@@ -4,11 +4,11 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/TenuredCLOUD/Misery/blob/master/LICENSE">
-    <img src="https://img.shields.io/badge/License-GRAD%20APL%20v1.1-red.svg?style=flat-square" alt="Misery License">
+    <a href="https://github.com/TenuredCLOUD/Misery/blob/0011ccf41fd157acfad707dfe1cd315c6ce1653d/LICENSE.txt">
+    <img src="https://img.shields.io/badge/License-GRAD%20APL%20v1.1-orange.svg?style=flat-square" alt="Misery License">
     </a>
     <a href="https://discord.gg/5gD3DwZqkK">
-        <img src="https://img.shields.io/badge/Discord-Join-darkviolet.svg?style=flat-square" alt="Misery Discord">
+        <img src="https://img.shields.io/badge/Discord-Join-blue.svg?style=flat-square" alt="Misery Discord">
     </a>
 </p>
 
@@ -17,11 +17,11 @@
     Visit us on <a href="https://discord.gg/5gD3DwZqkK">Discord</a></strong></sup>
 </p>
 
-**Misery** draws inspiration from renowned mods such as DayZ, Ravage, Heros Survive, and acclaimed games like S.T.A.L.K.E.R. However, it distinguishes itself through the incorporation of custom assets and a unique, challenging twist on survival mechanics[^1^][1].
+**Misery** draws inspiration from renowned mods such as DayZ, Ravage, Heros Survive, and acclaimed games like S.T.A.L.K.E.R. However, it distinguishes itself through the incorporation of custom assets and a unique, challenging twist on survival mechanics
 
-The mod also showcases the collaborative efforts of various community authors and friends. Designed as a framework, Misery aims to augment the creative possibilities for scenario designers in crafting a post-apocalyptic world[^1^][1].
+The mod also showcases the collaborative efforts of various community authors and friends. Designed as a framework, Misery aims to augment the creative possibilities for scenario designers in crafting a post-apocalyptic world
 
-We trust that this mod will serve as a valuable tool in realizing your vision for a compelling, immersive gaming experience[^1^][1].
+We trust that this mod will serve as a valuable tool in realizing your vision for a compelling, immersive gaming experience
 
 ## Core features
 
@@ -43,7 +43,7 @@ We trust that this mod will serve as a valuable tool in realizing your vision fo
 - Advanced refueling framework (Jet fuel, Diesel, petrol)
 - POI generation
 - Terrain De-Cluttering system
-- And many more unique tools & features for scenario designers...[^1^][1]
+- And many more unique tools & features for scenario designers...
 
 ## Getting started
 
