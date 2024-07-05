@@ -1,18 +1,9 @@
 <p align="center">
-    <img src="https://github.com/TenuredCLOUD/Misery/raw/master/banners/Miserylogo2k.png#gh-light-mode-only" width="480">
-    <img src="https://github.com/TenuredCLOUD/Misery/raw/master/banners/Miserylogo2k.png#gh-dark-mode-only" width="480">
+    <img src="https://github.com/TenuredCLOUD/Misery/blob/5bd3760486c5aafddca074dbba98186ce364859b/banners/Miserylogo2k.png#gh-light-mode-only" width="480">
+    <img src="https://github.com/TenuredCLOUD/Misery/blob/5bd3760486c5aafddca074dbba98186ce364859b/banners/Miserylogo2k.png#gh-dark-mode-only" width="480">
 </p>
 
 <p align="center">
-    <a href="https://github.com/TenuredCLOUD/Misery/releases/latest">
-        <img src="https://img.shields.io/github/release/TenuredCLOUD/Misery.svg?style=flat-square&label=Version" alt="Misery Version">
-    </a>
-    <a href="https://github.com/TenuredCLOUD/Misery/issues">
-        <img src="https://img.shields.io/github/issues-raw/TenuredCLOUD/Misery.svg?style=flat-square&label=Issues" alt="Misery Issues">
-    </a>
-    <a href="https://github.com/TenuredCLOUD/Misery/releases">
-        <img src="https://img.shields.io/github/downloads/TenuredCLOUD/Misery/total.svg?style=flat-square&label=Downloads" alt="Misery Downloads">
-    </a>
     <a href="https://github.com/TenuredCLOUD/Misery/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/License-GRAD%20APL%20v1.1-red.svg?style=flat-square" alt="Misery License">
     </a>
