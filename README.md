@@ -82,7 +82,7 @@ Thank you for being a part of the Misery community!
 <table>
   <tr>
     <td><a href="https://discord.gg/5gD3DwZqkK">Discord</a></td>
-    <td>Join the Discord Server to see current and upcoming features for Misery</td>
+    Join the Discord Server to see current and upcoming features for Misery
   </tr>
 </table>
 
