@@ -1,0 +1,2 @@
+
+cursortarget setfuel 1;

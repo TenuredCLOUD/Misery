@@ -1,0 +1,2 @@
+
+cursortarget setdamage 0; 

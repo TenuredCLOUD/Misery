@@ -1,0 +1,2 @@
+﻿
+player setDamage 1;

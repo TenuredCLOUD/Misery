@@ -1,0 +1,2 @@
+
+player allowdamage false; 
