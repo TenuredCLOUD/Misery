@@ -73,7 +73,7 @@ If you encounter any issues while using Misery, please report them on the Misery
 
 ### Community Collaboration
 
-Misery 2.0 is focused on community-driven collaboration. We encourage all users to contribute their ideas, code improvements, and bug fixes. Your contributions help make Misery a better experience for everyone.
+Misery is focused on community-driven collaboration. We encourage all users to contribute their ideas, code improvements, and bug fixes. Your contributions help make Misery a better experience for everyone.
 
 Thank you for being a part of the Misery community!
 
