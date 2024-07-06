@@ -13,21 +13,6 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/TenuredCLOUD">
-        <img src="https://img.shields.io/badge/Code-TenuredCLOUD-blue?style=flat-square" alt="TenuredCLOUD">
-        <img src="https://img.shields.io/badge/3D%20Modeling-TenuredCLOUD-green?style=flat-square" alt="TenuredCLOUD">
-    </a>
-    ☕🖥️
-</p>
-<p align="center">
-    <a href="https://github.com/audioDeveloperProfile">
-        <img src="https://img.shields.io/badge/Artwork-Name-red?style=flat-square" alt="ReasonUNKNOWN">
-        <img src="https://img.shields.io/badge/Audio%20Developer-Name-orange?style=flat-square" alt="ReasonUNKNOWN">
-    </a>
-    🎨🔊
-</p>
-
-<p align="center">
     <sup><strong>Requires the latest version of <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>.<br/>
     Visit us on <a href="https://discord.gg/5gD3DwZqkK">Discord</a></strong></sup>
 </p>
