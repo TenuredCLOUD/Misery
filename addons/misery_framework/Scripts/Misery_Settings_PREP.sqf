@@ -74,18 +74,6 @@ by TenuredCLOUD
 			] call CBA_fnc_addSetting;
 
 			[
-			"MiserySurvivalDebugacts", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
-			"CHECKBOX", // setting type
-			["Misery Debug Actions", "Enable debug scroll actions for scenario? (Recommended to disable after scenario testing. NOTE: Spawns scroll actions on player during scenario)"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-			["Misery","Debugging"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
-			false, // data for this setting: [min, max, default, number of shown trailing decimals]
-			1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
-			{
-			params ["_value"];
-			} // function that will be executed once on mission start and every time the setting is changed.
-			] call CBA_fnc_addSetting;
-			
-			[
 			"MiserySurvivalCycle", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
 			"EDITBOX", // setting type
 			["Survival Cycle length", "Seconds between updates / calculations (Misery hunger, thirst, temperature calculations, etc...) (note: very low cycle values may cause lag)"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.

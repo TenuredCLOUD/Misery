@@ -1,2 +1,0 @@
-
-player allowdamage true; 
