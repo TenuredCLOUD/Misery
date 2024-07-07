@@ -4,7 +4,7 @@ Designed specifically for Misery mod
 by TenuredCLOUD 
 -------------------------------------- */
 
-#include "\Misery\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 private ["_loadout","_stats","_radiation","_MHunger","_MThirst","_MSleep","_MPoison","_MInfection","_MExposure","_MCartridge","_MDebuffs","_MFear","_ACEdamage","_saveName","_namespace","_MiseryDebuffs","_MiseryCraftingKnowledge","_serialized"];
 

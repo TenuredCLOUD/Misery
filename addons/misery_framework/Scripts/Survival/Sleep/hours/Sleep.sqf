@@ -5,7 +5,7 @@ Designed specifically for Misery mod
 by TenuredCLOUD 
 -------------------------------------- */
 
-#include "\Misery\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 private _MSleepiness = player getVariable ["MiserySleepiness", MIS_SLEEP];
 private _MHunger = player getVariable ["MiseryHunger", MIS_HUNGER];

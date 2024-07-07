@@ -4,7 +4,7 @@ Designed specifically for Misery mod
 by TenuredCLOUD 
 -------------------------------------- */
 
-#include "\Misery\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 _MSleepiness = player getVariable ["MiserySleepiness", MIS_SLEEP];
 _MSleeppillstaken = player getVariable ["MiserySleeppillstaken", 0];

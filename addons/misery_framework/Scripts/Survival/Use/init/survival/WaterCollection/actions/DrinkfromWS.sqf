@@ -4,7 +4,7 @@ Designed specifically for Misery mod
 by TenuredCLOUD 
 -------------------------------------- */
 
-#include "\Misery\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 private _module=(entities"Misery_Survival")select 0;
 MiseryNORVG=_module getvariable "Misery_SurvivalFramework"; //Misery survival framework 
