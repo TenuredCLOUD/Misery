@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Buff or Ailment Data Parser 
 Designed specifically for Misery mod 
 by TenuredCLOUD 

@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Trader Shop
 Watches shop values and process deductions + increases in funds, as well as overall shop processing...
 Designed specifically for Misery mod 

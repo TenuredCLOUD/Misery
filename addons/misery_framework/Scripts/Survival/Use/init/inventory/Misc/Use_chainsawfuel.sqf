@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Chainsaw fuel usage
 Designed specifically for Misery mod 
 by TenuredCLOUD 

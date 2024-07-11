@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Value to Bar conversion 
 Designed specifically for Misery mod 
 by TenuredCLOUD 

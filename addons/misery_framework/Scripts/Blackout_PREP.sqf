@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery BlackOut 
 This code removes all light sources from most maps bringing that "Post-Apoc" feel...
 Concept Utilizes directed light hitpoint damage & Advanced Map object filtering

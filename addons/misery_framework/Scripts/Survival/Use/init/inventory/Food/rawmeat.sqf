@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Raw meat 
 Chances parasites
 Designed specifically for Misery mod 

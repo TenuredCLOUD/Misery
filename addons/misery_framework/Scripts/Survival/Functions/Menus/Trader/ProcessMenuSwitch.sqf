@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Trader Shop Sell / Buy Switching processor
 Processes Buying or Selling (Changes UI)
 Designed specifically for Misery mod 

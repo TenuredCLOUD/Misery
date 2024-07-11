@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Generator Fuel drain loop
 Controls fuel draining...
 Designed specifically for Misery mod 

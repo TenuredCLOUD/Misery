@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery hunger immersion
 Designed specifically for Misery mod 
 by TenuredCLOUD 

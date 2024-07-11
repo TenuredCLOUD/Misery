@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Custom Ravage init
 Custom Rvg functions 
 Permission to alter, use, etc.. Was explicitely requested from Haleks before use 

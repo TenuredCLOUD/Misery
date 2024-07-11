@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery skinning compat for WBK IMS Compat 
 Designed specifically for Misery mod 
 by TenuredCLOUD 

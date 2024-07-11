@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Geiger UI
 Designed specifically for Misery mod 
 by TenuredCLOUD 

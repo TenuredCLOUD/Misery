@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Campfire (small)
 Generates Small campfire variant
 Designed specifically for Misery mod 

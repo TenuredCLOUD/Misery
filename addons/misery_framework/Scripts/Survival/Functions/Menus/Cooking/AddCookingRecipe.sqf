@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Cooking Recipe Data Adder 
 Designed specifically for Misery mod 
 by TenuredCLOUD 

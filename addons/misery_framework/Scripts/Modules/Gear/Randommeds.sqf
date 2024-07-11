@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Random medication function (adds random meds to units)
 Code concepts from Haleks equipment func 
 Designed specifically for Misery mod 

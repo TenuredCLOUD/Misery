@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Fill water bottle from Jerrycan (clean)
 Designed specifically for Misery mod 
 by TenuredCLOUD 

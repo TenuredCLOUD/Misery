@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Kill handle for persistence
 Executes script on local player that is killed
 Designed specifically for Misery mod 

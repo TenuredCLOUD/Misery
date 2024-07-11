@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Antiparasitic pack usage
 Designed specifically for Misery mod 
 by TenuredCLOUD 

@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Drink from Jerrycan (dirty)
 Designed specifically for Misery mod 
 by TenuredCLOUD 

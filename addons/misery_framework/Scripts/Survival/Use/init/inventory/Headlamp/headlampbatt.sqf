@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Headlmap batteries
 Designed specifically for Misery mod 
 by TenuredCLOUD 

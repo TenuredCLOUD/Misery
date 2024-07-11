@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Generator Running Audio loop
 Controls running audio synchronization...
 Designed specifically for Misery mod 

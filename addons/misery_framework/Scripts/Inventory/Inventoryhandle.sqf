@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Inventory handle [Final code iteration]
 Utilizes vanilla Inventory EH's without the need for a 'While do' loop - Optimized* 
 Some concepts used from Ravage mod -LBDblClick snippet- (with permission from Haleks)

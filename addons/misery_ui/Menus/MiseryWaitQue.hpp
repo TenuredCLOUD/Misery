@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Trader / Shop UI Wait Que 
 Processes players being in a waiting Que as well as their spot in line...
 Designed specifically for Misery mod 

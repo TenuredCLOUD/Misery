@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Take Money UI Action process
 Processes money taking from corpses
 Designed specifically for Misery mod 

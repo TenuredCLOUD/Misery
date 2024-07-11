@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Guitar usage
 Designed specifically for Misery mod 
 by TenuredCLOUD 

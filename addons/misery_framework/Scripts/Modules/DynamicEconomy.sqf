@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Dynamic economy for HALs store
 Designed specifically for Misery mod 
 by TenuredCLOUD 

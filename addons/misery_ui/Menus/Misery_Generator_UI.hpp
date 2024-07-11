@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Generator UI
 Processes usage of generators, shows fuel levels, etc...
 Designed specifically for Misery mod 

@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery persistence
 Designed specifically for Misery mod 
 by TenuredCLOUD 

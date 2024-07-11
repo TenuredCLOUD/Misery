@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Item usage defines 
 Defines what inventory items do
 Designed specifically for Misery mod 

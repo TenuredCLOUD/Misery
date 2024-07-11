@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery advanced radiation exposure
 Designed specifically for Misery mod 
 by TenuredCLOUD 

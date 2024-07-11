@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 RF resync
 Runs checks to resync detector if player 
 picks up / starts with an RF detector that's on

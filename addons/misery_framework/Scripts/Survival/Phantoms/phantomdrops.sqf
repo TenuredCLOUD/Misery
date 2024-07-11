@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery artifact dropper
 Designed specifically for Misery mod 
 by TenuredCLOUD 

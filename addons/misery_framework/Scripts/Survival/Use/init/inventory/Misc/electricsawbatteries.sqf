@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Skillsaw batteries
 Designed specifically for Misery mod 
 by TenuredCLOUD 

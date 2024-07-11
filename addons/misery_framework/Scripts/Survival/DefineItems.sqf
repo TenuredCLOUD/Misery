@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Defined item usage, custom item params
 Designed specifically for Misery mod 
 Source code Drongo, expanded upon by TenuredCLOUD

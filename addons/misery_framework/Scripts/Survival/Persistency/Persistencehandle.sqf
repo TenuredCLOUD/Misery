@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery MP handler
 Dedi + Hosted handle for respawn events: - great help from Haleks
 Designed specifically for Misery mod 

@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 RF detector loop (detection)
 Runs audio samples + constant detection cycles
 Detects entities as well as Artifacts in Ground weapon holders

@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Trader Shop Categorizer processor
 Adds Category's to UI 
 Designed specifically for Misery mod 

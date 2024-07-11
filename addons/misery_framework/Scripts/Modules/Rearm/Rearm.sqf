@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Vehicle rearm point creation
 Designed specifically for Misery mod 
 by TenuredCLOUD 

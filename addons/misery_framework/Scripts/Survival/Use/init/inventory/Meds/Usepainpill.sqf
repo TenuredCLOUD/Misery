@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Pain pill usage 
 Designed specifically for Misery mod 
 by TenuredCLOUD 

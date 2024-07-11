@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Take Money UI
 Starts up UI with proper values, etc...
 Designed specifically for Misery mod 

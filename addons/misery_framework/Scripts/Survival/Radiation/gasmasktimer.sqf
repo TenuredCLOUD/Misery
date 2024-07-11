@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery gasmask cartridge degradation
 Designed specifically for Misery mod 
 by TenuredCLOUD 

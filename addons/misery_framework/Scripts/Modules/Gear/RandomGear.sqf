@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Random Gear function (adds random gear to units)
 Code concepts from Haleks equipment function 
 Designed specifically for Misery mod 

@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Caffetin tablets usage
 Designed specifically for Misery mod 
 by TenuredCLOUD 

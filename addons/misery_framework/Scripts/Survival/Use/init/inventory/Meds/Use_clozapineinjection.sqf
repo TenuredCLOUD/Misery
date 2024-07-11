@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Clozapine injection usage
 Designed specifically for Misery mod 
 by TenuredCLOUD 

@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Bank UI Contribute (Phoenix fund) Processor 
 Designed specifically for Misery mod 
 by TenuredCLOUD 

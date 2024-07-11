@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 RF detector loop
 Runs audio samples + constant detection cycles
 Also runs a generated numeric chance spawner for extremely hostile entities

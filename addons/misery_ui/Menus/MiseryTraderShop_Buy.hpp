@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Trader / Shop UI
 Processes Buying of items... 
 Designed specifically for Misery mod 

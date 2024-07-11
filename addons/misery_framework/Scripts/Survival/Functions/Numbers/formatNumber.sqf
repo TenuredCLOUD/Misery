@@ -1,5 +1,5 @@
 
-/* -----------------------------------
+/*
 Misery number formatter
 Takes input number and avoids scientific notations, should work for any numeric value, except 1Bil + Due to Arma's number processing limitations
 Designed specifically for Misery mod 

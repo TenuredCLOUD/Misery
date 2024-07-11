@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Cooking Recipe Data Remover
 Designed specifically for Misery mod 
 by TenuredCLOUD 

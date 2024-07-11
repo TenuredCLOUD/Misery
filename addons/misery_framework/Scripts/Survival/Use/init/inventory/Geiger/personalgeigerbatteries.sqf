@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Geiger battery adder
 Designed specifically for Misery mod 
 by TenuredCLOUD 

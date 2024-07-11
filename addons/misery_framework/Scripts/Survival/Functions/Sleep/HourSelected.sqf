@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Sleep system (Singleplayer only)
 Defines the selected hour for processing time skip, and stat drops, etc... 
 Designed specifically for Misery mod 

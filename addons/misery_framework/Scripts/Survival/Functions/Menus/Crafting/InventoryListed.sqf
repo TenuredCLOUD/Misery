@@ -5,7 +5,7 @@ Designed specifically for Misery mod
 by TenuredCLOUD 
 */
 
-/* -----------------------------------OBSOLETE*/
+/*OBSOLETE*/
 
 // waitUntil {sleep 1; !isNull findDisplay 982376 };
 

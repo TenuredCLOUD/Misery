@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Cocaine usage
 Designed specifically for Misery mod (also compatible with Ravage)
 by TenuredCLOUD 

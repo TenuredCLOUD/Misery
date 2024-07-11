@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery cold immersion
 Designed specifically for Misery mod 
 by TenuredCLOUD 

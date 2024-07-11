@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Mechanic (Vehicle repair point) creation
 Designed specifically for Misery mod 
 by TenuredCLOUD 

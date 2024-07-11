@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Bank UI Deposit Processor 
 Designed specifically for Misery mod 
 by TenuredCLOUD 

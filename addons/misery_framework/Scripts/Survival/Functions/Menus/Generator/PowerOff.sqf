@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Generator Power Off
 Shuts down generator, controlling audio synchronization & fuel draining halt
 Designed specifically for Misery mod 

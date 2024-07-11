@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Radio audio looper / Broadcaster
 Synces to all players that possess a radio (NOT JIP COMPAT)
 Runs strictly on Server for GLOBAL effect

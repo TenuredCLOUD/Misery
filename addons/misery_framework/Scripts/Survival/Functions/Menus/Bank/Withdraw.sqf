@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Bank UI Withdraw Processor 
 Designed specifically for Misery mod 
 by TenuredCLOUD 

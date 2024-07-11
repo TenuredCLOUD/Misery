@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Trader Shop Gift processor
 Processes Gifting of items + stock management
 Designed specifically for Misery mod 

@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery PDA reboot sequence
 Designed specifically for Misery mod 
 by TenuredCLOUD 

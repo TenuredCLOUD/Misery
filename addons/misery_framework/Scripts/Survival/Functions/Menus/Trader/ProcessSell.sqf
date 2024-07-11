@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Trader Shop Sell processor
 Processes Selling of items + funds handling
 Designed specifically for Misery mod 

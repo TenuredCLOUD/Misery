@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Forge audio looper
 Designed specifically for Misery mod 
 by TenuredCLOUD 

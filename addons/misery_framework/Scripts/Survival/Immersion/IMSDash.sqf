@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery WBKIMS Dash Compat
 Enforces a stamina / fatigue depletion when player uses IMS sprint movesets
 Designed specifically for Misery mod 

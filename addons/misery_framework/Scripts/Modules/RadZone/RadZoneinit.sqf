@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Radiation Zone processor
 Designed specifically for Misery mod 
 by TenuredCLOUD 

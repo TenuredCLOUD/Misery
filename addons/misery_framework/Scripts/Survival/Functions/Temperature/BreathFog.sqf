@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery BreathFog cycle
 BreathFog for players (runs on clients only)
 Breath speeds are from player's fatigue 

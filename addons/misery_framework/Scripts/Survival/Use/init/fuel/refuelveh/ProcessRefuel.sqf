@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Vehicle Refuel UI List populater
 Defines the selected refuel option, and passes values
 Designed specifically for Misery mod 

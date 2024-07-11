@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Radio loop
 Runs broadcast loop while waiting on Global sound timer
 Designed specifically for Misery mod 

@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery HUD layout / design
 Imported from some of Drongo's displays with permission
 Designed specifically for Misery mod 

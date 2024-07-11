@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery HUD & GUI layout / design
 Source code from Drongo, edited by TenuredCLOUD
 Designed specifically for Misery mod 

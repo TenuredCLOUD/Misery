@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery No Fuel resources
 This code removes all fuel sources from maps unless using Misery's Refueling framework
 Concept Utilizes Advanced Map object filtering

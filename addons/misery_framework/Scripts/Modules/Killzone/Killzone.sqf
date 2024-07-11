@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Killzone creation
 Designed specifically for Misery mod 
 by TenuredCLOUD 

@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Trader Shop Sell / Buy Processor
 Processes Buying or Selling 
 Designed specifically for Misery mod 

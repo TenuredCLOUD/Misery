@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Safezone creation (For entities + Client loop start cycle)
 Designed specifically for Misery mod 
 by TenuredCLOUD 

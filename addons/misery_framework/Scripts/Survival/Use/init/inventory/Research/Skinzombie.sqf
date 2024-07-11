@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Zombie skinning 
 Designed specifically for Misery mod 
 by TenuredCLOUD 

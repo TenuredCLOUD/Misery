@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Vehicle Maintenance UI
 Processes Repairs and Scavenging of parts for vehicles... 
 Designed specifically for Misery mod 

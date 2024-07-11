@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Primary HUD option 
 Concepts Based on GF Ravage Status Bar script & JakeHekesFist [DMD] displays 
 Designed specifically for Misery mod 

@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Radio Static
 Runs static loop while waiting on Global sound timer
 Designed specifically for Misery mod 

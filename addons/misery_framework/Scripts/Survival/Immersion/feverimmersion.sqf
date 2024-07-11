@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery fever immersion
 Designed specifically for Misery mod 
 by TenuredCLOUD 

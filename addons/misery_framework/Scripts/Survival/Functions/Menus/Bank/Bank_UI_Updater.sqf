@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Bank UI
 Watches UI for changes etc... 
 Designed specifically for Misery mod 

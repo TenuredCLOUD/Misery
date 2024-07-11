@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery rearming Shop UI
 Processes rearming purchases for vehicles... 
 Designed specifically for Misery mod 

@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Portable radio batteries
 Designed specifically for Misery mod 
 by TenuredCLOUD 

@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Fear cycle
 Designed specifically for Misery mod 
 by TenuredCLOUD 

@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Ambient Animals
 Drongo Source code - Rewritten by TenuredCLOUD
 Designed specifically for Misery mod 

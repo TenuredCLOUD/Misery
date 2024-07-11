@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Drink directly from Water sources
 Designed specifically for Misery mod 
 by TenuredCLOUD 

@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Dirty Water
 Chances parasites
 Designed specifically for Misery mod 

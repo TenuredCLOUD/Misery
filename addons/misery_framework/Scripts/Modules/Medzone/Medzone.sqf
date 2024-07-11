@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Medical treatment zone creation
 Designed specifically for Misery mod 
 by TenuredCLOUD 

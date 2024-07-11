@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Ailment Processor
 Designed specifically for Misery mod 
 by TenuredCLOUD 

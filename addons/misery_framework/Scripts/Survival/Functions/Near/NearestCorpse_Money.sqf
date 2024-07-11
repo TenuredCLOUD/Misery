@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Returns if near a corpse "man based" and the Nearest corpse itself 
 Designed specifically for Misery mod 
 by TenuredCLOUD 

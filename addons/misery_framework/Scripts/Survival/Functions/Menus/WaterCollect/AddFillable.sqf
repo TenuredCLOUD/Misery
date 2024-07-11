@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery WaterCollection Data Adder 
 Designed specifically for Misery mod 
 by TenuredCLOUD 

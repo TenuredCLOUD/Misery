@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Main Survival loop 
 Client survival loop runs after Client settings are defined
 Designed specifically for Misery mod 

@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery alternate RVG start (starts compatibility for Misery w/ Ravage)
 Permission before use / alteration was requested explicitely from Haleks 
 Designed specifically for Misery mod 

@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Trader Shop Purchase processor
 Processes Buying of items + funds handling
 Designed specifically for Misery mod 

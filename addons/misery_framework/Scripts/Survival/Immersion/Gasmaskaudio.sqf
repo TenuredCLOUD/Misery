@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Gasmask audio loop
 Designed specifically for Misery mod 
 by TenuredCLOUD 

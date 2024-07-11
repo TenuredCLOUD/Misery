@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Random pharm usage
 Designed specifically for Misery mod 
 by TenuredCLOUD 

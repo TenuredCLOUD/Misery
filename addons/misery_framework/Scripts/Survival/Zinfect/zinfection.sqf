@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Infection system with CBA HIT EH
 Designed specifically for Misery mod 
 by TenuredCLOUD 

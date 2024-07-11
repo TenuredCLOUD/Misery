@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Rad Zone creation
 Code concepts from Haleks rad zones
 Designed specifically for Misery mod 

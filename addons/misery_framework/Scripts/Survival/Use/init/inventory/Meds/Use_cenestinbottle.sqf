@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Cenestin bottle usage
 Designed specifically for Misery mod 
 by TenuredCLOUD 

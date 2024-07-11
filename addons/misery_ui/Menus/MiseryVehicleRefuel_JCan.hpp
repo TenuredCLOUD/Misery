@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Vehicle Refueling UI
 Processes Refueling via Jerry Cans for vehicles... 
 Designed specifically for Misery mod 

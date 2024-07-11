@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Fill canteen from Jerrycan (clean)
 Designed specifically for Misery mod 
 by TenuredCLOUD 

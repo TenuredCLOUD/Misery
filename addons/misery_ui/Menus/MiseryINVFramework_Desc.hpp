@@ -1,10 +1,10 @@
-/* -----------------------------------
+/*
 Misery Action / Inventory Framework Buffs & Ailments Description UI
 Processes Buffs & Ailments to separate UI
 Designed specifically for Misery mod 
 */
 
-/* -----------------------------------
+/*
 OBSOLETE
 */
 

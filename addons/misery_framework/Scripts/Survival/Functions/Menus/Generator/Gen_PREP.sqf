@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Generator UI populator / PREP
 Generator stats, usage UI processor
 Designed specifically for Misery mod 

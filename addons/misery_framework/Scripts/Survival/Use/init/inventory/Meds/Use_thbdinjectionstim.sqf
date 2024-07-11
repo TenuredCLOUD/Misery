@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery THBD stim (rad removal)
 Designed specifically for Misery mod 
 by TenuredCLOUD 

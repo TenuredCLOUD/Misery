@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Radio Objects static loop (immersion)
 Runs strictly on Server for GLOBAL effect
 Designed specifically for Misery mod 

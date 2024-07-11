@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Generator Power nearby loop
 Controls powering nearby structures...
 Designed specifically for Misery mod 

@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery WaterCollection Data Remover
 Designed specifically for Misery mod 
 by TenuredCLOUD 

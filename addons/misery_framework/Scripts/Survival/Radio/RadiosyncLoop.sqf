@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Radio resync
 Runs checks to resync radio if player 
 picks up / starts with an Radio that's on

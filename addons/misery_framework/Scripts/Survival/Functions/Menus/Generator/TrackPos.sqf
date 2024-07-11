@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Generator Position Tracking
 Continually watches generator position to make sure it doesn't move, if it moves kill the engine...
 This should prevent hiccups with fortification frameworks, or "moving" a generator

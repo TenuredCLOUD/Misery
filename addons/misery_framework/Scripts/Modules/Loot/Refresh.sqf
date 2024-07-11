@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Loot Framework refresh timer loop 
 Designed specifically for Misery mod 
 by TenuredCLOUD 

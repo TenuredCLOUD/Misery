@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery comabt logger timeout
 Designed specifically for Misery mod 
 by TenuredCLOUD 

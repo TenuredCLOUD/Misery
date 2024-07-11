@@ -1,4 +1,4 @@
-/* -----------------------------------
+/*
 Misery Ravage use container near watersource
 Designed specifically for Misery mod 
 by TenuredCLOUD 

@@ -1,4 +1,4 @@
-﻿/* -----------------------------------
+﻿/*
 Misery Sleep pill usage
 Designed specifically for Misery mod 
 by TenuredCLOUD 
