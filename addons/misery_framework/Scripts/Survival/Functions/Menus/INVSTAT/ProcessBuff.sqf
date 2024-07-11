@@ -2,7 +2,7 @@
 Misery Buff Processor
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 params ["_control", "_selectedIndex"];
 private _selectedAilmentinlist = _control lbData _selectedIndex;

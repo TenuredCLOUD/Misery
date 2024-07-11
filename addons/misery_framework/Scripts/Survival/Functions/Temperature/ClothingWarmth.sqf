@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Clothing warmth calcs 
 Designed specifically for Misery mod 
 Code concepts by Drongo, edited by TenuredCLOUD 
--------------------------------------- */
+*/
 
 // // Calculate warmth of clothing (based on mass of uniform, vest and headgear)
 private _man=_this;

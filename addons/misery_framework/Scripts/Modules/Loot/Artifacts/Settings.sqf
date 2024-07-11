@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Module startup function (Artifact Spawner)
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 Misery_ArtifactSpawnCheckDistance = _this select 0;
 Misery_ArtifactDeleteCheckDistance = _this select 1;

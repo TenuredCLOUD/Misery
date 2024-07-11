@@ -1,9 +1,9 @@
- /* -----------------------------------
+/*
 Misery WaterCollection Drink from source processor
 Takes inputs from GUI and processes recipe (if it exists)
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 #include "\a3\ui_f\hpp\definedikcodes.inc"
 #include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"

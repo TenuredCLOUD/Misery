@@ -4,7 +4,7 @@ Runs checks to resync detector if player
 picks up / starts with an RF detector that's on
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 #include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 

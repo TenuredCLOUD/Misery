@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Nearland veh no tanks check
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private ["_foundVeh","_target"];
 

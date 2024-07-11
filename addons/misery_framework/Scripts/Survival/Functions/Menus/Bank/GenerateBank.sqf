@@ -1,4 +1,4 @@
- /* -----------------------------------
+/*
 Misery Bank Generater 
 Passes arguments to generate a banker / bank object
 Designed specifically for Misery mod 
@@ -6,7 +6,7 @@ by TenuredCLOUD
 
 // Generate a bank
 [trader1] call Misery_fnc_GenerateBank;
--------------------------------------- */
+*/
 
 params ["_traderName"];
 

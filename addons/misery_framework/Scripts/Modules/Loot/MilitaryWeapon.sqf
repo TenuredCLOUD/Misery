@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Mil weapon checker
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private["_w","_isMilitary","_mags"];
 _w=_this;

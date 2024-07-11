@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery sledgehammer check fnc (iBuild compat)
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private ["_hasSledgehammer"];
 

@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery PDA GUI
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 class MiseryPDA_BGFrame: RscPicture
 {

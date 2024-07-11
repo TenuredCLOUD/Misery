@@ -2,7 +2,7 @@
 Misery skinning compat for WBK IMS Compat 
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 //Will choose which skinning method to start based on nearby dead corpse / animal:
 

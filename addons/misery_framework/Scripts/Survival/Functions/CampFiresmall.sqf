@@ -3,7 +3,7 @@ Misery Campfire (small)
 Generates Small campfire variant
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private _pos = player getRelPos [1.5, 0];
 private _object = createVehicle ["FirePlace_burning_F", _pos, [], 0, "CAN_COLLIDE"];

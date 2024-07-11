@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Gold mining
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 [
 	player,

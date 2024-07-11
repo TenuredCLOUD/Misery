@@ -3,7 +3,7 @@ Misery Primary HUD option
 Concepts Based on GF Ravage Status Bar script & JakeHekesFist [DMD] displays 
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 class MiseryStatusBar
 {
     idd = -1; // The ID of the dialog

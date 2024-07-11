@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Geiger UI
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 class MiseryGeiger_UI
 {

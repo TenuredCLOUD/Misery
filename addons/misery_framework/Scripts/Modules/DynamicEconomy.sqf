@@ -4,7 +4,7 @@ Designed specifically for Misery mod
 by TenuredCLOUD 
 
 OBSOLETE
--------------------------------------- */
+*/
 
 // private _module=(entities"Misery_HALs_EconomyFramework")select 0;
 // Misery_dyneconomy_1 =_module getvariable "MiseryDynEconomy1";

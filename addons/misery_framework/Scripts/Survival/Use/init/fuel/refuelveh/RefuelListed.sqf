@@ -3,7 +3,7 @@ Misery Refuel Vehicle JCan UI List populater
 Defines the selected refuel option, and passes data
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 waitUntil {!isNull findDisplay 982385};
 

@@ -5,7 +5,7 @@ Some concepts used from Ravage mod -LBDblClick snippet- (with permission from Ha
 Function help from Salbei from GRAD team - conversion to CBA waituntil + PFH handle 
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 player addEventHandler ["InventoryOpened", {
     [{

@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Stitch with Needle & Thread (ACE medical compat ONLY)
 Designed specifically for Misery mod 
 by TenuredCLOUD
--------------------------------------- */
+*/
 
 [
 	player,

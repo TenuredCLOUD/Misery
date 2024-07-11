@@ -1,11 +1,11 @@
- /* -----------------------------------
+/*
 Misery Crafting Framework List populater 
 Scans Player's inventory and populates the GUI
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
-/* -----------------------------------OBSOLETE-------------------------------------- */
+/* -----------------------------------OBSOLETE*/
 
 // waitUntil {sleep 1; !isNull findDisplay 982376 };
 

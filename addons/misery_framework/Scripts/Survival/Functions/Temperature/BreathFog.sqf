@@ -4,7 +4,7 @@ BreathFog for players (runs on clients only)
 Breath speeds are from player's fatigue 
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 while {TRUE} do {
 

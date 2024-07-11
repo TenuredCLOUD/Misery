@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Parser for custom item usage 
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private["_module","_className","_script"];
 _module=_this select 0;

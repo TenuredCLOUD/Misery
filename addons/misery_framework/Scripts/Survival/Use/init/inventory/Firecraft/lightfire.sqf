@@ -1,9 +1,9 @@
- /* -----------------------------------
+/*
 Misery Fire crafting
 Enables players to craft fires - Also checks environment
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 if (!hasInterface) exitWith {};
 

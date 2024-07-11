@@ -2,7 +2,7 @@
 HUD option 
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 disableSerialization;
 

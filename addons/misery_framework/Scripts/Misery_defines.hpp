@@ -3,7 +3,7 @@ Misery Macros Definitions - preprocesses base values of Gvars + Calculations
 Caches values to ram for much faster parsing etc... 
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 //Versioning:
 

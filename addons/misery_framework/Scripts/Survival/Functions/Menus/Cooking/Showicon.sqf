@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Crafting Framework Icon updater
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 disableSerialization;
 

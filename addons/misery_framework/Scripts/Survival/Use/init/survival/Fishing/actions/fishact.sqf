@@ -1,9 +1,9 @@
- /* -----------------------------------
+/*
 Fishing system
 Designed specifically for Misery mod 
 Fishing pole orientation to player help from SlayNoMore
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 [
 	player,

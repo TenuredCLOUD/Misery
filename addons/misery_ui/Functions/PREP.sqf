@@ -1,9 +1,9 @@
- /* -----------------------------------
+/*
 Misery UI PREP
 Pre-Processes all UI functions
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 #include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 

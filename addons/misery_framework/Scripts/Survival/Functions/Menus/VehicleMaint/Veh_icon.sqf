@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Vehicle Maintenance Vehicle icon updater
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 disableSerialization;
 

@@ -2,7 +2,7 @@
 Misery Bank UI Contribute (Phoenix fund) Processor 
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private _amount = parseNumber (ctrlText ((findDisplay 483729) displayCtrl 1400));
 private _playerFunds = player getVariable "MiseryCurrency";

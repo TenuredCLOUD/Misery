@@ -2,7 +2,7 @@
 Misery Money taking UI
 Processes Money taking from corpses
 Designed specifically for Misery mod 
--------------------------------------- */
+*/
 
 class Misery_MoneyTake_UI
 {

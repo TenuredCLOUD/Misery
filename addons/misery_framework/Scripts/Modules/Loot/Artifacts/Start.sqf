@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Artifact spawner startup
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private _modules = allMissionObjects "Misery_ArtifactSpawner"; 
 

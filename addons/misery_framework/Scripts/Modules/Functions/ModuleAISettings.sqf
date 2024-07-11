@@ -1,9 +1,9 @@
- /* -----------------------------------
+/*
 Misery Ambient AI Master settings module initialization
 Defines performance properties for each Ambient AI module
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private["_module","_units","_activated"];
 _module=_this select 0;

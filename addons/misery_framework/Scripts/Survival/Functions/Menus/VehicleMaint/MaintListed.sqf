@@ -3,7 +3,7 @@ Misery Maintenance UI List populater
 Defines the needed repairs, or possible scavenging
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 waitUntil {!isNull findDisplay 274839};
 

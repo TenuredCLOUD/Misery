@@ -1,9 +1,9 @@
- /* -----------------------------------
+/*
 Misery Ambient AI Master settings module data parser
 Defines performance properties for each Ambient AI module
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 Misery_AmbAI_SpawnCheckDistance = _this select 0;
 Misery_AmbAI_DeleteCheckDistance = _this select 1;

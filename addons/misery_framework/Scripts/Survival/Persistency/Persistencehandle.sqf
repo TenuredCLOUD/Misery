@@ -3,7 +3,7 @@ Misery MP handler
 Dedi + Hosted handle for respawn events: - great help from Haleks
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 #include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 

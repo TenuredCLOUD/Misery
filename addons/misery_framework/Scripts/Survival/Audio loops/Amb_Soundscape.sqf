@@ -1,9 +1,9 @@
- /* -----------------------------------
+/*
 Misery Ambient SoundScape simulation
 Runs random audio / sounds generated on a random player each loop...
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 if (isServer) then {
     while {true} do {

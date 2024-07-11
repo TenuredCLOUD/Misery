@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Module startup function (Artifact Spawner)
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private["_module","_units","_activated"];
 _module=_this select 0;

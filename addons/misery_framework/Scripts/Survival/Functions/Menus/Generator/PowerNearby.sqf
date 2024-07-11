@@ -3,7 +3,7 @@ Misery Generator Power nearby loop
 Controls powering nearby structures...
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 _Generator = _this select 0;
 

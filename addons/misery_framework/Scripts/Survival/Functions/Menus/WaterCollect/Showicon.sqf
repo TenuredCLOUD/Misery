@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery WaterCollect Icon updater
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 disableSerialization;
 

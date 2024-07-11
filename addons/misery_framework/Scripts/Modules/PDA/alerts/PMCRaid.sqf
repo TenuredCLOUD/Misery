@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery PMC Raid alert startup & Raid identifier
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private ["_pos","_marker","_raidID"];
 

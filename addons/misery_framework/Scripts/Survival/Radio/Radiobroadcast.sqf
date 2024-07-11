@@ -4,7 +4,7 @@ Synces to all players that possess a radio (NOT JIP COMPAT)
 Runs strictly on Server for GLOBAL effect
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 #include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 

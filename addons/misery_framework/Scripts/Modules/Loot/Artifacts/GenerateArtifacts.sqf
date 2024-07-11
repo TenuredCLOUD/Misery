@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Artifact Groundloot generator
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 if (isServer) then {
     private [

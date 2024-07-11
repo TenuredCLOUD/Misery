@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Crafting Framework Listboc index value checker
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 params ["_ctrl", "_str"];
 private _count = lbSize _ctrl;

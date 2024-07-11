@@ -3,7 +3,7 @@ Misery Main Survival loop
 Client survival loop runs after Client settings are defined
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 //Enforce client only loop:
 if !(hasInterface) exitWith {};

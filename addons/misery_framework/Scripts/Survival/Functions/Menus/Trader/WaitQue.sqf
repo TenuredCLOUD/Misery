@@ -3,7 +3,7 @@ Misery Trader Shop Wait Que UI
 Watches Trader player is in a Que to transaction with and keeps player updated of current waiting parameters...
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 [{!isNull findDisplay 270586},
 {

@@ -3,7 +3,7 @@ Misery Bank UI Claim Support (Phoenix fund) Processor
 Also adds a 24 hour cooldown before requesting more funds
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
     private _amount = parseNumber (ctrlText ((findDisplay 483729) displayCtrl 1400));
     private _maxAmount = MiseryCurrency_PhoenixAccount * 0.01; 

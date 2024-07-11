@@ -3,7 +3,7 @@ Misery Generator UI populator / PREP
 Generator stats, usage UI processor
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 waitUntil {!isNull findDisplay 573849};
 

@@ -1,10 +1,10 @@
- /* -----------------------------------
+/*
 Misery Music generation loop
 Selects a random music file to play from the "Ambient Music array" data after the previous file is played...
 Time between tracks is randomized, up to 2 minutes
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 addMusicEventHandler ["MusicStop", { 
 params ["_musicClassname", "_eventHandlerId", "_currentPosition", "_toralLength"]; 

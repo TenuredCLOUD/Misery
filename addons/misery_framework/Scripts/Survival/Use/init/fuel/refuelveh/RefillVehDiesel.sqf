@@ -1,9 +1,9 @@
- /* -----------------------------------
+/*
 Misery Advanced refueling  
 Array input for refueling amount per Jerrycan
 Designed specifically for Misery mod
 by TenuredCLOUD 
- -------------------------------------- */
+ */
 
 private _Jerrycanused= _this; // item classname
 private _Fueltype= 0; // 0=Diesel // 1=Petrol // 2=JetFuel 

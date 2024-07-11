@@ -1,4 +1,4 @@
- /* -----------------------------------
+/*
 Misery Shop Generater 
 Takes shop data and stores Hashmap on trader AI
 Also passes data to server side
@@ -15,7 +15,7 @@ _shop = [
 
 // Generate a shop
 [_shop, trader1] call Misery_fnc_GenerateShop;
--------------------------------------- */
+*/
 
 params ["_shopData", "_traderName"];
 

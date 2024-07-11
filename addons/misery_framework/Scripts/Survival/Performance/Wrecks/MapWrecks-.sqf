@@ -1,11 +1,11 @@
- /* -----------------------------------
+/*
 Misery Map optimizer (Wrecks removal)
 Filters through the active map and actively hides and disables simulation on specific object models (specifically Wrecks)
 Can in some instances increase framerate, especially useful on maps that are densly populated with Wreck objects, Chernarus Redux especially
 Runs on Client when CBA option is checked (BOOL)
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 if (isServer) then {   
     private _modelNames = [

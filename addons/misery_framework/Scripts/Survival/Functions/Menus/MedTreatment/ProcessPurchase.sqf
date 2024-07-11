@@ -3,7 +3,7 @@ Misery MedTreatment UI List populater
 Defines the selected purchase option, and passes current pricing values
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private _dialog = findDisplay 982381; 
 private _selectedIndex = lbCurSel 1500; // Get the index of the selected item

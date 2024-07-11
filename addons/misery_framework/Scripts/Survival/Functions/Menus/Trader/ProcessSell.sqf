@@ -3,7 +3,7 @@ Misery Trader Shop Sell processor
 Processes Selling of items + funds handling
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private ['_shop','_items','_stock','_playerFunds','_selectedItem','_price','_index'];
 

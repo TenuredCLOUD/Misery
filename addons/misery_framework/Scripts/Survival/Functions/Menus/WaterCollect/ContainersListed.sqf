@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery WaterCollection List populater for containers 
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 waitUntil {!isNull findDisplay 982380};
 

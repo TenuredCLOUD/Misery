@@ -3,7 +3,7 @@ Misery Raw meat
 Chances parasites
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private _module=(entities"Misery_Survival")select 0;
 Miseryrawmeatchance=_module getvariable "Misery_Rawmeatdischance";

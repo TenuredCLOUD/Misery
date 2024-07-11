@@ -1,9 +1,9 @@
- /* -----------------------------------
+/*
 Split wooden logs 
 Enables players to reform wood logs to firewood (Chainsaw or Axe compatible)
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 [
 	player,

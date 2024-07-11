@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Module startup function (Hud systems)
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private _module=(entities"Misery_HUDDefines")select 0;
 MiseryToolsHUD=_module getVariable"Misery_Toolsdisplay";

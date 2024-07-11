@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Clothing insulation check
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private _clothingWarmth = format [localize "STR_MISERY_ClothingWarmthVAL", ((player call Misery_fnc_ClothingWarmth) select 0)];
 

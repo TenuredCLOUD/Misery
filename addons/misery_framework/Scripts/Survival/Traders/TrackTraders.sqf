@@ -1,10 +1,10 @@
- /* -----------------------------------
+/*
 Misery Traders Tracking
 Processing Algorithm to Track players positioning to Traders and adjusts economic status of traders stock, as well as thier overall funds
 Calculations for purchasing prcessing will vary but should not go below or above the maximum and minimum price set points due to the way the calculation processes pricing, this ensures true dynamic markets...
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 waitUntil {sleep 1; ((count MiseryActiveTraders) > 0)};
 

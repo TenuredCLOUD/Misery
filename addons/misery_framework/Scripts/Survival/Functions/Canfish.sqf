@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Check player position relative to shoreline, water, or if they're on a watercraft
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private ["_canfish","_isLookingAtWater","_overShore","_overWater"]; 
  

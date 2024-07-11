@@ -1,10 +1,10 @@
- /* -----------------------------------
+/*
 Ambient AI Zones Generator 
 Generates highly reactive AI built to a scenario designers module layout
 Works with zone stepping, so different modules can generate different factions etc... (more robust that the ambient spawner) 
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private [
 "_module",

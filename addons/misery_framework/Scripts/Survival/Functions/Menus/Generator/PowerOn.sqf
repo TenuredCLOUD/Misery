@@ -3,7 +3,7 @@ Misery Generator Power On
 Starts up generator, controlling audio synchronization & fuel draining
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private ["_PowerOnB","_PowerOffB","_RefuelB","_GeneratorType","_soundStart","_fuelLevel","_soundDummy"];
 

@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Rads alert startup
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 _Check_items = items player;
 if ("Misery_PDA" in _Check_items) then {

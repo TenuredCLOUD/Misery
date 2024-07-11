@@ -2,7 +2,7 @@
 Misery Artifact storage
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 if (alive player) then {
 

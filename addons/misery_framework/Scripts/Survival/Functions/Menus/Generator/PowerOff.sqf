@@ -3,7 +3,7 @@ Misery Generator Power Off
 Shuts down generator, controlling audio synchronization & fuel draining halt
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 	_PowerOnB = findDisplay 573849 displayCtrl 1600;
     _PowerOffB = findDisplay 573849 displayCtrl 1601;

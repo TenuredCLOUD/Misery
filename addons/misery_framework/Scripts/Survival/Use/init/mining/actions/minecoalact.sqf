@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Coal mining
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 [
 	player,

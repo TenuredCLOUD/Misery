@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Damage modifier for player instant death
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private _target=_this select 0;
 private _damage=_this select 1;

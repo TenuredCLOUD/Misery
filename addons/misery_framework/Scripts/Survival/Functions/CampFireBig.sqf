@@ -1,9 +1,9 @@
- /* -----------------------------------
+/*
 Misery Campfire (big)
 Generates Big campfire variant
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private _pos=player getRelPos[1.5,0];
 private _object=createVehicle["Campfire_burning_F",_pos,[],0,"CAN_COLLIDE"];

@@ -1,9 +1,9 @@
- /* -----------------------------------
+/*
 Misery Near tree check fnc (Axe wood collection)
 Returns all nearby tree terrain objects + checks if they are damaged
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private ["_found", "_axeType","_WBKIMSAXETYPE"];    
 

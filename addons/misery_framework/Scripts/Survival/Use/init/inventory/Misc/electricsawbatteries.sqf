@@ -2,7 +2,7 @@
 Misery Skillsaw batteries
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 if ("Misery_18vbat" in items player) then {
  

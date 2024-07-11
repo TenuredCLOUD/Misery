@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Inventory Click handle
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private _idc = ctrlIDC (_this select 0);
 private _selectedIndex = _this select 1;

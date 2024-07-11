@@ -14,7 +14,7 @@ Usage ex:
     ] 
 ]] call yourAdderFunctionName;
 
--------------------------------------- */
+*/
 
 _this params ["_recipe"];
 private _playerRecipes = player getVariable ["Misery_Cooking_DataSet", []]; 

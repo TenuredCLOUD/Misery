@@ -2,7 +2,7 @@
 Misery Keyhandler for persistence
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 if !(hasInterface) exitWith {};
 

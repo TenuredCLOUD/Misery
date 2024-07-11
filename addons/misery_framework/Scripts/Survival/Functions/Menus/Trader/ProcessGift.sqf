@@ -3,7 +3,7 @@ Misery Trader Shop Gift processor
 Processes Gifting of items + stock management
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private ['_shop','_items','_stock','_playerFunds','_selectedItem','_index'];
 

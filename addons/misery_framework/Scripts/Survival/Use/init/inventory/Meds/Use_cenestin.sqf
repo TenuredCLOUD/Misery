@@ -2,7 +2,7 @@
 Misery Cenestin pill usage
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 MiseryACE=FALSE;
 if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=TRUE};

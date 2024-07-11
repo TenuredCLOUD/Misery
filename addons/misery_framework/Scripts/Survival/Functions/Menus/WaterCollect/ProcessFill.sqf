@@ -1,9 +1,9 @@
- /* -----------------------------------
+/*
 Misery WaterCollection processor
 Takes inputs from GUI and processes recipe (if it exists)
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 #include "\a3\ui_f\hpp\definedikcodes.inc"
 

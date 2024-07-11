@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Custom action for GUI parser
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private["_module","_units","_description","_script","_waitTime"];
 _module=_this select 0;

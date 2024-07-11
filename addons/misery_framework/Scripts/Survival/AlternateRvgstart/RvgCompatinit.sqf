@@ -6,7 +6,7 @@ RVG alternate init to work with survival framework: (Radiation system, as well a
 If survival framework module placed, this will not run, as Misery systems will exit
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
  
 //Haleks target exec defines:
 _targets = 0;

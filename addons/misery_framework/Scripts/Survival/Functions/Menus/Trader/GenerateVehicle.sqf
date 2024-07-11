@@ -1,4 +1,4 @@
- /* -----------------------------------
+/*
 Misery Vehicle Generater 
 Takes input data and generates a fully functional vehicle of defined class
 Also generates a varname TAG to the generated vehicle for reference
@@ -9,7 +9,7 @@ Usage Example:
 
 // Generate a vehicle
 ["B_Quadbike_01_F", spawnmarker_1] call Misery_fnc_GenerateVehicle;
--------------------------------------- */
+*/
 
 params ["_vehicleClassname", "_spawnMarker"]; 
 

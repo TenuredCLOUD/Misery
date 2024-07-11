@@ -2,7 +2,7 @@
 Misery comabt logger timeout
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 waitUntil {!isNull (findDisplay 49)};
 ((findDisplay 49) displayctrl 104) ctrlEnable false;

@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Pump fuel from fuel pump
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 [
 	player,

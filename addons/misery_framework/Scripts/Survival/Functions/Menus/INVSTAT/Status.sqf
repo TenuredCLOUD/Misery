@@ -2,7 +2,7 @@
 Misery Status UI for inventory framework 
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 #include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 

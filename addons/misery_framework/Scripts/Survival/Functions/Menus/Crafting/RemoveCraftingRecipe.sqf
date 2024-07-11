@@ -4,7 +4,7 @@ Designed specifically for Misery mod
 by TenuredCLOUD 
 
 Usage ex: "rvg_guttingknife" call Misery_fnc_RemoveCraftingRecipe; 
--------------------------------------- */
+*/
 
 _this params ["_recipeName"];
 private _playerRecipes = player getVariable "Misery_Crafting_DataSet";

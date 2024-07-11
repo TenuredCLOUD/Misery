@@ -3,7 +3,7 @@ Misery Trader Shop
 Processes Listob Icons as well as test but in the icon controls
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 [{!isNull findDisplay 982390},
 {

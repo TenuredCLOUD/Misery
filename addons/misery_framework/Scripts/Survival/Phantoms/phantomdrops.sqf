@@ -2,7 +2,7 @@
 Misery artifact dropper
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 //Enforce code runs on Server ONLY:
 if (isServer) then {

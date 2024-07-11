@@ -3,7 +3,7 @@ Misery Vehicle Refuel UI List populater
 Defines the selected refuel option, and passes values
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private _dialog = findDisplay 982385; 
 private _selectedIndex = lbCurSel 1500; // Get the index of the selected item

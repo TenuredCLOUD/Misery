@@ -2,7 +2,7 @@
 Misery Mechanic Shop UI
 Processes Repair purchases for vehicles... 
 Designed specifically for Misery mod 
--------------------------------------- */
+*/
 
 class MiseryMechShop_GUI
 {

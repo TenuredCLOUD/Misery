@@ -4,7 +4,7 @@ Continually watches generator position to make sure it doesn't move, if it moves
 This should prevent hiccups with fortification frameworks, or "moving" a generator
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 _Generator = _this select 0;
 _lastPos = getPosATL _Generator; 

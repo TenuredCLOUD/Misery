@@ -3,7 +3,7 @@ Misery Random medication function (adds random meds to units)
 Code concepts from Haleks equipment func 
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private _module = _this select 0;
 private _units= _this select 1;

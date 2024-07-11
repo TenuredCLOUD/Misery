@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Click action for custom item usage
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private["_item","_description"];
 _item=_this select 0;

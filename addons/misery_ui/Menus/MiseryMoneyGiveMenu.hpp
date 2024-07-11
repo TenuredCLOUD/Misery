@@ -2,7 +2,7 @@
 Misery Money Giving UI
 Processes Money Gifting to players
 Designed specifically for Misery mod 
--------------------------------------- */
+*/
 
 class Misery_MoneyGiveMenu_BG: RscFrame
 {

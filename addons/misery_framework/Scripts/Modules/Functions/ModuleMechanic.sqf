@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Module startup function (Mechanic zone)
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private _module=_this select 0;
 private _units=_this select 1;

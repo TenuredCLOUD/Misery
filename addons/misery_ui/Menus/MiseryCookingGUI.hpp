@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Cooking Framework GUI
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 class MiseryCookingFramework_GUI
 {

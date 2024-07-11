@@ -8,7 +8,7 @@ by TenuredCLOUD
 Usage: 
 
 [9999999] call Misery_fnc_formatNumber;
--------------------------------------- */
+*/
 
     private _num = (_this select 0) call BIS_fnc_numberText;  
     _num = _num splitString " " joinString ",";  

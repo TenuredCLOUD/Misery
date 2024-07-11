@@ -3,7 +3,7 @@ Misery Psyfield creation
 Code concepts from Haleks rad zones
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 //Params:
 private _module = _this select 0;

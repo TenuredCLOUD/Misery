@@ -2,7 +2,7 @@
 Misery Fill canteen from Jerrycan (dirty)
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 if (alive player) then {
 

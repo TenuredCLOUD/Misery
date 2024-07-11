@@ -3,7 +3,7 @@ Misery Trader Shop UI List populater
 Defines Traders purchase options, and passes current pricing values
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 waitUntil {sleep 0.01; !isNull findDisplay 982390};
 

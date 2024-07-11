@@ -2,7 +2,7 @@
 Misery Caffeine usage
 Designed specifically for Misery mod (also compatible with Ravage)
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 #include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 

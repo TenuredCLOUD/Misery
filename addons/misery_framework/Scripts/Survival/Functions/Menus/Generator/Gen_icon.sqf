@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Generator icon updater
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 disableSerialization;
 

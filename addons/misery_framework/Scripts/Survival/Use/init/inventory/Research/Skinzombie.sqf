@@ -2,7 +2,7 @@
 Misery Zombie skinning 
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position player);
 player setVariable ["_TC_sound", true, true];

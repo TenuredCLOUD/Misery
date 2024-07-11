@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Cooking Framework List populater for Recipes 
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 waitUntil {!isNull findDisplay 982379};
 

@@ -2,7 +2,7 @@
 Misery Medical treatment UI
 Processes Healing, and rad exposure treatment... 
 Designed specifically for Misery mod 
--------------------------------------- */
+*/
 
 class MiseryMedTreatment_GUI
 {

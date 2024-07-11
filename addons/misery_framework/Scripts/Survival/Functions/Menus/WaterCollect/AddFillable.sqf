@@ -5,7 +5,7 @@ by TenuredCLOUD
 
 Usage ex: 
 [["rvg_plasticBottleEmpty","rvg_plasticBottle",5]] call Misery_fnc_AddFillable;
--------------------------------------- */
+*/
 
 _this params ["_recipe"];
 private _playerRecipes = player getVariable ["Misery_WaterCollect_DataSet", []]; 

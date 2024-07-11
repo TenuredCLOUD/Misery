@@ -5,7 +5,7 @@ Concept Utilizes directed light hitpoint damage & Advanced Map object filtering
 No performance loss is notice-able due to processing before scenario loading, and running completely on the server...
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 if (isServer) then {
     private _axis = worldSize / 2;   

@@ -3,7 +3,7 @@ Misery Take Money UI Action process
 Processes money taking from corpses
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 [{!isNull findDisplay 358492},
 {

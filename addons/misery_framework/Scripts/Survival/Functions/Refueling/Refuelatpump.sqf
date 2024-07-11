@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Refuel at pump check
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private ["_refillatpump","_target"];
 

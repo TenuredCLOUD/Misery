@@ -3,7 +3,7 @@ Misery Generator Running Audio loop
 Controls running audio synchronization...
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 _Generator = _this select 0;
 

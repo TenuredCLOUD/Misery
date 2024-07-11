@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Mod Menu GUI updater
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 hintSilent"";
 ctrlShow[982377,TRUE];

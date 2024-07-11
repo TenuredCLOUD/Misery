@@ -1,9 +1,9 @@
- /* -----------------------------------
+/*
 Misery POI Master Checking loop 
 Consistenty checks players positions relative to module positions
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private _modules = allMissionObjects "Misery_POI"; 
 

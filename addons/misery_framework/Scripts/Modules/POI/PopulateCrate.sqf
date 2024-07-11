@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 POI Crate Loot Generator
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 _ammoBox = _this select 0;
 _crateweaponArray = _this select 1;

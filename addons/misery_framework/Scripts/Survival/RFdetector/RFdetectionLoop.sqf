@@ -4,7 +4,7 @@ Runs audio samples + constant detection cycles
 Detects entities as well as Artifacts in Ground weapon holders
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 #include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 

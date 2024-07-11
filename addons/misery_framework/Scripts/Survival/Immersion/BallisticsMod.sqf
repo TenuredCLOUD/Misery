@@ -1,4 +1,4 @@
- /* -----------------------------------
+/*
 Misery Ballistics modifier startup
 Checks what ammunition game or targets are hit with, if not safe ammunition, target is obliterated
 Should be JIP and MP compatible due to third parameter being used for active entity EH handling...
@@ -14,7 +14,7 @@ waitUntil {sleep 1; !isNil "MiseryClientReady"};
 if (!isNil "MiseryClientReady") then {
 ["Rabbit_F", ["B_9x21_Ball", "B_12Gauge_Pellets"]] call Misery_fnc_BallisticsModifier;
 };
--------------------------------------- */
+*/
 params ["_entityType", "_allowedAmmo"];
 
 _Misery_SGTypes = [_entityType] call Misery_fnc_ParseArray2;

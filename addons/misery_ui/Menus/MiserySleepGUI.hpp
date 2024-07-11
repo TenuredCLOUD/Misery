@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Sleep system GUI (Singleplayer only)
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 class MiserySleepMenuGUI
 {

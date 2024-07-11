@@ -3,7 +3,7 @@ Misery Sleep system (Singleplayer only)
 Defines the selected hour for processing time skip, and stat drops, etc... 
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private ["_ctrl","_index","_SelectedHourVal","_SleepDecrease","_HungerDecrease","_ThirstDecrease"];
 

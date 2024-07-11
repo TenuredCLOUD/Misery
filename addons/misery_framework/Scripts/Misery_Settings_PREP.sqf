@@ -1,10 +1,10 @@
- /* -----------------------------------
+/*
 Misery Main framework settings
 Pushes all CBA settings data to startup PREP for further processing...
 Settings are processed prior to session startup, values are defined prior to session start as well...
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 			#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 

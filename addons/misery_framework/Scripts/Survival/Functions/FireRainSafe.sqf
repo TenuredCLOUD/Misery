@@ -1,9 +1,9 @@
- /* -----------------------------------
+/*
 Misery under roof check for Fire objects
 Checks for Roof over fire, this aids with rain resistance
 Designed specifically for Misery mod 
 By TenuredCLOUD
--------------------------------------- */
+*/
 
 private ["_firePos","_fireDir","_maxDistance","_endPos","_int","_roof","_isUnderRoof"];  
 

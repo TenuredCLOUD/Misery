@@ -1,4 +1,4 @@
- /* -----------------------------------
+/*
 Temperature Conversions & Wind Chill Algorithm
 Returns calculated windchill as well as world temperatures (Runs on a per client basis, but base data is synced to all clients)
 Calculates Wind chill player is simulated to be experiencing (simplified algorithm)
@@ -6,7 +6,7 @@ Calculates air temperature with elevational differences (simplified algorithm)
 Utilizes Overcast and Rain values as proxies to simulate humidity (simplified algorithm)
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private _airTemp = ambientTemperature select 0;    
 private _seaTemp = ambientTemperature select 1;  

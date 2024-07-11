@@ -2,7 +2,7 @@
 Misery Headlmap batteries
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 if ("Misery_9vbat" in items player) then {
 	

@@ -2,7 +2,7 @@
 Misery PDA reboot sequence
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 if (alive player) exitwith {
 

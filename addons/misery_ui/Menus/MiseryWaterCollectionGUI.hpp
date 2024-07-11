@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Water Collection GUI
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 class MiseryWaterCollection_GUI
 {

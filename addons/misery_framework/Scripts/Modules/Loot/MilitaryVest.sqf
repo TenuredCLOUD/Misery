@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Mil vest checker
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private["_item","_military","_armour"];
 _item=_this;

@@ -3,7 +3,7 @@ Misery Trader Shop Sell / Buy Switching processor
 Processes Buying or Selling (Changes UI)
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private _dialog = findDisplay 982390;
 private _list = _dialog displayCtrl 1500;

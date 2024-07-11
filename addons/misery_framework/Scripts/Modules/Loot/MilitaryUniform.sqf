@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Mil uniform checker
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private["_item","_text","_side"];
 _item=_this;

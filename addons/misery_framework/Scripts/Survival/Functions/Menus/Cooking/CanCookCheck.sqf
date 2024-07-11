@@ -1,9 +1,9 @@
- /* -----------------------------------
+/*
 Misery Cooking Framework Item check
 Processes recipe items needed, if not all are met, code exits as false
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 params ["_requirements"];
 if (MiseryDebug) then {

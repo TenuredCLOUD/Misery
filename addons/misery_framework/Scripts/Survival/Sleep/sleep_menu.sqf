@@ -1,9 +1,9 @@
- /* -----------------------------------
+/*
 Misery Sleep system (Singleplayer only)
 Code concepts from Haleks Ravage mod (with permission)
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 _obj = (_this select 3) select 0;
 _nearFire = false;

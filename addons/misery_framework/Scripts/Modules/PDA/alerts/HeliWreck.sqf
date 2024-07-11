@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Heliwreck alert startup 
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private ["_pos","_marker","_WreckID","_WreckType","_WreckTypeName"];
 

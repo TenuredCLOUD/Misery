@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Rearming
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 #include "\a3\ui_f\hpp\definedikcodes.inc"
 

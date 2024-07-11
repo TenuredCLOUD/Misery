@@ -2,7 +2,7 @@
 Misery Banking UI
 Processes Money starage, as well as a joint player account ("Phoenix fund")
 Designed specifically for Misery mod 
--------------------------------------- */
+*/
 
 class Misery_Banking_UI
 {

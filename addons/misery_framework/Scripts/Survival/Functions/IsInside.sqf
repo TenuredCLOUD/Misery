@@ -1,9 +1,9 @@
- /* -----------------------------------
+/*
 Misery Isinside of building check 
 Checks for Roof over player, as well as 2 or more walls (player must be "boxed in")
 Designed specifically for Misery mod 
 By TenuredCLOUD
--------------------------------------- */
+*/
 
 private ["_playerPos","_isUnderRoof","_wallCount","_playerDir","_maxDistance","_endPos","_introof","_intwalls","_wall","_roof"];     
  

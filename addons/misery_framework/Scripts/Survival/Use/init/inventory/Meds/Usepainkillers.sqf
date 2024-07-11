@@ -2,7 +2,7 @@
 Misery Pain killer pack usage
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 if (!hasInterface) exitWith {};
 

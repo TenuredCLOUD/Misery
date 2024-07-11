@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 POI AI Generator (Raid)
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private [
 "_module",

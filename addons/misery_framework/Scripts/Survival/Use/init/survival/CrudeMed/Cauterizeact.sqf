@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Cauterization near fire sources (ACE medical compat ONLY)
 Designed specifically for Misery mod 
 by TenuredCLOUD
--------------------------------------- */
+*/
 
 [
 	player,

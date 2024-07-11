@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery resupply Vehicle Icon & name updater
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 disableSerialization;
 

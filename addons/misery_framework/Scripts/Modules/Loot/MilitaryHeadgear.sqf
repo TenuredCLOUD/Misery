@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Mil Headgear checker
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private["_item","_sides"];
 _item=_this;

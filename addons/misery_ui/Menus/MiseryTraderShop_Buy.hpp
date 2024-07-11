@@ -2,7 +2,7 @@
 Misery Trader / Shop UI
 Processes Buying of items... 
 Designed specifically for Misery mod 
--------------------------------------- */
+*/
 
 class Misery_TraderShop_Buy_GUI
 {

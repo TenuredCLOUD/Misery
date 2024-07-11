@@ -2,7 +2,7 @@
 Misery Sleeping pill pack usage
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 if (!hasInterface) exitWith {};
 

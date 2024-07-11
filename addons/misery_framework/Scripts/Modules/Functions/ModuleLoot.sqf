@@ -1,9 +1,9 @@
- /* -----------------------------------
+/*
 Misery Loot framework startup
 Code concepts from Drongo edited by TenuredCLOUD
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private["_module","_units","_activated"];
 _module=_this select 0;

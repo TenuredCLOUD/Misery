@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 POI AI Generator (Campground)
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private [
 "_module",

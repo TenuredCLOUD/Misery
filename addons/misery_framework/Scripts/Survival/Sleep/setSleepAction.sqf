@@ -1,9 +1,9 @@
- /* -----------------------------------
+/*
 Misery Sleep system (Singleplayer only)
 Code concepts from Haleks Ravage mod (with permission)
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 rvg_beds = ["sofa_01_f.p3d", "postel_panelak2.p3d","woodenbed_01_f.p3d","bed_big_a.p3d","bed_husbands.p3d","vojenska_palanda.p3d","postel_manz_kov.p3d","postel_panelak1.p3d","sleeping_bag_blue_f.p3d","sleeping_bag_brown_f.p3d","tenta_f.p3d","tentdome_f.p3d"];
 

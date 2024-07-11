@@ -3,7 +3,7 @@ Misery Vehicle Mechanic Repair Shop UI List populater
 Defines the selected purchase option, and passes current pricing values
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
     private _selected = _list lbCurSel;
     if (_selected == -1) exitWith {}; 

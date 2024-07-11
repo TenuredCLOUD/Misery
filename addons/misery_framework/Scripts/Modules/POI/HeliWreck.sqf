@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 POI Generator (Heli-Wreck)
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private [
     "_module",

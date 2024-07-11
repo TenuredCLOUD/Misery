@@ -4,7 +4,7 @@ Runs audio samples + constant detection cycles
 Also runs a generated numeric chance spawner for extremely hostile entities
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 [{(player getVariable ["Misery_RFEMFDet", false]) == true},
 {

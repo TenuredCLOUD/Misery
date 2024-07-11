@@ -5,7 +5,7 @@ by TenuredCLOUD
 
 Usage example:
 ["ailment","name of ailment"] call Misery_fnc_RemoveBuffOrAilment;
--------------------------------------- */
+*/
 
 _this params ["_type", "_index"];
 _index = parseNumber _index;  // Ensure _index is a number

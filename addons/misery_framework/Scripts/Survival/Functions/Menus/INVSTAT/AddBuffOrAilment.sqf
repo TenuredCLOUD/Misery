@@ -5,7 +5,7 @@ by TenuredCLOUD
 
 Usage example:
 ["ailment","name of ailment", "path/to/image/file.paa", "description"] call Misery_fnc_AddBuffOrAilment;
--------------------------------------- */
+*/
 
 _this params ["_type", "_name", "_image", "_description"];
 private _arrayName = if (_type == "buff") then {"buffs"} else {"ailments"};

@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Cooking Framework Recipe Formatter
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private _dialog = findDisplay 982379;
 private _list = _dialog displayCtrl 1500;

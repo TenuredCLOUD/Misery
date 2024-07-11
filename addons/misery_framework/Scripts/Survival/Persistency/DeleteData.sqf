@@ -2,7 +2,7 @@
 Misery Character deletion
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private ["_saveName"];
 

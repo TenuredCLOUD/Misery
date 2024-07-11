@@ -2,7 +2,7 @@
 Misery Refueling Shop UI
 Processes Refueling purchases for vehicles... 
 Designed specifically for Misery mod 
--------------------------------------- */
+*/
 
 class MiseryRefuelShop_GUI
 {

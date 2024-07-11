@@ -1,8 +1,8 @@
-﻿ /* -----------------------------------
+﻿/*
 Building add / parser for Loot spawning
 Designed specifically for Misery mod 
 SourceCode by Drongo edited by TenuredCLOUD 
--------------------------------------- */
+*/
 
 private["_b","_pos","_marker","_bText","_positions"];
 _b=_this;

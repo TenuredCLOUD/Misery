@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Advanced refueling (Syphoning) - by : TenuredCLOUD with great help from Drongo for easy module defines 
 Array input for refueling amount per Jerrycan
 Designed specifically for Misery mod
- -------------------------------------- */
+ */
 
 private _Jerrycanused= _this; // item classname
 private _Fueltype= 0; // 0=Diesel // 1=Petrol // 2=JetFuel 

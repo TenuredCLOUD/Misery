@@ -2,7 +2,7 @@
 Misery PDA batteries
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 if !("Misery_lithiumbattery" in items player) then {
 

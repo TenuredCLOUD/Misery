@@ -1,8 +1,8 @@
- /* -----------------------------------
+/*
 Misery Crafting Framework GUI
 Designed specifically for Misery mod 
 by TenuredCLOUD 
--------------------------------------- */
+*/
 
 class MiseryCraftingFramework_GUI
 {

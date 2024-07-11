@@ -2,7 +2,7 @@
 Misery Check if player is near fire
 Designed specifically for Misery mod 
 Source code Drongo, expanded upon by TenuredCLOUD
--------------------------------------- */
+*/
 
 private _nearFire=FALSE;
 

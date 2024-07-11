@@ -2,7 +2,7 @@
 Misery Action / Inventory Framework GUI
 Processes Actions, as well as status HUD
 Designed specifically for Misery mod 
--------------------------------------- */
+*/
 
 class MiseryINVACT_GUI
 {
