@@ -32,6 +32,12 @@ Both methods of credit acknowledgment are acceptable.
 
 By adhering to these guidelines, we can ensure respect for the original creators' work and foster a collaborative and respectful modding community.
 
+**Contributing to Misery**
+
+Misery is a community-driven project and we welcome contributions from everyone who is interested in improving this mod. Whether you're fixing bugs, improving the code, or even reporting errors, every contribution helps!
+
+While you are free to fork, modify, and contribute to the project, you cannot freely distribute the mod on the internet without explicit permission.
+
 ________________________________________________________________________________
 ================================================================================
                 Gruppe Adler Arma Public License (GRAD APL) v1.1
