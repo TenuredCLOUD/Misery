@@ -1,0 +1,19 @@
+name: BOM Check
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  bom-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: arma-actions/bom-check@v1
+        name: Check for BOM
+        with:
+          path: 'addons'
