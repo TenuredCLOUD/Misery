@@ -17,6 +17,14 @@
     Visit us on <a href="https://discord.gg/5gD3DwZqkK">Discord</a></strong></sup>
 </p>
 
+# 🚧 Work in Progress 🚧
+
+Please note that Misery 2.0 is currently under active development and **not ready for release**. 
+
+## Current State
+
+The mod is still missing several code functionalities and is in the process of being prepared for the **2.0 build**. We are also in the process of conducting extensive testing, including **multiplayer testing**.
+
 **Misery** draws inspiration from renowned mods such as DayZ, Ravage, Heros Survive, and acclaimed games like S.T.A.L.K.E.R. However, it distinguishes itself through the incorporation of custom assets and a unique, challenging twist on survival mechanics
 
 The mod also showcases the collaborative efforts of various community authors and friends. Designed as a framework, Misery aims to augment the creative possibilities for scenario designers in crafting a post-apocalyptic world
