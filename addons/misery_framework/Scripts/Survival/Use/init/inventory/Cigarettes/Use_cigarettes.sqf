@@ -22,8 +22,6 @@ private _MFear = player getVariable ["MiseryFear", MIS_FEAR];
 
 	playSound3D ["Misery\audio\sounds\immersion\Matchsmoking.ogg", player, false, getPosASL player, 4, 1, 10];
 
-  0 = [player, "rvg_matches", -1] call RVG_fnc_manipulateContainers; //remove match from box using RVG func
-
 	//Remove some fear due to cig smoking:
   if ((count(entities"Misery_FearFramework")) > 0) then {
 	player setVariable ["MiseryFear", (_MFear - 1.5)];
@@ -45,7 +43,6 @@ private _MFear = player getVariable ["MiseryFear", MIS_FEAR];
 _compteur = 0;
 player setVariable ["_antirad", true];
 if (isNil {player getVariable "radMonitorON"}) then {
-	0 = [] spawn rvg_fnc_radMonitor;
 };
 while {_compteur < 250} do {
 	_effectSpeed = 1 + random 2;
@@ -66,7 +63,6 @@ titleText ["You smoked the last cigarette...", "PLAIN DOWN"];
 _compteur = 0;
 player setVariable ["_antirad", true];
 if (isNil {player getVariable "radMonitorON"}) then {
-	0 = [] spawn rvg_fnc_radMonitor;
 };
 while {_compteur < 250} do {
 	_effectSpeed = 1 + random 2;
@@ -88,7 +84,6 @@ player additem "Misery_cigarettepack";
 _compteur = 0;
 player setVariable ["_antirad", true];
 if (isNil {player getVariable "radMonitorON"}) then {
-	0 = [] spawn rvg_fnc_radMonitor;
 };
 while {_compteur < 250} do {
 	_effectSpeed = 1 + random 2;
@@ -131,7 +126,6 @@ if ("Misery_lighter" in items player) then {
 _compteur = 0;
 player setVariable ["_antirad", true];
 if (isNil {player getVariable "radMonitorON"}) then {
-	0 = [] spawn rvg_fnc_radMonitor;
 };
 while {_compteur < 250} do {
 	_effectSpeed = 1 + random 2;
@@ -152,7 +146,6 @@ titleText ["You smoked the last cigarette...", "PLAIN DOWN"];
 _compteur = 0;
 player setVariable ["_antirad", true];
 if (isNil {player getVariable "radMonitorON"}) then {
-	0 = [] spawn rvg_fnc_radMonitor;
 };
 while {_compteur < 250} do {
 	_effectSpeed = 1 + random 2;
@@ -174,7 +167,6 @@ player additem "Misery_cigarettepack";
 _compteur = 0;
 player setVariable ["_antirad", true];
 if (isNil {player getVariable "radMonitorON"}) then {
-	0 = [] spawn rvg_fnc_radMonitor;
 };
 while {_compteur < 250} do {
 	_effectSpeed = 1 + random 2;

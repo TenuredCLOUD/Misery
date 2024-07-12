@@ -1,11 +1,11 @@
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+
 /*
 Misery Generator Running Audio loop
 Controls running audio synchronization...
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */
-
-#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 _Generator = _this select 0;
 

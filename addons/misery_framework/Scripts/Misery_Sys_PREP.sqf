@@ -1,11 +1,11 @@
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+
 /*
 Misery Module startup
 Reads all module startups on scenario load
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */
-
-#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 //if ((count(entities"Misery_Survival")) < 1) exitWith {}; //Exit startup code if no Misery survival module is placed 
 

@@ -1,10 +1,10 @@
-﻿/* 
+﻿#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+
+/* 
 * Misery Loot generation startup
 * Designed specifically for Misery mod 
 * Code concepts from Drongo edited by TenuredCLOUD
 */
-
-#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 private["_players","_buildings","_allBuildings","_add"];
 if!(isServer)exitWith{};

@@ -1,11 +1,11 @@
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+
 /*
 Misery Loot framework start
 Code concepts from Drongo edited by TenuredCLOUD
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */
-
-#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 private["_info","_c","_types","_bannedTypes","_remove","_weapons","_magazines","_military","_ammo","_grenadeParents","_explosiveParents","_mag","_parents","_parent","_script"];
 

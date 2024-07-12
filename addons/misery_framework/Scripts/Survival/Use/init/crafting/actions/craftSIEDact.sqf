@@ -9,7 +9,6 @@
 	"call Misery_fnc_craftsIED",
 	{
 	player action ["hideWeapon",player,player,101]; //holster weapon on start
-	0 = [player, 25] call rvg_fnc_alertNearby;
 	},
 	{private _prog = (_this select 4);
 	private _progcalc = round (_prog / 24 * 100);

@@ -5,8 +5,8 @@ by TenuredCLOUD
 */
 
 private _module=(entities"Misery_HUDDefines")select 0;
-MiseryToolsHUD=_module getVariable"Misery_Toolsdisplay";
-MiseryGMDisplayprop=_module getVariable"Misery_Gascartridgedisplay";
+MiseryToolsHUD=_module getVariable "Misery_Toolsdisplay";
+MiseryGMDisplayprop=_module getVariable "Misery_Gascartridgedisplay";
 
 if (!hasInterface) exitWith {};
 

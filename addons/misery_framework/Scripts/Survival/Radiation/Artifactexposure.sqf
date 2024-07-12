@@ -1,10 +1,10 @@
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+
 /*
 Misery artifact radiation exposure
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */
-
-#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 [{[MIS_Artifact,(items player)] call Misery_fnc_Inarray}, 
 {

@@ -7,9 +7,9 @@ by TenuredCLOUD
 private["_module","_units","_description","_script","_waitTime"];
 _module=_this select 0;
 _units=_this select 1;
-_description=_module getVariable"Misery_description";
-_script=_module getVariable"Misery_script";
-_waitTime=_module getVariable"Misery_waitTime";
+_description=_module getVariable "Misery_description";
+_script=_module getVariable "Misery_script";
+_waitTime=_module getVariable "Misery_waitTime";
 if(_description=="")exitWith{};
 if(_script=="")exitWith{};
 waitUntil{!isNil"MiseryActionsCustom"};

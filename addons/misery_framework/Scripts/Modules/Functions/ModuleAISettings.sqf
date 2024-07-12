@@ -13,11 +13,11 @@ waitUntil{sleep 1; !isNil "MiseryReady"};
 
 if (_activated && isServer) then {
 [
-(_module getVariable"Misery_AI_SpawnCheckDistance"),
-(_module getVariable"Misery_AI_DeleteCheckDistance"),
-(_module getVariable"Misery_AI_SpawnTimer"),
-(_module getVariable"Misery_AI_DeleteTimer"),
-(_module getVariable"Misery_AI_SpawnLimit")
+(_module getVariable "Misery_AI_SpawnCheckDistance"),
+(_module getVariable "Misery_AI_DeleteCheckDistance"),
+(_module getVariable "Misery_AI_SpawnTimer"),
+(_module getVariable "Misery_AI_DeleteTimer"),
+(_module getVariable "Misery_AI_SpawnLimit")
 ] execVM"Misery\Scripts\Modules\Ambient_AI_Zone\Settings.sqf";
 };
 TRUE

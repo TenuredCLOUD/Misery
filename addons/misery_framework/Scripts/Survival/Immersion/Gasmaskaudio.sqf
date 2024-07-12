@@ -1,10 +1,10 @@
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+
 /*
 Misery Gasmask audio loop
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */
-
-#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 [{((goggles player in antirad_goggles) || (vest player in antirad_vests) || (backpack player in antirad_packs))},
 {

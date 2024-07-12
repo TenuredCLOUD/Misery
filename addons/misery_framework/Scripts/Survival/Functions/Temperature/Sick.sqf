@@ -1,10 +1,10 @@
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+
 /*
 Sick
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */
-
-#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 private ["_sick","_MPlayertemp","_MExposure","_MThirst","_MDebuffs","_sickcalc1","_Miserytempsickcalc1","_sickcalc2","_Miserytempsickcalc2"];
 

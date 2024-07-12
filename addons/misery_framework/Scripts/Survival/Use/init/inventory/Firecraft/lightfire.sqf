@@ -104,8 +104,7 @@ if (_index != -1) then {
 		// If lighter is available, do not consume a match
 	}else{ 
     if ("rvg_matches" in magazines player) then {
-		// If no lighter, a match is consumed
-		0 = [player, "rvg_matches", -1] call RVG_fnc_manipulateContainers;
+
 	};
   };
   private _actionID = (_this select 2);
@@ -133,8 +132,7 @@ if (_index != -1) then {
 		// If lighter is available, do not consume a match
 	}else{ 
     if ("rvg_matches" in magazines player) then {
-		// If no lighter, a match is consumed
-		0 = [player, "rvg_matches", -1] call RVG_fnc_manipulateContainers;
+
 	};
   };
 	private _actionID = (_this select 2);

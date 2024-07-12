@@ -1,10 +1,10 @@
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+
 /*
 Misery hunger immersion
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */
-
-#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 [{!(isNil {player getVariable "MiseryHunger"}) && ((player getVariable ["MiseryHunger", MIS_HUNGER]) < 75)},
 {

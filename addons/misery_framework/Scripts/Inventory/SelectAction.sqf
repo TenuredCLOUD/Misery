@@ -1,11 +1,11 @@
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+
 /*
 Misery Mod actions
 Default Mod actions
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */
-
-#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 disableSerialization;
 private _ctrl=(findDisplay 982377)displayCtrl 1500;
@@ -642,21 +642,6 @@ sleep 1;
 player additem 'Misery_WaterJerryE';
 };
 	};
-
-if (_action=="Purify water") exitwith {
-(findDisplay 46 createDisplay"MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
-if !(call Misery_fnc_hasptablets) exitwith {
-private _formattedText ='You dont have any purification tablets...', 'PLAIN DOWN'];
-};
-if (call Misery_fnc_hasptablets) exitwith {
-private _formattedText ='You use a purification tablet in your Jerrycan...', 'PLAIN DOWN'];
-0 = [player, "rvg_purificationTablets", -1] call RVG_fnc_manipulateContainers;
-player removeitem 'Misery_WaterJerryFD'; 
-sleep 1;
-player additem 'Misery_WaterJerryF';
-};
-};
 
 //PDA:
 if(_action=="Use PDA") exitWith {

@@ -28,7 +28,6 @@ by TenuredCLOUD
     if ("Misery_Chainsaw" in items player) then {
 	MiseryCanSplitWoodChain = true;
 	MiseryCanSplitWoodAxe = false;
-	0 = [player, 500] call rvg_fnc_alertNearby;
 	private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position player);
 	_soundDummy attachTo [player, [0, 0, 0], "Pelvis"];
 	player setVariable ["_TC_sound", true,true];
@@ -42,7 +41,6 @@ by TenuredCLOUD
 	if ("Misery_Woodaxe" in items player || (MiseryWBKIMS && {currentWeapon player in ['WBK_axe','WBK_brush_axe','WBK_craftedAxe','FireAxe','Axe']})) then {	
 	MiseryCanSplitWoodAxe = true;
 	MiseryCanSplitWoodChain = false;
-	0 = [player, 150] call rvg_fnc_alertNearby;
 	private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position player);
 	player setVariable ["_TC_sound", true,true];
 	[_soundDummy, ["WoodChop01", 150]] remoteExec ["say3D", 0, _soundDummy];

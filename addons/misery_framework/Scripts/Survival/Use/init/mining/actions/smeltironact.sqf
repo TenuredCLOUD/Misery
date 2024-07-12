@@ -8,7 +8,7 @@
 	"call Misery_fnc_smeltiron",
 	{//start action:
 	player action ["hideWeapon",player,player,101]; //holster weapon on start
-	0 = [player, 50] call rvg_fnc_alertNearby;
+	
 	//soundsource:
 	private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position player);
 	player setVariable ["_TC_sound", true,true];

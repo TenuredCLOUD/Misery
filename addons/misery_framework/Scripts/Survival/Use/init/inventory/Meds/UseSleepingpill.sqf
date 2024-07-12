@@ -1,10 +1,10 @@
-﻿/*
+﻿#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+
+/*
 Misery Sleep pill usage
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */
-
-#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 _MSleepiness = player getVariable ["MiserySleepiness", MIS_SLEEP];
 _MSleeppillstaken = player getVariable ["MiserySleeppillstaken", 0];

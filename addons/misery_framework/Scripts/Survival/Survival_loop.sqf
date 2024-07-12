@@ -1,3 +1,5 @@
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+
 /*
 Misery Main Survival loop 
 Client survival loop runs after Client settings are defined
@@ -7,8 +9,6 @@ by TenuredCLOUD
 
 //Enforce client only loop:
 if !(hasInterface) exitWith {};
-
-#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 [{!isNil "MiseryClientReady" && alive player},
 {

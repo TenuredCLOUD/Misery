@@ -1,10 +1,10 @@
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+
 /*
 Misery gasmask cartridge degradation
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */
-
-#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 //If No Client data exists add default cartridge capacity:
 if (isNil{(profileNamespace getVariable MiserySurvivalSaveName)}) then {

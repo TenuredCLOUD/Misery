@@ -23,7 +23,6 @@ if (MiseryUsingiBuild) exitwith {
 	player action["SWITCHWEAPON",player,player,-1];
 	};
 	//soundsource:
-	0 = [player, 250] call rvg_fnc_alertNearby;
 	private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position player);
 	_soundDummy attachTo [player, [0, 0, 0], "Pelvis"];
 	player setVariable ["_TC_sound", true,true];
@@ -96,7 +95,6 @@ if !(MiseryUsingiBuild) exitwith {
 	player action["SWITCHWEAPON",player,player,-1];
 	};
 	//soundsource:
-	0 = [player, 250] call rvg_fnc_alertNearby;
 	private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position player);
 	_soundDummy attachTo [player, [0, 0, 0], "Pelvis"];
 	player setVariable ["_TC_sound", true,true];

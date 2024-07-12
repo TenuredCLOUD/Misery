@@ -1,11 +1,11 @@
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+
 /*
 Misery Item usage defines 
 Defines what inventory items do
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */
-
-#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 private ["_selectedItem","_debuffs","_entry","_MHunger","_MThirst","_MDebuffs","_MExposure","_hunger","_thirst","_debuffAdd","_debuffRemove","_script","_replaceWith","_playaudio","_checkforGmask","_checkforCopener","_waittill","_radsremoved","_radsadd","_feverremoved","_coldremoved"];
 

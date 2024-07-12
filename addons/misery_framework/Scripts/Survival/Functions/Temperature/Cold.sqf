@@ -1,10 +1,10 @@
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+
 /*
 Cold
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */
-
-#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 private ["_cold","_MPlayertemp","_MExposure","_MHunger","_MDebuffs","_coldexposure","_Miserytempdefcoldcalc"];
 

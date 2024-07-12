@@ -1,10 +1,10 @@
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+
 /*
 Temperature warming checks 
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */
-
-#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 private ["_clothesWarmth","_MPlayertemp","_MExposure","_MDebuffs","_nearfirecalc","_sicknearfirecalc","_insidewarmcalc","_sickinsidewarmcalc","_invehiclecalc","_sickinvehiclecalc"];
 

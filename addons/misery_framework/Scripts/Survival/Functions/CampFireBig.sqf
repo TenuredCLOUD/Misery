@@ -134,10 +134,7 @@ if (_index != -1) then {
 	if ("Misery_lighter" in items player) then {
 		// If lighter is available, do not consume a match
 	}else{ 
-    if ("rvg_matches" in magazines player) then {
-		// If no lighter, a match is consumed
-		0 = [player, "rvg_matches", -1] call RVG_fnc_manipulateContainers;
-	};
+		// Needs Misery matches code
   };
 	},
 	{
@@ -161,10 +158,7 @@ if (_index != -1) then {
 	if ("Misery_lighter" in items player) then {
 		// If lighter is available, do not consume a match
 	}else{ 
-    if ("rvg_matches" in magazines player) then {
-		// If no lighter, a match is consumed
-		0 = [player, "rvg_matches", -1] call RVG_fnc_manipulateContainers;
-	};
+    // Need Misery matches code
   };
 	},
 	[],

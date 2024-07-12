@@ -1,11 +1,11 @@
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+
 /*
 Misery Function compile PREP
 Compiles most Misery functions prior to sessions
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */
-
-#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 //Modules
 PREPROC_FUNCTION(Misery_fnc_ModuleCustomItemAction,MIS_FILESYS(Modules\Functions\ModuleCustomItemAction))

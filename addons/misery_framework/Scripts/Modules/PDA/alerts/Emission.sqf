@@ -1,10 +1,10 @@
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+
 /*
 Misery Emission alert startup
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */
-
-#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 [{(!isNil "tts_emission_emissionIsActive" && !isNil "tts_emission_progressState") && tts_emission_emissionIsActive == true && tts_emission_progressState == 0},
 {

@@ -12,7 +12,7 @@ disableSerialization;
 		params ["_args", "_handle"];
 		if ((!(goggles player in antirad_goggles) && !(vest player in antirad_vests || backpack player in antirad_packs)) || (!alive player)) exitWith {
 			[_handle] call CBA_fnc_removePerFrameHandler;
-			((uiNamespace getVariable"Gascartridge")displayCtrl 55554)ctrlSetStructuredText parseText"";
+			((uiNamespace getVariable "Gascartridge")displayCtrl 55554)ctrlSetStructuredText parseText"";
 			(findDisplay 46 createDisplay"Gascartridge")closeDisplay 1;
 			[] execVM "Misery\Scripts\Survival\HUD\gasmaskcart.sqf";
 		};

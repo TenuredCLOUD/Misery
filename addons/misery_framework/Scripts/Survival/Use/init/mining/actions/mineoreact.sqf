@@ -16,7 +16,6 @@ by TenuredCLOUD
 	{
 	//Starting variable:
 	MiseryCanMineOre = true;
-	0 = [player, 50] call rvg_fnc_alertNearby;
 	private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position player);
 	player setVariable ["_TC_sound", true,true];
 	[_soundDummy, ["Pickaxe60", 150]] remoteExec ["say3D", 0, _soundDummy];

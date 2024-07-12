@@ -1,10 +1,10 @@
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+
 /*
 Misery Cocaine usage
 Designed specifically for Misery mod (also compatible with Ravage)
 by TenuredCLOUD 
 */
-
-#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 private _MSleepiness = player getVariable ["MiserySleepiness", MIS_SLEEP];
 

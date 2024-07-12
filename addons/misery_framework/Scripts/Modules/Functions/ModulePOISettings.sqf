@@ -13,11 +13,11 @@ waitUntil{sleep 1; !isNil "MiseryReady"};
 
 if (_activated && isServer) then {
 [
-(_module getVariable"MiseryPOISpawnCheckDistance"),
-(_module getVariable"MiseryPOIDeleteCheckDistance"),
-(_module getVariable"MiseryPOISpawnTimer"),
-(_module getVariable"MiseryPOIDeleteTimer"),
-(_module getVariable"MiseryPOISpawnLimit")
+(_module getVariable "MiseryPOISpawnCheckDistance"),
+(_module getVariable "MiseryPOIDeleteCheckDistance"),
+(_module getVariable "MiseryPOISpawnTimer"),
+(_module getVariable "MiseryPOIDeleteTimer"),
+(_module getVariable "MiseryPOISpawnLimit")
 ] execVM"Misery\Scripts\Modules\POI\Settings.sqf";
 };
 TRUE

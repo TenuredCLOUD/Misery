@@ -18,7 +18,6 @@ by TenuredCLOUD
 	{
 	//start action:
 	player action ["sitDown",player]; 
-	0 = [player, 50] call rvg_fnc_alertNearby;
   //soundsource:
 _guitarsong = selectRandom [
 "guitar_1",

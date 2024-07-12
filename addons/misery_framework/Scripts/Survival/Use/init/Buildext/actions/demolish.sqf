@@ -13,7 +13,6 @@ by TenuredCLOUD
 	"call Misery_fnc_HasSledghammer",
 	"call Misery_fnc_NearNMB",
 	{
-	0 = [player, 100] call rvg_fnc_alertNearby;
 	private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position player);
 	player setVariable ["_TC_sound", true,true];
 	[_soundDummy, ["SHammerWOOD", 150]] remoteExec ["say3D", 0, _soundDummy];

@@ -12,10 +12,10 @@ waitUntil{sleep 1; !isNil "MiseryReady"};
 
 if (_activated && isServer) then {
 [
-(_module getVariable"MiseryArtifactSpawnCheckDistance"),
-(_module getVariable"MiseryArtifactDeleteCheckDistance"),
-(_module getVariable"MiseryArtifactSpawnTimer"),
-(_module getVariable"MiseryArtifactDeleteTimer")
+(_module getVariable "MiseryArtifactSpawnCheckDistance"),
+(_module getVariable "MiseryArtifactDeleteCheckDistance"),
+(_module getVariable "MiseryArtifactSpawnTimer"),
+(_module getVariable "MiseryArtifactDeleteTimer")
 ] execVM"Misery\Scripts\Modules\Loot\Artifacts\Settings.sqf";
 };
 TRUE

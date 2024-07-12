@@ -1,10 +1,10 @@
-﻿/*
+﻿#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+
+/*
 Misery Coldpack usage
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */
-
-#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 private _MExposure = player getVariable ["MiseryExposure", MIS_EXPOSURE];
 

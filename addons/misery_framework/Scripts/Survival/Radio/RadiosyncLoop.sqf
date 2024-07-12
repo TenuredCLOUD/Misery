@@ -1,3 +1,5 @@
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+
 /*
 Radio resync
 Runs checks to resync radio if player 
@@ -5,8 +7,6 @@ picks up / starts with an Radio that's on
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */
-
-#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 [{((!isNil "MiseryRadioBroadcastsystem") && ("Misery_PortableradioON" in items player) && (player getVariable ["Misery_HHRadio", false]) == false) && (alive player)},
 {

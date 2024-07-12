@@ -1,10 +1,10 @@
-﻿/*
+﻿#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+
+/*
 Misery Antibiotic pill usage
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */
-
-#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 private _MInfection = player getVariable ["MiseryInfection", MIS_INFECTION];
 

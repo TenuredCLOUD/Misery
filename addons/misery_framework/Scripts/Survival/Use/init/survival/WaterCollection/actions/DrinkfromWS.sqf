@@ -1,10 +1,10 @@
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+
 /*
 Misery Drink directly from Water sources
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */
-
-#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 private _module=(entities"Misery_Survival")select 0;
 MiseryNORVG=_module getvariable "Misery_SurvivalFramework"; //Misery survival framework 

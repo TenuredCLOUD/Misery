@@ -20,7 +20,6 @@ by TenuredCLOUD
 	};
 
 	//soundsource:
-	0 = [player, 150] call rvg_fnc_alertNearby;
 	private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position player);
 	player setVariable ["_TC_sound", true,true];
 	[_soundDummy, ["WoodChop01", 150]] remoteExec ["say3D", 0, _soundDummy];

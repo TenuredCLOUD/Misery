@@ -12,7 +12,7 @@ disableSerialization;
 		params ["_args", "_handle"];
 		if (!("Misery_PDA" in items player) || (!alive player)) exitWith {
 			[_handle] call CBA_fnc_removePerFrameHandler;
-			((uiNamespace getVariable"PDATEMP")displayCtrl 55554)ctrlSetStructuredText parseText"";
+			((uiNamespace getVariable "PDATEMP")displayCtrl 55554)ctrlSetStructuredText parseText"";
 			(findDisplay 46 createDisplay"PDATEMP")closeDisplay 1;
 			[] execVM "Misery\Scripts\Survival\HUD\PDA_Climate.sqf";
 		};

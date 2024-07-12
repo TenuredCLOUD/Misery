@@ -1,3 +1,5 @@
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+
 /*
 Misery WaterCollection Drink from source processor
 Takes inputs from GUI and processes recipe (if it exists)
@@ -6,7 +8,6 @@ by TenuredCLOUD
 */
 
 #include "\a3\ui_f\hpp\definedikcodes.inc"
-#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 private _dialog = findDisplay 982380;
 

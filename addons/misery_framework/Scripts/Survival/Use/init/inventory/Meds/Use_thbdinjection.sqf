@@ -23,7 +23,7 @@ sleep 5;
 _compteur = 0;
 player setVariable ["_antirad", true];
 if (isNil {player getVariable "radMonitorON"}) then {
-	0 = [] spawn rvg_fnc_radMonitor;
+
 };
 while {_compteur < 2500} do {
 	_effectSpeed = 50 + random 25;
