@@ -1,0 +1,50 @@
+name = "Misery"
+prefix = "Misery"
+author = "TenuredCLOUD"
+mainprefix = "z"
+
+[files]
+include = [
+    "mod.cpp",
+    "*.p3d",
+    "*.paa",
+    "*.ogg",
+    "*.txt",
+    "*.ext",
+    "*.xml",
+    "*.md",
+    "*.sqf",
+    "*.sqfc",
+    "*.fxy"
+]
+
+exclude = [
+    "*.png", # explicitly excluding image source files from build, but not repository
+]
+
+[version]
+git_hash = 0 # Disabled
+
+
+[hemtt.launch.default]
+workshop = [
+#    "450814997", # CBA_A3's Workshop ID
+#    "463939057", # ACE3
+]
+
+dlc = [
+]
+
+optionals = [
+]
+
+parameters = [
+    "-skipIntro",           # These parameters are passed to the Arma 3 executable
+    "-noSplash",            # They do not need to be added to your list
+    "-showScriptErrors",    # You can add additional parameters here
+    "-debug",
+    "-filePatching",
+    "-window",
+]
+
+executable = "arma3_x64"        # Default: "arma3_x64"

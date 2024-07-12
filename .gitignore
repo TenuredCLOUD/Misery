@@ -4,5 +4,4 @@ releases/*
 keys/*
 /releases
 /keys
-/.hemtt
 /.hemttout
