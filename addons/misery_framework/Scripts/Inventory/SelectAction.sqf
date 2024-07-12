@@ -548,7 +548,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 	MiseryDeleteConfirm = 0;
 	[player] call Misery_fnc_DeleteData;
 	systemChat format[localize "STR_MISERY_DELETECHARACTERSUCCESS",profilename];
-	player setDammage 1;
+	player setDamage 1;
 };
 	systemChat format[localize "STR_MISERY_DELETECHARACTERWARNING",profilename];
 	MiseryDeleteConfirm = MiseryDeleteConfirm + 1;

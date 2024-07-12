@@ -1,4 +1,4 @@
-﻿#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 /* 
 * Misery Loot generation startup
@@ -20,7 +20,7 @@ _buildings=_x nearObjects["House", MiseryLootspawnDist];
 	_add=TRUE;
 	if(TRUE)then{
 		if(_x in MiseryAllBuildings)exitWith{_add=FALSE};
-		if((getDammage _x)>.7)exitWith{_add=FALSE};
+		if((Damage _x)>.7)exitWith{_add=FALSE};
 		if((count([_x]call BIS_fnc_buildingPositions))==0)exitWith{_add=FALSE};
 	};
 	if(_add)then{_allBuildings pushBackUnique _x};

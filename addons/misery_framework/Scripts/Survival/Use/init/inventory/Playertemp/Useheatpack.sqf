@@ -1,4 +1,4 @@
-﻿#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
 
 /*
 Misery Heatpack usage
