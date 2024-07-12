@@ -109,7 +109,7 @@ if ("Misery_personalgeiger" in items player) then {
 };
 
 if!((_stats select 3)==worldName)then{
-	systemChat"Different worldName";
+	systemChat "Different worldName";
 };
 
 if!(MiseryMP)then{setDate(_stats select 4)};

@@ -8,7 +8,7 @@ by TenuredCLOUD
 
 private ["_playercash","_module","_dialog","_PurchaseB","_ExitB","_Vehiclename","_target","_repairPrice","_Found","_RepairsInterrupt","_playercash","_text","_displayedText","_delay","_progressIndicator","_displaySuccess"];
 
-_module=(entities"Misery_VehRepairSettings")select 0;
+_module=(entities "Misery_VehRepairSettings")select 0;
 Mis_Mechcurrencytype =_module getvariable "Misery_Mechcurrency";
 Mis_Mechfundstype =_module getvariable "Misery_Mechfundstype";
 

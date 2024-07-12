@@ -5,10 +5,6 @@ Designed specifically for Misery mod
 by TenuredCLOUD 
 */
 
-private _module=(entities"Misery_Survival")select 0;
-//MiseryNORVG=_module getvariable "Misery_SurvivalFramework"; //Misery survival framework 
-Miseryturbidwaterchance=_module getvariable "Misery_Waterturbidchance"; //Dirty water causes disease chance
-
 if (alive player) then {
 
  // if (MiseryNORVG == "ENABLED") exitwith {

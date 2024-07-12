@@ -6,7 +6,7 @@ by TenuredCLOUD
 OBSOLETE
 */
 
-// private _module=(entities"Misery_HALs_EconomyFramework")select 0;
+// private _module=(entities "Misery_HALs_EconomyFramework")select 0;
 // Misery_dyneconomy_1 =_module getvariable "MiseryDynEconomy1";
 // Misery_dyneconomy_2 =_module getvariable "MiseryDynEconomy2";
 // Misery_dyneconomy_3 =_module getvariable "MiseryDynEconomy3";

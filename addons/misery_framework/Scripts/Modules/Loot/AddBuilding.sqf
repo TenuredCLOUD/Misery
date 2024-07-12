@@ -32,15 +32,15 @@ _marker="";
 // Debug markers:
 if (MiseryDebug) then {
 	_marker=createMarkerLocal[format["%1", _b], (getPos _b)];
-	_marker setMarkerTypeLocal"mil_dot";_marker setMarkerColorLocal"ColorBlue"
+	_marker setMarkerTypeLocal "mil_dot";_marker setMarkerColorLocal "ColorBlue"
 };
 _bText=toLower(getText(configfile>>"CfgVehicles">>(typeOf _b)>>"editorSubcategory"));
 
 // Military building
-if ((_bText find"military")>-1) exitWith {
+if ((_bText find "military")>-1) exitWith {
 	if (MiseryDebug) then {
-		_marker setMarkerTypeLocal"mil_box";
-		_marker setMarkerColorLocal"ColorGREEN"
+		_marker setMarkerTypeLocal "mil_box";
+		_marker setMarkerColorLocal "ColorGREEN"
 	};
 	if ((random 100) < MiseryLootChanceHouseM) then {
 		_positions=[_b]call BIS_fnc_buildingPositions;
@@ -70,7 +70,7 @@ if ((_bText find"military")>-1) exitWith {
 		};
 	} else {
 		if (MiseryDebug) then {
-			_marker setMarkerColorLocal"ColorYellow"
+			_marker setMarkerColorLocal "ColorYellow"
 		}
 	};
 };
@@ -104,6 +104,6 @@ if ((random 100) < MiseryLootChanceHouse) then {
 	};
 } else {
 	if (MiseryDebug) then {
-		_marker setMarkerColorLocal"ColorYellow"
+		_marker setMarkerColorLocal "ColorYellow"
 	}
 };

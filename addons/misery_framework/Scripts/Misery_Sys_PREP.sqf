@@ -7,11 +7,11 @@ Designed specifically for Misery mod
 by TenuredCLOUD 
 */
 
-//if ((count(entities"Misery_Survival")) < 1) exitWith {}; //Exit startup code if no Misery survival module is placed 
+//if ((count(entities "Misery_Survival")) < 1) exitWith {}; //Exit startup code if no Misery survival module is placed 
 
-//if ((count(entities"Ravage_survival")) > 0) exitwith {}; //Exit startup code if Ravage survival module is placed (Version 1.1.6 + is no longer compatible)
+//if ((count(entities "Ravage_survival")) > 0) exitwith {}; //Exit startup code if Ravage survival module is placed (Version 1.1.6 + is no longer compatible)
 
-if!(isNil"MiseryExit")exitWith{};
+if!(isNil "MiseryExit")exitWith{};
 
 MiseryDebug=FALSE;
 MiseryEnabled=TRUE;
@@ -64,10 +64,10 @@ MiseryRavage=FALSE;
 if (isClass(configFile>>"cfgPatches">>"ravage")) then {MiseryRavage=TRUE};
 
 MiseryRavageAtmo = FALSE;
-if ((count(entities"Ravage_atmosphere")) > 0) then {MiseryRavageAtmo = TRUE};
+if ((count(entities "Ravage_atmosphere")) > 0) then {MiseryRavageAtmo = TRUE};
 
 if (MiseryRavageAtmo && isServer) then {
-private _atmomodule=(entities"Ravage_atmosphere")select 0;
+private _atmomodule=(entities "Ravage_atmosphere")select 0;
 _BreathfogisActive = _atmomodule getVariable ["breathfog_m", false];
 
 if (_BreathfogisActive) then{
@@ -276,8 +276,8 @@ if (isNil "MiseryinRefuelzonearea") then {MiseryinRefuelzonearea = false};
 //Medical zone:
 if (isNil "MiseryinMedzonearea") then {MiseryinMedzonearea = false}; 
 
-if ((count(entities"Misery_MedicalZoneSettings")) > 0) then {
-private _module=(entities"Misery_MedicalZoneSettings")select 0;
+if ((count(entities "Misery_MedicalZoneSettings")) > 0) then {
+private _module=(entities "Misery_MedicalZoneSettings")select 0;
 Mis_Medcurrencytype =_module getvariable "Misery_Medcurrency";
 Mis_Medfundstype =_module getvariable "Misery_Medfundstype";
 Mis_Medpriceheal =_module getvariable "Misery_Medpriceheal";
@@ -444,11 +444,11 @@ if (MiseryEnhForge && isServer) then {
 [] execVM MIS_FILESYS(Survival\Audio loops\forgeaudio);
 };
 
-if (((count(entities"Misery_Psyfieldcreate")) > 0) && hasInterface) then {
+if (((count(entities "Misery_Psyfieldcreate")) > 0) && hasInterface) then {
 [] execVM MIS_FILESYS(Modules\Psyfield\Psyfieldinit);
 }; 
 
-if (((count(entities"Misery_RadZonecreate")) > 0) && hasInterface) then {
+if (((count(entities "Misery_RadZonecreate")) > 0) && hasInterface) then {
 [] execVM MIS_FILESYS(Modules\RadZone\RadZoneinit);
 }; 
 
@@ -468,7 +468,7 @@ waitUntil {!isNil _x}; // Check Gvar arrays every second
     };
 };
 
-// if (((count (entities"Misery_RadioSettings")) > 0) && hasInterface) then {
+// if (((count (entities "Misery_RadioSettings")) > 0) && hasInterface) then {
 // [] execVM MIS_FILESYS(Survival\Radio\RadiosyncLoop);
 // };
 
@@ -593,7 +593,7 @@ if (MiseryWBKIMS && hasInterface) then {
 };
 
 //Auto Radio changes after player killed: 
-// if (((count (entities"Misery_RadioSettings")) > 0) && isServer) then {
+// if (((count (entities "Misery_RadioSettings")) > 0) && isServer) then {
 // addMissionEventHandler ["EntityKilled", {
 //   params ["_killed", "_killer", "_instigator"];
 //   if (_killed == player) then {
@@ -605,7 +605,7 @@ if (MiseryWBKIMS && hasInterface) then {
 // };
 
 // //Kill Audio loop when dropping active Radio
-// if (((count (entities"Misery_RadioSettings")) > 0) && hasInterface) then {
+// if (((count (entities "Misery_RadioSettings")) > 0) && hasInterface) then {
 // player addEventHandler ["Put", {
 // params ["_unit", "_container", "_item"];
 // if (_item == "Misery_PortableradioON") then {
@@ -618,7 +618,7 @@ if (MiseryWBKIMS && hasInterface) then {
 
 //Module startup wait check:
 MiseryReady=TRUE;
-publicVariable"MiseryReady";
+publicVariable "MiseryReady";
 
 MiserySurvival=TRUE;
 player setVariable ["MiseryThirst",MIS_THIRST];
@@ -673,18 +673,18 @@ if (MiseryManualPData == 1 && MiserySurvivalSaveMode == 2) then {
 //Persistency:
 //Persistency handle:
 if (MiserySurvivalPersistence == 1) then {
-[[], MIS_FILESYS(Survival\Persistency\Persistencehandle)] remoteExec ["execVM", 0, true];
+[[], MIS_FILESYS(Survival\Persistency\Persistencehandle)] remoteExec ["execVM ", 0, true];
 };
 //Persistency keyhandle press:
 if (MiserySurvivalPersistence == 2) then {
 if (hasInterface) then {
 [] execVM MIS_FILESYS(Survival\Persistency\Keyhandle);
 };
-[[], MIS_FILESYS(Survival\Persistency\Persistencehandle)] remoteExec ["execVM", 0, true];
+[[], MIS_FILESYS(Survival\Persistency\Persistencehandle)] remoteExec ["execVM ", 0, true];
 };
 
 if !(MiserySurvivalKillhandleScript=="") then {
-[[], MIS_FILESYS(Survival\Persistency\Killhandle)] remoteExec ["execVM", 0, true];
+[[], MIS_FILESYS(Survival\Persistency\Killhandle)] remoteExec ["execVM ", 0, true];
 };
 
 // //Persistency reloader:
@@ -692,12 +692,12 @@ if (MiserySurvivalSaveMode == 2) then {
 	private _saveArray=[];
 	if!(isNil{profileNamespace getVariable MiserySurvivalSaveName})then{
 		_saveArray=profileNamespace getVariable MiserySurvivalSaveName;
-		if((count _saveArray)<1)exitWith{systemChat"New Misery Character";
+		if((count _saveArray)<1)exitWith{systemChat "New Misery Character";
 		};
 		[player] call Misery_fnc_MiseryDeserializeplayer;
 		MiseryNewCharacter=FALSE;
 	}else{
-		systemChat"New Misery Character"; 
+		systemChat "New Misery Character"; 
 	};
 	enableSaving [false, false]; //Disable saving options + Save & exit etc... 
 };
@@ -847,7 +847,7 @@ _MDebuffs pushBackUnique "PARASITES"; player setVariable ["MiseryDebuffs", _MDeb
 };
 
 MiseryClientReady=TRUE;
-publicVariable"MiseryClientReady";
+publicVariable "MiseryClientReady";
 
 //Client execute survival loop
 if (hasInterface) then {[] execVM MIS_FILESYS(Survival\Survival_loop)};

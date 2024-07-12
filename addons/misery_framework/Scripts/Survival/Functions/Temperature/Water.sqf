@@ -13,7 +13,7 @@ _MExposure = player getVariable ["MiseryExposure", MIS_EXPOSURE];
 _MDebuffs = player getVariable "MiseryDebuffs";
 _MWetsuit = FALSE; //No wetsuit 
 
-if(((toLower(uniform player))find"wetsuit")>-1) then {_MWetsuit = TRUE}; //Check for wetsuit 
+if(((toLower(uniform player))find "wetsuit")>-1) then {_MWetsuit = TRUE}; //Check for wetsuit 
 
 if (((getPosASLW player select 2) < 0) || (underwater player)) then {
 

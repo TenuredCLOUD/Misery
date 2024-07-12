@@ -8,7 +8,7 @@ by TenuredCLOUD
 
 private _MThirst = player getVariable ["MiseryThirst", MIS_THIRST];
  
-private _module=(entities"Misery_Survival")select 0;
+
 
 if (goggles player in antirad_goggles || headgear player in antirad_headgears) exitWith {
 	titleText ["You cannot eat or drink while wearing a mask...", "PLAIN DOWN"]

@@ -112,7 +112,7 @@ _bannedTypes=[
 
 _remove=["Zasleh2"];
 
-_weapons=("((getNumber(_x>>'scope')>1)AND(getNumber(_x>>'type')in _types))"configClasses(configfile>>"CfgWeapons"))apply{configName _x};
+_weapons=("((getNumber(_x>>'scope')>1)AND(getNumber(_x>>'type')in _types))" configClasses(configfile>>"CfgWeapons"))apply{configName _x};
 //hint format["%1",_weapons];
 _weapons=_weapons-_remove;
 
@@ -240,7 +240,7 @@ if!(MiseryGearUseBISitems)then{
 //hint format["ITEMS: %1",MiseryGearItems];//sleep 3;hint format["ITEMS: %1",MiseryGearItemsM];
 
 // Goggles
-MiseryGearGoggles=("getNumber(_x>>'scope')>1"configClasses(configfile>>"CfgGlasses"))apply{configName _x};
+MiseryGearGoggles=("getNumber(_x>>'scope')>1" configClasses(configfile>>"CfgGlasses"))apply{configName _x};
 MiseryGearGoggles=MiseryGearGoggles-["None"];
 if!(MiseryGearUseBISgoggles)then{
 	{
@@ -250,7 +250,7 @@ if!(MiseryGearUseBISgoggles)then{
 };
 //hint format["GOG: %1",MiseryGearGoggles];
 
-MiseryGearPacks="((getNumber(_x>>'isbackpack')==1)AND(getNumber(_x>>'scope')>1)AND(getNumber(_x>>'maximumLoad')!=0))"configClasses(configfile>>"CfgVehicles")apply{configName _x};
+MiseryGearPacks="((getNumber(_x>>'isbackpack')==1)AND(getNumber(_x>>'scope')>1)AND(getNumber(_x>>'maximumLoad')!=0))" configClasses(configfile>>"CfgVehicles")apply{configName _x};
 if!(MiseryGearUseBISpacks)then{
 	{
 	if(_x call Misery_fnc_IsBIS)then{MiseryGearPacks=MiseryGearPacks-[_x]};
@@ -432,7 +432,7 @@ MiseryGearItemsM=["Misery_Pickaxe",
 "Misery_PetrolF",
 "Misery_AutoBatt"]+MiseryLootItemsMisc};
 
-_magazines=("getNumber(_x>>'scope')>1"configClasses(configfile>>"CfgMagazines"))apply{configName _x};
+_magazines=("getNumber(_x>>'scope')>1" configClasses(configfile>>"CfgMagazines"))apply{configName _x};
 
 MiseryGrenadeParents=["HandGrenade","MiniGrenade","B_IR_Grenade","FlareGreen_F","FlareRed_F","FlareWhite_F","FlareYellow_F"];
 MiseryExplosiveParents=["SatchelCharge_Remote_Mag","APERSBoundingMine_Range_Mag","APERSMine_Range_Mag","APERSMineDispenser_Mag","APERSTripMine_Wire_Mag","ATMine_Range_Mag"];
@@ -455,7 +455,7 @@ _parents=[configfile>>"CfgMagazines">>_mag,TRUE]call BIS_fnc_returnParents;
 
 if!(MiseryGearUseBISweapons)then{
 	{if(_x call Misery_fnc_IsBIS)then{_magazines=_magazines-[_x]}}forEach _magazines;
-	{if("VehicleMagazine"in([configfile>>"CfgMagazines">>_x,TRUE]call BIS_fnc_returnParents))then{_magazines=_magazines-[_x]}}forEach _magazines;
+	{if("VehicleMagazine" in([configfile>>"CfgMagazines">>_x,TRUE]call BIS_fnc_returnParents))then{_magazines=_magazines-[_x]}}forEach _magazines;
 };
 _military=FALSE;
 _ammo="";
@@ -463,7 +463,7 @@ _ammo="";
 _military=FALSE;
 if(TRUE)then{
 	if(getNumber(configFile>>"CfgMagazines">>_x>>"count")>20)exitWith{MiseryGearMagazinesM pushBack _x;_military=TRUE};
-	if("CA_LauncherMagazine"in([configfile>>"CfgMagazines">>_x,TRUE]call BIS_fnc_returnParents))exitWith{MiseryGearMagazinesM pushBack _x;_military=TRUE};
+	if("CA_LauncherMagazine" in([configfile>>"CfgMagazines">>_x,TRUE]call BIS_fnc_returnParents))exitWith{MiseryGearMagazinesM pushBack _x;_military=TRUE};
 	_ammo=getText(configFile>>"CfgMagazines">>_x>>"ammo");
 	if(getNumber(configFile>>"CfgAmmo">>_ammo>>"explosive")>0)exitWith{MiseryGearMagazinesM pushBack _x;_military=TRUE};
 };

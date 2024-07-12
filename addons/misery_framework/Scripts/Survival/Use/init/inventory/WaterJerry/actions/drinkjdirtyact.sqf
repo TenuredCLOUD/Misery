@@ -9,7 +9,7 @@ by TenuredCLOUD
 private _MThirst = player getVariable ["MiseryThirst", MIS_THIRST];
 private _MDebuffs = player getVariable "MiseryDebuffs";
 
-private _module=(entities"Misery_Survival")select 0;
+
 Miseryturbidwaterchance=_module getvariable "Misery_Waterturbidchance"; //Dirty water causes disease chance
 
 if (goggles player in antirad_goggles || headgear player in antirad_headgears) exitWith {

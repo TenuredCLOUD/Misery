@@ -8,7 +8,7 @@ by TenuredCLOUD
 
 private ["_playercash","_module","_dialog","_PurchaseB","_ExitB","_Vehiclename","_target","_resupplyPrice","_Found","_RepairsInterrupt","_playercash","_text","_displayedText","_delay","_progressIndicator","_displaySuccess"];
 
-_module=(entities"Misery_VehRearmSettings")select 0;
+_module=(entities "Misery_VehRearmSettings")select 0;
 Mis_Rearmcurrencytype =_module getvariable "Misery_Rearmcurrency";
 Mis_Rearmfundstype =_module getvariable "Misery_Rearmfundstype";
 

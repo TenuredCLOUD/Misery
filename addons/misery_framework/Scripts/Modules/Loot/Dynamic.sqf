@@ -9,7 +9,7 @@
 private["_players","_buildings","_allBuildings","_add"];
 if!(isServer)exitWith{};
 _players=call Misery_fnc_ListPlayers;
-_players=_players-(entities"HeadlessClient_F");
+_players=_players-(entities "HeadlessClient_F");
 _buildings=[];
 _allBuildings=[];
 _add=TRUE;

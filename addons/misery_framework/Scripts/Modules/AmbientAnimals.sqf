@@ -29,7 +29,7 @@ _spawn=TRUE;
 _type="";
 _marker="";
 _markers=[];
-if((count MiseryAnimalTypes)<1)exitWith{systemChat"No ambient animals defined"};
+if((count MiseryAnimalTypes)<1)exitWith{systemChat "No ambient animals defined"};
 
 while{TRUE}do{
 	_players=call Misery_fnc_ListPlayers;
@@ -38,7 +38,7 @@ while{TRUE}do{
 		_animal=_x;
 		_remove=TRUE;
 		{if((_x distance2D _animal) < MiseryAnimalDeleteDistance)then{_remove=FALSE}}forEach _players;
-		if(_remove)then{_registeredAnimals=_registeredAnimals-[_animal];_x removeAllMPEventHandlers"mpkilled";deleteVehicle _animal};
+		if(_remove)then{_registeredAnimals=_registeredAnimals-[_animal];_x removeAllMPEventHandlers "mpkilled"; deleteVehicle _animal};
 	}forEach _registeredAnimals;
 	if((count _registeredAnimals) < MiseryMaxAnimalUnits)then{
 		if((random 100) > MiseryAnimalSpawnChance)exitWith{};

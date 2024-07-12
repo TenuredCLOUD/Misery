@@ -50,7 +50,6 @@ for "_i" from 0 to (count _text - 1) do {
 
 if ((player getVariable "Misery_ISDrinking") isEqualTo true) then {
         
-private _module=(entities"Misery_Survival")select 0;
 Miseryturbidwaterchance=_module getvariable "Misery_Waterturbidchance"; //Dirty water causes disease chance
 
 private _MThirst = player getVariable ["MiseryThirst", MIS_THIRST];

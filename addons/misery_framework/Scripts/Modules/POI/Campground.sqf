@@ -110,7 +110,7 @@ _Spawnchance = _this select 35;
 
 _player=objNull;
 _players=call Misery_fnc_ListPlayers;
-_players=_players-(entities"HeadlessClient_F");
+_players=_players-(entities "HeadlessClient_F");
 
 _pos = getPos _module;
 
@@ -260,7 +260,7 @@ _taskDorP = [1,2] call BIS_fnc_randomInt;
         [_group, getPos leader _group] call BIS_fnc_taskDefend;
     };
 
-_group setCombatMode"RED";
+_group setCombatMode "RED";
 _group setBehaviour "SAFE";
 
 //Enforce Dynamic Simulation per generated AI unit per group 

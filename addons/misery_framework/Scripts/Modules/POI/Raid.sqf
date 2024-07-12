@@ -116,7 +116,7 @@ _Spawnchance = _this select 36;
 
 _player=objNull;
 _players=call Misery_fnc_ListPlayers;
-_players=_players-(entities"HeadlessClient_F");
+_players=_players-(entities "HeadlessClient_F");
 
 _pos = getPos _module;
 
@@ -265,7 +265,7 @@ _taskDorP = [1,2] call BIS_fnc_randomInt;
         [_group, getPos leader _group] call BIS_fnc_taskDefend;
     };
 
-_group setCombatMode"RED";
+_group setCombatMode "RED";
 _group setBehaviour "SAFE";
 
 //Enforce Dynamic Simulation per generated AI unit per group 
@@ -361,7 +361,7 @@ _module setVariable ["Active_Raid_ID", _raidID, true];
 
 _posStr = str _pos;
 _PMCalert = [_posStr, _raidID];
-[_PMCalert, "Misery\Scripts\Modules\PDA\alerts\PMCRaid.sqf"] remoteExec ["execVM", 0];
+[_PMCalert, "Misery\Scripts\Modules\PDA\alerts\PMCRaid.sqf"] remoteExec ["execVM ", 0];
 
 Misery_activePOIs = Misery_activePOIs + 1; 
 

@@ -31,7 +31,7 @@ if (isServer) then {
 
         //reload handle:
         private _respawnedIndex = addMissionEventHandler ["EntityRespawned",{
-            [ [], "Misery\Scripts\Survival\Persistency\Persistencehandle.sqf"] remoteExec ["execVM", _this select 0, true];
+            [ [], "Misery\Scripts\Survival\Persistency\Persistencehandle.sqf"] remoteExec ["execVM ", _this select 0, true];
         }];
 
         //Kill handle for Singleplayer and Multiplayer environments (enforces character data deletion when utilizing Persistent data)

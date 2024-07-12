@@ -84,6 +84,6 @@ if(_activated)then{
 (_module getVariable "MiseryLootrefreshtimer"),
 (_module getVariable "MiseryLootspawnDist"),
 (_module getVariable "MiseryLootDeleteDist")
-] execVM"Misery\Scripts\Modules\Loot\Start.sqf";
+] execVM "Misery\Scripts\Modules\Loot\Start.sqf";
 };
 TRUE

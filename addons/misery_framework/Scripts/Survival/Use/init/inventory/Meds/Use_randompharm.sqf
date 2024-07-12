@@ -57,7 +57,7 @@ if (!hasInterface) exitWith {};
           player setVariable ["MiseryPoison", (_MPoison + (random 20))]; //random poison amount  
           }; 
 
-          // if ((count(entities"Ravage_survival")) > 0) then {
+          // if ((count(entities "Ravage_survival")) > 0) then {
           // player setVariable ["hunger", (player getvariable ["hunger",0]) - 50, true];
           // player setVariable ["thirst", (player getvariable ["thirst",0]) - 50, true];  
           // };

@@ -127,7 +127,7 @@ _out pushback [localize "STR_MISERY_TURNOFFRFDETEC",localize "STR_MISERY_TURNOFF
 };
 };
 
-// if ((count (entities"Misery_RadioSettings")) > 0) then {
+// if ((count (entities "Misery_RadioSettings")) > 0) then {
 // if ("Misery_PortableradioOFF" in items player) then {
 // _out pushback ["Turn on Portable Radio", "Turn on Portable Radio"];
 // };

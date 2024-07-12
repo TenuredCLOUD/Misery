@@ -6,10 +6,6 @@ Designed specifically for Misery mod
 by TenuredCLOUD 
 */
 
-//Module stat check
-private _module =(entities"Misery_Survival")select 0;
-//MiseryNORVG =_module getvariable "Misery_SurvivalFramework";
-
 //ACE check for dmg:
 MiseryACE=FALSE;
 if (isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=TRUE};

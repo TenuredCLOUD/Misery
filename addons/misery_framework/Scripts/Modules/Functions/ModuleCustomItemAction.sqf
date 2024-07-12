@@ -9,4 +9,4 @@ _module=_this select 0;
 _units=_this select 1;
 _activated=_this select 2;
 
-_this execVM"Misery\Scripts\Inventory\AddCustomItemAction.sqf";
+_this execVM "Misery\Scripts\Inventory\AddCustomItemAction.sqf";

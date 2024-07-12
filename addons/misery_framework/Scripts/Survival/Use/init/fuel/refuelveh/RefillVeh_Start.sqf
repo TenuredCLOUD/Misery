@@ -4,7 +4,7 @@ Array input for refueling amount per Jerrycan
 Designed specifically for Misery mod
  */
 
-(findDisplay 46 createDisplay"MiseryINVACT_GUI")closeDisplay 1;
+(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
 createDialog "MiseryRefuel_Vehicle_JCan_GUI";
 

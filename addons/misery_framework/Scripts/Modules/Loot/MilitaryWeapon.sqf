@@ -18,6 +18,6 @@ if!(_isMilitary)then{
 	{if(getNumber(configFile>>"CfgMagazines">>_w>>"count")>30)then{_isMilitary=true}}forEach _mags;
 };
 if!(_isMilitary)then{
-	if("EGLM"in(getArray(configFile>>"CfgWeapons">>_w>>"muzzles")))then{_isMilitary=true};
+	if("EGLM" in(getArray(configFile>>"CfgWeapons">>_w>>"muzzles")))then{_isMilitary=true};
 };
 _isMilitary

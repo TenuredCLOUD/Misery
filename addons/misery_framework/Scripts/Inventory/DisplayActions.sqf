@@ -4,7 +4,7 @@ Designed specifically for Misery mod
 by TenuredCLOUD 
 */
 
-hintSilent"";
+hintSilent "";
 ctrlShow[982377,TRUE];
 private _list=(findDisplay 982377)displayCtrl 1500;
 

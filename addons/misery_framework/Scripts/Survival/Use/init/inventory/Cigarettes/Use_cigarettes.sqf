@@ -23,7 +23,7 @@ private _MFear = player getVariable ["MiseryFear", MIS_FEAR];
 	playSound3D ["Misery\audio\sounds\immersion\Matchsmoking.ogg", player, false, getPosASL player, 4, 1, 10];
 
 	//Remove some fear due to cig smoking:
-  if ((count(entities"Misery_FearFramework")) > 0) then {
+  if (MiseryFearenabled) then {
 	player setVariable ["MiseryFear", (_MFear - 1.5)];
 	if (_MFear <= 0) then {player setVariable ["MiseryFear", 0]};
   };
@@ -106,7 +106,7 @@ if ("Misery_lighter" in items player) then {
   playSound3D ["Misery\audio\sounds\immersion\Lightersmoking.ogg", player, false, getPosASL player, 4, 1, 10];
 
   //Remove some fear due to cig smoking:
-  if ((count(entities"Misery_FearFramework")) > 0) then {
+  if (MiseryFearenabled) then {
 	player setVariable ["MiseryFear", (_MFear - 1.5)];
 	if (_MFear <= 0) then {player setVariable ["MiseryFear", 0]};
   };

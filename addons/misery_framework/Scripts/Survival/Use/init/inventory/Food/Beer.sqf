@@ -13,7 +13,7 @@ if (!hasInterface) exitWith {};
 
   if (alive player) exitwith {
 
-  if ((count(entities"Misery_FearFramework")) > 0) then {
+  if (MiseryFearenabled) then {
 	player setVariable ["MiseryFear", (_MFear - 2)];
 	if (_MFear <= 0) then {player setVariable ["MiseryFear", 0]};
   };

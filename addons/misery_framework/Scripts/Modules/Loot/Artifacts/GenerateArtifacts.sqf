@@ -34,7 +34,7 @@ if (isServer) then {
 
     _player=objNull;
     _players=call Misery_fnc_ListPlayers;
-    _players=_players-(entities"HeadlessClient_F");
+    _players=_players-(entities "HeadlessClient_F");
     _groundStash=objNull;
     _mpos = getPos _module;
 

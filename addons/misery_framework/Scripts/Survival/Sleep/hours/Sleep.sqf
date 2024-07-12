@@ -67,9 +67,9 @@ if (_MHunger > 20) then {
 player setVariable ["MiseryHunger", (_MHunger - MisSleep_hungerDecrease)];
 } else {
 if (getdammage player > 50) then {
-player setdammage (getdammage player) + 0.25;
+player setdamage (getdammage player) + 0.25;
 } else {
-player setdammage (getdammage player) + 0.5;
+player setdamage (getdammage player) + 0.5;
 };
 };
 
@@ -77,9 +77,9 @@ if (_MThirst > 20) then {
 player setVariable ["MiseryThirst", (_MThirst - MisSleep_thirstDecrease)];
 } else {
 if (getdammage player > 50) then {
-player setdammage (getdammage player) + 0.25;
+player setdamage (getdammage player) + 0.25;
 } else {
-player setdammage (getdammage player) + 0.5;
+player setdamage (getdammage player) + 0.5;
 };
 };
 

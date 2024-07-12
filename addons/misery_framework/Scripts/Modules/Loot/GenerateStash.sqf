@@ -15,7 +15,7 @@ if ((count _this)>2) then {
 _deleteFlag = true;
 _player=objNull;
 _players=call Misery_fnc_ListPlayers;
-_players=_players-(entities"HeadlessClient_F");
+_players=_players-(entities "HeadlessClient_F");
 _groundStash=objNull;
 
 // If GRAD persistence is active, push Holders to blacklister for saving so empty piles don't populate on reload of a scenario (This will execute only once)
@@ -121,8 +121,8 @@ while { (count _players) > 0 } do {
 // Debug markers 
 if (MiseryDebug) then {
 	_marker=createMarkerLocal[format["%1", _groundStash], (getPos _groundStash)];
-	_marker setMarkerTypeLocal"mil_dot";
-	_marker setMarkerColorLocal"ColorBlack";
+	_marker setMarkerTypeLocal "mil_dot";
+	_marker setMarkerColorLocal "ColorBlack";
 	_marker setMarkerTextLocal(format["%1", (getText(configFile>>"cfgVehicles">>(typeOf _groundStash)>>"displayName"))]);
 };
 

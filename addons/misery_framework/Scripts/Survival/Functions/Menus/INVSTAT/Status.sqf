@@ -151,7 +151,6 @@ lbClear _ailmentsList;
 	_FundsVal ctrlSetText _FundsDisplay; 
 	
 	if (!isNil "MiseryinPsyfield") then {
-	private _module=(entities"Misery_Psyfieldprot")select 0;
 	private _input1 =(_module getvariable "Misery_Psyprotection") call Misery_fnc_ParseArray2; //STRING to ARRAY
 	private _psyprot = _input1;
 	private _PsyProtected = _ailments findIf {(_x select 0) isEqualTo "Psy Emissions (Protected)"}; 

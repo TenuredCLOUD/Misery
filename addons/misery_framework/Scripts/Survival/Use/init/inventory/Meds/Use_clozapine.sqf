@@ -29,7 +29,7 @@ player removeitem "Misery_ClozapinePill";
 
 sleep 60; 
 
-if ((count(entities"Misery_FearFramework")) > 0) then {
+if (MiseryFearenabled) then {
   player setVariable ["MiseryFear", (_MFear - 10)];
 	if (_MFear <= 0) then {player setVariable ["MiseryFear", MIS_FEAR]};
 };

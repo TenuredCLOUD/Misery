@@ -12,7 +12,7 @@ _script=_module getVariable "Misery_script";
 _waitTime=_module getVariable "Misery_waitTime";
 if(_description=="")exitWith{};
 if(_script=="")exitWith{};
-waitUntil{!isNil"MiseryActionsCustom"};
+waitUntil{!isNil "MiseryActionsCustom"};
 sleep _waitTime;
 if((count _units)>0)exitWith{
 	if(player in _units)then{MiseryActionsCustom pushBack[_description,_script]};

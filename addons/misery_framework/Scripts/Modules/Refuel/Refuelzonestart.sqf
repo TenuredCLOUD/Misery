@@ -8,7 +8,7 @@ by TenuredCLOUD
 
 private ["_playercash","_module","_dialog","_PurchaseB","_ExitB","_Vehiclename","_target","_fuelCost","_Found","_totalLiters","_RefuelInterrupt","_playercash","_text","_displayedText","_delay"];
 
-_module=(entities"Misery_RefuelZoneSettings")select 0;
+_module=(entities "Misery_RefuelZoneSettings")select 0;
 Mis_Refuelcurrencytype =_module getvariable "Misery_Refuelcurrency";
 Mis_Refuelfundstype =_module getvariable "Misery_Refuelfundstype";
 

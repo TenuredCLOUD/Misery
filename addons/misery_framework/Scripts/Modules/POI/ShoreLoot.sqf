@@ -70,7 +70,7 @@ _cratebackpackArray = (_this select 14) call Misery_fnc_ParseArray2;
 
 _player=objNull;
 _players=call Misery_fnc_ListPlayers;
-_players=_players-(entities"HeadlessClient_F");
+_players=_players-(entities "HeadlessClient_F");
 
 _SpawnFLAG = false;
 

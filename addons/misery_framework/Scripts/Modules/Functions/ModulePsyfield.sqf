@@ -20,7 +20,7 @@ private _EXECTARGETS = [];
 if (isServer) then { 
     _EXECTARGETS = [0, -2] select isDedicated;
 };
-	[[_module, _units], "Misery\Scripts\Modules\Psyfield\Psyfield.sqf"] remoteExec ["execVM", _EXECTARGETS, true];
+	[[_module, _units], "Misery\Scripts\Modules\Psyfield\Psyfield.sqf"] remoteExec ["execVM ", _EXECTARGETS, true];
 };
 
 }, [_module,_units,_activated]] call CBA_fnc_waitUntilAndExecute;

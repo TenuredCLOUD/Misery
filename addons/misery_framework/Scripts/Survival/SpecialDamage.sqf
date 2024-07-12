@@ -11,6 +11,6 @@ if(MiseryACE)exitWith{
 	[_target,_damage,"body","unknown"]remoteExec["ace_medical_fnc_addDamageToUnit",_target];
 	TRUE
 };
-private _damageFinal=(getDammage _target)+_damage;
-_target setDammage _damageFinal;
+private _damageFinal=(Damage _target)+_damage;
+_target setDamage _damageFinal;
 TRUE
