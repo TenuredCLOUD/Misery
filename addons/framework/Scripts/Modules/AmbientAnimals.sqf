@@ -38,7 +38,7 @@ while{TRUE}do{
 		_animal=_x;
 		_remove=TRUE;
 		{if((_x distance2D _animal) < MiseryAnimalDeleteDistance)then{_remove=FALSE}}forEach _players;
-		if(_remove)then{_registeredAnimals=_registeredAnimals-[_animal];_x removeAllMPEventHandlers "mpkilled"; deleteVehicle _animal};
+		if(_remove)then{_registeredAnimals=_registeredAnimals-[_animal];_x removeAllMPEventHandlers "MPKilled"; deleteVehicle _animal};
 	}forEach _registeredAnimals;
 	if((count _registeredAnimals) < MiseryMaxAnimalUnits)then{
 		if((random 100) > MiseryAnimalSpawnChance)exitWith{};

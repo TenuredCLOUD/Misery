@@ -1,7 +1,7 @@
 /*
 	Generated on https://jdtools.dev/
 	Made by John Doe
-*/
+
 ambient[] = { 1, 1, 1, 1 };
 diffuse[] = { 1, 1, 1, 1 };
 forcedDiffuse[] = { 0, 0, 0, 1 };
@@ -84,3 +84,5 @@ class Stage7 {
 class StageTI {
 	texture = "a3\data_f\default_vehicle_ti_ca.paa";
 };
+
+*/

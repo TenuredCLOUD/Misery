@@ -9,7 +9,7 @@ Usage example:
 
 _this params ["_type", "_index"];
 _index = parseNumber _index;  // Ensure _index is a number
-private _arrayName = if (_type == "buff") then {"buffs"} else {"ailments"};
+private _arrayName = ["ailments", "buffs"] select (_type == "buff");
 private _array = player getVariable [_arrayName, []];
 if (_index >= 0 && _index < count _array) then {
     _array deleteAt _index;

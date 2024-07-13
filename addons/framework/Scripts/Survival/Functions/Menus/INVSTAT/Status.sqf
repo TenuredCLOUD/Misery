@@ -120,7 +120,7 @@ lbClear _ailmentsList;
     	}; 
 	};
 
-	if ((_currentMagazineDetail find "(" > -1) && (_currentMagazineDetail find "/" > -1)) then {
+	if (("(" in _currentMagazineDetail > -1) && ("/" in _currentMagazineDetail > -1)) then {
     	private _ammoDetailsString = ((_currentMagazineDetail splitString "(") select 1) splitString "/" select 0; 
     	private _totalAmmoString = ((_currentMagazineDetail splitString "/") select 1) splitString ")" select 0; 
     	private _ammoCount = parseNumber _ammoDetailsString; 

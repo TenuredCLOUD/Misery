@@ -9,7 +9,7 @@ _Generator = _this select 0;
 
 while {true} do {
 
-	_soundRunning = if (typeOf _Generator == "Land_PowerGenerator_F") then {"dieselgeneratorrunning"} else {"petorlgeneratorrunning"};
+	_soundRunning = ["petorlgeneratorrunning", "dieselgeneratorrunning"] select (typeOf _Generator == "Land_PowerGenerator_F");
 
 	_GeneratorType = typeOf _Generator;
 
@@ -45,7 +45,7 @@ while {true} do {
 	deleteVehicle _soundDummyRunning;
 	_Generator setVariable ["Misery_GenSound", false,true];
 	_Generator setVariable ["Misery_Gen_IsRunning", false, true];
-	_soundStop = if (typeOf _Generator == "Land_PowerGenerator_F") then {"dieselgeneratorstop"} else {"petrolgeneratorstop"};
+	_soundStop = ["petrolgeneratorstop", "dieselgeneratorstop"] select (typeOf _Generator == "Land_PowerGenerator_F");
 	private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position _Generator);
 	_Generator setVariable ["Misery_GenSoundNOFUEL", true,true];
 	[_soundDummy, [_soundStop, 500]] remoteExec ["say3D", 0, _soundDummy];
