@@ -1,4 +1,4 @@
-#include "\z\misery\addons\misery_framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
 
 class CfgPatches {
     class ADDON {
