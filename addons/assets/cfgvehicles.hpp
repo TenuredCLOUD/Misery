@@ -223,7 +223,7 @@ class CfgVehicles {
 				onlyForPlayer = 0;
 				shortcut = "";
 				condition = "alive this && {this getVariable ['Misery_Gen_IsRunning', false] isEqualTo false}";
-				statement = "[this] execVM 'Misery\Scripts\Survival\Functions\Menus\Generator\Gen_RunningUserAct.sqf'";
+				statement = "[this] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Generator\Gen_RunningUserAct.sqf'";
 			};
 		class Shutdown_100KVA
 			{
@@ -303,7 +303,7 @@ class CfgVehicles {
 				onlyForPlayer = 0;
 				shortcut = "";
 				condition = "alive this && {this getVariable ['Misery_Gen_IsRunning', false] isEqualTo false}";
-				statement = "[this] execVM 'Misery\Scripts\Survival\Functions\Menus\Generator\Gen_RunningUserAct.sqf'";
+				statement = "[this] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Generator\Gen_RunningUserAct.sqf'";
 			};
 		class Shutdown_UsedGen_Gas
 			{
@@ -383,7 +383,7 @@ class CfgVehicles {
 				onlyForPlayer = 0;
 				shortcut = "";
 				condition = "alive this && {this getVariable ['Misery_Gen_IsRunning', false] isEqualTo false}";
-				statement = "[this] execVM 'Misery\Scripts\Survival\Functions\Menus\Generator\Gen_RunningUserAct.sqf'";
+				statement = "[this] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Generator\Gen_RunningUserAct.sqf'";
 			};
 		class Shutdown_UsedGen_Diesel
 			{

@@ -20,5 +20,5 @@ if !(_selectedIndex == -1) exitWith {
 _PurchaseB ctrlShow false;
 _ExitB ctrlShow false;
 
-[] execVM "Misery\Scripts\Survival\Use\init\fuel\refuelveh\Refillstart.sqf";
+[] execVM "\z\misery\addons\framework\scripts\survival\Use\init\fuel\refuelveh\Refillstart.sqf";
 };

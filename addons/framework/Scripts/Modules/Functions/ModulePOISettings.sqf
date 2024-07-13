@@ -18,6 +18,6 @@ if (_activated && isServer) then {
 (_module getVariable "MiseryPOISpawnTimer"),
 (_module getVariable "MiseryPOIDeleteTimer"),
 (_module getVariable "MiseryPOISpawnLimit")
-] execVM "Misery\Scripts\Modules\POI\Settings.sqf";
+] execVM "\z\misery\addons\framework\scripts\Modules\POI\Settings.sqf";
 };
 TRUE

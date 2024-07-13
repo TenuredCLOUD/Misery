@@ -14,7 +14,7 @@ disableSerialization;
 			[_handle] call CBA_fnc_removePerFrameHandler;
 			((uiNamespace getVariable "Gascartridge")displayCtrl 55554)ctrlSetStructuredText parseText "";
 			(findDisplay 46 createDisplay "Gascartridge")closeDisplay 1;
-			[] execVM "Misery\Scripts\Survival\HUD\gasmaskcart.sqf";
+			[] execVM "\z\misery\addons\framework\scripts\survival\HUD\gasmaskcart.sqf";
 		};
 
 	_rscLayer = "Gascartridge" call BIS_fnc_rscLayer;
@@ -33,8 +33,8 @@ disableSerialization;
 
 Miserygasmasks=_module getvariable "Misery_Enhgasmasks";
 
-private _maskimage = format ["<img shadow='0.1' size='1.5' image='%1'/>", "Misery\Scripts\Survival\Data\gasmask.paa"];
-private _scbaimage = format ["<img shadow='0.1' size='1.5' image='%1'/>", "Misery\Scripts\Survival\Data\SCBA.paa"];
+private _maskimage = format ["<img shadow='0.1' size='1.5' image='%1'/>", "\z\misery\addons\framework\scripts\survival\Data\gasmask.paa"];
+private _scbaimage = format ["<img shadow='0.1' size='1.5' image='%1'/>", "\z\misery\addons\framework\scripts\survival\Data\SCBA.paa"];
 private _cartridgecalc = player getVariable ["Miserycartridge", 100]; 
 
 if !(Miserygasmasks) exitwith {}; //if module isn't checked exit display 

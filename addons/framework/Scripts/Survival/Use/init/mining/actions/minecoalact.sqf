@@ -7,8 +7,8 @@ by TenuredCLOUD
 [
 	player,
 	"Mine Coal",
-	"Misery\Scripts\Survival\Use\icons\pickaxe.paa",
-	"Misery\Scripts\Survival\Use\icons\pickaxe.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\pickaxe.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\pickaxe.paa",
 	"call Misery_fnc_NearCoal",
 	"call Misery_fnc_mineactcheck",
 	{

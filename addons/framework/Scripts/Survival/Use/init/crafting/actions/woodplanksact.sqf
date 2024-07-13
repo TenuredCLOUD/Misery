@@ -10,8 +10,8 @@ if (MiseryUsingiBuild) exitwith {
 [
 	player,
 	"Craft woodplanks",
-	"Misery\Scripts\Survival\Use\icons\sawmill.paa",
-	"Misery\Scripts\Survival\Use\icons\sawmill.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\sawmill.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\sawmill.paa",
 	"call Misery_fnc_NearWorkbench",
 	"call Misery_fnc_woodplanks",
 	{
@@ -82,8 +82,8 @@ if !(MiseryUsingiBuild) exitwith {
 [
 	player,
 	"Craft woodplanks",
-	"Misery\Scripts\Survival\Use\icons\sawmill.paa",
-	"Misery\Scripts\Survival\Use\icons\sawmill.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\sawmill.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\sawmill.paa",
 	"call Misery_fnc_NearWorkbench",
 	"call Misery_fnc_woodplanks",
 	{

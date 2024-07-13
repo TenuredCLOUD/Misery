@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
 Misery persistence
@@ -12,12 +12,12 @@ if !(local player) exitWith{};
 if !(alive player) exitWith{};
 if ((toUpper(lifeState player)) in ["DEAD","DEAD-RESPAWN","DEAD-SWITCHING"]) exitWith {};
 
-if (MiserySurvivalHardCoreSaveMode == 1 && !([player] call Misery_fnc_NearFire)) exitWith {systemChat format["%1, Hardcore saving mode is active: you must be near a fire to save your character...",profilename]};
+if (MiserysurvivalHardCoreSaveMode == 1 && !([player] call Misery_fnc_NearFire)) exitWith {systemChat format["%1, Hardcore saving mode is active: you must be near a fire to save your character...",profilename]};
 
 _loadout = getUnitLoadout player;
 _stats = [Damage player, getDir player, getPosATL player, worldName, date, stance player];
 
-_saveName = MiserySurvivalSaveName;
+_saveName = MiserysurvivalSaveName;
 
 _namespace = [] call CBA_fnc_createNamespace;
 
@@ -85,6 +85,6 @@ _serialized = [_namespace] call CBA_fnc_serializeNamespace;
 
 profileNamespace setVariable [_saveName, _serialized];
 
-if !(MiserySurvivalSaveScript=="") then {[player] execVM MiserySurvivalSaveScript};
+if !(MiserysurvivalSaveScript=="") then {[player] execVM MiserysurvivalSaveScript};
 
 _namespace call CBA_fnc_deleteNamespace;

@@ -14,7 +14,7 @@ disableSerialization;
 			[_handle] call CBA_fnc_removePerFrameHandler;
 			((uiNamespace getVariable "PDACOMPASS")displayCtrl 55554)ctrlSetStructuredText parseText "";
 			(findDisplay 46 createDisplay "PDACOMPASS")closeDisplay 1;
-			[] execVM "Misery\Scripts\Survival\HUD\PDA_Compass.sqf";
+			[] execVM "\z\misery\addons\framework\scripts\survival\HUD\PDA_Compass.sqf";
 		};
 
 	_rscLayer = "PDACOMPASS" call BIS_fnc_rscLayer;

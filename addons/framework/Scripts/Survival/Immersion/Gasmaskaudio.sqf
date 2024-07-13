@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
 Misery Gasmask audio loop
@@ -15,7 +15,7 @@ by TenuredCLOUD
 		if ((!(goggles player in antirad_goggles) && !(vest player in antirad_vests || backpack player in antirad_packs)) || (!alive player)) exitWith {
 			[_handle] call CBA_fnc_removePerFrameHandler;
 			if(MiseryDebug)then{systemChat "Misery Gasmask audio cycle terminated..."};
-			[] execVM MIS_FILESYS(Survival\Immersion\Gasmaskaudio);
+			[] execVM MIS_FILESYS(survival\Immersion\Gasmaskaudio);
 			if(MiseryDebug)then{systemChat "Misery Gasmask audio cycle checks re-initiated..."};
 		};
   

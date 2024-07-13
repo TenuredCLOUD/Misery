@@ -32,7 +32,7 @@ waitUntil {
 				_module,
 				(_module getvariable "Misery_ArtifactSpawnnumber"),
 				(_module getvariable "Misery_ArtifactSpawnradius")
-				] execVM "Misery\Scripts\Modules\Loot\Artifacts\GenerateArtifacts.sqf";
+				] execVM "\z\misery\addons\framework\scripts\Modules\Loot\Artifacts\GenerateArtifacts.sqf";
     		};
 		};
     } forEach _modules;

@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
 Misery Cocaine usage
@@ -20,7 +20,7 @@ if (!hasInterface) exitWith {};
   if (alive player) then {
     titleText ["You use the cocaine...", "PLAIN DOWN"];
 
-    playSound3D ["Misery\audio\sounds\inventory\Items\Sniff01.ogg", player, false, getPosASL player, 4, 1, 5];
+    playSound3D ["\z\misery\addons\framework\audio\sounds\inventory\Items\Sniff01.ogg", player, false, getPosASL player, 4, 1, 5];
 
   player removeItem "Misery_cocaine";
   _time = time + 15;

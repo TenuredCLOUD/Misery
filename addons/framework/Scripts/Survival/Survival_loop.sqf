@@ -1,7 +1,7 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
-Misery Main Survival loop 
+Misery Main survival loop 
 Client survival loop runs after Client settings are defined
 Designed specifically for Misery mod 
 by TenuredCLOUD 
@@ -19,9 +19,9 @@ if !(hasInterface) exitWith {};
 			[_handle] call CBA_fnc_removePerFrameHandler;
 			//Ravage geiger var: (kill geiger on death)
 			player setVariable ["GeigerON", nil];
-			if(MiseryDebug)then{systemChat "Misery Survival loop cycle terminated..."};
-			[] execVM MIS_FILESYS(Survival\Survival_loop);
-			if(MiseryDebug)then{systemChat "Misery Survival loop cycle checks re-initiated..."};
+			if(MiseryDebug)then{systemChat "Misery survival loop cycle terminated..."};
+			[] execVM MIS_FILESYS(survival\survival_loop);
+			if(MiseryDebug)then{systemChat "Misery survival loop cycle checks re-initiated..."};
 		};
 
 	private ["_rads","_MHunger","_MThirst","_MInfection","_MPoison","_MSleepiness","_MExposure","_MPlayertemp","_Rhunger","_MDebuffs","_MSleeppillstaken","_MIsSleeping","_randomnutrient","_randomnutrientweight","_bagweightload","_Playerweight","_Miseryweightdefcalculated","_randomsleepweight","_random"];
@@ -199,7 +199,7 @@ if !(hasInterface) exitWith {};
 
 	if (MiseryBreathFogAllowed == true) then {
 	if (isNil{player getVariable "MiseryBreathFogSim"}) then {
-    [] execVM MIS_FILESYS(Survival\Functions\Temperature\BreathFog);
+    [] execVM MIS_FILESYS(survival\Functions\Temperature\BreathFog);
 	};
 };
 
@@ -216,7 +216,7 @@ if !(hasInterface) exitWith {};
 		}; //Over exposure death / -30C or 55+C  
 	};
 
-	if(MiseryDebug)then{systemChat "Misery Survival loop cycle..."};
+	if(MiseryDebug)then{systemChat "Misery survival loop cycle..."};
 
-}, MiserySurvivalCycle, []] call CBA_fnc_addPerFrameHandler;
+}, MiserysurvivalCycle, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;

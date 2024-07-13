@@ -37,7 +37,7 @@ if (MiseryDebug) then {
 _bText=toLower(getText(configfile>>"CfgVehicles">>(typeOf _b)>>"editorSubcategory"));
 
 // Military building
-if (("military" in _bText)>-1) exitWith {
+if ((_bText find "military")>-1) exitWith {
 	if (MiseryDebug) then {
 		_marker setMarkerTypeLocal "mil_box";
 		_marker setMarkerColorLocal "ColorGREEN"

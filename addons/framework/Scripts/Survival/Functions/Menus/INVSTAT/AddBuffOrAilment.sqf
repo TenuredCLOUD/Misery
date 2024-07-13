@@ -8,7 +8,7 @@ Usage example:
 */
 
 _this params ["_type", "_name", "_image", "_description"];
-private _arrayName = ["ailments", "buffs"] select (_type == "buff")
+private _arrayName = if (_type == "buff") then {"buffs"} else {"ailments"};
 private _array = player getVariable [_arrayName, []];
 if !(_array findIf {(_x select 0) isEqualTo _name} > -1) then {
     _array pushBack [_name, _image, _description];

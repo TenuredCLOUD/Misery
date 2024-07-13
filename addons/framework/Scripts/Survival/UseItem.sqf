@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
 Misery Item usage defines 
@@ -10,7 +10,7 @@ by TenuredCLOUD
 private ["_selectedItem","_debuffs","_entry","_MHunger","_MThirst","_MDebuffs","_MExposure","_hunger","_thirst","_debuffAdd","_debuffRemove","_script","_replaceWith","_playaudio","_checkforGmask","_checkforCopener","_waittill","_radsremoved","_radsadd","_feverremoved","_coldremoved"];
 
 _selectedItem = (toUpper _this);
-_debuffs = [] + MiserySurvivalItemEffects;
+_debuffs = [] + MiserysurvivalItemEffects;
 _entry = []; 
 
 {

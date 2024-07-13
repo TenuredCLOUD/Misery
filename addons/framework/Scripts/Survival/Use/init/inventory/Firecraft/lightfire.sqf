@@ -25,17 +25,17 @@ if !("Misery_tinder" in items player || "acex_intelitems_notepad" in magazines p
 [
 	player,
 	"Craft Fire",
-	"Misery\Scripts\Survival\Use\icons\firecraft.paa",
-	"Misery\Scripts\Survival\Use\icons\firecraft.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\firecraft.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\firecraft.paa",
 	"'Misery_firewood' in items player || 'Misery_woodensticks' in items player",
 	"'Misery_lighter' in items player || 'rvg_matches' in magazines player",
 	{
   //Sound generation:
   if ("Misery_lighter" in items player) then {
-  playSound3D ["Misery\audio\sounds\immersion\Lighter.ogg", player, false, getPosASL player, 4, 1, 10];  
+  playSound3D ["\z\misery\addons\framework\audio\sounds\immersion\Lighter.ogg", player, false, getPosASL player, 4, 1, 10];  
   }else{
   if ("rvg_matches" in magazines player) then {
-  playSound3D ["Misery\audio\sounds\immersion\Match.ogg", player, false, getPosASL player, 4, 1, 10];  
+  playSound3D ["\z\misery\addons\framework\audio\sounds\immersion\Match.ogg", player, false, getPosASL player, 4, 1, 10];  
   };
   };
 

@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
 Misery No nightvision when in TPP (Third person)
@@ -18,7 +18,7 @@ by TenuredCLOUD
 			if(MiseryDebug)then{systemChat "Misery TPP NVG's cycle terminated..."};
 			//Only re-execute if MiseryNoNVG_TPP_ENABLED is true:
 			if (MiseryNoNVG_TPP_ENABLED) then {
-			[] execVM MIS_FILESYS(Survival\Immersion\TPPNONVG);
+			[] execVM MIS_FILESYS(survival\Immersion\TPPNONVG);
 			if(MiseryDebug)then{systemChat "Misery TPP NVG's cycle checks re-initiated..."};
 			};
 		};

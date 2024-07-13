@@ -2,8 +2,8 @@
 [
 	player,
 	"Boil water",
-	"Misery\Scripts\Survival\Use\icons\boilwater.paa",
-	"Misery\Scripts\Survival\Use\icons\boilwater.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\boilwater.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\boilwater.paa",
 	"call Misery_fnc_NearFire",
 	"call Misery_fnc_Canboilwater",
 	{

@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
 Misery gasmask cartridge degradation
@@ -7,7 +7,7 @@ by TenuredCLOUD
 */
 
 //If No Client data exists add default cartridge capacity:
-if (isNil{(profileNamespace getVariable MiserySurvivalSaveName)}) then {
+if (isNil{(profileNamespace getVariable MiserysurvivalSaveName)}) then {
 player setVariable ["Miserycartridge", 100];
 };
 
@@ -23,7 +23,7 @@ if (isNil {player getVariable "Miserycartridge"}) then {player setVariable ["Mis
         if ((!(goggles player in antirad_goggles) && !(vest player in antirad_vests || backpack player in antirad_packs)) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             if(MiseryDebug)then{systemChat "Misery Gasmask deficiency cycle terminated..."};
-            [] execVM MIS_FILESYS(Survival\Radiation\gasmasktimer);
+            [] execVM MIS_FILESYS(survival\Radiation\gasmasktimer);
             if(MiseryDebug)then{systemChat "Misery Gasmask deficiency cycle checks re-initiated..."};
         };
 

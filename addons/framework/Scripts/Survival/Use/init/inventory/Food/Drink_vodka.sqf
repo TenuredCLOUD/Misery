@@ -4,7 +4,7 @@ Designed specifically for Misery mod (also compatible with Ravage)
 by TenuredCLOUD 
 */
 
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 private _MSleepiness = player getVariable ["MiserySleepiness", MIS_SLEEP];
 private _MFear = player getVariable ["MiseryFear", MIS_FEAR];

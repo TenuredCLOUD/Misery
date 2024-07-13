@@ -21,7 +21,7 @@ by TenuredCLOUD
     player setVariable ["MiseryCurrency", _CurrentFunds + _amount];
     _Corpse setVariable ["MiseryCurrency", _CorpseFunds - _amount, true];
 
-	[] execVM 'Misery\Scripts\Survival\Functions\Menus\Money\TakeMoney.sqf'; //Refresh main UI 
+	[] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Money\TakeMoney.sqf'; //Refresh main UI 
 
 }, []] call CBA_fnc_waitUntilAndExecute;
 

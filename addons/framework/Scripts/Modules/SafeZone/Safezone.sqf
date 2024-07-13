@@ -16,7 +16,7 @@ private _radius = _input1;
 private _trg = createTrigger ["EmptyDetector", _pos, false];
 _trg setTriggerArea [_radius,_radius,0,False];
 _trg setTriggerActivation ["ANY", "PRESENT", true];
-_trg setTriggerStatements ["(vehicle player) in thislist", "MiseryinSafezonearea = true; 'Misery\Scripts\Modules\SafeZone\Safezonestart.sqf' remoteExec ['execVM', thislist];", "MiseryinSafezonearea = false;"]; //COND. ACTIVE. DEACTIVE.
+_trg setTriggerStatements ["(vehicle player) in thislist", "MiseryinSafezonearea = true; '\z\misery\addons\framework\scripts\Modules\SafeZone\Safezonestart.sqf' remoteExec ['execVM', thislist];", "MiseryinSafezonearea = false;"]; //COND. ACTIVE. DEACTIVE.
 _trg setTriggerTimeout [0, 1, 2, true];
 
 if (MiseryDebug) then {

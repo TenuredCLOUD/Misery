@@ -7,7 +7,7 @@ by TenuredCLOUD
 class MiseryCraftingFramework_GUI
 {
 	idd = 982376;
-	onLoad = "[] execVM 'Misery\Scripts\Survival\Functions\Menus\Crafting\RecipesListed.sqf'; [] execVM 'Misery\Scripts\Survival\Functions\Menus\Crafting\Showicon.sqf';";
+	onLoad = "[] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Crafting\RecipesListed.sqf'; [] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Crafting\Showicon.sqf';";
 
 class ControlsBackground
 {
@@ -61,7 +61,7 @@ class MiseryCrafting_NoteBox: RscText
 class Misery_Crafting_Icon: RscPicture
 {
 	idc = 1501;
-	text = "\Misery\Scripts\Survival\Use\icons\crafting.paa";
+	text = "\\z\misery\addons\framework\scripts\survival\Use\icons\crafting.paa";
 	x = PASS_STR(36.5 * GUI_GRID_W + GUI_GRID_X);
 	y = PASS_STR(2 * GUI_GRID_H + GUI_GRID_Y);
 	w = PASS_STR(5.5 * GUI_GRID_W);
@@ -99,7 +99,7 @@ class MiseryCrafting_Button: RscButton
 	colorBackground[] = {0.2, 0.2, 0.2, 0.7};
 	colorFocused[] = {0.5, 0.5, 0.5, 0.7};
 	colorActive[] = {0.5, 0.5, 0.5, 0.7};
-	onButtonClick = "[] execVM 'Misery\Scripts\Survival\Functions\Menus\Crafting\ProcessItems.sqf';";
+	onButtonClick = "[] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Crafting\ProcessItems.sqf';";
 };
 class MiseryCrafting_KnownRecipes: RscButton
 {
@@ -114,7 +114,7 @@ class MiseryCrafting_KnownRecipes: RscButton
 	colorBackground[] = {0.2, 0.2, 0.2, 0.7};
 	colorFocused[] = {0.5, 0.5, 0.5, 0.7};
 	colorActive[] = {0.5, 0.5, 0.5, 0.7};
-	onButtonClick = "[] execVM 'Misery\Scripts\Survival\Functions\Menus\Crafting\ShowRecipe.sqf';";
+	onButtonClick = "[] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Crafting\ShowRecipe.sqf';";
 };
 class MiseryCrafting_ExitButton: RscButton
 {
@@ -134,5 +134,5 @@ class MiseryCrafting_ExitButton: RscButton
 	};
 		};
 
-//$[1.063,["Misery_CraftingGUI",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],[1800,"Misery_CraftingBG",[2,"",["-4.5 * GUI_GRID_W + GUI_GRID_X","0.5 * GUI_GRID_H + GUI_GRID_Y","49 * GUI_GRID_W","24 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1500,"MiseryCrafting_List_1",[2,"",["17 * GUI_GRID_W + GUI_GRID_X","4.5 * GUI_GRID_H + GUI_GRID_Y","16.5 * GUI_GRID_W","14 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1000,"Misery_CraftingPrompt",[2,"What would you like to craft?",["-4 * GUI_GRID_W + GUI_GRID_X","0.5 * GUI_GRID_H + GUI_GRID_Y","22 * GUI_GRID_W","2.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1600,"MiseryCrafting_Button",[2,"Craft",["35 * GUI_GRID_W + GUI_GRID_X","12 * GUI_GRID_H + GUI_GRID_Y","7.5 * GUI_GRID_W","1.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1002,"MiseryCrafting_ItemSelectionTip",[2,"Blueprints:",["16.66 * GUI_GRID_W + GUI_GRID_X","2.5 * GUI_GRID_H + GUI_GRID_Y","6 * GUI_GRID_W","2.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","0.8"],[]],[1601,"MiseryCrafting_KnownRecipes",[2,"Show Recipe",["35 * GUI_GRID_W + GUI_GRID_X","14.5 * GUI_GRID_H + GUI_GRID_Y","7.5 * GUI_GRID_W","1.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"Check Known Recipes","-1"],[]],[1602,"MiseryCrafting_ExitButton",[2,"Exit",["35 * GUI_GRID_W + GUI_GRID_X","17 * GUI_GRID_H + GUI_GRID_Y","7.5 * GUI_GRID_W","1.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"Check Known Recipes","-1"],[]],[1001,"MiseryCrafting_NoteBox",[2,"",["-3.5 * GUI_GRID_W + GUI_GRID_X","19 * GUI_GRID_H + GUI_GRID_Y","46.5 * GUI_GRID_W","4 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1200,"Misery_Crafting_Icon",[2,"\Misery\Scripts\Survival\Use\icons\crafting.paa",["36.5 * GUI_GRID_W + GUI_GRID_X","2 * GUI_GRID_H + GUI_GRID_Y","5.5 * GUI_GRID_W","3.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1003,"MiseryCrafting_RecipeTip",[2,"Recipe for Blueprint:",["-1.82 * GUI_GRID_W + GUI_GRID_X","2.72 * GUI_GRID_H + GUI_GRID_Y","9.5 * GUI_GRID_W","2 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","0.8"],[]],[1502,"MiseryCrafting_List_2",[2,"",["-1.5 * GUI_GRID_W + GUI_GRID_X","4.5 * GUI_GRID_H + GUI_GRID_Y","16.5 * GUI_GRID_W","14 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]]
+//$[1.063,["Misery_CraftingGUI",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],[1800,"Misery_CraftingBG",[2,"",["-4.5 * GUI_GRID_W + GUI_GRID_X","0.5 * GUI_GRID_H + GUI_GRID_Y","49 * GUI_GRID_W","24 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1500,"MiseryCrafting_List_1",[2,"",["17 * GUI_GRID_W + GUI_GRID_X","4.5 * GUI_GRID_H + GUI_GRID_Y","16.5 * GUI_GRID_W","14 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1000,"Misery_CraftingPrompt",[2,"What would you like to craft?",["-4 * GUI_GRID_W + GUI_GRID_X","0.5 * GUI_GRID_H + GUI_GRID_Y","22 * GUI_GRID_W","2.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1600,"MiseryCrafting_Button",[2,"Craft",["35 * GUI_GRID_W + GUI_GRID_X","12 * GUI_GRID_H + GUI_GRID_Y","7.5 * GUI_GRID_W","1.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1002,"MiseryCrafting_ItemSelectionTip",[2,"Blueprints:",["16.66 * GUI_GRID_W + GUI_GRID_X","2.5 * GUI_GRID_H + GUI_GRID_Y","6 * GUI_GRID_W","2.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","0.8"],[]],[1601,"MiseryCrafting_KnownRecipes",[2,"Show Recipe",["35 * GUI_GRID_W + GUI_GRID_X","14.5 * GUI_GRID_H + GUI_GRID_Y","7.5 * GUI_GRID_W","1.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"Check Known Recipes","-1"],[]],[1602,"MiseryCrafting_ExitButton",[2,"Exit",["35 * GUI_GRID_W + GUI_GRID_X","17 * GUI_GRID_H + GUI_GRID_Y","7.5 * GUI_GRID_W","1.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"Check Known Recipes","-1"],[]],[1001,"MiseryCrafting_NoteBox",[2,"",["-3.5 * GUI_GRID_W + GUI_GRID_X","19 * GUI_GRID_H + GUI_GRID_Y","46.5 * GUI_GRID_W","4 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1200,"Misery_Crafting_Icon",[2,"\\z\misery\addons\framework\scripts\survival\Use\icons\crafting.paa",["36.5 * GUI_GRID_W + GUI_GRID_X","2 * GUI_GRID_H + GUI_GRID_Y","5.5 * GUI_GRID_W","3.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1003,"MiseryCrafting_RecipeTip",[2,"Recipe for Blueprint:",["-1.82 * GUI_GRID_W + GUI_GRID_X","2.72 * GUI_GRID_H + GUI_GRID_Y","9.5 * GUI_GRID_W","2 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","0.8"],[]],[1502,"MiseryCrafting_List_2",[2,"",["-1.5 * GUI_GRID_W + GUI_GRID_X","4.5 * GUI_GRID_H + GUI_GRID_Y","16.5 * GUI_GRID_W","14 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]]
 

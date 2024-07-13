@@ -2281,7 +2281,7 @@ class Misery_Emerald : Misery_ItemCore {
 
 //////////////////////////End of mining stuff
 
-//////Survival: 
+//////survival: 
 
 //////EMF detectors: 
 

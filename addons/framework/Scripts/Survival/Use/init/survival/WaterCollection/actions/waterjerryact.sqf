@@ -3,8 +3,8 @@
 [
 	player,
 	"Collect water in Jerrycan",
-	"Misery\Scripts\Survival\Use\icons\well.paa",
-	"Misery\Scripts\Survival\Use\icons\well.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\well.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\well.paa",
 	"call Misery_fnc_NearWell",
 	"call Misery_fnc_emptyjerrycanfill",
 	{

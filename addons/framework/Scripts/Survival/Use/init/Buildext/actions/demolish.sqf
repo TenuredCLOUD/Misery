@@ -8,8 +8,8 @@ by TenuredCLOUD
 [
 	player,
 	"Demolish object",
-	"Misery\Scripts\Survival\Use\icons\Sledgehammer.paa",
-	"Misery\Scripts\Survival\Use\icons\Sledgehammer.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\Sledgehammer.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\Sledgehammer.paa",
 	"call Misery_fnc_HasSledghammer",
 	"call Misery_fnc_NearNMB",
 	{

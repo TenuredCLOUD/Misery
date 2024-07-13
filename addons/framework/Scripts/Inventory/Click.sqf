@@ -20,8 +20,8 @@ _item=_x;
 	if!(_selectedItem=="")exitWith{};
 }forEach((items player)+(magazines player)); //((items player)+(assignedItems player)+(magazines player)+(weapons player))
 if(_selectedItem=="")exitWith{};
-if((MiserySurvival)AND((toUpper _selectedItem)in MiserySurvivalItems))exitWith{
-	_selectedItem execVM "Misery\Scripts\Survival\UseItem.sqf";
+if((Miserysurvival)AND((toUpper _selectedItem)in MiserysurvivalItems))exitWith{
+	_selectedItem execVM "\z\misery\addons\framework\scripts\survival\UseItem.sqf";
 };
 
 private _script="";

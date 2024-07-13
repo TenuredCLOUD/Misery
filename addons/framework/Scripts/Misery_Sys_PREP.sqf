@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
 Misery Module startup
@@ -7,7 +7,7 @@ Designed specifically for Misery mod
 by TenuredCLOUD 
 */
 
-//if ((count(entities "Misery_Survival")) < 1) exitWith {}; //Exit startup code if no Misery survival module is placed 
+//if ((count(entities "Misery_survival")) < 1) exitWith {}; //Exit startup code if no Misery survival module is placed 
 
 //if ((count(entities "Ravage_survival")) > 0) exitwith {}; //Exit startup code if Ravage survival module is placed (Version 1.1.6 + is no longer compatible)
 
@@ -16,12 +16,12 @@ if!(isNil "MiseryExit")exitWith{};
 MiseryDebug=FALSE;
 MiseryEnabled=TRUE;
 
-MiserySurvivalShowStatus=FALSE;
+MiserysurvivalShowStatus=FALSE;
 
-MiserySurvival=FALSE;
+Miserysurvival=FALSE;
 
-MiserySurvivalItems=[];
-MiserySurvivalItemEffects=[];
+MiserysurvivalItems=[];
+MiserysurvivalItemEffects=[];
 
 MiseryAllBuildings=[];
 
@@ -288,7 +288,7 @@ Mis_Medpriceradheal=_module getvariable "Misery_Medpriceradheal";
 if (isNil "MiseryinSafezonearea") then {MiseryinSafezonearea = false}; 
 
 if (hasInterface) then {
-[] execVM MIS_FILESYS(Survival\Zinfect\zinfection); //Zed infection pre-checks in file 
+[] execVM MIS_FILESYS(survival\Zinfect\zinfection); //Zed infection pre-checks in file 
 };
 
 //If GRAD persistence is active, push Fireplace types to blacklister, so they won't save / reload (This will execute only once)
@@ -315,25 +315,25 @@ private _Fireclasses = [
 if (MiseryFearenabled) then {
 //Param checks:
 if (MiseryFearRvg == 1) then {
-PREPROC_FUNCTION(Misery_fnc_NearZed,MIS_FILESYS(Survival\Functions\Fear\Nearzeds))
+PREPROC_FUNCTION(Misery_fnc_NearZed,MIS_FILESYS(survival\Functions\Fear\Nearzeds))
 };
 if (MiseryFearRem == 1) then {
-PREPROC_FUNCTION(Misery_fnc_NearPhantom,MIS_FILESYS(Survival\Functions\Fear\NearPhantom))
+PREPROC_FUNCTION(Misery_fnc_NearPhantom,MIS_FILESYS(survival\Functions\Fear\NearPhantom))
 };
 if (MiseryFearDSA == 1) then {
-PREPROC_FUNCTION(Misery_fnc_NearSpook,MIS_FILESYS(Survival\Functions\Fear\NearSpook))
+PREPROC_FUNCTION(Misery_fnc_NearSpook,MIS_FILESYS(survival\Functions\Fear\NearSpook))
 };
 
 if (hasInterface) then {
 //Fear loops:
-[] execVM MIS_FILESYS(Survival\Fear\Fear);
-[] execVM MIS_FILESYS(Survival\Fear\Fearcycle);
+[] execVM MIS_FILESYS(survival\Fear\Fear);
+[] execVM MIS_FILESYS(survival\Fear\Fearcycle);
 	};
 };
 
 //Radiation Exp+:
 if (MiseryEnhrads && hasInterface) then {
-[] execVM MIS_FILESYS(Survival\Radiation\radiationex);
+[] execVM MIS_FILESYS(survival\Radiation\radiationex);
 
 //Reactivate Geiger if picking up active one:
 player addEventHandler ["Take", {
@@ -369,48 +369,48 @@ addMissionEventHandler ["EntityKilled", {
 
 //Artifact exposure+:
 if (MiseryEnhartifacts && hasInterface) then {
-[] execVM MIS_FILESYS(Survival\Radiation\Artifactexposure);
+[] execVM MIS_FILESYS(survival\Radiation\Artifactexposure);
 };
 
 //gasmasks +:
 if (Miserygasmasks && hasInterface) then {
-[] execVM MIS_FILESYS(Survival\Radiation\gasmasktimer);
+[] execVM MIS_FILESYS(survival\Radiation\gasmasktimer);
 //Misery Gasmask audio overhaul:
-[] execVM MIS_FILESYS(Survival\Immersion\Gasmaskaudio);
+[] execVM MIS_FILESYS(survival\Immersion\Gasmaskaudio);
 //};
 };
 
 //Phantom artifact drops:
 if (MiseryPhantDrops && isServer) then {
-[] execVM MIS_FILESYS(Survival\Phantoms\phantomdrops);
+[] execVM MIS_FILESYS(survival\Phantoms\phantomdrops);
 };
 
 //Character Immersion:
 if (MiseryChrenhan && hasInterface) then{
 //Misery Hunger:
-[] execVM MIS_FILESYS(Survival\Immersion\hungerimmersion);
+[] execVM MIS_FILESYS(survival\Immersion\hungerimmersion);
 //Cold: 
-[] execVM MIS_FILESYS(Survival\Immersion\coldimmersion);
+[] execVM MIS_FILESYS(survival\Immersion\coldimmersion);
 //Hot:
-[] execVM MIS_FILESYS(Survival\Immersion\feverimmersion);
+[] execVM MIS_FILESYS(survival\Immersion\feverimmersion);
 };
 
 //Inventory sound overhaul:
 if (MiseryEnhinv && hasInterface) then {
 //Always true if selected
 player addEventHandler ["InventoryClosed", {
-		playSound3D ["Misery\audio\sounds\inventory\inv_closenew.ogg", player, false, getPosASL player, 4, 1, 10];
+		playSound3D ["\z\misery\addons\framework\audio\sounds\inventory\inv_closenew.ogg", player, false, getPosASL player, 4, 1, 10];
 }];
 player addEventHandler ["InventoryOpened", {
-		playSound3D ["Misery\audio\sounds\inventory\inv_opennew.ogg", player, false, getPosASL player, 4, 1, 10];
+		playSound3D ["\z\misery\addons\framework\audio\sounds\inventory\inv_opennew.ogg", player, false, getPosASL player, 4, 1, 10];
 }];
 
 player addEventHandler ["Take", {
-		playSound3D ["Misery\audio\sounds\inventory\pickup.ogg", player, false, getPosASL player, 3, 1, 10];
+		playSound3D ["\z\misery\addons\framework\audio\sounds\inventory\pickup.ogg", player, false, getPosASL player, 3, 1, 10];
 }];
 
 player addEventHandler ["Put", {
-		playSound3D ["Misery\audio\sounds\inventory\drop5.ogg", player, false, getPosASL player, 3, 1, 10];
+		playSound3D ["\z\misery\addons\framework\audio\sounds\inventory\drop5.ogg", player, false, getPosASL player, 3, 1, 10];
 }];
 };
 
@@ -421,17 +421,17 @@ if (MiseryLootEnabled) then {
 
 //Audio
 if (MiseryEnhamb && isServer) then {
-[] execVM MIS_FILESYS(Survival\Audio loops\Amb_Soundscape);
+[] execVM MIS_FILESYS(survival\Audio loops\Amb_Soundscape);
 };
 
 if (count Misery_AmbientMusic_Listed_audio > 0 && isServer) then {
 [] call Misery_fnc_playMusic_Random; //First Track play
-[] execVM MIS_FILESYS(Survival\Audio loops\Amb_Music); //Begin loop
+[] execVM MIS_FILESYS(survival\Audio loops\Amb_Music); //Begin loop
 };
 
 //Traders
 if (MiseryDynamicMarketsActive && isServer) then {
-[] execVM MIS_FILESYS(Survival\Traders\TrackTraders);
+[] execVM MIS_FILESYS(survival\Traders\TrackTraders);
 };
 
 //Ambient Wildlife
@@ -441,7 +441,7 @@ if (MiseryAmbientWildlife && isServer) then {
 
 //Forge Audio loops:
 if (MiseryEnhForge && isServer) then {
-[] execVM MIS_FILESYS(Survival\Audio loops\forgeaudio);
+[] execVM MIS_FILESYS(survival\Audio loops\forgeaudio);
 };
 
 if (((count(entities "Misery_Psyfieldcreate")) > 0) && hasInterface) then {
@@ -462,14 +462,14 @@ private _gvars = ["dsaSpookBases", "dsaDevMutants", "dsaWebknightCreatures"];
 {
 waitUntil {!isNil _x}; // Check Gvar arrays every second
 } forEach _gvars;
-[] execVM MIS_FILESYS(Survival\RFdetector\RFsyncLoop);
+[] execVM MIS_FILESYS(survival\RFdetector\RFsyncLoop);
 }else{
-[] execVM MIS_FILESYS(Survival\RFdetector\RFsyncLoop);    
+[] execVM MIS_FILESYS(survival\RFdetector\RFsyncLoop);    
     };
 };
 
 // if (((count (entities "Misery_RadioSettings")) > 0) && hasInterface) then {
-// [] execVM MIS_FILESYS(Survival\Radio\RadiosyncLoop);
+// [] execVM MIS_FILESYS(survival\Radio\RadiosyncLoop);
 // };
 
 //Auto Detector changes after player killed: 
@@ -589,7 +589,7 @@ player addEventHandler ["Put", {
 
 // //WBK IMS Handle for Dash / sprint w/ no stamina (overrides to enforce stamina depletion)
 if (MiseryWBKIMS && hasInterface) then {
-[] execVM MIS_FILESYS(Survival\Immersion\IMSDash);
+[] execVM MIS_FILESYS(survival\Immersion\IMSDash);
 };
 
 //Auto Radio changes after player killed: 
@@ -620,7 +620,7 @@ if (MiseryWBKIMS && hasInterface) then {
 MiseryReady=TRUE;
 publicVariable "MiseryReady";
 
-MiserySurvival=TRUE;
+Miserysurvival=TRUE;
 player setVariable ["MiseryThirst",MIS_THIRST];
 player setVariable ["MiseryHunger",MIS_HUNGER];
 player setVariable ["MiserySleepiness",MIS_SLEEP];
@@ -648,50 +648,46 @@ player setVariable ["MiseryBreath", false];
 MiserySeaTemp = 0; 
 
 // Autogenerate savefile if blank:
-if (MiserySurvivalSaveName == "") then{
-MiserySurvivalSaveName=format["MiseryPlayerSave_%1%2%3",missionName,worldName,name player];
+if (MiserysurvivalSaveName == "") then{
+MiserysurvivalSaveName=format["MiseryPlayerSave_%1%2%3",missionName,worldName,name player];
 }else{
-MiserySurvivalSaveName=format["MiseryPlayerSave_%1",MiserySurvivalSaveName]
+MiserysurvivalSaveName=format["MiseryPlayerSave_%1",MiserysurvivalSaveName]
 };
 
-[] call Misery_fnc_DefineSurvivalItems;
+[] call Misery_fnc_DefinesurvivalItems;
 
 if (MiseryDefineItemsScript != "") then {
-	MiserySurvivalItemEffects=[];
-	MiserySurvivalItems=[];
+	MiserysurvivalItemEffects=[];
+	MiserysurvivalItems=[];
 [] execVM MiseryDefineItemsScript;
 };
 
-if (MiserySurvivalDebugacts && hasInterface) then {
-[] execVM MIS_FILESYS(Survival\Debug\AddDebug);
-};
-
-if (MiseryManualPData == 1 && MiserySurvivalSaveMode == 2) then {
+if (MiseryManualPData == 1 && MiserysurvivalSaveMode == 2) then {
 	MiseryActions pushback [localize "STR_MISERY_PLAYERDATA", localize "STR_MISERY_PLAYERDATA"];
 };
 
 //Persistency:
 //Persistency handle:
-if (MiserySurvivalPersistence == 1) then {
-[[], MIS_FILESYS(Survival\Persistency\Persistencehandle)] remoteExec ["execVM ", 0, true];
+if (MiserysurvivalPersistence == 1) then {
+[[], MIS_FILESYS(survival\Persistency\Persistencehandle)] remoteExec ["execVM ", 0, true];
 };
 //Persistency keyhandle press:
-if (MiserySurvivalPersistence == 2) then {
+if (MiserysurvivalPersistence == 2) then {
 if (hasInterface) then {
-[] execVM MIS_FILESYS(Survival\Persistency\Keyhandle);
+[] execVM MIS_FILESYS(survival\Persistency\Keyhandle);
 };
-[[], MIS_FILESYS(Survival\Persistency\Persistencehandle)] remoteExec ["execVM ", 0, true];
+[[], MIS_FILESYS(survival\Persistency\Persistencehandle)] remoteExec ["execVM ", 0, true];
 };
 
-if !(MiserySurvivalKillhandleScript=="") then {
-[[], MIS_FILESYS(Survival\Persistency\Killhandle)] remoteExec ["execVM ", 0, true];
+if !(MiserysurvivalKillhandleScript=="") then {
+[[], MIS_FILESYS(survival\Persistency\Killhandle)] remoteExec ["execVM ", 0, true];
 };
 
 // //Persistency reloader:
-if (MiserySurvivalSaveMode == 2) then { 
+if (MiserysurvivalSaveMode == 2) then { 
 	private _saveArray=[];
-	if!(isNil{profileNamespace getVariable MiserySurvivalSaveName})then{
-		_saveArray=profileNamespace getVariable MiserySurvivalSaveName;
+	if!(isNil{profileNamespace getVariable MiserysurvivalSaveName})then{
+		_saveArray=profileNamespace getVariable MiserysurvivalSaveName;
 		if((count _saveArray)<1)exitWith{systemChat "New Misery Character";
 		};
 		[player] call Misery_fnc_MiseryDeserializeplayer;
@@ -702,8 +698,8 @@ if (MiserySurvivalSaveMode == 2) then {
 	enableSaving [false, false]; //Disable saving options + Save & exit etc... 
 };
 
-if (MiserySurvivalSaveMode == 1) then {
-	if (MiserySurvivalHardCoreSaveMode == 1) then {
+if (MiserysurvivalSaveMode == 1) then {
+	if (MiserysurvivalHardCoreSaveMode == 1) then {
 //titleText ["Hardcore player saving ENABLED... You can now ONLY save near campfires.", "PLAIN DOWN"];
 
 enableSaving [false,false]; //Disables saving / autosaving
@@ -735,7 +731,7 @@ player addAction
 	};
 };
 
-MiserySurvivalShowStatus=TRUE; 
+MiserysurvivalShowStatus=TRUE; 
 
 if (MiseryTemperature == 1 && hasInterface) then { 
 MiseryActions pushBack [localize "STR_MISERY_CheckClothing", localize "STR_MISERY_CheckClothing"];
@@ -762,7 +758,7 @@ MiseryActions pushBack[localize "STR_MISERY_CheckGearweight", localize "STR_MISE
 };
 
 //respawn handle for stats (Singleplayer) - incase respawns exist: 
-if !(MiseryMP && MiserySurvivalSaveMode == 1) then {
+if !(MiseryMP && MiserysurvivalSaveMode == 1) then {
 player addEventHandler ["Respawn",{ 
 params ["_unit", "_corpse"];
 _MiseryDebuffs = [];
@@ -800,8 +796,8 @@ _MiseryCraftingKnowledge = [];
 };
 
 if !(MiseryMP && hasInterface) then {
-[player] execVM MIS_FILESYS(Survival\Sleep\setSleepAction);
-PREPROC_FUNCTION(Misery_fnc_HourSelected,MIS_FILESYS(Survival\Functions\Sleep\HourSelected));
+//Need new Sleeping interaction //[player] execVM MIS_FILESYS(survival\Sleep\setSleepAction);
+PREPROC_FUNCTION(Misery_fnc_HourSelected,MIS_FILESYS(survival\Functions\Sleep\HourSelected));
 };
 
 if !(MiseryMP) then {
@@ -850,7 +846,7 @@ MiseryClientReady=TRUE;
 publicVariable "MiseryClientReady";
 
 //Client execute survival loop
-if (hasInterface) then {[] execVM MIS_FILESYS(Survival\Survival_loop)};
+if (hasInterface) then {[] execVM MIS_FILESYS(survival\survival_loop)};
 
 if (hasInterface) then {
 [] execVM MIS_FILESYS(Inventory\Inventoryhandle);

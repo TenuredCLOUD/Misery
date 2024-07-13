@@ -10,5 +10,5 @@ createDialog "MiseryRefuel_Vehicle_JCan_GUI";
 
 private _Jerrycanused= _this; // item classname
 
-[_Jerrycanused] execVM 'Misery\Scripts\Survival\Use\init\fuel\refuelveh\Veh_icon.sqf';
+[_Jerrycanused] execVM '\z\misery\addons\framework\scripts\survival\Use\init\fuel\refuelveh\Veh_icon.sqf';
 

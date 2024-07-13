@@ -21,7 +21,7 @@ private _windChillIndexCelsius = 0;
 
 private _humidity = (_overcast + _rain) / 2;
 
-private _breathFog = parseNumber (_airTemp <= 45) && (_humidity >= 0.6);
+private _breathFog = if (_airTemp <= 45 && _humidity >= 0.60) then {1}else{0};
   
 if (_seaTemp <= 0) then {  
     _seaTemp = 0;  

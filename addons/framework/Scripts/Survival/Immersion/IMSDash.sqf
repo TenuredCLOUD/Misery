@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
 Misery WBKIMS Dash Compat
@@ -26,7 +26,7 @@ by TenuredCLOUD
 			player playMoveNow "melee_armed_idle"; //Force anim delay
     		};
 			} forEach IMSSPRINT;
-			[] execVM MIS_FILESYS(Survival\Immersion\IMSDash);
+			[] execVM MIS_FILESYS(survival\Immersion\IMSDash);
 			if(MiseryDebug)then{systemChat "Misery WBKIMS Dash Compat cycle checks re-initiated..."};
 		};
 

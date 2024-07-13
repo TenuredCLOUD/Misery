@@ -7,8 +7,8 @@ by TenuredCLOUD
 [
 	player,
 	"Cauterize wounds",
-	"Misery\Scripts\Survival\Use\icons\cauterize.paa",
-	"Misery\Scripts\Survival\Use\icons\cauterize.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\cauterize.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\cauterize.paa",
 	"call Misery_fnc_NearFire",
 	"[player] call ace_medical_blood_fnc_isBleeding",
 	{
@@ -59,7 +59,7 @@ by TenuredCLOUD
 	_TimeA=_this select 0;
 	waitUntil {(!alive player) or (time > _TimeA)};
 
-	player setVariable ["cauterizenotif", format ["<t>Your Cauterized wounds feel itchy and are hot to the touch... <img shadow='0' size='1.5' image='%1'/>", "Misery\Scripts\Survival\Data\infection.paa"]];
+	player setVariable ["cauterizenotif", format ["<t>Your Cauterized wounds feel itchy and are hot to the touch... <img shadow='0' size='1.5' image='%1'/>", "\z\misery\addons\framework\scripts\survival\Data\infection.paa"]];
 	hintSilent parseText format ["<t>%1</t><br/>",
 	player getVariable ['cauterizenotif', nil]
 	];

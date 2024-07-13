@@ -133,7 +133,7 @@ if (_ModuleplacementOK) then {
         _crateuniformArray,
         _cratevestArray,
         _cratebackpackArray,
-        _maxallowedCrateitems] execVM "Misery\Scripts\Modules\POI\PopulateCrate.sqf";
+        _maxallowedCrateitems] execVM "\z\misery\addons\framework\scripts\Modules\POI\PopulateCrate.sqf";
     };
 } else {
 if (MiseryDebug) then {systemChat format["[Misery POI Framework] Module at %1 is a Shore loot module, and must be placed near a shore...",getPosATL _module];};

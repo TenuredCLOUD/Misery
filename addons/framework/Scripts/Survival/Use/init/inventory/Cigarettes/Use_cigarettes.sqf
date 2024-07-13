@@ -4,7 +4,7 @@ Designed specifically for Misery mod
 by TenuredCLOUD 
 */
 
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 if (!hasInterface) exitWith {};
 MiseryACE=FALSE;
@@ -20,7 +20,7 @@ private _MFear = player getVariable ["MiseryFear", MIS_FEAR];
 
 	player removeitem "Misery_cigarettepack"; //remove on start;
 
-	playSound3D ["Misery\audio\sounds\immersion\Matchsmoking.ogg", player, false, getPosASL player, 4, 1, 10];
+	playSound3D ["\z\misery\addons\framework\audio\sounds\immersion\Matchsmoking.ogg", player, false, getPosASL player, 4, 1, 10];
 
 	//Remove some fear due to cig smoking:
   if (MiseryFearenabled) then {
@@ -103,7 +103,7 @@ if ("Misery_lighter" in items player) then {
 
   player removeitem "Misery_cigarettepack"; //remove on start;
 
-  playSound3D ["Misery\audio\sounds\immersion\Lightersmoking.ogg", player, false, getPosASL player, 4, 1, 10];
+  playSound3D ["\z\misery\addons\framework\audio\sounds\immersion\Lightersmoking.ogg", player, false, getPosASL player, 4, 1, 10];
 
   //Remove some fear due to cig smoking:
   if (MiseryFearenabled) then {

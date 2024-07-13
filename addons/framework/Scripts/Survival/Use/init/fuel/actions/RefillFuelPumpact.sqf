@@ -7,8 +7,8 @@ by TenuredCLOUD
 [
 	player,
 	"Pump Fuel",
-	"Misery\Scripts\Survival\Use\icons\pumpnozzle.paa",
-	"Misery\Scripts\Survival\Use\icons\pumpnozzle.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\pumpnozzle.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\pumpnozzle.paa",
 	"call Misery_fnc_NearFuel",
 	"call Misery_fnc_Refuelatpump",
 	{

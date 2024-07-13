@@ -6,7 +6,7 @@ by TenuredCLOUD
 
 private ["_saveName"];
 
-_saveName = MiserySurvivalSaveName;
+_saveName = MiserysurvivalSaveName;
 
 profileNamespace setVariable [_saveName, nil];
 

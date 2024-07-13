@@ -3,8 +3,8 @@
 [
 	player,
 	"Collect Jet Fuel",
-	"Misery\Scripts\Survival\Use\icons\jerrycan.paa",
-	"Misery\Scripts\Survival\Use\icons\jerrycan.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\jerrycan.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\jerrycan.paa",
 	"call Misery_fnc_NearJetFuel",
 	"call Misery_fnc_RefillgearJ",
 	{

@@ -4,13 +4,13 @@ Designed specifically for Misery mod
 by TenuredCLOUD 
 */
 
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 [
 	player,
 	"Mine Ore",
-	"Misery\Scripts\Survival\Use\icons\pickaxe.paa",
-	"Misery\Scripts\Survival\Use\icons\pickaxe.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\pickaxe.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\pickaxe.paa",
 	"call Misery_fnc_NearRockSource",
 	"call Misery_fnc_mineactcheck",
 	{

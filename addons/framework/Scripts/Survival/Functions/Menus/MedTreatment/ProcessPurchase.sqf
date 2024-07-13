@@ -30,19 +30,19 @@ private _selectedFile = _treatmentToFile select _selectedIndex;
 
 switch (_selectedFile) do {
     case "Medzonestart": {
-    [] execVM "Misery\Scripts\Modules\Medzone\Medzonestart.sqf";
+    [] execVM "\z\misery\addons\framework\scripts\Modules\Medzone\Medzonestart.sqf";
     };
     case "Radheal14": {
-    [] execVM "Misery\Scripts\Modules\Medzone\Radheal14.sqf";
+    [] execVM "\z\misery\addons\framework\scripts\Modules\Medzone\Radheal14.sqf";
     };
     case "Radheal12": {
-    [] execVM "Misery\Scripts\Modules\Medzone\Radheal12.sqf";
+    [] execVM "\z\misery\addons\framework\scripts\Modules\Medzone\Radheal12.sqf";
     };
     case "Radheal34": {
-   	[] execVM "Misery\Scripts\Modules\Medzone\Radheal34.sqf";
+   	[] execVM "\z\misery\addons\framework\scripts\Modules\Medzone\Radheal34.sqf";
     };
     case "RadhealALL": {
-    [] execVM "Misery\Scripts\Modules\Medzone\RadhealALL.sqf";
+    [] execVM "\z\misery\addons\framework\scripts\Modules\Medzone\RadhealALL.sqf";
     };
 };
 

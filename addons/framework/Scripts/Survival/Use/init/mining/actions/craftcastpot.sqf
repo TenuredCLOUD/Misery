@@ -2,8 +2,8 @@
 [
 	player,
 	"Craft castiron pot",
-	"Misery\Scripts\Survival\Use\icons\anvil.paa",
-	"Misery\Scripts\Survival\Use\icons\anvil.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\anvil.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\anvil.paa",
 	"call Misery_fnc_NearAnvil",
 	"call Misery_fnc_Castpotcraft",
 	{//start action:

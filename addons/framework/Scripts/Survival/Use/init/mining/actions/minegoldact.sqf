@@ -7,8 +7,8 @@ by TenuredCLOUD
 [
 	player,
 	"Mine gold",
-	"Misery\Scripts\Survival\Use\icons\pickaxe.paa",
-	"Misery\Scripts\Survival\Use\icons\pickaxe.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\pickaxe.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\pickaxe.paa",
 	"call Misery_fnc_NearGold",
 	"call Misery_fnc_mineactcheck",
 	{

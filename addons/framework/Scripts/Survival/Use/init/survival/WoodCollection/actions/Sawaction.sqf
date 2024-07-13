@@ -7,8 +7,8 @@ by TenuredCLOUD
  [
 	player,
 	"Saw wood",
-	"Misery\Scripts\Survival\Use\icons\chainsaw.paa",
-	"Misery\Scripts\Survival\Use\icons\chainsaw.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\chainsaw.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\chainsaw.paa",
 	"call Misery_fnc_NearTreeSaw",
 	"call Misery_fnc_NearTreeSaw",
 	{

@@ -70,7 +70,7 @@ waitUntil {
             	(_module getVariable "MiseryPOIAIShake"),
             	(_module getVariable "MiseryPOIAISpeed"),
             	(_module getVariable "MiseryPOISpawnChance")
-				] execVM "Misery\Scripts\Modules\POI\Campground.sqf";
+				] execVM "\z\misery\addons\framework\scripts\Modules\POI\Campground.sqf";
         		};
        			 case "HELIWRECK": {
             	[
@@ -89,7 +89,7 @@ waitUntil {
             	(_module getVariable "MiseryPOICrateUniformLoot"),
             	(_module getVariable "MiseryPOICrateVestLoot"),
             	(_module getVariable "MiseryPOICrateBackpackLoot")
-				] execVM "Misery\Scripts\Modules\POI\HeliWreck.sqf";
+				] execVM "\z\misery\addons\framework\scripts\Modules\POI\HeliWreck.sqf";
         		};
         		case "SHORELOOT": {
             	[
@@ -108,7 +108,7 @@ waitUntil {
             	(_module getVariable "MiseryPOICrateUniformLoot"),
             	(_module getVariable "MiseryPOICrateVestLoot"),
             	(_module getVariable "MiseryPOICrateBackpackLoot")
-				] execVM "Misery\Scripts\Modules\POI\ShoreLoot.sqf";
+				] execVM "\z\misery\addons\framework\scripts\Modules\POI\ShoreLoot.sqf";
         		};
         		case "PMCRAID": {
             	[
@@ -149,7 +149,7 @@ waitUntil {
             	(_module getVariable "MiseryPOIAIShake"),
             	(_module getVariable "MiseryPOIAISpeed"),
             	(_module getVariable "MiseryPOISpawnChance")
-				] execVM "Misery\Scripts\Modules\POI\Raid.sqf";
+				] execVM "\z\misery\addons\framework\scripts\Modules\POI\Raid.sqf";
         	};
         default {
             systemChat format ["Unknown POI type: %1", _poiType];

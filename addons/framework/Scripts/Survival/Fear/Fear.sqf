@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
 Misery Fear
@@ -14,7 +14,7 @@ by TenuredCLOUD
 		if (((player getVariable ["MiseryFear", MIS_FEAR]) < 5) || (!alive player)) exitWith {
 			[_handle] call CBA_fnc_removePerFrameHandler;
 			if(MiseryDebug)then{systemChat "Misery Fear event cycle terminated..."};
-			[] execVM MIS_FILESYS(Survival\Fear\Fear);
+			[] execVM MIS_FILESYS(survival\Fear\Fear);
 			if(MiseryDebug)then{systemChat "Misery Fear event cycle checks reinitiated..."};
 		};
 

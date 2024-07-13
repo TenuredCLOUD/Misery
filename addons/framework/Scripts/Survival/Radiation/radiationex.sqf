@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
 Misery advanced radiation exposure
@@ -18,7 +18,7 @@ if (isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=TRUE};
 		if (((player getVariable ["MiseryRadiation", 0]) < 500) || (!alive player)) exitWith {
 			[_handle] call CBA_fnc_removePerFrameHandler;
 			if(MiseryDebug)then{systemChat "Misery Rad exposure enh+ cycle terminated..."};
-			[] execVM MIS_FILESYS(Survival\Radiation\radiationex);
+			[] execVM MIS_FILESYS(survival\Radiation\radiationex);
 			if(MiseryDebug)then{systemChat "Misery Rad exposure enh+ cycle checks re-initiated..."};
 		};
 

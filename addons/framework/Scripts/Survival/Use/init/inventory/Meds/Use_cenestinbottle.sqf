@@ -8,7 +8,7 @@ if (!hasInterface) exitWith {};
 
   if (alive player) then {
   titleText ["You take a cenestin pill out of the bottle", "PLAIN DOWN"];
-  playSound3D ["Misery\audio\sounds\inventory\Items\PillBottleOpen.ogg", player, false, getPosASL player, 4, 1, 10];
+  playSound3D ["\z\misery\addons\framework\audio\sounds\inventory\Items\PillBottleOpen.ogg", player, false, getPosASL player, 4, 1, 10];
   private _random = [1, 10] call BIS_fnc_randomInt;
   
   if (_random > 5) exitwith {

@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
 Misery Main framework settings
@@ -74,15 +74,15 @@ by TenuredCLOUD
 			] call CBA_fnc_addSetting;
 
 			[
-			"MiserySurvivalCycle", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
+			"MiserysurvivalCycle", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
 			"EDITBOX", // setting type
-			["Survival Cycle length", "Seconds between updates / calculations (Misery hunger, thirst, temperature calculations, etc...) (note: very low cycle values may cause lag)"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-			["Misery","Survival framework"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
+			["survival Cycle length", "Seconds between updates / calculations (Misery hunger, thirst, temperature calculations, etc...) (note: very low cycle values may cause lag)"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
+			["Misery","survival framework"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
 			"30", // data for this setting: [min, max, default, number of shown trailing decimals]
 			1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
 			{
 			params ["_value"];
-			MiserySurvivalCycle = parseNumber _value;
+			MiserysurvivalCycle = parseNumber _value;
 			} // function that will be executed once on mission start and every time the setting is changed.
 			] call CBA_fnc_addSetting;
 
@@ -90,7 +90,7 @@ by TenuredCLOUD
 			"MiseryThirstIncrement", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
 			"EDITBOX", // setting type
 			["Thirst increment", "Thirst increase every cycle"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-			["Misery","Survival framework"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
+			["Misery","survival framework"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
 			"1", // data for this setting: [min, max, default, number of shown trailing decimals]
 			1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
 			{
@@ -103,7 +103,7 @@ by TenuredCLOUD
 			"MiseryHungerIncrement", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
 			"EDITBOX", // setting type
 			["Hunger increment", "Hunger increase every cycle"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-			["Misery","Survival framework"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
+			["Misery","survival framework"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
 			"1", // data for this setting: [min, max, default, number of shown trailing decimals]
 			1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
 			{
@@ -375,7 +375,7 @@ by TenuredCLOUD
 			[
 			"MiseryCraft", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
 			"CHECKBOX", // setting type
-			["Crafting menus Framework", "Enable Crafting menus? (Crafting allowed at workbenches)"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
+			["Crafting Menus Framework", "Enable Crafting Menus? (Crafting allowed at workbenches)"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
 			["Misery","Sub-Actions"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
 			false, // data for this setting: [min, max, default, number of shown trailing decimals]
 			1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
@@ -755,7 +755,7 @@ by TenuredCLOUD
 			] call CBA_fnc_addSetting;
 
 			[
-			"MiserySurvivalSaveMode", // Internal setting name
+			"MiserysurvivalSaveMode", // Internal setting name
 			"LIST", // setting type
 			["Save mode", "Which save mode to enable?"], // Pretty name shown inside the ingame settings menu
 			["Misery","Data"], // Pretty name of the category where the setting can be found
@@ -767,7 +767,7 @@ by TenuredCLOUD
 			] call CBA_fnc_addSetting;
 
 			[
-			"MiserySurvivalHardCoreSaveMode", // Internal setting name
+			"MiserysurvivalHardCoreSaveMode", // Internal setting name
 			"LIST", // setting type
 			["Hardcore Save mode", "Enable Hardcore saving? (This setting allows saving ONLY when a player is near a campfire)"], // Pretty name shown inside the ingame settings menu
 			["Misery","Data"], // Pretty name of the category where the setting can be found
@@ -779,7 +779,7 @@ by TenuredCLOUD
 			] call CBA_fnc_addSetting;
 	
 			[
-			"MiserySurvivalPersistence", // Internal setting name
+			"MiserysurvivalPersistence", // Internal setting name
 			"LIST", // setting type
 			["Misery Persistence", "Enable Persistent saving? (Activates saving system cycle)"], // Pretty name shown inside the ingame settings menu
 			["Misery","Data"], // Pretty name of the category where the setting can be found
@@ -816,7 +816,7 @@ by TenuredCLOUD
 			] call CBA_fnc_addSetting;
 
 			[
-			"MiserySurvivalSaveName", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
+			"MiserysurvivalSaveName", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
 			"EDITBOX", // setting type
 			["Save name", "Unique name for saving (keep blank to autogenerate)"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
 			["Misery","Data"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
@@ -828,9 +828,9 @@ by TenuredCLOUD
 			] call CBA_fnc_addSetting;
 
 			[
-			"MiserySurvivalSaveScript", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
+			"MiserysurvivalSaveScript", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
 			"EDITBOX", // setting type
-			["Save script", "Optional Script to run before a character is saved (ex. MyScripts\myscript.sqf - doesn't require qoutes '') *using excessive code and not just setting variables might cause lag*"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
+			["Save script", "Optional Script to run before a character is saved (ex. Myscripts\myscript.sqf - doesn't require qoutes '') *using excessive code and not just setting variables might cause lag*"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
 			["Misery","Data"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
 			"", // data for this setting: [min, max, default, number of shown trailing decimals]
 			1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
@@ -840,9 +840,9 @@ by TenuredCLOUD
 			] call CBA_fnc_addSetting;
 
 			[
-			"MiserySurvivalLoadScript", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
+			"MiserysurvivalLoadScript", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
 			"EDITBOX", // setting type
-			["Load script", "Optional Script to run after a character is loaded (ex. MyScripts\myscript.sqf - doesn't require qoutes '') *using excessive code and not just setting variables might cause lag*"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
+			["Load script", "Optional Script to run after a character is loaded (ex. Myscripts\myscript.sqf - doesn't require qoutes '') *using excessive code and not just setting variables might cause lag*"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
 			["Misery","Data"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
 			"", // data for this setting: [min, max, default, number of shown trailing decimals]
 			1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
@@ -852,9 +852,9 @@ by TenuredCLOUD
 			] call CBA_fnc_addSetting;
 
 			[
-			"MiserySurvivalKeyhandleScript", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
+			"MiserysurvivalKeyhandleScript", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
 			"EDITBOX", // setting type
-			["Keyhandle script", "Optional Script to run after pressed key example: [ESC key] (ex. MyScripts\myscript.sqf - doesn't require qoutes '') *Must be enabled under 'Keyhandle option' in Persistency setting!*"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
+			["Keyhandle script", "Optional Script to run after pressed key example: [ESC key] (ex. Myscripts\myscript.sqf - doesn't require qoutes '') *Must be enabled under 'Keyhandle option' in Persistency setting!*"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
 			["Misery","Data"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
 			"", // data for this setting: [min, max, default, number of shown trailing decimals]
 			1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
@@ -864,9 +864,9 @@ by TenuredCLOUD
 			] call CBA_fnc_addSetting;
 
 			[
-			"MiserySurvivalKillhandleScript", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
+			"MiserysurvivalKillhandleScript", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
 			"EDITBOX", // setting type
-			["Kill handle script", "Optional Script to run on a player / client once killed: (ex. MyScripts\myscript.sqf - doesn't require qoutes '')"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
+			["Kill handle script", "Optional Script to run on a player / client once killed: (ex. Myscripts\myscript.sqf - doesn't require qoutes '')"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
 			["Misery","Data"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
 			"", // data for this setting: [min, max, default, number of shown trailing decimals]
 			1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
@@ -898,7 +898,7 @@ by TenuredCLOUD
 			1, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
 			{
 			params ["_value"];
-			if (_value) then {[] execVM MIS_FILESYS(Survival\Performance\Trash\MapTrash-)}else{[] execVM MIS_FILESYS(Survival\Performance\Trash\MapTrash+)}; 
+			if (_value) then {[] execVM MIS_FILESYS(survival\Performance\Trash\MapTrash-)}else{[] execVM MIS_FILESYS(survival\Performance\Trash\MapTrash+)}; 
 			} // function that will be executed once on mission start and every time the setting is changed.
 			] call CBA_fnc_addSetting;
 
@@ -912,7 +912,7 @@ by TenuredCLOUD
 			1, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
 			{
 			params ["_value"];
-			if (_value) then {[] execVM MIS_FILESYS(Survival\Performance\Craters\MapCraters-)}else{[] execVM MIS_FILESYS(Survival\Performance\Craters\MapCraters+)}; 
+			if (_value) then {[] execVM MIS_FILESYS(survival\Performance\Craters\MapCraters-)}else{[] execVM MIS_FILESYS(survival\Performance\Craters\MapCraters+)}; 
 			} // function that will be executed once on mission start and every time the setting is changed.
 			] call CBA_fnc_addSetting;
 
@@ -926,7 +926,7 @@ by TenuredCLOUD
 			1, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
 			{
 			params ["_value"];
-			if (_value) then {[] execVM MIS_FILESYS(Survival\Performance\Wrecks\MapWrecks-)}else{[] execVM MIS_FILESYS(Survival\Performance\Wrecks\MapWrecks+)};
+			if (_value) then {[] execVM MIS_FILESYS(survival\Performance\Wrecks\MapWrecks-)}else{[] execVM MIS_FILESYS(survival\Performance\Wrecks\MapWrecks+)};
 			} // function that will be executed once on mission start and every time the setting is changed.
 			] call CBA_fnc_addSetting;
 
@@ -943,7 +943,7 @@ by TenuredCLOUD
 			if (_value) then {
 			MiseryNoNVG_TPP_ENABLED = true;
 			if (hasInterface) then {
-			[] execVM MIS_FILESYS(Survival\Immersion\TPPNONVG);
+			[] execVM MIS_FILESYS(survival\Immersion\TPPNONVG);
 			};
     			}else{
 			MiseryNoNVG_TPP_ENABLED = false;

@@ -2,8 +2,8 @@
  [
 	player,
 	"Make coffee",
-	"Misery\Scripts\Survival\Use\icons\coffee.paa",
-	"Misery\Scripts\Survival\Use\icons\coffee.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\coffee.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\coffee.paa",
 	"call Misery_fnc_NearFire",
 	"call Misery_fnc_Canbrewcoffee",
 	{

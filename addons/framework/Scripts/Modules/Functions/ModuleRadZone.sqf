@@ -20,7 +20,7 @@ if (_activated) then {
 if (isServer) then { 
     _EXECTARGETS = [0, -2] select isDedicated;
 };
-	[[_module, _units], "Misery\Scripts\Modules\RadZone\RadZone.sqf"] remoteExec ["execVM ", _EXECTARGETS, true];
+	[[_module, _units], "\z\misery\addons\framework\scripts\Modules\RadZone\RadZone.sqf"] remoteExec ["execVM ", _EXECTARGETS, true];
 };
 
 }, [_module,_units,_activated]] call CBA_fnc_waitUntilAndExecute;

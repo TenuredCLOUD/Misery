@@ -1,7 +1,7 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 class CfgPatches {
-    class ADDON {
+    class miserymain {
         name = "misery_main";
         units[] = {};
         weapons[] = {};

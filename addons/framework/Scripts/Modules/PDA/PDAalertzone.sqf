@@ -19,19 +19,19 @@ private _trg = createTrigger ["EmptyDetector", _pos, false];
 _trg setTriggerArea [_radius,_radius,0,False];
 _trg setTriggerActivation ["ANYPLAYER", "PRESENT", true];
 if (_input2 == "RADIATION") then {
-_trg setTriggerStatements ["(vehicle player) in thislist", "'Misery\Scripts\Modules\PDA\alerts\Radiation.sqf' remoteExec ['execVM', thislist];", ""]; //COND. ACTIVE. DEACTIVE.
+_trg setTriggerStatements ["(vehicle player) in thislist", "'\z\misery\addons\framework\scripts\Modules\PDA\alerts\Radiation.sqf' remoteExec ['execVM', thislist];", ""]; //COND. ACTIVE. DEACTIVE.
 };
 if (_input2 == "RADIATIONHIGH") then {
-_trg setTriggerStatements ["(vehicle player) in thislist", "'Misery\Scripts\Modules\PDA\alerts\RadiationHIGH.sqf' remoteExec ['execVM', thislist];", ""]; //COND. ACTIVE. DEACTIVE.
+_trg setTriggerStatements ["(vehicle player) in thislist", "'\z\misery\addons\framework\scripts\Modules\PDA\alerts\RadiationHIGH.sqf' remoteExec ['execVM', thislist];", ""]; //COND. ACTIVE. DEACTIVE.
 };
 if (_input2 == "PSYFIELD") then {
-_trg setTriggerStatements ["(vehicle player) in thislist", "'Misery\Scripts\Modules\PDA\alerts\Psyfield.sqf' remoteExec ['execVM', thislist];", ""]; //COND. ACTIVE. DEACTIVE.
+_trg setTriggerStatements ["(vehicle player) in thislist", "'\z\misery\addons\framework\scripts\Modules\PDA\alerts\Psyfield.sqf' remoteExec ['execVM', thislist];", ""]; //COND. ACTIVE. DEACTIVE.
 };
 if (_input2 == "ANOMALY") then {
-_trg setTriggerStatements ["(vehicle player) in thislist", "'Misery\Scripts\Modules\PDA\alerts\Anomaly.sqf' remoteExec ['execVM', thislist];", ""]; //COND. ACTIVE. DEACTIVE.
+_trg setTriggerStatements ["(vehicle player) in thislist", "'\z\misery\addons\framework\scripts\Modules\PDA\alerts\Anomaly.sqf' remoteExec ['execVM', thislist];", ""]; //COND. ACTIVE. DEACTIVE.
 };
 if (_input2 == "MILITARY") then {
-_trg setTriggerStatements ["(vehicle player) in thislist", "'Misery\Scripts\Modules\PDA\alerts\Military.sqf' remoteExec ['execVM', thislist];", ""]; //COND. ACTIVE. DEACTIVE.
+_trg setTriggerStatements ["(vehicle player) in thislist", "'\z\misery\addons\framework\scripts\Modules\PDA\alerts\Military.sqf' remoteExec ['execVM', thislist];", ""]; //COND. ACTIVE. DEACTIVE.
 };
 _trg setTriggerTimeout [0, 1, 5, true];
 

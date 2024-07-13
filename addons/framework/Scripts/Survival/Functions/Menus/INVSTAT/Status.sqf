@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
 Misery Status UI for inventory framework 
@@ -90,12 +90,12 @@ lbClear _ailmentsList;
 	if ((goggles player in antirad_goggles) && !(vest player in antirad_vests || backpack player in antirad_packs)) then {
 	_GascartridgeVal = format["%1%2",round(_cartridgecalc * 1), "%"];
 	_GasVal ctrlSetText _GascartridgeVal;
-	["buff","Gas Mask", "Misery\Scripts\Survival\Data\gasmask.paa", "You are wearing a gasmask, it can protect your lungs from harmful contaminants like radioactive particles, as well as toxic gases. You should be mindful of your cartridges..."] call Misery_fnc_AddBuffOrAilment;
+	["buff","Gas Mask", "\z\misery\addons\framework\scripts\survival\Data\gasmask.paa", "You are wearing a gasmask, it can protect your lungs from harmful contaminants like radioactive particles, as well as toxic gases. You should be mindful of your cartridges..."] call Misery_fnc_AddBuffOrAilment;
 	};
 	if ((goggles player in antirad_goggles) && (vest player in antirad_vests || backpack player in antirad_packs) || (vest player in antirad_vests || backpack player in antirad_packs)) then {	
 	_GasSuppAir = format["%1","∞"];
 	_GasVal ctrlSetText _GasSuppAir;
-	["buff","Supplied Air", "Misery\Scripts\Survival\Data\SCBA.paa", "You are utilizing an SCBA device which is useful in an IDLH (Immediately Dangerous to Life or health) area. You have the greatest protection gear available for air contaminants."] call Misery_fnc_AddBuffOrAilment;	
+	["buff","Supplied Air", "\z\misery\addons\framework\scripts\survival\Data\SCBA.paa", "You are utilizing an SCBA device which is useful in an IDLH (Immediately Dangerous to Life or health) area. You have the greatest protection gear available for air contaminants."] call Misery_fnc_AddBuffOrAilment;	
 	};
 	if ((!(goggles player in antirad_goggles) && !(vest player in antirad_vests || backpack player in antirad_packs)) && (!(goggles player in antirad_goggles) && !(vest player in antirad_vests || backpack player in antirad_packs) || !(vest player in antirad_vests || backpack player in antirad_packs))) then {
 	if (_GasmaskBuff > -1) then {
@@ -120,7 +120,7 @@ lbClear _ailmentsList;
     	}; 
 	};
 
-	if (("(" in _currentMagazineDetail > -1) && ("/" in _currentMagazineDetail > -1)) then {
+	if ((_currentMagazineDetail find "(" > -1) && (_currentMagazineDetail find "/" > -1)) then {
     	private _ammoDetailsString = ((_currentMagazineDetail splitString "(") select 1) splitString "/" select 0; 
     	private _totalAmmoString = ((_currentMagazineDetail splitString "/") select 1) splitString ")" select 0; 
     	private _ammoCount = parseNumber _ammoDetailsString; 
@@ -156,10 +156,10 @@ lbClear _ailmentsList;
 	private _PsyProtected = _ailments findIf {(_x select 0) isEqualTo "Psy Emissions (Protected)"}; 
 	private _PsyNoProtection = _ailments findIf {(_x select 0) isEqualTo "Psy Emissions"}; 
 	if (!(headgear player in _psyprot) && MiseryinPsyfield) then {
-		["ailment","Psy Emissions", "Misery\Scripts\Survival\data\Psyfield.paa", "You hear a very loud pulsing hum, its vibrations are pounding in your head, you're not sure how much longer you can take it..."] call Misery_fnc_AddBuffOrAilment;
+		["ailment","Psy Emissions", "\z\misery\addons\framework\scripts\survival\data\Psyfield.paa", "You hear a very loud pulsing hum, its vibrations are pounding in your head, you're not sure how much longer you can take it..."] call Misery_fnc_AddBuffOrAilment;
     };
 	if ((headgear player in _psyprot) && MiseryinPsyfield) then {
-		["ailment","Psy Emissions (Protected)", "Misery\Scripts\Survival\data\Psyfield.paa", "You feel subtle vibrations around your skull, you are uneasy..."] call Misery_fnc_AddBuffOrAilment;
+		["ailment","Psy Emissions (Protected)", "\z\misery\addons\framework\scripts\survival\data\Psyfield.paa", "You feel subtle vibrations around your skull, you are uneasy..."] call Misery_fnc_AddBuffOrAilment;
     };
 	if (MiseryinPsyfield == false) then {
 	if (_PsyNoProtection > -1) then {
@@ -190,7 +190,7 @@ if (_MSleepiness >= 15) then {
     };
     private _tirednessAilment = _tiredAilments select _tirednessIndex;
     private _imageNames = ["sleepy", "sleepy1", "sleepy2", "sleepy3", "tired"];
-    ["ailment", _tirednessAilment, format ["Misery\Scripts\Survival\data\%1.paa", (_imageNames select _tirednessIndex)], format ["You are %1...", _tirednessAilment]] call Misery_fnc_AddBuffOrAilment;
+    ["ailment", _tirednessAilment, format ["\z\misery\addons\framework\scripts\survival\data\%1.paa", (_imageNames select _tirednessIndex)], format ["You are %1...", _tirednessAilment]] call Misery_fnc_AddBuffOrAilment;
 } else {
     {
         private _ailmentName = _x select 0;
@@ -208,7 +208,7 @@ if (_MSleepiness >= 15) then {
 	_infection = _ailments findIf {(_x select 0) isEqualTo "Bacterial Infection"};
 
 	if(_MDebuffs find "PARASITES" != -1 && MiseryAilments == 1) then {
-		["ailment","Parasite Infection", "Misery\Scripts\Survival\data\parasites.paa", "You are infected with Parasites, You feel a gnawing hunger that is unsatiable, as well as unquenchable thirst..."] call Misery_fnc_AddBuffOrAilment;
+		["ailment","Parasite Infection", "\z\misery\addons\framework\scripts\survival\data\parasites.paa", "You are infected with Parasites, You feel a gnawing hunger that is unsatiable, as well as unquenchable thirst..."] call Misery_fnc_AddBuffOrAilment;
 	}else{
 	if (_parasites > -1) then {
 		["ailment","Parasite Infection"] call Misery_fnc_RemoveBuffOrAilment;
@@ -216,7 +216,7 @@ if (_MSleepiness >= 15) then {
 		};
 
 	if(_MPoison > 0 && MiseryAilments == 1)then{
-	["ailment","Poisoned", "Misery\Scripts\Survival\data\poison.paa", "You are poisoned, you feel a wave of unease wash over you as death lingers..."] call Misery_fnc_AddBuffOrAilment;
+	["ailment","Poisoned", "\z\misery\addons\framework\scripts\survival\data\poison.paa", "You are poisoned, you feel a wave of unease wash over you as death lingers..."] call Misery_fnc_AddBuffOrAilment;
 	}else{
 	if (_poison > -1) then {
 		["ailment","Poisoned"] call Misery_fnc_RemoveBuffOrAilment;
@@ -224,7 +224,7 @@ if (_MSleepiness >= 15) then {
 		};
 
 	if(_MInfection > 0 && MiseryAilments == 1)then{
-		["ailment","Bacterial Infection", "Misery\Scripts\Survival\data\infection.paa", "You have a Bacterial infection, your breaths are shallow, and feel hot. You can feel your muscles weakening..."] call Misery_fnc_AddBuffOrAilment;
+		["ailment","Bacterial Infection", "\z\misery\addons\framework\scripts\survival\data\infection.paa", "You have a Bacterial infection, your breaths are shallow, and feel hot. You can feel your muscles weakening..."] call Misery_fnc_AddBuffOrAilment;
 	}else{
 	if (_infection > -1) then {
 		["ailment","Bacterial Infection"] call Misery_fnc_RemoveBuffOrAilment;
@@ -246,7 +246,7 @@ if (_MExposure <= -1) then {
     private _coldexpoAilment = _ColdExposureAilments select _coldexposureindex;
     private _imageNames = ["chilly", "cold", "freezing", "hypo", "hypo2"];
     private _ColdExpoDesclevels = ["You feel chilly...", "You are cold...", "You are freezing...", "You are at risk of hypothermia...", "You are hypothermic..."];
-    ["ailment", _coldexpoAilment, format ["Misery\Scripts\Survival\data\%1.paa", (_imageNames select _coldexposureindex)], format ["%1", (_ColdExpoDesclevels select _coldexposureindex)]] call Misery_fnc_AddBuffOrAilment;
+    ["ailment", _coldexpoAilment, format ["\z\misery\addons\framework\scripts\survival\data\%1.paa", (_imageNames select _coldexposureindex)], format ["%1", (_ColdExpoDesclevels select _coldexposureindex)]] call Misery_fnc_AddBuffOrAilment;
 };
 
 private _HeatExposureAilments = ["Warm", "Hot", "Fever", "Hyperthermia risk", "Hyperthermic"];
@@ -264,7 +264,7 @@ if (_MExposure >= 1) then {
     private _heatexpoAilment = _HeatExposureAilments select _heatexposureindex;
     private _imageNames = ["hot", "hot2", "fever", "hyper", "hyper2"];
     private _HeatExpolevels = ["You feel a bit warm...", "You feel hot...", "You have a fever...", "You are at risk of hyperthermia...", "You are hyperthermic..."];
-    ["ailment", _heatexpoAilment, format ["Misery\Scripts\Survival\data\%1.paa", (_imageNames select _heatexposureindex)], format ["%1", (_HeatExpolevels select _heatexposureindex)]] call Misery_fnc_AddBuffOrAilment;
+    ["ailment", _heatexpoAilment, format ["\z\misery\addons\framework\scripts\survival\data\%1.paa", (_imageNames select _heatexposureindex)], format ["%1", (_HeatExpolevels select _heatexposureindex)]] call Misery_fnc_AddBuffOrAilment;
 };
 
 if (_MExposure == 0) then { 
@@ -327,7 +327,7 @@ _FatigueNum ctrlSetText _FatigueNumVal;
 	_ShelterBuff = _buffs findIf {(_x select 0) isEqualTo "Sheltered"};
 	_CoverageBuff = _buffs findIf {(_x select 0) isEqualTo "Under Roof"};
 	if ([player] call Misery_fnc_NearFire) then {
-	["buff","Near Fire", "Misery\Scripts\Survival\data\nearfire.paa", "When near a fire, you will be warmed from the cold, you can also utilize the fire for cooking, or boiling water to kill off micro-organisms..."] call Misery_fnc_AddBuffOrAilment;
+	["buff","Near Fire", "\z\misery\addons\framework\scripts\survival\data\nearfire.paa", "When near a fire, you will be warmed from the cold, you can also utilize the fire for cooking, or boiling water to kill off micro-organisms..."] call Misery_fnc_AddBuffOrAilment;
 	}else{
 	if (_NFireBuff > -1) then {
 	["buff","Near Fire"] call Misery_fnc_RemoveBuffOrAilment;
@@ -335,14 +335,14 @@ _FatigueNum ctrlSetText _FatigueNumVal;
 		};
 
     if ((([player] call Misery_fnc_Isinside) select 0) && (([player] call Misery_fnc_Isinside) select 1)) then {
-		["buff","Sheltered", "Misery\Scripts\Survival\data\shelter.paa", "You are sheltered from the weather, while inside you cannot build a fire due to smoke inhalation..."] call Misery_fnc_AddBuffOrAilment;
+		["buff","Sheltered", "\z\misery\addons\framework\scripts\survival\data\shelter.paa", "You are sheltered from the weather, while inside you cannot build a fire due to smoke inhalation..."] call Misery_fnc_AddBuffOrAilment;
     }else{
 	if (_ShelterBuff > -1) then {
 	["buff","Sheltered"] call Misery_fnc_RemoveBuffOrAilment;
 	};	
 		};
     if ((([player] call Misery_fnc_Isinside) select 0)) then {
-		["buff","Under Roof", "Misery\Scripts\Survival\data\roof.paa", "You are under a roof, protected from the rain, a fire can safetly be constructed here..."] call Misery_fnc_AddBuffOrAilment;
+		["buff","Under Roof", "\z\misery\addons\framework\scripts\survival\data\roof.paa", "You are under a roof, protected from the rain, a fire can safetly be constructed here..."] call Misery_fnc_AddBuffOrAilment;
     }else{
 	if (_CoverageBuff > -1) then {
 	["buff","Under Roof"] call Misery_fnc_RemoveBuffOrAilment;	

@@ -8,8 +8,8 @@ by TenuredCLOUD
 [
 	player,
 	"Fish",
-	"Misery\Scripts\Survival\Use\icons\fish.paa",
-	"Misery\Scripts\Survival\Use\icons\fish.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\fish.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\fish.paa",
 	"call Misery_fnc_Canfish",
 	"call Misery_fnc_Fishinggear",
 	{

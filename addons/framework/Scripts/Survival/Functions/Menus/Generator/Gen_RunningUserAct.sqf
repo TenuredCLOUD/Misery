@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
 Misery Generator Running Audio loop
@@ -47,13 +47,13 @@ private _soundDummy = "Land_HelipadEmpty_F" createVehicle (getPosATL _Generator)
 
 	sleep _startupDelay;
 
-	// [_Generator] execVM "Misery\Scripts\Survival\Functions\Menus\Generator\Gen_Fuel.sqf";
-	// [_Generator] execVM "Misery\Scripts\Survival\Functions\Menus\Generator\PowerNearby.sqf";
-	// [_Generator] execVM "Misery\Scripts\Survival\Functions\Menus\Generator\TrackPos.sqf";
+	// [_Generator] execVM "\z\misery\addons\framework\scripts\survival\functions\menus\Generator\Gen_Fuel.sqf";
+	// [_Generator] execVM "\z\misery\addons\framework\scripts\survival\functions\menus\Generator\PowerNearby.sqf";
+	// [_Generator] execVM "\z\misery\addons\framework\scripts\survival\functions\menus\Generator\TrackPos.sqf";
 
-	[[_Generator], MIS_FILESYS(Survival\Functions\Menus\Generator\Gen_Fuel)] remoteExec ["execVM ", 0, true];
-	[[_Generator], MIS_FILESYS(Survival\Functions\Menus\Generator\PowerNearby)] remoteExec ["execVM ", 0, true];
-	[[_Generator], MIS_FILESYS(Survival\Functions\Menus\Generator\TrackPos)] remoteExec ["execVM ", 0, true];
+	[[_Generator], MIS_FILESYS(survival\functions\menus\Generator\Gen_Fuel)] remoteExec ["execVM ", 0, true];
+	[[_Generator], MIS_FILESYS(survival\functions\menus\Generator\PowerNearby)] remoteExec ["execVM ", 0, true];
+	[[_Generator], MIS_FILESYS(survival\functions\menus\Generator\TrackPos)] remoteExec ["execVM ", 0, true];
 
 while {true} do {
 

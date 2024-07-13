@@ -10,8 +10,8 @@ if (MiseryUsingiBuild) exitwith {
 [
 	player,
 	"Repair pickaxe",
-	"Misery\Scripts\Survival\Use\icons\anvil.paa",
-	"Misery\Scripts\Survival\Use\icons\anvil.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\anvil.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\anvil.paa",
 	"call Misery_fnc_NearAnvil",
 	"call Misery_fnc_Repairpick",
 	{//start action:
@@ -67,8 +67,8 @@ if !(MiseryUsingiBuild) exitwith {
 [
 	player,
 	"Repair pickaxe",
-	"Misery\Scripts\Survival\Use\icons\anvil.paa",
-	"Misery\Scripts\Survival\Use\icons\anvil.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\anvil.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\anvil.paa",
 	"call Misery_fnc_NearAnvil",
 	"call Misery_fnc_Repairpick",
 	{//start action:

@@ -20,7 +20,7 @@ if !(_selectedIndex == -1) exitWith {
 _PurchaseB ctrlShow false;
 _ExitB ctrlShow false;
 
-[] execVM "Misery\Scripts\Modules\Rearm\Rearmstart.sqf";
+[] execVM "\z\misery\addons\framework\scripts\Modules\Rearm\Rearmstart.sqf";
 };
 
 

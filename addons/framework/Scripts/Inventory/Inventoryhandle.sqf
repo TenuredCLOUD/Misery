@@ -17,7 +17,7 @@ player addEventHandler ["InventoryOpened", {
 
         private _display = findDisplay 46 createDisplay "MiseryINVACT_GUI";
         MiseryActionsMode = "";
-        execVM "Misery\Scripts\Inventory\DisplayActions.sqf";
+        execVM "\z\misery\addons\framework\scripts\Inventory\DisplayActions.sqf";
 
         private _handle = [{
             params ["_display", "_handle"];

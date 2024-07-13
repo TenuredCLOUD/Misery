@@ -10,8 +10,8 @@ if (MiseryUsingiBuild) exitwith {
 [
 	player,
 	"Craft pickaxe",
-	"Misery\Scripts\Survival\Use\icons\anvil.paa",
-	"Misery\Scripts\Survival\Use\icons\anvil.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\anvil.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\anvil.paa",
 	"call Misery_fnc_NearAnvil",
 	"call Misery_fnc_Craftpick",
 	{//start action:
@@ -68,8 +68,8 @@ if !(MiseryUsingiBuild) exitwith {
 [
 	player,
 	"Craft pickaxe",
-	"Misery\Scripts\Survival\Use\icons\anvil.paa",
-	"Misery\Scripts\Survival\Use\icons\anvil.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\anvil.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\anvil.paa",
 	"call Misery_fnc_NearAnvil",
 	"call Misery_fnc_Craftpick",
 	{//start action:

@@ -14,7 +14,7 @@ disableSerialization;
 			[_handle] call CBA_fnc_removePerFrameHandler;
 			((uiNamespace getVariable "PDATEMP")displayCtrl 55554)ctrlSetStructuredText parseText "";
 			(findDisplay 46 createDisplay "PDATEMP")closeDisplay 1;
-			[] execVM "Misery\Scripts\Survival\HUD\PDA_Climate.sqf";
+			[] execVM "\z\misery\addons\framework\scripts\survival\HUD\PDA_Climate.sqf";
 		};
 
 	_rscLayer = "PDATEMP" call BIS_fnc_rscLayer;
@@ -30,9 +30,9 @@ disableSerialization;
 
 	};
 
-private _airtemperature = format ["<img shadow='0.1' size='1.8' image='%1'/>", "Misery\Scripts\Survival\data\tempair.paa"];
+private _airtemperature = format ["<img shadow='0.1' size='1.8' image='%1'/>", "\z\misery\addons\framework\scripts\survival\data\tempair.paa"];
 
-private _seatemperature = format ["<img shadow='0.1' size='1.8' image='%1'/>", "Misery\Scripts\Survival\data\tempsea.paa"];
+private _seatemperature = format ["<img shadow='0.1' size='1.8' image='%1'/>", "\z\misery\addons\framework\scripts\survival\data\tempsea.paa"];
 
 private _aircalc = GF_Temperature_Sum_Air; 
 

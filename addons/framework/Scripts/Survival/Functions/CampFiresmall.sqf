@@ -35,8 +35,8 @@ _object setVariable ["Mis_Woodstickfuel", 100, true];
 [
 	_object,
 	"Reignite Fire",
-	"Misery\Scripts\Survival\Use\icons\harvestwoodfuel.paa",
-	"Misery\Scripts\Survival\Use\icons\harvestwoodfuel.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\harvestwoodfuel.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\harvestwoodfuel.paa",
 	"_this distance _target < 2.5 && !(inflamed _target) && ('Misery_lighter' in items player || 'rvg_matches' in magazines player)",
 	"_caller distance _target < 2.5 && !(inflamed _target) && ('Misery_tinder' in items player || 'rvg_money' in magazines player || 'rvg_notepad' in magazines player || 'rvg_docFolder' in magazines player)",
 	{
@@ -58,10 +58,10 @@ _object setVariable ["Mis_Woodstickfuel", 100, true];
 
   //Sound generation:
   if ("Misery_lighter" in items player) then {
-  playSound3D ["Misery\audio\sounds\immersion\Lighter.ogg", player, false, getPosASL player, 4, 1, 10];  
+  playSound3D ["\z\misery\addons\framework\audio\sounds\immersion\Lighter.ogg", player, false, getPosASL player, 4, 1, 10];  
   }else{
   if ("rvg_matches" in magazines player) then {
-  playSound3D ["Misery\audio\sounds\immersion\Match.ogg", player, false, getPosASL player, 4, 1, 10];  
+  playSound3D ["\z\misery\addons\framework\audio\sounds\immersion\Match.ogg", player, false, getPosASL player, 4, 1, 10];  
   };
   };
 

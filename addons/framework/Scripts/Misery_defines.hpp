@@ -13,15 +13,6 @@ by TenuredCLOUD
 
 #define MISERYVERSTR 2,0,0,0
 
-//Prefixes fro file pathing:
-#ifndef MAINFILE
-    #define MAINFILE Misery
-#endif
-
-#ifndef S
-    #define S Scripts
-#endif
-
 #define PASS_STR(arg) #arg
 
 //Hunger
@@ -108,7 +99,7 @@ by TenuredCLOUD
 #define MISERY_WEIGHTCALC(arg) (((arg) / 10) / 10) / 10
 
 //File system 
-#define MIS_FILESYS(arg) '\MAINFILE\S\arg.sqf'
+#define MIS_FILESYS(arg) '\z\misery\addons\framework\scripts\arg.sqf'
 
 //Function name / File path 
 //#define PREPROC_FUNCTION(arg1,arg2) arg1 = compileScript [arg2]; 

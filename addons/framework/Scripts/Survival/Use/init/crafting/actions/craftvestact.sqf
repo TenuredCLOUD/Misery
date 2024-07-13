@@ -3,8 +3,8 @@
 [
 	player,
 	"Craft vest",
-	"Misery\Scripts\Survival\Use\icons\vest.paa",
-	"Misery\Scripts\Survival\Use\icons\vest.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\vest.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\vest.paa",
 	"call Misery_fnc_NearWorkbench",
 	"call Misery_fnc_craftvest",
 	{

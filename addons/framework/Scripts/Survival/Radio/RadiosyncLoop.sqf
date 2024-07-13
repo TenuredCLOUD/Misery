@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
 Radio resync
@@ -16,14 +16,14 @@ by TenuredCLOUD
 		if (((player getVariable ["Misery_HHRadio", false]) == true) || !("Misery_PortableradioON" in items player) || (!alive player)) exitWith {
 			[_handle] call CBA_fnc_removePerFrameHandler;
 			if(MiseryDebug)then{systemChat "Misery Radio resync cycle terminated..."};
-			[] execVM MIS_FILESYS(Survival\Radio\RadiosyncLoop);
+			[] execVM MIS_FILESYS(survival\Radio\RadiosyncLoop);
 			if(MiseryDebug)then{systemChat "Misery Radio resync cycle checks reinitiated..."};
 		};
 
 	if (("Misery_PortableradioON" in items player) && (player getVariable ["Misery_HHRadio", false]) == false) then {
 		player setVariable ["Misery_HHRadio", true,true]; //reactivate detector audio samples 
-		[] execVM MIS_FILESYS(Survival\Radio\RadioLoop);
-		[] execVM MIS_FILESYS(Survival\Radio\RadioStatic);
+		[] execVM MIS_FILESYS(survival\Radio\RadioLoop);
+		[] execVM MIS_FILESYS(survival\Radio\RadioStatic);
 		if(MiseryDebug)then{systemChat "Radio resynced properly..."};
 		};
 	}, 5, []] call CBA_fnc_addPerFrameHandler;

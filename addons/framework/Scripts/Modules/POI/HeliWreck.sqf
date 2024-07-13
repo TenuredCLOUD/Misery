@@ -133,7 +133,7 @@ for "_i" from 1 to _maxallowedCrates do {
     _crateuniformArray,
     _cratevestArray,
     _cratebackpackArray,
-    _maxallowedCrateitems] execVM "Misery\Scripts\Modules\POI\PopulateCrate.sqf";
+    _maxallowedCrateitems] execVM "\z\misery\addons\framework\scripts\Modules\POI\PopulateCrate.sqf";
 };
 
 _WreckID = _module getVariable ["Wreck_ID", nil];
@@ -146,7 +146,7 @@ _module setVariable ["Active_Wreck_ID", _WreckID, true];
 
 _posStr = str _pos;
 _Wreckalert = [_posStr, _WreckID];
-[_Wreckalert, "Misery\Scripts\Modules\PDA\alerts\HeliWreck.sqf"] remoteExec ["execVM ", 0];
+[_Wreckalert, "\z\misery\addons\framework\scripts\Modules\PDA\alerts\HeliWreck.sqf"] remoteExec ["execVM ", 0];
 
 Misery_activePOIs = Misery_activePOIs + 1;
 

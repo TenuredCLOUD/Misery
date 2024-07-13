@@ -324,7 +324,7 @@ _entityPositions = units _group apply {getPos _x};
     _crateuniformArray,
     _cratevestArray,
     _cratebackpackArray,
-    _maxallowedCrateitems] execVM "Misery\Scripts\Modules\POI\PopulateCrate.sqf";
+    _maxallowedCrateitems] execVM "\z\misery\addons\framework\scripts\Modules\POI\PopulateCrate.sqf";
 };
 
 } forEach _entityPositions;

@@ -3,8 +3,8 @@
 [
 	player,
 	"Smelt gold pieces",
-	"Misery\Scripts\Survival\Use\icons\forge.paa",
-	"Misery\Scripts\Survival\Use\icons\forge.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\forge.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\forge.paa",
 	"call Misery_fnc_NearForge",
 	"call Misery_fnc_smeltgoldpieces",
 	{//start action:

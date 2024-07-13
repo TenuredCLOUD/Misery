@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
 Misery Charcoal tabs usage
@@ -16,7 +16,7 @@ if (!hasInterface) exitWith {};
 
   if (alive player) then {
     
-    playSound3D ["Misery\audio\sounds\inventory\Items\CrinklingPlastic.ogg", player, false, getPosASL player, 4, 1, 10];
+    playSound3D ["\z\misery\addons\framework\audio\sounds\inventory\Items\CrinklingPlastic.ogg", player, false, getPosASL player, 4, 1, 10];
 
   player removeItem "Misery_charcoaltabs";
   titleText ["You take some Charcoal tablets...", "PLAIN DOWN"];

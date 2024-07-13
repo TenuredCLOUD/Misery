@@ -7,8 +7,8 @@ by TenuredCLOUD
  [
 	player,
 	"Chop wood",
-	"Misery\Scripts\Survival\Use\icons\firewood.paa",
-	"Misery\Scripts\Survival\Use\icons\firewood.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\firewood.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\firewood.paa",
 	"call Misery_fnc_NearTreeAxe",
 	"call Misery_fnc_NearTreeAxe",
 	{

@@ -48,7 +48,7 @@ if (_stock > 50) then {
     _price = _Minprice;
 };
 
-if (_currselection == -1) exitWith {ctrlSetText [1001, "No sell option selected..."]; [] execVM 'Misery\Scripts\Survival\Functions\Menus\Trader\ShopVALs.sqf';};
+if (_currselection == -1) exitWith {ctrlSetText [1001, "No sell option selected..."]; [] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Trader\ShopVALs.sqf';};
 
 if (_shopFunds >= _price) then {
 if ((_selectedItem in (items player)) or (_selectedItem in (magazines player))) then {
@@ -64,7 +64,7 @@ if ((_selectedItem in (items player)) or (_selectedItem in (magazines player))) 
         [player, _selectedItem] call CBA_fnc_removeItem;
     };
     ctrlSetText [1001, format ["%1 Sold for %2 %3", _displayName,MiseryCurrencySymbol,[_price, 1, 2, true] call CBA_fnc_formatNumber]];
-    [] execVM 'Misery\Scripts\Survival\Functions\Menus\Trader\ShopVALs.sqf';
+    [] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Trader\ShopVALs.sqf';
 }else{
     ctrlSetText [1001, "You no longer have any more of that item to sell..."];
 };

@@ -14,7 +14,7 @@ disableSerialization;
 			[_handle] call CBA_fnc_removePerFrameHandler;
 			((uiNamespace getVariable "PDATIME")displayCtrl 55554)ctrlSetStructuredText parseText "";
 			(findDisplay 46 createDisplay "PDATIME")closeDisplay 1;
-			[] execVM "Misery\Scripts\Survival\HUD\PDA_Time.sqf";
+			[] execVM "\z\misery\addons\framework\scripts\survival\HUD\PDA_Time.sqf";
 		};
 
 	_rscLayer = "PDATIME" call BIS_fnc_rscLayer;
@@ -45,7 +45,7 @@ if ("Misery_PDA" in items player && MiseryPDAClock) then {
 ((uiNamespace getVariable "PDATIME")displayCtrl 55554) ctrlSetStructuredText
 parseText format
 	["
-<t shadow='%5' shadowColor='#000000' color='%4'>[PDA] Time: %2 Date: %3 <img size='1.8' image='Misery\Scripts\Survival\data\clock.paa'/>						</t>
+<t shadow='%5' shadowColor='#000000' color='%4'>[PDA] Time: %2 Date: %3 <img size='1.8' image='\z\misery\addons\framework\scripts\survival\data\clock.paa'/>						</t>
 ",
 		"%",					//1
 		_Time,

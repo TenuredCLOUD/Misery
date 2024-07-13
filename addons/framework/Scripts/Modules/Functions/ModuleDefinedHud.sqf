@@ -13,14 +13,14 @@ if (!hasInterface) exitWith {};
 [{!isNull player}, {
 
     if (MiseryToolsHUD == "ENABLED") then {
-    [] execVM "Misery\Scripts\Survival\HUD\GeigerBar.sqf";
-    [] execVM "Misery\Scripts\Survival\HUD\PDA_Time.sqf";
-    [] execVM "Misery\Scripts\Survival\HUD\PDA_Climate.sqf";
-    [] execVM "Misery\Scripts\Survival\HUD\PDA_Compass.sqf";
+    [] execVM "\z\misery\addons\framework\scripts\survival\HUD\GeigerBar.sqf";
+    [] execVM "\z\misery\addons\framework\scripts\survival\HUD\PDA_Time.sqf";
+    [] execVM "\z\misery\addons\framework\scripts\survival\HUD\PDA_Climate.sqf";
+    [] execVM "\z\misery\addons\framework\scripts\survival\HUD\PDA_Compass.sqf";
     };
 
     if (MiseryGMDisplayprop == "ENABLED") then {
-    [] execVM "Misery\Scripts\Survival\HUD\gasmaskcart.sqf";
+    [] execVM "\z\misery\addons\framework\scripts\survival\HUD\gasmaskcart.sqf";
     };
 
 }, []] call CBA_fnc_waitUntilAndExecute;

@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
 Misery fever immersion
@@ -15,7 +15,7 @@ by TenuredCLOUD
 		if ((player getVariable ["MiseryExposure", MIS_EXPOSURE]) < 10 || (!alive player)) exitWith {
 			[_handle] call CBA_fnc_removePerFrameHandler;
 			if(MiseryDebug)then{systemChat "Misery Fever immersion cycle terminated..."};
-			[] execVM MIS_FILESYS(Survival\Immersion\feverimmersion);
+			[] execVM MIS_FILESYS(survival\Immersion\feverimmersion);
 			if(MiseryDebug)then{systemChat "Misery Fever immersion cycle checks re-initiated..."};
 		};
 	

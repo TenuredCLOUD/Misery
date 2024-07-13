@@ -3,8 +3,8 @@
 [
 	player,
 	"Cook raw meat",
-	"Misery\Scripts\Survival\Use\icons\cookedmeat.paa",
-	"Misery\Scripts\Survival\Use\icons\cookedmeat.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\cookedmeat.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\cookedmeat.paa",
 	"call Misery_fnc_NearFire",
 	"call Misery_fnc_Cancookmeat",
 	{

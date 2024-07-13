@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
 Misery RF detector reboot code
@@ -10,7 +10,7 @@ if (alive player) exitwith {
 
 player removeitem "Misery_RFHighrangeOFF";
 
-playSound3D ["Misery\audio\sounds\Geigerenable\GeigerON.ogg", player, false, getPosASL player, 4, 1, 10];
+playSound3D ["\z\misery\addons\framework\audio\sounds\Geigerenable\GeigerON.ogg", player, false, getPosASL player, 4, 1, 10];
 
     if (alive player) then {
 
@@ -31,9 +31,9 @@ playSound3D ["Misery\audio\sounds\Geigerenable\GeigerON.ogg", player, false, get
 
 
 
-playSound3D ["Misery\audio\sounds\Geigerenable\GeigerON.ogg", player, false, getPosASL player, 4, 1, 10];
+playSound3D ["\z\misery\addons\framework\audio\sounds\Geigerenable\GeigerON.ogg", player, false, getPosASL player, 4, 1, 10];
 sleep 0.5;
-playSound3D ["Misery\audio\sounds\Geigerenable\GeigerON.ogg", player, false, getPosASL player, 4, 1, 10];
+playSound3D ["\z\misery\addons\framework\audio\sounds\Geigerenable\GeigerON.ogg", player, false, getPosASL player, 4, 1, 10];
 
     if (alive player) then {
 
@@ -56,11 +56,11 @@ playSound3D ["Misery\audio\sounds\Geigerenable\GeigerON.ogg", player, false, get
 
 
 
-playSound3D ["Misery\audio\sounds\Geigerenable\GeigerON.ogg", player, false, getPosASL player, 4, 1, 10];
+playSound3D ["\z\misery\addons\framework\audio\sounds\Geigerenable\GeigerON.ogg", player, false, getPosASL player, 4, 1, 10];
 sleep 0.5;
-playSound3D ["Misery\audio\sounds\Geigerenable\GeigerON.ogg", player, false, getPosASL player, 4, 1, 10];
+playSound3D ["\z\misery\addons\framework\audio\sounds\Geigerenable\GeigerON.ogg", player, false, getPosASL player, 4, 1, 10];
 sleep 0.5;
-playSound3D ["Misery\audio\sounds\Geigerenable\GeigerON.ogg", player, false, getPosASL player, 4, 1, 10];
+playSound3D ["\z\misery\addons\framework\audio\sounds\Geigerenable\GeigerON.ogg", player, false, getPosASL player, 4, 1, 10];
 
 
     if (alive player) then {

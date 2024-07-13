@@ -31,5 +31,5 @@ _list lbSetCurSel 0;
 };
 };
 
-[] execVM 'Misery\Scripts\Survival\Functions\Menus\Trader\ShopVALs.sqf';
+[] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Trader\ShopVALs.sqf';
 

@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
 Misery Mod actions
@@ -28,13 +28,13 @@ if (_action == localize "STR_MISERY_CheckGearweight") exitWith {
 if(_action == "Search for Money") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
-[] execVM "Misery\Scripts\Survival\Functions\Menus\Money\Search_Corpse.sqf";	
+[] execVM "\z\misery\addons\framework\scripts\survival\functions\menus\Money\Search_Corpse.sqf";	
 };
 
 //Cycle MiseryHUD:
 if(_action == localize "STR_MISERY_MiseryHUDONOFF") exitWith {
-	if(MiserySurvivalShowStatus)exitWith{MiserySurvivalShowStatus=FALSE};
-	MiserySurvivalShowStatus=TRUE;
+	if(MiserysurvivalShowStatus)exitWith{MiserysurvivalShowStatus=FALSE};
+	MiserysurvivalShowStatus=TRUE;
 };
 
 //Mechanic repairs:
@@ -203,7 +203,7 @@ private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [locali
 };
 
 //Back to default menu:
-if(_action== localize "STR_MISERY_CANCEL")exitWith{MiseryActionsMode="";execVM "Misery\Scripts\Inventory\DisplayActions.sqf"};
+if(_action== localize "STR_MISERY_CANCEL")exitWith{MiseryActionsMode="";execVM "\z\misery\addons\framework\scripts\Inventory\DisplayActions.sqf"};
 
 //PDA reboot:
 if(_action== localize "STR_MISERY_REBOOTPDA") exitWith {
@@ -214,7 +214,7 @@ private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [locali
 [_formattedText] call Misery_fnc_FormatToTile;
 }else{
 sleep 1;
-execVM "Misery\Scripts\Survival\Use\init\inventory\PDA\actions\PDAreboot.sqf";
+execVM "\z\misery\addons\framework\scripts\survival\Use\init\inventory\PDA\actions\PDAreboot.sqf";
 };
 	};
 
@@ -228,7 +228,7 @@ private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [locali
 }else{
 private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_TURNONGEIGERBOOTUP"], "PLAIN DOWN", -1, true, true];  
 [_formattedText] call Misery_fnc_FormatToTile;  
-playSound3D ["Misery\audio\sounds\Geigerenable\GeigerON.ogg", player, false, getPosASL player, 4, 1, 10];
+playSound3D ["\z\misery\addons\framework\audio\sounds\Geigerenable\GeigerON.ogg", player, false, getPosASL player, 4, 1, 10];
 player removeitem 'Misery_personalgeigerOFF'; player additem 'Misery_personalgeiger';
 //Ravage geiger var:
 if (isNil {player getVariable "GeigerON"}) then {
@@ -245,7 +245,7 @@ private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [locali
 }else{
 private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_TURNONGEIGERTURNOFF"], "PLAIN DOWN", -1, true, true];
 [_formattedText] call Misery_fnc_FormatToTile;
-playSound3D ["Misery\audio\sounds\Geigerenable\GeigerOFF.ogg", player, false, getPosASL player, 4, 1, 10];
+playSound3D ["\z\misery\addons\framework\audio\sounds\Geigerenable\GeigerOFF.ogg", player, false, getPosASL player, 4, 1, 10];
 player removeitem 'Misery_personalgeiger'; player additem 'Misery_personalgeigerOFF';
 //Ravage geiger var:
 player setVariable ["GeigerON", nil, true];
@@ -260,7 +260,7 @@ if !("Misery_RFHighrangeOFF" in items player) then {
 private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_TURNONRFDETECNOITEM"], "PLAIN DOWN", -1, true, true];
 [_formattedText] call Misery_fnc_FormatToTile;
 }else{
-execVM "Misery\Scripts\Survival\Use\init\inventory\RFdetector\RFreboot.sqf";
+execVM "\z\misery\addons\framework\scripts\survival\Use\init\inventory\RFdetector\RFreboot.sqf";
 };
 	};
 if(_action== localize "STR_MISERY_TURNOFFRFDETEC") exitWith {
@@ -272,7 +272,7 @@ private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [locali
 }else{
 private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RFDETECTURNOFF"], "PLAIN DOWN", -1, true, true];
 [_formattedText] call Misery_fnc_FormatToTile;
-playSound3D ["Misery\audio\sounds\Geigerenable\GeigerOFF.ogg", player, false, getPosASL player, 4, 1, 10];
+playSound3D ["\z\misery\addons\framework\audio\sounds\Geigerenable\GeigerOFF.ogg", player, false, getPosASL player, 4, 1, 10];
 player removeitem 'Misery_RFHighrangeON'; player additem 'Misery_RFHighrangeOFF';
 player setVariable ["Misery_RFEMFDet", false,true];
 };
@@ -309,7 +309,7 @@ if !("Misery_guitar" in items player) exitwith {
 private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_NOGUITAR"], "PLAIN DOWN", -1, true, true];
 [_formattedText] call Misery_fnc_FormatToTile;
 };
-execVM "Misery\Scripts\Survival\Use\init\inventory\Instruments\Use_Guitar.sqf";
+execVM "\z\misery\addons\framework\scripts\survival\Use\init\inventory\Instruments\Use_Guitar.sqf";
 };
 
 //Artifacts:
@@ -320,7 +320,7 @@ if !("Misery_leadcontaineropen" in items player) then {
 private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_NOLLCONTAINER"], "PLAIN DOWN", -1, true, true];
 [_formattedText] call Misery_fnc_FormatToTile;
 }else{
-execVM "Misery\Scripts\Survival\Use\init\inventory\Leadcontainer\actions\putincontaineract.sqf";
+execVM "\z\misery\addons\framework\scripts\survival\Use\init\inventory\Leadcontainer\actions\putincontaineract.sqf";
 };
 	};
 
@@ -348,7 +348,7 @@ if !("Misery_HeadlampOFF" in items player) exitwith {
 private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_TURNONHEADLAMPNOITEM"], "PLAIN DOWN", -1, true, true];
 [_formattedText] call Misery_fnc_FormatToTile;
 };
-[player] execVM "Misery\Scripts\Survival\Headlamp\HeadlampON.sqf";
+[player] execVM "\z\misery\addons\framework\scripts\survival\Headlamp\HeadlampON.sqf";
 };
 
 if(_action== localize "STR_MISERY_TURNOFFHEADLAMP") exitWith {
@@ -358,7 +358,7 @@ if !("Misery_HeadlampON" in items player) exitwith {
 private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_TURNONHEADLAMPNOITEM"], "PLAIN DOWN", -1, true, true];
 [_formattedText] call Misery_fnc_FormatToTile;
 };
-[player] execVM "Misery\Scripts\Survival\Headlamp\HeadlampOFF.sqf";
+[player] execVM "\z\misery\addons\framework\scripts\survival\Headlamp\HeadlampOFF.sqf";
 };
 
 //Crafting Framework:
@@ -408,7 +408,7 @@ if(MiseryActionsMode=="") exitWith {
 		localize "STR_MISERY_SWAPFUELTYPEPETROL"]) 
 		exitWith {
 		MiseryActionsMode=_action;
-		execVM "Misery\Scripts\Inventory\DisplayActions.sqf";
+		execVM "\z\misery\addons\framework\scripts\Inventory\DisplayActions.sqf";
 	};
 	if(isNull(findDisplay 602))then{(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1};
 	execVM _action;
@@ -496,7 +496,7 @@ if(_action=="Anvil Blueprints") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
 sleep 1;
-execVM 'Misery\Scripts\Survival\Use\init\mining\Anvil\blueprints.sqf';
+execVM '\z\misery\addons\framework\scripts\survival\Use\init\mining\Anvil\blueprints.sqf';
 };
 
 if(_action=="Use Forge") exitWith {
@@ -526,7 +526,7 @@ if(_action=="Forge Blueprints") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
 sleep 1;
-execVM 'Misery\Scripts\Survival\Use\init\mining\Forge\blueprints.sqf';
+execVM '\z\misery\addons\framework\scripts\survival\Use\init\mining\Forge\blueprints.sqf';
 };
 	
 if(_action== localize "STR_MISERY_PLAYERDATA") exitWith {
@@ -537,7 +537,7 @@ if (_action ==localize "STR_MISERY_SAVECHARACTER") exitwith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
 if (MiseryManualPData == "ENABLED") then {
-	if (MiserySurvivalHardCoreSaveMode == "ENABLED" && !(call Misery_fnc_NearFire)) exitWith {systemChat format[localize "STR_MISERY_CHARACTERHARDCORESAVINGACTIVE",profilename]};
+	if (MiserysurvivalHardCoreSaveMode == "ENABLED" && !(call Misery_fnc_NearFire)) exitWith {systemChat format[localize "STR_MISERY_CHARACTERHARDCORESAVINGACTIVE",profilename]};
 [player] call Misery_fnc_MiserySerializeplayer;
 if !(MiseryDebug) then {systemChat format[localize "STR_MISERY_SAVECHARACTERNOTIF",profilename]};
 };

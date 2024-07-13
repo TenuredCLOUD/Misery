@@ -20,7 +20,7 @@ if !(_selectedIndex == -1) exitWith {
 _PurchaseB ctrlShow false;
 _ExitB ctrlShow false;
 
-[] execVM "Misery\Scripts\Modules\Mechanic\Repair.sqf";
+[] execVM "\z\misery\addons\framework\scripts\Modules\Mechanic\Repair.sqf";
 };
 
 

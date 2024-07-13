@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
 Misery persistence
@@ -8,7 +8,7 @@ by TenuredCLOUD
 
 private ["_loadout","_stats","_status","_ACEdamage","_saveName","_namespace","_serialized","_var","_MiseryDebuffs","_MiseryCraftingKnowledge"];
 
-_saveName = MiserySurvivalSaveName;
+_saveName = MiserysurvivalSaveName;
 
 _serialized = profileNamespace getVariable _saveName;
 
@@ -115,7 +115,7 @@ if!((_stats select 3)==worldName)then{
 if!(MiseryMP)then{setDate(_stats select 4)};
 systemChat format["Misery character loaded: %1",_saveName];
 
-if !(MiserySurvivalLoadScript=="") then {[player] execVM MiserySurvivalLoadScript};
+if !(MiserysurvivalLoadScript=="") then {[player] execVM MiserysurvivalLoadScript};
 
 switch (_stats select 5) do {
     case "STAND": {player playAction "PlayerStand";};

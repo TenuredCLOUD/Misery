@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
 Misery Radio startup
@@ -19,6 +19,6 @@ _module,
 (_module getVariable "Misery_Radiosoundclassarray"),
 (_module getVariable "Misery_Radioobjectarray"),
 (_module getVariable "Misery_Radiosoundmaintimer")
-] execVM MIS_FILESYS(Survival\Radio\Radiobroadcast);
+] execVM MIS_FILESYS(survival\Radio\Radiobroadcast);
 };
 TRUE

@@ -51,12 +51,12 @@ for "_i" from 0 to _fuelLevel do {
 _displayedText = format ["Fuel Level:%1%2%3%1[%4]", endl, _fuelLevel, "%", _progressIndicator]; 
 ctrlSetText [1003, _displayedText];
 
-private _powerState = ["RUNNING", "OFF"] select ((_Generator getVariable ["Misery_Gen_IsRunning",false]) isEqualTo false);
+private _powerState = if (_Generator getVariable ["Misery_Gen_IsRunning", false] isEqualTo false) then {"OFF"} else {"RUNNING"};
 
 _displayedState = format ["Power State: %1", _powerState]; 
 ctrlSetText [1001, _displayedState];
 
-private _AllPoweredObjects = [_AllPoweredObjectsCounted, "NO POWER"] select ((_Generator getVariable ["Misery_Gen_IsRunning",false]) isEqualTo false);
+private _AllPoweredObjects = if (_Generator getVariable ["Misery_Gen_IsRunning", false] isEqualTo false) then {"NO POWER"} else {_AllPoweredObjectsCounted};
 
     _displayedPowered = format ["Powered Objects: %1", _AllPoweredObjects]; 
 

@@ -8,8 +8,8 @@ by TenuredCLOUD
 [
 	player,
 	"Split wood log",
-	"Misery\Scripts\Survival\Use\icons\firewood.paa",
-	"Misery\Scripts\Survival\Use\icons\firewood.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\firewood.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\firewood.paa",
 	"'Misery_woodenlog' in items player",
 	"'Misery_Chainsaw' in items player || 'Misery_Woodaxe' in items player || (MiseryWBKIMS && {currentWeapon player in ['WBK_axe','WBK_brush_axe','WBK_craftedAxe','FireAxe','Axe']})",
 	{

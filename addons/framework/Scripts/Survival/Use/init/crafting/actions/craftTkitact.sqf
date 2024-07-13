@@ -3,8 +3,8 @@
 [
 	player,
 	"Craft toolkit",
-	"Misery\Scripts\Survival\Use\icons\toolkit.paa",
-	"Misery\Scripts\Survival\Use\icons\toolkit.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\toolkit.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\toolkit.paa",
 	"call Misery_fnc_NearWorkbench",
 	"call Misery_fnc_craftTkit",
 	{

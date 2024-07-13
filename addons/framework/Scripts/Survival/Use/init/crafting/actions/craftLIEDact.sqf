@@ -3,8 +3,8 @@
 [
 	player,
 	"Craft Large IED",
-	"Misery\Scripts\Survival\Use\icons\ied.paa",
-	"Misery\Scripts\Survival\Use\icons\ied.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\ied.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\ied.paa",
 	"call Misery_fnc_NearWorkbench",
 	"call Misery_fnc_craftLIED",
 	{

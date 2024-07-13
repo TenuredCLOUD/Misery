@@ -19,7 +19,7 @@ if (_activated) then {
 	if !(hasInterface) then {
 		_targets = -2;
 	};
-	[[_module, _units], "Misery\Scripts\Modules\Mechanic\Mechanic.sqf"] remoteExec ["execVM ", _targets, true];
+	[[_module, _units], "\z\misery\addons\framework\scripts\Modules\Mechanic\Mechanic.sqf"] remoteExec ["execVM ", _targets, true];
 };
 
 }, [_module,_units,_activated]] call CBA_fnc_waitUntilAndExecute;

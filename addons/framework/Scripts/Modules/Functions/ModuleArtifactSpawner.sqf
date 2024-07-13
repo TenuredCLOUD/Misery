@@ -16,7 +16,7 @@ if (_activated && isServer) then {
 (_module getVariable "MiseryArtifactDeleteCheckDistance"),
 (_module getVariable "MiseryArtifactSpawnTimer"),
 (_module getVariable "MiseryArtifactDeleteTimer")
-] execVM "Misery\Scripts\Modules\Loot\Artifacts\Settings.sqf";
+] execVM "\z\misery\addons\framework\scripts\Modules\Loot\Artifacts\Settings.sqf";
 };
 TRUE
 

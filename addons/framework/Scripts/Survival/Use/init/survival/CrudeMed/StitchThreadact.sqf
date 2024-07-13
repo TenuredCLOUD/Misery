@@ -7,8 +7,8 @@ by TenuredCLOUD
 [
 	player,
 	"Stitch wounds",
-	"Misery\Scripts\Survival\Use\icons\needlethread.paa",
-	"Misery\Scripts\Survival\Use\icons\needlethread.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\needlethread.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\needlethread.paa",
 	"'Misery_Needlethread' in items player",
 	"[player] call ace_medical_blood_fnc_isBleeding",
 	{
@@ -51,7 +51,7 @@ by TenuredCLOUD
 	_TimeA=_this select 0;
 	waitUntil {(!alive player) or (time > _TimeA)};
 
-	player setVariable ["stitchnotif", format ["<t>Your Stitched wounds feel itchy and are hot to the touch... <img shadow='0' size='1.5' image='%1'/>", "Misery\Scripts\Survival\Data\infection.paa"]];
+	player setVariable ["stitchnotif", format ["<t>Your Stitched wounds feel itchy and are hot to the touch... <img shadow='0' size='1.5' image='%1'/>", "\z\misery\addons\framework\scripts\survival\Data\infection.paa"]];
 	hintSilent parseText format ["<t>%1</t><br/>",
 	player getVariable ['stitchnotif', nil]
 	];

@@ -17,8 +17,8 @@ class MiseryDisplayInventoryActions
 			idc=10001;
 			text="";
 			tooltip="Actions";
-			onLBSelChanged="FALSE execVM'Misery\Scripts\Inventory\SelectAction.sqf'";
-			onLBDblClick="TRUE execVM'Misery\Scripts\Inventory\SelectAction.sqf'";
+			onLBSelChanged="FALSE execVM'\z\misery\addons\framework\scripts\Inventory\SelectAction.sqf'";
+			onLBDblClick="TRUE execVM'\z\misery\addons\framework\scripts\Inventory\SelectAction.sqf'";
 			x=Misery_COL+(Misery_COLINC*10);
 			y=Misery_ROW+(Misery_ROWINC*1);
 			w=Misery_BUTTON_W+(Misery_COLINC*1);

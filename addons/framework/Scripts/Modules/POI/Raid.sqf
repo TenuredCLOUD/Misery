@@ -338,7 +338,7 @@ _entityPositions = units _group apply {getPos _x};
         _crateuniformArray,
         _cratevestArray,
         _cratebackpackArray,
-        _maxallowedCrateitems] execVM "Misery\Scripts\Modules\POI\PopulateCrate.sqf";
+        _maxallowedCrateitems] execVM "\z\misery\addons\framework\scripts\Modules\POI\PopulateCrate.sqf";
     };
 
 } forEach _entityPositions;
@@ -361,7 +361,7 @@ _module setVariable ["Active_Raid_ID", _raidID, true];
 
 _posStr = str _pos;
 _PMCalert = [_posStr, _raidID];
-[_PMCalert, "Misery\Scripts\Modules\PDA\alerts\PMCRaid.sqf"] remoteExec ["execVM ", 0];
+[_PMCalert, "\z\misery\addons\framework\scripts\Modules\PDA\alerts\PMCRaid.sqf"] remoteExec ["execVM ", 0];
 
 Misery_activePOIs = Misery_activePOIs + 1; 
 

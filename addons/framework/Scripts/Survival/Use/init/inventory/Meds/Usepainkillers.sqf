@@ -10,7 +10,7 @@ if (alive player) then {
 
     titleText ["You open the box of painkillers...", "PLAIN DOWN"];
 
-    playSound3D ["Misery\audio\sounds\inventory\Items\CaffetinBoxOpen.ogg", player, false, getPosASL player, 4, 1, 10];
+    playSound3D ["\z\misery\addons\framework\audio\sounds\inventory\Items\CaffetinBoxOpen.ogg", player, false, getPosASL player, 4, 1, 10];
 
     player removeitem "Misery_pain";
 

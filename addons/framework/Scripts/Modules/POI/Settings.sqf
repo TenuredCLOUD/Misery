@@ -16,5 +16,5 @@ Misery_activePOIs = 0;
 MiseryPOIGenerationReady = TRUE;
 
 if (isServer) exitWith {
-[] execVM "Misery\Scripts\Modules\POI\ModuleCheck.sqf";
+[] execVM "\z\misery\addons\framework\scripts\Modules\POI\ModuleCheck.sqf";
 };

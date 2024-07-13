@@ -16,5 +16,5 @@ Misery_active_AmbAI_Groups = 0;
 Misery_AmbAI_GenerationReady = TRUE;
 
 if (isServer) exitWith {
-[] execVM "Misery\Scripts\Modules\Ambient_AI_Zone\ModuleCheck.sqf";
+[] execVM "\z\misery\addons\framework\scripts\Modules\Ambient_AI_Zone\ModuleCheck.sqf";
 };

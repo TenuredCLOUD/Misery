@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
 Misery artifact radiation exposure
@@ -15,7 +15,7 @@ by TenuredCLOUD
         if (!([MIS_Artifact,(items player)] call Misery_fnc_Inarray) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler; 
             if(MiseryDebug)then{systemChat "Misery Artifact exposure cycle terminated..."};
-            [] execVM MIS_FILESYS(Survival\Radiation\Artifactexposure); 
+            [] execVM MIS_FILESYS(survival\Radiation\Artifactexposure); 
             if(MiseryDebug)then{systemChat "Misery Artifact exposure cycle checks re-initiated..."};
         };
 

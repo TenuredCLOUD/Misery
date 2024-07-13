@@ -13,7 +13,7 @@ if ("Misery_PDA" in _Check_items) then {
 
       private _PDA = "Approaching Contaminated Area: Expect lethal amounts of radiation, and chemical exposure... [Contamination class III]: Respirator REQUIRED"; 
 
-      private _image = format ["<img shadow='0.1' align='center' size='1.5' image='%1'/>", "Misery\Scripts\Survival\data\chem.paa"];
+      private _image = format ["<img shadow='0.1' align='center' size='1.5' image='%1'/>", "\z\misery\addons\framework\scripts\survival\data\chem.paa"];
 
       private _PDAimage = format ["<img shadow='0.1' size='1.5' image='%1'/>", "\assets\data\PDA.paa"];
 

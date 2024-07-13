@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
 Misery MP handler
@@ -9,7 +9,7 @@ by TenuredCLOUD
 
 private ["_miseryDebuffs"];
 
-if (MiserySurvivalSaveMode == 2) then {
+if (MiserysurvivalSaveMode == 2) then {
 
 if (isServer) then {
 
@@ -31,7 +31,7 @@ if (isServer) then {
 
         //reload handle:
         private _respawnedIndex = addMissionEventHandler ["EntityRespawned",{
-            [ [], "Misery\Scripts\Survival\Persistency\Persistencehandle.sqf"] remoteExec ["execVM ", _this select 0, true];
+            [ [], "\z\misery\addons\framework\scripts\survival\Persistency\Persistencehandle.sqf"] remoteExec ["execVM ", _this select 0, true];
         }];
 
         //Kill handle for Singleplayer and Multiplayer environments (enforces character data deletion when utilizing Persistent data)

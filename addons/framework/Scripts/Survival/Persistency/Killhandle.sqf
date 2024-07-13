@@ -13,8 +13,8 @@ if (isNil {missionNamespace getVariable "ServerKillhandleCustom"}) then {
 addMissionEventHandler ["EntityKilled", {
   params ["_killed", "_killer", "_instigator"];
   if (_killed == player) then {
-   if !(MiserySurvivalKillhandleScript=="") then {
-			private _killedscript = [_this select 0] execVM MiserySurvivalKillhandleScript;
+   if !(MiserysurvivalKillhandleScript=="") then {
+			private _killedscript = [_this select 0] execVM MiserysurvivalKillhandleScript;
 			if(MiseryDebug)then{systemChat "Killed handle script executed...";};
 				};
   			};

@@ -91,6 +91,6 @@ _PurchaseB ctrlShow true;
 _ExitB ctrlShow true;
 
 //Refresh treatment prices:
-[] execVM 'Misery\Scripts\Survival\Functions\Menus\MedTreatment\MTreatListed.sqf';
+[] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\MedTreatment\MTreatListed.sqf';
 	};
 };

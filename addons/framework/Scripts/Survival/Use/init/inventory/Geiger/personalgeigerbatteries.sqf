@@ -14,7 +14,7 @@ player removeitem "Misery_lithiumbattery";
 
 player additem "Misery_personalgeiger";
 
-playSound3D ["Misery\audio\sounds\Geigerenable\GeigerON.ogg", player, false, getPosASL player, 4, 1, 10];
+playSound3D ["\z\misery\addons\framework\audio\sounds\Geigerenable\GeigerON.ogg", player, false, getPosASL player, 4, 1, 10];
 
 //If bootup successful:
 //Ravage geiger var:

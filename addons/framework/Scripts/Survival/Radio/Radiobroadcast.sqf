@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
 Misery Radio audio looper / Broadcaster
@@ -19,7 +19,7 @@ MiseryRadioTimer = _this select 4;
 
 MiseryRadioBroadcastsystem = TRUE; //Sync bootup
 
-[] execVM MIS_FILESYS(Survival\Radio\RadioObjectsStatic); //Immersive static loop
+[] execVM MIS_FILESYS(survival\Radio\RadioObjectsStatic); //Immersive static loop
 
 While {true} do {
 

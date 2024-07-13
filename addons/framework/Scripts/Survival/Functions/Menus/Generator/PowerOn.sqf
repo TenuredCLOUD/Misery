@@ -54,8 +54,8 @@ private ["_PowerOnB","_PowerOffB","_RefuelB","_GeneratorType","_soundStart","_fu
 
     _PowerOffB ctrlShow true;
 
-	[MiseryTarget_Gen] execVM "Misery\Scripts\Survival\Functions\Menus\Generator\Gen_Running.sqf";
-	[MiseryTarget_Gen] execVM "Misery\Scripts\Survival\Functions\Menus\Generator\Gen_Fuel.sqf";
-	[MiseryTarget_Gen] execVM "Misery\Scripts\Survival\Functions\Menus\Generator\PowerNearby.sqf";
-	[MiseryTarget_Gen] execVM "Misery\Scripts\Survival\Functions\Menus\Generator\TrackPos.sqf";
+	[MiseryTarget_Gen] execVM "\z\misery\addons\framework\scripts\survival\functions\menus\Generator\Gen_Running.sqf";
+	[MiseryTarget_Gen] execVM "\z\misery\addons\framework\scripts\survival\functions\menus\Generator\Gen_Fuel.sqf";
+	[MiseryTarget_Gen] execVM "\z\misery\addons\framework\scripts\survival\functions\menus\Generator\PowerNearby.sqf";
+	[MiseryTarget_Gen] execVM "\z\misery\addons\framework\scripts\survival\functions\menus\Generator\TrackPos.sqf";
 

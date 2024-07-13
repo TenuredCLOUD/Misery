@@ -7,8 +7,8 @@ by TenuredCLOUD
  [
 	player,
 	"Collect wood",
-	"Misery\Scripts\Survival\Use\icons\branch.paa",
-	"Misery\Scripts\Survival\Use\icons\branch.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\branch.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\branch.paa",
 	"call Misery_fnc_NearTree",
 	"call Misery_fnc_NearTree",
 	{

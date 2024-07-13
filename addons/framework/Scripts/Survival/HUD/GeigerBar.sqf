@@ -13,7 +13,7 @@ disableSerialization;
 		if (!("Misery_personalgeiger" in magazines player) || (!alive player)) exitWith {
 			[_handle] call CBA_fnc_removePerFrameHandler;
 			("MiseryGeiger_UI" call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
-			[] execVM "Misery\Scripts\Survival\HUD\GeigerBar.sqf";
+			[] execVM "\z\misery\addons\framework\scripts\survival\HUD\GeigerBar.sqf";
 		};
 
 		"MiseryGeiger_UI" cutRsc ["MiseryGeiger_UI","PLAIN",1,false];

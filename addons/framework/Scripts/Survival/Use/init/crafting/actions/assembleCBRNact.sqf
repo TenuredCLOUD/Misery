@@ -3,8 +3,8 @@
 [
 	player,
 	"Assemble CBRN gear",
-	"Misery\Scripts\Survival\Use\icons\cbrn.paa",
-	"Misery\Scripts\Survival\Use\icons\cbrn.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\cbrn.paa",
+	"\z\misery\addons\framework\scripts\survival\Use\icons\cbrn.paa",
 	"call Misery_fnc_NearWorkbench",
 	"call Misery_fnc_craftCBRNas",
 	{

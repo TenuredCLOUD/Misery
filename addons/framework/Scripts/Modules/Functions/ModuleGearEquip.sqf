@@ -14,7 +14,7 @@ private _activated=_this select 2;
 params ["_module","_units","_activated"];
 
 if (_activated) then {
-[_module,_units] execVM "Misery\Scripts\Modules\Gear\RandomGear.sqf";
+[_module,_units] execVM "\z\misery\addons\framework\scripts\Modules\Gear\RandomGear.sqf";
 };
 
 }, [_module,_units,_activated]] call CBA_fnc_waitUntilAndExecute;

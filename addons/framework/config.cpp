@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\Scripts\Misery_PreParser.hpp"
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 /*
 Misery Mod Config
@@ -8,9 +8,10 @@ by TenuredCLOUD
 
 class CfgPatches
 {
-	class framework
+	class miseryframework
 	{
-		units[] = {"Misery_CustomItemAction","Misery_CustomAction","Misery_Survival","Misery_Temperature","Misery_HUDDefines","Misery_FearFramework","Misery_SaveData","Misery_AmbientAnimals","Misery_EconomyFramework","Misery_AmbientRadioDefines","Misery_GhostBase","Misery_GhostBase2","Misery_Ghost","Misery_Debug","Misery_SpawnerGhosts","Misery_SpawnerAmbient","Misery_Ghosts","Misery_Stalk","Misery_ItFollows","Misery_Thrall","Misery_Sleep"};
+		units[] = {"Misery_CustomItemAction","Misery_CustomAction","Misery_survival","Misery_Temperature","Misery_HUDDefines","Misery_FearFramework","Misery_SaveData","Misery_AmbientAnimals","Misery_EconomyFramework","Misery_AmbientRadioDefines","Misery_GhostBase","Misery_GhostBase2","Misery_Ghost","Misery_Debug","Misery_SpawnerGhosts","Misery_SpawnerAmbient","Misery_Ghosts","Misery_Stalk","Misery_ItFollows","Misery_Thrall","Misery_Sleep"};
+		name = "misery_framework";
 		weapons[] = {};
 		requiredAddons[] = {"CBA_main"};
 		author="TenuredCLOUD";
@@ -23,16 +24,16 @@ class CfgPatches
 
 class Extended_PreInit_Eventhandlers {
 	class Misery_Settings_PREP {
-		Init = "[] execVM '\z\misery\addons\framework\Scripts\Misery_Settings_PREP.sqf';";
+		Init = "[] execVM '\z\misery\addons\framework\scripts\Misery_Settings_PREP.sqf';";
 	};
 	class Misery_Func_PREP {
-		Init = "[] execVM '\z\misery\addons\framework\Scripts\Misery_Func_Compile_PREP.sqf';";
+		Init = "[] execVM '\z\misery\addons\framework\scripts\Misery_Func_Compile_PREP.sqf';";
 	};
 	class Misery_NoFuel_PREP {
-		serverInit = "[] execVM '\z\misery\addons\framework\Scripts\No_FuelSource_PREP.sqf';";
+		serverInit = "[] execVM '\z\misery\addons\framework\scripts\No_FuelSource_PREP.sqf';";
 	};
 	class Misery_BlackOut_PREP {
-		serverInit = "[] execVM '\z\misery\addons\framework\Scripts\Blackout_PREP.sqf';";
+		serverInit = "[] execVM '\z\misery\addons\framework\scripts\Blackout_PREP.sqf';";
 	};
 };
 
@@ -49,7 +50,7 @@ class CfgFactionClasses
 
 class Extended_PostInit_EventHandlers {
 	class Misery_PREP {
-		Init = "[] execVM '\z\misery\addons\framework\Scripts\Misery_Sys_PREP.sqf';";
+		Init = "[] execVM '\z\misery\addons\framework\scripts\Misery_Sys_PREP.sqf';";
 	};
 };
 
@@ -67,7 +68,7 @@ class CfgMarkers
     class Base_materials
     {
         name="Base materials";
-        icon="\z\misery\addons\framework\Scripts\Survival\data\Mappack\basematerial.paa";
+        icon="\z\misery\addons\framework\scripts\survival\data\Mappack\basematerial.paa";
         size=32;
         color[]={0,0,0,1};
         shadow = 0;
@@ -78,7 +79,7 @@ class CfgMarkers
      class Base_trader
     {
         name="Base trader";
-        icon="\z\misery\addons\framework\Scripts\Survival\data\Mappack\basetrader.paa";
+        icon="\z\misery\addons\framework\scripts\survival\data\Mappack\basetrader.paa";
         size=32;
         color[]={0,0,0,1};
         shadow = 0;
@@ -89,7 +90,7 @@ class CfgMarkers
      class Ecologists
     {
         name="Ecologists";
-        icon="\z\misery\addons\framework\Scripts\Survival\data\Mappack\gasMask.paa";
+        icon="\z\misery\addons\framework\scripts\survival\data\Mappack\gasMask.paa";
         size=32;
         color[]={0,0,0,1};
         shadow = 0;
@@ -100,7 +101,7 @@ class CfgMarkers
      class Lumber_Mill
     {
         name="Lumber mill";
-        icon="\z\misery\addons\framework\Scripts\Survival\data\Mappack\lumber.paa";
+        icon="\z\misery\addons\framework\scripts\survival\data\Mappack\lumber.paa";
         size=32;
         color[]={0,0,0,1};
         shadow = 0;
@@ -111,7 +112,7 @@ class CfgMarkers
      class Mechanic
     {
         name="Mechanic";
-        icon="\z\misery\addons\framework\Scripts\Survival\data\Mappack\mechanic.paa";
+        icon="\z\misery\addons\framework\scripts\survival\data\Mappack\mechanic.paa";
         size=32;
         color[]={0,0,0,1};
         shadow = 0;
@@ -122,7 +123,7 @@ class CfgMarkers
      class Military
     {
         name="Military Zone";
-        icon="\z\misery\addons\framework\Scripts\Survival\data\Mappack\military.paa";
+        icon="\z\misery\addons\framework\scripts\survival\data\Mappack\military.paa";
         size=32;
         color[]={0,0,0,1};
         shadow = 0;
@@ -133,7 +134,7 @@ class CfgMarkers
      class Mining
     {
         name="Mining";
-        icon="\z\misery\addons\framework\Scripts\Survival\data\Mappack\mining.paa";
+        icon="\z\misery\addons\framework\scripts\survival\data\Mappack\mining.paa";
         size=32;
         color[]={0,0,0,1};
         shadow = 0;
@@ -144,7 +145,7 @@ class CfgMarkers
      class Skull
     {
         name="Skull";
-        icon="\z\misery\addons\framework\Scripts\Survival\data\Mappack\skull.paa";
+        icon="\z\misery\addons\framework\scripts\survival\data\Mappack\skull.paa";
         size=32;
         color[]={0,0,0,1};
         shadow = 0;
@@ -155,7 +156,7 @@ class CfgMarkers
      class Radiation_zone
     {
         name="Radiation Zone";
-        icon="\z\misery\addons\framework\Scripts\Survival\data\Mappack\RadZone.paa";
+        icon="\z\misery\addons\framework\scripts\survival\data\Mappack\RadZone.paa";
         size=32;
         color[]={0,0,0,1};
         shadow = 0;
@@ -166,7 +167,7 @@ class CfgMarkers
      class Trader_presence
     {
         name="Trader";
-        icon="\z\misery\addons\framework\Scripts\Survival\data\Mappack\trader.paa";
+        icon="\z\misery\addons\framework\scripts\survival\data\Mappack\trader.paa";
         size=32;
         color[]={0,0,0,1};
         shadow = 0;
@@ -177,7 +178,7 @@ class CfgMarkers
      class Banker_presence
     {
         name="Banker";
-        icon="\z\misery\addons\framework\Scripts\Survival\data\Mappack\banker.paa";
+        icon="\z\misery\addons\framework\scripts\survival\data\Mappack\banker.paa";
         size=32;
         color[]={0,0,0,1};
         shadow = 0;
@@ -188,7 +189,7 @@ class CfgMarkers
     class Forge_Anvil
     {
         name="Forge & Anvil";
-        icon="\z\misery\addons\framework\Scripts\Survival\data\Mappack\anvil.paa";
+        icon="\z\misery\addons\framework\scripts\survival\data\Mappack\anvil.paa";
         size=32;
         color[]={0,0,0,1};
         shadow = 0;
@@ -199,7 +200,7 @@ class CfgMarkers
     class Rearmer
     {
         name="Rearmer";
-        icon="\z\misery\addons\framework\Scripts\Survival\data\Mappack\rearm.paa";
+        icon="\z\misery\addons\framework\scripts\survival\data\Mappack\rearm.paa";
         size=32;
         color[]={0,0,0,1};
         shadow = 0;
@@ -210,7 +211,7 @@ class CfgMarkers
 	class Refueler
     {
         name="Refuel";
-        icon="\z\misery\addons\framework\Scripts\Survival\data\Mappack\pumpnozzle.paa";
+        icon="\z\misery\addons\framework\scripts\survival\data\Mappack\pumpnozzle.paa";
         size=32;
         color[]={0,0,0,1};
         shadow = 0;
@@ -221,7 +222,7 @@ class CfgMarkers
 	 class MedicalMap
     {
         name="Medical";
-        icon="\z\misery\addons\framework\Scripts\Survival\data\Mappack\medical.paa";
+        icon="\z\misery\addons\framework\scripts\survival\data\Mappack\medical.paa";
         size=32;
         color[]={0,0,0,1};
         shadow = 0;
@@ -232,7 +233,7 @@ class CfgMarkers
 	class SafeZoneMap
     {
         name="Safezone";
-        icon="\z\misery\addons\framework\Scripts\Survival\data\Mappack\safezone.paa";
+        icon="\z\misery\addons\framework\scripts\survival\data\Mappack\safezone.paa";
         size=32;
         color[]={0,0,0,1};
         shadow = 0;
@@ -243,7 +244,7 @@ class CfgMarkers
 	class HeliWreckMap
     {
         name="Helicopter Wreck";
-        icon="\z\misery\addons\framework\Scripts\Survival\data\Mappack\Heliwreck.paa";
+        icon="\z\misery\addons\framework\scripts\survival\data\Mappack\Heliwreck.paa";
         size=32;
         color[]={0,0,0,1};
         shadow = 0;
@@ -280,7 +281,7 @@ class CfgVehicles
 	{
 		scope=2;
 		displayName="Custom item usage";
-		icon = "\z\misery\addons\framework\Scripts\Survival\data\swap.paa";
+		icon = "\z\misery\addons\framework\scripts\survival\data\swap.paa";
 		category="Misery_faction";
 		function="Misery_fnc_ModuleCustomItemAction";
 		functionPriority=1;
@@ -301,7 +302,7 @@ class CfgVehicles
 			{
 				property="Misery_Script";
 				displayName="Script path";
-				tooltip="Path to a script that will be run when this item is clicked on (ex. MyScripts\myscript.sqf - doesn't require qoutes '')";
+				tooltip="Path to a script that will be run when this item is clicked on (ex. Myscripts\myscript.sqf - doesn't require qoutes '')";
 				typeName="STRING";
 				defaultValue="""""";
 			};
@@ -325,7 +326,7 @@ class CfgVehicles
 	{
 		scope=2;
 		displayName="Custom action";
-		icon = "\z\misery\addons\framework\Scripts\Survival\data\action.paa";
+		icon = "\z\misery\addons\framework\scripts\survival\data\action.paa";
 		category="Misery_faction";
 		function="Misery_fnc_ModuleCustomAction";
 		functionPriority=1;
@@ -346,7 +347,7 @@ class CfgVehicles
 			{
 				property="Misery_Script";
 				displayName="Script path";
-				tooltip="Path to a script that will be run when this action is clicked on (eg. MyScripts\CustomAction1.sqf)";
+				tooltip="Path to a script that will be run when this action is clicked on (eg. Myscripts\CustomAction1.sqf)";
 				typeName="STRING";
 				defaultValue="""""";
 			};
@@ -380,7 +381,7 @@ class CfgVehicles
 	// 	_generalMacro="Misery_Loot";
 	// 	scope=2;
 	// 	displayName="Loot Defines (Misery Loot framework)";
-	// 	icon="\z\misery\addons\framework\Scripts\Survival\data\loot.paa";
+	// 	icon="\z\misery\addons\framework\scripts\survival\data\loot.paa";
 	// 	category="Misery_faction";
 	// 	function="Misery_fnc_ModuleLoot";
 	// 	functionPriority=1;
@@ -1064,7 +1065,7 @@ class CfgVehicles
 	{
 		scope=2;
 		displayName="Medical gear random (Sync module)";
-		icon="\z\misery\addons\framework\Scripts\Survival\data\medication.paa";
+		icon="\z\misery\addons\framework\scripts\survival\data\medication.paa";
 		category="Misery_faction";
 		function="Misery_fnc_ModuleRandmed";
 		functionPriority=1;
@@ -1119,7 +1120,7 @@ class CfgVehicles
 	{
 		scope=2;
 		displayName="Gear Equip (Sync module)";
-		icon="\z\misery\addons\framework\Scripts\Survival\data\swap.paa";
+		icon="\z\misery\addons\framework\scripts\survival\data\swap.paa";
 		category="Misery_faction";
 		function="Misery_fnc_ModuleGearEquip";
 		functionPriority=1;
@@ -1281,7 +1282,7 @@ class Misery_Psyfieldcreate: Module_F
 	{
 		scope=2;
 		displayName="Psyfield creation";
-		icon="\z\misery\addons\framework\Scripts\Survival\data\Psyfield.paa";
+		icon="\z\misery\addons\framework\scripts\survival\data\Psyfield.paa";
 		category="Misery_faction";
 		function="Misery_fnc_ModulePsyfield";
 		functionPriority=1;
@@ -1318,7 +1319,7 @@ class Misery_RadZonecreate: Module_F
 	{
 		scope=2;
 		displayName="Radiation Zone creation";
-		icon="\z\misery\addons\framework\Scripts\Survival\data\Rad_zone.paa";
+		icon="\z\misery\addons\framework\scripts\survival\data\Rad_zone.paa";
 		category="Misery_faction";
 		function="Misery_fnc_ModuleRadZone";
 		functionPriority=1;
@@ -1354,7 +1355,7 @@ class Misery_PDA_notifier: Module_F
 	{
 		scope=2;
 		displayName="PDA notification create";
-		icon="\z\misery\addons\framework\Scripts\Survival\data\PDA.paa";
+		icon="\z\misery\addons\framework\scripts\survival\data\PDA.paa";
 		category="Misery_faction";
 		function="Misery_fnc_ModulePDA";
 		functionPriority=1;
@@ -1429,7 +1430,7 @@ class Misery_PDA_notifier: Module_F
 	{
 		scope=2;
 		displayName="Kill zone create";
-		icon="\z\misery\addons\framework\Scripts\Survival\data\Mappack\skull.paa";
+		icon="\z\misery\addons\framework\scripts\survival\data\Mappack\skull.paa";
 		category="Misery_faction";
 		function="Misery_fnc_Modulekillzone";
 		functionPriority=1;
@@ -1527,7 +1528,7 @@ class Misery_VehRepair: Module_F
 	{
 		scope=2;
 		displayName="Vehicle repair zone";
-		icon="\z\misery\addons\framework\Scripts\Survival\data\Mappack\mechanic.paa";
+		icon="\z\misery\addons\framework\scripts\survival\data\Mappack\mechanic.paa";
 		category="Misery_faction";
 		function="Misery_fnc_ModuleMechanic";
 		functionPriority=1;
@@ -1564,7 +1565,7 @@ class Misery_VehRearm: Module_F
 	{
 		scope=2;
 		displayName="Vehicle rearming zone";
-		icon="\z\misery\addons\framework\Scripts\Survival\data\Mappack\rearm.paa";
+		icon="\z\misery\addons\framework\scripts\survival\data\Mappack\rearm.paa";
 		category="Misery_faction";
 		function="Misery_fnc_ModuleRearm";
 		functionPriority=1;
@@ -1601,7 +1602,7 @@ class Misery_MedZone: Module_F
 	{
 		scope=2;
 		displayName="Medical (treatment zone)";
-		icon="\z\misery\addons\framework\Scripts\Survival\data\Mappack\medical.paa";
+		icon="\z\misery\addons\framework\scripts\survival\data\Mappack\medical.paa";
 		category="Misery_faction";
 		function="Misery_fnc_ModuleMedzone";
 		functionPriority=1;
@@ -1637,7 +1638,7 @@ class Misery_SafeZone: Module_F
 	{
 		scope=2;
 		displayName="SafeZone";
-		icon="\z\misery\addons\framework\Scripts\Survival\data\Mappack\safezone.paa";
+		icon="\z\misery\addons\framework\scripts\survival\data\Mappack\safezone.paa";
 		category="Misery_faction";
 		function="Misery_fnc_ModuleSafezone";
 		functionPriority=1;
@@ -1674,7 +1675,7 @@ class Misery_RefuelZone: Module_F
 	{
 		scope=2;
 		displayName="Vehicle refueling zone";
-		icon="\z\misery\addons\framework\Scripts\Survival\data\Mappack\pumpnozzle.paa";
+		icon="\z\misery\addons\framework\scripts\survival\data\Mappack\pumpnozzle.paa";
 		category="Misery_faction";
 		function="Misery_fnc_ModuleRefuelzone";
 		functionPriority=1;
@@ -1710,7 +1711,7 @@ class Misery_RefuelZone: Module_F
 	{
 		scope=2;
 		displayName="Misery Ambient AI Zone"; 
-		icon="\z\misery\addons\framework\Scripts\Survival\data\Group.paa";
+		icon="\z\misery\addons\framework\scripts\survival\data\Group.paa";
 		category="Misery_faction";
 		function="";
 		functionPriority=1;
@@ -1927,7 +1928,7 @@ class Misery_RefuelZone: Module_F
 	{
 		scope=2;
 		displayName="Misery Ambient AI"; 
-		icon="\z\misery\addons\framework\Scripts\Survival\data\AK.paa";
+		icon="\z\misery\addons\framework\scripts\survival\data\AK.paa";
 		category="Misery_faction";
 		function="";
 		functionPriority=1;
@@ -2144,7 +2145,7 @@ class Misery_RefuelZone: Module_F
 	{
 		scope=2;
 		displayName="Misery (AI) Settings";
-		icon="\z\misery\addons\framework\Scripts\Survival\data\Group.paa";
+		icon="\z\misery\addons\framework\scripts\survival\data\Group.paa";
 		category="Misery_faction";
 		function="Misery_fnc_ModuleAISettings";
 		functionPriority=1;
@@ -2212,7 +2213,7 @@ class Misery_RefuelZone: Module_F
 	{
 		scope=2;
 		displayName="Misery (Artifact Spawner)";
-		icon="\z\misery\addons\framework\Scripts\Survival\data\Artifacticon.paa";
+		icon="\z\misery\addons\framework\scripts\survival\data\Artifacticon.paa";
 		category="Misery_faction";
 		function="";
 		functionPriority=1;
@@ -2256,7 +2257,7 @@ class Misery_RefuelZone: Module_F
 	{
 		scope=2;
 		displayName="Misery (Artifact Spawner) Settings";
-		icon="\z\misery\addons\framework\Scripts\Survival\data\Artifacticon.paa";
+		icon="\z\misery\addons\framework\scripts\survival\data\Artifacticon.paa";
 		category="Misery_faction";
 		function="Misery_fnc_ModuleArtifactSpawner";
 		functionPriority=1;
@@ -2317,7 +2318,7 @@ class Misery_RefuelZone: Module_F
 	{
 		scope=2;
 		displayName="Misery (POI)";
-		icon="\z\misery\addons\framework\Scripts\Survival\data\POI.paa";
+		icon="\z\misery\addons\framework\scripts\survival\data\POI.paa";
 		category="Misery_faction";
 		function="";
 		functionPriority=1;
@@ -2752,7 +2753,7 @@ class Misery_RefuelZone: Module_F
 	{
 		scope=2;
 		displayName="Misery (POI) Settings";
-		icon="\z\misery\addons\framework\Scripts\Survival\data\POI.paa";
+		icon="\z\misery\addons\framework\scripts\survival\data\POI.paa";
 		category="Misery_faction";
 		function="Misery_fnc_ModulePOISettings";
 		functionPriority=1;
@@ -2820,7 +2821,7 @@ class Misery_RefuelZone: Module_F
 	// {
 	// 	scope=2;
 	// 	displayName="Radio Broadcaster (Settings)";
-	// 	icon="\z\misery\addons\framework\Scripts\Survival\data\radio.paa";
+	// 	icon="\z\misery\addons\framework\scripts\survival\data\radio.paa";
 	// 	category="Misery_faction";
 	// 	function="Misery_fnc_ModuleRadioSettings";
 	// 	functionPriority=1;
