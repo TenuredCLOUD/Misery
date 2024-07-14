@@ -5,7 +5,7 @@ class CfgVehicles {
 	class House_F;	// External class reference
 
 	class Misery_Object_Firewood : Item_Base_F {
-		scope = "public";
+		scope = 2;
 		scopeCurator = 2;
 		displayName = "Firewood";
 		author = "TenuredCLOUD";
@@ -23,7 +23,7 @@ class CfgVehicles {
 	};
 
 	class Misery_Object_Woodenlog : Item_Base_F {
-		scope = "public";
+		scope = 2;
 		scopeCurator = 2;
 		displayName = "Wooden log";
 		author = "TenuredCLOUD";
@@ -41,7 +41,7 @@ class CfgVehicles {
 	};
 
 	class Misery_Object_Collapsiblefishingrod : Item_Base_F {
-		scope = "public";
+		scope = 2;
 		scopeCurator = 2;
 		displayName = "Collapsible fishing rod";
 		author = "TenuredCLOUD";
@@ -59,7 +59,7 @@ class CfgVehicles {
 	};
 
 	class Misery_Object_2x4 : Item_Base_F {
-		scope = "public";
+		scope = 2;
 		scopeCurator = 2;
 		displayName = "2x4";
 		author = "TenuredCLOUD";
@@ -77,7 +77,7 @@ class CfgVehicles {
 	};
 
 	class Misery_Object_2x8 : Item_Base_F {
-		scope = "public";
+		scope = 2;
 		scopeCurator = 2;
 		displayName = "2x8";
 		author = "TenuredCLOUD";
@@ -95,7 +95,7 @@ class CfgVehicles {
 	};
 
 	class Misery_Object_woodpanel : Item_Base_F {
-		scope = "public";
+		scope = 2;
 		scopeCurator = 2;
 		displayName = "Woodpanel";
 		author = "TenuredCLOUD";
@@ -119,13 +119,13 @@ class CfgVehicles {
 		displayName = "$STR_MISERY_FORGE_DISPLAYNAME";
 		textSingular = "Forge";
 		destrType = "DestructNo";
-		model = "z\misery\addons\assets\data\models\other\forge.p3d";
+		model = "\z\misery\addons\assets\data\models\forge.p3d";
 		cost = 0;
 		armor = 2000;
 		author = "Model credits: RBG_illustrations - Reworked by TenuredCLOUD";
 		vehicleClass = "Misery_ObjectClass";
 		numberOfDoors = 0;
-		scope = "public";
+		scope = 2;
 		scopeCurator = 2;
 		mapSize = 3;
 		placement = "vertical";
@@ -142,14 +142,14 @@ class CfgVehicles {
 		displayName = "$STR_MISERY_ANVIL_DISPLAYNAME";
 		textSingular = "Anvil";
 		destrType = "DestructNo";
-		model = "z\misery\addons\assets\data\models\other\medievalanvil.p3d";
+		model = "\z\misery\addons\assets\data\models\medievalanvil.p3d";
 		
 		cost = 0;
 		armor = 3;
 		author = "Model credits: Margot D. - Reworked by TenuredCLOUD";
 		vehicleClass = "Misery_ObjectClass";
 		numberOfDoors = 0;
-		scope = "public";
+		scope = 2;
 		scopeCurator = 2;
 		mapSize = 2;
 		placement = "vertical";
@@ -168,20 +168,20 @@ class CfgVehicles {
 		displayName = "$STR_MISERY_JETFUELRU_DISPLAYNAME";
 		textSingular = "Jet Fuel Station";
 		destrType = "DestructNo";
-		model = "z\misery\addons\assets\data\models\other\twinjetfueltank.p3d";
+		model = "\z\misery\addons\assets\data\models\twinjetfueltank.p3d";
 		
 		cost = 0;
 		armor = 2000;
 		author = "Model credits: Tanks LuddePudde - Fuel pump castleonsandYT - Reworked by TenuredCLOUD";
 		vehicleClass = "Misery_ObjectClass";
 		numberOfDoors = 0;
-		scope = "public";
+		scope = 2;
 		scopeCurator = 2;
 		mapSize = 3;
 		placement = "vertical";
 		hiddenSelections[] = {};
 		hiddenSelectionsTextures[] = {};
-		hiddenSelectionsMaterials[] = {"z\misery\addons\assets\data\models\other\ui\Fueltanks.rvmat"};
+		hiddenSelectionsMaterials[] = {"\z\misery\addons\assets\data\models\ui\Fueltanks.rvmat"};
 		
 		class AnimationSources {};
 		
@@ -195,13 +195,13 @@ class CfgVehicles {
 		displayName = "$STR_MISERY_100KVAGEN_DISPLAYNAME";
 		textSingular = "100KVA Generator";
 		destrType = "DestructNo";
-		model = "z\misery\addons\assets\data\models\other\100KVA_Generator.p3d";
+		model = "\z\misery\addons\assets\data\models\100KVA_Generator.p3d";
 		cost = 0;
 		armor = 2000;
 		author = "Model credits: tasraven - Reworked by TenuredCLOUD";
 		vehicleClass = "Misery_ObjectClass";
 		numberOfDoors = 0;
-		scope = "public";
+		scope = 2;
 		scopeCurator = 2;
 		mapSize = 3;
 		placement = "vertical";
@@ -275,13 +275,13 @@ class CfgVehicles {
 		displayName = "$STR_MISERY_HeavilyUsedGen_Gas_DISPLAYNAME";
 		textSingular = "Heavily used Genrator - Petrol";
 		destrType = "DestructNo";
-		model = "z\misery\addons\assets\data\models\other\Used_Gen_Gas.p3d";
+		model = "\z\misery\addons\assets\data\models\Used_Gen_Gas.p3d";
 		cost = 0;
 		armor = 2000;
 		author = "Model credits: DennisHNguyen - Reworked by TenuredCLOUD";
 		vehicleClass = "Misery_ObjectClass";
 		numberOfDoors = 0;
-		scope = "public";
+		scope = 2;
 		scopeCurator = 2;
 		mapSize = 3;
 		placement = "vertical";
@@ -355,13 +355,13 @@ class CfgVehicles {
 		displayName = "$STR_MISERY_HeavilyUsedGen_Diesel_DISPLAYNAME";
 		textSingular = "Heavily used Genrator - Diesel";
 		destrType = "DestructNo";
-		model = "z\misery\addons\assets\data\models\other\Used_Gen_Diesel.p3d";
+		model = "\z\misery\addons\assets\data\models\Used_Gen_Diesel.p3d";
 		cost = 0;
 		armor = 2000;
 		author = "Model credits: Daniel_Bakunin - Reworked by TenuredCLOUD";
 		vehicleClass = "Misery_ObjectClass";
 		numberOfDoors = 0;
-		scope = "public";
+		scope = 2;
 		scopeCurator = 2;
 		mapSize = 3;
 		placement = "vertical";
