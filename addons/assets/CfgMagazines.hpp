@@ -1,5 +1,5 @@
 class CfgMagazines {
-	class CA_Magazine;	// External class reference
+	class CA_Magazine;
 
 	class Laserbatteries : CA_Magazine {};
 	
@@ -10,8 +10,6 @@ class CfgMagazines {
 		picture = "";
 		descriptionShort = "";
 	};
-
-	//Medicine:
 
 	class Misery_puretabs : Misery_ItemMagCore {
 		scope = 2;
@@ -131,8 +129,6 @@ class CfgMagazines {
 		mass = 2;
 	};
 
-	//Fuel consumers:
-
 	class Misery_lighter : Misery_ItemMagCore {
 		scope = 2;
 		author = "TenuredCLOUD";
@@ -175,8 +171,6 @@ class CfgMagazines {
 		count = 100;
 		mass = 10;
 	};
-
-	//Electronics & Batteries:
 
 	class Misery_PDA : Misery_ItemMagCore {
 		scope = 2;
@@ -283,8 +277,6 @@ class CfgMagazines {
 		count = 100;
 		mass = 200;
 	};
-
-	//Consume-ables / Tobacco products 
 
 	class Misery_matchespack : Misery_ItemMagCore {
 		scope = 2;
@@ -429,8 +421,6 @@ class CfgMagazines {
 		count = 20;
 		mass = 15;
 	};
-
-	//Jerry Cans
 
 	class Misery_WaterJerryF : Misery_ItemMagCore {
 		scope = 2;

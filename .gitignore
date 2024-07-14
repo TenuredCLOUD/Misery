@@ -5,3 +5,6 @@ keys/*
 /releases
 /keys
 /.hemttout
+build_dev.bat
+build_launch.bat
+build_release.bat

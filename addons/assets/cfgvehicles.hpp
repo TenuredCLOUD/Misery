@@ -1,8 +1,8 @@
 
 class CfgVehicles {
 	class Logic {};
-	class Item_Base_F;	// External class reference
-	class House_F;	// External class reference
+	class Item_Base_F;	
+	class House_F;	
 
 	class Misery_Object_Firewood : Item_Base_F {
 		scope = 2;
@@ -112,8 +112,6 @@ class CfgVehicles {
 		};
 	};
 
-	///////////END OF VEHICLE OBJECTS "Transporters"//////////////////////
-
 	class Misery_Forge : House_F {
 		
 		displayName = "$STR_MISERY_FORGE_DISPLAYNAME";
@@ -161,8 +159,6 @@ class CfgVehicles {
 		class UserActions {};
 	};
 
-	//REFUELING STRUCTURES:
-
 	class Misery_JetFuelRU : House_F {
 		
 		displayName = "$STR_MISERY_JETFUELRU_DISPLAYNAME";
@@ -189,7 +185,6 @@ class CfgVehicles {
 
 	};
 
-	//Generators:
 	class Misery_100KVA_Gen : House_F {
 		
 		displayName = "$STR_MISERY_100KVAGEN_DISPLAYNAME";
@@ -216,7 +211,7 @@ class CfgVehicles {
 				displayName = "Start 100KVA Generator";
 				displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
 				priority = 10;
-				radius = 1; // a too small radius might cause the action to not be visible
+				radius = 1; 
 				position = "ScreenController01";
 				showWindow = 0;
 				hideOnUse = 1;
@@ -230,7 +225,7 @@ class CfgVehicles {
 				displayName = "ShutDown 100KVA Generator";
 				displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
 				priority = 10;
-				radius = 1; // a too small radius might cause the action to not be visible
+				radius = 1; 
 				position = "ScreenController01";
 				showWindow = 0;
 				hideOnUse = 1;
@@ -244,7 +239,7 @@ class CfgVehicles {
 				displayName = "Refuel 100KVA Generator";
 				displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
 				priority = 10;
-				radius = 1; // a too small radius might cause the action to not be visible
+				radius = 1; 
 				position = "ScreenController01";
 				showWindow = 0;
 				hideOnUse = 1;
@@ -258,7 +253,7 @@ class CfgVehicles {
 				displayName = "Check 100KVA Generator Status";
 				displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
 				priority = 10;
-				radius = 1; // a too small radius might cause the action to not be visible
+				radius = 1; 
 				position = "ScreenController01";
 				showWindow = 0;
 				hideOnUse = 1;
@@ -296,7 +291,7 @@ class CfgVehicles {
 				displayName = "Start Generator";
 				displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
 				priority = 10;
-				radius = 1; // a too small radius might cause the action to not be visible
+				radius = 1; 
 				position = "Ignition01";
 				showWindow = 0;
 				hideOnUse = 1;
@@ -310,7 +305,7 @@ class CfgVehicles {
 				displayName = "ShutDown Generator";
 				displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
 				priority = 10;
-				radius = 1; // a too small radius might cause the action to not be visible
+				radius = 1; 
 				position = "Ignition01";
 				showWindow = 0;
 				hideOnUse = 1;
@@ -324,7 +319,7 @@ class CfgVehicles {
 				displayName = "Check Generator Status";
 				displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
 				priority = 10;
-				radius = 1; // a too small radius might cause the action to not be visible
+				radius = 1; 
 				position = "Ignition01";
 				showWindow = 0;
 				hideOnUse = 1;
@@ -338,7 +333,7 @@ class CfgVehicles {
 				displayName = "Refuel Generator";
 				displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
 				priority = 10;
-				radius = 1; // a too small radius might cause the action to not be visible
+				radius = 1; 
 				position = "FuelTank01";
 				showWindow = 0;
 				hideOnUse = 1;
@@ -376,7 +371,7 @@ class CfgVehicles {
 				displayName = "Start Generator";
 				displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
 				priority = 10;
-				radius = 1; // a too small radius might cause the action to not be visible
+				radius = 1; 
 				position = "Ignition01";
 				showWindow = 0;
 				hideOnUse = 1;
@@ -390,7 +385,7 @@ class CfgVehicles {
 				displayName = "ShutDown Generator";
 				displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
 				priority = 10;
-				radius = 1; // a too small radius might cause the action to not be visible
+				radius = 1; 
 				position = "Ignition01";
 				showWindow = 0;
 				hideOnUse = 1;
@@ -404,7 +399,7 @@ class CfgVehicles {
 				displayName = "Check Generator Status";
 				displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
 				priority = 10;
-				radius = 1; // a too small radius might cause the action to not be visible
+				radius = 1; 
 				position = "Ignition01";
 				showWindow = 0;
 				hideOnUse = 1;
@@ -418,7 +413,7 @@ class CfgVehicles {
 				displayName = "Refuel Generator";
 				displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
 				priority = 10;
-				radius = 1; // a too small radius might cause the action to not be visible
+				radius = 1; 
 				position = "FuelTank01";
 				showWindow = 0;
 				hideOnUse = 1;
@@ -430,6 +425,4 @@ class CfgVehicles {
 		};
 	};
 
-///////////END OF BUILDINGS//////////////////////
-
-}; //DO NOT DELETE End of config
+};

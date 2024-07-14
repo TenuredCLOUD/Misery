@@ -5,21 +5,19 @@ mainprefix = "z"
 
 [files]
 include = [
-    "mod.cpp",
     "*.p3d",
     "*.paa",
     "*.ogg",
     "*.txt",
     "*.ext",
     "*.xml",
-    "*.md",
     "*.sqf",
     "*.sqfc",
     "*.fxy"
 ]
 
 exclude = [
-    "*.png", # explicitly excluding image source files from build, but not repository
+    "*.png"
 ]
 
 [version]
