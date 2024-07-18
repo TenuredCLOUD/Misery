@@ -9,10 +9,10 @@ class Misery_BackGround
 	idc = -1;
 	type = 0;
 	style = 96;
-	x = PASS_STR(Misery_x);
-	y = PASS_STR(Misery_y);
-	w = PASS_STR(Misery_W);
-	h = PASS_STR(Misery_H);
+	x = QUOTE(Misery_x);
+	y = QUOTE(Misery_y);
+	w = QUOTE(Misery_W);
+	h = QUOTE(Misery_H);
 	font = Misery_font;
 	sizeEx = Misery_TEXTSIZE;
 	colorBackground[] = {0,0,0,1}; // Black background
@@ -27,8 +27,8 @@ class Misery_RscProgress
 	deletable = 0;
 	fade = 0;
 	access = 0;
-	type = PASS_STR(CT_PROGRESS);
-	style = PASS_STR(ST_HORIZONTAL);
+	type = QUOTE(CT_PROGRESS);
+	style = QUOTE(ST_HORIZONTAL);
 	colorFrame[] = {0,0,0,0};
 	colorBar[] =
 	{

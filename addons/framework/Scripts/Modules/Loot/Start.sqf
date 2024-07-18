@@ -2,7 +2,7 @@
 
 /*
 Misery Loot framework start
-Code concepts from Drongo edited by TenuredCLOUD
+Code concepts from Drongo edited by TenuredCLOUD (with permission)
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */

@@ -6,3 +6,5 @@ by TenuredCLOUD
 
 #include "\z\misery\addons\framework\scripts\Misery_defines.hpp"
 
+#include "\x\cba\addons\main\script_macros_common.hpp"
+

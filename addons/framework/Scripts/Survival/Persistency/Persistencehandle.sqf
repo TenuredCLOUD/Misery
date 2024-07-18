@@ -18,7 +18,7 @@ if (isServer) then {
         missionNamespace setVariable ["ServerPersistHandles", true];
 
         //Haleks Ravage dedi MP handle disconnect code: (removes actions and unit after leaving a server) 
-        //- without handle player character dies in server after leaving
+        //- without handle player character dies in server after leaving corpse is left
         private _disconnectIndex = addMissionEventHandler ["HandleDisconnect",{ //server only // run on dedicated server or player host
             _unit = _this select 0;
             removeAllActions _unit;

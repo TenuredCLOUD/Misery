@@ -67,7 +67,7 @@ class MiseryFillContainer_Button: RscButton
 	y = 12 * GUI_GRID_H + GUI_GRID_Y;
 	w = 7.5 * GUI_GRID_W;
 	h = 1.5 * GUI_GRID_H;
-	sizeEx = PASS_STR((((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1));
+	sizeEx = QUOTE((((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1));
 	font = "PuristaMedium";
 	colorBackground[] = {0.2, 0.2, 0.2, 0.7};
 	colorFocused[] = {0.5, 0.5, 0.5, 0.7};
@@ -82,7 +82,7 @@ class MiseryDrinkFromSource_Button: RscButton
 	y = 14.53 * GUI_GRID_H + GUI_GRID_Y;
 	w = 8.5 * GUI_GRID_W;
 	h = 1.5 * GUI_GRID_H;
-	sizeEx = PASS_STR((((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1));
+	sizeEx = QUOTE((((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1));
 	font = "PuristaMedium";
 	colorBackground[] = {0.2, 0.2, 0.2, 0.7};
 	colorFocused[] = {0.5, 0.5, 0.5, 0.7};
@@ -97,7 +97,7 @@ class MiseryWaterCollection_ExitButton: RscButton
 	y = 17 * GUI_GRID_H + GUI_GRID_Y;
 	w = 7.5 * GUI_GRID_W;
 	h = 1.5 * GUI_GRID_H;
-	sizeEx = PASS_STR((((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1));
+	sizeEx = QUOTE((((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1));
 	font = "PuristaMedium";
 	colorBackground[] = {0.2, 0.2, 0.2, 0.7};
 	colorFocused[] = {0.5, 0.5, 0.5, 0.7};

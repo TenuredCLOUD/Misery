@@ -1,7 +1,7 @@
 /* 
 	* Misery Loot stash generator
 	* Designed specifically for Misery mod 
-	* Code concepts from Drongo DMP edited by TenuredCLOUD
+	* Code concepts from Drongo DMP edited by TenuredCLOUD (with permission)
 */
 
 private["_pos", "_military", "_vehicle", "_crateTypes", "_crateType", "_deleteFlag", "_player", "_players", "_count", "_mCount", "_chance", "_index", "_magazines", "_arrays", "_array", "_magazineChance", "_magazineCount", "_item", "_items"];

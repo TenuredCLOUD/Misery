@@ -1,17 +1,14 @@
-#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
+#include "script_component.hpp"
 
 class CfgPatches {
-    class miserymain {
-        name = "misery_main";
+    class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
-        requiredAddons[] = {"CBA_main"}; 
-        authors[] = {"TenuredCLOUD", "ReasonUNKNOWN"}; 
-        author = "Misery mod"; 
-        requiredVersion = ARMABUILD; 
-		version = MISERYVERSION; 
-		versionStr = MISERYVERSION;
-		versionAr[] = {MISERYVERSTR};
+        requiredVersion = REQUIRED_VERSION;
+        requiredAddons[] = {};
+        authors[] = {"TenuredCLOUD", "RZNUNKNOWN"}; 
+        author = "Misery Team"; 
+        VERSION_CONFIG;
     };
 };
-

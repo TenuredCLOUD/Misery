@@ -2,7 +2,7 @@
 
 /*
 Misery Sleep system (Singleplayer only)
-Code concepts from Haleks Ravage mod (with permission)
+Some Code concepts from Haleks Ravage mod (with permission)
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */

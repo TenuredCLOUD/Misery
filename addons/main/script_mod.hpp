@@ -1,6 +1,15 @@
+#define MAINPREFIX z
+#define PREFIX Misery
+
 #include "script_version.hpp"
 
-#define VERSION MAJOR.MINOR.PATCHLVL-BUILD
-#define VERSION_AR MAJOR,MINOR,PATCHLVL,BUILD
+#define VERSION MAJOR.MINOR
+#define VERSION_AR MAJOR,MINOR,PATCH,BUILD
 
-#define VERSION_CONFIG version = #VERSION; versionStr = #VERSION; versionAr[] = {VERSION_AR}
+#define REQUIRED_VERSION 2.14 // Change this if you want to be compatible with older Arma versions
+
+#ifdef COMPONENT_BEAUTIFIED
+    #define COMPONENT_NAME QUOTE(Misery - COMPONENT_BEAUTIFIED)
+#else
+    #define COMPONENT_NAME QUOTE(misery - COMPONENT)
+#endif

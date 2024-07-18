@@ -15,57 +15,57 @@ class Misery_CraftingBG: Misery_RscText
 {
 	idc = -1;
 	colorBackground[]={0.2,0.2,0.2,.7};
-	x = PASS_STR(-4.5 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(0.5 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(49 * GUI_GRID_W);
-	h = PASS_STR(24 * GUI_GRID_H);
+	x = QUOTE(-4.5 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(0.5 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(49 * GUI_GRID_W);
+	h = QUOTE(24 * GUI_GRID_H);
 };
 class Misery_CraftingPrompt: RscText
 {
 	idc = -1;
 	text = "What would you like to craft?";
-	x = PASS_STR(-4 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(0.5 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(22 * GUI_GRID_W);
-	h = PASS_STR(2.5 * GUI_GRID_H);
+	x = QUOTE(-4 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(0.5 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(22 * GUI_GRID_W);
+	h = QUOTE(2.5 * GUI_GRID_H);
 };
 class MiseryCrafting_ItemSelectionTip: RscText
 {
 	idc = -1;
 	text = "Blueprints:"; 
-	x = PASS_STR(16.66 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(2.5 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(6 * GUI_GRID_W);
-	h = PASS_STR(2.5 * GUI_GRID_H);
+	x = QUOTE(16.66 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(2.5 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(6 * GUI_GRID_W);
+	h = QUOTE(2.5 * GUI_GRID_H);
 	sizeEx = 0.8 * GUI_GRID_H;
 };
 class MiseryCrafting_RecipeTip: RscText
 {
 	idc = -1;
 	text = "Recipe for Blueprint:";
-	x = PASS_STR(-1.82 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(2.72 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(9.5 * GUI_GRID_W);
-	h = PASS_STR(2 * GUI_GRID_H);
+	x = QUOTE(-1.82 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(2.72 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(9.5 * GUI_GRID_W);
+	h = QUOTE(2 * GUI_GRID_H);
 	sizeEx = 0.8 * GUI_GRID_H;
 };
 class MiseryCrafting_NoteBox: RscText
 {
 	idc = 1001;
-	x = PASS_STR(-3.5 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(19 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(46.5 * GUI_GRID_W);
-	h = PASS_STR(4 * GUI_GRID_H);
+	x = QUOTE(-3.5 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(19 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(46.5 * GUI_GRID_W);
+	h = QUOTE(4 * GUI_GRID_H);
 	sizeEx = 0.75 * GUI_GRID_H;
 };
 class Misery_Crafting_Icon: RscPicture
 {
 	idc = 1501;
 	text = "\\z\misery\addons\framework\scripts\survival\Use\icons\crafting.paa";
-	x = PASS_STR(36.5 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(2 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(5.5 * GUI_GRID_W);
-	h = PASS_STR(3.5 * GUI_GRID_H);
+	x = QUOTE(36.5 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(2 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(5.5 * GUI_GRID_W);
+	h = QUOTE(3.5 * GUI_GRID_H);
 };
 };
 class Controls
@@ -73,28 +73,28 @@ class Controls
 class MiseryCrafting_List_1: RscListBox
 {
 	idc = 1500;
-	x = PASS_STR(17 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(4.5 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(16.5 * GUI_GRID_W);
-	h = PASS_STR(14 * GUI_GRID_H);
+	x = QUOTE(17 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(4.5 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(16.5 * GUI_GRID_W);
+	h = QUOTE(14 * GUI_GRID_H);
 };
 class MiseryCrafting_List_2: RscListBox
 {
 	idc = 1502;
-	x = PASS_STR(-1.5 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(4.5 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(16.5 * GUI_GRID_W);
-	h = PASS_STR(14 * GUI_GRID_H);
+	x = QUOTE(-1.5 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(4.5 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(16.5 * GUI_GRID_W);
+	h = QUOTE(14 * GUI_GRID_H);
 };
 class MiseryCrafting_Button: RscButton
 {
 	idc = 1600;
 	text = "Craft"; 
-	x = PASS_STR(35 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(12 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(7.5 * GUI_GRID_W);
-	h = PASS_STR(1.5 * GUI_GRID_H);
-	sizeEx = PASS_STR((((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1));
+	x = QUOTE(35 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(12 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(7.5 * GUI_GRID_W);
+	h = QUOTE(1.5 * GUI_GRID_H);
+	sizeEx = QUOTE((((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1));
 	font = "PuristaMedium";
 	colorBackground[] = {0.2, 0.2, 0.2, 0.7};
 	colorFocused[] = {0.5, 0.5, 0.5, 0.7};
@@ -105,11 +105,11 @@ class MiseryCrafting_KnownRecipes: RscButton
 {
 	idc = 1601;
 	text = "Show Recipe"; 
-	x = PASS_STR(35 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(14.5 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(7.5 * GUI_GRID_W);
-	h = PASS_STR(1.5 * GUI_GRID_H);
-	sizeEx = PASS_STR((((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1));
+	x = QUOTE(35 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(14.5 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(7.5 * GUI_GRID_W);
+	h = QUOTE(1.5 * GUI_GRID_H);
+	sizeEx = QUOTE((((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1));
 	font = "PuristaMedium";
 	colorBackground[] = {0.2, 0.2, 0.2, 0.7};
 	colorFocused[] = {0.5, 0.5, 0.5, 0.7};
@@ -120,11 +120,11 @@ class MiseryCrafting_ExitButton: RscButton
 {
 	idc = 1602;
 	text = "Exit"; 
-	x = PASS_STR(35 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(17 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(7.5 * GUI_GRID_W);
-	h = PASS_STR(1.5 * GUI_GRID_H);
-	sizeEx = PASS_STR((((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1));
+	x = QUOTE(35 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(17 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(7.5 * GUI_GRID_W);
+	h = QUOTE(1.5 * GUI_GRID_H);
+	sizeEx = QUOTE((((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1));
 	font = "PuristaMedium";
 	colorBackground[] = {0.2, 0.2, 0.2, 0.7};
 	colorFocused[] = {0.5, 0.5, 0.5, 0.7};

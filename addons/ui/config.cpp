@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
+#include "script_component.hpp"
 
 /*
 Misery UI Mod Config
@@ -6,20 +6,16 @@ Designed specifically for Misery mod
 by TenuredCLOUD 
 */
 
-class CfgPatches
-{
-	class miseryui
-	{
-		units[] = {};
-		name = "misery_ui";
-		weapons[] = {};
-		requiredAddons[] = {"miseryframework"};
-		author="TenuredCLOUD";
-		requiredVersion = ARMABUILD; 
-		version = MISERYVERSION; 
-		versionStr = MISERYVERSION; 
-		versionAr[] = {MISERYVERSTR}; 
-	};
+class CfgPatches {
+    class ADDON {
+        name = COMPONENT_NAME;
+        units[] = {};
+        weapons[] = {};
+        requiredVersion = REQUIRED_VERSION;
+        requiredAddons[] = {"misery_main","misery_framework"}; // Include addons from this mod that contain code or assets you depend on. Affects loadorder. Including main as an example here.
+        authors[] = {"TenuredCLOUD"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}
+        VERSION_CONFIG;
+    };
 };
 
 #include "\z\misery\addons\ui\menus\MICore.hpp"

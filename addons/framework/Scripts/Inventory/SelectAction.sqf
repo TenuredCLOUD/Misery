@@ -24,6 +24,14 @@ if (_action == localize "STR_MISERY_CheckGearweight") exitWith {
 	[_formattedText] call Misery_fnc_FormatToTile;
 };
 
+//Sleep UI:
+if (_action == "Sleep") exitWith {
+MiseryCanSleep = nil;
+(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+(findDisplay 602) closeDisplay 2;
+createDialog "MiserySleepMenuGUI";
+};
+
 //Check corpse for money:
 if(_action == "Search for Money") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;

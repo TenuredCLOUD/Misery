@@ -3,7 +3,7 @@
 /*
 Misery Mod actions (inventory GUI)
 Designed specifically for Misery mod 
-by TenuredCLOUD 
+Code concepts from Drongo, reworked by TenuredCLOUD (with permission)
 */
 
 private _out=[];
@@ -74,6 +74,10 @@ if (call Misery_fnc_NearForge) then {
 if (call Misery_fnc_NearRockSource) then {
 	_out pushback [localize "STR_MISERY_MINEORE",localize "STR_MISERY_MINEORE"];
 };
+};
+
+if (!isNil "MiseryCanSleep" && MiseryCanSleep isEqualTo true && MiseryMP isEqualTo false) then {
+	_out pushback ["Sleep","Sleep"];
 };
 
 if (MiseryCraft) then {

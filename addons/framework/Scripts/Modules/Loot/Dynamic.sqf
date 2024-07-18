@@ -3,7 +3,7 @@
 /* 
 * Misery Loot generation startup
 * Designed specifically for Misery mod 
-* Code concepts from Drongo edited by TenuredCLOUD
+* Code concepts from Drongo edited by TenuredCLOUD (with permission) 
 */
 
 private["_players","_buildings","_allBuildings","_add"];

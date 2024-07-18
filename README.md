@@ -5,7 +5,7 @@
 
 <p align="center">
     <a href="https://github.com/TenuredCLOUD/Misery/blob/0011ccf41fd157acfad707dfe1cd315c6ce1653d/LICENSE.txt">
-    <img src="https://img.shields.io/badge/License-GRAD%20APL%20v1.1-orange.svg?style=flat-square" alt="Misery License">
+    <img src="https://img.shields.io/badge/License-GPLv2-orange.svg?style=flat-square" alt="Misery License">
     </a>
     <a href="https://discord.gg/5gD3DwZqkK">
         <img src="https://img.shields.io/badge/Discord-Join-blue.svg?style=flat-square" alt="Misery Discord">
@@ -59,21 +59,7 @@ Misery requires Arma 3 and the latest version of <a href="https://github.com/CBA
 
 ## Contributing to Misery
 
-Misery is a community-driven project and we welcome contributions from everyone who is interested in improving this mod. Whether you're fixing bugs, improving the code, or even reporting errors, every contribution helps!
-
-However, please note that Misery is licensed under the Gruppe Adler Arma Public License (GRAD APL) v1.1. This means that while you are free to fork, modify, and contribute to the project, you **cannot** freely distribute the mod on the internet without explicit permission.
-
-### How to Contribute
-
-1. **Fork the Repository**: Start by forking the Misery repository to your own GitHub account.
-
-2. **Clone the Forked Repository**: Clone the forked repository to your local machine and create a new branch for your feature or bug fix.
-
-3. **Commit Your Changes**: Make your changes in the new branch. Try to follow the existing code style and comment your code as necessary.
-
-4. **Push to GitHub**: Once you're done with your changes, push them to the branch in your forked repository on GitHub.
-
-5. **Submit a Pull Request**: Finally, submit a pull request from the branch in your forked repository to the `master` branch in the Misery repository. Be sure to include a detailed description of your changes.
+Misery is a community-driven, open-sourced project and we welcome contributions from everyone who is interested in improving this mod. Whether you're fixing bugs, improving the code, or even reporting errors, every contribution helps!
 
 ### Reporting Issues
 
@@ -96,4 +82,6 @@ Thank you for being a part of the Misery community!
 
 ## License
 
-Misery is licensed under the Gruppe Adler Arma Public License (GRAD APL) v1.1
+Misery is licensed under the GNU General Public License (GPLv2).
+
+Add-ons which invoke functions defined by Misery are not obligated to adhere to the GNU General Public License version 2 (GPLv2) or any other free software license. However, in the event that an add-on incorporates Misery code directly within its binarized PBO, or redistributes a version of Misery that has been altered, it is then classified as a derivative work. As such, it is legally mandated to be released under the stipulations of the GPL.

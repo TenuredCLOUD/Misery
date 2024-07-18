@@ -15,45 +15,45 @@ class ControlsBackground
 class Misery_TraderShop_Buy_BG: Misery_RscText
 {
 	idc = 1800;
-	x = PASS_STR(-6 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(-5 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(52 * GUI_GRID_W);
-	h = PASS_STR(32 * GUI_GRID_H);
+	x = QUOTE(-6 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(-5 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(52 * GUI_GRID_W);
+	h = QUOTE(32 * GUI_GRID_H);
 	colorBackground[]={0.2,0.2,0.2,.7};
 };
 class Misery_TraderShop_Buy_Prompt: RscText
 {
 	idc = 1000;
-	x = PASS_STR(-5 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(-4.5 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(21 * GUI_GRID_W);
-	h = PASS_STR(2 * GUI_GRID_H);
+	x = QUOTE(-5 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(-4.5 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(21 * GUI_GRID_W);
+	h = QUOTE(2 * GUI_GRID_H);
 };
 class Misery_TraderShop_Buy_PlayerFunds_Info: RscText
 {
 	idc = 1003;
-	x = PASS_STR(30.5 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(-1.5 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(17.5 * GUI_GRID_W);
-	h = PASS_STR(2 * GUI_GRID_H);
+	x = QUOTE(30.5 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(-1.5 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(17.5 * GUI_GRID_W);
+	h = QUOTE(2 * GUI_GRID_H);
 	sizeEx = 0.7 * GUI_GRID_H;
 };
 class Misery_TraderShop_Buy_ShopFunds_Info: RscText
 {
 	idc = 1002;
-	x = PASS_STR(30.5 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(-3 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(17.5 * GUI_GRID_W);
-	h = PASS_STR(2 * GUI_GRID_H);
+	x = QUOTE(30.5 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(-3 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(17.5 * GUI_GRID_W);
+	h = QUOTE(2 * GUI_GRID_H);
 	sizeEx = 0.7 * GUI_GRID_H;
 };
 class Misery_TraderShop_Buy_icon: RscPicture
 {
 	idc = 1200;
-	x = PASS_STR(27.5 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(1.5 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(8.5 * GUI_GRID_W);
-	h = PASS_STR(5 * GUI_GRID_H);
+	x = QUOTE(27.5 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(1.5 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(8.5 * GUI_GRID_W);
+	h = QUOTE(5 * GUI_GRID_H);
 };
 };
 class Controls
@@ -61,49 +61,49 @@ class Controls
 class Misery_TraderShop_Buy_DropList: RscCombo
 {
 	idc = 2100;
-	x = PASS_STR(0.04 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(-0.75 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(20.5 * GUI_GRID_W);
-	h = PASS_STR(1 * GUI_GRID_H);
+	x = QUOTE(0.04 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(-0.75 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(20.5 * GUI_GRID_W);
+	h = QUOTE(1 * GUI_GRID_H);
 	sizeEx = 0.7 * GUI_GRID_H;
 	onLBSelChanged = "[] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Trader\ShopVALs.sqf';";
 };
 class Misery_TraderShop_Buy_Shop_List: RscListBox
 {
 	idc = 1500;
-	x = PASS_STR(0 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(0.5 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(20.5 * GUI_GRID_W);
-	h = PASS_STR(18.5 * GUI_GRID_H);
+	x = QUOTE(0 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(0.5 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(20.5 * GUI_GRID_W);
+	h = QUOTE(18.5 * GUI_GRID_H);
 	sizeEx = 0.7 * GUI_GRID_H;
 	onLBSelChanged = "[] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Trader\ProcessIcon.sqf';";
 };
 class Misery_TraderShop_Buy_InfoBox: RscText
 {
 	idc = 1001;
-	x = PASS_STR(0 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(19.5 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(21.5 * GUI_GRID_W);
-	h = PASS_STR(7 * GUI_GRID_H);
+	x = QUOTE(0 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(19.5 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(21.5 * GUI_GRID_W);
+	h = QUOTE(7 * GUI_GRID_H);
 	sizeEx = 0.7 * GUI_GRID_H;
 };
 class Misery_TraderShop_Buy_Icon_infoBox: Misery_StructuredText 
 {
 	idc = 1004;
-	x = PASS_STR(23 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(7 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(19.5 * GUI_GRID_W);
-	h = PASS_STR(5.5 * GUI_GRID_H);
+	x = QUOTE(23 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(7 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(19.5 * GUI_GRID_W);
+	h = QUOTE(5.5 * GUI_GRID_H);
 	sizeEx = 0.65 * GUI_GRID_H;
 };
 class Misery_TraderShop_Sell_Sell: RscButton
 {
 	idc = 1602;
 	text = "Buy"; //--- ToDo: Localize;
-	x = PASS_STR(22.5 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(13.5 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(7 * GUI_GRID_W);
-	h = PASS_STR(2 * GUI_GRID_H);
+	x = QUOTE(22.5 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(13.5 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(7 * GUI_GRID_W);
+	h = QUOTE(2 * GUI_GRID_H);
 	colorBackground[] = {0.2, 0.2, 0.2, 0.7};
 	colorFocused[] = {0.5, 0.5, 0.5, 0.7};
 	colorActive[] = {0.5, 0.5, 0.5, 0.7};
@@ -113,10 +113,10 @@ class Misery_TraderShop_Sell_Gift: RscButton
 {
 	idc = 1603;
 	text = "Gift Item"; //--- ToDo: Localize;
-	x = PASS_STR(22.5 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(16 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(7 * GUI_GRID_W);
-	h = PASS_STR(2 * GUI_GRID_H);
+	x = QUOTE(22.5 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(16 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(7 * GUI_GRID_W);
+	h = QUOTE(2 * GUI_GRID_H);
 	colorBackground[] = {0.2, 0.2, 0.2, 0.7};
 	colorFocused[] = {0.5, 0.5, 0.5, 0.7};
 	colorActive[] = {0.5, 0.5, 0.5, 0.7};
@@ -126,10 +126,10 @@ class Misery_TraderShop_Sell_BuyMenu: RscButton
 {
 	idc = 1600;
 	text = "Sell Menu"; //--- ToDo: Localize;
-	x = PASS_STR(22.5 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(18.5 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(7 * GUI_GRID_W);
-	h = PASS_STR(2 * GUI_GRID_H);
+	x = QUOTE(22.5 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(18.5 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(7 * GUI_GRID_W);
+	h = QUOTE(2 * GUI_GRID_H);
 	colorBackground[] = {0.2, 0.2, 0.2, 0.7};
 	colorFocused[] = {0.5, 0.5, 0.5, 0.7};
 	colorActive[] = {0.5, 0.5, 0.5, 0.7};
@@ -139,10 +139,10 @@ class Misery_TraderShop_Buy_Exit: RscButton
 {
 	idc = 1601;
 	text = "Exit"; //--- ToDo: Localize;
-	x = PASS_STR(38 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(23.5 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(7 * GUI_GRID_W);
-	h = PASS_STR(2 * GUI_GRID_H);
+	x = QUOTE(38 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(23.5 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(7 * GUI_GRID_W);
+	h = QUOTE(2 * GUI_GRID_H);
 	colorBackground[] = {0.2, 0.2, 0.2, 0.7};
 	colorFocused[] = {0.5, 0.5, 0.5, 0.7};
 	colorActive[] = {0.5, 0.5, 0.5, 0.7};
@@ -152,10 +152,10 @@ class Misery_TraderShop_ShowCompats: Misery_Checkbox
 {
 	idc = 2800;
 	tooltip = "Only show compatible weapon items";
-	x = PASS_STR(21.21 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(-0.82 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(1.5 * GUI_GRID_W);
-	h = PASS_STR(1 * GUI_GRID_H);
+	x = QUOTE(21.21 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(-0.82 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(1.5 * GUI_GRID_W);
+	h = QUOTE(1 * GUI_GRID_H);
 	onCheckedChanged = "[] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Trader\ShopVALs.sqf';";
 };
 	};

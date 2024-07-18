@@ -1,6 +1,6 @@
 /*
 Misery Psyfield creation
-Code concepts from Haleks rad zones
+Code concepts from Haleks rad zones (with permission)
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */

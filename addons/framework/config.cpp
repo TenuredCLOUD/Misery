@@ -1,4 +1,4 @@
-#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
+#include "script_component.hpp"
 
 /*
 Misery Mod Config
@@ -6,20 +6,32 @@ Designed specifically for Misery mod
 by TenuredCLOUD 
 */
 
-class CfgPatches
-{
-	class miseryframework
-	{
-		units[] = {"Misery_CustomItemAction","Misery_CustomAction","Misery_survival","Misery_Temperature","Misery_HUDDefines","Misery_FearFramework","Misery_SaveData","Misery_AmbientAnimals","Misery_EconomyFramework","Misery_AmbientRadioDefines","Misery_GhostBase","Misery_GhostBase2","Misery_Ghost","Misery_Debug","Misery_SpawnerGhosts","Misery_SpawnerAmbient","Misery_Ghosts","Misery_Stalk","Misery_ItFollows","Misery_Thrall","Misery_Sleep"};
-		name = "misery_framework";
-		weapons[] = {};
-		requiredAddons[] = {"CBA_main"};
-		author="TenuredCLOUD";
-		requiredVersion = ARMABUILD; 
-		version = MISERYVERSION; 
-		versionStr = MISERYVERSION; 
-		versionAr[] = {MISERYVERSTR}; 
-	};
+// class CfgPatches
+// {
+// 	class miseryframework
+// 	{
+// 		units[] = {"Misery_CustomItemAction","Misery_CustomAction","Misery_survival","Misery_Temperature","Misery_HUDDefines","Misery_FearFramework","Misery_SaveData","Misery_AmbientAnimals","Misery_EconomyFramework","Misery_AmbientRadioDefines","Misery_GhostBase","Misery_GhostBase2","Misery_Ghost","Misery_Debug","Misery_SpawnerGhosts","Misery_SpawnerAmbient","Misery_Ghosts","Misery_Stalk","Misery_ItFollows","Misery_Thrall","Misery_Sleep"};
+// 		name = "misery_framework";
+// 		weapons[] = {};
+// 		requiredAddons[] = {"CBA_main"};
+// 		author="TenuredCLOUD";
+// 		requiredVersion = ARMABUILD; 
+// 		version = MISERYVERSION; 
+// 		versionStr = MISERYVERSION; 
+// 		versionAr[] = {MISERYVERSTR}; 
+// 	};
+// };
+
+class CfgPatches {
+    class ADDON {
+        name = COMPONENT_NAME;
+        units[] = {};
+        weapons[] = {};
+        requiredVersion = REQUIRED_VERSION;
+        requiredAddons[] = {"misery_main"}; // Include addons from this mod that contain code or assets you depend on. Affects loadorder. Including main as an example here.
+        authors[] = {"TenuredCLOUD"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}
+        VERSION_CONFIG;
+    };
 };
 
 class Extended_PreInit_Eventhandlers {
@@ -1060,223 +1072,6 @@ class CfgVehicles
 	// };
 	
 	// class Misery_StartLoot: Misery_loot{scope=1;};
-
-	class Misery_MedicalgearRand: Module_F
-	{
-		scope=2;
-		displayName="Medical gear random (Sync module)";
-		icon="\z\misery\addons\framework\scripts\survival\data\medication.paa";
-		category="Misery_faction";
-		function="Misery_fnc_ModuleRandmed";
-		functionPriority=1;
-		isGlobal=0;
-		isTriggerActivated=0;
-		isDisposable=0;
-		class Attributes: AttributesBase
-		{
-			class Misery_Randmed: Edit
-  			{
-				property="Misery_Randmed";
-				displayName="Amount Misery items";
-				tooltip="Amount of Misery medical items to add";
-				typeName="NUMBER";
-				defaultValue="1";
-			};
-			class Misery_RandmedACE: Edit
-  			{
-				property="Misery_RandmedACE";
-				displayName="Amount ACE items";
-				tooltip="Amount of ACE medical items to add";
-				typeName="NUMBER";
-				defaultValue="1";
-			};
-			class Misery_Randmedrandom: CheckBox
-			{
-				property="Misery_Randmedrandom";
-				displayName="Randomize values";
-				tooltip="Randomize add values? (Randomized items added to inventories of synced units)";
-				typeName="BOOL";
-			};
-			class ModuleDescription: ModuleDescription{};
-		};
-		class ModuleDescription: ModuleDescription
-		{
-			description[]=
-			{
-				"PLEASE READ BEFORE POSTING BUGS:",
-				"Multiple modules of this type can be built and synced to units across the scenario",
-				"This module needs to be SYNCED to a 'DUMMY' unit(s)",
-				"This module defines how many medical items you wish to add to each synced unit(s) inventory",
-				"If you use the randomizer option, it will randomly select an amount to add (Example: a value of 5 can be 1 - 5)",
-				"ALL medical gear from this module is prelisted and selected at random, the only control points are amount to add to units"
-			};
-			position=0;
-			duplicate=1;
-			positionEnabled="Can't change this text?";
-		};
-	};
-
-	class Misery_GearEquip: Module_F
-	{
-		scope=2;
-		displayName="Gear Equip (Sync module)";
-		icon="\z\misery\addons\framework\scripts\survival\data\swap.paa";
-		category="Misery_faction";
-		function="Misery_fnc_ModuleGearEquip";
-		functionPriority=1;
-		isGlobal=0;
-		isTriggerActivated=0;
-		isDisposable=0;
-		class Attributes: AttributesBase
-		{
-			class Misery_equip_weapons : Edit
-  			{
-				property="Misery_equip_weapons";
-				displayName="Weapons";
-				tooltip="(NOTE: *Array format* Must use qoutes, and commas!)";
-				typeName="STRING";
-			};
-			class Misery_equip_headGears : Edit
-  			{
-				property="Misery_equip_headGears";
-				displayName="Headgears";
-				tooltip="(NOTE: *Array format* Must use qoutes, and commas!)";
-				typeName="STRING";
-			};
-			class Misery_equip_backpacks : Edit
-  			{
-				property="Misery_equip_backpacks";
-				displayName="Backpacks";
-				tooltip="(NOTE: *Array format* Must use qoutes, and commas!)";
-				typeName="STRING";
-			};
-			class Misery_equip_vests : Edit
-  			{
-				property="Misery_equip_vests";
-				displayName="Vests";
-				tooltip="(NOTE: *Array format* Must use qoutes, and commas!)";
-				typeName="STRING";
-			};
-			class Misery_equip_goggles : Edit
-  			{
-				property="Misery_equip_goggles";
-				displayName="Goggles (facewear)";
-				tooltip="(NOTE: *Array format* Must use qoutes, and commas!)";
-				typeName="STRING";
-			};
-			class Misery_equip_uniforms : Edit
-  			{
-				property="Misery_equip_uniforms";
-				displayName="Uniforms";
-				tooltip="(NOTE: *Array format* Must use qoutes, and commas!)";
-				typeName="STRING";
-			};
-			class Misery_equip_WeaponItems : Edit
-  			{
-				property="Misery_equip_WeaponItems";
-				displayName="Weapon attachments";
-				tooltip="(NOTE: *Array format* Must use qoutes, and commas!)";
-				typeName="STRING";
-			};
-			class Misery_equip_uniqueItems : Edit
-  			{
-				property="Misery_equip_uniqueItems";
-				displayName="Rare items";
-				tooltip="(NOTE: *Array format* Must use qoutes, and commas!)";
-				typeName="STRING";
-			};
-			class Misery_equip_Items : Edit
-  			{
-				property="Misery_equip_Items";
-				displayName="Common items";
-				tooltip="(NOTE: *Array format* Must use qoutes, and commas!)";
-				typeName="STRING";
-			};
-			class Misery_equip_launchers : Edit
-  			{
-				property="Misery_equip_launchers";
-				displayName="Launchers";
-				tooltip="(NOTE: *Array format* Must use qoutes, and commas!)";
-				typeName="STRING";
-			};
-			class Misery_equip_gasmasks : Edit
-  			{
-				property="Misery_equip_gasmasks";
-				displayName="Gasmasks";
-				tooltip="(NOTE: *Array format* Must use qoutes, and commas!)";
-				typeName="STRING";
-			};
-			class Misery_equip_nvgs : Edit
-  			{
-				property="Misery_equip_nvgs";
-				displayName="NVGs";
-				tooltip="(NOTE: *Array format* Must use qoutes, and commas!)";
-				typeName="STRING";
-			};
-			class Misery_equip_Wammo: Edit
-  			{
-				property="Misery_equip_Wammo";
-				displayName="Weapon ammo";
-				tooltip="Amount of ammmo to add (May not add all depending on inv space)";
-				typeName="NUMBER";
-				defaultValue="1";
-			};
-			class Misery_equip_Lammo: Edit
-  			{
-				property="Misery_equip_Lammo";
-				displayName="Launcher ammo";
-				tooltip="Amount of ammo to add for Launcher (May not add all depending on inv space)";
-				typeName="NUMBER";
-				defaultValue="1";
-			};
-			class Misery_equip_itemamount: Edit
-  			{
-				property="Misery_equip_itemamount";
-				displayName="Amount items";
-				tooltip="Amount of items to add";
-				typeName="NUMBER";
-				defaultValue="1";
-			};
-			class Misery_equip_ACE: Edit
-  			{
-				property="Misery_equip_ACE";
-				displayName="Amount ACE items";
-				tooltip="Amount of ACE medical items to add";
-				typeName="NUMBER";
-				defaultValue="1";
-			};
-			class Misery_equip_Rare: Edit
-  			{
-				property="Misery_equip_Rare";
-				displayName="Amount Rare items";
-				tooltip="Amount of Rare items to add";
-				typeName="NUMBER";
-				defaultValue="1";
-			};
-			class Misery_equip_randomam: CheckBox
-			{
-				property="Misery_equip_randomam";
-				displayName="Randomize item values";
-				tooltip="Randomize added Item / ACE Item values? (Does not include Rare items)";
-				typeName="BOOL";
-			};
-			class ModuleDescription: ModuleDescription{};
-		};
-		class ModuleDescription: ModuleDescription
-		{
-			description[]=
-			{
-				"PLEASE READ BEFORE POSTING BUGS:",
-				"Multiple modules of this type can be built and synced to units across the scenario",
-				"This module needs to be SYNCED to a 'DUMMY' unit(s)",
-				"This module defines what type of items / gear you wish to add to each synced unit(s) inventory",
-				"Each input is an array input, so just list which items you wish to be possibly spawned on synced unit(s)"
-			};
-			position=0;
-			duplicate=1;
-			positionEnabled="Can't change this text?";
-		};
-	};
 
 class Misery_Psyfieldcreate: Module_F
 	{
@@ -3067,48 +2862,7 @@ class Cfgsounds
 		class Spooky1_Copy{name = "Spooky1_Copy";sound[] = {"\z\misery\addons\framework\audio\sounds\Trauma\Spooky1_Copy.ogg", 1, 800};titles[]={};};
 		class Spooky1_3{name = "Spooky1_3";sound[] = {"\z\misery\addons\framework\audio\sounds\Trauma\Spooky1_3.ogg", 1, 800};titles[]={};};
 		class Spooky1_2{name = "Spooky1_2";sound[] = {"\z\misery\addons\framework\audio\sounds\Trauma\Spooky1_2.ogg", 1, 800};titles[]={};};
-
-		//__________________________Ghost entity __________________________
-		class drone1{name = "drone1";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\drone1.ogg", 1, 800};titles[]={};};
-		class drone2{name = "drone2";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\drone2.ogg", 1, 800};titles[]={};};
-		class drone3{name = "drone3";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\drone3.ogg", 1, 800};titles[]={};};
-		class Ghost1{name = "Ghost1";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\Ghost1.ogg", 1, 800};titles[]={};};
-		class Ghost2{name = "Ghost2";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\Ghost2.ogg", 1, 800};titles[]={};};
-		class Ghost3{name = "Ghost3";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\Ghost3.ogg", 1, 800};titles[]={};};
-		class Ghost4{name = "Ghost4";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\Ghost4.ogg", 1, 800};titles[]={};};
-		class GhostAtmo{name = "GhostAtmo";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\GhostAtmo.ogg", 1, 800};titles[]={};};
-		class GhostHowls{name = "GhostHowls";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\GhostHowls.ogg", 1, 800};titles[]={};};
-		class GhostWhisp1{name = "GhostWhisp1";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\GhostWhisp1.ogg", 1, 800};titles[]={};};
-		class GhostWhisp2{name = "GhostWhisp2";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\GhostWhisp2.ogg", 1, 800};titles[]={};};
-		class GhostWhisp3{name = "GhostWhisp3";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\GhostWhisp3.ogg", 1, 800};titles[]={};};
-		class GhostWhisp4{name = "GhostWhisp4";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\GhostWhisp4.ogg", 1, 800};titles[]={};};
-		class GhostWhisp5{name = "GhostWhisp5";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\GhostWhisp5.ogg", 1, 800};titles[]={};};
-		class GhostWhisp6{name = "GhostWhisp6";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\GhostWhisp6.ogg", 1, 800};titles[]={};};
-		class GhostWhisp7{name = "GhostWhisp7";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\GhostWhisp7.ogg", 1, 800};titles[]={};};
-		class GhostWhisp8{name = "GhostWhisp8";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\GhostWhisp8.ogg", 1, 800};titles[]={};};
-		class GhostWhisp9{name = "GhostWhisp9";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\GhostWhisp9.ogg", 1, 800};titles[]={};};
-		class GhostWhisp10{name = "GhostWhisp10";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\GhostWhisp10.ogg", 1, 800};titles[]={};};
-		class GhostWhispChild{name = "GhostWhispChild";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\GhostWhispChild.ogg", 1, 800};titles[]={};};
-		class Hell{name = "Hell";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\Hell.ogg", 1, 800};titles[]={};};
-		class Spirits{name = "Spirits";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\Spirits.ogg", 1, 800};titles[]={};};
-		class SnatcherDeath{name = "SnatcherDeath";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\SnatcherDeath.ogg", 1, 800};titles[]={};};
-		class Rustle3{name = "Rustle3";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\Rustle3.ogg", 1, 800};titles[]={};};
-		class Rustle2{name = "Rustle2";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\Rustle2.ogg", 1, 800};titles[]={};};
-		class Rustle1{name = "Rustle1";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\Rustle1.ogg", 1, 800};titles[]={};};
-		class Clicking2{name = "Clicking2";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\Clicking2.ogg", 1, 800};titles[]={};}; //Boosted audio for phantoms 
-		class Clicking1{name = "Clicking1";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\Clicking1.ogg", 1, 800};titles[]={};}; //Boosted audio for phantoms
-		class attack2{name = "attack2";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\attack2.ogg", 1, 800};titles[]={};};
-		class attack1{name = "attack1";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\attack1.ogg", 1, 800};titles[]={};};
-		class AttackCar1{name = "AttackCar1";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\AttackCar1.ogg", 1, 800};titles[]={};};
-		class AttackCar2{name = "AttackCar2";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\AttackCar2.ogg", 1, 800};titles[]={};};
-
-		//__________________________Controller audio entity __________________________
-		class controller_attack_0{name = "controller_attack_0";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\controller_attack_0.ogg", 1, 800};titles[]={};};
-		class controller_attack_1{name = "controller_attack_1";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\controller_attack_1.ogg", 1, 800};titles[]={};};
-		class controller_attack_2{name = "controller_attack_2";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\controller_attack_2.ogg", 1, 800};titles[]={};};
-		class talk1{name = "talk1";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\talk1.ogg", 1, 800};titles[]={};};
-		class Talk2{name = "Talk2";sound[] = {"\z\misery\addons\framework\audio\sounds\Ghost\Talk2.ogg", 1, 800};titles[]={};};
-
+		
 		//__________________________Jaroslav Forest __________________________
 		class behindyou{name = "behindyou";sound[] = {"\z\misery\addons\framework\audio\sounds\Jforest\behindyou.ogg", 1, 800};titles[]={};};
 		class carefulnow{name = "carefulnow";sound[] = {"\z\misery\addons\framework\audio\sounds\Jforest\carefulnow.ogg", 1, 800};titles[]={};};

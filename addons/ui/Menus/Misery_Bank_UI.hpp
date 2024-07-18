@@ -15,55 +15,55 @@ class ControlsBackground
 class Misery_NWBank_BG: Misery_RscText
 {
 	idc = 1800;
-	x = PASS_STR(-0.04 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(4.83 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(40 * GUI_GRID_W);
-	h = PASS_STR(15.5 * GUI_GRID_H);
+	x = QUOTE(-0.04 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(4.83 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(40 * GUI_GRID_W);
+	h = QUOTE(15.5 * GUI_GRID_H);
 	colorBackground[]={0.2,0.2,0.2,.7};
 };
 class Misery_NWBank_Prompt: RscText
 {
 	idc = 1000;
 	text = "New world Bank "; //--- ToDo: Localize;
-	x = PASS_STR(0.5 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(5.5 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(11 * GUI_GRID_W);
-	h = PASS_STR(2 * GUI_GRID_H);
+	x = QUOTE(0.5 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(5.5 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(11 * GUI_GRID_W);
+	h = QUOTE(2 * GUI_GRID_H);
 };
 class Misery_NWBank_PlayerWallet: RscText
 {
 	idc = 1001;
-	x = PASS_STR(26 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(5 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(13.5 * GUI_GRID_W);
-	h = PASS_STR(2 * GUI_GRID_H);
+	x = QUOTE(26 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(5 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(13.5 * GUI_GRID_W);
+	h = QUOTE(2 * GUI_GRID_H);
 	sizeEx = 0.7 * GUI_GRID_H;
 };
 class Misery_NWBank_Playerbank: RscText
 {
 	idc = 1002;
-	x = PASS_STR(26 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(6.5 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(13.5 * GUI_GRID_W);
-	h = PASS_STR(2 * GUI_GRID_H);
+	x = QUOTE(26 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(6.5 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(13.5 * GUI_GRID_W);
+	h = QUOTE(2 * GUI_GRID_H);
 	sizeEx = 0.7 * GUI_GRID_H;
 };
 class Misery_NWBank_PhoenixFund: RscText
 {
 	idc = 1003;
-	x = PASS_STR(26 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(8 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(13.5 * GUI_GRID_W);
-	h = PASS_STR(2 * GUI_GRID_H);
+	x = QUOTE(26 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(8 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(13.5 * GUI_GRID_W);
+	h = QUOTE(2 * GUI_GRID_H);
 	sizeEx = 0.7 * GUI_GRID_H;
 };
 class Misery_NWBank_InputBox_funds: RscText
 {
 	idc = 1004;
-	x = PASS_STR(21.5 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(10 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(14 * GUI_GRID_W);
-	h = PASS_STR(1.5 * GUI_GRID_H);
+	x = QUOTE(21.5 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(10 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(14 * GUI_GRID_W);
+	h = QUOTE(1.5 * GUI_GRID_H);
 	sizeEx = 0.7 * GUI_GRID_H;
 };
 };
@@ -73,10 +73,10 @@ class Misery_NWBank_Deposit: RscButton
 {
 	idc = 1600;
 	text = "Deposit"; //--- ToDo: Localize;
-	x = PASS_STR(0.5 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(11.5 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(7.5 * GUI_GRID_W);
-	h = PASS_STR(2 * GUI_GRID_H);
+	x = QUOTE(0.5 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(11.5 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(7.5 * GUI_GRID_W);
+	h = QUOTE(2 * GUI_GRID_H);
 	colorBackground[] = {0.2, 0.2, 0.2, 0.7};
 	colorFocused[] = {0.5, 0.5, 0.5, 0.7};
 	colorActive[] = {0.5, 0.5, 0.5, 0.7};
@@ -86,10 +86,10 @@ class Misery_NWBank_Withdraw: RscButton
 {
 	idc = 1601;
 	text = "Withdraw"; //--- ToDo: Localize;
-	x = PASS_STR(0.5 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(14.5 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(7.5 * GUI_GRID_W);
-	h = PASS_STR(2 * GUI_GRID_H);
+	x = QUOTE(0.5 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(14.5 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(7.5 * GUI_GRID_W);
+	h = QUOTE(2 * GUI_GRID_H);
 	colorBackground[] = {0.2, 0.2, 0.2, 0.7};
 	colorFocused[] = {0.5, 0.5, 0.5, 0.7};
 	colorActive[] = {0.5, 0.5, 0.5, 0.7};
@@ -99,10 +99,10 @@ class Misery_NWBank_Contribute: RscButton
 {
 	idc = 1602;
 	text = "Contribute"; //--- ToDo: Localize;
-	x = PASS_STR(29 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(11.5 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(10 * GUI_GRID_W);
-	h = PASS_STR(2 * GUI_GRID_H);
+	x = QUOTE(29 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(11.5 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(10 * GUI_GRID_W);
+	h = QUOTE(2 * GUI_GRID_H);
 	colorBackground[] = {0.2, 0.2, 0.2, 0.7};
 	colorFocused[] = {0.5, 0.5, 0.5, 0.7};
 	colorActive[] = {0.5, 0.5, 0.5, 0.7};
@@ -111,20 +111,20 @@ class Misery_NWBank_Contribute: RscButton
 class Misery_NWBank_InputBox: RscEdit
 {
 	idc = 1400;
-	x = PASS_STR(10.5 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(10 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(11 * GUI_GRID_W);
-	h = PASS_STR(1.5 * GUI_GRID_H);
+	x = QUOTE(10.5 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(10 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(11 * GUI_GRID_W);
+	h = QUOTE(1.5 * GUI_GRID_H);
 	sizeEx = 0.7 * GUI_GRID_H;
 };
 class Misery_NWBank_ClaimSupport: RscButton
 {
 	idc = 1603;
 	text = "Claim Support"; //--- ToDo: Localize;
-	x = PASS_STR(29 * GUI_GRID_W + GUI_GRID_X);
-	y = PASS_STR(14.5 * GUI_GRID_H + GUI_GRID_Y);
-	w = PASS_STR(10 * GUI_GRID_W);
-	h = PASS_STR(2 * GUI_GRID_H);
+	x = QUOTE(29 * GUI_GRID_W + GUI_GRID_X);
+	y = QUOTE(14.5 * GUI_GRID_H + GUI_GRID_Y);
+	w = QUOTE(10 * GUI_GRID_W);
+	h = QUOTE(2 * GUI_GRID_H);
 	colorBackground[] = {0.2, 0.2, 0.2, 0.7};
 	colorFocused[] = {0.5, 0.5, 0.5, 0.7};
 	colorActive[] = {0.5, 0.5, 0.5, 0.7};

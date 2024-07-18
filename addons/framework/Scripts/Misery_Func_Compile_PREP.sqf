@@ -11,8 +11,6 @@ by TenuredCLOUD
 PREPROC_FUNCTION(Misery_fnc_ModuleCustomItemAction,MIS_FILESYS(Modules\Functions\ModuleCustomItemAction))
 PREPROC_FUNCTION(Misery_fnc_ModuleCustomAction,MIS_FILESYS(Modules\Functions\ModuleCustomAction))
 PREPROC_FUNCTION(Misery_fnc_ModuleLoot,MIS_FILESYS(Modules\Functions\ModuleLoot))
-PREPROC_FUNCTION(Misery_fnc_ModuleRandmed,MIS_FILESYS(Modules\Functions\ModuleRandmed))
-PREPROC_FUNCTION(Misery_fnc_ModuleGearEquip,MIS_FILESYS(Modules\Functions\ModuleGearEquip))
 PREPROC_FUNCTION(Misery_fnc_ModulePsyfield,MIS_FILESYS(Modules\Functions\ModulePsyfield))
 PREPROC_FUNCTION(Misery_fnc_ModuleRadZone,MIS_FILESYS(Modules\Functions\ModuleRadZone))
 PREPROC_FUNCTION(Misery_fnc_ModulePDA,MIS_FILESYS(Modules\Functions\ModulePDA))
