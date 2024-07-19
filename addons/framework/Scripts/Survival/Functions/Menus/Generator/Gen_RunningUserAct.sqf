@@ -1,5 +1,3 @@
-#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
-
 /*
 Misery Generator Running Audio loop
 Controls running audio synchronization...
@@ -7,11 +5,13 @@ Designed specifically for Misery mod
 by TenuredCLOUD 
 */
 
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
+
 _Generator = _this select 0;
 
 _GeneratorType = typeOf _Generator;
 
-if (_Generator getVariable "Misery_Gen_FuelLVL" <= 0) exitWith {
+if (_Generator getVariable ["Misery_Gen_FuelLVL", 100] <= 0) exitWith {
 private _formattedText = format ["<t font='PuristaMedium'>%1</t>", format ["This Generator has no fuel..."]];
 [_formattedText] call Misery_fnc_FormatToTile;
 };
@@ -47,13 +47,13 @@ private _soundDummy = "Land_HelipadEmpty_F" createVehicle (getPosATL _Generator)
 
 	sleep _startupDelay;
 
+	[_Generator, ["\z\misery\addons\framework\scripts\survival\functions\menus\Generator\Gen_Fuel.sqf"]] remoteExec ["execVM", 0, true];
+	[_Generator, ["\z\misery\addons\framework\scripts\survival\functions\menus\Generator\PowerNearby.sqf"]] remoteExec ["execVM", 0, true];
+	[_Generator, ["\z\misery\addons\framework\scripts\survival\functions\menus\Generator\TrackPos.sqf"]] remoteExec ["execVM", 0, true];
+
 	// [_Generator] execVM "\z\misery\addons\framework\scripts\survival\functions\menus\Generator\Gen_Fuel.sqf";
 	// [_Generator] execVM "\z\misery\addons\framework\scripts\survival\functions\menus\Generator\PowerNearby.sqf";
 	// [_Generator] execVM "\z\misery\addons\framework\scripts\survival\functions\menus\Generator\TrackPos.sqf";
-
-	[[_Generator], MIS_FILESYS(survival\functions\menus\Generator\Gen_Fuel)] remoteExec ["execVM ", 0, true];
-	[[_Generator], MIS_FILESYS(survival\functions\menus\Generator\PowerNearby)] remoteExec ["execVM ", 0, true];
-	[[_Generator], MIS_FILESYS(survival\functions\menus\Generator\TrackPos)] remoteExec ["execVM ", 0, true];
 
 while {true} do {
 
@@ -86,7 +86,7 @@ while {true} do {
     deleteVehicle _this;
 	}, _soundDummyRunning] call CBA_fnc_waitUntilAndExecute;
 
-	if (_Generator getVariable "Misery_Gen_IsRunning" isEqualTo false) exitWith {
+	if (_Generator getVariable ["Misery_Gen_IsRunning", false] isEqualTo false) exitWith {
 
 	deleteVehicle _soundDummyRunning;
 
@@ -116,7 +116,7 @@ while {true} do {
 	}, _soundDummy] call CBA_fnc_waitUntilAndExecute;
     };
 
-	if (_Generator getVariable "Misery_Gen_FuelLVL" <= 0) exitWith {
+	if (_Generator getVariable ["Misery_Gen_FuelLVL", 100] <= 0) exitWith {
 
 	deleteVehicle _soundDummyRunning;
 

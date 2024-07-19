@@ -7,6 +7,7 @@ by TenuredCLOUD
 */
 
 _Generator = _this select 0;
+
 _lastPos = getPosATL _Generator; 
 
 while {true} do {

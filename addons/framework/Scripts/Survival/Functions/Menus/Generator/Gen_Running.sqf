@@ -34,11 +34,11 @@ while {true} do {
     deleteVehicle _this;
 	}, _soundDummyRunning] call CBA_fnc_waitUntilAndExecute;
 
-	if (_Generator getVariable "Misery_Gen_IsRunning" isEqualTo false) exitWith {
+	if (_Generator getVariable ["Misery_Gen_IsRunning", false] isEqualTo false) exitWith {
 		deleteVehicle _soundDummyRunning;
 	};
 
-	 if (_Generator getVariable "Misery_Gen_FuelLVL" <= 0) exitWith {
+	 if (_Generator getVariable ["Misery_Gen_FuelLVL", 100] <= 0) exitWith {
 	_PowerOnB = findDisplay 573849 displayCtrl 1600;
     _PowerOffB = findDisplay 573849 displayCtrl 1601;
 	_RefuelB = findDisplay 573849 displayCtrl 1602;

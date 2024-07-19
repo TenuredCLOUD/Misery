@@ -1,21 +1,17 @@
 /*
-Misery advanced radiation exposure
+Misery show Sleep interaction
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */
 
 #include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
-//ACE check for dmg:
-MiseryACE=FALSE;
-if (isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=TRUE};
-
-[{(player getVariable ["MiseryRadiation", 0]) >= 500},
+[{(player call Misery_fnc_CanSleep)},
 {
 	[{
 		params ["_args", "_handle"];
 
-		if (((player getVariable ["MiseryRadiation", 0]) < 500) || (!alive player)) exitWith {
+		if (!(player call Misery_fnc_CanSleep) || (!alive player)) exitWith {
 			[_handle] call CBA_fnc_removePerFrameHandler;
 			if(MiseryDebug)then{systemChat "Misery Rad exposure enh+ cycle terminated..."};
 			[] execVM MIS_FILESYS(survival\Radiation\radiationex);
@@ -69,8 +65,5 @@ if (isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=TRUE};
 			};
 
 		}; 
-
-	if(MiseryDebug)then{systemChat "Misery Rad exposure enh+ cycle..."};
-
-	}, 120, []] call CBA_fnc_addPerFrameHandler;
+	}, 0.1, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;

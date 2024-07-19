@@ -208,49 +208,7 @@ class CfgVehicles {
 		class UserActions {
 		class Start_100KVA
 			{
-				displayName = "Start 100KVA Generator";
-				displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
-				priority = 10;
-				radius = 1; 
-				position = "ScreenController01";
-				showWindow = 0;
-				hideOnUse = 1;
-				onlyForPlayer = 0;
-				shortcut = "";
-				condition = "alive this && {this getVariable ['Misery_Gen_IsRunning', false] isEqualTo false}";
-				statement = "[this] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Generator\Gen_RunningUserAct.sqf'";
-			};
-		class Shutdown_100KVA
-			{
-				displayName = "ShutDown 100KVA Generator";
-				displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
-				priority = 10;
-				radius = 1; 
-				position = "ScreenController01";
-				showWindow = 0;
-				hideOnUse = 1;
-				onlyForPlayer = 0;
-				shortcut = "";
-				condition = "alive this && {this getVariable ['Misery_Gen_IsRunning', false] isEqualTo true}";
-				statement = "this setVariable ['Misery_Gen_IsRunning', false, true]";
-			};
-		class Refuel_100KVA
-			{
-				displayName = "Refuel 100KVA Generator";
-				displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
-				priority = 10;
-				radius = 1; 
-				position = "ScreenController01";
-				showWindow = 0;
-				hideOnUse = 1;
-				onlyForPlayer = 0;
-				shortcut = "";
-				condition = "alive this && {this getVariable ['Misery_Gen_IsRunning', false] isEqualTo false}";
-				statement = "this setVariable ['Misery_Gen_IsRunning', false, true]";
-			};
-		class Status_100KVA
-			{
-				displayName = "Check 100KVA Generator Status";
+				displayName = "Use Generator";
 				displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
 				priority = 10;
 				radius = 1; 
@@ -260,7 +218,7 @@ class CfgVehicles {
 				onlyForPlayer = 0;
 				shortcut = "";
 				condition = "alive this";
-				statement = "player setVariable ['Misery_Current_Generator', this]; createDialog 'MiseryGenerator_GUI'";
+				statement = "[this] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Generator\Gen_Interact.sqf'";
 			};
 		};
 	};
@@ -288,59 +246,17 @@ class CfgVehicles {
 		class UserActions {
 		class Start_UsedGen_Gas
 			{
-				displayName = "Start Generator";
+				displayName = "Use Generator";
 				displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
 				priority = 10;
 				radius = 1; 
-				position = "Ignition01";
-				showWindow = 0;
-				hideOnUse = 1;
-				onlyForPlayer = 0;
-				shortcut = "";
-				condition = "alive this && {this getVariable ['Misery_Gen_IsRunning', false] isEqualTo false}";
-				statement = "[this] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Generator\Gen_RunningUserAct.sqf'";
-			};
-		class Shutdown_UsedGen_Gas
-			{
-				displayName = "ShutDown Generator";
-				displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
-				priority = 10;
-				radius = 1; 
-				position = "Ignition01";
-				showWindow = 0;
-				hideOnUse = 1;
-				onlyForPlayer = 0;
-				shortcut = "";
-				condition = "alive this && {this getVariable ['Misery_Gen_IsRunning', false] isEqualTo true}";
-				statement = "this setVariable ['Misery_Gen_IsRunning', false, true]";
-			};
-		class Status_UsedGen_Gas
-			{
-				displayName = "Check Generator Status";
-				displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
-				priority = 10;
-				radius = 1; 
-				position = "Ignition01";
+				position = "Interact01";
 				showWindow = 0;
 				hideOnUse = 1;
 				onlyForPlayer = 0;
 				shortcut = "";
 				condition = "alive this";
-				statement = "player setVariable ['Misery_Current_Generator', this]; createDialog 'MiseryGenerator_GUI'";
-			};
-		class Refuel_UsedGen_Gas
-			{
-				displayName = "Refuel Generator";
-				displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
-				priority = 10;
-				radius = 1; 
-				position = "FuelTank01";
-				showWindow = 0;
-				hideOnUse = 1;
-				onlyForPlayer = 0;
-				shortcut = "";
-				condition = "alive this && {this getVariable ['Misery_Gen_IsRunning', false] isEqualTo false}";
-				statement = "this setVariable ['Misery_Gen_IsRunning', false, true]";
+				statement = "[this] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Generator\Gen_Interact.sqf'";
 			};
 		};
 	};
@@ -368,59 +284,17 @@ class CfgVehicles {
 		class UserActions {
 		class Start_UsedGen_Diesel
 			{
-				displayName = "Start Generator";
+				displayName = "Use Generator";
 				displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
 				priority = 10;
 				radius = 1; 
-				position = "Ignition01";
-				showWindow = 0;
-				hideOnUse = 1;
-				onlyForPlayer = 0;
-				shortcut = "";
-				condition = "alive this && {this getVariable ['Misery_Gen_IsRunning', false] isEqualTo false}";
-				statement = "[this] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Generator\Gen_RunningUserAct.sqf'";
-			};
-		class Shutdown_UsedGen_Diesel
-			{
-				displayName = "ShutDown Generator";
-				displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
-				priority = 10;
-				radius = 1; 
-				position = "Ignition01";
-				showWindow = 0;
-				hideOnUse = 1;
-				onlyForPlayer = 0;
-				shortcut = "";
-				condition = "alive this && {this getVariable ['Misery_Gen_IsRunning', false] isEqualTo true}";
-				statement = "this setVariable ['Misery_Gen_IsRunning', false, true]";
-			};
-		class Status_UsedGen_Diesel
-			{
-				displayName = "Check Generator Status";
-				displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
-				priority = 10;
-				radius = 1; 
-				position = "Ignition01";
+				position = "Interact01";
 				showWindow = 0;
 				hideOnUse = 1;
 				onlyForPlayer = 0;
 				shortcut = "";
 				condition = "alive this";
-				statement = "player setVariable ['Misery_Current_Generator', this]; createDialog 'MiseryGenerator_GUI'";
-			};
-		class Refuel_UsedGen_Diesel
-			{
-				displayName = "Refuel Generator";
-				displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
-				priority = 10;
-				radius = 1; 
-				position = "FuelTank01";
-				showWindow = 0;
-				hideOnUse = 1;
-				onlyForPlayer = 0;
-				shortcut = "";
-				condition = "alive this && {this getVariable ['Misery_Gen_IsRunning', false] isEqualTo false}";
-				statement = "this setVariable ['Misery_Gen_IsRunning', false, true]";
+				statement = "[this] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Generator\Gen_Interact.sqf'";
 			};
 		};
 	};

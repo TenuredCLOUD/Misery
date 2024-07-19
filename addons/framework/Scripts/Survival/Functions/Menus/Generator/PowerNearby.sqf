@@ -28,7 +28,7 @@ while {true} do {
     _lights = nearestObjects [getPosATL _Generator, ["HOUSE","STATIC","BUILDING"], _radius, false];
 	_lightsTerrain = nearestTerrainObjects [getPosATL _Generator, ["BUILDING","HOUSE"], _radius, false];
     
-    if (_Generator getVariable "Misery_Gen_IsRunning" isEqualTo true) then {
+    if (_Generator getVariable ["Misery_Gen_IsRunning", false] isEqualTo true) then {
     {
         private _object = _x;  
         private _hitpoints = getAllHitPointsDamage _object select 0;
@@ -45,7 +45,7 @@ while {true} do {
     } forEach _lights + _lightsTerrain;
     };
     
-    if (_Generator getVariable "Misery_Gen_IsRunning" isEqualTo false) exitWith {
+    if (_Generator getVariable ["Misery_Gen_IsRunning", false] isEqualTo false) exitWith {
     {
         private _object = _x;  
         private _hitpoints = getAllHitPointsDamage _object select 0;

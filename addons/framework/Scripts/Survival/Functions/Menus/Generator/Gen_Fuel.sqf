@@ -7,7 +7,7 @@ by TenuredCLOUD
 
 _Generator = _this select 0;
 
-while {_Generator getVariable "Misery_Gen_IsRunning" isEqualTo true && _Generator getVariable "Misery_Gen_FuelLVL" > 0} do {
+while {_Generator getVariable ["Misery_Gen_IsRunning", false] isEqualTo true && _Generator getVariable ["Misery_Gen_FuelLVL", 100] > 0} do {
 
 	_GeneratorType = typeOf _Generator;
 

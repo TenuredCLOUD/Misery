@@ -12,7 +12,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"misery_main","misery_framework"}; // Include addons from this mod that contain code or assets you depend on. Affects loadorder. Including main as an example here.
+        requiredAddons[] = {"cba_main","A3_ui_f","misery_main","misery_framework"}; // Include addons from this mod that contain code or assets you depend on. Affects loadorder. Including main as an example here.
         authors[] = {"TenuredCLOUD"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}
         VERSION_CONFIG;
     };
