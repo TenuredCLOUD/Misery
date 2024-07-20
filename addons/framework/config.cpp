@@ -64,9 +64,6 @@ class Extended_PostInit_EventHandlers {
 	class Misery_PREP {
 		Init = "[] execVM '\z\misery\addons\framework\scripts\Misery_Sys_PREP.sqf';";
 	};
-	class Misery_Sleep_Act_PREP {
-		serverInit = "[] execVM '\z\misery\addons\framework\scripts\Misery_SleepAct_PREP.sqf';";
-	};
 };
 
 class CfgMarkerClasses

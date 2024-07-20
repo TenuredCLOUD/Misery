@@ -31,49 +31,7 @@ player addEventHandler ["InventoryOpened", {
                 _display closeDisplay 1;
 
                 hintSilent "";
-                private _position = getPos player;
-                private _vehicles = [];
-                {
-                _vehicles append (nearestObjects [_position, [_x], 5]);
-                } forEach ["Car", "Tank", "Air", "Ship"];
-                MiseryTarget_Veh = if (count _vehicles > 0) then { _vehicles select 0 }else{ objNull };
-                MiseryTarget_VehName = typeOf MiseryTarget_Veh;
-
-                private _generators = [];
-                {
-                _generators append (nearestObjects [_position, [_x], 2.5]);
-                } forEach ["Misery_HeavilyUsedGen_Diesel", "Misery_HeavilyUsedGen_Gas","Misery_100KVA_Gen"];
-                MiseryTarget_Gen = if (count _generators > 0) then { _generators select 0 }else{ objNull };
-                MiseryTarget_GenName = typeOf MiseryTarget_Gen;
-
-                private _object = cursorObject; 
-                if (!isNil "MiseryCanSleep") then {MiseryCanSleep = nil};
-
-                if (!isNull _object) then {
-                private _model = getModelInfo _object select 0; // get the model of the object
-                if (_model in ["woodenbed_01_f.p3d",
-                "bed_big_a.p3d",
-                "bed_husbands.p3d",
-                "vojenska_palanda.p3d",
-                "postel_manz_kov.p3d",
-                "sofa_01_f.p3d",
-                "Land_ArmChair_01_F",
-                "armchair.p3d",
-                "postel_panelak1.p3d",
-                "postel_panelak2.p3d",
-                "sleeping_bag_f.p3d",
-                "sleeping_bag_blue_f.p3d",
-                "sleeping_bag_brown_f.p3d",
-                "ground_sheet_f.p3d",
-                "ground_sheet_blue_f.p3d",
-                "ground_sheet_khaki_f.p3d",
-                "ground_sheet_opfor_f.p3d",
-                "ground_sheet_yellow_f.p3d"
-                ]) then {
-                    MiseryCanSleep = true;
-                };
-            };
-
+            
                 closeDialog 602;
             };
 
@@ -92,48 +50,6 @@ player addEventHandler ["InventoryClosed", {
     private _display = player getVariable ["Misery_inventoryDisplay",_display];
     
     hintSilent "";
-    private _position = getPos player;
-    private _vehicles = [];
-    {
-    _vehicles append (nearestObjects [_position, [_x], 5]);
-    } forEach ["Car", "Tank", "Air", "Ship"];
-    MiseryTarget_Veh = if (count _vehicles > 0) then { _vehicles select 0 }else{ objNull };
-    MiseryTarget_VehName = typeOf MiseryTarget_Veh;
-
-    private _generators = [];
-    {
-    _generators append (nearestObjects [_position, [_x], 2.5]);
-    } forEach ["Misery_HeavilyUsedGen_Diesel", "Misery_HeavilyUsedGen_Gas","Misery_100KVA_Gen"];
-    MiseryTarget_Gen = if (count _generators > 0) then { _generators select 0 }else{ objNull };
-    MiseryTarget_GenName = typeOf MiseryTarget_Gen;
-
-    private _object = cursorObject; 
-                MiseryCanSleep = false;
-
-                if (!isNull _object) then {
-                private _model = getModelInfo _object select 0; // get the model of the object
-                if (_model in ["woodenbed_01_f.p3d",
-                "bed_big_a.p3d",
-                "bed_husbands.p3d",
-                "vojenska_palanda.p3d",
-                "postel_manz_kov.p3d",
-                "sofa_01_f.p3d",
-                "Land_ArmChair_01_F",
-                "armchair.p3d",
-                "postel_panelak1.p3d",
-                "postel_panelak2.p3d",
-                "sleeping_bag_f.p3d",
-                "sleeping_bag_blue_f.p3d",
-                "sleeping_bag_brown_f.p3d",
-                "ground_sheet_f.p3d",
-                "ground_sheet_blue_f.p3d",
-                "ground_sheet_khaki_f.p3d",
-                "ground_sheet_opfor_f.p3d",
-                "ground_sheet_yellow_f.p3d"
-                ]) then {
-                    MiseryCanSleep = true;
-                };
-            };
-
+    
     _display closeDisplay 1;
 }];

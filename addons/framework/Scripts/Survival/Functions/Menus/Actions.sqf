@@ -16,6 +16,43 @@ _items=_items+(assignedItems player);
 _items=_items+(magazines player);
 _items=_items+(weapons player);
 
+//SP sleeping
+if !(MiseryMP) then {
+private _object = cursorObject;
+private _model = getModelInfo _object select 0; 
+	if (_model in ["woodenbed_01_f.p3d",
+        "bed_big_a.p3d",
+        "bed_husbands.p3d",
+        "vojenska_palanda.p3d",
+        "postel_manz_kov.p3d",
+        "sofa_01_f.p3d",
+        "Land_ArmChair_01_F",
+        "armchair.p3d",
+		"armchair_big.p3d",
+        "postel_panelak1.p3d",
+        "postel_panelak2.p3d",
+        "sleeping_bag_f.p3d",
+        "sleeping_bag_blue_f.p3d",
+        "sleeping_bag_brown_f.p3d",
+        "ground_sheet_f.p3d",
+        "ground_sheet_blue_f.p3d",
+        "ground_sheet_khaki_f.p3d",
+        "ground_sheet_opfor_f.p3d",
+        "ground_sheet_yellow_f.p3d"
+		]) then {
+	_out pushback ["Sleep","Sleep"];		
+	};
+};
+
+//Vehicle data parsing:
+private _position = getPos player;
+private _vehicles = [];
+{
+_vehicles append (nearestObjects [_position, [_x], 5]);
+} forEach ["Car", "Tank", "Air", "Ship"];
+MiseryTarget_Veh = if (count _vehicles > 0) then { _vehicles select 0 }else{ objNull };
+MiseryTarget_VehName = typeOf MiseryTarget_Veh;
+
 if (Miseryfish) then {
 if (call Misery_fnc_Canfish) then {
 	_out pushback [localize "STR_MISERY_STARTFISHING",localize "STR_MISERY_STARTFISHING"];
@@ -74,10 +111,6 @@ if (call Misery_fnc_NearForge) then {
 if (call Misery_fnc_NearRockSource) then {
 	_out pushback [localize "STR_MISERY_MINEORE",localize "STR_MISERY_MINEORE"];
 };
-};
-
-if (!isNil "MiseryCanSleep" && MiseryCanSleep isEqualTo true && MiseryMP isEqualTo false) then {
-	_out pushback ["Sleep","Sleep"];
 };
 
 if (MiseryCraft) then {
@@ -209,13 +242,6 @@ _out pushback [localize "STR_MISERY_REQREFUEL",localize "STR_MISERY_REQREFUEL"];
 	
 if (MiseryinMedzonearea == true) then {
 _out pushback [localize "STR_MISERY_REQTREATMENT",localize "STR_MISERY_REQTREATMENT"];
-};
-
-//Gens:
-if (!isNil "MiseryTarget_GenName") then {
-if (MiseryTarget_GenName != "") then {
-_out pushback ["Use Generator","Use Generator"];
-	};
 };
 
 //Item swappers:

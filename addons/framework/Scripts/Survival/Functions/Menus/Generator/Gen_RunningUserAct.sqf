@@ -47,13 +47,9 @@ private _soundDummy = "Land_HelipadEmpty_F" createVehicle (getPosATL _Generator)
 
 	sleep _startupDelay;
 
-	[_Generator, ["\z\misery\addons\framework\scripts\survival\functions\menus\Generator\Gen_Fuel.sqf"]] remoteExec ["execVM", 0, true];
-	[_Generator, ["\z\misery\addons\framework\scripts\survival\functions\menus\Generator\PowerNearby.sqf"]] remoteExec ["execVM", 0, true];
-	[_Generator, ["\z\misery\addons\framework\scripts\survival\functions\menus\Generator\TrackPos.sqf"]] remoteExec ["execVM", 0, true];
-
-	// [_Generator] execVM "\z\misery\addons\framework\scripts\survival\functions\menus\Generator\Gen_Fuel.sqf";
-	// [_Generator] execVM "\z\misery\addons\framework\scripts\survival\functions\menus\Generator\PowerNearby.sqf";
-	// [_Generator] execVM "\z\misery\addons\framework\scripts\survival\functions\menus\Generator\TrackPos.sqf";
+	[[_Generator], "\z\misery\addons\framework\scripts\survival\functions\menus\Generator\Gen_Fuel.sqf"] remoteExec ["execVM", [0, -2] select isDedicated, true];
+	[[_Generator], "\z\misery\addons\framework\scripts\survival\functions\menus\Generator\PowerNearby.sqf"] remoteExec ["execVM", [0, -2] select isDedicated, true];
+	[[_Generator], "\z\misery\addons\framework\scripts\survival\functions\menus\Generator\TrackPos.sqf"] remoteExec ["execVM", [0, -2] select isDedicated, true];
 
 while {true} do {
 

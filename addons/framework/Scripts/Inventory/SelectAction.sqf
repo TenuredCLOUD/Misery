@@ -26,7 +26,6 @@ if (_action == localize "STR_MISERY_CheckGearweight") exitWith {
 
 //Sleep UI:
 if (_action == "Sleep") exitWith {
-MiseryCanSleep = nil;
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
 createDialog "MiserySleepMenuGUI";
@@ -388,13 +387,6 @@ if(_action== localize "STR_MISERY_REQTREATMENT") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
 createDialog "MiseryMedTreatment_GUI";
-};
-
-//Generator:
-if(_action== "Use Generator") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
-createDialog "MiseryGenerator_GUI";
 };
 
 //Action submenu defines:

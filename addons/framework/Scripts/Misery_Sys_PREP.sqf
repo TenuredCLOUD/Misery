@@ -796,7 +796,6 @@ _MiseryCraftingKnowledge = [];
 };
 
 if !(MiseryMP && hasInterface) then {
-//Need new Sleeping interaction //[player] execVM MIS_FILESYS(survival\Sleep\setSleepAction);
 PREPROC_FUNCTION(Misery_fnc_HourSelected,MIS_FILESYS(survival\Functions\Sleep\HourSelected));
 };
 
