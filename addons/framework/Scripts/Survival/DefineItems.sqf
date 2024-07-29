@@ -139,7 +139,7 @@ private _items=[
 //Misery batteries:
 ["Misery_Headlamp_NB",0,0,[],[],"\z\misery\addons\framework\scripts\survival\Use\init\inventory\Headlamp\headlampbatt.sqf","KEEP","",false,false,0,0,0],
 ["Misery_personalgeigernobattery",0,0,[],[],"\z\misery\addons\framework\scripts\survival\Use\init\inventory\Geiger\personalgeigerbatteries.sqf","KEEP","",false,false,0,0,0],
-["Misery_PDA_NB",0,0,[],[],"\z\misery\addons\framework\scripts\survival\Use\init\inventory\PDA\Use_PDANB.sqf","KEEP","",false,false,0,0,0],
+["Misery_ERU_NB",0,0,[],[],"\z\misery\addons\framework\scripts\survival\Use\init\inventory\PDA\Use_PDANB.sqf","KEEP","",false,false,0,0,0],
 ["Misery_electrichandsawnobattery",0,0,[],[],"\z\misery\addons\framework\scripts\survival\Use\init\inventory\Misc\electricsawbatteries.sqf","KEEP","",false,false,0,0,0],
 ["Misery_RFHighNobattery",0,0,[],[],"\z\misery\addons\framework\scripts\survival\Use\init\inventory\RFdetector\RF_NB.sqf","KEEP","",false,false,0,0,0],
 ["Misery_PortableradioNobattery",0,0,[],[],"\z\misery\addons\framework\scripts\survival\Use\init\inventory\PortableRadio\PR_NB.sqf","KEEP","",false,false,0,0,0],

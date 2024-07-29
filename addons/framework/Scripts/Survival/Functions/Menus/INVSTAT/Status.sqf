@@ -84,28 +84,57 @@ lbClear _ailmentsList;
 	_GasText ctrlShow false; 
 	_GasVal ctrlShow false;	
 	};
+	// if (Miserygasmasks) then {
+	// private _GasmaskBuff = _buffs findIf {(_x select 0) isEqualTo "Gas Mask"}; 
+	// private _SCBABuff = _buffs findIf {(_x select 0) isEqualTo "Supplied Air"}; 
+	// if ((goggles player in antirad_goggles) && !(vest player in antirad_vests || backpack player in antirad_packs)) then {
+	// _GascartridgeVal = format["%1%2",round(_cartridgecalc * 1), "%"];
+	// _GasVal ctrlSetText _GascartridgeVal;
+	// ["buff","Gas Mask", "\z\misery\addons\framework\scripts\survival\Data\gasmask.paa", "You are wearing a gasmask, it can protect your lungs from harmful contaminants like radioactive particles, as well as toxic gases. You should be mindful of your cartridges..."] call Misery_fnc_AddBuffOrAilment;
+	// };
+	// if ((goggles player in antirad_goggles) && (vest player in antirad_vests || backpack player in antirad_packs) || (vest player in antirad_vests || backpack player in antirad_packs)) then {	
+	// _GasSuppAir = format["%1","∞"];
+	// _GasVal ctrlSetText _GasSuppAir;
+	// ["buff","Supplied Air", "\z\misery\addons\framework\scripts\survival\Data\SCBA.paa", "You are utilizing an SCBA device which is useful in an IDLH (Immediately Dangerous to Life or health) area. You have the greatest protection gear available for air contaminants."] call Misery_fnc_AddBuffOrAilment;	
+	// };
+	// if ((!(goggles player in antirad_goggles) && !(vest player in antirad_vests || backpack player in antirad_packs)) && (!(goggles player in antirad_goggles) && !(vest player in antirad_vests || backpack player in antirad_packs) || !(vest player in antirad_vests || backpack player in antirad_packs))) then {
+	// if (_GasmaskBuff > -1) then {
+	// 	["buff","Gas Mask"] call Misery_fnc_RemoveBuffOrAilment;
+	// };	
+	// if (_SCBABuff > -1) then {
+	// 	["buff","Supplied Air"] call Misery_fnc_RemoveBuffOrAilment;
+	// };	
+	// 	};
+	// 		};
+
 	if (Miserygasmasks) then {
-	private _GasmaskBuff = _buffs findIf {(_x select 0) isEqualTo "Gas Mask"}; 
-	private _SCBABuff = _buffs findIf {(_x select 0) isEqualTo "Supplied Air"}; 
-	if ((goggles player in antirad_goggles) && !(vest player in antirad_vests || backpack player in antirad_packs)) then {
-	_GascartridgeVal = format["%1%2",round(_cartridgecalc * 1), "%"];
-	_GasVal ctrlSetText _GascartridgeVal;
-	["buff","Gas Mask", "\z\misery\addons\framework\scripts\survival\Data\gasmask.paa", "You are wearing a gasmask, it can protect your lungs from harmful contaminants like radioactive particles, as well as toxic gases. You should be mindful of your cartridges..."] call Misery_fnc_AddBuffOrAilment;
-	};
-	if ((goggles player in antirad_goggles) && (vest player in antirad_vests || backpack player in antirad_packs) || (vest player in antirad_vests || backpack player in antirad_packs)) then {	
-	_GasSuppAir = format["%1","∞"];
-	_GasVal ctrlSetText _GasSuppAir;
-	["buff","Supplied Air", "\z\misery\addons\framework\scripts\survival\Data\SCBA.paa", "You are utilizing an SCBA device which is useful in an IDLH (Immediately Dangerous to Life or health) area. You have the greatest protection gear available for air contaminants."] call Misery_fnc_AddBuffOrAilment;	
-	};
-	if ((!(goggles player in antirad_goggles) && !(vest player in antirad_vests || backpack player in antirad_packs)) && (!(goggles player in antirad_goggles) && !(vest player in antirad_vests || backpack player in antirad_packs) || !(vest player in antirad_vests || backpack player in antirad_packs))) then {
-	if (_GasmaskBuff > -1) then {
-		["buff","Gas Mask"] call Misery_fnc_RemoveBuffOrAilment;
-	};	
-	if (_SCBABuff > -1) then {
-		["buff","Supplied Air"] call Misery_fnc_RemoveBuffOrAilment;
-	};	
-		};
-			};
+    private _GasmaskBuff = _buffs findIf {(_x select 0) isEqualTo "Gas Mask"}; 
+    private _SCBABuff = _buffs findIf {(_x select 0) isEqualTo "Supplied Air"}; 
+
+    private _gear = goggles player;
+    private _isInArray = Misery_ProtectiveGearRatings findIf {(_x select 0) isEqualTo _gear} > -1;
+
+    if (_isInArray && !(vest player in antirad_vests || backpack player in antirad_packs)) then {
+        _GascartridgeVal = format["%1%2", round(_cartridgecalc * 1), "%"];
+        _GasVal ctrlSetText _GascartridgeVal;
+        ["buff", "Gas Mask", "\z\misery\addons\framework\scripts\survival\Data\gasmask.paa", "You are wearing a gasmask, it can protect your lungs from harmful contaminants like radioactive particles, as well as toxic gases. You should be mindful of your cartridges..."] call Misery_fnc_AddBuffOrAilment;
+    };
+
+    if (_isInArray && (vest player in antirad_vests || backpack player in antirad_packs) || (vest player in antirad_vests || backpack player in antirad_packs)) then {    
+        _GasSuppAir = format["%1", "∞"];
+        _GasVal ctrlSetText _GasSuppAir;
+        ["buff", "Supplied Air", "\z\misery\addons\framework\scripts\survival\Data\SCBA.paa", "You are utilizing an SCBA device which is useful in an IDLH (Immediately Dangerous to Life or health) area. You have the greatest protection gear available for air contaminants."] call Misery_fnc_AddBuffOrAilment;    
+    };
+
+    if ((!_isInArray && !(vest player in antirad_vests || backpack player in antirad_packs)) && (!_isInArray && !(vest player in antirad_vests || backpack player in antirad_packs) || !(vest player in antirad_vests || backpack player in antirad_packs))) then {
+        if (_GasmaskBuff > -1) then {
+            ["buff", "Gas Mask"] call Misery_fnc_RemoveBuffOrAilment;
+        };    
+        if (_SCBABuff > -1) then {
+            ["buff", "Supplied Air"] call Misery_fnc_RemoveBuffOrAilment;
+        };    
+    };
+};
 
 	private _currentMagazineDetail = currentMagazineDetail player;
 	private _magazine = currentMagazine player; 
@@ -134,11 +163,11 @@ lbClear _ailmentsList;
 	_TempText ctrlShow false; 
 	_TempVal ctrlShow false; 
 	};
-	if(MiseryTemperature == 1 && "Misery_PDA" in magazines player) then {
+	if(MiseryTemperature == 1 && "Misery_ERU" in magazines player) then {
 	_temp = format["%1°C",round (_MPlayertemp),(player call Misery_fnc_ClothingWarmth)select 0];
 	_TempVal ctrlSetText _temp;
 	};
-	if(MiseryTemperature == 1 && !("Misery_PDA" in magazines player)) then {
+	if(MiseryTemperature == 1 && !("Misery_ERU" in magazines player)) then {
 	_TempVal ctrlSetText "No PDA";	
 	};
 

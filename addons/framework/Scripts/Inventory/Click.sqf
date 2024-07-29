@@ -20,7 +20,7 @@ _item=_x;
 	if!(_selectedItem=="")exitWith{};
 }forEach((items player)+(magazines player)); //((items player)+(assignedItems player)+(magazines player)+(weapons player))
 if(_selectedItem=="")exitWith{};
-if((Miserysurvival)AND((toUpper _selectedItem)in MiserysurvivalItems))exitWith{
+if(((toUpper _selectedItem)in MiserysurvivalItems))exitWith{
 	_selectedItem execVM "\z\misery\addons\framework\scripts\survival\UseItem.sqf";
 };
 

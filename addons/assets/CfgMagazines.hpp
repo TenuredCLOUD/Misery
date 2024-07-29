@@ -172,22 +172,22 @@ class CfgMagazines {
 		mass = 10;
 	};
 
-	class Misery_PDA : Misery_ItemMagCore {
+	class Misery_ERU : Misery_ItemMagCore {
 		scope = 2;
 		author = "TenuredCLOUD";
-		displayName = "$STR_MISERY_PDA_DISPLAYNAME";
-  		descriptionShort = "$STR_MISERY_PDA_DESCRIPTION";
-  		picture = "\z\misery\addons\assets\data\PDA.paa";
+		displayName = "$STR_MISERY_ERU_DISPLAYNAME";
+  		descriptionShort = "$STR_MISERY_ERU_DESCRIPTION";
+  		picture = "\z\misery\addons\assets\data\ERU_ON.paa";
 		count = 100;
 		mass = 7;
 	};
 
-	class Misery_PDA_off : Misery_ItemMagCore {
+	class Misery_ERU_off : Misery_ItemMagCore {
 		scope = 2;
 		author = "TenuredCLOUD";
-		displayName = "$STR_MISERY_PDA_OFF_DISPLAYNAME";
-  		descriptionShort = "$STR_MISERY_PDA_OFF_DESCRIPTION";
-  		picture = "\z\misery\addons\assets\data\PDAnobattery.paa";
+		displayName = "$STR_MISERY_ERU_OFF_DISPLAYNAME";
+  		descriptionShort = "$STR_MISERY_ERU_OFF_DESCRIPTION";
+  		picture = "\z\misery\addons\assets\data\ERU_OFF.paa";
 		count = 100;
 		mass = 7;
 	};

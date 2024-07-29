@@ -17,7 +17,7 @@ player additem "Misery_personalgeiger";
 playSound3D ["\z\misery\addons\framework\audio\sounds\Geigerenable\GeigerON.ogg", player, false, getPosASL player, 4, 1, 10];
 
 //If bootup successful:
-//Ravage geiger var:
+
 if (isNil {player getVariable "GeigerON"}) then {
 player setVariable ["GeigerON", true];
 };

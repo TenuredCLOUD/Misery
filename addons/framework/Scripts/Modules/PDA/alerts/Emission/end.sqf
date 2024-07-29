@@ -5,7 +5,7 @@ by TenuredCLOUD
 */
 
 _Check_items = items player;
-if ("Misery_PDA" in _Check_items) then {
+if ("Misery_ERU" in _Check_items) then {
 
   playSound3D ["STALKERsounds\sounds\pda\pda_welcome.ogg", player, false, getPosASL player, 4, 1, 10];
 

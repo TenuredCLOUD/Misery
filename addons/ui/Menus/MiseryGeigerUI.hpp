@@ -17,7 +17,7 @@ class ControlsBackground
 class Misery_GeigerBG: RscPicture
 {
 	idc = -1;
-	text = "\z\misery\addons\ui\Geiger.paa";
+	text = "\z\misery\addons\ui\menus\ui\Geiger.paa";
 	x = 39.5 * GUI_GRID_W + GUI_GRID_X;
 	y = 20.5 * GUI_GRID_H + GUI_GRID_Y;
 	w = 10.5 * GUI_GRID_W;

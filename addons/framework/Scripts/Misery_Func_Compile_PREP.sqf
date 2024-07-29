@@ -10,16 +10,7 @@ by TenuredCLOUD
 //Modules
 PREPROC_FUNCTION(Misery_fnc_ModuleCustomItemAction,MIS_FILESYS(Modules\Functions\ModuleCustomItemAction))
 PREPROC_FUNCTION(Misery_fnc_ModuleCustomAction,MIS_FILESYS(Modules\Functions\ModuleCustomAction))
-PREPROC_FUNCTION(Misery_fnc_ModuleLoot,MIS_FILESYS(Modules\Functions\ModuleLoot))
-PREPROC_FUNCTION(Misery_fnc_ModulePsyfield,MIS_FILESYS(Modules\Functions\ModulePsyfield))
-PREPROC_FUNCTION(Misery_fnc_ModuleRadZone,MIS_FILESYS(Modules\Functions\ModuleRadZone))
 PREPROC_FUNCTION(Misery_fnc_ModulePDA,MIS_FILESYS(Modules\Functions\ModulePDA))
-PREPROC_FUNCTION(Misery_fnc_Modulekillzone,MIS_FILESYS(Modules\Functions\Modulekillzone))
-PREPROC_FUNCTION(Misery_fnc_ModuleMechanic,MIS_FILESYS(Modules\Functions\ModuleMechanic))
-PREPROC_FUNCTION(Misery_fnc_ModuleRearm,MIS_FILESYS(Modules\Functions\ModuleRearm))
-PREPROC_FUNCTION(Misery_fnc_ModuleMedzone,MIS_FILESYS(Modules\Functions\ModuleMedzone))
-PREPROC_FUNCTION(Misery_fnc_ModuleSafezone,MIS_FILESYS(Modules\Functions\ModuleSafezone))
-PREPROC_FUNCTION(Misery_fnc_ModuleRefuelzone,MIS_FILESYS(Modules\Functions\ModuleRefuelzone))
 PREPROC_FUNCTION(Misery_fnc_ModulePOISettings,MIS_FILESYS(Modules\Functions\ModulePOISettings))
 PREPROC_FUNCTION(Misery_fnc_ModuleAISettings,MIS_FILESYS(Modules\Functions\ModuleAISettings))
 PREPROC_FUNCTION(Misery_fnc_ModuleArtifactSpawner,MIS_FILESYS(Modules\Functions\ModuleArtifactSpawner))
@@ -242,4 +233,3 @@ PREPROC_FUNCTION(Misery_fnc_Sick,MIS_FILESYS(survival\Functions\Temperature\Sick
 PREPROC_FUNCTION(Misery_fnc_Cold,MIS_FILESYS(survival\Functions\Temperature\Cold))
 PREPROC_FUNCTION(Misery_fnc_Water,MIS_FILESYS(survival\Functions\Temperature\Water))
 PREPROC_FUNCTION(Misery_fnc_Clothingcheck,MIS_FILESYS(survival\Functions\Temperature\Clothingcheck))
-

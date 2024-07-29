@@ -137,24 +137,6 @@ _out pushback [localize "STR_MISERY_USEJERRYCANDIRTY",localize "STR_MISERY_USEJE
 };
 };
 
-if (MiseryPDAacts) then {
-if ("Misery_PDA" in items player) then {
-_out pushback [localize "STR_MISERY_USEPDA",localize "STR_MISERY_USEPDA"];
-};
-if ("Misery_PDA_off" in items player) then {
-_out pushback [localize "STR_MISERY_REBOOTPDA",localize "STR_MISERY_REBOOTPDA"];
-};
-};
-
-if (MiseryGeigeracts) then {
-if ("Misery_personalgeigerOFF" in items player) then {
-_out pushback [localize "STR_MISERY_TURNONGEIGER",localize "STR_MISERY_TURNONGEIGER"];
-};
-if ("Misery_personalgeiger" in items player) then {
-_out pushback [localize "STR_MISERY_TURNOFFGEIGER",localize "STR_MISERY_TURNOFFGEIGER"];
-};
-};
-
 if (MiseryRFEMFacts) then {
 if ("Misery_RFHighrangeOFF" in items player) then {
 _out pushback [localize "STR_MISERY_TURNONRFDETEC",localize "STR_MISERY_TURNONRFDETEC"];

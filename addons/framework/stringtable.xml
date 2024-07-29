@@ -3648,23 +3648,23 @@ by TenuredCLOUD
     <ChineseSimplified>预混合的电解质溶液可以帮助补充水分。&lt;br /&gt; - 减少口渴</ChineseSimplified>
     <Turkish>Önceden karıştırılmış Elektrolit solüsyonu, rehidrasyona yardımcı olabilir.&lt;br /&gt; - Susuzluğu azaltır</Turkish>
     </Key>
-    <Key ID="STR_MISERY_PDA_DISPLAYNAME">
-      <Original>PDA (ON)</Original>
-      <English>PDA (ON)</English>
-      <German>PDA (EIN)</German>
-      <Italian>PDA (ON)</Italian>
-      <Spanish>PDA (ENCENDIDO)</Spanish>
-      <French>PDA (ON)</French>
-      <Korean>PDA(켜짐)</Korean>
-      <Japanese>PDA（ON）</Japanese>
+    <Key ID="STR_MISERY_ERU_DISPLAYNAME">
+      <Original>ERU (ON)</Original>
+      <English>ERU (ON)</English>
+      <German>ERU (EIN)</German>
+      <Italian>ERU (ON)</Italian>
+      <Spanish>ERU (ENCENDIDO)</Spanish>
+      <French>ERU (ON)</French>
+      <Korean>ERU(켜짐)</Korean>
+      <Japanese>ERU（ON）</Japanese>
       <Russian>КПК (ВКЛ)</Russian>
-      <Polish>PDA (WŁ.)</Polish>
-      <Czech>PDA (ZAPNUTO)</Czech>
-      <Portuguese>PDA (LIGADO)</Portuguese>
-      <ChineseSimplified>PDA（开）</ChineseSimplified>
-      <Turkish>PDA (AÇIK)</Turkish>
+      <Polish>ERU (WŁ.)</Polish>
+      <Czech>ERU (ZAPNUTO)</Czech>
+      <Portuguese>ERU (LIGADO)</Portuguese>
+      <ChineseSimplified>ERU（开）</ChineseSimplified>
+      <Turkish>ERU (AÇIK)</Turkish>
     </Key>
-    <Key ID="STR_MISERY_PDA_DESCRIPTION">
+    <Key ID="STR_MISERY_ERU_DESCRIPTION">
     <Original>Personal digital assistant&lt;br /&gt; - Information</Original>
     <English>Personal digital assistant&lt;br /&gt; - Information</English>
     <German>Personal Digital Assistant&lt;br /&gt; - Information</German>
@@ -3680,23 +3680,23 @@ by TenuredCLOUD
     <ChineseSimplified>个人数字助理&lt;br /&gt; - 信息</ChineseSimplified>
     <Turkish>Kişisel dijital asistan&lt;br /&gt; - Bilgi</Turkish>
     </Key>
-    <Key ID="STR_MISERY_PDA_OFF_DISPLAYNAME">
-      <Original>PDA (OFF)</Original>
-      <English>PDA (OFF)</English>
-      <German>PDA (AUS)</German>
-      <Italian>PDA (OFF)</Italian>
-      <Spanish>PDA (APAGADO)</Spanish>
-      <French>PDA (OFF)</French>
-      <Korean>PDA(꺼짐)</Korean>
-      <Japanese>PDA（OFF）</Japanese>
+    <Key ID="STR_MISERY_ERU_OFF_DISPLAYNAME">
+      <Original>ERU (OFF)</Original>
+      <English>ERU (OFF)</English>
+      <German>ERU (AUS)</German>
+      <Italian>ERU (OFF)</Italian>
+      <Spanish>ERU (APAGADO)</Spanish>
+      <French>ERU (OFF)</French>
+      <Korean>ERU(꺼짐)</Korean>
+      <Japanese>ERU（OFF）</Japanese>
       <Russian>КПК (ВЫКЛ)</Russian>
-      <Polish>PDA (WYŁ.)</Polish>
-      <Czech>PDA (VYPNUTO)</Czech>
-      <Portuguese>PDA (DESLIGADO)</Portuguese>
-      <ChineseSimplified>PDA（关）</ChineseSimplified>
-      <Turkish>PDA (KAPALI)</Turkish>
+      <Polish>ERU (WYŁ.)</Polish>
+      <Czech>ERU (VYPNUTO)</Czech>
+      <Portuguese>ERU (DESLIGADO)</Portuguese>
+      <ChineseSimplified>ERU（关）</ChineseSimplified>
+      <Turkish>ERU (KAPALI)</Turkish>
     </Key>
-    <Key ID="STR_MISERY_PDA_OFF_DESCRIPTION">
+    <Key ID="STR_MISERY_ERU_OFF_DESCRIPTION">
     <Original>Personal digital assistant&lt;br /&gt; - Information</Original>
     <English>Personal digital assistant&lt;br /&gt; - Information</English>
     <German>Personal Digital Assistant&lt;br /&gt; - Information</German>
@@ -3712,23 +3712,23 @@ by TenuredCLOUD
     <ChineseSimplified>个人数字助理&lt;br /&gt; - 信息</ChineseSimplified>
     <Turkish>Kişisel dijital asistan&lt;br /&gt; - Bilgi</Turkish>
     </Key>
-    <Key ID="STR_MISERY_PDA_NB_DISPLAYNAME">
-      <Original>PDA (No battery)</Original>
-      <English>PDA (No battery)</English>
-      <German>PDA (keine Batterie)</German>
-      <Italian>PDA (nessuna batteria)</Italian>
-      <Spanish>PDA (sin batería)</Spanish>
-      <French>PDA (sans batterie)</French>
-      <Korean>PDA(배터리 없음)</Korean>
-      <Japanese>PDA（バッテリーなし）</Japanese>
+    <Key ID="STR_MISERY_ERU_NB_DISPLAYNAME">
+      <Original>ERU (No battery)</Original>
+      <English>ERU (No battery)</English>
+      <German>ERU (keine Batterie)</German>
+      <Italian>ERU (nessuna batteria)</Italian>
+      <Spanish>ERU (sin batería)</Spanish>
+      <French>ERU (sans batterie)</French>
+      <Korean>ERU(배터리 없음)</Korean>
+      <Japanese>ERU（バッテリーなし）</Japanese>
       <Russian>КПК (без аккумулятора)</Russian>
-      <Polish>PDA (brak baterii)</Polish>
-      <Czech>PDA (bez baterie)</Czech>
-      <Portuguese>PDA (sem bateria)</Portuguese>
-      <ChineseSimplified>PDA（无电池）</ChineseSimplified>
-      <Turkish>PDA (Pilsiz)</Turkish>
+      <Polish>ERU (brak baterii)</Polish>
+      <Czech>ERU (bez baterie)</Czech>
+      <Portuguese>ERU (sem bateria)</Portuguese>
+      <ChineseSimplified>ERU（无电池）</ChineseSimplified>
+      <Turkish>ERU (Pilsiz)</Turkish>
     </Key>
-    <Key ID="STR_MISERY_PDA_NB_DESCRIPTION">
+    <Key ID="STR_MISERY_ERU_NB_DESCRIPTION">
     <Original>Useless without a battery&lt;br /&gt; - Information &lt;br /&gt; - Requires Lithium battery</Original>
     <English>Useless without a battery&lt;br /&gt; - Information &lt;br /&gt; - Requires Lithium battery</English>
     <German>Ohne Akku nutzlos&lt;br /&gt; - Information&lt;br /&gt; - Benötigt Lithiumbatterie</German>
@@ -5610,37 +5610,37 @@ by TenuredCLOUD
       <ChineseSimplified>使用杰瑞罐（脏）</ChineseSimplified>
       <Turkish>Jerrycan (Kirli) kullanın</Turkish>
     </Key>
-    <Key ID="STR_MISERY_USEPDA">
-      <Original>Use PDA</Original>
-      <English>Use PDA</English>
-      <German>PDA verwenden</German>
-      <Italian>Utilizzare il PDA</Italian>
-      <Spanish>Utilizar PDA</Spanish>
-      <French>Utiliser un PDA</French>
-      <Korean>PDA 사용</Korean>
-      <Japanese>PDAを使う</Japanese>
+    <Key ID="STR_MISERY_USEERU">
+      <Original>Use ERU</Original>
+      <English>Use ERU</English>
+      <German>ERU verwenden</German>
+      <Italian>Utilizzare il ERU</Italian>
+      <Spanish>Utilizar ERU</Spanish>
+      <French>Utiliser un ERU</French>
+      <Korean>ERU 사용</Korean>
+      <Japanese>ERUを使う</Japanese>
       <Russian>Используйте КПК</Russian>
-      <Polish>Korzystanie z urządzenia PDA</Polish>
-      <Czech>Použití PDA</Czech>
-      <Portuguese>Usar PDA</Portuguese>
+      <Polish>Korzystanie z urządzenia ERU</Polish>
+      <Czech>Použití ERU</Czech>
+      <Portuguese>Usar ERU</Portuguese>
       <ChineseSimplified>使用掌上电脑</ChineseSimplified>
-      <Turkish>PDA kullanın</Turkish>
+      <Turkish>ERU kullanın</Turkish>
     </Key>
-    <Key ID="STR_MISERY_REBOOTPDA">
-      <Original>Reboot PDA</Original>
-      <English>Reboot PDA</English>
-      <German>PDA neu starten</German>
+    <Key ID="STR_MISERY_REBOOTERU">
+      <Original>Reboot ERU</Original>
+      <English>Reboot ERU</English>
+      <German>ERU neu starten</German>
       <Italian>Riavviare il palmare</Italian>
-      <Spanish>Reiniciar PDA</Spanish>
-      <French>Redémarrer le PDA</French>
-      <Korean>PDA 재부팅</Korean>
-      <Japanese>PDAの再起動</Japanese>
+      <Spanish>Reiniciar ERU</Spanish>
+      <French>Redémarrer le ERU</French>
+      <Korean>ERU 재부팅</Korean>
+      <Japanese>ERUの再起動</Japanese>
       <Russian>Перезагрузка КПК</Russian>
-      <Polish>Ponowne uruchomienie PDA</Polish>
-      <Czech>Restartování PDA</Czech>
-      <Portuguese>Reiniciar o PDA</Portuguese>
+      <Polish>Ponowne uruchomienie ERU</Polish>
+      <Czech>Restartování ERU</Czech>
+      <Portuguese>Reiniciar o ERU</Portuguese>
       <ChineseSimplified>重启掌上电脑</ChineseSimplified>
-      <Turkish>PDA'yı yeniden başlat</Turkish>
+      <Turkish>ERU'yı yeniden başlat</Turkish>
     </Key>
     <Key ID="STR_MISERY_TURNONGEIGER">
       <Original>Turn on Geiger</Original>
@@ -6346,21 +6346,21 @@ by TenuredCLOUD
       <Portuguese>Você precisa estar perto o suficiente de uma base e precisa de uma marreta para demolir os objetos da base...</Portuguese>
       <Turkish>Bir üsse yeterince yakın olmanız ve üs nesnelerini yıkmak için bir balyoza ihtiyacınız var...</Turkish>
     </Key>
-    <Key ID="STR_MISERY_REBOOTPDANOITEM">
-      <Original>You don't have a PDA to reboot...</Original>
-      <English>You don't have a PDA to reboot...</English>
-      <German>Sie haben keinen PDA zum Neustart...</German>
-      <Italian>Non hai un PDA da riavviare...</Italian>
-      <Spanish>No tienes una PDA para reiniciar...</Spanish>
-      <French>Vous n'avez pas de PDA pour redémarrer...</French>
-      <Korean>재부팅할 PDA가 없습니다...</Korean>
-      <Japanese>再起動するPDAがない...。</Japanese>
+    <Key ID="STR_MISERY_REBOOTERUNOITEM">
+      <Original>You don't have a ERU to reboot...</Original>
+      <English>You don't have a ERU to reboot...</English>
+      <German>Sie haben keinen ERU zum Neustart...</German>
+      <Italian>Non hai un ERU da riavviare...</Italian>
+      <Spanish>No tienes una ERU para reiniciar...</Spanish>
+      <French>Vous n'avez pas de ERU pour redémarrer...</French>
+      <Korean>재부팅할 ERU가 없습니다...</Korean>
+      <Japanese>再起動するERUがない...。</Japanese>
       <Russian>У вас нет КПК, чтобы перезагрузить...</Russian>
       <ChineseSimplified>你没有掌上电脑重新启动...</ChineseSimplified>
-      <Polish>Nie masz PDA do ponownego uruchomienia...</Polish>
-      <Czech>Nemáte PDA, které byste mohli restartovat...</Czech>
-      <Portuguese>Você não tem um PDA para reiniciar...</Portuguese>
-      <Turkish>Yeniden başlatmak için bir PDA'nız yok...</Turkish>
+      <Polish>Nie masz ERU do ponownego uruchomienia...</Polish>
+      <Czech>Nemáte ERU, které byste mohli restartovat...</Czech>
+      <Portuguese>Você não tem um ERU para reiniciar...</Portuguese>
+      <Turkish>Yeniden başlatmak için bir ERU'nız yok...</Turkish>
     </Key>
     <Key ID="STR_MISERY_TURNONGEIGERNOITEM">
       <Original>You don't have a Geiger...</Original>

@@ -19,7 +19,7 @@ _marker setMarkerText "Crash site";
 
 missionNamespace setVariable [format ["Wreck_Marker_%1", _WreckID], _marker];
 
-if ("Misery_PDA" in items player) then {
+if ("Misery_ERU" in items player) then {
 
 _marker setMarkerAlpha 1;
 

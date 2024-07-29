@@ -212,53 +212,6 @@ private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [locali
 //Back to default menu:
 if(_action== localize "STR_MISERY_CANCEL")exitWith{MiseryActionsMode="";execVM "\z\misery\addons\framework\scripts\Inventory\DisplayActions.sqf"};
 
-//PDA reboot:
-if(_action== localize "STR_MISERY_REBOOTPDA") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
-if !("Misery_PDA_off" in items player) then {
-private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_REBOOTPDANOITEM"], "PLAIN DOWN", -1, true, true];
-[_formattedText] call Misery_fnc_FormatToTile;
-}else{
-sleep 1;
-execVM "\z\misery\addons\framework\scripts\survival\Use\init\inventory\PDA\actions\PDAreboot.sqf";
-};
-	};
-
-//Geiger:
-if(_action== localize "STR_MISERY_TURNONGEIGER") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
-if !("Misery_personalgeigerOFF" in items player) then {
-private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_TURNONGEIGERNOITEM"], "PLAIN DOWN", -1, true, true];
-[_formattedText] call Misery_fnc_FormatToTile;
-}else{
-private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_TURNONGEIGERBOOTUP"], "PLAIN DOWN", -1, true, true];  
-[_formattedText] call Misery_fnc_FormatToTile;  
-playSound3D ["\z\misery\addons\framework\audio\sounds\Geigerenable\GeigerON.ogg", player, false, getPosASL player, 4, 1, 10];
-player removeitem 'Misery_personalgeigerOFF'; player additem 'Misery_personalgeiger';
-//Ravage geiger var:
-if (isNil {player getVariable "GeigerON"}) then {
-player setVariable ["GeigerON", true,true];
-};
-	};
-		};
-if(_action== localize "STR_MISERY_TURNOFFGEIGER") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
-if !("Misery_personalgeiger" in items player) then {
-private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_TURNONGEIGERNOITEM"], "PLAIN DOWN", -1, true, true];
-[_formattedText] call Misery_fnc_FormatToTile;
-}else{
-private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_TURNONGEIGERTURNOFF"], "PLAIN DOWN", -1, true, true];
-[_formattedText] call Misery_fnc_FormatToTile;
-playSound3D ["\z\misery\addons\framework\audio\sounds\Geigerenable\GeigerOFF.ogg", player, false, getPosASL player, 4, 1, 10];
-player removeitem 'Misery_personalgeiger'; player additem 'Misery_personalgeigerOFF';
-//Ravage geiger var:
-player setVariable ["GeigerON", nil, true];
-};
-	};
-
 //RF detector:
 if(_action== localize "STR_MISERY_TURNONRFDETEC") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
@@ -400,7 +353,6 @@ if(MiseryActionsMode=="") exitWith {
 		localize "STR_MISERY_PLAYERDATA",
 		localize "STR_MISERY_USEJERRYCANCLEAN",
 		localize "STR_MISERY_USEJERRYCANDIRTY",
-		localize "STR_MISERY_USEPDA",
 		localize "STR_MISERY_USEFUELPUMP",
 		localize "STR_MISERY_USEJETFUELPUMP",
 		localize "STR_MISERY_SWAPFUELTYPEJET",
@@ -640,86 +592,6 @@ private _formattedText = ["You dump the water from the Jerrycan onto the ground.
 player removeitem 'Misery_WaterJerryFD'; 
 sleep 1;
 player additem 'Misery_WaterJerryE';
-};
-	};
-
-//PDA:
-if(_action=="Use PDA") exitWith {
-MiseryActionsMode="Use PDA";
-};
-if(_action=="Check market rates") exitWith {
-if !("Misery_PDA" in items player) then {
-private _formattedText = ["You dont have a PDA...", "PLAIN DOWN"];
-}else{
-if (isNil "HALs_store_sellFactor") then { HALs_store_sellFactor = 0;};
-if (HALs_store_sellFactor != 0) then {
-private _marketrate = format ["CURRENT MARKET RATE: %1",str round(HALs_store_sellFactor * 100) + "%"];
-private _formattedText =format["%1", _marketrate, "PLAIN DOWN"];
-}else{
-private _formattedText =format["ERROR: CURRENTLY NO ACTIVE MARKET", "PLAIN DOWN"];
-};
-playSound3D ["STALKERsounds\sounds\pda\pda_objective.ogg", player, false, getPosASL player, 4, 1, 10];
-};
-	};
-if(_action=="Check score") exitWith {
-if !("Misery_PDA" in items player) then {
-private _formattedText = ["You dont have a PDA...", "PLAIN DOWN"];
-}else{
-if (MiseryMP) then {
-private _Kills = score player;
-private _formattedText =format["%2, your current score is: %1", _Kills, profilename, "PLAIN DOWN"];
-playSound3D ["STALKERsounds\sounds\pda\pda_objective.ogg", player, false, getPosASL player, 4, 1, 10];
-};
-if !(MiseryMP) then {
-private _count_dead = format ["%1",count allDeadMen];
-private _formattedText =format["%2, total deaths in the world: %1", _count_dead, profilename, "PLAIN DOWN"];
-playSound3D ["STALKERsounds\sounds\pda\pda_objective.ogg", player, false, getPosASL player, 4, 1, 10];
-};
-	};
-		};
-if(_action=="Check rating") exitWith {
-if !("Misery_PDA" in items player) then {
-private _formattedText = ["You dont have a PDA...", "PLAIN DOWN"];
-}else{
-private _rating = rating player;
-private _formattedText =format["%2, your rating: %1", _rating, profilename, "PLAIN DOWN"];
-playSound3D ["STALKERsounds\sounds\pda\pda_objective.ogg", player, false, getPosASL player, 4, 1, 10];
-};
-	};
-if(_action=="Display Compass") exitWith {
-if !("Misery_PDA" in items player) then {
-private _formattedText = ["You dont have a PDA...", "PLAIN DOWN"];
-}else{
-if(MiseryPDACompass)exitWith{MiseryPDACompass=FALSE};
-MiseryPDACompass=TRUE;
-playSound3D ["STALKERsounds\sounds\pda\pda_tip.ogg", player, false, getPosASL player, 4, 1, 10];
-};
-	};
-if(_action=="Display Clock") exitWith {
-if !("Misery_PDA" in items player) then {
-private _formattedText = ["You dont have a PDA...", "PLAIN DOWN"];
-}else{
-if(MiseryPDAClock)exitWith{MiseryPDAClock=FALSE};
-MiseryPDAClock=TRUE;
-playSound3D ["STALKERsounds\sounds\pda\pda_tip.ogg", player, false, getPosASL player, 4, 1, 10];
-};
-	};
-if(_action=="Display Climate data") exitWith {
-if !("Misery_PDA" in items player) then {
-private _formattedText = ["You dont have a PDA...", "PLAIN DOWN"];
-}else{
-if(MiseryPDAClimate)exitWith{MiseryPDAClimate=FALSE};
-MiseryPDAClimate=TRUE;
-playSound3D ["STALKERsounds\sounds\pda\pda_tip.ogg", player, false, getPosASL player, 4, 1, 10];
-};
-	};
-if(_action=="Turn off PDA") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
-if !("Misery_PDA" in items player) then {
-private _formattedText = ["You dont have a PDA...", "PLAIN DOWN"];
-}else{
-player removeitem 'Misery_PDA'; player additem 'Misery_PDA_off';
 };
 	};
 

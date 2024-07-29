@@ -49,6 +49,7 @@ class RscTitles
   //  #include "\z\misery\addons\ui\menus\GeigerstatusHPP.hpp"
   //  #include "\z\misery\addons\ui\menus\GascartridgeHPP.hpp"
 	#include "\z\misery\addons\ui\menus\MiseryGeigerUI.hpp"
+  #include "\z\misery\addons\ui\menus\MiseryERUUI.hpp"
 };
 
 class Extended_PostInit_EventHandlers {

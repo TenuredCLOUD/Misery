@@ -43,7 +43,7 @@ We trust that this mod will serve as a valuable tool in realizing your vision fo
 - Fatigue system either sleep or utilize stimulants in order to replenish energy levels. This feature is intended for single-player mode.
 - Dedicated crafting system
 - Ground loot framework
-- Simple PDA system
+- Simple ERU system (Environment Reading Unit)
 - Fishing & hunting
 - Mining and smithing
 - Wood collection system

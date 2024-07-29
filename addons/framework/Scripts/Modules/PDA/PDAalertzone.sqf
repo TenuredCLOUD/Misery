@@ -9,8 +9,8 @@ by TenuredCLOUD
 private _module = _this select 0;
 
 //Get module inputs:
-private _input1 =_module getvariable "Misery_PDAradius"; //Number
-private _input2 =_module getvariable "Misery_PDAalertype"; //STRING
+private _input1 =_module getvariable "Misery_ERUradius"; //Number
+private _input2 =_module getvariable "Misery_ERUalertype"; //STRING
 
 private _pos = position _module;
 private _radius = _input1;

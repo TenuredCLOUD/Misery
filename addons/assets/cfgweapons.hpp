@@ -1190,10 +1190,10 @@ class Misery_electrolyte : Misery_ItemCore {
   };
 };
 
-class Misery_PDA_NB : Misery_ItemCore {
-  displayName = "$STR_MISERY_PDA_NB_DISPLAYNAME";
-  descriptionShort = "$STR_MISERY_PDA_NB_DESCRIPTION";
-  picture = "\z\misery\addons\assets\data\PDAnobattery.paa";
+class Misery_ERU_NB : Misery_ItemCore {
+  displayName = "$STR_MISERY_ERU_NB_DISPLAYNAME";
+  descriptionShort = "$STR_MISERY_ERU_NB_DESCRIPTION";
+  picture = "\z\misery\addons\assets\data\ERU_OFF.paa";
   scope = 2;
   scopeCurator = 2;
 

@@ -125,20 +125,6 @@ if(MiseryActionsMode==localize "STR_MISERY_USEJERRYCANDIRTY") then {
 	];
 };
 
-//PDA:
-if(MiseryActionsMode==localize "STR_MISERY_USEPDA") then {
-	_allActions=[
-		["Check market rates","Check market rates"],  
-		["Check score","Check score"],
-		["Check rating","Check rating"],
-		["Display Compass","Display Compass"],
-		["Display Clock","Display Clock"],
-		["Display Climate data","Display Climate data"],
-		["Turn off PDA","Turn off PDA"],
-		[localize "STR_MISERY_CANCEL",localize "STR_MISERY_CANCEL"]
-	];
-};
-
 //Fuel collection
 if(MiseryActionsMode==localize "STR_MISERY_USEFUELPUMP") then {
 	_allActions=[

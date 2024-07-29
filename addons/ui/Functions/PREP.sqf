@@ -1,11 +1,11 @@
-#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
-
 /*
 Misery UI PREP
 Pre-Processes all UI functions
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */
+
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 PREPROC_FUNCTION(Misery_fnc_Actions,MIS_FILESYS(survival\functions\menus\Actions))
 PREPROC_FUNCTION(Misery_fnc_AddBuffOrAilment,MIS_FILESYS(survival\functions\menus\invstat\AddBuffOrAilment))

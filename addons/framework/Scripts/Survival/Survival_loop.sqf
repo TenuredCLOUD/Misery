@@ -17,8 +17,6 @@ if !(hasInterface) exitWith {};
 
 		if (!alive player) exitWith {
 			[_handle] call CBA_fnc_removePerFrameHandler;
-			//Ravage geiger var: (kill geiger on death)
-			player setVariable ["GeigerON", nil];
 			if(MiseryDebug)then{systemChat "Misery survival loop cycle terminated..."};
 			[] execVM MIS_FILESYS(survival\survival_loop);
 			if(MiseryDebug)then{systemChat "Misery survival loop cycle checks re-initiated..."};

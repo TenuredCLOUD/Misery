@@ -6,11 +6,11 @@ by TenuredCLOUD
 
 disableSerialization;
 
-[{"Misery_PDA" in items player},
+[{"Misery_ERU" in items player},
 {
 	[{
 		params ["_args", "_handle"];
-		if (!("Misery_PDA" in items player) || (!alive player)) exitWith {
+		if (!("Misery_ERU" in items player) || (!alive player)) exitWith {
 			[_handle] call CBA_fnc_removePerFrameHandler;
 			((uiNamespace getVariable "PDATIME")displayCtrl 55554)ctrlSetStructuredText parseText "";
 			(findDisplay 46 createDisplay "PDATIME")closeDisplay 1;
@@ -40,7 +40,7 @@ _curdate = format ["%4%5/%2%3/%1",
 	date select 2
 ];
 
-if ("Misery_PDA" in items player && MiseryPDAClock) then {
+if ("Misery_ERU" in items player && MiseryPDAClock) then {
 
 ((uiNamespace getVariable "PDATIME")displayCtrl 55554) ctrlSetStructuredText
 parseText format

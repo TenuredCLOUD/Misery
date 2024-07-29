@@ -1,11 +1,11 @@
-#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
-
 /*
 Misery Module startup
 Reads all module startups on scenario load
 Designed specifically for Misery mod 
 by TenuredCLOUD 
 */
+
+#include "\z\misery\addons\framework\scripts\Misery_PreParser.hpp"
 
 //if ((count(entities "Misery_survival")) < 1) exitWith {}; //Exit startup code if no Misery survival module is placed 
 
@@ -17,8 +17,6 @@ MiseryDebug=FALSE;
 MiseryEnabled=TRUE;
 
 MiserysurvivalShowStatus=FALSE;
-
-Miserysurvival=FALSE;
 
 MiserysurvivalItems=[];
 MiserysurvivalItemEffects=[];
@@ -42,11 +40,6 @@ MiseryActiveTraders = [];
 
 //Deleteclickcheck:
 MiseryDeleteConfirm = 0;
-
-//PDAclickcheck:
-MiseryPDACompass = FALSE;
-MiseryPDAClock = FALSE;
-MiseryPDAClimate = FALSE;
 
 //Psyfield preset:
 MiseryinPsyfield = FALSE; 
@@ -335,37 +328,45 @@ if (hasInterface) then {
 if (MiseryEnhrads && hasInterface) then {
 [] execVM MIS_FILESYS(survival\Radiation\radiationex);
 
-//Reactivate Geiger if picking up active one:
-player addEventHandler ["Take", {
-params ["_unit", "_container", "_item"];
-if (_item == "Misery_personalgeiger") then {
-if (isNil {(_this select 0) getVariable "GeigerON"}) then {
-(_this select 0) setVariable ["GeigerON", true,true];
-		};
-	};
-}];
-//Kill Detection var for Geiger if you drop it:
-player addEventHandler ["Put", {
-params ["_unit", "_container", "_item"];
-if (_item == "Misery_personalgeiger") then {
-if ((_this select 0) getVariable ["GeigerON", true]) then {
-		(_this select 0) setVariable ["GeigerON", nil, true];
-			};
-		};
-	}];
+// //Reactivate Geiger if picking up active one:
+// player addEventHandler ["Take", {
+// params ["_unit", "_container", "_item"];
+// if (_item == "Misery_personalgeiger") then {
+// if (isNil {(_this select 0) getVariable "GeigerON"}) then {
+// (_this select 0) setVariable ["GeigerON", true,true];
+// 		};
+// 	};
+// }];
+// //Kill Detection var for Geiger if you drop it:
+// player addEventHandler ["Put", {
+// params ["_unit", "_container", "_item"];
+// if (_item == "Misery_personalgeiger") then {
+// if ((_this select 0) getVariable ["GeigerON", true]) then {
+// 		(_this select 0) setVariable ["GeigerON", nil, true];
+// 			};
+// 		};
+// 	}];
+};
+
+if (MiseryGeigeracts && hasInterface) then {
+[] execVM MIS_FILESYS(survival\hud\GeigerBar);
+};
+
+if (MiseryERUacts && hasInterface) then {
+[] execVM MIS_FILESYS(survival\hud\ERU_main);
 };
 
 //Killed EH for clients, kills Geiger active detection var (Runs on Server only)
-if (MiseryEnhrads && isServer) then {
-addMissionEventHandler ["EntityKilled", {
-  params ["_killed", "_killer", "_instigator"];
-  if (_killed == player) then {
-    if ((_this select 0) getVariable ["GeigerON", true]) then {
-		(_this select 0) setVariable ["GeigerON", nil, true];
-			}; 
-  		};
-	}];
-};
+// if (MiseryEnhrads && isServer) then {
+// addMissionEventHandler ["EntityKilled", {
+//   params ["_killed", "_killer", "_instigator"];
+//   if (_killed == player) then {
+//     if ((_this select 0) getVariable ["GeigerON", true]) then {
+// 		(_this select 0) setVariable ["GeigerON", nil, true];
+// 			}; 
+//   		};
+// 	}];
+// };
 
 //Artifact exposure+:
 if (MiseryEnhartifacts && hasInterface) then {
@@ -444,17 +445,13 @@ if (MiseryEnhForge && isServer) then {
 [] execVM MIS_FILESYS(survival\Audio loops\forgeaudio);
 };
 
-if (((count(entities "Misery_Psyfieldcreate")) > 0) && hasInterface) then {
+if ((MiseryPsyFieldInit) && hasInterface) then {
 [] execVM MIS_FILESYS(Modules\Psyfield\Psyfieldinit);
 }; 
 
-if (((count(entities "Misery_RadZonecreate")) > 0) && hasInterface) then {
+if ((MiseryRadZoneInit) && hasInterface) then {
 [] execVM MIS_FILESYS(Modules\RadZone\RadZoneinit);
 }; 
-
-if (MiseryPDAEMSAL == 1 && hasInterface) then {
-[] execVM MIS_FILESYS(Modules\PDA\alerts\Emission);
-};
 
 if (MiseryRFEMFacts && hasInterface) then {
 if (MiseryDSA && hasInterface) then {
@@ -620,115 +617,16 @@ if (MiseryWBKIMS && hasInterface) then {
 MiseryReady=TRUE;
 publicVariable "MiseryReady";
 
-Miserysurvival=TRUE;
-player setVariable ["MiseryThirst",MIS_THIRST];
-player setVariable ["MiseryHunger",MIS_HUNGER];
-player setVariable ["MiserySleepiness",MIS_SLEEP];
-MiserySleepinessIncrement = 0;
-_MDebuffs = [];
-_MCrafting_DataSet = [];
-_MCooking_DataSet = [];
-_MWCollect_DataSet = [];
-player setVariable ["MiseryDebuffs", _MDebuffs];
-player setVariable ["Misery_Crafting_DataSet", _MCrafting_DataSet];
-player setVariable ["Misery_Cooking_DataSet", _MCooking_DataSet];
-player setVariable ["Misery_WaterCollect_DataSet", _MWCollect_DataSet];
-player setVariable ["MiseryCurrency", 0];
-player setVariable ["MiseryCurrency_Banked", 0];
-player setVariable ["lastPhoenixWithdrawalTime", 0];
-private _rads = player getVariable ["MiseryRadiation", 0];
-player setVariable ["MiseryPoison",MIS_POISON]; 
-player setVariable ["MiseryInfection",MIS_INFECTION]; 
-player setVariable ["MiseryFear",MIS_FEAR];
-player setVariable ["MiseryExposure",MIS_EXPOSURE]; 
-player setVariable ["MiseryPlayerTemp", (call Misery_fnc_Temperature) select 0];
-player setVariable ["MiseryBreathFogSim", nil];
-player setVariable ["MiseryBreath", false];
-
-MiserySeaTemp = 0; 
-
-// Autogenerate savefile if blank:
-if (MiserysurvivalSaveName == "") then{
-MiserysurvivalSaveName=format["MiseryPlayerSave_%1%2%3",missionName,worldName,name player];
-}else{
-MiserysurvivalSaveName=format["MiseryPlayerSave_%1",MiserysurvivalSaveName]
-};
-
 [] call Misery_fnc_DefinesurvivalItems;
 
 if (MiseryDefineItemsScript != "") then {
-	MiserysurvivalItemEffects=[];
-	MiserysurvivalItems=[];
-[] execVM MiseryDefineItemsScript;
+    MiserysurvivalItemEffects = [];
+    MiserysurvivalItems = [];
+    [] execVM MiseryDefineItemsScript;
 };
 
 if (MiseryManualPData == 1 && MiserysurvivalSaveMode == 2) then {
-	MiseryActions pushback [localize "STR_MISERY_PLAYERDATA", localize "STR_MISERY_PLAYERDATA"];
-};
-
-//Persistency:
-//Persistency handle:
-if (MiserysurvivalPersistence == 1) then {
-[[], MIS_FILESYS(survival\Persistency\Persistencehandle)] remoteExec ["execVM ", 0, true];
-};
-//Persistency keyhandle press:
-if (MiserysurvivalPersistence == 2) then {
-if (hasInterface) then {
-[] execVM MIS_FILESYS(survival\Persistency\Keyhandle);
-};
-[[], MIS_FILESYS(survival\Persistency\Persistencehandle)] remoteExec ["execVM ", 0, true];
-};
-
-if !(MiserysurvivalKillhandleScript=="") then {
-[[], MIS_FILESYS(survival\Persistency\Killhandle)] remoteExec ["execVM ", 0, true];
-};
-
-// //Persistency reloader:
-if (MiserysurvivalSaveMode == 2) then { 
-	private _saveArray=[];
-	if!(isNil{profileNamespace getVariable MiserysurvivalSaveName})then{
-		_saveArray=profileNamespace getVariable MiserysurvivalSaveName;
-		if((count _saveArray)<1)exitWith{systemChat "New Misery Character";
-		};
-		[player] call Misery_fnc_MiseryDeserializeplayer;
-		MiseryNewCharacter=FALSE;
-	}else{
-		systemChat "New Misery Character"; 
-	};
-	enableSaving [false, false]; //Disable saving options + Save & exit etc... 
-};
-
-if (MiserysurvivalSaveMode == 1) then {
-	if (MiserysurvivalHardCoreSaveMode == 1) then {
-//titleText ["Hardcore player saving ENABLED... You can now ONLY save near campfires.", "PLAIN DOWN"];
-
-enableSaving [false,false]; //Disables saving / autosaving
-
-player addAction
-[
-    "Save Character",
-    {
-        enableSaving [true,true];
-        sleep 1;
-        saveGame;
-        titleText ["Progress saved.", "PLAIN DOWN"];
-        sleep 1;
-        enableSaving [false,false];
-    },
-    nil,
-    1.5,
-    true,
-    true,
-    "",
-    "[player] call Misery_fnc_NearFire",//"inflamed cursorTarget",
-    5,
-    false,
-    "",
-    ""
-];	
-	}else{
-    enableSaving TRUE;
-	};
+    MiseryActions pushback [localize "STR_MISERY_PLAYERDATA", localize "STR_MISERY_PLAYERDATA"];
 };
 
 MiserysurvivalShowStatus=TRUE; 

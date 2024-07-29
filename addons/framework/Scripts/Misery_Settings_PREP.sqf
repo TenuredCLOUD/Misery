@@ -22,44 +22,29 @@ by TenuredCLOUD
 			} // function that will be executed once on mission start and every time the setting is changed.
 			] call CBA_fnc_addSetting;
 
-			// [
-			// "MiseryHUDcolorPDAClimate", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
-			// "EDITBOX", // setting type
-			// ["PDA Climate Display color", "(HTML color code)"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-			// ["Misery","Client HUD settings"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
-			// "#ffffff", // data for this setting: [min, max, default, number of shown trailing decimals]
-			// 2, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
-			// {
-			// params ["_value"];
-			// MiseryHUDcolorPDAClimate = _value;
-			// } // function that will be executed once on mission start and every time the setting is changed.
-			// ] call CBA_fnc_addSetting;
+			[
+			"MiseryPsyFieldInit", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
+			"CHECKBOX", // setting type
+			["Misery PsyFields", "Enable Psy emmissions once in psyfields?"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
+			["Misery","Zone Logics"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
+			false, // data for this setting: [min, max, default, number of shown trailing decimals]
+			1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+			{
+			params ["_value"];
+			} // function that will be executed once on mission start and every time the setting is changed.
+			] call CBA_fnc_addSetting;
 
-			// [
-			// "MiseryHUDcolorPDACompass", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
-			// "EDITBOX", // setting type
-			// ["PDA Compass Display color", "(HTML color code)"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-			// ["Misery","Client HUD settings"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
-			// "#ffffff", // data for this setting: [min, max, default, number of shown trailing decimals]
-			// 2, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
-			// {
-			// params ["_value"];
-			// MiseryHUDcolorPDACompass = _value;
-			// } // function that will be executed once on mission start and every time the setting is changed.
-			// ] call CBA_fnc_addSetting;
-
-			// [
-			// "MiseryHUDcolorPDAClock", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
-			// "EDITBOX", // setting type
-			// ["PDA Clock Display color", "(HTML color code)"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-			// ["Misery","Client HUD settings"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
-			// "#ffffff", // data for this setting: [min, max, default, number of shown trailing decimals]
-			// 2, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
-			// {
-			// params ["_value"];
-			// MiseryHUDcolorPDAClock = _value;
-			// } // function that will be executed once on mission start and every time the setting is changed.
-			// ] call CBA_fnc_addSetting;
+			[
+			"MiseryRadZoneInit", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
+			"CHECKBOX", // setting type
+			["Misery Radiation", "Enable Radiation exposure once in radiation zones?"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
+			["Misery","Zone Logics"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
+			false, // data for this setting: [min, max, default, number of shown trailing decimals]
+			1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+			{
+			params ["_value"];
+			} // function that will be executed once on mission start and every time the setting is changed.
+			] call CBA_fnc_addSetting;
 
 			[
 			"MiseryDebug", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
@@ -77,7 +62,7 @@ by TenuredCLOUD
 			"MiserysurvivalCycle", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
 			"EDITBOX", // setting type
 			["survival Cycle length", "Seconds between updates / calculations (Misery hunger, thirst, temperature calculations, etc...) (note: very low cycle values may cause lag)"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-			["Misery","survival framework"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
+			["Misery","Survival framework"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
 			"30", // data for this setting: [min, max, default, number of shown trailing decimals]
 			1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
 			{
@@ -90,7 +75,7 @@ by TenuredCLOUD
 			"MiseryThirstIncrement", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
 			"EDITBOX", // setting type
 			["Thirst increment", "Thirst increase every cycle"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-			["Misery","survival framework"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
+			["Misery","Survival framework"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
 			"1", // data for this setting: [min, max, default, number of shown trailing decimals]
 			1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
 			{
@@ -103,7 +88,7 @@ by TenuredCLOUD
 			"MiseryHungerIncrement", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
 			"EDITBOX", // setting type
 			["Hunger increment", "Hunger increase every cycle"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-			["Misery","survival framework"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
+			["Misery","Survival framework"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
 			"1", // data for this setting: [min, max, default, number of shown trailing decimals]
 			1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
 			{
@@ -409,23 +394,11 @@ by TenuredCLOUD
 			] call CBA_fnc_addSetting;
 
 			[
-			"MiseryPDAacts", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
+			"MiseryERUacts", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
 			"CHECKBOX", // setting type
-			["PDA actions", "Enable PDA actions? (Adds actions to PDA)"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
+			["ERU actions", "Enable ERU actions? (Adds actions to ERU)"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
 			["Misery","Detectors & Devices"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
 			false, // data for this setting: [min, max, default, number of shown trailing decimals]
-			1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
-			{
-			params ["_value"];
-			} // function that will be executed once on mission start and every time the setting is changed.
-			] call CBA_fnc_addSetting;
-
-			[
-			"MiseryPDAEMSAL", // Internal setting name
-			"LIST", // setting type
-			["PDA alerts for Emission storms", "Enable PDA alerts for Emission storms? (*Requires TTS_Emissions - You can get it from Github or Steam*)"], // Pretty name shown inside the ingame settings menu
-			["Misery","Detectors & Devices"], // Pretty name of the category where the setting can be found
-			[[0, 1], ["Disabled", "Enabled"], 0], // data for this setting: [array of options, default index]
 			1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
 			{
 			params ["_value"];
@@ -885,48 +858,6 @@ by TenuredCLOUD
 			{
 			params ["_value"];
 			MiseryCombatlog = parseNumber _value;
-			} // function that will be executed once on mission start and every time the setting is changed.
-			] call CBA_fnc_addSetting;
-
-			//CBA settings added for Map "optimization" (optional):
-			[
-			"MiseryMapOptimizeTrash", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
-			"CHECKBOX", // setting type
-			["Misery Map Optimization (Trash)", "Filters through the active map and actively hides and disables simulation on specific object models (For this option, TRASH). Can in some instances increase framerate, especially useful on maps that are densly populated with certain objects..."], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-			["Misery","Server Map Rendering settings"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
-			false, // data for this setting: [min, max, default, number of shown trailing decimals]
-			1, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
-			{
-			params ["_value"];
-			if (_value) then {[] execVM MIS_FILESYS(survival\Performance\Trash\MapTrash-)}else{[] execVM MIS_FILESYS(survival\Performance\Trash\MapTrash+)}; 
-			} // function that will be executed once on mission start and every time the setting is changed.
-			] call CBA_fnc_addSetting;
-
-			//CBA settings added for Map "optimization" (optional):
-			[
-			"MiseryMapOptimizeCraters", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
-			"CHECKBOX", // setting type
-			["Misery Map Optimization (Craters)", "Filters through the active map and actively hides and disables simulation on specific object models (For this option, CRATERS). Can in some instances increase framerate, especially useful on maps that are densly populated with certain objects..."], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-			["Misery","Server Map Rendering settings"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
-			false, // data for this setting: [min, max, default, number of shown trailing decimals]
-			1, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
-			{
-			params ["_value"];
-			if (_value) then {[] execVM MIS_FILESYS(survival\Performance\Craters\MapCraters-)}else{[] execVM MIS_FILESYS(survival\Performance\Craters\MapCraters+)}; 
-			} // function that will be executed once on mission start and every time the setting is changed.
-			] call CBA_fnc_addSetting;
-
-			//CBA settings added for Map "optimization" (optional):
-			[
-			"MiseryMapOptimizeWrecks", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
-			"CHECKBOX", // setting type
-			["Misery Map Optimization (Wrecks)", "Filters through the active map and actively hides and disables simulation on specific object models (For this option, WRECKS). Can in some instances increase framerate, especially useful on maps that are densly populated with certain objects..."], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-			["Misery","Server Map Rendering settings"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
-			false, // data for this setting: [min, max, default, number of shown trailing decimals]
-			1, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
-			{
-			params ["_value"];
-			if (_value) then {[] execVM MIS_FILESYS(survival\Performance\Wrecks\MapWrecks-)}else{[] execVM MIS_FILESYS(survival\Performance\Wrecks\MapWrecks+)};
 			} // function that will be executed once on mission start and every time the setting is changed.
 			] call CBA_fnc_addSetting;
 
@@ -1922,5 +1853,87 @@ by TenuredCLOUD
 			} // function that will be executed once on mission start and every time the setting is changed.
 			] call CBA_fnc_addSetting;
 
-			
-			
+			["Misery", "Geiger Power", "Turn on/off Geiger", {
+    		private _formattedText;
+    		if ("Misery_personalgeigerOFF" in magazines player) then {
+        		_formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_TURNONGEIGERBOOTUP"], "PLAIN DOWN", -1, true, true];
+        		[_formattedText] call Misery_fnc_FormatToTile;
+				playSound3D ["\z\misery\addons\framework\audio\sounds\Geigerenable\GeigerON.ogg", player, false, getPosASL player, 5, 1, 10];
+        		player removeMagazine 'Misery_personalgeigerOFF'; 
+        		player addMagazine 'Misery_personalgeiger';
+    			} else {
+        		if ("Misery_personalgeiger" in magazines player) then {
+            		_formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_TURNONGEIGERTURNOFF"], "PLAIN DOWN", -1, true, true];
+            		[_formattedText] call Misery_fnc_FormatToTile;
+					playSound3D ["\z\misery\addons\framework\audio\sounds\Geigerenable\GeigerOFF.ogg", player, false, getPosASL player, 5, 1, 10];
+            		player removeMagazine 'Misery_personalgeiger'; 
+            		player addMagazine 'Misery_personalgeigerOFF';
+        		} else {
+            		_formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_TURNONGEIGERNOITEM"], "PLAIN DOWN", -1, true, true];
+            		[_formattedText] call Misery_fnc_FormatToTile;
+        		};
+    		};
+			}, {}, [DIK_K, [false, false, false]]] call CBA_fnc_addKeybind;
+
+			["Misery", "ERU Power", "Turn on/off ERU", {
+    		private _formattedText;
+    		if ("Misery_ERU_off" in magazines player) then {
+        		_formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_TURNONGEIGERBOOTUP"], "PLAIN DOWN", -1, true, true];
+        		[_formattedText] call Misery_fnc_FormatToTile;
+				playSound3D ["\z\misery\addons\framework\audio\sounds\eru\PowerUpBeep.ogg", player, false, getPosASL player, 4, 1, 10];
+        		player removeMagazine 'Misery_ERU_off'; 
+        		player addMagazine 'Misery_ERU';
+    			} else {
+        		if ("Misery_ERU" in magazines player) then {
+            		_formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_TURNONGEIGERTURNOFF"], "PLAIN DOWN", -1, true, true];
+            		[_formattedText] call Misery_fnc_FormatToTile;
+					playSound3D ["\z\misery\addons\framework\audio\sounds\eru\PowerDownBeep.ogg", player, false, getPosASL player, 4, 1, 10];
+            		player removeMagazine 'Misery_ERU'; 
+            		player addMagazine 'Misery_ERU_off';
+        		} else {
+            		_formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_TURNONGEIGERNOITEM"], "PLAIN DOWN", -1, true, true];
+            		[_formattedText] call Misery_fnc_FormatToTile;
+        		};
+    		};
+			}, {}, [DIK_U, [false, false, false]]] call CBA_fnc_addKeybind;
+
+			["Misery", "ERU Temperature", "ERU Temperature Readings", {
+			if ("Misery_ERU" in magazines player) then {
+    		Misery_ERU_Temp = true;
+    		Misery_ERU_Radiation = nil;
+    		Misery_ERU_PsyEmm = nil;
+    		Misery_ERU_Compass = nil;
+			playSound3D ["\z\misery\addons\framework\audio\sounds\eru\ChirpBeep.ogg", player, false, getPosASL player, 4, 1, 10];
+			};
+			}, {}, [DIK_NUMPAD0, [false, false, true]]] call CBA_fnc_addKeybind;
+
+			["Misery", "ERU Radiation", "ERU Radiation Readings", {
+			if ("Misery_ERU" in magazines player) then {
+    		Misery_ERU_Temp = nil;
+    		Misery_ERU_Radiation = true;
+    		Misery_ERU_PsyEmm = nil;
+    		Misery_ERU_Compass = nil;
+			playSound3D ["\z\misery\addons\framework\audio\sounds\eru\ChirpBeep.ogg", player, false, getPosASL player, 4, 1, 10];
+			};
+			}, {}, [DIK_NUMPAD1, [false, false, true]]] call CBA_fnc_addKeybind;
+
+			["Misery", "ERU PsyEmmissions", "ERU PsyEmission Readings", {
+			if ("Misery_ERU" in magazines player) then {
+    		Misery_ERU_Temp = nil;
+    		Misery_ERU_Radiation = nil;
+    		Misery_ERU_PsyEmm = true;
+    		Misery_ERU_Compass = nil;
+			playSound3D ["\z\misery\addons\framework\audio\sounds\eru\ChirpBeep.ogg", player, false, getPosASL player, 4, 1, 10];
+			};
+			}, {}, [DIK_NUMPAD2, [false, false, true]]] call CBA_fnc_addKeybind;
+
+			["Misery", "ERU Compass", "ERU Compass Readings", {
+			if ("Misery_ERU" in magazines player) then {
+    		Misery_ERU_Temp = nil;
+    		Misery_ERU_Radiation = nil;
+    		Misery_ERU_PsyEmm = nil;
+    		Misery_ERU_Compass = true;
+			playSound3D ["\z\misery\addons\framework\audio\sounds\eru\ChirpBeep.ogg", player, false, getPosASL player, 4, 1, 10];
+			};
+			}, {}, [DIK_NUMPAD3, [false, false, true]]] call CBA_fnc_addKeybind;
+	

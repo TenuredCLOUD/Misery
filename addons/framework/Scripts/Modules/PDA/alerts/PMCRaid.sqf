@@ -19,7 +19,7 @@ _marker setMarkerText "PMC Raid";
 
 missionNamespace setVariable [format ["PMC_Raid_Marker_%1", _raidID], _marker];
 
-if ("Misery_PDA" in items player) then {
+if ("Misery_ERU" in items player) then {
 
 _marker setMarkerAlpha 1;
 

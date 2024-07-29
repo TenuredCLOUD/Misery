@@ -6,11 +6,11 @@ by TenuredCLOUD
 
 disableSerialization;
 
-[{"Misery_PDA" in items player},
+[{"Misery_ERU" in items player},
 {
 	[{
 		params ["_args", "_handle"];
-		if (!("Misery_PDA" in items player) || (!alive player)) exitWith {
+		if (!("Misery_ERU" in items player) || (!alive player)) exitWith {
 			[_handle] call CBA_fnc_removePerFrameHandler;
 			((uiNamespace getVariable "PDACOMPASS")displayCtrl 55554)ctrlSetStructuredText parseText "";
 			(findDisplay 46 createDisplay "PDACOMPASS")closeDisplay 1;
@@ -46,7 +46,7 @@ case((_dir >= 265) && (_dir <= 275)) : {_Bearing = "W";}; 	//Bearing West
 case((_dir > 275) && (_dir < 355)) : {_Bearing = "NW";};	//Bearing North-West
 };
 
-if ("Misery_PDA" in items player && MiseryPDACompass) then {
+if ("Misery_ERU" in items player && MiseryPDACompass) then {
 
 ((uiNamespace getVariable "PDACOMPASS")displayCtrl 55554) ctrlSetStructuredText
 parseText format

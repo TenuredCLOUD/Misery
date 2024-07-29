@@ -8,16 +8,16 @@ private _module=_this select 0;
 private _units=_this select 1;
 private _activated=_this select 2;
 
-[{!isNil "MiseryReady"},
-{
-
-params ["_module","_units","_activated"];
+waitUntil {sleep 1; !isNil "MiseryReady"};
 
 if (_activated) then {
-	
-	[[_module, _units], "\z\misery\addons\framework\scripts\Modules\PDA\PDAalertzone.sqf"] remoteExec ["execVM ", [0, -2] select isDedicated, true];
+	//Haleks target defines:
+	_targets = 0;
+	if !(hasInterface) then {
+		_targets = -2;
+	};
+	[[_module, _units], "\z\misery\addons\framework\scripts\Modules\PDA\PDAalertzone.sqf"] remoteExec ["execVM ", _targets, true];
 };
 
-}, [_module,_units,_activated]] call CBA_fnc_waitUntilAndExecute;
-TRUE
+
 

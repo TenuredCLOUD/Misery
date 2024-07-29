@@ -12,7 +12,7 @@ if !("Misery_lithiumbattery" in items player) then {
 
 }else{
 
-player removeitem "Misery_PDA_NB"; //Removal once batteries are placed inside PDA
+player removeitem "Misery_ERU_NB"; //Removal once batteries are placed inside PDA
 player removeitem "Misery_lithiumbattery";
 
 playSound3D ["STALKERsounds\sounds\pda\pda_news.ogg", player, false, getPosASL player, 4, 1, 10];
@@ -74,7 +74,7 @@ playSound3D ["STALKERsounds\sounds\pda\pda_welcome.ogg", player, false, getPosAS
     profilename,
     _PDAimage
     ];
-    player additem "Misery_PDA"; //End of boot cycle: adds PDA / Adds HUD 
+    player additem "Misery_ERU"; //End of boot cycle: adds PDA / Adds HUD 
     sleep 5;
     hintSilent ""; //<< removed HUD after 5 seconds
     };

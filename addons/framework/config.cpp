@@ -49,6 +49,15 @@ class Extended_PreInit_Eventhandlers {
 	};
 };
 
+class Extended_PostInit_EventHandlers {
+	class Misery_PREP {
+		Init = "[] execVM '\z\misery\addons\framework\scripts\Misery_Sys_PREP.sqf';";
+	};
+	class Misery_Client_PREP {
+        Init = "[] execVM '\z\misery\addons\framework\scripts\Misery_Client_PREP.sqf';";
+    };
+};
+
 class CfgFactionClasses
 {
 	class NO_CATEGORY;
@@ -57,12 +66,6 @@ class CfgFactionClasses
 		displayName="Misery";
 		priority=0.1;
 		side=7;
-	};
-};
-
-class Extended_PostInit_EventHandlers {
-	class Misery_PREP {
-		Init = "[] execVM '\z\misery\addons\framework\scripts\Misery_Sys_PREP.sqf';";
 	};
 };
 
@@ -384,435 +387,6 @@ class CfgVehicles
 			};
 			//position=0;
 			duplicate=1;
-		};
-	};
-
-class Misery_Psyfieldcreate: Module_F
-	{
-		scope=2;
-		displayName="Psyfield creation";
-		icon="\z\misery\addons\framework\scripts\survival\data\Psyfield.paa";
-		category="Misery_faction";
-		function="Misery_fnc_ModulePsyfield";
-		functionPriority=1;
-		isGlobal=0;
-		isTriggerActivated=0;
-		isDisposable=0;
-		class Attributes: AttributesBase
-		{
-			class Misery_Psyradius: Edit
-  			{
-				property="Misery_Psyradius";
-				displayName="Radius of Psyfield";
-				typeName="NUMBER";
-				defaultValue="500";
-			};
-			class ModuleDescription: ModuleDescription{};
-		};
-		class ModuleDescription: ModuleDescription
-		{
-			description[]=
-			{
-				"This module will create a Psyfield area",
-				"Psy fields are deadly areas that can cause brain damage to the player...",
-				"If Psyfield Fear is active - Psyfields can greatly increase psychosis levels to the player if they enter them without protection...",
-				"Multiple of these types of modules can be placed in the editor"
-			};
-			position=0;
-			duplicate=1;
-			positionEnabled="Can't change this text?";
-		};
-	};
-
-class Misery_RadZonecreate: Module_F
-	{
-		scope=2;
-		displayName="Radiation Zone creation";
-		icon="\z\misery\addons\framework\scripts\survival\data\Rad_zone.paa";
-		category="Misery_faction";
-		function="Misery_fnc_ModuleRadZone";
-		functionPriority=1;
-		isGlobal=0;
-		isTriggerActivated=0;
-		isDisposable=0;
-		class Attributes: AttributesBase
-		{
-			class Misery_RadiationRadius: Edit
-  			{
-				property="Misery_RadiationRadius";
-				displayName="Radius of Zone";
-				typeName="NUMBER";
-				defaultValue="500";
-			};
-			class ModuleDescription: ModuleDescription{};
-		};
-		class ModuleDescription: ModuleDescription
-		{
-			description[]=
-			{
-				"This module will create a Radio-Active area",
-				"Radiation zones are highly lethal if the player doesn't posess any protective gear...",
-				"Multiple of these types of modules can be placed in the editor"
-			};
-			position=0;
-			duplicate=1;
-			positionEnabled="Can't change this text?";
-		};
-	};
-
-class Misery_PDA_notifier: Module_F
-	{
-		scope=2;
-		displayName="PDA notification create";
-		icon="\z\misery\addons\framework\scripts\survival\data\PDA.paa";
-		category="Misery_faction";
-		function="Misery_fnc_ModulePDA";
-		functionPriority=1;
-		isGlobal=0;
-		isTriggerActivated=0;
-		isDisposable=0;
-		class Attributes: AttributesBase
-		{
-			class Misery_PDAradius: Edit
-  			{
-				property="Misery_PDAradius";
-				displayName="Radius of notification";
-				typeName="NUMBER";
-				defaultValue="500";
-			};
-			class Misery_PDAalertype: Combo
-			{
-				property="Misery_PDAalertype";
-				displayName = "Alert type";
-				tooltip = "Defines what type of alert you want the PDA to display";
-				typeName = "STRING";
-				class Values
-				{
-					class RADIATION
-					{
-						name = "Radiation / Contamination";
-						value = "RADIATION";
-						default = 1;
-					};
-					class RADIATIONHIGH
-					{
-						name = "Radiation / Contamination [HIGH]";
-						value = "RADIATIONHIGH";
-						default = 0;
-					};
-					class PSYFIELD
-					{
-						name = "Near Psy-emissions";
-						value = "PSYFIELD";
-						default = 0;
-					};
-					class ANOMALY
-					{
-						name = "Near Anomalies";
-						value = "ANOMALY";
-						default = 0;
-					};
-					class MILITARY
-					{
-						name = "Military Zone";
-						value = "MILITARY";
-						default = 0;
-					};
-				};
-			};
-			class ModuleDescription: ModuleDescription{};
-		};
-		class ModuleDescription: ModuleDescription
-		{
-			description[]=
-			{
-				"This module will create a customized PDA alert that is repeat-able",
-				"Multiple of these types of modules can be placed in the editor"
-			};
-			position=0;
-			duplicate=1;
-			positionEnabled="Can't change this text?";
-		};
-	};
-
-	class Misery_Killzone: Module_F
-	{
-		scope=2;
-		displayName="Kill zone create";
-		icon="\z\misery\addons\framework\scripts\survival\data\Mappack\skull.paa";
-		category="Misery_faction";
-		function="Misery_fnc_Modulekillzone";
-		functionPriority=1;
-		isGlobal=0;
-		isTriggerActivated=0;
-		isDisposable=0;
-		class Attributes: AttributesBase
-		{
-			class Misery_killzoneradius: Edit
-  			{
-				property="Misery_killzoneradius";
-				displayName="Radius of kill zone";
-				typeName="NUMBER";
-				defaultValue="500";
-			};
-			class Misery_killzonefactiontype: Combo
-			{
-				property="Misery_killzonefactiontype";
-				displayName = "Faction";
-				tooltip = "Defines what faction you want the zone to be for";
-				typeName = "STRING";
-				class Values
-				{
-					class SIDEANYONE
-					{
-						name = "Everyone";
-						value = "SIDEANYONE";
-						default = 1;
-					};
-					class SIDEWEST
-					{
-						name = "West / BLUFOR";
-						value = "SIDEWEST";
-						default = 0;
-					};
-					class SIDEEAST
-					{
-						name = "East / OPFOR";
-						value = "SIDEEAST";
-						default = 0;
-					};
-					class SIDECIVILIAN
-					{
-						name = "Civilian";
-						value = "SIDECIVILIAN";
-						default = 0;
-					};
-					class SIDEIND
-					{
-						name = "Independant";
-						value = "SIDEIND";
-						default = 0;
-					};
-				};
-			};
-			class Misery_killzoneactiontype: Combo
-			{
-				property="Misery_killzoneactiontype";
-				displayName = "Killzone action";
-				tooltip = "Defines what you want the zone to do when activated";
-				typeName = "STRING";
-				class Values
-				{
-					class KILLALL
-					{
-						name = "Kill entities";
-						value = "KILLALL";
-						default = 1;
-					};
-					class DELETEALL
-					{
-						name = "Delete entities";
-						value = "DELETEALL";
-						default = 0;
-					};
-				};
-			};
-			class ModuleDescription: ModuleDescription{};
-		};
-		class ModuleDescription: ModuleDescription
-		{
-			description[]=
-			{
-				"This module will create a Kill zone, any entity of the defined side that enters it's radius will instantly die, or be deleted depending on settings...",
-				"This module is very useful for keeping AI out of contaminated areas, or even Safezones...",
-				"Multiple of these types of modules can be placed in the editor"
-			};
-			position=0;
-			duplicate=1;
-			positionEnabled="Can't change this text?";
-		};
-	};
-
-class Misery_VehRepair: Module_F
-	{
-		scope=2;
-		displayName="Vehicle repair zone";
-		icon="\z\misery\addons\framework\scripts\survival\data\Mappack\mechanic.paa";
-		category="Misery_faction";
-		function="Misery_fnc_ModuleMechanic";
-		functionPriority=1;
-		isGlobal=0;
-		isTriggerActivated=0;
-		isDisposable=0;
-		class Attributes: AttributesBase
-		{
-			class Misery_Mechradius: Edit
-  			{
-				property="Misery_Mechradius";
-				displayName="Radius of Repair area";
-				typeName="NUMBER";
-				defaultValue="500";
-			};
-			class ModuleDescription: ModuleDescription{};
-		};
-		class ModuleDescription: ModuleDescription
-		{
-			description[]=
-			{
-				"This module will create a Vehicle repair zone area",
-				"This module allows players to request repairs for vehicles once in the radius of this module...",
-				"Players need to be outside the vehicle they wish to request repair services for...",
-				"Multiple of these types of modules can be placed in the editor"
-			};
-			position=0;
-			duplicate=1;
-			positionEnabled="Can't change this text?";
-		};
-	};
-
-class Misery_VehRearm: Module_F
-	{
-		scope=2;
-		displayName="Vehicle rearming zone";
-		icon="\z\misery\addons\framework\scripts\survival\data\Mappack\rearm.paa";
-		category="Misery_faction";
-		function="Misery_fnc_ModuleRearm";
-		functionPriority=1;
-		isGlobal=0;
-		isTriggerActivated=0;
-		isDisposable=0;
-		class Attributes: AttributesBase
-		{
-			class Misery_Rearmradius: Edit
-  			{
-				property="Misery_Rearmradius";
-				displayName="Radius of Rearming area";
-				typeName="NUMBER";
-				defaultValue="500";
-			};
-			class ModuleDescription: ModuleDescription{};
-		};
-		class ModuleDescription: ModuleDescription
-		{
-			description[]=
-			{
-				"This module will create a Vehicle rearming zone area",
-				"This module allows players to request rearming support for vehicles once in the radius of this module...",
-				"Players need to be outside the vehicle they wish to request rearming services for...",
-				"Multiple of these types of modules can be placed in the editor"
-			};
-			position=0;
-			duplicate=1;
-			positionEnabled="Can't change this text?";
-		};
-	};
-
-class Misery_MedZone: Module_F
-	{
-		scope=2;
-		displayName="Medical (treatment zone)";
-		icon="\z\misery\addons\framework\scripts\survival\data\Mappack\medical.paa";
-		category="Misery_faction";
-		function="Misery_fnc_ModuleMedzone";
-		functionPriority=1;
-		isGlobal=0;
-		isTriggerActivated=0;
-		isDisposable=0;
-		class Attributes: AttributesBase
-		{
-			class Misery_MedZoneradius: Edit
-  			{
-				property="Misery_MedZoneradius";
-				displayName="Radius of Medical area";
-				typeName="NUMBER";
-				defaultValue="25";
-			};
-			class ModuleDescription: ModuleDescription{};
-		};
-		class ModuleDescription: ModuleDescription
-		{
-			description[]=
-			{
-				"This module will create a Medical treatment zone area",
-				"This module allows players to request medical assistance once in the radius of this module...",
-				"Multiple of these types of modules can be placed in the editor"
-			};
-			position=0;
-			duplicate=1;
-			positionEnabled="Can't change this text?";
-		};
-	};
-
-class Misery_SafeZone: Module_F
-	{
-		scope=2;
-		displayName="SafeZone";
-		icon="\z\misery\addons\framework\scripts\survival\data\Mappack\safezone.paa";
-		category="Misery_faction";
-		function="Misery_fnc_ModuleSafezone";
-		functionPriority=1;
-		isGlobal=0;
-		isTriggerActivated=0;
-		isDisposable=0;
-		class Attributes: AttributesBase
-		{
-			class Misery_SafeZoneradius: Edit
-  			{
-				property="Misery_SafeZoneradius";
-				displayName="Radius of Safezone area";
-				typeName="NUMBER";
-				defaultValue="500";
-			};
-			class ModuleDescription: ModuleDescription{};
-		};
-		class ModuleDescription: ModuleDescription
-		{
-			description[]=
-			{
-				"This module will create a Safezone area",
-				"NOTE: When players enter a Safezone they Cannot inflict damage! Or recieve it!",
-				"Safezone modules can be used with Killzone modules, simply set a killzone module near your safezone and it will enforce a safe area...",
-				"Multiple of these types of modules can be placed in the editor"
-			};
-			position=0;
-			duplicate=1;
-			positionEnabled="Can't change this text?";
-		};
-	};
-
-class Misery_RefuelZone: Module_F
-	{
-		scope=2;
-		displayName="Vehicle refueling zone";
-		icon="\z\misery\addons\framework\scripts\survival\data\Mappack\pumpnozzle.paa";
-		category="Misery_faction";
-		function="Misery_fnc_ModuleRefuelzone";
-		functionPriority=1;
-		isGlobal=0;
-		isTriggerActivated=0;
-		isDisposable=0;
-		class Attributes: AttributesBase
-		{
-			class Misery_RefuelZoneradius: Edit
-  			{
-				property="Misery_RefuelZoneradius";
-				displayName="Radius of Refuel zone area";
-				typeName="NUMBER";
-				defaultValue="500";
-			};
-			class ModuleDescription: ModuleDescription{};
-		};
-		class ModuleDescription: ModuleDescription
-		{
-			description[]=
-			{
-				"This module will create a Refuel zone area",
-				"This module allows players to request refueling assistance once in the radius of this module...",
-				"Multiple of these types of modules can be placed in the editor"
-			};
-			position=0;
-			duplicate=1;
-			positionEnabled="Can't change this text?";
 		};
 	};
 
@@ -1999,47 +1573,43 @@ class Cfgsounds
 
     //__________________________	Ambiance	__________________________
 
-    	class Ambiance_day_1{name = "Ambiance_day_1";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\Ambiance_day_1.ogg", 1.0};titles[] = {};};
-    	class Ambiance_night_1{name = "Ambiance_night_1";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\Ambiance_night_1.ogg", 1.0};titles[] = {};};
-		class DTAmbience1{name = "DTAmbience1";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\DTAmbience1.ogg", 1.0};titles[] = {};};
-		class DTAmbience2{name = "DTAmbience2";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\DTAmbience2.ogg", 1.0};titles[] = {};};
-		class DTAmbience3{name = "DTAmbience3";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\DTAmbience3.ogg", 1.0};titles[] = {};};
-		class DTAmbience4{name = "DTAmbience4";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\DTAmbience4.ogg", 1.0};titles[] = {};};
-		class DTAmbience5{name = "DTAmbience5";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\DTAmbience5.ogg", 1.0};titles[] = {};};
-		class NTAmbience1{name = "NTAmbience1";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\NTAmbience1.ogg", 1.0};titles[] = {};};
-		class NTAmbience2{name = "NTAmbience2";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\NTAmbience2.ogg", 1.0};titles[] = {};};
-		class NTAmbience3{name = "NTAmbience3";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\NTAmbience3.ogg", 1.0};titles[] = {};};
-		class NTAmbience4{name = "NTAmbience4";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\NTAmbience4.ogg", 1.0};titles[] = {};};
-		class NTAmbience5{name = "NTAmbience5";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\NTAmbience5.ogg", 1.0};titles[] = {};};
-		class whisper_day{name = "whisper_day";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\whisper_day.ogg", 1.0};titles[] = {};};
-		class whisper_night{name = "whisper_night";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\whisper_night.ogg", 1.0};titles[] = {};};
-		class WanderingSoul{name = "WanderingSoul";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\WanderingSoul.ogg", 1.0};titles[] = {};};
+    	class Ambiance_day_1{name = "Ambiance_day_1";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\Ambiance_day_1.ogg", 1, 1};titles[] = {};};
+    	class Ambiance_night_1{name = "Ambiance_night_1";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\Ambiance_night_1.ogg", 1, 1};titles[] = {};};
+		class DTAmbience1{name = "DTAmbience1";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\DTAmbience1.ogg", 1, 1};titles[] = {};};
+		class DTAmbience2{name = "DTAmbience2";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\DTAmbience2.ogg", 1, 1};titles[] = {};};
+		class DTAmbience3{name = "DTAmbience3";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\DTAmbience3.ogg", 1, 1};titles[] = {};};
+		class DTAmbience4{name = "DTAmbience4";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\DTAmbience4.ogg", 1, 1};titles[] = {};};
+		class DTAmbience5{name = "DTAmbience5";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\DTAmbience5.ogg", 1, 1};titles[] = {};};
+		class NTAmbience1{name = "NTAmbience1";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\NTAmbience1.ogg", 1, 1};titles[] = {};};
+		class NTAmbience2{name = "NTAmbience2";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\NTAmbience2.ogg", 1, 1};titles[] = {};};
+		class NTAmbience3{name = "NTAmbience3";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\NTAmbience3.ogg", 1, 1};titles[] = {};};
+		class NTAmbience4{name = "NTAmbience4";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\NTAmbience4.ogg", 1, 1};titles[] = {};};
+		class NTAmbience5{name = "NTAmbience5";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\NTAmbience5.ogg", 1, 1};titles[] = {};};
+		class whisper_day{name = "whisper_day";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\whisper_day.ogg", 1, 1};titles[] = {};};
+		class whisper_night{name = "whisper_night";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\whisper_night.ogg", 1, 1};titles[] = {};};
+		class WanderingSoul{name = "WanderingSoul";sound[] = {"\z\misery\addons\framework\audio\sounds\Ambiance\WanderingSoul.ogg", 1, 1};titles[] = {};};
 
 		//__________________________	Cave	Ambiance	__________________________
 
-		class Cave{name = "Cave";sound[] = {"\z\misery\addons\framework\audio\sounds\Cave\Cave.ogg", 1.0};titles[] = {};};
-		class Cave01{name = "Cave01";sound[] = {"\z\misery\addons\framework\audio\sounds\Cave\Cave01.ogg", 1.0};titles[] = {};};
-		class Cave02{name = "Cave02";sound[] = {"\z\misery\addons\framework\audio\sounds\Cave\Cave02.ogg", 1.0};titles[] = {};};
-		class Cave03{name = "Cave03";sound[] = {"\z\misery\addons\framework\audio\sounds\Cave\Cave03.ogg", 1.0};titles[] = {};};
-		class Cave04{name = "Cave04";sound[] = {"\z\misery\addons\framework\audio\sounds\Cave\Cave04.ogg", 1.0};titles[] = {};};
-		class Cave05{name = "Cave05";sound[] = {"\z\misery\addons\framework\audio\sounds\Cave\Cave05.ogg", 1.0};titles[] = {};};
-		class Cave06{name = "Cave06";sound[] = {"\z\misery\addons\framework\audio\sounds\Cave\Cave06.ogg", 1.0};titles[] = {};};
-		class Cave07{name = "Cave07";sound[] = {"\z\misery\addons\framework\audio\sounds\Cave\Cave07.ogg", 1.0};titles[] = {};};
-		class Cave08{name = "Cave08";sound[] = {"\z\misery\addons\framework\audio\sounds\Cave\Cave08.ogg", 1.0};titles[] = {};};
+		class Cave{name = "Cave";sound[] = {"\z\misery\addons\framework\audio\sounds\Cave\Cave.ogg", 1, 1};titles[] = {};};
+		class Cave01{name = "Cave01";sound[] = {"\z\misery\addons\framework\audio\sounds\Cave\Cave01.ogg", 1, 1};titles[] = {};};
+		class Cave02{name = "Cave02";sound[] = {"\z\misery\addons\framework\audio\sounds\Cave\Cave02.ogg", 1, 1};titles[] = {};};
+		class Cave03{name = "Cave03";sound[] = {"\z\misery\addons\framework\audio\sounds\Cave\Cave03.ogg", 1, 1};titles[] = {};};
+		class Cave04{name = "Cave04";sound[] = {"\z\misery\addons\framework\audio\sounds\Cave\Cave04.ogg", 1, 1};titles[] = {};};
+		class Cave05{name = "Cave05";sound[] = {"\z\misery\addons\framework\audio\sounds\Cave\Cave05.ogg", 1, 1};titles[] = {};};
+		class Cave06{name = "Cave06";sound[] = {"\z\misery\addons\framework\audio\sounds\Cave\Cave06.ogg", 1, 1};titles[] = {};};
+		class Cave07{name = "Cave07";sound[] = {"\z\misery\addons\framework\audio\sounds\Cave\Cave07.ogg", 1, 1};titles[] = {};};
+		class Cave08{name = "Cave08";sound[] = {"\z\misery\addons\framework\audio\sounds\Cave\Cave08.ogg", 1, 1};titles[] = {};};
 
 		//__________________________	Items 	__________________________
-		class CaffetinBoxOpen{name = "CaffetinBoxOpen";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\Items\CaffetinBoxOpen.ogg", 1.0};titles[] = {};};
-		class CrinklingPlastic{name = "CrinklingPlastic";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\Items\CrinklingPlastic.ogg", 1.0};titles[] = {};};
-		// class geiger0{name = "geiger0";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\Items\Geiger1.ogg",  1.0};titles[] = {};};
-		// class geiger1{name = "geiger1";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\Items\Geiger2.ogg",  1.0};titles[] = {};};
-		// class geiger2{name = "geiger2";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\Items\Geiger3.ogg",  1.0};titles[] = {};};
-		// class geiger3{name = "geiger3";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\Items\Geiger4.ogg",  1.0};titles[] = {};};
-		class PillBottleOpen{name = "PillBottleOpen";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\Items\PillBottleOpen.ogg", 1.0};titles[] = {};};
+		class CaffetinBoxOpen{name = "CaffetinBoxOpen";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\Items\CaffetinBoxOpen.ogg", 1, 1};titles[] = {};};
+		class CrinklingPlastic{name = "CrinklingPlastic";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\Items\CrinklingPlastic.ogg", 1, 1};titles[] = {};};
+		class PillBottleOpen{name = "PillBottleOpen";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\Items\PillBottleOpen.ogg", 1, 1};titles[] = {};};
 		//class bagopen{name = "bagopen";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\UnZipping.ogg",  1, 1};titles[]={};};
 		//class bagclose{name = "bagclose";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\Zipping.ogg",  1, 1};titles[]={};};
-		class bagopen{name = "bagopen";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\in_open.ogg",  1, 1};titles[]={};};
-		class bagclose{name = "bagclose";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\in_close.ogg",  1, 1};titles[]={};};
-		class pickup{name = "pickup";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\pickup.ogg",  1, 1};titles[]={};};
+		class bagopen{name = "bagopen";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\in_open.ogg", 1, 1};titles[]={};};
+		class bagclose{name = "bagclose";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\in_close.ogg", 1, 1};titles[]={};};
+		class pickup{name = "pickup";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\pickup.ogg", 1, 1};titles[]={};};
 		class drop{name = "drop";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\drop4.ogg", 1, 1};titles[]={};};
 		class Sniff01{name = "Sniff01";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\Items\Sniff01.ogg", 1, 1};titles[]={};};
 		class WoodChop01 {name = "WoodChop01";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\Items\WoodChop01.ogg", 1, 1};titles[]={};};
@@ -2052,65 +1622,66 @@ class Cfgsounds
 		class SHammerWOOD {name = "SHammerWOOD";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\Items\SHammerWOOD.ogg", 1, 1};titles[]={};};
 
 		//__________________________	Rumbles __________________________
-		class Rumble1{name = "Rumble1";sound[] = {"\z\misery\addons\framework\audio\sounds\Rumbles\Rumble1.ogg", 1.0};titles[] = {};};
+		class Rumble1{name = "Rumble1";sound[] = {"\z\misery\addons\framework\audio\sounds\Rumbles\Rumble1.ogg", 1, 1};titles[] = {};};
 
 
 		//__________________________	Immersion  __________________________
-		class GatheringFirewood{name = "GatheringFirewood";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\GatheringFirewood.ogg", 1.0};titles[] = {};};
-		class Cauterizing{name = "Cauterizing";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\Cauterizing.ogg", 1.0};titles[] = {};};
-		class GasMask_Breathing{name = "GasMask_Breathing";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\GasMask_Breathing.ogg", 1.0};titles[] = {};};
-    	class ColdShiver{name = "ColdShiver";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\ColdShiver.ogg", 1.0};titles[] = {};};
-    	class Coughing{name = "Coughing";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\Coughing.ogg", 1.0};titles[] = {};};
-		class coughMask1{name = "sneezeMask1";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\coughMask1.ogg", 1.0};titles[] = {};};
-		class coughMask2{name = "sneezeMask2";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\coughMask2.ogg", 1.0};titles[] = {};};
-		class coughMask3{name = "sneezeMask3";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\coughMask3.ogg", 1.0};titles[] = {};};
-		class MaskCough01{name = "MaskCough01";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\MaskCough01.ogg", 1.0};titles[] = {};};
-		class MaskCough02{name = "MaskCough02";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\MaskCough02.ogg", 1.0};titles[] = {};};
-		class MaskCough03{name = "MaskCough03";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\MaskCough03.ogg", 1.0};titles[] = {};};
-		class MaskCough04{name = "MaskCough04";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\MaskCough04.ogg", 1.0};titles[] = {};};
-		class MaskCough05{name = "MaskCough05";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\MaskCough05.ogg", 1.0};titles[] = {};};
-		class StomachGrowl{name = "StomachGrowl";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\StomachGrowl.ogg", 1.0};titles[] = {};};
-		class Cough{name = "Cough";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\Cough.ogg", 1.0};titles[] = {};};
-		class CoughMuffled{name = "CoughMuffled";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\CoughMuffled.ogg", 1.0};titles[] = {};};
-    	class GasPump{name = "GasPump";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\GasPump.ogg", 1.0};titles[] = {};};
-		class GasPump30{name = "GasPump30";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\GasPump30.ogg", 1.0};titles[] = {};};
-    	class Sneeze{name = "Sneeze";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\Sneeze.ogg", 1.0};titles[] = {};};
+		class GatheringFirewood{name = "GatheringFirewood";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\GatheringFirewood.ogg", 1, 1};titles[] = {};};
+		class Cauterizing{name = "Cauterizing";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\Cauterizing.ogg", 1, 1};titles[] = {};};
+		class GasMask_Breathing{name = "GasMask_Breathing";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\GasMask_Breathing.ogg", 1, 1};titles[] = {};};
+    	class ColdShiver{name = "ColdShiver";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\ColdShiver.ogg", 1, 1};titles[] = {};};
+    	class Coughing{name = "Coughing";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\Coughing.ogg", 1, 1};titles[] = {};};
+		class coughMask1{name = "sneezeMask1";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\coughMask1.ogg", 1, 1};titles[] = {};};
+		class coughMask2{name = "sneezeMask2";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\coughMask2.ogg", 1, 1};titles[] = {};};
+		class coughMask3{name = "sneezeMask3";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\coughMask3.ogg", 1, 1};titles[] = {};};
+		class MaskCough01{name = "MaskCough01";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\MaskCough01.ogg", 1, 1};titles[] = {};};
+		class MaskCough02{name = "MaskCough02";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\MaskCough02.ogg", 1, 1};titles[] = {};};
+		class MaskCough03{name = "MaskCough03";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\MaskCough03.ogg", 1, 1};titles[] = {};};
+		class MaskCough04{name = "MaskCough04";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\MaskCough04.ogg", 1, 1};titles[] = {};};
+		class MaskCough05{name = "MaskCough05";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\MaskCough05.ogg", 1, 1};titles[] = {};};
+		class StomachGrowl{name = "StomachGrowl";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\StomachGrowl.ogg", 1, 1};titles[] = {};};
+		class Cough{name = "Cough";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\Cough.ogg", 1, 1};titles[] = {};};
+		class CoughMuffled{name = "CoughMuffled";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\CoughMuffled.ogg", 1, 1};titles[] = {};};
+    	class GasPump{name = "GasPump";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\GasPump.ogg", 1, 1};titles[] = {};};
+		class GasPump30{name = "GasPump30";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\GasPump30.ogg", 1, 1};titles[] = {};};
+    	class Sneeze{name = "Sneeze";sound[] = {"\z\misery\addons\framework\audio\sounds\sickness\Sneeze.ogg", 1, 1};titles[] = {};};
 		class Choking{name = "Choking";sound[] = {"\z\misery\addons\framework\audio\sounds\zones\Choking.ogg", 1, 1};titles[]={};};
-		class DryGrass{name = "DryGrass";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\DryGrass.ogg", 1.0};titles[] = {};};
-		class Shower{name = "Shower";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\Shower.ogg", 1.0};titles[] = {};};
-		class SawMill2{name = "SawMill2";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\SawMill2.ogg", 1.0};titles[] = {};};
-		class MeatRoasted{name = "MeatRoasted";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\MeatRoasted.ogg", 1.0};titles[] = {};};
-		class WaterBoiling{name = "WaterBoiling";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\WaterBoiling.ogg", 1.0};titles[] = {};};
-		class Lighter{name = "Lighter";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\Lighter.ogg", 1.0};titles[] = {};};
-		class Match{name = "Match";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\Match.ogg", 1.0};titles[] = {};};
-		class Lightersmoking{name = "Lightersmoking";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\Lightersmoking.ogg",  1.0};titles[] = {};};
-		class Matchsmoking{name = "Matchsmoking";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\Matchsmoking.ogg",  1.0};titles[] = {};};
-		class StaticRADIO{name = "StaticRADIO";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\StaticBASIC.ogg", 1.0};titles[] = {};};
-		class StaticBASIC{name = "StaticBASIC";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\StaticBASIC.ogg", 1.0};titles[] = {};};
-		class StaticWEIRD1{name = "StaticWEIRD1";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\StaticWEIRD1.ogg", 1.0};titles[] = {};};
-		class StaticWEIRD2{name = "StaticWEIRD2";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\StaticWEIRD2.ogg", 1.0};titles[] = {};};
-		class StaticWEIRD3{name = "StaticWEIRD3";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\StaticWEIRD3.ogg", 1.0};titles[] = {};};
-		class StaticWEIRD4{name = "StaticWEIRD4";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\StaticWEIRD4.ogg", 1.0};titles[] = {};};
-		class StaticWEIRD5{name = "StaticWEIRD5";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\StaticWEIRD5.ogg", 1.0};titles[] = {};};
-		class StaticWEIRD6{name = "StaticWEIRD6";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\StaticWEIRD6.ogg", 1.0};titles[] = {};};
-		class StaticWEIRD7{name = "StaticWEIRD7";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\StaticWEIRD7.ogg", 1.0};titles[] = {};};
-		class StaticWEIRD8{name = "StaticWEIRD8";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\StaticWEIRD8.ogg", 1.0};titles[] = {};};
-		class StaticWEIRD9{name = "StaticWEIRD9";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\StaticWEIRD9.ogg", 1.0};titles[] = {};};
-		class StaticWEIRD10{name = "StaticWEIRD10";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\StaticWEIRD10.ogg", 1.0};titles[] = {};};
-		class 25m{name = "25m";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\25m.ogg", 1.0};titles[] = {};};
-		class 50m{name = "50m";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\50m.ogg", 1.0};titles[] = {};};
-		class 150m{name = "150m";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\150m.ogg", 1.0};titles[] = {};};
-		class 250m{name = "250m";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\250m.ogg", 1.0};titles[] = {};};
-		class 350m{name = "350m";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\350m.ogg", 1.0};titles[] = {};};
-		class 500m{name = "500m";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\500m.ogg", 1.0};titles[] = {};};
-		class ArtifactSOUND{name = "ArtifactSOUND";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\ArtifactSOUND.ogg", 1.0};titles[] = {};};
+		class DryGrass{name = "DryGrass";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\DryGrass.ogg", 1, 1};titles[] = {};};
+		class Shower{name = "Shower";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\Shower.ogg", 1, 1};titles[] = {};};
+		class SawMill2{name = "SawMill2";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\SawMill2.ogg", 1, 1};titles[] = {};};
+		class MeatRoasted{name = "MeatRoasted";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\MeatRoasted.ogg", 1, 1};titles[] = {};};
+		class WaterBoiling{name = "WaterBoiling";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\WaterBoiling.ogg", 1, 1};titles[] = {};};
+		class Lighter{name = "Lighter";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\Lighter.ogg", 1, 1};titles[] = {};};
+		class Match{name = "Match";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\Match.ogg", 1, 1};titles[] = {};};
+		class Lightersmoking{name = "Lightersmoking";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\Lightersmoking.ogg", 1, 1};titles[] = {};};
+		class Matchsmoking{name = "Matchsmoking";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\Matchsmoking.ogg", 1, 1};titles[] = {};};
+		class StaticRADIO{name = "StaticRADIO";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\StaticBASIC.ogg", 1, 1};titles[] = {};};
+		class StaticBASIC{name = "StaticBASIC";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\StaticBASIC.ogg", 1, 1};titles[] = {};};
+		class StaticWEIRD1{name = "StaticWEIRD1";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\StaticWEIRD1.ogg", 1, 1};titles[] = {};};
+		class StaticWEIRD2{name = "StaticWEIRD2";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\StaticWEIRD2.ogg", 1, 1};titles[] = {};};
+		class StaticWEIRD3{name = "StaticWEIRD3";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\StaticWEIRD3.ogg", 1, 1};titles[] = {};};
+		class StaticWEIRD4{name = "StaticWEIRD4";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\StaticWEIRD4.ogg", 1, 1};titles[] = {};};
+		class StaticWEIRD5{name = "StaticWEIRD5";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\StaticWEIRD5.ogg", 1, 1};titles[] = {};};
+		class StaticWEIRD6{name = "StaticWEIRD6";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\StaticWEIRD6.ogg", 1, 1};titles[] = {};};
+		class StaticWEIRD7{name = "StaticWEIRD7";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\StaticWEIRD7.ogg", 1, 1};titles[] = {};};
+		class StaticWEIRD8{name = "StaticWEIRD8";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\StaticWEIRD8.ogg", 1, 1};titles[] = {};};
+		class StaticWEIRD9{name = "StaticWEIRD9";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\StaticWEIRD9.ogg", 1, 1};titles[] = {};};
+		class StaticWEIRD10{name = "StaticWEIRD10";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\StaticWEIRD10.ogg", 1, 1};titles[] = {};};
+		class 25m{name = "25m";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\25m.ogg", 1, 1};titles[] = {};};
+		class 50m{name = "50m";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\50m.ogg", 1, 1};titles[] = {};};
+		class 150m{name = "150m";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\150m.ogg", 1, 1};titles[] = {};};
+		class 250m{name = "250m";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\250m.ogg", 1, 1};titles[] = {};};
+		class 350m{name = "350m";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\350m.ogg", 1, 1};titles[] = {};};
+		class 500m{name = "500m";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\500m.ogg", 1, 1};titles[] = {};};
+		class ArtifactSOUND{name = "ArtifactSOUND";sound[] = {"\z\misery\addons\framework\audio\sounds\immersion\ArtifactSOUND.ogg", 1, 1};titles[] = {};};
 
 		//__________________________	Contamination Areas __________________________
 		class SubmergedShort{name = "SubmergedShort";sound[] = {"\z\misery\addons\framework\audio\sounds\zones\SubmergedShort.ogg", 1, 1};titles[]={};};
 		class Green_Mountain_chatter{name = "Green_Mountain_chatter";sound[] = {"\z\misery\addons\framework\audio\sounds\Greenmountain\Green_Mountain_chatter.ogg", 1, 1};titles[]={};};
 		class Green_Mountain_static{name = "Green_Mountain_static";sound[] = {"\z\misery\addons\framework\audio\sounds\Greenmountain\Green_Mountain_static.ogg", 1, 1};titles[]={};};
 		class Green_Mountain_beep{name = "Green_Mountain_beep";sound[] = {"\z\misery\addons\framework\audio\sounds\Greenmountain\Green_Mountain_beep.ogg", 1, 1};titles[]={};};
-		class BlowoutWarning{name = "BlowoutWarning";sound[] = {"\z\misery\addons\framework\audio\sounds\Greenmountain\BlowoutWarning.ogg", 1, 1};titles[]={};};
+		class BlowoutWarning{name = "BlowoutWarning";sound[] = {"\z\misery\addons\framework\audio\sounds\blowoutwarning\BlowoutWarning.ogg", 1, 1};titles[]={};};
+		class AltarALARM{name = "AltarALARM";sound[] = {"\z\misery\addons\framework\audio\sounds\zones\AltarALARM.ogg", 1, 1};titles[]={};};
 
 	//__________________________	Generators __________________________
 		class 100_KVA_Running{name = "100_KVA_Running";sound[] = {"\z\misery\addons\framework\audio\sounds\generator\100_KVA_Running.ogg", 1, 1};titles[]={};};
@@ -2147,13 +1718,13 @@ class Cfgsounds
 		class Song3{name = "Song3";sound[] = {"\z\misery\addons\framework\audio\sounds\radio\Song3.ogg", 1, 1};titles[]={};};
 
 		//__________________________GFSkin __________________________
-		class Skinning_1{name = "Skinning_1";sound[] = {"\z\misery\addons\framework\audio\sounds\z\misery\addons\frameworkSkin\Skinning_1.ogg", 1, 1};titles[]={};};
-		class Skinning_2{name = "Skinning_2";sound[] = {"\z\misery\addons\framework\audio\sounds\z\misery\addons\frameworkSkin\Skinning_2.ogg", 1, 1};titles[]={};};
-		class Skinning_3{name = "Skinning_3";sound[] = {"\z\misery\addons\framework\audio\sounds\z\misery\addons\frameworkSkin\Skinning_3.ogg", 1, 1};titles[]={};};
-		class Cut1{name = "Cut1";sound[] = {"\z\misery\addons\framework\audio\sounds\z\misery\addons\frameworkSkin\RUsaw\Cut1.ogg", 1, 1};titles[]={};};
-		class Cut2{name = "Cut2";sound[] = {"\z\misery\addons\framework\audio\sounds\z\misery\addons\frameworkSkin\RUsaw\Cut2.ogg", 1, 1};titles[]={};};
-		class Cut3{name = "Cut3";sound[] = {"\z\misery\addons\framework\audio\sounds\z\misery\addons\frameworkSkin\RUsaw\Cut3.ogg", 1, 1};titles[]={};};
-		class BoneSaw{name = "BoneSaw";sound[] = {"\z\misery\addons\framework\audio\sounds\z\misery\addons\frameworkSkin\RUsaw\BoneSaw.ogg", 1, 1};titles[]={};};
+		class Skinning_1{name = "Skinning_1";sound[] = {"\z\misery\addons\framework\audio\sounds\z\MiserySkin\Skinning_1.ogg", 1, 1};titles[]={};};
+		class Skinning_2{name = "Skinning_2";sound[] = {"\z\misery\addons\framework\audio\sounds\z\MiserySkin\Skinning_2.ogg", 1, 1};titles[]={};};
+		class Skinning_3{name = "Skinning_3";sound[] = {"\z\misery\addons\framework\audio\sounds\z\MiserySkin\Skinning_3.ogg", 1, 1};titles[]={};};
+		class Cut1{name = "Cut1";sound[] = {"\z\misery\addons\framework\audio\sounds\z\MiserySkin\RUsaw\Cut1.ogg", 1, 1};titles[]={};};
+		class Cut2{name = "Cut2";sound[] = {"\z\misery\addons\framework\audio\sounds\z\MiserySkin\RUsaw\Cut2.ogg", 1, 1};titles[]={};};
+		class Cut3{name = "Cut3";sound[] = {"\z\misery\addons\framework\audio\sounds\z\MiserySkin\RUsaw\Cut3.ogg", 1, 1};titles[]={};};
+		class BoneSaw{name = "BoneSaw";sound[] = {"\z\misery\addons\framework\audio\sounds\z\MiserySkin\RUsaw\BoneSaw.ogg", 1, 1};titles[]={};};
 
 		//__________________________fire __________________________
 		class ACE_BigFire{name = "ACE_BigFire";sound[] = {"\z\misery\addons\framework\audio\sounds\fire\ACE_BigFire.ogg", 1, 1};titles[]={};};
@@ -2194,8 +1765,23 @@ class Cfgsounds
 		class walking{name = "walking";sound[] = {"\z\misery\addons\framework\audio\sounds\Jforest\walking.ogg", 1, 1};titles[]={};};
 
 		//__________________________Geiger enable __________________________
-		class GeigerOFF{name = "GeigerOFF";sound[] = {"\z\misery\addons\framework\audio\sounds\Geigerenable\GeigerOFF.ogg", 1, 1};titles[]={};};
-		class GeigerON{name = "GeigerON";sound[] = {"\z\misery\addons\framework\audio\sounds\Geigerenable\GeigerON.ogg", 1, 1};titles[]={};};
+		class GeigerOFF{name = "GeigerOFF";sound[] = {"\z\misery\addons\framework\audio\sounds\Geigerenable\GeigerOFF.ogg", 10, 1};titles[]={};};
+		class GeigerON{name = "GeigerON";sound[] = {"\z\misery\addons\framework\audio\sounds\Geigerenable\GeigerON.ogg", 10, 1};titles[]={};};
+		class Geiger001{name = "Geiger001";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\Items\Geiger001.ogg", 10, 1};titles[] = {};};
+		class Geiger002{name = "Geiger002";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\Items\Geiger002.ogg", 10, 1};titles[] = {};};
+		class Geiger003{name = "Geiger003";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\Items\Geiger003.ogg", 10, 1};titles[] = {};};
+		class Geiger004{name = "Geiger004";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\Items\Geiger004.ogg", 10, 1};titles[] = {};};
+		class Geiger005{name = "Geiger005";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\Items\Geiger005.ogg", 10, 1};titles[] = {};};
+		class Geiger006{name = "Geiger006";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\Items\Geiger006.ogg", 10, 1};titles[] = {};};
+		class Geiger007{name = "Geiger007";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\Items\Geiger007.ogg", 10, 1};titles[] = {};};
+		class Geiger008{name = "Geiger008";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\Items\Geiger008.ogg", 10, 1};titles[] = {};};
+		class Geiger009{name = "Geiger009";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\Items\Geiger009.ogg", 10, 1};titles[] = {};};
+		class Geiger010{name = "Geiger010";sound[] = {"\z\misery\addons\framework\audio\sounds\inventory\Items\Geiger010.ogg", 10, 1};titles[] = {};};
+
+		//__________________________ ERU __________________________
+		class ChirpBeep{name = "ChirpBeep";sound[] = {"\z\misery\addons\framework\audio\sounds\eru\ChirpBeep.ogg", 1, 1};titles[]={};};
+		class PowerDownBeep{name = "PowerDownBeep";sound[] = {"\z\misery\addons\framework\audio\sounds\eru\PowerDownBeep.ogg", 1, 1};titles[]={};};
+		class PowerUpBeep{name = "PowerUpBeep";sound[] = {"\z\misery\addons\framework\audio\sounds\eru\PowerUpBeep.ogg", 1, 1};titles[]={};};
 
 		//__________________________Mining __________________________
 		class Coal{name = "Coal";sound[] = {"\z\misery\addons\framework\audio\sounds\Mining\Coal.ogg", 1, 1};titles[]={};};
@@ -2212,27 +1798,27 @@ class Cfgsounds
 class CfgMusic
 {
 tracks[] = {};
-class CrimsonSunset{name = "CrimsonSunset";sound[] = {"\z\misery\addons\framework\audio\music\CrimsonSunset.ogg", 1.0};titles[] = {0,""};};
-class ExtinctionEntity{name = "ExtinctionEntity";sound[] = {"\z\misery\addons\framework\audio\music\ExtinctionEntity.ogg", 1.0};titles[] = {0,""};};
-class NotAlone{name = "NotAlone";sound[] = {"\z\misery\addons\framework\audio\music\NotAlone.ogg", 1.0};titles[] = {0,""};};
-class SacredForest{name = "SacredForest";sound[] = {"\z\misery\addons\framework\audio\music\SacredForest.ogg", 1.0};titles[] = {0,""};};
-class Wendigo{name = "Wendigo";sound[] = {"\z\misery\addons\framework\audio\music\Wendigo.ogg", 1.0};titles[] = {0,""};};
-class TheBurningRain{name = "TheBurningRain";sound[] = {"\z\misery\addons\framework\audio\music\TheBurningRain.ogg", 1.0};titles[] = {0,""};};
-class SullenSkies{name = "SullenSkies";sound[] = {"\z\misery\addons\framework\audio\music\SullenSkies.ogg", 1.0};titles[] = {0,""};};
-class Tectonic{name = "Tectonic";sound[] = {"\z\misery\addons\framework\audio\music\Tectonic.ogg", 1.0};titles[] = {0,""};};
-class Atmospheric{name = "Atmospheric";sound[] = {"\z\misery\addons\framework\audio\music\Atmospheric.ogg", 1.0};titles[] = {0,""};};
-class Limbo{name = "Limbo";sound[] = {"\z\misery\addons\framework\audio\music\Limbo.ogg", 1.0};titles[] = {0,""};};
-class TheBeginning{name = "TheBeginning";sound[] = {"\z\misery\addons\framework\audio\music\TheBeginning.ogg", 1.0};titles[] = {0,""};};
-class Elysium{name = "Elysium";sound[] = {"\z\misery\addons\framework\audio\music\Elysium.ogg", 1.0};titles[] = {0,""};};
-class EternalOhm{name = "EternalOhm";sound[] = {"\z\misery\addons\framework\audio\music\EternalOhm.ogg", 1.0};titles[] = {0,""};};
-class MyColdBones{name = "MyColdBones";sound[] = {"\z\misery\addons\framework\audio\music\MyColdBones.ogg", 1.0};titles[] = {0,""};};
-class OldWorld{name = "OldWorld";sound[] = {"\z\misery\addons\framework\audio\music\OldWorld.ogg", 1.0};titles[] = {0,""};};
-class RazorBurn{name = "RazorBurn";sound[] = {"\z\misery\addons\framework\audio\music\RazorBurn.ogg", 1.0};titles[] = {0,""};};
-class Ethereal{name = "Ethereal";sound[] = {"\z\misery\addons\framework\audio\music\Ethereal.ogg", 1.0};titles[] = {0,""};};
-class PassingThroughTheLight{name = "PassingThroughTheLight";sound[] = {"\z\misery\addons\framework\audio\music\PassingThroughTheLight.ogg", 1.0};titles[] = {0,""};};
-class PlaguedLands{name = "PlaguedLands";sound[] = {"\z\misery\addons\framework\audio\music\PlaguedLands.ogg", 1.0};titles[] = {0,""};};
-class Playground{name = "Playground";sound[] = {"\z\misery\addons\framework\audio\music\Playground.ogg", 1.0};titles[] = {0,""};};
-class Scars{name = "Scars";sound[] = {"\z\misery\addons\framework\audio\music\Scars.ogg", 1.0};titles[] = {0,""};};
-class TheySeeYou{name = "TheySeeYou";sound[] = {"\z\misery\addons\framework\audio\music\TheySeeYou.ogg", 1.0};titles[] = {0,""};};
+class CrimsonSunset{name = "CrimsonSunset";sound[] = {"\z\misery\addons\framework\audio\music\CrimsonSunset.ogg", 1, 1};titles[] = {0,""};};
+class ExtinctionEntity{name = "ExtinctionEntity";sound[] = {"\z\misery\addons\framework\audio\music\ExtinctionEntity.ogg", 1, 1};titles[] = {0,""};};
+class NotAlone{name = "NotAlone";sound[] = {"\z\misery\addons\framework\audio\music\NotAlone.ogg", 1, 1};titles[] = {0,""};};
+class SacredForest{name = "SacredForest";sound[] = {"\z\misery\addons\framework\audio\music\SacredForest.ogg", 1, 1};titles[] = {0,""};};
+class Wendigo{name = "Wendigo";sound[] = {"\z\misery\addons\framework\audio\music\Wendigo.ogg", 1, 1};titles[] = {0,""};};
+class TheBurningRain{name = "TheBurningRain";sound[] = {"\z\misery\addons\framework\audio\music\TheBurningRain.ogg", 1, 1};titles[] = {0,""};};
+class SullenSkies{name = "SullenSkies";sound[] = {"\z\misery\addons\framework\audio\music\SullenSkies.ogg", 1, 1};titles[] = {0,""};};
+class Tectonic{name = "Tectonic";sound[] = {"\z\misery\addons\framework\audio\music\Tectonic.ogg", 1, 1};titles[] = {0,""};};
+class Atmospheric{name = "Atmospheric";sound[] = {"\z\misery\addons\framework\audio\music\Atmospheric.ogg", 1, 1};titles[] = {0,""};};
+class Limbo{name = "Limbo";sound[] = {"\z\misery\addons\framework\audio\music\Limbo.ogg", 1, 1};titles[] = {0,""};};
+class TheBeginning{name = "TheBeginning";sound[] = {"\z\misery\addons\framework\audio\music\TheBeginning.ogg", 1, 1};titles[] = {0,""};};
+class Elysium{name = "Elysium";sound[] = {"\z\misery\addons\framework\audio\music\Elysium.ogg", 1, 1};titles[] = {0,""};};
+class EternalOhm{name = "EternalOhm";sound[] = {"\z\misery\addons\framework\audio\music\EternalOhm.ogg", 1, 1};titles[] = {0,""};};
+class MyColdBones{name = "MyColdBones";sound[] = {"\z\misery\addons\framework\audio\music\MyColdBones.ogg", 1, 1};titles[] = {0,""};};
+class OldWorld{name = "OldWorld";sound[] = {"\z\misery\addons\framework\audio\music\OldWorld.ogg", 1, 1};titles[] = {0,""};};
+class RazorBurn{name = "RazorBurn";sound[] = {"\z\misery\addons\framework\audio\music\RazorBurn.ogg", 1, 1};titles[] = {0,""};};
+class Ethereal{name = "Ethereal";sound[] = {"\z\misery\addons\framework\audio\music\Ethereal.ogg", 1, 1};titles[] = {0,""};};
+class PassingThroughTheLight{name = "PassingThroughTheLight";sound[] = {"\z\misery\addons\framework\audio\music\PassingThroughTheLight.ogg", 1, 1};titles[] = {0,""};};
+class PlaguedLands{name = "PlaguedLands";sound[] = {"\z\misery\addons\framework\audio\music\PlaguedLands.ogg", 1, 1};titles[] = {0,""};};
+class Playground{name = "Playground";sound[] = {"\z\misery\addons\framework\audio\music\Playground.ogg", 1, 1};titles[] = {0,""};};
+class Scars{name = "Scars";sound[] = {"\z\misery\addons\framework\audio\music\Scars.ogg", 1, 1};titles[] = {0,""};};
+class TheySeeYou{name = "TheySeeYou";sound[] = {"\z\misery\addons\framework\audio\music\TheySeeYou.ogg", 1, 1};titles[] = {0,""};};
 };
 
