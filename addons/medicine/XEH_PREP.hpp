@@ -1,0 +1,15 @@
+PREP(Use_caffetintablets);
+PREP(Use_caffienetabs);
+PREP(Use_cenestin);
+PREP(Use_charcoaltabs);
+PREP(Use_clozapine);
+PREP(Use_clozapineinjection);
+PREP(Use_electrolyteinjection);
+PREP(Use_glucoseinjection);
+PREP(Use_randompharm);
+PREP(Use_thbdinjection);
+PREP(Use_thbdinjectionstim);
+PREP(UseAntibiotic);
+PREP(UseAntiparasitic);
+PREP(Usepainpill);
+PREP(UseSleepingpill);

@@ -1,0 +1,9 @@
+PREP(AddCustomAction);
+PREP(AddCustomItemAction);
+PREP(Click);
+PREP(ClickCustom);
+PREP(DefineItems);
+PREP(DisplayActions);
+PREP(Inventoryhandle);
+PREP(SelectAction);
+PREP(UseItem);

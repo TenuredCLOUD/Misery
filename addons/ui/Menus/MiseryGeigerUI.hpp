@@ -39,4 +39,4 @@ class Misery_GeigerReading: RscText
 	};
 		};
 
-//$[1.063,["Misery_CraftingGUI",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],[1200,"Misery_GeigerBG",[2,"\\z\misery\addons\framework\scripts\survival\Data\Geiger.paa",["39.5 * GUI_GRID_W + GUI_GRID_X","20.5 * GUI_GRID_H + GUI_GRID_Y","10.5 * GUI_GRID_W","14.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1000,"Misery_GeigerReading",[2,"",["43.5 * GUI_GRID_W + GUI_GRID_X","23 * GUI_GRID_H + GUI_GRID_Y","4.5 * GUI_GRID_W","1 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","0.7"],[]]]
+//$[1.063,["Misery_CraftingGUI",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],[1200,"Misery_GeigerBG",[2,"\Data\Geiger.paa",["39.5 * GUI_GRID_W + GUI_GRID_X","20.5 * GUI_GRID_H + GUI_GRID_Y","10.5 * GUI_GRID_W","14.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1000,"Misery_GeigerReading",[2,"",["43.5 * GUI_GRID_W + GUI_GRID_X","23 * GUI_GRID_H + GUI_GRID_Y","4.5 * GUI_GRID_W","1 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","0.7"],[]]]

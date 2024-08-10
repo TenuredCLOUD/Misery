@@ -12,7 +12,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"cba_main","A3_ui_f","misery_main","misery_framework"}; // Include addons from this mod that contain code or assets you depend on. Affects loadorder. Including main as an example here.
+        requiredAddons[] = {"cba_main","A3_ui_f","misery_main"}; // Include addons from this mod that contain code or assets you depend on. Affects loadorder. Including main as an example here.
         authors[] = {"TenuredCLOUD"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}
         VERSION_CONFIG;
     };
@@ -42,19 +42,6 @@ class CfgPatches {
 
 class RscTitles
 {
-  //  #include "\z\misery\addons\ui\menus\StatusBar.hpp"
-  //  #include "\z\misery\addons\ui\menus\PDATIMEHPP.hpp"
-  //  #include "\z\misery\addons\ui\menus\PDACOMPASSHPP.hpp"
-  //  #include "\z\misery\addons\ui\menus\PDATEMPHPP.hpp"
-  //  #include "\z\misery\addons\ui\menus\GeigerstatusHPP.hpp"
-  //  #include "\z\misery\addons\ui\menus\GascartridgeHPP.hpp"
 	#include "\z\misery\addons\ui\menus\MiseryGeigerUI.hpp"
   #include "\z\misery\addons\ui\menus\MiseryERUUI.hpp"
 };
-
-class Extended_PostInit_EventHandlers {
-	class SLX_ui_PREP {
-		Init = "[] execVM '\z\misery\addons\ui\Functions\PREP.sqf';";
-	};
-};
-

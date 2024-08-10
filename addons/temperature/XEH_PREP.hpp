@@ -1,0 +1,14 @@
+PREP(BreathFog);
+PREP(Clothingcheck);
+PREP(ClothingWarmth);
+PREP(Cold);
+PREP(coldimmersion);
+PREP(EffectiveTemperature);
+PREP(feverimmersion);
+PREP(Overtemp);
+PREP(Sick);
+PREP(Temperature);
+PREP(Usecoldpack);
+PREP(Useheatpack);
+PREP(Warmup);
+PREP(Water);

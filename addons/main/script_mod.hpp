@@ -1,5 +1,5 @@
 #define MAINPREFIX z
-#define PREFIX Misery
+#define PREFIX misery
 
 #include "script_version.hpp"
 

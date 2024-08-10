@@ -1126,7 +1126,7 @@ Macros: IS_x()
     IS_NUMBER() - A floating point number (synonym for <IS_SCALAR()>)
     IS_OBJECT() - World object.
     IS_SCALAR() - Floating point number.
-    IS_SCRIPT() - A script handle (as returned by execVM and spawn commands).
+    IS_SCRIPT() - A script handle (as returned by call and spawn commands).
     IS_SIDE() - Game side.
     IS_STRING() - World object.
     IS_TEXT() - Structured text.
