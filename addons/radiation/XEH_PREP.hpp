@@ -1,5 +1,2 @@
-PREP(radiationex);
-PREP(RadZoneinit);
-
-
-
+PREP(radiationExposure);
+PREP(radiationZone);

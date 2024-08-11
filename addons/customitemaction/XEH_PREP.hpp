@@ -1,1 +1,1 @@
-PREP(ModuleCustomItemAction);
+PREP(moduleCustomItemAction);

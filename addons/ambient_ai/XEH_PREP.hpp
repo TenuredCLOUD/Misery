@@ -1,2 +1,2 @@
-PREP(AI_Generation);
-PREP(ModuleCheck);
+PREP(aiGeneration);
+PREP(moduleCheck);

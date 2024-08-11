@@ -1,6 +1,3 @@
-PREP(Canforage);
-PREP(digforworms);
-PREP(searchfortinder);
-
-
-
+PREP(canForage);
+PREP(digForWorms);
+PREP(searchForTinder);

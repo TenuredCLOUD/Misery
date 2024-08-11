@@ -11,10 +11,10 @@
 // 		weapons[]={};
 // 		magazines[]={};
 // 		ammo[]={};
-// 		requiredVersion = ARMABUILD; 
-// 		version = MISERYVERSION; 
-// 		versionStr = MISERYVERSION; 
-// 		versionAr[] = {MISERYVERSTR}; 
+// 		requiredVersion = ARMABUILD;
+// 		version = MISERYVERSION;
+// 		versionStr = MISERYVERSION;
+// 		versionAr[] = {MISERYVERSTR};
 // 	};
 // };
 
@@ -30,11 +30,10 @@ class CfgPatches {
     };
 };
 
-
-#include "cfgweapons.hpp"
-#include "cfgvehicles.hpp"
-#include "CfgVehicleClasses.hpp"
-#include "CfgMagazines.hpp"
 #include "CfgAmmo.hpp"
+#include "CfgMagazines.hpp"
+#include "CfgVehicleClasses.hpp"
+#include "CfgVehicles.hpp"
+#include "CfgWeapons.hpp"
 
 

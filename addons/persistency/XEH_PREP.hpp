@@ -1,6 +1,7 @@
-PREP(Combatlogg);
-PREP(DeleteData);
-PREP(Keyhandle);
-PREP(Deserializeplayer);
-PREP(Serializeplayer);
-PREP(Persistencehandle);
+PREP(combatLogg);
+PREP(deleteData);
+PREP(deserializePlayer);
+PREP(keyHandle);
+PREP(killHandle);
+PREP(persistenceHandle);
+PREP(serializePlayer);

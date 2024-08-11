@@ -1,2 +1,2 @@
-PREP(Cauterizeact);
-PREP(StitchThreadact);
+PREP(cauterizeAct);
+PREP(stitchThreadAct);

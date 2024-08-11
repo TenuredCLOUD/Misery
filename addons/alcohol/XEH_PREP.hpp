@@ -1,2 +1,2 @@
-PREP(Beer);
+PREP(beer);
 PREP(vodka);

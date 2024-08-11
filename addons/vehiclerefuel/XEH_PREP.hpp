@@ -1,7 +1,4 @@
-PREP(ProcessPurchase);
-PREP(RefuelListed);
-PREP(Refuelzonestart);
-PREP(Veh_icon);
-
-
-
+PREP(icon);
+PREP(processPurchase);
+PREP(refuelListed);
+PREP(refuelZoneStart);

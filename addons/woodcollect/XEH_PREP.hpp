@@ -1,5 +1,5 @@
-PREP(Axeaction);
-PREP(Foragetreeaction);
-PREP(Sawaction);
-PREP(SplitWoodaction);
-PREP(Use_chainsawfuel);
+PREP(axeAction);
+PREP(chainsawFuel);
+PREP(forageTreeAction);
+PREP(sawAction);
+PREP(splitWoodAction);

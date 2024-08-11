@@ -1,2 +1,2 @@
-PREP(Hasartifact);
-PREP(putincontaineract);
+PREP(hasArtifact);
+PREP(putInContainerAct);

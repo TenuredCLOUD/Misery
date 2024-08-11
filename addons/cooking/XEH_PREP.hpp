@@ -1,10 +1,7 @@
-PREP(AddCookingRecipe);
-PREP(CanCookCheck);
-PREP(ProcessRecipe);
-PREP(RecipesListed);
-PREP(RemoveCookingRecipe);
-PREP(Showicon);
-PREP(ShowRecipe);
-
-
-
+PREP(addCookingRecipe);
+PREP(canCookCheck);
+PREP(processRecipe);
+PREP(recipesListed);
+PREP(removeCookingRecipe);
+PREP(showicon);
+PREP(showRecipe);

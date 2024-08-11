@@ -1,6 +1,3 @@
 PREP(demolish);
-PREP(Hashammer);
-PREP(HasSledghammer);
-
-
-
+PREP(hasHammer);
+PREP(hasSledghammer);

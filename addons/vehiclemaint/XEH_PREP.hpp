@@ -1,4 +1,4 @@
-PREP(MaintListed);
-PREP(ProcessRepair);
-PREP(ProcessScavenge);
-PREP(Veh_icon);
+PREP(icon);
+PREP(maintListed);
+PREP(processRepair);
+PREP(processScavenge);

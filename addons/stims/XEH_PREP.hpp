@@ -1,6 +1,3 @@
-PREP(BearEnergy);
-PREP(Coffee);
-PREP(Use_cocaine);
-
-
-
+PREP(bearEnergy);
+PREP(coffee);
+PREP(useCocaine);

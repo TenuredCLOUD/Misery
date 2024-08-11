@@ -1,11 +1,11 @@
 /*
-Misery Ambient AI Zones Master Checking loop 
+Misery Ambient AI Zones Master Checking loop
 Consistenty checks players positions relative to module positions
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
-private _modules = allMissionObjects "Misery_Ambient_AI"; 
+private _modules = allMissionObjects "Misery_Ambient_AI";
 
 waitUntil {
     private _players = call Misery_fnc_ListPlayers;
@@ -52,12 +52,12 @@ waitUntil {
 				(_module getVariable "Misery_AI_SpawnChance"),
 				(_module getVariable "Misery_AI_ModuleSpawnDistanceMIN"),
 				(_module getVariable "Misery_AI_ModuleSpawnDistanceMAX")
-				] execVM "\z\misery\addons\Ambient_AI\functions\fnc_AI_Generation.sqf";
-        		
+				] execVM "\z\misery\addons\Ambient_AI\functions\fnc_aiGeneration.sqf";
+
 			};
         };
     } forEach _modules;
 } forEach _players;
-    sleep Misery_AmbAI_SpawnTimer; 
-    false 
+    sleep Misery_AmbAI_SpawnTimer;
+    false
 };
