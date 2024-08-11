@@ -4,6 +4,6 @@ PREP(click);
 PREP(clickCustom);
 PREP(defineItems);
 PREP(displayActions);
-prep(inventoryHandle);
+PREP(inventoryHandle);
 PREP(selectAction);
 PREP(useItem);

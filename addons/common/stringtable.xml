@@ -1,12 +1,4 @@
-﻿<!--
-Misery Mod Stringtable for Multi-Language support
-Translated with DeepL and AI
-Designed specifically for Misery mod 
-by TenuredCLOUD 
--->
-
 <?xml version="1.0" encoding="utf-8"?>
-
 <Project name="Misery_Main_Translations">
   <Package name="Misery_MainSTR_Language_Compat">
     <Key ID="STR_MISERY_PICKAXE_DISPLAYNAME">
@@ -6650,7 +6642,7 @@ by TenuredCLOUD
       <Portuguese>Você não tem dinheiro suficiente para recrutar %1</Portuguese>
       <Turkish>İşe almak için yeterli paranız yok %1</Turkish>
     </Key>
-    
+
 </Package>
 </Project><!--Project / Strings End -->
 
