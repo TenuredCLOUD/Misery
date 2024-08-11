@@ -12,11 +12,11 @@ if (!isNil "grad_persistence_blacklist") then {
     if ((grad_persistence_blacklist find (toLower "#lightpoint") == -1) && (grad_persistence_blacklist find (toUpper "#lightpoint") == -1)) then {
         ["#lightpoint"] call grad_persistence_fnc_blacklistClasses;
         if (MiseryDebug) then {systemChat "[Misery Headlamp] GRAD Persistence detected, Adding light object class to blacklist for saving / reloading..."};
-    	};
-	};
+        };
+    };
 };
 
-// Auto headlamp termination after player killed: 
+// Auto headlamp termination after player killed:
 if (isServer) then {
     addMissionEventHandler ["EntityKilled", {
         params ["_killed", "_killer", "_instigator"];

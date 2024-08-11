@@ -1,7 +1,7 @@
-PREP(ModuleRadioSettings);
-PREP(PR_NB);
-PREP(Radiobroadcast);
-PREP(RadioLoop);
-PREP(RadioObjectsStatic);
-PREP(RadioStatic);
-PREP(RadiosyncLoop);
+PREP(moduleRadioSettings);
+PREP(portableRadioBatteries);
+PREP(radioBroadcast);
+PREP(radioLoop);
+PREP(radioObjectsStatic);
+PREP(radioStatic);
+PREP(radioSyncLoop);

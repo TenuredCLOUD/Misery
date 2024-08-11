@@ -1,7 +1,7 @@
 /*
 ERU UI
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 disableSerialization;
@@ -39,7 +39,7 @@ disableSerialization;
             case (!isNil "Misery_ERU_Radiation"): {
                 if (!isNil "MiseryinRadZone" && MiseryinRadZone) then {
                     _textControlReadings ctrlSetText "Radiation Detected!";
-					playSound3D ["\z\misery\addons\audio\sounds\eru\PowerDownBeep.ogg", player, false, getPosASL player, 4, 1, 10];
+                    playSound3D ["\z\misery\addons\audio\sounds\eru\PowerDownBeep.ogg", player, false, getPosASL player, 4, 1, 10];
                 } else {
                     _textControlReadings ctrlSetText "No Radiation Detected...";
                 };
@@ -47,7 +47,7 @@ disableSerialization;
             case (!isNil "Misery_ERU_PsyEmm"): {
                 if (!isNil "MiseryinPsyfield" && MiseryinPsyfield) then {
                     _textControlReadings ctrlSetText "Psy-Emmissions detected!";
-					playSound3D ["\z\misery\addons\audio\sounds\eru\PowerDownBeep.ogg", player, false, getPosASL player, 4, 1, 10];
+                    playSound3D ["\z\misery\addons\audio\sounds\eru\PowerDownBeep.ogg", player, false, getPosASL player, 4, 1, 10];
                 } else {
                     _textControlReadings ctrlSetText "No Psy-Emmissions Detected...";
                 };
@@ -56,14 +56,14 @@ disableSerialization;
                 _direction = round (getDir (vehicle player));
                 _Bearing = _direction;
                 switch true do {
-                    case(((_direction >= 355) && (_direction <=359)) || ((_direction >= 0) && (_direction <= 5))) : {_Bearing = "N";}; 
-                    case((_direction > 5) && (_direction < 85)) : {_Bearing = "NE";}; 		
-                    case((_direction >= 85) && (_direction <= 95)) : {_Bearing = "E";}; 	
-                    case((_direction > 95) && (_direction < 175)) : {_Bearing = "SE";}; 	
-                    case((_direction >= 175) && (_direction <= 185)) : {_Bearing = "S";}; 	
-                    case((_direction > 185) && (_direction < 265)) : {_Bearing = "SW";};	
-                    case((_direction >= 265) && (_direction <= 275)) : {_Bearing = "W";}; 	
-                    case((_direction > 275) && (_direction < 355)) : {_Bearing = "NW";};	
+                    case(((_direction >= 355) && (_direction <=359)) || ((_direction >= 0) && (_direction <= 5))) : {_Bearing = "N";};
+                    case((_direction > 5) && (_direction < 85)) : {_Bearing = "NE";};
+                    case((_direction >= 85) && (_direction <= 95)) : {_Bearing = "E";};
+                    case((_direction > 95) && (_direction < 175)) : {_Bearing = "SE";};
+                    case((_direction >= 175) && (_direction <= 185)) : {_Bearing = "S";};
+                    case((_direction > 185) && (_direction < 265)) : {_Bearing = "SW";};
+                    case((_direction >= 265) && (_direction <= 275)) : {_Bearing = "W";};
+                    case((_direction > 275) && (_direction < 355)) : {_Bearing = "NW";};
                 };
                 _textControlReadings ctrlSetText format ["Compass: %1 %2", _direction, _Bearing];
             };

@@ -1,6 +1,4 @@
-PREP(IsdeadZed);
-PREP(Sawzombie);
-PREP(Skinselected);
-PREP(Skinzombie);
-
-
+PREP(isDeadZed);
+PREP(sawZombie);
+PREP(skinSelected);
+PREP(skinZombie);

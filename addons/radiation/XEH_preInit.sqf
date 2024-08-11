@@ -15,7 +15,7 @@ if (MiseryEnhartifacts && hasInterface) then {
 
 if ((MiseryRadZoneInit) && hasInterface) then {
 [] execVM "\z\misery\addons\radiation\functions\fnc_RadZoneinit.sqf";
-}; 
+};
 
 //Radiation Exp+:
 if (MiseryEnhrads && hasInterface) then {
@@ -27,18 +27,18 @@ if (MiseryEnhrads && hasInterface) then {
 // if (_item == "Misery_personalgeiger") then {
 // if (isNil {(_this select 0) getVariable "GeigerON"}) then {
 // (_this select 0) setVariable ["GeigerON", true,true];
-// 		};
-// 	};
+//         };
+//     };
 // }];
 // //Kill Detection var for Geiger if you drop it:
 // player addEventHandler ["Put", {
 // params ["_unit", "_container", "_item"];
 // if (_item == "Misery_personalgeiger") then {
 // if ((_this select 0) getVariable ["GeigerON", true]) then {
-// 		(_this select 0) setVariable ["GeigerON", nil, true];
-// 			};
-// 		};
-// 	}];
+//         (_this select 0) setVariable ["GeigerON", nil, true];
+//             };
+//         };
+//     }];
 };
 
 ADDON = true;

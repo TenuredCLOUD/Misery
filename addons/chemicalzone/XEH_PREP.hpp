@@ -1,1 +1,1 @@
-PREP(chemicalzoneinit);
+PREP(chemicalZoneInit);

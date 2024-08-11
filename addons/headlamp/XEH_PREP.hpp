@@ -1,6 +1,3 @@
-PREP(headlampbatt);
-PREP(HeadlampOFF);
-PREP(HeadlampON);
-
-
-
+PREP(battery);
+PREP(off);
+PREP(on);

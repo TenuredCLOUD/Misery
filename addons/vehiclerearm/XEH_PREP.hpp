@@ -1,4 +1,4 @@
-PREP(ProcessPurchase);
-PREP(RearmListed);
-PREP(Rearmstart);
-PREP(Veh_icon);
+PREP(icon);
+PREP(processPurchase);
+PREP(rearmListed);
+PREP(rearmStart);

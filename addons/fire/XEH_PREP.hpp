@@ -1,5 +1,4 @@
-PREP(CampFireBig);
-PREP(CampFiresmall);
-PREP(FireRainSafe);
-PREP(lightfire);
-
+PREP(campfireBig);
+PREP(campfireSmall);
+PREP(fireRainSafe);
+PREP(lightFire);

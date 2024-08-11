@@ -1,8 +1,5 @@
-PREP(AddBuffOrAilment);
-PREP(ProcessAilment);
-PREP(ProcessBuff);
-PREP(RemoveBuffOrAilment);
-PREP(Status);
-
-
-
+PREP(addBuffOrAilment);
+PREP(processAilment);
+PREP(processBuff);
+PREP(removeBuffOrAilment);
+PREP(status);

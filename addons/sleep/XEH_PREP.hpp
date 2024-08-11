@@ -1,7 +1,3 @@
-PREP(HourSelected);
-PREP(Sleep);
-PREP(Sleep_action);
-
-
-
-
+PREP(hourSelected);
+PREP(sleep);
+PREP(sleepAction);

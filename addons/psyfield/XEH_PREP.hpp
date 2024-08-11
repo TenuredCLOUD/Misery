@@ -1,1 +1,1 @@
-PREP(Psyfieldinit);
+PREP(psyfield);

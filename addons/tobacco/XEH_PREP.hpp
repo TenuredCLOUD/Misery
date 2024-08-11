@@ -1,2 +1,2 @@
-PREP(Use_cigar);
-PREP(Use_cigarettes);
+PREP(cigar);
+PREP(cigarettes);

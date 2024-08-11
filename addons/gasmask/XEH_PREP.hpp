@@ -1,7 +1,4 @@
-PREP(Gasmaskaudio);
-PREP(gasmasktimer);
-PREP(Use_cartridges);
-PREP(Use_emptygasmask);
-
-
-
+PREP(gasmaskAudio);
+PREP(gasmaskTimer);
+PREP(useCartridges);
+PREP(useEmptyGasmask);

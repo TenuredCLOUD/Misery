@@ -1,4 +1,4 @@
-PREP(MechListed);
-PREP(ProcessPurchase);
-PREP(Repair);
-PREP(Veh_icon);
+PREP(icon);
+PREP(mechListed);
+PREP(processPurchase);
+PREP(repair);

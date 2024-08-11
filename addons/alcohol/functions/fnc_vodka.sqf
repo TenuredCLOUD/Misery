@@ -1,7 +1,7 @@
 /*
 Misery Vodka usage
 Designed specifically for Misery mod (also compatible with Ravage)
-by TenuredCLOUD 
+by TenuredCLOUD
 */
 
 #include "\z\misery\addons\main\script_macros.hpp"
@@ -14,8 +14,8 @@ if (!hasInterface) exitWith {};
   if (alive player) exitwith {
 
   if (MiseryFearenabled) then {
-	player setVariable ["MiseryFear", (_MFear - 5)];
-	if (_MFear <= 0) then {player setVariable ["MiseryFear", 0]};
+    player setVariable ["MiseryFear", (_MFear - 5)];
+    if (_MFear <= 0) then {player setVariable ["MiseryFear", 0]};
   };
 
 // if ((MiseryNORVG=="ENABLED") && !(MiseryMP)) then {
@@ -29,12 +29,12 @@ player setVariable ["_antirad", true];
 if (isNil {player getVariable "radMonitorON"}) then {
 };
 while {_compteur < 500} do {
-	enableCamShake true;
-	addCamShake [2, 15, 2];
-	_effectSpeed = 1 + random 5;
-	player setVariable ["_radToRemove", ((player getVariable ["_radToRemove", 0]) + _effectSpeed)];
-	_compteur = _compteur + _effectSpeed;
-	sleep 1;
+    enableCamShake true;
+    addCamShake [2, 15, 2];
+    _effectSpeed = 1 + random 5;
+    player setVariable ["_radToRemove", ((player getVariable ["_radToRemove", 0]) + _effectSpeed)];
+    _compteur = _compteur + _effectSpeed;
+    sleep 1;
 };
 player setVariable ["_antirad", nil];
 
