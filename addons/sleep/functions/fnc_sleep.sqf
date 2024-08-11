@@ -1,8 +1,8 @@
 /*
 Misery Sleep system (Singleplayer only)
 Some Code concepts from Haleks Ravage mod (with permission)
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 #include "\z\misery\addons\main\script_macros.hpp"
@@ -16,8 +16,8 @@ private _MFearSleep = player getVariable "Misery_FearSleep";
 private _HourVal = player getVariable "Misery_SleepDataVal";
 
 if (_HourVal == 0) exitWith {
-	titleText [format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_SLEEPNOHOURSELECT"], "PLAIN DOWN", -1, true, true];
-	player setVariable ["Misery_SleepDataVal", nil];
+    titleText [format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_SLEEPNOHOURSELECT"], "PLAIN DOWN", -1, true, true];
+    player setVariable ["Misery_SleepDataVal", nil];
 };
 
 if !(_MSleepiness >= 15) exitWith {titleText [format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_SLEEPNOTTIRED"], "PLAIN DOWN", -1, true, true]; player setVariable ["Misery_SleepDataVal", nil];};
@@ -26,7 +26,7 @@ if (!(isNil {player getVariable "MiseryFear"}) && ((player getVariable ["MiseryF
 
 _sitting = animationState player;
 if (_sitting != "amovpsitmstpsnonwnondnon_ground") then {
-	player playActionNow "SitDown";
+    player playActionNow "SitDown";
 };
 
 player setVariable ["Misery_IsSleeping", true];
@@ -47,12 +47,12 @@ sleep 2;
 
 cutText ["", "BLACK IN", 2];
 
-player switchMove "Acts_UnconsciousStandUp_part1"; 
-player setAnimSpeedCoef 1.5;  
+player switchMove "Acts_UnconsciousStandUp_part1";
+player setAnimSpeedCoef 1.5;
 
-[{animationState player != "Acts_UnconsciousStandUp_part1"},  
-{ 
-    player setAnimSpeedCoef 1; 
+[{animationState player != "Acts_UnconsciousStandUp_part1"},
+{
+    player setAnimSpeedCoef 1;
 }] call CBA_fnc_waitUntilAndExecute;
 
 player setVariable ["MiserySleepiness", (_MSleepiness - MisSleep_sleepinessDecrease)];

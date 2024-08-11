@@ -1,7 +1,7 @@
 /*
 Inventory Click handle
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 private _idc = ctrlIDC (_this select 0);
@@ -13,15 +13,15 @@ private _selectedItem = "";
 
 {
 _item=_x;
-	{
-	_displayName=getText(configFile>>_x>>_item>>"displayName");
-	if(_displayName==_itemText)exitWith{_selectedItem=_item};
-	}forEach["cfgWeapons","cfgMagazines"]; //["cfgWeapons","cfgMagazines","cfgGlasses","cfgVehicles"];
-	if!(_selectedItem=="")exitWith{};
+    {
+    _displayName=getText(configFile>>_x>>_item>>"displayName");
+    if(_displayName==_itemText)exitWith{_selectedItem=_item};
+    }forEach["cfgWeapons","cfgMagazines"]; //["cfgWeapons","cfgMagazines","cfgGlasses","cfgVehicles"];
+    if!(_selectedItem=="")exitWith{};
 }forEach((items player)+(magazines player)); //((items player)+(assignedItems player)+(magazines player)+(weapons player))
 if(_selectedItem=="")exitWith{};
 if(((toUpper _selectedItem)in MiserysurvivalItems))exitWith{
-	_selectedItem execVM "\z\misery\addons\inventory\functions\fnc_UseItem.sqf";
+    _selectedItem execVM "\z\misery\addons\inventory\functions\fnc_UseItem.sqf";
 };
 
 private _script="";

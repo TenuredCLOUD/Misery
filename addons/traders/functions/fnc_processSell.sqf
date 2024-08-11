@@ -1,8 +1,8 @@
 /*
 Misery Trader Shop Sell processor
 Processes Selling of items + funds handling
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 private ['_shop','_items','_stock','_playerFunds','_selectedItem','_price','_index'];
@@ -26,12 +26,12 @@ private _Defaultprice = _selectedItemData select 4;
 private _Maxprice = _selectedItemData select 5;
 _stock = _selectedItemData select 2;
 
-private _displayName = getText (configFile >> "CfgWeapons" >> _selectedItem >> "displayName");  
+private _displayName = getText (configFile >> "CfgWeapons" >> _selectedItem >> "displayName");
 if (_displayName == "") then {
-    _displayName = getText (configFile >> "CfgMagazines" >> _selectedItem >> "displayName");  
+    _displayName = getText (configFile >> "CfgMagazines" >> _selectedItem >> "displayName");
 };
-if (_displayName == "") then {  
-    _displayName = getText (configFile >> "CfgVehicles" >> _selectedItem >> "displayName");   
+if (_displayName == "") then {
+    _displayName = getText (configFile >> "CfgVehicles" >> _selectedItem >> "displayName");
 };
 
 private _price = _Defaultprice;
@@ -69,6 +69,6 @@ if ((_selectedItem in (items player)) or (_selectedItem in (magazines player))) 
     ctrlSetText [1001, "You no longer have any more of that item to sell..."];
 };
 }else{
-    ctrlSetText [1001, "This Shop doesn't have the adequate funds to reimburse you..."];	
+    ctrlSetText [1001, "This Shop doesn't have the adequate funds to reimburse you..."];
 };
 

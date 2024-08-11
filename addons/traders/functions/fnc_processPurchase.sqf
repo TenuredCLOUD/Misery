@@ -1,8 +1,8 @@
 /*
 Misery Trader Shop Purchase processor
 Processes Buying of items + funds handling
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 private ['_shop','_items','_stock','_playerFunds','_selectedItem','_price','_index'];
@@ -26,12 +26,12 @@ private _Defaultprice = _selectedItemData select 4;
 private _Maxprice = _selectedItemData select 5;
 _stock = _selectedItemData select 2;
 
-private _displayName = getText (configFile >> "CfgWeapons" >> _selectedItem >> "displayName");  
+private _displayName = getText (configFile >> "CfgWeapons" >> _selectedItem >> "displayName");
 if (_displayName == "") then {
-    _displayName = getText (configFile >> "CfgMagazines" >> _selectedItem >> "displayName");  
+    _displayName = getText (configFile >> "CfgMagazines" >> _selectedItem >> "displayName");
 };
-if (_displayName == "") then {  
-    _displayName = getText (configFile >> "CfgVehicles" >> _selectedItem >> "displayName");   
+if (_displayName == "") then {
+    _displayName = getText (configFile >> "CfgVehicles" >> _selectedItem >> "displayName");
 };
 
 private _price = _Defaultprice;
@@ -62,11 +62,11 @@ if (_playerFunds >= _price) then {
         call _codeToExecute;
     } else {
         [player, _selectedItem, true] call CBA_fnc_addItem;
-        ctrlSetText [1001, format ["%1 Purchased for %2 %3",_displayName,MiseryCurrencySymbol,[_price, 1, 2, true] call CBA_fnc_formatNumber]];	
+        ctrlSetText [1001, format ["%1 Purchased for %2 %3",_displayName,MiseryCurrencySymbol,[_price, 1, 2, true] call CBA_fnc_formatNumber]];
     };
     [] execVM '\z\misery\addons\traders\functions\fnc_ShopVALs.sqf';
 } else {
-    ctrlSetText [1001, "You cannot afford this!"];	
+    ctrlSetText [1001, "You cannot afford this!"];
 };
 
 

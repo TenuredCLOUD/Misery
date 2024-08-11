@@ -12,7 +12,7 @@ PREP_RECOMPILE_END;
 if (MiseryChrenhan && hasInterface) then{
 //Misery Hunger:
 [] execVM "\z\misery\addons\survival\functions\hungerimmersion.sqf";
-//Cold: 
+//Cold:
 [] execVM "\z\misery\addons\temperature\functions\coldimmersion.sqf";
 //Hot:
 [] execVM "\z\misery\addons\temperature\functions\feverimmersion.sqf";
@@ -22,18 +22,18 @@ if (MiseryChrenhan && hasInterface) then{
 if (MiseryEnhinv && hasInterface) then {
 //Always true if selected
 player addEventHandler ["InventoryClosed", {
-		playSound3D ["\z\misery\addons\audio\sounds\inventory\inv_closenew.ogg", player, false, getPosASL player, 4, 1, 10];
+        playSound3D ["\z\misery\addons\audio\sounds\inventory\inv_closenew.ogg", player, false, getPosASL player, 4, 1, 10];
 }];
 player addEventHandler ["InventoryOpened", {
-		playSound3D ["\z\misery\addons\audio\sounds\inventory\inv_opennew.ogg", player, false, getPosASL player, 4, 1, 10];
+        playSound3D ["\z\misery\addons\audio\sounds\inventory\inv_opennew.ogg", player, false, getPosASL player, 4, 1, 10];
 }];
 
 player addEventHandler ["Take", {
-		playSound3D ["\z\misery\addons\audio\sounds\inventory\pickup.ogg", player, false, getPosASL player, 3, 1, 10];
+        playSound3D ["\z\misery\addons\audio\sounds\inventory\pickup.ogg", player, false, getPosASL player, 3, 1, 10];
 }];
 
 player addEventHandler ["Put", {
-		playSound3D ["\z\misery\addons\audio\sounds\inventory\drop5.ogg", player, false, getPosASL player, 3, 1, 10];
+        playSound3D ["\z\misery\addons\audio\sounds\inventory\drop5.ogg", player, false, getPosASL player, 3, 1, 10];
 }];
 };
 

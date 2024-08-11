@@ -1,24 +1,24 @@
 /*
 Misery artifact dropper
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 //Enforce code runs on Server ONLY:
 if (isServer) then {
 
-addMissionEventHandler ["EntityKilled", 
+addMissionEventHandler ["EntityKilled",
 
 {
 
-params ["_killed", "_killer"];	
+params ["_killed", "_killer"];
 if (_killed isKindOf "myst_phantom_hidden_f" || _killed isKindOf "myst_phantom_naked_f") then {
 
 
 if((random 100) > Miseryphantdropchance) exitWith{};
 
 _unit = _this select 0;
-_uniform = uniformContainer _unit;	
+_uniform = uniformContainer _unit;
 _wh = "groundWeaponHolder" createVehicle (getpos _unit);
 _wh addItemCargoGlobal [
 
@@ -36,5 +36,5 @@ _wh addItemCargoGlobal [
 ]call BIS_fnc_selectRandom,1];
 
 };
-	}]; 
-		};
+    }];
+        };

@@ -1,23 +1,23 @@
 /*
-Misery Refuel with Jcan 
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Misery Refuel with Jcan
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
-#include "\a3\ui_f\hpp\definedikcodes.inc"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 
 private ["_dialog","_PurchaseB","_ExitB","_Vehiclename","_target","_Found","_totalLiters","_RefuelInterrupt","_text","_displayedText","_delay"];
 
-_dialog = findDisplay 982385; 
+_dialog = findDisplay 982385;
 _PurchaseB = _dialog displayCtrl 1600;
 _ExitB = _dialog displayCtrl 1601;
 
 _Vehiclename = getText (configFile >> "CfgVehicles" >> MiseryTarget_VehName >> "displayName");
 
-_target = MiseryTarget_Veh; 
+_target = MiseryTarget_Veh;
 
-_Found = false; 
-_totalLiters = 0; 
+_Found = false;
+_totalLiters = 0;
 _fuelTypeIndex = 0;
 
 {
@@ -37,8 +37,8 @@ player setVariable ["Misery_Proc_Refuel", true];
 _RefuelInterrupt = (findDisplay 982385) displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
     if (_key isEqualTo DIK_ESCAPE) then {
-        player setVariable ["Misery_Proc_Refuel",false]; 
-        [parseText "<t font='PuristaMedium' size='1'>Refueling interrupted...</t>", true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;    
+        player setVariable ["Misery_Proc_Refuel",false];
+        [parseText "<t font='PuristaMedium' size='1'>Refueling interrupted...</t>", true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
     };
 }];
 
@@ -81,20 +81,20 @@ if (!_hasRequiredFuel) exitWith {
 _text = "Refueling...";
 _tanklvl = "Tank level:";
 _displayedText = "";
-_delay = 29 / 100; 
+_delay = 29 / 100;
 
-for "_i" from 0 to (_totalLiters + 50) do { 
-    if ((player getVariable "Misery_Proc_Refuel") isEqualTo false) exitWith {}; 
-    
+for "_i" from 0 to (_totalLiters + 50) do {
+    if ((player getVariable "Misery_Proc_Refuel") isEqualTo false) exitWith {};
+
     _fuelToAdd = 1 / _totalLiters;
 
-    if (fuel _target >= 1) exitWith {    
+    if (fuel _target >= 1) exitWith {
         player setVariable ["Misery_Proc_Refuel", nil];
-        (findDisplay 982385) displayRemoveEventHandler ["KeyDown", _RefuelInterrupt];      
-        _displayFull = format ["%1 fuel tank is full...", _Vehiclename]; 
+        (findDisplay 982385) displayRemoveEventHandler ["KeyDown", _RefuelInterrupt];
+        _displayFull = format ["%1 fuel tank is full...", _Vehiclename];
         ctrlSetText [1001, _displayFull];
         _PurchaseB ctrlShow true;
-        _ExitB ctrlShow true;    
+        _ExitB ctrlShow true;
     };
 
     // Check if the player still has the required Jerry can type with at least 1 use
@@ -112,9 +112,9 @@ for "_i" from 0 to (_totalLiters + 50) do {
         _ExitB ctrlShow true;
     };
 
-    _displayedText = format ["%1%2%3%2%4%2%5", _text, endl, _Vehiclename, _tanklvl,(fuel _target) * 100]; 
+    _displayedText = format ["%1%2%3%2%4%2%5", _text, endl, _Vehiclename, _tanklvl,(fuel _target) * 100];
     ctrlSetText [1001, _displayedText];
-    sleep _delay; 
+    sleep _delay;
 
     _target setFuel ((fuel _target) + _fuelToAdd);
 

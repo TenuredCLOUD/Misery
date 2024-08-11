@@ -1,21 +1,21 @@
 /*
 Misery Refuel Vehicle JCan UI List populater
 Defines the selected refuel option, and passes data
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 waitUntil {!isNull findDisplay 982385};
 
-if (!isNull findDisplay 982385) exitWith { 
+if (!isNull findDisplay 982385) exitWith {
 
     private ["_list","_PurchaseB","_Vehiclename","_Found","_totalLiters","_index","_fuelTypeIndex"];
-    
-    _list = findDisplay 982385 displayCtrl 1500; 
-	_PurchaseB = findDisplay 982385 displayCtrl 1600;
+
+    _list = findDisplay 982385 displayCtrl 1500;
+    _PurchaseB = findDisplay 982385 displayCtrl 1600;
 
     if (isNil "MiseryTarget_VehName") exitWith {
-        _index = _list lbAdd "No vehicle to refuel..."; 
+        _index = _list lbAdd "No vehicle to refuel...";
         _PurchaseB ctrlShow false;
     };
 
@@ -23,8 +23,8 @@ if (!isNull findDisplay 982385) exitWith {
 
     lbClear _list;
 
-    _Found = false; 
-    _totalLiters = 0; 
+    _Found = false;
+    _totalLiters = 0;
 
     {
         if ((_x select 0) == MiseryTarget_VehName) then {
@@ -38,7 +38,7 @@ if (!isNull findDisplay 982385) exitWith {
 
     if !(_Found) exitWith {};
 
-    _index = _list lbAdd format ["Refuel %1 %2L", _Vehiclename,_totalLiters]; 
+    _index = _list lbAdd format ["Refuel %1 %2L", _Vehiclename,_totalLiters];
 };
 
 

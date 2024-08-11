@@ -1,8 +1,8 @@
 /*
-Misery Primary HUD option 
-Concepts Based on GF Ravage Status Bar script & JakeHekesFist [DMD] displays 
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Misery Primary HUD option
+Concepts Based on GF Ravage Status Bar script & JakeHekesFist [DMD] displays
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 class MiseryStatusBar
 {
@@ -14,9 +14,9 @@ class MiseryStatusBar
     movingEnable = 0; // Whether the dialog can be moved by the player (0 = no, 1 = yes)
     objects[] = {}; // An array of objects in the dialog
     class controls
-	{
+    {
         class statusBarText
-		{
+        {
             idc = 881488; // The ID of the control
             x = 0.905 * safezoneW + safezoneX; // The horizontal position of the control (0 = left side of the screen, 1 = right side)
             y = 0.3 * safezoneH + safezoneY; // The vertical position of the control (0 = top of the screen, 1 = bottom)
@@ -31,7 +31,7 @@ class MiseryStatusBar
             text = ""; // The initial text of the control
 
             class Attributes
-			{
+            {
                 align="right"; // The horizontal alignment of the text
                 valign = "middle"; // The vertical alignment of the text
                 shadow = 0; // Whether the text has a shadow (0 = no, 1 = yes)

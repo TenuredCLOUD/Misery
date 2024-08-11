@@ -1,18 +1,18 @@
 /*
 Misery MedTreatment UI List populater
 Defines the selected purchase option, and passes current pricing values
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
-private _dialog = findDisplay 982381; 
+private _dialog = findDisplay 982381;
 private _selectedIndex = lbCurSel 1500; // Get the index of the selected item
 
 private _PurchaseB = _dialog displayCtrl 1600;
 private _ExitB = _dialog displayCtrl 1601;
 
 if (_selectedIndex == -1) exitWith {
-	ctrlSetText [1001, "No treatment option selected..."];
+    ctrlSetText [1001, "No treatment option selected..."];
 };
 
 _PurchaseB ctrlShow false;
@@ -39,7 +39,7 @@ switch (_selectedFile) do {
     [] execVM "\z\misery\addons\medzone\fnc_Radheal12.sqf";
     };
     case "Radheal34": {
-   	[] execVM "\z\misery\addons\medzone\fnc_Radheal34.sqf";
+       [] execVM "\z\misery\addons\medzone\fnc_Radheal34.sqf";
     };
     case "RadhealALL": {
     [] execVM "\z\misery\addons\medzone\fnc_RadhealALL.sqf";

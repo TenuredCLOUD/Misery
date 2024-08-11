@@ -2,8 +2,8 @@
 
 /*
 Misery Safezone (Client loop)
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 fnc_Miserysafezoneexit = {
@@ -18,7 +18,7 @@ if (MiseryACE) then {
 player setVariable ["ace_medical_allowDamage",true,true];
 }else{
 player allowDamage true;
-	};
+    };
 };
 
 [{_this call fnc_Miserysafezoneexit;},[_index,_text]] call CBA_fnc_waitAndExecute;
@@ -30,7 +30,7 @@ titleText ["Entering Safezone...", "PLAIN DOWN"];
 
 private _index = player addEventHandler ["Fired", {_projectile = _this select 6; deleteVehicle _projectile;}]; //Delete projectile immediately when fired
 
-//Stop ALL types of damage to players: 
+//Stop ALL types of damage to players:
 if (MiseryACE) then {
 player setVariable ["ace_medical_allowDamage",false,true];
 }else{

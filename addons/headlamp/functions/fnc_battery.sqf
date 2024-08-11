@@ -1,11 +1,11 @@
 /*
 Misery Headlmap batteries
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 if ("Misery_9vbat" in items player) then {
-	
+
 player removeitem "Misery_Headlamp_NB";
 
 titleText ["You add a 9v battery to your Headlamp", "PLAIN DOWN"];

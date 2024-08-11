@@ -1,7 +1,7 @@
 /*
 Misery persistence
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 #include "\z\misery\addons\main\script_macros.hpp"
@@ -53,8 +53,8 @@ _MiseryWContainerKnowledge = [];
     ["MiseryRadiation", 0],
     ["MiseryFear", MIS_FEAR],
     ["Zinfectionlogged", nil],
-	["Turbidwaterlogged", nil],
-	["Rawmeatlogged", nil],
+    ["Turbidwaterlogged", nil],
+    ["Rawmeatlogged", nil],
     ["MiseryDebuffs", _MiseryDebuffs],
     ["Misery_Crafting_DataSet", _MiseryCraftingKnowledge],
     ["Misery_Cooking_DataSet", _MiseryCookingKnowledge],
@@ -67,14 +67,14 @@ if !(MiseryMP) then {
     _units = units player;
     _unitDetails = [];
     {
-        _unitType = typeOf _x; 
+        _unitType = typeOf _x;
         _unitloadout = getUnitLoadout _x;
         _unitstats = [Damage _x, getDir _x, getPosATL _x, stance _x];
         _unitACEdamage = [];
         if (MiseryACE) then {
             _unitACEdamage = [_x] call ace_medical_fnc_serializeState;
         };
-        _unitDetails pushBack [_unitType, _unitloadout, _unitstats, _unitACEdamage]; 
+        _unitDetails pushBack [_unitType, _unitloadout, _unitstats, _unitACEdamage];
     } forEach _units;
     _namespace setVariable ["unitDetails", _unitDetails];
 };

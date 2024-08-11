@@ -1,8 +1,8 @@
 /*
 Misery Cooking Framework Item check
 Processes recipe items needed, if not all are met, code exits as false
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 params ["_requirements"];
@@ -17,21 +17,21 @@ private _hasAll = TRUE;
 {
     private _itemArray = _x;
     if (MiseryDebug) then {
-	systemChat format["Checking 1: %1",_itemArray];
+    systemChat format["Checking 1: %1",_itemArray];
     };
     if (_itemArray isEqualType [] && {_itemArray select 0 != "CookingTime"} && {_itemArray select 0 != "CookingMethod"}) then {
         if (MiseryDebug) then {
-		systemChat format["Checking 2: %2",_itemArray];
+        systemChat format["Checking 2: %2",_itemArray];
         };
         private _requiredItem = _itemArray select 0;
         private _requiredCount = _itemArray select 1;
         private _playerCount = {_x isEqualTo _requiredItem} count _playerItems;
-        
+
         if (MiseryDebug) then {
         systemChat format ["Required item: %1, Required count: %2, Player count: %3", _requiredItem, _requiredCount, _playerCount]; //debug output
         systemChat format ["Count function result: %1", {_x isEqualTo _requiredItem} count _playerItems]; //debug output
         };
-        
+
         if (_playerCount < _requiredCount) then {
             if (MiseryDebug) then {
             systemChat "Not enough items, setting _hasAll to FALSE"; //debug output

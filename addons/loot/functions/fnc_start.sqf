@@ -1,8 +1,8 @@
 /*
 Misery Loot framework start
 Code concepts from Drongo edited by TenuredCLOUD (with permission)
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 #include "\z\misery\addons\main\script_macros.hpp"
@@ -26,27 +26,27 @@ MiseryGearUseMiserymedical=TRUE;
 MiseryGearUseMiseryitems=TRUE;
 
 private _LootData = [
-"MiseryLootItemsFood", 
-"MiseryLootItemsMedical", 
-"MiseryLootItemsMisc", 
-"MiseryLootWeapons", 
-"MiseryLootWeaponattachments", 
-"MiseryLootUniforms", 
-"MiseryLootVests", 
-"MiseryLootHeadgear", 
-"MiseryLootPacks", 
-"MiseryLootGoggles", 
-"MiseryLootItemsFoodM", 
-"MiseryLootItemsMedicalM", 
-"MiseryLootItemsMiscM", 
-"MiseryLootWeaponsM", 
-"MiseryLootWeaponattachmentsM", 
-"MiseryLootUniformsM", 
-"MiseryLootVestsM", 
-"MiseryLootHeadgearM", 
-"MiseryLootPacksM", 
-"MiseryLootGogglesM", 
-"MiseryLootGrenades", 
+"MiseryLootItemsFood",
+"MiseryLootItemsMedical",
+"MiseryLootItemsMisc",
+"MiseryLootWeapons",
+"MiseryLootWeaponattachments",
+"MiseryLootUniforms",
+"MiseryLootVests",
+"MiseryLootHeadgear",
+"MiseryLootPacks",
+"MiseryLootGoggles",
+"MiseryLootItemsFoodM",
+"MiseryLootItemsMedicalM",
+"MiseryLootItemsMiscM",
+"MiseryLootWeaponsM",
+"MiseryLootWeaponattachmentsM",
+"MiseryLootUniformsM",
+"MiseryLootVestsM",
+"MiseryLootHeadgearM",
+"MiseryLootPacksM",
+"MiseryLootGogglesM",
+"MiseryLootGrenades",
 "MiseryLootExplosives",
 "MiseryLootItemsBlacklist",
 "MiseryLootBldgBlacklist"];
@@ -115,45 +115,45 @@ _weapons=_weapons-_remove;
 
 // Base weapons only
 if(MiseryGearLootBaseOnly)then{
-	{
-	if(getNumber(configFile>>"CfgWeapons">>_x>>"type")in[0,1,2,4])then{
-		if!((getText(configFile>>"CfgWeapons">>_x>>"baseWeapon"))==_x)then{_weapons=_weapons-[_x]};
-	};
-	}forEach _weapons;
+    {
+    if(getNumber(configFile>>"CfgWeapons">>_x>>"type")in[0,1,2,4])then{
+        if!((getText(configFile>>"CfgWeapons">>_x>>"baseWeapon"))==_x)then{_weapons=_weapons-[_x]};
+    };
+    }forEach _weapons;
 };
 
 // Process weapons
 {
 if(getNumber(configFile>>"CfgWeapons">>_x>>"type")in[0,1,2,4])then{
-	if(_x call FUNC(MilitaryWeapon))then{MiseryGearWeaponsM pushBack _x}else{MiseryGearWeapons pushBack _x};
-	_weapons=_weapons-[_x];
+    if(_x call FUNC(MilitaryWeapon))then{MiseryGearWeaponsM pushBack _x}else{MiseryGearWeapons pushBack _x};
+    _weapons=_weapons-[_x];
 };
 }forEach _weapons;
 
 if!(MiseryGearUseBISweapons)then{
-	{
-	if(_x call FUNC(IsBIS))then{MiseryGearWeaponsM=MiseryGearWeaponsM-[_x]};
-	}forEach MiseryGearWeaponsM;
-	{
-	if(_x call FUNC(IsBIS))then{MiseryGearWeapons=MiseryGearWeapons-[_x]};
-	}forEach MiseryGearWeapons;
+    {
+    if(_x call FUNC(IsBIS))then{MiseryGearWeaponsM=MiseryGearWeaponsM-[_x]};
+    }forEach MiseryGearWeaponsM;
+    {
+    if(_x call FUNC(IsBIS))then{MiseryGearWeapons=MiseryGearWeapons-[_x]};
+    }forEach MiseryGearWeapons;
 };
 //hint format["CIV: %1",MiseryGearWeapons];//sleep 2;hint format["MIL: %1",MiseryGearWeaponsM];
 
 // Uniforms
 {
 if(getNumber(configFile>>"CfgWeapons">>_x>>"ItemInfo">>"type")==801)then{
-	if(_x call FUNC(MilitaryUniform))then{MiseryGearUniformsM pushBack _x}else{MiseryGearUniforms pushBack _x};
-	_weapons=_weapons-[_x];
+    if(_x call FUNC(MilitaryUniform))then{MiseryGearUniformsM pushBack _x}else{MiseryGearUniforms pushBack _x};
+    _weapons=_weapons-[_x];
 };
 }forEach _weapons;
 if!(MiseryGearUseBISuniforms)then{
-	{
-	if(_x call FUNC(IsBIS))then{MiseryGearUniformsM=MiseryGearUniformsM-[_x]};
-	}forEach MiseryGearUniformsM;
-	{
-	if(_x call FUNC(IsBIS))then{MiseryGearUniforms=MiseryGearUniforms-[_x]};
-	}forEach MiseryGearUniformsM;
+    {
+    if(_x call FUNC(IsBIS))then{MiseryGearUniformsM=MiseryGearUniformsM-[_x]};
+    }forEach MiseryGearUniformsM;
+    {
+    if(_x call FUNC(IsBIS))then{MiseryGearUniforms=MiseryGearUniforms-[_x]};
+    }forEach MiseryGearUniformsM;
 };
 //hint format["UNI: %1",MiseryGearUniforms];
 //sleep 2;hint format["UNI M: %1",MiseryGearUniformsM];
@@ -161,17 +161,17 @@ if!(MiseryGearUseBISuniforms)then{
 // Vests
 {
 if(getNumber(configFile>>"CfgWeapons">>_x>>"ItemInfo">>"type")==701)then{
-	if(_x call FUNC(MilitaryVest))then{MiseryGearVestsM pushBack _x}else{MiseryGearVests pushBack _x};
-	_weapons=_weapons-[_x];
+    if(_x call FUNC(MilitaryVest))then{MiseryGearVestsM pushBack _x}else{MiseryGearVests pushBack _x};
+    _weapons=_weapons-[_x];
 };
 }forEach _weapons;
 if!(MiseryGearUseBISvests)then{
-	{
-	if(_x call FUNC(IsBIS))then{MiseryGearVestsM=MiseryGearVestsM-[_x]};
-	}forEach MiseryGearVestsM;
-	{
-	if(_x call FUNC(IsBIS))then{MiseryGearVests=MiseryGearVests-[_x]};
-	}forEach MiseryGearVestsM;
+    {
+    if(_x call FUNC(IsBIS))then{MiseryGearVestsM=MiseryGearVestsM-[_x]};
+    }forEach MiseryGearVestsM;
+    {
+    if(_x call FUNC(IsBIS))then{MiseryGearVests=MiseryGearVests-[_x]};
+    }forEach MiseryGearVestsM;
 };
 //hint format["UNI: %1",MiseryGearVests];//sleep 2;hint format["UNI M: %1",MiseryGearVestsM];
 
@@ -179,39 +179,39 @@ if!(MiseryGearUseBISvests)then{
 {
 //systemChat str _x;
 if(getNumber(configFile>>"CfgWeapons">>_x>>"ItemInfo">>"type")==605)then{
-	if(_x call FUNC(MilitaryHeadgear))then{MiseryGearHeadgearM pushBack _x}else{MiseryGearHeadgear pushBack _x};
-	_weapons=_weapons-[_x];
+    if(_x call FUNC(MilitaryHeadgear))then{MiseryGearHeadgearM pushBack _x}else{MiseryGearHeadgear pushBack _x};
+    _weapons=_weapons-[_x];
 };
 }forEach _weapons;
 if!(MiseryGearUseBISheadgear)then{
-	{
-	if(_x call FUNC(IsBIS))then{MiseryGearHeadgearM=MiseryGearHeadgearM-[_x]};
-	}forEach MiseryGearHeadgearM;
-	{
-	if(_x call FUNC(IsBIS))then{MiseryGearHeadgear=MiseryGearHeadgear-[_x]};
-	}forEach MiseryGearHeadgearM;
+    {
+    if(_x call FUNC(IsBIS))then{MiseryGearHeadgearM=MiseryGearHeadgearM-[_x]};
+    }forEach MiseryGearHeadgearM;
+    {
+    if(_x call FUNC(IsBIS))then{MiseryGearHeadgear=MiseryGearHeadgear-[_x]};
+    }forEach MiseryGearHeadgearM;
 };
 //hint format["HAT: %1",MiseryGearHeadgear];//sleep 2;hint format["HAT M: %1",MiseryGearHeadgearM];
 
 // Attachments
 {
 if(getNumber(configFile>>"CfgWeapons">>_x>>"ItemInfo">>"type")in[101,621])then{
-	MiseryGearAttachmentsM pushBack _x;
-	_weapons=_weapons-[_x];
+    MiseryGearAttachmentsM pushBack _x;
+    _weapons=_weapons-[_x];
 };
 if(getNumber(configFile>>"CfgWeapons">>_x>>"ItemInfo">>"type")in[201,301,302])then{
-	MiseryGearAttachments pushBack _x;
-	MiseryGearAttachmentsM pushBack _x;
-	_weapons=_weapons-[_x];
+    MiseryGearAttachments pushBack _x;
+    MiseryGearAttachmentsM pushBack _x;
+    _weapons=_weapons-[_x];
 };
 }forEach _weapons;
 if!(MiseryGearUseBISweapons)then{
-	{
-	if(_x call FUNC(IsBIS))then{MiseryGearAttachmentsM=MiseryGearAttachmentsM-[_x]};
-	}forEach MiseryGearAttachmentsM;
-	{
-	if(_x call FUNC(IsBIS))then{MiseryGearAttachments=MiseryGearAttachments-[_x]};
-	}forEach MiseryGearAttachmentsM;
+    {
+    if(_x call FUNC(IsBIS))then{MiseryGearAttachmentsM=MiseryGearAttachmentsM-[_x]};
+    }forEach MiseryGearAttachmentsM;
+    {
+    if(_x call FUNC(IsBIS))then{MiseryGearAttachments=MiseryGearAttachments-[_x]};
+    }forEach MiseryGearAttachmentsM;
 };
 //hint format["ATT: %1",MiseryGearAttachments];//sleep 2;hint format["ATT M: %1",MiseryGearAttachmentsM];
 
@@ -225,12 +225,12 @@ _weapons=_weapons-[_x];
 }forEach _weapons;
 MiseryGearItemsM=MiseryGearItemsM+MiseryGearItems;
 if!(MiseryGearUseBISitems)then{
-	{
-	if(_x call FUNC(IsBIS))then{MiseryGearItemsM=MiseryGearItemsM-[_x]};
-	}forEach MiseryGearItemsM;
-	{
-	if(_x call FUNC(IsBIS))then{MiseryGearItems=MiseryGearItems-[_x]};
-	}forEach MiseryGearItemsM;
+    {
+    if(_x call FUNC(IsBIS))then{MiseryGearItemsM=MiseryGearItemsM-[_x]};
+    }forEach MiseryGearItemsM;
+    {
+    if(_x call FUNC(IsBIS))then{MiseryGearItems=MiseryGearItems-[_x]};
+    }forEach MiseryGearItemsM;
 };
 //hint format["ITEMS: %1",MiseryGearItems];//sleep 3;hint format["ITEMS: %1",MiseryGearItemsM];
 
@@ -238,19 +238,19 @@ if!(MiseryGearUseBISitems)then{
 MiseryGearGoggles=("getNumber(_x>>'scope')>1" configClasses(configfile>>"CfgGlasses"))apply{configName _x};
 MiseryGearGoggles=MiseryGearGoggles-["None"];
 if!(MiseryGearUseBISgoggles)then{
-	{
-	if(_x call FUNC(IsBIS))then{MiseryGearGoggles=MiseryGearGoggles-[_x]};
-	}forEach MiseryGearGoggles;
-	MiseryGearGogglesM=MiseryGearGoggles+[];
+    {
+    if(_x call FUNC(IsBIS))then{MiseryGearGoggles=MiseryGearGoggles-[_x]};
+    }forEach MiseryGearGoggles;
+    MiseryGearGogglesM=MiseryGearGoggles+[];
 };
 //hint format["GOG: %1",MiseryGearGoggles];
 
 MiseryGearPacks="((getNumber(_x>>'isbackpack')==1)AND(getNumber(_x>>'scope')>1)AND(getNumber(_x>>'maximumLoad')!=0))" configClasses(configfile>>"CfgVehicles")apply{configName _x};
 if!(MiseryGearUseBISpacks)then{
-	{
-	if(_x call FUNC(IsBIS))then{MiseryGearPacks=MiseryGearPacks-[_x]};
-	}forEach MiseryGearPacks;
-	MiseryGearPacksM=MiseryGearPacks+[];
+    {
+    if(_x call FUNC(IsBIS))then{MiseryGearPacks=MiseryGearPacks-[_x]};
+    }forEach MiseryGearPacks;
+    MiseryGearPacksM=MiseryGearPacks+[];
 };
 //hint format["PACK: %1",_backpacks];
 
@@ -441,26 +441,26 @@ _parent="";
 {
 _mag=_x;
 _parents=[configfile>>"CfgMagazines">>_mag,TRUE]call BIS_fnc_returnParents;
-	{
-	_parent=_x;
-	if(_parent in _grenadeParents)exitWith{_magazines=_magazines-[_mag];MiseryGearGrenades pushBackUnique _mag};
-	if(_parent in _explosiveParents)exitWith{_magazines=_magazines-[_mag];MiseryGearExplosives pushBackUnique _mag};
-	}forEach _parents;
+    {
+    _parent=_x;
+    if(_parent in _grenadeParents)exitWith{_magazines=_magazines-[_mag];MiseryGearGrenades pushBackUnique _mag};
+    if(_parent in _explosiveParents)exitWith{_magazines=_magazines-[_mag];MiseryGearExplosives pushBackUnique _mag};
+    }forEach _parents;
 }forEach _magazines;
 
 if!(MiseryGearUseBISweapons)then{
-	{if(_x call FUNC(IsBIS))then{_magazines=_magazines-[_x]}}forEach _magazines;
-	{if("VehicleMagazine" in([configfile>>"CfgMagazines">>_x,TRUE]call BIS_fnc_returnParents))then{_magazines=_magazines-[_x]}}forEach _magazines;
+    {if(_x call FUNC(IsBIS))then{_magazines=_magazines-[_x]}}forEach _magazines;
+    {if("VehicleMagazine" in([configfile>>"CfgMagazines">>_x,TRUE]call BIS_fnc_returnParents))then{_magazines=_magazines-[_x]}}forEach _magazines;
 };
 _military=FALSE;
 _ammo="";
 {
 _military=FALSE;
 if(TRUE)then{
-	if(getNumber(configFile>>"CfgMagazines">>_x>>"count")>20)exitWith{MiseryGearMagazinesM pushBack _x;_military=TRUE};
-	if("CA_LauncherMagazine" in([configfile>>"CfgMagazines">>_x,TRUE]call BIS_fnc_returnParents))exitWith{MiseryGearMagazinesM pushBack _x;_military=TRUE};
-	_ammo=getText(configFile>>"CfgMagazines">>_x>>"ammo");
-	if(getNumber(configFile>>"CfgAmmo">>_ammo>>"explosive")>0)exitWith{MiseryGearMagazinesM pushBack _x;_military=TRUE};
+    if(getNumber(configFile>>"CfgMagazines">>_x>>"count")>20)exitWith{MiseryGearMagazinesM pushBack _x;_military=TRUE};
+    if("CA_LauncherMagazine" in([configfile>>"CfgMagazines">>_x,TRUE]call BIS_fnc_returnParents))exitWith{MiseryGearMagazinesM pushBack _x;_military=TRUE};
+    _ammo=getText(configFile>>"CfgMagazines">>_x>>"ammo");
+    if(getNumber(configFile>>"CfgAmmo">>_ammo>>"explosive")>0)exitWith{MiseryGearMagazinesM pushBack _x;_military=TRUE};
 };
 if!(_military)then{MiseryGearMagazines pushBack _x};
 }forEach _magazines;
@@ -619,12 +619,12 @@ MiseryLootReady=TRUE;
 if!(isServer)exitWith{};
 
 if (MiseryLootrefreshtimer != -1) then {
-[] execVM "\z\misery\addons\loot\functions\fnc_Refresh.sqf"; 
+[] execVM "\z\misery\addons\loot\functions\fnc_Refresh.sqf";
 }else{
 if (MiseryDebug) then {systemChat format["[Misery Loot Framework] Disabled loot refresh, due to refresh timer being set to %1 value...", MiseryLootrefreshtimer];};
 };
 
-[] execVM "\z\misery\addons\loot\functions\fnc_Dynamic.sqf"; 
+[] execVM "\z\misery\addons\loot\functions\fnc_Dynamic.sqf";
 
 {publicVariable(str _x)} forEach [
 MiseryGearFood,

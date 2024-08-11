@@ -1,8 +1,8 @@
 /*
 Misery Get Simplified loadout
 Returns listed array of players loadout, just clothing, etc...
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
  private _playerGear = [];
@@ -11,5 +11,5 @@ by TenuredCLOUD
     _playerGear pushBack (goggles player);
     _playerGear pushBack (headgear player);
     _playerGear pushBack (backpack player);
-    
-	_playerGear
+
+    _playerGear

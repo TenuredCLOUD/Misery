@@ -1,6 +1,6 @@
 /*
 Misery Mod actions (inventory GUI)
-Designed specifically for Misery mod 
+Designed specifically for Misery mod
 Code concepts from Drongo, reworked by TenuredCLOUD (with permission)
 */
 
@@ -19,8 +19,8 @@ _items=_items+(weapons player);
 //SP sleeping
 if !(MiseryMP) then {
 private _object = cursorObject;
-private _model = getModelInfo _object select 0; 
-	if (_model in ["woodenbed_01_f.p3d",
+private _model = getModelInfo _object select 0;
+    if (_model in ["woodenbed_01_f.p3d",
         "bed_big_a.p3d",
         "bed_husbands.p3d",
         "vojenska_palanda.p3d",
@@ -28,7 +28,7 @@ private _model = getModelInfo _object select 0;
         "sofa_01_f.p3d",
         "Land_ArmChair_01_F",
         "armchair.p3d",
-		"armchair_big.p3d",
+        "armchair_big.p3d",
         "postel_panelak1.p3d",
         "postel_panelak2.p3d",
         "sleeping_bag_f.p3d",
@@ -39,9 +39,9 @@ private _model = getModelInfo _object select 0;
         "ground_sheet_khaki_f.p3d",
         "ground_sheet_opfor_f.p3d",
         "ground_sheet_yellow_f.p3d"
-		]) then {
-	_out pushback ["Sleep","Sleep"];		
-	};
+        ]) then {
+    _out pushback ["Sleep","Sleep"];
+    };
 };
 
 //Vehicle data parsing:
@@ -55,76 +55,76 @@ MiseryTarget_VehName = typeOf MiseryTarget_Veh;
 
 if (Miseryfish) then {
 if (call EFUNC(fishing,Canfish)) then {
-	_out pushback [localize "STR_MISERY_STARTFISHING",localize "STR_MISERY_STARTFISHING"];
-}; 
+    _out pushback [localize "STR_MISERY_STARTFISHING",localize "STR_MISERY_STARTFISHING"];
+};
 };
 
 if (Miseryforage) then {
 if (call EFUNC(forage,Canforage)) then {
-	_out pushback [localize "STR_MISERY_FORAGE", localize "STR_MISERY_FORAGE"];
-}; 
+    _out pushback [localize "STR_MISERY_FORAGE", localize "STR_MISERY_FORAGE"];
+};
 };
 
 if (Miserycook) then {
 if (call Misery_fnc_NearFire) then {
-	_out pushback [localize "STR_MISERY_USEFIRE",localize "STR_MISERY_USEFIRE"];
-}; 
+    _out pushback [localize "STR_MISERY_USEFIRE",localize "STR_MISERY_USEFIRE"];
+};
 };
 
 if (Miserywatercoll) then {
 if (call Misery_fnc_NearWell) then {
-	_out pushback [localize "STR_MISERY_COLLECTWATER",localize "STR_MISERY_COLLECTWATER"];
-}; 
+    _out pushback [localize "STR_MISERY_COLLECTWATER",localize "STR_MISERY_COLLECTWATER"];
+};
 };
 
 if (Miserywoodcut) then {
 if (call Misery_fnc_NearTreeAxe) then {
-	_out pushback [localize "STR_MISERY_CHOPWOOD",localize "STR_MISERY_CHOPWOOD"];
-}; 
+    _out pushback [localize "STR_MISERY_CHOPWOOD",localize "STR_MISERY_CHOPWOOD"];
+};
 if (call Misery_fnc_NearTreeSaw) then {
-	_out pushback [localize "STR_MISERY_SAWWOOD",localize "STR_MISERY_SAWWOOD"];
-}; 
+    _out pushback [localize "STR_MISERY_SAWWOOD",localize "STR_MISERY_SAWWOOD"];
+};
 if (call Misery_fnc_NearTree) then {
-	_out pushback [localize "STR_MISERY_COLLECTWOOD",localize "STR_MISERY_COLLECTWOOD"];
-}; 
+    _out pushback [localize "STR_MISERY_COLLECTWOOD",localize "STR_MISERY_COLLECTWOOD"];
+};
 if ("Misery_woodenlog" in items player) then {
-	_out pushback [localize "STR_MISERY_SPLITWOODLOG",localize "STR_MISERY_SPLITWOODLOG"];
-}; 
+    _out pushback [localize "STR_MISERY_SPLITWOODLOG",localize "STR_MISERY_SPLITWOODLOG"];
+};
 };
 
 if (call Misery_fnc_NearJetFuel) then {
-	_out pushback [localize "STR_MISERY_USEJETFUELPUMP",localize "STR_MISERY_USEJETFUELPUMP"];
-	_out pushback [localize "STR_MISERY_JETFUELPUMPREQ",localize "STR_MISERY_JETFUELPUMPREQ"];
+    _out pushback [localize "STR_MISERY_USEJETFUELPUMP",localize "STR_MISERY_USEJETFUELPUMP"];
+    _out pushback [localize "STR_MISERY_JETFUELPUMPREQ",localize "STR_MISERY_JETFUELPUMPREQ"];
 };
 if (call Misery_fnc_NearFuel) then {
-	_out pushback [localize "STR_MISERY_USEFUELPUMP",localize "STR_MISERY_USEFUELPUMP"];
-	_out pushback [localize "STR_MISERY_FUELPUMPREQ",localize "STR_MISERY_FUELPUMPREQ"];
+    _out pushback [localize "STR_MISERY_USEFUELPUMP",localize "STR_MISERY_USEFUELPUMP"];
+    _out pushback [localize "STR_MISERY_FUELPUMPREQ",localize "STR_MISERY_FUELPUMPREQ"];
 };
 
 if (MiseryMine) then {
 if (call Misery_fnc_NearAnvil) then {
-	_out pushback [localize "STR_MISERY_USEANVIL",localize "STR_MISERY_USEANVIL"];
+    _out pushback [localize "STR_MISERY_USEANVIL",localize "STR_MISERY_USEANVIL"];
 };
 if (call Misery_fnc_NearForge) then {
-	_out pushback [localize "STR_MISERY_USEFORGE",localize "STR_MISERY_USEFORGE"];
+    _out pushback [localize "STR_MISERY_USEFORGE",localize "STR_MISERY_USEFORGE"];
 };
 if (call Misery_fnc_NearRockSource) then {
-	_out pushback [localize "STR_MISERY_MINEORE",localize "STR_MISERY_MINEORE"];
+    _out pushback [localize "STR_MISERY_MINEORE",localize "STR_MISERY_MINEORE"];
 };
 };
 
 if (MiseryCraft) then {
 if (call Misery_fnc_NearWorkbench) then {
-	_out pushback [localize "STR_MISERY_CRAFTINGWORKBENCH",localize "STR_MISERY_CRAFTINGWORKBENCH"];
+    _out pushback [localize "STR_MISERY_CRAFTINGWORKBENCH",localize "STR_MISERY_CRAFTINGWORKBENCH"];
 };
 };
 
 if (MiseryUsingiBuild) then {
 if (call Misery_fnc_Hashammer) then {
-	_out pushback [localize "STR_MISERY_IBUILDOPEN",localize "STR_MISERY_IBUILDOPEN"];
+    _out pushback [localize "STR_MISERY_IBUILDOPEN",localize "STR_MISERY_IBUILDOPEN"];
 };
 if (call Misery_fnc_HasSledghammer) then {
-	_out pushback [localize "STR_MISERY_USESLEDGE",localize "STR_MISERY_USESLEDGE"];
+    _out pushback [localize "STR_MISERY_USESLEDGE",localize "STR_MISERY_USESLEDGE"];
 };
 };
 
@@ -201,7 +201,7 @@ _out pushback [localize "STR_MISERY_STITCHWOUNDS",localize "STR_MISERY_STITCHWOU
 // if ((call Misery_fnc_NearLandVeh || call Misery_fnc_NearHeli || call Misery_fnc_NearPlane || call Misery_fnc_NearShip || call Misery_fnc_NearTank) && MiseryinVehiclerepairarea == true) then {
 // _out pushback [localize "STR_MISERY_REQREPAIRS",localize "STR_MISERY_REQREPAIRS"];
 // };
-	
+
 // if ((call Misery_fnc_NearLandVeh || call Misery_fnc_NearHeli || call Misery_fnc_NearPlane || call Misery_fnc_NearShip || call Misery_fnc_NearTank) && MiseryinVehiclerearmarea == true) then {
 // _out pushback [localize "STR_MISERY_REQRESUPPLY",localize "STR_MISERY_REQRESUPPLY"];
 // };
@@ -213,7 +213,7 @@ _out pushback [localize "STR_MISERY_STITCHWOUNDS",localize "STR_MISERY_STITCHWOU
 if (MiseryinVehiclerepairarea == true) then {
 _out pushback [localize "STR_MISERY_REQREPAIRS",localize "STR_MISERY_REQREPAIRS"];
 };
-	
+
 if (MiseryinVehiclerearmarea == true) then {
 _out pushback [localize "STR_MISERY_REQRESUPPLY",localize "STR_MISERY_REQRESUPPLY"];
 };
@@ -221,7 +221,7 @@ _out pushback [localize "STR_MISERY_REQRESUPPLY",localize "STR_MISERY_REQRESUPPL
 if (MiseryinRefuelzonearea == true) then {
 _out pushback [localize "STR_MISERY_REQREFUEL",localize "STR_MISERY_REQREFUEL"];
 };
-	
+
 if (MiseryinMedzonearea == true) then {
 _out pushback [localize "STR_MISERY_REQTREATMENT",localize "STR_MISERY_REQTREATMENT"];
 };
@@ -256,7 +256,7 @@ if (MiseryWBKIMS) then {
 
 //Money Collection:
 if ((([] call Misery_fnc_NearestCorpse_Money) select 0)) then {
-_out pushback ["Search for Money","Search For Money"];    
+_out pushback ["Search for Money","Search For Money"];
 };
 
 _out

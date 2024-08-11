@@ -1,7 +1,7 @@
 /*
 Custom action for GUI parser
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 private["_module","_units","_description","_script","_waitTime"];
@@ -15,6 +15,6 @@ if(_script=="")exitWith{};
 waitUntil{!isNil "MiseryActionsCustom"};
 sleep _waitTime;
 if((count _units)>0)exitWith{
-	if(player in _units)then{MiseryActionsCustom pushBack[_description,_script]};
+    if(player in _units)then{MiseryActionsCustom pushBack[_description,_script]};
 };
 MiseryActionsCustom pushBack[_description,_script];

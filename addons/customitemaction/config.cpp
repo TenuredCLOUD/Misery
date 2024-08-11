@@ -19,10 +19,10 @@ class CfgVehicles
     class Logic;
     class Module_F: Logic
     {
-		class ArgumentsBaseUnits
-		{
-			class Units;
-		};
+        class ArgumentsBaseUnits
+        {
+            class Units;
+        };
         class AttributesBase
         {
             class Default;
@@ -39,47 +39,47 @@ class CfgVehicles
     };
 
 class Misery_CustomItemAction: Module_F
-	{
-		scope=2;
-		displayName="Custom item usage";
-		icon = "\z\misery\addons\icons\swap.paa";
-		category="Misery_faction";
-		function="Misery_fnc_ModuleCustomItemAction";
-		functionPriority=1;
-		isGlobal=0;
-		isTriggerActivated=0;
-		isDisposable=0;
-		class Attributes: AttributesBase
-		{
-			class Misery_ClassName: Edit
-			{
-				property="Misery_ClassName";
-				displayName="Class name";
-				tooltip="The class name of the item (ex. FirstAidKit - doesn't require qoutes '')";
-				typeName="STRING";
-				defaultValue="""""";
-			};
-			class Misery_Script: Edit
-			{
-				property="Misery_Script";
-				displayName="Script path";
-				tooltip="Path to a script that will be run when this item is clicked on (ex. Myscripts\myscript.sqf - doesn't require qoutes '')";
-				typeName="STRING";
-				defaultValue="""""";
-			};
-			class ModuleDescription: ModuleDescription{};
-		};
-		class ModuleDescription: ModuleDescription
-		{
-			description[]=
-			{
-				"**Requires utilization of the Misery framework, cannot use this with Ravage**",
-				"Class name and path of custom item actions when the inventory item is double-clicked.",
-				"Place as many of these modules as you want, or for each inventory item you want to have an action.",
-				"Syncing and location have no effect."
-			};
-			//position=0;
-			duplicate=1;
-		};
-	};
+    {
+        scope=2;
+        displayName="Custom item usage";
+        icon = "\z\misery\addons\icons\swap.paa";
+        category="Misery_faction";
+        function="Misery_fnc_ModuleCustomItemAction";
+        functionPriority=1;
+        isGlobal=0;
+        isTriggerActivated=0;
+        isDisposable=0;
+        class Attributes: AttributesBase
+        {
+            class Misery_ClassName: Edit
+            {
+                property="Misery_ClassName";
+                displayName="Class name";
+                tooltip="The class name of the item (ex. FirstAidKit - doesn't require qoutes '')";
+                typeName="STRING";
+                defaultValue="""""";
+            };
+            class Misery_Script: Edit
+            {
+                property="Misery_Script";
+                displayName="Script path";
+                tooltip="Path to a script that will be run when this item is clicked on (ex. Myscripts\myscript.sqf - doesn't require qoutes '')";
+                typeName="STRING";
+                defaultValue="""""";
+            };
+            class ModuleDescription: ModuleDescription{};
+        };
+        class ModuleDescription: ModuleDescription
+        {
+            description[]=
+            {
+                "**Requires utilization of the Misery framework, cannot use this with Ravage**",
+                "Class name and path of custom item actions when the inventory item is double-clicked.",
+                "Place as many of these modules as you want, or for each inventory item you want to have an action.",
+                "Syncing and location have no effect."
+            };
+            //position=0;
+            duplicate=1;
+        };
+    };
 };

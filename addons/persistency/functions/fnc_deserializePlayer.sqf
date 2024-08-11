@@ -1,7 +1,7 @@
 /*
 Misery persistence
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 #include "\z\misery\addons\main\script_macros.hpp"
@@ -53,8 +53,8 @@ _MiseryWContainerKnowledge = [];
     ["MiseryRadiation", 0],
     ["MiseryFear", MIS_FEAR],
     ["Zinfectionlogged", nil],
-	["Turbidwaterlogged", nil],
-	["Rawmeatlogged", nil],
+    ["Turbidwaterlogged", nil],
+    ["Rawmeatlogged", nil],
     ["MiseryDebuffs", _MiseryDebuffs],
     ["Misery_Crafting_DataSet", _MiseryCraftingKnowledge],
     ["Misery_Cooking_DataSet", _MiseryCookingKnowledge],
@@ -65,17 +65,17 @@ _MiseryWContainerKnowledge = [];
 
 if !(MiseryMP) then {
     _unitDetails = _namespace getVariable ["unitDetails", []];
-    _playerLoadout = getUnitLoadout player; 
+    _playerLoadout = getUnitLoadout player;
 
     {
-        if (count _x < 4) then {continue;}; 
+        if (count _x < 4) then {continue;};
 
         _unitType = _x select 0;
         _unitLoadout = _x select 1;
         _unitStats = _x select 2;
         _unitACEdamage = _x select 3;
 
-        if (isNil "_unitType" || isNil "_unitLoadout" || isNil "_unitStats") then {continue;}; 
+        if (isNil "_unitType" || isNil "_unitLoadout" || isNil "_unitStats") then {continue;};
 
         if (_unitType == typeOf player && _unitLoadout isEqualTo _playerLoadout) then {
             continue;
@@ -101,7 +101,7 @@ if !(MiseryMP) then {
 };
 
 if!((_stats select 3)==worldName)then{
-	systemChat "Different worldName";
+    systemChat "Different worldName";
 };
 
 if!(MiseryMP)then{setDate(_stats select 4)};

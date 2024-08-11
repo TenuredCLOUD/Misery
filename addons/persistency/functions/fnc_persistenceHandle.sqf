@@ -1,8 +1,8 @@
 /*
 Misery MP handler
 Dedi + Hosted handle for respawn events: - great help from Haleks
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 #include "\z\misery\addons\main\script_macros.hpp"
@@ -105,7 +105,7 @@ if (MiserysurvivalSaveMode == 2) then {
 //     if (isNil {missionNamespace getVariable "ServerPersistHandles"}) then {
 //         missionNamespace setVariable ["ServerPersistHandles", true];
 
-//         //Haleks Ravage dedi MP handle disconnect code: (removes actions and unit after leaving a server) 
+//         //Haleks Ravage dedi MP handle disconnect code: (removes actions and unit after leaving a server)
 //         //- without handle player character dies in server after leaving corpse is left
 //         private _disconnectIndex = addMissionEventHandler ["HandleDisconnect",{ //server only // run on dedicated server or player host
 //             _unit = _this select 0;
@@ -124,7 +124,7 @@ if (MiserysurvivalSaveMode == 2) then {
 
 //         //Kill handle for Singleplayer and Multiplayer environments (enforces character data deletion when utilizing Persistent data)
 //         private _killedIndex = addMissionEventHandler ["EntityKilled", {
-// 	        params ["_unit", "_killer", "_instigator", "_useEffects"];
+//             params ["_unit", "_killer", "_instigator", "_useEffects"];
 //             if (_unit == player) then {
 //                 [_this select 0] call Misery_fnc_DeleteData;
 //             };
@@ -139,7 +139,7 @@ if (MiserysurvivalSaveMode == 2) then {
 //     player setVariable ["PlayerRespawnHandles", true];
 
 //     if (MiseryMP) then {
-//         private _respawnIndex = player addEventHandler ["Respawn",{ 
+//         private _respawnIndex = player addEventHandler ["Respawn",{
 //             params ["_unit", "_corpse"];
 //             _MiseryDebuffs = [];
 //             _MiseryCraftingKnowledge = [];
@@ -159,8 +159,8 @@ if (MiserysurvivalSaveMode == 2) then {
 //                 ["MiseryExposure", MIS_EXPOSURE],
 //                 ["MiseryFear", MIS_FEAR],
 //                 ["Zinfectionlogged", nil],
-// 		        ["Turbidwaterlogged", nil],
-// 		        ["Rawmeatlogged", nil],
+//                 ["Turbidwaterlogged", nil],
+//                 ["Rawmeatlogged", nil],
 //                 ["MiseryDebuffs", _MiseryDebuffs],
 //                 ["Misery_Crafting_DataSet", _MiseryCraftingKnowledge],
 //                 ["Misery_Cooking_DataSet", _MiseryCookingKnowledge],
@@ -171,7 +171,7 @@ if (MiserysurvivalSaveMode == 2) then {
 //             ];
 //         }];
 //     } else {
-//         private _respawnIndex = player addEventHandler ["Respawn",{ 
+//         private _respawnIndex = player addEventHandler ["Respawn",{
 //             params ["_unit", "_corpse"];
 //             _MiseryDebuffs = [];
 //             _MiseryCraftingKnowledge = [];
@@ -191,8 +191,8 @@ if (MiserysurvivalSaveMode == 2) then {
 //                 ["MiseryExposure", MIS_EXPOSURE],
 //                 ["MiseryFear", MIS_FEAR],
 //                 ["Zinfectionlogged", nil],
-// 		        ["Turbidwaterlogged", nil],
-// 		        ["Rawmeatlogged", nil],
+//                 ["Turbidwaterlogged", nil],
+//                 ["Rawmeatlogged", nil],
 //                 ["MiseryDebuffs", _MiseryDebuffs],
 //                 ["Misery_Crafting_DataSet", _MiseryCraftingKnowledge],
 //                 ["Misery_Cooking_DataSet", _MiseryCookingKnowledge],

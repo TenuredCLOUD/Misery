@@ -3,7 +3,7 @@
 /*
 Misery Cocaine usage
 Designed specifically for Misery mod (also compatible with Ravage)
-by TenuredCLOUD 
+by TenuredCLOUD
 */
 
 private _MSleepiness = player getVariable ["MiserySleepiness", MIS_SLEEP];
@@ -14,7 +14,7 @@ if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=TRUE};
 if (!hasInterface) exitWith {};
 
    if (goggles player in antirad_goggles || headgear player in antirad_headgears) exitWith {
-	titleText ["You cannot take narcotics with a mask on...", "PLAIN DOWN"];
+    titleText ["You cannot take narcotics with a mask on...", "PLAIN DOWN"];
 };
 
   if (alive player) then {
@@ -31,7 +31,7 @@ if !(MiseryMP) then {
 };
 
   waitUntil {
-  	(!alive player) or (time > _time)
+      (!alive player) or (time > _time)
   };
   if (!(alive player)) exitWith {};
 
@@ -50,9 +50,9 @@ if !(MiseryMP) then {
       sleep 15; //2
       ppEffectDestroy _ppInfected;
       veffect = false;
-    }; 
+    };
 
-if (MiseryACE) then { 
+if (MiseryACE) then {
 [player, "Misery_cocaine", 0, 1800, 25, 0, 25] call ace_medical_status_fnc_addMedicationAdjustment;
 };
 
@@ -60,12 +60,12 @@ player enableFatigue false;
   _time = time + 1200;
 
   [_time] spawn {
-  	private ["_TimeA"];
-  	_TimeA=_this select 0;
-  	waitUntil {
-  		(!alive player) or (time > _TimeA)
-  	};
-  	player enableFatigue true;
-  	player setFatigue 0;
+      private ["_TimeA"];
+      _TimeA=_this select 0;
+      waitUntil {
+          (!alive player) or (time > _TimeA)
+      };
+      player enableFatigue true;
+      player setFatigue 0;
   };
 };

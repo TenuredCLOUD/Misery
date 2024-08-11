@@ -1,7 +1,7 @@
 /*
 Misery refuel Vehicle Icon & name updater
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 disableSerialization;
@@ -19,7 +19,7 @@ if (!isNil "_Vehiclename") then {
     if (isClass _cfg) exitWith {
         _picPath = getText (_cfg >> "picture");
         _IconCtrl ctrlSetText _picPath;
-		_IconName ctrlSetText _Vehiclename;
+        _IconName ctrlSetText _Vehiclename;
 
     _cfg_2 = configFile >> "CfgMagazines" >> _this select 0;
     if (isClass _cfg_2) exitWith {

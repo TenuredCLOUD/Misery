@@ -1,7 +1,7 @@
 /*
 Misery Generator icon updater
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 disableSerialization;
@@ -20,6 +20,6 @@ private _Vehiclename = getText (configFile >> "CfgVehicles" >> _GeneratorType >>
 if (!isNil "_Vehiclename") then {
     _cfg = configFile >> "CfgVehicles" >> _GeneratorType;
     if (isClass _cfg) exitWith {
-		_IconName ctrlSetText _Vehiclename;
+        _IconName ctrlSetText _Vehiclename;
     };
 };

@@ -3,7 +3,7 @@
 /*
 Misery Beer usage
 Designed specifically for Misery mod (also compatible with Ravage)
-by TenuredCLOUD 
+by TenuredCLOUD
 */
 
 private _MSleepiness = player getVariable ["MiserySleepiness", MIS_SLEEP];
@@ -14,8 +14,8 @@ if (!hasInterface) exitWith {};
   if (alive player) exitwith {
 
   if (MiseryFearenabled) then {
-	player setVariable ["MiseryFear", (_MFear - 2)];
-	if (_MFear <= 0) then {player setVariable ["MiseryFear", 0]};
+    player setVariable ["MiseryFear", (_MFear - 2)];
+    if (_MFear <= 0) then {player setVariable ["MiseryFear", 0]};
   };
 
 //if ((MiseryNORVG=="ENABLED") && !(MiseryMP)) then {

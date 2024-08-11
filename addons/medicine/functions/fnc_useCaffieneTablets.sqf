@@ -3,7 +3,7 @@
 /*
 Misery Caffeine usage
 Designed specifically for Misery mod (also compatible with Ravage)
-by TenuredCLOUD 
+by TenuredCLOUD
 */
 
 private _MSleepiness = player getVariable ["MiserySleepiness", MIS_SLEEP];
@@ -11,11 +11,11 @@ private _MSleepiness = player getVariable ["MiserySleepiness", MIS_SLEEP];
 if (!hasInterface) exitWith {};
 
  if (goggles player in antirad_goggles || headgear player in antirad_headgears) exitWith {
-	titleText ["You cannot take medicine while wearing a mask...", "PLAIN DOWN"];
+    titleText ["You cannot take medicine while wearing a mask...", "PLAIN DOWN"];
 };
 
   if (alive player) then {
-    
+
     playSound3D ["\z\misery\addons\audio\sounds\inventory\Items\CrinklingPlastic.ogg", player, false, getPosASL player, 4, 1, 10];
 
   player removeItem "Misery_caffeine";
@@ -24,7 +24,7 @@ if (!hasInterface) exitWith {};
   _time = time + 60;
 
   waitUntil {
-  	(!alive player) or (time > _time)
+      (!alive player) or (time > _time)
   };
   if (!(alive player)) exitWith {};
 
@@ -47,18 +47,18 @@ if (!hasInterface) exitWith {};
       sleep 2;
       ppEffectDestroy _ppeffect;
       veffect = false;
-    }; 
+    };
 
   player enableFatigue false;
   _time = time + 600;
 
   [_time] spawn {
-  	private ["_TimeA"];
-  	_TimeA=_this select 0;
-  	waitUntil {
-  		(!alive player) or (time > _TimeA)
-  	};
-  	player enableFatigue true;
-  	player setFatigue 0;
+      private ["_TimeA"];
+      _TimeA=_this select 0;
+      waitUntil {
+          (!alive player) or (time > _TimeA)
+      };
+      player enableFatigue true;
+      player setFatigue 0;
   };
 };

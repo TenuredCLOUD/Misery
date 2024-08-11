@@ -1,8 +1,8 @@
 /*
-Misery Raw meat 
+Misery Raw meat
 Chances parasites
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 
@@ -20,12 +20,11 @@ if (alive player) exitwith {
 
   _time = time + 180;
     [_time] spawn {
-    	private ["_TimeA"];
-    	_TimeA=_this select 0;
-    	waitUntil {(!alive player) or (time > _TimeA)};
+        private ["_TimeA"];
+        _TimeA=_this select 0;
+        waitUntil {(!alive player) or (time > _TimeA)};
       player setVariable ["Rawmeatlogged", nil];
       private _MDebuffs = player getVariable "MiseryDebuffs";
-    	if (alive player) then {_MDebuffs pushBackUnique "PARASITES"; player setVariable ["MiseryDebuffs", _MDebuffs];}; //<< sick from raw meat
+        if (alive player) then {_MDebuffs pushBackUnique "PARASITES"; player setVariable ["MiseryDebuffs", _MDebuffs];}; //<< sick from raw meat
     };
 };
-	

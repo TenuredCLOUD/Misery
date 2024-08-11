@@ -1,10 +1,10 @@
 /*
 Misery Artifact spawner startup
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
-private _modules = allMissionObjects "Misery_ArtifactSpawner"; 
+private _modules = allMissionObjects "Misery_ArtifactSpawner";
 
 waitUntil {
     private _players = call Misery_misc_fnc_ListPlayers;
@@ -25,20 +25,20 @@ waitUntil {
                 private _ArtifactsSpawned = _module getVariable ["Misery_Artifacts_Spawned", false];
 
                 if (!(_ArtifactsSpawned) && isServer) then {
-            
+
                 _module setVariable ["Misery_Artifacts_Spawned", true, true];
 
                 [
-				_module,
-				(_module getvariable "Misery_ArtifactSpawnnumber"),
-				(_module getvariable "Misery_ArtifactSpawnradius")
-				] execVM "\z\misery\addons\artifacts\functions\fnc_GenerateArtifacts.sqf";
-    		};
-		};
+                _module,
+                (_module getvariable "Misery_ArtifactSpawnnumber"),
+                (_module getvariable "Misery_ArtifactSpawnradius")
+                ] execVM "\z\misery\addons\artifacts\functions\fnc_GenerateArtifacts.sqf";
+            };
+        };
     } forEach _modules;
 } forEach _players;
 
-    sleep Misery_ArtifactSpawnTimer; 
+    sleep Misery_ArtifactSpawnTimer;
     false // This loop will run indefinitely
 };
 

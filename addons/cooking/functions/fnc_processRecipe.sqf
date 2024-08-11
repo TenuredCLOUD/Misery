@@ -1,11 +1,11 @@
 /*
 Misery Cooking Framework Item processor
 Takes inputs from GUI and processes recipe (if it exists)
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
-#include "\a3\ui_f\hpp\definedikcodes.inc"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 
 private _dialog = findDisplay 982379;
 private _selectedOutputItem = lbData[1500, (lbCurSel 1500)];
@@ -56,10 +56,10 @@ if (count _matchedRecipe > 0) then {
         _ExitB ctrlShow false;
 
         if !((currentWeapon player)=="") then {
-	    player action["SWITCHWEAPON",player,player,-1];
-	    };
+        player action["SWITCHWEAPON",player,player,-1];
+        };
 
-	    player playAction "Gear";
+        player playAction "Gear";
 
         private _itemDisplayName = getText (configFile >> "CfgWeapons" >> _outputItem >> "displayName");
         if (_itemDisplayName == "") then {
@@ -71,14 +71,14 @@ if (count _matchedRecipe > 0) then {
     _CraftInterrupt = (findDisplay 982379) displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
     if (_key isEqualTo DIK_ESCAPE) then {
-        player setVariable ["Misery_ISCooking",false]; 
+        player setVariable ["Misery_ISCooking",false];
         player setVariable ["_TC_sound", false,true];
         switch (_cookingMethod) do {
             case "Cook": {
-                [parseText "<t font='PuristaMedium' size='1'>Cooking interrupted...</t>", true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;    
+                [parseText "<t font='PuristaMedium' size='1'>Cooking interrupted...</t>", true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
             };
             case "Boil": {
-                [parseText "<t font='PuristaMedium' size='1'>Boiling interrupted...</t>", true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;     
+                [parseText "<t font='PuristaMedium' size='1'>Boiling interrupted...</t>", true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
             };
         };
     };
@@ -109,10 +109,10 @@ private _delay = _craftingTime / count _text;
 }, _soundDummy] call CBA_fnc_waitUntilAndExecute;
 
 for "_i" from 0 to (count _text - 1) do {
-    if ((player getVariable "Misery_ISCooking") isEqualTo false) exitWith {}; 
+    if ((player getVariable "Misery_ISCooking") isEqualTo false) exitWith {};
     _displayedText = _displayedText + (_text select [_i, 1]);
     ctrlSetText [1001, _displayedText];
-    sleep _delay; 
+    sleep _delay;
 };
 
     if ((player getVariable "Misery_ISCooking") isEqualTo true) then {
@@ -120,7 +120,7 @@ for "_i" from 0 to (count _text - 1) do {
             private _requiredItem = _x select 0;
             private _requiredCount = _x select 1;
             private _removeAfterUse = if (_x select 2 isEqualType []) then {true} else {_x select 2};
-            
+
             for "_j" from 1 to _requiredCount do {
                 if (_requiredItem in items player && _removeAfterUse) then {
                     player removeItem _requiredItem;
@@ -141,7 +141,7 @@ for "_i" from 0 to (count _text - 1) do {
         };
         case "Boil": {
             _SuccessText = format ["You successfully boiled: %1...", _itemDisplayName];
-            ctrlSetText [1001, _SuccessText];    
+            ctrlSetText [1001, _SuccessText];
             player setVariable ["_TC_sound", false,true];
         };
     };
@@ -151,7 +151,7 @@ for "_i" from 0 to (count _text - 1) do {
     _ExitB ctrlShow true;
 
             player setVariable ["Misery_ISCooking", nil]; //terminate crafting flag
-            (findDisplay 982379) displayRemoveEventHandler ["KeyDown", _CraftInterrupt]; //Remove Display EH 
+            (findDisplay 982379) displayRemoveEventHandler ["KeyDown", _CraftInterrupt]; //Remove Display EH
     };
 
     } else {

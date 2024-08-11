@@ -3,19 +3,19 @@
 
 // class CfgPatches
 // {
-// 	class miseryassets
-// 	{
-// 		author="TenuredCLOUD";
-// 		name = "misery_assets";
-// 		units[]={"Misery_Forge","Misery_Anvil"};
-// 		weapons[]={};
-// 		magazines[]={};
-// 		ammo[]={};
-// 		requiredVersion = ARMABUILD;
-// 		version = MISERYVERSION;
-// 		versionStr = MISERYVERSION;
-// 		versionAr[] = {MISERYVERSTR};
-// 	};
+//     class miseryassets
+//     {
+//         author="TenuredCLOUD";
+//         name = "misery_assets";
+//         units[]={"Misery_Forge","Misery_Anvil"};
+//         weapons[]={};
+//         magazines[]={};
+//         ammo[]={};
+//         requiredVersion = ARMABUILD;
+//         version = MISERYVERSION;
+//         versionStr = MISERYVERSION;
+//         versionAr[] = {MISERYVERSTR};
+//     };
 // };
 
 class CfgPatches {

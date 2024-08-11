@@ -1,8 +1,8 @@
 /*
 Misery Trader Shop Categorizer processor
-Adds Category's to UI 
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Adds Category's to UI
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 waitUntil {!isNull findDisplay 982390};
@@ -18,7 +18,7 @@ _items = _shop select (_shop findIf {_x select 0 == "Items"}) select 1;
         _category = _x select 1;
     if (_categories findIf {_x isEqualTo _category} == -1) then {
         _categories pushBack _category;
-    	};
+        };
     } forEach _items;
 
 {

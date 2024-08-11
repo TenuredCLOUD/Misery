@@ -2,8 +2,8 @@
 
 /*
 Misery Random pharm usage
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 private _MHunger = player getVariable ["MiseryHunger", MIS_HUNGER];
@@ -16,7 +16,7 @@ if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=TRUE};
 if (!hasInterface) exitWith {};
 
   if (goggles player in antirad_goggles || headgear player in antirad_headgears) exitWith {
-	titleText ["You cannot take medicine while wearing a mask...", "PLAIN DOWN"];
+    titleText ["You cannot take medicine while wearing a mask...", "PLAIN DOWN"];
 };
 
   if (alive player) exitwith {
@@ -44,22 +44,22 @@ if (!hasInterface) exitWith {};
       sleep 10; //2
       ppEffectDestroy _ppInfected;
       veffect = false;
-    }; 
+    };
 
-          if (MiseryACE) then { 
+          if (MiseryACE) then {
           [player, "Misery_randommedication", 0, 300, -40, 0, -40] call ace_medical_status_fnc_addMedicationAdjustment;
           };
 
           player setVariable ["MiseryThirst", (_MThirst - 50)];
-	        player setVariable ["MiseryHunger", (_MHunger - 50)];
+            player setVariable ["MiseryHunger", (_MHunger - 50)];
 
           if (MiseryAilments == "ENABLED") then {
-          player setVariable ["MiseryPoison", (_MPoison + (random 20))]; //random poison amount  
-          }; 
+          player setVariable ["MiseryPoison", (_MPoison + (random 20))]; //random poison amount
+          };
 
           // if ((count(entities "Ravage_survival")) > 0) then {
           // player setVariable ["hunger", (player getvariable ["hunger",0]) - 50, true];
-          // player setVariable ["thirst", (player getvariable ["thirst",0]) - 50, true];  
+          // player setVariable ["thirst", (player getvariable ["thirst",0]) - 50, true];
           // };
 
           sleep 10;
@@ -67,12 +67,12 @@ if (!hasInterface) exitWith {};
           if (alive player) then  {
 
             if (MiseryACE) then {
-          	[player, true, 10, true] call ace_medical_fnc_setUnconscious; 
+              [player, true, 10, true] call ace_medical_fnc_setUnconscious;
             }else{
             [player] spawn Misery_fnc_Stun;
             };
 
           }else {
-          	[] spawn {sleep 15; player setUnconscious false;};
+              [] spawn {sleep 15; player setUnconscious false;};
           };
 };

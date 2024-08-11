@@ -1,7 +1,7 @@
 /*
 Misery Cigarette usage
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 #include "\z\misery\addons\main\script_macros.hpp"
@@ -12,20 +12,20 @@ if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=TRUE};
 private _random = [1, 10] call BIS_fnc_randomInt;
 private _MFear = player getVariable ["MiseryFear", MIS_FEAR];
 
-	if !("rvg_matches" in magazines player || "Misery_lighter" in items player) exitWith {titleText ["You need a lighter or match to smoke...", "PLAIN DOWN"];};
-	
-	if ("rvg_matches" in magazines player) then {
+    if !("rvg_matches" in magazines player || "Misery_lighter" in items player) exitWith {titleText ["You need a lighter or match to smoke...", "PLAIN DOWN"];};
 
-  	titleText ["You light up a cigarette...", "PLAIN DOWN"];
+    if ("rvg_matches" in magazines player) then {
 
-	player removeitem "Misery_cigarettepack"; //remove on start;
+      titleText ["You light up a cigarette...", "PLAIN DOWN"];
 
-	playSound3D ["\z\misery\addons\audio\sounds\immersion\Matchsmoking.ogg", player, false, getPosASL player, 4, 1, 10];
+    player removeitem "Misery_cigarettepack"; //remove on start;
 
-	//Remove some fear due to cig smoking:
+    playSound3D ["\z\misery\addons\audio\sounds\immersion\Matchsmoking.ogg", player, false, getPosASL player, 4, 1, 10];
+
+    //Remove some fear due to cig smoking:
   if (MiseryFearenabled) then {
-	player setVariable ["MiseryFear", (_MFear - 1.5)];
-	if (_MFear <= 0) then {player setVariable ["MiseryFear", 0]};
+    player setVariable ["MiseryFear", (_MFear - 1.5)];
+    if (_MFear <= 0) then {player setVariable ["MiseryFear", 0]};
   };
 
  sleep 1;
@@ -33,22 +33,22 @@ private _MFear = player getVariable ["MiseryFear", MIS_FEAR];
   if (MiseryACE) then {
   [player, "Misery_cigarettepack", 10, 300, -1, -1, -1] call ace_medical_status_fnc_addMedicationAdjustment;
   };
-  
+
 ////---------------------------------------------------
   if (_random > 5) exitwith {
 
-	player additem "Misery_cigarettepack"; 
+    player additem "Misery_cigarettepack";
 
-	//This snippet is an altered version from Anti rad pills usage from Ravage mod, permission was requested before use:
+    //This snippet is an altered version from Anti rad pills usage from Ravage mod, permission was requested before use:
 _compteur = 0;
 player setVariable ["_antirad", true];
 if (isNil {player getVariable "radMonitorON"}) then {
 };
 while {_compteur < 250} do {
-	_effectSpeed = 1 + random 2;
-	player setVariable ["_radToRemove", ((player getVariable ["_radToRemove", 0]) + _effectSpeed)];
-	_compteur = _compteur + _effectSpeed;
-	sleep 1;
+    _effectSpeed = 1 + random 2;
+    player setVariable ["_radToRemove", ((player getVariable ["_radToRemove", 0]) + _effectSpeed)];
+    _compteur = _compteur + _effectSpeed;
+    sleep 1;
 };
 player setVariable ["_antirad", nil];
 
@@ -65,20 +65,20 @@ player setVariable ["_antirad", true];
 if (isNil {player getVariable "radMonitorON"}) then {
 };
 while {_compteur < 250} do {
-	_effectSpeed = 1 + random 2;
-	player setVariable ["_radToRemove", ((player getVariable ["_radToRemove", 0]) + _effectSpeed)];
-	_compteur = _compteur + _effectSpeed;
-	sleep 1;
+    _effectSpeed = 1 + random 2;
+    player setVariable ["_radToRemove", ((player getVariable ["_radToRemove", 0]) + _effectSpeed)];
+    _compteur = _compteur + _effectSpeed;
+    sleep 1;
 };
 player setVariable ["_antirad", nil];
-	
+
 };
 
 ////---------------------------------------------------
 
 if (_random < 5) exitwith {
 
-player additem "Misery_cigarettepack"; 
+player additem "Misery_cigarettepack";
 
 //This snippet is an altered version from Anti rad pills usage from Ravage mod, permission was requested before use:
 _compteur = 0;
@@ -86,10 +86,10 @@ player setVariable ["_antirad", true];
 if (isNil {player getVariable "radMonitorON"}) then {
 };
 while {_compteur < 250} do {
-	_effectSpeed = 1 + random 2;
-	player setVariable ["_radToRemove", ((player getVariable ["_radToRemove", 0]) + _effectSpeed)];
-	_compteur = _compteur + _effectSpeed;
-	sleep 1;
+    _effectSpeed = 1 + random 2;
+    player setVariable ["_radToRemove", ((player getVariable ["_radToRemove", 0]) + _effectSpeed)];
+    _compteur = _compteur + _effectSpeed;
+    sleep 1;
 };
 player setVariable ["_antirad", nil];
 
@@ -107,8 +107,8 @@ if ("Misery_lighter" in items player) then {
 
   //Remove some fear due to cig smoking:
   if (MiseryFearenabled) then {
-	player setVariable ["MiseryFear", (_MFear - 1.5)];
-	if (_MFear <= 0) then {player setVariable ["MiseryFear", 0]};
+    player setVariable ["MiseryFear", (_MFear - 1.5)];
+    if (_MFear <= 0) then {player setVariable ["MiseryFear", 0]};
   };
 
   sleep 1;
@@ -120,18 +120,18 @@ if ("Misery_lighter" in items player) then {
 ////---------------------------------------------------
   if (_random > 5) exitwith {
 
-	player additem "Misery_cigarettepack"; 
+    player additem "Misery_cigarettepack";
 
-	//This snippet is an altered version from Anti rad pills usage from Ravage mod, permission was requested before use:
+    //This snippet is an altered version from Anti rad pills usage from Ravage mod, permission was requested before use:
 _compteur = 0;
 player setVariable ["_antirad", true];
 if (isNil {player getVariable "radMonitorON"}) then {
 };
 while {_compteur < 250} do {
-	_effectSpeed = 1 + random 2;
-	player setVariable ["_radToRemove", ((player getVariable ["_radToRemove", 0]) + _effectSpeed)];
-	_compteur = _compteur + _effectSpeed;
-	sleep 1;
+    _effectSpeed = 1 + random 2;
+    player setVariable ["_radToRemove", ((player getVariable ["_radToRemove", 0]) + _effectSpeed)];
+    _compteur = _compteur + _effectSpeed;
+    sleep 1;
 };
 player setVariable ["_antirad", nil];
 
@@ -148,20 +148,20 @@ player setVariable ["_antirad", true];
 if (isNil {player getVariable "radMonitorON"}) then {
 };
 while {_compteur < 250} do {
-	_effectSpeed = 1 + random 2;
-	player setVariable ["_radToRemove", ((player getVariable ["_radToRemove", 0]) + _effectSpeed)];
-	_compteur = _compteur + _effectSpeed;
-	sleep 1;
+    _effectSpeed = 1 + random 2;
+    player setVariable ["_radToRemove", ((player getVariable ["_radToRemove", 0]) + _effectSpeed)];
+    _compteur = _compteur + _effectSpeed;
+    sleep 1;
 };
 player setVariable ["_antirad", nil];
-	
+
 };
 
 ////---------------------------------------------------
 
 if (_random < 5) exitwith {
 
-player additem "Misery_cigarettepack"; 
+player additem "Misery_cigarettepack";
 
 //This snippet is an altered version from Anti rad pills usage from Ravage mod, permission was requested before use:
 _compteur = 0;
@@ -169,13 +169,13 @@ player setVariable ["_antirad", true];
 if (isNil {player getVariable "radMonitorON"}) then {
 };
 while {_compteur < 250} do {
-	_effectSpeed = 1 + random 2;
-	player setVariable ["_radToRemove", ((player getVariable ["_radToRemove", 0]) + _effectSpeed)];
-	_compteur = _compteur + _effectSpeed;
-	sleep 1;
+    _effectSpeed = 1 + random 2;
+    player setVariable ["_radToRemove", ((player getVariable ["_radToRemove", 0]) + _effectSpeed)];
+    _compteur = _compteur + _effectSpeed;
+    sleep 1;
 };
 player setVariable ["_antirad", nil];
 
-		};
-	};
-}; //End of code 
+        };
+    };
+}; //End of code

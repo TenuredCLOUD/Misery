@@ -1,17 +1,17 @@
 /*
 Misery Bank UI
-Watches UI for changes etc... 
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Watches UI for changes etc...
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 [{!isNull findDisplay 483729},
 {
-	[{
-		params ["_args", "_handle"];
-		if ( isNull findDisplay 483729 || (!alive player)) exitWith {
-			[_handle] call CBA_fnc_removePerFrameHandler;
-		};
+    [{
+        params ["_args", "_handle"];
+        if ( isNull findDisplay 483729 || (!alive player)) exitWith {
+            [_handle] call CBA_fnc_removePerFrameHandler;
+        };
 
 ctrlSetText [1000, format ["%1", Misery_BankName]];
 

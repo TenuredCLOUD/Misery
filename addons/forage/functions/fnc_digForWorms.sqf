@@ -6,7 +6,7 @@ if (call EFUNC(common,Canforage)) then {
 
 player playActionNow "Crouch";
 sleep 0.5;
-player playActionNow "Gear"; //Use Gear instead of medical actions - Med actions without rifle can cause frame lag spike 
+player playActionNow "Gear"; //Use Gear instead of medical actions - Med actions without rifle can cause frame lag spike
 
 sleep 3;
 
@@ -16,6 +16,6 @@ if (_random > 7) then {
 titleText ["You found some worms...", "PLAIN DOWN"];
 player additem "Misery_worms";
 }else{
-	titleText ["You didn't find anything...", "PLAIN DOWN"];
-	};
+    titleText ["You didn't find anything...", "PLAIN DOWN"];
+    };
 };

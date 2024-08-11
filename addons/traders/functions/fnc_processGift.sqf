@@ -1,8 +1,8 @@
 /*
 Misery Trader Shop Gift processor
 Processes Gifting of items + stock management
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 private ['_shop','_items','_stock','_playerFunds','_selectedItem','_index'];
@@ -23,12 +23,12 @@ _stock = _selectedItemData select 2;
 
 private _selectedItem = _selectedItemData select 0;
 
-private _displayName = getText (configFile >> "CfgWeapons" >> _selectedItem >> "displayName");  
+private _displayName = getText (configFile >> "CfgWeapons" >> _selectedItem >> "displayName");
 if (_displayName == "") then {
-    _displayName = getText (configFile >> "CfgMagazines" >> _selectedItem >> "displayName");  
+    _displayName = getText (configFile >> "CfgMagazines" >> _selectedItem >> "displayName");
 };
-if (_displayName == "") then {  
-    _displayName = getText (configFile >> "CfgVehicles" >> _selectedItem >> "displayName");   
+if (_displayName == "") then {
+    _displayName = getText (configFile >> "CfgVehicles" >> _selectedItem >> "displayName");
 };
 
 if (_trader getVariable ["giftClicked", false]) then {
@@ -48,9 +48,9 @@ if (_trader getVariable ["giftClicked", false]) then {
     ctrlSetText [1001, format ["Are you sure you want to gift %1?",_displayName]];
     _time = time + 5;
     [_time] spawn {
-	private ["_TimeA"];
-	_TimeA=_this select 0;
-	waitUntil {(time > _TimeA)};
+    private ["_TimeA"];
+    _TimeA=_this select 0;
+    waitUntil {(time > _TimeA)};
     _trader = player getVariable "currentTrader";
     _trader setVariable ["giftClicked", false];
     };

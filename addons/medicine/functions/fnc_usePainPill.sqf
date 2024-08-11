@@ -1,7 +1,7 @@
 /*
-Misery Pain pill usage 
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Misery Pain pill usage
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 MiseryACE=FALSE;
@@ -10,11 +10,11 @@ if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=TRUE};
 if (!hasInterface) exitWith {};
 
    if (goggles player in antirad_goggles || headgear player in antirad_headgears) exitWith {
-	titleText ["You cannot take medicine while wearing a mask...", "PLAIN DOWN"];
+    titleText ["You cannot take medicine while wearing a mask...", "PLAIN DOWN"];
 };
 
 if (alive player) then {
-  
+
   titleText ["You take a pain pill...", "PLAIN DOWN"];
 
   ["Misery_pain"] call Misery_fnc_ItemDecrement;

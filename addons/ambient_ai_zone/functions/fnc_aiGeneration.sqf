@@ -1,9 +1,9 @@
 /*
-Ambient AI Zones Generator 
+Ambient AI Zones Generator
 Generates highly reactive AI built to a scenario designers module layout
-Works with zone stepping, so different modules can generate different factions etc... (more robust that the ambient spawner) 
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Works with zone stepping, so different modules can generate different factions etc... (more robust that the ambient spawner)
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 private [
@@ -63,10 +63,10 @@ _aiHeadgearLoot = (_this select 11) call Misery_fnc_ParseArray2;
 _aiuniformArray = (_this select 12) call Misery_fnc_ParseArray2;
 _aivestArray = (_this select 13) call Misery_fnc_ParseArray2;
 _aibackpackArray = (_this select 14) call Misery_fnc_ParseArray2;
-_aimingAccuracy = _this select 15; 
-_aimingShake = _this select 16; 
-_aimingSpeed = _this select 17; 
-_Spawnchance = _this select 18; 
+_aimingAccuracy = _this select 15;
+_aimingShake = _this select 16;
+_aimingSpeed = _this select 17;
+_Spawnchance = _this select 18;
 _ModuleSpawnDistanceMIN = _this select 19;
 _ModuleSpawnDistanceMAX = _this select 20;
 
@@ -85,8 +85,8 @@ _AI_Spawnblacklist = [];
 {
     _marker = createMarker [format ["playerMarker_%1", _forEachIndex], getPos _x];
     _marker setMarkerShape "ELLIPSE";
-    _marker setMarkerSize [10, 10];  
-    _marker setMarkerColor "ColorWhite";   
+    _marker setMarkerSize [10, 10];
+    _marker setMarkerColor "ColorWhite";
     _marker setMarkerAlpha 0;
 
     _AI_Spawnblacklist pushBack _marker;
@@ -168,7 +168,7 @@ for "_i" from 1 to _numEntities do {
     if (!isNil "_aiWeapPrimaryLoot" && {count _aiWeapPrimaryLoot > 0}) then {[_unit, selectRandom _aiWeapPrimaryLoot, 0] call BIS_fnc_addWeapon};
     if (!isNil "_aiWeaplauncherLoot" && {count _aiWeaplauncherLoot > 0}) then {[_unit, selectRandom _aiWeaplauncherLoot, 0] call BIS_fnc_addWeapon};
     };
-    
+
     if (_randomweaploadout == 5) then {
     if (!isNil "_aiWeapSecondaryLoot" && {count _aiWeapSecondaryLoot > 0}) then {[_unit, selectRandom _aiWeapSecondaryLoot, 0] call BIS_fnc_addWeapon};
     if (!isNil "_aiWeaplauncherLoot" && {count _aiWeaplauncherLoot > 0}) then {[_unit, selectRandom _aiWeaplauncherLoot, 0] call BIS_fnc_addWeapon};
@@ -183,7 +183,7 @@ for "_i" from 1 to _numEntities do {
     if (_randombackpackloadout == 1) then {
     if (!isNil "_aibackpackArray" && {count _aibackpackArray > 0}) then {_unit addBackpack selectRandom _aibackpackArray};
     };
-    
+
     if (_randomNVGloadout == 1) then {
     if (!isNil "_aiNVGLoot" && {count _aiNVGLoot > 0}) then {_unit linkItem selectRandom _aiNVGLoot};
     };
@@ -226,44 +226,44 @@ for "_i" from 1 to _numEntities do {
     _unit setSkill ["aimingShake", _aimingShake];
     _unit setSkill ["aimingSpeed", _aimingSpeed];
 
-    if !(MiseryMP) then { 
+    if !(MiseryMP) then {
     if (side _unit isEqualTo side player) then {
         private _equipmentMass = loadAbs _unit / getNumber (configFile >> "CfgInventoryGlobalVariable" >> "maxSoldierLoad");
-	    private _recruitmentCost = 500 * round(_equipmentMass * 100);
-        private _Unitidentity = name _unit; 
+        private _recruitmentCost = 500 * round(_equipmentMass * 100);
+        private _Unitidentity = name _unit;
 
         [
-            _unit,														
-            format [localize "STR_MISERY_RECRUITUNIT", _Unitidentity, MiseryCurrencySymbol, [_recruitmentCost] call Misery_fnc_formatNumber], 													
-            "\a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa",	
-            "\a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa",	
-            "_this distance _target < 3",									
-            "_caller distance _target < 3",									
-            {},																
-            {},																
+            _unit,
+            format [localize "STR_MISERY_RECRUITUNIT", _Unitidentity, MiseryCurrencySymbol, [_recruitmentCost] call Misery_fnc_formatNumber],
+            "\a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa",
+            "\a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa",
+            "_this distance _target < 3",
+            "_caller distance _target < 3",
+            {},
+            {},
             {
                 params ["_target", "_caller", "_actionId", "_arguments"];
                 private _recruitmentCost = _arguments select 0;
                 private _Unitidentity = _arguments select 1;
-                private _playerMoney = _caller getVariable "MiseryCurrency"; 
+                private _playerMoney = _caller getVariable "MiseryCurrency";
                 if (_playerMoney >= _recruitmentCost) then {
-                    _caller setVariable ["MiseryCurrency", _playerMoney - _recruitmentCost]; 
-                    [_target] joinSilent _caller; 
+                    _caller setVariable ["MiseryCurrency", _playerMoney - _recruitmentCost];
+                    [_target] joinSilent _caller;
                     [_target,_actionId] call BIS_fnc_holdActionRemove;
                     private _formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_SUCCESS", _Unitidentity, MiseryCurrencySymbol, [_recruitmentCost] call Misery_fnc_formatNumber]];
-	                [_formattedText] call Misery_fnc_FormatToTile;
+                    [_formattedText] call Misery_fnc_FormatToTile;
                 }else{
                     private _formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_FAIL",_Unitidentity]];
-	                [_formattedText] call Misery_fnc_FormatToTile;
+                    [_formattedText] call Misery_fnc_FormatToTile;
                 };
-            },				
-            {},																
-            [_recruitmentCost, _Unitidentity],																
-            0.1,																
-            nil,																
-            false,															
-            false															
-        ] call BIS_fnc_holdActionAdd;	
+            },
+            {},
+            [_recruitmentCost, _Unitidentity],
+            0.1,
+            nil,
+            false,
+            false
+        ] call BIS_fnc_holdActionAdd;
         };
     };
 };
@@ -281,8 +281,8 @@ if (MiseryDebug) then {
     _markerName = format ["AI Group %1", _randID];
     _marker = createMarker [_markerName, getPosATL leader _group];
     _marker setMarkerType "mil_dot";
-    _marker setMarkerColor "ColorWhite"; 
-    _marker setMarkerSize [0.5, 0.5]; 
+    _marker setMarkerColor "ColorWhite";
+    _marker setMarkerSize [0.5, 0.5];
     _marker setMarkerAlpha 1;
     _marker setMarkerText "[DEBUG] Generated AI Group Spawn";
 };
@@ -290,14 +290,14 @@ if (MiseryDebug) then {
 Misery_active_AmbAI_Groups = Misery_active_AmbAI_Groups + 1;
 
 [_group] spawn {
-    private _group = _this select 0; 
+    private _group = _this select 0;
 
     while {{alive _x} count units _group > 0} do {
 
         {
             _x enableGunLights "forceOn";
         } forEach units _group;
-        
+
         private _world = worldSize;
         private _axis = worldSize / 2;
         private _center = [_axis, _axis , 0];
@@ -305,7 +305,7 @@ Misery_active_AmbAI_Groups = Misery_active_AmbAI_Groups + 1;
 
         private _waypoint = [_center, _axis, _axis, 10, 0, 0, 0] call BIS_fnc_findSafePos;
         [_group, _waypoint, 500, 10, "MOVE", "SAFE", "YELLOW", "LIMITED", "STAG COLUMN", "_group call CBA_fnc_searchNearby", [3, 6, 9]] call CBA_fnc_taskPatrol;
-        
+
         private _building = nearestBuilding leader _group;
         if (_building distance leader _group < 100 && ((round(random 100)) < (round(random 100)))) then {
             [_group] call CBA_fnc_taskDefend;

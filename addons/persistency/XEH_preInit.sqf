@@ -12,9 +12,9 @@ if (MiseryManualPData == 1 && MiserysurvivalSaveMode == 2) then {
     MiseryActions pushback [localize "STR_MISERY_PLAYERDATA", localize "STR_MISERY_PLAYERDATA"];
 };
 
-//respawn handle for stats (Singleplayer) - incase respawns exist: 
+//respawn handle for stats (Singleplayer) - incase respawns exist:
 if !(MiseryMP && MiserysurvivalSaveMode == 1) then {
-player addEventHandler ["Respawn",{ 
+player addEventHandler ["Respawn",{
 params ["_unit", "_corpse"];
 _MiseryDebuffs = [];
 _MiseryCraftingKnowledge = [];
@@ -25,8 +25,8 @@ _MiseryCraftingKnowledge = [];
             (_this select 0) setVariable [_x select 0, _x select 1];
         };
     } forEach [
-		["hunger", 100],
-    	["thirst", 100],
+        ["hunger", 100],
+        ["thirst", 100],
         ["MiseryThirst", MIS_THIRST],
         ["MiseryHunger", MIS_HUNGER],
         ["MiserySleepiness", MIS_SLEEP],
@@ -34,9 +34,9 @@ _MiseryCraftingKnowledge = [];
         ["MiseryInfection", MIS_INFECTION],
         ["MiseryExposure", MIS_EXPOSURE],
         ["MiseryFear", MIS_FEAR],
-		["Zinfectionlogged", nil],
-		["Turbidwaterlogged", nil],
-		["Rawmeatlogged", nil],
+        ["Zinfectionlogged", nil],
+        ["Turbidwaterlogged", nil],
+        ["Rawmeatlogged", nil],
         ["MiseryDebuffs", _MiseryDebuffs],
         ["Misery_Crafting_DataSet", _MiseryCraftingKnowledge],
         ["MiseryCurrency", 0],
@@ -47,7 +47,7 @@ _MiseryCraftingKnowledge = [];
         ["MiseryBreathFogSim", nil],
         ["MiseryBreath", false]
     ];
-	}];
+    }];
 };
 
 ADDON = true;

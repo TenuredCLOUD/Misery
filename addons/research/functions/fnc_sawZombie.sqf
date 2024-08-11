@@ -1,7 +1,7 @@
 /*
-Misery Zombie sawing 
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Misery Zombie sawing
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position player);
@@ -19,7 +19,7 @@ private _randomsaw = selectRandom
 15,
 {true},
 {
-deleteVehicle cursortarget; // delete corpse 
+deleteVehicle cursortarget; // delete corpse
 private _zombiesawed = selectRandom [
 "Misery_zombiehead",
 "Misery_zombiehand",
@@ -49,11 +49,11 @@ true
 
 [_soundDummy, [_randomsaw, 50]] remoteExec ["say3D", 0, _soundDummy];
 
-	[{
+    [{
     !(player getVariable ["_TC_sound", false])
-	},{
+    },{
     deleteVehicle _this;
-	}, _soundDummy] call CBA_fnc_waitUntilAndExecute
+    }, _soundDummy] call CBA_fnc_waitUntilAndExecute
 
 };
 

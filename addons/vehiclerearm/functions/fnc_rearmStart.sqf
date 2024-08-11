@@ -24,11 +24,11 @@ _resupplyPrice = 0;
 _Found = false;
 
 {
-	if ((_x select 0) == MiseryTarget_VehName) then {
-		_Array=_x;
-		_Found = true;
-		_resupplyPrice = _x select 4;
-	};
+    if ((_x select 0) == MiseryTarget_VehName) then {
+        _Array=_x;
+        _Found = true;
+        _resupplyPrice = _x select 4;
+    };
 } forEach Misery_Veh_Type;
 
 if !(_Found) exitWith {};
@@ -108,4 +108,4 @@ player setVariable ["Misery_Proc_Resupply", nil];
 (findDisplay 982383) displayRemoveEventHandler ["KeyDown", _RepairsInterrupt];
 
 };
-	};
+    };

@@ -6,7 +6,7 @@ if (call EFUNC(common,Canforage)) then {
 
 player playActionNow "Crouch";
 sleep 0.5;
-player playActionNow "Gear"; //Use Gear instead of medical actions - Med actions without rifle can cause frame lag spike 
+player playActionNow "Gear"; //Use Gear instead of medical actions - Med actions without rifle can cause frame lag spike
 sleep 3;
 
 private _random = [1, 10] call BIS_fnc_randomInt;
@@ -16,5 +16,5 @@ titleText ["You found some tinder...", "PLAIN DOWN"];
 player additem "Misery_tinder";
 }else{
 titleText ["You didn't find anything...", "PLAIN DOWN"];
-	};
+    };
 };

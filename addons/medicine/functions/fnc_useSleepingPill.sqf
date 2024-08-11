@@ -1,9 +1,9 @@
 #include "\z\misery\addons\main\script_macros.hpp"
 
 /*
-	Misery sleep pill usage
-	Designed specifically for Misery mod
-	by TenuredCLOUD
+    Misery sleep pill usage
+    Designed specifically for Misery mod
+    by TenuredCLOUD
 */
 
 _MSleepiness = player getVariable ["MiserySleepiness", MIS_SLEEP];
@@ -13,52 +13,52 @@ _MFearSleep = player getVariable "Misery_FearSleep";
 
 MiseryACE=false;
 if (isClass(configFile>>"cfgPatches">>"ace_main")) then {
-	MiseryACE=true
+    MiseryACE=true
 };
 
 // sleep system enabled pre-check:
 if (MiseryMP) exitWith {
-	titleText ["...", "PLAIN DOWN"]
+    titleText ["...", "PLAIN DOWN"]
 };
 
 if (!hasInterface) exitWith {};
 
 if (goggles player in antirad_goggles || headgear player in antirad_headgears) exitWith {
-	titleText ["You cannot take medicine while wearing a mask...", "PLAIN DOWN"];
+    titleText ["You cannot take medicine while wearing a mask...", "PLAIN DOWN"];
 };
 
 if (alive player) exitWith {
-	titleText ["You take a sleeping pill...", "PLAIN DOWN"];
+    titleText ["You take a sleeping pill...", "PLAIN DOWN"];
 
-	player removeitem "Misery_sleeppill";
+    player removeitem "Misery_sleeppill";
 
-	if (MiseryACE) then {
-		[player, "Misery_sleeppill", 10, 60, -10, 0, -10] call ace_medical_status_fnc_addMedicationAdjustment;
-	};
+    if (MiseryACE) then {
+        [player, "Misery_sleeppill", 10, 60, -10, 0, -10] call ace_medical_status_fnc_addMedicationAdjustment;
+    };
 
-	player setVariable ["MiserySleeppillstaken", (_MSleeppillstaken + 1)];
-	player setVariable ["Misery_FearSleep", true];
+    player setVariable ["MiserySleeppillstaken", (_MSleeppillstaken + 1)];
+    player setVariable ["Misery_FearSleep", true];
 
-	sleep 60;
+    sleep 60;
 
-	_Sleepingpilleffectdone = false;
+    _Sleepingpilleffectdone = false;
 
-	while { alive player && !(_Sleepingpilleffectdone) } do {
-		player setVariable ["MiserySleepiness", (_MSleepiness + 0.1)];
-		_MSleepiness = player getVariable ["MiserySleepiness", MIS_SLEEP];
-		_MIsSleeping = player getVariable "Misery_IsSleeping";
-		if (_MSleepiness >= 35 || (_MIsSleeping == true)) then {
-			_Sleepingpilleffectdone = true;
-		};
-		sleep 1;
-	};
+    while { alive player && !(_Sleepingpilleffectdone) } do {
+        player setVariable ["MiserySleepiness", (_MSleepiness + 0.1)];
+        _MSleepiness = player getVariable ["MiserySleepiness", MIS_SLEEP];
+        _MIsSleeping = player getVariable "Misery_IsSleeping";
+        if (_MSleepiness >= 35 || (_MIsSleeping == true)) then {
+            _Sleepingpilleffectdone = true;
+        };
+        sleep 1;
+    };
 
-	player setVariable ["MiserySleeppillstaken", (_MSleeppillstaken - 1)];
-	if ((_MSleeppillstaken) <= 0) then {
-		player setVariable ["MiserySleeppillstaken", 0];
-	};
+    player setVariable ["MiserySleeppillstaken", (_MSleeppillstaken - 1)];
+    if ((_MSleeppillstaken) <= 0) then {
+        player setVariable ["MiserySleeppillstaken", 0];
+    };
 
-	if (_MFearSleep) then {
-		player setVariable ["Misery_FearSleep", false];
-	};
+    if (_MFearSleep) then {
+        player setVariable ["Misery_FearSleep", false];
+    };
 };

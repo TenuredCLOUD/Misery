@@ -1,12 +1,12 @@
-private ["_found"];    
+private ["_found"];
 
-_found=FALSE;  
+_found=FALSE;
 
-_Check_items = items player;  
-if (vehicle player == player) then {     
-	
-	if (count (nearestObjects [player, 
-				[
+_Check_items = items player;
+if (vehicle player == player) then {
+
+    if (count (nearestObjects [player,
+                [
 "NMIB_Generic_Garage_B",
 "NMIB_Generic_Garage_D",
 "NMIB_Generic_Garage_A",
@@ -57,10 +57,10 @@ if (vehicle player == player) then {
 "NMIB_Generic_Window_B",
 "NMIB_Generic_Window_C",
 "NMIB_Generic_Window_D",
-"NMIB_Plot_Workbench"], 5, true, true]) > 0) then {      
-		_found = TRUE;};      
-		
-		if (_found)exitwith{};
-		
-		};  
-		_found
+"NMIB_Plot_Workbench"], 5, true, true]) > 0) then {
+        _found = TRUE;};
+
+        if (_found)exitwith{};
+
+        };
+        _found

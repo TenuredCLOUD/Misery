@@ -1,8 +1,8 @@
 /*
 Misery Macros Definitions - preprocesses base values of Gvars + Calculations
-Caches values to ram for much faster parsing etc... 
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Caches values to ram for much faster parsing etc...
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 #include "\x\cba\addons\main\script_macros_common.hpp"
@@ -29,13 +29,13 @@ by TenuredCLOUD
 #define MIS_SLEEP 0
 
 //Poison
-#define MIS_POISON 0 
+#define MIS_POISON 0
 
 //Infection
 #define MIS_INFECTION 0
 
 //Exposure
-#define MIS_EXPOSURE 0 
+#define MIS_EXPOSURE 0
 
 //Fear
 #define MIS_FEAR 0
@@ -102,16 +102,8 @@ by TenuredCLOUD
 //Weight deficiency calc
 #define MISERY_WEIGHTCALC(arg) (((arg) / 10) / 10) / 10
 
-// //File system 
-// #define \z\misery\addons\framework\scripts\arg) '\z\misery\addons\framework\scripts\arg.sqf'
-
-// //Function name / File path 
-// //#define arg1,arg2) arg1 = compileScript [arg2]; 
-
-#define arg1,arg2) [(arg2), PASS_STR(arg1)] call CBA_fnc_compileFunction;
-
 //remoteExec
-#define MIS_REXEC(arg1,arg2,arg3) arg1 remoteExec ['arg2', arg3]; 
+#define MIS_REXEC(arg1,arg2,arg3) arg1 remoteExec ['arg2', arg3];
 
 //IMS animations for compat:
 #define IMSSPRINT ["am_kulak_sprintf", "melee_sprintf", "melee_sprintfl","melee_sprintfr"]
@@ -120,48 +112,48 @@ by TenuredCLOUD
 #define ST_PICTURE  0x30
 
 #define ST_LEFT     0x00
-#define ST_LEFT		0
-#define ST_RIGHT	1
-#define ST_CENTER	2
-#define ST_UP		3
-#define ST_DOWN		4
-#define ST_VCENTER	5
-#define ST_SINGLE	0
-#define ST_MULTI	16
+#define ST_LEFT        0
+#define ST_RIGHT    1
+#define ST_CENTER    2
+#define ST_UP        3
+#define ST_DOWN        4
+#define ST_VCENTER    5
+#define ST_SINGLE    0
+#define ST_MULTI    16
 #define ST_TITLE_BAR 32
-#define ST_PICTURE	48
-#define ST_FRAME	64
+#define ST_PICTURE    48
+#define ST_FRAME    64
 #define ST_HUD_BACKGROUND 128
 #define ST_TILE_PICTURE 144
 #define ST_WITH_RECT 160
-#define ST_LINE	176
-#define ST_SHADOW	256
-#define ST_NO_RECT	512
+#define ST_LINE    176
+#define ST_SHADOW    256
+#define ST_NO_RECT    512
 
 // //Menu Dialog
-#define GUI_GRID_X	(0)
-#define GUI_GRID_Y	(0)
-#define GUI_GRID_W	(0.025)
-#define GUI_GRID_H	(0.04)
-#define GUI_GRID_WAbs	(1)
-#define GUI_GRID_HAbs	(1)
+#define GUI_GRID_X    (0)
+#define GUI_GRID_Y    (0)
+#define GUI_GRID_W    (0.025)
+#define GUI_GRID_H    (0.04)
+#define GUI_GRID_WAbs    (1)
+#define GUI_GRID_HAbs    (1)
 
-#define Misery_X			0.062
-#define Misery_Y			0
-#define Misery_H			1
-#define Misery_W			1
-#define Misery_BUTTON_H		0.069 * Misery_H
-#define Misery_BUTTON_W		0.1044 * Misery_W
-#define Misery_SPACE		0.005 * Misery_W
-#define Misery_COL			(Misery_X + Misery_SPACE)
-#define Misery_ROW			(Misery_Y + Misery_SPACE)
-#define Misery_COLINC		(Misery_BUTTON_W + Misery_SPACE)
-#define Misery_ROWINC		(Misery_BUTTON_H + Misery_SPACE)
-#define Misery_TEXTSIZE		0.03
+#define Misery_X            0.062
+#define Misery_Y            0
+#define Misery_H            1
+#define Misery_W            1
+#define Misery_BUTTON_H        0.069 * Misery_H
+#define Misery_BUTTON_W        0.1044 * Misery_W
+#define Misery_SPACE        0.005 * Misery_W
+#define Misery_COL            (Misery_X + Misery_SPACE)
+#define Misery_ROW            (Misery_Y + Misery_SPACE)
+#define Misery_COLINC        (Misery_BUTTON_W + Misery_SPACE)
+#define Misery_ROWINC        (Misery_BUTTON_H + Misery_SPACE)
+#define Misery_TEXTSIZE        0.03
 #define Misery_TEXTSIZEMED 0.025
 #define Misery_TEXTSIZESMALL 0.015
 #define Misery_TEXTSIZEVSMALL 0.01
-#define Misery_font		"PuristaMedium"
+#define Misery_font        "PuristaMedium"
 #define Misery_BUTTONCOLOUR0 "#(argb,8,8,3)color(1,1,1,0)"
 #define Misery_BUTTONCOLOUR "#(argb,8,8,3)color(1,1,1,1)"
 #define Misery_BUTTONCOLOUR2 "#(argb,8,8,3)color(0,0,0,1)"

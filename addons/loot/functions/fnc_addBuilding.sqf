@@ -1,7 +1,7 @@
 /*
-	Building add / parser for Loot calling
-	Designed specifically for Misery mod
-	Source Code by Drongo edited by TenuredCLOUD (with Permission)
+    Building add / parser for Loot calling
+    Designed specifically for Misery mod
+    Source Code by Drongo edited by TenuredCLOUD (with Permission)
 */
 
 #include "\z\misery\addons\main\script_macros.hpp"
@@ -33,79 +33,79 @@ _marker="";
 
 // Debug markers:
 if (MiseryDebug) then {
-	_marker=createMarkerLocal[format["%1", _b], (getPos _b)];
-	_marker setMarkerTypeLocal "mil_dot";_marker setMarkerColorLocal "ColorBlue"
+    _marker=createMarkerLocal[format["%1", _b], (getPos _b)];
+    _marker setMarkerTypeLocal "mil_dot";_marker setMarkerColorLocal "ColorBlue"
 };
 _bText=toLower(getText(configfile>>"CfgVehicles">>(typeOf _b)>>"editorSubcategory"));
 
 // Military building
 if ((_bText find "military")>-1) exitWith {
-	if (MiseryDebug) then {
-		_marker setMarkerTypeLocal "mil_box";
-		_marker setMarkerColorLocal "ColorGREEN"
-	};
-	if ((random 100) < MiseryLootChanceHouseM) then {
-		_positions=[_b]call BIS_fnc_buildingPositions;
-		{
-			if!(_x call EFUNC(common,IsInsideloot))then{
-				_positions=_positions-[_x]
-			}
-		}forEach _positions;
-		if ((count _positions)<1) then {
-			_positions=[_b]call BIS_fnc_buildingPositions
-		};
-		if ((count _positions)<1) exitWith {};
-		_pos=selectRandom _positions;
-		_crates=round((count _positions)/3);
-		[_pos, true] spawn FUNC(GenerateStash);
-		_positions=_positions-[_pos];
-		_crates=_crates-1;
-		while { true } do {
-			if ((count _positions)<1) exitWith {};
-			if (_crates<1) exitWith {};
-			if ((random 100)>75) then {
-				_pos=selectRandom _positions;
-				_positions=_positions-[_pos];
-				[_pos, true] spawn FUNC(GenerateStash);
-			};
-			_crates=_crates-1;
-		};
-	} else {
-		if (MiseryDebug) then {
-			_marker setMarkerColorLocal "ColorYellow"
-		}
-	};
+    if (MiseryDebug) then {
+        _marker setMarkerTypeLocal "mil_box";
+        _marker setMarkerColorLocal "ColorGREEN"
+    };
+    if ((random 100) < MiseryLootChanceHouseM) then {
+        _positions=[_b]call BIS_fnc_buildingPositions;
+        {
+            if!(_x call EFUNC(common,IsInsideloot))then{
+                _positions=_positions-[_x]
+            }
+        }forEach _positions;
+        if ((count _positions)<1) then {
+            _positions=[_b]call BIS_fnc_buildingPositions
+        };
+        if ((count _positions)<1) exitWith {};
+        _pos=selectRandom _positions;
+        _crates=round((count _positions)/3);
+        [_pos, true] spawn FUNC(GenerateStash);
+        _positions=_positions-[_pos];
+        _crates=_crates-1;
+        while { true } do {
+            if ((count _positions)<1) exitWith {};
+            if (_crates<1) exitWith {};
+            if ((random 100)>75) then {
+                _pos=selectRandom _positions;
+                _positions=_positions-[_pos];
+                [_pos, true] spawn FUNC(GenerateStash);
+            };
+            _crates=_crates-1;
+        };
+    } else {
+        if (MiseryDebug) then {
+            _marker setMarkerColorLocal "ColorYellow"
+        }
+    };
 };
 
 // civilian building
 if ((random 100) < MiseryLootChanceHouse) then {
-	_positions=[_b]call BIS_fnc_buildingPositions;
-	{
-		if!(_x call EFUNC(common,IsInsideloot))then{
-			_positions=_positions-[_x]
-		}
-	}forEach _positions;
-	if ((count _positions)<1) then {
-		_positions=[_b]call BIS_fnc_buildingPositions
-	};
-	if ((count _positions)<1) exitWith {};
-	_pos=selectRandom _positions;
-	_crates=round((count _positions)/3);
-	[_pos, false] spawn FUNC(GenerateStash);
-	_positions=_positions-[_pos];
-	_crates=_crates-1;
-	while { true } do {
-		if ((count _positions)<1) exitWith {};
-		if (_crates<1) exitWith {};
-		if ((random 100)>75) then {
-			_pos=selectRandom _positions;
-			_positions=_positions-[_pos];
-			[_pos, false] spawn FUNC(GenerateStash);
-		};
-		_crates=_crates-1;
-	};
+    _positions=[_b]call BIS_fnc_buildingPositions;
+    {
+        if!(_x call EFUNC(common,IsInsideloot))then{
+            _positions=_positions-[_x]
+        }
+    }forEach _positions;
+    if ((count _positions)<1) then {
+        _positions=[_b]call BIS_fnc_buildingPositions
+    };
+    if ((count _positions)<1) exitWith {};
+    _pos=selectRandom _positions;
+    _crates=round((count _positions)/3);
+    [_pos, false] spawn FUNC(GenerateStash);
+    _positions=_positions-[_pos];
+    _crates=_crates-1;
+    while { true } do {
+        if ((count _positions)<1) exitWith {};
+        if (_crates<1) exitWith {};
+        if ((random 100)>75) then {
+            _pos=selectRandom _positions;
+            _positions=_positions-[_pos];
+            [_pos, false] spawn FUNC(GenerateStash);
+        };
+        _crates=_crates-1;
+    };
 } else {
-	if (MiseryDebug) then {
-		_marker setMarkerColorLocal "ColorYellow"
-	}
+    if (MiseryDebug) then {
+        _marker setMarkerColorLocal "ColorYellow"
+    }
 };

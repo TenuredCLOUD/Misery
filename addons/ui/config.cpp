@@ -2,8 +2,8 @@
 
 /*
 Misery UI Mod Config
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 class CfgPatches {
@@ -42,6 +42,6 @@ class CfgPatches {
 
 class RscTitles
 {
-	#include "\z\misery\addons\ui\menus\MiseryGeigerUI.hpp"
+    #include "\z\misery\addons\ui\menus\MiseryGeigerUI.hpp"
   #include "\z\misery\addons\ui\menus\MiseryERUUI.hpp"
 };

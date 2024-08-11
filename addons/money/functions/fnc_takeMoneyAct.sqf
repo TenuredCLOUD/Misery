@@ -1,8 +1,8 @@
 /*
 Misery Take Money UI Action process
 Processes money taking from corpses
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 #include "\z\misery\addons\main\script_macros.hpp"
@@ -13,17 +13,17 @@ by TenuredCLOUD
     private _CorpseFunds = _Corpse getVariable "MiseryCurrency";
 
     private _amount = ctrlText ((findDisplay 358492) displayCtrl 1400);
-    _amount = parseNumber _amount; 
+    _amount = parseNumber _amount;
 
     if (_amount > _CorpseFunds) then {
         _amount = _CorpseFunds;
     };
 
-	private _CurrentFunds = player getVariable "MiseryCurrency";
+    private _CurrentFunds = player getVariable "MiseryCurrency";
     player setVariable ["MiseryCurrency", _CurrentFunds + _amount];
     _Corpse setVariable ["MiseryCurrency", _CorpseFunds - _amount, true];
 
-	[] execVM '\z\misery\addons\money\fnc_TakeMoney.sqf'; //Refresh main UI 
+    [] execVM '\z\misery\addons\money\fnc_TakeMoney.sqf'; //Refresh main UI
 
 }, []] call CBA_fnc_waitUntilAndExecute;
 

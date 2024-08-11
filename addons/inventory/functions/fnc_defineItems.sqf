@@ -1,6 +1,6 @@
 /*
 Defined item usage, custom item params
-Designed specifically for Misery mod 
+Designed specifically for Misery mod
 Source code Drongo, expanded upon by TenuredCLOUD
 */
 
@@ -8,25 +8,25 @@ Source code Drongo, expanded upon by TenuredCLOUD
 // className
 // |  hunger increase / decrease
 // |  | thirst increase / decrease
-// |  | | add to debuffs 
-// |  | | |  remove from debuffs	
+// |  | | add to debuffs
+// |  | | |  remove from debuffs
 // |  | | |  |  script on use
 // |  | | |  |  |  KEEP or remove on use ("KEEP" / "")
 // |  | | |  |  |  |  sound played on use (Must be defined)
-// |  | | |  |	|  |  |  check for gasmask (BOOL)
-// |  | | |  |	|  |  |	 |     check for canopener (BOOL)
-// |  | | |  |	|  |  |	 |	   |     delay (numeric value)
-// |  | | |  |	|  |  |	 |	   |	 | rads 
-// |  | | |  |	|  |  |	 |	   |	 | | 	
-// |  | | |  |	|  |  |	 |	   |	 | | exposure
-// |  | | |  |  |  |  |  |     |     | | | 
-// |  | | |  |  |  |  |  |     |     | | | 
+// |  | | |  |    |  |  |  check for gasmask (BOOL)
+// |  | | |  |    |  |  |     |     check for canopener (BOOL)
+// |  | | |  |    |  |  |     |       |     delay (numeric value)
+// |  | | |  |    |  |  |     |       |     | rads
+// |  | | |  |    |  |  |     |       |     | |
+// |  | | |  |    |  |  |     |       |     | | exposure
+// |  | | |  |  |  |  |  |     |     | | |
+// |  | | |  |  |  |  |  |     |     | | |
 //["",0,0,[],[],"","","",false,false,0,0,0];
 
 private _items=[
-	
+
 //Rvg Tents, sleeping bag:
-["rvg_sleepingBag_Blue",0,0,[],[],"Use\init\inventory\Rvgtents\unfold.sqf","KEEP","",false,false,0,0,0], //Rvg action 
+["rvg_sleepingBag_Blue",0,0,[],[],"Use\init\inventory\Rvgtents\unfold.sqf","KEEP","",false,false,0,0,0], //Rvg action
 ["rvg_foldedTent_blue",0,0,[],[],"Use\init\inventory\Rvgtents\unpackblue.sqf","KEEP","",false,false,0,0,0], //Rvg action
 ["rvg_foldedTent",0,0,[],[],"Use\init\inventory\Rvgtents\unpackgreen.sqf","KEEP","",false,false,0,0,0], //Rvg action
 ["rvg_foldedTent_grey",0,0,[],[],"Use\init\inventory\Rvgtents\unpackgrey.sqf","KEEP","",false,false,0,0,0], //Rvg action
@@ -37,7 +37,7 @@ private _items=[
 
 //Misery Research tools:
 ["Misery_BONEsaw",0,0,[],[],"Use\init\inventory\Research\Sawzombie.sqf","KEEP","",false,false,0,0,0],
-["Misery_GuttingKnife",0,0,[],[],"Use\init\inventory\Research\Skinzombie.sqf","KEEP","",false,false,0,0,0], 
+["Misery_GuttingKnife",0,0,[],[],"Use\init\inventory\Research\Skinzombie.sqf","KEEP","",false,false,0,0,0],
 
 //Rvg gutting knife:
 ["rvg_guttingKnife",0,0,[],[],"\ravage\actions\gut.sqf","KEEP","",false,false,0,0,0],
@@ -78,7 +78,7 @@ private _items=[
 ["rvg_Boar_Meat",30,0,[],[],"Use\init\inventory\Food\rawmeat.sqf","","eating_8",true,false,15,random 250,0],
 ["rvg_Boar_Meat_Cooked",30,0,[],[],"","","eating_0",true,false,15,random 250,0],
 ["rvg_Buffalo_Meat",35,0,[],[],"Use\init\inventory\Food\rawmeat.sqf","","eating_6",true,false,15,random 250,0],
-["rvg_Buffalo_Meat_Cooked",35,0,[],[],"","","eating_6",true,false,15,random 250,0], 
+["rvg_Buffalo_Meat_Cooked",35,0,[],[],"","","eating_6",true,false,15,random 250,0],
 
 //Misery food:
 ["Misery_rawfish_1",25,0,[],[],"Use\init\inventory\Food\rawmeat.sqf","","eating_8",true,false,15,random 250,0],
@@ -175,7 +175,7 @@ private _items=[
 MiserysurvivalItemEffects = [] + _items;
 
 {
-	MiserysurvivalItems pushBackUnique(toUpper(_x select 0));
+    MiserysurvivalItems pushBackUnique(toUpper(_x select 0));
 }forEach _items;
 
 MiserysurvivalItems

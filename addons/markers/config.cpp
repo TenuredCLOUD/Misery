@@ -15,8 +15,8 @@ class CfgPatches {
 class CfgMarkerClasses
 {
     class Misery_map_markers
-	{
-		displayName="Misery";
+    {
+        displayName="Misery";
     };
 
 };
@@ -166,7 +166,7 @@ class CfgMarkers
         markerClass = "Misery_map_markers";
     };
 
-	class Refueler
+    class Refueler
     {
         name="Refuel";
         icon="\z\misery\addons\icons\mappack\pumpnozzle.paa";
@@ -177,7 +177,7 @@ class CfgMarkers
         markerClass = "Misery_map_markers";
     };
 
-	 class MedicalMap
+     class MedicalMap
     {
         name="Medical";
         icon="\z\misery\addons\icons\mappack\medical.paa";
@@ -188,7 +188,7 @@ class CfgMarkers
         markerClass = "Misery_map_markers";
     };
 
-	class SafeZoneMap
+    class SafeZoneMap
     {
         name="Safezone";
         icon="\z\misery\addons\icons\mappack\safezone.paa";
@@ -199,7 +199,7 @@ class CfgMarkers
         markerClass = "Misery_map_markers";
     };
 
-	class HeliWreckMap
+    class HeliWreckMap
     {
         name="Helicopter Wreck";
         icon="\z\misery\addons\icons\mappack\Heliwreck.paa";

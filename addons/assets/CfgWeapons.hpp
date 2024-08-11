@@ -1,6 +1,6 @@
 
 class CfgWeapons {
-class ItemCore; 
+class ItemCore;
 
 class Misery_ItemCore : ItemCore {
   type = 4096;
@@ -9,10 +9,10 @@ class Misery_ItemCore : ItemCore {
   simulation = "ItemMineDetector";
 };
 
-class InventoryItem_Base_F;	
-class InventoryFirstAidKitItem_Base_F;	
-class MedikitItem;	
-class SlotInfo;	
+class InventoryItem_Base_F;
+class InventoryFirstAidKitItem_Base_F;
+class MedikitItem;
+class SlotInfo;
 
 class Misery_Pickaxe : Misery_ItemCore {
   displayName = "$STR_MISERY_PICKAXE_DISPLAYNAME";
@@ -231,30 +231,30 @@ class Misery_CanOpener : Misery_ItemCore {
 };
 
 class Misery_CanteenEmpty : Misery_ItemCore {
-	scope = 2;
-	author = "TenuredCLOUD";
-	displayName = "$STR_MISERY_CANTEENEMPTY_DISPLAYNAME";
+    scope = 2;
+    author = "TenuredCLOUD";
+    displayName = "$STR_MISERY_CANTEENEMPTY_DISPLAYNAME";
   descriptionShort = "$STR_MISERY_CANTEENEMPTY_DESCRIPTION";
   picture = "\z\misery\addons\assets\data\canteen.paa";
   model = "a3\structures_f_epa\items\food\canteen_f.p3d";
-	
+
   class ItemInfo : InventoryItem_Base_F {
     mass = 30;
   };
-	};
+    };
 
   class Misery_WaterBottleEmpty : Misery_ItemCore {
-	scope = 2;
-	author = "TenuredCLOUD";
-	displayName = "$STR_MISERY_WATERBOTTLEEMPTY_DISPLAYNAME";
+    scope = 2;
+    author = "TenuredCLOUD";
+    displayName = "$STR_MISERY_WATERBOTTLEEMPTY_DISPLAYNAME";
   descriptionShort = "$STR_MISERY_WATERBOTTLEEMPTY_DESCRIPTION";
   picture = "\z\misery\addons\assets\data\waterbottle.paa";
   model = "a3\structures_f_epa\items\food\bottleplastic_v2_f.p3d";
-	
+
   class ItemInfo : InventoryItem_Base_F {
     mass = 15;
   };
-	};
+    };
 
   class Misery_Cereal : Misery_ItemCore {
   displayName = "$STR_MISERY_BEARENERGY_DISPLAYNAME";
@@ -280,7 +280,7 @@ class Misery_CanteenEmpty : Misery_ItemCore {
   class ItemInfo : InventoryItem_Base_F {
     mass = 2;
   };
-};  
+};
 
 class Misery_Drymilk : Misery_ItemCore {
   displayName = "$STR_MISERY_BEARENERGY_DISPLAYNAME";
@@ -293,7 +293,7 @@ class Misery_Drymilk : Misery_ItemCore {
   class ItemInfo : InventoryItem_Base_F {
     mass = 4;
   };
-}; 
+};
 
 class Misery_CannedBacon : Misery_ItemCore {
   displayName = "$STR_MISERY_BEARENERGY_DISPLAYNAME";
@@ -306,7 +306,7 @@ class Misery_CannedBacon : Misery_ItemCore {
   class ItemInfo : InventoryItem_Base_F {
     mass = 10;
   };
-}; 
+};
 
 class Misery_CannedBeans : Misery_ItemCore {
   displayName = "$STR_MISERY_BEARENERGY_DISPLAYNAME";
@@ -319,7 +319,7 @@ class Misery_CannedBeans : Misery_ItemCore {
   class ItemInfo : InventoryItem_Base_F {
     mass = 10;
   };
-}; 
+};
 
 class Misery_leadcontaineropen : Misery_ItemCore {
   displayName = "$STR_MISERY_LEADCONTAINEROPEN_DISPLAYNAME";
@@ -612,7 +612,7 @@ class Misery_coffeebrewed : Misery_ItemCore {
   picture = "\z\misery\addons\assets\data\coffeebrewed.paa";
   scope = 2;
   scopeCurator = 2;
-  
+
   class ItemInfo : InventoryItem_Base_F {
     mass = 10;
   };
@@ -1422,4 +1422,4 @@ class Misery_RFHighNobattery: Misery_ItemCore {
   };
 };
 
-}; 
+};

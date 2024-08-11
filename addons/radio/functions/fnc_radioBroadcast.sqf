@@ -4,8 +4,8 @@
 // Misery Radio audio looper / Broadcaster
 // Synces to all players that possess a radio (NOT JIP COMPAT)
 // Runs strictly on Server for GLOBAL effect
-// Designed specifically for Misery mod 
-// by TenuredCLOUD 
+// Designed specifically for Misery mod
+// by TenuredCLOUD
 // */
 
 // private["_module","_SoundfileArray","_SoundClassArray","RadioObjectArray","_timeafter","_TimeA","_timeafter2","_TimeB"];
@@ -51,7 +51,7 @@
 // {
 //     _object = _x;
 //     playSound3D [MiseryRadioObjectBroadcast, _object, false, getPosASL _object, 1, 1, 100];
-// } forEach _RadioSources; 
+// } forEach _RadioSources;
 
 // if(MiseryDebug)then{systemChat "Misery Radio Broadcasting to Radio objects..."};
 
@@ -76,4 +76,3 @@
 // };
 
 
-	

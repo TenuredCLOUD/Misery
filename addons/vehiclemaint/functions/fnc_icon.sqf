@@ -1,7 +1,7 @@
 /*
 Misery Vehicle Maintenance Vehicle icon updater
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 disableSerialization;
@@ -13,7 +13,7 @@ private _IconCtrl = _dialog displayCtrl 1200;
 private _IconName = _dialog displayCtrl 1002;
 
 if (MiseryTarget_VehName isEqualTo "") exitWith {
-        _IconName ctrlSetText "No Vehicle to Repair..."; 
+        _IconName ctrlSetText "No Vehicle to Repair...";
     };
 
 private _Vehiclename = getText (configFile >> "CfgVehicles" >> MiseryTarget_VehName >> "displayName");
@@ -23,6 +23,6 @@ if (!isNil "_Vehiclename") then {
     if (isClass _cfg) exitWith {
         _picPath = getText (_cfg >> "editorPreview");
         _IconCtrl ctrlSetText _picPath;
-		_IconName ctrlSetText _Vehiclename;
+        _IconName ctrlSetText _Vehiclename;
     };
 };

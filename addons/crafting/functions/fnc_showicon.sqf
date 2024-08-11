@@ -1,18 +1,18 @@
 /*
 Misery Crafting Framework Icon updater
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 disableSerialization;
 
 [{!isNull findDisplay 982376},
 {
-	[{
-		params ["_args", "_handle"];
-		if ( isNull findDisplay 982376 || (!alive player)) exitWith {
-			[_handle] call CBA_fnc_removePerFrameHandler;
-		};
+    [{
+        params ["_args", "_handle"];
+        if ( isNull findDisplay 982376 || (!alive player)) exitWith {
+            [_handle] call CBA_fnc_removePerFrameHandler;
+        };
 
 private _dialog = findDisplay 982376;
 private _list = _dialog displayCtrl 1500;
@@ -26,7 +26,7 @@ private _IconCtrl = _dialog displayCtrl 1501;
         _picPath = getText (_cfg >> "picture");
         _IconCtrl ctrlSetText _picPath;
     };
-    
+
     _cfg = configFile >> "CfgMagazines" >> _selectedItem;
     if (isClass _cfg) exitWith {
         _picPath = getText (_cfg >> "picture");

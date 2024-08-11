@@ -1,10 +1,10 @@
 /*
 Misery Repairing Shop UI processor
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
-#include "\a3\ui_f\hpp\definedikcodes.inc"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 
 private ["_playercash","_module","_dialog","_PurchaseB","_ExitB","_Vehiclename","_target","_repairPrice","_Found","_RepairsInterrupt","_playercash","_text","_displayedText","_delay","_progressIndicator","_displaySuccess"];
 
@@ -12,23 +12,23 @@ _module=(entities "Misery_VehRepairSettings")select 0;
 Mis_Mechcurrencytype =_module getvariable "Misery_Mechcurrency";
 Mis_Mechfundstype =_module getvariable "Misery_Mechfundstype";
 
-_dialog = findDisplay 982382; 
+_dialog = findDisplay 982382;
 _PurchaseB = _dialog displayCtrl 1600;
 _ExitB = _dialog displayCtrl 1601;
 
 _Vehiclename = getText (configFile >> "CfgVehicles" >> MiseryTarget_VehName >> "displayName");
 
-_target = MiseryTarget_Veh; 
+_target = MiseryTarget_Veh;
 
 _repairPrice = 0;
-_Found = false; 
+_Found = false;
 
 {
-	if ((_x select 0) == MiseryTarget_VehName) then {
-		_Array=_x;
-		_Found = true;
-		_repairPrice = _x select 3; 
-	};
+    if ((_x select 0) == MiseryTarget_VehName) then {
+        _Array=_x;
+        _Found = true;
+        _repairPrice = _x select 3;
+    };
 } forEach Misery_Veh_Type;
 
 if !(_Found) exitWith {};
@@ -38,8 +38,8 @@ player setVariable ["Misery_Proc_Repairs", true];
     _RepairsInterrupt = (findDisplay 982382) displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
     if (_key isEqualTo DIK_ESCAPE) then {
-        player setVariable ["Misery_Proc_Repairs",false]; 
-                [parseText "<t font='PuristaMedium' size='1'>Repairs interrupted...</t>", true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;    
+        player setVariable ["Misery_Proc_Repairs",false];
+                [parseText "<t font='PuristaMedium' size='1'>Repairs interrupted...</t>", true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
         };
 }];
 
@@ -65,15 +65,15 @@ _ExitB ctrlShow true;
 
 _text = "Repairing...";
 _displayedText = "";
-_delay = 45 / 100; 
+_delay = 45 / 100;
 _progressIndicator = "";
 
-for "_i" from 0 to 99 do { 
-    if ((player getVariable "Misery_Proc_Repairs") isEqualTo false) exitWith {}; 
-    if (_i % 5 == 0) then {_progressIndicator = _progressIndicator + "-"}; 
-    _displayedText = format ["%1%2%6%2%3%5%2[%4]", _text, endl, _i, _progressIndicator, "%", _Vehiclename]; 
+for "_i" from 0 to 99 do {
+    if ((player getVariable "Misery_Proc_Repairs") isEqualTo false) exitWith {};
+    if (_i % 5 == 0) then {_progressIndicator = _progressIndicator + "-"};
+    _displayedText = format ["%1%2%6%2%3%5%2[%4]", _text, endl, _i, _progressIndicator, "%", _Vehiclename];
     ctrlSetText [1001, _displayedText];
-    sleep _delay; 
+    sleep _delay;
 };
 
 if ((player getVariable "Misery_Proc_Repairs") isEqualTo true) then {
@@ -95,7 +95,7 @@ _playercash = {_x == Mis_Mechfundstype} count magazines player;
 for "_i" from 1 to _repairPrice do {player removeMagazine Mis_Mechfundstype;};
 };
 
-_displaySuccess = format ["%1 has been successfully repaired...", _Vehiclename]; 
+_displaySuccess = format ["%1 has been successfully repaired...", _Vehiclename];
 ctrlSetText [1001, _displaySuccess];
 
 _PurchaseB ctrlShow true;
@@ -104,7 +104,7 @@ _ExitB ctrlShow true;
 _target setdamage 0;
 
 player setVariable ["Misery_Proc_Repairs", nil];
-(findDisplay 982382) displayRemoveEventHandler ["KeyDown", _RepairsInterrupt];  
+(findDisplay 982382) displayRemoveEventHandler ["KeyDown", _RepairsInterrupt];
 
 };
-	};
+    };
