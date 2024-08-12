@@ -8,7 +8,6 @@ PREP(IsInGeometry);
 PREP(IsInside);
 PREP(IsInsideloot);
 PREP(ItemDecrement);
-PREP(ItemDecrement_Replace);
 PREP(ItemSwap);
 PREP(ListPlayers);
 PREP(LootPos);
