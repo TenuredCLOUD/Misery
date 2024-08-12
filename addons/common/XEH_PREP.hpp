@@ -2,7 +2,7 @@ PREP(buildingPositions);
 PREP(buildingPositionsInside);
 PREP(formatToTile);
 PREP(getSimplifiedLoadout);
-PREP(inArray);
+PREP(hasItem);
 PREP(isInGeometry);
 PREP(isInside);
 PREP(isInsideloot);

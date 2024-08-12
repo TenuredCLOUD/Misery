@@ -8,17 +8,22 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
-MiseryDebug=FALSE;
-MiseryEnabled=TRUE;
+MiseryDebug = false;
+MiseryEnabled = true;
 
-MiserysurvivalShowStatus=FALSE;
+// Loadout change will clear item cache for hasItem
+["loadout", {
+    GVAR(itemsCache) = nil;
+}] call CBA_fnc_addPlayerEventHandler;
+
+MiserysurvivalShowStatus = false;
 
 MiserysurvivalItems=[];
 MiserysurvivalItemEffects=[];
 
 MiseryAllBuildings=[];
 
-MiserySleeping=FALSE;
+MiserySleeping = false;
 
 // Custom inventory click actions [_itemClassName,_scriptPath]
 MiseryActionsItemCustom=[];
@@ -37,22 +42,22 @@ MiseryActiveTraders = [];
 MiseryDeleteConfirm = 0;
 
 //Psyfield preset:
-MiseryinPsyfield = FALSE; 
+MiseryinPsyfield = false;
 
 //RadZone preset:
-MiseryinRadZone = FALSE;
+MiseryinRadZone = false;
 
 // Custom player menu actions [_description,_scriptPath]
 MiseryActionsCustom=[];
 
-MiseryMP=TRUE; // Multiplayer
-if!(isMultiplayer)then{MiseryMP=FALSE};
+MiseryMP = true; // Multiplayer
+if!(isMultiplayer)then{MiseryMP=false};
 
-MiseryRavage=FALSE;
-if (isClass(configFile>>"cfgPatches">>"ravage")) then {MiseryRavage=TRUE};
+MiseryRavage = false;
+if (isClass(configFile>>"cfgPatches">>"ravage")) then {MiseryRavage=true};
 
-MiseryRavageAtmo = FALSE;
-if ((count(entities "Ravage_atmosphere")) > 0) then {MiseryRavageAtmo = TRUE};
+MiseryRavageAtmo = false;
+if ((count(entities "Ravage_atmosphere")) > 0) then {MiseryRavageAtmo = true};
 
 if (MiseryRavageAtmo && isServer) then {
 private _atmomodule=(entities "Ravage_atmosphere")select 0;
@@ -72,8 +77,8 @@ private _rvgatmofunctions = ["RVG_fnc_breathfog"];
     };
 };
 
-MiseryVA=FALSE;
-if(isClass(configFile>>"cfgPatches">>"VandeansonsApocalypse"))then{MiseryVA=TRUE};
+MiseryVA = false;
+if(isClass(configFile>>"cfgPatches">>"VandeansonsApocalypse"))then{MiseryVA=true};
 
 //If VA is active disable inventory handles:
 if (MiseryVA && isServer) then {
@@ -97,44 +102,43 @@ if (MiseryVA && isServer) then {
     } forEach _VAfunctions;
 };
 
-MiseryACE=FALSE;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=TRUE};
+MiseryACE = false;
+if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
 
-MiseryACERefuel=FALSE;
-if(isClass(configFile>>"cfgPatches">>"ace_refuel"))then{MiseryACERefuel=TRUE};
+MiseryACERefuel = false;
+if(isClass(configFile>>"cfgPatches">>"ace_refuel"))then{MiseryACERefuel=true};
 
-MiseryUsingiBuild=FALSE; 
-if(isClass(configFile>>"cfgPatches">>"NerdMods_iBuild"))then{MiseryUsingiBuild=TRUE};
+MiseryUsingiBuild = false;
+if(isClass(configFile>>"cfgPatches">>"NerdMods_iBuild"))then{MiseryUsingiBuild=true};
 
-MiseryRemnant=FALSE; 
-if(isClass(configFile>>"cfgPatches">>"remnant"))then{MiseryRemnant=TRUE};
+MiseryRemnant = false;
+if(isClass(configFile>>"cfgPatches">>"remnant"))then{MiseryRemnant=true};
 
-MiseryDSA=FALSE; 
-if(isClass(configFile>>"cfgPatches">>"DSA_Spooks"))then{MiseryDSA=TRUE};
+MiseryDSA = false;
+if(isClass(configFile>>"cfgPatches">>"DSA_Spooks"))then{MiseryDSA=true};
 
 //If GRAD persistence is active, push Remnant ODRA object holders to blacklister, so they won't save / reload (This will execute only once)
 if (MiseryRemnant && isServer) then {
-if (!isNil "grad_persistence_blacklist") then {
+    if (!isNil "grad_persistence_blacklist") then {
+        private _RemnantODRA = [
+            "Sign_Sphere10cm_F",
+            "Land_HandyCam_F",
+            "Reflector_Cone_01_narrow_blue_F",
+            "Reflector_Cone_01_narrow_red_F",
+            "Reflector_Cone_01_wide_blue_F",
+            "Reflector_Cone_01_wide_orange_F",
+            "odra_l_alert",
+            "odra_lamp_p",
+            "odra_l_idle",
+            "odra"
+        ];
 
-private _RemnantODRA = [
-  "Sign_Sphere10cm_F",
-  "Land_HandyCam_F",
-  "Reflector_Cone_01_narrow_blue_F",
-  "Reflector_Cone_01_narrow_red_F",
-  "Reflector_Cone_01_wide_blue_F",
-  "Reflector_Cone_01_wide_orange_F",
-  "odra_l_alert",
-  "odra_lamp_p",
-  "odra_l_idle",
-  "odra"
-  ];
-
-    {
-        if ((grad_persistence_blacklist find (toLower _x) == -1) && (grad_persistence_blacklist find (toUpper _x) == -1)) then {
-            [_x] call grad_persistence_fnc_blacklistClasses;
-            if (MiseryDebug) then {systemChat format ["[Misery Remnant Compat] GRAD Persistence detected, Adding %1 to blacklist for saving / reloading...", _x]}; 
-        };
-    } forEach _RemnantODRA;
+        {
+            if ((grad_persistence_blacklist find (toLower _x) == -1) && (grad_persistence_blacklist find (toUpper _x) == -1)) then {
+                [_x] call grad_persistence_fnc_blacklistClasses;
+                if (MiseryDebug) then {systemChat format ["[Misery Remnant Compat] GRAD Persistence detected, Adding %1 to blacklist for saving / reloading...", _x]};
+            };
+        } forEach _RemnantODRA;
     };
 };
 

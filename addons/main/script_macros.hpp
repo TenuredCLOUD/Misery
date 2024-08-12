@@ -25,6 +25,11 @@ by TenuredCLOUD
 #define MACRO_FUELSTATIONS "Land_fs_feed_F", "Land_FuelStation_Feed_F", "Land_Ind_TankSmall2", "Land_Ind_TankSmall2_EP1", "Land_A_FuelStation_Feed", "Land_fuelstation", "Land_Ind_FuelStation_Feed_EP1"
 
 #define MACRO_CRAFTINGSTATIONS "Land_Workbench_01_F", "Land_PortableDesk_01_olive_F", "NMIB_Plot_Workbench"
+
+#define MACRO_ARTIFACTS "Misery_artifact01", "Misery_artifact02", "Misery_artifact03", "Misery_artifact04", "Misery_artifact05", "Misery_artifact06", "Misery_artifact07", "Misery_artifact08", "Misery_artifact09", "Misery_artifact10"
+
+#define MACRO_KNIVES "Weap_melee_knife", "Knife_kukri", "Knife_m3", "UNSC_Knife", "UNSC_Knife_reversed", "WBK_survival_weapon_4", "WBK_survival_weapon_4_r", "WBK_survival_weapon_3", "WBK_survival_weapon_3_r"
+
 //Hunger
 #define MIS_HUNGER 100
 
@@ -45,9 +50,6 @@ by TenuredCLOUD
 
 //Fear
 #define MIS_FEAR 0
-
-//Artifact array
-#define MIS_Artifact ["Misery_artifact01","Misery_artifact02","Misery_artifact03","Misery_artifact04","Misery_artifact05","Misery_artifact06","Misery_artifact07","Misery_artifact08","Misery_artifact09","Misery_artifact10"]
 
 //Gems array
 #define MIS_Gem ["Misery_Malachite","Misery_Ruby","Misery_Sapphire","Misery_Amethyst","Misery_Diamond","Misery_Emerald"]
