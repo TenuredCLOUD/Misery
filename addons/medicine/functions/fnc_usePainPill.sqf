@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Pain pill usage
 Designed specifically for Misery mod
