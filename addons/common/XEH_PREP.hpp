@@ -5,7 +5,7 @@ PREP(getSimplifiedLoadout);
 PREP(hasItem);
 PREP(isInGeometry);
 PREP(isInside);
-PREP(isInsideloot);
+PREP(isInsideLoot);
 PREP(itemDecrement);
 PREP(itemSwap);
 PREP(listPlayers);

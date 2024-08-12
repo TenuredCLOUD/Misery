@@ -1,11 +1,18 @@
+#include "..\script_component.hpp"
 /*
-Misery Check if player is near fire
-Designed specifically for Misery mod 
-Source code Drongo, expanded upon by TenuredCLOUD
+ * Author: TenuredCLOUD, MikeMF
+ * Checks if player is nearby a lit fire
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * 0: Near Fire <BOOL>
+ *
+ * Example:
+ * [] call misery_fnc_common_nearFire
 */
 
-private _nearFire=FALSE;
+private _nearestObjects = nearestObjects [player, [MACRO_FIRETYPES], 2.5];
 
-{if(inflamed _x)exitWith{_nearFire=TRUE}}forEach(nearestObjects[player,MiseryFires,2.5]);
-
-_nearFire //return val (BOOL)
+_nearestObjects findIf {inflamed _x} != -1
