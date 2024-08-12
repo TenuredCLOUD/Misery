@@ -47,7 +47,7 @@ private _model = getModelInfo _object select 0;
 private _position = getPos player;
 private _vehicles = [];
 {
-_vehicles append (nearestObjects [_position, [_x], 5]);
+    _vehicles append (nearestObjects [_position, [_x], 5]);
 } forEach ["Car", "Tank", "Air", "Ship"];
 MiseryTarget_Veh = if (count _vehicles > 0) then { _vehicles select 0 }else{ objNull };
 MiseryTarget_VehName = typeOf MiseryTarget_Veh;
@@ -91,20 +91,20 @@ if ("Misery_woodenlog" in items player) then {
 };
 };
 
-if (call Misery_fnc_NearJetFuel) then {
+if ([["Misery_JetFuelRU"], 5.5] call EFUNC(common,nearCraftingStation)) then {
     _out pushback [localize "STR_MISERY_USEJETFUELPUMP",localize "STR_MISERY_USEJETFUELPUMP"];
     _out pushback [localize "STR_MISERY_JETFUELPUMPREQ",localize "STR_MISERY_JETFUELPUMPREQ"];
 };
-if (call Misery_fnc_NearFuel) then {
+if ([[MACRO_FUELSTATIONS], 1.5] call EFUNC(common,nearCraftingStation)) then {
     _out pushback [localize "STR_MISERY_USEFUELPUMP",localize "STR_MISERY_USEFUELPUMP"];
     _out pushback [localize "STR_MISERY_FUELPUMPREQ",localize "STR_MISERY_FUELPUMPREQ"];
 };
 
 if (MiseryMine) then {
-if (call Misery_fnc_NearAnvil) then {
+if ([["Misery_Anvil"], 1.5] call EFUNC(common,nearCraftingStation)) then {
     _out pushback [localize "STR_MISERY_USEANVIL",localize "STR_MISERY_USEANVIL"];
 };
-if (call Misery_fnc_NearForge) then {
+if ([["Misery_Forge"], 1.5] call EFUNC(common,nearCraftingStation)) then {
     _out pushback [localize "STR_MISERY_USEFORGE",localize "STR_MISERY_USEFORGE"];
 };
 if (call Misery_fnc_NearRockSource) then {
@@ -113,7 +113,7 @@ if (call Misery_fnc_NearRockSource) then {
 };
 
 if (MiseryCraft) then {
-if (call Misery_fnc_NearWorkbench) then {
+if ([[MACRO_CRAFTINGSTATIONS], 1.5] call EFUNC(common,nearCraftingStation)) then {
     _out pushback [localize "STR_MISERY_CRAFTINGWORKBENCH",localize "STR_MISERY_CRAFTINGWORKBENCH"];
 };
 };
