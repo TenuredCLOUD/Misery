@@ -1,18 +1,16 @@
+#include "..\script_component.hpp"
 /*
-Active players lister for zone checks, etc..
-Utilizes CBA for player checks, removes the need to also check if they are headless
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD, MikeMF
+ * Wrapper for CBA_fnc_players, getting only alive players.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * 0: Players <ARRAY>
+ *
+ * Example:
+ * [] call misery_fnc_common_listPlayers
 */
 
-private ["_players"];
-_players= call CBA_fnc_players;
-
-{
-    if !(alive _x) then {
-        _players=_players-[_x]
-    };
-
-}forEach _players;
-
-_players
+(call CBA_fnc_players) select {alive _x}
