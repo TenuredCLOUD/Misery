@@ -1,12 +1,11 @@
+#include "..\script_component.hpp"
 /*
 Misery Psyfield Processor
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
-#include "\z\misery\addons\main\script_macros.hpp"
-
-[{!isNil "MiseryinPsyfield" && MiseryinPsyfield == true}, 
+[{!isNil "MiseryinPsyfield" && MiseryinPsyfield == true},
 {
 
 [{
@@ -19,7 +18,7 @@ by TenuredCLOUD
             if(MiseryDebug)then{systemChat "Misery Psyfield cycle checks re-initiated..."};
         };
 
-        private _gear = player call Misery_fnc_GetSimplifiedLoadout;
+        private _gear = player call EFUNC(common,getSimplifiedLoadout);
 
         _totalProtection = [0, 0, 0, 0];
 
@@ -27,7 +26,7 @@ by TenuredCLOUD
         _equipment = _x;
 
         if (_equipment isEqualTo "") then {
-        _totalProtection = [0, 0, 0, 0]; 
+        _totalProtection = [0, 0, 0, 0];
         }else{
         {
             if (_x select 0 == _equipment) then {
@@ -42,18 +41,18 @@ by TenuredCLOUD
         private _damageMultiplier = 0;
 
         if (_hearingProtection >= 100) then {
-        _damageMultiplier = 0;    
+        _damageMultiplier = 0;
         }else{
         _damageMultiplier = (100 / (100 - _hearingProtection));
         };
 
         if (_damageMultiplier >= 0.25) then {
-        _damageMultiplier = 0.25;    
-        }; 
+        _damageMultiplier = 0.25;
+        };
 
         if (MiseryDebug) then {
-        systemChat format ["Psyfield Damage Multiplier: %1", _damageMultiplier]; 
-        systemChat format ["Psyfield Hearing Protection: %1%2", _hearingProtection, "%"]; 
+        systemChat format ["Psyfield Damage Multiplier: %1", _damageMultiplier];
+        systemChat format ["Psyfield Hearing Protection: %1%2", _hearingProtection, "%"];
         };
 
         if (_hearingProtection < 100 && MiseryinPsyfield) then {
@@ -64,8 +63,8 @@ by TenuredCLOUD
                 private _damage = damage player;
                 player setDamage (_damage + 0.09 + _damageMultiplier);
             };
- 
-            //Check if Fear framework is active && No protective equipment if so then destroy players sanity 
+
+            //Check if Fear framework is active && No protective equipment if so then destroy players sanity
             if (isNil "MiseryFearPsy") then {MiseryFearPsy = "DISABLED"};
             if (MiseryFearPsy == "ENABLED") then {
             private _fearadd = MISERY_FEARNOPROPSYFIELD;

@@ -1,10 +1,9 @@
+#include "..\script_component.hpp"
 /*
 Misery Mod actions (inventory GUI)
 Designed specifically for Misery mod
 Code concepts from Drongo, reworked by TenuredCLOUD (with permission)
 */
-
-#include "\z\misery\addons\main\script_macros.hpp"
 
 private _out=[];
 private _near=player nearObjects 5;
@@ -156,7 +155,7 @@ _out pushback [localize "STR_MISERY_TURNOFFRFDETEC",localize "STR_MISERY_TURNOFF
 // };
 
 if (MiseryLeadcontaineracts) then {
-if ("Misery_leadcontaineropen" in items player && [MIS_Artifact,(items player)] call Misery_fnc_Inarray) then {
+if ("Misery_leadcontaineropen" in items player && [MIS_Artifact,(items player)] call EFUNC(common,inArray)) then {
 _out pushback [localize "STR_MISERY_STOREARTIFACT",localize "STR_MISERY_STOREARTIFACT"];
 };
 };
@@ -229,29 +228,29 @@ _out pushback [localize "STR_MISERY_REQTREATMENT",localize "STR_MISERY_REQTREATM
 //Item swappers:
 //Radiation / Geiger conversion:
 if (MiseryEnhrads) then {
-[player, "rvg_Geiger", "Misery_personalgeigernobattery"] call Misery_fnc_ItemSwap;
+[player, "rvg_Geiger", "Misery_personalgeigernobattery"] call EFUNC(common,itemSwap);
 };
 
 //Vanilla toolkit conversion:
-[player, "ToolKit", "rvg_toolkit"] call Misery_fnc_ItemSwap;
+[player, "ToolKit", "rvg_toolkit"] call EFUNC(common,itemSwap);
 
 //ACE compat notepad swap:
 if (MiseryACE) then {
-[player, "rvg_notepad", "acex_intelitems_notepad"] call Misery_fnc_ItemSwap;
+[player, "rvg_notepad", "acex_intelitems_notepad"] call EFUNC(common,itemSwap);
 };
 
 //Fuel canister conversion:
-[player, "rvg_canisterFuel", selectrandom ["Misery_DieselF","Misery_PetrolF"]] call Misery_fnc_ItemSwap;
-[player, "rvg_canisterFuel_Empty", selectrandom ["Misery_EmptyDiesel","Misery_EmptyPetrol"]] call Misery_fnc_ItemSwap;
+[player, "rvg_canisterFuel", selectrandom ["Misery_DieselF","Misery_PetrolF"]] call EFUNC(common,itemSwap);
+[player, "rvg_canisterFuel_Empty", selectrandom ["Misery_EmptyDiesel","Misery_EmptyPetrol"]] call EFUNC(common,itemSwap);
 
 //WBKIMS checks + Swappers:
 if (MiseryWBKIMS) then {
-[player, "Misery_Woodaxe", "WBK_axe"] call Misery_fnc_WeapSwap;
-[player, "Misery_Sledghammer", "WBK_survival_weapon_2"] call Misery_fnc_WeapSwap;
-[player, "Misery_craftinghammer", "WBK_SmallHammer"] call Misery_fnc_WeapSwap;
-[player, "Misery_Anvilhammer", "WBK_SmallHammer"] call Misery_fnc_WeapSwap;
-[player, "rvg_guttingKnife", selectRandom ["Weap_melee_knife","Knife_kukri","Knife_m3","UNSC_Knife","UNSC_Knife_reversed","WBK_survival_weapon_4","WBK_survival_weapon_4_r","WBK_survival_weapon_3","WBK_survival_weapon_3_r"]] call Misery_fnc_WeapSwap;
-[player, "Misery_GuttingKnife", selectRandom ["Weap_melee_knife","Knife_kukri","Knife_m3","UNSC_Knife","UNSC_Knife_reversed","WBK_survival_weapon_4","WBK_survival_weapon_4_r","WBK_survival_weapon_3","WBK_survival_weapon_3_r"]] call Misery_fnc_WeapSwap;
+[player, "Misery_Woodaxe", "WBK_axe"] call EFUNC(common,weaponSwap);
+[player, "Misery_Sledghammer", "WBK_survival_weapon_2"] call EFUNC(common,weaponSwap);
+[player, "Misery_craftinghammer", "WBK_SmallHammer"] call EFUNC(common,weaponSwap);
+[player, "Misery_Anvilhammer", "WBK_SmallHammer"] call EFUNC(common,weaponSwap);
+[player, "rvg_guttingKnife", selectRandom ["Weap_melee_knife","Knife_kukri","Knife_m3","UNSC_Knife","UNSC_Knife_reversed","WBK_survival_weapon_4","WBK_survival_weapon_4_r","WBK_survival_weapon_3","WBK_survival_weapon_3_r"]] call EFUNC(common,weaponSwap);
+[player, "Misery_GuttingKnife", selectRandom ["Weap_melee_knife","Knife_kukri","Knife_m3","UNSC_Knife","UNSC_Knife_reversed","WBK_survival_weapon_4","WBK_survival_weapon_4_r","WBK_survival_weapon_3","WBK_survival_weapon_3_r"]] call EFUNC(common,weaponSwap);
 };
 
 //Money Collection:

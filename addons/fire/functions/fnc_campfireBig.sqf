@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Campfire (big)
 Generates Big campfire variant
@@ -9,7 +10,7 @@ private _pos=player getRelPos[1.5,0];
 private _object=createVehicle["Campfire_burning_F",_pos,[],0,"CAN_COLLIDE"];
 _pos=[_pos select 0,_pos select 1,((getPosATL player)select 2)+1];
 _object setPos _pos;
-_pos=(_object call Misery_fnc_SurfacePos)select 0;
+_pos=(_object call EFUNC(common,surfacePos)) select 0;
 _object setPosASL _pos;
 _object setDir(getDir player);
 

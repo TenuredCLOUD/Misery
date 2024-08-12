@@ -1,5 +1,4 @@
-#include "\z\misery\addons\main\script_macros.hpp"
-
+#include "..\script_component.hpp"
 /*
 Misery Main survival loop
 Client survival loop runs after Client settings are defined
@@ -106,7 +105,7 @@ if !(hasInterface) exitWith {};
         if ((random 100) >  (MiseryBlackoutChance)) then {_blackout = false};
 
         if (_blackout == true) then {
-        [player,(1+(random 3))] spawn Misery_fnc_Stun; //Spawn function for new scheduled environment
+        [player,(1+(random 3))] call EFUNC(common,stun); //Spawn function for new scheduled environment
         };
     };
 
@@ -146,7 +145,7 @@ if !(hasInterface) exitWith {};
 
         _MDebuffs pushBackUnique "POISON"; player setVariable ["MiseryDebuffs", _MDebuffs];
 
-        if (_MPoison > 15) then {[player,(_MPoison / 100)]call Misery_fnc_SpecialDamage};
+        if (_MPoison > 15) then {[player,(_MPoison / 100)] call EFUNC(common,specialDamage)};
 
         player setVariable ["MiseryPoison", (_MPoison - ((MiseryPoisonHealing)))]; //player setVariable ["MiseryPoison", (_MPoison -  ((MiseryPoisonHealing)toFixed 2))];
 };
@@ -162,7 +161,7 @@ if !(hasInterface) exitWith {};
 
         _MDebuffs pushBackUnique "INFECTION"; player setVariable ["MiseryDebuffs", _MDebuffs];
 
-        if (_MInfection > 15) then {[player,(_MInfection / 100)]call Misery_fnc_SpecialDamage};
+        if (_MInfection > 15) then {[player,(_MInfection / 100)] call EFUNC(common,specialDamage)};
 
         player setVariable ["MiseryInfection", (_MInfection - ((MiseryInfectionHealing)))]; //player setVariable ["MiseryInfection", (_MInfection -  ((MiseryInfectionHealing)toFixed 2))];
     };
@@ -174,11 +173,11 @@ if !(hasInterface) exitWith {};
 
             if(_MHunger > 100) then {player setVariable ["MiseryHunger", MIS_HUNGER]};
 
-             if(_MHunger <= 0)then{[player,100]call Misery_fnc_SpecialDamage}; //Kill the player on "0" hunger
+             if(_MHunger <= 0)then{[player,100] call EFUNC(common,specialDamage)}; //Kill the player on "0" hunger
 
             if(_MThirst > 100) then {player setVariable ["MiseryThirst", MIS_THIRST]};
 
-             if(_MThirst <= 0)then{[player,100]call Misery_fnc_SpecialDamage}; //Kill the player on "0" thirst
+             if(_MThirst <= 0)then{[player,100] call EFUNC(common,specialDamage)}; //Kill the player on "0" thirst
 
     //--------------------------------------------------------------------------------------------------------------
 
@@ -209,7 +208,7 @@ if !(hasInterface) exitWith {};
 
             if((random 100)>90)then{
 
-                [player,100]call Misery_fnc_SpecialDamage; //Kills player
+                [player,100] call EFUNC(common,specialDamage); //Kills player
             };
         }; //Over exposure death / -30C or 55+C
     };

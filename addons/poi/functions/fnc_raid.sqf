@@ -1,7 +1,8 @@
+#include "..\script_component.hpp"
 /*
 POI AI Generator (Raid)
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 private [
@@ -81,38 +82,38 @@ _aiClass = _this select 2;
 _aiCountMax = _this select 3;
 _aiCountMin = _this select 4;
 _aiSpawnDistance = _this select 5;
-_aiWeapPrimaryLoot = (_this select 6) call Misery_fnc_ParseArray2;
-_aiWeapSecondaryLoot = (_this select 7) call Misery_fnc_ParseArray2;
-_aiWeaplauncherLoot = (_this select 8) call Misery_fnc_ParseArray2;
+_aiWeapPrimaryLoot = (_this select 6) call EFUNC(common,parseArray);
+_aiWeapSecondaryLoot = (_this select 7) call EFUNC(common,parseArray);
+_aiWeaplauncherLoot = (_this select 8) call EFUNC(common,parseArray);
 _aiAmmo = _this select 9;
-_aiitemArray = (_this select 10) call Misery_fnc_ParseArray2;
-_aiNVGLoot = (_this select 11) call Misery_fnc_ParseArray2;
-_aiFacewearLoot = (_this select 12) call Misery_fnc_ParseArray2;
-_aiHeadgearLoot = (_this select 13) call Misery_fnc_ParseArray2;
-_aiuniformArray = (_this select 14) call Misery_fnc_ParseArray2;
-_aivestArray = (_this select 15) call Misery_fnc_ParseArray2;
-_aibackpackArray = (_this select 16) call Misery_fnc_ParseArray2;
-_crateweaponArray = (_this select 17) call Misery_fnc_ParseArray2;
+_aiitemArray = (_this select 10) call EFUNC(common,parseArray);
+_aiNVGLoot = (_this select 11) call EFUNC(common,parseArray);
+_aiFacewearLoot = (_this select 12) call EFUNC(common,parseArray);
+_aiHeadgearLoot = (_this select 13) call EFUNC(common,parseArray);
+_aiuniformArray = (_this select 14) call EFUNC(common,parseArray);
+_aivestArray = (_this select 15) call EFUNC(common,parseArray);
+_aibackpackArray = (_this select 16) call EFUNC(common,parseArray);
+_crateweaponArray = (_this select 17) call EFUNC(common,parseArray);
 _crateweaponMagArray = _this select 18;
 _crateweaponAttchArray = _this select 19;
-_crateitemArray = (_this select 20) call Misery_fnc_ParseArray2;
-_crateuniformArray = (_this select 21) call Misery_fnc_ParseArray2;
-_cratevestArray = (_this select 22) call Misery_fnc_ParseArray2;
-_cratebackpackArray = (_this select 23) call Misery_fnc_ParseArray2;
+_crateitemArray = (_this select 20) call EFUNC(common,parseArray);
+_crateuniformArray = (_this select 21) call EFUNC(common,parseArray);
+_cratevestArray = (_this select 22) call EFUNC(common,parseArray);
+_cratebackpackArray = (_this select 23) call EFUNC(common,parseArray);
 _crateItemsMAX = _this select 24;
 _crateItemsMIN = _this select 25;
 _spawnedobjectsMAX = _this select 26;
 _spawnedObjectsMIN = _this select 27;
 _spawnedCratesMAX = _this select 28;
 _spawnedCratesMIN = _this select 29;
-_tentTypes = (_this select 30) call Misery_fnc_ParseArray2;
-_flagTypes = (_this select 31) call Misery_fnc_ParseArray2;
-_crateTypes = (_this select 32) call Misery_fnc_ParseArray2;
+_tentTypes = (_this select 30) call EFUNC(common,parseArray);
+_flagTypes = (_this select 31) call EFUNC(common,parseArray);
+_crateTypes = (_this select 32) call EFUNC(common,parseArray);
 
-_aimingAccuracy = _this select 33; 
-_aimingShake = _this select 34; 
-_aimingSpeed = _this select 35; 
-_Spawnchance = _this select 36; 
+_aimingAccuracy = _this select 33;
+_aimingShake = _this select 34;
+_aimingSpeed = _this select 35;
+_Spawnchance = _this select 36;
 
 _player=objNull;
 _players=call Misery_fnc_ListPlayers;
@@ -192,7 +193,7 @@ for "_i" from 1 to _numEntities do {
     if (!isNil "_aiWeapPrimaryLoot" && {count _aiWeapPrimaryLoot > 0}) then {[_unit, selectRandom _aiWeapPrimaryLoot, 0] call BIS_fnc_addWeapon};
     if (!isNil "_aiWeaplauncherLoot" && {count _aiWeaplauncherLoot > 0}) then {[_unit, selectRandom _aiWeaplauncherLoot, 0] call BIS_fnc_addWeapon};
     };
-    
+
     if (_randomweaploadout == 5) then {
     if (!isNil "_aiWeapSecondaryLoot" && {count _aiWeapSecondaryLoot > 0}) then {[_unit, selectRandom _aiWeapSecondaryLoot, 0] call BIS_fnc_addWeapon};
     if (!isNil "_aiWeaplauncherLoot" && {count _aiWeaplauncherLoot > 0}) then {[_unit, selectRandom _aiWeaplauncherLoot, 0] call BIS_fnc_addWeapon};
@@ -207,7 +208,7 @@ for "_i" from 1 to _numEntities do {
     if (_randombackpackloadout == 1) then {
     if (!isNil "_aibackpackArray" && {count _aibackpackArray > 0}) then {_unit addBackpack selectRandom _aibackpackArray};
     };
-    
+
     if (_randomNVGloadout == 1) then {
     if (!isNil "_aiNVGLoot" && {count _aiNVGLoot > 0}) then {_unit linkItem selectRandom _aiNVGLoot};
     };
@@ -268,13 +269,13 @@ _taskDorP = [1,2] call BIS_fnc_randomInt;
 _group setCombatMode "RED";
 _group setBehaviour "SAFE";
 
-//Enforce Dynamic Simulation per generated AI unit per group 
+//Enforce Dynamic Simulation per generated AI unit per group
 _group enableDynamicSimulation true;
 
-_maxTents = _spawnedobjectsMAX; 
-_minTents = _spawnedObjectsMIN; 
+_maxTents = _spawnedobjectsMAX;
+_minTents = _spawnedObjectsMIN;
 
-_maxCrates = _spawnedCratesMAX; 
+_maxCrates = _spawnedCratesMAX;
 _minCrates = _spawnedCratesMIN;
 
 _tentCount = 0;
@@ -330,7 +331,7 @@ _entityPositions = units _group apply {getPos _x};
 
         _ammoBox enableDynamicSimulation true;
 
-        [_ammoBox, 
+        [_ammoBox,
         _crateweaponArray,
         _crateweaponMagArray,
         _crateweaponAttchArray,
@@ -343,7 +344,7 @@ _entityPositions = units _group apply {getPos _x};
 
 } forEach _entityPositions;
 
-_flagpole = selectRandom _flagTypes createVehicle ([_pos, 0, 5 + (random 50), 1, 0, 20, 0] call BIS_fnc_findSafePos); 
+_flagpole = selectRandom _flagTypes createVehicle ([_pos, 0, 5 + (random 50), 1, 0, 20, 0] call BIS_fnc_findSafePos);
 _flagpole setDir (random 360);
 _spawnedObjects pushBack _flagpole;
 
@@ -356,14 +357,14 @@ _flagpole enableDynamicSimulation true;
 //     _raidID = 0;
 // };
 
-// _raidID = str (diag_tickTime * 1e6) + str _module;  
+// _raidID = str (diag_tickTime * 1e6) + str _module;
 // _module setVariable ["Active_Raid_ID", _raidID, true];
 
 // _posStr = str _pos;
 // _PMCalert = [_posStr, _raidID];
 // [_PMCalert, "\z\misery\addons\framework\scripts\Modules\PDA\alerts\PMCRaid.sqf"] remoteExec ["execVM ", 0];
 
-Misery_activePOIs = Misery_activePOIs + 1; 
+Misery_activePOIs = Misery_activePOIs + 1;
 
 //If GRAD persistence is active, push Holders to blacklister for saving so POI objects won't save / reload (This will execute only once)
 if (!isNil "grad_persistence_blacklist") then {
@@ -398,7 +399,7 @@ deleteGroup _group; // Delete the group
 // _raidID = _module getVariable "Active_Raid_ID";
 // _marker = missionNamespace getVariable [format ["PMC_Raid_Marker_%1", _raidID], ""];
 if (_marker != "") then {
-    // [_marker] remoteExec ["deleteMarkerLocal", 0]; 
+    // [_marker] remoteExec ["deleteMarkerLocal", 0];
     // missionNamespace setVariable [format ["PMC_Raid_Marker_%1", _raidID], nil];
 };
 if (MiseryDebug) then {systemChat format["[Misery POI Framework] Re-initializing Raid POI for module at %1...",getPosATL _module]};

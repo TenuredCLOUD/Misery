@@ -1,5 +1,4 @@
-#include "\z\misery\addons\main\script_macros.hpp"
-
+#include "..\script_component.hpp"
 /*
 Misery Random pharm usage
 Designed specifically for Misery mod
@@ -69,7 +68,7 @@ if (!hasInterface) exitWith {};
             if (MiseryACE) then {
               [player, true, 10, true] call ace_medical_fnc_setUnconscious;
             }else{
-            [player] spawn Misery_fnc_Stun;
+            [player] call EFUNC(common,stun);
             };
 
           }else {

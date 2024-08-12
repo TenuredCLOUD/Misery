@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Generator Running Audio loop
 Controls running audio synchronization...
@@ -5,15 +6,13 @@ Designed specifically for Misery mod
 by TenuredCLOUD
 */
 
-#include "\z\misery\addons\main\script_macros.hpp"
-
 _Generator = _this select 0;
 
 _GeneratorType = typeOf _Generator;
 
 if (_Generator getVariable ["Misery_Gen_FuelLVL", 100] <= 0) exitWith {
 private _formattedText = format ["<t font='PuristaMedium'>%1</t>", format ["This Generator has no fuel..."]];
-[_formattedText] call Misery_fnc_FormatToTile;
+[_formattedText] call EFUNC(common,formatToTile);
 };
 
 private _soundStart = nil;

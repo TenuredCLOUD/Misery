@@ -1,7 +1,8 @@
+#include "..\script_component.hpp"
 /*
 POI Generator (Shore loot)
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 private [
@@ -44,11 +45,11 @@ _spawnedObjects = [];
 
 _pos = getPos _module;
 
-_maxCrates = _this select 1; 
+_maxCrates = _this select 1;
 _minCrates = _this select 2;
-_crateTypes = (_this select 3) call Misery_fnc_ParseArray2;
+_crateTypes = (_this select 3) call EFUNC(common,parseArray);
 
-_maxCratesitems = _this select 4; 
+_maxCratesitems = _this select 4;
 _minCratesitems = _this select 5;
 
 _crateCount = 0;
@@ -56,17 +57,17 @@ _crateCount = 0;
 _maxallowedCrates = [_minCrates,_maxCrates] call BIS_fnc_randomInt;
 _maxallowedCrateitems = [_minCratesitems,_maxCratesitems] call BIS_fnc_randomInt;
 
-_WreckTypes = (_this select 6) call Misery_fnc_ParseArray2;
+_WreckTypes = (_this select 6) call EFUNC(common,parseArray);
 
 _Spawnchance = _this select 7;
 
-_crateweaponArray = (_this select 8) call Misery_fnc_ParseArray2;
+_crateweaponArray = (_this select 8) call EFUNC(common,parseArray);
 _crateweaponMagArray = _this select 9;
 _crateweaponAttchArray = _this select 10;
-_crateitemArray = (_this select 11) call Misery_fnc_ParseArray2;
-_crateuniformArray = (_this select 12) call Misery_fnc_ParseArray2;
-_cratevestArray = (_this select 13) call Misery_fnc_ParseArray2;
-_cratebackpackArray = (_this select 14) call Misery_fnc_ParseArray2;
+_crateitemArray = (_this select 11) call EFUNC(common,parseArray);
+_crateuniformArray = (_this select 12) call EFUNC(common,parseArray);
+_cratevestArray = (_this select 13) call EFUNC(common,parseArray);
+_cratebackpackArray = (_this select 14) call EFUNC(common,parseArray);
 
 _player=objNull;
 _players=call Misery_fnc_ListPlayers;
@@ -75,7 +76,7 @@ _players=_players-(entities "HeadlessClient_F");
 _SpawnFLAG = false;
 
 if (Misery_activePOIs >= Misery_POIMAXAllowed) exitWith {
-    
+
     if (MiseryDebug) then {
             systemChat "[Misery POI Framework] exiting Generation for Shoreloot due to max active POI's allowed value being reached";
     };
@@ -94,13 +95,13 @@ if (MiseryDebug) then {systemChat format["[Misery POI Framework] Spawn chance fa
 //This POI is now null from spawning since the original check failed
 };
 
-_ModuleplacementOK = FALSE; 
+_ModuleplacementOK = FALSE;
 
-_overShore = !(_Pos isFlatEmpty  [-1, -1, -1, -1, 0, true] isEqualTo []); 
+_overShore = !(_Pos isFlatEmpty  [-1, -1, -1, -1, 0, true] isEqualTo []);
 
-if (_overShore) then { 
-    _ModuleplacementOK = TRUE; 
-}; 
+if (_overShore) then {
+    _ModuleplacementOK = TRUE;
+};
 
 if (_ModuleplacementOK) then {
     _Shoreloot = selectRandom _WreckTypes createVehicle ([_pos, 0, 5 + (random 20), 1, 0, 20, 1] call BIS_fnc_findSafePos);
@@ -125,7 +126,7 @@ if (_ModuleplacementOK) then {
 
         _ammoBox enableDynamicSimulation true;
 
-        [_ammoBox, 
+        [_ammoBox,
         _crateweaponArray,
         _crateweaponMagArray,
         _crateweaponAttchArray,
@@ -144,8 +145,8 @@ if (MiseryDebug) then {
     _markerName = format ["Shoreloot %1", _randID];
     _marker = createMarker [_markerName, _pos];
     _marker setMarkerType "mil_dot";
-    _marker setMarkerColor "ColorWhite"; 
-    _marker setMarkerSize [0.5, 0.5]; 
+    _marker setMarkerColor "ColorWhite";
+    _marker setMarkerSize [0.5, 0.5];
     _marker setMarkerAlpha 1;
     _marker setMarkerText "[DEBUG] Shoreloot POI";
 };

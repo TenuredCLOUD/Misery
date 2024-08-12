@@ -1,5 +1,4 @@
-#include "\z\misery\addons\main\script_macros.hpp"
-
+#include "..\script_component.hpp"
 /*
 Misery Status UI for inventory framework
 Designed specifically for Misery mod
@@ -180,7 +179,7 @@ lbClear _ailmentsList;
     _FundsVal ctrlSetText _FundsDisplay;
 
     if (!isNil "MiseryinPsyfield") then {
-    private _input1 =(_module getvariable "Misery_Psyprotection") call Misery_fnc_ParseArray2; //STRING to ARRAY
+    private _input1 =(_module getvariable "Misery_Psyprotection") call EFUNC(common,parseArray); //STRING to ARRAY
     private _psyprot = _input1;
     private _PsyProtected = _ailments findIf {(_x select 0) isEqualTo "Psy Emissions (Protected)"};
     private _PsyNoProtection = _ailments findIf {(_x select 0) isEqualTo "Psy Emissions"};
@@ -312,21 +311,21 @@ if (MiseryHUDlayout == 0) then {
 
 if (MiseryACE) then {
 _BloodtoVal = round(_Health / 6 * 100);
-_ValtoBarBlood = [_BloodtoVal] call Misery_fnc_ValToBar;
+_ValtoBarBlood = [_BloodtoVal] call EFUNC(common,valToBar);
 _HealthNum ctrlSetText _ValtoBarBlood;
 }else{
 _HealthtoVal = round((1 - (damage player)) * 100);
-_ValtoBarHealth = [_HealthtoVal] call Misery_fnc_ValToBar;
+_ValtoBarHealth = [_HealthtoVal] call EFUNC(common,valToBar);
 _HealthNum ctrlSetText _ValtoBarHealth;
 };
 
-_ValtoBarHunger = [_MHunger] call Misery_fnc_ValToBar;
+_ValtoBarHunger = [_MHunger] call EFUNC(common,valToBar);
 _HungerNum ctrlSetText _ValtoBarHunger;
 
-_ValtoBarThirst = [_MThirst] call Misery_fnc_ValToBar;
+_ValtoBarThirst = [_MThirst] call EFUNC(common,valToBar);
 _ThirstNum ctrlSetText _ValtoBarThirst;
 
-_ValtoBarFatigue = [_convpfatigue] call Misery_fnc_ValToBar;
+_ValtoBarFatigue = [_convpfatigue] call EFUNC(common,valToBar);
 _FatigueNum ctrlSetText _ValtoBarFatigue;
 
 }else{
