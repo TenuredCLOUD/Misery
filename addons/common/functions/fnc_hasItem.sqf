@@ -22,7 +22,7 @@ if (isNil QGVAR(itemsCache)) then {
 
 // Lower case both arrays
 _items = _items call FUNC(lowerCaseArray);
-GVAR(itemsCache) = _playerItems call FUNC(lowerCaseArray);
+GVAR(itemsCache) = GVAR(itemsCache) call FUNC(lowerCaseArray);
 
 private _itemCheck = _items arrayIntersect GVAR(itemsCache);
 
