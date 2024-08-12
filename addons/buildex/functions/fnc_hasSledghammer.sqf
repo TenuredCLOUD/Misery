@@ -14,7 +14,7 @@ if (MiseryWBKIMS == true) then {
         _hasSledgehammer = TRUE;
     };
 } else {
-    if ("Misery_Sledghammer" in items player && ([[MACRO_NMB_ITEMS], 5] call EFUNC(common,nearCraftingStation)) then {
+    if ("Misery_Sledghammer" in items player && ([[MACRO_NMB_ITEMS], 5] call EFUNC(common,nearCraftingStation))) then {
         _hasSledgehammer = TRUE;
     };
 };
