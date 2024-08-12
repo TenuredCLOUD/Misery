@@ -1,9 +1,26 @@
-// Building positions with a roof overhead
+#include "..\script_component.hpp"
+/*
+ * Author: TenuredCLOUD
+ * Gets building positions with a roof overhead
+ *
+ * Arguments:
+ * 0: Building <OBJECT>
+ *
+ * Return Value:
+ * 0: Positions within Building <ARRAY>
+ *
+ * Example:
+ * [] call misery_fnc_common_buildingPositionsInside
+*/
 
-#include "\z\misery\addons\main\script_macros.hpp"
+params ["_building"];
 
-private["_building","_positions"];
-_building=_this;
-_positions=_building call EFUNC(common,BuildingPositions);
-{if!(_x call Misery_misc_fnc_IsInsideloot)then{_positions=_positions-[_x]}}forEach _positions;
+private _positions = _building call EFUNC(common,buildingPositions);
+
+{
+    if !(_x call FUNC(isInsideLoot)) then {
+        _positions = _positions - [_x];
+    };
+} forEach _positions;
+
 _positions

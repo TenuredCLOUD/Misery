@@ -1,5 +1,26 @@
-private["_building","_positions"];
-_building=_this;
-_positions=[_building]call BIS_fnc_buildingPositions;
-{if(_x call Misery_fnc_IsInGeometry)then{_positions=_positions-[_x]}}forEach _positions;
+#include "..\script_component.hpp"
+/*
+ * Author: TenuredCLOUD
+ * Gets building positions
+ *
+ * Arguments:
+ * 0: Building <OBJECT>
+ *
+ * Return Value:
+ * 0: Positions within Building <ARRAY>
+ *
+ * Example:
+ * [] call misery_fnc_common_buildingPositions
+*/
+
+params ["_building"];
+
+private _positions = _building call BIS_fnc_buildingPositions;
+
+{
+    if (_x call FUNC(isInGeometry)) then {
+        _positions = _positions - [_x];
+    };
+} forEach _positions;
+
 _positions
