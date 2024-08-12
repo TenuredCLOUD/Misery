@@ -1,9 +1,18 @@
+#include "..\script_component.hpp"
 /*
-Misery Text Parser to textTile 
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+ * Author: TenuredCLOUD
+ * Parses text into textTile
+ *
+ * Arguments:
+ * 0: Formatted Text <TEXT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_fnc_common_formatToTile
 */
 
 params ["_formattedText"];
-[parseText _formattedText, true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
 
+[parseText _formattedText, true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
