@@ -1,9 +1,10 @@
+#include "..\script_component.hpp"
 /*
 Misery Weapon AutoSwapper
 Filters through active items in inventory and if matches an auto swap instance will automatically convert weapons
 Utilizing CBA_fnc_addWeapon if no room in inventory new weap will automatically drop to the ground
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 params ["_unit", "_oldWeapon", "_newWeapon"];
