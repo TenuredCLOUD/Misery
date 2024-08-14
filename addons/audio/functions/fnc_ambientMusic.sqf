@@ -8,16 +8,12 @@ by TenuredCLOUD
 */
 
 addMusicEventHandler ["MusicStop", {
-params ["_musicClassname", "_eventHandlerId", "_currentPosition", "_toralLength"];
-_time = time + random 60 + random 120;
-[_time] spawn {
-private ["_TimeA"];
-_TimeA=_this select 0;
-waitUntil {(time > _TimeA)};
-[] call Misery_fnc_playMusic_Random;
-};
-    }];
-
-
-
-
+    params ["_musicClassname", "_eventHandlerId", "_currentPosition", "_toralLength"];
+    _time = time + random 60 + random 120;
+    [_time] spawn {
+        private ["_TimeA"];
+        _TimeA=_this select 0;
+        waitUntil {(time > _TimeA)};
+        [] call Misery_fnc_playMusic_Random;
+    };
+}];
