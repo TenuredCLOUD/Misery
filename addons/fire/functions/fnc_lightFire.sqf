@@ -1,12 +1,10 @@
+#include "..\script_component.hpp"
 /*
 Misery Fire crafting
 Enables players to craft fires - Also checks environment
 Designed specifically for Misery mod
 by TenuredCLOUD
 */
-
-#include "\z\misery\addons\main\script_macros.hpp"
-
 
 if (!hasInterface) exitWith {};
 
@@ -28,8 +26,8 @@ if !("Misery_tinder" in items player || "acex_intelitems_notepad" in magazines p
 [
     player,
     "Craft Fire",
-    "Use\icons\firecraft.paa",
-    "Use\icons\firecraft.paa",
+    QPATHTOEF(icons,data\firecraft_ca.paa),
+    QPATHTOEF(icons,data\firecraft_ca.paa),
     "'Misery_firewood' in items player || 'Misery_woodensticks' in items player",
     "'Misery_lighter' in items player || 'rvg_matches' in magazines player",
     {

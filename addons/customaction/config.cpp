@@ -42,7 +42,7 @@ class Misery_CustomAction: Module_F
     {
         scope=2;
         displayName="Custom action";
-        icon = "\z\misery\addons\icons\action.paa";
+        icon = QPATHTOEF(icons,data\action_ca.paa);
         category="Misery_faction";
         function="Misery_fnc_ModuleCustomAction";
         functionPriority=1;

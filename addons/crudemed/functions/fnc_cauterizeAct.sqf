@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Cauterization near fire sources (ACE medical compat ONLY)
 Designed specifically for Misery mod
@@ -7,8 +8,8 @@ by TenuredCLOUD
 [
     player,
     "Cauterize wounds",
-    "Use\icons\cauterize.paa",
-    "Use\icons\cauterize.paa",
+    QPATHTOEF(icons,data\cauterize_ca.paa),
+    QPATHTOEF(icons,data\cauterize_ca.paa),
     "call Misery_fnc_NearFire",
     "[player] call ace_medical_blood_fnc_isBleeding",
     {

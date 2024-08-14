@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Crafting Framework GUI
 Designed specifically for Misery mod
@@ -61,7 +62,7 @@ class MiseryCrafting_NoteBox: RscText
 class Misery_Crafting_Icon: RscPicture
 {
     idc = 1501;
-    text = "\Use\icons\crafting.paa";
+    text = QPATHTOEF(icons,data\crafting_ca.paa);
     x = QUOTE(36.5 * GUI_GRID_W + GUI_GRID_X);
     y = QUOTE(2 * GUI_GRID_H + GUI_GRID_Y);
     w = QUOTE(5.5 * GUI_GRID_W);

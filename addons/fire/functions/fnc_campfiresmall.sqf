@@ -6,8 +6,6 @@ Designed specifically for Misery mod
 by TenuredCLOUD
 */
 
-#include "\z\misery\addons\main\script_macros.hpp"
-
 private _pos = player getRelPos [1.5, 0];
 private _object = createVehicle ["FirePlace_burning_F", _pos, [], 0, "CAN_COLLIDE"];
 _pos = [_pos select 0, _pos select 1, ((getPosATL player) select 2) + 1];
@@ -38,8 +36,8 @@ _object setVariable ["Mis_Woodstickfuel", 100, true];
 [
     _object,
     "Reignite Fire",
-    "Use\icons\harvestwoodfuel.paa",
-    "Use\icons\harvestwoodfuel.paa",
+    QPATHTOEF(icons,data\harvestwoodfuel_ca.paa),
+    QPATHTOEF(icons,data\harvestwoodfuel_ca.paa),
     "_this distance _target < 2.5 && !(inflamed _target) && ('Misery_lighter' in items player || 'rvg_matches' in magazines player)",
     "_caller distance _target < 2.5 && !(inflamed _target) && ('Misery_tinder' in items player || 'rvg_money' in magazines player || 'rvg_notepad' in magazines player || 'rvg_docFolder' in magazines player)",
     {

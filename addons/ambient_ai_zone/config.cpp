@@ -42,7 +42,7 @@ class Misery_Ambient_AI_Zone: Module_F
     {
         scope=2;
         displayName="Misery Ambient AI Zone";
-        icon="\z\misery\addons\icons\Group.paa";
+        icon = QPATHTOEF(icons,data\group_ca.paa);
         category="Misery_faction";
         function="";
         functionPriority=1;
@@ -259,7 +259,7 @@ class Misery_Ambient_AI_Zone: Module_F
     {
         scope=2;
         displayName="Misery (AI) Settings";
-        icon="\z\misery\addons\icons\Group.paa";
+        icon = QPATHTOEF(icons,data\group_ca.paa);
         category="Misery_faction";
         function="Misery_fnc_ModuleAISettings";
         functionPriority=1;
