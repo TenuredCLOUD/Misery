@@ -1,11 +1,12 @@
 #include "..\script_component.hpp"
 /*
-Misery Radio audio looper / Broadcaster
-Synces to all players that possess a radio (NOT JIP COMPAT)
-Runs strictly on Server for GLOBAL effect
-Designed specifically for Misery mod
-by TenuredCLOUD
+    Misery Radio audio looper / Broadcaster
+    Synces to all players that possess a radio (NOT JIP COMPAT)
+    Runs strictly on Server for GLOBAL effect
+    Designed specifically for Misery mod
+    by TenuredCLOUD
 */
+
 /*
 private["_module","_SoundfileArray","_SoundClassArray","RadioObjectArray","_timeafter","_TimeA","_timeafter2","_TimeB"];
 

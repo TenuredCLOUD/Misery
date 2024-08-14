@@ -1,7 +1,8 @@
+#include "..\script_component.hpp"
 /*
 Misery Module startup function (Custom action Menu GUI)
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 private["_module","_units","_activated"];

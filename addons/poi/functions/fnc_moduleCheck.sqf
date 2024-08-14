@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery POI Master Checking loop
 Consistenty checks players positions relative to module positions

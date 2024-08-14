@@ -1,10 +1,9 @@
+#include "..\script_component.hpp"
 /*
 * Misery Loot generation startup
 * Designed specifically for Misery mod
 * Code concepts from Drongo edited by TenuredCLOUD (with permission)
 */
-
-#include "\z\misery\addons\main\script_macros.hpp"
 
 private["_players","_buildings","_allBuildings","_add"];
 if!(isServer)exitWith{};

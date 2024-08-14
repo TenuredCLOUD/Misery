@@ -1,10 +1,9 @@
+#include "..\script_component.hpp"
 /*
 Misery Artifact Groundloot generator
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
-
-#include "\z\misery\addons\main\script_macros.hpp"
 
 if (isServer) then {
     private [
@@ -56,14 +55,14 @@ if (isServer) then {
         _ypos = _pos select 1;
         _xpos = _xpos + random (_radius * 2) - _radius;
         _ypos = _ypos + random (_radius * 2) - _radius;
-        _zpos = getTerrainHeightASL [_xpos, _ypos]; 
+        _zpos = getTerrainHeightASL [_xpos, _ypos];
         _randomPos = [_xpos, _ypos, _zpos];
 
         _groundStash = createVehicle ["GroundWeaponHolder_Scripted", _randomPos, [], 0, "can_Collide"];
         _groundStash setDir (random 360);
 
         _position = getPosATL _groundStash;
-        _position set [2, 0.1]; 
+        _position set [2, 0.1];
         _groundStash setPosATL _position;
 
         _item = _artifacts call bis_fnc_selectRandom;
@@ -72,7 +71,7 @@ if (isServer) then {
         _holderArray pushBack _groundStash;
     };
 
-    { 
+    {
         // Check if artifact spawns under roof, or in building: (Enforce exterior spawns)
         _groundStash = _x;
         if (_x call EFUNC(artifacts,ArtifactSafe)) then {
@@ -80,10 +79,10 @@ if (isServer) then {
             deleteVehicle _x;
         } else {
             _light = "#lightpoint" createVehicle getPos _x;
-            _light setLightBrightness 0.1; 
-            _light setLightColor [random 1, random 1, random 1]; 
-            _light lightAttachObject [_x, [0,0,0]]; 
-            _x setVariable ["Artifact_LightEmission", _light]; 
+            _light setLightBrightness 0.1;
+            _light setLightColor [random 1, random 1, random 1];
+            _light lightAttachObject [_x, [0,0,0]];
+            _x setVariable ["Artifact_LightEmission", _light];
 
     //Add checks to each artifact holder: (garbage collection if empty)
     [_groundStash] spawn {

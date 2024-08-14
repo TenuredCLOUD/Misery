@@ -1,10 +1,10 @@
-/*
-Misery Medical treatment (radiation)
-Designed specifically for Misery mod
-by TenuredCLOUD
-*/
-
+#include "..\script_component.hpp"
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
+/*
+    Misery Medical treatment (radiation)
+    Designed specifically for Misery mod
+    by TenuredCLOUD
+*/
 
 private ["_playercash","_pricerads","_priceradscalc","_dialog","_PurchaseB","_ExitB","_MedInterrupt"];
 

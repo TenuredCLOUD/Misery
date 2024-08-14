@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Cooking Framework Item check
 Processes recipe items needed, if not all are met, code exits as false

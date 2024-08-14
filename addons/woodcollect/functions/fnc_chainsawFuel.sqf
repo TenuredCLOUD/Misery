@@ -1,7 +1,8 @@
+#include "..\script_component.hpp"
 /*
-Misery Chainsaw fuel usage
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+    Misery Chainsaw fuel usage
+    Designed specifically for Misery mod
+    by TenuredCLOUD
 */
 
 if (!hasInterface) exitWith {};
@@ -16,7 +17,7 @@ if !("Misery_Chainsawempty" in items player) exitWith {titleText ["You have no c
   player removeitem "Misery_Chainsawempty";
 
   private _random = [1, 10] call BIS_fnc_randomInt;
-  
+
   if (_random < 5) then {
     titleText ["You refueled your chainsaw, and have fuel to spare", "PLAIN DOWN"];
   player additem "Misery_sawfuel";

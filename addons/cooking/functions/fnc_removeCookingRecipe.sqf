@@ -1,9 +1,10 @@
+#include "..\script_component.hpp"
 /*
 Misery Cooking Recipe Data Remover
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 
-Usage ex: "boiled_water" call Misery_fnc_RemoveCraftingRecipe; 
+Usage ex: "boiled_water" call Misery_fnc_RemoveCraftingRecipe;
 */
 
 _this params ["_recipeName"];

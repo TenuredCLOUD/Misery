@@ -1,16 +1,17 @@
+#include "..\script_component.hpp"
 /*
-Misery BlackOut 
+Misery BlackOut
 This code removes all light sources from most maps bringing that "Post-Apoc" feel...
 Concept Utilizes directed light hitpoint damage & Advanced Map object filtering
 No performance loss is notice-able due to processing before scenario loading, and running completely on the server...
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 if (isServer) then {
-    private _axis = worldSize / 2;   
-    private _center = [_axis, _axis , 0];   
-    private _radius = sqrt 2 * _axis;   
+    private _axis = worldSize / 2;
+    private _center = [_axis, _axis , 0];
+    private _radius = sqrt 2 * _axis;
 
     //Sources that will not return from Map / World scan (do not return "light" points)
     private _StructureOverride = [
@@ -75,8 +76,8 @@ if (isServer) then {
 
     private _replacementBuildings = [];
 
-    {  
-        private _object = _x;  
+    {
+        private _object = _x;
         private _modelInfo = getModelInfo _x;
         private _type = typeOf _object;
 
@@ -85,11 +86,11 @@ if (isServer) then {
         _x switchLight "OFF";
 
         if (!isNil "_hitpoints") then {
-            {  
-                if ((_x find "light" > -1) || (_x find "Light" > -1)) then {  
-                    _object setHitPointDamage [_x, 1]; 
-                };  
-            } forEach _hitpoints;  
+            {
+                if ((_x find "light" > -1) || (_x find "Light" > -1)) then {
+                    _object setHitPointDamage [_x, 1];
+                };
+            } forEach _hitpoints;
         };
 
         if (_type in _buildingTypes) then {
@@ -115,9 +116,9 @@ if (isServer) then {
 
                 if (!isNil "_hitpointNewObject") then {
                     {
-                        if ((_x find "light" > -1) || (_x find "Light" > -1)) then {  
-                            _newObject setHitPointDamage [_x, 1];  
-                        };  
+                        if ((_x find "light" > -1) || (_x find "Light" > -1)) then {
+                            _newObject setHitPointDamage [_x, 1];
+                        };
                     } forEach _hitpointNewObject;
                 };
 
@@ -127,16 +128,16 @@ if (isServer) then {
             };
         };
 
-            if ((typeOf _object) in _TerminateSource) then { 
+            if ((typeOf _object) in _TerminateSource) then {
             _object hideObjectGlobal true;
-            _object setDamage 1;  
-        }; 
+            _object setDamage 1;
+        };
 
-        if (_modelInfo select 0 in _DirectModelSource) then {            
-            _object hideObjectGlobal true;  
-        }; 
+        if (_modelInfo select 0 in _DirectModelSource) then {
+            _object hideObjectGlobal true;
+        };
 
-    } forEach (nearestTerrainObjects [_center, [], _radius * 2, false]);  
+    } forEach (nearestTerrainObjects [_center, [], _radius * 2, false]);
 
     [{diag_tickTime > 0},
 {

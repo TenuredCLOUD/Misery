@@ -1,10 +1,9 @@
+#include "..\script_component.hpp"
 /*
 Misery Fear cycle
 Designed specifically for Misery mod
 by TenuredCLOUD
 */
-
-#include "\z\misery\addons\main\script_macros.hpp"
 
 [{!(isNil {player getVariable "MiseryFear"}) && alive player},
 {

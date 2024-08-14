@@ -1,11 +1,10 @@
+#include "..\script_component.hpp"
 /*
 Misery Generator Power button
 Controls start and stop operation of generators
 Designed specifically for Misery mod
 by TenuredCLOUD
 */
-
-#include "\z\misery\addons\main\script_macros.hpp"
 
 waitUntil {!isNull findDisplay 573849};
 

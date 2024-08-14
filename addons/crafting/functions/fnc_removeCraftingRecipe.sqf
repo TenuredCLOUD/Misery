@@ -1,9 +1,10 @@
+#include "..\script_component.hpp"
 /*
 Misery Crafting Recipe Data Remover
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 
-Usage ex: "rvg_guttingknife" call Misery_fnc_RemoveCraftingRecipe; 
+Usage ex: "rvg_guttingknife" call Misery_fnc_RemoveCraftingRecipe;
 */
 
 _this params ["_recipeName"];

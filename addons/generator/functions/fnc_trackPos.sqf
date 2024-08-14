@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Generator Position Tracking
 Continually watches generator position to make sure it doesn't move, if it moves kill the engine...

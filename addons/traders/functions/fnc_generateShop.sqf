@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Shop Generater
 Takes shop data and stores Hashmap on trader AI

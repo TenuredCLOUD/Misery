@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery refuel Vehicle Icon & name updater
 Designed specifically for Misery mod

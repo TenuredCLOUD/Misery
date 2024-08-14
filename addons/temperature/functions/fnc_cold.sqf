@@ -1,9 +1,8 @@
-#include "\z\misery\addons\main\script_macros.hpp"
-
+#include "..\script_component.hpp"
 /*
 Cold
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 private ["_cold","_MPlayertemp","_MExposure","_MHunger","_MDebuffs","_coldexposure","_Miserytempdefcoldcalc"];
@@ -15,15 +14,15 @@ _MHunger = player getVariable ["MiseryHunger", MIS_HUNGER];
 _MDebuffs = player getVariable "MiseryDebuffs";
 
 //Player effective temperature pre-check:
-if ([player] call Misery_fnc_NearFire) exitWith {}; 
-if ((([player] call Misery_fnc_Isinside) select 0) && (([player] call Misery_fnc_Isinside) select 1)) exitWith {}; 
+if ([player] call Misery_fnc_NearFire) exitWith {};
+if ((([player] call Misery_fnc_Isinside) select 0) && (([player] call Misery_fnc_Isinside) select 1)) exitWith {};
 if !(isNull objectParent player) exitWith {};
 
-if (_MPlayertemp < 20) then { 
+if (_MPlayertemp < 20) then {
 
     if (!(_MDebuffs find "PARASITES" != -1 || _MDebuffs find "INFECTION" != -1)) then {
 
-        _coldexposure = MISERY_COLDEXPOSURE(_MPlayertemp); //- this value scales with player temperature decrease... 
+        _coldexposure = MISERY_COLDEXPOSURE(_MPlayertemp); //- this value scales with player temperature decrease...
 
         player setVariable ["MiseryExposure", (_MExposure - parseNumber ((_coldexposure)toFixed 2))];
 
@@ -33,7 +32,7 @@ if (_MPlayertemp < 20) then {
     //Temperature deficiency - Calculates a drop in hunger / thirst depending on Temperature:
     if (MiseryTemperaturedeficiency == 1) then {
 
-        _Miserytempdefcoldcalc = MISERY_COLDEXPOSURE(_MPlayertemp);    
+        _Miserytempdefcoldcalc = MISERY_COLDEXPOSURE(_MPlayertemp);
 
         player setVariable ["MiseryHunger", (_MHunger - parseNumber ((_Miserytempdefcoldcalc)toFixed 2))];
 

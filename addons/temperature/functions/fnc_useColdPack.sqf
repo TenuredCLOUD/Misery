@@ -1,5 +1,4 @@
-#include "\z\misery\addons\main\script_macros.hpp"
-
+#include "..\script_component.hpp"
 /*
     Misery Coldpack usage
     Designed specifically for Misery mod

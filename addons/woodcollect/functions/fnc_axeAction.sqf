@@ -1,8 +1,8 @@
 #include "..\script_component.hpp"
 /*
-WoodAxe usage
-Designed specifically for Misery mod
-by TenuredCLOUD
+    WoodAxe usage
+    Designed specifically for Misery mod
+    by TenuredCLOUD
 */
 
  [

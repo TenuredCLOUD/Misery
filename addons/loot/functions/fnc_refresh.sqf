@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Loot Framework refresh timer loop
 Designed specifically for Misery mod

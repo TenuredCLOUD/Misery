@@ -1,5 +1,4 @@
-#include "\z\misery\addons\main\script_macros.hpp"
-
+#include "..\script_component.hpp"
 /*
 Misery No nightvision when in TPP (Third person)
 Enforces player to disable NVG's when in third person, as it should be...

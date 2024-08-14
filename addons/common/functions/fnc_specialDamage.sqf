@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Damage modifier for player instant death
 Designed specifically for Misery mod

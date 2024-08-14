@@ -1,11 +1,10 @@
+#include "..\script_component.hpp"
 /*
 Misery MP handler
 Dedi + Hosted handle for respawn events: - great help from Haleks
 Designed specifically for Misery mod
 by TenuredCLOUD
 */
-
-#include "\z\misery\addons\main\script_macros.hpp"
 
 private ["_miseryDebuffs"];
 

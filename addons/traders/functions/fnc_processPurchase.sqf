@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Trader Shop Purchase processor
 Processes Buying of items + funds handling

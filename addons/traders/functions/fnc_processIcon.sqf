@@ -1,8 +1,9 @@
+#include "..\script_component.hpp"
 /*
 Misery Trader Shop
 Processes Listob Icons as well as test but in the icon controls
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 [{!isNull findDisplay 982390},
@@ -25,7 +26,7 @@ by TenuredCLOUD
         _descshort = format ["%1", getText (_cfg >> "descriptionShort")];
         _IconTxt ctrlSetStructuredText parseText _descshort;
     };
-    
+
     _cfg = configFile >> "CfgMagazines" >> _selectedItem;
     if (isClass _cfg) then {
         _picPath = getText (_cfg >> "picture");

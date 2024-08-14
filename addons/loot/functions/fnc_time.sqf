@@ -1,6 +1,7 @@
+#include "..\script_component.hpp"
 /*
 Misery Loot Framework Time stamp fnc
-Designed specifically for Misery mod 
+Designed specifically for Misery mod
 Code concepts by Drongo
 */
 

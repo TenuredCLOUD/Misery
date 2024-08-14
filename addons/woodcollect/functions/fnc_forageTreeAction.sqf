@@ -1,8 +1,8 @@
 #include "..\script_component.hpp"
 /*
-Wood foraging
-Designed specifically for Misery mod
-by TenuredCLOUD
+    Wood foraging
+    Designed specifically for Misery mod
+    by TenuredCLOUD
 */
 
  [

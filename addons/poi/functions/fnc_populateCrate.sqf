@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 POI Crate Loot Generator
 Designed specifically for Misery mod

@@ -1,7 +1,8 @@
+#include "..\script_component.hpp"
 /*
-Parser for custom item usage 
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Parser for custom item usage
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 private["_module","_className","_script"];

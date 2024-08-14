@@ -1,7 +1,8 @@
+#include "..\script_component.hpp"
 /*
-Misery Buff or Ailment Data Parser 
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Misery Buff or Ailment Data Parser
+Designed specifically for Misery mod
+by TenuredCLOUD
 
 Usage example:
 ["ailment","name of ailment", "path/to/image/file.paa", "description"] call Misery_fnc_AddBuffOrAilment;

@@ -1,9 +1,8 @@
-#include "\z\misery\addons\main\script_macros.hpp"
-
+#include "..\script_component.hpp"
 /*
 Misery Brewed Coffee usage
 Designed specifically for Misery mod (also compatible with Ravage)
-by TenuredCLOUD 
+by TenuredCLOUD
 */
 
 _MSleepiness = player getVariable ["MiserySleepiness", MIS_SLEEP];

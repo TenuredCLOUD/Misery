@@ -1,8 +1,9 @@
+#include "..\script_component.hpp"
 /*
 Headlamp Usage (Turning on)
 This function syncs to all client in a server environment
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 private _player = _this select 0;

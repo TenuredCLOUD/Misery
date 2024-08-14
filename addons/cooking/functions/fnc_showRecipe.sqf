@@ -1,7 +1,8 @@
+#include "..\script_component.hpp"
 /*
 Misery Cooking Framework Recipe Formatter
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 private _dialog = findDisplay 982379;
@@ -19,7 +20,7 @@ private _playerRecipes = player getVariable "Misery_Cooking_DataSet";
 
 if (count _selectedRecipe > 0) then {
     private _requirements = _selectedRecipe select 1;
-    private _reqList = _dialog displayCtrl 1502; 
+    private _reqList = _dialog displayCtrl 1502;
 
     lbClear _reqList;
 
@@ -45,8 +46,8 @@ if (count _selectedRecipe > 0) then {
                     _itemDisplayName_2 = getText (configFile >> "CfgMagazines" >> _item >> "displayName");
                 };
                 private _index = _reqList lbAdd format ["%1 x %2", _itemDisplayName_2, _count];
-                _reqList lbSetData [_index, _item];  
-                _reqList lbSetPicture [_index, getText (configFile >> "CfgWeapons" >> _item >> "picture")]; 
+                _reqList lbSetData [_index, _item];
+                _reqList lbSetPicture [_index, getText (configFile >> "CfgWeapons" >> _item >> "picture")];
             };
         };
     } forEach _requirements;

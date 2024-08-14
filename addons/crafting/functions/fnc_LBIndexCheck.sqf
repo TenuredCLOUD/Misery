@@ -1,7 +1,8 @@
+#include "..\script_component.hpp"
 /*
 Misery Crafting Framework Listboc index value checker
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 params ["_ctrl", "_str"];

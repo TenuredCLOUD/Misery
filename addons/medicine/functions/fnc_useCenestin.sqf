@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Cenestin pill usage
 Designed specifically for Misery mod

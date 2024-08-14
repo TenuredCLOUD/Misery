@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Defined item usage, custom item params
 Designed specifically for Misery mod

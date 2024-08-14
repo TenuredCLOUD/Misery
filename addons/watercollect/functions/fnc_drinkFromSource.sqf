@@ -1,13 +1,11 @@
-#include "\z\misery\addons\main\script_macros.hpp"
-
+#include "..\script_component.hpp"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
 Misery WaterCollection Drink from source processor
 Takes inputs from GUI and processes recipe (if it exists)
 Designed specifically for Misery mod
 by TenuredCLOUD
 */
-
-#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 
 private _dialog = findDisplay 982380;
 

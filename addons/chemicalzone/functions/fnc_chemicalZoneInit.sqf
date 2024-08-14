@@ -4,6 +4,7 @@ Misery Radiation Zone processor
 Designed specifically for Misery mod
 by TenuredCLOUD
 */
+
 /*
 [{!isNil "MiseryinChemZone" && MiseryinChemZone == true},
 {

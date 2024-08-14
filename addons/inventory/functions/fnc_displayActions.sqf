@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Mod Menu GUI updater
 Designed specifically for Misery mod

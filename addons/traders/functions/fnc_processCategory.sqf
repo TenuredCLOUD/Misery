@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Trader Shop Categorizer processor
 Adds Category's to UI

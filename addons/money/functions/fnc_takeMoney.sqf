@@ -1,11 +1,10 @@
+#include "..\script_component.hpp"
 /*
 Misery Take Money UI
 Starts up UI with proper values, etc...
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
-
-#include "\z\misery\addons\main\script_macros.hpp"
 
 [{!isNull findDisplay 358492},
 {

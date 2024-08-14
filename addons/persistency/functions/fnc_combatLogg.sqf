@@ -1,7 +1,8 @@
+#include "..\script_component.hpp"
 /*
 Misery comabt logger timeout
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 waitUntil {!isNull (findDisplay 49)};

@@ -1,6 +1,7 @@
+#include "..\script_component.hpp"
 /*
 Misery Mil vest checker
-Designed specifically for Misery mod 
+Designed specifically for Misery mod
 Source code by Drongo Permission recieved prior to usage
 */
 

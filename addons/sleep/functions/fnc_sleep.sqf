@@ -1,11 +1,10 @@
+#include "..\script_component.hpp"
 /*
 Misery Sleep system (Singleplayer only)
 Some Code concepts from Haleks Ravage mod (with permission)
 Designed specifically for Misery mod
 by TenuredCLOUD
 */
-
-#include "\z\misery\addons\main\script_macros.hpp"
 
 private _MSleepiness = player getVariable ["MiserySleepiness", MIS_SLEEP];
 private _MHunger = player getVariable ["MiseryHunger", MIS_HUNGER];

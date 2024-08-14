@@ -1,10 +1,10 @@
-/*
-Misery Rearming
-Designed specifically for Misery mod
-by TenuredCLOUD
-*/
-
+#include "..\script_component.hpp"
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
+/*
+    Misery Rearming
+    Designed specifically for Misery mod
+    by TenuredCLOUD
+*/
 
 private ["_playercash","_module","_dialog","_PurchaseB","_ExitB","_Vehiclename","_target","_resupplyPrice","_Found","_RepairsInterrupt","_playercash","_text","_displayedText","_delay","_progressIndicator","_displaySuccess"];
 

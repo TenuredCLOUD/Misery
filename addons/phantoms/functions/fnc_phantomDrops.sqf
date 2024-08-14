@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery artifact dropper
 Designed specifically for Misery mod

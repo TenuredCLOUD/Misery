@@ -1,10 +1,9 @@
+#include "..\script_component.hpp"
 /*
     * Misery Loot stash generator
     * Designed specifically for Misery mod
     * Code concepts from Drongo DMP edited by TenuredCLOUD (with permission)
 */
-
-#include "\z\misery\addons\main\script_macros.hpp"
 
 private["_pos", "_military", "_vehicle", "_crateTypes", "_crateType", "_deleteFlag", "_player", "_players", "_count", "_mCount", "_chance", "_index", "_magazines", "_arrays", "_array", "_magazineChance", "_magazineCount", "_item", "_items"];
 _pos=_this select 0;

@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Generator Power On
 Starts up generator, controlling audio synchronization & fuel draining

@@ -1,17 +1,18 @@
+#include "..\script_component.hpp"
 /*
 Misery Resupply Vehicle Shop UI List populater
 Defines the selected purchase option, and passes current pricing values
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 waitUntil {!isNull findDisplay 982383};
 
-if (!isNull findDisplay 982383) exitWith { 
+if (!isNull findDisplay 982383) exitWith {
 
     private ["_list","_PurchaseB","_Vehiclename","_resupplyPrice","_formattedPrice","_Found","_index"];
-    
-    _list = findDisplay 982383 displayCtrl 1500; 
+
+    _list = findDisplay 982383 displayCtrl 1500;
     _PurchaseB = findDisplay 982383 displayCtrl 1600;
 
     if (MiseryTarget_VehName isEqualTo "") exitWith {
@@ -25,13 +26,13 @@ if (!isNull findDisplay 982383) exitWith {
     if (isNil "_Vehiclename") exitWith {};
 
     _resupplyPrice = 0;
-    _Found = false; 
+    _Found = false;
 
     {
         if ((_x select 0) == MiseryTarget_VehName) then {
             _Array=_x;
             _Found = true;
-            _resupplyPrice = _x select 4; 
+            _resupplyPrice = _x select 4;
         };
     } forEach Misery_Veh_Type;
 
@@ -43,10 +44,10 @@ if (!isNull findDisplay 982383) exitWith {
     };
 
     if (_resupplyPrice == -1) then {
-    _index = _list lbAdd "This vehicle cannot be resupplied..."; 
-    _PurchaseB ctrlShow false; 
+    _index = _list lbAdd "This vehicle cannot be resupplied...";
+    _PurchaseB ctrlShow false;
 } else {
-    _index = _list lbAdd format ["Resupply (%1)", _formattedPrice];    
+    _index = _list lbAdd format ["Resupply (%1)", _formattedPrice];
 };
 };
 

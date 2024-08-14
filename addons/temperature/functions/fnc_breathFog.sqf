@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery BreathFog cycle
 BreathFog for players (runs on clients only)

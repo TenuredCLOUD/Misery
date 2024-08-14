@@ -1,8 +1,9 @@
+#include "..\script_component.hpp"
 /*
 Misery POI Master settings module initialization
 Defines performance properties for each POI module
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 private["_module","_units","_activated"];

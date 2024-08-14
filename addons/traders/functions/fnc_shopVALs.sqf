@@ -1,8 +1,9 @@
+#include "..\script_component.hpp"
 /*
 Misery Trader Shop
 Watches shop values and process deductions + increases in funds, as well as overall shop processing...
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 [{!isNull findDisplay 982390},
@@ -34,17 +35,17 @@ by TenuredCLOUD
 
         if (_pweapon != "") then {
         _compatibleItemsP = [_pweapon] call CBA_fnc_compatibleItems;
-        _compatibleMagazinesP = [_pweapon] call CBA_fnc_compatibleMagazines; 
+        _compatibleMagazinesP = [_pweapon] call CBA_fnc_compatibleMagazines;
         };
 
         if (_hweapon != "") then {
         _compatibleItemsH = [_hweapon] call CBA_fnc_compatibleItems;
-        _compatibleMagazinesH = [_hweapon] call CBA_fnc_compatibleMagazines;   
+        _compatibleMagazinesH = [_hweapon] call CBA_fnc_compatibleMagazines;
         };
 
         if (_sweapon != "") then {
         _compatibleItemsS = [_sweapon] call CBA_fnc_compatibleItems;
-        _compatibleMagazinesS = [_sweapon] call CBA_fnc_compatibleMagazines; 
+        _compatibleMagazinesS = [_sweapon] call CBA_fnc_compatibleMagazines;
         };
 
         _trader = player getVariable "currentTrader";
@@ -60,7 +61,7 @@ by TenuredCLOUD
 
         _items = _shop select (_shop findIf {_x select 0 == "Items"}) select 1;
 
-        _inventoryItems = items player; 
+        _inventoryItems = items player;
         _inventoryMagazines = magazines player;
         _inventory = _inventoryItems + _inventoryMagazines;
 
@@ -96,12 +97,12 @@ by TenuredCLOUD
         if (_category == _selectedCategory) then {
         if (cbChecked _checkbox) then {
         if (_itemName in _compatibleItemsP || _itemName in _compatibleMagazinesP || _itemName in _compatibleItemsH || _itemName in _compatibleMagazinesH || _itemName in _compatibleItemsS || _itemName in _compatibleMagazinesS) then {
-            private _displayName = getText (configFile >> "CfgWeapons" >> _itemName >> "displayName");  
+            private _displayName = getText (configFile >> "CfgWeapons" >> _itemName >> "displayName");
             if (_displayName == "") then {
-                _displayName = getText (configFile >> "CfgMagazines" >> _itemName >> "displayName");  
+                _displayName = getText (configFile >> "CfgMagazines" >> _itemName >> "displayName");
             };
-            if (_displayName == "") then {  
-                _displayName = getText (configFile >> "CfgVehicles" >> _itemName >> "displayName");   
+            if (_displayName == "") then {
+                _displayName = getText (configFile >> "CfgVehicles" >> _itemName >> "displayName");
             };
             _index = _list lbAdd format ["%1 - Price: %2 - Stock: %3", _displayName, [_price, 1, 2, true] call CBA_fnc_formatNumber, round(_stock)];
             _list lbSetData [_index, _itemName];
@@ -112,12 +113,12 @@ by TenuredCLOUD
             _list lbSetPicture [_index, _picture];
             };
         } else {
-            private _displayName = getText (configFile >> "CfgWeapons" >> _itemName >> "displayName");  
+            private _displayName = getText (configFile >> "CfgWeapons" >> _itemName >> "displayName");
             if (_displayName == "") then {
-                _displayName = getText (configFile >> "CfgMagazines" >> _itemName >> "displayName");  
+                _displayName = getText (configFile >> "CfgMagazines" >> _itemName >> "displayName");
             };
-            if (_displayName == "") then {  
-                _displayName = getText (configFile >> "CfgVehicles" >> _itemName >> "displayName");   
+            if (_displayName == "") then {
+                _displayName = getText (configFile >> "CfgVehicles" >> _itemName >> "displayName");
             };
             _index = _list lbAdd format ["%1 - Price: %2 - Stock: %3", _displayName, [_price, 1, 2, true] call CBA_fnc_formatNumber, round(_stock)];
             _list lbSetData [_index, _itemName];
@@ -179,9 +180,9 @@ by TenuredCLOUD
         } forEach _playerInventory;
 
         if (_playerItemCount > 0 && _category == _selectedCategory) then {
-            private _displayName = getText (configFile >> "CfgWeapons" >> _itemName >> "displayName");  
+            private _displayName = getText (configFile >> "CfgWeapons" >> _itemName >> "displayName");
             if (_displayName == "") then {
-                _displayName = getText (configFile >> "CfgMagazines" >> _itemName >> "displayName");  
+                _displayName = getText (configFile >> "CfgMagazines" >> _itemName >> "displayName");
             };
             _index = _list lbAdd format ["%1 - Price: %2 - Inventory: %3", _displayName, [_price, 1, 2, true] call CBA_fnc_formatNumber, _playerItemCount];
             _list lbSetData [_index, _itemName];
@@ -201,14 +202,14 @@ by TenuredCLOUD
     _checkbox ctrlShow false;
 
     if (lbSize _list == 0) then {
-        _buySellButton ctrlEnable false;  
+        _buySellButton ctrlEnable false;
         _giftButton ctrlEnable false;
         _IconCtrl ctrlSetText nil;
         _IconTxt ctrlSetText nil;
         ctrlSetText [1001, "You have nothing to Sell..."];
     }else{
-        _buySellButton ctrlEnable true;  
-        _giftButton ctrlEnable true; 
+        _buySellButton ctrlEnable true;
+        _giftButton ctrlEnable true;
         };
     };
 };

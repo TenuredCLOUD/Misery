@@ -1,7 +1,8 @@
+#include "..\script_component.hpp"
 /*
-Misery Bank UI Deposit Processor 
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Misery Bank UI Deposit Processor
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 private _amount = parseNumber (ctrlText ((findDisplay 483729) displayCtrl 1400));

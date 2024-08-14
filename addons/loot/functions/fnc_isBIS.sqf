@@ -1,6 +1,7 @@
+#include "..\script_component.hpp"
 /*
 Misery IsBIS parent check
-Designed specifically for Misery mod 
+Designed specifically for Misery mod
 Source code by Drongo Permission recieved prior to usage
 */
 

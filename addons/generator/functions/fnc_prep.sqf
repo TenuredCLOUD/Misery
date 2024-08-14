@@ -1,14 +1,15 @@
+#include "..\script_component.hpp"
 /*
 Misery Generator UI populator / PREP
 Generator stats, usage UI processor
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 waitUntil {!isNull findDisplay 573849};
 
 _Generator = player getVariable "Misery_Current_Generator";
-_GeneratorType = typeOf _Generator; 
+_GeneratorType = typeOf _Generator;
 
 private _radius = nil;
 
@@ -26,15 +27,15 @@ switch (_GeneratorType) do {
 
 while {!isNull findDisplay 573849} do {
 
-_fuelProgressBar = findDisplay 573849 displayCtrl 1003; 
+_fuelProgressBar = findDisplay 573849 displayCtrl 1003;
 
-_PowerButton = findDisplay 573849 displayCtrl 1600; 
+_PowerButton = findDisplay 573849 displayCtrl 1600;
 
-_RefuelButton = findDisplay 573849 displayCtrl 1601; 
+_RefuelButton = findDisplay 573849 displayCtrl 1601;
 
 _Generator = player getVariable "Misery_Current_Generator";
 
-_GeneratorType = typeOf _Generator; 
+_GeneratorType = typeOf _Generator;
 
 _Generatorname = getText (configFile >> "CfgVehicles" >> _GeneratorType >> "displayName");
 
@@ -44,11 +45,11 @@ private _fuelLevel = _Generator getVariable ["Misery_Gen_FuelLVL", 100];
 
 _progressIndicator = "";
 
-for "_i" from 0 to _fuelLevel do { 
-    if (_i % 5 == 0) then {_progressIndicator = _progressIndicator + "-"}; 
+for "_i" from 0 to _fuelLevel do {
+    if (_i % 5 == 0) then {_progressIndicator = _progressIndicator + "-"};
 };
 
-_displayedText = format ["Fuel Level:%1%2%3%1[%4]", endl, _fuelLevel, "%", _progressIndicator]; 
+_displayedText = format ["Fuel Level:%1%2%3%1[%4]", endl, _fuelLevel, "%", _progressIndicator];
 ctrlSetText [1003, _displayedText];
 
 private _isRunning = _Generator getVariable ["Misery_Gen_IsRunning", false];
@@ -72,7 +73,7 @@ switch (_isRunning) do {
 ctrlSetText [1600, _buttonText];
 _RefuelButton ctrlShow _showRefuelButton;
 
-private _displayedState = format ["Power State: %1", _powerState]; 
+private _displayedState = format ["Power State: %1", _powerState];
 ctrlSetText [1001, _displayedState];
 
 sleep 1;

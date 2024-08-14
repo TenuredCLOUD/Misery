@@ -1,7 +1,8 @@
+#include "..\script_component.hpp"
 /*
-Misery Value to Bar conversion 
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Misery Value to Bar conversion
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
     params ["_value"];

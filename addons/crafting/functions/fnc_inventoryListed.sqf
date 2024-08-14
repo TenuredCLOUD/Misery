@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Crafting Framework List populater
 Scans Player's inventory and populates the GUI

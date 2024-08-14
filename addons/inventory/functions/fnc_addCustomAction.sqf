@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Custom action for GUI parser
 Designed specifically for Misery mod

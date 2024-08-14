@@ -1,10 +1,9 @@
+#include "..\script_component.hpp"
 /*
-Misery Cigar usage
-Designed specifically for Misery mod
-by TenuredCLOUD
+    Misery Cigar usage
+    Designed specifically for Misery mod
+    by TenuredCLOUD
 */
-
-#include "\z\misery\addons\main\script_macros.hpp"
 
 if (!hasInterface) exitWith {};
 MiseryACE=FALSE;

@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery THBD injection (non-stim) (rad removal)
 Designed specifically for Misery mod

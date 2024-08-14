@@ -1,11 +1,10 @@
+#include "..\script_component.hpp"
 /*
 Misery Client Variables Initialization
 Pre-Processes Client Variables
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
-
-#include "\z\misery\addons\main\script_macros.hpp"
 
 player setVariable ["MiseryThirst", MIS_THIRST];
 player setVariable ["MiseryHunger", MIS_HUNGER];
@@ -22,15 +21,15 @@ player setVariable ["MiseryCurrency", 0];
 player setVariable ["MiseryCurrency_Banked", 0];
 player setVariable ["lastPhoenixWithdrawalTime", 0];
 player setVariable ["MiseryRadiation", 0];
-player setVariable ["MiseryPoison", MIS_POISON]; 
-player setVariable ["MiseryInfection", MIS_INFECTION]; 
+player setVariable ["MiseryPoison", MIS_POISON];
+player setVariable ["MiseryInfection", MIS_INFECTION];
 player setVariable ["MiseryFear", MIS_FEAR];
-player setVariable ["MiseryExposure", MIS_EXPOSURE]; 
+player setVariable ["MiseryExposure", MIS_EXPOSURE];
 player setVariable ["MiseryPlayerTemp", (call EFUNC(temperature,Temperature)) select 0];
 player setVariable ["MiseryBreathFogSim", nil];
 player setVariable ["MiseryBreath", false];
 
-MiserySeaTemp = 0; 
+MiserySeaTemp = 0;
 
 // Autogenerate savefile if blank
 if (MiserysurvivalSaveName == "") then {
@@ -56,7 +55,7 @@ if !(MiserysurvivalKillhandleScript == "") then {
 };
 
 // Persistency reloader
-if (MiserysurvivalSaveMode == 2) then { 
+if (MiserysurvivalSaveMode == 2) then {
     private _saveArray = [];
     if !(isNil {profileNamespace getVariable MiserysurvivalSaveName}) then {
         _saveArray = profileNamespace getVariable MiserysurvivalSaveName;
@@ -64,7 +63,7 @@ if (MiserysurvivalSaveMode == 2) then {
         [player] call EFUNC(persistency,Deserializeplayer);
         MiseryNewCharacter = FALSE;
     } else {
-        systemChat "New Misery Character"; 
+        systemChat "New Misery Character";
     };
     enableSaving [false, false]; // Disable saving options + Save & exit etc...
 };
@@ -92,7 +91,7 @@ if (MiserysurvivalSaveMode == 1) then {
             false,
             "",
             ""
-        ];    
+        ];
     } else {
         enableSaving TRUE;
     };

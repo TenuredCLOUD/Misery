@@ -1,11 +1,11 @@
-/*
-Misery WaterCollection processor
-Takes inputs from GUI and processes recipe (if it exists)
-Designed specifically for Misery mod
-by TenuredCLOUD
-*/
-
+#include "..\script_component.hpp"
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
+/*
+    Misery WaterCollection processor
+    Takes inputs from GUI and processes recipe (if it exists)
+    Designed specifically for Misery mod
+    by TenuredCLOUD
+*/
 
 private _dialog = findDisplay 982380;
 private _selectedOutputItem = lbData[1500, (lbCurSel 1500)];

@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Near tree check fnc (Hand wood collection)
 Returns all nearby tree terrain objects + checks if they are damaged

@@ -1,10 +1,9 @@
+#include "..\script_component.hpp"
 /*
-Misery skinning compat for WBK IMS Compat 
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Misery skinning compat for WBK IMS Compat
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
-
-#include "\z\misery\addons\main\script_macros.hpp"
 
 //Will choose which skinning method to start based on nearby dead corpse / animal:
 

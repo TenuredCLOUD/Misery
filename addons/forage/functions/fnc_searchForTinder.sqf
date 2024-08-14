@@ -1,6 +1,5 @@
+#include "..\script_component.hpp"
 //Searching for tinder by: TenuredCLOUD v2.0
-
-#include "\z\misery\addons\main\script_macros.hpp"
 
 if (call EFUNC(common,Canforage)) then {
 
