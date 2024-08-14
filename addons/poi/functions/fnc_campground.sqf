@@ -298,7 +298,7 @@ _entityPositions = units _group apply {getPos _x};
 
     _fireplace = "Land_Fireplace_F" createVehicle ([_pos, 0, 5 + (random 25), 1, 0, 20, 0] call BIS_fnc_findSafePos);
     _fireplace setDir (random 360);
-    if ((random 10) > 5) then {_fireplace inflame TRUE};
+    if ((random 10) > 5) then {_fireplace inflame true};
     _spawnedObjects pushBack _fireplace;
 
     _fireplace enableDynamicSimulation true;

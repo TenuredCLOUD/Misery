@@ -13,7 +13,7 @@ systemChat format ["Type of _requirements: %1", typeName _requirements]; //debug
 systemChat format ["Count of _requirements: %1", count _requirements]; //debug output
 };
 private _playerItems = (items player) + (magazines player);
-private _hasAll = TRUE;
+private _hasAll = true;
 
 {
     private _itemArray = _x;
@@ -35,9 +35,9 @@ private _hasAll = TRUE;
 
         if (_playerCount < _requiredCount) then {
             if (MiseryDebug) then {
-            systemChat "Not enough items, setting _hasAll to FALSE"; //debug output
+            systemChat "Not enough items, setting _hasAll to false"; //debug output
             };
-            _hasAll = FALSE;
+            _hasAll = false;
         };
     };
 } forEach _requirements;

@@ -8,21 +8,21 @@ by TenuredCLOUD
 
 private["_info","_c","_types","_bannedTypes","_remove","_weapons","_magazines","_military","_ammo","_grenadeParents","_explosiveParents","_mag","_parents","_parent","_script"];
 
-MiseryLootReady=FALSE;
+MiseryLootReady=false;
 
-MiseryGearLootBaseOnly=TRUE;
+MiseryGearLootBaseOnly=true;
 
-MiseryGearUseBISmedical=TRUE;
-MiseryGearUseBISweapons=TRUE;
-MiseryGearUseBISitems=TRUE;
-MiseryGearUseBISuniforms=TRUE;
-MiseryGearUseBISvests=TRUE;
-MiseryGearUseBISheadgear=TRUE;
-MiseryGearUseBISgoggles=TRUE;
-MiseryGearUseBISpacks=TRUE;
-MiseryGearUseMiseryfood=TRUE;
-MiseryGearUseMiserymedical=TRUE;
-MiseryGearUseMiseryitems=TRUE;
+MiseryGearUseBISmedical=true;
+MiseryGearUseBISweapons=true;
+MiseryGearUseBISitems=true;
+MiseryGearUseBISuniforms=true;
+MiseryGearUseBISvests=true;
+MiseryGearUseBISheadgear=true;
+MiseryGearUseBISgoggles=true;
+MiseryGearUseBISpacks=true;
+MiseryGearUseMiseryfood=true;
+MiseryGearUseMiserymedical=true;
+MiseryGearUseMiseryitems=true;
 
 private _LootData = [
 "MiseryLootItemsFood",
@@ -439,7 +439,7 @@ _parents=[];
 _parent="";
 {
 _mag=_x;
-_parents=[configfile>>"CfgMagazines">>_mag,TRUE]call BIS_fnc_returnParents;
+_parents=[configfile>>"CfgMagazines">>_mag,true]call BIS_fnc_returnParents;
     {
     _parent=_x;
     if(_parent in _grenadeParents)exitWith{_magazines=_magazines-[_mag];MiseryGearGrenades pushBackUnique _mag};
@@ -449,17 +449,17 @@ _parents=[configfile>>"CfgMagazines">>_mag,TRUE]call BIS_fnc_returnParents;
 
 if!(MiseryGearUseBISweapons)then{
     {if(_x call FUNC(IsBIS))then{_magazines=_magazines-[_x]}}forEach _magazines;
-    {if("VehicleMagazine" in([configfile>>"CfgMagazines">>_x,TRUE]call BIS_fnc_returnParents))then{_magazines=_magazines-[_x]}}forEach _magazines;
+    {if("VehicleMagazine" in([configfile>>"CfgMagazines">>_x,true]call BIS_fnc_returnParents))then{_magazines=_magazines-[_x]}}forEach _magazines;
 };
-_military=FALSE;
+_military=false;
 _ammo="";
 {
-_military=FALSE;
-if(TRUE)then{
-    if(getNumber(configFile>>"CfgMagazines">>_x>>"count")>20)exitWith{MiseryGearMagazinesM pushBack _x;_military=TRUE};
-    if("CA_LauncherMagazine" in([configfile>>"CfgMagazines">>_x,TRUE]call BIS_fnc_returnParents))exitWith{MiseryGearMagazinesM pushBack _x;_military=TRUE};
+_military=false;
+if(true)then{
+    if(getNumber(configFile>>"CfgMagazines">>_x>>"count")>20)exitWith{MiseryGearMagazinesM pushBack _x;_military=true};
+    if("CA_LauncherMagazine" in([configfile>>"CfgMagazines">>_x,true]call BIS_fnc_returnParents))exitWith{MiseryGearMagazinesM pushBack _x;_military=true};
     _ammo=getText(configFile>>"CfgMagazines">>_x>>"ammo");
-    if(getNumber(configFile>>"CfgAmmo">>_ammo>>"explosive")>0)exitWith{MiseryGearMagazinesM pushBack _x;_military=TRUE};
+    if(getNumber(configFile>>"CfgAmmo">>_ammo>>"explosive")>0)exitWith{MiseryGearMagazinesM pushBack _x;_military=true};
 };
 if!(_military)then{MiseryGearMagazines pushBack _x};
 }forEach _magazines;
@@ -613,7 +613,7 @@ MiseryLootChanceGrenadeM pushBack MiseryGearGrenades;
 MiseryLootChanceExplosiveM pushBack MiseryGearExplosives;
 };
 
-MiseryLootReady=TRUE;
+MiseryLootReady=true;
 
 if!(isServer)exitWith{};
 

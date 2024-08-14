@@ -11,16 +11,16 @@ _players=call EFUNC(common,ListPlayers);
 _players=_players-(entities "HeadlessClient_F");
 _buildings=[];
 _allBuildings=[];
-_add=TRUE;
+_add=true;
 if (MiseryDebug) then {systemChat "[Misery Loot Framework] Checking for Buildings..."};
 {
 _buildings=_x nearObjects["House", MiseryLootspawnDist];
     {
-    _add=TRUE;
-    if(TRUE)then{
-        if(_x in MiseryAllBuildings)exitWith{_add=FALSE};
-        if((Damage _x)>.7)exitWith{_add=FALSE};
-        if((count([_x]call BIS_fnc_buildingPositions))==0)exitWith{_add=FALSE};
+    _add=true;
+    if(true)then{
+        if(_x in MiseryAllBuildings)exitWith{_add=false};
+        if((Damage _x)>.7)exitWith{_add=false};
+        if((count([_x]call BIS_fnc_buildingPositions))==0)exitWith{_add=false};
     };
     if(_add)then{_allBuildings pushBackUnique _x};
     }forEach _buildings;

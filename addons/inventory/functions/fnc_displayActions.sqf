@@ -6,7 +6,7 @@ by TenuredCLOUD
 */
 
 hintSilent "";
-ctrlShow[982377,TRUE];
+ctrlShow[982377,true];
 private _list=(findDisplay 982377)displayCtrl 1500;
 
 lbClear _list;

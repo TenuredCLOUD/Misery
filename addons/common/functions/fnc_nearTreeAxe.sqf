@@ -8,10 +8,10 @@ by TenuredCLOUD
 
 private ["_found", "_axeType","_WBKIMSAXETYPE"];
 
-_found = FALSE;
+_found = false;
 _WBKIMSAXETYPE = [];
 
-if (MiseryWBKIMS == FALSE) then {
+if (!MiseryWBKIMS) then {
     _axeType = "Misery_Woodaxe";
 } else {
     _WBKIMSAXETYPE = ["WBK_axe","WBK_brush_axe","WBK_craftedAxe","FireAxe","Axe"];
@@ -21,13 +21,13 @@ if (MiseryWBKIMS == FALSE) then {
 if (vehicle player == player && ((_axeType in items player) || (_WBKIMSAXETYPE find _axeType > -1))) then {
     //List nearby trees
     if (count (nearestTerrainObjects [player, ["TREE","SMALL TREE"], 2.5, true, true]) > 0) then {
-        _found = TRUE;
+        _found = true;
     };
     //Check if nearby trees are damaged:
     private _nearbyTrees = nearestTerrainObjects [player, ["TREE","SMALL TREE"], 2.5, true, true];
     {
         if (damage _x == 1) then {
-            _found = FALSE;
+            _found = false;
             if (MiseryDebug) then {systemChat format["[Wood collection (Axe)]: The tree at position %1 is fallen, and doesn't offer any more wood...",getPosATL _x];};
         };
     } forEach _nearbyTrees;

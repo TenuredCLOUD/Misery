@@ -9,10 +9,10 @@ PREP_RECOMPILE_END;
 #include "initSettings.inc.sqf"
 
 //Module startup wait check:
-MiseryReady=TRUE;
+MiseryReady=true;
 publicVariable "MiseryReady";
 
-MiserysurvivalShowStatus=TRUE; 
+MiserysurvivalShowStatus=true;
 
 if !(MiseryMP) then {
 player setVariable ["MiserySleeppillstaken", 0];
@@ -30,7 +30,7 @@ if (MiseryMP && {_MDebuffs find "TIRED" != -1}) then {_MDebuffs deleteAt (_MDebu
 //Zedinfection:
 if !(isNil {player getVariable "Zinfectionlogged"}) then {
 
-player setVariable ["Zinfectionlogged", nil]; 
+player setVariable ["Zinfectionlogged", nil];
 
 private _MDebuffs = player getVariable "MiseryDebuffs";
 
@@ -56,7 +56,7 @@ private _MDebuffs = player getVariable "MiseryDebuffs";
 _MDebuffs pushBackUnique "PARASITES"; player setVariable ["MiseryDebuffs", _MDebuffs];
 };
 
-MiseryClientReady=TRUE;
+MiseryClientReady=true;
 publicVariable "MiseryClientReady";
 
 //Client execute survival loop

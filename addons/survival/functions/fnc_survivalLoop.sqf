@@ -99,12 +99,12 @@ if !(hasInterface) exitWith {};
     //Blackout due to extreme fatigue:
     _blackout = true;
 
-    //if ((MiseryNORVG==1) && (_MDebuffs find "TIRED" != -1) && (_MIsSleeping == false)) then {
-    if ((_MDebuffs find "TIRED" != -1) && (_MIsSleeping == false)) then {
+    //if ((MiseryNORVG==1) && (_MDebuffs find "TIRED" != -1) && (!_MIsSleeping)) then {
+    if ((_MDebuffs find "TIRED" != -1) && (!_MIsSleeping)) then {
 
         if ((random 100) >  (MiseryBlackoutChance)) then {_blackout = false};
 
-        if (_blackout == true) then {
+        if (_blackout) then {
         [player,(1+(random 3))] call EFUNC(common,stun); //Spawn function for new scheduled environment
         };
     };
@@ -194,7 +194,7 @@ if !(hasInterface) exitWith {};
     [player] call Misery_fnc_Water;
     [player] call Misery_fnc_EffectiveTemperature;
 
-    if (MiseryBreathFogAllowed == true) then {
+    if (MiseryBreathFogAllowed) then {
     if (isNil{player getVariable "MiseryBreathFogSim"}) then {
     [] execVM "\z\misery\addons\temperature\functions\fnc_BreathFog.sqf";
     };

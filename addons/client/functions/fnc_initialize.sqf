@@ -61,7 +61,7 @@ if (MiserysurvivalSaveMode == 2) then {
         _saveArray = profileNamespace getVariable MiserysurvivalSaveName;
         if ((count _saveArray) < 1) exitWith {systemChat "New Misery Character";};
         [player] call EFUNC(persistency,Deserializeplayer);
-        MiseryNewCharacter = FALSE;
+        MiseryNewCharacter = false;
     } else {
         systemChat "New Misery Character";
     };
@@ -93,7 +93,7 @@ if (MiserysurvivalSaveMode == 1) then {
             ""
         ];
     } else {
-        enableSaving TRUE;
+        enableSaving true;
     };
 };
 

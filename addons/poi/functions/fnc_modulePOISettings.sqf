@@ -21,4 +21,4 @@ if (_activated && isServer) then {
 (_module getVariable "MiseryPOISpawnLimit")
 ] execVM "\z\misery\addons\poi\functions\fnc_Settings.sqf";
 };
-TRUE
+true

@@ -9,8 +9,8 @@ private _MHunger = player getVariable ["MiseryHunger", MIS_HUNGER];
 private _MThirst = player getVariable ["MiseryThirst", MIS_THIRST];
 private _MPoison = player getVariable ["MiseryPoison", MIS_POISON];
 
-MiseryACE=FALSE;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=TRUE};
+MiseryACE=false;
+if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
 
 if (!hasInterface) exitWith {};
 

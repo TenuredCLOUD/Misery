@@ -48,7 +48,7 @@ _RefuelInterrupt = (findDisplay 982384) displayAddEventHandler ["KeyDown", {
     };
 }];
 
-if (MiseryinRefuelzonearea == true) exitwith {
+if (MiseryinRefuelzonearea) exitwith {
 
 if (Mis_Refuelcurrencytype == "DIGITALTYPE") then {
 _playercash = player getVariable [Mis_Refuelfundstype, 0];

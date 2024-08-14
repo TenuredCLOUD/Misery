@@ -38,7 +38,7 @@
     private _prog = (_this select 4);
     private _progcalc = round (_prog / 24 * 100);
 
-    if (call Misery_fnc_NearTreeSaw && MiseryCanSawWood == true) then {
+    if (call Misery_fnc_NearTreeSaw && MiseryCanSawWood) then {
     titleText [format["Sawing progress... %1%2", _progcalc, "%"], "PLAIN DOWN"];
     };
 

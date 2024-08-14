@@ -32,7 +32,7 @@ by TenuredCLOUD
     private _actionID = (_this select 2);
     private _random = [1, 100] call BIS_fnc_randomInt;
 
-    if (call Misery_fnc_Fishinggear && MiseryCanFish == true) then {
+    if (call Misery_fnc_Fishinggear && MiseryCanFish) then {
     titleText ["Fishing...", "PLAIN DOWN"];
     };
 

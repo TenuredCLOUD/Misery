@@ -21,24 +21,24 @@ _players=[];
 _player=objNull;
 _group=grpNull;
 _animal=objNull;
-_remove=TRUE;
+_remove=true;
 _tries=0;
 _clusters=0;
 _animalCount=0;
 _pos=[];
-_spawn=TRUE;
+_spawn=true;
 _type="";
 _marker="";
 _markers=[];
 if((count MiseryAnimalTypes)<1)exitWith{systemChat "No ambient animals defined"};
 
-while{TRUE}do{
+while{true}do{
     _players=call Misery_fnc_ListPlayers;
     _players=_players call BIS_fnc_arrayShuffle;
     {
         _animal=_x;
-        _remove=TRUE;
-        {if((_x distance2D _animal) < MiseryAnimalDeleteDistance)then{_remove=FALSE}}forEach _players;
+        _remove=true;
+        {if((_x distance2D _animal) < MiseryAnimalDeleteDistance)then{_remove=false}}forEach _players;
         if(_remove)then{_registeredAnimals=_registeredAnimals-[_animal];_x removeAllMPEventHandlers "MPKilled"; deleteVehicle _animal};
     }forEach _registeredAnimals;
     if((count _registeredAnimals) < MiseryMaxAnimalUnits)then{
@@ -46,25 +46,25 @@ while{TRUE}do{
         {
             _player=_x;
             _clusters=MiseryAnimalClusters call BIS_fnc_RandomInt;
-            while{TRUE}do{
+            while{true}do{
                 if(_clusters<1)exitWith{};
                 _type=selectRandom MiseryAnimalTypes;
                 if(_type=="SHEEP")then{_animalCountArray=[]+_sheepInfo select 1};
                 if(_type=="GOAT")then{_animalCountArray=[]+_goatInfo select 1};
                 if(_type=="CHICKEN")then{_animalCountArray=[]+_chookInfo select 1};
                 _animalCount=_animalCountArray call BIS_fnc_RandomInt;
-                while{TRUE}do{
+                while{true}do{
                     if(_animalCount<1)exitWith{};
                     _tries=10;
-                    while{TRUE}do{
+                    while{true}do{
                         if(_tries<1)exitWith{};
-                        _spawn=TRUE;
+                        _spawn=true;
                         _direction = random 360;
                         _pos=(getPos _player)getPos[ MiseryAnimalMinimumDistance,_direction];
                         if!(surfaceIsWater _pos)then{
-                            {if((_pos distance2D _x)< MiseryAnimalSafeDistance)exitWith{_spawn=FALSE}}forEach _players;
+                            {if((_pos distance2D _x)< MiseryAnimalSafeDistance)exitWith{_spawn=false}}forEach _players;
                             if(_spawn)then{
-                                while{TRUE}do{
+                                while{true}do{
                                     if(_animalCount<1)exitWith{};
                                     _tries=-1;
                                     if(_type=="SHEEP")then{_type=selectRandom (_sheepInfo select 0)};

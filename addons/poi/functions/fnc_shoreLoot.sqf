@@ -95,12 +95,12 @@ if (MiseryDebug) then {systemChat format["[Misery POI Framework] Spawn chance fa
 //This POI is now null from spawning since the original check failed
 };
 
-_ModuleplacementOK = FALSE;
+_ModuleplacementOK = false;
 
 _overShore = !(_Pos isFlatEmpty  [-1, -1, -1, -1, 0, true] isEqualTo []);
 
 if (_overShore) then {
-    _ModuleplacementOK = TRUE;
+    _ModuleplacementOK = true;
 };
 
 if (_ModuleplacementOK) then {

@@ -6,8 +6,8 @@ by TenuredCLOUD
 */
 
 //ACE check for dmg:
-MiseryACE=FALSE;
-if (isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=TRUE};
+MiseryACE=false;
+if (isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
 
 [{(player getVariable ["MiseryRadiation", 0]) >= 500},
 {

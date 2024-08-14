@@ -6,13 +6,13 @@ by TenuredCLOUD
 */
 
 /*
-[{!isNil "MiseryinChemZone" && MiseryinChemZone == true},
+[{!isNil "MiseryinChemZone" && MiseryinChemZone},
 {
 
 [{
         params ["_args","_handle"];
 
-        if ((!isNil "MiseryinChemZone" && MiseryinChemZone == false) || (!alive player)) exitWith {
+        if ((!isNil "MiseryinChemZone" && !MiseryinChemZone) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             if(MiseryDebug)then{systemChat "Misery Chemical cycle terminated..."};
             [] execVM "framework\scripts\Modules\chemicalzone\chemicalzoneinit.sqf";

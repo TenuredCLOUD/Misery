@@ -14,12 +14,12 @@ _maxDistance = 15;
 _endPos = _firePos vectorAdd (_fireDir vectorMultiply _maxDistance);
 _int = lineIntersectsSurfaces [_firePos,_endPos,_this,objNull,true,1,"GEOM","NONE"];
 _roof = _int select 0 select 3;
-_isUnderRoof = FALSE;
+_isUnderRoof = false;
 
-if ((count _int) < 1) exitWith {FALSE};
+if ((count _int) < 1) exitWith {false};
 
 if (_roof isKindOf "House" || _roof isKindOf "Building") then {
-    _isUnderRoof = TRUE;
+    _isUnderRoof = true;
 };
 
 _isUnderRoof

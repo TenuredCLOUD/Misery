@@ -189,7 +189,7 @@ lbClear _ailmentsList;
     if ((headgear player in _psyprot) && MiseryinPsyfield) then {
         ["ailment","Psy Emissions (Protected)", "data\Psyfield.paa", "You feel subtle vibrations around your skull, you are uneasy..."] call Misery_fnc_AddBuffOrAilment;
     };
-    if (MiseryinPsyfield == false) then {
+    if (!MiseryinPsyfield) then {
     if (_PsyNoProtection > -1) then {
         ["ailment","Psy Emissions"] call Misery_fnc_RemoveBuffOrAilment;
     };

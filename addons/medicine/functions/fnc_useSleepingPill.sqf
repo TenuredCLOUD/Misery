@@ -46,7 +46,7 @@ if (alive player) exitWith {
         player setVariable ["MiserySleepiness", (_MSleepiness + 0.1)];
         _MSleepiness = player getVariable ["MiserySleepiness", MIS_SLEEP];
         _MIsSleeping = player getVariable "Misery_IsSleeping";
-        if (_MSleepiness >= 35 || (_MIsSleeping == true)) then {
+        if (_MSleepiness >= 35 || (_MIsSleeping)) then {
             _Sleepingpilleffectdone = true;
         };
         sleep 1;

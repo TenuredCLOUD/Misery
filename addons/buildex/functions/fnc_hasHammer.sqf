@@ -7,15 +7,15 @@ by TenuredCLOUD
 
 private ["_hashammer"];
 
-_hashammer = FALSE;
+_hashammer = false;
 
-if (MiseryWBKIMS == true) then {
+if (MiseryWBKIMS) then {
     if ("Misery_craftinghammer" in items player || "Misery_Anvilhammer" in items player || "WBK_SmallHammer" in (weapons player)) then {
-        _hashammer = TRUE;
+        _hashammer = true;
     };
 } else {
     if ("Misery_craftinghammer" in items player || "Misery_Anvilhammer" in items player) then {
-        _hashammer = TRUE;
+        _hashammer = true;
     };
 };
 

@@ -7,12 +7,12 @@ by TenuredCLOUD
 
 private ["_water","_MExposure","_MDebuffs","_MWetsuit","_coldwater"];
 
-_water = FALSE;
+_water = false;
 _MExposure = player getVariable ["MiseryExposure", MIS_EXPOSURE];
 _MDebuffs = player getVariable "MiseryDebuffs";
-_MWetsuit = FALSE; //No wetsuit
+_MWetsuit = false; //No wetsuit
 
-if(((toLower(uniform player))find "wetsuit")>-1) then {_MWetsuit = TRUE}; //Check for wetsuit
+if(((toLower(uniform player))find "wetsuit")>-1) then {_MWetsuit = true}; //Check for wetsuit
 
 if (((getPosASLW player select 2) < 0) || (underwater player)) then {
 
@@ -27,7 +27,7 @@ if (((getPosASLW player select 2) < 0) || (underwater player)) then {
 
         player setVariable ["MiseryExposure", (_MExposure - parseNumber ((_coldwater)toFixed 2))];
 
-        _water = TRUE;
+        _water = true;
 
     }; //Start cold water simulation if sea temp is < 20C
 };

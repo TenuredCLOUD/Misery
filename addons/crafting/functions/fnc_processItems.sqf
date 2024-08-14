@@ -85,8 +85,8 @@ if (count _matchedRecipe > 0) then {
             params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
             if (_key isEqualTo DIK_ESCAPE) then {
                 player setVariable ["Misery_ISCrafting",false];
-                if (player getVariable "_TC_sound" == true) then {
-                player setVariable ["_TC_sound", false,true];
+                if (player getVariable ["_TC_sound", false]) then {
+                    player setVariable ["_TC_sound", false,true];
                 };
                 [parseText "<t font='PuristaMedium' size='1'>Crafting interrupted...</t>", true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
             };
@@ -152,7 +152,7 @@ if (count _matchedRecipe > 0) then {
             _SuccessText = format ["You successfully crafted: %1...", _itemDisplayName];
             ctrlSetText [1001, _SuccessText];
 
-            if (player getVariable "_TC_sound" == true) then {
+            if (player getVariable ["_TC_sound", false]) then {
                 player setVariable ["_TC_sound", false,true];
             };
 

@@ -21,4 +21,4 @@ if (_activated && isServer) then {
 (_module getVariable "Misery_AI_SpawnLimit")
 ] execVM "\z\misery\addons\framework\scripts\Modules\Ambient_AI_Zone\Settings.sqf";
 };
-TRUE
+true

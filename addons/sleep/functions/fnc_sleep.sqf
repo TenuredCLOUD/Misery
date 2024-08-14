@@ -21,7 +21,7 @@ if (_HourVal == 0) exitWith {
 
 if !(_MSleepiness >= 15) exitWith {titleText [format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_SLEEPNOTTIRED"], "PLAIN DOWN", -1, true, true]; player setVariable ["Misery_SleepDataVal", nil];};
 
-if (!(isNil {player getVariable "MiseryFear"}) && ((player getVariable ["MiseryFear", MIS_FEAR]) >= 5) && (_MFearSleep == false)) exitWith {titleText [format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_CANTSLEEPFEAR"], "PLAIN DOWN", -1, true, true];};
+if (!(isNil {player getVariable "MiseryFear"}) && ((player getVariable ["MiseryFear", MIS_FEAR]) >= 5) && (!_MFearSleep)) exitWith {titleText [format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_CANTSLEEPFEAR"], "PLAIN DOWN", -1, true, true];};
 
 _sitting = animationState player;
 if (_sitting != "amovpsitmstpsnonwnondnon_ground") then {
@@ -58,7 +58,7 @@ player setVariable ["MiserySleepiness", (_MSleepiness - MisSleep_sleepinessDecre
 
 player setVariable ["Misery_IsSleeping", false];
 
-if (_MFearSleep == true) then {
+if (_MFearSleep) then {
 player setVariable ["Misery_FearSleep", false];
 };
 

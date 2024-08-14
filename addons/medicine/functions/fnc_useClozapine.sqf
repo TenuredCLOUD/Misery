@@ -7,8 +7,8 @@ by TenuredCLOUD
 
 private _MFear = player getVariable ["MiseryFear", MIS_FEAR];
 
-MiseryACE=FALSE;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=TRUE};
+MiseryACE=false;
+if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
 
 if (!hasInterface) exitWith {};
 

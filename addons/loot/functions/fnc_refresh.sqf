@@ -5,7 +5,7 @@ Designed specifically for Misery mod
 by TenuredCLOUD
 */
 
-[{TRUE},
+[{true},
 {
     [{
         params ["_args", "_handle"];

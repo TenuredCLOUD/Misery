@@ -6,8 +6,8 @@ by TenuredCLOUD
 */
 
 if (!hasInterface) exitWith {};
-MiseryACE=FALSE;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=TRUE};
+MiseryACE=false;
+if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
 private _random = [1, 10] call BIS_fnc_randomInt;
 private _MFear = player getVariable ["MiseryFear", MIS_FEAR];
 

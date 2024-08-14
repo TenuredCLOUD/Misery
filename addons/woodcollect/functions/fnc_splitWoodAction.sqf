@@ -19,7 +19,7 @@
     MiseryCanSplitWoodAxe = true;
 
     //Force holstering if WBKIMS disabled:
-    if (MiseryWBKIMS == FALSE) then {
+    if (!MiseryWBKIMS) then {
     if !((currentWeapon player)=="") then {
     player action["SWITCHWEAPON",player,player,-1];
         };
@@ -59,10 +59,10 @@
     private _prog = (_this select 4);
     private _progcalc = round (_prog / 24 * 100);
 
-    if ("Misery_woodenlog" in items player && MiseryCanSplitWoodChain == true) then {
+    if ("Misery_woodenlog" in items player && MiseryCanSplitWoodChain) then {
     titleText [format["Sawing wood log progress... %1%2", _progcalc, "%"], "PLAIN DOWN"];
     }else{
-    if ("Misery_woodenlog" in items player && MiseryCanSplitWoodAxe == true) then {
+    if ("Misery_woodenlog" in items player && MiseryCanSplitWoodAxe) then {
     titleText [format["Splitting wood log progress... %1%2", _progcalc, "%"], "PLAIN DOWN"];
     };
         };
