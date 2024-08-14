@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Ambient AI Zones Generator
 Generates highly reactive AI built to a scenario designers module layout
@@ -52,17 +53,17 @@ _faction = switch (_this select 1) do {
 
 _aiClass = _this select 2;
 _aiCountMax = _this select 3;
-_aiWeapPrimaryLoot = (_this select 4) call Misery_fnc_ParseArray2;
-_aiWeapSecondaryLoot = (_this select 5) call Misery_fnc_ParseArray2;
-_aiWeaplauncherLoot = (_this select 6) call Misery_fnc_ParseArray2;
+_aiWeapPrimaryLoot = (_this select 4) call EFUNC(common,parseArray);
+_aiWeapSecondaryLoot = (_this select 5) call EFUNC(common,parseArray);
+_aiWeaplauncherLoot = (_this select 6) call EFUNC(common,parseArray);
 _aiAmmo = _this select 7;
-_aiitemArray = (_this select 8) call Misery_fnc_ParseArray2;
-_aiNVGLoot = (_this select 9) call Misery_fnc_ParseArray2;
-_aiFacewearLoot = (_this select 10) call Misery_fnc_ParseArray2;
-_aiHeadgearLoot = (_this select 11) call Misery_fnc_ParseArray2;
-_aiuniformArray = (_this select 12) call Misery_fnc_ParseArray2;
-_aivestArray = (_this select 13) call Misery_fnc_ParseArray2;
-_aibackpackArray = (_this select 14) call Misery_fnc_ParseArray2;
+_aiitemArray = (_this select 8) call EFUNC(common,parseArray);
+_aiNVGLoot = (_this select 9) call EFUNC(common,parseArray);
+_aiFacewearLoot = (_this select 10) call EFUNC(common,parseArray);
+_aiHeadgearLoot = (_this select 11) call EFUNC(common,parseArray);
+_aiuniformArray = (_this select 12) call EFUNC(common,parseArray);
+_aivestArray = (_this select 13) call EFUNC(common,parseArray);
+_aibackpackArray = (_this select 14) call EFUNC(common,parseArray);
 _aimingAccuracy = _this select 15;
 _aimingShake = _this select 16;
 _aimingSpeed = _this select 17;
@@ -251,10 +252,10 @@ for "_i" from 1 to _numEntities do {
                     [_target] joinSilent _caller;
                     [_target,_actionId] call BIS_fnc_holdActionRemove;
                     private _formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_SUCCESS", _Unitidentity, MiseryCurrencySymbol, [_recruitmentCost] call Misery_fnc_formatNumber]];
-                    [_formattedText] call Misery_fnc_FormatToTile;
+                    [_formattedText] call EFUNC(common,formatToTile);
                 }else{
                     private _formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_FAIL",_Unitidentity]];
-                    [_formattedText] call Misery_fnc_FormatToTile;
+                    [_formattedText] call EFUNC(common,formatToTile);
                 };
             },
             {},

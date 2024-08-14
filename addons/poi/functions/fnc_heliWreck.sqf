@@ -1,7 +1,8 @@
+#include "..\script_component.hpp"
 /*
 POI Generator (Heli-Wreck)
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 private [
@@ -48,11 +49,11 @@ _spawnedObjects = [];
 
 _pos = getPos _module;
 
-_maxCrates = _this select 1; 
+_maxCrates = _this select 1;
 _minCrates = _this select 2;
-_crateTypes = (_this select 3) call Misery_fnc_ParseArray2;
+_crateTypes = (_this select 3) call EFUNC(common,parseArray);
 
-_maxCratesitems = _this select 4; 
+_maxCratesitems = _this select 4;
 _minCratesitems = _this select 5;
 
 _crateCount = 0;
@@ -60,17 +61,17 @@ _crateCount = 0;
 _maxallowedCrates = [_minCrates,_maxCrates] call BIS_fnc_randomInt;
 _maxallowedCrateitems = [_minCratesitems,_maxCratesitems] call BIS_fnc_randomInt;
 
-_WreckTypes = (_this select 6) call Misery_fnc_ParseArray2;
+_WreckTypes = (_this select 6) call EFUNC(common,parseArray);
 
 _Spawnchance = _this select 7;
 
-_crateweaponArray = (_this select 8) call Misery_fnc_ParseArray2;
+_crateweaponArray = (_this select 8) call EFUNC(common,parseArray);
 _crateweaponMagArray = _this select 9;
 _crateweaponAttchArray = _this select 10;
-_crateitemArray = (_this select 11) call Misery_fnc_ParseArray2;
-_crateuniformArray = (_this select 12) call Misery_fnc_ParseArray2;
-_cratevestArray = (_this select 13) call Misery_fnc_ParseArray2;
-_cratebackpackArray = (_this select 14) call Misery_fnc_ParseArray2;
+_crateitemArray = (_this select 11) call EFUNC(common,parseArray);
+_crateuniformArray = (_this select 12) call EFUNC(common,parseArray);
+_cratevestArray = (_this select 13) call EFUNC(common,parseArray);
+_cratebackpackArray = (_this select 14) call EFUNC(common,parseArray);
 
 _player=objNull;
 _players=call Misery_fnc_ListPlayers;
@@ -98,7 +99,7 @@ if (MiseryDebug) then {systemChat format["[Misery POI Framework] Spawn chance fa
 //This POI is now null from spawning since the original check failed
 
 };
- 
+
 _heliWreck = selectRandom _WreckTypes createVehicle ([_pos, 0, 5 + (random 20), 1, 0, 20, 0] call BIS_fnc_findSafePos);
 _heliWreck setDir (random 360);
 _spawnedObjects pushBack _heliWreck;
@@ -125,7 +126,7 @@ for "_i" from 1 to _maxallowedCrates do {
 
     _ammoBox enableDynamicSimulation true;
 
-    [_ammoBox, 
+    [_ammoBox,
     _crateweaponArray,
     _crateweaponMagArray,
     _crateweaponAttchArray,
@@ -141,7 +142,7 @@ for "_i" from 1 to _maxallowedCrates do {
 //     _WreckID = 0;
 // };
 
-// _WreckID = str (diag_tickTime * 1e6) + str _module;  
+// _WreckID = str (diag_tickTime * 1e6) + str _module;
 // _module setVariable ["Active_Wreck_ID", _WreckID, true];
 
 // _posStr = str _pos;
@@ -181,7 +182,7 @@ if (_deleteFlag) exitWith {
     //  _WreckID = _module getVariable "Active_Wreck_ID";
     //  _marker = missionNamespace getVariable [format ["Wreck_Marker_%1", _WreckID], ""];
 if (_marker != "") then {
-    // [_marker] remoteExec ["deleteMarkerLocal", 0]; 
+    // [_marker] remoteExec ["deleteMarkerLocal", 0];
     // missionNamespace setVariable [format ["Wreck_Marker_%1", _WreckID], nil];
 };
 

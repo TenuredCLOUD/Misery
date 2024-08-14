@@ -1,12 +1,11 @@
+#include "..\script_component.hpp"
 /*
 Misery Radiation Zone processor
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
-#include "\z\misery\addons\main\script_macros.hpp"
-
-[{!isNil "MiseryinRadZone" && MiseryinRadZone == true}, 
+[{!isNil "MiseryinRadZone" && MiseryinRadZone == true},
 {
 
 [{
@@ -19,7 +18,7 @@ by TenuredCLOUD
             if(MiseryDebug)then{systemChat "Misery Radiation cycle checks re-initiated..."};
         };
 
-        private _gear = player call Misery_fnc_GetSimplifiedLoadout;
+        private _gear = player call EFUNC(common,getSimplifiedLoadout);
 
         _totalProtection = [0, 0, 0, 0];
 
@@ -27,7 +26,7 @@ by TenuredCLOUD
             _equipment = _x;
 
             if (_equipment isEqualTo "") then {
-                _totalProtection = [0, 0, 0, 0]; 
+                _totalProtection = [0, 0, 0, 0];
             } else {
                 {
                     if (_x select 0 == _equipment) then {
@@ -43,13 +42,13 @@ by TenuredCLOUD
 
         private _protectionFactor = _skinProtection + _respiratoryProtection + _eyeProtection;
 
-        private _baseDose = 1; 
+        private _baseDose = 1;
         private _effectiveDose = _baseDose * (1 - (_protectionFactor / 300));
 
         player setVariable ["MiseryRadiation", (player getVariable ["MiseryRadiation", 0]) + _effectiveDose];
 
         if (MiseryDebug) then {
-            systemChat format ["Radiation Protection: Skin %1%2, Respiratory %3%4, Eye %5%6", _skinProtection, "%", _respiratoryProtection, "%", _eyeProtection, "%"]; 
+            systemChat format ["Radiation Protection: Skin %1%2, Respiratory %3%4, Eye %5%6", _skinProtection, "%", _respiratoryProtection, "%", _eyeProtection, "%"];
             systemChat format ["Effective Radiation Dose: %1", _effectiveDose];
         };
 

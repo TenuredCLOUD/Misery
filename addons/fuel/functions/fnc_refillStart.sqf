@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Refuel with Jcan
 Designed specifically for Misery mod
@@ -120,9 +121,18 @@ for "_i" from 0 to (_totalLiters + 50) do {
 
     // Decrement the count of the used Jerry can type
     switch (_requiredFuelType) do {
-        case "Diesel": {["Misery_Diesel","Misery_EmptyDiesel"] call Misery_fnc_ItemDecrement_Replace; _dieselCount = _dieselCount - 1;};
-        case "Petrol": {["Misery_Petrol","Misery_EmptyPetrol"] call Misery_fnc_ItemDecrement_Replace; _petrolCount = _petrolCount - 1;};
-        case "JetFuel": {["Misery_JetFuel","Misery_EmptyJet"] call Misery_fnc_ItemDecrement_Replace;  _jetFuelCount = _jetFuelCount - 1;};
+        case "Diesel": {
+            ["Misery_Diesel", "Misery_EmptyDiesel"] call EFUNC(common,itemDecrement);
+            _dieselCount = _dieselCount - 1;
+        };
+        case "Petrol": {
+            ["Misery_Petrol", "Misery_EmptyPetrol"] call EFUNC(common,itemDecrement);
+            _petrolCount = _petrolCount - 1;
+        };
+        case "JetFuel": {
+            ["Misery_JetFuel", "Misery_EmptyJet"] call EFUNC(common,itemDecrement);
+            _jetFuelCount = _jetFuelCount - 1;
+        };
     };
 };
 

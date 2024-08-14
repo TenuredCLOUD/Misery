@@ -1,78 +1,76 @@
-// #include "\z\misery\addons\main\script_macros.hpp"
+#include "..\script_component.hpp"
+/*
+Misery Radio audio looper / Broadcaster
+Synces to all players that possess a radio (NOT JIP COMPAT)
+Runs strictly on Server for GLOBAL effect
+Designed specifically for Misery mod
+by TenuredCLOUD
+*/
+/*
+private["_module","_SoundfileArray","_SoundClassArray","RadioObjectArray","_timeafter","_TimeA","_timeafter2","_TimeB"];
 
-// /*
-// Misery Radio audio looper / Broadcaster
-// Synces to all players that possess a radio (NOT JIP COMPAT)
-// Runs strictly on Server for GLOBAL effect
-// Designed specifically for Misery mod
-// by TenuredCLOUD
-// */
+_module = _this select 0;
 
-// private["_module","_SoundfileArray","_SoundClassArray","RadioObjectArray","_timeafter","_TimeA","_timeafter2","_TimeB"];
+_SoundfileArray = (_this select 1) call EFUNC(common,parseArray);
+_SoundClassArray = (_this select 2) call EFUNC(common,parseArray);
+RadioObjectArray = (_this select 3) call EFUNC(common,parseArray);
+MiseryRadioTimer = _this select 4;
 
-// _module = _this select 0;
+MiseryRadioBroadcastsystem = TRUE; //Sync bootup
 
-// _SoundfileArray = (_this select 1) call Misery_fnc_ParseArray2;
-// _SoundClassArray = (_this select 2) call Misery_fnc_ParseArray2;
-// RadioObjectArray = (_this select 3) call Misery_fnc_ParseArray2;
-// MiseryRadioTimer = _this select 4;
+[] execVM Radio\RadioObjectsStatic); //Immersive static loop
 
-// MiseryRadioBroadcastsystem = TRUE; //Sync bootup
+While {true} do {
 
-// [] execVM Radio\RadioObjectsStatic); //Immersive static loop
+if(MiseryDebug)then{systemChat "Misery Radio Broadcast starting..."};
 
-// While {true} do {
+//sync indexed classname of sound + filepathing:
+_index = floor (random (count _SoundfileArray)); get a random index
+_soundFile = _SoundfileArray select _index; select a sound file
+_soundClass = _SoundClassArray select _index; select a sound class
 
-// if(MiseryDebug)then{systemChat "Misery Radio Broadcast starting..."};
+//Brodcast sound synchronizer:
+//Portable radios:
+MiseryRadioBroadcast = _soundClass;
+publicVariable "MiseryRadioBroadcast";
+//Radio objects:
+MiseryRadioObjectBroadcast = _soundFile;
+publicVariable "MiseryRadioObjectBroadcast";
+if(MiseryDebug)then{systemChat "Misery Radio Broadcasting to clients..."};
 
-// //sync indexed classname of sound + filepathing:
-// _index = floor (random (count _SoundfileArray)); // get a random index
-// _soundFile = _SoundfileArray select _index; // select a sound file
-// _soundClass = _SoundClassArray select _index; // select a sound class
+Gather all radio objects
+_RadioSources = [];
+{
+    if (typeOf _x in RadioObjectArray) then {
+        _RadioSources pushBackUnique _x;
+    };
+} forEach allMissionObjects "ALL";
 
-// //Brodcast sound synchronizer:
-// //Portable radios:
-// MiseryRadioBroadcast = _soundClass;
-// publicVariable "MiseryRadioBroadcast";
-// //Radio objects:
-// MiseryRadioObjectBroadcast = _soundFile;
-// publicVariable "MiseryRadioObjectBroadcast";
-// if(MiseryDebug)then{systemChat "Misery Radio Broadcasting to clients..."};
+Radio object looper:
+{
+    _object = _x;
+    playSound3D [MiseryRadioObjectBroadcast, _object, false, getPosASL _object, 1, 1, 100];
+} forEach _RadioSources;
 
-// // Gather all radio objects
-// _RadioSources = [];
-// {
-//     if (typeOf _x in RadioObjectArray) then {
-//         _RadioSources pushBackUnique _x;
-//     };
-// } forEach allMissionObjects "ALL";
+if(MiseryDebug)then{systemChat "Misery Radio Broadcasting to Radio objects..."};
 
-// // Radio object looper:
-// {
-//     _object = _x;
-//     playSound3D [MiseryRadioObjectBroadcast, _object, false, getPosASL _object, 1, 1, 100];
-// } forEach _RadioSources;
+//Unsync sound played until next radio broadcast:
+_timeafter = time + 0.5;
+[_timeafter] spawn {
 
-// if(MiseryDebug)then{systemChat "Misery Radio Broadcasting to Radio objects..."};
+_TimeA=_this select 0;
+waitUntil {(time > _TimeA)};
 
-// //Unsync sound played until next radio broadcast:
-// _timeafter = time + 0.5;
-// [_timeafter] spawn {
+//Reset audio:
+MiseryRadioBroadcast = "";
+publicVariable "MiseryRadioBroadcast";
 
-// _TimeA=_this select 0;
-// waitUntil {(time > _TimeA)};
+MiseryRadioObjectBroadcast = "";
+publicVariable "MiseryRadioObjectBroadcast";
 
-// //Reset audio:
-// MiseryRadioBroadcast = "";
-// publicVariable "MiseryRadioBroadcast";
+if(MiseryDebug)then{systemChat "Misery Radio Broadcast ended..."};
+};
 
-// MiseryRadioObjectBroadcast = "";
-// publicVariable "MiseryRadioObjectBroadcast";
-
-// if(MiseryDebug)then{systemChat "Misery Radio Broadcast ended..."};
-// };
-
-// sleep MiseryRadioTimer;
-// };
-
-
+sleep MiseryRadioTimer;
+};
+*/

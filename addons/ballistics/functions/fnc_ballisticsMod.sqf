@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Ballistics modifier startup
 Checks what ammunition game or targets are hit with, if not safe ammunition, target is obliterated
@@ -17,8 +18,8 @@ if (!isNil "MiseryClientReady") then {
 */
 params ["_entityType", "_allowedAmmo"];
 
-_Misery_SGTypes = [_entityType] call Misery_fnc_ParseArray2;
-_Misery_SGAmmo = [_allowedAmmo] call Misery_fnc_ParseArray2;
+_Misery_SGTypes = [_entityType] call EFUNC(common,parseArray);
+_Misery_SGAmmo = [_allowedAmmo] call EFUNC(common,parseArray);
 
 if (isServer) then {
     Misery_BMEntities = [];

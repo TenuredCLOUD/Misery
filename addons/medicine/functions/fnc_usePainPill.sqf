@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Pain pill usage
 Designed specifically for Misery mod
@@ -17,7 +18,7 @@ if (alive player) then {
 
   titleText ["You take a pain pill...", "PLAIN DOWN"];
 
-  ["Misery_pain"] call Misery_fnc_ItemDecrement;
+  ["Misery_pain"] call EFUNC(common,itemDecrement);
 
   sleep 15;
 
