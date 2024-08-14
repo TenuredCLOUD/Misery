@@ -1,7 +1,8 @@
+#include "..\script_component.hpp"
 /*
 Misery hammer check fnc (iBuild compat)
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 private ["_hashammer"];

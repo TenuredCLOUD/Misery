@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Zombie sawing
 Designed specifically for Misery mod

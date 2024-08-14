@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Generator icon updater
 Designed specifically for Misery mod

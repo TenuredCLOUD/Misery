@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Stitch with Needle & Thread (ACE medical compat ONLY)
 Designed specifically for Misery mod

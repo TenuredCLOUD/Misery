@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Headlamp Usage (Turning off)
 This function syncs to all client in a server environment

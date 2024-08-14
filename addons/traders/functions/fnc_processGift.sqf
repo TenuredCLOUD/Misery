@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Trader Shop Gift processor
 Processes Gifting of items + stock management

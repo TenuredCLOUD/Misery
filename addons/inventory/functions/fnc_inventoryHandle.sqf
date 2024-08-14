@@ -1,20 +1,19 @@
+#include "..\script_component.hpp"
 /*
 Misery Inventory handle [Final code iteration]
-Utilizes vanilla Inventory EH's without the need for a 'While do' loop - Optimized* 
+Utilizes vanilla Inventory EH's without the need for a 'While do' loop - Optimized*
 Some concepts used from Ravage mod -LBDblClick snippet- (with permission from Haleks)
-Function help from Salbei from GRAD team - conversion to CBA waituntil + PFH handle 
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Function help from Salbei from GRAD team - conversion to CBA waituntil + PFH handle
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
-
-#include "\z\misery\addons\main\script_macros.hpp"
 
 player addEventHandler ["InventoryOpened", {
     [{
         !(isnull (finddisplay 602))
     },{
         {
-            ((findDisplay 602) displayCtrl _x) ctrlSetEventHandler ["LBDblClick", "_this call FUNC(Click)"]; 
+            ((findDisplay 602) displayCtrl _x) ctrlSetEventHandler ["LBDblClick", "_this call FUNC(Click)"];
         } count [633, 638, 619];
 
         private _display = findDisplay 46 createDisplay "MiseryINVACT_GUI";
@@ -25,15 +24,15 @@ player addEventHandler ["InventoryOpened", {
             params ["_display", "_handle"];
 
             if ((isnull (findDisplay 602))) exitWith {
-                [_handle] call CBA_fnc_removePerFrameHandler; 
+                [_handle] call CBA_fnc_removePerFrameHandler;
             };
 
             if (vehicle player isEqualTo player && {vectorMagnitude velocity player > 1}) exitWith {
-                [_handle] call CBA_fnc_removePerFrameHandler; 
+                [_handle] call CBA_fnc_removePerFrameHandler;
                 _display closeDisplay 1;
 
                 hintSilent "";
-            
+
                 closeDialog 602;
             };
 
@@ -50,8 +49,8 @@ player addEventHandler ["InventoryClosed", {
 
     private _handle = player getVariable ["Misery_inventoryPFH",_handle];
     private _display = player getVariable ["Misery_inventoryDisplay",_display];
-    
+
     hintSilent "";
-    
+
     _display closeDisplay 1;
 }];

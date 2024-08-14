@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Advanced refueling
 Array input for refueling amount per Jerrycan

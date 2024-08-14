@@ -1,5 +1,4 @@
-#include "\z\misery\addons\main\script_macros.hpp"
-
+#include "..\script_component.hpp"
 /*
 Misery WBKIMS Dash Compat
 Enforces a stamina / fatigue depletion when player uses IMS sprint movesets

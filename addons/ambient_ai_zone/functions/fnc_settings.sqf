@@ -1,8 +1,9 @@
+#include "..\script_component.hpp"
 /*
 Misery Ambient AI Master settings module data parser
 Defines performance properties for each Ambient AI module
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 Misery_AmbAI_SpawnCheckDistance = _this select 0;

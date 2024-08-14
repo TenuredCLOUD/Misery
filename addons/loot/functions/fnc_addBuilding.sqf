@@ -1,10 +1,9 @@
+#include "..\script_component.hpp"
 /*
     Building add / parser for Loot calling
     Designed specifically for Misery mod
     Source Code by Drongo edited by TenuredCLOUD (with Permission)
 */
-
-#include "\z\misery\addons\main\script_macros.hpp"
 
 private["_b", "_pos", "_marker", "_bText", "_positions"];
 _b=_this;

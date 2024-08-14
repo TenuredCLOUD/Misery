@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 ERU UI
 Designed specifically for Misery mod

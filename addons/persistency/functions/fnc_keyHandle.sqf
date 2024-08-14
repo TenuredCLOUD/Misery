@@ -1,12 +1,12 @@
+#include "..\script_component.hpp"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
-Misery Keyhandler for persistence
-Designed specifically for Misery mod
-by TenuredCLOUD
+    Misery Keyhandler for persistence
+    Designed specifically for Misery mod
+    by TenuredCLOUD
 */
 
 if !(hasInterface) exitWith {};
-
-#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 
 [] spawn {
     waitUntil {sleep 1; !isNull(findDisplay 46)};

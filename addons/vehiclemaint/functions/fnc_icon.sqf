@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Vehicle Maintenance Vehicle icon updater
 Designed specifically for Misery mod

@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Bank Generater
 Passes arguments to generate a banker / bank object

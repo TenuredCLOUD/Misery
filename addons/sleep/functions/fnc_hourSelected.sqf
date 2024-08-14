@@ -1,18 +1,19 @@
+#include "..\script_component.hpp"
 /*
 Misery Sleep system (Singleplayer only)
-Defines the selected hour for processing time skip, and stat drops, etc... 
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Defines the selected hour for processing time skip, and stat drops, etc...
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 private ["_ctrl","_index","_SelectedHourVal","_SleepDecrease","_HungerDecrease","_ThirstDecrease"];
 
-_ctrl = findDisplay 982374 displayCtrl 982375; 
+_ctrl = findDisplay 982374 displayCtrl 982375;
 _index = lbCurSel _ctrl;
 if (_index != -1) then {
-    _SelectedHourVal = _index + 1; 
+    _SelectedHourVal = _index + 1;
 } else {
-    _SelectedHourVal = 0; 
+    _SelectedHourVal = 0;
 };
 
 player setVariable ["Misery_SleepDataVal", _SelectedHourVal];

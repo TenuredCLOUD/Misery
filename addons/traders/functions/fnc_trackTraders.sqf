@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Traders Tracking
 Processing Algorithm to Track players positioning to Traders and adjusts economic status of traders stock, as well as thier overall funds

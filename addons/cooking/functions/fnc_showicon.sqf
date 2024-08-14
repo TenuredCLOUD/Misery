@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Crafting Framework Icon updater
 Designed specifically for Misery mod

@@ -1,7 +1,8 @@
+#include "..\script_component.hpp"
 /*
 Misery Artifact storage
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 if (alive player) then {
@@ -26,7 +27,7 @@ if (alive player) then {
     } forEach _artifacts;
 
     if (_artifact != "") then {
-        player removeItem _artifact; 
+        player removeItem _artifact;
         player removeItem "Misery_leadcontaineropen";
         player addItem "Misery_leadcontainerclosed";
         titleText ["You put the artifact in your lead lined container", "PLAIN DOWN"];

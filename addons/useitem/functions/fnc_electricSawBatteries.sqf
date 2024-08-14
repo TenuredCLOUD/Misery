@@ -1,11 +1,12 @@
+#include "..\script_component.hpp"
 /*
 Misery Skillsaw batteries
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 if ("Misery_18vbat" in items player) then {
- 
+
 player removeitem "Misery_electrichandsawnobattery";
 
 titleText ["You add a battery to your saw...", "PLAIN DOWN"];
@@ -17,5 +18,5 @@ player additem "Misery_electrichandsaw";
 } else {
 
   titleText ["You don't have any 18v batteries...", "PLAIN DOWN"];
-  
+
 };

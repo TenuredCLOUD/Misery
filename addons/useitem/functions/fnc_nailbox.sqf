@@ -1,8 +1,9 @@
+#include "..\script_component.hpp"
 /*
 Misery woodnail box
 Has compat for iBuild if it's in use
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 if (MiseryUsingiBuild) exitwith {

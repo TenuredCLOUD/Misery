@@ -6,8 +6,6 @@ Designed specifically for Misery mod
 by TenuredCLOUD
 */
 
-#include "\z\misery\addons\main\script_macros.hpp"
-
 private _pos = player getRelPos [1.5, 0];
 private _object = createVehicle ["FirePlace_burning_F", _pos, [], 0, "CAN_COLLIDE"];
 _pos = [_pos select 0, _pos select 1, ((getPosATL player) select 2) + 1];

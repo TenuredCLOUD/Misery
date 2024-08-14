@@ -1,9 +1,8 @@
-#include "\z\misery\addons\main\script_macros.hpp"
-
+#include "..\script_component.hpp"
 /*
 Misery Glucose injection usage
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 fnc_glucose = {
@@ -11,11 +10,11 @@ fnc_glucose = {
 params ["_c", "_text"];
 
 if (!hasInterface || {!alive player}) exitWith {};
-if (_c == 0) exitwith {titleText [_text, "PLAIN DOWN"];}; //exit loop 
+if (_c == 0) exitwith {titleText [_text, "PLAIN DOWN"];}; //exit loop
 player setVariable ["MiseryHunger", (_MHunger + 5)];
 _c = _c - 1;
 
-[{ _this call fnc_glucose;}, [_c, _text], 10] call CBA_fnc_waitAndExecute;  
+[{ _this call fnc_glucose;}, [_c, _text], 10] call CBA_fnc_waitAndExecute;
 };
 
 if (!hasInterface || {!alive player}) exitWith {};

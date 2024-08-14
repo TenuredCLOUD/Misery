@@ -1,10 +1,9 @@
+#include "..\script_component.hpp"
 /*
-Misery Vodka usage
-Designed specifically for Misery mod (also compatible with Ravage)
-by TenuredCLOUD
+    Misery Vodka usage
+    Designed specifically for Misery mod (also compatible with Ravage)
+    by TenuredCLOUD
 */
-
-#include "\z\misery\addons\main\script_macros.hpp"
 
 private _MSleepiness = player getVariable ["MiserySleepiness", MIS_SLEEP];
 private _MFear = player getVariable ["MiseryFear", MIS_FEAR];

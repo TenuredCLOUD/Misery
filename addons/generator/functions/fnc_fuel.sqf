@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Generator Fuel drain loop
 Controls fuel draining...

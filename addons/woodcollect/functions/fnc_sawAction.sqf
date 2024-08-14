@@ -1,7 +1,8 @@
+#include "..\script_component.hpp"
 /*
-Chainsaw usage
-Designed specifically for Misery mod
-by TenuredCLOUD
+    Chainsaw usage
+    Designed specifically for Misery mod
+    by TenuredCLOUD
 */
 
  [

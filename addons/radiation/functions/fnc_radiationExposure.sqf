@@ -1,10 +1,9 @@
+#include "..\script_component.hpp"
 /*
 Misery advanced radiation exposure
 Designed specifically for Misery mod
 by TenuredCLOUD
 */
-
-#include "\z\misery\addons\main\script_macros.hpp"
 
 //ACE check for dmg:
 MiseryACE=FALSE;

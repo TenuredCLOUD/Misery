@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Artifact spawner startup
 Designed specifically for Misery mod

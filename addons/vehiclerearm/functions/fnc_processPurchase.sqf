@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Vehicle Rearm Shop UI List populater
 Defines the selected purchase option, and passes current pricing values

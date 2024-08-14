@@ -1,5 +1,6 @@
+#include "..\script_component.hpp"
 /*
-Misery Advanced refueling - by : TenuredCLOUD with great help from Drongo for easy module defines 
+Misery Advanced refueling - by : TenuredCLOUD with great help from Drongo for easy module defines
 Array input for refueling amount per Jerrycan
 Designed specifically for Misery mod
  */

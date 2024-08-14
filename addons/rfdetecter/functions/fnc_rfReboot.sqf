@@ -1,9 +1,8 @@
-#include "\z\misery\addons\main\script_macros.hpp"
-
+#include "..\script_component.hpp"
 /*
 Misery RF detector reboot code
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 if (alive player) exitwith {
@@ -82,10 +81,9 @@ playSound3D ["\z\misery\addons\audio\sounds\Geigerenable\GeigerON.ogg", player, 
     _RF2,
     _RF3
     ];
-    player additem "Misery_RFHighrangeON"; //End of boot cycle: adds RF detector 
+    player additem "Misery_RFHighrangeON"; //End of boot cycle: adds RF detector
     sleep 5;
     hintSilent ""; //<< removed HUD after 5 seconds
     };
   };
 
-  

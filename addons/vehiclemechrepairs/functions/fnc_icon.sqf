@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Vehicle repair Vehicle Icon & name updater
 Designed specifically for Misery mod

@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Kill handle for persistence
 Executes script on local player that is killed

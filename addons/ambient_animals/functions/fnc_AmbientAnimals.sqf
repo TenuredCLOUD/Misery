@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Ambient Animals
 Drongo Source code edited by TenuredCLOUD (with permission)

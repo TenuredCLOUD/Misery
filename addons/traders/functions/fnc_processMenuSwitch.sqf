@@ -1,8 +1,9 @@
+#include "..\script_component.hpp"
 /*
 Misery Trader Shop Sell / Buy Switching processor
 Processes Buying or Selling (Changes UI)
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 private _dialog = findDisplay 982390;
@@ -26,7 +27,7 @@ _switchModeButton ctrlSetText "Sell Menu";
 _IconCtrl ctrlSetText nil;
 _IconTxt ctrlSetText nil;
 ctrlSetText [1001, nil];
-if (lbSize _list > 0) then { 
+if (lbSize _list > 0) then {
 _list lbSetCurSel 0;
 };
 };

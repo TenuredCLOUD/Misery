@@ -1,10 +1,9 @@
+#include "..\script_component.hpp"
 /*
 Misery Generator Interaction synchronization
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
-
-#include "\z\misery\addons\main\script_macros.hpp"
 
 _Generator = _this select 0;
 

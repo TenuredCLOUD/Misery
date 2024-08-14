@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Zombie skinning
 Designed specifically for Misery mod

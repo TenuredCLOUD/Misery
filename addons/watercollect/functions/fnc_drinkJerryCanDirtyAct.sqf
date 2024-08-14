@@ -1,9 +1,8 @@
-#include "\z\misery\addons\main\script_macros.hpp"
-
+#include "..\script_component.hpp"
 /*
-Misery Drink from Jerrycan (dirty)
-Designed specifically for Misery mod
-by TenuredCLOUD
+    Misery Drink from Jerrycan (dirty)
+    Designed specifically for Misery mod
+    by TenuredCLOUD
 */
 
 private _MThirst = player getVariable ["MiseryThirst", MIS_THIRST];

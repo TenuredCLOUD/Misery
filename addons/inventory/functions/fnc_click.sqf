@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Inventory Click handle
 Designed specifically for Misery mod

@@ -1,9 +1,8 @@
-#include "\z\misery\addons\main\script_macros.hpp"
-
+#include "..\script_component.hpp"
 /*
-Misery Beer usage
-Designed specifically for Misery mod (also compatible with Ravage)
-by TenuredCLOUD
+    Misery Beer usage
+    Designed specifically for Misery mod (also compatible with Ravage)
+    by TenuredCLOUD
 */
 
 private _MSleepiness = player getVariable ["MiserySleepiness", MIS_SLEEP];

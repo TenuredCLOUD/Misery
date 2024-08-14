@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Bank UI Claim Support (Phoenix fund) Processor
 Also adds a 24 hour cooldown before requesting more funds

@@ -1,7 +1,8 @@
+#include "..\script_component.hpp"
 /*
 Misery Ailment Processor
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 params ["_control", "_selectedIndex"];

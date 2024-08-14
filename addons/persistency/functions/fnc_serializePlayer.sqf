@@ -1,10 +1,9 @@
+#include "..\script_component.hpp"
 /*
 Misery persistence
 Designed specifically for Misery mod
 by TenuredCLOUD
 */
-
-#include "\z\misery\addons\main\script_macros.hpp"
 
 private ["_loadout","_stats","_radiation","_MHunger","_MThirst","_MSleep","_MPoison","_MInfection","_MExposure","_MCartridge","_MDebuffs","_MFear","_ACEdamage","_saveName","_namespace","_MiseryDebuffs","_MiseryCraftingKnowledge","_serialized"];
 

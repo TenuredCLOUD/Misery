@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Music generation loop
 Selects a random music file to play from the "Ambient Music array" data after the previous file is played...

@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Take Money UI Action process
 Processes money taking from corpses
@@ -5,7 +6,6 @@ Designed specifically for Misery mod
 by TenuredCLOUD
 */
 
-#include "\z\misery\addons\main\script_macros.hpp"
 
 [{!isNull findDisplay 358492},
 {

@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Fishing system
 Designed specifically for Misery mod

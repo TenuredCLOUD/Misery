@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Generator Power nearby loop
 Controls powering nearby structures...

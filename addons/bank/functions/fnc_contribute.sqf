@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Bank UI Contribute (Phoenix fund) Processor
 Designed specifically for Misery mod

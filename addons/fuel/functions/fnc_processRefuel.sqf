@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Vehicle Refuel UI List populater
 Defines the selected refuel option, and passes values

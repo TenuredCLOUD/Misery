@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Forge audio looper
 Designed specifically for Misery mod

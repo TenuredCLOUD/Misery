@@ -1,4 +1,5 @@
 
+#include "..\script_component.hpp"
 /*
 Misery Demolishing
 Designed specifically for Misery mod

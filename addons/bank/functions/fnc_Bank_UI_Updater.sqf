@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Bank UI
 Watches UI for changes etc...

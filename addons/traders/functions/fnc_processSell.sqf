@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Trader Shop Sell processor
 Processes Selling of items + funds handling

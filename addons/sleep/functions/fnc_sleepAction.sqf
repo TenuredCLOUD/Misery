@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery show Sleep interaction
 Designed specifically for Misery mod

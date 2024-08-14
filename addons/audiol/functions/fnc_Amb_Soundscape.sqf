@@ -1,19 +1,20 @@
+#include "..\script_component.hpp"
 /*
 Misery Ambient SoundScape simulation
 Runs random audio / sounds generated on a random player each loop...
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 if (isServer) then {
     while {true} do {
-        
+
         _players = allPlayers;
 
         _player = selectRandom _players;
 
         _angle = random 360;
-        _distance = 50 + random 150; 
+        _distance = 50 + random 150;
         _spawnPos = _player getPos [_distance, _angle];
 
         private _soundDummy = "Land_HelipadEmpty_F" createVehicle _spawnPos;

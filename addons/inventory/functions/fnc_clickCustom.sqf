@@ -1,7 +1,8 @@
+#include "..\script_component.hpp"
 /*
 Click action for custom item usage
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 private["_item","_description"];

@@ -1,8 +1,9 @@
+#include "..\script_component.hpp"
 /*
 Misery Ambient AI Master settings module initialization
 Defines performance properties for each Ambient AI module
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Designed specifically for Misery mod
+by TenuredCLOUD
 */
 
 private["_module","_units","_activated"];

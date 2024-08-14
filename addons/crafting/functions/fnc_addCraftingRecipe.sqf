@@ -1,7 +1,8 @@
+#include "..\script_component.hpp"
 /*
-Misery Crafting Recipe Data Adder 
-Designed specifically for Misery mod 
-by TenuredCLOUD 
+Misery Crafting Recipe Data Adder
+Designed specifically for Misery mod
+by TenuredCLOUD
 
 Usage ex: [["rvg_guttingknife", [["Misery_pliers",1], ["CraftingTime", 5]]]] call Misery_fnc_AddCraftingRecipe;
 */

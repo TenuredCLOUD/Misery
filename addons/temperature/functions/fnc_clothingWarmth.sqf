@@ -1,7 +1,8 @@
+#include "..\script_component.hpp"
 /*
-Clothing warmth calcs 
-Designed specifically for Misery mod 
-Code concepts by Drongo, edited by TenuredCLOUD 
+Clothing warmth calcs
+Designed specifically for Misery mod
+Code concepts by Drongo, edited by TenuredCLOUD
 */
 
 // // Calculate warmth of clothing (based on mass of uniform, vest and headgear)
@@ -25,21 +26,21 @@ if(((toLower(headGear _man))find "watchcap")>-1)then{
 if (_h < 6 || _h == 0) then {
 _h=((6) * 3);
 }else{
-_h=_h * 3; 
+_h=_h * 3;
 };
 };
 if(((toLower(headGear _man))find "ushanka")>-1)then{
 if (_h < 6 || _h == 0) then {
 _h=((6) * 3);
 }else{
-_h=_h * 3; 
+_h=_h * 3;
 };
 };
 if(((toLower(headGear _man))find "bala")>-1)then{
 if (_h < 6 || _h == 0) then {
 _h=((6) * 3);
 }else{
-_h=_h * 3; 
+_h=_h * 3;
 };
 };
 if(((toLower(headGear _man))find "shem")>-1)then{
@@ -65,7 +66,7 @@ _g=_g * 3;
 };
 
 private _warmth=(_u+_v+_h+_g);
-//Ceil to round up in case clothing mass is very low integer value example: 1 * 3 = 3 /10 = 0.3 ceil = 1; 
+//Ceil to round up in case clothing mass is very low integer value example: 1 * 3 = 3 /10 = 0.3 ceil = 1;
 _warmth=ceil(_warmth/10);
 _u=round(_u/10);
 _v=round(_v/10);
