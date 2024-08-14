@@ -1,6 +1,6 @@
 class CfgMarkers {
     class GVAR(ammo): GVAR(ammo) {
-        color[] = {0, 0, 0, 1};
+        color[] = {1, 1, 1, 1};
         icon = QPATHTOF(data\ammo.paa);
         markerClass = QGVAR(map);
         name = "Ammo";
