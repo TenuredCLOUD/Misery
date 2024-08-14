@@ -133,7 +133,6 @@ class CfgVehicles {
         class AnimationSources {};
 
         class UserActions {};
-
     };
 
     class Misery_Anvil : House_F {
