@@ -1,19 +1,29 @@
 #include "..\script_component.hpp"
 /*
-Misery Music generation loop
-Selects a random music file to play from the "Ambient Music array" data after the previous file is played...
-Time between tracks is randomized, up to 2 minutes
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: MikeMF
+ * Queues music to be played upon finish
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_fnc_audio_ambientMusic
 */
 
 addMusicEventHandler ["MusicStop", {
-    params ["_musicClassname", "_eventHandlerId", "_currentPosition", "_toralLength"];
-    _time = time + random 60 + random 120;
-    [_time] spawn {
-        private ["_TimeA"];
-        _TimeA=_this select 0;
-        waitUntil {(time > _TimeA)};
-        [] call Misery_fnc_playMusic_Random;
+    params ["_musicClassname", "_eventID"];
+
+    // Refill music tracks if empty.
+    if (GVAR(musicTracks) isEqualTo []) then {
+        GVAR(musicTracks) = +GVAR(musicTracksMain);
     };
+
+    // Delay by 10s, queue up next track.
+    [{
+        call FUNC(playRandomMusic);
+    }, [], 10] call CBA_fnc_waitAndExecute;
+
 }];

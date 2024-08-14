@@ -10,7 +10,11 @@ PREP_RECOMPILE_END;
 
 if (hasInterface) then {
     // Get all Music Tracks
-    GVAR(musicTracks) = ('getNumber (_x >> QGVAR(isMusic) > 0' configClasses (configFile >> "CfgMusic")) apply {configName _x};
+    GVAR(musicTracksMain) = ('getNumber (_x >> QGVAR(isMusic) > 0' configClasses (configFile >> "CfgMusic")) apply {configName _x};
+    GVAR(musicTracks) = [];
+
+    // Forge Master List
+    GVAR(forgeAudioList) = [];
 
     if (GVAR(enhancedInventorySounds)) then {
         // Inventory Sounds
@@ -35,10 +39,6 @@ if (hasInterface) then {
 // TODO.
 /*
 if (isServer) then {
-    if (GVAR(ambientSoundScape)) then {
-        [] call FUNC(ambientSoundScape);
-    };
-
     if (count GVAR(ambientMusicExtras) > 0) then {
         [] call FUNC(playRandomMusic);
         [] call FUNC(ambientMusic);

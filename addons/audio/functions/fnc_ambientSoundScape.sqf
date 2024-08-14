@@ -1,29 +1,36 @@
 #include "..\script_component.hpp"
 /*
-Misery Ambient SoundScape simulation
-Runs random audio / sounds generated on a random player each loop...
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD, MikeMF
+ * Handles ambient environment sounds
+ *
+ * Arguments:
+ * Previous Sound Source <OBJECT> (default: objNull)
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_fnc_audio_ambientSoundScape
 */
 
-while {true} do {
+params [["_oldSoundSource", objNull]];
 
-    _players = allPlayers;
-
-    _player = selectRandom _players;
-
-    _angle = random 360;
-    _distance = 50 + random 150;
-    _spawnPos = _player getPos [_distance, _angle];
-
-    private _soundDummy = "Land_HelipadEmpty_F" createVehicle _spawnPos;
-    _player setVariable ["_TC_sound", true,true];
-    [_soundDummy, [selectRandom Misery_EnhancedAmbsoundscape_Listed_audio, 250]] remoteExec ["say3D", 0, _soundDummy];
-    [{
-        !(_player getVariable ["_TC_sound", false])
-    }, {
-        deleteVehicle _this;
-    }, _soundDummy] call CBA_fnc_waitUntilAndExecute;
-
-    sleep 60 + random 120;
+// delete old sound dummy.
+if (!isNull _oldSoundSource) then {
+    deleteVehicle _oldSoundSource;
 };
+
+// Exit if no sounds defined, will end the loop.
+if (GVAR(ambientSoundScapeExtras) isEqualTo []) exitWith {};
+
+private _dummyPosition = player getPos [(30 + random 70), random 360];
+private _soundDummy = createVehicle ["Land_HelipadEmpty_F", _dummyPosition, [], 0, "CAN_COLLIDE"];
+
+private _sound = selectRandom GVAR(ambientSoundScapeExtras);
+
+[QGVAR(say3D), [_soundDummy, _sound]] call CBA_fnc_globalEvent;
+
+// Loop sound
+[{
+    _this call FUNC(ambientSoundScape);
+}, _soundDummy, 10] call CBA_fnc_waitAndExecute;

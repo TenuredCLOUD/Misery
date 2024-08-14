@@ -3,7 +3,9 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {};
+        units[] = {
+            QGVAR(sfx_v_furnace)
+        };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"misery_main"};
@@ -14,4 +16,6 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "CfgMusic.hpp"
+#include "CfgSFX.hpp"
 #include "CfgSounds.hpp"
+#include "CfgVehicles.hpp"

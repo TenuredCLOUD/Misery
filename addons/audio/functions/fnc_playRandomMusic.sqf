@@ -1,10 +1,16 @@
 #include "..\script_component.hpp"
 /*
-    Misery Random music selection
-    Selects a random music file to play from the "Ambient Music array" data
-    Designed specifically for Misery mod
-    by TenuredCLOUD
+ * Author: MikeMF
+ * Select random music track to play
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_fnc_audio_playRandomMusic
 */
 
-private _randomMusic = selectRandom GVAR(ambientMusicExtras);
-playMusic _randomMusic;
+playMusic (selectRandom GVAR(musicTracks));
