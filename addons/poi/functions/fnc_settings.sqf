@@ -14,7 +14,7 @@ Misery_POIMAXAllowed = _this select 4;
 
 Misery_activePOIs = 0;
 
-MiseryPOIGenerationReady = TRUE;
+MiseryPOIGenerationReady = true;
 
 if (isServer) exitWith {
 [] execVM "\z\misery\addons\poi\functions\fnc_ModuleCheck.sqf";

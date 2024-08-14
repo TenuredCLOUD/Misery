@@ -7,7 +7,7 @@ by TenuredCLOUD
 
 private ["_cold","_MPlayertemp","_MExposure","_MHunger","_MDebuffs","_coldexposure","_Miserytempdefcoldcalc"];
 
-_cold = FALSE;
+_cold = false;
 _MPlayertemp = player getVariable "MiseryPlayerTemp";
 _MExposure = player getVariable ["MiseryExposure", MIS_EXPOSURE];
 _MHunger = player getVariable ["MiseryHunger", MIS_HUNGER];
@@ -26,7 +26,7 @@ if (_MPlayertemp < 20) then {
 
         player setVariable ["MiseryExposure", (_MExposure - parseNumber ((_coldexposure)toFixed 2))];
 
-        _cold = TRUE;
+        _cold = true;
     };
 
     //Temperature deficiency - Calculates a drop in hunger / thirst depending on Temperature:

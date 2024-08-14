@@ -15,7 +15,7 @@ by TenuredCLOUD
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
 
-        if ((player getVariable ["Misery_RFEMFDet", false]) == true) then {
+        if ((player getVariable ["Misery_RFEMFDet", false])) then {
 
             private _spookArray = [] + dsaSpookBases + dsaDevMutants + dsaWebknightCreatures;
             private _weaponHolders = nearestObjects [getPos player, ["WeaponHolderSimulated", "GroundWeaponHolder", "Default"], 25];

@@ -5,8 +5,8 @@ Designed specifically for Misery mod
 by TenuredCLOUD
 */
 
-MiseryACE=FALSE;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=TRUE};
+MiseryACE=false;
+if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
 
 if (!hasInterface) exitWith {};
 

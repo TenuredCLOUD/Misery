@@ -17,7 +17,7 @@ _SoundClassArray = (_this select 2) call EFUNC(common,parseArray);
 RadioObjectArray = (_this select 3) call EFUNC(common,parseArray);
 MiseryRadioTimer = _this select 4;
 
-MiseryRadioBroadcastsystem = TRUE; //Sync bootup
+MiseryRadioBroadcastsystem = true; //Sync bootup
 
 [] execVM Radio\RadioObjectsStatic); //Immersive static loop
 

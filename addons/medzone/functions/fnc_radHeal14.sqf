@@ -14,7 +14,7 @@ _ExitB = _dialog displayCtrl 1601;
 
 _pricerads = parseNumber (((((player getvariable ["radiation",0]) * 0.25) / 50) * Mis_Medpriceradheal) toFixed 1);
 
-if (MiseryinMedzonearea == true) exitwith {
+if (MiseryinMedzonearea) exitwith {
 
 if (Mis_Medcurrencytype == "DIGITALTYPE") then {
 _playercash = player getVariable [Mis_Medfundstype, 0];

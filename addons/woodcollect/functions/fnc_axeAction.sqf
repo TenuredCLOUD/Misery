@@ -14,7 +14,7 @@
     "call Misery_fnc_NearTreeAxe",
     {
     //Force holstering if WBKIMS disabled:
-    if (MiseryWBKIMS == FALSE) then {
+    if (!MiseryWBKIMS) then {
     if !((currentWeapon player)=="") then {
     player action["SWITCHWEAPON",player,player,-1];
     };

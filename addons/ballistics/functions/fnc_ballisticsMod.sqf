@@ -32,7 +32,7 @@ while {true} do {
 {
     _type = _x;
     {
-        if (_x getVariable ["Misery_SG_EH_added", false] == false) then {
+        if !(_x getVariable ["Misery_SG_EH_added", false]) then {
             _x setVariable ["Misery_SG_allowedAmmo", _Misery_SGAmmo, true];
             _x addEventHandler ["HandleDamage", {_this call Misery_fnc_DamageMod}];
             _x setVariable ["Misery_SG_EH_added", true, true];

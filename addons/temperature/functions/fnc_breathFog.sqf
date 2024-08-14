@@ -7,11 +7,11 @@ Designed specifically for Misery mod
 by TenuredCLOUD
 */
 
-while {TRUE} do {
+while {true} do {
 
     player setVariable ["MiseryBreathFogSim", true];
 
-    if ((((call Misery_fnc_Temperature) select 2) == 0) || (MiseryBreathFogAllowed == false) || (!alive player)) exitWith {
+    if ((((call Misery_fnc_Temperature) select 2) == 0) || (!MiseryBreathFogAllowed) || (!alive player)) exitWith {
         if(MiseryDebug)then{systemChat "Misery Breathfog cycle terminated..."};
         player setVariable ["MiseryBreathFogSim", nil];
     };

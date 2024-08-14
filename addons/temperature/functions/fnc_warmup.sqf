@@ -7,7 +7,7 @@ by TenuredCLOUD
 
 private ["_warmup","_MPlayertemp","_MExposure","_MDebuffs","_cooldown"];
 
-_warmup = FALSE;
+_warmup = false;
 _MPlayertemp = player getVariable "MiseryPlayerTemp";
 _MExposure = player getVariable ["MiseryExposure", MIS_EXPOSURE];
 _MDebuffs = player getVariable "MiseryDebuffs";
@@ -27,7 +27,7 @@ if (_MPlayertemp >= 20 && _MPlayertemp < 33) then {
 
             player setVariable ["MiseryExposure", (_MExposure + parseNumber ((_warmUp)toFixed 2))];
 
-            _warmup = TRUE;
+            _warmup = true;
 
             if (_MExposure >= 0) then {player setVariable ["MiseryExposure", MIS_EXPOSURE];};
 
@@ -39,7 +39,7 @@ if (_MPlayertemp >= 20 && _MPlayertemp < 33) then {
 
             player setVariable ["MiseryExposure", (_MExposure - parseNumber ((_cooldown)toFixed 2))];
 
-            _warmup = TRUE;
+            _warmup = true;
 
             if (_MExposure <= 0) then {player setVariable ["MiseryExposure", MIS_EXPOSURE];};
 

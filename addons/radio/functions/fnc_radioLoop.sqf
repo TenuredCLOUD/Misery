@@ -7,12 +7,12 @@
 */
 
 /*
-[{(player getVariable ["Misery_HHRadio", false]) == true},
+[{(player getVariable ["Misery_HHRadio", false])},
 {
     [{
         params ["_args", "_handle"];
 
-        if (((player getVariable ["Misery_HHRadio", false]) == false) || (!alive player)) exitWith {
+        if ((!(player getVariable ["Misery_HHRadio", false])) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             if(MiseryDebug)then{systemChat "Misery Radio Broadcast check Terminated..."};
         };

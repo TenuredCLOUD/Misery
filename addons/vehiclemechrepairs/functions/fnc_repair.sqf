@@ -43,7 +43,7 @@ player setVariable ["Misery_Proc_Repairs", true];
         };
 }];
 
-if (MiseryinVehiclerepairarea == true) exitwith {
+if (MiseryinVehiclerepairarea) exitwith {
 
 if (Mis_Mechcurrencytype == "DIGITALTYPE") then {
 _playercash = player getVariable [Mis_Mechfundstype, 0];

@@ -200,15 +200,15 @@ if (MiseryACE && [["Misery_Needlethread"]] call EFUNC(common,hasItem)) then {
     _out pushback [localize "STR_MISERY_STITCHWOUNDS",localize "STR_MISERY_STITCHWOUNDS"];
 };
 
-// if ((call Misery_fnc_NearLandVeh || call Misery_fnc_NearHeli || call Misery_fnc_NearPlane || call Misery_fnc_NearShip || call Misery_fnc_NearTank) && MiseryinVehiclerepairarea == true) then {
+// if ((call Misery_fnc_NearLandVeh || call Misery_fnc_NearHeli || call Misery_fnc_NearPlane || call Misery_fnc_NearShip || call Misery_fnc_NearTank) && MiseryinVehiclerepairarea) then {
 // _out pushback [localize "STR_MISERY_REQREPAIRS",localize "STR_MISERY_REQREPAIRS"];
 // };
 
-// if ((call Misery_fnc_NearLandVeh || call Misery_fnc_NearHeli || call Misery_fnc_NearPlane || call Misery_fnc_NearShip || call Misery_fnc_NearTank) && MiseryinVehiclerearmarea == true) then {
+// if ((call Misery_fnc_NearLandVeh || call Misery_fnc_NearHeli || call Misery_fnc_NearPlane || call Misery_fnc_NearShip || call Misery_fnc_NearTank) && MiseryinVehiclerearmarea) then {
 // _out pushback [localize "STR_MISERY_REQRESUPPLY",localize "STR_MISERY_REQRESUPPLY"];
 // };
 
-// if ((call Misery_fnc_NearLandVeh || call Misery_fnc_NearHeli || call Misery_fnc_NearPlane || call Misery_fnc_NearShip || call Misery_fnc_NearTank) && MiseryinRefuelzonearea == true) then {
+// if ((call Misery_fnc_NearLandVeh || call Misery_fnc_NearHeli || call Misery_fnc_NearPlane || call Misery_fnc_NearShip || call Misery_fnc_NearTank) && MiseryinRefuelzonearea) then {
 // _out pushback [localize "STR_MISERY_REQREFUEL",localize "STR_MISERY_REQREFUEL"];
 // };
 

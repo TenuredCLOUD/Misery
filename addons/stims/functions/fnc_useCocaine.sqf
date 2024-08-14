@@ -7,8 +7,8 @@ by TenuredCLOUD
 
 private _MSleepiness = player getVariable ["MiserySleepiness", MIS_SLEEP];
 
-MiseryACE=FALSE;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=TRUE};
+MiseryACE=false;
+if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
 
 if (!hasInterface) exitWith {};
 

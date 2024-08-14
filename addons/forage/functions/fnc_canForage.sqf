@@ -1,7 +1,7 @@
 
 private ["_canforage"];
 
-_canforage = FALSE;
+_canforage = false;
 
 private _pos=(positionCameraToWorld[0,0,0]);
 private _pos2=(_pos vectorAdd(getCameraViewDirection player vectorMultiply 4));
@@ -11,7 +11,7 @@ if (_intersects && !((([player] call Misery_fnc_Isinside) select 0) && (([player
 
     if (count (nearestTerrainObjects [player, ["BUSH"], 2.5, true, true]) > 0) then {
 
-    _canforage = TRUE;
+    _canforage = true;
 
     if (_canforage)exitwith{};
 

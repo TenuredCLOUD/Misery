@@ -19,6 +19,6 @@ if (_activated && isServer) then {
 (_module getVariable "MiseryArtifactDeleteTimer")
 ] execVM "\z\misery\addons\Artifacts\functions\fnc_Settings.sqf";
 };
-TRUE
+true
 
 

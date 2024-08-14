@@ -6,8 +6,8 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-MiseryWBKIMS=FALSE; 
-if(isClass(configFile>>"cfgPatches">>"WBK_MeleeMechanics"))then{MiseryWBKIMS=TRUE};
+MiseryWBKIMS=false;
+if(isClass(configFile>>"cfgPatches">>"WBK_MeleeMechanics"))then{MiseryWBKIMS=true};
 
 //WBKIMS Force Misery compat settings (If loaded):
 if (MiseryWBKIMS && isServer) then {
@@ -16,7 +16,7 @@ if (MiseryWBKIMS && isServer) then {
 
     //Force FP melee mode:
     if (!isNil "IMS_WBK_MAINFPTP") then {
-        if (IMS_WBK_MAINFPTP == false) then {
+        if (!IMS_WBK_MAINFPTP) then {
             IMS_WBK_MAINFPTP = true;
             publicVariable "IMS_WBK_MAINFPTP";
         };
@@ -50,7 +50,7 @@ if (MiseryWBKIMS && MiseryRavage && isServer) then {
                 };
             },true];
         };
-    } forEach allUnits; 
+    } forEach allUnits;
 };
 
 //IMS melee kill for DSA removed for now
@@ -59,7 +59,7 @@ if (MiseryWBKIMS && MiseryRavage && isServer) then {
 //     private _gvars = ["dsaSpookBases", "dsaDevMutants", "dsaWebknightCreatures"];
 
 //     {
-//         waitUntil {!isNil _x}; // Run every frame to reload faster 
+//         waitUntil {!isNil _x}; // Run every frame to reload faster
 //     } forEach _gvars;
 
 //     private _spookArray = [] + dsaSpookBases + dsaDevMutants + dsaWebknightCreatures;
@@ -75,7 +75,7 @@ if (MiseryWBKIMS && MiseryRavage && isServer) then {
 //                     };
 //                 },true];
 //             };
-//         } forEach allUnits; 
+//         } forEach allUnits;
 //     };
 // };
 

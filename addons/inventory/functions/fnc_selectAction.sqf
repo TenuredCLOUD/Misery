@@ -10,7 +10,7 @@ disableSerialization;
 private _ctrl=(findDisplay 982377)displayCtrl 1500;
 private _index=lbCurSel _ctrl;
 private _action=_ctrl lbData _index;
-private _playAction=FALSE;
+private _playAction=false;
 private _pos=[];
 
 //Insulation check:
@@ -39,8 +39,8 @@ if(_action == "Search for Money") exitWith {
 
 //Cycle MiseryHUD:
 if(_action == localize "STR_MISERY_MiseryHUDONOFF") exitWith {
-    if(MiserysurvivalShowStatus)exitWith{MiserysurvivalShowStatus=FALSE};
-    MiserysurvivalShowStatus=TRUE;
+    if(MiserysurvivalShowStatus)exitWith{MiserysurvivalShowStatus=false};
+    MiserysurvivalShowStatus=true;
 };
 
 //Mechanic repairs:

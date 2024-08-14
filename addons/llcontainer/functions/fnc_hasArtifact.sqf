@@ -1,8 +1,8 @@
-private _Hasartifact = FALSE;
+private _Hasartifact = false;
 
 private _check_items = items player;
 
-if ("Misery_artifact01" in _Check_items 
+if ("Misery_artifact01" in _Check_items
 || "Misery_artifact02" in _Check_items
 || "Misery_artifact03" in _Check_items
 || "Misery_artifact04" in _Check_items
@@ -13,7 +13,7 @@ if ("Misery_artifact01" in _Check_items
 || "Misery_artifact09" in _Check_items
 || "Misery_artifact10" in _Check_items) then {
 
-_Hasartifact = TRUE;
+_Hasartifact = true;
 
 if (_Hasartifact)exitwith{};
 

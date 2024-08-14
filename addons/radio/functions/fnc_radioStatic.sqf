@@ -7,16 +7,16 @@ by TenuredCLOUD
 */
 
 /*
-[{(player getVariable ["Misery_HHRadio", false]) == true},
+[{(player getVariable ["Misery_HHRadio", false])},
     {
         [{
             params ["_args", "_handle"];
 
-            if (((player getVariable ["Misery_HHRadio", false]) == false) || (!alive player)) exitWith {
+            if ((!(player getVariable ["Misery_HHRadio", false])) || (!alive player)) exitWith {
                 [_handle] call CBA_fnc_removePerFrameHandler;
             };
 
-        if ((player getVariable ["Misery_HHRadio", false]) == true) then {
+        if ((player getVariable ["Misery_HHRadio", false])) then {
         MiseryRadioStaticDummy = "Land_HelipadEmpty_F" createVehicle (position player);
         MiseryRadioStaticDummy attachTo [player, [0, 0, 0], "Pelvis"];
         [MiseryRadioStaticDummy, ["StaticRADIO", 50]] remoteExec ["say3D", 0, MiseryRadioStaticDummy];

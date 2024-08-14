@@ -12,7 +12,7 @@ _dialog = findDisplay 982381;
 _PurchaseB = _dialog displayCtrl 1600;
 _ExitB = _dialog displayCtrl 1601;
 
-if (MiseryinMedzonearea == true) exitwith {
+if (MiseryinMedzonearea) exitwith {
 
 if (Mis_Medcurrencytype == "DIGITALTYPE") then {
 _playercash = player getVariable [Mis_Medfundstype, 0];

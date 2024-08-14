@@ -7,7 +7,7 @@ by TenuredCLOUD
 
 private ["_sick","_MPlayertemp","_MExposure","_MThirst","_MDebuffs","_sickcalc1","_Miserytempsickcalc1","_sickcalc2","_Miserytempsickcalc2"];
 
-_sick = FALSE;
+_sick = false;
 _MPlayertemp = player getVariable "MiseryPlayerTemp";
 _MExposure = player getVariable ["MiseryExposure", MIS_EXPOSURE];
 _MThirst = player getVariable ["MiseryThirst", MIS_THIRST];
@@ -21,7 +21,7 @@ _MDebuffs = player getVariable "MiseryDebuffs";
 
         player setVariable ["MiseryExposure", (_MExposure + parseNumber ((_sickcalc1)toFixed 2))];
 
-        _sick = TRUE;
+        _sick = true;
 
     //Temperature deficiency - Calculates a drop in hunger / thirst depending on Temperature:
     if (MiseryTemperaturedeficiency == 1) then {
@@ -39,7 +39,7 @@ _MDebuffs = player getVariable "MiseryDebuffs";
 
         player setVariable ["MiseryExposure", (_MExposure + parseNumber ((_sickcalc2)toFixed 2))];
 
-        _sick = TRUE;
+        _sick = true;
 
     //Temperature deficiency - Calculates a drop in hunger / thirst depending on Temperature:
     if (MiseryTemperaturedeficiency == 1) then {
@@ -57,7 +57,7 @@ _MDebuffs = player getVariable "MiseryDebuffs";
 
         player setVariable ["MiseryExposure", (_MExposure + parseNumber ((_sickcalc3)toFixed 2))];
 
-        _sick = TRUE;
+        _sick = true;
 
     //Temperature deficiency - Calculates a drop in hunger / thirst depending on Temperature:
     if (MiseryTemperaturedeficiency == 1) then {

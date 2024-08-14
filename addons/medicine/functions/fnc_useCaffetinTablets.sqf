@@ -9,8 +9,8 @@ private _MInfection = player getVariable ["MiseryInfection", MIS_INFECTION];
 private _MExposure = player getVariable ["MiseryExposure", MIS_EXPOSURE];
 private _MDebuffs = player getVariable "MiseryDebuffs";
 
-MiseryACE=FALSE;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=TRUE};
+MiseryACE=false;
+if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
 
 if (!hasInterface) exitWith {};
 

@@ -5,13 +5,13 @@ Designed specifically for Misery mod
 by TenuredCLOUD
 */
 
-[{!isNil "MiseryinRadZone" && MiseryinRadZone == true},
+[{!isNil "MiseryinRadZone" && MiseryinRadZone},
 {
 
 [{
         params ["_args","_handle"];
 
-        if ((!isNil "MiseryinRadZone" && MiseryinRadZone == false) || (!alive player)) exitWith {
+        if ((!isNil "MiseryinRadZone" && !MiseryinRadZone) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             if(MiseryDebug)then{systemChat "Misery Radiation cycle terminated..."};
             [] execVM "\z\misery\addons\radiation\functions\fnc_RadZoneinit.sqf";

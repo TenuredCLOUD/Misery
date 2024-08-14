@@ -8,18 +8,18 @@
 */
 
 /*
-[{(player getVariable ["Misery_RFEMFDet", false]) == true},
+[{(player getVariable ["Misery_RFEMFDet", false])},
 {
     [{
         params ["_args", "_handle"];
 
-        if (((player getVariable ["Misery_RFEMFDet", false]) == false) || (!alive player)) exitWith {
+        if ((!(player getVariable ["Misery_RFEMFDet", false])) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
 
     private ["_randomaudio","_randomunknownREMNANT","_randomunknownDSA","_RFsoundrandom","_group","_pos","_entity","_timeafter","_TimeA","_spookArray"];
 
-    if ((player getVariable ["Misery_RFEMFDet", false]) == true) then {
+    if ((player getVariable ["Misery_RFEMFDet", false])) then {
     _randomaudio = [1, 10] call BIS_fnc_randomInt;
     _randomunknownREMNANT = [1, 50] call BIS_fnc_randomInt;
     _randomunknownDSA = [1, 50] call BIS_fnc_randomInt;
