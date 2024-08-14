@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Misery Infection system with CBA HIT EH
 Designed specifically for Misery mod
@@ -20,7 +21,7 @@ if !(isNull objectParent player) exitwith {}; //If NOT player or Player is in ve
 if ((isPlayer _unit) && (_instigator isKindOf "zombie")) then { //If IS player then proceed to infection
 
 if((random 100) > Miseryzedinfectchance) exitWith {
-player setVariable ["zednotif", format ["<t>Possible Infection... <img shadow='0' size='1.5' image='%1'/>", "Zinfect\icons\zedhand.paa"]];
+player setVariable ["zednotif", format ["<t>Possible Infection... <img shadow='0' size='1.5' image='%1'/>", QPATHTOEF(icons,data\zedhand_ca.paa)]];
 hintSilent parseText format ["<t>%1</t><br/>",
 player getVariable ['zednotif', nil]
 ];
@@ -29,7 +30,7 @@ hintSilent "";
 };
 
 //---------------------------------------------------Infected status
-player setVariable ["zednotif", format ["<t>Possible Infection... <img shadow='0' size='1.5' image='%1'/>", "Zinfect\icons\zedhand.paa"]];
+player setVariable ["zednotif", format ["<t>Possible Infection... <img shadow='0' size='1.5' image='%1'/>", QPATHTOEF(icons,data\zedhand_ca.paa)]];
 hintSilent parseText format ["<t>%1</t><br/>",
 player getVariable ['zednotif', nil]
 ];

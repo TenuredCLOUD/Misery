@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Split wooden logs
 Enables players to reform wood logs to firewood (Chainsaw or Axe compatible)
@@ -8,8 +9,8 @@ by TenuredCLOUD
 [
     player,
     "Split wood log",
-    "Use\icons\firewood.paa",
-    "Use\icons\firewood.paa",
+    QPATHTOEF(icons,data\firewood_ca.paa),
+    QPATHTOEF(icons,data\firewood_ca.paa),
     "'Misery_woodenlog' in items player",
     "'Misery_Chainsaw' in items player || 'Misery_Woodaxe' in items player || (MiseryWBKIMS && {currentWeapon player in ['WBK_axe','WBK_brush_axe','WBK_craftedAxe','FireAxe','Axe']})",
     {

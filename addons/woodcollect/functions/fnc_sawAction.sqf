@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Chainsaw usage
 Designed specifically for Misery mod
@@ -7,8 +8,8 @@ by TenuredCLOUD
  [
     player,
     "Saw wood",
-    "Use\icons\chainsaw.paa",
-    "Use\icons\chainsaw.paa",
+    QPATHTOEF(icons,data\chainsaw_ca.paa),
+    QPATHTOEF(icons,data\chainsaw_ca.paa),
     "call Misery_fnc_NearTreeSaw",
     "call Misery_fnc_NearTreeSaw",
     {

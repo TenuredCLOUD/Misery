@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 Fishing system
 Designed specifically for Misery mod
@@ -8,8 +9,8 @@ by TenuredCLOUD
 [
     player,
     "Fish",
-    "Use\icons\fish.paa",
-    "Use\icons\fish.paa",
+    QPATHTOEF(icons,data\fish_ca.paa),
+    QPATHTOEF(icons,data\fish_ca.paa),
     "call Misery_fnc_Canfish",
     "call Misery_fnc_Fishinggear",
     {
