@@ -36,8 +36,8 @@ _object setVariable ["Mis_Woodstickfuel", 100, true];
 [
     _object,
     "Reignite Fire",
-    "Use\icons\harvestwoodfuel.paa",
-    "Use\icons\harvestwoodfuel.paa",
+    QPATHTOEF(icons,data\harvestwoodfuel_ca.paa),
+    QPATHTOEF(icons,data\harvestwoodfuel_ca.paa),
     "_this distance _target < 2.5 && !(inflamed _target) && ('Misery_lighter' in items player || 'rvg_matches' in magazines player)",
     "_caller distance _target < 2.5 && !(inflamed _target) && ('Misery_tinder' in items player || 'rvg_money' in magazines player || 'rvg_notepad' in magazines player || 'rvg_docFolder' in magazines player)",
     {

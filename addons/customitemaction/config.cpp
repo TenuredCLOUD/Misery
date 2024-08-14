@@ -42,7 +42,7 @@ class Misery_CustomItemAction: Module_F
     {
         scope=2;
         displayName="Custom item usage";
-        icon = "\z\misery\addons\icons\swap.paa";
+        icon = QPATHTOEF(icons,data\swap_ca.paa);
         category="Misery_faction";
         function="Misery_fnc_ModuleCustomItemAction";
         functionPriority=1;

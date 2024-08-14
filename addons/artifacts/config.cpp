@@ -42,7 +42,7 @@ class Misery_ArtifactSpawner: Module_F
     {
         scope=2;
         displayName="Misery (Artifact Spawner)";
-        icon="\z\misery\addons\icons\Artifacticon.paa";
+        icon = QPATHTOEF(icons,data\artifacticon_ca.paa);
         category="Misery_faction";
         function="";
         functionPriority=1;
@@ -86,7 +86,7 @@ class Misery_ArtifactSpawner: Module_F
     {
         scope=2;
         displayName="Misery (Artifact Spawner) Settings";
-        icon="\z\misery\addons\icons\Artifacticon.paa";
+        icon = QPATHTOEF(icons,data\artifacticon_ca.paa);
         category="Misery_faction";
         function="Misery_fnc_ModuleArtifactSpawner";
         functionPriority=1;

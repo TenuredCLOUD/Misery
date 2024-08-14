@@ -8,8 +8,8 @@
  [
     player,
     "Collect wood",
-    "Use\icons\branch.paa",
-    "Use\icons\branch.paa",
+    QPATHTOEF(icons,data\branch_ca.paa),
+    QPATHTOEF(icons,data\branch_ca.paa),
     "call Misery_fnc_NearTree",
     "call Misery_fnc_NearTree",
     {

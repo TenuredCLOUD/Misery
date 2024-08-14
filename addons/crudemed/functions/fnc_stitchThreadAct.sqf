@@ -8,8 +8,8 @@ by TenuredCLOUD
 [
     player,
     "Stitch wounds",
-    "Use\icons\needlethread.paa",
-    "Use\icons\needlethread.paa",
+    QPATHTOEF(icons,data\needlethread_ca.paa),
+    QPATHTOEF(icons,data\needlethread_ca.paa),
     "'Misery_Needlethread' in items player",
     "[player] call ace_medical_blood_fnc_isBleeding",
     {

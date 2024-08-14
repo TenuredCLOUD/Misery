@@ -8,8 +8,8 @@
  [
     player,
     "Chop wood",
-    "Use\icons\firewood.paa",
-    "Use\icons\firewood.paa",
+    QPATHTOEF(icons,data\firewood_ca.paa),
+    QPATHTOEF(icons,data\firewood_ca.paa),
     "call Misery_fnc_NearTreeAxe",
     "call Misery_fnc_NearTreeAxe",
     {

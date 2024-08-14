@@ -1,4 +1,3 @@
-
 #include "..\script_component.hpp"
 /*
 Misery Demolishing
@@ -9,8 +8,8 @@ by TenuredCLOUD
 [
     player,
     "Demolish object",
-    "Use\icons\Sledgehammer.paa",
-    "Use\icons\Sledgehammer.paa",
+    QPATHTOEF(icons,data\sledgehammer_ca.paa),
+    QPATHTOEF(icons,data\sledgehammer_ca.paa),
     "call Misery_fnc_HasSledghammer",
     "call Misery_fnc_NearNMB",
     {

@@ -6,7 +6,6 @@ Designed specifically for Misery mod
 by TenuredCLOUD
 */
 
-
 if (!hasInterface) exitWith {};
 
 //Force close inv:
@@ -27,8 +26,8 @@ if !("Misery_tinder" in items player || "acex_intelitems_notepad" in magazines p
 [
     player,
     "Craft Fire",
-    "Use\icons\firecraft.paa",
-    "Use\icons\firecraft.paa",
+    QPATHTOEF(icons,data\firecraft_ca.paa),
+    QPATHTOEF(icons,data\firecraft_ca.paa),
     "'Misery_firewood' in items player || 'Misery_woodensticks' in items player",
     "'Misery_lighter' in items player || 'rvg_matches' in magazines player",
     {

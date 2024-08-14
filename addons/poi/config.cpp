@@ -42,7 +42,7 @@ class Misery_POI: Module_F
     {
         scope=2;
         displayName="Misery (POI)";
-        icon="\z\misery\addons\icons\POI.paa";
+        icon = QPATHTOEF(icons,data\poi_ca.paa);
         category="Misery_faction";
         function="";
         functionPriority=1;
@@ -477,7 +477,7 @@ class Misery_POI: Module_F
     {
         scope=2;
         displayName="Misery (POI) Settings";
-        icon="\z\misery\addons\icons\POI.paa";
+        icon = QPATHTOEF(icons,data\poi_ca.paa);
         category="Misery_faction";
         function="Misery_fnc_ModulePOISettings";
         functionPriority=1;

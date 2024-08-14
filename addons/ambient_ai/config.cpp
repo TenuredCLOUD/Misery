@@ -42,7 +42,7 @@ class Misery_Ambient_AI: Module_F
     {
         scope=2;
         displayName="Misery Ambient AI";
-        icon="\z\misery\addons\icons\AK.paa";
+        icon = QPATHTOEF(icons,data\ak_ca.paa);
         category="Misery_faction";
         function="";
         functionPriority=1;

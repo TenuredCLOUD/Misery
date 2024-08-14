@@ -8,8 +8,8 @@ by TenuredCLOUD
     [
     player,
     "Sleep",
-    "Use\icons\sleepy.paa",
-    "Use\icons\sleepy.paa",
+    QPATHTOEF(icons,data\sleepy_ca.paa),
+    QPATHTOEF(icons,data\sleepy_ca.paa),
     "private _object = cursorObject;
     private _model = getModelInfo _object select 0;
     _model in ['woodenbed_01_f.p3d',
