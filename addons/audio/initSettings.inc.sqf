@@ -64,7 +64,7 @@
     "", 1,
     {
         params ["_value"];
-        Misery_EnhancedAmbsoundscape_Listed_audio = _value splitString ",";
+        GVAR(ambientSoundScapeExtras) = _value splitString ",";
     }
 ] call CBA_fnc_addSetting;
 
