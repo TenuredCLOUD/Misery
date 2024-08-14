@@ -6,6 +6,12 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-[_this] call FUNC(blackout);
+if (isServer) then {
+    call FUNC(hideObjects);
+};
+
+if (hasInterface) then {
+    call FUNC(switchLights);
+};
 
 ADDON = true;
