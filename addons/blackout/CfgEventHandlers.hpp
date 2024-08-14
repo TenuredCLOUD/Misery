@@ -3,6 +3,3 @@ class Extended_PreInit_EventHandlers {
         serverInit = QUOTE(call COMPILE_SCRIPT(XEH_preInit));
     };
 };
-
-
-
