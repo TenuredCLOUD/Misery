@@ -6,6 +6,8 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-[_this] call Misery_nofuel_fnc_no_fuelsource;
+if (isServer) then {
+    call FUNC(removeFuelSources);
+};
 
 ADDON = true;
