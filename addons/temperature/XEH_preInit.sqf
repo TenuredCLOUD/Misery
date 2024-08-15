@@ -8,7 +8,8 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
-if (MiseryTemperature == 1 && hasInterface) then { 
+/*
+if (MiseryTemperature == 1 && hasInterface) then {
 MiseryActions pushBack [localize "STR_MISERY_CheckClothing", localize "STR_MISERY_CheckClothing"];
 [player] call Misery_fnc_EffectiveTemperature;
 
@@ -23,9 +24,10 @@ true, // data for this setting: [min, max, default, number of shown trailing dec
 {
 params ["_value"];
 MiseryBFEffect = _value;
-if !(MiseryBFEffect) then {MiseryBreathFogAllowed = false} else {MiseryBreathFogAllowed = true}; 
+if !(MiseryBFEffect) then {MiseryBreathFogAllowed = false} else {MiseryBreathFogAllowed = true};
 } // function that will be executed once on mission start and every time the setting is changed.
 ] call CBA_fnc_addSetting;
 };
+*/
 
 ADDON = true;

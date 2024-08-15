@@ -6,8 +6,10 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+/*
 if (hasInterface) then {
-        [player] call FUNC(initialize);
-    };
+    [player] call FUNC(initialize);
+};
+*/
 
 ADDON = true;

@@ -7,9 +7,10 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
-
+/*
 if (MiseryGeigeracts && hasInterface) then {
-[] execVM "\z\misery\addons\geiger\functions\fnc_GeigerBar.sqf";
+    [] execVM "\z\misery\addons\geiger\functions\fnc_GeigerBar.sqf";
 };
+*/
 
 ADDON = true;

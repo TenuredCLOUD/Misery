@@ -8,6 +8,7 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
+/*
 if (MiseryRFEMFacts && hasInterface) then {
 if (MiseryDSA && hasInterface) then {
 private _gvars = ["dsaSpookBases", "dsaDevMutants", "dsaWebknightCreatures"];
@@ -47,6 +48,6 @@ if ((_this select 0) getVariable ["Misery_RFEMFDet", true]) then {
         };
     }];
 };
-
+*/
 
 ADDON = true;

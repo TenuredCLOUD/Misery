@@ -7,8 +7,8 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 MiseryFuelSources=[
-"fuel_source",
-"fuel"
+    "fuel_source",
+    "fuel"
 ];
 
 ADDON = true;

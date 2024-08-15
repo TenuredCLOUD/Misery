@@ -8,8 +8,10 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
+/*
 if (Miseryzedinfect && hasInterface) then {
-[] execVM "\z\misery\addons\zinfect\functions\fnc_zinfection.sqf"; //Zed infection pre-checks in file 
+    [] execVM "\z\misery\addons\zinfect\functions\fnc_zinfection.sqf"; //Zed infection pre-checks in file
 };
+*/
 
 ADDON = true;

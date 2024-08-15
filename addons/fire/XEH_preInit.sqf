@@ -6,6 +6,7 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+/*
 //If GRAD persistence is active, push Fireplace types to blacklister, so they won't save / reload (This will execute only once)
 if (isServer) then {
     if (!isNil "grad_persistence_blacklist") then {
@@ -25,5 +26,6 @@ if (isServer) then {
         } forEach _Fireclasses;
     };
 };
+*/
 
 ADDON = true;

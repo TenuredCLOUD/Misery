@@ -8,6 +8,7 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
+/*
 //Module startup wait check:
 MiseryReady=true;
 publicVariable "MiseryReady";
@@ -61,5 +62,6 @@ publicVariable "MiseryClientReady";
 
 //Client execute survival loop
 if (hasInterface) then {[] execVM "\z\misery\addons\survival\functions\fnc_survival_loop.sqf"};
+*/
 
 ADDON = true;

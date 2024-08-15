@@ -6,6 +6,7 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+/*
 //Headlamp object blacklister (auto) for GRAD persistence:
 if (isServer) then {
 if (!isNil "grad_persistence_blacklist") then {
@@ -67,5 +68,6 @@ if (hasInterface) then {
         };
     }];
 };
+*/
 
 ADDON = true;
