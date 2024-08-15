@@ -6,13 +6,13 @@ Designed specifically for Misery mod
 by TenuredCLOUD
 */
 
-[{(animationState player in IMSSPRINT)},
+[{(animationState player in [MACRO_ANIMATION_IMS_SPRINT])},
 {
 
     [{
         params ["_args", "_handle"];
 
-        if (!(animationState player in IMSSPRINT) || (!alive player) || (getFatigue player >= 0.99)) exitWith {
+        if (!(animationState player in [MACRO_ANIMATION_IMS_SPRINT]) || (!alive player) || (getFatigue player >= 0.99)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             if(MiseryDebug)then{systemChat "Misery WBKIMS Dash Compat cycle terminated..."};
             if (animationState player == "am_kulak_sprintf") then {
@@ -24,12 +24,12 @@ by TenuredCLOUD
         //    player switchMove "melee_armed_idle"; // Forcefully stop the animation
             player playMoveNow "melee_armed_idle"; //Force anim delay
             };
-            } forEach IMSSPRINT;
+            } forEach [MACRO_ANIMATION_IMS_SPRINT];
             [] execVM "\z\misery\addons\ims\functions\fnc_IMSDash.sqf";
             if(MiseryDebug)then{systemChat "Misery WBKIMS Dash Compat cycle checks re-initiated..."};
         };
 
-    if (animationState player in IMSSPRINT) then {
+    if (animationState player in [MACRO_ANIMATION_IMS_SPRINT]) then {
         player setFatigue (getFatigue player + 0.01);
     };
 

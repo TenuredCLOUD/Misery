@@ -19,7 +19,7 @@ _c = _c - 1;
 
 if (!hasInterface || {!alive player}) exitWith {};
 
-private _MHunger = player getVariable ["MiseryHunger", MIS_HUNGER];
+private _MHunger = player getVariable ["MiseryHunger", MACRO_PLAYER_HUNGER];
 
 titleText ["You inject the Glucose solution...", "PLAIN DOWN"];
 

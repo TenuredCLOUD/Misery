@@ -1,11 +1,5 @@
 #include "script_component.hpp"
 
-/*
-Misery UI Mod Config
-Designed specifically for Misery mod
-by TenuredCLOUD
-*/
-
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
@@ -40,8 +34,7 @@ class CfgPatches {
 #include "\z\misery\addons\ui\menus\MiseryINVFramework.hpp"
 #include "\z\misery\addons\ui\menus\Misery_Generator_UI.hpp"
 
-class RscTitles
-{
+class RscTitles {
     #include "\z\misery\addons\ui\menus\MiseryGeigerUI.hpp"
-  #include "\z\misery\addons\ui\menus\MiseryERUUI.hpp"
+    #include "\z\misery\addons\ui\menus\MiseryERUUI.hpp"
 };

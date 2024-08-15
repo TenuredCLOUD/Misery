@@ -67,7 +67,7 @@ by TenuredCLOUD
             //Check if Fear framework is active && No protective equipment if so then destroy players sanity
             if (isNil "MiseryFearPsy") then {MiseryFearPsy = "DISABLED"};
             if (MiseryFearPsy == "ENABLED") then {
-            private _fearadd = MISERY_FEARNOPROPSYFIELD;
+            private _fearadd = MACRO_FEAR_CALC_PSYFIELD_NOPROTECTION;
             player setVariable ["MiseryFear", (_MFear + parsenumber ((_fearadd)toFixed 2))];
             };
 

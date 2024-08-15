@@ -5,7 +5,7 @@ Designed specifically for Misery mod
 by TenuredCLOUD
 */
 
-private _MInfection = player getVariable ["MiseryInfection", MIS_INFECTION];
+private _MInfection = player getVariable ["MiseryInfection", MACRO_PLAYER_INFECTION];
 
 MiseryACE=false;
 if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
@@ -28,6 +28,6 @@ if (!hasInterface) exitWith {};
 
 sleep 60;
 
-player setVariable ["MiseryInfection", MIS_INFECTION];
+player setVariable ["MiseryInfection", MACRO_PLAYER_INFECTION];
 
 };

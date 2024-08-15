@@ -19,7 +19,7 @@ _c = _c - 1;
 
 if (!hasInterface || {!alive player}) exitWith {};
 
-private _MThirst = player getVariable ["MiseryThirst", MIS_THIRST];
+private _MThirst = player getVariable ["MiseryThirst", MACRO_PLAYER_THIRST];
 
 titleText ["You inject the Electrolyte solution...", "PLAIN DOWN"];
 

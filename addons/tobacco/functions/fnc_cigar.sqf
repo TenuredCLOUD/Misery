@@ -8,7 +8,7 @@
 if (!hasInterface) exitWith {};
 MiseryACE=false;
 if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
-private _MFear = player getVariable ["MiseryFear", MIS_FEAR];
+private _MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];
 
     if !("rvg_matches" in magazines player || "Misery_lighter" in items player) exitWith {titleText ["You need a lighter or matches to smoke...", "PLAIN DOWN"];};
 

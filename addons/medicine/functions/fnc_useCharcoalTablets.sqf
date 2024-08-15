@@ -5,7 +5,7 @@ Designed specifically for Misery mod
 by TenuredCLOUD
 */
 
-private _MPoison = player getVariable ["MiseryPoison", MIS_POISON];
+private _MPoison = player getVariable ["MiseryPoison", MACRO_PLAYER_TOXICITY];
 
 if (!hasInterface) exitWith {};
 
@@ -23,7 +23,7 @@ if (!hasInterface) exitWith {};
   sleep 60;
 
 if (_MPoison > 0) then {
-    player setVariable ["MiseryPoison", MIS_POISON];
+    player setVariable ["MiseryPoison", MACRO_PLAYER_TOXICITY];
 };
 
 };

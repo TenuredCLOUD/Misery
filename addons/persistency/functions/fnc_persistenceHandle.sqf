@@ -53,13 +53,13 @@ private _MiseryaddRespawnEHs = {
                     (_this select 0) setVariable [_x select 0, _x select 1];
                 };
             } forEach [
-                ["MiseryThirst", MIS_THIRST],
-                ["MiseryHunger", MIS_HUNGER],
-                ["MiserySleepiness", MIS_SLEEP],
-                ["MiseryPoison", MIS_POISON],
-                ["MiseryInfection", MIS_INFECTION],
-                ["MiseryExposure", MIS_EXPOSURE],
-                ["MiseryFear", MIS_FEAR],
+                ["MiseryThirst", MACRO_PLAYER_THIRST],
+                ["MiseryHunger", MACRO_PLAYER_HUNGER],
+                ["MiserySleepiness", MACRO_PLAYER_FATIGUE],
+                ["MiseryPoison", MACRO_PLAYER_TOXICITY],
+                ["MiseryInfection", MACRO_PLAYER_INFECTION],
+                ["MiseryExposure", MACRO_PLAYER_EXPOSURE],
+                ["MiseryFear", MACRO_PLAYER_FEAR],
                 ["Zinfectionlogged", nil],
                 ["Turbidwaterlogged", nil],
                 ["Rawmeatlogged", nil],
@@ -150,13 +150,13 @@ if (MiserysurvivalSaveMode == 2) then {
 //                     (_this select 0) setVariable [_x select 0, _x select 1];
 //                 };
 //             } forEach [
-//                 ["MiseryThirst", MIS_THIRST],
-//                 ["MiseryHunger", MIS_HUNGER],
-//                 ["MiserySleepiness", MIS_SLEEP],
-//                 ["MiseryPoison", MIS_POISON],
-//                 ["MiseryInfection", MIS_INFECTION],
-//                 ["MiseryExposure", MIS_EXPOSURE],
-//                 ["MiseryFear", MIS_FEAR],
+//                 ["MiseryThirst", MACRO_PLAYER_THIRST],
+//                 ["MiseryHunger", MACRO_PLAYER_HUNGER],
+//                 ["MiserySleepiness", MACRO_PLAYER_FATIGUE],
+//                 ["MiseryPoison", MACRO_PLAYER_TOXICITY],
+//                 ["MiseryInfection", MACRO_PLAYER_INFECTION],
+//                 ["MiseryExposure", MACRO_PLAYER_EXPOSURE],
+//                 ["MiseryFear", MACRO_PLAYER_FEAR],
 //                 ["Zinfectionlogged", nil],
 //                 ["Turbidwaterlogged", nil],
 //                 ["Rawmeatlogged", nil],
@@ -182,13 +182,13 @@ if (MiserysurvivalSaveMode == 2) then {
 //                     (_this select 0) setVariable [_x select 0, _x select 1];
 //                 };
 //             } forEach [
-//                 ["MiseryThirst", MIS_THIRST],
-//                 ["MiseryHunger", MIS_HUNGER],
-//                 ["MiserySleepiness", MIS_SLEEP],
-//                 ["MiseryPoison", MIS_POISON],
-//                 ["MiseryInfection", MIS_INFECTION],
-//                 ["MiseryExposure", MIS_EXPOSURE],
-//                 ["MiseryFear", MIS_FEAR],
+//                 ["MiseryThirst", MACRO_PLAYER_THIRST],
+//                 ["MiseryHunger", MACRO_PLAYER_HUNGER],
+//                 ["MiserySleepiness", MACRO_PLAYER_FATIGUE],
+//                 ["MiseryPoison", MACRO_PLAYER_TOXICITY],
+//                 ["MiseryInfection", MACRO_PLAYER_INFECTION],
+//                 ["MiseryExposure", MACRO_PLAYER_EXPOSURE],
+//                 ["MiseryFear", MACRO_PLAYER_FEAR],
 //                 ["Zinfectionlogged", nil],
 //                 ["Turbidwaterlogged", nil],
 //                 ["Rawmeatlogged", nil],

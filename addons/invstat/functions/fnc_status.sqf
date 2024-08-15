@@ -35,12 +35,12 @@ disableSerialization;
     _CurrMag = _display displayCtrl 1111;
     _CurrMagVal =_display displayCtrl 1112;
 
-    _MHunger = player getVariable ["MiseryHunger", MIS_HUNGER];
-    _MThirst = player getVariable ["MiseryThirst", MIS_THIRST];
-    _MInfection = player getVariable ["MiseryInfection", MIS_INFECTION];
-    _MPoison = player getVariable ["MiseryPoison", MIS_POISON];
-    _MSleepiness = player getVariable ["MiserySleepiness", MIS_SLEEP];
-    _MExposure = player getVariable ["MiseryExposure", MIS_EXPOSURE];
+    _MHunger = player getVariable ["MiseryHunger", MACRO_PLAYER_HUNGER];
+    _MThirst = player getVariable ["MiseryThirst", MACRO_PLAYER_THIRST];
+    _MInfection = player getVariable ["MiseryInfection", MACRO_PLAYER_INFECTION];
+    _MPoison = player getVariable ["MiseryPoison", MACRO_PLAYER_TOXICITY];
+    _MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
+    _MExposure = player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE];
     _MPlayertemp = player getVariable ["MiseryPlayerTemp", 0];
     _MDebuffs = player getVariable "MiseryDebuffs";
 

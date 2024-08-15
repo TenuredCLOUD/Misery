@@ -9,12 +9,12 @@ class Misery_BackGround
     idc = -1;
     type = 0;
     style = 96;
-    x = QUOTE(Misery_x);
-    y = QUOTE(Misery_y);
-    w = QUOTE(Misery_W);
-    h = QUOTE(Misery_H);
-    font = Misery_font;
-    sizeEx = Misery_TEXTSIZE;
+    x = QUOTE(UI_MACRO_X);
+    y = QUOTE(UI_MACRO_Y);
+    w = QUOTE(UI_MACRO_W);
+    h = QUOTE(UI_MACRO_H);
+    font = UI_MACRO_FONT;
+    sizeEx = UI_MACRO_TEXTSIZE;
     colorBackground[] = {0,0,0,1}; // Black background
     colorText[] = {0.5,0.5,0.5,1}; // Grey foreground
     text = "";
@@ -53,7 +53,7 @@ class Misery_RscPicture
     style = ST_PICTURE;
     colorBackground[] = {0,0,0,0};
     colorText[] = {1,1,1,1};
-    font = Misery_font;
+    font = UI_MACRO_FONT;
     sizeEx = 0;
     lineSpacing = 0;
     text = "";
@@ -61,8 +61,8 @@ class Misery_RscPicture
     shadow = 0;
     x = 0;
     y = 0;
-    w = 0.06 * Misery_W;
-    h = 0.08 * Misery_H;
+    w = 0.06 * UI_MACRO_W;
+    h = 0.08 * UI_MACRO_H;
 };
 
 class Misery_RscText {
@@ -71,11 +71,11 @@ class Misery_RscText {
     h = 0.037;
     w = 0.3;
     type = 0;
-    style = Misery_style;
+    style = UI_MACRO_STYLE;
     shadow = 1;
     colorShadow[] = {0,0,0,0.5};
-    font = Misery_font;
-    SizeEx = Misery_TEXTSIZE;
+    font = UI_MACRO_FONT;
+    SizeEx = UI_MACRO_TEXTSIZE;
     text = "";
     colorText[] = {1,1,1,1};
     colorBackground[] = {0,0,0,0};
@@ -127,18 +127,18 @@ class Misery_Checkbox
 class Misery_StructuredText {
     idc = -1;
     type = 13;
-    style = Misery_style;
+    style = UI_MACRO_STYLE;
     colorText[] = {1,1,1,1};
     colorBackground[] = {0,0,0,0};
     x = 0.5;
     y = 0.5;
     w = 0.5;
     h = 0.5;
-    size = Misery_TEXTSIZE;
+    size = UI_MACRO_TEXTSIZE;
     text = "";
-    font = Misery_font;
+    font = UI_MACRO_FONT;
     class Attributes {
-        font = Misery_font;
+        font = UI_MACRO_FONT;
         color = "#ffffff";
         align = "left";
         valign = "middle";
@@ -161,60 +161,60 @@ class Misery_RscEdit
     colorBackground[] = {0,0,0,0.5};
     colorText[] = {1,1,1,1};
     colorSelection[] = {1,1,1,0.25};
-    font = Misery_font;
-    SizeEx = Misery_TEXTSIZE;
+    font = UI_MACRO_FONT;
+    SizeEx = UI_MACRO_TEXTSIZE;
     autocomplete = "";
     text = "";
-    size = Misery_TEXTSIZE;
+    size = UI_MACRO_TEXTSIZE;
     shadow = 0;
     canModify = 1;
 };
 
 class Misery_RscTitle : Misery_RscText {
     style = 0;
-    SizeEx = Misery_TEXTSIZE;
+    SizeEx = UI_MACRO_TEXTSIZE;
     colorText[] = {0.95, 0.95, 0.95, 1};
 };
 
 class Misery_RscButtonMenu {
     idc = -1;
     type = 16;
-    style = Misery_style;
+    style = UI_MACRO_STYLE;
     default = 0;
     shadow = 0;
     x = 0;
     y = 0;
-    w = Misery_BUTTON_W;
-    h = Misery_BUTTON_H;
-    animTextureNormal = Misery_BUTTONCOLOUR3;
-    animTextureDisabled = Misery_BUTTONCOLOUR3;
-    animTextureOver = Misery_BUTTONCOLOUR3; //
-    animTextureFocused = Misery_BUTTONCOLOUR0;
-    animTexturePressed = Misery_BUTTONCOLOUR0; //
-    animTextureDefault = Misery_BUTTONCOLOUR3;
-    textureNoShortcut = Misery_BUTTONCOLOUR3;
-    colorBackground[] = Misery_COLOUR1;
+    w = UI_MACRO_BUTTON_W;
+    h = UI_MACRO_BUTTON_H;
+    animTextureNormal = UI_MACRO_BUTTON_COLOR3;
+    animTextureDisabled = UI_MACRO_BUTTON_COLOR3;
+    animTextureOver = UI_MACRO_BUTTON_COLOR3; //
+    animTextureFocused = UI_MACRO_BUTTON_COLOR0;
+    animTexturePressed = UI_MACRO_BUTTON_COLOR0; //
+    animTextureDefault = UI_MACRO_BUTTON_COLOR3;
+    textureNoShortcut = UI_MACRO_BUTTON_COLOR3;
+    colorBackground[] = UI_MACRO_COLOR1;
     colorBackground2[] = {1,1,1,0.3};
-    colorBackgroundFocused[] = Misery_COLOUR1;
+    colorBackgroundFocused[] = UI_MACRO_COLOR1;
     // Text colour selected
-    color[] = Misery_COLOUR7;
+    color[] = UI_MACRO_COLOR7;
     // Text colour other
-    color2[] = Misery_COLOUR7;
-    colorText[] = Misery_COLOUR7;
-    colorFocused[] = Misery_COLOUR7;
-    colorDisabled[] = Misery_COLOUR7;
+    color2[] = UI_MACRO_COLOR7;
+    colorText[] = UI_MACRO_COLOR7;
+    colorFocused[] = UI_MACRO_COLOR7;
+    colorDisabled[] = UI_MACRO_COLOR7;
     period = 1;
     periodFocus = 111;
     periodOver = 111;
-    Size = Misery_TEXTSIZE;
-    SizeEx = Misery_TEXTSIZE;
+    Size = UI_MACRO_TEXTSIZE;
+    SizeEx = UI_MACRO_TEXTSIZE;
     soundEnter[] = {"",0.09,1};
     soundPush[] = {"",0.0,0};
     soundClick[] = {"",0.07,1};
     soundEscape[] = {"",0.09,1};
     action = "";
     text = "";
-    font = Misery_font;
+    font = UI_MACRO_FONT;
     class HitZone {
         left = 0;
         top = 0;
@@ -234,7 +234,7 @@ class Misery_RscButtonMenu {
         bottom = 0;
     };
     class Attributes {
-        font = Misery_font;
+        font = UI_MACRO_FONT;
         color = "#696969";
         align = "center";
         valign = "middle";
@@ -262,10 +262,10 @@ class Misery_RscButtonTabFNC : Misery_RscButtonHidden {
     text = "";
     tooltip = "";
     onButtonClick = "";
-    x = Misery_tabFx;
-    y = Misery_tabFy;
-    w = Misery_tabFw;
-    h = Misery_tabFh;
+    x = UI_MACRO_TABFX;
+    y = UI_MACRO_TABFY;
+    w = UI_MACRO_TABFW;
+    h = UI_MACRO_TABFH;
 };
 
 class Misery_RscButtonMenuText : Misery_RscButtonMenu{
@@ -278,29 +278,29 @@ class Misery_RscListBox
     type = 5;
     w = 0.275;
     h = 0.04;
-    font = Misery_font;
+    font = UI_MACRO_FONT;
     // Text colour when selected
-    colorSelect[] = Misery_COLOUR1;
+    colorSelect[] = UI_MACRO_COLOR1;
     // Colour the text will fade to when selected
-    colorSelect2[] = Misery_COLOUR1;
+    colorSelect2[] = UI_MACRO_COLOR1;
     // Basic text colour when NOT selected
-    colorText[] = Misery_COLOUR1;
+    colorText[] = UI_MACRO_COLOR1;
     // Basic background colour
-    //colorBackground[] = Misery_COLOUR0;
-    colorBackground[] = Misery_COLOUR4;
+    //colorBackground[] = UI_MACRO_COLOR0;
+    colorBackground[] = UI_MACRO_COLOR4;
     // Background colour behind the text when selected
-    colorSelectBackground[] = Misery_COLOUR7;
+    colorSelectBackground[] = UI_MACRO_COLOR7;
     // This is the colour that colorSelectBackground will fade to
-    colorSelectBackground2[] = Misery_COLOUR7;
+    colorSelectBackground2[] = UI_MACRO_COLOR7;
     colorScrollbar[] = {0.2,0.2,0.2,1};
     arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
     arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
     wholeHeight = 0.45;
     rowHeight = 0.04;
-    color[] = Misery_COLOUR1;
-    colorActive[] = Misery_COLOUR1;
+    color[] = UI_MACRO_COLOR1;
+    colorActive[] = UI_MACRO_COLOR1;
     colorDisabled[] = {0,0,0,0.3};
-    SizeEx = Misery_TEXTSIZE;
+    SizeEx = UI_MACRO_TEXTSIZE;
     soundSelect[] = {"",0.1,1};
     soundExpand[] = {"",0.1,1};
     soundCollapse[] = {"",0.1,1};
@@ -308,10 +308,10 @@ class Misery_RscListBox
     autoScrollSpeed = -1;
     autoScrollDelay = 5;
     autoScrollRewind = 0;
-    pictureColor[] = Misery_COLOUR1;
+    pictureColor[] = UI_MACRO_COLOR1;
     // What it fades to
-    pictureColorSelect[] = Misery_COLOUR1;
-    pictureColorDisabled[] = Misery_COLOUR1;
+    pictureColorSelect[] = UI_MACRO_COLOR1;
+    pictureColorDisabled[] = UI_MACRO_COLOR1;
     class ListScrollBar
     {
         color[] = {1,1,1,0.6};
@@ -327,12 +327,12 @@ class Misery_RscListBox
 class Misery_ActiveText : Misery_RscText {
     idc = -1;
     type = 11;
-    style = Misery_style;
-    color[] = Misery_COLOUR1;
-    colorActive[] = Misery_COLOUR1;
+    style = UI_MACRO_STYLE;
+    color[] = UI_MACRO_COLOR1;
+    colorActive[] = UI_MACRO_COLOR1;
     colorDisabled[] = {1,1,1,0.3};
-    colorText[] = Misery_COLOUR1;
-    colorBackground[] = Misery_COLOUR2;
+    colorText[] = UI_MACRO_COLOR1;
+    colorBackground[] = UI_MACRO_COLOR2;
     soundEnter[] = {"",0,1};
     soundPush[] = {"",0,1};
     soundClick[] = {"", 0,1};
@@ -347,9 +347,9 @@ class Misery_ButtonExitTablet : Misery_RscButtonHidden {
     text = "";
     tooltip = "Exit";
     onButtonClick = "closeDialog 0";
-    x = Misery_COL + (Misery_COLINC * 5.5);
-    //y = Misery_ROW + (Misery_ROWINC * 12.5);
-    y = Misery_tabFy;
-    w = Misery_BUTTON_W;
-    h = Misery_BUTTON_H;
+    x = UI_MACRO_COL + (UI_MACRO_COLINC * 5.5);
+    //y = UI_MACRO_ROW + (UI_MACRO_ROWINC * 12.5);
+    y = UI_MACRO_TABFY;
+    w = UI_MACRO_BUTTON_W;
+    h = UI_MACRO_BUTTON_H;
 };
