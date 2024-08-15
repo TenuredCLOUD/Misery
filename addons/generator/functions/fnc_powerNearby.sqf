@@ -38,7 +38,8 @@ while {true} do {
 
         if (!isNil "_hitpoints") then {
             {
-                if ((_x find "light" > -1) || (_x find "Light" > -1)) then {
+                private _lower = toLower _x;
+                if ("light" in _lower) then {
                     _object setHitPointDamage [_x, 0];
                 };
             } forEach _hitpoints;
@@ -55,8 +56,9 @@ while {true} do {
 
         if (!isNil "_hitpoints") then {
             {
-                if ((_x find "light" > -1) || (_x find "Light" > -1)) then {
-                    _object setHitPointDamage [_x, 1];
+                private _lower = toLower _x;
+                if ("light" in _lower) then {
+                    _object setHitPointDamage [_x, 0];
                 };
             } forEach _hitpoints;
         };

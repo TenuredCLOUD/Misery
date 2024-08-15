@@ -19,10 +19,9 @@ private _altitude = (getPosASL player) select 2;
 _airTemp = (_airTemp - (_altitude / 1000) * 6.5) * 9/5 + 32;
 
 private _windChillIndexCelsius = 0;
-
 private _humidity = (_overcast + _rain) / 2;
 
-private _breathFog = if (_airTemp <= 45 && _humidity >= 0.60) then {1}else{0};
+private _breathFog = parseNumber ((_airTemp <= 45) && (_humidity >= 0.6));
 
 if (_seaTemp <= 0) then {
     _seaTemp = 0;
