@@ -44,7 +44,6 @@
 // Forge Ambience
 [
     QGVAR(forgeAmbience),
-    "MiseryEnhForge",
     "CHECKBOX",
     [
         "Ambient audio for Forges", "Enable Audio loop for forges? (Makes them crackle & hum - immersion)"
