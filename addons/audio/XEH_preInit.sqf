@@ -10,7 +10,7 @@ PREP_RECOMPILE_END;
 
 if (hasInterface) then {
     // Get all Music Tracks
-    GVAR(musicTracksMain) = ('getNumber (_x >> QGVAR(isMusic) > 0' configClasses (configFile >> "CfgMusic")) apply {configName _x};
+    GVAR(musicTracksMain) = ('getNumber (_x >> QGVAR(isMusic)) > 0' configClasses (configFile >> "CfgMusic")) apply {configName _x};
     GVAR(musicTracks) = [];
 
     // Forge Master List
