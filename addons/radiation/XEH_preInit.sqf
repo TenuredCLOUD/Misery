@@ -8,6 +8,7 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
+/*
 //Artifact exposure+:
 if (MiseryEnhartifacts && hasInterface) then {
 [] execVM "\z\misery\addons\artifacts\functions\fnc_Artifactexposure.sqf";
@@ -40,5 +41,6 @@ if (MiseryEnhrads && hasInterface) then {
 //         };
 //     }];
 };
+*/
 
 ADDON = true;

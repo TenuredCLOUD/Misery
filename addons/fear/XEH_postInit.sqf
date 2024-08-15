@@ -1,6 +1,7 @@
 #include "script_component.hpp"
 #include "XEH_PREP.hpp"
 
+/*
 if (MiseryFearenabled) then {
     if (MiseryFearRvg == 1) then {
         PREP(Nearzeds);
@@ -17,3 +18,4 @@ if (MiseryFearenabled) then {
         [player] call FUNC(Fearcycle);
     };
 };
+*/

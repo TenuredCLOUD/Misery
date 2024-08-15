@@ -8,6 +8,7 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
+/*
 if (MiseryManualPData == 1 && MiserysurvivalSaveMode == 2) then {
     MiseryActions pushback [localize "STR_MISERY_PLAYERDATA", localize "STR_MISERY_PLAYERDATA"];
 };
@@ -49,5 +50,6 @@ _MiseryCraftingKnowledge = [];
     ];
     }];
 };
+*/
 
 ADDON = true;

@@ -8,6 +8,7 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
+/*
 //gasmasks +:
 if (Miserygasmasks && hasInterface) then {
 [] execVM "\z\misery\addons\gasmask\functions\fnc_gasmasktimer.sqf";
@@ -15,5 +16,6 @@ if (Miserygasmasks && hasInterface) then {
 [] execVM "\z\misery\addons\gasmask\functions\fnc_Gasmaskaudio.sqf";
 //};
 };
+*/
 
 ADDON = true;

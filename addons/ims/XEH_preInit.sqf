@@ -6,6 +6,7 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+/*
 MiseryWBKIMS=false;
 if(isClass(configFile>>"cfgPatches">>"WBK_MeleeMechanics"))then{MiseryWBKIMS=true};
 
@@ -83,5 +84,6 @@ if (MiseryWBKIMS && MiseryRavage && isServer) then {
 if (MiseryWBKIMS && hasInterface) then {
 [] execVM "\z\misery\addons\ims\functions\fnc_IMSDash.sqf";
 };
+*/
 
 ADDON = true;

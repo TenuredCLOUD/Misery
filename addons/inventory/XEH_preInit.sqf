@@ -8,6 +8,7 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
+/*
 [] call FUNC(DefineItems);
 
 if (MiseryDefineItemsScript != "") then {
@@ -19,5 +20,6 @@ if (MiseryDefineItemsScript != "") then {
 if (hasInterface) then {
 [] call FUNC(Inventoryhandle);
 };
+*/
 
 ADDON = true;
