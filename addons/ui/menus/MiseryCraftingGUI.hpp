@@ -1,4 +1,3 @@
-#include "..\script_component.hpp"
 /*
 Misery Crafting Framework GUI
 Designed specifically for Misery mod

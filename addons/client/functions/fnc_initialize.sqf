@@ -6,9 +6,9 @@ Designed specifically for Misery mod
 by TenuredCLOUD
 */
 
-player setVariable ["MiseryThirst", MIS_THIRST];
-player setVariable ["MiseryHunger", MIS_HUNGER];
-player setVariable ["MiserySleepiness", MIS_SLEEP];
+player setVariable ["MiseryThirst", MACRO_PLAYER_THIRST];
+player setVariable ["MiseryHunger", MACRO_PLAYER_HUNGER];
+player setVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
 _MDebuffs = [];
 _MCrafting_DataSet = [];
 _MCooking_DataSet = [];
@@ -21,10 +21,10 @@ player setVariable ["MiseryCurrency", 0];
 player setVariable ["MiseryCurrency_Banked", 0];
 player setVariable ["lastPhoenixWithdrawalTime", 0];
 player setVariable ["MiseryRadiation", 0];
-player setVariable ["MiseryPoison", MIS_POISON];
-player setVariable ["MiseryInfection", MIS_INFECTION];
-player setVariable ["MiseryFear", MIS_FEAR];
-player setVariable ["MiseryExposure", MIS_EXPOSURE];
+player setVariable ["MiseryPoison", MACRO_PLAYER_TOXICITY];
+player setVariable ["MiseryInfection", MACRO_PLAYER_INFECTION];
+player setVariable ["MiseryFear", MACRO_PLAYER_FEAR];
+player setVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE];
 player setVariable ["MiseryPlayerTemp", (call EFUNC(temperature,Temperature)) select 0];
 player setVariable ["MiseryBreathFogSim", nil];
 player setVariable ["MiseryBreath", false];

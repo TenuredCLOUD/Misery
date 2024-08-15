@@ -23,20 +23,20 @@ if (isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
 
         private ["_MHunger","_MThirst","_Rhunger","_Rthirst","_radlvl","_scalednutrientloss","_scaledstaminaloss","_damage"];
 
-        _MHunger = player getVariable ["MiseryHunger", MIS_HUNGER];
-        _MThirst = player getVariable ["MiseryThirst", MIS_THIRST];
+        _MHunger = player getVariable ["MiseryHunger", MACRO_PLAYER_HUNGER];
+        _MThirst = player getVariable ["MiseryThirst", MACRO_PLAYER_THIRST];
         _radlvl = player getVariable ["MiseryRadiation", 0];
 
         //calculation for hunger / thirst removal: (scales with radiation exposure)
-        _scalednutrientloss = MISERY_SCALEDNUTRLOSS(_radlvl);
+        _scalednutrientloss = MACRO_RADIATION_NUTRITIONLOSS(_radlvl);
 
         //calculation for stamina loss: (scales with radiation exposure)
-        _scaledstaminaloss = MISERY_SCALEDSTAMLOSS(_radlvl);
+        _scaledstaminaloss = MACRO_RADIATION_STAMINALOSS(_radlvl);
 
         if (_radlvl >= 500) then {
 
-                        _MHunger = player getVariable ["MiseryHunger", MIS_HUNGER];
-                        _MThirst = player getVariable ["MiseryThirst", MIS_THIRST];
+                        _MHunger = player getVariable ["MiseryHunger", MACRO_PLAYER_HUNGER];
+                        _MThirst = player getVariable ["MiseryThirst", MACRO_PLAYER_THIRST];
 
                         player setstamina ((getStamina player) - _scaledstaminaloss);
 

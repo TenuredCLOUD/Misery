@@ -19,10 +19,10 @@ class MiseryDisplayInventoryActions
             tooltip="Actions";
             onLBSelChanged="[false] execVM '\z\misery\addons\inventory\functions\fnc_SelectAction.sqf'";
             onLBDblClick="[true] execVM '\z\misery\addons\inventory\functions\fnc_SelectAction.sqf'";
-            x=Misery_COL+(Misery_COLINC*10);
-            y=Misery_ROW+(Misery_ROWINC*1);
-            w=Misery_BUTTON_W+(Misery_COLINC*1);
-            h=Misery_BUTTON_H+(Misery_ROWINC*10);
+            x=UI_MACRO_COL+(UI_MACRO_COLINC*10);
+            y=UI_MACRO_ROW+(UI_MACRO_ROWINC*1);
+            w=UI_MACRO_BUTTON_W+(UI_MACRO_COLINC*1);
+            h=UI_MACRO_BUTTON_H+(UI_MACRO_ROWINC*10);
             colorBackground[]={0.2,0.2,0.2,.7};
         };
     };

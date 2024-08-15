@@ -1,4 +1,3 @@
-#include "..\script_component.hpp"
 /*
 Misery Cooking Framework GUI
 Designed specifically for Misery mod

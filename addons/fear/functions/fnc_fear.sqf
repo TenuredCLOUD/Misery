@@ -5,12 +5,12 @@ Designed specifically for Misery mod
 by TenuredCLOUD
 */
 
-[{!(isNil {player getVariable "MiseryFear"}) && ((player getVariable ["MiseryFear", MIS_FEAR]) >= 5)},
+[{!(isNil {player getVariable "MiseryFear"}) && ((player getVariable ["MiseryFear", MACRO_PLAYER_FEAR]) >= 5)},
 {
     [{
         params ["_args", "_handle"];
 
-        if (((player getVariable ["MiseryFear", MIS_FEAR]) < 5) || (!alive player)) exitWith {
+        if (((player getVariable ["MiseryFear", MACRO_PLAYER_FEAR]) < 5) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             if(MiseryDebug)then{systemChat "Misery Fear event cycle terminated..."};
             [] call FUNC(Fear);
@@ -25,7 +25,7 @@ _randomaudio = [1, 5] call BIS_fnc_randomInt;
 _randomshake = [1, 5] call BIS_fnc_randomInt;
 
 //Fear var
-_MFear = player getVariable ["MiseryFear", MIS_FEAR];
+_MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];
 
 if (_MFear >= 5 && _MFear < 10) then
         {

@@ -21,7 +21,7 @@ by TenuredCLOUD
     private ["_MFear","_randomzedval","_fearzedadd","_randomphantomval","_fearphantomadd","_randomspookval","_fearspookadd","_randomnightval","_fearnightadd","_randomnightnofear","_fearnightnofear","_randompsyval","_fearpsyadd"];
 
     //Fear var
-    _MFear = player getVariable ["MiseryFear", MIS_FEAR];
+    _MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];
 
 if (!(isNil {player getVariable "MiseryFear"})) then {
 
@@ -39,7 +39,7 @@ if (!(isNil {player getVariable "MiseryFear"})) then {
      if (call FUNC(NearZed)) then {
 
         _randomzedval = floor random RavageFear;
-        _fearzedadd = MISERY_FEARRAVAGE(_randomzedval); //- random calc for fear add
+        _fearzedadd = MACRO_FEAR_CALC_RAVAGE(_randomzedval); //- random calc for fear add
 
         player setVariable ["MiseryFear", (_MFear + ((_fearzedadd)))]; //player setVariable ["MiseryFear", (_MFear + ((_fearzedadd)toFixed 2))];
 
@@ -51,7 +51,7 @@ if (!(isNil {player getVariable "MiseryFear"})) then {
       if (call FUNC(NearPhantom)) then {
 
         _randomphantomval = floor random RemnantFear;
-        _fearphantomadd = MISERY_FEARPHANTOM(_randomphantomval);
+        _fearphantomadd = MACRO_FEAR_CALC_PHANTOM(_randomphantomval);
 
         player setVariable ["MiseryFear", (_MFear + ((_fearphantomadd)))]; //player setVariable ["MiseryFear", (_MFear + ((_fearphantomadd)toFixed 2))];
 
@@ -63,7 +63,7 @@ if (!(isNil {player getVariable "MiseryFear"})) then {
       if (call FUNC(NearSpook)) then {
 
         _randomspookval = floor random DSAFear;
-        _fearspookadd = MISERY_FEARDSASPOOK(_randomspookval);
+        _fearspookadd = MACRO_FEAR_CALC_DSASPOOK(_randomspookval);
 
         player setVariable ["MiseryFear", (_MFear + ((_fearspookadd)))]; //player setVariable ["MiseryFear", (_MFear + ((_fearspookadd)toFixed 2))];
 
@@ -74,7 +74,7 @@ if (!(isNil {player getVariable "MiseryFear"})) then {
     if (MiseryFearNight == 1) then {
     if (daytime >= 18 || daytime < 5) then {
         _randomnightval = floor random NightFear;
-        _fearnightadd = MISERY_FEARNIGHT(_randomnightval);
+        _fearnightadd = MACRO_FEAR_CALC_NIGHT(_randomnightval);
 
         //Reduce sanity (outside in darkness)
         player setVariable ["MiseryFear", (_MFear + ((_fearnightadd)))]; //player setVariable ["MiseryFear", (_MFear + ((_fearnightadd)toFixed 2))];
@@ -82,7 +82,7 @@ if (!(isNil {player getVariable "MiseryFear"})) then {
 
         if ((([player] call EFUNC(common,Isinside)) select 0) && (([player] call EFUNC(common,Isinside)) select 1) || ([player] call EFUNC(common,NearFire))) then {
         _randomnightnofear = (((NightFear) + NightFear) * 2);
-        _fearnightnofear = MISERY_FEARNIGHT(_randomnightnofear);
+        _fearnightnofear = MACRO_FEAR_CALC_NIGHT(_randomnightnofear);
         //Gain back sanity (inside or near fire)
         player setVariable ["MiseryFear", (_MFear - ((_fearnightnofear)))]; //player setVariable ["MiseryFear", (_MFear - ((_fearnightnofear)toFixed 2))];
         if (_MFear <= 0) then {player setVariable ["MiseryFear", 0]};
@@ -95,7 +95,7 @@ if (!(isNil {player getVariable "MiseryFear"})) then {
     if (MiseryinPsyfield) then {
 
         _randompsyval = floor random PsyFear;
-        _fearpsyadd = MISERY_FEARPSYFIELD(_randompsyval);
+        _fearpsyadd = MACRO_FEAR_CALC_PSYFIELD(_randompsyval);
 
         //MiseryFear = ((MiseryFear + _fearpsyadd) toFixed 2);
         player setVariable ["MiseryFear", (_MFear + ((_fearpsyadd)))]; //player setVariable ["MiseryFear", (_MFear + ((_fearpsyadd)toFixed 2))];

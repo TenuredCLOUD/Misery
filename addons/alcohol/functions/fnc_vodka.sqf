@@ -5,8 +5,8 @@
     by TenuredCLOUD
 */
 
-private _MSleepiness = player getVariable ["MiserySleepiness", MIS_SLEEP];
-private _MFear = player getVariable ["MiseryFear", MIS_FEAR];
+private _MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
+private _MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];
 
 if (!hasInterface) exitWith {};
 

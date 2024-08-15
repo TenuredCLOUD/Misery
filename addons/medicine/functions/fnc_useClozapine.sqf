@@ -5,7 +5,7 @@ Designed specifically for Misery mod
 by TenuredCLOUD
 */
 
-private _MFear = player getVariable ["MiseryFear", MIS_FEAR];
+private _MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];
 
 MiseryACE=false;
 if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
@@ -30,7 +30,7 @@ sleep 60;
 
 if (MiseryFearenabled) then {
   player setVariable ["MiseryFear", (_MFear - 10)];
-    if (_MFear <= 0) then {player setVariable ["MiseryFear", MIS_FEAR]};
+    if (_MFear <= 0) then {player setVariable ["MiseryFear", MACRO_PLAYER_FEAR]};
 };
 
  };

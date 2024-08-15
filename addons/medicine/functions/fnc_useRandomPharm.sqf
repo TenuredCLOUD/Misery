@@ -5,9 +5,9 @@ Designed specifically for Misery mod
 by TenuredCLOUD
 */
 
-private _MHunger = player getVariable ["MiseryHunger", MIS_HUNGER];
-private _MThirst = player getVariable ["MiseryThirst", MIS_THIRST];
-private _MPoison = player getVariable ["MiseryPoison", MIS_POISON];
+private _MHunger = player getVariable ["MiseryHunger", MACRO_PLAYER_HUNGER];
+private _MThirst = player getVariable ["MiseryThirst", MACRO_PLAYER_THIRST];
+private _MPoison = player getVariable ["MiseryPoison", MACRO_PLAYER_TOXICITY];
 
 MiseryACE=false;
 if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};

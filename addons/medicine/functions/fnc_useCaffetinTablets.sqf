@@ -5,8 +5,8 @@ Designed specifically for Misery mod
 by TenuredCLOUD
 */
 
-private _MInfection = player getVariable ["MiseryInfection", MIS_INFECTION];
-private _MExposure = player getVariable ["MiseryExposure", MIS_EXPOSURE];
+private _MInfection = player getVariable ["MiseryInfection", MACRO_PLAYER_INFECTION];
+private _MExposure = player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE];
 private _MDebuffs = player getVariable "MiseryDebuffs";
 
 MiseryACE=false;
@@ -33,7 +33,7 @@ if ((_MInfection > 1) || (_MDebuffs find "PARASITES" != -1)) then {
 
   player setVariable ["MiseryExposure", (_MExposure - 25)];
 
-    if (_MExposure > 0) then {player setVariable ["MiseryExposure", MIS_EXPOSURE]};
+    if (_MExposure > 0) then {player setVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE]};
 
 }else{
 //Nothing

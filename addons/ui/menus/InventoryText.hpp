@@ -17,20 +17,20 @@ class MiseryDisplayInventoryText
             //colorBackground[]={0, 0, 0, 0.7};
             colorBackground[]={0.2,0.2,0.2,.7};
             idc=-1;
-            x=Misery_COL+(Misery_COLINC*3);
-            y=Misery_ROW+(Misery_ROWINC*-1);
-            w=Misery_BUTTON_W+(Misery_COLINC*0);
-            h=Misery_BUTTON_H+(Misery_ROWINC*0);
+            x=UI_MACRO_COL+(UI_MACRO_COLINC*3);
+            y=UI_MACRO_ROW+(UI_MACRO_ROWINC*-1);
+            w=UI_MACRO_BUTTON_W+(UI_MACRO_COLINC*0);
+            h=UI_MACRO_BUTTON_H+(UI_MACRO_ROWINC*0);
         };
         class Misery_ActiveTextInv : Misery_ActiveText
         {
             idc=-1;
             text="Actions";
             action="execVM '\z\misery\addons\inventory\functions\fnc_DisplayActions.sqf'";
-            x=Misery_COL+(Misery_COLINC*3);
-            y=Misery_ROW+(Misery_ROWINC*-1);
-            w=Misery_BUTTON_W+(Misery_COLINC*1);
-            h=Misery_BUTTON_H;
+            x=UI_MACRO_COL+(UI_MACRO_COLINC*3);
+            y=UI_MACRO_ROW+(UI_MACRO_ROWINC*-1);
+            w=UI_MACRO_BUTTON_W+(UI_MACRO_COLINC*1);
+            h=UI_MACRO_BUTTON_H;
             align = "center";
             valign = "middle";
         };

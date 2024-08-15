@@ -5,7 +5,7 @@
     by TenuredCLOUD
 */
 
-private _MThirst = player getVariable ["MiseryThirst", MIS_THIRST];
+private _MThirst = player getVariable ["MiseryThirst", MACRO_PLAYER_THIRST];
 private _MDebuffs = player getVariable "MiseryDebuffs";
 
 

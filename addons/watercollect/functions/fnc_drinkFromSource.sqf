@@ -50,7 +50,7 @@ if ((player getVariable "Misery_ISDrinking") isEqualTo true) then {
 
 Miseryturbidwaterchance=_module getvariable "Misery_Waterturbidchance"; //Dirty water causes disease chance
 
-private _MThirst = player getVariable ["MiseryThirst", MIS_THIRST];
+private _MThirst = player getVariable ["MiseryThirst", MACRO_PLAYER_THIRST];
 
 playSound3D ["STALKERsounds\sounds\character\drinkwater_gulp.ogg", player, false, getPosASL player, 4, 1, 10];
 

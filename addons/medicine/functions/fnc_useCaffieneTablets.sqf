@@ -5,7 +5,7 @@ Designed specifically for Misery mod (also compatible with Ravage)
 by TenuredCLOUD
 */
 
-private _MSleepiness = player getVariable ["MiserySleepiness", MIS_SLEEP];
+private _MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
 
 if (!hasInterface) exitWith {};
 

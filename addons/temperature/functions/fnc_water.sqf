@@ -8,7 +8,7 @@ by TenuredCLOUD
 private ["_water","_MExposure","_MDebuffs","_MWetsuit","_coldwater"];
 
 _water = false;
-_MExposure = player getVariable ["MiseryExposure", MIS_EXPOSURE];
+_MExposure = player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE];
 _MDebuffs = player getVariable "MiseryDebuffs";
 _MWetsuit = false; //No wetsuit
 
@@ -23,7 +23,7 @@ if (((getPosASLW player select 2) < 0) || (underwater player)) then {
 
     if (!_MWetsuit && MiserySeaTemp < 20) then { //If player isn't wearing a wetsuit drop temp by 2.5 if water is cold enough
 
-        _coldwater = MISERY_COLDWATER(MiserySeaTemp); //- this  value scales with temperature decrease...
+        _coldwater = MACRO_TEMPERATURE_COLDWATER(MiserySeaTemp); //- this  value scales with temperature decrease...
 
         player setVariable ["MiseryExposure", (_MExposure - parseNumber ((_coldwater)toFixed 2))];
 

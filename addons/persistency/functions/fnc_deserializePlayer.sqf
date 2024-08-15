@@ -42,15 +42,15 @@ _MiseryWContainerKnowledge = [];
         player setVariable [_x select 0, _var];
     };
 } forEach [
-    ["MiseryHunger", MIS_HUNGER],
-    ["MiseryThirst", MIS_THIRST],
-    ["MiserySleepiness", MIS_SLEEP],
-    ["MiseryPoison", MIS_POISON],
-    ["MiseryInfection", MIS_INFECTION],
-    ["MiseryExposure", MIS_EXPOSURE],
+    ["MiseryHunger", MACRO_PLAYER_HUNGER],
+    ["MiseryThirst", MACRO_PLAYER_THIRST],
+    ["MiserySleepiness", MACRO_PLAYER_FATIGUE],
+    ["MiseryPoison", MACRO_PLAYER_TOXICITY],
+    ["MiseryInfection", MACRO_PLAYER_INFECTION],
+    ["MiseryExposure", MACRO_PLAYER_EXPOSURE],
     ["Miserycartridge", 100],
     ["MiseryRadiation", 0],
-    ["MiseryFear", MIS_FEAR],
+    ["MiseryFear", MACRO_PLAYER_FEAR],
     ["Zinfectionlogged", nil],
     ["Turbidwaterlogged", nil],
     ["Rawmeatlogged", nil],

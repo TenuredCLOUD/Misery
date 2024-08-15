@@ -24,12 +24,12 @@ if !(hasInterface) exitWith {};
     private ["_rads","_MHunger","_MThirst","_MInfection","_MPoison","_MSleepiness","_MExposure","_MPlayertemp","_Rhunger","_MDebuffs","_MSleeppillstaken","_MIsSleeping","_randomnutrient","_randomnutrientweight","_bagweightload","_Playerweight","_Miseryweightdefcalculated","_randomsleepweight","_random"];
 
     _rads = player getVariable ["MiseryRadiation", 0];
-    _MHunger = player getVariable ["MiseryHunger", MIS_HUNGER];
-    _MThirst = player getVariable ["MiseryThirst", MIS_THIRST];
-    _MInfection = player getVariable ["MiseryInfection", MIS_INFECTION];
-    _MPoison = player getVariable ["MiseryPoison", MIS_POISON];
-    _MSleepiness = player getVariable ["MiserySleepiness", MIS_SLEEP];
-    _MExposure = player getVariable ["MiseryExposure", MIS_EXPOSURE];
+    _MHunger = player getVariable ["MiseryHunger", MACRO_PLAYER_HUNGER];
+    _MThirst = player getVariable ["MiseryThirst", MACRO_PLAYER_THIRST];
+    _MInfection = player getVariable ["MiseryInfection", MACRO_PLAYER_INFECTION];
+    _MPoison = player getVariable ["MiseryPoison", MACRO_PLAYER_TOXICITY];
+    _MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
+    _MExposure = player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE];
     _MPlayertemp = player getVariable ["MiseryPlayerTemp", 0];
     _Rhunger = player getVariable ["hunger", 100];
     _MDebuffs = player getVariable "MiseryDebuffs";
@@ -57,7 +57,7 @@ if !(hasInterface) exitWith {};
 
     _bagweightload = loadAbs player / getNumber (configFile >> "CfgInventoryGlobalVariable" >> "maxSoldierLoad");
     _Playerweight = round(_bagweightload * 100);
-    _Miseryweightdefcalculated = MISERY_WEIGHTCALC(_Playerweight);
+    _Miseryweightdefcalculated = MACRO_WEIGHTCALC(_Playerweight);
 
     if (_randomnutrientweight == 1) then {
     player setVariable ["MiseryThirst", (_MThirst - (_Miseryweightdefcalculated))]; //player setVariable ["MiseryThirst", (_MThirst -  ((_Miseryweightdefcalculated)))]; //player setVariable ["MiseryThirst", (_MThirst -  ((_Miseryweightdefcalculated)toFixed 2))];
@@ -68,18 +68,18 @@ if !(hasInterface) exitWith {};
     if !(MiseryMP) then { //If SP - and Weight deficiency then start increasing sleepiness var
     _randomsleepweight = [1, 2] call BIS_fnc_randomInt; //random sleep decrease
     if (_randomsleepweight == 1) then {
-    _MSleepiness = player getVariable ["MiserySleepiness", MIS_SLEEP];
+    _MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
     player setVariable ["MiserySleepiness", (_MSleepiness + (_Miseryweightdefcalculated))]; //player setVariable ["MiserySleepiness", (_MSleepiness +  ((_Miseryweightdefcalculated)))]; //player setVariable ["MiserySleepiness", (_MSleepiness +  ((_Miseryweightdefcalculated)toFixed 2))];
         };
     };
 };
 
-    if (MiseryMP) then {player setVariable ["MiserySleepiness", MIS_SLEEP];
+    if (MiseryMP) then {player setVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
     }else{
 
         //if (MiseryNORVG==1) then { //Only calculate Misery sleep system if using Misery framework
 
-        _MSleepiness = player getVariable ["MiserySleepiness", MIS_SLEEP];
+        _MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
 
         player setVariable ["MiserySleepiness", (_MSleepiness + (MiserySleepinessIncrement))]; //player setVariable ["MiserySleepiness", (_MSleepiness +  ((MiserySleepinessIncrement)))]; //player setVariable ["MiserySleepiness", (_MSleepiness +  ((MiserySleepinessIncrement)toFixed 2))];
 
@@ -111,7 +111,7 @@ if !(hasInterface) exitWith {};
 
     if (MiseryAilments == 1) then {
 
-    _MHunger = player getVariable ["MiseryHunger", MIS_HUNGER];
+    _MHunger = player getVariable ["MiseryHunger", MACRO_PLAYER_HUNGER];
 
     if ((_MDebuffs find "PARASITES" != -1)) then {player setVariable ["MiseryHunger", (_MHunger - ((MiseryHungerIncrement)))]};     //if ((_MDebuffs find "PARASITES" != -1)) then {player setVariable ["MiseryHunger", (_MHunger -  ((MiseryHungerIncrement)toFixed 2))]};
 };
@@ -137,11 +137,11 @@ if !(hasInterface) exitWith {};
         };
 
     //Poison:
-    _MPoison = player getVariable ["MiseryPoison", MIS_POISON];
+    _MPoison = player getVariable ["MiseryPoison", MACRO_PLAYER_TOXICITY];
 
     if (_MPoison > 0 && MiseryAilments == 1) then {
 
-        _MPoison = player getVariable ["MiseryPoison", MIS_POISON];
+        _MPoison = player getVariable ["MiseryPoison", MACRO_PLAYER_TOXICITY];
 
         _MDebuffs pushBackUnique "POISON"; player setVariable ["MiseryDebuffs", _MDebuffs];
 
@@ -153,11 +153,11 @@ if !(hasInterface) exitWith {};
     if (_MPoison <= 0) then {_MDebuffs deleteAt (_MDebuffs find "POISON"); player setVariable ["MiseryDebuffs", _MDebuffs];};
 
     //Infection:
-    _MInfection = player getVariable ["MiseryInfection", MIS_INFECTION];
+    _MInfection = player getVariable ["MiseryInfection", MACRO_PLAYER_INFECTION];
 
     if(_MInfection > 0 && MiseryAilments == 1)then{
 
-        _MInfection = player getVariable ["MiseryInfection", MIS_INFECTION];
+        _MInfection = player getVariable ["MiseryInfection", MACRO_PLAYER_INFECTION];
 
         _MDebuffs pushBackUnique "INFECTION"; player setVariable ["MiseryDebuffs", _MDebuffs];
 
@@ -168,14 +168,14 @@ if !(hasInterface) exitWith {};
 
     if(_MInfection <= 0) then {_MDebuffs deleteAt (_MDebuffs find "INFECTION"); player setVariable ["MiseryDebuffs", _MDebuffs];};
 
-            _MHunger = player getVariable ["MiseryHunger", MIS_HUNGER];
-            _MThirst = player getVariable ["MiseryThirst", MIS_THIRST];
+            _MHunger = player getVariable ["MiseryHunger", MACRO_PLAYER_HUNGER];
+            _MThirst = player getVariable ["MiseryThirst", MACRO_PLAYER_THIRST];
 
-            if(_MHunger > 100) then {player setVariable ["MiseryHunger", MIS_HUNGER]};
+            if(_MHunger > 100) then {player setVariable ["MiseryHunger", MACRO_PLAYER_HUNGER]};
 
              if(_MHunger <= 0)then{[player,100] call EFUNC(common,specialDamage)}; //Kill the player on "0" hunger
 
-            if(_MThirst > 100) then {player setVariable ["MiseryThirst", MIS_THIRST]};
+            if(_MThirst > 100) then {player setVariable ["MiseryThirst", MACRO_PLAYER_THIRST]};
 
              if(_MThirst <= 0)then{[player,100] call EFUNC(common,specialDamage)}; //Kill the player on "0" thirst
 
@@ -185,7 +185,7 @@ if !(hasInterface) exitWith {};
 
     if (MiseryTemperature == 1) then {
 
-    _MExposure = player getVariable ["MiseryExposure", MIS_EXPOSURE];
+    _MExposure = player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE];
 
     [player] call Misery_fnc_Warmup;
     [player] call Misery_fnc_Overtemp;

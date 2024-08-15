@@ -18,9 +18,9 @@ if (_selectedItem==(toUpper(_x select 0))) exitWith {_entry=_x};
 
 if ((count _entry)<1) exitWith {};
 
-_MHunger = player getVariable ["MiseryHunger", MIS_HUNGER];
-_MThirst = player getVariable ["MiseryThirst", MIS_THIRST];
-_MExposure = player getVariable ["MiseryExposure", MIS_EXPOSURE];
+_MHunger = player getVariable ["MiseryHunger", MACRO_PLAYER_HUNGER];
+_MThirst = player getVariable ["MiseryThirst", MACRO_PLAYER_THIRST];
+_MExposure = player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE];
 _MDebuffs = player getVariable "MiseryDebuffs";
 _rads = player getVariable ["radiation", 0];
 _hunger=_entry select 1;
@@ -79,8 +79,8 @@ if (_MHunger < 0) then {player setVariable ["Miseryhunger", 0]};
 if (_MThirst < 0) then {player setVariable ["MiseryThirst", 0]};
 
 //Reset to 100 if greater than 100:
-if (_MHunger > 100) then {player setVariable ["MiseryHunger", MIS_HUNGER]};
-if (_MThirst > 100) then {player setVariable ["MiseryThirst", MIS_THIRST]};
+if (_MHunger > 100) then {player setVariable ["MiseryHunger", MACRO_PLAYER_HUNGER]};
+if (_MThirst > 100) then {player setVariable ["MiseryThirst", MACRO_PLAYER_THIRST]};
 
 //Ailment add
 if ((count _debuffAdd) > 0) then {
