@@ -15,9 +15,11 @@
 
 params ["_array"];
 
+private _loweredArray = [];
+
 {
     private _lower = toLower _x;
-    _array set [_forEachIndex, _lower];
+    _loweredArray pushBack _lower;
 } forEach _array;
 
-_array
+_loweredArray
