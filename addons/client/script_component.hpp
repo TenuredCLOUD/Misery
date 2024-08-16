@@ -14,3 +14,6 @@
 #endif
 
 #include "\z\misery\addons\main\script_macros.hpp"
+
+#define MISERY_PLAYER_VARIABLES QGVAR(cooking_recipes), QGVAR(crafting_recipes), QGVAR(debuffs), QGVAR(exposure), QGVAR(fatigue), QGVAR(fear), QGVAR(hunger), QGVAR(infection), QGVAR(radiation), QGVAR(sea_temperature), QGVAR(temperature), QGVAR(thirst), QGVAR(toxicity), QGVAR(water_collect_recipes), QGVAR(currency), QGVAR(currency_banked)
+#define MISERY_PLAYER_VARIABLE_VALUES GVAR(cooking_recipes), GVAR(crafting_recipes), GVAR(debuffs), GVAR(exposure), GVAR(fatigue), GVAR(fear), GVAR(hunger), GVAR(infection), GVAR(radiation), GVAR(sea_temperature), GVAR(temperature), GVAR(thirst), GVAR(toxicity), GVAR(water_collect_recipes), GVAR(currency), GVAR(currency_banked)

@@ -7,7 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"misery_main"};
-        authors[] = {"TenuredCLOUD"};
+        authors[] = {"MikeMF"};
         VERSION_CONFIG;
     };
 };

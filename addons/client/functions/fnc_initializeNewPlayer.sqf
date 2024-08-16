@@ -1,0 +1,42 @@
+#include "..\script_component.hpp"
+/*
+ * Author: MikeMF
+ * Sets up the player variables for a new start or after death.
+ *
+ * Arguments:
+ * 0: New Save <BOOL> (default: true)
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_client_fnc_initializePlayer
+*/
+
+params [["_newSave", true]];
+
+private _temperature = call EFUNC(temperature,temperature);
+
+// Set defaults for blank save.
+player setVariable [QGVAR(cooking_recipes), MACRO_PLAYER_COOKING_RECIPES];
+player setVariable [QGVAR(crafting_recipes), MACRO_PLAYER_CRAFTING_RECIPES];
+player setVariable [QGVAR(debuffs), MACRO_PLAYER_DEBUFFS];
+player setVariable [QGVAR(exposure), MACRO_PLAYER_EXPOSURE];
+player setVariable [QGVAR(fatigue), MACRO_PLAYER_FATIGUE];
+player setVariable [QGVAR(fear), MACRO_PLAYER_FEAR];
+player setVariable [QGVAR(hunger), MACRO_PLAYER_HUNGER];
+player setVariable [QGVAR(infection), MACRO_PLAYER_INFECTION];
+player setVariable [QGVAR(radiation), MACRO_PLAYER_RADIATION];
+player setVariable [QGVAR(sea_temperature), _temperature select 1];
+player setVariable [QGVAR(temperature), _temperature select 0];
+player setVariable [QGVAR(thirst), MACRO_PLAYER_THIRST];
+player setVariable [QGVAR(toxicity), MACRO_PLAYER_TOXICITY];
+player setVariable [QGVAR(water_collect_recipes), MACRO_PLAYER_WATERCOLLECT_RECIPES];
+
+if (_newSave) then {
+    player setVariable [QGVAR(currency), MACRO_PLAYER_CURRENCY];
+    player setVariable [QGVAR(currency_banked), MACRO_PLAYER_CURRENCY_BANKED];
+};
+
+// Broadcast event for a new player that has been initialized.
+[QGVAR(newPlayer), player] call CBA_fnc_globalEvent;

@@ -1,1 +1,3 @@
-PREP(initialize);
+PREP(initializeNewPlayer);
+PREP(loadPlayerVariables);
+PREP(serializePlayer);
