@@ -14,3 +14,6 @@
 #endif
 
 #include "\z\misery\addons\main\script_macros.hpp"
+
+
+#define MACRO_BLOODPOOL_TYPES "BloodPool_01_Medium_New_F", "BloodSplatter_01_Medium_New_F", "BloodSplatter_01_Small_New_F", "BloodSpray_01_New_F"
