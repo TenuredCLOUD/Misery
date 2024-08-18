@@ -1,10 +1,63 @@
 #include "..\script_component.hpp"
 /*
-Ambient AI Zones Generator
-Generates highly reactive AI built to a scenario designers module layout
-Works with zone stepping, so different modules can generate different factions etc... (more robust that the ambient spawner)
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Ambient AI Zones Generator
+ * Generates highly reactive AI built to a scenario designers module layout
+ * Works with zone stepping, so different modules can generate different factions etc... (more robust than the ambient spawner)
+ *
+ * Arguments:
+ * 0: Module the spawner is assigned to <OBJECT>
+ * 1: faction to spawn by the module <STRING>
+ * 2: Class of AI to be generated <STRING>
+ * 3: Max allowed size of group <NUMBER>
+ * 4: Primary weapon loot for AI <ARRAY> 
+ * 5: Secondary weapon loot for AI <ARRAY>
+ * 6: Launcher weapon loot for AI <ARRAY>
+ * 7: Ammo ammount possible (slected randomly) <NUMBER>
+ * 8: Possible item loot in AI inventories <ARRAY>
+ * 9: Possible Night vision loot for AI <ARRAY>
+ * 10: Possible Facewear loot for AI <ARRAY>
+ * 11: Possible Headgear loot for AI <ARRAY>
+ * 12: Possible Uniform loot for AI <ARRAY>
+ * 13: Possible Vest loot for AI <ARRAY>
+ * 14: Possible backpack loot for AI <ARRAY>
+ * 15: AI Accuracy <NUMBER>
+ * 16: AI Shake <NUMBER>
+ * 17: AI Speed <NUMBER>
+ * 18: Group Spawn Chance <NUMBER>
+ * 19: Minimum spawn distance from module object for group <NUMBER>
+ * 20: Maximum spawn distance from module object for group <NUMBER>
+ *
+ * Return Value:
+ * 0: NONE
+ *
+ * Example:
+ * [
+ * _module,
+ * (_module getVariable "Misery_AI_faction"),
+ * (_module getVariable "Misery_AI_Class"),
+ * (_module getVariable "Misery_AI_GroupMAX"),
+ * (_module getVariable "Misery_AI_WeapPrimaryLoot"),
+ * (_module getVariable "Misery_AI_WeapSecondaryLoot"),
+ * (_module getVariable "Misery_AI_WeaplauncherLoot"),
+ * (_module getVariable "Misery_AI_Ammo"),
+ * (_module getVariable "Misery_AI_ItemLoot"),
+ * (_module getVariable "Misery_AI_NVGLoot"),
+ * (_module getVariable "Misery_AI_FacewearLoot"),
+ * (_module getVariable "Misery_AI_HeadgearLoot"),
+ * (_module getVariable "Misery_AI_UniformLoot"),
+ * (_module getVariable "Misery_AI_VestLoot"),
+ * (_module getVariable "Misery_AI_BackpackLoot"),
+ * (_module getVariable "Misery_AI_Accuracy"),
+ * (_module getVariable "Misery_AI_Shake"),
+ * (_module getVariable "Misery_AI_Speed"),
+ * (_module getVariable "Misery_AI_SpawnChance"),
+ * (_module getVariable "Misery_AI_ModuleSpawnDistanceMIN"),
+ * (_module getVariable "Misery_AI_ModuleSpawnDistanceMAX")
+ * ] call misery_ambient_ai_fnc_Generation;
+ *
+ * Public: No
+ * NOTE: THIS FUNCTION / COMPONENT IS NOT YET IN USE AND IS A DRAFT
 */
 
 private [

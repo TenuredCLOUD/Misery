@@ -1,8 +1,24 @@
 #include "..\script_component.hpp"
 /*
-Misery Artifact Groundloot generator
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Artifact Groundloot generator
+ *
+ * Arguments:
+ * 0: Module object <OBJECT>
+ * 1: number of artifact to spawn <NUMBER>
+ * 2: radius of module <NUMBER> 
+ *
+ * Return Value:
+ * 0: NONE
+ *
+ * Example:
+ * [
+ * _module,
+ * (_module getvariable "Misery_ArtifactSpawnnumber"),
+ * (_module getvariable "Misery_ArtifactSpawnradius")
+ * ] call misery_artifacts_fnc_generate;
+ *
+ * Public: No
 */
 
 if (isServer) then {
@@ -74,7 +90,7 @@ if (isServer) then {
     {
         // Check if artifact spawns under roof, or in building: (Enforce exterior spawns)
         _groundStash = _x;
-        if (_x call EFUNC(artifacts,ArtifactSafe)) then {
+        if (_x call EFUNC(artifacts,safe)) then {
              if (MiseryDebug) then {systemChat format ["[Misery Artifact spawner] Artifact at %1 spawned under a roof or inside of a building, deleting...", getPosATL _x]};
             deleteVehicle _x;
         } else {

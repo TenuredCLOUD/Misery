@@ -1,14 +1,24 @@
 #include "..\script_component.hpp"
 /*
-Misery Artifact spawner startup
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Artifact spawner startup
+ *
+ * Arguments:
+ * 0: NONE
+ *
+ * Return Value:
+ * 0: NONE
+ *
+ * Example:
+ * [] call misery_artifacts_fnc_start;
+ *
+ * Public: No
 */
 
 private _modules = allMissionObjects "Misery_ArtifactSpawner";
 
 waitUntil {
-    private _players = call Misery_misc_fnc_ListPlayers;
+    private _players = call EFUNC(common,listPlayers);
     _players = _players - (entities "HeadlessClient_F");
 
     {
@@ -33,7 +43,7 @@ waitUntil {
                 _module,
                 (_module getvariable "Misery_ArtifactSpawnnumber"),
                 (_module getvariable "Misery_ArtifactSpawnradius")
-                ] execVM "\z\misery\addons\artifacts\functions\fnc_GenerateArtifacts.sqf";
+                ] execVM "\z\misery\addons\artifacts\functions\fnc_generate.sqf";
             };
         };
     } forEach _modules;

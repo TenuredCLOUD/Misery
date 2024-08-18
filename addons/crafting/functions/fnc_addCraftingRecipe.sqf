@@ -1,10 +1,23 @@
 #include "..\script_component.hpp"
 /*
-Misery Crafting Recipe Data Adder
-Designed specifically for Misery mod
-by TenuredCLOUD
-
-Usage ex: [["rvg_guttingknife", [["Misery_pliers",1], ["CraftingTime", 5]]]] call Misery_fnc_AddCraftingRecipe;
+ * Author: TenuredCLOUD
+ * Crafting Recipe Data Adder
+ *
+ * Arguments:
+ * 0: NONE
+ *
+ * Return Value:
+ * 0: NONE 
+ *
+ * Example:
+ * [[
+ *   "rvg_guttingknife", 
+ *   [
+ *   ["Misery_pliers",1], 
+ *   ["CraftingTime", 5]
+ *   ]
+ * ]] call misery_crafting_fnc_addCraftingRecipe;
+ *
 */
 
 _this params ["_recipe"];

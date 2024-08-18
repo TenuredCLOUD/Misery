@@ -1,9 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Crafting Framework Item check
-Processes recipe items needed, if not all are met, code exits as false
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Crafting Framework Item check
+ *
+ * Arguments:
+ * 0: Requirements <ARRAY>
+ *
+ * Return Value:
+ * 0: BOOL 
+ *
+ * Example:
+ * [_requirements] call misery_crafting_fnc_canCraftCheck
+ *
+ * Public: No
 */
 
 params ["_requirements"];

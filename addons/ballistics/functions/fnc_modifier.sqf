@@ -1,21 +1,21 @@
 #include "..\script_component.hpp"
 /*
-Misery Ballistics modifier startup
-Checks what ammunition game or targets are hit with, if not safe ammunition, target is obliterated
-Should be JIP and MP compatible due to third parameter being used for active entity EH handling...
-Designed specifically for Misery mod
-by TenuredCLOUD
-
-Needs to run on server, and is manually refreshed every 30 seconds, all safe ammunition also needs to be listed one by one...
-It is generally a good idea to wait until Misery Client is loaded...
-
-Usage Ex:
-
-waitUntil {sleep 1; !isNil "MiseryClientReady"};
-if (!isNil "MiseryClientReady") then {
-["Rabbit_F", ["B_9x21_Ball", "B_12Gauge_Pellets"]] call Misery_fnc_BallisticsModifier;
-};
+ * Author: TenuredCLOUD
+ * Ballistics modifier 
+ * 
+ *
+ * Arguments:
+ * 0: animal or unit classname to modify <CLASSNAME>
+ * 1: safe ammunition that won't obliterate unit <ARRAY>
+ *
+ * Return Value:
+ * 0: NONE
+ *
+ * Example:
+ * ["Rabbit_F", ["B_9x21_Ball", "B_12Gauge_Pellets"]] call misery_ballistics_fnc_modifier;
+ *
 */
+
 params ["_entityType", "_allowedAmmo"];
 
 _Misery_SGTypes = [_entityType] call EFUNC(common,parseArray);

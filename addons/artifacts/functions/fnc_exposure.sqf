@@ -1,9 +1,19 @@
 #include "..\script_component.hpp"
 /*
-Misery artifact radiation exposure
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * artifact radiation exposure
+ *
+ * Arguments:
+ * 0: NONE
+ *
+ * Return Value:
+ * 0: NONE
+ *
+ * Example:
+ * [] call misery_artifacts_fnc_exposure;
+ *
 */
+
 
 [{[[MACRO_ARTIFACTS]] call EFUNC(common,hasItem)},
 {
@@ -14,7 +24,7 @@ by TenuredCLOUD
         if (!([[MACRO_ARTIFACTS]] call EFUNC(common,hasItem)) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             if(MiseryDebug)then{systemChat "Misery Artifact exposure cycle terminated..."};
-            [] execVM "\z\misery\addons\artifacts\functions\fnc_Artifactexposure.sqf";
+            [] execVM "\z\misery\addons\artifacts\functions\fnc_exposure.sqf";
             if(MiseryDebug)then{systemChat "Misery Artifact exposure cycle checks re-initiated..."};
         };
 

@@ -1,8 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Demolishing
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Demolishing
+ * 
+ *
+ * Arguments:
+ * 0: NONE
+ *
+ * Return Value:
+ * 0: NONE
+ *
+ * Example:
+ * [] call misery_buildex_fnc_demolish;
+ *
 */
 
 [

@@ -1,3 +1,20 @@
+#include "..\script_component.hpp"
+/*
+ * Author: TenuredCLOUD, Drongo
+ * Grabs surface postion of object
+ *
+ * Arguments:
+ * 0: NONE
+ *
+ * Return Value:
+ * 0: NONE
+ *
+ * Example:
+ * _object setPos _pos;
+ * _pos = (_object call misery_common_fnc_surfacePos)) select 0;
+ *
+*/
+
 private _object=_this;
 private _object2=objNull;
 private _pos=getPosASL _object;

@@ -1,8 +1,29 @@
 #include "..\script_component.hpp"
 /*
-Misery Ambient Animals
-Drongo Source code edited by TenuredCLOUD (with permission)
-Designed specifically for Misery mod
+ * Author: TenuredCLOUD, Drongo
+ * Ambient Animals
+ *
+ * Arguments:
+ * 0: Ambient Wildlife enabler <BOOL>
+ * 1: Animal Types <ARRAY>
+ * 2: Max Animals allowed <NUMBER>
+ * 3: Minimum distance at which animals can spawn <NUMBER>
+ * 4: Minimum distance at which animals can spawn from other players <NUMBER>
+ * 5: Minimum distance from a player at which animals will be deleted <NUMBER>
+ * 6: Time in seconds between spawn checks <NUMBER>
+ * 7: % chance per cycle that clusters will spawn <NUMBER>
+ * 8: Clusters of animals spawned per spawn cycle <ARRAY>
+ * 9: Number of sheep spawned per cluster <ARRAY>
+ * 10: Number of goats spawned per cluster <ARRAY>
+ * 11: Number of chickens spawned per cluster <ARRAY>
+ *
+ * Return Value:
+ * 0: NONE
+ *
+ * Example:
+ * [] call misery_ambient_animals_fnc_Spawner;
+ *
+ * Public: No
 */
 
 if!(isServer)exitWith{};
@@ -33,7 +54,7 @@ _markers=[];
 if((count MiseryAnimalTypes)<1)exitWith{systemChat "No ambient animals defined"};
 
 while{true}do{
-    _players=call Misery_fnc_ListPlayers;
+    _players=call EFUNC(common,ListPlayers);
     _players=_players call BIS_fnc_arrayShuffle;
     {
         _animal=_x;

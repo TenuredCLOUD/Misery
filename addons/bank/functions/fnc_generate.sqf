@@ -1,12 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Bank Generater
-Passes arguments to generate a banker / bank object
-Designed specifically for Misery mod
-by TenuredCLOUD
-
-// Generate a bank
-[trader1] call Misery_fnc_GenerateBank;
+ * Author: TenuredCLOUD
+ * Bank Generater
+ * Passes arguments to generate a banker / bank object
+ *
+ * Arguments:
+ * 0: Object you want to have a bank interaction with <OBJECT>
+ *
+ * Return Value:
+ * 0: NONE
+ *
+ * Example:
+ * [trader1] call misery_bank_fnc_generate;
+ *
 */
 
 params ["_traderName"];

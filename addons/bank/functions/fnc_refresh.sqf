@@ -1,9 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Bank UI
-Watches UI for changes etc...
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Bank UI
+ * 
+ *
+ * Arguments:
+ * 0: NONE
+ *
+ * Return Value:
+ * 0: NONE
+ *
+ * Example:
+ * [] call misery_bank_fnc_refresh;
+ *
 */
 
 [{!isNull findDisplay 483729},

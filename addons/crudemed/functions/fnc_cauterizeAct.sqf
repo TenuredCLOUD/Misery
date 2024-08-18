@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery Cauterization near fire sources (ACE medical compat ONLY)
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Cauterization near fire sources (ACE medical compat ONLY)
+ *
+ * Arguments:
+ * 0: NONE
+ *
+ * Return Value:
+ * 0: NONE 
+ *
+ * Example:
+ * [] call misery_crudemed_fnc_cauterizeAct
+ *
 */
 
 [

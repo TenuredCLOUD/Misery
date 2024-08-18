@@ -10,7 +10,7 @@
  * 0: Is Inside <BOOL>
  *
  * Example:
- * [] call misery_fnc_common_isInsideLoot
+ * [] call misery_common_fnc_isInsideLoot
 */
 
 params ["_position"];

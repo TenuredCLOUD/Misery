@@ -1,9 +1,19 @@
 #include "..\script_component.hpp"
 /*
-Misery Ambient AI Master settings module data parser
-Defines performance properties for each Ambient AI module
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Ambient AI Master settings module data parser
+ * Defines performance properties for each Ambient AI module
+ *
+ * Arguments:
+ * 0: NONE
+ *
+ * Return Value:
+ * 0: NONE
+ *
+ * Example:
+ * [] call misery_ambient_ai_zone_fnc_moduleCheck;
+ *
+ * Public: No
 */
 
 Misery_AmbAI_SpawnCheckDistance = _this select 0;

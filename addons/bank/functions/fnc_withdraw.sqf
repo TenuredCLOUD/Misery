@@ -1,8 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Bank UI Withdraw Processor
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Bank UI Withdraw Processor
+ * 
+ *
+ * Arguments:
+ * 0: NONE
+ *
+ * Return Value:
+ * 0: NONE
+ *
+ * Example:
+ * [] call misery_bank_fnc_withdraw;
+ *
 */
 
 private _amount = parseNumber (ctrlText ((findDisplay 483729) displayCtrl 1400));

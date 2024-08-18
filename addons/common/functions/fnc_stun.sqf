@@ -1,3 +1,19 @@
+#include "..\script_component.hpp"
+/*
+ * Author: TenuredCLOUD, Drongo
+ * Knockout simulation for player
+ *
+ * Arguments:
+ * 0: NONE
+ *
+ * Return Value:
+ * 0: NONE
+ *
+ * Example:
+ * [player, (1+(random 3))] call misery_common_fnc_stun;
+ *
+*/
+
 private _target=_this select 0;
 private _time=_this select 1;
 titleText[" ","BLACK OUT",1];

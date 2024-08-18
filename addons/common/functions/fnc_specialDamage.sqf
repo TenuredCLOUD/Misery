@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Damage modifier for player instant death
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD, Drongo
+ * Damage modifier for player 
+ *
+ * Arguments:
+ * 0: NONE
+ *
+ * Return Value:
+ * 0: NONE
+ *
+ * Example:
+ * [player,100] call misery_common_fnc_specialDamage;
+ *
 */
 
 private _target=_this select 0;

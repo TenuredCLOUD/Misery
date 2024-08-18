@@ -1,8 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Cooking Framework List populater for Recipes
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Cooking Framework List populater for Recipes
+ *
+ * Arguments:
+ * 0: NONE
+ *
+ * Return Value:
+ * 0: Listed indexes for UI 
+ *
+ * Example:
+ * [] call misery_cooking_fnc_recipesListed
+ *
+ * Public: No
 */
 
 waitUntil {!isNull findDisplay 982379};

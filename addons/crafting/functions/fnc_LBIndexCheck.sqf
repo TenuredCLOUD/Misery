@@ -1,8 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Crafting Framework Listboc index value checker
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Crafting Framework Listbox index value checker
+ *
+ * Arguments:
+ * 0: NONE
+ *
+ * Return Value:
+ * 0: NONE 
+ *
+ * Example:
+ * [] call misery_crafting_fnc_LBIndexCheck
+ *
+ * Public: No
 */
 
 params ["_ctrl", "_str"];

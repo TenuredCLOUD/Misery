@@ -1,8 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery sledgehammer check fnc (iBuild compat)
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * sledghammer check fnc (iBuild compat)
+ * 
+ *
+ * Arguments:
+ * 0: NONE
+ *
+ * Return Value:
+ * 0: NONE
+ *
+ * Example:
+ * [] call misery_buildex_fnc_hasSledghammer;
+ *
 */
 
 private ["_hasSledgehammer"];

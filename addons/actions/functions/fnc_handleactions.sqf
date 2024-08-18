@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery Mod actions (inventory GUI)
-Designed specifically for Misery mod
-Code concepts from Drongo, reworked by TenuredCLOUD (with permission)
+ * Author: TenuredCLOUD, Drongo
+ * actions (inventory GUI) default actions checks and parser
+ * Parses STRING values to inventory GUI when conditions return true
+ *
+ * Arguments:
+ * 0: NONE
+ *
+ * Return Value:
+ * 0: NONE
+ *
+ * Example:
+ * [] call misery_actions_fnc_handleactions
 */
 
 private _out=[];
@@ -199,18 +208,6 @@ if ([["Misery_EmptyPetrol"]] call EFUNC(common,hasItem)) then {
 if (MiseryACE && [["Misery_Needlethread"]] call EFUNC(common,hasItem)) then {
     _out pushback [localize "STR_MISERY_STITCHWOUNDS",localize "STR_MISERY_STITCHWOUNDS"];
 };
-
-// if ((call Misery_fnc_NearLandVeh || call Misery_fnc_NearHeli || call Misery_fnc_NearPlane || call Misery_fnc_NearShip || call Misery_fnc_NearTank) && MiseryinVehiclerepairarea) then {
-// _out pushback [localize "STR_MISERY_REQREPAIRS",localize "STR_MISERY_REQREPAIRS"];
-// };
-
-// if ((call Misery_fnc_NearLandVeh || call Misery_fnc_NearHeli || call Misery_fnc_NearPlane || call Misery_fnc_NearShip || call Misery_fnc_NearTank) && MiseryinVehiclerearmarea) then {
-// _out pushback [localize "STR_MISERY_REQRESUPPLY",localize "STR_MISERY_REQRESUPPLY"];
-// };
-
-// if ((call Misery_fnc_NearLandVeh || call Misery_fnc_NearHeli || call Misery_fnc_NearPlane || call Misery_fnc_NearShip || call Misery_fnc_NearTank) && MiseryinRefuelzonearea) then {
-// _out pushback [localize "STR_MISERY_REQREFUEL",localize "STR_MISERY_REQREFUEL"];
-// };
 
 if (MiseryinVehiclerepairarea) then {
 _out pushback [localize "STR_MISERY_REQREPAIRS",localize "STR_MISERY_REQREPAIRS"];

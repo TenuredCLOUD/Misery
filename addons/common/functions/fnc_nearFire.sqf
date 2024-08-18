@@ -10,7 +10,7 @@
  * 0: Near Fire <BOOL>
  *
  * Example:
- * [] call misery_fnc_common_nearFire
+ * [] call misery_common_fnc_nearFire
 */
 
 private _nearestObjects = nearestObjects [player, [MACRO_FIRETYPES], 2.5];

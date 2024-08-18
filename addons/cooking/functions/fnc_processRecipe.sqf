@@ -1,10 +1,20 @@
 #include "..\script_component.hpp"
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
-    Misery Cooking Framework Item processor
-    Takes inputs from GUI and processes recipe (if it exists)
-    Designed specifically for Misery mod
-    by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Cooking Framework Item processor
+ * Takes inputs from GUI and processes recipe (if it exists)
+ *
+ * Arguments:
+ * 0: NONE
+ *
+ * Return Value:
+ * 0: BOOL
+ *
+ * Example:
+ * [] call misery_cooking_fnc_processRecipe
+ *
+ * Public: No
 */
 
 private _dialog = findDisplay 982379;
