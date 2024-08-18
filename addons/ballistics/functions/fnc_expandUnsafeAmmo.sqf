@@ -8,7 +8,7 @@
  * 1: Safe Ammunitions <ARRAY>
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * ["Rabbit_F", ["B_9x21_Ball", "B_12Gauge_Pellets"]] call misery_ballistics_fnc_expandUnsafeAmmo;

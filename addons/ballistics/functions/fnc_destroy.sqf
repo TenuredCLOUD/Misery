@@ -7,7 +7,7 @@
  * 0: Entity <OBJECT>
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * [] call misery_ballistics_fnc_destroy;

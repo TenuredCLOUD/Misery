@@ -7,7 +7,7 @@
  * 0: Animal / Unit Classname <CLASSNAME>
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * ["Rabbit_F"] call misery_ballistics_fnc_registerEventHandlers;
