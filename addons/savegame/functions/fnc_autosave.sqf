@@ -23,8 +23,9 @@ if (isMultiplayer) exitWith {
     diag_log "[MISERY] - Autosave Disabled in Multiplayer";
 };
 
-// Loop function call & save game.
+// Loop function call & save game, sets variable for last time saved.
 [{
     [QGVAR(executeSaveGame)] call CBA_fnc_localEvent;
     [] call FUNC(autosave);
+    player setVariable [QGVAR(lastTimeSaved), CBA_missionTime];
 }, [], GVAR(autosaveInterval)] call CBA_fnc_waitAndExecute;

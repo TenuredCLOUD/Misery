@@ -13,6 +13,13 @@
  * [] call misery_savegame_fnc_savePlayerData
 */
 
-private _playerData = [] call EFUNC(client,serializePlayer);
-private _saveName = call FUNC(formatSaveName);
-private _saveFile = profileNamespace setVariable [_saveName, _playerData];
+diag_log "[MISERY] - Saving Single Player Data";
+
+private _playerData = call EFUNC(client,serializePlayer);
+
+if (!isMultiplayer) then {
+    private _saveName = call FUNC(formatSaveName);
+    private _saveFile = profileNamespace setVariable [_saveName, _playerData];
+};
+
+// For multiplayer, create event which sends _playerData to server.

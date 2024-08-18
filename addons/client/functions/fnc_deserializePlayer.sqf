@@ -16,11 +16,17 @@
 private _saveName = call EFUNC(savegame,formatSaveName);
 private _playerData = profileNamespace getVariable [_saveName, []];
 
-_playerData params ["_worldName", "_variables", "_loadout", "_position"];
+_playerData params ["_worldName", "_playerID", "_variables", "_loadout", "_position"];
 
 // Figure out what to do in this scenario, loading failed, create new player?
 if (worldName != _worldName) exitWith {
     diag_log format ["[MISERY] - Current World (%1) does not match the current save world (%2), Loading Aborted.", worldName, _worldName];
+};
+
+// Block save sharing
+private _currentPlayerID = getPlayerUID player;
+if !(_playerID isEqualTo _currentPlayerID) exitWith {
+    diag_log format ["[MISERY] - Current player ID (%1) does not match saved player ID (%2), Loading Aborted", _currentPlayerID, _playerID];
 };
 
 private _variableNames = [MISERY_PLAYER_VARIABLE_VALUES];

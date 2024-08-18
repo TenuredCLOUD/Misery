@@ -22,7 +22,8 @@
 private _playerData = [];
 private _variables = [];
 
-// Variables done in specific order.
+private _playerID = getPlayerUID player;
+
 {
     private _variable = player getVariable [_x, ""];
     _variables pushBack _variable;
@@ -32,6 +33,7 @@ private _loadout = getUnitLoadout player;
 private _position = getPosATL player;
 
 _playerData pushBack worldName;
+_playerData pushBack _playerID;
 _playerData pushBack _variables;
 _playerData pushBack _loadout;
 _playerData pushBack _position;
