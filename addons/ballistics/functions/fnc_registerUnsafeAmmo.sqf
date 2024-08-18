@@ -9,7 +9,7 @@
  * 1: Safe Ammunitions <ARRAY>
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * ["Rabbit_F", ["B_9x21_Ball", "B_12Gauge_Pellets"]] call misery_ballistics_fnc_registerUnsafeAmmo;
@@ -19,10 +19,8 @@ if (!isServer) exitWith {};
 
 params ["_classname", "_unsafeAmmo"];
 
-private _isKeyDefault = (GVAR(ballisticsMap) getOrDefault [_classname, []]) isEqualTo [];
-
 // Add if key returns default value.
-if (_isKeyDefault) exitWith {
+if (_classname call FUNC(isKeyDefault)) exitWith {
     GVAR(ballisticsMap) set [_classname, _unsafeAmmo];
     _classname call FUNC(registerEventHandlers);
 };
