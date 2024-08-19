@@ -1,301 +1,145 @@
-
 class CfgVehicles {
-    class Logic {};
     class Item_Base_F;
     class House_F;
 
-    class Misery_Object_Firewood : Item_Base_F {
-        scope = 2;
-        scopeCurator = 2;
+    class CLASS(Object_Firewood): Item_Base_F {
         displayName = "Firewood";
-        author = "TenuredCLOUD";
-        vehicleClass = "Misery_ObjectClass";
+        MACRO_ITEM_COMMON;
 
-        mapSize = 0.25;
-
-
-        class TransportItems {
-            class Misery_Object_Firewood {
-                name = "Misery_firewood";
-                count = 1;
-            };
-        };
+        MACRO_ADDITEM(CLASS(Object_Firewood),1);
     };
-
-    class Misery_Object_Woodenlog : Item_Base_F {
-        scope = 2;
-        scopeCurator = 2;
+    class CLASS(Object_Woodenlog): Item_Base_F {
         displayName = "Wooden log";
-        author = "TenuredCLOUD";
-        vehicleClass = "Misery_ObjectClass";
+        MACRO_ITEM_COMMON;
 
-        mapSize = 0.25;
-
-
-        class TransportItems {
-            class Misery_Object_Woodenlog {
-                name = "Misery_woodenlog";
-                count = 1;
-            };
-        };
+        MACRO_ADDITEM(CLASS(Object_Woodenlog),1);
     };
+    class CLASS(Object_CollapsibleFishingRod): Item_Base_F {
+        displayName = "Collapsible Fishing Rod";
+        MACRO_ITEM_COMMON;
 
-    class Misery_Object_Collapsiblefishingrod : Item_Base_F {
-        scope = 2;
-        scopeCurator = 2;
-        displayName = "Collapsible fishing rod";
-        author = "TenuredCLOUD";
-        vehicleClass = "Misery_ObjectClass";
-
-        mapSize = 0.25;
-
-
-        class TransportItems {
-            class Misery_Object_Collapsiblefishingrod {
-                name = "Misery_fishingpole";
-                count = 1;
-            };
-        };
+        MACRO_ADDITEM(CLASS(Object_CollapsibleFishingRod),1);
     };
-
-    class Misery_Object_2x4 : Item_Base_F {
-        scope = 2;
-        scopeCurator = 2;
+    class CLASS(Object_2x4): Item_Base_F {
         displayName = "2x4";
-        author = "TenuredCLOUD";
-        vehicleClass = "Misery_ObjectClass";
+        MACRO_ITEM_COMMON;
 
-        mapSize = 0.25;
-
-
-        class TransportItems {
-            class Misery_Object_2x4 {
-                name = "Misery_2x4";
-                count = 1;
-            };
-        };
+        MACRO_ADDITEM(CLASS(Object_2x4),1);
     };
-
-    class Misery_Object_2x8 : Item_Base_F {
-        scope = 2;
-        scopeCurator = 2;
+    class CLASS(Object_2x8): Item_Base_F {
         displayName = "2x8";
-        author = "TenuredCLOUD";
-        vehicleClass = "Misery_ObjectClass";
+        MACRO_ITEM_COMMON;
 
-        mapSize = 0.25;
-
-
-        class TransportItems {
-            class Misery_Object_2x8 {
-                name = "Misery_2x8";
-                count = 1;
-            };
-        };
+        MACRO_ADDITEM(CLASS(Object_2x8),1);
     };
-
-    class Misery_Object_woodpanel : Item_Base_F {
-        scope = 2;
-        scopeCurator = 2;
+    class CLASS(Object_Woodpanel): Item_Base_F {
         displayName = "Woodpanel";
-        author = "TenuredCLOUD";
-        vehicleClass = "Misery_ObjectClass";
+        MACRO_ITEM_COMMON;
 
-        mapSize = 0.25;
-
-
-        class TransportItems {
-            class Misery_Object_woodpanel {
-                name = "Misery_woodpanel";
-                count = 1;
-            };
-        };
+        MACRO_ADDITEM(CLASS(Object_Woodpanel),1);
     };
 
-    class Misery_Forge : House_F {
-
-        displayName = "$STR_MISERY_FORGE_DISPLAYNAME";
-        textSingular = "Forge";
-        destrType = "DestructNo";
-        model = "\z\misery\addons\assets\data\models\forge.p3d";
-        cost = 0;
+    class CLASS(Forge): House_F {
         armor = 2000;
         author = "Model credits: RBG_illustrations - Reworked by TenuredCLOUD";
-        vehicleClass = "Misery_ObjectClass";
-        numberOfDoors = 0;
-        scope = 2;
-        scopeCurator = 2;
+        displayName = "$STR_MISERY_FORGE_DISPLAYNAME";
+        MACRO_HOUSE_COMMON;
         mapSize = 3;
-        placement = "vertical";
-        hiddenSelections[] = {};
-        hiddenSelectionsTextures[] = {};
-
-        class AnimationSources {};
-
-        class UserActions {};
+        model = QPATHTOF(data\models\forge.p3d);
+        textSingular = "Forge";
     };
-
-    class Misery_Anvil : House_F {
-        displayName = "$STR_MISERY_ANVIL_DISPLAYNAME";
-        textSingular = "Anvil";
-        destrType = "DestructNo";
-        model = "\z\misery\addons\assets\data\models\medievalanvil.p3d";
-
-        cost = 0;
+    class CLASS(Anvil): House_F {
         armor = 3;
         author = "Model credits: Margot D. - Reworked by TenuredCLOUD";
-        vehicleClass = "Misery_ObjectClass";
-        numberOfDoors = 0;
-        scope = 2;
-        scopeCurator = 2;
+        displayName = "$STR_MISERY_ANVIL_DISPLAYNAME";
+        MACRO_HOUSE_COMMON;
         mapSize = 2;
-        placement = "vertical";
-        hiddenSelections[] = {};
-        hiddenSelectionsTextures[] = {};
-
-        class AnimationSources {};
-
-        class UserActions {};
+        model = QPATHTOF(data\models\medievalanvil.p3d);
+        textSingular = "Anvil";
     };
-
-    class Misery_JetFuelRU : House_F {
-
-        displayName = "$STR_MISERY_JETFUELRU_DISPLAYNAME";
-        textSingular = "Jet Fuel Station";
-        destrType = "DestructNo";
-        model = "\z\misery\addons\assets\data\models\twinjetfueltank.p3d";
-
-        cost = 0;
+    class CLASS(JetFuelRU): House_F {
         armor = 2000;
         author = "Model credits: Tanks LuddePudde - Fuel pump castleonsandYT - Reworked by TenuredCLOUD";
-        vehicleClass = "Misery_ObjectClass";
-        numberOfDoors = 0;
-        scope = 2;
-        scopeCurator = 2;
+        displayName = "$STR_MISERY_JETFUELRU_DISPLAYNAME";
+        hiddenSelectionsMaterials[] = {QPATHTOF(data\rvmats\fueltanks.rvmat)};
+        MACRO_HOUSE_COMMON;
         mapSize = 3;
-        placement = "vertical";
-        hiddenSelections[] = {};
-        hiddenSelectionsTextures[] = {};
-        hiddenSelectionsMaterials[] = {"\z\misery\addons\assets\data\models\ui\Fueltanks.rvmat"};
-
-        class AnimationSources {};
-
-        class UserActions {};
-
+        model = QPATHTOF(data\models\twinjetfueltank.p3d);
+        textSingular = "Jet Fuel Station";
     };
-
-    class Misery_100KVA_Gen : House_F {
-
-        displayName = "$STR_MISERY_100KVAGEN_DISPLAYNAME";
-        textSingular = "100KVA Generator";
-        destrType = "DestructNo";
-        model = "\z\misery\addons\assets\data\models\100KVA_Generator.p3d";
-        cost = 0;
+    class CLASS(100KVA_Gen): House_F {
         armor = 2000;
         author = "Model credits: tasraven - Reworked by TenuredCLOUD";
-        vehicleClass = "Misery_ObjectClass";
-        numberOfDoors = 0;
-        scope = 2;
-        scopeCurator = 2;
+        displayName = "$STR_MISERY_100KVAGEN_DISPLAYNAME";
+        MACRO_HOUSE_COMMON;
         mapSize = 3;
-        placement = "vertical";
-        hiddenSelections[] = {};
-        hiddenSelectionsTextures[] = {};
-
-        class AnimationSources {};
+        model = QPATHTOF(data\models\100kva_generator.p3d);
+        textSingular = "100KVA Generator";
 
         class UserActions {
-        class Start_100KVA
-            {
+            class Start_100KVA {
+                condition = "alive this";
                 displayName = "Use Generator";
                 displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
-                priority = 10;
-                radius = 1;
-                position = "ScreenController01";
-                showWindow = 0;
                 hideOnUse = 1;
                 onlyForPlayer = 0;
+                position = "ScreenController01";
+                priority = 10;
+                radius = 1;
                 shortcut = "";
-                condition = "alive this";
+                showWindow = 0;
                 statement = "[this] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Generator\Gen_Interact.sqf'";
             };
         };
     };
-
-    class Misery_HeavilyUsedGen_Gas : House_F {
-
-        displayName = "$STR_MISERY_HeavilyUsedGen_Gas_DISPLAYNAME";
-        textSingular = "Heavily used Genrator - Petrol";
-        destrType = "DestructNo";
-        model = "\z\misery\addons\assets\data\models\Used_Gen_Gas.p3d";
-        cost = 0;
+    class CLASS(HeavilyUsedGen_Gas): House_F {
         armor = 2000;
         author = "Model credits: DennisHNguyen - Reworked by TenuredCLOUD";
-        vehicleClass = "Misery_ObjectClass";
-        numberOfDoors = 0;
-        scope = 2;
-        scopeCurator = 2;
+        displayName = "$STR_MISERY_HeavilyUsedGen_Gas_DISPLAYNAME";
+        MACRO_HOUSE_COMMON;
         mapSize = 3;
-        placement = "vertical";
-        hiddenSelections[] = {};
-        hiddenSelectionsTextures[] = {};
-
-        class AnimationSources {};
+        model = QPATHTOF(data\models\used_gen_gas.p3d);
+        textSingular = "Heavily used Genrator - Petrol";
 
         class UserActions {
-        class Start_UsedGen_Gas
-            {
+            class Start_UsedGen_Gas {
+                condition = "alive this";
                 displayName = "Use Generator";
                 displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
-                priority = 10;
-                radius = 1;
-                position = "Interact01";
-                showWindow = 0;
                 hideOnUse = 1;
                 onlyForPlayer = 0;
+                position = "Interact01";
+                priority = 10;
+                radius = 1;
                 shortcut = "";
-                condition = "alive this";
+                showWindow = 0;
                 statement = "[this] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Generator\Gen_Interact.sqf'";
             };
         };
     };
-
-    class Misery_HeavilyUsedGen_Diesel : House_F {
-
-        displayName = "$STR_MISERY_HeavilyUsedGen_Diesel_DISPLAYNAME";
-        textSingular = "Heavily used Genrator - Diesel";
-        destrType = "DestructNo";
-        model = "\z\misery\addons\assets\data\models\Used_Gen_Diesel.p3d";
-        cost = 0;
+    class CLASS(HeavilyUsedGen_Diesel): House_F {
         armor = 2000;
         author = "Model credits: Daniel_Bakunin - Reworked by TenuredCLOUD";
-        vehicleClass = "Misery_ObjectClass";
-        numberOfDoors = 0;
-        scope = 2;
-        scopeCurator = 2;
+        displayName = "$STR_MISERY_HeavilyUsedGen_Diesel_DISPLAYNAME";
+        MACRO_HOUSE_COMMON;
         mapSize = 3;
-        placement = "vertical";
-        hiddenSelections[] = {};
-        hiddenSelectionsTextures[] = {};
-
-        class AnimationSources {};
+        model = QPATHTOF(data\models\used_gen_diesel.p3d);
+        textSingular = "Heavily used Generator - Diesel";
 
         class UserActions {
-        class Start_UsedGen_Diesel
-            {
+            class Start_UsedGen_Diesel {
+                condition = "alive this";
                 displayName = "Use Generator";
                 displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
-                priority = 10;
-                radius = 1;
-                position = "Interact01";
-                showWindow = 0;
                 hideOnUse = 1;
                 onlyForPlayer = 0;
+                position = "Interact01";
+                priority = 10;
+                radius = 1;
                 shortcut = "";
-                condition = "alive this";
+                showWindow = 0;
                 statement = "[this] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Generator\Gen_Interact.sqf'";
             };
         };
     };
-
 };

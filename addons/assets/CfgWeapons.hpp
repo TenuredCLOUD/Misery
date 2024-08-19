@@ -5,14 +5,14 @@ class CfgWeapons {
     class SlotInfo;
     class ItemCore;
 
-    class Misery_ItemCore: ItemCore {
+    class CLASS(ItemCore): ItemCore {
         type = 4096;
         detectRange = -1;
         scopeCurator = 2;
         simulation = "ItemMineDetector";
     };
 
-    class Misery_Pickaxe: Misery_ItemCore {
+    class CLASS(Pickaxe): CLASS(ItemCore) {
         displayName = "$STR_MISERY_PICKAXE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_PICKAXE_DESCRIPTION";
         picture = QPATHTOF(data\icons\pickaxe.paa);
@@ -25,7 +25,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Pickaxebroken: Misery_ItemCore {
+    class CLASS(PickaxeBroken): CLASS(ItemCore) {
         displayName = "$STR_MISERY_PICKAXEBROKEN_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_PICKAXEBROKEN_DESCRIPTION";
         picture = QPATHTOF(data\icons\brokenpickaxe.paa);
@@ -38,7 +38,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_fishingpole: Misery_ItemCore {
+    class CLASS(FishingPole): CLASS(ItemCore) {
         displayName = "$STR_MISERY_FISHINGPOLE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_FISHINGPOLE_DESCRIPTION";
         picture = QPATHTOF(data\icons\fishingpole2.paa);
@@ -51,7 +51,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_fishingspool: Misery_ItemCore {
+    class CLASS(FishingsPool): CLASS(ItemCore) {
         displayName = "$STR_MISERY_FISHINGSPOOL_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_FISHINGSPOOL_DESCRIPTION";
         picture = QPATHTOF(data\icons\fishingspool.paa);
@@ -64,7 +64,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_personalgeigernobattery: Misery_ItemCore {
+    class CLASS(PersonalGeigerNoBattery): CLASS(ItemCore) {
         displayName = "$STR_MISERY_PERSONALGEIGERNOBATTERY_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_PERSONALGEIGERNOBATTERY_DESCRIPTION";
         picture = QPATHTOF(data\icons\personalgeigernobattery.paa);
@@ -77,7 +77,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Headlamp_NB: Misery_ItemCore {
+    class CLASS(Headlamp_NB): CLASS(ItemCore) {
         displayName = "$STR_MISERY_HEADLAMP_NB_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_HEADLAMP_NB_DESCRIPTION";
         picture = QPATHTOF(data\icons\headlamp.paa);
@@ -89,7 +89,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Clozapine: Misery_ItemCore {
+    class CLASS(Clozapine): CLASS(ItemCore) {
         displayName = "$STR_MISERY_CLOZAPINE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_CLOZAPINE_DESCRIPTION";
         picture = QPATHTOF(data\icons\Clozapineinjection.paa);
@@ -101,7 +101,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_cocaine: Misery_ItemCore {
+    class CLASS(Cocaine): CLASS(ItemCore) {
         displayName = "$STR_MISERY_COCAINE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_COCAINE_DESCRIPTION";
         picture = QPATHTOF(data\icons\cocaine.paa);
@@ -113,7 +113,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Thrombomodulin: Misery_ItemCore {
+    class CLASS(Thrombomodulin): CLASS(ItemCore) {
         displayName = "$STR_MISERY_THROMBOMODULIN_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_THROMBOMODULIN_DESCRIPTION";
         picture = QPATHTOF(data\icons\Thbd.paa);
@@ -126,7 +126,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_ThrombomodulinStimpack: Misery_ItemCore {
+    class CLASS(ThrombomodulinStimpack): CLASS(ItemCore) {
         displayName = "$STR_MISERY_THROMBOMODULINSTIMPACK_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_THROMBOMODULINSTIMPACK_DESCRIPTION";
         picture = QPATHTOF(data\icons\Thbdstim.paa);
@@ -139,7 +139,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_randommedication: Misery_ItemCore {
+    class CLASS(RandomMedication): CLASS(ItemCore) {
         displayName = "$STR_MISERY_RANDOMMEDICATION_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_RANDOMMEDICATION_DESCRIPTION";
         picture = QPATHTOF(data\icons\medication.paa);
@@ -151,7 +151,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_fishhook: Misery_ItemCore {
+    class CLASS(Fishhook): CLASS(ItemCore) {
         displayName = "$STR_MISERY_FISHHOOK_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_FISHHOOK_DESCRIPTION";
         picture = QPATHTOF(data\icons\fishhook.paa);
@@ -165,7 +165,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_worms: Misery_ItemCore {
+    class CLASS(Worms): CLASS(ItemCore) {
         displayName = "$STR_MISERY_WORMS_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_WORMS_DESCRIPTION";
         picture = QPATHTOF(data\icons\worms.paa);
@@ -177,7 +177,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_lithiumbattery: Misery_ItemCore {
+    class CLASS(LithiumBattery): CLASS(ItemCore) {
         displayName = "$STR_MISERY_LITHIUMBATTERY_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_LITHIUMBATTERY_DESCRIPTION";
         picture = QPATHTOF(data\icons\NitecoreBATT.paa);
@@ -189,7 +189,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Bearenergy: Misery_ItemCore {
+    class CLASS(BearEnergy): CLASS(ItemCore) {
         displayName = "$STR_MISERY_BEARENERGY_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_BEARENERGY_DESCRIPTION";
         picture = QPATHTOF(data\icons\Bearstrength.paa);
@@ -202,7 +202,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_SodaCan: Misery_ItemCore {
+    class CLASS(SodaCan): CLASS(ItemCore) {
         displayName = "$STR_MISERY_BEARENERGY_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_BEARENERGY_DESCRIPTION";
         picture = QPATHTOF(data\icons\Bearstrength.paa);
@@ -215,7 +215,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_CanOpener: Misery_ItemCore {
+    class CLASS(CanOpener): CLASS(ItemCore) {
         displayName = "$STR_MISERY_CANOPENER_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_CANOPENER_DESCRIPTION";
         picture = QPATHTOF(data\icons\canOpener.paa);
@@ -228,7 +228,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_CanteenEmpty: Misery_ItemCore {
+    class CLASS(CanteenEmpty): CLASS(ItemCore) {
         scope = 2;
         author = "TenuredCLOUD";
         displayName = "$STR_MISERY_CANTEENEMPTY_DISPLAYNAME";
@@ -241,7 +241,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_WaterBottleEmpty: Misery_ItemCore {
+    class CLASS(WaterBottleEmpty): CLASS(ItemCore) {
         scope = 2;
         author = "TenuredCLOUD";
         displayName = "$STR_MISERY_WATERBOTTLEEMPTY_DISPLAYNAME";
@@ -254,7 +254,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Cereal: Misery_ItemCore {
+    class CLASS(Cereal): CLASS(ItemCore) {
         displayName = "$STR_MISERY_BEARENERGY_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_BEARENERGY_DESCRIPTION";
         picture = QPATHTOF(data\icons\cereal.paa);
@@ -267,7 +267,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Orange: Misery_ItemCore {
+    class CLASS(Orange): CLASS(ItemCore) {
         displayName = "$STR_MISERY_BEARENERGY_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_BEARENERGY_DESCRIPTION";
         picture = QPATHTOF(data\icons\orange.paa);
@@ -280,7 +280,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Drymilk: Misery_ItemCore {
+    class CLASS(DryMilk): CLASS(ItemCore) {
         displayName = "$STR_MISERY_BEARENERGY_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_BEARENERGY_DESCRIPTION";
         picture = QPATHTOF(data\icons\drymilk.paa);
@@ -293,7 +293,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_CannedBacon: Misery_ItemCore {
+    class CLASS(CannedBacon): CLASS(ItemCore) {
         displayName = "$STR_MISERY_BEARENERGY_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_BEARENERGY_DESCRIPTION";
         picture = QPATHTOF(data\icons\CannedBacon.paa);
@@ -306,7 +306,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_CannedBeans: Misery_ItemCore {
+    class CLASS(CannedBeans): CLASS(ItemCore) {
         displayName = "$STR_MISERY_BEARENERGY_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_BEARENERGY_DESCRIPTION";
         picture = QPATHTOF(data\icons\CannedBeans.paa);
@@ -319,7 +319,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_leadcontaineropen: Misery_ItemCore {
+    class CLASS(LeadContainerOpen): CLASS(ItemCore) {
         displayName = "$STR_MISERY_LEADCONTAINEROPEN_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_LEADCONTAINEROPEN_DESCRIPTION";
         picture = QPATHTOF(data\icons\artifactcontaineropen.paa);
@@ -332,7 +332,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_leadcontainerclosed: Misery_ItemCore {
+    class CLASS(LeadContainerClosed): CLASS(ItemCore) {
         displayName = "$STR_MISERY_LEADCONTAINERCLOSED_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_LEADCONTAINERCLOSED_DESCRIPTION";
         picture = QPATHTOF(data\icons\artifactcontaineropen.paa);
@@ -345,7 +345,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_artifact01: Misery_ItemCore {
+    class CLASS(artifact01): CLASS(ItemCore) {
         displayName = "$STR_MISERY_ARTIFACT_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_ARTIFACT_DESCRIPTION";
         picture = QPATHTOF(data\icons\Artifact01.paa);
@@ -358,7 +358,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_artifact02: Misery_ItemCore {
+    class CLASS(artifact02): CLASS(ItemCore) {
         displayName = "$STR_MISERY_ARTIFACT_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_ARTIFACT_DESCRIPTION";
         picture = QPATHTOF(data\icons\Artifact02.paa);
@@ -371,7 +371,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_artifact03: Misery_ItemCore {
+    class CLASS(artifact03): CLASS(ItemCore) {
         displayName = "$STR_MISERY_ARTIFACT_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_ARTIFACT_DESCRIPTION";
         picture = QPATHTOF(data\icons\Artifact03.paa);
@@ -384,7 +384,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_artifact04: Misery_ItemCore {
+    class CLASS(artifact04): CLASS(ItemCore) {
         displayName = "$STR_MISERY_ARTIFACT_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_ARTIFACT_DESCRIPTION";
         picture = QPATHTOF(data\icons\Artifact04.paa);
@@ -397,7 +397,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_artifact05: Misery_ItemCore {
+    class CLASS(artifact05): CLASS(ItemCore) {
         displayName = "$STR_MISERY_ARTIFACT_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_ARTIFACT_DESCRIPTION";
         picture = QPATHTOF(data\icons\Artifact05.paa);
@@ -410,7 +410,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_artifact06: Misery_ItemCore {
+    class CLASS(artifact06): CLASS(ItemCore) {
         displayName = "$STR_MISERY_ARTIFACT_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_ARTIFACT_DESCRIPTION";
         picture = QPATHTOF(data\icons\Artifact06.paa);
@@ -423,7 +423,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_artifact07: Misery_ItemCore {
+    class CLASS(artifact07): CLASS(ItemCore) {
         displayName = "$STR_MISERY_ARTIFACT_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_ARTIFACT_DESCRIPTION";
         picture = QPATHTOF(data\icons\Artifact07.paa);
@@ -436,7 +436,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_artifact08: Misery_ItemCore {
+    class CLASS(artifact08): CLASS(ItemCore) {
         displayName = "$STR_MISERY_ARTIFACT_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_ARTIFACT_DESCRIPTION";
         picture = QPATHTOF(data\icons\Artifact08.paa);
@@ -449,7 +449,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_artifact09: Misery_ItemCore {
+    class CLASS(artifact09): CLASS(ItemCore) {
         displayName = "$STR_MISERY_ARTIFACT_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_ARTIFACT_DESCRIPTION";
         picture = QPATHTOF(data\icons\Artifact09.paa);
@@ -462,7 +462,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_artifact10: Misery_ItemCore {
+    class CLASS(artifact10): CLASS(ItemCore) {
         displayName = "$STR_MISERY_ARTIFACT_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_ARTIFACT_DESCRIPTION";
         picture = QPATHTOF(data\icons\Artifact10.paa);
@@ -475,7 +475,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Heatpack: Misery_ItemCore {
+    class CLASS(Heatpack): CLASS(ItemCore) {
         displayName = "$STR_MISERY_HEATPACK_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_HEATPACK_DESCRIPTION";
         picture = QPATHTOF(data\icons\hotpack.paa);
@@ -488,7 +488,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Coldpack: Misery_ItemCore {
+    class CLASS(Coldpack): CLASS(ItemCore) {
         displayName = "$STR_MISERY_COLDPACK_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_COLDPACK_DESCRIPTION";
         picture = QPATHTOF(data\icons\coldpack.paa);
@@ -500,7 +500,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_WaterJerryE: Misery_ItemCore {
+    class CLASS(WaterJerryE): CLASS(ItemCore) {
         displayName = "$STR_MISERY_WATERJERRYE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_WATERJERRYE_DESCRIPTION";
         picture = QPATHTOF(data\icons\CanisterWater.paa);
@@ -513,7 +513,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_castironpot: Misery_ItemCore {
+    class CLASS(CastIronPot): CLASS(ItemCore) {
         displayName = "$STR_MISERY_CASTIRONPOT_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_CASTIRONPOT_DESCRIPTION";
         picture = QPATHTOF(data\icons\castironpot.paa);
@@ -527,7 +527,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_cookedfish: Misery_ItemCore {
+    class CLASS(CookedFish): CLASS(ItemCore) {
         displayName = "$STR_MISERY_COOKEDFISH_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_COOKEDFISH_DESCRIPTION";
         picture = QPATHTOF(data\icons\cookedfish.paa);
@@ -540,7 +540,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_rawfish_1: Misery_ItemCore {
+    class CLASS(RawFish): CLASS(ItemCore) {
         displayName = "$STR_MISERY_RAWFISH_1_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_RAWFISH_1_DESCRIPTION";
         picture = QPATHTOF(data\icons\rawfish.paa);
@@ -553,7 +553,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_cookedmeat: Misery_ItemCore {
+    class CLASS(CookedMeat): CLASS(ItemCore) {
         displayName = "Cooked Meat";
         descriptionShort = "Meat that's been cooked";
         picture = QPATHTOF(data\icons\cookedmeat.paa);
@@ -566,7 +566,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_rawmeat_1: Misery_ItemCore {
+    class CLASS(RawMeat): CLASS(ItemCore) {
         displayName = "Raw Meat";
         descriptionShort = "Raw meat, needs to be cooked";
         picture = QPATHTOF(data\icons\rawmeat.paa);
@@ -579,7 +579,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_guitar: Misery_ItemCore {
+    class CLASS(Guitar): CLASS(ItemCore) {
         displayName = "$STR_MISERY_GUITAR_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_GUITAR_DESCRIPTION";
         picture = QPATHTOF(data\icons\guitar.paa);
@@ -592,7 +592,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_coffeemug: Misery_ItemCore {
+    class CLASS(CoffeeMug): CLASS(ItemCore) {
         displayName = "$STR_MISERY_COFFEEMUG_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_COFFEEMUG_DESCRIPTION";
         picture = QPATHTOF(data\icons\coffeemug.paa);
@@ -604,7 +604,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_coffeebrewed: Misery_ItemCore {
+    class CLASS(CoffeeBrewed): CLASS(ItemCore) {
         displayName = "$STR_MISERY_COFFEEBREWED_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_COFFEEBREWED_DESCRIPTION";
         picture = QPATHTOF(data\icons\coffeebrewed.paa);
@@ -616,7 +616,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_gasmaskempty: Misery_ItemCore {
+    class CLASS(GasMaskEmpty): CLASS(ItemCore) {
         displayName = "$STR_MISERY_GASMASKEMPTY_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_GASMASKEMPTY_DESCRIPTION";
         picture = QPATHTOF(data\icons\gasmask.paa);
@@ -627,7 +627,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_gascartridge: Misery_ItemCore {
+    class CLASS(GasCartridge): CLASS(ItemCore) {
         displayName = "$STR_MISERY_GASCARTRIDGE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_GASCARTRIDGE_DESCRIPTION";
         picture = QPATHTOF(data\icons\maskcartridges.paa);
@@ -639,7 +639,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_18vbat: Misery_ItemCore {
+    class CLASS(18vBattery): CLASS(ItemCore) {
         displayName = "$STR_MISERY_18VBAT_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_18VBAT_DESCRIPTION";
         picture = QPATHTOF(data\icons\18vbat.paa);
@@ -651,7 +651,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Ducttape: Misery_ItemCore {
+    class CLASS(DuctTape): CLASS(ItemCore) {
         displayName = "$STR_MISERY_DUCTTAPE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_DUCTTAPE_DESCRIPTION";
         picture = QPATHTOF(data\icons\ducttape.paa);
@@ -664,7 +664,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Pscrewdriver: Misery_ItemCore {
+    class CLASS(PhillipsScrewdriver): CLASS(ItemCore) {
         displayName = "$STR_MISERY_PSCREWDRIVER_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_PSCREWDRIVER_DESCRIPTION";
         picture = QPATHTOF(data\icons\phillips.paa);
@@ -677,7 +677,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Fscrewdriver: Misery_ItemCore {
+    class CLASS(FlatheadScrewdriver): CLASS(ItemCore) {
         displayName = "$STR_MISERY_FSCREWDRIVER_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_FSCREWDRIVER_DESCRIPTION";
         picture = QPATHTOF(data\icons\flathead.paa);
@@ -690,7 +690,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_pliers: Misery_ItemCore {
+    class CLASS(Pliers): CLASS(ItemCore) {
         displayName = "$STR_MISERY_PLIERS_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_PLIERS_DESCRIPTION";
         picture = QPATHTOF(data\icons\pliers.paa);
@@ -703,7 +703,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_camonet: Misery_ItemCore {
+    class CLASS(CamoNet): CLASS(ItemCore) {
         displayName = "$STR_MISERY_CAMONET_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_CAMONET_DESCRIPTION";
         picture = QPATHTOF(data\icons\camonet.paa);
@@ -716,7 +716,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_9vbat: Misery_ItemCore {
+    class CLASS(9vBattery): CLASS(ItemCore) {
         displayName = "$STR_MISERY_9VBAT_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_9VBAT_DESCRIPTION";
         picture = QPATHTOF(data\icons\9Vbat.paa);
@@ -728,7 +728,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_CoppWire: Misery_ItemCore {
+    class CLASS(CopperWire): CLASS(ItemCore) {
         displayName = "$STR_MISERY_COPPWIRE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_COPPWIRE_DESCRIPTION";
         picture = QPATHTOF(data\icons\copperwire.paa);
@@ -741,7 +741,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Rope: Misery_ItemCore {
+    class CLASS(Rope): CLASS(ItemCore) {
         displayName = "$STR_MISERY_ROPE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_ROPE_DESCRIPTION";
         picture = QPATHTOF(data\icons\rope.paa);
@@ -753,7 +753,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Needlethread: Misery_ItemCore {
+    class CLASS(NeedleThread): CLASS(ItemCore) {
         displayName = "$STR_MISERY_NEEDLETHREAD_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_NEEDLETHREAD_DESCRIPTION";
         picture = QPATHTOF(data\icons\needlethread.paa);
@@ -765,7 +765,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_circuitboard: Misery_ItemCore {
+    class CLASS(CircuitBoard): CLASS(ItemCore) {
         displayName = "$STR_MISERY_CIRCUITBOARD_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_CIRCUITBOARD_DESCRIPTION";
         picture = QPATHTOF(data\icons\CircutBoard.paa);
@@ -777,7 +777,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_DeadGeiger: Misery_ItemCore {
+    class CLASS(DeadGeiger): CLASS(ItemCore) {
         displayName = "$STR_MISERY_DEADGEIGER_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_DEADGEIGER_DESCRIPTION";
         picture = QPATHTOF(data\icons\DeadGeiger.paa);
@@ -789,7 +789,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_DragonVase: Misery_ItemCore {
+    class CLASS(DragonVase): CLASS(ItemCore) {
         displayName = "$STR_MISERY_DRAGONVASE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_DRAGONVASE_DESCRIPTION";
         picture = QPATHTOF(data\icons\DragonVase.paa);
@@ -801,7 +801,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Matryoshka: Misery_ItemCore {
+    class CLASS(Matryoshka): CLASS(ItemCore) {
         displayName = "$STR_MISERY_MATRYOSHKA_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_MATRYOSHKA_DESCRIPTION";
         picture = QPATHTOF(data\icons\Matryoshka.paa);
@@ -813,7 +813,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_OldWatch: Misery_ItemCore {
+    class CLASS(OldWatch): CLASS(ItemCore) {
         displayName = "$STR_MISERY_OLDWATCH_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_OLDWATCH_DESCRIPTION";
         picture = QPATHTOF(data\icons\OldWatch.paa);
@@ -825,7 +825,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Phone: Misery_ItemCore {
+    class CLASS(Phone): CLASS(ItemCore) {
         displayName = "$STR_MISERY_PHONE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_PHONE_DESCRIPTION";
         picture = QPATHTOF(data\icons\Phone.paa);
@@ -837,7 +837,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Photos: Misery_ItemCore {
+    class CLASS(Photos): CLASS(ItemCore) {
         displayName = "$STR_MISERY_PHOTOS_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_PHOTOS_DESCRIPTION";
         picture = QPATHTOF(data\icons\Photos.paa);
@@ -850,7 +850,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_ToySoldier: Misery_ItemCore {
+    class CLASS(ToySoldier): CLASS(ItemCore) {
         displayName = "$STR_MISERY_TOYSOLDIER_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_TOYSOLDIER_DESCRIPTION";
         picture = QPATHTOF(data\icons\ToySoldier.paa);
@@ -862,7 +862,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_VintageShipBottle: Misery_ItemCore {
+    class CLASS(VintageShipBottle): CLASS(ItemCore) {
         displayName = "$STR_MISERY_VINTAGESHIPBOTTLE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_VINTAGESHIPBOTTLE_DESCRIPTION";
         picture = QPATHTOF(data\icons\VintageShipBottle.paa);
@@ -874,7 +874,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_zombiehead: Misery_ItemCore {
+    class CLASS(ZombieHead): CLASS(ItemCore) {
         displayName = "$STR_MISERY_ZOMBIEHEAD_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_ZOMBIEHEAD_DESCRIPTION";
         picture = QPATHTOF(data\icons\head.paa);
@@ -886,7 +886,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_zombiehand: Misery_ItemCore {
+    class CLASS(ZombieHand): CLASS(ItemCore) {
         displayName = "$STR_MISERY_ZOMBIEHAND_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_ZOMBIEHAND_DESCRIPTION";
         picture = QPATHTOF(data\icons\hand.paa);
@@ -898,7 +898,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Zombieeye: Misery_ItemCore {
+    class CLASS(ZombieEye): CLASS(ItemCore) {
         displayName = "$STR_MISERY_ZOMBIEEYE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_ZOMBIEEYE_DESCRIPTION";
         picture = QPATHTOF(data\icons\eye.paa);
@@ -910,7 +910,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Zombiefoot: Misery_ItemCore {
+    class CLASS(ZombieFoot): CLASS(ItemCore) {
         displayName = "$STR_MISERY_ZOMBIEFOOT_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_ZOMBIEFOOT_DESCRIPTION";
         picture = QPATHTOF(data\icons\foot.paa);
@@ -922,7 +922,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Zombiebrain: Misery_ItemCore {
+    class CLASS(ZombieBrain): CLASS(ItemCore) {
         displayName = "$STR_MISERY_ZOMBIEBRAIN_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_ZOMBIEBRAIN_DESCRIPTION";
         picture = QPATHTOF(data\icons\brain.paa);
@@ -934,7 +934,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Zombieskin: Misery_ItemCore {
+    class CLASS(ZombieSkin): CLASS(ItemCore) {
         displayName = "$STR_MISERY_ZOMBIESKIN_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_ZOMBIESKIN_DESCRIPTION";
         picture = QPATHTOF(data\icons\skin.paa);
@@ -946,7 +946,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_BONEsaw: Misery_ItemCore {
+    class CLASS(BoneSaw): CLASS(ItemCore) {
         displayName = "$STR_MISERY_BONESAW_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_BONESAW_DESCRIPTION";
         picture = QPATHTOF(data\icons\hacksaw.paa);
@@ -959,7 +959,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_GuttingKnife: Misery_ItemCore {
+    class CLASS(GuttingKnife): CLASS(ItemCore) {
         displayName = "$STR_MISERY_GUTTINGKNIFE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_GUTTINGKNIFE_DESCRIPTION";
         picture = QPATHTOF(data\icons\GuttingKnife.paa);
@@ -971,7 +971,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Woodaxe: Misery_ItemCore {
+    class CLASS(Woodaxe): CLASS(ItemCore) {
         displayName = "$STR_MISERY_WOODAXE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_WOODAXE_DESCRIPTION";
         picture = QPATHTOF(data\icons\Woodaxe.paa);
@@ -984,7 +984,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Sledghammer: Misery_ItemCore {
+    class CLASS(Sledgehammer): CLASS(ItemCore) {
         displayName = "$STR_MISERY_SLEDGHAMMER_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_SLEDGHAMMER_DESCRIPTION";
         picture = QPATHTOF(data\icons\sledgehammer.paa);
@@ -997,7 +997,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_tinder: Misery_ItemCore {
+    class CLASS(Tinder): CLASS(ItemCore) {
         displayName = "$STR_MISERY_TINDER_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_TINDER_DESCRIPTION";
         picture = QPATHTOF(data\icons\tinder.paa);
@@ -1009,7 +1009,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_CBRNparts: Misery_ItemCore {
+    class CLASS(CBRNparts): CLASS(ItemCore) {
         displayName = "$STR_MISERY_CBRNPARTS_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_CBRNPARTS_DESCRIPTION";
         picture = QPATHTOF(data\icons\CBRN_Parts.paa);
@@ -1022,7 +1022,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Chainsawempty: Misery_ItemCore {
+    class CLASS(ChainsawEmpty): CLASS(ItemCore) {
         displayName = "$STR_MISERY_CHAINSAWEMPTY_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_CHAINSAWEMPTY_DESCRIPTION";
         picture = QPATHTOF(data\icons\chainsaw.paa);
@@ -1035,7 +1035,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_woodplank: Misery_ItemCore {
+    class CLASS(Woodplank): CLASS(ItemCore) {
         displayName = "$STR_MISERY_WOODPLANK_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_WOODPLANK_DESCRIPTION";
         picture = QPATHTOF(data\icons\woodplank.paa);
@@ -1048,7 +1048,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_woodnail: Misery_ItemCore {
+    class CLASS(Woodnail): CLASS(ItemCore) {
         displayName = "$STR_MISERY_WOODNAIL_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_WOODNAIL_DESCRIPTION";
         picture = QPATHTOF(data\icons\Woodnail.paa);
@@ -1060,7 +1060,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_woodensticks: Misery_ItemCore {
+    class CLASS(Woodensticks): CLASS(ItemCore) {
         displayName = "$STR_MISERY_WOODENSTICKS_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_WOODENSTICKS_DESCRIPTION";
         picture = QPATHTOF(data\icons\woodsticks.paa);
@@ -1073,7 +1073,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_firewood: Misery_ItemCore {
+    class CLASS(Firewood): CLASS(ItemCore) {
         displayName = "$STR_MISERY_FIREWOOD_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_FIREWOOD_DESCRIPTION";
         picture = QPATHTOF(data\icons\firewood.paa);
@@ -1086,7 +1086,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_woodenlog: Misery_ItemCore {
+    class CLASS(Woodenlog): CLASS(ItemCore) {
         displayName = "$STR_MISERY_WOODENLOG_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_WOODENLOG_DESCRIPTION";
         picture = QPATHTOF(data\icons\woodenlog.paa);
@@ -1099,7 +1099,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_boxnails: Misery_ItemCore {
+    class CLASS(BoxNails): CLASS(ItemCore) {
         displayName = "$STR_MISERY_BOXNAILS_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_BOXNAILS_DESCRIPTION";
         picture = QPATHTOF(data\icons\boxnails.paa);
@@ -1111,7 +1111,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_craftinghammer: Misery_ItemCore {
+    class CLASS(CraftingHammer): CLASS(ItemCore) {
         displayName = "$STR_MISERY_CRAFTINGHAMMER_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_CRAFTINGHAMMER_DESCRIPTION";
         picture = QPATHTOF(data\icons\craftinghammer.paa);
@@ -1124,7 +1124,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Anvilhammer: Misery_ItemCore {
+    class CLASS(AnvilHammer): CLASS(ItemCore) {
         displayName = "$STR_MISERY_ANVILHAMMER_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_ANVILHAMMER_DESCRIPTION";
         picture = QPATHTOF(data\icons\anvilhammer.paa);
@@ -1137,7 +1137,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_electrichandsawnobattery: Misery_ItemCore {
+    class CLASS(ElectricHandSawNoBattery): CLASS(ItemCore) {
         displayName = "$STR_MISERY_ELECTRICHANDSAWNOBATTERY_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_ELECTRICHANDSAWNOBATTERY_DESCRIPTION";
         picture = QPATHTOF(data\icons\ElectricHandCircularSaw.paa);
@@ -1149,7 +1149,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_wrench: Misery_ItemCore {
+    class CLASS(Wrench): CLASS(ItemCore) {
         displayName = "$STR_MISERY_WRENCH_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_WRENCH_DESCRIPTION";
         picture = QPATHTOF(data\icons\wrench.paa);
@@ -1162,7 +1162,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_glucose: Misery_ItemCore {
+    class CLASS(Glucose): CLASS(ItemCore) {
         displayName = "$STR_MISERY_GLUCOSE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_GLUCOSE_DESCRIPTION";
         picture = QPATHTOF(data\icons\Glucose.paa);
@@ -1175,7 +1175,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_electrolyte: Misery_ItemCore {
+    class CLASS(Electrolyte): CLASS(ItemCore) {
         displayName = "$STR_MISERY_ELECTROLYTE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_ELECTROLYTE_DESCRIPTION";
         picture = QPATHTOF(data\icons\Electrolyte.paa);
@@ -1188,7 +1188,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_ERU_NB: Misery_ItemCore {
+    class CLASS(ERU_NB): CLASS(ItemCore) {
         displayName = "$STR_MISERY_ERU_NB_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_ERU_NB_DESCRIPTION";
         picture = QPATHTOF(data\icons\ERU_OFF.paa);
@@ -1200,7 +1200,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_EmptyJet: Misery_ItemCore {
+    class CLASS(EmptyJet): CLASS(ItemCore) {
         displayName = "$STR_MISERY_EMPTYJET_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_EMPTYJET_DESCRIPTION";
         picture = QPATHTOF(data\icons\CanisterJetFuel.paa);
@@ -1213,7 +1213,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_EmptyDiesel: Misery_ItemCore {
+    class CLASS(EmptyDiesel): CLASS(ItemCore) {
         displayName = "$STR_MISERY_EMPTYDIESEL_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_EMPTYDIESEL_DESCRIPTION";
         picture = QPATHTOF(data\icons\CanisterDiesel.paa);
@@ -1226,7 +1226,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_EmptyPetrol: Misery_ItemCore {
+    class CLASS(EmptyPetrol): CLASS(ItemCore) {
         displayName = "$STR_MISERY_EMPTYPETROL_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_EMPTYPETROL_DESCRIPTION";
         picture = QPATHTOF(data\icons\CanisterPetrol.paa);
@@ -1239,7 +1239,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Stonechunk: Misery_ItemCore {
+    class CLASS(StoneChunk): CLASS(ItemCore) {
         displayName = "$STR_MISERY_STONECHUNK_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_STONECHUNK_DESCRIPTION";
         picture = QPATHTOF(data\icons\stonepieces.paa);
@@ -1251,7 +1251,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Ironingot: Misery_ItemCore {
+    class CLASS(IronIngot): CLASS(ItemCore) {
         displayName = "$STR_MISERY_IRONINGOT_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_IRONINGOT_DESCRIPTION";
         picture = QPATHTOF(data\icons\ironingot.paa);
@@ -1263,7 +1263,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Ironore: Misery_ItemCore {
+    class CLASS(IronOre): CLASS(ItemCore) {
         displayName = "$STR_MISERY_IRONORE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_IRONORE_DESCRIPTION";
         picture = QPATHTOF(data\icons\ironore.paa);
@@ -1275,7 +1275,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Ironpiece: Misery_ItemCore {
+    class CLASS(IronPiece): CLASS(ItemCore) {
         displayName = "$STR_MISERY_IRONPIECE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_IRONPIECE_DESCRIPTION";
         picture = QPATHTOF(data\icons\ironpiece.paa);
@@ -1287,7 +1287,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Goldingot: Misery_ItemCore {
+    class CLASS(GoldIngot): CLASS(ItemCore) {
         displayName = "$STR_MISERY_GOLDINGOT_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_GOLDINGOT_DESCRIPTION";
         picture = QPATHTOF(data\icons\goldingot.paa);
@@ -1299,7 +1299,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Goldore: Misery_ItemCore {
+    class CLASS(GoldOre): CLASS(ItemCore) {
         displayName = "$STR_MISERY_GOLDORE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_GOLDORE_DESCRIPTION";
         picture = QPATHTOF(data\icons\goldore.paa);
@@ -1311,7 +1311,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Goldpiece: Misery_ItemCore {
+    class CLASS(GoldPiece): CLASS(ItemCore) {
         displayName = "$STR_MISERY_GOLDPIECE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_GOLDPIECE_DESCRIPTION";
         picture = QPATHTOF(data\icons\goldpiece.paa);
@@ -1323,7 +1323,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Coalore: Misery_ItemCore {
+    class CLASS(CoalOre): CLASS(ItemCore) {
         displayName = "$STR_MISERY_COALORE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_COALORE_DESCRIPTION";
         picture = QPATHTOF(data\icons\coalore.paa);
@@ -1335,7 +1335,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Malachite: Misery_ItemCore {
+    class CLASS(Malachite): CLASS(ItemCore) {
         displayName = "$STR_MISERY_MALACHITE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_MALACHITE_DESCRIPTION";
         picture = QPATHTOF(data\icons\malachite.paa);
@@ -1347,7 +1347,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Ruby: Misery_ItemCore {
+    class CLASS(Ruby): CLASS(ItemCore) {
         displayName = "$STR_MISERY_RUBY_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_RUBY_DESCRIPTION";
         picture = QPATHTOF(data\icons\ruby.paa);
@@ -1359,7 +1359,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Sapphire: Misery_ItemCore {
+    class CLASS(Sapphire): CLASS(ItemCore) {
         displayName = "$STR_MISERY_SAPPHIRE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_SAPPHIRE_DESCRIPTION";
         picture = QPATHTOF(data\icons\sapphire.paa);
@@ -1371,7 +1371,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Amethyst: Misery_ItemCore {
+    class CLASS(Amethyst): CLASS(ItemCore) {
         displayName = "$STR_MISERY_AMETHYST_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_AMETHYST_DESCRIPTION";
         picture = QPATHTOF(data\icons\amethyst.paa);
@@ -1383,7 +1383,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Diamond: Misery_ItemCore {
+    class CLASS(Diamond): CLASS(ItemCore) {
         displayName = "$STR_MISERY_DIAMOND_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_DIAMOND_DESCRIPTION";
         picture = QPATHTOF(data\icons\diamond.paa);
@@ -1395,7 +1395,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_Emerald: Misery_ItemCore {
+    class CLASS(Emerald): CLASS(ItemCore) {
         displayName = "$STR_MISERY_EMERALD_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_EMERALD_DESCRIPTION";
         picture = QPATHTOF(data\icons\emerald.paa);
@@ -1407,7 +1407,7 @@ class CfgWeapons {
         };
     };
 
-    class Misery_RFHighNobattery: Misery_ItemCore {
+    class CLASS(RFHighNoBattery): CLASS(ItemCore) {
         displayName = "$STR_MISERY_RFHIGHNOBATTERY_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_RFHIGHNOBATTERY_DESCRIPTION";
         picture = QPATHTOF(data\icons\EMFdetectorhighrangenobattery.paa);
