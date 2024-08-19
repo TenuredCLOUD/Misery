@@ -14,3 +14,30 @@
 #endif
 
 #include "\z\misery\addons\main\script_macros.hpp"
+
+#define CLASS(var1) DOUBLES(PREFIX,var1)
+#define QCLASS(var1) QUOTE(DOUBLES(PREFIX,var1))
+
+#define MACRO_ITEM_COMMON \
+        author = "TenuredCLOUD"; \
+        scope = 2; \
+        scopeCurator = 2; \
+        vehicleClass = QCLASS(Objects); \
+        mapSize = 0.25
+
+#define MACRO_HOUSE_COMMON \
+        scope = 2; \
+        scopeCurator = 2; \
+        numberOfDoors = 0; \
+        placement = "vertical"; \
+        destrType = "DestructNo"; \
+        cost = 0; \
+        vehicleClass = QCLASS(Objects)
+
+#define MACRO_ADDITEM(ITEM,COUNT) \
+    class TransportItems { \
+        class _xx_##ITEM { \
+            name = #ITEM; \
+            count = COUNT; \
+        }; \
+    }
