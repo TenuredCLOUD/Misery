@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-ERU UI
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * ERU ui
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_eru_fnc_main
+ *
 */
 
 disableSerialization;

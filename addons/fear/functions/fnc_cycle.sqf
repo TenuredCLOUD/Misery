@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery Fear cycle
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Fear cycle
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_fear_fnc_cycle
+ *
 */
 
 [{!(isNil {player getVariable "MiseryFear"}) && alive player},

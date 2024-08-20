@@ -5,10 +5,10 @@
  * Parses STRING values to inventory GUI when conditions return true
  *
  * Arguments:
- * 0: NONE
+ * None
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * [] call misery_actions_fnc_handleactions

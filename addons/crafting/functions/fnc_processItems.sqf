@@ -6,7 +6,7 @@
  * Takes inputs from GUI and process recipe (if it exists)
  *
  * Arguments:
- * 0: NONE
+ * None
  *
  * Return Value:
  * 0: BOOL 

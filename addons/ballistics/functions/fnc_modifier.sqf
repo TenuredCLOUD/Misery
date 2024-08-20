@@ -9,7 +9,7 @@
  * 1: safe ammunition that won't obliterate unit <ARRAY>
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * ["Rabbit_F", ["B_9x21_Ball", "B_12Gauge_Pellets"]] call misery_ballistics_fnc_modifier;

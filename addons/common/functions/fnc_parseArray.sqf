@@ -4,10 +4,10 @@
  * Basically parseSimpleArray but works whether there are brackets on the array or not. Designed for arrays of strings
  *
  * Arguments:
- * 0: NONE
+ * None
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * [] call misery_common_fnc_parseArray;

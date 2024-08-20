@@ -4,10 +4,10 @@
  * Crafting Framework Recipe Formatter
  *
  * Arguments:
- * 0: NONE
+ * None
  *
  * Return Value:
- * 0: NONE 
+ * None 
  *
  * Example:
  * [] call misery_crafting_fnc_showRecipe

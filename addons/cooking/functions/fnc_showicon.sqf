@@ -4,10 +4,10 @@
  * Cooking Framework Icon updater
  *
  * Arguments:
- * 0: NONE
+ * None
  *
  * Return Value:
- * 0: NONE 
+ * None 
  *
  * Example:
  * [] call misery_cooking_fnc_showIcon;

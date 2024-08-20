@@ -5,10 +5,10 @@
  * Returns all nearby tree terrain objects + checks if they are damaged
  *
  * Arguments:
- * 0: NONE
+ * None
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * [] call misery_common_fnc_nearTree;

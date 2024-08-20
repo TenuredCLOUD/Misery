@@ -4,10 +4,10 @@
  * Grabs surface postion of object
  *
  * Arguments:
- * 0: NONE
+ * None
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * _object setPos _pos;

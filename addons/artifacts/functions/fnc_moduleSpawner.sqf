@@ -10,7 +10,7 @@
  * 3: deletion timer check frequency in seconds <NUMBER>
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * [

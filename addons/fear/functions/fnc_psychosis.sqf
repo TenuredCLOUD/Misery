@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery Fear
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Psychosis emulation
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_fear_fnc_psychosis 
+ *
 */
 
 [{!(isNil {player getVariable "MiseryFear"}) && ((player getVariable ["MiseryFear", MACRO_PLAYER_FEAR]) >= 5)},

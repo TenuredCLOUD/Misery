@@ -8,7 +8,7 @@
  * 0: Object you want to have a bank interaction with <OBJECT>
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * [trader1] call misery_bank_fnc_generate;

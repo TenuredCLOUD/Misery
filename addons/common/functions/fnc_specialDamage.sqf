@@ -4,10 +4,10 @@
  * Damage modifier for player 
  *
  * Arguments:
- * 0: NONE
+ * None
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * [player,100] call misery_common_fnc_specialDamage;

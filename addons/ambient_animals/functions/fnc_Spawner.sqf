@@ -18,7 +18,7 @@
  * 11: Number of chickens spawned per cluster <ARRAY>
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * [] call misery_ambient_animals_fnc_Spawner;

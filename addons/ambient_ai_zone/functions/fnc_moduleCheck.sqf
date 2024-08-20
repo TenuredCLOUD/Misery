@@ -28,7 +28,7 @@
  * 20: Maximum spawn distance from module object for group <NUMBER>
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * [

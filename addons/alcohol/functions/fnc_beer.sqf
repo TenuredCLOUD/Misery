@@ -5,10 +5,10 @@
  * Simple function that changes fear values from alcohol consumption, and increases fatigue (tiredness)
  *
  * Arguments:
- * 0: NONE
+ * None
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * [] call misery_alcohol_fnc_beer

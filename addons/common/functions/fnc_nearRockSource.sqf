@@ -4,10 +4,10 @@
  * Check if player is looking at & near a "Rock source"
  *
  * Arguments:
- * 0: NONE
+ * None
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * [] call misery_common_fnc_nearRockSource;

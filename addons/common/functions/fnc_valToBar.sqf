@@ -7,7 +7,7 @@
  * 0: Value <NUMBER>
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * [_value] call misery_common_fnc_valToBar;

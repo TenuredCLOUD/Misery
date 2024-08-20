@@ -4,10 +4,10 @@
  * Knockout simulation for player
  *
  * Arguments:
- * 0: NONE
+ * None
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * [player, (1+(random 3))] call misery_common_fnc_stun;

@@ -9,7 +9,7 @@
  * 2: radius of module <NUMBER> 
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * [

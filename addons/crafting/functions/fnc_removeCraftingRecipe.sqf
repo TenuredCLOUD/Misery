@@ -7,7 +7,7 @@
  * 0: Recipe name to remove <STRING>
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * "rvg_guttingknife" call misery_crafting_fnc_removeCraftingRecipe

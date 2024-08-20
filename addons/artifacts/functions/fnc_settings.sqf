@@ -4,10 +4,10 @@
  * Module startup function (Artifact Spawner)
  *
  * Arguments:
- * 0: NONE
+ * None
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * [] call misery_artifacts_fnc_settings;

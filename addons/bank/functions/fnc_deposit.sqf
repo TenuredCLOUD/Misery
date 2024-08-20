@@ -4,10 +4,10 @@
  * Bank UI Deposit Processor
  *
  * Arguments:
- * 0: NONE
+ * None
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * [] call misery_bank_fnc_deposit;

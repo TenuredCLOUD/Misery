@@ -5,10 +5,10 @@
  * Consistenty checks players positions relative to module positions
  *
  * Arguments:
- * 0: NONE
+ * None
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * [] call misery_ambient_ai_fnc_moduleCheck;

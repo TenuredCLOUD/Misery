@@ -7,7 +7,7 @@
  * 0: Recipe name to remove <STRING>
  *
  * Return Value:
- * 0: NONE 
+ * None 
  *
  * Example:
  * "boiled_water" call misery_cooking_fnc_removeCookingRecipe

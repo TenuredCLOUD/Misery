@@ -1,3 +1,18 @@
+/*
+ * Author: TenuredCLOUD
+ * Near Spook
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_fear_fnc_nearSpook
+ *
+*/
+
 private _found;
 private _spookArray = [] + dsaSpookBases + dsaDevMutants + dsaWebknightCreatures;
 

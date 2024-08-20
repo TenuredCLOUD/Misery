@@ -1,4 +1,3 @@
-#include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
  * Near Phantom
@@ -10,7 +9,7 @@
  * None
  *
  * Example:
- * [] call misery_fear_fnc_nearPhantom
+ * [] call misery_fear_fnc_nearZed
  *
 */
 
@@ -18,7 +17,7 @@ private ["_found"];
 
 _found=false;
 
-if (count (player nearEntities [["myst_phantom_hidden_f","myst_phantom_naked_f"], 25]) > 0) then {
+if (count (player nearEntities [["zombie"], 25]) > 0) then {
   _found = true;
 
   if (_found)exitwith{};

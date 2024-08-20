@@ -13,7 +13,7 @@
  * 5: Max GLOBAL AI Groups allowed to be spawned at once <NUMBER>
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * [

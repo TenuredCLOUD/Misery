@@ -4,7 +4,7 @@
  * Crafting Framework List populater for Recipes
  *
  * Arguments:
- * 0: NONE
+ * None
  *
  * Return Value:
  * 0: Listed indexes for UI

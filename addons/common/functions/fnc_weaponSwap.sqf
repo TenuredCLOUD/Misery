@@ -10,7 +10,7 @@
  * 2: new weapon <STRING>
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * [player, "Misery_Woodaxe", "WBK_axe"] call misery_common_fnc_weaponSwap;

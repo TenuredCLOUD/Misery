@@ -5,10 +5,10 @@
  * Defines performance properties for each Ambient AI module
  *
  * Arguments:
- * 0: NONE
+ * None
  *
  * Return Value:
- * 0: NONE
+ * None
  *
  * Example:
  * [] call misery_ambient_ai_zone_fnc_moduleCheck;
