@@ -518,7 +518,7 @@ class CfgWeapons {
         descriptionShort = "$STR_MISERY_CASTIRONPOT_DESCRIPTION";
         picture = QPATHTOF(data\icons\castironpot.paa);
         model = QPATHTOF(data\models\CastIron_Pot.p3d);
-        hiddenSelectionsMaterials[] = {"\z\misery\addons\assets\data\models\ui\Iron.rvmat"};
+        hiddenSelectionsMaterials[] = {QPATHTOF(data\rvmats\iron.rvmat)};
         scope = 2;
         scopeCurator = 2;
 
