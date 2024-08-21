@@ -15,9 +15,6 @@
 
 #include "\z\misery\addons\main\script_macros.hpp"
 
-#define CLASS(var1) DOUBLES(PREFIX,var1)
-#define QCLASS(var1) QUOTE(DOUBLES(PREFIX,var1))
-
 #define MACRO_ITEM_COMMON \
         author = "TenuredCLOUD"; \
         scope = 2; \
