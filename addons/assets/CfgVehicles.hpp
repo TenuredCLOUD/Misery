@@ -75,22 +75,6 @@ class CfgVehicles {
         mapSize = 3;
         model = QPATHTOF(data\models\100kva_generator.p3d);
         textSingular = "100KVA Generator";
-
-        class UserActions {
-            class Start_100KVA {
-                condition = "alive this";
-                displayName = "Use Generator";
-                displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
-                hideOnUse = 1;
-                onlyForPlayer = 0;
-                position = "ScreenController01";
-                priority = 10;
-                radius = 1;
-                shortcut = "";
-                showWindow = 0;
-                statement = "[this] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Generator\Gen_Interact.sqf'";
-            };
-        };
     };
     class CLASS(HeavilyUsedGen_Gas): House_F {
         armor = 2000;
@@ -100,22 +84,6 @@ class CfgVehicles {
         mapSize = 3;
         model = QPATHTOF(data\models\used_gen_gas.p3d);
         textSingular = "Heavily used Genrator - Petrol";
-
-        class UserActions {
-            class Start_UsedGen_Gas {
-                condition = "alive this";
-                displayName = "Use Generator";
-                displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
-                hideOnUse = 1;
-                onlyForPlayer = 0;
-                position = "Interact01";
-                priority = 10;
-                radius = 1;
-                shortcut = "";
-                showWindow = 0;
-                statement = "[this] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Generator\Gen_Interact.sqf'";
-            };
-        };
     };
     class CLASS(HeavilyUsedGen_Diesel): House_F {
         armor = 2000;
@@ -125,21 +93,5 @@ class CfgVehicles {
         mapSize = 3;
         model = QPATHTOF(data\models\used_gen_diesel.p3d);
         textSingular = "Heavily used Generator - Diesel";
-
-        class UserActions {
-            class Start_UsedGen_Diesel {
-                condition = "alive this";
-                displayName = "Use Generator";
-                displayNameDefault = "<img image='\a3\missions_f_oldman\data\img\holdactions\holdAction_talk_ca.paa'/>";
-                hideOnUse = 1;
-                onlyForPlayer = 0;
-                position = "Interact01";
-                priority = 10;
-                radius = 1;
-                shortcut = "";
-                showWindow = 0;
-                statement = "[this] execVM '\z\misery\addons\framework\scripts\survival\functions\menus\Generator\Gen_Interact.sqf'";
-            };
-        };
     };
 };
