@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call misery_client_fnc_initializePlayer
+ * [] call misery_persistence_fnc_initializeNewPlayer
 */
 
 params [["_newSave", true]];

@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: MikeMF
- * Prevents combat logging, forcibly saves after countdown ends.
+ * Prevents combat logging, forcibly saves after countdown ends, will only run in Multiplayer.
  *
  * Arguments:
  * None
@@ -10,18 +10,16 @@
  * None
  *
  * Example:
- * [] call misery_savegame_fnc_combatLog
+ * [] call misery_persistence_fnc_combatLogPrevention
 */
+
+if (isMultiplayer) exitWith {};
 
 diag_log "[MISERY] - Combat log prevention active";
 
 (findDisplay 46) displayAddEventHandler ["KeyDown", {
     [{
         if (!isNull findDisplay 49) then {
-            /*
-            private _abortButton = (findDisplay 49) displayCtrl 104;
-            _abortButton ctrlEnable false;
-            */
             [{
                 ["_args", "_handle"];
                 _args params [["_iteration", 5], ["_time", 0]];

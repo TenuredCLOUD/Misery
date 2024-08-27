@@ -1,16 +1,16 @@
-#define COMPONENT client
-#define COMPONENT_BEAUTIFIED Client
+#define COMPONENT persistence
+#define COMPONENT_BEAUTIFIED Persistence
 #include "\z\misery\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
 
-#ifdef DEBUG_ENABLED_CLIENT
+#ifdef DEBUG_ENABLED_PERSISTENCE
     #define DEBUG_MODE_FULL
 #endif
 
-#ifdef DEBUG_SETTINGS_CLIENT
-    #define DEBUG_SETTINGS DEBUG_SETTINGS_CLIENT
+#ifdef DEBUG_SETTINGS_PERSISTENCE
+    #define DEBUG_SETTINGS DEBUG_SETTINGS_PERSISTENCE
 #endif
 
 #include "\z\misery\addons\main\script_macros.hpp"

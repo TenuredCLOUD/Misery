@@ -10,7 +10,7 @@
  * Player Data <ARRAY>
  *
  * Example:
- * [] call misery_client_fnc_serializePlayer
+ * [] call misery_persistence_fnc_serializeClient
 */
 
 /*
@@ -31,11 +31,23 @@ private _playerID = getPlayerUID player;
 
 private _loadout = getUnitLoadout player;
 private _position = getPosATL player;
+private _direction = getDir player;
+private _stance = stance player;
+private _damage = damage player;
+/*
+if ACE is loaded.
+private _aceDamage = [player] call ace_medical_fnc_serializeState;
+*/
+private _aceDamage = [];
 
 _playerData pushBack worldName;
 _playerData pushBack _playerID;
 _playerData pushBack _variables;
 _playerData pushBack _loadout;
 _playerData pushBack _position;
+_playerData pushBack _direction;
+_playerData pushBack _stance;
+_playerData pushBack _damage;
+_playerData pushBack _aceDamage;
 
 _playerData

@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: MikeMF
- * Loads player variables from profileNameSpace.
+ * Checks save for Single player
  *
  * Arguments:
  * None
@@ -10,11 +10,13 @@
  * None
  *
  * Example:
- * [] call misery_client_fnc_loadPlayerVariables
+ * [] call misery_persistence_fnc_checkSaveForSinglePlayer
 */
 
+// CONVERT TO BOOL RETURN, DOES EXIST OR NOT.
+
 // If save doesn't exist, blank slate.
-if (call EFUNC(savegame,checkSaveFile)) exitWith {
+if (call FUNC(savegame,checkSaveFile)) exitWith {
     diag_log "[MISERY] - Save File is blank, creating new player.";
     call FUNC(initializeNewPlayer)
 };
