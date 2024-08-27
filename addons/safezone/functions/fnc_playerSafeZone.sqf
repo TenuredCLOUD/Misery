@@ -17,7 +17,7 @@
 
 // Handle Damage
 player allowDamage false;
-player setVariable ["ace_medical_allowDamage", true, true];
+player setVariable ["ace_medical_allowDamage", false, true];
 
 private _index = player addEventHandler ["Fired", {
     params ["", "", "", "", "", "", "_projectile"];
@@ -35,7 +35,7 @@ player setVariable [QGVAR(index), _index];
 
     if (_leftSafeZone) exitWith {
         player allowDamage true;
-        player setVariable ["ace_medical_allowDamage", false, true];
+        player setVariable ["ace_medical_allowDamage", true, true];
 
         private _index = player getVariable [QGVAR(index), 0];
         player removeEventHandler ["Fired", _index];
