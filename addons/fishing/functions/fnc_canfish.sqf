@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Check player position relative to shoreline, water, or if they're on a watercraft
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Check player position relative to shoreline, water, or if they're on a watercraft
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * 0: BOOL
+ *
+ * Example:
+ * [] call misery_fishing_fnc_canFish
+ *
 */
 
 private ["_canfish","_isLookingAtWater","_overShore","_overWater"];

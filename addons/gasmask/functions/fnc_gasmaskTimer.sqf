@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
-/*
-Misery gasmask cartridge degradation
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * gasmask cartridge degradation
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_gasmask_fnc_gasmaskTimer
+ *
 */
 
 //If No Client data exists add default cartridge capacity:

@@ -1,8 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Temperature warming checks
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Temperature checks
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_temperature_fnc_effectiveTemperature;
+ *
+ * Public: No
 */
 
 private ["_clothesWarmth","_MPlayertemp","_MExposure","_MDebuffs","_nearfirecalc","_sicknearfirecalc","_insidewarmcalc","_sickinsidewarmcalc","_invehiclecalc","_sickinvehiclecalc"];

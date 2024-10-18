@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
-/*
-Misery Status UI for inventory framework
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * Status UI for inventory framework
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_invstat_fnc_status;
+ *
 */
 
 disableSerialization;

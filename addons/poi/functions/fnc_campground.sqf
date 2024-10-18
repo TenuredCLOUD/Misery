@@ -1,8 +1,18 @@
 #include "..\script_component.hpp"
 /*
-POI AI Generator (Campground)
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * POI AI Generator (Campground)
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_poi_fnc_campground;
+ *
+ * Public: No
 */
 
 private [

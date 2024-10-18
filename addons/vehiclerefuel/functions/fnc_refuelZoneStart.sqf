@@ -1,9 +1,19 @@
 #include "..\script_component.hpp"
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
-    Misery Refuel zone
-    Designed specifically for Misery mod
-    by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Refuel Processing
+ * Processes refueling as well as prompts and progress bar
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_vehiclerefuel_fnc_refuelZoneStart;
+ *
+ * Public: No
 */
 
 private ["_playercash","_module","_dialog","_PurchaseB","_ExitB","_Vehiclename","_target","_fuelCost","_Found","_totalLiters","_RefuelInterrupt","_playercash","_text","_displayedText","_delay"];

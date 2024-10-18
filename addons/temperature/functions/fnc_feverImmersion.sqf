@@ -1,11 +1,20 @@
 #include "..\script_component.hpp"
 /*
-Misery fever immersion
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * fever immersion
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_temperature_fnc_feverImmersion;
+ *
+ * Public: No
 */
 
-/*
 [{!(isNil {player getVariable "MiseryExposure"}) && ((player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE]) > 10)},
 {
 
@@ -41,4 +50,3 @@ by TenuredCLOUD
 
 }, 300, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;
-*/

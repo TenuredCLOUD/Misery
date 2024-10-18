@@ -1,7 +1,20 @@
 #include "..\script_component.hpp"
-//Digging for worms by: TenuredCLOUD v2.0
+/*
+ * Author: TenuredCLOUD
+ * Digging for worms
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_forage_fnc_digForWorms
+ *
+*/
 
-if (call EFUNC(common,Canforage)) then {
+if (call FUNC(forage,canForage)) then {
 
 player playActionNow "Crouch";
 sleep 0.5;

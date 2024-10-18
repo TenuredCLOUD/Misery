@@ -1,9 +1,17 @@
 #include "..\script_component.hpp"
-/*
-Headlamp Usage (Turning off)
-This function syncs to all client in a server environment
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * Headlamp Usage (Turning off)
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_headlamp_fnc_off
+ *
 */
 
 private _player = _this select 0;

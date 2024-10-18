@@ -1,9 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Resupply Vehicle Shop UI List populater
-Defines the selected purchase option, and passes current pricing values
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Resupply Vehicle Shop UI List populater
+ * Defines the selected purchase option, and passes current pricing values
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_vehiclerearm_fnc_rearmListed;
+ *
+ * Public: No
 */
 
 waitUntil {!isNull findDisplay 982383};

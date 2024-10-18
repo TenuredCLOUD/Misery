@@ -1,9 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Trader Shop Purchase processor
-Processes Buying of items + funds handling
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Trader Shop Purchase processor
+ * Processes Buying of items + funds handling
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_traders_fnc_processPurchase;
+ *
+ * Public: No
 */
 
 private ['_shop','_items','_stock','_playerFunds','_selectedItem','_price','_index'];

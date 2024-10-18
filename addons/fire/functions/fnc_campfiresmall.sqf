@@ -1,9 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery Campfire (small)
-Generates Small campfire variant
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Generates Small campfire variant
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_fire_fnc_campfiresmall
+ *
 */
 
 private _pos = player getRelPos [1.5, 0];
@@ -90,7 +98,7 @@ _object setVariable ["Mis_Woodstickfuel", 100, true];
     //remove Firewood & upgrade fire:
     if ("Misery_firewood" in items player) then {
         player removeitem "Misery_firewood";
-        call EFUNC(common,CampfireBig);
+        call EFUNC(fire,CampfireBig);
         };
     };
     // reignite fire

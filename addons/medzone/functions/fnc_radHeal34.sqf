@@ -1,9 +1,19 @@
 #include "..\script_component.hpp"
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
-    Misery Medical treatment (radiation)
-    Designed specifically for Misery mod
-    by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Medical treatment (radiation)
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_medzone_fnc_radHeal34;
+ *
+ * Public: No
 */
 
 private ["_playercash","_pricerads","_priceradscalc","_dialog","_PurchaseB","_ExitB","_MedInterrupt"];
@@ -12,7 +22,7 @@ _dialog = findDisplay 982381;
 _PurchaseB = _dialog displayCtrl 1600;
 _ExitB = _dialog displayCtrl 1601;
 
-_pricerads = parseNumber (((((player getvariable ["radiation",0]) * 0.75) / 50) * Mis_Medpriceradheal) toFixed 1);
+_pricerads = parseNumber (((((player getvariable ["MiseryRadiation",0]) * 0.75) / 50) * Mis_Medpriceradheal) toFixed 1);
 
 if (MiseryinMedzonearea) exitwith {
 
@@ -28,8 +38,8 @@ if (Mis_Medcurrencytype == "MAGAZINETYPE") then {
 _playercash = {_x == Mis_Medfundstype} count magazines player;
 };
 
-if (player getVariable ["radiation", 0] <= 50) exitWith {
-ctrlSetText [1001, "Your radiation exposure doesn't require treatment..."];
+if (player getVariable ["MiseryRadiation", 0] <= 50) exitWith {
+ctrlSetText [1001, "Your MiseryRadiation exposure doesn't require treatment..."];
 _PurchaseB ctrlShow true;
 _ExitB ctrlShow true;
 };
@@ -65,7 +75,7 @@ for "_i" from 0 to 99 do {
 
 if ((player getVariable "Misery_Proc_Treatment") isEqualTo true) then {
 
-_pricerads = parseNumber (((((player getvariable ["radiation",0]) * 0.75) / 50) * Mis_Medpriceradheal) toFixed 1);
+_pricerads = parseNumber (((((player getvariable ["MiseryRadiation",0]) * 0.75) / 50) * Mis_Medpriceradheal) toFixed 1);
 
 if (Mis_Medcurrencytype == "DIGITALTYPE") then {
 _playercash = player getVariable [Mis_Medfundstype, 0];
@@ -80,9 +90,9 @@ _playercash = {_x == Mis_Medfundstype} count magazines player;
 for "_i" from 1 to _pricerads do {player removeMagazine Mis_Medfundstype;};
 };
 
-_priceradscalc = parseNumber (((player getvariable ["radiation",0]) * 0.75) toFixed 1);
+_priceradscalc = parseNumber (((player getvariable ["MiseryRadiation",0]) * 0.75) toFixed 1);
 
-player setVariable ["radiation", (player getvariable ["radiation",0]) - _priceradscalc, true];
+player setVariable ["MiseryRadiation", (player getvariable ["MiseryRadiation",0]) - _priceradscalc, true];
 
 ctrlSetText [1001, "You have been successfully treated..."];
 

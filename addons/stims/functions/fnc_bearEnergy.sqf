@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery BearEnergy usage
-Designed specifically for Misery mod (also compatible with Ravage)
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * BearEnergy usage
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_stims_fnc_bearEnergy;
+ *
 */
 
 _MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];

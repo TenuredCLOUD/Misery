@@ -1,10 +1,17 @@
 #include "..\script_component.hpp"
-/*
-Misery Generator Position Tracking
-Continually watches generator position to make sure it doesn't move, if it moves kill the engine...
-This should prevent hiccups with fortification frameworks, or "moving" a generator
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * Generator Position Tracking
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_generator_fnc_trackPos
+ *
 */
 
 _Generator = _this select 0;

@@ -1,9 +1,17 @@
 #include "..\script_component.hpp"
-/*
-Misery Generator Power On
-Starts up generator, controlling audio synchronization & fuel draining
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * Generator Power On
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_generator_fnc_powerOn
+ *
 */
 
 private ["_PowerOnB","_PowerOffB","_RefuelB","_GeneratorType","_soundStart","_fuelLevel","_soundDummy"];

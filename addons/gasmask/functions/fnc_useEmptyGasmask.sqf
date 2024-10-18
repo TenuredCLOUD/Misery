@@ -1,3 +1,18 @@
+#include "..\script_component.hpp"
+ /*
+ * Author: TenuredCLOUD
+ * Gas mask cartridge replacement
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_gasmask_fnc_useEmptyGasmask
+ *
+*/
 
 if (alive player) then {
 

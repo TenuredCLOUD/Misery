@@ -1,8 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery cold immersion
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * cold immersion
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_temperature_fnc_coldImmersion;
+ *
+ * Public: No
 */
 
 [{!(isNil {player getVariable "MiseryExposure"}) && ((player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE]) < -10)},

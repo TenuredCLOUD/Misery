@@ -1,3 +1,18 @@
+#include "..\script_component.hpp"
+/*
+ * Author: TenuredCLOUD
+ * Can forage check
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * 0: BOOL
+ *
+ * Example:
+ * [] call misery_forage_fnc_canForage
+ *
+*/
 
 private ["_canforage"];
 

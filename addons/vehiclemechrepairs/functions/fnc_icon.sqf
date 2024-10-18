@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery Vehicle repair Vehicle Icon & name updater
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Vehicle repair Vehicle Icon & name updater
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_vehiclemechrepairs_fnc_icon;
+ *
+ * Public: No
 */
 
 disableSerialization;

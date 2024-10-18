@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
-/*
-Misery Generator Interaction synchronization
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * Generator Interaction synchronization
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_generator_fnc_interact
+ *
 */
 
 _Generator = _this select 0;

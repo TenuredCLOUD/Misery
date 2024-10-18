@@ -1,8 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Warmup
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Warmup
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_temperature_fnc_warmup;
+ *
+ * Public: No
 */
 
 private ["_warmup","_MPlayertemp","_MExposure","_MDebuffs","_cooldown"];

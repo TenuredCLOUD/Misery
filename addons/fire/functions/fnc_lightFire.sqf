@@ -1,9 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery Fire crafting
-Enables players to craft fires - Also checks environment
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Enables players to craft fires - Also checks environment
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_fire_fnc_lightFire
+ *
 */
 
 if (!hasInterface) exitWith {};
@@ -72,11 +80,11 @@ if !("Misery_tinder" in items player || "acex_intelitems_notepad" in magazines p
 
     if ("Misery_firewood" in items player) then {
         player removeitem "Misery_firewood";
-        call EFUNC(common,CampfireBig);
+        call EFUNC(fire,CampfireBig);
     }else{
     if ("Misery_woodensticks" in items player) then {
         player removeitem "Misery_woodensticks";
-        call EFUNC(common,Campfiresmall);
+        call EFUNC(fire,Campfiresmall);
     };
 };
     [player,_actionID] call BIS_fnc_holdActionRemove;

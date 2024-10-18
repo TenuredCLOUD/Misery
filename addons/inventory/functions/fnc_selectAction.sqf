@@ -1,9 +1,17 @@
 #include "..\script_component.hpp"
-/*
-Misery Mod actions
-Default Mod actions
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * Default inventory UI actions 
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_inventory_fnc_selectActions
+ *
 */
 
 disableSerialization;

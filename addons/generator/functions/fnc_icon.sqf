@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
-/*
-Misery Generator icon updater
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * Generator icon updater
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_generator_fnc_icon
+ *
 */
 
 disableSerialization;

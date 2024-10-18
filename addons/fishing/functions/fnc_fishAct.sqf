@@ -1,9 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Fishing system
-Designed specifically for Misery mod
-Fishing pole orientation to player help from SlayNoMore
-by TenuredCLOUD
+ * Author: TenuredCLOUD, SlayNoMore
+ * puts fishing pole in player's hand as well as chance processing for cathcing fish
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * 0: BOOL
+ *
+ * Example:
+ * [] call misery_fishing_fnc_fishAct
+ *
 */
 
 [

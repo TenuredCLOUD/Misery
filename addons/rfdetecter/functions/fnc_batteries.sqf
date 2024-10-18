@@ -1,0 +1,32 @@
+#include "..\script_component.hpp"
+/*
+ * Author: TenuredCLOUD
+ * RF detector batteries
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_rfdetector_fnc_rfBatteries;
+ *
+*/
+
+if !("Misery_lithiumbattery" in items player) then {
+
+   titleText ["It's completely dead...", "PLAIN DOWN"];
+
+}else{
+
+titleText ["You add a battery to your RF detector...", "PLAIN DOWN"];
+
+player removeitem "Misery_RFHighNobattery";
+player removeitem "Misery_lithiumbattery";
+
+if (alive player) then {
+
+    player additem "Misery_RFHighrangeOFF";
+    };
+  };

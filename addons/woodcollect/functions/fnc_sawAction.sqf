@@ -1,8 +1,16 @@
 #include "..\script_component.hpp"
 /*
-    Chainsaw usage
-    Designed specifically for Misery mod
-    by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Chainsaw usage
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_woodcollect_fnc_sawAction;
+ *
 */
 
  [

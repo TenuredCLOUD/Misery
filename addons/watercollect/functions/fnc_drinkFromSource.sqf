@@ -1,10 +1,18 @@
 #include "..\script_component.hpp"
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
-Misery WaterCollection Drink from source processor
-Takes inputs from GUI and processes recipe (if it exists)
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * WaterCollection Drink from source processor
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_watercollect_fnc_drinkFromSource;
+ *
+ * Public: No
 */
 
 private _dialog = findDisplay 982380;

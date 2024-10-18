@@ -1,18 +1,23 @@
 #include "..\script_component.hpp"
 /*
-Misery Raw meat
-Chances parasites
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Chances parasites
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_food_fnc_rawMeat
+ *
 */
-
-
-Miseryrawmeatchance=_module getvariable "Misery_Rawmeatdischance";
 
 if (alive player) exitwith {
 
   if((random 100) > Miseryrawmeatchance) exitWith {
-  titleText ["You consumed some raw meat, your stomach churns ominously. \n You feel a wave of unease wash over you...", "PLAIN DOWN"];
+  titleText ["You consumed some raw meat, your stomach churns ominously. \n You feel a wave of unease wash over you...", "PLAIN DOWN"]; //Needs localization
   };
 
   titleText ["You consumed some raw meat, your stomach churns ominously. \n You feel a wave of unease wash over you...", "PLAIN DOWN"];

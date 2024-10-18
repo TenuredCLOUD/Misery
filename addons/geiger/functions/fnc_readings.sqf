@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
-/*
-Misery Geiger UI Reading updater
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * Geiger UI Reading updater
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_geiger_fnc_readings
+ *
 */
 
 waitUntil {sleep 1; !isNull findDisplay 982344};

@@ -1,9 +1,17 @@
 #include "..\script_component.hpp"
-/*
-Misery Generator Fuel drain loop
-Controls fuel draining...
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * Generator Fuel drain loop
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_generator_fnc_fuel
+ *
 */
 
 _Generator = _this select 0;

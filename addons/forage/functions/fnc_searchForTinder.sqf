@@ -1,7 +1,20 @@
 #include "..\script_component.hpp"
-//Searching for tinder by: TenuredCLOUD v2.0
+/*
+ * Author: TenuredCLOUD
+ * Search for tinder
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_forage_fnc_searchForTinder
+ *
+*/
 
-if (call EFUNC(common,Canforage)) then {
+if (call FUNC(forage,canforage)) then {
 
 player playActionNow "Crouch";
 sleep 0.5;

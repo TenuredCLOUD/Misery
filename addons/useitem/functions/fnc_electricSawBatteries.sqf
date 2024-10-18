@@ -1,8 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Skillsaw batteries
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Skillsaw batteries
+ * Action to add batteries into handheld electric saw
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_useitem_fnc_electricSawBatteries;
+ *
+ * Public: No
 */
 
 if ("Misery_18vbat" in items player) then {

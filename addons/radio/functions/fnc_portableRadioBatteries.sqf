@@ -1,8 +1,18 @@
 #include "..\script_component.hpp"
+
 /*
-Misery Portable radio batteries
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Portable radio batteries
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_radio_fnc_portableRadioBatteries;
+ *
 */
 
 if !("Misery_9vbat" in items player) then {

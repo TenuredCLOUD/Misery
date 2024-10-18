@@ -1,9 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Trader Shop Gift processor
-Processes Gifting of items + stock management
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Trader Shop Gift processor
+ * Processes Gifting of items + stock management
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_traders_fnc_processGift;
+ *
+ * Public: No
 */
 
 private ['_shop','_items','_stock','_playerFunds','_selectedItem','_index'];

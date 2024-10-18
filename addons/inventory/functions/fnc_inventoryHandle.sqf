@@ -1,11 +1,17 @@
 #include "..\script_component.hpp"
-/*
-Misery Inventory handle [Final code iteration]
-Utilizes vanilla Inventory EH's without the need for a 'While do' loop - Optimized*
-Some concepts used from Ravage mod -LBDblClick snippet- (with permission from Haleks)
-Function help from Salbei from GRAD team - conversion to CBA waituntil + PFH handle
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD, Salbei
+ * Inventory handle
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_inventory_fnc_inventoryHandle
+ *
 */
 
 player addEventHandler ["InventoryOpened", {

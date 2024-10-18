@@ -1,9 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Vehicle Rearm Shop UI List populater
-Defines the selected purchase option, and passes current pricing values
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Vehicle Rearm Shop UI List populater
+ * Defines the selected purchase option, and passes current pricing values
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_vehiclerearm_fnc_processPurchase;
+ *
+ * Public: No
 */
 
 private _dialog = findDisplay 982383;

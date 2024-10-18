@@ -1,8 +1,16 @@
 #include "..\script_component.hpp"
 /*
-    Misery Chainsaw fuel usage
-    Designed specifically for Misery mod
-    by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Chainsaw fuel usage
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_woodcollect_fnc_chainsawFuel;
+ *
 */
 
 if (!hasInterface) exitWith {};

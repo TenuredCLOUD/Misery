@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
-/*
-Defined item usage, custom item params
-Designed specifically for Misery mod
-Source code Drongo, expanded upon by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * Defined item usage, custom item params
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_inventory_fnc_defineItems
+ *
 */
 
 //Format:

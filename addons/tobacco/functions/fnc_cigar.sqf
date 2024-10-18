@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-    Misery Cigar usage
-    Designed specifically for Misery mod
-    by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Cigar usage
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_tobacco_fnc_cigar;
+ *
 */
 
 if (!hasInterface) exitWith {};

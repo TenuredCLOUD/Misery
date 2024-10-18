@@ -1,8 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Over exposure
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Over exposure
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_temperature_fnc_overTemp;
+ *
+ * Public: No
 */
 
 private ["_overtemp","_MPlayertemp","_MExposure","_MThirst","_overtempcalc","_Miserytempdefhotcalc"];

@@ -1,9 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Vehicle Mechanic Repair Shop UI List populater
-Defines the selected purchase option, and passes current pricing values
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Maintenance repairing
+ * passes repair option to part on vehicle (hitpoints)
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_vehicleMaint_fnc_processRepair;
+ *
+ * Public: No
 */
 
 //WIP

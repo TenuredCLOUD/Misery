@@ -1,17 +1,27 @@
 #include "..\script_component.hpp"
 /*
-Misery BreathFog cycle
-BreathFog for players (runs on clients only)
-Breath speeds are from player's fatigue
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * BreathFog cycle
+ * For players (runs on clients only)
+ * Breath speeds are from player's fatigue
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_temperature_fnc_breathFog;
+ *
+ * Public: No
 */
 
 while {true} do {
 
     player setVariable ["MiseryBreathFogSim", true];
 
-    if ((((call Misery_fnc_Temperature) select 2) == 0) || (!MiseryBreathFogAllowed) || (!alive player)) exitWith {
+    if ((((call FUNC(temperature)) select 2) == 0) || (!MiseryBreathFogAllowed) || (!alive player)) exitWith {
         if(MiseryDebug)then{systemChat "Misery Breathfog cycle terminated..."};
         player setVariable ["MiseryBreathFogSim", nil];
     };
@@ -25,7 +35,7 @@ while {true} do {
         if (_pfatigue >= 25 && _pfatigue < 50) then {_delay=(3 + random 3);};
         if (_pfatigue < 25) then {_delay=(4 + random 4);};
         sleep _delay;
-            if (((call Misery_fnc_Temperature) select 2) == 1) then {
+            if (((call FUNC(temperature)) select 2) == 1) then {
                 player setVariable ["MiseryBreath", true];
                 _MisFogObject = "logic" createVehicleLocal (getPos player);
                 _FogEffect = "#particlesource" createVehicleLocal getPos _MisFogObject;

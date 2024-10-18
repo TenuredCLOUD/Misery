@@ -1,8 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery WaterCollection List populater for containers
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Misery WaterCollection List populater for containers
+ * Shows list of fillables for player
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_watercollect_fnc_containersListed;
+ *
+ * Public: No
 */
 
 waitUntil {!isNull findDisplay 982380};
@@ -26,5 +36,3 @@ if (!isNull findDisplay 982380) exitWith {
         _list lbSetData [_index, _requiredItem];  // Associate data with the item
     } forEach _playerRecipes;
 };
-
-

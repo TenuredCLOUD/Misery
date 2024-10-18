@@ -5,4 +5,4 @@ PREP(drinkJerryCanCleanAct);
 PREP(drinkJerryCanDirtyAct);
 PREP(processFill);
 PREP(removeFillable);
-PREP(showIcon);
+PREP(icon);

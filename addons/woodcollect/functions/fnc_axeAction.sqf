@@ -1,8 +1,16 @@
 #include "..\script_component.hpp"
 /*
-    WoodAxe usage
-    Designed specifically for Misery mod
-    by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * WoodAxe usage
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_woodcollect_fnc_axeAction;
+ *
 */
 
  [

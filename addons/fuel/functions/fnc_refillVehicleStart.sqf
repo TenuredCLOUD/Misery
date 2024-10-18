@@ -1,9 +1,18 @@
 #include "..\script_component.hpp"
-/*
-Misery Advanced refueling - by : TenuredCLOUD with great help from Drongo for easy module defines
-Array input for refueling amount per Jerrycan
-Designed specifically for Misery mod
- */
+ /*
+ * Author: TenuredCLOUD
+ * Array input for refueling amount per Jerrycan
+ *
+ * Arguments:
+ * 0: Jerry can type <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [_Jerrycanused] call misery_fuel_fnc_refillVehicleStart
+ *
+*/
 
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;

@@ -1,8 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Water
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Water
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_temperature_fnc_water;
+ *
+ * Public: No
 */
 
 private ["_water","_MExposure","_MDebuffs","_MWetsuit","_coldwater"];

@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery Antibiotic pill usage
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Antibiotic pill usage
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_llcontainer_fnc_storeArtifact;
+ *
 */
 
 private _MInfection = player getVariable ["MiseryInfection", MACRO_PLAYER_INFECTION];

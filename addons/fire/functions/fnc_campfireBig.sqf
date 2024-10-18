@@ -1,9 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery Campfire (big)
-Generates Big campfire variant
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Starts fire crafting concept
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_fire_fnc_campfireBig
+ *
 */
 
 private _pos=player getRelPos[1.5,0];

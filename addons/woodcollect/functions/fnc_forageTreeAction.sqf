@@ -1,8 +1,16 @@
 #include "..\script_component.hpp"
 /*
-    Wood foraging
-    Designed specifically for Misery mod
-    by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Wood foraging
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_woodcollect_fnc_forageTreeAction;
+ *
 */
 
  [

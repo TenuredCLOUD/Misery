@@ -1,1 +1,1 @@
-PREP(thirdPersonNVG);
+PREP(disableNightVision);
