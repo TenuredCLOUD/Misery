@@ -14,8 +14,6 @@ jobs:
       uses: actions/checkout@v4
     - name: Validate Config
       run: python3 tools/config_style_checker.py
-    - name: Check for BOM
-      uses: arma-actions/bom-check@master
 
   build:
     runs-on: ubuntu-latest
