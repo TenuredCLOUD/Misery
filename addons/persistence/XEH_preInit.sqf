@@ -4,10 +4,6 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
-/*
-if (hasInterface) then {
-    [player] call FUNC(initialize);
-};
-*/
+#include "initSettings.inc.sqf"
 
 ADDON = true;
