@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery Stitch with Needle & Thread (ACE medical compat ONLY)
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Stitch with Needle & Thread (ACE medical compat ONLY)
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_crudemed_fnc_stitchThreadAct
+ *
 */
 
 [
@@ -22,7 +31,7 @@ by TenuredCLOUD
     player playAction "Gear";
     },
     {
-    titletext ["Stitching wounds...", "PLAIN DOWN"];
+    titleText ["Stitching wounds...", "PLAIN DOWN"];
     [player, 0.041] call ace_medical_fnc_adjustPainLevel; //after 24 cycles pain will be at max level (0.984)
     },
     {
@@ -35,7 +44,7 @@ by TenuredCLOUD
     };
 
     //Remove needle & thread
-    player removeitem "Misery_Needlethread";
+    player removeItem "Misery_Needlethread";
 
     if((random 100) > 50) exitWith {
     private _actionID = (_this select 2);

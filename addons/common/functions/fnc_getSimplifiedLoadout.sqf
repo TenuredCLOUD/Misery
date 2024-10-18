@@ -10,7 +10,7 @@
  * 0: Loadout <ARRAY>
  *
  * Example:
- * [] call misery_fnc_common_getSimplifiedLoadout
+ * [] call misery_common_fnc_getSimplifiedLoadout
 */
 
 private _playerGear = [];

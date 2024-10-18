@@ -1,9 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Trader Shop Sell processor
-Processes Selling of items + funds handling
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Trader Shop Sell processor
+ * Processes Selling of items + funds handling
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_traders_fnc_processSell;
+ *
+ * Public: No
 */
 
 private ['_shop','_items','_stock','_playerFunds','_selectedItem','_price','_index'];

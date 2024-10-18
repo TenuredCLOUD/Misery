@@ -16,7 +16,7 @@ if (MiseryACE) then {
 
 titleText ["You inject the Thrombomodulin...", "PLAIN DOWN"];
 
-player removeitem "Misery_Thrombomodulin";
+player removeItem "Misery_Thrombomodulin";
 
 sleep 5;
 

@@ -1,12 +1,19 @@
 #include "..\script_component.hpp"
 /*
-Misery Funds add / remove function
-Adds or removes funds to a recipient's wallet
-Designed specifically for Misery mod
-by TenuredCLOUD
-
-Usage example:
-[player, 1000000] call Misery_fnc_addCurrency; // Adds 1,000,000 to the player's wallet
+ * Author: TenuredCLOUD
+ * Funds add / remove function
+ * Adds or removes funds to a recipient's wallet
+ *
+ * Arguments:
+ * 0: Recipient <OBJECT>
+ * 1: Amount <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player, 1000000] call misery_money_fnc_addCurrency;
+ *
 */
 
     params ["_recipient", "_amount"];

@@ -1,9 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Trader Shop Wait Que UI
-Watches Trader player is in a Que to transaction with and keeps player updated of current waiting parameters...
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Trader Shop Wait Que UI
+ * Watches Trader player is in a Que to transaction with and keeps player updated of current waiting parameters...
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_traders_fnc_waitQueue;
+ *
+ * Public: No
 */
 
 [{!isNull findDisplay 270586},

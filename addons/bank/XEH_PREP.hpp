@@ -1,6 +1,6 @@
-PREP(Bank_UI_Updater);
-PREP(claimSupport);
+PREP(refresh);
+PREP(claim);
 PREP(contribute);
 PREP(deposit);
-PREP(generateBank);
+PREP(generate);
 PREP(withdraw);

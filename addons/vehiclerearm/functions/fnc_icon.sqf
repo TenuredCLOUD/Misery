@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery resupply Vehicle Icon & name updater
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * resupply Vehicle Icon & name updater
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_vehiclerearm_fnc_icon;
+ *
+ * Public: No
 */
 
 disableSerialization;

@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [] call misery_fnc_common_itemSwap
+ * [] call misery_common_fnc_itemSwap
 */
 
 params ["_unit", "_oldItem", "_newItem"];

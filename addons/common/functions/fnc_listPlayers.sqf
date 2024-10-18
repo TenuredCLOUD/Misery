@@ -10,7 +10,7 @@
  * 0: Players <ARRAY>
  *
  * Example:
- * [] call misery_fnc_common_listPlayers
+ * [] call misery_common_fnc_listPlayers
 */
 
 (call CBA_fnc_players) select {alive _x}

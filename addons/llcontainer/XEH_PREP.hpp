@@ -1,2 +1,2 @@
 PREP(hasArtifact);
-PREP(putInContainerAct);
+PREP(storeArtifact);

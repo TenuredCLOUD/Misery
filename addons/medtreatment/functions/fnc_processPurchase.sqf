@@ -5,6 +5,21 @@ Defines the selected purchase option, and passes current pricing values
 Designed specifically for Misery mod
 by TenuredCLOUD
 */
+/*
+ * Author: TenuredCLOUD
+ * Defines the selected purchase option, and passes current pricing values
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_medtreatment_fnc_processPurchase;
+ *
+ * Public: No
+*/
 
 private _dialog = findDisplay 982381;
 private _selectedIndex = lbCurSel 1500; // Get the index of the selected item

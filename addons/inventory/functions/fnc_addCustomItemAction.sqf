@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
-/*
-Parser for custom item usage
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * Parser for custom item usage
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_inventory_fnc_addCustomItemAction
+ *
 */
 
 private["_module","_className","_script"];

@@ -2,9 +2,7 @@
 
 ADDON = false;
 
-PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
-PREP_RECOMPILE_END;
 
 /*
 //If GRAD persistence is active, push Fireplace types to blacklister, so they won't save / reload (This will execute only once)

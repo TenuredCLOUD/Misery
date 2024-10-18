@@ -18,14 +18,14 @@ _buildings=_x nearObjects["House", MiseryLootspawnDist];
     {
     _add=true;
     if(true)then{
-        if(_x in MiseryAllBuildings)exitWith{_add=false};
-        if((Damage _x)>.7)exitWith{_add=false};
-        if((count([_x]call BIS_fnc_buildingPositions))==0)exitWith{_add=false};
+        if (_x in MiseryAllBuildings)exitWith{_add=false};
+        if ((damage _x)>.7)exitWith{_add=false};
+        if ((count([_x]call BIS_fnc_buildingPositions))==0)exitWith{_add=false};
     };
-    if(_add)then{_allBuildings pushBackUnique _x};
-    }forEach _buildings;
-}forEach _players;
-{_x call FUNC(AddBuilding)}forEach _allBuildings;
+    if (_add) then {_allBuildings pushBackUnique _x};
+    } forEach _buildings;
+} forEach _players;
+{_x call FUNC(AddBuilding)} forEach _allBuildings;
 sleep MiseryLoottimer;
 
 [] execVM "\z\misery\addons\loot\functions\fnc_Dynamic.sqf";

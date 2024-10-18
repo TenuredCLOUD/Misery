@@ -1,8 +1,18 @@
 #include "..\script_component.hpp"
 /*
-POI Crate Loot Generator
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * POI Crate Loot Generator
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_poi_fnc_populateCrate;
+ *
+ * Public: No
 */
 
 _ammoBox = _this select 0;

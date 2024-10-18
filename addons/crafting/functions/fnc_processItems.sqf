@@ -1,10 +1,20 @@
 #include "..\script_component.hpp"
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
-Misery Crafting Framework Item processor
-Takes inputs from GUI and process recipe (if it exists)
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Crafting Framework Item processor
+ * Takes inputs from GUI and process recipe (if it exists)
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * 0: BOOL
+ *
+ * Example:
+ * [] call misery_crafting_fnc_processItems
+ *
+ * Public: No
 */
 
 private _dialog = findDisplay 982376;

@@ -1,9 +1,18 @@
 #include "..\script_component.hpp"
-/*
-Misery Refuel Vehicle JCan UI List populater
-Defines the selected refuel option, and passes data
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * Refuel Vehicle JCan UI List populater
+ * Defines the selected refuel option, and passes data
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_fuel_fnc_refuelListed
+ *
 */
 
 waitUntil {!isNull findDisplay 982385};

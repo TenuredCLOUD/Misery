@@ -1,2 +1,2 @@
 PREP(electricSawBatteries);
-PREP(nailbox);
+PREP(nailBox);

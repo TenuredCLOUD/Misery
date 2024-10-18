@@ -1,9 +1,17 @@
 #include "..\script_component.hpp"
-/*
-Misery Generator Power Off
-Shuts down generator, controlling audio synchronization & fuel draining halt
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * Generator Power Off
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_generator_fnc_powerOff
+ *
 */
 
     _PowerOnB = findDisplay 573849 displayCtrl 1600;

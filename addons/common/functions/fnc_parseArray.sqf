@@ -1,5 +1,19 @@
 #include "..\script_component.hpp"
-// Basically parseSimpleArray but works whether there are brackets on the array or not. Designed for arrays of strings
+/*
+ * Author: TenuredCLOUD, Drongo
+ * Basically parseSimpleArray but works whether there are brackets on the array or not. Designed for arrays of strings
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_common_fnc_parseArray;
+ *
+*/
+
 private["_string","_array"];
 _string="";if((typeName _this)=="STRING")then{_string=_this}else{_string=str _this};
 //_array=[];

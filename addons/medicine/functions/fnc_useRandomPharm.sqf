@@ -18,7 +18,7 @@ if (!hasInterface) exitWith {};
     titleText ["You cannot take medicine while wearing a mask...", "PLAIN DOWN"];
 };
 
-  if (alive player) exitwith {
+  if (alive player) exitWith {
 
     titleText ["You take some random medication...", "PLAIN DOWN"];
 
@@ -57,8 +57,8 @@ if (!hasInterface) exitWith {};
           };
 
           // if ((count(entities "Ravage_survival")) > 0) then {
-          // player setVariable ["hunger", (player getvariable ["hunger",0]) - 50, true];
-          // player setVariable ["thirst", (player getvariable ["thirst",0]) - 50, true];
+          // player setVariable ["hunger", (player getVariable ["hunger",0]) - 50, true];
+          // player setVariable ["thirst", (player getVariable ["thirst",0]) - 50, true];
           // };
 
           sleep 10;

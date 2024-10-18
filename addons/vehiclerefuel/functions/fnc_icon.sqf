@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery refuel Vehicle Icon & name updater
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Refuel Vehicle Icon & name updater
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_vehiclerefuel_fnc_icon;
+ *
+ * Public: No
 */
 
 disableSerialization;

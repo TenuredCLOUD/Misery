@@ -1,8 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Sick
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Sick
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_temperature_fnc_sick;
+ *
+ * Public: No
 */
 
 private ["_sick","_MPlayertemp","_MExposure","_MThirst","_MDebuffs","_sickcalc1","_Miserytempsickcalc1","_sickcalc2","_Miserytempsickcalc2"];

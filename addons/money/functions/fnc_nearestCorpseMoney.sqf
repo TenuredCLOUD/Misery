@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Returns if near a corpse "man based" and the Nearest corpse itself
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Returns if near a corpse "man based" and the Nearest corpse itself
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_money_fnc_nearestCorpseMoney;
+ *
 */
 
     private _deadEntities = allDeadMen;

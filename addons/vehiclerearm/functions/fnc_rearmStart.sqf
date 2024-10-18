@@ -1,16 +1,26 @@
 #include "..\script_component.hpp"
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
-    Misery Rearming
-    Designed specifically for Misery mod
-    by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Rearming
+ * Runs rearm process, prompts loading bar, etc...
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_vehiclerearm_fnc_rearmStart;
+ *
+ * Public: No
 */
 
 private ["_playercash","_module","_dialog","_PurchaseB","_ExitB","_Vehiclename","_target","_resupplyPrice","_Found","_RepairsInterrupt","_playercash","_text","_displayedText","_delay","_progressIndicator","_displaySuccess"];
 
 _module=(entities "Misery_VehRearmSettings")select 0;
-Mis_Rearmcurrencytype =_module getvariable "Misery_Rearmcurrency";
-Mis_Rearmfundstype =_module getvariable "Misery_Rearmfundstype";
+Mis_Rearmcurrencytype =_module getVariable "Misery_Rearmcurrency";
+Mis_Rearmfundstype =_module getVariable "Misery_Rearmfundstype";
 
 _dialog = findDisplay 982383;
 _PurchaseB = _dialog displayCtrl 1600;
@@ -43,7 +53,7 @@ player setVariable ["Misery_Proc_Resupply", true];
         };
 }];
 
-if (MiseryinVehiclerepairarea) exitwith {
+if (MiseryinVehiclerepairarea) exitWith {
 
 if (Mis_Rearmcurrencytype == "DIGITALTYPE") then {
 _playercash = player getVariable [Mis_Rearmfundstype, 0];
@@ -87,7 +97,7 @@ player setVariable [Mis_Rearmfundstype, (_playercash - _resupplyPrice), true];
 
 if (Mis_Rearmcurrencytype == "ITEMTYPE") then {
 _playercash = {_x == Mis_Rearmfundstype} count items player;
-for "_i" from 1 to _resupplyPrice do {player removeitem Mis_Rearmfundstype;};
+for "_i" from 1 to _resupplyPrice do {player removeItem Mis_Rearmfundstype;};
 };
 
 if (Mis_Rearmcurrencytype == "MAGAZINETYPE") then {

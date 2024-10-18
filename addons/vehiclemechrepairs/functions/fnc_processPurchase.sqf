@@ -1,9 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Vehicle Mechanic Repair Shop UI List populater
-Defines the selected purchase option, and passes current pricing values
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Mechanic Shop Purchase processor
+ * Processes repairing option
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_vehiclemechrepairs_fnc_processPurchase;
+ *
+ * Public: No
 */
 
 private _dialog = findDisplay 982382;

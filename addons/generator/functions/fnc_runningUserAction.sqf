@@ -1,9 +1,17 @@
 #include "..\script_component.hpp"
-/*
-Misery Generator Running Audio loop
-Controls running audio synchronization...
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * Generator Running Audio loop
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_generator_fnc_runningUserAction
+ *
 */
 
 _Generator = _this select 0;

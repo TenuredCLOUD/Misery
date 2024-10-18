@@ -1,8 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Cold
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Cold
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_temperature_fnc_cold;
+ *
+ * Public: No
 */
 
 private ["_cold","_MPlayertemp","_MExposure","_MHunger","_MDebuffs","_coldexposure","_Miserytempdefcoldcalc"];

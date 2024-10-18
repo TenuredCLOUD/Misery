@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery Bank UI Contribute (Phoenix fund) Processor
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Bank UI Contribute (Phoenix fund) Processor
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_bank_fnc_contribute;
+ *
 */
 
 private _amount = parseNumber (ctrlText ((findDisplay 483729) displayCtrl 1400));

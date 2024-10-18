@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
-/*
-Misery Ailment Processor
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * Ailment Processor
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_invstat_fnc_processAilment;
+ *
 */
 
 params ["_control", "_selectedIndex"];

@@ -1,9 +1,17 @@
 #include "..\script_component.hpp"
-/*
-Misery Generator Power nearby loop
-Controls powering nearby structures...
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * Generator Power nearby loop
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_generator_fnc_powerNearby
+ *
 */
 
 _Generator = _this select 0;

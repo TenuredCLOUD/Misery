@@ -1,1 +1,1 @@
-PREP(zInfection);
+PREP(infect);

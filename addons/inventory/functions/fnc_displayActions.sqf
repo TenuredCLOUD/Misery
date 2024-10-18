@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
-/*
-Misery Mod Menu GUI updater
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * Menu GUI updater
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_inventory_fnc_displayActions
+ *
 */
 
 hintSilent "";
