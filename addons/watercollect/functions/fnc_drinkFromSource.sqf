@@ -1,10 +1,18 @@
 #include "..\script_component.hpp"
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
-Misery WaterCollection Drink from source processor
-Takes inputs from GUI and processes recipe (if it exists)
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * WaterCollection Drink from source processor
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_watercollect_fnc_drinkFromSource;
+ *
+ * Public: No
 */
 
 private _dialog = findDisplay 982380;
@@ -48,7 +56,7 @@ for "_i" from 0 to (count _text - 1) do {
 
 if ((player getVariable "Misery_ISDrinking") isEqualTo true) then {
 
-Miseryturbidwaterchance=_module getvariable "Misery_Waterturbidchance"; //Dirty water causes disease chance
+Miseryturbidwaterchance=_module getVariable "Misery_Waterturbidchance"; //Dirty water causes disease chance
 
 private _MThirst = player getVariable ["MiseryThirst", MACRO_PLAYER_THIRST];
 
@@ -58,7 +66,7 @@ if((random 100) > Miseryturbidwaterchance) exitWith {
 
 player setVariable ["MiseryThirst", (_MThirst + 10)];
 _SuccessText_NoSickness = "You just swallowed water that smelled foul and tasted dirty. Despite the repugnant taste, it did quench your thirst.";
-player setVariable ["radiation", (player getvariable ["radiation",0]) + random 150, true];
+player setVariable ["radiation", (player getVariable ["radiation",0]) + random 150, true];
 
 ctrlSetText [1001, _SuccessText_NoSickness];
 
@@ -72,7 +80,7 @@ ctrlSetText [1001, _SuccessText_NoSickness];
 
 player setVariable ["MiseryThirst", (_MThirst + 10)];
 _SuccessText_Sickness = "You just swallowed water that smelled foul and tasted dirty. Despite the repugnant taste, it did quench your thirst.";
-player setVariable ["radiation", (player getvariable ["radiation",0]) + random 150, true];
+player setVariable ["radiation", (player getVariable ["radiation",0]) + random 150, true];
 player setVariable ["Turbidwaterlogged", true];
 _time = time + 180;
 [_time] spawn {

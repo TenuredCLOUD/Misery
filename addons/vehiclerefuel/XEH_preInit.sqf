@@ -2,11 +2,9 @@
 
 ADDON = false;
 
-PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
-PREP_RECOMPILE_END;
 
 //Refueling zone:
-if (isNil "MiseryinRefuelzonearea") then {MiseryinRefuelzonearea = false}; 
+if (isNil "MiseryinRefuelzonearea") then {MiseryinRefuelzonearea = false};
 
 ADDON = true;

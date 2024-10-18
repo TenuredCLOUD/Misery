@@ -1,4 +1,4 @@
-PREP(aiGeneration);
-PREP(moduleAISettings);
+PREP(Generation);
+PREP(moduleSettings);
 PREP(moduleCheck);
 PREP(settings);

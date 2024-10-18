@@ -6,4 +6,4 @@ Code concepts by Drongo
 */
 
 if(isMultiplayer)exitWith{serverTime};
-TIME
+time

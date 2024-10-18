@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-    Misery Beer usage
-    Designed specifically for Misery mod (also compatible with Ravage)
-    by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Beer usage
+ * Simple function that changes fear values from alcohol consumption, and increases fatigue (tiredness)
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_alcohol_fnc_beer
 */
 
 private _MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
@@ -10,7 +19,7 @@ private _MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];
 
 if (!hasInterface) exitWith {};
 
-  if (alive player) exitwith {
+  if (alive player) exitWith {
 
   if (MiseryFearenabled) then {
     player setVariable ["MiseryFear", (_MFear - 2)];

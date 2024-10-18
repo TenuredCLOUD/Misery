@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call misery_fnc_common_formatToTile
+ * [] call misery_common_fnc_formatToTile
 */
 
 params ["_formattedText"];

@@ -1,9 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery Fire crafting
-Enables players to craft fires - Also checks environment
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Enables players to craft fires - Also checks environment
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_fire_fnc_lightFire
+ *
 */
 
 if (!hasInterface) exitWith {};
@@ -53,7 +61,7 @@ if !("Misery_tinder" in items player || "acex_intelitems_notepad" in magazines p
     //Raining too hard: (Chances fire extinguishing if player isn't under an awning or "roof like" structure for rain coverage)
     if (_rainlevel > 0.3 && !(([player] call Misery_fnc_Isinside) select 0)) then {
   private _rainkillfire = [1, 50] call BIS_fnc_randomInt;
-  if (_rainkillfire > 25) exitwith {
+  if (_rainkillfire > 25) exitWith {
     _random = 0; //Set RNG to 0 avoiding 10 and pushing for a failure since rain extinguished flame
         };
     };
@@ -66,17 +74,17 @@ if !("Misery_tinder" in items player || "acex_intelitems_notepad" in magazines p
     };
     };
 
-    if (_random == 10) exitwith {
+    if (_random == 10) exitWith {
     titleText ["You successfully crafted a fire...", "PLAIN DOWN"];
     (_this select 1) setVariable ["MiseryCanCraftFire", false];
 
     if ("Misery_firewood" in items player) then {
-        player removeitem "Misery_firewood";
-        call EFUNC(common,CampfireBig);
+        player removeItem "Misery_firewood";
+        call EFUNC(fire,CampfireBig);
     }else{
     if ("Misery_woodensticks" in items player) then {
-        player removeitem "Misery_woodensticks";
-        call EFUNC(common,Campfiresmall);
+        player removeItem "Misery_woodensticks";
+        call EFUNC(fire,Campfiresmall);
     };
 };
     [player,_actionID] call BIS_fnc_holdActionRemove;
@@ -92,12 +100,12 @@ private _mags = ["acex_intelitems_notepad","rvg_money", "rvg_notepad", "rvg_docF
 private _index = _items findIf { _x in items player };
 if (_index != -1) then {
     private _item = _items select _index;
-    player removeitem _item;
+    player removeItem _item;
 } else {
     _index = _mags findIf { _x in magazines player };
     if (_index != -1) then {
         private _mag = _mags select _index;
-        player removemagazine _mag;
+        player removeMagazine _mag;
     };
 };
 
@@ -120,12 +128,12 @@ private _mags = ["acex_intelitems_notepad","rvg_money", "rvg_notepad", "rvg_docF
 private _index = _items findIf { _x in items player };
 if (_index != -1) then {
     private _item = _items select _index;
-    player removeitem _item;
+    player removeItem _item;
 } else {
     _index = _mags findIf { _x in magazines player };
     if (_index != -1) then {
         private _mag = _mags select _index;
-        player removemagazine _mag;
+        player removeMagazine _mag;
     };
 };
 

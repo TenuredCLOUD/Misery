@@ -1,51 +1,30 @@
 #include "..\script_component.hpp"
 /*
-Misery woodnail box
-Has compat for iBuild if it's in use
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * woodnail box
+ * Action removing nails from boxes action result varies on mod compatibility
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_useitem_fnc_nailBox;
+ *
+ * Public: No
 */
 
-if (MiseryUsingiBuild) exitwith {
+if (MiseryUsingiBuild) exitWith {
 
 titleText ["You take the nails out of the box...", "PLAIN DOWN"];
-player removeitem "Misery_boxnails"; //<<-- remove early to prevent dooping
-sleep 1;
-player additem "NMIB_WoodNails_Itm";
-player additem "NMIB_WoodNails_Itm";
-player additem "NMIB_WoodNails_Itm";
-player additem "NMIB_WoodNails_Itm";
-player additem "NMIB_WoodNails_Itm";
-player additem "NMIB_WoodNails_Itm";
-player additem "NMIB_WoodNails_Itm";
-player additem "NMIB_WoodNails_Itm";
-player additem "NMIB_WoodNails_Itm";
-player additem "NMIB_WoodNails_Itm";
-player additem "NMIB_WoodNails_Itm";
-player additem "NMIB_WoodNails_Itm";
-player additem "NMIB_WoodNails_Itm";
-player additem "NMIB_WoodNails_Itm";
-player additem "NMIB_WoodNails_Itm";
+player removeItem "Misery_boxnails";
+for "_i" from 1 to 15 do {[player, "NMIB_WoodNails_Itm", true] call CBA_fnc_addItem;};
 };
 
-if !(MiseryUsingiBuild) exitwith {
+if !(MiseryUsingiBuild) exitWith {
 
 titleText ["You take the nails out of the box...", "PLAIN DOWN"];
-player removeitem "Misery_boxnails"; //<<-- remove early to prevent dooping
-sleep 1;
-player additem "Misery_woodnail";
-player additem "Misery_woodnail";
-player additem "Misery_woodnail";
-player additem "Misery_woodnail";
-player additem "Misery_woodnail";
-player additem "Misery_woodnail";
-player additem "Misery_woodnail";
-player additem "Misery_woodnail";
-player additem "Misery_woodnail";
-player additem "Misery_woodnail";
-player additem "Misery_woodnail";
-player additem "Misery_woodnail";
-player additem "Misery_woodnail";
-player additem "Misery_woodnail";
-player additem "Misery_woodnail";
+player removeItem "Misery_boxnails";
+for "_i" from 1 to 15 do {[player, "Misery_woodnail", true] call CBA_fnc_addItem;};
 };

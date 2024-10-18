@@ -1,21 +1,28 @@
 #include "..\script_component.hpp"
 /*
-Misery Shop Generater
-Takes shop data and stores Hashmap on trader AI
-Also passes data to server side
-Designed specifically for Misery mod
-by TenuredCLOUD
-
-Usage Example:
-_shop = [
-    ["ShopName", "General Goods"],
-    ["Items", ["Classname_1", "Classname_2",etc... ]],
-    ["Stock", [50, 5, 10,etc... ]],
-    ["Price", [5000,1000, 100,etc... ]],
-];
-
-// Generate a shop
-[_shop, trader1] call Misery_fnc_GenerateShop;
+ * Author: TenuredCLOUD
+ * Shop Generater
+ * Takes shop data and stores Hashmap on trader AI
+ * Also passes data to server side
+ *
+ * Arguments:
+ * 0: Hashmap data <ARRAY>
+ * 1: Trader object <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * _shop = [
+ *   ["ShopName", "General Goods"],
+ *   ["Items", ["Classname_1", "Classname_2"]],
+ *   ["Stock", [50, 5, 10]],
+ *   ["Price", [5000,1000, 100]],
+ * ];
+ *
+ * [_shop, trader1] call misery_traders_fnc_generateShop;
+ *
+ * Public: No
 */
 
 params ["_shopData", "_traderName"];

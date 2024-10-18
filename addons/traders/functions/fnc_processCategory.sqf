@@ -1,9 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Trader Shop Categorizer processor
-Adds Category's to UI
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Trader Shop Categorizer processor
+ * Adds Category's to UI
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_traders_fnc_processCategory;
+ *
+ * Public: No
 */
 
 waitUntil {!isNull findDisplay 982390};

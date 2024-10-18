@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
-/*
-Inventory Click handle
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * Inventory Click handle
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_inventory_fnc_click
+ *
 */
 
 private _idc = ctrlIDC (_this select 0);

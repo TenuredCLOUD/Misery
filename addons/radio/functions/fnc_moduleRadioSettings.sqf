@@ -1,8 +1,21 @@
 #include "..\script_component.hpp"
+
 /*
-    Misery Radio startup
-    Designed specifically for Misery mod
-    by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Radio startup
+ *
+ * Arguments:
+ * 0: Module the logic is attached to <OBJECT>
+ * 1: Sound sources <ARRAY>
+ * 2: Class of radio objects <STRING>
+ * 3: Timer loop <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_radio_fnc_moduleRadioSettings;
+ *
 */
 
 /*

@@ -1,8 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Cooking Framework Recipe Formatter
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Cooking Framework Recipe Formatter
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_cooking_fnc_showRecipe
+ *
+ * Public: No
 */
 
 private _dialog = findDisplay 982379;

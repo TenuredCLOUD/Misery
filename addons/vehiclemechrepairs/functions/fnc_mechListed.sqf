@@ -1,9 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Mechanic Shop UI List populater
-Defines the selected purchase option, and passes current pricing values
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Mechanic Shop UI List populater
+ * Defines the selected purchase option, and passes current pricing values
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_vehiclemechrepairs_fnc_mechListed;
+ *
+ * Public: No
 */
 
 waitUntil {!isNull findDisplay 982382};

@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery Value to Bar conversion
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Value to Bar conversion
+ *
+ * Arguments:
+ * 0: Value <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [_value] call misery_common_fnc_valToBar;
+ *
 */
 
     params ["_value"];

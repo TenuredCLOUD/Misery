@@ -1,3 +1,19 @@
+#include "..\script_component.hpp"
+/*
+ * Author: TenuredCLOUD, Drongo
+ * Near well check
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_common_fnc_nearWell;
+ *
+*/
+
 private["_found","_type","_rDir"];
 _found=false;
 _type="";

@@ -1,2 +1,2 @@
-PREP(medTreatListed);
+PREP(treatListed);
 PREP(processPurchase);

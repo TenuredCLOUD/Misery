@@ -2,9 +2,7 @@
 
 ADDON = false;
 
-PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
-PREP_RECOMPILE_END;
 
 //Auto Radio changes after player killed:
 // if (((count (entities "Misery_RadioSettings")) > 0) && isServer) then {

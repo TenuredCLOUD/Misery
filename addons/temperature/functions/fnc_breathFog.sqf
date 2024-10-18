@@ -1,17 +1,27 @@
 #include "..\script_component.hpp"
 /*
-Misery BreathFog cycle
-BreathFog for players (runs on clients only)
-Breath speeds are from player's fatigue
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * BreathFog cycle
+ * For players (runs on clients only)
+ * Breath speeds are from player's fatigue
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_temperature_fnc_breathFog;
+ *
+ * Public: No
 */
 
 while {true} do {
 
     player setVariable ["MiseryBreathFogSim", true];
 
-    if ((((call Misery_fnc_Temperature) select 2) == 0) || (!MiseryBreathFogAllowed) || (!alive player)) exitWith {
+    if ((((call FUNC(temperature)) select 2) == 0) || (!MiseryBreathFogAllowed) || (!alive player)) exitWith {
         if(MiseryDebug)then{systemChat "Misery Breathfog cycle terminated..."};
         player setVariable ["MiseryBreathFogSim", nil];
     };
@@ -19,13 +29,13 @@ while {true} do {
     private ["_delay","_pfatigue","_MisFogObject","_FogEffect","_FogBreath"];
 
         if !(player getVariable ["MiseryBreath", false]) then {
-        _pfatigue = (getfatigue player) * 100; //Fatigue calc
+        _pfatigue = (getFatigue player) * 100; //Fatigue calc
         if (_pfatigue >= 75) then {_delay=(1 + random 1);};
         if (_pfatigue >= 50 && _pfatigue < 75) then {_delay=(2 + random 2);};
         if (_pfatigue >= 25 && _pfatigue < 50) then {_delay=(3 + random 3);};
         if (_pfatigue < 25) then {_delay=(4 + random 4);};
         sleep _delay;
-            if (((call Misery_fnc_Temperature) select 2) == 1) then {
+            if (((call FUNC(temperature)) select 2) == 1) then {
                 player setVariable ["MiseryBreath", true];
                 _MisFogObject = "logic" createVehicleLocal (getPos player);
                 _FogEffect = "#particlesource" createVehicleLocal getPos _MisFogObject;

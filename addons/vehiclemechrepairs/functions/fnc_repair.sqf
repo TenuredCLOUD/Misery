@@ -1,16 +1,26 @@
 #include "..\script_component.hpp"
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
-    Misery Repairing Shop UI processor
-    Designed specifically for Misery mod
-    by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Mechanic Repairing Shop UI processor
+ * Processes repairing with "progress bar"
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_vehiclemechrepairs_fnc_repair;
+ *
+ * Public: No
 */
 
 private ["_playercash","_module","_dialog","_PurchaseB","_ExitB","_Vehiclename","_target","_repairPrice","_Found","_RepairsInterrupt","_playercash","_text","_displayedText","_delay","_progressIndicator","_displaySuccess"];
 
 _module=(entities "Misery_VehRepairSettings")select 0;
-Mis_Mechcurrencytype =_module getvariable "Misery_Mechcurrency";
-Mis_Mechfundstype =_module getvariable "Misery_Mechfundstype";
+Mis_Mechcurrencytype =_module getVariable "Misery_Mechcurrency";
+Mis_Mechfundstype =_module getVariable "Misery_Mechfundstype";
 
 _dialog = findDisplay 982382;
 _PurchaseB = _dialog displayCtrl 1600;
@@ -43,7 +53,7 @@ player setVariable ["Misery_Proc_Repairs", true];
         };
 }];
 
-if (MiseryinVehiclerepairarea) exitwith {
+if (MiseryinVehiclerepairarea) exitWith {
 
 if (Mis_Mechcurrencytype == "DIGITALTYPE") then {
 _playercash = player getVariable [Mis_Mechfundstype, 0];
@@ -87,7 +97,7 @@ player setVariable [Mis_Mechfundstype, (_playercash - _repairPrice), true];
 
 if (Mis_Mechcurrencytype == "ITEMTYPE") then {
 _playercash = {_x == Mis_Mechfundstype} count items player;
-for "_i" from 1 to _repairPrice do {player removeitem Mis_Mechfundstype;};
+for "_i" from 1 to _repairPrice do {player removeItem Mis_Mechfundstype;};
 };
 
 if (Mis_Mechcurrencytype == "MAGAZINETYPE") then {
@@ -101,7 +111,7 @@ ctrlSetText [1001, _displaySuccess];
 _PurchaseB ctrlShow true;
 _ExitB ctrlShow true;
 
-_target setdamage 0;
+_target setDamage 0;
 
 player setVariable ["Misery_Proc_Repairs", nil];
 (findDisplay 982382) displayRemoveEventHandler ["KeyDown", _RepairsInterrupt];

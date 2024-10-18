@@ -1,3 +1,3 @@
 PREP(hourSelected);
-PREP(sleep);
+PREP(processSleep);
 PREP(sleepAction);

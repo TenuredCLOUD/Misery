@@ -1,5 +1,5 @@
-PREP(fear);
-PREP(fearCycle);
+PREP(psychosis);
+PREP(cycle);
 PREP(nearPhantom);
 PREP(nearSpook);
-PREP(nearZeds);
+PREP(nearZed);

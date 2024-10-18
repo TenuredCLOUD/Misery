@@ -2,21 +2,21 @@
 
 This package contains digital models that have been meticulously converted for compatibility with Arma 3. This intricate conversion process was conducted using Blender, TexView, and Object Builder (Oxygen 2) software, under the careful auspices of TenuredCLOUD.
 
-All models used in Misery were originally licensed under the Creative Commons Attribution (CC:BY) License, which can be accessed here: https://creativecommons.org/licenses/by/4.0/. 
+All models used in Misery were originally licensed under the Creative Commons Attribution (CC:BY) License, which can be accessed here: https://creativecommons.org/licenses/by/4.0/.
 
 These models have been transformed for use in Arma 3, with all due credit given to the original authors.
 
-Misery mod retains the rights to these transformed assets. While Misery mod is not obligated to distribute these derivative files, they are available for use under the terms of the original CC:BY license. 
+Misery mod retains the rights to these transformed assets. while Misery mod is not obligated to distribute these derivative files, they are available for use under the terms of the original CC:BY license.
 
 If someone uses the models from this derivative work, they must provide attribution to both the original authors and to Misery mod (TenuredCLOUD) for the derivative work.
 
-Please note that some files may have been removed from Misery mod. Despite this, we ensure that the current assets list is always up-to-date, reflecting the most recent changes and updates. 
+Please note that some files may have been removed from Misery mod. Despite this, we ensure that the current assets list is always up-to-date, reflecting the most recent changes and updates.
 
 We are committed to transparency and adherence to licensing terms in all our operations.
 
-Additionally, it's important to note that the names of the p3d assets may not match the original names of the asset models. 
+Additionally, it's important to note that the names of the p3d assets may not match the original names of the asset models.
 
-However, all necessary credits are provided, and following the provided links will guide you to understand the correlation between the transformed and original models. 
+However, all necessary credits are provided, and following the provided links will guide you to understand the correlation between the transformed and original models.
 
 We believe in maintaining a transparent and respectful approach to using and crediting original works.
 
@@ -24,108 +24,108 @@ We believe in maintaining a transparent and respectful approach to using and cre
 
 //*** Attributions:
 
-"Chainsaw" (https://skfb.ly/o6spV) by Lassi Kaukonen 
+"Chainsaw" (https://skfb.ly/o6spV) by Lassi Kaukonen
 
-"Delicious Polish vodka bottle" (https://skfb.ly/6YJIA) by Marcin.Kwiatkowski 
+"Delicious Polish vodka bottle" (https://skfb.ly/6YJIA) by Marcin.Kwiatkowski
 
 "Dusty Beer Bottle" (https://skfb.ly/oyRHX) by GameDev Nick  -Edited logo on bottle-
 
-"Asset02 Medieval Anvil" (https://skfb.ly/6WMy7) by Margot D. 
+"Asset02 Medieval Anvil" (https://skfb.ly/6WMy7) by Margot D.
 
-"Forge And Bellow" (https://skfb.ly/6ZvWF) by RBG_illustrations 
+"Forge And Bellow" (https://skfb.ly/6ZvWF) by RBG_illustrations
 
-"Pickaxe" (https://skfb.ly/JInS) by beyondmatter 
+"Pickaxe" (https://skfb.ly/JInS) by beyondmatter
 
 "Iron Ore (FREE)" (https://skfb.ly/6WVZA) by VX-Designs  -Changed face textures to make coal, diamond, gold ores
 
 "Guitar" (https://skfb.ly/ovDsp) by Kesenkai is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
-"Monster Energy Drink" (https://skfb.ly/P9nu) by dark-minaz 
+"Monster Energy Drink" (https://skfb.ly/P9nu) by dark-minaz
 
-"Soda Can" (https://skfb.ly/6qQAJ) by junhyde 
+"Soda Can" (https://skfb.ly/6qQAJ) by junhyde
 
-"Lowpoly Fish" (https://skfb.ly/6YsIz) by RBG_illustrations 
+"Lowpoly Fish" (https://skfb.ly/6YsIz) by RBG_illustrations
 
-"Knife" (https://skfb.ly/oxKoP) by iwannachillll 
+"Knife" (https://skfb.ly/oxKoP) by iwannachillll
 
-"Lighter (Game Model)" (https://skfb.ly/YNBD) by Michael Makivic 
+"Lighter (Game Model)" (https://skfb.ly/YNBD) by Michael Makivic
 
-"Cooking tripod with pot (Game ready)" (https://skfb.ly/o9NGQ) by jsorens 
+"Cooking tripod with pot (Game ready)" (https://skfb.ly/o9NGQ) by jsorens
 
-"Car Battery" (https://skfb.ly/6DUM9) by amt16 
+"Car Battery" (https://skfb.ly/6DUM9) by amt16
 
-"Raw Steak" (https://skfb.ly/oCOwR) by OKgamedev 
+"Raw Steak" (https://skfb.ly/oCOwR) by OKgamedev
 
-"fuel station" (https://skfb.ly/oEnsL) by AlemanGame 
+"fuel station" (https://skfb.ly/oEnsL) by AlemanGame
 
-"Rusty airbase fuel tank" (https://skfb.ly/6G7yP) by LuddePudde 
+"Rusty airbase fuel tank" (https://skfb.ly/6G7yP) by LuddePudde
 
-"Horizontal fuel Tank" (https://skfb.ly/oAEuo) by castleonsandYT 
+"Horizontal fuel Tank" (https://skfb.ly/oAEuo) by castleonsandYT
 
-"Fish hook from Poly by Google" (https://skfb.ly/6XRYw) by IronEqual 
+"Fish hook from Poly by Google" (https://skfb.ly/6XRYw) by IronEqual
 
-"Ball Peen Hammer PBR" (https://skfb.ly/6nLFo) by artssionate 
+"Ball Peen Hammer PBR" (https://skfb.ly/6nLFo) by artssionate
 
-"Used Big Beater Sledgehammer" (https://skfb.ly/6XDUG) by CGKnuenz 
+"Used Big Beater Sledgehammer" (https://skfb.ly/6XDUG) by CGKnuenz
 
-"Well Used Pliers" (https://skfb.ly/oqxIp) by Arthur Krut 
+"Well Used Pliers" (https://skfb.ly/oqxIp) by Arthur Krut
 
-"Battery" (https://skfb.ly/6syLB) by hoschu 
+"Battery" (https://skfb.ly/6syLB) by hoschu
 
-"9V Battery" (https://skfb.ly/oA6M7) by Da-Luna 
+"9V Battery" (https://skfb.ly/oA6M7) by Da-Luna
 
-"18650 Battery - Rechargeable Li-Ion Cells" (https://skfb.ly/ooSoW) by YouniqueĪdeaStudio 
+"18650 Battery - Rechargeable Li-Ion Cells" (https://skfb.ly/ooSoW) by YouniqueĪdeaStudio
 
 "Folded Towel" (https://skfb.ly/6S8zY) by Nicothin - changed textures to make camo netting
 
-"Copper Wire" (https://skfb.ly/6ZrKD) by Thunder 
+"Copper Wire" (https://skfb.ly/6ZrKD) by Thunder
 
-"Old Flathead and Phillips Screwdrivers" (https://skfb.ly/o6U8P) by TwilightFox 
+"Old Flathead and Phillips Screwdrivers" (https://skfb.ly/o6U8P) by TwilightFox
 
-"Screwdriver" (https://skfb.ly/o8Aot) by Kris 
+"Screwdriver" (https://skfb.ly/o8Aot) by Kris
 
-"screwdriver" (https://skfb.ly/ouFwM) by Arthur_Leplae 
+"screwdriver" (https://skfb.ly/ouFwM) by Arthur_Leplae
 
-"Duct Tape" (https://skfb.ly/oBKqD) by Kami Rapacz 
+"Duct Tape" (https://skfb.ly/oBKqD) by Kami Rapacz
 
-"Cigarette Box" (https://skfb.ly/o6SCS) by stfuaahil 
+"Cigarette Box" (https://skfb.ly/o6SCS) by stfuaahil
 
-"Wooden axe" (https://skfb.ly/ovIwG) by PolyDude 
+"Wooden axe" (https://skfb.ly/ovIwG) by PolyDude
 
-"wood billet" (https://skfb.ly/o8I9N) by falk lochmann 
+"wood billet" (https://skfb.ly/o8I9N) by falk lochmann
 
-"Collection of Forest Branches" (https://skfb.ly/o8CL6) by Arkify 3D 
+"Collection of Forest Branches" (https://skfb.ly/o8CL6) by Arkify 3D
 
-"Tronco Lungo S1" (https://skfb.ly/ZxNO) by Francesco Coldesina 
+"Tronco Lungo S1" (https://skfb.ly/ZxNO) by Francesco Coldesina
 
-"Wood plank" (https://skfb.ly/o6yFE) by Vítek Chalany 
+"Wood plank" (https://skfb.ly/o6yFE) by Vítek Chalany
 
 "Wood Pile" (https://skfb.ly/6Wq7C) by shtran
 
 "Safe matches" (https://skfb.ly/686KB) by 3dhdscan
 
-"Canteen" (https://skfb.ly/otxDw) by d2609779322 
+"Canteen" (https://skfb.ly/otxDw) by d2609779322
 
-"Cigar 3d" (https://skfb.ly/6xSIv) by soumitradigistring 
+"Cigar 3d" (https://skfb.ly/6xSIv) by soumitradigistring
 
-"Military Duffel bag" (https://skfb.ly/oxFDu) by Sousinho 
+"Military Duffel bag" (https://skfb.ly/oxFDu) by Sousinho
 
-"Dented-up Craftsman Toolbox" (https://skfb.ly/oMGpY) by JPDV 
+"Dented-up Craftsman Toolbox" (https://skfb.ly/oMGpY) by JPDV
 
-"Modern Car lightbulb" (https://skfb.ly/orF7I) by ml-design 
+"Modern Car lightbulb" (https://skfb.ly/orF7I) by ml-design
 
-"Diesel Generator" (https://skfb.ly/oFIpG) by tasraven 
+"Diesel Generator" (https://skfb.ly/oFIpG) by tasraven
 
-"Heavily Used Generator" (https://skfb.ly/oFTsO) by DennisHNguyen 
+"Heavily Used Generator" (https://skfb.ly/oFTsO) by DennisHNguyen
 
-"Game asset "Generator"" (https://skfb.ly/6TsJZ) by Daniel_Bakunin 
+"Game asset "Generator"" (https://skfb.ly/6TsJZ) by Daniel_Bakunin
 
 "Workbench & Vice" (https://skfb.ly/oxpvF) by lukewest
 
-"Pot" (https://skfb.ly/6VJtu) by eucocker 
+"Pot" (https://skfb.ly/6VJtu) by eucocker
 
 "Container" (https://skfb.ly/o6MpF) by Qwestgamp
 
-"Ungranned Gem" (https://skfb.ly/6uqyJ) by Aki_Kato 
+"Ungranned Gem" (https://skfb.ly/6uqyJ) by Aki_Kato
 
-"CC0 - Meat Hook 5" (https://skfb.ly/6ZxuL) by plaggy is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). 
+"CC0 - Meat Hook 5" (https://skfb.ly/6ZxuL) by plaggy is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).

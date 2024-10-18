@@ -10,7 +10,7 @@
  * 0: Positions within Building <ARRAY>
  *
  * Example:
- * [] call misery_fnc_common_buildingPositionsInside
+ * [] call misery_common_fnc_buildingPositionsInside
 */
 
 params ["_building"];

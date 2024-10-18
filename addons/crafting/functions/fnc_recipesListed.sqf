@@ -1,8 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Crafting Framework List populater for Recipes
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Crafting Framework List populater for Recipes
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * 0: Listed indexes for UI
+ *
+ * Example:
+ * [] call misery_crafting_fnc_recipesListed
+ *
+ * Public: No
 */
 
 waitUntil {!isNull findDisplay 982376};

@@ -1,10 +1,19 @@
 #include "..\script_component.hpp"
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
-    Misery WaterCollection processor
-    Takes inputs from GUI and processes recipe (if it exists)
-    Designed specifically for Misery mod
-    by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * WaterCollection fill processor
+ * Takes inputs from GUI and processes recipe (if it exists)
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_watercollect_fnc_processFill;
+ *
+ * Public: No
 */
 
 private _dialog = findDisplay 982380;

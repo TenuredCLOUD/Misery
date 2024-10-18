@@ -1,12 +1,22 @@
 #include "..\script_component.hpp"
 /*
-Temperature Conversions & Wind Chill Algorithm
-Returns calculated windchill as well as world temperatures (Runs on a per client basis, but base data is synced to all clients)
-Calculates Wind chill player is simulated to be experiencing (simplified algorithm)
-Calculates air temperature with elevational differences (simplified algorithm)
-Utilizes Overcast and Rain values as proxies to simulate humidity (simplified algorithm)
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Temperature Conversions & Wind Chill Algorithm
+ * Returns calculated windchill as well as world temperatures (Runs on a per client basis, but base data is synced to all clients)
+ * Calculates Wind chill player is simulated to be experiencing (simplified algorithm)
+ * Calculates air temperature with elevational differences (simplified algorithm)
+ * Utilizes Overcast and Rain values as proxies to simulate humidity (simplified algorithm)
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_temperature_fnc_temperature;
+ *
+ * Public: No
 */
 
 private _airTemp = ambientTemperature select 0;
@@ -58,9 +68,3 @@ if (_airTemp <= 50 && _windSpeed >= 3) then {
 };
 
 [_windChillIndexCelsius, _seaTemp, _breathFog]
-
-
-
-
-
-

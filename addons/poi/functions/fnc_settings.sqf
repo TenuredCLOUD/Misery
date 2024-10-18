@@ -1,9 +1,19 @@
 #include "..\script_component.hpp"
 /*
-Misery POI Master settings module data parser
-Defines performance properties for each POI module
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * POI Master settings module data parser
+ * Defines performance properties for each POI module
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_poi_fnc_settings;
+ *
+ * Public: No
 */
 
 Misery_POISpawnCheckDistance = _this select 0;

@@ -1,11 +1,18 @@
 #include "..\script_component.hpp"
-/*
-Misery Buff or Ailment Data Remover
-Designed specifically for Misery mod
-by TenuredCLOUD
-
-Usage example:
-["ailment","name of ailment"] call Misery_fnc_RemoveBuffOrAilment;
+ /*
+ * Author: TenuredCLOUD
+ * 0: ailment or buff <STRING>
+ * 1: name of ailment or buff <STRING>
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * ["ailment","name of ailment"] call misery_invstat_fnc_RemoveBuffOrAilment;
+ *
 */
 
 _this params ["_type", "_index"];

@@ -10,7 +10,7 @@
  * 0: Lower cased array <ARRAY>
  *
  * Example:
- * [] call misery_fnc_common_lowerCaseArray
+ * [] call misery_common_fnc_lowerCaseArray
 */
 
 params ["_array"];

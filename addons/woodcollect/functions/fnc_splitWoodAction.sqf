@@ -1,9 +1,17 @@
 #include "..\script_component.hpp"
 /*
-    Split wooden logs
-    Enables players to reform wood logs to firewood (Chainsaw or Axe compatible)
-    Designed specifically for Misery mod
-    by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Split wooden logs
+ * Enables players to reform wood logs to firewood (Chainsaw or Axe compatible)
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_woodcollect_fnc_splitWoodAction;
+ *
 */
 
 [
@@ -67,10 +75,10 @@
     };
         };
 
-    if (MiseryCanSplitWoodChain && _random == 100) exitwith {
+    if (MiseryCanSplitWoodChain && _random == 100) exitWith {
     titleText ["Your saw ran out of fuel...", "PLAIN DOWN"];
-    player removeitem "Misery_Chainsaw";
-    player additem "Misery_Chainsawempty";
+    player removeItem "Misery_Chainsaw";
+    player addItem "Misery_Chainsawempty";
     MiseryCanSplitWoodChain = false;
     [player,_actionID] call BIS_fnc_holdActionRemove;
     };
@@ -88,7 +96,7 @@
         _woodtoground1 = "GroundWeaponHolder" createVehicle [0,0,0];
         _woodtoground1 addItemCargoGlobal ["Misery_firewood", _rfirewood];
         _woodtoground1 enableCollisionWith player;
-        _woodtoground1 setpos (player modelToWorld [.3,-.3,.1]);
+        _woodtoground1 setPos (player modelToWorld [.3,-.3,.1]);
         _todelete append [_woodtoground1];
 
     private _actionID = (_this select 2);
