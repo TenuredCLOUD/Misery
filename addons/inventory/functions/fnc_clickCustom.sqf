@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
-/*
-Click action for custom item usage
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * Click action for custom item usage
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_inventory_fnc_clickCustom
+ *
 */
 
 private["_item","_description"];

@@ -1,16 +1,26 @@
 #include "..\script_component.hpp"
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
-    Misery Refuel zone
-    Designed specifically for Misery mod
-    by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Refuel Processing
+ * Processes refueling as well as prompts and progress bar
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_vehiclerefuel_fnc_refuelZoneStart;
+ *
+ * Public: No
 */
 
 private ["_playercash","_module","_dialog","_PurchaseB","_ExitB","_Vehiclename","_target","_fuelCost","_Found","_totalLiters","_RefuelInterrupt","_playercash","_text","_displayedText","_delay"];
 
 _module=(entities "Misery_RefuelZoneSettings")select 0;
-Mis_Refuelcurrencytype =_module getvariable "Misery_Refuelcurrency";
-Mis_Refuelfundstype =_module getvariable "Misery_Refuelfundstype";
+Mis_Refuelcurrencytype =_module getVariable "Misery_Refuelcurrency";
+Mis_Refuelfundstype =_module getVariable "Misery_Refuelfundstype";
 
 _dialog = findDisplay 982384;
 _PurchaseB = _dialog displayCtrl 1600;
@@ -48,7 +58,7 @@ _RefuelInterrupt = (findDisplay 982384) displayAddEventHandler ["KeyDown", {
     };
 }];
 
-if (MiseryinRefuelzonearea) exitwith {
+if (MiseryinRefuelzonearea) exitWith {
 
 if (Mis_Refuelcurrencytype == "DIGITALTYPE") then {
 _playercash = player getVariable [Mis_Refuelfundstype, 0];
@@ -113,7 +123,7 @@ for "_i" from 0 to (_totalLiters + 50) do {
     };
     if (Mis_Refuelcurrencytype == "ITEMTYPE") then {
         _playercash = {_x == Mis_Refuelfundstype} count items player;
-        for "_j" from 1 to _fundsToDeduct do {player removeitem Mis_Refuelfundstype;};
+        for "_j" from 1 to _fundsToDeduct do {player removeItem Mis_Refuelfundstype;};
     };
     if (Mis_Refuelcurrencytype == "MAGAZINETYPE") then {
         _playercash = {_x == Mis_Refuelfundstype} count magazines player;

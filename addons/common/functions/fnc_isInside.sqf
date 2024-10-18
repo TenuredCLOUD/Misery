@@ -1,9 +1,19 @@
 #include "..\script_component.hpp"
 /*
-Misery Isinside of building check
-Checks for Roof over player, as well as 2 or more walls (player must be "boxed in")
-Designed specifically for Misery mod
-By TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Checks if the player has an item, player loadout is cached to reduce how often unique items are called.
+ * Items check includes everything, even weapons.
+ *
+ * Arguments:
+ * 0: Player <OBJECT>
+ *
+ * Return Value:
+ * 0: Under roof [1,0] <ARRAY>
+ * 1: Boxed in [0,1] <ARRAY>
+ *
+ * Example:
+ * (([player] call misery_common_fnc_isInside) select 0) 
+ * (([player] call misery_common_fnc_isInside) select 1)
 */
 
 private ["_playerPos","_isUnderRoof","_wallCount","_playerDir","_maxDistance","_endPos","_introof","_intwalls","_wall","_roof"];

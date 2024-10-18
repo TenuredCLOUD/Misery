@@ -1,9 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Vehicle Refuel UI List populater
-Defines the selected refuel option, and passes values
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Vehicle Refuel UI List populater
+ * Defines the selected refuel option, and passes values
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_fuel_fnc_processRefuel
+ *
 */
 
 private _dialog = findDisplay 982385;

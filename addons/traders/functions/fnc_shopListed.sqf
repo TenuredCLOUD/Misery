@@ -1,9 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Trader Shop UI List populater
-Defines Traders purchase options, and passes current pricing values
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Trader Shop UI List populater
+ * Defines Traders purchase options, and passes current pricing values
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_traders_fnc_shopListed;
+ *
+ * Public: No
 */
 
 waitUntil {sleep 0.01; !isNull findDisplay 982390};

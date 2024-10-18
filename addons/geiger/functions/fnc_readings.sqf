@@ -1,13 +1,22 @@
 #include "..\script_component.hpp"
-/*
-Misery Geiger UI Reading updater
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * Geiger UI Reading updater
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_geiger_fnc_readings
+ *
 */
 
 waitUntil {sleep 1; !isNull findDisplay 982344};
 
-While {!isNull findDisplay 982344} do {
+while {!isNull findDisplay 982344} do {
 
 _RadReading = format ["%1 mSv", round (player getVariable ["MiseryRadiation",0])];
 ctrlSetText [1000, _RadReading];

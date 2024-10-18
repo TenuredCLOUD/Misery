@@ -1,9 +1,19 @@
 #include "..\script_component.hpp"
 /*
-Misery Ambient AI Zones Master Checking loop
-Consistenty checks players positions relative to module positions
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Ambient AI Zones Master Checking loop
+ * Consistenty checks players positions relative to module positions
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_ambient_ai_fnc_moduleCheck;
+ *
+ * Public: No
 */
 
 private _modules = allMissionObjects "Misery_Ambient_AI";

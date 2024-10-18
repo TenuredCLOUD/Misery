@@ -11,7 +11,7 @@
  * 0: Item Found <BOOL>
  *
  * Example:
- * [] call misery_fnc_common_hasItem
+ * [] call misery_common_fnc_hasItem
 */
 
 params ["_items"];

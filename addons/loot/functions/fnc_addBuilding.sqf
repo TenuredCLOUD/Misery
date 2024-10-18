@@ -26,7 +26,7 @@ if (_b in MiseryAllBuildings) exitWith {};
 MiseryAllBuildings pushBack _b;
 
 // if too much damage to building no loot:
-if ((Damage _b)>0.7) exitWith {};
+if ((damage _b)>0.7) exitWith {};
 
 _marker="";
 
@@ -35,7 +35,7 @@ if (MiseryDebug) then {
     _marker=createMarkerLocal[format["%1", _b], (getPos _b)];
     _marker setMarkerTypeLocal "mil_dot";_marker setMarkerColorLocal "ColorBlue"
 };
-_bText=toLower(getText(configfile>>"CfgVehicles">>(typeOf _b)>>"editorSubcategory"));
+_bText=toLower(getText(configFile>>"CfgVehicles">>(typeOf _b)>>"editorSubcategory"));
 
 // Military building
 if ("military" in _bText) exitWith {

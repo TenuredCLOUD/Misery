@@ -1,9 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Near tree check fnc (Axe wood collection)
-Returns all nearby tree terrain objects + checks if they are damaged
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Near tree check fnc (Axe wood collection)
+ * Returns all nearby tree terrain objects + checks if they are damaged
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_common_fnc_nearTreeAxe;
+ *
 */
 
 private ["_found", "_axeType","_WBKIMSAXETYPE"];
@@ -18,7 +27,7 @@ if (!MiseryWBKIMS) then {
     _axeType = currentWeapon player;
 };
 
-if (vehicle player == player && ((_axeType in items player) || (_WBKIMSAXETYPE find _axeType > -1))) then {
+if (isNull objectParent player && ((_axeType in items player) || (_WBKIMSAXETYPE find _axeType > -1))) then {
     //List nearby trees
     if (count (nearestTerrainObjects [player, ["TREE","SMALL TREE"], 2.5, true, true]) > 0) then {
         _found = true;

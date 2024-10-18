@@ -1,3 +1,18 @@
+#include "..\script_component.hpp"
+/*
+ * Author: TenuredCLOUD
+ * Can forage check
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * 0: BOOL
+ *
+ * Example:
+ * [] call misery_forage_fnc_canForage
+ *
+*/
 
 private ["_canforage"];
 
@@ -13,7 +28,7 @@ if (_intersects && !((([player] call Misery_fnc_Isinside) select 0) && (([player
 
     _canforage = true;
 
-    if (_canforage)exitwith{};
+    if (_canforage)exitWith{};
 
     };
 };

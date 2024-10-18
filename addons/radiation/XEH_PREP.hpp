@@ -1,2 +1,2 @@
-PREP(radiationExposure);
-PREP(radiationZone);
+PREP(exposure);
+PREP(zone);

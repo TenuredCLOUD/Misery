@@ -11,10 +11,10 @@ if !(local player) exitWith{};
 if !(alive player) exitWith{};
 if ((toUpper(lifeState player)) in ["DEAD","DEAD-RESPAWN","DEAD-SWITCHING"]) exitWith {};
 
-if (MiserysurvivalHardCoreSaveMode == 1 && !([player] call EFUNC(common,NearFire))) exitWith {systemChat format["%1, Hardcore saving mode is active: you must be near a fire to save your character...",profilename]};
+if (MiserysurvivalHardCoreSaveMode == 1 && !([player] call EFUNC(common,NearFire))) exitWith {systemChat format["%1, Hardcore saving mode is active: you must be near a fire to save your character...",profileName]};
 
 _loadout = getUnitLoadout player;
-_stats = [Damage player, getDir player, getPosATL player, worldName, date, stance player];
+_stats = [damage player, getDir player, getPosATL player, worldName, date, stance player];
 
 _saveName = MiserysurvivalSaveName;
 
@@ -68,7 +68,7 @@ if !(MiseryMP) then {
     {
         _unitType = typeOf _x;
         _unitloadout = getUnitLoadout _x;
-        _unitstats = [Damage _x, getDir _x, getPosATL _x, stance _x];
+        _unitstats = [damage _x, getDir _x, getPosATL _x, stance _x];
         _unitACEdamage = [];
         if (MiseryACE) then {
             _unitACEdamage = [_x] call ace_medical_fnc_serializeState;

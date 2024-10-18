@@ -1,11 +1,19 @@
 #include "..\script_component.hpp"
 /*
-Misery Take Money UI Action process
-Processes money taking from corpses
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Take Money UI Action process
+ * Processes money taking from corpses
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_money_fnc_takeMoneyAct;
+ *
 */
-
 
 [{!isNull findDisplay 358492},
 {

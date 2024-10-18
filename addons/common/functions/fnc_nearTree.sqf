@@ -1,16 +1,25 @@
 #include "..\script_component.hpp"
 /*
-Misery Near tree check fnc (Hand wood collection)
-Returns all nearby tree terrain objects + checks if they are damaged
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Near tree check fnc (Hand wood collection)
+ * Returns all nearby tree terrain objects + checks if they are damaged
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_common_fnc_nearTree;
+ *
 */
 
 private ["_found"];
 
 _found=false;
 
-if (vehicle player == player) then {
+if (isNull objectParent player) then {
 
     //List nearby trees
     if (count (nearestTerrainObjects [player, ["TREE","SMALL TREE"], 2.5, true, true]) > 0) then {

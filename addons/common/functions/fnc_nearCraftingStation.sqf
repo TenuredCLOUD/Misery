@@ -11,7 +11,7 @@
  * 0: Nearby <BOOL>
  *
  * Example:
- * [["Misery_Anvil"], 1.5] call misery_fnc_common_nearCraftingStation
+ * [["Misery_Anvil"], 1.5] call misery_common_fnc_nearCraftingStation
 */
 
 params ["_craftingStations", "_distance"];

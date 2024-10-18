@@ -1,8 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Crafting Framework Icon updater
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Crafting Framework Icon updater
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_crafting_fnc_showIcon;
+ *
+ * Public: No
 */
 
 disableSerialization;

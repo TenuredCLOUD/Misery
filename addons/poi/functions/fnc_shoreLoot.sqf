@@ -1,8 +1,18 @@
 #include "..\script_component.hpp"
 /*
-POI Generator (Shore loot)
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * POI Generator (Shore loot)
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_poi_fnc_shoreLoot;
+ *
+ * Public: No
 */
 
 private [

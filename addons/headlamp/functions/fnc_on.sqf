@@ -1,17 +1,25 @@
 #include "..\script_component.hpp"
-/*
-Headlamp Usage (Turning on)
-This function syncs to all client in a server environment
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * Headlamp Usage (Turning on)
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_headlamp_fnc_on
+ *
 */
 
 private _player = _this select 0;
 
 if (isNil {_player getVariable "Misery_Headlamp"}) then {
 
-_player removeitem "Misery_HeadlampOFF";
-_player additem "Misery_HeadlampON";
+_player removeItem "Misery_HeadlampOFF";
+_player addItem "Misery_HeadlampON";
 
 private _headlamp = "#lightpoint" createVehicle position _player;
 _headlamp setLightBrightness 0.15; // Set brightness

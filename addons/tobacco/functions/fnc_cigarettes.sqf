@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery Cigarette usage
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Cigarette usage
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_tobacco_fnc_cigarettes;
+ *
 */
 
 if (!hasInterface) exitWith {};
@@ -17,7 +26,7 @@ private _MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];
 
       titleText ["You light up a cigarette...", "PLAIN DOWN"];
 
-    player removeitem "Misery_cigarettepack"; //remove on start;
+    player removeItem "Misery_cigarettepack"; //remove on start;
 
     playSound3D ["\z\misery\addons\audio\sounds\immersion\Matchsmoking.ogg", player, false, getPosASL player, 4, 1, 10];
 
@@ -34,9 +43,9 @@ private _MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];
   };
 
 ////---------------------------------------------------
-  if (_random > 5) exitwith {
+  if (_random > 5) exitWith {
 
-    player additem "Misery_cigarettepack";
+    player addItem "Misery_cigarettepack";
 
     //This snippet is an altered version from Anti rad pills usage from Ravage mod, permission was requested before use:
 _compteur = 0;
@@ -54,7 +63,7 @@ player setVariable ["_antirad", nil];
 };
 
 //---------------------------------------------------no more cigs
-if (_random == 5) exitwith {
+if (_random == 5) exitWith {
 
 titleText ["You smoked the last cigarette...", "PLAIN DOWN"];
 
@@ -75,9 +84,9 @@ player setVariable ["_antirad", nil];
 
 ////---------------------------------------------------
 
-if (_random < 5) exitwith {
+if (_random < 5) exitWith {
 
-player additem "Misery_cigarettepack";
+player addItem "Misery_cigarettepack";
 
 //This snippet is an altered version from Anti rad pills usage from Ravage mod, permission was requested before use:
 _compteur = 0;
@@ -100,7 +109,7 @@ if ("Misery_lighter" in items player) then {
 
   titleText ["You light up a cigarette...", "PLAIN DOWN"];
 
-  player removeitem "Misery_cigarettepack"; //remove on start;
+  player removeItem "Misery_cigarettepack"; //remove on start;
 
   playSound3D ["\z\misery\addons\audio\sounds\immersion\Lightersmoking.ogg", player, false, getPosASL player, 4, 1, 10];
 
@@ -117,9 +126,9 @@ if ("Misery_lighter" in items player) then {
   };
 
 ////---------------------------------------------------
-  if (_random > 5) exitwith {
+  if (_random > 5) exitWith {
 
-    player additem "Misery_cigarettepack";
+    player addItem "Misery_cigarettepack";
 
     //This snippet is an altered version from Anti rad pills usage from Ravage mod, permission was requested before use:
 _compteur = 0;
@@ -137,7 +146,7 @@ player setVariable ["_antirad", nil];
 };
 
 //---------------------------------------------------no more cigs
-if (_random == 5) exitwith {
+if (_random == 5) exitWith {
 
 titleText ["You smoked the last cigarette...", "PLAIN DOWN"];
 
@@ -158,9 +167,9 @@ player setVariable ["_antirad", nil];
 
 ////---------------------------------------------------
 
-if (_random < 5) exitwith {
+if (_random < 5) exitWith {
 
-player additem "Misery_cigarettepack";
+player addItem "Misery_cigarettepack";
 
 //This snippet is an altered version from Anti rad pills usage from Ravage mod, permission was requested before use:
 _compteur = 0;

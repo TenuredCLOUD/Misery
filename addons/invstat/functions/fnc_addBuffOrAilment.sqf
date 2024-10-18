@@ -1,11 +1,20 @@
 #include "..\script_component.hpp"
-/*
-Misery Buff or Ailment Data Parser
-Designed specifically for Misery mod
-by TenuredCLOUD
-
-Usage example:
-["ailment","name of ailment", "path/to/image/file.paa", "description"] call Misery_fnc_AddBuffOrAilment;
+ /*
+ * Author: TenuredCLOUD
+ * Buff or Ailment Data Parser
+ *
+ * Arguments:
+ * 0: ailment or buff <STRING>
+ * 1: name of ailment or buff <STRING>
+ * 2: path to icon <STRING>
+ * 3: description <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * ["ailment","name of ailment", "path/to/image/file.paa", "description"] call misery_invstat_fnc_addBuffOrAilment;
+ *
 */
 
 _this params ["_type", "_name", "_image", "_description"];

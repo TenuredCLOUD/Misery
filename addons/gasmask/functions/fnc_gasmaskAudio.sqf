@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
-/*
-Misery Gasmask audio loop
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * Gasmask audio loop
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_gasmask_fnc_gasmaskAudio
+ *
 */
 
 [{((goggles player in antirad_goggles) || (vest player in antirad_vests) || (backpack player in antirad_packs))},

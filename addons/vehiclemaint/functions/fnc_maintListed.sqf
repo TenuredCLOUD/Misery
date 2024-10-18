@@ -1,9 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Maintenance UI List populater
-Defines the needed repairs, or possible scavenging
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Maintenance UI List populater
+ * Defines the needed repairs, or possible scavenging
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_vehicleMaint_fnc_maintListed;
+ *
+ * Public: No
 */
 
 waitUntil {!isNull findDisplay 274839};

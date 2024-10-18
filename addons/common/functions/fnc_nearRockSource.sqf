@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Check if player is looking at & near a "Rock source"
-Designed specifically for Misery mod
-by TenuredCLOUD with help from Dedmen (BIS) & Drongo
+ * Author: TenuredCLOUD, Dedmen, Drongo
+ * Check if player is looking at & near a "Rock source"
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_common_fnc_nearRockSource;
+ *
 */
 
 private ["_playerPos","_playerDir","_maxDistance","_endPos","_int","_rock","_rockSource"];

@@ -7,7 +7,7 @@ Designed specifically for Misery mod
 class MiseryRefuel_Vehicle_JCan_GUI
 {
     idd = 982385;
-    onLoad = "[] execVM '\z\misery\addons\fuel\functions\fnc_RefuelListed.sqf';";
+    onLoad = "[] execVM '\z\misery\addons\fuel\functions\fnc_refuelListed.sqf';";
 
 class ControlsBackground
 {

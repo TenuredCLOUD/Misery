@@ -1,6 +1,6 @@
-PREP(artifactExposure);
-PREP(artifactSafe);
-PREP(artifactsSettings);
-PREP(artifactsStart);
-PREP(generateArtifacts);
-PREP(moduleArtifactSpawner);
+PREP(exposure);
+PREP(safe);
+PREP(settings);
+PREP(start);
+PREP(generate);
+PREP(moduleSpawner);

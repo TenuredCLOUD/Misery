@@ -23,7 +23,7 @@ class Misery_BackGround
 
 class Misery_RscProgress
 {
-    onLoad = "_this spawn { for '_i' from 0 to 1 step 0.01 do { (_this # 0) progressSetPosition _i; sleep 0.01 } }";
+    onLoad = "_this spawn { for '_i' from 0 to 1 step 0.01 do { (_this # 0) progresssetPosition _i; sleep 0.01 } }";
     deletable = 0;
     fade = 0;
     access = 0;
@@ -32,10 +32,10 @@ class Misery_RscProgress
     colorFrame[] = {0,0,0,0};
     colorBar[] =
     {
-        "(profilenamespace getvariable ['GUI_BCG_RGB_R',0.13])",
-        "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.54])",
-        "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.21])",
-        "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.8])"
+        "(profilenamespace getVariable ['GUI_BCG_RGB_R',0.13])",
+        "(profilenamespace getVariable ['GUI_BCG_RGB_G',0.54])",
+        "(profilenamespace getVariable ['GUI_BCG_RGB_B',0.21])",
+        "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.8])"
     };
     x = 0.344;
     y = 0.619;

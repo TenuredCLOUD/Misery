@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery Antibiotic pill usage
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Antibiotic pill usage
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_llcontainer_fnc_storeArtifact;
+ *
 */
 
 private _MInfection = player getVariable ["MiseryInfection", MACRO_PLAYER_INFECTION];
@@ -16,11 +25,11 @@ if (!hasInterface) exitWith {};
     titleText ["You cannot take medicine while wearing a mask...", "PLAIN DOWN"];
 };
 
-    if (alive player) exitwith {
+    if (alive player) exitWith {
 
     titleText ["You take an antibiotic pill...", "PLAIN DOWN"];
 
-    player removeitem "Misery_antibioticpill";
+    player removeItem "Misery_antibioticpill";
 
     if (MiseryACE) then {
     [player, "Misery_antibioticpill", 10, 60, -10, 0, -10] call ace_medical_status_fnc_addMedicationAdjustment;

@@ -1,15 +1,20 @@
 #include "..\script_component.hpp"
 /*
-Misery Vehicle Generater
-Takes input data and generates a fully functional vehicle of defined class
-Also generates a varname TAG to the generated vehicle for reference
-Designed specifically for Misery mod
-by TenuredCLOUD
-
-Usage Example:
-
-// Generate a vehicle
-["B_Quadbike_01_F", spawnmarker_1] call Misery_fnc_GenerateVehicle;
+ * Author: TenuredCLOUD
+ * Vehicle Generater
+ * Takes input data and generates a fully functional vehicle of defined class
+ * Also generates a varname TAG to the generated vehicle for reference
+ *
+ * Arguments:
+ * 0: Class of vehicle to spawn <STRING>
+ * 1: Spawn position <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * ["B_Quadbike_01_F", spawnmarker_1] call misery_traders_fnc_generateVehicle;
+ *
+ * Public: No
 */
 
 params ["_vehicleClassname", "_spawnMarker"];

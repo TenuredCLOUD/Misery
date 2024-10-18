@@ -1,27 +1,38 @@
 #include "..\script_component.hpp"
 /*
-Misery Vehicle Mechanic Repair Shop UI List populater
-Defines the selected purchase option, and passes current pricing values
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Maintenance scavenging
+ * passes scavenging option to part on vehicle (hitpoints)
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_vehicleMaint_fnc_processScavenge;
+ *
+ * Public: No
 */
 
-private _dialog = findDisplay 982382;
-private _selectedIndex = lbCurSel 1500; // Get the index of the selected item
+//WIP
 
-private _PurchaseB = _dialog displayCtrl 1600;
-private _ExitB = _dialog displayCtrl 1601;
+// private _dialog = findDisplay 982382;
+// private _selectedIndex = lbCurSel 1500; // Get the index of the selected item
 
-if (_selectedIndex == -1) exitWith {
-    ctrlSetText [1001, "No Repair option selected..."];
-};
+// private _PurchaseB = _dialog displayCtrl 1600;
+// private _ExitB = _dialog displayCtrl 1601;
 
-if !(_selectedIndex == -1) exitWith {
+// if (_selectedIndex == -1) exitWith {
+//     ctrlSetText [1001, "No Repair option selected..."];
+// };
 
-_PurchaseB ctrlShow false;
-_ExitB ctrlShow false;
+// if !(_selectedIndex == -1) exitWith {
 
-[] execVM "\z\misery\addons\vehiclemechrepairs\functions\fnc_Repair.sqf";
-};
+// _PurchaseB ctrlShow false;
+// _ExitB ctrlShow false;
+
+// [] execVM "\z\misery\addons\vehiclemechrepairs\functions\fnc_Repair.sqf";
+// };
 
 

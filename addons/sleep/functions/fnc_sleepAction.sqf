@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery show Sleep interaction
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * show Sleep interaction (asset model based)
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_sleep_fnc_sleepAction;
+ *
 */
 
     [

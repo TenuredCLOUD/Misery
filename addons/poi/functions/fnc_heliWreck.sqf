@@ -1,8 +1,18 @@
 #include "..\script_component.hpp"
 /*
-POI Generator (Heli-Wreck)
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * POI Generator (Heli-Wreck)
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_poi_fnc_heliWreck;
+ *
+ * Public: No
 */
 
 private [

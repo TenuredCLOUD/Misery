@@ -1,9 +1,17 @@
 #include "..\script_component.hpp"
-/*
-Misery Generator Power button
-Controls start and stop operation of generators
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * Generator Power button
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_generator_fnc_powerButton
+ *
 */
 
 waitUntil {!isNull findDisplay 573849};

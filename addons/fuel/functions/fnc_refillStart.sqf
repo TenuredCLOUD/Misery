@@ -1,9 +1,18 @@
 #include "..\script_component.hpp"
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
-    Misery Refuel with Jcan
-    Designed specifically for Misery mod
-    by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Refuel with Jcan
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_fuel_fnc_refillStart
+ *
 */
 
 private ["_dialog","_PurchaseB","_ExitB","_Vehiclename","_target","_Found","_totalLiters","_RefuelInterrupt","_text","_displayedText","_delay"];

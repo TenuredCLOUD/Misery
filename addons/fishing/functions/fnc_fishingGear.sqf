@@ -1,3 +1,18 @@
+#include "..\script_component.hpp"
+/*
+ * Author: TenuredCLOUD
+ * checks if a player has fishing gear
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * 0: BOOL
+ *
+ * Example:
+ * [] call misery_fishing_fnc_fishingGear
+ *
+*/
 
 private ["_canfish"];
 
@@ -9,6 +24,6 @@ if ("Misery_fishingpole" in _Check_items && "Misery_fishingspool" in _Check_item
 
     _fishinggear = true;
 
-    if (_fishinggear)exitwith{};
+    if (_fishinggear)exitWith{};
 };
         _fishinggear //return

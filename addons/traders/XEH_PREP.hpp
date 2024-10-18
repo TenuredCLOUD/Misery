@@ -8,6 +8,6 @@ PREP(processPurchase);
 PREP(processSell);
 PREP(processTransaction);
 PREP(shopListed);
-PREP(shopVALs);
+PREP(shopVAL);
 PREP(trackTraders);
 PREP(waitQueue);

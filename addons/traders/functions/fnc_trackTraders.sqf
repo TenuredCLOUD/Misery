@@ -1,10 +1,20 @@
 #include "..\script_component.hpp"
 /*
-Misery Traders Tracking
-Processing Algorithm to Track players positioning to Traders and adjusts economic status of traders stock, as well as thier overall funds
-Calculations for purchasing prcessing will vary but should not go below or above the maximum and minimum price set points due to the way the calculation processes pricing, this ensures true dynamic markets...
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Traders Tracking
+ * Processing Algorithm to Track players positioning to Traders and adjusts economic status of traders stock, as well as thier overall funds
+ * Calculations for purchasing prcessing will vary but should not go below or above the maximum and minimum price set points due to the way the calculation processes pricing, this ensures true dynamic markets...
+ * This algorithm essentially emulates AI within the world trading with traders
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_traders_fnc_trackTraders;
+ *
+ * Public: No
 */
 
 waitUntil {sleep 1; ((count MiseryActiveTraders) > 0)};
@@ -27,7 +37,7 @@ while {true} do {
                     private _shopFunds = _shop select (_shop findIf {_x select 0 == "ShopFunds"}) select 1;
 
                     if (MiseryDebug) then {
-                        systemChat format ["Processing trader %1, initial funds: %2", _trader, [_shopFunds] call Misery_fnc_formatNumber];
+                        systemChat format ["Processing trader %1, initial funds: %2", _trader, [_shopFunds, 1, 2, true] call CBA_fnc_formatNumber];
                     };
 
                     {
@@ -71,7 +81,7 @@ while {true} do {
                     _trader setVariable ['shop', _shop, true];
 
                     if (MiseryDebug) then {
-                        systemChat format ["Finished processing trader %1, final funds: %2", _trader, [_shopFunds] call Misery_fnc_formatNumber];
+                        systemChat format ["Finished processing trader %1, final funds: %2", _trader, [_shopFunds, 1, 2, true] call CBA_fnc_formatNumber];
                     };
                 };
             };

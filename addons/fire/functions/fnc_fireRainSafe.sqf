@@ -1,9 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery under roof check for Fire objects
-Checks for Roof over fire, this aids with rain resistance
-Designed specifically for Misery mod
-By TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Checks for Roof over fire, this aids with rain resistance
+ *
+ * Arguments:
+ * 0: OBJECT <STRING>
+ *
+ * Return Value:
+ * 0: BOOL
+ *
+ * Example:
+ * [] call misery_fire_fnc_fireRainSafe
+ *
 */
 
 private ["_firePos","_fireDir","_maxDistance","_endPos","_int","_roof","_isUnderRoof"];

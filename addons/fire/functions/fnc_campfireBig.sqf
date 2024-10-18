@@ -1,9 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery Campfire (big)
-Generates Big campfire variant
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Starts fire crafting concept
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_fire_fnc_campfireBig
+ *
 */
 
 private _pos=player getRelPos[1.5,0];
@@ -70,7 +78,7 @@ _object setVariable ["Mis_Firewoodfuel", 100, true];
     //Raining too hard: (Chances fire extinguishing if player isn't under an awning or "roof like" structure for rain coverage)
     if (_rainlevel > 0.3 && !(([player] call Misery_fnc_Isinside) select 0)) then {
   private _rainkillfire = [1, 50] call BIS_fnc_randomInt;
-  if (_rainkillfire > 25) exitwith {
+  if (_rainkillfire > 25) exitWith {
     _random = 0; //Set RNG to 0 avoiding 10 and pushing for a failure since rain extinguished flame
     };
 };
@@ -78,7 +86,7 @@ _object setVariable ["Mis_Firewoodfuel", 100, true];
     titleText ["Attempting to reignite unlit fire...", "PLAIN DOWN"];
     };
 
-    if (_random == 10) exitwith {
+    if (_random == 10) exitWith {
     // reignite fire
     (_this select 0) inflame true;
     titleText ["You successfully reignited the fire...", "PLAIN DOWN"];
@@ -87,7 +95,7 @@ _object setVariable ["Mis_Firewoodfuel", 100, true];
     //Reset flame timer variable if needed: (+ remove wood used) // If no wood sticks used Fire fuel will not reset
     if ((((_this select 0) getVariable ["Mis_Firewoodfuel", 100]) <= 0) && ("Misery_firewood" in items player)) then {
     (_this select 0) setVariable ["Mis_Firewoodfuel", 100, true];
-    player removeitem "Misery_firewood";
+    player removeItem "Misery_firewood";
     };
 
     //Check if fuel variable was never reset: (someone attempted fuel exploit):
@@ -123,12 +131,12 @@ private _mags = ["acex_intelitems_notepad","rvg_money", "rvg_notepad", "rvg_docF
 private _index = _items findIf { _x in items player };
 if (_index != -1) then {
     private _item = _items select _index;
-    player removeitem _item;
+    player removeItem _item;
 } else {
     _index = _mags findIf { _x in magazines player };
     if (_index != -1) then {
         private _mag = _mags select _index;
-        player removemagazine _mag;
+        player removeMagazine _mag;
     };
 };
 
@@ -147,12 +155,12 @@ private _mags = ["acex_intelitems_notepad","rvg_money", "rvg_notepad", "rvg_docF
 private _index = _items findIf { _x in items player };
 if (_index != -1) then {
     private _item = _items select _index;
-    player removeitem _item;
+    player removeItem _item;
 } else {
     _index = _mags findIf { _x in magazines player };
     if (_index != -1) then {
         private _mag = _mags select _index;
-        player removemagazine _mag;
+        player removeMagazine _mag;
     };
 };
 

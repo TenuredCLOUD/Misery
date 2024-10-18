@@ -1,9 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Trader Shop
-Processes Listob Icons as well as test but in the icon controls
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Trader Shop icons
+ * Processes Lists of Icons as well as text but in the icon controls
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * [] call misery_traders_fnc_processIcon;
+ *
+ * Public: No
 */
 
 [{!isNull findDisplay 982390},

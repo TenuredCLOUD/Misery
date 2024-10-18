@@ -1,9 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Misery Take Money UI
-Starts up UI with proper values, etc...
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Take Money UI
+ * Starts up UI with proper values, etc...
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_money_fnc_takeMoney;
+ *
 */
 
 [{!isNull findDisplay 358492},

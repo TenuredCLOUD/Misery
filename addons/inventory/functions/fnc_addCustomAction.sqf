@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
-/*
-Custom action for GUI parser
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * Custom action for GUI parser
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_inventory_fnc_addCustomAction
+ *
 */
 
 private["_module","_units","_description","_script","_waitTime"];

@@ -1,16 +1,25 @@
 #include "..\script_component.hpp"
 /*
-Misery Near tree check fnc (Chainsaw wood collection)
-Returns all nearby tree terrain objects + checks if they are damaged
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Near tree check fnc (Chainsaw wood collection)
+ * Returns all nearby tree terrain objects + checks if they are damaged
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_common_fnc_nearTreeSaw;
+ *
 */
 
 private ["_found"];
 
 _found=false;
 
-if (vehicle player == player && "Misery_Chainsaw" in items player) then {
+if (isNull objectParent player && "Misery_Chainsaw" in items player) then {
 
     //List nearby trees
     if (count (nearestTerrainObjects [player, ["TREE","SMALL TREE"], 2.5, true, true]) > 0) then {

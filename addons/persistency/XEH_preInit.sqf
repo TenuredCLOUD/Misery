@@ -2,15 +2,13 @@
 
 ADDON = false;
 
-PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
-PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
 /*
 if (MiseryManualPData == 1 && MiserysurvivalSaveMode == 2) then {
-    MiseryActions pushback [localize "STR_MISERY_PLAYERDATA", localize "STR_MISERY_PLAYERDATA"];
+    MiseryActions pushBack [localize "STR_MISERY_PLAYERDATA", localize "STR_MISERY_PLAYERDATA"];
 };
 
 //respawn handle for stats (Singleplayer) - incase respawns exist:

@@ -18,7 +18,7 @@ if (alive player) then {
 
 titleText ["You take a cenestin pill...", "PLAIN DOWN"];
 
-player removeitem "Misery_Cenestin";
+player removeItem "Misery_Cenestin";
 
 sleep 60;
 
@@ -31,7 +31,7 @@ sleep 60;
 
 }else{
 private _playerhealth = damage player;
-player setdamage [_playerhealth - 0.15, false];
+player setDamage [_playerhealth - 0.15, false];
  };
 
 };

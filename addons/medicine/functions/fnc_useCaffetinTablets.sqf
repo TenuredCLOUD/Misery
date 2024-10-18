@@ -23,7 +23,7 @@ if ((_MInfection > 1) || (_MDebuffs find "PARASITES" != -1)) then {
     titleText ["You take some Caffetin tablets...", "PLAIN DOWN"];
     playSound3D ["\z\misery\addons\audio\sounds\inventory\Items\CrinklingPlastic.ogg", player, false, getPosASL player, 4, 1, 10];
 
-    player removeitem "Misery_caffetincaps";
+    player removeItem "Misery_caffetincaps";
 
      if (MiseryACE) then {
     [player, "Misery_caffetincaps", 120, 300, 1, 0, 1] call ace_medical_status_fnc_addMedicationAdjustment;

@@ -1,5 +1,5 @@
-PREP(rfBatteries);
-PREP(rfDetectionLoop);
-PREP(rfLoop);
-PREP(rfReboot);
-PREP(rfSyncLoop);
+PREP(batteries);
+PREP(detection);
+PREP(loop);
+PREP(reboot);
+PREP(syncLoop);

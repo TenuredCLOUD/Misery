@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
-/*
-Misery gasmask cartridge degradation
-Designed specifically for Misery mod
-by TenuredCLOUD
+ /*
+ * Author: TenuredCLOUD
+ * gasmask cartridge degradation
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_gasmask_fnc_gasmaskTimer
+ *
 */
 
 //If No Client data exists add default cartridge capacity:
@@ -35,7 +44,7 @@ if (_MCartridge <= 0) then {
 MiseryEmptyGasmask = goggles player; //Store currently worn gasmask before removal
 removeGoggles player;
 titleText ["Gasmask cartridges empty, removed mask...", "PLAIN DOWN"];
-player additem "Misery_gasmaskempty";
+player addItem "Misery_gasmaskempty";
 player setVariable ["Miserycartridge", 100];
 };
 };

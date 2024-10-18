@@ -3,20 +3,20 @@
 ["Misery", "ERU Power", "Turn on/off ERU", {
     private _formattedText;
     if ("Misery_ERU_off" in magazines player) then {
-        _formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_TURNONGEIGERBOOTUP"], "PLAIN DOWN", -1, true, true];
+        _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONGEIGERBOOTUP"];
         [_formattedText] call EFUNC(common,formatToTile);
         playSound3D ["\z\misery\addons\audio\sounds\eru\PowerUpBeep.ogg", player, false, getPosASL player, 4, 1, 10];
         player removeMagazine 'Misery_ERU_off';
         player addMagazine 'Misery_ERU';
         } else {
         if ("Misery_ERU" in magazines player) then {
-            _formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_TURNONGEIGERTURNOFF"], "PLAIN DOWN", -1, true, true];
+            _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONGEIGERTURNOFF"];
             [_formattedText] call EFUNC(common,formatToTile);
             playSound3D ["\z\misery\addons\audio\sounds\eru\PowerDownBeep.ogg", player, false, getPosASL player, 4, 1, 10];
             player removeMagazine 'Misery_ERU';
             player addMagazine 'Misery_ERU_off';
         } else {
-            _formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_TURNONGEIGERNOITEM"], "PLAIN DOWN", -1, true, true];
+            _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONGEIGERNOITEM"];
             [_formattedText] call EFUNC(common,formatToTile);
         };
     };

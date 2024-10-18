@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [] call misery_fnc_common_itemDecrement
+ * [] call misery_common_fnc_itemDecrement
 */
 
 params ["_item", ["_replacementItem", ""]];

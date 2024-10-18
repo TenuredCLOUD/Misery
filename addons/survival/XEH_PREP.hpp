@@ -1,2 +1,2 @@
-PREP(hungerImmersion);
-PREP(survivalLoop);
+PREP(hungry);
+PREP(loop);
