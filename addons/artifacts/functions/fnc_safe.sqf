@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Checks if artifact spawned under a roof 
+ * Checks if artifact spawned under a roof
  *
  * Arguments:
  * None

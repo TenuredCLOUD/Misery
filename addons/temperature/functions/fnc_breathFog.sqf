@@ -29,7 +29,7 @@ while {true} do {
     private ["_delay","_pfatigue","_MisFogObject","_FogEffect","_FogBreath"];
 
         if !(player getVariable ["MiseryBreath", false]) then {
-        _pfatigue = (getfatigue player) * 100; //Fatigue calc
+        _pfatigue = (getFatigue player) * 100; //Fatigue calc
         if (_pfatigue >= 75) then {_delay=(1 + random 1);};
         if (_pfatigue >= 50 && _pfatigue < 75) then {_delay=(2 + random 2);};
         if (_pfatigue >= 25 && _pfatigue < 50) then {_delay=(3 + random 3);};

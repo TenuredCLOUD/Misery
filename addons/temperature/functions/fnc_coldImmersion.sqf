@@ -28,12 +28,12 @@
             if(MiseryDebug)then{systemChat "Misery Cold immersion cycle checks re-initiated..."};
         };
 
-    if (((player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE]) < -10) && !(Goggles player in antirad_goggles || vest player in antirad_vests)) then {
+    if (((player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE]) < -10) && !(goggles player in antirad_goggles || vest player in antirad_vests)) then {
             player say3D ["Sneeze",10,1,2,0];
 
     }else{
 
-        if (((player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE]) < -10) && (Goggles player in antirad_goggles || vest player in antirad_vests)) then {
+        if (((player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE]) < -10) && (goggles player in antirad_goggles || vest player in antirad_vests)) then {
             player say3D ["coughMask1",10,1,2,0];
 
     };

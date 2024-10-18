@@ -26,6 +26,6 @@ if ((_overShore && _isLookingAtWater) || (_overWater && _isLookingAtWater) || (v
 
  _canfish = true;
 
- if (_canfish)exitwith{};
+ if (_canfish)exitWith{};
 };
   _canfish //return

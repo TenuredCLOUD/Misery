@@ -7,7 +7,7 @@
  * None
  *
  * Return Value:
- * 0: Listed indexes for UI 
+ * 0: Listed indexes for UI
  *
  * Example:
  * [] call misery_cooking_fnc_recipesListed

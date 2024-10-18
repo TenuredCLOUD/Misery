@@ -2,7 +2,7 @@
 /*
  * Author: TenuredCLOUD
  * hammer check fnc (iBuild compat)
- * 
+ *
  *
  * Arguments:
  * None

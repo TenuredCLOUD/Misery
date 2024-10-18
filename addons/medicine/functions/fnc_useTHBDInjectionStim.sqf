@@ -17,7 +17,7 @@ if (!hasInterface) exitWith {};
 
 titleText ["You use the Thrombomodulin Stimpack...", "PLAIN DOWN"];
 
-    player removeitem "Misery_ThrombomodulinStimpack";
+    player removeItem "Misery_ThrombomodulinStimpack";
 
 sleep 5;
 

@@ -22,9 +22,9 @@ _dialog = findDisplay 982381;
 _PurchaseB = _dialog displayCtrl 1600;
 _ExitB = _dialog displayCtrl 1601;
 
-_pricerads = parseNumber ((((player getvariable ["MiseryRadiation",0]) / 50) * Mis_Medpriceradheal) toFixed 1);
+_pricerads = parseNumber ((((player getVariable ["MiseryRadiation",0]) / 50) * Mis_Medpriceradheal) toFixed 1);
 
-if (MiseryinMedzonearea) exitwith {
+if (MiseryinMedzonearea) exitWith {
 
 if (Mis_Medcurrencytype == "DIGITALTYPE") then {
 _playercash = player getVariable [Mis_Medfundstype, 0];
@@ -75,7 +75,7 @@ for "_i" from 0 to 99 do {
 
 if ((player getVariable "Misery_Proc_Treatment") isEqualTo true) then {
 
-_pricerads = parseNumber ((((player getvariable ["MiseryRadiation",0]) / 50) * Mis_Medpriceradheal) toFixed 1);
+_pricerads = parseNumber ((((player getVariable ["MiseryRadiation",0]) / 50) * Mis_Medpriceradheal) toFixed 1);
 
 if (Mis_Medcurrencytype == "DIGITALTYPE") then {
 _playercash = player getVariable [Mis_Medfundstype, 0];
@@ -83,16 +83,16 @@ player setVariable [Mis_Medfundstype, (_playercash - _pricerads), true];
 };
 if (Mis_Medcurrencytype == "ITEMTYPE") then {
 _playercash = {_x == Mis_Medfundstype} count items player;
-for "_i" from 1 to _pricerads do {player removeitem Mis_Medfundstype;};
+for "_i" from 1 to _pricerads do {player removeItem Mis_Medfundstype;};
 };
 if (Mis_Medcurrencytype == "MAGAZINETYPE") then {
 _playercash = {_x == Mis_Medfundstype} count magazines player;
 for "_i" from 1 to _pricerads do {player removeMagazine Mis_Medfundstype;};
 };
 
-_priceradscalc = parseNumber ((player getvariable ["MiseryRadiation",0]) toFixed 1);
+_priceradscalc = parseNumber ((player getVariable ["MiseryRadiation",0]) toFixed 1);
 
-player setVariable ["MiseryRadiation", (player getvariable ["MiseryRadiation",0]) - _priceradscalc, true];
+player setVariable ["MiseryRadiation", (player getVariable ["MiseryRadiation",0]) - _priceradscalc, true];
 
 ctrlSetText [1001, "You have been successfully treated..."];
 

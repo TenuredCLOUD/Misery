@@ -1,8 +1,8 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Ballistics modifier 
- * 
+ * Ballistics modifier
+ *
  *
  * Arguments:
  * 0: animal or unit classname to modify <CLASSNAME>

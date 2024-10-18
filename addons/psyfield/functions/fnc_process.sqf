@@ -77,7 +77,7 @@
             if (isNil "MiseryFearPsy") then {MiseryFearPsy = "DISABLED"};
             if (MiseryFearPsy == "ENABLED") then {
             private _fearadd = MACRO_FEAR_CALC_PSYFIELD_NOPROTECTION;
-            player setVariable ["MiseryFear", (_MFear + parsenumber ((_fearadd)toFixed 2))];
+            player setVariable ["MiseryFear", (_MFear + parseNumber ((_fearadd)toFixed 2))];
             };
 
             playSound "Brain_Scorcher2";

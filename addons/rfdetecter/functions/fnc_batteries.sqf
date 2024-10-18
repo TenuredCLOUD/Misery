@@ -22,11 +22,11 @@ if !("Misery_lithiumbattery" in items player) then {
 
 titleText ["You add a battery to your RF detector...", "PLAIN DOWN"];
 
-player removeitem "Misery_RFHighNobattery";
-player removeitem "Misery_lithiumbattery";
+player removeItem "Misery_RFHighNobattery";
+player removeItem "Misery_lithiumbattery";
 
 if (alive player) then {
 
-    player additem "Misery_RFHighrangeOFF";
+    player addItem "Misery_RFHighrangeOFF";
     };
   };

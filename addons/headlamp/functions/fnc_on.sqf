@@ -18,8 +18,8 @@ private _player = _this select 0;
 
 if (isNil {_player getVariable "Misery_Headlamp"}) then {
 
-_player removeitem "Misery_HeadlampOFF";
-_player additem "Misery_HeadlampON";
+_player removeItem "Misery_HeadlampOFF";
+_player addItem "Misery_HeadlampON";
 
 private _headlamp = "#lightpoint" createVehicle position _player;
 _headlamp setLightBrightness 0.15; // Set brightness

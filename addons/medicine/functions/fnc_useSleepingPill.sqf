@@ -29,7 +29,7 @@ if (goggles player in antirad_goggles || headgear player in antirad_headgears) e
 if (alive player) exitWith {
     titleText ["You take a sleeping pill...", "PLAIN DOWN"];
 
-    player removeitem "Misery_sleeppill";
+    player removeItem "Misery_sleeppill";
 
     if (MiseryACE) then {
         [player, "Misery_sleeppill", 10, 60, -10, 0, -10] call ace_medical_status_fnc_addMedicationAdjustment;

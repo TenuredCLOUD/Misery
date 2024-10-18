@@ -7,7 +7,7 @@
  * None
  *
  * Return Value:
- * None 
+ * None
  *
  * Example:
  * [] call misery_crafting_fnc_LBIndexCheck

@@ -19,7 +19,7 @@ private _MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];
 
 if (!hasInterface) exitWith {};
 
-  if (alive player) exitwith {
+  if (alive player) exitWith {
 
   if (MiseryFearenabled) then {
     player setVariable ["MiseryFear", (_MFear - 2)];

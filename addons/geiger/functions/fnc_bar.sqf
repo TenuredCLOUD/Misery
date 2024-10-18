@@ -40,7 +40,7 @@ disableSerialization;
         "\z\misery\addons\audio\sounds\inventory\Items\Geiger008.ogg"
         ];
 
-        if (!isNil "MiseryinRadZone" && MiseryinRadZone == true) then {
+        if (!isNil "MiseryinRadZone" && MiseryinRadZone) then {
         playSound3D [_randomGeiger, player, false, getPosASL player, 5, 1, 10];
         };
 

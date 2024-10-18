@@ -38,7 +38,7 @@ if !(hasInterface) exitWith {};
 
         };
 
-        if (_ctrl && _alt && _key isEqualto DIK_DELETE) then {
+        if (_ctrl && _alt && _key isEqualTo DIK_DELETE) then {
 
         if!(MiserysurvivalKeyhandleScript=="")then{
         private _scriptDone = [player] execVM MiserysurvivalKeyhandleScript;

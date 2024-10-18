@@ -19,7 +19,7 @@ fnc_Miserysafezoneexit = {
 params ["_index", "_text"];
 
 if (!hasInterface || {!alive player}) exitWith {};
-if !(MiseryinSafezonearea) exitwith {
+if !(MiseryinSafezonearea) exitWith {
 titleText [_text, "PLAIN DOWN"];
 player removeEventHandler ["Fired", _index]; //Remove Fired EH
 if (MiseryACE) then {

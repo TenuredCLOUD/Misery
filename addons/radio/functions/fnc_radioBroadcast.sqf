@@ -21,7 +21,7 @@ MiseryRadioBroadcastsystem = true; //Sync bootup
 
 [] execVM Radio\RadioObjectsStatic); //Immersive static loop
 
-While {true} do {
+while {true} do {
 
 if(MiseryDebug)then{systemChat "Misery Radio Broadcast starting..."};
 

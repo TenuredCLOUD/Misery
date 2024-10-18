@@ -16,16 +16,16 @@
 
 if (!hasInterface) exitWith {};
 
-if !(Miseryzedinfect) exitwith {};
+if !(Miseryzedinfect) exitWith {};
 
 ["CAManBase", "hit", {_this spawn Misery_fnc_ZedInfection}, true, [], true] call CBA_fnc_addClassEventHandler;
 
 Misery_fnc_ZedInfection = {
 params ["_unit", "_source", "_damage", "_instigator"];
 
-if (!isplayer _unit) exitwith {}; //If NOT player do nothing
+if (!isPlayer _unit) exitWith {}; //If NOT player do nothing
 
-if !(isNull objectParent player) exitwith {}; //If NOT player or Player is in vehicle do nothing
+if !(isNull objectParent player) exitWith {}; //If NOT player or Player is in vehicle do nothing
 
 if ((isPlayer _unit) && (_instigator isKindOf "zombie")) then { //If IS player then proceed to infection
 

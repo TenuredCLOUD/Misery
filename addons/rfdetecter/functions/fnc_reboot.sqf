@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * RF detector reboot 
+ * RF detector reboot
  *
  * Arguments:
  * None
@@ -14,9 +14,9 @@
  *
 */
 
-if (alive player) exitwith {
+if (alive player) exitWith {
 
-player removeitem "Misery_RFHighrangeOFF";
+player removeItem "Misery_RFHighrangeOFF";
 
 playSound3D ["\z\misery\addons\audio\sounds\Geigerenable\GeigerON.ogg", player, false, getPosASL player, 4, 1, 10];
 
@@ -51,7 +51,7 @@ playSound3D ["\z\misery\addons\audio\sounds\Geigerenable\GeigerON.ogg", player, 
     private _RFimage = format ["<img shadow='0.1' size='1.5' image='%1'/>", "\assets\data\EMFdetectorhighrange.paa"];
 
     hintSilent parseText format ["
-    <t size='1.15' align='center'> [RF Detector] %2</t><br/><br/>
+    <t size='1.15' align='center'> [RF Detector] %2 (%3)</t><br/><br/>
     <t>%1</t><br/>
     ",
     _RF,
@@ -90,7 +90,7 @@ playSound3D ["\z\misery\addons\audio\sounds\Geigerenable\GeigerON.ogg", player, 
     _RF2,
     _RF3
     ];
-    player additem "Misery_RFHighrangeON"; //End of boot cycle: adds RF detector
+    player addItem "Misery_RFHighrangeON"; //End of boot cycle: adds RF detector
     sleep 5;
     hintSilent ""; //<< removed HUD after 5 seconds
     };

@@ -44,11 +44,11 @@
 
     if (_randomunknownREMNANT == 25 && MiseryRemnant) then {
     _group = creategroup [civilian, true];
-    _pos = getpos player;
+    _pos = getPos player;
     _pos = [_pos select 0, _pos select 1, _pos select 2];
     _pos = _pos vectorAdd [50, 0, 0];
     _entity = ["myst_phantom_hidden_f","myst_phantom_naked_f"];
-    (selectrandom _entity) createUnit [_pos, _group, "MiseryPsuedoPhantom = this"]; //Create phantom and tag it with Gvar
+    (selectRandom _entity) createUnit [_pos, _group, "MiseryPsuedoPhantom = this"]; //Create phantom and tag it with Gvar
     //Spawn scheduled code on registered spawned entity:
     _timeafter = time + 30;
     [_timeafter] spawn {
@@ -60,11 +60,11 @@
 
     if (_randomunknownDSA == 25 && MiseryDSA) then {
     _group = creategroup [civilian, true];
-    _pos = getpos player;
+    _pos = getPos player;
     _pos = [_pos select 0, _pos select 1, _pos select 2];
     _pos = _pos vectorAdd [50, 0, 0];
     _spookArray = [] + dsaSpookBases + dsaDevMutants + dsaWebknightCreatures;
-    (selectrandom _spookArray) createUnit [_pos, _group, "MiseryPsuedoSpook = this"]; //Create spook and tag it with Gvar
+    (selectRandom _spookArray) createUnit [_pos, _group, "MiseryPsuedoSpook = this"]; //Create spook and tag it with Gvar
     //Spawn scheduled code on registered spawned entity:
     _timeafter = time + 30;
     [_timeafter] spawn {

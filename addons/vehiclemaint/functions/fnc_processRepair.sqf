@@ -34,7 +34,7 @@
     // if (_requiredItem isEqualTo '') exitWith {};
 
     // private _player = ...;
-    // if (_player canAddItemToUniform _requiredItem) then {
+    // if (_player canaddItemToUniform _requiredItem) then {
     //     _vehicle setHitPointDamage [_hitpoint, 0];
     // } else {
     //     // The player does not have the required item

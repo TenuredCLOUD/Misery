@@ -53,7 +53,7 @@ disableSerialization;
     _MPlayertemp = player getVariable ["MiseryPlayerTemp", 0];
     _MDebuffs = player getVariable "MiseryDebuffs";
 
-    _pfatigue = (getfatigue player) * 100; //Fatigue calc
+    _pfatigue = (getFatigue player) * 100; //Fatigue calc
     _convpfatigue = round (100 - _pfatigue); //conversion to 100 - 0
 
     _cartridgecalc = player getVariable ["Miserycartridge", 100];
@@ -172,7 +172,7 @@ lbClear _ailmentsList;
     _TempVal ctrlShow false;
     };
     if(MiseryTemperature == 1 && "Misery_ERU" in magazines player) then {
-    _temp = format["%1°C",round (_MPlayertemp),(player call Misery_fnc_ClothingWarmth)select 0];
+    _temp = format["%1°C",round (_MPlayertemp)];
     _TempVal ctrlSetText _temp;
     };
     if(MiseryTemperature == 1 && !("Misery_ERU" in magazines player)) then {
@@ -188,7 +188,7 @@ lbClear _ailmentsList;
     _FundsVal ctrlSetText _FundsDisplay;
 
     if (!isNil "MiseryinPsyfield") then {
-    private _input1 =(_module getvariable "Misery_Psyprotection") call EFUNC(common,parseArray); //STRING to ARRAY
+    private _input1 =(_module getVariable "Misery_Psyprotection") call EFUNC(common,parseArray); //STRING to ARRAY
     private _psyprot = _input1;
     private _PsyProtected = _ailments findIf {(_x select 0) isEqualTo "Psy Emissions (Protected)"};
     private _PsyNoProtection = _ailments findIf {(_x select 0) isEqualTo "Psy Emissions"};

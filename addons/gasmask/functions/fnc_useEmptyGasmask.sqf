@@ -20,18 +20,18 @@ if (alive player) then {
 
    titleText ["You add some cartridges to the mask...", "PLAIN DOWN"];
 
-   player removeitem "Misery_gasmaskempty";
-   player removeitem "Misery_gascartridge";
+   player removeItem "Misery_gasmaskempty";
+   player removeItem "Misery_gascartridge";
 
    sleep 1;
 
    //If no "MiseryEmptyGasmask" variable exists add random gasmask to player
    if (isNil "MiseryEmptyGasmask") then {
-   private _randomgmask = selectrandom ["Mask_M40","Mask_M40_OD"];
-   player additem _randomgmask;   
+   private _randomgmask = selectRandom ["Mask_M40","Mask_M40_OD"];
+   player addItem _randomgmask;
    }else{
-   player additem MiseryEmptyGasmask; //Re-add stored Gasmask classname from stored variable 
-   MiseryEmptyGasmask = nil; //Make Empty gasmask string NIL value to prevent duping of pre-worn masks  
+   player addItem MiseryEmptyGasmask; //Re-add stored Gasmask classname from stored variable
+   MiseryEmptyGasmask = nil; //Make Empty gasmask string NIL value to prevent duping of pre-worn masks
    };
 
 };

@@ -28,8 +28,8 @@
             if(MiseryDebug)then{systemChat "Misery Artifact exposure cycle checks re-initiated..."};
         };
 
-If ([[MACRO_ARTIFACTS]] call EFUNC(common,hasItem)) then {
-  player setVariable ["MiseryRadiation", (player getvariable ["MiseryRadiation",0]) + 50, true];
+if ([[MACRO_ARTIFACTS]] call EFUNC(common,hasItem)) then {
+  player setVariable ["MiseryRadiation", (player getVariable ["MiseryRadiation",0]) + 50, true];
 };
 
 if(MiseryDebug)then{systemChat "Misery Artifact exposure cycle..."};

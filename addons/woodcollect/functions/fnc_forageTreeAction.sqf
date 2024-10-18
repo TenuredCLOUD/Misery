@@ -57,7 +57,7 @@
         _woodtoground1 = "GroundWeaponHolder" createVehicle [0,0,0];
         _woodtoground1 addItemCargoGlobal ["Misery_woodensticks", _rstick];
         _woodtoground1 enableCollisionWith player;
-        _woodtoground1 setpos (player modelToWorld [1,-.3,.1]);
+        _woodtoground1 setPos (player modelToWorld [1,-.3,.1]);
         _todelete append [_woodtoground1];
 
     private _actionID = (_this select 2);

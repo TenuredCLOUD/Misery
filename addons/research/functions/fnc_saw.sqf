@@ -29,7 +29,7 @@ private _randomsaw = selectRandom
 15,
 {true},
 {
-deleteVehicle cursortarget; // delete corpse
+deleteVehicle cursorTarget; // delete corpse
 private _zombiesawed = selectRandom [
 "Misery_zombiehead",
 "Misery_zombiehand",

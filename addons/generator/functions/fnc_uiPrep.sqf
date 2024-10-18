@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
  /*
  * Author: TenuredCLOUD
- * Generator UI populator 
+ * Generator UI populator
  *
  * Arguments:
  * None

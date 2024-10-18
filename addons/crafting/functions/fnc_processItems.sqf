@@ -9,7 +9,7 @@
  * None
  *
  * Return Value:
- * 0: BOOL 
+ * 0: BOOL
  *
  * Example:
  * [] call misery_crafting_fnc_processItems

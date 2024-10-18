@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD, Drongo
- * Near well check 
+ * Near well check
  *
  * Arguments:
  * None

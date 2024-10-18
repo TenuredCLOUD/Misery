@@ -18,12 +18,12 @@ private ["_deadzed"];
 
 _deadzed=false;
 
-private _target = cursortarget;
+private _target = cursorTarget;
 
-if ((_target iskindof "zombie") && (damage _target) >= 1) then {
+if ((_target isKindOf "zombie") && (damage _target) >= 1) then {
 
     _deadzed = true;
 
-    if (_deadzed)exitwith{};
+    if (_deadzed)exitWith{};
 };
         _deadzed //return

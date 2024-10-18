@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Module object <OBJECT>
  * 1: number of artifact to spawn <NUMBER>
- * 2: radius of module <NUMBER> 
+ * 2: radius of module <NUMBER>
  *
  * Return Value:
  * None
@@ -14,8 +14,8 @@
  * Example:
  * [
  * _module,
- * (_module getvariable "Misery_ArtifactSpawnnumber"),
- * (_module getvariable "Misery_ArtifactSpawnradius")
+ * (_module getVariable "Misery_ArtifactSpawnnumber"),
+ * (_module getVariable "Misery_ArtifactSpawnradius")
  * ] call misery_artifacts_fnc_generate;
  *
  * Public: No

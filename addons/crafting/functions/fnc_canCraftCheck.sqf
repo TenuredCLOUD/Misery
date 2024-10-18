@@ -7,7 +7,7 @@
  * 0: Requirements <ARRAY>
  *
  * Return Value:
- * 0: BOOL 
+ * 0: BOOL
  *
  * Example:
  * [_requirements] call misery_crafting_fnc_canCraftCheck
@@ -31,7 +31,7 @@ private _hasAll = true;
     };
     if (_itemArray isEqualType [] && {_itemArray select 0 != "CraftingTime"} && {_itemArray select 0 != "OutputCount"} && {_itemArray select 0 != "ToBeReplaced"} && {_itemArray select 0 != "Audio"}) then {
         if (MiseryDebug) then {
-        systemChat format["Checking 2: %2",_itemArray];
+        systemChat format["Checking 2: %1",_itemArray];
         };
         private _requiredItem = _itemArray select 0;
         private _requiredCount = _itemArray select 1;

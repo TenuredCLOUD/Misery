@@ -31,7 +31,7 @@ if ([["Misery_artifact01",
 
 _Hasartifact = true;
 
-if (_Hasartifact)exitwith{};
+if (_Hasartifact)exitWith{};
 
 };
 

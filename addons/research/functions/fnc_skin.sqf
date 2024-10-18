@@ -28,7 +28,7 @@ private _randomskin = selectRandom
 15,
 {true},
 {
-deleteVehicle cursortarget; // delete corpse
+deleteVehicle cursorTarget; // delete corpse
 private _zombieskinned = selectRandom [
 "Misery_Zombieskin",
 "Misery_Zombieeye"

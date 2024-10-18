@@ -7,7 +7,7 @@
  * None
  *
  * Return Value:
- * None 
+ * None
  *
  * Example:
  * [] call misery_crudemed_fnc_cauterizeAct
@@ -41,7 +41,7 @@
     }, _soundDummy] call CBA_fnc_waitUntilAndExecute;
     },
     {
-    titletext ["Cauterizing wounds...", "PLAIN DOWN"];
+    titleText ["Cauterizing wounds...", "PLAIN DOWN"];
     [player, 0.041] call ace_medical_fnc_adjustPainLevel; //after 24 cycles pain will be at max level (0.984)
     },
     {

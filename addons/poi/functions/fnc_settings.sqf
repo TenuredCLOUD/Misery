@@ -2,7 +2,7 @@
 /*
  * Author: TenuredCLOUD
  * POI Master settings module data parser
- * Defines performance properties for each POI module	
+ * Defines performance properties for each POI module
  *
  * Arguments:
  * None

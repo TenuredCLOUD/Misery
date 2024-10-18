@@ -22,7 +22,7 @@ if (!hasInterface) exitWith {};
 if (alive player) exitWith {
     titleText ["You use a cold pack...", "PLAIN DOWN"];
 
-    player removeitem "Misery_Coldpack";
+    player removeItem "Misery_Coldpack";
 
     sleep 60;
 

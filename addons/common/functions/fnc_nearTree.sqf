@@ -19,7 +19,7 @@ private ["_found"];
 
 _found=false;
 
-if (vehicle player == player) then {
+if (isNull objectParent player) then {
 
     //List nearby trees
     if (count (nearestTerrainObjects [player, ["TREE","SMALL TREE"], 2.5, true, true]) > 0) then {

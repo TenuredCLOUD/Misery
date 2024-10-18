@@ -47,7 +47,7 @@ if (isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
                         _MHunger = player getVariable ["MiseryHunger", MACRO_PLAYER_HUNGER];
                         _MThirst = player getVariable ["MiseryThirst", MACRO_PLAYER_THIRST];
 
-                        player setstamina ((getStamina player) - _scaledstaminaloss);
+                        player setStamina ((getStamina player) - _scaledstaminaloss);
 
                         addCamShake [1, 5, 10];
 
@@ -56,10 +56,10 @@ if (isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
 
                         // player setVariable ["MiseryHunger", (_MHunger - ((MiseryHungerIncrement)toFixed 2))];
                         // player setVariable ["MiseryHunger", (_MHunger - ((MiseryHungerIncrement)toFixed 2))];
-                        if !(Goggles player in antirad_goggles || vest player in antirad_vests) then {
+                        if !(goggles player in antirad_goggles || vest player in antirad_vests) then {
                         player say3D ["Cough",10,1,2,0];
                         }else{
-                        if (Goggles player in antirad_goggles || vest player in antirad_vests) then {
+                        if (goggles player in antirad_goggles || vest player in antirad_vests) then {
                         player say3D ["CoughMuffled",10,1,2,0];
 
                 };

@@ -44,7 +44,7 @@
     titleText ["Fishing...", "PLAIN DOWN"];
     };
 
-    if (_random == 25) exitwith {
+    if (_random == 25) exitWith {
     titleText ["You caught a fish!", "PLAIN DOWN"];
 
     _todelete = [];
@@ -52,35 +52,35 @@
     _fishtoground = "GroundWeaponHolder" createVehicle [0,0,0];
     _fishtoground addItemCargoGlobal ["Misery_rawfish_1", 1];
     _fishtoground enableCollisionWith player;
-    _fishtoground setpos (player modelToWorld [.3,-.3,0]);
+    _fishtoground setPos (player modelToWorld [.3,-.3,0]);
     _todelete append [_fishtoground];
     MiseryCanFish = false;
     [player,_actionID] call BIS_fnc_holdActionRemove;
     deleteVehicle Misery_Isfishing;
     };
 
-    if (_random == 50) exitwith {
+    if (_random == 50) exitWith {
     titleText ["Something broke, or flew off the line, and you failed to catch anything...", "PLAIN DOWN"];
-    _part = selectrandom ["Misery_fishingspool", "Misery_fishhook", "Misery_worms", "Misery_worms", "Misery_worms"];
-    player removeitem _part;
+    _part = selectRandom ["Misery_fishingspool", "Misery_fishhook", "Misery_worms", "Misery_worms", "Misery_worms"];
+    player removeItem _part;
     MiseryCanFish = false;
     [player,_actionID] call BIS_fnc_holdActionRemove;
     deleteVehicle Misery_Isfishing;
     };
 
-    if (_random == 75) exitwith {
+    if (_random == 75) exitWith {
     titleText ["You lost your bait...", "PLAIN DOWN"];
-    _part = selectrandom ["Misery_worms", "Misery_worms"];
-    player removeitem _part;
+    _part = selectRandom ["Misery_worms", "Misery_worms"];
+    player removeItem _part;
     MiseryCanFish = false;
     [player,_actionID] call BIS_fnc_holdActionRemove;
     deleteVehicle Misery_Isfishing;
     };
 
-    if (_random == 100) exitwith {
+    if (_random == 100) exitWith {
     titleText ["Your hook and bait are gone...", "PLAIN DOWN"];
-    player removeitem "Misery_fishhook";
-    player removeitem "Misery_worms";
+    player removeItem "Misery_fishhook";
+    player removeItem "Misery_worms";
     MiseryCanFish = false;
     [player,_actionID] call BIS_fnc_holdActionRemove;
     deleteVehicle Misery_Isfishing;

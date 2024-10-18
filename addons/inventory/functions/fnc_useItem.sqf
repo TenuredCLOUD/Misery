@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
  /*
  * Author: TenuredCLOUD
- * Defines what inventory items do 
+ * Defines what inventory items do
  *
  * Arguments:
  * None

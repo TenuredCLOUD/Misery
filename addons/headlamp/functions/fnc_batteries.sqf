@@ -16,13 +16,13 @@
 
 if ("Misery_9vbat" in items player) then {
 
-player removeitem "Misery_Headlamp_NB";
+player removeItem "Misery_Headlamp_NB";
 
 titleText ["You add a 9v battery to your Headlamp", "PLAIN DOWN"];
 
-player removeitem "Misery_9vbat";
+player removeItem "Misery_9vbat";
 
-player additem "Misery_HeadlampOFF";
+player addItem "Misery_HeadlampOFF";
 
 } else {
 titleText ["You don't have any 9v batteries...", "PLAIN DOWN"];

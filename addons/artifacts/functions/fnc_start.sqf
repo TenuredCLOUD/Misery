@@ -41,8 +41,8 @@ waitUntil {
 
                 [
                 _module,
-                (_module getvariable "Misery_ArtifactSpawnnumber"),
-                (_module getvariable "Misery_ArtifactSpawnradius")
+                (_module getVariable "Misery_ArtifactSpawnnumber"),
+                (_module getVariable "Misery_ArtifactSpawnradius")
                 ] execVM "\z\misery\addons\artifacts\functions\fnc_generate.sqf";
             };
         };

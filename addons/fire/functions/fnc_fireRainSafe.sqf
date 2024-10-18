@@ -7,7 +7,7 @@
  * 0: OBJECT <STRING>
  *
  * Return Value:
- * 0: BOOL 
+ * 0: BOOL
  *
  * Example:
  * [] call misery_fire_fnc_fireRainSafe

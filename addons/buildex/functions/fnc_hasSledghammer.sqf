@@ -2,7 +2,7 @@
 /*
  * Author: TenuredCLOUD
  * sledghammer check fnc (iBuild compat)
- * 
+ *
  *
  * Arguments:
  * None

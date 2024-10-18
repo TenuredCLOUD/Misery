@@ -204,9 +204,9 @@ if (MiserysurvivalSaveMode == 2) then {
 //     };
 // };
 
-// if (MiseryMPsavecycle == -1) exitwith {};
+// if (MiseryMPsavecycle == -1) exitWith {};
 
-// waitUntil {sleep 2; !isnull player};
+// waitUntil {sleep 2; !isNull player};
 // while {alive player} do {
 //     [player] call Misery_fnc_MiserySerializeplayer;
 //     uiSleep MiseryMPsavecycle;

@@ -35,7 +35,7 @@
 if (!(isNil {player getVariable "MiseryFear"})) then {
 
     if (MiseryFearNight == 1) then {
-    if (daytime >= 5 && daytime < 18) then {
+    if (dayTime >= 5 && dayTime < 18) then {
     player setVariable ["MiseryFear", (_MFear - ((MiseryFearHealing)))]; //player setVariable ["MiseryFear", (_MFear - ((MiseryFearHealing)toFixed 2))];
     if (_MFear <= 0) then {player setVariable ["MiseryFear", 0]};
     };
@@ -81,7 +81,7 @@ if (!(isNil {player getVariable "MiseryFear"})) then {
       };
 
     if (MiseryFearNight == 1) then {
-    if (daytime >= 18 || daytime < 5) then {
+    if (dayTime >= 18 || dayTime < 5) then {
         _randomnightval = floor random NightFear;
         _fearnightadd = MACRO_FEAR_CALC_NIGHT(_randomnightval);
 

@@ -10,7 +10,7 @@
  * 1: faction to spawn by the module <STRING>
  * 2: Class of AI to be generated <STRING>
  * 3: Max allowed size of group <NUMBER>
- * 4: Primary weapon loot for AI <ARRAY> 
+ * 4: Primary weapon loot for AI <ARRAY>
  * 5: Secondary weapon loot for AI <ARRAY>
  * 6: Launcher weapon loot for AI <ARRAY>
  * 7: Ammo ammount possible (slected randomly) <NUMBER>

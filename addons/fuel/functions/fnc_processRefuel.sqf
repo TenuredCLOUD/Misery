@@ -2,7 +2,7 @@
 /*
  * Author: TenuredCLOUD
  * Vehicle Refuel UI List populater
- * Defines the selected refuel option, and passes values 
+ * Defines the selected refuel option, and passes values
  *
  * Arguments:
  * None

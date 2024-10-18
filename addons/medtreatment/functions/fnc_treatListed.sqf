@@ -31,16 +31,16 @@ if (!isNull findDisplay 982381) exitWith {
                 _price = Mis_Medpriceheal;
             };
             case "Treat Radiation (25%)": {
-                _price = parseNumber (((((player getvariable ["radiation",0]) * 0.25) / 50) * Mis_Medpriceradheal) toFixed 1);
+                _price = parseNumber (((((player getVariable ["radiation",0]) * 0.25) / 50) * Mis_Medpriceradheal) toFixed 1);
             };
             case "Treat Radiation (50%)": {
-                _price = parseNumber (((((player getvariable ["radiation",0]) * 0.5) / 50) * Mis_Medpriceradheal) toFixed 1);
+                _price = parseNumber (((((player getVariable ["radiation",0]) * 0.5) / 50) * Mis_Medpriceradheal) toFixed 1);
             };
             case "Treat Radiation (75%)": {
-                _price = parseNumber (((((player getvariable ["radiation",0]) * 0.75) / 50) * Mis_Medpriceradheal) toFixed 1);
+                _price = parseNumber (((((player getVariable ["radiation",0]) * 0.75) / 50) * Mis_Medpriceradheal) toFixed 1);
             };
             case "Treat Radiation (ALL)": {
-                _price = parseNumber ((((player getvariable ["radiation",0]) / 50) * Mis_Medpriceradheal) toFixed 1);
+                _price = parseNumber ((((player getVariable ["radiation",0]) / 50) * Mis_Medpriceradheal) toFixed 1);
             };
         };
         if (!isNil "Misery_dyneconomy_display" && {Misery_dyneconomy_display}) then {

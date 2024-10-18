@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call misery_fear_fnc_psychosis 
+ * [] call misery_fear_fnc_psychosis
  *
 */
 
@@ -39,7 +39,7 @@ _MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];
 if (_MFear >= 5 && _MFear < 10) then
         {
                 if (_randomhint == 3) then {
-                titleText [selectrandom ["You feel a lingering presence...","You feel like you're being watched...","You feel uneasy..."], "PLAIN DOWN"];
+                titleText [selectRandom ["You feel a lingering presence...","You feel like you're being watched...","You feel uneasy..."], "PLAIN DOWN"];
                 };
 
                 if (_randomaudio == 3) then {
@@ -69,10 +69,10 @@ if (_MFear >= 5 && _MFear < 10) then
                 addCamShake [1, 60, 2];
                 };
 
-                if (daytime >=18 || daytime < 5) then {
+                if (dayTime >=18 || dayTime < 5) then {
 
                 if (_randomhint == 3) then {
-                titleText [selectrandom ["The shadows are moving...","They're watching me...","They follow in the darkness..."], "PLAIN DOWN"];
+                titleText [selectRandom ["The shadows are moving...","They're watching me...","They follow in the darkness..."], "PLAIN DOWN"];
                 };
 
                 if (_randomaudio == 3) then {
@@ -109,7 +109,7 @@ if (_MFear >= 5 && _MFear < 10) then
 if (_MFear >= 10 && _MFear < 15) then
         {
                 if (_randomhint == 3) then {
-                titleText [selectrandom ["You feel a lingering presence...","You feel like you're being watched...","You feel uneasy..."], "PLAIN DOWN"];
+                titleText [selectRandom ["You feel a lingering presence...","You feel like you're being watched...","You feel uneasy..."], "PLAIN DOWN"];
                 };
 
                 if (_randomaudio == 3) then {
@@ -139,10 +139,10 @@ if (_MFear >= 10 && _MFear < 15) then
                 addCamShake [1, 60, 2];
                 };
 
-                if (daytime >=18 || daytime < 5) then {
+                if (dayTime >=18 || dayTime < 5) then {
 
                 if (_randomhint == 3) then {
-                titleText [selectrandom ["The shadows are moving...","They're watching me...","They follow in the darkness..."], "PLAIN DOWN"];
+                titleText [selectRandom ["The shadows are moving...","They're watching me...","They follow in the darkness..."], "PLAIN DOWN"];
                 };
 
                 if (_randomaudio == 3) then {
@@ -179,7 +179,7 @@ if (_MFear >= 10 && _MFear < 15) then
 if (_MFear >= 15 && _MFear < 20) then
         {
                 if (_randomhint == 3) then {
-                titleText [selectrandom ["You feel a lingering presence...","You feel like you're being watched...","You feel uneasy..."], "PLAIN DOWN"];
+                titleText [selectRandom ["You feel a lingering presence...","You feel like you're being watched...","You feel uneasy..."], "PLAIN DOWN"];
                 };
 
                 if (_randomaudio == 3) then {
@@ -209,10 +209,10 @@ if (_MFear >= 15 && _MFear < 20) then
                 addCamShake [3, 60, 2];
                 };
 
-                if (daytime >=18 || daytime < 5) then {
+                if (dayTime >=18 || dayTime < 5) then {
 
                 if (_randomhint == 3) then {
-                titleText [selectrandom ["The shadows are moving...","They're watching me...","They follow in the darkness..."], "PLAIN DOWN"];
+                titleText [selectRandom ["The shadows are moving...","They're watching me...","They follow in the darkness..."], "PLAIN DOWN"];
                 };
 
                 if (_randomaudio == 3) then {
@@ -250,7 +250,7 @@ if (_MFear >= 15 && _MFear < 20) then
 if (_MFear >= 20 && _MFear < 25) then
         {
                 if (_randomhint == 3) then {
-                titleText [selectrandom ["You feel a lingering presence...","You feel like you're being watched...","You feel uneasy..."], "PLAIN DOWN"];
+                titleText [selectRandom ["You feel a lingering presence...","You feel like you're being watched...","You feel uneasy..."], "PLAIN DOWN"];
                 };
 
                 if (_randomaudio == 3) then {
@@ -280,10 +280,10 @@ if (_MFear >= 20 && _MFear < 25) then
                 addCamShake [3, 120, 2];
                 };
 
-                if (daytime >=18 || daytime < 5) then {
+                if (dayTime >=18 || dayTime < 5) then {
 
                 if (_randomhint == 3) then {
-                titleText [selectrandom ["The shadows are moving...","They're watching me...","They follow in the darkness..."], "PLAIN DOWN"];
+                titleText [selectRandom ["The shadows are moving...","They're watching me...","They follow in the darkness..."], "PLAIN DOWN"];
                 };
 
                 if (_randomaudio == 3) then {

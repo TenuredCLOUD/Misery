@@ -18,7 +18,7 @@ _MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
 
 if (!hasInterface) exitWith {};
 
-  if (alive player) exitwith {
+  if (alive player) exitWith {
 
 if !(MiseryMP) then {
   player setVariable ["MiserySleepiness", (_MSleepiness - 10)];

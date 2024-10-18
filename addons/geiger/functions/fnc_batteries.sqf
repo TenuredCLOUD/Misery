@@ -16,13 +16,13 @@
 
 if ("Misery_lithiumbattery" in items player) then {
 
-player removeitem "Misery_personalgeigernobattery";
+player removeItem "Misery_personalgeigernobattery";
 
 titleText ["You add a Lithium battery to your Geiger", "PLAIN DOWN"];
 
-player removeitem "Misery_lithiumbattery";
+player removeItem "Misery_lithiumbattery";
 
-player additem "Misery_personalgeiger";
+player addItem "Misery_personalgeiger";
 
 playSound3D ["\z\misery\addons\audio\sounds\Geigerenable\GeigerON.ogg", player, false, getPosASL player, 4, 1, 10];
 

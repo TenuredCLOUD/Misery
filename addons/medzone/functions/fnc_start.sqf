@@ -22,7 +22,7 @@ _dialog = findDisplay 982381;
 _PurchaseB = _dialog displayCtrl 1600;
 _ExitB = _dialog displayCtrl 1601;
 
-if (MiseryinMedzonearea) exitwith {
+if (MiseryinMedzonearea) exitWith {
 
 if (Mis_Medcurrencytype == "DIGITALTYPE") then {
 _playercash = player getVariable [Mis_Medfundstype, 0];
@@ -74,7 +74,7 @@ player setVariable [Mis_Medfundstype, (_playercash - Mis_Medpriceheal), true];
 
 if (Mis_Medcurrencytype == "ITEMTYPE") then {
 _playercash = {_x == Mis_Medfundstype} count items player;
-for "_i" from 1 to Mis_Medpriceheal do {player removeitem Mis_Medfundstype;};
+for "_i" from 1 to Mis_Medpriceheal do {player removeItem Mis_Medfundstype;};
 };
 
 if (Mis_Medcurrencytype == "MAGAZINETYPE") then {
@@ -85,7 +85,7 @@ for "_i" from 1 to Mis_Medpriceheal do {player removeMagazine Mis_Medfundstype;}
 if (MiseryACE) then {
 [player] call ace_medical_treatment_fnc_fullHealLocal;
 }else{
-player setdamage 0;
+player setDamage 0;
 };
 
 ctrlSetText [1001, "You have been successfully treated..."];

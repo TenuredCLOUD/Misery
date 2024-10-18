@@ -12,11 +12,11 @@ if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
 
 if (!hasInterface) exitWith {};
 
-if (alive player) exitwith {
+if (alive player) exitWith {
 
 titleText ["You inject the Clozapine...", "PLAIN DOWN"];
 
-player removeitem "Misery_Clozapine";
+player removeItem "Misery_Clozapine";
 
  if (MiseryACE) then {
 [player, "Misery_Clozapine", 120, 300, 5, 0, 5] call ace_medical_status_fnc_addMedicationAdjustment;

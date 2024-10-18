@@ -9,7 +9,7 @@
  * 1: Safe spawn distance AI can spawn once a player is this close to module object <NUMBER>
  * 2: Safe Deletion distance the AI group will be removed at once a player gets this far away <NUMBER>
  * 3: Spawn check timedown (how often to check players postions to module object for safe spawn) <NUMBER>
- * 4: Deletion check timedown (how often to check players postions to module object for safe deletion) <NUMBER> 
+ * 4: Deletion check timedown (how often to check players postions to module object for safe deletion) <NUMBER>
  * 5: Max GLOBAL AI Groups allowed to be spawned at once <NUMBER>
  *
  * Return Value:

@@ -197,12 +197,12 @@ if !(hasInterface) exitWith {};
 
     _MExposure = player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE];
 
-    [player] call EFUNC (temperature,warmup);
-    [player] call EFUNC (temperature,overtemp);
-    [player] call EFUNC (temperature,sick);
-    [player] call EFUNC (temperature,cold);
-    [player] call EFUNC (temperature,water);
-    [player] call EFUNC (temperature,effectiveTemperature);
+    [player] call EFUNC(temperature,warmup);
+    [player] call EFUNC(temperature,overtemp);
+    [player] call EFUNC(temperature,sick);
+    [player] call EFUNC(temperature,cold);
+    [player] call EFUNC(temperature,water);
+    [player] call EFUNC(temperature,effectiveTemperature);
 
     if (MiseryBreathFogAllowed) then {
     if (isNil{player getVariable "MiseryBreathFogSim"}) then {

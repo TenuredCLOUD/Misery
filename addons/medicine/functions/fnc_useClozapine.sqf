@@ -16,11 +16,11 @@ if (!hasInterface) exitWith {};
     titleText ["You cannot take medicine while wearing a mask...", "PLAIN DOWN"];
 };
 
-if (alive player) exitwith {
+if (alive player) exitWith {
 
 titleText ["You take a clozapine pill...", "PLAIN DOWN"];
 
-player removeitem "Misery_ClozapinePill";
+player removeItem "Misery_ClozapinePill";
 
  if (MiseryACE) then {
 [player, "Misery_ClozapinePill", 120, 300, 5, 0, 5] call ace_medical_status_fnc_addMedicationAdjustment;

@@ -28,7 +28,7 @@ if (_intersects && !((([player] call Misery_fnc_Isinside) select 0) && (([player
 
     _canforage = true;
 
-    if (_canforage)exitwith{};
+    if (_canforage)exitWith{};
 
     };
 };

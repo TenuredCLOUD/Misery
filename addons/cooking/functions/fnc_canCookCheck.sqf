@@ -32,7 +32,7 @@ private _hasAll = true;
     };
     if (_itemArray isEqualType [] && {_itemArray select 0 != "CookingTime"} && {_itemArray select 0 != "CookingMethod"}) then {
         if (MiseryDebug) then {
-        systemChat format["Checking 2: %2",_itemArray];
+        systemChat format["Checking 2: %1",_itemArray];
         };
         private _requiredItem = _itemArray select 0;
         private _requiredCount = _itemArray select 1;

@@ -19,11 +19,11 @@ private _MExposure = player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE
 
 if (!hasInterface) exitWith {};
 
-    if (alive player) exitwith {
+    if (alive player) exitWith {
 
     titleText ["You use a heat pack...", "PLAIN DOWN"];
 
-    player removeitem "Misery_Heatpack";
+    player removeItem "Misery_Heatpack";
 
 sleep 60;
 

@@ -15,16 +15,16 @@
  * Public: No
 */
 
-if (MiseryUsingiBuild) exitwith {
+if (MiseryUsingiBuild) exitWith {
 
 titleText ["You take the nails out of the box...", "PLAIN DOWN"];
-player removeitem "Misery_boxnails";
+player removeItem "Misery_boxnails";
 for "_i" from 1 to 15 do {[player, "NMIB_WoodNails_Itm", true] call CBA_fnc_addItem;};
 };
 
-if !(MiseryUsingiBuild) exitwith {
+if !(MiseryUsingiBuild) exitWith {
 
 titleText ["You take the nails out of the box...", "PLAIN DOWN"];
-player removeitem "Misery_boxnails"; 
+player removeItem "Misery_boxnails";
 for "_i" from 1 to 15 do {[player, "Misery_woodnail", true] call CBA_fnc_addItem;};
 };

@@ -50,10 +50,10 @@
     titleText [format["Sawing progress... %1%2", _progcalc, "%"], "PLAIN DOWN"];
     };
 
-    if (_random == 100) exitwith {
+    if (_random == 100) exitWith {
     titleText ["Your saw ran out of fuel...", "PLAIN DOWN"];
-    player removeitem "Misery_Chainsaw";
-    player additem "Misery_Chainsawempty";
+    player removeItem "Misery_Chainsaw";
+    player addItem "Misery_Chainsawempty";
     MiseryCanSawWood = false;
     [player,_actionID] call BIS_fnc_holdActionRemove;
     };
@@ -71,24 +71,24 @@
         _woodtoground1 = "GroundWeaponHolder" createVehicle [0,0,0];
         _woodtoground1 addItemCargoGlobal ["Misery_firewood", _rfirewood];
         _woodtoground1 enableCollisionWith player;
-        _woodtoground1 setpos (player modelToWorld [1,-.3,.1]);
+        _woodtoground1 setPos (player modelToWorld [1,-.3,.1]);
         _todelete append [_woodtoground1];
 
         _woodtoground2 = "GroundWeaponHolder" createVehicle [0,0,0];
         _woodtoground2 addItemCargoGlobal ["Misery_woodenlog", _rlog];
         _woodtoground2 enableCollisionWith player;
-        _woodtoground2 setpos (player modelToWorld [2,-.3,.1]);
+        _woodtoground2 setPos (player modelToWorld [2,-.3,.1]);
         _todelete append [_woodtoground2];
 
         _woodtoground3 = "GroundWeaponHolder" createVehicle [0,0,0];
         _woodtoground3 addItemCargoGlobal ["Misery_woodensticks", _rstick];
         _woodtoground3 enableCollisionWith player;
-        _woodtoground3 setpos (player modelToWorld [.5,-.3,.1]);
+        _woodtoground3 setPos (player modelToWorld [.5,-.3,.1]);
         _todelete append [_woodtoground3];
 
     //Simulate tree felling:
     private _nearTrees = nearestTerrainObjects [player, ["TREE", "SMALL TREE"], 2.5, true, true];
-     {_x setdamage 1} foreach _nearTrees;
+     {_x setDamage 1} forEach _nearTrees;
 
     private _actionID = (_this select 2);
     [player,_actionID] call BIS_fnc_holdActionRemove;

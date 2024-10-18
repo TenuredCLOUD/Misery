@@ -48,7 +48,7 @@ private _model = getModelInfo _object select 0;
         "ground_sheet_opfor_f.p3d",
         "ground_sheet_yellow_f.p3d"
         ]) then {
-    _out pushback ["Sleep","Sleep"];
+    _out pushBack ["Sleep","Sleep"];
     };
 };
 
@@ -63,166 +63,166 @@ MiseryTarget_VehName = typeOf MiseryTarget_Veh;
 
 if (Miseryfish) then {
     if (call EFUNC(fishing,Canfish)) then {
-        _out pushback [localize "STR_MISERY_STARTFISHING",localize "STR_MISERY_STARTFISHING"];
+        _out pushBack [localize "STR_MISERY_STARTFISHING",localize "STR_MISERY_STARTFISHING"];
     };
 };
 
 if (Miseryforage) then {
     if (call EFUNC(forage,Canforage)) then {
-        _out pushback [localize "STR_MISERY_FORAGE", localize "STR_MISERY_FORAGE"];
+        _out pushBack [localize "STR_MISERY_FORAGE", localize "STR_MISERY_FORAGE"];
     };
 };
 
 if (Miserycook) then {
     if (call Misery_fnc_NearFire) then {
-        _out pushback [localize "STR_MISERY_USEFIRE",localize "STR_MISERY_USEFIRE"];
+        _out pushBack [localize "STR_MISERY_USEFIRE",localize "STR_MISERY_USEFIRE"];
     };
 };
 
 if (Miserywatercoll) then {
     if (call Misery_fnc_NearWell) then {
-        _out pushback [localize "STR_MISERY_COLLECTWATER",localize "STR_MISERY_COLLECTWATER"];
+        _out pushBack [localize "STR_MISERY_COLLECTWATER",localize "STR_MISERY_COLLECTWATER"];
     };
 };
 
 if (Miserywoodcut) then {
     if (call Misery_fnc_NearTreeAxe) then {
-        _out pushback [localize "STR_MISERY_CHOPWOOD",localize "STR_MISERY_CHOPWOOD"];
+        _out pushBack [localize "STR_MISERY_CHOPWOOD",localize "STR_MISERY_CHOPWOOD"];
     };
     if (call Misery_fnc_NearTreeSaw) then {
-        _out pushback [localize "STR_MISERY_SAWWOOD",localize "STR_MISERY_SAWWOOD"];
+        _out pushBack [localize "STR_MISERY_SAWWOOD",localize "STR_MISERY_SAWWOOD"];
     };
     if (call Misery_fnc_NearTree) then {
-        _out pushback [localize "STR_MISERY_COLLECTWOOD",localize "STR_MISERY_COLLECTWOOD"];
+        _out pushBack [localize "STR_MISERY_COLLECTWOOD",localize "STR_MISERY_COLLECTWOOD"];
     };
 
     if ([["Misery_WoodenLog"]] call EFUNC(common,hasItem)) then {
-        _out pushback [localize "STR_MISERY_SPLITWOODLOG",localize "STR_MISERY_SPLITWOODLOG"];
+        _out pushBack [localize "STR_MISERY_SPLITWOODLOG",localize "STR_MISERY_SPLITWOODLOG"];
     };
 };
 
 if ([["Misery_JetFuelRU"], 5.5] call EFUNC(common,nearCraftingStation)) then {
-    _out pushback [localize "STR_MISERY_USEJETFUELPUMP",localize "STR_MISERY_USEJETFUELPUMP"];
-    _out pushback [localize "STR_MISERY_JETFUELPUMPREQ",localize "STR_MISERY_JETFUELPUMPREQ"];
+    _out pushBack [localize "STR_MISERY_USEJETFUELPUMP",localize "STR_MISERY_USEJETFUELPUMP"];
+    _out pushBack [localize "STR_MISERY_JETFUELPUMPREQ",localize "STR_MISERY_JETFUELPUMPREQ"];
 };
 if ([[MACRO_FUELSTATIONS], 1.5] call EFUNC(common,nearCraftingStation)) then {
-    _out pushback [localize "STR_MISERY_USEFUELPUMP",localize "STR_MISERY_USEFUELPUMP"];
-    _out pushback [localize "STR_MISERY_FUELPUMPREQ",localize "STR_MISERY_FUELPUMPREQ"];
+    _out pushBack [localize "STR_MISERY_USEFUELPUMP",localize "STR_MISERY_USEFUELPUMP"];
+    _out pushBack [localize "STR_MISERY_FUELPUMPREQ",localize "STR_MISERY_FUELPUMPREQ"];
 };
 
 if (MiseryMine) then {
     if ([["Misery_Anvil"], 1.5] call EFUNC(common,nearCraftingStation)) then {
-        _out pushback [localize "STR_MISERY_USEANVIL",localize "STR_MISERY_USEANVIL"];
+        _out pushBack [localize "STR_MISERY_USEANVIL",localize "STR_MISERY_USEANVIL"];
     };
     if ([["Misery_Forge"], 1.5] call EFUNC(common,nearCraftingStation)) then {
-        _out pushback [localize "STR_MISERY_USEFORGE",localize "STR_MISERY_USEFORGE"];
+        _out pushBack [localize "STR_MISERY_USEFORGE",localize "STR_MISERY_USEFORGE"];
     };
     if (call Misery_fnc_NearRockSource) then {
-        _out pushback [localize "STR_MISERY_MINEORE",localize "STR_MISERY_MINEORE"];
+        _out pushBack [localize "STR_MISERY_MINEORE",localize "STR_MISERY_MINEORE"];
     };
 };
 
 if (MiseryCraft) then {
     if ([[MACRO_CRAFTINGSTATIONS], 1.5] call EFUNC(common,nearCraftingStation)) then {
-        _out pushback [localize "STR_MISERY_CRAFTINGWORKBENCH",localize "STR_MISERY_CRAFTINGWORKBENCH"];
+        _out pushBack [localize "STR_MISERY_CRAFTINGWORKBENCH",localize "STR_MISERY_CRAFTINGWORKBENCH"];
     };
 };
 
 if (MiseryUsingiBuild) then {
     if (call Misery_fnc_Hashammer) then {
-        _out pushback [localize "STR_MISERY_IBUILDOPEN",localize "STR_MISERY_IBUILDOPEN"];
+        _out pushBack [localize "STR_MISERY_IBUILDOPEN",localize "STR_MISERY_IBUILDOPEN"];
     };
     if (call Misery_fnc_HasSledghammer) then {
-        _out pushback [localize "STR_MISERY_USESLEDGE",localize "STR_MISERY_USESLEDGE"];
+        _out pushBack [localize "STR_MISERY_USESLEDGE",localize "STR_MISERY_USESLEDGE"];
     };
 };
 
 if (MiseryJerrycanacts) then {
     if (call Misery_fnc_HasJerrycanClean) then {
-        _out pushback [localize "STR_MISERY_USEJERRYCANCLEAN",localize "STR_MISERY_USEJERRYCANCLEAN"];
+        _out pushBack [localize "STR_MISERY_USEJERRYCANCLEAN",localize "STR_MISERY_USEJERRYCANCLEAN"];
     };
     if (call Misery_fnc_HasJerrycanDirty) then {
-        _out pushback [localize "STR_MISERY_USEJERRYCANDIRTY",localize "STR_MISERY_USEJERRYCANDIRTY"];
+        _out pushBack [localize "STR_MISERY_USEJERRYCANDIRTY",localize "STR_MISERY_USEJERRYCANDIRTY"];
     };
 };
 
 if (MiseryRFEMFacts) then {
     if ([["Misery_RF_HighRangeOff"]] call EFUNC(common,hasItem)) then {
-        _out pushback [localize "STR_MISERY_TURNONRFDETEC",localize "STR_MISERY_TURNONRFDETEC"];
+        _out pushBack [localize "STR_MISERY_TURNONRFDETEC",localize "STR_MISERY_TURNONRFDETEC"];
     };
     if ([["Misery_RFHighRangeOn"]] call EFUNC(common,hasItem)) then {
-        _out pushback [localize "STR_MISERY_TURNOFFRFDETEC",localize "STR_MISERY_TURNOFFRFDETEC"];
+        _out pushBack [localize "STR_MISERY_TURNOFFRFDETEC",localize "STR_MISERY_TURNOFFRFDETEC"];
     };
 };
 
 /*
 if ((count (entities "Misery_RadioSettings")) > 0) then {
     if ([["Misery_PortableRadioOFF"]] call EFUNC(common,hasItem)) then {
-        _out pushback ["Turn on Portable Radio", "Turn on Portable Radio"];
+        _out pushBack ["Turn on Portable Radio", "Turn on Portable Radio"];
     };
     if ([["Misery_PortableRadioON"]] call EFUNC(common,hasItem)) then {
-    _out pushback ["Turn off Portable Radio", "Turn off Portable Radio"];
+    _out pushBack ["Turn off Portable Radio", "Turn off Portable Radio"];
     };
 };
 */
 
 if (MiseryLeadcontaineracts) then {
     if ([["Misery_leadcontaineropen"]] call EFUNC(common,hasItem) && [[MACRO_ARTIFACTS]] call EFUNC(common,hasItem)) then {
-        _out pushback [localize "STR_MISERY_STOREARTIFACT",localize "STR_MISERY_STOREARTIFACT"];
+        _out pushBack [localize "STR_MISERY_STOREARTIFACT",localize "STR_MISERY_STOREARTIFACT"];
     };
 };
 
 if ([["Misery_HeadlampOFF"]] call EFUNC(common,hasItem)) then {
-    _out pushback [localize "STR_MISERY_TURNONHEADLAMP",localize "STR_MISERY_TURNONHEADLAMP"];
+    _out pushBack [localize "STR_MISERY_TURNONHEADLAMP",localize "STR_MISERY_TURNONHEADLAMP"];
 };
 
 if ([["Misery_HeadlampON"]] call EFUNC(common,hasItem)) then {
-    _out pushback [localize "STR_MISERY_TURNOFFHEADLAMP",localize "STR_MISERY_TURNOFFHEADLAMP"];
+    _out pushBack [localize "STR_MISERY_TURNOFFHEADLAMP",localize "STR_MISERY_TURNOFFHEADLAMP"];
 };
 
 if ([["Misery_guitar"]] call EFUNC(common,hasItem)) then {
-    _out pushback [localize "STR_MISERY_PLAYGUITAR",localize "STR_MISERY_PLAYGUITAR"];
+    _out pushBack [localize "STR_MISERY_PLAYGUITAR",localize "STR_MISERY_PLAYGUITAR"];
 };
 
 if ([["Misery_JetFuelF"]] call EFUNC(common,hasItem)) then {
-_out pushback [localize "STR_MISERY_DUMPOUTFUELJET",localize "STR_MISERY_DUMPOUTFUELJET"];
+_out pushBack [localize "STR_MISERY_DUMPOUTFUELJET",localize "STR_MISERY_DUMPOUTFUELJET"];
 };
 if ([["Misery_EmptyJet"]] call EFUNC(common,hasItem)) then {
-_out pushback [localize "STR_MISERY_SWAPFUELTYPEJET",localize "STR_MISERY_SWAPFUELTYPEJET"];
+_out pushBack [localize "STR_MISERY_SWAPFUELTYPEJET",localize "STR_MISERY_SWAPFUELTYPEJET"];
 };
 
 if ([["Misery_DieselF"]] call EFUNC(common,hasItem)) then {
-_out pushback [localize "STR_MISERY_DUMPOUTFUELDIESEL",localize "STR_MISERY_DUMPOUTFUELDIESEL"];
+_out pushBack [localize "STR_MISERY_DUMPOUTFUELDIESEL",localize "STR_MISERY_DUMPOUTFUELDIESEL"];
 };
 if ([["Misery_EmptyDiesel"]] call EFUNC(common,hasItem)) then {
-_out pushback [localize "STR_MISERY_SWAPFUELTYPEDIESEL",localize "STR_MISERY_SWAPFUELTYPEDIESEL"];
+_out pushBack [localize "STR_MISERY_SWAPFUELTYPEDIESEL",localize "STR_MISERY_SWAPFUELTYPEDIESEL"];
 };
 
 if ([["Misery_PetrolF"]] call EFUNC(common,hasItem)) then {
-    _out pushback [localize "STR_MISERY_DUMPOUTFUELPETROL",localize "STR_MISERY_DUMPOUTFUELPETROL"];
+    _out pushBack [localize "STR_MISERY_DUMPOUTFUELPETROL",localize "STR_MISERY_DUMPOUTFUELPETROL"];
 };
 if ([["Misery_EmptyPetrol"]] call EFUNC(common,hasItem)) then {
-    _out pushback [localize "STR_MISERY_SWAPFUELTYPEPETROL",localize "STR_MISERY_SWAPFUELTYPEPETROL"];
+    _out pushBack [localize "STR_MISERY_SWAPFUELTYPEPETROL",localize "STR_MISERY_SWAPFUELTYPEPETROL"];
 };
 
 if (MiseryACE && [["Misery_Needlethread"]] call EFUNC(common,hasItem)) then {
-    _out pushback [localize "STR_MISERY_STITCHWOUNDS",localize "STR_MISERY_STITCHWOUNDS"];
+    _out pushBack [localize "STR_MISERY_STITCHWOUNDS",localize "STR_MISERY_STITCHWOUNDS"];
 };
 
 if (MiseryinVehiclerepairarea) then {
-_out pushback [localize "STR_MISERY_REQREPAIRS",localize "STR_MISERY_REQREPAIRS"];
+_out pushBack [localize "STR_MISERY_REQREPAIRS",localize "STR_MISERY_REQREPAIRS"];
 };
 
 if (MiseryinVehiclerearmarea) then {
-_out pushback [localize "STR_MISERY_REQRESUPPLY",localize "STR_MISERY_REQRESUPPLY"];
+_out pushBack [localize "STR_MISERY_REQRESUPPLY",localize "STR_MISERY_REQRESUPPLY"];
 };
 
 if (MiseryinRefuelzonearea) then {
-_out pushback [localize "STR_MISERY_REQREFUEL",localize "STR_MISERY_REQREFUEL"];
+_out pushBack [localize "STR_MISERY_REQREFUEL",localize "STR_MISERY_REQREFUEL"];
 };
 
 if (MiseryinMedzonearea) then {
-_out pushback [localize "STR_MISERY_REQTREATMENT",localize "STR_MISERY_REQTREATMENT"];
+_out pushBack [localize "STR_MISERY_REQTREATMENT",localize "STR_MISERY_REQTREATMENT"];
 };
 
 //Item swappers:
@@ -240,8 +240,8 @@ if (MiseryACE) then {
 };
 
 //Fuel canister conversion:
-[player, "rvg_canisterFuel", selectrandom ["Misery_DieselF","Misery_PetrolF"]] call EFUNC(common,itemSwap);
-[player, "rvg_canisterFuel_Empty", selectrandom ["Misery_EmptyDiesel","Misery_EmptyPetrol"]] call EFUNC(common,itemSwap);
+[player, "rvg_canisterFuel", selectRandom ["Misery_DieselF","Misery_PetrolF"]] call EFUNC(common,itemSwap);
+[player, "rvg_canisterFuel_Empty", selectRandom ["Misery_EmptyDiesel","Misery_EmptyPetrol"]] call EFUNC(common,itemSwap);
 
 //WBKIMS checks + Swappers:
 if (MiseryWBKIMS) then {
@@ -255,7 +255,7 @@ if (MiseryWBKIMS) then {
 
 //Money Collection:
 if ((([] call Misery_fnc_NearestCorpse_Money) select 0)) then {
-    _out pushback ["Search for Money","Search For Money"];
+    _out pushBack ["Search for Money","Search For Money"];
 };
 
 _out

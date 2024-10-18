@@ -17,13 +17,13 @@
 
 if ("Misery_18vbat" in items player) then {
 
-player removeitem "Misery_electrichandsawnobattery";
+player removeItem "Misery_electrichandsawnobattery";
 
 titleText ["You add a battery to your saw...", "PLAIN DOWN"];
 
-player removeitem "Misery_18vbat";
+player removeItem "Misery_18vbat";
 
-player additem "Misery_electrichandsaw";
+player addItem "Misery_electrichandsaw";
 
 } else {
 

@@ -24,6 +24,6 @@ if ("Misery_fishingpole" in _Check_items && "Misery_fishingspool" in _Check_item
 
     _fishinggear = true;
 
-    if (_fishinggear)exitwith{};
+    if (_fishinggear)exitWith{};
 };
         _fishinggear //return

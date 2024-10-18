@@ -28,7 +28,7 @@ private _MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];
 
     titleText ["You light up a cigar...", "PLAIN DOWN"];
 
-     player removeitem "Misery_cigar";
+     player removeItem "Misery_cigar";
 
       playSound3D ["\z\misery\addons\audio\sounds\immersion\Matchsmoking.ogg", player, false, getPosASL player, 4, 1, 10];
 
@@ -66,7 +66,7 @@ if ("Misery_lighter" in items player) then {
 
       playSound3D ["\z\misery\addons\audio\sounds\immersion\Lightersmoking.ogg", player, false, getPosASL player, 4, 1, 10];
 
-    player removeitem "Misery_cigar";
+    player removeItem "Misery_cigar";
 
     //Remove some fear due to cig smoking:
   if (MiseryFearenabled) then {

@@ -22,7 +22,7 @@ if (count (player nearEntities [[_spookArray], 25]) > 0) then {
 
   _found = true;
 
-  if (_found)exitwith{};
+  if (_found)exitWith{};
 };
 
 _found

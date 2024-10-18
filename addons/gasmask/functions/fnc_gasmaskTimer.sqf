@@ -44,7 +44,7 @@ if (_MCartridge <= 0) then {
 MiseryEmptyGasmask = goggles player; //Store currently worn gasmask before removal
 removeGoggles player;
 titleText ["Gasmask cartridges empty, removed mask...", "PLAIN DOWN"];
-player additem "Misery_gasmaskempty";
+player addItem "Misery_gasmaskempty";
 player setVariable ["Miserycartridge", 100];
 };
 };

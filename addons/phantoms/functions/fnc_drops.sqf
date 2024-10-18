@@ -29,7 +29,7 @@ if((random 100) > Miseryphantdropchance) exitWith{};
 
 _unit = _this select 0;
 _uniform = uniformContainer _unit;
-_wh = "groundWeaponHolder" createVehicle (getpos _unit);
+_wh = "groundWeaponHolder" createVehicle (getPos _unit);
 _wh addItemCargoGlobal [
 
 [

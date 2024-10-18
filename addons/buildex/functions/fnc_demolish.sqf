@@ -2,7 +2,7 @@
 /*
  * Author: TenuredCLOUD
  * Demolishing
- * 
+ *
  *
  * Arguments:
  * None
@@ -38,10 +38,10 @@
     },
     {
 
-    deletevehicle cursortarget; //Structure deleted
+    deleteVehicle cursorTarget; //Structure deleted
 
-    player additem "NMIB_WoodNails_Itm";
-    player additem "NMIB_WoodPlanks_Itm";
+    player addItem "NMIB_WoodNails_Itm";
+    player addItem "NMIB_WoodPlanks_Itm";
 
     private _actionID = (_this select 2);
     [player,_actionID] call BIS_fnc_holdActionRemove;

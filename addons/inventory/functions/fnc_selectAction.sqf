@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
  /*
  * Author: TenuredCLOUD
- * Default inventory UI actions 
+ * Default inventory UI actions
  *
  * Arguments:
  * None
@@ -87,7 +87,7 @@ if(_action== localize "STR_MISERY_CHOPWOOD") exitWith {
             [] spawn Misery_fnc_Axeaction;
         };
         default {
-            private _formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_NOAXEFORWOODNOTI"], "PLAIN DOWN", -1, true, true];
+            private _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOAXEFORWOODNOTI"];
             [_formattedText] call EFUNC(common,formatToTile);
         };
     };
@@ -98,7 +98,7 @@ if(_action== localize "STR_MISERY_SAWWOOD") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
 if !("Misery_Chainsaw" in items player) then {
-private _formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_NOCHAINSAWFORWOODNOTI"], "PLAIN DOWN", -1, true, true];
+private _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOCHAINSAWFORWOODNOTI"];
 [_formattedText] call EFUNC(common,formatToTile);
 }else{
 [] spawn Misery_fnc_Sawaction;
@@ -125,14 +125,14 @@ if(_action== localize "STR_MISERY_SPLITWOODLOG") exitWith {
     };
     switch (true) do {
         case (!("Misery_woodenlog" in items player)): {
-            private _formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_NOWOODENLOGSFORSPLITTING"], "PLAIN DOWN", -1, true, true];
+            private _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOWOODENLOGSFORSPLITTING"];
             [_formattedText] call EFUNC(common,formatToTile);
         };
         case ("Misery_Chainsaw" in items player || _toolType in items player || _toolType in _WBKIMSAXETYPE): {
             [] spawn Misery_fnc_SplitWoodaction;
         };
         default {
-            private _formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_NOWOODAXEORCHAINSAWNOTI"], "PLAIN DOWN", -1, true, true];
+            private _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOWOODAXEORCHAINSAWNOTI"];
             [_formattedText] call EFUNC(common,formatToTile);
         };
     };
@@ -140,48 +140,48 @@ if(_action== localize "STR_MISERY_SPLITWOODLOG") exitWith {
 
 //Jet fuel collection:
 if(_action== localize "STR_MISERY_JETFUELPUMPREQ") exitWith {
-private _formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_JETFUELPUMPREQTIP"], "PLAIN DOWN", -1, true, true];
+private _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_JETFUELPUMPREQTIP"];
 [_formattedText] call EFUNC(common,formatToTile);
 };
 
 //Fuel collection:
 if(_action== localize "STR_MISERY_FUELPUMPREQ") exitWith {
-private _formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_FUELPUMPREQTIP"], "PLAIN DOWN", -1, true, true];
+private _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_FUELPUMPREQTIP"];
 [_formattedText] call EFUNC(common,formatToTile);
 };
 
 //Fuel dumping Jerrycans:
 if(_action== localize "STR_MISERY_DUMPOUTFUELJET") exitWith {
 if !("Misery_JetFuelF" in items player) then {
-private _formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_DUMPOUTFUELJETNOCANNOTI"], "PLAIN DOWN", -1, true, true];
+private _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELJETNOCANNOTI"];
 [_formattedText] call EFUNC(common,formatToTile);
 }else{
-private _formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_DUMPOUTFUELJETSUCCESS"], "PLAIN DOWN", -1, true, true];
+private _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELJETSUCCESS"];
 [_formattedText] call EFUNC(common,formatToTile);
 player removeItem "Misery_JetFuelF";
-player additem "Misery_EmptyJet";
+player addItem "Misery_EmptyJet";
 };
     };
 if(_action== localize "STR_MISERY_DUMPOUTFUELDIESEL") exitWith {
 if !("Misery_DieselF" in items player) then {
-private _formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_DUMPOUTFUELDIESELNOCANNOTI"], "PLAIN DOWN", -1, true, true];
+private _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELDIESELNOCANNOTI"];
 [_formattedText] call EFUNC(common,formatToTile);
 }else{
-private _formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_DUMPOUTFUELDIESELSUCCESS"], "PLAIN DOWN", -1, true, true];
+private _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELDIESELSUCCESS"];
 [_formattedText] call EFUNC(common,formatToTile);
 player removeItem "Misery_DieselF";
-player additem "Misery_EmptyDiesel";
+player addItem "Misery_EmptyDiesel";
 };
     };
 if(_action== localize "STR_MISERY_DUMPOUTFUELPETROL") exitWith {
 if !("Misery_PetrolF" in items player) then {
-private _formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_DUMPOUTFUELPETROLNOCANNOTI"], "PLAIN DOWN", -1, true, true];
+private _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELPETROLNOCANNOTI"];
 [_formattedText] call EFUNC(common,formatToTile);
 }else{
-private _formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_DUMPOUTFUELPETROLSUCCESS"], "PLAIN DOWN", -1, true, true];
+private _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELPETROLSUCCESS"];
 [_formattedText] call EFUNC(common,formatToTile);
 player removeItem "Misery_PetrolF";
-player additem "Misery_EmptyPetrol";
+player addItem "Misery_EmptyPetrol";
 };
     };
 
@@ -189,8 +189,8 @@ player additem "Misery_EmptyPetrol";
 if(_action== localize "STR_MISERY_MINEORE") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
-if !(call Misery_fnc_mineactcheck) exitwith {
-private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_MINEORENOTOOLS"], "PLAIN DOWN", -1, true, true];
+if !(call Misery_fnc_mineactcheck) exitWith {
+private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_MINEORENOTOOLS"];
 [_formattedText] call EFUNC(common,formatToTile);
 }; //items pre-check
 [] spawn Misery_fnc_mineoreact;
@@ -200,8 +200,8 @@ private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [locali
 if(_action== localize "STR_MISERY_IBUILDOPEN") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
-if !(call Misery_fnc_Hashammer) exitwith {
-private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_IBUILDOPENNOTOOLS"], "PLAIN DOWN", -1, true, true];
+if !(call Misery_fnc_Hashammer) exitWith {
+private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_IBUILDOPENNOTOOLS"];
 [_formattedText] call EFUNC(common,formatToTile);
 }; //items pre-check
 [] call NMIB_fnc_Action;
@@ -209,8 +209,8 @@ private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [locali
 if(_action== localize "STR_MISERY_USESLEDGE") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
-if !(call Misery_fnc_HasSledghammer) exitwith {
-private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_USESLEDGENOTOOLTIP"], "PLAIN DOWN", -1, true, true];
+if !(call Misery_fnc_HasSledghammer) exitWith {
+private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_USESLEDGENOTOOLTIP"];
 [_formattedText] call EFUNC(common,formatToTile);
 }; //items pre-check
 [] call Misery_fnc_demolish;
@@ -221,27 +221,28 @@ if(_action== localize "STR_MISERY_CANCEL")exitWith{MiseryActionsMode="";execVM "
 
 //RF detector:
 if(_action== localize "STR_MISERY_TURNONRFDETEC") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
-if !("Misery_RFHighrangeOFF" in items player) then {
-private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_TURNONRFDETECNOITEM"], "PLAIN DOWN", -1, true, true];
-[_formattedText] call EFUNC(common,formatToTile);
+    (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+    (findDisplay 602) closeDisplay 2;
+    if !("Misery_RFHighrangeOFF" in items player) then {
+    private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONRFDETECNOITEM"];
+    [_formattedText] call EFUNC(common,formatToTile);
 }else{
-execVM "\z\misery\addons\rfdetector\functions\fnc_RFreboot.sqf";
+    execVM "\z\misery\addons\rfdetector\functions\fnc_RFreboot.sqf";
 };
     };
 if(_action== localize "STR_MISERY_TURNOFFRFDETEC") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
-if !("Misery_RFHighrangeON" in items player) then {
-private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_TURNONRFDETECNOITEM"], "PLAIN DOWN", -1, true, true];
-[_formattedText] call EFUNC(common,formatToTile);
+    (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+    (findDisplay 602) closeDisplay 2;
+    if !("Misery_RFHighrangeON" in items player) then {
+    private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONRFDETECNOITEM"];
+    [_formattedText] call EFUNC(common,formatToTile);
 }else{
-private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RFDETECTURNOFF"], "PLAIN DOWN", -1, true, true];
-[_formattedText] call EFUNC(common,formatToTile);
-playSound3D ["\z\misery\addons\audio\sounds\Geigerenable\GeigerOFF.ogg", player, false, getPosASL player, 4, 1, 10];
-player removeitem 'Misery_RFHighrangeON'; player additem 'Misery_RFHighrangeOFF';
-player setVariable ["Misery_RFEMFDet", false,true];
+    private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_RFDETECTURNOFF"];
+    [_formattedText] call EFUNC(common,formatToTile);
+    playSound3D ["\z\misery\addons\audio\sounds\Geigerenable\GeigerOFF.ogg", player, false, getPosASL player, 4, 1, 10];
+    player removeItem 'Misery_RFHighrangeON';
+    player addItem 'Misery_RFHighrangeOFF';
+    player setVariable ["Misery_RFEMFDet", false,true];
 };
     };
 
@@ -253,7 +254,7 @@ player setVariable ["Misery_RFEMFDet", false,true];
 // private _formattedText = ["You don't have a portable radio...", "PLAIN DOWN"];
 // }else{
 // private _formattedText = ["You turn on your portable radio...", "PLAIN DOWN"];
-// player removeitem 'Misery_PortableradioOFF'; player additem 'Misery_PortableradioON';
+// player removeItem 'Misery_PortableradioOFF'; player addItem 'Misery_PortableradioON';
 // };
 //     };
 // if(_action=="Turn off Portable Radio") exitWith {
@@ -263,17 +264,17 @@ player setVariable ["Misery_RFEMFDet", false,true];
 // private _formattedText = ["You don't have a portable radio...", "PLAIN DOWN"];
 // }else{
 // private _formattedText = ["You turn off your portable radio...", "PLAIN DOWN"];
-// player removeitem 'Misery_PortableradioON'; player additem 'Misery_PortableradioOFF';
+// player removeItem 'Misery_PortableradioON'; player addItem 'Misery_PortableradioOFF';
 // player setVariable ["Misery_HHRadio", false,true];
 // };
 //     };
 
 //Artifacts:
-if (_action== localize "STR_MISERY_STOREARTIFACT") exitwith {
+if (_action== localize "STR_MISERY_STOREARTIFACT") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
 if !("Misery_leadcontaineropen" in items player) then {
-private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_NOLLCONTAINER"], "PLAIN DOWN", -1, true, true];
+private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOLLCONTAINER"];
 [_formattedText] call EFUNC(common,formatToTile);
 }else{
 execVM "\z\misery\addons\llcontainer\functions\fnc_putincontaineract.sqf";
@@ -285,11 +286,11 @@ if(_action== localize "STR_MISERY_STITCHWOUNDS") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
 if !("Misery_Needlethread" in items player) exitWith {
-private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_STITCHWOUNDSNOITEM"], "PLAIN DOWN", -1, true, true];
+private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_STITCHWOUNDSNOITEM"];
 [_formattedText] call EFUNC(common,formatToTile);
 };
 if !([player] call ace_medical_blood_fnc_isBleeding) then {
-private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_STITCHWOUNDSNOTBLEEDING"], "PLAIN DOWN", -1, true, true];
+private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_STITCHWOUNDSNOTBLEEDING"];
 [_formattedText] call EFUNC(common,formatToTile);
 }else{
 [] spawn Misery_fnc_StitchThreadact;
@@ -300,8 +301,8 @@ private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [locali
 if(_action== localize "STR_MISERY_TURNONHEADLAMP") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
-if !("Misery_HeadlampOFF" in items player) exitwith {
-private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_TURNONHEADLAMPNOITEM"], "PLAIN DOWN", -1, true, true];
+if !("Misery_HeadlampOFF" in items player) exitWith {
+private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONHEADLAMPNOITEM"];
 [_formattedText] call EFUNC(common,formatToTile);
 };
 [player] execVM "\z\misery\addons\headlamp\functions\fnc_HeadlampON.sqf";
@@ -310,8 +311,8 @@ private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [locali
 if(_action== localize "STR_MISERY_TURNOFFHEADLAMP") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
-if !("Misery_HeadlampON" in items player) exitwith {
-private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_TURNONHEADLAMPNOITEM"], "PLAIN DOWN", -1, true, true];
+if !("Misery_HeadlampON" in items player) exitWith {
+private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONHEADLAMPNOITEM"];
 [_formattedText] call EFUNC(common,formatToTile);
 };
 [player] execVM "\z\misery\addons\headlamp\functions\fnc_HeadlampOFF.sqf";
@@ -374,7 +375,7 @@ if(_action==localize "STR_MISERY_STARTFISHINGACT") exitWith {
 [] spawn Misery_fnc_fishact;
 };
 if(_action== localize "STR_MISERY_STARTFISHINGREQUIRMENTS") exitWith {
-private _formattedText =format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_STARTFISHINGREQUIRMENTS_LISTED"], "PLAIN DOWN", -1, true, true];
+private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_STARTFISHINGREQUIRMENTS_LISTED"];
 [_formattedText] call EFUNC(common,formatToTile);
 };
 
@@ -416,24 +417,24 @@ if(_action== localize "STR_MISERY_PLAYERDATA") exitWith {
 MiseryActionsMode=localize "STR_MISERY_PLAYERDATA";
 };
 
-if (_action ==localize "STR_MISERY_SAVECHARACTER") exitwith {
+if (_action ==localize "STR_MISERY_SAVECHARACTER") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
 if (MiseryManualPData == "ENABLED") then {
-    if (MiserysurvivalHardCoreSaveMode == "ENABLED" && !(call Misery_fnc_NearFire)) exitWith {systemChat format[localize "STR_MISERY_CHARACTERHARDCORESAVINGACTIVE",profilename]};
+    if (MiserysurvivalHardCoreSaveMode == "ENABLED" && !(call Misery_fnc_NearFire)) exitWith {systemChat format[localize "STR_MISERY_CHARACTERHARDCORESAVINGACTIVE",profileName]};
 [player] call Misery_fnc_MiserySerializeplayer;
-if !(MiseryDebug) then {systemChat format[localize "STR_MISERY_SAVECHARACTERNOTIF",profilename]};
+if !(MiseryDebug) then {systemChat format[localize "STR_MISERY_SAVECHARACTERNOTIF",profileName]};
 };
 };
 
 if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
-    if (MiseryDeleteConfirm > 0) exitwith {
+    if (MiseryDeleteConfirm > 0) exitWith {
     MiseryDeleteConfirm = 0;
     [player] call Misery_fnc_DeleteData;
-    systemChat format[localize "STR_MISERY_DELETECHARACTERSUCCESS",profilename];
+    systemChat format[localize "STR_MISERY_DELETECHARACTERSUCCESS",profileName];
     player setDamage 1;
 };
-    systemChat format[localize "STR_MISERY_DELETECHARACTERWARNING",profilename];
+    systemChat format[localize "STR_MISERY_DELETECHARACTERWARNING",profileName];
     MiseryDeleteConfirm = MiseryDeleteConfirm + 1;
     sleep 5;
     MiseryDeleteConfirm = 0;
@@ -477,9 +478,9 @@ if !("Misery_WaterJerryF" in items player) then {
 private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
 }else{
 private _formattedText = ["You dump the water from the Jerrycan onto the ground...", "PLAIN DOWN"];
-player removeitem 'Misery_WaterJerryF';
+player removeItem 'Misery_WaterJerryF';
 sleep 1;
-player additem 'Misery_WaterJerryE';
+player addItem 'Misery_WaterJerryE';
 };
     };
 
@@ -520,9 +521,9 @@ if !("Misery_WaterJerryFD" in items player) then {
 private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
 }else{
 private _formattedText = ["You dump the water from the Jerrycan onto the ground...", "PLAIN DOWN"];
-player removeitem 'Misery_WaterJerryFD';
+player removeItem 'Misery_WaterJerryFD';
 sleep 1;
-player additem 'Misery_WaterJerryE';
+player addItem 'Misery_WaterJerryE';
 };
     };
 
@@ -533,13 +534,13 @@ MiseryActionsMode="Use Fuel pump";
 if(_action=="Refill Fuel Jerrycan") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
-if !(call Misery_fnc_Refillgear) exitwith {private _formattedText = ["You don't have the required items to refill a Jerrycan...", "PLAIN DOWN"];};
+if !(call Misery_fnc_Refillgear) exitWith {private _formattedText = ["You don't have the required items to refill a Jerrycan...", "PLAIN DOWN"];};
 [] spawn Misery_fnc_RefillFuelact;
 };
 if(_action=="Refill vehicle") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
-if !(call Misery_fnc_Refuelatpump) exitwith {private _formattedText = ["You do not meet all the requirments to operate a fuel pump...", "PLAIN DOWN"];};
+if !(call Misery_fnc_Refuelatpump) exitWith {private _formattedText = ["You do not meet all the requirments to operate a fuel pump...", "PLAIN DOWN"];};
 [] spawn Misery_fnc_RefillFuelPumpact;
 };
 
@@ -550,13 +551,13 @@ MiseryActionsMode="Use JetFuel pump";
 if(_action=="Refill JetFuel Jerrycan") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
-if !(call Misery_fnc_RefillgearJ) exitwith {private _formattedText = ["You don't have the required items to refill a Jerrycan...", "PLAIN DOWN"];};
+if !(call Misery_fnc_RefillgearJ) exitWith {private _formattedText = ["You don't have the required items to refill a Jerrycan...", "PLAIN DOWN"];};
 [] spawn Misery_fnc_RefillJFuelact;
 };
 if(_action=="Refill aircraft") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
-if !(call Misery_fnc_RefuelatJetpump) exitwith {private _formattedText = ["You do not meet all the requirments to operate a Jetfuel pump...", "PLAIN DOWN"];};
+if !(call Misery_fnc_RefuelatJetpump) exitWith {private _formattedText = ["You do not meet all the requirments to operate a Jetfuel pump...", "PLAIN DOWN"];};
 [] spawn Misery_fnc_RefillJFuelPumpact;
 };
 
@@ -571,7 +572,7 @@ if !("Misery_EmptyJet" in items player) then {
 private _formattedText = ["You don't have a Jetfuel canister...", "PLAIN DOWN"];
 }else{
 player removeItem "Misery_EmptyJet";
-player additem "Misery_EmptyPetrol";
+player addItem "Misery_EmptyPetrol";
 };
     };
 if(_action=="Swap to Diesel") exitWith {
@@ -581,7 +582,7 @@ if !("Misery_EmptyJet" in items player) then {
 private _formattedText = ["You don't have a Jetfuel canister...", "PLAIN DOWN"];
 }else{
 player removeItem "Misery_EmptyJet";
-player additem "Misery_EmptyDiesel";
+player addItem "Misery_EmptyDiesel";
 };
     };
 
@@ -595,7 +596,7 @@ if !("Misery_EmptyDiesel" in items player) then {
 private _formattedText = ["You don't have a Diesel canister...", "PLAIN DOWN"];
 }else{
 player removeItem "Misery_EmptyDiesel";
-player additem "Misery_EmptyPetrol";
+player addItem "Misery_EmptyPetrol";
 };
     };
 if(_action=="Swap to Jetfuel") exitWith {
@@ -605,7 +606,7 @@ if !("Misery_EmptyDiesel" in items player) then {
 private _formattedText = ["You don't have a Diesel canister...", "PLAIN DOWN"];
 }else{
 player removeItem "Misery_EmptyDiesel";
-player additem "Misery_EmptyJet";
+player addItem "Misery_EmptyJet";
 };
     };
 
@@ -619,7 +620,7 @@ if !("Misery_EmptyPetrol" in items player) then {
 private _formattedText = ["You don't have a Petrol canister...", "PLAIN DOWN"];
 }else{
 player removeItem "Misery_EmptyPetrol";
-player additem "Misery_EmptyDiesel";
+player addItem "Misery_EmptyDiesel";
 };
     };
 if(_action=="Swap to Jetfuel") exitWith {
@@ -629,6 +630,6 @@ if !("Misery_EmptyPetrol" in items player) then {
 private _formattedText = ["You don't have a Petrol canister...", "PLAIN DOWN"];
 }else{
 player removeItem "Misery_EmptyPetrol";
-player additem "Misery_EmptyJet";
+player addItem "Misery_EmptyJet";
 };
     };

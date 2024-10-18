@@ -16,7 +16,7 @@
 
 player addEventHandler ["InventoryOpened", {
     [{
-        !(isnull (finddisplay 602))
+        !(isNull (findDisplay 602))
     },{
         {
             ((findDisplay 602) displayCtrl _x) ctrlSetEventHandler ["LBDblClick", "_this call FUNC(Click)"];
@@ -29,11 +29,11 @@ player addEventHandler ["InventoryOpened", {
         private _handle = [{
             params ["_display", "_handle"];
 
-            if ((isnull (findDisplay 602))) exitWith {
+            if ((isNull (findDisplay 602))) exitWith {
                 [_handle] call CBA_fnc_removePerFrameHandler;
             };
 
-            if (vehicle player isEqualTo player && {vectorMagnitude velocity player > 1}) exitWith {
+            if (isNull objectParent player && {vectorMagnitude velocity player > 1}) exitWith {
                 [_handle] call CBA_fnc_removePerFrameHandler;
                 _display closeDisplay 1;
 
