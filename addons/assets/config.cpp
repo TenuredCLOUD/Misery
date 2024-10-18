@@ -1,4 +1,3 @@
-
 #include "script_component.hpp"
 
 class CfgPatches {
@@ -7,16 +6,13 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"misery_main"}; // Include addons from this mod that contain code or assets you depend on. Affects loadorder. Including main as an example here.
-        authors[] = {"TenuredCLOUD"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}
+        requiredAddons[] = {"misery_main"};
+        authors[] = {"TenuredCLOUD"};
         VERSION_CONFIG;
     };
 };
 
-#include "CfgAmmo.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgVehicleClasses.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
-
-

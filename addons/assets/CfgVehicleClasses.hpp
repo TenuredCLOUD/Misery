@@ -1,6 +1,5 @@
-
 class CfgVehicleClasses {
-    class Misery_ObjectClass {
+    class CLASS(Objects) {
         displayName = "Misery";
     };
 };
