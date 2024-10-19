@@ -438,7 +438,7 @@ private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
 if(_action=="Pour into canteen") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
-if !("Misery_WaterJerryF" in items player) then {
+if !([["Misery_WaterJerryF"]] call EFUNC(common,hasItem)) then {
 private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
 }else{
 [] spawn Misery_fnc_canteenfillcact;
@@ -447,7 +447,7 @@ private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
 if(_action=="Pour into water bottle") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
-if !("Misery_WaterJerryF" in items player) then {
+if !([["Misery_WaterJerryF"]] call EFUNC(common,hasItem)) then {
 private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
 }else{
 [] spawn Misery_fnc_bottlefillcact;
@@ -456,7 +456,7 @@ private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
 if(_action=="Dump out water (clean)") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
-if !("Misery_WaterJerryF" in items player) then {
+if !([["Misery_WaterJerryF"]] call EFUNC(common,hasItem)) then {
 private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
 }else{
 private _formattedText = ["You dump the water from the Jerrycan onto the ground...", "PLAIN DOWN"];
@@ -472,7 +472,7 @@ MiseryActionsMode="Use Jerrycan (Dirty)";
 if(_action=="Drink from Jerrycan (dirty)") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
-if !("Misery_WaterJerryFD" in items player) then {
+if !([["Misery_WaterJerryFD"]] call EFUNC(common,hasItem)) then {
 private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
 }else{
 [] spawn Misery_fnc_drinkjdirtyact;
@@ -481,7 +481,7 @@ private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
 if(_action=="Pour into canteen") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
-if !("Misery_WaterJerryFD" in items player) then {
+if !([["Misery_WaterJerryFD"]] call EFUNC(common,hasItem)) then {
 private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
 }else{
 [] spawn Misery_fnc_canteenfilldact;
@@ -490,7 +490,7 @@ private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
 if(_action=="Pour into water bottle") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
-if !("Misery_WaterJerryFD" in items player) then {
+if !([["Misery_WaterJerryFD"]] call EFUNC(common,hasItem)) then {
 private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
 }else{
 [] spawn Misery_fnc_bottlefilldact;
@@ -499,7 +499,7 @@ private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
 if(_action=="Dump out water (dirty)") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
-if !("Misery_WaterJerryFD" in items player) then {
+if !([["Misery_WaterJerryFD"]] call EFUNC(common,hasItem)) then {
 private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
 }else{
 private _formattedText = ["You dump the water from the Jerrycan onto the ground...", "PLAIN DOWN"];
@@ -550,7 +550,7 @@ MiseryActionsMode="Swap Jerrycan fuel type (JetFuel)";
 if(_action=="Swap to Petrol") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
-if !("Misery_EmptyJet" in items player) then {
+if !([["Misery_EmptyJet"]] call EFUNC(common,hasItem)) then {
 private _formattedText = ["You don't have a Jetfuel canister...", "PLAIN DOWN"];
 }else{
 player removeItem "Misery_EmptyJet";
@@ -560,7 +560,7 @@ player addItem "Misery_EmptyPetrol";
 if(_action=="Swap to Diesel") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
-if !("Misery_EmptyJet" in items player) then {
+if !([["Misery_EmptyJet"]] call EFUNC(common,hasItem)) then {
 private _formattedText = ["You don't have a Jetfuel canister...", "PLAIN DOWN"];
 }else{
 player removeItem "Misery_EmptyJet";
@@ -574,7 +574,7 @@ MiseryActionsMode="Swap Jerrycan fuel type (Diesel)";
 if(_action=="Swap to Petrol") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
-if !("Misery_EmptyDiesel" in items player) then {
+if !([["Misery_EmptyDiesel"]] call EFUNC(common,hasItem)) then {
 private _formattedText = ["You don't have a Diesel canister...", "PLAIN DOWN"];
 }else{
 player removeItem "Misery_EmptyDiesel";
@@ -584,7 +584,7 @@ player addItem "Misery_EmptyPetrol";
 if(_action=="Swap to Jetfuel") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
-if !("Misery_EmptyDiesel" in items player) then {
+if !([["Misery_EmptyDiesel"]] call EFUNC(common,hasItem)) then {
 private _formattedText = ["You don't have a Diesel canister...", "PLAIN DOWN"];
 }else{
 player removeItem "Misery_EmptyDiesel";
@@ -598,7 +598,7 @@ MiseryActionsMode="Swap Jerrycan fuel type (Petrol)";
 if(_action=="Swap to Diesel") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
-if !("Misery_EmptyPetrol" in items player) then {
+if !([["Misery_EmptyPetrol"]] call EFUNC(common,hasItem)) then {
 private _formattedText = ["You don't have a Petrol canister...", "PLAIN DOWN"];
 }else{
 player removeItem "Misery_EmptyPetrol";
@@ -608,7 +608,7 @@ player addItem "Misery_EmptyDiesel";
 if(_action=="Swap to Jetfuel") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
-if !("Misery_EmptyPetrol" in items player) then {
+if !([["Misery_EmptyPetrol"]] call EFUNC(common,hasItem)) then {
 private _formattedText = ["You don't have a Petrol canister...", "PLAIN DOWN"];
 }else{
 player removeItem "Misery_EmptyPetrol";

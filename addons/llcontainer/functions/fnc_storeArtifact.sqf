@@ -30,7 +30,7 @@ if (alive player) then {
     ];
 
     {
-        if (_x in items player && "Misery_leadcontaineropen" in items player) exitWith {
+        if (_x in items player && [["Misery_leadcontaineropen"]] call EFUNC(common,hasItem)) exitWith {
             _artifact = _x;
         };
     } forEach _artifacts;

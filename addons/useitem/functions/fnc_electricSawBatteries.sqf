@@ -15,7 +15,7 @@
  * Public: No
 */
 
-if ("Misery_18vbat" in items player) then {
+if ([["Misery_18vbat"]] call EFUNC(common,hasItem)) then {
 
 player removeItem "Misery_electrichandsawnobattery";
 

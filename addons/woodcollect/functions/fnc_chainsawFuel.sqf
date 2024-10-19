@@ -15,9 +15,9 @@
 
 if (!hasInterface) exitWith {};
 
-if !("Misery_Chainsawempty" in items player) exitWith {titleText ["You have no chainsaw that needs fuel...", "PLAIN DOWN"];};
+if !([["Misery_Chainsawempty"]] call EFUNC(common,hasItem)) exitWith {titleText ["You have no chainsaw that needs fuel...", "PLAIN DOWN"];};
 
-  if ("Misery_Chainsawempty" in items player) exitWith {
+  if ([["Misery_Chainsawempty"]] call EFUNC(common,hasItem)) exitWith {
 
   titleText ["You start to refuel your chainsaw...", "PLAIN DOWN"];
 
