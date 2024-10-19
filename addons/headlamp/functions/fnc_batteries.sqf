@@ -14,7 +14,7 @@
  *
 */
 
-if ("Misery_9vbat" in items player) then {
+if ([["Misery_9vbat"]] call EFUNC(common,hasItem)) then {
 
 player removeItem "Misery_Headlamp_NB";
 

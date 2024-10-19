@@ -14,7 +14,7 @@
  *
 */
 
-if ("Misery_lithiumbattery" in items player) then {
+if ([["Misery_lithiumbattery"]] call EFUNC(common,hasItem)) then {
 
 player removeItem "Misery_personalgeigernobattery";
 
