@@ -89,7 +89,7 @@ if (!(isNil {player getVariable "MiseryFear"})) then {
         player setVariable ["MiseryFear", (_MFear + ((_fearnightadd)))]; //player setVariable ["MiseryFear", (_MFear + ((_fearnightadd)toFixed 2))];
         if (MiseryFear >= 25) then {player setVariable ["MiseryFear", 25]};
 
-        if ((([player] call EFUNC(common,Isinside)) select 0) && (([player] call EFUNC(common,Isinside)) select 1) || ([player] call EFUNC(common,NearFire))) then {
+        if ((insideBuilding player == 1) || ([player] call EFUNC(common,NearFire))) then {
         _randomnightnofear = (((NightFear) + NightFear) * 2);
         _fearnightnofear = MACRO_FEAR_CALC_NIGHT(_randomnightnofear);
         //Gain back sanity (inside or near fire)

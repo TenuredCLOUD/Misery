@@ -371,21 +371,14 @@ _FatigueNum ctrlSetText _FatigueNumVal;
     };
         };
 
-    if ((([player] call Misery_fnc_Isinside) select 0) && (([player] call Misery_fnc_Isinside) select 1)) then {
+    if (insideBuilding player == 1) then {
         ["buff","Sheltered", "data\shelter.paa", "You are sheltered from the weather, while inside you cannot build a fire due to smoke inhalation..."] call Misery_fnc_AddBuffOrAilment;
     }else{
     if (_ShelterBuff > -1) then {
     ["buff","Sheltered"] call Misery_fnc_RemoveBuffOrAilment;
     };
-        };
-    if ((([player] call Misery_fnc_Isinside) select 0)) then {
-        ["buff","Under Roof", "data\roof.paa", "You are under a roof, protected from the rain, a fire can safetly be constructed here..."] call Misery_fnc_AddBuffOrAilment;
-    }else{
-    if (_CoverageBuff > -1) then {
-    ["buff","Under Roof"] call Misery_fnc_RemoveBuffOrAilment;
     };
-        };
-            };
+};
 
     }, 0, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;
