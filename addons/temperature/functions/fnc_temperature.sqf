@@ -37,7 +37,7 @@ if (_seaTemp <= 0) then {
     _seaTemp = 0;
 };
 
-if (!(isNull objectParent player) || ((([player] call Misery_fnc_Isinside) select 0) && (([player] call Misery_fnc_Isinside) select 1))) then {
+if (!(isNull objectParent player) || ((insideBuilding player == 1))) then {
     _windChillIndex = _airTemp;
     _windChillIndexCelsius = (_windChillIndex - 32) * 5/9;
     _breathFog = 0;

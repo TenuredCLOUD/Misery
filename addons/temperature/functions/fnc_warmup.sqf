@@ -24,7 +24,7 @@ _MDebuffs = player getVariable "MiseryDebuffs";
 
 //Player effective temperature pre-check:
 if ([player] call Misery_fnc_NearFire) exitWith {};
-if ((([player] call Misery_fnc_Isinside) select 0) && (([player] call Misery_fnc_Isinside) select 1)) exitWith {};
+if (insideBuilding player == 1) exitWith {};
 if !(isNull objectParent player) exitWith {};
 
 if (_MPlayertemp >= 20 && _MPlayertemp < 33) then {

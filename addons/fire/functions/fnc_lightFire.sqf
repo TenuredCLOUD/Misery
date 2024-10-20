@@ -27,7 +27,7 @@ if (!hasInterface) exitWith {};
 if !(isNull objectParent player) exitWith {titleText ["You cannot build a fire while inside a vehicle...", "PLAIN DOWN"];};
 
 //Inside:
-if ((([player] call Misery_fnc_Isinside) select 0) && (([player] call Misery_fnc_Isinside) select 1)) exitWith {titleText ["You cannot build a fire inside, it's too dangerous...", "PLAIN DOWN"];};
+if (insideBuilding player == 1) exitWith {titleText ["You cannot build a fire inside, it's too dangerous...", "PLAIN DOWN"];};
 
 //No firewood or sticks:
 if (!("Misery_firewood" in items player) && !("Misery_woodensticks" in items player)) exitWith {titleText ["You need firewood or sticks...", "PLAIN DOWN"];};

@@ -57,7 +57,7 @@ if ([player] call Misery_fnc_NearFire) then {
 //---------------------------
 //Inside house check (checks if player is "boxed in" and under roof)
 
-if ((([player] call Misery_fnc_Isinside) select 0) && (([player] call Misery_fnc_Isinside) select 1)) then {
+if (insideBuilding player == 1) then {
 
     if ((_MPlayertemp < 20) && (!(_MDebuffs find "PARASITES" != -1 || _MDebuffs find "INFECTION" != -1))) then {
 
