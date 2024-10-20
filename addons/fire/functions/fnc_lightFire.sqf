@@ -14,6 +14,10 @@
  *
 */
 
+/*
+Again, with the fire crafting Will most likely rewrite to new UI based framework
+*/
+
 if (!hasInterface) exitWith {};
 
 //Force close inv:

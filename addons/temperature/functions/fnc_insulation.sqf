@@ -17,7 +17,7 @@
 
 private _clothingWarmth = format [localize "STR_MISERY_ClothingWarmthVAL", ((player call Misery_fnc_ClothingWarmth) select 0)];
 
-if ("Misery_ERU" in items player) then {
+if ([["Misery_ERU"]] call EFUNC(common,hasItem)) then {
     private _formattedText = format ["<t font='PuristaMedium'>%1 %2 %3</t>", _clothingWarmth, localize "STR_MISERY_ClothingInsulationVAL", ((player call Misery_fnc_ClothingWarmth) select 2)];
     [_formattedText] call EFUNC(common,formatToTile);
 } else {

@@ -16,7 +16,7 @@
 
 if (alive player) then {
 
-  if !("Misery_gascartridge" in items player) exitWith {titleText ["You need spare cartridges to use this mask...", "PLAIN DOWN"];};
+  if !([["Misery_gascartridge"]] call EFUNC(common,hasItem)) exitWith {titleText ["You need spare cartridges to use this mask...", "PLAIN DOWN"];};
 
    titleText ["You add some cartridges to the mask...", "PLAIN DOWN"];
 
