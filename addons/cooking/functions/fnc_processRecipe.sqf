@@ -59,7 +59,7 @@ if (count _matchedRecipe > 0) then {
         };
     } forEach _requirements;
 
-    if ([_requirements] call Misery_fnc_CanCookCheck) then {
+    if ([_requirements] call FUNC(canCookCheck)) then {
 
         _CookB ctrlShow false;
         _RecipeB ctrlShow false;

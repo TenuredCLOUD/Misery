@@ -44,7 +44,7 @@ disableSerialization;
 
         switch (true) do {
             case (!isNil "Misery_ERU_Temp"): {
-                _textControlReadings ctrlSetText format ["Air: %1°C Sea: %2°C", parseNumber (((call Misery_fnc_Temperature) select 0) toFixed 1), parseNumber (((call Misery_fnc_Temperature) select 1) toFixed 1)];
+                _textControlReadings ctrlSetText format ["Air: %1°C Sea: %2°C", parseNumber (((call EFUNC(temperature,environment)) select 0) toFixed 1), parseNumber (((call EFUNC(temperature,environment)) select 1) toFixed 1)];
             };
             case (!isNil "Misery_ERU_Radiation"): {
                 if (!isNil "MiseryinRadZone" && MiseryinRadZone) then {
