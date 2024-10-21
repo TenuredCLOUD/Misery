@@ -19,7 +19,7 @@
 private _modules = allMissionObjects "Misery_Ambient_AI";
 
 waitUntil {
-    private _players = call Misery_fnc_ListPlayers;
+    private _players = call EFUNC(common,listPlayers);
 
     {
         private _player = _x;

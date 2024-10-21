@@ -25,7 +25,7 @@ player setVariable ["MiseryPoison", MACRO_PLAYER_TOXICITY];
 player setVariable ["MiseryInfection", MACRO_PLAYER_INFECTION];
 player setVariable ["MiseryFear", MACRO_PLAYER_FEAR];
 player setVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE];
-player setVariable ["MiseryPlayerTemp", (call EFUNC(temperature,Temperature)) select 0];
+player setVariable ["MiseryPlayerTemp", (call EFUNC(temperature,environment)) select 0];
 player setVariable ["MiseryBreathFogSim", nil];
 player setVariable ["MiseryBreath", false];
 

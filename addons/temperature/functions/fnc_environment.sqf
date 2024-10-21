@@ -14,7 +14,7 @@
  * None
  *
  * Example:
- * [] call misery_temperature_fnc_temperature;
+ * [] call misery_temperature_fnc_environment;
  *
  * Public: No
 */

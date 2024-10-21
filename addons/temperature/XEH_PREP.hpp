@@ -9,6 +9,6 @@ PREP(heatPack);
 PREP(insulation);
 PREP(overTemp);
 PREP(sick);
-PREP(temperature);
+PREP(environment);
 PREP(warmup);
 PREP(water);

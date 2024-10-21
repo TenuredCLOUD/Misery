@@ -125,7 +125,7 @@ _ModuleSpawnDistanceMIN = _this select 19;
 _ModuleSpawnDistanceMAX = _this select 20;
 
 _player=objNull;
-_players=call Misery_fnc_ListPlayers;
+_players=call EFUNC(common,listPlayers);
 
 _pos = getPos _module;
 
