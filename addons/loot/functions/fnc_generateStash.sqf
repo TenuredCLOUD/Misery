@@ -121,10 +121,10 @@ while { (count _players) > 0 } do {
 
 // Debug markers
 if (MiseryDebug) then {
-    _marker=createMarkerLocal[format["%1", _groundStash], (getPos _groundStash)];
+    _marker=createMarkerLocal [format ["%1", _groundStash], (getPos _groundStash)];
     _marker setMarkerTypeLocal "mil_dot";
     _marker setMarkerColorLocal "ColorBlack";
-    _marker setMarkerTextLocal(format["%1", (getText(configFile>>"cfgVehicles">>(typeOf _groundStash)>>"displayName"))]);
+    _marker setMarkerTextLocal (format ["%1", (getText(configFile>>"CfgVehicles">>(typeOf _groundStash)>>"displayName"))]);
 };
 
 // Loot Clean check (Slowed down due to immense frame loss since deletion check will run Per frame)

@@ -136,10 +136,10 @@ _SpawnFLAG = false;
 
 _AI_Spawnblacklist = [];
 {
-    _marker = createMarker [format ["playerMarker_%1", _forEachIndex], getPos _x];
-    _marker setMarkerShape "ELLIPSE";
-    _marker setMarkerSize [10, 10];
-    _marker setMarkerColor "ColorWhite";
+    _marker = createMarkerLocal [format ["playerMarker_%1", _forEachIndex], getPos _x];
+    _marker setMarkerShapeLocal "ELLIPSE";
+    _marker setMarkerSizeLocal [10, 10];
+    _marker setMarkerColorLocal "ColorWhite";
     _marker setMarkerAlpha 0;
 
     _AI_Spawnblacklist pushBack _marker;
@@ -332,11 +332,11 @@ _group enableDynamicSimulation true;
 if (MiseryDebug) then {
     _randID = str (diag_tickTime * 1e6) + str _module;
     _markerName = format ["AI Group %1", _randID];
-    _marker = createMarker [_markerName, getPosATL leader _group];
-    _marker setMarkerType "mil_dot";
-    _marker setMarkerColor "ColorWhite";
-    _marker setMarkerSize [0.5, 0.5];
-    _marker setMarkerAlpha 1;
+    _marker = createMarkerLocal [_markerName, getPosATL leader _group];
+    _marker setMarkerTypeLocal "mil_dot";
+    _marker setMarkerColorLocal "ColorWhite";
+    _marker setMarkerSizeLocal [0.5, 0.5];
+    _marker setMarkerAlphaLocal 1;
     _marker setMarkerText "[DEBUG] Generated AI Group Spawn";
 };
 
