@@ -18,7 +18,7 @@
 [{!isNull findDisplay 358492},
 {
 
-private _Corpse = (([] call FUNC(NearestCorpse_Money)) select 1);
+private _Corpse = (([] call FUNC(nearestCorpseMoney)) select 1);
 
 private _CorpseFunds = _Corpse getVariable "MiseryCurrency";
 

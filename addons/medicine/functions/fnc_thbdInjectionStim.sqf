@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery THBD stim (rad removal)
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * THBD stim (rad removal)
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_medicine_fnc_thbdInjectionStim;
+ *
 */
 
 MiseryACE=false;

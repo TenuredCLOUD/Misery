@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery Caffeine usage
-Designed specifically for Misery mod (also compatible with Ravage)
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Caffeine usage
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_medicine_fnc_caffieneTablets;
+ *
 */
 
 private _MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];

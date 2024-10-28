@@ -24,7 +24,7 @@
         if ((player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE]) < 10 || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             if(MiseryDebug)then{systemChat "Misery Fever immersion cycle terminated..."};
-            [] call EFUNC(Immersion,feverimmersion);
+            [] call FUNC(feverimmersion);
             if(MiseryDebug)then{systemChat "Misery Fever immersion cycle checks re-initiated..."};
         };
 

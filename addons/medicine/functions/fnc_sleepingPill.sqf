@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-    Misery sleep pill usage
-    Designed specifically for Misery mod
-    by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * sleep pill usage
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_medicine_fnc_sleepingPill;
+ *
 */
 
 _MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];

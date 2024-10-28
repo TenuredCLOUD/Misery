@@ -1,11 +1,5 @@
 #include "..\script_component.hpp"
 /*
-Misery MedTreatment UI List populater
-Defines the selected purchase option, and passes current pricing values
-Designed specifically for Misery mod
-by TenuredCLOUD
-*/
-/*
  * Author: TenuredCLOUD
  * Defines the selected purchase option, and passes current pricing values
  *
@@ -55,7 +49,7 @@ switch (_selectedFile) do {
     [] execVM "\z\misery\addons\medzone\fnc_Radheal12.sqf";
     };
     case "Radheal34": {
-       [] execVM "\z\misery\addons\medzone\fnc_Radheal34.sqf";
+    [] execVM "\z\misery\addons\medzone\fnc_Radheal34.sqf";
     };
     case "RadhealALL": {
     [] execVM "\z\misery\addons\medzone\fnc_RadhealALL.sqf";

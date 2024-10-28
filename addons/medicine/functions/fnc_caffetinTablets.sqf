@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery Caffetin tablets usage
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Caffetin tablets usage
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_medicine_fnc_caffetinTablets;
+ *
 */
 
 private _MInfection = player getVariable ["MiseryInfection", MACRO_PLAYER_INFECTION];

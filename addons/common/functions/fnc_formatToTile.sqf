@@ -15,4 +15,4 @@
 
 params ["_formattedText"];
 
-[parseText _formattedText, true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
+[parseText _formattedText, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;

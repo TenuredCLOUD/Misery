@@ -17,7 +17,7 @@
 private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position player);
 player setVariable ["_TC_sound", true, true];
 
-if (call Misery_fnc_IsdeadZed) then {
+if (call FUNC(corpse)) then {
 
 private _randomskin = selectRandom
 ["Skinning_1",

@@ -85,10 +85,10 @@ if (count _matchedRecipe > 0) then {
         player setVariable ["_TC_sound", false,true];
         switch (_cookingMethod) do {
             case "Cook": {
-                [parseText "<t font='PuristaMedium' size='1'>Cooking interrupted...</t>", true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
+                [parseText "<t font='PuristaMedium' size='1'>Cooking interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
             };
             case "Boil": {
-                [parseText "<t font='PuristaMedium' size='1'>Boiling interrupted...</t>", true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
+                [parseText "<t font='PuristaMedium' size='1'>Boiling interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
             };
         };
     };

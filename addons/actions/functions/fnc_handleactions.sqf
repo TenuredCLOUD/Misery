@@ -137,14 +137,14 @@ if (MiseryUsingiBuild) then {
     };
 };
 
-if (MiseryJerrycanacts) then {
-    if ([["Misery_WaterJerryF"]] call EFUNC(common,hasItem)) then {
-        _out pushBack [localize "STR_MISERY_USEJERRYCANCLEAN",localize "STR_MISERY_USEJERRYCANCLEAN"];
-    };
-    if ([["Misery_WaterJerryFD"]] call EFUNC(common,hasItem)) then {
-        _out pushBack [localize "STR_MISERY_USEJERRYCANDIRTY",localize "STR_MISERY_USEJERRYCANDIRTY"];
-    };
-};
+// if (MiseryJerrycanacts) then {
+//     if ([["Misery_WaterJerryF"]] call EFUNC(common,hasItem)) then {
+//         _out pushBack [localize "STR_MISERY_USEJERRYCANCLEAN",localize "STR_MISERY_USEJERRYCANCLEAN"];
+//     };
+//     if ([["Misery_WaterJerryFD"]] call EFUNC(common,hasItem)) then {
+//         _out pushBack [localize "STR_MISERY_USEJERRYCANDIRTY",localize "STR_MISERY_USEJERRYCANDIRTY"];
+//     };
+// };
 
 if (MiseryRFEMFacts) then {
     if ([["Misery_RF_HighRangeOff"]] call EFUNC(common,hasItem)) then {

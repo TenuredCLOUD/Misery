@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call misery_llcontainer_fnc_storeArtifact;
+ * [] call misery_medicine_fnc_antibiotic;
  *
 */
 

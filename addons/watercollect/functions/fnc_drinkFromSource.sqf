@@ -39,7 +39,7 @@ private _ExitB = _dialog displayCtrl 1602;
     params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable ["Misery_ISDrinking",false];
-                [parseText "<t font='PuristaMedium' size='1'>Drinking interrupted...</t>", true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
+                [parseText "<t font='PuristaMedium' size='1'>Drinking interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
         };
 }];
 
