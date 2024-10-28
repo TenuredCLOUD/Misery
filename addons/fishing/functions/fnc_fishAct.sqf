@@ -40,7 +40,7 @@
     private _actionID = (_this select 2);
     private _random = [1, 100] call BIS_fnc_randomInt;
 
-    if (call Misery_fnc_Fishinggear && MiseryCanFish) then {
+    if (call FUNC(fishingGear) && MiseryCanFish) then {
     titleText ["Fishing...", "PLAIN DOWN"];
     };
 

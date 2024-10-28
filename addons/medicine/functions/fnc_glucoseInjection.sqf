@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery Glucose injection usage
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Glucose injection usage
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_medicine_fnc_glucoseInjection;
+ *
 */
 
 fnc_glucose = {

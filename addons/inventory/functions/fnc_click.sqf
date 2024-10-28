@@ -37,4 +37,4 @@ if(((toUpper _selectedItem)in MiserysurvivalItems))exitWith{
 private _script="";
 {if(toLower(_x select 0)==(toLower _selectedItem))exitWith{_script=_x select 1}}forEach MiseryActionsItemCustom;
 if!(_script=="")exitWith{_selectedItem execVM _script};
-[_selectedItem] spawn Misery_fnc_InventoryClickCustom;
+[_selectedItem] call FUNC(clickCustom);

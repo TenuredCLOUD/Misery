@@ -23,7 +23,7 @@
         if (!alive player) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             if(MiseryDebug)then{systemChat "Misery Fear cycle terminated..."};
-            [] call FUNC(Fearcycle);
+            [] call FUNC(cycle);
             if(MiseryDebug)then{systemChat "Misery Fear cycle checks re-initiated..."};
         };
 
@@ -45,7 +45,7 @@ if (!(isNil {player getVariable "MiseryFear"})) then {
     };
 
     if (MiseryFearRvg == 1) then {
-     if (call FUNC(NearZed)) then {
+     if (call FUNC(nearZed)) then {
 
         _randomzedval = floor random RavageFear;
         _fearzedadd = MACRO_FEAR_CALC_RAVAGE(_randomzedval); //- random calc for fear add
@@ -57,7 +57,7 @@ if (!(isNil {player getVariable "MiseryFear"})) then {
     };
 
       if (MiseryFearRem == 1) then {
-      if (call FUNC(NearPhantom)) then {
+      if (call FUNC(nearPhantom)) then {
 
         _randomphantomval = floor random RemnantFear;
         _fearphantomadd = MACRO_FEAR_CALC_PHANTOM(_randomphantomval);
@@ -69,7 +69,7 @@ if (!(isNil {player getVariable "MiseryFear"})) then {
       };
 
       if (MiseryFearDSA == 1) then {
-      if (call FUNC(NearSpook)) then {
+      if (call FUNC(nearSpook)) then {
 
         _randomspookval = floor random DSAFear;
         _fearspookadd = MACRO_FEAR_CALC_DSASPOOK(_randomspookval);

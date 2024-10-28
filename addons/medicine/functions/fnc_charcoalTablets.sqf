@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery Charcoal tabs usage
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Charcoal tabs usage
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_medicine_fnc_charcoalTablets;
+ *
 */
 
 private _MPoison = player getVariable ["MiseryPoison", MACRO_PLAYER_TOXICITY];

@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery Electrolyte injection usage
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Electrolyte injection usage
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_medicine_fnc_electrolyteInjection;
+ *
 */
 
 fnc_electrolyte = {

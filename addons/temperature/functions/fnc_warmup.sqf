@@ -23,7 +23,7 @@ _MExposure = player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE];
 _MDebuffs = player getVariable "MiseryDebuffs";
 
 //Player effective temperature pre-check:
-if ([player] call Misery_fnc_NearFire) exitWith {};
+if ([player] call EFUNC(common,nearFire)) exitWith {};
 if (insideBuilding player == 1) exitWith {};
 if !(isNull objectParent player) exitWith {};
 

@@ -20,7 +20,7 @@
 waitUntil {sleep 1; ((count MiseryActiveTraders) > 0)};
 
 while {true} do {
-    private _players = call Misery_fnc_ListPlayers;
+    private _players = call EFUNC(common,listPlayers);
     _players = _players - (entities "HeadlessClient_F");
     {
         private _player = _x;

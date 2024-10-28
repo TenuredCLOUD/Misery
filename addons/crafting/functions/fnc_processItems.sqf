@@ -72,7 +72,7 @@ if (count _matchedRecipe > 0) then {
     };
     } forEach _requirements;
 
-    if ([_requirements] call Misery_fnc_CanCraftCheck) then {
+    if ([_requirements] call FUNC(canCraftCheck)) then {
 
         _CraftB ctrlShow false;
         _RecipeB ctrlShow false;
@@ -98,7 +98,7 @@ if (count _matchedRecipe > 0) then {
                 if (player getVariable ["_TC_sound", false]) then {
                     player setVariable ["_TC_sound", false,true];
                 };
-                [parseText "<t font='PuristaMedium' size='1'>Crafting interrupted...</t>", true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
+                [parseText "<t font='PuristaMedium' size='1'>Crafting interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
             };
         }];
 

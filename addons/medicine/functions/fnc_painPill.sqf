@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery Pain pill usage
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Pain pill usage
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_medicine_fnc_painPill;
+ *
 */
 
 MiseryACE=false;

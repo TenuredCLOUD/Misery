@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery Clozapine pill usage
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Clozapine pill usage
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_medicine_fnc_clozapine;
+ *
 */
 
 private _MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];

@@ -74,25 +74,25 @@ if (Miseryforage) then {
 };
 
 if (Miserycook) then {
-    if (call Misery_fnc_NearFire) then {
+    if (call EFUNC(common,nearFire)) then {
         _out pushBack [localize "STR_MISERY_USEFIRE",localize "STR_MISERY_USEFIRE"];
     };
 };
 
 if (Miserywatercoll) then {
-    if (call Misery_fnc_NearWell) then {
+    if (call EFUNC(common,nearWell)) then {
         _out pushBack [localize "STR_MISERY_COLLECTWATER",localize "STR_MISERY_COLLECTWATER"];
     };
 };
 
 if (Miserywoodcut) then {
-    if (call Misery_fnc_NearTreeAxe) then {
+    if (call EFUNC(common,nearTreeAxe)) then {
         _out pushBack [localize "STR_MISERY_CHOPWOOD",localize "STR_MISERY_CHOPWOOD"];
     };
-    if (call Misery_fnc_NearTreeSaw) then {
+    if (call EFUNC(common,nearTreeSaw)) then {
         _out pushBack [localize "STR_MISERY_SAWWOOD",localize "STR_MISERY_SAWWOOD"];
     };
-    if (call Misery_fnc_NearTree) then {
+    if (call EFUNC(common,nearTree)) then {
         _out pushBack [localize "STR_MISERY_COLLECTWOOD",localize "STR_MISERY_COLLECTWOOD"];
     };
 
@@ -117,7 +117,7 @@ if (MiseryMine) then {
     if ([["Misery_Forge"], 1.5] call EFUNC(common,nearCraftingStation)) then {
         _out pushBack [localize "STR_MISERY_USEFORGE",localize "STR_MISERY_USEFORGE"];
     };
-    if (call Misery_fnc_NearRockSource) then {
+    if (call EFUNC(common,nearRockSource)) then {
         _out pushBack [localize "STR_MISERY_MINEORE",localize "STR_MISERY_MINEORE"];
     };
 };
@@ -129,22 +129,22 @@ if (MiseryCraft) then {
 };
 
 if (MiseryUsingiBuild) then {
-    if (call Misery_fnc_Hashammer) then {
+    if (call EFUNC(buildex,hasHammer)) then {
         _out pushBack [localize "STR_MISERY_IBUILDOPEN",localize "STR_MISERY_IBUILDOPEN"];
     };
-    if (call Misery_fnc_HasSledghammer) then {
+    if (call EFUNC(buildex,hasSledghammer)) then {
         _out pushBack [localize "STR_MISERY_USESLEDGE",localize "STR_MISERY_USESLEDGE"];
     };
 };
 
-if (MiseryJerrycanacts) then {
-    if (call Misery_fnc_HasJerrycanClean) then {
-        _out pushBack [localize "STR_MISERY_USEJERRYCANCLEAN",localize "STR_MISERY_USEJERRYCANCLEAN"];
-    };
-    if (call Misery_fnc_HasJerrycanDirty) then {
-        _out pushBack [localize "STR_MISERY_USEJERRYCANDIRTY",localize "STR_MISERY_USEJERRYCANDIRTY"];
-    };
-};
+// if (MiseryJerrycanacts) then {
+//     if ([["Misery_WaterJerryF"]] call EFUNC(common,hasItem)) then {
+//         _out pushBack [localize "STR_MISERY_USEJERRYCANCLEAN",localize "STR_MISERY_USEJERRYCANCLEAN"];
+//     };
+//     if ([["Misery_WaterJerryFD"]] call EFUNC(common,hasItem)) then {
+//         _out pushBack [localize "STR_MISERY_USEJERRYCANDIRTY",localize "STR_MISERY_USEJERRYCANDIRTY"];
+//     };
+// };
 
 if (MiseryRFEMFacts) then {
     if ([["Misery_RF_HighRangeOff"]] call EFUNC(common,hasItem)) then {
@@ -254,7 +254,7 @@ if (MiseryWBKIMS) then {
 };
 
 //Money Collection:
-if ((([] call Misery_fnc_NearestCorpse_Money) select 0)) then {
+if (((call EFUNC(money,nearestCorpseMoney)) select 0)) then {
     _out pushBack ["Search for Money","Search For Money"];
 };
 

@@ -1,8 +1,17 @@
 #include "..\script_component.hpp"
 /*
-Misery Random pharm usage
-Designed specifically for Misery mod
-by TenuredCLOUD
+ * Author: TenuredCLOUD
+ * Random pharm usage
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_medicine_fnc_randomPharm;
+ *
 */
 
 private _MHunger = player getVariable ["MiseryHunger", MACRO_PLAYER_HUNGER];

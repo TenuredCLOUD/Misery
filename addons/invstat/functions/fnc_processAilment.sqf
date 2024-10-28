@@ -29,7 +29,7 @@ if (count _selectedAilment > 0) then {
     _namedata = _selectedAilment select 0;
     _descriptiondata = _selectedAilment select 2;
 
-    [parseText format ["<t font='PuristaMedium' size='1'>%1</t><br/><t font='PuristaMedium' size='0.8'>%2</t>", _namedata, _descriptiondata], true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
+    [parseText format ["<t font='PuristaMedium' size='1'>%1</t><br/><t font='PuristaMedium' size='0.8'>%2</t>", _namedata, _descriptiondata], true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 };
 
 

@@ -18,7 +18,7 @@ if (!hasInterface) exitWith {};
 
 if !(Miseryzedinfect) exitWith {};
 
-["CAManBase", "hit", {_this spawn Misery_fnc_ZedInfection}, true, [], true] call CBA_fnc_addClassEventHandler;
+["CAManBase", "hit", {_this call Misery_fnc_ZedInfection}, true, [], true] call CBA_fnc_addClassEventHandler;
 
 Misery_fnc_ZedInfection = {
 params ["_unit", "_source", "_damage", "_instigator"];
