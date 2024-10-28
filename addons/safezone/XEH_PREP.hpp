@@ -1,1 +1,3 @@
-PREP(start);
+PREP(checkSafeZones);
+PREP(playerSafeZone);
+PREP(playersInSafeZones);
