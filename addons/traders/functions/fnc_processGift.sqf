@@ -24,7 +24,7 @@ private _dialog = findDisplay 982390;
 private _list = _dialog displayCtrl 1500;
 private _currselection = lbCurSel _list;
 
-if (_currselection == -1) exitWith {ctrlSetText [1001, "No gift option selected..."]; [] execVM '\z\misery\addons\traders\functions\fnc_ShopVALs.sqf';};
+if (_currselection == -1) exitWith {ctrlSetText [1001, "No gift option selected..."]; [] call FUNC(shopVAL);};
 
 private _selectedItem = _list lbData _currselection;
 private _selectedItemData = _items select (_items findIf {_x select 0 == _selectedItem});
@@ -52,7 +52,7 @@ if (_trader getVariable ["giftClicked", false]) then {
         player removeMagazine _selectedItem;
     };
     _trader setVariable ["giftClicked", false];
-    [] execVM '\z\misery\addons\traders\functions\fnc_ShopVALs.sqf';
+    [] call FUNC(shopVAL);
 }else{
     _trader setVariable ["giftClicked", true];
     ctrlSetText [1001, format ["Are you sure you want to gift %1?",_displayName]];

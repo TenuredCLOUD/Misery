@@ -7,7 +7,7 @@ Designed specifically for Misery mod
 class MiseryGenerator_GUI
 {
     idd = 573849;
-    onLoad = "[] execVM '\z\misery\addons\generator\functions\fnc_Gen_PREP.sqf'; [] execVM '\z\misery\addons\generator\functions\fnc_Gen_icon.sqf';";
+    onLoad = "[] call '\z\misery\addons\generator\functions\fnc_Gen_PREP.sqf'; [] call '\z\misery\addons\generator\functions\fnc_Gen_icon.sqf';";
     onUnload = "player setVariable ['Misery_Current_Generator', nil]";
 
 class ControlsBackground
@@ -74,7 +74,7 @@ class Misery_Generator_Start_Stop_Button: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\generator\functions\fnc_PowerButton.sqf'";
+    onButtonClick = "[] call '\z\misery\addons\generator\functions\fnc_PowerButton.sqf'";
 };
 class Misery_Generator_Refuel_Button: RscButton
 {
@@ -89,7 +89,7 @@ class Misery_Generator_Refuel_Button: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\generator\functions\fnc_Refuel.sqf'";
+    onButtonClick = "[] call '\z\misery\addons\generator\functions\fnc_Refuel.sqf'";
         };
     };
 };

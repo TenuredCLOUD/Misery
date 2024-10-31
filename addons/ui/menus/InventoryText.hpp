@@ -26,7 +26,7 @@ class MiseryDisplayInventoryText
         {
             idc=-1;
             text="Actions";
-            action="execVM '\z\misery\addons\inventory\functions\fnc_DisplayActions.sqf'";
+            action="call '\z\misery\addons\inventory\functions\fnc_DisplayActions.sqf'";
             x=UI_MACRO_COL+(UI_MACRO_COLINC*3);
             y=UI_MACRO_ROW+(UI_MACRO_ROWINC*-1);
             w=UI_MACRO_BUTTON_W+(UI_MACRO_COLINC*1);

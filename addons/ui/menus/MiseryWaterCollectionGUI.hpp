@@ -7,7 +7,7 @@ by TenuredCLOUD
 class MiseryWaterCollection_GUI
 {
     idd = 982380;
-    onLoad = "[] execVM '\z\misery\addons\watercollect\functions\fnc_ContainersListed.sqf'; [] execVM '\z\misery\addons\watercollect\functions\fnc_Showicon.sqf';";
+    onLoad = "[] call '\z\misery\addons\watercollect\functions\fnc_ContainersListed.sqf'; [] call '\z\misery\addons\watercollect\functions\fnc_Showicon.sqf';";
 
 class ControlsBackground
 {
@@ -72,7 +72,7 @@ class MiseryFillContainer_Button: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\watercollect\functions\fnc_ProcessFill.sqf';";
+    onButtonClick = "[] call '\z\misery\addons\watercollect\functions\fnc_ProcessFill.sqf';";
 };
 class MiseryDrinkFromSource_Button: RscButton
 {
@@ -87,7 +87,7 @@ class MiseryDrinkFromSource_Button: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\watercollect\functions\fnc_DrinkFromSource.sqf';";
+    onButtonClick = "[] call '\z\misery\addons\watercollect\functions\fnc_DrinkFromSource.sqf';";
 };
 class MiseryWaterCollection_ExitButton: RscButton
 {

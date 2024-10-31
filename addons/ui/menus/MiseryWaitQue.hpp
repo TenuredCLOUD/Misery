@@ -6,7 +6,7 @@ Designed specifically for Misery mod
 class Misery_TraderShop_WaitQue_UI
 {
     idd = 270586;
-    onLoad = "[] execVM '\z\misery\addons\traders\functions\fnc_WaitQue.sqf';";
+    onLoad = "[] call '\z\misery\addons\traders\functions\fnc_WaitQue.sqf';";
 
 class ControlsBackground
 {

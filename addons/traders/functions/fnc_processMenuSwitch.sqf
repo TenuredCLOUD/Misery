@@ -41,5 +41,5 @@ _list lbSetCurSel 0;
 };
 };
 
-[] execVM '\z\misery\addons\traders\functions\fnc_ShopVALs.sqf';
+[] call FUNC(shopVAL);
 

@@ -7,7 +7,7 @@ Designed specifically for Misery mod
 class MiseryMedTreatment_GUI
 {
     idd = 982381;
-    onLoad = "[] execVM '\z\misery\addons\medtreatment\functions\fnc_MTreatListed.sqf';";
+    onLoad = "[] call '\z\misery\addons\medtreatment\functions\fnc_MTreatListed.sqf';";
 
 class ControlsBackground
 {
@@ -60,7 +60,7 @@ class Misery_MedTreatment_Purchase: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick ="[] execVM '\z\misery\addons\medtreatment\functions\fnc_ProcessPurchase.sqf';";
+    onButtonClick ="[] call '\z\misery\addons\medtreatment\functions\fnc_ProcessPurchase.sqf';";
 };
 class Misery_MedTreatment_Exit: RscButton
 {

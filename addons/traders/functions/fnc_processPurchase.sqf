@@ -62,7 +62,7 @@ if (_stock > 50) then {
 _codeToExecute = _selectedItemData select 6;
 
 if (_playerFunds >= _price) then {
-    if (_stock < 1) exitWith {ctrlSetText [1001, format ["There isn't enough stock to purchase %1...",_displayName]]; [] execVM '\z\misery\addons\traders\functions\fnc_ShopVALs.sqf';};
+    if (_stock < 1) exitWith {ctrlSetText [1001, format ["There isn't enough stock to purchase %1...",_displayName]]; [] call FUNC(shopVAL);};
     player setVariable ['MiseryCurrency', _playerFunds - _price];
     _selectedItemData set [2, _stock - 1];
     _shopFunds = _shopFunds + _price;
@@ -74,7 +74,7 @@ if (_playerFunds >= _price) then {
         [player, _selectedItem, true] call CBA_fnc_addItem;
         ctrlSetText [1001, format ["%1 Purchased for %2 %3",_displayName,MiseryCurrencySymbol,[_price, 1, 2, true] call CBA_fnc_formatNumber]];
     };
-    [] execVM '\z\misery\addons\traders\functions\fnc_ShopVALs.sqf';
+    [] call FUNC(shopVAL);
 } else {
     ctrlSetText [1001, "You cannot afford this!"];
 };

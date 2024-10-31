@@ -618,12 +618,12 @@ MiseryLootReady=true;
 if!(isServer)exitWith{};
 
 if (MiseryLootrefreshtimer != -1) then {
-[] execVM "\z\misery\addons\loot\functions\fnc_Refresh.sqf";
+[] call FUNC(refresh);
 }else{
 if (MiseryDebug) then {systemChat format["[Misery Loot Framework] Disabled loot refresh, due to refresh timer being set to %1 value...", MiseryLootrefreshtimer];};
 };
 
-[] execVM "\z\misery\addons\loot\functions\fnc_Dynamic.sqf";
+[] call FUNC(dynamic);
 
 {publicVariable(str _x)} forEach [
 MiseryGearFood,

@@ -28,6 +28,6 @@ _buildings=_x nearObjects["House", MiseryLootspawnDist];
 {_x call FUNC(AddBuilding)} forEach _allBuildings;
 sleep MiseryLoottimer;
 
-[] execVM "\z\misery\addons\loot\functions\fnc_Dynamic.sqf";
+[] call FUNC(dynamic);
 
 

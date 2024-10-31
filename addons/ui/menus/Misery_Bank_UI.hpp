@@ -8,7 +8,7 @@ class Misery_Banking_UI
 {
     idd = 483729;
 
-    onLoad = "[] execVM '\z\misery\addons\bank\functions\fnc_Bank_UI_Updater.sqf';";
+    onLoad = "[] call '\z\misery\addons\bank\functions\fnc_Bank_UI_Updater.sqf';";
 
 class ControlsBackground
 {
@@ -80,7 +80,7 @@ class Misery_NWBank_Deposit: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\bank\functions\fnc_Deposit.sqf';";
+    onButtonClick = "[] call '\z\misery\addons\bank\functions\fnc_Deposit.sqf';";
 };
 class Misery_NWBank_Withdraw: RscButton
 {
@@ -93,7 +93,7 @@ class Misery_NWBank_Withdraw: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\bank\functions\fnc_Withdraw.sqf';";
+    onButtonClick = "[] call '\z\misery\addons\bank\functions\fnc_Withdraw.sqf';";
 };
 class Misery_NWBank_Contribute: RscButton
 {
@@ -106,7 +106,7 @@ class Misery_NWBank_Contribute: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\bank\functions\fnc_Contribute.sqf';";
+    onButtonClick = "[] call '\z\misery\addons\bank\functions\fnc_Contribute.sqf';";
 };
 class Misery_NWBank_InputBox: RscEdit
 {
@@ -128,7 +128,7 @@ class Misery_NWBank_ClaimSupport: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\bank\functions\fnc_Claim_support.sqf';";
+    onButtonClick = "[] call '\z\misery\addons\bank\functions\fnc_Claim_support.sqf';";
 };
     };
         };

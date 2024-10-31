@@ -7,7 +7,7 @@ by TenuredCLOUD
 class MiseryCraftingFramework_GUI
 {
     idd = 982376;
-    onLoad = "[] execVM '\z\misery\addons\crafting\functions\fnc_RecipesListed.sqf'; [] execVM '\z\misery\addons\crafting\functions\fnc_Showicon.sqf';";
+    onLoad = "[] call '\z\misery\addons\crafting\functions\fnc_RecipesListed.sqf'; [] call '\z\misery\addons\crafting\functions\fnc_Showicon.sqf';";
 
 class ControlsBackground
 {
@@ -99,7 +99,7 @@ class MiseryCrafting_Button: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\crafting\functions\fnc_ProcessItems.sqf';";
+    onButtonClick = "[] call '\z\misery\addons\crafting\functions\fnc_ProcessItems.sqf';";
 };
 class MiseryCrafting_KnownRecipes: RscButton
 {
@@ -114,7 +114,7 @@ class MiseryCrafting_KnownRecipes: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\crafting\functions\fnc_ShowRecipe.sqf';";
+    onButtonClick = "[] call '\z\misery\addons\crafting\functions\fnc_ShowRecipe.sqf';";
 };
 class MiseryCrafting_ExitButton: RscButton
 {

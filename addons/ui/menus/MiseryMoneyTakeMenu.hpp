@@ -8,7 +8,7 @@ class Misery_MoneyTake_UI
 {
     idd = 358492;
 
-    onLoad = "[] execVM '\z\misery\addons\money\functions\fnc_TakeMoney.sqf';";
+    onLoad = "[] call '\z\misery\addons\money\functions\fnc_TakeMoney.sqf';";
 
 class ControlsBackground
 {
@@ -53,7 +53,7 @@ class Misery_MoneyTakeMenu_Take: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\money\functions\fnc_TakeMoney_Act.sqf';";
+    onButtonClick = "[] call '\z\misery\addons\money\functions\fnc_TakeMoney_Act.sqf';";
 };
 class Misery_MoneyTakeMenu_ObjectsFunds: RscText
 {

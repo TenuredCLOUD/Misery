@@ -7,7 +7,7 @@ Designed specifically for Misery mod
 class MiseryVehicleMaint_GUI
 {
     idd = 274839;
-    onLoad = "[] execVM '\z\misery\addons\vehiclemaint\functions\fnc_MaintListed.sqf'; [] execVM '\z\misery\addons\vehiclemaint\functions\fnc_Veh_icon.sqf';";
+    onLoad = "[] call '\z\misery\addons\vehiclemaint\functions\fnc_MaintListed.sqf'; [] call '\z\misery\addons\vehiclemaint\functions\fnc_Veh_icon.sqf';";
 
 class ControlsBackground
 {
