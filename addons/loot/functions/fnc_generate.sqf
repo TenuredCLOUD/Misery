@@ -25,15 +25,50 @@ params ["_spawnPosition", "_enableDebug", "_isMilitary", "_isMedical", "_isStore
 
 _holder = createVehicle ["GroundWeaponHolder", _spawnPosition, [], 0, "CAN_COLLIDE"];
 removeFromRemainsCollector [_holder]; //Remove _holders from Garbage system to prevent deletion
-_holder setVectorUp surfaceNormal getPosASL _holder; //Align object with the terrain underneath 
 
-// Adjust loot type probabilities based on building type
-if (_isMilitary) then {
-    _lootType = selectRandom [0, 0, 1, 1]; // Higher probability for weapons and explosives
+// Align with the terrain
+_holder setVectorUp (surfaceNormal (getPosASL _holder));
+
+// Perform a raycast to find the ground level
+private _fromPos = getPosASL _holder;
+private _toPos = [_fromPos select 0, _fromPos select 1, (_fromPos select 2) - 2]; // Cast 2 meters down
+
+private _raycastResult = lineIntersectsSurfaces [_fromPos, _toPos, _holder, objNull, true, 1, "GEOM", "NONE"];
+if (count _raycastResult > 0) then {
+    private _collisionPos = _raycastResult select 0 select 0;
+    private _adjustedPos = _collisionPos;
+    _adjustedPos set [2, (_adjustedPos select 2) + 0.05]; // Adjust slightly above the ground to avoid clipping
+    _holder setPosASL _adjustedPos;
 } else {
-    // Adjusted loot types for non-military buildings
-    _lootType = selectRandom []; // Slim chance for weapons
+    // Fallback if no collision detected
+    private _fallbackPos = getPosATL _holder;
+    _fallbackPos set [2, (_fallbackPos select 2) + 0.1]; // Adjust slightly above the ground
+    _holder setPosATL _fallbackPos;
 };
+
+// Adjust loot type probabilities based on building type 
+switch true do { 
+case _isMilitary: { 
+// Higher probability for weapons and explosives 
+_lootType = selectRandom [0, 0, 1, 1]; 
+}; 
+// Higher probability for medical supplies and clothing 
+case _isMedical: { 
+_lootType = selectRandom [2, 2, 3]; 
+}; 
+// Higher probability for general items and food 
+case _isStore: { 
+_lootType = selectRandom [4, 4, 5, 5]; 
+}; 
+// Higher probability for tools and equipment 
+case _isGarage: { 
+_lootType = selectRandom [6, 6, 7, 7]; 
+}; 
+default { 
+// General loot for other buildings
+_lootType = selectRandom [2, 3, 4, 5]; 
+};
+    };
 
 if (_enableDebug) then {
     _markerID = format ["%1", _spawnPosition];

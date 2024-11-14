@@ -7,7 +7,7 @@
             1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
             {
             params ["_value"];
-            if (MiseryLootEnabled) then {[] call FUNC(loop)};
+            if (MiseryLootEnabled) then {[FUNC(loop)] remoteExec ["call", 2]};
             } // function that will be executed once on mission start and every time the setting is changed.
             ] call CBA_fnc_addSetting;
 

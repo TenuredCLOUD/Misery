@@ -57,10 +57,13 @@ _players = call EFUNC(common,listPlayers);
                     case (_buildingType find "military" > -1): {
                         _isMilitary = true;
                     };
+                    case (_buildingType find "guardhouse" > -1): {
+                        _isMilitary = true;
+                    };
                     case (_buildingType find "terminal" > -1): {
                         _isMilitary = true;
                     };
-                    case (_buildingType find "hangar" > -1): {
+                    case (_buildingType find "bunker" > -1): {
                         _isMilitary = true;
                     };
                 //Medical building:
@@ -85,6 +88,18 @@ _players = call EFUNC(common,listPlayers);
                         _isGarage = true;
                     };
                     case (_buildingType find "garage" > -1): {
+                        _isGarage = true;
+                    };
+                    case (_buildingType find "factory" > -1): {
+                        _isGarage = true;
+                    };
+                    case (_buildingType find "hangar" > -1): {
+                        _isGarage = true;
+                    };
+                    case (_buildingType find "shed" > -1): {
+                        _isGarage = true;
+                    };
+                    case (_buildingType find "cowshed" > -1): {
                         _isGarage = true;
                     };
                 };
