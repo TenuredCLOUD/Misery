@@ -15,7 +15,7 @@
  *
 */
 
-private ["_players", "_player", "_playerPos", "_distance", "_BuildingArray", "_Building", "_buildingPositions", "_buildingPos", "_buildingType", "_isMilitary", "_spawnProbability"];
+private ["_players", "_player", "_playerPos", "_distance", "_BuildingArray", "_Building", "_buildingPositions", "_buildingPos", "_buildingType", "_isMilitary"];
 
 // Prep Global array for already spawned loot inside buildings & share across network
 if (isNil "MiseryLootBldgUsed") then {
@@ -105,9 +105,9 @@ _players = call EFUNC(common,listPlayers);
                 };
 
                 // Adjust probability for military buildings
-                _spawnProbability = if (_isMilitary) then {MiseryLootChance * 2.5} else {MiseryLootChance};
+                if (_isMilitary) then {MiseryLootChance * 2.5} else {MiseryLootChance};
 
-                if (_spawnProbability > random 100) then {
+                if (MiseryLootChance > random 100) then {
                     [_buildingPos, MiseryLootDebug, _isMilitary, _isMedical, _isStore, _isGarage] call FUNC(generate);
                     if !(_Building in MiseryLootBldgUsed) then {
                         MiseryLootBldgUsed pushBack _Building; // Add the building to the blacklist
