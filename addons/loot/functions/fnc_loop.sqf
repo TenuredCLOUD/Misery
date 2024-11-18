@@ -18,10 +18,12 @@
 private ["_players", "_player", "_playerPos", "_distance", "_BuildingArray", "_Building", "_buildingPositions", "_buildingPos", "_buildingType", "_isMilitary"];
 
 // Prep Global array for already spawned loot inside buildings & share across network
-if (isNil "MiseryLootBldgUsed") then {
-    MiseryLootBldgUsed = [];
-    publicVariable "MiseryLootBldgUsed";
+if (isNil QGVAR(Building_used)) then {
+    GVAR(Building_used) = [];
+    publicVariable QGVAR(Building_used);
 };
+
+systemChat format ["Loot system is running... On Server: %1", isServer];
 
 _players = call EFUNC(common,listPlayers);
 
@@ -35,7 +37,7 @@ _players = call EFUNC(common,listPlayers);
     {
         _Building = _x;
 
-        if (!(typeOf _Building in MiseryLootBldgBlacklist) && !(_Building in MiseryLootBldgUsed)) then {
+        if (!(typeOf _Building in GVAR(buildingBlacklist)) && !(_Building in GVAR(Building_used))) then {
             _buildingPositions = _Building call BIS_fnc_buildingPositions;
 
             {
@@ -105,13 +107,13 @@ _players = call EFUNC(common,listPlayers);
                 };
 
                 // Adjust probability for military buildings
-                if (_isMilitary) then {MiseryLootChance * 2.5} else {MiseryLootChance};
+                if (_isMilitary) then {GVAR(chance) * 2.5} else {GVAR(chance)};
 
-                if (MiseryLootChance > random 100) then {
-                    [_buildingPos, MiseryLootDebug, _isMilitary, _isMedical, _isStore, _isGarage] call FUNC(generate);
-                    if !(_Building in MiseryLootBldgUsed) then {
-                        MiseryLootBldgUsed pushBack _Building; // Add the building to the blacklist
-                        publicVariable "MiseryLootBldgUsed"; // Broadcast the updated blacklist
+                if (GVAR(chance) > random 100) then {
+                    [_buildingPos, GVAR(debug), _isMilitary, _isMedical, _isStore, _isGarage] call FUNC(generate);
+                    if !(_Building in GVAR(Building_used)) then {
+                        GVAR(Building_used) pushBack _Building; // Add the building to the blacklist
+                        publicVariable QGVAR(Building_used); // Broadcast the updated blacklist
                     };
                 };
             } forEach _buildingPositions;

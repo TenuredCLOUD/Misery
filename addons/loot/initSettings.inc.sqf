@@ -4,10 +4,7 @@
             ["Enable loot", "Enable or disable Misery loot framework"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Loot"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
             false, // data for this setting: [min, max, default, number of shown trailing decimals]
-            1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
-            {
-            if (true && isServer) then {[] call FUNC(loop)};
-            } // function that will be executed once on mission start and every time the setting is changed.
+            1 // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
             ] call CBA_fnc_addSetting;
 
             [
@@ -29,12 +26,12 @@
             ] call CBA_fnc_addSetting;
 
             [
-            QGVAR(itemsFood), // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
-            "EDITBOX", // setting type
-            ["Food items (Civilian)", "Listed food items for Civilian food loot"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
-            ["Misery","Loot"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
-            "[]", // data for this setting: [min, max, default, number of shown trailing decimals]
-            1 // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            QGVAR(itemsFood), 
+            "EDITBOX",
+            ["Food items (Civilian)", "Listed food items for Civilian food loot"],
+            ["Misery", "Loot"], 
+            "[]", 
+            1
             ] call CBA_fnc_addSetting;
 
             [

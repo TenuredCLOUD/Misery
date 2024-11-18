@@ -14,9 +14,9 @@
  *
 */
     params ["_array"];
-    private _filteredArray = _array select {!(_x in MiseryLootItemsBlacklist)};
+    private _filteredArray = _array select {!(_x in GVAR(itemsBlacklist))};
     if (count _filteredArray > 0) then { 
         selectRandom _filteredArray; 
     } else { 
-        if (count MiseryLootItemsBlacklist > 0) then {""} else {selectRandom _array}; 
+        if (count GVAR(itemsBlacklist) > 0) then {""} else {selectRandom _array}; 
     };
