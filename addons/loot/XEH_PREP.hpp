@@ -1,10 +1,3 @@
-PREP(addBuilding);
-PREP(dynamic);
-PREP(generateStash);
-PREP(isBIS);
-PREP(militaryHeadgear);
-PREP(militaryUniform);
-PREP(militaryWeapon);
-PREP(refresh);
-PREP(start);
-PREP(time);
+PREP(loop);
+PREP(generate);
+PREP(blacklistFilter);
