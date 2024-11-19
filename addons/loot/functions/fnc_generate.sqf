@@ -19,7 +19,7 @@
  *
 */
 
-private ["_spawnPosition", "_enableDebug", "_isMilitary", "_isMedical", "_isStore", "_isGarage", "_holder", "_lootType", "_markerID", "_debugMarker", "_weaponChoice", "_magChoice", "_itemChoice", "_clothingChoice", "_vestChoice", "_backpackChoice", "_explosiveChoice", "_maxAllowedItems", "_compatibleMags", "_compatibleAttachments", "_fromPos", "_toPos", "_raycastResult", "_collisionPos", "_adjustedPos", "_fallbackPos", "_itemAddProbabilityUniform", "_uniformItems", "_itemFoodChoice", "_itemFoodChoiceM", "_itemMedicalChoice", "_itemMedicalChoiceM", "_itemChoiceM", "_itemAddProbabilityVest", "_vestItems", "_itemAddProbabilityPack", "_backpackItems", "_headgearChoice", "_facewearChoice"];
+private ["_spawnPosition", "_enableDebug", "_isMilitary", "_isMedical", "_isStore", "_isGarage", "_holder", "_lootType", "_markerID", "_debugMarker", "_weaponChoice", "_magChoice", "_itemChoice", "_clothingChoice", "_vestChoice", "_backpackChoice", "_explosiveChoice", "_maxAllowedItems", "_compatibleMags", "_compatibleAttachments", "_fromPos", "_toPos", "_raycastResult", "_collisionPos", "_adjustedPos", "_fallbackPos", "_itemAddProbabilityUniform", "_uniformItems", "_itemFoodChoice", "_itemFoodChoiceM", "_itemMedicalChoice", "_itemMedicalChoiceM", "_itemChoiceM", "_itemAddProbabilityVest", "_vestItems", "_itemAddProbabilityPack", "_backpackItems", "_headgearChoice", "_facewearChoice", "_grenadeChoice", "_explosiveChoice", "_specialChoice"];
 
 params ["_spawnPosition", "_enableDebug", "_isMilitary", "_isMedical", "_isStore", "_isGarage"];
 
@@ -64,7 +64,7 @@ if (count _raycastResult > 0) then {
 switch true do { 
 case _isMilitary: { 
 // Higher probability for weapons and explosives 
-_lootType = selectRandom [0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; 
+_lootType = selectRandom [0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 10, 11]; 
 }; 
 // Higher probability for medical supplies 
 case _isMedical: { 
@@ -96,8 +96,8 @@ if (_enableDebug) then {
 switch (_loottype) do {
     case 0: {
         if (_isMilitary) then {
-            if (count MiseryLootWeaponsM > 0) then {
-                _weaponChoice = [MiseryLootWeaponsM] call FUNC(blacklistFilter);
+            if (count GVAR(weaponsM) > 0) then {
+                _weaponChoice = [GVAR(weaponsM)] call FUNC(blacklistFilter);
                 _holder addWeaponCargoGlobal [_weaponChoice, 1];
                 _compatibleMags = getArray (configFile >> "CfgWeapons" >> _weaponChoice >> "magazines");
                 if (count _compatibleMags > 0) then {
@@ -113,8 +113,8 @@ switch (_loottype) do {
                 };
             };
         } else {
-            if (count MiseryLootWeapons > 0) then {
-                _weaponChoice = [MiseryLootWeapons] call FUNC(blacklistFilter);
+            if (count GVAR(weapons) > 0) then {
+                _weaponChoice = [GVAR(weapons)] call FUNC(blacklistFilter);
                 _holder addWeaponCargoGlobal [_weaponChoice, 1];
                 _compatibleMags = getArray (configFile >> "CfgWeapons" >> _weaponChoice >> "magazines");
                 if (count _compatibleMags > 0) then {
@@ -127,57 +127,57 @@ switch (_loottype) do {
     };
     case 1: {
         if (_isMilitary) then {
-            if (count MiseryLootItemsMiscM > 0) then {
-                _itemChoiceM = [MiseryLootItemsMiscM] call FUNC(blacklistFilter);
+            if (count GVAR(itemsMiscM) > 0) then {
+                _itemChoiceM = [GVAR(itemsMiscM)] call FUNC(blacklistFilter);
                 _holder addItemCargoGlobal [_itemChoiceM, 1];
             };
         } else {
-            if (count MiseryLootItemsMisc > 0) then {    
-                _itemChoice = [MiseryLootItemsMisc] call FUNC(blacklistFilter);
+            if (count GVAR(itemsMisc) > 0) then {    
+                _itemChoice = [GVAR(itemsMisc)] call FUNC(blacklistFilter);
                 _holder addItemCargoGlobal [_itemChoice, 1];    
             };
         };
     };
     case 2: {
         if (_isMilitary) then {
-            if (count MiseryLootItemsFoodM > 0) then {
-                _itemFoodChoiceM = [MiseryLootItemsFoodM] call FUNC(blacklistFilter);
+            if (count GVAR(itemsFoodM) > 0) then {
+                _itemFoodChoiceM = [GVAR(itemsFoodM)] call FUNC(blacklistFilter);
                 _holder addItemCargoGlobal [_itemFoodChoiceM, 1];
             };
         } else {
-            if (count MiseryLootItemsFood > 0) then {
-                _itemFoodChoice = [MiseryLootItemsFood] call FUNC(blacklistFilter);
+            if (count GVAR(itemsFood) > 0) then {
+                _itemFoodChoice = [GVAR(itemsFood)] call FUNC(blacklistFilter);
                 _holder addItemCargoGlobal [_itemFoodChoice, 1];    
             };
         };
     };
     case 3: {
         if (_isMilitary) then {
-            if (count MiseryLootItemsMedicalM > 0) then {
-                _itemMedicalChoiceM = [MiseryLootItemsMedicalM] call FUNC(blacklistFilter);
+            if (count GVAR(itemsMedicalM) > 0) then {
+                _itemMedicalChoiceM = [GVAR(itemsMedicalM)] call FUNC(blacklistFilter);
                 _holder addItemCargoGlobal [_itemMedicalChoiceM, 1];
             };
         } else {
-            if (count MiseryLootItemsMedical > 0) then {
-                _itemMedicalChoice = [MiseryLootItemsMedical] call FUNC(blacklistFilter);
+            if (count GVAR(itemsMedical) > 0) then {
+                _itemMedicalChoice = [GVAR(itemsMedical)] call FUNC(blacklistFilter);
                 _holder addItemCargoGlobal [_itemMedicalChoice, 1];    
             };
         };
     };
     case 4: {
         if (_isMilitary) then {
-            if (count MiseryLootUniformsM > 0) then {
-                _clothingChoice = [MiseryLootUniformsM] call FUNC(blacklistFilter);
+            if (count GVAR(uniformsM) > 0) then {
+                _clothingChoice = [GVAR(uniformsM)] call FUNC(blacklistFilter);
                 _holder addItemCargoGlobal [_clothingChoice, 1];
             };
         } else {
-            if (count MiseryLootUniforms > 0) then {
-                _clothingChoice = [MiseryLootUniforms] call FUNC(blacklistFilter);
+            if (count GVAR(uniforms) > 0) then {
+                _clothingChoice = [GVAR(uniforms)] call FUNC(blacklistFilter);
                 _holder addItemCargoGlobal [_clothingChoice, 1];    
             };
         };
 
-        if (MiseryLootUniformItemChance > random 100) then {
+        if (GVAR(uniformItemChance) > random 100) then {
             _itemAddProbabilityUniform = 0.5;
             _uniformItems = [];
             if (_isMilitary) then {
@@ -185,13 +185,13 @@ switch (_loottype) do {
                     if (count _x > 0) then {
                         _uniformItems pushBack ([_x] call FUNC(blacklistFilter));
                     };
-                } forEach [MiseryLootItemsM, MiseryLootItemsMiscM, MiseryLootItemsFoodM, MiseryLootItemsMedicalM];
+                } forEach [GVAR(itemsMiscM), GVAR(itemsFoodM), GVAR(itemsMedicalM)];
             } else {
                 {
                     if (count _x > 0) then {
                         _uniformItems pushBack ([_x] call FUNC(blacklistFilter));
                     };
-                } forEach [MiseryLootItems, MiseryLootItemsMisc, MiseryLootItemsFood, MiseryLootItemsMedical];
+                } forEach [GVAR(itemsMisc), GVAR(itemsFood), GVAR(itemsMedical)];
             };
             {
                 if (random 1 < _itemAddProbabilityUniform) then { 
@@ -202,18 +202,18 @@ switch (_loottype) do {
     };
     case 5: {
         if (_isMilitary) then {
-            if (count MiseryLootVestsM > 0) then {
-                _vestChoice = [MiseryLootVestsM] call FUNC(blacklistFilter);
+            if (count GVAR(vestsM) > 0) then {
+                _vestChoice = [GVAR(vestsM)] call FUNC(blacklistFilter);
                 _holder addItemCargoGlobal [_vestChoice, 1];    
             };
         } else {
-            if (count MiseryLootVests > 0) then {
-                _vestChoice = [MiseryLootVests] call FUNC(blacklistFilter);
+            if (count GVAR(vests) > 0) then {
+                _vestChoice = [GVAR(vests)] call FUNC(blacklistFilter);
                 _holder addItemCargoGlobal [_vestChoice, 1];        
             };
         };
 
-        if (MiseryLootVestsItemChance > random 100) then {
+        if (GVAR(vestsItemChance) > random 100) then {
             _itemAddProbabilityVest = 0.5;
             _vestItems = [];
             if (_isMilitary) then {
@@ -221,13 +221,13 @@ switch (_loottype) do {
                     if (count _x > 0) then {
                         _vestItems pushBack ([_x] call FUNC(blacklistFilter));
                     };
-                } forEach [MiseryLootItemsM, MiseryLootItemsMiscM, MiseryLootItemsFoodM, MiseryLootItemsMedicalM];
+                } forEach [GVAR(itemsMiscM), GVAR(itemsFoodM), GVAR(itemsMedicalM)];
             } else {
                 {
                     if (count _x > 0) then {
                         _vestItems pushBack ([_x] call FUNC(blacklistFilter));
                     };
-                } forEach [MiseryLootItems, MiseryLootItemsMisc, MiseryLootItemsFood, MiseryLootItemsMedical];
+                } forEach [GVAR(itemsMisc), GVAR(itemsFood), GVAR(itemsMedical)];
             };
             {
                 if (random 1 < _itemAddProbabilityVest) then { 
@@ -238,17 +238,17 @@ switch (_loottype) do {
     };
     case 6: {
         if (_isMilitary) then {
-            if (count MiseryLootPacksM > 0) then {
-                _backpackChoice = [MiseryLootPacksM] call FUNC(blacklistFilter);
+            if (count GVAR(packsM) > 0) then {
+                _backpackChoice = [GVAR(packsM)] call FUNC(blacklistFilter);
                 _holder addBackpackCargoGlobal [_backpackChoice, 1];
             };
         } else {
-            if (count MiseryLootPacks > 0) then {
-                _backpackChoice = [MiseryLootPacks] call FUNC(blacklistFilter);
+            if (count GVAR(packs) > 0) then {
+                _backpackChoice = [GVAR(packs)] call FUNC(blacklistFilter);
                 _holder addBackpackCargoGlobal [_backpackChoice, 1];    
             };
         };
-        if (MiseryLootBackpacksItemChance > random 100) then {
+        if (GVAR(backpacksItemChance) > random 100) then {
             _itemAddProbabilityPack = 0.5;
             _backpackItems = [];
             if (_isMilitary) then {
@@ -256,13 +256,13 @@ switch (_loottype) do {
                     if (count _x > 0) then {
                         _backpackItems pushBack ([_x] call FUNC(blacklistFilter));
                     };
-                } forEach [MiseryLootItemsM, MiseryLootItemsMiscM, MiseryLootItemsFoodM, MiseryLootItemsMedicalM];
+                } forEach [GVAR(itemsMiscM), GVAR(itemsFoodM), GVAR(itemsMedicalM)];
             } else {
                 {
                     if (count _x > 0) then {
                         _backpackItems pushBack ([_x] call FUNC(blacklistFilter));
                     };
-                } forEach [MiseryLootItems, MiseryLootItemsMisc, MiseryLootItemsFood, MiseryLootItemsMedical];
+                } forEach [GVAR(itemsMisc), GVAR(itemsFood), GVAR(itemsMedical)];
             };
             {
                 if (random 1 < _itemAddProbabilityPack) then {
@@ -273,29 +273,45 @@ switch (_loottype) do {
     };
     case 7: {
         if (_isMilitary) then {
-            if (count MiseryLootHeadgearM > 0) then {
-                _headgearChoice = [MiseryLootHeadgearM] call FUNC(blacklistFilter);
+            if (count GVAR(headgearM) > 0) then {
+                _headgearChoice = [GVAR(headgearM)] call FUNC(blacklistFilter);
                 _holder addItemCargoGlobal [_headgearChoice, 1];
             };
         } else {
-            if (count MiseryLootHeadgear > 0) then {
-                _headgearChoice = [MiseryLootHeadgear] call FUNC(blacklistFilter);
+            if (count GVAR(headgear) > 0) then {
+                _headgearChoice = [GVAR(headgear)] call FUNC(blacklistFilter);
                 _holder addItemCargoGlobal [_headgearChoice, 1];    
             };
         };
     };
     case 8: {
         if (_isMilitary) then {
-            if (count MiseryLootGogglesM > 0) then {
-                _facewearChoice = [MiseryLootGogglesM] call FUNC(blacklistFilter);
+            if (count GVAR(gogglesM) > 0) then {
+                _facewearChoice = [GVAR(gogglesM)] call FUNC(blacklistFilter);
                 _holder addItemCargoGlobal [_facewearChoice, 1];
             };
         } else {
-            if (count MiseryLootGoggles > 0) then {
-                _facewearChoice = [MiseryLootGoggles] call FUNC(blacklistFilter);
+            if (count GVAR(goggles) > 0) then {
+                _facewearChoice = [GVAR(goggles)] call FUNC(blacklistFilter);
                 _holder addItemCargoGlobal [_facewearChoice, 1];    
             };
         };
     };
-    //TODO: Add explosives & grenades 
-};
+    case 9: {
+            if (count GVAR(grenades) > 0) then {
+                _grenadeChoice = [GVAR(grenades)] call FUNC(blacklistFilter);
+                _holder addItemCargoGlobal [_grenadeChoice, 1];
+        };
+    };
+    case 10: {
+            if (count GVAR(explosives) > 0) then {
+                _explosiveChoice = [GVAR(explosives)] call FUNC(blacklistFilter);
+                _holder addItemCargoGlobal [_explosiveChoice, 1];
+        };
+    };
+    case 11: {
+            if (count GVAR(special) > 0) then {
+                _specialChoice = [GVAR(special)] call FUNC(blacklistFilter);
+                _holder addItemCargoGlobal [_specialChoice, 1];
+        };
+    };

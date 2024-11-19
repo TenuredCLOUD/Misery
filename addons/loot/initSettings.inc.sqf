@@ -31,7 +31,11 @@
             ["Food items (Civilian)", "Listed food items for Civilian food loot"],
             ["Misery", "Loot"], 
             "[]", 
-            1
+            1,
+            {
+            params ["_value"];
+            GVAR(itemsFood) = parseSimpleArray _value;    
+            }
             ] call CBA_fnc_addSetting;
 
             [
@@ -40,7 +44,11 @@
             ["Food items (Military)", "Listed food items for Military food loot"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Loot"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
             "[]", // data for this setting: [min, max, default, number of shown trailing decimals]
-            1 // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            {
+            params ["_value"];
+            GVAR(itemsFoodM) = parseSimpleArray _value;    
+            }
             ] call CBA_fnc_addSetting;
 
             [
@@ -49,7 +57,11 @@
             ["Medical items (Civilian)", "Listed medical items for Civilian medical loot"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Loot"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
             "[]", // data for this setting: [min, max, default, number of shown trailing decimals]
-            1 // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            {
+            params ["_value"];
+            GVAR(itemsMedical) = parseSimpleArray _value;    
+            }
             ] call CBA_fnc_addSetting;
 
             [
@@ -58,7 +70,11 @@
             ["Medical items (Military)", "Listed medical items for Military medical loot"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Loot"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
             "[]", // data for this setting: [min, max, default, number of shown trailing decimals]
-            1 // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            {
+            params ["_value"];
+            GVAR(itemsMedicalM) = parseSimpleArray _value;    
+            }
             ] call CBA_fnc_addSetting;
 
             [
@@ -67,7 +83,11 @@
             ["Misc items (Civilian)", "Listed misc items for civilian loot"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Loot"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
             "[]", // data for this setting: [min, max, default, number of shown trailing decimals]
-            1 // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            {
+            params ["_value"];
+            GVAR(itemsMisc) = parseSimpleArray _value;    
+            }
             ] call CBA_fnc_addSetting;
 
             [
@@ -76,7 +96,11 @@
             ["Misc items (Military)", "Listed misc items for military loot"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Loot"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
             "[]", // data for this setting: [min, max, default, number of shown trailing decimals]
-            1 // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            {
+            params ["_value"];
+            GVAR(itemsMiscM) = parseSimpleArray _value;    
+            }
             ] call CBA_fnc_addSetting;
 
             [
@@ -85,7 +109,11 @@
             ["Weapons (Civilian)", "Magazines are auto populated into arrays"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Loot"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
             "[]", // data for this setting: [min, max, default, number of shown trailing decimals]
-            1 // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            {
+            params ["_value"];
+            GVAR(weapons) = parseSimpleArray _value;    
+            }
             ] call CBA_fnc_addSetting;
 
             [
@@ -94,7 +122,11 @@
             ["Weapons (Military)", "Magazines are auto populated into arrays"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Loot"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
             "[]", // data for this setting: [min, max, default, number of shown trailing decimals]
-            1 // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            {
+            params ["_value"];
+            GVAR(weaponsM) = parseSimpleArray _value;    
+            }
             ] call CBA_fnc_addSetting;
 
             [
@@ -103,7 +135,11 @@
             ["Uniforms (Civilian)", "Listed uniforms civilian"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Loot"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
             "[]", // data for this setting: [min, max, default, number of shown trailing decimals]
-            1 // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            {
+            params ["_value"];
+            GVAR(uniforms) = parseSimpleArray _value;    
+            }
             ] call CBA_fnc_addSetting;
 
             [
@@ -112,7 +148,11 @@
             ["Uniforms (Military)", "Listed uniforms military"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Loot"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
             "[]", // data for this setting: [min, max, default, number of shown trailing decimals]
-            1 // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            {
+            params ["_value"];
+            GVAR(uniformsM) = parseSimpleArray _value;    
+            }
             ] call CBA_fnc_addSetting;
 
             [
@@ -130,7 +170,11 @@
             ["Vests (Civilian)", "Listed vests civilian"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Loot"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
             "[]", // data for this setting: [min, max, default, number of shown trailing decimals]
-            1 // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            {
+            params ["_value"];
+            GVAR(vests) = parseSimpleArray _value;    
+            }
             ] call CBA_fnc_addSetting;
 
             [
@@ -139,7 +183,11 @@
             ["Vests (Military)", "Listed vests military"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Loot"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
             "[]", // data for this setting: [min, max, default, number of shown trailing decimals]
-            1 // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            {
+            params ["_value"];
+            GVAR(vestsM) = parseSimpleArray _value;    
+            }
             ] call CBA_fnc_addSetting;
 
             [
@@ -157,7 +205,11 @@
             ["Headgear (Civilian)", "Listed headgear civilian"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Loot"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
             "[]", // data for this setting: [min, max, default, number of shown trailing decimals]
-            1 // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            {
+            params ["_value"];
+            GVAR(headgear) = parseSimpleArray _value;    
+            }
             ] call CBA_fnc_addSetting;
 
             [
@@ -166,7 +218,11 @@
             ["Headgear (Military)", "Listed headgear military"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Loot"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
             "[]", // data for this setting: [min, max, default, number of shown trailing decimals]
-            1 // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            {
+            params ["_value"];
+            GVAR(headgearM) = parseSimpleArray _value;    
+            }
             ] call CBA_fnc_addSetting;
 
             [
@@ -175,7 +231,11 @@
             ["Backpacks (Civilian)", "Listed back packs civilian"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Loot"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
             "[]", // data for this setting: [min, max, default, number of shown trailing decimals]
-            1 // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            {
+            params ["_value"];
+            GVAR(packs) = parseSimpleArray _value;    
+            }
             ] call CBA_fnc_addSetting;
 
             [
@@ -184,7 +244,11 @@
             ["Backpacks (Military)", "Listed back packs military"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Loot"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
             "[]", // data for this setting: [min, max, default, number of shown trailing decimals]
-            1 // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            {
+            params ["_value"];
+            GVAR(packsM) = parseSimpleArray _value;    
+            }
             ] call CBA_fnc_addSetting;
 
             [
@@ -202,7 +266,11 @@
             ["Goggles / Facewear (Civilian)", "Listed goggles / facewear civilian"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Loot"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
             "[]", // data for this setting: [min, max, default, number of shown trailing decimals]
-            1 // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            {
+            params ["_value"];
+            GVAR(goggles) = parseSimpleArray _value;    
+            }
             ] call CBA_fnc_addSetting;
 
             [
@@ -211,7 +279,11 @@
             ["Goggles / Facewear (Military)", "Listed goggles / facewear military"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Loot"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
             "[]", // data for this setting: [min, max, default, number of shown trailing decimals]
-            1 // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            {
+            params ["_value"];
+            GVAR(gogglesM) = parseSimpleArray _value;    
+            }
             ] call CBA_fnc_addSetting;
 
             [
@@ -220,7 +292,11 @@
             ["Grenades", "Listed possible grenades"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Loot"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
             "[]", // data for this setting: [min, max, default, number of shown trailing decimals]
-            1 // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            {
+            params ["_value"];
+            GVAR(grenades) = parseSimpleArray _value;    
+            }
             ] call CBA_fnc_addSetting;
 
             [
@@ -229,7 +305,11 @@
             ["Explosives", "Listed possible explosives"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Loot"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
             "[]", // data for this setting: [min, max, default, number of shown trailing decimals]
-            1 // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            {
+            params ["_value"];
+            GVAR(explosives) = parseSimpleArray _value;    
+            }
             ] call CBA_fnc_addSetting;
 
             [
@@ -238,7 +318,11 @@
             ["Special equipment", "Night vision, maps, radio, GPS, etc..."], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Loot"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
             "[]", // data for this setting: [min, max, default, number of shown trailing decimals]
-            1 // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            {
+            params ["_value"];
+            GVAR(special) = parseSimpleArray _value;    
+            }
             ] call CBA_fnc_addSetting;
 
             [
@@ -247,7 +331,11 @@
             ["Blacklisted items", "Input classnames of items you do not wish to spawn, or be available, this array removes input items from every loot list."], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Loot"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
             "[]", // data for this setting: [min, max, default, number of shown trailing decimals]
-            1 // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            {
+            params ["_value"];
+            GVAR(itemsBlacklist) = parseSimpleArray _value;    
+            }
             ] call CBA_fnc_addSetting;
 
             [
@@ -256,5 +344,9 @@
             ["Blacklisted Buildings", "Input classnames of Buildings you don't want any loot to spawn in"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Loot"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
             "[]", // data for this setting: [min, max, default, number of shown trailing decimals]
-            1 // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            1, // 1: all clients share the same setting, 2: setting can’t be overwritten (optional, default: 0) ARRAY
+            {
+            params ["_value"];
+            GVAR(buildingBlacklist) = parseSimpleArray _value;    
+            }
             ] call CBA_fnc_addSetting;
