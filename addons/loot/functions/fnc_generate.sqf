@@ -315,3 +315,4 @@ switch (_loottype) do {
                 _holder addItemCargoGlobal [_specialChoice, 1];
         };
     };
+};
