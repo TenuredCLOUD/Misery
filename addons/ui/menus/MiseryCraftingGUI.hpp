@@ -7,7 +7,7 @@ by TenuredCLOUD
 class MiseryCraftingFramework_GUI
 {
     idd = 982376;
-    onLoad = QUOTE([] call EFUNC(crafting,recipesListed)); QUOTE([] call EFUNC(crafting,showicon));
+    onLoad = QUOTE([] call EFUNC(crafting,recipesListed); [] call EFUNC(crafting,showicon));
 
 class ControlsBackground
 {
@@ -129,7 +129,7 @@ class MiseryCrafting_ExitButton: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "closeDialog 2;";
+    onButtonClick = QUOTE(closeDialog 2);
 };
     };
         };

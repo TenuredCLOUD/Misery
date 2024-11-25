@@ -7,7 +7,7 @@ by TenuredCLOUD
 class MiseryCookingFramework_GUI
 {
     idd = 982379;
-    onLoad = QUOTE([] call EFUNC(cooking,recipesListed)); QUOTE([] call EFUNC(cooking,showicon));
+    onLoad = QUOTE([] call EFUNC(cooking,recipesListed); [] call EFUNC(cooking,showicon));
 
 class ControlsBackground
 {
@@ -129,7 +129,7 @@ class MiseryCooking_ExitButton: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "closeDialog 2;";
+    onButtonClick = QUOTE(closeDialog 2);
 };
     };
         };

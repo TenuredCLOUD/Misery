@@ -7,7 +7,7 @@ Designed specifically for Misery mod
 class MiseryGenerator_GUI
 {
     idd = 573849;
-    onLoad = QUOTE([] call EFUNC(generator,uiPrep)); QUOTE([] call EFUNC(generator,icon));
+    onLoad = QUOTE([] call EFUNC(generator,uiPrep); [] call EFUNC(generator,icon));
     onUnload = "player setVariable ['Misery_Current_Generator', nil]";
 
 class ControlsBackground
