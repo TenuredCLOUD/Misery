@@ -8,7 +8,7 @@ class MiseryGenerator_GUI
 {
     idd = 573849;
     onLoad = QUOTE([] call EFUNC(generator,uiPrep); [] call EFUNC(generator,icon));
-    onUnload = "player setVariable ['Misery_Current_Generator', nil]";
+    onUnload = QUOTE(player setVariable [ARR_2(QUOTE(QGVAR(currentGenerator)),nil)]);
 
 class ControlsBackground
 {
