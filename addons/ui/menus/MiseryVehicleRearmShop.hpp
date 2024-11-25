@@ -7,7 +7,7 @@ Designed specifically for Misery mod
 class MiseryRearmShop_GUI
 {
     idd = 982383;
-    onLoad = "[] call '\z\misery\addons\vehiclerearm\functions\fnc_RearmListed.sqf'; [] call '\z\misery\addons\vehiclerearm\functions\fnc_Veh_icon.sqf';";
+    onLoad = QUOTE([] call EFUNC(vehiclerearm,rearmListed); [] call EFUNC(vehiclerearm,icon));
 
 class ControlsBackground
 {
@@ -68,7 +68,7 @@ class Misery_VehShopRearm_Purchase: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick ="[] call '\z\misery\addons\vehiclerearm\functions\fnc_ProcessPurchase.sqf';";
+    onButtonClick =QUOTE([] call EFUNC(vehiclerearm,processPurchase));
 };
 class Misery_VehShopRearm_Exit: RscButton
 {
@@ -81,7 +81,7 @@ class Misery_VehShopRearm_Exit: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "closeDialog 2;";
+    onButtonClick = QUOTE(closeDialog 2);
 };
 class Misery_VehShopRearm_InfoBox: RscText
 {

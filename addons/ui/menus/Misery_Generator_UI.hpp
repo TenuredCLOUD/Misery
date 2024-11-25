@@ -7,7 +7,7 @@ Designed specifically for Misery mod
 class MiseryGenerator_GUI
 {
     idd = 573849;
-    onLoad = "[] call '\z\misery\addons\generator\functions\fnc_Gen_PREP.sqf'; [] call '\z\misery\addons\generator\functions\fnc_Gen_icon.sqf';";
+    onLoad = QUOTE([] call EFUNC(generator,uiPrep)); QUOTE([] call EFUNC(generator,icon));
     onUnload = "player setVariable ['Misery_Current_Generator', nil]";
 
 class ControlsBackground
@@ -74,7 +74,7 @@ class Misery_Generator_Start_Stop_Button: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] call '\z\misery\addons\generator\functions\fnc_PowerButton.sqf'";
+    onButtonClick = QUOTE([] call EFUNC(generator,powerButton));
 };
 class Misery_Generator_Refuel_Button: RscButton
 {
@@ -89,7 +89,7 @@ class Misery_Generator_Refuel_Button: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] call '\z\misery\addons\generator\functions\fnc_Refuel.sqf'";
+    onButtonClick = QUOTE([] call EFUNC(generator,refuel));
         };
     };
 };

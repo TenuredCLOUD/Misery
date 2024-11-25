@@ -7,7 +7,7 @@ by TenuredCLOUD
 class MiseryWaterCollection_GUI
 {
     idd = 982380;
-    onLoad = "[] call '\z\misery\addons\watercollect\functions\fnc_ContainersListed.sqf'; [] call '\z\misery\addons\watercollect\functions\fnc_Showicon.sqf';";
+    onLoad = QUOTE([] call EFUNC(watercollect,containersListed); [] call EFUNC(watercollect,icon));
 
 class ControlsBackground
 {
@@ -72,7 +72,7 @@ class MiseryFillContainer_Button: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] call '\z\misery\addons\watercollect\functions\fnc_ProcessFill.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(watercollect,processFill));
 };
 class MiseryDrinkFromSource_Button: RscButton
 {
@@ -87,7 +87,7 @@ class MiseryDrinkFromSource_Button: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] call '\z\misery\addons\watercollect\functions\fnc_DrinkFromSource.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(watercollect,drinkFromSource));
 };
 class MiseryWaterCollection_ExitButton: RscButton
 {
@@ -102,7 +102,7 @@ class MiseryWaterCollection_ExitButton: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "closeDialog 2;";
+    onButtonClick = QUOTE(closeDialog 2);
 };
 class MiseryWaterCollection_NoteBox: RscText
 {

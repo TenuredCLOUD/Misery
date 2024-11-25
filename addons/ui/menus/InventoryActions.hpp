@@ -17,8 +17,8 @@ class MiseryDisplayInventoryActions
             idc=10001;
             text="";
             tooltip="Actions";
-            onLBSelChanged="[false] call '\z\misery\addons\inventory\functions\fnc_SelectAction.sqf'";
-            onLBDblClick="[true] call '\z\misery\addons\inventory\functions\fnc_SelectAction.sqf'";
+            onLBSelChanged= QUOTE([false] call EFUNC(inventory,selectAction));
+            onLBDblClick= QUOTE([true] call EFUNC(inventory,selectAction));
             x=UI_MACRO_COL+(UI_MACRO_COLINC*10);
             y=UI_MACRO_ROW+(UI_MACRO_ROWINC*1);
             w=UI_MACRO_BUTTON_W+(UI_MACRO_COLINC*1);

@@ -7,7 +7,7 @@ Designed specifically for Misery mod
 class MiseryINVACT_GUI
 {
     idd = 982377;
-    onLoad = "[] call '\z\misery\addons\invstat\functions\fnc_Status.sqf';";
+    onLoad = QUOTE([] call EFUNC(invstat,status));
 
 class ControlsBackground
 {
@@ -171,7 +171,7 @@ class Misery_ActionFW_ACTBUTTON: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick ="[true] call '\z\misery\addons\inventory\functions\fnc_SelectAction.sqf'";
+    onButtonClick = QUOTE([true] call EFUNC(inventory,selectAction));
 };
 class Misery_STATUSFW_Buffs_List: RscListBox
 {
@@ -181,7 +181,7 @@ class Misery_STATUSFW_Buffs_List: RscListBox
     w = 6 * GUI_GRID_W;
     h = 2.5 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
-    onLBSelChanged = "_this call '\z\misery\addons\invstat\functions\fnc_ProcessBuff.sqf'";
+    onLBSelChanged = QUOTE(_this call EFUNC(invstat,processBuff));
 };
 class Misery_STATUSFW_Ailments_List: RscListBox
 {
@@ -191,7 +191,7 @@ class Misery_STATUSFW_Ailments_List: RscListBox
     w = 6 * GUI_GRID_W;
     h = 2.5 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
-    onLBSelChanged = "_this call '\z\misery\addons\invstat\funcitons\fnc_ProcessAilment.sqf'";
+    onLBSelChanged = QUOTE(_this call EFUNC(invstat,processAilment));
 };
 class Misery_STATUSFW_HealthVal: RscText
 {

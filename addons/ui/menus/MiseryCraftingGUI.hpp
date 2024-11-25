@@ -7,7 +7,7 @@ by TenuredCLOUD
 class MiseryCraftingFramework_GUI
 {
     idd = 982376;
-    onLoad = "[] call '\z\misery\addons\crafting\functions\fnc_RecipesListed.sqf'; [] call '\z\misery\addons\crafting\functions\fnc_Showicon.sqf';";
+    onLoad = QUOTE([] call EFUNC(crafting,recipesListed)); QUOTE([] call EFUNC(crafting,showicon));
 
 class ControlsBackground
 {
@@ -99,7 +99,7 @@ class MiseryCrafting_Button: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] call '\z\misery\addons\crafting\functions\fnc_ProcessItems.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(crafting,processItems));
 };
 class MiseryCrafting_KnownRecipes: RscButton
 {
@@ -114,7 +114,7 @@ class MiseryCrafting_KnownRecipes: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] call '\z\misery\addons\crafting\functions\fnc_ShowRecipe.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(crafting,showRecipe));
 };
 class MiseryCrafting_ExitButton: RscButton
 {

@@ -6,7 +6,7 @@ Designed specifically for Misery mod
 class Misery_TraderShop_WaitQue_UI
 {
     idd = 270586;
-    onLoad = "[] call '\z\misery\addons\traders\functions\fnc_WaitQue.sqf';";
+    onLoad = QUOTE([] call EFUNC(traders,waitQueue));
 
 class ControlsBackground
 {
@@ -51,7 +51,7 @@ class Misery_TradingQue_Cancel: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "_trader = player getVariable 'currentTrader'; _queue = _trader getVariable 'queue'; _index = _queue find (getPlayerUID player); if (_index != -1) then {_queue deleteAt _index;}; closeDialog 2;";
+    onButtonClick = QUOTE(_trader = player getVariable 'currentTrader'; _queue = _trader getVariable 'queue'; _index = _queue find (getPlayerUID player); if (_index != -1) then {_queue deleteAt _index;}; closeDialog 2);
 };
     };
         };

@@ -7,7 +7,7 @@ Designed specifically for Misery mod
 class MiseryMechShop_GUI
 {
     idd = 982382;
-    onLoad = "[] call 'functions\menus\VehicleMechRepairs\MechListed.sqf'; [] call 'functions\menus\VehicleMechRepairs\Veh_icon.sqf';";
+    onLoad = QUOTE([] call EFUNC(vehiclemechrepairs,mechListed); [] call EFUNC(vehiclemechrepairs,icon));
 
 class ControlsBackground
 {
@@ -68,7 +68,7 @@ class Misery_VehMechShopRepair_Purchase: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick ="[] call 'functions\menus\VehicleMechRepairs\ProcessPurchase.sqf';";
+    onButtonClick =QUOTE([] call EFUNC(vehiclemechrepairs,processPurchase));
 };
 class Misery_VehMechShopRepair_Exit: RscButton
 {
@@ -81,7 +81,7 @@ class Misery_VehMechShopRepair_Exit: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "closeDialog 2;";
+    onButtonClick = QUOTE(closeDialog 2);
 };
 class Misery_VehMechShopRepair_InfoBox: RscText
 {

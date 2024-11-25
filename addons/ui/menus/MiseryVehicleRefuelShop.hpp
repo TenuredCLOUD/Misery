@@ -7,7 +7,7 @@ Designed specifically for Misery mod
 class MiseryRefuelShop_GUI
 {
     idd = 982384;
-    onLoad = "[] call '\z\misery\addons\vehiclerefuel\functions\fnc_RefuelListed.sqf'; [] call '\z\misery\addons\vehiclerefuel\functions\fnc_Veh_icon.sqf';";
+    onLoad = QUOTE([] call EFUNC(vehiclerefuel,refuelListed); [] call EFUNC(vehiclerefuel,icon));
 
 class ControlsBackground
 {
@@ -68,7 +68,7 @@ class Misery_VehShopRefuel_Purchase: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick ="[] call '\z\misery\addons\vehiclerefuel\fucntions\fnc_ProcessPurchase.sqf';";
+    onButtonClick =QUOTE([] call EFUNC(vehiclerefuel,processPurchase));
 };
 class Misery_VehShopRefuel_Exit: RscButton
 {
@@ -81,7 +81,7 @@ class Misery_VehShopRefuel_Exit: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "closeDialog 2;";
+    onButtonClick = QUOTE(closeDialog 2);
 };
 class Misery_VehShopRefuel_InfoBox: RscText
 {

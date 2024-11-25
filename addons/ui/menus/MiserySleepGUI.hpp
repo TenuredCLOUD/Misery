@@ -8,7 +8,7 @@ class MiserySleepMenuGUI
 {
     idd = 982374;
     //onUnload = "MisSleep_selectedHour = 0;"; // Reset sleep selection variable on unload
-    onLoad = "player setVariable ['Misery_SleepDataVal', 0];"; //Set player var to 0 on start of GUI to ensure no errors
+    onLoad = "player setVariable [QUOTE(Misery_SleepDataVal), 0]"; //Set player var to 0 on start of GUI to ensure no errors
 class ControlsBackground
     {
 class MiserySleepMenu_BG: Misery_RscText
@@ -56,7 +56,7 @@ class MiserySleepGUI_Button: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[player] call '\z\misery\addons\sleep\functions\fnc_Sleep.sqf'; closeDialog 2;";
+    onButtonClick = QUOTE([player] call EFUNC(sleep,processSleep)); closeDialog 2);
 
 };
 class MiserySleepMenu_List_1: RscCombo
@@ -67,7 +67,7 @@ class MiserySleepMenu_List_1: RscCombo
     w = 12 * GUI_GRID_W;
     h = 1 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
-    onLBSelChanged = "_this call Misery_fnc_HourSelected";
+    onLBSelChanged = QUOTE(_this call EFUNC(sleep,hourSelected));
 class Items
     {
     class 1HOUR

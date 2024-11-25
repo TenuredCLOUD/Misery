@@ -7,7 +7,7 @@ Designed specifically for Misery mod
 class MiseryRefuel_Vehicle_JCan_GUI
 {
     idd = 982385;
-    onLoad = "[] call '\z\misery\addons\fuel\functions\fnc_refuelListed.sqf';";
+    onLoad = QUOTE([] call EFUNC(fuel,refuelListed));
 
 class ControlsBackground
 {
@@ -76,7 +76,7 @@ class MiseryRefuel_Vehicle_JCan_Start: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick ="[] call '\z\misery\addons\fuel\functions\fnc_ProcessRefuel.sqf';";
+    onButtonClick =QUOTE([] call EFUNC(fuel,processRefuel));
 };
 class MiseryRefuel_Vehicle_JCan_Exit: RscButton
 {
@@ -89,7 +89,7 @@ class MiseryRefuel_Vehicle_JCan_Exit: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "closeDialog 2;";
+    onButtonClick = QUOTE(closeDialog 2);
 };
 class MiseryRefuel_Vehicle_JCan_InfoBox: RscText
 {
