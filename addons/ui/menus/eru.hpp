@@ -1,10 +1,4 @@
-/*
-Misery ERU UI
-Designed specifically for Misery mod
-by TenuredCLOUD
-*/
-
-class MiseryERU_UI
+class CLASS(eru_ui)
 {
     idd = 482917;
     duration = 10000000000;
@@ -14,7 +8,7 @@ class MiseryERU_UI
 
 class ControlsBackground
 {
-class Misery_ERUBG: RscPicture
+class CLASS(eru_background): RscPicture
 {
     idc = -1;
     text = "\z\misery\addons\ui\menus\ui\ERU.paa";
@@ -26,7 +20,7 @@ class Misery_ERUBG: RscPicture
 };
 class Controls
 {
-class Misery_ERU_Readings: RscText
+class CLASS(eru_readings): RscText
 {
     idc = 1001;
     x = 50.96 * GUI_GRID_W + GUI_GRID_X;
@@ -36,7 +30,7 @@ class Misery_ERU_Readings: RscText
     colorText[] = {0,0,0,0.8};
     sizeEx = 0.6 * GUI_GRID_H;
 };
-class Misery_ERU_TimeDate: RscText
+class CLASS(eru_timeDate): RscText
 {
     idc = 1000;
     x = 51 * GUI_GRID_W + GUI_GRID_X;

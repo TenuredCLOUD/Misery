@@ -1,10 +1,4 @@
-/*
-Misery HUD layout / design
-Imported from some of Drongo's displays with permission
-Designed specifically for Misery mod
-*/
-
-class MiseryDisplayInventoryActions
+class CLASS(inventoryActions_ui)
 {
     idd = 10000;
     duration = .1;
@@ -12,7 +6,7 @@ class MiseryDisplayInventoryActions
     fadeout = 0;
     class controls
     {
-        class Misery_ListActions : Misery_RscListBox
+        class CLASS(listActions) : CLASS(RscListBox)
         {
             idc=10001;
             text="";

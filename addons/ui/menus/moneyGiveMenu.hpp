@@ -1,10 +1,4 @@
-/*
-Misery Money Giving UI
-Processes Money Gifting to players
-Designed specifically for Misery mod
-*/
-
-class Misery_MoneyGiveMenu_BG: RscFrame
+class CLASS(moneyGiveMenu_background): RscFrame
 {
     idc = 1800;
     x = 5 * GUI_GRID_W + GUI_GRID_X;
@@ -12,7 +6,7 @@ class Misery_MoneyGiveMenu_BG: RscFrame
     w = 29.5 * GUI_GRID_W;
     h = 8 * GUI_GRID_H;
 };
-class Misery_MoneyGiveMenu_Prompt: RscText
+class CLASS(moneyGiveMenu_prompt): RscText
 {
     idc = 1000;
     text = "Give funds"; //--- ToDo: Localize;
@@ -21,7 +15,7 @@ class Misery_MoneyGiveMenu_Prompt: RscText
     w = 11 * GUI_GRID_W;
     h = 2 * GUI_GRID_H;
 };
-class Misery_MoneyGiveMenu_InputBox: RscEdit
+class CLASS(moneyGiveMenu_inputBox): RscEdit
 {
     idc = 1400;
     x = 15 * GUI_GRID_W + GUI_GRID_X;
@@ -29,7 +23,7 @@ class Misery_MoneyGiveMenu_InputBox: RscEdit
     w = 7 * GUI_GRID_W;
     h = 1.5 * GUI_GRID_H;
 };
-class Misery_MoneyGiveMenu_Give: RscButton
+class CLASS(moneyGiveMenu_give): RscButton
 {
     idc = 1600;
     text = "Give"; //--- ToDo: Localize;
@@ -38,7 +32,7 @@ class Misery_MoneyGiveMenu_Give: RscButton
     w = 8 * GUI_GRID_W;
     h = 2 * GUI_GRID_H;
 };
-class Misery_MoneyGiveMenu_ObjectsFunds: RscText
+class CLASS(moneyGiveMenu_objectsFunds): RscText
 {
     idc = 1001;
     text = "0 funds"; //--- ToDo: Localize;
@@ -48,7 +42,7 @@ class Misery_MoneyGiveMenu_ObjectsFunds: RscText
     h = 2 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_MoneyGiveMenu_PlayersFunds: RscText
+class CLASS(moneyGiveMenu_playersFunds): RscText
 {
     idc = 1002;
     text = "Player: 1% 2%"; //--- ToDo: Localize;

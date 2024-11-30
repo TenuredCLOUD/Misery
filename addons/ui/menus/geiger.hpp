@@ -1,10 +1,4 @@
-/*
-Misery Geiger UI
-Designed specifically for Misery mod
-by TenuredCLOUD
-*/
-
-class MiseryGeiger_UI
+class CLASS(geiger_ui)
 {
     idd = 982344;
     duration = 10000000000;
@@ -14,7 +8,7 @@ class MiseryGeiger_UI
 
 class ControlsBackground
 {
-class Misery_GeigerBG: RscPicture
+class CLASS(geiger_background): RscPicture
 {
     idc = -1;
     text = "\z\misery\addons\ui\menus\ui\Geiger.paa";
@@ -26,7 +20,7 @@ class Misery_GeigerBG: RscPicture
 };
 class Controls
 {
-class Misery_GeigerReading: RscText
+class CLASS(geiger_readings): RscText
 {
     idc = 1000;
     x = 43.5 * GUI_GRID_W + GUI_GRID_X;

@@ -1,17 +1,11 @@
-/*
-Misery Crafting Framework GUI
-Designed specifically for Misery mod
-by TenuredCLOUD
-*/
-
-class MiseryCraftingFramework_GUI
+class CLASS(craftingFramework_ui)
 {
     idd = 982376;
     onLoad = "[] execVM '\z\misery\addons\crafting\functions\fnc_RecipesListed.sqf'; [] execVM '\z\misery\addons\crafting\functions\fnc_Showicon.sqf';";
 
 class ControlsBackground
 {
-class Misery_CraftingBG: Misery_RscText
+class CLASS(crafting_background): CLASS(RscText)
 {
     idc = -1;
     colorBackground[]={0.2,0.2,0.2,.7};
@@ -20,7 +14,7 @@ class Misery_CraftingBG: Misery_RscText
     w = QUOTE(49 * GUI_GRID_W);
     h = QUOTE(24 * GUI_GRID_H);
 };
-class Misery_CraftingPrompt: RscText
+class CLASS(crafting_prompt): RscText
 {
     idc = -1;
     text = "What would you like to craft?";
@@ -29,7 +23,7 @@ class Misery_CraftingPrompt: RscText
     w = QUOTE(22 * GUI_GRID_W);
     h = QUOTE(2.5 * GUI_GRID_H);
 };
-class MiseryCrafting_ItemSelectionTip: RscText
+class CLASS(crafting_itemSelectionTip): RscText
 {
     idc = -1;
     text = "Blueprints:";
@@ -39,7 +33,7 @@ class MiseryCrafting_ItemSelectionTip: RscText
     h = QUOTE(2.5 * GUI_GRID_H);
     sizeEx = 0.8 * GUI_GRID_H;
 };
-class MiseryCrafting_RecipeTip: RscText
+class CLASS(crafting_recipeTip): RscText
 {
     idc = -1;
     text = "Recipe for Blueprint:";
@@ -49,7 +43,7 @@ class MiseryCrafting_RecipeTip: RscText
     h = QUOTE(2 * GUI_GRID_H);
     sizeEx = 0.8 * GUI_GRID_H;
 };
-class MiseryCrafting_NoteBox: RscText
+class CLASS(crafting_noteBox): RscText
 {
     idc = 1001;
     x = QUOTE(-3.5 * GUI_GRID_W + GUI_GRID_X);
@@ -58,7 +52,7 @@ class MiseryCrafting_NoteBox: RscText
     h = QUOTE(4 * GUI_GRID_H);
     sizeEx = 0.75 * GUI_GRID_H;
 };
-class Misery_Crafting_Icon: RscPicture
+class CLASS(crafting_icon): RscPicture
 {
     idc = 1501;
     text = QPATHTOEF(icons,data\crafting_ca.paa);
@@ -70,7 +64,7 @@ class Misery_Crafting_Icon: RscPicture
 };
 class Controls
     {
-class MiseryCrafting_List_1: RscListBox
+class CLASS(crafting_list_1): RscListBox
 {
     idc = 1500;
     x = QUOTE(17 * GUI_GRID_W + GUI_GRID_X);
@@ -78,7 +72,7 @@ class MiseryCrafting_List_1: RscListBox
     w = QUOTE(16.5 * GUI_GRID_W);
     h = QUOTE(14 * GUI_GRID_H);
 };
-class MiseryCrafting_List_2: RscListBox
+class CLASS(crafting_list_2): RscListBox
 {
     idc = 1502;
     x = QUOTE(-1.5 * GUI_GRID_W + GUI_GRID_X);
@@ -86,7 +80,7 @@ class MiseryCrafting_List_2: RscListBox
     w = QUOTE(16.5 * GUI_GRID_W);
     h = QUOTE(14 * GUI_GRID_H);
 };
-class MiseryCrafting_Button: RscButton
+class CLASS(crafting_button): RscButton
 {
     idc = 1600;
     text = "Craft";
@@ -101,7 +95,7 @@ class MiseryCrafting_Button: RscButton
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
     onButtonClick = "[] execVM '\z\misery\addons\crafting\functions\fnc_ProcessItems.sqf';";
 };
-class MiseryCrafting_KnownRecipes: RscButton
+class CLASS(crafting_knownRecipes): RscButton
 {
     idc = 1601;
     text = "Show Recipe";
@@ -116,7 +110,7 @@ class MiseryCrafting_KnownRecipes: RscButton
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
     onButtonClick = "[] execVM '\z\misery\addons\crafting\functions\fnc_ShowRecipe.sqf';";
 };
-class MiseryCrafting_ExitButton: RscButton
+class CLASS(crafting_exitButton): RscButton
 {
     idc = 1602;
     text = "Exit";
