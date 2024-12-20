@@ -9,9 +9,9 @@ ADDON = false;
 /*
 //gasmasks +:
 if (Miserygasmasks && hasInterface) then {
-[] execVM "\z\misery\addons\gasmask\functions\fnc_gasmasktimer.sqf";
+[] call "\z\misery\addons\gasmask\functions\fnc_gasmasktimer.sqf";
 //Misery Gasmask audio overhaul:
-[] execVM "\z\misery\addons\gasmask\functions\fnc_Gasmaskaudio.sqf";
+[] call "\z\misery\addons\gasmask\functions\fnc_Gasmaskaudio.sqf";
 //};
 };
 */

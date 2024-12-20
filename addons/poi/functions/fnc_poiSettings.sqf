@@ -29,6 +29,6 @@ if (_activated && isServer) then {
 (_module getVariable "MiseryPOISpawnTimer"),
 (_module getVariable "MiseryPOIDeleteTimer"),
 (_module getVariable "MiseryPOISpawnLimit")
-] execVM "\z\misery\addons\poi\functions\fnc_Settings.sqf";
+] call FUNC(settings);
 };
 true

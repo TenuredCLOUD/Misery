@@ -10,7 +10,7 @@
             if (_value) then {
             MiseryNoNVG_TPP_ENABLED = true;
             if (hasInterface) then {
-            [] execVM "\z\misery\addons\nonvg\functions\fnc_TPPNONVG.sqf";
+            [] call FUNC(disableNightVision);
             };
                 }else{
             MiseryNoNVG_TPP_ENABLED = false;

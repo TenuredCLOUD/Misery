@@ -80,7 +80,7 @@ if (MiseryWBKIMS && MiseryRavage && isServer) then {
 
 // //WBK IMS Handle for Dash / sprint w/ no stamina (overrides to enforce stamina depletion)
 if (MiseryWBKIMS && hasInterface) then {
-[] execVM "\z\misery\addons\ims\functions\fnc_IMSDash.sqf";
+[] call "\z\misery\addons\ims\functions\fnc_IMSDash.sqf";
 };
 */
 

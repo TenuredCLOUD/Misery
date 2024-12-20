@@ -9,7 +9,7 @@ ADDON = false;
 /*
 //Phantom artifact drops:
 if (MiseryPhantDrops && isServer) then {
-    [] execVM "\z\misery\addons\phantoms\functions\fnc_phantomdrops.sqf";
+    [] call "\z\misery\addons\phantoms\functions\fnc_phantomdrops.sqf";
 };
 */
 

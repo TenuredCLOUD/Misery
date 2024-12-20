@@ -24,7 +24,7 @@
         if ((player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE]) > -10 || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             if(MiseryDebug)then{systemChat "Misery Cold immersion cycle terminated..."};
-            [] execVM "\z\misery\addons\temperature\functions\fnc_coldimmersion.sqf";
+            [] call FUNC(coldimmersion);
             if(MiseryDebug)then{systemChat "Misery Cold immersion cycle checks re-initiated..."};
         };
 

@@ -126,7 +126,7 @@ _aimingSpeed = _this select 35;
 _Spawnchance = _this select 36;
 
 _player=objNull;
-_players=call Misery_fnc_ListPlayers;
+_players=call EFUNC(common,listPlayers);
 _players=_players-(entities "HeadlessClient_F");
 
 _pos = getPos _module;
@@ -349,7 +349,7 @@ _entityPositions = units _group apply {getPos _x};
         _crateuniformArray,
         _cratevestArray,
         _cratebackpackArray,
-        _maxallowedCrateitems] execVM "\z\misery\addons\poi\functions\fnc_PopulateCrate.sqf";
+        _maxallowedCrateitems] call FUNC(populateCrate);
     };
 
 } forEach _entityPositions;
@@ -372,7 +372,7 @@ _flagpole enableDynamicSimulation true;
 
 // _posStr = str _pos;
 // _PMCalert = [_posStr, _raidID];
-// [_PMCalert, "\z\misery\addons\framework\scripts\Modules\PDA\alerts\PMCRaid.sqf"] remoteExec ["execVM ", 0];
+// [_PMCalert, "\z\misery\addons\framework\scripts\Modules\PDA\alerts\PMCRaid.sqf"] remoteExec ["call ", 0];
 
 Misery_activePOIs = Misery_activePOIs + 1;
 

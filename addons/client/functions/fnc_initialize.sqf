@@ -40,18 +40,18 @@ if (MiserysurvivalSaveName == "") then {
 
 // Persistency
 if (MiserysurvivalPersistence == 1) then {
-    [[], "\z\misery\addons\persistency\functions\fnc_Persistencehandle.sqf"] remoteExec ["execVM", 0, true];
+    [[], EFUNC(persistency,persistenceHandle)] remoteExec ["call", 0, true];
 };
 
 if (MiserysurvivalPersistence == 2) then {
     if (hasInterface) then {
     [] call EFUNC(persistency,Keyhandle);
     };
-    [[], "\z\misery\addons\persistency\functions\fnc_Persistencehandle.sqf"] remoteExec ["execVM", 0, true];
+    [[], EFUNC(persistency,persistenceHandle)] remoteExec ["call", 0, true];
 };
 
 if !(MiserysurvivalKillhandleScript == "") then {
-    [[], "\z\misery\addons\persistency\functions\fnc_Killhandle.sqf"] remoteExec ["execVM", 0, true];
+    [[], EFUNC(persistency,killHandle)] remoteExec ["call", 0, true];
 };
 
 // Persistency reloader

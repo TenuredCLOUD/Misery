@@ -35,7 +35,7 @@ if (_activated && isServer) then {
 (_module getVariable "MiseryArtifactDeleteCheckDistance"),
 (_module getVariable "MiseryArtifactSpawnTimer"),
 (_module getVariable "MiseryArtifactDeleteTimer")
-] execVM "\z\misery\addons\Artifacts\functions\fnc_settings.sqf";
+] call FUNC(settings);
 };
 true
 

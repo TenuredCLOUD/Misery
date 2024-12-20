@@ -19,7 +19,7 @@ MiseryRadioTimer = _this select 4;
 
 MiseryRadioBroadcastsystem = true; //Sync bootup
 
-[] execVM Radio\RadioObjectsStatic); //Immersive static loop
+[] call Radio\RadioObjectsStatic); //Immersive static loop
 
 while {true} do {
 

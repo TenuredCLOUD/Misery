@@ -9,7 +9,7 @@ class Gascartridge
 {
         idd = -1;
         duration = 10000000000;
-        onLoad = "uiNamespace setVariable ['Gascartridge', _this select 0];";
+        onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(gasCartridge)),_this select 0)]);
         fadein = 0;
         fadeout = 0;
         movingEnable = 0;

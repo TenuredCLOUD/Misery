@@ -40,19 +40,19 @@ private _selectedFile = _treatmentToFile select _selectedIndex;
 
 switch (_selectedFile) do {
     case "Medzonestart": {
-    [] execVM "\z\misery\addons\medzone\fnc_Medzonestart.sqf";
+    [] call EFUNC(medzone,start);
     };
     case "Radheal14": {
-    [] execVM "\z\misery\addons\medzone\fnc_Radheal14.sqf";
+    [] call EFUNC(medzone,radheal14);
     };
     case "Radheal12": {
-    [] execVM "\z\misery\addons\medzone\fnc_Radheal12.sqf";
+    [] call EFUNC(medzone,radheal12);
     };
     case "Radheal34": {
-    [] execVM "\z\misery\addons\medzone\fnc_Radheal34.sqf";
+    [] call EFUNC(medzone,radheal34);
     };
     case "RadhealALL": {
-    [] execVM "\z\misery\addons\medzone\fnc_RadhealALL.sqf";
+    [] call EFUNC(medzone,radhealAll);
     };
 };
 

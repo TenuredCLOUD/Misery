@@ -8,7 +8,7 @@ class MiseryGeiger_UI
 {
     idd = 982344;
     duration = 10000000000;
-    onLoad = "uiNamespace setVariable ['MiseryGeiger_UI', _this select 0];";
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(geiger_ui)),_this select 0)]);
     fadein = 0;
     fadeout = 0;
 

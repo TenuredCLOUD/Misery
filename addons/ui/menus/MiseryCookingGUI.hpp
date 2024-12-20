@@ -7,7 +7,7 @@ by TenuredCLOUD
 class MiseryCookingFramework_GUI
 {
     idd = 982379;
-    onLoad = "[] execVM '\z\misery\addons\cooking\functions\fnc_RecipesListed.sqf'; [] execVM '\z\misery\addons\cooking\functions\fnc_Showicon.sqf';";
+    onLoad = QUOTE([] call EFUNC(cooking,recipesListed); [] call EFUNC(cooking,showicon));
 
 class ControlsBackground
 {
@@ -99,7 +99,7 @@ class MiseryCooking_Button: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\cooking\functions\fnc_ProcessRecipe.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(cooking,processRecipe));
 };
 class MiseryCooking_KnownRecipes: RscButton
 {
@@ -114,7 +114,7 @@ class MiseryCooking_KnownRecipes: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\cooking\functions\fnc_ShowRecipe.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(cooking,showRecipe));
 };
 class MiseryCooking_ExitButton: RscButton
 {
@@ -129,7 +129,7 @@ class MiseryCooking_ExitButton: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "closeDialog 2;";
+    onButtonClick = QUOTE(closeDialog 2);
 };
     };
         };

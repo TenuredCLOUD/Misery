@@ -30,7 +30,7 @@ if !(_selectedIndex == -1) exitWith {
 _PurchaseB ctrlShow false;
 _ExitB ctrlShow false;
 
-[] execVM "\z\misery\addons\vehiclerefuel\functions\fnc_Refuelzonestart.sqf";
+[] call FUNC(refuelZoneStart);
 };
 
 

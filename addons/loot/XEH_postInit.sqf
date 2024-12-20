@@ -4,6 +4,6 @@
 /*
 //Loot
 if (MiseryLootEnabled) then {
-    [] execVM "\z\misery\addons\loot\functions\fnc_Start.sqf";
+    [] call "\z\misery\addons\loot\functions\fnc_Start.sqf";
 };
 */

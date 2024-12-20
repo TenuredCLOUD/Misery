@@ -84,7 +84,7 @@ _cratevestArray = (_this select 13) call EFUNC(common,parseArray);
 _cratebackpackArray = (_this select 14) call EFUNC(common,parseArray);
 
 _player=objNull;
-_players=call Misery_fnc_ListPlayers;
+_players=call EFUNC(common,listPlayers);
 _players=_players-(entities "HeadlessClient_F");
 
 _SpawnFLAG = false;
@@ -144,7 +144,7 @@ for "_i" from 1 to _maxallowedCrates do {
     _crateuniformArray,
     _cratevestArray,
     _cratebackpackArray,
-    _maxallowedCrateitems] execVM "\z\misery\addons\poi\functions\fnc_PopulateCrate.sqf";
+    _maxallowedCrateitems] call FUNC(populateCrate);
 };
 
 // _WreckID = _module getVariable ["Wreck_ID", nil];
@@ -157,7 +157,7 @@ for "_i" from 1 to _maxallowedCrates do {
 
 // _posStr = str _pos;
 // _Wreckalert = [_posStr, _WreckID];
-// [_Wreckalert, "\z\misery\addons\poi\scripts\Modules\PDA\alerts\HeliWreck.sqf"] remoteExec ["execVM ", 0];
+// [_Wreckalert, "\z\misery\addons\poi\scripts\Modules\PDA\alerts\HeliWreck.sqf"] remoteExec ["call ", 0];
 
 Misery_activePOIs = Misery_activePOIs + 1;
 

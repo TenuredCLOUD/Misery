@@ -23,7 +23,7 @@
         if ((!isNil "MiseryinPsyfield" && !MiseryinPsyfield) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             if(MiseryDebug)then{systemChat "Misery Psyfield cycle terminated..."};
-            [] execVM "\z\misery\addons\psyfield\functions\fnc_Psyfieldinit.sqf";
+            [] call FUNC(process);
             if(MiseryDebug)then{systemChat "Misery Psyfield cycle checks re-initiated..."};
         };
 

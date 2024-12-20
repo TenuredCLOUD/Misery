@@ -107,6 +107,6 @@ if ((count _debuffRemove) > 0) then {
 };
 
 //Custom script execution
-if !(_script=="") then {_selectedItem execVM _script};
+if !(_script=="") then {_selectedItem call _script};
 
 

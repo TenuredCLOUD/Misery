@@ -9,16 +9,16 @@ ADDON = false;
 /*
 //Artifact exposure+:
 if (MiseryEnhartifacts && hasInterface) then {
-[] execVM "\z\misery\addons\artifacts\functions\fnc_Artifactexposure.sqf";
+[] call "\z\misery\addons\artifacts\functions\fnc_Artifactexposure.sqf";
 };
 
 if ((MiseryRadZoneInit) && hasInterface) then {
-[] execVM "\z\misery\addons\radiation\functions\fnc_RadZoneinit.sqf";
+[] call "\z\misery\addons\radiation\functions\fnc_RadZoneinit.sqf";
 };
 
 //Radiation Exp+:
 if (MiseryEnhrads && hasInterface) then {
-[] execVM "\z\misery\addons\radiation\functions\fnc_radiationex.sqf";
+[] call "\z\misery\addons\radiation\functions\fnc_radiationex.sqf";
 
 // //Reactivate Geiger if picking up active one:
 // player addEventHandler ["Take", {

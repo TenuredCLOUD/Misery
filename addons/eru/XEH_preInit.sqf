@@ -8,7 +8,7 @@ ADDON = false;
 
 /*
 if (MiseryERUacts && hasInterface) then {
-[] execVM "\z\misery\addons\eru\functions\fnc_ERU_main.sqf";
+[] call "\z\misery\addons\eru\functions\fnc_ERU_main.sqf";
 };
 */
 

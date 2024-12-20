@@ -18,7 +18,7 @@
 private _dialog = findDisplay 982390;
 
 if (currentAction == "buy") then {
-[] execVM "\z\misery\addons\traders\functions\fnc_ProcessPurchase.sqf";
+[] call FUNC(processPurchase);
 } else {
-[] execVM "\z\misery\addons\traders\functions\fnc_ProcessSell.sqf";
+[] call FUNC(processSell);
 };

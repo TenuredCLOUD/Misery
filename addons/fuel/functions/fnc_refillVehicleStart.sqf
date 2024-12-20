@@ -20,5 +20,4 @@ createDialog "MiseryRefuel_Vehicle_JCan_GUI";
 
 private _Jerrycanused= _this; // item classname
 
-[_Jerrycanused] execVM '\z\misery\addons\fuel\functions\fnc_Veh_icon.sqf';
-
+[_Jerrycanused] call FUNC(vehicleIcon);

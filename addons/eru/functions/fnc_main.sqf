@@ -22,7 +22,7 @@ disableSerialization;
         if (!("Misery_ERU" in magazines player) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             ("MiseryERU_UI" call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
-            [] execVM "\z\misery\addons\eru\functions\fnc_ERU_main.sqf";
+            [] call FUNC(main);
         };
 
         "MiseryERU_UI" cutRsc ["MiseryERU_UI", "PLAIN", 1, false];

@@ -101,6 +101,6 @@ _PurchaseB ctrlShow true;
 _ExitB ctrlShow true;
 
 //Refresh treatment prices:
-[] execVM '\z\misery\addons\medtreatment\functions\fnc_MTreatListed.sqf';
+[] call EFUNC(medtreatment,treatListed);
     };
 };

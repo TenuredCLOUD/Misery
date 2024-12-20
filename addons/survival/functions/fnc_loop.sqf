@@ -27,7 +27,7 @@ if !(hasInterface) exitWith {};
         if (!alive player) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             if(MiseryDebug)then{systemChat "Misery survival loop cycle terminated..."};
-            [] execVM "\z\misery\addons\survival\functions\fnc_survival_loop.sqf";
+            [] call FUNC(loop);
             if(MiseryDebug)then{systemChat "Misery survival loop cycle checks re-initiated..."};
         };
 
@@ -206,7 +206,7 @@ if !(hasInterface) exitWith {};
 
     if (MiseryBreathFogAllowed) then {
     if (isNil{player getVariable "MiseryBreathFogSim"}) then {
-    [] execVM "\z\misery\addons\temperature\functions\fnc_BreathFog.sqf";
+    [] call "\z\misery\addons\temperature\functions\fnc_BreathFog.sqf";
     };
 };
 

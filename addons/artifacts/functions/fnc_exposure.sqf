@@ -24,7 +24,7 @@
         if (!([[MACRO_ARTIFACTS]] call EFUNC(common,hasItem)) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             if(MiseryDebug)then{systemChat "Misery Artifact exposure cycle terminated..."};
-            [] execVM "\z\misery\addons\artifacts\functions\fnc_exposure.sqf";
+            [] call FUNC(exposure);
             if(MiseryDebug)then{systemChat "Misery Artifact exposure cycle checks re-initiated..."};
         };
 

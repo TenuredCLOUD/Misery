@@ -22,7 +22,7 @@ private _MiseryaddMissionEHs = {
 
         // Handle respawn
         private _respawnedIndex = addMissionEventHandler ["EntityRespawned", {
-            [ [], "\z\misery\addons\Persistency\functions\fnc_Persistencehandle.sqf"] remoteExec ["execVM ", _this select 0, true];
+            [ [], "\z\misery\addons\Persistency\functions\fnc_Persistencehandle.sqf"] remoteExec ["call ", _this select 0, true];
         }];
 
         // Handle killed

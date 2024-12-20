@@ -15,11 +15,11 @@ if !(hasInterface) exitWith {};
 
         if (_key isEqualTo DIK_ESCAPE) then {
             if !(MiserysurvivalKeyhandleScript=="") then {
-            private _scriptDone = [player] execVM MiserysurvivalKeyhandleScript;
+            private _scriptDone = [player] call MiserysurvivalKeyhandleScript;
             };
 
             if (MiseryCombatlog > 0) then {
-            execVM "\z\misery\addons\Persistency\functions\fnc_Combatlogg.sqf";
+            call "\z\misery\addons\Persistency\functions\fnc_Combatlogg.sqf";
             };
 
             if(MiseryDebug)then{systemChat "ESC pressed";};
@@ -27,11 +27,11 @@ if !(hasInterface) exitWith {};
 
         if (_key isEqualTo DIK_F4 && _alt) then {
         if!(MiserysurvivalKeyhandleScript=="")then{
-        private _scriptDone = [player] execVM MiserysurvivalKeyhandleScript;
+        private _scriptDone = [player] call MiserysurvivalKeyhandleScript;
         };
 
         if (MiseryCombatlog > 0) then {
-            execVM "\z\misery\addons\Persistency\functions\fnc_Combatlogg.sqf";
+            call "\z\misery\addons\Persistency\functions\fnc_Combatlogg.sqf";
             };
 
         if(MiseryDebug)then{systemChat "ALT + F4 pressed";};
@@ -41,11 +41,11 @@ if !(hasInterface) exitWith {};
         if (_ctrl && _alt && _key isEqualTo DIK_DELETE) then {
 
         if!(MiserysurvivalKeyhandleScript=="")then{
-        private _scriptDone = [player] execVM MiserysurvivalKeyhandleScript;
+        private _scriptDone = [player] call MiserysurvivalKeyhandleScript;
         };
 
         if (MiseryCombatlog > 0) then {
-            execVM "\z\misery\addons\Persistency\functions\fnc_Combatlogg.sqf";
+            call "\z\misery\addons\Persistency\functions\fnc_Combatlogg.sqf";
             };
 
         if(MiseryDebug)then{systemChat "CTRL + ALT + DEL pressed";};

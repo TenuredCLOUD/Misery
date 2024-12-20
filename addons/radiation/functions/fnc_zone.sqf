@@ -23,7 +23,7 @@
         if ((!isNil "MiseryinRadZone" && !MiseryinRadZone) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             if(MiseryDebug)then{systemChat "Misery Radiation cycle terminated..."};
-            [] execVM "\z\misery\addons\radiation\functions\fnc_RadZoneinit.sqf";
+            [] call FUNC(zone);
             if(MiseryDebug)then{systemChat "Misery Radiation cycle checks re-initiated..."};
         };
 

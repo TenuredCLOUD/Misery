@@ -120,7 +120,7 @@ _aimingSpeed = _this select 34;
 _Spawnchance = _this select 35;
 
 _player=objNull;
-_players=call Misery_fnc_ListPlayers;
+_players=call EFUNC(common,listPlayers);
 _players=_players-(entities "HeadlessClient_F");
 
 _pos = getPos _module;
@@ -335,7 +335,7 @@ _entityPositions = units _group apply {getPos _x};
     _crateuniformArray,
     _cratevestArray,
     _cratebackpackArray,
-    _maxallowedCrateitems] execVM "\z\misery\addons\poi\functions\fnc_PopulateCrate.sqf";
+    _maxallowedCrateitems] call FUNC(populateCrate);
 };
 
 } forEach _entityPositions;
