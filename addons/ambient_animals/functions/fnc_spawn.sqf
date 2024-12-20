@@ -46,8 +46,8 @@ if ((random 100) <= 100) then {  // Animal spawn chance
             private _spawn = false;
             private _pos = [];
 
-            for "_try" from 1 to _tries do {
-                _pos = [_marker, true] call CBA_fnc_randPosArea
+            for "_z" from 1 to _tries do {
+                _pos = [_marker, true] call CBA_fnc_randPosArea;
 
                 if (!surfaceIsWater _pos) then {
                     _spawn = true;
