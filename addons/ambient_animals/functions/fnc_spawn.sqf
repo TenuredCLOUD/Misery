@@ -2,7 +2,7 @@
 /*
  * Author: TenuredCLOUD
  * Animal spawner animal generation
- * Processes spawning / generation of ambient animals near players 
+ * Processes spawning / generation of ambient animals near players
  *
  * Arguments:
  * None
@@ -14,16 +14,16 @@
  * [] call misery_ambient_animals_fnc_spawn;
  *
 */
- 	
-	//!! Parsed Data for animals need to be in array format from initSettings - 
-	//Since PR #33 this needs to be looked into: 
-	// ["Sheep_random_F", 3],
+
+    //!! Parsed Data for animals need to be in array format from initSettings -
+    //Since PR #33 this needs to be looked into:
+    // ["Sheep_random_F", 3],
     // ["Goat_random_F", 2],
     // ["Cock_random_F", 1],
     // ["Hen_random_F", 4]
 
-	_players = call EFUNC(common,listPlayers);
-    
+    _players = call EFUNC(common,listPlayers);
+
     if ((count GVAR(registeredEntities)) < GVAR(maxAnimalUnits)) then {
         if ((random 100) <= 100) then {  // Animal spawn chance
             private _player = selectRandom _players;

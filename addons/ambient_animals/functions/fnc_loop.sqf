@@ -1,8 +1,8 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Animal spawner run order loop 
- * Processes deletion of distant animals & regeneration of animals with cycle timer 
+ * Animal spawner run order loop
+ * Processes deletion of distant animals & regeneration of animals with cycle timer
  *
  * Arguments:
  * None
@@ -15,10 +15,10 @@
  *
 */
 
-    [] call FUNC(clean);
+[] call FUNC(clean);
 
-    [] call FUNC(spawn);
+[] call FUNC(spawn);
 
-    [{
-        [] call FUNC(loop);
-    }, [], GVAR(animalCycleLength)] call CBA_fnc_waitAndExecute;
+[{
+    [] call FUNC(loop);
+}, [], GVAR(animalCycleLength)] call CBA_fnc_waitAndExecute;

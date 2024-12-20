@@ -20,4 +20,4 @@ if (!isServer) exitWith {};
 // Process empty entity array prior to generating animals
 GVAR(registeredEntities) = [];
 
-[] call FUNC(loop); 
+[] call FUNC(loop);
