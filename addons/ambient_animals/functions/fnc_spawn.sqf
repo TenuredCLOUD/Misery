@@ -62,4 +62,3 @@ if ((random 100) <= 100) then {  // Animal spawn chance
         };
     };
 };
-};
