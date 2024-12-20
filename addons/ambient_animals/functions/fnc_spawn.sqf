@@ -22,7 +22,7 @@
 // ["Cock_random_F", 1],
 // ["Hen_random_F", 4]
 
-_players = call EFUNC(common,listPlayers);
+private _players = call EFUNC(common,listPlayers);
 
 if ((count GVAR(registeredEntities)) < GVAR(maxAnimalUnits)) then {
     if ((random 100) <= 100) then {  // Animal spawn chance
