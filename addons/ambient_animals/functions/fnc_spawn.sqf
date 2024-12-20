@@ -24,7 +24,7 @@
 
 private _players = call EFUNC(common,listPlayers);
 
-if ((count GVAR(registeredEntities)) < GVAR(maxAnimalUnits)) then {
+if ((count GVAR(registeredEntities)) > GVAR(maxAnimalUnits)) exitWith {};
     if ((random 100) <= 100) then {  // Animal spawn chance
         private _player = selectRandom _players;
         private _clusters = [1, 3] call BIS_fnc_randomInt;
