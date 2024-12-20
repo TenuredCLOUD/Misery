@@ -27,8 +27,8 @@ if (_action == localize "STR_MISERY_CheckClothing") exitWith {call EFUNC(tempera
 //Gear weight check:
 if (_action == localize "STR_MISERY_CheckGearweight") exitWith {
     private _bagweightload = loadAbs player / getNumber (configFile >> "CfgInventoryGlobalVariable" >> "maxSoldierLoad");
-    private _formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_GearweightVAL", round(_bagweightload * 100), round((_bagweightload * 100) / 2.2)]];
-    [_formattedText] call EFUNC(common,formatToTile);
+    private _gearWeightStr = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_GearweightVAL", round(_bagweightload * 100), round((_bagweightload * 100) / 2.2)]];
+    [parseText _gearWeightStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 };
 
 //Sleep UI:
@@ -79,8 +79,8 @@ if(_action== localize "STR_MISERY_CHOPWOOD") exitWith {
 if ([["WBK_axe","WBK_brush_axe","WBK_craftedAxe","FireAxe","Axe","Misery_Woodaxe"]] call EFUNC(common,hasItem)) then {
 [] call EFUNC(woodcollect,axeAction);
 }else{
-private _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOAXEFORWOODNOTI"];
-[_formattedText] call EFUNC(common,formatToTile);
+private _noAxeForWoodStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOAXEFORWOODNOTI"];
+[parseText _noAxeForWoodStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
     };
 };
 
@@ -89,8 +89,8 @@ if(_action== localize "STR_MISERY_SAWWOOD") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
 if !([["Misery_Chainsaw"]] call EFUNC(common,hasItem)) then {
-private _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOCHAINSAWFORWOODNOTI"];
-[_formattedText] call EFUNC(common,formatToTile);
+private _noChainsawForWoodStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOCHAINSAWFORWOODNOTI"];
+[parseText _noChainsawForWoodStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 }else{
 [] call EFUNC(woodcollect,sawAction);
 };
@@ -108,59 +108,59 @@ if(_action== localize "STR_MISERY_SPLITWOODLOG") exitWith {
     (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
     (findDisplay 602) closeDisplay 2;
         if (!([["Misery_woodenlog"]] call EFUNC(common,hasItem))) exitWith {
-            private _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOWOODENLOGSFORSPLITTING"];
-            [_formattedText] call EFUNC(common,formatToTile);
+            private _noWoodLogForSplitStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOWOODENLOGSFORSPLITTING"];
+            [parseText _noWoodLogForSplitStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
         };
         if ([["Misery_Chainsaw","WBK_axe","WBK_brush_axe","WBK_craftedAxe","FireAxe","Axe","Misery_Woodaxe"]] call EFUNC(common,hasItem)) then {
             [] call EFUNC(woodcollect,splitWoodAction);
         } else {
-            private _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOWOODAXEORCHAINSAWNOTI"];
-            [_formattedText] call EFUNC(common,formatToTile);
+            private _noAxeOrSawForLogStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOWOODAXEORCHAINSAWNOTI"];
+            [parseText _noAxeOrSawForLogStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
     };
 };
 
 //Jet fuel collection:
 if(_action== localize "STR_MISERY_JETFUELPUMPREQ") exitWith {
-private _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_JETFUELPUMPREQTIP"];
-[_formattedText] call EFUNC(common,formatToTile);
+private _jetFuelPumpReqStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_JETFUELPUMPREQTIP"];
+[parseText _jetFuelPumpReqStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 };
 
 //Fuel collection:
 if(_action== localize "STR_MISERY_FUELPUMPREQ") exitWith {
-private _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_FUELPUMPREQTIP"];
-[_formattedText] call EFUNC(common,formatToTile);
+private _fuelPumpReqStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_FUELPUMPREQTIP"];
+[parseText _fuelPumpReqStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 };
 
 //Fuel dumping Jerrycans:
 if(_action== localize "STR_MISERY_DUMPOUTFUELJET") exitWith {
 if !([["Misery_JetFuelF"]] call EFUNC(common,hasItem)) then {
-private _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELJETNOCANNOTI"];
-[_formattedText] call EFUNC(common,formatToTile);
+private _noJetJerryCanStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELJETNOCANNOTI"];
+[parseText _noJetJerryCanStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 }else{
-private _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELJETSUCCESS"];
-[_formattedText] call EFUNC(common,formatToTile);
+private _jetJerryCanDumpSuccessStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELJETSUCCESS"];
+[parseText _jetJerryCanDumpSuccessStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 player removeItem "Misery_JetFuelF";
 player addItem "Misery_EmptyJet";
 };
     };
 if(_action== localize "STR_MISERY_DUMPOUTFUELDIESEL") exitWith {
 if !([["Misery_DieselF"]] call EFUNC(common,hasItem)) then {
-private _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELDIESELNOCANNOTI"];
-[_formattedText] call EFUNC(common,formatToTile);
+private _noDieselJerryCanStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELDIESELNOCANNOTI"];
+[parseText _noDieselJerryCanStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 }else{
-private _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELDIESELSUCCESS"];
-[_formattedText] call EFUNC(common,formatToTile);
+private _dieselJerryCanDumpSuccessStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELDIESELSUCCESS"];
+[parseText _dieselJerryCanDumpSuccessStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 player removeItem "Misery_DieselF";
 player addItem "Misery_EmptyDiesel";
 };
     };
 if(_action== localize "STR_MISERY_DUMPOUTFUELPETROL") exitWith {
 if !([["Misery_PetrolF"]] call EFUNC(common,hasItem)) then {
-private _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELPETROLNOCANNOTI"];
-[_formattedText] call EFUNC(common,formatToTile);
+private _noPetrolJerryCanStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELPETROLNOCANNOTI"];
+[parseText _noPetrolJerryCanStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 }else{
-private _formattedText = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELPETROLSUCCESS"];
-[_formattedText] call EFUNC(common,formatToTile);
+private _petrolJerryCanDumpSuccessStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELPETROLSUCCESS"];
+[parseText _petrolJerryCanDumpSuccessStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 player removeItem "Misery_PetrolF";
 player addItem "Misery_EmptyPetrol";
 };
@@ -172,7 +172,7 @@ player addItem "Misery_EmptyPetrol";
 // (findDisplay 602) closeDisplay 2;
 // if !(call Misery_fnc_mineactcheck) exitWith {
 // private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_MINEORENOTOOLS"];
-// [_formattedText] call EFUNC(common,formatToTile);
+// [parseText _formattedText, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 // }; //items pre-check
 // [] spawn Misery_fnc_mineoreact;
 // };
@@ -182,8 +182,8 @@ if(_action== localize "STR_MISERY_IBUILDOPEN") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
 if !(call EFUNC(buildex,hasHammer)) exitWith {
-private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_IBUILDOPENNOTOOLS"];
-[_formattedText] call EFUNC(common,formatToTile);
+private _noIbuildToolsStr =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_IBUILDOPENNOTOOLS"];
+[parseText _noIbuildToolsStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 }; //items pre-check
 [] call NMIB_fnc_Action; //Misery NMIB compat function
 };
@@ -191,8 +191,8 @@ if(_action== localize "STR_MISERY_USESLEDGE") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
 if !(call EFUNC(buildex,hasSledghammer)) exitWith {
-private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_USESLEDGENOTOOLTIP"];
-[_formattedText] call EFUNC(common,formatToTile);
+private _sledgeHammerProxToBaseStr =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_USESLEDGENOTOOLTIP"];
+[parseText _sledgeHammerProxToBaseStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 }; //items pre-check
 [] call EFUNC(buildex,demolish);
 };
@@ -205,8 +205,8 @@ if(_action== localize "STR_MISERY_TURNONRFDETEC") exitWith {
     (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
     (findDisplay 602) closeDisplay 2;
     if !([["Misery_RFHighrangeOFF"]] call EFUNC(common,hasItem)) then {
-    private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONRFDETECNOITEM"];
-    [_formattedText] call EFUNC(common,formatToTile);
+    private _noRfDetectorStr =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONRFDETECNOITEM"];
+    [parseText _noRfDetectorStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 }else{
     execVM "\z\misery\addons\rfdetector\functions\fnc_RFreboot.sqf";
 };
@@ -215,11 +215,11 @@ if(_action== localize "STR_MISERY_TURNOFFRFDETEC") exitWith {
     (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
     (findDisplay 602) closeDisplay 2;
     if !([["Misery_RFHighrangeON"]] call EFUNC(common,hasItem)) then {
-    private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONRFDETECNOITEM"];
-    [_formattedText] call EFUNC(common,formatToTile);
+    private _noRfDetectorStr_2 =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONRFDETECNOITEM"];
+    [parseText _noRfDetectorStr_2, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 }else{
-    private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_RFDETECTURNOFF"];
-    [_formattedText] call EFUNC(common,formatToTile);
+    private _rfDetectorTurnOffStr =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_RFDETECTURNOFF"];
+    [parseText _rfDetectorTurnOffStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
     playSound3D ["\z\misery\addons\audio\sounds\Geigerenable\GeigerOFF.ogg", player, false, getPosASL player, 4, 1, 10];
     player removeItem 'Misery_RFHighrangeON';
     player addItem 'Misery_RFHighrangeOFF';
@@ -256,8 +256,8 @@ if (_action== localize "STR_MISERY_STOREARTIFACT") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
 if !([["Misery_leadcontaineropen"]] call EFUNC(common,hasItem)) then {
-private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOLLCONTAINER"];
-[_formattedText] call EFUNC(common,formatToTile);
+private _noLeadContainerStr =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOLLCONTAINER"];
+[parseText _noLeadContainerStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 }else{
 execVM "\z\misery\addons\llcontainer\functions\fnc_putincontaineract.sqf";
 };
@@ -269,11 +269,11 @@ execVM "\z\misery\addons\llcontainer\functions\fnc_putincontaineract.sqf";
 // (findDisplay 602) closeDisplay 2;
 // if !([["Misery_Needlethread"]] call EFUNC(common,hasItem)) exitWith {
 // private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_STITCHWOUNDSNOITEM"];
-// [_formattedText] call EFUNC(common,formatToTile);
+// [parseText _formattedText, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 // };
 // if !([player] call ace_medical_blood_fnc_isBleeding) then {
 // private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_STITCHWOUNDSNOTBLEEDING"];
-// [_formattedText] call EFUNC(common,formatToTile);
+// [parseText _formattedText, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 // }else{
 // [] spawn Misery_fnc_StitchThreadact;
 // };
@@ -284,8 +284,8 @@ if(_action== localize "STR_MISERY_TURNONHEADLAMP") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
 if !([["Misery_HeadlampOFF"]] call EFUNC(common,hasItem)) exitWith {
-private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONHEADLAMPNOITEM"];
-[_formattedText] call EFUNC(common,formatToTile);
+private _noHeadLampItemStr =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONHEADLAMPNOITEM"];
+[parseText _noHeadLampItemStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 };
 [player] execVM "\z\misery\addons\headlamp\functions\fnc_HeadlampON.sqf";
 };
@@ -294,8 +294,8 @@ if(_action== localize "STR_MISERY_TURNOFFHEADLAMP") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
 if !([["Misery_HeadlampON"]] call EFUNC(common,hasItem)) exitWith {
-private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONHEADLAMPNOITEM"];
-[_formattedText] call EFUNC(common,formatToTile);
+private _noHeadLampItemStr_2 =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONHEADLAMPNOITEM"];
+[parseText _noHeadLampItemStr_2, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 };
 [player] execVM "\z\misery\addons\headlamp\functions\fnc_HeadlampOFF.sqf";
 };
@@ -357,8 +357,8 @@ if(_action==localize "STR_MISERY_STARTFISHINGACT") exitWith {
 [] call EFUNC(fishing,fishAct);
 };
 if(_action== localize "STR_MISERY_STARTFISHINGREQUIRMENTS") exitWith {
-private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_STARTFISHINGREQUIRMENTS_LISTED"];
-[_formattedText] call EFUNC(common,formatToTile);
+private _fishingItemsReqStr =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_STARTFISHINGREQUIRMENTS_LISTED"];
+[parseText _fishingItemsReqStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 };
 
 //Foraging:
