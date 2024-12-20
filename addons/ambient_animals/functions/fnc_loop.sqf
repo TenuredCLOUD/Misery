@@ -16,7 +16,6 @@
 */
 
 [] call FUNC(clean);
-
 [] call FUNC(spawn);
 
 [{
