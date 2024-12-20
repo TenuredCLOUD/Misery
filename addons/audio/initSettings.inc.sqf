@@ -60,10 +60,10 @@
         "Ambient soundscape array", "Listed sounds to play randomly around players (Format: Mysound_1,Mysound_2,etc...)"
     ],
     "Misery - Audio",
-    "", 1,
+    "[]", 1,
     {
         params ["_value"];
-        GVAR(ambientSoundScapeExtras) = _value splitString ",";
+        GVAR(ambientSoundScapeExtras) = parseSimpleArray _value;
     }
 ] call CBA_fnc_addSetting;
 
@@ -74,9 +74,9 @@
         "Ambient Music array", "Listed music to play randomly for players (Format: Mymusic_1,Mymusic_2,etc...)"
     ],
     "Misery - Audio",
-    "", 1,
+    "[]", 1,
     {
         params ["_value"];
-        GVAR(ambientMusicExtras) = _value splitString ",";
+        GVAR(ambientMusicExtras) = parseSimpleArray _value;
     }
 ] call CBA_fnc_addSetting;

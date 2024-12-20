@@ -1,6 +1,6 @@
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 
-["Misery", "Geiger Power", "Turn on/off Geiger", {
+["Misery", QGVAR(power), "Turn on/off Geiger", {
     private _formattedText;
     if ("Misery_personalgeigerOFF" in magazines player) then {
         _formattedText = format ["<t font='PuristaMedium'>%1</t>",localize "STR_MISERY_TURNONGEIGERBOOTUP"];
