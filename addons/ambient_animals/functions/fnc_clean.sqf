@@ -15,7 +15,7 @@
  *
 */
 
-_players = call EFUNC(common,listPlayers);
+private _players = call EFUNC(common,listPlayers);
 
 {
     private _animal = _x;
