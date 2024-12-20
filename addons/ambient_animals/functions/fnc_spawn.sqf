@@ -33,14 +33,21 @@ if ((random 100) <= 100) then {  // Animal spawn chance
         private _animalClass = selectRandom GVAR(animalTypes);
         private _animalCount = (_animalClass select 1);
 
+        //draw marker on each client: 
+        private _markerPos = getPos _player;
+        private _playerUID = getPlayerUID _player;
+        private _markerName = format ["marker_%1", _playerUID];
+        private _marker = createMarkerLocal [_markerName, _markerPos];
+        _marker setMarkerShapeLocal "ELLIPSE";
+        _marker setMarkerSizeLocal [GVAR(animalMinimumDistance) + GVAR(animalSafeDistance), GVAR(animalMaximumDistance) + GVAR(animalSafeDistance)];
+
         for "_i" from 1 to _animalCount do {
             private _tries = 10;
             private _spawn = false;
             private _pos = [];
 
             for "_try" from 1 to _tries do {
-                private _direction = random 360;
-                _pos = (getPos _player) getPos [GVAR(animalMinimumDistance), _direction];
+                _pos = [_marker, true] call CBA_fnc_randPosArea
 
                 if (!surfaceIsWater _pos) then {
                     _spawn = true;
@@ -60,5 +67,6 @@ if ((random 100) <= 100) then {  // Animal spawn chance
                 if ((count GVAR(registeredEntities)) >= GVAR(maxAnimalUnits)) exitWith {};
             };
         };
+        deleteMarkerLocal _marker;
     };
 };
