@@ -1,17 +1,11 @@
-/*
-Misery Vehicle Refueling UI
-Processes Refueling via Jerry Cans for vehicles...
-Designed specifically for Misery mod
-*/
-
-class MiseryRefuel_Vehicle_JCan_GUI
+class CLASS(refuelJerryCan_ui)
 {
     idd = 982385;
     onLoad = QUOTE([] call EFUNC(fuel,refuelListed));
 
 class ControlsBackground
 {
-class MiseryRefuel_Vehicle_JCan_BG: Misery_RscText
+class CLASS(refuelJerryCan_background): CLASS(RscText)
 {
     idc = -1;
     x = 0 * GUI_GRID_W + GUI_GRID_X;
@@ -20,7 +14,7 @@ class MiseryRefuel_Vehicle_JCan_BG: Misery_RscText
     h = 25 * GUI_GRID_H;
     colorBackground[]={0.2,0.2,0.2,.7};
 };
-class MiseryRefuel_Vehicle_JCan_Prompt: RscText
+class CLASS(refuelJerryCan_prompt): RscText
 {
     idc = -1;
     text = "Refuel Vehicle"; //--- ToDo: Localize;
@@ -29,7 +23,7 @@ class MiseryRefuel_Vehicle_JCan_Prompt: RscText
     w = 20.5 * GUI_GRID_W;
     h = 2 * GUI_GRID_H;
 };
-class MiseryRefuel_Vehicle_JCan_icon: RscPicture
+class CLASS(refuelJerryCan_icon): RscPicture
 {
     idc = 1602;
     x = 30.5 * GUI_GRID_W + GUI_GRID_X;
@@ -37,7 +31,7 @@ class MiseryRefuel_Vehicle_JCan_icon: RscPicture
     w = 5 * GUI_GRID_W;
     h = 3.5 * GUI_GRID_H;
 };
-class MiseryRefuel_Vehicle_JCan_VehicelText: RscText
+class CLASS(refuelJerryCan_name): RscText
 {
     idc = 1603;
     x = 28.5 * GUI_GRID_W + GUI_GRID_X;
@@ -46,7 +40,7 @@ class MiseryRefuel_Vehicle_JCan_VehicelText: RscText
     h = 1.5 * GUI_GRID_H;
     sizeEx = 0.75 * GUI_GRID_H;
 };
-class MiseryRefuel_Vehicle_JCan_icon_2: RscPicture
+class CLASS(refuelJerryCan_icon_2): RscPicture
 {
     idc = 1604;
     x = 30.5 * GUI_GRID_W + GUI_GRID_X;
@@ -57,7 +51,7 @@ class MiseryRefuel_Vehicle_JCan_icon_2: RscPicture
 };
 class Controls
     {
-class MiseryRefuel_Vehicle_JCan_List: RscListBox
+class CLASS(refuelJerryCan_list): RscListBox
 {
     idc = 1500;
     x = 1.5 * GUI_GRID_W + GUI_GRID_X;
@@ -65,7 +59,7 @@ class MiseryRefuel_Vehicle_JCan_List: RscListBox
     w = 20.5 * GUI_GRID_W;
     h = 12.5 * GUI_GRID_H;
 };
-class MiseryRefuel_Vehicle_JCan_Start: RscButton
+class CLASS(refuelJerryCan_refill): RscButton
 {
     idc = 1600;
     text = "Refill"; //--- ToDo: Localize;
@@ -78,7 +72,7 @@ class MiseryRefuel_Vehicle_JCan_Start: RscButton
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
     onButtonClick =QUOTE([] call EFUNC(fuel,processRefuel));
 };
-class MiseryRefuel_Vehicle_JCan_Exit: RscButton
+class CLASS(refuelJerryCan_exit): RscButton
 {
     idc = 1601;
     text = "Exit"; //--- ToDo: Localize;
@@ -91,7 +85,7 @@ class MiseryRefuel_Vehicle_JCan_Exit: RscButton
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
     onButtonClick = QUOTE(closeDialog 2);
 };
-class MiseryRefuel_Vehicle_JCan_InfoBox: RscText
+class CLASS(refuelJerryCan_infoBox): RscText
 {
     idc = 1001;
     x = 1.46 * GUI_GRID_W + GUI_GRID_X;

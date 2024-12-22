@@ -1,10 +1,4 @@
-/*
-Misery Generator UI
-Processes usage of generators, shows fuel levels, etc...
-Designed specifically for Misery mod
-*/
-
-class MiseryGenerator_GUI
+class CLASS(generator_ui)
 {
     idd = 573849;
     onLoad = QUOTE([] call EFUNC(generator,uiPrep); [] call EFUNC(generator,icon));
@@ -12,7 +6,7 @@ class MiseryGenerator_GUI
 
 class ControlsBackground
 {
-class Misery_Generator_BG: Misery_RscText
+class CLASS(generator_background): CLASS(RscText)
 {
     idc = 1800;
     x = 0 * GUI_GRID_W + GUI_GRID_X;
@@ -21,7 +15,7 @@ class Misery_Generator_BG: Misery_RscText
     h = 16.5 * GUI_GRID_H;
     colorBackground[]={0.2,0.2,0.2,.7};
 };
-class Misery_Generator_Prompt: RscText
+class CLASS(generator_prompt): RscText
 {
     idc = 1000;
     text = "Power Generator"; //--- ToDo: Localize;
@@ -30,7 +24,7 @@ class Misery_Generator_Prompt: RscText
     w = 20.5 * GUI_GRID_W;
     h = 2 * GUI_GRID_H;
 };
-class Misery_Generator_name: RscText
+class CLASS(generator_name): RscText
 {
     idc = 1002;
     x = 27.5 * GUI_GRID_W + GUI_GRID_X;
@@ -39,7 +33,7 @@ class Misery_Generator_name: RscText
     h = 3 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_Generator_Fuellvl: RscText
+class CLASS(generator_fuellvl): RscText
 {
     idc = 1003;
     text = "100% --------------------"; //--- ToDo: Localize;
@@ -49,7 +43,7 @@ class Misery_Generator_Fuellvl: RscText
     h = 2 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_Generator_PowerState: RscText
+class CLASS(generator_powerState): RscText
 {
     idc = 1001;
     text = "'On / Off'"; //--- ToDo: Localize;
@@ -62,7 +56,7 @@ class Misery_Generator_PowerState: RscText
 };
 class Controls
 {
-class Misery_Generator_Start_Stop_Button: RscButton
+class CLASS(generator_startStop_button): RscButton
 {
     idc = 1600;
     x = 1.5 * GUI_GRID_W + GUI_GRID_X;
@@ -76,7 +70,7 @@ class Misery_Generator_Start_Stop_Button: RscButton
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
     onButtonClick = QUOTE([] call EFUNC(generator,powerButton));
 };
-class Misery_Generator_Refuel_Button: RscButton
+class CLASS(generator_refuel_button): RscButton
 {
     idc = 1601;
     text = "Refuel"; //--- ToDo: Localize;

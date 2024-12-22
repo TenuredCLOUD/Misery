@@ -1,17 +1,11 @@
-/*
-Misery Water Collection GUI
-Designed specifically for Misery mod
-by TenuredCLOUD
-*/
-
-class MiseryWaterCollection_GUI
+class CLASS(waterCollection_ui)
 {
     idd = 982380;
     onLoad = QUOTE([] call EFUNC(watercollect,containersListed); [] call EFUNC(watercollect,icon));
 
 class ControlsBackground
 {
-class Misery_WaterCollectionBG: Misery_RscText
+class CLASS(waterCollection_background): CLASS(RscText)
 {
     idc = -1;
     colorBackground[]={0.2,0.2,0.2,.7};
@@ -20,7 +14,7 @@ class Misery_WaterCollectionBG: Misery_RscText
     w = 33 * GUI_GRID_W;
     h = 23.5 * GUI_GRID_H;
 };
-class MiseryWaterCollection_ItemSelectionTip: RscText
+class CLASS(waterCollection_itemSelectionTip): RscText
 {
     idc = -1;
     text = "Containers:"; //--- ToDo: Localize;
@@ -30,7 +24,7 @@ class MiseryWaterCollection_ItemSelectionTip: RscText
     h = 2.5 * GUI_GRID_H;
     sizeEx = 0.8 * GUI_GRID_H;
 };
-class Misery_WaterCollectionPrompt: RscText
+class CLASS(waterCollection_prompt): RscText
 {
     idc = -1;
     text = "What container would you like to fill?"; //--- ToDo: Localize;
@@ -39,7 +33,7 @@ class Misery_WaterCollectionPrompt: RscText
     w = 22 * GUI_GRID_W;
     h = 2.5 * GUI_GRID_H;
 };
-class Misery_WaterCollect_Icon: RscPicture
+class CLASS(waterCollection_icon): RscPicture
 {
     idc = 1200;
     text = "Use\icons\well.paa";
@@ -51,7 +45,7 @@ class Misery_WaterCollect_Icon: RscPicture
 };
 class Controls
     {
-class MiseryWaterCollect_List_1: RscListBox
+class CLASS(waterCollection_list_1): RscListBox
 {
     idc = 1500;
     x = 7 * GUI_GRID_W + GUI_GRID_X;
@@ -59,7 +53,7 @@ class MiseryWaterCollect_List_1: RscListBox
     w = 16.5 * GUI_GRID_W;
     h = 14 * GUI_GRID_H;
 };
-class MiseryFillContainer_Button: RscButton
+class CLASS(waterCollection_FillContainer_Button): RscButton
 {
     idc = 1600;
     text = "Fill container"; //--- ToDo: Localize;
@@ -74,7 +68,7 @@ class MiseryFillContainer_Button: RscButton
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
     onButtonClick = QUOTE([] call EFUNC(watercollect,processFill));
 };
-class MiseryDrinkFromSource_Button: RscButton
+class CLASS(waterCollection_drinkFromSource_Button): RscButton
 {
     idc = 1601;
     text = "Drink from source"; //--- ToDo: Localize;
@@ -89,7 +83,7 @@ class MiseryDrinkFromSource_Button: RscButton
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
     onButtonClick = QUOTE([] call EFUNC(watercollect,drinkFromSource));
 };
-class MiseryWaterCollection_ExitButton: RscButton
+class CLASS(waterCollection_exit): RscButton
 {
     idc = 1602;
     text = "Exit";
@@ -104,7 +98,7 @@ class MiseryWaterCollection_ExitButton: RscButton
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
     onButtonClick = QUOTE(closeDialog 2);
 };
-class MiseryWaterCollection_NoteBox: RscText
+class CLASS(waterCollection_noteBox): RscText
 {
     idc = 1001;
     x = 6 * GUI_GRID_W + GUI_GRID_X;

@@ -1,17 +1,11 @@
-/*
-Misery Action / Inventory Framework GUI
-Processes Actions, as well as status HUD
-Designed specifically for Misery mod
-*/
-
-class MiseryINVACT_GUI
+class CLASS(inventoryFramework_ui)
 {
     idd = 982377;
     onLoad = QUOTE([] call EFUNC(invstat,status));
 
 class ControlsBackground
 {
-class Misery_ActionFW_BG: Misery_RscText
+class CLASS(inventoryFramework_background): CLASS(RscText)
 {
     idc = -1;
     x = 0 * GUI_GRID_W + GUI_GRID_X;
@@ -20,7 +14,7 @@ class Misery_ActionFW_BG: Misery_RscText
     h = 11.5 * GUI_GRID_H;
     colorBackground[]={0.2,0.2,0.2,.7};
 };
-class Misery_ActionFW_Promt: RscText
+class CLASS(inventoryFramework_prompt): RscText
 {
     idc = -1;
     text = "Actions:"; //--- ToDo: Localize;
@@ -30,7 +24,7 @@ class Misery_ActionFW_Promt: RscText
     h = 2.5 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_STATUSFW_Prompt: RscText
+class CLASS(inventoryFramework_status_prompt): RscText
 {
     idc = -1;
     text = "Status:"; //--- ToDo: Localize;
@@ -40,7 +34,7 @@ class Misery_STATUSFW_Prompt: RscText
     h = 2.5 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_STATUSFW_SPLIT: RscFrame
+class CLASS(inventoryFramework_status_split): RscFrame
 {
     idc = -1;
     x = 23 * GUI_GRID_W + GUI_GRID_X;
@@ -48,7 +42,7 @@ class Misery_STATUSFW_SPLIT: RscFrame
     w = 0.4 * GUI_GRID_W;
     h = 11.5 * GUI_GRID_H;
 };
-class Misery_STATUSFW_Hunger: RscText
+class CLASS(inventoryFramework_status_hunger): RscText
 {
     idc = -1;
     text = "Hunger:"; //--- ToDo: Localize;
@@ -58,7 +52,7 @@ class Misery_STATUSFW_Hunger: RscText
     h = 2.5 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_STATUSFW_Health: RscText
+class CLASS(inventoryFramework_status_health): RscText
 {
     idc = 1008;
     text = "Blood:"; //--- ToDo: Localize;
@@ -68,7 +62,7 @@ class Misery_STATUSFW_Health: RscText
     h = 2 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_STATUSFW_Thirst: RscText
+class CLASS(inventoryFramework_status_thirst): RscText
 {
     idc = -1;
     text = "Thirst:"; //--- ToDo: Localize;
@@ -78,7 +72,7 @@ class Misery_STATUSFW_Thirst: RscText
     h = 2.5 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_STATUSFW_Fatigue: RscText
+class CLASS(inventoryFramework_status_fatigue): RscText
 {
     idc = -1;
     text = "Fatigue:"; //--- ToDo: Localize;
@@ -88,7 +82,7 @@ class Misery_STATUSFW_Fatigue: RscText
     h = 2.5 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_STATUSFW_Ailments: RscText
+class CLASS(inventoryFramework_status_ailments): RscText
 {
     idc = -1;
     text = "Ailments:"; //--- ToDo: Localize;
@@ -98,7 +92,7 @@ class Misery_STATUSFW_Ailments: RscText
     h = 2.5 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_STATUSFW_Buffs: RscText
+class CLASS(inventoryFramework_status_buffs): RscText
 {
     idc = -1;
     text = "Buffs:"; //--- ToDo: Localize;
@@ -108,7 +102,7 @@ class Misery_STATUSFW_Buffs: RscText
     h = 2.5 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_STATUSFW_Funds: RscText
+class CLASS(inventoryFramework_status_funds): RscText
 {
     idc = 1009;
     text = "Funds"; //--- ToDo: Localize;
@@ -118,7 +112,7 @@ class Misery_STATUSFW_Funds: RscText
     h = 2.5 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_STATUSFW_Temperature: RscText
+class CLASS(inventoryFramework_status_temperature): RscText
 {
     idc = 1015;
     text = "Temperature:"; //--- ToDo: Localize;
@@ -128,7 +122,7 @@ class Misery_STATUSFW_Temperature: RscText
     h = 2 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_STATUSFW_GasMask: RscText
+class CLASS(inventoryFramework_status_gasMask): RscText
 {
     idc = 1016;
     text = "Gas Mask:"; //--- ToDo: Localize;
@@ -138,7 +132,7 @@ class Misery_STATUSFW_GasMask: RscText
     h = 1.5 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_STATUSFW_CurrentMag: RscPicture
+class CLASS(inventoryFramework_status_currentMag): RscPicture
 {
     idc = 1111;
     x = 33 * GUI_GRID_W + GUI_GRID_X;
@@ -149,7 +143,7 @@ class Misery_STATUSFW_CurrentMag: RscPicture
     };
 class Controls
     {
-class Misery_ActionFW_ACTLIST: RscListBox
+class CLASS(inventoryFramework_actionList): RscListBox
 {
     idc = 1500;
     x = 0.5 * GUI_GRID_W + GUI_GRID_X;
@@ -158,7 +152,7 @@ class Misery_ActionFW_ACTLIST: RscListBox
     h = 9.5 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_ActionFW_ACTBUTTON: RscButton
+class CLASS(inventoryFramework_actionButton): RscButton
 {
     idc = 1600;
     text = "Confirm Selection"; //--- ToDo: Localize;
@@ -173,7 +167,7 @@ class Misery_ActionFW_ACTBUTTON: RscButton
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
     onButtonClick = QUOTE([true] call EFUNC(inventory,selectAction));
 };
-class Misery_STATUSFW_Buffs_List: RscListBox
+class CLASS(inventoryFramework_status_buffs_list): RscListBox
 {
     idc = 1501;
     x = 23.88 * GUI_GRID_W + GUI_GRID_X;
@@ -183,7 +177,7 @@ class Misery_STATUSFW_Buffs_List: RscListBox
     sizeEx = 0.7 * GUI_GRID_H;
     onLBSelChanged = QUOTE(_this call EFUNC(invstat,processBuff));
 };
-class Misery_STATUSFW_Ailments_List: RscListBox
+class CLASS(inventoryFramework_status_ailments_list): RscListBox
 {
     idc = 1502;
     x = 31.91 * GUI_GRID_W + GUI_GRID_X;
@@ -193,7 +187,7 @@ class Misery_STATUSFW_Ailments_List: RscListBox
     sizeEx = 0.7 * GUI_GRID_H;
     onLBSelChanged = QUOTE(_this call EFUNC(invstat,processAilment));
 };
-class Misery_STATUSFW_HealthVal: RscText
+class CLASS(inventoryFramework_status_healthValue): RscText
 {
     idc = 1011;
     x = 25.67 * GUI_GRID_W + GUI_GRID_X;
@@ -202,7 +196,7 @@ class Misery_STATUSFW_HealthVal: RscText
     h = 2.5 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_STATUSFW_HungerVal: RscText
+class CLASS(inventoryFramework_status_hungerValue): RscText
 {
     idc = 1012;
     x = 26.04 * GUI_GRID_W + GUI_GRID_X;
@@ -211,7 +205,7 @@ class Misery_STATUSFW_HungerVal: RscText
     h = 2.5 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_STATUSFW_ThirstVal: RscText
+class CLASS(inventoryFramework_status_thirstValue): RscText
 {
     idc = 1013;
     x = 25.67 * GUI_GRID_W + GUI_GRID_X;
@@ -220,7 +214,7 @@ class Misery_STATUSFW_ThirstVal: RscText
     h = 2.5 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_STATUSFW_FatigueVal: RscText
+class CLASS(inventoryFramework_status_fatigueValue): RscText
 {
     idc = 1014;
     x = 26 * GUI_GRID_W + GUI_GRID_X;
@@ -229,7 +223,7 @@ class Misery_STATUSFW_FatigueVal: RscText
     h = 2.5 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_STATUSFW_Temperature_exposure: RscText
+class CLASS(inventoryFramework_status_temperature_exposure): RscText
 {
     idc = 1010;
     text = "No PDA"; //--- ToDo: Localize;
@@ -239,7 +233,7 @@ class Misery_STATUSFW_Temperature_exposure: RscText
     h = 2 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_STATUSFW_GasMask_Cartridge: RscText
+class CLASS(inventoryFramework_status_gasMask_cartridge): RscText
 {
     idc = 1017;
     text = "None";
@@ -249,7 +243,7 @@ class Misery_STATUSFW_GasMask_Cartridge: RscText
     h = 1.5 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_STATUSFW_CurrentMagVal: RscText
+class CLASS(inventoryFramework_status_currentMagValue): RscText
 {
     idc = 1112;
     x = 35.5 * GUI_GRID_W + GUI_GRID_X;

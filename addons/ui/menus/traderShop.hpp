@@ -1,10 +1,4 @@
-/*
-Misery Trader / Shop UI
-Processes Buying of items...
-Designed specifically for Misery mod
-*/
-
-class Misery_TraderShop_Buy_GUI
+class CLASS(traderShop_ui)
 {
     idd = 982390;
     // onLoad = QUOTE(_trader = player getVariable 'currentTrader'; _trader setVariable ['Misery_TraderIsBusy', true, true]; _trader setVariable ['Misery_TradingWith', profileName, true]; GVAR(currentAction) = 'buy'; [] call EFUNC(traders,shopVal); [] call EFUNC(traders,processCategory); [] call EFUNC(traders,processMenuSwitch;));
@@ -36,7 +30,7 @@ onUnload = QUOTE(
 
 class ControlsBackground
 {
-class Misery_TraderShop_Buy_BG: Misery_RscText
+class CLASS(traderShop_background): CLASS(RscText)
 {
     idc = 1800;
     x = QUOTE(-6 * GUI_GRID_W + GUI_GRID_X);
@@ -45,7 +39,7 @@ class Misery_TraderShop_Buy_BG: Misery_RscText
     h = QUOTE(32 * GUI_GRID_H);
     colorBackground[]={0.2,0.2,0.2,.7};
 };
-class Misery_TraderShop_Buy_Prompt: RscText
+class CLASS(traderShop_prompt): RscText
 {
     idc = 1000;
     x = QUOTE(-5 * GUI_GRID_W + GUI_GRID_X);
@@ -53,7 +47,7 @@ class Misery_TraderShop_Buy_Prompt: RscText
     w = QUOTE(21 * GUI_GRID_W);
     h = QUOTE(2 * GUI_GRID_H);
 };
-class Misery_TraderShop_Buy_PlayerFunds_Info: RscText
+class CLASS(traderShop_playerFunds_info): RscText
 {
     idc = 1003;
     x = QUOTE(30.5 * GUI_GRID_W + GUI_GRID_X);
@@ -62,7 +56,7 @@ class Misery_TraderShop_Buy_PlayerFunds_Info: RscText
     h = QUOTE(2 * GUI_GRID_H);
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_TraderShop_Buy_ShopFunds_Info: RscText
+class CLASS(traderShop_shopFunds_info): RscText
 {
     idc = 1002;
     x = QUOTE(30.5 * GUI_GRID_W + GUI_GRID_X);
@@ -71,7 +65,7 @@ class Misery_TraderShop_Buy_ShopFunds_Info: RscText
     h = QUOTE(2 * GUI_GRID_H);
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_TraderShop_Buy_icon: RscPicture
+class CLASS(traderShop_icon): RscPicture
 {
     idc = 1200;
     x = QUOTE(27.5 * GUI_GRID_W + GUI_GRID_X);
@@ -82,7 +76,7 @@ class Misery_TraderShop_Buy_icon: RscPicture
 };
 class Controls
     {
-class Misery_TraderShop_Buy_DropList: RscCombo
+class CLASS(traderShop_dropList): RscCombo
 {
     idc = 2100;
     x = QUOTE(0.04 * GUI_GRID_W + GUI_GRID_X);
@@ -92,7 +86,7 @@ class Misery_TraderShop_Buy_DropList: RscCombo
     sizeEx = 0.7 * GUI_GRID_H;
     onLBSelChanged = QUOTE([] call EFUNC(traders,shopVal));
 };
-class Misery_TraderShop_Buy_Shop_List: RscListBox
+class CLASS(traderShop_shop_list): RscListBox
 {
     idc = 1500;
     x = QUOTE(0 * GUI_GRID_W + GUI_GRID_X);
@@ -102,7 +96,7 @@ class Misery_TraderShop_Buy_Shop_List: RscListBox
     sizeEx = 0.7 * GUI_GRID_H;
     onLBSelChanged = QUOTE([] call EFUNC(traders,processIcon));
 };
-class Misery_TraderShop_Buy_InfoBox: RscText
+class CLASS(traderShop_infoBox): RscText
 {
     idc = 1001;
     x = QUOTE(0 * GUI_GRID_W + GUI_GRID_X);
@@ -111,7 +105,7 @@ class Misery_TraderShop_Buy_InfoBox: RscText
     h = QUOTE(7 * GUI_GRID_H);
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_TraderShop_Buy_Icon_infoBox: Misery_StructuredText
+class CLASS(traderShop_icon_infoBox): CLASS(StructuredText)
 {
     idc = 1004;
     x = QUOTE(23 * GUI_GRID_W + GUI_GRID_X);
@@ -120,7 +114,7 @@ class Misery_TraderShop_Buy_Icon_infoBox: Misery_StructuredText
     h = QUOTE(5.5 * GUI_GRID_H);
     sizeEx = 0.65 * GUI_GRID_H;
 };
-class Misery_TraderShop_Sell_Sell: RscButton
+class CLASS(traderShop_sell): RscButton
 {
     idc = 1602;
     text = "Buy"; //--- ToDo: Localize;
@@ -133,7 +127,7 @@ class Misery_TraderShop_Sell_Sell: RscButton
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
     onButtonClick = QUOTE([] call EFUNC(traders,processTransaction));
 };
-class Misery_TraderShop_Sell_Gift: RscButton
+class CLASS(traderShop_gift): RscButton
 {
     idc = 1603;
     text = "Gift Item"; //--- ToDo: Localize;
@@ -146,7 +140,7 @@ class Misery_TraderShop_Sell_Gift: RscButton
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
     onButtonClick = QUOTE([] call EFUNC(traders,processGift));
 };
-class Misery_TraderShop_Sell_BuyMenu: RscButton
+class CLASS(traderShop_buyMenu): RscButton
 {
     idc = 1600;
     text = "Sell Menu"; //--- ToDo: Localize;
@@ -159,7 +153,7 @@ class Misery_TraderShop_Sell_BuyMenu: RscButton
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
     onButtonClick = QUOTE([] call EFUNC(traders,processMenuSwitch));
 };
-class Misery_TraderShop_Buy_Exit: RscButton
+class CLASS(traderShop_exit): RscButton
 {
     idc = 1601;
     text = "Exit"; //--- ToDo: Localize;
@@ -172,7 +166,7 @@ class Misery_TraderShop_Buy_Exit: RscButton
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
     onButtonClick = QUOTE(GVAR(currentAction) = nil; closeDialog 2);
 };
-class Misery_TraderShop_ShowCompats: Misery_Checkbox
+class CLASS(traderShop_showCompats): CLASS(Checkbox)
 {
     idc = 2800;
     tooltip = "Only show compatible weapon items";
@@ -185,5 +179,5 @@ class Misery_TraderShop_ShowCompats: Misery_Checkbox
     };
         };
 
-//$[1.063,["Misery_TraderShop_Buy_UI",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],[1800,"Misery_TraderShop_Sell_BG",[2,"",["-6 * GUI_GRID_W + GUI_GRID_X","-5 * GUI_GRID_H + GUI_GRID_Y","52 * GUI_GRID_W","32 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1000,"Misery_TraderShop_Sell_Prompt",[2,"Store Name",["-5 * GUI_GRID_W + GUI_GRID_X","-4.5 * GUI_GRID_H + GUI_GRID_Y","21 * GUI_GRID_W","2 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1500,"Misery_TraderShop_Sell_Shop_List",[2,"",["0 * GUI_GRID_W + GUI_GRID_X","0.5 * GUI_GRID_H + GUI_GRID_Y","20.5 * GUI_GRID_W","18.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","0.7"],[]],[1200,"Misery_TraderShop_Sell_icon",[2,"\Data\Mappack\medical.paa",["27.5 * GUI_GRID_W + GUI_GRID_X","1.5 * GUI_GRID_H + GUI_GRID_Y","8.5 * GUI_GRID_W","5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1601,"Misery_TraderShop_Sell_Exit",[2,"Exit",["38 * GUI_GRID_W + GUI_GRID_X","23.5 * GUI_GRID_H + GUI_GRID_Y","7 * GUI_GRID_W","2 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1001,"Misery_TraderShop_Sell_InfoBox",[2,"",["0 * GUI_GRID_W + GUI_GRID_X","19.5 * GUI_GRID_H + GUI_GRID_Y","21.5 * GUI_GRID_W","7 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","0.7"],[]],[1003,"Misery_TraderShop_Sell_PlayerFunds_Info",[2,"Your funds:",["30.5 * GUI_GRID_W + GUI_GRID_X","-1.5 * GUI_GRID_H + GUI_GRID_Y","17.5 * GUI_GRID_W","2 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","0.7"],[]],[1602,"Misery_TraderShop_Sell_Sell",[2,"Sell",["22.5 * GUI_GRID_W + GUI_GRID_X","13.5 * GUI_GRID_H + GUI_GRID_Y","7 * GUI_GRID_W","2 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1004,"Misery_TraderShop_Sell_Icon_infoBox",[2,"",["23 * GUI_GRID_W + GUI_GRID_X","7 * GUI_GRID_H + GUI_GRID_Y","19.5 * GUI_GRID_W","5.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1603,"Misery_TraderShop_Sell_Gift",[2,"Gift Item",["22.5 * GUI_GRID_W + GUI_GRID_X","16 * GUI_GRID_H + GUI_GRID_Y","7 * GUI_GRID_W","2 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1002,"Misery_TraderShop_Sell_ShopFunds_Info",[2,"Shop funds:",["30.5 * GUI_GRID_W + GUI_GRID_X","-3 * GUI_GRID_H + GUI_GRID_Y","17.5 * GUI_GRID_W","2 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","0.7"],[]],[1600,"Misery_TraderShop_Sell_BuyMenu",[2,"Buy Menu",["22.5 * GUI_GRID_W + GUI_GRID_X","18.5 * GUI_GRID_H + GUI_GRID_Y","7 * GUI_GRID_W","2 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[2100,"Misery_TraderShop_Buy_DropList",[2,"",["0.04 * GUI_GRID_W + GUI_GRID_X","-0.75 * GUI_GRID_H + GUI_GRID_Y","20.5 * GUI_GRID_W","1 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1801,"Misery_Trader_Buy_Icon_Frame",[2,"",["27.5 * GUI_GRID_W + GUI_GRID_X","1.5 * GUI_GRID_H + GUI_GRID_Y","8.5 * GUI_GRID_W","5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]]
+//$[1.063,["traderShop_UI",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],[1800,"traderShop_BG",[2,"",["-6 * GUI_GRID_W + GUI_GRID_X","-5 * GUI_GRID_H + GUI_GRID_Y","52 * GUI_GRID_W","32 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1000,"traderShop_Prompt",[2,"Store Name",["-5 * GUI_GRID_W + GUI_GRID_X","-4.5 * GUI_GRID_H + GUI_GRID_Y","21 * GUI_GRID_W","2 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1500,"traderShop_Shop_List",[2,"",["0 * GUI_GRID_W + GUI_GRID_X","0.5 * GUI_GRID_H + GUI_GRID_Y","20.5 * GUI_GRID_W","18.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","0.7"],[]],[1200,"traderShop_icon",[2,"\Data\Mappack\medical.paa",["27.5 * GUI_GRID_W + GUI_GRID_X","1.5 * GUI_GRID_H + GUI_GRID_Y","8.5 * GUI_GRID_W","5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1601,"traderShop_Exit",[2,"Exit",["38 * GUI_GRID_W + GUI_GRID_X","23.5 * GUI_GRID_H + GUI_GRID_Y","7 * GUI_GRID_W","2 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1001,"traderShop_InfoBox",[2,"",["0 * GUI_GRID_W + GUI_GRID_X","19.5 * GUI_GRID_H + GUI_GRID_Y","21.5 * GUI_GRID_W","7 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","0.7"],[]],[1003,"traderShop_PlayerFunds_Info",[2,"Your funds:",["30.5 * GUI_GRID_W + GUI_GRID_X","-1.5 * GUI_GRID_H + GUI_GRID_Y","17.5 * GUI_GRID_W","2 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","0.7"],[]],[1602,"traderShop_Sell",[2,"Sell",["22.5 * GUI_GRID_W + GUI_GRID_X","13.5 * GUI_GRID_H + GUI_GRID_Y","7 * GUI_GRID_W","2 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1004,"traderShop_Icon_infoBox",[2,"",["23 * GUI_GRID_W + GUI_GRID_X","7 * GUI_GRID_H + GUI_GRID_Y","19.5 * GUI_GRID_W","5.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1603,"traderShop_Gift",[2,"Gift Item",["22.5 * GUI_GRID_W + GUI_GRID_X","16 * GUI_GRID_H + GUI_GRID_Y","7 * GUI_GRID_W","2 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1002,"traderShop_ShopFunds_Info",[2,"Shop funds:",["30.5 * GUI_GRID_W + GUI_GRID_X","-3 * GUI_GRID_H + GUI_GRID_Y","17.5 * GUI_GRID_W","2 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","0.7"],[]],[1600,"traderShop_BuyMenu",[2,"Buy Menu",["22.5 * GUI_GRID_W + GUI_GRID_X","18.5 * GUI_GRID_H + GUI_GRID_Y","7 * GUI_GRID_W","2 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[2100,"traderShop_DropList",[2,"",["0.04 * GUI_GRID_W + GUI_GRID_X","-0.75 * GUI_GRID_H + GUI_GRID_Y","20.5 * GUI_GRID_W","1 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1801,"Misery_Trader_Buy_Icon_Frame",[2,"",["27.5 * GUI_GRID_W + GUI_GRID_X","1.5 * GUI_GRID_H + GUI_GRID_Y","8.5 * GUI_GRID_W","5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]]
 
