@@ -32,7 +32,7 @@
 // _PurchaseB ctrlShow false;
 // _ExitB ctrlShow false;
 
-// [] execVM "\z\misery\addons\vehiclemechrepairs\functions\fnc_Repair.sqf";
+// [] call "\z\misery\addons\vehiclemechrepairs\functions\fnc_Repair.sqf";
 // };
 
 

@@ -59,7 +59,7 @@ MiseryClientReady=true;
 publicVariable "MiseryClientReady";
 
 //Client execute survival loop
-if (hasInterface) then {[] execVM "\z\misery\addons\survival\functions\fnc_survival_loop.sqf"};
+if (hasInterface) then {[] call "\z\misery\addons\survival\functions\fnc_survival_loop.sqf"};
 */
 
 ADDON = true;

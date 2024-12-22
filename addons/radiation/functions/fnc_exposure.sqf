@@ -26,7 +26,7 @@ if (isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
         if (((player getVariable ["MiseryRadiation", 0]) < 500) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             if(MiseryDebug)then{systemChat "Misery Rad exposure enh+ cycle terminated..."};
-            [] execVM "\z\misery\addons\raditaion\functions\fnc_radiationex.sqf";
+            [] call FUNC(exposure);
             if(MiseryDebug)then{systemChat "Misery Rad exposure enh+ cycle checks re-initiated..."};
         };
 

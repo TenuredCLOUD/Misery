@@ -1,17 +1,11 @@
-/*
-Misery Cooking Framework GUI
-Designed specifically for Misery mod
-by TenuredCLOUD
-*/
-
-class MiseryCookingFramework_GUI
+class CLASS(cookingFramework_ui)
 {
     idd = 982379;
-    onLoad = "[] execVM '\z\misery\addons\cooking\functions\fnc_RecipesListed.sqf'; [] execVM '\z\misery\addons\cooking\functions\fnc_Showicon.sqf';";
+    onLoad = QUOTE([] call EFUNC(cooking,recipesListed); [] call EFUNC(cooking,showicon));
 
 class ControlsBackground
 {
-class Misery_CookingBG: Misery_RscText
+class CLASS(cooking_background): CLASS(RscText)
 {
     idc = -1;
     colorBackground[]={0.2,0.2,0.2,.7};
@@ -20,7 +14,7 @@ class Misery_CookingBG: Misery_RscText
     w = QUOTE(49 * GUI_GRID_W);
     h = QUOTE(24 * GUI_GRID_H);
 };
-class Misery_CookingPrompt: RscText
+class CLASS(cooking_prompt): RscText
 {
     idc = -1;
     text = "What would you like to cook?";
@@ -29,7 +23,7 @@ class Misery_CookingPrompt: RscText
     w = QUOTE(22 * GUI_GRID_W);
     h = QUOTE(2.5 * GUI_GRID_H);
 };
-class MiseryCooking_ItemSelectionTip: RscText
+class CLASS(cooking_itemSelectionTip): RscText
 {
     idc = -1;
     text = "Recipes:";
@@ -39,7 +33,7 @@ class MiseryCooking_ItemSelectionTip: RscText
     h = QUOTE(2.5 * GUI_GRID_H);
     sizeEx = 0.8 * GUI_GRID_H;
 };
-class MiseryCooking_RecipeTip: RscText
+class CLASS(cooking_recipeTip): RscText
 {
     idc = -1;
     text = "Requirements for Recipe:";
@@ -49,7 +43,7 @@ class MiseryCooking_RecipeTip: RscText
     h = QUOTE(2 * GUI_GRID_H);
     sizeEx = 0.8 * GUI_GRID_H;
 };
-class MiseryCooking_NoteBox: RscText
+class CLASS(cooking_noteBox): RscText
 {
     idc = 1001;
     x = QUOTE(-3.5 * GUI_GRID_W + GUI_GRID_X);
@@ -58,7 +52,7 @@ class MiseryCooking_NoteBox: RscText
     h = QUOTE(4 * GUI_GRID_H);
     sizeEx = 0.75 * GUI_GRID_H;
 };
-class Misery_Cooking_Icon: RscPicture
+class CLASS(cooking_icon): RscPicture
 {
     idc = 1501;
     text = QPATHTOEF(icons,data\boilwater_ca.paa);
@@ -70,7 +64,7 @@ class Misery_Cooking_Icon: RscPicture
 };
 class Controls
     {
-class MiseryCooking_List_1: RscListBox
+class CLASS(cooking_list_1): RscListBox
 {
     idc = 1500;
     x = QUOTE(17 * GUI_GRID_W + GUI_GRID_X);
@@ -78,7 +72,7 @@ class MiseryCooking_List_1: RscListBox
     w = QUOTE(16.5 * GUI_GRID_W);
     h = QUOTE(14 * GUI_GRID_H);
 };
-class MiseryCooking_List_2: RscListBox
+class CLASS(cooking_list_2): RscListBox
 {
     idc = 1502;
     x = QUOTE(-1.5 * GUI_GRID_W + GUI_GRID_X);
@@ -86,7 +80,7 @@ class MiseryCooking_List_2: RscListBox
     w = QUOTE(16.5 * GUI_GRID_W);
     h = QUOTE(14 * GUI_GRID_H);
 };
-class MiseryCooking_Button: RscButton
+class CLASS(cooking_button): RscButton
 {
     idc = 1600;
     text = "Cook";
@@ -99,9 +93,9 @@ class MiseryCooking_Button: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\cooking\functions\fnc_ProcessRecipe.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(cooking,processRecipe));
 };
-class MiseryCooking_KnownRecipes: RscButton
+class CLASS(cooking_knownRecipes): RscButton
 {
     idc = 1601;
     text = "Show Recipe";
@@ -114,9 +108,9 @@ class MiseryCooking_KnownRecipes: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\cooking\functions\fnc_ShowRecipe.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(cooking,showRecipe));
 };
-class MiseryCooking_ExitButton: RscButton
+class CLASS(cooking_exitButton): RscButton
 {
     idc = 1602;
     text = "Exit";
@@ -129,7 +123,7 @@ class MiseryCooking_ExitButton: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "closeDialog 2;";
+    onButtonClick = QUOTE(closeDialog 2);
 };
     };
         };

@@ -30,5 +30,5 @@ if !(_selectedIndex == -1) exitWith {
 _PurchaseB ctrlShow false;
 _ExitB ctrlShow false;
 
-[] execVM "\z\misery\addons\fuel\functions\fnc_Refillstart.sqf";
+[] call FUNC(refillstart);
 };

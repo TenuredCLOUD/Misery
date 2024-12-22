@@ -1,18 +1,12 @@
-/*
-Misery Banking UI
-Processes Money starage, as well as a joint player account ("Phoenix fund")
-Designed specifically for Misery mod
-*/
-
-class Misery_Banking_UI
+class CLASS(banking_ui)
 {
     idd = 483729;
 
-    onLoad = "[] execVM '\z\misery\addons\bank\functions\fnc_Bank_UI_Updater.sqf';";
+    onLoad = QUOTE([] call EFUNC(bank,refresh));
 
 class ControlsBackground
 {
-class Misery_NWBank_BG: Misery_RscText
+class CLASS(bank_background): CLASS(RscText)
 {
     idc = 1800;
     x = QUOTE(-0.04 * GUI_GRID_W + GUI_GRID_X);
@@ -21,7 +15,7 @@ class Misery_NWBank_BG: Misery_RscText
     h = QUOTE(15.5 * GUI_GRID_H);
     colorBackground[]={0.2,0.2,0.2,.7};
 };
-class Misery_NWBank_Prompt: RscText
+class CLASS(bank_prompt): RscText
 {
     idc = 1000;
     text = "New world Bank "; //--- ToDo: Localize;
@@ -30,7 +24,7 @@ class Misery_NWBank_Prompt: RscText
     w = QUOTE(11 * GUI_GRID_W);
     h = QUOTE(2 * GUI_GRID_H);
 };
-class Misery_NWBank_PlayerWallet: RscText
+class CLASS(bank_playerWallet): RscText
 {
     idc = 1001;
     x = QUOTE(26 * GUI_GRID_W + GUI_GRID_X);
@@ -39,7 +33,7 @@ class Misery_NWBank_PlayerWallet: RscText
     h = QUOTE(2 * GUI_GRID_H);
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_NWBank_Playerbank: RscText
+class CLASS(bank_playerbank): RscText
 {
     idc = 1002;
     x = QUOTE(26 * GUI_GRID_W + GUI_GRID_X);
@@ -48,7 +42,7 @@ class Misery_NWBank_Playerbank: RscText
     h = QUOTE(2 * GUI_GRID_H);
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_NWBank_PhoenixFund: RscText
+class CLASS(bank_phoenixFund): RscText
 {
     idc = 1003;
     x = QUOTE(26 * GUI_GRID_W + GUI_GRID_X);
@@ -57,7 +51,7 @@ class Misery_NWBank_PhoenixFund: RscText
     h = QUOTE(2 * GUI_GRID_H);
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_NWBank_InputBox_funds: RscText
+class CLASS(bank_inputBox_funds): RscText
 {
     idc = 1004;
     x = QUOTE(21.5 * GUI_GRID_W + GUI_GRID_X);
@@ -69,7 +63,7 @@ class Misery_NWBank_InputBox_funds: RscText
 };
 class Controls
     {
-class Misery_NWBank_Deposit: RscButton
+class CLASS(bank_deposit): RscButton
 {
     idc = 1600;
     text = "Deposit"; //--- ToDo: Localize;
@@ -80,9 +74,9 @@ class Misery_NWBank_Deposit: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\bank\functions\fnc_Deposit.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(bank,deposit));
 };
-class Misery_NWBank_Withdraw: RscButton
+class CLASS(bank_withdraw): RscButton
 {
     idc = 1601;
     text = "Withdraw"; //--- ToDo: Localize;
@@ -93,9 +87,9 @@ class Misery_NWBank_Withdraw: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\bank\functions\fnc_Withdraw.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(bank,withdraw));
 };
-class Misery_NWBank_Contribute: RscButton
+class CLASS(bank_contribute): RscButton
 {
     idc = 1602;
     text = "Contribute"; //--- ToDo: Localize;
@@ -106,9 +100,9 @@ class Misery_NWBank_Contribute: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\bank\functions\fnc_Contribute.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(bank,contribute));
 };
-class Misery_NWBank_InputBox: RscEdit
+class CLASS(bank_inputBox): RscEdit
 {
     idc = 1400;
     x = QUOTE(10.5 * GUI_GRID_W + GUI_GRID_X);
@@ -117,7 +111,7 @@ class Misery_NWBank_InputBox: RscEdit
     h = QUOTE(1.5 * GUI_GRID_H);
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_NWBank_ClaimSupport: RscButton
+class CLASS(bank_claimSupport): RscButton
 {
     idc = 1603;
     text = "Claim Support"; //--- ToDo: Localize;
@@ -128,7 +122,7 @@ class Misery_NWBank_ClaimSupport: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\bank\functions\fnc_Claim_support.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(bank,claim));
 };
     };
         };

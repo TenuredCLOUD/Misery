@@ -106,7 +106,7 @@ if!((_stats select 3)==worldName)then{
 if!(MiseryMP)then{setDate(_stats select 4)};
 systemChat format["Misery character loaded: %1",_saveName];
 
-if !(MiserysurvivalLoadScript=="") then {[player] execVM MiserysurvivalLoadScript};
+if !(MiserysurvivalLoadScript=="") then {[player] call MiserysurvivalLoadScript};
 
 switch (_stats select 5) do {
     case "STAND": {player playAction "PlayerStand";};

@@ -1,10 +1,4 @@
-/*
-Misery HUD layout / design
-Imported from some of Drongo's displays with permission
-Designed specifically for Misery mod
-*/
-
-class MiseryDisplayInventoryActions
+class CLASS(inventoryActions_ui)
 {
     idd = 10000;
     duration = .1;
@@ -12,13 +6,13 @@ class MiseryDisplayInventoryActions
     fadeout = 0;
     class controls
     {
-        class Misery_ListActions : Misery_RscListBox
+        class CLASS(listActions) : CLASS(RscListBox)
         {
             idc=10001;
             text="";
             tooltip="Actions";
-            onLBSelChanged="[false] execVM '\z\misery\addons\inventory\functions\fnc_SelectAction.sqf'";
-            onLBDblClick="[true] execVM '\z\misery\addons\inventory\functions\fnc_SelectAction.sqf'";
+            onLBSelChanged= QUOTE([false] call EFUNC(inventory,selectAction));
+            onLBDblClick= QUOTE([true] call EFUNC(inventory,selectAction));
             x=UI_MACRO_COL+(UI_MACRO_COLINC*10);
             y=UI_MACRO_ROW+(UI_MACRO_ROWINC*1);
             w=UI_MACRO_BUTTON_W+(UI_MACRO_COLINC*1);

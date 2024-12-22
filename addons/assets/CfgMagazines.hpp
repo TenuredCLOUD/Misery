@@ -9,7 +9,7 @@ class CfgMagazines {
         descriptionShort = "";
     };
 
-    class CLASS(PureTablets): CLASS(ItemMagCore) {
+    class CLASS(pureTablets): CLASS(ItemMagCore) {
         count = 30;
         descriptionShort = "$STR_MISERY_PAIN_DESCRIPTION";
         displayName = "$STR_MISERY_PAIN_DISPLAYNAME";
@@ -19,7 +19,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(Painkillers): CLASS(ItemMagCore) {
+    class CLASS(painkillers): CLASS(ItemMagCore) {
         count = 15;
         descriptionShort = "$STR_MISERY_PAIN_DESCRIPTION";
         displayName = "$STR_MISERY_PAIN_DISPLAYNAME";
@@ -29,7 +29,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(Caffeine): CLASS(ItemMagCore) {
+    class CLASS(caffeine): CLASS(ItemMagCore) {
         count = 8;
         descriptionShort = "$STR_MISERY_CAFFEINE_DESCRIPTION";
         displayName = "$STR_MISERY_CAFFEINE_DISPLAYNAME";
@@ -38,7 +38,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(CharcoalTablets): CLASS(ItemMagCore) {
+    class CLASS(charcoalTablets): CLASS(ItemMagCore) {
         count = 10;
         descriptionShort = "$STR_MISERY_CHARCOALTABS_DESCRIPTION";
         displayName = "$STR_MISERY_CHARCOALTABS_DISPLAYNAME";
@@ -47,7 +47,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(Caffetin): CLASS(ItemMagCore) {
+    class CLASS(caffetin): CLASS(ItemMagCore) {
         count = 4;
         descriptionShort = "$STR_MISERY_CAFFETIN_DESCRIPTION";
         displayName = "$STR_MISERY_CAFFETIN_DISPLAYNAME";
@@ -57,7 +57,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(ClozapineBox): CLASS(ItemMagCore) {
+    class CLASS(clozapineBox): CLASS(ItemMagCore) {
         count = 8;
         descriptionShort = "$STR_MISERY_CLOZAPINEBOX_DESCRIPTION";
         displayName = "$STR_MISERY_CLOZAPINEBOX_DISPLAYNAME";
@@ -66,7 +66,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(Antiparasitic): CLASS(ItemMagCore) {
+    class CLASS(antiparasitic): CLASS(ItemMagCore) {
         count = 8;
         descriptionShort = "$STR_MISERY_ANTIPARASITIC_DESCRIPTION";
         displayName = "$STR_MISERY_ANTIPARASITIC_DISPLAYNAME";
@@ -76,7 +76,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(Antibiotic): CLASS(ItemMagCore) {
+    class CLASS(antibiotic): CLASS(ItemMagCore) {
         count = 8;
         descriptionShort = "$STR_MISERY_ANTIBIOTIC_DESCRIPTION";
         displayName = "$STR_MISERY_ANTIBIOTIC_DISPLAYNAME";
@@ -86,7 +86,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(SleepingPills): CLASS(ItemMagCore) {
+    class CLASS(sleepingPills): CLASS(ItemMagCore) {
         count = 8;
         descriptionShort = "$STR_MISERY_SLEEPPACK_DESCRIPTION";
         displayName = "$STR_MISERY_SLEEPPACK_DISPLAYNAME";
@@ -96,7 +96,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(PotassiumIodate): CLASS(ItemMagCore) {
+    class CLASS(potassiumIodate): CLASS(ItemMagCore) {
         count = 15;
         descriptionShort = "Contains Anti-Radiation tablets";
         displayName = "Potassium Iodate";
@@ -106,7 +106,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(CenestinBottle): CLASS(ItemMagCore) {
+    class CLASS(cenestinBottle): CLASS(ItemMagCore) {
         count = 15;
         descriptionShort = "$STR_MISERY_CENESTINBOTTLE_DESCRIPTION";
         displayName = "$STR_MISERY_CENESTINBOTTLE_DISPLAYNAME";
@@ -116,7 +116,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(Lighter): CLASS(ItemMagCore) {
+    class CLASS(lighter): CLASS(ItemMagCore) {
         count = 100;
         descriptionShort = "$STR_MISERY_LIGHTER_DESCRIPTION";
         displayName = "$STR_MISERY_LIGHTER_DISPLAYNAME";
@@ -126,7 +126,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(ElectricHandsaw): CLASS(ItemMagCore) {
+    class CLASS(electricHandsaw): CLASS(ItemMagCore) {
         count = 10;
         descriptionShort = "$STR_MISERY_ELECTRICHANDSAW_DESCRIPTION";
         displayName = "$STR_MISERY_ELECTRICHANDSAW_DISPLAYNAME";
@@ -135,7 +135,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(Chainsaw): CLASS(ItemMagCore) {
+    class CLASS(chainsaw): CLASS(ItemMagCore) {
         count = 25;
         descriptionShort = "$STR_MISERY_CHAINSAW_DESCRIPTION";
         displayName = "$STR_MISERY_CHAINSAW_DISPLAYNAME";
@@ -145,7 +145,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(SawFuel): CLASS(ItemMagCore) {
+    class CLASS(sawFuel): CLASS(ItemMagCore) {
         count = 100;
         descriptionShort = "$STR_MISERY_SAWFUEL_DESCRIPTION";
         displayName = "$STR_MISERY_SAWFUEL_DISPLAYNAME";
@@ -155,7 +155,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(ERU_On): CLASS(ItemMagCore) {
+    class CLASS(eru_On): CLASS(ItemMagCore) {
         ace_disableRepacking = 1;
         count = 100;
         descriptionShort = "$STR_MISERY_ERU_DESCRIPTION";
@@ -165,7 +165,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(ERU_Off): CLASS(ItemMagCore) {
+    class CLASS(eru_Off): CLASS(ItemMagCore) {
         ace_disableRepacking = 1;
         count = 100;
         descriptionShort = "$STR_MISERY_ERU_OFF_DESCRIPTION";
@@ -175,7 +175,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(HeadlampON): CLASS(ItemMagCore) {
+    class CLASS(headlamp_On): CLASS(ItemMagCore) {
         ace_disableRepacking = 1;
         count = 100;
         descriptionShort = "$STR_MISERY_HEADLAMPON_DESCRIPTION";
@@ -185,7 +185,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(HeadlampOFF): CLASS(ItemMagCore) {
+    class CLASS(headlamp_Off): CLASS(ItemMagCore) {
         ace_disableRepacking = 1;
         count = 100;
         descriptionShort = "$STR_MISERY_HEADLAMPOFF_DESCRIPTION";
@@ -195,7 +195,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(PersonalGeigerOn): CLASS(ItemMagCore) {
+    class CLASS(geiger_On): CLASS(ItemMagCore) {
         ace_disableRepacking = 1;
         count = 100;
         descriptionShort = "$STR_MISERY_PERSONALGEIGER_DESCRIPTION";
@@ -206,7 +206,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(PersonalGeigerOff): CLASS(ItemMagCore) {
+    class CLASS(geiger_Off): CLASS(ItemMagCore) {
         ace_disableRepacking = 1;
         scope = 2;
         displayName = "$STR_MISERY_PERSONALGEIGEROFF_DISPLAYNAME";
@@ -217,7 +217,7 @@ class CfgMagazines {
         mass = 10;
     };
 
-    class CLASS(RFHighRangeOn): CLASS(ItemMagCore) {
+    class CLASS(rfHighRange_On): CLASS(ItemMagCore) {
         ace_disableRepacking = 1;
         count = 100;
         descriptionShort = "$STR_MISERY_RFHIGHRANGE_DESCRIPTION";
@@ -228,7 +228,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(RFHighRangeOff): CLASS(ItemMagCore) {
+    class CLASS(rfHighRange_Off): CLASS(ItemMagCore) {
         ace_disableRepacking = 1;
         count = 100;
         descriptionShort = "$STR_MISERY_RFHIGHRANGE_DESCRIPTION";
@@ -239,7 +239,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(AutoBatt): CLASS(ItemMagCore) {
+    class CLASS(autoBattery): CLASS(ItemMagCore) {
         ace_disableRepacking = 1;
         count = 100;
         descriptionShort = "$STR_MISERY_AUTOBATT_DESCRIPTION";
@@ -250,7 +250,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(AutoBatt_Heavy): CLASS(ItemMagCore) {
+    class CLASS(autoBattery_Heavy): CLASS(ItemMagCore) {
         ace_disableRepacking = 1;
         count = 100;
         descriptionShort = "$STR_MISERY_AUTOBATTHEAVY_DESCRIPTION";
@@ -261,7 +261,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(Matches): CLASS(ItemMagCore) {
+    class CLASS(matches): CLASS(ItemMagCore) {
         count = 20;
         descriptionShort = "$STR_MISERY_MATCHESPACK_DESCRIPTION";
         displayName = "$STR_MISERY_MATCHESPACK_DISPLAYNAME";
@@ -271,7 +271,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(CigarettePack): CLASS(ItemMagCore) {
+    class CLASS(cigarettePack): CLASS(ItemMagCore) {
         count = 20;
         descriptionShort = "$STR_MISERY_CIGARETTEPACK_DESCRIPTION";
         displayName = "$STR_MISERY_CIGARETTEPACK_DISPLAYNAME";
@@ -281,7 +281,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(Cigar): CLASS(ItemMagCore) {
+    class CLASS(cigar): CLASS(ItemMagCore) {
         count = 4;
         descriptionShort = "$STR_MISERY_CIGAR_DESCRIPTION";
         displayName = "$STR_MISERY_CIGAR_DISPLAYNAME";
@@ -290,7 +290,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(WolfBeer): CLASS(ItemMagCore) {
+    class CLASS(wolfBeer): CLASS(ItemMagCore) {
         count = 4;
         descriptionShort = "$STR_MISERY_WOLFBEER_DESCRIPTION";
         displayName = "$STR_MISERY_WOLFBEER_DISPLAYNAME";
@@ -301,7 +301,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(Vodka): CLASS(ItemMagCore) {
+    class CLASS(vodka): CLASS(ItemMagCore) {
         count = 8;
         descriptionShort = "$STR_MISERY_VODKA_DESCRIPTION";
         displayName = "$STR_MISERY_VODKA_DISPLAYNAME";
@@ -312,7 +312,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(CanteenPurified): CLASS(ItemMagCore) {
+    class CLASS(canteen_Purified): CLASS(ItemMagCore) {
         count = 8;
         descriptionShort = "$STR_MISERY_CANTEENPURIFIED_DESCRIPTION";
         displayName = "$STR_MISERY_CANTEENPURIFIED_DISPLAYNAME";
@@ -322,7 +322,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(CanteenClean): CLASS(ItemMagCore) {
+    class CLASS(canteen_Clean): CLASS(ItemMagCore) {
         count = 8;
         descriptionShort = "$STR_MISERY_CANTEENCLEAN_DESCRIPTION";
         displayName = "$STR_MISERY_CANTEENCLEAN_DISPLAYNAME";
@@ -332,7 +332,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(CanteenDirty): CLASS(ItemMagCore) {
+    class CLASS(canteen_Dirty): CLASS(ItemMagCore) {
         count = 8;
         descriptionShort = "$STR_MISERY_CANTEENDIRTY_DESCRIPTION";
         displayName = "$STR_MISERY_CANTEENDIRTY_DISPLAYNAME";
@@ -342,7 +342,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(WaterBottlePurified): CLASS(ItemMagCore) {
+    class CLASS(waterBottle_Purified): CLASS(ItemMagCore) {
         count = 4;
         descriptionShort = "$STR_MISERY_WATERBOTTLEPURIFIED_DESCRIPTION";
         displayName = "$STR_MISERY_WATERBOTTLEPURIFIED_DISPLAYNAME";
@@ -352,7 +352,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(WaterBottleClean): CLASS(ItemMagCore) {
+    class CLASS(waterBottle_Clean): CLASS(ItemMagCore) {
         count = 4;
         descriptionShort = "$STR_MISERY_WATERBOTTLECLEAN_DESCRIPTION";
         displayName = "$STR_MISERY_WATERBOTTLECLEAN_DISPLAYNAME";
@@ -362,7 +362,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(WaterBottleDirty): CLASS(ItemMagCore) {
+    class CLASS(waterBottle_Dirty): CLASS(ItemMagCore) {
         count = 4;
         descriptionShort = "$STR_MISERY_WATERBOTTLEDIRTY_DESCRIPTION";
         displayName = "$STR_MISERY_WATERBOTTLEDIRTY_DISPLAYNAME";
@@ -372,7 +372,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(CoffeeGrounds): CLASS(ItemMagCore) {
+    class CLASS(coffeeGrounds): CLASS(ItemMagCore) {
         count = 4;
         descriptionShort = "$STR_MISERY_COFFEEGROUNDS_DESCRIPTION";
         displayName = "$STR_MISERY_COFFEEGROUNDS_DISPLAYNAME";
@@ -382,7 +382,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(Rice): CLASS(ItemMagCore) {
+    class CLASS(rice): CLASS(ItemMagCore) {
         count = 20;
         descriptionShort = "$STR_MISERY_RICE_DESCRIPTION";
         displayName = "$STR_MISERY_RICE_DISPLAYNAME";
@@ -392,7 +392,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(WaterJerryF): CLASS(ItemMagCore) {
+    class CLASS(waterJerryCan_Full): CLASS(ItemMagCore) {
         count = 20;
         descriptionShort = "$STR_MISERY_WATERJERRYF_DESCRIPTION";
         displayName = "$STR_MISERY_WATERJERRYF_DISPLAYNAME";
@@ -402,7 +402,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(WaterJerryFD): CLASS(ItemMagCore) {
+    class CLASS(waterJerryCan_FullDirty): CLASS(ItemMagCore) {
         count = 20;
         descriptionShort = "$STR_MISERY_WATERJERRYFD_DESCRIPTION";
         displayName = "$STR_MISERY_WATERJERRYFD_DISPLAYNAME";
@@ -412,7 +412,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(JetFuel): CLASS(ItemMagCore) {
+    class CLASS(jetFuel): CLASS(ItemMagCore) {
         count = 20;
         descriptionShort = "$STR_MISERY_JETFUELF_DESCRIPTION";
         displayName = "$STR_MISERY_JETFUELF_DISPLAYNAME";
@@ -422,7 +422,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(Diesel): CLASS(ItemMagCore) {
+    class CLASS(diesel): CLASS(ItemMagCore) {
         count = 20;
         descriptionShort = "$STR_MISERY_DIESELF_DESCRIPTION";
         displayName = "$STR_MISERY_DIESELF_DISPLAYNAME";
@@ -432,7 +432,7 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(Petrol): CLASS(ItemMagCore) {
+    class CLASS(petrol): CLASS(ItemMagCore) {
         count = 20;
         descriptionShort = "$STR_MISERY_PETROLF_DESCRIPTION";
         displayName = "$STR_MISERY_PETROLF_DISPLAYNAME";

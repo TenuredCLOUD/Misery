@@ -41,6 +41,6 @@ if (_activated && isServer) then {
 (_module getVariable "Misery_AI_SpawnTimer"),
 (_module getVariable "Misery_AI_DeleteTimer"),
 (_module getVariable "Misery_AI_SpawnLimit")
-] execVM "\z\misery\addons\framework\scripts\Modules\Ambient_AI_Zone\Settings.sqf";
+] call FUNC(settings);
 };
 true

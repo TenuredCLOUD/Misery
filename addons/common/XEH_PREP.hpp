@@ -1,6 +1,5 @@
 PREP(buildingPositions);
 PREP(buildingPositionsInside);
-PREP(formatToTile);
 PREP(getSimplifiedLoadout);
 PREP(hasItem);
 PREP(isInGeometry);

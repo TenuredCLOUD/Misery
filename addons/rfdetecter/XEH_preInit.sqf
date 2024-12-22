@@ -13,14 +13,14 @@ private _gvars = ["dsaSpookBases", "dsaDevMutants", "dsaWebknightCreatures"];
 {
 waitUntil {!isNil _x}; // Check Gvar arrays every second
 } forEach _gvars;
-[] execVM "\z\misery\addons\rfdetector\functions\fnc_RFsyncLoop.sqf";
+[] call "\z\misery\addons\rfdetector\functions\fnc_RFsyncLoop.sqf";
 }else{
-[] execVM "\z\misery\addons\rfdetector\functions\fnc_RFsyncLoop.sqf";
+[] call "\z\misery\addons\rfdetector\functions\fnc_RFsyncLoop.sqf";
     };
 };
 
 // if (((count (entities "Misery_RadioSettings")) > 0) && hasInterface) then {
-// [] execVM "\z\misery\addons\framework\scripts\survival\Radio\RadiosyncLoop.sqf";
+// [] call "\z\misery\addons\framework\scripts\survival\Radio\RadiosyncLoop.sqf";
 // };
 
 //Auto Detector changes after player killed:

@@ -10,7 +10,7 @@
             if (_value) then {
             GVAR(enabled) = true;
             if (hasInterface) then {
-            [] execVM "\z\misery\addons\nonvg\functions\fnc_TPPNONVG.sqf";
+            [] call FUNC(disableNightVision);
             };
                 }else{
             GVAR(enabled) = false;

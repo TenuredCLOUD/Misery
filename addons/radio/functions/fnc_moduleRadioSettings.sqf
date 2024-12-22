@@ -32,7 +32,7 @@ if (_activated && isServer) then {
     (_module getVariable "Misery_Radiosoundclassarray"),
     (_module getVariable "Misery_Radioobjectarray"),
     (_module getVariable "Misery_Radiosoundmaintimer")
-    ] execVM Radio\Radiobroadcast);
+    ] call Radio\Radiobroadcast);
 };
 true
 */
