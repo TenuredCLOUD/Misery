@@ -303,11 +303,11 @@ for "_i" from 1 to _numEntities do {
                     _caller setVariable ["MiseryCurrency", _playerMoney - _recruitmentCost];
                     [_target] joinSilent _caller;
                     [_target,_actionId] call BIS_fnc_holdActionRemove;
-                    private _formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_SUCCESS", _Unitidentity, MiseryCurrencySymbol, [_recruitmentCost] call Misery_fnc_formatNumber]];
-                    [_formattedText] call EFUNC(common,formatToTile);
+                    private _recruitSuccess = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_SUCCESS", _Unitidentity, MiseryCurrencySymbol, [_recruitmentCost] call Misery_fnc_formatNumber]];
+                    [parseText _recruitSuccess, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
                 }else{
-                    private _formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_FAIL",_Unitidentity]];
-                    [_formattedText] call EFUNC(common,formatToTile);
+                    private _recruitFail = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_FAIL",_Unitidentity]];
+                    [parseText _recruitFail, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
                 };
             },
             {},
