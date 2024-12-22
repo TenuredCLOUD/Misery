@@ -25,7 +25,7 @@ player setVariable ["MiseryPoison", MACRO_PLAYER_TOXICITY];
 player setVariable ["MiseryInfection", MACRO_PLAYER_INFECTION];
 player setVariable ["MiseryFear", MACRO_PLAYER_FEAR];
 player setVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE];
-player setVariable ["MiseryPlayerTemp", (call EFUNC(temperature,Temperature)) select 0];
+player setVariable ["MiseryPlayerTemp", (call EFUNC(temperature,environment)) select 0];
 player setVariable ["MiseryBreathFogSim", nil];
 player setVariable ["MiseryBreath", false];
 
@@ -40,18 +40,18 @@ if (MiserysurvivalSaveName == "") then {
 
 // Persistency
 if (MiserysurvivalPersistence == 1) then {
-    [[], "\z\misery\addons\persistency\functions\fnc_Persistencehandle.sqf"] remoteExec ["execVM", 0, true];
+    [[], EFUNC(persistency,persistenceHandle)] remoteExec ["call", 0, true];
 };
 
 if (MiserysurvivalPersistence == 2) then {
     if (hasInterface) then {
     [] call EFUNC(persistency,Keyhandle);
     };
-    [[], "\z\misery\addons\persistency\functions\fnc_Persistencehandle.sqf"] remoteExec ["execVM", 0, true];
+    [[], EFUNC(persistency,persistenceHandle)] remoteExec ["call", 0, true];
 };
 
 if !(MiserysurvivalKillhandleScript == "") then {
-    [[], "\z\misery\addons\persistency\functions\fnc_Killhandle.sqf"] remoteExec ["execVM", 0, true];
+    [[], EFUNC(persistency,killHandle)] remoteExec ["call", 0, true];
 };
 
 // Persistency reloader

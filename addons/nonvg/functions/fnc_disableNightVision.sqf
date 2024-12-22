@@ -26,7 +26,7 @@
             if(MiseryDebug)then{systemChat "Misery TPP NVG's cycle terminated..."};
             //Only re-execute if MiseryNoNVG_TPP_ENABLED is true:
             if (MiseryNoNVG_TPP_ENABLED) then {
-            [] execVM "\z\misery\addons\nonvg\functions\fnc_TPPNONVG.sqf";
+            [] call FUNC(disableNightVision);
             if(MiseryDebug)then{systemChat "Misery TPP NVG's cycle checks re-initiated..."};
             };
         };

@@ -24,8 +24,8 @@ _MHunger = player getVariable ["MiseryHunger", MACRO_PLAYER_HUNGER];
 _MDebuffs = player getVariable "MiseryDebuffs";
 
 //Player effective temperature pre-check:
-if ([player] call Misery_fnc_NearFire) exitWith {};
-if ((([player] call Misery_fnc_Isinside) select 0) && (([player] call Misery_fnc_Isinside) select 1)) exitWith {};
+if ([player] call EFUNC(common,nearFire)) exitWith {};
+if (insideBuilding player == 1) exitWith {};
 if !(isNull objectParent player) exitWith {};
 
 if (_MPlayertemp < 20) then {

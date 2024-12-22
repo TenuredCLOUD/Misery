@@ -27,5 +27,5 @@ Misery_active_AmbAI_Groups = 0;
 Misery_AmbAI_GenerationReady = true;
 
 if (isServer) exitWith {
-[] execVM "\z\misery\addons\Ambient_AI_Zone\functions\fnc_ModuleCheck.sqf";
+[] call FUNC(moduleCheck);
 };

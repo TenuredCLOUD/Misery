@@ -20,11 +20,11 @@ private ["_hasSledgehammer"];
 _hasSledgehammer = false;
 
 if (MiseryWBKIMS) then {
-    if (("Misery_Sledghammer" in items player || "WBK_survival_weapon_2" in (weapons player)) && ([[MACRO_NMB_ITEMS], 5] call EFUNC(common,nearCraftingStation))) then {
+    if (([["Misery_Sledghammer","WBK_survival_weapon_2"]] call EFUNC(common,hasItem)) && ([[MACRO_NMB_ITEMS], 5] call EFUNC(common,nearCraftingStation))) then {
         _hasSledgehammer = true;
     };
 } else {
-    if ("Misery_Sledghammer" in items player && ([[MACRO_NMB_ITEMS], 5] call EFUNC(common,nearCraftingStation))) then {
+    if ([["Misery_Sledghammer"]] call EFUNC(common,hasItem) && ([[MACRO_NMB_ITEMS], 5] call EFUNC(common,nearCraftingStation))) then {
         _hasSledgehammer = true;
     };
 };

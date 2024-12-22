@@ -15,7 +15,7 @@
  *
 */
 
-if !("Misery_9vbat" in items player) then {
+if !([["Misery_9vbat"]] call EFUNC(common,hasItem)) then {
 
    titleText ["It's completely dead...", "PLAIN DOWN"];
 

@@ -24,7 +24,7 @@ player addEventHandler ["InventoryOpened", {
 
         private _display = findDisplay 46 createDisplay "MiseryINVACT_GUI";
         MiseryActionsMode = "";
-        [] call FUNC(DisplayActions);
+        [] call FUNC(displayActions);
 
         private _handle = [{
             params ["_display", "_handle"];

@@ -1,5 +1,5 @@
             [
-            "MiseryNoNVG_TPP", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
+            QGVAR(enabled), // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
             "CHECKBOX", // setting type
             ["Misery TPP No NVG's", "Actively disables NVG's if the player is in third person (TPP) trying to use them, can greatly increase difficulty, also levels the playing field..."], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Server Difficulty"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
@@ -8,12 +8,12 @@
             {
             params ["_value"];
             if (_value) then {
-            MiseryNoNVG_TPP_ENABLED = true;
+            GVAR(enabled) = true;
             if (hasInterface) then {
-            [] execVM "\z\misery\addons\nonvg\functions\fnc_TPPNONVG.sqf";
+            [] call FUNC(disableNightVision);
             };
                 }else{
-            MiseryNoNVG_TPP_ENABLED = false;
+            GVAR(enabled) = false;
             };
             } // function that will be executed once on mission start and every time the setting is changed.
             ] call CBA_fnc_addSetting;

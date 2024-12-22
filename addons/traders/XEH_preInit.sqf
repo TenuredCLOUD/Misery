@@ -9,7 +9,7 @@ ADDON = false;
 /*
 //Traders
 if (MiseryDynamicMarketsActive && isServer) then {
-    [] execVM "\z\misery\addons\traders\functions\fnc_TrackTraders.sqf";
+    [] call "\z\misery\addons\traders\functions\fnc_TrackTraders.sqf";
 };
 */
 

@@ -14,12 +14,16 @@
  *
 */
 
+/*
+Will most likely rewrite to new UI based use - Or move to an ACE action
+*/
+
 [
     player,
     "Stitch wounds",
     QPATHTOEF(icons,data\needlethread_ca.paa),
     QPATHTOEF(icons,data\needlethread_ca.paa),
-    "'Misery_Needlethread' in items player",
+    "[['Misery_Needlethread']] call EFUNC(common,hasItem)",
     "[player] call ace_medical_blood_fnc_isBleeding",
     {
     //Force holstering

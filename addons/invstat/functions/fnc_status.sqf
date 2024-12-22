@@ -98,19 +98,19 @@ lbClear _ailmentsList;
     // if ((goggles player in antirad_goggles) && !(vest player in antirad_vests || backpack player in antirad_packs)) then {
     // _GascartridgeVal = format["%1%2",round(_cartridgecalc * 1), "%"];
     // _GasVal ctrlSetText _GascartridgeVal;
-    // ["buff","Gas Mask", "Data\gasmask.paa", "You are wearing a gasmask, it can protect your lungs from harmful contaminants like radioactive particles, as well as toxic gases. You should be mindful of your cartridges..."] call Misery_fnc_AddBuffOrAilment;
+    // ["buff","Gas Mask", "Data\gasmask.paa", "You are wearing a gasmask, it can protect your lungs from harmful contaminants like radioactive particles, as well as toxic gases. You should be mindful of your cartridges..."] call FUNC(addBuffOrAilment);
     // };
     // if ((goggles player in antirad_goggles) && (vest player in antirad_vests || backpack player in antirad_packs) || (vest player in antirad_vests || backpack player in antirad_packs)) then {
     // _GasSuppAir = format["%1","∞"];
     // _GasVal ctrlSetText _GasSuppAir;
-    // ["buff","Supplied Air", "Data\SCBA.paa", "You are utilizing an SCBA device which is useful in an IDLH (Immediately Dangerous to Life or health) area. You have the greatest protection gear available for air contaminants."] call Misery_fnc_AddBuffOrAilment;
+    // ["buff","Supplied Air", "Data\SCBA.paa", "You are utilizing an SCBA device which is useful in an IDLH (Immediately Dangerous to Life or health) area. You have the greatest protection gear available for air contaminants."] call FUNC(addBuffOrAilment);
     // };
     // if ((!(goggles player in antirad_goggles) && !(vest player in antirad_vests || backpack player in antirad_packs)) && (!(goggles player in antirad_goggles) && !(vest player in antirad_vests || backpack player in antirad_packs) || !(vest player in antirad_vests || backpack player in antirad_packs))) then {
     // if (_GasmaskBuff > -1) then {
-    //     ["buff","Gas Mask"] call Misery_fnc_RemoveBuffOrAilment;
+    //     ["buff","Gas Mask"] call FUNC(removeBuffOrAilment);
     // };
     // if (_SCBABuff > -1) then {
-    //     ["buff","Supplied Air"] call Misery_fnc_RemoveBuffOrAilment;
+    //     ["buff","Supplied Air"] call FUNC(removeBuffOrAilment);
     // };
     //     };
     //         };
@@ -125,21 +125,21 @@ lbClear _ailmentsList;
     if (_isInArray && !(vest player in antirad_vests || backpack player in antirad_packs)) then {
         _GascartridgeVal = format["%1%2", round(_cartridgecalc * 1), "%"];
         _GasVal ctrlSetText _GascartridgeVal;
-        ["buff", "Gas Mask", "Data\gasmask.paa", "You are wearing a gasmask, it can protect your lungs from harmful contaminants like radioactive particles, as well as toxic gases. You should be mindful of your cartridges..."] call Misery_fnc_AddBuffOrAilment;
+        ["buff", "Gas Mask", "Data\gasmask.paa", "You are wearing a gasmask, it can protect your lungs from harmful contaminants like radioactive particles, as well as toxic gases. You should be mindful of your cartridges..."] call FUNC(addBuffOrAilment);
     };
 
     if (_isInArray && (vest player in antirad_vests || backpack player in antirad_packs) || (vest player in antirad_vests || backpack player in antirad_packs)) then {
         _GasSuppAir = format["%1", "∞"];
         _GasVal ctrlSetText _GasSuppAir;
-        ["buff", "Supplied Air", "Data\SCBA.paa", "You are utilizing an SCBA device which is useful in an IDLH (Immediately Dangerous to Life or health) area. You have the greatest protection gear available for air contaminants."] call Misery_fnc_AddBuffOrAilment;
+        ["buff", "Supplied Air", "Data\SCBA.paa", "You are utilizing an SCBA device which is useful in an IDLH (Immediately Dangerous to Life or health) area. You have the greatest protection gear available for air contaminants."] call FUNC(addBuffOrAilment);
     };
 
     if ((!_isInArray && !(vest player in antirad_vests || backpack player in antirad_packs)) && (!_isInArray && !(vest player in antirad_vests || backpack player in antirad_packs) || !(vest player in antirad_vests || backpack player in antirad_packs))) then {
         if (_GasmaskBuff > -1) then {
-            ["buff", "Gas Mask"] call Misery_fnc_RemoveBuffOrAilment;
+            ["buff", "Gas Mask"] call FUNC(removeBuffOrAilment);
         };
         if (_SCBABuff > -1) then {
-            ["buff", "Supplied Air"] call Misery_fnc_RemoveBuffOrAilment;
+            ["buff", "Supplied Air"] call FUNC(removeBuffOrAilment);
         };
     };
 };
@@ -193,17 +193,17 @@ lbClear _ailmentsList;
     private _PsyProtected = _ailments findIf {(_x select 0) isEqualTo "Psy Emissions (Protected)"};
     private _PsyNoProtection = _ailments findIf {(_x select 0) isEqualTo "Psy Emissions"};
     if (!(headgear player in _psyprot) && MiseryinPsyfield) then {
-        ["ailment","Psy Emissions", "data\Psyfield.paa", "You hear a very loud pulsing hum, its vibrations are pounding in your head, you're not sure how much longer you can take it..."] call Misery_fnc_AddBuffOrAilment;
+        ["ailment","Psy Emissions", "data\Psyfield.paa", "You hear a very loud pulsing hum, its vibrations are pounding in your head, you're not sure how much longer you can take it..."] call FUNC(addBuffOrAilment);
     };
     if ((headgear player in _psyprot) && MiseryinPsyfield) then {
-        ["ailment","Psy Emissions (Protected)", "data\Psyfield.paa", "You feel subtle vibrations around your skull, you are uneasy..."] call Misery_fnc_AddBuffOrAilment;
+        ["ailment","Psy Emissions (Protected)", "data\Psyfield.paa", "You feel subtle vibrations around your skull, you are uneasy..."] call FUNC(addBuffOrAilment);
     };
     if (!MiseryinPsyfield) then {
     if (_PsyNoProtection > -1) then {
-        ["ailment","Psy Emissions"] call Misery_fnc_RemoveBuffOrAilment;
+        ["ailment","Psy Emissions"] call FUNC(removeBuffOrAilment);
     };
     if (_PsyProtected > -1) then {
-        ["ailment","Psy Emissions (Protected)"] call Misery_fnc_RemoveBuffOrAilment;
+        ["ailment","Psy Emissions (Protected)"] call FUNC(removeBuffOrAilment);
     };
         };
             };
@@ -216,7 +216,7 @@ if (_MSleepiness >= 15) then {
         if (_ailmentName in _tiredAilments) then {
             private _index = _ailments findIf {(_x select 0) isEqualTo _ailmentName};
             if (_index > -1) then {
-                ["ailment", str _index] call Misery_fnc_RemoveBuffOrAilment;
+                ["ailment", str _index] call FUNC(removeBuffOrAilment);
             };
         };
     } forEach _ailments;
@@ -227,14 +227,14 @@ if (_MSleepiness >= 15) then {
     };
     private _tirednessAilment = _tiredAilments select _tirednessIndex;
     private _imageNames = ["sleepy", "sleepy1", "sleepy2", "sleepy3", "tired"];
-    ["ailment", _tirednessAilment, format ["data\%1.paa", (_imageNames select _tirednessIndex)], format ["You are %1...", _tirednessAilment]] call Misery_fnc_AddBuffOrAilment;
+    ["ailment", _tirednessAilment, format ["data\%1.paa", (_imageNames select _tirednessIndex)], format ["You are %1...", _tirednessAilment]] call FUNC(addBuffOrAilment);
 } else {
     {
         private _ailmentName = _x select 0;
         if (_ailmentName in _tiredAilments) then {
             private _index = _ailments findIf {(_x select 0) isEqualTo _ailmentName};
             if (_index > -1) then {
-                ["ailment", str _index] call Misery_fnc_RemoveBuffOrAilment;
+                ["ailment", str _index] call FUNC(removeBuffOrAilment);
             };
         };
     } forEach _ailments;
@@ -245,26 +245,26 @@ if (_MSleepiness >= 15) then {
     _infection = _ailments findIf {(_x select 0) isEqualTo "Bacterial Infection"};
 
     if(_MDebuffs find "PARASITES" != -1 && MiseryAilments == 1) then {
-        ["ailment","Parasite Infection", "data\parasites.paa", "You are infected with Parasites, You feel a gnawing hunger that is unsatiable, as well as unquenchable thirst..."] call Misery_fnc_AddBuffOrAilment;
+        ["ailment","Parasite Infection", "data\parasites.paa", "You are infected with Parasites, You feel a gnawing hunger that is unsatiable, as well as unquenchable thirst..."] call FUNC(addBuffOrAilment);
     }else{
     if (_parasites > -1) then {
-        ["ailment","Parasite Infection"] call Misery_fnc_RemoveBuffOrAilment;
+        ["ailment","Parasite Infection"] call FUNC(removeBuffOrAilment);
     };
         };
 
     if(_MPoison > 0 && MiseryAilments == 1)then{
-    ["ailment","Poisoned", "data\poison.paa", "You are poisoned, you feel a wave of unease wash over you as death lingers..."] call Misery_fnc_AddBuffOrAilment;
+    ["ailment","Poisoned", "data\poison.paa", "You are poisoned, you feel a wave of unease wash over you as death lingers..."] call FUNC(addBuffOrAilment);
     }else{
     if (_poison > -1) then {
-        ["ailment","Poisoned"] call Misery_fnc_RemoveBuffOrAilment;
+        ["ailment","Poisoned"] call FUNC(removeBuffOrAilment);
     };
         };
 
     if(_MInfection > 0 && MiseryAilments == 1)then{
-        ["ailment","Bacterial Infection", "data\infection.paa", "You have a Bacterial infection, your breaths are shallow, and feel hot. You can feel your muscles weakening..."] call Misery_fnc_AddBuffOrAilment;
+        ["ailment","Bacterial Infection", "data\infection.paa", "You have a Bacterial infection, your breaths are shallow, and feel hot. You can feel your muscles weakening..."] call FUNC(addBuffOrAilment);
     }else{
     if (_infection > -1) then {
-        ["ailment","Bacterial Infection"] call Misery_fnc_RemoveBuffOrAilment;
+        ["ailment","Bacterial Infection"] call FUNC(removeBuffOrAilment);
     };
         };
 
@@ -283,7 +283,7 @@ if (_MExposure <= -1) then {
     private _coldexpoAilment = _ColdExposureAilments select _coldexposureindex;
     private _imageNames = ["chilly", "cold", "freezing", "hypo", "hypo2"];
     private _ColdExpoDesclevels = ["You feel chilly...", "You are cold...", "You are freezing...", "You are at risk of hypothermia...", "You are hypothermic..."];
-    ["ailment", _coldexpoAilment, format ["data\%1.paa", (_imageNames select _coldexposureindex)], format ["%1", (_ColdExpoDesclevels select _coldexposureindex)]] call Misery_fnc_AddBuffOrAilment;
+    ["ailment", _coldexpoAilment, format ["data\%1.paa", (_imageNames select _coldexposureindex)], format ["%1", (_ColdExpoDesclevels select _coldexposureindex)]] call FUNC(addBuffOrAilment);
 };
 
 private _HeatExposureAilments = ["Warm", "Hot", "Fever", "Hyperthermia risk", "Hyperthermic"];
@@ -301,7 +301,7 @@ if (_MExposure >= 1) then {
     private _heatexpoAilment = _HeatExposureAilments select _heatexposureindex;
     private _imageNames = ["hot", "hot2", "fever", "hyper", "hyper2"];
     private _HeatExpolevels = ["You feel a bit warm...", "You feel hot...", "You have a fever...", "You are at risk of hyperthermia...", "You are hyperthermic..."];
-    ["ailment", _heatexpoAilment, format ["data\%1.paa", (_imageNames select _heatexposureindex)], format ["%1", (_HeatExpolevels select _heatexposureindex)]] call Misery_fnc_AddBuffOrAilment;
+    ["ailment", _heatexpoAilment, format ["data\%1.paa", (_imageNames select _heatexposureindex)], format ["%1", (_HeatExpolevels select _heatexposureindex)]] call FUNC(addBuffOrAilment);
 };
 
 if (_MExposure == 0) then {
@@ -310,7 +310,7 @@ if (_MExposure == 0) then {
         if (_ailmentName in (_ColdExposureAilments + _HeatExposureAilments)) then {
             private _index = _ailments findIf {(_x select 0) isEqualTo _ailmentName};
             if (_index > -1) then {
-                ["ailment", str _index] call Misery_fnc_RemoveBuffOrAilment;
+                ["ailment", str _index] call FUNC(removeBuffOrAilment);
             };
         };
 } forEach _ailments;
@@ -363,29 +363,22 @@ _FatigueNum ctrlSetText _FatigueNumVal;
     _NFireBuff = _buffs findIf {(_x select 0) isEqualTo "Near Fire"};
     _ShelterBuff = _buffs findIf {(_x select 0) isEqualTo "Sheltered"};
     _CoverageBuff = _buffs findIf {(_x select 0) isEqualTo "Under Roof"};
-    if ([player] call Misery_fnc_NearFire) then {
-    ["buff","Near Fire", "data\nearfire.paa", "When near a fire, you will be warmed from the cold, you can also utilize the fire for cooking, or boiling water to kill off micro-organisms..."] call Misery_fnc_AddBuffOrAilment;
+    if ([player] call EFUNC(common,nearFire)) then {
+    ["buff","Near Fire", "data\nearfire.paa", "When near a fire, you will be warmed from the cold, you can also utilize the fire for cooking, or boiling water to kill off micro-organisms..."] call FUNC(addBuffOrAilment);
     }else{
     if (_NFireBuff > -1) then {
-    ["buff","Near Fire"] call Misery_fnc_RemoveBuffOrAilment;
+    ["buff","Near Fire"] call FUNC(removeBuffOrAilment);
     };
         };
 
-    if ((([player] call Misery_fnc_Isinside) select 0) && (([player] call Misery_fnc_Isinside) select 1)) then {
-        ["buff","Sheltered", "data\shelter.paa", "You are sheltered from the weather, while inside you cannot build a fire due to smoke inhalation..."] call Misery_fnc_AddBuffOrAilment;
+    if (insideBuilding player == 1) then {
+        ["buff","Sheltered", "data\shelter.paa", "You are sheltered from the weather, while inside you cannot build a fire due to smoke inhalation..."] call FUNC(addBuffOrAilment);
     }else{
     if (_ShelterBuff > -1) then {
-    ["buff","Sheltered"] call Misery_fnc_RemoveBuffOrAilment;
+    ["buff","Sheltered"] call FUNC(removeBuffOrAilment);
     };
-        };
-    if ((([player] call Misery_fnc_Isinside) select 0)) then {
-        ["buff","Under Roof", "data\roof.paa", "You are under a roof, protected from the rain, a fire can safetly be constructed here..."] call Misery_fnc_AddBuffOrAilment;
-    }else{
-    if (_CoverageBuff > -1) then {
-    ["buff","Under Roof"] call Misery_fnc_RemoveBuffOrAilment;
     };
-        };
-            };
+};
 
     }, 0, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;

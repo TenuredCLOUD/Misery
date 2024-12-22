@@ -82,6 +82,6 @@ _serialized = [_namespace] call CBA_fnc_serializeNamespace;
 
 profileNamespace setVariable [_saveName, _serialized];
 
-if !(MiserysurvivalSaveScript=="") then {[player] execVM MiserysurvivalSaveScript};
+if !(MiserysurvivalSaveScript=="") then {[player] call MiserysurvivalSaveScript};
 
 _namespace call CBA_fnc_deleteNamespace;

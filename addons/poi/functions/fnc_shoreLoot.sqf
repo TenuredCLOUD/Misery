@@ -80,7 +80,7 @@ _cratevestArray = (_this select 13) call EFUNC(common,parseArray);
 _cratebackpackArray = (_this select 14) call EFUNC(common,parseArray);
 
 _player=objNull;
-_players=call Misery_fnc_ListPlayers;
+_players=call EFUNC(common,listPlayers);
 _players=_players-(entities "HeadlessClient_F");
 
 _SpawnFLAG = false;
@@ -144,7 +144,7 @@ if (_ModuleplacementOK) then {
         _crateuniformArray,
         _cratevestArray,
         _cratebackpackArray,
-        _maxallowedCrateitems] execVM "\z\misery\addons\poi\functions\fnc_PopulateCrate.sqf";
+        _maxallowedCrateitems] call FUNC(populateCrate);
     };
 } else {
 if (MiseryDebug) then {systemChat format["[Misery POI Framework] Module at %1 is a Shore loot module, and must be placed near a shore...",getPosATL _module];};
@@ -153,11 +153,11 @@ if (MiseryDebug) then {systemChat format["[Misery POI Framework] Module at %1 is
 if (MiseryDebug) then {
     _randID = str (diag_tickTime * 1e6) + str _module;
     _markerName = format ["Shoreloot %1", _randID];
-    _marker = createMarker [_markerName, _pos];
-    _marker setMarkerType "mil_dot";
-    _marker setMarkerColor "ColorWhite";
-    _marker setMarkerSize [0.5, 0.5];
-    _marker setMarkerAlpha 1;
+    _marker = createMarkerLocal [_markerName, _pos];
+    _marker setMarkerTypeLocal "mil_dot";
+    _marker setMarkerColorLocal "ColorWhite";
+    _marker setMarkerSizeLocal [0.5, 0.5];
+    _marker setMarkerAlphaLocal 1;
     _marker setMarkerText "[DEBUG] Shoreloot POI";
 };
 

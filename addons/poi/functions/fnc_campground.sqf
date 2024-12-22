@@ -120,7 +120,7 @@ _aimingSpeed = _this select 34;
 _Spawnchance = _this select 35;
 
 _player=objNull;
-_players=call Misery_fnc_ListPlayers;
+_players=call EFUNC(common,listPlayers);
 _players=_players-(entities "HeadlessClient_F");
 
 _pos = getPos _module;
@@ -335,7 +335,7 @@ _entityPositions = units _group apply {getPos _x};
     _crateuniformArray,
     _cratevestArray,
     _cratebackpackArray,
-    _maxallowedCrateitems] execVM "\z\misery\addons\poi\functions\fnc_PopulateCrate.sqf";
+    _maxallowedCrateitems] call FUNC(populateCrate);
 };
 
 } forEach _entityPositions;
@@ -348,11 +348,11 @@ _x action ["sitDown", _x]};
 if (MiseryDebug) then {
     _randID = str (diag_tickTime * 1e6) + str _module;
     _markerName = format ["Campground %1", _randID];
-    _marker = createMarker [_markerName, _pos];
-    _marker setMarkerType "mil_dot";
-    _marker setMarkerColor "ColorWhite";
-    _marker setMarkerSize [0.5, 0.5];
-    _marker setMarkerAlpha 1;
+    _marker = createMarkerLocal [_markerName, _pos];
+    _marker setMarkerTypeLocal "mil_dot";
+    _marker setMarkerColorLocal "ColorWhite";
+    _marker setMarkerSizeLocal [0.5, 0.5];
+    _marker setMarkerAlphaLocal 1;
     _marker setMarkerText "[DEBUG] Campground POI";
 };
 
