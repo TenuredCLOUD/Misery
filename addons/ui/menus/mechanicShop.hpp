@@ -1,7 +1,7 @@
 class CLASS(mechanicShop_ui)
 {
-    idd = 982382;
-    onLoad = "[] call 'functions\menus\VehicleMechRepairs\MechListed.sqf'; [] call 'functions\menus\VehicleMechRepairs\Veh_icon.sqf';";
+    idd = 982383;
+    onLoad = QUOTE([] call EFUNC(vehiclerearm,rearmListed); [] call EFUNC(vehiclerearm,icon));
 
 class ControlsBackground
 {
@@ -62,7 +62,7 @@ class CLASS(mechanicShop_purchase): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick ="[] call 'functions\menus\VehicleMechRepairs\ProcessPurchase.sqf';";
+    onButtonClick =QUOTE([] call EFUNC(vehiclerearm,processPurchase));
 };
 class CLASS(mechanicShop_exit): RscButton
 {
@@ -75,7 +75,7 @@ class CLASS(mechanicShop_exit): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "closeDialog 2;";
+    onButtonClick = QUOTE(closeDialog 2);
 };
 class CLASS(mechanicShop_infoBox): RscText
 {

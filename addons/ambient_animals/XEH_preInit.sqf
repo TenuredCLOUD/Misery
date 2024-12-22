@@ -8,7 +8,7 @@ ADDON = false;
 /*
 //Ambient Wildlife
 if (MiseryAmbientWildlife && isServer) then {
-[] execVM "\z\misery\addons\ambient_animals\functions\fnc_AmbientAnimals.sqf";
+[] call "\z\misery\addons\ambient_animals\functions\fnc_AmbientAnimals.sqf";
 };
 */
 ADDON = true;

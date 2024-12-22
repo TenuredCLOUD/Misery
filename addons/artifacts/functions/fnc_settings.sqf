@@ -21,5 +21,5 @@ Misery_ArtifactSpawnTimer = _this select 2;
 Misery_ArtifactDeleteTimer = _this select 3;
 
 if (isServer) exitWith {
-[] execVM "\z\misery\addons\artifacts\functions\fnc_start.sqf";
+[] call FUNC(start);
 };

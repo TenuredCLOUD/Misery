@@ -1,8 +1,8 @@
 class CLASS(generator_ui)
 {
     idd = 573849;
-    onLoad = "[] execVM '\z\misery\addons\generator\functions\fnc_Gen_PREP.sqf'; [] execVM '\z\misery\addons\generator\functions\fnc_Gen_icon.sqf';";
-    onUnload = "player setVariable ['Misery_Current_Generator', nil]";
+    onLoad = QUOTE([] call EFUNC(generator,uiPrep); [] call EFUNC(generator,icon));
+    onUnload = QUOTE(player setVariable [ARR_2(QUOTE(QGVAR(currentGenerator)),nil)]);
 
 class ControlsBackground
 {
@@ -68,7 +68,7 @@ class CLASS(generator_startStop_button): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\generator\functions\fnc_PowerButton.sqf'";
+    onButtonClick = QUOTE([] call EFUNC(generator,powerButton));
 };
 class CLASS(generator_refuel_button): RscButton
 {
@@ -83,7 +83,7 @@ class CLASS(generator_refuel_button): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\generator\functions\fnc_Refuel.sqf'";
+    onButtonClick = QUOTE([] call EFUNC(generator,refuel));
         };
     };
 };

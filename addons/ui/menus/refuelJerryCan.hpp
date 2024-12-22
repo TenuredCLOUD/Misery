@@ -1,7 +1,7 @@
 class CLASS(refuelJerryCan_ui)
 {
     idd = 982385;
-    onLoad = "[] execVM '\z\misery\addons\fuel\functions\fnc_refuelListed.sqf';";
+    onLoad = QUOTE([] call EFUNC(fuel,refuelListed));
 
 class ControlsBackground
 {
@@ -70,7 +70,7 @@ class CLASS(refuelJerryCan_refill): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick ="[] execVM '\z\misery\addons\fuel\functions\fnc_ProcessRefuel.sqf';";
+    onButtonClick =QUOTE([] call EFUNC(fuel,processRefuel));
 };
 class CLASS(refuelJerryCan_exit): RscButton
 {
@@ -83,7 +83,7 @@ class CLASS(refuelJerryCan_exit): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "closeDialog 2;";
+    onButtonClick = QUOTE(closeDialog 2);
 };
 class CLASS(refuelJerryCan_infoBox): RscText
 {

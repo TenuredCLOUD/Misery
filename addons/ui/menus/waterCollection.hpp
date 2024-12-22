@@ -1,7 +1,7 @@
 class CLASS(waterCollection_ui)
 {
     idd = 982380;
-    onLoad = "[] execVM '\z\misery\addons\watercollect\functions\fnc_ContainersListed.sqf'; [] execVM '\z\misery\addons\watercollect\functions\fnc_Showicon.sqf';";
+    onLoad = QUOTE([] call EFUNC(watercollect,containersListed); [] call EFUNC(watercollect,icon));
 
 class ControlsBackground
 {
@@ -66,7 +66,7 @@ class CLASS(waterCollection_FillContainer_Button): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\watercollect\functions\fnc_ProcessFill.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(watercollect,processFill));
 };
 class CLASS(waterCollection_drinkFromSource_Button): RscButton
 {
@@ -81,7 +81,7 @@ class CLASS(waterCollection_drinkFromSource_Button): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\watercollect\functions\fnc_DrinkFromSource.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(watercollect,drinkFromSource));
 };
 class CLASS(waterCollection_exit): RscButton
 {
@@ -96,7 +96,7 @@ class CLASS(waterCollection_exit): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "closeDialog 2;";
+    onButtonClick = QUOTE(closeDialog 2);
 };
 class CLASS(waterCollection_noteBox): RscText
 {

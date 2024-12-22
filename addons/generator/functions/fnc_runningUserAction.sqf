@@ -54,9 +54,9 @@ private _soundDummy = "Land_HelipadEmpty_F" createVehicle (getPosATL _Generator)
 
     sleep _startupDelay;
 
-    [[_Generator], "\z\misery\addons\generator\functions\fnc_Gen_Fuel.sqf"] remoteExec ["execVM", [0, -2] select isDedicated, true];
-    [[_Generator], "\z\misery\addons\generator\functions\fnc_PowerNearby.sqf"] remoteExec ["execVM", [0, -2] select isDedicated, true];
-    [[_Generator], "\z\misery\addons\generator\functions\fnc_TrackPos.sqf"] remoteExec ["execVM", [0, -2] select isDedicated, true];
+    [[_Generator], FUNC(fuel)] remoteExec ["call", [0, -2] select isDedicated, true];
+    [[_Generator], FUNC(powerNearby)] remoteExec ["call", [0, -2] select isDedicated, true];
+    [[_Generator], FUNC(trackPos)] remoteExec ["call", [0, -2] select isDedicated, true];
 
 while {true} do {
 

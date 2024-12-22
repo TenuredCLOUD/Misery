@@ -17,7 +17,7 @@ class CLASS(BackGround)
 
 class CLASS(RscProgress)
 {
-    onLoad = "_this spawn { for '_i' from 0 to 1 step 0.01 do { (_this # 0) progresssetPosition _i; sleep 0.01 } }";
+    onLoad = QUOTE(_this spawn { for '_i' from 0 to 1 step 0.01 do { (_this # 0) progresssetPosition _i; sleep 0.01 } });
     deletable = 0;
     fade = 0;
     access = 0;
@@ -340,7 +340,7 @@ class CLASS(ButtonExitTablet) : CLASS(RscButtonHidden) {
     idc = -1;
     text = "";
     tooltip = "Exit";
-    onButtonClick = "closeDialog 0";
+    onButtonClick = QUOTE(closeDialog 0);
     x = UI_MACRO_COL + (UI_MACRO_COLINC * 5.5);
     //y = UI_MACRO_ROW + (UI_MACRO_ROWINC * 12.5);
     y = UI_MACRO_TABFY;

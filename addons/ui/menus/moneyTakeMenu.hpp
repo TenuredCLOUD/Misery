@@ -2,7 +2,7 @@ class CLASS(moneyTake_ui)
 {
     idd = 358492;
 
-    onLoad = "[] execVM '\z\misery\addons\money\functions\fnc_TakeMoney.sqf';";
+    onLoad = QUOTE([] call EFUNC(money,takeMoney));
 
 class ControlsBackground
 {
@@ -47,7 +47,7 @@ class CLASS(moneyTakeMenu_take): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\money\functions\fnc_TakeMoney_Act.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(money,takeMoneyAct));
 };
 class CLASS(moneyTakeMenu_objectsFunds): RscText
 {

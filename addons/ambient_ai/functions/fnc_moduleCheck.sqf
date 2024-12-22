@@ -63,7 +63,7 @@ waitUntil {
                 (_module getVariable "Misery_AI_SpawnChance"),
                 (_module getVariable "Misery_AI_ModuleSpawnDistanceMIN"),
                 (_module getVariable "Misery_AI_ModuleSpawnDistanceMAX")
-                ] execVM "\z\misery\addons\Ambient_AI\functions\fnc_aiGeneration.sqf";
+                ] call FUNC(generation);
 
             };
         };

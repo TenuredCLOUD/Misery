@@ -23,7 +23,7 @@ _GeneratorType = typeOf _Generator;
 _PowerButton = findDisplay 573849 displayCtrl 1600;
 
 if ((ctrlText 1600) isEqualTo "Start") exitWith {
-    [_Generator] execVM "\z\misery\addons\generator\functions\fnc_Gen_RunningUserAct.sqf";
+    [_Generator] call FUNC(runningUserAction);
 };
 
 if ((ctrlText 1600) isEqualTo "Stop") exitWith {

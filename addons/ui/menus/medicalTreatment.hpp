@@ -1,7 +1,7 @@
 class CLASS(medicalTreatment_ui)
 {
     idd = 982381;
-    onLoad = "[] execVM '\z\misery\addons\medtreatment\functions\fnc_MTreatListed.sqf';";
+    onLoad = QUOTE([] call EFUNC(medtreatment,treatListed));
 
 class ControlsBackground
 {
@@ -54,7 +54,7 @@ class CLASS(medicalTreatment_purchase): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick ="[] execVM '\z\misery\addons\medtreatment\functions\fnc_ProcessPurchase.sqf';";
+    onButtonClick =QUOTE([] call EFUNC(medtreatment,processPurchase));
 };
 class CLASS(medicalTreatment_exit): RscButton
 {

@@ -2,7 +2,7 @@ class CLASS(banking_ui)
 {
     idd = 483729;
 
-    onLoad = "[] execVM '\z\misery\addons\bank\functions\fnc_Bank_UI_Updater.sqf';";
+    onLoad = QUOTE([] call EFUNC(bank,refresh));
 
 class ControlsBackground
 {
@@ -74,7 +74,7 @@ class CLASS(bank_deposit): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\bank\functions\fnc_Deposit.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(bank,deposit));
 };
 class CLASS(bank_withdraw): RscButton
 {
@@ -87,7 +87,7 @@ class CLASS(bank_withdraw): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\bank\functions\fnc_Withdraw.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(bank,withdraw));
 };
 class CLASS(bank_contribute): RscButton
 {
@@ -100,7 +100,7 @@ class CLASS(bank_contribute): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\bank\functions\fnc_Contribute.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(bank,contribute));
 };
 class CLASS(bank_inputBox): RscEdit
 {
@@ -122,7 +122,7 @@ class CLASS(bank_claimSupport): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\bank\functions\fnc_Claim_support.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(bank,claim));
 };
     };
         };

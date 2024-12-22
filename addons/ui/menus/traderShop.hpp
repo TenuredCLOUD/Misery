@@ -1,8 +1,32 @@
 class CLASS(traderShop_ui)
 {
     idd = 982390;
-    onLoad = "_trader = player getVariable 'currentTrader'; _trader setVariable ['Misery_TraderIsBusy', true, true]; _trader setVariable ['Misery_TradingWith', profileName, true]; currentAction = 'buy'; [] execVM '\z\misery\addons\traders\functions\fnc_ShopVALs.sqf'; [] execVM '\z\misery\addons\traders\functions\fnc_ProcessCategory.sqf'; [] execVM '\z\misery\addons\traders\functions\fnc_ProcessMenuSwitch.sqf';";
-    onUnload = "_trader = player getVariable 'currentTrader'; _trader setVariable ['Misery_TraderIsBusy', false, true]; _trader setVariable ['Misery_TradingWith', nil, true]; _queue = _trader getVariable 'Misery_TradingQue'; _index = _queue find (getPlayerUID player); if (_index != -1) then {_queue deleteAt _index;_trader setVariable ['Misery_TradingQue', _queue, true];};";
+    // onLoad = QUOTE(_trader = player getVariable 'currentTrader'; _trader setVariable ['Misery_TraderIsBusy', true, true]; _trader setVariable ['Misery_TradingWith', profileName, true]; GVAR(currentAction) = 'buy'; [] call EFUNC(traders,shopVal); [] call EFUNC(traders,processCategory); [] call EFUNC(traders,processMenuSwitch;));
+    // onUnload = QUOTE(_trader = player getVariable 'currentTrader'; _trader setVariable ['Misery_TraderIsBusy', false, true]; _trader setVariable ['Misery_TradingWith', nil, true]; _queue = _trader getVariable 'Misery_TradingQue'; _index = _queue find (getPlayerUID player); if (_index != -1) then {_queue deleteAt _index;_trader setVariable ['Misery_TradingQue', _queue, true];};);
+
+    //Will need to convert onLoad and onUnload events to functions: 
+onLoad = QUOTE(
+    _trader = player getVariable [ARR_2(QUOTE(QGVAR(currentTrader)),objNull)];
+    _trader setVariable [ARR_3(QUOTE(QGVAR(traderIsBusy)),true,true)];
+    _trader setVariable [ARR_3(QUOTE(QGVAR(tradingWith)),profileName,true)];
+    GVAR(currentAction) = buy;
+    [] call EFUNC(traders,shopVal);
+    [] call EFUNC(traders,processCategory);
+    [] call EFUNC(traders,processMenuSwitch);
+);
+
+onUnload = QUOTE(
+    _trader = player getVariable [ARR_2(QUOTE(QGVAR(currentTrader)),objNull)];
+    _trader setVariable [ARR_3(QUOTE(QGVAR(traderIsBusy)),false,true)];
+    _trader setVariable [ARR_3(QUOTE(QGVAR(tradingWith)),nil,true)];
+    _queue = _trader getVariable [ARR_2(QUOTE(QGVAR(tradingQue)),[])];
+    _index = _queue find (getPlayerUID player);
+    if (_index != -1) then {
+        _queue deleteAt _index;
+        _trader setVariable [ARR_3(QUOTE(QGVAR(tradingQue)),_queue,true)];
+    };
+);
+
 
 class ControlsBackground
 {
@@ -60,7 +84,7 @@ class CLASS(traderShop_dropList): RscCombo
     w = QUOTE(20.5 * GUI_GRID_W);
     h = QUOTE(1 * GUI_GRID_H);
     sizeEx = 0.7 * GUI_GRID_H;
-    onLBSelChanged = "[] execVM '\z\misery\addons\traders\functions\fnc_ShopVALs.sqf';";
+    onLBSelChanged = QUOTE([] call EFUNC(traders,shopVal));
 };
 class CLASS(traderShop_shop_list): RscListBox
 {
@@ -70,7 +94,7 @@ class CLASS(traderShop_shop_list): RscListBox
     w = QUOTE(20.5 * GUI_GRID_W);
     h = QUOTE(18.5 * GUI_GRID_H);
     sizeEx = 0.7 * GUI_GRID_H;
-    onLBSelChanged = "[] execVM '\z\misery\addons\traders\functions\fnc_ProcessIcon.sqf';";
+    onLBSelChanged = QUOTE([] call EFUNC(traders,processIcon));
 };
 class CLASS(traderShop_infoBox): RscText
 {
@@ -101,7 +125,7 @@ class CLASS(traderShop_sell): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\traders\functions\fnc_ProcessBuy_Sell.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(traders,processTransaction));
 };
 class CLASS(traderShop_gift): RscButton
 {
@@ -114,7 +138,7 @@ class CLASS(traderShop_gift): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\traders\functions\fnc_ProcessGift.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(traders,processGift));
 };
 class CLASS(traderShop_buyMenu): RscButton
 {
@@ -127,7 +151,7 @@ class CLASS(traderShop_buyMenu): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\traders\functions\fnc_ProcessMenuSwitch.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(traders,processMenuSwitch));
 };
 class CLASS(traderShop_exit): RscButton
 {
@@ -140,7 +164,7 @@ class CLASS(traderShop_exit): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "currentAction = nil; closeDialog 2;";
+    onButtonClick = QUOTE(GVAR(currentAction) = nil; closeDialog 2);
 };
 class CLASS(traderShop_showCompats): CLASS(Checkbox)
 {
@@ -150,7 +174,7 @@ class CLASS(traderShop_showCompats): CLASS(Checkbox)
     y = QUOTE(-0.82 * GUI_GRID_H + GUI_GRID_Y);
     w = QUOTE(1.5 * GUI_GRID_W);
     h = QUOTE(1 * GUI_GRID_H);
-    onCheckedChanged = "[] execVM '\z\misery\addons\traders\functions\fnc_ShopVALs.sqf';";
+    onCheckedChanged = QUOTE([] call EFUNC(traders,shopVal));
 };
     };
         };

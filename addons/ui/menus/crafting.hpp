@@ -1,7 +1,7 @@
 class CLASS(craftingFramework_ui)
 {
     idd = 982376;
-    onLoad = "[] execVM '\z\misery\addons\crafting\functions\fnc_RecipesListed.sqf'; [] execVM '\z\misery\addons\crafting\functions\fnc_Showicon.sqf';";
+    onLoad = QUOTE([] call EFUNC(crafting,recipesListed); [] call EFUNC(crafting,showicon));
 
 class ControlsBackground
 {
@@ -93,7 +93,7 @@ class CLASS(crafting_button): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\crafting\functions\fnc_ProcessItems.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(crafting,processItems));
 };
 class CLASS(crafting_knownRecipes): RscButton
 {
@@ -108,7 +108,7 @@ class CLASS(crafting_knownRecipes): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\crafting\functions\fnc_ShowRecipe.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(crafting,showRecipe));
 };
 class CLASS(crafting_exitButton): RscButton
 {
@@ -123,7 +123,7 @@ class CLASS(crafting_exitButton): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "closeDialog 2;";
+    onButtonClick = QUOTE(closeDialog 2);
 };
     };
         };
