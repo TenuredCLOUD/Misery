@@ -19,7 +19,7 @@
 private _modules = allMissionObjects "Misery_POI";
 
 waitUntil {
-    private _players = call Misery_fnc_ListPlayers;
+    private _players = call EFUNC(common,listPlayers);
     {
         private _player = _x;
         {
@@ -81,7 +81,7 @@ waitUntil {
                 (_module getVariable "MiseryPOIAIShake"),
                 (_module getVariable "MiseryPOIAISpeed"),
                 (_module getVariable "MiseryPOISpawnChance")
-                ] execVM "\z\misery\addons\poi\functions\fnc_Campground.sqf";
+                ] call FUNC(campground);
                 };
                     case "HELIWRECK": {
                 [
@@ -100,7 +100,7 @@ waitUntil {
                 (_module getVariable "MiseryPOICrateUniformLoot"),
                 (_module getVariable "MiseryPOICrateVestLoot"),
                 (_module getVariable "MiseryPOICrateBackpackLoot")
-                ] execVM "\z\misery\addons\poi\functions\fnc_HeliWreck.sqf";
+                ] call FUNC(heliWreck);
                 };
                 case "SHORELOOT": {
                 [
@@ -119,7 +119,7 @@ waitUntil {
                 (_module getVariable "MiseryPOICrateUniformLoot"),
                 (_module getVariable "MiseryPOICrateVestLoot"),
                 (_module getVariable "MiseryPOICrateBackpackLoot")
-                ] execVM "\z\misery\addons\poi\functions\fnc_ShoreLoot.sqf";
+                ] call FUNC(shoreLoot);
                 };
                 case "PMCRAID": {
                 [
@@ -160,7 +160,7 @@ waitUntil {
                 (_module getVariable "MiseryPOIAIShake"),
                 (_module getVariable "MiseryPOIAISpeed"),
                 (_module getVariable "MiseryPOISpawnChance")
-                ] execVM "\z\misery\addons\poi\functions\fnc_Raid.sqf";
+                ] call FUNC(raid);
             };
         default {
             systemChat format ["Unknown POI type: %1", _poiType];

@@ -27,5 +27,5 @@ Misery_activePOIs = 0;
 MiseryPOIGenerationReady = true;
 
 if (isServer) exitWith {
-[] execVM "\z\misery\addons\poi\functions\fnc_ModuleCheck.sqf";
+[] call FUNC(poiSettings);
 };

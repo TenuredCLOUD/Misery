@@ -1,10 +1,4 @@
-/*
-Misery HUD & GUI layout / design
-Source code from Drongo, edited by TenuredCLOUD
-Designed specifically for Misery mod
-*/
-
-class Misery_BackGround
+class CLASS(BackGround)
 {
     idc = -1;
     type = 0;
@@ -21,9 +15,9 @@ class Misery_BackGround
     lineSpacing = 1;
 };
 
-class Misery_RscProgress
+class CLASS(RscProgress)
 {
-    onLoad = "_this spawn { for '_i' from 0 to 1 step 0.01 do { (_this # 0) progresssetPosition _i; sleep 0.01 } }";
+    onLoad = QUOTE(_this spawn { for '_i' from 0 to 1 step 0.01 do { (_this # 0) progresssetPosition _i; sleep 0.01 } });
     deletable = 0;
     fade = 0;
     access = 0;
@@ -45,7 +39,7 @@ class Misery_RscProgress
     texture = "#(argb,8,8,3)color(1,1,1,1)";
 };
 
-class Misery_RscPicture
+class CLASS(RscPicture)
 {
     access = 0;
     idc = -1;
@@ -65,7 +59,7 @@ class Misery_RscPicture
     h = 0.08 * UI_MACRO_H;
 };
 
-class Misery_RscText {
+class CLASS(RscText) {
     x = 0;
     y = 0;
     h = 0.037;
@@ -84,7 +78,7 @@ class Misery_RscText {
     valign = "middle";
 };
 
-class Misery_Checkbox
+class CLASS(Checkbox)
 {
     idc = -1; // Control identifier
     type = 77; // Type is 77 for checkbox
@@ -124,7 +118,7 @@ class Misery_Checkbox
     textureDisabledUnchecked = "\A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_unchecked_ca.paa"; // Texture for disabled unchecked state
 };
 
-class Misery_StructuredText {
+class CLASS(StructuredText) {
     idc = -1;
     type = 13;
     style = UI_MACRO_STYLE;
@@ -148,7 +142,7 @@ class Misery_StructuredText {
   };
 };
 
-class Misery_RscEdit
+class CLASS(RscEdit)
 {
     access = 0;
     type = 2;
@@ -170,13 +164,13 @@ class Misery_RscEdit
     canModify = 1;
 };
 
-class Misery_RscTitle : Misery_RscText {
+class CLASS(RscTitle) : CLASS(RscText) {
     style = 0;
     SizeEx = UI_MACRO_TEXTSIZE;
     colorText[] = {0.95, 0.95, 0.95, 1};
 };
 
-class Misery_RscButtonMenu {
+class CLASS(RscButtonMenu) {
     idc = -1;
     type = 16;
     style = UI_MACRO_STYLE;
@@ -247,7 +241,7 @@ class Misery_RscButtonMenu {
     };
 };
 
-class Misery_RscButtonHidden : Misery_RscButtonMenu {
+class CLASS(RscButtonHidden) : CLASS(RscButtonMenu) {
     animTextureNormal = "#(argb,8,8,3)color(0,0,0,0)";
     animTextureDisabled = "#(argb,8,8,3)color(0,0,0,0)";
     animTextureOver = "#(argb,8,8,3)color(0,0,0,0)";
@@ -257,7 +251,7 @@ class Misery_RscButtonHidden : Misery_RscButtonMenu {
     textureNoShortcut = "#(argb,8,8,3)color(0,0,0,0)";
 };
 
-class Misery_RscButtonTabFNC : Misery_RscButtonHidden {
+class CLASS(RscButtonTabFNC) : CLASS(RscButtonHidden) {
     idc = -1;
     text = "";
     tooltip = "";
@@ -268,10 +262,10 @@ class Misery_RscButtonTabFNC : Misery_RscButtonHidden {
     h = UI_MACRO_TABFH;
 };
 
-class Misery_RscButtonMenuText : Misery_RscButtonMenu{
+class CLASS(RscButtonMenu)Text : CLASS(RscButtonMenu){
 };
 
-class Misery_RscListBox
+class CLASS(RscListBox)
 {
     style = 16;
     idc = -1;
@@ -324,7 +318,7 @@ class Misery_RscListBox
     };
 };
 
-class Misery_ActiveText : Misery_RscText {
+class CLASS(ActiveText) : CLASS(RscText) {
     idc = -1;
     type = 11;
     style = UI_MACRO_STYLE;
@@ -342,11 +336,11 @@ class Misery_ActiveText : Misery_RscText {
     default = "false";
 };
 
-class Misery_ButtonExitTablet : Misery_RscButtonHidden {
+class CLASS(ButtonExitTablet) : CLASS(RscButtonHidden) {
     idc = -1;
     text = "";
     tooltip = "Exit";
-    onButtonClick = "closeDialog 0";
+    onButtonClick = QUOTE(closeDialog 0);
     x = UI_MACRO_COL + (UI_MACRO_COLINC * 5.5);
     //y = UI_MACRO_ROW + (UI_MACRO_ROWINC * 12.5);
     y = UI_MACRO_TABFY;

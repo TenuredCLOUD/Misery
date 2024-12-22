@@ -8,7 +8,7 @@ ADDON = false;
 
 /*
 if ((MiseryPsyFieldInit) && hasInterface) then {
-    [] execVM "\z\misery\addons\psyfield\functions\fnc_Psyfieldinit.sqf";
+    [] call "\z\misery\addons\psyfield\functions\fnc_Psyfieldinit.sqf";
 };
 */
 

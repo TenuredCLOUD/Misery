@@ -42,7 +42,7 @@ createDialog "MiserySleepMenuGUI";
 if(_action == "Search for Money") exitWith {
 (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
-[] execVM "\z\misery\addons\money\functions\fnc_Search_Corpse.sqf";
+[] call EFUNC(money,searchCorpse);
 };
 
 //Cycle MiseryHUD:
@@ -198,7 +198,7 @@ private _sledgeHammerProxToBaseStr =format ["<t font='PuristaMedium'>%1</t>", lo
 };
 
 //Back to default menu:
-if(_action== localize "STR_MISERY_CANCEL")exitWith{MiseryActionsMode="";execVM "\z\misery\addons\inventory\functions\fnc_DisplayActions.sqf"};
+if(_action== localize "STR_MISERY_CANCEL")exitWith{MiseryActionsMode="";call FUNC(displayActions)};
 
 //RF detector:
 if(_action== localize "STR_MISERY_TURNONRFDETEC") exitWith {
@@ -208,7 +208,7 @@ if(_action== localize "STR_MISERY_TURNONRFDETEC") exitWith {
     private _noRfDetectorStr =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONRFDETECNOITEM"];
     [parseText _noRfDetectorStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 }else{
-    execVM "\z\misery\addons\rfdetector\functions\fnc_RFreboot.sqf";
+    call EFUNC(rfdetecter,reboot);
 };
     };
 if(_action== localize "STR_MISERY_TURNOFFRFDETEC") exitWith {
@@ -259,7 +259,7 @@ if !([["Misery_leadcontaineropen"]] call EFUNC(common,hasItem)) then {
 private _noLeadContainerStr =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOLLCONTAINER"];
 [parseText _noLeadContainerStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 }else{
-execVM "\z\misery\addons\llcontainer\functions\fnc_putincontaineract.sqf";
+call EFUNC(llcontianer,storeArtifact);
 };
     };
 
@@ -287,7 +287,7 @@ if !([["Misery_HeadlampOFF"]] call EFUNC(common,hasItem)) exitWith {
 private _noHeadLampItemStr =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONHEADLAMPNOITEM"];
 [parseText _noHeadLampItemStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 };
-[player] execVM "\z\misery\addons\headlamp\functions\fnc_HeadlampON.sqf";
+[player] call EFUNC(headlamp,on);
 };
 
 if(_action== localize "STR_MISERY_TURNOFFHEADLAMP") exitWith {
@@ -297,7 +297,7 @@ if !([["Misery_HeadlampON"]] call EFUNC(common,hasItem)) exitWith {
 private _noHeadLampItemStr_2 =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONHEADLAMPNOITEM"];
 [parseText _noHeadLampItemStr_2, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 };
-[player] execVM "\z\misery\addons\headlamp\functions\fnc_HeadlampOFF.sqf";
+[player] call EFUNC(headlamp,off);
 };
 
 //Crafting Framework:
@@ -339,7 +339,7 @@ if(MiseryActionsMode=="") exitWith {
         localize "STR_MISERY_SWAPFUELTYPEPETROL"])
         exitWith {
         MiseryActionsMode=_action;
-        execVM "\z\misery\addons\inventory\functions\fnc_DisplayActions.sqf";
+        call FUNC(displayActions);
     };
     if(isNull(findDisplay 602))then{(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1};
     call _action; //reference to selected action in UI

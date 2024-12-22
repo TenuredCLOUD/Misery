@@ -1,17 +1,11 @@
-/*
-Misery Medical treatment UI
-Processes Healing, and rad exposure treatment...
-Designed specifically for Misery mod
-*/
-
-class MiseryMedTreatment_GUI
+class CLASS(medicalTreatment_ui)
 {
     idd = 982381;
-    onLoad = "[] execVM '\z\misery\addons\medtreatment\functions\fnc_MTreatListed.sqf';";
+    onLoad = QUOTE([] call EFUNC(medtreatment,treatListed));
 
 class ControlsBackground
 {
-class Misery_MedTreatment_BG: Misery_RscText
+class CLASS(medicalTreatment_background): CLASS(RscText)
 {
     idc = -1;
     x = 0 * GUI_GRID_W + GUI_GRID_X;
@@ -20,7 +14,7 @@ class Misery_MedTreatment_BG: Misery_RscText
     h = 25 * GUI_GRID_H;
     colorBackground[]={0.2,0.2,0.2,.7};
 };
-class Misery_MedTreatment_Prompt: RscText
+class CLASS(medicalTreatment_prompt): RscText
 {
     idc = -1;
     text = "Medical Treatment";
@@ -29,7 +23,7 @@ class Misery_MedTreatment_Prompt: RscText
     w = 20.5 * GUI_GRID_W;
     h = 2 * GUI_GRID_H;
 };
-class Misery_MedTreatment_icon: RscPicture
+class CLASS(medicalTreatment_icon): RscPicture
 {
     idc = -1;
     text = "\Data\Mappack\medical.paa";
@@ -41,7 +35,7 @@ class Misery_MedTreatment_icon: RscPicture
 };
 class Controls
     {
-class Misery_MedTreatment_List: RscListBox
+class CLASS(medicalTreatment_list): RscListBox
 {
     idc = 1500;
     x = 1.5 * GUI_GRID_W + GUI_GRID_X;
@@ -49,7 +43,7 @@ class Misery_MedTreatment_List: RscListBox
     w = 20.5 * GUI_GRID_W;
     h = 12.5 * GUI_GRID_H;
 };
-class Misery_MedTreatment_Purchase: RscButton
+class CLASS(medicalTreatment_purchase): RscButton
 {
     idc = 1600;
     text = "Purchase";
@@ -60,9 +54,9 @@ class Misery_MedTreatment_Purchase: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick ="[] execVM '\z\misery\addons\medtreatment\functions\fnc_ProcessPurchase.sqf';";
+    onButtonClick =QUOTE([] call EFUNC(medtreatment,processPurchase));
 };
-class Misery_MedTreatment_Exit: RscButton
+class CLASS(medicalTreatment_exit): RscButton
 {
     idc = 1601;
     text = "Exit";
@@ -75,7 +69,7 @@ class Misery_MedTreatment_Exit: RscButton
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
     onButtonClick = "closeDialog 2;";
 };
-class Misery_MedTreatment_InfoBox: RscText
+class CLASS(medicalTreatment_infoBox): RscText
 {
     idc = 1001;
     x = 1.5 * GUI_GRID_W + GUI_GRID_X;
