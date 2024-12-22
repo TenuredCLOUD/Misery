@@ -20,11 +20,11 @@ private ["_hashammer"];
 _hashammer = false;
 
 if (MiseryWBKIMS) then {
-    if ("Misery_craftinghammer" in items player || "Misery_Anvilhammer" in items player || "WBK_SmallHammer" in (weapons player)) then {
+    if ([["Misery_craftinghammer","Misery_Anvilhammer","WBK_SmallHammer"]] call EFUNC(common,hasItem)) then {
         _hashammer = true;
     };
 } else {
-    if ("Misery_craftinghammer" in items player || "Misery_Anvilhammer" in items player) then {
+    if ([["Misery_craftinghammer","Misery_Anvilhammer"]] call EFUNC(common,hasItem)) then {
         _hashammer = true;
     };
 };

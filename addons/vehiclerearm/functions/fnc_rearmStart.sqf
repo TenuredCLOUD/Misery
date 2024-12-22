@@ -49,7 +49,7 @@ player setVariable ["Misery_Proc_Resupply", true];
     params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable ["Misery_Proc_Resupply",false];
-                [parseText "<t font='PuristaMedium' size='1'>Resupply interrupted...</t>", true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
+                [parseText "<t font='PuristaMedium' size='1'>Resupply interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
         };
 }];
 

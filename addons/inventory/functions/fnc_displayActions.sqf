@@ -29,7 +29,7 @@ if(MiseryActionsMode=="") then{
 
     {
     _allActions pushBack _x
-    } forEach (call Misery_fnc_Actions);
+    } forEach (call EFUNC(actions,handleActions));
 
 
     if((count MiseryActionsCustom) > 0) then {_allActions=_allActions + MiseryActionsCustom};

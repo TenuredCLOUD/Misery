@@ -124,7 +124,7 @@ _ModuleSpawnDistanceMIN = _this select 19;
 _ModuleSpawnDistanceMAX = _this select 20;
 
 _player=objNull;
-_players=call Misery_fnc_ListPlayers;
+_players=call EFUNC(common,listPlayers);
 
 _pos = getPos _module;
 
@@ -136,10 +136,10 @@ _SpawnFLAG = false;
 
 _AI_Spawnblacklist = [];
 {
-    _marker = createMarker [format ["playerMarker_%1", _forEachIndex], getPos _x];
-    _marker setMarkerShape "ELLIPSE";
-    _marker setMarkerSize [10, 10];
-    _marker setMarkerColor "ColorWhite";
+    _marker = createMarkerLocal [format ["playerMarker_%1", _forEachIndex], getPos _x];
+    _marker setMarkerShapeLocal "ELLIPSE";
+    _marker setMarkerSizeLocal [10, 10];
+    _marker setMarkerColorLocal "ColorWhite";
     _marker setMarkerAlpha 0;
 
     _AI_Spawnblacklist pushBack _marker;
@@ -303,11 +303,11 @@ for "_i" from 1 to _numEntities do {
                     _caller setVariable ["MiseryCurrency", _playerMoney - _recruitmentCost];
                     [_target] joinSilent _caller;
                     [_target,_actionId] call BIS_fnc_holdActionRemove;
-                    private _formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_SUCCESS", _Unitidentity, MiseryCurrencySymbol, [_recruitmentCost] call Misery_fnc_formatNumber]];
-                    [_formattedText] call EFUNC(common,formatToTile);
+                    private _recruitSuccess = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_SUCCESS", _Unitidentity, MiseryCurrencySymbol, [_recruitmentCost] call Misery_fnc_formatNumber]];
+                    [parseText _recruitSuccess, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
                 }else{
-                    private _formattedText = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_FAIL",_Unitidentity]];
-                    [_formattedText] call EFUNC(common,formatToTile);
+                    private _recruitFail = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_FAIL",_Unitidentity]];
+                    [parseText _recruitFail, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
                 };
             },
             {},
@@ -332,11 +332,11 @@ _group enableDynamicSimulation true;
 if (MiseryDebug) then {
     _randID = str (diag_tickTime * 1e6) + str _module;
     _markerName = format ["AI Group %1", _randID];
-    _marker = createMarker [_markerName, getPosATL leader _group];
-    _marker setMarkerType "mil_dot";
-    _marker setMarkerColor "ColorWhite";
-    _marker setMarkerSize [0.5, 0.5];
-    _marker setMarkerAlpha 1;
+    _marker = createMarkerLocal [_markerName, getPosATL leader _group];
+    _marker setMarkerTypeLocal "mil_dot";
+    _marker setMarkerColorLocal "ColorWhite";
+    _marker setMarkerSizeLocal [0.5, 0.5];
+    _marker setMarkerAlphaLocal 1;
     _marker setMarkerText "[DEBUG] Generated AI Group Spawn";
 };
 

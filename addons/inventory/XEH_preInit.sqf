@@ -12,7 +12,7 @@ ADDON = false;
 if (MiseryDefineItemsScript != "") then {
     MiserysurvivalItemEffects = [];
     MiserysurvivalItems = [];
-    [] execVM MiseryDefineItemsScript;
+    [] call MiseryDefineItemsScript;
 };
 
 if (hasInterface) then {

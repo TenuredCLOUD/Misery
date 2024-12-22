@@ -48,9 +48,9 @@ _radval= _entry select 11;
 _exposureval= _entry select 12;
 
 //Gasmask check for items, check RVG goggle array
-    if (_checkforGmask && {(goggles player in antirad_goggles || headgear player in antirad_headgears)}) exitWith {
-    titleText ["You cannot eat or drink while wearing a mask...", "PLAIN DOWN"]
-    };
+    // if (_checkforGmask && {(goggles player in antirad_goggles || headgear player in antirad_headgears)}) exitWith { //Needs to be tweaked to filter through protective masks etc... 
+    // titleText ["You cannot eat or drink while wearing a mask...", "PLAIN DOWN"]
+    // };
 
 //Can opener / tool check for RVG canned foods:
 //Default RVG mod checker for can opener / tools edited for WBK knife melee weapons:
@@ -107,6 +107,6 @@ if ((count _debuffRemove) > 0) then {
 };
 
 //Custom script execution
-if !(_script=="") then {_selectedItem execVM _script};
+if !(_script=="") then {_selectedItem call _script};
 
 

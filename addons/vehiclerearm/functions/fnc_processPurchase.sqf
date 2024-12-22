@@ -30,7 +30,7 @@ if !(_selectedIndex == -1) exitWith {
 _PurchaseB ctrlShow false;
 _ExitB ctrlShow false;
 
-[] execVM "\z\misery\addons\vehiclerearm\functions\fnc_Rearmstart.sqf";
+[] call FUNC(rearmstart);
 };
 
 

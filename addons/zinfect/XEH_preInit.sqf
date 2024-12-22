@@ -8,7 +8,7 @@ ADDON = false;
 
 /*
 if (Miseryzedinfect && hasInterface) then {
-    [] execVM "\z\misery\addons\zinfect\functions\fnc_zinfection.sqf"; //Zed infection pre-checks in file
+    [] call "\z\misery\addons\zinfect\functions\fnc_zinfection.sqf"; //Zed infection pre-checks in file
 };
 */
 

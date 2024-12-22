@@ -15,7 +15,7 @@ by TenuredCLOUD
         if ((!isNil "MiseryinChemZone" && !MiseryinChemZone) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             if(MiseryDebug)then{systemChat "Misery Chemical cycle terminated..."};
-            [] execVM "framework\scripts\Modules\chemicalzone\chemicalzoneinit.sqf";
+            [] call "framework\scripts\Modules\chemicalzone\chemicalzoneinit.sqf";
             if(MiseryDebug)then{systemChat "Misery Chemical cycle checks re-initiated..."};
         };
 

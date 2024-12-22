@@ -17,9 +17,9 @@
 
 private ["_clothesWarmth","_MPlayertemp","_MExposure","_MDebuffs","_nearfirecalc","_sicknearfirecalc","_insidewarmcalc","_sickinsidewarmcalc","_invehiclecalc","_sickinvehiclecalc"];
 
-player setVariable ["MiseryPlayerTemp", (call Misery_fnc_Temperature) select 0]; //Air temp
-MiserySeaTemp = (call Misery_fnc_Temperature) select 1; //Sea temp
-_clothesWarmth= (player call Misery_fnc_ClothingWarmth) select 0;
+player setVariable ["MiseryPlayerTemp", (call FUNC(environment)) select 0]; //Air temp
+MiserySeaTemp = (call FUNC(environment)) select 1; //Sea temp
+_clothesWarmth= (player call FUNC(clothing)) select 0;
 
 //Parse values from temperature calculations
 _MPlayertemp = player getVariable "MiseryPlayerTemp";
@@ -32,7 +32,7 @@ _MDebuffs = player getVariable "MiseryDebuffs";
 //---------------------------
 //Nearby fire check
 
-if ([player] call Misery_fnc_NearFire) then {
+if ([player] call EFUNC(common,nearFire)) then {
 
     if ((_MPlayertemp < 20) && (!(_MDebuffs find "PARASITES" != -1 || _MDebuffs find "INFECTION" != -1))) then {
 
@@ -57,7 +57,7 @@ if ([player] call Misery_fnc_NearFire) then {
 //---------------------------
 //Inside house check (checks if player is "boxed in" and under roof)
 
-if ((([player] call Misery_fnc_Isinside) select 0) && (([player] call Misery_fnc_Isinside) select 1)) then {
+if (insideBuilding player == 1) then {
 
     if ((_MPlayertemp < 20) && (!(_MDebuffs find "PARASITES" != -1 || _MDebuffs find "INFECTION" != -1))) then {
 

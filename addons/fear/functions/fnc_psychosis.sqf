@@ -22,7 +22,7 @@
         if (((player getVariable ["MiseryFear", MACRO_PLAYER_FEAR]) < 5) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             if(MiseryDebug)then{systemChat "Misery Fear event cycle terminated..."};
-            [] call FUNC(Fear);
+            [] call FUNC(psychosis);
             if(MiseryDebug)then{systemChat "Misery Fear event cycle checks reinitiated..."};
         };
 

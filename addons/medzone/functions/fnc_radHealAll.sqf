@@ -56,7 +56,7 @@ player setVariable ["Misery_Proc_Treatment", true];
     params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable ["Misery_Proc_Treatment",false];
-                [parseText "<t font='PuristaMedium' size='1'>Treatment interrupted...</t>", true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
+                [parseText "<t font='PuristaMedium' size='1'>Treatment interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
         };
 }];
 
@@ -103,6 +103,6 @@ _PurchaseB ctrlShow true;
 _ExitB ctrlShow true;
 
 //Refresh treatment prices:
-[] execVM '\z\misery\addons\medtreatment\functions\fnc_MTreatListed.sqf';
+[] call EFUNC(medtreatment,treatListed);
     };
 };
