@@ -17,19 +17,15 @@
 
 private _players = call EFUNC(common,listPlayers);
 
+if (count GVAR(registeredEntities) == 0) exitWith {};
+
 {
-    private _animal = _x;
-    private _remove = true;
-
+    private _entity = _x;
     {
-        if ((_x distance _animal) < GVAR(animalDeleteDistance)) then {
-            _remove = false;
-        };
-    } forEach _players;
+        private _distance = _x distance2D _entity;
+        if (_distance < GVAR(animalDeleteDistance)) exitWith {continue};
 
-    if (_remove) then {
-        GVAR(registeredEntities) = GVAR(registeredEntities) - [_animal];
-        _animal removeAllMPEventHandlers "MPKilled";
-        deleteVehicle _animal;
-    };
+        GVAR(registeredEntities) deleteAt (GVAR(registeredEntities) find _entity);
+        deleteVehicle _entity;
+    } forEach _players;
 } forEach GVAR(registeredEntities);

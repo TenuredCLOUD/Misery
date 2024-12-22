@@ -34,7 +34,8 @@ private _playerUID = getPlayerUID _selectedPlayer;
 private _markerName = format ["%1_%2", CBA_missionTime, _playerUID];
 private _marker = createMarkerLocal [_markerName, _markerPos];
 _marker setMarkerShapeLocal "ELLIPSE";
-_marker setMarkerSizeLocal [GVAR(animalMinimumDistance) + GVAR(animalSafeDistance), GVAR(animalMaximumDistance) + GVAR(animalSafeDistance)];
+_marker setMarkerSizeLocal [GVAR(markerSizeX), GVAR(markerSizeY)];
+_marker setMarkerAlphaLocal 0;
 
 for "_i" from 1 to _clusters do {
     (selectRandom GVAR(animalTypes)) params ["_animalClass", "_animalCount"];
@@ -48,7 +49,7 @@ for "_i" from 1 to _clusters do {
             continue;
         };
         private _createdAnimal = createAgent [_animalClass, _outsidePos, [], 0, "CAN_COLLIDE"];
-        GVAR(registeredEntities) pushBack _createdAnimal;
+        GVAR(registeredEntities) pushBack (agent _createdAnimal);
     };
 };
 
