@@ -1,6 +1,6 @@
  #include "..\script_component.hpp"
 /*
- * Author: TenuredCLOUD
+ * Author: TenuredCLOUD, MikeMF
  * Animal spawner animal generation
  * Processes spawning / generation of ambient animals near players
  *
@@ -22,51 +22,36 @@
 // ["Cock_random_F", 1],
 // ["Hen_random_F", 4]
 
+if ((count GVAR(registeredEntities)) >= GVAR(maxAnimalUnits)) exitWith {};
+
 private _players = call EFUNC(common,listPlayers);
+private _selectedPlayer = selectRandom _players;
 
-if ((count GVAR(registeredEntities)) > GVAR(maxAnimalUnits)) exitWith {};
-if ((random 100) <= 100) then {  // Animal spawn chance
-    private _player = selectRandom _players;
-    private _clusters = [1, 3] call BIS_fnc_randomInt;
+private _clusters = selectRandom [1, 2, 3];
 
-    for "_cluster" from 1 to _clusters do {
-        private _animalClass = selectRandom GVAR(animalTypes);
-        private _animalCount = (_animalClass select 1);
+private _markerPos = getPosATL _selectedPlayer;
+private _playerUID = getPlayerUID _selectedPlayer;
+private _markerName = format ["%1_%2", CBA_missionTime, _playerUID];
+private _marker = createMarkerLocal [_markerName, _markerPos];
+_marker setMarkerShapeLocal "ELLIPSE";
+_marker setMarkerSizeLocal [GVAR(animalMinimumDistance) + GVAR(animalSafeDistance), GVAR(animalMaximumDistance) + GVAR(animalSafeDistance)];
 
-        //draw marker on each client: 
-        private _markerPos = getPos _player;
-        private _playerUID = getPlayerUID _player;
-        private _markerName = format ["marker_%1", _playerUID];
-        private _marker = createMarkerLocal [_markerName, _markerPos];
-        _marker setMarkerShapeLocal "ELLIPSE";
-        _marker setMarkerSizeLocal [GVAR(animalMinimumDistance) + GVAR(animalSafeDistance), GVAR(animalMaximumDistance) + GVAR(animalSafeDistance)];
+for "_i" from 1 to _clusters do {
+    (selectRandom GVAR(animalTypes)) params ["_animalClass", "_animalCount"];
 
-        for "_i" from 1 to _animalCount do {
-            private _tries = 10;
-            private _spawn = false;
-            private _pos = [];
+    for "_z" from 0 to _animalCount - 1 do {
+        private _outsidePos = [_marker, true] call CBA_fnc_randPosArea;
 
-            for "_z" from 1 to _tries do {
-                _pos = [_marker, true] call CBA_fnc_randPosArea;
-
-                if (!surfaceIsWater _pos) then {
-                    _spawn = true;
-                    {
-                        if ((_pos distance _x) < GVAR(animalSafeDistance)) then {
-                            _spawn = false;
-                        };
-                    } forEach _players;
-                    if (_spawn) exitWith {};
-                };
-            };
-
-            if (_spawn) then {
-                private _animalType = (_animalClass select 0);
-                private _animal = createAgent [_animalType, _pos, [], 15, "NONE"];
-                GVAR(registeredEntities) pushBack _animal;
-                if ((count GVAR(registeredEntities)) >= GVAR(maxAnimalUnits)) exitWith {};
-            };
+        // Check if _outsidePos is valid and not water
+        if (_outsidePos isEqualTo [] || surfaceIsWater _outsidePos) exitWith {
+            systemChat "Invalid position or position in water, skipping...";
+            continue;
         };
-        deleteMarkerLocal _marker;
+        private _createdAnimal = createAgent [_animalClass, _outsidePos, [], 0, "CAN_COLLIDE"];
+        GVAR(registeredEntities) pushBack _createdAnimal;
     };
 };
+
+[{
+    deleteMarkerLocal _this;
+}, _marker, 1] call CBA_fnc_waitAndExecute;
