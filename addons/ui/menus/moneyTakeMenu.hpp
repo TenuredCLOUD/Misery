@@ -1,18 +1,12 @@
-/*
-Misery Money taking UI
-Processes Money taking from corpses
-Designed specifically for Misery mod
-*/
-
-class Misery_MoneyTake_UI
+class CLASS(moneyTake_ui)
 {
     idd = 358492;
 
-    onLoad = "[] execVM '\z\misery\addons\money\functions\fnc_TakeMoney.sqf';";
+    onLoad = QUOTE([] call EFUNC(money,takeMoney));
 
 class ControlsBackground
 {
-class Misery_MoneyTakeMenu_BG: Misery_RscText
+class CLASS(moneyTakeMenu_background): CLASS(RscText)
 {
     idc = 1800;
     x = 5 * GUI_GRID_W + GUI_GRID_X;
@@ -21,7 +15,7 @@ class Misery_MoneyTakeMenu_BG: Misery_RscText
     h = 8 * GUI_GRID_H;
     colorBackground[]={0.2,0.2,0.2,.7};
 };
-class Misery_MoneyTakeMenu_Prompt: RscText
+class CLASS(moneyTakeMenu_prompt): RscText
 {
     idc = 1000;
     text = "Take funds"; //--- ToDo: Localize;
@@ -33,7 +27,7 @@ class Misery_MoneyTakeMenu_Prompt: RscText
 };
 class Controls
     {
-class Misery_MoneyTakeMenu_InputBox: RscEdit
+class CLASS(moneyTakeMenu_inputBox): RscEdit
 {
     idc = 1400;
     x = 15 * GUI_GRID_W + GUI_GRID_X;
@@ -42,7 +36,7 @@ class Misery_MoneyTakeMenu_InputBox: RscEdit
     h = 1.5 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_MoneyTakeMenu_Take: RscButton
+class CLASS(moneyTakeMenu_take): RscButton
 {
     idc = 1600;
     text = "Take"; //--- ToDo: Localize;
@@ -53,9 +47,9 @@ class Misery_MoneyTakeMenu_Take: RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "[] execVM '\z\misery\addons\money\functions\fnc_TakeMoney_Act.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(money,takeMoneyAct));
 };
-class Misery_MoneyTakeMenu_ObjectsFunds: RscText
+class CLASS(moneyTakeMenu_objectsFunds): RscText
 {
     idc = 1001;
     x = 22.65 * GUI_GRID_W + GUI_GRID_X;
@@ -64,7 +58,7 @@ class Misery_MoneyTakeMenu_ObjectsFunds: RscText
     h = 2 * GUI_GRID_H;
     sizeEx = 0.7 * GUI_GRID_H;
 };
-class Misery_MoneyTakeMenu_PlayersFunds: RscText
+class CLASS(moneyTakeMenu_playersFunds): RscText
 {
     idc = 1002;
     x = 23.23 * GUI_GRID_W + GUI_GRID_X;

@@ -1,10 +1,3 @@
-/*
-Misery Font overrider / HUD change
-List and scroll bar controls + Certain Menu's Inventory, etc...
-Designed specifically for Misery mod 
-by TenuredCLOUD 
-*/
-
 class RscFrame
 {
     type = 0;

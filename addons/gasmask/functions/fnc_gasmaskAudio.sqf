@@ -23,7 +23,7 @@
         if ((!(goggles player in antirad_goggles) && !(vest player in antirad_vests || backpack player in antirad_packs)) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             if(MiseryDebug)then{systemChat "Misery Gasmask audio cycle terminated..."};
-            [] execVM "\z\misery\addons\gasmask\functions\fnc_Gasmaskaudio.sqf";
+            [] call FUNC(gasmaskAudio);
             if(MiseryDebug)then{systemChat "Misery Gasmask audio cycle checks re-initiated..."};
         };
 

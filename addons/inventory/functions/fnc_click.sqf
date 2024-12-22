@@ -31,10 +31,10 @@ _item=_x;
 }forEach((items player)+(magazines player)); //((items player)+(assignedItems player)+(magazines player)+(weapons player))
 if(_selectedItem=="")exitWith{};
 if(((toUpper _selectedItem)in MiserysurvivalItems))exitWith{
-    _selectedItem execVM "\z\misery\addons\inventory\functions\fnc_UseItem.sqf";
+    _selectedItem call FUNC(useItem);
 };
 
 private _script="";
 {if(toLower(_x select 0)==(toLower _selectedItem))exitWith{_script=_x select 1}}forEach MiseryActionsItemCustom;
-if!(_script=="")exitWith{_selectedItem execVM _script};
+if!(_script=="")exitWith{_selectedItem call _script};
 [_selectedItem] call FUNC(clickCustom);

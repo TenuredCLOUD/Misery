@@ -34,7 +34,7 @@
             player playMoveNow "melee_armed_idle"; //Force anim delay
             };
             } forEach [MACRO_ANIMATION_IMS_SPRINT];
-            [] execVM "\z\misery\addons\ims\functions\fnc_IMSDash.sqf";
+            [] call FUNC(dash);
             if(MiseryDebug)then{systemChat "Misery WBKIMS Dash Compat cycle checks re-initiated..."};
         };
 

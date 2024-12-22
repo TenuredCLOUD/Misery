@@ -25,7 +25,7 @@
         if ((player getVariable ["MiseryHunger", MACRO_PLAYER_HUNGER]) > 75 || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             if(MiseryDebug)then{systemChat "Misery hunger immersion cycle terminated..."};
-            [] execVM "\z\misery\addons\survival\functions\fnc_hungerimmersion.sqf";
+            [] call FUNC(hungry);
             if(MiseryDebug)then{systemChat "Misery hunger immersion cycle checks re-initiated..."};
         };
 
