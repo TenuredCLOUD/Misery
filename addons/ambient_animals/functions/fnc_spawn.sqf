@@ -17,13 +17,6 @@
 
 if ((count GVAR(registeredEntities)) >= GVAR(maxAnimalUnits)) exitWith {};
 
-GVAR(animalTypes) = [ 
-    ["Sheep_random_F", 3], 
-    ["Goat_random_F", 2], 
-    ["Cock_random_F", 1], 
-    ["Hen_random_F", 4] 
-]; 
-
 private _players = call EFUNC(common,listPlayers);
 private _selectedPlayer = selectRandom _players;
 
@@ -49,8 +42,8 @@ for "_i" from 1 to _clusters do {
             continue;
         };
         if ((random 100) > GVAR(animalSpawnChance)) then {
-        private _createdAnimal = createAgent [_animalClass, _outsidePos, [], 0, "CAN_COLLIDE"];
-        GVAR(registeredEntities) pushBack (agent _createdAnimal);
+    private _createdAnimal = createAgent [_animalClass, _outsidePos, [], 0, "CAN_COLLIDE"];
+    GVAR(registeredEntities) pushBack (agent _createdAnimal);
         };
     };
 };
