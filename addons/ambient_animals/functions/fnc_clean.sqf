@@ -28,4 +28,4 @@ if (count GVAR(registeredEntities) == 0) exitWith {};
         GVAR(registeredEntities) deleteAt _forEachIndex);
         deleteVehicle _entity;
     } forEach _players;
-} forEach GVAR(registeredEntities);
+} forEachReversed GVAR(registeredEntities);
