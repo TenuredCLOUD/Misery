@@ -25,7 +25,7 @@ if (count GVAR(registeredEntities) == 0) exitWith {};
         private _distance = _x distance2D _entity;
         if (_distance < GVAR(animalDeleteDistance)) exitWith {continue};
 
-        GVAR(registeredEntities) deleteAt _forEachIndex);
+        GVAR(registeredEntities) deleteAt _forEachIndex;
         deleteVehicle _entity;
     } forEach _players;
 } forEachReversed GVAR(registeredEntities);
