@@ -23,8 +23,6 @@ if (isNil QGVAR(Building_used)) then {
     publicVariable QGVAR(Building_used);
 };
 
-systemChat format ["Loot system is running... On Server: %1", isServer];
-
 _players = call EFUNC(common,listPlayers);
 
 {
@@ -53,55 +51,55 @@ _players = call EFUNC(common,listPlayers);
                 //Building checks:
                 switch true do {
                 //Military building:
-                    case (_buildingType find "barracks" > -1): {
+                    case ("barracks" in _buildingType): {
                         _isMilitary = true;
                     };
-                    case (_buildingType find "military" > -1): {
+                    case ("military" in _buildingType): {
                         _isMilitary = true;
                     };
-                    case (_buildingType find "guardhouse" > -1): {
+                    case ("guardhouse" in _buildingType): {
                         _isMilitary = true;
                     };
-                    case (_buildingType find "terminal" > -1): {
+                    case ("terminal" in _buildingType): {
                         _isMilitary = true;
                     };
-                    case (_buildingType find "bunker" > -1): {
+                    case ("bunker" in _buildingType): {
                         _isMilitary = true;
                     };
                 //Medical building:
-                    case (_buildingType find "medical" > -1): {
+                    case ("medical" in _buildingType): {
                         _isMedical = true;
                     };
-                    case (_buildingType find "hospital" > -1): {
+                    case ("hospital" in _buildingType): {
                         _isMedical = true;
                     };
                 //Store building:
-                    case (_buildingType find "store" > -1): {
+                    case ("store" in _buildingType): {
                         _isStore = true;
                     };
-                    case (_buildingType find "grocery" > -1): {
+                    case ("grocery" in _buildingType): {
                         _isStore = true;
                     };
-                    case (_buildingType find "shop" > -1): {
+                    case ("shop" in _buildingType): {
                         _isStore = true;
                     };
                 //Garage building:
-                    case (_buildingType find "workshop" > -1): {
+                    case ("workshop" in _buildingType): {
                         _isGarage = true;
                     };
-                    case (_buildingType find "garage" > -1): {
+                    case ("garage" in _buildingType): {
                         _isGarage = true;
                     };
-                    case (_buildingType find "factory" > -1): {
+                    case ("factory" in _buildingType): {
                         _isGarage = true;
                     };
-                    case (_buildingType find "hangar" > -1): {
+                    case ("hangar" in _buildingType): {
                         _isGarage = true;
                     };
-                    case (_buildingType find "shed" > -1): {
+                    case ("shed" in _buildingType): {
                         _isGarage = true;
                     };
-                    case (_buildingType find "cowshed" > -1): {
+                    case ("cowshed" in _buildingType): {
                         _isGarage = true;
                     };
                 };
