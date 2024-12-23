@@ -4,7 +4,6 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
-//Safezone:
-if (isNil "MiseryinSafezonearea") then {MiseryinSafezonearea = false};
+#include "initSettings.inc.sqf"
 
 ADDON = true;
