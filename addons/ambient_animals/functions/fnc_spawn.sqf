@@ -15,14 +15,14 @@
  *
 */
 
-//!! Parsed Data for animals need to be in array format from initSettings -
-//Since PR #33 this needs to be looked into:
-// ["Sheep_random_F", 3],
-// ["Goat_random_F", 2],
-// ["Cock_random_F", 1],
-// ["Hen_random_F", 4]
-
 if ((count GVAR(registeredEntities)) >= GVAR(maxAnimalUnits)) exitWith {};
+
+GVAR(animalTypes) = [ 
+    ["Sheep_random_F", 3], 
+    ["Goat_random_F", 2], 
+    ["Cock_random_F", 1], 
+    ["Hen_random_F", 4] 
+]; 
 
 private _players = call EFUNC(common,listPlayers);
 private _selectedPlayer = selectRandom _players;
@@ -45,11 +45,13 @@ for "_i" from 1 to _clusters do {
 
         // Check if _outsidePos is valid and not water
         if (_outsidePos isEqualTo [] || surfaceIsWater _outsidePos) exitWith {
-            systemChat "Invalid position or position in water, skipping...";
+           if (GVAR(debug)) then {systemChat "[Misery Animal spawner] Invalid position or position in water, skipping..."};
             continue;
         };
+        if ((random 100) > GVAR(animalSpawnChance)) then {
         private _createdAnimal = createAgent [_animalClass, _outsidePos, [], 0, "CAN_COLLIDE"];
         GVAR(registeredEntities) pushBack (agent _createdAnimal);
+        };
     };
 };
 

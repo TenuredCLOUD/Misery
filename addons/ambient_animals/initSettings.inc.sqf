@@ -8,19 +8,6 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(animalTypes),
-    "EDITBOX",
-    ["Possible types", "Possible animals to spawn: ('Sheep','Goat','Chicken')"],
-    ["Misery","Ambient wildlife"],
-    "['Sheep','Goat','Chicken']",
-    1,
-    {
-        params ["_value"];
-        GVAR(animalTypes) = parseSimpleArray _value;
-    }
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(maxAnimalUnits),
     "SLIDER",
     ["Maximum animals", "Maximum animals allowed to spawn"],
@@ -35,6 +22,15 @@
     ["Minimum distance", "Minimum distance at which animals can spawn"],
     ["Misery","Ambient wildlife"],
     [25, 5000, 500, 0],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(animalMaximumDistance),
+    "SLIDER",
+    ["Maximum distance", "Maximum distance at which animals can spawn"],
+    ["Misery","Ambient wildlife"],
+    [25, 10000, 500, 0],
     1
 ] call CBA_fnc_addSetting;
 
