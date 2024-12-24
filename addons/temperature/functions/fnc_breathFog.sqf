@@ -22,7 +22,7 @@ while {true} do {
     player setVariable ["MiseryBreathFogSim", true];
 
     if ((((call FUNC(environment)) select 2) == 0) || (!MiseryBreathFogAllowed) || (!alive player)) exitWith {
-        if(MiseryDebug)then{systemChat "Misery Breathfog cycle terminated..."};
+        if(EGVAR(common,debug))then{systemChat "Misery Breathfog cycle terminated..."};
         player setVariable ["MiseryBreathFogSim", nil];
     };
 
@@ -50,7 +50,7 @@ while {true} do {
                 player setVariable ["MiseryBreath", false];
             };
         };
-    if(MiseryDebug)then{systemChat "Misery BreathFog cycle..."};
+    if(EGVAR(common,debug))then{systemChat "Misery BreathFog cycle..."};
     sleep 1;
 };
 

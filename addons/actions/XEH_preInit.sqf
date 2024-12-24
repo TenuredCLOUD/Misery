@@ -6,8 +6,9 @@ ADDON = false;
 
 #include "initSettings.inc.sqf"
 
-if (MiseryWeightcheck) then {
-MiseryActions pushBack[localize "STR_MISERY_CheckGearweight", localize "STR_MISERY_CheckGearweight"];
-};
+GVAR(guiActions) = [];
+GVAR(guiActionsMode) = "";
+GVAR(guiCustomActions) = [];
+GVAR(confirmDeletion) = 0;
 
 ADDON = true;

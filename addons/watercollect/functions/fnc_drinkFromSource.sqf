@@ -60,7 +60,7 @@ Miseryturbidwaterchance=_module getVariable "Misery_Waterturbidchance"; //Dirty 
 
 private _MThirst = player getVariable ["MiseryThirst", MACRO_PLAYER_THIRST];
 
-playSound3D ["STALKERsounds\sounds\character\drinkwater_gulp.ogg", player, false, getPosASL player, 4, 1, 10];
+playSound3D [QPATHTOEF(audio,sounds\items\drink.ogg), player, false, getPosASL player, 4, 1, 10];
 
 if((random 100) > Miseryturbidwaterchance) exitWith {
 

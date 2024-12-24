@@ -17,7 +17,7 @@
 private ["_selectedItem","_debuffs","_entry","_MHunger","_MThirst","_MDebuffs","_MExposure","_hunger","_thirst","_debuffAdd","_debuffRemove","_script","_replaceWith","_playaudio","_checkforGmask","_checkforCopener","_waittill","_radsremoved","_radsadd","_feverremoved","_coldremoved"];
 
 _selectedItem = (toUpper _this);
-_debuffs = [] + MiserysurvivalItemEffects;
+_debuffs = [] + GVAR(itemEffects);
 _entry = [];
 
 {

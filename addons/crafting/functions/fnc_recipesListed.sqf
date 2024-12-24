@@ -29,7 +29,7 @@ if (!isNull findDisplay 982376) exitWith { //Double make sure script exits after
     if (_displayName == "") then {
         _displayName = getText (configFile >> "CfgMagazines" >> _outputItem >> "displayName");
     };
-    if (MiseryDebug) then {
+    if (EGVAR(common,debug)) then {
         systemChat format ["Output item: %1", _displayName];  // Debugging hint
     };
     private _index = _list lbAdd _displayName;

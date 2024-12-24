@@ -133,7 +133,7 @@ _SpawnFLAG = false;
 
 if (Misery_activePOIs >= Misery_POIMAXAllowed) exitWith {
 
-    if (MiseryDebug) then {
+    if (EGVAR(common,debug)) then {
             systemChat "[Misery POI Framework] exiting Generation for Campground due to max active POI's allowed value being reached";
     };
 
@@ -146,13 +146,13 @@ if (Misery_activePOIs >= Misery_POIMAXAllowed) exitWith {
 
 //Spawn chance check:
 if ((random 100) > _Spawnchance) exitWith {
-if (MiseryDebug) then {systemChat format["[Misery POI Framework] Spawn chance failed, exiting Generation for Campground at %1 checks will be re-initialized next game session...",getPosATL _module]};
+if (EGVAR(common,debug)) then {systemChat format["[Misery POI Framework] Spawn chance failed, exiting Generation for Campground at %1 checks will be re-initialized next game session...",getPosATL _module]};
 
 //This POI is now null from spawning since the original check failed
 
 };
 
-if (MiseryDebug) then {systemChat format["[Misery POI Framework] Player detected near module at %1 Generating Campground...",getPosATL _module]};
+if (EGVAR(common,debug)) then {systemChat format["[Misery POI Framework] Player detected near module at %1 Generating Campground...",getPosATL _module]};
 
 // Create the entities
 for "_i" from 1 to _numEntities do {
@@ -345,7 +345,7 @@ if ((random 10) > 5) then {
 _x action ["sitDown", _x]};
 } forEach (units _group);
 
-if (MiseryDebug) then {
+if (EGVAR(common,debug)) then {
     _randID = str (diag_tickTime * 1e6) + str _module;
     _markerName = format ["Campground %1", _randID];
     _marker = createMarkerLocal [_markerName, _pos];
@@ -363,7 +363,7 @@ if (!isNil "grad_persistence_blacklist") then {
     {
         if ((grad_persistence_blacklist find (toLower _x) == -1) && (grad_persistence_blacklist find (toUpper _x) == -1)) then {
             [_x] call grad_persistence_fnc_blacklistClasses;
-            if (MiseryDebug) then {systemChat format ["[Misery POI Framework] GRAD Persistence detected, Adding %1 to blacklist for saving / reloading...", _x]};
+            if (EGVAR(common,debug)) then {systemChat format ["[Misery POI Framework] GRAD Persistence detected, Adding %1 to blacklist for saving / reloading...", _x]};
         };
     } forEach (_tentTypes + _crateTypes);
 };
@@ -384,13 +384,13 @@ waitUntil {
 };
 
 if (_deleteFlag) exitWith {
-if (MiseryDebug) then {systemChat format["[Misery POI Framework] Player no longer detected, deleting Campground at %1...",getPosATL _module]};
+if (EGVAR(common,debug)) then {systemChat format["[Misery POI Framework] Player no longer detected, deleting Campground at %1...",getPosATL _module]};
 {deleteVehicle _x} forEach units _group; // Delete all units in the group
 {deleteVehicle _x} forEach _spawnedObjects;
 deleteGroup _group; // Delete the group
-if (MiseryDebug) then {systemChat format["[Misery POI Framework] Re-initializing Campground POI for module at %1...",getPosATL _module]};
+if (EGVAR(common,debug)) then {systemChat format["[Misery POI Framework] Re-initializing Campground POI for module at %1...",getPosATL _module]};
 _module setVariable ["Misery_POI_Spawned", false, true];
-if (MiseryDebug && {!isNil "_marker"}) then {
+if (EGVAR(common,debug) && {!isNil "_marker"}) then {
         deleteMarker _marker;
     };
 

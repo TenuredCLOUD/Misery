@@ -26,9 +26,9 @@ if !(hasInterface) exitWith {};
 
         if (!alive player) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
-            if(MiseryDebug)then{systemChat "Misery survival loop cycle terminated..."};
+            if(EGVAR(common,debug))then{systemChat "Misery survival loop cycle terminated..."};
             [] call FUNC(loop);
-            if(MiseryDebug)then{systemChat "Misery survival loop cycle checks re-initiated..."};
+            if(EGVAR(common,debug))then{systemChat "Misery survival loop cycle checks re-initiated..."};
         };
 
     private ["_rads","_MHunger","_MThirst","_MInfection","_MPoison","_MSleepiness","_MExposure","_MPlayertemp","_Rhunger","_MDebuffs","_MSleeppillstaken","_MIsSleeping","_randomnutrient","_randomnutrientweight","_bagweightload","_Playerweight","_Miseryweightdefcalculated","_randomsleepweight","_random"];
@@ -75,7 +75,7 @@ if !(hasInterface) exitWith {};
     player setVariable ["MiseryHunger", (_MHunger - (_Miseryweightdefcalculated))]; //player setVariable ["MiseryHunger", (_MHunger -  ((_Miseryweightdefcalculated)))]; //player setVariable ["MiseryHunger", (_MHunger -  ((_Miseryweightdefcalculated)toFixed 2))];
     };
 
-    if !(MiseryMP) then { //If SP - and Weight deficiency then start increasing sleepiness var
+    if !(EGVAR(common,checkMultiplayer)) then { //If SP - and Weight deficiency then start increasing sleepiness var
     _randomsleepweight = [1, 2] call BIS_fnc_randomInt; //random sleep decrease
     if (_randomsleepweight == 1) then {
     _MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
@@ -84,7 +84,7 @@ if !(hasInterface) exitWith {};
     };
 };
 
-    if (MiseryMP) then {player setVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
+    if (EGVAR(common,checkMultiplayer)) then {player setVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
     }else{
 
         //if (MiseryNORVG==1) then { //Only calculate Misery sleep system if using Misery framework
@@ -104,7 +104,7 @@ if !(hasInterface) exitWith {};
     };
 
     //MP "Tired" Debuff removal:
-    if (MiseryMP && _MDebuffs find "TIRED" != -1) then {_MDebuffs deleteAt (_MDebuffs find "TIRED"); player setVariable ["MiseryDebuffs", _MDebuffs];};
+    if (EGVAR(common,checkMultiplayer) && _MDebuffs find "TIRED" != -1) then {_MDebuffs deleteAt (_MDebuffs find "TIRED"); player setVariable ["MiseryDebuffs", _MDebuffs];};
 
     //Blackout due to extreme fatigue:
     _blackout = true;
@@ -223,7 +223,7 @@ if !(hasInterface) exitWith {};
         }; //Over exposure death / -30C or 55+C
     };
 
-    if(MiseryDebug)then{systemChat "Misery survival loop cycle..."};
+    if(EGVAR(common,debug))then{systemChat "Misery survival loop cycle..."};
 
 }, MiserysurvivalCycle, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;

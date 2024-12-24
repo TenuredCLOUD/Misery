@@ -45,10 +45,10 @@ if !("Misery_tinder" in items player || "acex_intelitems_notepad" in magazines p
     {
   //Sound generation:
   if ("Misery_lighter" in items player) then {
-  playSound3D ["\z\misery\addons\audio\sounds\immersion\Lighter.ogg", player, false, getPosASL player, 4, 1, 10];
+  playSound3D [QPATHTOEF(audio,sounds\immersion\Lighter.ogg), player, false, getPosASL player, 4, 1, 10];
   }else{
   if ("rvg_matches" in magazines player) then {
-  playSound3D ["\z\misery\addons\audio\sounds\immersion\Match.ogg", player, false, getPosASL player, 4, 1, 10];
+  playSound3D [QPATHTOEF(audio,sounds\immersion\Match.ogg), player, false, getPosASL player, 4, 1, 10];
   };
   };
 

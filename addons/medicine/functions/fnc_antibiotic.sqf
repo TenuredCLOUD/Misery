@@ -16,8 +16,7 @@
 
 private _MInfection = player getVariable ["MiseryInfection", MACRO_PLAYER_INFECTION];
 
-MiseryACE=false;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
+
 
 if (!hasInterface) exitWith {};
 
@@ -31,7 +30,7 @@ if (!hasInterface) exitWith {};
 
     player removeItem "Misery_antibioticpill";
 
-    if (MiseryACE) then {
+    if (EGVAR(common,ace)) then {
     [player, "Misery_antibioticpill", 10, 60, -10, 0, -10] call ace_medical_status_fnc_addMedicationAdjustment;
     };
 

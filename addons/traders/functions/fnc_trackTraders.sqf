@@ -17,7 +17,7 @@
  * Public: No
 */
 
-waitUntil {sleep 1; ((count MiseryActiveTraders) > 0)};
+waitUntil {sleep 1; ((count GVAR(activeTraders)) > 0)};
 
 while {true} do {
     private _players = call EFUNC(common,listPlayers);
@@ -36,7 +36,7 @@ while {true} do {
                     private _items = _shop select (_shop findIf {_x select 0 == "Items"}) select 1;
                     private _shopFunds = _shop select (_shop findIf {_x select 0 == "ShopFunds"}) select 1;
 
-                    if (MiseryDebug) then {
+                    if (EGVAR(common,debug)) then {
                         systemChat format ["Processing trader %1, initial funds: %2", _trader, [_shopFunds, 1, 2, true] call CBA_fnc_formatNumber];
                     };
 
@@ -80,12 +80,12 @@ while {true} do {
                     _shop set [(_shop findIf {_x select 0 == "ShopFunds"}), ["ShopFunds", _shopFunds]];
                     _trader setVariable ['shop', _shop, true];
 
-                    if (MiseryDebug) then {
+                    if (EGVAR(common,debug)) then {
                         systemChat format ["Finished processing trader %1, final funds: %2", _trader, [_shopFunds, 1, 2, true] call CBA_fnc_formatNumber];
                     };
                 };
             };
-        } forEach MiseryActiveTraders;
+        } forEach GVAR(activeTraders);
     } forEach _players;
     sleep Misery_MarketShift_Cycle;
 };

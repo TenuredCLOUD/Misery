@@ -30,11 +30,16 @@ _item=_x;
     if!(_selectedItem=="")exitWith{};
 }forEach((items player)+(magazines player)); //((items player)+(assignedItems player)+(magazines player)+(weapons player))
 if(_selectedItem=="")exitWith{};
-if(((toUpper _selectedItem)in MiserysurvivalItems))exitWith{
+if(((toUpper _selectedItem)in GVAR(items)))exitWith{
     _selectedItem call FUNC(useItem);
 };
 
+GVAR(itemCustomActions) params [_selectedItem, _script];
+
 private _script="";
-{if(toLower(_x select 0)==(toLower _selectedItem))exitWith{_script=_x select 1}}forEach MiseryActionsItemCustom;
-if!(_script=="")exitWith{_selectedItem call _script};
+{ 
+if (toLower(_x select 0) == (toLower _selectedItem)) exitWith {_script=_x select 1} 
+} forEach GVAR(itemCustomActions);
+
+if !(_script == "") exitWith {_selectedItem call _script};
 [_selectedItem] call FUNC(clickCustom);

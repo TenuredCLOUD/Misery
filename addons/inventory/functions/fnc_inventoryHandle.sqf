@@ -23,7 +23,7 @@ player addEventHandler ["InventoryOpened", {
         } count [633, 638, 619];
 
         private _display = findDisplay 46 createDisplay "MiseryINVACT_GUI";
-        MiseryActionsMode = "";
+        EGVAR(actions,guiActionsMode) = "";
         [] call FUNC(displayActions);
 
         private _handle = [{

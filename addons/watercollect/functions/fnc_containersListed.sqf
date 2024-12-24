@@ -29,7 +29,7 @@ if (!isNull findDisplay 982380) exitWith {
         if (_displayName == "") then {
             _displayName = getText (configFile >> "CfgMagazines" >> _requiredItem >> "displayName");
         };
-        if (MiseryDebug) then {
+        if (EGVAR(common,debug)) then {
             systemChat format ["Filling %1 requires: %2 and takes %3 seconds", _requiredItem, _requiredItem, _fillingTime];
         };
         private _index = _list lbAdd _displayName;

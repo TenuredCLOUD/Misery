@@ -26,7 +26,7 @@ class CLASS(medicalTreatment_prompt): RscText
 class CLASS(medicalTreatment_icon): RscPicture
 {
     idc = -1;
-    text = "\Data\Mappack\medical.paa";
+    text = QPATHTOEF(markers,data\medical.paa);
     x = 31.5 * GUI_GRID_W + GUI_GRID_X;
     y = 1 * GUI_GRID_H + GUI_GRID_Y;
     w = 5 * GUI_GRID_W;

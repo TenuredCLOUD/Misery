@@ -15,8 +15,8 @@
 */
 
 //ACE check for dmg:
-MiseryACE=false;
-if (isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
+EGVAR(common,ace)=false;
+if (isClass(configFile>>"cfgPatches">>"ace_main"))then{EGVAR(common,ace)=true};
 
 [{(player getVariable ["MiseryRadiation", 0]) >= 500},
 {
@@ -25,9 +25,9 @@ if (isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
 
         if (((player getVariable ["MiseryRadiation", 0]) < 500) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
-            if(MiseryDebug)then{systemChat "Misery Rad exposure enh+ cycle terminated..."};
+            if(EGVAR(common,debug))then{systemChat "Misery Rad exposure enh+ cycle terminated..."};
             [] call FUNC(exposure);
-            if(MiseryDebug)then{systemChat "Misery Rad exposure enh+ cycle checks re-initiated..."};
+            if(EGVAR(common,debug))then{systemChat "Misery Rad exposure enh+ cycle checks re-initiated..."};
         };
 
         private ["_MHunger","_MThirst","_Rhunger","_Rthirst","_radlvl","_scalednutrientloss","_scaledstaminaloss","_damage"];
@@ -68,7 +68,7 @@ if (isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
 
         if (_radlvl >= 9500) then  {
 
-            if (MiseryACE) then {
+            if (EGVAR(common,ace)) then {
             [player, 1, "head", "stab"] call ace_medical_fnc_addDamageToUnit;
             [player, 1, "body", "stab"] call ace_medical_fnc_addDamageToUnit;
             }else{
@@ -78,7 +78,7 @@ if (isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
 
         };
 
-    if(MiseryDebug)then{systemChat "Misery Rad exposure enh+ cycle..."};
+    if(EGVAR(common,debug))then{systemChat "Misery Rad exposure enh+ cycle..."};
 
     }, 120, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;

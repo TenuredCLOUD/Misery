@@ -16,10 +16,10 @@
 
 disableSerialization;
 
-[{"Misery_ERU" in magazines player}, {
+[{QCLASS(eru_On) in magazines player}, {
     [{
         params ["_args", "_handle"];
-        if (!("Misery_ERU" in magazines player) || (!alive player)) exitWith {
+        if (!(QCLASS(eru_On) in magazines player) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             ("MiseryERU_UI" call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
             [] call FUNC(main);
@@ -49,7 +49,7 @@ disableSerialization;
             case (!isNil "Misery_ERU_Radiation"): {
                 if (!isNil "MiseryinRadZone" && MiseryinRadZone) then {
                     _textControlReadings ctrlSetText "Radiation Detected!";
-                    playSound3D ["\z\misery\addons\audio\sounds\eru\PowerDownBeep.ogg", player, false, getPosASL player, 4, 1, 10];
+                    playSound3D [QPATHTOEF(audio,sounds\eru\PowerDownBeep.ogg), player, false, getPosASL player, 4, 1, 10];
                 } else {
                     _textControlReadings ctrlSetText "No Radiation Detected...";
                 };
@@ -57,7 +57,7 @@ disableSerialization;
             case (!isNil "Misery_ERU_PsyEmm"): {
                 if (!isNil "MiseryinPsyfield" && MiseryinPsyfield) then {
                     _textControlReadings ctrlSetText "Psy-Emmissions detected!";
-                    playSound3D ["\z\misery\addons\audio\sounds\eru\PowerDownBeep.ogg", player, false, getPosASL player, 4, 1, 10];
+                    playSound3D [QPATHTOEF(audio,sounds\eru\PowerDownBeep.ogg), player, false, getPosASL player, 4, 1, 10];
                 } else {
                     _textControlReadings ctrlSetText "No Psy-Emmissions Detected...";
                 };

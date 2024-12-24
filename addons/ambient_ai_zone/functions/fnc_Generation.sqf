@@ -154,7 +154,7 @@ _spawnPos = [_pos, _ModuleSpawnDistanceMIN, _ModuleSpawnDistanceMAX, 10, 0, 0, 0
 
 if (Misery_active_AmbAI_Groups >= Misery_AmbAI_MAXAllowed) exitWith {
 
-    if (MiseryDebug) then {
+    if (EGVAR(common,debug)) then {
             systemChat "[Misery Ambient_AI Framework] exiting AI Generation due to max active AI groups allowed value being reached";
     };
 
@@ -166,12 +166,12 @@ if (Misery_active_AmbAI_Groups >= Misery_AmbAI_MAXAllowed) exitWith {
 
 //Spawn chance check:
 if ((random 100) > _Spawnchance) exitWith {
-if (MiseryDebug) then {systemChat format["[Misery Ambient_AI Framework] Spawn chance failed, exiting Generation for AI at %1 checks will be re-initialized next game session...",getPosATL _module]};
+if (EGVAR(common,debug)) then {systemChat format["[Misery Ambient_AI Framework] Spawn chance failed, exiting Generation for AI at %1 checks will be re-initialized next game session...",getPosATL _module]};
 
 //This AI generator is now null from spawning since the original check failed
 };
 
-if (MiseryDebug) then {systemChat format["[Misery Ambient_AI Framework] Player detected near module at %1 Generating AI Group...",getPosATL _module]};
+if (EGVAR(common,debug)) then {systemChat format["[Misery Ambient_AI Framework] Player detected near module at %1 Generating AI Group...",getPosATL _module]};
 
 // Create the entities
 for "_i" from 1 to _numEntities do {
@@ -279,7 +279,7 @@ for "_i" from 1 to _numEntities do {
     _unit setSkill ["aimingShake", _aimingShake];
     _unit setSkill ["aimingSpeed", _aimingSpeed];
 
-    if !(MiseryMP) then {
+    if !(EGVAR(common,checkMultiplayer)) then {
     if (side _unit isEqualTo side player) then {
         private _equipmentMass = loadAbs _unit / getNumber (configFile >> "CfgInventoryGlobalVariable" >> "maxSoldierLoad");
         private _recruitmentCost = 500 * round(_equipmentMass * 100);
@@ -287,7 +287,7 @@ for "_i" from 1 to _numEntities do {
 
         [
             _unit,
-            format [localize "STR_MISERY_RECRUITUNIT", _Unitidentity, MiseryCurrencySymbol, [_recruitmentCost] call Misery_fnc_formatNumber],
+            format [localize "STR_MISERY_RECRUITUNIT", _Unitidentity, EGVAR(money,symbol), [_recruitmentCost] call Misery_fnc_formatNumber],
             "\a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa",
             "\a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa",
             "_this distance _target < 3",
@@ -303,7 +303,7 @@ for "_i" from 1 to _numEntities do {
                     _caller setVariable ["MiseryCurrency", _playerMoney - _recruitmentCost];
                     [_target] joinSilent _caller;
                     [_target,_actionId] call BIS_fnc_holdActionRemove;
-                    private _recruitSuccess = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_SUCCESS", _Unitidentity, MiseryCurrencySymbol, [_recruitmentCost] call Misery_fnc_formatNumber]];
+                    private _recruitSuccess = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_SUCCESS", _Unitidentity, EGVAR(money,symbol), [_recruitmentCost] call Misery_fnc_formatNumber]];
                     [parseText _recruitSuccess, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
                 }else{
                     private _recruitFail = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_FAIL",_Unitidentity]];
@@ -329,7 +329,7 @@ for "_i" from 1 to _numEntities do {
 
 _group enableDynamicSimulation true;
 
-if (MiseryDebug) then {
+if (EGVAR(common,debug)) then {
     _randID = str (diag_tickTime * 1e6) + str _module;
     _markerName = format ["AI Group %1", _randID];
     _marker = createMarkerLocal [_markerName, getPosATL leader _group];
@@ -383,12 +383,12 @@ waitUntil {
 };
 
 if (_deleteFlag) exitWith {
-if (MiseryDebug) then {systemChat format["[Misery Ambient_AI Framework] Player no longer detected, or Group for module at %1 was wiped out...",getPosATL _module]};
+if (EGVAR(common,debug)) then {systemChat format["[Misery Ambient_AI Framework] Player no longer detected, or Group for module at %1 was wiped out...",getPosATL _module]};
 {deleteVehicle _x} forEach units _group; // Delete all units in the group
 deleteGroup _group; // Delete the group
-if (MiseryDebug) then {systemChat format["[Misery Ambient_AI Framework] Re-initializing AI Generation for module at %1...",getPosATL _module]};
+if (EGVAR(common,debug)) then {systemChat format["[Misery Ambient_AI Framework] Re-initializing AI Generation for module at %1...",getPosATL _module]};
 _module setVariable ["Misery_AI_Zone_Spawned", false, true];
-if (MiseryDebug && {!isNil "_marker"}) then {
+if (EGVAR(common,debug) && {!isNil "_marker"}) then {
         deleteMarker _marker;
     };
 

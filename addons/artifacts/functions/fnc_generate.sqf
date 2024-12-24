@@ -61,7 +61,7 @@ if (isServer) then {
     if (!isNil "grad_persistence_blacklist") then {
         if ((grad_persistence_blacklist find (toLower "GroundWeaponHolder_Scripted") == -1) && (grad_persistence_blacklist find (toUpper "GroundWeaponHolder_Scripted") == -1)) then {
             ["GroundWeaponHolder_Scripted"] call grad_persistence_fnc_blacklistClasses;
-            if (MiseryDebug) then {systemChat "[Misery Artifact spawner] GRAD Persistence detected, Adding Artifact piles to blacklist for saving / reloading..."};
+            if (EGVAR(common,debug)) then {systemChat "[Misery Artifact spawner] GRAD Persistence detected, Adding Artifact piles to blacklist for saving / reloading..."};
         };
     };
 
@@ -91,7 +91,7 @@ if (isServer) then {
         // Check if artifact spawns under roof, or in building: (Enforce exterior spawns)
         _groundStash = _x;
         if (_x call EFUNC(artifacts,safe)) then {
-             if (MiseryDebug) then {systemChat format ["[Misery Artifact spawner] Artifact at %1 spawned under a roof or inside of a building, deleting...", getPosATL _x]};
+             if (EGVAR(common,debug)) then {systemChat format ["[Misery Artifact spawner] Artifact at %1 spawned under a roof or inside of a building, deleting...", getPosATL _x]};
             deleteVehicle _x;
         } else {
             _light = "#lightpoint" createVehicle getPos _x;
@@ -106,7 +106,7 @@ if (isServer) then {
     while {true} do {
         sleep 5;
         if (count((weaponCargo _groundStash)+(itemCargo _groundStash)+(magazineCargo _groundStash)+(backpackCargo _groundStash)+(weaponsItemsCargo _groundStash)) < 1) exitWith {
-            if (MiseryDebug) then {systemChat format["[Misery Artifact spawner] Loot pile at %1 no longer has an artifact, Deleting...",getPosATL _groundStash];};
+            if (EGVAR(common,debug)) then {systemChat format["[Misery Artifact spawner] Loot pile at %1 no longer has an artifact, Deleting...",getPosATL _groundStash];};
             deleteVehicle _groundStash;
             };
         };

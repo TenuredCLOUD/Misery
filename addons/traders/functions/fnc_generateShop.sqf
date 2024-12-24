@@ -75,6 +75,6 @@ _shopName = _shop select (_shop findIf {_x select 0 == "ShopName"}) select 1;
     false
 ] call BIS_fnc_holdActionAdd;
 
-MiseryActiveTraders pushBack _traderName;
+GVAR(activeTraders) pushBack _traderName;
 
-publicVariable "MiseryActiveTraders";
+publicVariable "GVAR(activeTraders)";

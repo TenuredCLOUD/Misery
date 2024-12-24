@@ -24,7 +24,7 @@ if (!hasInterface) exitWith {};
 
   if (alive player) then {
 
-    playSound3D ["\z\misery\addons\audio\sounds\inventory\Items\CrinklingPlastic.ogg", player, false, getPosASL player, 4, 1, 10];
+    playSound3D [QPATHTOEF(audio,sounds\inventory\Items\CrinklingPlastic.ogg), player, false, getPosASL player, 4, 1, 10];
 
   player removeItem "Misery_caffeine";
   titleText ["You take some Caffeine tablets...", "PLAIN DOWN"];
@@ -36,7 +36,7 @@ if (!hasInterface) exitWith {};
   };
   if (!(alive player)) exitWith {};
 
-  if !(MiseryMP) then {
+  if !(EGVAR(common,checkMultiplayer)) then {
   player setVariable ["MiserySleepiness", (_MSleepiness - 15)];
 };
 

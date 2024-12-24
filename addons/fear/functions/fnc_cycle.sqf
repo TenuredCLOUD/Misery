@@ -22,9 +22,9 @@
 
         if (!alive player) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
-            if(MiseryDebug)then{systemChat "Misery Fear cycle terminated..."};
+            if(EGVAR(common,debug))then{systemChat "Misery Fear cycle terminated..."};
             [] call FUNC(cycle);
-            if(MiseryDebug)then{systemChat "Misery Fear cycle checks re-initiated..."};
+            if(EGVAR(common,debug))then{systemChat "Misery Fear cycle checks re-initiated..."};
         };
 
     private ["_MFear","_randomzedval","_fearzedadd","_randomphantomval","_fearphantomadd","_randomspookval","_fearspookadd","_randomnightval","_fearnightadd","_randomnightnofear","_fearnightnofear","_randompsyval","_fearpsyadd"];
@@ -114,7 +114,7 @@ if (!(isNil {player getVariable "MiseryFear"})) then {
          };
     };
 
-if(MiseryDebug)then{systemChat "Misery Fear cycle..."};
+if(EGVAR(common,debug))then{systemChat "Misery Fear cycle..."};
 
 }, MiserysurvivalCycle, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;

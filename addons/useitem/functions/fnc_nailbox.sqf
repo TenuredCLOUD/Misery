@@ -15,14 +15,14 @@
  * Public: No
 */
 
-if (MiseryUsingiBuild) exitWith {
+if (EGVAR(common,iBuild)) exitWith {
 
 titleText ["You take the nails out of the box...", "PLAIN DOWN"];
 player removeItem "Misery_boxnails";
 for "_i" from 1 to 15 do {[player, "NMIB_WoodNails_Itm", true] call CBA_fnc_addItem;};
 };
 
-if !(MiseryUsingiBuild) exitWith {
+if !(EGVAR(common,iBuild)) exitWith {
 
 titleText ["You take the nails out of the box...", "PLAIN DOWN"];
 player removeItem "Misery_boxnails";

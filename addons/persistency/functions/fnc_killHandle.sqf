@@ -16,7 +16,7 @@ addMissionEventHandler ["EntityKilled", {
   if (_killed == player) then {
    if !(MiserysurvivalKillhandleScript=="") then {
             private _killedscript = [_this select 0] call MiserysurvivalKillhandleScript;
-            if(MiseryDebug)then{systemChat "Killed handle script executed...";};
+            if(EGVAR(common,debug))then{systemChat "Killed handle script executed...";};
                 };
               };
         }];

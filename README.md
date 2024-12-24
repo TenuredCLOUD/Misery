@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/TenuredCLOUD/Misery/blob/0c4d2870b95d438ccd019c0f3076058dca843430/LICENSE.txt">
+    <a href="https://github.com/TenuredCLOUD/Misery/blob/b018a7a7aba6b1e8021ce4312b35fb9f2357b94c/LICENSE.txt">
     <img src="https://img.shields.io/badge/License-GPLv2-orange.svg?style=flat-square" alt="Misery License">
     </a>
     <a href="https://discord.gg/5gD3DwZqkK">

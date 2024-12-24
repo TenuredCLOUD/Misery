@@ -24,7 +24,7 @@ player removeItem "Misery_lithiumbattery";
 
 player addItem "Misery_personalgeiger";
 
-playSound3D ["\z\misery\addons\audio\sounds\Geigerenable\GeigerON.ogg", player, false, getPosASL player, 4, 1, 10];
+playSound3D [QPATHTOEF(audio,sounds\Geigerenable\GeigerON.ogg), player, false, getPosASL player, 4, 1, 10];
 
 //If bootup successful:
 

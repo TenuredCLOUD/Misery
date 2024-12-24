@@ -19,13 +19,13 @@ _MSleeppillstaken = player getVariable ["MiserySleeppillstaken", 0];
 _MIsSleeping = player getVariable "Misery_IsSleeping";
 _MFearSleep = player getVariable "Misery_FearSleep";
 
-MiseryACE=false;
+EGVAR(common,ace)=false;
 if (isClass(configFile>>"cfgPatches">>"ace_main")) then {
-    MiseryACE=true
+    EGVAR(common,ace)=true
 };
 
 // sleep system enabled pre-check:
-if (MiseryMP) exitWith {
+if (EGVAR(common,checkMultiplayer)) exitWith {
     titleText ["...", "PLAIN DOWN"]
 };
 
@@ -40,7 +40,7 @@ if (alive player) exitWith {
 
     player removeItem "Misery_sleeppill";
 
-    if (MiseryACE) then {
+    if (EGVAR(common,ace)) then {
         [player, "Misery_sleeppill", 10, 60, -10, 0, -10] call ace_medical_status_fnc_addMedicationAdjustment;
     };
 

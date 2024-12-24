@@ -25,7 +25,7 @@ private _FillB = _dialog displayCtrl 1600;
 private _DrinkFSB = _dialog displayCtrl 1601;
 private _ExitB = _dialog displayCtrl 1602;
 
-if (MiseryDebug) then {
+if (EGVAR(common,debug)) then {
 systemChat format ["Selected output item: %1", _selectedOutputItem]; //debug output
 systemChat format ["Player's recipes: %1", _playerRecipes]; //debug output
 };
@@ -34,7 +34,7 @@ systemChat format ["Player's recipes: %1", _playerRecipes]; //debug output
     if (_x select 0 isEqualTo _selectedOutputItem) then {
         _matchedRecipe = _x;
     };
-    if (MiseryDebug) then {
+    if (EGVAR(common,debug)) then {
     systemChat format ["Filled Container Output item of current recipe: %1", _x select 1]; //debug output
     };
 } forEach _playerRecipes;

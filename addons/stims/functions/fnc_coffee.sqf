@@ -20,7 +20,7 @@ if (!hasInterface) exitWith {};
 
   if (alive player) exitWith {
 
-if !(MiseryMP) then {
+if !(EGVAR(common,checkMultiplayer)) then {
   player setVariable ["MiserySleepiness", (_MSleepiness - 10)];
 };
 

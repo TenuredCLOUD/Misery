@@ -15,8 +15,7 @@
 */
 
 if (!hasInterface) exitWith {};
-MiseryACE=false;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
+
 private _random = [1, 10] call BIS_fnc_randomInt;
 private _MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];
 
@@ -28,7 +27,7 @@ private _MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];
 
     player removeItem "Misery_cigarettepack"; //remove on start;
 
-    playSound3D ["\z\misery\addons\audio\sounds\immersion\Matchsmoking.ogg", player, false, getPosASL player, 4, 1, 10];
+    playSound3D [QPATHTOEF(audio,sounds\immersion\Matchsmoking.ogg), player, false, getPosASL player, 4, 1, 10];
 
     //Remove some fear due to cig smoking:
   if (MiseryFearenabled) then {
@@ -38,7 +37,7 @@ private _MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];
 
  sleep 1;
 
-  if (MiseryACE) then {
+  if (EGVAR(common,ace)) then {
   [player, "Misery_cigarettepack", 10, 300, -1, -1, -1] call ace_medical_status_fnc_addMedicationAdjustment;
   };
 
@@ -111,7 +110,7 @@ if ("Misery_lighter" in items player) then {
 
   player removeItem "Misery_cigarettepack"; //remove on start;
 
-  playSound3D ["\z\misery\addons\audio\sounds\immersion\Lightersmoking.ogg", player, false, getPosASL player, 4, 1, 10];
+  playSound3D [QPATHTOEF(audio,sounds\immersion\Lightersmoking.ogg), player, false, getPosASL player, 4, 1, 10];
 
   //Remove some fear due to cig smoking:
   if (MiseryFearenabled) then {
@@ -121,7 +120,7 @@ if ("Misery_lighter" in items player) then {
 
   sleep 1;
 
-  if (MiseryACE) then {
+  if (EGVAR(common,ace)) then {
   [player, "Misery_cigarettepack", 10, 300, -1, -1, -1] call ace_medical_status_fnc_addMedicationAdjustment;
   };
 
