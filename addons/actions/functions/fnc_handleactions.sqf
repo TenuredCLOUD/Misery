@@ -227,7 +227,7 @@ _out pushBack [localize "STR_MISERY_REQTREATMENT",localize "STR_MISERY_REQTREATM
 
 //Item swappers:
 //Radiation / Geiger conversion:
-if (MiseryEnhrads) then {
+if EGVAR(radiation,enhancedExposure) then {
     [player, "rvg_Geiger", "Misery_personalgeigernobattery"] call EFUNC(common,itemSwap);
 };
 
@@ -244,7 +244,7 @@ if (EGVAR(common,ace)) then {
 [player, "rvg_canisterFuel_Empty", selectRandom ["Misery_EmptyDiesel","Misery_EmptyPetrol"]] call EFUNC(common,itemSwap);
 
 //WBKIMS checks + Swappers:
-if (MiseryWBKIMS) then {
+if (EGVAR(ims,enabled)) then {
     [player, "Misery_Woodaxe", "WBK_axe"] call EFUNC(common,weaponSwap);
     [player, "Misery_Sledghammer", "WBK_survival_weapon_2"] call EFUNC(common,weaponSwap);
     [player, "Misery_craftinghammer", "WBK_SmallHammer"] call EFUNC(common,weaponSwap);

@@ -88,7 +88,7 @@ lbClear _ailmentsList;
     _HealthText ctrlSetText "Health:";
     };
 
-    if !(Miserygasmasks) then {
+    if (!EGVAR(gasmask,enhanced)) then {
     _GasText ctrlShow false;
     _GasVal ctrlShow false;
     };
@@ -115,23 +115,23 @@ lbClear _ailmentsList;
     //     };
     //         };
 
-    if (Miserygasmasks) then {
+    if (EGVAR(gasmask,enhanced)) then {
     private _GasmaskBuff = _buffs findIf {(_x select 0) isEqualTo "Gas Mask"};
     private _SCBABuff = _buffs findIf {(_x select 0) isEqualTo "Supplied Air"};
 
     private _gear = goggles player;
-    private _isInArray = Misery_ProtectiveGearRatings findIf {(_x select 0) isEqualTo _gear} > -1;
+    private _isInArray = EGVAR(common,protectiveGear) findIf {(_x select 0) isEqualTo _gear} > -1;
 
     if (_isInArray && !(vest player in antirad_vests || backpack player in antirad_packs)) then {
         _GascartridgeVal = format["%1%2", round(_cartridgecalc * 1), "%"];
         _GasVal ctrlSetText _GascartridgeVal;
-        ["buff", "Gas Mask", "Data\gasmask.paa", "You are wearing a gasmask, it can protect your lungs from harmful contaminants like radioactive particles, as well as toxic gases. You should be mindful of your cartridges..."] call FUNC(addBuffOrAilment);
+        ["buff", "Gas Mask", QPATHTOEF(icons,data\gasmask_ca.paa), "You are wearing a gasmask, it can protect your lungs from harmful contaminants like radioactive particles, as well as toxic gases. You should be mindful of your cartridges..."] call FUNC(addBuffOrAilment);
     };
 
     if (_isInArray && (vest player in antirad_vests || backpack player in antirad_packs) || (vest player in antirad_vests || backpack player in antirad_packs)) then {
         _GasSuppAir = format["%1", "∞"];
         _GasVal ctrlSetText _GasSuppAir;
-        ["buff", "Supplied Air", "Data\SCBA.paa", "You are utilizing an SCBA device which is useful in an IDLH (Immediately Dangerous to Life or health) area. You have the greatest protection gear available for air contaminants."] call FUNC(addBuffOrAilment);
+        ["buff", "Supplied Air", QPATHTOEF(icons,data\scba_ca.paa), "You are utilizing an SCBA device which is useful in an IDLH (Immediately Dangerous to Life or health) area. You have the greatest protection gear available for air contaminants."] call FUNC(addBuffOrAilment);
     };
 
     if ((!_isInArray && !(vest player in antirad_vests || backpack player in antirad_packs)) && (!_isInArray && !(vest player in antirad_vests || backpack player in antirad_packs) || !(vest player in antirad_vests || backpack player in antirad_packs))) then {
@@ -167,23 +167,21 @@ lbClear _ailmentsList;
         _CurrMagVal ctrlShow false;
     };
 
-    if(MiseryTemperature == 0) then {
+    if(!EGVAR(temperature,enable)) then {
     _TempText ctrlShow false;
     _TempVal ctrlShow false;
     };
-    if(MiseryTemperature == 1 && "Misery_ERU" in magazines player) then {
+    if(EGVAR(temperature,enable) && QCLASS(eru_On) in magazines player) then {
     _temp = format["%1°C",round (_MPlayertemp)];
     _TempVal ctrlSetText _temp;
     };
-    if(MiseryTemperature == 1 && !("Misery_ERU" in magazines player)) then {
-    _TempVal ctrlSetText "No PDA";
+    if(EGVAR(temperature,enable) && !(QCLASS(eru_On) in magazines player)) then {
+    _TempVal ctrlSetText "No ERU";
     };
 
     _GetFunds = player getVariable "MiseryCurrency";
 
-    if (isNil "MiseryCurrencySymbol") then {MiseryCurrencySymbol = "$"};
-
-    _FundsDisplay = format ["%1 %2",MiseryCurrencySymbol,[_GetFunds, 1, 2, true] call CBA_fnc_formatNumber]; //[_GetFunds] call Misery_fnc_formatNumber
+    _FundsDisplay = format ["%1 %2",EGVAR(money,symbol),[_GetFunds, 1, 2, true] call CBA_fnc_formatNumber]; //[_GetFunds] call Misery_fnc_formatNumber
 
     _FundsVal ctrlSetText _FundsDisplay;
 
@@ -193,10 +191,10 @@ lbClear _ailmentsList;
     private _PsyProtected = _ailments findIf {(_x select 0) isEqualTo "Psy Emissions (Protected)"};
     private _PsyNoProtection = _ailments findIf {(_x select 0) isEqualTo "Psy Emissions"};
     if (!(headgear player in _psyprot) && MiseryinPsyfield) then {
-        ["ailment","Psy Emissions", "data\Psyfield.paa", "You hear a very loud pulsing hum, its vibrations are pounding in your head, you're not sure how much longer you can take it..."] call FUNC(addBuffOrAilment);
+        ["ailment","Psy Emissions", QPATHTOEF(icons,data\psyfield_ca.paa), "You hear a very loud pulsing hum, its vibrations are pounding in your head, you're not sure how much longer you can take it..."] call FUNC(addBuffOrAilment);
     };
     if ((headgear player in _psyprot) && MiseryinPsyfield) then {
-        ["ailment","Psy Emissions (Protected)", "data\Psyfield.paa", "You feel subtle vibrations around your skull, you are uneasy..."] call FUNC(addBuffOrAilment);
+        ["ailment","Psy Emissions (Protected)", QPATHTOEF(icons,data\psyfield_ca.paa), "You feel subtle vibrations around your skull, you are uneasy..."] call FUNC(addBuffOrAilment);
     };
     if (!MiseryinPsyfield) then {
     if (_PsyNoProtection > -1) then {
@@ -245,7 +243,7 @@ if (_MSleepiness >= 15) then {
     _infection = _ailments findIf {(_x select 0) isEqualTo "Bacterial Infection"};
 
     if(_MDebuffs find "PARASITES" != -1 && MiseryAilments == 1) then {
-        ["ailment","Parasite Infection", "data\parasites.paa", "You are infected with Parasites, You feel a gnawing hunger that is unsatiable, as well as unquenchable thirst..."] call FUNC(addBuffOrAilment);
+        ["ailment","Parasite Infection", QPATHTOEF(icons,data\parasites_ca.paa), "You are infected with Parasites, You feel a gnawing hunger that is unsatiable, as well as unquenchable thirst..."] call FUNC(addBuffOrAilment);
     }else{
     if (_parasites > -1) then {
         ["ailment","Parasite Infection"] call FUNC(removeBuffOrAilment);
@@ -253,7 +251,7 @@ if (_MSleepiness >= 15) then {
         };
 
     if(_MPoison > 0 && MiseryAilments == 1)then{
-    ["ailment","Poisoned", "data\poison.paa", "You are poisoned, you feel a wave of unease wash over you as death lingers..."] call FUNC(addBuffOrAilment);
+    ["ailment","Poisoned", QPATHTOEF(icons,data\poison_ca.paa), "You are poisoned, you feel a wave of unease wash over you as death lingers..."] call FUNC(addBuffOrAilment);
     }else{
     if (_poison > -1) then {
         ["ailment","Poisoned"] call FUNC(removeBuffOrAilment);
@@ -261,7 +259,7 @@ if (_MSleepiness >= 15) then {
         };
 
     if(_MInfection > 0 && MiseryAilments == 1)then{
-        ["ailment","Bacterial Infection", "data\infection.paa", "You have a Bacterial infection, your breaths are shallow, and feel hot. You can feel your muscles weakening..."] call FUNC(addBuffOrAilment);
+        ["ailment","Bacterial Infection", QPATHTOEF(icons,data\infection_ca.paa), "You have a Bacterial infection, your breaths are shallow, and feel hot. You can feel your muscles weakening..."] call FUNC(addBuffOrAilment);
     }else{
     if (_infection > -1) then {
         ["ailment","Bacterial Infection"] call FUNC(removeBuffOrAilment);
@@ -364,7 +362,7 @@ _FatigueNum ctrlSetText _FatigueNumVal;
     _ShelterBuff = _buffs findIf {(_x select 0) isEqualTo "Sheltered"};
     _CoverageBuff = _buffs findIf {(_x select 0) isEqualTo "Under Roof"};
     if ([player] call EFUNC(common,nearFire)) then {
-    ["buff","Near Fire", "data\nearfire.paa", "When near a fire, you will be warmed from the cold, you can also utilize the fire for cooking, or boiling water to kill off micro-organisms..."] call FUNC(addBuffOrAilment);
+    ["buff","Near Fire", QPATHTOEF(icons,data\nearfire_ca.paa), "When near a fire, you will be warmed from the cold, you can also utilize the fire for cooking, or boiling water to kill off micro-organisms..."] call FUNC(addBuffOrAilment);
     }else{
     if (_NFireBuff > -1) then {
     ["buff","Near Fire"] call FUNC(removeBuffOrAilment);
@@ -372,7 +370,7 @@ _FatigueNum ctrlSetText _FatigueNumVal;
         };
 
     if (insideBuilding player == 1) then {
-        ["buff","Sheltered", "data\shelter.paa", "You are sheltered from the weather, while inside you cannot build a fire due to smoke inhalation..."] call FUNC(addBuffOrAilment);
+        ["buff","Sheltered", QPATHTOEF(icons,data\shelter_ca.paa), "You are sheltered from the weather, while inside you cannot build a fire due to smoke inhalation..."] call FUNC(addBuffOrAilment);
     }else{
     if (_ShelterBuff > -1) then {
     ["buff","Sheltered"] call FUNC(removeBuffOrAilment);

@@ -16,8 +16,7 @@
 
 private _MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
 
-EGVAR(common,ace)=false;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{EGVAR(common,ace)=true};
+
 
 if (!hasInterface) exitWith {};
 
@@ -28,7 +27,7 @@ if (!hasInterface) exitWith {};
   if (alive player) then {
     titleText ["You use the cocaine...", "PLAIN DOWN"];
 
-    playSound3D ["\z\misery\addons\audio\sounds\inventory\Items\Sniff01.ogg", player, false, getPosASL player, 4, 1, 5];
+    playSound3D [QPATHTOEF(audio,sounds\inventory\Items\Sniff01.ogg), player, false, getPosASL player, 4, 1, 5];
 
   player removeItem "Misery_cocaine";
   _time = time + 15;

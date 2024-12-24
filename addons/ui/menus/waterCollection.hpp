@@ -36,7 +36,7 @@ class CLASS(waterCollection_prompt): RscText
 class CLASS(waterCollection_icon): RscPicture
 {
     idc = 1200;
-    text = "Use\icons\well.paa";
+    text = QPATHTOEF(icons,data\well_ca.paa);
     x = 28.5 * GUI_GRID_W + GUI_GRID_X;
     y = 3 * GUI_GRID_H + GUI_GRID_Y;
     w = 5.5 * GUI_GRID_W;

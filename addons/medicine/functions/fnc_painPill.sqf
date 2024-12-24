@@ -14,8 +14,7 @@
  *
 */
 
-EGVAR(common,ace)=false;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{EGVAR(common,ace)=true};
+
 
 if (!hasInterface) exitWith {};
 

@@ -11,7 +11,7 @@ class ControlsBackground
 class CLASS(eru_background): RscPicture
 {
     idc = -1;
-    text = "\z\misery\addons\ui\menus\ui\ERU.paa";
+    text = QPATHTOEF(ui,menus\ui\ERU.paa);
     x = 48.5 * GUI_GRID_W + GUI_GRID_X;
     y = 28.5 * GUI_GRID_H + GUI_GRID_Y;
     w = 13 * GUI_GRID_W;

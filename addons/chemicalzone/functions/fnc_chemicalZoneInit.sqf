@@ -33,7 +33,7 @@ by TenuredCLOUD
             if (_x select 0 == _equipment) then {
                 _totalProtection = _totalProtection vectorAdd (_x select 1);
             };
-        } forEach Misery_ProtectiveGearRatings;
+        } forEach EGVAR(common,protectiveGear);
             };
     } forEach _gear;
 

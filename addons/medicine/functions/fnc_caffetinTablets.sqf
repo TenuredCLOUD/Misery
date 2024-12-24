@@ -18,9 +18,6 @@ private _MInfection = player getVariable ["MiseryInfection", MACRO_PLAYER_INFECT
 private _MExposure = player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE];
 private _MDebuffs = player getVariable "MiseryDebuffs";
 
-EGVAR(common,ace)=false;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{EGVAR(common,ace)=true};
-
 if (!hasInterface) exitWith {};
 
  if (goggles player in antirad_goggles || headgear player in antirad_headgears) exitWith {
@@ -30,7 +27,7 @@ if (!hasInterface) exitWith {};
 if ((_MInfection > 1) || (_MDebuffs find "PARASITES" != -1)) then {
 
     titleText ["You take some Caffetin tablets...", "PLAIN DOWN"];
-    playSound3D ["\z\misery\addons\audio\sounds\inventory\Items\CrinklingPlastic.ogg", player, false, getPosASL player, 4, 1, 10];
+    playSound3D [QPATHTOEF(audio,sounds\inventory\Items\CrinklingPlastic.ogg), player, false, getPosASL player, 4, 1, 10];
 
     player removeItem "Misery_caffetincaps";
 

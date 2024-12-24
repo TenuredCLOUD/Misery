@@ -201,7 +201,7 @@ if(_action== localize "STR_MISERY_TURNOFFRFDETEC") exitWith {
 }else{
     private _rfDetectorTurnOffStr =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_RFDETECTURNOFF"];
     [QEGVAR(common,tileText), _rfDetectorTurnOffStr] call CBA_fnc_localEvent;
-    playSound3D ["\z\misery\addons\audio\sounds\Geigerenable\GeigerOFF.ogg", player, false, getPosASL player, 4, 1, 10];
+    playSound3D [QPATHTOEF(audio,sounds\Geigerenable\GeigerOFF.ogg), player, false, getPosASL player, 4, 1, 10];
     player removeItem 'Misery_RFHighrangeON';
     player addItem 'Misery_RFHighrangeOFF';
     player setVariable ["Misery_RFEMFDet", false,true];

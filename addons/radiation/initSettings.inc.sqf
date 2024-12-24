@@ -17,7 +17,7 @@
             ] call CBA_fnc_addSetting;
 
             [
-            QGVAR(enahancedExposure), // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
+            QGVAR(enhancedExposure), // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
             "CHECKBOX", // setting type
             ["Advanced Radiation exposure", "Enable more serious radiation poisoning? (Enables shaking, coughing, and extra hunger and thirst drainage from radiation poisoning - scales with exposure)"], // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
             ["Misery","Radiation & Artifacts"], // Pretty name of the category where the setting can be found. Can be stringtable entry.

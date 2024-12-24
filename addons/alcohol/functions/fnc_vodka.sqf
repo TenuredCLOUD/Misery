@@ -21,12 +21,12 @@ if (!hasInterface) exitWith {};
 
   if (alive player) exitWith {
 
-  if (MiseryFearenabled) then {
+  if (EGVAR(fear,enabled)) then {
     player setVariable ["MiseryFear", (_MFear - 5)];
     if (_MFear <= 0) then {player setVariable ["MiseryFear", 0]};
   };
 
-if !(EGVAR(common,checkMultiplayer)) then {
+if (!EGVAR(common,checkMultiplayer)) then {
   player setVariable ["MiserySleepiness", (_MSleepiness + 15)];
 };
 

@@ -33,11 +33,11 @@ disableSerialization;
         private _radReading = format ["%1 mSv", round (player getVariable ["MiseryRadiation",0])];
         _textControl ctrlSetText _radReading;
 
-        private _randomGeiger = selectRandom ["\z\misery\addons\audio\sounds\inventory\Items\Geiger001.ogg",
-        "\z\misery\addons\audio\sounds\inventory\Items\Geiger002.ogg",
-        "\z\misery\addons\audio\sounds\inventory\Items\Geiger006.ogg",
-        "\z\misery\addons\audio\sounds\inventory\Items\Geiger007.ogg",
-        "\z\misery\addons\audio\sounds\inventory\Items\Geiger008.ogg"
+        private _randomGeiger = selectRandom [QPATHTOEF(audio,sounds\inventory\Items\Geiger001.ogg),
+        QPATHTOEF(audio,sounds\inventory\Items\Geiger002.ogg),
+        QPATHTOEF(audio,sounds\inventory\Items\Geiger006.ogg),
+        QPATHTOEF(audio,sounds\inventory\Items\Geiger007.ogg),
+        QPATHTOEF(audio,sounds\inventory\Items\Geiger008.ogg)
         ];
 
         if (!isNil "MiseryinRadZone" && MiseryinRadZone) then {

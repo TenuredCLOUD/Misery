@@ -16,8 +16,7 @@
 
 private _MInfection = player getVariable ["MiseryInfection", MACRO_PLAYER_INFECTION];
 
-EGVAR(common,ace)=false;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{EGVAR(common,ace)=true};
+
 
 if (!hasInterface) exitWith {};
 

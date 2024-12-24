@@ -287,7 +287,7 @@ for "_i" from 1 to _numEntities do {
 
         [
             _unit,
-            format [localize "STR_MISERY_RECRUITUNIT", _Unitidentity, MiseryCurrencySymbol, [_recruitmentCost] call Misery_fnc_formatNumber],
+            format [localize "STR_MISERY_RECRUITUNIT", _Unitidentity, EGVAR(money,symbol), [_recruitmentCost] call Misery_fnc_formatNumber],
             "\a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa",
             "\a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa",
             "_this distance _target < 3",
@@ -303,7 +303,7 @@ for "_i" from 1 to _numEntities do {
                     _caller setVariable ["MiseryCurrency", _playerMoney - _recruitmentCost];
                     [_target] joinSilent _caller;
                     [_target,_actionId] call BIS_fnc_holdActionRemove;
-                    private _recruitSuccess = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_SUCCESS", _Unitidentity, MiseryCurrencySymbol, [_recruitmentCost] call Misery_fnc_formatNumber]];
+                    private _recruitSuccess = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_SUCCESS", _Unitidentity, EGVAR(money,symbol), [_recruitmentCost] call Misery_fnc_formatNumber]];
                     [parseText _recruitSuccess, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
                 }else{
                     private _recruitFail = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_FAIL",_Unitidentity]];

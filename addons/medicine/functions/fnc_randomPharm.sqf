@@ -18,8 +18,7 @@ private _MHunger = player getVariable ["MiseryHunger", MACRO_PLAYER_HUNGER];
 private _MThirst = player getVariable ["MiseryThirst", MACRO_PLAYER_THIRST];
 private _MPoison = player getVariable ["MiseryPoison", MACRO_PLAYER_TOXICITY];
 
-EGVAR(common,ace)=false;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{EGVAR(common,ace)=true};
+
 
 if (!hasInterface) exitWith {};
 
@@ -31,7 +30,7 @@ if (!hasInterface) exitWith {};
 
     titleText ["You take some random medication...", "PLAIN DOWN"];
 
-    playSound3D ["\z\misery\addons\audio\sounds\inventory\Items\CrinklingPlastic.ogg", player, false, getPosASL player, 4, 1, 10];
+    playSound3D [QPATHTOEF(audio,sounds\inventory\Items\CrinklingPlastic.ogg), player, false, getPosASL player, 4, 1, 10];
 
   player removeItem "Misery_randommedication";
 

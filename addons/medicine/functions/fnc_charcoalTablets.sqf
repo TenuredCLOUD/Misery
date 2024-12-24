@@ -24,7 +24,7 @@ if (!hasInterface) exitWith {};
 
   if (alive player) then {
 
-    playSound3D ["\z\misery\addons\audio\sounds\inventory\Items\CrinklingPlastic.ogg", player, false, getPosASL player, 4, 1, 10];
+    playSound3D [QPATHTOEF(audio,sounds\inventory\Items\CrinklingPlastic.ogg), player, false, getPosASL player, 4, 1, 10];
 
   player removeItem "Misery_charcoaltabs";
   titleText ["You take some Charcoal tablets...", "PLAIN DOWN"];
