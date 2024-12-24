@@ -16,9 +16,9 @@
 
 private _MDebuffs = player getVariable "MiseryDebuffs";
 
-MiseryACE=false;
+EGVAR(common,ace)=false;
 if (isClass(configFile>>"cfgPatches">>"ace_main")) then {
-    MiseryACE=true
+    EGVAR(common,ace)=true
 };
 
 if (!hasInterface) exitWith {};
@@ -32,7 +32,7 @@ if (alive player) then {
 
     player removeItem "Misery_antiparasiticpill";
 
-    if (MiseryACE) then {
+    if (EGVAR(common,ace)) then {
         [player, "Misery_antiparasiticpill", 10, 60, -15, 0, -15] call ace_medical_status_fnc_addMedicationAdjustment;
     };
 

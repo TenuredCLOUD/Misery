@@ -15,8 +15,8 @@
 */
 
 if (!hasInterface) exitWith {};
-MiseryACE=false;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
+EGVAR(common,ace)=false;
+if(isClass(configFile>>"cfgPatches">>"ace_main"))then{EGVAR(common,ace)=true};
 private _random = [1, 10] call BIS_fnc_randomInt;
 private _MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];
 
@@ -38,7 +38,7 @@ private _MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];
 
  sleep 1;
 
-  if (MiseryACE) then {
+  if (EGVAR(common,ace)) then {
   [player, "Misery_cigarettepack", 10, 300, -1, -1, -1] call ace_medical_status_fnc_addMedicationAdjustment;
   };
 
@@ -121,7 +121,7 @@ if ("Misery_lighter" in items player) then {
 
   sleep 1;
 
-  if (MiseryACE) then {
+  if (EGVAR(common,ace)) then {
   [player, "Misery_cigarettepack", 10, 300, -1, -1, -1] call ace_medical_status_fnc_addMedicationAdjustment;
   };
 

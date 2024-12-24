@@ -23,16 +23,16 @@
 
         if (((player getVariable ["Misery_RFEMFDet", false])) || !([["Misery_RFHighrangeON"]] call EFUNC(common,hasItem)) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
-            if(MiseryDebug)then{systemChat "Misery RFdetec resync cycle terminated..."};
+            if(EGVAR(common,debug))then{systemChat "Misery RFdetec resync cycle terminated..."};
             [] call FUNC(syncLoop);
-            if(MiseryDebug)then{systemChat "Misery RFdetec resync cycle checks reinitiated..."};
+            if(EGVAR(common,debug))then{systemChat "Misery RFdetec resync cycle checks reinitiated..."};
         };
 
     if (([["Misery_RFHighrangeON"]] call EFUNC(common,hasItem)) && !(player getVariable ["Misery_RFEMFDet", false])) then {
         player setVariable ["Misery_RFEMFDet", true,true]; //reactivate detector audio samples
         [] call FUNC(loop);
         [] call FUNC(detection);
-        if(MiseryDebug)then{systemChat "RF detector resynced properly..."};
+        if(EGVAR(common,debug))then{systemChat "RF detector resynced properly..."};
         };
     }, 5, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;

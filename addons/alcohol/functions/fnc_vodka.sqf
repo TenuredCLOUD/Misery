@@ -26,7 +26,7 @@ if (!hasInterface) exitWith {};
     if (_MFear <= 0) then {player setVariable ["MiseryFear", 0]};
   };
 
-if !(MiseryMP) then {
+if !(EGVAR(common,checkMultiplayer)) then {
   player setVariable ["MiserySleepiness", (_MSleepiness + 15)];
 };
 

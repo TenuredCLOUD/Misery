@@ -25,7 +25,7 @@ _items=_items+(magazines player);
 _items=_items+(weapons player);
 
 //SP sleeping
-if !(MiseryMP) then {
+if !(EGVAR(common,checkMultiplayer)) then {
 private _object = cursorObject;
 private _model = getModelInfo _object select 0;
     if (_model in ["woodenbed_01_f.p3d",
@@ -58,8 +58,8 @@ private _vehicles = [];
 {
     _vehicles append (nearestObjects [_position, [_x], 5]);
 } forEach ["Car", "Tank", "Air", "Ship"];
-MiseryTarget_Veh = if (count _vehicles > 0) then { _vehicles select 0 }else{ objNull };
-MiseryTarget_VehName = typeOf MiseryTarget_Veh;
+EGVAR(common,targetVehicle) = if (count _vehicles > 0) then { _vehicles select 0 }else{ objNull };
+MiseryTarget_VehName = typeOf EGVAR(common,targetVehicle);
 
 if (Miseryfish) then {
     if (call EFUNC(fishing,Canfish)) then {
@@ -128,7 +128,7 @@ if (MiseryCraft) then {
     };
 };
 
-if (MiseryUsingiBuild) then {
+if (EGVAR(common,iBuild)) then {
     if (call EFUNC(buildex,hasHammer)) then {
         _out pushBack [localize "STR_MISERY_IBUILDOPEN",localize "STR_MISERY_IBUILDOPEN"];
     };
@@ -205,7 +205,7 @@ if ([["Misery_EmptyPetrol"]] call EFUNC(common,hasItem)) then {
     _out pushBack [localize "STR_MISERY_SWAPFUELTYPEPETROL",localize "STR_MISERY_SWAPFUELTYPEPETROL"];
 };
 
-if (MiseryACE && [["Misery_Needlethread"]] call EFUNC(common,hasItem)) then {
+if (EGVAR(common,ace) && [["Misery_Needlethread"]] call EFUNC(common,hasItem)) then {
     _out pushBack [localize "STR_MISERY_STITCHWOUNDS",localize "STR_MISERY_STITCHWOUNDS"];
 };
 
@@ -235,7 +235,7 @@ if (MiseryEnhrads) then {
 [player, "ToolKit", "rvg_toolkit"] call EFUNC(common,itemSwap);
 
 //ACE compat notepad swap:
-if (MiseryACE) then {
+if (EGVAR(common,ace)) then {
     [player, "rvg_notepad", "acex_intelitems_notepad"] call EFUNC(common,itemSwap);
 };
 

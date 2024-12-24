@@ -16,8 +16,8 @@
 
 private _MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
 
-MiseryACE=false;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
+EGVAR(common,ace)=false;
+if(isClass(configFile>>"cfgPatches">>"ace_main"))then{EGVAR(common,ace)=true};
 
 if (!hasInterface) exitWith {};
 
@@ -33,8 +33,8 @@ if (!hasInterface) exitWith {};
   player removeItem "Misery_cocaine";
   _time = time + 15;
 
-// if ((MiseryNORVG=="ENABLED") && !(MiseryMP)) then {
-if !(MiseryMP) then {
+// if ((MiseryNORVG=="ENABLED") && !(EGVAR(common,checkMultiplayer))) then {
+if !(EGVAR(common,checkMultiplayer)) then {
   player setVariable ["MiserySleepiness", (_MSleepiness - 25)];
 };
 
@@ -60,7 +60,7 @@ if !(MiseryMP) then {
       veffect = false;
     };
 
-if (MiseryACE) then {
+if (EGVAR(common,ace)) then {
 [player, "Misery_cocaine", 0, 1800, 25, 0, 25] call ace_medical_status_fnc_addMedicationAdjustment;
 };
 

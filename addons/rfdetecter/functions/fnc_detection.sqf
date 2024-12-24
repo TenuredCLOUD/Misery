@@ -30,7 +30,7 @@
             private _weaponHolders = nearestObjects [getPos player, ["WeaponHolderSimulated", "GroundWeaponHolder", "Default"], 25];
 
             //Remnant compat checks:
-            if (MiseryRemnant) then {
+            if (EGVAR(common,remnant)) then {
                 if (count (player nearEntities [["myst_phantom_hidden_f","myst_phantom_naked_f"], 25]) > 0) then {
                     playSound3D ["\z\misery\addons\audio\sounds\immersion\25m.ogg", player, false, getPosASL player, 1, 1, 50];
                 };
@@ -52,7 +52,7 @@
             };
 
             //DSA compat checks:
-            if (MiseryDSA) then {
+            if (EGVAR(common,dsa)) then {
                 if (count (player nearEntities [[_spookArray], 25]) > 0) then {
                     playSound3D ["\z\misery\addons\audio\sounds\immersion\25m.ogg", player, false, getPosASL player, 1, 1, 50];
                 };
@@ -78,7 +78,7 @@
                 {
                     if (_x in _items) then {
                         playSound3D ["\z\misery\addons\audio\sounds\immersion\ArtifactSOUND.ogg", player, false, getPosASL player, 1, 1, 50];
-                        //   if (MiseryDebug) then {systemChat format ["'%1' found in weapon holder at position %2", _x, getPosATL _this]};
+                        //   if (EGVAR(common,debug)) then {systemChat format ["'%1' found in weapon holder at position %2", _x, getPosATL _this]};
                     };
                 } forEach [MACRO_ARTIFACTS];
             } forEach _weaponHolders;

@@ -182,12 +182,12 @@ private _items=[
 
 ];
 
-MiserysurvivalItemEffects = [] + _items;
+GVAR(itemEffects) = [] + _items;
 
 {
-    MiserysurvivalItems pushBackUnique(toUpper(_x select 0));
+    GVAR(items) pushBackUnique(toUpper(_x select 0));
 }forEach _items;
 
-MiserysurvivalItems
+GVAR(items)
 
 

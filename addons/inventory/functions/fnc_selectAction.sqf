@@ -28,69 +28,56 @@ if (_action == localize "STR_MISERY_CheckClothing") exitWith {call EFUNC(tempera
 if (_action == localize "STR_MISERY_CheckGearweight") exitWith {
     private _bagweightload = loadAbs player / getNumber (configFile >> "CfgInventoryGlobalVariable" >> "maxSoldierLoad");
     private _gearWeightStr = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_GearweightVAL", round(_bagweightload * 100), round((_bagweightload * 100) / 2.2)]];
-    [parseText _gearWeightStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+    [QEGVAR(common,tileText), _gearWeightStr] call CBA_fnc_localEvent;
 };
 
 //Sleep UI:
 if (_action == "Sleep") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
+[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
 createDialog "MiserySleepMenuGUI";
 };
 
 //Check corpse for money:
 if(_action == "Search for Money") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
+[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
 [] call EFUNC(money,searchCorpse);
-};
-
-//Cycle MiseryHUD:
-if(_action == localize "STR_MISERY_MiseryHUDONOFF") exitWith {
-    if(MiserysurvivalShowStatus)exitWith{MiserysurvivalShowStatus=false};
-    MiserysurvivalShowStatus=true;
 };
 
 //Mechanic repairs:
 if(_action== localize "STR_MISERY_REQREPAIRS") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
+[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
 createDialog "MiseryMechShop_GUI";
 };
 
 //Veh Resupply:
 if(_action== localize "STR_MISERY_REQRESUPPLY") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
+[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
 createDialog "MiseryRearmShop_GUI";
 };
 
 //Veh Refuel:
 if(_action== localize "STR_MISERY_REQREFUEL") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
+[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
 createDialog "MiseryRefuelShop_GUI";
 };
 
 //Wood collection (Axe):
 if(_action== localize "STR_MISERY_CHOPWOOD") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
+[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
 if ([["WBK_axe","WBK_brush_axe","WBK_craftedAxe","FireAxe","Axe","Misery_Woodaxe"]] call EFUNC(common,hasItem)) then {
 [] call EFUNC(woodcollect,axeAction);
 }else{
 private _noAxeForWoodStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOAXEFORWOODNOTI"];
-[parseText _noAxeForWoodStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+[QEGVAR(common,tileText), _noAxeForWoodStr] call CBA_fnc_localEvent;
     };
 };
 
 //Wood collection (Chainsaw):
 if(_action== localize "STR_MISERY_SAWWOOD") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
+[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
 if !([["Misery_Chainsaw"]] call EFUNC(common,hasItem)) then {
 private _noChainsawForWoodStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOCHAINSAWFORWOODNOTI"];
-[parseText _noChainsawForWoodStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+[QEGVAR(common,tileText), _noChainsawForWoodStr] call CBA_fnc_localEvent;
 }else{
 [] call EFUNC(woodcollect,sawAction);
 };
@@ -98,47 +85,45 @@ private _noChainsawForWoodStr = format ["<t font='PuristaMedium'>%1</t>", locali
 
 //Wood collection (Hands):
 if(_action== localize "STR_MISERY_COLLECTWOOD") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
+[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
 [] call EFUNC(woodcollect,forageTreeAction);
 };
 
 //Wood log splitting (Requires Axe or Chainsaw):
 if(_action== localize "STR_MISERY_SPLITWOODLOG") exitWith {
-    (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-    (findDisplay 602) closeDisplay 2;
+[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
         if (!([["Misery_woodenlog"]] call EFUNC(common,hasItem))) exitWith {
             private _noWoodLogForSplitStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOWOODENLOGSFORSPLITTING"];
-            [parseText _noWoodLogForSplitStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+            [QEGVAR(common,tileText), _noWoodLogForSplitStr] call CBA_fnc_localEvent;
         };
         if ([["Misery_Chainsaw","WBK_axe","WBK_brush_axe","WBK_craftedAxe","FireAxe","Axe","Misery_Woodaxe"]] call EFUNC(common,hasItem)) then {
             [] call EFUNC(woodcollect,splitWoodAction);
         } else {
             private _noAxeOrSawForLogStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOWOODAXEORCHAINSAWNOTI"];
-            [parseText _noAxeOrSawForLogStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+            [QEGVAR(common,tileText), _noAxeOrSawForLogStr] call CBA_fnc_localEvent;
     };
 };
 
 //Jet fuel collection:
 if(_action== localize "STR_MISERY_JETFUELPUMPREQ") exitWith {
 private _jetFuelPumpReqStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_JETFUELPUMPREQTIP"];
-[parseText _jetFuelPumpReqStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+[QEGVAR(common,tileText), _jetFuelPumpReqStr] call CBA_fnc_localEvent;
 };
 
 //Fuel collection:
 if(_action== localize "STR_MISERY_FUELPUMPREQ") exitWith {
 private _fuelPumpReqStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_FUELPUMPREQTIP"];
-[parseText _fuelPumpReqStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+[QEGVAR(common,tileText), _fuelPumpReqStr] call CBA_fnc_localEvent;
 };
 
 //Fuel dumping Jerrycans:
 if(_action== localize "STR_MISERY_DUMPOUTFUELJET") exitWith {
 if !([["Misery_JetFuelF"]] call EFUNC(common,hasItem)) then {
 private _noJetJerryCanStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELJETNOCANNOTI"];
-[parseText _noJetJerryCanStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+[QEGVAR(common,tileText), _noJetJerryCanStr] call CBA_fnc_localEvent;
 }else{
 private _jetJerryCanDumpSuccessStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELJETSUCCESS"];
-[parseText _jetJerryCanDumpSuccessStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+[QEGVAR(common,tileText), _jetJerryCanDumpSuccessStr] call CBA_fnc_localEvent;
 player removeItem "Misery_JetFuelF";
 player addItem "Misery_EmptyJet";
 };
@@ -146,10 +131,10 @@ player addItem "Misery_EmptyJet";
 if(_action== localize "STR_MISERY_DUMPOUTFUELDIESEL") exitWith {
 if !([["Misery_DieselF"]] call EFUNC(common,hasItem)) then {
 private _noDieselJerryCanStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELDIESELNOCANNOTI"];
-[parseText _noDieselJerryCanStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+[QEGVAR(common,tileText), _noDieselJerryCanStr] call CBA_fnc_localEvent;
 }else{
 private _dieselJerryCanDumpSuccessStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELDIESELSUCCESS"];
-[parseText _dieselJerryCanDumpSuccessStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+[QEGVAR(common,tileText), _dieselJerryCanDumpSuccessStr] call CBA_fnc_localEvent;
 player removeItem "Misery_DieselF";
 player addItem "Misery_EmptyDiesel";
 };
@@ -157,10 +142,10 @@ player addItem "Misery_EmptyDiesel";
 if(_action== localize "STR_MISERY_DUMPOUTFUELPETROL") exitWith {
 if !([["Misery_PetrolF"]] call EFUNC(common,hasItem)) then {
 private _noPetrolJerryCanStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELPETROLNOCANNOTI"];
-[parseText _noPetrolJerryCanStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+[QEGVAR(common,tileText), _noPetrolJerryCanStr] call CBA_fnc_localEvent;
 }else{
 private _petrolJerryCanDumpSuccessStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELPETROLSUCCESS"];
-[parseText _petrolJerryCanDumpSuccessStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+[QEGVAR(common,tileText), _petrolJerryCanDumpSuccessStr] call CBA_fnc_localEvent;
 player removeItem "Misery_PetrolF";
 player addItem "Misery_EmptyPetrol";
 };
@@ -179,47 +164,43 @@ player addItem "Misery_EmptyPetrol";
 
 //iBuild start action:
 if(_action== localize "STR_MISERY_IBUILDOPEN") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
+[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
 if !(call EFUNC(buildex,hasHammer)) exitWith {
 private _noIbuildToolsStr =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_IBUILDOPENNOTOOLS"];
-[parseText _noIbuildToolsStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+[QEGVAR(common,tileText), _noIbuildToolsStr] call CBA_fnc_localEvent;
 }; //items pre-check
 [] call NMIB_fnc_Action; //Misery NMIB compat function
 };
 if(_action== localize "STR_MISERY_USESLEDGE") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
+[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
 if !(call EFUNC(buildex,hasSledghammer)) exitWith {
 private _sledgeHammerProxToBaseStr =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_USESLEDGENOTOOLTIP"];
-[parseText _sledgeHammerProxToBaseStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+[QEGVAR(common,tileText), _sledgeHammerProxToBaseStr] call CBA_fnc_localEvent;
 }; //items pre-check
 [] call EFUNC(buildex,demolish);
 };
 
 //Back to default menu:
-if(_action== localize "STR_MISERY_CANCEL")exitWith{MiseryActionsMode="";call FUNC(displayActions)};
+if(_action== localize "STR_MISERY_CANCEL")exitWith{EGVAR(actions,guiActionsMode)="";call FUNC(displayActions)};
 
 //RF detector:
 if(_action== localize "STR_MISERY_TURNONRFDETEC") exitWith {
-    (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-    (findDisplay 602) closeDisplay 2;
+    [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
     if !([["Misery_RFHighrangeOFF"]] call EFUNC(common,hasItem)) then {
     private _noRfDetectorStr =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONRFDETECNOITEM"];
-    [parseText _noRfDetectorStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+    [QEGVAR(common,tileText), _noRfDetectorStr] call CBA_fnc_localEvent;
 }else{
     call EFUNC(rfdetecter,reboot);
 };
     };
 if(_action== localize "STR_MISERY_TURNOFFRFDETEC") exitWith {
-    (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-    (findDisplay 602) closeDisplay 2;
+    [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
     if !([["Misery_RFHighrangeON"]] call EFUNC(common,hasItem)) then {
     private _noRfDetectorStr_2 =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONRFDETECNOITEM"];
-    [parseText _noRfDetectorStr_2, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+    [QEGVAR(common,tileText), _noRfDetectorStr_2] call CBA_fnc_localEvent;
 }else{
     private _rfDetectorTurnOffStr =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_RFDETECTURNOFF"];
-    [parseText _rfDetectorTurnOffStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+    [QEGVAR(common,tileText), _rfDetectorTurnOffStr] call CBA_fnc_localEvent;
     playSound3D ["\z\misery\addons\audio\sounds\Geigerenable\GeigerOFF.ogg", player, false, getPosASL player, 4, 1, 10];
     player removeItem 'Misery_RFHighrangeON';
     player addItem 'Misery_RFHighrangeOFF';
@@ -253,11 +234,10 @@ if(_action== localize "STR_MISERY_TURNOFFRFDETEC") exitWith {
 
 //Artifacts:
 if (_action== localize "STR_MISERY_STOREARTIFACT") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
+[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
 if !([["Misery_leadcontaineropen"]] call EFUNC(common,hasItem)) then {
 private _noLeadContainerStr =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOLLCONTAINER"];
-[parseText _noLeadContainerStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+[QEGVAR(common,tileText), _noLeadContainerStr] call CBA_fnc_localEvent;
 }else{
 call EFUNC(llcontianer,storeArtifact);
 };
@@ -281,48 +261,43 @@ call EFUNC(llcontianer,storeArtifact);
 
 //Headlamp:
 if(_action== localize "STR_MISERY_TURNONHEADLAMP") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
+[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
 if !([["Misery_HeadlampOFF"]] call EFUNC(common,hasItem)) exitWith {
 private _noHeadLampItemStr =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONHEADLAMPNOITEM"];
-[parseText _noHeadLampItemStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+[QEGVAR(common,tileText), _noHeadLampItemStr] call CBA_fnc_localEvent;
 };
 [player] call EFUNC(headlamp,on);
 };
 
 if(_action== localize "STR_MISERY_TURNOFFHEADLAMP") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
+[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
 if !([["Misery_HeadlampON"]] call EFUNC(common,hasItem)) exitWith {
 private _noHeadLampItemStr_2 =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONHEADLAMPNOITEM"];
-[parseText _noHeadLampItemStr_2, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+[QEGVAR(common,tileText), _noHeadLampItemStr_2] call CBA_fnc_localEvent;
 };
 [player] call EFUNC(headlamp,off);
 };
 
 //Crafting Framework:
 if(_action== localize "STR_MISERY_CRAFTINGWORKBENCH") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
+[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
 createDialog "MiseryCraftingFramework_GUI";
 };
 
 //Water collection menu:
 if(_action=="Collect water") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
+[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
 createDialog "MiseryWaterCollection_GUI";
 };
 
 //Medical treatment menu:
 if(_action== localize "STR_MISERY_REQTREATMENT") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
+[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
 createDialog "MiseryMedTreatment_GUI";
 };
 
 //Action submenu defines:
-if(MiseryActionsMode=="") exitWith {
+if(EGVAR(actions,guiActionsMode)=="") exitWith {
     if(_action in [
         localize "STR_MISERY_FORAGE",
         localize "STR_MISERY_STARTFISHING",
@@ -338,7 +313,7 @@ if(MiseryActionsMode=="") exitWith {
         localize "STR_MISERY_SWAPFUELTYPEDIESEL",
         localize "STR_MISERY_SWAPFUELTYPEPETROL"])
         exitWith {
-        MiseryActionsMode=_action;
+        EGVAR(actions,guiActionsMode)=_action;
         call FUNC(displayActions);
     };
     if(isNull(findDisplay 602))then{(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1};
@@ -349,40 +324,36 @@ if(MiseryActionsMode=="") exitWith {
 
 //Fishing:
 if(_action== localize "STR_MISERY_STARTFISHING") exitWith {
-MiseryActionsMode= localize "STR_MISERY_STARTFISHING";
+EGVAR(actions,guiActionsMode)= localize "STR_MISERY_STARTFISHING";
 };
 if(_action==localize "STR_MISERY_STARTFISHINGACT") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
+[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
 [] call EFUNC(fishing,fishAct);
 };
 if(_action== localize "STR_MISERY_STARTFISHINGREQUIRMENTS") exitWith {
 private _fishingItemsReqStr =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_STARTFISHINGREQUIRMENTS_LISTED"];
-[parseText _fishingItemsReqStr, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+[QEGVAR(common,tileText), _fishingItemsReqStr] call CBA_fnc_localEvent;
 };
 
 //Foraging:
 if(_action== localize "STR_MISERY_FORAGE") exitWith {
-MiseryActionsMode= localize "STR_MISERY_FORAGE";
+EGVAR(actions,guiActionsMode)= localize "STR_MISERY_FORAGE";
 };
 if(_action== localize "STR_MISERY_FORAGE_DIGFORWORMS") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
+[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
 [] call EFUNC(forage,digForWorms);
 };
 if(_action== localize "STR_MISERY_FORAGE_SEARCHFORTINDER") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
+[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
 [] call EFUNC(forage,searchForTinder);
 };
 
 //Cooking / Fire usage:
 if(_action== localize "STR_MISERY_USEFIRE") exitWith {
-MiseryActionsMode= localize "STR_MISERY_USEFIRE";
+EGVAR(actions,guiActionsMode)= localize "STR_MISERY_USEFIRE";
 };
 if(_action== localize "STR_MISERY_USEFIRE_COOK") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
+[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
 createDialog "MiseryCookingFramework_GUI";
 };
 // if(_action=="Cauterize wounds") exitWith {
@@ -396,35 +367,34 @@ createDialog "MiseryCookingFramework_GUI";
 //     };
 
 if(_action== localize "STR_MISERY_PLAYERDATA") exitWith {
-MiseryActionsMode=localize "STR_MISERY_PLAYERDATA";
+EGVAR(actions,guiActionsMode)=localize "STR_MISERY_PLAYERDATA";
 };
 
 if (_action ==localize "STR_MISERY_SAVECHARACTER") exitWith {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
+[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
 if (MiseryManualPData == "ENABLED") then {
     if (MiserysurvivalHardCoreSaveMode == "ENABLED" && !(call EFUNC(common,nearFire))) exitWith {systemChat format[localize "STR_MISERY_CHARACTERHARDCORESAVINGACTIVE",profileName]};
 [player] call EFUNC(persistency,serializePlayer);
-if !(MiseryDebug) then {systemChat format[localize "STR_MISERY_SAVECHARACTERNOTIF",profileName]};
+if !(EGVAR(common,debug)) then {systemChat format[localize "STR_MISERY_SAVECHARACTERNOTIF",profileName]};
 };
 };
 
 if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
-    if (MiseryDeleteConfirm > 0) exitWith {
-    MiseryDeleteConfirm = 0;
+    if (GVAR(confirmDeletion) > 0) exitWith {
+    GVAR(confirmDeletion) = 0;
     [player] call EFUNC(persistency,deleteData);
     systemChat format[localize "STR_MISERY_DELETECHARACTERSUCCESS",profileName];
     player setDamage 1;
 };
     systemChat format[localize "STR_MISERY_DELETECHARACTERWARNING",profileName];
-    MiseryDeleteConfirm = MiseryDeleteConfirm + 1;
+    GVAR(confirmDeletion) = GVAR(confirmDeletion) + 1;
     sleep 5;
-    MiseryDeleteConfirm = 0;
+    GVAR(confirmDeletion) = 0;
 };
 
 //Jerrycans:
 // if(_action==localize "STR_MISERY_USEJERRYCANCLEAN") exitWith {
-// MiseryActionsMode=localize "STR_MISERY_USEJERRYCANCLEAN";
+// EGVAR(actions,guiActionsMode)=localize "STR_MISERY_USEJERRYCANCLEAN";
 // };
 // if(_action=="Drink from Jerrycan (clean)") exitWith {
 // (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
@@ -467,7 +437,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 //     };
 
 // if(_action=="Use Jerrycan (Dirty)") exitWith {
-// MiseryActionsMode="Use Jerrycan (Dirty)";
+// EGVAR(actions,guiActionsMode)="Use Jerrycan (Dirty)";
 // };
 // if(_action=="Drink from Jerrycan (dirty)") exitWith {
 // (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
@@ -511,7 +481,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 
 //Fuel collection pump / Jerrycan:
 // if(_action=="Use Fuel pump") exitWith {
-// MiseryActionsMode="Use Fuel pump";
+// EGVAR(actions,guiActionsMode)="Use Fuel pump";
 // };
 // if(_action=="Refill Fuel Jerrycan") exitWith {
 // (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
@@ -528,7 +498,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 
 // //Jet Fuel collection pump / Jerrycan:
 // if(_action=="Use JetFuel pump") exitWith {
-// MiseryActionsMode="Use JetFuel pump";
+// EGVAR(actions,guiActionsMode)="Use JetFuel pump";
 // };
 // if(_action=="Refill JetFuel Jerrycan") exitWith {
 // (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
@@ -545,7 +515,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 
 //Jerrycans:
 // if(_action=="Swap Jerrycan fuel type (JetFuel)") exitWith {
-// MiseryActionsMode="Swap Jerrycan fuel type (JetFuel)";
+// EGVAR(actions,guiActionsMode)="Swap Jerrycan fuel type (JetFuel)";
 // };
 // if(_action=="Swap to Petrol") exitWith {
 // (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
@@ -569,7 +539,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 //     };
 
 // if(_action=="Swap Jerrycan fuel type (Diesel)") exitWith {
-// MiseryActionsMode="Swap Jerrycan fuel type (Diesel)";
+// EGVAR(actions,guiActionsMode)="Swap Jerrycan fuel type (Diesel)";
 // };
 // if(_action=="Swap to Petrol") exitWith {
 // (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
@@ -593,7 +563,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 //     };
 
 // if(_action=="Swap Jerrycan fuel type (Petrol)") exitWith {
-// MiseryActionsMode="Swap Jerrycan fuel type (Petrol)";
+// EGVAR(actions,guiActionsMode)="Swap Jerrycan fuel type (Petrol)";
 // };
 // if(_action=="Swap to Diesel") exitWith {
 // (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;

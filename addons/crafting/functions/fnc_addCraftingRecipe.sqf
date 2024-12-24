@@ -38,7 +38,7 @@
 
 _this params ["_recipe"];
 private _playerRecipes = player getVariable ["Misery_Crafting_DataSet", []]; // Provide a default value
-if (MiseryDebug) then {
+if (EGVAR(common,debug)) then {
 systemChat format ["_recipe: %1", _recipe];
 };
 private _recipeName = _recipe select 0;

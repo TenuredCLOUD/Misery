@@ -15,28 +15,28 @@
 */
 
 hintSilent "";
-ctrlShow[982377,true];
-private _list=(findDisplay 982377)displayCtrl 1500;
+ctrlShow [982377,true];
+private _list = (findDisplay 982377) displayCtrl 1500;
 
 lbClear _list;
-private _allActions=[];
-private _index=0;
-private _item="";
+private _allActions = [];
+private _index = 0;
+private _item = "";
 
-if(MiseryActionsMode=="") then{
+if (EGVAR(actions,guiActionsMode) == "") then{
 
-    _allActions=_allActions+MiseryActions;
+    _allActions = _allActions + EGVAR(common,guiActions);
 
     {
     _allActions pushBack _x
     } forEach (call EFUNC(actions,handleActions));
 
 
-    if((count MiseryActionsCustom) > 0) then {_allActions=_allActions + MiseryActionsCustom};
+    if ((count EGVAR(actions,guiCustomActions)) > 0) then { _allActions = _allActions + EGVAR(actions,guiCustomActions)};
 };
 
 //Foraging:
-if(MiseryActionsMode==localize "STR_MISERY_FORAGE")then{
+if(EGVAR(actions,guiActionsMode)==localize "STR_MISERY_FORAGE")then{
     _allActions=[
         [localize "STR_MISERY_FORAGE_DIGFORWORMS",localize "STR_MISERY_FORAGE_DIGFORWORMS"],
         [localize "STR_MISERY_FORAGE_SEARCHFORTINDER",localize "STR_MISERY_FORAGE_SEARCHFORTINDER"],
@@ -45,7 +45,7 @@ if(MiseryActionsMode==localize "STR_MISERY_FORAGE")then{
 };
 
 //Fishing:
-if(MiseryActionsMode==localize "STR_MISERY_STARTFISHING")then{
+if(EGVAR(actions,guiActionsMode)==localize "STR_MISERY_STARTFISHING")then{
     _allActions=[
         [localize "STR_MISERY_STARTFISHINGACT", localize "STR_MISERY_STARTFISHINGACT"],
         [localize "STR_MISERY_STARTFISHINGREQUIRMENTS", localize "STR_MISERY_STARTFISHINGREQUIRMENTS"],
@@ -54,13 +54,13 @@ if(MiseryActionsMode==localize "STR_MISERY_STARTFISHING")then{
 };
 
 //Cooking / Fire usage:
-if (MiseryActionsMode==localize "STR_MISERY_USEFIRE" && !(MiseryACE)) then {
+if (EGVAR(actions,guiActionsMode)==localize "STR_MISERY_USEFIRE" && !(EGVAR(common,ace))) then {
     _allActions=[
         [localize "STR_MISERY_USEFIRE_COOK",localize "STR_MISERY_USEFIRE_COOK"],
         [localize "STR_MISERY_CANCEL",localize "STR_MISERY_CANCEL"]
     ];
 };
-if (MiseryActionsMode==localize "STR_MISERY_USEFIRE" && (MiseryACE)) then {
+if (EGVAR(actions,guiActionsMode)==localize "STR_MISERY_USEFIRE" && (EGVAR(common,ace))) then {
     _allActions=[
         [localize "STR_MISERY_USEFIRE_COOK",localize "STR_MISERY_USEFIRE_COOK"],
         ["Cauterize wounds","Cauterize wounds"],
@@ -69,8 +69,8 @@ if (MiseryActionsMode==localize "STR_MISERY_USEFIRE" && (MiseryACE)) then {
 };
 
 //Anvil usage:
-if(MiseryActionsMode== localize "STR_MISERY_USEANVIL")then{
-    if (MiseryUsingiBuild) then {
+if(EGVAR(actions,guiActionsMode)== localize "STR_MISERY_USEANVIL")then{
+    if (EGVAR(common,iBuild)) then {
     _allActions=[
         ["Craft pickaxe","Craft pickaxe"],
         ["Repair pickaxe","Repair pickaxe"],
@@ -81,7 +81,7 @@ if(MiseryActionsMode== localize "STR_MISERY_USEANVIL")then{
         [localize "STR_MISERY_CANCEL",localize "STR_MISERY_CANCEL"]
     ];
     };
-    if !(MiseryUsingiBuild) then {
+    if !(EGVAR(common,iBuild)) then {
     _allActions=[
         ["Craft pickaxe","Craft pickaxe"],
         ["Repair pickaxe","Repair pickaxe"],
@@ -94,7 +94,7 @@ if(MiseryActionsMode== localize "STR_MISERY_USEANVIL")then{
 };
 
 //Forge usage:
-if(MiseryActionsMode== localize "STR_MISERY_USEFORGE")then{
+if(EGVAR(actions,guiActionsMode)== localize "STR_MISERY_USEFORGE")then{
     _allActions=[
         ["Smelt iron","Smelt iron"],
         ["Smelt iron pieces","Smelt iron pieces"],
@@ -106,7 +106,7 @@ if(MiseryActionsMode== localize "STR_MISERY_USEFORGE")then{
 };
 
 //Manual player data:
-if(MiseryActionsMode==localize "STR_MISERY_PLAYERDATA")then{
+if(EGVAR(actions,guiActionsMode)==localize "STR_MISERY_PLAYERDATA")then{
     _allActions=[
         [localize "STR_MISERY_SAVECHARACTER",localize "STR_MISERY_SAVECHARACTER"],
         [localize "STR_MISERY_DELETECHARACTER",localize "STR_MISERY_DELETECHARACTER"],
@@ -115,7 +115,7 @@ if(MiseryActionsMode==localize "STR_MISERY_PLAYERDATA")then{
 };
 
 //Jerrycans:
-if(MiseryActionsMode==localize "STR_MISERY_USEJERRYCANCLEAN") then {
+if(EGVAR(actions,guiActionsMode)==localize "STR_MISERY_USEJERRYCANCLEAN") then {
     _allActions=[
         ["Drink from Jerrycan (clean)","Drink from Jerrycan (clean)"],
         ["Pour into canteen","Pour into canteen"],
@@ -124,7 +124,7 @@ if(MiseryActionsMode==localize "STR_MISERY_USEJERRYCANCLEAN") then {
         [localize "STR_MISERY_CANCEL",localize "STR_MISERY_CANCEL"]
     ];
 };
-if(MiseryActionsMode==localize "STR_MISERY_USEJERRYCANDIRTY") then {
+if(EGVAR(actions,guiActionsMode)==localize "STR_MISERY_USEJERRYCANDIRTY") then {
     _allActions=[
         ["Drink from Jerrycan (dirty)","Drink from Jerrycan (dirty)"],
         ["Pour into canteen","Pour into canteen"],
@@ -136,7 +136,7 @@ if(MiseryActionsMode==localize "STR_MISERY_USEJERRYCANDIRTY") then {
 };
 
 //Fuel collection
-if(MiseryActionsMode==localize "STR_MISERY_USEFUELPUMP") then {
+if(EGVAR(actions,guiActionsMode)==localize "STR_MISERY_USEFUELPUMP") then {
     _allActions=[
         ["Refill Fuel Jerrycan","Refill Fuel Jerrycan"],
         ["Refill vehicle","Refill vehicle"],
@@ -145,7 +145,7 @@ if(MiseryActionsMode==localize "STR_MISERY_USEFUELPUMP") then {
 };
 
 //Fuel collection
-if(MiseryActionsMode==localize "STR_MISERY_USEJETFUELPUMP") then {
+if(EGVAR(actions,guiActionsMode)==localize "STR_MISERY_USEJETFUELPUMP") then {
     _allActions=[
         ["Refill JetFuel Jerrycan","Refill JetFuel Jerrycan"],
         ["Refill aircraft","Refill aircraft"],
@@ -154,21 +154,21 @@ if(MiseryActionsMode==localize "STR_MISERY_USEJETFUELPUMP") then {
 };
 
 //Jerrycans Fuel
-if(MiseryActionsMode==localize "STR_MISERY_SWAPFUELTYPEJET") then {
+if(EGVAR(actions,guiActionsMode)==localize "STR_MISERY_SWAPFUELTYPEJET") then {
     _allActions=[
         ["Swap to Petrol","Swap to Petrol"],
         ["Swap to Diesel","Swap to Diesel"],
         [localize "STR_MISERY_CANCEL",localize "STR_MISERY_CANCEL"]
     ];
 };
-if(MiseryActionsMode==localize "STR_MISERY_SWAPFUELTYPEDIESEL") then {
+if(EGVAR(actions,guiActionsMode)==localize "STR_MISERY_SWAPFUELTYPEDIESEL") then {
     _allActions=[
         ["Swap to Petrol","Swap to Petrol"],
         ["Swap to Jetfuel","Swap to Jetfuel"],
         [localize "STR_MISERY_CANCEL",localize "STR_MISERY_CANCEL"]
     ];
 };
-if(MiseryActionsMode==localize "STR_MISERY_SWAPFUELTYPEPETROL") then {
+if(EGVAR(actions,guiActionsMode)==localize "STR_MISERY_SWAPFUELTYPEPETROL") then {
     _allActions=[
         ["Swap to Diesel","Swap to Diesel"],
         ["Swap to Jetfuel","Swap to Jetfuel"],
@@ -177,12 +177,12 @@ if(MiseryActionsMode==localize "STR_MISERY_SWAPFUELTYPEPETROL") then {
 };
 
 {
-if((typeName _x)=="ARRAY")then{
-    if((typeName(_x select 0))=="STRING")then{_list lbAdd format["%1",_x select 0]}else{_list lbAdd format["%1",str(_x select 0)]};
-    if((typeName(_x select 1))=="STRING")then{_list lbSetData[_index,(_x select 1)]}else{_list lbSetData[_index,str(_x select 1)]};
+if ((typeName _x) == "ARRAY") then {
+    if ((typeName(_x select 0)) == "STRING") then {_list lbAdd format["%1",_x select 0]} else {_list lbAdd format["%1",str(_x select 0)]};
+    if ((typeName(_x select 1)) == "STRING") then {_list lbSetData[_index,(_x select 1)]} else {_list lbSetData[_index,str(_x select 1)]};
 }else{
-    if((typeName _x)=="STRING")then{_list lbAdd format["%1",_x]}else{_list lbAdd format["%1",str _x]};
-    if((typeName _x)=="STRING")then{_list lbSetData[_index,_x]}else{_list lbSetData[_index,str _x]};
+    if ((typeName _x)=="STRING") then {_list lbAdd format["%1",_x]} else {_list lbAdd format["%1",str _x]};
+    if ((typeName _x)=="STRING") then {_list lbSetData[_index,_x]} else {_list lbSetData[_index,str _x]};
 };
-_index=_index+1;
-}forEach _allActions;
+_index = _index + 1;
+} forEach _allActions;

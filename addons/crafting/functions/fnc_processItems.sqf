@@ -26,7 +26,7 @@ private _CraftB = _dialog displayCtrl 1600;
 private _RecipeB = _dialog displayCtrl 1601;
 private _ExitB = _dialog displayCtrl 1602;
 
-if (MiseryDebug) then {
+if (EGVAR(common,debug)) then {
 systemChat format ["Selected output item: %1", _selectedOutputItem]; //debug output
 systemChat format ["Player's recipes: %1", _playerRecipes]; //debug output
 };
@@ -35,7 +35,7 @@ systemChat format ["Player's recipes: %1", _playerRecipes]; //debug output
     if (_x select 0 isEqualTo _selectedOutputItem) then {
         _matchedRecipe = _x;
     };
-    if (MiseryDebug) then {
+    if (EGVAR(common,debug)) then {
     systemChat format ["Output item of current recipe: %1", _x select 0]; //debug output
     };
 } forEach _playerRecipes;
@@ -43,7 +43,7 @@ systemChat format ["Player's recipes: %1", _playerRecipes]; //debug output
 if (count _matchedRecipe > 0) then {
     private _outputItem = _matchedRecipe select 0;
     private _requirements = _matchedRecipe select 1;
-     if (MiseryDebug) then {
+     if (EGVAR(common,debug)) then {
     systemChat format ["Requirements: %1, Type: %2", _requirements, typeName _requirements]; //debug output
     };
     private _craftingTime = -1;

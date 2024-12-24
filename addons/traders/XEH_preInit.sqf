@@ -6,6 +6,9 @@ ADDON = false;
 
 #include "initSettings.inc.sqf"
 
+//Prestart for Trader varname tracking:
+GVAR(activeTraders) = [];
+
 /*
 //Traders
 if (MiseryDynamicMarketsActive && isServer) then {

@@ -14,12 +14,12 @@
  *
 */
 
-MiseryACE=false;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
+EGVAR(common,ace)=false;
+if(isClass(configFile>>"cfgPatches">>"ace_main"))then{EGVAR(common,ace)=true};
 
 if (!hasInterface) exitWith {};
 
-if (MiseryACE) then {
+if (EGVAR(common,ace)) then {
 [player, "Misery_Thrombomodulin", 120, 300, 1, 0, 1] call ace_medical_status_fnc_addMedicationAdjustment;
 };
 

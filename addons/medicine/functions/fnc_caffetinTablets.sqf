@@ -18,8 +18,8 @@ private _MInfection = player getVariable ["MiseryInfection", MACRO_PLAYER_INFECT
 private _MExposure = player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE];
 private _MDebuffs = player getVariable "MiseryDebuffs";
 
-MiseryACE=false;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
+EGVAR(common,ace)=false;
+if(isClass(configFile>>"cfgPatches">>"ace_main"))then{EGVAR(common,ace)=true};
 
 if (!hasInterface) exitWith {};
 
@@ -34,7 +34,7 @@ if ((_MInfection > 1) || (_MDebuffs find "PARASITES" != -1)) then {
 
     player removeItem "Misery_caffetincaps";
 
-     if (MiseryACE) then {
+     if (EGVAR(common,ace)) then {
     [player, "Misery_caffetincaps", 120, 300, 1, 0, 1] call ace_medical_status_fnc_addMedicationAdjustment;
     };
 

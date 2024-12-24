@@ -18,8 +18,8 @@ private _MHunger = player getVariable ["MiseryHunger", MACRO_PLAYER_HUNGER];
 private _MThirst = player getVariable ["MiseryThirst", MACRO_PLAYER_THIRST];
 private _MPoison = player getVariable ["MiseryPoison", MACRO_PLAYER_TOXICITY];
 
-MiseryACE=false;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
+EGVAR(common,ace)=false;
+if(isClass(configFile>>"cfgPatches">>"ace_main"))then{EGVAR(common,ace)=true};
 
 if (!hasInterface) exitWith {};
 
@@ -54,7 +54,7 @@ if (!hasInterface) exitWith {};
       veffect = false;
     };
 
-          if (MiseryACE) then {
+          if (EGVAR(common,ace)) then {
           [player, "Misery_randommedication", 0, 300, -40, 0, -40] call ace_medical_status_fnc_addMedicationAdjustment;
           };
 
@@ -74,7 +74,7 @@ if (!hasInterface) exitWith {};
 
           if (alive player) then  {
 
-            if (MiseryACE) then {
+            if (EGVAR(common,ace)) then {
               [player, true, 10, true] call ace_medical_fnc_setUnconscious;
             }else{
             [player] call EFUNC(common,stun);

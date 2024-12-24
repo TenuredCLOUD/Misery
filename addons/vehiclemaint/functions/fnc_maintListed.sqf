@@ -37,7 +37,7 @@ if (!isNull findDisplay 274839) exitWith {
     if (isNil "_Vehiclename") exitWith {};
 
 
-    private _vehicle = MiseryTarget_Veh;
+    private _vehicle = EGVAR(common,targetVehicle);
     private _hitpoints = getAllHitPointsDamage _vehicle;
     private _hitpointNames = _hitpoints select 0;
     private _damages = _hitpoints select 2;

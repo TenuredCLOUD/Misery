@@ -15,8 +15,8 @@
 */
 
 if (!hasInterface) exitWith {};
-MiseryACE=false;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
+EGVAR(common,ace)=false;
+if(isClass(configFile>>"cfgPatches">>"ace_main"))then{EGVAR(common,ace)=true};
 private _MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];
 
     if !("rvg_matches" in magazines player || "Misery_lighter" in items player) exitWith {titleText ["You need a lighter or matches to smoke...", "PLAIN DOWN"];};
@@ -40,7 +40,7 @@ private _MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];
 
     sleep 1;
 
-if (MiseryACE) then {
+if (EGVAR(common,ace)) then {
     [player, "Misery_cigar", 10, 300, -5, -5, -5] call ace_medical_status_fnc_addMedicationAdjustment;
 };
 
@@ -76,7 +76,7 @@ if ("Misery_lighter" in items player) then {
 
     sleep 1;
 
-if (MiseryACE) then {
+if (EGVAR(common,ace)) then {
     [player, "Misery_cigar", 10, 300, -5, -5, -5] call ace_medical_status_fnc_addMedicationAdjustment;
 };
 

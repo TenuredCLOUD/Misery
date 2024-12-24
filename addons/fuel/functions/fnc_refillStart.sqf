@@ -23,7 +23,7 @@ _ExitB = _dialog displayCtrl 1601;
 
 _Vehiclename = getText (configFile >> "CfgVehicles" >> MiseryTarget_VehName >> "displayName");
 
-_target = MiseryTarget_Veh;
+_target = EGVAR(common,targetVehicle);
 
 _Found = false;
 _totalLiters = 0;

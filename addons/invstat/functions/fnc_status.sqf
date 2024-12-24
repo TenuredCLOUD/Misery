@@ -80,7 +80,7 @@ lbClear _ailmentsList;
     _ailmentsList lbSetPicture [_ailmentsindex, _ailmentimage];
 } forEach _ailments;
 
-    if (MiseryACE) then {
+    if (EGVAR(common,ace)) then {
     _Health = player getVariable ["ace_medical_bloodVolume", 6]; //ACE blood calc
     _HealthText ctrlSetText "Blood:";
     }else{
@@ -318,7 +318,7 @@ if (_MExposure == 0) then {
 
 if (MiseryHUDlayout == 0) then {
 
-if (MiseryACE) then {
+if (EGVAR(common,ace)) then {
 _BloodtoVal = round(_Health / 6 * 100);
 _ValtoBarBlood = [_BloodtoVal] call EFUNC(common,valToBar);
 _HealthNum ctrlSetText _ValtoBarBlood;
@@ -340,7 +340,7 @@ _FatigueNum ctrlSetText _ValtoBarFatigue;
 }else{
 
 if (MiseryHUDlayout == 1) then {
-if (MiseryACE) then {
+if (EGVAR(common,ace)) then {
 _HealthNumVal = format ["%1",round(_Health / 6 * 100)];
 _HealthNum ctrlSetText _HealthNumVal;
 }else{

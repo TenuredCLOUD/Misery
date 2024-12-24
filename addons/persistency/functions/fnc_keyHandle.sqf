@@ -22,7 +22,7 @@ if !(hasInterface) exitWith {};
             call "\z\misery\addons\Persistency\functions\fnc_Combatlogg.sqf";
             };
 
-            if(MiseryDebug)then{systemChat "ESC pressed";};
+            if(EGVAR(common,debug))then{systemChat "ESC pressed";};
         };
 
         if (_key isEqualTo DIK_F4 && _alt) then {
@@ -34,7 +34,7 @@ if !(hasInterface) exitWith {};
             call "\z\misery\addons\Persistency\functions\fnc_Combatlogg.sqf";
             };
 
-        if(MiseryDebug)then{systemChat "ALT + F4 pressed";};
+        if(EGVAR(common,debug))then{systemChat "ALT + F4 pressed";};
 
         };
 
@@ -48,7 +48,7 @@ if !(hasInterface) exitWith {};
             call "\z\misery\addons\Persistency\functions\fnc_Combatlogg.sqf";
             };
 
-        if(MiseryDebug)then{systemChat "CTRL + ALT + DEL pressed";};
+        if(EGVAR(common,debug))then{systemChat "CTRL + ALT + DEL pressed";};
             };
     }];
 };

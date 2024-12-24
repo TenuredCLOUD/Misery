@@ -6,12 +6,16 @@ ADDON = false;
 
 #include "initSettings.inc.sqf"
 
+GVAR(items) = [];
+GVAR(itemEffects) = [];
+GVAR(itemCustomActions) = [];
+
 /*
 [] call FUNC(DefineItems);
 
 if (MiseryDefineItemsScript != "") then {
-    MiserysurvivalItemEffects = [];
-    MiserysurvivalItems = [];
+    GVAR(itemEffects) = [];
+    GVAR(items) = [];
     [] call MiseryDefineItemsScript;
 };
 

@@ -17,7 +17,7 @@ _loadout = _namespace getVariable "loadout";
 
 _stats = _namespace getVariable "stats";
 
-if (MiseryACE) then {
+if (EGVAR(common,ace)) then {
     _ACEdamage = _namespace getVariable "ACE_damage";
     if (!isNil "_ACEdamage") then {
         [player, _ACEdamage] call ace_medical_fnc_deserializeState;
@@ -62,7 +62,7 @@ _MiseryWContainerKnowledge = [];
     ["MiseryCurrency_Banked", 0]
 ];
 
-if !(MiseryMP) then {
+if !(EGVAR(common,checkMultiplayer)) then {
     _unitDetails = _namespace getVariable ["unitDetails", []];
     _playerLoadout = getUnitLoadout player;
 
@@ -93,7 +93,7 @@ if !(MiseryMP) then {
         case "PRONE": {_newUnit playAction "PlayerProne";};
         };
 
-        if (MiseryACE && !isNil "_unitACEdamage") then {
+        if (EGVAR(common,ace) && !isNil "_unitACEdamage") then {
             [_newUnit, _unitACEdamage] call ace_medical_fnc_deserializeState;
         };
     } forEach _unitDetails;
@@ -103,7 +103,7 @@ if!((_stats select 3)==worldName)then{
     systemChat "Different worldName";
 };
 
-if!(MiseryMP)then{setDate(_stats select 4)};
+if!(EGVAR(common,checkMultiplayer))then{setDate(_stats select 4)};
 systemChat format["Misery character loaded: %1",_saveName];
 
 if !(MiserysurvivalLoadScript=="") then {[player] call MiserysurvivalLoadScript};

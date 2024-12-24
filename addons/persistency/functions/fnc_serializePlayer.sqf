@@ -26,7 +26,7 @@ _namespace setVariable ["stats", _stats];
 
 _ACEdamage = []; //Default
 
-if (MiseryACE) then {
+if (EGVAR(common,ace)) then {
     _ACEdamage = [player] call ace_medical_fnc_serializeState;
     _namespace setVariable ["ACE_damage", _ACEdamage];
 };
@@ -62,7 +62,7 @@ _MiseryWContainerKnowledge = [];
     ["MiseryCurrency_Banked", 0]
 ];
 
-if !(MiseryMP) then {
+if !(EGVAR(common,checkMultiplayer)) then {
     _units = units player;
     _unitDetails = [];
     {
@@ -70,7 +70,7 @@ if !(MiseryMP) then {
         _unitloadout = getUnitLoadout _x;
         _unitstats = [damage _x, getDir _x, getPosATL _x, stance _x];
         _unitACEdamage = [];
-        if (MiseryACE) then {
+        if (EGVAR(common,ace)) then {
             _unitACEdamage = [_x] call ace_medical_fnc_serializeState;
         };
         _unitDetails pushBack [_unitType, _unitloadout, _unitstats, _unitACEdamage];

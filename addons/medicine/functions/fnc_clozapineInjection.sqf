@@ -16,8 +16,8 @@
 
 private _MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];
 
-MiseryACE=false;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
+EGVAR(common,ace)=false;
+if(isClass(configFile>>"cfgPatches">>"ace_main"))then{EGVAR(common,ace)=true};
 
 if (!hasInterface) exitWith {};
 
@@ -27,7 +27,7 @@ titleText ["You inject the Clozapine...", "PLAIN DOWN"];
 
 player removeItem "Misery_Clozapine";
 
- if (MiseryACE) then {
+ if (EGVAR(common,ace)) then {
 [player, "Misery_Clozapine", 120, 300, 5, 0, 5] call ace_medical_status_fnc_addMedicationAdjustment;
 };
 

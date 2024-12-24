@@ -91,7 +91,7 @@ _SpawnFLAG = false;
 
 if (Misery_activePOIs >= Misery_POIMAXAllowed) exitWith {
 
-    if (MiseryDebug) then {
+    if (EGVAR(common,debug)) then {
             systemChat "[Misery POI Framework] exiting Generation for Heli-Wreck due to max active POI's allowed value being reached";
     };
 
@@ -104,7 +104,7 @@ _module setVariable ["Misery_POI_Spawned", false, true];
 
 //Spawn chance check:
 if ((random 100) > _Spawnchance) exitWith {
-if (MiseryDebug) then {systemChat format["[Misery POI Framework] Spawn chance failed, exiting Generation for Heli-Wreck at %1 checks will be re-initialized next game session...",getPosATL _module]};
+if (EGVAR(common,debug)) then {systemChat format["[Misery POI Framework] Spawn chance failed, exiting Generation for Heli-Wreck at %1 checks will be re-initialized next game session...",getPosATL _module]};
 
 //This POI is now null from spawning since the original check failed
 
@@ -166,7 +166,7 @@ if (!isNil "grad_persistence_blacklist") then {
     {
         if ((grad_persistence_blacklist find (toLower _x) == -1) && (grad_persistence_blacklist find (toUpper _x) == -1)) then {
             [_x] call grad_persistence_fnc_blacklistClasses;
-            if (MiseryDebug) then {systemChat format ["[Misery POI Framework] GRAD Persistence detected, Adding %1 to blacklist for saving / reloading...", _x]};
+            if (EGVAR(common,debug)) then {systemChat format ["[Misery POI Framework] GRAD Persistence detected, Adding %1 to blacklist for saving / reloading...", _x]};
         };
     } forEach (_WreckTypes + _crateTypes);
 };

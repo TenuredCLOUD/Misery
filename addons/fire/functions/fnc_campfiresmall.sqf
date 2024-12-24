@@ -38,9 +38,9 @@ _object setVariable ["Mis_Woodstickfuel", 100, true];
         //Rain exposure to fireplace, extinguish if conditions are met:
         if (rain > 0.3 && random 1 < 0.25 && !(_object call Misery_fnc_FireRainSafe)) then {
         _object inflame false;
-        if (MiseryDebug) then {systemChat format["Small fire at %1 was extinguished from the rain...",getPosATL _object];};
+        if (EGVAR(common,debug)) then {systemChat format["Small fire at %1 was extinguished from the rain...",getPosATL _object];};
         };
-        if (MiseryDebug) then {systemChat format["Small fire at %1 is burning, current fuel: %2",getPosATL _object, (_object getVariable "Mis_Woodstickfuel")];};
+        if (EGVAR(common,debug)) then {systemChat format["Small fire at %1 is burning, current fuel: %2",getPosATL _object, (_object getVariable "Mis_Woodstickfuel")];};
     };
     _object inflame false;
 };
@@ -130,9 +130,9 @@ _object setVariable ["Mis_Woodstickfuel", 100, true];
         //Rain exposure to fireplace, extinguish if conditions are met:
         if (rain > 0.3 && random 1 < 0.25 && !((_this select 0) call Misery_fnc_FireRainSafe)) then {
         (_this select 0) inflame false;
-        if (MiseryDebug) then {systemChat format["Small fire at %1 was extinguished from the rain...",getPosATL (_this select 0)];};
+        if (EGVAR(common,debug)) then {systemChat format["Small fire at %1 was extinguished from the rain...",getPosATL (_this select 0)];};
         };
-        if (MiseryDebug) then {systemChat format["Small fire at %1 is burning, current fuel: %2",getPosATL (_this select 0), ((_this select 0) getVariable "Mis_Woodstickfuel")];};
+        if (EGVAR(common,debug)) then {systemChat format["Small fire at %1 is burning, current fuel: %2",getPosATL (_this select 0), ((_this select 0) getVariable "Mis_Woodstickfuel")];};
     };
     (_this select 0) inflame false;
     };

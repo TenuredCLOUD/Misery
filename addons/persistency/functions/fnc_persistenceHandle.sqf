@@ -84,12 +84,12 @@ if (MiserysurvivalSaveMode == 2) then {
 
     call _MiseryaddRespawnEHs;
 
-    if (MiseryMPsavecycle == -1) exitWith {};
+    if (EGVAR(common,checkMultiplayer)savecycle == -1) exitWith {};
 
     waitUntil {sleep 2; !isNull player};
     while {alive player} do {
         [player] call FUNC(Serializeplayer);
-        uiSleep MiseryMPsavecycle;
+        uiSleep EGVAR(common,checkMultiplayer)savecycle;
     };
 };
 
@@ -137,7 +137,7 @@ if (MiserysurvivalSaveMode == 2) then {
 // if (isNil {player getVariable "PlayerRespawnHandles"}) then {
 //     player setVariable ["PlayerRespawnHandles", true];
 
-//     if (MiseryMP) then {
+//     if (EGVAR(common,checkMultiplayer)) then {
 //         private _respawnIndex = player addEventHandler ["Respawn",{
 //             params ["_unit", "_corpse"];
 //             _MiseryDebuffs = [];
@@ -204,11 +204,11 @@ if (MiserysurvivalSaveMode == 2) then {
 //     };
 // };
 
-// if (MiseryMPsavecycle == -1) exitWith {};
+// if (EGVAR(common,checkMultiplayer)savecycle == -1) exitWith {};
 
 // waitUntil {sleep 2; !isNull player};
 // while {alive player} do {
 //     [player] call Misery_fnc_MiserySerializeplayer;
-//     uiSleep MiseryMPsavecycle;
+//     uiSleep EGVAR(common,checkMultiplayer)savecycle;
 // };
 // };

@@ -22,9 +22,9 @@
 
         if ((!isNil "MiseryinPsyfield" && !MiseryinPsyfield) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
-            if(MiseryDebug)then{systemChat "Misery Psyfield cycle terminated..."};
+            if(EGVAR(common,debug))then{systemChat "Misery Psyfield cycle terminated..."};
             [] call FUNC(process);
-            if(MiseryDebug)then{systemChat "Misery Psyfield cycle checks re-initiated..."};
+            if(EGVAR(common,debug))then{systemChat "Misery Psyfield cycle checks re-initiated..."};
         };
 
         private _gear = player call EFUNC(common,getSimplifiedLoadout);
@@ -59,14 +59,14 @@
         _damageMultiplier = 0.25;
         };
 
-        if (MiseryDebug) then {
+        if (EGVAR(common,debug)) then {
         systemChat format ["Psyfield Damage Multiplier: %1", _damageMultiplier];
         systemChat format ["Psyfield Hearing Protection: %1%2", _hearingProtection, "%"];
         };
 
         if (_hearingProtection < 100 && MiseryinPsyfield) then {
 
-            if (MiseryACE) then {
+            if (EGVAR(common,ace)) then {
                 [player, 0.09 + _damageMultiplier, "head", "punch"] call ace_medical_fnc_addDamageToUnit;
             } else {
                 private _damage = damage player;
@@ -95,7 +95,7 @@
             "dynamicBlur" ppEffectEnable false;
         };
 
-        if(MiseryDebug)then{systemChat "Misery Psyfield cycle..."};
+        if(EGVAR(common,debug))then{systemChat "Misery Psyfield cycle..."};
 
 }, 8, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;

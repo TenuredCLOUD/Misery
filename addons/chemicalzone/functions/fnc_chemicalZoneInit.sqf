@@ -14,9 +14,9 @@ by TenuredCLOUD
 
         if ((!isNil "MiseryinChemZone" && !MiseryinChemZone) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
-            if(MiseryDebug)then{systemChat "Misery Chemical cycle terminated..."};
+            if(EGVAR(common,debug))then{systemChat "Misery Chemical cycle terminated..."};
             [] call "framework\scripts\Modules\chemicalzone\chemicalzoneinit.sqf";
-            if(MiseryDebug)then{systemChat "Misery Chemical cycle checks re-initiated..."};
+            if(EGVAR(common,debug))then{systemChat "Misery Chemical cycle checks re-initiated..."};
         };
 
         private _gear = player call EFUNC(common,getSimplifiedLoadout);
@@ -49,7 +49,7 @@ by TenuredCLOUD
 
         player setVariable ["MiseryRadiation", (player getVariable ["MiseryRadiation", 0]) + _radiationExposure];
 
-        if (MiseryDebug) then {
+        if (EGVAR(common,debug)) then {
         systemChat format ["Radiation Damage Multiplier: %1", _RadiationMultiplier];
         systemChat format ["Radiation Protection: Skin %1%2, Respiratory %3%4, Eye %5%6", _skinProtection, "%", _respiratoryProtection, "%", _eyeProtection, "%"];
         };
@@ -60,7 +60,7 @@ by TenuredCLOUD
              playSound "Choking";
             };
 
-            if (MiseryACE) then {
+            if (EGVAR(common,ace)) then {
                 [player, 0.2, "body", "punch"] call ace_medical_fnc_addDamageToUnit;
                 [player, 0.2, "head", "punch"] call ace_medical_fnc_addDamageToUnit;
             } else {
@@ -81,7 +81,7 @@ by TenuredCLOUD
             "dynamicBlur" ppEffectEnable false;
         };
 
-        if(MiseryDebug)then{systemChat "Misery Radiation cycle..."};
+        if(EGVAR(common,debug))then{systemChat "Misery Radiation cycle..."};
 
 }, 15, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;

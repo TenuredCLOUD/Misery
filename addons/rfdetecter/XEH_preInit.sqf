@@ -8,7 +8,7 @@ ADDON = false;
 
 /*
 if (MiseryRFEMFacts && hasInterface) then {
-if (MiseryDSA && hasInterface) then {
+if (EGVAR(common,dsa) && hasInterface) then {
 private _gvars = ["dsaSpookBases", "dsaDevMutants", "dsaWebknightCreatures"];
 {
 waitUntil {!isNil _x}; // Check Gvar arrays every second

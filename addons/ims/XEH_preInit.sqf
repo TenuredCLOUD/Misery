@@ -39,7 +39,7 @@ if (MiseryWBKIMS && isServer) then {
 };
 
 //WBKIMS Force compat to Ravage zeds (This insures they no longer scream when killed):
-if (MiseryWBKIMS && MiseryRavage && isServer) then {
+if (MiseryWBKIMS && EGVAR(common,checkRavage) && isServer) then {
     {
         if (_x isKindOf "zombie") then {
             _x setVariable ["IMS_EventHandler_Hit",{
@@ -54,7 +54,7 @@ if (MiseryWBKIMS && MiseryRavage && isServer) then {
 
 //IMS melee kill for DSA removed for now
 //WBKIMS Force compat to DSA (spooks & Anomalies) (This insures spooks no longer scream when killed, etc...):
-// if (MiseryWBKIMS && MiseryDSA) then {
+// if (MiseryWBKIMS && EGVAR(common,dsa)) then {
 //     private _gvars = ["dsaSpookBases", "dsaDevMutants", "dsaWebknightCreatures"];
 
 //     {
