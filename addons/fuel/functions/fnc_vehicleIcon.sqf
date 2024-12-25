@@ -22,10 +22,10 @@ private _dialog = findDisplay 982385;
 private _IconCtrl = _dialog displayCtrl 1602;
 private _IconName = _dialog displayCtrl 1603;
 private _IconCtrl_2 = _dialog displayCtrl 1604;
-private _Vehiclename = getText (configFile >> "CfgVehicles" >> MiseryTarget_VehName >> "displayName");
+private _Vehiclename = getText (configFile >> "CfgVehicles" >> EGVAR(common,targetVehicleType) >> "displayName");
 
 if (!isNil "_Vehiclename") then {
-    _cfg = configFile >> "CfgVehicles" >> MiseryTarget_VehName;
+    _cfg = configFile >> "CfgVehicles" >> EGVAR(common,targetVehicleType);
     if (isClass _cfg) exitWith {
         _picPath = getText (_cfg >> "picture");
         _IconCtrl ctrlSetText _picPath;

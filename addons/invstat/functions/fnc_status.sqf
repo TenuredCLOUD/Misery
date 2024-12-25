@@ -314,7 +314,7 @@ if (_MExposure == 0) then {
 } forEach _ailments;
 };
 
-if (MiseryHUDlayout == 0) then {
+if (EGVAR(inventory,hudLayout) == 0) then {
 
 if (EGVAR(common,ace)) then {
 _BloodtoVal = round(_Health / 6 * 100);
@@ -337,7 +337,7 @@ _FatigueNum ctrlSetText _ValtoBarFatigue;
 
 }else{
 
-if (MiseryHUDlayout == 1) then {
+if (EGVAR(inventory,hudLayout) == 1) then {
 if (EGVAR(common,ace)) then {
 _HealthNumVal = format ["%1",round(_Health / 6 * 100)];
 _HealthNum ctrlSetText _HealthNumVal;

@@ -22,14 +22,14 @@ private _dialog = findDisplay 274839;
 private _IconCtrl = _dialog displayCtrl 1200;
 private _IconName = _dialog displayCtrl 1002;
 
-if (MiseryTarget_VehName isEqualTo "") exitWith {
+if (EGVAR(common,targetVehicleType) isEqualTo "") exitWith {
         _IconName ctrlSetText "No Vehicle to Repair...";
     };
 
-private _Vehiclename = getText (configFile >> "CfgVehicles" >> MiseryTarget_VehName >> "displayName");
+private _Vehiclename = getText (configFile >> "CfgVehicles" >> EGVAR(common,targetVehicleType) >> "displayName");
 
 if (!isNil "_Vehiclename") then {
-    _cfg = configFile >> "CfgVehicles" >> MiseryTarget_VehName;
+    _cfg = configFile >> "CfgVehicles" >> EGVAR(common,targetVehicleType);
     if (isClass _cfg) exitWith {
         _picPath = getText (_cfg >> "editorPreview");
         _IconCtrl ctrlSetText _picPath;

@@ -25,12 +25,12 @@ if (!isNull findDisplay 274839) exitWith {
     _RepairB = findDisplay 274839 displayCtrl 1600;
     _ScavengeB = findDisplay 274839 displayCtrl 1601;
 
-    if (MiseryTarget_VehName isEqualTo "") exitWith {
+    if (EGVAR(common,targetVehicleType) isEqualTo "") exitWith {
         _RepairB ctrlShow false;
         _ScavengeB ctrlShow false;
     };
 
-    _Vehiclename = getText (configFile >> "CfgVehicles" >> MiseryTarget_VehName >> "displayName");
+    _Vehiclename = getText (configFile >> "CfgVehicles" >> EGVAR(common,targetVehicleType) >> "displayName");
 
     lbClear _list;
 

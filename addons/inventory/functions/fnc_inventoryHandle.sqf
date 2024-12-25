@@ -19,7 +19,7 @@ player addEventHandler ["InventoryOpened", {
         !(isNull (findDisplay 602))
     },{
         {
-            ((findDisplay 602) displayCtrl _x) ctrlSetEventHandler ["LBDblClick", "_this call FUNC(Click)"];
+            ((findDisplay 602) displayCtrl _x) ctrlSetEventHandler ["LBDblClick", "_this call FUNC(click)"];
         } count [633, 638, 619];
 
         private _display = findDisplay 46 createDisplay "MiseryINVACT_GUI";

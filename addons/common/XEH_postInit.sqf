@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "XEH_PREP.hpp"
 
 //If GRAD persistence is active, push Remnant ODRA object holders to blacklister, so they won't save / reload (This will execute only once)
 if (isServer) then {

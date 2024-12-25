@@ -13,6 +13,7 @@ ADDON = false;
 
 // Prestart for vehicle interaction to avoid undefined RPT logs
 GVAR(targetVehicle) = objNull;
+GVAR(targetVehicleType) = nil;
 
 GVAR(checkMultiplayer) = isMultiplayer;
 

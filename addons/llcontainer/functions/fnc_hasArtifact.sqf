@@ -18,16 +18,17 @@ private _Hasartifact = false;
 
 private _check_items = items player;
 
-if ([["Misery_artifact01",
-"Misery_artifact02",
-"Misery_artifact03",
-"Misery_artifact04",
-"Misery_artifact05",
-"Misery_artifact06",
-"Misery_artifact07",
-"Misery_artifact08",
-"Misery_artifact09",
-"Misery_artifact10"]] call EFUNC(common,hasItem)) then {
+if ([[
+QCLASS(artifact_01),
+QCLASS(artifact_02),
+QCLASS(artifact_03),
+QCLASS(artifact_04),
+QCLASS(artifact_05),
+QCLASS(artifact_06),
+QCLASS(artifact_07),
+QCLASS(artifact_08),
+QCLASS(artifact_09),
+QCLASS(artifact_10)]] call EFUNC(common,hasItem)) then {
 
 _Hasartifact = true;
 

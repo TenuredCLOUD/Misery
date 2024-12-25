@@ -178,11 +178,11 @@ if(EGVAR(actions,guiActionsMode)==localize "STR_MISERY_SWAPFUELTYPEPETROL") then
 
 {
 if ((typeName _x) == "ARRAY") then {
-    if ((typeName(_x select 0)) == "STRING") then {_list lbAdd format["%1",_x select 0]} else {_list lbAdd format["%1",str(_x select 0)]};
-    if ((typeName(_x select 1)) == "STRING") then {_list lbSetData[_index,(_x select 1)]} else {_list lbSetData[_index,str(_x select 1)]};
+    if ((typeName(_x select 0)) == "STRING") then {_list lbAdd format["%1",_x select 0]} else {_list lbAdd format ["%1",str(_x select 0)]};
+    if ((typeName(_x select 1)) == "STRING") then {_list lbSetData[_index,(_x select 1)]} else {_list lbSetData [_index,str(_x select 1)]};
 }else{
-    if ((typeName _x)=="STRING") then {_list lbAdd format["%1",_x]} else {_list lbAdd format["%1",str _x]};
-    if ((typeName _x)=="STRING") then {_list lbSetData[_index,_x]} else {_list lbSetData[_index,str _x]};
+    if ((typeName _x) == "STRING") then {_list lbAdd format["%1",_x]} else {_list lbAdd format ["%1",str _x]};
+    if ((typeName _x) == "STRING") then {_list lbSetData [_index,_x]} else {_list lbSetData [_index,str _x]};
 };
 _index = _index + 1;
 } forEach _allActions;

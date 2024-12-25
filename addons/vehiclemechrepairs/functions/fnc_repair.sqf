@@ -26,7 +26,7 @@ _dialog = findDisplay 982382;
 _PurchaseB = _dialog displayCtrl 1600;
 _ExitB = _dialog displayCtrl 1601;
 
-_Vehiclename = getText (configFile >> "CfgVehicles" >> MiseryTarget_VehName >> "displayName");
+_Vehiclename = getText (configFile >> "CfgVehicles" >> EGVAR(common,targetVehicleType) >> "displayName");
 
 _target = EGVAR(common,targetVehicle);
 
@@ -34,7 +34,7 @@ _repairPrice = 0;
 _Found = false;
 
 {
-    if ((_x select 0) == MiseryTarget_VehName) then {
+    if ((_x select 0) == EGVAR(common,targetVehicleType)) then {
         _Array=_x;
         _Found = true;
         _repairPrice = _x select 3;

@@ -14,18 +14,18 @@
  * [] call misery_actions_fnc_handleactions
 */
 
-private _out=[];
-private _near=player nearObjects 5;
-private _cursorObject=cursorObject;
+private _out = [];
+private _near = player nearObjects 5;
+private _cursorObject = cursorObject;
 
-private _items=[];
-_items=_items+(items player);
-_items=_items+(assignedItems player);
-_items=_items+(magazines player);
-_items=_items+(weapons player);
+private _items = [];
+_items = _items + (items player);
+_items = _items + (assignedItems player);
+_items = _items + (magazines player);
+_items = _items + (weapons player);
 
 //SP sleeping
-if !(EGVAR(common,checkMultiplayer)) then {
+if (!EGVAR(common,checkMultiplayer)) then {
 private _object = cursorObject;
 private _model = getModelInfo _object select 0;
     if (_model in ["woodenbed_01_f.p3d",
@@ -59,7 +59,7 @@ private _vehicles = [];
     _vehicles append (nearestObjects [_position, [_x], 5]);
 } forEach ["Car", "Tank", "Air", "Ship"];
 EGVAR(common,targetVehicle) = if (count _vehicles > 0) then { _vehicles select 0 }else{ objNull };
-MiseryTarget_VehName = typeOf EGVAR(common,targetVehicle);
+EGVAR(common,targetVehicleType) = typeOf EGVAR(common,targetVehicle);
 
 if (Miseryfish) then {
     if (call EFUNC(fishing,Canfish)) then {
