@@ -16,11 +16,11 @@
 
 disableSerialization;
 
-[{"Misery_personalgeiger" in magazines player},
+[{QCLASS(geiger_On) in magazines player},
 {
     [{
         params ["_args", "_handle"];
-        if (!("Misery_personalgeiger" in magazines player) || (!alive player)) exitWith {
+        if (!(QCLASS(geiger_On) in magazines player) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             ("MiseryGeiger_UI" call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
             [] call FUNC(bar);

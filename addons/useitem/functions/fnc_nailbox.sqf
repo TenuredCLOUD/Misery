@@ -18,13 +18,13 @@
 if (EGVAR(common,iBuild)) exitWith {
 
 titleText ["You take the nails out of the box...", "PLAIN DOWN"];
-player removeItem "Misery_boxnails";
+player removeItem QCLASS(boxNails);
 for "_i" from 1 to 15 do {[player, "NMIB_WoodNails_Itm", true] call CBA_fnc_addItem;};
 };
 
 if !(EGVAR(common,iBuild)) exitWith {
 
 titleText ["You take the nails out of the box...", "PLAIN DOWN"];
-player removeItem "Misery_boxnails";
-for "_i" from 1 to 15 do {[player, "Misery_woodnail", true] call CBA_fnc_addItem;};
+player removeItem QCLASS(boxNails);
+for "_i" from 1 to 15 do {[player, QCLASS(woodnail), true] call CBA_fnc_addItem;};
 };

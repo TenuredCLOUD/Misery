@@ -28,10 +28,10 @@ if (!hasInterface) exitWith {};
 
     titleText ["You take an antibiotic pill...", "PLAIN DOWN"];
 
-    player removeItem "Misery_antibioticpill";
+    player removeItem QCLASS(antibiotic);
 
     if (EGVAR(common,ace)) then {
-    [player, "Misery_antibioticpill", 10, 60, -10, 0, -10] call ace_medical_status_fnc_addMedicationAdjustment;
+    [player, QCLASS(antibiotic), 10, 60, -10, 0, -10] call ace_medical_status_fnc_addMedicationAdjustment;
     };
 
 sleep 60;

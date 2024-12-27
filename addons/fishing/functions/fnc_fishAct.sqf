@@ -31,7 +31,7 @@
     };
 
     Misery_Isfishing = "GroundWeaponHolder_Scripted" createVehicle(getPos player);
-    Misery_Isfishing addItemCargoGlobal ["Misery_fishingpole", 1];
+    Misery_Isfishing addItemCargoGlobal [QCLASS(fishingPole), 1];
     Misery_Isfishing setDir 0;
     Misery_Isfishing attachTo [player,[0,-0.15,-0.75],"rightHandMiddle1",true];
     Misery_Isfishing setVectorDirAndUp [[3,0,0.55],[9.05,0.65,-0.15]];
@@ -50,7 +50,7 @@
     _todelete = [];
 
     _fishtoground = "GroundWeaponHolder" createVehicle [0,0,0];
-    _fishtoground addItemCargoGlobal ["Misery_rawfish_1", 1];
+    _fishtoground addItemCargoGlobal [QCLASS(rawFish), 1];
     _fishtoground enableCollisionWith player;
     _fishtoground setPos (player modelToWorld [.3,-.3,0]);
     _todelete append [_fishtoground];
@@ -61,7 +61,7 @@
 
     if (_random == 50) exitWith {
     titleText ["Something broke, or flew off the line, and you failed to catch anything...", "PLAIN DOWN"];
-    _part = selectRandom ["Misery_fishingspool", "Misery_fishhook", "Misery_worms", "Misery_worms", "Misery_worms"];
+    _part = selectRandom [QCLASS(fishingSpool), QCLASS(fishhook), QCLASS(worms), QCLASS(worms), QCLASS(worms)];
     player removeItem _part;
     MiseryCanFish = false;
     [player,_actionID] call BIS_fnc_holdActionRemove;
@@ -70,7 +70,7 @@
 
     if (_random == 75) exitWith {
     titleText ["You lost your bait...", "PLAIN DOWN"];
-    _part = selectRandom ["Misery_worms", "Misery_worms"];
+    _part = selectRandom [QCLASS(worms), QCLASS(worms)];
     player removeItem _part;
     MiseryCanFish = false;
     [player,_actionID] call BIS_fnc_holdActionRemove;
@@ -79,8 +79,8 @@
 
     if (_random == 100) exitWith {
     titleText ["Your hook and bait are gone...", "PLAIN DOWN"];
-    player removeItem "Misery_fishhook";
-    player removeItem "Misery_worms";
+    player removeItem QCLASS(fishhook);
+    player removeItem QCLASS(worms);
     MiseryCanFish = false;
     [player,_actionID] call BIS_fnc_holdActionRemove;
     deleteVehicle Misery_Isfishing;

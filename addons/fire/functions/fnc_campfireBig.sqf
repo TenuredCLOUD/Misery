@@ -57,15 +57,15 @@ _object setVariable ["Mis_Firewoodfuel", 100, true];
     (_this select 1) setVariable ["MiseryCanRIFire", true];
 
     //Check if fire needs more wood:
-    if ((((_this select 0) getVariable ["Mis_Firewoodfuel", 100]) <= 0) && !("Misery_firewood" in items player)) exitWith {titleText ["This fire needs more wood...", "PLAIN DOWN"];};
+    if ((((_this select 0) getVariable ["Mis_Firewoodfuel", 100]) <= 0) && !(QCLASS(firewood) in items player)) exitWith {titleText ["This fire needs more wood...", "PLAIN DOWN"];};
 
     //Exit from not enough mats:
-    if !("Misery_tinder" in items player || "acex_intelitems_notepad" in magazines player || "rvg_money" in magazines player || "rvg_notepad" in magazines player || "rvg_docFolder" in magazines player) exitWith {titleText ["You don't have the required materials to craft a fire...", "PLAIN DOWN"];};
+    if !(QCLASS(tinder) in items player || "acex_intelitems_notepad" in magazines player || "rvg_money" in magazines player || "rvg_notepad" in magazines player || "rvg_docFolder" in magazines player) exitWith {titleText ["You don't have the required materials to craft a fire...", "PLAIN DOWN"];};
 
-    if !("Misery_lighter" in items player || "rvg_matches" in magazines player) exitWith {titleText ["You need a lighter or matches to reignite this fire...", "PLAIN DOWN"];};
+    if !(QCLASS(lighter) in magazines player || "rvg_matches" in magazines player) exitWith {titleText ["You need a lighter or matches to reignite this fire...", "PLAIN DOWN"];};
 
   //Sound generation:
-  if ("Misery_lighter" in items player) then {
+  if (QCLASS(lighter) in magazines player) then {
   playSound3D [QPATHTOEF(audio,sounds\immersion\Lighter.ogg), player, false, getPosASL player, 4, 1, 10];
   }else{
   if ("rvg_matches" in magazines player) then {
@@ -97,9 +97,9 @@ _object setVariable ["Mis_Firewoodfuel", 100, true];
     (_this select 1) setVariable ["MiseryCanRIFire", false];
 
     //Reset flame timer variable if needed: (+ remove wood used) // If no wood sticks used Fire fuel will not reset
-    if ((((_this select 0) getVariable ["Mis_Firewoodfuel", 100]) <= 0) && ("Misery_firewood" in items player)) then {
+    if ((((_this select 0) getVariable ["Mis_Firewoodfuel", 100]) <= 0) && (QCLASS(firewood) in items player)) then {
     (_this select 0) setVariable ["Mis_Firewoodfuel", 100, true];
-    player removeItem "Misery_firewood";
+    player removeItem QCLASS(firewood);
     };
 
     //Check if fuel variable was never reset: (someone attempted fuel exploit):
@@ -129,7 +129,7 @@ _object setVariable ["Mis_Firewoodfuel", 100, true];
     //On failure of reignition:
 titleText ["You failed to reignite the fire...", "PLAIN DOWN"];
 (_this select 1) setVariable ["MiseryCanRIFire", false];
-private _items = ["Misery_tinder"];
+private _items = [QCLASS(tinder)];
 private _mags = ["acex_intelitems_notepad","rvg_money", "rvg_notepad", "rvg_docFolder"];
 
 private _index = _items findIf { _x in items player };
@@ -144,7 +144,7 @@ if (_index != -1) then {
     };
 };
 
-    if ("Misery_lighter" in items player) then {
+    if (QCLASS(lighter) in magazines player) then {
         // If lighter is available, do not consume a match
     }else{
         // Needs Misery matches code
@@ -153,7 +153,7 @@ if (_index != -1) then {
     {
     //On interrupt / Success
 (_this select 1) setVariable ["MiseryCanRIFire", false];
-private _items = ["Misery_tinder"];
+private _items = [QCLASS(tinder)];
 private _mags = ["acex_intelitems_notepad","rvg_money", "rvg_notepad", "rvg_docFolder"];
 
 private _index = _items findIf { _x in items player };
@@ -168,7 +168,7 @@ if (_index != -1) then {
     };
 };
 
-    if ("Misery_lighter" in items player) then {
+    if (QCLASS(lighter) in magazines player) then {
         // If lighter is available, do not consume a match
     }else{
     // Need Misery matches code

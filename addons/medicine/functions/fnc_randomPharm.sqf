@@ -32,7 +32,7 @@ if (!hasInterface) exitWith {};
 
     playSound3D [QPATHTOEF(audio,sounds\inventory\Items\CrinklingPlastic.ogg), player, false, getPosASL player, 4, 1, 10];
 
-  player removeItem "Misery_randommedication";
+  player removeItem QCLASS(randomMedication);
 
   sleep 15;
 
@@ -54,7 +54,7 @@ if (!hasInterface) exitWith {};
     };
 
           if (EGVAR(common,ace)) then {
-          [player, "Misery_randommedication", 0, 300, -40, 0, -40] call ace_medical_status_fnc_addMedicationAdjustment;
+          [player, QCLASS(randomMedication), 0, 300, -40, 0, -40] call ace_medical_status_fnc_addMedicationAdjustment;
           };
 
           player setVariable [QCLASS(thirst), (_MThirst - 50)];

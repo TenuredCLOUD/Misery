@@ -29,10 +29,10 @@ if ((_MInfection > 1) || (_ailments find "PARASITES" != -1)) then {
     titleText ["You take some Caffetin tablets...", "PLAIN DOWN"];
     playSound3D [QPATHTOEF(audio,sounds\inventory\Items\CrinklingPlastic.ogg), player, false, getPosASL player, 4, 1, 10];
 
-    player removeItem "Misery_caffetincaps";
+    player removeItem QCLASS(caffetin);
 
      if (EGVAR(common,ace)) then {
-    [player, "Misery_caffetincaps", 120, 300, 1, 0, 1] call ace_medical_status_fnc_addMedicationAdjustment;
+    [player, QCLASS(caffetin), 120, 300, 1, 0, 1] call ace_medical_status_fnc_addMedicationAdjustment;
     };
 
   sleep 60;

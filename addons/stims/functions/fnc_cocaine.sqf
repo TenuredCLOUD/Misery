@@ -29,7 +29,7 @@ if (!hasInterface) exitWith {};
 
     playSound3D [QPATHTOEF(audio,sounds\inventory\Items\Sniff01.ogg), player, false, getPosASL player, 4, 1, 5];
 
-  player removeItem "Misery_cocaine";
+  player removeItem QCLASS(cocaine);
   _time = time + 15;
 
 // if ((MiseryNORVG=="ENABLED") && !(EGVAR(common,checkMultiplayer))) then {
@@ -60,7 +60,7 @@ if !(EGVAR(common,checkMultiplayer)) then {
     };
 
 if (EGVAR(common,ace)) then {
-[player, "Misery_cocaine", 0, 1800, 25, 0, 25] call ace_medical_status_fnc_addMedicationAdjustment;
+[player, QCLASS(cocaine), 0, 1800, 25, 0, 25] call ace_medical_status_fnc_addMedicationAdjustment;
 };
 
 player enableFatigue false;

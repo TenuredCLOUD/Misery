@@ -1,8 +1,17 @@
             [
             QGVAR(enabled), 
             "CHECKBOX", 
-            ["Misery Radiation", "Enable Radiation exposure once in radiation zones?"], 
+            ["Radiation", "Enable Radiation exposure once in radiation zones?"], 
             ["Misery","Zone Logics"], 
+            false, 
+            1 
+            ] call CBA_fnc_addSetting;
+
+            [
+            QGVAR(leadContainers), 
+            "CHECKBOX", 
+            ["Leadlined container actions", "Enable Lead container actions? (Adds safe transportation of artifacts if artifact exposure is enabled)"], 
+            ["Misery","Radiation & Artifacts"], 
             false, 
             1 
             ] call CBA_fnc_addSetting;

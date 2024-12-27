@@ -18,11 +18,11 @@
  * Example:
  * [
  * _module,
- * (_module getVariable "Misery_AI_SpawnCheckDistance"),
- * (_module getVariable "Misery_AI_DeleteCheckDistance"),
- * (_module getVariable "Misery_AI_SpawnTimer"),
- * (_module getVariable "Misery_AI_DeleteTimer"),
- * (_module getVariable "Misery_AI_SpawnLimit")
+ * (_module getVariable QCLASS(AI_SpawnCheckDistance)),
+ * (_module getVariable QCLASS(AI_DeleteCheckDistance)),
+ * (_module getVariable QCLASS(AI_SpawnTimer)),
+ * (_module getVariable QCLASS(AI_DeleteTimer)),
+ * (_module getVariable QCLASS(AI_SpawnLimit))
  * ] call misery_ambient_ai_zone_fnc_moduleSettings;
  *
  * Public: No
@@ -36,11 +36,11 @@ waitUntil{sleep 1; !isNil "MiseryReady"};
 
 if (_activated && isServer) then {
 [
-(_module getVariable "Misery_AI_SpawnCheckDistance"),
-(_module getVariable "Misery_AI_DeleteCheckDistance"),
-(_module getVariable "Misery_AI_SpawnTimer"),
-(_module getVariable "Misery_AI_DeleteTimer"),
-(_module getVariable "Misery_AI_SpawnLimit")
+(_module getVariable QCLASS(AI_SpawnCheckDistance)),
+(_module getVariable QCLASS(AI_DeleteCheckDistance)),
+(_module getVariable QCLASS(AI_SpawnTimer)),
+(_module getVariable QCLASS(AI_DeleteTimer)),
+(_module getVariable QCLASS(AI_SpawnLimit))
 ] call FUNC(settings);
 };
 true

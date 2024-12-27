@@ -32,7 +32,7 @@ private _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER];
 
 titleText ["You inject the Glucose solution...", "PLAIN DOWN"];
 
-player removeItem "Misery_glucose";
+player removeItem QCLASS(glucose);
 private _c = 10;
 [{ _this call fnc_glucose;}, [_c, "The Glucose injection has worn off..."], 10] call CBA_fnc_waitAndExecute;
 

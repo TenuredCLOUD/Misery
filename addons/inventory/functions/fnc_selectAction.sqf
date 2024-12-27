@@ -64,8 +64,8 @@ createDialog QCLASS(refuelShop_ui);
 //Wood collection (Axe):
 if(_action== localize "STR_MISERY_CHOPWOOD") exitWith {
 [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-if ([["WBK_axe","WBK_brush_axe","WBK_craftedAxe","FireAxe","Axe","Misery_Woodaxe"]] call EFUNC(common,hasItem)) then {
-[] call EFUNC(woodcollect,axeAction);
+if ([["WBK_axe","WBK_brush_axe","WBK_craftedAxe","FireAxe","Axe",QCLASS(woodaxe)]] call EFUNC(common,hasItem)) then {
+[] call EFUNC(forestry,axeAction);
 }else{
 private _noAxeForWoodStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOAXEFORWOODNOTI"];
 [QEGVAR(common,tileText), _noAxeForWoodStr] call CBA_fnc_localEvent;
@@ -75,29 +75,29 @@ private _noAxeForWoodStr = format ["<t font='PuristaMedium'>%1</t>", localize "S
 //Wood collection (Chainsaw):
 if(_action== localize "STR_MISERY_SAWWOOD") exitWith {
 [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-if !([["Misery_Chainsaw"]] call EFUNC(common,hasItem)) then {
+if !([[QCLASS(chainsaw)]] call EFUNC(common,hasItem)) then {
 private _noChainsawForWoodStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOCHAINSAWFORWOODNOTI"];
 [QEGVAR(common,tileText), _noChainsawForWoodStr] call CBA_fnc_localEvent;
 }else{
-[] call EFUNC(woodcollect,sawAction);
+[] call EFUNC(forestry,sawAction);
 };
 };
 
 //Wood collection (Hands):
 if(_action== localize "STR_MISERY_COLLECTWOOD") exitWith {
 [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-[] call EFUNC(woodcollect,forageTreeAction);
+[] call EFUNC(forestry,forageTreeAction);
 };
 
 //Wood log splitting (Requires Axe or Chainsaw):
 if(_action== localize "STR_MISERY_SPLITWOODLOG") exitWith {
 [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-        if (!([["Misery_woodenlog"]] call EFUNC(common,hasItem))) exitWith {
+        if (!([[QCLASS(woodenlog)]] call EFUNC(common,hasItem))) exitWith {
             private _noWoodLogForSplitStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOWOODENLOGSFORSPLITTING"];
             [QEGVAR(common,tileText), _noWoodLogForSplitStr] call CBA_fnc_localEvent;
         };
-        if ([["Misery_Chainsaw","WBK_axe","WBK_brush_axe","WBK_craftedAxe","FireAxe","Axe","Misery_Woodaxe"]] call EFUNC(common,hasItem)) then {
-            [] call EFUNC(woodcollect,splitWoodAction);
+        if ([[QCLASS(chainsaw),"WBK_axe","WBK_brush_axe","WBK_craftedAxe","FireAxe","Axe",QCLASS(woodaxe)]] call EFUNC(common,hasItem)) then {
+            [] call EFUNC(forestry,splitWoodAction);
         } else {
             private _noAxeOrSawForLogStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOWOODAXEORCHAINSAWNOTI"];
             [QEGVAR(common,tileText), _noAxeOrSawForLogStr] call CBA_fnc_localEvent;
@@ -118,36 +118,36 @@ private _fuelPumpReqStr = format ["<t font='PuristaMedium'>%1</t>", localize "ST
 
 //Fuel dumping Jerrycans:
 if(_action== localize "STR_MISERY_DUMPOUTFUELJET") exitWith {
-if !([["Misery_JetFuelF"]] call EFUNC(common,hasItem)) then {
+if !([[QCLASS(jetFuel)]] call EFUNC(common,hasItem)) then {
 private _noJetJerryCanStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELJETNOCANNOTI"];
 [QEGVAR(common,tileText), _noJetJerryCanStr] call CBA_fnc_localEvent;
 }else{
 private _jetJerryCanDumpSuccessStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELJETSUCCESS"];
 [QEGVAR(common,tileText), _jetJerryCanDumpSuccessStr] call CBA_fnc_localEvent;
-player removeItem "Misery_JetFuelF";
-player addItem "Misery_EmptyJet";
+player removeItem QCLASS(jetFuel);
+player addItem QCLASS(jetFuelJerryCan_Empty);
 };
     };
 if(_action== localize "STR_MISERY_DUMPOUTFUELDIESEL") exitWith {
-if !([["Misery_DieselF"]] call EFUNC(common,hasItem)) then {
+if !([[QCLASS(diesel)]] call EFUNC(common,hasItem)) then {
 private _noDieselJerryCanStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELDIESELNOCANNOTI"];
 [QEGVAR(common,tileText), _noDieselJerryCanStr] call CBA_fnc_localEvent;
 }else{
 private _dieselJerryCanDumpSuccessStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELDIESELSUCCESS"];
 [QEGVAR(common,tileText), _dieselJerryCanDumpSuccessStr] call CBA_fnc_localEvent;
-player removeItem "Misery_DieselF";
-player addItem "Misery_EmptyDiesel";
+player removeItem QCLASS(diesel);
+player addItem QCLASS(dieselJerryCan_Empty);
 };
     };
 if(_action== localize "STR_MISERY_DUMPOUTFUELPETROL") exitWith {
-if !([["Misery_PetrolF"]] call EFUNC(common,hasItem)) then {
+if !([[QCLASS(petrol)]] call EFUNC(common,hasItem)) then {
 private _noPetrolJerryCanStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELPETROLNOCANNOTI"];
 [QEGVAR(common,tileText), _noPetrolJerryCanStr] call CBA_fnc_localEvent;
 }else{
 private _petrolJerryCanDumpSuccessStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_DUMPOUTFUELPETROLSUCCESS"];
 [QEGVAR(common,tileText), _petrolJerryCanDumpSuccessStr] call CBA_fnc_localEvent;
-player removeItem "Misery_PetrolF";
-player addItem "Misery_EmptyPetrol";
+player removeItem QCLASS(petrol);
+player addItem QCLASS(petrolJerryCan_Empty);
 };
     };
 
@@ -186,7 +186,7 @@ if(_action== localize "STR_MISERY_CANCEL")exitWith{EGVAR(actions,guiActionsMode)
 //RF detector:
 if(_action== localize "STR_MISERY_TURNONRFDETEC") exitWith {
     [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-    if !([["Misery_RFHighrangeOFF"]] call EFUNC(common,hasItem)) then {
+    if !([[QCLASS(rfHighRange_Off)]] call EFUNC(common,hasItem)) then {
     private _noRfDetectorStr =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONRFDETECNOITEM"];
     [QEGVAR(common,tileText), _noRfDetectorStr] call CBA_fnc_localEvent;
 }else{
@@ -195,7 +195,7 @@ if(_action== localize "STR_MISERY_TURNONRFDETEC") exitWith {
     };
 if(_action== localize "STR_MISERY_TURNOFFRFDETEC") exitWith {
     [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-    if !([["Misery_RFHighrangeON"]] call EFUNC(common,hasItem)) then {
+    if !([[QCLASS(rfHighRange_On)]] call EFUNC(common,hasItem)) then {
     private _noRfDetectorStr_2 =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONRFDETECNOITEM"];
     [QEGVAR(common,tileText), _noRfDetectorStr_2] call CBA_fnc_localEvent;
 }else{
@@ -204,7 +204,7 @@ if(_action== localize "STR_MISERY_TURNOFFRFDETEC") exitWith {
     playSound3D [QPATHTOEF(audio,sounds\Geigerenable\GeigerOFF.ogg), player, false, getPosASL player, 4, 1, 10];
     player removeItem 'Misery_RFHighrangeON';
     player addItem 'Misery_RFHighrangeOFF';
-    player setVariable ["Misery_RFEMFDet", false,true];
+    player setVariable [QCLASS(rfdetectorStatus), false,true];
 };
     };
 
@@ -213,7 +213,7 @@ if(_action== localize "STR_MISERY_TURNOFFRFDETEC") exitWith {
 // if(_action=="Turn on Portable Radio") exitWith {
 // (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
-// if !([["Misery_PortableradioOFF"]] call EFUNC(common,hasItem)) then {
+// if !([[QCLASS(PortableradioOFF"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a portable radio...", "PLAIN DOWN"];
 // }else{
 // private _formattedText = ["You turn on your portable radio...", "PLAIN DOWN"];
@@ -223,19 +223,19 @@ if(_action== localize "STR_MISERY_TURNOFFRFDETEC") exitWith {
 // if(_action=="Turn off Portable Radio") exitWith {
 // (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
-// if !([["Misery_PortableradioON"]] call EFUNC(common,hasItem)) then {
+// if !([[QCLASS(PortableradioON"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a portable radio...", "PLAIN DOWN"];
 // }else{
 // private _formattedText = ["You turn off your portable radio...", "PLAIN DOWN"];
 // player removeItem 'Misery_PortableradioON'; player addItem 'Misery_PortableradioOFF';
-// player setVariable ["Misery_HHRadio", false,true];
+// player setVariable [QCLASS(HHRadio", false,true];
 // };
 //     };
 
 //Artifacts:
 if (_action== localize "STR_MISERY_STOREARTIFACT") exitWith {
 [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-if !([["Misery_leadcontaineropen"]] call EFUNC(common,hasItem)) then {
+if !([[QCLASS(leadContainer_Open)]] call EFUNC(common,hasItem)) then {
 private _noLeadContainerStr =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_NOLLCONTAINER"];
 [QEGVAR(common,tileText), _noLeadContainerStr] call CBA_fnc_localEvent;
 }else{
@@ -247,7 +247,7 @@ call EFUNC(llcontianer,storeArtifact);
 // if(_action== localize "STR_MISERY_STITCHWOUNDS") exitWith {
 // (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
-// if !([["Misery_Needlethread"]] call EFUNC(common,hasItem)) exitWith {
+// if !([[QCLASS(needleThread)]] call EFUNC(common,hasItem)) exitWith {
 // private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_STITCHWOUNDSNOITEM"];
 // [parseText _formattedText, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 // };
@@ -262,7 +262,7 @@ call EFUNC(llcontianer,storeArtifact);
 //Headlamp:
 if(_action== localize "STR_MISERY_TURNONHEADLAMP") exitWith {
 [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-if !([["Misery_HeadlampOFF"]] call EFUNC(common,hasItem)) exitWith {
+if !([[QCLASS(headlamp_Off)]] call EFUNC(common,hasItem)) exitWith {
 private _noHeadLampItemStr =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONHEADLAMPNOITEM"];
 [QEGVAR(common,tileText), _noHeadLampItemStr] call CBA_fnc_localEvent;
 };
@@ -271,7 +271,7 @@ private _noHeadLampItemStr =format ["<t font='PuristaMedium'>%1</t>", localize "
 
 if(_action== localize "STR_MISERY_TURNOFFHEADLAMP") exitWith {
 [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-if !([["Misery_HeadlampON"]] call EFUNC(common,hasItem)) exitWith {
+if !([[QCLASS(headlamp_On)]] call EFUNC(common,hasItem)) exitWith {
 private _noHeadLampItemStr_2 =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONHEADLAMPNOITEM"];
 [QEGVAR(common,tileText), _noHeadLampItemStr_2] call CBA_fnc_localEvent;
 };
@@ -399,7 +399,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // if(_action=="Drink from Jerrycan (clean)") exitWith {
 // (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
-// if !([["Misery_WaterJerryF"]] call EFUNC(common,hasItem)) then {
+// if !([[QCLASS(WaterJerryF"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
 // }else{
 // [] spawn Misery_fnc_drinkjcleanact;
@@ -408,7 +408,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // if(_action=="Pour into canteen") exitWith {
 // (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
-// if !([["Misery_WaterJerryF"]] call EFUNC(common,hasItem)) then {
+// if !([[QCLASS(WaterJerryF"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
 // }else{
 // [] spawn Misery_fnc_canteenfillcact;
@@ -417,7 +417,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // if(_action=="Pour into water bottle") exitWith {
 // (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
-// if !([["Misery_WaterJerryF"]] call EFUNC(common,hasItem)) then {
+// if !([[QCLASS(WaterJerryF"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
 // }else{
 // [] spawn Misery_fnc_bottlefillcact;
@@ -426,7 +426,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // if(_action=="Dump out water (clean)") exitWith {
 // (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
-// if !([["Misery_WaterJerryF"]] call EFUNC(common,hasItem)) then {
+// if !([[QCLASS(WaterJerryF"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
 // }else{
 // private _formattedText = ["You dump the water from the Jerrycan onto the ground...", "PLAIN DOWN"];
@@ -442,7 +442,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // if(_action=="Drink from Jerrycan (dirty)") exitWith {
 // (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
-// if !([["Misery_WaterJerryFD"]] call EFUNC(common,hasItem)) then {
+// if !([[QCLASS(WaterJerryFD"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
 // }else{
 // [] spawn Misery_fnc_drinkjdirtyact;
@@ -451,7 +451,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // if(_action=="Pour into canteen") exitWith {
 // (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
-// if !([["Misery_WaterJerryFD"]] call EFUNC(common,hasItem)) then {
+// if !([[QCLASS(WaterJerryFD"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
 // }else{
 // [] spawn Misery_fnc_canteenfilldact;
@@ -460,7 +460,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // if(_action=="Pour into water bottle") exitWith {
 // (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
-// if !([["Misery_WaterJerryFD"]] call EFUNC(common,hasItem)) then {
+// if !([[QCLASS(WaterJerryFD"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
 // }else{
 // [] spawn Misery_fnc_bottlefilldact;
@@ -469,7 +469,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // if(_action=="Dump out water (dirty)") exitWith {
 // (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
-// if !([["Misery_WaterJerryFD"]] call EFUNC(common,hasItem)) then {
+// if !([[QCLASS(WaterJerryFD"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
 // }else{
 // private _formattedText = ["You dump the water from the Jerrycan onto the ground...", "PLAIN DOWN"];
@@ -520,21 +520,21 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // if(_action=="Swap to Petrol") exitWith {
 // (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
-// if !([["Misery_EmptyJet"]] call EFUNC(common,hasItem)) then {
+// if !([[QCLASS(jetFuelJerryCan_Empty)]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Jetfuel canister...", "PLAIN DOWN"];
 // }else{
-// player removeItem "Misery_EmptyJet";
-// player addItem "Misery_EmptyPetrol";
+// player removeItem QCLASS(jetFuelJerryCan_Empty);
+// player addItem QCLASS(petrolJerryCan_Empty);
 // };
 //     };
 // if(_action=="Swap to Diesel") exitWith {
 // (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
-// if !([["Misery_EmptyJet"]] call EFUNC(common,hasItem)) then {
+// if !([[QCLASS(jetFuelJerryCan_Empty)]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Jetfuel canister...", "PLAIN DOWN"];
 // }else{
-// player removeItem "Misery_EmptyJet";
-// player addItem "Misery_EmptyDiesel";
+// player removeItem QCLASS(jetFuelJerryCan_Empty);
+// player addItem QCLASS(dieselJerryCan_Empty);
 // };
 //     };
 
@@ -544,21 +544,21 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // if(_action=="Swap to Petrol") exitWith {
 // (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
-// if !([["Misery_EmptyDiesel"]] call EFUNC(common,hasItem)) then {
+// if !([[QCLASS(dieselJerryCan_Empty)]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Diesel canister...", "PLAIN DOWN"];
 // }else{
-// player removeItem "Misery_EmptyDiesel";
-// player addItem "Misery_EmptyPetrol";
+// player removeItem QCLASS(dieselJerryCan_Empty);
+// player addItem QCLASS(petrolJerryCan_Empty);
 // };
 //     };
 // if(_action=="Swap to Jetfuel") exitWith {
 // (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
-// if !([["Misery_EmptyDiesel"]] call EFUNC(common,hasItem)) then {
+// if !([[QCLASS(dieselJerryCan_Empty)]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Diesel canister...", "PLAIN DOWN"];
 // }else{
-// player removeItem "Misery_EmptyDiesel";
-// player addItem "Misery_EmptyJet";
+// player removeItem QCLASS(dieselJerryCan_Empty);
+// player addItem QCLASS(jetFuelJerryCan_Empty);
 // };
 //     };
 
@@ -568,20 +568,20 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // if(_action=="Swap to Diesel") exitWith {
 // (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
-// if !([["Misery_EmptyPetrol"]] call EFUNC(common,hasItem)) then {
+// if !([[QCLASS(petrolJerryCan_Empty)]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Petrol canister...", "PLAIN DOWN"];
 // }else{
-// player removeItem "Misery_EmptyPetrol";
-// player addItem "Misery_EmptyDiesel";
+// player removeItem QCLASS(petrolJerryCan_Empty);
+// player addItem QCLASS(dieselJerryCan_Empty);
 // };
 //     };
 // if(_action=="Swap to Jetfuel") exitWith {
 // (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
-// if !([["Misery_EmptyPetrol"]] call EFUNC(common,hasItem)) then {
+// if !([[QCLASS(petrolJerryCan_Empty)]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Petrol canister...", "PLAIN DOWN"];
 // }else{
-// player removeItem "Misery_EmptyPetrol";
-// player addItem "Misery_EmptyJet";
+// player removeItem QCLASS(petrolJerryCan_Empty);
+// player addItem QCLASS(jetFuelJerryCan_Empty);
 // };
 //     };

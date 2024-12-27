@@ -23,13 +23,13 @@
  *
  * Example:
  * [[
- *   "Misery_woodplank",
+ *   QCLASS(woodplank",
  *   [
- *   ["Misery_electrichandsaw",1,false],
- *   ["Misery_woodenlog", 1, true],
+ *   [QCLASS(electricHandsaw),1,false],
+ *   [QCLASS(woodenlog), 1, true],
  *   ["CraftingTime", 45],
  *   ["OutputCount", 4],
- *   ["ToBeReplaced","Misery_electrichandsaw", 0.5, "Misery_electrichandsawnobattery"],
+ *   ["ToBeReplaced",QCLASS(electricHandsaw), 0.5, QCLASS(electricHandSaw_NoBattery)],
  *   ["Audio","ElectricSaw"]
  *   ]
  * ]] call misery_crafting_fnc_addCraftingRecipe;

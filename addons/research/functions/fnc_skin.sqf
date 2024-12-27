@@ -30,8 +30,8 @@ private _randomskin = selectRandom
 {
 deleteVehicle cursorTarget; // delete corpse
 private _zombieskinned = selectRandom [
-"Misery_Zombieskin",
-"Misery_Zombieeye"
+QCLASS(zombie_Skin),
+QCLASS(zombie_Eye)
 ];
 player addItem _zombieskinned;
 titleText ["You collect your specimen, but the rest of the corpse is too rotten for any more specimens...", "PLAIN DOWN"];

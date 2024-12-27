@@ -15,7 +15,7 @@
  * Public: No
 */
 
-private _modules = allMissionObjects "Misery_ArtifactSpawner";
+private _modules = allMissionObjects QCLASS(ArtifactSpawner);
 
 waitUntil {
     private _players = call EFUNC(common,listPlayers);
@@ -33,16 +33,16 @@ waitUntil {
 
             if (_distance > Misery_ArtifactSpawnCheckDistance && _distance < _maxSpawnDistance) then {
 
-                private _ArtifactsSpawned = _module getVariable ["Misery_Artifacts_Spawned", false];
+                private _ArtifactsSpawned = _module getVariable [QCLASS(Artifacts_Spawned), false];
 
                 if (!(_ArtifactsSpawned) && isServer) then {
 
-                _module setVariable ["Misery_Artifacts_Spawned", true, true];
+                _module setVariable [QCLASS(Artifacts_Spawned), true, true];
 
                 [
                 _module,
-                (_module getVariable "Misery_ArtifactSpawnnumber"),
-                (_module getVariable "Misery_ArtifactSpawnradius")
+                (_module getVariable QCLASS(ArtifactSpawnnumber)),
+                (_module getVariable QCLASS(ArtifactSpawnradius))
                 ] call FUNC(generate);
             };
         };

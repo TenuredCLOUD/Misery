@@ -34,26 +34,26 @@
  * Example:
  * [
  * _module,
- * (_module getVariable "Misery_AI_faction"),
- * (_module getVariable "Misery_AI_Class"),
- * (_module getVariable "Misery_AI_GroupMAX"),
- * (_module getVariable "Misery_AI_WeapPrimaryLoot"),
- * (_module getVariable "Misery_AI_WeapSecondaryLoot"),
- * (_module getVariable "Misery_AI_WeaplauncherLoot"),
- * (_module getVariable "Misery_AI_Ammo"),
- * (_module getVariable "Misery_AI_ItemLoot"),
- * (_module getVariable "Misery_AI_NVGLoot"),
- * (_module getVariable "Misery_AI_FacewearLoot"),
- * (_module getVariable "Misery_AI_HeadgearLoot"),
- * (_module getVariable "Misery_AI_UniformLoot"),
- * (_module getVariable "Misery_AI_VestLoot"),
- * (_module getVariable "Misery_AI_BackpackLoot"),
- * (_module getVariable "Misery_AI_Accuracy"),
- * (_module getVariable "Misery_AI_Shake"),
- * (_module getVariable "Misery_AI_Speed"),
- * (_module getVariable "Misery_AI_SpawnChance"),
- * (_module getVariable "Misery_AI_ModuleSpawnDistanceMIN"),
- * (_module getVariable "Misery_AI_ModuleSpawnDistanceMAX")
+ * (_module getVariable QCLASS(AI_faction)),
+ * (_module getVariable QCLASS(AI_Class)),
+ * (_module getVariable QCLASS(AI_GroupMAX)),
+ * (_module getVariable QCLASS(AI_WeapPrimaryLoot)),
+ * (_module getVariable QCLASS(AI_WeapSecondaryLoot)),
+ * (_module getVariable QCLASS(AI_WeaplauncherLoot)),
+ * (_module getVariable QCLASS(AI_Ammo)),
+ * (_module getVariable QCLASS(AI_ItemLoot)),
+ * (_module getVariable QCLASS(AI_NVGLoot)),
+ * (_module getVariable QCLASS(AI_FacewearLoot)),
+ * (_module getVariable QCLASS(AI_HeadgearLoot)),
+ * (_module getVariable QCLASS(AI_UniformLoot)),
+ * (_module getVariable QCLASS(AI_VestLoot)),
+ * (_module getVariable QCLASS(AI_BackpackLoot)),
+ * (_module getVariable QCLASS(AI_Accuracy)),
+ * (_module getVariable QCLASS(AI_Shake)),
+ * (_module getVariable QCLASS(AI_Speed)),
+ * (_module getVariable QCLASS(AI_SpawnChance)),
+ * (_module getVariable QCLASS(AI_ModuleSpawnDistanceMIN)),
+ * (_module getVariable QCLASS(AI_ModuleSpawnDistanceMAX))
  * ] call misery_ambient_ai_fnc_Generation;
  *
  * Public: No
@@ -162,7 +162,7 @@ if (Misery_active_AmbAI_Groups >= Misery_AmbAI_MAXAllowed) exitWith {
     //Start cooldown before retry:
     sleep 120;
 
-    _module setVariable ["Misery_AI_Zone_Spawned", false, true];
+    _module setVariable [QCLASS(AI_Zone_Spawned), false, true];
 };
 
 //Spawn chance check:
@@ -389,7 +389,7 @@ if (EGVAR(common,debug)) then {systemChat format["[Misery Ambient_AI Framework] 
 {deleteVehicle _x} forEach units _group; // Delete all units in the group
 deleteGroup _group; // Delete the group
 if (EGVAR(common,debug)) then {systemChat format["[Misery Ambient_AI Framework] Re-initializing AI Generation for module at %1...",getPosATL _module]};
-_module setVariable ["Misery_AI_Zone_Spawned", false, true];
+_module setVariable [QCLASS(AI_Zone_Spawned), false, true];
 if (EGVAR(common,debug) && {!isNil "_marker"}) then {
         deleteMarker _marker;
     };

@@ -16,18 +16,18 @@
 
 private _player = _this select 0;
 
-if (!isNil {_player getVariable "Misery_Headlamp"}) then {
+if (!isNil {_player getVariable QCLASS(headlampStatus)}) then {
 
-    private _headlamp = _player getVariable "Misery_Headlamp";
+    private _headlamp = _player getVariable QCLASS(headlampStatus);
     deleteVehicle _headlamp;
 
-    _player removeItem "Misery_HeadlampON";
-    _player addItem "Misery_HeadlampOFF";
+    _player removeItem QCLASS(headlamp_On);
+    _player addItem QCLASS(headlamp_Off);
 
-    _player setVariable ["Misery_Headlamp", nil, true];
+    _player setVariable [QCLASS(headlampStatus), nil, true];
 
     //Fixes reloader issues:
 }else{
-_player removeItem "Misery_HeadlampON";
-_player addItem "Misery_HeadlampOFF";
+_player removeItem QCLASS(headlamp_On);
+_player addItem QCLASS(headlamp_Off);
 };

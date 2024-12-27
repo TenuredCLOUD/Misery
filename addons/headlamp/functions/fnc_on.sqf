@@ -16,10 +16,10 @@
 
 private _player = _this select 0;
 
-if (isNil {_player getVariable "Misery_Headlamp"}) then {
+if (isNil {_player getVariable QCLASS(headlampStatus)}) then {
 
-_player removeItem "Misery_HeadlampOFF";
-_player addItem "Misery_HeadlampON";
+_player removeItem QCLASS(headlamp_Off);
+_player addItem QCLASS(headlamp_On);
 
 private _headlamp = "#lightpoint" createVehicle position _player;
 _headlamp setLightBrightness 0.15; // Set brightness
@@ -30,5 +30,5 @@ _headlamp setLightAttenuation [0.5, 0, 0, 1]; // Set attenuation
 _headlamp attachTo [_player, [0,0,0], "pilot"];
 _headlamp setDir (direction _player);
 
-_player setVariable ["Misery_Headlamp", _headlamp, true];
+_player setVariable [QCLASS(headlampStatus), _headlamp, true];
 };

@@ -1,7 +1,7 @@
 class CLASS(refuelShop_ui)
 {
     idd = 982384;
-    onLoad = QUOTE([] call EFUNC(vehiclerefuel,refuelListed); [] call EFUNC(vehiclerefuel,icon));
+    onLoad = QUOTE([] call EFUNC(refuel,refuelListed); [] call EFUNC(refuel,icon));
 
 class ControlsBackground
 {
@@ -62,7 +62,7 @@ class CLASS(refuelShop_purchase): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick ="[] execVM '\z\misery\addons\vehiclerefuel\fucntions\fnc_ProcessPurchase.sqf';";
+    onButtonClick ="[] execVM '\z\misery\addons\refuel\fucntions\fnc_ProcessPurchase.sqf';";
 };
 class CLASS(refuelShop_exit): RscButton
 {

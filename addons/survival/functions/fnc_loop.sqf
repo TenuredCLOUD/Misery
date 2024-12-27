@@ -45,7 +45,7 @@ if !(hasInterface) exitWith {};
 
     //Sleep system
     _MSleeppillstaken = player getVariable ["MiserySleeppillstaken", 0];
-    _MIsSleeping = player getVariable ["Misery_IsSleeping", false];
+    _MIsSleeping = player getVariable [QCLASS(isSleeping), false];
 
     _randomnutrient = [1, 2] call BIS_fnc_randomInt; //random nutrient deficiency hunger or thirst
 

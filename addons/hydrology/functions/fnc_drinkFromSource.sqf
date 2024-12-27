@@ -33,12 +33,12 @@ private _ExitB = _dialog displayCtrl 1602;
 
         player playAction "Gear";
 
-        player setVariable ["Misery_ISDrinking", true];
+        player setVariable [QCLASS(isDrinking), true];
 
     _FillInterrupt = (findDisplay 982380) displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
     if (_key isEqualTo DIK_ESCAPE) then {
-        player setVariable ["Misery_ISDrinking",false];
+        player setVariable [QCLASS(isDrinking),false];
                 [parseText "<t font='PuristaMedium' size='1'>Drinking interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
         };
 }];
@@ -48,21 +48,19 @@ private _displayedText = "";
 private _delay = 8 / count _text;
 
 for "_i" from 0 to (count _text - 1) do {
-    if ((player getVariable "Misery_ISDrinking") isEqualTo false) exitWith {};
+    if ((player getVariable QCLASS(isDrinking)) isEqualTo false) exitWith {};
     _displayedText = _displayedText + (_text select [_i, 1]);
     ctrlSetText [1001, _displayedText];
     sleep _delay;
 };
 
-if ((player getVariable "Misery_ISDrinking") isEqualTo true) then {
-
-Miseryturbidwaterchance=_module getVariable "Misery_Waterturbidchance"; //Dirty water causes disease chance
+if ((player getVariable QCLASS(isDrinking)) isEqualTo true) then {
 
 private _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_THIRST];
 
 playSound3D [QPATHTOEF(audio,sounds\items\drink.ogg), player, false, getPosASL player, 4, 1, 10];
 
-if((random 100) > Miseryturbidwaterchance) exitWith {
+if((random 100) > EGVAR(survival,turbidWaterChance)) exitWith {
 
 player setVariable [QCLASS(thirst), (_MThirst + 10)];
 _SuccessText_NoSickness = "You just swallowed water that smelled foul and tasted dirty. Despite the repugnant taste, it did quench your thirst.";
@@ -74,21 +72,21 @@ ctrlSetText [1001, _SuccessText_NoSickness];
     _DrinkFSB ctrlShow true;
     _ExitB ctrlShow true;
 
-            player setVariable ["Misery_ISDrinking", nil]; //terminate crafting flag
+            player setVariable [QCLASS(isDrinking), nil]; //terminate crafting flag
             (findDisplay 982380) displayRemoveEventHandler ["KeyDown", _FillInterrupt]; //Remove Display EH
 };
 
 player setVariable [QCLASS(thirst), (_MThirst + 10)];
 _SuccessText_Sickness = "You just swallowed water that smelled foul and tasted dirty. Despite the repugnant taste, it did quench your thirst.";
 player setVariable ["radiation", (player getVariable ["radiation",0]) + random 150, true];
-player setVariable ["Turbidwaterlogged", true];
+player setVariable [QCLASS(turbidWaterLogged), true];
 _time = time + 180;
 [_time] spawn {
     private ["_TimeA"];
     _TimeA=_this select 0;
     waitUntil {(!alive player) or (time > _TimeA)};
     if (alive player) then {
-        player setVariable ["Turbidwaterlogged", nil];
+        player setVariable [QCLASS(turbidWaterLogged), nil];
 
         private _ailments = player getVariable QCLASS(ailments);
         _ailments pushBackUnique "PARASITES"; player setVariable [QCLASS(ailments), _ailments]; //<< sick from bad water
@@ -101,7 +99,7 @@ _time = time + 180;
     _DrinkFSB ctrlShow true;
     _ExitB ctrlShow true;
 
-            player setVariable ["Misery_ISDrinking", nil]; //terminate crafting flag
+            player setVariable [QCLASS(isDrinking), nil]; //terminate crafting flag
             (findDisplay 982380) displayRemoveEventHandler ["KeyDown", _FillInterrupt]; //Remove Display EH
     };
 };

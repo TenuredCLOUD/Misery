@@ -24,12 +24,12 @@
             [_handle] call CBA_fnc_removePerFrameHandler;
 
             _trader = player getVariable "currentTrader";
-            _queue = _trader getVariable "Misery_TradingQue";
+            _queue = _trader getVariable QCLASS(tradingQue);
 
             _index = _queue find (getPlayerUID player);
             if (_index != -1) then {
                 _queue deleteAt _index;
-                _trader setVariable ["Misery_TradingQue", _queue, true];
+                _trader setVariable [QCLASS(tradingQue), _queue, true];
             };
         };
 
@@ -39,11 +39,11 @@
 
         _shopName = _shop select (_shop findIf {_x select 0 == "ShopName"}) select 1;
 
-        _queue = _trader getVariable "Misery_TradingQue";
+        _queue = _trader getVariable QCLASS(tradingQue);
         _index = _queue find (getPlayerUID player);
         if (_index != -1) then {
             _position = _index;
-            ctrlSetText [1000, format ["%1 is currently busy trading with %2, your spot in the wait queue is: %3. Please wait...", _shopName, _trader getVariable "Misery_TradingWith",_position]];
+            ctrlSetText [1000, format ["%1 is currently busy trading with %2, your spot in the wait queue is: %3. Please wait...", _shopName, _trader getVariable QCLASS(tradingWith),_position]];
         };
 
         if (_index == 0) then {

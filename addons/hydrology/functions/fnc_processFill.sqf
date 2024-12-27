@@ -65,12 +65,12 @@ if (count _matchedRecipe > 0) then {
             _itemDisplayName = getText (configFile >> "CfgMagazines" >> _outputItem >> "displayName");
         };
 
-        player setVariable ["Misery_ISFilling", true];
+        player setVariable [QCLASS(isFilling), true];
 
     _FillInterrupt = (findDisplay 982380) displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
     if (_key isEqualTo DIK_ESCAPE) then {
-        player setVariable ["Misery_ISFilling",false];
+        player setVariable [QCLASS(isFilling),false];
                 [parseText "<t font='PuristaMedium' size='1'>Filling interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
         };
 }];
@@ -80,13 +80,13 @@ private _displayedText = "";
 private _delay = _FillingTime / count _text;
 
 for "_i" from 0 to (count _text - 1) do {
-    if ((player getVariable "Misery_ISFilling") isEqualTo false) exitWith {};
+    if ((player getVariable QCLASS(isFilling)) isEqualTo false) exitWith {};
     _displayedText = _displayedText + (_text select [_i, 1]);
     ctrlSetText [1001, _displayedText];
     sleep _delay;
 };
 
-    if ((player getVariable "Misery_ISFilling") isEqualTo true) then {
+    if ((player getVariable QCLASS(isFilling)) isEqualTo true) then {
 
                 if (_requiredItem in items player) then {
                     player removeItem _requiredItem;
@@ -105,7 +105,7 @@ for "_i" from 0 to (count _text - 1) do {
     _DrinkFSB ctrlShow true;
     _ExitB ctrlShow true;
 
-            player setVariable ["Misery_ISFilling", nil]; //terminate crafting flag
+            player setVariable [QCLASS(isFilling), nil]; //terminate crafting flag
             (findDisplay 982380) displayRemoveEventHandler ["KeyDown", _FillInterrupt]; //Remove Display EH
     };
 

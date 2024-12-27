@@ -26,7 +26,7 @@ if (!hasInterface) exitWith {};
 
     playSound3D [QPATHTOEF(audio,sounds\inventory\Items\CrinklingPlastic.ogg), player, false, getPosASL player, 4, 1, 10];
 
-  player removeItem "Misery_caffeine";
+  player removeItem QCLASS(caffeine);
   titleText ["You take some Caffeine tablets...", "PLAIN DOWN"];
 
   _time = time + 60;

@@ -16,7 +16,7 @@
 
 if (alive player) exitWith {
 
-player removeItem "Misery_RFHighrangeOFF";
+player removeItem QCLASS(rfHighRange_Off);
 
 playSound3D [QPATHTOEF(audio,sounds\Geigerenable\GeigerON.ogg), player, false, getPosASL player, 4, 1, 10];
 
@@ -81,7 +81,7 @@ playSound3D [QPATHTOEF(audio,sounds\Geigerenable\GeigerON.ogg), player, false, g
     _RF2,
     _RF3
     ];
-    player addItem "Misery_RFHighrangeON"; //End of boot cycle: adds RF detector
+    player addItem QCLASS(rfHighRange_On); //End of boot cycle: adds RF detector
     sleep 5;
     hintSilent ""; //<< removed HUD after 5 seconds
     };

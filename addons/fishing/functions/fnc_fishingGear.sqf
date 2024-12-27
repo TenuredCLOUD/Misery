@@ -20,7 +20,7 @@ _fishinggear =false;
 
 _Check_items = items player;
 
-if ("Misery_fishingpole" in _Check_items && "Misery_fishingspool" in _Check_items && "Misery_fishhook" in _Check_items && "Misery_worms" in _Check_items)  then {
+if (QCLASS(fishingPole) in _Check_items && QCLASS(fishingSpool) in _Check_items && QCLASS(fishhook) in _Check_items && QCLASS(worms) in _Check_items)  then {
 
     _fishinggear = true;
 

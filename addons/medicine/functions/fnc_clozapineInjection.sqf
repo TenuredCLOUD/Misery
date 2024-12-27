@@ -24,10 +24,10 @@ if (alive player) exitWith {
 
 titleText ["You inject the Clozapine...", "PLAIN DOWN"];
 
-player removeItem "Misery_Clozapine";
+player removeItem QCLASS(clozapineBox);
 
  if (EGVAR(common,ace)) then {
-[player, "Misery_Clozapine", 120, 300, 5, 0, 5] call ace_medical_status_fnc_addMedicationAdjustment;
+[player, QCLASS(clozapineBox), 120, 300, 5, 0, 5] call ace_medical_status_fnc_addMedicationAdjustment;
 };
 
 sleep 60;

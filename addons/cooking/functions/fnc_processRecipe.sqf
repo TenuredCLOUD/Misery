@@ -76,12 +76,12 @@ if (count _matchedRecipe > 0) then {
             _itemDisplayName = getText (configFile >> "CfgMagazines" >> _outputItem >> "displayName");
         };
 
-        player setVariable ["Misery_ISCooking", true];
+        player setVariable [QCLASS(ISCooking), true];
 
     _CraftInterrupt = (findDisplay 982379) displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
     if (_key isEqualTo DIK_ESCAPE) then {
-        player setVariable ["Misery_ISCooking",false];
+        player setVariable [QCLASS(ISCooking),false];
         player setVariable ["_TC_sound", false,true];
         switch (_cookingMethod) do {
             case "Cook": {
@@ -119,13 +119,13 @@ private _delay = _craftingTime / count _text;
 }, _soundDummy] call CBA_fnc_waitUntilAndExecute;
 
 for "_i" from 0 to (count _text - 1) do {
-    if ((player getVariable "Misery_ISCooking") isEqualTo false) exitWith {};
+    if ((player getVariable QCLASS(ISCooking)) isEqualTo false) exitWith {};
     _displayedText = _displayedText + (_text select [_i, 1]);
     ctrlSetText [1001, _displayedText];
     sleep _delay;
 };
 
-    if ((player getVariable "Misery_ISCooking") isEqualTo true) then {
+    if ((player getVariable QCLASS(ISCooking)) isEqualTo true) then {
         {
             private _requiredItem = _x select 0;
             private _requiredCount = _x select 1;
@@ -160,7 +160,7 @@ for "_i" from 0 to (count _text - 1) do {
     _RecipeB ctrlShow true;
     _ExitB ctrlShow true;
 
-            player setVariable ["Misery_ISCooking", nil]; //terminate crafting flag
+            player setVariable [QCLASS(ISCooking), nil]; //terminate crafting flag
             (findDisplay 982379) displayRemoveEventHandler ["KeyDown", _CraftInterrupt]; //Remove Display EH
     };
 

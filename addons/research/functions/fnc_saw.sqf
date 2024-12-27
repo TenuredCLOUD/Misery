@@ -31,18 +31,18 @@ private _randomsaw = selectRandom
 {
 deleteVehicle cursorTarget; // delete corpse
 private _zombiesawed = selectRandom [
-"Misery_zombiehead",
-"Misery_zombiehand",
-"Misery_Zombiefoot",
-"Misery_Zombiebrain",
-"Misery_zombiehead",
-"Misery_zombiehand",
-"Misery_Zombiefoot",
-"Misery_Zombiebrain",
-"Misery_zombiehead",
-"Misery_zombiehand",
-"Misery_Zombiefoot",
-"Misery_Zombiebrain"
+QCLASS(zombie_Head),
+QCLASS(zombie_Hand),
+QCLASS(zombie_Foot),
+QCLASS(zombie_Brain),
+QCLASS(zombie_Head),
+QCLASS(zombie_Hand),
+QCLASS(zombie_Foot),
+QCLASS(zombie_Brain),
+QCLASS(zombie_Head),
+QCLASS(zombie_Hand),
+QCLASS(zombie_Foot),
+QCLASS(zombie_Brain)
 ];
 player addItem _zombiesawed;
 titleText ["You collect your specimen, but the rest of the corpse is too rotten for any more specimens...", "PLAIN DOWN"];

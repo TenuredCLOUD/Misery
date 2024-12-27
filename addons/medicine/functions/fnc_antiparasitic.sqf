@@ -30,10 +30,10 @@ if (goggles player in antirad_goggles || headgear player in antirad_headgears) e
 if (alive player) then {
     titleText ["You take a Anti parasitic pill...", "PLAIN DOWN"];
 
-    player removeItem "Misery_antiparasiticpill";
+    player removeItem QCLASS(antiparasitic);
 
     if (EGVAR(common,ace)) then {
-        [player, "Misery_antiparasiticpill", 10, 60, -15, 0, -15] call ace_medical_status_fnc_addMedicationAdjustment;
+        [player, QCLASS(antiparasitic), 10, 60, -15, 0, -15] call ace_medical_status_fnc_addMedicationAdjustment;
     };
 
     sleep 60;

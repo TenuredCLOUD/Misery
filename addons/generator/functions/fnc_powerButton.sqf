@@ -16,7 +16,7 @@
 
 waitUntil {!isNull findDisplay 573849};
 
-_Generator = player getVariable "Misery_Current_Generator";
+_Generator = player getVariable QCLASS(currentGenerator);
 
 _GeneratorType = typeOf _Generator;
 

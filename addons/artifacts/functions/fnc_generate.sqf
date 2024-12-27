@@ -14,8 +14,8 @@
  * Example:
  * [
  * _module,
- * (_module getVariable "Misery_ArtifactSpawnnumber"),
- * (_module getVariable "Misery_ArtifactSpawnradius")
+ * (_module getVariable QCLASS(ArtifactSpawnnumber)),
+ * (_module getVariable QCLASS(ArtifactSpawnradius))
  * ] call misery_artifacts_fnc_generate;
  *
  * Public: No
@@ -47,7 +47,7 @@ if (isServer) then {
     _numartifacts = _this select 1;
     _radius = _this select 2;
 
-    _artifacts = ["Misery_artifact01","Misery_artifact02","Misery_artifact03","Misery_artifact04","Misery_artifact05","Misery_artifact06","Misery_artifact07","Misery_artifact08","Misery_artifact09","Misery_artifact10"];
+    _artifacts = [QCLASS(artifact01),QCLASS(artifact02),QCLASS(artifact03),QCLASS(artifact04),QCLASS(artifact05),QCLASS(artifact06),QCLASS(artifact07),QCLASS(artifact08),QCLASS(artifact09),QCLASS(artifact10)];
 
     _player=objNull;
     _players=call EFUNC(common,ListPlayers);
@@ -131,6 +131,6 @@ if (isServer) then {
 
     if (_deleteFlag) exitWith {
         {deleteVehicle _x} forEach _holderArray;
-        _module setVariable ["Misery_Artifacts_Spawned", false, true];
+        _module setVariable [QCLASS(Artifacts_Spawned), false, true];
     };
 };

@@ -16,15 +16,15 @@
  *
 */
 
-[{(player getVariable ["Misery_RFEMFDet", false])}, {
+[{(player getVariable [QCLASS(rfdetectorStatus), false])}, {
     [{
         params ["_args", "_handle"];
 
-        if (!(player getVariable ["Misery_RFEMFDet", false]) && (!alive player)) exitWith {
+        if (!(player getVariable [QCLASS(rfdetectorStatus), false]) && (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
 
-        if ((player getVariable ["Misery_RFEMFDet", false])) then {
+        if ((player getVariable [QCLASS(rfdetectorStatus), false])) then {
 
             private _spookArray = [] + dsaSpookBases + dsaDevMutants + dsaWebknightCreatures;
             private _weaponHolders = nearestObjects [getPos player, ["WeaponHolderSimulated", "GroundWeaponHolder", "Default"], 25];

@@ -48,7 +48,7 @@ Will most likely rewrite to new UI based use - Or move to an ACE action
     };
 
     //Remove needle & thread
-    player removeItem "Misery_Needlethread";
+    player removeItem QCLASS(needleThread);
 
     if((random 100) > 50) exitWith {
     private _actionID = (_this select 2);

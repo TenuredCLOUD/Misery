@@ -22,7 +22,7 @@ if (!hasInterface) exitWith {};
 if (alive player) exitWith {
     titleText ["You use a cold pack...", "PLAIN DOWN"];
 
-    player removeItem "Misery_Coldpack";
+    player removeItem QCLASS(coldpack);
 
     sleep 60;
 

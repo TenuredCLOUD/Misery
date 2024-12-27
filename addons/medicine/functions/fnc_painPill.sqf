@@ -26,12 +26,12 @@ if (alive player) then {
 
   titleText ["You take a pain pill...", "PLAIN DOWN"];
 
-  ["Misery_pain"] call EFUNC(common,itemDecrement);
+  [QCLASS(painkillers)] call EFUNC(common,itemDecrement);
 
   sleep 15;
 
   if (EGVAR(common,ace)) then {
-  [player, "Misery_pain", 120, 300, -1, 0.5, -1] call ace_medical_status_fnc_addMedicationAdjustment;
+  [player, QCLASS(painkillers), 120, 300, -1, 0.5, -1] call ace_medical_status_fnc_addMedicationAdjustment;
   }else{
   private _playerhealth = damage player;
   player setDamage [_playerhealth - 0.05, false];

@@ -2,7 +2,7 @@
 
 ["Misery", QGVAR(power), "Turn on/off ERU", {
     private _formattedText;
-    if ("Misery_ERU_off" in magazines player) then {
+    if (QCLASS(eru_Off) in magazines player) then {
         private _eruTurnOn = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONGEIGERBOOTUP"];
         [parseText _eruTurnOn, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
         playSound3D [QPATHTOEF(audio,sounds\eru\PowerUpBeep.ogg), player, false, getPosASL player, 4, 1, 10];

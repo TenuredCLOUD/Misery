@@ -20,10 +20,10 @@ if (isServer) then {
     addMissionEventHandler ["EntityKilled", {
         params ["_killed", "_killer", "_instigator"];
         if (_killed == player) then {
-            if (!isNil {_killed getVariable "Misery_Headlamp"}) then {
-                private _headlamp = _killed getVariable "Misery_Headlamp";
+            if (!isNil {_killed getVariable QCLASS(headlampStatus)}) then {
+                private _headlamp = _killed getVariable QCLASS(headlampStatus);
                 deleteVehicle _headlamp; // Delete the light
-                _killed setVariable ["Misery_Headlamp", nil, true];
+                _killed setVariable [QCLASS(headlampStatus), nil, true];
             };
         };
     }];
@@ -33,11 +33,11 @@ if (isServer) then {
 if (hasInterface) then {
     player addEventHandler ["Put", {
         params ["_unit", "_container", "_item"];
-        if (_item == "Misery_HeadlampON") then {
-            if (!isNil {_unit getVariable "Misery_Headlamp"}) then {
-                private _headlamp = _unit getVariable "Misery_Headlamp";
+        if (_item == QCLASS(headlamp_On)) then {
+            if (!isNil {_unit getVariable QCLASS(headlampStatus)}) then {
+                private _headlamp = _unit getVariable QCLASS(headlampStatus);
                 deleteVehicle _headlamp; // Delete the light
-                _unit setVariable ["Misery_Headlamp", nil, true];
+                _unit setVariable [QCLASS(headlampStatus), nil, true];
             };
         };
     }];
@@ -47,9 +47,9 @@ if (hasInterface) then {
 if (hasInterface) then {
     player addEventHandler ["Take", {
         params ["_unit", "_container", "_item"];
-        if (_item == "Misery_HeadlampON") then {
+        if (_item == QCLASS(headlamp_On)) then {
             // If the player doesn't already have an active headlamp...
-            if (isNil {_unit getVariable "Misery_Headlamp"}) then {
+            if (isNil {_unit getVariable QCLASS(headlampStatus)}) then {
                 // Create the light and attach it to the player.
                 private _headlamp = "#lightpoint" createVehicle position _unit;
                 _headlamp setLightBrightness 0.15; // Set brightness
@@ -61,7 +61,7 @@ if (hasInterface) then {
                 _headlamp setDir (direction _unit);
 
                 // Store the headlamp in the player's namespace so we can access it later.
-                _unit setVariable ["Misery_Headlamp", _headlamp, true];
+                _unit setVariable [QCLASS(headlampStatus), _headlamp, true];
             };
         };
     }];

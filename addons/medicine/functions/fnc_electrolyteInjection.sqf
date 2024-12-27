@@ -32,7 +32,7 @@ private _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_THIRST];
 
 titleText ["You inject the Electrolyte solution...", "PLAIN DOWN"];
 
-player removeItem "Misery_electrolyte";
+player removeItem QCLASS(electrolyte);
 private _c = 10;
 [{ _this call fnc_electrolyte;}, [_c, "The Electrolyte injection has worn off..."], 10] call CBA_fnc_waitAndExecute;
 

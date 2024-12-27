@@ -1,5 +1,5 @@
             [
-            QGVAR(crafting), 
+            QGVAR(enabled), 
             "CHECKBOX", 
             ["Crafting Menus Framework", "Enable Crafting Menus? (Crafting allowed at workbenches)"], 
             ["Misery","Sub-Actions"], 

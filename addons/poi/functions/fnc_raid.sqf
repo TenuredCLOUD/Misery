@@ -146,7 +146,7 @@ if (Misery_activePOIs >= Misery_POIMAXAllowed) exitWith {
     //Start cooldown before retry:
     sleep 120;
 
-_module setVariable ["Misery_POI_Spawned", false, true];
+_module setVariable [QCLASS(poiSpawned), false, true];
 
 };
 
@@ -413,7 +413,7 @@ if (_marker != "") then {
     // missionNamespace setVariable [format ["PMC_Raid_Marker_%1", _raidID], nil];
 };
 if (EGVAR(common,debug)) then {systemChat format["[Misery POI Framework] Re-initializing Raid POI for module at %1...",getPosATL _module]};
-_module setVariable ["Misery_POI_Spawned", false, true];
+_module setVariable [QCLASS(poiSpawned), false, true];
 
 Misery_activePOIs = Misery_activePOIs - 1;
 

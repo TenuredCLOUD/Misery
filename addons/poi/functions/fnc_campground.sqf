@@ -140,7 +140,7 @@ if (Misery_activePOIs >= Misery_POIMAXAllowed) exitWith {
     //Start cooldown before retry:
     sleep 120;
 
-    _module setVariable ["Misery_POI_Spawned", false, true];
+    _module setVariable [QCLASS(poiSpawned), false, true];
 
 };
 
@@ -389,7 +389,7 @@ if (EGVAR(common,debug)) then {systemChat format["[Misery POI Framework] Player 
 {deleteVehicle _x} forEach _spawnedObjects;
 deleteGroup _group; // Delete the group
 if (EGVAR(common,debug)) then {systemChat format["[Misery POI Framework] Re-initializing Campground POI for module at %1...",getPosATL _module]};
-_module setVariable ["Misery_POI_Spawned", false, true];
+_module setVariable [QCLASS(poiSpawned), false, true];
 if (EGVAR(common,debug) && {!isNil "_marker"}) then {
         deleteMarker _marker;
     };

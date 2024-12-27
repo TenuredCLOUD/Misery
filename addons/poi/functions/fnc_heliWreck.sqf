@@ -98,7 +98,7 @@ if (Misery_activePOIs >= Misery_POIMAXAllowed) exitWith {
     //Start cooldown before retry:
     sleep 120;
 
-_module setVariable ["Misery_POI_Spawned", false, true];
+_module setVariable [QCLASS(poiSpawned), false, true];
 
 };
 
@@ -188,7 +188,7 @@ waitUntil {
 
 if (_deleteFlag) exitWith {
     {deleteVehicle _x} forEach _spawnedObjects; // Delete all spawned objects
-     _module setVariable ["Misery_POI_Spawned", false, true];
+     _module setVariable [QCLASS(poiSpawned), false, true];
     //  _WreckID = _module getVariable "Active_Wreck_ID";
     //  _marker = missionNamespace getVariable [format ["Wreck_Marker_%1", _WreckID], ""];
 if (_marker != "") then {

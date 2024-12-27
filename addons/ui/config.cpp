@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"cba_main","A3_ui_f","misery_common"}; // Include addons from this mod that contain code or assets you depend on. Affects loadorder. Including main as an example here.
+        requiredAddons[] = {"cba_main","A3_ui_f",QCLASS(common)}; // Include addons from this mod that contain code or assets you depend on. Affects loadorder. Including main as an example here.
         authors[] = {"TenuredCLOUD"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}
         VERSION_CONFIG;
     };
@@ -21,8 +21,8 @@ class CfgPatches {
 #include "\z\misery\addons\ui\menus\cooking.hpp"
 #include "\z\misery\addons\ui\menus\hydrology.hpp"
 #include "\z\misery\addons\ui\menus\medicalTreatment.hpp"
-#include "\z\misery\addons\ui\menus\mechanicShop.hpp"
-#include "\z\misery\addons\ui\menus\vehicleMaint.hpp"
+#include "\z\misery\addons\ui\menus\repairShop.hpp"
+#include "\z\misery\addons\ui\menus\maintenance.hpp"
 #include "\z\misery\addons\ui\menus\rearmShop.hpp"
 #include "\z\misery\addons\ui\menus\refuelShop.hpp"
 #include "\z\misery\addons\ui\menus\refuelJerryCan.hpp"

@@ -18,7 +18,7 @@ if (!hasInterface) exitWith {};
 
 private _MFear = player getVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR];
 
-    if !("rvg_matches" in magazines player || "Misery_lighter" in items player) exitWith {titleText ["You need a lighter or matches to smoke...", "PLAIN DOWN"];};
+    if !("rvg_matches" in magazines player || QCLASS(lighter) in items player) exitWith {titleText ["You need a lighter or matches to smoke...", "PLAIN DOWN"];};
 
 
     if (alive player) then {
@@ -27,7 +27,7 @@ private _MFear = player getVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR];
 
     titleText ["You light up a cigar...", "PLAIN DOWN"];
 
-     player removeItem "Misery_cigar";
+     player removeItem QCLASS(cigar);
 
       playSound3D [QPATHTOEF(audio,sounds\immersion\Matchsmoking.ogg), player, false, getPosASL player, 4, 1, 10];
 
@@ -40,7 +40,7 @@ private _MFear = player getVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR];
     sleep 1;
 
 if (EGVAR(common,ace)) then {
-    [player, "Misery_cigar", 10, 300, -5, -5, -5] call ace_medical_status_fnc_addMedicationAdjustment;
+    [player, QCLASS(cigar), 10, 300, -5, -5, -5] call ace_medical_status_fnc_addMedicationAdjustment;
 };
 
  //This snippet is an altered version from Anti rad pills usage from Ravage mod, permission was requested before use:
@@ -59,13 +59,13 @@ player setVariable ["_antirad", nil];
 
 }else {
 
-if ("Misery_lighter" in items player) then {
+if (QCLASS(lighter) in magazines player) then {
 
     titleText ["You light up a cigar...", "PLAIN DOWN"];
 
       playSound3D [QPATHTOEF(audio,sounds\immersion\Lightersmoking.ogg), player, false, getPosASL player, 4, 1, 10];
 
-    player removeItem "Misery_cigar";
+    player removeItem QCLASS(cigar);
 
     //Remove some fear due to cig smoking:
   if (MiseryFearenabled) then {
@@ -76,7 +76,7 @@ if ("Misery_lighter" in items player) then {
     sleep 1;
 
 if (EGVAR(common,ace)) then {
-    [player, "Misery_cigar", 10, 300, -5, -5, -5] call ace_medical_status_fnc_addMedicationAdjustment;
+    [player, QCLASS(cigar), 10, 300, -5, -5, -5] call ace_medical_status_fnc_addMedicationAdjustment;
 };
 
    //This snippet is an altered version from Anti rad pills usage from Ravage mod, permission was requested before use:

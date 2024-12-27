@@ -23,7 +23,7 @@ if (!hasInterface) exitWith {};
 
     titleText ["You use a heat pack...", "PLAIN DOWN"];
 
-    player removeItem "Misery_Heatpack";
+    player removeItem QCLASS(heatpack);
 
 sleep 60;
 
