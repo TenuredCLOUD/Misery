@@ -1,0 +1,9 @@
+PREP(accessServerSaveData);
+PREP(autoSaveSingleplayer);
+PREP(combatLogPrevention);
+PREP(deserializeClient);
+PREP(formatSaveName);
+PREP(initializeNewPlayer);
+PREP(savePlayerData);
+PREP(savePlayerDataMultiplayer);
+PREP(serializeClient);
