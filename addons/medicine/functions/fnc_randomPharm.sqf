@@ -14,9 +14,9 @@
  *
 */
 
-private _MHunger = player getVariable ["MiseryHunger", MACRO_PLAYER_HUNGER];
-private _MThirst = player getVariable ["MiseryThirst", MACRO_PLAYER_THIRST];
-private _MPoison = player getVariable ["MiseryPoison", MACRO_PLAYER_TOXICITY];
+private _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER];
+private _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_THIRST];
+private _MPoison = player getVariable [QCLASS(toxicity), MACRO_PLAYER_TOXICITY];
 
 
 
@@ -57,11 +57,11 @@ if (!hasInterface) exitWith {};
           [player, "Misery_randommedication", 0, 300, -40, 0, -40] call ace_medical_status_fnc_addMedicationAdjustment;
           };
 
-          player setVariable ["MiseryThirst", (_MThirst - 50)];
-            player setVariable ["MiseryHunger", (_MHunger - 50)];
+          player setVariable [QCLASS(thirst), (_MThirst - 50)];
+            player setVariable [QCLASS(hunger), (_MHunger - 50)];
 
-          if (MiseryAilments == "ENABLED") then {
-          player setVariable ["MiseryPoison", (_MPoison + (random 20))]; //random poison amount
+          if (EGVAR(survival,ailments) == "ENABLED") then {
+          player setVariable [QCLASS(toxicity), (_MPoison + (random 20))]; //random poison amount
           };
 
           // if ((count(entities "Ravage_survival")) > 0) then {

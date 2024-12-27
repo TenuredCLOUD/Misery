@@ -24,7 +24,7 @@ disableSerialization;
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
 
-    private ["_display","_TempText","_TempVal","_GasText","_GasVal","_cartridgecalc","_GascartridgeVal","_GasSuppAir","_FundsVal","_HealthText","_HealthNum","_ValtoBarHealth","_ValtoBarBlood","_BloodtoVal","_HealthtoVal","_HealthNumVal","_HungerNum","_ValtoBarHunger","_HungerNumVal","_ThirstNum","_ValtoBarThirst","_ThirstNumVal","_FatigueNum","_ValtoBarFatigue","_FatigueNumVal","_MHunger","_MThirst","_MInfection","_MPoison","_MSleepiness","_MExposure","_MPlayertemp","_MDebuffs","_Health","_pfatigue","_thirst","_temp","_funds","_tired","_parasites","_poison","_infection"];
+    private ["_display","_TempText","_TempVal","_GasText","_GasVal","_cartridgecalc","_GascartridgeVal","_GasSuppAir","_FundsVal","_HealthText","_HealthNum","_ValtoBarHealth","_ValtoBarBlood","_BloodtoVal","_HealthtoVal","_HealthNumVal","_HungerNum","_ValtoBarHunger","_HungerNumVal","_ThirstNum","_ValtoBarThirst","_ThirstNumVal","_FatigueNum","_ValtoBarFatigue","_FatigueNumVal","_MHunger","_MThirst","_MInfection","_MPoison","_MSleepiness","_MExposure","_MPlayertemp","_ailments","_Health","_pfatigue","_thirst","_temp","_funds","_tired","_parasites","_poison","_infection"];
 
     _display = findDisplay 982377;
     _TempText = _display displayCtrl 1015;
@@ -44,14 +44,14 @@ disableSerialization;
     _CurrMag = _display displayCtrl 1111;
     _CurrMagVal =_display displayCtrl 1112;
 
-    _MHunger = player getVariable ["MiseryHunger", MACRO_PLAYER_HUNGER];
-    _MThirst = player getVariable ["MiseryThirst", MACRO_PLAYER_THIRST];
-    _MInfection = player getVariable ["MiseryInfection", MACRO_PLAYER_INFECTION];
-    _MPoison = player getVariable ["MiseryPoison", MACRO_PLAYER_TOXICITY];
-    _MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
-    _MExposure = player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE];
-    _MPlayertemp = player getVariable ["MiseryPlayerTemp", 0];
-    _MDebuffs = player getVariable "MiseryDebuffs";
+    _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER];
+    _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_THIRST];
+    _MInfection = player getVariable [QCLASS(infection), MACRO_PLAYER_INFECTION];
+    _MPoison = player getVariable [QCLASS(toxicity), MACRO_PLAYER_TOXICITY];
+    _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
+    _MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];
+    _MPlayertemp = player getVariable [QCLASS(thermalIndex), 0];
+    _ailments = player getVariable QCLASS(ailments);
 
     _pfatigue = (getFatigue player) * 100; //Fatigue calc
     _convpfatigue = round (100 - _pfatigue); //conversion to 100 - 0
@@ -179,7 +179,7 @@ lbClear _ailmentsList;
     _TempVal ctrlSetText "No ERU";
     };
 
-    _GetFunds = player getVariable "MiseryCurrency";
+    _GetFunds = player getVariable QCLASS(currency);
 
     _FundsDisplay = format ["%1 %2",EGVAR(money,symbol),[_GetFunds, 1, 2, true] call CBA_fnc_formatNumber]; //[_GetFunds] call Misery_fnc_formatNumber
 
@@ -242,7 +242,7 @@ if (_MSleepiness >= 15) then {
     _poison = _ailments findIf {(_x select 0) isEqualTo "Poisoned"};
     _infection = _ailments findIf {(_x select 0) isEqualTo "Bacterial Infection"};
 
-    if(_MDebuffs find "PARASITES" != -1 && MiseryAilments == 1) then {
+    if(_ailments find "PARASITES" != -1 && EGVAR(survival,ailments)) then {
         ["ailment","Parasite Infection", QPATHTOEF(icons,data\parasites_ca.paa), "You are infected with Parasites, You feel a gnawing hunger that is unsatiable, as well as unquenchable thirst..."] call FUNC(addBuffOrAilment);
     }else{
     if (_parasites > -1) then {
@@ -250,7 +250,7 @@ if (_MSleepiness >= 15) then {
     };
         };
 
-    if(_MPoison > 0 && MiseryAilments == 1)then{
+    if(_MPoison > 0 && EGVAR(survival,ailments))then{
     ["ailment","Poisoned", QPATHTOEF(icons,data\poison_ca.paa), "You are poisoned, you feel a wave of unease wash over you as death lingers..."] call FUNC(addBuffOrAilment);
     }else{
     if (_poison > -1) then {
@@ -258,7 +258,7 @@ if (_MSleepiness >= 15) then {
     };
         };
 
-    if(_MInfection > 0 && MiseryAilments == 1)then{
+    if(_MInfection > 0 && EGVAR(survival,ailments))then{
         ["ailment","Bacterial Infection", QPATHTOEF(icons,data\infection_ca.paa), "You have a Bacterial infection, your breaths are shallow, and feel hot. You can feel your muscles weakening..."] call FUNC(addBuffOrAilment);
     }else{
     if (_infection > -1) then {
@@ -357,7 +357,7 @@ _FatigueNum ctrlSetText _FatigueNumVal;
 };
     };
 
-    if (MiseryTemperature == 1) then {
+    if (EGVAR(temperature,enable)) then {
     _NFireBuff = _buffs findIf {(_x select 0) isEqualTo "Near Fire"};
     _ShelterBuff = _buffs findIf {(_x select 0) isEqualTo "Sheltered"};
     _CoverageBuff = _buffs findIf {(_x select 0) isEqualTo "Under Roof"};
@@ -370,7 +370,7 @@ _FatigueNum ctrlSetText _FatigueNumVal;
         };
 
     if (insideBuilding player == 1) then {
-        ["buff","Sheltered", QPATHTOEF(icons,data\shelter_ca.paa), "You are sheltered from the weather, while inside you cannot build a fire due to smoke inhalation..."] call FUNC(addBuffOrAilment);
+    ["buff","Sheltered", QPATHTOEF(icons,data\shelter_ca.paa), "You are sheltered from the weather, while inside you cannot build a fire due to smoke inhalation..."] call FUNC(addBuffOrAilment);
     }else{
     if (_ShelterBuff > -1) then {
     ["buff","Sheltered"] call FUNC(removeBuffOrAilment);

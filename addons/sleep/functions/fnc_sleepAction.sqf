@@ -67,7 +67,7 @@
     {},
     {
     private _actionID = (_this select 2);
-    createDialog "MiserySleepMenuGUI";
+    createDialog QCLASS(sleepMenu_ui);
     [player,_actionID] call BIS_fnc_holdActionRemove;
     },
     {

@@ -17,14 +17,14 @@
 
     private _amount = parseNumber (ctrlText ((findDisplay 483729) displayCtrl 1400));
     private _maxAmount = MiseryCurrency_PhoenixAccount * 0.01;
-    private _lastWithdrawalTime = player getVariable ["lastPhoenixWithdrawalTime", 0];
+    private _lastWithdrawalTime = player getVariable [QCLASS(lastBankLoan), 0];
 
     if (time > _lastWithdrawalTime + 4 * 60 * 60) then {
         if (_amount > 0 && _amount <= _maxAmount && _amount <= MiseryCurrency_PhoenixAccount) then {
-            player setVariable ["MiseryCurrency", (player getVariable "MiseryCurrency") + _amount];
+            player setVariable [QCLASS(currency), (player getVariable QCLASS(currency)) + _amount];
             MiseryCurrency_PhoenixAccount = MiseryCurrency_PhoenixAccount - _amount;
             publicVariable "MiseryCurrency_PhoenixAccount";
-            player setVariable ["lastPhoenixWithdrawalTime", time];
+            player setVariable [QCLASS(lastBankLoan), time];
         };
     };
 

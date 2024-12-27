@@ -44,7 +44,7 @@ if (!hasInterface) exitWith {};
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(exitGui), {
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+(findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
 }] call CBA_fnc_addEventHandler;
 

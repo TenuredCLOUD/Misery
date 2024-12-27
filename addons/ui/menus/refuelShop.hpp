@@ -1,7 +1,7 @@
 class CLASS(refuelShop_ui)
 {
     idd = 982384;
-    onLoad = "[] execVM '\z\misery\addons\vehiclerefuel\functions\fnc_RefuelListed.sqf'; [] execVM '\z\misery\addons\vehiclerefuel\functions\fnc_Veh_icon.sqf';";
+    onLoad = QUOTE([] call EFUNC(vehiclerefuel,refuelListed); [] call EFUNC(vehiclerefuel,icon));
 
 class ControlsBackground
 {

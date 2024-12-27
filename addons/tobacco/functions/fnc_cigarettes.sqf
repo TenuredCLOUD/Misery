@@ -17,7 +17,7 @@
 if (!hasInterface) exitWith {};
 
 private _random = [1, 10] call BIS_fnc_randomInt;
-private _MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];
+private _MFear = player getVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR];
 
     if !("rvg_matches" in magazines player || "Misery_lighter" in items player) exitWith {titleText ["You need a lighter or match to smoke...", "PLAIN DOWN"];};
 
@@ -31,8 +31,8 @@ private _MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];
 
     //Remove some fear due to cig smoking:
   if (MiseryFearenabled) then {
-    player setVariable ["MiseryFear", (_MFear - 1.5)];
-    if (_MFear <= 0) then {player setVariable ["MiseryFear", 0]};
+    player setVariable [QCLASS(psycosis), (_MFear - 1.5)];
+    if (_MFear <= 0) then {player setVariable [QCLASS(psycosis), 0]};
   };
 
  sleep 1;
@@ -114,8 +114,8 @@ if ("Misery_lighter" in items player) then {
 
   //Remove some fear due to cig smoking:
   if (MiseryFearenabled) then {
-    player setVariable ["MiseryFear", (_MFear - 1.5)];
-    if (_MFear <= 0) then {player setVariable ["MiseryFear", 0]};
+    player setVariable [QCLASS(psycosis), (_MFear - 1.5)];
+    if (_MFear <= 0) then {player setVariable [QCLASS(psycosis), 0]};
   };
 
   sleep 1;

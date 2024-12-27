@@ -56,7 +56,7 @@ Will most likely rewrite to new UI based use - Or move to an ACE action
     };
 
     //Check if ailments are active (before infection)
-    if (MiseryAilments == "ENABLED") then {
+    if (EGVAR(survival,ailments) == "ENABLED") then {
 
     private _timeafter = time + 120;
     [_timeafter] spawn {
@@ -77,7 +77,7 @@ Will most likely rewrite to new UI based use - Or move to an ACE action
     _TimeA=_this select 0;
     waitUntil {(!alive player) or (time > _TimeA)};
     if (alive player) then {
-    player setVariable ["MiseryInfection", (random 15)]; //random infection amount
+    player setVariable [QCLASS(infection), (random 15)]; //random infection amount
     };
         };
 

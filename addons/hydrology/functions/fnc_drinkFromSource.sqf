@@ -2,7 +2,7 @@
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
  * Author: TenuredCLOUD
- * WaterCollection Drink from source processor
+ * Hydrology Drink from source processor
  *
  * Arguments:
  * None
@@ -10,7 +10,7 @@
  * Return Value:
  * None
  *
- * [] call misery_watercollect_fnc_drinkFromSource;
+ * [] call misery_hydrology_fnc_drinkFromSource;
  *
  * Public: No
 */
@@ -58,13 +58,13 @@ if ((player getVariable "Misery_ISDrinking") isEqualTo true) then {
 
 Miseryturbidwaterchance=_module getVariable "Misery_Waterturbidchance"; //Dirty water causes disease chance
 
-private _MThirst = player getVariable ["MiseryThirst", MACRO_PLAYER_THIRST];
+private _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_THIRST];
 
 playSound3D [QPATHTOEF(audio,sounds\items\drink.ogg), player, false, getPosASL player, 4, 1, 10];
 
 if((random 100) > Miseryturbidwaterchance) exitWith {
 
-player setVariable ["MiseryThirst", (_MThirst + 10)];
+player setVariable [QCLASS(thirst), (_MThirst + 10)];
 _SuccessText_NoSickness = "You just swallowed water that smelled foul and tasted dirty. Despite the repugnant taste, it did quench your thirst.";
 player setVariable ["radiation", (player getVariable ["radiation",0]) + random 150, true];
 
@@ -78,7 +78,7 @@ ctrlSetText [1001, _SuccessText_NoSickness];
             (findDisplay 982380) displayRemoveEventHandler ["KeyDown", _FillInterrupt]; //Remove Display EH
 };
 
-player setVariable ["MiseryThirst", (_MThirst + 10)];
+player setVariable [QCLASS(thirst), (_MThirst + 10)];
 _SuccessText_Sickness = "You just swallowed water that smelled foul and tasted dirty. Despite the repugnant taste, it did quench your thirst.";
 player setVariable ["radiation", (player getVariable ["radiation",0]) + random 150, true];
 player setVariable ["Turbidwaterlogged", true];
@@ -90,8 +90,8 @@ _time = time + 180;
     if (alive player) then {
         player setVariable ["Turbidwaterlogged", nil];
 
-        private _MDebuffs = player getVariable "MiseryDebuffs";
-        _MDebuffs pushBackUnique "PARASITES"; player setVariable ["MiseryDebuffs", _MDebuffs]; //<< sick from bad water
+        private _ailments = player getVariable QCLASS(ailments);
+        _ailments pushBackUnique "PARASITES"; player setVariable [QCLASS(ailments), _ailments]; //<< sick from bad water
         };
     };
 

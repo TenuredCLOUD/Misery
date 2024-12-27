@@ -42,24 +42,24 @@ _MiseryWContainerKnowledge = [];
         player setVariable [_x select 0, _var];
     };
 } forEach [
-    ["MiseryHunger", MACRO_PLAYER_HUNGER],
-    ["MiseryThirst", MACRO_PLAYER_THIRST],
-    ["MiserySleepiness", MACRO_PLAYER_FATIGUE],
-    ["MiseryPoison", MACRO_PLAYER_TOXICITY],
-    ["MiseryInfection", MACRO_PLAYER_INFECTION],
-    ["MiseryExposure", MACRO_PLAYER_EXPOSURE],
+    [QCLASS(hunger), MACRO_PLAYER_HUNGER],
+    [QCLASS(thirst), MACRO_PLAYER_THIRST],
+    [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE],
+    [QCLASS(toxicity), MACRO_PLAYER_TOXICITY],
+    [QCLASS(infection), MACRO_PLAYER_INFECTION],
+    [QCLASS(exposure), MACRO_PLAYER_EXPOSURE],
     ["Miserycartridge", 100],
-    ["MiseryRadiation", 0],
-    ["MiseryFear", MACRO_PLAYER_FEAR],
+    [QCLASS(radiation), 0],
+    [QCLASS(psycosis), MACRO_PLAYER_FEAR],
     ["Zinfectionlogged", nil],
     ["Turbidwaterlogged", nil],
     ["Rawmeatlogged", nil],
-    ["MiseryDebuffs", _MiseryDebuffs],
-    ["Misery_Crafting_DataSet", _MiseryCraftingKnowledge],
-    ["Misery_Cooking_DataSet", _MiseryCookingKnowledge],
-    ["Misery_WaterCollect_DataSet", _MiseryWContainerKnowledge],
-    ["MiseryCurrency", 0],
-    ["MiseryCurrency_Banked", 0]
+    [QCLASS(ailments), _MiseryDebuffs],
+    [QCLASS(craftingKnowledge), _MiseryCraftingKnowledge],
+    [QCLASS(cookingKnowledge), _MiseryCookingKnowledge],
+    [QCLASS(hydrologyKnowledge), _MiseryWContainerKnowledge],
+    [QCLASS(currency), 0],
+    [QCLASS(bankedCurrency), 0]
 ];
 
 if !(EGVAR(common,checkMultiplayer)) then {

@@ -20,7 +20,7 @@
 private _dialog = findDisplay 982379;
 private _selectedOutputItem = lbData[1500, (lbCurSel 1500)];
 private _matchedRecipe = [];
-private _playerRecipes = player getVariable "Misery_Cooking_DataSet";
+private _playerRecipes = player getVariable QCLASS(cookingKnowledge);
 
 private _CookB = _dialog displayCtrl 1600;
 private _RecipeB = _dialog displayCtrl 1601;

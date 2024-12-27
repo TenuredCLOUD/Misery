@@ -61,11 +61,11 @@ _shopName = _shop select (_shop findIf {_x select 0 == "ShopName"}) select 1;
     if (_target getVariable "Misery_TraderIsBusy" isEqualTo true) exitWith {
         _queue pushBack (getPlayerUID _caller);
         _target setVariable ["Misery_TradingQue", _queue, true];
-        createDialog "Misery_TraderShop_WaitQue_UI";
+        createDialog QCLASS(tradingQue_ui);
     };
     _queue pushBack (getPlayerUID _caller);
     _target setVariable ["Misery_TradingQue", _queue, true];
-    createDialog "Misery_TraderShop_Buy_GUI";
+    createDialog QCLASS(traderShop_ui);
     },
     {},
     [_shopName, _traderName],
@@ -77,4 +77,4 @@ _shopName = _shop select (_shop findIf {_x select 0 == "ShopName"}) select 1;
 
 GVAR(activeTraders) pushBack _traderName;
 
-publicVariable "GVAR(activeTraders)";
+publicVariable QGVAR(activeTraders);

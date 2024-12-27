@@ -14,7 +14,7 @@
  *
 */
 
-private _MPoison = player getVariable ["MiseryPoison", MACRO_PLAYER_TOXICITY];
+private _MPoison = player getVariable [QCLASS(toxicity), MACRO_PLAYER_TOXICITY];
 
 if (!hasInterface) exitWith {};
 
@@ -32,7 +32,7 @@ if (!hasInterface) exitWith {};
   sleep 60;
 
 if (_MPoison > 0) then {
-    player setVariable ["MiseryPoison", MACRO_PLAYER_TOXICITY];
+    player setVariable [QCLASS(toxicity), MACRO_PLAYER_TOXICITY];
 };
 
 };

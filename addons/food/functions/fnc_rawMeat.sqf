@@ -30,7 +30,7 @@ if (alive player) exitWith {
         _TimeA=_this select 0;
         waitUntil {(!alive player) or (time > _TimeA)};
       player setVariable ["Rawmeatlogged", nil];
-      private _MDebuffs = player getVariable "MiseryDebuffs";
-        if (alive player) then {_MDebuffs pushBackUnique "PARASITES"; player setVariable ["MiseryDebuffs", _MDebuffs];}; //<< sick from raw meat
+      private _ailments = player getVariable QCLASS(ailments);
+        if (alive player) then {_ailments pushBackUnique "PARASITES"; player setVariable [QCLASS(ailments), _ailments];}; //<< sick from raw meat
     };
 };

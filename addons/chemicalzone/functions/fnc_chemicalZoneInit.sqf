@@ -47,7 +47,7 @@ by TenuredCLOUD
 
         private _radiationExposure = _totalShortfall * _RadiationMultiplier;
 
-        player setVariable ["MiseryRadiation", (player getVariable ["MiseryRadiation", 0]) + _radiationExposure];
+        player setVariable [QCLASS(radiation), (player getVariable [QCLASS(radiation), 0]) + _radiationExposure];
 
         if (EGVAR(common,debug)) then {
         systemChat format ["Radiation Damage Multiplier: %1", _RadiationMultiplier];

@@ -1,7 +1,7 @@
 class CLASS(vehicleMaint_ui)
 {
     idd = 274839;
-    onLoad = "[] execVM '\z\misery\addons\vehiclemaint\functions\fnc_MaintListed.sqf'; [] execVM '\z\misery\addons\vehiclemaint\functions\fnc_Veh_icon.sqf';";
+    onLoad = QUOTE([] call EFUNC(vehiclemaint,maintListed); [] call EFUNC(vehiclemaint,icon));
 
 class ControlsBackground
 {

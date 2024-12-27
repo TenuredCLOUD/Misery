@@ -6,4 +6,6 @@ ADDON = false;
 
 #include "initSettings.inc.sqf"
 
+GVAR(seaTemperature) = 0;
+
 ADDON = true;

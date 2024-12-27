@@ -20,11 +20,11 @@
 
 private _Corpse = (([] call FUNC(nearestCorpseMoney)) select 1);
 
-private _CorpseFunds = _Corpse getVariable "MiseryCurrency";
+private _CorpseFunds = _Corpse getVariable QCLASS(currency);
 
 ctrlSetText [1001, format ["%1 %2", EGVAR(money,symbol), [_CorpseFunds, 1, 2, true] call CBA_fnc_formatNumber]];
 
-private _playerFunds = player getVariable "MiseryCurrency";
+private _playerFunds = player getVariable QCLASS(currency);
 ctrlSetText [1002, format ["%3: %1 %2", EGVAR(money,symbol), [_playerFunds, 1, 2, true] call CBA_fnc_formatNumber, profileName]];
 
 }, []] call CBA_fnc_waitUntilAndExecute;

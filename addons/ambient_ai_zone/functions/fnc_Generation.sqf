@@ -298,9 +298,9 @@ for "_i" from 1 to _numEntities do {
                 params ["_target", "_caller", "_actionId", "_arguments"];
                 private _recruitmentCost = _arguments select 0;
                 private _Unitidentity = _arguments select 1;
-                private _playerMoney = _caller getVariable "MiseryCurrency";
+                private _playerMoney = _caller getVariable QCLASS(currency);
                 if (_playerMoney >= _recruitmentCost) then {
-                    _caller setVariable ["MiseryCurrency", _playerMoney - _recruitmentCost];
+                    _caller setVariable [QCLASS(currency), _playerMoney - _recruitmentCost];
                     [_target] joinSilent _caller;
                     [_target,_actionId] call BIS_fnc_holdActionRemove;
                     private _recruitSuccess = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_SUCCESS", _Unitidentity, EGVAR(money,symbol), [_recruitmentCost] call Misery_fnc_formatNumber]];

@@ -1,7 +1,7 @@
 class CLASS(rearmShop_ui)
 {
     idd = 982383;
-    onLoad = "[] execVM '\z\misery\addons\vehiclerearm\functions\fnc_RearmListed.sqf'; [] execVM '\z\misery\addons\vehiclerearm\functions\fnc_Veh_icon.sqf';";
+    onLoad = QUOTE([] call EFUNC(vehiclerearm,rearmListed); [] call EFUNC(vehiclerearm,icon));
 
 class ControlsBackground
 {

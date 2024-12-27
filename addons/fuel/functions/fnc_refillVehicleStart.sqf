@@ -15,7 +15,7 @@
 */
 
 [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-createDialog "MiseryRefuel_Vehicle_JCan_GUI";
+createDialog QCLASS(refuelJerryCan_ui);
 
 private _Jerrycanused= _this; // item classname
 

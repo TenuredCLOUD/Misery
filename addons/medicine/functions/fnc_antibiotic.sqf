@@ -14,7 +14,7 @@
  *
 */
 
-private _MInfection = player getVariable ["MiseryInfection", MACRO_PLAYER_INFECTION];
+private _MInfection = player getVariable [QCLASS(infection), MACRO_PLAYER_INFECTION];
 
 
 
@@ -36,6 +36,6 @@ if (!hasInterface) exitWith {};
 
 sleep 60;
 
-player setVariable ["MiseryInfection", MACRO_PLAYER_INFECTION];
+player setVariable [QCLASS(infection), MACRO_PLAYER_INFECTION];
 
 };

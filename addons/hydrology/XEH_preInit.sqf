@@ -6,7 +6,7 @@ ADDON = false;
 
 #include "initSettings.inc.sqf"
 
-MiseryWaterSources=[
+GVAR(waterSources) = [
 "well",
 "watertank",
 "watercooler",

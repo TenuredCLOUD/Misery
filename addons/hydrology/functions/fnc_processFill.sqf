@@ -2,7 +2,7 @@
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
  * Author: TenuredCLOUD
- * WaterCollection fill processor
+ * Hydrology fill processor
  * Takes inputs from GUI and processes recipe (if it exists)
  *
  * Arguments:
@@ -11,7 +11,7 @@
  * Return Value:
  * None
  *
- * [] call misery_watercollect_fnc_processFill;
+ * [] call misery_hydrology_fnc_processFill;
  *
  * Public: No
 */
@@ -19,7 +19,7 @@
 private _dialog = findDisplay 982380;
 private _selectedOutputItem = lbData[1500, (lbCurSel 1500)];
 private _matchedRecipe = [];
-private _playerRecipes = player getVariable "Misery_WaterCollect_DataSet";
+private _playerRecipes = player getVariable QCLASS(hydrologyKnowledge);
 
 private _FillB = _dialog displayCtrl 1600;
 private _DrinkFSB = _dialog displayCtrl 1601;

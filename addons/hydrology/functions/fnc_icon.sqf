@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * WaterCollect Icon updater
+ * hydrology Icon updater
  * Updates icons in water collection GUI
  *
  * Arguments:
@@ -10,7 +10,7 @@
  * Return Value:
  * None
  *
- * [] call misery_watercollect_fnc_icon;
+ * [] call misery_hydrology_fnc_icon;
  *
  * Public: No
 */

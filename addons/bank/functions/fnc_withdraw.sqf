@@ -16,9 +16,9 @@
 */
 
 private _amount = parseNumber (ctrlText ((findDisplay 483729) displayCtrl 1400));
-private _playerBank = player getVariable "MiseryCurrency_Banked";
+private _playerBank = player getVariable QCLASS(bankedCurrency);
     if (_amount <= _playerBank) then {
-        player setVariable ["MiseryCurrency_Banked", _playerBank - _amount];
-        player setVariable ["MiseryCurrency", (player getVariable "MiseryCurrency") + _amount];
+        player setVariable [QCLASS(bankedCurrency), _playerBank - _amount];
+        player setVariable [QCLASS(currency), (player getVariable QCLASS(currency)) + _amount];
     };
 

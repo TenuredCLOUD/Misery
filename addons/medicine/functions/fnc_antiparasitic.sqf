@@ -14,7 +14,7 @@
  *
 */
 
-private _MDebuffs = player getVariable "MiseryDebuffs";
+private _ailments = player getVariable QCLASS(ailments);
 
 EGVAR(common,ace)=false;
 if (isClass(configFile>>"cfgPatches">>"ace_main")) then {
@@ -38,8 +38,8 @@ if (alive player) then {
 
     sleep 60;
 
-    if (_MDebuffs find "PARASITES" != -1) then {
-        _MDebuffs deleteAt (_MDebuffs find "PARASITES");
-        player setVariable ["MiseryDebuffs", _MDebuffs];
+    if (_ailments find "PARASITES" != -1) then {
+        _ailments deleteAt (_ailments find "PARASITES");
+        player setVariable [QCLASS(ailments), _ailments];
     };
 };

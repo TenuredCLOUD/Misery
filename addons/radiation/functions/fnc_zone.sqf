@@ -54,7 +54,7 @@
         private _baseDose = 1;
         private _effectiveDose = _baseDose * (1 - (_protectionFactor / 300));
 
-        player setVariable ["MiseryRadiation", (player getVariable ["MiseryRadiation", 0]) + _effectiveDose];
+        player setVariable [QCLASS(radiation), (player getVariable [QCLASS(radiation), 0]) + _effectiveDose];
 
         if (EGVAR(common,debug)) then {
             systemChat format ["Radiation Protection: Skin %1%2, Respiratory %3%4, Eye %5%6", _skinProtection, "%", _respiratoryProtection, "%", _eyeProtection, "%"];

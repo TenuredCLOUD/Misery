@@ -34,7 +34,7 @@ if (_action == localize "STR_MISERY_CheckGearweight") exitWith {
 //Sleep UI:
 if (_action == "Sleep") exitWith {
 [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-createDialog "MiserySleepMenuGUI";
+createDialog QCLASS(sleepMenu_ui);
 };
 
 //Check corpse for money:
@@ -46,19 +46,19 @@ if(_action == "Search for Money") exitWith {
 //Mechanic repairs:
 if(_action== localize "STR_MISERY_REQREPAIRS") exitWith {
 [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-createDialog "MiseryMechShop_GUI";
+createDialog QCLASS(mechanicShop_ui);
 };
 
 //Veh Resupply:
 if(_action== localize "STR_MISERY_REQRESUPPLY") exitWith {
 [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-createDialog "MiseryRearmShop_GUI";
+createDialog QCLASS(rearmShop_ui);
 };
 
 //Veh Refuel:
 if(_action== localize "STR_MISERY_REQREFUEL") exitWith {
 [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-createDialog "MiseryRefuelShop_GUI";
+createDialog QCLASS(refuelShop_ui);
 };
 
 //Wood collection (Axe):
@@ -153,7 +153,7 @@ player addItem "Misery_EmptyPetrol";
 
 //Mining: (WIP needs GUI)
 // if(_action== localize "STR_MISERY_MINEORE") exitWith {
-// (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+// (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
 // if !(call Misery_fnc_mineactcheck) exitWith {
 // private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_MINEORENOTOOLS"];
@@ -211,7 +211,7 @@ if(_action== localize "STR_MISERY_TURNOFFRFDETEC") exitWith {
 //WIP
 // //Portable Radio:
 // if(_action=="Turn on Portable Radio") exitWith {
-// (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+// (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
 // if !([["Misery_PortableradioOFF"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a portable radio...", "PLAIN DOWN"];
@@ -221,7 +221,7 @@ if(_action== localize "STR_MISERY_TURNOFFRFDETEC") exitWith {
 // };
 //     };
 // if(_action=="Turn off Portable Radio") exitWith {
-// (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+// (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
 // if !([["Misery_PortableradioON"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a portable radio...", "PLAIN DOWN"];
@@ -245,7 +245,7 @@ call EFUNC(llcontianer,storeArtifact);
 
 //Needle & thread:
 // if(_action== localize "STR_MISERY_STITCHWOUNDS") exitWith {
-// (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+// (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
 // if !([["Misery_Needlethread"]] call EFUNC(common,hasItem)) exitWith {
 // private _formattedText =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_STITCHWOUNDSNOITEM"];
@@ -281,19 +281,19 @@ private _noHeadLampItemStr_2 =format ["<t font='PuristaMedium'>%1</t>", localize
 //Crafting Framework:
 if(_action== localize "STR_MISERY_CRAFTINGWORKBENCH") exitWith {
 [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-createDialog "MiseryCraftingFramework_GUI";
+createDialog QCLASS(craftingFramework_ui);
 };
 
 //Water collection menu:
 if(_action=="Collect water") exitWith {
 [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-createDialog "MiseryWaterCollection_GUI";
+createDialog QCLASS(hydrology_ui);
 };
 
 //Medical treatment menu:
 if(_action== localize "STR_MISERY_REQTREATMENT") exitWith {
 [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-createDialog "MiseryMedTreatment_GUI";
+createDialog QCLASS(medicalTreatment_ui);
 };
 
 //Action submenu defines:
@@ -316,7 +316,7 @@ if(EGVAR(actions,guiActionsMode)=="") exitWith {
         EGVAR(actions,guiActionsMode)=_action;
         call FUNC(displayActions);
     };
-    if(isNull(findDisplay 602))then{(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1};
+    if(isNull(findDisplay 602))then{(findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1};
     call _action; //reference to selected action in UI
 };
 
@@ -354,10 +354,10 @@ EGVAR(actions,guiActionsMode)= localize "STR_MISERY_USEFIRE";
 };
 if(_action== localize "STR_MISERY_USEFIRE_COOK") exitWith {
 [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-createDialog "MiseryCookingFramework_GUI";
+createDialog QCLASS(cookingFramework_ui);
 };
 // if(_action=="Cauterize wounds") exitWith {
-// (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+// (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
 // if !([player] call ace_medical_blood_fnc_isBleeding) then {
 // private _formattedText = ["You aren't bleeding right now...", "PLAIN DOWN"];
@@ -397,7 +397,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // EGVAR(actions,guiActionsMode)=localize "STR_MISERY_USEJERRYCANCLEAN";
 // };
 // if(_action=="Drink from Jerrycan (clean)") exitWith {
-// (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+// (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
 // if !([["Misery_WaterJerryF"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
@@ -406,7 +406,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // };
 //     };
 // if(_action=="Pour into canteen") exitWith {
-// (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+// (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
 // if !([["Misery_WaterJerryF"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
@@ -415,7 +415,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // };
 //     };
 // if(_action=="Pour into water bottle") exitWith {
-// (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+// (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
 // if !([["Misery_WaterJerryF"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
@@ -424,7 +424,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // };
 //     };
 // if(_action=="Dump out water (clean)") exitWith {
-// (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+// (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
 // if !([["Misery_WaterJerryF"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
@@ -440,7 +440,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // EGVAR(actions,guiActionsMode)="Use Jerrycan (Dirty)";
 // };
 // if(_action=="Drink from Jerrycan (dirty)") exitWith {
-// (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+// (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
 // if !([["Misery_WaterJerryFD"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
@@ -449,7 +449,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // };
 //     };
 // if(_action=="Pour into canteen") exitWith {
-// (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+// (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
 // if !([["Misery_WaterJerryFD"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
@@ -458,7 +458,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // };
 //     };
 // if(_action=="Pour into water bottle") exitWith {
-// (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+// (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
 // if !([["Misery_WaterJerryFD"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
@@ -467,7 +467,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // };
 //     };
 // if(_action=="Dump out water (dirty)") exitWith {
-// (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+// (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
 // if !([["Misery_WaterJerryFD"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Jerrycan...", "PLAIN DOWN"];
@@ -484,13 +484,13 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // EGVAR(actions,guiActionsMode)="Use Fuel pump";
 // };
 // if(_action=="Refill Fuel Jerrycan") exitWith {
-// (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+// (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
 // if !(call Misery_fnc_Refillgear) exitWith {private _formattedText = ["You don't have the required items to refill a Jerrycan...", "PLAIN DOWN"];};
 // [] spawn Misery_fnc_RefillFuelact;
 // };
 // if(_action=="Refill vehicle") exitWith {
-// (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+// (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
 // if !(call Misery_fnc_Refuelatpump) exitWith {private _formattedText = ["You do not meet all the requirments to operate a fuel pump...", "PLAIN DOWN"];};
 // [] spawn Misery_fnc_RefillFuelPumpact;
@@ -501,13 +501,13 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // EGVAR(actions,guiActionsMode)="Use JetFuel pump";
 // };
 // if(_action=="Refill JetFuel Jerrycan") exitWith {
-// (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+// (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
 // if !(call Misery_fnc_RefillgearJ) exitWith {private _formattedText = ["You don't have the required items to refill a Jerrycan...", "PLAIN DOWN"];};
 // [] spawn Misery_fnc_RefillJFuelact;
 // };
 // if(_action=="Refill aircraft") exitWith {
-// (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+// (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
 // if !(call Misery_fnc_RefuelatJetpump) exitWith {private _formattedText = ["You do not meet all the requirments to operate a Jetfuel pump...", "PLAIN DOWN"];};
 // [] spawn Misery_fnc_RefillJFuelPumpact;
@@ -518,7 +518,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // EGVAR(actions,guiActionsMode)="Swap Jerrycan fuel type (JetFuel)";
 // };
 // if(_action=="Swap to Petrol") exitWith {
-// (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+// (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
 // if !([["Misery_EmptyJet"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Jetfuel canister...", "PLAIN DOWN"];
@@ -528,7 +528,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // };
 //     };
 // if(_action=="Swap to Diesel") exitWith {
-// (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+// (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
 // if !([["Misery_EmptyJet"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Jetfuel canister...", "PLAIN DOWN"];
@@ -542,7 +542,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // EGVAR(actions,guiActionsMode)="Swap Jerrycan fuel type (Diesel)";
 // };
 // if(_action=="Swap to Petrol") exitWith {
-// (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+// (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
 // if !([["Misery_EmptyDiesel"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Diesel canister...", "PLAIN DOWN"];
@@ -552,7 +552,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // };
 //     };
 // if(_action=="Swap to Jetfuel") exitWith {
-// (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+// (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
 // if !([["Misery_EmptyDiesel"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Diesel canister...", "PLAIN DOWN"];
@@ -566,7 +566,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // EGVAR(actions,guiActionsMode)="Swap Jerrycan fuel type (Petrol)";
 // };
 // if(_action=="Swap to Diesel") exitWith {
-// (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+// (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
 // if !([["Misery_EmptyPetrol"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Petrol canister...", "PLAIN DOWN"];
@@ -576,7 +576,7 @@ if(_action== localize "STR_MISERY_DELETECHARACTER") exitWith {
 // };
 //     };
 // if(_action=="Swap to Jetfuel") exitWith {
-// (findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
+// (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 // (findDisplay 602) closeDisplay 2;
 // if !([["Misery_EmptyPetrol"]] call EFUNC(common,hasItem)) then {
 // private _formattedText = ["You don't have a Petrol canister...", "PLAIN DOWN"];

@@ -47,8 +47,8 @@
         };
 
         if (_index == 0) then {
-            (findDisplay 46 createDisplay "Misery_TraderShop_WaitQue_UI")closeDisplay 1;
-            createDialog "Misery_TraderShop_Buy_GUI";
+            (findDisplay 46 createDisplay QCLASS(tradingQue_ui))closeDisplay 1;
+            createDialog QCLASS(traderShop_ui);
         };
 
     }, 0.01, []] call CBA_fnc_addPerFrameHandler;

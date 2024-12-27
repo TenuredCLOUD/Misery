@@ -29,7 +29,7 @@
         };
 
 if ([[MACRO_ARTIFACTS]] call EFUNC(common,hasItem)) then {
-  player setVariable ["MiseryRadiation", (player getVariable ["MiseryRadiation",0]) + 50, true];
+  player setVariable [QCLASS(radiation), (player getVariable [QCLASS(radiation),0]) + 50, true];
 };
 
 if(EGVAR(common,debug))then{systemChat "Misery Artifact exposure cycle..."};

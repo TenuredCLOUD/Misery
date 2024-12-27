@@ -1,7 +1,7 @@
             [
             QGVAR(enabled), 
             "CHECKBOX", 
-            ["Mining, Smithing, Forging", "Enable Mining, forging and smithing? (Ore collection, metal working, etc...)"], 
+            ["Water collection", "Enable Water collection actions from water sources? (Wells, etc...)"], 
             ["Misery","Sub-Actions"], 
             false, 
             1 

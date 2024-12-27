@@ -25,10 +25,10 @@
 
 ctrlSetText [1000, format ["%1", Misery_BankName]];
 
-private _playerFunds = player getVariable "MiseryCurrency";
+private _playerFunds = player getVariable QCLASS(currency);
 ctrlSetText [1001, format ["%3: %1 %2", EGVAR(money,symbol), [_playerFunds, 1, 2, true] call CBA_fnc_formatNumber, profileName]];
 
-private _playerBank = player getVariable "MiseryCurrency_Banked";
+private _playerBank = player getVariable QCLASS(bankedCurrency);
 ctrlSetText [1002, format ["%3: %1 %2", EGVAR(money,symbol), [_playerBank, 1, 2, true] call CBA_fnc_formatNumber, "Bank Account"]];
 
 if (!isNil "MiseryCurrency_PhoenixAccount") then {
@@ -37,7 +37,7 @@ ctrlSetText [1003, format ["%3: %1 %2", EGVAR(money,symbol), [MiseryCurrency_Pho
 
 ctrlSetText [1004, format ["%1", EGVAR(money,symbol)]];
 
-private _lastWithdrawalTime = player getVariable ["lastPhoenixWithdrawalTime", 0];
+private _lastWithdrawalTime = player getVariable [QCLASS(lastBankLoan), 0];
 private _claimSupportButton = findDisplay 483729 displayCtrl 1603;
 if (time > _lastWithdrawalTime + 4 * 60 * 60) then {
     _claimSupportButton ctrlEnable true;

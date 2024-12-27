@@ -57,10 +57,10 @@ _time = time + 180;
 
     player setVariable ["Zinfectionlogged", nil];
 
-    private _MDebuffs = player getVariable "MiseryDebuffs";
+    private _ailments = player getVariable QCLASS(ailments);
 
-    player setVariable ["MiseryInfection", (random 10)]; //add random infection status up to value of 10
-    _MDebuffs pushBackUnique "PARASITES"; player setVariable ["MiseryDebuffs", _MDebuffs]; //Push parasites to player
+    player setVariable [QCLASS(infection), (random 10)]; //add random infection status up to value of 10
+    _ailments pushBackUnique "PARASITES"; player setVariable [QCLASS(ailments), _ailments]; //Push parasites to player
 
             };
         };

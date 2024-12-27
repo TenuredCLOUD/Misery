@@ -16,9 +16,9 @@
 */
 
 _this params ["_recipeName"];
-private _playerRecipes = player getVariable "Misery_Crafting_DataSet";
+private _playerRecipes = player getVariable QCLASS(craftingKnowledge);
 private _index = _playerRecipes findIf {(_x select 0) isEqualTo _recipeName};
 if (_index > -1) then {
     _playerRecipes deleteAt _index;
-    player setVariable ["Misery_Crafting_DataSet", _playerRecipes];
+    player setVariable [QCLASS(craftingKnowledge), _playerRecipes];
 };

@@ -53,23 +53,23 @@ private _MiseryaddRespawnEHs = {
                     (_this select 0) setVariable [_x select 0, _x select 1];
                 };
             } forEach [
-                ["MiseryThirst", MACRO_PLAYER_THIRST],
-                ["MiseryHunger", MACRO_PLAYER_HUNGER],
-                ["MiserySleepiness", MACRO_PLAYER_FATIGUE],
-                ["MiseryPoison", MACRO_PLAYER_TOXICITY],
-                ["MiseryInfection", MACRO_PLAYER_INFECTION],
-                ["MiseryExposure", MACRO_PLAYER_EXPOSURE],
-                ["MiseryFear", MACRO_PLAYER_FEAR],
+                [QCLASS(thirst), MACRO_PLAYER_THIRST],
+                [QCLASS(hunger), MACRO_PLAYER_HUNGER],
+                [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE],
+                [QCLASS(toxicity), MACRO_PLAYER_TOXICITY],
+                [QCLASS(infection), MACRO_PLAYER_INFECTION],
+                [QCLASS(exposure), MACRO_PLAYER_EXPOSURE],
+                [QCLASS(psycosis), MACRO_PLAYER_FEAR],
                 ["Zinfectionlogged", nil],
                 ["Turbidwaterlogged", nil],
                 ["Rawmeatlogged", nil],
-                ["MiseryDebuffs", _MiseryDebuffs],
-                ["Misery_Crafting_DataSet", _MiseryCraftingKnowledge],
-                ["Misery_Cooking_DataSet", _MiseryCookingKnowledge],
-                ["Misery_WaterCollect_DataSet", _MiseryWContainerKnowledge],
-                ["MiseryCurrency", 0],
-                ["MiseryBreathFogSim", nil],
-                ["MiseryBreath", false]
+                [QCLASS(ailments), _MiseryDebuffs],
+                [QCLASS(craftingKnowledge), _MiseryCraftingKnowledge],
+                [QCLASS(cookingKnowledge), _MiseryCookingKnowledge],
+                [QCLASS(hydrologyKnowledge), _MiseryWContainerKnowledge],
+                [QCLASS(currency), 0],
+                [QCLASS(breathCondensationEffect), nil],
+                [QCLASS(breathCondensation), false]
             ];
         }];
     };
@@ -150,23 +150,23 @@ if (MiserysurvivalSaveMode == 2) then {
 //                     (_this select 0) setVariable [_x select 0, _x select 1];
 //                 };
 //             } forEach [
-//                 ["MiseryThirst", MACRO_PLAYER_THIRST],
-//                 ["MiseryHunger", MACRO_PLAYER_HUNGER],
-//                 ["MiserySleepiness", MACRO_PLAYER_FATIGUE],
-//                 ["MiseryPoison", MACRO_PLAYER_TOXICITY],
-//                 ["MiseryInfection", MACRO_PLAYER_INFECTION],
-//                 ["MiseryExposure", MACRO_PLAYER_EXPOSURE],
-//                 ["MiseryFear", MACRO_PLAYER_FEAR],
+//                 [QCLASS(thirst), MACRO_PLAYER_THIRST],
+//                 [QCLASS(hunger), MACRO_PLAYER_HUNGER],
+//                 [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE],
+//                 [QCLASS(toxicity), MACRO_PLAYER_TOXICITY],
+//                 [QCLASS(infection), MACRO_PLAYER_INFECTION],
+//                 [QCLASS(exposure), MACRO_PLAYER_EXPOSURE],
+//                 [QCLASS(psycosis), MACRO_PLAYER_FEAR],
 //                 ["Zinfectionlogged", nil],
 //                 ["Turbidwaterlogged", nil],
 //                 ["Rawmeatlogged", nil],
-//                 ["MiseryDebuffs", _MiseryDebuffs],
-//                 ["Misery_Crafting_DataSet", _MiseryCraftingKnowledge],
-//                 ["Misery_Cooking_DataSet", _MiseryCookingKnowledge],
-//                 ["Misery_WaterCollect_DataSet", _MiseryWContainerKnowledge],
-//                 ["MiseryCurrency", 0],
-//                 ["MiseryBreathFogSim", nil],
-//                 ["MiseryBreath", false]
+//                 [QCLASS(ailments), _MiseryDebuffs],
+//                 [QCLASS(craftingKnowledge), _MiseryCraftingKnowledge],
+//                 [QCLASS(cookingKnowledge), _MiseryCookingKnowledge],
+//                 [QCLASS(hydrologyKnowledge), _MiseryWContainerKnowledge],
+//                 [QCLASS(currency), 0],
+//                 [QCLASS(breathCondensationEffect), nil],
+//                 [QCLASS(breathCondensation), false]
 //             ];
 //         }];
 //     } else {
@@ -182,23 +182,23 @@ if (MiserysurvivalSaveMode == 2) then {
 //                     (_this select 0) setVariable [_x select 0, _x select 1];
 //                 };
 //             } forEach [
-//                 ["MiseryThirst", MACRO_PLAYER_THIRST],
-//                 ["MiseryHunger", MACRO_PLAYER_HUNGER],
-//                 ["MiserySleepiness", MACRO_PLAYER_FATIGUE],
-//                 ["MiseryPoison", MACRO_PLAYER_TOXICITY],
-//                 ["MiseryInfection", MACRO_PLAYER_INFECTION],
-//                 ["MiseryExposure", MACRO_PLAYER_EXPOSURE],
-//                 ["MiseryFear", MACRO_PLAYER_FEAR],
+//                 [QCLASS(thirst), MACRO_PLAYER_THIRST],
+//                 [QCLASS(hunger), MACRO_PLAYER_HUNGER],
+//                 [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE],
+//                 [QCLASS(toxicity), MACRO_PLAYER_TOXICITY],
+//                 [QCLASS(infection), MACRO_PLAYER_INFECTION],
+//                 [QCLASS(exposure), MACRO_PLAYER_EXPOSURE],
+//                 [QCLASS(psycosis), MACRO_PLAYER_FEAR],
 //                 ["Zinfectionlogged", nil],
 //                 ["Turbidwaterlogged", nil],
 //                 ["Rawmeatlogged", nil],
-//                 ["MiseryDebuffs", _MiseryDebuffs],
-//                 ["Misery_Crafting_DataSet", _MiseryCraftingKnowledge],
-//                 ["Misery_Cooking_DataSet", _MiseryCookingKnowledge],
-//                 ["Misery_WaterCollect_DataSet", _MiseryWContainerKnowledge],
-//                 ["MiseryCurrency", 0],
-//                 ["MiseryBreathFogSim", nil],
-//                 ["MiseryBreath", false]
+//                 [QCLASS(ailments), _MiseryDebuffs],
+//                 [QCLASS(craftingKnowledge), _MiseryCraftingKnowledge],
+//                 [QCLASS(cookingKnowledge), _MiseryCookingKnowledge],
+//                 [QCLASS(hydrologyKnowledge), _MiseryWContainerKnowledge],
+//                 [QCLASS(currency), 0],
+//                 [QCLASS(breathCondensationEffect), nil],
+//                 [QCLASS(breathCondensation), false]
 //             ];
 //         }];
 //     };

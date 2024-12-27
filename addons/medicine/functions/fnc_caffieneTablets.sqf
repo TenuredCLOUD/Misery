@@ -14,7 +14,7 @@
  *
 */
 
-private _MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
+private _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
 
 if (!hasInterface) exitWith {};
 
@@ -37,7 +37,7 @@ if (!hasInterface) exitWith {};
   if (!(alive player)) exitWith {};
 
   if !(EGVAR(common,checkMultiplayer)) then {
-  player setVariable ["MiserySleepiness", (_MSleepiness - 15)];
+  player setVariable [QCLASS(energyDeficit), (_MSleepiness - 15)];
 };
 
     [] spawn {

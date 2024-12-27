@@ -224,7 +224,7 @@
 };
 
         // Update the player's funds
-        private _playerFunds = player getVariable "MiseryCurrency";
+        private _playerFunds = player getVariable QCLASS(currency);
         ctrlSetText [1003, format ["%3: %1 %2", EGVAR(money,symbol), [_playerFunds, 1, 2, true] call CBA_fnc_formatNumber, profileName]];
 
         // Update the shop's funds

@@ -14,7 +14,7 @@
  *
 */
 
-private _MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];
+private _MFear = player getVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR];
 
 
 
@@ -37,8 +37,8 @@ player removeItem "Misery_ClozapinePill";
 sleep 60;
 
 if (MiseryFearenabled) then {
-  player setVariable ["MiseryFear", (_MFear - 10)];
-    if (_MFear <= 0) then {player setVariable ["MiseryFear", MACRO_PLAYER_FEAR]};
+  player setVariable [QCLASS(psycosis), (_MFear - 10)];
+    if (_MFear <= 0) then {player setVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR]};
 };
 
  };

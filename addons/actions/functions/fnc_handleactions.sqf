@@ -61,25 +61,25 @@ private _vehicles = [];
 EGVAR(common,targetVehicle) = if (count _vehicles > 0) then { _vehicles select 0 }else{ objNull };
 EGVAR(common,targetVehicleType) = typeOf EGVAR(common,targetVehicle);
 
-if (Miseryfish) then {
+if (EGVAR(fishing,enabled)) then {
     if (call EFUNC(fishing,Canfish)) then {
         _out pushBack [localize "STR_MISERY_STARTFISHING",localize "STR_MISERY_STARTFISHING"];
     };
 };
 
-if (Miseryforage) then {
+if (EGVAR(forage,enabled)) then {
     if (call EFUNC(forage,Canforage)) then {
         _out pushBack [localize "STR_MISERY_FORAGE", localize "STR_MISERY_FORAGE"];
     };
 };
 
-if (Miserycook) then {
+if (EGVAR(cooking,enabled)) then {
     if (call EFUNC(common,nearFire)) then {
         _out pushBack [localize "STR_MISERY_USEFIRE",localize "STR_MISERY_USEFIRE"];
     };
 };
 
-if (Miserywatercoll) then {
+if (EGVAR(hydrology,enabled)) then {
     if (call EFUNC(common,nearWell)) then {
         _out pushBack [localize "STR_MISERY_COLLECTWATER",localize "STR_MISERY_COLLECTWATER"];
     };

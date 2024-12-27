@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Misery WaterCollection List populater for containers
+ * hydrology List populater for containers
  * Shows list of fillables for player
  *
  * Arguments:
@@ -10,7 +10,7 @@
  * Return Value:
  * None
  *
- * [] call misery_watercollect_fnc_containersListed;
+ * [] call misery_hydrology_fnc_containersListed;
  *
  * Public: No
 */
@@ -19,7 +19,7 @@ waitUntil {!isNull findDisplay 982380};
 
 if (!isNull findDisplay 982380) exitWith {
     private _list = findDisplay 982380 displayCtrl 1500;
-    private _playerRecipes = player getVariable "Misery_WaterCollect_DataSet";
+    private _playerRecipes = player getVariable QCLASS(hydrologyKnowledge);
 
     {
         private _requiredItem = _x select 0;

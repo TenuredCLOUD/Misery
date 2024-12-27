@@ -226,7 +226,7 @@ class CLASS(inventoryFramework_status_fatigueValue): RscText
 class CLASS(inventoryFramework_status_temperature_exposure): RscText
 {
     idc = 1010;
-    text = "No PDA"; //--- ToDo: Localize;
+    text = "No ERU"; //--- ToDo: Localize;
     x = 35.81 * GUI_GRID_W + GUI_GRID_X;
     y = 28.78 * GUI_GRID_H + GUI_GRID_Y;
     w = 5 * GUI_GRID_W;
