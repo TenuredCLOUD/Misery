@@ -25,11 +25,11 @@ if (_index != -1) then {
     _SelectedHourVal = 0;
 };
 
-player setVariable ["Misery_SleepDataVal", _SelectedHourVal];
+player setVariable [QCLASS(sleepValueParsed), _SelectedHourVal];
 
-_SleepDecrease = player getVariable "Misery_SleepDataVal";
-_HungerDecrease = player getVariable "Misery_SleepDataVal";
-_ThirstDecrease = player getVariable "Misery_SleepDataVal";
+_SleepDecrease = player getVariable QCLASS(sleepValueParsed);
+_HungerDecrease = player getVariable QCLASS(sleepValueParsed);
+_ThirstDecrease = player getVariable QCLASS(sleepValueParsed);
 
 MisSleep_sleepinessDecrease = _SleepDecrease * 5;
 MisSleep_hungerDecrease = _HungerDecrease * 5;

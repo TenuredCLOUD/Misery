@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"misery_main"}; // Include addons from this mod that contain code or assets you depend on. Affects loadorder. Including main as an example here.
+        requiredAddons[] = {QCLASS(common)}; // Include addons from this mod that contain code or assets you depend on. Affects loadorder. Including main as an example here.
         authors[] = {"TenuredCLOUD"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}
         VERSION_CONFIG;
     };
@@ -43,7 +43,7 @@ class Misery_Ambient_AI: Module_F
         scope=2;
         displayName="Misery Ambient AI";
         icon = QPATHTOEF(icons,data\ak_ca.paa);
-        category="Misery_faction";
+        category=QCLASS(faction);
         function="";
         functionPriority=1;
         isGlobal=0;
@@ -53,7 +53,7 @@ class Misery_Ambient_AI: Module_F
         {
             class Misery_AI_faction: Combo
             {
-                property="Misery_AI_faction";
+                property=QCLASS(AI_faction);
                 displayName = "Faction";
                 tooltip = "Defines what faction you want to be genrated";
                 typeName = "STRING";
@@ -87,7 +87,7 @@ class Misery_Ambient_AI: Module_F
             };
             class Misery_AI_Class : Edit
               {
-                property="Misery_AI_Class";
+                property=QCLASS(AI_Class);
                 displayName="AI type";
                 tooltip="Single classname input, AI Class to spawn, doesn't need qoutes";
                 defaultValue="""B_Soldier_F""";
@@ -95,7 +95,7 @@ class Misery_Ambient_AI: Module_F
             };
             class Misery_AI_GroupMAX: Edit
               {
-                property="Misery_AI_GroupMAX";
+                property=QCLASS(AI_GroupMAX);
                 displayName="Group Size";
                 tooltip="Maximum number of AI a group can spawn with";
                 typeName="NUMBER";
@@ -103,7 +103,7 @@ class Misery_Ambient_AI: Module_F
             };
             class Misery_AI_WeapPrimaryLoot: Edit
               {
-                property="Misery_AI_WeapPrimaryLoot";
+                property=QCLASS(AI_WeapPrimaryLoot);
                 displayName="Primary Weapons for generated AI";
                 tooltip="(NOTE: *Array format* Must use qoutes, and commas! Don't use []'s)";
                 typeName="STRING";
@@ -111,7 +111,7 @@ class Misery_Ambient_AI: Module_F
             };
             class Misery_AI_WeapSecondaryLoot: Edit
               {
-                property="Misery_AI_WeapSecondaryLoot";
+                property=QCLASS(AI_WeapSecondaryLoot);
                 displayName="Secondary Weapons for generated AI";
                 tooltip="(NOTE: *Array format* Must use qoutes, and commas! Don't use []'s)";
                 typeName="STRING";
@@ -119,7 +119,7 @@ class Misery_Ambient_AI: Module_F
             };
             class Misery_AI_WeaplauncherLoot: Edit
               {
-                property="Misery_AI_WeaplauncherLoot";
+                property=QCLASS(AI_WeaplauncherLoot);
                 displayName="launcher Weapons for generated AI";
                 tooltip="(NOTE: *Array format* Must use qoutes, and commas! Don't use []'s)";
                 typeName="STRING";
@@ -127,7 +127,7 @@ class Misery_Ambient_AI: Module_F
             };
             class Misery_AI_Ammo: Edit
               {
-                property="Misery_AI_Ammo";
+                property=QCLASS(AI_Ammo);
                 displayName="Ammo count for AI";
                 tooltip="Max allowed ammo (generated randomly)";
                 typeName="NUMBER";
@@ -135,7 +135,7 @@ class Misery_Ambient_AI: Module_F
             };
             class Misery_AI_ItemLoot: Edit
               {
-                property="Misery_AI_ItemLoot";
+                property=QCLASS(AI_ItemLoot);
                 displayName="Item Gear for generated AI";
                 tooltip="(NOTE: *Array format* Must use qoutes, and commas! Don't use []'s)";
                 typeName="STRING";
@@ -143,7 +143,7 @@ class Misery_Ambient_AI: Module_F
             };
             class Misery_AI_NVGLoot: Edit
               {
-                property="Misery_AI_NVGLoot";
+                property=QCLASS(AI_NVGLoot);
                 displayName="NVG Gear for generated AI";
                 tooltip="(NOTE: *Array format* Must use qoutes, and commas! Don't use []'s)";
                 typeName="STRING";
@@ -151,7 +151,7 @@ class Misery_Ambient_AI: Module_F
             };
             class Misery_AI_FacewearLoot: Edit
               {
-                property="Misery_AI_FacewearLoot";
+                property=QCLASS(AI_FacewearLoot);
                 displayName="Facewear Gear for generated AI";
                 tooltip="(NOTE: *Array format* Must use qoutes, and commas! Don't use []'s)";
                 typeName="STRING";
@@ -159,7 +159,7 @@ class Misery_Ambient_AI: Module_F
             };
             class Misery_AI_HeadgearLoot: Edit
               {
-                property="Misery_AI_HeadgearLoot";
+                property=QCLASS(AI_HeadgearLoot);
                 displayName="Headgear for generated AI";
                 tooltip="(NOTE: *Array format* Must use qoutes, and commas! Don't use []'s)";
                 typeName="STRING";
@@ -167,7 +167,7 @@ class Misery_Ambient_AI: Module_F
             };
             class Misery_AI_UniformLoot: Edit
               {
-                property="Misery_AI_UniformLoot";
+                property=QCLASS(AI_UniformLoot);
                 displayName="Uniform Gear for generated AI";
                 tooltip="(NOTE: *Array format* Must use qoutes, and commas! Don't use []'s)";
                 typeName="STRING";
@@ -175,7 +175,7 @@ class Misery_Ambient_AI: Module_F
             };
             class Misery_AI_VestLoot: Edit
               {
-                property="Misery_AI_VestLoot";
+                property=QCLASS(AI_VestLoot);
                 displayName="Vest Gear for generated AI";
                 tooltip="(NOTE: *Array format* Must use qoutes, and commas! Don't use []'s)";
                 typeName="STRING";
@@ -183,7 +183,7 @@ class Misery_Ambient_AI: Module_F
             };
             class Misery_AI_BackpackLoot: Edit
               {
-                property="Misery_AI_BackpackLoot";
+                property=QCLASS(AI_BackpackLoot);
                 displayName="Backpack Gear for generated AI";
                 tooltip="(NOTE: *Array format* Must use qoutes, and commas! Don't use []'s)";
                 typeName="STRING";
@@ -191,7 +191,7 @@ class Misery_Ambient_AI: Module_F
             };
             class Misery_AI_Accuracy: Edit
               {
-                property="Misery_AI_Accuracy";
+                property=QCLASS(AI_Accuracy);
                 displayName="Spawned AI Accuracy";
                 tooltip="Aiming Accuracy setting for spawned AI";
                 typeName="NUMBER";
@@ -199,7 +199,7 @@ class Misery_Ambient_AI: Module_F
             };
             class Misery_AI_Shake: Edit
               {
-                property="Misery_AI_Shake";
+                property=QCLASS(AI_Shake);
                 displayName="Spawned AI Shake";
                 tooltip="Aiming Shake setting for spawned AI";
                 typeName="NUMBER";
@@ -207,7 +207,7 @@ class Misery_Ambient_AI: Module_F
             };
             class Misery_AI_Speed: Edit
               {
-                property="Misery_AI_Speed";
+                property=QCLASS(AI_Speed);
                 displayName="Spawned AI Speed";
                 tooltip="Aiming Speed setting for spawned AI ";
                 typeName="NUMBER";
@@ -215,7 +215,7 @@ class Misery_Ambient_AI: Module_F
             };
             class Misery_AI_SpawnChance: Edit
               {
-                property="Misery_AI_SpawnChance";
+                property=QCLASS(AI_SpawnChance);
                 displayName="Spawn chance";
                 tooltip="Spawn chance % input for this specified AI generater when spawn conditions are met (NOTE: If AI generator fails the random spawn chance, it will no longer attempt to generate for the remainder of the game session)";
                 typeName="NUMBER";
@@ -223,7 +223,7 @@ class Misery_Ambient_AI: Module_F
             };
             class Misery_AI_ModuleSpawnDistanceMIN: Edit
               {
-                property="Misery_AI_ModuleSpawnDistanceMIN";
+                property=QCLASS(AI_ModuleSpawnDistanceMIN);
                 displayName="Min Distance";
                 tooltip="Minimum distance the AI can spawn from this module";
                 typeName="NUMBER";
@@ -231,7 +231,7 @@ class Misery_Ambient_AI: Module_F
             };
             class Misery_AI_ModuleSpawnDistanceMAX: Edit
               {
-                property="Misery_AI_ModuleSpawnDistanceMAX";
+                property=QCLASS(AI_ModuleSpawnDistanceMAX);
                 displayName="Max Distance";
                 tooltip="Maximum distance the AI can spawn from this module";
                 typeName="NUMBER";

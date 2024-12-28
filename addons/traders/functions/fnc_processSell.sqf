@@ -73,7 +73,7 @@ if ((_selectedItem in (items player)) or (_selectedItem in (magazines player))) 
     if (_selectedItem in (items player)) then {
         [player, _selectedItem] call CBA_fnc_removeItem;
     };
-    ctrlSetText [1001, format ["%1 Sold for %2 %3", _displayName,MiseryCurrencySymbol,[_price, 1, 2, true] call CBA_fnc_formatNumber]];
+    ctrlSetText [1001, format ["%1 Sold for %2 %3", _displayName,EGVAR(money,symbol),[_price, 1, 2, true] call CBA_fnc_formatNumber]];
     [] call FUNC(shopVAL);
 }else{
     ctrlSetText [1001, "You no longer have any more of that item to sell..."];

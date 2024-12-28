@@ -22,7 +22,7 @@ if (!hasInterface || {!alive player}) exitWith {};
 if !(MiseryinSafezonearea) exitWith {
 titleText [_text, "PLAIN DOWN"];
 player removeEventHandler ["Fired", _index]; //Remove Fired EH
-if (MiseryACE) then {
+if (EGVAR(common,ace)) then {
 player setVariable ["ace_medical_allowDamage",true,true];
 }else{
 player allowDamage true;
@@ -39,7 +39,7 @@ titleText ["Entering Safezone...", "PLAIN DOWN"];
 private _index = player addEventHandler ["Fired", {_projectile = _this select 6; deleteVehicle _projectile;}]; //Delete projectile immediately when fired
 
 //Stop ALL types of damage to players:
-if (MiseryACE) then {
+if (EGVAR(common,ace)) then {
 player setVariable ["ace_medical_allowDamage",false,true];
 }else{
 player allowDamage false;

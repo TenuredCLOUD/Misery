@@ -29,7 +29,7 @@ if !(isNull objectParent player) exitWith {}; //If NOT player or Player is in ve
 
 if ((isPlayer _unit) && (_instigator isKindOf "zombie")) then { //If IS player then proceed to infection
 
-if((random 100) > Miseryzedinfectchance) exitWith {
+if((random 100) > EGVAR(zinfect,chance)) exitWith {
 player setVariable ["zednotif", format ["<t>Possible Infection... <img shadow='0' size='1.5' image='%1'/>", QPATHTOEF(icons,data\zedhand_ca.paa)]];
 hintSilent parseText format ["<t>%1</t><br/>",
 player getVariable ['zednotif', nil]
@@ -46,7 +46,7 @@ player getVariable ['zednotif', nil]
 sleep 8;
 hintSilent "";
 
-player setVariable ["Zinfectionlogged", true];
+player setVariable [QCLASS(infectionLogged), true];
 
 _time = time + 180;
 [_time] spawn {
@@ -55,12 +55,12 @@ _time = time + 180;
     waitUntil {(!alive player) or (time > _TimeA)};
     if (alive player) then {
 
-    player setVariable ["Zinfectionlogged", nil];
+    player setVariable [QCLASS(infectionLogged), nil];
 
-    private _MDebuffs = player getVariable "MiseryDebuffs";
+    private _ailments = player getVariable QCLASS(ailments);
 
-    player setVariable ["MiseryInfection", (random 10)]; //add random infection status up to value of 10
-    _MDebuffs pushBackUnique "PARASITES"; player setVariable ["MiseryDebuffs", _MDebuffs]; //Push parasites to player
+    player setVariable [QCLASS(infection), (random 10)]; //add random infection status up to value of 10
+    _ailments pushBackUnique "PARASITES"; player setVariable [QCLASS(ailments), _ailments]; //Push parasites to player
 
             };
         };

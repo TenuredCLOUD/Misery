@@ -8,7 +8,7 @@ ADDON = false;
 
 /*
 if (MiseryRFEMFacts && hasInterface) then {
-if (MiseryDSA && hasInterface) then {
+if (EGVAR(common,dsa) && hasInterface) then {
 private _gvars = ["dsaSpookBases", "dsaDevMutants", "dsaWebknightCreatures"];
 {
 waitUntil {!isNil _x}; // Check Gvar arrays every second
@@ -19,7 +19,7 @@ waitUntil {!isNil _x}; // Check Gvar arrays every second
     };
 };
 
-// if (((count (entities "Misery_RadioSettings")) > 0) && hasInterface) then {
+// if (((count (entities QCLASS(RadioSettings")) > 0) && hasInterface) then {
 // [] call "\z\misery\addons\framework\scripts\survival\Radio\RadiosyncLoop.sqf";
 // };
 
@@ -28,8 +28,8 @@ if (MiseryRFEMFacts && isServer) then {
 addMissionEventHandler ["EntityKilled", {
   params ["_killed", "_killer", "_instigator"];
   if (_killed == player) then {
-    if ((_this select 0) getVariable ["Misery_RFEMFDet", true]) then {
-        (_this select 0) setVariable ["Misery_RFEMFDet", false,true];
+    if ((_this select 0) getVariable [QCLASS(rfdetectorStatus), true]) then {
+        (_this select 0) setVariable [QCLASS(rfdetectorStatus), false,true];
             };
           };
     }];
@@ -39,9 +39,9 @@ addMissionEventHandler ["EntityKilled", {
 if (MiseryRFEMFacts && hasInterface) then {
 player addEventHandler ["Put", {
 params ["_unit", "_container", "_item"];
-if (_item == "Misery_RFHighrangeON") then {
-if ((_this select 0) getVariable ["Misery_RFEMFDet", true]) then {
-    (_this select 0) setVariable ["Misery_RFEMFDet", false,true];
+if (_item == QCLASS(rfHighRange_On)) then {
+if ((_this select 0) getVariable [QCLASS(rfdetectorStatus), true]) then {
+    (_this select 0) setVariable [QCLASS(rfdetectorStatus), false,true];
             };
         };
     }];

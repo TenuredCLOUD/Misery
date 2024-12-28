@@ -7,22 +7,22 @@ by TenuredCLOUD
 */
 
 /*
-[{(player getVariable ["Misery_HHRadio", false])},
+[{(player getVariable [QCLASS(HHRadio", false])},
     {
         [{
             params ["_args", "_handle"];
 
-            if ((!(player getVariable ["Misery_HHRadio", false])) || (!alive player)) exitWith {
+            if ((!(player getVariable [QCLASS(HHRadio", false])) || (!alive player)) exitWith {
                 [_handle] call CBA_fnc_removePerFrameHandler;
             };
 
-        if ((player getVariable ["Misery_HHRadio", false])) then {
+        if ((player getVariable [QCLASS(HHRadio", false])) then {
         MiseryRadioStaticDummy = "Land_HelipadEmpty_F" createVehicle (position player);
         MiseryRadioStaticDummy attachTo [player, [0, 0, 0], "Pelvis"];
         [MiseryRadioStaticDummy, ["StaticRADIO", 50]] remoteExec ["say3D", 0, MiseryRadioStaticDummy];
 
         [{
-        !(player getVariable ["Misery_HHRadio", false])
+        !(player getVariable [QCLASS(HHRadio", false])
         },{deleteVehicle _this;
         }, MiseryRadioStaticDummy] call CBA_fnc_waitUntilAndExecute;
         };

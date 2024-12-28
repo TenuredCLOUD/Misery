@@ -21,16 +21,16 @@ _dialog = findDisplay 982385;
 _PurchaseB = _dialog displayCtrl 1600;
 _ExitB = _dialog displayCtrl 1601;
 
-_Vehiclename = getText (configFile >> "CfgVehicles" >> MiseryTarget_VehName >> "displayName");
+_Vehiclename = getText (configFile >> "CfgVehicles" >> EGVAR(common,targetVehicleType) >> "displayName");
 
-_target = MiseryTarget_Veh;
+_target = EGVAR(common,targetVehicle);
 
 _Found = false;
 _totalLiters = 0;
 _fuelTypeIndex = 0;
 
 {
-    if ((_x select 0) == MiseryTarget_VehName) then {
+    if ((_x select 0) == EGVAR(common,targetVehicleType)) then {
         _Array=_x;
         _Found = true;
         _fuelTypeIndex = _x select 1;
@@ -41,12 +41,12 @@ _fuelTypeIndex = 0;
 
 if !(_Found) exitWith {};
 
-player setVariable ["Misery_Proc_Refuel", true];
+player setVariable [QCLASS(processRefuel), true];
 
 _RefuelInterrupt = (findDisplay 982385) displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
     if (_key isEqualTo DIK_ESCAPE) then {
-        player setVariable ["Misery_Proc_Refuel",false];
+        player setVariable [QCLASS(processRefuel),false];
         [parseText "<t font='PuristaMedium' size='1'>Refueling interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
     };
 }];
@@ -61,9 +61,9 @@ private _jetFuelCount = 0;
     private _ammoCount = _x select 1;
 
     switch (_magazineType) do {
-        case "Misery_Diesel": {_dieselCount = _dieselCount + _ammoCount;};
-        case "Misery_Petrol": {_petrolCount = _petrolCount + _ammoCount;};
-        case "Misery_JetFuel": {_jetFuelCount = _jetFuelCount + _ammoCount;};
+        case QCLASS(diesel): {_dieselCount = _dieselCount + _ammoCount;};
+        case QCLASS(petrol): {_petrolCount = _petrolCount + _ammoCount;};
+        case QCLASS(jetFuel): {_jetFuelCount = _jetFuelCount + _ammoCount;};
     };
 } forEach magazinesAmmo player;
 
@@ -93,12 +93,12 @@ _displayedText = "";
 _delay = 29 / 100;
 
 for "_i" from 0 to (_totalLiters + 50) do {
-    if ((player getVariable "Misery_Proc_Refuel") isEqualTo false) exitWith {};
+    if ((player getVariable QCLASS(processRefuel)) isEqualTo false) exitWith {};
 
     _fuelToAdd = 1 / _totalLiters;
 
     if (fuel _target >= 1) exitWith {
-        player setVariable ["Misery_Proc_Refuel", nil];
+        player setVariable [QCLASS(processRefuel), nil];
         (findDisplay 982385) displayRemoveEventHandler ["KeyDown", _RefuelInterrupt];
         _displayFull = format ["%1 fuel tank is full...", _Vehiclename];
         ctrlSetText [1001, _displayFull];
@@ -114,7 +114,7 @@ for "_i" from 0 to (_totalLiters + 50) do {
     };
 
     if (!_hasRequiredFuel) exitWith {
-        player setVariable ["Misery_Proc_Refuel", nil];
+        player setVariable [QCLASS(processRefuel), nil];
         (findDisplay 982385) displayRemoveEventHandler ["KeyDown", _RefuelInterrupt];
         ctrlSetText [1001, format ["You have run out of %1...", _requiredFuelType]];
         _PurchaseB ctrlShow true;
@@ -130,15 +130,15 @@ for "_i" from 0 to (_totalLiters + 50) do {
     // Decrement the count of the used Jerry can type
     switch (_requiredFuelType) do {
         case "Diesel": {
-            ["Misery_Diesel", "Misery_EmptyDiesel"] call EFUNC(common,itemDecrement);
+            [QCLASS(diesel), QCLASS(dieselJerryCan_Empty)] call EFUNC(common,itemDecrement);
             _dieselCount = _dieselCount - 1;
         };
         case "Petrol": {
-            ["Misery_Petrol", "Misery_EmptyPetrol"] call EFUNC(common,itemDecrement);
+            [QCLASS(petrol), QCLASS(petrolJerryCan_Empty)] call EFUNC(common,itemDecrement);
             _petrolCount = _petrolCount - 1;
         };
         case "JetFuel": {
-            ["Misery_JetFuel", "Misery_EmptyJet"] call EFUNC(common,itemDecrement);
+            [QCLASS(jetFuel), QCLASS(jetFuelJerryCan_Empty)] call EFUNC(common,itemDecrement);
             _jetFuelCount = _jetFuelCount - 1;
         };
     };

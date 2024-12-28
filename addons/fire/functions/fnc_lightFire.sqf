@@ -30,10 +30,10 @@ if !(isNull objectParent player) exitWith {titleText ["You cannot build a fire w
 if (insideBuilding player == 1) exitWith {titleText ["You cannot build a fire inside, it's too dangerous...", "PLAIN DOWN"];};
 
 //No firewood or sticks:
-if (!("Misery_firewood" in items player) && !("Misery_woodensticks" in items player)) exitWith {titleText ["You need firewood or sticks...", "PLAIN DOWN"];};
+if (!(QCLASS(firewood) in items player) && !(QCLASS(woodensticks) in items player)) exitWith {titleText ["You need firewood or sticks...", "PLAIN DOWN"];};
 
 //Exit from not enough mats:
-if !("Misery_tinder" in items player || "acex_intelitems_notepad" in magazines player || "rvg_money" in magazines player || "rvg_notepad" in magazines player || "rvg_docFolder" in magazines player) exitWith {titleText ["You don't have the required materials to craft a fire...", "PLAIN DOWN"];};
+if !(QCLASS(tinder) in items player || "acex_intelitems_notepad" in magazines player || "rvg_money" in magazines player || "rvg_notepad" in magazines player || "rvg_docFolder" in magazines player) exitWith {titleText ["You don't have the required materials to craft a fire...", "PLAIN DOWN"];};
 
 [
     player,
@@ -44,11 +44,11 @@ if !("Misery_tinder" in items player || "acex_intelitems_notepad" in magazines p
     "'Misery_lighter' in items player || 'rvg_matches' in magazines player",
     {
   //Sound generation:
-  if ("Misery_lighter" in items player) then {
-  playSound3D ["\z\misery\addons\audio\sounds\immersion\Lighter.ogg", player, false, getPosASL player, 4, 1, 10];
+  if (QCLASS(lighter) in magazines player) then {
+  playSound3D [QPATHTOEF(audio,sounds\immersion\Lighter.ogg), player, false, getPosASL player, 4, 1, 10];
   }else{
   if ("rvg_matches" in magazines player) then {
-  playSound3D ["\z\misery\addons\audio\sounds\immersion\Match.ogg", player, false, getPosASL player, 4, 1, 10];
+  playSound3D [QPATHTOEF(audio,sounds\immersion\Match.ogg), player, false, getPosASL player, 4, 1, 10];
   };
   };
 
@@ -70,10 +70,10 @@ if !("Misery_tinder" in items player || "acex_intelitems_notepad" in magazines p
         };
     };
 
-    if ((((_this select 1) getVariable "MiseryCanCraftFire") isEqualTo true) && "Misery_firewood" in items player) then {
+    if ((((_this select 1) getVariable "MiseryCanCraftFire") isEqualTo true) && QCLASS(firewood) in items player) then {
     titleText ["Crafting fire with firewood...", "PLAIN DOWN"];
     }else{
-    if ((((_this select 1) getVariable "MiseryCanCraftFire") isEqualTo true) && "Misery_woodensticks" in items player) then {
+    if ((((_this select 1) getVariable "MiseryCanCraftFire") isEqualTo true) && QCLASS(woodensticks) in items player) then {
     titleText ["Crafting fire with wooden sticks...", "PLAIN DOWN"];
     };
     };
@@ -82,12 +82,12 @@ if !("Misery_tinder" in items player || "acex_intelitems_notepad" in magazines p
     titleText ["You successfully crafted a fire...", "PLAIN DOWN"];
     (_this select 1) setVariable ["MiseryCanCraftFire", false];
 
-    if ("Misery_firewood" in items player) then {
-        player removeItem "Misery_firewood";
+    if (QCLASS(firewood) in items player) then {
+        player removeItem QCLASS(firewood);
         call EFUNC(fire,CampfireBig);
     }else{
-    if ("Misery_woodensticks" in items player) then {
-        player removeItem "Misery_woodensticks";
+    if (QCLASS(woodensticks) in items player) then {
+        player removeItem QCLASS(woodensticks);
         call EFUNC(fire,Campfiresmall);
     };
 };
@@ -98,7 +98,7 @@ if !("Misery_tinder" in items player || "acex_intelitems_notepad" in magazines p
 //On completion / Fire failure
 titleText ["You failed to craft a fire...", "PLAIN DOWN"];
 (_this select 1) setVariable ["MiseryCanCraftFire", false];
-private _items = ["Misery_tinder"];
+private _items = [QCLASS(tinder)];
 private _mags = ["acex_intelitems_notepad","rvg_money", "rvg_notepad", "rvg_docFolder"];
 
 private _index = _items findIf { _x in items player };
@@ -113,7 +113,7 @@ if (_index != -1) then {
     };
 };
 
-    if ("Misery_lighter" in items player) then {
+    if (QCLASS(lighter) in magazines player) then {
         // If lighter is available, do not consume a match
     }else{
     if ("rvg_matches" in magazines player) then {
@@ -126,7 +126,7 @@ if (_index != -1) then {
     {
 //On complete / On interruption
 (_this select 1) setVariable ["MiseryCanCraftFire", false];
-private _items = ["Misery_tinder"];
+private _items = [QCLASS(tinder)];
 private _mags = ["acex_intelitems_notepad","rvg_money", "rvg_notepad", "rvg_docFolder"];
 
 private _index = _items findIf { _x in items player };
@@ -141,7 +141,7 @@ if (_index != -1) then {
     };
 };
 
-    if ("Misery_lighter" in items player) then {
+    if (QCLASS(lighter) in magazines player) then {
         // If lighter is available, do not consume a match
     }else{
     if ("rvg_matches" in magazines player) then {

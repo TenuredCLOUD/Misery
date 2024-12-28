@@ -15,7 +15,7 @@
  * Public: No
 */
 
-private _MExposure = player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE];
+private _MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];
 
 if (!hasInterface) exitWith {};
 
@@ -23,19 +23,19 @@ if (!hasInterface) exitWith {};
 
     titleText ["You use a heat pack...", "PLAIN DOWN"];
 
-    player removeItem "Misery_Heatpack";
+    player removeItem QCLASS(heatpack);
 
 sleep 60;
 
 if (_MExposure < 0) then {
 
-    player setVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE];
+    player setVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];
 
 }else{
 
 if (_MExposure > 0) then {
 
-    player setVariable ["MiseryExposure", (_MExposure + 5)];
+    player setVariable [QCLASS(exposure), (_MExposure + 5)];
 
         };
     };

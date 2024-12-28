@@ -28,10 +28,10 @@ waitUntil{sleep 1; !isNil "MiseryReady"};
 if (_activated && isServer) then {
     [
     _module,
-    (_module getVariable "Misery_Radiosoundfilearray"),
-    (_module getVariable "Misery_Radiosoundclassarray"),
-    (_module getVariable "Misery_Radioobjectarray"),
-    (_module getVariable "Misery_Radiosoundmaintimer")
+    (_module getVariable QCLASS(Radiosoundfilearray"),
+    (_module getVariable QCLASS(Radiosoundclassarray"),
+    (_module getVariable QCLASS(Radioobjectarray"),
+    (_module getVariable QCLASS(Radiosoundmaintimer")
     ] call Radio\Radiobroadcast);
 };
 true

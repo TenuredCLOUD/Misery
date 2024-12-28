@@ -15,37 +15,36 @@
 */
 
 if (!hasInterface) exitWith {};
-MiseryACE=false;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
-private _random = [1, 10] call BIS_fnc_randomInt;
-private _MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];
 
-    if !("rvg_matches" in magazines player || "Misery_lighter" in items player) exitWith {titleText ["You need a lighter or match to smoke...", "PLAIN DOWN"];};
+private _random = [1, 10] call BIS_fnc_randomInt;
+private _MFear = player getVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR];
+
+    if !("rvg_matches" in magazines player || QCLASS(lighter) in items player) exitWith {titleText ["You need a lighter or match to smoke...", "PLAIN DOWN"];};
 
     if ("rvg_matches" in magazines player) then {
 
       titleText ["You light up a cigarette...", "PLAIN DOWN"];
 
-    player removeItem "Misery_cigarettepack"; //remove on start;
+    player removeItem QCLASS(cigarettePack); //remove on start;
 
-    playSound3D ["\z\misery\addons\audio\sounds\immersion\Matchsmoking.ogg", player, false, getPosASL player, 4, 1, 10];
+    playSound3D [QPATHTOEF(audio,sounds\immersion\Matchsmoking.ogg), player, false, getPosASL player, 4, 1, 10];
 
     //Remove some fear due to cig smoking:
   if (MiseryFearenabled) then {
-    player setVariable ["MiseryFear", (_MFear - 1.5)];
-    if (_MFear <= 0) then {player setVariable ["MiseryFear", 0]};
+    player setVariable [QCLASS(psycosis), (_MFear - 1.5)];
+    if (_MFear <= 0) then {player setVariable [QCLASS(psycosis), 0]};
   };
 
  sleep 1;
 
-  if (MiseryACE) then {
-  [player, "Misery_cigarettepack", 10, 300, -1, -1, -1] call ace_medical_status_fnc_addMedicationAdjustment;
+  if (EGVAR(common,ace)) then {
+  [player, QCLASS(cigarettePack), 10, 300, -1, -1, -1] call ace_medical_status_fnc_addMedicationAdjustment;
   };
 
 ////---------------------------------------------------
   if (_random > 5) exitWith {
 
-    player addItem "Misery_cigarettepack";
+    player addItem QCLASS(cigarettePack);
 
     //This snippet is an altered version from Anti rad pills usage from Ravage mod, permission was requested before use:
 _compteur = 0;
@@ -86,7 +85,7 @@ player setVariable ["_antirad", nil];
 
 if (_random < 5) exitWith {
 
-player addItem "Misery_cigarettepack";
+player addItem QCLASS(cigarettePack);
 
 //This snippet is an altered version from Anti rad pills usage from Ravage mod, permission was requested before use:
 _compteur = 0;
@@ -105,30 +104,30 @@ player setVariable ["_antirad", nil];
 
 }else{
 
-if ("Misery_lighter" in items player) then {
+if (QCLASS(lighter) in magazines player) then {
 
   titleText ["You light up a cigarette...", "PLAIN DOWN"];
 
-  player removeItem "Misery_cigarettepack"; //remove on start;
+  player removeItem QCLASS(cigarettePack); //remove on start;
 
-  playSound3D ["\z\misery\addons\audio\sounds\immersion\Lightersmoking.ogg", player, false, getPosASL player, 4, 1, 10];
+  playSound3D [QPATHTOEF(audio,sounds\immersion\Lightersmoking.ogg), player, false, getPosASL player, 4, 1, 10];
 
   //Remove some fear due to cig smoking:
   if (MiseryFearenabled) then {
-    player setVariable ["MiseryFear", (_MFear - 1.5)];
-    if (_MFear <= 0) then {player setVariable ["MiseryFear", 0]};
+    player setVariable [QCLASS(psycosis), (_MFear - 1.5)];
+    if (_MFear <= 0) then {player setVariable [QCLASS(psycosis), 0]};
   };
 
   sleep 1;
 
-  if (MiseryACE) then {
-  [player, "Misery_cigarettepack", 10, 300, -1, -1, -1] call ace_medical_status_fnc_addMedicationAdjustment;
+  if (EGVAR(common,ace)) then {
+  [player, QCLASS(cigarettePack), 10, 300, -1, -1, -1] call ace_medical_status_fnc_addMedicationAdjustment;
   };
 
 ////---------------------------------------------------
   if (_random > 5) exitWith {
 
-    player addItem "Misery_cigarettepack";
+    player addItem QCLASS(cigarettePack);
 
     //This snippet is an altered version from Anti rad pills usage from Ravage mod, permission was requested before use:
 _compteur = 0;
@@ -169,7 +168,7 @@ player setVariable ["_antirad", nil];
 
 if (_random < 5) exitWith {
 
-player addItem "Misery_cigarettepack";
+player addItem QCLASS(cigarettePack);
 
 //This snippet is an altered version from Anti rad pills usage from Ravage mod, permission was requested before use:
 _compteur = 0;

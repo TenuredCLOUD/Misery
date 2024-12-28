@@ -19,16 +19,16 @@
 
 while {true} do {
 
-    player setVariable ["MiseryBreathFogSim", true];
+    player setVariable [QCLASS(breathCondensationEffect), true];
 
     if ((((call FUNC(environment)) select 2) == 0) || (!MiseryBreathFogAllowed) || (!alive player)) exitWith {
-        if(MiseryDebug)then{systemChat "Misery Breathfog cycle terminated..."};
-        player setVariable ["MiseryBreathFogSim", nil];
+        if(EGVAR(common,debug))then{systemChat "Misery Breathfog cycle terminated..."};
+        player setVariable [QCLASS(breathCondensationEffect), nil];
     };
 
     private ["_delay","_pfatigue","_MisFogObject","_FogEffect","_FogBreath"];
 
-        if !(player getVariable ["MiseryBreath", false]) then {
+        if !(player getVariable [QCLASS(breathCondensation), false]) then {
         _pfatigue = (getFatigue player) * 100; //Fatigue calc
         if (_pfatigue >= 75) then {_delay=(1 + random 1);};
         if (_pfatigue >= 50 && _pfatigue < 75) then {_delay=(2 + random 2);};
@@ -36,7 +36,7 @@ while {true} do {
         if (_pfatigue < 25) then {_delay=(4 + random 4);};
         sleep _delay;
             if (((call FUNC(environment)) select 2) == 1) then {
-                player setVariable ["MiseryBreath", true];
+                player setVariable [QCLASS(breathCondensation), true];
                 _MisFogObject = "logic" createVehicleLocal (getPos player);
                 _FogEffect = "#particlesource" createVehicleLocal getPos _MisFogObject;
                 _FogEffect setParticleParams [["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 12, 13,0],
@@ -47,10 +47,10 @@ while {true} do {
                 _MisFogObject attachTo [player, [0,0.16,0], "neck", true];
                 sleep 0.5;
                 deleteVehicle _MisFogObject;
-                player setVariable ["MiseryBreath", false];
+                player setVariable [QCLASS(breathCondensation), false];
             };
         };
-    if(MiseryDebug)then{systemChat "Misery BreathFog cycle..."};
+    if(EGVAR(common,debug))then{systemChat "Misery BreathFog cycle..."};
     sleep 1;
 };
 

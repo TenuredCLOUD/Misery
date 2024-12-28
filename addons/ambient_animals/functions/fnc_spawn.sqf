@@ -41,9 +41,9 @@ for "_i" from 1 to _clusters do {
            if (GVAR(debug)) then {systemChat "[Misery Animal spawner] Invalid position or position in water, skipping..."};
             continue;
         };
-        if ((random 100) > GVAR(animalSpawnChance)) then {
+        if (GVAR(animalSpawnChance) > (random 100)) then {
     private _createdAnimal = createAgent [_animalClass, _outsidePos, [], 0, "CAN_COLLIDE"];
-    GVAR(registeredEntities) pushBack (agent _createdAnimal);
+    GVAR(registeredEntities) pushBack _createdAnimal;
         };
     };
 };

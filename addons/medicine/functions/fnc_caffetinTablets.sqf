@@ -14,12 +14,9 @@
  *
 */
 
-private _MInfection = player getVariable ["MiseryInfection", MACRO_PLAYER_INFECTION];
-private _MExposure = player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE];
-private _MDebuffs = player getVariable "MiseryDebuffs";
-
-MiseryACE=false;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
+private _MInfection = player getVariable [QCLASS(infection), MACRO_PLAYER_INFECTION];
+private _MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];
+private _ailments = player getVariable QCLASS(ailments);
 
 if (!hasInterface) exitWith {};
 
@@ -27,22 +24,22 @@ if (!hasInterface) exitWith {};
     titleText ["You cannot take medicine while wearing a mask...", "PLAIN DOWN"];
 };
 
-if ((_MInfection > 1) || (_MDebuffs find "PARASITES" != -1)) then {
+if ((_MInfection > 1) || (_ailments find "PARASITES" != -1)) then {
 
     titleText ["You take some Caffetin tablets...", "PLAIN DOWN"];
-    playSound3D ["\z\misery\addons\audio\sounds\inventory\Items\CrinklingPlastic.ogg", player, false, getPosASL player, 4, 1, 10];
+    playSound3D [QPATHTOEF(audio,sounds\inventory\Items\CrinklingPlastic.ogg), player, false, getPosASL player, 4, 1, 10];
 
-    player removeItem "Misery_caffetincaps";
+    player removeItem QCLASS(caffetin);
 
-     if (MiseryACE) then {
-    [player, "Misery_caffetincaps", 120, 300, 1, 0, 1] call ace_medical_status_fnc_addMedicationAdjustment;
+     if (EGVAR(common,ace)) then {
+    [player, QCLASS(caffetin), 120, 300, 1, 0, 1] call ace_medical_status_fnc_addMedicationAdjustment;
     };
 
   sleep 60;
 
-  player setVariable ["MiseryExposure", (_MExposure - 25)];
+  player setVariable [QCLASS(exposure), (_MExposure - 25)];
 
-    if (_MExposure > 0) then {player setVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE]};
+    if (_MExposure > 0) then {player setVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE]};
 
 }else{
 //Nothing

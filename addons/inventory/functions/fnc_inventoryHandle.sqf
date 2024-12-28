@@ -19,11 +19,11 @@ player addEventHandler ["InventoryOpened", {
         !(isNull (findDisplay 602))
     },{
         {
-            ((findDisplay 602) displayCtrl _x) ctrlSetEventHandler ["LBDblClick", "_this call FUNC(Click)"];
+            ((findDisplay 602) displayCtrl _x) ctrlSetEventHandler ["LBDblClick", "_this call FUNC(click)"];
         } count [633, 638, 619];
 
-        private _display = findDisplay 46 createDisplay "MiseryINVACT_GUI";
-        MiseryActionsMode = "";
+        private _display = findDisplay 46 createDisplay QCLASS(inventoryFramework_ui);
+        EGVAR(actions,guiActionsMode) = "";
         [] call FUNC(displayActions);
 
         private _handle = [{
@@ -44,8 +44,8 @@ player addEventHandler ["InventoryOpened", {
 
         }, 0, _display] call CBA_fnc_addPerFrameHandler;
 
-        player setVariable ["Misery_inventoryPFH",_handle,false];
-        player setVariable ["Misery_inventoryDisplay",_display,false];
+        player setVariable [QGVAR(inventoryPFH),_handle,false];
+        player setVariable [QGVAR(inventoryDisplay),_display,false];
     }, []] call CBA_fnc_waitUntilAndExecute;
 }];
 
@@ -53,8 +53,8 @@ player addEventHandler ["InventoryOpened", {
 player addEventHandler ["InventoryClosed", {
     params ["_unit", "_container","_display"];
 
-    private _handle = player getVariable ["Misery_inventoryPFH",_handle];
-    private _display = player getVariable ["Misery_inventoryDisplay",_display];
+    private _handle = player getVariable [QGVAR(inventoryPFH),_handle];
+    private _display = player getVariable [QGVAR(inventoryDisplay),_display];
 
     hintSilent "";
 

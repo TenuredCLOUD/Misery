@@ -20,7 +20,7 @@ waitUntil {!isNull findDisplay 982376};
 if (!isNull findDisplay 982376) exitWith { //Double make sure script exits after loot lists are populated
 
  private _list = findDisplay 982376 displayCtrl 1500;
- private _playerRecipes = player getVariable "Misery_Crafting_DataSet";
+ private _playerRecipes = player getVariable QCLASS(craftingKnowledge);
 
 {
     private _outputItem = _x select 0;
@@ -29,7 +29,7 @@ if (!isNull findDisplay 982376) exitWith { //Double make sure script exits after
     if (_displayName == "") then {
         _displayName = getText (configFile >> "CfgMagazines" >> _outputItem >> "displayName");
     };
-    if (MiseryDebug) then {
+    if (EGVAR(common,debug)) then {
         systemChat format ["Output item: %1", _displayName];  // Debugging hint
     };
     private _index = _list lbAdd _displayName;

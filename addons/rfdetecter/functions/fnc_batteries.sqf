@@ -14,7 +14,7 @@
  *
 */
 
-if !([["Misery_lithiumbattery"]] call EFUNC(common,hasItem)) then {
+if !([[QCLASS(lithiumBattery)]] call EFUNC(common,hasItem)) then {
 
    titleText ["It's completely dead...", "PLAIN DOWN"];
 
@@ -22,11 +22,11 @@ if !([["Misery_lithiumbattery"]] call EFUNC(common,hasItem)) then {
 
 titleText ["You add a battery to your RF detector...", "PLAIN DOWN"];
 
-player removeItem "Misery_RFHighNobattery";
-player removeItem "Misery_lithiumbattery";
+player removeItem QCLASS(rfHighRange_NoBattery);
+player removeItem QCLASS(lithiumBattery);
 
 if (alive player) then {
 
-    player addItem "Misery_RFHighrangeOFF";
+    player addItem QCLASS(rfHighRange_Off);
     };
   };
