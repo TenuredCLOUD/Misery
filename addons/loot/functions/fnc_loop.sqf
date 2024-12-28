@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
  /*
  * Author: TenuredCLOUD
- * Loot Server Loop 
+ * Loot Server Loop
  * Monitors Players positions relative to buildings
  *
  * Arguments:
@@ -15,110 +15,56 @@
  *
 */
 
-private ["_players", "_player", "_playerPos", "_distance", "_BuildingArray", "_Building", "_buildingPositions", "_buildingPos", "_buildingType", "_isMilitary"];
+if (!GVAR(enabled)) exitWith {};
 
-// Prep Global array for already spawned loot inside buildings & share across network
-if (isNil QGVAR(Building_used)) then {
-    GVAR(Building_used) = [];
-    publicVariable QGVAR(Building_used);
-};
-
-_players = call EFUNC(common,listPlayers);
+private _players = call EFUNC(common,listPlayers);
 
 {
-    _player = _x;
-    _playerPos = getPos _player;
+    private _player = _x;
 
-    // Get nearest terrain objects that are buildings
-    _BuildingArray = nearestTerrainObjects [_playerPos, ["HOUSE", "BUILDING"], 100, false, true];
+    private _nearBuildings = nearestTerrainObjects [getPosATL _player, ["HOUSE", "BUILDING"], 100, false, true];
 
     {
-        _Building = _x;
+        private _building = _x;
+        private _buildingType = typeOf _building;
+        if (_buildingType in GVAR(buildingBlacklist) || _building in GVAR(building_used)) exitWith {continue};
 
-        if (!(typeOf _Building in GVAR(buildingBlacklist)) && !(_Building in GVAR(Building_used))) then {
-            _buildingPositions = _Building call BIS_fnc_buildingPositions;
+        private _buildingPositions = _building call BIS_fnc_buildingPositions;
 
-            {
-                _buildingPos = _x;
+        {
+            private _buildingName = toLower getText (configFile >> "CfgVehicles" >> _buildingType >> "displayName");
+            private _isMilitary = false;
+            private _isMedical = false;
+            private _isStore = false;
+            private _isGarage = false;
 
-                // Check if building is military using refined filtering
-                _buildingType = toLower (getText (configFile >> "CfgVehicles" >> (typeOf _Building) >> "displayName"));
-                _isMilitary = false;
-                _isMedical = false;
-                _isStore = false;
-                _isGarage = false;
-
-                //Building checks:
-                switch true do {
-                //Military building:
-                    case ("barracks" in _buildingType): {
-                        _isMilitary = true;
-                    };
-                    case ("military" in _buildingType): {
-                        _isMilitary = true;
-                    };
-                    case ("guardhouse" in _buildingType): {
-                        _isMilitary = true;
-                    };
-                    case ("terminal" in _buildingType): {
-                        _isMilitary = true;
-                    };
-                    case ("bunker" in _buildingType): {
-                        _isMilitary = true;
-                    };
-                //Medical building:
-                    case ("medical" in _buildingType): {
-                        _isMedical = true;
-                    };
-                    case ("hospital" in _buildingType): {
-                        _isMedical = true;
-                    };
-                //Store building:
-                    case ("store" in _buildingType): {
-                        _isStore = true;
-                    };
-                    case ("grocery" in _buildingType): {
-                        _isStore = true;
-                    };
-                    case ("shop" in _buildingType): {
-                        _isStore = true;
-                    };
-                //Garage building:
-                    case ("workshop" in _buildingType): {
-                        _isGarage = true;
-                    };
-                    case ("garage" in _buildingType): {
-                        _isGarage = true;
-                    };
-                    case ("factory" in _buildingType): {
-                        _isGarage = true;
-                    };
-                    case ("hangar" in _buildingType): {
-                        _isGarage = true;
-                    };
-                    case ("shed" in _buildingType): {
-                        _isGarage = true;
-                    };
-                    case ("cowshed" in _buildingType): {
-                        _isGarage = true;
-                    };
+            switch true do {
+                case (["barracks", "military", "guardhouse", "terminal", "bunker"] findIf {_x in _buildingName} != -1): {
+                    _isMilitary = true;
                 };
-
-                // Adjust probability for military buildings
-                if (_isMilitary) then {GVAR(chance) * 2.5} else {GVAR(chance)};
-
-                if (GVAR(chance) > random 100) then {
-                    [_buildingPos, GVAR(debug), _isMilitary, _isMedical, _isStore, _isGarage] call FUNC(generate);
-                    if !(_Building in GVAR(Building_used)) then {
-                        GVAR(Building_used) pushBack _Building; // Add the building to the blacklist
-                        publicVariable QGVAR(Building_used); // Broadcast the updated blacklist
-                    };
+                case (["medical", "hospital"] findIf {_x in _buildingName} != -1): {
+                    _isMedical = true;
                 };
-            } forEach _buildingPositions;
-        };
-    } forEach _BuildingArray;
+                case (["store", "grocery", "shop"] findIf {_x in _buildingName} != -1): {
+                    _isStore = true;
+                };
+                case (["workshop", "garage", "factory", "hangar", "shed", "cowshed"] findIf {_x in _buildingName} != -1): {
+                    _isGarage = true;
+                };
+            };
+
+            // Adjust chance for military buildings
+            private _chance = [GVAR(chance), GVAR(chance) * 2.5] select _isMilitary;
+
+            if (_chance < random 100) exitWith {continue};
+            [_buildingPos, GVAR(debug), _isMilitary, _isMedical, _isStore, _isGarage] call FUNC(generate);
+            GVAR(building_used) pushBack _building;
+        } forEach _buildingPositions;
+
+    } forEach _nearBuildings;
 } forEach _players;
 
+// Loop loot check & generation every 10 seconds
 [{
-    [] call FUNC(loop); // Loop loot check & generation every 10 seconds
+    [] call FUNC(loop);
 }, [], 10] call CBA_fnc_waitAndExecute;
