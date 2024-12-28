@@ -27,10 +27,10 @@
 */
 
 _this params ["_recipe"];
-private _playerRecipes = player getVariable ["Misery_Cooking_DataSet", []];
+private _playerRecipes = player getVariable [QCLASS(cookingKnowledge), []];
 
 private _recipeName = _recipe select 0;
 if (_playerRecipes findIf {_x select 0 isEqualTo _recipeName} == -1) then {
     _playerRecipes pushBack _recipe;
-    player setVariable ["Misery_Cooking_DataSet", _playerRecipes];
+    player setVariable [QCLASS(cookingKnowledge), _playerRecipes];
 };

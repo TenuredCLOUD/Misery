@@ -14,15 +14,15 @@
  *
 */
 
-if ([["Misery_9vbat"]] call EFUNC(common,hasItem)) then {
+if ([[QCLASS(9vBattery)]] call EFUNC(common,hasItem)) then {
 
-player removeItem "Misery_Headlamp_NB";
+player removeItem QCLASS(headlamp_NoBattery);
 
 titleText ["You add a 9v battery to your Headlamp", "PLAIN DOWN"];
 
-player removeItem "Misery_9vbat";
+player removeItem QCLASS(9vBattery);
 
-player addItem "Misery_HeadlampOFF";
+player addItem QCLASS(headlamp_Off);
 
 } else {
 titleText ["You don't have any 9v batteries...", "PLAIN DOWN"];

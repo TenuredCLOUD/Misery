@@ -14,16 +14,16 @@
  *
 */
 
-[{!(isNil {player getVariable "MiseryFear"}) && ((player getVariable ["MiseryFear", MACRO_PLAYER_FEAR]) >= 5)},
+[{!(isNil {player getVariable QCLASS(psycosis)}) && ((player getVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR]) >= 5)},
 {
     [{
         params ["_args", "_handle"];
 
-        if (((player getVariable ["MiseryFear", MACRO_PLAYER_FEAR]) < 5) || (!alive player)) exitWith {
+        if (((player getVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR]) < 5) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
-            if(MiseryDebug)then{systemChat "Misery Fear event cycle terminated..."};
+            if(EGVAR(common,debug))then{systemChat "Misery Fear event cycle terminated..."};
             [] call FUNC(psychosis);
-            if(MiseryDebug)then{systemChat "Misery Fear event cycle checks reinitiated..."};
+            if(EGVAR(common,debug))then{systemChat "Misery Fear event cycle checks reinitiated..."};
         };
 
     private ["_randomhint","_randomaudio","_randomshake","_MFear"];
@@ -34,7 +34,7 @@ _randomaudio = [1, 5] call BIS_fnc_randomInt;
 _randomshake = [1, 5] call BIS_fnc_randomInt;
 
 //Fear var
-_MFear = player getVariable ["MiseryFear", MACRO_PLAYER_FEAR];
+_MFear = player getVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR];
 
 if (_MFear >= 5 && _MFear < 10) then
         {
@@ -319,7 +319,7 @@ if (_MFear >= 20 && _MFear < 25) then
 
 if (_MFear >= 25) then  {
 
-      if (MiseryACE) then {
+      if (EGVAR(common,ace)) then {
     [player, 0.2, "head", "stab"] call ace_medical_fnc_addDamageToUnit;
     [player, 0.2, "body", "stab"] call ace_medical_fnc_addDamageToUnit;
 

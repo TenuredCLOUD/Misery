@@ -48,7 +48,7 @@ Will most likely rewrite to new UI based use - Or move to an ACE action
     };
 
     //Remove needle & thread
-    player removeItem "Misery_Needlethread";
+    player removeItem QCLASS(needleThread);
 
     if((random 100) > 50) exitWith {
     private _actionID = (_this select 2);
@@ -56,7 +56,7 @@ Will most likely rewrite to new UI based use - Or move to an ACE action
     };
 
     //Check if ailments are active (before infection)
-    if (MiseryAilments == "ENABLED") then {
+    if (EGVAR(survival,ailments) == "ENABLED") then {
 
     private _timeafter = time + 120;
     [_timeafter] spawn {
@@ -65,7 +65,7 @@ Will most likely rewrite to new UI based use - Or move to an ACE action
     _TimeA=_this select 0;
     waitUntil {(!alive player) or (time > _TimeA)};
 
-    player setVariable ["stitchnotif", format ["<t>Your Stitched wounds feel itchy and are hot to the touch... <img shadow='0' size='1.5' image='%1'/>", "Data\infection.paa"]];
+    player setVariable ["stitchnotif", format ["<t>Your Stitched wounds feel itchy and are hot to the touch... <img shadow='0' size='1.5' image='%1'/>", QPATHTOEF(icons,data\infection_ca.paa)]];
     hintSilent parseText format ["<t>%1</t><br/>",
     player getVariable ['stitchnotif', nil]
     ];
@@ -77,7 +77,7 @@ Will most likely rewrite to new UI based use - Or move to an ACE action
     _TimeA=_this select 0;
     waitUntil {(!alive player) or (time > _TimeA)};
     if (alive player) then {
-    player setVariable ["MiseryInfection", (random 15)]; //random infection amount
+    player setVariable [QCLASS(infection), (random 15)]; //random infection amount
     };
         };
 

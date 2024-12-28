@@ -17,7 +17,7 @@ _loadout = _namespace getVariable "loadout";
 
 _stats = _namespace getVariable "stats";
 
-if (MiseryACE) then {
+if (EGVAR(common,ace)) then {
     _ACEdamage = _namespace getVariable "ACE_damage";
     if (!isNil "_ACEdamage") then {
         [player, _ACEdamage] call ace_medical_fnc_deserializeState;
@@ -42,27 +42,27 @@ _MiseryWContainerKnowledge = [];
         player setVariable [_x select 0, _var];
     };
 } forEach [
-    ["MiseryHunger", MACRO_PLAYER_HUNGER],
-    ["MiseryThirst", MACRO_PLAYER_THIRST],
-    ["MiserySleepiness", MACRO_PLAYER_FATIGUE],
-    ["MiseryPoison", MACRO_PLAYER_TOXICITY],
-    ["MiseryInfection", MACRO_PLAYER_INFECTION],
-    ["MiseryExposure", MACRO_PLAYER_EXPOSURE],
-    ["Miserycartridge", 100],
-    ["MiseryRadiation", 0],
-    ["MiseryFear", MACRO_PLAYER_FEAR],
-    ["Zinfectionlogged", nil],
-    ["Turbidwaterlogged", nil],
-    ["Rawmeatlogged", nil],
-    ["MiseryDebuffs", _MiseryDebuffs],
-    ["Misery_Crafting_DataSet", _MiseryCraftingKnowledge],
-    ["Misery_Cooking_DataSet", _MiseryCookingKnowledge],
-    ["Misery_WaterCollect_DataSet", _MiseryWContainerKnowledge],
-    ["MiseryCurrency", 0],
-    ["MiseryCurrency_Banked", 0]
+    [QCLASS(hunger), MACRO_PLAYER_HUNGER],
+    [QCLASS(thirst), MACRO_PLAYER_THIRST],
+    [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE],
+    [QCLASS(toxicity), MACRO_PLAYER_TOXICITY],
+    [QCLASS(infection), MACRO_PLAYER_INFECTION],
+    [QCLASS(exposure), MACRO_PLAYER_EXPOSURE],
+    [QCLASS(gasmaskCartridgeLevel), 100],
+    [QCLASS(radiation), 0],
+    [QCLASS(psycosis), MACRO_PLAYER_FEAR],
+    [QCLASS(infectionLogged), nil],
+    [QCLASS(turbidWaterLogged), nil],
+    [QCLASS(rawMeatLogged), nil],
+    [QCLASS(ailments), _MiseryDebuffs],
+    [QCLASS(craftingKnowledge), _MiseryCraftingKnowledge],
+    [QCLASS(cookingKnowledge), _MiseryCookingKnowledge],
+    [QCLASS(hydrologyKnowledge), _MiseryWContainerKnowledge],
+    [QCLASS(currency), 0],
+    [QCLASS(bankedCurrency), 0]
 ];
 
-if !(MiseryMP) then {
+if !(EGVAR(common,checkMultiplayer)) then {
     _unitDetails = _namespace getVariable ["unitDetails", []];
     _playerLoadout = getUnitLoadout player;
 
@@ -93,7 +93,7 @@ if !(MiseryMP) then {
         case "PRONE": {_newUnit playAction "PlayerProne";};
         };
 
-        if (MiseryACE && !isNil "_unitACEdamage") then {
+        if (EGVAR(common,ace) && !isNil "_unitACEdamage") then {
             [_newUnit, _unitACEdamage] call ace_medical_fnc_deserializeState;
         };
     } forEach _unitDetails;
@@ -103,7 +103,7 @@ if!((_stats select 3)==worldName)then{
     systemChat "Different worldName";
 };
 
-if!(MiseryMP)then{setDate(_stats select 4)};
+if!(EGVAR(common,checkMultiplayer))then{setDate(_stats select 4)};
 systemChat format["Misery character loaded: %1",_saveName];
 
 if !(MiserysurvivalLoadScript=="") then {[player] call MiserysurvivalLoadScript};

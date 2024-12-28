@@ -14,10 +14,9 @@
  *
 */
 
-private _MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
+private _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
 
-MiseryACE=false;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
+
 
 if (!hasInterface) exitWith {};
 
@@ -28,14 +27,14 @@ if (!hasInterface) exitWith {};
   if (alive player) then {
     titleText ["You use the cocaine...", "PLAIN DOWN"];
 
-    playSound3D ["\z\misery\addons\audio\sounds\inventory\Items\Sniff01.ogg", player, false, getPosASL player, 4, 1, 5];
+    playSound3D [QPATHTOEF(audio,sounds\inventory\Items\Sniff01.ogg), player, false, getPosASL player, 4, 1, 5];
 
-  player removeItem "Misery_cocaine";
+  player removeItem QCLASS(cocaine);
   _time = time + 15;
 
-// if ((MiseryNORVG=="ENABLED") && !(MiseryMP)) then {
-if !(MiseryMP) then {
-  player setVariable ["MiserySleepiness", (_MSleepiness - 25)];
+// if ((MiseryNORVG=="ENABLED") && !(EGVAR(common,checkMultiplayer))) then {
+if !(EGVAR(common,checkMultiplayer)) then {
+  player setVariable [QCLASS(energyDeficit), (_MSleepiness - 25)];
 };
 
   waitUntil {
@@ -60,8 +59,8 @@ if !(MiseryMP) then {
       veffect = false;
     };
 
-if (MiseryACE) then {
-[player, "Misery_cocaine", 0, 1800, 25, 0, 25] call ace_medical_status_fnc_addMedicationAdjustment;
+if (EGVAR(common,ace)) then {
+[player, QCLASS(cocaine), 0, 1800, 25, 0, 25] call ace_medical_status_fnc_addMedicationAdjustment;
 };
 
 player enableFatigue false;

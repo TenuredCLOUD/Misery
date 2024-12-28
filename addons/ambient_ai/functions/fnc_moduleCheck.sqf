@@ -16,7 +16,7 @@
  * Public: No
 */
 
-private _modules = allMissionObjects "Misery_Ambient_AI";
+private _modules = allMissionObjects QCLASS(Ambient_AI);
 
 waitUntil {
     private _players = call EFUNC(common,listPlayers);
@@ -35,34 +35,34 @@ waitUntil {
             // Check if the AI is within the spawn check distance and less than the maximum spawn distance
             if (_distance > Misery_AmbAI_SpawnCheckDistance && _distance < _maxSpawnDistance) then {
 
-                private _AISpawned = _module getVariable ["Misery_AI_Spawned", false];
+                private _AISpawned = _module getVariable [QCLASS(AI_Spawned), false];
 
                 if (!(_AISpawned) && isServer) then {
 
-                _module setVariable ["Misery_AI_Spawned", true, true];
+                _module setVariable [QCLASS(AI_Spawned), true, true];
 
                 [
                 _module,
-                (_module getVariable "Misery_AI_faction"),
-                (_module getVariable "Misery_AI_Class"),
-                (_module getVariable "Misery_AI_GroupMAX"),
-                (_module getVariable "Misery_AI_WeapPrimaryLoot"),
-                (_module getVariable "Misery_AI_WeapSecondaryLoot"),
-                (_module getVariable "Misery_AI_WeaplauncherLoot"),
-                (_module getVariable "Misery_AI_Ammo"),
-                (_module getVariable "Misery_AI_ItemLoot"),
-                (_module getVariable "Misery_AI_NVGLoot"),
-                (_module getVariable "Misery_AI_FacewearLoot"),
-                (_module getVariable "Misery_AI_HeadgearLoot"),
-                (_module getVariable "Misery_AI_UniformLoot"),
-                (_module getVariable "Misery_AI_VestLoot"),
-                (_module getVariable "Misery_AI_BackpackLoot"),
-                (_module getVariable "Misery_AI_Accuracy"),
-                (_module getVariable "Misery_AI_Shake"),
-                (_module getVariable "Misery_AI_Speed"),
-                (_module getVariable "Misery_AI_SpawnChance"),
-                (_module getVariable "Misery_AI_ModuleSpawnDistanceMIN"),
-                (_module getVariable "Misery_AI_ModuleSpawnDistanceMAX")
+                (_module getVariable QCLASS(AI_faction)),
+                (_module getVariable QCLASS(AI_Class)),
+                (_module getVariable QCLASS(AI_GroupMAX)),
+                (_module getVariable QCLASS(AI_WeapPrimaryLoot)),
+                (_module getVariable QCLASS(AI_WeapSecondaryLoot)),
+                (_module getVariable QCLASS(AI_WeaplauncherLoot)),
+                (_module getVariable QCLASS(AI_Ammo)),
+                (_module getVariable QCLASS(AI_ItemLoot)),
+                (_module getVariable QCLASS(AI_NVGLoot)),
+                (_module getVariable QCLASS(AI_FacewearLoot)),
+                (_module getVariable QCLASS(AI_HeadgearLoot)),
+                (_module getVariable QCLASS(AI_UniformLoot)),
+                (_module getVariable QCLASS(AI_VestLoot)),
+                (_module getVariable QCLASS(AI_BackpackLoot)),
+                (_module getVariable QCLASS(AI_Accuracy)),
+                (_module getVariable QCLASS(AI_Shake)),
+                (_module getVariable QCLASS(AI_Speed)),
+                (_module getVariable QCLASS(AI_SpawnChance)),
+                (_module getVariable QCLASS(AI_ModuleSpawnDistanceMIN)),
+                (_module getVariable QCLASS(AI_ModuleSpawnDistanceMAX))
                 ] call FUNC(generation);
 
             };

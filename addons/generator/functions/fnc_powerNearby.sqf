@@ -23,13 +23,13 @@ while {true} do {
     private _radius = nil;
 
     switch (_GeneratorType) do {
-        case "Misery_100KVA_Gen": {
+        case QCLASS(100KVA_Generator): {
             _radius = 500;
         };
-        case "Misery_HeavilyUsedGen_Gas": {
+        case QCLASS(heavilyUsedGas_Generator): {
             _radius = 25;
         };
-        case "Misery_HeavilyUsedGen_Diesel": {
+        case QCLASS(heavilyUsedDiesel_Generator): {
             _radius = 150;
         };
     };
@@ -37,7 +37,7 @@ while {true} do {
     _lights = nearestObjects [getPosATL _Generator, ["HOUSE","STATIC","BUILDING"], _radius, false];
     _lightsTerrain = nearestTerrainObjects [getPosATL _Generator, ["BUILDING","HOUSE"], _radius, false];
 
-    if (_Generator getVariable ["Misery_Gen_IsRunning", false] isEqualTo true) then {
+    if (_Generator getVariable [QCLASS(generatorRunning), false] isEqualTo true) then {
     {
         private _object = _x;
         private _hitpoints = getAllHitPointsDamage _object select 0;
@@ -55,7 +55,7 @@ while {true} do {
     } forEach _lights + _lightsTerrain;
     };
 
-    if (_Generator getVariable ["Misery_Gen_IsRunning", false] isEqualTo false) exitWith {
+    if (_Generator getVariable [QCLASS(generatorRunning), false] isEqualTo false) exitWith {
     {
         private _object = _x;
         private _hitpoints = getAllHitPointsDamage _object select 0;

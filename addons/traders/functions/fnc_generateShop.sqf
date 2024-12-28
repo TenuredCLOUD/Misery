@@ -53,19 +53,19 @@ _shopName = _shop select (_shop findIf {_x select 0 == "ShopName"}) select 1;
     {
     params ["_target", "_caller", "_actionId", "_arguments"];
     _caller setVariable ["currentTrader", _target];
-    _queue = _target getVariable "Misery_TradingQue";
+    _queue = _target getVariable QCLASS(tradingQue);
     if (isNil "_queue") then {
         _queue = [];
-        _target setVariable ["Misery_TradingQue", _queue, true];
+        _target setVariable [QCLASS(tradingQue), _queue, true];
     };
-    if (_target getVariable "Misery_TraderIsBusy" isEqualTo true) exitWith {
+    if (_target getVariable QCLASS(traderIsBusy) isEqualTo true) exitWith {
         _queue pushBack (getPlayerUID _caller);
-        _target setVariable ["Misery_TradingQue", _queue, true];
-        createDialog "Misery_TraderShop_WaitQue_UI";
+        _target setVariable [QCLASS(tradingQue), _queue, true];
+        createDialog QCLASS(tradingQue_ui);
     };
     _queue pushBack (getPlayerUID _caller);
-    _target setVariable ["Misery_TradingQue", _queue, true];
-    createDialog "Misery_TraderShop_Buy_GUI";
+    _target setVariable [QCLASS(tradingQue), _queue, true];
+    createDialog QCLASS(traderShop_ui);
     },
     {},
     [_shopName, _traderName],
@@ -75,6 +75,6 @@ _shopName = _shop select (_shop findIf {_x select 0 == "ShopName"}) select 1;
     false
 ] call BIS_fnc_holdActionAdd;
 
-MiseryActiveTraders pushBack _traderName;
+GVAR(activeTraders) pushBack _traderName;
 
-publicVariable "MiseryActiveTraders";
+publicVariable QGVAR(activeTraders);

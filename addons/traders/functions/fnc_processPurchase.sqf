@@ -72,7 +72,7 @@ if (_playerFunds >= _price) then {
         call _codeToExecute;
     } else {
         [player, _selectedItem, true] call CBA_fnc_addItem;
-        ctrlSetText [1001, format ["%1 Purchased for %2 %3",_displayName,MiseryCurrencySymbol,[_price, 1, 2, true] call CBA_fnc_formatNumber]];
+        ctrlSetText [1001, format ["%1 Purchased for %2 %3",_displayName,EGVAR(money,symbol),[_price, 1, 2, true] call CBA_fnc_formatNumber]];
     };
     [] call FUNC(shopVAL);
 } else {

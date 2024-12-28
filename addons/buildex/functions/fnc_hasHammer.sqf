@@ -20,11 +20,11 @@ private ["_hashammer"];
 _hashammer = false;
 
 if (MiseryWBKIMS) then {
-    if ([["Misery_craftinghammer","Misery_Anvilhammer","WBK_SmallHammer"]] call EFUNC(common,hasItem)) then {
+    if ([[QCLASS(craftingHammer),QCLASS(anvilHammer),"WBK_SmallHammer"]] call EFUNC(common,hasItem)) then {
         _hashammer = true;
     };
 } else {
-    if ([["Misery_craftinghammer","Misery_Anvilhammer"]] call EFUNC(common,hasItem)) then {
+    if ([[QCLASS(craftingHammer),QCLASS(anvilHammer)]] call EFUNC(common,hasItem)) then {
         _hashammer = true;
     };
 };

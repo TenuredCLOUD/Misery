@@ -87,20 +87,20 @@ _SpawnFLAG = false;
 
 if (Misery_activePOIs >= Misery_POIMAXAllowed) exitWith {
 
-    if (MiseryDebug) then {
+    if (EGVAR(common,debug)) then {
             systemChat "[Misery POI Framework] exiting Generation for Shoreloot due to max active POI's allowed value being reached";
     };
 
     //Start cooldown before retry:
     sleep 120;
 
-_module setVariable ["Misery_POI_Spawned", false, true];
+_module setVariable [QCLASS(poiSpawned), false, true];
 
 };
 
 //Spawn chance check:
 if ((random 100) > _Spawnchance) exitWith {
-if (MiseryDebug) then {systemChat format["[Misery POI Framework] Spawn chance failed, exiting Generation for Shoreloot at %1 checks will be re-initialized next game session...",getPosATL _module]};
+if (EGVAR(common,debug)) then {systemChat format["[Misery POI Framework] Spawn chance failed, exiting Generation for Shoreloot at %1 checks will be re-initialized next game session...",getPosATL _module]};
 
 //This POI is now null from spawning since the original check failed
 };
@@ -147,10 +147,10 @@ if (_ModuleplacementOK) then {
         _maxallowedCrateitems] call FUNC(populateCrate);
     };
 } else {
-if (MiseryDebug) then {systemChat format["[Misery POI Framework] Module at %1 is a Shore loot module, and must be placed near a shore...",getPosATL _module];};
+if (EGVAR(common,debug)) then {systemChat format["[Misery POI Framework] Module at %1 is a Shore loot module, and must be placed near a shore...",getPosATL _module];};
 };
 
-if (MiseryDebug) then {
+if (EGVAR(common,debug)) then {
     _randID = str (diag_tickTime * 1e6) + str _module;
     _markerName = format ["Shoreloot %1", _randID];
     _marker = createMarkerLocal [_markerName, _pos];
@@ -168,7 +168,7 @@ if (!isNil "grad_persistence_blacklist") then {
     {
         if ((grad_persistence_blacklist find (toLower _x) == -1) && (grad_persistence_blacklist find (toUpper _x) == -1)) then {
             [_x] call grad_persistence_fnc_blacklistClasses;
-            if (MiseryDebug) then {systemChat format ["[Misery POI Framework] GRAD Persistence detected, Adding %1 to blacklist for saving / reloading...", _x]};
+            if (EGVAR(common,debug)) then {systemChat format ["[Misery POI Framework] GRAD Persistence detected, Adding %1 to blacklist for saving / reloading...", _x]};
         };
     } forEach (_WreckTypes + _crateTypes);
 };
@@ -190,8 +190,8 @@ waitUntil {
 
 if (_deleteFlag) exitWith {
     {deleteVehicle _x} forEach _spawnedObjects; // Delete all spawned objects
-    _module setVariable ["Misery_POI_Spawned", false, true];
-if (MiseryDebug && {!isNil "_marker"}) then {
+    _module setVariable [QCLASS(poiSpawned), false, true];
+if (EGVAR(common,debug) && {!isNil "_marker"}) then {
         deleteMarker _marker;
     };
 
