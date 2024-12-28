@@ -1,8 +1,7 @@
 #include "..\script_component.hpp"
- /*
- * Author: TenuredCLOUD
- * Loot Server Loop
- * Monitors Players positions relative to buildings
+/*
+ * Author: TenuredCLOUD, MikeMF
+ * Loot Server Loop, Monitors Players positions relative to buildings
  *
  * Arguments:
  * None
