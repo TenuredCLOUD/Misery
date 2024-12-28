@@ -22,7 +22,7 @@ private _players = call EFUNC(common,listPlayers);
 {
     private _player = _x;
 
-    private _nearBuildings = nearestTerrainObjects [getPosATL _player, ["HOUSE", "BUILDING"], 100, false, true];
+    private _nearBuildings = nearestTerrainObjects [_player, ["HOUSE", "BUILDING"], 100, false, true];
 
     {
         private _building = _x;
