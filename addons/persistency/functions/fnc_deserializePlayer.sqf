@@ -26,7 +26,7 @@ if (EGVAR(common,ace)) then {
 
 player setUnitLoadout _loadout;
 player setDir(_stats select 1);
-if!((count(_stats select 2))==0)then{
+if((count(_stats select 2))!=0)then{
 _pos=_stats select 2;
 player setPosATL[_pos select 0,_pos select 1,_pos select 2];
 };
@@ -99,14 +99,14 @@ if !(EGVAR(common,checkMultiplayer)) then {
     } forEach _unitDetails;
 };
 
-if!((_stats select 3)==worldName)then{
+if((_stats select 3)!=worldName)then{
     systemChat "Different worldName";
 };
 
 if!(EGVAR(common,checkMultiplayer))then{setDate(_stats select 4)};
 systemChat format["Misery character loaded: %1",_saveName];
 
-if !(MiserysurvivalLoadScript=="") then {[player] call MiserysurvivalLoadScript};
+if (MiserysurvivalLoadScript !="") then {[player] call MiserysurvivalLoadScript};
 
 switch (_stats select 5) do {
     case "STAND": {player playAction "PlayerStand";};

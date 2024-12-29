@@ -14,7 +14,7 @@ if !(hasInterface) exitWith {};
         params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
 
         if (_key isEqualTo DIK_ESCAPE) then {
-            if !(MiserysurvivalKeyhandleScript=="") then {
+            if (MiserysurvivalKeyhandleScript != "") then {
             private _scriptDone = [player] call MiserysurvivalKeyhandleScript;
             };
 
@@ -26,7 +26,7 @@ if !(hasInterface) exitWith {};
         };
 
         if (_key isEqualTo DIK_F4 && _alt) then {
-        if!(MiserysurvivalKeyhandleScript=="")then{
+        if (MiserysurvivalKeyhandleScript != "") then{
         private _scriptDone = [player] call MiserysurvivalKeyhandleScript;
         };
 
@@ -40,7 +40,7 @@ if !(hasInterface) exitWith {};
 
         if (_ctrl && _alt && _key isEqualTo DIK_DELETE) then {
 
-        if!(MiserysurvivalKeyhandleScript=="")then{
+        if (MiserysurvivalKeyhandleScript != "") then {
         private _scriptDone = [player] call MiserysurvivalKeyhandleScript;
         };
 

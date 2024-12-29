@@ -48,7 +48,7 @@ _radval= _entry select 11;
 _exposureval= _entry select 12;
 
 //Gasmask check for items, check RVG goggle array
-    // if (_checkforGmask && {(goggles player in antirad_goggles || headgear player in antirad_headgears)}) exitWith { //Needs to be tweaked to filter through protective masks etc... 
+    // if (_checkforGmask && {(goggles player in antirad_goggles || headgear player in antirad_headgears)}) exitWith { //Needs to be tweaked to filter through protective masks etc...
     // titleText ["You cannot eat or drink while wearing a mask...", "PLAIN DOWN"]
     // };
 
@@ -60,27 +60,29 @@ if (_checkforCopener && {!("rvg_canOpener" in magazines player) && !("rvg_toolki
     titleText ["You need a can opener or tools to open this.", "PLAIN DOWN"];
 };
 
-//Item replacer
-if !(_replaceWith=="KEEP") then {
-player removeItem _selectedItem;
-if !(_replaceWith=="") then {player addItem _replaceWith};
+    //Item replacer
+    if (_replaceWith != "KEEP") then {
+    player removeItem _selectedItem;
+    if (_replaceWith != "") then {
+        player addItem _replaceWith
+    };
 };
 
 //Audio
-if !(_playaudio=="") then {player say3D [_playaudio,10,1,2,0];}; //[sound, maxDistance, pitch, isSpeech, offset]
+if (_playaudio != "") then {player say3D [_playaudio,10,1,2,0];}; //[sound, maxDistance, pitch, isSpeech, offset]
 
 //Waittimer
-if !(_waittill == 0) then {sleep _waittill}; //delayed effect (good for medication simulation)
+if (_waittill != 0) then {sleep _waittill}; //delayed effect (good for medication simulation)
 
 //Radiation
-if !(_radval==0) then {player setVariable ["radiation", (_rads + _radval)]};
+if (_radval !=0) then {player setVariable ["radiation", (_rads + _radval)]};
 
 //Exposure
-if !(_exposureval==0) then {player setVariable [QCLASS(exposure), (_MExposure + _exposureval)];};
+if (_exposureval != 0) then {player setVariable [QCLASS(exposure), (_MExposure + _exposureval)];};
 
 //Hunger / Thirst
-if !(_hunger == 0) then {player setVariable [QCLASS(hunger), (_MHunger + _hunger)];};
-if !(_thirst == 0) then {player setVariable [QCLASS(thirst), (_MThirst + _thirst)];};
+if (_hunger != 0) then {player setVariable [QCLASS(hunger), (_MHunger + _hunger)];};
+if (_thirst != 0) then {player setVariable [QCLASS(thirst), (_MThirst + _thirst)];};
 
 //Reset to 0 if less than 0:
 if (_MHunger < 0) then {player setVariable [QCLASS(hunger), 0]};
@@ -107,6 +109,6 @@ if ((count _debuffRemove) > 0) then {
 };
 
 //Custom script execution
-if !(_script=="") then {_selectedItem call _script};
-
-
+if (_script !="") then {
+    selectedItem call _script
+};

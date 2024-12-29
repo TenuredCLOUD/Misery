@@ -54,7 +54,7 @@ if (count _matchedRecipe > 0) then {
         _DrinkFSB ctrlShow false;
         _ExitB ctrlShow false;
 
-        if !((currentWeapon player)=="") then {
+        if (currentWeapon player != "") then {
         player action["SWITCHWEAPON",player,player,-1];
         };
 

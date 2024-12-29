@@ -78,8 +78,8 @@ if (count _matchedRecipe > 0) then {
         _RecipeB ctrlShow false;
         _ExitB ctrlShow false;
 
-        if !((currentWeapon player)=="") then {
-        player action["SWITCHWEAPON",player,player,-1];
+        if (currentWeapon player != "") then {
+            player action["SWITCHWEAPON",player,player,-1];
         };
 
         player playAction "Gear";

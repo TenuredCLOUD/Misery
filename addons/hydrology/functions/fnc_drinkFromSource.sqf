@@ -27,7 +27,7 @@ private _ExitB = _dialog displayCtrl 1602;
         _DrinkFSB ctrlShow false;
         _ExitB ctrlShow false;
 
-        if !((currentWeapon player)=="") then {
+        if (currentWeapon player != "") then {
         player action["SWITCHWEAPON",player,player,-1];
         };
 

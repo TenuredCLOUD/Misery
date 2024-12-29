@@ -27,8 +27,8 @@ private _RecipeB = _dialog displayCtrl 1601;
 private _ExitB = _dialog displayCtrl 1602;
 
 if (EGVAR(common,debug)) then {
-systemChat format ["Selected output item: %1", _selectedOutputItem]; //debug output
-systemChat format ["Player's recipes: %1", _playerRecipes]; //debug output
+    systemChat format ["Selected output item: %1", _selectedOutputItem]; //debug output
+    systemChat format ["Player's recipes: %1", _playerRecipes]; //debug output
 };
 
 {
@@ -36,7 +36,7 @@ systemChat format ["Player's recipes: %1", _playerRecipes]; //debug output
         _matchedRecipe = _x;
     };
     if (EGVAR(common,debug)) then {
-    systemChat format ["Output item of current recipe: %1", _x select 0]; //debug output
+        systemChat format ["Output item of current recipe: %1", _x select 0]; //debug output
     };
 } forEach _playerRecipes;
 
@@ -65,7 +65,7 @@ if (count _matchedRecipe > 0) then {
         _RecipeB ctrlShow false;
         _ExitB ctrlShow false;
 
-        if !((currentWeapon player)=="") then {
+        if (currentWeapon player != "") then {
         player action["SWITCHWEAPON",player,player,-1];
         };
 

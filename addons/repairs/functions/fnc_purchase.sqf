@@ -25,7 +25,7 @@ if (_selectedIndex == -1) exitWith {
     ctrlSetText [1001, "No Repair option selected..."];
 };
 
-if !(_selectedIndex == -1) exitWith {
+if (_selectedIndex != -1) exitWith {
 
 _PurchaseB ctrlShow false;
 _ExitB ctrlShow false;

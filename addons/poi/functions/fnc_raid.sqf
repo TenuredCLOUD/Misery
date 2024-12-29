@@ -233,7 +233,7 @@ for "_i" from 1 to _numEntities do {
 
     if ((_unit ammo (primaryWeapon _unit)) isEqualTo 0) then {
         _magazinearrayP = getArray (configFile >> "CfgWeapons" >> primaryWeapon _unit >> "magazines");
-        if !(_magazinearrayP isEqualTo []) then {
+        if (_magazinearrayP isNotEqualTo []) then {
             _magP = _magazinearrayP select 0;
             for "_j" from 1 to _randomammocount do {_unit addMagazine _magP;};
         };
@@ -241,7 +241,7 @@ for "_i" from 1 to _numEntities do {
 
     if ((_unit ammo (handgunWeapon _unit)) isEqualTo 0) then {
         _magazinearrayH = getArray (configFile >> "CfgWeapons" >> handgunWeapon _unit >> "magazines");
-        if !(_magazinearrayH isEqualTo []) then {
+        if (_magazinearrayH isNotEqualTo []) then {
             _magH = _magazinearrayH select 0;
             for "_j" from 1 to _randomammocount do {_unit addMagazine _magH;};
         };
@@ -249,7 +249,7 @@ for "_i" from 1 to _numEntities do {
 
     if ((_unit ammo (secondaryWeapon _unit)) isEqualTo 0) then {
         _magazinearrayS = getArray (configFile >> "CfgWeapons" >> secondaryWeapon _unit >> "magazines");
-        if !(_magazinearrayS isEqualTo []) then {
+        if (_magazinearrayS isNotEqualTo []) then {
             _magS = _magazinearrayS select 0;
             for "_j" from 1 to _randomammocount do {_unit addMagazine _magS;};
         };

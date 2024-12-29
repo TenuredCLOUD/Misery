@@ -22,3 +22,8 @@ _string="";if((typeName _this)=="STRING")then{_string=_this}else{_string=str _th
 if(_string=="")exitWith{[]};
 if!(((_string splitString "")select 0)=="[")then{_string=format["[%1]",_string]};
 (parseSimpleArray _string)
+
+/*
+ * I have absolutely no fucking idea what is going on with this function. But it hurts my soul to look at.
+ * Hemtt also does not like it.
+*/
