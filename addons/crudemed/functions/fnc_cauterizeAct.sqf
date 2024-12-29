@@ -23,7 +23,7 @@
     "[player] call ace_medical_blood_fnc_isBleeding",
     {
     //Force holstering
-    if !((currentWeapon player)=="") then {
+    if (currentWeapon player != "") then {
     player action["SWITCHWEAPON",player,player,-1];
     };
 
