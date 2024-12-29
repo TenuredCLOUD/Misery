@@ -107,7 +107,7 @@ if (EGVAR(common,debug)) then {systemChat format["[Misery POI Framework] Spawn c
 
 _ModuleplacementOK = false;
 
-_overShore = !(_Pos isFlatEmpty  [-1, -1, -1, -1, 0, true] isEqualTo []);
+_overShore = (_Pos isFlatEmpty  [-1, -1, -1, -1, 0, true] isNotEqualTo []);
 
 if (_overShore) then {
     _ModuleplacementOK = true;

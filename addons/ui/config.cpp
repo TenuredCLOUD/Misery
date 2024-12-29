@@ -6,8 +6,8 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"cba_main","A3_ui_f",QCLASS(common)}; // Include addons from this mod that contain code or assets you depend on. Affects loadorder. Including main as an example here.
-        authors[] = {"TenuredCLOUD"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}
+        requiredAddons[] = {"cba_main","A3_ui_f",QCLASS(common)};
+        authors[] = {"TenuredCLOUD"};
         VERSION_CONFIG;
     };
 };

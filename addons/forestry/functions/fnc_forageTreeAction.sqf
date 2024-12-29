@@ -22,7 +22,7 @@
     "call Misery_fnc_NearTree",
     {
     //Force holstering
-    if !((currentWeapon player)=="") then {
+    if (currentWeapon player != "") then {
     player action["SWITCHWEAPON",player,player,-1];
     };
 

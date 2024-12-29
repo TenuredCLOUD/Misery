@@ -14,18 +14,12 @@
  *
 */
 
-private ["_canfish","_isLookingAtWater","_overShore","_overWater"];
+private _isLookingAtWater = surfaceIsWater (screenToWorld [0.5,0.5]);
+private _overShore = (position player isFlatEmpty  [-1, -1, -1, -1, 0, true] isNotEqualTo []);
+private _overWater = (position player isFlatEmpty  [-1, -1, -1, -1, 2, false] isNotEqualTo []);
 
-_canfish=false;
-
-_isLookingAtWater = surfaceIsWater (screenToWorld [0.5,0.5]);
-_overShore = !(position player isFlatEmpty  [-1, -1, -1, -1, 0, true] isEqualTo []);
-_overWater = !(position player isFlatEmpty  [-1, -1, -1, -1, 2, false] isEqualTo []);
-
-if ((_overShore && _isLookingAtWater) || (_overWater && _isLookingAtWater) || (vehicle player isKindOf 'Ship')) then {
-
- _canfish = true;
-
- if (_canfish)exitWith{};
+if ((_overShore && _isLookingAtWater) || (_overWater && _isLookingAtWater) || (vehicle player isKindOf 'Ship')) exitWith {
+    true
 };
-  _canfish //return
+
+false // return

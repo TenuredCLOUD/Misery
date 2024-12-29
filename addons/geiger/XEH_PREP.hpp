@@ -1,3 +1,3 @@
-PREP(geigerBar);
-PREP(personalGeigerBatteries);
+PREP(bar);
+PREP(batteries);
 PREP(readings);

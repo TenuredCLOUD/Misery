@@ -27,7 +27,7 @@ Will most likely rewrite to new UI based use - Or move to an ACE action
     "[player] call ace_medical_blood_fnc_isBleeding",
     {
     //Force holstering
-    if !((currentWeapon player)=="") then {
+    if (currentWeapon player != "") then {
     player action["SWITCHWEAPON",player,player,-1];
     };
 

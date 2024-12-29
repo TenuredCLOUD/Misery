@@ -14,12 +14,13 @@
  *
 */
 
-private["_item","_description"];
-_item=_this select 0;
-_description="";
+
+private _item=_this select 0;
+private _description="";
+
 {
-_description=getText(configFile>>_x>>_item>>"descriptionShort");
-if!(_description=="")exitWith{};
-}forEach["cfgWeapons","cfgMagazines"]; //["cfgWeapons","cfgMagazines","cfgGlasses","cfgVehicles"];
-if(_description=="")exitWith{};
-//hint parseText _description;
+    _description = getText (configFile >> _x >> _item >> "descriptionShort");
+    if (_description != "") exitWith {};
+} forEach ["CfgWeapons", "CfgMagazines"];
+
+if (_description == "") exitWith {};

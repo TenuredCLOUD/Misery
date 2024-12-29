@@ -28,7 +28,7 @@
 
     //Force holstering if WBKIMS disabled:
     if (!MiseryWBKIMS) then {
-    if !((currentWeapon player)=="") then {
+    if (currentWeapon player != "") then {
     player action["SWITCHWEAPON",player,player,-1];
         };
     };

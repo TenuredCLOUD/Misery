@@ -1,11 +1,5 @@
 PREP(processRefuel);
-PREP(refillJet);
 PREP(refillStart);
-PREP(refillVehicleDiesel);
-PREP(refillVehiclePetrol);
 PREP(refillVehicleStart);
 PREP(refuelListed);
-PREP(siphonVehicleDiesel);
-PREP(siphonVehicleJet);
-PREP(siphonVehiclePetrol);
 PREP(vehicleIcon);

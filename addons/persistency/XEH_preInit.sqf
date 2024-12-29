@@ -24,7 +24,7 @@ if (MiserysurvivalPersistence == 2) then {
     [[], EFUNC(persistency,persistenceHandle)] remoteExec ["call", 0, true];
 };
 
-if !(MiserysurvivalKillhandleScript == "") then {
+if (MiserysurvivalKillhandleScript != "") then {
     [[], EFUNC(persistency,killHandle)] remoteExec ["call", 0, true];
 };
 
