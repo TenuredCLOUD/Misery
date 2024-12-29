@@ -4,10 +4,8 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
-/*
-if (hasInterface) then {
-    [player] call FUNC(initialize);
-};
-*/
+if (!hasInterface) exitWith {};
+
+[player] call FUNC(initialize);
 
 ADDON = true;

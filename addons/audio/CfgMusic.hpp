@@ -30,5 +30,5 @@ class CfgMusic {
     MACRO_MUSIC(theBeginning);
     MACRO_MUSIC(theBurningRain);
     MACRO_MUSIC(theySeeYou);
-    MACRO_MUSIC(wendingo);
+    MACRO_MUSIC(wendigo);
 };

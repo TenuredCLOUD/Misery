@@ -14,18 +14,17 @@
  *
 */
 
-MiseryACE=false;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
+
 
 if (!hasInterface) exitWith {};
 
-if (MiseryACE) then {
-[player, "Misery_Thrombomodulin", 120, 300, 1, 0, 1] call ace_medical_status_fnc_addMedicationAdjustment;
+if (EGVAR(common,ace)) then {
+[player, QCLASS(thrombomodulin), 120, 300, 1, 0, 1] call ace_medical_status_fnc_addMedicationAdjustment;
 };
 
 titleText ["You inject the Thrombomodulin...", "PLAIN DOWN"];
 
-player removeItem "Misery_Thrombomodulin";
+player removeItem QCLASS(thrombomodulin);
 
 sleep 5;
 

@@ -16,26 +16,26 @@
 
 _Generator = _this select 0;
 
-while {_Generator getVariable ["Misery_Gen_IsRunning", false] isEqualTo true && _Generator getVariable ["Misery_Gen_FuelLVL", 100] > 0} do {
+while {_Generator getVariable [QCLASS(generatorRunning), false] isEqualTo true && _Generator getVariable [QCLASS(generatorFuelLevel), 100] > 0} do {
 
     _GeneratorType = typeOf _Generator;
 
     private _FuelDelay = nil;
 
     switch (_GeneratorType) do {
-        case "Misery_100KVA_Gen": {
+        case QCLASS(100KVA_Generator): {
             _FuelDelay = 300;
         };
-        case "Misery_HeavilyUsedGen_Gas": {
+        case QCLASS(heavilyUsedGas_Generator): {
             _FuelDelay = 60;
         };
-        case "Misery_HeavilyUsedGen_Diesel": {
+        case QCLASS(heavilyUsedDiesel_Generator): {
             _FuelDelay = 120;
         };
     };
 
-    _fuelLevel = _Generator getVariable ["Misery_Gen_FuelLVL", 100];
-    _Generator setVariable ["Misery_Gen_FuelLVL", _fuelLevel - 1, true];
+    _fuelLevel = _Generator getVariable [QCLASS(generatorFuelLevel), 100];
+    _Generator setVariable [QCLASS(generatorFuelLevel), _fuelLevel - 1, true];
 
     sleep _FuelDelay;
 };

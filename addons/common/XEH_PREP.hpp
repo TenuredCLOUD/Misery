@@ -2,7 +2,6 @@ PREP(buildingPositions);
 PREP(buildingPositionsInside);
 PREP(getSimplifiedLoadout);
 PREP(hasItem);
-PREP(isInGeometry);
 PREP(isInside);
 PREP(isInsideLoot);
 PREP(itemDecrement);

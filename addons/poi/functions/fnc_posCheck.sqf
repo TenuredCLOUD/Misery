@@ -16,7 +16,7 @@
  * Public: No
 */
 
-private _modules = allMissionObjects "Misery_POI";
+private _modules = allMissionObjects QCLASS(poi);
 
 waitUntil {
     private _players = call EFUNC(common,listPlayers);
@@ -34,23 +34,23 @@ waitUntil {
             // Check if the POI is within the spawn check distance and less than the maximum spawn distance
             if (_distance > Misery_POISpawnCheckDistance && _distance < _maxSpawnDistance) then {
 
-                private _poiType = _module getVariable "Misery_POI_Type"; //STRING
+                private _poiType = _module getVariable QCLASS(poiType); //STRING
 
-                private _poiSpawned = _module getVariable ["Misery_POI_Spawned", false];
+                private _poiSpawned = _module getVariable [QCLASS(poiSpawned), false];
 
                 if (!(_poiSpawned) && isServer) then {
 
-                _module setVariable ["Misery_POI_Spawned", true, true];
+                _module setVariable [QCLASS(poiSpawned), true, true];
 
                 switch (_poiType) do {
                 case "CAMP": {
                 [
                 _module,
-                (_module getVariable "Misery_POI_faction"),
-                (_module getVariable "Misery_POI_AIClass"),
-                (_module getVariable "Misery_POI_AICountMAX"),
-                (_module getVariable "Misery_POI_AICountMIN"),
-                (_module getVariable "Misery_POI_AISpawnDistance"),
+                (_module getVariable QCLASS(poiFaction)),
+                (_module getVariable QCLASS(poi_ai_class)),
+                (_module getVariable QCLASS(poi_ai_CountMax)),
+                (_module getVariable QCLASS(poi_ai_countMin)),
+                (_module getVariable QCLASS(poi_ai_spawnDistance)),
                 (_module getVariable "MiseryPOIAIWeapPrimaryLoot"),
                 (_module getVariable "MiseryPOIAIWeapSecondaryLoot"),
                 (_module getVariable "MiseryPOIAIWeaplauncherLoot"),
@@ -124,11 +124,11 @@ waitUntil {
                 case "PMCRAID": {
                 [
                 _module,
-                (_module getVariable "Misery_POI_faction"),
-                (_module getVariable "Misery_POI_AIClass"),
-                (_module getVariable "Misery_POI_AICountMAX"),
-                (_module getVariable "Misery_POI_AICountMIN"),
-                (_module getVariable "Misery_POI_AISpawnDistance"),
+                (_module getVariable QCLASS(poiFaction)),
+                (_module getVariable QCLASS(poi_ai_class)),
+                (_module getVariable QCLASS(poi_ai_CountMax)),
+                (_module getVariable QCLASS(poi_ai_countMin)),
+                (_module getVariable QCLASS(poi_ai_spawnDistance)),
                 (_module getVariable "MiseryPOIAIWeapPrimaryLoot"),
                 (_module getVariable "MiseryPOIAIWeapSecondaryLoot"),
                 (_module getVariable "MiseryPOIAIWeaplauncherLoot"),

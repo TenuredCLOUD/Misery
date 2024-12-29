@@ -1,1 +1,3 @@
-PREP(Spawner);
+PREP(clean);
+PREP(loop);
+PREP(spawn);

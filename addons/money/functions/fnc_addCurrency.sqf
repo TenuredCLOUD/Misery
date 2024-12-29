@@ -18,7 +18,7 @@
 
     params ["_recipient", "_amount"];
 
-    private _currentFunds = _recipient getVariable ["MiseryCurrency", 0];
+    private _currentFunds = _recipient getVariable [QCLASS(currency), 0];
 
-    _recipient setVariable ["MiseryCurrency", _currentFunds + _amount];
+    _recipient setVariable [QCLASS(currency), _currentFunds + _amount];
 

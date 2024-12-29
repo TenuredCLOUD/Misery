@@ -60,7 +60,7 @@
     };
 
     //Check if ailments are active (before infection)
-    if (MiseryAilments == "ENABLED") then {
+    if (EGVAR(survival,ailments) == "ENABLED") then {
 
     private _timeafter = time + 120;
     [_timeafter] spawn {
@@ -69,7 +69,7 @@
     _TimeA=_this select 0;
     waitUntil {(!alive player) or (time > _TimeA)};
 
-    player setVariable ["cauterizenotif", format ["<t>Your Cauterized wounds feel itchy and are hot to the touch... <img shadow='0' size='1.5' image='%1'/>", "Data\infection.paa"]];
+    player setVariable ["cauterizenotif", format ["<t>Your Cauterized wounds feel itchy and are hot to the touch... <img shadow='0' size='1.5' image='%1'/>", QPATHTOEF(icons,data\infection_ca.paa)]];
     hintSilent parseText format ["<t>%1</t><br/>",
     player getVariable ['cauterizenotif', nil]
     ];
@@ -81,7 +81,7 @@
     _TimeA=_this select 0;
     waitUntil {(!alive player) or (time > _TimeA)};
     if (alive player) then {
-    player setVariable ["MiseryInfection", (random 15)]; //random infection amount
+    player setVariable [QCLASS(infection), (random 15)]; //random infection amount
     };
         };
 

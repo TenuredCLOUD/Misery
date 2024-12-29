@@ -16,12 +16,12 @@
 
 if (goggles player in antirad_goggles) then {
 
-   player removeItem "Misery_gascartridge";
+   player removeItem QCLASS(gasCartridge);
 
    titleText ["You replace the cartridges on your gasmask...", "PLAIN DOWN"];
 
    sleep 1;
 
-   player setVariable ["Miserycartridge", 100];
+   player setVariable [QCLASS(gasmaskCartridgeLevel), 100];
 
 };

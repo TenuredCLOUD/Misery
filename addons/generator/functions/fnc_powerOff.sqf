@@ -18,32 +18,32 @@
     _PowerOffB = findDisplay 573849 displayCtrl 1601;
     _RefuelB = findDisplay 573849 displayCtrl 1602;
 
-    _GeneratorType = typeOf MiseryTarget_Gen;
+    _GeneratorType = typeOf GVAR(targetGenerator);
 
     switch (_GeneratorType) do {
-        case "Misery_100KVA_Gen": {
+        case QCLASS(100KVA_Generator): {
             _soundStop = "100_KVA_Shutdown";
         };
-        case "Misery_HeavilyUsedGen_Gas": {
+        case QCLASS(heavilyUsedGas_Generator): {
             _soundStop = "petrolgeneratorstop";
         };
-        case "Misery_HeavilyUsedGen_Diesel": {
+        case QCLASS(heavilyUsedDiesel_Generator): {
             _soundStop = "dieselgeneratorstop";
         };
     };
 
-    MiseryTarget_Gen setVariable ["Misery_Gen_IsRunning", false, true];
+    GVAR(targetGenerator) setVariable [QCLASS(generatorRunning), false, true];
 
        ctrlSetText [1001, "Shutting down generator..."];
 
     _PowerOnB ctrlShow false;
     _RefuelB ctrlShow false;
 
-    private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position MiseryTarget_Gen);
-    MiseryTarget_Gen setVariable ["Misery_GenSound", true,true];
+    private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position GVAR(targetGenerator));
+    GVAR(targetGenerator) setVariable [QCLASS(generatorSound), true,true];
     [_soundDummy, [_soundStop, 500]] remoteExec ["say3D", 0, _soundDummy];
     [{
-    !(MiseryTarget_Gen getVariable ["Misery_GenSound", false])
+    !(GVAR(targetGenerator) getVariable [QCLASS(generatorSound), false])
     },{
     deleteVehicle _this;
     }, _soundDummy] call CBA_fnc_waitUntilAndExecute;

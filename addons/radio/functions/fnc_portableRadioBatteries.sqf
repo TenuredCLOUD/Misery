@@ -15,7 +15,7 @@
  *
 */
 
-if !([["Misery_9vbat"]] call EFUNC(common,hasItem)) then {
+if !([[QCLASS(9vBattery)]] call EFUNC(common,hasItem)) then {
 
    titleText ["It's completely dead...", "PLAIN DOWN"];
 
@@ -23,11 +23,11 @@ if !([["Misery_9vbat"]] call EFUNC(common,hasItem)) then {
 
 titleText ["You add a battery to your portable radio...", "PLAIN DOWN"];
 
-player removeItem "Misery_PortableradioNobattery";
-player removeItem "Misery_9vbat";
+//player removeItem QCLASS(PortableradioNobattery";
+player removeItem QCLASS(9vBattery);
 
 if (alive player) then {
 
-    player addItem "Misery_PortableradioOFF";
+//    player addItem QCLASS(PortableradioOFF";
     };
   };

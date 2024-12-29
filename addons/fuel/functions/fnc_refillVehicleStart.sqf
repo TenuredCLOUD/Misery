@@ -14,9 +14,8 @@
  *
 */
 
-(findDisplay 46 createDisplay "MiseryINVACT_GUI")closeDisplay 1;
-(findDisplay 602) closeDisplay 2;
-createDialog "MiseryRefuel_Vehicle_JCan_GUI";
+[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
+createDialog QCLASS(refuelJerryCan_ui);
 
 private _Jerrycanused= _this; // item classname
 

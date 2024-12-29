@@ -14,19 +14,18 @@
  *
 */
 
-MiseryACE=false;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
+
 
 if (!hasInterface) exitWith {};
 
 //ACE med ajustment:
-  if (MiseryACE) then {
-  [player, "Misery_ThrombomodulinStimpack", 120, 600, 1, 0, 1] call ace_medical_status_fnc_addMedicationAdjustment;
+  if (EGVAR(common,ace)) then {
+  [player, QCLASS(thrombomodulin_Stimpack), 120, 600, 1, 0, 1] call ace_medical_status_fnc_addMedicationAdjustment;
   };
 
 titleText ["You use the Thrombomodulin Stimpack...", "PLAIN DOWN"];
 
-    player removeItem "Misery_ThrombomodulinStimpack";
+    player removeItem QCLASS(thrombomodulin_Stimpack);
 
 sleep 5;
 
