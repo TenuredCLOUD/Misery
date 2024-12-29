@@ -15,7 +15,7 @@
 
 // If safezone check fails, system will not function.
 if !(call FUNC(checkSafeZones)) exitWith {
-    diag_log "[MISERY] - Safezone marker check failed, system disabled.";
+    [QUOTE(COMPONENT_BEAUTIFIED), "Marker check system failed, system disabled."] call EFUNC(common,debugMessage);
 };
 
 [{

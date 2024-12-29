@@ -14,22 +14,19 @@
 */
 
 // Convert to Array.
-if (!GVAR(safezoneAreas) isEqualType []) then {
-    GVAR(safezoneAreas) = [GVAR(safezoneAreas)];
+if (GVAR(safezoneAreas) isEqualType "") then {
+    GVAR(safezoneAreas) = parseSimpleArray GVAR(safezoneAreas);
 };
 
 private _failedMarkers = [];
 
 {
-    private _markerShape = markerShape _x;
-    if (_markerShape != "RECTANGLE" || _markerShape != "ELLIPSE") then {
-        diag_log format ["[MISERY] - Safezone marker (%1) is not an area marker, remove it from the list.", _x];
-        _failedMarkers pushBackUnique _x;
-    };
-
-    if (_markerShape == "") then {
-        diag_log format ["[MISERY] - Safezone marker (%1) does not exist, remove it from the list", _x];
-        _failedMarkers pushBackUnique _x;
+    private _marker = _x;
+    private _markerShape = markerShape _marker;
+    if (_markerShape != "RECTANGLE" && _markerShape != "ELLIPSE") then {
+        private _msg = format ["Safezone marker (%1) is either not an area marker or does not exist, remove it from the list.", _marker];
+        [QUOTE(COMPONENT_BEAUTIFIED), _msg] call EFUNC(common,debugMessage);
+        _failedMarkers pushBackUnique _marker;
     };
 } forEach GVAR(safezoneAreas);
 
