@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
  /*
- * Author: TenuredCLOUD
+ * Author: TenuredCLOUD, MikeMF
  * Check if player has an artifact in thier inventory
  *
  * Arguments:
@@ -10,30 +10,10 @@
  * 0: Artifact found <BOOL>
  *
  * Example:
- * [] call misery_llcontainer_fnc_hasArtifact;
+ * [] call misery_radiation_fnc_hasArtifact;
  *
 */
 
-private _Hasartifact = false;
+if ([[MACRO_ARTIFACTS]] call EFUNC(common,hasItem)) exitWith {true};
 
-private _check_items = items player;
-
-if ([[
-QCLASS(artifact_01),
-QCLASS(artifact_02),
-QCLASS(artifact_03),
-QCLASS(artifact_04),
-QCLASS(artifact_05),
-QCLASS(artifact_06),
-QCLASS(artifact_07),
-QCLASS(artifact_08),
-QCLASS(artifact_09),
-QCLASS(artifact_10)]] call EFUNC(common,hasItem)) then {
-
-_Hasartifact = true;
-
-if (_Hasartifact)exitWith{};
-
-};
-
-_Hasartifact //return
+false

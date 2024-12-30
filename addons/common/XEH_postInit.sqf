@@ -32,6 +32,11 @@ if (GVAR(specialGear)) then {
 
 if (!hasInterface) exitWith {};
 
+// Loadout change will clear item cache for hasItem
+["loadout", {
+    GVAR(itemsCache) = nil;
+}] call CBA_fnc_addPlayerEventHandler;
+
 [QGVAR(titleText), {
     params ["_text"];
     titleText [format ["<t font='PuristaMedium'>%1</t>", _text], "PLAIN DOWN", -1, true, true];

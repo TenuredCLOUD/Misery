@@ -1,4 +1,7 @@
+PREP(checkRadZones);
 PREP(exposure);
-PREP(zone);
 PREP(hasArtifact);
+PREP(playerRadZone);
+PREP(playersInRadZones);
 PREP(storeArtifact);
+PREP(zone);

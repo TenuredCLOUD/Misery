@@ -14,10 +14,6 @@
  *
 */
 
-//ACE check for dmg:
-EGVAR(common,ace)=false;
-if (isClass(configFile>>"cfgPatches">>"ace_main"))then{EGVAR(common,ace)=true};
-
 [{(player getVariable [QCLASS(radiation), 0]) >= 500},
 {
     [{

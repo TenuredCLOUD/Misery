@@ -6,11 +6,6 @@ ADDON = false;
 
 #include "initSettings.inc.sqf"
 
-// Loadout change will clear item cache for hasItem
-["loadout", {
-    GVAR(itemsCache) = nil;
-}] call CBA_fnc_addPlayerEventHandler;
-
 // Prestart for vehicle interaction to avoid undefined RPT logs
 GVAR(targetVehicle) = objNull;
 GVAR(targetVehicleType) = nil;

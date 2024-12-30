@@ -33,16 +33,16 @@ _wh = "groundWeaponHolder" createVehicle (getPos _unit);
 _wh addItemCargoGlobal [
 
 [
-QCLASS(artifact01),
-QCLASS(artifact02),
-QCLASS(artifact03),
-QCLASS(artifact04),
-QCLASS(artifact05),
-QCLASS(artifact06),
-QCLASS(artifact07),
-QCLASS(artifact08),
-QCLASS(artifact09),
-QCLASS(artifact10)
+QCLASS(artifact_01),
+QCLASS(artifact_02),
+QCLASS(artifact_03),
+QCLASS(artifact_04),
+QCLASS(artifact_05),
+QCLASS(artifact_06),
+QCLASS(artifact_07),
+QCLASS(artifact_08),
+QCLASS(artifact_09),
+QCLASS(artifact_10)
 ]call BIS_fnc_selectRandom,1];
 
 };
