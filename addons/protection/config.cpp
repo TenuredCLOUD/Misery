@@ -4,7 +4,7 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {};
-        weapons[] = {QCLASS(rebreather)};
+        weapons[] = {QCLASS(Rebreather)};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {QCLASS(common)};
         authors[] = {"TenuredCLOUD"};
@@ -12,7 +12,7 @@ class CfgPatches {
     };
 };
 
-#include "CfgWeapons.hpp"
-#include "CfgVehicles.hpp"
-#include "CfgGlasses.hpp"
 #include "CfgEventHandlers.hpp"
+#include "CfgGlasses.hpp"
+#include "CfgVehicles.hpp"
+#include "CfgWeapons.hpp"
