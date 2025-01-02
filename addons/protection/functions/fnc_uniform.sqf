@@ -21,7 +21,9 @@
 */
 
 private _uniform = uniform player;
-if (_uniform isEqualTo "") exitWith {};
+if (_uniform isEqualTo "") exitWith {
+    MACRO_NO_PROTECTIONS
+};
 
 private _uniformCfg = configFile >> "CfgWeapons" >> _uniform;
 

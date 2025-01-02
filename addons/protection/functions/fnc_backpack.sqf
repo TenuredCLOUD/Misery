@@ -21,7 +21,9 @@
 */
 
 private _backpack = backpack player;
-if (_backpack isEqualTo "") exitWith {};
+if (_backpack isEqualTo "") exitWith {
+    MACRO_NO_PROTECTIONS
+};
 
 private _backpackCfg = configFile >> "CfgVehicles" >> _backpack;
 

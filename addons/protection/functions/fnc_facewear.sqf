@@ -21,7 +21,9 @@
 */
 
 private _facewear = goggles player;
-if (_facewear isEqualTo "") exitWith {};
+if (_facewear isEqualTo "") exitWith {
+    MACRO_NO_PROTECTIONS
+};
 
 private _facewearCfg = configFile >> "CfgGlasses" >> _facewear;
 

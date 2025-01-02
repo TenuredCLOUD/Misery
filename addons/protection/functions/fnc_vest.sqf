@@ -21,7 +21,9 @@
 */
 
 private _vest = vest player;
-if (_vest isEqualTo "") exitWith {};
+if (_vest isEqualTo "") exitWith {
+    MACRO_NO_PROTECTIONS
+};
 
 private _vestCfg = configFile >> "CfgWeapons" >> _vest;
 

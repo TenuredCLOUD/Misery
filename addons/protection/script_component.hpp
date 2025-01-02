@@ -14,3 +14,5 @@
 #endif
 
 #include "\z\misery\addons\main\script_macros.hpp"
+
+#define MACRO_NO_PROTECTIONS [0, 0, 0, 0, 0, 0]

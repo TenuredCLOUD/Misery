@@ -21,7 +21,9 @@
 */
 
 private _headgear = headgear player;
-if (_headgear isEqualTo "") exitWith {};
+if (_headgear isEqualTo "") exitWith {
+    MACRO_NO_PROTECTIONS
+};
 
 private _headgearCfg = configFile >> "CfgWeapons" >> _headgear;
 
