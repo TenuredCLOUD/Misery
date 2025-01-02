@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
  /*
  * Author: TenuredCLOUD, MikeMF
- * Check if player has an artifact in thier inventory
+ * Check if player has an artifact in their inventory
  *
  * Arguments:
  * None

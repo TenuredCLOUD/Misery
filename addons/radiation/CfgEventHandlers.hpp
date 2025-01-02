@@ -9,5 +9,3 @@ class Extended_PostInit_EventHandlers {
         serverInit = QUOTE(call COMPILE_SCRIPT(XEH_postInit));
     };
 };
-
-

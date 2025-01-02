@@ -18,34 +18,21 @@
     params ["_args", "_handle"];
 
 //Handle dosage
-private _gear = player call EFUNC(common,getSimplifiedLoadout);
+private _totalProtection = call EFUNC(protection,totalProtection);
 
-_totalProtection = [0, 0, 0, 0];
-
-{
-_equipment = _x;
-
-if (_equipment isEqualTo "") then {
-_totalProtection = [0, 0, 0, 0];
-} else {
-{
-    if (_x select 0 == _equipment) then {
-    _totalProtection = _totalProtection vectorAdd (_x select 1);
-};
-} forEach EGVAR(common,protectiveGear);
-};
-} forEach _gear;
-
-_skinProtection = _totalProtection select 0;
-_respiratoryProtection = _totalProtection select 1;
-_eyeProtection = _totalProtection select 2;
+private _skinProtection = _totalProtection select 2;
+private _respiratoryProtection = _totalProtection select 3;
+private _eyeProtection = _totalProtection select 4;
 
 private _protectionFactor = _skinProtection + _respiratoryProtection + _eyeProtection;
 
 private _baseDose = 1;
 private _effectiveDose = _baseDose * (1 - (_protectionFactor / 300));
 
+//Only dose player if effective dose is greater than 0 - with enough protection values can turn negative 
+if (_effectiveDose > 0) then {
 player setVariable [QCLASS(radiation), (player getVariable [QCLASS(radiation), 0]) + _effectiveDose];
+};
 
 if (EGVAR(common,debug)) then {
     systemChat format ["Radiation Protection: Skin %1%2, Respiratory %3%4, Eye %5%6", _skinProtection, "%", _respiratoryProtection, "%", _eyeProtection, "%"];

@@ -4,4 +4,3 @@ PREP(hasArtifact);
 PREP(playerRadZone);
 PREP(playersInRadZones);
 PREP(storeArtifact);
-PREP(zone);

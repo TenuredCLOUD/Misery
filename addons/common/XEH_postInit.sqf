@@ -25,9 +25,6 @@ if (GVAR(remnant)) then {
         } forEach _RemnantODRA;
         };
     };
-if (GVAR(specialGear)) then {
-    GVAR(protectiveGear) = [];
-    };
 };
 
 if (!hasInterface) exitWith {};
@@ -51,4 +48,3 @@ if (!hasInterface) exitWith {};
 (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
 }] call CBA_fnc_addEventHandler;
-

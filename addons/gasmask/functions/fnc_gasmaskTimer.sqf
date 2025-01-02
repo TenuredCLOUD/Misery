@@ -22,13 +22,13 @@ player setVariable [QCLASS(gasmaskCartridgeLevel), 100];
 //If cartridge GVAR isn't defined yet define default value:
 if (isNil {player getVariable QCLASS(gasmaskCartridgeLevel)}) then {player setVariable [QCLASS(gasmaskCartridgeLevel), 100]};
 
-[{((goggles player in antirad_goggles) && !(vest player in antirad_vests || backpack player in antirad_packs))},
+[{(call EFUNC(protection,totalProtection) select 0) > 0 && (call EFUNC(protection,totalProtection) select 3) > 0 && (call EFUNC(protection,totalProtection) select 1) < 1},
 {
 
     [{
         params ["_args", "_handle"];
 
-        if ((!(goggles player in antirad_goggles) && !(vest player in antirad_vests || backpack player in antirad_packs)) || (!alive player)) exitWith {
+        if ((call EFUNC(protection,totalProtection) select 0) < 1 || (call EFUNC(protection,totalProtection) select 3) < 1 || (call EFUNC(protection,totalProtection) select 1) > 0 || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             if(EGVAR(common,debug))then{systemChat "Misery Gasmask deficiency cycle terminated..."};
             [] call FUNC(gasmaskTimer);
@@ -37,20 +37,14 @@ if (isNil {player getVariable QCLASS(gasmaskCartridgeLevel)}) then {player setVa
 
 private _MCartridge = player getVariable [QCLASS(gasmaskCartridgeLevel), 100];
 
-if ((goggles player in antirad_goggles) && !(vest player in antirad_vests || backpack player in antirad_packs)) then {
-//Miserycartridge = Miserycartridge -1;
 player setVariable [QCLASS(gasmaskCartridgeLevel), (_MCartridge - 1)];
 if (_MCartridge <= 0) then {
-MiseryEmptyGasmask = goggles player; //Store currently worn gasmask before removal
-removeGoggles player;
-titleText ["Gasmask cartridges empty, removed mask...", "PLAIN DOWN"];
-player addItem QCLASS(gasMask_Empty);
+[] call FUNC(swapMask);
 player setVariable [QCLASS(gasmaskCartridgeLevel), 100];
-};
 };
 
 if(EGVAR(common,debug))then{systemChat "Misery Gasmask deficiency cycle..."};
 
-}, MiseryGMdeficiencyCycle, []] call CBA_fnc_addPerFrameHandler;
+}, GVAR(deficiencyCycle), []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;
 
