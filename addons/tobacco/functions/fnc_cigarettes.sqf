@@ -24,8 +24,8 @@ if !(QCLASS(matches) in magazines player || QCLASS(lighter) in magazines player)
 
     titleText ["You light up a cigarette...", "PLAIN DOWN"];
 
-    [QCLASS(cigarettePack), ""] call misery_common_fnc_itemDecrement;
-    [QCLASS(matches), ""] call misery_common_fnc_itemDecrement;
+    [QCLASS(cigarettePack), ""] call EFUNC(common,itemDecrement);
+    [QCLASS(matches), ""] call EFUNC(common,itemDecrement);
 
     playSound3D [QPATHTOEF(audio,sounds\immersion\Matchsmoking.ogg), player, false, getPosASL player, 4, 1, 10];
 
@@ -51,8 +51,8 @@ if (QCLASS(lighter) in magazines player) then {
 
   titleText ["You light up a cigarette...", "PLAIN DOWN"];
 
-  [QCLASS(cigarettePack), ""] call misery_common_fnc_itemDecrement;
-  [QCLASS(lighter), ""] call misery_common_fnc_itemDecrement;
+  [QCLASS(cigarettePack), ""] call EFUNC(common,itemDecrement);
+  [QCLASS(lighter), ""] call EFUNC(common,itemDecrement);
 
   playSound3D [QPATHTOEF(audio,sounds\immersion\Lightersmoking.ogg), player, false, getPosASL player, 4, 1, 10];
 

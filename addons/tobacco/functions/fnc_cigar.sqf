@@ -25,7 +25,7 @@ private _MFear = player getVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR];
     titleText ["You light up a cigar...", "PLAIN DOWN"];
 
     player removeItem QCLASS(cigar);
-    [QCLASS(matches), ""] call misery_common_fnc_itemDecrement;
+    [QCLASS(matches), ""] call EFUNC(common,itemDecrement);
 
     playSound3D [QPATHTOEF(audio,sounds\immersion\Matchsmoking.ogg), player, false, getPosASL player, 4, 1, 10];
 
@@ -54,7 +54,7 @@ if (QCLASS(lighter) in magazines player) then {
     playSound3D [QPATHTOEF(audio,sounds\immersion\Lightersmoking.ogg), player, false, getPosASL player, 4, 1, 10];
 
     player removeItem QCLASS(cigar);
-    [QCLASS(lighter), ""] call misery_common_fnc_itemDecrement;
+    [QCLASS(lighter), ""] call EFUNC(common,itemDecrement);
 
   if (EGVAR(fear,enabled)) then {
     player setVariable [QCLASS(psycosis), (_MFear - 3)];
