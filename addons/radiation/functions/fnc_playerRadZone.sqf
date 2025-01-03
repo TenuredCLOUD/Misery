@@ -26,7 +26,7 @@ private _eyeProtection = _totalProtection select 4;
 
 private _protectionFactor = _skinProtection + _respiratoryProtection + _eyeProtection;
 
-private _baseDose = 1;
+private _baseDose = 10;
 private _effectiveDose = _baseDose * (1 - (_protectionFactor / 300));
 
 //Only dose player if effective dose is greater than 0 - with enough protection values can turn negative 

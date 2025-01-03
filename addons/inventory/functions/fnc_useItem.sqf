@@ -48,7 +48,7 @@ _radval= _entry select 11;
 _exposureval= _entry select 12;
 
 //Gasmask check for items, check RVG goggle array
-    // if (_checkforGmask && {(goggles player in antirad_goggles || headgear player in antirad_headgears)}) exitWith { //Needs to be tweaked to filter through protective masks etc...
+    // if (_checkforGmask && {((call EFUNC(protection,totalProtection) select 0) > 0 || (call EFUNC(protection,totalProtection) select 1) > 0)}) exitWith { //Needs to be tweaked to filter through protective masks etc...
     // titleText ["You cannot eat or drink while wearing a mask...", "PLAIN DOWN"]
     // };
 

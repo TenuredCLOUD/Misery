@@ -14,11 +14,8 @@
  *
 */
 
-
-
 if (!hasInterface) exitWith {};
 
-//ACE med ajustment:
   if (EGVAR(common,ace)) then {
   [player, QCLASS(thrombomodulin_Stimpack), 120, 600, 1, 0, 1] call ace_medical_status_fnc_addMedicationAdjustment;
   };
@@ -27,20 +24,11 @@ titleText ["You use the Thrombomodulin Stimpack...", "PLAIN DOWN"];
 
     player removeItem QCLASS(thrombomodulin_Stimpack);
 
-sleep 5;
-
-//This snippet is an altered version from Anti rad pills usage from Ravage mod, permission was requested before use:
-_compteur = 0;
-player setVariable ["_antirad", true];
-if (isNil {player getVariable "radMonitorON"}) then {
-
-};
-while {_compteur < 5000} do {
-    _effectSpeed = 75 + random 25;
-    player setVariable ["_radToRemove", ((player getVariable ["_radToRemove", 0]) + _effectSpeed)];
-    _compteur = _compteur + _effectSpeed;
-    sleep 1;
-};
-player setVariable ["_antirad", nil];
+[{
+    player setVariable [QCLASS(radiation), -5000 - random 250];
+    if ((player getVariable [QCLASS(radiation), 0]) < 0) then {
+        player setVariable [QCLASS(radiation), 0];
+    }; 
+}, [], 10] call CBA_fnc_waitAndExecute;
 
 

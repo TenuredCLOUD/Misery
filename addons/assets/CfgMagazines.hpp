@@ -126,6 +126,16 @@ class CfgMagazines {
         scope = 2;
     };
 
+    class CLASS(matchBox): CLASS(ItemMagCore) {
+        count = 20;
+        descriptionShort = "$STR_MISERY_LIGHTER_DESCRIPTION";
+        displayName = "$STR_MISERY_LIGHTER_DISPLAYNAME";
+        mass = 1;
+        model = "a3\structures_f_epa\items\tools\matches_f.p3d";
+        picture = QPATHTOF(data\icons\lighter.paa);
+        scope = 2;
+    };
+
     class CLASS(electricHandsaw): CLASS(ItemMagCore) {
         count = 10;
         descriptionShort = "$STR_MISERY_ELECTRICHANDSAW_DESCRIPTION";
@@ -263,8 +273,8 @@ class CfgMagazines {
 
     class CLASS(matches): CLASS(ItemMagCore) {
         count = 20;
-        descriptionShort = "$STR_MISERY_MATCHESPACK_DESCRIPTION";
-        displayName = "$STR_MISERY_MATCHESPACK_DISPLAYNAME";
+        descriptionShort = "box of weathered matches";
+        displayName = "Match Box";
         mass = 3;
         model = "a3\structures_f_epa\items\tools\matches_f.p3d";
         picture = QPATHTOF(data\icons\matchespack.paa);

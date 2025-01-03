@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 /*
-if (MiseryFearenabled) then {
+if (EGVAR(fear,enabled)) then {
     if (MiseryFearRvg == 1) then {
         PREP(Nearzeds);
     };

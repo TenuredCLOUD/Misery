@@ -14,8 +14,6 @@
  *
 */
 
-
-
 if (!hasInterface) exitWith {};
 
 if (EGVAR(common,ace)) then {
@@ -26,19 +24,10 @@ titleText ["You inject the Thrombomodulin...", "PLAIN DOWN"];
 
 player removeItem QCLASS(thrombomodulin);
 
-sleep 5;
-
-//This snippet is an altered version from Anti rad pills usage from Ravage mod, permission was requested before use:
-_compteur = 0;
-player setVariable ["_antirad", true];
-if (isNil {player getVariable "radMonitorON"}) then {
-
-};
-while {_compteur < 2500} do {
-    _effectSpeed = 50 + random 25;
-    player setVariable ["_radToRemove", ((player getVariable ["_radToRemove", 0]) + _effectSpeed)];
-    _compteur = _compteur + _effectSpeed;
-    sleep 1;
-};
-player setVariable ["_antirad", nil];
+[{
+    player setVariable [QCLASS(radiation), -2500 - random 500];
+    if ((player getVariable [QCLASS(radiation), 0]) < 0) then {
+        player setVariable [QCLASS(radiation), 0];
+    }; 
+}, [], 10] call CBA_fnc_waitAndExecute;
 
