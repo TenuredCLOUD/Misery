@@ -14,36 +14,19 @@
  *
 */
 
-//Enforce code runs on Server ONLY:
 if (isServer) then {
 
-addMissionEventHandler ["EntityKilled",
-
-{
+addMissionEventHandler ["EntityKilled",{
 
 params ["_killed", "_killer"];
 if (_killed isKindOf "myst_phantom_hidden_f" || _killed isKindOf "myst_phantom_naked_f") then {
 
-
-if((random 100) > Miseryphantdropchance) exitWith{};
+if((random 100) > GVAR(dropChance)) exitWith {};
 
 _unit = _this select 0;
 _uniform = uniformContainer _unit;
 _wh = "groundWeaponHolder" createVehicle (getPos _unit);
-_wh addItemCargoGlobal [
-
-[
-QCLASS(artifact_01),
-QCLASS(artifact_02),
-QCLASS(artifact_03),
-QCLASS(artifact_04),
-QCLASS(artifact_05),
-QCLASS(artifact_06),
-QCLASS(artifact_07),
-QCLASS(artifact_08),
-QCLASS(artifact_09),
-QCLASS(artifact_10)
-]call BIS_fnc_selectRandom,1];
+_wh addItemCargoGlobal [selectRandom [MACRO_ARTIFACTS], 1];
 
 };
     }];

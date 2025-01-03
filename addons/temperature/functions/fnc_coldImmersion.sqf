@@ -28,13 +28,13 @@
             if(EGVAR(common,debug))then{systemChat "Misery Cold immersion cycle checks re-initiated..."};
         };
 
-    if (((player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE]) < -10) && !(goggles player in antirad_goggles || EGVAR(common,protectiveGear) findIf {(_x select 0) isEqualTo vest player} > -1)) then {
-            player say3D ["Sneeze",10,1,2,0];
+    if (((player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE]) < -10) && (call EFUNC(protection,totalProtection) select 0) < 1 && (call EFUNC(protection,totalProtection) select 1) < 1) then {
+            player say3D [QEGVAR(audio,sound_sneeze),10,1,2,0];
 
     }else{
 
-        if (((player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE]) < -10) && (goggles player in antirad_goggles || EGVAR(common,protectiveGear) findIf {(_x select 0) isEqualTo vest player} > -1)) then {
-            player say3D ["coughMask1",10,1,2,0];
+        if (((player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE]) < -10) && (call EFUNC(protection,totalProtection) select 0) > 0 || (call EFUNC(protection,totalProtection) select 1) > 0) then {
+            player say3D [QEGVAR(audio,sound_coughMask1),10,1,2,0];
 
     };
     };
