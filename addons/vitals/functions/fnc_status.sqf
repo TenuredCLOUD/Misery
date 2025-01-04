@@ -92,54 +92,48 @@ lbClear _ailmentsList;
     _GasText ctrlShow false;
     _GasVal ctrlShow false;
     };
-    // if (Miserygasmasks) then {
-    // private _GasmaskBuff = _buffs findIf {(_x select 0) isEqualTo "Gas Mask"};
-    // private _SCBABuff = _buffs findIf {(_x select 0) isEqualTo "Supplied Air"};
-    // if ((goggles player in antirad_goggles) && !(vest player in antirad_vests || backpack player in antirad_packs)) then {
-    // _GascartridgeVal = format["%1%2",round(_cartridgecalc * 1), "%"];
-    // _GasVal ctrlSetText _GascartridgeVal;
-    // ["buff","Gas Mask", "Data\gasmask.paa", "You are wearing a gasmask, it can protect your lungs from harmful contaminants like radioactive particles, as well as toxic gases. You should be mindful of your cartridges..."] call FUNC(addBuffOrAilment);
-    // };
-    // if ((goggles player in antirad_goggles) && (vest player in antirad_vests || backpack player in antirad_packs) || (vest player in antirad_vests || backpack player in antirad_packs)) then {
-    // _GasSuppAir = format["%1","∞"];
-    // _GasVal ctrlSetText _GasSuppAir;
-    // ["buff","Supplied Air", "Data\SCBA.paa", "You are utilizing an SCBA device which is useful in an IDLH (Immediately Dangerous to Life or health) area. You have the greatest protection gear available for air contaminants."] call FUNC(addBuffOrAilment);
-    // };
-    // if ((!(goggles player in antirad_goggles) && !(vest player in antirad_vests || backpack player in antirad_packs)) && (!(goggles player in antirad_goggles) && !(vest player in antirad_vests || backpack player in antirad_packs) || !(vest player in antirad_vests || backpack player in antirad_packs))) then {
-    // if (_GasmaskBuff > -1) then {
-    //     ["buff","Gas Mask"] call FUNC(removeBuffOrAilment);
-    // };
-    // if (_SCBABuff > -1) then {
-    //     ["buff","Supplied Air"] call FUNC(removeBuffOrAilment);
-    // };
-    //     };
-    //         };
-
+   
     if (EGVAR(gasmask,enhanced)) then {
-    private _GasmaskBuff = _buffs findIf {(_x select 0) isEqualTo "Gas Mask"};
-    private _SCBABuff = _buffs findIf {(_x select 0) isEqualTo "Supplied Air"};
+    private _GasmaskBuff = _buffs findIf {(_x select 0) isEqualTo "Gas Mask"} > -1;
+    private _SCBABuff = _buffs findIf {(_x select 0) isEqualTo "Supplied Air"} > -1;
+    private _hasGasmask = (call EFUNC(protection,totalProtection) select 0) > 0;
+    private _positiveMaskRespiratoryValue = (call EFUNC(protection,totalProtection) select 3) > 0;
+    private _hasSuppliedAir = (call EFUNC(protection,totalProtection) select 1) > 0;
 
-    private _gear = goggles player;
-    private _isInArray = EGVAR(common,protectiveGear) findIf {(_x select 0) isEqualTo _gear} > -1;
-
-    if (_isInArray && !(vest player in antirad_vests || backpack player in antirad_packs)) then {
-        _GascartridgeVal = format["%1%2", round(_cartridgecalc * 1), "%"];
+    private _gearCase = switch (true) do {
+    case (_hasGasmask && !(_hasSuppliedAir)): {"GasMask"};
+    case (_hasGasmask && (_hasSuppliedAir)): {"SuppliedAir"};
+    default {"None"};
+};
+switch (_gearCase) do {
+    case "GasMask": {
+        if (_positiveMaskRespiratoryValue) then {
+        private _GascartridgeVal = format["%1%2", round(_cartridgecalc * 1), "%"];
         _GasVal ctrlSetText _GascartridgeVal;
+        }else{
+        _GasVal ctrlSetText "No Cartridge";    
+        };
         ["buff", "Gas Mask", QPATHTOEF(icons,data\gasmask_ca.paa), "You are wearing a gasmask, it can protect your lungs from harmful contaminants like radioactive particles, as well as toxic gases. You should be mindful of your cartridges..."] call FUNC(addBuffOrAilment);
+        if (_SCBABuff) then {
+            ["buff", "Supplied Air"] call FUNC(removeBuffOrAilment);
+        };
     };
-
-    if (_isInArray && (vest player in antirad_vests || backpack player in antirad_packs) || (vest player in antirad_vests || backpack player in antirad_packs)) then {
-        _GasSuppAir = format["%1", "∞"];
+    case "SuppliedAir": {
+        private _GasSuppAir = format["%1", "∞"];
         _GasVal ctrlSetText _GasSuppAir;
         ["buff", "Supplied Air", QPATHTOEF(icons,data\scba_ca.paa), "You are utilizing an SCBA device which is useful in an IDLH (Immediately Dangerous to Life or health) area. You have the greatest protection gear available for air contaminants."] call FUNC(addBuffOrAilment);
-    };
-
-    if ((!_isInArray && !(vest player in antirad_vests || backpack player in antirad_packs)) && (!_isInArray && !(vest player in antirad_vests || backpack player in antirad_packs) || !(vest player in antirad_vests || backpack player in antirad_packs))) then {
-        if (_GasmaskBuff > -1) then {
+        if (_GasmaskBuff) then {
             ["buff", "Gas Mask"] call FUNC(removeBuffOrAilment);
         };
-        if (_SCBABuff > -1) then {
+    };
+    case "None": {
+        if (_GasmaskBuff) then {
+            ["buff", "Gas Mask"] call FUNC(removeBuffOrAilment);
+        };
+        if (_SCBABuff) then {
             ["buff", "Supplied Air"] call FUNC(removeBuffOrAilment);
+            };
+        _GasVal ctrlSetText "None";
         };
     };
 };

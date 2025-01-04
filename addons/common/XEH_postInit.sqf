@@ -25,12 +25,14 @@ if (GVAR(remnant)) then {
         } forEach _RemnantODRA;
         };
     };
-if (GVAR(specialGear)) then {
-    GVAR(protectiveGear) = [];
-    };
 };
 
 if (!hasInterface) exitWith {};
+
+// Loadout change will clear item cache for hasItem
+["loadout", {
+    GVAR(itemsCache) = nil;
+}] call CBA_fnc_addPlayerEventHandler;
 
 [QGVAR(titleText), {
     params ["_text"];
@@ -46,4 +48,3 @@ if (!hasInterface) exitWith {};
 (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui))closeDisplay 1;
 (findDisplay 602) closeDisplay 2;
 }] call CBA_fnc_addEventHandler;
-

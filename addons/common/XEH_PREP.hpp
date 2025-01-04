@@ -17,7 +17,6 @@ PREP(nearTree);
 PREP(nearTreeAxe);
 PREP(nearTreeSaw);
 PREP(nearWell);
-PREP(parseArray);
 PREP(specialDamage);
 PREP(stun);
 PREP(surfacePos);

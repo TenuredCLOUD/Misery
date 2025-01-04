@@ -20,7 +20,7 @@ private _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_F
 
 if (!hasInterface) exitWith {};
 
-   if (goggles player in antirad_goggles || headgear player in antirad_headgears) exitWith {
+   if ((call EFUNC(protection,totalProtection) select 0) > 0 || (call EFUNC(protection,totalProtection) select 1) > 0) exitWith {
     titleText ["You cannot take narcotics with a mask on...", "PLAIN DOWN"];
 };
 

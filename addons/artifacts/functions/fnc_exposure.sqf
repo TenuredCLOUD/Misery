@@ -15,22 +15,20 @@
 */
 
 
-[{[[MACRO_ARTIFACTS]] call EFUNC(common,hasItem)},
+[{call EFUNC(radiation,hasArtifact)},
 {
 
 [{
         params ["_args","_handle"];
 
-        if (!([[MACRO_ARTIFACTS]] call EFUNC(common,hasItem)) || (!alive player)) exitWith {
+        if (!(call EFUNC(radiation,hasArtifact)) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             if(EGVAR(common,debug))then{systemChat "Misery Artifact exposure cycle terminated..."};
             [] call FUNC(exposure);
             if(EGVAR(common,debug))then{systemChat "Misery Artifact exposure cycle checks re-initiated..."};
         };
 
-if ([[MACRO_ARTIFACTS]] call EFUNC(common,hasItem)) then {
-  player setVariable [QCLASS(radiation), (player getVariable [QCLASS(radiation),0]) + 50, true];
-};
+player setVariable [QCLASS(radiation), (player getVariable [QCLASS(radiation),0]) + 50, true];
 
 if(EGVAR(common,debug))then{systemChat "Misery Artifact exposure cycle..."};
 

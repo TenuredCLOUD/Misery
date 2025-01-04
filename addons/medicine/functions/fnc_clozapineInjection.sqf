@@ -32,7 +32,7 @@ player removeItem QCLASS(clozapineBox);
 
 sleep 60;
 
-if (MiseryFearenabled) then {
+if (EGVAR(fear,enabled)) then {
   player setVariable [QCLASS(psycosis), (_MFear - 25)];
     if (_MFear <= 0) then {player setVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR]};
 };

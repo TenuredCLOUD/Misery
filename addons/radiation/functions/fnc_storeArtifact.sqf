@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: TenuredCLOUD
+ * Author: TenuredCLOUD, MikeMF
  * Artifact storage
  *
  * Arguments:
@@ -10,36 +10,21 @@
  * None
  *
  * Example:
- * [] call misery_llcontainer_fnc_storeArtifact;
+ * [] call misery_radiation_fnc_storeArtifact;
  *
 */
 
-if (alive player) then {
-    private _artifact = "";
-    private _artifacts = [
-        QCLASS(artifact_01),
-        QCLASS(artifact_02),
-        QCLASS(artifact_03),
-        QCLASS(artifact_04),
-        QCLASS(artifact_05),
-        QCLASS(artifact_06),
-        QCLASS(artifact_07),
-        QCLASS(artifact_08),
-        QCLASS(artifact_09),
-        QCLASS(artifact_10)
-    ];
+private _artifacts = [MACRO_ARTIFACTS];
 
-    {
-        if (_x in items player && [[QCLASS(leadContainer_Open)]] call EFUNC(common,hasItem)) exitWith {
-            _artifact = _x;
-        };
-    } forEach _artifacts;
+if !([[QCLASS(leadContainer_Open)]] call EFUNC(common,hasItem)) exitWith {};
 
-    if (_artifact != "") then {
-        player removeItem _artifact;
-        player removeItem QCLASS(leadContainer_Open);
-        player addItem QCLASS(leadContainer_Closed);
-        titleText ["You put the artifact in your lead lined container", "PLAIN DOWN"];
-    };
+if ([_artifacts] call EFUNC(common,hasItem)) then {
+    private _index = EGVAR(common,itemsCache) findIf {_x in _artifacts};
+    private _artifact = EGVAR(common,itemsCache) select _index;
+
+    player removeItem _artifact;
+    player removeItem QCLASS(leadContainer_Open);
+    player addItem QCLASS(leadContainer_Closed);
+    private _artifactStoredStr = format ["<t font='PuristaMedium'>%1</t>", "You put the artifact in your lead lined container"];
+    [QEGVAR(common,tileText), _artifactStoredStr] call CBA_fnc_localEvent;
 };
-

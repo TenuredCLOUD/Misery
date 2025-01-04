@@ -14,10 +14,6 @@
  *
 */
 
-//ACE check for dmg:
-EGVAR(common,ace)=false;
-if (isClass(configFile>>"cfgPatches">>"ace_main"))then{EGVAR(common,ace)=true};
-
 [{(player getVariable [QCLASS(radiation), 0]) >= 500},
 {
     [{
@@ -54,14 +50,11 @@ if (isClass(configFile>>"cfgPatches">>"ace_main"))then{EGVAR(common,ace)=true};
                         player setVariable [QCLASS(hunger), (_MHunger - ((EGVAR(survival,hungerIncrement))))];
                         player setVariable [QCLASS(hunger), (_MHunger - ((EGVAR(survival,hungerIncrement))))];
 
-                        // player setVariable [QCLASS(hunger), (_MHunger - ((EGVAR(survival,hungerIncrement))toFixed 2))];
-                        // player setVariable [QCLASS(hunger), (_MHunger - ((EGVAR(survival,hungerIncrement))toFixed 2))];
-                        if !(goggles player in antirad_goggles || vest player in antirad_vests) then {
-                        player say3D ["Cough",10,1,2,0];
+                        if ((call EFUNC(protection,totalProtection) select 0) < 1 && (call EFUNC(protection,totalProtection) select 1) < 1) then {
+                        player say3D [QEGVAR(audio,sound_cough),10,1,2,0];
                         }else{
-                        if (goggles player in antirad_goggles || vest player in antirad_vests) then {
-                        player say3D ["CoughMuffled",10,1,2,0];
-
+                        if ((call EFUNC(protection,totalProtection) select 0) > 0 || (call EFUNC(protection,totalProtection) select 1) > 0) then {
+                        player say3D [QEGVAR(audio,sound_coughMuffled),10,1,2,0];
                 };
             };
         };

@@ -20,7 +20,7 @@ private _MFear = player getVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR];
 
 if (!hasInterface) exitWith {};
 
-  if (goggles player in antirad_goggles || headgear player in antirad_headgears) exitWith {
+  if ((call EFUNC(protection,totalProtection) select 0) > 0 || (call EFUNC(protection,totalProtection) select 1) > 0) exitWith {
     titleText ["You cannot take medicine while wearing a mask...", "PLAIN DOWN"];
 };
 
@@ -36,7 +36,7 @@ player removeItem QCLASS(clozapineBox);
 
 sleep 60;
 
-if (MiseryFearenabled) then {
+if (EGVAR(fear,enabled)) then {
   player setVariable [QCLASS(psycosis), (_MFear - 10)];
     if (_MFear <= 0) then {player setVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR]};
 };
