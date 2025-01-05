@@ -10,12 +10,12 @@
  * Marker check success <BOOL>
  *
  * Example:
- * [] call misery_radiation_fnc_checkRadZones
+ * [] call misery_radiation_fnc_checkAreas
 */
 
 // Convert to Array.
-if (GVAR(radiationAreas) isEqualType "") then {
-    GVAR(radiationAreas) = parseSimpleArray GVAR(radiationAreas);
+if (GVAR(areas) isEqualType "") then {
+    GVAR(areas) = parseSimpleArray GVAR(areas);
 };
 
 private _failedMarkers = [];
@@ -28,6 +28,6 @@ private _failedMarkers = [];
         [QUOTE(COMPONENT_BEAUTIFIED), _msg] call EFUNC(common,debugMessage);
         _failedMarkers pushBackUnique _marker;
     };
-} forEach GVAR(radiationAreas);
+} forEach GVAR(areas);
 
 count _failedMarkers == 0

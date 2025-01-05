@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call misery_safezone_fnc_playerSafeZone
+ * [] call misery_safezone_fnc_process
 */
 
 [QEGVAR(common,titleText), "You are entering a safezone.."] call CBA_fnc_localEvent;
@@ -31,7 +31,7 @@ player setVariable [QGVAR(index), _index];
 [{
     params ["_args", "_handle"];
 
-    private _leftSafeZone = GVAR(safezoneAreas) findIf {player inArea _x} == -1;
+    private _leftSafeZone = GVAR(areas) findIf {player inArea _x} == -1;
 
     if (_leftSafeZone) exitWith {
         player allowDamage true;
@@ -41,7 +41,7 @@ player setVariable [QGVAR(index), _index];
         player removeEventHandler ["Fired", _index];
         [QEGVAR(common,titleText), "You have left a safezone.."] call CBA_fnc_localEvent;
 
-        player setVariable [QGVAR(insideSafeZone), false, true];
+        player setVariable [QGVAR(insideArea), false, true];
 
         _handle call CBA_fnc_removePerFrameHandler;
     };
