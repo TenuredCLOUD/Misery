@@ -55,7 +55,6 @@ if (_hearingProtection < 1) then {
     private _leftArea = GVAR(areas) findIf {player inArea _x} == -1;
 
     if (_leftArea) exitWith {
-        player setVariable [QGVAR(insideArea), false, true];
         _handle call CBA_fnc_removePerFrameHandler;
     };
 }, 16] call CBA_fnc_addPerFrameHandler;
