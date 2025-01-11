@@ -4,6 +4,8 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
-GVAR(enabled) = isClass (configFile>>"cfgPatches">>"WBK_MeleeMechanics");
+if (EGVAR(common,ims)) then {
+#include "initSettings.inc.sqf"
+};
 
 ADDON = true;

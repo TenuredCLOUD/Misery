@@ -1,18 +1,10 @@
 #include "script_component.hpp"
 
-if (!GVAR(enabled)) exitWith {};
+if (!EGVAR(common,ims)) exitWith {};
 
 if (isServer) then {
     private _WBKIMSgvars = ["IMS_RifleDodgeSet", "IMS_IsStaticDeaths", "IMS_EnablePlayerSounds"];
     private _WBKIMSfunctions = ["IMS_DodgeWithFists", "IMS_DodgeWithRifle", "IMS_DodgeLeftOrRight", "FP_SpawnHumanDodge_Actual", "FP_SpawnHumanDodge", "HumanExecutionsSelectFrom"];
-
-    //Force FP melee mode:
-    if (!isNil "IMS_WBK_MAINFPTP") then {
-        if (!IMS_WBK_MAINFPTP) then {
-            IMS_WBK_MAINFPTP = true;
-            publicVariable "IMS_WBK_MAINFPTP";
-        };
-    };
 
     {
         if (!isNil _x) then {
@@ -72,6 +64,12 @@ if (EGVAR(common,checkRavage)) then {
 };
 
 if (!hasInterface) exitWith {};
+
+if !(GVAR(hudShow)) then {
+WBK_ShowHud = false;
+}else{
+WBK_ShowHud = true;
+};
 
 // //WBK IMS Handle for Dash / sprint w/ no stamina (overrides to enforce stamina depletion)
 [] call FUNC(dash);
