@@ -7,7 +7,7 @@
 
 if (hasInterface) then {
 [QGVAR(chemicalAreaEvent), FUNC(process)] call CBA_fnc_addEventHandler;
-//TODO: Gas Event
+[] call FUNC(gas);
 };
 
 }] call CBA_fnc_addEventHandler;
