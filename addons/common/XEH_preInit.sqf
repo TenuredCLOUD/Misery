@@ -28,6 +28,4 @@ GVAR(remnant) = isClass (configFile>>"cfgPatches">>"remnant");
 
 GVAR(dsa) = isClass (configFile>>"cfgPatches">>"DSA_Spooks");
 
-GVAR(ims) = isClass (configFile>>"cfgPatches">>"WBK_MeleeMechanics");
-
 ADDON = true;

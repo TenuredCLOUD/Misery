@@ -1,7 +1,5 @@
 #include "script_component.hpp"
 
-if (!EGVAR(common,ims)) exitWith {};
-
 if (isServer) then {
     private _WBKIMSgvars = ["IMS_RifleDodgeSet", "IMS_IsStaticDeaths", "IMS_EnablePlayerSounds"];
     private _WBKIMSfunctions = ["IMS_DodgeWithFists", "IMS_DodgeWithRifle", "IMS_DodgeLeftOrRight", "FP_SpawnHumanDodge_Actual", "FP_SpawnHumanDodge", "HumanExecutionsSelectFrom"];
@@ -74,4 +72,11 @@ WBK_ShowHud = true;
 // //WBK IMS Handle for Dash / sprint w/ no stamina (overrides to enforce stamina depletion)
 [] call FUNC(dash);
 
-
+player addEventHandler ["InventoryOpened", {
+    [player, QCLASS(woodaxe), "WBK_axe"] call EFUNC(common,weaponSwap);
+    [player, QCLASS(sledgehammer), "WBK_survival_weapon_2"] call EFUNC(common,weaponSwap);
+    [player, QCLASS(craftingHammer), "WBK_SmallHammer"] call EFUNC(common,weaponSwap);
+    [player, QCLASS(anvilHammer), "WBK_SmallHammer"] call EFUNC(common,weaponSwap);
+    [player, "rvg_guttingKnife", selectRandom [MACRO_KNIVES]] call EFUNC(common,weaponSwap);
+    [player, QCLASS(guttingKnife), selectRandom [MACRO_KNIVES]] call EFUNC(common,weaponSwap);	
+}];
