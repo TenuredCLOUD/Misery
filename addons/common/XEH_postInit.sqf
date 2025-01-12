@@ -1,5 +1,10 @@
 #include "script_component.hpp"
 
+GVAR(worldSize) = worldSize;
+GVAR(worldAxis) = worldSize / 2;
+GVAR(worldCenter) = [GVAR(worldAxis), GVAR(worldAxis), 0];
+GVAR(worldRadius) = sqrt 2 * GVAR(worldAxis);
+
 //If GRAD persistence is active, push Remnant ODRA object holders to blacklister, so they won't save / reload (This will execute only once)
 if (isServer) then {
 if (GVAR(remnant)) then {
