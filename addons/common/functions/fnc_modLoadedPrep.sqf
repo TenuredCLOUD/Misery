@@ -14,14 +14,14 @@
 */
 
 private _modPrep = [
-    ["ravage", isClass (configFile >>"cfgPatches" >> "ravage")],
+    ["ravage", isClass (configFile >> "CfgPatches" >> "ravage")],
     ["VandeansonsApocalypse", isClass (configFile >> "cfgPatches" >> "VandeansonsApocalypse")],
-    ["ace_main", isClass (configFile >>"cfgPatches" >> "ace_main")],
-    ["ace_medical", isClass (configFile >>"cfgPatches" >> "ace_medical")],
-    ["ace_refuel", isClass (configFile >>"cfgPatches" >> "ace_refuel")],
-    ["NerdMods_iBuild", isClass (configFile >>"cfgPatches" >> "NerdMods_iBuild")],
-    ["remnant", isClass (configFile >>"cfgPatches" >> "remnant")],
-    ["DSA_Spooks",  isClass (configFile >>"cfgPatches" >> "DSA_Spooks")]
+    ["ace_main", isClass (configFile >> "CfgPatches" >> "ace_main")],
+    ["ace_medical", isClass (configFile >> "CfgPatches" >> "ace_medical")],
+    ["ace_refuel", isClass (configFile >> "CfgPatches" >> "ace_refuel")],
+    ["NerdMods_iBuild", isClass (configFile >> "CfgPatches" >> "NerdMods_iBuild")],
+    ["remnant", isClass (configFile >> "CfgPatches" >> "remnant")],
+    ["DSA_Spooks",  isClass (configFile >> "CfgPatches" >> "DSA_Spooks")]
 ];
 
 {
