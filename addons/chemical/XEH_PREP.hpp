@@ -1,1 +1,4 @@
-PREP(zone);
+PREP(checkAreas);
+PREP(gas);
+PREP(inArea);
+PREP(process);
