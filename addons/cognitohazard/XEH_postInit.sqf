@@ -5,8 +5,8 @@
         call FUNC(inArea);
     };
 
-if (hasInterface) then {
-[QGVAR(cognitoHazardEvent), FUNC(process)] call CBA_fnc_addEventHandler;
-[QGVAR(cognitoHazardAudio), FUNC(audioEffect)] call CBA_fnc_addEventHandler;
+    if (hasInterface) then {
+        [QGVAR(cognitoHazardEvent), FUNC(process)] call CBA_fnc_addEventHandler;
+        [QGVAR(cognitoHazardAudio), FUNC(audioEffect)] call CBA_fnc_addEventHandler;
     };
 }] call CBA_fnc_addEventHandler;
