@@ -239,16 +239,6 @@ if (EGVAR(common,ace)) then {
 [player, "rvg_canisterFuel", selectRandom [QCLASS(diesel),QCLASS(petrol)]] call EFUNC(common,itemSwap);
 [player, "rvg_canisterFuel_Empty", selectRandom [QCLASS(dieselJerryCan_Empty),QCLASS(petrolJerryCan_Empty)]] call EFUNC(common,itemSwap);
 
-//WBKIMS checks + Swappers:
-if (EGVAR(ims,enabled)) then {
-    [player, QCLASS(woodaxe), "WBK_axe"] call EFUNC(common,weaponSwap);
-    [player, QCLASS(sledgehammer), "WBK_survival_weapon_2"] call EFUNC(common,weaponSwap);
-    [player, QCLASS(craftingHammer), "WBK_SmallHammer"] call EFUNC(common,weaponSwap);
-    [player, QCLASS(anvilHammer), "WBK_SmallHammer"] call EFUNC(common,weaponSwap);
-    [player, "rvg_guttingKnife", selectRandom [MACRO_KNIVES]] call EFUNC(common,weaponSwap);
-    [player, QCLASS(guttingKnife), selectRandom [MACRO_KNIVES]] call EFUNC(common,weaponSwap);
-};
-
 //Money Collection:
 if (((call EFUNC(money,nearestCorpseMoney)) select 0)) then {
     _out pushBack ["Search for Money","Search For Money"];

@@ -17,32 +17,27 @@
 
 [{(animationState player in [MACRO_ANIMATION_IMS_SPRINT])},
 {
-
     [{
         params ["_args", "_handle"];
 
         if (!(animationState player in [MACRO_ANIMATION_IMS_SPRINT]) || (!alive player) || (getFatigue player >= 0.99)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
-            if(EGVAR(common,debug))then{systemChat "Misery WBKIMS Dash Compat cycle terminated..."};
+            [QUOTE(COMPONENT_BEAUTIFIED), "Dash Compat cycle terminated."] call EFUNC(common,debugMessage);
             if (animationState player == "am_kulak_sprintf") then {
-        //    player switchMove "am_kulak_idle"; // Forcefully stop the animation
-            player playMoveNow "am_kulak_idle"; //Force anim delay
+            player playMoveNow "am_kulak_idle"; 
             };
             {
             if ((animationState player == _x) && _x != "am_kulak_sprintf") then {
-        //    player switchMove "melee_armed_idle"; // Forcefully stop the animation
-            player playMoveNow "melee_armed_idle"; //Force anim delay
+            player playMoveNow "melee_armed_idle"; 
             };
             } forEach [MACRO_ANIMATION_IMS_SPRINT];
             [] call FUNC(dash);
             if(EGVAR(common,debug))then{systemChat "Misery WBKIMS Dash Compat cycle checks re-initiated..."};
         };
 
-    if (animationState player in [MACRO_ANIMATION_IMS_SPRINT]) then {
         player setFatigue (getFatigue player + 0.01);
-    };
-
-    if(EGVAR(common,debug))then{systemChat "Misery WBKIMS Dash Compat cycle..."};
+    
+    [QUOTE(COMPONENT_BEAUTIFIED), "Dash Compat cycle."] call EFUNC(common,debugMessage);
 
 }, 0.1, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;
