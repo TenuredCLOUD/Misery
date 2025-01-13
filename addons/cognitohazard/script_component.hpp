@@ -1,4 +1,4 @@
-#define COMPONENT cognitohazard
+#define COMPONENT cognito_hazard
 #define COMPONENT_BEAUTIFIED Cognito Hazard
 #include "\z\misery\addons\main\script_mod.hpp"
 
