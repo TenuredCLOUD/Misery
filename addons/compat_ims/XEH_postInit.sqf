@@ -65,7 +65,7 @@ if (!hasInterface) exitWith {};
 
 WBK_ShowHud = GVAR(hudShow);
 
-// //WBK IMS Handle for Dash / sprint w/ no stamina (overrides to enforce stamina depletion)
+// WBK IMS Handle for Dash / sprint w/ no stamina (overrides to enforce stamina depletion)
 [] call FUNC(dash);
 
 player addEventHandler ["InventoryOpened", {
