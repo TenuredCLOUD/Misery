@@ -5,7 +5,7 @@
  * Controls AI groups patrol patterns & actions
  *
  * Arguments:
- * None
+ * 0: Group <GROUP>
  *
  * Return Value:
  * None
