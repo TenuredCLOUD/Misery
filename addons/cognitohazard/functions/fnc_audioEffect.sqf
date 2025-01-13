@@ -22,8 +22,7 @@
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
-    private _totalProtection = call EFUNC(protection,totalProtection);
-    private _hearingProtection = _totalProtection select 5;
+    private _hearingProtection = (call EFUNC(protection,totalProtection)) select 5;
 
     enableCamShake true;
 
