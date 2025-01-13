@@ -63,11 +63,7 @@ if (EGVAR(common,checkRavage)) then {
 
 if (!hasInterface) exitWith {};
 
-if !(GVAR(hudShow)) then {
-WBK_ShowHud = false;
-}else{
-WBK_ShowHud = true;
-};
+WBK_ShowHud = GVAR(hudShow);
 
 // //WBK IMS Handle for Dash / sprint w/ no stamina (overrides to enforce stamina depletion)
 [] call FUNC(dash);
