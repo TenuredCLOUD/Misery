@@ -16,7 +16,7 @@
  * Public: No
 */
 
-private _group = _this select 0;
+params ["_group"];
 
 [{{alive _x} count units _group > 0}, {
 
