@@ -5,9 +5,9 @@
         call FUNC(inArea);
     };
 
-if (hasInterface) then {
-[QGVAR(chemicalAreaEvent), FUNC(process)] call CBA_fnc_addEventHandler;
-[] call FUNC(gas);
-};
+    if (hasInterface) then {
+        [QGVAR(chemicalAreaEvent), FUNC(process)] call CBA_fnc_addEventHandler;
+        [] call FUNC(gas);
+    };
 
 }] call CBA_fnc_addEventHandler;
