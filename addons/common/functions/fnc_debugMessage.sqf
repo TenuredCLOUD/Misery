@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: MikeMF
- * Prints Error Messages to the RPT, except if Debug mode is enabled then it will also do a systemChat
+ * Prints error messages, basic debugging is systemChat, additional info is logging to RPT.
  *
  * Arguments:
  * 0: Component <STRING>
@@ -16,9 +16,14 @@
 
 params ["_component", "_message"];
 
-private _errorMsg = format ["[Misery - %1] - %2", _component, _message];
-diag_log _errorMsg;
+if (GVAR(debugMode) == 0) exitWith {};
 
-if (GVAR(debug)) then {
+private _errorMsg = format ["[Misery - %1] - %2", _component, _message];
+
+if (GVAR(debugMode) > 0) then {
     systemChat _errorMsg;
+};
+
+if (GVAR(debugMode) == 2) then {
+    diag_log _errorMsg;
 };
