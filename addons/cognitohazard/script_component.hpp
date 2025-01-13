@@ -1,5 +1,5 @@
 #define COMPONENT cognitohazard
-#define COMPONENT_BEAUTIFIED Cognitohazard
+#define COMPONENT_BEAUTIFIED Cognito Hazard
 #include "\z\misery\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
