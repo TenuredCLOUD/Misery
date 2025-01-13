@@ -22,7 +22,7 @@
 
         if (!(animationState player in [MACRO_ANIMATION_IMS_SPRINT]) || (!alive player) || (getFatigue player >= 0.99)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
-            if(EGVAR(common,debug))then{systemChat "Misery WBKIMS Dash Compat cycle terminated..."};
+            [QUOTE(COMPONENT_BEAUTIFIED), "Dash Compat cycle terminated."] call EFUNC(common,debugMessage);
             if (animationState player == "am_kulak_sprintf") then {
             player playMoveNow "am_kulak_idle"; 
             };
