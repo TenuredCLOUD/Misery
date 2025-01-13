@@ -15,7 +15,7 @@
 
 private _modPrep = [
     ["ravage", isClass (configFile >> "CfgPatches" >> "ravage")],
-    ["VandeansonsApocalypse", isClass (configFile >> "cfgPatches" >> "VandeansonsApocalypse")],
+    ["VandeansonsApocalypse", isClass (configFile >> "CfgPatches" >> "VandeansonsApocalypse")],
     ["ace_main", isClass (configFile >> "CfgPatches" >> "ace_main")],
     ["ace_medical", isClass (configFile >> "CfgPatches" >> "ace_medical")],
     ["ace_refuel", isClass (configFile >> "CfgPatches" >> "ace_refuel")],
