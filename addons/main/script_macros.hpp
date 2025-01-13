@@ -23,6 +23,8 @@
 #define MACRO_GEMTYPES  QCLASS(malachite), QCLASS(ruby), QCLASS(sapphire), QCLASS(amethyst), QCLASS(diamond), QCLASS(emerald)
 #define MACRO_RESPIRATOR_MASKS "g_airpurifyingrespirator_01_f", "g_airpurifyingrespirator_02_black_f", "g_airpurifyingrespirator_02_olive_f", "g_airpurifyingrespirator_02_sand_f"
 #define MACRO_RESPIRATOR_MASKS_NOFILTER "g_airpurifyingrespirator_01_nofilter_f", "g_airpurifyingrespirator_02_black_nofilter_f", "g_airpurifyingrespirator_02_olive_nofilter_f", "g_airpurifyingrespirator_02_sand_nofilter_f"
+#define MACRO_FACTIONS west, east, civilian, independent
+#define MACRO_FACTIONS_BASE_CLASS "B_Survivor_F", "O_G_Survivor_F", "C_man_1", "I_G_Survivor_F"
 
 // Player Status
 #define MACRO_PLAYER_HUNGER 100

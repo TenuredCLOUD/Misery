@@ -24,7 +24,7 @@ private _clusters = selectRandom [1, 2, 3];
 
 private _markerPos = getPosATL _selectedPlayer;
 private _playerUID = getPlayerUID _selectedPlayer;
-private _markerName = format ["%1_%2", CBA_missionTime, _playerUID];
+private _markerName = format ["%1_%2_%3", CBA_missionTime, _playerUID, random 100];
 private _marker = createMarkerLocal [_markerName, _markerPos];
 _marker setMarkerShapeLocal "ELLIPSE";
 _marker setMarkerSizeLocal [GVAR(markerSizeX), GVAR(markerSizeY)];
