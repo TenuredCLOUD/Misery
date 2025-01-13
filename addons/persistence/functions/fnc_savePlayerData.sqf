@@ -13,7 +13,7 @@
  * [] call misery_persistence_fnc_savePlayerData
 */
 
-diag_log "[MISERY] - Saving Single Player Data";
+[QUOTE(COMPONENT_BEAUTIFIED), "Saving single player data"] call EFUNC(common,debugMessage);
 
 private _playerData = call FUNC(serializeClient);
 

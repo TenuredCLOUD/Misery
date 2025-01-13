@@ -15,7 +15,6 @@
 
 /*
  * ToDo
- * Add Stance, Damage / ACE Damage
  * Serialize player stats to prevent altering them
 */
 
@@ -33,12 +32,8 @@ private _loadout = getUnitLoadout player;
 private _position = getPosATL player;
 private _direction = getDir player;
 private _stance = stance player;
-private _damage = damage player;
-/*
-if ACE is loaded.
-private _aceDamage = [player] call ace_medical_fnc_serializeState;
-*/
-private _aceDamage = [];
+
+private _damage = [damage player, [player] call ace_medical_fnc_serializeState] select "ace_medical" call EFUNC(common,isModLoaded);
 
 _playerData pushBack worldName;
 _playerData pushBack _playerID;
@@ -48,6 +43,5 @@ _playerData pushBack _position;
 _playerData pushBack _direction;
 _playerData pushBack _stance;
 _playerData pushBack _damage;
-_playerData pushBack _aceDamage;
 
 _playerData

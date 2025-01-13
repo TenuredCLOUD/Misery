@@ -22,18 +22,18 @@ if (!isMultiplayer) then {
     [QGVAR(requestSaveDataClient), player] call CBA_fnc_serverEvent;
 };
 
-_playerData params ["_worldName", "_playerID", "_variables", "_loadout", "_position", "_direction", "_stance", "_damage", "_aceDamage"];
+_playerData params ["_worldName", "_playerID", "_variables", "_loadout", "_position", "_direction", "_stance", "_damage"];
 
 // Create new player if world doesn't match.
-if (worldName != _worldName) exitWith {
-    diag_log format ["[MISERY] - Current World (%1) does not match the current save world (%2), Loading Aborted.", worldName, _worldName];
+if (worldName isNotEqualTo _worldName) exitWith {
+    [QUOTE(COMPONENT_BEAUTIFIED), format ["Current World (%1) does not match the current save world (%2), Loading Aborted.", worldName, _worldName]] call EFUNC(common,debugMessage);
     [] call FUNC(initializeNewPlayer);
 };
 
 // Block save sharing
 private _currentPlayerID = getPlayerUID player;
-if !(_playerID isEqualTo _currentPlayerID) exitWith {
-    diag_log format ["[MISERY] - Current player ID (%1) does not match saved player ID (%2), Loading Aborted", _currentPlayerID, _playerID];
+if (_playerID isNotEqualTo _currentPlayerID) exitWith {
+    [QUOTE(COMPONENT_BEAUTIFIED), format [" Current player ID (%1) does not match saved player ID (%2), Loading Aborted", _currentPlayerID, _playerID]] call EFUNC(common,debugMessage);
     [] call FUNC(initializeNewPlayer);
 };
 
@@ -54,9 +54,8 @@ switch (_stance) do {
     default {};
 };
 
-player setDamage _damage;
-
-/*
-if ACE medical is loaded, load ACE damage.
-[player, _aceDamage] call ace_medical_fnc_deserializeState;
-*/
+if ("ace_medical" call EFUNC(common,isModLoaded)) then {
+    [player, _damage] call ace_medical_fnc_deserializeState;
+} else {
+    player setDamage _damage;
+};

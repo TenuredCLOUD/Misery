@@ -17,7 +17,7 @@ if (isMultiplayer) exitWith {};
 
 // Attach hardcore mode logic
 if (GVAR(autosaveInterval) isEqualTo 0 || GVAR(hardcore)) exitWith {
-    diag_log "[MISERY] - Autosave Disabled or Hardcore mode enabled.";
+    [QUOTE(COMPONENT_BEAUTIFIED), "Autosave disabled or Hardcore mode enabled."] call EFUNC(common,debugMessage);
 };
 
 // Loop function call & save game, sets variable for last time saved.

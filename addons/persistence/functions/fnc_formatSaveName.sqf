@@ -17,10 +17,10 @@ private _saveName = "";
 
 if (isMultiplayer) then {
     private _saveName = format [QGVAR(%1), worldName];
-    diag_log format ["[MISERY] - Multiplayer Save Name: %1", _saveName];
+    [QUOTE(COMPONENT_BEAUTIFIED), format ["Multiplayer Save Name: %1", _saveName]] call EFUNC(common,debugMessage);
 } else {
     private _saveName = format [QGVAR(%1), GVAR(saveSlot)];
-    diag_log format ["[MISERY] - Singleplayer Save Name: %1", _saveName];
+    [QUOTE(COMPONENT_BEAUTIFIED), format ["Singleplayer Save Name: %1", _saveName]] call EFUNC(common,debugMessage);
 };
 
 _saveName

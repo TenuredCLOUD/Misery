@@ -15,7 +15,7 @@
 
 if (isMultiplayer) exitWith {};
 
-diag_log "[MISERY] - Combat log prevention active";
+[QUOTE(COMPONENT_BEAUTIFIED), "Combat Log prevention active"] call EFUNC(common,debugMessage);
 
 (findDisplay 46) displayAddEventHandler ["KeyDown", {
     [{
