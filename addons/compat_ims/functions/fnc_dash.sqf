@@ -37,7 +37,7 @@
 
         player setFatigue (getFatigue player + 0.01);
     
-    if(EGVAR(common,debug))then{systemChat "Misery WBKIMS Dash Compat cycle..."};
+    [QUOTE(COMPONENT_BEAUTIFIED), "Dash Compat cycle."] call EFUNC(common,debugMessage);
 
 }, 0.1, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;
