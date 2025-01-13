@@ -1,5 +1,5 @@
 #define COMPONENT compat_ims
-#define COMPONENT_BEAUTIFIED Compat_IMS
+#define COMPONENT_BEAUTIFIED Compat IMS
 #include "\z\misery\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
