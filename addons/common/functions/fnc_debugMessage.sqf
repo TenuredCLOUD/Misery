@@ -20,7 +20,7 @@ if (GVAR(debugMode) == 0) exitWith {};
 
 private _errorMsg = format ["[Misery - %1] - %2", _component, _message];
 
-if (GVAR(debugMode) == 1) then {
+if (GVAR(debugMode) > 0) then {
     systemChat _errorMsg;
 };
 
