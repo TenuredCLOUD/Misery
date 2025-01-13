@@ -45,16 +45,5 @@
 
     addCamShake [1, 5, 10];
     playSound QEGVAR(audio,sound_submergedShort);
-    playSound selectRandom [
-        QEGVAR(audio,sound_distantGhost),
-        QEGVAR(audio,sound_distantHellspawn),
-        QEGVAR(audio,sound_distantScream01),
-        QEGVAR(audio,sound_distantScream02),
-        QEGVAR(audio,sound_distantScream03),
-        QEGVAR(audio,sound_distantScream04),
-        QEGVAR(audio,sound_moan),
-        QEGVAR(audio,sound_monsterCall),
-        QEGVAR(audio,sound_monsterDistant),
-        QEGVAR(audio,sound_monsterScream)
-    ];
+    playSound selectRandom [MACRO_AUDIOSELECTIONS];
 }, 16] call CBA_fnc_addPerFrameHandler;
