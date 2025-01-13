@@ -42,7 +42,7 @@ player setVariable [QCLASS(radiation), (player getVariable [QCLASS(radiation), 0
 };
 
 if (EGVAR(common,debug)) then {
-    systemChat format ["Radiation Protection: Skin %1%2, Respiratory %3%4, Eye %5%6", (_skinProtection * 100), "%", (_respiratoryProtection * 100), "%", (_eyeProtection * 100), "%"];
+    systemChat format ["Radiation Protection: Skin %1%4, Respiratory %2%4, Eye %3%4", (_skinProtection * 100), (_respiratoryProtection * 100), (_eyeProtection * 100), "%"];
     systemChat format ["Effective Radiation Dose: %1", _effectiveDose];
 };
 
