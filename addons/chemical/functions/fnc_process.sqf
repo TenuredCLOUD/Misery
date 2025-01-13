@@ -47,7 +47,7 @@ if (EGVAR(common,ace)) then {
 };
 
 if (EGVAR(common,debug)) then {
-    systemChat format ["Chemical Area Protection: Skin %1%2, Respiratory %3%4, Eye %5%6", _skinProtection, "%", _respiratoryProtection, "%", _eyeProtection, "%"];
+    systemChat format ["Chemical Area Protection: Skin %1%4, Respiratory %2%4, Eye %3%4", (_skinProtection * 100), (_respiratoryProtection * 100), (_eyeProtection * 100), "%"];
 };
 
     private _leftArea = GVAR(areas) findIf {player inArea _x} == -1;
