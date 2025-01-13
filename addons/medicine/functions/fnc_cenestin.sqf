@@ -14,12 +14,11 @@
  *
 */
 
-MiseryACE=false;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
+
 
 if (!hasInterface) exitWith {};
 
-  if (goggles player in antirad_goggles || headgear player in antirad_headgears) exitWith {
+  if ((call EFUNC(protection,totalProtection) select 0) > 0 || (call EFUNC(protection,totalProtection) select 1) > 0) exitWith {
     titleText ["You cannot take medicine while wearing a mask...", "PLAIN DOWN"];
 };
 
@@ -27,12 +26,12 @@ if (alive player) then {
 
 titleText ["You take a cenestin pill...", "PLAIN DOWN"];
 
-player removeItem "Misery_Cenestin";
+player removeItem QCLASS(cenestinBottle);
 
 sleep 60;
 
- if (MiseryACE) then {
-[player, "Misery_Cenestin", 120, 300, 1, 0, 1] call ace_medical_status_fnc_addMedicationAdjustment;
+ if (EGVAR(common,ace)) then {
+[player, QCLASS(cenestinBottle), 120, 300, 1, 0, 1] call ace_medical_status_fnc_addMedicationAdjustment;
 
 {
 [player, _x, "FieldDressing"] call ace_medical_treatment_fnc_bandageLocal;

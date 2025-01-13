@@ -14,33 +14,28 @@
  *
 */
 
-[{((goggles player in antirad_goggles) || (vest player in antirad_vests) || (backpack player in antirad_packs))},
+[{(call EFUNC(protection,totalProtection) select 1) > 0},
 {
 
     [{
         params ["_args", "_handle"];
 
-        if ((!(goggles player in antirad_goggles) && !(vest player in antirad_vests || backpack player in antirad_packs)) || (!alive player)) exitWith {
+        if ((call EFUNC(protection,totalProtection) select 1) < 1 || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
-            if(MiseryDebug)then{systemChat "Misery Gasmask audio cycle terminated..."};
+            if(EGVAR(common,debug))then{systemChat "Misery Gasmask audio cycle terminated..."};
             [] call FUNC(gasmaskAudio);
-            if(MiseryDebug)then{systemChat "Misery Gasmask audio cycle checks re-initiated..."};
+            if(EGVAR(common,debug))then{systemChat "Misery Gasmask audio cycle checks re-initiated..."};
         };
-
-    if ((goggles player in antirad_goggles) || (vest player in antirad_vests) || (backpack player in antirad_packs)) then {
-
-        private _gmsounds = selectRandom ["gasmask1","gasmask2","gasmask3","gasmask4"];
 
         if (cameraView != "EXTERNAL") then {
 
-            player say3D [_gmsounds, 10, 0.8 + random 0.1 + getFatigue player];
+            player say3D [QEGVAR(audio,sound_gasmaskBreathing), 10, 0.8 + random 0.1 + getFatigue player];
         };
 
         ((getFatigue player)*2);
         player setSpeaker speaker player;
-    };
-
-if(MiseryDebug)then{systemChat "Misery Gasmask audio cycle..."};
+    
+if(EGVAR(common,debug))then{systemChat "Misery Gasmask audio cycle..."};
 
 }, 10, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;

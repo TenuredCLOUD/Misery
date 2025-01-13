@@ -224,12 +224,12 @@
 };
 
         // Update the player's funds
-        private _playerFunds = player getVariable "MiseryCurrency";
-        ctrlSetText [1003, format ["%3: %1 %2", MiseryCurrencySymbol, [_playerFunds, 1, 2, true] call CBA_fnc_formatNumber, profileName]];
+        private _playerFunds = player getVariable QCLASS(currency);
+        ctrlSetText [1003, format ["%3: %1 %2", EGVAR(money,symbol), [_playerFunds, 1, 2, true] call CBA_fnc_formatNumber, profileName]];
 
         // Update the shop's funds
         private _shop = _trader getVariable "shop";
         private _shopFunds = _shop select (_shop findIf {_x select 0 == "ShopFunds"}) select 1;
-        ctrlSetText [1002, format ["%3: %1 %2", MiseryCurrencySymbol, [_shopFunds, 1, 2, true] call CBA_fnc_formatNumber, _shopName]];
+        ctrlSetText [1002, format ["%3: %1 %2", EGVAR(money,symbol), [_shopFunds, 1, 2, true] call CBA_fnc_formatNumber, _shopName]];
 
 }, []] call CBA_fnc_waitUntilAndExecute;

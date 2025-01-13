@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
  /*
- * Author: TenuredCLOUD
+ * Author: MikeMF, TenuredCLOUD
  * Gas mask cartridge replacement
  *
  * Arguments:
@@ -14,14 +14,22 @@
  *
 */
 
-if (goggles player in antirad_goggles) then {
+private _goggles = toLower goggles player;
+if (_goggles isEqualTo "") exitWith {};
 
-   player removeItem "Misery_gascartridge";
+player removeItem QCLASS(gasCartridge);
 
-   titleText ["You replace the cartridges on your gasmask...", "PLAIN DOWN"];
+private _respirators = [MACRO_RESPIRATOR_MASKS_NOFILTER];
 
-   sleep 1;
+if (_goggles in _respirators) then {
+    private _index = _respirators find _goggles;
+    private _filteredMask = [MACRO_RESPIRATOR_MASKS] select _index;
 
-   player setVariable ["Miserycartridge", 100];
+    removeGoggles player;
+    player addGoggles _filteredMask;
 
+    private _artifactStoredStr = format ["<t font='PuristaMedium'>%1</t>", "You replace the cartridges on your gasmask..."];
+    [QEGVAR(common,tileText), _artifactStoredStr] call CBA_fnc_localEvent;
+
+    player setVariable [QCLASS(gasmaskCartridgeLevel), 100];
 };

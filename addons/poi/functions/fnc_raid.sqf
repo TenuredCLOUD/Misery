@@ -139,25 +139,25 @@ _SpawnFLAG = false;
 
 if (Misery_activePOIs >= Misery_POIMAXAllowed) exitWith {
 
-    if (MiseryDebug) then {
+    if (EGVAR(common,debug)) then {
             systemChat "[Misery POI Framework] exiting Generation for PMC Raid due to max active POI's allowed value being reached";
     };
 
     //Start cooldown before retry:
     sleep 120;
 
-_module setVariable ["Misery_POI_Spawned", false, true];
+_module setVariable [QCLASS(poiSpawned), false, true];
 
 };
 
 //Spawn chance check:
 if ((random 100) > _Spawnchance) exitWith {
-if (MiseryDebug) then {systemChat format["[Misery POI Framework] Spawn chance failed, exiting Generation for PMC Raid at %1 checks will be re-initialized next game session...",getPosATL _module]};
+if (EGVAR(common,debug)) then {systemChat format["[Misery POI Framework] Spawn chance failed, exiting Generation for PMC Raid at %1 checks will be re-initialized next game session...",getPosATL _module]};
 
 //This POI is now null from spawning since the original check failed
 };
 
-if (MiseryDebug) then {systemChat format["[Misery POI Framework] Player detected near module at %1 Generating Raid...",getPosATL _module]};
+if (EGVAR(common,debug)) then {systemChat format["[Misery POI Framework] Player detected near module at %1 Generating Raid...",getPosATL _module]};
 
 // Create the entities
 for "_i" from 1 to _numEntities do {
@@ -233,7 +233,7 @@ for "_i" from 1 to _numEntities do {
 
     if ((_unit ammo (primaryWeapon _unit)) isEqualTo 0) then {
         _magazinearrayP = getArray (configFile >> "CfgWeapons" >> primaryWeapon _unit >> "magazines");
-        if !(_magazinearrayP isEqualTo []) then {
+        if (_magazinearrayP isNotEqualTo []) then {
             _magP = _magazinearrayP select 0;
             for "_j" from 1 to _randomammocount do {_unit addMagazine _magP;};
         };
@@ -241,7 +241,7 @@ for "_i" from 1 to _numEntities do {
 
     if ((_unit ammo (handgunWeapon _unit)) isEqualTo 0) then {
         _magazinearrayH = getArray (configFile >> "CfgWeapons" >> handgunWeapon _unit >> "magazines");
-        if !(_magazinearrayH isEqualTo []) then {
+        if (_magazinearrayH isNotEqualTo []) then {
             _magH = _magazinearrayH select 0;
             for "_j" from 1 to _randomammocount do {_unit addMagazine _magH;};
         };
@@ -249,7 +249,7 @@ for "_i" from 1 to _numEntities do {
 
     if ((_unit ammo (secondaryWeapon _unit)) isEqualTo 0) then {
         _magazinearrayS = getArray (configFile >> "CfgWeapons" >> secondaryWeapon _unit >> "magazines");
-        if !(_magazinearrayS isEqualTo []) then {
+        if (_magazinearrayS isNotEqualTo []) then {
             _magS = _magazinearrayS select 0;
             for "_j" from 1 to _randomammocount do {_unit addMagazine _magS;};
         };
@@ -381,7 +381,7 @@ if (!isNil "grad_persistence_blacklist") then {
     {
         if ((grad_persistence_blacklist find (toLower _x) == -1) && (grad_persistence_blacklist find (toUpper _x) == -1)) then {
             [_x] call grad_persistence_fnc_blacklistClasses;
-            if (MiseryDebug) then {systemChat format ["[Misery POI Framework] GRAD Persistence detected, Adding %1 to blacklist for saving / reloading...", _x]};
+            if (EGVAR(common,debug)) then {systemChat format ["[Misery POI Framework] GRAD Persistence detected, Adding %1 to blacklist for saving / reloading...", _x]};
         };
     } forEach (_tentTypes + _flagTypes + _crateTypes);
 };
@@ -402,7 +402,7 @@ waitUntil {
 };
 
 if (_deleteFlag) exitWith {
-if (MiseryDebug) then {systemChat format["[Misery POI Framework] Player no longer detected, deleting Raid at %1...",getPosATL _module]};
+if (EGVAR(common,debug)) then {systemChat format["[Misery POI Framework] Player no longer detected, deleting Raid at %1...",getPosATL _module]};
 {deleteVehicle _x} forEach units _group; // Delete all units in the group
 {deleteVehicle _x} forEach _spawnedObjects;
 deleteGroup _group; // Delete the group
@@ -412,8 +412,8 @@ if (_marker != "") then {
     // [_marker] remoteExec ["deleteMarkerLocal", 0];
     // missionNamespace setVariable [format ["PMC_Raid_Marker_%1", _raidID], nil];
 };
-if (MiseryDebug) then {systemChat format["[Misery POI Framework] Re-initializing Raid POI for module at %1...",getPosATL _module]};
-_module setVariable ["Misery_POI_Spawned", false, true];
+if (EGVAR(common,debug)) then {systemChat format["[Misery POI Framework] Re-initializing Raid POI for module at %1...",getPosATL _module]};
+_module setVariable [QCLASS(poiSpawned), false, true];
 
 Misery_activePOIs = Misery_activePOIs - 1;
 

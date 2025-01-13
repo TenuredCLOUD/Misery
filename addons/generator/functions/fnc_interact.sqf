@@ -18,4 +18,4 @@ _Generator = _this select 0;
 
 player setVariable ['Misery_Current_Generator', _Generator, true];
 
-createDialog "MiseryGenerator_GUI";
+createDialog QCLASS(generator_ui);

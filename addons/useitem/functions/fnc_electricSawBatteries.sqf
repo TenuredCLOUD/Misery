@@ -15,15 +15,15 @@
  * Public: No
 */
 
-if ([["Misery_18vbat"]] call EFUNC(common,hasItem)) then {
+if ([[QCLASS(18vBattery)]] call EFUNC(common,hasItem)) then {
 
-player removeItem "Misery_electrichandsawnobattery";
+player removeItem QCLASS(electricHandSaw_NoBattery);
 
 titleText ["You add a battery to your saw...", "PLAIN DOWN"];
 
-player removeItem "Misery_18vbat";
+player removeItem QCLASS(18vBattery);
 
-player addItem "Misery_electrichandsaw";
+player addItem QCLASS(electricHandsaw);
 
 } else {
 

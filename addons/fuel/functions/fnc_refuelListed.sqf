@@ -24,12 +24,12 @@ if (!isNull findDisplay 982385) exitWith {
     _list = findDisplay 982385 displayCtrl 1500;
     _PurchaseB = findDisplay 982385 displayCtrl 1600;
 
-    if (isNil "MiseryTarget_VehName") exitWith {
+    if (isNil "EGVAR(common,targetVehicleType)") exitWith {
         _index = _list lbAdd "No vehicle to refuel...";
         _PurchaseB ctrlShow false;
     };
 
-    _Vehiclename = getText (configFile >> "CfgVehicles" >> MiseryTarget_VehName >> "displayName");
+    _Vehiclename = getText (configFile >> "CfgVehicles" >> EGVAR(common,targetVehicleType) >> "displayName");
 
     lbClear _list;
 
@@ -37,7 +37,7 @@ if (!isNull findDisplay 982385) exitWith {
     _totalLiters = 0;
 
     {
-        if ((_x select 0) == MiseryTarget_VehName) then {
+        if ((_x select 0) == EGVAR(common,targetVehicleType)) then {
             _Array=_x;
             _Found = true;
             _fuelTypeIndex = _x select 1;

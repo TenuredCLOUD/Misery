@@ -19,49 +19,44 @@
 //Enforce client only loop:
 if !(hasInterface) exitWith {};
 
-[{!isNil "MiseryClientReady" && alive player},
+[{!isNil QEGVAR(client,initialized) && alive player},
 {
     [{
         params ["_args", "_handle"];
 
         if (!alive player) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
-            if(MiseryDebug)then{systemChat "Misery survival loop cycle terminated..."};
+            if(EGVAR(common,debug))then{systemChat "[Misery survival] loop cycle terminated..."};
             [] call FUNC(loop);
-            if(MiseryDebug)then{systemChat "Misery survival loop cycle checks re-initiated..."};
+            if(EGVAR(common,debug))then{systemChat "[Misery survival] loop cycle checks re-initiated..."};
         };
 
-    private ["_rads","_MHunger","_MThirst","_MInfection","_MPoison","_MSleepiness","_MExposure","_MPlayertemp","_Rhunger","_MDebuffs","_MSleeppillstaken","_MIsSleeping","_randomnutrient","_randomnutrientweight","_bagweightload","_Playerweight","_Miseryweightdefcalculated","_randomsleepweight","_random"];
+    private ["_rads","_MHunger","_MThirst","_MInfection","_MPoison","_MSleepiness","_MExposure","_MPlayertemp","_ailments","_MSleeppillstaken","_MIsSleeping","_randomnutrient","_randomnutrientweight","_bagweightload","_Playerweight","_Miseryweightdefcalculated","_randomsleepweight","_random"];
 
-    _rads = player getVariable ["MiseryRadiation", 0];
-    _MHunger = player getVariable ["MiseryHunger", MACRO_PLAYER_HUNGER];
-    _MThirst = player getVariable ["MiseryThirst", MACRO_PLAYER_THIRST];
-    _MInfection = player getVariable ["MiseryInfection", MACRO_PLAYER_INFECTION];
-    _MPoison = player getVariable ["MiseryPoison", MACRO_PLAYER_TOXICITY];
-    _MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
-    _MExposure = player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE];
-    _MPlayertemp = player getVariable ["MiseryPlayerTemp", 0];
-    _Rhunger = player getVariable ["hunger", 100];
-    _MDebuffs = player getVariable "MiseryDebuffs";
+    _rads = player getVariable [QCLASS(radiation), 0];
+    _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER];
+    _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_THIRST];
+    _MInfection = player getVariable [QCLASS(infection), MACRO_PLAYER_INFECTION];
+    _MPoison = player getVariable [QCLASS(toxicity), MACRO_PLAYER_TOXICITY];
+    _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
+    _MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];
+    _MPlayertemp = player getVariable [QCLASS(thermalIndex), 0];
+    _ailments = player getVariable QCLASS(ailments);
 
     //Sleep system
     _MSleeppillstaken = player getVariable ["MiserySleeppillstaken", 0];
-    _MIsSleeping = player getVariable ["Misery_IsSleeping", false];
+    _MIsSleeping = player getVariable [QCLASS(isSleeping), false];
 
     _randomnutrient = [1, 2] call BIS_fnc_randomInt; //random nutrient deficiency hunger or thirst
 
-    // if (MiseryNORVG==1) then {
-
     if (_randomnutrient == 1) then {
-    player setVariable ["MiseryThirst", (_MThirst - ((MiseryThirstIncrement)))]; //player setVariable ["MiseryThirst", (_MThirst -  ((MiseryThirstIncrement)toFixed 2))];
+    player setVariable [QCLASS(thirst), (_MThirst - ((GVAR(thirstIncrement))))]; //player setVariable [QCLASS(thirst), (_MThirst -  ((GVAR(thirstIncrement))toFixed 2))];
     }else{
-    player setVariable ["MiseryHunger", (_MHunger - ((MiseryHungerIncrement)))]; //player setVariable ["MiseryHunger", (_MHunger -  ((MiseryHungerIncrement)toFixed 2))];
+    player setVariable [QCLASS(hunger), (_MHunger - ((GVAR(hungerIncrement))))]; //player setVariable [QCLASS(hunger), (_MHunger -  ((GVAR(hungerIncrement))toFixed 2))];
     };
 
-    //}; //If scenario designer doesn't change hunger / thirst rates for misery thirst / hunger then they will not calc if Rvg is being used
-
     //Weight deficiency - Calculates a drop in hunger / thirst depending on weight:
-    if (MiseryWeightdeficiency == 1) then {
+    if (GVAR(weightDeficiency)) then {
 
     _randomnutrientweight = [1, 2] call BIS_fnc_randomInt; //random nutrient deficiency hunger or thirst
 
@@ -70,60 +65,56 @@ if !(hasInterface) exitWith {};
     _Miseryweightdefcalculated = MACRO_WEIGHTCALC(_Playerweight);
 
     if (_randomnutrientweight == 1) then {
-    player setVariable ["MiseryThirst", (_MThirst - (_Miseryweightdefcalculated))]; //player setVariable ["MiseryThirst", (_MThirst -  ((_Miseryweightdefcalculated)))]; //player setVariable ["MiseryThirst", (_MThirst -  ((_Miseryweightdefcalculated)toFixed 2))];
+    player setVariable [QCLASS(thirst), (_MThirst - (_Miseryweightdefcalculated))]; //player setVariable [QCLASS(thirst), (_MThirst -  ((_Miseryweightdefcalculated)))]; //player setVariable [QCLASS(thirst), (_MThirst -  ((_Miseryweightdefcalculated)toFixed 2))];
     }else{
-    player setVariable ["MiseryHunger", (_MHunger - (_Miseryweightdefcalculated))]; //player setVariable ["MiseryHunger", (_MHunger -  ((_Miseryweightdefcalculated)))]; //player setVariable ["MiseryHunger", (_MHunger -  ((_Miseryweightdefcalculated)toFixed 2))];
+    player setVariable [QCLASS(hunger), (_MHunger - (_Miseryweightdefcalculated))]; //player setVariable [QCLASS(hunger), (_MHunger -  ((_Miseryweightdefcalculated)))]; //player setVariable [QCLASS(hunger), (_MHunger -  ((_Miseryweightdefcalculated)toFixed 2))];
     };
 
-    if !(MiseryMP) then { //If SP - and Weight deficiency then start increasing sleepiness var
+    if !(EGVAR(common,checkMultiplayer)) then { //If SP - and Weight deficiency then start increasing sleepiness var
     _randomsleepweight = [1, 2] call BIS_fnc_randomInt; //random sleep decrease
     if (_randomsleepweight == 1) then {
-    _MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
-    player setVariable ["MiserySleepiness", (_MSleepiness + (_Miseryweightdefcalculated))]; //player setVariable ["MiserySleepiness", (_MSleepiness +  ((_Miseryweightdefcalculated)))]; //player setVariable ["MiserySleepiness", (_MSleepiness +  ((_Miseryweightdefcalculated)toFixed 2))];
+    _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
+    player setVariable [QCLASS(energyDeficit), (_MSleepiness + (_Miseryweightdefcalculated))]; //player setVariable [QCLASS(energyDeficit), (_MSleepiness +  ((_Miseryweightdefcalculated)))]; //player setVariable [QCLASS(energyDeficit), (_MSleepiness +  ((_Miseryweightdefcalculated)toFixed 2))];
         };
     };
 };
 
-    if (MiseryMP) then {player setVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
+    if (EGVAR(common,checkMultiplayer)) then {player setVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
     }else{
 
-        //if (MiseryNORVG==1) then { //Only calculate Misery sleep system if using Misery framework
+        _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
 
-        _MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
+        player setVariable [QCLASS(energyDeficit), (_MSleepiness + (GVAR(energyDeficitIncrement)))]; //player setVariable [QCLASS(energyDeficit), (_MSleepiness +  ((GVAR(energyDeficitIncrement))))]; //player setVariable [QCLASS(energyDeficit), (_MSleepiness +  ((GVAR(energyDeficitIncrement))toFixed 2))];
 
-        player setVariable ["MiserySleepiness", (_MSleepiness + (MiserySleepinessIncrement))]; //player setVariable ["MiserySleepiness", (_MSleepiness +  ((MiserySleepinessIncrement)))]; //player setVariable ["MiserySleepiness", (_MSleepiness +  ((MiserySleepinessIncrement)toFixed 2))];
-
-        if ((_MSleepiness) >= 35) then {_MDebuffs pushBackUnique "TIRED"; player setVariable ["MiseryDebuffs", _MDebuffs];};
-        if ((_MSleepiness) < 35) then {_MDebuffs deleteAt (_MDebuffs find "TIRED"); player setVariable ["MiseryDebuffs", _MDebuffs];};
-        if ((_MSleepiness) >= 35) then {player setVariable ["MiserySleepiness", 35]};
-        if ((_MSleepiness) <= 0) then {player setVariable ["MiserySleepiness", 0]};
+        if ((_MSleepiness) >= 35) then {_ailments pushBackUnique "TIRED"; player setVariable [QCLASS(ailments), _ailments];};
+        if ((_MSleepiness) < 35) then {_ailments deleteAt (_ailments find "TIRED"); player setVariable [QCLASS(ailments), _ailments];};
+        if ((_MSleepiness) >= 35) then {player setVariable [QCLASS(energyDeficit), 35]};
+        if ((_MSleepiness) <= 0) then {player setVariable [QCLASS(energyDeficit), 0]};
 
         //Detect how many sleeping pills player has taken (If 3 or more in short amount of time terminate player):
         if (!isNil {player getVariable ["MiserySleeppillstaken", 0]} && {_MSleeppillstaken >= 3}) then {player setDamage 1};
-        //};
     };
 
     //MP "Tired" Debuff removal:
-    if (MiseryMP && _MDebuffs find "TIRED" != -1) then {_MDebuffs deleteAt (_MDebuffs find "TIRED"); player setVariable ["MiseryDebuffs", _MDebuffs];};
+    if (EGVAR(common,checkMultiplayer) && _ailments find "TIRED" != -1) then {_ailments deleteAt (_ailments find "TIRED"); player setVariable [QCLASS(ailments), _ailments];};
 
     //Blackout due to extreme fatigue:
     _blackout = true;
 
-    //if ((MiseryNORVG==1) && (_MDebuffs find "TIRED" != -1) && (!_MIsSleeping)) then {
-    if ((_MDebuffs find "TIRED" != -1) && (!_MIsSleeping)) then {
+    if ((_ailments find "TIRED" != -1) && (!_MIsSleeping)) then {
 
-        if ((random 100) >  (MiseryBlackoutChance)) then {_blackout = false};
+        if ((random 100) >  (GVAR(blackoutChance))) then {_blackout = false};
 
         if (_blackout) then {
         [player,(1+(random 3))] call EFUNC(common,stun); //Spawn function for new scheduled environment
         };
     };
 
-    if (MiseryAilments == 1) then {
+    if (GVAR(ailments)) then {
 
-    _MHunger = player getVariable ["MiseryHunger", MACRO_PLAYER_HUNGER];
+    _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER];
 
-    if ((_MDebuffs find "PARASITES" != -1)) then {player setVariable ["MiseryHunger", (_MHunger - ((MiseryHungerIncrement)))]};     //if ((_MDebuffs find "PARASITES" != -1)) then {player setVariable ["MiseryHunger", (_MHunger -  ((MiseryHungerIncrement)toFixed 2))]};
+    if ((_ailments find "PARASITES" != -1)) then {player setVariable [QCLASS(hunger), (_MHunger - ((GVAR(hungerIncrement))))]};     //if ((_ailments find "PARASITES" != -1)) then {player setVariable [QCLASS(hunger), (_MHunger -  ((GVAR(hungerIncrement))toFixed 2))]};
 };
 
 //--------------------------------------------------------------------------------------------------------------
@@ -132,60 +123,60 @@ if !(hasInterface) exitWith {};
 
         if (_rads > 1) then {
 
-        _rads = player getVariable ["MiseryRadiation", 0];
+        _rads = player getVariable [QCLASS(radiation), 0];
 
-        player setVariable ["MiseryRadiation", (_rads) - MiseryRadiationHealing];
+        player setVariable [QCLASS(radiation), (_rads) - EGVAR(radiation,healingValue)];
         };
 
-            _rads = player getVariable ["MiseryRadiation", 0];
+            _rads = player getVariable [QCLASS(radiation), 0];
 
             _random = [1, 10] call BIS_fnc_randomInt; //random event for parasite removal
 
-            if (_random == 5 && _rads > 1000 && MiseryAilments == 1) then {
+            if (_random == 5 && _rads > 1000 && GVAR(ailments)) then {
 
-            if (_MDebuffs find "PARASITES" != -1) then {_MDebuffs deleteAt (_MDebuffs find "PARASITES"); player setVariable ["MiseryDebuffs", _MDebuffs];};
+            if (_ailments find "PARASITES" != -1) then {_ailments deleteAt (_ailments find "PARASITES"); player setVariable [QCLASS(ailments), _ailments];};
         };
 
     //Poison:
-    _MPoison = player getVariable ["MiseryPoison", MACRO_PLAYER_TOXICITY];
+    _MPoison = player getVariable [QCLASS(toxicity), MACRO_PLAYER_TOXICITY];
 
-    if (_MPoison > 0 && MiseryAilments == 1) then {
+    if (_MPoison > 0 && GVAR(ailments)) then {
 
-        _MPoison = player getVariable ["MiseryPoison", MACRO_PLAYER_TOXICITY];
+        _MPoison = player getVariable [QCLASS(toxicity), MACRO_PLAYER_TOXICITY];
 
-        _MDebuffs pushBackUnique "POISON"; player setVariable ["MiseryDebuffs", _MDebuffs];
+        _ailments pushBackUnique "POISON"; player setVariable [QCLASS(ailments), _ailments];
 
         if (_MPoison > 15) then {[player,(_MPoison / 100)] call EFUNC(common,specialDamage)};
 
-        player setVariable ["MiseryPoison", (_MPoison - ((MiseryPoisonHealing)))]; //player setVariable ["MiseryPoison", (_MPoison -  ((MiseryPoisonHealing)toFixed 2))];
+        player setVariable [QCLASS(toxicity), (_MPoison - ((GVAR(toxicityHealing))))]; //player setVariable [QCLASS(toxicity), (_MPoison -  ((GVAR(toxicityHealing))toFixed 2))];
 };
 
-    if (_MPoison <= 0) then {_MDebuffs deleteAt (_MDebuffs find "POISON"); player setVariable ["MiseryDebuffs", _MDebuffs];};
+    if (_MPoison <= 0) then {_ailments deleteAt (_ailments find "POISON"); player setVariable [QCLASS(ailments), _ailments];};
 
     //Infection:
-    _MInfection = player getVariable ["MiseryInfection", MACRO_PLAYER_INFECTION];
+    _MInfection = player getVariable [QCLASS(infection), MACRO_PLAYER_INFECTION];
 
-    if(_MInfection > 0 && MiseryAilments == 1)then{
+    if(_MInfection > 0 && GVAR(ailments))then{
 
-        _MInfection = player getVariable ["MiseryInfection", MACRO_PLAYER_INFECTION];
+        _MInfection = player getVariable [QCLASS(infection), MACRO_PLAYER_INFECTION];
 
-        _MDebuffs pushBackUnique "INFECTION"; player setVariable ["MiseryDebuffs", _MDebuffs];
+        _ailments pushBackUnique "INFECTION"; player setVariable [QCLASS(ailments), _ailments];
 
         if (_MInfection > 15) then {[player,(_MInfection / 100)] call EFUNC(common,specialDamage)};
 
-        player setVariable ["MiseryInfection", (_MInfection - ((MiseryInfectionHealing)))]; //player setVariable ["MiseryInfection", (_MInfection -  ((MiseryInfectionHealing)toFixed 2))];
+        player setVariable [QCLASS(infection), (_MInfection - ((GVAR(infectionHealing))))]; //player setVariable [QCLASS(infection), (_MInfection -  ((GVAR(infectionHealing))toFixed 2))];
     };
 
-    if(_MInfection <= 0) then {_MDebuffs deleteAt (_MDebuffs find "INFECTION"); player setVariable ["MiseryDebuffs", _MDebuffs];};
+    if(_MInfection <= 0) then {_ailments deleteAt (_ailments find "INFECTION"); player setVariable [QCLASS(ailments), _ailments];};
 
-            _MHunger = player getVariable ["MiseryHunger", MACRO_PLAYER_HUNGER];
-            _MThirst = player getVariable ["MiseryThirst", MACRO_PLAYER_THIRST];
+            _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER];
+            _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_THIRST];
 
-            if(_MHunger > 100) then {player setVariable ["MiseryHunger", MACRO_PLAYER_HUNGER]};
+            if(_MHunger > 100) then {player setVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER]};
 
              if(_MHunger <= 0)then{[player,100] call EFUNC(common,specialDamage)}; //Kill the player on "0" hunger
 
-            if(_MThirst > 100) then {player setVariable ["MiseryThirst", MACRO_PLAYER_THIRST]};
+            if(_MThirst > 100) then {player setVariable [QCLASS(thirst), MACRO_PLAYER_THIRST]};
 
              if(_MThirst <= 0)then{[player,100] call EFUNC(common,specialDamage)}; //Kill the player on "0" thirst
 
@@ -193,9 +184,9 @@ if !(hasInterface) exitWith {};
 
     // Start temperature simulation (if enabled):
 
-    if (MiseryTemperature == 1) then {
+    if (EGVAR(temperature,enable)) then {
 
-    _MExposure = player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE];
+    _MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];
 
     [player] call EFUNC(temperature,warmup);
     [player] call EFUNC(temperature,overtemp);
@@ -205,13 +196,13 @@ if !(hasInterface) exitWith {};
     [player] call EFUNC(temperature,effectiveTemperature);
 
     if (MiseryBreathFogAllowed) then {
-    if (isNil{player getVariable "MiseryBreathFogSim"}) then {
-    [] call "\z\misery\addons\temperature\functions\fnc_BreathFog.sqf";
+    if (isNil{player getVariable QCLASS(breathCondensationEffect)}) then {
+    [] call EFUNC(temperature,breathFog);
     };
 };
 
-    if (_MExposure <= -25) then {player setVariable ["MiseryExposure", -25];};
-    if (_MExposure >= 25) then {player setVariable ["MiseryExposure", 25];};
+    if (_MExposure <= -25) then {player setVariable [QCLASS(exposure), -25];};
+    if (_MExposure >= 25) then {player setVariable [QCLASS(exposure), 25];};
 
 
         if ((_MExposure <= -25 || _MExposure >= 25) || (_MPlayertemp <= -30 || _MPlayertemp >= 55)) then {
@@ -223,7 +214,7 @@ if !(hasInterface) exitWith {};
         }; //Over exposure death / -30C or 55+C
     };
 
-    if(MiseryDebug)then{systemChat "Misery survival loop cycle..."};
+    if (EGVAR(common,debug)) then {systemChat "[Misery survival] loop cycle..."};
 
-}, MiserysurvivalCycle, []] call CBA_fnc_addPerFrameHandler;
+}, GVAR(cycle), []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;

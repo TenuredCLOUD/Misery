@@ -23,13 +23,13 @@
  *
  * Example:
  * [[
- *   "Misery_woodplank",
+ *   QCLASS(woodplank",
  *   [
- *   ["Misery_electrichandsaw",1,false],
- *   ["Misery_woodenlog", 1, true],
+ *   [QCLASS(electricHandsaw),1,false],
+ *   [QCLASS(woodenlog), 1, true],
  *   ["CraftingTime", 45],
  *   ["OutputCount", 4],
- *   ["ToBeReplaced","Misery_electrichandsaw", 0.5, "Misery_electrichandsawnobattery"],
+ *   ["ToBeReplaced",QCLASS(electricHandsaw), 0.5, QCLASS(electricHandSaw_NoBattery)],
  *   ["Audio","ElectricSaw"]
  *   ]
  * ]] call misery_crafting_fnc_addCraftingRecipe;
@@ -37,14 +37,14 @@
 */
 
 _this params ["_recipe"];
-private _playerRecipes = player getVariable ["Misery_Crafting_DataSet", []]; // Provide a default value
-if (MiseryDebug) then {
+private _playerRecipes = player getVariable [QCLASS(craftingKnowledge), []]; // Provide a default value
+if (EGVAR(common,debug)) then {
 systemChat format ["_recipe: %1", _recipe];
 };
 private _recipeName = _recipe select 0;
 if (_playerRecipes findIf {_x select 0 isEqualTo _recipeName} == -1) then {
     _playerRecipes pushBack _recipe;
-    player setVariable ["Misery_Crafting_DataSet", _playerRecipes];
+    player setVariable [QCLASS(craftingKnowledge), _playerRecipes];
 };
 
 

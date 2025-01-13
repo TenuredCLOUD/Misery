@@ -1,2 +1,0 @@
-PREP(treatListed);
-PREP(processPurchase);

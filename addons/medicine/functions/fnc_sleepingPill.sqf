@@ -14,47 +14,47 @@
  *
 */
 
-_MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
+_MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
 _MSleeppillstaken = player getVariable ["MiserySleeppillstaken", 0];
-_MIsSleeping = player getVariable "Misery_IsSleeping";
-_MFearSleep = player getVariable "Misery_FearSleep";
+_MIsSleeping = player getVariable QCLASS(isSleeping);
+_MFearSleep = player getVariable QCLASS(fearSleep);
 
-MiseryACE=false;
+EGVAR(common,ace)=false;
 if (isClass(configFile>>"cfgPatches">>"ace_main")) then {
-    MiseryACE=true
+    EGVAR(common,ace)=true
 };
 
 // sleep system enabled pre-check:
-if (MiseryMP) exitWith {
+if (EGVAR(common,checkMultiplayer)) exitWith {
     titleText ["...", "PLAIN DOWN"]
 };
 
 if (!hasInterface) exitWith {};
 
-if (goggles player in antirad_goggles || headgear player in antirad_headgears) exitWith {
+if ((call EFUNC(protection,totalProtection) select 0) > 0 || (call EFUNC(protection,totalProtection) select 1) > 0) exitWith {
     titleText ["You cannot take medicine while wearing a mask...", "PLAIN DOWN"];
 };
 
 if (alive player) exitWith {
     titleText ["You take a sleeping pill...", "PLAIN DOWN"];
 
-    player removeItem "Misery_sleeppill";
+    player removeItem QCLASS(sleepingPills);
 
-    if (MiseryACE) then {
-        [player, "Misery_sleeppill", 10, 60, -10, 0, -10] call ace_medical_status_fnc_addMedicationAdjustment;
+    if (EGVAR(common,ace)) then {
+        [player, QCLASS(sleepingPills), 10, 60, -10, 0, -10] call ace_medical_status_fnc_addMedicationAdjustment;
     };
 
     player setVariable ["MiserySleeppillstaken", (_MSleeppillstaken + 1)];
-    player setVariable ["Misery_FearSleep", true];
+    player setVariable [QCLASS(fearSleep), true];
 
     sleep 60;
 
     _Sleepingpilleffectdone = false;
 
     while { alive player && !(_Sleepingpilleffectdone) } do {
-        player setVariable ["MiserySleepiness", (_MSleepiness + 0.1)];
-        _MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
-        _MIsSleeping = player getVariable "Misery_IsSleeping";
+        player setVariable [QCLASS(energyDeficit), (_MSleepiness + 0.1)];
+        _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
+        _MIsSleeping = player getVariable QCLASS(isSleeping);
         if (_MSleepiness >= 35 || (_MIsSleeping)) then {
             _Sleepingpilleffectdone = true;
         };
@@ -67,6 +67,6 @@ if (alive player) exitWith {
     };
 
     if (_MFearSleep) then {
-        player setVariable ["Misery_FearSleep", false];
+        player setVariable [QCLASS(fearSleep), false];
     };
 };

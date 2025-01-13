@@ -14,14 +14,14 @@
  *
 */
 
-_MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
+_MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
 
 if (!hasInterface) exitWith {};
 
   if (alive player) exitWith {
 
-if !(MiseryMP) then {
-  player setVariable ["MiserySleepiness", (_MSleepiness - 10)];
+if !(EGVAR(common,checkMultiplayer)) then {
+  player setVariable [QCLASS(energyDeficit), (_MSleepiness - 10)];
 };
 
 };

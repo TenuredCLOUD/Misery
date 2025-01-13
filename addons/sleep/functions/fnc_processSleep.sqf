@@ -14,29 +14,29 @@
  *
 */
 
-private _MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
-private _MHunger = player getVariable ["MiseryHunger", MACRO_PLAYER_HUNGER];
-private _MThirst = player getVariable ["MiseryThirst", MACRO_PLAYER_THIRST];
-private _MDebuffs = player getVariable "MiseryDebuffs";
-private _MFearSleep = player getVariable "Misery_FearSleep";
+private _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
+private _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER];
+private _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_THIRST];
+private _ailments = player getVariable QCLASS(ailments);
+private _MFearSleep = player getVariable QCLASS(fearSleep);
 
-private _HourVal = player getVariable "Misery_SleepDataVal";
+private _HourVal = player getVariable QCLASS(sleepValueParsed);
 
 if (_HourVal == 0) exitWith {
     titleText [format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_SLEEPNOHOURSELECT"], "PLAIN DOWN", -1, true, true];
-    player setVariable ["Misery_SleepDataVal", nil];
+    player setVariable [QCLASS(sleepValueParsed), nil];
 };
 
-if !(_MSleepiness >= 15) exitWith {titleText [format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_SLEEPNOTTIRED"], "PLAIN DOWN", -1, true, true]; player setVariable ["Misery_SleepDataVal", nil];};
+if (_MSleepiness < 15) exitWith {titleText [format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_SLEEPNOTTIRED"], "PLAIN DOWN", -1, true, true]; player setVariable [QCLASS(sleepValueParsed), nil];};
 
-if (!(isNil {player getVariable "MiseryFear"}) && ((player getVariable ["MiseryFear", MACRO_PLAYER_FEAR]) >= 5) && (!_MFearSleep)) exitWith {titleText [format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_CANTSLEEPFEAR"], "PLAIN DOWN", -1, true, true];};
+if (!(isNil {player getVariable QCLASS(psycosis)}) && ((player getVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR]) >= 5) && (!_MFearSleep)) exitWith {titleText [format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_CANTSLEEPFEAR"], "PLAIN DOWN", -1, true, true];};
 
 _sitting = animationState player;
 if (_sitting != "amovpsitmstpsnonwnondnon_ground") then {
     player playActionNow "SitDown";
 };
 
-player setVariable ["Misery_IsSleeping", true];
+player setVariable [QCLASS(isSleeping), true];
 
 cutText ["", "BLACK OUT", 2];
 
@@ -62,16 +62,16 @@ player setAnimSpeedCoef 1.5;
     player setAnimSpeedCoef 1;
 }] call CBA_fnc_waitUntilAndExecute;
 
-player setVariable ["MiserySleepiness", (_MSleepiness - MisSleep_sleepinessDecrease)];
+player setVariable [QCLASS(energyDeficit), (_MSleepiness - MisSleep_sleepinessDecrease)];
 
-player setVariable ["Misery_IsSleeping", false];
+player setVariable [QCLASS(isSleeping), false];
 
 if (_MFearSleep) then {
-player setVariable ["Misery_FearSleep", false];
+player setVariable [QCLASS(fearSleep), false];
 };
 
 if (_MHunger > 20) then {
-player setVariable ["MiseryHunger", (_MHunger - MisSleep_hungerDecrease)];
+player setVariable [QCLASS(hunger), (_MHunger - MisSleep_hungerDecrease)];
 } else {
 if (damage player > 50) then {
 player setDamage (damage player) + 0.25;
@@ -81,7 +81,7 @@ player setDamage (damage player) + 0.5;
 };
 
 if (_MThirst > 20) then {
-player setVariable ["MiseryThirst", (_MThirst - MisSleep_thirstDecrease)];
+player setVariable [QCLASS(thirst), (_MThirst - MisSleep_thirstDecrease)];
 } else {
 if (damage player > 50) then {
 player setDamage (damage player) + 0.25;
@@ -90,4 +90,4 @@ player setDamage (damage player) + 0.5;
 };
 };
 
-player setVariable ["Misery_SleepDataVal", nil];
+player setVariable [QCLASS(sleepValueParsed), nil];

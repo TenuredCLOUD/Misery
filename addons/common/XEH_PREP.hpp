@@ -1,8 +1,8 @@
 PREP(buildingPositions);
 PREP(buildingPositionsInside);
+PREP(debugMessage);
 PREP(getSimplifiedLoadout);
 PREP(hasItem);
-PREP(isInGeometry);
 PREP(isInside);
 PREP(isInsideLoot);
 PREP(itemDecrement);
@@ -17,7 +17,6 @@ PREP(nearTree);
 PREP(nearTreeAxe);
 PREP(nearTreeSaw);
 PREP(nearWell);
-PREP(parseArray);
 PREP(specialDamage);
 PREP(stun);
 PREP(surfacePos);

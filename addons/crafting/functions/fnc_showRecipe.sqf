@@ -20,7 +20,7 @@ private _list = _dialog displayCtrl 1500;
 private _currselection = lbCurSel _list;
 private _selectedOutputItem = _list lbData _currselection;
 private _selectedRecipe = [];
-private _playerRecipes = player getVariable "Misery_Crafting_DataSet";
+private _playerRecipes = player getVariable QCLASS(craftingKnowledge);
 
 {
     if (_x select 0 isEqualTo _selectedOutputItem) then {

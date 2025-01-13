@@ -6,8 +6,8 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"misery_main"}; // Include addons from this mod that contain code or assets you depend on. Affects loadorder. Including main as an example here.
-        authors[] = {"TenuredCLOUD"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}
+        requiredAddons[] = {QCLASS(common)};
+        authors[] = {"TenuredCLOUD"};
         VERSION_CONFIG;
     };
 };
@@ -43,7 +43,7 @@ class Misery_POI: Module_F
         scope=2;
         displayName="Misery (POI)";
         icon = QPATHTOEF(icons,data\poi_ca.paa);
-        category="Misery_faction";
+        category=QCLASS(faction);
         function="";
         functionPriority=1;
         isGlobal=0;
@@ -53,7 +53,7 @@ class Misery_POI: Module_F
         {
             class Misery_POI_Type: Combo
             {
-                property="Misery_POI_Type";
+                property=QCLASS(poiType);
                 displayName = "POI type";
                 tooltip = "Defines what POI you'd like this module to generate (Campground, Heli-Wreck, Washed ashore loot, Raid, etc...)";
                 typeName = "STRING";
@@ -87,7 +87,7 @@ class Misery_POI: Module_F
             };
             class Misery_POI_faction: Combo
             {
-                property="Misery_POI_faction";
+                property=QCLASS(poiFaction);
                 displayName = "Faction";
                 tooltip = "Defines what faction you want the POI to spawn [Used only for Campground & Raids]";
                 typeName = "STRING";
@@ -121,7 +121,7 @@ class Misery_POI: Module_F
             };
             class Misery_POI_AIClass : Edit
               {
-                property="Misery_POI_AIClass";
+                property=QCLASS(poi_ai_class);
                 displayName="AI type";
                 tooltip="Single classname input, AI Class to spawn, doesn't need qoutes [Used only for Campground & Raids]";
                 defaultValue="""B_Soldier_F""";
@@ -129,7 +129,7 @@ class Misery_POI: Module_F
             };
             class Misery_POI_AICountMAX: Edit
               {
-                property="Misery_POI_AICountMAX";
+                property=QCLASS(poi_ai_CountMax);
                 displayName="Maximum AI";
                 tooltip="Maximum possible AI you want to be available at this POI [Used only for Campground & Raids]";
                 typeName="NUMBER";
@@ -137,7 +137,7 @@ class Misery_POI: Module_F
             };
             class Misery_POI_AICountMIN: Edit
               {
-                property="Misery_POI_AICountMIN";
+                property=QCLASS(poi_ai_countMin);
                 displayName="Minimum AI";
                 tooltip="Minimum possible AI you want to be available at this POI [Used only for Campground & Raids]";
                 typeName="NUMBER";
@@ -145,7 +145,7 @@ class Misery_POI: Module_F
             };
             class Misery_POI_AISpawnDistance: Edit
               {
-                property="Misery_POI_AISpawnDistance";
+                property=QCLASS(poi_ai_spawnDistance);
                 displayName="AI Spawn distance";
                 tooltip="Random distance AI can spawn from POI [Used only for Campground & Raids]";
                 typeName="NUMBER";
@@ -478,8 +478,8 @@ class Misery_POI: Module_F
         scope=2;
         displayName="Misery (POI) Settings";
         icon = QPATHTOEF(icons,data\poi_ca.paa);
-        category="Misery_faction";
-        function="Misery_fnc_ModulePOISettings";
+        category=QCLASS(faction);
+        function=QCLASS(fnc_module_poi_settings);
         functionPriority=1;
         isGlobal=0;
         isTriggerActivated=0;

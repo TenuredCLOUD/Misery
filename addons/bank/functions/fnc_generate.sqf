@@ -17,7 +17,7 @@
 
 params ["_traderName"];
 
-if (isNil "Misery_BankName") then {Misery_BankName = "New World Bank"};
+if (isNil QCLASS(BankName)) then {Misery_BankName = "New World Bank"};
 
 [
     _traderName,
@@ -30,7 +30,7 @@ if (isNil "Misery_BankName") then {Misery_BankName = "New World Bank"};
     {},
     {
     params ["_target", "_caller", "_actionId", "_arguments"];
-    createDialog "Misery_Banking_UI";
+    createDialog QCLASS(banking_ui);
     },
     {},
     [_traderName],

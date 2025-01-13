@@ -14,10 +14,10 @@
  *
 */
 
-private ["_selectedItem","_debuffs","_entry","_MHunger","_MThirst","_MDebuffs","_MExposure","_hunger","_thirst","_debuffAdd","_debuffRemove","_script","_replaceWith","_playaudio","_checkforGmask","_checkforCopener","_waittill","_radsremoved","_radsadd","_feverremoved","_coldremoved"];
+private ["_selectedItem","_debuffs","_entry","_MHunger","_MThirst","_ailments","_MExposure","_hunger","_thirst","_debuffAdd","_debuffRemove","_script","_replaceWith","_playaudio","_checkforGmask","_checkforCopener","_waittill","_radsremoved","_radsadd","_feverremoved","_coldremoved"];
 
 _selectedItem = (toUpper _this);
-_debuffs = [] + MiserysurvivalItemEffects;
+_debuffs = [] + GVAR(itemEffects);
 _entry = [];
 
 {
@@ -26,10 +26,10 @@ if (_selectedItem==(toUpper(_x select 0))) exitWith {_entry=_x};
 
 if ((count _entry)<1) exitWith {};
 
-_MHunger = player getVariable ["MiseryHunger", MACRO_PLAYER_HUNGER];
-_MThirst = player getVariable ["MiseryThirst", MACRO_PLAYER_THIRST];
-_MExposure = player getVariable ["MiseryExposure", MACRO_PLAYER_EXPOSURE];
-_MDebuffs = player getVariable "MiseryDebuffs";
+_MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER];
+_MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_THIRST];
+_MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];
+_ailments = player getVariable QCLASS(ailments);
 _rads = player getVariable ["radiation", 0];
 _hunger=_entry select 1;
 _thirst=_entry select 2;
@@ -48,7 +48,7 @@ _radval= _entry select 11;
 _exposureval= _entry select 12;
 
 //Gasmask check for items, check RVG goggle array
-    // if (_checkforGmask && {(goggles player in antirad_goggles || headgear player in antirad_headgears)}) exitWith { //Needs to be tweaked to filter through protective masks etc... 
+    // if (_checkforGmask && {((call EFUNC(protection,totalProtection) select 0) > 0 || (call EFUNC(protection,totalProtection) select 1) > 0)}) exitWith { //Needs to be tweaked to filter through protective masks etc...
     // titleText ["You cannot eat or drink while wearing a mask...", "PLAIN DOWN"]
     // };
 
@@ -60,53 +60,55 @@ if (_checkforCopener && {!("rvg_canOpener" in magazines player) && !("rvg_toolki
     titleText ["You need a can opener or tools to open this.", "PLAIN DOWN"];
 };
 
-//Item replacer
-if !(_replaceWith=="KEEP") then {
-player removeItem _selectedItem;
-if !(_replaceWith=="") then {player addItem _replaceWith};
+    //Item replacer
+    if (_replaceWith != "KEEP") then {
+    player removeItem _selectedItem;
+    if (_replaceWith != "") then {
+        player addItem _replaceWith
+    };
 };
 
 //Audio
-if !(_playaudio=="") then {player say3D [_playaudio,10,1,2,0];}; //[sound, maxDistance, pitch, isSpeech, offset]
+if (_playaudio != "") then {player say3D [_playaudio,10,1,2,0];}; //[sound, maxDistance, pitch, isSpeech, offset]
 
 //Waittimer
-if !(_waittill == 0) then {sleep _waittill}; //delayed effect (good for medication simulation)
+if (_waittill != 0) then {sleep _waittill}; //delayed effect (good for medication simulation)
 
 //Radiation
-if !(_radval==0) then {player setVariable ["radiation", (_rads + _radval)]};
+if (_radval !=0) then {player setVariable ["radiation", (_rads + _radval)]};
 
 //Exposure
-if !(_exposureval==0) then {player setVariable ["MiseryExposure", (_MExposure + _exposureval)];};
+if (_exposureval != 0) then {player setVariable [QCLASS(exposure), (_MExposure + _exposureval)];};
 
 //Hunger / Thirst
-if !(_hunger == 0) then {player setVariable ["MiseryHunger", (_MHunger + _hunger)];};
-if !(_thirst == 0) then {player setVariable ["MiseryThirst", (_MThirst + _thirst)];};
+if (_hunger != 0) then {player setVariable [QCLASS(hunger), (_MHunger + _hunger)];};
+if (_thirst != 0) then {player setVariable [QCLASS(thirst), (_MThirst + _thirst)];};
 
 //Reset to 0 if less than 0:
-if (_MHunger < 0) then {player setVariable ["Miseryhunger", 0]};
-if (_MThirst < 0) then {player setVariable ["MiseryThirst", 0]};
+if (_MHunger < 0) then {player setVariable [QCLASS(hunger), 0]};
+if (_MThirst < 0) then {player setVariable [QCLASS(thirst), 0]};
 
 //Reset to 100 if greater than 100:
-if (_MHunger > 100) then {player setVariable ["MiseryHunger", MACRO_PLAYER_HUNGER]};
-if (_MThirst > 100) then {player setVariable ["MiseryThirst", MACRO_PLAYER_THIRST]};
+if (_MHunger > 100) then {player setVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER]};
+if (_MThirst > 100) then {player setVariable [QCLASS(thirst), MACRO_PLAYER_THIRST]};
 
 //Ailment add
 if ((count _debuffAdd) > 0) then {
     {
-    _MDebuffs pushBackUnique (toUpper _x);
-    player setVariable ["MiseryDebuffs", _MDebuffs];
+    _ailments pushBackUnique (toUpper _x);
+    player setVariable [QCLASS(ailments), _ailments];
     }forEach _debuffAdd;
 };
 
 //Ailment remove
 if ((count _debuffRemove) > 0) then {
     {
-    _MDebuffs deleteAt (_MDebuffs find (toUpper _x));
-    player setVariable ["MiseryDebuffs", _MDebuffs];
+    _ailments deleteAt (_ailments find (toUpper _x));
+    player setVariable [QCLASS(ailments), _ailments];
     }forEach _debuffRemove;
 };
 
 //Custom script execution
-if !(_script=="") then {_selectedItem call _script};
-
-
+if (_script !="") then {
+    selectedItem call _script
+};

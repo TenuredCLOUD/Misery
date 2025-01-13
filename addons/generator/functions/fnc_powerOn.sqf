@@ -20,27 +20,27 @@ private ["_PowerOnB","_PowerOffB","_RefuelB","_GeneratorType","_soundStart","_fu
     _PowerOffB = findDisplay 573849 displayCtrl 1601;
     _RefuelB = findDisplay 573849 displayCtrl 1602;
 
-    _GeneratorType = typeOf MiseryTarget_Gen;
+    _GeneratorType = typeOf GVAR(targetGenerator);
 
     switch (_GeneratorType) do {
-        case "Misery_100KVA_Gen": {
+        case QCLASS(100KVA_Generator): {
             _soundStart = "100_KVA_Startup";
         };
-        case "Misery_HeavilyUsedGen_Gas": {
+        case QCLASS(heavilyUsedGas_Generator): {
             _soundStart = "petorlgeneratorstart";
         };
-        case "Misery_HeavilyUsedGen_Diesel": {
+        case QCLASS(heavilyUsedDiesel_Generator): {
             _soundStart = "dieselgeneratorstart";
         };
     };
 
-    _fuelLevel = MiseryTarget_Gen getVariable ["Misery_Gen_FuelLVL", 100];
+    _fuelLevel = GVAR(targetGenerator) getVariable [QCLASS(generatorFuelLevel), 100];
 
     if (_fuelLevel <= 0) exitWith {
         ctrlSetText [1001, "This generator is out of fuel..."];
     };
 
-    MiseryTarget_Gen setVariable ["Misery_Gen_IsRunning", true, true];
+    GVAR(targetGenerator) setVariable [QCLASS(generatorRunning), true, true];
 
     ctrlSetText [1001, "Starting generator..."];
 
@@ -48,11 +48,11 @@ private ["_PowerOnB","_PowerOffB","_RefuelB","_GeneratorType","_soundStart","_fu
     _PowerOffB ctrlShow false;
     _RefuelB ctrlShow false;
 
-    private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position MiseryTarget_Gen);
-    MiseryTarget_Gen setVariable ["Misery_GenSound", true,true];
+    private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position GVAR(targetGenerator));
+    GVAR(targetGenerator) setVariable [QCLASS(generatorSound), true,true];
     [_soundDummy, [_soundStart, 500]] remoteExec ["say3D", 0, _soundDummy];
     [{
-    !(MiseryTarget_Gen getVariable ["Misery_GenSound", false])
+    !(GVAR(targetGenerator) getVariable [QCLASS(generatorSound), false])
     },{
     deleteVehicle _this;
     }, _soundDummy] call CBA_fnc_waitUntilAndExecute;
@@ -63,8 +63,8 @@ private ["_PowerOnB","_PowerOffB","_RefuelB","_GeneratorType","_soundStart","_fu
 
     _PowerOffB ctrlShow true;
 
-    [MiseryTarget_Gen] call FUNC(running);
-    [MiseryTarget_Gen] call FUNC(fuel);
-    [MiseryTarget_Gen] call FUNC(powerNearby);
-    [MiseryTarget_Gen] call FUNC(trackPos);
+    [GVAR(targetGenerator)] call FUNC(running);
+    [GVAR(targetGenerator)] call FUNC(fuel);
+    [GVAR(targetGenerator)] call FUNC(powerNearby);
+    [GVAR(targetGenerator)] call FUNC(trackPos);
 

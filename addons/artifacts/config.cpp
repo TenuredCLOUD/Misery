@@ -6,8 +6,8 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"misery_main"}; // Include addons from this mod that contain code or assets you depend on. Affects loadorder. Including main as an example here.
-        authors[] = {"TenuredCLOUD"}; // sub array of authors, considered for the specific addon, can be removed or left empty {}
+        requiredAddons[] = {QCLASS(common)};
+        authors[] = {"TenuredCLOUD"};
         VERSION_CONFIG;
     };
 };
@@ -43,7 +43,7 @@ class Misery_ArtifactSpawner: Module_F
         scope=2;
         displayName="Misery (Artifact Spawner)";
         icon = QPATHTOEF(icons,data\artifacticon_ca.paa);
-        category="Misery_faction";
+        category=QCLASS(faction);
         function="";
         functionPriority=1;
         isGlobal=0;
@@ -53,7 +53,7 @@ class Misery_ArtifactSpawner: Module_F
         {
             class Misery_ArtifactSpawnnumber: Edit
               {
-                property="Misery_ArtifactSpawnnumber";
+                property=QCLASS(ArtifactSpawnnumber);
                 displayName="Artifact count";
                 tooltip="Number of Artifacts to spawn within your radius, placement locations are randomly generated at ground level...";
                 typeName="NUMBER";
@@ -61,7 +61,7 @@ class Misery_ArtifactSpawner: Module_F
             };
             class Misery_ArtifactSpawnradius: Edit
               {
-                property="Misery_ArtifactSpawnradius";
+                property=QCLASS(ArtifactSpawnradius);
                 displayName="Radius of Spawn";
                 tooltip="Distance from this modules center point to spawn artifacts";
                 typeName="NUMBER";
@@ -87,8 +87,8 @@ class Misery_ArtifactSpawner: Module_F
         scope=2;
         displayName="Misery (Artifact Spawner) Settings";
         icon = QPATHTOEF(icons,data\artifacticon_ca.paa);
-        category="Misery_faction";
-        function="Misery_fnc_ModuleArtifactSpawner";
+        category=QCLASS(faction);
+        function=QCLASS(fnc_ModuleArtifactSpawner);
         functionPriority=1;
         isGlobal=0;
         isTriggerActivated=0;

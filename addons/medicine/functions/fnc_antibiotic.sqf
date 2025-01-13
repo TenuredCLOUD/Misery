@@ -14,14 +14,13 @@
  *
 */
 
-private _MInfection = player getVariable ["MiseryInfection", MACRO_PLAYER_INFECTION];
+private _MInfection = player getVariable [QCLASS(infection), MACRO_PLAYER_INFECTION];
 
-MiseryACE=false;
-if(isClass(configFile>>"cfgPatches">>"ace_main"))then{MiseryACE=true};
+
 
 if (!hasInterface) exitWith {};
 
-   if (goggles player in antirad_goggles || headgear player in antirad_headgears) exitWith {
+   if ((call EFUNC(protection,totalProtection) select 0) > 0 || (call EFUNC(protection,totalProtection) select 1) > 0) exitWith {
     titleText ["You cannot take medicine while wearing a mask...", "PLAIN DOWN"];
 };
 
@@ -29,14 +28,14 @@ if (!hasInterface) exitWith {};
 
     titleText ["You take an antibiotic pill...", "PLAIN DOWN"];
 
-    player removeItem "Misery_antibioticpill";
+    player removeItem QCLASS(antibiotic);
 
-    if (MiseryACE) then {
-    [player, "Misery_antibioticpill", 10, 60, -10, 0, -10] call ace_medical_status_fnc_addMedicationAdjustment;
+    if (EGVAR(common,ace)) then {
+    [player, QCLASS(antibiotic), 10, 60, -10, 0, -10] call ace_medical_status_fnc_addMedicationAdjustment;
     };
 
 sleep 60;
 
-player setVariable ["MiseryInfection", MACRO_PLAYER_INFECTION];
+player setVariable [QCLASS(infection), MACRO_PLAYER_INFECTION];
 
 };

@@ -14,19 +14,19 @@
  *
 */
 
-private _MSleepiness = player getVariable ["MiserySleepiness", MACRO_PLAYER_FATIGUE];
+private _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
 
 if (!hasInterface) exitWith {};
 
- if (goggles player in antirad_goggles || headgear player in antirad_headgears) exitWith {
+ if ((call EFUNC(protection,totalProtection) select 0) > 0 || (call EFUNC(protection,totalProtection) select 1) > 0) exitWith {
     titleText ["You cannot take medicine while wearing a mask...", "PLAIN DOWN"];
 };
 
   if (alive player) then {
 
-    playSound3D ["\z\misery\addons\audio\sounds\inventory\Items\CrinklingPlastic.ogg", player, false, getPosASL player, 4, 1, 10];
+    playSound3D [QPATHTOEF(audio,sounds\inventory\Items\CrinklingPlastic.ogg), player, false, getPosASL player, 4, 1, 10];
 
-  player removeItem "Misery_caffeine";
+  player removeItem QCLASS(caffeine);
   titleText ["You take some Caffeine tablets...", "PLAIN DOWN"];
 
   _time = time + 60;
@@ -36,8 +36,8 @@ if (!hasInterface) exitWith {};
   };
   if (!(alive player)) exitWith {};
 
-  if !(MiseryMP) then {
-  player setVariable ["MiserySleepiness", (_MSleepiness - 15)];
+  if !(EGVAR(common,checkMultiplayer)) then {
+  player setVariable [QCLASS(energyDeficit), (_MSleepiness - 15)];
 };
 
     [] spawn {

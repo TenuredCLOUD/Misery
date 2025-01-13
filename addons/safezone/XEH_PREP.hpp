@@ -1,1 +1,3 @@
-PREP(start);
+PREP(checkAreas);
+PREP(inArea);
+PREP(process);

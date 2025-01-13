@@ -20,13 +20,13 @@
 private _dialog = findDisplay 982376;
 private _selectedOutputItem = lbData[1500, (lbCurSel 1500)];
 private _matchedRecipe = [];
-private _playerRecipes = player getVariable "Misery_Crafting_DataSet";
+private _playerRecipes = player getVariable QCLASS(craftingKnowledge);
 
 private _CraftB = _dialog displayCtrl 1600;
 private _RecipeB = _dialog displayCtrl 1601;
 private _ExitB = _dialog displayCtrl 1602;
 
-if (MiseryDebug) then {
+if (EGVAR(common,debug)) then {
 systemChat format ["Selected output item: %1", _selectedOutputItem]; //debug output
 systemChat format ["Player's recipes: %1", _playerRecipes]; //debug output
 };
@@ -35,7 +35,7 @@ systemChat format ["Player's recipes: %1", _playerRecipes]; //debug output
     if (_x select 0 isEqualTo _selectedOutputItem) then {
         _matchedRecipe = _x;
     };
-    if (MiseryDebug) then {
+    if (EGVAR(common,debug)) then {
     systemChat format ["Output item of current recipe: %1", _x select 0]; //debug output
     };
 } forEach _playerRecipes;
@@ -43,7 +43,7 @@ systemChat format ["Player's recipes: %1", _playerRecipes]; //debug output
 if (count _matchedRecipe > 0) then {
     private _outputItem = _matchedRecipe select 0;
     private _requirements = _matchedRecipe select 1;
-     if (MiseryDebug) then {
+     if (EGVAR(common,debug)) then {
     systemChat format ["Requirements: %1, Type: %2", _requirements, typeName _requirements]; //debug output
     };
     private _craftingTime = -1;
@@ -78,8 +78,8 @@ if (count _matchedRecipe > 0) then {
         _RecipeB ctrlShow false;
         _ExitB ctrlShow false;
 
-        if !((currentWeapon player)=="") then {
-        player action["SWITCHWEAPON",player,player,-1];
+        if (currentWeapon player != "") then {
+            player action["SWITCHWEAPON",player,player,-1];
         };
 
         player playAction "Gear";
@@ -89,12 +89,12 @@ if (count _matchedRecipe > 0) then {
             _itemDisplayName = getText (configFile >> "CfgMagazines" >> _outputItem >> "displayName");
         };
 
-        player setVariable ["Misery_ISCrafting", true];
+        player setVariable [QCLASS(ISCrafting), true];
 
         _CraftInterrupt = (findDisplay 982376) displayAddEventHandler ["KeyDown", {
             params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
             if (_key isEqualTo DIK_ESCAPE) then {
-                player setVariable ["Misery_ISCrafting",false];
+                player setVariable [QCLASS(ISCrafting),false];
                 if (player getVariable ["_TC_sound", false]) then {
                     player setVariable ["_TC_sound", false,true];
                 };
@@ -118,13 +118,13 @@ if (count _matchedRecipe > 0) then {
         private _delay = _craftingTime / count _text;
 
         for "_i" from 0 to (count _text - 1) do {
-            if ((player getVariable "Misery_ISCrafting") isEqualTo false) exitWith {};
+            if ((player getVariable QCLASS(ISCrafting)) isEqualTo false) exitWith {};
             _displayedText = _displayedText + (_text select [_i, 1]);
             ctrlSetText [1001, _displayedText];
             sleep _delay;
         };
 
-        if ((player getVariable "Misery_ISCrafting") isEqualTo true) then {
+        if ((player getVariable QCLASS(ISCrafting)) isEqualTo true) then {
     {
         private _requiredItem = _x select 0;
         private _requiredCount = _x select 1;
@@ -170,7 +170,7 @@ if (count _matchedRecipe > 0) then {
         _RecipeB ctrlShow true;
         _ExitB ctrlShow true;
 
-            player setVariable ["Misery_ISCrafting", nil]; //terminate crafting flag
+            player setVariable [QCLASS(ISCrafting), nil]; //terminate crafting flag
             (findDisplay 982376) displayRemoveEventHandler ["KeyDown", _CraftInterrupt]; //Remove Display EH
         };
 

@@ -15,12 +15,6 @@
  *
 */
 
-player playAction "medicstart";
+player playAction "Gear";
 
-sleep 1;
-
-createDialog "Misery_MoneyTake_UI";
-
-sleep 1;
-
-player playActionNow "medicstop";
+createDialog QCLASS(moneyTake_ui);

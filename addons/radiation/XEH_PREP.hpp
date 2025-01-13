@@ -1,2 +1,6 @@
+PREP(checkAreas);
 PREP(exposure);
-PREP(zone);
+PREP(hasArtifact);
+PREP(inArea);
+PREP(process);
+PREP(storeArtifact);

@@ -1,3 +1,3 @@
-PREP(battery);
+PREP(batteries);
 PREP(off);
 PREP(on);

@@ -12,4 +12,4 @@ PREP(painPill);
 PREP(randomPharm);
 PREP(sleepingPill);
 PREP(thbdInjection);
-PREP(thdbInjectionStim);
+PREP(thbdInjectionStim);

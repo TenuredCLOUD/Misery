@@ -34,26 +34,26 @@
  * Example:
  * [
  * _module,
- * (_module getVariable "Misery_AI_faction"),
- * (_module getVariable "Misery_AI_Class"),
- * (_module getVariable "Misery_AI_GroupMAX"),
- * (_module getVariable "Misery_AI_WeapPrimaryLoot"),
- * (_module getVariable "Misery_AI_WeapSecondaryLoot"),
- * (_module getVariable "Misery_AI_WeaplauncherLoot"),
- * (_module getVariable "Misery_AI_Ammo"),
- * (_module getVariable "Misery_AI_ItemLoot"),
- * (_module getVariable "Misery_AI_NVGLoot"),
- * (_module getVariable "Misery_AI_FacewearLoot"),
- * (_module getVariable "Misery_AI_HeadgearLoot"),
- * (_module getVariable "Misery_AI_UniformLoot"),
- * (_module getVariable "Misery_AI_VestLoot"),
- * (_module getVariable "Misery_AI_BackpackLoot"),
- * (_module getVariable "Misery_AI_Accuracy"),
- * (_module getVariable "Misery_AI_Shake"),
- * (_module getVariable "Misery_AI_Speed"),
- * (_module getVariable "Misery_AI_SpawnChance"),
- * (_module getVariable "Misery_AI_ModuleSpawnDistanceMIN"),
- * (_module getVariable "Misery_AI_ModuleSpawnDistanceMAX")
+ * (_module getVariable QCLASS(AI_faction)),
+ * (_module getVariable QCLASS(AI_Class)),
+ * (_module getVariable QCLASS(AI_GroupMAX)),
+ * (_module getVariable QCLASS(AI_WeapPrimaryLoot)),
+ * (_module getVariable QCLASS(AI_WeapSecondaryLoot)),
+ * (_module getVariable QCLASS(AI_WeaplauncherLoot)),
+ * (_module getVariable QCLASS(AI_Ammo)),
+ * (_module getVariable QCLASS(AI_ItemLoot)),
+ * (_module getVariable QCLASS(AI_NVGLoot)),
+ * (_module getVariable QCLASS(AI_FacewearLoot)),
+ * (_module getVariable QCLASS(AI_HeadgearLoot)),
+ * (_module getVariable QCLASS(AI_UniformLoot)),
+ * (_module getVariable QCLASS(AI_VestLoot)),
+ * (_module getVariable QCLASS(AI_BackpackLoot)),
+ * (_module getVariable QCLASS(AI_Accuracy)),
+ * (_module getVariable QCLASS(AI_Shake)),
+ * (_module getVariable QCLASS(AI_Speed)),
+ * (_module getVariable QCLASS(AI_SpawnChance)),
+ * (_module getVariable QCLASS(AI_ModuleSpawnDistanceMIN)),
+ * (_module getVariable QCLASS(AI_ModuleSpawnDistanceMAX))
  * ] call misery_ambient_ai_zone_fnc_Generation;
  *
  * Public: No
@@ -154,24 +154,24 @@ _spawnPos = [_pos, _ModuleSpawnDistanceMIN, _ModuleSpawnDistanceMAX, 10, 0, 0, 0
 
 if (Misery_active_AmbAI_Groups >= Misery_AmbAI_MAXAllowed) exitWith {
 
-    if (MiseryDebug) then {
+    if (EGVAR(common,debug)) then {
             systemChat "[Misery Ambient_AI Framework] exiting AI Generation due to max active AI groups allowed value being reached";
     };
 
     //Start cooldown before retry:
     sleep 120;
 
-    _module setVariable ["Misery_AI_Zone_Spawned", false, true];
+    _module setVariable [QCLASS(AI_Zone_Spawned), false, true];
 };
 
 //Spawn chance check:
 if ((random 100) > _Spawnchance) exitWith {
-if (MiseryDebug) then {systemChat format["[Misery Ambient_AI Framework] Spawn chance failed, exiting Generation for AI at %1 checks will be re-initialized next game session...",getPosATL _module]};
+if (EGVAR(common,debug)) then {systemChat format["[Misery Ambient_AI Framework] Spawn chance failed, exiting Generation for AI at %1 checks will be re-initialized next game session...",getPosATL _module]};
 
 //This AI generator is now null from spawning since the original check failed
 };
 
-if (MiseryDebug) then {systemChat format["[Misery Ambient_AI Framework] Player detected near module at %1 Generating AI Group...",getPosATL _module]};
+if (EGVAR(common,debug)) then {systemChat format["[Misery Ambient_AI Framework] Player detected near module at %1 Generating AI Group...",getPosATL _module]};
 
 // Create the entities
 for "_i" from 1 to _numEntities do {
@@ -251,7 +251,7 @@ for "_i" from 1 to _numEntities do {
 
     if ((_unit ammo (primaryWeapon _unit)) isEqualTo 0) then {
         _magazinearrayP = getArray (configFile >> "CfgWeapons" >> primaryWeapon _unit >> "magazines");
-        if !(_magazinearrayP isEqualTo []) then {
+        if (_magazinearrayP isNotEqualTo []) then {
             _magP = _magazinearrayP select 0;
             for "_j" from 1 to _randomammocount do {_unit addMagazine _magP;};
         };
@@ -259,7 +259,7 @@ for "_i" from 1 to _numEntities do {
 
     if ((_unit ammo (handgunWeapon _unit)) isEqualTo 0) then {
         _magazinearrayH = getArray (configFile >> "CfgWeapons" >> handgunWeapon _unit >> "magazines");
-        if !(_magazinearrayH isEqualTo []) then {
+        if (_magazinearrayH isNotEqualTo []) then {
             _magH = _magazinearrayH select 0;
             for "_j" from 1 to _randomammocount do {_unit addMagazine _magH;};
         };
@@ -267,7 +267,7 @@ for "_i" from 1 to _numEntities do {
 
     if ((_unit ammo (secondaryWeapon _unit)) isEqualTo 0) then {
         _magazinearrayS = getArray (configFile >> "CfgWeapons" >> secondaryWeapon _unit >> "magazines");
-        if !(_magazinearrayS isEqualTo []) then {
+        if (_magazinearrayS isNotEqualTo []) then {
             _magS = _magazinearrayS select 0;
             for "_j" from 1 to _randomammocount do {_unit addMagazine _magS;};
         };
@@ -279,7 +279,7 @@ for "_i" from 1 to _numEntities do {
     _unit setSkill ["aimingShake", _aimingShake];
     _unit setSkill ["aimingSpeed", _aimingSpeed];
 
-    if !(MiseryMP) then {
+    if !(EGVAR(common,checkMultiplayer)) then {
     if (side _unit isEqualTo side player) then {
         private _equipmentMass = loadAbs _unit / getNumber (configFile >> "CfgInventoryGlobalVariable" >> "maxSoldierLoad");
         private _recruitmentCost = 500 * round(_equipmentMass * 100);
@@ -287,7 +287,7 @@ for "_i" from 1 to _numEntities do {
 
         [
             _unit,
-            format [localize "STR_MISERY_RECRUITUNIT", _Unitidentity, MiseryCurrencySymbol, [_recruitmentCost] call Misery_fnc_formatNumber],
+            format [localize "STR_MISERY_RECRUITUNIT", _Unitidentity, EGVAR(money,symbol), [_recruitmentCost] call Misery_fnc_formatNumber],
             "\a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa",
             "\a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa",
             "_this distance _target < 3",
@@ -298,12 +298,12 @@ for "_i" from 1 to _numEntities do {
                 params ["_target", "_caller", "_actionId", "_arguments"];
                 private _recruitmentCost = _arguments select 0;
                 private _Unitidentity = _arguments select 1;
-                private _playerMoney = _caller getVariable "MiseryCurrency";
+                private _playerMoney = _caller getVariable QCLASS(currency);
                 if (_playerMoney >= _recruitmentCost) then {
-                    _caller setVariable ["MiseryCurrency", _playerMoney - _recruitmentCost];
+                    _caller setVariable [QCLASS(currency), _playerMoney - _recruitmentCost];
                     [_target] joinSilent _caller;
                     [_target,_actionId] call BIS_fnc_holdActionRemove;
-                    private _recruitSuccess = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_SUCCESS", _Unitidentity, MiseryCurrencySymbol, [_recruitmentCost] call Misery_fnc_formatNumber]];
+                    private _recruitSuccess = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_SUCCESS", _Unitidentity, EGVAR(money,symbol), [_recruitmentCost] call Misery_fnc_formatNumber]];
                     [parseText _recruitSuccess, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
                 }else{
                     private _recruitFail = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_FAIL",_Unitidentity]];
@@ -329,7 +329,7 @@ for "_i" from 1 to _numEntities do {
 
 _group enableDynamicSimulation true;
 
-if (MiseryDebug) then {
+if (EGVAR(common,debug)) then {
     _randID = str (diag_tickTime * 1e6) + str _module;
     _markerName = format ["AI Group %1", _randID];
     _marker = createMarkerLocal [_markerName, getPosATL leader _group];
@@ -383,12 +383,12 @@ waitUntil {
 };
 
 if (_deleteFlag) exitWith {
-if (MiseryDebug) then {systemChat format["[Misery Ambient_AI Framework] Player no longer detected, or Group for module at %1 was wiped out...",getPosATL _module]};
+if (EGVAR(common,debug)) then {systemChat format["[Misery Ambient_AI Framework] Player no longer detected, or Group for module at %1 was wiped out...",getPosATL _module]};
 {deleteVehicle _x} forEach units _group; // Delete all units in the group
 deleteGroup _group; // Delete the group
-if (MiseryDebug) then {systemChat format["[Misery Ambient_AI Framework] Re-initializing AI Generation for module at %1...",getPosATL _module]};
-_module setVariable ["Misery_AI_Zone_Spawned", false, true];
-if (MiseryDebug && {!isNil "_marker"}) then {
+if (EGVAR(common,debug)) then {systemChat format["[Misery Ambient_AI Framework] Re-initializing AI Generation for module at %1...",getPosATL _module]};
+_module setVariable [QCLASS(AI_Zone_Spawned), false, true];
+if (EGVAR(common,debug) && {!isNil "_marker"}) then {
         deleteMarker _marker;
     };
 

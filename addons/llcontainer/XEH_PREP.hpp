@@ -1,2 +1,0 @@
-PREP(hasArtifact);
-PREP(storeArtifact);

@@ -14,25 +14,25 @@
  *
 */
 
-private _MPoison = player getVariable ["MiseryPoison", MACRO_PLAYER_TOXICITY];
+private _MPoison = player getVariable [QCLASS(toxicity), MACRO_PLAYER_TOXICITY];
 
 if (!hasInterface) exitWith {};
 
- if (goggles player in antirad_goggles || headgear player in antirad_headgears) exitWith {
+ if ((call EFUNC(protection,totalProtection) select 0) > 0 || (call EFUNC(protection,totalProtection) select 1) > 0) exitWith {
     titleText ["You cannot take medicine while wearing a mask...", "PLAIN DOWN"];
 };
 
   if (alive player) then {
 
-    playSound3D ["\z\misery\addons\audio\sounds\inventory\Items\CrinklingPlastic.ogg", player, false, getPosASL player, 4, 1, 10];
+    playSound3D [QPATHTOEF(audio,sounds\inventory\Items\CrinklingPlastic.ogg), player, false, getPosASL player, 4, 1, 10];
 
-  player removeItem "Misery_charcoaltabs";
+  player removeItem QCLASS(charcoalTablets);
   titleText ["You take some Charcoal tablets...", "PLAIN DOWN"];
 
   sleep 60;
 
 if (_MPoison > 0) then {
-    player setVariable ["MiseryPoison", MACRO_PLAYER_TOXICITY];
+    player setVariable [QCLASS(toxicity), MACRO_PLAYER_TOXICITY];
 };
 
 };

@@ -14,17 +14,17 @@
  *
 */
 
-if ([["Misery_lithiumbattery"]] call EFUNC(common,hasItem)) then {
+if ([[QCLASS(lithiumBattery)]] call EFUNC(common,hasItem)) then {
 
-player removeItem "Misery_personalgeigernobattery";
+player removeItem QCLASS(geiger_NoBattery);
 
 titleText ["You add a Lithium battery to your Geiger", "PLAIN DOWN"];
 
-player removeItem "Misery_lithiumbattery";
+player removeItem QCLASS(lithiumBattery);
 
-player addItem "Misery_personalgeiger";
+player addItem QCLASS(geiger_On);
 
-playSound3D ["\z\misery\addons\audio\sounds\Geigerenable\GeigerON.ogg", player, false, getPosASL player, 4, 1, 10];
+playSound3D [QPATHTOEF(audio,sounds\Geigerenable\GeigerON.ogg), player, false, getPosASL player, 4, 1, 10];
 
 //If bootup successful:
 

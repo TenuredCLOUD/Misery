@@ -17,18 +17,18 @@
 */
 
 /*
-[{(player getVariable ["Misery_RFEMFDet", false])},
+[{(player getVariable [QCLASS(rfdetectorStatus), false])},
 {
     [{
         params ["_args", "_handle"];
 
-        if ((!(player getVariable ["Misery_RFEMFDet", false])) || (!alive player)) exitWith {
+        if ((!(player getVariable [QCLASS(rfdetectorStatus), false])) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
 
     private ["_randomaudio","_randomunknownREMNANT","_randomunknownDSA","_RFsoundrandom","_group","_pos","_entity","_timeafter","_TimeA","_spookArray"];
 
-    if ((player getVariable ["Misery_RFEMFDet", false])) then {
+    if ((player getVariable [QCLASS(rfdetectorStatus), false])) then {
     _randomaudio = [1, 10] call BIS_fnc_randomInt;
     _randomunknownREMNANT = [1, 50] call BIS_fnc_randomInt;
     _randomunknownDSA = [1, 50] call BIS_fnc_randomInt;
@@ -42,7 +42,7 @@
     [MiseryRFLoopdummy, ["StaticBASIC", 50]] remoteExec ["say3D", 0, MiseryRFLoopdummy];
     };
 
-    if (_randomunknownREMNANT == 25 && MiseryRemnant) then {
+    if (_randomunknownREMNANT == 25 && EGVAR(common,remnant)) then {
     _group = creategroup [civilian, true];
     _pos = getPos player;
     _pos = [_pos select 0, _pos select 1, _pos select 2];
@@ -58,7 +58,7 @@
     };
         };
 
-    if (_randomunknownDSA == 25 && MiseryDSA) then {
+    if (_randomunknownDSA == 25 && EGVAR(common,dsa)) then {
     _group = creategroup [civilian, true];
     _pos = getPos player;
     _pos = [_pos select 0, _pos select 1, _pos select 2];
@@ -75,7 +75,7 @@
         };
 
     [{
-    !(player getVariable ["Misery_RFEMFDet", false])
+    !(player getVariable [QCLASS(rfdetectorStatus), false])
     },{deleteVehicle _this; //Delete active audio source if detector is "off"
     }, MiseryRFLoopdummy] call CBA_fnc_waitUntilAndExecute;
         };
