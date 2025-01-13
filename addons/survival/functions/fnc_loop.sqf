@@ -125,7 +125,7 @@ if !(hasInterface) exitWith {};
 
         _rads = player getVariable [QCLASS(radiation), 0];
 
-        player setVariable [QCLASS(radiation), (_rads) - EGVAR(radiation,healingVal)];
+        player setVariable [QCLASS(radiation), (_rads) - EGVAR(radiation,healingValue)];
         };
 
             _rads = player getVariable [QCLASS(radiation), 0];

@@ -2,10 +2,10 @@
 
 ["CBA_settingsInitialized", {
     if (isServer) then {
-        call FUNC(playersInSafeZones);
+        call FUNC(inArea);
     };
 
 if (hasInterface) then {
-    [QGVAR(playerSafeZoneEvent), FUNC(playerSafeZone)] call CBA_fnc_addEventHandler;
+    [QGVAR(safeZoneEvent), FUNC(process)] call CBA_fnc_addEventHandler;
 };
 }] call CBA_fnc_addEventHandler;

@@ -14,7 +14,7 @@
 */
 
 // If radiation zone check fails, system will not function.
-if !(call FUNC(checkRadZones)) exitWith {
+if !(call FUNC(checkAreas)) exitWith {
     [QUOTE(COMPONENT_BEAUTIFIED), "Marker check system failed, system disabled."] call EFUNC(common,debugMessage);
 };
 
@@ -24,14 +24,15 @@ if !(call FUNC(checkRadZones)) exitWith {
     private _players = call EFUNC(common,listPlayers);
     {
         private _player = _x;
-        private _isPlayerHandled = _player getVariable [QGVAR(insideRadZone), false];
+        private _isPlayerHandled = _player getVariable [QGVAR(insideArea), false];
 
         if (!_isPlayerHandled) then {
-            private _isInsideZone = GVAR(radiationAreas) findIf {_player inArea _x} != -1;
+            private _isInsideZone = GVAR(areas) findIf {_player inArea _x} != -1;
 
             if (_isInsideZone) then {
-                _player setVariable [QGVAR(insideRadZone), true, true];
-                [QGVAR(playerRadZoneEvent), [], _player] call CBA_fnc_targetEvent;
+                _player setVariable [QGVAR(insideArea), true, true];
+                [QGVAR(cognitoHazardEvent), [], _player] call CBA_fnc_targetEvent;
+                [QGVAR(cognitoHazardAudio), [], _player] call CBA_fnc_targetEvent;
             };
         };
     } forEach _players;

@@ -2,11 +2,11 @@
 
 ["CBA_settingsInitialized", {
     if (isServer) then {
-        call FUNC(playersInRadZones);
+        call FUNC(inArea);
     };
 
 if (hasInterface) then {
-[QGVAR(playerRadZoneEvent), FUNC(playerRadZone)] call CBA_fnc_addEventHandler;
+[QGVAR(radiationEvent), FUNC(process)] call CBA_fnc_addEventHandler;
 
 if (GVAR(enhancedExposure)) then {
 [] call FUNC(exposure);

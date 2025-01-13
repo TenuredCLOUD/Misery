@@ -175,28 +175,29 @@ switch (_gearCase) do {
 
     _GetFunds = player getVariable [QCLASS(currency), 0];
 
-    _FundsDisplay = format ["%1 %2",EGVAR(money,symbol),[_GetFunds, 1, 2, true] call CBA_fnc_formatNumber]; //[_GetFunds] call Misery_fnc_formatNumber
+    _FundsDisplay = format ["%1 %2",EGVAR(money,symbol),[_GetFunds, 1, 2, true] call CBA_fnc_formatNumber]; 
 
     _FundsVal ctrlSetText _FundsDisplay;
 
-    if (!isNil "MiseryinPsyfield") then {
-    private _PsyProtected = _ailments findIf {(_x select 0) isEqualTo "Psy Emissions (Protected)"};
-    private _PsyNoProtection = _ailments findIf {(_x select 0) isEqualTo "Psy Emissions"};
-    if (!(headgear player in _psyprot) && MiseryinPsyfield) then {
-        ["ailment","Psy Emissions", QPATHTOEF(icons,data\psyfield_ca.paa), "You hear a very loud pulsing hum, its vibrations are pounding in your head, you're not sure how much longer you can take it..."] call FUNC(addBuffOrAilment);
+    private _cognitoProtected = _ailments findIf {(_x select 0) isEqualTo "Cognitohazard (Protected)"};
+    private _cognitoNoProtection = _ailments findIf {(_x select 0) isEqualTo "Cognitohazard"};
+
+    private _totalProtection = call EFUNC(protection,totalProtection);
+    private _hearingProtection = _totalProtection select 5;
+    if ((_hearingProtection < 1) && (player getVariable [QEGVAR(cognitohazard,insideArea), false] isEqualTo true)) then {
+        ["ailment","Cognitohazard", QPATHTOEF(icons,data\psyfield_ca.paa), "You hear a very loud pulsing hum, its vibrations are pounding in your head, you're not sure how much longer you can take it..."] call FUNC(addBuffOrAilment);
     };
-    if ((headgear player in _psyprot) && MiseryinPsyfield) then {
-        ["ailment","Psy Emissions (Protected)", QPATHTOEF(icons,data\psyfield_ca.paa), "You feel subtle vibrations around your skull, you are uneasy..."] call FUNC(addBuffOrAilment);
+    if ((_hearingProtection > 1) && (player getVariable [QEGVAR(cognitohazard,insideArea), false] isEqualTo true)) then {
+        ["ailment","Cognitohazard (Protected)", QPATHTOEF(icons,data\psyfield_ca.paa), "You feel subtle vibrations around your skull, you are uneasy..."] call FUNC(addBuffOrAilment);
     };
-    if (!MiseryinPsyfield) then {
-    if (_PsyNoProtection > -1) then {
-        ["ailment","Psy Emissions"] call FUNC(removeBuffOrAilment);
+    if ((player getVariable [QEGVAR(cognitohazard,insideArea), false] isEqualTo false)) then {
+    if (_cognitoNoProtection > -1) then {
+        ["ailment","Cognitohazard"] call FUNC(removeBuffOrAilment);
     };
-    if (_PsyProtected > -1) then {
-        ["ailment","Psy Emissions (Protected)"] call FUNC(removeBuffOrAilment);
+    if (_cognitoProtected > -1) then {
+        ["ailment","Cognitohazard (Protected)"] call FUNC(removeBuffOrAilment);
     };
         };
-            };
 
 private _tiredAilments = ["Tired", "Mildy Tired", "Very Tired", "Exhausted", "Inhumanely Exhausted"];
 

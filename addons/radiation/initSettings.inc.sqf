@@ -1,5 +1,5 @@
             [
-            QGVAR(radiationAreas),
+            QGVAR(areas),
             "EDITBOX",
             ["Radioactive Areas", "ELLIPSE or RECTANGLE marker names covering the radioactive area as strings ['Radzone_1', 'Radzone_2']"],
             "Misery - Radiation & Artifacts", 
@@ -17,7 +17,7 @@
             ] call CBA_fnc_addSetting;
 
             [
-            QGVAR(healingVal), 
+            QGVAR(healingValue), 
             "SLIDER", 
             ["Radiation healing", "Radiation decrease every cycle"], 
             "Misery - Radiation & Artifacts", 

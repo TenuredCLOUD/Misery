@@ -1,6 +1,6 @@
-PREP(checkRadZones);
+PREP(checkAreas);
 PREP(exposure);
 PREP(hasArtifact);
-PREP(playerRadZone);
-PREP(playersInRadZones);
+PREP(inArea);
+PREP(process);
 PREP(storeArtifact);

@@ -5,7 +5,7 @@ class CfgVehicles {
         GVAR(gasmask) = 0;
         GVAR(scba) = 1;
         GVAR(skinProtection) = 0;
-        GVAR(respiratoryProtection) = 100;
+        GVAR(respiratoryProtection) = 1;
         GVAR(eyeProtection) = 0;
         GVAR(hearingProtection) = 0;
     };
@@ -14,7 +14,7 @@ class CfgVehicles {
         GVAR(gasmask) = 0;
         GVAR(scba) = 1;
         GVAR(skinProtection) = 0;
-        GVAR(respiratoryProtection) = 100;
+        GVAR(respiratoryProtection) = 1;
         GVAR(eyeProtection) = 0;
         GVAR(hearingProtection) = 0;
     };
