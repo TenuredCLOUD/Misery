@@ -1,3 +1,5 @@
+private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
+
 // Enhanced Character Effects
 [
     QGVAR(enhancedCharacterEffects),
@@ -6,7 +8,7 @@
         "Character Enhanced effects",
         "Enable Extra Character Immersion? (Enables Player coughing, sneezing when sick or cold, and stomach growling if you are starting to get hungry.)"
     ],
-    "Misery - Audio",
+    _category,
     false, 1,
     {
         params ["_value"];
@@ -26,7 +28,7 @@
         "Enhanced Inventory sounds",
         "Enable Inventory audio overhaul?"
     ],
-    "Misery - Audio",
+    _category,
     false, 1, {}, true
 ] call CBA_fnc_addSetting;
 
@@ -37,7 +39,7 @@
     [
         "Ambient audio soundscape overhaul", "Enable Extra world audio with input sounds? (must utilize the 'Ambient soundscape array' data)"
     ],
-    "Misery - Audio",
+    _category,
     false, 1, {}, true
 ] call CBA_fnc_addSetting;
 
@@ -48,7 +50,7 @@
     [
         "Ambient audio for Forges", "Enable Audio loop for forges? (Makes them crackle & hum - immersion)"
     ],
-    "Misery - Audio",
+    _category,
     false, 1, {}, true
 ] call CBA_fnc_addSetting;
 
@@ -59,7 +61,7 @@
     [
         "Ambient soundscape array", "Listed sounds to play randomly around players (Format: Mysound_1,Mysound_2,etc...)"
     ],
-    "Misery - Audio",
+    _category,
     "[]", 1,
     {
         params ["_value"];
@@ -73,7 +75,7 @@
     [
         "Ambient Music array", "Listed music to play randomly for players (Format: Mymusic_1,Mymusic_2,etc...)"
     ],
-    "Misery - Audio",
+    _category,
     "[]", 1,
     {
         params ["_value"];
