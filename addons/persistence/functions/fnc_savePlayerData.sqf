@@ -19,7 +19,7 @@ private _playerData = call FUNC(serializeClient);
 
 if (!isMultiplayer) exitWith {
     private _saveName = call FUNC(formatSaveName);
-    private _saveFile = profileNamespace setVariable [_saveName, _playerData];
+    profileNamespace setVariable [_saveName, _playerData];
 };
 
 // For multiplayer, create event which sends _playerData to server.

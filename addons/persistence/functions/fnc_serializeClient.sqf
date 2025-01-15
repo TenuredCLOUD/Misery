@@ -33,7 +33,7 @@ private _position = getPosATL player;
 private _direction = getDir player;
 private _stance = stance player;
 
-private _damage = [damage player, [player] call ace_medical_fnc_serializeState] select "ace_medical" call EFUNC(common,isModLoaded);
+private _damage = [damage player, [player] call ace_medical_fnc_serializeState] select ["ace_medical"] call EFUNC(common,isModLoaded);
 
 _playerData pushBack worldName;
 _playerData pushBack _playerID;
