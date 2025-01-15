@@ -3,7 +3,7 @@
 if (isServer && isMultiplayer) then {
     call FUNC(accessServerSaveData); // Get save hashmap
     [QGVAR(saveDataMultiplayer), FUNC(savePlayerDataMultiplayer)] call CBA_fnc_addEventHandler;
-    [QGVAR(requestSaveDataClient), FUNC(loadPlayerDataMultiplayer)] call CBA_fnc_addEventHandler;
+    //[QGVAR(requestSaveDataClient), FUNC(loadPlayerDataMultiplayer)] call CBA_fnc_addEventHandler;
 };
 
 if (hasInterface) then {

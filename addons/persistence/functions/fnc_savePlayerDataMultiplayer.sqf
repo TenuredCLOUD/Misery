@@ -16,6 +16,8 @@
 params ["_playerData"];
 _playerData params ["_worldName", "_playerID"];
 
+[QUOTE(COMPONENT_BEAUTIFIED), "Saving Multiplayer data"] call EFUNC(common,debugMessage);
+
 // Save ID as key with all data.
 GVAR(multiplayerSaveData) set [_playerID, _playerData];
 

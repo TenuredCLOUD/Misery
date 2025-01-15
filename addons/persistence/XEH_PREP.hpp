@@ -1,5 +1,5 @@
 PREP(accessServerSaveData);
-PREP(autoSaveSingleplayer);
+PREP(autoSave);
 PREP(combatLogPrevention);
 PREP(deserializeClient);
 PREP(formatSaveName);
