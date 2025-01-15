@@ -6,9 +6,9 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {};
-        authors[] = {"TenuredCLOUD", "RZNUNKNOWN", "MikeMF"}; 
-        author = "Misery Team"; 
+        requiredAddons[] = {"A3_Data_F_Decade_Loadorder"};
+        authors[] = {"TenuredCLOUD", "RZNUNKNOWN", "MikeMF"};
+        author = "Misery Team";
         VERSION_CONFIG;
     };
 };
