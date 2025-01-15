@@ -12,18 +12,5 @@ class CfgPatches {
     };
 };
 
-class CfgFactionClasses
-{
-    class NO_CATEGORY;
-    class Misery_faction: NO_CATEGORY
-    {
-        displayName="Misery";
-        priority=0.1;
-        side=7;
-    };
-};
-
-
 #include "CfgEventHandlers.hpp"
-
-
+#include "CfgFactionClasses.hpp"
