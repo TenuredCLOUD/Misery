@@ -13,7 +13,7 @@
  * [] call misery_persistence_fnc_combatLogPrevention
 */
 
-if (isMultiplayer) exitWith {};
+if !(isMultiplayer) exitWith {};
 
 [QUOTE(COMPONENT_BEAUTIFIED), "Combat Log prevention active"] call EFUNC(common,debugMessage);
 
