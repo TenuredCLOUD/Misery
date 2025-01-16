@@ -18,7 +18,7 @@ if (!GVAR(night)) exitWith {};
 
 private _nightAlteration = 0;
 
-private _daytime = daytime;
+private _daytime = dayTime;
 if (_daytime >= 5 && _daytime < 18) exitWith {
     [QUOTE(COMPONENT_BEAUTIFIED), "Psychosis reduction because of daytime."] call EFUNC(common,debugMessage);
     _nightAlteration + (_psychosisLevel - GVAR(decrease))
