@@ -13,7 +13,22 @@
  * [] call misery_persistence_fnc_combatLogPrevention
 */
 
-if !(isMultiplayer) exitWith {};
+if !(isMultiplayer) exitWith {
+    (findDisplay 46) displayAddEventHandler ["KeyDown", {
+    [{
+        if (!isNull findDisplay 49) then {
+            [{
+                ["_args", "_handle"];
+                if (!isNull findDisplay 49) then {
+                [QGVAR(executeSaveGame)] call CBA_fnc_localEvent;
+                } else {
+                _handle call CBA_fnc_removePerFrameHandler;
+                };
+            }] call CBA_fnc_addPerFrameHandler;
+        };
+    }, [], 1] call CBA_fnc_waitAndExecute;
+}];
+};
 
 [QUOTE(COMPONENT_BEAUTIFIED), "Combat Log prevention active"] call EFUNC(common,debugMessage);
 

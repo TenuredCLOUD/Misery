@@ -7,6 +7,11 @@ if (isServer && isMultiplayer) then {
 };
 
 if (hasInterface) then {
+    // Check if savefile exists when client loads in
+    if (call FUNC(formatSavename) isNotEqualTo "") then {
+    call FUNC(deserializeClient)
+    };
+
     // Initiate Saving
     [QGVAR(executeSaveGame), FUNC(savePlayerData)] call CBA_fnc_addEventHandler;
 
