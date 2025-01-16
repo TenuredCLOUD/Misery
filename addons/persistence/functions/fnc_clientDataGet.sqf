@@ -1,40 +1,33 @@
 #include "..\script_component.hpp"
 /*
  * Author: MikeMF
- * Deserialize player from savegame.
+ * Gathers client data from savegame and resets it.
  *
  * Arguments:
- * None
+ * 0: Player Data <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call misery_persistence_fnc_deserializeClient
+ * [] call misery_persistence_fnc_clientDataGet
 */
 
-private _playerData = [];
-
-if (!isMultiplayer) then {
-    private _saveName = call FUNC(formatSaveName);
-    _playerData = profileNamespace getVariable [_saveName, []];
-} else {
-    [QGVAR(requestSaveDataClient), player] call CBA_fnc_serverEvent;
-};
+params [["_playerData", []]];
 
 _playerData params ["_worldName", "_playerID", "_variables", "_loadout", "_position", "_direction", "_stance", "_damage"];
 
 // Create new player if world doesn't match.
 if (worldName isNotEqualTo _worldName) exitWith {
     [QUOTE(COMPONENT_BEAUTIFIED), format ["Current World (%1) does not match the current save world (%2), Loading Aborted.", worldName, _worldName]] call EFUNC(common,debugMessage);
-    [] call FUNC(initializeNewPlayer);
+    [] call FUNC(newPlayer);
 };
 
 // Block save sharing
 private _currentPlayerID = getPlayerUID player;
 if (_playerID isNotEqualTo _currentPlayerID) exitWith {
     [QUOTE(COMPONENT_BEAUTIFIED), format [" Current player ID (%1) does not match saved player ID (%2), Loading Aborted", _currentPlayerID, _playerID]] call EFUNC(common,debugMessage);
-    [] call FUNC(initializeNewPlayer);
+    [] call FUNC(newPlayer);
 };
 
 private _variableNames = [MISERY_PLAYER_VARIABLE_VALUES];
@@ -54,8 +47,4 @@ switch (_stance) do {
     default {};
 };
 
-if ("ace_medical" call EFUNC(common,isModLoaded)) then {
-    [player, _damage] call ace_medical_fnc_deserializeState;
-} else {
-    player setDamage _damage;
-};
+[player setDamage _damage, [player, _damage] call ace_medical_fnc_deserializeState] select ["ace_medical"] call EFUNC(common,isModLoaded);

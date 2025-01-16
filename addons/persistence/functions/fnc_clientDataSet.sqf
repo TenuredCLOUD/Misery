@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: MikeMF
- * Serialize player for savegame
+ * Gathers client data and saves it.
  *
  * Arguments:
  * None
@@ -10,7 +10,7 @@
  * Player Data <ARRAY>
  *
  * Example:
- * [] call misery_persistence_fnc_serializeClient
+ * [] call misery_persistence_fnc_clientDataSet
 */
 
 /*

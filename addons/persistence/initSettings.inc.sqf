@@ -1,12 +1,11 @@
 private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 
-// Single-Player settings.
 [
-    QGVAR(saveType),
-    "LIST",
-    ["Save Mode", "Which type of save would you like?"],
+    QGVAR(enabled),
+    "CHECKBOX",
+    ["Enabled", "Enable Saving"],
     _category,
-    [[0, 1, 2], ["None", "Single Player", "Persistent World"], 0],
+    true,
     1
 ] call CBA_fnc_addSetting;
 
@@ -24,14 +23,18 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     ["Save Slot", "Which save slot would you like to use?"],
     _category,
     [[0, 1, 2, 3, 4], ["0", "1", "2", "3", "4"], 0],
-    1, {}, true
+    1,
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 [
     QGVAR(autosaveInterval),
     "LIST",
-    ["Autosave Interval (SP)", "How often would you like to autosave?"],
+    ["Autosave Interval", "How often would you like to autosave?"],
     _category,
-    [[0, 10, 15, 20, 25, 30], ["Never", "10 Minutes", "15 Minutes", "20 Minutes", "25 Minutes", "30 Minutes"], 1],
-    1, {}, true
+    [[0, 1, 10, 15, 20, 25, 30], ["Never", "1 Minute", "10 Minutes", "15 Minutes", "20 Minutes", "25 Minutes", "30 Minutes"], 1],
+    1,
+    {},
+    true
 ] call CBA_fnc_addSetting;

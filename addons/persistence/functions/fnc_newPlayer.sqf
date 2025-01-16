@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: MikeMF
- * Sets up the player variables for a new start or after death.
+ * Handles new players or respawning players.
  *
  * Arguments:
  * 0: New Save <BOOL> (default: true)
@@ -10,10 +10,12 @@
  * None
  *
  * Example:
- * [] call misery_persistence_fnc_initializeNewPlayer
+ * [] call misery_persistence_fnc_newPlayer
 */
 
 params [["_newSave", true]];
+
+player setUnitLoadout EGVAR(common,defaultLoadout);
 
 private _temperature = call EFUNC(temperature,temperature);
 
@@ -23,7 +25,7 @@ player setVariable [QGVAR(crafting_recipes), MACRO_PLAYER_CRAFTING_RECIPES];
 player setVariable [QGVAR(debuffs), MACRO_PLAYER_DEBUFFS];
 player setVariable [QGVAR(exposure), MACRO_PLAYER_EXPOSURE];
 player setVariable [QGVAR(fatigue), MACRO_PLAYER_FATIGUE];
-player setVariable [QGVAR(fear), MACRO_PLAYER_FEAR];
+player setVariable [QGVAR(psycosis), MACRO_PLAYER_FEAR];
 player setVariable [QGVAR(hunger), MACRO_PLAYER_HUNGER];
 player setVariable [QGVAR(infection), MACRO_PLAYER_INFECTION];
 player setVariable [QGVAR(radiation), MACRO_PLAYER_RADIATION];
@@ -37,6 +39,3 @@ if (_newSave) then {
     player setVariable [QGVAR(currency), MACRO_PLAYER_CURRENCY];
     player setVariable [QGVAR(currency_banked), MACRO_PLAYER_CURRENCY_BANKED];
 };
-
-// Broadcast event for a new player that has been initialized.
-[QGVAR(newPlayer), player] call CBA_fnc_globalEvent;

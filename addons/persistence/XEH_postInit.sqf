@@ -1,22 +1,29 @@
 #include "script_component.hpp"
 
-if (isServer && isMultiplayer) then {
-    call FUNC(accessServerSaveData); // Get save hashmap
-    [QGVAR(saveDataMultiplayer), FUNC(savePlayerDataMultiplayer)] call CBA_fnc_addEventHandler;
-    //[QGVAR(requestSaveDataClient), FUNC(loadPlayerDataMultiplayer)] call CBA_fnc_addEventHandler;
+GVAR(autosaveTimer) = GVAR(autosaveInterval) * 60;
+GVAR(saveName) = call FUNC(formatSaveName);
+
+// Multiplayer save/load
+if (isServer) then {
+    [QGVAR(saveDataToServer), FUNC(multiplayerDataSave)] call CBA_fnc_addEventHandler;
+    [QGVAR(loadDataFromServer), FUNC(multiplayerDataLoad)] call CBA_fnc_addEventHandler;
 };
 
-if (hasInterface) then {
-    // Initiate Saving
-    [QGVAR(executeSaveGame), FUNC(savePlayerData)] call CBA_fnc_addEventHandler;
+[QGVAR(loadDataFromServerCallback), {
+    params ["_playerData"];
 
-    // Activate anti-combat Log.
-    [{!isNull findDisplay 46}, {call FUNC(combatLogPrevention)}] call CBA_fnc_waitUntilAndExecute;
+    if (_playerData isEqualTo []) exitWith {
+        [true] call FUNC(newPlayer);
+    };
 
-    player addEventHandler ["Respawn", {
-        params ["_unit"];
+    _playerData call FUNC(clientDataGet);
+}] call CBA_fnc_addEventHandler;
 
-        // Reset player variables, excluding bank account.
-        [false] call FUNC(initializeNewPlayer);
-    }];
-};
+if (!hasInterface) exitWith {};
+
+call FUNC(init);
+
+// New player or Respawned player
+player addEventHandler ["Respawn", {
+    [false] call FUNC(newPlayer);
+}];

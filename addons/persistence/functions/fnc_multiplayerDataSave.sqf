@@ -10,16 +10,15 @@
  * None
  *
  * Example:
- * [] call misery_persistence_fnc_savePlayerDataMultiplayer
+ * [] call misery_persistence_fnc_multiplayerDataSave
 */
 
 params ["_playerData"];
 _playerData params ["_worldName", "_playerID"];
 
-[QUOTE(COMPONENT_BEAUTIFIED), "Saving Multiplayer data"] call EFUNC(common,debugMessage);
+[QUOTE(COMPONENT_BEAUTIFIED), format ["Saving Multiplayer data for client (%1)", _playerID]] call EFUNC(common,debugMessage);
 
 // Save ID as key with all data.
 GVAR(multiplayerSaveData) set [_playerID, _playerData];
 
-private _saveName = call FUNC(formatSaveName);
-profileNamespace setVariable [_saveName, GVAR(multiplayerSaveData)];
+profileNamespace setVariable [GVAR(saveName), GVAR(multiplayerSaveData)];
