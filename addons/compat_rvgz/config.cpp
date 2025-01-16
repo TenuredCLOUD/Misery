@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {QCLASS(common),"ravage"};
+        requiredAddons[] = {QCLASS(common), "ravage"};
         skipWhenMissingDependencies = 1;
         authors[] = {"TenuredCLOUD"};
         VERSION_CONFIG;
