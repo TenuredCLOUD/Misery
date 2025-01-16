@@ -32,7 +32,13 @@ if (0.5 > random 1) then {
     titleText [selectRandom _text, "PLAIN DOWN"];
 };
 
-if (_psychosisLevel < 0.55) exitWith {};
+if (_psychosisLevel < 0.55) exitWith {
+    if (GVAR(sleepBlocked)) then {
+        GVAR(sleepBlocked) = false;
+    };
+};
+
+GVAR(sleepBlocked) = true;
 
 if (0.5 > random 1) then {
     enableCamShake true;

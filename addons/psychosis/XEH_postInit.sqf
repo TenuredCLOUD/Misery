@@ -6,6 +6,7 @@ GVAR(dsa) = ["DSA_Spooks"] call EFUNC(common,isModLoaded);
 GVAR(ravage) = ["ravage"] call EFUNC(common,isModLoaded);
 GVAR(remnant) = ["remnant"] call EFUNC(common,isModLoaded);
 GVAR(additionalModifiers) = [];
+GVAR(sleepBlocked) = false;
 
 [] call FUNC(loop);
 

@@ -14,7 +14,7 @@
  *
 */
 
-private _psychosis = player getVariable [QGVAR(psychosis), MACRO_PLAYER_PSYCHOSIS];
+private _psychosis = player getVariable [QGVAR(state), MACRO_PLAYER_PSYCHOSIS];
 
 // Handle exterior modifiers, resets itself.
 if (GVAR(additionalModifiers) isNotEqualTo 0) then {
@@ -31,7 +31,7 @@ private _zombies = call FUNC(zombies);
 // Value cannot be negative.
 private _finalPsychosis = (_psychosis + _night + _phantoms + _radiationZone + _spooks + _zombies) max 0;
 
-player setVariable [QGVAR(psychosis), _finalPsychosis];
+player setVariable [QGVAR(state), _finalPsychosis];
 
 if (_finalPsychosis > 0) then {
     [QGVAR(update), _finalPsychosis] call CBA_fnc_localEvent;
