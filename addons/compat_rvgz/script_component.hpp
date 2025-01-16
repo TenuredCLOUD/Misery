@@ -1,5 +1,5 @@
 #define COMPONENT compat_rvgz
-#define COMPONENT_BEAUTIFIED Compat RVG Zombies
+#define COMPONENT_BEAUTIFIED Compat Ravage Zombies
 #include "\z\misery\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
