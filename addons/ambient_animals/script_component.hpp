@@ -1,5 +1,5 @@
 #define COMPONENT ambient_animals
-#define COMPONENT_BEAUTIFIED Ambient_Animals
+#define COMPONENT_BEAUTIFIED Ambient Animals
 #include "\z\misery\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
