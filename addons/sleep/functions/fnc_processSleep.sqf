@@ -14,80 +14,62 @@
  *
 */
 
-private _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
-private _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER];
-private _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_THIRST];
-private _ailments = player getVariable QCLASS(ailments);
-private _MFearSleep = player getVariable QCLASS(fearSleep);
+// Early exit if sleep is blocked.
+if (EGVAR(psychosis,enabled) && {EGVAR(psychosis,sleepBlocked)}) exitWith {
+    titleText [format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_CANTSLEEPFEAR"], "PLAIN DOWN", -1, true, true];
+    [QUOTE(COMPONENT_BEAUTIFIED), "Sleep is blocked by fear."] call EFUNC(common,debugMessage);
+};
 
-private _HourVal = player getVariable QCLASS(sleepValueParsed);
+private _energy = player getVariable [QEGVAR(survival,energyDeficit), MACRO_PLAYER_FATIGUE];
+private _hunger = player getVariable [QEGVAR(survival,hunger), MACRO_PLAYER_HUNGER];
+private _thirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_THIRST];
+private _tiredness = player getVariable [QGVAR(tiredness), 0];
+//private _ailments = player getVariable QCLASS(ailments);
 
-if (_HourVal == 0) exitWith {
+private _hourValue = player getVariable QCLASS(sleepValueParsed);
+
+if (_hourValue == 0) exitWith {
     titleText [format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_SLEEPNOHOURSELECT"], "PLAIN DOWN", -1, true, true];
     player setVariable [QCLASS(sleepValueParsed), nil];
 };
 
-if (_MSleepiness < 15) exitWith {titleText [format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_SLEEPNOTTIRED"], "PLAIN DOWN", -1, true, true]; player setVariable [QCLASS(sleepValueParsed), nil];};
+if (_tiredness < 0.15) exitWith {
+    titleText [format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_SLEEPNOTTIRED"], "PLAIN DOWN", -1, true, true];
+    player setVariable [QCLASS(sleepValueParsed), nil];
+};
 
-if (!(isNil {player getVariable QCLASS(psycosis)}) && ((player getVariable [QCLASS(psycosis), MACRO_PLAYER_PSYCHOSIS]) >= 5) && (!_MFearSleep)) exitWith {titleText [format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_CANTSLEEPFEAR"], "PLAIN DOWN", -1, true, true];};
-
-_sitting = animationState player;
-if (_sitting != "amovpsitmstpsnonwnondnon_ground") then {
+if (animationState player != "amovpsitmstpsnonwnondnon_ground") then {
     player playActionNow "SitDown";
 };
 
-player setVariable [QCLASS(isSleeping), true];
+player setVariable [QGVAR(isSleeping), true];
 
 cutText ["", "BLACK OUT", 2];
 
-sleep 3;
+[{
+    params ["_hourValue"];
+    skipTime _hourValue;
+}, _hourValue, 3] call CBA_fnc_waitAndExecute;
 
-skipTime _HourVal; // Use the selected hour for the skipTime command
+[{
+    params ["_hourValue"];
+    titleText [format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_SLEPTFORHOWLONG", _hourValue]], "PLAIN DOWN", -1, true, true];
+    player setFatigue 1;
+}, _hourValue, 6] call CBA_fnc_waitAndExecute;
 
-sleep 3;
+[{
+    cutText ["", "BLACK IN", 2];
+}, [], 8] call CBA_fnc_waitAndExecute;
 
-titleText [format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_SLEPTFORHOWLONG", _HourVal]], "PLAIN DOWN", -1, true, true];
+[{
+    player switchMove "Acts_UnconsciousStandUp_part1";
+    player setVariable [QCLASS(isSleeping), false];
 
-player setFatigue 1;
+    // Decrement hunger, thirst and energy deficit.
+    player setVariable [QEGVAR(survival,energyDeficit), GVAR(energyDeficitAfterSleep)];
+    /*
+    * ToDo: Add modifier function for hunger thirst and decrease them from sleep.
+    */
 
-sleep 2;
-
-cutText ["", "BLACK IN", 2];
-
-player switchMove "Acts_UnconsciousStandUp_part1";
-player setAnimSpeedCoef 1.5;
-
-[{animationState player != "Acts_UnconsciousStandUp_part1"},
-{
-    player setAnimSpeedCoef 1;
-}] call CBA_fnc_waitUntilAndExecute;
-
-player setVariable [QCLASS(energyDeficit), (_MSleepiness - MisSleep_sleepinessDecrease)];
-
-player setVariable [QCLASS(isSleeping), false];
-
-if (_MFearSleep) then {
-player setVariable [QCLASS(fearSleep), false];
-};
-
-if (_MHunger > 20) then {
-player setVariable [QCLASS(hunger), (_MHunger - MisSleep_hungerDecrease)];
-} else {
-if (damage player > 50) then {
-player setDamage (damage player) + 0.25;
-} else {
-player setDamage (damage player) + 0.5;
-};
-};
-
-if (_MThirst > 20) then {
-player setVariable [QCLASS(thirst), (_MThirst - MisSleep_thirstDecrease)];
-} else {
-if (damage player > 50) then {
-player setDamage (damage player) + 0.25;
-} else {
-player setDamage (damage player) + 0.5;
-};
-};
-
-player setVariable [QCLASS(sleepValueParsed), nil];
+    player setVariable [QCLASS(sleepValueParsed), nil];
+}, [], 10] call CBA_fnc_waitAndExecute;
