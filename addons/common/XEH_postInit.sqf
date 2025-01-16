@@ -34,6 +34,12 @@ if (GVAR(remnant)) then {
 
 if (!hasInterface) exitWith {};
 
+// Default loadout
+GVAR(defaultLoadout) = [[[],[],[],[],[],[],"","",[],["ItemMap","","","ItemCompass","ItemWatch",""]],[]];
+
+// Combat Logging
+[] call FUNC(combatLogPrevention);
+
 // Loadout change will clear item cache for hasItem
 ["loadout", {
     GVAR(itemsCache) = nil;

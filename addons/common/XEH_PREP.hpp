@@ -1,5 +1,6 @@
 PREP(buildingPositions);
 PREP(buildingPositionsInside);
+PREP(combatLogPrevention);
 PREP(debugMessage);
 PREP(getSimplifiedLoadout);
 PREP(hasItem);
