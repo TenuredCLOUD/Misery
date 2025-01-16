@@ -14,7 +14,7 @@
  *
 */
 
-private _MFear = player getVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR];
+private _MFear = player getVariable [QCLASS(psycosis), MACRO_PLAYER_PSYCHOSIS];
 
 
 
@@ -34,7 +34,7 @@ sleep 60;
 
 if (EGVAR(fear,enabled)) then {
   player setVariable [QCLASS(psycosis), (_MFear - 25)];
-    if (_MFear <= 0) then {player setVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR]};
+    if (_MFear <= 0) then {player setVariable [QCLASS(psycosis), MACRO_PLAYER_PSYCHOSIS]};
 };
 
  };

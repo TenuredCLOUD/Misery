@@ -15,7 +15,7 @@
 */
 
 private _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
-private _MFear = player getVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR];
+private _MFear = player getVariable [QCLASS(psycosis), MACRO_PLAYER_PSYCHOSIS];
 
 if (!hasInterface) exitWith {};
 

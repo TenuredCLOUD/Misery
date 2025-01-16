@@ -16,7 +16,7 @@
 
 if (!hasInterface) exitWith {};
 
-private _MFear = player getVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR];
+private _MFear = player getVariable [QCLASS(psycosis), MACRO_PLAYER_PSYCHOSIS];
 
 if !(QCLASS(matches) in magazines player || QCLASS(lighter) in magazines player) exitWith {titleText ["You need a lighter or matches to smoke...", "PLAIN DOWN"]};
 
@@ -42,7 +42,7 @@ if !(QCLASS(matches) in magazines player || QCLASS(lighter) in magazines player)
     player setVariable [QCLASS(radiation), -25 - random 25];
     if ((player getVariable [QCLASS(radiation), 0]) < 0) then {
         player setVariable [QCLASS(radiation), 0];
-    }; 
+    };
 }, [], 10] call CBA_fnc_waitAndExecute;
 
 }else{
@@ -69,8 +69,8 @@ if (QCLASS(lighter) in magazines player) then {
     player setVariable [QCLASS(radiation), -25 - random 25];
     if ((player getVariable [QCLASS(radiation), 0]) < 0) then {
         player setVariable [QCLASS(radiation), 0];
-    }; 
+    };
 }, [], 10] call CBA_fnc_waitAndExecute;
 
   };
-}; 
+};

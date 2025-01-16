@@ -43,11 +43,5 @@
         } else {
             player setDamage (damage player + _damageMultiplier);
         };
-
-        if (EGVAR(fear,enabled)) then {
-            private _fearAdd = MACRO_FEAR_CALC_PSYFIELD_NOPROTECTION;
-            private _fear = player getVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR];
-            player setVariable [QCLASS(psycosis), (_fear + parseNumber ((_fearAdd)toFixed 2))];
-        };
     };
 }, 1] call CBA_fnc_addPerFrameHandler;
