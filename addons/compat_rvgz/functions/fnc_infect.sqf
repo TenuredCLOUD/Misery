@@ -15,17 +15,14 @@
 */
 params ["_unit", "_source", "_damage", "_instigator"];
 
-if (!isPlayer _unit) exitWith {}; //If NOT player do nothing
+// Must be a player, on foot being attacked by a zombie.
+if !(isPlayer _unit || isNull objectParent player || _instigator isKindOf "zombie") exitWith {};
 
-if !(isNull objectParent player) exitWith {}; //If NOT player or Player is in vehicle do nothing
-
-if ((isPlayer _unit) && (_instigator isKindOf "zombie")) then { //If IS player then proceed to infection chance
-
-if((random 100) < GVAR(chance)) exitWith {
-["ailment","Possible Infection...", QPATHTOEF(icons,data\zedhand_ca.paa), ""] call EFUNC(vitals,addBuffOrAilment);
-[{
- ["ailment", "Possible Infection..."] call EFUNC(vitals,removeBuffOrAilment);
-}, [], 180] call CBA_fnc_waitAndExecute;
+if (random 100 < GVAR(chance)) exitWith {
+    ["ailment","Possible Infection...", QPATHTOEF(icons,data\zedhand_ca.paa), ""] call EFUNC(vitals,addBuffOrAilment);
+    [{
+        ["ailment", "Possible Infection..."] call EFUNC(vitals,removeBuffOrAilment);
+    }, [], 180] call CBA_fnc_waitAndExecute;
 };
 
 ["ailment","Possible Infection...", QPATHTOEF(icons,data\zedhand_ca.paa), ""] call EFUNC(vitals,addBuffOrAilment);
@@ -33,8 +30,7 @@ if((random 100) < GVAR(chance)) exitWith {
 player setVariable [QCLASS(infectionLogged), true];
 
 [{
- ["ailment", "Possible Infection..."] call EFUNC(vitals,removeBuffOrAilment);
- player setVariable [QCLASS(infectionLogged), nil];
- player setVariable [QCLASS(infection), (random 10)];
+    ["ailment", "Possible Infection..."] call EFUNC(vitals,removeBuffOrAilment);
+    player setVariable [QCLASS(infectionLogged), nil];
+    player setVariable [QCLASS(infection), (random 10)];
 }, [], 180] call CBA_fnc_waitAndExecute;
-};
