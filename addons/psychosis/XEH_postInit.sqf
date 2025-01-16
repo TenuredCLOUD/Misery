@@ -8,7 +8,9 @@ GVAR(remnant) = ["remnant"] call EFUNC(common,isModLoaded);
 GVAR(additionalModifiers) = [];
 GVAR(sleepBlocked) = false;
 
-[] call FUNC(loop);
+["CBA_settingsInitialized", {
+    [] call FUNC(loop);
+}] call CBA_fnc_addEventHandler;
 
 [QGVAR(update), FUNC(effects)] call CBA_fnc_addEventHandler;
 
