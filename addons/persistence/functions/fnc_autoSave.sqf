@@ -23,7 +23,7 @@ if (GVAR(autosaveInterval) isEqualTo 0 || GVAR(hardcore)) exitWith {
     [] call FUNC(autosave);
 }, [], GVAR(autosaveInterval) * 60] call CBA_fnc_waitAndExecute;
 
-if (isMultiplayer) exitwith {
+if (isMultiplayer) exitWith {
     [QGVAR(saveDataMultiplayer)] call CBA_fnc_serverEvent;
 };
 
