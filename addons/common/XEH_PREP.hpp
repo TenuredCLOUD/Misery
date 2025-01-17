@@ -1,6 +1,8 @@
 PREP(buildingPositions);
 PREP(buildingPositionsInside);
+PREP(combatLogPrevention);
 PREP(debugMessage);
+PREP(getPlayerVariables);
 PREP(getSimplifiedLoadout);
 PREP(hasItem);
 PREP(isInside);

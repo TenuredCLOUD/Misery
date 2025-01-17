@@ -14,7 +14,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "LIST",
     ["Psychosis Cycle Timer", "How often is the psychosis value updated?"],
     _category,
-    [15, 30, 60], ["10 Seconds", "30 Seconds", "60 Seconds", 0],
+    [[15, 30, 60], ["10 Seconds", "30 Seconds", "60 Seconds"], 0],
     1
 ] call CBA_fnc_addSetting;
 

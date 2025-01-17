@@ -11,3 +11,12 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     ],
     1
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(combatLogPreventionEnabled),
+    "CHECKBOX",
+    ["Combat Log Prevention", "Prevent Combat logging"],
+    _category,
+    true,
+    1
+] call CBA_fnc_addSetting;

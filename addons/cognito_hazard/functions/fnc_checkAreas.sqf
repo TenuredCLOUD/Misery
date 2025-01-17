@@ -10,7 +10,7 @@
  * Marker check success <BOOL>
  *
  * Example:
- * [] call misery_cognitohazard_fnc_checkZones
+ * [] call misery_cognito_hazard_fnc_checkZones
 */
 
 // Convert to Array.
