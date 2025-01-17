@@ -15,7 +15,7 @@
  * Public: No
 */
 
-private _MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];
+private _MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW];
 
 if (!hasInterface) exitWith {};
 
@@ -27,7 +27,7 @@ if (alive player) exitWith {
     sleep 60;
 
     if (_MExposure > 0) then {
-        player setVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];// reset exposure to 0; from overheat
+        player setVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW];// reset exposure to 0; from overheat
     } else {
         if (_MExposure < 0) then {
             player setVariable [QCLASS(exposure), (_MExposure - 5)];

@@ -34,12 +34,12 @@ if !(hasInterface) exitWith {};
     private ["_rads","_MHunger","_MThirst","_MInfection","_MPoison","_MSleepiness","_MExposure","_MPlayertemp","_ailments","_MSleeppillstaken","_MIsSleeping","_randomnutrient","_randomnutrientweight","_bagweightload","_Playerweight","_Miseryweightdefcalculated","_randomsleepweight","_random"];
 
     _rads = player getVariable [QCLASS(radiation), 0];
-    _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER];
-    _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_THIRST];
-    _MInfection = player getVariable [QCLASS(infection), MACRO_PLAYER_INFECTION];
-    _MPoison = player getVariable [QCLASS(toxicity), MACRO_PLAYER_TOXICITY];
-    _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
-    _MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];
+    _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_DEFAULTS_HIGH];
+    _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_DEFAULTS_HIGH];
+    _MInfection = player getVariable [QCLASS(infection), MACRO_PLAYER_DEFAULTS_LOW];
+    _MPoison = player getVariable [QCLASS(toxicity), MACRO_PLAYER_DEFAULTS_LOW];
+    _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
+    _MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW];
     _MPlayertemp = player getVariable [QCLASS(thermalIndex), 0];
     _ailments = player getVariable QCLASS(ailments);
 
@@ -73,16 +73,16 @@ if !(hasInterface) exitWith {};
     if !(EGVAR(common,checkMultiplayer)) then { //If SP - and Weight deficiency then start increasing sleepiness var
     _randomsleepweight = [1, 2] call BIS_fnc_randomInt; //random sleep decrease
     if (_randomsleepweight == 1) then {
-    _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
+    _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
     player setVariable [QCLASS(energyDeficit), (_MSleepiness + (_Miseryweightdefcalculated))]; //player setVariable [QCLASS(energyDeficit), (_MSleepiness +  ((_Miseryweightdefcalculated)))]; //player setVariable [QCLASS(energyDeficit), (_MSleepiness +  ((_Miseryweightdefcalculated)toFixed 2))];
         };
     };
 };
 
-    if (EGVAR(common,checkMultiplayer)) then {player setVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
+    if (EGVAR(common,checkMultiplayer)) then {player setVariable [QCLASS(energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
     }else{
 
-        _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
+        _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
 
         player setVariable [QCLASS(energyDeficit), (_MSleepiness + (GVAR(energyDeficitIncrement)))]; //player setVariable [QCLASS(energyDeficit), (_MSleepiness +  ((GVAR(energyDeficitIncrement))))]; //player setVariable [QCLASS(energyDeficit), (_MSleepiness +  ((GVAR(energyDeficitIncrement))toFixed 2))];
 
@@ -112,7 +112,7 @@ if !(hasInterface) exitWith {};
 
     if (GVAR(ailments)) then {
 
-    _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER];
+    _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_DEFAULTS_HIGH];
 
     if ((_ailments find "PARASITES" != -1)) then {player setVariable [QCLASS(hunger), (_MHunger - ((GVAR(hungerIncrement))))]};     //if ((_ailments find "PARASITES" != -1)) then {player setVariable [QCLASS(hunger), (_MHunger -  ((GVAR(hungerIncrement))toFixed 2))]};
 };
@@ -138,11 +138,11 @@ if !(hasInterface) exitWith {};
         };
 
     //Poison:
-    _MPoison = player getVariable [QCLASS(toxicity), MACRO_PLAYER_TOXICITY];
+    _MPoison = player getVariable [QCLASS(toxicity), MACRO_PLAYER_DEFAULTS_LOW];
 
     if (_MPoison > 0 && GVAR(ailments)) then {
 
-        _MPoison = player getVariable [QCLASS(toxicity), MACRO_PLAYER_TOXICITY];
+        _MPoison = player getVariable [QCLASS(toxicity), MACRO_PLAYER_DEFAULTS_LOW];
 
         _ailments pushBackUnique "POISON"; player setVariable [QCLASS(ailments), _ailments];
 
@@ -154,11 +154,11 @@ if !(hasInterface) exitWith {};
     if (_MPoison <= 0) then {_ailments deleteAt (_ailments find "POISON"); player setVariable [QCLASS(ailments), _ailments];};
 
     //Infection:
-    _MInfection = player getVariable [QCLASS(infection), MACRO_PLAYER_INFECTION];
+    _MInfection = player getVariable [QCLASS(infection), MACRO_PLAYER_DEFAULTS_LOW];
 
     if(_MInfection > 0 && GVAR(ailments))then{
 
-        _MInfection = player getVariable [QCLASS(infection), MACRO_PLAYER_INFECTION];
+        _MInfection = player getVariable [QCLASS(infection), MACRO_PLAYER_DEFAULTS_LOW];
 
         _ailments pushBackUnique "INFECTION"; player setVariable [QCLASS(ailments), _ailments];
 
@@ -169,14 +169,14 @@ if !(hasInterface) exitWith {};
 
     if(_MInfection <= 0) then {_ailments deleteAt (_ailments find "INFECTION"); player setVariable [QCLASS(ailments), _ailments];};
 
-            _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER];
-            _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_THIRST];
+            _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_DEFAULTS_HIGH];
+            _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_DEFAULTS_HIGH];
 
-            if(_MHunger > 100) then {player setVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER]};
+            if(_MHunger > 100) then {player setVariable [QCLASS(hunger), MACRO_PLAYER_DEFAULTS_HIGH]};
 
              if(_MHunger <= 0)then{[player,100] call EFUNC(common,specialDamage)}; //Kill the player on "0" hunger
 
-            if(_MThirst > 100) then {player setVariable [QCLASS(thirst), MACRO_PLAYER_THIRST]};
+            if(_MThirst > 100) then {player setVariable [QCLASS(thirst), MACRO_PLAYER_DEFAULTS_HIGH]};
 
              if(_MThirst <= 0)then{[player,100] call EFUNC(common,specialDamage)}; //Kill the player on "0" thirst
 
@@ -186,7 +186,7 @@ if !(hasInterface) exitWith {};
 
     if (EGVAR(temperature,enable)) then {
 
-    _MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];
+    _MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW];
 
     [player] call EFUNC(temperature,warmup);
     [player] call EFUNC(temperature,overtemp);

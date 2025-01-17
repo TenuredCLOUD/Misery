@@ -19,8 +19,8 @@ private ["_sick","_MPlayertemp","_MExposure","_MThirst","_ailments","_sickcalc1"
 
 _sick = false;
 _MPlayertemp = player getVariable QCLASS(thermalIndex);
-_MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];
-_MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_THIRST];
+_MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW];
+_MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_DEFAULTS_HIGH];
 _ailments = player getVariable QCLASS(ailments);
 
     switch (true) do {

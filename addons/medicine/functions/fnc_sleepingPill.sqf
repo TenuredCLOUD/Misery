@@ -14,7 +14,7 @@
  *
 */
 
-_MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
+_MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
 _MSleeppillstaken = player getVariable ["MiserySleeppillstaken", 0];
 _MIsSleeping = player getVariable QCLASS(isSleeping);
 _MFearSleep = player getVariable QCLASS(fearSleep);
@@ -53,7 +53,7 @@ if (alive player) exitWith {
 
     while { alive player && !(_Sleepingpilleffectdone) } do {
         player setVariable [QCLASS(energyDeficit), (_MSleepiness + 0.1)];
-        _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
+        _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
         _MIsSleeping = player getVariable QCLASS(isSleeping);
         if (_MSleepiness >= 35 || (_MIsSleeping)) then {
             _Sleepingpilleffectdone = true;

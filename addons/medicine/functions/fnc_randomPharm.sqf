@@ -14,9 +14,9 @@
  *
 */
 
-private _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER];
-private _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_THIRST];
-private _MPoison = player getVariable [QCLASS(toxicity), MACRO_PLAYER_TOXICITY];
+private _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_DEFAULTS_HIGH];
+private _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_DEFAULTS_HIGH];
+private _MPoison = player getVariable [QCLASS(toxicity), MACRO_PLAYER_DEFAULTS_LOW];
 
 
 

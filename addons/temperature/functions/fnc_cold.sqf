@@ -19,8 +19,8 @@ private ["_cold","_MPlayertemp","_MExposure","_MHunger","_ailments","_coldexposu
 
 _cold = false;
 _MPlayertemp = player getVariable QCLASS(thermalIndex);
-_MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];
-_MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER];
+_MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW];
+_MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_DEFAULTS_HIGH];
 _ailments = player getVariable QCLASS(ailments);
 
 //Player effective temperature pre-check:

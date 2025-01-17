@@ -28,7 +28,7 @@ _c = _c - 1;
 
 if (!hasInterface || {!alive player}) exitWith {};
 
-private _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_THIRST];
+private _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_DEFAULTS_HIGH];
 
 titleText ["You inject the Electrolyte solution...", "PLAIN DOWN"];
 

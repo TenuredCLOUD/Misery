@@ -19,8 +19,8 @@ private ["_overtemp","_MPlayertemp","_MExposure","_MThirst","_overtempcalc","_Mi
 
 _overtemp = false;
 _MPlayertemp = player getVariable QCLASS(thermalIndex);
-_MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];
-_MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_THIRST];
+_MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW];
+_MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_DEFAULTS_HIGH];
 
     if (_MPlayertemp >= 33) then {
 
