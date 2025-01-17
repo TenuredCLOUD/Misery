@@ -14,7 +14,7 @@
  * [] call misery_alcohol_fnc_beer
 */
 
-private _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
+private _MSleepiness = player getVariable [QEGVAR(survival,energyDeficit), MACRO_PLAYER_FATIGUE];
 private _MFear = player getVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR];
 
 if (!hasInterface) exitWith {};
@@ -28,7 +28,7 @@ if (!hasInterface) exitWith {};
 
 //if ((MiseryNORVG=="ENABLED") && !(EGVAR(common,checkMultiplayer))) then {
 if (!EGVAR(common,checkMultiplayer)) then {
-  player setVariable [QCLASS(energyDeficit), (_MSleepiness + 5)];
+  player setVariable [QEGVAR(survival,energyDeficit), (_MSleepiness + 5)];
 };
 
 enableCamShake true;

@@ -39,10 +39,10 @@ if (EGVAR(common,ace)) then {
 };
 
 [{
-    player setVariable [QCLASS(radiation), -50 - random 50];
-    if ((player getVariable [QCLASS(radiation), 0]) < 0) then {
-        player setVariable [QCLASS(radiation), 0];
-    }; 
+    player setVariable [QEGVAR(survival,radiation), -50 - random 50];
+    if ((player getVariable [QEGVAR(survival,radiation), 0]) < 0) then {
+        player setVariable [QEGVAR(survival,radiation), 0];
+    };
 }, [], 10] call CBA_fnc_waitAndExecute;
 
 }else{
@@ -66,10 +66,10 @@ if (EGVAR(common,ace)) then {
 };
 
 [{
-    player setVariable [QCLASS(radiation), -50 - random 5];
-    if ((player getVariable [QCLASS(radiation), 0]) < 0) then {
-        player setVariable [QCLASS(radiation), 0];
-    }; 
+    player setVariable [QEGVAR(survival,radiation), -50 - random 5];
+    if ((player getVariable [QEGVAR(survival,radiation), 0]) < 0) then {
+        player setVariable [QEGVAR(survival,radiation), 0];
+    };
 }, [], 10] call CBA_fnc_waitAndExecute;
   };
 };

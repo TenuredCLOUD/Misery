@@ -77,7 +77,7 @@ Will most likely rewrite to new UI based use - Or move to an ACE action
     _TimeA=_this select 0;
     waitUntil {(!alive player) or (time > _TimeA)};
     if (alive player) then {
-    player setVariable [QCLASS(infection), (random 15)]; //random infection amount
+    player setVariable [QEGVAR(survival,infection), (random 15)]; //random infection amount
     };
         };
 

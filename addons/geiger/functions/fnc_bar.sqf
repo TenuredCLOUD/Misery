@@ -30,7 +30,7 @@ disableSerialization;
 
         private _display = uiNamespace getVariable "MiseryGeiger_UI";
         private _textControl = _display displayCtrl 1000;
-        private _radReading = format ["%1 mSv", round (player getVariable [QCLASS(radiation),0])];
+        private _radReading = format ["%1 mSv", round (player getVariable [QEGVAR(survival,radiation),0])];
         _textControl ctrlSetText _radReading;
 
         private _randomGeiger = selectRandom [QPATHTOEF(audio,sounds\inventory\Items\Geiger001.ogg),

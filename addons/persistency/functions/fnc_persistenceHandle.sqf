@@ -53,12 +53,12 @@ private _MiseryaddRespawnEHs = {
                     (_this select 0) setVariable [_x select 0, _x select 1];
                 };
             } forEach [
-                [QCLASS(thirst), MACRO_PLAYER_THIRST],
-                [QCLASS(hunger), MACRO_PLAYER_HUNGER],
-                [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE],
-                [QCLASS(toxicity), MACRO_PLAYER_TOXICITY],
-                [QCLASS(infection), MACRO_PLAYER_INFECTION],
-                [QCLASS(exposure), MACRO_PLAYER_EXPOSURE],
+                [QEGVAR(survival,thirst), MACRO_PLAYER_THIRST],
+                [QEGVAR(survival,hunger), MACRO_PLAYER_HUNGER],
+                [QEGVAR(survival,energyDeficit), MACRO_PLAYER_FATIGUE],
+                [QEGVAR(survival,toxicity), MACRO_PLAYER_TOXICITY],
+                [QEGVAR(survival,infection), MACRO_PLAYER_INFECTION],
+                [QEGVAR(survival,exposure), MACRO_PLAYER_EXPOSURE],
                 [QCLASS(psycosis), MACRO_PLAYER_FEAR],
                 [QCLASS(infectionLogged), nil],
                 [QCLASS(turbidWaterLogged), nil],
@@ -150,12 +150,12 @@ if (MiserysurvivalSaveMode == 2) then {
 //                     (_this select 0) setVariable [_x select 0, _x select 1];
 //                 };
 //             } forEach [
-//                 [QCLASS(thirst), MACRO_PLAYER_THIRST],
-//                 [QCLASS(hunger), MACRO_PLAYER_HUNGER],
-//                 [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE],
-//                 [QCLASS(toxicity), MACRO_PLAYER_TOXICITY],
-//                 [QCLASS(infection), MACRO_PLAYER_INFECTION],
-//                 [QCLASS(exposure), MACRO_PLAYER_EXPOSURE],
+//                 [QEGVAR(survival,thirst), MACRO_PLAYER_THIRST],
+//                 [QEGVAR(survival,hunger), MACRO_PLAYER_HUNGER],
+//                 [QEGVAR(survival,energyDeficit), MACRO_PLAYER_FATIGUE],
+//                 [QEGVAR(survival,toxicity), MACRO_PLAYER_TOXICITY],
+//                 [QEGVAR(survival,infection), MACRO_PLAYER_INFECTION],
+//                 [QEGVAR(survival,exposure), MACRO_PLAYER_EXPOSURE],
 //                 [QCLASS(psycosis), MACRO_PLAYER_FEAR],
 //                 [QCLASS(infectionLogged), nil],
 //                 [QCLASS(turbidWaterLogged), nil],
@@ -182,12 +182,12 @@ if (MiserysurvivalSaveMode == 2) then {
 //                     (_this select 0) setVariable [_x select 0, _x select 1];
 //                 };
 //             } forEach [
-//                 [QCLASS(thirst), MACRO_PLAYER_THIRST],
-//                 [QCLASS(hunger), MACRO_PLAYER_HUNGER],
-//                 [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE],
-//                 [QCLASS(toxicity), MACRO_PLAYER_TOXICITY],
-//                 [QCLASS(infection), MACRO_PLAYER_INFECTION],
-//                 [QCLASS(exposure), MACRO_PLAYER_EXPOSURE],
+//                 [QEGVAR(survival,thirst), MACRO_PLAYER_THIRST],
+//                 [QEGVAR(survival,hunger), MACRO_PLAYER_HUNGER],
+//                 [QEGVAR(survival,energyDeficit), MACRO_PLAYER_FATIGUE],
+//                 [QEGVAR(survival,toxicity), MACRO_PLAYER_TOXICITY],
+//                 [QEGVAR(survival,infection), MACRO_PLAYER_INFECTION],
+//                 [QEGVAR(survival,exposure), MACRO_PLAYER_EXPOSURE],
 //                 [QCLASS(psycosis), MACRO_PLAYER_FEAR],
 //                 [QCLASS(infectionLogged), nil],
 //                 [QCLASS(turbidWaterLogged), nil],

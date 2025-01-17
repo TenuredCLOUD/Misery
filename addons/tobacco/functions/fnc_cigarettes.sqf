@@ -39,10 +39,10 @@ if !(QCLASS(matches) in magazines player || QCLASS(lighter) in magazines player)
   };
 
 [{
-    player setVariable [QCLASS(radiation), -25 - random 25];
-    if ((player getVariable [QCLASS(radiation), 0]) < 0) then {
-        player setVariable [QCLASS(radiation), 0];
-    }; 
+    player setVariable [QEGVAR(survival,radiation), -25 - random 25];
+    if ((player getVariable [QEGVAR(survival,radiation), 0]) < 0) then {
+        player setVariable [QEGVAR(survival,radiation), 0];
+    };
 }, [], 10] call CBA_fnc_waitAndExecute;
 
 }else{
@@ -66,11 +66,11 @@ if (QCLASS(lighter) in magazines player) then {
   };
 
 [{
-    player setVariable [QCLASS(radiation), -25 - random 25];
-    if ((player getVariable [QCLASS(radiation), 0]) < 0) then {
-        player setVariable [QCLASS(radiation), 0];
-    }; 
+    player setVariable [QEGVAR(survival,radiation), -25 - random 25];
+    if ((player getVariable [QEGVAR(survival,radiation), 0]) < 0) then {
+        player setVariable [QEGVAR(survival,radiation), 0];
+    };
 }, [], 10] call CBA_fnc_waitAndExecute;
 
   };
-}; 
+};

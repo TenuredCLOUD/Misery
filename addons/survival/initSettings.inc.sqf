@@ -14,7 +14,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "SLIDER",
     ["Thirst increment", "Thirst increase every cycle"],
     _category,
-    [0.01, 100, 0.05, 2],
+    [0.01, 1, 0.01, 2],
     1
 ] call CBA_fnc_addSetting;
 
@@ -23,7 +23,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "SLIDER",
     ["Hunger increment", "Hunger increase every cycle"],
     _category,
-    [0.01, 100, 0.05, 2],
+    [0.01, 1, 0.01, 2],
     1
 ] call CBA_fnc_addSetting;
 
@@ -50,7 +50,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "SLIDER",
     ["Energy deficit increment", "Energy loss every cycle (SP only)"],
     _category,
-    [0.01, 100, 0.1, 2],
+    [0.01, 1, 0.01, 2],
     1
 ] call CBA_fnc_addSetting;
 
@@ -59,7 +59,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "SLIDER",
     ["Poison healing", "Poison decrease every cycle"],
     _category,
-    [0.01, 100, 0.1, 2],
+    [0.01, 1, 0.01, 2],
     1
 ] call CBA_fnc_addSetting;
 
@@ -68,7 +68,16 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "SLIDER",
     ["Infection healing", "Infection decrease every cycle"],
     _category,
-    [0.01, 100, 0.1, 2],
+    [0.01, 1, 0.01, 2],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(parasitesHealing),
+    "SLIDER",
+    ["Parasites healing", "Parasites decrease every cycle"],
+    _category,
+    [0.01, 1, 0.01, 2],
     1
 ] call CBA_fnc_addSetting;
 

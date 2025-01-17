@@ -28,7 +28,7 @@
             if(EGVAR(common,debug))then{systemChat "Misery Artifact exposure cycle checks re-initiated..."};
         };
 
-player setVariable [QCLASS(radiation), (player getVariable [QCLASS(radiation),0]) + 50, true];
+player setVariable [QEGVAR(survival,radiation), (player getVariable [QEGVAR(survival,radiation),0]) + 50, true];
 
 if(EGVAR(common,debug))then{systemChat "Misery Artifact exposure cycle..."};
 

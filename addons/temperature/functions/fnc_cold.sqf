@@ -18,9 +18,9 @@
 private ["_cold","_MPlayertemp","_MExposure","_MHunger","_ailments","_coldexposure","_Miserytempdefcoldcalc"];
 
 _cold = false;
-_MPlayertemp = player getVariable QCLASS(thermalIndex);
-_MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];
-_MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER];
+_MPlayertemp = player getVariable QEGVAR(survival,temperature);
+_MExposure = player getVariable [QEGVAR(survival,exposure), MACRO_PLAYER_EXPOSURE];
+_MHunger = player getVariable [QEGVAR(survival,hunger), MACRO_PLAYER_HUNGER];
 _ailments = player getVariable QCLASS(ailments);
 
 //Player effective temperature pre-check:
@@ -34,7 +34,7 @@ if (_MPlayertemp < 20) then {
 
         _coldexposure = MACRO_TEMPERATURE_COLDEXPOSURE(_MPlayertemp); //- this value scales with player temperature decrease...
 
-        player setVariable [QCLASS(exposure), (_MExposure - parseNumber ((_coldexposure)toFixed 2))];
+        player setVariable [QEGVAR(survival,exposure), (_MExposure - parseNumber ((_coldexposure)toFixed 2))];
 
         _cold = true;
     };
@@ -44,7 +44,7 @@ if (_MPlayertemp < 20) then {
 
         _Miserytempdefcoldcalc = MACRO_TEMPERATURE_COLDEXPOSURE(_MPlayertemp);
 
-        player setVariable [QCLASS(hunger), (_MHunger - parseNumber ((_Miserytempdefcoldcalc)toFixed 2))];
+        player setVariable [QEGVAR(survival,hunger), (_MHunger - parseNumber ((_Miserytempdefcoldcalc)toFixed 2))];
 
     };
 }; //Start cold simulation if < 20C (scaled)

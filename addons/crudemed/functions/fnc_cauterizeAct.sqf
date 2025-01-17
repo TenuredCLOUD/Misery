@@ -81,7 +81,7 @@
     _TimeA=_this select 0;
     waitUntil {(!alive player) or (time > _TimeA)};
     if (alive player) then {
-    player setVariable [QCLASS(infection), (random 15)]; //random infection amount
+    player setVariable [QEGVAR(survival,infection), (random 15)]; //random infection amount
     };
         };
 

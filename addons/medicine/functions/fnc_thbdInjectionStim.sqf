@@ -25,10 +25,10 @@ titleText ["You use the Thrombomodulin Stimpack...", "PLAIN DOWN"];
     player removeItem QCLASS(thrombomodulin_Stimpack);
 
 [{
-    player setVariable [QCLASS(radiation), -5000 - random 250];
-    if ((player getVariable [QCLASS(radiation), 0]) < 0) then {
-        player setVariable [QCLASS(radiation), 0];
-    }; 
+    player setVariable [QEGVAR(survival,radiation), -5000 - random 250];
+    if ((player getVariable [QEGVAR(survival,radiation), 0]) < 0) then {
+        player setVariable [QEGVAR(survival,radiation), 0];
+    };
 }, [], 10] call CBA_fnc_waitAndExecute;
 
 

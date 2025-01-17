@@ -32,5 +32,5 @@ player setVariable [QCLASS(infectionLogged), true];
 [{
     ["ailment", "Possible Infection..."] call EFUNC(vitals,removeBuffOrAilment);
     player setVariable [QCLASS(infectionLogged), nil];
-    player setVariable [QCLASS(infection), (random 10)];
+    player setVariable [QEGVAR(survival,infection), (random 10)];
 }, [], 180] call CBA_fnc_waitAndExecute;

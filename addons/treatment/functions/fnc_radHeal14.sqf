@@ -22,7 +22,7 @@ _dialog = findDisplay 982381;
 _PurchaseB = _dialog displayCtrl 1600;
 _ExitB = _dialog displayCtrl 1601;
 
-_pricerads = parseNumber (((((player getVariable [QCLASS(radiation),0]) * 0.25) / 50) * Mis_Medpriceradheal) toFixed 1);
+_pricerads = parseNumber (((((player getVariable [QEGVAR(survival,radiation),0]) * 0.25) / 50) * Mis_Medpriceradheal) toFixed 1);
 
 if (MiseryinMedzonearea) exitWith {
 
@@ -38,7 +38,7 @@ if (Mis_Medcurrencytype == "MAGAZINETYPE") then {
 _playercash = {_x == Mis_Medfundstype} count magazines player;
 };
 
-if (player getVariable [QCLASS(radiation), 0] <= 50) exitWith {
+if (player getVariable [QEGVAR(survival,radiation), 0] <= 50) exitWith {
 ctrlSetText [1001, "Your MiseryRadiation exposure doesn't require treatment..."];
 _PurchaseB ctrlShow true;
 _ExitB ctrlShow true;
@@ -75,7 +75,7 @@ for "_i" from 0 to 99 do {
 
 if ((player getVariable QCLASS(processTreatment)) isEqualTo true) then {
 
-_pricerads = parseNumber (((((player getVariable [QCLASS(radiation),0]) * 0.25) / 50) * Mis_Medpriceradheal) toFixed 1);
+_pricerads = parseNumber (((((player getVariable [QEGVAR(survival,radiation),0]) * 0.25) / 50) * Mis_Medpriceradheal) toFixed 1);
 
 if (Mis_Medcurrencytype == "DIGITALTYPE") then {
 _playercash = player getVariable [Mis_Medfundstype, 0];
@@ -90,7 +90,7 @@ _playercash = {_x == Mis_Medfundstype} count magazines player;
 for "_i" from 1 to _pricerads do {player removeMagazine Mis_Medfundstype;};
 };
 
-_priceradscalc = parseNumber (((player getVariable [QCLASS(radiation),0]) * 0.25) toFixed 1);
+_priceradscalc = parseNumber (((player getVariable [QEGVAR(survival,radiation),0]) * 0.25) toFixed 1);
 
 ctrlSetText [1001, "You have been successfully treated..."];
 

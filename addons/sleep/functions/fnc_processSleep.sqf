@@ -14,9 +14,9 @@
  *
 */
 
-private _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
-private _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER];
-private _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_THIRST];
+private _MSleepiness = player getVariable [QEGVAR(survival,energyDeficit), MACRO_PLAYER_FATIGUE];
+private _MHunger = player getVariable [QEGVAR(survival,hunger), MACRO_PLAYER_HUNGER];
+private _MThirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_THIRST];
 private _ailments = player getVariable QCLASS(ailments);
 private _MFearSleep = player getVariable QCLASS(fearSleep);
 
@@ -36,7 +36,7 @@ if (_sitting != "amovpsitmstpsnonwnondnon_ground") then {
     player playActionNow "SitDown";
 };
 
-player setVariable [QCLASS(isSleeping), true];
+player setVariable [EGVAR(survival,isSleeping), true];
 
 cutText ["", "BLACK OUT", 2];
 
@@ -62,16 +62,16 @@ player setAnimSpeedCoef 1.5;
     player setAnimSpeedCoef 1;
 }] call CBA_fnc_waitUntilAndExecute;
 
-player setVariable [QCLASS(energyDeficit), (_MSleepiness - MisSleep_sleepinessDecrease)];
+player setVariable [QEGVAR(survival,energyDeficit), (_MSleepiness - MisSleep_sleepinessDecrease)];
 
-player setVariable [QCLASS(isSleeping), false];
+player setVariable [EGVAR(survival,isSleeping), false];
 
 if (_MFearSleep) then {
 player setVariable [QCLASS(fearSleep), false];
 };
 
 if (_MHunger > 20) then {
-player setVariable [QCLASS(hunger), (_MHunger - MisSleep_hungerDecrease)];
+player setVariable [QEGVAR(survival,hunger), (_MHunger - MisSleep_hungerDecrease)];
 } else {
 if (damage player > 50) then {
 player setDamage (damage player) + 0.25;
@@ -81,7 +81,7 @@ player setDamage (damage player) + 0.5;
 };
 
 if (_MThirst > 20) then {
-player setVariable [QCLASS(thirst), (_MThirst - MisSleep_thirstDecrease)];
+player setVariable [QEGVAR(survival,thirst), (_MThirst - MisSleep_thirstDecrease)];
 } else {
 if (damage player > 50) then {
 player setDamage (damage player) + 0.25;

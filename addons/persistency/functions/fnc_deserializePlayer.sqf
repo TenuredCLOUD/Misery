@@ -42,14 +42,14 @@ _MiseryWContainerKnowledge = [];
         player setVariable [_x select 0, _var];
     };
 } forEach [
-    [QCLASS(hunger), MACRO_PLAYER_HUNGER],
-    [QCLASS(thirst), MACRO_PLAYER_THIRST],
-    [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE],
-    [QCLASS(toxicity), MACRO_PLAYER_TOXICITY],
-    [QCLASS(infection), MACRO_PLAYER_INFECTION],
-    [QCLASS(exposure), MACRO_PLAYER_EXPOSURE],
+    [QEGVAR(survival,hunger), MACRO_PLAYER_HUNGER],
+    [QEGVAR(survival,thirst), MACRO_PLAYER_THIRST],
+    [QEGVAR(survival,energyDeficit), MACRO_PLAYER_FATIGUE],
+    [QEGVAR(survival,toxicity), MACRO_PLAYER_TOXICITY],
+    [QEGVAR(survival,infection), MACRO_PLAYER_INFECTION],
+    [QEGVAR(survival,exposure), MACRO_PLAYER_EXPOSURE],
     [QCLASS(gasmaskCartridgeLevel), 100],
-    [QCLASS(radiation), 0],
+    [QEGVAR(survival,radiation), 0],
     [QCLASS(psycosis), MACRO_PLAYER_FEAR],
     [QCLASS(infectionLogged), nil],
     [QCLASS(turbidWaterLogged), nil],

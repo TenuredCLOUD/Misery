@@ -26,9 +26,9 @@ if (_selectedItem==(toUpper(_x select 0))) exitWith {_entry=_x};
 
 if ((count _entry)<1) exitWith {};
 
-_MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER];
-_MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_THIRST];
-_MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];
+_MHunger = player getVariable [QEGVAR(survival,hunger), MACRO_PLAYER_HUNGER];
+_MThirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_THIRST];
+_MExposure = player getVariable [QEGVAR(survival,exposure), MACRO_PLAYER_EXPOSURE];
 _ailments = player getVariable QCLASS(ailments);
 _rads = player getVariable ["radiation", 0];
 _hunger=_entry select 1;
@@ -78,19 +78,19 @@ if (_waittill != 0) then {sleep _waittill}; //delayed effect (good for medicatio
 if (_radval !=0) then {player setVariable ["radiation", (_rads + _radval)]};
 
 //Exposure
-if (_exposureval != 0) then {player setVariable [QCLASS(exposure), (_MExposure + _exposureval)];};
+if (_exposureval != 0) then {player setVariable [QEGVAR(survival,exposure), (_MExposure + _exposureval)];};
 
 //Hunger / Thirst
-if (_hunger != 0) then {player setVariable [QCLASS(hunger), (_MHunger + _hunger)];};
-if (_thirst != 0) then {player setVariable [QCLASS(thirst), (_MThirst + _thirst)];};
+if (_hunger != 0) then {player setVariable [QEGVAR(survival,hunger), (_MHunger + _hunger)];};
+if (_thirst != 0) then {player setVariable [QEGVAR(survival,thirst), (_MThirst + _thirst)];};
 
 //Reset to 0 if less than 0:
-if (_MHunger < 0) then {player setVariable [QCLASS(hunger), 0]};
-if (_MThirst < 0) then {player setVariable [QCLASS(thirst), 0]};
+if (_MHunger < 0) then {player setVariable [QEGVAR(survival,hunger), 0]};
+if (_MThirst < 0) then {player setVariable [QEGVAR(survival,thirst), 0]};
 
 //Reset to 100 if greater than 100:
-if (_MHunger > 100) then {player setVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER]};
-if (_MThirst > 100) then {player setVariable [QCLASS(thirst), MACRO_PLAYER_THIRST]};
+if (_MHunger > 100) then {player setVariable [QEGVAR(survival,hunger), MACRO_PLAYER_HUNGER]};
+if (_MThirst > 100) then {player setVariable [QEGVAR(survival,thirst), MACRO_PLAYER_THIRST]};
 
 //Ailment add
 if ((count _debuffAdd) > 0) then {

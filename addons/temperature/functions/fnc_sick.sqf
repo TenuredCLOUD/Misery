@@ -18,9 +18,9 @@
 private ["_sick","_MPlayertemp","_MExposure","_MThirst","_ailments","_sickcalc1","_Miserytempsickcalc1","_sickcalc2","_Miserytempsickcalc2"];
 
 _sick = false;
-_MPlayertemp = player getVariable QCLASS(thermalIndex);
-_MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];
-_MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_THIRST];
+_MPlayertemp = player getVariable QEGVAR(survival,temperature);
+_MExposure = player getVariable [QEGVAR(survival,exposure), MACRO_PLAYER_EXPOSURE];
+_MThirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_THIRST];
 _ailments = player getVariable QCLASS(ailments);
 
     switch (true) do {
@@ -29,7 +29,7 @@ _ailments = player getVariable QCLASS(ailments);
 
         _sickcalc1 = MACRO_TEMPERATURE_SICKEXPOSURE(_MPlayertemp); //- this value scales
 
-        player setVariable [QCLASS(exposure), (_MExposure + parseNumber ((_sickcalc1)toFixed 2))];
+        player setVariable [QEGVAR(survival,exposure), (_MExposure + parseNumber ((_sickcalc1)toFixed 2))];
 
         _sick = true;
 
@@ -38,7 +38,7 @@ _ailments = player getVariable QCLASS(ailments);
 
     _Miserytempsickcalc1 = MACRO_TEMPERATURE_SICKEXPOSURE(_MPlayertemp);
 
-    player setVariable [QCLASS(thirst), (_MThirst - parseNumber ((_Miserytempsickcalc1)toFixed 2))];
+    player setVariable [QEGVAR(survival,thirst), (_MThirst - parseNumber ((_Miserytempsickcalc1)toFixed 2))];
 
     };
 };
@@ -47,7 +47,7 @@ _ailments = player getVariable QCLASS(ailments);
 
         _sickcalc2 = MACRO_TEMPERATURE_COLDEXPOSURE(_MPlayertemp); //- this value scales
 
-        player setVariable [QCLASS(exposure), (_MExposure + parseNumber ((_sickcalc2)toFixed 2))];
+        player setVariable [QEGVAR(survival,exposure), (_MExposure + parseNumber ((_sickcalc2)toFixed 2))];
 
         _sick = true;
 
@@ -56,7 +56,7 @@ _ailments = player getVariable QCLASS(ailments);
 
     _Miserytempsickcalc2 = MACRO_TEMPERATURE_COLDEXPOSURE(_MPlayertemp);
 
-    player setVariable [QCLASS(thirst), (_MThirst - parseNumber ((_Miserytempsickcalc2)toFixed 2))];
+    player setVariable [QEGVAR(survival,thirst), (_MThirst - parseNumber ((_Miserytempsickcalc2)toFixed 2))];
 
     };
 };
@@ -65,7 +65,7 @@ _ailments = player getVariable QCLASS(ailments);
 
         _sickcalc3 = MACRO_TEMPERATURE_SICKEXPOSURE(_MPlayertemp); //- this value scales
 
-        player setVariable [QCLASS(exposure), (_MExposure + parseNumber ((_sickcalc3)toFixed 2))];
+        player setVariable [QEGVAR(survival,exposure), (_MExposure + parseNumber ((_sickcalc3)toFixed 2))];
 
         _sick = true;
 
@@ -74,7 +74,7 @@ _ailments = player getVariable QCLASS(ailments);
 
     _Miserytempsickcalc3 = MACRO_TEMPERATURE_SICKEXPOSURE(_MPlayertemp);
 
-    player setVariable [QCLASS(thirst), (_MThirst - parseNumber ((_Miserytempsickcalc3)toFixed 2))];
+    player setVariable [QEGVAR(survival,thirst), (_MThirst - parseNumber ((_Miserytempsickcalc3)toFixed 2))];
 
         };
     };
