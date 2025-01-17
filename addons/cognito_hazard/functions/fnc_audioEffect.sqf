@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call misery_cognitohazard_fnc_audioEffect
+ * [] call misery_cognito_hazard_fnc_audioEffect
 */
 
 [{

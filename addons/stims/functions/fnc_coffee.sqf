@@ -14,7 +14,7 @@
  *
 */
 
-_MSleepiness = player getVariable [QEGVAR(survival,energyDeficit), MACRO_PLAYER_FATIGUE];
+_MSleepiness = player getVariable [QEGVAR(survival,energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
 
 if (!hasInterface) exitWith {};
 

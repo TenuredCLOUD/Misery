@@ -18,9 +18,9 @@
 private ["_overtemp","_MPlayertemp","_MExposure","_MThirst","_overtempcalc","_Miserytempdefhotcalc"];
 
 _overtemp = false;
-_MPlayertemp = player getVariable QEGVAR(survival,temperature);
-_MExposure = player getVariable [QEGVAR(survival,exposure), MACRO_PLAYER_EXPOSURE];
-_MThirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_THIRST];
+_MPlayertemp = player getVariable [QEGVAR(survival,temperature), MACRO_PLAYER_DEFAULTS_TEMP];
+_MExposure = player getVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];
+_MThirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH];
 
     if (_MPlayertemp >= 33) then {
 

@@ -16,8 +16,8 @@
 
 if (!hasInterface) exitWith {};
 
-private _fatigue = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
-private _psychosis = player getVariable [EGVAR(psychosis,state), MACRO_PLAYER_PSYCHOSIS];
+private _fatigue = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
+private _psychosis = player getVariable [EGVAR(psychosis,state), MACRO_PLAYER_DEFAULTS_LOW];
 
 if (EGVAR(psychosis,enabled)) then {
     [-0.35] call EFUNC(psychosis,addModifier);

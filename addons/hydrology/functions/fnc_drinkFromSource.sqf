@@ -56,7 +56,7 @@ for "_i" from 0 to (count _text - 1) do {
 
 if ((player getVariable QCLASS(isDrinking)) isEqualTo true) then {
 
-private _MThirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_THIRST];
+private _MThirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH];
 
 playSound3D [QPATHTOEF(audio,sounds\items\drink.ogg), player, false, getPosASL player, 4, 1, 10];
 

@@ -44,12 +44,12 @@ disableSerialization;
     _CurrMag = _display displayCtrl 1111;
     _CurrMagVal =_display displayCtrl 1112;
 
-    _MHunger = player getVariable [QEGVAR(survival,hunger), MACRO_PLAYER_HUNGER];
-    _MThirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_THIRST];
-    _MInfection = player getVariable [QEGVAR(survival,infection), MACRO_PLAYER_INFECTION];
-    _MPoison = player getVariable [QEGVAR(survival,toxicity), MACRO_PLAYER_TOXICITY];
-    _MSleepiness = player getVariable [QEGVAR(survival,energyDeficit), MACRO_PLAYER_FATIGUE];
-    _MExposure = player getVariable [QEGVAR(survival,exposure), MACRO_PLAYER_EXPOSURE];
+    _MHunger = player getVariable [QEGVAR(survival,hunger), MACRO_PLAYER_DEFAULTS_HIGH];
+    _MThirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH];
+    _MInfection = player getVariable [QEGVAR(survival,infection), MACRO_PLAYER_DEFAULTS_LOW];
+    _MPoison = player getVariable [QEGVAR(survival,toxicity), MACRO_PLAYER_DEFAULTS_LOW];
+    _MSleepiness = player getVariable [QEGVAR(survival,energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
+    _MExposure = player getVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];
     _MPlayertemp = player getVariable [QEGVAR(survival,temperature), 0];
 
     _pfatigue = (getFatigue player) * 100;

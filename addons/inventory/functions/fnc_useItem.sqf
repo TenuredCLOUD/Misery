@@ -26,9 +26,9 @@ if (_selectedItem==(toUpper(_x select 0))) exitWith {_entry=_x};
 
 if ((count _entry)<1) exitWith {};
 
-_MHunger = player getVariable [QEGVAR(survival,hunger), MACRO_PLAYER_HUNGER];
-_MThirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_THIRST];
-_MExposure = player getVariable [QEGVAR(survival,exposure), MACRO_PLAYER_EXPOSURE];
+_MHunger = player getVariable [QEGVAR(survival,hunger), MACRO_PLAYER_DEFAULTS_HIGH];
+_MThirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH];
+_MExposure = player getVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];
 _ailments = player getVariable QCLASS(ailments);
 _rads = player getVariable ["radiation", 0];
 _hunger=_entry select 1;
@@ -89,8 +89,8 @@ if (_MHunger < 0) then {player setVariable [QEGVAR(survival,hunger), 0]};
 if (_MThirst < 0) then {player setVariable [QEGVAR(survival,thirst), 0]};
 
 //Reset to 100 if greater than 100:
-if (_MHunger > 100) then {player setVariable [QEGVAR(survival,hunger), MACRO_PLAYER_HUNGER]};
-if (_MThirst > 100) then {player setVariable [QEGVAR(survival,thirst), MACRO_PLAYER_THIRST]};
+if (_MHunger > 100) then {player setVariable [QEGVAR(survival,hunger), MACRO_PLAYER_DEFAULTS_HIGH]};
+if (_MThirst > 100) then {player setVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH]};
 
 //Ailment add
 if ((count _debuffAdd) > 0) then {

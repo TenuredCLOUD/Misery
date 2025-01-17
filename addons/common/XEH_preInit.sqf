@@ -13,4 +13,6 @@ GVAR(targetVehicleType) = nil;
 GVAR(checkMultiplayer) = isMultiplayer;
 GVAR(modLoadedCache) = createHashMap;
 
+call FUNC(modLoadedPrep);
+
 ADDON = true;

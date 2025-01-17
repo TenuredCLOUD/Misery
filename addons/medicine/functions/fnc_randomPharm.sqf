@@ -14,9 +14,9 @@
  *
 */
 
-private _MHunger = player getVariable [QEGVAR(survival,hunger), MACRO_PLAYER_HUNGER];
-private _MThirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_THIRST];
-private _MPoison = player getVariable [QEGVAR(survival,toxicity), MACRO_PLAYER_TOXICITY];
+private _MHunger = player getVariable [QEGVAR(survival,hunger), MACRO_PLAYER_DEFAULTS_HIGH];
+private _MThirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH];
+private _MPoison = player getVariable [QEGVAR(survival,toxicity), MACRO_PLAYER_DEFAULTS_LOW];
 
 
 

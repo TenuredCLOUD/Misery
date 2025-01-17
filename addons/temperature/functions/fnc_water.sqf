@@ -18,7 +18,7 @@
 private ["_water","_MExposure","_ailments","_MWetsuit","_coldwater"];
 
 _water = false;
-_MExposure = player getVariable [QEGVAR(survival,exposure), MACRO_PLAYER_EXPOSURE];
+_MExposure = player getVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];
 _ailments = player getVariable QCLASS(ailments);
 _MWetsuit = false; //No wetsuit
 

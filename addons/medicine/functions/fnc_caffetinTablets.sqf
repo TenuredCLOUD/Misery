@@ -14,8 +14,8 @@
  *
 */
 
-private _MInfection = player getVariable [QEGVAR(survival,infection), MACRO_PLAYER_INFECTION];
-private _MExposure = player getVariable [QEGVAR(survival,exposure), MACRO_PLAYER_EXPOSURE];
+private _MInfection = player getVariable [QEGVAR(survival,infection), MACRO_PLAYER_DEFAULTS_LOW];
+private _MExposure = player getVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];
 private _ailments = player getVariable QCLASS(ailments);
 
 if (!hasInterface) exitWith {};
@@ -39,7 +39,7 @@ if ((_MInfection > 1) || (_ailments find "PARASITES" != -1)) then {
 
   player setVariable [QEGVAR(survival,exposure), (_MExposure - 25)];
 
-    if (_MExposure > 0) then {player setVariable [QEGVAR(survival,exposure), MACRO_PLAYER_EXPOSURE]};
+    if (_MExposure > 0) then {player setVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW]};
 
 }else{
 //Nothing

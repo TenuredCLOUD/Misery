@@ -102,10 +102,10 @@ class CLASS(Checkbox)
     tooltipColorText[] = {1, 1, 1, 1}; // RGBA color of the tooltip text
     tooltipColorBox[] = {1, 1, 1, 1}; // RGBA color of the tooltip box
     tooltipColorShade[] = {0, 0, 0, 0.65}; // RGBA color of the tooltip box's shadow
-    soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter", 0.09, 1};
-    soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush", 0.09, 1};
-    soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick", 0.09, 1};
-    soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape", 0.09, 1};
+    soundEnter[] = {"\A3\ui_f\data\sound\RscButton\soundEnter.wss", 0.09, 1};
+    soundPush[] = {"\A3\ui_f\data\sound\RscButton\soundPush.wss", 0.09, 1};
+    soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick.wss", 0.09, 1};
+    soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape.wss", 0.09, 1};
     textureChecked = "\A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_checked_ca.paa"; // Texture for checked state
     textureUnchecked = "\A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_unchecked_ca.paa"; // Texture for unchecked state
     textureFocusedChecked = "\A3\Ui_f\data\GUI\RscCommon\RscCheckBox\CheckBox_checked_ca.paa"; // Texture for focused checked state

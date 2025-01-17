@@ -1,0 +1,11 @@
+PREP(autosave);
+PREP(clientDataGet);
+PREP(clientDataSet);
+PREP(formatSaveName);
+PREP(init);
+PREP(loadData);
+PREP(multiplayerDataLoad);
+PREP(multiplayerDataSave);
+PREP(newPlayer);
+PREP(saveGame);
+PREP(wipeSaveSingleplayer);

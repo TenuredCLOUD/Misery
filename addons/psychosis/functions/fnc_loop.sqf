@@ -14,7 +14,7 @@
  *
 */
 
-private _psychosis = player getVariable [QGVAR(state), MACRO_PLAYER_PSYCHOSIS];
+private _psychosis = player getVariable [QGVAR(state), MACRO_PLAYER_DEFAULTS_LOW];
 
 // Handle exterior modifiers, resets itself.
 if (GVAR(additionalModifiers) isNotEqualTo 0) then {

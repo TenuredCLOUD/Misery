@@ -14,7 +14,7 @@
  *
 */
 
-_MSleepiness = player getVariable [QEGVAR(survival,energyDeficit), MACRO_PLAYER_FATIGUE];
+_MSleepiness = player getVariable [QEGVAR(survival,energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
 _MSleeppillstaken = player getVariable ["MiserySleeppillstaken", 0];
 _MIsSleeping = player getVariable EGVAR(survival,isSleeping);
 _MFearSleep = player getVariable QCLASS(fearSleep);
@@ -53,7 +53,7 @@ if (alive player) exitWith {
 
     while { alive player && !(_Sleepingpilleffectdone) } do {
         player setVariable [QEGVAR(survival,energyDeficit), (_MSleepiness + 0.1)];
-        _MSleepiness = player getVariable [QEGVAR(survival,energyDeficit), MACRO_PLAYER_FATIGUE];
+        _MSleepiness = player getVariable [QEGVAR(survival,energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
         _MIsSleeping = player getVariable EGVAR(survival,isSleeping);
         if (_MSleepiness >= 35 || (_MIsSleeping)) then {
             _Sleepingpilleffectdone = true;

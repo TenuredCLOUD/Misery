@@ -18,9 +18,9 @@
 private ["_cold","_MPlayertemp","_MExposure","_MHunger","_ailments","_coldexposure","_Miserytempdefcoldcalc"];
 
 _cold = false;
-_MPlayertemp = player getVariable QEGVAR(survival,temperature);
-_MExposure = player getVariable [QEGVAR(survival,exposure), MACRO_PLAYER_EXPOSURE];
-_MHunger = player getVariable [QEGVAR(survival,hunger), MACRO_PLAYER_HUNGER];
+_MPlayertemp = player getVariable [QEGVAR(survival,temperature), MACRO_PLAYER_DEFAULTS_LOW];
+_MExposure = player getVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];
+_MHunger = player getVariable [QEGVAR(survival,hunger), MACRO_PLAYER_DEFAULTS_HIGH];
 _ailments = player getVariable QCLASS(ailments);
 
 //Player effective temperature pre-check:

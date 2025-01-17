@@ -14,7 +14,7 @@
  *
 */
 
-private _MPoison = player getVariable [QEGVAR(survival,toxicity), MACRO_PLAYER_TOXICITY];
+private _MPoison = player getVariable [QEGVAR(survival,toxicity), MACRO_PLAYER_DEFAULTS_LOW];
 
 if (!hasInterface) exitWith {};
 
@@ -32,7 +32,7 @@ if (!hasInterface) exitWith {};
   sleep 60;
 
 if (_MPoison > 0) then {
-    player setVariable [QEGVAR(survival,toxicity), MACRO_PLAYER_TOXICITY];
+    player setVariable [QEGVAR(survival,toxicity), MACRO_PLAYER_DEFAULTS_LOW];
 };
 
 };

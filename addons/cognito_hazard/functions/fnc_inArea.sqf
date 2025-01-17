@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: MikeMF, TenuredCLOUD
- * Checks if players are inside a radiation zone.
+ * Checks if players are inside a cognito hazardous area.
  *
  * Arguments:
  * None
@@ -10,10 +10,10 @@
  * None
  *
  * Example:
- * [] call misery_radiation_fnc_playersInRadZones
+ * [] call misery_cognito_hazard_fnc_playersInRadZones
 */
 
-// If radiation zone check fails, system will not function.
+// If area check fails, system will not function.
 if !(call FUNC(checkAreas)) exitWith {
     [QUOTE(COMPONENT_BEAUTIFIED), "Marker check system failed, system disabled."] call EFUNC(common,debugMessage);
 };

@@ -91,8 +91,8 @@ class CfgWeapons {
         displayName = "Oxygen Rebreather";
         author = "TenuredCLOUD";
         picture = "\A3\characters_f\Data\UI\icon_V_RebreatherB_CA.paa";
-        model = "\A3\Characters_F\Common\equip_rebreather";
-        hiddenSelections[] = {"camo","hide","unhide","unhide2"};
+        model = "\A3\Characters_F\Common\equip_rebreather.p3d";
+        hiddenSelections[] = {"camo", "hide", "unhide", "unhide2"};
         hiddenSelectionsTextures[] = {
             "\A3\characters_f\common\data\diver_equip_nato_co.paa",
             "\A3\characters_f\common\data\diver_equip_nato_co.paa",
@@ -100,7 +100,7 @@ class CfgWeapons {
         };
 
         class ItemInfo : VestItem {
-            uniformModel = "\A3\Characters_F\Common\equip_rebreather";
+            uniformModel = "\A3\Characters_F\Common\equip_rebreather.p3d";
             vestType = "Rebreather";
             containerClass = "Supply0";
             mass = 80;

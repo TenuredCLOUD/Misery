@@ -20,9 +20,9 @@ if (EGVAR(psychosis,enabled) && {EGVAR(psychosis,sleepBlocked)}) exitWith {
     [QUOTE(COMPONENT_BEAUTIFIED), "Sleep is blocked by fear."] call EFUNC(common,debugMessage);
 };
 
-private _energy = player getVariable [QEGVAR(survival,energyDeficit), MACRO_PLAYER_FATIGUE];
-private _hunger = player getVariable [QEGVAR(survival,hunger), MACRO_PLAYER_HUNGER];
-private _thirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_THIRST];
+private _energy = player getVariable [QEGVAR(survival,energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
+private _hunger = player getVariable [QEGVAR(survival,hunger), MACRO_PLAYER_DEFAULTS_HIGH];
+private _thirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH];
 private _tiredness = player getVariable [QGVAR(tiredness), 0];
 //private _ailments = player getVariable QCLASS(ailments);
 

@@ -18,8 +18,8 @@
 private ["_warmup","_MPlayertemp","_MExposure","_ailments","_cooldown"];
 
 _warmup = false;
-_MPlayertemp = player getVariable QEGVAR(survival,temperature);
-_MExposure = player getVariable [QEGVAR(survival,exposure), MACRO_PLAYER_EXPOSURE];
+_MPlayertemp = player getVariable [QEGVAR(survival,temperature), MACRO_PLAYER_DEFAULTS_TEMP];
+_MExposure = player getVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];
 _ailments = player getVariable QCLASS(ailments);
 
 //Player effective temperature pre-check:
@@ -39,7 +39,7 @@ if (_MPlayertemp >= 20 && _MPlayertemp < 33) then {
 
             _warmup = true;
 
-            if (_MExposure >= 0) then {player setVariable [QEGVAR(survival,exposure), MACRO_PLAYER_EXPOSURE];};
+            if (_MExposure >= 0) then {player setVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];};
 
         }; //Warmup if neutral temp & cold
 
@@ -51,7 +51,7 @@ if (_MPlayertemp >= 20 && _MPlayertemp < 33) then {
 
             _warmup = true;
 
-            if (_MExposure <= 0) then {player setVariable [QEGVAR(survival,exposure), MACRO_PLAYER_EXPOSURE];};
+            if (_MExposure <= 0) then {player setVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];};
 
         }; //Cooldown if neutral temp & hot
     };
