@@ -36,7 +36,7 @@ player setVariable [QCLASS(lastBankLoan), 0];
 player setVariable [QCLASS(radiation), 0];
 player setVariable [QCLASS(toxicity), MACRO_PLAYER_TOXICITY];
 player setVariable [QCLASS(infection), MACRO_PLAYER_INFECTION];
-player setVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR];
+player setVariable [QCLASS(psycosis), MACRO_PLAYER_PSYCHOSIS];
 player setVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];
 player setVariable [QCLASS(thermalIndex), (call EFUNC(temperature,environment)) select 0];
 player setVariable [QCLASS(breathCondensationEffect), nil];

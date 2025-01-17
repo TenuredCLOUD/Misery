@@ -2,7 +2,7 @@
 /*
  * Author: TenuredCLOUD
  * Beer usage
- * Simple function that changes fear values from alcohol consumption, and increases fatigue (tiredness)
+ * Simple function that changes psychosis values from alcohol consumption, and increases fatigue (tiredness)
  *
  * Arguments:
  * None
@@ -14,25 +14,17 @@
  * [] call misery_alcohol_fnc_beer
 */
 
-private _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
-private _MFear = player getVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR];
-
 if (!hasInterface) exitWith {};
 
-  if (alive player) exitWith {
+private _fatigue = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
 
-  if (EGVAR(fear,enabled)) then {
-    player setVariable [QCLASS(psycosis), (_MFear - 2)];
-    if (_MFear <= 0) then {player setVariable [QCLASS(psycosis), 0]};
-  };
-
-//if ((MiseryNORVG=="ENABLED") && !(EGVAR(common,checkMultiplayer))) then {
-if (!EGVAR(common,checkMultiplayer)) then {
-  player setVariable [QCLASS(energyDeficit), (_MSleepiness + 5)];
+if (EGVAR(psychosis,enabled)) then {
+    [-0.2] call EFUNC(psychosis,addModifier);
 };
+
+if (isMultiplayer) exitWith {};
+
+player setVariable [QCLASS(energyDeficit), _fatigue + 5];
 
 enableCamShake true;
 addCamShake [1, 10, 2];
-
-};
-
