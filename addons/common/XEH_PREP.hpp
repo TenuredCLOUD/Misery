@@ -14,6 +14,7 @@ PREP(lootPos);
 PREP(lowerCaseArray);
 PREP(modLoadedPrep);
 PREP(nearCraftingStation);
+PREP(nearEntities);
 PREP(nearFire);
 PREP(nearRockSource);
 PREP(nearTree);
