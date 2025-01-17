@@ -23,10 +23,7 @@ private _variables = [];
 
 private _playerID = getPlayerUID player;
 
-{
-    private _variable = player getVariable [_x, ""];
-    _variables pushBack _variable;
-} forEach [MISERY_PLAYER_VARIABLES];
+private _playerVariables = call EFUNC(common,getPlayerVariables);
 
 private _loadout = getUnitLoadout player;
 private _position = getPosATL player;
@@ -37,7 +34,7 @@ private _damage = [damage player, [player] call ace_medical_fnc_serializeState] 
 
 _playerData pushBack worldName;
 _playerData pushBack _playerID;
-_playerData pushBack _variables;
+_playerData pushBack _playerVariables;
 _playerData pushBack _loadout;
 _playerData pushBack _position;
 _playerData pushBack _direction;

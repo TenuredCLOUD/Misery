@@ -5,6 +5,27 @@
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
 
+// Do not alter the order of this, will cause variables to be set with the wrong values.
+#define MISERY_PLAYER_VARIABLE_VALUES \
+    QEGVAR(survival,hunger), \
+    QEGVAR(survival,thirst), \
+    QEGVAR(survival,energyDeficit), \
+    QEGVAR(survival,temperature), \
+    QEGVAR(survival,exposure), \
+    QEGVAR(survival,radiation), \
+    QEGVAR(survival,infection), \
+    QEGVAR(survival,parasites), \
+    QEGVAR(survival,toxicity), \
+    QEGVAR(psychosis,state), \
+    QEGVAR(vitals,buffs), \
+    QEGVAR(vitals,debuffs), \
+    QEGVAR(bank,currency), \
+    QEGVAR(bank,bankedCurrency), \
+    QEGVAR(bank,lastBankLoan), \
+    QEGVAR(cooking,knowledge), \
+    QEGVAR(crafting,knowledge), \
+    QEGVAR(hydrology,knowledge)
+
 #ifdef DEBUG_ENABLED_PERSISTENCE
     #define DEBUG_MODE_FULL
 #endif
@@ -14,6 +35,3 @@
 #endif
 
 #include "\z\misery\addons\main\script_macros.hpp"
-
-#define MISERY_PLAYER_VARIABLES QGVAR(cooking_recipes), QGVAR(crafting_recipes), QGVAR(debuffs), QGVAR(exposure), QGVAR(fatigue), QGVAR(fear), QGVAR(hunger), QGVAR(infection), QGVAR(radiation), QGVAR(sea_temperature), QGVAR(temperature), QGVAR(thirst), QGVAR(toxicity), QGVAR(water_collect_recipes), QGVAR(currency), QGVAR(currency_banked)
-#define MISERY_PLAYER_VARIABLE_VALUES GVAR(cooking_recipes), GVAR(crafting_recipes), GVAR(debuffs), GVAR(exposure), GVAR(fatigue), GVAR(fear), GVAR(hunger), GVAR(infection), GVAR(radiation), GVAR(sea_temperature), GVAR(temperature), GVAR(thirst), GVAR(toxicity), GVAR(water_collect_recipes), GVAR(currency), GVAR(currency_banked)
