@@ -25,7 +25,7 @@ _clothesWarmth= (player call FUNC(clothing)) select 0;
 _MPlayertemp = player getVariable QCLASS(thermalIndex);
 player setVariable [QCLASS(thermalIndex), (_MPlayertemp + parseNumber ((_clothesWarmth)toFixed 2))];
 
-_MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];
+_MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW];
 
 _ailments = player getVariable QCLASS(ailments);
 
@@ -37,14 +37,14 @@ if ([player] call EFUNC(common,nearFire)) then {
     if ((_MPlayertemp < 20) && (!(_ailments find "PARASITES" != -1 || _ailments find "INFECTION" != -1))) then {
 
        if (abs(_MExposure) < 0.5) exitWith {
-        player setVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];
+        player setVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW];
         };
 
         _nearfirecalc = MACRO_TEMPERATURE_FIREORVEHICLE(_MPlayertemp);
 
         player setVariable [QCLASS(exposure), (_MExposure + parseNumber ((_nearfirecalc)toFixed 2))];
 
-        if (_MExposure > 0) then {player setVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];};
+        if (_MExposure > 0) then {player setVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW];};
 
     } else {
 
@@ -62,14 +62,14 @@ if (insideBuilding player == 1) then {
     if ((_MPlayertemp < 20) && (!(_ailments find "PARASITES" != -1 || _ailments find "INFECTION" != -1))) then {
 
         if (abs(_MExposure) < 0.5) exitWith {
-        player setVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];
+        player setVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW];
         };
 
         _insidewarmcalc = MACRO_TEMPERATURE_INSIDEBUILDING(_MPlayertemp);
 
         player setVariable [QCLASS(exposure), (_MExposure + parseNumber ((_insidewarmcalc)toFixed 2))];
 
-        if (_MExposure > 0) then {player setVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];}; //If not sick, not hot, then - warm up, but reset at 0
+        if (_MExposure > 0) then {player setVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW];}; //If not sick, not hot, then - warm up, but reset at 0
 
     } else {
 
@@ -87,14 +87,14 @@ if !(isNull objectParent player) then {
     if ((_MPlayertemp < 20) && (!(_ailments find "PARASITES" != -1 || _ailments find "INFECTION" != -1))) then {
 
         if (abs(_MExposure) < 0.5) exitWith {
-        player setVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];
+        player setVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW];
         };
 
         _invehiclecalc = MACRO_TEMPERATURE_FIREORVEHICLE(_MPlayertemp);
 
         player setVariable [QCLASS(exposure), (_MExposure + parseNumber ((_invehiclecalc)toFixed 2))];
 
-        if (_MExposure > 0) then {player setVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];}; //If not sick, not hot, then - warm up, but reset at 0
+        if (_MExposure > 0) then {player setVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW];}; //If not sick, not hot, then - warm up, but reset at 0
 
     } else {
 

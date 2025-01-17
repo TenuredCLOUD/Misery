@@ -14,7 +14,7 @@
  *
 */
 
-private _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
+private _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
 
 
 

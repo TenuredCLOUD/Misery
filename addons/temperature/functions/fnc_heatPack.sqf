@@ -15,7 +15,7 @@
  * Public: No
 */
 
-private _MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];
+private _MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW];
 
 if (!hasInterface) exitWith {};
 
@@ -29,7 +29,7 @@ sleep 60;
 
 if (_MExposure < 0) then {
 
-    player setVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];
+    player setVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW];
 
 }else{
 

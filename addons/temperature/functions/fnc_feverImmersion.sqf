@@ -15,13 +15,13 @@
  * Public: No
 */
 
-[{!(isNil {player getVariable QCLASS(exposure)}) && ((player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE]) > 10)},
+[{!(isNil {player getVariable QCLASS(exposure)}) && ((player getVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW]) > 10)},
 {
 
     [{
         params ["_args", "_handle"];
 
-        if ((player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE]) < 10 || (!alive player)) exitWith {
+        if ((player getVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW]) < 10 || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             if(EGVAR(common,debug))then{systemChat "Misery Fever immersion cycle terminated..."};
             [] call FUNC(feverimmersion);
@@ -32,7 +32,7 @@
 
     _ailments = player getVariable QCLASS(ailments);
 
-    if (((player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE]) > 10) || (_ailments find "PARASITES" != -1 || _ailments find "INFECTION" != -1) && (call EFUNC(protection,totalProtection) select 0) < 1 && (call EFUNC(protection,totalProtection) select 1) < 1) then {
+    if (((player getVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW]) > 10) || (_ailments find "PARASITES" != -1 || _ailments find "INFECTION" != -1) && (call EFUNC(protection,totalProtection) select 0) < 1 && (call EFUNC(protection,totalProtection) select 1) < 1) then {
          player say3D [QEGVAR(audio,sound_coughing),10,1,2,0];
 
 
@@ -40,7 +40,7 @@
 
     _ailments = player getVariable QCLASS(ailments);
 
-        if (((player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE]) > 10) || (_ailments find "PARASITES" != -1 || _ailments find "INFECTION" != -1) && (call EFUNC(protection,totalProtection) select 0) > 0 || (call EFUNC(protection,totalProtection) select 1) > 0) then {
+        if (((player getVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW]) > 10) || (_ailments find "PARASITES" != -1 || _ailments find "INFECTION" != -1) && (call EFUNC(protection,totalProtection) select 0) > 0 || (call EFUNC(protection,totalProtection) select 1) > 0) then {
             player say3D [QEGVAR(audio,sound_coughMask01),10,1,2,0];
         };
     };

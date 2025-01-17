@@ -44,17 +44,17 @@ disableSerialization;
     _CurrMag = _display displayCtrl 1111;
     _CurrMagVal =_display displayCtrl 1112;
 
-    _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER];
-    _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_THIRST];
-    _MInfection = player getVariable [QCLASS(infection), MACRO_PLAYER_INFECTION];
-    _MPoison = player getVariable [QCLASS(toxicity), MACRO_PLAYER_TOXICITY];
-    _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_FATIGUE];
-    _MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_EXPOSURE];
+    _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_DEFAULTS_HIGH];
+    _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_DEFAULTS_HIGH];
+    _MInfection = player getVariable [QCLASS(infection), MACRO_PLAYER_DEFAULTS_LOW];
+    _MPoison = player getVariable [QCLASS(toxicity), MACRO_PLAYER_DEFAULTS_LOW];
+    _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
+    _MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW];
     _MPlayertemp = player getVariable [QCLASS(thermalIndex), 0];
     _ailments = player getVariable QCLASS(ailments);
 
-    _pfatigue = (getFatigue player) * 100; 
-    _convpfatigue = round _pfatigue; 
+    _pfatigue = (getFatigue player) * 100;
+    _convpfatigue = round _pfatigue;
 
     _cartridgecalc = player getVariable [QCLASS(gasmaskCartridgeLevel), 100];
 
@@ -92,7 +92,7 @@ lbClear _ailmentsList;
     _GasText ctrlShow false;
     _GasVal ctrlShow false;
     };
-   
+
     if (EGVAR(gasmask,enhanced)) then {
     private _GasmaskBuff = _buffs findIf {(_x select 0) isEqualTo "Gas Mask"} > -1;
     private _SCBABuff = _buffs findIf {(_x select 0) isEqualTo "Supplied Air"} > -1;
@@ -111,7 +111,7 @@ switch (_gearCase) do {
         private _GascartridgeVal = format["%1%2", round(_cartridgecalc * 1), "%"];
         _GasVal ctrlSetText _GascartridgeVal;
         }else{
-        _GasVal ctrlSetText "No Cartridge";    
+        _GasVal ctrlSetText "No Cartridge";
         };
         ["buff", "Gas Mask", QPATHTOEF(icons,data\gasmask_ca.paa), "You are wearing a gasmask, it can protect your lungs from harmful contaminants like radioactive particles, as well as toxic gases. You should be mindful of your cartridges..."] call FUNC(addBuffOrAilment);
         if (_SCBABuff) then {
@@ -175,7 +175,7 @@ switch (_gearCase) do {
 
     _GetFunds = player getVariable [QCLASS(currency), 0];
 
-    _FundsDisplay = format ["%1 %2",EGVAR(money,symbol),[_GetFunds, 1, 2, true] call CBA_fnc_formatNumber]; 
+    _FundsDisplay = format ["%1 %2",EGVAR(money,symbol),[_GetFunds, 1, 2, true] call CBA_fnc_formatNumber];
 
     _FundsVal ctrlSetText _FundsDisplay;
 

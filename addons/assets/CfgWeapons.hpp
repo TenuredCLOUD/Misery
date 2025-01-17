@@ -1398,7 +1398,7 @@ class CfgWeapons {
         displayName = "$STR_MISERY_RFHIGHNOBATTERY_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_RFHIGHNOBATTERY_DESCRIPTION";
         picture = QPATHTOF(data\icons\EMFdetectorhighrangenobattery.paa);
-        model = "\A3\Weapons_F\Items\MineDetector";
+        model = "\A3\Weapons_F\Items\minedetector.p3d";
         scope = 2;
         scopeCurator = 2;
 

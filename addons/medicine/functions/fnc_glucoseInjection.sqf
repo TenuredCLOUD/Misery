@@ -28,7 +28,7 @@ _c = _c - 1;
 
 if (!hasInterface || {!alive player}) exitWith {};
 
-private _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER];
+private _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_DEFAULTS_HIGH];
 
 titleText ["You inject the Glucose solution...", "PLAIN DOWN"];
 

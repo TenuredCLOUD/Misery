@@ -211,7 +211,7 @@ class CfgMagazines {
         descriptionShort = "$STR_MISERY_PERSONALGEIGER_DESCRIPTION";
         displayName = "$STR_MISERY_PERSONALGEIGER_DISPLAYNAME";
         mass = 10;
-        model = "\A3\Weapons_F\Items\MineDetector";
+        model = "\A3\Weapons_F\Items\minedetector.p3d";
         picture = QPATHTOF(data\icons\personalgeiger.paa);
         scope = 2;
     };
@@ -222,7 +222,7 @@ class CfgMagazines {
         displayName = "$STR_MISERY_PERSONALGEIGEROFF_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_PERSONALGEIGEROFF_DESCRIPTION";
         picture = QPATHTOF(data\icons\personalgeigernobattery.paa);
-        model = "\A3\Weapons_F\Items\MineDetector";
+        model = "\A3\Weapons_F\Items\minedetector.p3d";
         count = 100;
         mass = 10;
     };
@@ -233,7 +233,7 @@ class CfgMagazines {
         descriptionShort = "$STR_MISERY_RFHIGHRANGE_DESCRIPTION";
         displayName = "$STR_MISERY_RFHIGHRANGEON_DISPLAYNAME";
         mass = 5;
-        model = "\A3\Weapons_F\Items\MineDetector";
+        model = "\A3\Weapons_F\Items\minedetector.p3d";
         picture = QPATHTOF(data\icons\emfdetectorhighrange.paa);
         scope = 2;
     };
@@ -244,7 +244,7 @@ class CfgMagazines {
         descriptionShort = "$STR_MISERY_RFHIGHRANGE_DESCRIPTION";
         displayName = "$STR_MISERY_RFHIGHRANGEOFF_DISPLAYNAME";
         mass = 5;
-        model = "\A3\Weapons_F\Items\MineDetector";
+        model = "\A3\Weapons_F\Items\minedetector.p3d";
         picture = QPATHTOF(data\icons\emfdetectorhighrangenobattery.paa);
         scope = 2;
     };

@@ -28,8 +28,8 @@
 
         private ["_MHunger","_MThirst","_Rthirst","_radlvl","_scalednutrientloss","_scaledstaminaloss","_damage"];
 
-        _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER];
-        _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_THIRST];
+        _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_DEFAULTS_HIGH];
+        _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_DEFAULTS_HIGH];
         _radlvl = player getVariable [QCLASS(radiation), 0];
 
         //calculation for hunger / thirst removal: (scales with radiation exposure)
@@ -40,8 +40,8 @@
 
         if (_radlvl >= 500) then {
 
-                        _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_HUNGER];
-                        _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_THIRST];
+                        _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_DEFAULTS_HIGH];
+                        _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_DEFAULTS_HIGH];
 
                         player setStamina ((getStamina player) - _scaledstaminaloss);
 
