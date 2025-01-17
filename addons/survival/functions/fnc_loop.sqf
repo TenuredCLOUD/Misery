@@ -44,41 +44,55 @@
 
     private _randomNutrientSelection = [1, 2] call BIS_fnc_randomInt;
 
-    if (_randomNutrientSelection isEqualTo 1) then {
-    player setVariable [QGVAR(thirst), (_thirst - ((QGVAR(thirstIncrement))))];
-    }else{
-    player setVariable [QGVAR(hunger), (_hunger - ((QGVAR(hungerIncrement))))];
+    private _weightDeficiency = 1;
+
+    if (GVAR(weightDeficiency)) then {
+    _weightDeficiency = call FUNC(weightCalculation);
     };
 
-    if (QGVAR(weightDeficiency)) then {
+    // Define hunger, thirst, and sleep decrement values
+    private _hungerDecrement = 0;
+    private _thirstDecrement = 0;
+    private _sleepDecrement = 0;
 
-    private _randomWeightDeficiency = [1, 2] call BIS_fnc_randomInt;
-
-    private _bagWeightLoad = loadAbs player / getNumber (configFile >> "CfgInventoryGlobalVariable" >> "maxSoldierLoad");
-    private _playerWeight = round(_bagWeightLoad * 100);
-    private _weightCalculated = MACRO_WEIGHTCALC(_playerWeight);
-
-    if (_randomWeightDeficiency isEqualTo 1) then {
-    player setVariable [QGVAR(thirst), (_thirst - (_weightCalculated))];
-    }else{
-    player setVariable [QGVAR(hunger), (_hunger - (_weightCalculated))];
-    };
-
-    if !(EGVAR(common,checkMultiplayer)) then {
-    _randomEnergyDeficiency = [1, 2] call BIS_fnc_randomInt;
-    if (_randomEnergyDeficiency isEqualTo 1) then {
-    player setVariable [QGVAR(energyDeficit), (_sleepiness + (_weightCalculated))];
+    // If player is not on foot, make reduction the lowest value
+    if !(isNull objectParent player) then {
+        _hungerDecrement = 0.001;
+        _thirstDecrement = 0.001;
+        _sleepDecrement = 0.001;
+    } else {
+        switch (true) do {
+            case (speed player < 5): {
+                _hungerDecrement = 0.001 * _weightDeficiency;
+                _thirstDecrement = 0.0015 * _weightDeficiency;
+                _sleepDecrement = 0.001 * _weightDeficiency;
+            };
+            case (speed player < 10): {
+                _hungerDecrement = 0.002 * _weightDeficiency;
+                _thirstDecrement = 0.003 * _weightDeficiency;
+                _sleepDecrement = 0.002 * _weightDeficiency;
+            };
+            case (speed player >= 10): {
+                _hungerDecrement = 0.003 * _weightDeficiency;
+                _thirstDecrement = 0.0045 * _weightDeficiency;
+                _sleepDecrement = 0.003 * _weightDeficiency;
             };
         };
     };
 
-    if (EGVAR(common,checkMultiplayer)) then {
-    player setVariable [QGVAR(energyDeficit), MACRO_PLAYER_FATIGUE];
-    }else{
-        player setVariable [QGVAR(energyDeficit), (_sleepiness + (QGVAR(energyDeficitIncrement)))];
+    if (_randomNutrientSelection isEqualTo 1) then {
+        player setVariable [QGVAR(thirst), (_thirst - _thirstDecrement)];
+    } else {
+        player setVariable [QGVAR(hunger), (_hunger - _hungerDecrement)];
+    };
 
-        if ((_sleepiness) >= 1) then {player setVariable [QGVAR(energyDeficit), 1]};
-        if ((_sleepiness) <= 0) then {player setVariable [QGVAR(energyDeficit), 0]};
+    if (EGVAR(common, checkMultiplayer)) then {
+        player setVariable [QGVAR(energyDeficit), MACRO_PLAYER_FATIGUE];
+    } else {
+    player setVariable [QGVAR(energyDeficit), (_sleepiness + _sleepDecrement)];
+
+    if (_sleepiness >= 1) then {player setVariable [QGVAR(energyDeficit), 1]};
+    if (_sleepiness <= 0) then {player setVariable [QGVAR(energyDeficit), 0]};
     };
 
     private _blackout = true;
@@ -94,7 +108,7 @@
 
     if (GVAR(ailments)) then {
     if ((_ailments findIf {(_x select 0) isEqualTo "Parasite Infection"})) then {
-        player setVariable [QGVAR(hunger), (_hunger - ((QGVAR(hungerIncrement))))]};
+        player setVariable [QGVAR(hunger), (_hunger - _hungerDecrement)]};
     };
 
         if (_radiation > 0) then {
@@ -104,7 +118,7 @@
 
             if (_random isEqualTo 5 && _radiation > 1000 && GVAR(ailments)) then {
 
-            if (_ailments find "PARASITES" != -1) then {_ailments deleteAt (_ailments find "PARASITES"); player setVariable [QCLASS(ailments), _ailments];};
+            if (_ailments findIf {(_x select 0) isEqualTo "Parasite Infection"}) then {_ailments deleteAt (_ailments find "PARASITES"); player setVariable [QCLASS(ailments), _ailments];};
         };
 
     if (_poison > 0 && GVAR(ailments)) then {
@@ -167,5 +181,5 @@
 
     if (EGVAR(common,debug)) then {systemChat "[Misery survival] loop cycle..."};
 
-}, QGVAR(cycle), []] call CBA_fnc_addPerFrameHandler;
+}, 30, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;
