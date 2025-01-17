@@ -14,29 +14,18 @@
  *
 */
 
-private _MFear = player getVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR];
-
-
-
 if (!hasInterface) exitWith {};
-
-if (alive player) exitWith {
 
 titleText ["You inject the Clozapine...", "PLAIN DOWN"];
 
 player removeItem QCLASS(clozapineBox);
 
- if (EGVAR(common,ace)) then {
-[player, QCLASS(clozapineBox), 120, 300, 5, 0, 5] call ace_medical_status_fnc_addMedicationAdjustment;
+if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
+    [player, QCLASS(clozapineBox), 120, 300, 5, 0, 5] call ace_medical_status_fnc_addMedicationAdjustment;
 };
 
-sleep 60;
+if (!EGVAR(psychosis,enabled)) exitWith {};
 
-if (EGVAR(fear,enabled)) then {
-  player setVariable [QCLASS(psycosis), (_MFear - 25)];
-    if (_MFear <= 0) then {player setVariable [QCLASS(psycosis), MACRO_PLAYER_FEAR]};
-};
-
- };
-
-
+[{
+    [-0.25] call EFUNC(psychosis,addModifier);
+}, [], 60] call CBA_fnc_waitAndExecute;

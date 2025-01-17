@@ -34,15 +34,7 @@
 #define MACRO_PLAYER_PARASITES 0
 #define MACRO_PLAYER_INFECTION 0
 #define MACRO_PLAYER_EXPOSURE 0
-#define MACRO_PLAYER_FEAR 0
-
-// Calculations - Fear
-#define MACRO_FEAR_CALC_RAVAGE(arg) ((arg) / 10) / 10
-#define MACRO_FEAR_CALC_PHANTOM(arg) ((arg) / 10) / 10
-#define MACRO_FEAR_CALC_DSASPOOK(arg) ((arg) / 10) / 10
-#define MACRO_FEAR_CALC_NIGHT(arg) ((arg) / 10) / 10
-#define MACRO_FEAR_CALC_PSYFIELD(arg) ((arg) / 10) / 10
-#define MACRO_FEAR_CALC_PSYFIELD_NOPROTECTION ((1000) / 10) / 10
+#define MACRO_PLAYER_PSYCHOSIS 0
 
 // Calculations - Radiation
 #define MACRO_RADIATION_NUTRITIONLOSS(arg) ((arg) / 100) / 10
