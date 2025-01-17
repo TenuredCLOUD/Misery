@@ -14,6 +14,7 @@
 */
 
 if (isMultiplayer) exitWith {
+    [QUOTE(COMPONENT_BEAUTIFIED), "Refreshing Multiplayer Data Map"] call EFUNC(common,debugMessage);
     GVAR(multiplayerSaveData) = profileNamespace getVariable [GVAR(saveName), []];
 
     if (GVAR(multiplayerSaveData) isEqualTo []) then {
@@ -21,4 +22,5 @@ if (isMultiplayer) exitWith {
     };
 };
 
-GVAR(singlePlayerSaveData) = profileNamespace getVariable [GVAR(saveName), []];
+[QUOTE(COMPONENT_BEAUTIFIED), "Refreshing Singleplayer Data Map"] call EFUNC(common,debugMessage);
+GVAR(singlePlayerSaveData) = profileNamespace getVariable [QGVAR(saveName), []];

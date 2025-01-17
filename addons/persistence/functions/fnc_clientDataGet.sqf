@@ -17,6 +17,8 @@ params [["_playerData", []]];
 
 _playerData params ["_worldName", "_playerID", "_variables", "_loadout", "_position", "_direction", "_stance", "_damage"];
 
+[QUOTE(COMPONENT_BEAUTIFIED), "Loading Client Data"] call EFUNC(common,debugMessage);
+
 // Create new player if world doesn't match.
 if (worldName isNotEqualTo _worldName) exitWith {
     [QUOTE(COMPONENT_BEAUTIFIED), format ["Current World (%1) does not match the current save world (%2), Loading Aborted.", worldName, _worldName]] call EFUNC(common,debugMessage);
@@ -47,4 +49,4 @@ switch (_stance) do {
     default {};
 };
 
-[player setDamage _damage, [player, _damage] call ace_medical_fnc_deserializeState] select ["ace_medical"] call EFUNC(common,isModLoaded);
+[player setDamage _damage, [player, _damage] call ace_medical_fnc_deserializeState] select (["ace_medical"] call EFUNC(common,isModLoaded));

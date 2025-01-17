@@ -22,14 +22,32 @@ if (isServer) then {
     }, [], GVAR(autosaveTimer)] call CBA_fnc_waitAndExecute;
 };
 
+// New player or Respawned player
+player addEventHandler ["Respawn", {
+    [false] call FUNC(newPlayer);
+}];
+
 // Callback for multiplayer
 if (isMultiplayer) exitWith {
+    [QUOTE(COMPONENT_BEAUTIFIED), "Loading multiplayer data from server."] call EFUNC(common,debugMessage);
     [QGVAR(loadDataFromServer), player] call CBA_fnc_serverEvent;
 };
 
 if (GVAR(singlePlayerSaveData isEqualTo [])) exitWith {
+    [QUOTE(COMPONENT_BEAUTIFIED), "No singleplayer data found, new player."] call EFUNC(common,debugMessage);
     call FUNC(newPlayer);
 };
 
 // Use direct save data for singleplayer
-GVAR(singlePlayerSaveData) call FUNC(clientDataGet);
+[QUOTE(COMPONENT_BEAUTIFIED), "Loading singleplayer data"] call EFUNC(common,debugMessage);
+[GVAR(singlePlayerSaveData)] call FUNC(clientDataGet);
+
+// Force SP save on Escape menu
+[{!isNull findDisplay 46}, {
+    (findDisplay 46) displayAddEventHandler ["KeyDown", {
+        params ["", "_key"];
+        if (_key isEqualTo 1) then {
+            call FUNC(saveGame);
+        };
+    }];
+}] call CBA_fnc_waitUntilAndExecute;

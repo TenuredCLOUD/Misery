@@ -8,3 +8,4 @@ PREP(multiplayerDataLoad);
 PREP(multiplayerDataSave);
 PREP(newPlayer);
 PREP(saveGame);
+PREP(wipeSaveSingleplayer);

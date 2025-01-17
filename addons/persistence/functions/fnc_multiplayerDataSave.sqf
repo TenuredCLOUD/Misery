@@ -21,4 +21,4 @@ _playerData params ["_worldName", "_playerID"];
 // Save ID as key with all data.
 GVAR(multiplayerSaveData) set [_playerID, _playerData];
 
-profileNamespace setVariable [GVAR(saveName), GVAR(multiplayerSaveData)];
+profileNamespace setVariable [QGVAR(saveName), GVAR(multiplayerSaveData)];

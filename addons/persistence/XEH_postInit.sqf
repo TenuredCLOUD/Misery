@@ -21,20 +21,8 @@ if (isServer) then {
 
 if (!hasInterface) exitWith {};
 
-call FUNC(init);
+GVAR(blockSave) = false;
 
-// New player or Respawned player
-player addEventHandler ["Respawn", {
-    [false] call FUNC(newPlayer);
-}];
-
-// Force SP save on Escape menu
-if (!isMultiplayer) then {
-    (findDisplay 46) displayAddEventHandler ["KeyDown", {
-        [{
-            if (!isNull findDisplay 49) then {
-                call FUNC(saveGame);
-            };
-        }, [], 0.5] call CBA_fnc_waitAndExecute;
-    }];
-};
+["CBA_settingsInitialized", {
+    [] call FUNC(init);
+}] call CBA_fnc_addEventHandler;
