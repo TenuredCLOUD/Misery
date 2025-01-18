@@ -36,7 +36,7 @@ if (EGVAR(actions,guiActionsMode) isEqualTo "") then{
 };
 
 //Foraging:
-if(EGVAR(actions,guiActionsMode)isEqualTolocalize "STR_MISERY_FORAGE")then{
+if(EGVAR(actions,guiActionsMode) isEqualTo localize "STR_MISERY_FORAGE")then{
     _allActions=[
         [localize "STR_MISERY_FORAGE_DIGFORWORMS",localize "STR_MISERY_FORAGE_DIGFORWORMS"],
         [localize "STR_MISERY_FORAGE_SEARCHFORTINDER",localize "STR_MISERY_FORAGE_SEARCHFORTINDER"],
@@ -45,7 +45,7 @@ if(EGVAR(actions,guiActionsMode)isEqualTolocalize "STR_MISERY_FORAGE")then{
 };
 
 //Fishing:
-if(EGVAR(actions,guiActionsMode)isEqualTolocalize "STR_MISERY_STARTFISHING")then{
+if(EGVAR(actions,guiActionsMode) isEqualTo localize "STR_MISERY_STARTFISHING")then{
     _allActions=[
         [localize "STR_MISERY_STARTFISHINGACT", localize "STR_MISERY_STARTFISHINGACT"],
         [localize "STR_MISERY_STARTFISHINGREQUIRMENTS", localize "STR_MISERY_STARTFISHINGREQUIRMENTS"],
@@ -54,13 +54,13 @@ if(EGVAR(actions,guiActionsMode)isEqualTolocalize "STR_MISERY_STARTFISHING")then
 };
 
 //Cooking / Fire usage:
-if (EGVAR(actions,guiActionsMode)isEqualTolocalize "STR_MISERY_USEFIRE" && !(EGVAR(common,ace))) then {
+if (EGVAR(actions,guiActionsMode) isEqualTo localize "STR_MISERY_USEFIRE" && !(EGVAR(common,ace))) then {
     _allActions=[
         [localize "STR_MISERY_USEFIRE_COOK",localize "STR_MISERY_USEFIRE_COOK"],
         [localize "STR_MISERY_CANCEL",localize "STR_MISERY_CANCEL"]
     ];
 };
-if (EGVAR(actions,guiActionsMode)isEqualTolocalize "STR_MISERY_USEFIRE" && (EGVAR(common,ace))) then {
+if (EGVAR(actions,guiActionsMode) isEqualTo localize "STR_MISERY_USEFIRE" && (EGVAR(common,ace))) then {
     _allActions=[
         [localize "STR_MISERY_USEFIRE_COOK",localize "STR_MISERY_USEFIRE_COOK"],
         ["Cauterize wounds","Cauterize wounds"],
@@ -69,7 +69,7 @@ if (EGVAR(actions,guiActionsMode)isEqualTolocalize "STR_MISERY_USEFIRE" && (EGVA
 };
 
 //Anvil usage:
-if(EGVAR(actions,guiActionsMode)isEqualTo localize "STR_MISERY_USEANVIL")then{
+if(EGVAR(actions,guiActionsMode) isEqualTo localize "STR_MISERY_USEANVIL")then{
     if (EGVAR(common,iBuild)) then {
     _allActions=[
         ["Craft pickaxe","Craft pickaxe"],
@@ -94,7 +94,7 @@ if(EGVAR(actions,guiActionsMode)isEqualTo localize "STR_MISERY_USEANVIL")then{
 };
 
 //Forge usage:
-if(EGVAR(actions,guiActionsMode)isEqualTo localize "STR_MISERY_USEFORGE")then{
+if(EGVAR(actions,guiActionsMode) isEqualTo localize "STR_MISERY_USEFORGE")then{
     _allActions=[
         ["Smelt iron","Smelt iron"],
         ["Smelt iron pieces","Smelt iron pieces"],
@@ -106,7 +106,7 @@ if(EGVAR(actions,guiActionsMode)isEqualTo localize "STR_MISERY_USEFORGE")then{
 };
 
 //Manual player data:
-if(EGVAR(actions,guiActionsMode)isEqualTolocalize "STR_MISERY_PLAYERDATA")then{
+if(EGVAR(actions,guiActionsMode) isEqualTo localize "STR_MISERY_PLAYERDATA")then{
     _allActions=[
         [localize "STR_MISERY_SAVECHARACTER",localize "STR_MISERY_SAVECHARACTER"],
         [localize "STR_MISERY_DELETECHARACTER",localize "STR_MISERY_DELETECHARACTER"],
@@ -115,7 +115,7 @@ if(EGVAR(actions,guiActionsMode)isEqualTolocalize "STR_MISERY_PLAYERDATA")then{
 };
 
 //Jerrycans:
-if(EGVAR(actions,guiActionsMode)isEqualTolocalize "STR_MISERY_USEJERRYCANCLEAN") then {
+if(EGVAR(actions,guiActionsMode) isEqualTo localize "STR_MISERY_USEJERRYCANCLEAN") then {
     _allActions=[
         ["Drink from Jerrycan (clean)","Drink from Jerrycan (clean)"],
         ["Pour into canteen","Pour into canteen"],
@@ -124,7 +124,7 @@ if(EGVAR(actions,guiActionsMode)isEqualTolocalize "STR_MISERY_USEJERRYCANCLEAN")
         [localize "STR_MISERY_CANCEL",localize "STR_MISERY_CANCEL"]
     ];
 };
-if(EGVAR(actions,guiActionsMode)isEqualTolocalize "STR_MISERY_USEJERRYCANDIRTY") then {
+if(EGVAR(actions,guiActionsMode) isEqualTo localize "STR_MISERY_USEJERRYCANDIRTY") then {
     _allActions=[
         ["Drink from Jerrycan (dirty)","Drink from Jerrycan (dirty)"],
         ["Pour into canteen","Pour into canteen"],
@@ -136,7 +136,7 @@ if(EGVAR(actions,guiActionsMode)isEqualTolocalize "STR_MISERY_USEJERRYCANDIRTY")
 };
 
 //Fuel collection
-if(EGVAR(actions,guiActionsMode)isEqualTolocalize "STR_MISERY_USEFUELPUMP") then {
+if(EGVAR(actions,guiActionsMode) isEqualTo localize "STR_MISERY_USEFUELPUMP") then {
     _allActions=[
         ["Refill Fuel Jerrycan","Refill Fuel Jerrycan"],
         ["Refill vehicle","Refill vehicle"],
@@ -145,7 +145,7 @@ if(EGVAR(actions,guiActionsMode)isEqualTolocalize "STR_MISERY_USEFUELPUMP") then
 };
 
 //Fuel collection
-if(EGVAR(actions,guiActionsMode)isEqualTolocalize "STR_MISERY_USEJETFUELPUMP") then {
+if(EGVAR(actions,guiActionsMode) isEqualTo localize "STR_MISERY_USEJETFUELPUMP") then {
     _allActions=[
         ["Refill JetFuel Jerrycan","Refill JetFuel Jerrycan"],
         ["Refill aircraft","Refill aircraft"],
@@ -154,21 +154,21 @@ if(EGVAR(actions,guiActionsMode)isEqualTolocalize "STR_MISERY_USEJETFUELPUMP") t
 };
 
 //Jerrycans Fuel
-if(EGVAR(actions,guiActionsMode)isEqualTolocalize "STR_MISERY_SWAPFUELTYPEJET") then {
+if(EGVAR(actions,guiActionsMode) isEqualTo localize "STR_MISERY_SWAPFUELTYPEJET") then {
     _allActions=[
         ["Swap to Petrol","Swap to Petrol"],
         ["Swap to Diesel","Swap to Diesel"],
         [localize "STR_MISERY_CANCEL",localize "STR_MISERY_CANCEL"]
     ];
 };
-if(EGVAR(actions,guiActionsMode)isEqualTolocalize "STR_MISERY_SWAPFUELTYPEDIESEL") then {
+if(EGVAR(actions,guiActionsMode) isEqualTo localize "STR_MISERY_SWAPFUELTYPEDIESEL") then {
     _allActions=[
         ["Swap to Petrol","Swap to Petrol"],
         ["Swap to Jetfuel","Swap to Jetfuel"],
         [localize "STR_MISERY_CANCEL",localize "STR_MISERY_CANCEL"]
     ];
 };
-if(EGVAR(actions,guiActionsMode)isEqualTolocalize "STR_MISERY_SWAPFUELTYPEPETROL") then {
+if(EGVAR(actions,guiActionsMode) isEqualTo localize "STR_MISERY_SWAPFUELTYPEPETROL") then {
     _allActions=[
         ["Swap to Diesel","Swap to Diesel"],
         ["Swap to Jetfuel","Swap to Jetfuel"],

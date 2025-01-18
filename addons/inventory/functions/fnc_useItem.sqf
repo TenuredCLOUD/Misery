@@ -21,7 +21,7 @@ _debuffs = [] + GVAR(itemEffects);
 _entry = [];
 
 {
-if (_selectedItemisEqualTo(toUpper(_x select 0))) exitWith {_entry=_x};
+if (_selectedItem isEqualTo (toUpper(_x select 0))) exitWith {_entry=_x};
 }forEach _debuffs;
 
 if ((count _entry)<1) exitWith {};
@@ -75,7 +75,7 @@ if (_playaudio isNotEqualTo "") then {player say3D [_playaudio,10,1,2,0];}; //[s
 if (_waittill isNotEqualTo 0) then {sleep _waittill}; //delayed effect (good for medication simulation)
 
 //Radiation
-if (_radval isNotEqualTo0) then {player setVariable ["radiation", (_rads + _radval)]};
+if (_radval isNotEqualTo 0) then {player setVariable ["radiation", (_rads + _radval)]};
 
 //Exposure
 if (_exposureval isNotEqualTo 0) then {player setVariable [QCLASS(exposure), (_MExposure + _exposureval)];};
@@ -109,6 +109,6 @@ if ((count _debuffRemove) > 0) then {
 };
 
 //Custom script execution
-if (_script isNotEqualTo"") then {
+if (_script isNotEqualTo "") then {
     selectedItem call _script
 };

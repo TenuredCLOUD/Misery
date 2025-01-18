@@ -25,11 +25,11 @@ private _selectedItem = "";
 _item=_x;
     {
     _displayName=getText(configFile>>_x>>_item>>"displayName");
-    if(_displayNameisEqualTo_itemText)exitWith{_selectedItem=_item};
+    if(_displayName isEqualTo _itemText)exitWith{_selectedItem=_item};
     }forEach["cfgWeapons","cfgMagazines"]; //["cfgWeapons","cfgMagazines","cfgGlasses","cfgVehicles"];
     if (_selectedItem isNotEqualTo "") exitWith {};
 }forEach((items player)+(magazines player)); //((items player)+(assignedItems player)+(magazines player)+(weapons player))
-if(_selectedItemisEqualTo"")exitWith{};
+if(_selectedItem isEqualTo "")exitWith{};
 if(((toUpper _selectedItem)in GVAR(items)))exitWith{
     _selectedItem call FUNC(useItem);
 };
