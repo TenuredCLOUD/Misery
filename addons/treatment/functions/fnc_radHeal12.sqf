@@ -26,16 +26,16 @@ _pricerads = parseNumber (((((player getVariable [QCLASS(radiation),0]) * 0.5) /
 
 if (MiseryinMedzonearea) exitWith {
 
-if (Mis_Medcurrencytype == "DIGITALTYPE") then {
+if (Mis_Medcurrencytype isEqualTo "DIGITALTYPE") then {
 _playercash = player getVariable [Mis_Medfundstype, 0];
 };
 
-if (Mis_Medcurrencytype == "ITEMTYPE") then {
-_playercash = {_x == Mis_Medfundstype} count items player;
+if (Mis_Medcurrencytype isEqualTo "ITEMTYPE") then {
+_playercash = {_x isEqualTo Mis_Medfundstype} count items player;
 };
 
-if (Mis_Medcurrencytype == "MAGAZINETYPE") then {
-_playercash = {_x == Mis_Medfundstype} count magazines player;
+if (Mis_Medcurrencytype isEqualTo "MAGAZINETYPE") then {
+_playercash = {_x isEqualTo Mis_Medfundstype} count magazines player;
 };
 
 if (player getVariable [QCLASS(radiation), 0] <= 50) exitWith {
@@ -67,7 +67,7 @@ private _progressIndicator = "";
 
 for "_i" from 0 to 99 do {
     if ((player getVariable QCLASS(processTreatment)) isEqualTo false) exitWith {};
-    if (_i % 5 == 0) then {_progressIndicator = _progressIndicator + "-"};
+    if (_i % 5 isEqualTo 0) then {_progressIndicator = _progressIndicator + "-"};
     _displayedText = format ["%1%2%3%5%2[%4]", _text, endl, _i, _progressIndicator, "%"];
     ctrlSetText [1001, _displayedText];
     sleep _delay;
@@ -77,16 +77,16 @@ if ((player getVariable QCLASS(processTreatment)) isEqualTo true) then {
 
 _pricerads = parseNumber (((((player getVariable [QCLASS(radiation),0]) * 0.5) / 50) * Mis_Medpriceradheal) toFixed 1);
 
-if (Mis_Medcurrencytype == "DIGITALTYPE") then {
+if (Mis_Medcurrencytype isEqualTo "DIGITALTYPE") then {
 _playercash = player getVariable [Mis_Medfundstype, 0];
 player setVariable [Mis_Medfundstype, (_playercash - _pricerads), true];
 };
-if (Mis_Medcurrencytype == "ITEMTYPE") then {
-_playercash = {_x == Mis_Medfundstype} count items player;
+if (Mis_Medcurrencytype isEqualTo "ITEMTYPE") then {
+_playercash = {_x isEqualTo Mis_Medfundstype} count items player;
 for "_i" from 1 to _pricerads do {player removeItem Mis_Medfundstype;};
 };
-if (Mis_Medcurrencytype == "MAGAZINETYPE") then {
-_playercash = {_x == Mis_Medfundstype} count magazines player;
+if (Mis_Medcurrencytype isEqualTo "MAGAZINETYPE") then {
+_playercash = {_x isEqualTo Mis_Medfundstype} count magazines player;
 for "_i" from 1 to _pricerads do {player removeMagazine Mis_Medfundstype;};
 };
 

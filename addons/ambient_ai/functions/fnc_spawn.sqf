@@ -94,54 +94,54 @@ for "_i" from 1 to _numEntities do {
     removeHeadgear _unit;
     removeGoggles _unit;
 
-    if (_randomweaploadout == 0) then {
+    if (_randomweaploadout isEqualTo 0) then {
         if (count GVAR(primaryWeapons) > 0) then {[_unit, selectRandom GVAR(primaryWeapons), 0] call BIS_fnc_addWeapon};
         if (count GVAR(secondaryWeapons) > 0) then {[_unit, selectRandom GVAR(secondaryWeapons), 0] call BIS_fnc_addWeapon};
         if (count GVAR(launcherWeapons) > 0) then {[_unit, selectRandom GVAR(launcherWeapons), 0] call BIS_fnc_addWeapon};
     };
 
-    if (_randomweaploadout == 1) then {
+    if (_randomweaploadout isEqualTo 1) then {
         if (count GVAR(primaryWeapons) > 0) then {[_unit, selectRandom GVAR(primaryWeapons), 0] call BIS_fnc_addWeapon};
     };
 
-    if (_randomweaploadout == 2) then {
+    if (_randomweaploadout isEqualTo 2) then {
         if (count GVAR(secondaryWeapons) > 0) then {[_unit, selectRandom GVAR(secondaryWeapons), 0] call BIS_fnc_addWeapon};
     };
 
-    if (_randomweaploadout == 3) then {
+    if (_randomweaploadout isEqualTo 3) then {
         if (count GVAR(primaryWeapons) > 0) then {[_unit, selectRandom GVAR(primaryWeapons), 0] call BIS_fnc_addWeapon};
         if (count GVAR(secondaryWeapons) > 0) then {[_unit, selectRandom GVAR(secondaryWeapons), 0] call BIS_fnc_addWeapon};
     };
 
-    if (_randomweaploadout == 4) then {
+    if (_randomweaploadout isEqualTo 4) then {
         if (count GVAR(primaryWeapons) > 0) then {[_unit, selectRandom GVAR(primaryWeapons), 0] call BIS_fnc_addWeapon};
         if (count GVAR(launcherWeapons) > 0) then {[_unit, selectRandom GVAR(launcherWeapons), 0] call BIS_fnc_addWeapon};
     };
 
-    if (_randomweaploadout == 5) then {
+    if (_randomweaploadout isEqualTo 5) then {
         if (count GVAR(secondaryWeapons) > 0) then {[_unit, selectRandom GVAR(secondaryWeapons), 0] call BIS_fnc_addWeapon};
         if (count GVAR(launcherWeapons) > 0) then {[_unit, selectRandom GVAR(launcherWeapons), 0] call BIS_fnc_addWeapon};
     };
 
     if (count GVAR(uniform) > 0) then {_unit forceAddUniform selectRandom GVAR(uniform)};
 
-    if (_randomvestloadout == 1) then {
+    if (_randomvestloadout isEqualTo 1) then {
         if (count GVAR(vest) > 0) then {_unit addVest selectRandom GVAR(vest)};
     };
 
-    if (_randombackpackloadout == 1) then {
+    if (_randombackpackloadout isEqualTo 1) then {
         if (count GVAR(backpack) > 0) then {_unit addBackpack selectRandom GVAR(backpack)};
     };
 
-    if (_randomNVGloadout == 1) then {
+    if (_randomNVGloadout isEqualTo 1) then {
         if (count GVAR(nvgs) > 0) then {_unit linkItem selectRandom GVAR(nvgs)};
     };
 
-    if (_randomFacewearloadout == 1) then {
+    if (_randomFacewearloadout isEqualTo 1) then {
         if (count GVAR(facewear) > 0) then {_unit addGoggles selectRandom GVAR(facewear)};
     };
 
-    if (_randomHeadgearloadout == 1) then {
+    if (_randomHeadgearloadout isEqualTo 1) then {
         if (count GVAR(headgear) > 0) then {_unit addHeadgear selectRandom GVAR(headgear)};
     };
 

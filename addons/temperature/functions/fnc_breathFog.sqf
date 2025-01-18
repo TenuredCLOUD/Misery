@@ -21,7 +21,7 @@ while {true} do {
 
     player setVariable [QCLASS(breathCondensationEffect), true];
 
-    if ((((call FUNC(environment)) select 2) == 0) || (!MiseryBreathFogAllowed) || (!alive player)) exitWith {
+    if ((((call FUNC(environment)) select 2) isEqualTo 0) || (!MiseryBreathFogAllowed) || (!alive player)) exitWith {
         if(EGVAR(common,debug))then{systemChat "Misery Breathfog cycle terminated..."};
         player setVariable [QCLASS(breathCondensationEffect), nil];
     };
@@ -35,7 +35,7 @@ while {true} do {
         if (_pfatigue >= 25 && _pfatigue < 50) then {_delay=(3 + random 3);};
         if (_pfatigue < 25) then {_delay=(4 + random 4);};
         sleep _delay;
-            if (((call FUNC(environment)) select 2) == 1) then {
+            if (((call FUNC(environment)) select 2) isEqualTo 1) then {
                 player setVariable [QCLASS(breathCondensation), true];
                 _MisFogObject = "logic" createVehicleLocal (getPos player);
                 _FogEffect = "#particlesource" createVehicleLocal getPos _MisFogObject;

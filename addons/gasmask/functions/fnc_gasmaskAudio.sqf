@@ -27,14 +27,14 @@
             if(EGVAR(common,debug))then{systemChat "Misery Gasmask audio cycle checks re-initiated..."};
         };
 
-        if (cameraView != "EXTERNAL") then {
+        if (cameraView isNotEqualTo "EXTERNAL") then {
 
             player say3D [QEGVAR(audio,sound_gasmaskBreathing), 10, 0.8 + random 0.1 + getFatigue player];
         };
 
         ((getFatigue player)*2);
         player setSpeaker speaker player;
-    
+
 if(EGVAR(common,debug))then{systemChat "Misery Gasmask audio cycle..."};
 
 }, 10, []] call CBA_fnc_addPerFrameHandler;

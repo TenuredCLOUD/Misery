@@ -17,7 +17,7 @@
 params [["_canForage", false]];
 
 if (!isNull objectParent player) exitWith {};
-if (insideBuilding player == 0) exitWith {};
+if (insideBuilding player isEqualTo 0) exitWith {};
 
 private _pos = positionCameraToWorld [0, 0, 0];
 private _pos2 = _pos vectorAdd (getCameraViewDirection player vectorMultiply 4);

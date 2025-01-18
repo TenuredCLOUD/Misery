@@ -48,7 +48,7 @@ if (EGVAR(common,checkRavage)) then {
 //     if (isServer) then {
 //         {
 //             private _unit = _x; // Store the current unit in a variable
-//             if (_spookArray findIf {_unit isKindOf _x} != -1) then {
+//             if (_spookArray findIf {_unit isKindOf _x} isNotEqualTo -1) then {
 //                 _unit setVariable ["IMS_EventHandler_Hit",{
 //                     _victim = _this select 0;
 //                     if ((damage _victim) >= 0.3) exitWith {
@@ -74,5 +74,5 @@ player addEventHandler ["InventoryOpened", {
     [player, QCLASS(craftingHammer), "WBK_SmallHammer"] call EFUNC(common,weaponSwap);
     [player, QCLASS(anvilHammer), "WBK_SmallHammer"] call EFUNC(common,weaponSwap);
     [player, "rvg_guttingKnife", selectRandom [MACRO_KNIVES]] call EFUNC(common,weaponSwap);
-    [player, QCLASS(guttingKnife), selectRandom [MACRO_KNIVES]] call EFUNC(common,weaponSwap);	
+    [player, QCLASS(guttingKnife), selectRandom [MACRO_KNIVES]] call EFUNC(common,weaponSwap);
 }];

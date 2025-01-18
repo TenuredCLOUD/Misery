@@ -27,7 +27,7 @@ waitUntil {!isNil _x}; // Check Gvar arrays every second
 if (MiseryRFEMFacts && isServer) then {
 addMissionEventHandler ["EntityKilled", {
   params ["_killed", "_killer", "_instigator"];
-  if (_killed == player) then {
+  if (_killed isEqualTo player) then {
     if ((_this select 0) getVariable [QCLASS(rfdetectorStatus), true]) then {
         (_this select 0) setVariable [QCLASS(rfdetectorStatus), false,true];
             };
@@ -39,7 +39,7 @@ addMissionEventHandler ["EntityKilled", {
 if (MiseryRFEMFacts && hasInterface) then {
 player addEventHandler ["Put", {
 params ["_unit", "_container", "_item"];
-if (_item == QCLASS(rfHighRange_On)) then {
+if (_item isEqualTo QCLASS(rfHighRange_On)) then {
 if ((_this select 0) getVariable [QCLASS(rfdetectorStatus), true]) then {
     (_this select 0) setVariable [QCLASS(rfdetectorStatus), false,true];
             };

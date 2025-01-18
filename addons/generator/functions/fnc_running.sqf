@@ -18,7 +18,7 @@ _Generator = _this select 0;
 
 while {true} do {
 
-    _soundRunning = ["petorlgeneratorrunning", "dieselgeneratorrunning"] select (typeOf _Generator == "Land_PowerGenerator_F");
+    _soundRunning = ["petorlgeneratorrunning", "dieselgeneratorrunning"] select (typeOf _Generator isEqualTo "Land_PowerGenerator_F");
 
     _GeneratorType = typeOf _Generator;
 
@@ -54,7 +54,7 @@ while {true} do {
     deleteVehicle _soundDummyRunning;
     _Generator setVariable [QCLASS(generatorSound), false,true];
     _Generator setVariable [QCLASS(generatorRunning), false, true];
-    _soundStop = ["petrolgeneratorstop", "dieselgeneratorstop"] select (typeOf _Generator == "Land_PowerGenerator_F");
+    _soundStop = ["petrolgeneratorstop", "dieselgeneratorstop"] select (typeOf _Generator isEqualTo "Land_PowerGenerator_F");
     private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position _Generator);
     _Generator setVariable [QCLASS(generatorNoFuelSound), true,true];
     [_soundDummy, [_soundStop, 500]] remoteExec ["say3D", 0, _soundDummy];

@@ -15,4 +15,4 @@
 
 private _nearestObjects = nearestObjects [player, [MACRO_FIRETYPES], 2.5];
 
-_nearestObjects findIf {inflamed _x} != -1
+_nearestObjects findIf {inflamed _x} isNotEqualTo -1

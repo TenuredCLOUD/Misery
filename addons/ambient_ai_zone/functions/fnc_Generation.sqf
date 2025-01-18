@@ -198,54 +198,54 @@ for "_i" from 1 to _numEntities do {
     removeHeadgear _unit;
     removeGoggles _unit;
 
-    if (_randomweaploadout == 0) then {
+    if (_randomweaploadout isEqualTo 0) then {
     if (!isNil "_aiWeapPrimaryLoot" && {count _aiWeapPrimaryLoot > 0}) then {[_unit, selectRandom _aiWeapPrimaryLoot, 0] call BIS_fnc_addWeapon};
     if (!isNil "_aiWeapSecondaryLoot" && {count _aiWeapSecondaryLoot > 0}) then {[_unit, selectRandom _aiWeapSecondaryLoot, 0] call BIS_fnc_addWeapon};
     if (!isNil "_aiWeaplauncherLoot" && {count _aiWeaplauncherLoot > 0}) then {[_unit, selectRandom _aiWeaplauncherLoot, 0] call BIS_fnc_addWeapon};
     };
 
-    if (_randomweaploadout == 1) then {
+    if (_randomweaploadout isEqualTo 1) then {
     if (!isNil "_aiWeapPrimaryLoot" && {count _aiWeapPrimaryLoot > 0}) then {[_unit, selectRandom _aiWeapPrimaryLoot, 0] call BIS_fnc_addWeapon};
     };
 
-    if (_randomweaploadout == 2) then {
+    if (_randomweaploadout isEqualTo 2) then {
     if (!isNil "_aiWeapSecondaryLoot" && {count _aiWeapSecondaryLoot > 0}) then {[_unit, selectRandom _aiWeapSecondaryLoot, 0] call BIS_fnc_addWeapon};
     };
 
-    if (_randomweaploadout == 3) then {
+    if (_randomweaploadout isEqualTo 3) then {
     if (!isNil "_aiWeapPrimaryLoot" && {count _aiWeapPrimaryLoot > 0}) then {[_unit, selectRandom _aiWeapPrimaryLoot, 0] call BIS_fnc_addWeapon};
     if (!isNil "_aiWeapSecondaryLoot" && {count _aiWeapSecondaryLoot > 0}) then {[_unit, selectRandom _aiWeapSecondaryLoot, 0] call BIS_fnc_addWeapon};
     };
 
-    if (_randomweaploadout == 4) then {
+    if (_randomweaploadout isEqualTo 4) then {
     if (!isNil "_aiWeapPrimaryLoot" && {count _aiWeapPrimaryLoot > 0}) then {[_unit, selectRandom _aiWeapPrimaryLoot, 0] call BIS_fnc_addWeapon};
     if (!isNil "_aiWeaplauncherLoot" && {count _aiWeaplauncherLoot > 0}) then {[_unit, selectRandom _aiWeaplauncherLoot, 0] call BIS_fnc_addWeapon};
     };
 
-    if (_randomweaploadout == 5) then {
+    if (_randomweaploadout isEqualTo 5) then {
     if (!isNil "_aiWeapSecondaryLoot" && {count _aiWeapSecondaryLoot > 0}) then {[_unit, selectRandom _aiWeapSecondaryLoot, 0] call BIS_fnc_addWeapon};
     if (!isNil "_aiWeaplauncherLoot" && {count _aiWeaplauncherLoot > 0}) then {[_unit, selectRandom _aiWeaplauncherLoot, 0] call BIS_fnc_addWeapon};
     };
 
     if (!isNil "_aiuniformArray" && {count _aiuniformArray > 0}) then {_unit forceAddUniform selectRandom _aiuniformArray};
 
-    if (_randomvestloadout == 1) then {
+    if (_randomvestloadout isEqualTo 1) then {
     if (!isNil "_aivestArray" && {count _aivestArray > 0}) then {_unit addVest selectRandom _aivestArray};
     };
 
-    if (_randombackpackloadout == 1) then {
+    if (_randombackpackloadout isEqualTo 1) then {
     if (!isNil "_aibackpackArray" && {count _aibackpackArray > 0}) then {_unit addBackpack selectRandom _aibackpackArray};
     };
 
-    if (_randomNVGloadout == 1) then {
+    if (_randomNVGloadout isEqualTo 1) then {
     if (!isNil "_aiNVGLoot" && {count _aiNVGLoot > 0}) then {_unit linkItem selectRandom _aiNVGLoot};
     };
 
-    if (_randomFacewearloadout == 1) then {
+    if (_randomFacewearloadout isEqualTo 1) then {
     if (!isNil "_aiFacewearLoot" && {count _aiFacewearLoot > 0}) then {_unit addGoggles selectRandom _aiFacewearLoot};
     };
 
-    if (_randomHeadgearloadout == 1) then {
+    if (_randomHeadgearloadout isEqualTo 1) then {
     if (!isNil "_aiHeadgearLoot" && {count _aiHeadgearLoot > 0}) then {_unit addHeadgear selectRandom _aiHeadgearLoot};
     };
 

@@ -38,7 +38,7 @@ if (!isNull findDisplay 982383) exitWith {
     _Found = false;
 
     {
-        if ((_x select 0) == EGVAR(common,targetVehicleType)) then {
+        if ((_x select 0) isEqualTo EGVAR(common,targetVehicleType)) then {
             _Array=_x;
             _Found = true;
             _resupplyPrice = _x select 4;
@@ -48,8 +48,8 @@ if (!isNull findDisplay 982383) exitWith {
     if !(_Found) exitWith {};
 
     _formattedPrice = _resupplyPrice;
-    
-    if (_resupplyPrice == -1) then {
+
+    if (_resupplyPrice isEqualTo -1) then {
     _index = _list lbAdd "This vehicle cannot be resupplied...";
     _PurchaseB ctrlShow false;
 } else {

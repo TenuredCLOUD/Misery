@@ -30,7 +30,7 @@ _repairPrice = 0;
 _Found = false;
 
 {
-    if ((_x select 0) == EGVAR(common,targetVehicleType)) then {
+    if ((_x select 0) isEqualTo EGVAR(common,targetVehicleType)) then {
         _Array=_x;
         _Found = true;
         _repairPrice = _x select 3;
@@ -51,16 +51,16 @@ player setVariable [QCLASS(processRepairs), true];
 
 if (MiseryinVehiclerepairarea) exitWith {
 
-if (Mis_Mechcurrencytype == "DIGITALTYPE") then {
+if (Mis_Mechcurrencytype isEqualTo "DIGITALTYPE") then {
 _playercash = player getVariable [Mis_Mechfundstype, 0];
 };
 
-if (Mis_Mechcurrencytype == "ITEMTYPE") then {
-_playercash = {_x == Mis_Mechfundstype} count items player;
+if (Mis_Mechcurrencytype isEqualTo "ITEMTYPE") then {
+_playercash = {_x isEqualTo Mis_Mechfundstype} count items player;
 };
 
-if (Mis_Mechcurrencytype == "MAGAZINETYPE") then {
-_playercash = {_x == Mis_Mechfundstype} count magazines player;
+if (Mis_Mechcurrencytype isEqualTo "MAGAZINETYPE") then {
+_playercash = {_x isEqualTo Mis_Mechfundstype} count magazines player;
 };
 
 if (_playercash < _repairPrice) exitWith {
@@ -76,7 +76,7 @@ _progressIndicator = "";
 
 for "_i" from 0 to 99 do {
     if ((player getVariable QCLASS(processRepairs)) isEqualTo false) exitWith {};
-    if (_i % 5 == 0) then {_progressIndicator = _progressIndicator + "-"};
+    if (_i % 5 isEqualTo 0) then {_progressIndicator = _progressIndicator + "-"};
     _displayedText = format ["%1%2%6%2%3%5%2[%4]", _text, endl, _i, _progressIndicator, "%", _Vehiclename];
     ctrlSetText [1001, _displayedText];
     sleep _delay;
@@ -86,18 +86,18 @@ if ((player getVariable QCLASS(processRepairs)) isEqualTo true) then {
 
 _target = cursorTarget;
 
-if (Mis_Mechcurrencytype == "DIGITALTYPE") then {
+if (Mis_Mechcurrencytype isEqualTo "DIGITALTYPE") then {
 _playercash = player getVariable [Mis_Mechfundstype, 0];
 player setVariable [Mis_Mechfundstype, (_playercash - _repairPrice), true];
 };
 
-if (Mis_Mechcurrencytype == "ITEMTYPE") then {
-_playercash = {_x == Mis_Mechfundstype} count items player;
+if (Mis_Mechcurrencytype isEqualTo "ITEMTYPE") then {
+_playercash = {_x isEqualTo Mis_Mechfundstype} count items player;
 for "_i" from 1 to _repairPrice do {player removeItem Mis_Mechfundstype;};
 };
 
-if (Mis_Mechcurrencytype == "MAGAZINETYPE") then {
-_playercash = {_x == Mis_Mechfundstype} count magazines player;
+if (Mis_Mechcurrencytype isEqualTo "MAGAZINETYPE") then {
+_playercash = {_x isEqualTo Mis_Mechfundstype} count magazines player;
 for "_i" from 1 to _repairPrice do {player removeMagazine Mis_Mechfundstype;};
 };
 

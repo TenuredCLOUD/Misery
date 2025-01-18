@@ -17,9 +17,9 @@
 params ["_item", ["_replacementItem", ""]];
 
 private _magazines = magazinesAmmo player;
-private _itemContainer = _magazines findIf {(_x select 0) == _item};
+private _itemContainer = _magazines findIf {(_x select 0) isEqualTo _item};
 
-if (_itemContainer != -1) then {
+if (_itemContainer isNotEqualTo -1) then {
     private _containerCount = (_magazines select _itemContainer) select 1;
 
     if (_containerCount > 1) then {

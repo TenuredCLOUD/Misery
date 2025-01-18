@@ -38,7 +38,7 @@ if (alive player) then {
 
     sleep 60;
 
-    if (_ailments find "PARASITES" != -1) then {
+    if (_ailments find "PARASITES" isNotEqualTo -1) then {
         _ailments deleteAt (_ailments find "PARASITES");
         player setVariable [QCLASS(ailments), _ailments];
     };

@@ -59,7 +59,7 @@ if (isServer) then {
 
     //If GRAD persistence is active, push Holders to blacklister for saving so empty piles don't populate on reload of a scenario (This will execute only once)
     if (!isNil "grad_persistence_blacklist") then {
-        if ((grad_persistence_blacklist find (toLower "GroundWeaponHolder_Scripted") == -1) && (grad_persistence_blacklist find (toUpper "GroundWeaponHolder_Scripted") == -1)) then {
+        if ((grad_persistence_blacklist find (toLower "GroundWeaponHolder_Scripted") isEqualTo -1) && (grad_persistence_blacklist find (toUpper "GroundWeaponHolder_Scripted") isEqualTo -1)) then {
             ["GroundWeaponHolder_Scripted"] call grad_persistence_fnc_blacklistClasses;
             if (EGVAR(common,debug)) then {systemChat "[Misery Artifact spawner] GRAD Persistence detected, Adding Artifact piles to blacklist for saving / reloading..."};
         };

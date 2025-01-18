@@ -30,7 +30,7 @@ _totalLiters = 0;
 _fuelTypeIndex = 0;
 
 {
-    if ((_x select 0) == EGVAR(common,targetVehicleType)) then {
+    if ((_x select 0) isEqualTo EGVAR(common,targetVehicleType)) then {
         _Array=_x;
         _Found = true;
         _fuelTypeIndex = _x select 1;

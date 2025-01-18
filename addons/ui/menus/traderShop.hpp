@@ -2,9 +2,9 @@ class CLASS(traderShop_ui)
 {
     idd = 982390;
     // onLoad = QUOTE(_trader = player getVariable 'currentTrader'; _trader setVariable ['Misery_TraderIsBusy', true, true]; _trader setVariable ['Misery_TradingWith', profileName, true]; GVAR(currentAction) = 'buy'; [] call EFUNC(traders,shopVal); [] call EFUNC(traders,processCategory); [] call EFUNC(traders,processMenuSwitch;));
-    // onUnload = QUOTE(_trader = player getVariable 'currentTrader'; _trader setVariable ['Misery_TraderIsBusy', false, true]; _trader setVariable ['Misery_TradingWith', nil, true]; _queue = _trader getVariable 'Misery_TradingQue'; _index = _queue find (getPlayerUID player); if (_index != -1) then {_queue deleteAt _index;_trader setVariable ['Misery_TradingQue', _queue, true];};);
+    // onUnload = QUOTE(_trader = player getVariable 'currentTrader'; _trader setVariable ['Misery_TraderIsBusy', false, true]; _trader setVariable ['Misery_TradingWith', nil, true]; _queue = _trader getVariable 'Misery_TradingQue'; _index = _queue find (getPlayerUID player); if (_index isNotEqualTo -1) then {_queue deleteAt _index;_trader setVariable ['Misery_TradingQue', _queue, true];};);
 
-    //Will need to convert onLoad and onUnload events to functions: 
+    //Will need to convert onLoad and onUnload events to functions:
 onLoad = QUOTE(
     _trader = player getVariable [ARR_2(QUOTE(QGVAR(currentTrader)),objNull)];
     _trader setVariable [ARR_3(QUOTE(QGVAR(traderIsBusy)),true,true)];
@@ -21,7 +21,7 @@ onUnload = QUOTE(
     _trader setVariable [ARR_3(QUOTE(QGVAR(tradingWith)),nil,true)];
     _queue = _trader getVariable [ARR_2(QUOTE(QGVAR(tradingQue)),[])];
     _index = _queue find (getPlayerUID player);
-    if (_index != -1) then {
+    if (_index isNotEqualTo -1) then {
         _queue deleteAt _index;
         _trader setVariable [ARR_3(QUOTE(QGVAR(tradingQue)),_queue,true)];
     };

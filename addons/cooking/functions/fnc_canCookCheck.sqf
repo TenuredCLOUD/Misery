@@ -30,7 +30,7 @@ private _hasAll = true;
     if (EGVAR(common,debug)) then {
     systemChat format["Checking 1: %1",_itemArray];
     };
-    if (_itemArray isEqualType [] && {_itemArray select 0 != "CookingTime"} && {_itemArray select 0 != "CookingMethod"}) then {
+    if (_itemArray isEqualType [] && {_itemArray select 0 isNotEqualTo "CookingTime"} && {_itemArray select 0 isNotEqualTo "CookingMethod"}) then {
         if (EGVAR(common,debug)) then {
         systemChat format["Checking 2: %1",_itemArray];
         };

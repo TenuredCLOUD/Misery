@@ -30,7 +30,7 @@ _resupplyPrice = 0;
 _Found = false;
 
 {
-    if ((_x select 0) == EGVAR(common,targetVehicleType)) then {
+    if ((_x select 0) isEqualTo EGVAR(common,targetVehicleType)) then {
         _Array=_x;
         _Found = true;
         _resupplyPrice = _x select 4;
@@ -51,16 +51,16 @@ player setVariable [QCLASS(processRearm), true];
 
 if (MiseryinVehiclerepairarea) exitWith {
 
-if (Mis_Rearmcurrencytype == "DIGITALTYPE") then {
+if (Mis_Rearmcurrencytype isEqualTo "DIGITALTYPE") then {
 _playercash = player getVariable [Mis_Rearmfundstype, 0];
 };
 
-if (Mis_Rearmcurrencytype == "ITEMTYPE") then {
-_playercash = {_x == Mis_Rearmfundstype} count items player;
+if (Mis_Rearmcurrencytype isEqualTo "ITEMTYPE") then {
+_playercash = {_x isEqualTo Mis_Rearmfundstype} count items player;
 };
 
-if (Mis_Rearmcurrencytype == "MAGAZINETYPE") then {
-_playercash = {_x == Mis_Rearmfundstype} count magazines player;
+if (Mis_Rearmcurrencytype isEqualTo "MAGAZINETYPE") then {
+_playercash = {_x isEqualTo Mis_Rearmfundstype} count magazines player;
 };
 
 if (_playercash < _resupplyPrice) exitWith {
@@ -76,7 +76,7 @@ _progressIndicator = "";
 
 for "_i" from 0 to 99 do {
     if ((player getVariable QCLASS(processRearm)) isEqualTo false) exitWith {};
-    if (_i % 5 == 0) then {_progressIndicator = _progressIndicator + "-"};
+    if (_i % 5 isEqualTo 0) then {_progressIndicator = _progressIndicator + "-"};
     _displayedText = format ["%1%2%6%2%3%5%2[%4]", _text, endl, _i, _progressIndicator, "%", _Vehiclename];
     ctrlSetText [1001, _displayedText];
     sleep _delay;
@@ -86,18 +86,18 @@ if ((player getVariable QCLASS(processRearm)) isEqualTo true) then {
 
 _target = cursorTarget;
 
-if (Mis_Rearmcurrencytype == "DIGITALTYPE") then {
+if (Mis_Rearmcurrencytype isEqualTo "DIGITALTYPE") then {
 _playercash = player getVariable [Mis_Rearmfundstype, 0];
 player setVariable [Mis_Rearmfundstype, (_playercash - _resupplyPrice), true];
 };
 
-if (Mis_Rearmcurrencytype == "ITEMTYPE") then {
-_playercash = {_x == Mis_Rearmfundstype} count items player;
+if (Mis_Rearmcurrencytype isEqualTo "ITEMTYPE") then {
+_playercash = {_x isEqualTo Mis_Rearmfundstype} count items player;
 for "_i" from 1 to _resupplyPrice do {player removeItem Mis_Rearmfundstype;};
 };
 
-if (Mis_Rearmcurrencytype == "MAGAZINETYPE") then {
-_playercash = {_x == Mis_Rearmfundstype} count magazines player;
+if (Mis_Rearmcurrencytype isEqualTo "MAGAZINETYPE") then {
+_playercash = {_x isEqualTo Mis_Rearmfundstype} count magazines player;
 for "_i" from 1 to _resupplyPrice do {player removeMagazine Mis_Rearmfundstype;};
 };
 

@@ -53,16 +53,16 @@ if (count _matchedRecipe > 0) then {
     private _outputCount = 1;
 
     {
-        if (_x select 0 == "CraftingTime") then {
+        if (_x select 0 isEqualTo "CraftingTime") then {
             _craftingTime = _x select 1;
         } else {
-            if (_x select 0 == "ToBeReplaced") then {
+            if (_x select 0 isEqualTo "ToBeReplaced") then {
                 _toBeReplaced = _x;
             } else {
-                if (_x select 0 == "Audio") then {
+                if (_x select 0 isEqualTo "Audio") then {
                     _audio = _x select 1;
                 } else {
-                    if (_x select 0 == "OutputCount") then {
+                    if (_x select 0 isEqualTo "OutputCount") then {
                     _outputCount = _x select 1;
                 } else {
                     _requiredItemsCounts pushBack _x;
@@ -78,14 +78,14 @@ if (count _matchedRecipe > 0) then {
         _RecipeB ctrlShow false;
         _ExitB ctrlShow false;
 
-        if (currentWeapon player != "") then {
+        if (currentWeapon player isNotEqualTo "") then {
             player action["SWITCHWEAPON",player,player,-1];
         };
 
         player playAction "Gear";
 
         private _itemDisplayName = getText (configFile >> "CfgWeapons" >> _outputItem >> "displayName");
-        if (_itemDisplayName == "") then {
+        if (_itemDisplayName isEqualTo "") then {
             _itemDisplayName = getText (configFile >> "CfgMagazines" >> _outputItem >> "displayName");
         };
 
@@ -102,7 +102,7 @@ if (count _matchedRecipe > 0) then {
             };
         }];
 
-        if (!isNil "_audio" && _audio != "") then {
+        if (!isNil "_audio" && _audio isNotEqualTo "") then {
         private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position player);
         player setVariable ["_TC_sound", true,true];
         [_soundDummy, [_audio, 50]] remoteExec ["say3D", 0, _soundDummy];

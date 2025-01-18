@@ -27,7 +27,7 @@ Will most likely rewrite to new UI based use - Or move to an ACE action
     "[player] call ace_medical_blood_fnc_isBleeding",
     {
     //Force holstering
-    if (currentWeapon player != "") then {
+    if (currentWeapon player isNotEqualTo "") then {
     player action["SWITCHWEAPON",player,player,-1];
     };
 
@@ -56,7 +56,7 @@ Will most likely rewrite to new UI based use - Or move to an ACE action
     };
 
     //Check if ailments are active (before infection)
-    if (EGVAR(survival,ailments) == "ENABLED") then {
+    if (EGVAR(survival,ailments) isEqualTo "ENABLED") then {
 
     private _timeafter = time + 120;
     [_timeafter] spawn {

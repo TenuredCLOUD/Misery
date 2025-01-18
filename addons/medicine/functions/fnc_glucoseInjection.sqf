@@ -19,7 +19,7 @@ fnc_glucose = {
 params ["_c", "_text"];
 
 if (!hasInterface || {!alive player}) exitWith {};
-if (_c == 0) exitWith {titleText [_text, "PLAIN DOWN"];}; //exit loop
+if (_c isEqualTo 0) exitWith {titleText [_text, "PLAIN DOWN"];}; //exit loop
 player setVariable [QCLASS(hunger), (_MHunger + 5)];
 _c = _c - 1;
 

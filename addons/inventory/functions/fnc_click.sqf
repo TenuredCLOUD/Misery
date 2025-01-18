@@ -25,11 +25,11 @@ private _selectedItem = "";
 _item=_x;
     {
     _displayName=getText(configFile>>_x>>_item>>"displayName");
-    if(_displayName==_itemText)exitWith{_selectedItem=_item};
+    if(_displayNameisEqualTo_itemText)exitWith{_selectedItem=_item};
     }forEach["cfgWeapons","cfgMagazines"]; //["cfgWeapons","cfgMagazines","cfgGlasses","cfgVehicles"];
-    if (_selectedItem != "") exitWith {};
+    if (_selectedItem isNotEqualTo "") exitWith {};
 }forEach((items player)+(magazines player)); //((items player)+(assignedItems player)+(magazines player)+(weapons player))
-if(_selectedItem=="")exitWith{};
+if(_selectedItemisEqualTo"")exitWith{};
 if(((toUpper _selectedItem)in GVAR(items)))exitWith{
     _selectedItem call FUNC(useItem);
 };
@@ -38,10 +38,10 @@ GVAR(itemCustomActions) params [_selectedItem, _script];
 
 private _script="";
 {
-if (toLower(_x select 0) == (toLower _selectedItem)) exitWith {_script=_x select 1}
+if (toLower(_x select 0) isEqualTo (toLower _selectedItem)) exitWith {_script=_x select 1}
 } forEach GVAR(itemCustomActions);
 
-if (_script != "") exitWith {
+if (_script isNotEqualTo "") exitWith {
     _selectedItem call _script
 };
 

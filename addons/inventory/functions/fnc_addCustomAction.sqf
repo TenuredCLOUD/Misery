@@ -20,8 +20,8 @@
 // _description=_module getVariable QCLASS(description";
 // _script=_module getVariable QCLASS(script";
 // _waitTime=_module getVariable QCLASS(waitTime";
-// if(_description=="")exitWith{};
-// if(_script=="")exitWith{};
+// if(_descriptionisEqualTo"")exitWith{};
+// if(_scriptisEqualTo"")exitWith{};
 // if((count _units)>0)exitWith{
 //     if(player in _units)then{EGVAR(actions,guiCustomActions) pushBack[_description,_script]};
 // };

@@ -95,7 +95,7 @@ _object setVariable ["Mis_Woodstickfuel", 100, true];
     titleText ["Attempting to reignite unlit fire...", "PLAIN DOWN"];
     };
 
-    if (_random == 10) exitWith {
+    if (_random isEqualTo 10) exitWith {
     //If fire upgrade is needed, upgrade fire type:
     if (((_this select 0) getVariable "Mis_FireUpgrade") isEqualTo true) exitWith {
     deleteVehicle (_this select 0); //delete old small fire
@@ -147,12 +147,12 @@ private _items = [QCLASS(tinder)];
 private _mags = ["acex_intelitems_notepad","rvg_money", "rvg_notepad", "rvg_docFolder"];
 
 private _index = _items findIf { _x in items player };
-if (_index != -1) then {
+if (_index isNotEqualTo -1) then {
     private _item = _items select _index;
     player removeItem _item;
 } else {
     _index = _mags findIf { _x in magazines player };
-    if (_index != -1) then {
+    if (_index isNotEqualTo -1) then {
         private _mag = _mags select _index;
         player removeMagazine _mag;
     };
@@ -171,12 +171,12 @@ private _items = [QCLASS(tinder)];
 private _mags = ["acex_intelitems_notepad","rvg_money", "rvg_notepad", "rvg_docFolder"];
 
 private _index = _items findIf { _x in items player };
-if (_index != -1) then {
+if (_index isNotEqualTo -1) then {
     private _item = _items select _index;
     player removeItem _item;
 } else {
     _index = _mags findIf { _x in magazines player };
-    if (_index != -1) then {
+    if (_index isNotEqualTo -1) then {
         private _mag = _mags select _index;
         player removeMagazine _mag;
     };

@@ -26,7 +26,7 @@ if (!isNull findDisplay 982380) exitWith {
         private _outputItem = _x select 1;
         private _fillingTime = _x select 2;
         private _displayName = getText (configFile >> "CfgWeapons" >> _requiredItem >> "displayName");
-        if (_displayName == "") then {
+        if (_displayName isEqualTo "") then {
             _displayName = getText (configFile >> "CfgMagazines" >> _requiredItem >> "displayName");
         };
         if (EGVAR(common,debug)) then {
