@@ -24,7 +24,7 @@ disableSerialization;
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
 
-    private ["_display","_TempText","_TempVal","_GasText","_GasVal","_cartridgecalc","_GascartridgeVal","_GasSuppAir","_FundsVal","_HealthText","_HealthNum","_ValtoBarHealth","_ValtoBarBlood","_BloodtoVal","_HealthtoVal","_HealthNumVal","_HungerNum","_ValtoBarHunger","_HungerNumVal","_ThirstNum","_ValtoBarThirst","_ThirstNumVal","_FatigueNum","_ValtoBarFatigue","_FatigueNumVal","_MHunger","_MThirst","_MInfection","_MPoison","_MSleepiness","_MExposure","_MPlayertemp","_ailments","_Health","_pfatigue","_thirst","_temp","_funds","_tired","_parasites","_poison","_infection"];
+    private ["_display","_TempText","_TempVal","_GasText","_GasVal","_cartridgecalc","_GascartridgeVal","_GasSuppAir","_FundsVal","_HealthText","_HealthNum","_ValtoBarHealth","_ValtoBarBlood","_BloodtoVal","_HealthtoVal","_HealthNumVal","_HungerNum","_ValtoBarHunger","_HungerNumVal","_ThirstNum","_ValtoBarThirst","_ThirstNumVal","_FatigueNum","_ValtoBarFatigue","_FatigueNumVal","_hunger","_thirst","_infection","_poison","_sleepiness","_exposure","_playerTemperature","_ailments","_Health","_playerFatigue","_thirst","_temp","_funds","_tired","_parasites","_poison","_infection"];
 
     _display = findDisplay 982377;
     _TempText = _display displayCtrl 1015;
@@ -44,40 +44,40 @@ disableSerialization;
     _CurrMag = _display displayCtrl 1111;
     _CurrMagVal =_display displayCtrl 1112;
 
-    _MHunger = player getVariable [QEGVAR(survival,hunger), MACRO_PLAYER_DEFAULTS_HIGH];
-    _MThirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH];
-    _MInfection = player getVariable [QEGVAR(survival,infection), MACRO_PLAYER_DEFAULTS_LOW];
-    _MPoison = player getVariable [QEGVAR(survival,toxicity), MACRO_PLAYER_DEFAULTS_LOW];
-    _MSleepiness = player getVariable [QEGVAR(survival,energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
-    _MExposure = player getVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];
-    _MPlayertemp = player getVariable [QEGVAR(survival,temperature), 0];
+    _hunger = player getVariable [QEGVAR(survival,hunger), MACRO_PLAYER_DEFAULTS_HIGH];
+    _thirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH];
+    _infection = player getVariable [QEGVAR(survival,infection), MACRO_PLAYER_DEFAULTS_LOW];
+    _poison = player getVariable [QEGVAR(survival,toxicity), MACRO_PLAYER_DEFAULTS_LOW];
+    _sleepiness = player getVariable [QEGVAR(survival,energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
+    _exposure = player getVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];
+    _playerTemperature = player getVariable [QEGVAR(survival,temperature), 0];
 
-    _pfatigue = (getFatigue player) * 100;
-    _convpfatigue = round _pfatigue;
+    _playerFatigue = (getFatigue player) * 100;
+    _convertPlayerFatigue = round _playerFatigue;
 
     _cartridgecalc = player getVariable [QCLASS(gasmaskCartridgeLevel), 100];
 
     _buffs = player getVariable [QGVAR(buffs), []];
     _ailments = player getVariable [QGVAR(ailments), []];
 
-lbClear _buffsList;
-lbClear _ailmentsList;
+    lbClear _buffsList;
+    lbClear _ailmentsList;
 
-{
-    private _buffname = _x select 0;
-    private _buffimage = _x select 1;
-    private _buffsindex = _buffsList lbAdd _buffname;
-    _buffsList lbSetData [_buffsindex, _buffname];
-    _buffsList lbSetPicture [_buffsindex, _buffimage];
-} forEach _buffs;
+    {
+        private _buffname = _x select 0;
+        private _buffimage = _x select 1;
+        private _buffsindex = _buffsList lbAdd _buffname;
+        _buffsList lbSetData [_buffsindex, _buffname];
+        _buffsList lbSetPicture [_buffsindex, _buffimage];
+    } forEach _buffs;
 
-{
-    private _ailmentname = _x select 0;
-    private _ailmentimage = _x select 1;
-    private _ailmentsindex = _ailmentsList lbAdd _ailmentname;
-    _ailmentsList lbSetData [_ailmentsindex, _ailmentname];
-    _ailmentsList lbSetPicture [_ailmentsindex, _ailmentimage];
-} forEach _ailments;
+    {
+        private _ailmentname = _x select 0;
+        private _ailmentimage = _x select 1;
+        private _ailmentsindex = _ailmentsList lbAdd _ailmentname;
+        _ailmentsList lbSetData [_ailmentsindex, _ailmentname];
+        _ailmentsList lbSetPicture [_ailmentsindex, _ailmentimage];
+    } forEach _ailments;
 
     if (EGVAR(common,ace)) then {
     _Health = player getVariable ["ace_medical_bloodVolume", 6]; //ACE blood calc
@@ -103,8 +103,9 @@ lbClear _ailmentsList;
     case (_hasGasmask && !(_hasSuppliedAir)): {"GasMask"};
     case (_hasGasmask && (_hasSuppliedAir)): {"SuppliedAir"};
     default {"None"};
-};
-switch (_gearCase) do {
+    };
+
+    switch (_gearCase) do {
     case "GasMask": {
         if (_positiveMaskRespiratoryValue) then {
         private _GascartridgeVal = format["%1%2", round(_cartridgecalc * 1), "%"];
@@ -133,9 +134,9 @@ switch (_gearCase) do {
             ["buff", "Supplied Air"] call FUNC(removeBuffOrAilment);
             };
         _GasVal ctrlSetText "None";
+            };
         };
     };
-};
 
     private _currentMagazineDetail = currentMagazineDetail player;
     private _magazine = currentMagazine player;
@@ -165,7 +166,7 @@ switch (_gearCase) do {
     _TempVal ctrlShow false;
     };
     if(EGVAR(temperature,enable) && QCLASS(eru_On) in magazines player) then {
-    _temp = format["%1°C",round (_MPlayertemp)];
+    _temp = format["%1°C",round (_playerTemperature)];
     _TempVal ctrlSetText _temp;
     };
     if(EGVAR(temperature,enable) && !(QCLASS(eru_On) in magazines player)) then {
@@ -198,9 +199,9 @@ switch (_gearCase) do {
     };
         };
 
-private _tiredAilments = ["Tired", "Mildy Tired", "Very Tired", "Exhausted", "Inhumanely Exhausted"];
+    private _tiredAilments = ["Tired", "Mildy Tired", "Very Tired", "Exhausted", "Inhumanely Exhausted"];
 
-if (_MSleepiness >= 15) then {
+    if (_sleepiness >= 15) then {
     {
         private _ailmentName = _x select 0;
         if (_ailmentName in _tiredAilments) then {
@@ -211,14 +212,14 @@ if (_MSleepiness >= 15) then {
         };
     } forEach _ailments;
 
-    private _tirednessIndex = floor((_MSleepiness - 15) / 5);
+    private _tirednessIndex = floor((_sleepiness - 15) / 5);
     if (_tirednessIndex >= count _tiredAilments) then {
         _tirednessIndex = count _tiredAilments - 1;
     };
     private _tirednessAilment = _tiredAilments select _tirednessIndex;
     private _imageNames = ["sleepy", "sleepy1", "sleepy2", "sleepy3", "tired"];
     ["ailment", _tirednessAilment, format ["data\%1.paa", (_imageNames select _tirednessIndex)], format ["You are %1...", _tirednessAilment]] call FUNC(addBuffOrAilment);
-} else {
+    } else {
     {
         private _ailmentName = _x select 0;
         if (_ailmentName in _tiredAilments) then {
@@ -228,7 +229,7 @@ if (_MSleepiness >= 15) then {
             };
         };
     } forEach _ailments;
-};
+    };
 
     _parasites = _ailments findIf {(_x select 0) isEqualTo "Parasite Infection"};
     _poison = _ailments findIf {(_x select 0) isEqualTo "Poisoned"};
@@ -242,7 +243,7 @@ if (_MSleepiness >= 15) then {
     };
         };
 
-    if(_MPoison > 0 && EGVAR(survival,ailments))then{
+    if(_poison > 0 && EGVAR(survival,ailments))then{
     ["ailment","Poisoned", QPATHTOEF(icons,data\poison_ca.paa), "You are poisoned, you feel a wave of unease wash over you as death lingers..."] call FUNC(addBuffOrAilment);
     }else{
     if (_poison > -1) then {
@@ -250,7 +251,7 @@ if (_MSleepiness >= 15) then {
     };
         };
 
-    if(_MInfection > 0 && EGVAR(survival,ailments))then{
+    if(_infection > 0 && EGVAR(survival,ailments))then{
         ["ailment","Bacterial Infection", QPATHTOEF(icons,data\infection_ca.paa), "You have a Bacterial infection, your breaths are shallow, and feel hot. You can feel your muscles weakening..."] call FUNC(addBuffOrAilment);
     }else{
     if (_infection > -1) then {
@@ -260,15 +261,15 @@ if (_MSleepiness >= 15) then {
 
     private _ColdExposureAilments = ["Chilly", "Cold", "Freezing", "Hypothermia risk", "Hypothermic"];
 
-if (_MExposure <= -1) then {
+if (_exposure <= -1) then {
 
     private _coldexposureindex = -1;
 
-        if (_MExposure <= -1) then {_coldexposureindex = 0};
-        if (_MExposure <= -5) then {_coldexposureindex = 1};
-        if (_MExposure <= -10) then {_coldexposureindex = 2};
-        if (_MExposure <= -15) then {_coldexposureindex = 3};
-        if (_MExposure <= -20) then {_coldexposureindex = 4};
+        if (_exposure <= -1) then {_coldexposureindex = 0};
+        if (_exposure <= -5) then {_coldexposureindex = 1};
+        if (_exposure <= -10) then {_coldexposureindex = 2};
+        if (_exposure <= -15) then {_coldexposureindex = 3};
+        if (_exposure <= -20) then {_coldexposureindex = 4};
 
     private _coldexpoAilment = _ColdExposureAilments select _coldexposureindex;
     private _imageNames = ["chilly", "cold", "freezing", "hypo", "hypo2"];
@@ -278,15 +279,15 @@ if (_MExposure <= -1) then {
 
 private _HeatExposureAilments = ["Warm", "Hot", "Fever", "Hyperthermia risk", "Hyperthermic"];
 
-if (_MExposure >= 1) then {
+if (_exposure >= 1) then {
 
     private _heatexposureindex = -1;
 
-        if (_MExposure >= 1) then {_heatexposureindex = 0};
-        if (_MExposure >= 5) then {_heatexposureindex = 1};
-        if (_MExposure >= 10) then {_heatexposureindex = 2};
-        if (_MExposure >= 15) then {_heatexposureindex = 3};
-        if (_MExposure >= 20) then {_heatexposureindex = 4};
+        if (_exposure >= 1) then {_heatexposureindex = 0};
+        if (_exposure >= 5) then {_heatexposureindex = 1};
+        if (_exposure >= 10) then {_heatexposureindex = 2};
+        if (_exposure >= 15) then {_heatexposureindex = 3};
+        if (_exposure >= 20) then {_heatexposureindex = 4};
 
     private _heatexpoAilment = _HeatExposureAilments select _heatexposureindex;
     private _imageNames = ["hot", "hot2", "fever", "hyper", "hyper2"];
@@ -294,7 +295,7 @@ if (_MExposure >= 1) then {
     ["ailment", _heatexpoAilment, format ["data\%1.paa", (_imageNames select _heatexposureindex)], format ["%1", (_HeatExpolevels select _heatexposureindex)]] call FUNC(addBuffOrAilment);
 };
 
-if (_MExposure == 0) then {
+if (_exposure == 0) then {
 {
         private _ailmentName = _x select 0;
         if (_ailmentName in (_ColdExposureAilments + _HeatExposureAilments)) then {
@@ -318,33 +319,33 @@ _ValtoBarHealth = [_HealthtoVal] call EFUNC(common,valToBar);
 _HealthNum ctrlSetText _ValtoBarHealth;
 };
 
-_ValtoBarHunger = [_MHunger] call EFUNC(common,valToBar);
+_ValtoBarHunger = [round(_hunger * 100)] call EFUNC(common,valToBar);
 _HungerNum ctrlSetText _ValtoBarHunger;
 
-_ValtoBarThirst = [_MThirst] call EFUNC(common,valToBar);
+_ValtoBarThirst = [round(_thirst * 100)] call EFUNC(common,valToBar);
 _ThirstNum ctrlSetText _ValtoBarThirst;
 
-_ValtoBarFatigue = [_convpfatigue] call EFUNC(common,valToBar);
+_ValtoBarFatigue = [_convertPlayerFatigue] call EFUNC(common,valToBar);
 _FatigueNum ctrlSetText _ValtoBarFatigue;
 
 }else{
 
 if (EGVAR(inventory,hudLayout) == 1) then {
 if (EGVAR(common,ace)) then {
-_HealthNumVal = format ["%1",round(_Health / 6 * 100)];
+_HealthNumVal = format ["%1", round(_Health / 6 * 100)];
 _HealthNum ctrlSetText _HealthNumVal;
 }else{
-_HealthNumVal = format ["%1",round ((1 - (damage player)) * 100)];
+_HealthNumVal = format ["%1", round((1 - (damage player)) * 100)];
 _HealthNum ctrlSetText _HealthNumVal;
 };
 
-_HungerNumVal = format ["%1",round (_MHunger)];
+_HungerNumVal = format ["%1", round(_hunger * 100)];
 _HungerNum ctrlSetText _HungerNumVal;
 
-_ThirstNumVal = format ["%1",round (_MThirst)];
+_ThirstNumVal = format ["%1", round(_thirst * 100)];
 _ThirstNum ctrlSetText _ThirstNumVal;
 
-_FatigueNumVal = format ["%1", _convpfatigue];
+_FatigueNumVal = format ["%1", _convertPlayerFatigue];
 _FatigueNum ctrlSetText _FatigueNumVal;
 };
     };

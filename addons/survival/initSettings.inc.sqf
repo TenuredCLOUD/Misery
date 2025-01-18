@@ -19,42 +19,6 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(toxicityHealing),
-    "SLIDER",
-    ["Poison healing", "Poison decrease every cycle"],
-    _category,
-    [0.01, 1, 0.01, 2],
-    1
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(infectionHealing),
-    "SLIDER",
-    ["Infection healing", "Infection decrease every cycle"],
-    _category,
-    [0.01, 1, 0.01, 2],
-    1
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(parasitesHealing),
-    "SLIDER",
-    ["Parasites healing", "Parasites decrease every cycle"],
-    _category,
-    [0.01, 1, 0.01, 2],
-    1
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(blackoutChance),
-    "SLIDER",
-    ["Blackout chance", "% chance per cycle to blackout when Tired (SP only)"],
-    _category,
-    [1, 100, 30, 0],
-    1
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(ailments),
     "CHECKBOX",
     ["Misery Ailments", "Enable Ailments? (Enables bacterial infections, parasites, etc...)"],

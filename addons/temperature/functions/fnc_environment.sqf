@@ -45,7 +45,7 @@ if (!(isNull objectParent player) || ((insideBuilding player == 1))) then {
     _windSpeed = (wind select 0) * 2.23694;
 
     if (isNull objectParent player) then {
-        _playerSpeed = (speed player) * 0.277778;
+        _playerSpeed = abs(speed player) * 0.277778;
         _windSpeed = _windSpeed + _playerSpeed;
     };
 

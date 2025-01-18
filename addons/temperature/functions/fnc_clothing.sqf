@@ -1,8 +1,18 @@
 #include "..\script_component.hpp"
 /*
-Clothing warmth calcs
-Designed specifically for Misery mod
-Code concepts by Drongo, edited by TenuredCLOUD
+ * Author: TenuredCLOUD, Drongo
+ * Clothing warmth / insulation factors
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_temperature_fnc_clothing;
+ *
+ * Public: No
 */
 
 // // Calculate warmth of clothing (based on mass of uniform, vest and headgear)
