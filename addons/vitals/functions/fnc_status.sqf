@@ -295,7 +295,7 @@ if (_exposure >= 1) then {
     ["ailment", _heatexpoAilment, format ["data\%1.paa", (_imageNames select _heatexposureindex)], format ["%1", (_HeatExpolevels select _heatexposureindex)]] call FUNC(addBuffOrAilment);
 };
 
-if (_MExposure isEqualTo 0) then {
+if (_exposure isEqualTo 0) then {
 {
         private _ailmentName = _x select 0;
         if (_ailmentName in (_ColdExposureAilments + _HeatExposureAilments)) then {

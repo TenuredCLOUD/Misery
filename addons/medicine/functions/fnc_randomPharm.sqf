@@ -59,7 +59,7 @@ if (alive player) exitWith {
     player setVariable [QEGVAR(survival,hunger), (_MHunger - 50)];
 
     if (EGVAR(survival,ailments)) then {
-        player setVariable [QCLASS(toxicity), (_MPoison + (random 20))]; //random poison amount
+        player setVariable [QEGVAR(survival,toxicity), (_MPoison + (random 20))]; //random poison amount
     };
 
     // if ((count(entities "Ravage_survival")) > 0) then {

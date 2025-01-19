@@ -20,7 +20,7 @@ params ["_c", "_text"];
 
 if (!hasInterface || {!alive player}) exitWith {};
 if (_c isEqualTo 0) exitWith {titleText [_text, "PLAIN DOWN"];}; //exit loop
-player setVariable [QCLASS(hunger), (_MHunger + 5)];
+player setVariable [QEGVAR(survival,hunger), (_MHunger + 5)];
 _c = _c - 1;
 
 [{ _this call fnc_glucose;}, [_c, _text], 10] call CBA_fnc_waitAndExecute;
@@ -35,5 +35,3 @@ titleText ["You inject the Glucose solution...", "PLAIN DOWN"];
 player removeItem QCLASS(glucose);
 private _c = 10;
 [{ _this call fnc_glucose;}, [_c, "The Glucose injection has worn off..."], 10] call CBA_fnc_waitAndExecute;
-
-

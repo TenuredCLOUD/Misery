@@ -81,8 +81,8 @@ if (_radval isNotEqualTo 0) then {player setVariable ["radiation", (_rads + _rad
 if (_exposureval isNotEqualTo 0) then {player setVariable [QCLASS(exposure), (_MExposure + _exposureval)];};
 
 //Hunger / Thirst
-if (_hunger isNotEqualTo 0) then {player setVariable [QCLASS(hunger), (_MHunger + _hunger)];};
-if (_thirst isNotEqualTo 0) then {player setVariable [QCLASS(thirst), (_MThirst + _thirst)];};
+if (_hunger isNotEqualTo 0) then {player setVariable [QEGVAR(survival,hunger), (_MHunger + _hunger)];};
+if (_thirst isNotEqualTo 0) then {player setVariable [QEGVAR(survival,thirst), (_MThirst + _thirst)];};
 
 //Reset to 0 if less than 0:
 if (_MHunger < 0) then {player setVariable [QEGVAR(survival,hunger), 0]};
