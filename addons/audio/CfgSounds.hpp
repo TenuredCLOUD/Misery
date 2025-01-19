@@ -73,6 +73,16 @@ class CfgSounds {
     // Geiger
     MACRO_SOUNDS(geigerOff,geiger);
     MACRO_SOUNDS(geigerOn,geiger);
+    MACRO_SOUNDS(geiger01,geiger);
+    MACRO_SOUNDS(geiger02,geiger);
+    MACRO_SOUNDS(geiger03,geiger);
+    MACRO_SOUNDS(geiger04,geiger);
+    MACRO_SOUNDS(geiger05,geiger);
+    MACRO_SOUNDS(geiger06,geiger);
+    MACRO_SOUNDS(geiger07,geiger);
+    MACRO_SOUNDS(geiger08,geiger);
+    MACRO_SOUNDS(geiger09,geiger);
+    MACRO_SOUNDS(geiger10,geiger);
 
     // Generator
     MACRO_SOUNDS(dieselRunning,generator);
@@ -153,16 +163,6 @@ class CfgSounds {
     MACRO_SOUNDS(drink,items);
     MACRO_SOUNDS(eat,items);
     MACRO_SOUNDS(electricSaw,items);
-    MACRO_SOUNDS(geiger01,items);
-    MACRO_SOUNDS(geiger02,items);
-    MACRO_SOUNDS(geiger03,items);
-    MACRO_SOUNDS(geiger04,items);
-    MACRO_SOUNDS(geiger05,items);
-    MACRO_SOUNDS(geiger06,items);
-    MACRO_SOUNDS(geiger07,items);
-    MACRO_SOUNDS(geiger08,items);
-    MACRO_SOUNDS(geiger09,items);
-    MACRO_SOUNDS(geiger10,items);
     MACRO_SOUNDS(hammerSound,items);
     MACRO_SOUNDS(hammerWood,items);
     MACRO_SOUNDS(pillBottleOpen,items);
