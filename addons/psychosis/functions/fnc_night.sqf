@@ -14,14 +14,14 @@
  *
 */
 
-if (!GVAR(night)) exitWith {};
-
 private _nightAlteration = 0;
+
+if (!GVAR(night)) exitWith {0};
 
 private _daytime = dayTime;
 if (_daytime >= 5 && _daytime < 18) exitWith {
     [QUOTE(COMPONENT_BEAUTIFIED), "Psychosis reduction because of daytime."] call EFUNC(common,debugMessage);
-    _nightAlteration + (_psychosisLevel - GVAR(decrease))
+    _nightAlteration - GVAR(decrease)
 };
 
 // Exit if near fire.
