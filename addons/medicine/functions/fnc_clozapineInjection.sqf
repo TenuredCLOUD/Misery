@@ -21,7 +21,7 @@ titleText ["You inject the Clozapine...", "PLAIN DOWN"];
 player removeItem QCLASS(clozapineBox);
 
 if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
-    [player, QCLASS(clozapineBox), 120, 300, 5, 0, 5] call ace_medical_status_fnc_addMedicationAdjustment;
+    [player, QCLASS(clozapineBox), 120, 300, 5, 0, 5, 1] call ace_medical_status_fnc_addMedicationAdjustment;
 };
 
 if (!EGVAR(psychosis,enabled)) exitWith {};

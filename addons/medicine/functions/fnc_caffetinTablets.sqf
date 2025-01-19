@@ -32,7 +32,7 @@ if ((_MInfection > 1) || (_ailments find "PARASITES" isNotEqualTo -1)) then {
     player removeItem QCLASS(caffetin);
 
      if (EGVAR(common,ace)) then {
-    [player, QCLASS(caffetin), 120, 300, 1, 0, 1] call ace_medical_status_fnc_addMedicationAdjustment;
+    [player, QCLASS(caffetin), 120, 300, 1, 0, 1, 1] call ace_medical_status_fnc_addMedicationAdjustment;
     };
 
   sleep 60;

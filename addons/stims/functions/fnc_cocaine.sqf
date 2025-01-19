@@ -60,7 +60,7 @@ if !(EGVAR(common,checkMultiplayer)) then {
     };
 
 if (EGVAR(common,ace)) then {
-[player, QCLASS(cocaine), 0, 1800, 25, 0, 25] call ace_medical_status_fnc_addMedicationAdjustment;
+[player, QCLASS(cocaine), 0, 1800, 25, 0, 25, 1] call ace_medical_status_fnc_addMedicationAdjustment;
 };
 
 player enableFatigue false;
