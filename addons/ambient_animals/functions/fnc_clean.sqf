@@ -17,7 +17,7 @@
 
 private _players = call EFUNC(common,listPlayers);
 
-if (count GVAR(registeredEntities) == 0) exitWith {};
+if (count GVAR(registeredEntities) isEqualTo 0) exitWith {};
 
 {
     private _entity = _x;

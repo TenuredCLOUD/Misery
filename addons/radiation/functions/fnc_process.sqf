@@ -46,7 +46,7 @@ if (EGVAR(common,debug)) then {
     systemChat format ["Effective Radiation Dose: %1", _effectiveDose];
 };
 
-    private _leftRadZone = GVAR(areas) findIf {player inArea _x} == -1;
+    private _leftRadZone = GVAR(areas) findIf {player inArea _x} isEqualTo -1;
 
     if (_leftRadZone) exitWith {
         player setVariable [QGVAR(insideArea), false, true];

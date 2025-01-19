@@ -25,7 +25,7 @@ params ["_classname"];
         private _type = typeOf _unit;
         private _unsafeProjectiles = GVAR(ballisticsMap) getOrDefault [_type, []];
 
-        if (_unsafeProjectiles findIf {_x isEqualTo _projectile} != -1) then {
+        if (_unsafeProjectiles findIf {_x isEqualTo _projectile} isNotEqualTo -1) then {
             _unit call FUNC(destroy);
             if (isPlayer _instigator) then {
                 private _displayName = getText (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");

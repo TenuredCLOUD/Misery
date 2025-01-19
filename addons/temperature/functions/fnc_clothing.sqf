@@ -33,42 +33,42 @@ if(((toLower(uniform _man))find "wetsuit")>-1)then{_u=_u * 2};
 
 // Extra warmth for ushankas, balaclavas, beanies, and shemags: (+calc if facewear / helmet has no value)
 if(((toLower(headgear _man))find "watchcap")>-1)then{
-if (_h < 6 || _h == 0) then {
+if (_h < 6 || _h isEqualTo 0) then {
 _h=((6) * 3);
 }else{
 _h=_h * 3;
 };
 };
 if(((toLower(headgear _man))find "ushanka")>-1)then{
-if (_h < 6 || _h == 0) then {
+if (_h < 6 || _h isEqualTo 0) then {
 _h=((6) * 3);
 }else{
 _h=_h * 3;
 };
 };
 if(((toLower(headgear _man))find "bala")>-1)then{
-if (_h < 6 || _h == 0) then {
+if (_h < 6 || _h isEqualTo 0) then {
 _h=((6) * 3);
 }else{
 _h=_h * 3;
 };
 };
 if(((toLower(headgear _man))find "shem")>-1)then{
-if (_h < 6 || _h == 0) then {
+if (_h < 6 || _h isEqualTo 0) then {
 _h=((6) * 3);
 }else{
 _h=_h * 3;
 };
 };
 if(((toLower(goggles _man))find "bala")>-1)then{
-if (_g < 6 || _g == 0) then {
+if (_g < 6 || _g isEqualTo 0) then {
 _g=((6) * 3);
 }else{
 _g=_g * 3;
 };
 };
 if(((toLower(goggles _man))find "shem")>-1)then{
-if (_g < 6 || _g == 0) then {
+if (_g < 6 || _g isEqualTo 0) then {
 _g=((6) * 3);
 }else{
 _g=_g * 3;

@@ -23,11 +23,11 @@ private _failedMarkers = [];
 {
     private _marker = _x;
     private _markerShape = markerShape _marker;
-    if (_markerShape != "RECTANGLE" && _markerShape != "ELLIPSE") then {
+    if (_markerShape isNotEqualTo "RECTANGLE" && _markerShape isNotEqualTo "ELLIPSE") then {
         private _msg = format ["Safezone marker (%1) is either not an area marker or does not exist, remove it from the list.", _marker];
         [QUOTE(COMPONENT_BEAUTIFIED), _msg] call EFUNC(common,debugMessage);
         _failedMarkers pushBackUnique _marker;
     };
 } forEach GVAR(areas);
 
-count _failedMarkers == 0
+count _failedMarkers isEqualTo 0

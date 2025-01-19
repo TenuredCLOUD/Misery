@@ -17,7 +17,7 @@
 
 private _dialog = findDisplay 982390;
 
-if (currentAction == "buy") then {
+if (currentAction isEqualTo "buy") then {
 [] call FUNC(processPurchase);
 } else {
 [] call FUNC(processSell);

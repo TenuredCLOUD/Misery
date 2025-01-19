@@ -15,7 +15,7 @@
 [{
     params ["_args", "_handle"];
 
-    private _leftArea = GVAR(areas) findIf {player inArea _x} == -1;
+    private _leftArea = GVAR(areas) findIf {player inArea _x} isEqualTo -1;
 
     if (_leftArea) exitWith {
         player setVariable [QGVAR(insideArea), false, true];

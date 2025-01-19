@@ -21,7 +21,7 @@ private _switchModeButton = _dialog displayCtrl 1600;
 private _IconCtrl = _dialog displayCtrl 1200;
 private _IconTxt = _dialog displayCtrl 1004;
 
-if (currentAction == "buy") then {
+if (currentAction isEqualTo "buy") then {
     currentAction = "sell";
 _switchModeButton ctrlSetText "Buy Menu";
 _IconCtrl ctrlSetText nil;

@@ -34,7 +34,7 @@ _ailments = player getVariable QCLASS(ailments);
 
 if ([player] call EFUNC(common,nearFire)) then {
 
-    if ((_MPlayertemp < 20) && (!(_ailments find "PARASITES" != -1 || _ailments find "INFECTION" != -1))) then {
+    if ((_MPlayertemp < 20) && (!(_ailments find "PARASITES" isNotEqualTo -1 || _ailments find "INFECTION" isNotEqualTo -1))) then {
 
        if (abs(_MExposure) < 0.5) exitWith {
         player setVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];
@@ -57,9 +57,9 @@ if ([player] call EFUNC(common,nearFire)) then {
 //---------------------------
 //Inside house check (checks if player is "boxed in" and under roof)
 
-if (insideBuilding player == 1) then {
+if (insideBuilding player isEqualTo 1) then {
 
-    if ((_MPlayertemp < 20) && (!(_ailments find "PARASITES" != -1 || _ailments find "INFECTION" != -1))) then {
+    if ((_MPlayertemp < 20) && (!(_ailments find "PARASITES" isNotEqualTo -1 || _ailments find "INFECTION" isNotEqualTo -1))) then {
 
         if (abs(_MExposure) < 0.5) exitWith {
         player setVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];
@@ -84,7 +84,7 @@ if (insideBuilding player == 1) then {
 
 if !(isNull objectParent player) then {
 
-    if ((_MPlayertemp < 20) && (!(_ailments find "PARASITES" != -1 || _ailments find "INFECTION" != -1))) then {
+    if ((_MPlayertemp < 20) && (!(_ailments find "PARASITES" isNotEqualTo -1 || _ailments find "INFECTION" isNotEqualTo -1))) then {
 
         if (abs(_MExposure) < 0.5) exitWith {
         player setVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];

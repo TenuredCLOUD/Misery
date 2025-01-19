@@ -27,7 +27,7 @@ if !(call FUNC(checkAreas)) exitWith {
         private _isPlayerHandled = _player getVariable [QGVAR(insideArea), false];
 
         if (!_isPlayerHandled) then {
-            private _isInsideZone = GVAR(areas) findIf {_player inArea _x} != -1;
+            private _isInsideZone = GVAR(areas) findIf {_player inArea _x} isNotEqualTo -1;
 
             if (_isInsideZone) then {
                 _player setVariable [QGVAR(insideArea), true, true];

@@ -19,8 +19,8 @@ fnc_glucose = {
 params ["_c", "_text"];
 
 if (!hasInterface || {!alive player}) exitWith {};
-if (_c == 0) exitWith {titleText [_text, "PLAIN DOWN"];}; //exit loop
-player setVariable [QEGVAR(survival,hunger), (_MHunger + 5)];
+if (_c isEqualTo 0) exitWith {titleText [_text, "PLAIN DOWN"];}; //exit loop
+player setVariable [QCLASS(hunger), (_MHunger + 5)];
 _c = _c - 1;
 
 [{ _this call fnc_glucose;}, [_c, _text], 10] call CBA_fnc_waitAndExecute;

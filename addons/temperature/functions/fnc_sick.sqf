@@ -23,7 +23,7 @@
 
     switch (true) do {
 
-    case ((_ailments find "PARASITES" != -1 || _ailments find "INFECTION" != -1) && _MPlayertemp > 20): {
+    case ((_ailments find "PARASITES" isNotEqualTo -1 || _ailments find "INFECTION" isNotEqualTo -1) && _MPlayertemp > 20): {
 
         private _sickCalc_1 = MACRO_TEMPERATURE_SICKEXPOSURE(_MPlayertemp); //- this value scales
 
@@ -41,7 +41,7 @@
     };
 };
 
-    case ((_ailments find "PARASITES" != -1 || _ailments find "INFECTION" != -1) && _MPlayertemp < 20): {
+    case ((_ailments find "PARASITES" isNotEqualTo -1 || _ailments find "INFECTION" isNotEqualTo -1) && _MPlayertemp < 20): {
 
         private _sickCalc_2 = MACRO_TEMPERATURE_COLDEXPOSURE(_MPlayertemp); //- this value scales
 
@@ -59,7 +59,7 @@
     };
 };
 
- case ((_ailments find "PARASITES" != -1 || _ailments find "INFECTION" != -1) && _MPlayertemp == 20): {
+ case ((_ailments find "PARASITES" isNotEqualTo -1 || _ailments find "INFECTION" isNotEqualTo -1) && _MPlayertemp isEqualTo 20): {
 
         private _sickcalc3 = MACRO_TEMPERATURE_SICKEXPOSURE(_MPlayertemp); //- this value scales
 

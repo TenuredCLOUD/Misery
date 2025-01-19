@@ -144,7 +144,7 @@ disableSerialization;
 
     if (isClass _cfg) then {
     private _picPath = getText (_cfg >> "picture");
-    if (_picPath != "") then {
+    if (_picPath isNotEqualTo "") then {
         _CurrMag ctrlSetText _picPath;
     } else {
         _CurrMag ctrlShow false;
@@ -235,7 +235,7 @@ disableSerialization;
     _poison = _ailments findIf {(_x select 0) isEqualTo "Poisoned"};
     _infection = _ailments findIf {(_x select 0) isEqualTo "Bacterial Infection"};
 
-    if(_ailments find "PARASITES" != -1 && EGVAR(survival,ailments)) then {
+    if(_ailments find "PARASITES" isNotEqualTo -1 && EGVAR(survival,ailments)) then {
         ["ailment","Parasite Infection", QPATHTOEF(icons,data\parasites_ca.paa), "You are infected with Parasites, You feel a gnawing hunger that is unsatiable, as well as unquenchable thirst..."] call FUNC(addBuffOrAilment);
     }else{
     if (_parasites > -1) then {
@@ -295,7 +295,7 @@ if (_exposure >= 1) then {
     ["ailment", _heatexpoAilment, format ["data\%1.paa", (_imageNames select _heatexposureindex)], format ["%1", (_HeatExpolevels select _heatexposureindex)]] call FUNC(addBuffOrAilment);
 };
 
-if (_exposure == 0) then {
+if (_MExposure isEqualTo 0) then {
 {
         private _ailmentName = _x select 0;
         if (_ailmentName in (_ColdExposureAilments + _HeatExposureAilments)) then {
@@ -307,7 +307,7 @@ if (_exposure == 0) then {
 } forEach _ailments;
 };
 
-if (EGVAR(inventory,hudLayout) == 0) then {
+if (EGVAR(inventory,hudLayout) isEqualTo 0) then {
 
 if (EGVAR(common,ace)) then {
 _BloodtoVal = round(_Health / 6 * 100);
@@ -330,7 +330,7 @@ _FatigueNum ctrlSetText _ValtoBarFatigue;
 
 }else{
 
-if (EGVAR(inventory,hudLayout) == 1) then {
+if (EGVAR(inventory,hudLayout) isEqualTo 1) then {
 if (EGVAR(common,ace)) then {
 _HealthNumVal = format ["%1", round(_Health / 6 * 100)];
 _HealthNum ctrlSetText _HealthNumVal;
@@ -362,7 +362,7 @@ _FatigueNum ctrlSetText _FatigueNumVal;
     };
         };
 
-    if (insideBuilding player == 1) then {
+    if (insideBuilding player isEqualTo 1) then {
     ["buff","Sheltered", QPATHTOEF(icons,data\shelter_ca.paa), "You are sheltered from the weather, while inside you cannot build a fire due to smoke inhalation..."] call FUNC(addBuffOrAilment);
     }else{
     if (_ShelterBuff > -1) then {

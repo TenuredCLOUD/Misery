@@ -37,7 +37,7 @@ if (count _selectedRecipe > 0) then {
     private _recipeName = _selectedRecipe select 0;
 
     private _itemDisplayName_1 = getText (configFile >> "CfgWeapons" >> _recipeName >> "displayName");
-        if (_itemDisplayName_1 == "") then {
+        if (_itemDisplayName_1 isEqualTo "") then {
             _itemDisplayName_1 = getText (configFile >> "CfgMagazines" >> _recipeName >> "displayName");
         };
 
@@ -46,9 +46,9 @@ if (count _selectedRecipe > 0) then {
     {
         private _item = _x select 0;
         private _count = _x select 1;
-        if (_item != "CraftingTime" && _item != "OutputCount" && _item != "ToBeReplaced" && _item != "Audio" && {_count > 0}) then {
+        if (_item isNotEqualTo "CraftingTime" && _item isNotEqualTo "OutputCount" && _item isNotEqualTo "ToBeReplaced" && _item isNotEqualTo "Audio" && {_count > 0}) then {
             private _itemDisplayName_2 = getText (configFile >> "CfgWeapons" >> _item >> "displayName");
-            if (_itemDisplayName_2 == "") then {
+            if (_itemDisplayName_2 isEqualTo "") then {
                 _itemDisplayName_2 = getText (configFile >> "CfgMagazines" >> _item >> "displayName");
             };
             private _index = _reqList lbAdd format ["%1 x %2", _itemDisplayName_2, _count];

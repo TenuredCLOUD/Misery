@@ -15,7 +15,7 @@ if (GVAR(enhancedExposure)) then {
 //Reactivate Geiger if picking up active one:
 player addEventHandler ["Take", {
 params ["_unit", "_container", "_item"];
-if (_item == QCLASS(geiger_On)) then {
+if (_item isEqualTo QCLASS(geiger_On)) then {
 if (isNil {(_this select 0) getVariable "GeigerON"}) then {
 (_this select 0) setVariable ["GeigerON", true,true];
         };
@@ -25,7 +25,7 @@ if (isNil {(_this select 0) getVariable "GeigerON"}) then {
 //Kill Detection var for Geiger if you drop it:
 player addEventHandler ["Put", {
 params ["_unit", "_container", "_item"];
-if (_item == QCLASS(geiger_On)) then {
+if (_item isEqualTo QCLASS(geiger_On)) then {
 if ((_this select 0) getVariable ["GeigerON", true]) then {
         (_this select 0) setVariable ["GeigerON", nil, true];
             };

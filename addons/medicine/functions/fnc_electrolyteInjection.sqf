@@ -19,8 +19,8 @@ fnc_electrolyte = {
 params ["_c", "_text"];
 
 if (!hasInterface || {!alive player}) exitWith {};
-if (_c == 0) exitWith {titleText [_text, "PLAIN DOWN"];}; //exit loop
-player setVariable [QEGVAR(survival,thirst), (_MThirst + 5)];
+if (_c isEqualTo 0) exitWith {titleText [_text, "PLAIN DOWN"];}; //exit loop
+player setVariable [QCLASS(thirst), (_MThirst + 5)];
 _c = _c - 1;
 
 [{ _this call fnc_electrolyte;}, [_c, _text], 10] call CBA_fnc_waitAndExecute;

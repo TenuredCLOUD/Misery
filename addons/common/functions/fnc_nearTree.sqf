@@ -28,7 +28,7 @@ if (isNull objectParent player) then {
     //Check if nearby trees are damaged:
     private _nearbyTrees = nearestTerrainObjects [player, ["TREE","SMALL TREE"], 2.5, true, true];
     {
-    if (damage _x == 1) then {
+    if (damage _x isEqualTo 1) then {
         _found = false;
         if (EGVAR(common,debug)) then {systemChat format["[Wood collection (Hands)]: The tree at position %1 is fallen, and doesn't offer any more wood...",getPosATL _x];};
     };

@@ -11,7 +11,6 @@ PREP(isModLoaded);
 PREP(itemDecrement);
 PREP(itemSwap);
 PREP(listPlayers);
-PREP(lootPos);
 PREP(lowerCaseArray);
 PREP(modLoadedPrep);
 PREP(nearCraftingStation);

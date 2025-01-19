@@ -26,7 +26,7 @@ if (!isNull findDisplay 982379) exitWith { //Double make sure script exits after
     private _outputItem = _x select 0;
     private _requirements = _x select 1;
     private _displayName = getText (configFile >> "CfgWeapons" >> _outputItem >> "displayName");
-    if (_displayName == "") then {
+    if (_displayName isEqualTo "") then {
         _displayName = getText (configFile >> "CfgMagazines" >> _outputItem >> "displayName");
     };
     if (EGVAR(common,debug)) then {

@@ -54,7 +54,7 @@ private _fuelLevel = _Generator getVariable [QCLASS(generatorFuelLevel), 100];
 _progressIndicator = "";
 
 for "_i" from 0 to _fuelLevel do {
-    if (_i % 5 == 0) then {_progressIndicator = _progressIndicator + "-"};
+    if (_i % 5 isEqualTo 0) then {_progressIndicator = _progressIndicator + "-"};
 };
 
 _displayedText = format ["Fuel Level:%1%2%3%1[%4]", endl, _fuelLevel, "%", _progressIndicator];

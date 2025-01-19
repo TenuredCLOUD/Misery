@@ -29,7 +29,7 @@ private _hasAll = true;
     if (EGVAR(common,debug)) then {
     systemChat format["Checking 1: %1",_itemArray];
     };
-    if (_itemArray isEqualType [] && {_itemArray select 0 != "CraftingTime"} && {_itemArray select 0 != "OutputCount"} && {_itemArray select 0 != "ToBeReplaced"} && {_itemArray select 0 != "Audio"}) then {
+    if (_itemArray isEqualType [] && {_itemArray select 0 isNotEqualTo "CraftingTime"} && {_itemArray select 0 isNotEqualTo "OutputCount"} && {_itemArray select 0 isNotEqualTo "ToBeReplaced"} && {_itemArray select 0 isNotEqualTo "Audio"}) then {
         if (EGVAR(common,debug)) then {
         systemChat format["Checking 2: %1",_itemArray];
         };

@@ -33,8 +33,8 @@ while {true} do {
 
                 if (_distance > Misery_MarketShift_Dist) then {
                     private _shop = _trader getVariable "shop";
-                    private _items = _shop select (_shop findIf {_x select 0 == "Items"}) select 1;
-                    private _shopFunds = _shop select (_shop findIf {_x select 0 == "ShopFunds"}) select 1;
+                    private _items = _shop select (_shop findIf {_x select 0 isEqualTo "Items"}) select 1;
+                    private _shopFunds = _shop select (_shop findIf {_x select 0 isEqualTo "ShopFunds"}) select 1;
 
                     if (EGVAR(common,debug)) then {
                         systemChat format ["Processing trader %1, initial funds: %2", _trader, [_shopFunds, 1, 2, true] call CBA_fnc_formatNumber];
@@ -77,7 +77,7 @@ while {true} do {
                         _items set [_index, _itemData];
                     } forEach _items;
 
-                    _shop set [(_shop findIf {_x select 0 == "ShopFunds"}), ["ShopFunds", _shopFunds]];
+                    _shop set [(_shop findIf {_x select 0 isEqualTo "ShopFunds"}), ["ShopFunds", _shopFunds]];
                     _trader setVariable ['shop', _shop, true];
 
                     if (EGVAR(common,debug)) then {

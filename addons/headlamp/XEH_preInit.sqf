@@ -8,7 +8,7 @@ ADDON = false;
 //Headlamp object blacklister (auto) for GRAD persistence:
 if (isServer) then {
 if (!isNil "grad_persistence_blacklist") then {
-    if ((grad_persistence_blacklist find (toLower "#lightpoint") == -1) && (grad_persistence_blacklist find (toUpper "#lightpoint") == -1)) then {
+    if ((grad_persistence_blacklist find (toLower "#lightpoint") isEqualTo -1) && (grad_persistence_blacklist find (toUpper "#lightpoint") isEqualTo -1)) then {
         ["#lightpoint"] call grad_persistence_fnc_blacklistClasses;
         if (EGVAR(common,debug)) then {systemChat "[Misery Headlamp] GRAD Persistence detected, Adding light object class to blacklist for saving / reloading..."};
         };
@@ -19,7 +19,7 @@ if (!isNil "grad_persistence_blacklist") then {
 if (isServer) then {
     addMissionEventHandler ["EntityKilled", {
         params ["_killed", "_killer", "_instigator"];
-        if (_killed == player) then {
+        if (_killed isEqualTo player) then {
             if (!isNil {_killed getVariable QCLASS(headlampStatus)}) then {
                 private _headlamp = _killed getVariable QCLASS(headlampStatus);
                 deleteVehicle _headlamp; // Delete the light
@@ -33,7 +33,7 @@ if (isServer) then {
 if (hasInterface) then {
     player addEventHandler ["Put", {
         params ["_unit", "_container", "_item"];
-        if (_item == QCLASS(headlamp_On)) then {
+        if (_item isEqualTo QCLASS(headlamp_On)) then {
             if (!isNil {_unit getVariable QCLASS(headlampStatus)}) then {
                 private _headlamp = _unit getVariable QCLASS(headlampStatus);
                 deleteVehicle _headlamp; // Delete the light
@@ -47,7 +47,7 @@ if (hasInterface) then {
 if (hasInterface) then {
     player addEventHandler ["Take", {
         params ["_unit", "_container", "_item"];
-        if (_item == QCLASS(headlamp_On)) then {
+        if (_item isEqualTo QCLASS(headlamp_On)) then {
             // If the player doesn't already have an active headlamp...
             if (isNil {_unit getVariable QCLASS(headlampStatus)}) then {
                 // Create the light and attach it to the player.

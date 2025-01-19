@@ -26,7 +26,7 @@
     MiseryCanFish = true;
 
     //Force holstering
-    if (currentWeapon player != "") then {
+    if (currentWeapon player isNotEqualTo "") then {
     player action["SWITCHWEAPON",player,player,-1];
     };
 
@@ -44,7 +44,7 @@
     titleText ["Fishing...", "PLAIN DOWN"];
     };
 
-    if (_random == 25) exitWith {
+    if (_random isEqualTo 25) exitWith {
     titleText ["You caught a fish!", "PLAIN DOWN"];
 
     _todelete = [];
@@ -59,7 +59,7 @@
     deleteVehicle Misery_Isfishing;
     };
 
-    if (_random == 50) exitWith {
+    if (_random isEqualTo 50) exitWith {
     titleText ["Something broke, or flew off the line, and you failed to catch anything...", "PLAIN DOWN"];
     _part = selectRandom [QCLASS(fishingSpool), QCLASS(fishhook), QCLASS(worms), QCLASS(worms), QCLASS(worms)];
     player removeItem _part;
@@ -68,7 +68,7 @@
     deleteVehicle Misery_Isfishing;
     };
 
-    if (_random == 75) exitWith {
+    if (_random isEqualTo 75) exitWith {
     titleText ["You lost your bait...", "PLAIN DOWN"];
     _part = selectRandom [QCLASS(worms), QCLASS(worms)];
     player removeItem _part;
@@ -77,7 +77,7 @@
     deleteVehicle Misery_Isfishing;
     };
 
-    if (_random == 100) exitWith {
+    if (_random isEqualTo 100) exitWith {
     titleText ["Your hook and bait are gone...", "PLAIN DOWN"];
     player removeItem QCLASS(fishhook);
     player removeItem QCLASS(worms);

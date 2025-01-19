@@ -21,12 +21,12 @@ private _dialog = findDisplay 982390;
 private _categoryDropdown = _dialog displayCtrl 2100;
 _trader = player getVariable "currentTrader";
 _shop = _trader getVariable "shop";
-_items = _shop select (_shop findIf {_x select 0 == "Items"}) select 1;
+_items = _shop select (_shop findIf {_x select 0 isEqualTo "Items"}) select 1;
 
     _categories = [];
     {
         _category = _x select 1;
-    if (_categories findIf {_x isEqualTo _category} == -1) then {
+    if (_categories findIf {_x isEqualTo _category} isEqualTo -1) then {
         _categories pushBack _category;
         };
     } forEach _items;

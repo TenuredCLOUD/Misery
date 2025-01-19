@@ -25,7 +25,7 @@
     MiseryCanSawWood = true;
 
     //Force holstering
-    if (currentWeapon player != "") then {
+    if (currentWeapon player isNotEqualTo "") then {
     player action["SWITCHWEAPON",player,player,-1];
     };
 
@@ -50,7 +50,7 @@
     titleText [format["Sawing progress... %1%2", _progcalc, "%"], "PLAIN DOWN"];
     };
 
-    if (_random == 100) exitWith {
+    if (_random isEqualTo 100) exitWith {
     titleText ["Your saw ran out of fuel...", "PLAIN DOWN"];
     player removeItem QCLASS(chainsaw);
     player addItem QCLASS(chainsaw_Empty);
