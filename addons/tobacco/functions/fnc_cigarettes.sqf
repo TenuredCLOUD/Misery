@@ -32,7 +32,7 @@ if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
 };
 
 if (EGVAR(psychosis,enabled)) then {
-    [-0.1] call EFUNC(psychosis,addModifier);
+    [-0.1, "psychosis"] call EFUNC(common,addModifier);
 };
 
 if (_hasMatch) exitWith {
