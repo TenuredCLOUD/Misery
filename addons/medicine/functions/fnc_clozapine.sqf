@@ -25,11 +25,11 @@ titleText ["You take a clozapine pill...", "PLAIN DOWN"];
 player removeItem QCLASS(clozapineBox);
 
 if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
-    [player, QCLASS(clozapineBox), 120, 300, 5, 0, 5] call ace_medical_status_fnc_addMedicationAdjustment;
+    [player, QCLASS(clozapineBox), 120, 300, 5, 0, 5, 1] call ace_medical_status_fnc_addMedicationAdjustment;
 };
 
 if (!EGVAR(psychosis,enabled)) exitWith {};
 
 [{
-    [-0.1] call EFUNC(psychosis,addModifier);
+    [-0.1, "psychosis"] call EFUNC(common,addModifier);
 }, [], 60] call CBA_fnc_waitAndExecute;

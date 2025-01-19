@@ -17,7 +17,7 @@
 if (!hasInterface) exitWith {};
 
 if (EGVAR(common,ace)) then {
-[player, QCLASS(thrombomodulin), 120, 300, 1, 0, 1] call ace_medical_status_fnc_addMedicationAdjustment;
+[player, QCLASS(thrombomodulin), 120, 300, 1, 0, 1, 1] call ace_medical_status_fnc_addMedicationAdjustment;
 };
 
 titleText ["You inject the Thrombomodulin...", "PLAIN DOWN"];

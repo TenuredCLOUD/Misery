@@ -14,7 +14,7 @@
  *
 */
 
-if !(EGVAR(cognito_hazard,enabled)) exitWith {};
+if !(EGVAR(cognito_hazard,enabled)) exitWith {0};
 
 if (player getVariable [QEGVAR(cognito_hazard,insideArea), false]) exitWith {
     GVAR(unnaturalIncrease)

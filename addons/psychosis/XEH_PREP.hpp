@@ -1,4 +1,3 @@
-PREP(addModifier);
 PREP(effects);
 PREP(loop);
 PREP(night);

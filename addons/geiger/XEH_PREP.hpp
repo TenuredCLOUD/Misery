@@ -1,3 +1,3 @@
-PREP(bar);
-PREP(batteries);
+PREP(addBatteries);
+PREP(keybind);
 PREP(readings);

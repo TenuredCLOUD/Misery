@@ -22,8 +22,8 @@ player setUnitLoadout EGVAR(common,defaultLoadout) select 0;
 player setVariable [QEGVAR(survival,hunger), MACRO_PLAYER_DEFAULTS_HIGH];
 player setVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH];
 player setVariable [QEGVAR(survival,energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
-player setVariable [QEGVAR(survival,temperature), MACRO_PLAYER_DEFAULTS_TEMP];
-player setVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];
+player setVariable [QEGVAR(temperature,thermalIndex), MACRO_PLAYER_DEFAULTS_TEMP];
+player setVariable [QEGVAR(temperature,exposure), MACRO_PLAYER_DEFAULTS_LOW];
 player setVariable [QEGVAR(survival,radiation), MACRO_PLAYER_DEFAULTS_LOW];
 player setVariable [QEGVAR(survival,infection), MACRO_PLAYER_DEFAULTS_LOW];
 player setVariable [QEGVAR(survival,parasites), MACRO_PLAYER_DEFAULTS_LOW];
@@ -37,7 +37,6 @@ player setVariable [QEGVAR(hydrology,knowledge), []];
 
 // Banking data is not reset unless fresh player.
 if (_newSave) then {
-    player setVariable [QEGVAR(bank,currency), MACRO_PLAYER_DEFAULTS_LOW];
-    player setVariable [QEGVAR(bank,bankedCurrency), MACRO_PLAYER_DEFAULTS_LOW];
-    player setVariable [QEGVAR(bank,lastBankLoan), MACRO_PLAYER_DEFAULTS_LOW];
+    player setVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
+    player setVariable [QEGVAR(currency,bankedFunds), MACRO_PLAYER_DEFAULTS_LOW];
 };
