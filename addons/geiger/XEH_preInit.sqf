@@ -3,6 +3,6 @@
 ADDON = false;
 
 #include "XEH_PREP.hpp"
-#include "keybinds.sqf"
+#include "keybinds.inc.sqf"
 
 ADDON = true;
