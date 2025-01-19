@@ -14,11 +14,13 @@
  *
 */
 
-private _amount = parseNumber (ctrlText ((findDisplay 483729) displayCtrl 1400));
-private _playerFunds = player getVariable QCLASS(currency);
-    if (_amount <= _playerFunds) then {
-        player setVariable [QCLASS(currency), _playerFunds - _amount];
-        MiseryCurrency_PhoenixAccount = MiseryCurrency_PhoenixAccount + _amount;
-        publicVariable "MiseryCurrency_PhoenixAccount";
-    };
+// ToDo
 
+private _amount = parseNumber (ctrlText ((findDisplay 483729) displayCtrl 1400));
+private _playerFunds = player getVariable [QGVAR(currency), MACRO_PLAYER_DEFAULTS_LOW];
+
+if (_amount > _playerFunds) exitWith {};
+
+player setVariable [QGVAR(currency), _playerFunds - _amount];
+MiseryCurrency_PhoenixAccount = MiseryCurrency_PhoenixAccount + _amount;
+publicVariable "MiseryCurrency_PhoenixAccount";

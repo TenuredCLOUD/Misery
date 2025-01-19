@@ -1,27 +1,24 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Bank Generater
- * Passes arguments to generate a banker / bank object
+ * Creates a bank on an object.
  *
  * Arguments:
- * 0: Object you want to have a bank interaction with <OBJECT>
+ * 0: Bank Object <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [trader1] call misery_bank_fnc_generate;
+ * [trader1] call misery_bank_fnc_createBank;
  *
 */
 
 params ["_traderName"];
 
-if (isNil QCLASS(BankName)) then {Misery_BankName = "New World Bank"};
-
 [
     _traderName,
-    format ["Open %1", Misery_BankName],
+    format ["Open %1", GVAR(bankName)],
     "\a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa",
     "\a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa",
     "_this distance _target < 3",
@@ -29,11 +26,10 @@ if (isNil QCLASS(BankName)) then {Misery_BankName = "New World Bank"};
     {},
     {},
     {
-    params ["_target", "_caller", "_actionId", "_arguments"];
-    createDialog QCLASS(banking_ui);
+        createDialog QCLASS(banking_ui);
     },
     {},
-    [_traderName],
+    [],
     0.1,
     nil,
     false,
