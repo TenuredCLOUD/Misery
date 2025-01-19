@@ -49,7 +49,7 @@ if !(hasInterface) exitWith {};
 
     _randomnutrient = [1, 2] call BIS_fnc_randomInt; //random nutrient deficiency hunger or thirst
 
-    if (_randomnutrient == 1) then {
+    if (_randomnutrient isEqualTo 1) then {
     player setVariable [QCLASS(thirst), (_MThirst - ((GVAR(thirstIncrement))))]; //player setVariable [QCLASS(thirst), (_MThirst -  ((GVAR(thirstIncrement))toFixed 2))];
     }else{
     player setVariable [QCLASS(hunger), (_MHunger - ((GVAR(hungerIncrement))))]; //player setVariable [QCLASS(hunger), (_MHunger -  ((GVAR(hungerIncrement))toFixed 2))];
@@ -64,7 +64,7 @@ if !(hasInterface) exitWith {};
     _Playerweight = round(_bagweightload * 100);
     _Miseryweightdefcalculated = MACRO_WEIGHTCALC(_Playerweight);
 
-    if (_randomnutrientweight == 1) then {
+    if (_randomnutrientweight isEqualTo 1) then {
     player setVariable [QCLASS(thirst), (_MThirst - (_Miseryweightdefcalculated))]; //player setVariable [QCLASS(thirst), (_MThirst -  ((_Miseryweightdefcalculated)))]; //player setVariable [QCLASS(thirst), (_MThirst -  ((_Miseryweightdefcalculated)toFixed 2))];
     }else{
     player setVariable [QCLASS(hunger), (_MHunger - (_Miseryweightdefcalculated))]; //player setVariable [QCLASS(hunger), (_MHunger -  ((_Miseryweightdefcalculated)))]; //player setVariable [QCLASS(hunger), (_MHunger -  ((_Miseryweightdefcalculated)toFixed 2))];
@@ -72,7 +72,7 @@ if !(hasInterface) exitWith {};
 
     if !(EGVAR(common,checkMultiplayer)) then { //If SP - and Weight deficiency then start increasing sleepiness var
     _randomsleepweight = [1, 2] call BIS_fnc_randomInt; //random sleep decrease
-    if (_randomsleepweight == 1) then {
+    if (_randomsleepweight isEqualTo 1) then {
     _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
     player setVariable [QCLASS(energyDeficit), (_MSleepiness + (_Miseryweightdefcalculated))]; //player setVariable [QCLASS(energyDeficit), (_MSleepiness +  ((_Miseryweightdefcalculated)))]; //player setVariable [QCLASS(energyDeficit), (_MSleepiness +  ((_Miseryweightdefcalculated)toFixed 2))];
         };
@@ -96,12 +96,12 @@ if !(hasInterface) exitWith {};
     };
 
     //MP "Tired" Debuff removal:
-    if (EGVAR(common,checkMultiplayer) && _ailments find "TIRED" != -1) then {_ailments deleteAt (_ailments find "TIRED"); player setVariable [QCLASS(ailments), _ailments];};
+    if (EGVAR(common,checkMultiplayer) && _ailments find "TIRED" isNotEqualTo -1) then {_ailments deleteAt (_ailments find "TIRED"); player setVariable [QCLASS(ailments), _ailments];};
 
     //Blackout due to extreme fatigue:
     _blackout = true;
 
-    if ((_ailments find "TIRED" != -1) && (!_MIsSleeping)) then {
+    if ((_ailments find "TIRED" isNotEqualTo -1) && (!_MIsSleeping)) then {
 
         if ((random 100) >  (GVAR(blackoutChance))) then {_blackout = false};
 
@@ -114,7 +114,7 @@ if !(hasInterface) exitWith {};
 
     _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_DEFAULTS_HIGH];
 
-    if ((_ailments find "PARASITES" != -1)) then {player setVariable [QCLASS(hunger), (_MHunger - ((GVAR(hungerIncrement))))]};     //if ((_ailments find "PARASITES" != -1)) then {player setVariable [QCLASS(hunger), (_MHunger -  ((GVAR(hungerIncrement))toFixed 2))]};
+    if ((_ailments find "PARASITES" isNotEqualTo -1)) then {player setVariable [QCLASS(hunger), (_MHunger - ((GVAR(hungerIncrement))))]};     //if ((_ailments find "PARASITES" isNotEqualTo -1)) then {player setVariable [QCLASS(hunger), (_MHunger -  ((GVAR(hungerIncrement))toFixed 2))]};
 };
 
 //--------------------------------------------------------------------------------------------------------------
@@ -132,9 +132,9 @@ if !(hasInterface) exitWith {};
 
             _random = [1, 10] call BIS_fnc_randomInt; //random event for parasite removal
 
-            if (_random == 5 && _rads > 1000 && GVAR(ailments)) then {
+            if (_random isEqualTo 5 && _rads > 1000 && GVAR(ailments)) then {
 
-            if (_ailments find "PARASITES" != -1) then {_ailments deleteAt (_ailments find "PARASITES"); player setVariable [QCLASS(ailments), _ailments];};
+            if (_ailments find "PARASITES" isNotEqualTo -1) then {_ailments deleteAt (_ailments find "PARASITES"); player setVariable [QCLASS(ailments), _ailments];};
         };
 
     //Poison:

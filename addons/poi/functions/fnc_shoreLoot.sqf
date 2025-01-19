@@ -166,7 +166,7 @@ Misery_activePOIs = Misery_activePOIs + 1;
 //If GRAD persistence is active, push Holders to blacklister for saving so POI objects won't save / reload (This will execute only once)
 if (!isNil "grad_persistence_blacklist") then {
     {
-        if ((grad_persistence_blacklist find (toLower _x) == -1) && (grad_persistence_blacklist find (toUpper _x) == -1)) then {
+        if ((grad_persistence_blacklist find (toLower _x) isEqualTo -1) && (grad_persistence_blacklist find (toUpper _x) isEqualTo -1)) then {
             [_x] call grad_persistence_fnc_blacklistClasses;
             if (EGVAR(common,debug)) then {systemChat format ["[Misery POI Framework] GRAD Persistence detected, Adding %1 to blacklist for saving / reloading...", _x]};
         };

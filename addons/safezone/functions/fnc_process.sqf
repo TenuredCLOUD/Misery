@@ -31,7 +31,7 @@ player setVariable [QGVAR(index), _index];
 [{
     params ["_args", "_handle"];
 
-    private _leftSafeZone = GVAR(areas) findIf {player inArea _x} == -1;
+    private _leftSafeZone = GVAR(areas) findIf {player inArea _x} isEqualTo -1;
 
     if (_leftSafeZone) exitWith {
         player allowDamage true;

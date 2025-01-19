@@ -60,7 +60,7 @@ if (!hasInterface) exitWith {};
           player setVariable [QCLASS(thirst), (_MThirst - 50)];
             player setVariable [QCLASS(hunger), (_MHunger - 50)];
 
-          if (EGVAR(survival,ailments) == "ENABLED") then {
+          if (EGVAR(survival,ailments) isEqualTo "ENABLED") then {
           player setVariable [QCLASS(toxicity), (_MPoison + (random 20))]; //random poison amount
           };
 

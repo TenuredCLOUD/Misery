@@ -18,7 +18,7 @@
 //WIP
 
     // private _selected = _list lbCurSel;
-    // if (_selected == -1) exitWith {};
+    // if (_selected isEqualTo -1) exitWith {};
 
     // private _hitpoint = _list lbData _selected;
     // private _requiredItem;

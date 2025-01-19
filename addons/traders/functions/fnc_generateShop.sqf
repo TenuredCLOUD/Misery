@@ -39,7 +39,7 @@ if (isNil "_shop") then {
 _shop = _traderName getVariable "shop"; //refetch data if shop was Nil
 
 // Fetch the shop name
-_shopName = _shop select (_shop findIf {_x select 0 == "ShopName"}) select 1;
+_shopName = _shop select (_shop findIf {_x select 0 isEqualTo "ShopName"}) select 1;
 
 [
     _traderName,

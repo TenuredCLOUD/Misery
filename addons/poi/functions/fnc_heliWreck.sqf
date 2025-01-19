@@ -164,7 +164,7 @@ Misery_activePOIs = Misery_activePOIs + 1;
 //If GRAD persistence is active, push Holders to blacklister for saving so POI objects won't save / reload (This will execute only once)
 if (!isNil "grad_persistence_blacklist") then {
     {
-        if ((grad_persistence_blacklist find (toLower _x) == -1) && (grad_persistence_blacklist find (toUpper _x) == -1)) then {
+        if ((grad_persistence_blacklist find (toLower _x) isEqualTo -1) && (grad_persistence_blacklist find (toUpper _x) isEqualTo -1)) then {
             [_x] call grad_persistence_fnc_blacklistClasses;
             if (EGVAR(common,debug)) then {systemChat format ["[Misery POI Framework] GRAD Persistence detected, Adding %1 to blacklist for saving / reloading...", _x]};
         };
@@ -191,7 +191,7 @@ if (_deleteFlag) exitWith {
      _module setVariable [QCLASS(poiSpawned), false, true];
     //  _WreckID = _module getVariable "Active_Wreck_ID";
     //  _marker = missionNamespace getVariable [format ["Wreck_Marker_%1", _WreckID], ""];
-if (_marker != "") then {
+if (_marker isNotEqualTo "") then {
     // [_marker] remoteExec ["deleteMarkerLocal", 0];
     // missionNamespace setVariable [format ["Wreck_Marker_%1", _WreckID], nil];
 };

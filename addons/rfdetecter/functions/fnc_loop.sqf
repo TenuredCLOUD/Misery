@@ -36,13 +36,13 @@
     MiseryRFLoopdummy attachTo [player, [0, 0, 0], "Pelvis"];
     _RFsoundrandom = selectRandom ["StaticWEIRD1","StaticWEIRD2","StaticWEIRD3","StaticWEIRD4","StaticWEIRD5","StaticWEIRD6","StaticWEIRD7","StaticWEIRD8","StaticWEIRD9","StaticWEIRD10"];
 
-    if (_randomaudio == 5) then {
+    if (_randomaudio isEqualTo 5) then {
     [MiseryRFLoopdummy, [_RFsoundrandom, 50]] remoteExec ["say3D", 0, MiseryRFLoopdummy];
     }else{
     [MiseryRFLoopdummy, ["StaticBASIC", 50]] remoteExec ["say3D", 0, MiseryRFLoopdummy];
     };
 
-    if (_randomunknownREMNANT == 25 && EGVAR(common,remnant)) then {
+    if (_randomunknownREMNANT isEqualTo 25 && EGVAR(common,remnant)) then {
     _group = creategroup [civilian, true];
     _pos = getPos player;
     _pos = [_pos select 0, _pos select 1, _pos select 2];
@@ -58,7 +58,7 @@
     };
         };
 
-    if (_randomunknownDSA == 25 && EGVAR(common,dsa)) then {
+    if (_randomunknownDSA isEqualTo 25 && EGVAR(common,dsa)) then {
     _group = creategroup [civilian, true];
     _pos = getPos player;
     _pos = [_pos select 0, _pos select 1, _pos select 2];

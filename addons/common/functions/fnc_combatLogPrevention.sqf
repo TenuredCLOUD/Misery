@@ -30,7 +30,7 @@ if !(GVAR(combatLogPreventionEnabled) || isMultiplayer) exitWith {};
                         _args set [0, (_iteration -1)];
                         _args set [1, CBA_missionTime];
 
-                        if (_iteration == 0) then {
+                        if (_iteration isEqualTo 0) then {
                             _handle call CBA_fnc_removePerFrameHandler;
                             _abortButton ctrlSetText "Logout";
                             _abortButton ctrlEnable true;

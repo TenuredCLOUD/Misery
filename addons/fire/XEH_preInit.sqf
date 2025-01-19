@@ -17,7 +17,7 @@ if (isServer) then {
         ];
 
         {
-            if ((grad_persistence_blacklist find (toLower _x) == -1) && (grad_persistence_blacklist find (toUpper _x) == -1)) then {
+            if ((grad_persistence_blacklist find (toLower _x) isEqualTo -1) && (grad_persistence_blacklist find (toUpper _x) isEqualTo -1)) then {
                 [_x] call grad_persistence_fnc_blacklistClasses;
                 if (EGVAR(common,debug)) then {systemChat format ["[Misery Fire crafting] GRAD Persistence detected, Adding %1 to blacklist for saving / reloading...", _x]};
             };

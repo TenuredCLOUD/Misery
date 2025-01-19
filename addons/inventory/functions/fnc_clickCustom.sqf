@@ -20,7 +20,7 @@ private _description="";
 
 {
     _description = getText (configFile >> _x >> _item >> "descriptionShort");
-    if (_description != "") exitWith {};
+    if (_description isNotEqualTo "") exitWith {};
 } forEach ["CfgWeapons", "CfgMagazines"];
 
-if (_description == "") exitWith {};
+if (_description isEqualTo "") exitWith {};

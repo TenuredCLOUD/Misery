@@ -27,7 +27,7 @@
         private _IconCtrl = _dialog displayCtrl 1200;
         private _IconTxt = _dialog displayCtrl 1004;
 
-    if (_currselection != -1) then {
+    if (_currselection isNotEqualTo -1) then {
     _cfg = configFile >> "CfgWeapons" >> _selectedItem;
     if (isClass _cfg) then {
         _picPath = getText (_cfg >> "picture");

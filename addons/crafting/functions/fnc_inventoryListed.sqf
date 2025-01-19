@@ -20,7 +20,7 @@ by TenuredCLOUD
 //         lbClear _list;
 //         {
 //             private _displayName = getText (configFile >> "CfgWeapons" >> _x >> "displayName");
-//             if (_displayName == "") then {
+//             if (_displayName isEqualTo "") then {
 //                 _displayName = getText (configFile >> "CfgMagazines" >> _x >> "displayName");
 //             };
 //             private _index = _list lbAdd _displayName;

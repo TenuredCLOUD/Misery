@@ -54,14 +54,14 @@ if (count _matchedRecipe > 0) then {
         _DrinkFSB ctrlShow false;
         _ExitB ctrlShow false;
 
-        if (currentWeapon player != "") then {
+        if (currentWeapon player isNotEqualTo "") then {
         player action["SWITCHWEAPON",player,player,-1];
         };
 
         player playAction "Gear";
 
         private _itemDisplayName = getText (configFile >> "CfgWeapons" >> _outputItem >> "displayName");
-        if (_itemDisplayName == "") then {
+        if (_itemDisplayName isEqualTo "") then {
             _itemDisplayName = getText (configFile >> "CfgMagazines" >> _outputItem >> "displayName");
         };
 

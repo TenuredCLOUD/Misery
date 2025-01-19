@@ -46,7 +46,7 @@ class CLASS(tradingQue_cancel): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = QUOTE(_trader = player getVariable 'currentTrader'; _queue = _trader getVariable 'queue'; _index = _queue find (getPlayerUID player); if (_index != -1) then {_queue deleteAt _index;}; closeDialog 2);
+    onButtonClick = QUOTE(_trader = player getVariable 'currentTrader'; _queue = _trader getVariable 'queue'; _index = _queue find (getPlayerUID player); if (_index isNotEqualTo -1) then {_queue deleteAt _index;}; closeDialog 2);
 };
     };
         };

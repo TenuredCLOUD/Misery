@@ -31,7 +31,7 @@ _Found = false;
 _totalLiters = 0;
 
 {
-    if ((_x select 0) == EGVAR(common,targetVehicleType)) then {
+    if ((_x select 0) isEqualTo EGVAR(common,targetVehicleType)) then {
         _Array=_x;
         _Found = true;
         _fuelTypeIndex = _x select 1;
@@ -56,16 +56,16 @@ _RefuelInterrupt = (findDisplay 982384) displayAddEventHandler ["KeyDown", {
 
 if (MiseryinRefuelzonearea) exitWith {
 
-if (Mis_Refuelcurrencytype == "DIGITALTYPE") then {
+if (Mis_Refuelcurrencytype isEqualTo "DIGITALTYPE") then {
 _playercash = player getVariable [Mis_Refuelfundstype, 0];
 };
 
-if (Mis_Refuelcurrencytype == "ITEMTYPE") then {
-_playercash = {_x == Mis_Refuelfundstype} count items player;
+if (Mis_Refuelcurrencytype isEqualTo "ITEMTYPE") then {
+_playercash = {_x isEqualTo Mis_Refuelfundstype} count items player;
 };
 
-if (Mis_Refuelcurrencytype == "MAGAZINETYPE") then {
-_playercash = {_x == Mis_Refuelfundstype} count magazines player;
+if (Mis_Refuelcurrencytype isEqualTo "MAGAZINETYPE") then {
+_playercash = {_x isEqualTo Mis_Refuelfundstype} count magazines player;
 };
 
 if (_playercash < _fuelCost) exitWith {
@@ -113,16 +113,16 @@ for "_i" from 0 to (_totalLiters + 50) do {
     ctrlSetText [1001, _displayedText];
     sleep _delay;
 
-    if (Mis_Refuelcurrencytype == "DIGITALTYPE") then {
+    if (Mis_Refuelcurrencytype isEqualTo "DIGITALTYPE") then {
         _playercash = player getVariable [Mis_Refuelfundstype, 0];
         player setVariable [Mis_Refuelfundstype, (_playercash - _fundsToDeduct), true];
     };
-    if (Mis_Refuelcurrencytype == "ITEMTYPE") then {
-        _playercash = {_x == Mis_Refuelfundstype} count items player;
+    if (Mis_Refuelcurrencytype isEqualTo "ITEMTYPE") then {
+        _playercash = {_x isEqualTo Mis_Refuelfundstype} count items player;
         for "_j" from 1 to _fundsToDeduct do {player removeItem Mis_Refuelfundstype;};
     };
-    if (Mis_Refuelcurrencytype == "MAGAZINETYPE") then {
-        _playercash = {_x == Mis_Refuelfundstype} count magazines player;
+    if (Mis_Refuelcurrencytype isEqualTo "MAGAZINETYPE") then {
+        _playercash = {_x isEqualTo Mis_Refuelfundstype} count magazines player;
         for "_j" from 1 to _fundsToDeduct do {player removeMagazine Mis_Refuelfundstype;};
     };
 

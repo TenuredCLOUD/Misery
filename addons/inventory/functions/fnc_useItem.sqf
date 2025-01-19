@@ -21,7 +21,7 @@ _debuffs = [] + GVAR(itemEffects);
 _entry = [];
 
 {
-if (_selectedItem==(toUpper(_x select 0))) exitWith {_entry=_x};
+if (_selectedItem isEqualTo (toUpper(_x select 0))) exitWith {_entry=_x};
 }forEach _debuffs;
 
 if ((count _entry)<1) exitWith {};
@@ -61,28 +61,28 @@ if (_checkforCopener && {!("rvg_canOpener" in magazines player) && !("rvg_toolki
 };
 
     //Item replacer
-    if (_replaceWith != "KEEP") then {
+    if (_replaceWith isNotEqualTo "KEEP") then {
     player removeItem _selectedItem;
-    if (_replaceWith != "") then {
+    if (_replaceWith isNotEqualTo "") then {
         player addItem _replaceWith
     };
 };
 
 //Audio
-if (_playaudio != "") then {player say3D [_playaudio,10,1,2,0];}; //[sound, maxDistance, pitch, isSpeech, offset]
+if (_playaudio isNotEqualTo "") then {player say3D [_playaudio,10,1,2,0];}; //[sound, maxDistance, pitch, isSpeech, offset]
 
 //Waittimer
-if (_waittill != 0) then {sleep _waittill}; //delayed effect (good for medication simulation)
+if (_waittill isNotEqualTo 0) then {sleep _waittill}; //delayed effect (good for medication simulation)
 
 //Radiation
-if (_radval !=0) then {player setVariable ["radiation", (_rads + _radval)]};
+if (_radval isNotEqualTo 0) then {player setVariable ["radiation", (_rads + _radval)]};
 
 //Exposure
-if (_exposureval != 0) then {player setVariable [QCLASS(exposure), (_MExposure + _exposureval)];};
+if (_exposureval isNotEqualTo 0) then {player setVariable [QCLASS(exposure), (_MExposure + _exposureval)];};
 
 //Hunger / Thirst
-if (_hunger != 0) then {player setVariable [QCLASS(hunger), (_MHunger + _hunger)];};
-if (_thirst != 0) then {player setVariable [QCLASS(thirst), (_MThirst + _thirst)];};
+if (_hunger isNotEqualTo 0) then {player setVariable [QCLASS(hunger), (_MHunger + _hunger)];};
+if (_thirst isNotEqualTo 0) then {player setVariable [QCLASS(thirst), (_MThirst + _thirst)];};
 
 //Reset to 0 if less than 0:
 if (_MHunger < 0) then {player setVariable [QCLASS(hunger), 0]};
@@ -109,6 +109,6 @@ if ((count _debuffRemove) > 0) then {
 };
 
 //Custom script execution
-if (_script !="") then {
+if (_script isNotEqualTo "") then {
     selectedItem call _script
 };

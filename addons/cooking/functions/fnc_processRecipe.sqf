@@ -48,10 +48,10 @@ if (count _matchedRecipe > 0) then {
     private _requiredItemsCounts = [];
 
     {
-        if (_x select 0 == "CookingTime") then {
+        if (_x select 0 isEqualTo "CookingTime") then {
             _craftingTime = _x select 1;
         } else {
-            if (_x select 0 == "CookingMethod") then {
+            if (_x select 0 isEqualTo "CookingMethod") then {
                 _cookingMethod = _x select 1;
             } else {
                 _requiredItemsCounts pushBack _x;
@@ -65,14 +65,14 @@ if (count _matchedRecipe > 0) then {
         _RecipeB ctrlShow false;
         _ExitB ctrlShow false;
 
-        if (currentWeapon player != "") then {
+        if (currentWeapon player isNotEqualTo "") then {
         player action["SWITCHWEAPON",player,player,-1];
         };
 
         player playAction "Gear";
 
         private _itemDisplayName = getText (configFile >> "CfgWeapons" >> _outputItem >> "displayName");
-        if (_itemDisplayName == "") then {
+        if (_itemDisplayName isEqualTo "") then {
             _itemDisplayName = getText (configFile >> "CfgMagazines" >> _outputItem >> "displayName");
         };
 

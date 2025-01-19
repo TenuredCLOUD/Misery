@@ -38,16 +38,16 @@ private _players = call EFUNC(common,listPlayers);
             private _isGarage = false;
 
             switch true do {
-                case (["barracks", "military", "guardhouse", "terminal", "bunker"] findIf {_x in _buildingName} != -1): {
+                case (["barracks", "military", "guardhouse", "terminal", "bunker"] findIf {_x in _buildingName} isNotEqualTo -1): {
                     _isMilitary = true;
                 };
-                case (["medical", "hospital"] findIf {_x in _buildingName} != -1): {
+                case (["medical", "hospital"] findIf {_x in _buildingName} isNotEqualTo -1): {
                     _isMedical = true;
                 };
-                case (["store", "grocery", "shop"] findIf {_x in _buildingName} != -1): {
+                case (["store", "grocery", "shop"] findIf {_x in _buildingName} isNotEqualTo -1): {
                     _isStore = true;
                 };
-                case (["workshop", "garage", "factory", "hangar", "shed", "cowshed"] findIf {_x in _buildingName} != -1): {
+                case (["workshop", "garage", "factory", "hangar", "shed", "cowshed"] findIf {_x in _buildingName} isNotEqualTo -1): {
                     _isGarage = true;
                 };
             };

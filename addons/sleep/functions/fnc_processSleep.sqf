@@ -28,7 +28,7 @@ private _tiredness = player getVariable [QGVAR(tiredness), 0];
 
 private _hourValue = player getVariable QCLASS(sleepValueParsed);
 
-if (_hourValue == 0) exitWith {
+if (_hourValue isEqualTo 0) exitWith {
     titleText [format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_SLEEPNOHOURSELECT"], "PLAIN DOWN", -1, true, true];
     player setVariable [QCLASS(sleepValueParsed), nil];
 };
@@ -38,7 +38,7 @@ if (_tiredness < 0.15) exitWith {
     player setVariable [QCLASS(sleepValueParsed), nil];
 };
 
-if (animationState player != "amovpsitmstpsnonwnondnon_ground") then {
+if (animationState player isNotEqualTo "amovpsitmstpsnonwnondnon_ground") then {
     player playActionNow "SitDown";
 };
 

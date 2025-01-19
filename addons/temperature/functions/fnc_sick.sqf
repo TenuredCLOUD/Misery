@@ -25,7 +25,7 @@ _ailments = player getVariable QCLASS(ailments);
 
     switch (true) do {
 
-    case ((_ailments find "PARASITES" != -1 || _ailments find "INFECTION" != -1) && _MPlayertemp > 20): {
+    case ((_ailments find "PARASITES" isNotEqualTo -1 || _ailments find "INFECTION" isNotEqualTo -1) && _MPlayertemp > 20): {
 
         _sickcalc1 = MACRO_TEMPERATURE_SICKEXPOSURE(_MPlayertemp); //- this value scales
 
@@ -43,7 +43,7 @@ _ailments = player getVariable QCLASS(ailments);
     };
 };
 
-    case ((_ailments find "PARASITES" != -1 || _ailments find "INFECTION" != -1) && _MPlayertemp < 20): {
+    case ((_ailments find "PARASITES" isNotEqualTo -1 || _ailments find "INFECTION" isNotEqualTo -1) && _MPlayertemp < 20): {
 
         _sickcalc2 = MACRO_TEMPERATURE_COLDEXPOSURE(_MPlayertemp); //- this value scales
 
@@ -61,7 +61,7 @@ _ailments = player getVariable QCLASS(ailments);
     };
 };
 
- case ((_ailments find "PARASITES" != -1 || _ailments find "INFECTION" != -1) && _MPlayertemp == 20): {
+ case ((_ailments find "PARASITES" isNotEqualTo -1 || _ailments find "INFECTION" isNotEqualTo -1) && _MPlayertemp isEqualTo 20): {
 
         _sickcalc3 = MACRO_TEMPERATURE_SICKEXPOSURE(_MPlayertemp); //- this value scales
 

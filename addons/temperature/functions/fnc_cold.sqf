@@ -25,12 +25,12 @@ _ailments = player getVariable QCLASS(ailments);
 
 //Player effective temperature pre-check:
 if ([player] call EFUNC(common,nearFire)) exitWith {};
-if (insideBuilding player == 1) exitWith {};
+if (insideBuilding player isEqualTo 1) exitWith {};
 if !(isNull objectParent player) exitWith {};
 
 if (_MPlayertemp < 20) then {
 
-    if (!(_ailments find "PARASITES" != -1 || _ailments find "INFECTION" != -1)) then {
+    if (!(_ailments find "PARASITES" isNotEqualTo -1 || _ailments find "INFECTION" isNotEqualTo -1)) then {
 
         _coldexposure = MACRO_TEMPERATURE_COLDEXPOSURE(_MPlayertemp); //- this value scales with player temperature decrease...
 

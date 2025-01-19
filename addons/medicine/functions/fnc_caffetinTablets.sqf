@@ -24,7 +24,7 @@ if (!hasInterface) exitWith {};
     titleText ["You cannot take medicine while wearing a mask...", "PLAIN DOWN"];
 };
 
-if ((_MInfection > 1) || (_ailments find "PARASITES" != -1)) then {
+if ((_MInfection > 1) || (_ailments find "PARASITES" isNotEqualTo -1)) then {
 
     titleText ["You take some Caffetin tablets...", "PLAIN DOWN"];
     playSound3D [QPATHTOEF(audio,sounds\inventory\Items\CrinklingPlastic.ogg), player, false, getPosASL player, 4, 1, 10];

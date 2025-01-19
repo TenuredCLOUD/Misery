@@ -30,6 +30,6 @@ _pos2=(_out select 0)select 0;
 _pos2=[_pos2 select 0,_pos2 select 1,(_pos2 select 2)];//+.01
 _object2=(_out select 0)select 2;
 if(isNull((_out select 0)select 2))then{_terrain=true};
-if(_object2==player)then{_object2=objNull};
+if(_object2isEqualToplayer)then{_object2=objNull};
 if(isNull _object2)then{_object2=_object};
 [_pos2,_object2,_terrain]

@@ -27,7 +27,7 @@ if (!hasInterface) exitWith {};
 if !(isNull objectParent player) exitWith {titleText ["You cannot build a fire while inside a vehicle...", "PLAIN DOWN"];};
 
 //Inside:
-if (insideBuilding player == 1) exitWith {titleText ["You cannot build a fire inside, it's too dangerous...", "PLAIN DOWN"];};
+if (insideBuilding player isEqualTo 1) exitWith {titleText ["You cannot build a fire inside, it's too dangerous...", "PLAIN DOWN"];};
 
 //No firewood or sticks:
 if (!(QCLASS(firewood) in items player) && !(QCLASS(woodensticks) in items player)) exitWith {titleText ["You need firewood or sticks...", "PLAIN DOWN"];};
@@ -78,7 +78,7 @@ if !(QCLASS(tinder) in items player || "acex_intelitems_notepad" in magazines pl
     };
     };
 
-    if (_random == 10) exitWith {
+    if (_random isEqualTo 10) exitWith {
     titleText ["You successfully crafted a fire...", "PLAIN DOWN"];
     (_this select 1) setVariable ["MiseryCanCraftFire", false];
 
@@ -102,12 +102,12 @@ private _items = [QCLASS(tinder)];
 private _mags = ["acex_intelitems_notepad","rvg_money", "rvg_notepad", "rvg_docFolder"];
 
 private _index = _items findIf { _x in items player };
-if (_index != -1) then {
+if (_index isNotEqualTo -1) then {
     private _item = _items select _index;
     player removeItem _item;
 } else {
     _index = _mags findIf { _x in magazines player };
-    if (_index != -1) then {
+    if (_index isNotEqualTo -1) then {
         private _mag = _mags select _index;
         player removeMagazine _mag;
     };
@@ -130,12 +130,12 @@ private _items = [QCLASS(tinder)];
 private _mags = ["acex_intelitems_notepad","rvg_money", "rvg_notepad", "rvg_docFolder"];
 
 private _index = _items findIf { _x in items player };
-if (_index != -1) then {
+if (_index isNotEqualTo -1) then {
     private _item = _items select _index;
     player removeItem _item;
 } else {
     _index = _mags findIf { _x in magazines player };
-    if (_index != -1) then {
+    if (_index isNotEqualTo -1) then {
         private _mag = _mags select _index;
         player removeMagazine _mag;
     };

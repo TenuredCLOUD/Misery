@@ -26,7 +26,7 @@ if(((toLower(uniform player))find "wetsuit")>-1) then {_MWetsuit = true}; //Chec
 
 if (((getPosASLW player select 2) < 0) || (underwater player)) then {
 
-    if (_ailments find "PARASITES" != -1 || _ailments find "INFECTION" != -1) then {
+    if (_ailments find "PARASITES" isNotEqualTo -1 || _ailments find "INFECTION" isNotEqualTo -1) then {
 
         player setVariable [QCLASS(exposure), 0]; //If sick, and in cold water, remove fever, but reset exposure level
     };
