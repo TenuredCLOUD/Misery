@@ -31,7 +31,7 @@ if (!hasInterface) exitWith {};
     player removeItem QCLASS(antibiotic);
 
     if (EGVAR(common,ace)) then {
-    [player, QCLASS(antibiotic), 10, 60, -10, 0, -10] call ace_medical_status_fnc_addMedicationAdjustment;
+    [player, QCLASS(antibiotic), 10, 60, -10, 0, -10, 1] call ace_medical_status_fnc_addMedicationAdjustment;
     };
 
 sleep 60;

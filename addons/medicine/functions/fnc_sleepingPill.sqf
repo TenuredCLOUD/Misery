@@ -41,7 +41,7 @@ if (alive player) exitWith {
     player removeItem QCLASS(sleepingPills);
 
     if (EGVAR(common,ace)) then {
-        [player, QCLASS(sleepingPills), 10, 60, -10, 0, -10] call ace_medical_status_fnc_addMedicationAdjustment;
+        [player, QCLASS(sleepingPills), 10, 60, -10, 0, -10, 1] call ace_medical_status_fnc_addMedicationAdjustment;
     };
 
     player setVariable ["MiserySleeppillstaken", (_MSleeppillstaken + 1)];

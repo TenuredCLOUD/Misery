@@ -54,7 +54,7 @@ if (!hasInterface) exitWith {};
     };
 
           if (EGVAR(common,ace)) then {
-          [player, QCLASS(randomMedication), 0, 300, -40, 0, -40] call ace_medical_status_fnc_addMedicationAdjustment;
+          [player, QCLASS(randomMedication), 0, 300, -40, 0, -40, 1] call ace_medical_status_fnc_addMedicationAdjustment;
           };
 
           player setVariable [QCLASS(thirst), (_MThirst - 50)];

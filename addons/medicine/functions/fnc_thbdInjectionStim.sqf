@@ -17,7 +17,7 @@
 if (!hasInterface) exitWith {};
 
   if (EGVAR(common,ace)) then {
-  [player, QCLASS(thrombomodulin_Stimpack), 120, 600, 1, 0, 1] call ace_medical_status_fnc_addMedicationAdjustment;
+  [player, QCLASS(thrombomodulin_Stimpack), 120, 600, 1, 0, 1, 1] call ace_medical_status_fnc_addMedicationAdjustment;
   };
 
 titleText ["You use the Thrombomodulin Stimpack...", "PLAIN DOWN"];
@@ -28,7 +28,7 @@ titleText ["You use the Thrombomodulin Stimpack...", "PLAIN DOWN"];
     player setVariable [QCLASS(radiation), -5000 - random 250];
     if ((player getVariable [QCLASS(radiation), 0]) < 0) then {
         player setVariable [QCLASS(radiation), 0];
-    }; 
+    };
 }, [], 10] call CBA_fnc_waitAndExecute;
 
 

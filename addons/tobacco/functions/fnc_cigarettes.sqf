@@ -28,7 +28,7 @@ titleText ["You light up a cigarette...", "PLAIN DOWN"];
 [QCLASS(cigarettePack), ""] call EFUNC(common,itemDecrement);
 
 if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
-    [player, QCLASS(cigarettePack), 10, 300, -1, -1, -1] call ace_medical_status_fnc_addMedicationAdjustment;
+    [player, QCLASS(cigarettePack), 10, 300, -1, -1, -1, 1] call ace_medical_status_fnc_addMedicationAdjustment;
 };
 
 if (EGVAR(psychosis,enabled)) then {

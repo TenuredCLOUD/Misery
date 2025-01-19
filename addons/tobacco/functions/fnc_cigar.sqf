@@ -32,7 +32,7 @@ if (EGVAR(psychosis,enabled)) then {
 };
 
 if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
-    [player, QCLASS(cigar), 10, 300, -5, -5, -5] call ace_medical_status_fnc_addMedicationAdjustment;
+    [player, QCLASS(cigar), 10, 300, -5, -5, -5, 1] call ace_medical_status_fnc_addMedicationAdjustment;
 };
 
 if (_hasMatch) exitWith {

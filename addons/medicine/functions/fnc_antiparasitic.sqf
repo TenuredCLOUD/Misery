@@ -33,7 +33,7 @@ if (alive player) then {
     player removeItem QCLASS(antiparasitic);
 
     if (EGVAR(common,ace)) then {
-        [player, QCLASS(antiparasitic), 10, 60, -15, 0, -15] call ace_medical_status_fnc_addMedicationAdjustment;
+        [player, QCLASS(antiparasitic), 10, 60, -15, 0, -15, 1] call ace_medical_status_fnc_addMedicationAdjustment;
     };
 
     sleep 60;
