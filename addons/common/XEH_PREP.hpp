@@ -25,5 +25,7 @@ PREP(nearWell);
 PREP(specialDamage);
 PREP(stun);
 PREP(surfacePos);
+PREP(switchItem);
+PREP(switchMagazine);
 PREP(valToBar);
 PREP(weaponSwap);
