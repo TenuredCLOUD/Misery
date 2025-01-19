@@ -5,7 +5,7 @@ if (isServer) exitWith {};
 GVAR(dsa) = ["DSA_Spooks"] call EFUNC(common,isModLoaded);
 GVAR(ravage) = ["ravage"] call EFUNC(common,isModLoaded);
 GVAR(remnant) = ["remnant"] call EFUNC(common,isModLoaded);
-GVAR(additionalModifiers) = [];
+GVAR(modifiers) = 0;
 GVAR(sleepBlocked) = false;
 
 ["CBA_settingsInitialized", {

@@ -1,3 +1,4 @@
+PREP(addStatusModifier);
 PREP(buildingPositions);
 PREP(buildingPositionsInside);
 PREP(combatLogPrevention);
@@ -24,5 +25,7 @@ PREP(nearWell);
 PREP(specialDamage);
 PREP(stun);
 PREP(surfacePos);
+PREP(switchItem);
+PREP(switchMagazine);
 PREP(valToBar);
 PREP(weaponSwap);

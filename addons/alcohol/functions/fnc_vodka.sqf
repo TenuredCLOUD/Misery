@@ -20,7 +20,7 @@ private _fatigue = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_DEFAU
 private _psychosis = player getVariable [EGVAR(psychosis,state), MACRO_PLAYER_DEFAULTS_LOW];
 
 if (EGVAR(psychosis,enabled)) then {
-    [-0.35] call EFUNC(psychosis,addModifier);
+    [-0.35, "psychosis"] call EFUNC(common,addModifier);
 };
 
 if (isMultiplayer) exitWith {};

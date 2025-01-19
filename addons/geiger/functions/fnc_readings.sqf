@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
  /*
- * Author: TenuredCLOUD
- * Geiger UI Reading updater
+ * Author: TenuredCLOUD, MikeMF
+ * Geiger counter UI and sound effects.
  *
  * Arguments:
  * None
@@ -14,13 +14,23 @@
  *
 */
 
-waitUntil {sleep 1; !isNull findDisplay 982344};
+[{
+    params ["_args", "_handle"];
 
-while {!isNull findDisplay 982344} do {
+    private _hasGeiger = [[QCLASS(geiger_On)]] call EFUNC(common,hasItem);
 
-_RadReading = format ["%1 mSv", round (player getVariable [QCLASS(radiation),0])];
-ctrlSetText [1000, _RadReading];
+    if !(_hasGeiger || alive player || isNull findDisplay 982344) exitWith {
+        [QUOTE(COMPONENT_BEAUTIFIED), "Geiger loop exiting"] call EFUNC(common,debugMessage);
+        QCLASS(geiger_ui) cutText ["", "PLAIN"];
+        _handle call CBA_fnc_removePerFrameHandler;
+    };
 
-sleep 0.25;
-};
+    QCLASS(geiger_ui) cutRsc ["MiseryGeiger_UI", "PLAIN", 1, false];
+    private _display = uiNamespace getVariable "MiseryGeiger_UI";
+    private _textControl = _display displayCtrl 1000;
+    private _radReading = format ["%1 mSv", player getVariable [QEGVAR(survival,radiation),0]];
+    _textControl ctrlSetText _radReading;
 
+    // Sound is local to avoid orbital saturation of the network in MP.
+    playSound selectRandom [MACRO_GEIGER_SOUNDS];
+}, 0.5] call CBA_fnc_addPerFrameHandler;

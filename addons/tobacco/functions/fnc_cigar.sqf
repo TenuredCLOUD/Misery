@@ -28,11 +28,11 @@ titleText ["You light up a cigar...", "PLAIN DOWN"];
 player removeItem QCLASS(cigar);
 
 if (EGVAR(psychosis,enabled)) then {
-    [-0.1] call EFUNC(psychosis,addModifier);
+    [-0.1, "psychosis"] call EFUNC(common,addModifier);
 };
 
 if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
-    [player, QCLASS(cigar), 10, 300, -5, -5, -5] call ace_medical_status_fnc_addMedicationAdjustment;
+    [player, QCLASS(cigar), 10, 300, -5, -5, -5, 1] call ace_medical_status_fnc_addMedicationAdjustment;
 };
 
 if (_hasMatch) exitWith {

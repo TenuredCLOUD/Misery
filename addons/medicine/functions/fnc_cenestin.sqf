@@ -31,7 +31,7 @@ player removeItem QCLASS(cenestinBottle);
 sleep 60;
 
  if (EGVAR(common,ace)) then {
-[player, QCLASS(cenestinBottle), 120, 300, 1, 0, 1] call ace_medical_status_fnc_addMedicationAdjustment;
+[player, QCLASS(cenestinBottle), 120, 300, 1, 0, 1, 1] call ace_medical_status_fnc_addMedicationAdjustment;
 
 {
 [player, _x, "FieldDressing"] call ace_medical_treatment_fnc_bandageLocal;
