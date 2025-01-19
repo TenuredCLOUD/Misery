@@ -10,8 +10,8 @@
     QEGVAR(survival,hunger), \
     QEGVAR(survival,thirst), \
     QEGVAR(survival,energyDeficit), \
-    QEGVAR(survival,temperature), \
-    QEGVAR(survival,exposure), \
+    QEGVAR(temperature,temperature), \
+    QEGVAR(temperature,exposure), \
     QEGVAR(survival,radiation), \
     QEGVAR(survival,infection), \
     QEGVAR(survival,parasites), \
