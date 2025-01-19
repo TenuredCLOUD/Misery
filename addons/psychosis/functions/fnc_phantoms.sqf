@@ -19,5 +19,3 @@ if (!GVAR(remnant)) exitWith {0};
 if ([["myst_phantom_hidden_f", "myst_phantom_naked_f"], 25] call EFUNC(common,nearEntities)) exitWith {
     GVAR(unnaturalIncrease)
 };
-
-0

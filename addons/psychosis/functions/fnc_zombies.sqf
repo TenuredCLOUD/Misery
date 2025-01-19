@@ -19,5 +19,3 @@ if (!GVAR(ravage)) exitWith {0};
 if ([["zombie"], 25] call EFUNC(common,nearEntities)) exitWith {
     GVAR(unnaturalIncrease)
 };
-
-0

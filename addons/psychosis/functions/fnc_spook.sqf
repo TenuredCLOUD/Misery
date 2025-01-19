@@ -19,5 +19,3 @@ if (!GVAR(dsa)) exitWith {0};
 if ([["DSA_SpookBase", "DSA_SpookBase2", "DSA_AnomalyBase"], 25] call EFUNC(common,nearEntities)) exitWith {
     GVAR(unnaturalIncrease)
 };
-
-0

@@ -14,7 +14,7 @@
  *
 */
 
-if (!GVAR(night)) exitWith {};
+if (!GVAR(night)) exitWith {0};
 
 private _nightAlteration = 0;
 
