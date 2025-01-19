@@ -1,8 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Corpse searching for money
- * Simulates the player searching a corpse for money, also opens Money taking UI
+ * Corpse searching for money, simulates the player searching a corpse for money, also opens Money taking UI
  *
  * Arguments:
  * None
@@ -11,7 +10,7 @@
  * None
  *
  * Example:
- * [] call misery_money_fnc_searchCorpse;
+ * [] call misery_currency_fnc_searchCorpse;
  *
 */
 

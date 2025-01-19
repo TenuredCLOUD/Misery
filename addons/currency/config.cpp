@@ -7,11 +7,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {QCLASS(common)};
-        authors[] = {"TenuredCLOUD"};
+        authors[] = {"TenuredCLOUD", "MikeMF"};
         VERSION_CONFIG;
     };
 };
 
 #include "CfgEventHandlers.hpp"
-
-
