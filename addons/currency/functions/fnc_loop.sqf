@@ -19,11 +19,11 @@
 
     if (isNull findDisplay 483729) exitWith {};
 
-    private _playerFunds = player getVariable [QGVAR(currency), MACRO_PLAYER_DEFAULTS_LOW];
+    private _playerFunds = player getVariable [QGVAR(funds), MACRO_PLAYER_DEFAULTS_LOW];
     private _playerFundsFormatted = [_playerFunds, 1, 2, true] call CBA_fnc_formatNumber;
     private _playerFundsText = format ["%3: %1 %2", GVAR(symbol), _playerFundsFormatted, profileName];
 
-    private _playerBank = player getVariable [QGVAR(bankedCurrency), MACRO_PLAYER_DEFAULTS_LOW];
+    private _playerBank = player getVariable [QGVAR(bankedFunds), MACRO_PLAYER_DEFAULTS_LOW];
     private _playerBankFormatted = [_playerBank, 1, 2, true] call CBA_fnc_formatNumber;
     private _playerBankText = format ["%3: %1 %2", GVAR(symbol), _playerBankFormatted, "Bank Account"];
 

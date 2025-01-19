@@ -14,11 +14,11 @@
  *
 */
 
-call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "_currency", "_bankedCurrency"];
+call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_bankedFunds"];
 
 private _amount = parseNumber (ctrlText ((findDisplay 483729) displayCtrl 1400));
 
-if (_amount > _bankedCurrency) exitWith {};
+if (_amount > _bankedFunds) exitWith {};
 
-player setVariable [QGVAR(currency), _currency + _amount];
-player setVariable [QGVAR(bankedCurrency), _bankedCurrency - _amount];
+[_amount] call FUNC(modifyMoney);
+[-_amount, true] call FUNC(modifyMoney);

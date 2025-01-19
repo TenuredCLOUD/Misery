@@ -5,6 +5,7 @@
  *
  * Arguments:
  * 0: Amount <NUMBER>
+ * 1: Modify bank money? <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -15,8 +16,13 @@
  *
 */
 
-params ["_amount"];
+params ["_amount", "_isBank"];
 
-private _currentFunds = player getVariable [QGVAR(currency), MACRO_PLAYER_DEFAULTS_LOW];
+if (_isBank) exitWith {
+    private _currentBankedFunds = player getVariable [QGVAR(bankedFunds), MACRO_PLAYER_DEFAULTS_LOW];
+    player setVariable [QGVAR(bankedFunds), _currentBankedFunds + _amount];
+};
 
-player setVariable [QGVAR(currency), _currentFunds + _amount];
+private _currentFunds = player getVariable [QGVAR(funds), MACRO_PLAYER_DEFAULTS_LOW];
+
+player setVariable [QGVAR(funds), _currentFunds + _amount];
