@@ -10,8 +10,8 @@
     QEGVAR(survival,hunger), \
     QEGVAR(survival,thirst), \
     QEGVAR(survival,energyDeficit), \
-    QEGVAR(survival,temperature), \
-    QEGVAR(survival,exposure), \
+    QEGVAR(temperature,thermalIndex), \
+    QEGVAR(temperature,exposure), \
     QEGVAR(survival,radiation), \
     QEGVAR(survival,infection), \
     QEGVAR(survival,parasites), \
@@ -19,9 +19,8 @@
     QEGVAR(psychosis,state), \
     QEGVAR(vitals,buffs), \
     QEGVAR(vitals,debuffs), \
-    QEGVAR(bank,currency), \
-    QEGVAR(bank,bankedCurrency), \
-    QEGVAR(bank,lastBankLoan), \
+    QEGVAR(currency,funds), \
+    QEGVAR(currency,bankedFunds), \
     QEGVAR(cooking,knowledge), \
     QEGVAR(crafting,knowledge), \
     QEGVAR(hydrology,knowledge)
