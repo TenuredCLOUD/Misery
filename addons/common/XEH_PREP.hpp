@@ -1,3 +1,4 @@
+PREP(addStatusModifier);
 PREP(buildingPositions);
 PREP(buildingPositionsInside);
 PREP(combatLogPrevention);
