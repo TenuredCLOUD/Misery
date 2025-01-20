@@ -30,7 +30,7 @@ ctrlSetText [1001, nil];
 if (lbSize _list > 0) then {
 _list lbSetCurSel 0;
 };
-}else{
+} else {
     currentAction = "buy";
 _switchModeButton ctrlSetText "Sell Menu";
 _IconCtrl ctrlSetText nil;

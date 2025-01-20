@@ -22,7 +22,7 @@ _MExposure = player getVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULT
 _ailments = player getVariable QCLASS(ailments);
 _MWetsuit = false; //No wetsuit
 
-if(((toLower(uniform player))find "wetsuit")>-1) then {_MWetsuit = true}; //Check for wetsuit
+if (((toLower(uniform player))find "wetsuit")>-1) then {_MWetsuit = true}; //Check for wetsuit
 
 if (((getPosASLW player select 2) < 0) || (underwater player)) then {
 

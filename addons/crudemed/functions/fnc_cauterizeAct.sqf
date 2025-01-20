@@ -53,7 +53,7 @@
     } forEach ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"];
     };
 
-    if((random 100) > 50) exitWith {
+    if ((random 100) > 50) exitWith {
     private _actionID = (_this select 2);
     [player,_actionID] call BIS_fnc_holdActionRemove;
     player setVariable ["_TC_sound", false,true];
@@ -88,7 +88,7 @@
     private _actionID = (_this select 2);
     [player,_actionID] call BIS_fnc_holdActionRemove;
     player setVariable ["_TC_sound", false,true];
-    }else{
+    } else {
     private _actionID = (_this select 2);
     [player,_actionID] call BIS_fnc_holdActionRemove;
     player setVariable ["_TC_sound", false,true];

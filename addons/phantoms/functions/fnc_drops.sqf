@@ -21,7 +21,7 @@ addMissionEventHandler ["EntityKilled",{
 params ["_killed", "_killer"];
 if (_killed isKindOf "myst_phantom_hidden_f" || _killed isKindOf "myst_phantom_naked_f") then {
 
-if((random 100) > GVAR(dropChance)) exitWith {};
+if ((random 100) > GVAR(dropChance)) exitWith {};
 
 _unit = _this select 0;
 _uniform = uniformContainer _unit;

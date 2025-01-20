@@ -30,9 +30,9 @@ if (isNil {player getVariable QCLASS(gasmaskCartridgeLevel)}) then {player setVa
 
         if ((call EFUNC(protection,totalProtection) select 0) < 1 || (call EFUNC(protection,totalProtection) select 3) < 1 || (call EFUNC(protection,totalProtection) select 1) > 0 || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
-            if(EGVAR(common,debug))then{systemChat "Misery Gasmask deficiency cycle terminated..."};
+            if (EGVAR(common,debug)) then {systemChat "Misery Gasmask deficiency cycle terminated..."};
             [] call FUNC(gasmaskTimer);
-            if(EGVAR(common,debug))then{systemChat "Misery Gasmask deficiency cycle checks re-initiated..."};
+            if (EGVAR(common,debug)) then {systemChat "Misery Gasmask deficiency cycle checks re-initiated..."};
         };
 
 private _MCartridge = player getVariable [QCLASS(gasmaskCartridgeLevel), 100];
@@ -43,7 +43,7 @@ if (_MCartridge <= 0) then {
 player setVariable [QCLASS(gasmaskCartridgeLevel), 100];
 };
 
-if(EGVAR(common,debug))then{systemChat "Misery Gasmask deficiency cycle..."};
+if (EGVAR(common,debug)) then {systemChat "Misery Gasmask deficiency cycle..."};
 
 }, GVAR(deficiencyCycle), []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;

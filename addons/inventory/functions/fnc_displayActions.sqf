@@ -36,7 +36,7 @@ if (EGVAR(actions,guiActionsMode) isEqualTo "") then{
 };
 
 //Foraging:
-if(EGVAR(actions,guiActionsMode) isEqualTo localize "STR_MISERY_FORAGE")then{
+if (EGVAR(actions,guiActionsMode)==localize "STR_MISERY_FORAGE") then {
     _allActions=[
         [localize "STR_MISERY_FORAGE_DIGFORWORMS",localize "STR_MISERY_FORAGE_DIGFORWORMS"],
         [localize "STR_MISERY_FORAGE_SEARCHFORTINDER",localize "STR_MISERY_FORAGE_SEARCHFORTINDER"],

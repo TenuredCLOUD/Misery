@@ -1,5 +1,5 @@
 [
-    QGVAR(enable),
+    QGVAR(enabled),
     "CHECKBOX",
     ["Temperature Framework", "Enable Temperature framework? (Enables player temperature calculations)"],
     ["Misery","Temperature"],

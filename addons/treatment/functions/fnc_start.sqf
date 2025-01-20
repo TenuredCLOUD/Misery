@@ -84,7 +84,7 @@ for "_i" from 1 to Mis_Medpriceheal do {player removeMagazine Mis_Medfundstype;}
 
 if (EGVAR(common,ace)) then {
 [player] call ace_medical_treatment_fnc_fullHealLocal;
-}else{
+} else {
 player setDamage 0;
 };
 

@@ -53,7 +53,7 @@ if (_trader getVariable ["giftClicked", false]) then {
     };
     _trader setVariable ["giftClicked", false];
     [] call FUNC(shopVAL);
-}else{
+} else {
     _trader setVariable ["giftClicked", true];
     ctrlSetText [1001, format ["Are you sure you want to gift %1?",_displayName]];
     _time = time + 5;

@@ -149,7 +149,7 @@
 
     if (lbSize _list > 0) then {
         _buySellButton ctrlEnable true;
-    }else{
+    } else {
         _buySellButton ctrlEnable false;
     };
     }else{
@@ -216,7 +216,7 @@
         _IconCtrl ctrlSetText nil;
         _IconTxt ctrlSetText nil;
         ctrlSetText [1001, "You have nothing to Sell..."];
-    }else{
+    } else {
         _buySellButton ctrlEnable true;
         _giftButton ctrlEnable true;
         };

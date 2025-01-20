@@ -50,7 +50,7 @@ while {true} do {
                 player setVariable [QCLASS(breathCondensation), false];
             };
         };
-    if(EGVAR(common,debug))then{systemChat "Misery BreathFog cycle..."};
+    if (EGVAR(common,debug)) then {systemChat "Misery BreathFog cycle..."};
     sleep 1;
 };
 

@@ -305,7 +305,7 @@ for "_i" from 1 to _numEntities do {
                     [_target,_actionId] call BIS_fnc_holdActionRemove;
                     private _recruitSuccess = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_SUCCESS", _Unitidentity, EGVAR(money,symbol), [_recruitmentCost] call Misery_fnc_formatNumber]];
                     [parseText _recruitSuccess, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
-                }else{
+                } else {
                     private _recruitFail = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_FAIL",_Unitidentity]];
                     [parseText _recruitFail, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
                 };
@@ -375,7 +375,7 @@ waitUntil {
         _player=_x;
         if ((_player distance leader _group) < Misery_AmbAI_DeleteCheckDistance) then {
             _deleteFlag = false;
-        }else{
+        } else {
             _deleteFlag = true;
         };
     } forEach _players;

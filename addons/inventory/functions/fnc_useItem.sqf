@@ -97,7 +97,7 @@ if ((count _debuffAdd) > 0) then {
     {
     _ailments pushBackUnique (toUpper _x);
     player setVariable [QCLASS(ailments), _ailments];
-    }forEach _debuffAdd;
+    } forEach _debuffAdd;
 };
 
 //Ailment remove
@@ -105,7 +105,7 @@ if ((count _debuffRemove) > 0) then {
     {
     _ailments deleteAt (_ailments find (toUpper _x));
     player setVariable [QCLASS(ailments), _ailments];
-    }forEach _debuffRemove;
+    } forEach _debuffRemove;
 };
 
 //Custom script execution

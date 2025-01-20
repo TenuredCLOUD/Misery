@@ -14,7 +14,7 @@
 
         if ((!(player getVariable [QCLASS(HHRadio", false])) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
-            if(EGVAR(common,debug))then{systemChat "Misery Radio Broadcast check Terminated..."};
+            if (EGVAR(common,debug)) then {systemChat "Misery Radio Broadcast check Terminated..."};
         };
 
     if (MiseryRadioBroadcast isNotEqualTo "") then { //Double check broadcast has a sound class
@@ -22,7 +22,7 @@
     MiseryRadioLoopBroadcast attachTo [player, [0, 0, 0], "Pelvis"];
     [MiseryRadioLoopBroadcast, [MiseryRadioBroadcast, 50]] remoteExec ["say3D", 0, MiseryRadioLoopBroadcast];
 
-    if(EGVAR(common,debug))then{systemChat "Misery Radio Broadcast check detected broadcast, playing audio..."};
+    if (EGVAR(common,debug)) then {systemChat "Misery Radio Broadcast check detected broadcast, playing audio..."};
 
     [{
     !(player getVariable [QCLASS(HHRadio", false])

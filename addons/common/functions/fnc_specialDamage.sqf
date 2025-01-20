@@ -17,7 +17,7 @@
 private _target=_this select 0;
 private _damage=_this select 1;
 
-if(GVAR(ace))exitWith{
+if (GVAR(ace))exitWith{
     [_target,_damage,"body","unknown"]remoteExec["ace_medical_fnc_addDamageToUnit",_target];
     true
 };

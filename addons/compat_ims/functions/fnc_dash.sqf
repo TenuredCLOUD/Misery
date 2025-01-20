@@ -32,10 +32,11 @@
             };
             } forEach [MACRO_ANIMATION_IMS_SPRINT];
             [] call FUNC(dash);
-            if(EGVAR(common,debug))then{systemChat "Misery WBKIMS Dash Compat cycle checks re-initiated..."};
+            if (EGVAR(common,debug)) then {systemChat "Misery WBKIMS Dash Compat cycle checks re-initiated..."};
         };
 
         player setFatigue (getFatigue player + 0.01);
+
 
     [QUOTE(COMPONENT_BEAUTIFIED), "Dash Compat cycle."] call EFUNC(common,debugMessage);
 

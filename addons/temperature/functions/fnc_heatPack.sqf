@@ -31,7 +31,7 @@ if (_MExposure < 0) then {
 
     player setVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];
 
-}else{
+} else {
 
 if (_MExposure > 0) then {
 

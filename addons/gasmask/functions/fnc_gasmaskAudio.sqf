@@ -22,9 +22,9 @@
 
         if ((call EFUNC(protection,totalProtection) select 1) < 1 || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
-            if(EGVAR(common,debug))then{systemChat "Misery Gasmask audio cycle terminated..."};
+            if (EGVAR(common,debug)) then {systemChat "Misery Gasmask audio cycle terminated..."};
             [] call FUNC(gasmaskAudio);
-            if(EGVAR(common,debug))then{systemChat "Misery Gasmask audio cycle checks re-initiated..."};
+            if (EGVAR(common,debug)) then {systemChat "Misery Gasmask audio cycle checks re-initiated..."};
         };
 
         if (cameraView isNotEqualTo "EXTERNAL") then {

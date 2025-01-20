@@ -58,7 +58,7 @@ private _vehicles = [];
 {
     _vehicles append (nearestObjects [_position, [_x], 5]);
 } forEach ["Car", "Tank", "Air", "Ship"];
-EGVAR(common,targetVehicle) = if (count _vehicles > 0) then { _vehicles select 0 }else{ objNull };
+EGVAR(common,targetVehicle) = if (count _vehicles > 0) then { _vehicles select 0 } else { objNull };
 EGVAR(common,targetVehicleType) = typeOf EGVAR(common,targetVehicle);
 
 if (EGVAR(fishing,enabled)) then {

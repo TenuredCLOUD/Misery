@@ -41,6 +41,6 @@ if ((_MInfection > 1) || (_ailments find "PARASITES" isNotEqualTo -1)) then {
 
     if (_MExposure > 0) then {player setVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW]};
 
-}else{
+} else {
 //Nothing
 };

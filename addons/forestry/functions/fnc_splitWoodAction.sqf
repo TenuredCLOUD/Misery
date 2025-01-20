@@ -46,7 +46,7 @@
     },{
     deleteVehicle _this;
     }, _soundDummy] call CBA_fnc_waitUntilAndExecute;
-    }else{
+    } else {
     if (QCLASS(woodaxe) in items player || (MiseryWBKIMS && {currentWeapon player in ['WBK_axe','WBK_brush_axe','WBK_craftedAxe','FireAxe','Axe']})) then {
     MiseryCanSplitWoodAxe = true;
     MiseryCanSplitWoodChain = false;
@@ -69,7 +69,7 @@
 
     if (QCLASS(woodenlog) in items player && MiseryCanSplitWoodChain) then {
     titleText [format["Sawing wood log progress... %1%2", _progcalc, "%"], "PLAIN DOWN"];
-    }else{
+    } else {
     if (QCLASS(woodenlog) in items player && MiseryCanSplitWoodAxe) then {
     titleText [format["Splitting wood log progress... %1%2", _progcalc, "%"], "PLAIN DOWN"];
     };

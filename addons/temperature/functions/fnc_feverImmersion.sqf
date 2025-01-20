@@ -23,9 +23,9 @@
 
         if ((player getVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW]) < 10 || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
-            if(EGVAR(common,debug))then{systemChat "Misery Fever immersion cycle terminated..."};
+            if (EGVAR(common,debug)) then {systemChat "Misery Fever immersion cycle terminated..."};
             [] call FUNC(feverimmersion);
-            if(EGVAR(common,debug))then{systemChat "Misery Fever immersion cycle checks re-initiated..."};
+            if (EGVAR(common,debug)) then {systemChat "Misery Fever immersion cycle checks re-initiated..."};
         };
 
     private ["_ailments"];
@@ -36,7 +36,7 @@
          player say3D [QEGVAR(audio,sound_coughing),10,1,2,0];
 
 
-    }else{
+    } else {
 
     _ailments = player getVariable QCLASS(ailments);
 
@@ -45,7 +45,7 @@
         };
     };
 
-    if(EGVAR(common,debug))then{systemChat "Misery Fever immersion cycle..."};
+    if (EGVAR(common,debug)) then {systemChat "Misery Fever immersion cycle..."};
 
 }, 300, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;

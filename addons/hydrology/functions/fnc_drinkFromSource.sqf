@@ -60,7 +60,7 @@ private _MThirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEF
 
 playSound3D [QPATHTOEF(audio,sounds\items\drink.ogg), player, false, getPosASL player, 4, 1, 10];
 
-if((random 100) > EGVAR(survival,turbidWaterChance)) exitWith {
+if ((random 100) > EGVAR(survival,turbidWaterChance)) exitWith {
 
 player setVariable [QEGVAR(survival,thirst), (_MThirst + 10)];
 _SuccessText_NoSickness = "You just swallowed water that smelled foul and tasted dirty. Despite the repugnant taste, it did quench your thirst.";

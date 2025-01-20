@@ -37,7 +37,7 @@ sleep 60;
 [player, _x, "FieldDressing"] call ace_medical_treatment_fnc_bandageLocal;
 } forEach ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"];
 
-}else{
+} else {
 private _playerhealth = damage player;
 player setDamage [_playerhealth - 0.15, false];
  };

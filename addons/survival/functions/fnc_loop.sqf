@@ -23,9 +23,9 @@
 
         if (!alive player) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
-            if(EGVAR(common,debug))then{systemChat "[Misery survival] loop cycle terminated..."};
+            if (EGVAR(common,debug)) then {systemChat "[Misery survival] loop cycle terminated..."};
             [] call FUNC(loop);
-            if(EGVAR(common,debug))then{systemChat "[Misery survival] loop cycle checks re-initiated..."};
+            if (EGVAR(common,debug)) then {systemChat "[Misery survival] loop cycle checks re-initiated..."};
         };
 
     private _radiation = player getVariable [QGVAR(radiation), MACRO_PLAYER_DEFAULTS_LOW];
@@ -35,8 +35,8 @@
     private _parasites = player getVariable [QGVAR(parasites), MACRO_PLAYER_DEFAULTS_LOW];
     private _poison = player getVariable [QGVAR(toxicity), MACRO_PLAYER_DEFAULTS_LOW];
     private _sleepiness = player getVariable [QGVAR(energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
-    private _exposure = player getVariable [QGVAR(exposure), MACRO_PLAYER_DEFAULTS_LOW];
-    private _playerTemperature = player getVariable [QGVAR(temperature), 0];
+    private _exposure = player getVariable [QEGVAR(temperature,exposure), MACRO_PLAYER_DEFAULTS_LOW];
+    private _playerTemperature = player getVariable [QEGVAR(temperature,temperature), (call EFUNC(temperature,environment)) select 0];
     private _isSleeping = player getVariable [QGVAR(isSleeping), false];
 
     private _ailments = player getVariable [QEGVAR(vitals,ailments), []];
@@ -126,7 +126,7 @@
         };
     };
 
-    if (EGVAR(temperature,enable)) then {
+    if (EGVAR(temperature,enabled)) then {
     [player] call EFUNC(temperature,warmup);
     [player] call EFUNC(temperature,overtemp);
     [player] call EFUNC(temperature,sick);

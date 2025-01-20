@@ -23,11 +23,11 @@
 
         if (!(MiseryNoNVG_TPP_ENABLED) || (cameraView isEqualTo "INTERNAL") || (cameraView isEqualTo "GUNNER") || (currentVisionMode player isEqualTo 0) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
-            if(EGVAR(common,debug))then{systemChat "Misery TPP NVG's cycle terminated..."};
+            if (EGVAR(common,debug)) then {systemChat "Misery TPP NVG's cycle terminated..."};
             //Only re-execute if MiseryNoNVG_TPP_ENABLED is true:
             if (MiseryNoNVG_TPP_ENABLED) then {
             [] call FUNC(disableNightVision);
-            if(EGVAR(common,debug))then{systemChat "Misery TPP NVG's cycle checks re-initiated..."};
+            if (EGVAR(common,debug)) then {systemChat "Misery TPP NVG's cycle checks re-initiated..."};
             };
         };
 
@@ -35,7 +35,7 @@
         player action ["nvGogglesOff", player]; //If player is actively using NODs disable them
     };
 
-    if(EGVAR(common,debug))then{systemChat "Misery TPP NVG's cycle..."};
+    if (EGVAR(common,debug)) then {systemChat "Misery TPP NVG's cycle..."};
 
 }, 0.1, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;

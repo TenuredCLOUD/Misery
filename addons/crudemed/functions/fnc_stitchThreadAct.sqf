@@ -50,7 +50,7 @@ Will most likely rewrite to new UI based use - Or move to an ACE action
     //Remove needle & thread
     player removeItem QCLASS(needleThread);
 
-    if((random 100) > 50) exitWith {
+    if ((random 100) > 50) exitWith {
     private _actionID = (_this select 2);
     [player,_actionID] call BIS_fnc_holdActionRemove;
     };
@@ -83,7 +83,7 @@ Will most likely rewrite to new UI based use - Or move to an ACE action
 
     private _actionID = (_this select 2);
     [player,_actionID] call BIS_fnc_holdActionRemove;
-    }else{
+    } else {
     private _actionID = (_this select 2);
     [player,_actionID] call BIS_fnc_holdActionRemove;
     };

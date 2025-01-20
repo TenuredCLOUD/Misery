@@ -24,7 +24,7 @@ if (call FUNC(canForage)) then {
     if (_random > 7) then {
         titleText ["You found some worms...", "PLAIN DOWN"];
         player addItem QCLASS(worms);
-    }else{
+    } else {
         titleText ["You didn't find anything...", "PLAIN DOWN"];
     };
 };

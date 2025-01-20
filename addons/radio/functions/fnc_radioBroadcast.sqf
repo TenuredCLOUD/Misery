@@ -23,7 +23,7 @@ MiseryRadioBroadcastsystem = true; //Sync bootup
 
 while {true} do {
 
-if(EGVAR(common,debug))then{systemChat "Misery Radio Broadcast starting..."};
+if (EGVAR(common,debug)) then {systemChat "Misery Radio Broadcast starting..."};
 
 //sync indexed classname of sound + filepathing:
 _index = floor (random (count _SoundfileArray)); get a random index
@@ -37,7 +37,7 @@ publicVariable "MiseryRadioBroadcast";
 //Radio objects:
 MiseryRadioObjectBroadcast = _soundFile;
 publicVariable "MiseryRadioObjectBroadcast";
-if(EGVAR(common,debug))then{systemChat "Misery Radio Broadcasting to clients..."};
+if (EGVAR(common,debug)) then {systemChat "Misery Radio Broadcasting to clients..."};
 
 Gather all radio objects
 _RadioSources = [];
@@ -53,7 +53,7 @@ Radio object looper:
     playSound3D [MiseryRadioObjectBroadcast, _object, false, getPosASL _object, 1, 1, 100];
 } forEach _RadioSources;
 
-if(EGVAR(common,debug))then{systemChat "Misery Radio Broadcasting to Radio objects..."};
+if (EGVAR(common,debug)) then {systemChat "Misery Radio Broadcasting to Radio objects..."};
 
 //Unsync sound played until next radio broadcast:
 _timeafter = time + 0.5;
@@ -69,7 +69,7 @@ publicVariable "MiseryRadioBroadcast";
 MiseryRadioObjectBroadcast = "";
 publicVariable "MiseryRadioObjectBroadcast";
 
-if(EGVAR(common,debug))then{systemChat "Misery Radio Broadcast ended..."};
+if (EGVAR(common,debug)) then {systemChat "Misery Radio Broadcast ended..."};
 };
 
 sleep MiseryRadioTimer;
