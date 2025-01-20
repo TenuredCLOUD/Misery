@@ -15,91 +15,69 @@
  * Public: No
 */
 
-player setVariable [QGVAR(temperature), (call FUNC(environment)) select 0]; //Air temp
-GVAR(seaTemperature) = (call FUNC(environment)) select 1; //Sea temp
-private _clothesWarmth= (player call FUNC(clothing)) select 0;
-
-//Parse values from temperature calculations
-private _playerTemperature = player getVariable QGVAR(temperature);
+private _playerTemperature = player getVariable [QGVAR(temperature), (call FUNC(environment)) select 0];
+GVAR(seaTemperature) = (call FUNC(environment)) select 1;
+private _clothesWarmth = (player call FUNC(clothing)) select 0;
 player setVariable [QGVAR(temperature), (_playerTemperature + parseNumber ((_clothesWarmth)toFixed 2))];
-
 private _exposure = player getVariable [QGVAR(exposure), MACRO_PLAYER_DEFAULTS_LOW];
-
-private _ailments = player getVariable [QEGVAR(vitals,ailments), []];
-
-//---------------------------
-//Nearby fire check
+private _parasites = player getVariable [QEGVAR(survival,parasites), MACRO_PLAYER_DEFAULTS_LOW];
+private _infection = player getVariable [QEGVAR(survival,infection), MACRO_PLAYER_DEFAULTS_LOW];
 
 if ([player] call EFUNC(common,nearFire)) then {
 
-    if ((_MPlayertemp < 20) && (!(_ailments find "PARASITES" isNotEqualTo -1 || _ailments find "INFECTION" isNotEqualTo -1))) then {
+    if ((_playerTemperature < 20) && !(_parasites > 0 || _infection > 0)) then {
+       if (abs(_exposure) < 0.0001) exitWith {
+        player setVariable [QGVAR(exposure), MACRO_PLAYER_DEFAULTS_LOW];
+    };
+        private _nearFireCalculation = (((20 - _playerTemperature) * 2) / 5) / 5;
 
-       if (abs(_exposure) < 0.5) exitWith {
-        player setVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];
+        [+_nearFireCalculation, "exposure"] call EFUNC(common,addModifier);
+
+        if (_exposure > 0) then {
+            player setVariable [QGVAR(exposure), MACRO_PLAYER_DEFAULTS_LOW];
         };
-
-        _nearFireCalculation = MACRO_TEMPERATURE_FIREORVEHICLE(_playerTemperature);
-
-        player setVariable [QEGVAR(survival,exposure), (_exposure + parseNumber ((_nearFireCalculation)toFixed 2))];
-
-        if (_exposure > 0) then {player setVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];};
-
     } else {
-
-        _sickNearFireCalculation = MACRO_TEMPERATURE_FIREORVEHICLE_SICK(_playerTemperature);
-
-        player setVariable [QEGVAR(survival,exposure), (_exposure + parseNumber ((_sickNearFireCalculation)toFixed 2))];
+        private _sickNearFireCalculation = ((_playerTemperature) / 100) / 100;
+        [+_sickNearFireCalculation, "exposure"] call EFUNC(common,addModifier);
     };
 };
-
-//---------------------------
-//Inside house check (checks if player is "boxed in" and under roof)
 
 if (insideBuilding player isEqualTo 1) then {
 
-    if ((_MPlayertemp < 20) && (!(_ailments find "PARASITES" isNotEqualTo -1 || _ailments find "INFECTION" isNotEqualTo -1))) then {
+    if ((_playerTemperature < 20) && !(_parasites > 0 || _infection > 0)) then {
 
-        if (abs(_exposure) < 0.5) exitWith {
+        if (abs(_exposure) < 0.0001) exitWith {
         player setVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];
         };
 
-        _insideWarmCalculation = MACRO_TEMPERATURE_INSIDEBUILDING(_playerTemperature);
+        private _insideWarmCalculation = (((20 - _playerTemperature) * 2) / 10) / 10;
+        [+_insideWarmCalculation, "exposure"] call EFUNC(common,addModifier);
 
-        player setVariable [QEGVAR(survival,exposure), (_exposure + parseNumber ((_insideWarmCalculation)toFixed 2))];
-
-        if (_exposure > 0) then {player setVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];}; //If not sick, not hot, then - warm up, but reset at 0
-
+        if (_exposure > 0) then {
+            player setVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];
+        };
     } else {
-
-        _sickInsideWarmCalculation = MACRO_TEMPERATURE_INSIDEBUILDING_SICK(_playerTemperature);
-
-        player setVariable [QEGVAR(survival,exposure), (_exposure + parseNumber ((_sickInsideWarmCalculation)toFixed 2))];
+        private _sickInsideWarmCalculation = ((_playerTemperature) / 12) / 120;
+        [+_sickInsideWarmCalculation, "exposure"] call EFUNC(common,addModifier);
     };
 };
-
-//---------------------------
-//In a vehicle Check
 
 if !(isNull objectParent player) then {
 
-    if ((_MPlayertemp < 20) && (!(_ailments find "PARASITES" isNotEqualTo -1 || _ailments find "INFECTION" isNotEqualTo -1))) then {
+    if ((_playerTemperature < 20) && !(_parasites > 0 || _infection > 0)) then {
 
-        if (abs(_exposure) < 0.5) exitWith {
+        if (abs(_exposure) < 0.0001) exitWith {
         player setVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];
         };
 
-        _insideVehicleCalculation = MACRO_TEMPERATURE_FIREORVEHICLE(_playerTemperature);
+        private _insideVehicleCalculation = (((20 - _playerTemperature) * 2) / 5) / 5;
+        [+_insideVehicleCalculation, "exposure"] call EFUNC(common,addModifier);
 
-        player setVariable [QEGVAR(survival,exposure), (_exposure + parseNumber ((_insideVehicleCalculation)toFixed 2))];
-
-        if (_exposure > 0) then {player setVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];}; //If not sick, not hot, then - warm up, but reset at 0
-
+        if (_exposure > 0) then {
+            player setVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];
+        };
     } else {
-
-        _sickInsideVehicleCalculation = MACRO_TEMPERATURE_FIREORVEHICLE_SICK(_playerTemperature);
-
-        player setVariable [QEGVAR(survival,exposure), (_exposure + parseNumber ((_sickInsideVehicleCalculation)toFixed 2))];
+        private _sickInsideVehicleCalculation = ((_playerTemperature) / 100) / 100;
+        [+_sickInsideVehicleCalculation, "exposure"] call EFUNC(common,addModifier);
     };
 };
-
-_playerTemperature

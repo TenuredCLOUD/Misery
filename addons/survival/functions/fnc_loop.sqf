@@ -36,7 +36,7 @@
     private _poison = player getVariable [QGVAR(toxicity), MACRO_PLAYER_DEFAULTS_LOW];
     private _sleepiness = player getVariable [QGVAR(energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
     private _exposure = player getVariable [QEGVAR(temperature,exposure), MACRO_PLAYER_DEFAULTS_LOW];
-    private _playerTemperature = player getVariable [QEGVAR(temperature,temperature), (call EFUNC(temperature,environment)) select 0];
+    private _playerTemperature = player getVariable [QEGVAR(temperature,thermalIndex), (call EFUNC(temperature,environment)) select 0];
     private _isSleeping = player getVariable [QGVAR(isSleeping), false];
 
     private _ailments = player getVariable [QEGVAR(vitals,ailments), []];
@@ -122,7 +122,7 @@
 
     if (_infection > 0) then {
     if (_infection > 1) then {[player,(_infection / 100)] call EFUNC(common,specialDamage)};
-    player setVariable [QGVAR(infection), (_infection - 0.001)];
+        player setVariable [QGVAR(infection), (_infection - 0.001)];
         };
     };
 
