@@ -25,7 +25,6 @@ if (GVAR(remnant)) then {
         {
             if ((grad_persistence_blacklist find (toLower _x) isEqualTo -1) && (grad_persistence_blacklist find (toUpper _x) isEqualTo -1)) then {
                 [_x] call grad_persistence_fnc_blacklistClasses;
-                if (EGVAR(common,debug)) then {systemChat format ["[Misery Remnant Compat] GRAD Persistence detected, Adding %1 to blacklist for saving / reloading...", _x]};
             };
         } forEach _RemnantODRA;
         };

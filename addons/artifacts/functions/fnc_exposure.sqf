@@ -23,14 +23,13 @@
 
         if (!(call EFUNC(radiation,hasArtifact)) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
-            if (EGVAR(common,debug)) then {systemChat "Misery Artifact exposure cycle terminated..."};
+            [QUOTE(COMPONENT_BEAUTIFIED), "Artifact exposure cycle terminated"] call EFUNC(common,debugMessage);
             [] call FUNC(exposure);
-            if (EGVAR(common,debug)) then {systemChat "Misery Artifact exposure cycle checks re-initiated..."};
         };
 
 player setVariable [QEGVAR(survival,radiation), (player getVariable [QEGVAR(survival,radiation),0]) + 50, true];
 
-if (EGVAR(common,debug)) then {systemChat "Misery Artifact exposure cycle..."};
+[QUOTE(COMPONENT_BEAUTIFIED), "Artifact exposure cycle"] call EFUNC(common,debugMessage);
 
 }, 10, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;
