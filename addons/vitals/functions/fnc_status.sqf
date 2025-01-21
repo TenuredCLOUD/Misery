@@ -49,7 +49,7 @@ private _exposure = player getVariable [QEGVAR(temperature,exposure), MACRO_PLAY
 private _playerTemperature = player getVariable [QEGVAR(temperature,thermalIndex), (call EFUNC(temperature,environment)) select 0];
 private _playerFatigue = (getFatigue player) * 100;
 private _convertPlayerFatigue = round _playerFatigue;
-private _gasMaskCartridgeCalculation = player getVariable [QCLASS(gasmaskCartridgeLevel), 100];
+private _gasMaskCartridgeCalculation = player getVariable [QCLASS(gasmaskCartridgeLevel), MACRO_PLAYER_DEFAULTS_HIGH];
 private _buffs = player getVariable [QGVAR(buffs), []];
 private _ailments = player getVariable [QGVAR(ailments), []];
 
@@ -184,10 +184,10 @@ lbClear _ailmentsList;
         ["ailment","Cognitohazard (Protected)", QPATHTOEF(icons,data\psyfield_ca.paa), "You feel subtle vibrations around your skull, you are uneasy..."] call FUNC(addBuffOrAilment);
     };
     if ((player getVariable [QEGVAR(cognitohazard,insideArea), false] isEqualTo false)) then {
-    if (_cognitoNoProtection > -1) then {
+    if (_cognitoNoProtection isNotEqualTo -1) then {
         ["ailment","Cognitohazard"] call FUNC(removeBuffOrAilment);
     };
-    if (_cognitoProtected > -1) then {
+    if (_cognitoProtected isNotEqualTo -1) then {
         ["ailment","Cognitohazard (Protected)"] call FUNC(removeBuffOrAilment);
         };
     };
@@ -229,17 +229,19 @@ lbClear _ailmentsList;
     private _poisonAilment = _ailments findIf {(_x select 0) isEqualTo "Poisoned"};
     private _infectionAilment = _ailments findIf {(_x select 0) isEqualTo "Bacterial Infection"};
 
-    if(_ailments find "PARASITES" isNotEqualTo -1 && EGVAR(survival,ailments)) then {
+    if (_parasites > 0) then {
+    if (_parasiteAilment isEqualTo -1) then {
         ["ailment","Parasite Infection", QPATHTOEF(icons,data\parasites_ca.paa), "You are infected with Parasites, You feel a gnawing hunger that is unsatiable, as well as unquenchable thirst..."] call FUNC(addBuffOrAilment);
-    }else{
-    if (_parasites > -1) then {
+        };
+    } else {
+        if (_parasiteAilment isNotEqualTo -1) then {
         ["ailment","Parasite Infection"] call FUNC(removeBuffOrAilment);
         };
     };
 
     if (_poison > 0) then {
         if (_poisonAilment isEqualTo -1) then {
-            ["ailment","Poisoned", QPATHTOEF(icons,data\poison_ca.paa), "You are poisoned, you feel a wave of unease wash over you as death lingers..."] call FUNC(addBuffOrAilment);
+        ["ailment","Poisoned", QPATHTOEF(icons,data\poison_ca.paa), "You are poisoned, you feel a wave of unease wash over you as death lingers..."] call FUNC(addBuffOrAilment);
         };
     } else {
     if (_poisonAilment isNotEqualTo -1) then {
@@ -249,7 +251,7 @@ lbClear _ailmentsList;
 
     if (_infection > 0) then {
         if (_infectionAilment isEqualTo -1) then {
-            ["ailment","Bacterial Infection", QPATHTOEF(icons,data\infection_ca.paa), "You have a Bacterial infection, your breaths are shallow, and feel hot. You can feel your muscles weakening..."] call FUNC(addBuffOrAilment);
+        ["ailment","Bacterial Infection", QPATHTOEF(icons,data\infection_ca.paa), "You have a Bacterial infection, your breaths are shallow, and feel hot. You can feel your muscles weakening..."] call FUNC(addBuffOrAilment);
         };
     } else {
     if (_infectionAilment isNotEqualTo -1) then {
@@ -309,66 +311,64 @@ if (_exposure isEqualTo 0) then {
 };
 
 if (EGVAR(inventory,hudLayout) isEqualTo 0) then {
+    if (EGVAR(common,ace)) then {
+    private _bloodToValue = round(_Health / 6 * 100);
+    private _valueToBarBlood = [_bloodToValue] call EFUNC(common,valToBar);
+    _healthNumber ctrlSetText _valueToBarBlood;
+    } else {
+    private _healthToValue = round((1 - (damage player)) * 100);
+    private _valueToBarHealth = [_healthToValue] call EFUNC(common,valToBar);
+    _healthNumber ctrlSetText _valueToBarHealth;
+    };
 
-if (EGVAR(common,ace)) then {
-_BloodtoVal = round(_Health / 6 * 100);
-_ValtoBarBlood = [_BloodtoVal] call EFUNC(common,valToBar);
-_HealthNum ctrlSetText _ValtoBarBlood;
-} else {
-_HealthtoVal = round((1 - (damage player)) * 100);
-_ValtoBarHealth = [_HealthtoVal] call EFUNC(common,valToBar);
-_HealthNum ctrlSetText _ValtoBarHealth;
-};
+    private _valueToBarHunger = [round(_hunger * 100)] call EFUNC(common,valToBar);
+    _hungerNumber ctrlSetText _valueToBarHunger;
 
-_ValtoBarHunger = [round(_hunger * 100)] call EFUNC(common,valToBar);
-_HungerNum ctrlSetText _ValtoBarHunger;
+    private _valueToBarThirst = [round(_thirst * 100)] call EFUNC(common,valToBar);
+    _thirstNumber ctrlSetText _valueToBarThirst;
 
-_ValtoBarThirst = [round(_thirst * 100)] call EFUNC(common,valToBar);
-_ThirstNum ctrlSetText _ValtoBarThirst;
-
-_ValtoBarFatigue = [_convertPlayerFatigue] call EFUNC(common,valToBar);
-_FatigueNum ctrlSetText _ValtoBarFatigue;
+    private _valueToBarFatigue = [_convertPlayerFatigue] call EFUNC(common,valToBar);
+    _fatigueNumber ctrlSetText _valueToBarFatigue;
 
     } else {
 
     if (EGVAR(inventory,hudLayout) isEqualTo 1) then {
     if (EGVAR(common,ace)) then {
-    _HealthNumVal = format ["%1", round(_Health / 6 * 100)];
-    _HealthNum ctrlSetText _HealthNumVal;
+    private _healthNumberValueAce = format ["%1", round(_Health / 6 * 100)];
+    _healthNumber ctrlSetText _healthNumberValueAce;
     } else {
-    _HealthNumVal = format ["%1", round((1 - (damage player)) * 100)];
-    _HealthNum ctrlSetText _HealthNumVal;
+    private _healthNumberValueVanilla = format ["%1", round((1 - (damage player)) * 100)];
+    _healthNumber ctrlSetText _healthNumberValueVanilla;
     };
 
-    _HungerNumVal = format ["%1", round(_hunger * 100)];
-    _HungerNum ctrlSetText _HungerNumVal;
+    private _hungerNumberValue = format ["%1", round(_hunger * 100)];
+    _hungerNumber ctrlSetText _hungerNumberValue;
 
-    _ThirstNumVal = format ["%1", round(_thirst * 100)];
-    _ThirstNum ctrlSetText _ThirstNumVal;
+    private _thirstNumberValue = format ["%1", round(_thirst * 100)];
+    _thirstNumber ctrlSetText _thirstNumberValue;
 
-    _FatigueNumVal = format ["%1", _convertPlayerFatigue];
-    _FatigueNum ctrlSetText _FatigueNumVal;
+    private _fatigueNumberValue = format ["%1", _convertPlayerFatigue];
+    _fatigueNumber ctrlSetText _fatigueNumberValue;
         };
     };
 
     if (EGVAR(temperature,enable)) then {
-    _NFireBuff = _buffs findIf {(_x select 0) isEqualTo "Near Fire"};
-    _ShelterBuff = _buffs findIf {(_x select 0) isEqualTo "Sheltered"};
-    _CoverageBuff = _buffs findIf {(_x select 0) isEqualTo "Under Roof"};
+    _nearFireBuff = _buffs findIf {(_x select 0) isEqualTo "Near Fire"};
+    _shelterBuff = _buffs findIf {(_x select 0) isEqualTo "Sheltered"};
     if ([player] call EFUNC(common,nearFire)) then {
-        ["buff","Near Fire", QPATHTOEF(icons,data\nearfire_ca.paa), "When near a fire, you will be warmed from the cold, you can also utilize the fire for cooking, or boiling water to kill off micro-organisms..."] call FUNC(addBuffOrAilment);
+    ["buff","Near Fire", QPATHTOEF(icons,data\nearfire_ca.paa), "When near a fire, you will be warmed from the cold, you can also utilize the fire for cooking, or boiling water to kill off micro-organisms..."] call FUNC(addBuffOrAilment);
     } else {
-        if (_nearFireBuff > -1) then {
-        ["buff","Near Fire"] call FUNC(removeBuffOrAilment);
+    if (_nearFireBuff isNotEqualTo -1) then {
+    ["buff","Near Fire"] call FUNC(removeBuffOrAilment);
         };
     };
 
     if (insideBuilding player isEqualTo 1) then {
     ["buff","Sheltered", QPATHTOEF(icons,data\shelter_ca.paa), "You are sheltered from the weather, while inside you cannot build a fire due to smoke inhalation..."] call FUNC(addBuffOrAilment);
     } else {
-    if (_ShelterBuff > -1) then {
+    if (_shelterBuff isNotEqualTo -1) then {
     ["buff","Sheltered"] call FUNC(removeBuffOrAilment);
-    };
+        };
     };
 };
 

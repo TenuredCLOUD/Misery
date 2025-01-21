@@ -35,21 +35,6 @@
 #define MACRO_RADIATION_NUTRITIONLOSS(arg) ((arg) / 100) / 10
 #define MACRO_RADIATION_STAMINALOSS(arg) ((arg) / 10) / 10
 
-// Calculations - Temperature
-#define MACRO_TEMPERATURE_COLDEXPOSURE(arg) ((20 - arg) / 10) / 10
-#define MACRO_TEMPERATURE_WARMUP(arg) (arg / 10) / 10
-#define MACRO_TEMPERATURE_COOLDOWN(arg) (arg / 10) / 10
-#define MACRO_TEMPERATURE_OVEREXPOSURE(arg) (arg / 10) / 10
-#define MACRO_TEMPERATURE_SICKEXPOSURE(arg) (arg / 10) / 10
-#define MACRO_TEMPERATURE_FIREORVEHICLE(arg) (((20 - arg) * 2) / 5) / 5
-#define MACRO_TEMPERATURE_FIREORVEHICLE_SICK(arg) ((arg) / 10) / 10
-#define MACRO_TEMPERATURE_INSIDEBUILDING(arg) (((20 - arg) * 2) / 8) / 8
-#define MACRO_TEMPERATURE_INSIDEBUILDING_SICK(arg) ((arg) / 12) / 12
-#define MACRO_TEMPERATURE_COLDWATER(arg) ((20 - arg) / 2) / 2
-
-// Calculations - Weight Deficiency
-#define MACRO_WEIGHTCALC(arg) (((arg) / 10) / 10) / 10
-
 //IMS animations for compat:
 #define MACRO_ANIMATION_IMS_SPRINT "am_kulak_sprintf", "melee_sprintf", "melee_sprintfl","melee_sprintfr"
 

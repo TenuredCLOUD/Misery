@@ -35,9 +35,8 @@
         private _poison = player getVariable [QGVAR(toxicity), MACRO_PLAYER_DEFAULTS_LOW];
         private _sleepiness = player getVariable [QGVAR(energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
         private _exposure = player getVariable [QEGVAR(temperature,exposure), MACRO_PLAYER_DEFAULTS_LOW];
-        private _playerTemperature = player getVariable [QEGVAR(temperature,thermalIndex), (call EFUNC(temperature,environment)) select 0];
+        private _playerTemperature = player getVariable [QEGVAR(temperature,thermalIndex), MACRO_PLAYER_DEFAULTS_TEMP];
         private _isSleeping = player getVariable [QGVAR(isSleeping), false];
-
         private _ailments = player getVariable [QEGVAR(vitals,ailments), []];
 
         private _randomNutrientSelection = selectRandom [1,2];
@@ -69,9 +68,9 @@
         };
 
         if (_randomNutrientSelection isEqualTo 1) then {
-            player setVariable [QGVAR(thirst), (_thirst - _thirstDecrement)];
+            [-_thirstDecrement, "thirst"] call EFUNC(common,addModifier);
         } else {
-            player setVariable [QGVAR(hunger), (_hunger - _hungerDecrement)];
+            [-_hungerDecrement, "hunger"] call EFUNC(common,addModifier);
         };
 
         if (_hunger > 1) then {player setVariable [QGVAR(hunger), MACRO_PLAYER_DEFAULTS_HIGH]};
@@ -82,7 +81,7 @@
         if (EGVAR(common,checkMultiplayer)) then {
             player setVariable [QGVAR(energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
         } else {
-            player setVariable [QGVAR(energyDeficit), (_sleepiness + _sleepDecrement)];
+            [+_sleepDecrement, "energy"] call EFUNC(common,addModifier);
             if (_sleepiness >= 1) then {player setVariable [QGVAR(energyDeficit), MACRO_PLAYER_DEFAULTS_HIGH]};
             if (_sleepiness < 0) then {player setVariable [QGVAR(energyDeficit), MACRO_PLAYER_DEFAULTS_LOW]};
 
@@ -98,29 +97,29 @@
         };
 
         if (_radiation > 0) then {
-            player setVariable [QGVAR(radiation), (_radiation) - 0.001];
+            [-0.001, "radiation"] call EFUNC(common,addModifier);
             _random = [1, 10] call BIS_fnc_randomInt;
 
             if (_random isEqualTo 5 && _radiation > 0.05 && GVAR(ailments)) then {
-                if (_ailments findIf {(_x select 0) isEqualTo "Parasite Infection"} > -1) then {
+                if (_parasites > 0) then {
                     player setVariable [QGVAR(parasites), MACRO_PLAYER_DEFAULTS_LOW];
                 };
             };
         };
 
         if (GVAR(ailments)) then {
-            if ((_ailments findIf {(_x select 0) isEqualTo "Parasite Infection"} > -1)) then {
-                player setVariable [QGVAR(hunger), (_hunger - _hungerDecrement)];
+            if ((_parasites > 0)) then {
+                [-_hungerDecrement, "hunger"] call EFUNC(common,addModifier);
             };
 
             if (_poison > 0) then {
             if (_poison > 1) then {[player,(_poison / 100)] call EFUNC(common,specialDamage)};
-                player setVariable [QGVAR(toxicity), (_poison - 0.001)];
+                [-0.001, "toxicity"] call EFUNC(common,addModifier);
             };
 
             if (_infection > 0) then {
             if (_infection > 1) then {[player,(_infection / 100)] call EFUNC(common,specialDamage)};
-                player setVariable [QGVAR(infection), (_infection - 0.001)];
+                [-0.001, "infection"] call EFUNC(common,addModifier);
             };
         };
 

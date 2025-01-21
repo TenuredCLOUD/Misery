@@ -18,6 +18,6 @@
 
 private _bagWeightLoad = loadAbs player / getNumber (configFile >> "CfgInventoryGlobalVariable" >> "maxSoldierLoad");
 private _playerWeight = round(_bagWeightLoad * 100);
-private _weightCalculated = MACRO_WEIGHTCALC(_playerWeight);
+private _weightCalculated = (((_playerWeight) / 10) / 10) / 10;
 
 _weightCalculated

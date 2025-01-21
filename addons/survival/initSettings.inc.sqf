@@ -21,7 +21,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(ailments),
     "CHECKBOX",
-    ["Misery Ailments", "Enable Ailments? (Enables bacterial infections, parasites, etc...)"],
+    ["Ailments", "Enable Ailments? (Enables bacterial infections, parasites, etc...)"],
     _category,
     false,
     1
