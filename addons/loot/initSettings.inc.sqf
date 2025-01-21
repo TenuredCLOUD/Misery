@@ -1,4 +1,4 @@
-private _category = format ["Misery %1", QUOTE(COMPONENT_BEAUTIFIED)];
+private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 
 [QGVAR(enabled),
     "CHECKBOX",
