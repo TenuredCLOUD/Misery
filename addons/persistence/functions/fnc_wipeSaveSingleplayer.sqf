@@ -15,8 +15,11 @@
 
 params ["_saveFile"];
 
-[QUOTE(COMPONENT_BEAUTIFIED), format ["Wiping Save File %1", _x]] call EFUNC(common,debugMessage);
-
 private _saveName = format [QGVAR(%1), _saveFile];
 
+[QUOTE(COMPONENT_BEAUTIFIED), format ["Wiping Save File %1", _saveName]] call EFUNC(common,debugMessage);
+
 profileNamespace setVariable [_saveName, []];
+
+// Refresh data variables
+call FUNC(loadData);
