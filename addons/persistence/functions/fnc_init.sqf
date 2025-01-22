@@ -33,8 +33,8 @@ if (isMultiplayer) exitWith {
     [QGVAR(loadDataFromServer), player] call CBA_fnc_serverEvent;
 };
 
-if (GVAR(singlePlayerSaveData isEqualTo [])) exitWith {
-    [QUOTE(COMPONENT_BEAUTIFIED), "No singleplayer data found, new player."] call EFUNC(common,debugMessage);
+if (GVAR(singlePlayerSaveData) isEqualTo [] || GVAR(resetSinglePlayerSave)) exitWith {
+    [QUOTE(COMPONENT_BEAUTIFIED), "New player, no single player data found or single player data reset is enabled."] call EFUNC(common,debugMessage);
     call FUNC(newPlayer);
 };
 
