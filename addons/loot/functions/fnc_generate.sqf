@@ -46,13 +46,13 @@ if (count _raycastResult > 0) then {
     _holder setPosATL _fallbackPos;
 };
 
-// Adjust loot type probabilities based on building type 
+// Adjust loot type probabilities based on building type
 /*
 0 - Weapoms
 1 - Items (Misc)
 2 - Items (Food)
 3 - Items (Medical)
-4 - Clothing 
+4 - Clothing
 5 - Vests
 6 - Backpacks
 7 - Headwear
@@ -61,26 +61,26 @@ if (count _raycastResult > 0) then {
 10 - Explosives
 */
 
-switch true do { 
-case _isMilitary: { 
-// Higher probability for weapons and explosives 
-_lootType = selectRandom [0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 10, 11]; 
-}; 
-// Higher probability for medical supplies 
-case _isMedical: { 
-_lootType = 3; 
-}; 
-// Higher probability for general items and food 
-case _isStore: { 
-_lootType = selectRandom [1, 2, 4, 5, 6, 7, 8]; 
-}; 
-// Higher probability for tools and equipment 
-case _isGarage: { 
-_lootType = 1; 
-}; 
-default { 
+switch true do {
+case _isMilitary: {
+// Higher probability for weapons and explosives
+_lootType = selectRandom [0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 10, 11];
+};
+// Higher probability for medical supplies
+case _isMedical: {
+_lootType = 3;
+};
+// Higher probability for general items and food
+case _isStore: {
+_lootType = selectRandom [1, 2, 4, 5, 6, 7, 8];
+};
+// Higher probability for tools and equipment
+case _isGarage: {
+_lootType = 1;
+};
+default {
 // General loot for other buildings
-_lootType = selectRandom [0, 1, 2, 3, 4, 5, 6, 7, 8]; 
+_lootType = selectRandom [0, 1, 2, 3, 4, 5, 6, 7, 8];
 };
     };
 
@@ -132,9 +132,9 @@ switch (_loottype) do {
                 _holder addItemCargoGlobal [_itemChoiceM, 1];
             };
         } else {
-            if (count GVAR(itemsMisc) > 0) then {    
+            if (count GVAR(itemsMisc) > 0) then {
                 _itemChoice = [GVAR(itemsMisc)] call FUNC(blacklistFilter);
-                _holder addItemCargoGlobal [_itemChoice, 1];    
+                _holder addItemCargoGlobal [_itemChoice, 1];
             };
         };
     };
@@ -147,7 +147,7 @@ switch (_loottype) do {
         } else {
             if (count GVAR(itemsFood) > 0) then {
                 _itemFoodChoice = [GVAR(itemsFood)] call FUNC(blacklistFilter);
-                _holder addItemCargoGlobal [_itemFoodChoice, 1];    
+                _holder addItemCargoGlobal [_itemFoodChoice, 1];
             };
         };
     };
@@ -160,7 +160,7 @@ switch (_loottype) do {
         } else {
             if (count GVAR(itemsMedical) > 0) then {
                 _itemMedicalChoice = [GVAR(itemsMedical)] call FUNC(blacklistFilter);
-                _holder addItemCargoGlobal [_itemMedicalChoice, 1];    
+                _holder addItemCargoGlobal [_itemMedicalChoice, 1];
             };
         };
     };
@@ -173,7 +173,7 @@ switch (_loottype) do {
         } else {
             if (count GVAR(uniforms) > 0) then {
                 _clothingChoice = [GVAR(uniforms)] call FUNC(blacklistFilter);
-                _holder addItemCargoGlobal [_clothingChoice, 1];    
+                _holder addItemCargoGlobal [_clothingChoice, 1];
             };
         };
 
@@ -194,8 +194,8 @@ switch (_loottype) do {
                 } forEach [GVAR(itemsMisc), GVAR(itemsFood), GVAR(itemsMedical)];
             };
             {
-                if (random 1 < _itemAddProbabilityUniform) then { 
-                    _holder addItemToUniform [_clothingChoice, _x, 1]; 
+                if (random 1 < _itemAddProbabilityUniform) then {
+                    _holder addItemToUniform [_clothingChoice, _x, 1];
                 };
             } forEach _uniformItems;
         };
@@ -204,12 +204,12 @@ switch (_loottype) do {
         if (_isMilitary) then {
             if (count GVAR(vestsM) > 0) then {
                 _vestChoice = [GVAR(vestsM)] call FUNC(blacklistFilter);
-                _holder addItemCargoGlobal [_vestChoice, 1];    
+                _holder addItemCargoGlobal [_vestChoice, 1];
             };
         } else {
             if (count GVAR(vests) > 0) then {
                 _vestChoice = [GVAR(vests)] call FUNC(blacklistFilter);
-                _holder addItemCargoGlobal [_vestChoice, 1];        
+                _holder addItemCargoGlobal [_vestChoice, 1];
             };
         };
 
@@ -230,8 +230,8 @@ switch (_loottype) do {
                 } forEach [GVAR(itemsMisc), GVAR(itemsFood), GVAR(itemsMedical)];
             };
             {
-                if (random 1 < _itemAddProbabilityVest) then { 
-                    _holder addItemToVest [_vestChoice, _x, 1]; 
+                if (random 1 < _itemAddProbabilityVest) then {
+                    _holder addItemToVest [_vestChoice, _x, 1];
                 };
             } forEach _vestItems;
         };
@@ -245,7 +245,7 @@ switch (_loottype) do {
         } else {
             if (count GVAR(packs) > 0) then {
                 _backpackChoice = [GVAR(packs)] call FUNC(blacklistFilter);
-                _holder addBackpackCargoGlobal [_backpackChoice, 1];    
+                _holder addBackpackCargoGlobal [_backpackChoice, 1];
             };
         };
         if (GVAR(backpacksItemChance) > random 100) then {
@@ -280,7 +280,7 @@ switch (_loottype) do {
         } else {
             if (count GVAR(headgear) > 0) then {
                 _headgearChoice = [GVAR(headgear)] call FUNC(blacklistFilter);
-                _holder addItemCargoGlobal [_headgearChoice, 1];    
+                _holder addItemCargoGlobal [_headgearChoice, 1];
             };
         };
     };
@@ -293,7 +293,7 @@ switch (_loottype) do {
         } else {
             if (count GVAR(goggles) > 0) then {
                 _facewearChoice = [GVAR(goggles)] call FUNC(blacklistFilter);
-                _holder addItemCargoGlobal [_facewearChoice, 1];    
+                _holder addItemCargoGlobal [_facewearChoice, 1];
             };
         };
     };
