@@ -10,6 +10,15 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(resetSinglePlayerSave),
+    "CHECKBOX",
+    ["Fresh Start", "Start fresh in singleplayer?"],
+    _category,
+    false,
+    1
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(hardcore),
     "CHECKBOX",
     ["Enable Hardcore", "Hardcore mode only allows saving nearby a campfire."],
