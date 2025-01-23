@@ -27,9 +27,9 @@ if !(call FUNC(checkAreas)) exitWith {
         if (!_isPlayerHandled) then {
             private _currentMarker = "";
             {
-            if (_player inArea _x && {!(_x in GVAR(processedMarkers))}) exitWith {
-            _currentMarker = _x;
-            };
+                if (_player inArea _x && {!(_x in GVAR(processedMarkers))}) exitWith {
+                _currentMarker = _x;
+                };
             } forEach GVAR(areas);
 
             if (_currentMarker isNotEqualTo "") then {
@@ -38,7 +38,6 @@ if !(call FUNC(checkAreas)) exitWith {
                     getMarkerPos _currentMarker,
                     round(linearConversion [0, 500, selectMax (getMarkerSize _currentMarker), 5, 20, true]),
                     selectMax (getMarkerSize _currentMarker),
-                    GVAR(debug),
                     getMarkerSize _currentMarker,
                     _currentMarker
                 ], _player] call CBA_fnc_targetEvent;

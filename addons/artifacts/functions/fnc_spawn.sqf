@@ -4,7 +4,11 @@
  * Artifact spawner
  *
  * Arguments:
- * None
+ * 0: Center Position <POSITION>
+ * 1: Artifact Number <NUMBER>
+ * 2: Radius <NUMBER>
+ * 3: Marker Size <NUMBER>
+ * 4: Current Marker <MARKER>
  *
  * Return Value:
  * None
@@ -15,7 +19,7 @@
  * Public: No
 */
 
-params ["_centerPos", "_numArtifacts", "_radius", "_enableDebug", "_markerSize", "_currentMarker"];
+params ["_centerPos", "_numArtifacts", "_radius", "_markerSize", "_currentMarker"];
 
 if (!isServer) exitWith {};
 
@@ -99,7 +103,7 @@ for "_i" from 1 to _numArtifacts do {
     _holder setVariable [QGVAR(lightEmission), _light];
 
     // Debug markers
-    if (_enableDebug) then {
+    if (GVAR(debug)) then {
         private _marker = createMarker [format ["Artifact_%1_%2", diag_tickTime, _i], ASLToAGL _finalPos];
         _marker setMarkerTypeLocal "hd_dot";
         _marker setMarkerColorLocal (["ColorGreen","ColorBlue"] select _useBuilding);

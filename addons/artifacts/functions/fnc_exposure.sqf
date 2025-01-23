@@ -20,11 +20,7 @@
     if !(call EFUNC(radiation,hasArtifact)) exitWith {}; // Early exit until player has an artifact.
 
 //Handle artifact dosage
-private _totalProtection = call EFUNC(protection,totalProtection);
-
-private _skinProtection = _totalProtection select 2;
-private _respiratoryProtection = _totalProtection select 3;
-private _eyeProtection = _totalProtection select 4;
+call EFUNC(protection,totalProtection) params ["", "", "_skinProtection", "_respiratoryProtection", "_eyeProtection"];
 
 private _baseDose = 10;
 private _skinDeficit = _baseDose * ((1 - _skinProtection) / 1);
@@ -43,11 +39,7 @@ if (_effectiveDose > 0) then {
 [+_effectiveDose, "radiation"] call EFUNC(common,addModifier);
 };
 
-if (EGVAR(common,debug)) then {
-    systemChat format ["Artifact Radiation Protection: Skin %1%4, Respiratory %2%4, Eye %3%4", (_skinProtection * 100), (_respiratoryProtection * 100), (_eyeProtection * 100), "%"];
-    systemChat format ["Effective Artifact Radiation Dose: %1", _effectiveDose];
-};
-
-if(EGVAR(common,debug))then{systemChat "Misery Artifact exposure cycle..."};
+    [QUOTE(COMPONENT_BEAUTIFIED), format ["Artifact Radiation Protection: Skin %1%4, Respiratory %2%4, Eye %3%4", _skinProtection, _respiratoryProtection, _eyeProtection, "%"]] call EFUNC(common,debugMessage);
+    [QUOTE(COMPONENT_BEAUTIFIED), format ["Effective Artifact Radiation Dose: %1", _effectiveDose]] call EFUNC(common,debugMessage);
 
 }, 10, []] call CBA_fnc_addPerFrameHandler;
