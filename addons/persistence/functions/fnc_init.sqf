@@ -33,15 +33,6 @@ if (isMultiplayer) exitWith {
     [QGVAR(loadDataFromServer), player] call CBA_fnc_serverEvent;
 };
 
-if (GVAR(singlePlayerSaveData isEqualTo [])) exitWith {
-    [QUOTE(COMPONENT_BEAUTIFIED), "No singleplayer data found, new player."] call EFUNC(common,debugMessage);
-    call FUNC(newPlayer);
-};
-
-// Use direct save data for singleplayer
-[QUOTE(COMPONENT_BEAUTIFIED), "Loading singleplayer data"] call EFUNC(common,debugMessage);
-[GVAR(singlePlayerSaveData)] call FUNC(clientDataGet);
-
 // Force SP save on Escape menu
 [{!isNull findDisplay 46}, {
     (findDisplay 46) displayAddEventHandler ["KeyDown", {
@@ -51,3 +42,12 @@ if (GVAR(singlePlayerSaveData isEqualTo [])) exitWith {
         };
     }];
 }] call CBA_fnc_waitUntilAndExecute;
+
+if (GVAR(singlePlayerSaveData) isEqualTo [] || GVAR(resetSinglePlayerSave)) exitWith {
+    [QUOTE(COMPONENT_BEAUTIFIED), "New player, no single player data found or single player data reset is enabled."] call EFUNC(common,debugMessage);
+    call FUNC(newPlayer);
+};
+
+// Use direct save data for singleplayer
+[QUOTE(COMPONENT_BEAUTIFIED), "Loading singleplayer data"] call EFUNC(common,debugMessage);
+[GVAR(singlePlayerSaveData)] call FUNC(clientDataGet);
