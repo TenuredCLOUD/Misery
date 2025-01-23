@@ -14,17 +14,10 @@
  *
 */
 
-[{call EFUNC(radiation,hasArtifact)},
-{
 [{
-        params ["_args","_handle"];
+    params ["_args","_handle"];
 
-        if (!(call EFUNC(radiation,hasArtifact)) || (!alive player)) exitWith {
-            [_handle] call CBA_fnc_removePerFrameHandler;
-            if(EGVAR(common,debug))then{systemChat "Misery Artifact exposure cycle terminated..."};
-            [] call FUNC(exposure);
-            if(EGVAR(common,debug))then{systemChat "Misery Artifact exposure cycle checks re-initiated..."};
-        };
+    if !(call EFUNC(radiation,hasArtifact)) exitWith {}; // Early exit until player has an artifact.
 
 //Handle artifact dosage
 private _totalProtection = call EFUNC(protection,totalProtection);
@@ -58,4 +51,3 @@ if (EGVAR(common,debug)) then {
 if(EGVAR(common,debug))then{systemChat "Misery Artifact exposure cycle..."};
 
 }, 10, []] call CBA_fnc_addPerFrameHandler;
-}, []] call CBA_fnc_waitUntilAndExecute;
