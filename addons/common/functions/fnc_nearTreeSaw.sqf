@@ -30,7 +30,7 @@ if (isNull objectParent player && ([[QCLASS(chainsaw)]] call FUNC(hasItem))) the
         {
         if (damage _x isEqualTo 1) then {
         _found = false;
-        if (EGVAR(common,debug)) then {systemChat format["[Wood collection (Chainsaw)]: The tree at position %1 is fallen, and doesn't offer any more wood...",getPosATL _x];};
+        [QUOTE(COMPONENT_BEAUTIFIED), "Tree has fallen and doesn't offer anymore wood."] call EFUNC(common,debugMessage);
         };
         } forEach _nearbyTrees;
 

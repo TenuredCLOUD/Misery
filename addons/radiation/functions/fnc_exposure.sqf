@@ -14,23 +14,23 @@
  *
 */
 
-[{(player getVariable [QCLASS(radiation), 0]) >= 500},
+[{(player getVariable [QEGVAR(survival,radiation), 0]) >= 500},
 {
     [{
         params ["_args", "_handle"];
 
-        if (((player getVariable [QCLASS(radiation), 0]) < 500) || (!alive player)) exitWith {
+        if (((player getVariable [QEGVAR(survival,radiation), 0]) < 500) || (!alive player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
-            if(EGVAR(common,debug))then{systemChat "Misery Rad exposure enh+ cycle terminated..."};
+            if (EGVAR(common,debug)) then {systemChat "Misery Rad exposure enh+ cycle terminated..."};
             [] call FUNC(exposure);
-            if(EGVAR(common,debug))then{systemChat "Misery Rad exposure enh+ cycle checks re-initiated..."};
+            if (EGVAR(common,debug)) then {systemChat "Misery Rad exposure enh+ cycle checks re-initiated..."};
         };
 
         private ["_MHunger","_MThirst","_Rthirst","_radlvl","_scalednutrientloss","_scaledstaminaloss","_damage"];
 
-        _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_DEFAULTS_HIGH];
-        _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_DEFAULTS_HIGH];
-        _radlvl = player getVariable [QCLASS(radiation), 0];
+        _MHunger = player getVariable [QEGVAR(survival,hunger), MACRO_PLAYER_DEFAULTS_HIGH];
+        _MThirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH];
+        _radlvl = player getVariable [QEGVAR(survival,radiation), MACRO_PLAYER_DEFAULTS_LOW];
 
         //calculation for hunger / thirst removal: (scales with radiation exposure)
         _scalednutrientloss = MACRO_RADIATION_NUTRITIONLOSS(_radlvl);
@@ -40,19 +40,19 @@
 
         if (_radlvl >= 500) then {
 
-                        _MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_DEFAULTS_HIGH];
-                        _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_DEFAULTS_HIGH];
+                        _MHunger = player getVariable [QEGVAR(survival,hunger), MACRO_PLAYER_DEFAULTS_HIGH];
+                        _MThirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH];
 
                         player setStamina ((getStamina player) - _scaledstaminaloss);
 
                         addCamShake [1, 5, 10];
 
-                        player setVariable [QCLASS(hunger), (_MHunger - ((EGVAR(survival,hungerIncrement))))];
-                        player setVariable [QCLASS(hunger), (_MHunger - ((EGVAR(survival,hungerIncrement))))];
+                        player setVariable [QEGVAR(survival,hunger), (_MHunger - ((EGVAR(survival,hungerIncrement))))];
+                        player setVariable [QEGVAR(survival,hunger), (_MHunger - ((EGVAR(survival,hungerIncrement))))];
 
                         if ((call EFUNC(protection,totalProtection) select 0) < 1 && (call EFUNC(protection,totalProtection) select 1) < 1) then {
                         player say3D [QEGVAR(audio,sound_cough),10,1,2,0];
-                        }else{
+                        } else {
                         if ((call EFUNC(protection,totalProtection) select 0) > 0 || (call EFUNC(protection,totalProtection) select 1) > 0) then {
                         player say3D [QEGVAR(audio,sound_coughMuffled),10,1,2,0];
                 };
@@ -64,14 +64,14 @@
             if (EGVAR(common,ace)) then {
             [player, 1, "head", "stab"] call ace_medical_fnc_addDamageToUnit;
             [player, 1, "body", "stab"] call ace_medical_fnc_addDamageToUnit;
-            }else{
+            } else {
             _damage = damage player;
             player setDamage (_damage + 1); //No ACE damage
             };
 
         };
 
-    if(EGVAR(common,debug))then{systemChat "Misery Rad exposure enh+ cycle..."};
+    if (EGVAR(common,debug)) then {systemChat "Misery Rad exposure enh+ cycle..."};
 
     }, 120, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;

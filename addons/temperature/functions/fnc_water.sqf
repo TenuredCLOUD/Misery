@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Water
+ * Water temperature exposure
  *
  * Arguments:
  * None
@@ -15,31 +15,21 @@
  * Public: No
 */
 
-private ["_water","_MExposure","_ailments","_MWetsuit","_coldwater"];
+private _wetSuit = false;
+private _exposure = player getVariable [QGVAR(exposure), MACRO_PLAYER_DEFAULTS_LOW];
+private _parasites = player getVariable [QEGVAR(survival,parasites), MACRO_PLAYER_DEFAULTS_LOW];
+private _infection = player getVariable [QEGVAR(survival,infection), MACRO_PLAYER_DEFAULTS_LOW];
 
-_water = false;
-_MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW];
-_ailments = player getVariable QCLASS(ailments);
-_MWetsuit = false; //No wetsuit
-
-if(((toLower(uniform player))find "wetsuit")>-1) then {_MWetsuit = true}; //Check for wetsuit
+if (((toLower(uniform player))find "wetsuit") > -1) then {_wetSuit = true};
 
 if (((getPosASLW player select 2) < 0) || (underwater player)) then {
-
-    if (_ailments find "PARASITES" isNotEqualTo -1 || _ailments find "INFECTION" isNotEqualTo -1) then {
-
-        player setVariable [QCLASS(exposure), 0]; //If sick, and in cold water, remove fever, but reset exposure level
+    if (_parasites > 0 || _infection > 0) then {
+        player setVariable [QGVAR(exposure), MACRO_PLAYER_DEFAULTS_LOW];
     };
 
-    if (!_MWetsuit && GVAR(seaTemperature) < 20) then { //If player isn't wearing a wetsuit drop temp by 2.5 if water is cold enough
-
-        _coldwater = MACRO_TEMPERATURE_COLDWATER(GVAR(seaTemperature)); //- this  value scales with temperature decrease...
-
-        player setVariable [QCLASS(exposure), (_MExposure - parseNumber ((_coldwater)toFixed 2))];
-
-        _water = true;
-
-    }; //Start cold water simulation if sea temp is < 20C
+    if (!_wetSuit && GVAR(seaTemperature) < 20) then {
+        _coldWater = ((20 - GVAR(seaTemperature)) / 2) / 2;
+        [-_coldWater, "exposure"] call EFUNC(common,addModifier);
+    };
 };
 
-_water

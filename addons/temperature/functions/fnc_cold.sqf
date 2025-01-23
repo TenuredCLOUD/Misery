@@ -14,39 +14,21 @@
  *
  * Public: No
 */
+private _playerTemperature = player getVariable [QGVAR(thermalIndex), MACRO_PLAYER_DEFAULTS_TEMP];
+private _exposure = player getVariable [QGVAR(exposure), MACRO_PLAYER_DEFAULTS_LOW];
+private _hunger = player getVariable [QEGVAR(survival,hunger), MACRO_PLAYER_DEFAULTS_HIGH];
+private _parasites = player getVariable [QEGVAR(survival,parasites), MACRO_PLAYER_DEFAULTS_LOW];
+private _infection = player getVariable [QEGVAR(survival,infection), MACRO_PLAYER_DEFAULTS_LOW];
 
-private ["_cold","_MPlayertemp","_MExposure","_MHunger","_ailments","_coldexposure","_Miserytempdefcoldcalc"];
+if ([player] call EFUNC(common,nearFire) || insideBuilding player isEqualTo 1 || !(isNull objectParent player)) exitWith {};
 
-_cold = false;
-_MPlayertemp = player getVariable QCLASS(thermalIndex);
-_MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW];
-_MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_DEFAULTS_HIGH];
-_ailments = player getVariable QCLASS(ailments);
+if (_playerTemperature < 20) then {
+    if (!(_parasites > 0 || _infection > 0)) then {
+    _coldExposure = ((20 - _playerTemperature) / 10) / 100;
+    [-_coldExposure, "exposure"] call EFUNC(common,addModifier);
+};
 
-//Player effective temperature pre-check:
-if ([player] call EFUNC(common,nearFire)) exitWith {};
-if (insideBuilding player isEqualTo 1) exitWith {};
-if !(isNull objectParent player) exitWith {};
-
-if (_MPlayertemp < 20) then {
-
-    if (!(_ailments find "PARASITES" isNotEqualTo -1 || _ailments find "INFECTION" isNotEqualTo -1)) then {
-
-        _coldexposure = MACRO_TEMPERATURE_COLDEXPOSURE(_MPlayertemp); //- this value scales with player temperature decrease...
-
-        player setVariable [QCLASS(exposure), (_MExposure - parseNumber ((_coldexposure)toFixed 2))];
-
-        _cold = true;
+if (EGVAR(survival,temperatureDeficiency)) then {
+    [-_coldExposure, "hunger"] call EFUNC(common,addModifier);
     };
-
-    //Temperature deficiency - Calculates a drop in hunger / thirst depending on Temperature:
-    if (EGVAR(survival,temperatureDeficiency)) then {
-
-        _Miserytempdefcoldcalc = MACRO_TEMPERATURE_COLDEXPOSURE(_MPlayertemp);
-
-        player setVariable [QCLASS(hunger), (_MHunger - parseNumber ((_Miserytempdefcoldcalc)toFixed 2))];
-
-    };
-}; //Start cold simulation if < 20C (scaled)
-
-_cold
+};

@@ -51,7 +51,7 @@
         _descshort = format ["%1", getText (_cfg >> "displayName")];
         _IconTxt ctrlSetStructuredText parseText _descshort;
     };
-}else{
+} else {
     _IconCtrl ctrlSetText nil;
     _IconTxt ctrlSetText nil;
 };

@@ -15,29 +15,16 @@
  * Public: No
 */
 
-private ["_overtemp","_MPlayertemp","_MExposure","_MThirst","_overtempcalc","_Miserytempdefhotcalc"];
+_playerTemperature = player getVariable [QGVAR(thermalIndex), MACRO_PLAYER_DEFAULTS_TEMP];
+_exposure = player getVariable [QGVAR(exposure), MACRO_PLAYER_DEFAULTS_LOW];
+_thirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH];
 
-_overtemp = false;
-_MPlayertemp = player getVariable QCLASS(thermalIndex);
-_MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW];
-_MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_DEFAULTS_HIGH];
+    if (_playerTemperature >= 33) then {
+        _overTemperature = (_playerTemperature / 10) / 10;
+        [+_overTemperature, "exposure"] call EFUNC(common,addModifier);
 
-    if (_MPlayertemp >= 33) then {
-
-        _overtempcalc = MACRO_TEMPERATURE_OVEREXPOSURE(_MPlayertemp); //- this value scales with temperature increase...
-
-        player setVariable [QCLASS(exposure), (_MExposure + parseNumber ((_overtempcalc)toFixed 2))];
-
-        _overtemp = true;
-
-    //Temperature deficiency - Calculates a drop in hunger / thirst depending on Temperature:
     if (EGVAR(survival,temperatureDeficiency)) then {
-
-    _Miserytempdefhotcalc = MACRO_TEMPERATURE_OVEREXPOSURE(_MPlayertemp);
-
-    player setVariable [QCLASS(thirst), (_MThirst - parseNumber ((_Miserytempdefhotcalc)toFixed 2))];
-
+    _temperatureDeficiency = (_playerTemperature / 10) / 10;
+    [-_temperatureDeficiency, "thirst"] call EFUNC(common,addModifier);
     };
-}; //Start hot simulation if >= 33C temp (scaled)
-
-        _overtemp
+};

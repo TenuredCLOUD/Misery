@@ -14,7 +14,7 @@ private _gvars = ["dsaSpookBases", "dsaDevMutants", "dsaWebknightCreatures"];
 waitUntil {!isNil _x}; // Check Gvar arrays every second
 } forEach _gvars;
 [] call "\z\misery\addons\rfdetector\functions\fnc_RFsyncLoop.sqf";
-}else{
+} else {
 [] call "\z\misery\addons\rfdetector\functions\fnc_RFsyncLoop.sqf";
     };
 };

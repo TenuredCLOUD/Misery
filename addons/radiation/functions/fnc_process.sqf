@@ -38,7 +38,7 @@ private _effectiveDose = _skinDeficit + _respiratoryDeficit + _eyeDeficit;
 
 //Only dose player if effective dose is greater than 0 - with enough protection values can turn negative
 if (_effectiveDose > 0) then {
-player setVariable [QCLASS(radiation), (player getVariable [QCLASS(radiation), 0]) + _effectiveDose];
+player setVariable [QEGVAR(survival,radiation), (player getVariable [QEGVAR(survival,radiation), 0]) + _effectiveDose];
 };
 
 if (EGVAR(common,debug)) then {

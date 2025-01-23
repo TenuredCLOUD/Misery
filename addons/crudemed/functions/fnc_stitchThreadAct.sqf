@@ -50,7 +50,7 @@ Will most likely rewrite to new UI based use - Or move to an ACE action
     //Remove needle & thread
     player removeItem QCLASS(needleThread);
 
-    if((random 100) > 50) exitWith {
+    if ((random 100) > 50) exitWith {
     private _actionID = (_this select 2);
     [player,_actionID] call BIS_fnc_holdActionRemove;
     };
@@ -77,13 +77,13 @@ Will most likely rewrite to new UI based use - Or move to an ACE action
     _TimeA=_this select 0;
     waitUntil {(!alive player) or (time > _TimeA)};
     if (alive player) then {
-    player setVariable [QCLASS(infection), (random 15)]; //random infection amount
+    player setVariable [QEGVAR(survival,infection), (random 15)]; //random infection amount
     };
         };
 
     private _actionID = (_this select 2);
     [player,_actionID] call BIS_fnc_holdActionRemove;
-    }else{
+    } else {
     private _actionID = (_this select 2);
     [player,_actionID] call BIS_fnc_holdActionRemove;
     };

@@ -16,7 +16,7 @@
 
 if (alive player) exitWith {
 
-  if((random 100) > Miseryrawmeatchance) exitWith {
+  if ((random 100) > Miseryrawmeatchance) exitWith {
   titleText ["You consumed some raw meat, your stomach churns ominously. \n You feel a wave of unease wash over you...", "PLAIN DOWN"]; //Needs localization
   };
 

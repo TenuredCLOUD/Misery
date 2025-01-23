@@ -56,13 +56,13 @@ for "_i" from 0 to (count _text - 1) do {
 
 if ((player getVariable QCLASS(isDrinking)) isEqualTo true) then {
 
-private _MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_DEFAULTS_HIGH];
+private _MThirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH];
 
 playSound3D [QPATHTOEF(audio,sounds\items\drink.ogg), player, false, getPosASL player, 4, 1, 10];
 
-if((random 100) > EGVAR(survival,turbidWaterChance)) exitWith {
+if ((random 100) > EGVAR(survival,turbidWaterChance)) exitWith {
 
-player setVariable [QCLASS(thirst), (_MThirst + 10)];
+player setVariable [QEGVAR(survival,thirst), (_MThirst + 10)];
 _SuccessText_NoSickness = "You just swallowed water that smelled foul and tasted dirty. Despite the repugnant taste, it did quench your thirst.";
 player setVariable ["radiation", (player getVariable ["radiation",0]) + random 150, true];
 
@@ -76,7 +76,7 @@ ctrlSetText [1001, _SuccessText_NoSickness];
             (findDisplay 982380) displayRemoveEventHandler ["KeyDown", _FillInterrupt]; //Remove Display EH
 };
 
-player setVariable [QCLASS(thirst), (_MThirst + 10)];
+player setVariable [QEGVAR(survival,thirst), (_MThirst + 10)];
 _SuccessText_Sickness = "You just swallowed water that smelled foul and tasted dirty. Despite the repugnant taste, it did quench your thirst.";
 player setVariable ["radiation", (player getVariable ["radiation",0]) + random 150, true];
 player setVariable [QCLASS(turbidWaterLogged), true];

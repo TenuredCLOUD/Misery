@@ -18,7 +18,7 @@ if !([[QCLASS(lithiumBattery)]] call EFUNC(common,hasItem)) then {
 
    titleText ["It's completely dead...", "PLAIN DOWN"];
 
-}else{
+} else {
 
 titleText ["You add a battery to your RF detector...", "PLAIN DOWN"];
 

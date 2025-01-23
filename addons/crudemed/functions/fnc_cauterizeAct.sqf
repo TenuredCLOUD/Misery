@@ -53,7 +53,7 @@
     } forEach ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"];
     };
 
-    if((random 100) > 50) exitWith {
+    if ((random 100) > 50) exitWith {
     private _actionID = (_this select 2);
     [player,_actionID] call BIS_fnc_holdActionRemove;
     player setVariable ["_TC_sound", false,true];
@@ -81,14 +81,14 @@
     _TimeA=_this select 0;
     waitUntil {(!alive player) or (time > _TimeA)};
     if (alive player) then {
-    player setVariable [QCLASS(infection), (random 15)]; //random infection amount
+    player setVariable [QEGVAR(survival,infection), (random 15)]; //random infection amount
     };
         };
 
     private _actionID = (_this select 2);
     [player,_actionID] call BIS_fnc_holdActionRemove;
     player setVariable ["_TC_sound", false,true];
-    }else{
+    } else {
     private _actionID = (_this select 2);
     [player,_actionID] call BIS_fnc_holdActionRemove;
     player setVariable ["_TC_sound", false,true];

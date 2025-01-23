@@ -75,10 +75,10 @@ if ((_selectedItem in (items player)) or (_selectedItem in (magazines player))) 
     };
     ctrlSetText [1001, format ["%1 Sold for %2 %3", _displayName,EGVAR(money,symbol),[_price, 1, 2, true] call CBA_fnc_formatNumber]];
     [] call FUNC(shopVAL);
-}else{
+} else {
     ctrlSetText [1001, "You no longer have any more of that item to sell..."];
 };
-}else{
+} else {
     ctrlSetText [1001, "This Shop doesn't have the adequate funds to reimburse you..."];
 };
 

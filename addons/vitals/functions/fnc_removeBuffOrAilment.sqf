@@ -15,10 +15,12 @@
  *
 */
 
-_this params ["_type", "_index"];
+params ["_type", "_index"];
+
 _index = parseNumber _index;  // Ensure _index is a number
 private _arrayName = ["ailments", "buffs"] select (_type isEqualTo "buff");
 private _array = player getVariable [_arrayName, []];
+
 if (_index >= 0 && _index < count _array) then {
     _array deleteAt _index;
     player setVariable [_arrayName, _array];

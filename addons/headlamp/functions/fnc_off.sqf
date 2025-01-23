@@ -27,7 +27,7 @@ if (!isNil {_player getVariable QCLASS(headlampStatus)}) then {
     _player setVariable [QCLASS(headlampStatus), nil, true];
 
     //Fixes reloader issues:
-}else{
+} else {
 _player removeItem QCLASS(headlamp_On);
 _player addItem QCLASS(headlamp_Off);
 };

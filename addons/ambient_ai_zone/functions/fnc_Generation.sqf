@@ -154,9 +154,7 @@ _spawnPos = [_pos, _ModuleSpawnDistanceMIN, _ModuleSpawnDistanceMAX, 10, 0, 0, 0
 
 if (Misery_active_AmbAI_Groups >= Misery_AmbAI_MAXAllowed) exitWith {
 
-    if (EGVAR(common,debug)) then {
-            systemChat "[Misery Ambient_AI Framework] exiting AI Generation due to max active AI groups allowed value being reached";
-    };
+    [QUOTE(COMPONENT_BEAUTIFIED), "Exiting AI generation due to max active AI groups allowed value being reached."] call EFUNC(common,debugMessage);
 
     //Start cooldown before retry:
     sleep 120;
@@ -166,12 +164,8 @@ if (Misery_active_AmbAI_Groups >= Misery_AmbAI_MAXAllowed) exitWith {
 
 //Spawn chance check:
 if ((random 100) > _Spawnchance) exitWith {
-if (EGVAR(common,debug)) then {systemChat format["[Misery Ambient_AI Framework] Spawn chance failed, exiting Generation for AI at %1 checks will be re-initialized next game session...",getPosATL _module]};
-
-//This AI generator is now null from spawning since the original check failed
+    [QUOTE(COMPONENT_BEAUTIFIED), "Spawn chance failed, exiting generation for AI, checks will be re-initialized next game session"] call EFUNC(common,debugMessage);
 };
-
-if (EGVAR(common,debug)) then {systemChat format["[Misery Ambient_AI Framework] Player detected near module at %1 Generating AI Group...",getPosATL _module]};
 
 // Create the entities
 for "_i" from 1 to _numEntities do {
@@ -305,7 +299,7 @@ for "_i" from 1 to _numEntities do {
                     [_target,_actionId] call BIS_fnc_holdActionRemove;
                     private _recruitSuccess = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_SUCCESS", _Unitidentity, EGVAR(money,symbol), [_recruitmentCost] call Misery_fnc_formatNumber]];
                     [parseText _recruitSuccess, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
-                }else{
+                } else {
                     private _recruitFail = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_FAIL",_Unitidentity]];
                     [parseText _recruitFail, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
                 };
@@ -375,7 +369,7 @@ waitUntil {
         _player=_x;
         if ((_player distance leader _group) < Misery_AmbAI_DeleteCheckDistance) then {
             _deleteFlag = false;
-        }else{
+        } else {
             _deleteFlag = true;
         };
     } forEach _players;
@@ -383,10 +377,8 @@ waitUntil {
 };
 
 if (_deleteFlag) exitWith {
-if (EGVAR(common,debug)) then {systemChat format["[Misery Ambient_AI Framework] Player no longer detected, or Group for module at %1 was wiped out...",getPosATL _module]};
 {deleteVehicle _x} forEach units _group; // Delete all units in the group
 deleteGroup _group; // Delete the group
-if (EGVAR(common,debug)) then {systemChat format["[Misery Ambient_AI Framework] Re-initializing AI Generation for module at %1...",getPosATL _module]};
 _module setVariable [QCLASS(AI_Zone_Spawned), false, true];
 if (EGVAR(common,debug) && {!isNil "_marker"}) then {
         deleteMarker _marker;

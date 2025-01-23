@@ -26,9 +26,9 @@ if (_selectedItem isEqualTo (toUpper(_x select 0))) exitWith {_entry=_x};
 
 if ((count _entry)<1) exitWith {};
 
-_MHunger = player getVariable [QCLASS(hunger), MACRO_PLAYER_DEFAULTS_HIGH];
-_MThirst = player getVariable [QCLASS(thirst), MACRO_PLAYER_DEFAULTS_HIGH];
-_MExposure = player getVariable [QCLASS(exposure), MACRO_PLAYER_DEFAULTS_LOW];
+_MHunger = player getVariable [QEGVAR(survival,hunger), MACRO_PLAYER_DEFAULTS_HIGH];
+_MThirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH];
+_MExposure = player getVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];
 _ailments = player getVariable QCLASS(ailments);
 _rads = player getVariable ["radiation", 0];
 _hunger=_entry select 1;
@@ -81,23 +81,23 @@ if (_radval isNotEqualTo 0) then {player setVariable ["radiation", (_rads + _rad
 if (_exposureval isNotEqualTo 0) then {player setVariable [QCLASS(exposure), (_MExposure + _exposureval)];};
 
 //Hunger / Thirst
-if (_hunger isNotEqualTo 0) then {player setVariable [QCLASS(hunger), (_MHunger + _hunger)];};
-if (_thirst isNotEqualTo 0) then {player setVariable [QCLASS(thirst), (_MThirst + _thirst)];};
+if (_hunger isNotEqualTo 0) then {player setVariable [QEGVAR(survival,hunger), (_MHunger + _hunger)];};
+if (_thirst isNotEqualTo 0) then {player setVariable [QEGVAR(survival,thirst), (_MThirst + _thirst)];};
 
 //Reset to 0 if less than 0:
-if (_MHunger < 0) then {player setVariable [QCLASS(hunger), 0]};
-if (_MThirst < 0) then {player setVariable [QCLASS(thirst), 0]};
+if (_MHunger < 0) then {player setVariable [QEGVAR(survival,hunger), 0]};
+if (_MThirst < 0) then {player setVariable [QEGVAR(survival,thirst), 0]};
 
 //Reset to 100 if greater than 100:
-if (_MHunger > 100) then {player setVariable [QCLASS(hunger), MACRO_PLAYER_DEFAULTS_HIGH]};
-if (_MThirst > 100) then {player setVariable [QCLASS(thirst), MACRO_PLAYER_DEFAULTS_HIGH]};
+if (_MHunger > 100) then {player setVariable [QEGVAR(survival,hunger), MACRO_PLAYER_DEFAULTS_HIGH]};
+if (_MThirst > 100) then {player setVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH]};
 
 //Ailment add
 if ((count _debuffAdd) > 0) then {
     {
     _ailments pushBackUnique (toUpper _x);
     player setVariable [QCLASS(ailments), _ailments];
-    }forEach _debuffAdd;
+    } forEach _debuffAdd;
 };
 
 //Ailment remove
@@ -105,7 +105,7 @@ if ((count _debuffRemove) > 0) then {
     {
     _ailments deleteAt (_ailments find (toUpper _x));
     player setVariable [QCLASS(ailments), _ailments];
-    }forEach _debuffRemove;
+    } forEach _debuffRemove;
 };
 
 //Custom script execution

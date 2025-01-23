@@ -25,9 +25,9 @@ titleText ["You inject the Thrombomodulin...", "PLAIN DOWN"];
 player removeItem QCLASS(thrombomodulin);
 
 [{
-    player setVariable [QCLASS(radiation), -2500 - random 500];
-    if ((player getVariable [QCLASS(radiation), 0]) < 0) then {
-        player setVariable [QCLASS(radiation), 0];
+    player setVariable [QEGVAR(survival,radiation), -2500 - random 500];
+    if ((player getVariable [QEGVAR(survival,radiation), 0]) < 0) then {
+        player setVariable [QEGVAR(survival,radiation), 0];
     };
 }, [], 10] call CBA_fnc_waitAndExecute;
 

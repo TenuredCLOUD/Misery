@@ -19,7 +19,7 @@ if !([[QCLASS(9vBattery)]] call EFUNC(common,hasItem)) then {
 
    titleText ["It's completely dead...", "PLAIN DOWN"];
 
-}else{
+} else {
 
 titleText ["You add a battery to your portable radio...", "PLAIN DOWN"];
 

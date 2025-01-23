@@ -46,7 +46,7 @@ if !(QCLASS(tinder) in items player || "acex_intelitems_notepad" in magazines pl
   //Sound generation:
   if (QCLASS(lighter) in magazines player) then {
   playSound3D [QPATHTOEF(audio,sounds\immersion\Lighter.ogg), player, false, getPosASL player, 4, 1, 10];
-  }else{
+  } else {
   if ("rvg_matches" in magazines player) then {
   playSound3D [QPATHTOEF(audio,sounds\immersion\Match.ogg), player, false, getPosASL player, 4, 1, 10];
   };
@@ -72,7 +72,7 @@ if !(QCLASS(tinder) in items player || "acex_intelitems_notepad" in magazines pl
 
     if ((((_this select 1) getVariable "MiseryCanCraftFire") isEqualTo true) && QCLASS(firewood) in items player) then {
     titleText ["Crafting fire with firewood...", "PLAIN DOWN"];
-    }else{
+    } else {
     if ((((_this select 1) getVariable "MiseryCanCraftFire") isEqualTo true) && QCLASS(woodensticks) in items player) then {
     titleText ["Crafting fire with wooden sticks...", "PLAIN DOWN"];
     };
@@ -85,7 +85,7 @@ if !(QCLASS(tinder) in items player || "acex_intelitems_notepad" in magazines pl
     if (QCLASS(firewood) in items player) then {
         player removeItem QCLASS(firewood);
         call EFUNC(fire,CampfireBig);
-    }else{
+    } else {
     if (QCLASS(woodensticks) in items player) then {
         player removeItem QCLASS(woodensticks);
         call EFUNC(fire,Campfiresmall);
@@ -115,7 +115,7 @@ if (_index isNotEqualTo -1) then {
 
     if (QCLASS(lighter) in magazines player) then {
         // If lighter is available, do not consume a match
-    }else{
+    } else {
     if ("rvg_matches" in magazines player) then {
 
     };
@@ -143,7 +143,7 @@ if (_index isNotEqualTo -1) then {
 
     if (QCLASS(lighter) in magazines player) then {
         // If lighter is available, do not consume a match
-    }else{
+    } else {
     if ("rvg_matches" in magazines player) then {
 
     };

@@ -38,7 +38,7 @@
 
     if (_randomaudio isEqualTo 5) then {
     [MiseryRFLoopdummy, [_RFsoundrandom, 50]] remoteExec ["say3D", 0, MiseryRFLoopdummy];
-    }else{
+    } else {
     [MiseryRFLoopdummy, ["StaticBASIC", 50]] remoteExec ["say3D", 0, MiseryRFLoopdummy];
     };
 

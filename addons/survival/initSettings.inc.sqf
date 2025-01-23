@@ -1,33 +1,6 @@
 private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 
 [
-    QGVAR(cycle),
-    "SLIDER",
-    ["survival Cycle length", "Seconds between updates / calculations (Misery hunger, thirst, temperature calculations, etc...) (note: very low cycle values may cause lag)"],
-    _category,
-    [1, 300, 30, 0],
-    1
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(thirstIncrement),
-    "SLIDER",
-    ["Thirst increment", "Thirst increase every cycle"],
-    _category,
-    [0.01, 100, 0.05, 2],
-    1
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(hungerIncrement),
-    "SLIDER",
-    ["Hunger increment", "Hunger increase every cycle"],
-    _category,
-    [0.01, 100, 0.05, 2],
-    1
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(weightDeficiency),
     "CHECKBOX",
     ["Weight penalty", "Enable a penalty for players gear weight? (Enables a deficiency to hunger / thirst for player weight, also increases tired calc values in SP - Dynamically calculated)"],
@@ -46,45 +19,9 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(energyDeficitIncrement),
-    "SLIDER",
-    ["Energy deficit increment", "Energy loss every cycle (SP only)"],
-    _category,
-    [0.01, 100, 0.1, 2],
-    1
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(toxicityHealing),
-    "SLIDER",
-    ["Poison healing", "Poison decrease every cycle"],
-    _category,
-    [0.01, 100, 0.1, 2],
-    1
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(infectionHealing),
-    "SLIDER",
-    ["Infection healing", "Infection decrease every cycle"],
-    _category,
-    [0.01, 100, 0.1, 2],
-    1
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(blackoutChance),
-    "SLIDER",
-    ["Blackout chance", "% chance per cycle to blackout when Tired (SP only)"],
-    _category,
-    [1, 100, 30, 0],
-    1
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(ailments),
     "CHECKBOX",
-    ["Misery Ailments", "Enable Ailments? (Enables bacterial infections, parasites, etc...)"],
+    ["Ailments", "Enable Ailments? (Enables bacterial infections, parasites, etc...)"],
     _category,
     false,
     1

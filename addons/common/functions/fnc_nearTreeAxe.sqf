@@ -29,7 +29,7 @@ if (isNull objectParent player && ([[QCLASS(woodaxe),"WBK_axe","WBK_brush_axe","
     {
         if (damage _x isEqualTo 1) then {
             _found = false;
-            if (EGVAR(common,debug)) then {systemChat format["[Wood collection (Axe)]: The tree at position %1 is fallen, and doesn't offer any more wood...",getPosATL _x];};
+            [QUOTE(COMPONENT_BEAUTIFIED), "Tree has fallen, and has no more wood."] call EFUNC(common,debugMessage);
         };
     } forEach _nearbyTrees;
 };

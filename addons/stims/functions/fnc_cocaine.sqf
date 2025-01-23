@@ -14,7 +14,7 @@
  *
 */
 
-private _MSleepiness = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
+private _MSleepiness = player getVariable [QEGVAR(survival,energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
 
 
 
@@ -34,7 +34,7 @@ if (!hasInterface) exitWith {};
 
 // if ((MiseryNORVGisEqualTo"ENABLED") && !(EGVAR(common,checkMultiplayer))) then {
 if !(EGVAR(common,checkMultiplayer)) then {
-  player setVariable [QCLASS(energyDeficit), (_MSleepiness - 25)];
+  player setVariable [QEGVAR(survival,energyDeficit), (_MSleepiness - 25)];
 };
 
   waitUntil {

@@ -1,8 +1,7 @@
 #include "script_component.hpp"
 
-["CBA_settingsInitialized", {
 if (!hasInterface) exitWith {};
 
+["CBA_settingsInitialized", {
 [player] call FUNC(loop);
-
 }] call CBA_fnc_addEventHandler;

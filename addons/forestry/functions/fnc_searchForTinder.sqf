@@ -25,7 +25,7 @@ if (call FUNC(canForage)) then {
     if (_random > 4) then {
         titleText ["You found some tinder...", "PLAIN DOWN"];
         player addItem QCLASS(tinder);
-    }else{
+    } else {
         titleText ["You didn't find anything...", "PLAIN DOWN"];
     };
 };

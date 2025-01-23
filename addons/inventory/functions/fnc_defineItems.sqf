@@ -186,7 +186,7 @@ GVAR(itemEffects) = [] + _items;
 
 {
     GVAR(items) pushBackUnique(toUpper(_x select 0));
-}forEach _items;
+} forEach _items;
 
 GVAR(items)
 

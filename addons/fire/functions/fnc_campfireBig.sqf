@@ -67,7 +67,7 @@ _object setVariable ["Mis_Firewoodfuel", 100, true];
   //Sound generation:
   if (QCLASS(lighter) in magazines player) then {
   playSound3D [QPATHTOEF(audio,sounds\immersion\Lighter.ogg), player, false, getPosASL player, 4, 1, 10];
-  }else{
+  } else {
   if ("rvg_matches" in magazines player) then {
   playSound3D [QPATHTOEF(audio,sounds\immersion\Match.ogg), player, false, getPosASL player, 4, 1, 10];
   };
@@ -146,7 +146,7 @@ if (_index isNotEqualTo -1) then {
 
     if (QCLASS(lighter) in magazines player) then {
         // If lighter is available, do not consume a match
-    }else{
+    } else {
         // Needs Misery matches code
   };
     },
@@ -170,7 +170,7 @@ if (_index isNotEqualTo -1) then {
 
     if (QCLASS(lighter) in magazines player) then {
         // If lighter is available, do not consume a match
-    }else{
+    } else {
     // Need Misery matches code
   };
     },

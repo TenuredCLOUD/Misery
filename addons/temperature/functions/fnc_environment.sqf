@@ -41,11 +41,11 @@ if (!(isNull objectParent player) || ((insideBuilding player isEqualTo 1))) then
     _windChillIndex = _airTemp;
     _windChillIndexCelsius = (_windChillIndex - 32) * 5/9;
     _breathFog = 0;
-}else{
+} else {
     _windSpeed = (wind select 0) * 2.23694;
 
     if (isNull objectParent player) then {
-        _playerSpeed = (speed player) * 0.277778;
+        _playerSpeed = abs(speed player) * 0.277778;
         _windSpeed = _windSpeed + _playerSpeed;
     };
 
@@ -61,7 +61,7 @@ if (_airTemp <= 50 && _windSpeed >= 3) then {
         _windChillIndex = 35.74 + 0.6215 * _airTemp - 35.75 * (_windSpeed^0.16) + 0.4275 * _airTemp * (_windSpeed^0.16);
         _windChillIndexCelsius = (_windChillIndex - 32) * 5/9;
     };
-}else{
+} else {
     _windChillIndex = _airTemp;
     _windChillIndexCelsius = (_windChillIndex - 32) * 5/9;
     };
