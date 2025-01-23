@@ -23,7 +23,7 @@ params ["_position", ["_weaponCargo", []], ["_magazineCargo", []], ["_itemCargo"
 if (!isServer) exitWith {};
 
 // Raise height to prevent loot under buildings.
-if (_position select 2 isEqualTo 0) then {
+if (_position select 2 < 2) then {
     _position set [2, 1];
 };
 
