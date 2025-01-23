@@ -14,23 +14,23 @@
  *
 */
 
-
-[{call EFUNC(radiation,hasArtifact)},
-{
+#define MACRO_BASE_DOSE 10
 
 [{
-        params ["_args","_handle"];
+    params ["_args", "_handle"];
 
-        if (!(call EFUNC(radiation,hasArtifact)) || (!alive player)) exitWith {
-            [_handle] call CBA_fnc_removePerFrameHandler;
-            if(EGVAR(common,debug))then{systemChat "Misery Artifact exposure cycle terminated..."};
-            [] call FUNC(exposure);
-            if(EGVAR(common,debug))then{systemChat "Misery Artifact exposure cycle checks re-initiated..."};
-        };
+    if !(call EFUNC(radiation,hasArtifact)) exitWith {}; // Early exit until player has an artifact.
 
-player setVariable [QCLASS(radiation), (player getVariable [QCLASS(radiation),0]) + 50, true];
+    // Handle artifact dosage
+    call EFUNC(protection,totalProtection) params ["", "", "_skinProtection", "_respiratoryProtection", "_eyeProtection"];
 
-if(EGVAR(common,debug))then{systemChat "Misery Artifact exposure cycle..."};
+    private _skinDeficit = MACRO_BASE_DOSE * ((1 - _skinProtection) / 1);
+    private _respiratoryDeficit = MACRO_BASE_DOSE * ((1 - _respiratoryProtection) / 1);
+    private _eyeDeficit = MACRO_BASE_DOSE * ((1 - _eyeProtection) / 1);
+    private _effectiveDose = (_skinDeficit + _respiratoryDeficit + _eyeDeficit) max 0; // with enough protection values can turn negative
 
+    [_effectiveDose, "radiation"] call EFUNC(common,addModifier);
+
+    [QUOTE(COMPONENT_BEAUTIFIED), format ["Artifact Radiation Protection: Skin %1%4, Respiratory %2%4, Eye %3%4", _skinProtection, _respiratoryProtection, _eyeProtection, "%"]] call EFUNC(common,debugMessage);
+    [QUOTE(COMPONENT_BEAUTIFIED), format ["Effective Artifact Radiation Dose: %1", _effectiveDose]] call EFUNC(common,debugMessage);
 }, 10, []] call CBA_fnc_addPerFrameHandler;
-}, []] call CBA_fnc_waitUntilAndExecute;

@@ -1,5 +1,5 @@
 #define COMPONENT artifacts
-#define COMPONENT_BEAUTIFIED artifacts
+#define COMPONENT_BEAUTIFIED Artifacts
 #include "\z\misery\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
