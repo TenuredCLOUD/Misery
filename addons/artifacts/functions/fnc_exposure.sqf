@@ -14,8 +14,6 @@
  *
 */
 
-#define MACRO_BASE_DOSE 10
-
 [{
     params ["_args", "_handle"];
 

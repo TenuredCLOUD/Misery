@@ -2,16 +2,18 @@
 /*
  * Author: TenuredCLOUD
  * Temperature Conversions & Wind Chill Algorithm
- * Returns calculated windchill as well as world temperatures (Runs on a per client basis, but base data is synced to all clients)
- * Calculates Wind chill player is simulated to be experiencing (simplified algorithm)
- * Calculates air temperature with elevational differences (simplified algorithm)
- * Utilizes Overcast and Rain values as proxies to simulate humidity (simplified algorithm)
+ * Implements WMO-standard wind chill formula (valid for ≤10°C & >4.8mph winds)
+ * Accounts for apparent wind (meteorological + player movement vectors)
+ * Automatic fallback to ambient temp outside valid ranges
  *
  * Arguments:
  * None
  *
  * Return Value:
- * None
+ * 0: Array of Variables <ARRAY>
+ *     0: Windchill / Air temperature <NUMBER>
+ *     1: SeaTemp <NUMBER>
+ *     2: BreathFog <BOOL>
  *
  * Example:
  * [] call misery_temperature_fnc_environment;
@@ -19,52 +21,38 @@
  * Public: No
 */
 
-private _airTemp = ambientTemperature select 0;
-private _seaTemp = ambientTemperature select 1;
-private _overcast = overcast;
-private _rain = rain;
-
+ambientTemperature params ["_airTemp", "_seaTemp"];
 private _altitude = (getPosASL player) select 2;
 
-_airTemp = (_airTemp - (_altitude / 1000) * 6.5) * 9/5 + 32;
+_airTemp = _airTemp - (_altitude / 1000) * 6.5; // Temperature in Celsius at altitude
 
-private _windChillIndexCelsius = 0;
-private _humidity = (_overcast + _rain) / 2;
+private _airTempF = _airTemp * 9/5 + 32;
 
-private _breathFog = parseNumber ((_airTemp <= 45) && (_humidity >= 0.6));
+private _windChillIndexCelsius = _airTemp; // Default to air temp
+private _breathFog = false;
 
-if (_seaTemp <= 0) then {
-    _seaTemp = 0;
-};
+private _humidity = linearConversion [0, 1, (overcast + rain + fog)/3, 0.3, 1, true];
 
-if (!(isNull objectParent player) || ((insideBuilding player isEqualTo 1))) then {
-    _windChillIndex = _airTemp;
-    _windChillIndexCelsius = (_windChillIndex - 32) * 5/9;
-    _breathFog = 0;
+if (!(isNull objectParent player) || insideBuilding player isEqualTo 1) then {
+    _windChillIndexCelsius = _airTemp;
+    _breathFog = false;
 } else {
-    _windSpeed = (wind select 0) * 2.23694;
+    private _windSpeedMs = vectorMagnitude [wind select 0, wind select 1, 0];
+    private _playerSpeedMs = abs(speed player) / 3.6; // Convert km/h to m/s
+    private _apparentWindMs = _windSpeedMs + _playerSpeedMs;
 
-    if (isNull objectParent player) then {
-        _playerSpeed = abs(speed player) * 0.277778;
-        _windSpeed = _windSpeed + _playerSpeed;
+    private _apparentWindMph = _apparentWindMs * 2.23694;
+
+    if (_airTemp <= 10 && _apparentWindMph > 4.8) then {
+        // North American/WMO wind chill formula
+        _windChillIndexCelsius = 13.12 + (0.6215 * _airTemp) - (11.37 * (_apparentWindMph ^ 0.16)) + (0.3965 * _airTemp * (_apparentWindMph ^ 0.16));
     };
 
-if (_windSpeed < 0.01) then {
-    _windSpeed = 0;
-};
-
-if (_airTemp <= 50 && _windSpeed >= 3) then {
-    if (_windSpeed <= 0) then {
-        _windChillIndex = _airTemp;
-        _windChillIndexCelsius = _airTemp;
-    } else {
-        _windChillIndex = 35.74 + 0.6215 * _airTemp - 35.75 * (_windSpeed^0.16) + 0.4275 * _airTemp * (_windSpeed^0.16);
-        _windChillIndexCelsius = (_windChillIndex - 32) * 5/9;
-    };
-} else {
-    _windChillIndex = _airTemp;
-    _windChillIndexCelsius = (_windChillIndex - 32) * 5/9;
+    if (_windChillIndexCelsius <= 7 && _humidity >= 0.6 && (rain < 0.5) && !(underwater player)) then {
+        _breathFog = true;
     };
 };
+
+_seaTemp = _seaTemp max 0;
 
 [_windChillIndexCelsius, _seaTemp, _breathFog]

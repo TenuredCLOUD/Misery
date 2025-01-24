@@ -16,24 +16,12 @@
  * Public: No
 */
 
-[{((player getVariable [QGVAR(hunger), MACRO_PLAYER_DEFAULTS_HIGH]) < 75)},
-    {
+call EFUNC(common,getPlayerVariables) params ["_hunger", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
 
-        [{
-            params ["_args", "_handle"];
+if (_hunger < 0.75) then {
+    player say3D [QEGVAR(audio,sound_stomachGrowl), 10, 1, 2, 0];
+};
 
-            if ((player getVariable [QGVAR(hunger), MACRO_PLAYER_DEFAULTS_HIGH]) > 75 || (!alive player)) exitWith {
-                [_handle] call CBA_fnc_removePerFrameHandler;
-                if (EGVAR(common,debug)) then {systemChat "[Misery hunger] immersion cycle terminated..."};
-                [] call FUNC(hungry);
-                if (EGVAR(common,debug)) then {systemChat "[Misery hunger] immersion cycle checks re-initiated..."};
-            };
-
-        if ((player getVariable [QGVAR(hunger), MACRO_PLAYER_DEFAULTS_HIGH]) < 75) then {
-            player say3D ["StomachGrowl",10,1,2,0];
-        };
-
-        if (EGVAR(common,debug)) then {systemChat "[Misery hunger] immersion cycle..."};
-
-    }, 300, []] call CBA_fnc_addPerFrameHandler;
-}, []] call CBA_fnc_waitUntilAndExecute;
+[{
+    [] call FUNC(hungry);
+}, [], 300] call CBA_fnc_waitAndExecute;

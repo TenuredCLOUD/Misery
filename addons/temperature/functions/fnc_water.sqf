@@ -15,10 +15,8 @@
  * Public: No
 */
 
+call EFUNC(common,getPlayerVariables) params ["", "", "", "", "_exposure", "", "_infection", "_parasites"];
 private _wetSuit = false;
-private _exposure = player getVariable [QGVAR(exposure), MACRO_PLAYER_DEFAULTS_LOW];
-private _parasites = player getVariable [QEGVAR(survival,parasites), MACRO_PLAYER_DEFAULTS_LOW];
-private _infection = player getVariable [QEGVAR(survival,infection), MACRO_PLAYER_DEFAULTS_LOW];
 
 if (((toLower(uniform player))find "wetsuit") > -1) then {_wetSuit = true};
 

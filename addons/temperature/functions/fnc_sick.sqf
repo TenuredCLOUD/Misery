@@ -1,5 +1,5 @@
 #include "..\script_component.hpp"
-/*
+ /*
  * Author: TenuredCLOUD
  * Sick
  *
@@ -15,41 +15,35 @@
  * Public: No
 */
 
-    private _playerTemperature = player getVariable [QGVAR(thermalIndex), MACRO_PLAYER_DEFAULTS_TEMP];
-    private _exposure = player getVariable [QGVAR(exposure), MACRO_PLAYER_DEFAULTS_LOW];
-    private _thirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH];
-    private _parasites = player getVariable [QEGVAR(survival,parasites), MACRO_PLAYER_DEFAULTS_LOW];
-    private _infection = player getVariable [QEGVAR(survival,infection), MACRO_PLAYER_DEFAULTS_LOW];
+call EFUNC(common,getPlayerVariables) params ["", "", "", "_playerTemperature", "", "", "_infection", "_parasites"];
 
-    switch (true) do {
+private _hasParasites = _parasites > 0;
+private _hasInfection = _infection > 0;
+private _sickCalculation = (_playerTemperature / 10) / 10;
 
-    case ((_parasites > 0 || _infection > 0) && _playerTemperature > 20): {
-    private _sickCalculation_1 = (_playerTemperature / 10) / 10;
-    [+_sickCalculation_1, "exposure"] call EFUNC(common,addModifier);
+switch (true) do {
+    case ((_hasParasites || _hasInfection) && _playerTemperature > 20): {
+        [+_sickCalculation, "exposure"] call EFUNC(common,addModifier);
 
-    if (EGVAR(survival,temperatureDeficiency)) then {
-    private _temperatureDeficiency_1 = (_playerTemperature / 10) / 10;
-    [-_temperatureDeficiency_1, "thirst"] call EFUNC(common,addModifier);
+        if (EGVAR(survival,temperatureDeficiency)) then {
+            [-_sickCalculation, "thirst"] call EFUNC(common,addModifier);
+        };
     };
-};
 
-    case ((_parasites > 0 || _infection > 0) && _playerTemperature < 20): {
-    private _sickCalculation_2 = ((20 - _playerTemperature) / 10) / 10;
-    [+_sickCalculation_2, "exposure"] call EFUNC(common,addModifier);
+    case ((_hasParasites || _hasInfection) && _playerTemperature < 20): {
+        private _sickCalculationAlt = ((20 - _playerTemperature) / 10) / 10;
+        [+_sickCalculationAlt, "exposure"] call EFUNC(common,addModifier);
 
-    if (EGVAR(survival,temperatureDeficiency)) then {
-    private _temperatureDeficiency_2 = ((20 - _playerTemperature) / 10) / 10;
-    [-_temperatureDeficiency_2, "thirst"] call EFUNC(common,addModifier);
+        if (EGVAR(survival,temperatureDeficiency)) then {
+            [-_sickCalculationAlt, "thirst"] call EFUNC(common,addModifier);
+        };
     };
-};
 
-    case ((_parasites > 0 || _infection > 0) && _playerTemperature isEqualTo 20): {
-    private _sickCalculation_3 = (_playerTemperature / 10) / 10;
-    [+_sickCalculation_3, "exposure"] call EFUNC(common,addModifier);
+    case ((_hasParasites || _hasInfection) && _playerTemperature isEqualTo 20): {
+        [+_sickCalculation, "exposure"] call EFUNC(common,addModifier);
 
-    if (EGVAR(survival,temperatureDeficiency)) then {
-    private _temperatureDeficiency_3 = (_playerTemperature / 10) / 10;
-    [-_temperatureDeficiency_3, "thirst"] call EFUNC(common,addModifier);
+        if (EGVAR(survival,temperatureDeficiency)) then {
+            [-_sickCalculation, "thirst"] call EFUNC(common,addModifier);
         };
     };
 };

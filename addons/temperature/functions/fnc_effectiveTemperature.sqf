@@ -15,13 +15,13 @@
  * Public: No
 */
 
-private _playerTemperature = player getVariable [QGVAR(temperature), (call FUNC(environment)) select 0];
-GVAR(seaTemperature) = (call FUNC(environment)) select 1;
+call EFUNC(common,getPlayerVariables) params ["", "", "", "_playerTemperature", "_exposure", "", "_infection", "_parasites"];
+call FUNC(exposure) params ["_airTemp", "_seaTemp"];
+
+GVAR(seaTemperature) = _seaTemp;
 private _clothesWarmth = (player call FUNC(clothing)) select 0;
-player setVariable [QGVAR(temperature), (_playerTemperature + parseNumber ((_clothesWarmth)toFixed 2))];
-private _exposure = player getVariable [QGVAR(exposure), MACRO_PLAYER_DEFAULTS_LOW];
-private _parasites = player getVariable [QEGVAR(survival,parasites), MACRO_PLAYER_DEFAULTS_LOW];
-private _infection = player getVariable [QEGVAR(survival,infection), MACRO_PLAYER_DEFAULTS_LOW];
+
+[_airTemp + _clothesWarmth, "temperature"] call EFUNC(common,addModifier);
 
 if ([player] call EFUNC(common,nearFire)) then {
 
