@@ -3,5 +3,5 @@
 if !(isServer) exitWith {};
 
 if (GVAR(enabled)) then {
-call FUNC(drops)
+    call FUNC(drops)
 };
