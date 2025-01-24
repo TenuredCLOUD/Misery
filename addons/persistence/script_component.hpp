@@ -23,7 +23,8 @@
     QEGVAR(currency,bankedFunds), \
     QEGVAR(cooking,knowledge), \
     QEGVAR(crafting,knowledge), \
-    QEGVAR(hydrology,knowledge)
+    QEGVAR(hydrology,knowledge), \
+    QEGVAR(gasmask,cartridgeEfficiency)
 
 #ifdef DEBUG_ENABLED_PERSISTENCE
     #define DEBUG_MODE_FULL
