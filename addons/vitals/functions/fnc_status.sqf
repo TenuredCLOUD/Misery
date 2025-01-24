@@ -251,16 +251,16 @@ disableSerialization;
                 case (_exposure <= -1): {
                     _coldExposureIndex = 0;
                 };
-                case (_exposure <= -5) {
+                case (_exposure <= -5): {
                     _coldExposureIndex = 1;
                 };
-                case (_exposure <= -10) {
+                case (_exposure <= -10): {
                     _coldExposureIndex = 2;
                 };
-                case (_exposure <= -15) {
+                case (_exposure <= -15): {
                     _coldExposureIndex = 3;
                 };
-                case (_exposure <= -20) {
+                case (_exposure <= -20): {
                     _coldExposureIndex = 4;
                 };
             };
