@@ -48,7 +48,7 @@
         player setVariable [QCLASS(breathCondensation), true];
     };
 
-[QUOTE(COMPONENT_BEAUTIFIED), format ["BreathFog: Delay %1s | Fatigue %2%3 | Active: %4", round(_delay), round(getFatigue player * 100), "%", _effectActive]] call EFUNC(common,debugMessage);
+    [QUOTE(COMPONENT_BEAUTIFIED), format ["BreathFog: Delay %1s | Fatigue %2%3 | Active: %4", round(_delay), round(getFatigue player * 100), "%", _effectActive]] call EFUNC(common,debugMessage);
 }, 1, [CBA_missionTime - 5, false]] call CBA_fnc_addPerFrameHandler;
 
 

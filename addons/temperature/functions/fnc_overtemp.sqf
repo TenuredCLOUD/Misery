@@ -15,7 +15,7 @@
  * Public: No
 */
 
-call EFUNC(common,getPlayerVariables) params ["", "", "", "_playerTemperature", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+call EFUNC(common,getPlayerVariables) params ["", "", "", "_playerTemperature"];
 
     if (_playerTemperature >= 33) then {
         _overTemperature = (_playerTemperature / 10) / 10;

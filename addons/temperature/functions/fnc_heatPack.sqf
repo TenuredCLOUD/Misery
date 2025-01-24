@@ -15,7 +15,7 @@
  * Public: No
 */
 
-call EFUNC(common,getPlayerVariables) params ["", "", "", "", "_exposure", "", "", "", "", "", "", "", "", "", "", "", ""];
+call EFUNC(common,getPlayerVariables) params ["", "", "", "", "_exposure"];
 
 if (alive player) exitWith {
     titleText ["You use a heat pack...", "PLAIN DOWN"];

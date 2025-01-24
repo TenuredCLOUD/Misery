@@ -15,7 +15,7 @@
  * Public: No
 */
 
-call EFUNC(common,getPlayerVariables) params ["", "", "", "_playerTemperature", "", "", "_infection", "_parasites", "", "", "", "", "", "", "", "", ""];
+call EFUNC(common,getPlayerVariables) params ["", "", "", "_playerTemperature", "", "", "_infection", "_parasites"];
 
 switch (true) do {
     case ((_parasites > 0 || _infection > 0) && _playerTemperature > 20): {

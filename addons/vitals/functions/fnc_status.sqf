@@ -18,7 +18,7 @@ disableSerialization;
 [{
     params ["_args", "_handle"];
 
-if (isNull findDisplay 982377) exitWith {};
+    if (isNull findDisplay 982377) exitWith {};
 
 private _vitalsDisplay = findDisplay 982377;
 private _temperatureText = _vitalsDisplay displayCtrl 1015;
@@ -39,7 +39,7 @@ private _playerFatigue = (getFatigue player) * 100;
 private _convertPlayerFatigue = round _playerFatigue;
 private _gasMaskCartridgeCalculation = player getVariable [QCLASS(gasmaskCartridgeLevel), MACRO_PLAYER_DEFAULTS_HIGH];
 
-call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "_playerTemperature", "_exposure", "_radiation", "_infection", "_parasites", "_toxicity", "", "_buffs", "_ailments", "_funds", "", "", "", ""];
+call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "_playerTemperature", "_exposure", "_radiation", "_infection", "_parasites", "_toxicity", "", "_buffs", "_ailments", "_funds"];
 call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "_skinProtection", "_respiratoryProtection", "_eyeProtection", "_hearingProtection"];
 
 lbClear _buffsList;

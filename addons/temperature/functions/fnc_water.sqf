@@ -15,7 +15,7 @@
  * Public: No
 */
 
-call EFUNC(common,getPlayerVariables) params ["", "", "", "", "_exposure", "", "_infection", "_parasites", "", "", "", "", "", "", "", "", ""];
+call EFUNC(common,getPlayerVariables) params ["", "", "", "", "_exposure", "", "_infection", "_parasites"];
 private _wetSuit = false;
 
 if (((toLower(uniform player))find "wetsuit") > -1) then {_wetSuit = true};

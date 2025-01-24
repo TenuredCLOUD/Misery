@@ -15,8 +15,8 @@
  * Public: No
 */
 
-call EFUNC(common,getPlayerVariables) params ["", "", "", "_playerTemperature", "_exposure", "", "_infection", "_parasites", "", "", "", "", "", "", "", "", ""];
-call FUNC(exposure) params ["_airTemp", "_seaTemp", ""];
+call EFUNC(common,getPlayerVariables) params ["", "", "", "_playerTemperature", "_exposure", "", "_infection", "_parasites"];
+call FUNC(exposure) params ["_airTemp", "_seaTemp"];
 
 GVAR(seaTemperature) = _seaTemp;
 private _clothesWarmth = (player call FUNC(clothing)) select 0;

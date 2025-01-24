@@ -15,14 +15,14 @@
  * Public: No
 */
 
-call EFUNC(common,getPlayerVariables) params ["", "", "", "", "_exposure", "", "", "", "", "", "", "", "", "", "", "", ""];
-call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "", "", "", ""];
+call EFUNC(common,getPlayerVariables) params ["", "", "", "", "_exposure"];
+call EFUNC(protection,totalProtection) params ["_gasMask", "_scba"];
 
 if ((_exposure > 0.1) && _gasMask < 1 && _scba < 1) then {
     player say3D [QEGVAR(audio,sound_coughing), 10, 1, 2, 0];
-    } else {
+} else {
     if ((_exposure > 0.1) && _gasMask > 0 || _scba > 0) then {
-    player say3D [QEGVAR(audio,sound_coughMask01), 10, 1, 2, 0];
+        player say3D [QEGVAR(audio,sound_coughMask01), 10, 1, 2, 0];
     };
 };
 

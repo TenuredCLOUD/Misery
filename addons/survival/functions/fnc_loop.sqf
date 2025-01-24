@@ -21,7 +21,7 @@
 
         if (!alive player) exitWith {};
 
-        call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "_playerTemperature", "_exposure", "_radiation", "_infection", "_parasites", "_toxicity", "", "", "_ailments", "", "", "", "", ""];
+        call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "_playerTemperature", "_exposure", "_radiation", "_infection", "_parasites", "_toxicity", "", "", "_ailments"];
 
         private _isSleeping = player getVariable [QGVAR(isSleeping), false];
         private _randomNutrientSelection = selectRandom [1,2];

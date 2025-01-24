@@ -21,8 +21,7 @@
  * Public: No
 */
 
-private _airTemp = ambientTemperature select 0; // Get temperature in Celsius
-private _seaTemp = ambientTemperature select 1; // Get black-hot surface temperatures
+ambientTemperature params ["_airTemp", "_seaTemp"];
 private _altitude = (getPosASL player) select 2;
 
 _airTemp = _airTemp - (_altitude / 1000) * 6.5; // Temperature in Celsius at altitude
@@ -45,8 +44,8 @@ if (!(isNull objectParent player) || insideBuilding player isEqualTo 1) then {
     private _apparentWindMph = _apparentWindMs * 2.23694;
 
     if (_airTemp <= 10 && _apparentWindMph > 4.8) then {
-    // North American/WMO wind chill formula
-    _windChillIndexCelsius = 13.12 + (0.6215 * _airTemp) - (11.37 * (_apparentWindMph ^ 0.16)) + (0.3965 * _airTemp * (_apparentWindMph ^ 0.16));
+        // North American/WMO wind chill formula
+        _windChillIndexCelsius = 13.12 + (0.6215 * _airTemp) - (11.37 * (_apparentWindMph ^ 0.16)) + (0.3965 * _airTemp * (_apparentWindMph ^ 0.16));
     };
 
     if (_windChillIndexCelsius <= 7 && _humidity >= 0.6 && (rain < 0.5) && !(underwater player)) then {

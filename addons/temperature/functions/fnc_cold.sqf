@@ -15,7 +15,7 @@
  * Public: No
 */
 
-call EFUNC(common,getPlayerVariables) params ["_hunger", "", "", "_playerTemperature", "_exposure", "", "_infection", "_parasites", "", "", "", "", "", "", "", "", ""];
+call EFUNC(common,getPlayerVariables) params ["_hunger", "", "", "_playerTemperature", "_exposure", "", "_infection", "_parasites"];
 
 if ([player] call EFUNC(common,nearFire) || insideBuilding player isEqualTo 1 || !(isNull objectParent player)) exitWith {};
 
