@@ -22,6 +22,7 @@ PREP(nearTree);
 PREP(nearTreeAxe);
 PREP(nearTreeSaw);
 PREP(nearWell);
+PREP(spawnLoot);
 PREP(specialDamage);
 PREP(stun);
 PREP(surfacePos);
