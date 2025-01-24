@@ -17,41 +17,38 @@
  * Public: No
 */
 
-while {true} do {
+[{
+    params ["_args", "_handle"];
+    _args params ["_lastActivation", "_effectActive"];
 
-    player setVariable [QCLASS(breathCondensationEffect), true];
+    call FUNC(environment) params ["", "", "_breathFog"];
 
-    if ((((call FUNC(environment)) select 2) isEqualTo 0) || (!GVAR(breathFogAllowed)) || (!alive player)) exitWith {
-        if(EGVAR(common,debug))then{systemChat "Misery Breathfog cycle terminated..."};
-        player setVariable [QCLASS(breathCondensationEffect), nil];
+    if (!_breathFog) exitWith {}; // Wait till _breathFog check is true
+
+    private _delay = linearConversion [0, 1, getFatigue player, 4, 12, true];
+
+    if (CBA_missionTime - _lastActivation >= _delay) then {
+        _fogLogic = "logic" createVehicleLocal (getPos player);
+        _fogEffect = "#particlesource" createVehicleLocal getPos _fogLogic;
+        _fogEffect setParticleParams [["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 12, 13,0],
+        "", "Billboard", 0.5, 0.5, [0,0,0],    [0, 0.2, -0.2], 1, 1.275,    1, 0.2, [0, 0.2, 0],
+        [[1, 1, 1, 0.0001], [1, 1, 1, 0.01], [1, 1, 1, 0]], [1000], 1, 0.04, "", "", _fogLogic];
+        _fogEffect setParticleRandom [2, [0, 0, 0], [0.25, 0.25, 0.25], 0, 0.5, [0, 0, 0, 0.1], 0, 0, 10];
+
+        _fogEffect setDropInterval 0.05;
+        _fogLogic attachTo [player, [0, 0.15, 0.1], "neck", true];
+
+        [{
+            deleteVehicle _this;
+            player setVariable [QCLASS(breathCondensation), false];
+        }, [_fogLogic], 2] call CBA_fnc_waitAndExecute;
+
+        _args set [0, CBA_missionTime];
+        _args set [1, true];
+        player setVariable [QCLASS(breathCondensation), true];
     };
 
-    private ["_delay","_pfatigue","_MisFogObject","_FogEffect","_FogBreath"];
-
-        if !(player getVariable [QCLASS(breathCondensation), false]) then {
-        _pfatigue = (getFatigue player) * 100; //Fatigue calc
-        if (_pfatigue >= 75) then {_delay=(1 + random 1);};
-        if (_pfatigue >= 50 && _pfatigue < 75) then {_delay=(2 + random 2);};
-        if (_pfatigue >= 25 && _pfatigue < 50) then {_delay=(3 + random 3);};
-        if (_pfatigue < 25) then {_delay=(4 + random 4);};
-        sleep _delay;
-            if (((call FUNC(environment)) select 2) isEqualTo 1) then {
-                player setVariable [QCLASS(breathCondensation), true];
-                _MisFogObject = "logic" createVehicleLocal (getPos player);
-                _FogEffect = "#particlesource" createVehicleLocal getPos _MisFogObject;
-                _FogEffect setParticleParams [["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 12, 13,0],
-                "", "Billboard", 0.5, 0.5, [0,0,0],    [0, 0.2, -0.2], 1, 1.275,    1, 0.2, [0, 0.2,0],
-                [[1,1,1, 0.0001], [1,1,1, 0.01], [1,1,1, 0]], [1000], 1, 0.04, "", "", _MisFogObject];
-                _FogEffect setParticleRandom [2, [0, 0, 0], [0.25, 0.25, 0.25], 0, 0.5, [0, 0, 0, 0.1], 0, 0, 10];
-                _FogEffect setDropInterval 0.001;
-                _MisFogObject attachTo [player, [0,0.16,0], "neck", true];
-                sleep 0.5;
-                deleteVehicle _MisFogObject;
-                player setVariable [QCLASS(breathCondensation), false];
-            };
-        };
-    if (EGVAR(common,debug)) then {systemChat "Misery BreathFog cycle..."};
-    sleep 1;
-};
+[QUOTE(COMPONENT_BEAUTIFIED), format ["BreathFog: Delay %1s | Fatigue %2%3 | Active: %4", round(_delay), round(getFatigue player * 100), "%", _effectActive]] call EFUNC(common,debugMessage);
+}, 1, [CBA_missionTime - 5, false]] call CBA_fnc_addPerFrameHandler;
 
 

@@ -15,10 +15,7 @@
  * Public: No
 */
 
-private _playerTemperature = player getVariable [QGVAR(thermalIndex), MACRO_PLAYER_DEFAULTS_TEMP];
-private _exposure = player getVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];
-private _parasites = player getVariable [QEGVAR(survival,parasites), MACRO_PLAYER_DEFAULTS_LOW];
-private _infection = player getVariable [QEGVAR(survival,infection), MACRO_PLAYER_DEFAULTS_LOW];
+call EFUNC(common,getPlayerVariables) params ["", "", "", "_playerTemperature", "_exposure", "", "_infection", "_parasites", "", "", "", "", "", "", "", "", ""];
 
 if ([player] call EFUNC(common,nearFire) || insideBuilding player isEqualTo 1 || !(isNull objectParent player)) exitWith {};
 

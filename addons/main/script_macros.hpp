@@ -32,6 +32,7 @@
 #define MACRO_PLAYER_DEFAULTS_TEMP 37
 
 // Calculations - Radiation
+#define MACRO_BASE_DOSE 10
 #define MACRO_RADIATION_NUTRITIONLOSS(arg) ((arg) / 100) / 10
 #define MACRO_RADIATION_STAMINALOSS(arg) ((arg) / 10) / 10
 

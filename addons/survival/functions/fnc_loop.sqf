@@ -16,29 +16,14 @@
  * Public: No
 */
 
-[{alive player}, {
-    [{
-        params ["_args", "_handle"];
+[{
+    params ["_args", "_handle"];
 
-        if (!alive player) exitWith {
-            [_handle] call CBA_fnc_removePerFrameHandler;
-            if (EGVAR(common,debug)) then {systemChat "[Misery survival] loop cycle terminated..."};
-            [] call FUNC(loop);
-            if (EGVAR(common,debug)) then {systemChat "[Misery survival] loop cycle checks re-initiated..."};
-        };
+        if (!alive player) exitWith {};
 
-        private _radiation = player getVariable [QGVAR(radiation), MACRO_PLAYER_DEFAULTS_LOW];
-        private _hunger = player getVariable [QGVAR(hunger), MACRO_PLAYER_DEFAULTS_HIGH];
-        private _thirst = player getVariable [QGVAR(thirst), MACRO_PLAYER_DEFAULTS_HIGH];
-        private _infection = player getVariable [QGVAR(infection), MACRO_PLAYER_DEFAULTS_LOW];
-        private _parasites = player getVariable [QGVAR(parasites), MACRO_PLAYER_DEFAULTS_LOW];
-        private _poison = player getVariable [QGVAR(toxicity), MACRO_PLAYER_DEFAULTS_LOW];
-        private _sleepiness = player getVariable [QGVAR(energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
-        private _exposure = player getVariable [QEGVAR(temperature,exposure), MACRO_PLAYER_DEFAULTS_LOW];
-        private _playerTemperature = player getVariable [QEGVAR(temperature,thermalIndex), MACRO_PLAYER_DEFAULTS_TEMP];
+        call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "_playerTemperature", "_exposure", "_radiation", "_infection", "_parasites", "_toxicity", "", "", "_ailments", "", "", "", "", ""];
+
         private _isSleeping = player getVariable [QGVAR(isSleeping), false];
-        private _ailments = player getVariable [QEGVAR(vitals,ailments), []];
-
         private _randomNutrientSelection = selectRandom [1,2];
 
         private _weightDeficiency = 0;
@@ -82,15 +67,14 @@
             player setVariable [QGVAR(energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
         } else {
             [+_sleepDecrement, "energy"] call EFUNC(common,addModifier);
-            if (_sleepiness >= 1) then {player setVariable [QGVAR(energyDeficit), MACRO_PLAYER_DEFAULTS_HIGH]};
-            if (_sleepiness < 0) then {player setVariable [QGVAR(energyDeficit), MACRO_PLAYER_DEFAULTS_LOW]};
+            if (_energyDeficit >= 1) then {player setVariable [QGVAR(energyDeficit), MACRO_PLAYER_DEFAULTS_HIGH]};
+            if (_energyDeficit < 0) then {player setVariable [QGVAR(energyDeficit), MACRO_PLAYER_DEFAULTS_LOW]};
 
             private _blackout = true;
 
             if ((_ailments findIf {(_x select 0) isEqualTo "Inhumanely Exhausted"} > -1) && !(_isSleeping)) then {
                 if ((random 100) > 25) then {_blackout = false};
-
-                if (_blackout) then {
+                    if (_blackout) then {
                     [player, (1 + (random 3))] call EFUNC(common,stun);
                 };
             };
@@ -112,8 +96,8 @@
                 [-_hungerDecrement, "hunger"] call EFUNC(common,addModifier);
             };
 
-            if (_poison > 0) then {
-            if (_poison > 1) then {[player,(_poison / 100)] call EFUNC(common,specialDamage)};
+            if (_toxicity > 0) then {
+            if (_toxicity > 1) then {[player,(_toxicity / 100)] call EFUNC(common,specialDamage)};
                 [-0.001, "toxicity"] call EFUNC(common,addModifier);
             };
 
@@ -146,8 +130,5 @@
                 };
             };
         };
+}, 30, []] call CBA_fnc_addPerFrameHandler;
 
-        if (EGVAR(common,debug)) then {systemChat "[Misery survival] loop cycle..."};
-
-    }, 30, []] call CBA_fnc_addPerFrameHandler;
-}, []] call CBA_fnc_waitUntilAndExecute;

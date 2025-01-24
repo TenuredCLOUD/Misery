@@ -15,14 +15,9 @@
  * Public: No
 */
 
-    private _playerTemperature = player getVariable [QGVAR(thermalIndex), MACRO_PLAYER_DEFAULTS_TEMP];
-    private _exposure = player getVariable [QGVAR(exposure), MACRO_PLAYER_DEFAULTS_LOW];
-    private _thirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH];
-    private _parasites = player getVariable [QEGVAR(survival,parasites), MACRO_PLAYER_DEFAULTS_LOW];
-    private _infection = player getVariable [QEGVAR(survival,infection), MACRO_PLAYER_DEFAULTS_LOW];
+call EFUNC(common,getPlayerVariables) params ["", "", "", "_playerTemperature", "", "", "_infection", "_parasites", "", "", "", "", "", "", "", "", ""];
 
-    switch (true) do {
-
+switch (true) do {
     case ((_parasites > 0 || _infection > 0) && _playerTemperature > 20): {
     private _sickCalculation_1 = (_playerTemperature / 10) / 10;
     [+_sickCalculation_1, "exposure"] call EFUNC(common,addModifier);

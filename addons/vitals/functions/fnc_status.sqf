@@ -15,14 +15,10 @@
 */
 
 disableSerialization;
+[{
+    params ["_args", "_handle"];
 
-[{!isNull findDisplay 982377},
-{
-    [{
-        params ["_args", "_handle"];
-        if ( isNull findDisplay 982377 || (!alive player)) exitWith {
-            [_handle] call CBA_fnc_removePerFrameHandler;
-        };
+if (isNull findDisplay 982377) exitWith {};
 
 private _vitalsDisplay = findDisplay 982377;
 private _temperatureText = _vitalsDisplay displayCtrl 1015;
@@ -39,19 +35,12 @@ private _buffsList = _vitalsDisplay displayCtrl 1501;
 private _ailmentsList = _vitalsDisplay displayCtrl 1502;
 private _currentMagazine = _vitalsDisplay displayCtrl 1111;
 private _currentMagazineValue = _vitalsDisplay displayCtrl 1112;
-private _hunger = player getVariable [QEGVAR(survival,hunger), MACRO_PLAYER_DEFAULTS_HIGH];
-private _thirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH];
-private _infection = player getVariable [QEGVAR(survival,infection), MACRO_PLAYER_DEFAULTS_LOW];
-private _parasites = player getVariable [QEGVAR(survival,parasites), MACRO_PLAYER_DEFAULTS_LOW];
-private _poison = player getVariable [QEGVAR(survival,toxicity), MACRO_PLAYER_DEFAULTS_LOW];
-private _sleepiness = player getVariable [QEGVAR(survival,energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
-private _exposure = player getVariable [QEGVAR(temperature,exposure), MACRO_PLAYER_DEFAULTS_LOW];
-private _playerTemperature = player getVariable [QEGVAR(temperature,thermalIndex), (call EFUNC(temperature,environment)) select 0];
 private _playerFatigue = (getFatigue player) * 100;
 private _convertPlayerFatigue = round _playerFatigue;
 private _gasMaskCartridgeCalculation = player getVariable [QCLASS(gasmaskCartridgeLevel), MACRO_PLAYER_DEFAULTS_HIGH];
-private _buffs = player getVariable [QGVAR(buffs), []];
-private _ailments = player getVariable [QGVAR(ailments), []];
+
+call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "_playerTemperature", "_exposure", "_radiation", "_infection", "_parasites", "_toxicity", "", "_buffs", "_ailments", "_funds", "", "", "", ""];
+call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "_skinProtection", "_respiratoryProtection", "_eyeProtection", "_hearingProtection"];
 
 lbClear _buffsList;
 lbClear _ailmentsList;
@@ -88,19 +77,16 @@ lbClear _ailmentsList;
     if (EGVAR(gasmask,enhanced)) then {
     private _gasMaskBuff = _buffs findIf {(_x select 0) isEqualTo "Gas Mask"} > -1;
     private _scbaBuff = _buffs findIf {(_x select 0) isEqualTo "Supplied Air"} > -1;
-    private _hasGasMask = (call EFUNC(protection,totalProtection) select 0) > 0;
-    private _positiveMaskRespiratoryValue = (call EFUNC(protection,totalProtection) select 3) > 0;
-    private _hasSuppliedAir = (call EFUNC(protection,totalProtection) select 1) > 0;
 
     private _gearCase = switch (true) do {
-    case (_hasGasMask && !(_hasSuppliedAir)): {"GasMask"};
-    case (_hasGasMask && (_hasSuppliedAir)): {"SuppliedAir"};
+    case (_gasMask > 0 && (_scba isEqualTo 0)): {"GasMask"};
+    case (_gasMask > 0 && (_scba > 0)): {"SuppliedAir"};
     default {"None"};
     };
 
     switch (_gearCase) do {
     case "GasMask": {
-        if (_positiveMaskRespiratoryValue) then {
+        if (_respiratoryProtection > 0) then {
             private _gasMaskCartridgeValue = format["%1%2", round(_gasMaskCartridgeCalculation * 1), "%"];
             _gasMaskValue ctrlSetText _gasMaskCartridgeValue;
         } else {
@@ -135,8 +121,8 @@ lbClear _ailmentsList;
     private _magazine = currentMagazine player;
     private _magazineConfig = configFile >> "CfgMagazines" >> _magazine;
 
-    if (isClass _cfg) then {
-    private _picPath = getText (_cfg >> "picture");
+    if (isClass _magazineConfig) then {
+    private _picPath = getText (_magazineConfig >> "picture");
     if (_picPath isNotEqualTo "") then {
         _CurrMag ctrlSetText _picPath;
     } else {
@@ -166,16 +152,12 @@ lbClear _ailmentsList;
         _temperatureValue ctrlSetText "No ERU";
     };
 
-    private _getFunds = player getVariable [QCLASS(currency), 0];
-    private _fundsDisplay = format ["%1 %2",EGVAR(money,symbol),[_getFunds, 1, 2, true] call CBA_fnc_formatNumber];
+    private _fundsDisplay = format ["%1 %2",EGVAR(currency,symbol),[_funds, 1, 2, true] call CBA_fnc_formatNumber];
 
     _currencyValue ctrlSetText _fundsDisplay;
 
     private _cognitoProtected = _ailments findIf {(_x select 0) isEqualTo "Cognitohazard (Protected)"};
     private _cognitoNoProtection = _ailments findIf {(_x select 0) isEqualTo "Cognitohazard"};
-
-    private _totalProtection = call EFUNC(protection,totalProtection);
-    private _hearingProtection = _totalProtection select 5;
 
     if ((_hearingProtection < 1) && (player getVariable [QEGVAR(cognitohazard,insideArea), false] isEqualTo true)) then {
         ["ailment","Cognitohazard", QPATHTOEF(icons,data\psyfield_ca.paa), "You hear a very loud pulsing hum, its vibrations are pounding in your head, you're not sure how much longer you can take it..."] call FUNC(addBuffOrAilment);
@@ -371,6 +353,4 @@ if (EGVAR(inventory,hudLayout) isEqualTo 0) then {
         };
     };
 };
-
 }, 0, []] call CBA_fnc_addPerFrameHandler;
-}, []] call CBA_fnc_waitUntilAndExecute;

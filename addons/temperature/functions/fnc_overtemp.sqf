@@ -15,9 +15,7 @@
  * Public: No
 */
 
-_playerTemperature = player getVariable [QGVAR(thermalIndex), MACRO_PLAYER_DEFAULTS_TEMP];
-_exposure = player getVariable [QGVAR(exposure), MACRO_PLAYER_DEFAULTS_LOW];
-_thirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH];
+call EFUNC(common,getPlayerVariables) params ["", "", "", "_playerTemperature", "", "", "", "", "", "", "", "", "", "", "", "", ""];
 
     if (_playerTemperature >= 33) then {
         _overTemperature = (_playerTemperature / 10) / 10;

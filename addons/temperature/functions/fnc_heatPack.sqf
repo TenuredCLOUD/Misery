@@ -15,7 +15,7 @@
  * Public: No
 */
 
-private _exposure = player getVariable [QGVAR(exposure), MACRO_PLAYER_DEFAULTS_LOW];
+call EFUNC(common,getPlayerVariables) params ["", "", "", "", "_exposure", "", "", "", "", "", "", "", "", "", "", "", ""];
 
 if (alive player) exitWith {
     titleText ["You use a heat pack...", "PLAIN DOWN"];
