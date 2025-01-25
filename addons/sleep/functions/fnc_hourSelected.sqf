@@ -8,7 +8,7 @@
  * None
  *
  * Return Value:
- * None
+ * 0: Hours to sleep <NUMBER>
  *
  * Example:
  * [] call misery_sleep_fnc_hourSelected;
@@ -23,4 +23,4 @@ if (_index isNotEqualTo -1) then {
     _selectedHour = _index + 1;
 };
 
-player setVariable [QCLASS(sleepValueParsed), _selectedHour];
+_selectedHour
