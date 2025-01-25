@@ -37,9 +37,8 @@ disableSerialization;
     private _currentMagazineValue = _vitalsDisplay displayCtrl 1112;
     private _playerFatigue = (getFatigue player) * 100;
     private _convertPlayerFatigue = round _playerFatigue;
-    private _gasMaskCartridgeCalculation = player getVariable [QCLASS(gasmaskCartridgeLevel), MACRO_PLAYER_DEFAULTS_HIGH];
 
-    call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "_playerTemperature", "_exposure", "_radiation", "_infection", "_parasites", "_toxicity", "", "_buffs", "_ailments", "_funds"];
+    call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "_playerTemperature", "_exposure", "_radiation", "_infection", "_parasites", "_toxicity", "", "_buffs", "_ailments", "_funds", "", "", "", "", "_cartridges"];
     call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "_skinProtection", "_respiratoryProtection", "_eyeProtection", "_hearingProtection"];
 
     lbClear _buffsList;
@@ -85,7 +84,7 @@ disableSerialization;
         switch (_gearCase) do {
             case "GasMask": {
                 if (_respiratoryProtection > 0) then {
-                    private _gasMaskCartridgeValue = format["%1%2", round(_gasMaskCartridgeCalculation * 1), "%"];
+                    private _gasMaskCartridgeValue = format["%1%2", round(_cartridges * 1), "%"];
                     _gasMaskValue ctrlSetText _gasMaskCartridgeValue;
                 } else {
                     _gasMaskValue ctrlSetText "No Cartridge";

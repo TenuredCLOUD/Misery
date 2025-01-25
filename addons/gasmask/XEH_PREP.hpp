@@ -1,5 +1,4 @@
-PREP(gasmaskAudio);
-PREP(gasmaskTimer);
+PREP(deficiency);
+PREP(rebreatherAudio);
 PREP(swapMask);
 PREP(useCartridges);
-PREP(useEmptyGasmask);
