@@ -1,3 +1,3 @@
+PREP(action);
 PREP(canFish);
-PREP(fishAct);
-PREP(fishingGear);
+PREP(hasGear);

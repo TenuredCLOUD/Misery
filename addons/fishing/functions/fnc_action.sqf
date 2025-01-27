@@ -1,16 +1,16 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD, SlayNoMore
- * puts fishing pole in player's hand as well as chance processing for cathcing fish
+ * puts fishing pole in player's hand as well as chance processing for catching fish
  *
  * Arguments:
  * None
  *
  * Return Value:
- * 0: BOOL
+ * None
  *
  * Example:
- * [] call misery_fishing_fnc_fishAct
+ * [] call misery_fishing_fnc_action
  *
 */
 
@@ -19,28 +19,28 @@
     "Fish",
     QPATHTOEF(icons,data\fish_ca.paa),
     QPATHTOEF(icons,data\fish_ca.paa),
-    "call Misery_fnc_Canfish",
-    "call Misery_fnc_Fishinggear",
+    QUOTE(call FUNC(canFish)),
+    QUOTE(call FUNC(hasGear)),
     {
     //Starting variable:
-    MiseryCanFish = true;
+    GVAR(canFish) = true;
 
     //Force holstering
     if (currentWeapon player isNotEqualTo "") then {
     player action["SWITCHWEAPON",player,player,-1];
     };
-
-    Misery_Isfishing = "GroundWeaponHolder_Scripted" createVehicle(getPos player);
-    Misery_Isfishing addItemCargoGlobal [QCLASS(fishingPole), 1];
-    Misery_Isfishing setDir 0;
-    Misery_Isfishing attachTo [player,[0,-0.15,-0.75],"rightHandMiddle1",true];
-    Misery_Isfishing setVectorDirAndUp [[3,0,0.55],[9.05,0.65,-0.15]];
+    // TODO: Redo - Fishing pole logic
+    // GVAR(actionLogic) = "GroundWeaponHolder_Scripted" createVehicle(getPos player);
+    // GVAR(actionLogic) addItemCargoGlobal [QCLASS(fishingPole), 1];
+    // GVAR(actionLogic) setDir 0;
+    // GVAR(actionLogic) attachTo [player,[0,-0.15,-0.75],"rightHandMiddle1",true];
+    // GVAR(actionLogic) setVectorDirAndUp [[3,0,0.55],[9.05,0.65,-0.15]];
     },
     {
     private _actionID = (_this select 2);
     private _random = [1, 100] call BIS_fnc_randomInt;
 
-    if (call FUNC(fishingGear) && MiseryCanFish) then {
+    if (call FUNC(hasGear) && GVAR(canFish)) then {
     titleText ["Fishing...", "PLAIN DOWN"];
     };
 
@@ -54,48 +54,48 @@
     _fishtoground enableCollisionWith player;
     _fishtoground setPos (player modelToWorld [.3,-.3,0]);
     _todelete append [_fishtoground];
-    MiseryCanFish = false;
+    GVAR(canFish) = false;
     [player,_actionID] call BIS_fnc_holdActionRemove;
-    deleteVehicle Misery_Isfishing;
+    //deleteVehicle GVAR(actionLogic);
     };
 
     if (_random isEqualTo 50) exitWith {
     titleText ["Something broke, or flew off the line, and you failed to catch anything...", "PLAIN DOWN"];
     _part = selectRandom [QCLASS(fishingSpool), QCLASS(fishhook), QCLASS(worms), QCLASS(worms), QCLASS(worms)];
     player removeItem _part;
-    MiseryCanFish = false;
+    GVAR(canFish) = false;
     [player,_actionID] call BIS_fnc_holdActionRemove;
-    deleteVehicle Misery_Isfishing;
+    //deleteVehicle GVAR(actionLogic);
     };
 
     if (_random isEqualTo 75) exitWith {
     titleText ["You lost your bait...", "PLAIN DOWN"];
     _part = selectRandom [QCLASS(worms), QCLASS(worms)];
     player removeItem _part;
-    MiseryCanFish = false;
+    GVAR(canFish) = false;
     [player,_actionID] call BIS_fnc_holdActionRemove;
-    deleteVehicle Misery_Isfishing;
+    //deleteVehicle GVAR(actionLogic);
     };
 
     if (_random isEqualTo 100) exitWith {
     titleText ["Your hook and bait are gone...", "PLAIN DOWN"];
     player removeItem QCLASS(fishhook);
     player removeItem QCLASS(worms);
-    MiseryCanFish = false;
+    GVAR(canFish) = false;
     [player,_actionID] call BIS_fnc_holdActionRemove;
-    deleteVehicle Misery_Isfishing;
+    //deleteVehicle GVAR(actionLogic);
     };
     },
     {
     titleText ["You didn't catch anything...", "PLAIN DOWN"];
     private _actionID = (_this select 2);
     [player,_actionID] call BIS_fnc_holdActionRemove;
-    deleteVehicle Misery_Isfishing;
+    //deleteVehicle GVAR(actionLogic);
     },
     {
     private _actionID = (_this select 2);
     [player,_actionID] call BIS_fnc_holdActionRemove;
-    deleteVehicle Misery_Isfishing;
+    //deleteVehicle GVAR(actionLogic);
     },
     [],
     120,
