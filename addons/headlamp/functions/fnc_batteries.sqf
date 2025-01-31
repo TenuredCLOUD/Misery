@@ -22,7 +22,7 @@ titleText ["You add a 9v battery to your Headlamp", "PLAIN DOWN"];
 
 player removeItem QCLASS(9vBattery);
 
-player addItem QCLASS(headlamp_Off);
+player addMagazine QCLASS(headlamp_Off);
 
 } else {
 titleText ["You don't have any 9v batteries...", "PLAIN DOWN"];
