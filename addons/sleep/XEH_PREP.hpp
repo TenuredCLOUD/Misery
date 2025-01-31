@@ -1,4 +1,3 @@
+PREP(condition);
 PREP(hourSelected);
 PREP(processSleep);
-PREP(sleepAction);
-PREP(sleepCondition);

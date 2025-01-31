@@ -1,8 +1,6 @@
 #include "script_component.hpp"
 
-if (isServer) exitWith {};
-
-[] call FUNC(sleepAction);
+if (EGVAR(common,checkMultiplayer)) exitWith {};
 
 GVAR(energyDeficitAfterSleep) = 0;
 GVAR(hungerDecrease) = 0.25;
