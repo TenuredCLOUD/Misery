@@ -28,8 +28,8 @@
 
         private _weightDeficiency = 0;
 
-        if (GVAR(weightDeficiency)) then {
-            _weightDeficiency = (call FUNC(weightCalculation)) / 100;
+        if (EGVAR(weight,deficiency)) then {
+            _weightDeficiency = (call EFUNC(weight,calculated)) / 100;
         } else {
             _weightDeficiency = selectRandom [0.01, 0.02, 0.03, 0.04, 0.05];
             _weightDeficiency = _weightDeficiency / 100;
@@ -63,7 +63,7 @@
         if (_thirst > 1) then {player setVariable [QGVAR(thirst), MACRO_PLAYER_DEFAULTS_HIGH]};
         if (_thirst <= 0) then {[player, 100] call EFUNC(common,specialDamage)};
 
-        if (EGVAR(common,checkMultiplayer)) then {
+        if (isMultiplayer) then {
             player setVariable [QGVAR(energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
         } else {
             [+_sleepDecrement, "energy"] call EFUNC(common,addModifier);

@@ -22,24 +22,30 @@ player addEventHandler ["InventoryOpened", {
             ((findDisplay 602) displayCtrl _x) ctrlSetEventHandler ["LBDblClick", "_this call FUNC(click)"];
         } count [633, 638, 619];
 
-        private _display = findDisplay 46 createDisplay QCLASS(inventoryFramework_ui);
-        EGVAR(actions,guiActionsMode) = "";
-        [] call FUNC(displayActions);
+    private _display = findDisplay 46 createDisplay QCLASS(inventoryFramework_ui);
+    [] call EFUNC(actions,displayActions);
 
-        private _handle = [{
-            params ["_display", "_handle"];
+    //Vehicle data parsing:
+    private _position = getPos player;
+    private _vehicles = [];
+    {
+        _vehicles append (nearestObjects [_position, [_x], 5]);
+    } forEach ["Car", "Tank", "Air", "Ship"];
+    EGVAR(common,targetVehicle) = if (count _vehicles > 0) then { _vehicles select 0 } else { objNull };
+    EGVAR(common,targetVehicleType) = typeOf EGVAR(common,targetVehicle);
 
-            if ((isNull (findDisplay 602))) exitWith {
-                [_handle] call CBA_fnc_removePerFrameHandler;
-            };
+    private _handle = [{
+        params ["_display", "_handle"];
 
-            if (isNull objectParent player && {vectorMagnitude velocity player > 1}) exitWith {
-                [_handle] call CBA_fnc_removePerFrameHandler;
-                _display closeDisplay 1;
+        if ((isNull (findDisplay 602))) exitWith {
+            [_handle] call CBA_fnc_removePerFrameHandler;
+        };
 
-                hintSilent "";
-
-                closeDialog 602;
+        if (isNull objectParent player && {vectorMagnitude velocity player > 1}) exitWith {
+            [_handle] call CBA_fnc_removePerFrameHandler;
+            _display closeDisplay 1;
+            hintSilent "";
+            closeDialog 602;
             };
 
         }, 0, _display] call CBA_fnc_addPerFrameHandler;
