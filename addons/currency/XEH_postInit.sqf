@@ -13,8 +13,8 @@ GVAR(bankName) = "New World Bank";
     "Search for Money",
     {call FUNC(corpseCondition) isNotEqualTo objNull},
     {
-    [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-    [] call FUNC(searchCorpse);
+        [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
+        [] call FUNC(searchCorpse);
     },
     "",
     QGVAR(symbol),

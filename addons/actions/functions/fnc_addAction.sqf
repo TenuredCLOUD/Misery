@@ -32,7 +32,7 @@ params ["_id", "_displayName", ["_condition", {true}, [{}]], ["_code", {}, [{}]]
 private _actionRegistry = player getVariable [QGVAR(actionRegistry), []];
 
 // Check if action already exists
-if (_actionRegistry findIf { _x select 0 isEqualTo _id } isNotEqualTo -1) exitWith {
+if ((_actionRegistry findIf { _x select 0 isEqualTo _id }) > -1) exitWith {
     [QUOTE(COMPONENT_BEAUTIFIED), format ["Action %1 already registered!", _id]] call EFUNC(common,debugMessage);
 };
 
