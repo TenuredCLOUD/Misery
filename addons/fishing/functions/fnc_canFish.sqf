@@ -22,4 +22,4 @@ if ((_overShore && _isLookingAtWater) || (_overWater && _isLookingAtWater) || (v
     true
 };
 
-false // return
+false

@@ -41,7 +41,7 @@ EGVAR(common,targetVehicle) = if (count _vehicles > 0) then { _vehicles select 0
 EGVAR(common,targetVehicleType) = typeOf EGVAR(common,targetVehicle);
 
 if (EGVAR(fishing,enabled)) then {
-    if (call EFUNC(fishing,Canfish)) then {
+    if (call EFUNC(fishing,canFish)) then {
         _out pushBack [localize "STR_MISERY_STARTFISHING",localize "STR_MISERY_STARTFISHING"];
     };
 };
