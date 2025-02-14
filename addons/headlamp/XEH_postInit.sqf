@@ -22,7 +22,7 @@ if (isServer) then {
         params ["_killed", "_killer", "_instigator"];
         if (_killed isEqualTo player) then {
             if (!isNil {_killed getVariable [QCLASS(headlampStatus), nil]}) then {
-                private _headlamp = _killed getVariable QCLASS(headlampStatus);
+                private _headlamp = _killed getVariable [QCLASS(headlampStatus), nil];
                 deleteVehicle _headlamp; // Delete the light
                 _killed setVariable [QCLASS(headlampStatus), nil, true];
             };
@@ -35,8 +35,8 @@ if (hasInterface) then {
     player addEventHandler ["Put", {
         params ["_unit", "_container", "_item"];
         if (_item isEqualTo QCLASS(headlamp_On)) then {
-            if (!isNil {_unit getVariable QCLASS(headlampStatus)}) then {
-                private _headlamp = _unit getVariable QCLASS(headlampStatus);
+            if (!isNil {_unit getVariable [QCLASS(headlampStatus), nil]}) then {
+                private _headlamp = _unit getVariable [QCLASS(headlampStatus), nil];
                 deleteVehicle _headlamp; // Delete the light
                 _unit setVariable [QCLASS(headlampStatus), nil, true];
             };
@@ -49,7 +49,7 @@ if (hasInterface) then {
         params ["_unit", "_container", "_item"];
         if (_item isEqualTo QCLASS(headlamp_On)) then {
             // If the player doesn't already have an active headlamp...
-            if (isNil {_unit getVariable QCLASS(headlampStatus)}) then {
+            if (isNil {_unit getVariable [QCLASS(headlampStatus), nil]}) then {
                 // Create the light and attach it to the player.
                 private _headlamp = "#lightpoint" createVehicle position _unit;
                 _headlamp setLightBrightness 0.15; // Set brightness
