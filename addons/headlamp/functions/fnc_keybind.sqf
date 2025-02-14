@@ -45,7 +45,7 @@ if (_hasOn) then {
 
     //Fixes reloader issues:
 } else {
-[[QCLASS(headlamp_On)], [QCLASS(headlamp_Off)]] call EFUNC(common,switchMagazine);
+    [[QCLASS(headlamp_On)], [QCLASS(headlamp_Off)]] call EFUNC(common,switchMagazine);
     };
 };
 

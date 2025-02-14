@@ -7,19 +7,21 @@
 
 //Headlamp object blacklister (auto) for GRAD persistence:
 if (isServer) then {
-if (!isNil "grad_persistence_blacklist") then {
-    if ((grad_persistence_blacklist find (toLower "#lightpoint") isEqualTo -1) && (grad_persistence_blacklist find (toUpper "#lightpoint") isEqualTo -1)) then {
-        ["#lightpoint"] call grad_persistence_fnc_blacklistClasses;
-        if (EGVAR(common,debug)) then {systemChat "[Misery Headlamp] GRAD Persistence detected, Adding light object class to blacklist for saving / reloading..."};
+    if (!isNil "grad_persistence_blacklist") then {
+        if ((grad_persistence_blacklist find (toLower "#lightpoint") isEqualTo -1) && (grad_persistence_blacklist find (toUpper "#lightpoint") isEqualTo -1)) then {
+            ["#lightpoint"] call grad_persistence_fnc_blacklistClasses;
+            if (EGVAR(common,debug)) then {
+                systemChat "[Misery Headlamp] GRAD Persistence detected, Adding light object class to blacklist for saving / reloading..";
+            };
         };
     };
 
 
-// Auto headlamp termination after player killed:
-addMissionEventHandler ["EntityKilled", {
+    // Auto headlamp termination after player killed:
+    addMissionEventHandler ["EntityKilled", {
         params ["_killed", "_killer", "_instigator"];
         if (_killed isEqualTo player) then {
-            if (!isNil {_killed getVariable QCLASS(headlampStatus)}) then {
+            if (!isNil {_killed getVariable [QCLASS(headlampStatus), nil]}) then {
                 private _headlamp = _killed getVariable QCLASS(headlampStatus);
                 deleteVehicle _headlamp; // Delete the light
                 _killed setVariable [QCLASS(headlampStatus), nil, true];
@@ -42,7 +44,7 @@ if (hasInterface) then {
     }];
 
 
-// Reactivate lightsource when picking up active headlamp:
+    // Reactivate lightsource when picking up active headlamp:
     player addEventHandler ["Take", {
         params ["_unit", "_container", "_item"];
         if (_item isEqualTo QCLASS(headlamp_On)) then {
