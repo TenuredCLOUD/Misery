@@ -30,7 +30,7 @@ if (_selectedIndex isNotEqualTo -1) exitWith {
 _PurchaseB ctrlShow false;
 _ExitB ctrlShow false;
 
-[] call FUNC(refuelZoneStart);
+[] call FUNC(start);
 };
 
 

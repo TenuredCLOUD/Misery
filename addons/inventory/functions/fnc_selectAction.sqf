@@ -27,18 +27,6 @@ if(_action isEqualTo localize "STR_MISERY_REQREPAIRS") exitWith {
 createDialog QCLASS(mechanicShop_ui);
 };
 
-//Veh Resupply:
-if(_action isEqualTo localize "STR_MISERY_REQRESUPPLY") exitWith {
-[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-createDialog QCLASS(rearmShop_ui);
-};
-
-//Veh Refuel:
-if(_action isEqualTo localize "STR_MISERY_REQREFUEL") exitWith {
-[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-createDialog QCLASS(refuelShop_ui);
-};
-
 //Jet fuel collection:
 if(_action isEqualTo localize "STR_MISERY_JETFUELPUMPREQ") exitWith {
 private _jetFuelPumpReqStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_JETFUELPUMPREQTIP"];

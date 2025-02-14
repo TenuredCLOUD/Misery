@@ -6,7 +6,6 @@ ADDON = false;
 
 #include "initSettings.inc.sqf"
 
-
 // Prestart for vehicle interaction to avoid undefined RPT logs
 GVAR(targetVehicle) = objNull;
 GVAR(targetVehicleType) = nil;

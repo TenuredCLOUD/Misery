@@ -4,7 +4,6 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
-//Resupply zone:
-if (isNil "Miseryinrearmarea") then {Miseryinrearmarea = false};
+#include "initSettings.inc.sqf"
 
 ADDON = true;

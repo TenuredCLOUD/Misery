@@ -15,9 +15,8 @@
  * Public: No
 */
 
-waitUntil {!isNull findDisplay 982384};
-
-if (!isNull findDisplay 982384) exitWith {
+[{!isNull findDisplay 982384},
+{
 
     private ["_list","_PurchaseB","_Vehiclename","_fuelCost","_Found","_totalLiters","_index","_fuelTypeIndex"];
 
@@ -42,7 +41,7 @@ if (!isNull findDisplay 982384) exitWith {
             _Found = true;
             _fuelTypeIndex = _x select 1;
 
-            _fuelCost = (Misery_Veh_FuelCosts select 0) select _fuelTypeIndex;
+            _fuelCost = (GVAR(fuelCosts) select 0) select _fuelTypeIndex;
 
             _totalLiters = _x select 2;
         };
@@ -51,8 +50,8 @@ if (!isNull findDisplay 982384) exitWith {
     if !(_Found) exitWith {};
 
     _index = _list lbAdd format ["Refuel (%1/L) %2L", _fuelCost,_totalLiters];
-};
 
+}, []] call CBA_fnc_waitUntilAndExecute;
 
 
 

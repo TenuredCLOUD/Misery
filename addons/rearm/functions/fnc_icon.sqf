@@ -16,23 +16,24 @@
 
 disableSerialization;
 
-waitUntil {!isNull findDisplay 982383};
-
+[{!isNull findDisplay 982383},
+{
 private _dialog = findDisplay 982383;
-private _IconCtrl = _dialog displayCtrl 1602;
-private _IconName = _dialog displayCtrl 1603;
+private _iconCtrl = _dialog displayCtrl 1602;
+private _iconName = _dialog displayCtrl 1603;
 
 if (EGVAR(common,targetVehicleType) isEqualTo "") exitWith {
-        _IconName ctrlSetText "No Vehicle to Resupply...";
+        _iconName ctrlSetText "No Vehicle to Resupply...";
     };
 
-private _Vehiclename = getText (configFile >> "CfgVehicles" >> EGVAR(common,targetVehicleType) >> "displayName");
+private _vehicleName = getText (configFile >> "CfgVehicles" >> EGVAR(common,targetVehicleType) >> "displayName");
 
-if (!isNil "_Vehiclename") then {
-    _cfg = configFile >> "CfgVehicles" >> EGVAR(common,targetVehicleType);
-    if (isClass _cfg) exitWith {
-        _picPath = getText (_cfg >> "editorPreview");
-        _IconCtrl ctrlSetText _picPath;
-        _IconName ctrlSetText _Vehiclename;
+if (!isNil "_vehicleName") then {
+    _vehicleCfg = configFile >> "CfgVehicles" >> EGVAR(common,targetVehicleType);
+    if (isClass _vehicleCfg) exitWith {
+        _picPath = getText (_vehicleCfg >> "editorPreview");
+        _iconCtrl ctrlSetText _picPath;
+        _iconName ctrlSetText _vehicleName;
+        };
     };
-};
+}, []] call CBA_fnc_waitUntilAndExecute;

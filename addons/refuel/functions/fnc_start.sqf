@@ -36,7 +36,7 @@ _totalLiters = 0;
         _Found = true;
         _fuelTypeIndex = _x select 1;
 
-        _fuelCost = (Misery_Veh_FuelCosts select 0) select _fuelTypeIndex;
+        _fuelCost = (GVAR(fuelCosts) select 0) select _fuelTypeIndex;
 
         _totalLiters = _x select 2;
     };
