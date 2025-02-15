@@ -1,4 +1,6 @@
+PREP(action);
+PREP(checkAreas);
 PREP(icon);
-PREP(purchase);
 PREP(listed);
+PREP(purchase);
 PREP(start);

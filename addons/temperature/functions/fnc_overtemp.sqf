@@ -21,7 +21,7 @@ call EFUNC(common,getPlayerVariables) params ["", "", "", "_playerTemperature"];
         _overTemperature = (_playerTemperature / 10) / 10;
         [+_overTemperature, "exposure"] call EFUNC(common,addModifier);
 
-    if (EGVAR(survival,temperatureDeficiency)) then {
+    if (GVAR(deficiency)) then {
     _temperatureDeficiency = (_playerTemperature / 10) / 10;
     [-_temperatureDeficiency, "thirst"] call EFUNC(common,addModifier);
     };

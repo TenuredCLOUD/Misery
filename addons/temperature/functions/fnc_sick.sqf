@@ -25,7 +25,7 @@ switch (true) do {
     case ((_hasParasites || _hasInfection) && _playerTemperature > 20): {
         [+_sickCalculation, "exposure"] call EFUNC(common,addModifier);
 
-        if (EGVAR(survival,temperatureDeficiency)) then {
+        if (GVAR(deficiency)) then {
             [-_sickCalculation, "thirst"] call EFUNC(common,addModifier);
         };
     };
@@ -34,7 +34,7 @@ switch (true) do {
         private _sickCalculationAlt = ((20 - _playerTemperature) / 10) / 10;
         [+_sickCalculationAlt, "exposure"] call EFUNC(common,addModifier);
 
-        if (EGVAR(survival,temperatureDeficiency)) then {
+        if (GVAR(deficiency)) then {
             [-_sickCalculationAlt, "thirst"] call EFUNC(common,addModifier);
         };
     };
@@ -42,7 +42,7 @@ switch (true) do {
     case ((_hasParasites || _hasInfection) && _playerTemperature isEqualTo 20): {
         [+_sickCalculation, "exposure"] call EFUNC(common,addModifier);
 
-        if (EGVAR(survival,temperatureDeficiency)) then {
+        if (GVAR(deficiency)) then {
             [-_sickCalculation, "thirst"] call EFUNC(common,addModifier);
         };
     };

@@ -165,7 +165,7 @@ class CLASS(inventoryFramework_actionButton): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = QUOTE([true] call EFUNC(inventory,selectAction));
+    onButtonClick = QUOTE([true] call EFUNC(actions,selectAction));
 };
 class CLASS(inventoryFramework_status_buffs_list): RscListBox
 {

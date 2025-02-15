@@ -4,7 +4,6 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
-//Refueling zone:
-if (isNil "MiseryinRefuelzonearea") then {MiseryinRefuelzonearea = false};
+#include "initSettings.inc.sqf"
 
 ADDON = true;

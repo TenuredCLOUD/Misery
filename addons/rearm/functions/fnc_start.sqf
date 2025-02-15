@@ -18,30 +18,27 @@
 
 private ["_playercash","_module","_dialog","_PurchaseB","_ExitB","_Vehiclename","_target","_resupplyPrice","_Found","_RepairsInterrupt","_playercash","_text","_displayedText","_delay","_progressIndicator","_displaySuccess"];
 
-_dialog = findDisplay 982383;
-_PurchaseB = _dialog displayCtrl 1600;
-_ExitB = _dialog displayCtrl 1601;
-
-_Vehiclename = getText (configFile >> "CfgVehicles" >> EGVAR(common,targetVehicleType) >> "displayName");
-
-_target = EGVAR(common,targetVehicle);
-
-_resupplyPrice = 0;
-_Found = false;
+private _dialog = findDisplay 982383;
+private _PurchaseB = _dialog displayCtrl 1600;
+private _ExitB = _dialog displayCtrl 1601;
+private _Vehiclename = getText (configFile >> "CfgVehicles" >> EGVAR(common,targetVehicleType) >> "displayName");
+private _target = EGVAR(common,targetVehicle);
+private _resupplyPrice = 0;
+private _Found = false;
 
 {
     if ((_x select 0) isEqualTo EGVAR(common,targetVehicleType)) then {
-        _Array=_x;
+        _Array = _x;
         _Found = true;
         _resupplyPrice = _x select 4;
     };
-} forEach Misery_Veh_Type;
+} forEach EGVAR(common,vehicleData);
 
 if !(_Found) exitWith {};
 
 player setVariable [QCLASS(processRearm), true];
 
-    _RepairsInterrupt = (findDisplay 982383) displayAddEventHandler ["KeyDown", {
+   private _RepairsInterrupt = (findDisplay 982383) displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QCLASS(processRearm),false];
@@ -51,17 +48,7 @@ player setVariable [QCLASS(processRearm), true];
 
 if (MiseryinVehiclerepairarea) exitWith {
 
-if (Mis_Rearmcurrencytype isEqualTo "DIGITALTYPE") then {
-_playercash = player getVariable [Mis_Rearmfundstype, 0];
-};
-
-if (Mis_Rearmcurrencytype isEqualTo "ITEMTYPE") then {
-_playercash = {_x isEqualTo Mis_Rearmfundstype} count items player;
-};
-
-if (Mis_Rearmcurrencytype isEqualTo "MAGAZINETYPE") then {
-_playercash = {_x isEqualTo Mis_Rearmfundstype} count magazines player;
-};
+_playercash = player getVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
 
 if (_playercash < _resupplyPrice) exitWith {
 ctrlSetText [1001, "You cannot afford this!"];
@@ -86,20 +73,7 @@ if ((player getVariable QCLASS(processRearm)) isEqualTo true) then {
 
 _target = cursorTarget;
 
-if (Mis_Rearmcurrencytype isEqualTo "DIGITALTYPE") then {
-_playercash = player getVariable [Mis_Rearmfundstype, 0];
-player setVariable [Mis_Rearmfundstype, (_playercash - _resupplyPrice), true];
-};
-
-if (Mis_Rearmcurrencytype isEqualTo "ITEMTYPE") then {
-_playercash = {_x isEqualTo Mis_Rearmfundstype} count items player;
-for "_i" from 1 to _resupplyPrice do {player removeItem Mis_Rearmfundstype;};
-};
-
-if (Mis_Rearmcurrencytype isEqualTo "MAGAZINETYPE") then {
-_playercash = {_x isEqualTo Mis_Rearmfundstype} count magazines player;
-for "_i" from 1 to _resupplyPrice do {player removeMagazine Mis_Rearmfundstype;};
-};
+player setVariable [QEGVAR(currency,funds), (_playercash - _resupplyPrice), true];
 
 _displaySuccess = format ["%1 has been successfully resupplied...", _Vehiclename];
 ctrlSetText [1001, _displaySuccess];

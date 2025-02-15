@@ -2,7 +2,7 @@
 /*
  * Author: TenuredCLOUD
  * Weight calculation
- * Calculated players gear weight
+ * Calculates players gear weight
  *
  * Arguments:
  * None
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [] call misery_survival_fnc_weightCalculation;
+ * [] call misery_weight_fnc_calculated;
  *
  * Public: No
 */

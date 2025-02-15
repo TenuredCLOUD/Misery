@@ -44,6 +44,7 @@ if (hasInterface) then {
     }];
 
 
+
     // Reactivate lightsource when picking up active headlamp:
     player addEventHandler ["Take", {
         params ["_unit", "_container", "_item"];

@@ -25,7 +25,7 @@ if (isClass(configFile>>"cfgPatches">>"ace_main")) then {
 };
 
 // sleep system enabled pre-check:
-if (EGVAR(common,checkMultiplayer)) exitWith {
+if (isMultiplayer) exitWith {
     titleText ["...", "PLAIN DOWN"]
 };
 

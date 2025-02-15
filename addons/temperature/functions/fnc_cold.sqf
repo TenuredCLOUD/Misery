@@ -25,7 +25,7 @@ if (_playerTemperature < 20) then {
     [-_coldExposure, "exposure"] call EFUNC(common,addModifier);
 };
 
-if (EGVAR(survival,temperatureDeficiency)) then {
+if (GVAR(deficiency)) then {
     [-_coldExposure, "hunger"] call EFUNC(common,addModifier);
     };
 };
