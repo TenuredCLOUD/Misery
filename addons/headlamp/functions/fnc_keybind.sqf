@@ -20,7 +20,7 @@ private _hasOn = [QCLASS(headlamp_On)] call EFUNC(common,hasItem);
 private _hasOff = [QCLASS(headlamp_Off)] call EFUNC(common,hasItem);
 
 if (_hasOff) then {
-    if (isNil {_player getVariable QCLASS(headlampStatus)}) then {
+    if (isNil {_player getVariable [QCLASS(headlampStatus), nil]}) then {
     [[QCLASS(headlamp_Off)], [QCLASS(headlamp_On)]] call EFUNC(common,switchMagazine);
 
     private _headlamp = "#lightpoint" createVehicle position _player;
@@ -35,8 +35,8 @@ if (_hasOff) then {
 };
 
 if (_hasOn) then {
-    if (!isNil {_player getVariable QCLASS(headlampStatus)}) then {
-    private _headlamp = _player getVariable QCLASS(headlampStatus);
+    if (!isNil {_player getVariable [QCLASS(headlampStatus), nil]}) then {
+    private _headlamp = _player getVariable [QCLASS(headlampStatus), nil];
     deleteVehicle _headlamp;
 
     [[QCLASS(headlamp_On)], [QCLASS(headlamp_Off)]] call EFUNC(common,switchMagazine);
@@ -45,7 +45,7 @@ if (_hasOn) then {
 
     //Fixes reloader issues:
 } else {
-[[QCLASS(headlamp_On)], [QCLASS(headlamp_Off)]] call EFUNC(common,switchMagazine);
+    [[QCLASS(headlamp_On)], [QCLASS(headlamp_Off)]] call EFUNC(common,switchMagazine);
     };
 };
 
