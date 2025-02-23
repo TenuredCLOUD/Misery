@@ -9,22 +9,23 @@
  * Return Value:
  * None
  *
- * [] call misery_repairs_fnc_icon;
+ * [] call misery_repair_fnc_icon;
  *
  * Public: No
 */
 
 disableSerialization;
 
-waitUntil {!isNull findDisplay 982382};
+[{!isNull findDisplay 982386},
+{
 
-private _dialog = findDisplay 982382;
+private _dialog = findDisplay 982386;
 private _IconCtrl = _dialog displayCtrl 1602;
 private _IconName = _dialog displayCtrl 1603;
 
 if (EGVAR(common,targetVehicleType) isEqualTo "") exitWith {
-        _IconName ctrlSetText "No Vehicle to Repair...";
-    };
+    _IconName ctrlSetText "No Vehicle to Repair...";
+};
 
 private _Vehiclename = getText (configFile >> "CfgVehicles" >> EGVAR(common,targetVehicleType) >> "displayName");
 
@@ -36,3 +37,4 @@ if (!isNil "_Vehiclename") then {
         _IconName ctrlSetText _Vehiclename;
     };
 };
+}, []] call CBA_fnc_waitUntilAndExecute;

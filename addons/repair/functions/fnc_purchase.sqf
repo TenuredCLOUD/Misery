@@ -10,12 +10,12 @@
  * Return Value:
  * None
  *
- * [] call misery_repairs_fnc_purchase;
+ * [] call misery_repair_fnc_purchase;
  *
  * Public: No
 */
 
-private _dialog = findDisplay 982382;
+private _dialog = findDisplay 982386;
 private _selectedIndex = lbCurSel 1500; // Get the index of the selected item
 
 private _PurchaseB = _dialog displayCtrl 1600;
@@ -30,7 +30,7 @@ if (_selectedIndex isNotEqualTo -1) exitWith {
 _PurchaseB ctrlShow false;
 _ExitB ctrlShow false;
 
-[] call FUNC(repair);
+[] call FUNC(process);
 };
 
 

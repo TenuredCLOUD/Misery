@@ -39,7 +39,7 @@ private _found = false;
             _found = true;
             _resupplyPrice = _x select 4;
         };
-    } forEach Misery_Veh_Type;
+    } forEach EGVAR(common,vehicleData);
 
 if !(_found) exitWith {};
 

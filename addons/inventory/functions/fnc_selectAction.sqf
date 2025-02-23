@@ -21,12 +21,6 @@ private _action=_ctrl lbData _index;
 private _playAction=false;
 private _pos=[];
 
-//Mechanic repairs:
-if(_action isEqualTo localize "STR_MISERY_REQREPAIRS") exitWith {
-[QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-createDialog QCLASS(mechanicShop_ui);
-};
-
 //Jet fuel collection:
 if(_action isEqualTo localize "STR_MISERY_JETFUELPUMPREQ") exitWith {
 private _jetFuelPumpReqStr = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_JETFUELPUMPREQTIP"];

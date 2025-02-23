@@ -10,19 +10,18 @@
  * Return Value:
  * None
  *
- * [] call misery_repairs_fnc_listed;
+ * [] call misery_repair_fnc_listed;
  *
  * Public: No
 */
 
-waitUntil {!isNull findDisplay 982382};
-
-if (!isNull findDisplay 982382) exitWith {
+[{!isNull findDisplay 982386},
+{
 
     private ["_list","_PurchaseB","_Vehiclename","_repairPrice","_Found","_index"];
 
-    _list = findDisplay 982382 displayCtrl 1500;
-    _PurchaseB = findDisplay 982382 displayCtrl 1600;
+    _list = findDisplay 982386 displayCtrl 1500;
+    _PurchaseB = findDisplay 982386 displayCtrl 1600;
 
     if (EGVAR(common,targetVehicleType) isEqualTo "") exitWith {
         _PurchaseB ctrlShow false;
@@ -39,16 +38,17 @@ if (!isNull findDisplay 982382) exitWith {
 
     {
         if ((_x select 0) isEqualTo EGVAR(common,targetVehicleType)) then {
-            _Array=_x;
+            _Array = _x;
             _Found = true;
             _repairPrice = _x select 3;
         };
-    } forEach Misery_Veh_Type;
+    } forEach EGVAR(common,vehicleData);
 
     if !(_Found) exitWith {};
 
     _index = _list lbAdd format ["Repair (%1)", _repairPrice];
-};
+
+}, []] call CBA_fnc_waitUntilAndExecute;
 
 
 

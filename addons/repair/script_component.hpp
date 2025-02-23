@@ -1,16 +1,16 @@
-#define COMPONENT repairs
-#define COMPONENT_BEAUTIFIED Repairs
+#define COMPONENT repair
+#define COMPONENT_BEAUTIFIED Repair
 #include "\z\misery\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
 
-#ifdef DEBUG_ENABLED_REPAIRS
+#ifdef DEBUG_ENABLED_REPAIR
     #define DEBUG_MODE_FULL
 #endif
 
-#ifdef DEBUG_SETTINGS_REPAIRS
-    #define DEBUG_SETTINGS DEBUG_SETTINGS_REPAIRS
+#ifdef DEBUG_SETTINGS_REPAIR
+    #define DEBUG_SETTINGS DEBUG_SETTINGS_REPAIR
 #endif
 
 #include "\z\misery\addons\main\script_macros.hpp"
