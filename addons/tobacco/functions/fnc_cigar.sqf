@@ -28,7 +28,7 @@ titleText ["You light up a cigar...", "PLAIN DOWN"];
 player removeItem QCLASS(cigar);
 
 if (EGVAR(psychosis,enabled)) then {
-    [-0.1, "psychosis"] call EFUNC(common,addModifier);
+    [-0.1, "psychosis"] call EFUNC(common,addStatusModifier);
 };
 
 if (["ace_medical"] call EFUNC(common,isModLoaded)) then {

@@ -31,5 +31,5 @@ if (_goggles in _respirators) then {
     private _artifactStoredStr = format ["<t font='PuristaMedium'>%1</t>", "You replace the cartridges on your gasmask..."];
     [QEGVAR(common,tileText), _artifactStoredStr] call CBA_fnc_localEvent;
 
-    player setVariable [QCLASS(gasmaskCartridgeLevel), 100];
+    player setVariable [GVAR(cartridgeEfficiency), 100];
 };

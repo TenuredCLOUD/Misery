@@ -21,32 +21,35 @@ params ["_modifier", ["_status", "notFound"]];
 _status = toLower _status;
 
 switch (_status) do {
+    case "cartridge": {
+        EGVAR(gasmask,modifiers) = EGVAR(gasmask,modifiers) + _modifier;
+    };
     case "energy": {
-        EGVAR(survival,modifiers) = EGVAR(survival,modifiers) + _modifier;
+        EGVAR(survival,energyModifiers) = EGVAR(survival,energyModifiers) + _modifier;
     };
     case "exposure": {
         EGVAR(temperature,modifiers) = EGVAR(temperature,modifiers) + _modifier;
     };
     case "hunger": {
-        EGVAR(survival,modifiers) = EGVAR(survival,modifiers) + _modifier;
+        EGVAR(survival,hungerModifiers) = EGVAR(survival,hungerModifiers) + _modifier;
     };
     case "infection": {
-        EGVAR(survival,modifiers) = EGVAR(survival,modifiers) + _modifier;
+        EGVAR(survival,infectionModifiers) = EGVAR(survival,infectionModifiers) + _modifier;
     };
     case "psychosis": {
         EGVAR(psychosis,modifiers) = EGVAR(psychosis,modifiers) + _modifier;
     };
     case "radiation": {
-        EGVAR(survival,modifiers) = EGVAR(survival,modifiers) + _modifier;
+        EGVAR(survival,radiationModifiers) = EGVAR(survival,radiationModifiers) + _modifier;
     };
     case "temperature": {
         EGVAR(temperature,modifiers) = EGVAR(temperature,modifiers) + _modifier;
     };
     case "thirst": {
-        EGVAR(survival,modifiers) = EGVAR(survival,modifiers) + _modifier;
+        EGVAR(survival,thirstModifiers) = EGVAR(survival,thirstModifiers) + _modifier;
     };
     case "toxicity": {
-        EGVAR(survival,modifiers) = EGVAR(survival,modifiers) + _modifier;
+        EGVAR(survival,toxicityModifiers) = EGVAR(survival,toxicityModifiers) + _modifier;
     };
     default {
         [QUOTE(COMPONENT_BEAUTIFIED), format ["Status modifier: %1 did not match any case or was not provided.", _status]] call FUNC(debugMessage);
