@@ -29,7 +29,7 @@ private _spooks = call FUNC(spook);
 private _zombies = call FUNC(zombies);
 
 // Value cannot be negative.
-private _finalPsychosis = (_psychosis + _night + _phantoms + _radiationZone + _spooks + _zombies) max 0;
+private _finalPsychosis = ((_psychosis + _night + _phantoms + _radiationZone + _spooks + _zombies) min 1) max 0;
 
 player setVariable [QGVAR(state), _finalPsychosis];
 
