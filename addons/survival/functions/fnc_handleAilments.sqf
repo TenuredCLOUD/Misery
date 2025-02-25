@@ -49,5 +49,9 @@ private _isSleeping = player getVariable [QGVAR(isSleeping), false];
 private _inhumanlyExhausted = (_ailments findIf {(_x select 0) isEqualTo "Inhumanely Exhausted"}) > -1;
 
 if (_inhumanlyExhausted && !(_isSleeping) && (random 100) < 25) then {
-    [player, random 4] call EFUNC(common,stun);
+    if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
+        [player, true, 5, true] call ace_medical_fnc_setUnconscious;
+    } else {
+        [player, random 4] call EFUNC(common,stun);
+    };
 };
