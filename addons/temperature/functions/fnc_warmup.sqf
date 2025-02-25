@@ -19,7 +19,7 @@ call EFUNC(common,getPlayerVariables) params ["", "", "", "_playerTemperature", 
 
 if ([player] call EFUNC(common,nearFire) || insideBuilding player isEqualTo 1 || !(isNull objectParent player)) exitWith {};
 
-if (_playerTemperature < 20 && _playerTemperature > 33) exitWith {};
+if (_playerTemperature < 20 || _playerTemperature > 33) exitWith {};
 
 if (!(_parasites > 0 || _infection > 0)) then {
     if (_exposure < 0) then {

@@ -24,7 +24,7 @@
 
     [-1, "cartridge"] call EFUNC(common,addStatusModifier);
 
-    private _cartridgeTotal = _cartridge + GVAR(modifiers);
+    private _cartridgeTotal = ((_cartridge + GVAR(modifiers)) min 1) max 0;
     player setVariable [QGVAR(cartridgeEfficiency), _cartridgeTotal];
     GVAR(modifiers) = 0;
 
