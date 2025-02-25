@@ -26,7 +26,7 @@
     private _isMultiplayer = isMultiplayer;
     private _decrementValue = 0.0001;
 
-    private _weightDeficiency = [(call FUNC(weightCalculation)) / 100, (selectRandom [0.01, 0.02, 0.03, 0.04, 0.05]) / 100] select EGVAR(weight,Deficiency);
+    private _weightDeficiency = [(call EFUNC(weight,calculated)) / 100, (selectRandom [0.01, 0.02, 0.03, 0.04, 0.05]) / 100] select EGVAR(weight,Deficiency);
 
     // If player is not on foot, reduction stays at a low value.
     if (isNull objectParent player) then {
