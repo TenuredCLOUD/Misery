@@ -19,7 +19,7 @@
 
 params ["_decrementValue", "_energyDeficit", "_isMultiplayer"];
 
-if (!_isMultiplayer) exitWith {};
+if (_isMultiplayer) exitWith {};
 
 [+_decrementValue, "energy"] call EFUNC(common,addStatusModifier);
 private _finalEnergy = ((_energyDeficit + GVAR(energyModifiers)) min 1) max 0;

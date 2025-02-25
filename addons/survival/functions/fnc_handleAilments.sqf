@@ -43,7 +43,7 @@ if (_infection > 0) then {
     };
 };
 
-if (!_isMultiplayer) exitWith {};
+if (_isMultiplayer) exitWith {};
 
 private _isSleeping = player getVariable [QGVAR(isSleeping), false];
 private _inhumanlyExhausted = (_ailments findIf {(_x select 0) isEqualTo "Inhumanely Exhausted"}) > -1;
