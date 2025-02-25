@@ -17,9 +17,9 @@
 private _psychosis = player getVariable [QGVAR(state), MACRO_PLAYER_DEFAULTS_LOW];
 
 // Handle exterior modifiers, resets itself.
-if (GVAR(additionalModifiers) isNotEqualTo 0) then {
-    _psychosis = _psychosis + GVAR(additionalModifiers);
-    GVAR(additionalModifiers) = 0;
+if (GVAR(modifiers) isNotEqualTo 0) then {
+    _psychosis = _psychosis + GVAR(modifiers);
+    GVAR(modifiers) = 0;
 };
 
 private _night = call FUNC(night);

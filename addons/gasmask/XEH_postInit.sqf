@@ -8,3 +8,6 @@ if (!hasInterface) exitWith {};
         [] call FUNC(rebreatherAudio);
     };
 }] call CBA_fnc_addEventHandler;
+
+// For gasmask cartridge efficiency.
+GVAR(modifiers) = 0;

@@ -22,8 +22,11 @@
 
     if (_gasMask > 0 && _respiratory > 0 && _scba < 1) exitWith {};
 
-    // WIP needs modifier
-    //[-1, "cartridge"] call EFUNC(common,addModifier);
+    [-1, "cartridge"] call EFUNC(common,addStatusModifier);
+
+    private _cartridgeTotal = _cartridge + GVAR(modifiers);
+    player setVariable [QGVAR(cartridgeEfficiency), _cartridgeTotal];
+    GVAR(modifiers) = 0;
 
     if (_cartridge <= 0) then {
         [] call FUNC(swapMask);

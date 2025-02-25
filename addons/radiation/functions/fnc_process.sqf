@@ -26,7 +26,7 @@ private _eyeDeficit = MACRO_BASE_DOSE * ((1 - _eyeProtection) / 1);
 
 private _effectiveDose = (_skinDeficit + _respiratoryDeficit + _eyeDeficit) max 0; // with enough protection values can turn negative
 
-[_effectiveDose, "radiation"] call EFUNC(common,addModifier);
+[_effectiveDose, "radiation"] call EFUNC(common,addStatusModifier);
 
 [QUOTE(COMPONENT_BEAUTIFIED), format ["Radiation Protection: Skin %1%4, Respiratory %2%4, Eye %3%4", (_skinProtection * 100), (_respiratoryProtection * 100), (_eyeProtection * 100), "%"]] call EFUNC(common,debugMessage);
 [QUOTE(COMPONENT_BEAUTIFIED), format ["Effective Radiation Dose: %1", _effectiveDose]] call EFUNC(common,debugMessage);

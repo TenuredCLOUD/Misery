@@ -23,66 +23,55 @@
 
         call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "_playerTemperature", "_exposure", "_radiation", "_infection", "_parasites", "_toxicity", "", "", "_ailments"];
 
-        private _isSleeping = player getVariable [QGVAR(isSleeping), false];
-        private _randomNutrientSelection = selectRandom [1,2];
+        private _randomNutrientSelection = selectRandom ["hunger", "thirst"];
 
         private _weightDeficiency = 0;
 
         if (GVAR(weightDeficiency)) then {
             _weightDeficiency = (call FUNC(weightCalculation)) / 100;
         } else {
-            _weightDeficiency = selectRandom [0.01, 0.02, 0.03, 0.04, 0.05];
-            _weightDeficiency = _weightDeficiency / 100;
+            _weightDeficiency = (selectRandom [0.01, 0.02, 0.03, 0.04, 0.05]) / 100;
         };
 
-        private _hungerDecrement = 0;
-        private _thirstDecrement = 0;
-        private _sleepDecrement = 0;
+        private _decrementValue = 0.0001;
 
-        // If player is not on foot, make reduction a very low value
-        if !(isNull objectParent player) then {
-            _hungerDecrement = 0.0001;
-            _thirstDecrement = 0.0001;
-            _sleepDecrement = 0.0001;
-        } else {
-            private _speedPenalty = abs(speed player) / 10000;
+        // If player is not on foot, reduction stays at a low value.
+        if (isNull objectParent player) then {
+            private _speedPenalty = abs (speed player) / 10000;
 
-            _hungerDecrement = 0.0001 + _speedPenalty + _weightDeficiency;
-            _thirstDecrement = 0.0001 + _speedPenalty + _weightDeficiency;
-            _sleepDecrement = 0.0001 + _speedPenalty + _weightDeficiency;
+            _decrementValue = _decrementValue + _speedPenalty + _weightDeficiency;
         };
 
-        if (_randomNutrientSelection isEqualTo 1) then {
-            [-_thirstDecrement, "thirst"] call EFUNC(common,addModifier);
-        } else {
-            [-_hungerDecrement, "hunger"] call EFUNC(common,addModifier);
+        [-_decrementValue, _randomNutrientSelection] call EFUNC(common,addStatusModifier);
+
+        private _finalHunger = ((_hunger + GVAR(hungerModifiers)) min 1) max 0;
+        GVAR(hungerModifiers) = 0;
+        player setVariable [QGVAR(hunger), _finalHunger];
+
+        private _finalThirst = ((_thirst + GVAR(thirstModifiers)) min 1) max 0;
+        GVAR(thirstModifiers) = 0;
+        player setVariable [QGVAR(thirst), _finalThirst];
+
+        if (_finalHunger == 0 || _finalThirst == 0) then {
+            [player, 100] call EFUNC(common,specialDamage);
         };
 
-        if (_hunger > 1) then {player setVariable [QGVAR(hunger), MACRO_PLAYER_DEFAULTS_HIGH]};
-        if (_hunger <= 0) then {[player, 100] call EFUNC(common,specialDamage)};
-        if (_thirst > 1) then {player setVariable [QGVAR(thirst), MACRO_PLAYER_DEFAULTS_HIGH]};
-        if (_thirst <= 0) then {[player, 100] call EFUNC(common,specialDamage)};
+        if (!isMultiplayer) then {
+            [+_decrementValue, "energy"] call EFUNC(common,addStatusModifier);
+            private _finalEnergy = ((_energyDeficit + GVAR(energyModifiers)) min 1) max 0;
+            player setVariable [QGVAR(energyDeficit), _finalEnergy];
 
-        if (EGVAR(common,checkMultiplayer)) then {
-            player setVariable [QGVAR(energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
-        } else {
-            [+_sleepDecrement, "energy"] call EFUNC(common,addModifier);
-            if (_energyDeficit >= 1) then {player setVariable [QGVAR(energyDeficit), MACRO_PLAYER_DEFAULTS_HIGH]};
-            if (_energyDeficit < 0) then {player setVariable [QGVAR(energyDeficit), MACRO_PLAYER_DEFAULTS_LOW]};
+            private _isSleeping = player getVariable [QGVAR(isSleeping), false];
+            private _inhumanlyExhausted = (_ailments findIf {(_x select 0) isEqualTo "Inhumanely Exhausted"}) > -1;
 
-            private _blackout = true;
-
-            if ((_ailments findIf {(_x select 0) isEqualTo "Inhumanely Exhausted"} > -1) && !(_isSleeping)) then {
-                if ((random 100) > 25) then {_blackout = false};
-                    if (_blackout) then {
-                    [player, (1 + (random 3))] call EFUNC(common,stun);
-                };
+            if (_inhumanlyExhausted && !(_isSleeping) && (random 100) < 25) then {
+                [player, random 4] call EFUNC(common,stun);
             };
         };
 
         if (_radiation > 0) then {
-            [-0.001, "radiation"] call EFUNC(common,addModifier);
-            _random = [1, 10] call BIS_fnc_randomInt;
+            [-0.001, "radiation"] call EFUNC(common,addStatusModifier);
+            private _random = [1, 10] call BIS_fnc_randomInt;
 
             if (_random isEqualTo 5 && _radiation > 0.05 && GVAR(ailments)) then {
                 if (_parasites > 0) then {
@@ -93,17 +82,25 @@
 
         if (GVAR(ailments)) then {
             if ((_parasites > 0)) then {
-                [-_hungerDecrement, "hunger"] call EFUNC(common,addModifier);
+                [-_decrementValue, "hunger"] call EFUNC(common,addStatusModifier);
             };
 
             if (_toxicity > 0) then {
-            if (_toxicity > 1) then {[player,(_toxicity / 100)] call EFUNC(common,specialDamage)};
-                [-0.001, "toxicity"] call EFUNC(common,addModifier);
+                if (_toxicity > 1) then {
+                    [player, (_toxicity / 100)] call EFUNC(common,specialDamage);
+                };
+                [-0.001, "toxicity"] call EFUNC(common,addStatusModifier);
+                private _finalToxicity = ((_toxicity + GVAR(toxicityModifiers)) min 1) max 0;
+                player setVariable [QGVAR(toxicity), _finalToxicity];
             };
 
             if (_infection > 0) then {
-            if (_infection > 1) then {[player,(_infection / 100)] call EFUNC(common,specialDamage)};
-                [-0.001, "infection"] call EFUNC(common,addModifier);
+                if (_infection > 1) then {
+                    [player, (_infection / 100)] call EFUNC(common,specialDamage);
+                };
+                [-0.001, "infection"] call EFUNC(common,addStatusModifier);
+                private _finalInfection = ((_infection + GVAR(infectionModifiers)) min 1) max 0;
+                player setVariable [QGVAR(infection), _finalInfection];
             };
         };
 
@@ -116,13 +113,13 @@
             [player] call EFUNC(temperature,effectiveTemperature);
 
             if (EGVAR(temperature,breathFogAllowed)) then {
-                if (isNil{player getVariable QCLASS(breathCondensationEffect)}) then {
+                if (isNil {player getVariable QCLASS(breathCondensationEffect)}) then {
                     [] call EFUNC(temperature,breathFog);
                 };
             };
 
-            if (_exposure <= -1) then {player setVariable [QGVAR(exposure), -1];};
-            if (_exposure >= 1) then {player setVariable [QGVAR(exposure), 1];};
+            private _finalExposure = round _exposure;
+            player setVariable [QGVAR(exposure), _finalExposure];
 
             if ((_exposure <= -1 || _exposure >= 1) || (_playerTemperature <= -30 || _playerTemperature >= 55)) then {
                 if ((random 100) > 90) then {

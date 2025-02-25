@@ -21,11 +21,11 @@ if ([player] call EFUNC(common,nearFire) || insideBuilding player isEqualTo 1 ||
 
 if (_playerTemperature < 20) then {
     if (!(_parasites > 0 || _infection > 0)) then {
-    _coldExposure = ((20 - _playerTemperature) / 10) / 100;
-    [-_coldExposure, "exposure"] call EFUNC(common,addModifier);
-};
+        private _coldExposure = ((20 - _playerTemperature) / 10) / 100;
+        [-_coldExposure, "exposure"] call EFUNC(common,addStatusModifier);
+    };
 
-if (EGVAR(survival,temperatureDeficiency)) then {
-    [-_coldExposure, "hunger"] call EFUNC(common,addModifier);
+    if (EGVAR(survival,temperatureDeficiency)) then {
+        [-_coldExposure, "hunger"] call EFUNC(common,addStatusModifier);
     };
 };

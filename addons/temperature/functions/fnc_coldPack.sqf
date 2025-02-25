@@ -17,17 +17,16 @@
 
 call EFUNC(common,getPlayerVariables) params ["", "", "", "", "_exposure"];
 
-if (alive player) exitWith {
-    titleText ["You use a cold pack...", "PLAIN DOWN"];
-    player removeItem QCLASS(coldpack);
+if (!alive player) exitWith {};
+
+titleText ["You use a cold pack...", "PLAIN DOWN"];
+player removeItem QCLASS(coldpack);
 
 [{
-if (_this > 0) then {
-    player setVariable [QGVAR(exposure), MACRO_PLAYER_DEFAULTS_LOW];
+    params ["_exposure"];
+    if (_exposure > 0) then {
+        player setVariable [QGVAR(exposure), MACRO_PLAYER_DEFAULTS_LOW];
     } else {
-    if (_this < 0) then {
-    [-5, "exposure"] call EFUNC(common,addModifier);
-        };
+        [-5, "exposure"] call EFUNC(common,addStatusModifier);
     };
 }, [_exposure], 60] call CBA_fnc_waitAndExecute;
-};
