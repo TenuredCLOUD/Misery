@@ -38,7 +38,7 @@ disableSerialization;
     private _playerFatigue = (getFatigue player) * 100;
     private _convertPlayerFatigue = round _playerFatigue;
 
-    call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "_playerTemperature", "_exposure", "_radiation", "_infection", "_parasites", "_toxicity", "", "_buffs", "_ailments", "_funds", "", "", "", "", "_cartridges"];
+    call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "_playerTemperature", "_exposure", "_radiation", "_infection", "_parasites", "_toxicity", "", "_buffs", "_ailments", "_funds", "", "", "", "", "_cartridgeEfficiency"];
     call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "_skinProtection", "_respiratoryProtection", "_eyeProtection", "_hearingProtection"];
 
     lbClear _buffsList;
@@ -84,7 +84,7 @@ disableSerialization;
         switch (_gearCase) do {
             case "GasMask": {
                 if (_respiratoryProtection > 0) then {
-                    private _gasMaskCartridgeValue = format["%1%2", round(_cartridges * 100), "%"];
+                    private _gasMaskCartridgeValue = format["%1%2", round(_cartridgeEfficiency * 100), "%"];
                     _gasMaskValue ctrlSetText _gasMaskCartridgeValue;
                 } else {
                     _gasMaskValue ctrlSetText "No Cartridge";
