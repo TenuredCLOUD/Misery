@@ -84,7 +84,7 @@ disableSerialization;
         switch (_gearCase) do {
             case "GasMask": {
                 if (_respiratoryProtection > 0) then {
-                    private _gasMaskCartridgeValue = format["%1%2", round(_cartridges * 1), "%"];
+                    private _gasMaskCartridgeValue = format["%1%2", round(_cartridges * 100), "%"];
                     _gasMaskValue ctrlSetText _gasMaskCartridgeValue;
                 } else {
                     _gasMaskValue ctrlSetText "No Cartridge";
