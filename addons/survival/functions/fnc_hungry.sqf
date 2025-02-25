@@ -16,7 +16,7 @@
  * Public: No
 */
 
-call EFUNC(common,getPlayerVariables) params ["_hunger", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+call EFUNC(common,getPlayerVariables) params ["_hunger"];
 
 if (_hunger < 0.75) then {
     player say3D [QEGVAR(audio,sound_stomachGrowl), 10, 1, 2, 0];

@@ -18,3 +18,5 @@ GVAR(randomTextLines) = [
     ["You feel a lingering presence..", "You feel like you're being watched..", "You feel uneasy.."],
     ["The shadows are moving..", "They're watching me..", "They follow in the darkness.."]
 ];
+
+GVAR(modifiers) = 0;

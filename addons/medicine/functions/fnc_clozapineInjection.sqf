@@ -27,5 +27,5 @@ if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
 if (!EGVAR(psychosis,enabled)) exitWith {};
 
 [{
-    [-0.25, "psychosis"] call EFUNC(common,addModifier);
+    [-0.25, "psychosis"] call EFUNC(common,addStatusModifier);
 }, [], 60] call CBA_fnc_waitAndExecute;
