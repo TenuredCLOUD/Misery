@@ -3,7 +3,7 @@
 if (!hasInterface) exitWith {};
 
 ["CBA_settingsInitialized", {
-    [player] call FUNC(loop);
+    [] call FUNC(loop);
 }] call CBA_fnc_addEventHandler;
 
 GVAR(energyModifiers) = 0;
