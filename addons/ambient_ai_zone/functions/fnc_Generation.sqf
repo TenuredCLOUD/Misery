@@ -273,7 +273,7 @@ for "_i" from 1 to _numEntities do {
     _unit setSkill ["aimingShake", _aimingShake];
     _unit setSkill ["aimingSpeed", _aimingSpeed];
 
-    if !(EGVAR(common,checkMultiplayer)) then {
+    if !(isMultiplayer) then {
     if (side _unit isEqualTo side player) then {
         private _equipmentMass = loadAbs _unit / getNumber (configFile >> "CfgInventoryGlobalVariable" >> "maxSoldierLoad");
         private _recruitmentCost = 500 * round(_equipmentMass * 100);

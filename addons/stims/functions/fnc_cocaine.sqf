@@ -32,8 +32,7 @@ if (!hasInterface) exitWith {};
   player removeItem QCLASS(cocaine);
   _time = time + 15;
 
-// if ((MiseryNORVGisEqualTo"ENABLED") && !(EGVAR(common,checkMultiplayer))) then {
-if !(EGVAR(common,checkMultiplayer)) then {
+if !(isMultiplayer) then {
   player setVariable [QEGVAR(survival,energyDeficit), (_MSleepiness - 25)];
 };
 

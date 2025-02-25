@@ -1,11 +1,11 @@
-class CLASS(mechanicShop_ui)
+class CLASS(repairShop_ui)
 {
-    idd = 982383;
+    idd = 982386;
     onLoad = QUOTE([] call EFUNC(repair,listed); [] call EFUNC(repair,icon));
 
 class ControlsBackground
 {
-class CLASS(mechanicShop_background): CLASS(RscText)
+class CLASS(repairShop_background): CLASS(RscText)
 {
     idc = -1;
     x = 0 * GUI_GRID_W + GUI_GRID_X;
@@ -14,16 +14,16 @@ class CLASS(mechanicShop_background): CLASS(RscText)
     h = 25 * GUI_GRID_H;
     colorBackground[]={0.2,0.2,0.2,.7};
 };
-class CLASS(mechanicShop_prompt): RscText
+class CLASS(repairShop_prompt): RscText
 {
     idc = -1;
-    text = "Vehicle Repairs";
+    text = "Vehicle Repair";
     x = 1.6 * GUI_GRID_W + GUI_GRID_X;
     y = 0.24 * GUI_GRID_H + GUI_GRID_Y;
     w = 20.5 * GUI_GRID_W;
     h = 2 * GUI_GRID_H;
 };
-class CLASS(mechanicShop_icon): RscPicture
+class CLASS(repairShop_icon): RscPicture
 {
     idc = 1602;
     x = 31.5 * GUI_GRID_W + GUI_GRID_X;
@@ -31,7 +31,7 @@ class CLASS(mechanicShop_icon): RscPicture
     w = 5 * GUI_GRID_W;
     h = 3.5 * GUI_GRID_H;
 };
-class CLASS(mechanicShop_name): RscText
+class CLASS(repairShop_name): RscText
 {
     idc = 1603;
     x = 29.52 * GUI_GRID_W + GUI_GRID_X;
@@ -43,15 +43,16 @@ class CLASS(mechanicShop_name): RscText
 };
 class Controls
     {
-class CLASS(mechanicShop_list): RscListBox
+class CLASS(repairShop_list): RscListBox
 {
     idc = 1500;
     x = 1.5 * GUI_GRID_W + GUI_GRID_X;
     y = 2.5 * GUI_GRID_H + GUI_GRID_Y;
     w = 20.5 * GUI_GRID_W;
     h = 12.5 * GUI_GRID_H;
+    sizeEx = 0.7 * GUI_GRID_H;
 };
-class CLASS(mechanicShop_purchase): RscButton
+class CLASS(repairShop_purchase): RscButton
 {
     idc = 1600;
     text = "Purchase";
@@ -62,9 +63,9 @@ class CLASS(mechanicShop_purchase): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick =QUOTE([] call EFUNC(rearm,processPurchase));
+    onButtonClick = QUOTE([] call EFUNC(repair,process));
 };
-class CLASS(mechanicShop_exit): RscButton
+class CLASS(repairShop_exit): RscButton
 {
     idc = 1601;
     text = "Exit";
@@ -75,9 +76,9 @@ class CLASS(mechanicShop_exit): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = QUOTE(closeDialog 2);
+    onButtonClick = QUOTE([] call EFUNC(repair,exit));
 };
-class CLASS(mechanicShop_infoBox): RscText
+class CLASS(repairShop_infoBox): RscText
 {
     idc = 1001;
     x = 1.5 * GUI_GRID_W + GUI_GRID_X;
@@ -88,4 +89,5 @@ class CLASS(mechanicShop_infoBox): RscText
     };
         };
 
-//$[1.063,[QCLASS(mechanicShop",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],[1800,QCLASS(mechanicShop_BG",[2,"",["0 * GUI_GRID_W + GUI_GRID_X","0 * GUI_GRID_H + GUI_GRID_Y","40 * GUI_GRID_W","25 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1000,QCLASS(mechanicShop_Prompt",[2,"Medical Treatment",["1.6 * GUI_GRID_W + GUI_GRID_X","0.24 * GUI_GRID_H + GUI_GRID_Y","20.5 * GUI_GRID_W","2 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1500,QCLASS(mechanicShop_List",[2,"",["1.5 * GUI_GRID_W + GUI_GRID_X","2.5 * GUI_GRID_H + GUI_GRID_Y","20.5 * GUI_GRID_W","12.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","0.7"],[]],[1200,QCLASS(mechanicShop_icon",[2,"\Data\Mappack\medical.paa",["31.5 * GUI_GRID_W + GUI_GRID_X","1 * GUI_GRID_H + GUI_GRID_Y","5 * GUI_GRID_W","3.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1600,QCLASS(mechanicShop_Purchase",[2,"Purchase",["29.5 * GUI_GRID_W + GUI_GRID_X","9.5 * GUI_GRID_H + GUI_GRID_Y","7 * GUI_GRID_W","2 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1601,QCLASS(mechanicShop_Exit",[2,"Exit",["29.5 * GUI_GRID_W + GUI_GRID_X","12.5 * GUI_GRID_H + GUI_GRID_Y","7 * GUI_GRID_W","2 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1001,QCLASS(mechanicShop_InfoBox",[2,"",["1.5 * GUI_GRID_W + GUI_GRID_X","16.5 * GUI_GRID_H + GUI_GRID_Y","37.5 * GUI_GRID_W","7.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]]
+//$[1.063,[QCLASS(repairShop",[[0,0,1,1],0.025,0.04,"GUI_GRID"],0,0,0],[1800,QCLASS(repairShop_BG",[2,"",["0 * GUI_GRID_W + GUI_GRID_X","0 * GUI_GRID_H + GUI_GRID_Y","40 * GUI_GRID_W","25 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1000,QCLASS(repairShop_Prompt",[2,"Medical Treatment",["1.6 * GUI_GRID_W + GUI_GRID_X","0.24 * GUI_GRID_H + GUI_GRID_Y","20.5 * GUI_GRID_W","2 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1500,QCLASS(repairShop_List",[2,"",["1.5 * GUI_GRID_W + GUI_GRID_X","2.5 * GUI_GRID_H + GUI_GRID_Y","20.5 * GUI_GRID_W","12.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","0.7"],[]],[1200,QCLASS(repairShop_icon",[2,"\Data\Mappack\medical.paa",["31.5 * GUI_GRID_W + GUI_GRID_X","1 * GUI_GRID_H + GUI_GRID_Y","5 * GUI_GRID_W","3.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1600,QCLASS(repairShop_Purchase",[2,"Purchase",["29.5 * GUI_GRID_W + GUI_GRID_X","9.5 * GUI_GRID_H + GUI_GRID_Y","7 * GUI_GRID_W","2 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1601,QCLASS(repairShop_Exit",[2,"Exit",["29.5 * GUI_GRID_W + GUI_GRID_X","12.5 * GUI_GRID_H + GUI_GRID_Y","7 * GUI_GRID_W","2 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]],[1001,QCLASS(repairShop_InfoBox",[2,"",["1.5 * GUI_GRID_W + GUI_GRID_X","16.5 * GUI_GRID_H + GUI_GRID_Y","37.5 * GUI_GRID_W","7.5 * GUI_GRID_H"],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],"","-1"],[]]]
+

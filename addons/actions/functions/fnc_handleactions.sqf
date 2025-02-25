@@ -24,62 +24,6 @@ _items = _items + (assignedItems player);
 _items = _items + (magazines player);
 _items = _items + (weapons player);
 
-//SP sleeping
-if (!EGVAR(common,checkMultiplayer)) then {
-    if (call EFUNC(sleep,condition)) then {
-        _out pushBack ["Sleep","Sleep"];
-    };
-};
-
-//Vehicle data parsing:
-private _position = getPos player;
-private _vehicles = [];
-{
-    _vehicles append (nearestObjects [_position, [_x], 5]);
-} forEach ["Car", "Tank", "Air", "Ship"];
-EGVAR(common,targetVehicle) = if (count _vehicles > 0) then { _vehicles select 0 } else { objNull };
-EGVAR(common,targetVehicleType) = typeOf EGVAR(common,targetVehicle);
-
-if (EGVAR(fishing,enabled)) then {
-    if (call EFUNC(fishing,canFish)) then {
-        _out pushBack [localize "STR_MISERY_STARTFISHING",localize "STR_MISERY_STARTFISHING"];
-    };
-};
-
-if (EGVAR(cooking,enabled)) then {
-    if (call EFUNC(common,nearFire)) then {
-        _out pushBack [localize "STR_MISERY_USEFIRE",localize "STR_MISERY_USEFIRE"];
-    };
-};
-
-if (EGVAR(hydrology,enabled)) then {
-    if (call EFUNC(common,nearWell)) then {
-        _out pushBack [localize "STR_MISERY_COLLECTWATER",localize "STR_MISERY_COLLECTWATER"];
-    };
-};
-
-if (EGVAR(forestry,woodCollection)) then {
-    if (call EFUNC(common,nearTreeAxe)) then {
-        _out pushBack [localize "STR_MISERY_CHOPWOOD",localize "STR_MISERY_CHOPWOOD"];
-    };
-    if (call EFUNC(common,nearTreeSaw)) then {
-        _out pushBack [localize "STR_MISERY_SAWWOOD",localize "STR_MISERY_SAWWOOD"];
-    };
-    if (call EFUNC(common,nearTree)) then {
-        _out pushBack [localize "STR_MISERY_COLLECTWOOD",localize "STR_MISERY_COLLECTWOOD"];
-    };
-
-    if ([[QCLASS(woodenlog)]] call EFUNC(common,hasItem)) then {
-        _out pushBack [localize "STR_MISERY_SPLITWOODLOG",localize "STR_MISERY_SPLITWOODLOG"];
-    };
-};
-
-if (EGVAR(forestry,foraging)) then {
-    if (call EFUNC(forestry,Canforage)) then {
-        _out pushBack [localize "STR_MISERY_FORAGE", localize "STR_MISERY_FORAGE"];
-    };
-};
-
 if ([[QCLASS(jetFuel_Russian)], 5.5] call EFUNC(common,nearCraftingStation)) then {
     _out pushBack [localize "STR_MISERY_USEJETFUELPUMP",localize "STR_MISERY_USEJETFUELPUMP"];
     _out pushBack [localize "STR_MISERY_JETFUELPUMPREQ",localize "STR_MISERY_JETFUELPUMPREQ"];
@@ -98,12 +42,6 @@ if (EGVAR(mining,enabled)) then {
     };
     if (call EFUNC(common,nearRockSource)) then {
         _out pushBack [localize "STR_MISERY_MINEORE",localize "STR_MISERY_MINEORE"];
-    };
-};
-
-if (EGVAR(crafting,enabled)) then {
-    if ([[MACRO_CRAFTINGSTATIONS], 1.5] call EFUNC(common,nearCraftingStation)) then {
-        _out pushBack [localize "STR_MISERY_CRAFTINGWORKBENCH",localize "STR_MISERY_CRAFTINGWORKBENCH"];
     };
 };
 
@@ -144,20 +82,6 @@ if ((count (entities QCLASS(RadioSettings")) > 0) then {
     };
 };
 */
-
-if (EGVAR(radiation,leadContainers)) then {
-    if ([[QCLASS(leadContainer_Open)]] call EFUNC(common,hasItem) && [[MACRO_ARTIFACTS]] call EFUNC(common,hasItem)) then {
-        _out pushBack [localize "STR_MISERY_STOREARTIFACT",localize "STR_MISERY_STOREARTIFACT"];
-    };
-};
-
-if ([[QCLASS(headlamp_Off)]] call EFUNC(common,hasItem)) then {
-    _out pushBack [localize "STR_MISERY_TURNONHEADLAMP",localize "STR_MISERY_TURNONHEADLAMP"];
-};
-
-if ([[QCLASS(headlamp_On)]] call EFUNC(common,hasItem)) then {
-    _out pushBack [localize "STR_MISERY_TURNOFFHEADLAMP",localize "STR_MISERY_TURNOFFHEADLAMP"];
-};
 
 if ([[QCLASS(jetFuel)]] call EFUNC(common,hasItem)) then {
 _out pushBack [localize "STR_MISERY_DUMPOUTFUELJET",localize "STR_MISERY_DUMPOUTFUELJET"];

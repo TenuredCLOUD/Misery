@@ -16,7 +16,8 @@
 
 disableSerialization;
 
-waitUntil {!isNull findDisplay 982384};
+[{!isNull findDisplay 982384},
+{
 
 private _dialog = findDisplay 982384;
 private _IconCtrl = _dialog displayCtrl 1602;
@@ -36,3 +37,4 @@ if (!isNil "_Vehiclename") then {
         _IconName ctrlSetText _Vehiclename;
     };
 };
+}, []] call CBA_fnc_waitUntilAndExecute;

@@ -12,6 +12,21 @@ if (hasInterface) then {
         [] call FUNC(exposure);
     };
 
+if (GVAR(leadContainers)) then {
+    [
+        "leadContainers_menu",
+        localize "STR_MISERY_STOREARTIFACT",
+        {[[QCLASS(leadContainer_Open)]] call EFUNC(common,hasItem) && [[MACRO_ARTIFACTS]] call EFUNC(common,hasItem)},
+        {
+        [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
+        call FUNC(storeArtifact);
+        },
+        "",
+        "",
+        ""
+    ] call EFUNC(actions,addAction);
+};
+
     // Reactivate Geiger if picking up active one:
     player addEventHandler ["Take", {
         params ["_unit", "_container", "_item"];
