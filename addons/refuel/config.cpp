@@ -6,12 +6,10 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {QCLASS(common), QCLASS(ui)};
+        requiredAddons[] = {QCLASS(common)};
         authors[] = {"TenuredCLOUD"};
         VERSION_CONFIG;
     };
 };
 
 #include "CfgEventHandlers.hpp"
-#include "\z\misery\addons\ui\menus\core.hpp"
-#include "refuelShop.hpp"

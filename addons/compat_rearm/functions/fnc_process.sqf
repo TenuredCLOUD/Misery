@@ -100,7 +100,7 @@ _dummyVehicle enableSimulation false;
         _vehicleName,
         _progressPercent,
         EGVAR(currency,symbol),
-        player getVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW]
+        [_currentFunds, 1, 2, true] call CBA_fnc_formatNumber
     ];
     ctrlSetText [1001, _displayedText];
 

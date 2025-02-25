@@ -101,7 +101,7 @@ private _fundsToDeduct = _fuelCost;
         (_currentFuel + _fuelToAdd) * 100 toFixed 2,
         "%",
         EGVAR(currency,symbol),
-        player getVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW]
+        [_currentFunds, 1, 2, true] call CBA_fnc_formatNumber
     ];
     ctrlSetText [1001, _displayedText];
 
