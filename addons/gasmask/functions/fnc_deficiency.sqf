@@ -18,20 +18,42 @@
     params ["_args", "_handle"];
 
     call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "", "_respiratory"];
-    call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "_cartridge"];
+    call EFUNC(common,getPlayerVariables) params ["_cartridgeEfficiency"];
 
     if (_gasMask > 0 && _respiratory > 0 && _scba < 1) exitWith {};
 
-    [-1, "cartridge"] call EFUNC(common,addStatusModifier);
+    private _baseDegradation = 0.001389;
+    private _zoneMultiplier = 2;
+    private _fatigueMultiplier = 0.008334;
+    private _maxDegradation = 0.011112;
 
-    private _cartridgeTotal = ((_cartridge + GVAR(modifiers)) min 1) max 0;
-    player setVariable [QGVAR(cartridgeEfficiency), _cartridgeTotal];
+    private _decrementValue = _baseDegradation;
+
+    // Check if in hazardous zones
+    private _inHazardZone = ((EGVAR(chemical,areas) findIf {player inArea _x} isNotEqualTo -1) || (EGVAR(radiation,areas) findIf {player inArea _x} isNotEqualTo -1));
+
+    if (_inHazardZone) then {
+        _decrementValue = _decrementValue * _zoneMultiplier;
+    };
+
+    if (isNull objectParent player) then {
+        private _fatiguePenalty = (getFatigue player) * _fatigueMultiplier;
+        _decrementValue = _decrementValue + _fatiguePenalty;
+    };
+
+    if (_decrementValue > _maxDegradation) then {
+        _decrementValue = _maxDegradation;
+    };
+
+    [-_decrementValue, "cartridge"] call EFUNC(common,addStatusModifier);
+    private _cartridgeEfficiencyTotal = ((_cartridgeEfficiency + GVAR(modifiers)) min 1) max 0;
+    player setVariable [QGVAR(cartridgeEfficiency), _cartridgeEfficiencyTotal];
     GVAR(modifiers) = 0;
 
-    if (_cartridge <= 0) then {
+    if (_cartridgeEfficiencyTotal <= 0) then {
         [] call FUNC(swapMask);
-        player setVariable [QGVAR(cartridgeEfficiency), MACRO_PLAYER_DEFAULTS_HIGH];
+        player setVariable [QGVAR(cartridgeEfficiency), MACROplayer_DEFAULTS_HIGH];
     };
 
     [QUOTE(COMPONENT_BEAUTIFIED), "Deficiency cycle..."] call EFUNC(common,debugMessage);
-}, GVAR(deficiencyCycle), []] call CBA_fnc_addPerFrameHandler;
+}, 10, []] call CBA_fnc_addPerFrameHandler;
