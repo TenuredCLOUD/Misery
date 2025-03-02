@@ -1,9 +1,5 @@
-PREP(addCraftingRecipe);
 PREP(canCraftCheck);
-PREP(inventoryListed);
-PREP(LBIndexCheck);
 PREP(processItems);
 PREP(recipesListed);
-PREP(removeCraftingRecipe);
-PREP(showicon);
+PREP(showIcon);
 PREP(showRecipe);

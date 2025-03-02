@@ -7,6 +7,11 @@ GVAR(worldRadius) = sqrt 2 * GVAR(worldAxis);
 
 //If GRAD persistence is active, push Remnant ODRA object holders to blacklister, so they won't save / reload (This will execute only once)
 if (isServer) then {
+    if (isClass (missionConfigFile >> "CfgMisery_CraftingData")) then {
+    [] call FUNC(parseCraftingData);
+    } else {
+    [QUOTE(COMPONENT_BEAUTIFIED), "CfgMisery_CraftingData class not found in description.ext, skipping data parser..."] call EFUNC(common,debugMessage);
+    };
 if (GVAR(remnant)) then {
     if (!isNil "grad_persistence_blacklist") then {
         private _RemnantODRA = [

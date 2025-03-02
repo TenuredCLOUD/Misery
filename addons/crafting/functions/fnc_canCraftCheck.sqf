@@ -1,60 +1,33 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Crafting Framework Item check
+ * Crafting Framework Item Checker
  *
  * Arguments:
- * 0: Requirements <ARRAY>
+ * 0: Required items <ARRAY> ([["item1", count, remove], ["item2", count, remove]])
  *
  * Return Value:
  * 0: BOOL
  *
  * Example:
- * [_requirements] call misery_crafting_fnc_canCraftCheck
+ * [["misery_electricHandsaw", 1, false], ["misery_woodenlog", 1, true]] call misery_crafting_fnc_canCraftCheck
  *
  * Public: No
 */
 
-params ["_requirements"];
-if (EGVAR(common,debug)) then {
-systemChat str _requirements;
-systemChat format ["Type of _requirements: %1", typeName _requirements]; //debug output
-systemChat format ["Count of _requirements: %1", count _requirements]; //debug output
-};
+params ["_requiredItems"];
+
 private _playerItems = (items player) + (magazines player);
 private _hasAll = true;
 
 {
-    private _itemArray = _x;
-    if (EGVAR(common,debug)) then {
-    systemChat format["Checking 1: %1",_itemArray];
-    };
-    if (_itemArray isEqualType [] && {_itemArray select 0 isNotEqualTo "CraftingTime"} && {_itemArray select 0 isNotEqualTo "OutputCount"} && {_itemArray select 0 isNotEqualTo "ToBeReplaced"} && {_itemArray select 0 isNotEqualTo "Audio"}) then {
-        if (EGVAR(common,debug)) then {
-        systemChat format["Checking 2: %1",_itemArray];
-        };
-        private _requiredItem = _itemArray select 0;
-        private _requiredCount = _itemArray select 1;
-        private _playerCount = {_x isEqualTo _requiredItem} count _playerItems;
+    private _item = _x select 0;
+    private _count = _x select 1;
+    private _playerCount = {_x isEqualTo _item} count _playerItems;
 
-        if (EGVAR(common,debug)) then {
-        systemChat format ["Required item: %1, Required count: %2, Player count: %3", _requiredItem, _requiredCount, _playerCount]; //debug output
-        systemChat format ["Count function result: %1", {_x isEqualTo _requiredItem} count _playerItems]; //debug output
-        };
-
-        if (_playerCount < _requiredCount) then {
-            if (EGVAR(common,debug)) then {
-            systemChat "Not enough items, setting _hasAll to false"; //debug output
-            };
-            _hasAll = false;
-        };
+    if (_playerCount < _count) then {
+        _hasAll = false;
     };
-} forEach _requirements;
+} forEach _requiredItems;
 
 _hasAll
-
-
-
-
-
-

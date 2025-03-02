@@ -2,14 +2,13 @@
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
  * Author: TenuredCLOUD
- * Crafting Framework Item processor
- * Takes inputs from GUI and process recipe (if it exists)
+ * Crafting Framework Item Processor
  *
  * Arguments:
  * None
  *
  * Return Value:
- * 0: BOOL
+ * None
  *
  * Example:
  * [] call misery_crafting_fnc_processItems
@@ -18,171 +17,121 @@
 */
 
 private _dialog = findDisplay 982376;
-private _selectedOutputItem = lbData[1500, (lbCurSel 1500)];
-private _matchedRecipe = [];
-private _playerRecipes = player getVariable QCLASS(craftingKnowledge);
+private _selectedOutputItem = lbData [1500, (lbCurSel 1500)];
+private _recipe = EGVAR(common,craftingRecipes) select {(_x select 0) isEqualTo _selectedOutputItem} select 0;
 
-private _CraftB = _dialog displayCtrl 1600;
-private _RecipeB = _dialog displayCtrl 1601;
-private _ExitB = _dialog displayCtrl 1602;
+if (isNil "_recipe") exitWith { ctrlSetText [1001, "No matching recipe found."]; };
 
-if (EGVAR(common,debug)) then {
-systemChat format ["Selected output item: %1", _selectedOutputItem]; //debug output
-systemChat format ["Player's recipes: %1", _playerRecipes]; //debug output
+private _outputItem = _recipe select 0;
+private _requiredItems = _recipe select 1;
+private _craftingTime = _recipe select 2;
+private _outputCount = _recipe select 3;
+private _toBeReplaced = _recipe select 4;
+private _audio = _recipe select 5;
+private _outputXP = _recipe select 6;
+
+private _outputDisplayName = getText (configFile >> "CfgWeapons" >> _outputItem >> "displayName");
+if (_outputDisplayName isEqualTo "") then {
+    _outputDisplayName = getText (configFile >> "CfgMagazines" >> _outputItem >> "displayName");
+};
+if (_outputDisplayName isEqualTo "") then {
+    _outputDisplayName = _outputItem; // Fallback to classname
 };
 
-{
-    if (_x select 0 isEqualTo _selectedOutputItem) then {
-        _matchedRecipe = _x;
-    };
-    if (EGVAR(common,debug)) then {
-    systemChat format ["Output item of current recipe: %1", _x select 0]; //debug output
-    };
-} forEach _playerRecipes;
+if (!([_requiredItems] call FUNC(canCraftCheck))) exitWith {
+    ctrlSetText [1001, "You don’t have the required items..."];
+};
 
-if (count _matchedRecipe > 0) then {
-    private _outputItem = _matchedRecipe select 0;
-    private _requirements = _matchedRecipe select 1;
-     if (EGVAR(common,debug)) then {
-    systemChat format ["Requirements: %1, Type: %2", _requirements, typeName _requirements]; //debug output
-    };
-    private _craftingTime = -1;
-    private _requiredItemsCounts = [];
-    private _toBeReplaced = [];
-    private _audio = "";
-    private _outputCount = 1;
+private _craftButton = _dialog displayCtrl 1600;
+private _recipeButton = _dialog displayCtrl 1601;
+private _exitButton = _dialog displayCtrl 1602;
+_craftButton ctrlShow false;
+_recipeButton ctrlShow false;
+_exitButton ctrlShow false;
 
-    {
-        if (_x select 0 isEqualTo "CraftingTime") then {
-            _craftingTime = _x select 1;
-        } else {
-            if (_x select 0 isEqualTo "ToBeReplaced") then {
-                _toBeReplaced = _x;
-            } else {
-                if (_x select 0 isEqualTo "Audio") then {
-                    _audio = _x select 1;
-                } else {
-                    if (_x select 0 isEqualTo "OutputCount") then {
-                    _outputCount = _x select 1;
-                } else {
-                    _requiredItemsCounts pushBack _x;
+player playAction "Gear";
+
+if (_audio isNotEqualTo "") then {
+    playSound3D [_audio, player, false, getPosASL player, 4, 1, 50];
+};
+
+player setVariable [QGVAR(isCrafting), true];
+
+private _craftInterrupt = _dialog displayAddEventHandler ["KeyDown", {
+    params ["_displayOrControl", "_key"];
+    if (_key isEqualTo DIK_ESCAPE) then {
+        player setVariable [QGVAR(isCrafting), false];
+        [parseText "<t font='PuristaMedium' size='1'>Crafting interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+    };
+}];
+
+private _totalSteps = _craftingTime * 2;
+private _stepTime = _craftingTime / _totalSteps;
+private _currentStep = 0;
+
+[{
+    params ["_args", "_handle"];
+    _args params ["_requiredItems", "_outputItem", "_outputCount", "_toBeReplaced", "_outputXP", "_dialog", "_craftButton", "_recipeButton", "_exitButton", "_craftInterrupt", "_totalSteps", "_currentStep", "_outputDisplayName"];
+
+    if (!(player getVariable [QGVAR(isCrafting), false]) || !alive player) exitWith {
+        player setVariable [QGVAR(isCrafting), nil];
+        _dialog displayRemoveEventHandler ["KeyDown", _craftInterrupt];
+        _craftButton ctrlShow true;
+        _recipeButton ctrlShow true;
+        _exitButton ctrlShow true;
+        [_handle] call CBA_fnc_removePerFrameHandler;
+    };
+
+    _currentStep = _currentStep + 1;
+    _args set [11, _currentStep];
+
+    private _progress = (_currentStep / _totalSteps) * 100;
+    ctrlSetText [1001, format ["Crafting %1... %2%3 complete", _outputDisplayName, _progress toFixed 0, "%"]];
+
+    if (_currentStep >= _totalSteps) exitWith {
+        {
+            private _item = _x select 0;
+            private _count = _x select 1;
+            private _removeAfterUse = _x select 2;
+            if (_removeAfterUse) then {
+                for "_j" from 1 to _count do {
+                    [player, _item] call CBA_fnc_removeItem;
                 };
             };
-        };
-    };
-    } forEach _requirements;
-
-    if ([_requirements] call FUNC(canCraftCheck)) then {
-
-        _CraftB ctrlShow false;
-        _RecipeB ctrlShow false;
-        _ExitB ctrlShow false;
-
-        if (currentWeapon player isNotEqualTo "") then {
-            player action["SWITCHWEAPON",player,player,-1];
-        };
-
-        player playAction "Gear";
-
-        private _itemDisplayName = getText (configFile >> "CfgWeapons" >> _outputItem >> "displayName");
-        if (_itemDisplayName isEqualTo "") then {
-            _itemDisplayName = getText (configFile >> "CfgMagazines" >> _outputItem >> "displayName");
-        };
-
-        player setVariable [QCLASS(ISCrafting), true];
-
-        _CraftInterrupt = (findDisplay 982376) displayAddEventHandler ["KeyDown", {
-            params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
-            if (_key isEqualTo DIK_ESCAPE) then {
-                player setVariable [QCLASS(ISCrafting),false];
-                if (player getVariable ["_TC_sound", false]) then {
-                    player setVariable ["_TC_sound", false,true];
-                };
-                [parseText "<t font='PuristaMedium' size='1'>Crafting interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
-            };
-        }];
-
-        if (!isNil "_audio" && _audio isNotEqualTo "") then {
-        private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position player);
-        player setVariable ["_TC_sound", true,true];
-        [_soundDummy, [_audio, 50]] remoteExec ["say3D", 0, _soundDummy];
-        [{
-        !(player getVariable ["_TC_sound", false])
-        },{
-        deleteVehicle _this;
-        }, _soundDummy] call CBA_fnc_waitUntilAndExecute;
-        };
-
-        private _text = "Crafting...";
-        private _displayedText = "";
-        private _delay = _craftingTime / count _text;
-
-        for "_i" from 0 to (count _text - 1) do {
-            if ((player getVariable QCLASS(ISCrafting)) isEqualTo false) exitWith {};
-            _displayedText = _displayedText + (_text select [_i, 1]);
-            ctrlSetText [1001, _displayedText];
-            sleep _delay;
-        };
-
-        if ((player getVariable QCLASS(ISCrafting)) isEqualTo true) then {
-    {
-        private _requiredItem = _x select 0;
-        private _requiredCount = _x select 1;
-        private _removeAfterUse = if (_x select 2 isEqualType []) then {true} else {_x select 2};
-
-        for "_j" from 1 to _requiredCount do {
-            if (_requiredItem in items player && _removeAfterUse) then {
-                player removeItem _requiredItem;
-            };
-            if (_requiredItem in magazines player && _removeAfterUse) then {
-                player removeMagazine _requiredItem;
-            };
-        };
-    } forEach _requiredItemsCounts;
+        } forEach _requiredItems;
 
         for "_i" from 1 to _outputCount do {
-        [player, _outputItem, true] call CBA_fnc_addItem;
+            [player, _outputItem, true] call CBA_fnc_addItem;
         };
 
-            if (!isNil "_toBeReplaced" && {count _toBeReplaced > 0}) then {
-            private _itemToReplace = _toBeReplaced select 1;
-            private _chance = _toBeReplaced select 2;
-            private _replacementItem = _toBeReplaced select 3;
+        if (count _toBeReplaced > 0) then {
+            private _itemToReplace = _toBeReplaced select 0;
+            private _chance = _toBeReplaced select 1;
+            private _replacementItem = _toBeReplaced select 2;
             if (random 1 < _chance) then {
-             if (_itemToReplace in items player) then {
-                player removeItem _itemToReplace;
+                [player, _itemToReplace] call CBA_fnc_removeItem;
+                [player, _replacementItem, true] call CBA_fnc_addItem;
             };
-            if (_itemToReplace in magazines player) then {
-                player removeMagazine _itemToReplace;
-            };
-            [player, _replacementItem, true] call CBA_fnc_addItem;
-                };
-            };
-
-            _SuccessText = format ["You successfully crafted: %1...", _itemDisplayName];
-            ctrlSetText [1001, _SuccessText];
-
-            if (player getVariable ["_TC_sound", false]) then {
-                player setVariable ["_TC_sound", false,true];
-            };
-
-        _CraftB ctrlShow true;
-        _RecipeB ctrlShow true;
-        _ExitB ctrlShow true;
-
-            player setVariable [QCLASS(ISCrafting), nil]; //terminate crafting flag
-            (findDisplay 982376) displayRemoveEventHandler ["KeyDown", _CraftInterrupt]; //Remove Display EH
         };
 
-    } else {
-        ctrlSetText [1001, "You do not have all the required items for this recipe."];
-        _CraftB ctrlShow true;
-        _RecipeB ctrlShow true;
-        _ExitB ctrlShow true;
+        private _currentXP = player getVariable [QGVAR(xp), MACRO_PLAYER_DEFAULTS_LOW];
+        player setVariable [QGVAR(xp), _currentXP + _outputXP, true];
+        [parseText format ["<t font='PuristaMedium' size='1'>You gained %1 XP from crafting %2.</t>", _outputXP, _outputDisplayName], true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+
+        ctrlSetText [1001, format ["You crafted %1 %2!", _outputCount, _outputDisplayName]];
+        player setVariable [QGVAR(isCrafting), nil];
+        _dialog displayRemoveEventHandler ["KeyDown", _craftInterrupt];
+        _craftButton ctrlShow true;
+        _recipeButton ctrlShow true;
+        _exitButton ctrlShow true;
+
+        // Refresh the crafting list
+        [] call FUNC(recipesListed);
+
+        [_handle] call CBA_fnc_removePerFrameHandler;
     };
-} else {
-    ctrlSetText [1001, "No matching recipe found."];
-};
-
-
-
+}, 0.5, [
+    _requiredItems, _outputItem, _outputCount, _toBeReplaced, _outputXP,
+    _dialog, _craftButton, _recipeButton, _exitButton, _craftInterrupt,
+    _totalSteps, _currentStep, _outputDisplayName
+]] call CBA_fnc_addPerFrameHandler;
