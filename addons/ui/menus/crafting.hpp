@@ -46,9 +46,9 @@ class CLASS(craftingFramework_ui)
             idc = 1501;
             text = QPATHTOEF(icons,data\crafting_ca.paa);
             x = QUOTE(27 * GUI_GRID_W + GUI_GRID_X);
-	        y = QUOTE(3 * GUI_GRID_H + GUI_GRID_Y);
-	        w = QUOTE(5.5 * GUI_GRID_W);
-	        h = QUOTE(4 * GUI_GRID_H);
+            y = QUOTE(3 * GUI_GRID_H + GUI_GRID_Y);
+            w = QUOTE(5.5 * GUI_GRID_W);
+            h = QUOTE(4 * GUI_GRID_H);
         };
     };
     class Controls
