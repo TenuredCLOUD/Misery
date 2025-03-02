@@ -20,7 +20,7 @@ GVAR(craftingRecipes) = [];
     private _recipeName = configName _x;
     private _requiredItems = getArray (_x >> "requiredItems");
     {
-        _x set [2, (_x select 2) == 1]; // Convert RemoveAfterUse to boolean
+        _x set [2, (_x select 2) isEqualTo 1]; // Convert RemoveAfterUse to boolean
     } forEach _requiredItems;
     private _craftingTime = getNumber (_x >> "craftingTime");
     private _outputCount = getNumber (_x >> "outputCount");
