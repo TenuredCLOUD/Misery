@@ -22,6 +22,7 @@ PREP(nearTree);
 PREP(nearTreeAxe);
 PREP(nearTreeSaw);
 PREP(nearWell);
+PREP(parseCookingData);
 PREP(spawnLoot);
 PREP(specialDamage);
 PREP(stun);

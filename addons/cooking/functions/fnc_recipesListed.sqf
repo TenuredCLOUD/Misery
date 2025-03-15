@@ -1,13 +1,13 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Cooking Framework List populater for Recipes
+ * Cooking Framework List Populator
  *
  * Arguments:
  * None
  *
  * Return Value:
- * 0: Listed indexes for UI
+ * None
  *
  * Example:
  * [] call misery_cooking_fnc_recipesListed
@@ -15,25 +15,27 @@
  * Public: No
 */
 
-waitUntil {!isNull findDisplay 982379};
+[{!isNull findDisplay 982379}, {
+    private _list = findDisplay 982379 displayCtrl 1500;
+    private _playerXP = player getVariable [QGVAR(xp), MACRO_PLAYER_DEFAULTS_LOW];
 
-if (!isNull findDisplay 982379) exitWith { //Double make sure script exits after loot lists are populated
+    lbClear _list;
 
- private _list = findDisplay 982379 displayCtrl 1500;
- private _playerRecipes = player getVariable QCLASS(cookingKnowledge);
+    {
+        private _outputItem = _x select 0;
+        private _requiredXP = _x select 7;
 
-{
-    private _outputItem = _x select 0;
-    private _requirements = _x select 1;
-    private _displayName = getText (configFile >> "CfgWeapons" >> _outputItem >> "displayName");
-    if (_displayName isEqualTo "") then {
-        _displayName = getText (configFile >> "CfgMagazines" >> _outputItem >> "displayName");
-    };
-    if (EGVAR(common,debug)) then {
-        systemChat format ["Output item: %1", _displayName];
-    };
-    private _index = _list lbAdd _displayName;
-    _list lbSetData [_index, _outputItem];
-} forEach _playerRecipes;
-};
+        if (_playerXP >= _requiredXP) then {
+            private _displayName = getText (configFile >> "CfgWeapons" >> _outputItem >> "displayName");
+            if (_displayName isEqualTo "") then {
+                _displayName = getText (configFile >> "CfgMagazines" >> _outputItem >> "displayName");
+            };
+            if (_displayName isEqualTo "") then {
+                _displayName = _outputItem;
+            };
 
+            private _index = _list lbAdd _displayName;
+            _list lbSetData [_index, _outputItem];
+        };
+    } forEach EGVAR(common,cookingRecipes);
+}, []] call CBA_fnc_waitUntilAndExecute;
