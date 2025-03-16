@@ -2,8 +2,8 @@
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
  * Author: TenuredCLOUD
- * Hydrology fill processor
- * Takes inputs from GUI and processes recipe (if it exists)
+ * Hydrology Fill Processor
+ * Fills selected container from GUI using PFH for scheduled execution
  *
  * Arguments:
  * None
@@ -11,110 +11,117 @@
  * Return Value:
  * None
  *
+ * Example:
  * [] call misery_hydrology_fnc_processFill;
  *
  * Public: No
 */
 
 private _dialog = findDisplay 982380;
-private _selectedOutputItem = lbData[1500, (lbCurSel 1500)];
-private _matchedRecipe = [];
-private _playerRecipes = player getVariable QCLASS(hydrologyKnowledge);
+private _selectedItem = lbData [1500, (lbCurSel 1500)];
+private _recipe = GVAR(recipes) select {(_x select 0) isEqualTo _selectedItem} select 0;
 
-private _FillB = _dialog displayCtrl 1600;
-private _DrinkFSB = _dialog displayCtrl 1601;
-private _ExitB = _dialog displayCtrl 1602;
+private _fillButton = _dialog displayCtrl 1600;
+private _drinkButton = _dialog displayCtrl 1601;
+private _exitButton = _dialog displayCtrl 1602;
 
-if (EGVAR(common,debug)) then {
-systemChat format ["Selected output item: %1", _selectedOutputItem]; //debug output
-systemChat format ["Player's recipes: %1", _playerRecipes]; //debug output
+if (isNil "_recipe") exitWith { ctrlSetText [1001, "No matching container found."]; };
+
+private _requiredItem = _recipe select 0;
+private _outputItem = _recipe select 1;
+private _fillingTime = _recipe select 2;
+
+private _playerItems = (items player) + (magazines player);
+private _hasItem = _requiredItem in _playerItems;
+
+if (!_hasItem) exitWith {
+    ctrlSetText [1001, "You don’t have that container..."];
 };
 
-{
-    if (_x select 0 isEqualTo _selectedOutputItem) then {
-        _matchedRecipe = _x;
-    };
-    if (EGVAR(common,debug)) then {
-    systemChat format ["Filled Container Output item of current recipe: %1", _x select 1]; //debug output
-    };
-} forEach _playerRecipes;
+_fillButton ctrlShow false;
+_drinkButton ctrlShow false;
+_exitButton ctrlShow false;
 
-if (count _matchedRecipe > 0) then {
-    private _requiredItem = _matchedRecipe select 0;
-    private _outputItem = _matchedRecipe select 1;
-    private _FillingTime = _matchedRecipe select 2;
+player playAction "Gear";
 
-    private _playerItems = (items player) + (magazines player);
-    private _playerCount = {_x isEqualTo _requiredItem} count _playerItems;
-    private _hasAll = _playerCount > 0;
+private _outputDisplayName = getText (configFile >> "CfgWeapons" >> _outputItem >> "displayName");
+if (_outputDisplayName isEqualTo "") then {
+    _outputDisplayName = getText (configFile >> "CfgMagazines" >> _outputItem >> "displayName");
+};
+if (_outputDisplayName isEqualTo "") then {
+    _outputDisplayName = _outputItem;
+};
 
-    if (_hasAll) then {
+player setVariable [QCLASS(isFilling), true];
 
-        _FillB ctrlShow false;
-        _DrinkFSB ctrlShow false;
-        _ExitB ctrlShow false;
-
-        if (currentWeapon player isNotEqualTo "") then {
-        player action["SWITCHWEAPON",player,player,-1];
-        };
-
-        player playAction "Gear";
-
-        private _itemDisplayName = getText (configFile >> "CfgWeapons" >> _outputItem >> "displayName");
-        if (_itemDisplayName isEqualTo "") then {
-            _itemDisplayName = getText (configFile >> "CfgMagazines" >> _outputItem >> "displayName");
-        };
-
-        player setVariable [QCLASS(isFilling), true];
-
-    _FillInterrupt = (findDisplay 982380) displayAddEventHandler ["KeyDown", {
-    params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
+private _fillInterrupt = _dialog displayAddEventHandler ["KeyDown", {
+    params ["_displayOrControl", "_key"];
     if (_key isEqualTo DIK_ESCAPE) then {
-        player setVariable [QCLASS(isFilling),false];
-                [parseText "<t font='PuristaMedium' size='1'>Filling interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
-        };
+        player setVariable [QCLASS(isFilling), false];
+        [parseText "<t font='PuristaMedium' size='1'>Filling interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+    };
 }];
 
-private _text = "Filling Container...";
-private _displayedText = "";
-private _delay = _FillingTime / count _text;
+private _totalSteps = _fillingTime * 2;
+private _currentStep = 0;
 
-for "_i" from 0 to (count _text - 1) do {
-    if ((player getVariable QCLASS(isFilling)) isEqualTo false) exitWith {};
-    _displayedText = _displayedText + (_text select [_i, 1]);
-    ctrlSetText [1001, _displayedText];
-    sleep _delay;
-};
+[{
+    params ["_args", "_handle"];
+    _args params [
+        "_requiredItem",
+        "_outputItem",
+        "_dialog",
+        "_fillButton",
+        "_drinkButton",
+        "_exitButton",
+        "_fillInterrupt",
+        "_totalSteps",
+        "_currentStep",
+        "_outputDisplayName"
+    ];
 
-    if ((player getVariable QCLASS(isFilling)) isEqualTo true) then {
+    if (!(player getVariable [QCLASS(isFilling), false]) || !alive player) exitWith {
+        player setVariable [QCLASS(isFilling), nil];
+        _dialog displayRemoveEventHandler ["KeyDown", _fillInterrupt];
+        _fillButton ctrlShow true;
+        _drinkButton ctrlShow true;
+        _exitButton ctrlShow true;
+        [_handle] call CBA_fnc_removePerFrameHandler;
+    };
 
-                if (_requiredItem in items player) then {
-                    player removeItem _requiredItem;
-                };
-                if (_requiredItem in magazines player) then {
-                    player removeMagazine _requiredItem;
-                };
+    _currentStep = _currentStep + 1;
+    _args set [8, _currentStep];
+
+    private _progress = (_currentStep / _totalSteps) * 100;
+    ctrlSetText [1001, format ["Filling Container... %1%2 complete", _progress toFixed 0, "%"]];
+
+    if (_currentStep >= _totalSteps) then {
+        if (_requiredItem in items player) then {
+            player removeItem _requiredItem;
+        } else {
+            player removeMagazine _requiredItem;
+        };
 
         [player, _outputItem, true] call CBA_fnc_addItem;
 
+        ctrlSetText [1001, format ["You filled: %1...", _outputDisplayName]];
+        player setVariable [QCLASS(isFilling), nil];
+        _dialog displayRemoveEventHandler ["KeyDown", _fillInterrupt];
+        _fillButton ctrlShow true;
+        _drinkButton ctrlShow true;
+        _exitButton ctrlShow true;
 
-    _SuccessText = format ["You successfully Filled: %1...", _itemDisplayName];
-    ctrlSetText [1001, _SuccessText];
-
-    _FillB ctrlShow true;
-    _DrinkFSB ctrlShow true;
-    _ExitB ctrlShow true;
-
-            player setVariable [QCLASS(isFilling), nil]; //terminate crafting flag
-            (findDisplay 982380) displayRemoveEventHandler ["KeyDown", _FillInterrupt]; //Remove Display EH
+        [_handle] call CBA_fnc_removePerFrameHandler;
     };
-
-    } else {
-        ctrlSetText [1001, "You do not have the required Container..."];
-        _FillB ctrlShow true;
-        _DrinkFSB ctrlShow true;
-        _ExitB ctrlShow true;
-    };
-} else {
-    ctrlSetText [1001, "No matching recipe found."];
-};
+}, 0.5, [
+    _requiredItem,
+    _outputItem,
+    _dialog,
+    _fillButton,
+    _drinkButton,
+    _exitButton,
+    _fillInterrupt,
+    _totalSteps,
+    _currentStep,
+    _outputDisplayName
+]] call CBA_fnc_addPerFrameHandler;

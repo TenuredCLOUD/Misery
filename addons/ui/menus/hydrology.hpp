@@ -22,7 +22,7 @@ class CLASS(hydrology_itemSelectionTip): RscText
     y = 2.5 * GUI_GRID_H + GUI_GRID_Y;
     w = 6 * GUI_GRID_W;
     h = 2.5 * GUI_GRID_H;
-    sizeEx = 0.8 * GUI_GRID_H;
+    sizeEx = 0.7 * GUI_GRID_H;
 };
 class CLASS(hydrology_prompt): RscText
 {
@@ -52,6 +52,7 @@ class CLASS(hydrology_list_1): RscListBox
     y = 4.5 * GUI_GRID_H + GUI_GRID_Y;
     w = 16.5 * GUI_GRID_W;
     h = 14 * GUI_GRID_H;
+    sizeEx = 0.7 * GUI_GRID_H;
 };
 class CLASS(hydrology_FillContainer_Button): RscButton
 {
@@ -105,7 +106,7 @@ class CLASS(hydrology_noteBox): RscText
     y = 19.5 * GUI_GRID_H + GUI_GRID_Y;
     w = 30 * GUI_GRID_W;
     h = 4 * GUI_GRID_H;
-    sizeEx = 0.75 * GUI_GRID_H;
+    sizeEx = 0.7 * GUI_GRID_H;
 };
     };
         };
