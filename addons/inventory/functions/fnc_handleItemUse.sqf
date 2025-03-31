@@ -32,27 +32,7 @@ if (isNil "_itemData") exitWith {
     [QUOTE(COMPONENT_BEAUTIFIED), format ["No item data found for %1...", _selectedItem]] call EFUNC(common,debugMessage);
 };
 
-private _itemName = _itemData select 0;
-private _category = _itemData select 1;
-private _delay = _itemData select 2;
-private _hungerValue = _itemData select 3;
-private _thirstValue = _itemData select 4;
-private _energyDeficitValue = _itemData select 5;
-private _exposureValue = _itemData select 6;
-private _radiationValue = _itemData select 7;
-private _infectionValue = _itemData select 8;
-private _parasitesValue = _itemData select 9;
-private _toxicityValue = _itemData select 10;
-private _psychosisValue = _itemData select 11;
-private _maskBlocksUse = _itemData select 12;
-private _requiresCanOpener = _itemData select 13;
-private _removeOnUse = _itemData select 14;
-private _sound = _itemData select 15;
-private _addStatus = _itemData select 16;
-private _removeStatus = _itemData select 17;
-private _feedback = _itemData select 18;
-private _animation = _itemData select 19;
-private _code = _itemData select 20;
+_itemData params ["_itemName", "_category", "_delay", "_hungerValue", "_thirstValue", "_energyDeficitValue", "_exposureValue", "_radiationValue", "_infectionValue", "_parasitesValue", "_toxicityValue", "_psychosisValue", "_maskBlocksUse", "_requiresCanOpener", "_removeOnUse", "_sound", "_addStatus", "_removeStatus", "_feedback", "_animation", "_code"];
 
 call EFUNC(protection,totalProtection) params ["_gasMask", "_scba"];
 
