@@ -3,69 +3,69 @@ class CLASS(inventoryFramework_ui)
     idd = 982377;
     onLoad = QUOTE([] call EFUNC(vitals,status); _this call EFUNC(inventory,initInventoryDialog));
 
-        class ControlsBackground
+    class ControlsBackground
+    {
+        class CLASS(inventoryFramework_actions_background): CLASS(RscText)
         {
-            class CLASS(inventoryFramework_actions_background): CLASS(RscText)
-            {
-                idc = -1;
-                x = -26 * GUI_GRID_W + GUI_GRID_X;
-                y = -2.5 * GUI_GRID_H + GUI_GRID_Y;
-                w = 16.5 * GUI_GRID_W;
-                h = 31.5 * GUI_GRID_H;
-                colorBackground[] = {0,0,0,0.7};
-            };
-            class CLASS(inventoryFramework_vitals_background): CLASS(RscText)
-            {
-                idc = -1;
-                x = 49.5 * GUI_GRID_W + GUI_GRID_X;
-                y = -2.5 * GUI_GRID_H + GUI_GRID_Y;
-                w = 16.5 * GUI_GRID_W;
-                h = 31.5 * GUI_GRID_H;
-                colorBackground[] = {0,0,0,0.7};
-            };
-            class CLASS(inventoryFramework_prompt): RscText
-            {
-                idc = 1001;
-                text = "Actions:";
-                x = -25.5 * GUI_GRID_W + GUI_GRID_X;
-                y = -3 * GUI_GRID_H + GUI_GRID_Y;
-                w = 4 * GUI_GRID_W;
-                h = 2.5 * GUI_GRID_H;
-                sizeEx = 0.7 * GUI_GRID_H;
-            };
-            class CLASS(inventoryFramework_items_prompt): RscText
-            {
-                idc = 1024;
-                text = "Items:";
-                x = -25.5 * GUI_GRID_W + GUI_GRID_X;
-                y = 10 * GUI_GRID_H + GUI_GRID_Y;
-                w = 4 * GUI_GRID_W;
-                h = 2.5 * GUI_GRID_H;
-                sizeEx = 0.7 * GUI_GRID_H;
-            };
-            class CLASS(inventoryFramework_status_buffs): RscText
-            {
-                idc = 1008;
-                text = "Buffs:";
-                x = 50.5 * GUI_GRID_W + GUI_GRID_X;
-                y = 11.5 * GUI_GRID_H + GUI_GRID_Y;
-                w = 4 * GUI_GRID_W;
-                h = 2.5 * GUI_GRID_H;
-                sizeEx = 0.7 * GUI_GRID_H;
-            };
-            class CLASS(inventoryFramework_status_ailments): RscText
-            {
-                idc = 1007;
-                text = "Ailments:";
-                x = 58.5 * GUI_GRID_W + GUI_GRID_X;
-                y = 11.5 * GUI_GRID_H + GUI_GRID_Y;
-                w = 4.5 * GUI_GRID_W;
-                h = 2.5 * GUI_GRID_H;
-                sizeEx = 0.7 * GUI_GRID_H;
-            };
+            idc = -1;
+            x = -26 * GUI_GRID_W + GUI_GRID_X;
+            y = -2.5 * GUI_GRID_H + GUI_GRID_Y;
+            w = 16.5 * GUI_GRID_W;
+            h = 31.5 * GUI_GRID_H;
+            colorBackground[] = {0,0,0,0.7};
         };
-        class Controls
+        class CLASS(inventoryFramework_vitals_background): CLASS(RscText)
         {
+            idc = -1;
+            x = 49.5 * GUI_GRID_W + GUI_GRID_X;
+            y = -2.5 * GUI_GRID_H + GUI_GRID_Y;
+            w = 16.5 * GUI_GRID_W;
+            h = 31.5 * GUI_GRID_H;
+            colorBackground[] = {0,0,0,0.7};
+        };
+        class CLASS(inventoryFramework_prompt): RscText
+        {
+            idc = 1001;
+            text = "Actions:";
+            x = -25.5 * GUI_GRID_W + GUI_GRID_X;
+            y = -3 * GUI_GRID_H + GUI_GRID_Y;
+            w = 4 * GUI_GRID_W;
+            h = 2.5 * GUI_GRID_H;
+            sizeEx = 0.7 * GUI_GRID_H;
+        };
+        class CLASS(inventoryFramework_items_prompt): RscText
+        {
+            idc = 1024;
+            text = "Items:";
+            x = -25.5 * GUI_GRID_W + GUI_GRID_X;
+            y = 10 * GUI_GRID_H + GUI_GRID_Y;
+            w = 4 * GUI_GRID_W;
+            h = 2.5 * GUI_GRID_H;
+            sizeEx = 0.7 * GUI_GRID_H;
+        };
+        class CLASS(inventoryFramework_status_buffs): RscText
+        {
+            idc = 1008;
+            text = "Buffs:";
+            x = 50.5 * GUI_GRID_W + GUI_GRID_X;
+            y = 11.5 * GUI_GRID_H + GUI_GRID_Y;
+            w = 4 * GUI_GRID_W;
+            h = 2.5 * GUI_GRID_H;
+            sizeEx = 0.7 * GUI_GRID_H;
+        };
+        class CLASS(inventoryFramework_status_ailments): RscText
+        {
+            idc = 1007;
+            text = "Ailments:";
+            x = 58.5 * GUI_GRID_W + GUI_GRID_X;
+            y = 11.5 * GUI_GRID_H + GUI_GRID_Y;
+            w = 4.5 * GUI_GRID_W;
+            h = 2.5 * GUI_GRID_H;
+            sizeEx = 0.7 * GUI_GRID_H;
+        };
+    };
+    class Controls
+    {
         class CLASS(inventoryFramework_actionList): RscListBox
         {
             idc = 1500;
@@ -109,17 +109,17 @@ class CLASS(inventoryFramework_ui)
         };
         class CLASS(inventoryFramework_itemsSelection): RscButton
         {
-	    idc = 1601;
-        text = "Use";
-	    x = -17 * GUI_GRID_W + GUI_GRID_X;
-	    y = 23.5 * GUI_GRID_H + GUI_GRID_Y;
-	    w = 7 * GUI_GRID_W;
-	    h = 1.5 * GUI_GRID_H;
-	    sizeEx = 0.7 * GUI_GRID_H;
-        colorBackground[] = {0,0,0,0.7};
-        colorFocused[] = {0.5,0.5,0.5,0.7};
-        colorActive[] = {0.5,0.5,0.5,0.7};
-        onButtonClick = QUOTE([ctrlParent (_this select 0)] call EFUNC(inventory,handleItemUse));
+            idc = 1601;
+            text = "Use";
+            x = -17 * GUI_GRID_W + GUI_GRID_X;
+            y = 23.5 * GUI_GRID_H + GUI_GRID_Y;
+            w = 7 * GUI_GRID_W;
+            h = 1.5 * GUI_GRID_H;
+            sizeEx = 0.7 * GUI_GRID_H;
+            colorBackground[] = {0,0,0,0.7};
+            colorFocused[] = {0.5,0.5,0.5,0.7};
+            colorActive[] = {0.5,0.5,0.5,0.7};
+            onButtonClick = QUOTE([ctrlParent (_this select 0)] call EFUNC(inventory,handleItemUse));
         };
         class CLASS(inventoryFramework_status_health): RscText
         {
