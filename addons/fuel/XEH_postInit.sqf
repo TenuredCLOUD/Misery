@@ -58,7 +58,7 @@ if (_action isEqualTo localize "STR_MISERY_DUMPOUTFUELDIESEL") exitWith {
         [QEGVAR(common,tileText), _dieselJerryCanDumpSuccessStr] call CBA_fnc_localEvent;
         player removeItem QCLASS(diesel);
         player addItem QCLASS(dieselJerryCan_Empty);
-    };`
+    };
 };
 
 if (_action isEqualTo localize "STR_MISERY_DUMPOUTFUELPETROL") exitWith {
