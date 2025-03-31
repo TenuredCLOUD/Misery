@@ -65,60 +65,47 @@ if (_animation isNotEqualTo "") then {
 
 [_dialog, lbCurSel (_dialog displayCtrl 2100)] call FUNC(populateItemsList);
 
-if (_delay > 0) then {
-    [
-        {
-            params ["_args"];
-            _args params [
-                "_itemName", "_hungerValue", "_thirstValue", "_energyDeficitValue", "_exposureValue", "_radiationValue",
-                "_infectionValue", "_parasitesValue", "_toxicityValue", "_psychosisValue", "_addStatus", "_removeStatus",
-                "_removeOnUse", "_code", "_dialog"
-            ];
+[{
+    params ["_args"];
+    _args params [
+        "_itemName", "_hungerValue", "_thirstValue", "_energyDeficitValue", "_exposureValue", "_radiationValue",
+        "_infectionValue", "_parasitesValue", "_toxicityValue", "_psychosisValue", "_addStatus", "_removeStatus",
+        "_removeOnUse", "_code", "_dialog"
+    ];
 
-            call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "", "_exposure", "_radiation", "_infection", "_parasites", "_toxicity", "_psychosis", "_buffs", "_ailments"];
-
-            if (_hungerValue isNotEqualTo 0) then {player setVariable [QEGVAR(survival,hunger), (_hunger + _hungerValue / 100)]};
-            if (_thirstValue isNotEqualTo 0) then {player setVariable [QEGVAR(survival,thirst), (_thirst + _thirstValue / 100)]};
-            if (_energyDeficitValue isNotEqualTo 0) then {player setVariable [QEGVAR(survival,energyDeficit), (_energyDeficit + _energyDeficitValue / 100)]};
-            if (_exposureValue isNotEqualTo 0) then {player setVariable [QEGVAR(temperature,exposure), (_exposure + _exposureValue / 100)]};
-            if (_radiationValue isNotEqualTo 0) then {player setVariable [QEGVAR(survival,radiation), (_radiation + _radiationValue / 100)]};
-            if (_infectionValue isNotEqualTo 0) then {player setVariable [QEGVAR(survival,infection), (_infection + _infectionValue / 100)]};
-            if (_parasitesValue isNotEqualTo 0) then {player setVariable [QEGVAR(survival,parasites), (_parasites + _parasitesValue / 100)]};
-            if (_toxicityValue isNotEqualTo 0) then {player setVariable [QEGVAR(survival,toxicity), (_toxicity + _toxicityValue / 100)]};
-            if (_psychosisValue isNotEqualTo 0) then {player setVariable [QEGVAR(psychosis,state), (_psychosis + _psychosisValue / 100)]};
-
-            {[_x select 0, _x select 1, _x select 2, _x select 3] call EFUNC(vitals,addBuffOrAilment)} forEach _addStatus;
-            {
-                private _type = _x select 0;
-                private _name = _x select 1;
-                private _arrayName = ["ailments", "buffs"] select (_type isEqualTo "buff");
-                private _array = player getVariable [_arrayName, []];
-                private _index = _array findIf {(_x select 0) isEqualTo _name};
-                if (_index isNotEqualTo -1) then {[_type, str _index] call EFUNC(vitals,removeBuffOrAilment)};
-            } forEach _removeStatus;
-
-            if (_code isNotEqualTo "") then {call compile _code};
-        },
-        [_itemName, _hungerValue, _thirstValue, _energyDeficitValue, _exposureValue, _radiationValue, _infectionValue, _parasitesValue, _toxicityValue, _psychosisValue, _addStatus, _removeStatus, _removeOnUse, _code, _dialog],
-        _delay
-    ] call CBA_fnc_waitAndExecute;
-} else {
     call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "", "_exposure", "_radiation", "_infection", "_parasites", "_toxicity", "_psychosis", "_buffs", "_ailments"];
 
-    if (_hungerValue isNotEqualTo 0) then {player setVariable [QEGVAR(survival,hunger), (_hunger + _hungerValue / 100)]};
-    if (_thirstValue isNotEqualTo 0) then {player setVariable [QEGVAR(survival,thirst), (_thirst + _thirstValue / 100)]};
-    if (_energyDeficitValue isNotEqualTo 0) then {player setVariable [QEGVAR(survival,energyDeficit), (_energyDeficit + _energyDeficitValue / 100)]};
-    if (_exposureValue isNotEqualTo 0) then {player setVariable [QEGVAR(temperature,exposure), (_exposure + _exposureValue / 100)]};
-    if (_radiationValue isNotEqualTo 0) then {player setVariable [QEGVAR(survival,radiation), (_radiation + _radiationValue / 100)]};
-    if (_infectionValue isNotEqualTo 0) then {player setVariable [QEGVAR(survival,infection), (_infection + _infectionValue / 100)]};
-    if (_parasitesValue isNotEqualTo 0) then {player setVariable [QEGVAR(survival,parasites), (_parasites + _parasitesValue / 100)]};
-    if (_toxicityValue isNotEqualTo 0) then {player setVariable [QEGVAR(survival,toxicity), (_toxicity + _toxicityValue / 100)]};
-    if (_psychosisValue isNotEqualTo 0) then {player setVariable [QEGVAR(psychosis,state), (_psychosis + _psychosisValue / 100)]};
+    if (_hungerValue isNotEqualTo 0) then {
+        player setVariable [QEGVAR(survival,hunger), (_hunger + _hungerValue / 100)];
+    };
+    if (_thirstValue isNotEqualTo 0) then {
+        player setVariable [QEGVAR(survival,thirst), (_thirst + _thirstValue / 100)];
+    };
+    if (_energyDeficitValue isNotEqualTo 0) then {
+        player setVariable [QEGVAR(survival,energyDeficit), (_energyDeficit + _energyDeficitValue / 100)];
+    };
+    if (_exposureValue isNotEqualTo 0) then {
+        player setVariable [QEGVAR(temperature,exposure), (_exposure + _exposureValue / 100)];
+    };
+    if (_radiationValue isNotEqualTo 0) then {
+        player setVariable [QEGVAR(survival,radiation), (_radiation + _radiationValue / 100)];
+    };
+    if (_infectionValue isNotEqualTo 0) then {
+        player setVariable [QEGVAR(survival,infection), (_infection + _infectionValue / 100)];
+    };
+    if (_parasitesValue isNotEqualTo 0) then {
+        player setVariable [QEGVAR(survival,parasites), (_parasites + _parasitesValue / 100)];
+    };
+    if (_toxicityValue isNotEqualTo 0) then {
+        player setVariable [QEGVAR(survival,toxicity), (_toxicity + _toxicityValue / 100)];
+    };
+    if (_psychosisValue isNotEqualTo 0) then {
+        player setVariable [QEGVAR(psychosis,state), (_psychosis + _psychosisValue / 100)];
+    };
 
     {[_x select 0, _x select 1, _x select 2, _x select 3] call EFUNC(vitals,addBuffOrAilment)} forEach _addStatus;
     {
-        private _type = _x select 0;
-        private _name = _x select 1;
+        _x params ["_type", "_name"];
         private _arrayName = ["ailments", "buffs"] select (_type isEqualTo "buff");
         private _array = player getVariable [_arrayName, []];
         private _index = _array findIf {(_x select 0) isEqualTo _name};
@@ -126,4 +113,4 @@ if (_delay > 0) then {
     } forEach _removeStatus;
 
     if (_code isNotEqualTo "") then {call compile _code};
-};
+}, [_itemName, _hungerValue, _thirstValue, _energyDeficitValue, _exposureValue, _radiationValue, _infectionValue, _parasitesValue, _toxicityValue, _psychosisValue, _addStatus, _removeStatus, _removeOnUse, _code, _dialog], _delay] call CBA_fnc_waitAndExecute;
