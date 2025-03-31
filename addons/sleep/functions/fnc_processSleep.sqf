@@ -16,7 +16,7 @@
 
 // Early exit if sleep is blocked.
 if (EGVAR(psychosis,enabled) && EGVAR(psychosis,sleepBlocked)) exitWith {
-    titleText [format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_CANTSLEEPFEAR"], "PLAIN DOWN", -1, true, true];
+    titleText [format ["<t font='PuristaMedium' size='0.7'>%1</t>", localize "STR_MISERY_CANTSLEEPFEAR"], "PLAIN DOWN", -1, true, true];
     [QUOTE(COMPONENT_BEAUTIFIED), "Sleep is blocked by fear."] call EFUNC(common,debugMessage);
 };
 
@@ -24,11 +24,11 @@ call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDefi
 call FUNC(hourSelected) params ["_selectedHour"];
 
 if (_selectedHour isEqualTo 0) exitWith {
-    titleText [format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_SLEEPNOHOURSELECT"], "PLAIN DOWN", -1, true, true];
+    titleText [format ["<t font='PuristaMedium' size='0.7'>%1</t>", localize "STR_MISERY_SLEEPNOHOURSELECT"], "PLAIN DOWN", -1, true, true];
 };
 
 if (_energyDeficit < 0.15) exitWith {
-    titleText [format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_SLEEPNOTTIRED"], "PLAIN DOWN", -1, true, true];
+    titleText [format ["<t font='PuristaMedium' size='0.7'>%1</t>", localize "STR_MISERY_SLEEPNOTTIRED"], "PLAIN DOWN", -1, true, true];
 };
 
 if (animationState player isNotEqualTo "amovpsitmstpsnonwnondnon_ground") then {
@@ -44,7 +44,7 @@ cutText ["", "BLACK OUT", 2];
 }, _selectedHour, 3] call CBA_fnc_waitAndExecute;
 
 [{
-    titleText [format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_SLEPTFORHOWLONG", _this]], "PLAIN DOWN", -1, true, true];
+    titleText [format ["<t font='PuristaMedium' size='0.7'>%1</t>", format [localize "STR_MISERY_SLEPTFORHOWLONG", _this]], "PLAIN DOWN", -1, true, true];
     player setFatigue 1;
 }, _selectedHour, 6] call CBA_fnc_waitAndExecute;
 

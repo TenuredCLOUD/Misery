@@ -20,7 +20,7 @@ if (!hasInterface) exitWith {};
 
   if (alive player) exitWith {
 
-if !(EGVAR(common,checkMultiplayer)) then {
+if !(isMultiplayer) then {
   player setVariable [QEGVAR(survival,energyDeficit), (_MSleepiness - 10)];
 };
 

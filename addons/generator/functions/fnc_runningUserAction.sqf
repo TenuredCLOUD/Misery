@@ -19,7 +19,7 @@ _Generator = _this select 0;
 _GeneratorType = typeOf _Generator;
 
 if (_Generator getVariable [QCLASS(generatorFuelLevel), 100] <= 0) exitWith {
-private _generatorNoFuel = format ["<t font='PuristaMedium'>%1</t>", format ["This Generator has no fuel..."]];
+private _generatorNoFuel = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["This Generator has no fuel..."]];
 [parseText _generatorNoFuel, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 };
 

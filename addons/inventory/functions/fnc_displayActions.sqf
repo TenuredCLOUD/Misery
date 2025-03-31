@@ -35,39 +35,6 @@ if (EGVAR(actions,guiActionsMode) isEqualTo "") then{
     if ((count EGVAR(actions,guiCustomActions)) > 0) then { _allActions = _allActions + EGVAR(actions,guiCustomActions)};
 };
 
-//Foraging:
-if (EGVAR(actions,guiActionsMode)==localize "STR_MISERY_FORAGE") then {
-    _allActions=[
-        [localize "STR_MISERY_FORAGE_DIGFORWORMS",localize "STR_MISERY_FORAGE_DIGFORWORMS"],
-        [localize "STR_MISERY_FORAGE_SEARCHFORTINDER",localize "STR_MISERY_FORAGE_SEARCHFORTINDER"],
-        [localize "STR_MISERY_CANCEL",localize "STR_MISERY_CANCEL"]
-    ];
-};
-
-//Fishing:
-if(EGVAR(actions,guiActionsMode) isEqualTo localize "STR_MISERY_STARTFISHING")then{
-    _allActions=[
-        [localize "STR_MISERY_STARTFISHINGACT", localize "STR_MISERY_STARTFISHINGACT"],
-        [localize "STR_MISERY_STARTFISHINGREQUIRMENTS", localize "STR_MISERY_STARTFISHINGREQUIRMENTS"],
-        [localize "STR_MISERY_CANCEL",localize "STR_MISERY_CANCEL"]
-    ];
-};
-
-//Cooking / Fire usage:
-if (EGVAR(actions,guiActionsMode) isEqualTo localize "STR_MISERY_USEFIRE" && !(EGVAR(common,ace))) then {
-    _allActions=[
-        [localize "STR_MISERY_USEFIRE_COOK",localize "STR_MISERY_USEFIRE_COOK"],
-        [localize "STR_MISERY_CANCEL",localize "STR_MISERY_CANCEL"]
-    ];
-};
-if (EGVAR(actions,guiActionsMode) isEqualTo localize "STR_MISERY_USEFIRE" && (EGVAR(common,ace))) then {
-    _allActions=[
-        [localize "STR_MISERY_USEFIRE_COOK",localize "STR_MISERY_USEFIRE_COOK"],
-        ["Cauterize wounds","Cauterize wounds"],
-        [localize "STR_MISERY_CANCEL",localize "STR_MISERY_CANCEL"]
-    ];
-};
-
 //Anvil usage:
 if(EGVAR(actions,guiActionsMode) isEqualTo localize "STR_MISERY_USEANVIL")then{
     if (EGVAR(common,iBuild)) then {

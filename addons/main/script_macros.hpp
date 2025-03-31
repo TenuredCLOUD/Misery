@@ -36,38 +36,47 @@
 #define MACRO_RADIATION_NUTRITIONLOSS(arg) ((arg) / 100) / 10
 #define MACRO_RADIATION_STAMINALOSS(arg) ((arg) / 10) / 10
 
-//IMS animations for compat:
+// IMS animations for compat:
 #define MACRO_ANIMATION_IMS_SPRINT "am_kulak_sprintf", "melee_sprintf", "melee_sprintfl","melee_sprintfr"
 
 // UI Macros
-#define CT_STATIC   0
-//#define ST_PICTURE  0x30
-//#define ST_LEFT     0x00
-#define ST_LEFT        0
-#define ST_RIGHT    1
-#define ST_CENTER    2
-#define ST_UP        3
-#define ST_DOWN        4
-#define ST_VCENTER    5
-#define ST_SINGLE    0
-#define ST_MULTI    16
+#define CT_STATIC 0 // Static text/picture
+#define CT_BUTTON 1 // Button
+#define CT_EDIT 2 // Edit box
+#define CT_COMBO 4 // Combo box
+#define CT_LISTBOX 5 // List box
+#define CT_PROGRESS 8 // Progress bar
+#define CT_ACTIVETEXT 11 // Clickable text
+#define CT_STRUCTURED_TEXT 13 // Structured text
+#define CT_SHORTCUTBUTTON 16 // Button with shortcut
+#define CT_CHECKBOX 77 // Checkbox
+
+#define ST_LEFT 0
+#define ST_RIGHT 1
+#define ST_CENTER 2
+#define ST_UP 3
+#define ST_DOWN 4
+#define ST_VCENTER 5
+#define ST_SINGLE 0
+#define ST_MULTI 16
 #define ST_TITLE_BAR 32
-#define ST_PICTURE    48
-#define ST_FRAME    64
+#define ST_PICTURE 48
+#define ST_FRAME 64
 #define ST_HUD_BACKGROUND 128
 #define ST_TILE_PICTURE 144
 #define ST_WITH_RECT 160
-#define ST_LINE    176
-#define ST_SHADOW    256
-#define ST_NO_RECT    512
+#define ST_LINE 176
+#define ST_SHADOW 256
+#define ST_NO_RECT 512
+#define ST_HORIZONTAL 0
 
 // Menu Dialog
-#define GUI_GRID_X    (0)
-#define GUI_GRID_Y    (0)
-#define GUI_GRID_W    (0.025)
-#define GUI_GRID_H    (0.04)
-#define GUI_GRID_WAbs    (1)
-#define GUI_GRID_HAbs    (1)
+#define GUI_GRID_X (0)
+#define GUI_GRID_Y (0)
+#define GUI_GRID_W (0.025)
+#define GUI_GRID_H (0.04)
+#define GUI_GRID_WAbs (1)
+#define GUI_GRID_HAbs (1)
 
 #define UI_MACRO_X 0.062
 #define UI_MACRO_Y 0
@@ -123,7 +132,6 @@
 #define UI_MACRO_STYLE 2 + 12
 #define UI_MACRO_TABFX (UI_MACRO_COL + (UI_MACRO_COLINC * 1.48))
 #define UI_MACRO_TABFY UI_MACRO_ROW + (UI_MACRO_ROWINC * 13)
-//#define UI_MACRO_TABFY UI_MACRO_ROW + (UI_MACRO_ROWINC * 12.5)
 #define UI_MACRO_TABFW (UI_MACRO_BUTTON_W * 0.32)
 #define UI_MACRO_TABFH (UI_MACRO_BUTTON_H * 0.8)
 #define UI_MACRO_TABFSPACE (UI_MACRO_BUTTON_W * 0.093)
