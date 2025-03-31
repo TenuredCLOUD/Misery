@@ -1,7 +1,7 @@
 class CLASS(refuelShop_ui)
 {
     idd = 982384;
-    onLoad = QUOTE([] call EFUNC(refuel,refuelListed); [] call EFUNC(refuel,icon));
+    onLoad = QUOTE([] call EFUNC(refuel,listed); [] call EFUNC(refuel,icon));
 
 class ControlsBackground
 {
@@ -50,6 +50,7 @@ class CLASS(refuelShop_list): RscListBox
     y = 2.5 * GUI_GRID_H + GUI_GRID_Y;
     w = 20.5 * GUI_GRID_W;
     h = 12.5 * GUI_GRID_H;
+    sizeEx = 0.7 * GUI_GRID_H;
 };
 class CLASS(refuelShop_purchase): RscButton
 {
@@ -62,7 +63,7 @@ class CLASS(refuelShop_purchase): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick ="[] execVM '\z\misery\addons\refuel\fucntions\fnc_ProcessPurchase.sqf';";
+    onButtonClick = QUOTE([] call EFUNC(refuel,process));
 };
 class CLASS(refuelShop_exit): RscButton
 {
@@ -75,7 +76,7 @@ class CLASS(refuelShop_exit): RscButton
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
     colorActive[] = {0.5, 0.5, 0.5, 0.7};
-    onButtonClick = "closeDialog 2;";
+    onButtonClick = QUOTE([] call EFUNC(refuel,exit));
 };
 class CLASS(refuelShop_infoBox): RscText
 {

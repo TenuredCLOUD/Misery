@@ -15,44 +15,36 @@
  * Public: No
 */
 
-waitUntil {!isNull findDisplay 982384};
-
-if (!isNull findDisplay 982384) exitWith {
-
-    private ["_list","_PurchaseB","_Vehiclename","_fuelCost","_Found","_totalLiters","_index","_fuelTypeIndex"];
-
-    _list = findDisplay 982384 displayCtrl 1500;
-    _PurchaseB = findDisplay 982384 displayCtrl 1600;
+[{!isNull findDisplay 982384}, {
+    private _list = findDisplay 982384 displayCtrl 1500;
+    private _purchaseButton = findDisplay 982384 displayCtrl 1600;
 
     if (EGVAR(common,targetVehicleType) isEqualTo "") exitWith {
-        _PurchaseB ctrlShow false;
+        _purchaseButton ctrlShow false;
     };
 
-    _Vehiclename = getText (configFile >> "CfgVehicles" >> EGVAR(common,targetVehicleType) >> "displayName");
+    private _vehicleName = getText (configFile >> "CfgVehicles" >> EGVAR(common,targetVehicleType) >> "displayName");
 
     lbClear _list;
 
-    _fuelCost = 0;
-    _Found = false;
-    _totalLiters = 0;
+    private _fuelCost = 0;
+    private _found = false;
+    private _totalLiters = 0;
 
     {
         if ((_x select 0) isEqualTo EGVAR(common,targetVehicleType)) then {
-            _Array=_x;
-            _Found = true;
-            _fuelTypeIndex = _x select 1;
-
-            _fuelCost = (Misery_Veh_FuelCosts select 0) select _fuelTypeIndex;
-
+            _found = true;
+            private _fuelTypeIndex = _x select 1;
+            _fuelCost = GVAR(fuelCosts) select _fuelTypeIndex;
             _totalLiters = _x select 2;
         };
-    } forEach Misery_Veh_Type;
+    } forEach EGVAR(common,vehicleData);
 
-    if !(_Found) exitWith {};
+    if !(_found) exitWith {};
 
-    _index = _list lbAdd format ["Refuel (%1/L) %2L", _fuelCost,_totalLiters];
-};
+    private _index = _list lbAdd format ["Refuel (%1/L) %2L", _fuelCost, _totalLiters];
 
+}, []] call CBA_fnc_waitUntilAndExecute;
 
 
 

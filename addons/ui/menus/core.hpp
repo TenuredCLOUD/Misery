@@ -17,24 +17,17 @@ class CLASS(BackGround)
 
 class CLASS(RscProgress)
 {
-    onLoad = QUOTE(_this spawn { for '_i' from 0 to 1 step 0.01 do { (_this # 0) progresssetPosition _i; sleep 0.01 } });
     deletable = 0;
     fade = 0;
     access = 0;
-    type = QUOTE(CT_PROGRESS);
-    style = QUOTE(ST_HORIZONTAL);
-    colorFrame[] = {0,0,0,0};
-    colorBar[] =
-    {
-        "(profilenamespace getVariable ['GUI_BCG_RGB_R',0.13])",
-        "(profilenamespace getVariable ['GUI_BCG_RGB_G',0.54])",
-        "(profilenamespace getVariable ['GUI_BCG_RGB_B',0.21])",
-        "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.8])"
-    };
-    x = 0.344;
-    y = 0.619;
-    w = 0.313726;
-    h = 0.0261438;
+    type = CT_PROGRESS;
+    style = ST_HORIZONTAL;
+    colorFrame[] = {1,1,1,0.8};
+    colorBar[] = {1,1,1,1};
+    colorBackground[] = {0,0,0,0.3};
+    colorText[] = {1,1,1,0};
+    font = UI_MACRO_FONT;
+    sizeEx = UI_MACRO_TEXTSIZE;
     shadow = 2;
     texture = "#(argb,8,8,3)color(1,1,1,1)";
 };
