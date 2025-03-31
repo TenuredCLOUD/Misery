@@ -7,9 +7,14 @@ GVAR(worldRadius) = sqrt 2 * GVAR(worldAxis);
 
 //If GRAD persistence is active, push Remnant ODRA object holders to blacklister, so they won't save / reload (This will execute only once)
 if (isServer) then {
-if (GVAR(remnant)) then {
-    if (!isNil "grad_persistence_blacklist") then {
-        private _RemnantODRA = [
+    if (isClass (missionConfigFile >> "CfgMisery_VehicleData")) then {
+    [] call FUNC(parseVehicleData);
+    } else {
+    [QUOTE(COMPONENT_BEAUTIFIED), "CfgMisery_VehicleData class not found in description.ext, skipping data parser..."] call EFUNC(common,debugMessage);
+    };
+        if (GVAR(remnant)) then {
+            if (!isNil "grad_persistence_blacklist") then {
+            private _RemnantODRA = [
             "Sign_Sphere10cm_F",
             "Land_HandyCam_F",
             "Reflector_Cone_01_narrow_blue_F",
@@ -20,13 +25,12 @@ if (GVAR(remnant)) then {
             "odra_lamp_p",
             "odra_l_idle",
             "odra"
-        ];
-
-        {
+            ];
+            {
             if ((grad_persistence_blacklist find (toLower _x) isEqualTo -1) && (grad_persistence_blacklist find (toUpper _x) isEqualTo -1)) then {
                 [_x] call grad_persistence_fnc_blacklistClasses;
             };
-        } forEach _RemnantODRA;
+            } forEach _RemnantODRA;
         };
     };
 };
@@ -52,6 +56,20 @@ GVAR(defaultLoadout) = [[[],[],[],[],[],[],"","",[],["ItemMap","","","ItemCompas
 [QGVAR(tileText), {
     params ["_text"];
     [parseText _text, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(inventoryTile), {
+    params ["_text", ["_time", 10]];
+    private _display = findDisplay 982377;
+    if (isNull _display) exitWith {};
+    private _noteBox = _display displayCtrl 1022;
+    _noteBox ctrlSetStructuredText parseText _text;
+
+    [{
+        params ["_display", "_noteBox"];
+        if (isNull _display) exitWith {};
+        _noteBox ctrlSetStructuredText parseText "";
+    }, [_display, _noteBox], _time] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(exitGui), {

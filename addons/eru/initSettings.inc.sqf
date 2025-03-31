@@ -3,20 +3,20 @@
 ["Misery", QGVAR(power), "Turn on/off ERU", {
     private _formattedText;
     if (QCLASS(eru_Off) in magazines player) then {
-        private _eruTurnOn = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONGEIGERBOOTUP"];
+        private _eruTurnOn = format ["<t font='PuristaMedium' size='0.7'>%1</t>", localize "STR_MISERY_TURNONGEIGERBOOTUP"];
         [parseText _eruTurnOn, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
         playSound3D [QPATHTOEF(audio,sounds\eru\PowerUpBeep.ogg), player, false, getPosASL player, 4, 1, 10];
         player removeMagazine 'Misery_ERU_off';
         player addMagazine 'Misery_ERU';
         } else {
         if (QCLASS(eru_On) in magazines player) then {
-            private _eruTurnOff = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONGEIGERTURNOFF"];
+            private _eruTurnOff = format ["<t font='PuristaMedium' size='0.7'>%1</t>", localize "STR_MISERY_TURNONGEIGERTURNOFF"];
             [parseText _eruTurnOff, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
             playSound3D [QPATHTOEF(audio,sounds\eru\PowerDownBeep.ogg), player, false, getPosASL player, 4, 1, 10];
             player removeMagazine 'Misery_ERU';
             player addMagazine 'Misery_ERU_off';
         } else {
-            private _eruNoItem = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONGEIGERNOITEM"];
+            private _eruNoItem = format ["<t font='PuristaMedium' size='0.7'>%1</t>", localize "STR_MISERY_TURNONGEIGERNOITEM"];
             [parseText _eruNoItem, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
         };
     };

@@ -50,7 +50,7 @@ if (_hasOn) then {
 };
 
 if !(_hasOn && _hasOff) then {
-    _text = format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_TURNONHEADLAMPNOITEM"];
+    _text = format ["<t font='PuristaMedium' size='0.7'>%1</t>", localize "STR_MISERY_TURNONHEADLAMPNOITEM"];
 };
 
 [parseText _text, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;

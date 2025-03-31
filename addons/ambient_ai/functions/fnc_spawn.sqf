@@ -175,7 +175,7 @@ for "_i" from 1 to _numEntities do {
     _unit setSkill ["aimingShake", GVAR(shake)];
     _unit setSkill ["aimingSpeed", GVAR(speed)];
 
-    if !(EGVAR(common,checkMultiplayer)) then {
+    if !(isMultiplayer) then {
         if (side _unit isEqualTo side player) then {
             private _equipmentMass = loadAbs _unit / getNumber (configFile >> "CfgInventoryGlobalVariable" >> "maxSoldierLoad");
             private _recruitmentCost = 500 * round(_equipmentMass * 100);
@@ -199,10 +199,10 @@ for "_i" from 1 to _numEntities do {
                         _caller setVariable [QCLASS(currency), _playerMoney - _recruitmentCost];
                         [_target] joinSilent _caller;
                         [_target,_actionId] call BIS_fnc_holdActionRemove;
-                        private _recruitSuccess = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_SUCCESS", _Unitidentity, EGVAR(money,symbol), [_recruitmentCost] call Misery_fnc_formatNumber]];
+                        private _recruitSuccess = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_SUCCESS", _Unitidentity, EGVAR(money,symbol), [_recruitmentCost] call Misery_fnc_formatNumber]];
                         [QEGVAR(common,tileText), _recruitSuccess] call CBA_fnc_localEvent;
                     } else {
-                        private _recruitFail = format ["<t font='PuristaMedium'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_FAIL",_Unitidentity]];
+                        private _recruitFail = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format [localize "STR_MISERY_RECRUITUNIT_FAIL",_Unitidentity]];
                         [QEGVAR(common,tileText), _recruitFail] call CBA_fnc_localEvent;
                     };
                 },

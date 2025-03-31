@@ -1187,7 +1187,7 @@ class CfgWeapons {
         };
     };
 
-    class CLASS(jetFuelJerryCan_Empty): CLASS(ItemCore) {
+    class CLASS(jetFuelEmpty): CLASS(ItemCore) {
         displayName = "$STR_MISERY_EMPTYJET_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_EMPTYJET_DESCRIPTION";
         picture = QPATHTOF(data\icons\CanisterJetFuel.paa);
@@ -1200,7 +1200,7 @@ class CfgWeapons {
         };
     };
 
-    class CLASS(dieselJerryCan_Empty): CLASS(ItemCore) {
+    class CLASS(dieselEmpty): CLASS(ItemCore) {
         displayName = "$STR_MISERY_EMPTYDIESEL_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_EMPTYDIESEL_DESCRIPTION";
         picture = QPATHTOF(data\icons\CanisterDiesel.paa);
@@ -1213,7 +1213,7 @@ class CfgWeapons {
         };
     };
 
-    class CLASS(petrolJerryCan_Empty): CLASS(ItemCore) {
+    class CLASS(petrolEmpty): CLASS(ItemCore) {
         displayName = "$STR_MISERY_EMPTYPETROL_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_EMPTYPETROL_DESCRIPTION";
         picture = QPATHTOF(data\icons\CanisterPetrol.paa);
