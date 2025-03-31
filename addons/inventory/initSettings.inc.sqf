@@ -6,12 +6,3 @@
     "",
     1
 ] call CBA_fnc_addSetting;
-
-[
-    QGVAR(hudLayout),
-    "LIST",
-    ["HUD layout", "(Integer style or Progress bar style)"],
-    ["Misery","Client HUD settings"],
-    [[1, 0], ["Integers","Bar"], 1],
-    2
-] call CBA_fnc_addSetting;

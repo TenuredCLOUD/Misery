@@ -58,6 +58,20 @@ GVAR(defaultLoadout) = [[[],[],[],[],[],[],"","",[],["ItemMap","","","ItemCompas
     [parseText _text, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(inventoryTile), {
+    params ["_text", ["_time", 10]];
+    private _display = findDisplay 982377;
+    if (isNull _display) exitWith {};
+    private _noteBox = _display displayCtrl 1022;
+    _noteBox ctrlSetStructuredText parseText _text;
+
+    [{
+        params ["_display", "_noteBox"];
+        if (isNull _display) exitWith {};
+        _noteBox ctrlSetStructuredText parseText "";
+    }, [_display, _noteBox], _time] call CBA_fnc_waitAndExecute;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(exitGui), {
     (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui)) closeDisplay 1;
     (findDisplay 602) closeDisplay 2;

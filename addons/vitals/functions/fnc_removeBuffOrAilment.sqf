@@ -1,27 +1,26 @@
 #include "..\script_component.hpp"
- /*
+/*
  * Author: TenuredCLOUD
- * 0: ailment or buff <STRING>
- * 1: name of ailment or buff <STRING>
+ * Remove Buff or Ailment
  *
  * Arguments:
- * None
+ * 0: Type <STRING> ("buff" or "ailment")
+ * 1: Name <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * ["ailment","name of ailment"] call misery_vitals_fnc_RemoveBuffOrAilment;
- *
-*/
+ * ["buff", "Near Fire"] call misery_vitals_fnc_removeBuffOrAilment;
+ */
 
-params ["_type", "_index"];
+params ["_type", "_name"];
 
-_index = parseNumber _index;  // Ensure _index is a number
 private _arrayName = ["ailments", "buffs"] select (_type isEqualTo "buff");
 private _array = player getVariable [_arrayName, []];
+private _index = _array findIf {(_x select 0) isEqualTo _name};
 
-if (_index >= 0 && _index < count _array) then {
+if (_index isNotEqualTo -1) then {
     _array deleteAt _index;
     player setVariable [_arrayName, _array];
 };

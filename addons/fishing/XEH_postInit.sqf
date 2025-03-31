@@ -32,7 +32,7 @@ if (GVAR(enabled)) then {
         localize "STR_MISERY_STARTFISHINGREQUIRMENTS",
         {player getVariable [QEGVAR(actions,currentParentID), ""] isEqualTo "fishing_menu"},
         {
-            private _fishingItemsReqStr =format ["<t font='PuristaMedium'>%1</t>", localize "STR_MISERY_STARTFISHINGREQUIRMENTS_LISTED"];
+            private _fishingItemsReqStr =format ["<t font='PuristaMedium' size='0.7'>%1</t>", localize "STR_MISERY_STARTFISHINGREQUIRMENTS_LISTED"];
             [QEGVAR(common,tileText), _fishingItemsReqStr] call CBA_fnc_localEvent;
         },
         "fishing_menu",
