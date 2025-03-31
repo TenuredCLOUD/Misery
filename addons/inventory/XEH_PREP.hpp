@@ -1,9 +1,10 @@
-PREP(addCustomAction);
-PREP(addCustomItemAction);
-PREP(click);
-PREP(clickCustom);
-PREP(defineItems);
 PREP(displayActions);
+PREP(handleItemUse);
+PREP(initInventoryDialog);
+PREP(initItems);
 PREP(inventoryHandle);
+PREP(parseItemData);
+PREP(populateCategories);
+PREP(populateItemsCombo);
+PREP(populateItemsList);
 PREP(selectAction);
-PREP(useItem);

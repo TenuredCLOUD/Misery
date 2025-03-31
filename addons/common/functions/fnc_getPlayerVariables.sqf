@@ -19,7 +19,7 @@
  *     8: Toxicity <NUMBER>
  *     9: Psychosis <NUMBER>
  *     10: Buffs <ARRAY>
- *     11: Debuffs <ARRAY>
+ *     11: Ailments <ARRAY>
  *     12: Currency <NUMBER>
  *     13: Banked Currency <NUMBER>
  *     14: Cooking <ARRAY>
@@ -55,11 +55,11 @@ private _funds = player getVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAUL
 
 // Vitals
 private _buffs = player getVariable [QEGVAR(vitals,buffs), []];
-private _debuffs = player getVariable [QEGVAR(vitals,debuffs), []];
+private _ailments = player getVariable [QEGVAR(vitals,ailments), []];
 
 // Crafting
 private _cooking = player getVariable [QEGVAR(cooking,knowledge), []];
 private _crafting = player getVariable [QEGVAR(crafting,knowledge), []];
 private _hydrology = player getVariable [QEGVAR(hydrology,knowledge), []];
 
-[_hunger, _thirst, _energyDeficit, _thermalIndex, _exposure, _radiation, _infection, _parasites, _toxicity, _psychosis, _buffs, _debuffs, _funds, _bankedFunds, _cooking, _crafting, _hydrology, _cartridgeEfficiency]
+[_hunger, _thirst, _energyDeficit, _thermalIndex, _exposure, _radiation, _infection, _parasites, _toxicity, _psychosis, _buffs, _ailments, _funds, _bankedFunds, _cooking, _crafting, _hydrology, _cartridgeEfficiency]
