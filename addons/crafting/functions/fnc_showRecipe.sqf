@@ -17,7 +17,7 @@
 
 private _dialog = findDisplay 982376;
 private _selectedOutputItem = lbData [1500, (lbCurSel 1500)];
-private _recipe = EGVAR(common,craftingRecipes) select {(_x select 0) isEqualTo _selectedOutputItem} select 0;
+private _recipe = GVAR(craftingRecipes) select {(_x select 0) isEqualTo _selectedOutputItem} select 0;
 
 if (isNil "_recipe") exitWith {
     ctrlSetText [1001, "No recipe selected..."];

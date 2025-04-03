@@ -18,7 +18,7 @@
 
 private _dialog = findDisplay 982376;
 private _selectedOutputItem = lbData [1500, (lbCurSel 1500)];
-private _recipe = EGVAR(common,craftingRecipes) select {(_x select 0) isEqualTo _selectedOutputItem} select 0;
+private _recipe = GVAR(craftingRecipes) select {(_x select 0) isEqualTo _selectedOutputItem} select 0;
 
 if (isNil "_recipe") exitWith { ctrlSetText [1001, "No matching recipe found."]; };
 
@@ -45,14 +45,20 @@ if (!([_requiredItems] call FUNC(canCraftCheck))) exitWith {
 private _craftButton = _dialog displayCtrl 1600;
 private _recipeButton = _dialog displayCtrl 1601;
 private _exitButton = _dialog displayCtrl 1602;
+private _progressBar = _dialog displayCtrl 1010;
 _craftButton ctrlShow false;
 _recipeButton ctrlShow false;
 _exitButton ctrlShow false;
+_progressBar ctrlShow true;
 
 player playAction "Gear";
 
+private _soundSource = objNull;
 if (_audio isNotEqualTo "") then {
-    playSound3D [_audio, player, false, getPosASL player, 4, 1, 50];
+    _soundSource = createVehicle ["Land_HelipadEmpty_F", getPosASL player, [], 0, "CAN_COLLIDE"];
+    _soundSource setPosASL (getPosASL player);
+    _soundSource attachTo [player, [0, 0, 0]];
+    _soundSource say3D [_audio, 50, 1];
 };
 
 player setVariable [QGVAR(isCrafting), true];
@@ -61,6 +67,10 @@ private _craftInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key"];
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QGVAR(isCrafting), false];
+        _progressBar ctrlShow false;
+        if (_soundSource isNotEqualTo objNull) then {
+            deleteVehicle _soundSource;
+        };
         [parseText "<t font='PuristaMedium' size='1'>Crafting interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
     };
 }];
@@ -71,7 +81,7 @@ private _currentStep = 0;
 
 [{
     params ["_args", "_handle"];
-    _args params ["_requiredItems", "_outputItem", "_outputCount", "_toBeReplaced", "_outputXP", "_dialog", "_craftButton", "_recipeButton", "_exitButton", "_craftInterrupt", "_totalSteps", "_currentStep", "_outputDisplayName"];
+    _args params ["_requiredItems", "_outputItem", "_outputCount", "_toBeReplaced", "_outputXP", "_dialog", "_craftButton", "_recipeButton", "_exitButton", "_craftInterrupt", "_totalSteps", "_currentStep", "_outputDisplayName", "_progressBar", "_soundSource"];
 
     if (!(player getVariable [QGVAR(isCrafting), false]) || !alive player) exitWith {
         player setVariable [QGVAR(isCrafting), nil];
@@ -79,14 +89,19 @@ private _currentStep = 0;
         _craftButton ctrlShow true;
         _recipeButton ctrlShow true;
         _exitButton ctrlShow true;
+        _progressBar ctrlShow false;
+        if (_soundSource isNotEqualTo objNull) then {
+            deleteVehicle _soundSource;
+        };
         [_handle] call CBA_fnc_removePerFrameHandler;
     };
 
     _currentStep = _currentStep + 1;
     _args set [11, _currentStep];
 
-    private _progress = (_currentStep / _totalSteps) * 100;
-    ctrlSetText [1001, format ["Crafting %1... %2%3 complete", _outputDisplayName, _progress toFixed 0, "%"]];
+    private _progress = (_currentStep / _totalSteps);
+    _progressBar progressSetPosition _progress;
+    ctrlSetText [1001, format ["Crafting %1... %2%3 complete", _outputDisplayName, (_progress * 100) toFixed 0, "%"]];
 
     if (_currentStep >= _totalSteps) exitWith {
         {
@@ -119,11 +134,16 @@ private _currentStep = 0;
         [parseText format ["<t font='PuristaMedium' size='1'>You gained %1 XP from crafting %2.</t>", _outputXP, _outputDisplayName], true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 
         ctrlSetText [1001, format ["You crafted %1 %2!", _outputCount, _outputDisplayName]];
+        _progressBar progressSetPosition 1;
         player setVariable [QGVAR(isCrafting), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _craftInterrupt];
         _craftButton ctrlShow true;
         _recipeButton ctrlShow true;
         _exitButton ctrlShow true;
+        _progressBar ctrlShow false;
+        if (_soundSource isNotEqualTo objNull) then {
+            deleteVehicle _soundSource;
+        };
 
         // Refresh the crafting list
         [] call FUNC(recipesListed);
@@ -133,5 +153,5 @@ private _currentStep = 0;
 }, 0.5, [
     _requiredItems, _outputItem, _outputCount, _toBeReplaced, _outputXP,
     _dialog, _craftButton, _recipeButton, _exitButton, _craftInterrupt,
-    _totalSteps, _currentStep, _outputDisplayName
+    _totalSteps, _currentStep, _outputDisplayName, _progressBar, _soundSource
 ]] call CBA_fnc_addPerFrameHandler;
