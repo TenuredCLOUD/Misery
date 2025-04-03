@@ -5,57 +5,57 @@ class CLASS(craftingFramework_ui) {
     class ControlsBackground {
         class CLASS(crafting_background): CLASS(RscText) {
             idc = -1;
-			x = -4 * GUI_GRID_W + GUI_GRID_X;
-			y = 0 * GUI_GRID_H + GUI_GRID_Y;
-		    w = 47.5 * GUI_GRID_W;
-			h = 26 * GUI_GRID_H;
-			colorBackground[] = {0, 0, 0, 0.7};
+            x = -4 * GUI_GRID_W + GUI_GRID_X;
+            y = 0 * GUI_GRID_H + GUI_GRID_Y;
+            w = 47.5 * GUI_GRID_W;
+            h = 26 * GUI_GRID_H;
+            colorBackground[] = {0, 0, 0, 0.7};
         };
         class CLASS(crafting_prompt): RscText {
             idc = -1;
-			text = "What would you like to craft?"; //--- ToDo: Localize;
-			x = -3.5 * GUI_GRID_W + GUI_GRID_X;
-			y = 0 * GUI_GRID_H + GUI_GRID_Y;
-			w = 22 * GUI_GRID_W;
-			h = 2.5 * GUI_GRID_H;
+            text = "What would you like to craft?"; //--- ToDo: Localize;
+            x = -3.5 * GUI_GRID_W + GUI_GRID_X;
+            y = 0 * GUI_GRID_H + GUI_GRID_Y;
+            w = 22 * GUI_GRID_W;
+            h = 2.5 * GUI_GRID_H;
             sizeEx = 0.7 * GUI_GRID_H;
             font = UI_MACRO_FONT;
         };
         class CLASS(crafting_itemSelectionTip): RscText {
             idc = -1;
-			text = "Blueprints:"; //--- ToDo: Localize;
-			x = -3.5 * GUI_GRID_W + GUI_GRID_X;
-			y = 2 * GUI_GRID_H + GUI_GRID_Y;
-			w = 6 * GUI_GRID_W;
-			h = 2.5 * GUI_GRID_H;
+            text = "Blueprints:"; //--- ToDo: Localize;
+            x = -3.5 * GUI_GRID_W + GUI_GRID_X;
+            y = 2 * GUI_GRID_H + GUI_GRID_Y;
+            w = 6 * GUI_GRID_W;
+            h = 2.5 * GUI_GRID_H;
             sizeEx = 0.7 * GUI_GRID_H;
             font = UI_MACRO_FONT;
         };
         class CLASS(crafting_noteBox): RscText {
             idc = 1001;
-			x = -3.5 * GUI_GRID_W + GUI_GRID_X;
-			y = 20 * GUI_GRID_H + GUI_GRID_Y;
-			w = 46.5 * GUI_GRID_W;
-			h = 4 * GUI_GRID_H;
+            x = -3.5 * GUI_GRID_W + GUI_GRID_X;
+            y = 20 * GUI_GRID_H + GUI_GRID_Y;
+            w = 46.5 * GUI_GRID_W;
+            h = 4 * GUI_GRID_H;
             sizeEx = 0.7 * GUI_GRID_H;
             font = UI_MACRO_FONT;
         };
         class CLASS(crafting_icon): RscPicture {
             idc = 1501;
             text = QPATHTOEF(icons,data\crafting_ca.paa);
-			x = 29 * GUI_GRID_W + GUI_GRID_X;
-			y = 1.5 * GUI_GRID_H + GUI_GRID_Y;
-			w = 5.5 * GUI_GRID_W;
-			h = 3.5 * GUI_GRID_H;
+            x = 29 * GUI_GRID_W + GUI_GRID_X;
+            y = 1.5 * GUI_GRID_H + GUI_GRID_Y;
+            w = 5.5 * GUI_GRID_W;
+            h = 3.5 * GUI_GRID_H;
         };
     };
     class Controls {
         class CLASS(crafting_list_1): RscListBox {
             idc = 1500;
-			x = -3.5 * GUI_GRID_W + GUI_GRID_X;
-			y = 4 * GUI_GRID_H + GUI_GRID_Y;
-			w = 16.5 * GUI_GRID_W;
-			h = 14 * GUI_GRID_H;
+            x = -3.5 * GUI_GRID_W + GUI_GRID_X;
+            y = 4 * GUI_GRID_H + GUI_GRID_Y;
+            w = 16.5 * GUI_GRID_W;
+            h = 14 * GUI_GRID_H;
             sizeEx = 0.7 * GUI_GRID_H;
             font = UI_MACRO_FONT;
         };
@@ -63,9 +63,9 @@ class CLASS(craftingFramework_ui) {
             idc = 1600;
             text = "Craft";
             x = 16.5 * GUI_GRID_W + GUI_GRID_X;
-			y = 6.5 * GUI_GRID_H + GUI_GRID_Y;
-			w = 7.5 * GUI_GRID_W;
-			h = 1.5 * GUI_GRID_H;
+            y = 6.5 * GUI_GRID_H + GUI_GRID_Y;
+            w = 7.5 * GUI_GRID_W;
+            h = 1.5 * GUI_GRID_H;
             sizeEx = 0.7 * GUI_GRID_H;
             font = UI_MACRO_FONT;
             colorBackground[] = {0.2, 0.2, 0.2, 0.7};
@@ -77,9 +77,9 @@ class CLASS(craftingFramework_ui) {
             idc = 1601;
             text = "Show Recipe";
             x = 16.5 * GUI_GRID_W + GUI_GRID_X;
-			y = 9 * GUI_GRID_H + GUI_GRID_Y;
-			w = 7.5 * GUI_GRID_W;
-			h = 1.5 * GUI_GRID_H;
+            y = 9 * GUI_GRID_H + GUI_GRID_Y;
+            w = 7.5 * GUI_GRID_W;
+            h = 1.5 * GUI_GRID_H;
             sizeEx = 0.7 * GUI_GRID_H;
             font = UI_MACRO_FONT;
             colorBackground[] = {0.2, 0.2, 0.2, 0.7};
@@ -91,9 +91,9 @@ class CLASS(craftingFramework_ui) {
             idc = 1602;
             text = "Exit";
             x = 16.5 * GUI_GRID_W + GUI_GRID_X;
-			y = 11.5 * GUI_GRID_H + GUI_GRID_Y;
-			w = 7.5 * GUI_GRID_W;
-			h = 1.5 * GUI_GRID_H;
+            y = 11.5 * GUI_GRID_H + GUI_GRID_Y;
+            w = 7.5 * GUI_GRID_W;
+            h = 1.5 * GUI_GRID_H;
             sizeEx = 0.7 * GUI_GRID_H;
             font = UI_MACRO_FONT;
             colorBackground[] = {0.2, 0.2, 0.2, 0.7};
@@ -101,14 +101,12 @@ class CLASS(craftingFramework_ui) {
             colorActive[] = {0.5, 0.5, 0.5, 0.7};
             onButtonClick = QUOTE(closeDialog 2);
         };
-        class CLASS(crafting_progressBar): CLASS(RscProgress)
-		{
-			idc = 1010;
-			x = -3.5 * GUI_GRID_W + GUI_GRID_X;
-			y = 18.5 * GUI_GRID_H + GUI_GRID_Y;
-			w = 46.5 * GUI_GRID_W;
-		    h = 1 * GUI_GRID_H;
-		};
+        class CLASS(crafting_progressBar): CLASS(RscProgress) {
+            idc = 1010;
+            x = -3.5 * GUI_GRID_W + GUI_GRID_X;
+            y = 18.5 * GUI_GRID_H + GUI_GRID_Y;
+            w = 46.5 * GUI_GRID_W;
+            h = 1 * GUI_GRID_H;
+        };
     };
 };
-
