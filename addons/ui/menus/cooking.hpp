@@ -1,107 +1,111 @@
-class CLASS(cookingFramework_ui)
-{
+class CLASS(cookingFramework_ui) {
     idd = 982379;
     onLoad = QUOTE([] call EFUNC(cooking,recipesListed); [] call EFUNC(cooking,showIcon));
 
-    class ControlsBackground
-    {
-        class CLASS(cooking_background): CLASS(RscText)
-        {
+    class ControlsBackground {
+        class CLASS(cooking_background): CLASS(RscText) {
             idc = -1;
-            colorBackground[] = {0.2, 0.2, 0.2, 0.7};
-            x = QUOTE(-0.12 * GUI_GRID_W + GUI_GRID_X);
-            y = QUOTE(0 * GUI_GRID_H + GUI_GRID_Y);
-            w = QUOTE(41.5 * GUI_GRID_W);
-            h = QUOTE(25 * GUI_GRID_H);
+            colorBackground[]={0.2,0.2,0.2,.7};
+            x = -0.1125;
+            y = 0.02;
+            w = 0.02;
+            h = 0.96;
         };
-        class CLASS(cooking_prompt): RscText
-        {
+        class CLASS(cooking_prompt): RscText {
             idc = -1;
             text = "What would you like to cook?";
-            x = QUOTE(0.08 * GUI_GRID_W + GUI_GRID_X);
-            y = QUOTE(0.25 * GUI_GRID_H + GUI_GRID_Y);
-            w = QUOTE(22 * GUI_GRID_W);
-            h = QUOTE(2.5 * GUI_GRID_H);
+            x = -0.1;
+            y = 0.02;
+            w = 0.55;
+            h = 0.1;
         };
-        class CLASS(cooking_itemSelectionTip): RscText
-        {
+        class CLASS(cooking_itemSelectionTip): RscText {
             idc = -1;
             text = "Recipes:";
-            x = QUOTE(1 * GUI_GRID_W + GUI_GRID_X);
-            y = QUOTE(2.5 * GUI_GRID_H + GUI_GRID_Y);
-            w = QUOTE(9.5 * GUI_GRID_W);
-            h = QUOTE(2.5 * GUI_GRID_H);
+            x = 0.4165;
+            y = 0.1;
+            w = 0.15;
+            h = 0.1;
+            sizeEx = 0.8 * GUI_GRID_H;
         };
-        class CLASS(cooking_noteBox): RscText
-        {
+        class CLASS(cooking_recipeTip): RscText {
+            idc = -1;
+            text = "Requirements for Recipe:";
+            x = -0.0455;
+            y = 0.1088;
+            w = 0.2375;
+            h = 0.08;
+            sizeEx = 0.8 * GUI_GRID_H;
+        };
+        class CLASS(cooking_noteBox): RscText {
             idc = 1001;
-            x = QUOTE(0.5 * GUI_GRID_W + GUI_GRID_X);
-            y = QUOTE(19.5 * GUI_GRID_H + GUI_GRID_Y);
-            w = QUOTE(40 * GUI_GRID_W);
-            h = QUOTE(4 * GUI_GRID_H);
-            sizeEx = 0.7 * GUI_GRID_H;
+            x = -0.0875;
+            y = 0.76;
+            w = 1.1625;
+            h = 0.16;
+            sizeEx = 0.75 * GUI_GRID_H;
         };
-        class CLASS(cooking_icon): RscPicture
-        {
+        class CLASS(cooking_icon): RscPicture {
             idc = 1501;
             text = QPATHTOEF(icons,data\boilwater_ca.paa);
-            x = QUOTE(27 * GUI_GRID_W + GUI_GRID_X);
-            y = QUOTE(3 * GUI_GRID_H + GUI_GRID_Y);
-            w = QUOTE(5.5 * GUI_GRID_W);
-            h = QUOTE(4 * GUI_GRID_H);
+            x = 0.9125;
+            y = 0.08;
+            w = 0.1375;
+            h = 0.14;
         };
     };
-    class Controls
-    {
-        class CLASS(cooking_list_1): RscListBox
-        {
+    class Controls {
+        class CLASS(cooking_list_1): RscListBox {
             idc = 1500;
-            x = QUOTE(1 * GUI_GRID_W + GUI_GRID_X);
-            y = QUOTE(5 * GUI_GRID_H + GUI_GRID_Y);
-            w = QUOTE(16.5 * GUI_GRID_W);
-            h = QUOTE(14 * GUI_GRID_H);
-            sizeEx = 0.7 * GUI_GRID_H;
+            x = 0.425;
+            y = 0.18;
+            w = 0.4125;
+            h = 0.56;
         };
-        class CLASS(cooking_button): RscButton
-        {
+        class CLASS(cooking_list_2): RscListBox {
+            idc = 1502;
+            x = -0.0375;
+            y = 0.18;
+            w = 0.4125;
+            h = 0.56;
+        };
+        class CLASS(cooking_button): RscButton {
             idc = 1600;
             text = "Cook";
-            x = QUOTE(20.5 * GUI_GRID_W + GUI_GRID_X);
-            y = QUOTE(10.5 * GUI_GRID_H + GUI_GRID_Y);
-            w = QUOTE(7.5 * GUI_GRID_W);
-            h = QUOTE(1.5 * GUI_GRID_H);
+            x = 0.875;
+            y = 0.48;
+            w = 0.1875;
+            h = 0.06;
             sizeEx = QUOTE((((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1));
-            font = UI_MACRO_FONT;
+            font = "PuristaMedium";
             colorBackground[] = {0.2, 0.2, 0.2, 0.7};
             colorFocused[] = {0.5, 0.5, 0.5, 0.7};
             colorActive[] = {0.5, 0.5, 0.5, 0.7};
             onButtonClick = QUOTE([] call EFUNC(cooking,processRecipe));
         };
-        class CLASS(cooking_knownRecipes): RscButton
-        {
+        class CLASS(cooking_knownRecipes): RscButton {
             idc = 1601;
             text = "Show Recipe";
-            x = QUOTE(20.5 * GUI_GRID_W + GUI_GRID_X);
-            y = QUOTE(13 * GUI_GRID_H + GUI_GRID_Y);
-            w = QUOTE(7.5 * GUI_GRID_W);
-            h = QUOTE(1.5 * GUI_GRID_H);
+            x = 0.875;
+            y = 0.58;
+            w = 0.1875;
+            h = 0.06;
             sizeEx = QUOTE((((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1));
-            font = UI_MACRO_FONT;
+            font = "PuristaMedium";
             colorBackground[] = {0.2, 0.2, 0.2, 0.7};
             colorFocused[] = {0.5, 0.5, 0.5, 0.7};
             colorActive[] = {0.5, 0.5, 0.5, 0.7};
             onButtonClick = QUOTE([] call EFUNC(cooking,showRecipe));
         };
-        class CLASS(cooking_exitButton): RscButton
-        {
+        class CLASS(cooking_exitButton): RscButton {
             idc = 1602;
             text = "Exit";
-            x = QUOTE(20.5 * GUI_GRID_W + GUI_GRID_X);
-            y = QUOTE(15.5 * GUI_GRID_H + GUI_GRID_Y);
-            w = QUOTE(7.5 * GUI_GRID_W);
-            h = QUOTE(1.5 * GUI_GRID_H);
+            x = 0.875;
+            y = 0.68;
+            w = 0.1875;
+            h = 0.06;
             sizeEx = QUOTE((((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1));
-            font = UI_MACRO_FONT;
+            font = "PuristaMedium";
             colorBackground[] = {0.2, 0.2, 0.2, 0.7};
             colorFocused[] = {0.5, 0.5, 0.5, 0.7};
             colorActive[] = {0.5, 0.5, 0.5, 0.7};
