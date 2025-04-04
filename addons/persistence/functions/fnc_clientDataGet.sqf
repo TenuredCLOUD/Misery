@@ -49,4 +49,13 @@ switch (_stance) do {
     default {};
 };
 
-[player setDamage _damage, [player, _damage] call ace_medical_fnc_deserializeState] select (["ace_medical"] call EFUNC(common,isModLoaded));
+private _damageType = typeName _damage;
+if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
+    if (_damageType isEqualTo "STRING") then {
+        [player, _damage] call ace_medical_fnc_deserializeState;
+    } else {
+        [player, MACRO_DEFAULT_ACE_DAMAGE] call ace_medical_fnc_deserializeState;
+    };
+} else {
+    player setDamage _damage;
+};
