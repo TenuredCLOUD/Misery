@@ -36,6 +36,9 @@ switch (_status) do {
     case "infection": {
         EGVAR(survival,infectionModifiers) = EGVAR(survival,infectionModifiers) + _modifier;
     };
+    case "parasites": {
+        EGVAR(survival,parasiteModifiers) = EGVAR(survival,parasiteModifiers) + _modifier;
+    };
     case "psychosis": {
         EGVAR(psychosis,modifiers) = EGVAR(psychosis,modifiers) + _modifier;
     };
