@@ -19,11 +19,12 @@
 
 private _dialog = findDisplay 982380;
 private _selectedItem = lbData [1500, (lbCurSel 1500)];
-private _recipe = GVAR(recipes) select {(_x select 0) isEqualTo _selectedItem} select 0;
+private _recipe = GVAR(containers) select {(_x select 0) isEqualTo _selectedItem} select 0;
 
 private _fillButton = _dialog displayCtrl 1600;
 private _drinkButton = _dialog displayCtrl 1601;
 private _exitButton = _dialog displayCtrl 1602;
+private _progressBar = _dialog displayCtrl 1010;
 
 if (isNil "_recipe") exitWith { ctrlSetText [1001, "No matching container found."]; };
 
@@ -41,6 +42,7 @@ if (!_hasItem) exitWith {
 _fillButton ctrlShow false;
 _drinkButton ctrlShow false;
 _exitButton ctrlShow false;
+_progressBar ctrlShow true;
 
 player playAction "Gear";
 
@@ -58,6 +60,7 @@ private _fillInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key"];
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QCLASS(isFilling), false];
+        _progressBar ctrlShow false;
         [parseText "<t font='PuristaMedium' size='1'>Filling interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
     };
 }];
@@ -77,7 +80,8 @@ private _currentStep = 0;
         "_fillInterrupt",
         "_totalSteps",
         "_currentStep",
-        "_outputDisplayName"
+        "_outputDisplayName",
+        "_progressBar"
     ];
 
     if (!(player getVariable [QCLASS(isFilling), false]) || !alive player) exitWith {
@@ -86,14 +90,16 @@ private _currentStep = 0;
         _fillButton ctrlShow true;
         _drinkButton ctrlShow true;
         _exitButton ctrlShow true;
+        _progressBar ctrlShow false;
         [_handle] call CBA_fnc_removePerFrameHandler;
     };
 
     _currentStep = _currentStep + 1;
     _args set [8, _currentStep];
 
-    private _progress = (_currentStep / _totalSteps) * 100;
-    ctrlSetText [1001, format ["Filling Container... %1%2 complete", _progress toFixed 0, "%"]];
+    private _progress = (_currentStep / _totalSteps);
+    _progressBar progressSetPosition _progress;
+    ctrlSetText [1001, format ["Filling Container... %1%2 complete", (_progress * 100) toFixed 0, "%"]];
 
     if (_currentStep >= _totalSteps) then {
         if (_requiredItem in items player) then {
@@ -110,6 +116,7 @@ private _currentStep = 0;
         _fillButton ctrlShow true;
         _drinkButton ctrlShow true;
         _exitButton ctrlShow true;
+        _progressBar ctrlShow false;
 
         [_handle] call CBA_fnc_removePerFrameHandler;
     };
@@ -123,5 +130,6 @@ private _currentStep = 0;
     _fillInterrupt,
     _totalSteps,
     _currentStep,
-    _outputDisplayName
+    _outputDisplayName,
+    _progressBar
 ]] call CBA_fnc_addPerFrameHandler;

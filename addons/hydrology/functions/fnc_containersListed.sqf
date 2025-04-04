@@ -18,6 +18,10 @@
 
 [{!isNull findDisplay 982380}, {
 private _list = findDisplay 982380 displayCtrl 1500;
+
+private _progressBar = findDisplay 982380 displayCtrl 1010;
+_progressBar ctrlShow false; // Hide progresss bar on GUI load
+
 lbClear _list;
 
     {
@@ -32,5 +36,5 @@ lbClear _list;
 
         private _index = _list lbAdd _displayName;
         _list lbSetData [_index, _requiredItem];
-    } forEach GVAR(recipes);
+    } forEach GVAR(containers);
 }, []] call CBA_fnc_waitUntilAndExecute;
