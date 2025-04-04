@@ -31,7 +31,6 @@ private _currselection = lbCurSel _list;
 private _selectedItem = _list lbData _currselection;
 private _IconCtrl = _dialog displayCtrl 1200;
 
-
     _cfg = configFile >> "CfgWeapons" >> _selectedItem;
     if (isClass _cfg) exitWith {
         _picPath = getText (_cfg >> "picture");

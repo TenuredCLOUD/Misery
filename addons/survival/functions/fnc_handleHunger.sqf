@@ -27,7 +27,7 @@ private _finalHunger = ((_hunger + GVAR(hungerModifiers)) min 1) max 0;
 GVAR(hungerModifiers) = 0;
 player setVariable [QGVAR(hunger), _finalHunger];
 
-if (_finalHunger == 0) then {
+if (_finalHunger isEqualTo 0) then {
     [player, 100] call EFUNC(common,specialDamage);
 };
 

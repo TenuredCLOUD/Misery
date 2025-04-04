@@ -23,22 +23,39 @@ params ["_ailments", "_parasites", "_toxicity", "_infection", "_isMultiplayer"];
 
 if !(GVAR(ailments)) exitWith {};
 
+// Initial values are checked before comparing, otherwise values will never change.
+private _finalParasites = ((_parasites + GVAR(parasiteModifiers)) min 1) max 0;
+GVAR(parasiteModifiers) = 0;
+player setVariable [QGVAR(parasites), _finalParasites];
+
+if (_parasites > 0) then {
+    [0.001, "parasites"] call EFUNC(common,addStatusModifier);
+
+    if (_parasites isEqualTo 1) then {
+        [player, (_parasites / 100)] call EFUNC(common,specialDamage);
+    };
+};
+
+private _finalToxicity = ((_toxicity + GVAR(toxicityModifiers)) min 1) max 0;
+GVAR(toxicityModifiers) = 0;
+player setVariable [QGVAR(toxicity), _finalToxicity];
+
 if (_toxicity > 0) then {
     [-0.001, "toxicity"] call EFUNC(common,addStatusModifier);
-    private _finalToxicity = ((_toxicity + GVAR(toxicityModifiers)) min 1) max 0;
-    player setVariable [QGVAR(toxicity), _finalToxicity];
 
-    if (_finalToxicity == 1) then {
+    if (_toxicity isEqualTo 1) then {
         [player, (_toxicity / 100)] call EFUNC(common,specialDamage);
     };
 };
 
+private _finalInfection = ((_infection + GVAR(infectionModifiers)) min 1) max 0;
+GVAR(infectionModifiers) = 0;
+player setVariable [QGVAR(infection), _finalInfection];
+
 if (_infection > 0) then {
     [-0.001, "infection"] call EFUNC(common,addStatusModifier);
-    private _finalInfection = ((_infection + GVAR(infectionModifiers)) min 1) max 0;
-    player setVariable [QGVAR(infection), _finalInfection];
 
-    if (_finalInfection == 1) then {
+    if (_infection isEqualTo 1) then {
         [player, (_infection / 100)] call EFUNC(common,specialDamage);
     };
 };
