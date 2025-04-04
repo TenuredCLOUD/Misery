@@ -19,6 +19,9 @@
     private _list = findDisplay 982379 displayCtrl 1500;
     private _playerXP = player getVariable [QGVAR(xp), MACRO_PLAYER_DEFAULTS_LOW];
 
+    private _progressBar = findDisplay 982379 displayCtrl 1010;
+    _progressBar ctrlShow false; // Hide progresss bar on GUI load
+
     lbClear _list;
 
     {
@@ -37,5 +40,5 @@
             private _index = _list lbAdd _displayName;
             _list lbSetData [_index, _outputItem];
         };
-    } forEach EGVAR(common,cookingRecipes);
+    } forEach GVAR(cookingRecipes);
 }, []] call CBA_fnc_waitUntilAndExecute;

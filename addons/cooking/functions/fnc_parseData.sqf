@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call misery_common_fnc_parseCookingData;
+ * [] call misery_common_fnc_parseData;
  *
 */
 
