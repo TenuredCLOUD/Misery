@@ -26,6 +26,7 @@
  *     15: Crafting <ARRAY>
  *     16: Hydrology <ARRAY>
  *     17: Cartridge Efficiency <NUMBER>
+ *     18: Turbid Water Logged <BOOL>
  *
  * Example:
  * [] call misery_common_fnc_getPlayerVariables
@@ -39,6 +40,7 @@ private _parasites = player getVariable [QEGVAR(survival,parasites), MACRO_PLAYE
 private _radiation = player getVariable [QEGVAR(survival,radiation), MACRO_PLAYER_DEFAULTS_LOW];
 private _thirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH];
 private _toxicity = player getVariable [QEGVAR(survival,toxicity), MACRO_PLAYER_DEFAULTS_LOW];
+private _turbidWater = player getVariable [QEGVAR(hydrology,turbidWaterLogged), false];
 
 // Gas Mask
 private _cartridgeEfficiency = player getVariable [QEGVAR(gasmask,cartridgeEfficiency), MACRO_PLAYER_DEFAULTS_HIGH];
@@ -62,4 +64,4 @@ private _cooking = player getVariable [QEGVAR(cooking,knowledge), []];
 private _crafting = player getVariable [QEGVAR(crafting,knowledge), []];
 private _hydrology = player getVariable [QEGVAR(hydrology,knowledge), []];
 
-[_hunger, _thirst, _energyDeficit, _thermalIndex, _exposure, _radiation, _infection, _parasites, _toxicity, _psychosis, _buffs, _ailments, _funds, _bankedFunds, _cooking, _crafting, _hydrology, _cartridgeEfficiency]
+[_hunger, _thirst, _energyDeficit, _thermalIndex, _exposure, _radiation, _infection, _parasites, _toxicity, _psychosis, _buffs, _ailments, _funds, _bankedFunds, _cooking, _crafting, _hydrology, _cartridgeEfficiency, _turbidWater]

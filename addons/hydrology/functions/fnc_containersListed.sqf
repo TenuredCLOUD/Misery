@@ -1,8 +1,8 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * hydrology List populater for containers
- * Shows list of fillables for player
+ * Hydrology List Populator
+ * Populates list of fillable containers in GUI
  *
  * Arguments:
  * None
@@ -10,29 +10,31 @@
  * Return Value:
  * None
  *
+ * Example:
  * [] call misery_hydrology_fnc_containersListed;
  *
  * Public: No
 */
 
-waitUntil {!isNull findDisplay 982380};
+[{!isNull findDisplay 982380}, {
+private _list = findDisplay 982380 displayCtrl 1500;
 
-if (!isNull findDisplay 982380) exitWith {
-    private _list = findDisplay 982380 displayCtrl 1500;
-    private _playerRecipes = player getVariable QCLASS(hydrologyKnowledge);
+private _progressBar = findDisplay 982380 displayCtrl 1010;
+_progressBar ctrlShow false; // Hide progresss bar on GUI load
+
+lbClear _list;
 
     {
         private _requiredItem = _x select 0;
-        private _outputItem = _x select 1;
-        private _fillingTime = _x select 2;
         private _displayName = getText (configFile >> "CfgWeapons" >> _requiredItem >> "displayName");
         if (_displayName isEqualTo "") then {
             _displayName = getText (configFile >> "CfgMagazines" >> _requiredItem >> "displayName");
         };
-        if (EGVAR(common,debug)) then {
-            systemChat format ["Filling %1 requires: %2 and takes %3 seconds", _requiredItem, _requiredItem, _fillingTime];
+        if (_displayName isEqualTo "") then {
+            _displayName = _requiredItem;
         };
+
         private _index = _list lbAdd _displayName;
-        _list lbSetData [_index, _requiredItem];  // Associate data with the item
-    } forEach _playerRecipes;
-};
+        _list lbSetData [_index, _requiredItem];
+    } forEach GVAR(containers);
+}, []] call CBA_fnc_waitUntilAndExecute;
