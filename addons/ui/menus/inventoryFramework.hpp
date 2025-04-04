@@ -25,7 +25,7 @@ class CLASS(inventoryFramework_ui)
         };
         class CLASS(inventoryFramework_prompt): RscText
         {
-            idc = 1001;
+            idc = -1;
             text = "Actions:";
             x = -25.5 * GUI_GRID_W + GUI_GRID_X;
             y = -3 * GUI_GRID_H + GUI_GRID_Y;
@@ -35,7 +35,7 @@ class CLASS(inventoryFramework_ui)
         };
         class CLASS(inventoryFramework_items_prompt): RscText
         {
-            idc = 1024;
+            idc = -1;
             text = "Items:";
             x = -25.5 * GUI_GRID_W + GUI_GRID_X;
             y = 10 * GUI_GRID_H + GUI_GRID_Y;
@@ -45,7 +45,7 @@ class CLASS(inventoryFramework_ui)
         };
         class CLASS(inventoryFramework_status_buffs): RscText
         {
-            idc = 1008;
+            idc = -1;
             text = "Buffs:";
             x = 50.5 * GUI_GRID_W + GUI_GRID_X;
             y = 11.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -55,7 +55,7 @@ class CLASS(inventoryFramework_ui)
         };
         class CLASS(inventoryFramework_status_ailments): RscText
         {
-            idc = 1007;
+            idc = -1;
             text = "Ailments:";
             x = 58.5 * GUI_GRID_W + GUI_GRID_X;
             y = 11.5 * GUI_GRID_H + GUI_GRID_Y;

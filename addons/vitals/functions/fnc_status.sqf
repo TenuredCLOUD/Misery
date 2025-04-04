@@ -101,7 +101,7 @@ disableSerialization;
     } else {
         private _gearCase = switch (true) do {
             case (_gasMask > 0 && _scba isEqualTo 0): {"GasMask"};
-            case (_gasMask > 0 && _scba > 0): {"SuppliedAir"};
+            case (_gasMask > 0 || _gasMask < 1 && _scba > 0): {"SuppliedAir"};
             default {"None"};
         };
         switch (_gearCase) do {
