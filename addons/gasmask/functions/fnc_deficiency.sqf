@@ -20,7 +20,8 @@
     call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "", "_respiratory"];
     call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "_cartridgeEfficiency"];
 
-    if (_gasMask > 0 && _respiratory > 0 && _scba < 1) exitWith {};
+    if (_scba >= 1) exitWith {};
+    if (_gasmask < 1 && _respiratory < 1) exitWith {};
 
     private _baseDegradation = 0.001389;
     private _zoneMultiplier = 2;
@@ -37,7 +38,8 @@
     };
 
     if (isNull objectParent player) then {
-        private _fatiguePenalty = (getFatigue player) * _fatigueMultiplier;
+        private _fatigue = [getFatigue player, player getVariable ["ace_advanced_fatigue_aimFatigue", 0]] select (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled});
+        private _fatiguePenalty = _fatigue * _fatigueMultiplier;
         _decrementValue = _decrementValue + _fatiguePenalty;
     };
 
@@ -52,7 +54,7 @@
 
     if (_cartridgeEfficiencyTotal <= 0) then {
         [] call FUNC(swapMask);
-        player setVariable [QGVAR(cartridgeEfficiency), MACROplayer_DEFAULTS_HIGH];
+        player setVariable [QGVAR(cartridgeEfficiency), MACRO_PLAYER_DEFAULTS_HIGH];
     };
 
     [QUOTE(COMPONENT_BEAUTIFIED), "Deficiency cycle..."] call EFUNC(common,debugMessage);

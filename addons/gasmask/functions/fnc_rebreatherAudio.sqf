@@ -20,6 +20,8 @@
 
     call EFUNC(protection,totalProtection) params ["", "_scba"];
 
+    if (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled}) exitWith {}; // Kill audible breath if ACE advanced fatigue is enabled
+
     if (_scba < 1) exitWith {};
 
     private _breathDelay = linearConversion [0, 1, getFatigue player, 10, 3, true];
