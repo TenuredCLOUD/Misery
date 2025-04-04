@@ -26,7 +26,7 @@ _fillButton ctrlShow false;
 _drinkButton ctrlShow false;
 _exitButton ctrlShow false;
 
-if (isClass (configFile >> "CfgPatches" >> "ace_main")) then { // TODO: Will replace with common isModLoaded function once it returns true, currently with ACE loaded it returns false in debug?
+if ("ace_field_rations" call EFUNC(common,isModLoaded)) then {
     player switchMove "ace_field_rations_drinkFromSourceLow";
 } else {
     player playAction "Gear";
