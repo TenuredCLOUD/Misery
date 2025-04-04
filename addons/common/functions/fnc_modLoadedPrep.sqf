@@ -25,6 +25,6 @@ private _modPrep = [
 ];
 
 {
-    params ["_addonName", "_isLoaded"];
+    _x params ["_addonName", "_isLoaded"];
     GVAR(modLoadedCache) set [_addonName, _isLoaded, true];
 } forEach _modPrep;
