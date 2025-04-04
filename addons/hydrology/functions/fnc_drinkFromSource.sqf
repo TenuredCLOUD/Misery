@@ -39,12 +39,12 @@ playSound3D [QPATHTOEF(audio,sounds\items\drink.ogg), player, false, getPosASL p
 [0.015, "radiation"] call EFUNC(common,addStatusModifier);
 
 if ((random 100) <= EGVAR(survival,turbidWaterChance)) then {
-    player setVariable [QCLASS(turbidWaterLogged), true];
+    player setVariable [QGVAR(turbidWaterLogged), true];
     ctrlSetText [1001, "You gulped down foul water. It quenched your thirst, but you feel sick..."];
 
     [{
-        player setVariable [QCLASS(turbidWaterLogged), nil];
-        // [0.01, "parasites"] call EFUNC(common,addStatusModifier); TODO: Need parasites modifier
+        player setVariable [QGVAR(turbidWaterLogged), false];
+        [0.01, "parasites"] call EFUNC(common,addStatusModifier);
     }, [], 180] call CBA_fnc_waitAndExecute;
 } else {
     ctrlSetText [1001, "You gulped down foul water... It quenched your thirst."];
