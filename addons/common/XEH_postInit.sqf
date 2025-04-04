@@ -38,7 +38,7 @@ if (isServer) then {
 if (!hasInterface) exitWith {};
 
 // Default loadout
-GVAR(defaultLoadout) = [[[],[],[],[],[],[],"","",[],["ItemMap","","","ItemCompass","ItemWatch",""]],[]];
+GVAR(defaultLoadout) = [[[],[],[],[],[],[],"","",[],["ItemMap","","","ItemCompass","ItemWatch",""]],[], false];
 
 // Combat Logging
 [] call FUNC(combatLogPrevention);

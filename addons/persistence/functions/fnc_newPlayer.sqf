@@ -17,7 +17,7 @@ params [["_newSave", true]];
 
 [QUOTE(COMPONENT_BEAUTIFIED), format ["New player, Fresh Start: %1", _newSave]] call EFUNC(common,debugMessage);
 
-player setUnitLoadout EGVAR(common,defaultLoadout) select 0;
+player setUnitLoadout EGVAR(common,defaultLoadout);
 
 player setVariable [QEGVAR(survival,hunger), MACRO_PLAYER_DEFAULTS_HIGH];
 player setVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH];
