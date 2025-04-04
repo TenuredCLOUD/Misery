@@ -2,14 +2,13 @@
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
  * Author: TenuredCLOUD
- * Cooking Framework Item processor
- * Takes inputs from GUI and processes recipe (if it exists)
+ * Cooking Framework Item Processor
  *
  * Arguments:
  * None
  *
  * Return Value:
- * 0: BOOL
+ * None
  *
  * Example:
  * [] call misery_cooking_fnc_processRecipe
@@ -18,158 +17,147 @@
 */
 
 private _dialog = findDisplay 982379;
-private _selectedOutputItem = lbData[1500, (lbCurSel 1500)];
-private _matchedRecipe = [];
-private _playerRecipes = player getVariable QCLASS(cookingKnowledge);
+private _selectedOutputItem = lbData [1500, (lbCurSel 1500)];
+private _recipe = GVAR(cookingRecipes) select {(_x select 0) isEqualTo _selectedOutputItem} select 0;
 
-private _CookB = _dialog displayCtrl 1600;
-private _RecipeB = _dialog displayCtrl 1601;
-private _ExitB = _dialog displayCtrl 1602;
+if (isNil "_recipe") exitWith { ctrlSetText [1001, "No matching recipe found."]; };
 
-if (EGVAR(common,debug)) then {
-    systemChat format ["Selected output item: %1", _selectedOutputItem]; //debug output
-    systemChat format ["Player's recipes: %1", _playerRecipes]; //debug output
+private _outputItem = _recipe select 0;
+private _requiredItems = _recipe select 1;
+private _cookingTime = _recipe select 2;
+private _outputCount = _recipe select 3;
+private _toBeReplaced = _recipe select 4;
+private _audio = _recipe select 5;
+private _outputXP = _recipe select 6;
+private _requiredXP = _recipe select 7;
+private _cookingMethod = _recipe select 8;
+
+private _outputDisplayName = getText (configFile >> "CfgWeapons" >> _outputItem >> "displayName");
+if (_outputDisplayName isEqualTo "") then {
+    _outputDisplayName = getText (configFile >> "CfgMagazines" >> _outputItem >> "displayName");
+};
+if (_outputDisplayName isEqualTo "") then {
+    _outputDisplayName = _outputItem;
 };
 
-{
-    if (_x select 0 isEqualTo _selectedOutputItem) then {
-        _matchedRecipe = _x;
-    };
-    if (EGVAR(common,debug)) then {
-        systemChat format ["Output item of current recipe: %1", _x select 0]; //debug output
-    };
-} forEach _playerRecipes;
+private _playerXP = player getVariable [QGVAR(xp), MACRO_PLAYER_DEFAULTS_LOW];
+if (_playerXP < _requiredXP) exitWith {
+    ctrlSetText [1001, format ["You need %1 cooking XP to make this (you have %2).", _requiredXP, _playerXP]];
+};
 
-if (count _matchedRecipe > 0) then {
-    private _outputItem = _matchedRecipe select 0;
-    private _requirements = _matchedRecipe select 1;
-    private _craftingTime = -1;
-    private _cookingMethod = "";
-    private _requiredItemsCounts = [];
+if (!([_requiredItems] call FUNC(canCookCheck))) exitWith {
+    ctrlSetText [1001, "You don’t have the required items..."];
+};
 
-    {
-        if (_x select 0 isEqualTo "CookingTime") then {
-            _craftingTime = _x select 1;
-        } else {
-            if (_x select 0 isEqualTo "CookingMethod") then {
-                _cookingMethod = _x select 1;
-            } else {
-                _requiredItemsCounts pushBack _x;
-            };
-        };
-    } forEach _requirements;
+private _cookButton = _dialog displayCtrl 1600;
+private _recipeButton = _dialog displayCtrl 1601;
+private _exitButton = _dialog displayCtrl 1602;
+private _progressBar = _dialog displayCtrl 1010;
+_cookButton ctrlShow false;
+_recipeButton ctrlShow false;
+_exitButton ctrlShow false;
+_progressBar ctrlShow true;
 
-    if ([_requirements] call FUNC(canCookCheck)) then {
+player playAction "Gear";
 
-        _CookB ctrlShow false;
-        _RecipeB ctrlShow false;
-        _ExitB ctrlShow false;
+private _soundSource = objNull;
+if (_audio isNotEqualTo "") then {
+    _soundSource = createVehicle ["Land_HelipadEmpty_F", getPosASL player, [], 0, "CAN_COLLIDE"];
+    _soundSource setPosASL (getPosASL player);
+    _soundSource attachTo [player, [0, 0, 0]];
+    _soundSource say3D [_audio, 50, 1];
+};
 
-        if (currentWeapon player isNotEqualTo "") then {
-        player action["SWITCHWEAPON",player,player,-1];
-        };
+player setVariable [QGVAR(isCooking), true];
 
-        player playAction "Gear";
-
-        private _itemDisplayName = getText (configFile >> "CfgWeapons" >> _outputItem >> "displayName");
-        if (_itemDisplayName isEqualTo "") then {
-            _itemDisplayName = getText (configFile >> "CfgMagazines" >> _outputItem >> "displayName");
-        };
-
-        player setVariable [QCLASS(ISCooking), true];
-
-    _CraftInterrupt = (findDisplay 982379) displayAddEventHandler ["KeyDown", {
-    params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
+private _cookInterrupt = _dialog displayAddEventHandler ["KeyDown", {
+    params ["_displayOrControl", "_key"];
     if (_key isEqualTo DIK_ESCAPE) then {
-        player setVariable [QCLASS(ISCooking),false];
-        player setVariable ["_TC_sound", false,true];
-        switch (_cookingMethod) do {
-            case "Cook": {
-                [parseText "<t font='PuristaMedium' size='1'>Cooking interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
-            };
-            case "Boil": {
-                [parseText "<t font='PuristaMedium' size='1'>Boiling interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
-            };
+        player setVariable [QGVAR(isCooking), false];
+        _progressBar ctrlShow false;
+        if (_soundSource isNotEqualTo objNull) then {
+            deleteVehicle _soundSource;
         };
+        [parseText "<t font='PuristaMedium' size='1'>Cooking interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
     };
 }];
 
-private _text = "";
-private _displayedText = "";
-private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position player);
-player setVariable ["_TC_sound", true,true];
-
-switch (_cookingMethod) do {
-    case "Cook": {
-        [_soundDummy, ["MeatRoasted", 50]] remoteExec ["say3D", 0, _soundDummy];
-        _text = "Cooking...";
-    };
-    case "Boil": {
-        [_soundDummy, ["WaterBoiling", 50]] remoteExec ["say3D", 0, _soundDummy];
-        _text = "Boiling...";
-    };
-};
-
-private _delay = _craftingTime / count _text;
+private _totalSteps = _cookingTime * 2;
+private _stepTime = _cookingTime / _totalSteps;
+private _currentStep = 0;
 
 [{
-    !(player getVariable ["_TC_sound", false])
-},{
-    deleteVehicle _this;
-}, _soundDummy] call CBA_fnc_waitUntilAndExecute;
+    params ["_args", "_handle"];
+    _args params ["_requiredItems", "_outputItem", "_outputCount", "_toBeReplaced", "_outputXP", "_cookingMethod", "_dialog", "_cookButton", "_recipeButton", "_exitButton", "_cookInterrupt", "_totalSteps", "_currentStep", "_outputDisplayName", "_progressBar", "_soundSource"];
 
-for "_i" from 0 to (count _text - 1) do {
-    if ((player getVariable QCLASS(ISCooking)) isEqualTo false) exitWith {};
-    _displayedText = _displayedText + (_text select [_i, 1]);
-    ctrlSetText [1001, _displayedText];
-    sleep _delay;
-};
+    if (!(player getVariable [QGVAR(isCooking), false]) || !alive player) exitWith {
+        player setVariable [QGVAR(isCooking), nil];
+        _dialog displayRemoveEventHandler ["KeyDown", _cookInterrupt];
+        _cookButton ctrlShow true;
+        _recipeButton ctrlShow true;
+        _exitButton ctrlShow true;
+        _progressBar ctrlShow false;
+        if (_soundSource isNotEqualTo objNull) then {
+            deleteVehicle _soundSource;
+        };
+        [_handle] call CBA_fnc_removePerFrameHandler;
+    };
 
-    if ((player getVariable QCLASS(ISCooking)) isEqualTo true) then {
+    _currentStep = _currentStep + 1;
+    _args set [12, _currentStep];
+
+    private _progress = (_currentStep / _totalSteps);
+    _progressBar progressSetPosition _progress;
+    ctrlSetText [1001, format ["%1ing %2... %3%4 complete", _cookingMethod, _outputDisplayName, (_progress * 100) toFixed 0, "%"]];
+
+    if (_currentStep >= _totalSteps) exitWith {
         {
-            private _requiredItem = _x select 0;
-            private _requiredCount = _x select 1;
-            private _removeAfterUse = if (_x select 2 isEqualType []) then {true} else {_x select 2};
-
-            for "_j" from 1 to _requiredCount do {
-                if (_requiredItem in items player && _removeAfterUse) then {
-                    player removeItem _requiredItem;
-                };
-                if (_requiredItem in magazines player && _removeAfterUse) then {
-                    player removeMagazine _requiredItem;
+            private _item = _x select 0;
+            private _count = _x select 1;
+            private _removeAfterUse = _x select 2;
+            if (_removeAfterUse) then {
+                for "_j" from 1 to _count do {
+                    [player, _item] call CBA_fnc_removeItem;
                 };
             };
-        } forEach _requiredItemsCounts;
+        } forEach _requiredItems;
 
-        [player, _outputItem, true] call CBA_fnc_addItem;
-
-        switch (_cookingMethod) do {
-        case "Cook": {
-            _SuccessText = format ["You successfully cooked: %1...", _itemDisplayName];
-            ctrlSetText [1001, _SuccessText];
-            player setVariable ["_TC_sound", false,true];
+        for "_i" from 1 to _outputCount do {
+            [player, _outputItem, true] call CBA_fnc_addItem;
         };
-        case "Boil": {
-            _SuccessText = format ["You successfully boiled: %1...", _itemDisplayName];
-            ctrlSetText [1001, _SuccessText];
-            player setVariable ["_TC_sound", false,true];
+
+        if (count _toBeReplaced > 0) then {
+            private _itemToReplace = _toBeReplaced select 0;
+            private _chance = _toBeReplaced select 1;
+            private _replacementItem = _toBeReplaced select 2;
+            if (random 1 < _chance) then {
+                [player, _itemToReplace] call CBA_fnc_removeItem;
+                [player, _replacementItem, true] call CBA_fnc_addItem;
+            };
         };
-    };
 
-    _CookB ctrlShow true;
-    _RecipeB ctrlShow true;
-    _ExitB ctrlShow true;
+        private _currentXP = player getVariable [QGVAR(xp), MACRO_PLAYER_DEFAULTS_LOW];
+        player setVariable [QGVAR(xp), _currentXP + _outputXP, true];
+        [parseText format ["<t font='PuristaMedium' size='1'>You gained %1 XP from %2ing %3.</t>", _outputXP, toLower _cookingMethod, _outputDisplayName], true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 
-            player setVariable [QCLASS(ISCooking), nil]; //terminate crafting flag
-            (findDisplay 982379) displayRemoveEventHandler ["KeyDown", _CraftInterrupt]; //Remove Display EH
-    };
+        ctrlSetText [1001, format ["You %1ed %2 %3!", toLower _cookingMethod, _outputCount, _outputDisplayName]];
+        player setVariable [QGVAR(isCooking), nil];
+        _dialog displayRemoveEventHandler ["KeyDown", _cookInterrupt];
+        _cookButton ctrlShow true;
+        _recipeButton ctrlShow true;
+        _exitButton ctrlShow true;
+        _progressBar ctrlShow false;
+        if (_soundSource isNotEqualTo objNull) then {
+            deleteVehicle _soundSource;
+        };
 
-    } else {
-        ctrlSetText [1001, "You do not have all the required items for this recipe."];
-        _CookB ctrlShow true;
-        _RecipeB ctrlShow true;
-        _ExitB ctrlShow true;
+        // Refresh cooking list
+        [] call FUNC(recipesListed);
+
+        [_handle] call CBA_fnc_removePerFrameHandler;
     };
-} else {
-    ctrlSetText [1001, "No matching recipe found."];
-};
+}, 0.5, [
+    _requiredItems, _outputItem, _outputCount, _toBeReplaced, _outputXP, _cookingMethod,
+    _dialog, _cookButton, _recipeButton, _exitButton, _cookInterrupt,
+    _totalSteps, _currentStep, _outputDisplayName, _progressBar, _soundSource
+]] call CBA_fnc_addPerFrameHandler;
