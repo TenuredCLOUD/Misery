@@ -28,7 +28,7 @@ switch (_status) do {
         EGVAR(survival,energyModifiers) = EGVAR(survival,energyModifiers) + _modifier;
     };
     case "exposure": {
-        EGVAR(temperature,modifiers) = EGVAR(temperature,modifiers) + _modifier;
+        EGVAR(temperature,exposureModifiers) = EGVAR(temperature,exposureModifiers) + _modifier;
     };
     case "hunger": {
         EGVAR(survival,hungerModifiers) = EGVAR(survival,hungerModifiers) + _modifier;
@@ -44,9 +44,6 @@ switch (_status) do {
     };
     case "radiation": {
         EGVAR(survival,radiationModifiers) = EGVAR(survival,radiationModifiers) + _modifier;
-    };
-    case "temperature": {
-        EGVAR(temperature,modifiers) = EGVAR(temperature,modifiers) + _modifier;
     };
     case "thirst": {
         EGVAR(survival,thirstModifiers) = EGVAR(survival,thirstModifiers) + _modifier;

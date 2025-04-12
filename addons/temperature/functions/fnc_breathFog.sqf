@@ -25,7 +25,9 @@
 
     if (!_breathFog) exitWith {}; // Wait till _breathFog check is true
 
-    private _delay = linearConversion [0, 1, getFatigue player, 4, 12, true];
+    private _fatigueValue = [getFatigue player, player getVariable ["ace_advanced_fatigue_aimFatigue", 0]] select (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled});
+
+    private _delay = linearConversion [0, 1, _fatigueValue, 4, 12, true];
 
     if (CBA_missionTime - _lastActivation >= _delay) then {
         _fogLogic = "logic" createVehicleLocal (getPos player);
@@ -48,7 +50,7 @@
         player setVariable [QCLASS(breathCondensation), true];
     };
 
-    [QUOTE(COMPONENT_BEAUTIFIED), format ["BreathFog: Delay %1s | Fatigue %2%3 | Active: %4", round(_delay), round(getFatigue player * 100), "%", _effectActive]] call EFUNC(common,debugMessage);
+    [QUOTE(COMPONENT_BEAUTIFIED), format ["BreathFog: Delay %1s | Fatigue %2%3 | Active: %4", round(_delay), round(_fatigueValue * 100), "%", _effectActive]] call EFUNC(common,debugMessage);
 }, 1, [CBA_missionTime - 5, false]] call CBA_fnc_addPerFrameHandler;
 
 
