@@ -33,7 +33,7 @@ disableSerialization;
     private _buffsList = _vitalsDisplay displayCtrl 1501;
     private _ailmentsList = _vitalsDisplay displayCtrl 1502;
 
-    call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "_playerTemperature", "_exposure", "_radiation", "_infection", "_parasites", "_toxicity", "_psychosis", "_buffs", "_ailments", "_funds", "", "", "", "", "_cartridgeEfficiency"];
+    call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "_thermalIndex", "_exposure", "_radiation", "_infection", "_parasites", "_toxicity", "_psychosis", "_buffs", "_ailments", "_funds", "", "", "", "", "_cartridgeEfficiency"];
     call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "_skinProtection", "_respiratoryProtection", "_eyeProtection", "_hearingProtection"];
 
     lbClear _buffsList;
@@ -115,7 +115,7 @@ disableSerialization;
         _temperatureText ctrlShow false;
         _temperatureValue ctrlShow false;
     } else {
-        _temperatureValue ctrlSetText (if (QCLASS(eru_On) in magazines player) then {format ["%1°C", [_playerTemperature, 1, 1, false] call CBA_fnc_formatNumber]} else {"No ERU"});
+        _temperatureValue ctrlSetText (if (QCLASS(eru_On) in magazines player) then {format ["%1°C", [_thermalIndex, 1, 1, false] call CBA_fnc_formatNumber]} else {"No ERU"});
     };
 
     _currencyValue ctrlSetText (format ["%1 %2", EGVAR(currency,symbol), [_funds, 1, 2, true] call CBA_fnc_formatNumber]);

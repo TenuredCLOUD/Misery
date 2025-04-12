@@ -1,14 +1,13 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Weight calculation
- * Calculates players gear weight
+ * Calculates player gear weight
  *
  * Arguments:
  * None
  *
  * Return Value:
- * None
+ * 0: Weight factor (0–1) <NUMBER>
  *
  * Example:
  * [] call misery_weight_fnc_calculated;
@@ -16,8 +15,7 @@
  * Public: No
 */
 
-private _bagWeightLoad = loadAbs player / getNumber (configFile >> "CfgInventoryGlobalVariable" >> "maxSoldierLoad");
-private _playerWeight = round(_bagWeightLoad * 100);
-private _weightCalculated = (((_playerWeight) / 10) / 10) / 10;
+private _maxLoad = getNumber (configFile >> "CfgInventoryGlobalVariable" >> "maxSoldierLoad");
+private _weightFactor = (loadAbs player / _maxLoad) min 1; // 0–1, capped at max load
 
-_weightCalculated
+_weightFactor
