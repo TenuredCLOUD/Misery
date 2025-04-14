@@ -27,7 +27,7 @@ class CLASS(geiger_readings): RscText
     y = 23 * GUI_GRID_H + GUI_GRID_Y;
     w = 4.5 * GUI_GRID_W;
     h = 1 * GUI_GRID_H;
-    sizeEx = 0.7 * GUI_GRID_H;
+    sizeEx = UI_MACRO_TEXTSIZE;
     colorText[] = {0,0,0,0.5};
 };
     };

@@ -23,7 +23,7 @@ disableSerialization;
     private _temperatureText = _vitalsDisplay displayCtrl 1015;
     private _temperatureValue = _vitalsDisplay displayCtrl 1010;
     private _gasMaskText = _vitalsDisplay displayCtrl 1016;
-    private _gasMaskValue = _vitalsDisplay displayCtrl 1017;
+    private _gasMaskBar = _vitalsDisplay displayCtrl 1017;
     private _currencyValue = _vitalsDisplay displayCtrl 1009;
     private _healthText = _vitalsDisplay displayCtrl 1008;
     private _healthBar = _vitalsDisplay displayCtrl 1011;
@@ -97,7 +97,7 @@ disableSerialization;
 
     if (!EGVAR(gasmask,enhanced)) then {
         _gasMaskText ctrlShow false;
-        _gasMaskValue ctrlShow false;
+        _gasMaskBar ctrlShow false;
     } else {
         private _gearCase = switch (true) do {
             case (_gasMask > 0 && _scba isEqualTo 0): {"GasMask"};
@@ -105,9 +105,19 @@ disableSerialization;
             default {"None"};
         };
         switch (_gearCase) do {
-            case "GasMask": {_gasMaskValue ctrlSetText (format ["%1%2", round (_cartridgeEfficiency * 100), "%"])};
-            case "SuppliedAir": {_gasMaskValue ctrlSetText "∞"};
-            default {_gasMaskValue ctrlSetText "None"};
+            case "GasMask": {
+                    _gasMaskText ctrlShow true;
+                    _gasMaskBar ctrlShow true;
+                    _gasMaskBar progressSetPosition _cartridgeEfficiency;
+                };
+            case "SuppliedAir": {
+                    _gasMaskText ctrlShow false;
+                    _gasMaskBar ctrlShow false;
+                };
+            default {
+                    _gasMaskText ctrlShow false;
+                    _gasMaskBar ctrlShow false;
+                };
         };
     };
 
@@ -125,4 +135,4 @@ disableSerialization;
     private _fatigueValue = [getFatigue player, player getVariable ["ace_advanced_fatigue_aimFatigue", 0]] select (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled});
     _fatigueBar progressSetPosition _fatigueValue;
 
-}, 0, []] call CBA_fnc_addPerFrameHandler;
+}, 0.1, []] call CBA_fnc_addPerFrameHandler;
