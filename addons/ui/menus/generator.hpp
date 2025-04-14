@@ -31,7 +31,7 @@ class CLASS(generator_name): RscText
     y = 5 * GUI_GRID_H + GUI_GRID_Y;
     w = 11 * GUI_GRID_W;
     h = 3 * GUI_GRID_H;
-    sizeEx = 0.7 * GUI_GRID_H;
+    sizeEx = UI_MACRO_TEXTSIZE;
 };
 class CLASS(generator_fuellvl): RscText
 {
@@ -41,7 +41,7 @@ class CLASS(generator_fuellvl): RscText
     y = 10 * GUI_GRID_H + GUI_GRID_Y;
     w = 9.5 * GUI_GRID_W;
     h = 2 * GUI_GRID_H;
-    sizeEx = 0.7 * GUI_GRID_H;
+    sizeEx = UI_MACRO_TEXTSIZE;
 };
 class CLASS(generator_powerState): RscText
 {
@@ -51,7 +51,7 @@ class CLASS(generator_powerState): RscText
     y = 8 * GUI_GRID_H + GUI_GRID_Y;
     w = 9.5 * GUI_GRID_W;
     h = 2 * GUI_GRID_H;
-    sizeEx = 0.7 * GUI_GRID_H;
+    sizeEx = UI_MACRO_TEXTSIZE;
 };
 };
 class Controls
@@ -63,7 +63,7 @@ class CLASS(generator_startStop_button): RscButton
     y = 14.5 * GUI_GRID_H + GUI_GRID_Y;
     w = 8 * GUI_GRID_W;
     h = 2 * GUI_GRID_H;
-    sizeEx = 0.7 * GUI_GRID_H;
+    sizeEx = UI_MACRO_TEXTSIZE;
     font = "PuristaMedium";
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};
@@ -78,7 +78,7 @@ class CLASS(generator_refuel_button): RscButton
     y = 17.5 * GUI_GRID_H + GUI_GRID_Y;
     w = 8 * GUI_GRID_W;
     h = 2 * GUI_GRID_H;
-    sizeEx = 0.7 * GUI_GRID_H;
+    sizeEx = UI_MACRO_TEXTSIZE;
     font = "PuristaMedium";
     colorBackground[] = {0.2, 0.2, 0.2, 0.7};
     colorFocused[] = {0.5, 0.5, 0.5, 0.7};

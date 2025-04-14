@@ -1,7 +1,7 @@
 class CLASS(hydrology_ui)
 {
     idd = 982380;
-    onLoad = QUOTE([] call EFUNC(hydrology,containersListed); [] call EFUNC(hydrology,icon));
+    onLoad = QUOTE([982380] call EFUNC(common,menuBlurEffect); [] call EFUNC(hydrology,containersListed); [] call EFUNC(hydrology,icon));
 
     class ControlsBackground
     {
@@ -22,8 +22,8 @@ class CLASS(hydrology_ui)
             y = 2 * GUI_GRID_H + GUI_GRID_Y;
             w = 6 * GUI_GRID_W;
             h = 2.5 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
             font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(hydrology_prompt): RscText
         {
@@ -33,8 +33,8 @@ class CLASS(hydrology_ui)
             y = 0 * GUI_GRID_H + GUI_GRID_Y;
             w = 22 * GUI_GRID_W;
             h = 2.5 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
             font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(hydrology_icon): RscPicture
         {
@@ -56,8 +56,8 @@ class CLASS(hydrology_ui)
             y = 4 * GUI_GRID_H + GUI_GRID_Y;
             w = 16.5 * GUI_GRID_W;
             h = 14 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
             font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(hydrology_FillContainer_Button): RscButton
         {
@@ -67,12 +67,12 @@ class CLASS(hydrology_ui)
             y = 7.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;
             h = 1.5 * GUI_GRID_H;
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
             colorBackground[] = {0.2, 0.2, 0.2, 0.7};
             colorFocused[] = {0.5, 0.5, 0.5, 0.7};
             colorActive[] = {0.5, 0.5, 0.5, 0.7};
             onButtonClick = QUOTE([] call EFUNC(hydrology,processFill));
-            sizeEx = 0.7 * GUI_GRID_H;
-            font = UI_MACRO_FONT;
         };
         class CLASS(hydrology_drinkFromSource_Button): RscButton
         {
@@ -82,12 +82,12 @@ class CLASS(hydrology_ui)
             y = 9.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 8.5 * GUI_GRID_W;
             h = 1.5 * GUI_GRID_H;
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
             colorBackground[] = {0.2, 0.2, 0.2, 0.7};
             colorFocused[] = {0.5, 0.5, 0.5, 0.7};
             colorActive[] = {0.5, 0.5, 0.5, 0.7};
             onButtonClick = QUOTE([] call EFUNC(hydrology,drinkFromSource));
-            sizeEx = 0.7 * GUI_GRID_H;
-            font = UI_MACRO_FONT;
         };
         class CLASS(hydrology_exit): RscButton
         {
@@ -97,12 +97,12 @@ class CLASS(hydrology_ui)
             y = 11.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;
             h = 1.5 * GUI_GRID_H;
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
             colorBackground[] = {0.2, 0.2, 0.2, 0.7};
             colorFocused[] = {0.5, 0.5, 0.5, 0.7};
             colorActive[] = {0.5, 0.5, 0.5, 0.7};
             onButtonClick = QUOTE(closeDialog 2);
-            sizeEx = 0.7 * GUI_GRID_H;
-            font = UI_MACRO_FONT;
         };
         class CLASS(hydrology_noteBox): RscText
         {
@@ -111,8 +111,8 @@ class CLASS(hydrology_ui)
             y = 20.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 39 * GUI_GRID_W;
             h = 4 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
             font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(hydrology_progressBar): CLASS(RscProgress)
         {

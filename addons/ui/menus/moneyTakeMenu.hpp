@@ -34,7 +34,7 @@ class CLASS(moneyTakeMenu_inputBox): RscEdit
     y = 8 * GUI_GRID_H + GUI_GRID_Y;
     w = 7 * GUI_GRID_W;
     h = 1.5 * GUI_GRID_H;
-    sizeEx = 0.7 * GUI_GRID_H;
+    sizeEx = UI_MACRO_TEXTSIZE;
 };
 class CLASS(moneyTakeMenu_take): RscButton
 {
@@ -56,7 +56,7 @@ class CLASS(moneyTakeMenu_objectsFunds): RscText
     y = 7.59 * GUI_GRID_H + GUI_GRID_Y;
     w = 11 * GUI_GRID_W;
     h = 2 * GUI_GRID_H;
-    sizeEx = 0.7 * GUI_GRID_H;
+    sizeEx = UI_MACRO_TEXTSIZE;
 };
 class CLASS(moneyTakeMenu_playersFunds): RscText
 {
@@ -65,7 +65,7 @@ class CLASS(moneyTakeMenu_playersFunds): RscText
     y = 5.75 * GUI_GRID_H + GUI_GRID_Y;
     w = 11 * GUI_GRID_W;
     h = 2 * GUI_GRID_H;
-    sizeEx = 0.7 * GUI_GRID_H;
+    sizeEx = UI_MACRO_TEXTSIZE;
 };
     };
         };

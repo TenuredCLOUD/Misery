@@ -21,7 +21,7 @@ class CLASS(tradingQue_notif): RscText
     y = 8 * GUI_GRID_H + GUI_GRID_Y;
     w = 41 * GUI_GRID_W;
     h = 3.5 * GUI_GRID_H;
-    sizeEx = 0.7 * GUI_GRID_H;
+    sizeEx = UI_MACRO_TEXTSIZE;
 };
 class CLASS(tradingQue_prompt): RscText
 {

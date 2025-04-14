@@ -30,7 +30,7 @@ class CLASS(maintenance_name): RscText
     y = 4.88 * GUI_GRID_H + GUI_GRID_Y;
     w = 11 * GUI_GRID_W;
     h = 3 * GUI_GRID_H;
-    sizeEx = 0.7 * GUI_GRID_H;
+    sizeEx = UI_MACRO_TEXTSIZE;
 };
 class CLASS(maintenance_icon): RscPicture
 {
@@ -50,7 +50,7 @@ class CLASS(maintenance_list): RscListBox
     y = 2.5 * GUI_GRID_H + GUI_GRID_Y;
     w = 20.5 * GUI_GRID_W;
     h = 12.5 * GUI_GRID_H;
-    sizeEx = 0.7 * GUI_GRID_H;
+    sizeEx = UI_MACRO_TEXTSIZE;
 };
 class CLASS(maintenance_repair): RscButton
 {
@@ -85,7 +85,7 @@ class CLASS(maintenance_infoBox): RscText
     y = 17.15 * GUI_GRID_H + GUI_GRID_Y;
     w = 39 * GUI_GRID_W;
     h = 7 * GUI_GRID_H;
-    sizeEx = 0.7 * GUI_GRID_H;
+    sizeEx = UI_MACRO_TEXTSIZE;
 };
     };
         };

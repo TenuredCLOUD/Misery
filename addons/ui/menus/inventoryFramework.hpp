@@ -1,7 +1,7 @@
 class CLASS(inventoryFramework_ui)
 {
     idd = 982377;
-    onLoad = QUOTE([] call EFUNC(vitals,status); _this call EFUNC(inventory,initInventoryDialog));
+    onLoad = QUOTE([982377] call EFUNC(common,menuBlurEffect); [] call EFUNC(vitals,status); _this call EFUNC(inventory,initInventoryDialog));
 
     class ControlsBackground
     {
@@ -31,7 +31,8 @@ class CLASS(inventoryFramework_ui)
             y = -3 * GUI_GRID_H + GUI_GRID_Y;
             w = 4 * GUI_GRID_W;
             h = 2.5 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(inventoryFramework_items_prompt): RscText
         {
@@ -41,7 +42,8 @@ class CLASS(inventoryFramework_ui)
             y = 10 * GUI_GRID_H + GUI_GRID_Y;
             w = 4 * GUI_GRID_W;
             h = 2.5 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(inventoryFramework_status_buffs): RscText
         {
@@ -51,7 +53,8 @@ class CLASS(inventoryFramework_ui)
             y = 11.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 4 * GUI_GRID_W;
             h = 2.5 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(inventoryFramework_status_ailments): RscText
         {
@@ -61,7 +64,8 @@ class CLASS(inventoryFramework_ui)
             y = 11.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 4.5 * GUI_GRID_W;
             h = 2.5 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
     };
     class Controls
@@ -73,7 +77,8 @@ class CLASS(inventoryFramework_ui)
             y = -1 * GUI_GRID_H + GUI_GRID_Y;
             w = 14.5 * GUI_GRID_W;
             h = 9.5 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(inventoryFramework_actionButton): RscButton
         {
@@ -83,7 +88,8 @@ class CLASS(inventoryFramework_ui)
             y = 9 * GUI_GRID_H + GUI_GRID_Y;
             w = 7 * GUI_GRID_W;
             h = 1.5 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
             colorBackground[] = {0,0,0,0.7};
             colorFocused[] = {0.5,0.5,0.5,0.7};
             colorActive[] = {0.5,0.5,0.5,0.7};
@@ -96,7 +102,8 @@ class CLASS(inventoryFramework_ui)
             y = 13.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 14.5 * GUI_GRID_W;
             h = 9.5 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(inventoryFramework_itemsSelect): RscCombo
         {
@@ -105,7 +112,8 @@ class CLASS(inventoryFramework_ui)
             y = 12 * GUI_GRID_H + GUI_GRID_Y;
             w = 15 * GUI_GRID_W;
             h = 1 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(inventoryFramework_itemsSelection): RscButton
         {
@@ -115,7 +123,8 @@ class CLASS(inventoryFramework_ui)
             y = 23.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7 * GUI_GRID_W;
             h = 1.5 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
             colorBackground[] = {0,0,0,0.7};
             colorFocused[] = {0.5,0.5,0.5,0.7};
             colorActive[] = {0.5,0.5,0.5,0.7};
@@ -129,7 +138,8 @@ class CLASS(inventoryFramework_ui)
             y = 0 * GUI_GRID_H + GUI_GRID_Y;
             w = 5 * GUI_GRID_W;
             h = 1 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(inventoryFramework_status_healthBar): CLASS(RscProgress)
         {
@@ -147,7 +157,8 @@ class CLASS(inventoryFramework_ui)
             y = 1.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 4 * GUI_GRID_W;
             h = 1 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(inventoryFramework_status_hungerBar): CLASS(RscProgress)
         {
@@ -165,7 +176,8 @@ class CLASS(inventoryFramework_ui)
             y = 3 * GUI_GRID_H + GUI_GRID_Y;
             w = 4 * GUI_GRID_W;
             h = 1 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(inventoryFramework_status_thirstBar): CLASS(RscProgress)
         {
@@ -183,7 +195,8 @@ class CLASS(inventoryFramework_ui)
             y = 4.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 4 * GUI_GRID_W;
             h = 1 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(inventoryFramework_status_fatigueBar): CLASS(RscProgress)
         {
@@ -193,6 +206,25 @@ class CLASS(inventoryFramework_ui)
             w = 4.8 * GUI_GRID_W;
             h = 0.5 * GUI_GRID_H;
         };
+        class CLASS(inventoryFramework_status_wetness): RscText
+        {
+	        idc = 1007;
+	        text = "Wetness:";
+	        x = 49.5 * GUI_GRID_W + GUI_GRID_X;
+	        y = 6 * GUI_GRID_H + GUI_GRID_Y;
+	        w = 4.5 * GUI_GRID_W;
+	        h = 1 * GUI_GRID_H;
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
+        };
+        class CLASS(inventoryFramework_status_wetnessBar): CLASS(RscProgress)
+        {
+	        idc = 1018;
+	        x = 49.5 * GUI_GRID_W + GUI_GRID_X;
+	        y = 7 * GUI_GRID_H + GUI_GRID_Y;
+	        w = 4.8 * GUI_GRID_W;
+	        h = 0.5 * GUI_GRID_H;
+        };
         class CLASS(inventoryFramework_status_funds): RscText
         {
             idc = 1009;
@@ -201,47 +233,49 @@ class CLASS(inventoryFramework_ui)
             y = -2.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 13 * GUI_GRID_W;
             h = 2 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(inventoryFramework_status_gasMask): RscText
         {
-            idc = 1016;
-            text = "Gas Mask:";
-            x = 49.5 * GUI_GRID_W + GUI_GRID_X;
-            y = 7 * GUI_GRID_H + GUI_GRID_Y;
-            w = 5 * GUI_GRID_W;
-            h = 1.5 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
+	        idc = 1016;
+	        text = "Gas Mask:";
+	        x = 49.5 * GUI_GRID_W + GUI_GRID_X;
+	        y = 9.5 * GUI_GRID_H + GUI_GRID_Y;
+	        w = 5 * GUI_GRID_W;
+	        h = 1.5 * GUI_GRID_H;
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
-        class CLASS(inventoryFramework_status_gasMask_cartridge): RscText
+        class CLASS(inventoryFramework_status_cartridgesBar): CLASS(RscProgress)
         {
-            idc = 1017;
-            text = "None";
-            x = 53.12 * GUI_GRID_W + GUI_GRID_X;
-            y = 7.25 * GUI_GRID_H + GUI_GRID_Y;
-            w = 4.5 * GUI_GRID_W;
-            h = 1 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
+	        idc = 1017;
+	        x = 49.5 * GUI_GRID_W + GUI_GRID_X;
+	        y = 11 * GUI_GRID_H + GUI_GRID_Y;
+	        w = 4.8 * GUI_GRID_W;
+	        h = 0.5 * GUI_GRID_H;
         };
         class CLASS(inventoryFramework_status_temperature): RscText
         {
-            idc = 1015;
-            text = "Temperature:";
-            x = 49.5 * GUI_GRID_W + GUI_GRID_X;
-            y = 8.5 * GUI_GRID_H + GUI_GRID_Y;
-            w = 6 * GUI_GRID_W;
-            h = 2 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
+	        idc = 1015;
+	        text = "Temperature:";
+	        x = 49.5 * GUI_GRID_W + GUI_GRID_X;
+	        y = 7.5 * GUI_GRID_H + GUI_GRID_Y;
+	        w = 6 * GUI_GRID_W;
+	        h = 2 * GUI_GRID_H;
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(inventoryFramework_status_temperature_exposure): RscText
         {
-            idc = 1010;
-            text = "No ERU";
-            x = 54.12 * GUI_GRID_W + GUI_GRID_X;
-            y = 8.53 * GUI_GRID_H + GUI_GRID_Y;
-            w = 5 * GUI_GRID_W;
-            h = 2 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
+	        idc = 1010;
+	        text = "No ERU";
+	        x = 54.5 * GUI_GRID_W + GUI_GRID_X;
+	        y = 7.5 * GUI_GRID_H + GUI_GRID_Y;
+	        w = 5 * GUI_GRID_W;
+	        h = 2 * GUI_GRID_H;
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(inventoryFramework_status_buffs_list): RscListBox
         {
@@ -250,7 +284,8 @@ class CLASS(inventoryFramework_ui)
             y = 14 * GUI_GRID_H + GUI_GRID_Y;
             w = 6 * GUI_GRID_W;
             h = 2.5 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
             onLBSelChanged = QUOTE(_this call EFUNC(vitals,processStatus));
         };
         class CLASS(inventoryFramework_status_ailments_list): RscListBox
@@ -260,7 +295,8 @@ class CLASS(inventoryFramework_ui)
             y = 14 * GUI_GRID_H + GUI_GRID_Y;
             w = 6 * GUI_GRID_W;
             h = 2.5 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
             onLBSelChanged = QUOTE(_this call EFUNC(vitals,processStatus));
         };
         class CLASS(inventoryFramework_noteBox): RscStructuredText
@@ -270,7 +306,8 @@ class CLASS(inventoryFramework_ui)
             y = 26 * GUI_GRID_H + GUI_GRID_Y;
             w = 40 * GUI_GRID_W;
             h = 4.5 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
     };
 };

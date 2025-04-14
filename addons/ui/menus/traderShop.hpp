@@ -49,7 +49,7 @@ class CLASS(traderShop_ui) {
             y = -0.06;
             w = 0.4375;
             h = 0.08;
-            sizeEx = 0.7 * GUI_GRID_H;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(traderShop_shopFunds_info): RscText {
             idc = 1002;
@@ -57,7 +57,7 @@ class CLASS(traderShop_ui) {
             y = -0.12;
             w = 0.4375;
             h = 0.08;
-            sizeEx = 0.7 * GUI_GRID_H;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(traderShop_icon): RscPicture {
             idc = 1200;
@@ -74,7 +74,7 @@ class CLASS(traderShop_ui) {
             y = -0.03;
             w = 0.5125;
             h = 0.04;
-            sizeEx = 0.7 * GUI_GRID_H;
+            sizeEx = UI_MACRO_TEXTSIZE;
             onLBSelChanged = QUOTE([] call EFUNC(traders,shopVal));
         };
         class CLASS(traderShop_shop_list): RscListBox {
@@ -83,7 +83,7 @@ class CLASS(traderShop_ui) {
             y = 0.02;
             w = 0.5125;
             h = 0.74;
-            sizeEx = 0.7 * GUI_GRID_H;
+            sizeEx = UI_MACRO_TEXTSIZE;
             onLBSelChanged = QUOTE([] call EFUNC(traders,processIcon));
         };
         class CLASS(traderShop_infoBox): RscText {
@@ -92,7 +92,7 @@ class CLASS(traderShop_ui) {
             y = 0.78;
             w = 0.5375;
             h = 0.28;
-            sizeEx = 0.7 * GUI_GRID_H;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(traderShop_icon_infoBox): CLASS(StructuredText) {
             idc = 1004;
