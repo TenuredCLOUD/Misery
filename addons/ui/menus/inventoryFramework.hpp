@@ -208,22 +208,22 @@ class CLASS(inventoryFramework_ui)
         };
         class CLASS(inventoryFramework_status_wetness): RscText
         {
-	        idc = 1007;
-	        text = "Wetness:";
-	        x = 49.5 * GUI_GRID_W + GUI_GRID_X;
-	        y = 6 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 4.5 * GUI_GRID_W;
-	        h = 1 * GUI_GRID_H;
+            idc = 1007;
+            text = "Wetness:";
+            x = 49.5 * GUI_GRID_W + GUI_GRID_X;
+            y = 6 * GUI_GRID_H + GUI_GRID_Y;
+            w = 4.5 * GUI_GRID_W;
+            h = 1 * GUI_GRID_H;
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(inventoryFramework_status_wetnessBar): CLASS(RscProgress)
         {
-	        idc = 1018;
-	        x = 49.5 * GUI_GRID_W + GUI_GRID_X;
-	        y = 7 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 4.8 * GUI_GRID_W;
-	        h = 0.5 * GUI_GRID_H;
+            idc = 1018;
+            x = 49.5 * GUI_GRID_W + GUI_GRID_X;
+            y = 7 * GUI_GRID_H + GUI_GRID_Y;
+            w = 4.8 * GUI_GRID_W;
+            h = 0.5 * GUI_GRID_H;
         };
         class CLASS(inventoryFramework_status_funds): RscText
         {
@@ -238,42 +238,42 @@ class CLASS(inventoryFramework_ui)
         };
         class CLASS(inventoryFramework_status_gasMask): RscText
         {
-	        idc = 1016;
-	        text = "Gas Mask:";
-	        x = 49.5 * GUI_GRID_W + GUI_GRID_X;
-	        y = 9.5 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 5 * GUI_GRID_W;
-	        h = 1.5 * GUI_GRID_H;
+            idc = 1016;
+            text = "Gas Mask:";
+            x = 49.5 * GUI_GRID_W + GUI_GRID_X;
+            y = 9.5 * GUI_GRID_H + GUI_GRID_Y;
+            w = 5 * GUI_GRID_W;
+            h = 1.5 * GUI_GRID_H;
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(inventoryFramework_status_cartridgesBar): CLASS(RscProgress)
         {
-	        idc = 1017;
-	        x = 49.5 * GUI_GRID_W + GUI_GRID_X;
-	        y = 11 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 4.8 * GUI_GRID_W;
-	        h = 0.5 * GUI_GRID_H;
+            idc = 1017;
+            x = 49.5 * GUI_GRID_W + GUI_GRID_X;
+            y = 11 * GUI_GRID_H + GUI_GRID_Y;
+            w = 4.8 * GUI_GRID_W;
+            h = 0.5 * GUI_GRID_H;
         };
         class CLASS(inventoryFramework_status_temperature): RscText
         {
-	        idc = 1015;
-	        text = "Temperature:";
-	        x = 49.5 * GUI_GRID_W + GUI_GRID_X;
-	        y = 7.5 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 6 * GUI_GRID_W;
-	        h = 2 * GUI_GRID_H;
+            idc = 1015;
+            text = "Temperature:";
+            x = 49.5 * GUI_GRID_W + GUI_GRID_X;
+            y = 7.5 * GUI_GRID_H + GUI_GRID_Y;
+            w = 6 * GUI_GRID_W;
+            h = 2 * GUI_GRID_H;
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(inventoryFramework_status_temperature_exposure): RscText
         {
-	        idc = 1010;
-	        text = "No ERU";
-	        x = 54.5 * GUI_GRID_W + GUI_GRID_X;
-	        y = 7.5 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 5 * GUI_GRID_W;
-	        h = 2 * GUI_GRID_H;
+            idc = 1010;
+            text = "No ERU";
+            x = 54.5 * GUI_GRID_W + GUI_GRID_X;
+            y = 7.5 * GUI_GRID_H + GUI_GRID_Y;
+            w = 5 * GUI_GRID_W;
+            h = 2 * GUI_GRID_H;
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
