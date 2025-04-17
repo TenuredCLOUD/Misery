@@ -33,9 +33,9 @@ player setVariable [QEGVAR(psychosis,state), MACRO_PLAYER_DEFAULTS_LOW];
 player setVariable [QEGVAR(gasmask,cartridgeEfficiency), MACRO_PLAYER_DEFAULTS_HIGH];
 player setVariable [QEGVAR(vitals,buffs), []];
 player setVariable [QEGVAR(vitals,ailments), []];
+player setVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
 
 // Banking data is not reset unless fresh player.
 if (_newSave) then {
-    player setVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
     player setVariable [QEGVAR(currency,bankedFunds), MACRO_PLAYER_DEFAULTS_LOW];
 };
