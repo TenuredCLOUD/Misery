@@ -22,10 +22,7 @@
     QEGVAR(vitals,debuffs), \
     QEGVAR(currency,funds), \
     QEGVAR(currency,bankedFunds), \
-    QEGVAR(gasmask,cartridgeEfficiency), \
-    QEGVAR(survival,turbidWaterLogged), \
-    QEGVAR(survival,infectionLogged), \
-    QEGVAR(survival,toxicityLogged)
+    QEGVAR(gasmask,cartridgeEfficiency)
 
 #define MACRO_DEFAULT_ACE_DAMAGE \
     "{""ace_medical_openwounds"": {}, ""ace_medical_bloodpressure"": [79, 119], ""ace_medical_ivbags"": null, ""ace_medical_inpain"": false, ""ace_medical_medications"": [], ""ace_medical_tourniquets"": [0, 0, 0, 0, 0, 0], ""ace_medical_heartrate"": 79.2222, ""ace_medical_pain"": 0, ""ace_medical_bloodvolume"": 6, ""ace_medical_stitchedwounds"": {}, ""ace_medical_fractures"": [0, 0, 0, 0, 0, 0], ""ace_medical_triagelevel"": 0, ""ace_medical_bodypartdamage"": [0, 0, 0, 0, 0, 0], ""ace_medical_hemorrhage"": 0, ""ace_medical_occludedmedications"": null, ""ace_medical_triagecard"": [], ""ace_medical_bandagedwounds"": {}, ""ace_medical_peripheralresistance"": 100, ""ace_medical_painsuppress"": 0, ""ace_medical_statemachinestate"": ""Default""}"

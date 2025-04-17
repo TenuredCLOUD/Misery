@@ -24,9 +24,6 @@
  *     13: Currency <NUMBER>
  *     14: Banked Currency <NUMBER>
  *     18: Cartridge Efficiency <NUMBER>
- *     19: Parasites Logged <BOOL>
- *     20: Infection Logged <BOOL>
- *     21: Toxicity Logged <BOOL>
  *
  * Example:
  * [] call misery_common_fnc_getPlayerVariables
@@ -62,9 +59,4 @@ private _bankedFunds = player getVariable [QEGVAR(currency,bankedFunds), MACRO_P
 // Gas Mask
 private _cartridgeEfficiency = player getVariable [QEGVAR(gasmask,cartridgeEfficiency), MACRO_PLAYER_DEFAULTS_HIGH];
 
-// Relog states
-private _parasitesLogged = player getVariable [QEGVAR(survival,turbidWaterLogged), false];
-private _infectionLogged = player getVariable [QEGVAR(survival,infectionLogged), false];
-private _toxicityLogged = player getVariable [QEGVAR(survival,toxicityLogged), false];
-
-[_hunger, _thirst, _energyDeficit, _thermalIndex, _exposure, _wetness, _radiation, _infection, _parasites, _toxicity, _psychosis, _buffs, _ailments, _funds, _bankedFunds, _cartridgeEfficiency, _parasitesLogged, _infectionLogged, _toxicityLogged]
+[_hunger, _thirst, _energyDeficit, _thermalIndex, _exposure, _wetness, _radiation, _infection, _parasites, _toxicity, _psychosis, _buffs, _ailments, _funds, _bankedFunds, _cartridgeEfficiency]
