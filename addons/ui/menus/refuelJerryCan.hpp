@@ -38,7 +38,7 @@ class CLASS(refuelJerryCan_name): RscText
     y = 4.59 * GUI_GRID_H + GUI_GRID_Y;
     w = 9.5 * GUI_GRID_W;
     h = 1.5 * GUI_GRID_H;
-    sizeEx = 0.75 * GUI_GRID_H;
+    sizeEx = UI_MACRO_TEXTSIZE;
 };
 class CLASS(refuelJerryCan_icon_2): RscPicture
 {
@@ -92,7 +92,7 @@ class CLASS(refuelJerryCan_infoBox): RscText
     y = 18.28 * GUI_GRID_H + GUI_GRID_Y;
     w = 37.5 * GUI_GRID_W;
     h = 6 * GUI_GRID_H;
-    sizeEx = 0.75 * GUI_GRID_H;
+    sizeEx = UI_MACRO_TEXTSIZE;
 };
     };
         };

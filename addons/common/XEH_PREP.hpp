@@ -13,6 +13,7 @@ PREP(itemDecrement);
 PREP(itemSwap);
 PREP(listPlayers);
 PREP(lowerCaseArray);
+PREP(menuBlurEffect);
 PREP(modLoadedPrep);
 PREP(nearCraftingStation);
 PREP(nearEntities);

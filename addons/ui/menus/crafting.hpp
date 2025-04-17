@@ -1,6 +1,6 @@
 class CLASS(craftingFramework_ui) {
     idd = 982376;
-    onLoad = QUOTE([] call EFUNC(crafting,recipesListed); [] call EFUNC(crafting,showIcon));
+    onLoad = QUOTE([982376] call EFUNC(common,menuBlurEffect); [] call EFUNC(crafting,recipesListed); [] call EFUNC(crafting,showIcon));
 
     class ControlsBackground {
         class CLASS(crafting_background): CLASS(RscText) {
@@ -18,8 +18,8 @@ class CLASS(craftingFramework_ui) {
             y = 0 * GUI_GRID_H + GUI_GRID_Y;
             w = 22 * GUI_GRID_W;
             h = 2.5 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
             font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(crafting_itemSelectionTip): RscText {
             idc = -1;
@@ -28,8 +28,8 @@ class CLASS(craftingFramework_ui) {
             y = 2 * GUI_GRID_H + GUI_GRID_Y;
             w = 6 * GUI_GRID_W;
             h = 2.5 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
             font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(crafting_noteBox): RscText {
             idc = 1001;
@@ -37,8 +37,8 @@ class CLASS(craftingFramework_ui) {
             y = 20 * GUI_GRID_H + GUI_GRID_Y;
             w = 46.5 * GUI_GRID_W;
             h = 4 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
             font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(crafting_icon): RscPicture {
             idc = 1501;
@@ -56,8 +56,8 @@ class CLASS(craftingFramework_ui) {
             y = 4 * GUI_GRID_H + GUI_GRID_Y;
             w = 16.5 * GUI_GRID_W;
             h = 14 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
             font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(crafting_button): RscButton {
             idc = 1600;
@@ -66,8 +66,8 @@ class CLASS(craftingFramework_ui) {
             y = 6.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;
             h = 1.5 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
             font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
             colorBackground[] = {0.2, 0.2, 0.2, 0.7};
             colorFocused[] = {0.5, 0.5, 0.5, 0.7};
             colorActive[] = {0.5, 0.5, 0.5, 0.7};
@@ -80,8 +80,8 @@ class CLASS(craftingFramework_ui) {
             y = 9 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;
             h = 1.5 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
             font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
             colorBackground[] = {0.2, 0.2, 0.2, 0.7};
             colorFocused[] = {0.5, 0.5, 0.5, 0.7};
             colorActive[] = {0.5, 0.5, 0.5, 0.7};
@@ -94,8 +94,8 @@ class CLASS(craftingFramework_ui) {
             y = 11.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;
             h = 1.5 * GUI_GRID_H;
-            sizeEx = 0.7 * GUI_GRID_H;
             font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
             colorBackground[] = {0.2, 0.2, 0.2, 0.7};
             colorFocused[] = {0.5, 0.5, 0.5, 0.7};
             colorActive[] = {0.5, 0.5, 0.5, 0.7};

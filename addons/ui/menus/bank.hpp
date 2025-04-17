@@ -26,7 +26,7 @@ class CLASS(banking_ui) {
             y = 0.2;
             w = 0.3375;
             h = 0.08;
-            sizeEx = 0.7 * GUI_GRID_H;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(bank_playerbank): RscText {
             idc = 1002;
@@ -34,7 +34,7 @@ class CLASS(banking_ui) {
             y = 0.26;
             w = 0.3375;
             h = 0.08;
-            sizeEx = 0.7 * GUI_GRID_H;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(bank_phoenixFund): RscText {
             idc = 1003;
@@ -42,7 +42,7 @@ class CLASS(banking_ui) {
             y = 0.32;
             w = 0.3375;
             h = 0.08;
-            sizeEx = 0.7 * GUI_GRID_H;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(bank_inputBox_funds): RscText {
             idc = 1004;
@@ -50,7 +50,7 @@ class CLASS(banking_ui) {
             y = 0.4;
             w = 0.35;
             h = 0.06;
-            sizeEx = 0.7 * GUI_GRID_H;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
     };
     class Controls {
@@ -96,7 +96,7 @@ class CLASS(banking_ui) {
             y = 0.4;
             w = 0.275;
             h = 0.06;
-            sizeEx = 0.7 * GUI_GRID_H;
+            sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(bank_claimSupport): RscButton {
             idc = 1603;

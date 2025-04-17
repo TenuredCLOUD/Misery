@@ -75,7 +75,7 @@ class CLASS(medicalTreatment_infoBox): RscText
     x = 1.5 * GUI_GRID_W + GUI_GRID_X;
     y = 16.5 * GUI_GRID_H + GUI_GRID_Y;
     w = 37.5 * GUI_GRID_W;
-    sizeEx = 0.75 * GUI_GRID_H;
+    sizeEx = UI_MACRO_TEXTSIZE;
 };
     };
         };
