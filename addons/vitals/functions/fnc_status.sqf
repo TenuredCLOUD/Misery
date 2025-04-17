@@ -30,10 +30,12 @@ disableSerialization;
     private _hungerBar = _vitalsDisplay displayCtrl 1012;
     private _thirstBar = _vitalsDisplay displayCtrl 1013;
     private _fatigueBar = _vitalsDisplay displayCtrl 1014;
+    private _wetnessText = _vitalsDisplay displayCtrl 1007;
+    private _wetnessBar = _vitalsDisplay displayCtrl 1018;
     private _buffsList = _vitalsDisplay displayCtrl 1501;
     private _ailmentsList = _vitalsDisplay displayCtrl 1502;
 
-    call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "_thermalIndex", "_exposure", "_radiation", "_infection", "_parasites", "_toxicity", "_psychosis", "_buffs", "_ailments", "_funds", "", "", "", "", "_cartridgeEfficiency"];
+    call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "_thermalIndex", "_exposure", "_wetness", "_radiation", "_infection", "_parasites", "_toxicity", "_psychosis", "_buffs", "_ailments", "_funds", "", "_cartridgeEfficiency"];
     call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "_skinProtection", "_respiratoryProtection", "_eyeProtection", "_hearingProtection"];
 
     lbClear _buffsList;
@@ -134,5 +136,14 @@ disableSerialization;
     _thirstBar progressSetPosition _thirst;
     private _fatigueValue = [getFatigue player, player getVariable ["ace_advanced_fatigue_aimFatigue", 0]] select (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled});
     _fatigueBar progressSetPosition _fatigueValue;
+
+    if (_wetness <= 0) then {
+        _wetnessText ctrlShow false;
+        _wetnessBar ctrlShow false;
+    } else {
+        _wetnessText ctrlShow true;
+        _wetnessBar ctrlShow true;
+        _wetnessBar progressSetPosition _wetness;
+    };
 
 }, 0.1, []] call CBA_fnc_addPerFrameHandler;

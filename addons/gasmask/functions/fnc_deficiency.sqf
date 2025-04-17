@@ -18,7 +18,7 @@
     params ["_args", "_handle"];
 
     call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "", "_respiratory"];
-    call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "_cartridgeEfficiency"];
+    call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "_cartridgeEfficiency"];
 
     if (_scba >= 1) exitWith {};
     if (_gasmask < 1 && _respiratory < 1) exitWith {};

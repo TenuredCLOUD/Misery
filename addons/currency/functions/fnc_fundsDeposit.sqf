@@ -14,7 +14,7 @@
  *
 */
 
-call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
+call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
 private _amount = parseNumber (ctrlText ((findDisplay 483729) displayCtrl 1400));
 

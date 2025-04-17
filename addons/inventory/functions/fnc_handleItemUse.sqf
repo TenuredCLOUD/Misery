@@ -73,7 +73,7 @@ if (_animation isNotEqualTo "") then {
         "_removeOnUse", "_code", "_dialog"
     ];
 
-    call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "", "_exposure", "_radiation", "_infection", "_parasites", "_toxicity", "_psychosis", "_buffs", "_ailments"];
+    call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "", "_exposure", "", "_radiation", "_infection", "_parasites", "_toxicity", "_psychosis", "_buffs", "_ailments"];
 
     if (_hungerValue isNotEqualTo 0) then {
         player setVariable [QEGVAR(survival,hunger), (_hunger + _hungerValue / 100)];
