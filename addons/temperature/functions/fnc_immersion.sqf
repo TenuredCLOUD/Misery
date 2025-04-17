@@ -15,7 +15,7 @@
  * Public: No
 */
 
-call EFUNC(common,getPlayerVariables) params ["", "", "", "", "_exposure", "", "_infection", "_parasites"];
+call EFUNC(common,getPlayerVariables) params ["", "", "", "", "_exposure", "", "", "_infection", "_parasites"];
 call EFUNC(protection,totalProtection) params ["_gasMask", "_scba"];
 
 // Fever

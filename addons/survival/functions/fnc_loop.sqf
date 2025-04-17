@@ -21,7 +21,7 @@
 
     if (!alive player) exitWith {};
 
-    call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "_thermalIndex", "_exposure", "_radiation", "_infection", "_parasites", "_toxicity", "", "", "_ailments"];
+    call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "_thermalIndex", "_exposure", "_wetness", "_radiation", "_infection", "_parasites", "_toxicity", "", "", "_ailments"];
 
     private _isMultiplayer = isMultiplayer;
     private _decrementValue = 0.0001;
@@ -41,7 +41,7 @@
     private _randomNutrientSelection = selectRandom ["hunger", "thirst"];
     [-_decrementValue, _randomNutrientSelection] call EFUNC(common,addStatusModifier);
 
-    [_thermalIndex, _exposure, _parasites, _infection] call EFUNC(temperature,core) params ["_exposureModifier", "_hungerModifier", "_thirstModifier", "_thermalIndexModifier", "_wetnessModifier"];
+    [_thermalIndex, _exposure, _wetness, _parasites, _infection] call EFUNC(temperature,core) params ["_exposureModifier", "_hungerModifier", "_thirstModifier", "_thermalIndexModifier", "_wetnessModifier"];
     [_exposureModifier, "exposure"] call EFUNC(common,addStatusModifier);
     [-_hungerModifier, "hunger"] call EFUNC(common,addStatusModifier);
     [-_thirstModifier, "thirst"] call EFUNC(common,addStatusModifier);
