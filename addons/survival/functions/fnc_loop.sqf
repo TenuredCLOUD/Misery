@@ -23,6 +23,18 @@
 
     call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "_thermalIndex", "_exposure", "_radiation", "_infection", "_parasites", "_toxicity", "", "", "_ailments"];
 
+    private _damaged = false;
+
+    if ("ace_medical" call EFUNC(common,isModLoaded)) then {
+        if (player call ace_medical_fnc_isInjured) then {
+        _damaged = true;
+        };
+    } else {
+        if ((damage player) > 0.25) then {
+            _damaged = true;
+        };
+    };
+
     private _isMultiplayer = isMultiplayer;
     private _decrementValue = 0.0001;
 
@@ -46,7 +58,7 @@
     [-_hungerModifier, "hunger"] call EFUNC(common,addStatusModifier);
     [-_thirstModifier, "thirst"] call EFUNC(common,addStatusModifier);
 
-    [_ailments, _parasites, _toxicity, _infection, _isMultiplayer] call FUNC(handleAilments);
+    [_damaged, _hunger, _thirst, _ailments, _parasites, _toxicity, _infection, _isMultiplayer] call FUNC(handleAilments);
     [_decrementValue, _energyDeficit, _isMultiplayer] call FUNC(handleEnergy);
     [_decrementValue, _parasites, _hunger] call FUNC(handleHunger);
     [_radiation] call FUNC(handleRadiation);
