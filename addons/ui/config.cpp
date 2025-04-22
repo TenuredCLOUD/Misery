@@ -18,6 +18,7 @@ class CfgPatches {
 #include "\z\misery\addons\ui\menus\fontChange.hpp"
 #include "\z\misery\addons\ui\menus\sleep.hpp"
 #include "\z\misery\addons\ui\menus\crafting.hpp"
+#include "\z\misery\addons\ui\menus\fishing.hpp"
 #include "\z\misery\addons\ui\menus\cooking.hpp"
 #include "\z\misery\addons\ui\menus\hydrology.hpp"
 #include "\z\misery\addons\ui\menus\medicalTreatment.hpp"

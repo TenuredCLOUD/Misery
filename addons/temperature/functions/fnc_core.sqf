@@ -19,19 +19,17 @@
  *
  *
  * Example:
- * [_thermalIndex, _exposure, _parasites, _infection] call misery_temperature_fnc_core;
+ * [_thermalIndex, _exposure, _wetness, _parasites, _infection] call misery_temperature_fnc_core;
  *
  * Public: No
 */
 
-params ["_thermalIndex", "_exposure", "_parasites", "_infection"];
+params ["_thermalIndex", "_exposure", "_wetness", "_parasites", "_infection"];
 
 if !(GVAR(enabled)) exitWith {[0, 0, 0, 0, 0]};
 
 // Get environmental data
 call FUNC(environment) params ["_airTemp", "_seaTemp"];
-
-private _wetness = player getVariable [QEGVAR(temperature,wetness), MACRO_PLAYER_DEFAULTS_LOW]; // TODO: Add to getPlayerVariables func & pass as argument ^
 
 // Calculate base temperature impact (-1 to 1)
 private _tempDelta = _thermalIndex - TEMP_NEUTRAL;
