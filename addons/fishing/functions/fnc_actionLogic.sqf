@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: TenuredCLOUD
+ * Author: TenuredCLOUD, SlayNoMore
  * Creates fishing pole holding logic for fishing action
  *
  * Arguments:
