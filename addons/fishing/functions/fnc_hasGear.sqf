@@ -14,4 +14,4 @@
  *
 */
 
-[QCLASS(fishingPole), QCLASS(fishingSpool), QCLASS(fishhook), QCLASS(worms)] call EFUNC(common,hasItem)
+[[QCLASS(fishingPole), QCLASS(fishingSpool), QCLASS(fishhook), QCLASS(worms)]] call EFUNC(common,hasItem);

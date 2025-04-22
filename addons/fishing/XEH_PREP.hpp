@@ -1,3 +1,10 @@
 PREP(action);
+PREP(actionLogic);
 PREP(canFish);
+PREP(castLine);
+PREP(castLineCheck);
+PREP(exit);
 PREP(hasGear);
+PREP(pullRod);
+PREP(reelIn);
+PREP(reelOut);
