@@ -24,19 +24,18 @@ player setVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH];
 player setVariable [QEGVAR(survival,energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
 player setVariable [QEGVAR(temperature,thermalIndex), MACRO_PLAYER_DEFAULTS_TEMP];
 player setVariable [QEGVAR(temperature,exposure), MACRO_PLAYER_DEFAULTS_LOW];
+player setVariable [QEGVAR(temperature,wetness), MACRO_PLAYER_DEFAULTS_LOW];
 player setVariable [QEGVAR(survival,radiation), MACRO_PLAYER_DEFAULTS_LOW];
 player setVariable [QEGVAR(survival,infection), MACRO_PLAYER_DEFAULTS_LOW];
 player setVariable [QEGVAR(survival,parasites), MACRO_PLAYER_DEFAULTS_LOW];
 player setVariable [QEGVAR(survival,toxicity), MACRO_PLAYER_DEFAULTS_LOW];
 player setVariable [QEGVAR(psychosis,state), MACRO_PLAYER_DEFAULTS_LOW];
+player setVariable [QEGVAR(gasmask,cartridgeEfficiency), MACRO_PLAYER_DEFAULTS_HIGH];
 player setVariable [QEGVAR(vitals,buffs), []];
-player setVariable [QEGVAR(vitals,debuffs), []];
-player setVariable [QEGVAR(cooking,knowledge), []];
-player setVariable [QEGVAR(crafting,knowledge), []];
-player setVariable [QEGVAR(hydrology,knowledge), []];
+player setVariable [QEGVAR(vitals,ailments), []];
+player setVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
 
 // Banking data is not reset unless fresh player.
 if (_newSave) then {
-    player setVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
     player setVariable [QEGVAR(currency,bankedFunds), MACRO_PLAYER_DEFAULTS_LOW];
 };

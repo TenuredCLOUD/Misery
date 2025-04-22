@@ -27,11 +27,8 @@ if (random 100 < GVAR(chance)) exitWith {
 
 ["ailment","Possible Infection...", QPATHTOEF(icons,data\zedhand_ca.paa), ""] call EFUNC(vitals,addBuffOrAilment);
 
-player setVariable [QCLASS(infectionLogged), true];
-
 [{
     ["ailment", "Possible Infection..."] call EFUNC(vitals,removeBuffOrAilment);
-    player setVariable [QCLASS(infectionLogged), nil];
     private _infection = player getVariable [QEGVAR(survival,infection), MACRO_PLAYER_DEFAULTS_LOW];
     player setVariable [QEGVAR(survival,infection), _infection + ((random 10) / 100)];
 }, [], 180] call CBA_fnc_waitAndExecute;
