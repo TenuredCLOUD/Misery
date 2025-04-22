@@ -100,24 +100,21 @@ class CLASS(fishing_ui)
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
-        class CLASS(fishing_progressBar_tension): CLASS(RscProgress
+        class CLASS(fishing_progressBar_tension): CLASS(RscProgress)
         {
             idc = 1011;
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
             y = 8.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 27.5 * GUI_GRID_W;
             h = 1 * GUI_GRID_H;
-            onLoad = QUOTE(findDisplay 982387 displayCtrl 1010 ctrlShow false);
         };
-        class CLASS(fishing_progressBar_lineOut): CLASS(RscProgress
+        class CLASS(fishing_progressBar_lineOut): CLASS(RscProgress)
         {
             idc = 1013;
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
             y = 12 * GUI_GRID_H + GUI_GRID_Y;
             w = 27.5 * GUI_GRID_W;
             h = 1 * GUI_GRID_H;
-            onLoad = QUOTE(findDisplay 982387 displayCtrl 1011 ctrlShow false);
         };
     };
 };
-
