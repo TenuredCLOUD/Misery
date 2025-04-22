@@ -81,9 +81,9 @@ class CLASS(fishing_ui)
             colorFocused[] = {0.5,0.5,0.5,0.7};
             text = "Exit";
             x = 31.5 * GUI_GRID_W + GUI_GRID_X;
-	        y = 18 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 7.5 * GUI_GRID_W;
-	        h = 1.5 * GUI_GRID_H;
+            y = 18 * GUI_GRID_H + GUI_GRID_Y;
+            w = 7.5 * GUI_GRID_W;
+            h = 1.5 * GUI_GRID_H;
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
             colorBackground[] = {0.2,0.2,0.2,0.7};

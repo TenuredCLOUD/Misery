@@ -20,10 +20,6 @@ if (!isNull _display) then {
     closeDialog 2;
 };
 
-if (!isNil QGVAR(actionLogic)) then {
-    deleteVehicle GVAR(actionLogic);
-};
-
 GVAR(lineOut) = nil;
 GVAR(lineTension) = nil;
 GVAR(isSnagged) = nil;
