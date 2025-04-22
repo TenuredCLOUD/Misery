@@ -27,7 +27,7 @@
 
     if ("ace_medical" call EFUNC(common,isModLoaded)) then {
         if (player call ace_medical_fnc_isInjured) then {
-        _damaged = true;
+            _damaged = true;
         };
     } else {
         if ((damage player) > 0.25) then {
