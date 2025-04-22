@@ -38,14 +38,10 @@ playSound3D [QPATHTOEF(audio,sounds\items\drink.ogg), player, false, getPosASL p
 
 [0.015, "radiation"] call EFUNC(common,addStatusModifier);
 
-if ((random 100) <= EGVAR(survival,turbidWaterChance)) then {
-    ctrlSetText [1001, "You gulped down foul water. It quenched your thirst, but you feel sick..."];
-
-    [{
+if (EGVAR(survival,ailments)) then {
+    if ((random 100) <= EGVAR(survival,turbidWaterChance)) then {
         [0.01, "parasites"] call EFUNC(common,addStatusModifier);
-    }, [], 180] call CBA_fnc_waitAndExecute;
-} else {
-    ctrlSetText [1001, "You gulped down foul water... It quenched your thirst."];
+    };
 };
 
 _fillButton ctrlShow true;

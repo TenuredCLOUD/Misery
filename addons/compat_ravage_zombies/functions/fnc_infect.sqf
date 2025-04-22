@@ -18,17 +18,7 @@ params ["_unit", "_source", "_damage", "_instigator"];
 // Must be a player, on foot being attacked by a zombie.
 if !(isPlayer _unit || isNull objectParent player || _instigator isKindOf "zombie") exitWith {};
 
-if (random 100 < GVAR(chance)) exitWith {
-    ["ailment","Possible Infection...", QPATHTOEF(icons,data\zedhand_ca.paa), ""] call EFUNC(vitals,addBuffOrAilment);
-    [{
-        ["ailment", "Possible Infection..."] call EFUNC(vitals,removeBuffOrAilment);
-    }, [], 180] call CBA_fnc_waitAndExecute;
+if ((random 100) <= GVAR(chance)) exitWith {
+    [0.01, "infection"] call EFUNC(common,addStatusModifier);
 };
 
-["ailment","Possible Infection...", QPATHTOEF(icons,data\zedhand_ca.paa), ""] call EFUNC(vitals,addBuffOrAilment);
-
-[{
-    ["ailment", "Possible Infection..."] call EFUNC(vitals,removeBuffOrAilment);
-    private _infection = player getVariable [QEGVAR(survival,infection), MACRO_PLAYER_DEFAULTS_LOW];
-    player setVariable [QEGVAR(survival,infection), _infection + ((random 10) / 100)];
-}, [], 180] call CBA_fnc_waitAndExecute;
