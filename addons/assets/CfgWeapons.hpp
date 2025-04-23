@@ -55,7 +55,6 @@ class CfgWeapons {
         displayName = "$STR_MISERY_FISHINGSPOOL_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_FISHINGSPOOL_DESCRIPTION";
         picture = QPATHTOF(data\icons\fishingspool.paa);
-        model = QPATHTOF(data\models\fishingspool.p3d);
         scope = 2;
         scopeCurator = 2;
 
