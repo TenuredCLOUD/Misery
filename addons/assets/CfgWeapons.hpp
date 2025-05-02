@@ -9,7 +9,6 @@ class CfgWeapons {
         type = 4096;
         detectRange = -1;
         scopeCurator = 2;
-        simulation = "ItemMineDetector";
     };
 
     class CLASS(pickaxe): CLASS(ItemCore) {
