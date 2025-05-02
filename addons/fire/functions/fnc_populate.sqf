@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Populates fire crafting GUI combo boxes and updates fuel progress bar
+ * Populates fire crafting GUI combo boxes
  *
  * Arguments:
  * None
