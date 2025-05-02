@@ -1,4 +1,10 @@
-PREP(campfireBig);
-PREP(campfireSmall);
-PREP(fireRainSafe);
-PREP(lightFire);
+PREP(addData);
+PREP(burnMonitor);
+PREP(condition);
+PREP(craft);
+PREP(createObject);
+PREP(extinguish);
+PREP(manage);
+PREP(populate);
+PREP(rainSafe);
+PREP(reignite);

@@ -25,7 +25,8 @@ if (_daytime >= 5 && _daytime < 18) exitWith {
 };
 
 // Exit if near fire.
-if (player call EFUNC(common,nearFire)) exitWith {
+call EFUNC(common,nearFire) params ["", "_isInflamed"];
+if (_isInflamed) exitWith {
     [QUOTE(COMPONENT_BEAUTIFIED), "No psychosis increase at night due to being near fire."] call EFUNC(common,debugMessage);
     _nightAlteration
 };
