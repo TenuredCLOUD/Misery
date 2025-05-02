@@ -4,13 +4,13 @@
  * Populates fire crafting GUI combo boxes and updates fuel progress bar
  *
  * Arguments:
- * 0: Display <DISPLAY>
+ * None
  *
  * Return Value:
  * None
  *
  * Example:
- * [findDisplay 982388] call misery_fire_fnc_populate
+ * [] call misery_fire_fnc_populate
  */
 
 [{!isNull findDisplay 982388},
