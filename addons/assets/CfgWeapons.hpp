@@ -1,15 +1,7 @@
 class CfgWeapons {
-    class InventoryItem_Base_F;
-    class InventoryFirstAidKitItem_Base_F;
-    class MedikitItem;
-    class SlotInfo;
-    class ItemCore;
-
-    class CLASS(ItemCore): ItemCore {
-        type = 4096;
-        detectRange = -1;
-        scopeCurator = 2;
-    };
+    class CBA_MiscItem;
+    class CBA_MiscItem_ItemInfo;
+    class CLASS(ItemCore): CBA_MiscItem {};
 
     class CLASS(pickaxe): CLASS(ItemCore) {
         displayName = "$STR_MISERY_PICKAXE_DISPLAYNAME";
@@ -19,7 +11,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 85;
         };
     };
@@ -32,7 +24,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 85;
         };
     };
@@ -45,7 +37,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 30;
         };
     };
@@ -57,7 +49,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 5;
         };
     };
@@ -70,7 +62,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
         };
     };
@@ -82,7 +74,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
         };
     };
@@ -94,7 +86,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 5;
         };
     };
@@ -106,7 +98,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0.5;
         };
     };
@@ -119,7 +111,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 5;
         };
     };
@@ -132,7 +124,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 8;
         };
     };
@@ -144,7 +136,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 5;
         };
     };
@@ -158,7 +150,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 2;
         };
     };
@@ -170,7 +162,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0.5;
         };
     };
@@ -182,7 +174,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 2;
         };
     };
@@ -195,7 +187,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 8;
         };
     };
@@ -208,7 +200,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 4;
         };
     };
@@ -221,7 +213,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
         };
     };
@@ -234,7 +226,7 @@ class CfgWeapons {
         picture = QPATHTOF(data\icons\canteen.paa);
         model = "a3\structures_f_epa\items\food\canteen_f.p3d";
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 30;
         };
     };
@@ -247,7 +239,7 @@ class CfgWeapons {
         picture = QPATHTOF(data\icons\waterbottle.paa);
         model = "a3\structures_f_epa\items\food\bottleplastic_v2_f.p3d";
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 15;
         };
     };
@@ -260,7 +252,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 4;
         };
     };
@@ -273,7 +265,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 2;
         };
     };
@@ -286,7 +278,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 4;
         };
     };
@@ -299,7 +291,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
         };
     };
@@ -312,7 +304,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
         };
     };
@@ -325,7 +317,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 50;
         };
     };
@@ -338,7 +330,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 50;
         };
     };
@@ -351,7 +343,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 3;
         };
     };
@@ -364,7 +356,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 3;
         };
     };
@@ -377,7 +369,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 3;
         };
     };
@@ -390,7 +382,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 3;
         };
     };
@@ -403,7 +395,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 3;
         };
     };
@@ -416,7 +408,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 3;
         };
     };
@@ -429,7 +421,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 3;
         };
     };
@@ -442,7 +434,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 3;
         };
     };
@@ -455,7 +447,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 3;
         };
     };
@@ -468,7 +460,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 3;
         };
     };
@@ -481,7 +473,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 8;
         };
     };
@@ -493,7 +485,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 8;
         };
     };
@@ -506,7 +498,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 50;
         };
     };
@@ -520,7 +512,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 90;
         };
     };
@@ -533,7 +525,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 3;
         };
     };
@@ -546,7 +538,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 5;
         };
     };
@@ -559,7 +551,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 5;
         };
     };
@@ -572,7 +564,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 5;
         };
     };
@@ -584,7 +576,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
         };
     };
@@ -596,7 +588,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
         };
     };
@@ -607,7 +599,7 @@ class CfgWeapons {
         picture = QPATHTOF(data\icons\gasmask.paa);
         scope = 2;
         scopeCurator = 2;
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 25;
         };
     };
@@ -619,7 +611,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 20;
         };
     };
@@ -631,7 +623,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 20;
         };
     };
@@ -644,7 +636,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 18;
         };
     };
@@ -657,7 +649,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 15;
         };
     };
@@ -670,7 +662,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 15;
         };
     };
@@ -683,7 +675,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 25;
         };
     };
@@ -696,7 +688,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 40;
         };
     };
@@ -708,7 +700,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
         };
     };
@@ -721,7 +713,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
         };
     };
@@ -733,7 +725,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 15;
         };
     };
@@ -745,7 +737,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 8;
         };
     };
@@ -757,7 +749,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
         };
     };
@@ -769,7 +761,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
         };
     };
@@ -781,7 +773,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 15;
         };
     };
@@ -793,7 +785,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 15;
         };
     };
@@ -805,7 +797,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
         };
     };
@@ -817,7 +809,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 15;
         };
     };
@@ -830,7 +822,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 5;
         };
     };
@@ -842,7 +834,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 5;
         };
     };
@@ -854,7 +846,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 15;
         };
     };
@@ -866,7 +858,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 35;
         };
     };
@@ -878,7 +870,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 15;
         };
     };
@@ -890,7 +882,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 10;
         };
     };
@@ -902,7 +894,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 25;
         };
     };
@@ -914,7 +906,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 30;
         };
     };
@@ -926,7 +918,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 20;
         };
     };
@@ -939,7 +931,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 35;
         };
     };
@@ -951,7 +943,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 25;
         };
     };
@@ -964,7 +956,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 50;
         };
     };
@@ -977,7 +969,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 85;
         };
     };
@@ -989,7 +981,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 5;
         };
     };
@@ -1002,7 +994,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 30;
         };
     };
@@ -1015,7 +1007,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 100;
         };
     };
@@ -1028,7 +1020,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0;
         };
     };
@@ -1040,7 +1032,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0;
         };
     };
@@ -1053,7 +1045,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 35;
         };
     };
@@ -1066,7 +1058,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 75;
         };
     };
@@ -1079,7 +1071,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 225;
         };
     };
@@ -1091,7 +1083,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0;
         };
     };
@@ -1104,7 +1096,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 15;
         };
     };
@@ -1117,7 +1109,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 35;
         };
     };
@@ -1129,7 +1121,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 25;
         };
     };
@@ -1142,7 +1134,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 15;
         };
     };
@@ -1155,7 +1147,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 3;
         };
     };
@@ -1168,7 +1160,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 3;
         };
     };
@@ -1180,7 +1172,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 7;
         };
     };
@@ -1193,7 +1185,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 50;
         };
     };
@@ -1206,7 +1198,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 50;
         };
     };
@@ -1219,7 +1211,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 50;
         };
     };
@@ -1231,7 +1223,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0;
         };
     };
@@ -1243,7 +1235,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0;
         };
     };
@@ -1255,7 +1247,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0;
         };
     };
@@ -1267,7 +1259,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0;
         };
     };
@@ -1279,7 +1271,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0;
         };
     };
@@ -1291,7 +1283,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0;
         };
     };
@@ -1303,7 +1295,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0;
         };
     };
@@ -1315,7 +1307,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0;
         };
     };
@@ -1327,7 +1319,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0;
         };
     };
@@ -1339,7 +1331,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0;
         };
     };
@@ -1351,7 +1343,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0;
         };
     };
@@ -1363,7 +1355,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0;
         };
     };
@@ -1375,7 +1367,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0;
         };
     };
@@ -1387,7 +1379,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0;
         };
     };
@@ -1400,7 +1392,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
 
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 5;
         };
     };

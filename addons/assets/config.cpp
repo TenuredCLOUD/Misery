@@ -4,7 +4,7 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {};
-        weapons[] = {};
+        weapons[] = {QCLASS(ItemCore)};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {QCLASS(common)};
         authors[] = {"TenuredCLOUD"};
