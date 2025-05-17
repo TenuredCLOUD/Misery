@@ -1,15 +1,6 @@
 private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 
 [
-    QGVAR(enabled),
-    "CHECKBOX",
-    ["Dynamic Markets", "Enable dynamic markets?"],
-    _category,
-    false,
-    1
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(marketshiftDistance),
     "SLIDER",
     ["Distance check", "Distance that the shop manager checks for players near traders in meters"],
@@ -25,4 +16,38 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     _category,
     [1, 86400, 3600, 0],
     1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(economyMode),
+    "LIST",
+    ["Economy Mode", "Sets trader economy difficulty"],
+    _category,
+    [
+        ["normal", "recession", "hyperinflation", "depression"],
+        ["The most stable market.", "A Medium level of difficulty with the market.", "Harder variant of the market.", "Brutal, hardest level of the economy."],
+        0
+    ],
+    1,
+    {
+        params ["_value"];
+        switch (_value) do {
+            case "normal": {
+                GVAR(markup) = 1.1;
+                GVAR(markdown) = 0.9;
+            };
+            case "recession": {
+                GVAR(markup) = 1.4;
+                GVAR(markdown) = 0.7;
+            };
+            case "hyperinflation": {
+                GVAR(markup) = 2.5;
+                GVAR(markdown) = 0.6;
+            };
+            case "depression": {
+                GVAR(markup) = 2.0;
+                GVAR(markdown) = 0.4;
+            };
+        };
+    }
 ] call CBA_fnc_addSetting;

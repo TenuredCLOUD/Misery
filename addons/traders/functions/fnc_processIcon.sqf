@@ -15,45 +15,41 @@
  * Public: No
 */
 
-[{!isNull findDisplay 982390},
-{
-        private _dialog = findDisplay 982390;
-        private _list = _dialog displayCtrl 1500;
-        private _categoryDropdown = _dialog displayCtrl 2100;
-        private _currselection = lbCurSel _list;
-        private _currselectionCat = lbCurSel _categoryDropdown;
-        private _selectedItem = _list lbData _currselection;
-        private _selectedCategory = _categoryDropdown lbData _currselectionCat;
-        private _IconCtrl = _dialog displayCtrl 1200;
-        private _IconTxt = _dialog displayCtrl 1004;
+[{!isNull findDisplay 982390}, {
 
-    if (_currselection isNotEqualTo -1) then {
-    _cfg = configFile >> "CfgWeapons" >> _selectedItem;
+    private _dialog = findDisplay 982390;
+    private _list = _dialog displayCtrl 1500;
+    private _iconCtrl = _dialog displayCtrl 1200;
+    private _iconTxt = _dialog displayCtrl 1004;
+    private _currselection = lbCurSel _list;
+
+    if (_currselection isEqualTo -1) exitWith {
+        _iconCtrl ctrlSetText "";
+        _iconTxt ctrlSetText "";
+    };
+
+    private _selectedItem = _list lbData _currselection;
+    private _cfg = configFile >> "CfgWeapons" >> _selectedItem;
+    private _picPath = "";
+    private _descShort = "";
+
     if (isClass _cfg) then {
         _picPath = getText (_cfg >> "picture");
-        _IconCtrl ctrlSetText _picPath;
-        _descshort = format ["%1", getText (_cfg >> "descriptionShort")];
-        _IconTxt ctrlSetStructuredText parseText _descshort;
+        _descShort = getText (_cfg >> "descriptionShort");
+    } else {
+        _cfg = configFile >> "CfgMagazines" >> _selectedItem;
+        if (isClass _cfg) then {
+            _picPath = getText (_cfg >> "picture");
+            _descShort = getText (_cfg >> "descriptionShort");
+        } else {
+            _cfg = configFile >> "CfgVehicles" >> _selectedItem;
+            if (isClass _cfg) then {
+                _picPath = getText (_cfg >> "editorPreview");
+                _descShort = getText (_cfg >> "displayName");
+            };
+        };
     };
 
-    _cfg = configFile >> "CfgMagazines" >> _selectedItem;
-    if (isClass _cfg) then {
-        _picPath = getText (_cfg >> "picture");
-        _IconCtrl ctrlSetText _picPath;
-        _descshort = format ["%1", getText (_cfg >> "descriptionShort")];
-        _IconTxt ctrlSetStructuredText parseText _descshort;
-    };
-
-    _cfg = configFile >> "CfgVehicles" >> _selectedItem;
-    if (isClass _cfg) then {
-        _picPath = getText (_cfg >> "editorPreview");
-        _IconCtrl ctrlSetText _picPath;
-        _descshort = format ["%1", getText (_cfg >> "displayName")];
-        _IconTxt ctrlSetStructuredText parseText _descshort;
-    };
-} else {
-    _IconCtrl ctrlSetText nil;
-    _IconTxt ctrlSetText nil;
-};
-
+    _iconCtrl ctrlSetText _picPath;
+    _iconTxt ctrlSetStructuredText parseText _descShort;
 }, []] call CBA_fnc_waitUntilAndExecute;

@@ -1,8 +1,8 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Trader Shop Categorizer processor
- * Adds Category's to UI
+ * Trader Shop Category Processor
+ * Populates category dropdown in trader UI
  *
  * Arguments:
  * None
@@ -10,34 +10,46 @@
  * Return Value:
  * None
  *
+ * Example:
  * [] call misery_traders_fnc_processCategory;
  *
  * Public: No
 */
 
-waitUntil {!isNull findDisplay 982390};
+[{!isNull findDisplay 982390}, {
 
-private _dialog = findDisplay 982390;
-private _categoryDropdown = _dialog displayCtrl 2100;
-_trader = player getVariable "currentTrader";
-_shop = _trader getVariable "shop";
-_items = _shop select (_shop findIf {_x select 0 isEqualTo "Items"}) select 1;
+    private _dialog = findDisplay 982390;
+    private _categoryDropdown = _dialog displayCtrl 2100;
+    private _trader = player getVariable [QGVAR(currentTrader), objNull];
 
-    _categories = [];
+    if (isNull _trader) exitWith {(findDisplay 982390) closeDisplay 2};
+
+    private _shop = _trader getVariable [QGVAR(shop), []];
+
+    if (_shop isEqualTo []) exitWith {(findDisplay 982390) closeDisplay 2};
+
+    private _items = _shop select 2;
+    private _categories = [];
+
     {
-        _category = _x select 1;
-    if (_categories findIf {_x isEqualTo _category} isEqualTo -1) then {
-        _categories pushBack _category;
+        private _category = _x select 6;
+        if (_category isEqualTo "") then {
+            _category = "Default";
+        };
+        if !(_category in _categories) then {
+            _categories pushBack _category;
         };
     } forEach _items;
 
-{
-    _category = _x;
-    _index = _categoryDropdown lbAdd _category;
-    _categoryDropdown lbSetData [_index, _category];
-} forEach _categories;
+    lbClear _categoryDropdown;
+    private _index = _categoryDropdown lbAdd "All";
+    _categoryDropdown lbSetData [_index, ""];
+    {
+        private _index = _categoryDropdown lbAdd _x;
+        _categoryDropdown lbSetData [_index, _x];
+    } forEach _categories;
 
-if (lbSize _categoryDropdown > 0) then {
-    _categoryDropdown lbSetCurSel 0;
-};
-
+    if (lbSize _categoryDropdown > 0) then {
+        _categoryDropdown lbSetCurSel 0;
+    };
+}, []] call CBA_fnc_waitUntilAndExecute;
