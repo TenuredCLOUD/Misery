@@ -2,6 +2,7 @@ PREP(addStatusModifier);
 PREP(buildingPositions);
 PREP(buildingPositionsInside);
 PREP(combatLogPrevention);
+PREP(countItem);
 PREP(debugMessage);
 PREP(getPlayerVariables);
 PREP(getSimplifiedLoadout);
