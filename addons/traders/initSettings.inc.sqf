@@ -21,11 +21,11 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(economyMode),
     "LIST",
-    ["Economy Mode", "Sets trader economy difficulty. Normal: stable market. Depression: brutal."],
+    ["Economy Mode", "Sets trader economy difficulty"],
     _category,
     [
         ["normal", "recession", "hyperinflation", "depression"],
-        ["Normal", "Recession", "Hyperinflation", "Depression"],
+        ["The most stable market.", "A Medium level of difficulty with the market.", "Harder variant of the market.", "Brutal, hardest level of the economy."],
         0
     ],
     1,
