@@ -12,48 +12,30 @@
  *
  * [] call misery_traders_fnc_processIcon;
  *
- * Public: No
 */
 
-[{!isNull findDisplay 982390},
-{
-        private _dialog = findDisplay 982390;
-        private _list = _dialog displayCtrl 1500;
-        private _categoryDropdown = _dialog displayCtrl 2100;
-        private _currselection = lbCurSel _list;
-        private _currselectionCat = lbCurSel _categoryDropdown;
-        private _selectedItem = _list lbData _currselection;
-        private _selectedCategory = _categoryDropdown lbData _currselectionCat;
-        private _IconCtrl = _dialog displayCtrl 1200;
-        private _IconTxt = _dialog displayCtrl 1004;
+[{!isNull findDisplay 982390}, {
 
-    if (_currselection isNotEqualTo -1) then {
-    _cfg = configFile >> "CfgWeapons" >> _selectedItem;
-    if (isClass _cfg) then {
-        _picPath = getText (_cfg >> "picture");
-        _IconCtrl ctrlSetText _picPath;
-        _descshort = format ["%1", getText (_cfg >> "descriptionShort")];
-        _IconTxt ctrlSetStructuredText parseText _descshort;
+    private _dialog = findDisplay 982390;
+    private _list = _dialog displayCtrl 1500;
+    private _iconCtrl = _dialog displayCtrl 1200;
+    private _iconTxt = _dialog displayCtrl 1004;
+    private _currselection = lbCurSel _list;
+
+    if (_currselection isEqualTo -1) exitWith {
+        _iconCtrl ctrlSetText "";
+        _iconTxt ctrlSetText "";
     };
 
-    _cfg = configFile >> "CfgMagazines" >> _selectedItem;
-    if (isClass _cfg) then {
-        _picPath = getText (_cfg >> "picture");
-        _IconCtrl ctrlSetText _picPath;
-        _descshort = format ["%1", getText (_cfg >> "descriptionShort")];
-        _IconTxt ctrlSetStructuredText parseText _descshort;
-    };
+    private _selectedItem = _list lbData _currselection;
 
-    _cfg = configFile >> "CfgVehicles" >> _selectedItem;
-    if (isClass _cfg) then {
-        _picPath = getText (_cfg >> "editorPreview");
-        _IconCtrl ctrlSetText _picPath;
-        _descshort = format ["%1", getText (_cfg >> "displayName")];
-        _IconTxt ctrlSetStructuredText parseText _descshort;
+    if ([_selectedItem, "CfgVehicles"] call EFUNC(common,configCheck)) then {
+        [_selectedItem] call EFUNC(common,getObjectData) params ["_objectDisplayName", "_objectPicture"];
+        _iconCtrl ctrlSetText _objectPicture;
+        _iconTxt ctrlSetStructuredText parseText _objectDisplayName;
+    } else {
+        [_selectedItem] call EFUNC(common,getItemData) params ["", "_itemPicture", "_itemDescription"];
+        _iconCtrl ctrlSetText _itemPicture;
+        _iconTxt ctrlSetStructuredText parseText _itemDescription;
     };
-} else {
-    _IconCtrl ctrlSetText nil;
-    _IconTxt ctrlSetText nil;
-};
-
 }, []] call CBA_fnc_waitUntilAndExecute;

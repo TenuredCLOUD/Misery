@@ -1,80 +1,57 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Shop Generater
- * Takes shop data and stores Hashmap on trader AI
- * Also passes data to server side
+ * Shop Generator
+ * Initializes trader with config-based shop data and sets up hold action
  *
  * Arguments:
- * 0: Hashmap data <ARRAY>
- * 1: Trader object <OBJECT>
+ * 0: Trader object <OBJECT>
+ * 1: Trader class <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * _shop = [
- *   ["ShopName", "General Goods"],
- *   ["Items", ["Classname_1", "Classname_2"]],
- *   ["Stock", [50, 5, 10]],
- *   ["Price", [5000,1000, 100]],
- * ];
+ * [] call misery_traders_fnc_generateShop;
  *
- * [_shop, trader1] call misery_traders_fnc_generateShop;
- *
- * Public: No
 */
 
-params ["_shopData", "_traderName"];
+params ["_trader", "_traderClass"];
 
-// Fetch the shop data from the trader
-_shop = _traderName getVariable "shop";
+if (isNull _trader) exitWith {};
 
-// Check if the shop data exists
-if (isNil "_shop") then {
-    _traderName setVariable ["shop", _shopData, true];
-};
+private _traderData = [] call FUNC(getTraderData);
+private _shop = _traderData select {(_x select 0) isEqualTo _traderClass} select 0;
 
-// Fetch the shop data from the trader
-_shop = _traderName getVariable "shop"; //refetch data if shop was Nil
+if (isNil "_shop") exitWith {};
 
-// Fetch the shop name
-_shopName = _shop select (_shop findIf {_x select 0 isEqualTo "ShopName"}) select 1;
+_shop params ["_traderClass", "_shopName", "_items", "_shopFunds"];
 
+_trader setVariable [QGVAR(shop), _shop, true];
+_trader setVariable [QGVAR(isBusy), false, true];
+
+// Add hold action
 [
-    _traderName,
+    _trader,
     format ["Open %1", _shopName],
-    "\a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa",
-    "\a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa",
-    "_this distance _target < 3",
-    "_caller distance _target < 3",
+    QUOTE(a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa),
+    QUOTE(a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa),
+    QUOTE(_this distance _target < 3 && !(_target getVariable [ARR_2(QUOTE(QGVAR(isBusy)),false)])),
+    QUOTE(_caller distance _target < 3 && !(_target getVariable [ARR_2(QUOTE(QGVAR(isBusy)),false)])),
     {},
     {},
     {
-    params ["_target", "_caller", "_actionId", "_arguments"];
-    _caller setVariable ["currentTrader", _target];
-    _queue = _target getVariable QCLASS(tradingQue);
-    if (isNil "_queue") then {
-        _queue = [];
-        _target setVariable [QCLASS(tradingQue), _queue, true];
-    };
-    if (_target getVariable QCLASS(traderIsBusy) isEqualTo true) exitWith {
-        _queue pushBack (getPlayerUID _caller);
-        _target setVariable [QCLASS(tradingQue), _queue, true];
-        createDialog QCLASS(tradingQue_ui);
-    };
-    _queue pushBack (getPlayerUID _caller);
-    _target setVariable [QCLASS(tradingQue), _queue, true];
-    createDialog QCLASS(traderShop_ui);
+        params ["_target", "_caller", "_actionId", "_arguments"];
+        _caller setVariable [QGVAR(currentTrader), _target];
+        createDialog QCLASS(traderShop_ui);
     },
     {},
-    [_shopName, _traderName],
-    0.1,
+    [_shopName, _trader],
+    1,
     nil,
     false,
     false
 ] call BIS_fnc_holdActionAdd;
 
-GVAR(activeTraders) pushBack _traderName;
-
+GVAR(activeTraders) pushBackUnique _trader;
 publicVariable QGVAR(activeTraders);
