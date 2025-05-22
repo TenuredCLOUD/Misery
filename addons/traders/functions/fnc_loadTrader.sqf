@@ -19,8 +19,7 @@ private _trader = player getVariable [QGVAR(currentTrader), objNull];
 
 if (isNull _trader) exitWith {(findDisplay 982390) closeDisplay 2};
 
-_trader setVariable [QGVAR(traderIsBusy), true, true];
-_trader setVariable [QGVAR(tradingWith), profileName, true];
+_trader setVariable [QGVAR(isBusy), true, true];
 
 GVAR(currentAction) = "buy";
 

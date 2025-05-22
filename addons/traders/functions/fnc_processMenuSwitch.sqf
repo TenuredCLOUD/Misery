@@ -12,7 +12,6 @@
  *
  * [] call misery_traders_fnc_processMenuSwitch;
  *
- * Public: No
 */
 
 private _dialog = findDisplay 982390;

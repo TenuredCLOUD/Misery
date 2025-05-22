@@ -1,6 +1,6 @@
 class CLASS(traderShop_ui) {
     idd = 982390;
-    onLoad = QUOTE(call EFUNC(traders,loadTrader));
+    onLoad = QUOTE([982390] call EFUNC(common,menuBlurEffect); call EFUNC(traders,loadTrader));
     onUnload = QUOTE(call EFUNC(traders,unloadTrader));
 
     class ControlsBackground {
@@ -88,7 +88,7 @@ class CLASS(traderShop_ui) {
         };
         class CLASS(traderShop_sell): RscButton {
             idc = 1602;
-            text = "Buy"; //--- ToDo: Localize;
+            text = QUOTE(Buy); //--- ToDo: Localize;
             x = 0.5625;
             y = 0.54;
             w = 0.175;
@@ -102,7 +102,7 @@ class CLASS(traderShop_ui) {
         };
         class CLASS(traderShop_gift): RscButton {
             idc = 1603;
-            text = "Gift Item"; //--- ToDo: Localize;
+            text = QUOTE(Gift Item); //--- ToDo: Localize;
             x = 0.5625;
             y = 0.64;
             w = 0.175;
@@ -116,7 +116,7 @@ class CLASS(traderShop_ui) {
         };
         class CLASS(traderShop_buyMenu): RscButton {
             idc = 1600;
-            text = "Sell Menu"; //--- ToDo: Localize;
+            text = QUOTE(Sell Menu); //--- ToDo: Localize;
             x = 0.5625;
             y = 0.74;
             w = 0.175;
@@ -130,7 +130,7 @@ class CLASS(traderShop_ui) {
         };
         class CLASS(traderShop_exit): RscButton {
             idc = 1601;
-            text = "Exit"; //--- ToDo: Localize;
+            text = QUOTE(Exit); //--- ToDo: Localize;
             x = 0.95;
             y = 0.94;
             w = 0.175;
@@ -144,7 +144,7 @@ class CLASS(traderShop_ui) {
         };
         class CLASS(traderShop_showCompats): CLASS(Checkbox) {
             idc = 2800;
-            tooltip = "Only show compatible weapon items";
+            tooltip = QUOTE(Only show compatible weapon items);
             x = 0.53025;
             y = -0.0328;
             w = 0.0375;

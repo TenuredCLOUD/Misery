@@ -13,7 +13,6 @@
  * Example:
  * [] call misery_traders_fnc_trackTraders;
  *
- * Public: No
 */
 
 if (!isServer) exitWith {};

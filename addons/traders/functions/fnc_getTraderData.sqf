@@ -17,7 +17,6 @@
  * Example:
  * [] call misery_traders_fnc_getTraderData;
  *
- * Public: No
 */
 
 private _traderData = [];

@@ -11,9 +11,8 @@
  * None
  *
  * Example:
- * ["Buy"] call misery_traders_fnc_processTransaction;
+ * [] call misery_traders_fnc_processTransaction;
  *
- * Public: No
 */
 
 params ["_buttonAction"];
@@ -28,7 +27,6 @@ private _shopFunds = _shop select 3;
 private _selectedItem = _list lbData _currSelection;
 private _itemIndex = _items findIf {(_x select 0) isEqualTo _selectedItem};
 private _itemData = _items select _itemIndex;
-private _displayName = getText (configFile >> "CfgWeapons" >> _itemName >> "displayName");
 private _playerFunds = player getVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
 
 if (isNull _dialog) exitWith {};
@@ -46,16 +44,8 @@ if (_itemIndex < 0) exitWith {(findDisplay 982390) closeDisplay 2};
 _itemData params ["_itemName", "_basePrice", "_stock", "_minCostFactor", "_maxCostFactor", "_purchaseCode", "_category"];
 private _buyPrice = [_basePrice, _itemData select 2, _minCostFactor, _maxCostFactor, true] call FUNC(calculatePrice);
 private _sellPrice = [_basePrice, _itemData select 2, _minCostFactor, _maxCostFactor, false] call FUNC(calculatePrice);
-
-if (_displayName isEqualTo "") then {
-    _displayName = getText (configFile >> "CfgMagazines" >> _itemName >> "displayName");
-};
-if (_displayName isEqualTo "") then {
-    _displayName = getText (configFile >> "CfgVehicles" >> _itemName >> "displayName");
-};
-if (_displayName isEqualTo "") then {
-    _displayName = _itemName;
-};
+[_itemName] call EFUNC(common,getObjectData) params ["_objectDisplayName"];
+[_itemName] call EFUNC(common,getItemData) params ["_itemDisplayName"];
 
 switch (true) do {
     case (_buttonAction isEqualTo "Buy"): {
@@ -63,7 +53,7 @@ switch (true) do {
             ctrlSetText [1001, "You cannot afford this!"];
         };
         if (_stock isEqualTo 0) exitWith {
-            ctrlSetText [1001, format ["Out of stock: %1", _displayName]];
+            ctrlSetText [1001, format ["Out of stock: %1", [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck))]];
         };
         if (_shopFunds < _buyPrice) exitWith {
             ctrlSetText [1001, "Trader cannot afford this transaction!"];
@@ -79,7 +69,7 @@ switch (true) do {
             private _added = [player, _itemName, true] call CBA_fnc_addItem;
 
         };
-        ctrlSetText [1001, format ["%1 purchased for %2 %3", _displayName, EGVAR(currency,symbol), [_buyPrice, 1, 2, true] call CBA_fnc_formatNumber]];
+        ctrlSetText [1001, format ["%1 purchased for %2 %3", [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck)), EGVAR(currency,symbol), [_buyPrice, 1, 2, true] call CBA_fnc_formatNumber]];
         [] call FUNC(updateShop);
     };
     case (_buttonAction isEqualTo "Sell"): {
@@ -99,7 +89,7 @@ switch (true) do {
         } else {
             [player, _itemName] call CBA_fnc_removeItem;
         };
-        ctrlSetText [1001, format ["%1 sold for %2 %3", _displayName, EGVAR(currency,symbol), [_sellPrice, 1, 2, true] call CBA_fnc_formatNumber]];
+        ctrlSetText [1001, format ["%1 sold for %2 %3", [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck)), EGVAR(currency,symbol), [_sellPrice, 1, 2, true] call CBA_fnc_formatNumber]];
         [] call FUNC(updateShop);
     };
     case (_buttonAction isEqualTo "Gift Item"): {
@@ -114,11 +104,11 @@ switch (true) do {
             } else {
                 [player, _itemName] call CBA_fnc_removeItem;
             };
-            ctrlSetText [1001, format ["Successfully gifted %1", _displayName]];
+            ctrlSetText [1001, format ["Successfully gifted %1", [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck))]];
             _trader setVariable [QGVAR(giftClicked), false];
         } else {
             _trader setVariable [QGVAR(giftClicked), true];
-            ctrlSetText [1001, format ["Confirm gift of %1?", _displayName]];
+            ctrlSetText [1001, format ["Confirm gift of %1?", [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck))]];
             [{
                 params ["_trader"];
                 if (isNull _trader) exitWith {};

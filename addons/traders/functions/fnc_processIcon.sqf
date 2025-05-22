@@ -12,7 +12,6 @@
  *
  * [] call misery_traders_fnc_processIcon;
  *
- * Public: No
 */
 
 [{!isNull findDisplay 982390}, {
@@ -29,27 +28,14 @@
     };
 
     private _selectedItem = _list lbData _currselection;
-    private _cfg = configFile >> "CfgWeapons" >> _selectedItem;
-    private _picPath = "";
-    private _descShort = "";
 
-    if (isClass _cfg) then {
-        _picPath = getText (_cfg >> "picture");
-        _descShort = getText (_cfg >> "descriptionShort");
+    if ([_selectedItem, "CfgVehicles"] call EFUNC(common,configCheck)) then {
+        [_selectedItem] call EFUNC(common,getObjectData) params ["_objectDisplayName", "_objectPicture"];
+        _iconCtrl ctrlSetText _objectPicture;
+        _iconTxt ctrlSetStructuredText parseText _objectDisplayName;
     } else {
-        _cfg = configFile >> "CfgMagazines" >> _selectedItem;
-        if (isClass _cfg) then {
-            _picPath = getText (_cfg >> "picture");
-            _descShort = getText (_cfg >> "descriptionShort");
-        } else {
-            _cfg = configFile >> "CfgVehicles" >> _selectedItem;
-            if (isClass _cfg) then {
-                _picPath = getText (_cfg >> "editorPreview");
-                _descShort = getText (_cfg >> "displayName");
-            };
-        };
+        [_selectedItem] call EFUNC(common,getItemData) params ["", "_itemPicture", "_itemDescription"];
+        _iconCtrl ctrlSetText _itemPicture;
+        _iconTxt ctrlSetStructuredText parseText _itemDescription;
     };
-
-    _iconCtrl ctrlSetText _picPath;
-    _iconTxt ctrlSetStructuredText parseText _descShort;
 }, []] call CBA_fnc_waitUntilAndExecute;

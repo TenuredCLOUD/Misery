@@ -12,12 +12,11 @@
  * 4: Is Buying <BOOL>
  *
  * Return Value:
- * <NUMBER> Calculated price
+ * Calculated price <NUMBER>
  *
  * Example:
  * [] call misery_traders_fnc_calculatePrice;
  *
- * Public: No
 */
 
 params [

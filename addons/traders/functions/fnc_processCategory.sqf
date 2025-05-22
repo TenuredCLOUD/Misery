@@ -13,7 +13,6 @@
  * Example:
  * [] call misery_traders_fnc_processCategory;
  *
- * Public: No
 */
 
 [{!isNull findDisplay 982390}, {

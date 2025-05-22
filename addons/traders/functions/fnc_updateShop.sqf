@@ -13,7 +13,6 @@
  * Example:
  * [] call misery_traders_fnc_updateShop;
  *
- * Public: No
 */
 
 [{!isNull findDisplay 982390}, {
@@ -54,32 +53,24 @@
     if (GVAR(currentAction) isEqualTo "buy") then {
         {
             _x params ["_itemName", "_basePrice", "_stock", "_minCostFactor", "_maxCostFactor", "_customAction", "_category"];
+            [_itemName] call EFUNC(common,getObjectData) params ["_objectDisplayName", "_objectPicture"];
+            [_itemName] call EFUNC(common,getItemData) params ["_itemDisplayName", "_itemPicture"];
             if (_selectedCategory isEqualTo "" || _category isEqualTo _selectedCategory) then {
                 if (cbChecked _checkbox && !(_itemName in (_compatibleItemsP + _compatibleMagazinesP + _compatibleItemsH + _compatibleMagazinesH + _compatibleItemsS + _compatibleMagazinesS))) then {
                     continue;
                 };
                 private _price = [_basePrice, _stock, _minCostFactor, _maxCostFactor, true] call FUNC(calculatePrice);
-                private _displayName = getText (configFile >> "CfgWeapons" >> _itemName >> "displayName");
-                if (_displayName isEqualTo "") then {
-                    _displayName = getText (configFile >> "CfgMagazines" >> _itemName >> "displayName");
-                };
-                if (_displayName isEqualTo "") then {
-                    _displayName = getText (configFile >> "CfgVehicles" >> _itemName >> "displayName");
-                };
-                if (_displayName isEqualTo "") then {
-                    _displayName = _itemName;
-                };
-                private _index = _list lbAdd format ["%1 - Price: %2 - Stock: %3", _displayName, [_price, 1, 2, true] call CBA_fnc_formatNumber, round(_stock)];
+
+                private _index = _list lbAdd format ["%1 - Price: %2 - Stock: %3", [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck)), [_price, 1, 2, true] call CBA_fnc_formatNumber, round(_stock)];
                 _list lbSetData [_index, _itemName];
-                private _picture = getText (configFile >> "CfgWeapons" >> _itemName >> "picture");
-                if (_picture isEqualTo "") then {
-                    _picture = getText (configFile >> "CfgMagazines" >> _itemName >> "picture");
-                };
-                if (_picture isEqualTo "") then {
-                    _picture = getText (configFile >> "CfgVehicles" >> _itemName >> "editorPreview");
-                };
-                _list lbSetPicture [_index, _picture];
-                [QUOTE(COMPONENT_BEAUTIFIED), format ["Added item %1: price %2, stock %3", _displayName, _price, _stock]] call EFUNC(common,debugMessage);
+
+                    if ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck)) then {
+                        _list lbSetPicture [_index, _objectPicture];
+                    } else {
+                        _list lbSetPicture [_index, _itemPicture];
+                    };
+
+                [QUOTE(COMPONENT_BEAUTIFIED), format ["Added item %1: price %2, stock %3", [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck)), _price, _stock]] call EFUNC(common,debugMessage);
             };
         } forEach _items;
 
@@ -91,33 +82,25 @@
     } else {
     {
         _x params ["_itemName", "_basePrice", "_stock", "_minCostFactor", "_maxCostFactor", "_customAction", "_category"];
+        [_itemName] call EFUNC(common,getObjectData) params ["_objectDisplayName", "_objectPicture"];
+        [_itemName] call EFUNC(common,getItemData) params ["_itemDisplayName", "_itemPicture"];
         if (_selectedCategory isEqualTo "" || _category isEqualTo _selectedCategory) then {
             if ([_itemName] call EFUNC(common,countItem) isEqualTo 0) then {
                 continue;
             };
             private _price = [_basePrice, _stock, _minCostFactor, _maxCostFactor, false] call FUNC(calculatePrice);
-            private _displayName = getText (configFile >> "CfgWeapons" >> _itemName >> "displayName");
-            if (_displayName isEqualTo "") then {
-                _displayName = getText (configFile >> "CfgMagazines" >> _itemName >> "displayName");
-            };
-            if (_displayName isEqualTo "") then {
-                _displayName = getText (configFile >> "CfgVehicles" >> _itemName >> "displayName");
-            };
-            if (_displayName isEqualTo "") then {
-                _displayName = _itemName;
-            };
+
             private _itemCount = [_itemName] call EFUNC(common,countItem);
-            private _index = _list lbAdd format ["%1 - Price: %2 - Inventory: %3", _displayName, [_price, 1, 2, true] call CBA_fnc_formatNumber, _itemCount];
+            private _index = _list lbAdd format ["%1 - Price: %2 - Inventory: %3", [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck)), [_price, 1, 2, true] call CBA_fnc_formatNumber, _itemCount];
             _list lbSetData [_index, _itemName];
-            private _picture = getText (configFile >> "CfgWeapons" >> _itemName >> "picture");
-            if (_picture isEqualTo "") then {
-                _picture = getText (configFile >> "CfgMagazines" >> _itemName >> "picture");
-            };
-            if (_picture isEqualTo "") then {
-                _picture = getText (configFile >> "CfgVehicles" >> _itemName >> "editorPreview");
-            };
-            _list lbSetPicture [_index, _picture];
-            [QUOTE(COMPONENT_BEAUTIFIED), format ["Added item %1: price %2, inventory %3", _displayName, _price, _itemCount]] call EFUNC(common,debugMessage);
+
+                if ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck)) then {
+                    _list lbSetPicture [_index, _objectPicture];
+                } else {
+                    _list lbSetPicture [_index, _itemPicture];
+                };
+
+            [QUOTE(COMPONENT_BEAUTIFIED), format ["Added item %1: price %2, inventory %3", [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck)), _price, _itemCount]] call EFUNC(common,debugMessage);
         };
     } forEach _items;
 

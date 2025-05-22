@@ -14,7 +14,6 @@
  * Example:
  * [] call misery_traders_fnc_generateVehicle;
  *
- * Public: No
 */
 
 params ["_vehicleClassname", "_player"];
