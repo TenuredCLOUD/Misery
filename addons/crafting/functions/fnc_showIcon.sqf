@@ -31,16 +31,9 @@ disableSerialization;
         private _selectedItem = _list lbData _currselection;
         private _IconCtrl = _dialog displayCtrl 1501;
 
-        _cfg = configFile >> "CfgWeapons" >> _selectedItem;
-        if (isClass _cfg) exitWith {
-            _picPath = getText (_cfg >> "picture");
-            _IconCtrl ctrlSetText _picPath;
-        };
+        [_selectedItem] call EFUNC(common,getItemData) params ["", "_picture"];
 
-        _cfg = configFile >> "CfgMagazines" >> _selectedItem;
-        if (isClass _cfg) exitWith {
-            _picPath = getText (_cfg >> "picture");
-            _IconCtrl ctrlSetText _picPath;
-        };
+        _IconCtrl ctrlSetText _picture;
+
     }, 0, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;

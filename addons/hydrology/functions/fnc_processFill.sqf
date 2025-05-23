@@ -32,10 +32,7 @@ private _requiredItem = _recipe select 0;
 private _outputItem = _recipe select 1;
 private _fillingTime = _recipe select 2;
 
-private _playerItems = (items player) + (magazines player);
-private _hasItem = _requiredItem in _playerItems;
-
-if (!_hasItem) exitWith {
+if !([[_requiredItem]] call EFUNC(common,hasItem)) exitWith {
     ctrlSetText [1001, "You don’t have that container..."];
 };
 
@@ -46,13 +43,7 @@ _progressBar ctrlShow true;
 
 player playAction "Gear";
 
-private _outputDisplayName = getText (configFile >> "CfgWeapons" >> _outputItem >> "displayName");
-if (_outputDisplayName isEqualTo "") then {
-    _outputDisplayName = getText (configFile >> "CfgMagazines" >> _outputItem >> "displayName");
-};
-if (_outputDisplayName isEqualTo "") then {
-    _outputDisplayName = _outputItem;
-};
+[_outputItem] call EFUNC(common,getItemData) params ["_displayName"];
 
 player setVariable [QCLASS(isFilling), true];
 
@@ -80,7 +71,7 @@ private _currentStep = 0;
         "_fillInterrupt",
         "_totalSteps",
         "_currentStep",
-        "_outputDisplayName",
+        "_displayName",
         "_progressBar"
     ];
 
@@ -102,15 +93,12 @@ private _currentStep = 0;
     ctrlSetText [1001, format ["Filling Container... %1%2 complete", (_progress * 100) toFixed 0, "%"]];
 
     if (_currentStep >= _totalSteps) then {
-        if (_requiredItem in items player) then {
-            player removeItem _requiredItem;
-        } else {
-            player removeMagazine _requiredItem;
-        };
+
+        [player, _requiredItem] call CBA_fnc_removeItem;
 
         [player, _outputItem, true] call CBA_fnc_addItem;
 
-        ctrlSetText [1001, format ["You filled: %1...", _outputDisplayName]];
+        ctrlSetText [1001, format ["You filled: %1...", _displayName]];
         player setVariable [QCLASS(isFilling), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _fillInterrupt];
         _fillButton ctrlShow true;
@@ -130,6 +118,6 @@ private _currentStep = 0;
     _fillInterrupt,
     _totalSteps,
     _currentStep,
-    _outputDisplayName,
+    _displayName,
     _progressBar
 ]] call CBA_fnc_addPerFrameHandler;

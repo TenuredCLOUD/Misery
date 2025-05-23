@@ -29,13 +29,8 @@
         private _requiredXP = _x select 7;
 
         if (_playerXP >= _requiredXP) then {
-            private _displayName = getText (configFile >> "CfgWeapons" >> _outputItem >> "displayName");
-            if (_displayName isEqualTo "") then {
-                _displayName = getText (configFile >> "CfgMagazines" >> _outputItem >> "displayName");
-            };
-            if (_displayName isEqualTo "") then {
-                _displayName = _outputItem; // Fallback to classname
-            };
+
+            [_outputItem] call EFUNC(common,getItemData) params ["_displayName"];
 
             private _index = _list lbAdd _displayName;
             _list lbSetData [_index, _outputItem];
