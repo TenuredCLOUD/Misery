@@ -20,6 +20,7 @@
 #define MACRO_ARTIFACTS QCLASS(artifact_01), QCLASS(artifact_02), QCLASS(artifact_03), QCLASS(artifact_04), QCLASS(artifact_05), QCLASS(artifact_06), QCLASS(artifact_07), QCLASS(artifact_08), QCLASS(artifact_09), QCLASS(artifact_10)
 #define MACRO_KNIVES "Weap_melee_knife", "Knife_kukri", "Knife_m3", "UNSC_Knife", "UNSC_Knife_reversed", "WBK_survival_weapon_4", "WBK_survival_weapon_4_r", "WBK_survival_weapon_3", "WBK_survival_weapon_3_r"
 #define MACRO_FIRETYPES "MetalBarrel_burning_F", "Land_Campfire_F", "Land_FirePlace_F", "FirePlace_burning_F"
+#define MACRO_BUILDINGTYPES "House", "Building"
 #define MACRO_GEMTYPES  QCLASS(malachite), QCLASS(ruby), QCLASS(sapphire), QCLASS(amethyst), QCLASS(diamond), QCLASS(emerald)
 #define MACRO_RESPIRATOR_MASKS "g_airpurifyingrespirator_01_f", "g_airpurifyingrespirator_02_black_f", "g_airpurifyingrespirator_02_olive_f", "g_airpurifyingrespirator_02_sand_f"
 #define MACRO_RESPIRATOR_MASKS_NOFILTER "g_airpurifyingrespirator_01_nofilter_f", "g_airpurifyingrespirator_02_black_nofilter_f", "g_airpurifyingrespirator_02_olive_nofilter_f", "g_airpurifyingrespirator_02_sand_nofilter_f"
