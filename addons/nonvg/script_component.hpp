@@ -1,5 +1,5 @@
 #define COMPONENT nonvg
-#define COMPONENT_BEAUTIFIED No NVG
+#define COMPONENT_BEAUTIFIED No Night Vision TPP
 #include "\z\misery\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
