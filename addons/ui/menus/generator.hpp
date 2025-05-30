@@ -9,9 +9,9 @@ class CLASS(generator_ui)
         {
             idc = 1800;
             x = 0 * GUI_GRID_W + GUI_GRID_X;
-	        y = 4.5 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 40 * GUI_GRID_W;
-	        h = 16.5 * GUI_GRID_H;
+            y = 4.5 * GUI_GRID_H + GUI_GRID_Y;
+            w = 40 * GUI_GRID_W;
+            h = 16.5 * GUI_GRID_H;
             colorBackground[] = {0, 0, 0, 0.7};
         };
         class CLASS(generator_prompt): RscText
@@ -29,9 +29,9 @@ class CLASS(generator_ui)
         {
             idc = 1002;
             x = 27.5 * GUI_GRID_W + GUI_GRID_X;
-	        y = 5 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 11 * GUI_GRID_W;
-	        h = 2.5 * GUI_GRID_H;
+            y = 5 * GUI_GRID_H + GUI_GRID_Y;
+            w = 11 * GUI_GRID_W;
+            h = 2.5 * GUI_GRID_H;
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
@@ -40,19 +40,19 @@ class CLASS(generator_ui)
             idc = 1003;
             text = "Fuel:"; //--- ToDo: Localize;
             x = 1 * GUI_GRID_W + GUI_GRID_X;
-	        y = 10 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 9.5 * GUI_GRID_W;
-	        h = 2 * GUI_GRID_H;
+            y = 10 * GUI_GRID_H + GUI_GRID_Y;
+            w = 9.5 * GUI_GRID_W;
+            h = 2 * GUI_GRID_H;
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(generator_fuelProgressBar): CLASS(RscProgress)
         {
-	        idc = 1004;
-	        x = 3.84 * GUI_GRID_W + GUI_GRID_X;
-	        y = 10.83 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 8 * GUI_GRID_W;
-	        h = 0.5 * GUI_GRID_H;
+            idc = 1004;
+            x = 3.84 * GUI_GRID_W + GUI_GRID_X;
+            y = 10.83 * GUI_GRID_H + GUI_GRID_Y;
+            w = 8 * GUI_GRID_W;
+            h = 0.5 * GUI_GRID_H;
         };
         class CLASS(generator_powerState): RscText
         {
@@ -100,16 +100,16 @@ class CLASS(generator_ui)
         };
         class CLASS(generator_exitButton): RscButton
         {
-	        idc = 1602;
-	        text = "Exit"; //--- ToDo: Localize;
-	        x = 30 * GUI_GRID_W + GUI_GRID_X;
-	        y = 17.5 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 8 * GUI_GRID_W;
-	        h = 2 * GUI_GRID_H;
-	        colorBackground[] = {0.2,0.2,0.2,0.7};
-	        colorActive[] = {0.5,0.5,0.5,0.7};
+            idc = 1602;
+            text = "Exit"; //--- ToDo: Localize;
+            x = 30 * GUI_GRID_W + GUI_GRID_X;
+            y = 17.5 * GUI_GRID_H + GUI_GRID_Y;
+            w = 8 * GUI_GRID_W;
+            h = 2 * GUI_GRID_H;
+            colorBackground[] = {0.2,0.2,0.2,0.7};
+            colorActive[] = {0.5,0.5,0.5,0.7};
             colorFocused[] = {0.5,0.5,0.5,0.7};
-	        onButtonClick = QUOTE(closeDialog 2);
+            onButtonClick = QUOTE(closeDialog 2);
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
