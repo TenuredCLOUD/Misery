@@ -15,6 +15,8 @@
 */
 params ["_object"];
 
+if (!isNull objectParent player) exitWith {};
+
 private _nearestObjects = nearestObjects [_object, [MACRO_VEHICLETYPES], 5];
 
 private _isNearVehicle = _nearestObjects isNotEqualTo [];
