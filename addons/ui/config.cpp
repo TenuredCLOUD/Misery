@@ -34,6 +34,7 @@ class CfgPatches {
 #include "\z\misery\addons\ui\menus\tradingQue.hpp"
 #include "\z\misery\addons\ui\menus\inventoryFramework.hpp"
 #include "\z\misery\addons\ui\menus\generator.hpp"
+#include "\z\misery\addons\ui\menus\forge.hpp"
 
 class RscTitles {
     #include "\z\misery\addons\ui\menus\geiger.hpp"
