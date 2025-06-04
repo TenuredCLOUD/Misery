@@ -147,6 +147,7 @@ class CfgSounds {
     MACRO_SOUNDS(inventoryOpen,inventory);
     MACRO_SOUNDS(inventoryOpenAlt,inventory);
     MACRO_SOUNDS(pickup,inventory);
+    MACRO_SOUNDS(rummaging,inventory);
     MACRO_SOUNDS(unzipping,inventory);
     MACRO_SOUNDS(zipping,inventory);
 
