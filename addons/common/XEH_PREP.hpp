@@ -30,5 +30,6 @@ PREP(stun);
 PREP(surfacePos);
 PREP(switchItem);
 PREP(switchMagazine);
+PREP(switchPowerState);
 PREP(valToBar);
 PREP(weaponSwap);
