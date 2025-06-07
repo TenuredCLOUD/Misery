@@ -25,8 +25,6 @@ PREP(nearTreeSaw);
 PREP(nearWell);
 PREP(parseVehicleData);
 PREP(spawnLoot);
-PREP(specialDamage);
-PREP(stun);
 PREP(surfacePos);
 PREP(switchItem);
 PREP(switchMagazine);
