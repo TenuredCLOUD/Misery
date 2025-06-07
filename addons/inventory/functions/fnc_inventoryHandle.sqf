@@ -33,8 +33,8 @@ player addEventHandler ["InventoryOpened", {
         private _playerItems = (items player) + (magazines player);
         private _availableCategories = [];
         {
-            private _itemCategory = _x select 0;
-            private _itemName = _x select 1;
+            private _itemCategory = _x select 1;
+            private _itemName = _x select 0;
             if (_itemName in _playerItems && !(_itemCategory in _availableCategories)) then {
                 _availableCategories pushBack _itemCategory;
                 private _idx = _combo lbAdd _itemCategory;
@@ -89,8 +89,8 @@ player addEventHandler ["Put", {
         private _playerItems = (items player) + (magazines player);
         private _availableCategories = [];
         {
-            private _itemCategory = _x select 0;
-            private _itemName = _x select 1;
+            private _itemCategory = _x select 1;
+            private _itemName = _x select 0;
             if (_itemName in _playerItems && !(_itemCategory in _availableCategories)) then {
                 _availableCategories pushBack _itemCategory;
                 private _idx = _combo lbAdd _itemCategory;
@@ -114,8 +114,8 @@ player addEventHandler ["Take", {
         private _playerItems = (items player) + (magazines player);
         private _availableCategories = [];
         {
-            private _itemCategory = _x select 0;
-            private _itemName = _x select 1;
+            private _itemCategory = _x select 1;
+            private _itemName = _x select 0;
             if (_itemName in _playerItems && !(_itemCategory in _availableCategories)) then {
                 _availableCategories pushBack _itemCategory;
                 private _idx = _combo lbAdd _itemCategory;
