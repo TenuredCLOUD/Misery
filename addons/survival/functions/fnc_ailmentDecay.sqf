@@ -20,7 +20,7 @@
 
 params ["_radiation", "_infection", "_parasites", "_toxicity", "_psychosis"];
 
-if (_radiation > 0.25) then {
+if (_radiation > 0.025) then {
     [player, _radiation / 5, "body"] call FUNC(ailmentDamage);
 };
 
