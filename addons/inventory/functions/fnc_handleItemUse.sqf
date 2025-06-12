@@ -103,7 +103,10 @@ if (_animation isNotEqualTo "") then {
         player setVariable [QEGVAR(psychosis,state), (_psychosis + _psychosisValue / 100)];
     };
 
-    {[_x select 0, _x select 1, _x select 2, _x select 3] call EFUNC(vitals,addBuffOrAilment)} forEach _addStatus;
+    {
+        [_x select 0, _x select 1, _x select 2, _x select 3] call EFUNC(vitals,addBuffOrAilment)
+    } forEach _addStatus;
+
     {
         _x params ["_type", "_name"];
         private _arrayName = ["ailments", "buffs"] select (_type isEqualTo "buff");

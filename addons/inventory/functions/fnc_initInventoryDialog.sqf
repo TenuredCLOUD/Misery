@@ -23,7 +23,7 @@ lbClear _combo;
 // Get unique categories from itemData
 private _categories = [];
 {
-    private _category = _x select 0;
+    private _category = _x select 1;
     if !(_category in _categories) then {
         _categories pushBack _category;
     };

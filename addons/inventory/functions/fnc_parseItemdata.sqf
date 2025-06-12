@@ -6,7 +6,7 @@
  * Arguments:
  * None
  *
- * Return Value:
+ * Return :
  * None
  *
  * Example:
@@ -48,22 +48,27 @@ GVAR(itemData) = [];
     };
 
     GVAR(itemData) pushBack [
-        _category,          // 0
-        _itemName,          // 1
-        _hunger,            // 2
-        _thirst,            // 3
-        _addStatus,         // 4
-        _removeStatus,      // 5
-        _animation,         // 6
-        _removeOnUse,       // 7
-        _sound,             // 8
-        _maskBlocksUse,     // 9
-        _requiresCanOpener, // 10
-        _delay,             // 11
-        _radiation,         // 12
-        _exposure,          // 13
-        _code,              // 14
-        _feedback           // 15
+        _itemName,
+        _category,
+        _delay,
+        _hunger,
+        _thirst,
+        _energyDeficit,
+        _exposure,
+        _radiation,
+        _infection,
+        _parasites,
+        _toxicity,
+        _psychosis,
+        _maskBlocksUse,
+        _requiresCanOpener,
+        _removeOnUse,
+        _sound,
+        _addStatus,
+        _removeStatus,
+        _feedback,
+        _animation,
+        _code
     ];
 } forEach ("true" configClasses (missionConfigFile >> "CfgMisery_ItemData"));
 

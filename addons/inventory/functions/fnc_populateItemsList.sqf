@@ -26,8 +26,8 @@ lbClear _list;
 private _playerItems = (items player) + (magazines player);
 
 {
-    private _itemCategory = _x select 0;
-    private _itemName = _x select 1;
+    private _itemName = _x select 0;
+    private _itemCategory = _x select 1;
 
     if (_itemCategory isEqualTo _category && {_itemName in _playerItems}) then {
         private _displayName = getText (configFile >> "CfgWeapons" >> _itemName >> "displayName");
