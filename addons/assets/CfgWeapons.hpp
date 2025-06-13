@@ -1383,17 +1383,4 @@ class CfgWeapons {
             mass = 0;
         };
     };
-
-    class CLASS(rfHighRange_NoBattery): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_RFHIGHNOBATTERY_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_RFHIGHNOBATTERY_DESCRIPTION";
-        picture = QPATHTOF(data\icons\EMFdetectorhighrangenobattery.paa);
-        model = "\A3\Weapons_F\Items\minedetector.p3d";
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 5;
-        };
-    };
 };
