@@ -226,28 +226,6 @@ class CfgMagazines {
         mass = 10;
     };
 
-    class CLASS(rfHighRange_On): CLASS(FakeMagazine) {
-        ace_disableRepacking = 1;
-        count = 100;
-        descriptionShort = "$STR_MISERY_RFHIGHRANGE_DESCRIPTION";
-        displayName = "$STR_MISERY_RFHIGHRANGEON_DISPLAYNAME";
-        mass = 5;
-        model = "\A3\Weapons_F\Items\minedetector.p3d";
-        picture = QPATHTOF(data\icons\emfdetectorhighrange.paa);
-        scope = 2;
-    };
-
-    class CLASS(rfHighRange_Off): CLASS(FakeMagazine) {
-        ace_disableRepacking = 1;
-        count = 100;
-        descriptionShort = "$STR_MISERY_RFHIGHRANGE_DESCRIPTION";
-        displayName = "$STR_MISERY_RFHIGHRANGEOFF_DISPLAYNAME";
-        mass = 5;
-        model = "\A3\Weapons_F\Items\minedetector.p3d";
-        picture = QPATHTOF(data\icons\emfdetectorhighrangenobattery.paa);
-        scope = 2;
-    };
-
     class CLASS(autoBattery): CLASS(FakeMagazine) {
         ace_disableRepacking = 1;
         count = 100;
