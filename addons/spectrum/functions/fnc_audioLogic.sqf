@@ -5,6 +5,7 @@
  *
  * Arguments:
  * 0: Source <OBJECT>
+ * 1: Handle <NUMBER>
  *
  * Return Value:
  * None

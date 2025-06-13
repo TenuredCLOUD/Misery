@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [] call misery_spectrum_fnc_audioLogic
+ * [] call misery_spectrum_fnc_nearArtifact
 */
 
 params ["_object", "_distance"];

@@ -2,6 +2,7 @@
 /*
  * Author: TenuredCLOUD
  * Pings player with audible alerts if certain entity classes are nearby
+ * Also pushes feedback to spectrum's GUI
  *
  * Arguments:
  * None
