@@ -5,6 +5,7 @@ PREP(combatLogPrevention);
 PREP(debugMessage);
 PREP(getPlayerVariables);
 PREP(getSimplifiedLoadout);
+PREP(grabComposition);
 PREP(hasItem);
 PREP(isInside);
 PREP(isInsideLoot);
