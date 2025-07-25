@@ -19,6 +19,7 @@ PREP(listPlayers);
 PREP(lowerCaseArray);
 PREP(menuBlurEffect);
 PREP(modLoadedPrep);
+PREP(nearBuilding);
 PREP(nearCraftingStation);
 PREP(nearEntities);
 PREP(nearFire);
