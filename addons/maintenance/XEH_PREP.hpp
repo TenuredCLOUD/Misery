@@ -1,4 +1,11 @@
-PREP(icon);
+PREP(countBatteries);
+PREP(countItem);
+PREP(engineControl);
+PREP(getBatteryCharge);
+PREP(initVehicles);
 PREP(listed);
+PREP(nearVehicle);
 PREP(repair);
 PREP(scavenge);
+PREP(updateIcon);
+PREP(vehicleStats);
