@@ -1,8 +1,4 @@
-PREP(campground);
-PREP(heliWreck);
-PREP(posCheck);
-PREP(poiSettings);
+PREP(cleanup);
+PREP(generate);
+PREP(parseData);
 PREP(populateCrate);
-PREP(raid);
-PREP(settings);
-PREP(shoreLoot);

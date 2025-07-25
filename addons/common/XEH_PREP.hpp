@@ -9,6 +9,7 @@ PREP(getItemData);
 PREP(getObjectData);
 PREP(getPlayerVariables);
 PREP(getSimplifiedLoadout);
+PREP(grabComposition);
 PREP(hasItem);
 PREP(isInside);
 PREP(isInsideLoot);

@@ -4,7 +4,15 @@
  * POI Crate Loot Generator
  *
  * Arguments:
- * None
+ * 0: Ammo Box <OBJECT>
+ * 1: Weapon Array <ARRAY>
+ * 2: Weapon Mag Array <STRING>
+ * 3: Weapon Attachment Array <STRING>
+ * 4: Item Array <ARRAY>
+ * 5: Uniform Array <ARRAY>
+ * 6: Vest Array <ARRAY>
+ * 7: Backpack Array <ARRAY>
+ * 8: Max Allowed Items <NUMBER>
  *
  * Return Value:
  * None
@@ -15,73 +23,75 @@
  * Public: No
 */
 
-_ammoBox = _this select 0;
-_crateweaponArray = _this select 1;
-_crateitemArray = _this select 4;
-_crateuniformArray = _this select 5;
-_cratevestArray = _this select 6;
-_cratebackpackArray = _this select 7;
-_maxallowedCrateitems = _this select 8;
+params ["_ammoBox", "_crateWeaponArray", "_crateWeaponMagArray", "_crateWeaponAttchArray", "_crateItemArray", "_crateUniformArray", "_crateVestArray", "_crateBackpackArray", "_maxAllowedCrateItems"];
 
-if (!isNil "_crateweaponArray" && {count _crateweaponArray > 0}) then {
-    for "_i" from 1 to _maxallowedCrateItems do {
-        _selectedWeapon = selectRandom _crateweaponArray;
+if (!isNil "_crateWeaponArray" && {count _crateWeaponArray > 0}) then {
+    for "_i" from 1 to _maxAllowedCrateItems do {
+        private _selectedWeapon = selectRandom _crateWeaponArray;
         _ammoBox addWeaponCargoGlobal [_selectedWeapon, 1];
 
-    _crateweaponMagArray = switch (_this select 2) do {
-    case "BASIC": {_compatibleMags = getArray (configFile >> "CfgWeapons" >> _selectedWeapon >> "magazines");
-        if (count _compatibleMags > 0) then {
-            for "_j" from 1 to _maxallowedCrateItems do {
-                _ammoBox addMagazineCargoGlobal [_compatibleMags select 0, 1];
+        switch (_crateWeaponMagArray) do {
+            case "BASIC": {
+                private _compatibleMags = getArray (configFile >> "CfgWeapons" >> _selectedWeapon >> "magazines");
+                if (count _compatibleMags > 0) then {
+                    for "_j" from 1 to _maxAllowedCrateItems do {
+                        _ammoBox addMagazineCargoGlobal [_compatibleMags select 0, 1];
+                    };
+                };
             };
-        };};
-    case "ALL": {_compatibleMags = getArray (configFile >> "CfgWeapons" >> _selectedWeapon >> "magazines");
-        if (count _compatibleMags > 0) then {
-            for "_j" from 1 to _maxallowedCrateItems do {
-                _ammoBox addMagazineCargoGlobal [selectRandom _compatibleMags, 1];
+            case "ALL": {
+                private _compatibleMags = getArray (configFile >> "CfgWeapons" >> _selectedWeapon >> "magazines");
+                if (count _compatibleMags > 0) then {
+                    for "_j" from 1 to _maxAllowedCrateItems do {
+                        _ammoBox addMagazineCargoGlobal [selectRandom _compatibleMags, 1];
+                    };
+                };
             };
-        };};
-    case "NOMAGS": {};
-    };
+            case "NONE": {};
+        };
 
-    _crateweaponAttchArray = switch (_this select 3) do {
-    case "BASIC": {_compatibleAttachments = (compatibleItems _selectedWeapon);
-        if (count _compatibleAttachments > 0) then {
-            for "_k" from 1 to _maxallowedCrateItems do {
-                _ammoBox addItemCargoGlobal [_compatibleAttachments select 0, 1];
+        switch (_crateWeaponAttchArray) do {
+            case "BASIC": {
+                private _compatibleAttachments = compatibleItems _selectedWeapon;
+                if (count _compatibleAttachments > 0) then {
+                    for "_k" from 1 to _maxAllowedCrateItems do {
+                        _ammoBox addItemCargoGlobal [_compatibleAttachments select 0, 1];
+                    };
+                };
             };
-        };};
-    case "ALL": {_compatibleAttachments = (compatibleItems _selectedWeapon);
-        if (count _compatibleAttachments > 0) then {
-            for "_k" from 1 to _maxallowedCrateItems do {
-                _ammoBox addItemCargoGlobal [selectRandom _compatibleAttachments, 1];
+            case "ALL": {
+                private _compatibleAttachments = compatibleItems _selectedWeapon;
+                if (count _compatibleAttachments > 0) then {
+                    for "_k" from 1 to _maxAllowedCrateItems do {
+                        _ammoBox addItemCargoGlobal [selectRandom _compatibleAttachments, 1];
+                    };
+                };
             };
-        };};
-    case "NOATTCH": {};
+            case "NONE": {};
         };
     };
 };
 
-if (!isNil "_crateitemArray" && {count _crateitemArray > 0}) then {
-    for "_i" from 1 to _maxallowedCrateItems do {
-    _ammoBox addItemCargoGlobal [selectRandom _crateitemArray, 1];
+if (!isNil "_crateItemArray" && {count _crateItemArray > 0}) then {
+    for "_i" from 1 to _maxAllowedCrateItems do {
+        _ammoBox addItemCargoGlobal [selectRandom _crateItemArray, 1];
     };
-        };
+};
 
-if (!isNil "_crateuniformArray" && {count _crateuniformArray > 0}) then {
-    for "_i" from 1 to _maxallowedCrateItems do {
-    _ammoBox addItemCargoGlobal [selectRandom _crateuniformArray, 1];
+if (!isNil "_crateUniformArray" && {count _crateUniformArray > 0}) then {
+    for "_i" from 1 to _maxAllowedCrateItems do {
+        _ammoBox addItemCargoGlobal [selectRandom _crateUniformArray, 1];
     };
-        };
+};
 
-if (!isNil "_cratevestArray" && {count _cratevestArray > 0}) then {
-    for "_i" from 1 to _maxallowedCrateItems do {
-    _ammoBox addItemCargoGlobal [selectRandom _cratevestArray, 1];
+if (!isNil "_crateVestArray" && {count _crateVestArray > 0}) then {
+    for "_i" from 1 to _maxAllowedCrateItems do {
+        _ammoBox addItemCargoGlobal [selectRandom _crateVestArray, 1];
     };
-        };
+};
 
-if (!isNil "_cratebackpackArray" && {count _cratebackpackArray > 0}) then {
-    for "_i" from 1 to _maxallowedCrateItems do {
-    _ammoBox addBackpackCargoGlobal [selectRandom _cratebackpackArray, 1];
+if (!isNil "_crateBackpackArray" && {count _crateBackpackArray > 0}) then {
+    for "_i" from 1 to _maxAllowedCrateItems do {
+        _ammoBox addBackpackCargoGlobal [selectRandom _crateBackpackArray, 1];
     };
-        };
+};
