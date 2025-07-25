@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: TenuredCLOUD
+ * Author: TenuredCLOUD, MikeMF
  * No nightvision when in TPP (Third person)
  * Enforces player to disable NVG's when in third person
  *
