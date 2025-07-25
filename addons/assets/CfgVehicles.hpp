@@ -67,31 +67,4 @@ class CfgVehicles {
         model = QPATHTOF(data\models\twinjetfueltank.p3d);
         textSingular = "Jet Fuel Station";
     };
-    class CLASS(100KVA_Generator): House_F {
-        armor = 2000;
-        author = "Model credits: tasraven - Reworked by TenuredCLOUD";
-        displayName = "$STR_MISERY_100KVAGEN_DISPLAYNAME";
-        MACRO_HOUSE_COMMON;
-        mapSize = 3;
-        model = QPATHTOF(data\models\100kva_generator.p3d);
-        textSingular = "100KVA Generator";
-    };
-    class CLASS(heavilyUsedGas_Generator): House_F {
-        armor = 2000;
-        author = "Model credits: DennisHNguyen - Reworked by TenuredCLOUD";
-        displayName = "$STR_MISERY_HeavilyUsedGen_Gas_DISPLAYNAME";
-        MACRO_HOUSE_COMMON;
-        mapSize = 3;
-        model = QPATHTOF(data\models\used_gen_gas.p3d);
-        textSingular = "Heavily used Genrator - Petrol";
-    };
-    class CLASS(heavilyUsedDiesel_Generator): House_F {
-        armor = 2000;
-        author = "Model credits: Daniel_Bakunin - Reworked by TenuredCLOUD";
-        displayName = "$STR_MISERY_HeavilyUsedGen_Diesel_DISPLAYNAME";
-        MACRO_HOUSE_COMMON;
-        mapSize = 3;
-        model = QPATHTOF(data\models\used_gen_diesel.p3d);
-        textSingular = "Heavily used Generator - Diesel";
-    };
 };
