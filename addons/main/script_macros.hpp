@@ -80,6 +80,7 @@
 #define ST_SHADOW 256
 #define ST_NO_RECT 512
 #define ST_HORIZONTAL 0
+#define ST_VERTICAL 1
 
 // Menu Dialog
 #define GUI_GRID_X (0)

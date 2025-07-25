@@ -38,4 +38,5 @@ class CfgPatches {
 class RscTitles {
     #include "\z\misery\addons\ui\menus\geiger.hpp"
     #include "\z\misery\addons\ui\menus\eru.hpp"
+    #include "\z\misery\addons\ui\menus\vehicleStats.hpp"
 };

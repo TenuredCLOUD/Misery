@@ -1,38 +1,84 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Maintenance scavenging
- * passes scavenging option to part on vehicle (hitpoints)
+ * Maintenance Scavenge Handler
+ * Scavenges parts or batteries from vehicle
  *
  * Arguments:
- * None
+ * 0: Vehicle <OBJECT>
+ * 1: Hitpoint <STRING>
  *
  * Return Value:
  * None
  *
- * [] call misery_maintenance_fnc_scavenge;
+ * Example:
+ * [vehicle player, "Battery"] call misery_maintenance_fnc_scavenge;
  *
  * Public: No
 */
 
-//WIP
+params ["_vehicle", "_hitpoint"];
 
-// private _dialog = findDisplay 982382;
-// private _selectedIndex = lbCurSel 1500; // Get the index of the selected item
+if (isNull _vehicle || _hitpoint isEqualTo "") exitWith {systemChat "Invalid vehicle or hitpoint.";};
 
-// private _PurchaseB = _dialog displayCtrl 1600;
-// private _ExitB = _dialog displayCtrl 1601;
+private _item = "";
+private _hitpointLower = toLower _hitpoint;
 
-// if (_selectedIndex isEqualTo -1) exitWith {
-//     ctrlSetText [1001, "No Repair option selected..."];
-// };
+// Find vehicle data in EGVAR(common,vehicleData)
+private _vehicleData = EGVAR(common,vehicleData) select {(_x select 0) isEqualTo typeOf _vehicle};
+private _batteryType = if (_vehicleData isNotEqualTo []) then {_vehicleData select 0 select 6} else {"misery_autoBattery"};
+private _batteryCount = if (_vehicleData isNotEqualTo []) then {_vehicleData select 0 select 7} else {1};
 
-// if (_selectedIndex isNotEqualTo -1) exitWith {
+switch (true) do {
+    case (_hitpointLower find "optic" > -1): {_item = "glass";};
+    case (_hitpointLower find "track" > -1): {_item = "spare_track";};
+    case (_hitpointLower find "engine" > -1): {_item = "engine_part";};
+    case (_hitpointLower find "wheel" > -1): {_item = "spare_wheel";};
+    case (_hitpointLower isEqualTo "battery"): {_item = _batteryType;};
+    default {_item = "scrap_metal";};
+};
 
-// _PurchaseB ctrlShow false;
-// _ExitB ctrlShow false;
+if (_item isEqualTo "") exitWith {systemChat "Nothing to scavenge from this part.";};
 
-// [] call "\z\misery\addons\repairs\functions\fnc_Repair.sqf";
-// };
+private _player = player;
 
+if (_hitpointLower isEqualTo "battery") then {
+    // Count pseudo-batteries
+    private _installedBatteries = _vehicle getVariable [QGVAR(installedBatteries), 0];
+    private _batteryLevel = _vehicle getVariable [QGVAR(batteryLevel), 0];
 
+    if (_installedBatteries <= 0) exitWith {systemChat "No batteries left to scavenge.";};
+
+    if ([_player, _item, true] call CBA_fnc_addItem) then {
+        // Reduce battery count and level
+        _installedBatteries = _installedBatteries - 1;
+        _vehicle setVariable [QGVAR(installedBatteries), _installedBatteries, true];
+        private _chargePerBattery = _batteryLevel / (_installedBatteries + 1);
+        _vehicle setVariable [QGVAR(batteryLevel), _batteryLevel - _chargePerBattery, true];
+
+        // Drop battery item with charge info
+        private _holder = createVehicle ["GroundWeaponHolder", getPosATL _player, [], 0, "CAN_COLLIDE"];
+        _holder addItemCargoGlobal [_item, 1];
+        _holder setVariable [QGVAR(batteryCharge), _chargePerBattery, true];
+        _player addItem _item;
+        systemChat format ["Scavenged 1 %1 with %2%% charge.", _item, _chargePerBattery];
+
+        if (_installedBatteries <= 0) then {
+            _vehicle setVariable [QGVAR(batteryLevel), 0, true];
+            _vehicle setFuel 0;
+        };
+
+        // Refresh UI
+        [_vehicle] call FUNC(listed);
+    };
+} else {
+    if (_player canAdd _item) then {
+        _vehicle setHitPointDamage [_hitpoint, 1];
+        _player addItem _item;
+        systemChat format ["Scavenged %1 from %2.", _item, _hitpoint];
+        // Refresh UI
+        [_vehicle] call FUNC(listed);
+    } else {
+        systemChat "Not enough inventory space to scavenge.";
+    };
+};
