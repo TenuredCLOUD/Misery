@@ -4,8 +4,8 @@ if (isServer) then {
     GVAR(activeTraders) = [];
 
     if (isClass (missionConfigFile >> "CfgMisery_TradersData")) then {
-    call FUNC(trackTraders);
+        call FUNC(trackTraders);
     } else {
-    [QUOTE(COMPONENT_BEAUTIFIED), "CfgMisery_TradersData class not found in description.ext, skipping..."] call EFUNC(common,debugMessage);
+        [QUOTE(COMPONENT_BEAUTIFIED), "CfgMisery_TradersData class not found in description.ext, skipping..."] call EFUNC(common,debugMessage);
     };
 };
