@@ -3,16 +3,16 @@
 // Blacklist the camping lantern for GRAD persistence
 if (isServer) then {
     [
-            "lantern_menu",
-            "Add 9v battery to lantern",
-            {[[QCLASS(9vBattery), QCLASS(lantern_NoBattery)]] call EFUNC(common,hasItem)},
-            {
-                [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-                call FUNC(batteries);
-            },
-            "",
-            "",
-            ""
+        "lantern_menu",
+        "Add 9v battery to lantern",
+        {[[QCLASS(9vBattery), QCLASS(lantern_NoBattery)]] call EFUNC(common,hasItem)},
+        {
+            [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
+            call FUNC(batteries);
+        },
+        "",
+        "",
+        ""
     ] call EFUNC(actions,addAction);
 
     if (!isNil "grad_persistence_blacklist") then {
