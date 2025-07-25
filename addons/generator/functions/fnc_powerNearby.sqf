@@ -4,7 +4,8 @@
  * Generator Power nearby loop
  *
  * Arguments:
- * None
+ * 0: Generator <OBJECT>
+ * 1: Type <STRING>
  *
  * Return Value:
  * None
@@ -14,62 +15,61 @@
  *
 */
 
-_Generator = _this select 0;
+params ["_generator", "_generatorType"];
 
-while {true} do {
+[{
+    params ["_args", "_handle"];
+    _args params ["_generator", "_generatorType"];
 
-    _GeneratorType = typeOf _Generator;
+    private _runState = _generator getVariable [QGVAR(isRunning), false];
 
     private _radius = nil;
 
-    switch (_GeneratorType) do {
-        case QCLASS(100KVA_Generator): {
-            _radius = 500;
-        };
-        case QCLASS(heavilyUsedGas_Generator): {
+    switch (_generatorType) do {
+        case "Land_Portable_generator_F": {
             _radius = 25;
         };
-        case QCLASS(heavilyUsedDiesel_Generator): {
+        case "Land_PowerGenerator_F": {
             _radius = 150;
         };
     };
 
-    _lights = nearestObjects [getPosATL _Generator, ["HOUSE","STATIC","BUILDING"], _radius, false];
-    _lightsTerrain = nearestTerrainObjects [getPosATL _Generator, ["BUILDING","HOUSE"], _radius, false];
+    private _lights = nearestObjects [getPosATL _generator, ["HOUSE","STATIC","BUILDING"], _radius, false];
+    private _lightsTerrain = nearestTerrainObjects [getPosATL _generator, ["BUILDING","HOUSE"], _radius, false];
 
-    if (_Generator getVariable [QCLASS(generatorRunning), false] isEqualTo true) then {
-    {
-        private _object = _x;
-        private _hitpoints = getAllHitPointsDamage _object select 0;
+    if (_runState) then {
+        {
+            private _object = _x;
+            private _hitpoints = getAllHitPointsDamage _object select 0;
 
-        _x switchLight "ON";
+            _x switchLight "ON";
 
-        if (!isNil "_hitpoints") then {
-            {
-                private _lower = toLower _x;
-                if ("light" in _lower) then {
-                    _object setHitPointDamage [_x, 0];
-                };
-            } forEach _hitpoints;
-        };
-    } forEach _lights + _lightsTerrain;
+            if (!isNil "_hitpoints") then {
+                {
+                    private _lower = toLower _x;
+                    if ("light" in _lower) then {
+                        _object setHitPointDamage [_x, 0];
+                    };
+                } forEach _hitpoints;
+            };
+        } forEach _lights + _lightsTerrain;
     };
 
-    if (_Generator getVariable [QCLASS(generatorRunning), false] isEqualTo false) exitWith {
-    {
-        private _object = _x;
-        private _hitpoints = getAllHitPointsDamage _object select 0;
+    if (!_runState) exitWith {
+        {
+            private _object = _x;
+            private _hitpoints = getAllHitPointsDamage _object select 0;
 
-        _x switchLight "OFF";
+            _x switchLight "OFF";
 
-        if (!isNil "_hitpoints") then {
-            {
-                private _lower = toLower _x;
-                if ("light" in _lower) then {
-                    _object setHitPointDamage [_x, 0];
-                };
-            } forEach _hitpoints;
-        };
-    } forEach _lights + _lightsTerrain;
+            if (!isNil "_hitpoints") then {
+                {
+                    private _lower = toLower _x;
+                    if ("light" in _lower) then {
+                        _object setHitPointDamage [_x, 0];
+                    };
+                } forEach _hitpoints;
+            };
+        } forEach _lights + _lightsTerrain;
     };
-};
+}, 1, [_generator, _generatorType]] call CBA_fnc_addPerFrameHandler;

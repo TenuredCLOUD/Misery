@@ -14,18 +14,25 @@
  *
 */
 
-waitUntil {!isNull findDisplay 573849};
+[player] call FUNC(nearGenerator) params ["", "_generator", "_generatorType"];
 
-_Generator = player getVariable QCLASS(currentGenerator);
+[{!isNull findDisplay 573849}, {
+    params ["_generator", "_generatorType"];
 
-_GeneratorType = typeOf _Generator;
+    _powerButton = findDisplay 573849 displayCtrl 1600;
 
-_PowerButton = findDisplay 573849 displayCtrl 1600;
+    if ((ctrlText 1600) isEqualTo "Start") exitWith {
+        if (insideBuilding player isEqualTo 1) exitWith {
+            private _noStartInside = format ["<t font='PuristaMedium' size='0.7'>You cannot start a generator while inside...</t>"];
+            [QEGVAR(common,tileText), _noStartInside] call CBA_fnc_localEvent;
+        };
 
-if ((ctrlText 1600) isEqualTo "Start") exitWith {
-    [_Generator] call FUNC(runningUserAction);
-};
+        [_generator, _generatorType] call FUNC(processAction);
+    };
 
-if ((ctrlText 1600) isEqualTo "Stop") exitWith {
-    _Generator setVariable ['Misery_Gen_IsRunning', false, true];
-};
+    if ((ctrlText 1600) isEqualTo "Stop") exitWith {
+        _generator setVariable [QGVAR(shuttingDown), true, true];
+    };
+}, [_generator, _generatorType]] call CBA_fnc_waitUntilAndExecute;
+
+
