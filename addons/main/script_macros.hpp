@@ -14,13 +14,13 @@
 #endif
 
 // Item List Macros
-#define MACRO_NMB_ITEMS "NMIB_Generic_Garage_B", "NMIB_Generic_Garage_D", "NMIB_Generic_Garage_A", "NMIB_Generic_Garage_C", "NMIB_Lockable_Garage_D", "NMIB_Lockable_Garage_B", "NMIB_Lockable_Garage_A", "NMIB_Lockable_Garage_C", "NMIB_Plot", "NMIB_Generic_Door_D", "NMIB_Generic_Door_A", "NMIB_Generic_Door_B", "NMIB_Generic_Door_C", "NMIB_Lockable_Door_C", "NMIB_Lockable_Door_A", "NMIB_Lockable_Door_D", "NMIB_Lockable_Door_B", "NMIB_Generic_Floor_A", "NMIB_Generic_Foundation", "NMIB_Generic_Ladder", "NMIB_Generic_Ramp_A", "NMIB_Generic_Roof_E", "NMIB_Barricaded_Window_C", "NMIB_Barricaded_Window_B", "NMIB_Barricaded_Window_D", "NMIB_Barricaded_Window_A", "NMIB_Generic_Doorway_D", "NMIB_Generic_Doorway_C", "NMIB_Generic_Doorway_A", "NMIB_Generic_Doorway_B", "NMIB_Generic_Wall0_A", "NMIB_Generic_Wall0_B", "NMIB_Generic_Wall0_C", "NMIB_Generic_Wall0_D", "NMIB_Generic_Wall1_A", "NMIB_Generic_Wall1_D", "NMIB_Generic_Wall1_B", "NMIB_Generic_Wall1_C", "NMIB_Generic_Wall2_C", "NMIB_Generic_Wall2_D", "NMIB_Generic_Wall2_B", "NMIB_Generic_Wall2_A", "NMIB_Generic_Wall3_A", "NMIB_Generic_Wall3_B", "NMIB_Generic_Wall3_C", "NMIB_Generic_Wall3_D", "NMIB_Generic_Window_A", "NMIB_Generic_Window_B", "NMIB_Generic_Window_C", "NMIB_Generic_Window_D", "NMIB_Plot_Workbench"
 #define MACRO_FUELSTATIONS "Land_fs_feed_F", "Land_FuelStation_Feed_F", "Land_Ind_TankSmall2", "Land_Ind_TankSmall2_EP1", "Land_A_FuelStation_Feed", "Land_fuelstation", "Land_Ind_FuelStation_Feed_EP1"
-#define MACRO_CRAFTINGSTATIONS "Land_Workbench_01_F", "Land_PortableDesk_01_olive_F", "NMIB_Plot_Workbench"
+#define MACRO_CRAFTINGSTATIONS "Land_Workbench_01_F", "Land_PortableDesk_01_olive_F"
 #define MACRO_ARTIFACTS QCLASS(artifact_01), QCLASS(artifact_02), QCLASS(artifact_03), QCLASS(artifact_04), QCLASS(artifact_05), QCLASS(artifact_06), QCLASS(artifact_07), QCLASS(artifact_08), QCLASS(artifact_09), QCLASS(artifact_10)
 #define MACRO_KNIVES "Weap_melee_knife", "Knife_kukri", "Knife_m3", "UNSC_Knife", "UNSC_Knife_reversed", "WBK_survival_weapon_4", "WBK_survival_weapon_4_r", "WBK_survival_weapon_3", "WBK_survival_weapon_3_r"
 #define MACRO_FIRETYPES "MetalBarrel_burning_F", "Land_Campfire_F", "Land_FirePlace_F", "FirePlace_burning_F"
 #define MACRO_VEHICLETYPES "Car", "Tank", "Air", "Ship"
+#define MACRO_BUILDINGTYPES "House", "Building"
 #define MACRO_GEMTYPES  QCLASS(malachite), QCLASS(ruby), QCLASS(sapphire), QCLASS(amethyst), QCLASS(diamond), QCLASS(emerald)
 #define MACRO_RESPIRATOR_MASKS "g_airpurifyingrespirator_01_f", "g_airpurifyingrespirator_02_black_f", "g_airpurifyingrespirator_02_olive_f", "g_airpurifyingrespirator_02_sand_f"
 #define MACRO_RESPIRATOR_MASKS_NOFILTER "g_airpurifyingrespirator_01_nofilter_f", "g_airpurifyingrespirator_02_black_nofilter_f", "g_airpurifyingrespirator_02_olive_nofilter_f", "g_airpurifyingrespirator_02_sand_nofilter_f"
