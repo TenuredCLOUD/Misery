@@ -34,6 +34,7 @@ class CfgPatches {
 #include "\z\misery\addons\ui\menus\bank.hpp"
 #include "\z\misery\addons\ui\menus\inventoryFramework.hpp"
 #include "\z\misery\addons\ui\menus\generator.hpp"
+#include "\z\misery\addons\ui\menus\forge.hpp"
 #include "\z\misery\addons\ui\menus\furniture.hpp"
 #include "\z\misery\addons\ui\menus\vehicleFurniture.hpp"
 
