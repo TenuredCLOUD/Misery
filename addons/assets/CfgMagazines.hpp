@@ -127,11 +127,11 @@ class CfgMagazines {
 
     class CLASS(matchBox): CLASS(FakeMagazine) {
         count = 20;
-        descriptionShort = "$STR_MISERY_LIGHTER_DESCRIPTION";
-        displayName = "$STR_MISERY_LIGHTER_DISPLAYNAME";
+        descriptionShort = "box of weathered matches";
+        displayName = "Match Box";
         mass = 1;
         model = "a3\structures_f_epa\items\tools\matches_f.p3d";
-        picture = QPATHTOF(data\icons\lighter.paa);
+        picture = QPATHTOF(data\icons\matchBox.paa);
         scope = 2;
     };
 
