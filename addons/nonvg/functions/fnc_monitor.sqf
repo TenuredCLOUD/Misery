@@ -15,19 +15,17 @@
  *
 */
 
-[{(cameraView isEqualTo "EXTERNAL" && (currentVisionMode player isEqualTo 1 || currentVisionMode player isEqualTo 2))},
-{
-    [{
-        params ["_args", "_handle"];
+player addEventHandler ["VisionModeChanged", {
+    params ["_player", "_visionMode", "_tiIndex", "_previousVisionMode", "_previousTiIndex", "_vehicle", "_turret"];
 
-        if ((cameraView isEqualTo "INTERNAL") || (cameraView isEqualTo "GUNNER") || (currentVisionMode player isEqualTo 0) || (!alive player)) exitWith {
-            _handle call CBA_fnc_removePerFrameHandler;
-            call FUNC(monitor);
-        };
+    private _cameraView = cameraView;
 
-        if ((currentVisionMode player isEqualTo 1) || (currentVisionMode player isEqualTo 2)) then {
-            player action ["nvGogglesOff", player];
-        };
-    }, 0.1, []] call CBA_fnc_addPerFrameHandler;
-}, []] call CBA_fnc_waitUntilAndExecute;
+    if (_visionMode isEqualTo 0) exitWith {};
+    if (_cameraView isEqualTo "INTERNAL") exitWith {};
+
+    if (_cameraView isEqualTo "EXTERNAL") then {
+        player action ["nvGogglesOff", player];
+    };
+
+}];
 
