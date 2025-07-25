@@ -21,6 +21,3 @@ private _finalThirst = ((_thirst + GVAR(thirstModifiers)) min 1) max 0;
 GVAR(thirstModifiers) = 0;
 player setVariable [QGVAR(thirst), _finalThirst];
 
-if (_finalThirst isEqualTo 0) then {
-    [player, 100] call EFUNC(common,specialDamage);
-};

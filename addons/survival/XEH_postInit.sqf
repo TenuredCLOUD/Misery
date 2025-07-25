@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+GVAR(decayLevel) = 0;
+GVAR(decayEffect) = ppEffectCreate ["colorCorrections", 1500];
+
 if (!hasInterface) exitWith {};
 
 ["CBA_settingsInitialized", {

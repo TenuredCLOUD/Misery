@@ -14,22 +14,24 @@
  *
 */
 
+[player] call FUNC(nearGenerator) params ["", "", "_generatorType"];
+
 disableSerialization;
 
-waitUntil {!isNull findDisplay 573849};
+[{!isNull findDisplay 573849}, {
+    params ["_args"];
+    _args params ["_generatorType"];
 
-private _dialog = findDisplay 573849;
-private _IconCtrl = _dialog displayCtrl 1200;
-private _IconName = _dialog displayCtrl 1002;
+    private _dialog = findDisplay 573849;
+    private _iconCtrl = _dialog displayCtrl 1200;
+    private _iconName = _dialog displayCtrl 1002;
 
-_Generator = player getVariable QCLASS(currentGenerator);
-_GeneratorType = typeOf _Generator;
+    private _vehicleName = getText (configFile >> "CfgVehicles" >> _generatorType >> "displayName");
 
-private _Vehiclename = getText (configFile >> "CfgVehicles" >> _GeneratorType >> "displayName");
-
-if (!isNil "_Vehiclename") then {
-    _cfg = configFile >> "CfgVehicles" >> _GeneratorType;
-    if (isClass _cfg) exitWith {
-        _IconName ctrlSetText _Vehiclename;
+    if (!isNil "_vehicleName") then {
+        _cfg = configFile >> "CfgVehicles" >> _generatorType;
+        if (isClass _cfg) exitWith {
+            _iconName ctrlSetText _vehicleName;
+        };
     };
-};
+}, [_generatorType]] call CBA_fnc_waitUntilAndExecute;

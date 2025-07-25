@@ -21,7 +21,8 @@ private _modPrep = [
     ["ace_refuel", isClass (configFile >> "CfgPatches" >> "ace_refuel")],
     ["NerdMods_iBuild", isClass (configFile >> "CfgPatches" >> "NerdMods_iBuild")],
     ["remnant", isClass (configFile >> "CfgPatches" >> "remnant")],
-    ["DSA_Spooks",  isClass (configFile >> "CfgPatches" >> "DSA_Spooks")]
+    ["DSA_Spooks",  isClass (configFile >> "CfgPatches" >> "DSA_Spooks")],
+    ["WBK_MeleeMechanics", isClass (configFile >> "CfgPatches" >> "WBK_MeleeMechanics")]
 ];
 
 {

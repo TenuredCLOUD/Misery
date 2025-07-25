@@ -18,6 +18,7 @@ class CfgPatches {
 #include "\z\misery\addons\ui\menus\fontChange.hpp"
 #include "\z\misery\addons\ui\menus\sleep.hpp"
 #include "\z\misery\addons\ui\menus\crafting.hpp"
+#include "\z\misery\addons\ui\menus\fireCrafting.hpp"
 #include "\z\misery\addons\ui\menus\fishing.hpp"
 #include "\z\misery\addons\ui\menus\cooking.hpp"
 #include "\z\misery\addons\ui\menus\hydrology.hpp"
@@ -31,9 +32,10 @@ class CfgPatches {
 #include "\z\misery\addons\ui\menus\moneyTakeMenu.hpp"
 //#include "\ui\menus\moneyGiveMenu.hpp"
 #include "\z\misery\addons\ui\menus\bank.hpp"
-#include "\z\misery\addons\ui\menus\tradingQue.hpp"
 #include "\z\misery\addons\ui\menus\inventoryFramework.hpp"
 #include "\z\misery\addons\ui\menus\generator.hpp"
+#include "\z\misery\addons\ui\menus\furniture.hpp"
+#include "\z\misery\addons\ui\menus\vehicleFurniture.hpp"
 
 class RscTitles {
     #include "\z\misery\addons\ui\menus\geiger.hpp"
