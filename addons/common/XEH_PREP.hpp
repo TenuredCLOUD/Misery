@@ -27,6 +27,7 @@ PREP(nearRockSource);
 PREP(nearTree);
 PREP(nearTreeAxe);
 PREP(nearTreeSaw);
+PREP(nearVehicle);
 PREP(nearWell);
 PREP(parseVehicleData);
 PREP(spawnLoot);
