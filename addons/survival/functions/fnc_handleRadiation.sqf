@@ -17,7 +17,7 @@
  * Public: No
 */
 
-params ["_radiation"];
+params ["_radiation", "_parasites"];
 
 if (_radiation > 0) then {
     [-0.001, "radiation"] call EFUNC(common,addStatusModifier);
