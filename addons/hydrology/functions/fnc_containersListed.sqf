@@ -26,13 +26,8 @@ lbClear _list;
 
     {
         private _requiredItem = _x select 0;
-        private _displayName = getText (configFile >> "CfgWeapons" >> _requiredItem >> "displayName");
-        if (_displayName isEqualTo "") then {
-            _displayName = getText (configFile >> "CfgMagazines" >> _requiredItem >> "displayName");
-        };
-        if (_displayName isEqualTo "") then {
-            _displayName = _requiredItem;
-        };
+
+        [_requiredItem] call EFUNC(common,getItemData) params ["_displayName"];
 
         private _index = _list lbAdd _displayName;
         _list lbSetData [_index, _requiredItem];
