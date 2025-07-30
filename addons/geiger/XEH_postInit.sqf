@@ -1,6 +1,24 @@
 #include "script_component.hpp"
 
-// Keybind is bound to "K"
-["Misery", QGVAR(power), "Toggle Geiger", {
-        call FUNC(keybind);
-}, {}, [37, [false, false, false]]] call CBA_fnc_addKeybind;
+if (hasInterface) then {
+    call FUNC(managePower);
+};
+
+if !(isServer) exitWith {};
+
+[
+    "geiger_menu",
+    "Add lithium battery to geiger",
+    {
+        [[QCLASS(lithiumBattery), QCLASS(geiger_NoBattery)]] call EFUNC(common,hasItem)
+    },
+    {
+        [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
+        call FUNC(batteries);
+    },
+    "",
+    "",
+    ""
+] call EFUNC(actions,addAction);
+
+
