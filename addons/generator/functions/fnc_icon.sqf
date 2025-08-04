@@ -19,19 +19,12 @@
 disableSerialization;
 
 [{!isNull findDisplay 573849}, {
-    params ["_args"];
-    _args params ["_generatorType"];
+    params ["_generatorType"];
 
     private _dialog = findDisplay 573849;
-    private _iconCtrl = _dialog displayCtrl 1200;
-    private _iconName = _dialog displayCtrl 1002;
+    private _iconName = _dialog displayCtrl 1000;
 
-    private _vehicleName = getText (configFile >> "CfgVehicles" >> _generatorType >> "displayName");
+    [_generatorType] call EFUNC(common,getObjectData) params ["_objectDisplayName"];
+    _iconName ctrlSetText _objectDisplayName;
 
-    if (!isNil "_vehicleName") then {
-        _cfg = configFile >> "CfgVehicles" >> _generatorType;
-        if (isClass _cfg) exitWith {
-            _iconName ctrlSetText _vehicleName;
-        };
-    };
-}, [_generatorType]] call CBA_fnc_waitUntilAndExecute;
+}, _generatorType] call CBA_fnc_waitUntilAndExecute;
