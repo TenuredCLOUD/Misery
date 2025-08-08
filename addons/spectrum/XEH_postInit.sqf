@@ -9,11 +9,26 @@
 
     if (isServer) then {
         call FUNC(updateDetector);
+        [
+            "chemicalDetector_menu",
+            "Add lithium batteries to spectrum device",
+            {
+                [["hgun_esd_01_dummy_F"]] call EFUNC(common,hasItem) && ([QCLASS(lithiumBattery)] call EFUNC(common,countItem) > 1)
+            },
+            {
+                [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
+                call FUNC(batteries);
+            },
+            "",
+            "",
+            ""
+        ] call EFUNC(actions,addAction);
     };
 
     if (hasInterface) then {
         call FUNC(detectorAudio);
         call FUNC(entityDetection);
+        call FUNC(managePower);
     };
 
     // Set Spectrum device frequency allowance to 1MHz - 1GHz:

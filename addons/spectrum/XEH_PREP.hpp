@@ -1,7 +1,9 @@
 PREP(audioLogic);
+PREP(batteries);
 PREP(detectorAudio);
 PREP(entityDetection);
 PREP(hasDetector);
+PREP(managePower);
 PREP(nearArtifact);
 PREP(updateDetector);
 PREP(updateReadings);
