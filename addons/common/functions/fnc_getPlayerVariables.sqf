@@ -61,5 +61,6 @@ private _cartridgeEfficiency = player getVariable [QEGVAR(gasmask,cartridgeEffic
 
 // Power / simulated battery life
 private _chemicalDetectorPower = player getVariable [QEGVAR(chemical,detectorPower), MACRO_PLAYER_DEFAULTS_HIGH];
+private _spectrumDevicePower = player getVariable [QEGVAR(spectrum,detectorPower), MACRO_PLAYER_DEFAULTS_HIGH];
 
-[_hunger, _thirst, _energyDeficit, _thermalIndex, _exposure, _wetness, _radiation, _infection, _parasites, _toxicity, _psychosis, _buffs, _ailments, _funds, _bankedFunds, _cartridgeEfficiency, _chemicalDetectorPower]
+[_hunger, _thirst, _energyDeficit, _thermalIndex, _exposure, _wetness, _radiation, _infection, _parasites, _toxicity, _psychosis, _buffs, _ailments, _funds, _bankedFunds, _cartridgeEfficiency, _chemicalDetectorPower, _spectrumDevicePower]

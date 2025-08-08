@@ -10,6 +10,7 @@ PREP(getObjectData);
 PREP(getPlayerVariables);
 PREP(getSimplifiedLoadout);
 PREP(grabComposition);
+PREP(handgunAttachments);
 PREP(hasItem);
 PREP(isInside);
 PREP(isInsideLoot);

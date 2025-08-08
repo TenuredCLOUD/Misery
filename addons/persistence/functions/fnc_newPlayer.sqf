@@ -32,6 +32,7 @@ player setVariable [QEGVAR(survival,toxicity), MACRO_PLAYER_DEFAULTS_LOW];
 player setVariable [QEGVAR(psychosis,state), MACRO_PLAYER_DEFAULTS_LOW];
 player setVariable [QEGVAR(gasmask,cartridgeEfficiency), MACRO_PLAYER_DEFAULTS_HIGH];
 player setVariable [QEGVAR(chemical,detectorPower), MACRO_PLAYER_DEFAULTS_HIGH];
+player setVariable [QEGVAR(spectrum,detectorPower), MACRO_PLAYER_DEFAULTS_HIGH];
 player setVariable [QEGVAR(vitals,buffs), []];
 player setVariable [QEGVAR(vitals,ailments), []];
 player setVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
