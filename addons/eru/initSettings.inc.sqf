@@ -1,63 +1,22 @@
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
+private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 
-["Misery", QGVAR(power), "Turn on/off ERU", {
-    private _formattedText;
-    if (QCLASS(eru_Off) in magazines player) then {
-        private _eruTurnOn = format ["<t font='PuristaMedium' size='0.7'>%1</t>", localize "STR_MISERY_TURNONGEIGERBOOTUP"];
-        [parseText _eruTurnOn, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
-        playSound3D [QPATHTOEF(audio,sounds\eru\PowerUpBeep.ogg), player, false, getPosASL player, 4, 1, 10];
-        player removeMagazine 'Misery_ERU_off';
-        player addMagazine 'Misery_ERU';
-        } else {
-        if (QCLASS(eru_On) in magazines player) then {
-            private _eruTurnOff = format ["<t font='PuristaMedium' size='0.7'>%1</t>", localize "STR_MISERY_TURNONGEIGERTURNOFF"];
-            [parseText _eruTurnOff, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
-            playSound3D [QPATHTOEF(audio,sounds\eru\PowerDownBeep.ogg), player, false, getPosASL player, 4, 1, 10];
-            player removeMagazine 'Misery_ERU';
-            player addMagazine 'Misery_ERU_off';
-        } else {
-            private _eruNoItem = format ["<t font='PuristaMedium' size='0.7'>%1</t>", localize "STR_MISERY_TURNONGEIGERNOITEM"];
-            [parseText _eruNoItem, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
-        };
-    };
+[_category, QGVAR(power), "Toggle ERU", {
+    call FUNC(keybind);
 }, {}, [DIK_U, [false, false, false]]] call CBA_fnc_addKeybind;
 
-["Misery", QGVAR(temperature), "ERU Temperature Readings", {
-    if (QCLASS(eru_On) in magazines player) then {
-    Misery_ERU_Temp = true;
-    Misery_ERU_Radiation = nil;
-    Misery_ERU_PsyEmm = nil;
-    Misery_ERU_Compass = nil;
-    playSound3D [QPATHTOEF(audio,sounds\eru\ChirpBeep.ogg), player, false, getPosASL player, 4, 1, 10];
+[_category, QGVAR(temperature), "Temperature Readings", {
+    if ([[QCLASS(eru_On)]] call EFUNC(common,hasItem)) then {
+        GVAR(temperature) = true;
+        GVAR(compass) = nil;
+        playSound QEGVAR(audio,sound_chirpBeep);
     };
 }, {}, [DIK_NUMPAD0, [false, false, true]]] call CBA_fnc_addKeybind;
 
-["Misery", QGVAR(radiation), "ERU Radiation Readings", {
-    if (QCLASS(eru_On) in magazines player) then {
-    Misery_ERU_Temp = nil;
-    Misery_ERU_Radiation = true;
-    Misery_ERU_PsyEmm = nil;
-    Misery_ERU_Compass = nil;
-    playSound3D [QPATHTOEF(audio,sounds\eru\ChirpBeep.ogg), player, false, getPosASL player, 4, 1, 10];
+[_category, QGVAR(compass), "Compass Setting", {
+    if ([[QCLASS(eru_On)]] call EFUNC(common,hasItem)) then {
+        GVAR(temperature) = nil;
+        GVAR(compass) = true;
+        playSound QEGVAR(audio,sound_chirpBeep);
     };
 }, {}, [DIK_NUMPAD1, [false, false, true]]] call CBA_fnc_addKeybind;
-
-["Misery", QGVAR(psyEmissions), "ERU PsyEmission Readings", {
-    if (QCLASS(eru_On) in magazines player) then {
-    Misery_ERU_Temp = nil;
-    Misery_ERU_Radiation = nil;
-    Misery_ERU_PsyEmm = true;
-    Misery_ERU_Compass = nil;
-    playSound3D [QPATHTOEF(audio,sounds\eru\ChirpBeep.ogg), player, false, getPosASL player, 4, 1, 10];
-    };
-}, {}, [DIK_NUMPAD2, [false, false, true]]] call CBA_fnc_addKeybind;
-
-["Misery", QGVAR(compass), "ERU Compass Readings", {
-    if (QCLASS(eru_On) in magazines player) then {
-    Misery_ERU_Temp = nil;
-    Misery_ERU_Radiation = nil;
-    Misery_ERU_PsyEmm = nil;
-    Misery_ERU_Compass = true;
-    playSound3D [QPATHTOEF(audio,sounds\eru\ChirpBeep.ogg), player, false, getPosASL player, 4, 1, 10];
-    };
-}, {}, [DIK_NUMPAD3, [false, false, true]]] call CBA_fnc_addKeybind;

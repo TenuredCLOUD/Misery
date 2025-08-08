@@ -7,10 +7,10 @@ if (hasInterface) then {
 if !(isServer) exitWith {};
 
 [
-    "geiger_menu",
-    "Add lithium battery to geiger",
+    "eru_menu",
+    "Add lithium battery to ERU",
     {
-        [[QCLASS(lithiumBattery), QCLASS(geiger_NoBattery)]] call EFUNC(common,hasItem)
+        [[QCLASS(lithiumBattery), QCLASS(eru_NoBattery)]] call EFUNC(common,hasItem)
     },
     {
         [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
@@ -20,5 +20,3 @@ if !(isServer) exitWith {};
     "",
     ""
 ] call EFUNC(actions,addAction);
-
-

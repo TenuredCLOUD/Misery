@@ -22,7 +22,7 @@ lbClear _combo;
 private _inventoryItems = items player;
 {
     private _itemClass = toUpper _x;
-    private _itemData = GVAR(itemData) select {toUpper (_x select 1) isEqualTo _itemClass};
+    private _itemData = GVAR(itemData) select {toUpper (_x select 0) isEqualTo _itemClass};
     if (count _itemData > 0) then {
         private _displayName = getText (configFile >> "CfgMagazines" >> _itemClass >> "displayName");
         if (_displayName == "") then {
