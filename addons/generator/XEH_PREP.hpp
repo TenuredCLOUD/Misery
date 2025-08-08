@@ -1,12 +1,10 @@
 PREP(fuel);
 PREP(icon);
-PREP(interact);
+PREP(nearGenerator);
 PREP(powerButton);
 PREP(powerNearby);
-PREP(powerOff);
-PREP(powerOn);
+PREP(processAction);
+PREP(refresh);
 PREP(refuel);
-PREP(running);
-PREP(runningUserAction);
+PREP(runLoop);
 PREP(trackPos);
-PREP(uiPrep);

@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [] call misery_ambient_ai_fnc_generation;
+ * [] call misery_ambient_ai_fnc_spawn;
  *
  * Public: No
 */

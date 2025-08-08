@@ -67,10 +67,11 @@ class CfgWeapons {
         };
     };
 
-    class CLASS(headlamp_NoBattery): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_HEADLAMP_NB_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_HEADLAMP_NB_DESCRIPTION";
-        picture = QPATHTOF(data\icons\headlamp.paa);
+    class CLASS(lantern_NoBattery): CLASS(ItemCore) {
+        displayName = "Lantern (No battery)";
+        descriptionShort = "- Useless without batteries...";
+        picture = QPATHTOF(data\icons\lantern.paa);
+        model = "a3\structures_f\civ\camping\camping_light_off_f.p3d";
         scope = 2;
         scopeCurator = 2;
 

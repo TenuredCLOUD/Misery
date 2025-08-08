@@ -31,8 +31,6 @@ private _airTempF = _airTemp * 9/5 + 32;
 private _windChillIndexCelsius = _airTemp; // Default to air temp
 private _breathFog = false;
 
-private _humidity = linearConversion [0, 1, (overcast + rain + fog)/3, 0.3, 1, true];
-
 if (!(isNull objectParent player) || insideBuilding player isEqualTo 1) then {
     _windChillIndexCelsius = _airTemp;
     _breathFog = false;
@@ -48,7 +46,7 @@ if (!(isNull objectParent player) || insideBuilding player isEqualTo 1) then {
         _windChillIndexCelsius = 13.12 + (0.6215 * _airTemp) - (11.37 * (_apparentWindMph ^ 0.16)) + (0.3965 * _airTemp * (_apparentWindMph ^ 0.16));
     };
 
-    if (_windChillIndexCelsius <= 7 && _humidity >= 0.6 && (rain < 0.5) && !(underwater player)) then {
+    if (_windChillIndexCelsius <= 7 && (humidity >= 0.6) && (rain < 0.5) && !(underwater player)) then {
         _breathFog = true;
     };
 };

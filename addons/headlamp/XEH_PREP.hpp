@@ -1,2 +1,0 @@
-PREP(batteries);
-PREP(keybind);

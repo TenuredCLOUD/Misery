@@ -33,9 +33,3 @@ player setVariable [QEGVAR(temperature,exposure), _finalExposure];
 
 player setVariable [QEGVAR(temperature,thermalIndex), _thermalIndexModifier];
 player setVariable [QEGVAR(temperature,wetness), _wetnessModifier];
-
-if ((_exposure <= -1 || _exposure >= 1) || (_thermalIndex <= -30 || _thermalIndex >= 55)) then {
-    if ((random 100) > 90) then {
-        [player, 100] call EFUNC(common,specialDamage);
-    };
-};

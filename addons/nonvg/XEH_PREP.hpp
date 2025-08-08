@@ -1,1 +1,1 @@
-PREP(disableNightVision);
+PREP(monitor);
