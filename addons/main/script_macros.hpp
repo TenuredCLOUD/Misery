@@ -35,6 +35,9 @@
 #define MACRO_PLAYER_DEFAULTS_LOW 0
 #define MACRO_PLAYER_DEFAULTS_TEMP 37
 
+// Calculations - Chemical
+#define MACRO_BASE_CHEMICAL_DOSE 1
+
 // Calculations - Radiation
 #define MACRO_BASE_DOSE 10
 #define MACRO_RADIATION_NUTRITIONLOSS(arg) ((arg) / 100) / 10

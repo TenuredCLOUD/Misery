@@ -29,8 +29,8 @@ if !(call FUNC(checkAreas)) exitWith {
             _handle call CBA_fnc_removePerFrameHandler;
         };
 
-        if (_threatLevel >= 0.25) then {
-            playSound QEGVAR(audio,sound_PowerDownBeep);
+        if (_threatLevel >= 0.05) then {
+           playSound "FD_Start_F";
         };
     }, 0.5] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;

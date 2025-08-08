@@ -30,7 +30,7 @@ if !(call EFUNC(common,checkAreas)) exitWith {
             private _area = _x;
             private _areaPos = getMarkerPos _area;
             private _areaSize = selectMax (getMarkerSize _area);
-            private _maxRange = _areaSize + 50;
+            private _maxRange = _areaSize + 100;
             private _distance = _player distance _areaPos;
 
             private _threat = ((1 - (_distance / _maxRange)) max 0) min 1;
