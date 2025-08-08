@@ -52,9 +52,11 @@ private _thirstModifier = THIRST_RATE;
 private _thermalIndexModifier = _airTemp + (_clothesWarmth / 5); // Very slow drift
 private _wetnessModifier = 0;
 
+call EFUNC(common,nearFire) params ["", "_isInflamed"];
+
 // Environment
 switch (true) do {
-    case ([player] call EFUNC(common,nearFire)): {
+    case (_isInflamed): {
         if (_thermalIndex < TEMP_NEUTRAL) then {
             _exposureModifier = NEUTRAL_RATE; // Warm up
             _thermalIndexModifier = _thermalIndex + 1 min TEMP_NEUTRAL; // Slow warming

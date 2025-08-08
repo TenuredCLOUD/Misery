@@ -67,10 +67,11 @@ class CfgWeapons {
         };
     };
 
-    class CLASS(headlamp_NoBattery): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_HEADLAMP_NB_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_HEADLAMP_NB_DESCRIPTION";
-        picture = QPATHTOF(data\icons\headlamp.paa);
+    class CLASS(lantern_NoBattery): CLASS(ItemCore) {
+        displayName = "Lantern (No battery)";
+        descriptionShort = "- Useless without batteries...";
+        picture = QPATHTOF(data\icons\lantern.paa);
+        model = "a3\structures_f\civ\camping\camping_light_off_f.p3d";
         scope = 2;
         scopeCurator = 2;
 
@@ -1381,19 +1382,6 @@ class CfgWeapons {
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0;
-        };
-    };
-
-    class CLASS(rfHighRange_NoBattery): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_RFHIGHNOBATTERY_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_RFHIGHNOBATTERY_DESCRIPTION";
-        picture = QPATHTOF(data\icons\EMFdetectorhighrangenobattery.paa);
-        model = "\A3\Weapons_F\Items\minedetector.p3d";
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 5;
         };
     };
 };

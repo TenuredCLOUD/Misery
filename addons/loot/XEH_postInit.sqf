@@ -2,8 +2,35 @@
 
 if (!isServer) exitWith {};
 
-GVAR(building_used) = [];
+if (isClass (missionConfigFile >> "CfgMisery_LootData")) then {
+    [] call FUNC(parseData);
 
-[{
-    [] call FUNC(loop)
-}, [], 1] call CBA_fnc_waitAndExecute;
+    [{
+        [] call FUNC(loop)
+    }, [], 1] call CBA_fnc_waitAndExecute;
+} else {
+    [QUOTE(COMPONENT_BEAUTIFIED), "CfgMisery_LootData class not found in description.ext, skipping data parser..."] call EFUNC(common,debugMessage);
+};
+
+if (isClass (missionConfigFile >> "CfgMisery_SearchableObjects")) then {
+    [] call FUNC(parseSearchData);
+
+    [
+        "searchObject_menu",
+        "Search...",
+        {
+            [player] call FUNC(searchCondition) select 0
+        },
+        {
+            [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
+            [player] call FUNC(searchCondition) params ["", "_object", "_objectData"];
+            [_object, _objectData] call FUNC(searchObject)
+        },
+        "",
+        QUOTE(a3\missions_f_oldman\data\img\holdactions\holdaction_box_ca.paa),
+        ""
+    ] call EFUNC(actions,addAction);
+} else {
+    [QUOTE(COMPONENT_BEAUTIFIED), "CfgMisery_SearchableObjects class not found in description.ext, skipping data parser..."] call EFUNC(common,debugMessage);
+};
+
