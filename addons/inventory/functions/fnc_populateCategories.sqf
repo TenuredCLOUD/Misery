@@ -20,7 +20,10 @@ private _combo = _display displayCtrl 2100;
 lbClear _combo;
 
 private _categories = [];
-{ _categories pushBackUnique (_x select 0); } forEach GVAR(itemData);
+
+{
+    _categories pushBackUnique (_x select 1)
+} forEach GVAR(itemData);
 
 {
     private _index = _combo lbAdd _x;
