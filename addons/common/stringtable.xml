@@ -2520,90 +2520,6 @@
             <Japanese>[ガイガー]</Japanese>
             <Turkish>[Geiger]</Turkish>
         </Key>
-        <Key ID="STR_MISERY_HEADLAMPOFF_DESCRIPTION">
-            <English>Helps light the way in the dark</English>
-            <Czech>Pomáhá osvětlit cestu ve tmě</Czech>
-            <French>Aide à éclairer le chemin dans l'obscurité</French>
-            <Spanish>Ayuda a iluminar el camino en la oscuridad</Spanish>
-            <Italian>Aiuta a illuminare la strada al buio</Italian>
-            <Polish>Pomaga oświetlić drogę w ciemności</Polish>
-            <Portuguese>Ajuda a iluminar o caminho no escuro</Portuguese>
-            <Russian>Помогает осветить путь в темноте</Russian>
-            <German>Hilft, den Weg im Dunkeln zu erleuchten</German>
-            <Korean>어둠 속에서 길을 밝히는 데 도움이 됩니다.</Korean>
-            <Japanese>暗闇の中で道を照らすのに役立ちます</Japanese>
-            <Turkish>Karanlıkta yolu aydınlatmaya yardımcı olur</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_HEADLAMPOFF_DISPLAYNAME">
-            <English>Headlamp (OFF)</English>
-            <Czech>Čelovka (VYPNUTÁ)</Czech>
-            <French>Lampe frontale (ÉTEINTE)</French>
-            <Spanish>Linterna frontal (APAGADA)</Spanish>
-            <Italian>Lampada frontale (SPENTA)</Italian>
-            <Polish>Latarka czołowa (WYŁĄCZONA)</Polish>
-            <Portuguese>Lanterna frontal (DESLIGADA)</Portuguese>
-            <Russian>Налобный фонарь (ВЫКЛ)</Russian>
-            <German>Stirnlampe (AUS)</German>
-            <Korean>헤드 램프(OFF)</Korean>
-            <Japanese>ヘッドランプ（OFF）</Japanese>
-            <Turkish>Kafa Lambası (KAPALI)</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_HEADLAMPON_DESCRIPTION">
-            <English>Helps light the way in the dark</English>
-            <Czech>Pomáhá osvětlit cestu ve tmě</Czech>
-            <French>Aide à éclairer le chemin dans l'obscurité</French>
-            <Spanish>Ayuda a iluminar el camino en la oscuridad</Spanish>
-            <Italian>Aiuta a illuminare la strada al buio</Italian>
-            <Polish>Pomaga oświetlić drogę w ciemności</Polish>
-            <Portuguese>Ajuda a iluminar o caminho no escuro</Portuguese>
-            <Russian>Помогает осветить путь в темноте</Russian>
-            <German>Hilft, den Weg im Dunkeln zu erleuchten</German>
-            <Korean>어둠 속에서 길을 밝히는 데 도움이 됩니다.</Korean>
-            <Japanese>暗闇の中で道を照らすのに役立ちます</Japanese>
-            <Turkish>Karanlıkta yolu aydınlatmaya yardımcı olur</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_HEADLAMPON_DISPLAYNAME">
-            <English>Headlamp (ON)</English>
-            <Czech>Čelovka (ZAPNUTO)</Czech>
-            <French>Lampe frontale (ALLUMÉE)</French>
-            <Spanish>Linterna frontal (ENCENDIDA)</Spanish>
-            <Italian>Lampada frontale (ACCESA)</Italian>
-            <Polish>Latarka czołowa (WŁĄCZONA)</Polish>
-            <Portuguese>Lanterna frontal (LIGADA)</Portuguese>
-            <Russian>Налобный фонарь (ВКЛ)</Russian>
-            <German>Stirnlampe (EIN)</German>
-            <Korean>헤드 램프(ON)</Korean>
-            <Japanese>ヘッドランプ（ON）</Japanese>
-            <Turkish>Kafa Lambası (AÇIK)</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_HEADLAMP_NB_DESCRIPTION">
-            <English>Useless without a battery&lt;br/&gt; - Requires 9v battery</English>
-            <Czech>Bez baterie nepoužitelný&lt;br/&gt; - Vyžaduje 9v baterii</Czech>
-            <French>Inutile sans pile&lt;br/&gt; - Nécessite une pile 9v</French>
-            <Spanish>Inservible sin batería&lt;br/&gt; - Requiere batería de 9v</Spanish>
-            <Italian>Inutile senza batteria&lt;br/&gt; - Richiede batteria da 9v</Italian>
-            <Polish>Bezużyteczny bez baterii&lt;br/&gt; - Wymaga baterii 9v</Polish>
-            <Portuguese>Inútil sem bateria&lt;br/&gt; - Requer bateria de 9v</Portuguese>
-            <Russian>Бесполезен без батареи&lt;br/&gt; - Требуется батарея 9v</Russian>
-            <German>Ohne Batterie nutzlos&lt;br/&gt; - Benötigt 9-V-Batterie</German>
-            <Korean>배터리가 없으면 쓸모가 없습니다.&lt;br/&gt; - 9v 배터리 필요</Korean>
-            <Japanese>電池がないと役に立たない&lt;br/&gt; - 9V電池が必要</Japanese>
-            <Turkish>Pilsiz işe yaramaz&lt;br/&gt; - 9v pil gerektirir</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_HEADLAMP_NB_DISPLAYNAME">
-            <English>Headlamp (No battery)</English>
-            <Czech>Čelovka (Bez baterie)</Czech>
-            <French>Lampe frontale (Pas de pile)</French>
-            <Spanish>Linterna frontal (Sin batería)</Spanish>
-            <Italian>Lampada frontale (Batteria scarica)</Italian>
-            <Polish>Latarka czołowa (Brak baterii)</Polish>
-            <Portuguese>Lanterna frontal (Sem bateria)</Portuguese>
-            <Russian>Налобный фонарь (Без батареи)</Russian>
-            <German>Stirnlampe (Keine Batterie)</German>
-            <Korean>헤드 램프(배터리 없음)</Korean>
-            <Japanese>ヘッドランプ（電池切れ）</Japanese>
-            <Turkish>Kafa Lambası (Pilsiz)</Turkish>
-        </Key>
         <Key ID="STR_MISERY_HEATPACK_DESCRIPTION">
             <English>Single use heatpack&lt;br/&gt; - Increases temperature</English>
             <Czech>Jednorázový hřejivý polštářek&lt;br/&gt; - Zvyšuje teplotu</Czech>
@@ -4791,20 +4707,6 @@
             <Japanese>ガイガーをオフにする</Japanese>
             <Turkish>Geiger'ı kapatın</Turkish>
         </Key>
-        <Key ID="STR_MISERY_TURNOFFHEADLAMP">
-            <English>Turn off Headlamp</English>
-            <Czech>Vypnout čelovku</Czech>
-            <French>Éteignez le phare</French>
-            <Spanish>Apaga el faro</Spanish>
-            <Italian>Spegni il faro</Italian>
-            <Polish>Wyłącz światło czołowe</Polish>
-            <Portuguese>Apague o farol</Portuguese>
-            <Russian>Выключить фару</Russian>
-            <German>Schalte den Scheinwerfer aus</German>
-            <Korean>전등을 끄십시오</Korean>
-            <Japanese>ヘッドライトをオフにする</Japanese>
-            <Turkish>Baş lambayı kapat</Turkish>
-        </Key>
         <Key ID="STR_MISERY_TURNOFFRFDETEC">
             <English>Turn off RF detector</English>
             <Czech>Vypnutí RF detektoru</Czech>
@@ -4874,34 +4776,6 @@
             <Korean>가이거를 끄면...</Korean>
             <Japanese>ガイガーを止めて...</Japanese>
             <Turkish>Geiger'ını kapat.</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_TURNONHEADLAMP">
-            <English>Turn on Headlamp</English>
-            <Czech>Zapnout čelovku</Czech>
-            <French>Allume le phare</French>
-            <Spanish>Enciende el faro</Spanish>
-            <Italian>Accendi il faro</Italian>
-            <Polish>Włącz światło czołowe</Polish>
-            <Portuguese>Acender o farol</Portuguese>
-            <Russian>Включить фару</Russian>
-            <German>Schalte den Scheinwerfer ein</German>
-            <Korean>전등을 켜십시오</Korean>
-            <Japanese>ヘッドライトをオンにする</Japanese>
-            <Turkish>Baş lambayı aç</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_TURNONHEADLAMPNOITEM">
-            <English>You don't have a Headlamp...</English>
-            <Czech>Nemáte čelovku...</Czech>
-            <French>Vous n'avez pas de lampe frontale...</French>
-            <Spanish>No tienes un faro...</Spanish>
-            <Italian>Non hai una lampada frontale...</Italian>
-            <Polish>Nie masz latarki czołowej...</Polish>
-            <Portuguese>Você não tem um farol...</Portuguese>
-            <Russian>У вас нет налобного фонаря...</Russian>
-            <German>Sie haben keine Stirnlampe...</German>
-            <Korean>헤드램프가 없습니다...</Korean>
-            <Japanese>ヘッドランプがない...</Japanese>
-            <Turkish>Farın yok...</Turkish>
         </Key>
         <Key ID="STR_MISERY_TURNONRFDETEC">
             <English>Turn on RF detector</English>

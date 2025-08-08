@@ -21,14 +21,14 @@ private _players = call EFUNC(common,listPlayers);
 {
     private _player = _x;
 
-    private _nearBuildings = nearestTerrainObjects [_player, ["HOUSE", "BUILDING"], 100, false, true];
+    [_player, 100] call EFUNC(common,nearBuilding) params ["", "", "_nearBuildings"];
 
     {
         private _building = _x;
         private _buildingType = typeOf _building;
         if (_buildingType in GVAR(buildingBlacklist) || _building in GVAR(building_used)) exitWith {continue};
 
-        private _buildingPositions = _building call BIS_fnc_buildingPositions;
+        private _buildingPositions = _building buildingPos -1;
 
         {
             private _buildingName = toLower getText (configFile >> "CfgVehicles" >> _buildingType >> "displayName");
@@ -56,10 +56,9 @@ private _players = call EFUNC(common,listPlayers);
             private _chance = [GVAR(chance), GVAR(chance) * 2.5] select _isMilitary;
 
             if (_chance < random 100) exitWith {continue};
-            [_buildingPos, GVAR(debug), _isMilitary, _isMedical, _isStore, _isGarage] call FUNC(generate);
+            [_x, _isMilitary, _isMedical, _isStore, _isGarage] call FUNC(generate);
             GVAR(building_used) pushBack _building;
         } forEach _buildingPositions;
-
     } forEach _nearBuildings;
 } forEach _players;
 

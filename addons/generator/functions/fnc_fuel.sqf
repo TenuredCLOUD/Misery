@@ -4,7 +4,8 @@
  * Generator Fuel drain loop
  *
  * Arguments:
- * None
+ * 0: Generator <OBJECT>
+ * 1: Type <STRING>
  *
  * Return Value:
  * None
@@ -14,29 +15,30 @@
  *
 */
 
-_Generator = _this select 0;
+params ["_generator", "_generatorType"];
 
-while {_Generator getVariable [QCLASS(generatorRunning), false] isEqualTo true && _Generator getVariable [QCLASS(generatorFuelLevel), 100] > 0} do {
+private _fuelDelay = nil;
 
-    _GeneratorType = typeOf _Generator;
-
-    private _FuelDelay = nil;
-
-    switch (_GeneratorType) do {
-        case QCLASS(100KVA_Generator): {
-            _FuelDelay = 300;
+    switch (_generatorType) do {
+        case "Land_Portable_generator_F": {
+            _fuelDelay = 60;
         };
-        case QCLASS(heavilyUsedGas_Generator): {
-            _FuelDelay = 60;
-        };
-        case QCLASS(heavilyUsedDiesel_Generator): {
-            _FuelDelay = 120;
+        case "Land_PowerGenerator_F": {
+            _fuelDelay = 120;
         };
     };
 
-    _fuelLevel = _Generator getVariable [QCLASS(generatorFuelLevel), 100];
-    _Generator setVariable [QCLASS(generatorFuelLevel), _fuelLevel - 1, true];
+[{
+    params ["_args", "_handle"];
+    _args params ["_generator"];
 
-    sleep _FuelDelay;
-};
+    private _runState = _generator getVariable [QGVAR(isRunning), false];
+    private _fuelLevel = _generator getVariable [QGVAR(fuelLevel), 1];
 
+    if (!_runState || _fuelLevel <= 0) exitWith {
+        _handle call CBA_fnc_removePerFrameHandler;
+    };
+
+    _generator setVariable [QGVAR(fuelLevel), _fuelLevel - 0.01, true];
+
+}, _fuelDelay, [_generator]] call CBA_fnc_addPerFrameHandler;

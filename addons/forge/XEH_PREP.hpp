@@ -1,0 +1,9 @@
+PREP(burnFuel);
+PREP(canSmeltCheck);
+PREP(outputsListed);
+PREP(parseData);
+PREP(processSmelt);
+PREP(refuel);
+PREP(showFuel);
+PREP(showRecipe);
+PREP(stats);
