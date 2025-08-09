@@ -35,7 +35,7 @@ switch (true) do {
     case (_hitpointLower find "engine" > -1): {_requiredItem = "engine_part";};
     case (_hitpointLower find "wheel" > -1): {_requiredItem = "spare_wheel";};
     case (_hitpointLower isEqualTo "battery"): {_requiredItem = _batteryType;};
-    default {_requiredItem = "repair_kit";};
+    default {_requiredItem = "ToolKit";};
 };
 
 if (_requiredItem isEqualTo "") exitWith {systemChat "No repair item defined for this part.";};
@@ -49,11 +49,11 @@ if (_hitpointLower isEqualTo "battery") then {
 
     if (_missingBatteries <= 0) exitWith {systemChat "All batteries already installed.";};
 
-    private _playerBatteryCount = [_player, _requiredItem] call CBA_fnc_getItemCount;
+    private _playerBatteryCount = [_requiredItem] call EFUNC(common,countItem);
 
     if (_playerBatteryCount >= 1) then {
         // Remove battery from player and vehicle (pseudo-install)
-        [_player, _requiredItem, 1] call CBA_fnc_removeItem;
+        [_player, _requiredItem] call CBA_fnc_removeItem;
         //[_vehicle, _requiredItem, 1] call CBA_fnc_removeItemCargo;
         _installedBatteries = _installedBatteries + 1;
         _vehicle setVariable [QGVAR(installedBatteries), _installedBatteries, true];

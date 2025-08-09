@@ -1,3 +1,5 @@
+PREP(addCoolant);
+PREP(addOil);
 PREP(countBatteries);
 PREP(countItem);
 PREP(engineControl);

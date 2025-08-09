@@ -1217,6 +1217,19 @@ class CfgWeapons {
         };
     };
 
+    class CLASS(tire): CLASS(ItemCore) {
+        displayName = "Tire";
+        descriptionShort = "used for vehicle repairs";
+        picture = "a3\editorpreviews_f\data\cfgvehicles\land_tyre_f.jpg";
+        model = "a3\structures_f\civ\garbage\tyre_f.p3d";
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 50;
+        };
+    };
+
     class CLASS(stoneChunk): CLASS(ItemCore) {
         displayName = "$STR_MISERY_STONECHUNK_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_STONECHUNK_DESCRIPTION";

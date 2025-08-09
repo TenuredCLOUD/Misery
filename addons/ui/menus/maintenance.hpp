@@ -56,6 +56,34 @@ class CLASS(maintenance_ui)
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
+        class CLASS(maintenance_addOil): RscButton
+        {
+	        idc = 1604;
+	        colorFocused[] = {0.5,0.5,0.5,0.7};
+	        text = "Add oil"; //--- ToDo: Localize;
+	        x = 22 * GUI_GRID_W + GUI_GRID_X;
+	        y = 9 * GUI_GRID_H + GUI_GRID_Y;
+	        w = 7 * GUI_GRID_W;
+	        h = 2 * GUI_GRID_H;
+	        colorBackground[] = {0.2,0.2,0.2,0.7};
+	        colorActive[] = {0.5,0.5,0.5,0.7};
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
+        };
+        class CLASS(maintenance_addCoolant): RscButton
+        {
+	        idc = 1605;
+	        colorFocused[] = {0.5,0.5,0.5,0.7};
+	        text = "Add coolant"; //--- ToDo: Localize;
+	        x = 22 * GUI_GRID_W + GUI_GRID_X;
+	        y = 11.5 * GUI_GRID_H + GUI_GRID_Y;
+	        w = 7 * GUI_GRID_W;
+	        h = 2 * GUI_GRID_H;
+	        colorBackground[] = {0.2,0.2,0.2,0.7};
+	        colorActive[] = {0.5,0.5,0.5,0.7};
+            font = UI_MACRO_FONT;
+            sizeEx = UI_MACRO_TEXTSIZE;
+        };
         class CLASS(maintenance_repair): RscButton
         {
             idc = 1600;

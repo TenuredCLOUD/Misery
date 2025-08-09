@@ -235,7 +235,7 @@ class CfgMagazines {
         displayName = "$STR_MISERY_AUTOBATT_DISPLAYNAME";
         mass = 110;
         model = "a3\structures_f_bootcamp\items\electronics\carbattery_02_f.p3d";
-        picture = QPATHTOF(data\icons\autobatt.paa);
+        picture = "a3\editorpreviews_f\data\cfgvehicles\land_carbattery_02_f.jpg"; //QPATHTOF(data\icons\autobatt.paa);
         scope = 2;
     };
 
@@ -246,7 +246,7 @@ class CfgMagazines {
         displayName = "$STR_MISERY_AUTOBATTHEAVY_DISPLAYNAME";
         mass = 200;
         model = "a3\structures_f_bootcamp\items\electronics\carbattery_01_f.p3d";
-        picture = QPATHTOF(data\icons\autobatt_heavy.paa);
+        picture = "a3\editorpreviews_f\data\cfgvehicles\land_carbattery_01_f.jpg"; //QPATHTOF(data\icons\autobatt_heavy.paa);
         scope = 2;
     };
 
@@ -428,6 +428,103 @@ class CfgMagazines {
         mass = 150;
         model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
         picture = QPATHTOF(data\icons\canisterpetrol.paa);
+        scope = 2;
+    };
+
+    class CLASS(coolant): CLASS(FakeMagazine) {
+        count = 4;
+        descriptionShort = "Coolant (1Gal / 4L)";
+        displayName = "engine coolant";
+        mass = 50;
+        model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
+        picture = "a3\editorpreviews_f_orange\data\cfgvehicles\land_canisterfuel_blue_f.jpg";
+        scope = 2;
+    };
+
+    class CLASS(engineOil): CLASS(FakeMagazine) {
+        count = 4;
+        descriptionShort = "Engine oil (1Gal / 4L)";
+        displayName = "engine oil";
+        mass = 50;
+        model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
+        picture = "a3\editorpreviews_f_orange\data\cfgvehicles\land_canisterfuel_red_f.jpg";
+        scope = 2;
+    };
+
+    class CLASS(metalFabKit): CLASS(FakeMagazine) {
+        count = 20;
+        descriptionShort = "metal fabrication kit used for vehicle repair";
+        displayName = "Metal fabrication kit";
+        mass = 100;
+        model = "a3\weapons_f\ammoboxes\bags\backpack_tortila.p3d";
+        picture = "a3\weapons_f\ammoboxes\bags\data\ui\icon_b_c_tortila_cbr.paa";
+        hiddenselectionstextures[] = {"a3\weapons_f\ammoboxes\bags\data\backpack_tortila_cbr_co.paa"};
+        scope = 2;
+    };
+
+    class CLASS(enginePartsKit): CLASS(FakeMagazine) {
+        count = 20;
+        descriptionShort = "engine parts kit used for vehicle repair";
+        displayName = "Engine parts kit";
+        mass = 70;
+        model = "a3\weapons_f\ammoboxes\bags\backpack_small.p3d";
+        picture = "a3\weapons_f\ammoboxes\bags\data\ui\icon_b_c_small_rgr.paa";
+        hiddenselectionstextures[] = {"a3\weapons_f\ammoboxes\bags\data\backpack_small_rgr_co.paa"};
+        scope = 2;
+    };
+
+    class CLASS(fuelSystemKit): CLASS(FakeMagazine) {
+        count = 20;
+        descriptionShort = "fuel system kit used for vehicle repair";
+        displayName = "Fuel system kit";
+        mass = 70;
+        model = "a3\weapons_f\ammoboxes\bags\backpack_fast.p3d";
+        picture = "a3\weapons_f\ammoboxes\bags\data\ui\icon_b_c_kitbag_sgg.paa";
+        hiddenselectionstextures[] = {"a3\weapons_f\ammoboxes\bags\data\backpack_fast_sgg_co.paa"};
+        scope = 2;
+    };
+
+    class CLASS(electronicRepairKit): CLASS(FakeMagazine) {
+        count = 20;
+        descriptionShort = "electronics repair kit used for vehicle repair";
+        displayName = "Electronics repair kit";
+        mass = 50;
+        model = "a3\supplies_f_orange\bags\b_messenger_f.p3d";
+        picture = "a3\supplies_f_orange\bags\data\ui\icon_b_messenger_coyote_ca.paa";
+        hiddenselectionstextures[] = {"a3\supplies_f_orange\bags\data\b_messenger_coyote_f_co.paa"};
+        scope = 2;
+    };
+
+    class CLASS(glassRepairKit): CLASS(FakeMagazine) {
+        count = 20;
+        descriptionShort = "glass repair kit used for vehicle repair";
+        displayName = "Glass repair kit";
+        mass = 50;
+        model = "a3\supplies_f_orange\bags\b_messenger_f.p3d";
+        picture = "a3\supplies_f_orange\bags\data\ui\icon_b_messenger_gray_ca.paa";
+        hiddenselectionstextures[] = {"a3\supplies_f_orange\bags\data\b_messenger_gray_f_co.paa"};
+        scope = 2;
+    };
+
+    class CLASS(tirePatchKit): CLASS(FakeMagazine) {
+        count = 20;
+        descriptionShort = "tire patch kit used for vehicle repair";
+        displayName = "Tire patch kit";
+        mass = 50;
+        model = "a3\supplies_f_orange\bags\b_messenger_f.p3d";
+        picture = "a3\supplies_f_orange\bags\data\ui\icon_b_messenger_black_ca.paa";
+        hiddenselectionstextures[] = {"a3\supplies_f_orange\bags\data\b_messenger_black_f_co.paa"};
+        scope = 2;
+    };
+
+    class CLASS(trackRepairKit): CLASS(FakeMagazine) {
+        count = 20;
+        descriptionShort = "track repair kit used for vehicle repair";
+        displayName = "Track repair kit";
+        mass = 100;
+        model = "a3\weapons_f\ammoboxes\bags\backpack_gorod.p3d";
+        picture = "a3\weapons_f\ammoboxes\bags\data\ui\icon_b_c_gorod_blk_ca.paa";
+        hiddenselectionstextures[] = {"a3\weapons_f\ammoboxes\bags\data\backpack_gorod_blk_co.paa"};
         scope = 2;
     };
 };

@@ -15,7 +15,7 @@ if (isServer) then {
             createDialog QCLASS(maintenance_ui);
         },
         "",
-        "a3\ui_f\data\igui\cfg\cursors\iconrepairat_ca.paa",
+        "",
         ""
     ] call EFUNC(actions,addAction);
 };

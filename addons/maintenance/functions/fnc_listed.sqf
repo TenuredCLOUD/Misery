@@ -21,10 +21,22 @@
     [player] call FUNC(nearVehicle) params ["_nearVehicle", "_vehicle"];
 
     private _list = findDisplay 274839 displayCtrl 1500;
+    private _coolantButton = findDisplay 274839 displayCtrl 1605;
+    private _oilButton = findDisplay 274839 displayCtrl 1604;
     private _repairButton = findDisplay 274839 displayCtrl 1600;
     private _refuelButton = findDisplay 274839 displayCtrl 1601;
     private _scavengeButton = findDisplay 274839 displayCtrl 1602;
     private _statusText = findDisplay 274839 displayCtrl 1000;
+
+    _coolantButton ctrlAddEventHandler ["ButtonClick", {
+        params ["_control"];
+        [_vehicle] call FUNC(addCoolant);
+    }];
+
+    _oilButton ctrlAddEventHandler ["ButtonClick", {
+        params ["_control"];
+        [_vehicle] call FUNC(addOil);
+    }];
 
     _repairButton ctrlAddEventHandler ["ButtonClick", {
         params ["_control"];
