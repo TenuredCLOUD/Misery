@@ -19,22 +19,19 @@ disableSerialization;
 [{!isNull findDisplay 982384},
 {
 
-private _dialog = findDisplay 982384;
-private _IconCtrl = _dialog displayCtrl 1602;
-private _IconName = _dialog displayCtrl 1603;
+    private _dialog = findDisplay 982384;
+    private _iconCtrl = _dialog displayCtrl 1602;
+    private _iconName = _dialog displayCtrl 1603;
 
-if (EGVAR(common,targetVehicleType) isEqualTo "") exitWith {
-        _IconName ctrlSetText "No Vehicle to Refuel...";
+    [player] call EFUNC(common,nearVehicle) params ["", "_nearestVehicle"];
+
+    if (_nearestVehicle isEqualTo []) exitWith {
+        _iconName ctrlSetText "No Vehicle to Refuel...";
     };
 
-private _Vehiclename = getText (configFile >> "CfgVehicles" >> EGVAR(common,targetVehicleType) >> "displayName");
+    [_nearestVehicle] call EFUNC(common,getObjectData) params ["_displayName", "_picture"];
 
-if (!isNil "_Vehiclename") then {
-    _cfg = configFile >> "CfgVehicles" >> EGVAR(common,targetVehicleType);
-    if (isClass _cfg) exitWith {
-        _picPath = getText (_cfg >> "editorPreview");
-        _IconCtrl ctrlSetText _picPath;
-        _IconName ctrlSetText _Vehiclename;
-    };
-};
+    _iconCtrl ctrlSetText _picture;
+    _iconName ctrlSetText _displayName;
+
 }, []] call CBA_fnc_waitUntilAndExecute;
