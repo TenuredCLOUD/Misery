@@ -58,29 +58,29 @@ class CLASS(maintenance_ui)
         };
         class CLASS(maintenance_addBattery): RscButton
         {
-	        idc = 1607;
-	        colorFocused[] = {0.5,0.5,0.5,0.7};
-	        text = "Add battery"; //--- ToDo: Localize;
-	        x = 22 * GUI_GRID_W + GUI_GRID_X;
-	        y = 14 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 7 * GUI_GRID_W;
-	        h = 2 * GUI_GRID_H;
-	        colorBackground[] = {0.2,0.2,0.2,0.7};
-	        colorActive[] = {0.5,0.5,0.5,0.7};
+            idc = 1607;
+            colorFocused[] = {0.5,0.5,0.5,0.7};
+            text = "Add battery"; //--- ToDo: Localize;
+            x = 22 * GUI_GRID_W + GUI_GRID_X;
+            y = 14 * GUI_GRID_H + GUI_GRID_Y;
+            w = 7 * GUI_GRID_W;
+            h = 2 * GUI_GRID_H;
+            colorBackground[] = {0.2,0.2,0.2,0.7};
+            colorActive[] = {0.5,0.5,0.5,0.7};
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(maintenance_removeBattery): RscButton
         {
-	        idc = 1606;
-	        colorFocused[] = {0.5,0.5,0.5,0.7};
-	        text = "Remove battery"; //--- ToDo: Localize;
-	        x = 22 * GUI_GRID_W + GUI_GRID_X;
-	        y = 16.5 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 7 * GUI_GRID_W;
-	        h = 2 * GUI_GRID_H;
-	        colorBackground[] = {0.2,0.2,0.2,0.7};
-	        colorActive[] = {0.5,0.5,0.5,0.7};
+            idc = 1606;
+            colorFocused[] = {0.5,0.5,0.5,0.7};
+            text = "Remove battery"; //--- ToDo: Localize;
+            x = 22 * GUI_GRID_W + GUI_GRID_X;
+            y = 16.5 * GUI_GRID_H + GUI_GRID_Y;
+            w = 7 * GUI_GRID_W;
+            h = 2 * GUI_GRID_H;
+            colorBackground[] = {0.2,0.2,0.2,0.7};
+            colorActive[] = {0.5,0.5,0.5,0.7};
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
@@ -172,11 +172,11 @@ class CLASS(maintenance_ui)
         };
         class CLASS(maintenance_battery_info): RscText
         {
-	        idc = 1003;
-	        x = 8.5 * GUI_GRID_W + GUI_GRID_X;
-	        y = 15 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 12.5 * GUI_GRID_W;
-	        h = 2 * GUI_GRID_H;
+            idc = 1003;
+            x = 8.5 * GUI_GRID_W + GUI_GRID_X;
+            y = 15 * GUI_GRID_H + GUI_GRID_Y;
+            w = 12.5 * GUI_GRID_W;
+            h = 2 * GUI_GRID_H;
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
