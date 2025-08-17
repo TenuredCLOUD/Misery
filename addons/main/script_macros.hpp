@@ -13,6 +13,33 @@
     #define PREP(fncName) [QPATHTOF(functions\DOUBLES(fnc,fncName).sqf), QFUNC(fncName)] call CBA_fnc_compileFunction
 #endif
 
+// Maintenance
+#define MACRO_REPAIR_KITS [ \
+    ["optic", QCLASS(glassRepairKit)], \
+    ["glass", QCLASS(glassRepairKit)], \
+    ["light", QCLASS(electronicRepairKit)], \
+    ["avionics", QCLASS(electronicRepairKit)], \
+    ["track", QCLASS(trackRepairKit)], \
+    ["engine", QCLASS(enginePartsKit)], \
+    ["fuel", QCLASS(fuelSystemKit)], \
+    ["hull", QCLASS(metalFabricationKit)], \
+    ["body", QCLASS(metalFabricationKit)], \
+    ["wheel", ""] \
+]
+
+#define MACRO_REPAIR_SCAVENGE [ \
+    ["optic", ""], \
+    ["glass", ""], \
+    ["light", QCLASS(electronicRepairKit)], \
+    ["avionics", QCLASS(electronicRepairKit)], \
+    ["track", QCLASS(trackRepairKit)], \
+    ["engine", QCLASS(enginePartsKit)], \
+    ["fuel", QCLASS(fuelSystemKit)], \
+    ["hull", ""], \
+    ["body", ""], \
+    ["wheel", QCLASS(spareTire)] \
+]
+
 // Item List Macros
 #define MACRO_FUELSTATIONS "Land_fs_feed_F", "Land_FuelStation_Feed_F", "Land_Ind_TankSmall2", "Land_Ind_TankSmall2_EP1", "Land_A_FuelStation_Feed", "Land_fuelstation", "Land_Ind_FuelStation_Feed_EP1"
 #define MACRO_CRAFTINGSTATIONS "Land_Workbench_01_F", "Land_PortableDesk_01_olive_F"

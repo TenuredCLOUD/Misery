@@ -1,0 +1,47 @@
+#include "..\script_component.hpp"
+/*
+ * Author: TenuredCLOUD
+ * Process removal of batteries from vehicles
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_maintenance_fnc_removeBattery
+ *
+*/
+
+[player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
+
+private _installedBatteries = _vehicle getVariable [QGVAR(installedBatteries), 0];
+private _batteryLevel = _vehicle getVariable [QGVAR(batteryLevel), 0];
+
+if (_installedBatteries <= 0) exitWith {
+    private _needBattery = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["%1 has no batteries left to remove...", [_vehicle] call EFUNC(common,getObjectData) select 0]];
+    [QEGVAR(common,tileText), _needBattery] call CBA_fnc_localEvent;
+};
+
+private _batteryType = _vehicle getVariable [QGVAR(batteryType), "misery_autoBattery"];
+
+if (_installedBatteries > 0) then {
+    [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607], false] call EFUNC(common,displayEnableControls);
+
+    player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+    [{
+        params ["_vehicle", "_batteryType", "_installedBatteries", "_batteryLevel"];
+        _installedBatteries = _installedBatteries - 1;
+        _vehicle setVariable [QGVAR(installedBatteries), _installedBatteries, true];
+        private _chargePerBattery = _batteryLevel / (_installedBatteries + 1);
+        _vehicle setVariable [QGVAR(batteryLevel), _batteryLevel - _chargePerBattery, true];
+        if (_installedBatteries <= 0) then {
+            _vehicle setVariable [QGVAR(batteryLevel), 0, true];
+            _vehicle setFuel 0;
+        };
+        [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607], true] call EFUNC(common,displayEnableControls);
+        [player, _batteryType, true] call CBA_fnc_addItem;
+        [_vehicle] call FUNC(listed);
+    }, [_vehicle, _batteryType, _installedBatteries, _batteryLevel], 5] call CBA_fnc_waitAndExecute;
+};

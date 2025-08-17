@@ -17,68 +17,80 @@
  * Public: No
 */
 
-params ["_vehicle", "_hitpoint"];
+params ["_hitpoint", "_hitpointIndex"];
 
-if (isNull _vehicle || _hitpoint isEqualTo "") exitWith {systemChat "Invalid vehicle or hitpoint.";};
-
-private _item = "";
-private _hitpointLower = toLower _hitpoint;
-
-// Find vehicle data in EGVAR(common,vehicleData)
-private _vehicleData = EGVAR(common,vehicleData) select {(_x select 0) isEqualTo typeOf _vehicle};
-private _batteryType = if (_vehicleData isNotEqualTo []) then {_vehicleData select 0 select 6} else {"misery_autoBattery"};
-private _batteryCount = if (_vehicleData isNotEqualTo []) then {_vehicleData select 0 select 7} else {1};
-
-switch (true) do {
-    case (_hitpointLower find "optic" > -1): {_item = "glass";};
-    case (_hitpointLower find "track" > -1): {_item = "spare_track";};
-    case (_hitpointLower find "engine" > -1): {_item = "engine_part";};
-    case (_hitpointLower find "wheel" > -1): {_item = "spare_wheel";};
-    case (_hitpointLower isEqualTo "battery"): {_item = _batteryType;};
-    default {_item = "scrap_metal";};
+if !([["ToolKit"]] call EFUNC(common,hasItem)) exitWith {
+    private _needTools = format ["<t font='PuristaMedium' size='0.7'>%1</t>", "You need a toolkit to scavenge from vehicles..."];
+    [QEGVAR(common,tileText), _needTools] call CBA_fnc_localEvent;
 };
 
-if (_item isEqualTo "") exitWith {systemChat "Nothing to scavenge from this part.";};
+[player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
 
-private _player = player;
+if (isNull _vehicle || _hitpoint isEqualTo "") exitWith {
+    private _invalid = format ["<t font='PuristaMedium' size='0.7'>%1</t>", "Invalid vehicle or hitpoint..."];
+    [QEGVAR(common,tileText), _invalid] call CBA_fnc_localEvent;
+};
 
-if (_hitpointLower isEqualTo "battery") then {
-    // Count pseudo-batteries
-    private _installedBatteries = _vehicle getVariable [QGVAR(installedBatteries), 0];
-    private _batteryLevel = _vehicle getVariable [QGVAR(batteryLevel), 0];
+private _scavengedItem = "";
+private _hitpointLower = toLower _hitpoint;
+private _hitpointDamage = _vehicle getHitIndex _hitpointIndex;
 
-    if (_installedBatteries <= 0) exitWith {systemChat "No batteries left to scavenge.";};
+{
+    if ((_x select 0) in _hitpointLower) exitWith {_scavengedItem = _x select 1};
+} forEach MACRO_REPAIR_SCAVENGE;
 
-    if ([_player, _item, true] call CBA_fnc_addItem) then {
-        // Reduce battery count and level
-        _installedBatteries = _installedBatteries - 1;
-        _vehicle setVariable [QGVAR(installedBatteries), _installedBatteries, true];
-        private _chargePerBattery = _batteryLevel / (_installedBatteries + 1);
-        _vehicle setVariable [QGVAR(batteryLevel), _batteryLevel - _chargePerBattery, true];
+switch (true) do {
+    case (_hitpointDamage isEqualTo 1): {
+        private _cannotScavenge = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["Cannot scavenge %1...", _hitpoint]];
+        [QEGVAR(common,tileText), _cannotScavenge] call CBA_fnc_localEvent;
 
-        // Drop battery item with charge info
-        private _holder = createVehicle ["GroundWeaponHolder", getPosATL _player, [], 0, "CAN_COLLIDE"];
-        _holder addItemCargoGlobal [_item, 1];
-        _holder setVariable [QGVAR(batteryCharge), _chargePerBattery, true];
-        _player addItem _item;
-        systemChat format ["Scavenged 1 %1 with %2%% charge.", _item, _chargePerBattery];
-
-        if (_installedBatteries <= 0) then {
-            _vehicle setVariable [QGVAR(batteryLevel), 0, true];
-            _vehicle setFuel 0;
-        };
-
-        // Refresh UI
         [_vehicle] call FUNC(listed);
     };
-} else {
-    if (_player canAdd _item) then {
-        _vehicle setHitPointDamage [_hitpoint, 1];
-        _player addItem _item;
-        systemChat format ["Scavenged %1 from %2.", _item, _hitpoint];
-        // Refresh UI
+    case (_scavengedItem isEqualTo ""): {
+        private _cannotScavenge = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["Cannot scavenge %1...", _hitpoint]];
+        [QEGVAR(common,tileText), _cannotScavenge] call CBA_fnc_localEvent;
+
         [_vehicle] call FUNC(listed);
-    } else {
-        systemChat "Not enough inventory space to scavenge.";
+    };
+    case (_scavengedItem isNotEqualTo ""): {
+
+        [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607], false] call EFUNC(common,displayEnableControls);
+
+        player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+            [{
+                params ["_vehicle", "_hitpoint", "_scavengedItem"];
+
+                [player, _scavengedItem, 1, true] call CBA_fnc_addMagazine;
+                _vehicle setHitPointDamage [_hitpoint, 1];
+                private _scavengeSuccess = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["Scavenged %1 from %2...", [_scavengedItem] call EFUNC(common,getItemData) select 0, _hitpoint]];
+                [QEGVAR(common,tileText), _scavengeSuccess] call CBA_fnc_localEvent;
+                [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607], true] call EFUNC(common,displayEnableControls);
+                [_vehicle] call FUNC(listed);
+            }, [_vehicle, _hitpoint, _scavengedItem], 5] call CBA_fnc_waitAndExecute;
+
+        [_vehicle] call FUNC(listed);
+    };
+    case ("wheel" in _hitpointLower): {
+        if (_hitpointDamage > 0) exitWith {
+            private _tireScavengeDamaged = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["%1 is too damaged to scavenge...", _hitpoint]];
+            [QEGVAR(common,tileText), _tireScavengeDamaged] call CBA_fnc_localEvent;
+        };
+
+        if (_hitpointDamage isEqualTo 0) exitWith {
+
+            [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607], false] call EFUNC(common,displayEnableControls);
+
+            player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+            [{
+                params ["_vehicle", "_hitpoint", "_scavengedItem"];
+
+                [player, _scavengedItem, true] call CBA_fnc_addItem;
+                _vehicle setHitPointDamage [_hitpoint, 1];
+                private _tireScavengeSuccess = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["%1 scavenged...", _hitpoint]];
+                [QEGVAR(common,tileText), _tireScavengeSuccess] call CBA_fnc_localEvent;
+                [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607], true] call EFUNC(common,displayEnableControls);
+                [_vehicle] call FUNC(listed);
+            }, [_vehicle, _hitpoint, _scavengedItem], 5] call CBA_fnc_waitAndExecute;
+        };
     };
 };

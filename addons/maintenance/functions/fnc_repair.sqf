@@ -17,62 +17,103 @@
  * Public: No
 */
 
-params ["_vehicle", "_hitpoint"];
+params ["_hitpoint", "_hitpointIndex"];
 
-if (isNull _vehicle || _hitpoint isEqualTo "") exitWith {systemChat "Invalid vehicle or hitpoint.";};
-
-private _requiredItem = "";
-private _hitpointLower = toLower _hitpoint;
-
-// Find vehicle data in EGVAR(common,vehicleData)
-private _vehicleData = EGVAR(common,vehicleData) select {(_x select 0) isEqualTo typeOf _vehicle};
-private _batteryType = if (_vehicleData isNotEqualTo []) then {_vehicleData select 0 select 6} else {"misery_autoBattery"};
-private _batteryCount = if (_vehicleData isNotEqualTo []) then {_vehicleData select 0 select 7} else {1};
-
-switch (true) do {
-    case (_hitpointLower find "optic" > -1): {_requiredItem = "glass";};
-    case (_hitpointLower find "track" > -1): {_requiredItem = "spare_track";};
-    case (_hitpointLower find "engine" > -1): {_requiredItem = "engine_part";};
-    case (_hitpointLower find "wheel" > -1): {_requiredItem = "spare_wheel";};
-    case (_hitpointLower isEqualTo "battery"): {_requiredItem = _batteryType;};
-    default {_requiredItem = "ToolKit";};
+if !([["ToolKit"]] call EFUNC(common,hasItem)) exitWith {
+    private _needTools = format ["<t font='PuristaMedium' size='0.7'>%1</t>", "You need a toolkit to repair vehicles..."];
+    [QEGVAR(common,tileText), _needTools] call CBA_fnc_localEvent;
 };
 
-if (_requiredItem isEqualTo "") exitWith {systemChat "No repair item defined for this part.";};
+[player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
 
-private _player = player;
+if (isNull _vehicle || _hitpoint isEqualTo "") exitWith {
+    private _invalid = format ["<t font='PuristaMedium' size='0.7'>%1</t>", "Invalid vehicle or hitpoint..."];
+    [QEGVAR(common,tileText), _invalid] call CBA_fnc_localEvent;
+};
 
-if (_hitpointLower isEqualTo "battery") then {
-    // Count batteries in vehicle (pseudo-count)
-    private _installedBatteries = _vehicle getVariable [QGVAR(installedBatteries), 0];
-    private _missingBatteries = _batteryCount - _installedBatteries;
+private _requiredForRepair = "";
+private _hitpointLower = toLower _hitpoint;
+private _hitpointDamage = _vehicle getHitIndex _hitpointIndex;
 
-    if (_missingBatteries <= 0) exitWith {systemChat "All batteries already installed.";};
+{
+    if ((_x select 0) in _hitpointLower) exitWith {_requiredForRepair = _x select 1};
+} forEach MACRO_REPAIR_KITS;
 
-    private _playerBatteryCount = [_requiredItem] call EFUNC(common,countItem);
+systemChat format ["_requiredForRepair: %1", _requiredForRepair];
 
-    if (_playerBatteryCount >= 1) then {
-        // Remove battery from player and vehicle (pseudo-install)
-        [_player, _requiredItem] call CBA_fnc_removeItem;
-        //[_vehicle, _requiredItem, 1] call CBA_fnc_removeItemCargo;
-        _installedBatteries = _installedBatteries + 1;
-        _vehicle setVariable [QGVAR(installedBatteries), _installedBatteries, true];
-        _vehicle setVariable [QGVAR(batteryLevel), (_vehicle getVariable [QGVAR(batteryLevel), 0]) + (100 / _batteryCount), true];
-        _vehicle setFuel (_vehicle getVariable [QGVAR(originalFuel), 1]);
-        systemChat format ["Installed 1 %1. Total batteries: %2/%3. Battery level: %4%%.", _requiredItem, _installedBatteries, _batteryCount, _vehicle getVariable [QGVAR(batteryLevel), 0]];
-        // Refresh UI
+switch (true) do {
+    case (_hitpointDamage isEqualTo 0): {
+        private _cannotRepair = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["Cannot repair %1...", _hitpoint]];
+        [QEGVAR(common,tileText), _cannotRepair] call CBA_fnc_localEvent;
+
         [_vehicle] call FUNC(listed);
-    } else {
-        systemChat format ["Need 1 %1 to install.", _requiredItem];
     };
-} else {
-    if ([_requiredItem] call FUNC(countItems) > 0) then {
-        _vehicle setHitPointDamage [_hitpoint, 0];
-        [_player, _requiredItem, 1] call CBA_fnc_removeItem;
-        systemChat format ["Repaired %1 with %2.", _hitpoint, _requiredItem];
-        // Refresh UI
+    case (_requiredForRepair isEqualTo ""): {
+        private _cannotRepair = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["Cannot repair %1...", _hitpoint]];
+        [QEGVAR(common,tileText), _cannotRepair] call CBA_fnc_localEvent;
+
         [_vehicle] call FUNC(listed);
-    } else {
-        systemChat format ["Missing required item: %1", _requiredItem];
+    };
+    case ([[_requiredForRepair]] call EFUNC(common,hasItem)): {
+
+        [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607], false] call EFUNC(common,displayEnableControls);
+
+        player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+        [{
+            params ["_vehicle", "_hitpoint", "_requiredForRepair"];
+
+            [_requiredForRepair] call EFUNC(common,itemDecrement);
+            _vehicle setHitPointDamage [_hitpoint, 0];
+            private _successfulRepair = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["Repaired %1 with %2.", _hitpoint, [_requiredForRepair] call EFUNC(common,getItemData) select 0]];
+            [QEGVAR(common,tileText), _successfulRepair] call CBA_fnc_localEvent;
+            [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607], true] call EFUNC(common,displayEnableControls);
+            [_vehicle] call FUNC(listed);
+        }, [_vehicle, _hitpoint, _requiredForRepair], 5] call CBA_fnc_waitAndExecute;
+    };
+    case ("wheel" in _hitpointLower): {
+        private _hasSpare = [[QCLASS(spareTire)]] call EFUNC(common,hasItem);
+        private _hasPatchKit = [[QCLASS(tirePatchKit)]] call EFUNC(common,hasItem);
+
+        if (_hitpointDamage isEqualTo 1 && _hasSpare) then {
+
+            [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607], false] call EFUNC(common,displayEnableControls);
+
+            player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+            [{
+                params ["_vehicle", "_hitpoint"];
+
+                [player, QCLASS(spareTire)] call CBA_fnc_removeItem;
+                _vehicle setHitPointDamage [_hitpoint, 0];
+                private _tireRepairSuccess = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["Repaired %1 with spare tire.", _hitpoint]];
+                [QEGVAR(common,tileText), _tireRepairSuccess] call CBA_fnc_localEvent;
+                [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607], true] call EFUNC(common,displayEnableControls);
+                [_vehicle] call FUNC(listed);
+            }, [_vehicle, _hitpoint], 5] call CBA_fnc_waitAndExecute;
+        } else {
+            if (_hitpointDamage isEqualTo 1) then {
+                private _tireRepairFail = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["You need a spare tire to repair %1.", _hitpoint]];
+                [QEGVAR(common,tileText), _tireRepairFail] call CBA_fnc_localEvent;
+            } else {
+                if (_hitpointDamage > 0 && _hasPatchKit) then {
+
+                    [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607], false] call EFUNC(common,displayEnableControls);
+
+                    player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+                    [{
+                        params ["_vehicle", "_hitpoint"];
+
+                        [QCLASS(tirePatchKit)] call EFUNC(common,itemDecrement);
+                        _vehicle setHitPointDamage [_hitpoint, 0];
+                        private _tirePatchSuccess = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["Patched %1 with tire patch kit.", _hitpoint]];
+                        [QEGVAR(common,tileText), _tirePatchSuccess] call CBA_fnc_localEvent;
+                        [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607], true] call EFUNC(common,displayEnableControls);
+                        [_vehicle] call FUNC(listed);
+                    }, [_vehicle, _hitpoint], 3] call CBA_fnc_waitAndExecute;
+                } else {
+                    private _tirePatchFail = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["You need a tire patch kit to repair %1.", _hitpoint]];
+                    [QEGVAR(common,tileText), _tirePatchFail] call CBA_fnc_localEvent;
+                };
+            };
+        };
     };
 };

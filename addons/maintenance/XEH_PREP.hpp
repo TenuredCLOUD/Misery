@@ -1,12 +1,12 @@
+PREP(addBattery);
 PREP(addCoolant);
 PREP(addOil);
-PREP(countBatteries);
-PREP(countItem);
 PREP(engineControl);
 PREP(getBatteryCharge);
 PREP(initVehicles);
 PREP(listed);
-PREP(nearVehicle);
+PREP(refuel);
+PREP(removeBattery);
 PREP(repair);
 PREP(scavenge);
 PREP(updateIcon);

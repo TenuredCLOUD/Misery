@@ -54,8 +54,8 @@ showHUD [true, false, true, true, true, true, true, true, true, true, true];
     private _requiredBatteries = _vehicle getVariable [QGVAR(batteryCount), 0];
     private _oilLevel = _vehicle getVariable [QGVAR(oilLevel), 0];
     private _coolantLevel = _vehicle getVariable [QGVAR(coolantLevel), 0];
+    private _installedBatteries = _vehicle getVariable [QGVAR(installedBatteries), 0];
 
-    [_vehicle, _batteryType] call FUNC(countBatteries) params ["_installedBatteries"];
     [_vehicle, _batteryType, _requiredBatteries] call FUNC(getBatteryCharge) params ["_totalCharge", "_maxCharge"];
 
     _vehicleNameCtrl ctrlSetText format ["%1", _vehicleName];
@@ -66,9 +66,7 @@ showHUD [true, false, true, true, true, true, true, true, true, true, true];
 
     // Remove coolant bar for aircraft (most aircraft use air flow for cooling components)
     if (_vehicle isKindOf "plane" || _vehicle isKindOf "helicopter") then {
-        {
-            _x ctrlShow false;
-        } forEach ["_coolantIcon", "_coolantBar"];
+        [982400, [1100, 1804], false] call EFUNC(common,displayShowControls);
     } else {
         _coolantBar progressSetPosition _coolantLevel;
     };

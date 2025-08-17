@@ -1217,16 +1217,42 @@ class CfgWeapons {
         };
     };
 
-    class CLASS(tire): CLASS(ItemCore) {
-        displayName = "Tire";
-        descriptionShort = "used for vehicle repairs";
-        picture = "a3\editorpreviews_f\data\cfgvehicles\land_tyre_f.jpg";
-        model = "a3\structures_f\civ\garbage\tyre_f.p3d";
+    class CLASS(oilEmpty): CLASS(ItemCore) {
+        displayName = "Engine oil";
+        descriptionShort = "empty engine oil container";
+        picture = QPATHTOF(data\icons\CanisterDiesel.paa);
+        model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
         scope = 2;
         scopeCurator = 2;
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 50;
+        };
+    };
+
+    class CLASS(coolantEmpty): CLASS(ItemCore) {
+        displayName = "Engine coolant";
+        descriptionShort = "empty engine coolant container";
+        picture = QPATHTOF(data\icons\CanisterWater.paa);
+        model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 50;
+        };
+    };
+
+    class CLASS(spareTire): CLASS(ItemCore) {
+        displayName = "Spare tire";
+        descriptionShort = "used for vehicle repairs";
+        picture = QPATHTOF(data\icons\tire.paa);
+        model = "a3\structures_f\civ\garbage\tyre_f.p3d";
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 150;
         };
     };
 

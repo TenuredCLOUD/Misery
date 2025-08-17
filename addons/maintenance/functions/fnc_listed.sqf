@@ -18,9 +18,11 @@
 
 [{!isNull findDisplay 274839},{
 
-    [player] call FUNC(nearVehicle) params ["_nearVehicle", "_vehicle"];
+    [player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
 
     private _list = findDisplay 274839 displayCtrl 1500;
+    private _addBatteryButton = findDisplay 274839 displayCtrl 1607;
+    private _removeBatteryButton = findDisplay 274839 displayCtrl 1606;
     private _coolantButton = findDisplay 274839 displayCtrl 1605;
     private _oilButton = findDisplay 274839 displayCtrl 1604;
     private _repairButton = findDisplay 274839 displayCtrl 1600;
@@ -28,14 +30,29 @@
     private _scavengeButton = findDisplay 274839 displayCtrl 1602;
     private _statusText = findDisplay 274839 displayCtrl 1000;
 
+    _addBatteryButton ctrlAddEventHandler ["ButtonClick", {
+        params ["_control"];
+        call FUNC(addBattery);
+    }];
+
+    _removeBatteryButton ctrlAddEventHandler ["ButtonClick", {
+        params ["_control"];
+        call FUNC(removeBattery);
+    }];
+
     _coolantButton ctrlAddEventHandler ["ButtonClick", {
         params ["_control"];
-        [_vehicle] call FUNC(addCoolant);
+        call FUNC(addCoolant);
     }];
 
     _oilButton ctrlAddEventHandler ["ButtonClick", {
         params ["_control"];
-        [_vehicle] call FUNC(addOil);
+        call FUNC(addOil);
+    }];
+
+    _refuelButton ctrlAddEventHandler ["ButtonClick", {
+        params ["_control"];
+        call FUNC(refuel);
     }];
 
     _repairButton ctrlAddEventHandler ["ButtonClick", {
@@ -45,17 +62,7 @@
         private _selected = lbCurSel _list;
         if (_selected isEqualTo -1) exitWith {systemChat "No Repair option selected...";};
         private _hitpoint = _list lbData _selected;
-        [_vehicle, _hitpoint] call FUNC(repair);
-    }];
-
-    _refuelButton ctrlAddEventHandler ["ButtonClick", {
-        params ["_control"];
-        private _dialog = ctrlParent _control;
-        private _list = _dialog displayCtrl 1500;
-        private _selected = lbCurSel _list;
-        if (_selected isEqualTo -1) exitWith {systemChat "No Repair option selected...";};
-        private _hitpoint = _list lbData _selected;
-        [_vehicle, _hitpoint] call FUNC(refuel);
+        [_hitpoint, _selected] call FUNC(repair);
     }];
 
     _scavengeButton ctrlAddEventHandler ["ButtonClick", {
@@ -65,12 +72,12 @@
         private _selected = lbCurSel _list;
         if (_selected isEqualTo -1) exitWith {systemChat "No Scavenge option selected...";};
         private _hitpoint = _list lbData _selected;
-        [_vehicle, _hitpoint] call FUNC(scavenge);
+        [_hitpoint, _selected] call FUNC(scavenge);
     }];
 
     [{
         params ["_args", "_handle"];
-        _args params ["_nearVehicle", "_vehicle", "_list", "_repairButton", "_refuelButton", "_scavengeButton", "_statusText"];
+        _args params ["_nearVehicle", "_vehicle", "_list", "_repairButton", "_refuelButton", "_scavengeButton", "_statusText", "_batteryStatusText"];
 
         if (isNull findDisplay 274839 || !alive player) exitWith {
             _handle call CBA_fnc_removePerFrameHandler;
@@ -82,8 +89,7 @@
             _statusText ctrlSetText "No Vehicle to Repair...";
         };
 
-        private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
-        _statusText ctrlSetText format ["Vehicle: %1", _vehicleName];
+        _statusText ctrlSetText format ["Vehicle: %1", [_vehicle] call EFUNC(common,getObjectData) select 0];
 
         lbClear _list;
 
@@ -100,21 +106,5 @@
             _list lbSetData [_index, _hitpointName];
         } forEach _hitpointNames;
 
-        // Add battery entry
-        private _requiredBatteries = _vehicle getVariable [QGVAR(batteryCount), 1];
-        private _batteryType = _vehicle getVariable [QGVAR(batteryType), "misery_autoBattery"];
-        private _batteryLevel = _vehicle getVariable [QGVAR(batteryLevel), 100];
-        private _cargo = getItemCargo _vehicle;
-        private _items = _cargo select 0;
-        private _counts = _cargo select 1;
-        private _installedBatteries = 0;
-        private _index = _items find _batteryType;
-        if (_index != -1) then {
-            _installedBatteries = _counts select _index;
-        };
-        private _batteryStatus = format ["Battery - %1/%2 (%3%% charge)", _installedBatteries, _requiredBatteries, _batteryLevel];
-        private _batteryIndex = _list lbAdd _batteryStatus;
-        _list lbSetData [_batteryIndex, "Battery"];
-
-    }, 0.5, [_nearVehicle, _vehicle, _list, _repairButton, _refuelButton, _scavengeButton, _statusText]] call CBA_fnc_addPerFrameHandler;
+    }, 0.5, [_nearVehicle, _vehicle, _list, _repairButton, _refuelButton, _scavengeButton, _statusText, _batteryStatusText]] call CBA_fnc_addPerFrameHandler;
 },[]] call CBA_fnc_waitUntilAndExecute;

@@ -9,7 +9,7 @@ if (isServer) then {
     [
         "maintenance_menu",
         "Vehicle Maintenance",
-        {[["ToolKit"]] call EFUNC(common,hasItem) && ([player] call FUNC(nearVehicle)) select 0},
+        {([player] call EFUNC(common,nearVehicle)) select 0},
         {
             [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
             createDialog QCLASS(maintenance_ui);

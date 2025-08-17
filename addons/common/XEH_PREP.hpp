@@ -5,6 +5,8 @@ PREP(combatLogPrevention);
 PREP(configCheck);
 PREP(countItem);
 PREP(debugMessage);
+PREP(displayEnableControls);
+PREP(displayShowControls);
 PREP(getItemData);
 PREP(getObjectData);
 PREP(getPlayerVariables);

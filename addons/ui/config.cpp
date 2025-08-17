@@ -27,7 +27,6 @@ class CfgPatches {
 #include "\z\misery\addons\ui\menus\maintenance.hpp"
 #include "\z\misery\addons\ui\menus\rearmShop.hpp"
 #include "\z\misery\addons\ui\menus\refuelShop.hpp"
-#include "\z\misery\addons\ui\menus\refuelJerryCan.hpp"
 #include "\z\misery\addons\ui\menus\traderShop.hpp"
 #include "\z\misery\addons\ui\menus\moneyTakeMenu.hpp"
 //#include "\ui\menus\moneyGiveMenu.hpp"
