@@ -56,19 +56,57 @@ switch (true) do {
 
         [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607], false] call EFUNC(common,displayEnableControls);
 
-        player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+        if !([[_scavengedItem, QCLASS(emptyToolKit)]] call EFUNC(common,hasItem)) exitWith {
+            private _scavengeNeedEmptyKit = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["You need %1 or an %2 in order to scavenge %3...", [_scavengedItem] call EFUNC(common,getItemData) select 0, [_emptyKit] call EFUNC(common,getItemData) select 0, _hitpoint]];
+            [QEGVAR(common,tileText), _scavengeNeedEmptyKit] call CBA_fnc_localEvent;
+            [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607], true] call EFUNC(common,displayEnableControls);
+            [_vehicle] call FUNC(listed);
+        };
+
+        if ([[QCLASS(emptyToolKit)]] call EFUNC(common,hasItem)) exitWith {
+            player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
             [{
                 params ["_vehicle", "_hitpoint", "_scavengedItem"];
 
+                player removeItem QCLASS(emptyToolKit);
                 [player, _scavengedItem, 1, true] call CBA_fnc_addMagazine;
                 _vehicle setHitPointDamage [_hitpoint, 1];
-                private _scavengeSuccess = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["Scavenged %1 from %2...", [_scavengedItem] call EFUNC(common,getItemData) select 0, _hitpoint]];
+                private _scavengeSuccess = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["Scavenged %1 from %3, used %2...", [_scavengedItem] call EFUNC(common,getItemData) select 0, [QCLASS(emptyToolKit)] call EFUNC(common,getItemData) select 0, _hitpoint]];
                 [QEGVAR(common,tileText), _scavengeSuccess] call CBA_fnc_localEvent;
                 [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607], true] call EFUNC(common,displayEnableControls);
                 [_vehicle] call FUNC(listed);
             }, [_vehicle, _hitpoint, _scavengedItem], 5] call CBA_fnc_waitAndExecute;
 
         [_vehicle] call FUNC(listed);
+        };
+
+        if ([[_scavengedItem]] call EFUNC(common,hasItem)) then {
+
+            [_scavengedItem] call EFUNC(common,itemIncrement) params ["_canIncrement"];
+
+            if !(_canIncrement) exitWith {
+                private _scavengeKitNoRoom = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["%1 doesn't have enough room left for scavenging %2...", [_scavengedItem] call EFUNC(common,getItemData) select 0, _hitpoint]];
+                [QEGVAR(common,tileText), _scavengeKitNoRoom] call CBA_fnc_localEvent;
+                [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607], true] call EFUNC(common,displayEnableControls);
+                [_vehicle] call FUNC(listed);
+            };
+
+            if (_canIncrement) exitWith {
+                player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+                [{
+                    params ["_vehicle", "_hitpoint", "_scavengedItem"];
+
+                    [player, _scavengedItem, 1, true] call CBA_fnc_addMagazine;
+                    _vehicle setHitPointDamage [_hitpoint, 1];
+                    private _scavengeSuccess = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["Scavenged parts for %1 from %2...", [_scavengedItem] call EFUNC(common,getItemData) select 0, _hitpoint]];
+                    [QEGVAR(common,tileText), _scavengeSuccess] call CBA_fnc_localEvent;
+                    [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607], true] call EFUNC(common,displayEnableControls);
+                    [_vehicle] call FUNC(listed);
+                }, [_vehicle, _hitpoint, _scavengedItem], 5] call CBA_fnc_waitAndExecute;
+
+            [_vehicle] call FUNC(listed);
+            };
+        };
     };
     case ("wheel" in _hitpointLower): {
         if (_hitpointDamage > 0) exitWith {

@@ -39,8 +39,6 @@ private _hitpointDamage = _vehicle getHitIndex _hitpointIndex;
     if ((_x select 0) in _hitpointLower) exitWith {_requiredForRepair = _x select 1};
 } forEach MACRO_REPAIR_KITS;
 
-systemChat format ["_requiredForRepair: %1", _requiredForRepair];
-
 switch (true) do {
     case (_hitpointDamage isEqualTo 0): {
         private _cannotRepair = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["Cannot repair %1...", _hitpoint]];
@@ -62,7 +60,7 @@ switch (true) do {
         [{
             params ["_vehicle", "_hitpoint", "_requiredForRepair"];
 
-            [_requiredForRepair] call EFUNC(common,itemDecrement);
+            [_requiredForRepair, QCLASS(emptyToolKit)] call EFUNC(common,itemDecrement);
             _vehicle setHitPointDamage [_hitpoint, 0];
             private _successfulRepair = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["Repaired %1 with %2.", _hitpoint, [_requiredForRepair] call EFUNC(common,getItemData) select 0]];
             [QEGVAR(common,tileText), _successfulRepair] call CBA_fnc_localEvent;

@@ -3,6 +3,7 @@
  * Author: TenuredCLOUD
  * Display control enabler / disabler
  * Disables or enables listed control idc's that are listed
+ * Cannot be used on RscTitle classed displays
  *
  * Arguments:
  * 0: Display idd <NUMBER>

@@ -34,11 +34,11 @@ if (_playerBatteryCount >= 1) then {
     player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
     [{
         params ["_vehicle", "_batteryType", "_installedBatteries", "_batteryCount"];
-        [player, _batteryType] call CBA_fnc_removeItem;
+        [_batteryType] call EFUNC(common,countMagazinesAmmo) params ["_batteryLife"];
+        [player, _batteryType] call CBA_fnc_removeMagazine;
         _installedBatteries = _installedBatteries + 1;
         _vehicle setVariable [QGVAR(installedBatteries), _installedBatteries, true];
-        _vehicle setVariable [QGVAR(batteryLevel), (_vehicle getVariable [QGVAR(batteryLevel), 0]) + (100 / _batteryCount), true];
-        _vehicle setFuel (_vehicle getVariable [QGVAR(originalFuel), 1]);
+        _vehicle setVariable [QGVAR(batteryLevel), (_vehicle getVariable [QGVAR(batteryLevel), 0]) + (_batteryLife / _batteryCount), true];
         private _batteryInstallSuccess = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["Installed (x1) %1. Total batteries: %2/%3. Battery level: %4%%.", [_batteryType] call EFUNC(common,getItemData) select 0, _installedBatteries, _batteryCount, _vehicle getVariable [QGVAR(batteryLevel), 0]]];
         [QEGVAR(common,tileText), _batteryInstallSuccess] call CBA_fnc_localEvent;
         [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607], true] call EFUNC(common,displayEnableControls);

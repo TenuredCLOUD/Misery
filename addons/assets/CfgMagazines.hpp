@@ -235,7 +235,7 @@ class CfgMagazines {
         displayName = "$STR_MISERY_AUTOBATT_DISPLAYNAME";
         mass = 110;
         model = "a3\structures_f_bootcamp\items\electronics\carbattery_02_f.p3d";
-        picture = "a3\editorpreviews_f\data\cfgvehicles\land_carbattery_02_f.jpg"; //QPATHTOF(data\icons\autobatt.paa);
+        picture = QPATHTOF(data\icons\autobatt.paa);
         scope = 2;
     };
 
@@ -246,7 +246,7 @@ class CfgMagazines {
         displayName = "$STR_MISERY_AUTOBATTHEAVY_DISPLAYNAME";
         mass = 200;
         model = "a3\structures_f_bootcamp\items\electronics\carbattery_01_f.p3d";
-        picture = "a3\editorpreviews_f\data\cfgvehicles\land_carbattery_01_f.jpg"; //QPATHTOF(data\icons\autobatt_heavy.paa);
+        picture = QPATHTOF(data\icons\autobatt_heavy.paa);
         scope = 2;
     };
 
@@ -452,7 +452,7 @@ class CfgMagazines {
     };
 
     class CLASS(metalFabricationKit): CLASS(FakeMagazine) {
-        count = 20;
+        count = 5;
         descriptionShort = "metal fabrication kit used for vehicle repair";
         displayName = "Metal fabrication kit";
         mass = 150;
@@ -462,7 +462,7 @@ class CfgMagazines {
     };
 
     class CLASS(enginePartsKit): CLASS(FakeMagazine) {
-        count = 20;
+        count = 10;
         descriptionShort = "engine parts kit used for vehicle repair";
         displayName = "Engine parts kit";
         mass = 70;
@@ -472,7 +472,7 @@ class CfgMagazines {
     };
 
     class CLASS(fuelSystemKit): CLASS(FakeMagazine) {
-        count = 20;
+        count = 10;
         descriptionShort = "fuel system kit used for vehicle repair";
         displayName = "Fuel system kit";
         mass = 70;
@@ -492,7 +492,7 @@ class CfgMagazines {
     };
 
     class CLASS(glassRepairKit): CLASS(FakeMagazine) {
-        count = 20;
+        count = 15;
         descriptionShort = "glass repair kit used for vehicle repair";
         displayName = "Glass repair kit";
         mass = 50;
@@ -502,7 +502,7 @@ class CfgMagazines {
     };
 
     class CLASS(tirePatchKit): CLASS(FakeMagazine) {
-        count = 20;
+        count = 10;
         descriptionShort = "tire patch kit used for vehicle repair";
         displayName = "Tire patch kit";
         mass = 50;
@@ -512,9 +512,89 @@ class CfgMagazines {
     };
 
     class CLASS(trackRepairKit): CLASS(FakeMagazine) {
-        count = 20;
+        count = 4;
         descriptionShort = "track repair kit used for vehicle repair";
         displayName = "Track repair kit";
+        mass = 150;
+        model = "a3\weapons_f\items\toolkit.p3d";
+        picture = QPATHTOF(data\icons\toolkit.paa);
+        scope = 2;
+    };
+
+    class CLASS(rotorRepairKit): CLASS(FakeMagazine) {
+        count = 4;
+        descriptionShort = "rotor repair kit used for aircraft repairs";
+        displayName = "Rotor repair kit";
+        mass = 150;
+        model = "a3\weapons_f\items\toolkit.p3d";
+        picture = QPATHTOF(data\icons\toolkit.paa);
+        scope = 2;
+    };
+
+    class CLASS(winchRepairKit): CLASS(FakeMagazine) {
+        count = 10;
+        descriptionShort = "winch repair kit used for vehicles repairs";
+        displayName = "Winch repair kit";
+        mass = 100;
+        model = "a3\weapons_f\items\toolkit.p3d";
+        picture = QPATHTOF(data\icons\toolkit.paa);
+        scope = 2;
+    };
+
+    class CLASS(hydraulicRepairKit): CLASS(FakeMagazine) {
+        count = 5;
+        descriptionShort = "hydraulic repair kit used for vehicles repairs";
+        displayName = "Hydraulic repair kit";
+        mass = 100;
+        model = "a3\weapons_f\items\toolkit.p3d";
+        picture = QPATHTOF(data\icons\toolkit.paa);
+        scope = 2;
+    };
+
+    class CLASS(aerodynamicControlKit): CLASS(FakeMagazine) {
+        count = 5;
+        descriptionShort = "aerodynamic controls kit used for aircraft repairs";
+        displayName = "Aerodynamic controls kit";
+        mass = 100;
+        model = "a3\weapons_f\items\toolkit.p3d";
+        picture = QPATHTOF(data\icons\toolkit.paa);
+        scope = 2;
+    };
+
+    class CLASS(transmissionRepairKit): CLASS(FakeMagazine) {
+        count = 5;
+        descriptionShort = "transmission repair kit used for vehicle repairs";
+        displayName = "Transmission repair kit";
+        mass = 100;
+        model = "a3\weapons_f\items\toolkit.p3d";
+        picture = QPATHTOF(data\icons\toolkit.paa);
+        scope = 2;
+    };
+
+    class CLASS(landingGearKit): CLASS(FakeMagazine) {
+        count = 5;
+        descriptionShort = "landing gear kit used for aircraft repairs";
+        displayName = "Landing gear kit";
+        mass = 100;
+        model = "a3\weapons_f\items\toolkit.p3d";
+        picture = QPATHTOF(data\icons\toolkit.paa);
+        scope = 2;
+    };
+
+    class CLASS(weaponSystemKit): CLASS(FakeMagazine) {
+        count = 10;
+        descriptionShort = "weapons systems kit used for vehicle repairs";
+        displayName = "Weapon system kit";
+        mass = 150;
+        model = "a3\weapons_f\items\toolkit.p3d";
+        picture = QPATHTOF(data\icons\toolkit.paa);
+        scope = 2;
+    };
+
+    class CLASS(countermeasureKit): CLASS(FakeMagazine) {
+        count = 10;
+        descriptionShort = "counter measures kit used for vehicle repairs";
+        displayName = "Counter measure kit";
         mass = 100;
         model = "a3\weapons_f\items\toolkit.p3d";
         picture = QPATHTOF(data\icons\toolkit.paa);

@@ -21,5 +21,5 @@ if (isServer) then {
 };
 
 if (hasInterface) then {
-    call FUNC(engineControl);
+    call FUNC(vehicleControl);
 };

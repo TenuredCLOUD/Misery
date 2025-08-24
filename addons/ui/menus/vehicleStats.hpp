@@ -33,7 +33,7 @@ class CLASS(vehicleStats_ui)
         };
         class CLASS(vehicle_fuelIcon): RscPicture
         {
-            idc = -1;
+            idc = 2000;
             text = QUOTE(a3\ui_f\data\igui\cfg\cursors\iconrefuelat_ca.paa);
             x = 45.5 * GUI_GRID_W + GUI_GRID_X;
             y = 32 * GUI_GRID_H + GUI_GRID_Y;
@@ -42,7 +42,7 @@ class CLASS(vehicleStats_ui)
         };
         class CLASS(vehicle_powerIcon): RscPicture
         {
-            idc = -1;
+            idc = 2001;
             text = QUOTE(a3\modules_f_curator\data\portraitlightning_ca.paa);
             x = 48.26 * GUI_GRID_W + GUI_GRID_X;
             y = 32.33 * GUI_GRID_H + GUI_GRID_Y;
@@ -51,7 +51,7 @@ class CLASS(vehicleStats_ui)
         };
         class CLASS(vehicle_oilIcon): RscPicture
         {
-            idc = -1;
+            idc = 2002;
             text = QPATHTOEF(icons,data\engineOil_ca.paa);
             x = 50.51 * GUI_GRID_W + GUI_GRID_X;
             y = 31.85 * GUI_GRID_H + GUI_GRID_Y;
@@ -60,7 +60,7 @@ class CLASS(vehicleStats_ui)
         };
         class CLASS(vehicle_waterIcon): RscPicture
         {
-            idc = 1100;
+            idc = 2003;
             text = QPATHTOEF(icons,data\waterDrop_ca.paa);
             x = 53.6 * GUI_GRID_W + GUI_GRID_X;
             y = 32.26 * GUI_GRID_H + GUI_GRID_Y;

@@ -1,7 +1,6 @@
 PREP(addBattery);
 PREP(addCoolant);
 PREP(addOil);
-PREP(engineControl);
 PREP(getBatteryCharge);
 PREP(initVehicles);
 PREP(listed);
@@ -10,4 +9,5 @@ PREP(removeBattery);
 PREP(repair);
 PREP(scavenge);
 PREP(updateIcon);
+PREP(vehicleControl);
 PREP(vehicleStats);

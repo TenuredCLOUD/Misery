@@ -23,8 +23,10 @@ showHUD [true, false, true, true, true, true, true, true, true, true, true];
 
     private _vehicle = vehicle player;
 
+    [_vehicle] call EFUNC(common,getObjectData) params ["_displayName", "_picture"];
+
     // Make sure driver or pilot / co-pilot get display only
-    if (driver _vehicle isEqualTo player || currentPilot _vehicle isEqualTo player) then {
+    if (currentPilot _vehicle isEqualTo player) then {
         QGVAR(display) cutRsc [QUOTE(CLASS(vehicleStats_ui)), "PLAIN", 1, false];
     } else {
         QGVAR(display) cutText ["", "PLAIN"];
@@ -34,6 +36,12 @@ showHUD [true, false, true, true, true, true, true, true, true, true, true];
         QGVAR(display) cutText ["", "PLAIN"];
         showHUD [true, true, true, true, true, true, true, true, true, true, true];
         _handle call CBA_fnc_removePerFrameHandler;
+    };
+
+    if (gunner _vehicle isEqualTo player || commander _vehicle isEqualTo player) then {
+        showHUD [true, true, true, true, true, true, true, true, true, true, true];
+    } else {
+        showHUD [true, false, true, true, true, true, true, true, true, true, true];
     };
 
     private _display = uiNamespace getVariable [QGVAR(vehicleStats_ui), objNull];
@@ -47,7 +55,6 @@ showHUD [true, false, true, true, true, true, true, true, true, true, true];
     private _vehicleSpeedCtrl = _display displayCtrl 1001;
     private _batteryCtrl = _display displayCtrl 1002;
 
-    private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
     private _fuelLevel = fuel _vehicle;
     private _batteryLevel = _vehicle getVariable [QGVAR(batteryLevel), 0];
     private _batteryType = _vehicle getVariable [QGVAR(batteryType), nil];
@@ -56,19 +63,55 @@ showHUD [true, false, true, true, true, true, true, true, true, true, true];
     private _coolantLevel = _vehicle getVariable [QGVAR(coolantLevel), 0];
     private _installedBatteries = _vehicle getVariable [QGVAR(installedBatteries), 0];
 
+    private _found = false;
+    private _fuelLiters = 0;
+    private _coolantLiters = 0;
+    private _batteryCount = 0;
+    private _oilLiters = 0;
+
+    {
+        if ((_x select 0) isEqualTo typeOf _vehicle) then {
+            _array = _x;
+            _found = true;
+            _fuelLiters = _x select 2;
+            _coolantLiters = _x select 7;
+            _batteryCount = _x select 6;
+            _oilLiters = _x select 8;
+        };
+    } forEach EGVAR(common,vehicleData);
+
+    if !(_found) exitWith {};
+
     [_vehicle, _batteryType, _requiredBatteries] call FUNC(getBatteryCharge) params ["_totalCharge", "_maxCharge"];
 
-    _vehicleNameCtrl ctrlSetText format ["%1", _vehicleName];
+    _vehicleNameCtrl ctrlSetText format ["%1", _displayName];
     _batteryCtrl ctrlSetText format ["(Batteries: %1/%2)", _installedBatteries, _requiredBatteries];
     _fuelBar progressSetPosition _fuelLevel;
     _powerBar progressSetPosition (_totalCharge / _maxCharge);
     _oilBar progressSetPosition _oilLevel;
+    _coolantBar progressSetPosition _coolantLevel;
 
-    // Remove coolant bar for aircraft (most aircraft use air flow for cooling components)
-    if (_vehicle isKindOf "plane" || _vehicle isKindOf "helicopter") then {
-        [982400, [1100, 1804], false] call EFUNC(common,displayShowControls);
-    } else {
-        _coolantBar progressSetPosition _coolantLevel;
+    switch (true) do {
+        case (_batteryCount isEqualTo 0): {
+            {
+                _display displayCtrl _x ctrlShow false;
+            } forEach [1802, 2001, 1002];
+        };
+        case (_fuelLiters isEqualTo 0): {
+            {
+                _display displayCtrl _x ctrlShow false;
+            } forEach [1801, 2000];
+        };
+        case (_oilLiters isEqualTo 0): {
+            {
+                _display displayCtrl _x ctrlShow false;
+            } forEach [1803, 2002];
+        };
+        case (_coolantLiters isEqualTo 0): {
+            {
+                _display displayCtrl _x ctrlShow false;
+            } forEach [1804, 2003];
+        };
     };
 
     private _speedType = ["MPH:", "Km/h:"] select GVAR(speedType);

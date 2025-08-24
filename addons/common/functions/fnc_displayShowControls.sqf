@@ -3,6 +3,7 @@
  * Author: TenuredCLOUD
  * Display control show / hide
  * Shows or hides listed control idc's that are listed
+ * Cannot be used on RscTitle classed displays
  *
  * Arguments:
  * 0: Display idd <NUMBER>

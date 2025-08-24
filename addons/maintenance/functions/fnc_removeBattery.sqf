@@ -38,10 +38,9 @@ if (_installedBatteries > 0) then {
         _vehicle setVariable [QGVAR(batteryLevel), _batteryLevel - _chargePerBattery, true];
         if (_installedBatteries <= 0) then {
             _vehicle setVariable [QGVAR(batteryLevel), 0, true];
-            _vehicle setFuel 0;
         };
         [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607], true] call EFUNC(common,displayEnableControls);
-        [player, _batteryType, true] call CBA_fnc_addItem;
+        [player, _batteryType, _chargePerBattery, true] call CBA_fnc_addMagazine;
         [_vehicle] call FUNC(listed);
     }, [_vehicle, _batteryType, _installedBatteries, _batteryLevel], 5] call CBA_fnc_waitAndExecute;
 };
