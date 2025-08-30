@@ -33,6 +33,18 @@ private _vehicleClasses = [];
         _entity setVariable [QGVAR(batteryLevel), 0, true];
         _entity setVariable [QGVAR(oilLevel), 0, true];
         _entity setVariable [QGVAR(coolantLevel), 0, true];
+        if (GVAR(fuelOnStart) > 0) then {
+            _entity setFuel (random GVAR(fuelOnStart));
+        };
+        if (GVAR(damageOnStart) > 0) then {
+            private _hitPoints = getAllHitPointsDamage _entity select 0;
+            {
+                _entity setHitPointDamage [_x, random GVAR(damageOnStart)];
+            } forEach _hitPoints;
+        };
+        if (GVAR(preparedTools)) then {
+            [_entity] call FUNC(preparedVehicle);
+        };
     };
 } forEach (allMissionObjects "Car") + (allMissionObjects "Tank") + (allMissionObjects "Air");
 

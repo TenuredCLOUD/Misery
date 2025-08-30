@@ -4,6 +4,7 @@ PREP(buildingPositionsInside);
 PREP(combatLogPrevention);
 PREP(configCheck);
 PREP(countItem);
+PREP(countMagazinesAmmo);
 PREP(debugMessage);
 PREP(displayEnableControls);
 PREP(displayShowControls);

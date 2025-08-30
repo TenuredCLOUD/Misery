@@ -27,7 +27,7 @@ if (_installedBatteries <= 0) exitWith {
 private _batteryType = _vehicle getVariable [QGVAR(batteryType), "misery_autoBattery"];
 
 if (_installedBatteries > 0) then {
-    [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607], false] call EFUNC(common,displayEnableControls);
+    [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], false] call EFUNC(common,displayEnableControls);
 
     player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
     [{
@@ -39,8 +39,8 @@ if (_installedBatteries > 0) then {
         if (_installedBatteries <= 0) then {
             _vehicle setVariable [QGVAR(batteryLevel), 0, true];
         };
-        [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607], true] call EFUNC(common,displayEnableControls);
+        [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
         [player, _batteryType, _chargePerBattery, true] call CBA_fnc_addMagazine;
         [_vehicle] call FUNC(listed);
-    }, [_vehicle, _batteryType, _installedBatteries, _batteryLevel], 5] call CBA_fnc_waitAndExecute;
+    }, [_vehicle, _batteryType, _installedBatteries, _batteryLevel], 3] call CBA_fnc_waitAndExecute;
 };

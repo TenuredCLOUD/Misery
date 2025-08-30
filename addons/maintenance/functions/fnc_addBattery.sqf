@@ -30,7 +30,7 @@ if (_missingBatteries <= 0) exitWith {
 private _playerBatteryCount = [_batteryType] call EFUNC(common,countItem);
 
 if (_playerBatteryCount >= 1) then {
-    [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607], false] call EFUNC(common,displayEnableControls);
+    [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], false] call EFUNC(common,displayEnableControls);
     player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
     [{
         params ["_vehicle", "_batteryType", "_installedBatteries", "_batteryCount"];
@@ -41,9 +41,9 @@ if (_playerBatteryCount >= 1) then {
         _vehicle setVariable [QGVAR(batteryLevel), (_vehicle getVariable [QGVAR(batteryLevel), 0]) + (_batteryLife / _batteryCount), true];
         private _batteryInstallSuccess = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["Installed (x1) %1. Total batteries: %2/%3. Battery level: %4%%.", [_batteryType] call EFUNC(common,getItemData) select 0, _installedBatteries, _batteryCount, _vehicle getVariable [QGVAR(batteryLevel), 0]]];
         [QEGVAR(common,tileText), _batteryInstallSuccess] call CBA_fnc_localEvent;
-        [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607], true] call EFUNC(common,displayEnableControls);
+        [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
         [_vehicle] call FUNC(listed);
-    }, [_vehicle, _batteryType, _installedBatteries, _batteryCount], 5] call CBA_fnc_waitAndExecute;
+    }, [_vehicle, _batteryType, _installedBatteries, _batteryCount], 3] call CBA_fnc_waitAndExecute;
 } else {
     private _needBattery = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["Need (x1) %1 to install.", [_batteryType] call EFUNC(common,getItemData) select 0]];
     [QEGVAR(common,tileText), _needBattery] call CBA_fnc_localEvent;

@@ -14,7 +14,7 @@
 #endif
 
 // Maintenance
-#define MACRO_REPAIR_KITS [ \
+#define MACRO_MAINTENANCE_REPAIR [ \
     [QUOTE(optic), QCLASS(glassRepairKit)], \
     [QUOTE(glass), QCLASS(glassRepairKit)], \
     [QUOTE(light), QCLASS(electronicRepairKit)], \
@@ -47,7 +47,7 @@
     [QUOTE(wheel), ""] \
 ]
 
-#define MACRO_REPAIR_SCAVENGE [ \
+#define MACRO_MAINTENANCE_SCAVENGE [ \
     [QUOTE(optic), ""], \
     [QUOTE(glass), ""], \
     [QUOTE(light), QCLASS(electronicRepairKit)], \

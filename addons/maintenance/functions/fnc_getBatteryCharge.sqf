@@ -23,6 +23,6 @@ private _installedBatteries = _vehicle getVariable [QGVAR(installedBatteries), 0
 private _batteryLevel = _vehicle getVariable [QGVAR(batteryLevel), 0];
 
 private _totalCharge = _batteryLevel;
-private _maxCharge = _requiredBatteries * 100;
+private _maxCharge = _requiredBatteries * 1;
 
 [_totalCharge, _maxCharge]

@@ -48,7 +48,7 @@ GVAR(handleEngine) = {
         } else {
             private _drainBatteryLevel = _batteryLevel - (0.05 / _requiredBatteries);
             _vehicle setVariable [QGVAR(batteryLevel), _drainBatteryLevel, true];
-            if (_batteryLevel < 0) then {
+            if (_batteryLevel <= 0) then {
                 _vehicle setVariable [QGVAR(batteryLevel), 0, true];
             };
         };
@@ -67,6 +67,33 @@ player addEventHandler ["GetInMan", {
     params ["_unit", "_role", "_vehicle"];
 
     if (typeOf _vehicle in MACRO_TANK_CLASSES) then {
+
+        private _turretPath = _vehicle unitTurret _unit;
+        private _batteryLevel = _vehicle getVariable [QGVAR(batteryLevel), 0];
+
+        if (_batteryLevel <= 0 && {_turretPath isNotEqualTo [-1]}) then {
+            _vehicle setTurretLimits [_turretPath, 0, 0, 0, 0];
+        } else {
+            _vehicle setTurretLimits [_turretPath];
+        };
+
+        GVAR(handleTurret) = _vehicle addEventHandler ["SeatSwitched", {
+            params ["_vehicle", "_unit1", "_unit2"];
+
+            private _batteryLevel = _vehicle getVariable [QGVAR(batteryLevel), 0];
+
+            {
+                private _turretPath = _vehicle unitTurret _x;
+                if (_turretPath isNotEqualTo [-1]) then {
+                    if (_batteryLevel <= 0) then {
+                        _vehicle setTurretLimits [_turretPath, 0, 0, 0, 0];
+                    } else {
+                        _vehicle setTurretLimits [_turretPath];
+                    };
+                };
+            } forEach [_unit1, _unit2];
+        }];
+
         GVAR(handleOptics) = _unit addEventHandler ["OpticsSwitch", {
 	        params ["_unit", "_isADS"];
 
@@ -179,6 +206,9 @@ player addEventHandler ["GetOutMan", {
 
         if (!isNil QGVAR(handleOptics)) then {
             _unit removeEventHandler ["OpticsSwitch", GVAR(handleOptics)];
+        };
+        if (!isNil QGVAR(handleTurret)) then {
+            _vehicle removeEventHandler ["SeatSwitched", GVAR(handleTurret)];
         };
     };
 }];
