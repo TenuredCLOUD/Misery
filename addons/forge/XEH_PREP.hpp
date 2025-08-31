@@ -7,3 +7,4 @@ PREP(refuel);
 PREP(showFuel);
 PREP(showRecipe);
 PREP(stats);
+PREP(track);
