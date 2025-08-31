@@ -2,14 +2,9 @@
 
 if !(isServer) exitWith {};
 
-GVAR(forgeList) = [];
+GVAR(tracked) = [];
 
-// Track all forges easily.
-[QCLASS(forge), "init", {
-    params ["_object"];
-
-    GVAR(forgeList) pushBack _object;
-}, true, [], true] call CBA_fnc_addClassEventHandler;
+call FUNC(track);
 
 if (isClass (missionConfigFile >> "CfgMisery_ForgeData")) then {
     [] call FUNC(parseData);

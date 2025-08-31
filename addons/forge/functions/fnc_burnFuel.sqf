@@ -17,12 +17,12 @@
 [{
     params ["_args", "_handle"];
 
-    if ((count GVAR(forgeList)) < 1) exitWith {};
+    if ((count GVAR(tracked)) < 1) exitWith {};
 
     {
         private _currentFuel = _x getVariable [QGVAR(fuel), 0];
         if (_currentFuel isNotEqualTo 0) then {
         _x setVariable [QGVAR(fuel), _currentFuel - 0.01, true]
         };
-    } forEach GVAR(forgeList);
+    } forEach GVAR(tracked);
 }, 60, []] call CBA_fnc_addPerFrameHandler;
