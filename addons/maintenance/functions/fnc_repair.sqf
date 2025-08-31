@@ -20,15 +20,13 @@
 params ["_hitpointIndex", "_selectedIndex"];
 
 if !([["ToolKit"]] call EFUNC(common,hasItem)) exitWith {
-    private _needTools = format ["<t font='PuristaMedium' size='0.7'>%1</t>", "You need a toolkit to repair vehicles..."];
-    [QEGVAR(common,tileText), _needTools] call CBA_fnc_localEvent;
+    ctrlSetText [1001, format ["You need a toolkit to repair vehicles..."]];
 };
 
 [player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
 
 if (isNull _vehicle) exitWith {
-    private _invalid = format ["<t font='PuristaMedium' size='0.7'>%1</t>", "Invalid vehicle..."];
-    [QEGVAR(common,tileText), _invalid] call CBA_fnc_localEvent;
+    ctrlSetText [1001, format ["Invalid vehicle..."]];
 };
 
 private _hitpoints = getAllHitPointsDamage _vehicle;
@@ -37,15 +35,14 @@ private _selectionNames = _hitpoints select 1;
 private _index = parseNumber _hitpointIndex;
 
 if (_index < 0 || _index >= count _hitpointNames) exitWith {
-    private _invalid = format ["<t font='PuristaMedium' size='0.7'>%1</t>", "Invalid hitpoint..."];
-    [QEGVAR(common,tileText), _invalid] call CBA_fnc_localEvent;
+    ctrlSetText [1001, format ["Invalid hitpoint..."]];
 };
 
 private _hitpoint = _hitpointNames select _index;
 private _selectionName = _selectionNames select _index;
 private _requiredForRepair = "";
-private _hitpointLower = toLower _hitpoint;
-private _hitpointDamage = _vehicle getHitPointDamage _hitpoint;
+private _hitpointLower = toLower _hitpoint; //toLower _selectionName;
+private _hitpointDamage = _vehicle getHitIndex _index;
 
 {
     if ((_x select 0) in _hitpointLower) exitWith {_requiredForRepair = _x select 1};
@@ -60,59 +57,59 @@ switch (true) do {
             [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], false] call EFUNC(common,displayEnableControls);
             player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
             [{
-                params ["_vehicle", "_hitpoint", "_selectionName"];
+                params ["_vehicle", "_index"];
                 [player, QCLASS(spareTire)] call CBA_fnc_removeItem;
-                _vehicle setHitPointDamage [_hitpoint, 0];
-                private _tireRepairSuccess = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["Repaired %1 with spare tire.", _selectionName]];
-                [QEGVAR(common,tileText), _tireRepairSuccess] call CBA_fnc_localEvent;
+                _vehicle setHitIndex [_index, 0];
+                ctrlSetText [1001, format ["Repaired wheel with spare tire"]];
                 [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
                 [_vehicle] call FUNC(listed);
-            }, [_vehicle, _hitpoint, _selectionName], 3] call CBA_fnc_waitAndExecute;
+            }, [_vehicle, _index], 3] call CBA_fnc_waitAndExecute;
         } else {
             if (_hitpointDamage isEqualTo 1) then {
-                private _tireRepairFail = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["You need a spare tire to repair %1.", _selectionName]];
-                [QEGVAR(common,tileText), _tireRepairFail] call CBA_fnc_localEvent;
+                ctrlSetText [1001, format ["You need a spare tire to repair wheel."]];
             } else {
                 if (_hitpointDamage > 0 && _hasPatchKit) then {
                     [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], false] call EFUNC(common,displayEnableControls);
                     player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
                     [{
-                        params ["_vehicle", "_hitpoint", "_selectionName"];
+                        params ["_vehicle", "_index"];
                         [QCLASS(tirePatchKit)] call EFUNC(common,itemDecrement);
-                        _vehicle setHitPointDamage [_hitpoint, 0];
-                        private _tirePatchSuccess = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["Patched %1 with tire patch kit.", _selectionName]];
-                        [QEGVAR(common,tileText), _tirePatchSuccess] call CBA_fnc_localEvent;
+                        _vehicle setHitIndex [_index, 0];
+                        ctrlSetText [1001, format ["Patched wheel with tire patch kit."]];
                         [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
                         [_vehicle] call FUNC(listed);
-                    }, [_vehicle, _hitpoint, _selectionName], 3] call CBA_fnc_waitAndExecute;
+                    }, [_vehicle, _index], 3] call CBA_fnc_waitAndExecute;
                 } else {
-                    private _tirePatchFail = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["You need a tire patch kit to repair %1.", _selectionName]];
-                    [QEGVAR(common,tileText), _tirePatchFail] call CBA_fnc_localEvent;
+                    ctrlSetText [1001, format ["You need a tire patch kit to repair wheel."]];
                 };
             };
         };
     };
     case (_hitpointDamage isEqualTo 0): {
-        private _cannotRepair = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["Cannot repair %1...", _selectionName]];
-        [QEGVAR(common,tileText), _cannotRepair] call CBA_fnc_localEvent;
+        ctrlSetText [1001, format ["Cannot repair %1...", _selectionName]];
         [_vehicle] call FUNC(listed);
     };
     case (_requiredForRepair isEqualTo ""): {
-        private _cannotRepair = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["Cannot repair %1...", _selectionName]];
-        [QEGVAR(common,tileText), _cannotRepair] call CBA_fnc_localEvent;
+        ctrlSetText [1001, format ["Cannot repair %1...", _selectionName]];
         [_vehicle] call FUNC(listed);
     };
-    case ([[_requiredForRepair]] call EFUNC(common,hasItem)): {
+    case (_requiredForRepair isNotEqualTo ""): {
         [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], false] call EFUNC(common,displayEnableControls);
-        player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
-        [{
-            params ["_vehicle", "_hitpoint", "_requiredForRepair", "_selectionName"];
-            [_requiredForRepair, QCLASS(emptyToolKit)] call EFUNC(common,itemDecrement);
-            _vehicle setHitPointDamage [_hitpoint, 0];
-            private _successfulRepair = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["Repaired %1 with %2.", _selectionName, [_requiredForRepair] call EFUNC(common,getItemData) select 0]];
-            [QEGVAR(common,tileText), _successfulRepair] call CBA_fnc_localEvent;
+        if !([[_requiredForRepair]] call EFUNC(common,hasItem)) exitWith {
+            ctrlSetText [1001, format ["You need %1 in order to repair %2...", [_requiredForRepair] call EFUNC(common,getItemData) select 0, _selectionName]];
             [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
             [_vehicle] call FUNC(listed);
-        }, [_vehicle, _hitpoint, _requiredForRepair, _selectionName], 3] call CBA_fnc_waitAndExecute;
+        };
+        if ([[_requiredForRepair]] call EFUNC(common,hasItem)) exitWith {
+            player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+            [{
+                params ["_vehicle", "_requiredForRepair", "_index", "_selectionName"];
+                [_requiredForRepair, QCLASS(emptyToolKit)] call EFUNC(common,itemDecrement);
+                _vehicle setHitIndex [_index, 0];
+                ctrlSetText [1001, format ["Repaired %1 with %2.", _selectionName, [_requiredForRepair] call EFUNC(common,getItemData) select 0]];
+                [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
+                [_vehicle] call FUNC(listed);
+            }, [_vehicle, _requiredForRepair, _index, _selectionName], 3] call CBA_fnc_waitAndExecute;
+        };
     };
 };

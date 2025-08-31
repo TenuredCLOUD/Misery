@@ -20,8 +20,7 @@ private _installedBatteries = _vehicle getVariable [QGVAR(installedBatteries), 0
 private _batteryLevel = _vehicle getVariable [QGVAR(batteryLevel), 0];
 
 if (_installedBatteries <= 0) exitWith {
-    private _needBattery = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["%1 has no batteries left to remove...", [_vehicle] call EFUNC(common,getObjectData) select 0]];
-    [QEGVAR(common,tileText), _needBattery] call CBA_fnc_localEvent;
+    ctrlSetText [1001, format ["%1 has no batteries left to remove...", [_vehicle] call EFUNC(common,getObjectData) select 0]];
 };
 
 private _batteryType = _vehicle getVariable [QGVAR(batteryType), "misery_autoBattery"];

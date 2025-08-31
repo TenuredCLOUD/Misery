@@ -18,13 +18,11 @@
 [player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
 
 if (isNull _vehicle) exitWith {
-    private _invalid = format ["<t font='PuristaMedium' size='0.7'>%1</t>", "Invalid vehicle..."];
-    [QEGVAR(common,tileText), _invalid] call CBA_fnc_localEvent;
+    ctrlSetText [1001, format ["Invalid vehicle..."]];
 };
 
 if !([["ToolKit"]] call EFUNC(common,hasItem)) exitWith {
-    private _needTools = format ["<t font='PuristaMedium' size='0.7'>%1</t>", "You need a toolkit to syphon fuel..."];
-    [QEGVAR(common,tileText), _needTools] call CBA_fnc_localEvent;
+    ctrlSetText [1001, format ["You need a toolkit to syphon fuel..."]];
 };
 
 private _found = false;
@@ -51,8 +49,7 @@ _refuelInterrupt = (findDisplay 274839) displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QCLASS(processRefuel),false];
-        private _refuelInterrupted = format ["<t font='PuristaMedium' size='0.7'>%1</t>", "Syphoning interrupted..."];
-        [QEGVAR(common,tileText), _refuelInterrupted] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), format ["Syphoning interrupted..."]] call CBA_fnc_localEvent;
     };
 }];
 
@@ -69,8 +66,7 @@ if (fuel _vehicle <= 0) exitWith {
     player setVariable [QCLASS(processRefuel), nil];
     (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
     _vehicle setFuel 0;
-    _displayEmpty = format ["%1 fuel tank is empty...", [_vehicle] call EFUNC(common,getObjectData) select 0];
-    ctrlSetText [1001, _displayEmpty];
+    ctrlSetText [1001, format ["%1 fuel tank is empty...", [_vehicle] call EFUNC(common,getObjectData) select 0]];
     [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
 };
 
@@ -103,8 +99,7 @@ private _displayedText = "";
         player setVariable [QCLASS(processRefuel), nil];
         (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
         _vehicle setFuel 0;
-        _displayEmpty = format ["%1 fuel tank is empty...", [_vehicle] call EFUNC(common,getObjectData) select 0];
-        ctrlSetText [1001, _displayEmpty];
+        ctrlSetText [1001, format ["%1 fuel tank is empty...", [_vehicle] call EFUNC(common,getObjectData) select 0]];
         [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
         _handle call CBA_fnc_removePerFrameHandler;
     };
@@ -119,8 +114,7 @@ private _displayedText = "";
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
-    _displayedText = format ["%1%2%3%2%4%2%5", _text, endl, [_vehicle] call EFUNC(common,getObjectData) select 0, _tanklvl, (fuel _vehicle) * 100];
-    ctrlSetText [1001, _displayedText];
+    ctrlSetText [1001, format ["%1%2%3%2%4%2%5", _text, endl, [_vehicle] call EFUNC(common,getObjectData) select 0, _tanklvl, (fuel _vehicle) * 100]];
 
     _vehicle setFuel ((fuel _vehicle) - _fuelToRemove);
 

@@ -81,8 +81,7 @@
         _oilBar progressSetPosition _oilLevel;
         _coolantBar progressSetPosition _coolantLevel;
 
-        private _batteryStatus = format ["Battery - %1/%2 (%3%% charge)", _installedBatteries, _requiredBatteries, _batteryLevel];
-        _batteryStatusText ctrlSetText _batteryStatus;
+        ctrlSetText [1003, format ["Battery - %1/%2", _installedBatteries, _requiredBatteries]];
 
         switch (true) do {
             case (_batteryCount isEqualTo 0): {
@@ -99,7 +98,7 @@
             };
     };
 
-        _iconCtrl ctrlSetText _picture;
-        _iconName ctrlSetText _displayName;
+        ctrlSetText [1200, format ["%1", _picture]];
+        ctrlSetText [1002, format ["%1", _displayName]];
     }, 0.5] call CBA_fnc_addPerFrameHandler;
 },[]] call CBA_fnc_waitUntilAndExecute;

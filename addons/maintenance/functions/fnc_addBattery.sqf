@@ -23,8 +23,7 @@ private _batteryType = _vehicle getVariable [QGVAR(batteryType), "misery_autoBat
 private _missingBatteries = _batteryCount - _installedBatteries;
 
 if (_missingBatteries <= 0) exitWith {
-    private _batteriesFull = format ["<t font='PuristaMedium' size='0.7'>%1</t>", "All batteries already installed..."];
-    [QEGVAR(common,tileText), _batteriesFull] call CBA_fnc_localEvent;
+    ctrlSetText [1001, format ["All batteries already installed..."]];
 };
 
 private _playerBatteryCount = [_batteryType] call EFUNC(common,countItem);
@@ -39,13 +38,11 @@ if (_playerBatteryCount >= 1) then {
         _installedBatteries = _installedBatteries + 1;
         _vehicle setVariable [QGVAR(installedBatteries), _installedBatteries, true];
         _vehicle setVariable [QGVAR(batteryLevel), (_vehicle getVariable [QGVAR(batteryLevel), 0]) + (_batteryLife / _batteryCount), true];
-        private _batteryInstallSuccess = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["Installed (x1) %1. Total batteries: %2/%3. Battery level: %4%%.", [_batteryType] call EFUNC(common,getItemData) select 0, _installedBatteries, _batteryCount, _vehicle getVariable [QGVAR(batteryLevel), 0]]];
-        [QEGVAR(common,tileText), _batteryInstallSuccess] call CBA_fnc_localEvent;
+        ctrlSetText [1001, format ["Installed (x1) %1. Total batteries: %2/%3.", [_batteryType] call EFUNC(common,getItemData) select 0, _installedBatteries, _batteryCount]];
         [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
         [_vehicle] call FUNC(listed);
     }, [_vehicle, _batteryType, _installedBatteries, _batteryCount], 3] call CBA_fnc_waitAndExecute;
 } else {
-    private _needBattery = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["Need (x1) %1 to install.", [_batteryType] call EFUNC(common,getItemData) select 0]];
-    [QEGVAR(common,tileText), _needBattery] call CBA_fnc_localEvent;
+    ctrlSetText [1001, format ["Need (x1) %1 to install.", [_batteryType] call EFUNC(common,getItemData) select 0]];
 };
 

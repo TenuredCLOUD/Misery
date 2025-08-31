@@ -100,8 +100,7 @@
         [player] call EFUNC(common,nearVehicle) params ["", "", "_hasCrew"];
 
         if (_hasCrew) exitWith {
-            private _vehicleHasCrew = format ["<t font='PuristaMedium' size='0.7'>%1</t>", format ["Crew is present in %1, preventing any maintenance...", [_vehicle] call EFUNC(common,getObjectData) select 0]];
-            [QEGVAR(common,tileText), _vehicleHasCrew] call CBA_fnc_localEvent;
+            [QEGVAR(common,tileText), format ["Crew is present in %1, preventing any maintenance...", [_vehicle] call EFUNC(common,getObjectData) select 0]] call CBA_fnc_localEvent;
             _handle call CBA_fnc_removePerFrameHandler;
             (findDisplay 274839) closeDisplay 2;
         };
@@ -113,38 +112,26 @@
         if (isNil "_vehicle") exitWith {
             _repairButton ctrlShow false;
             _scavengeButton ctrlShow false;
-            _statusText ctrlSetText "No Vehicle to Repair...";
+            ctrlSetText [1000, "No Vehicle to Repair..."];
         };
 
-        _statusText ctrlSetText format ["Vehicle: %1", [_vehicle] call EFUNC(common,getObjectData) select 0];
+        ctrlSetText [1000, format ["Vehicle: %1", [_vehicle] call EFUNC(common,getObjectData) select 0]];
 
         lbClear _list;
 
         // Add hitpoints
-        // private _hitpoints = getAllHitPointsDamage _vehicle;
-        // private _hitpointNames = _hitpoints select 0;
-        // private _damages = _hitpoints select 2;
-
-        // {
-        //     private _hitpointName = _hitpointNames select _forEachIndex;
-        //     private _damage = _damages select _forEachIndex;
-        //     private _damagePercent = _damage * 100;
-        //     private _index = _list lbAdd format ["%1 - Damage: %2%%", _hitpointName, [_damagePercent, 1, 1, false] call CBA_fnc_formatNumber];
-        //     _list lbSetData [_index, _hitpointName];
-        // } forEach _hitpointNames;
-
         private _hitpoints = getAllHitPointsDamage _vehicle;
-        private _hitpointNames = _hitpoints select 0; // For repair mapping
-        private _selectionNames = _hitpoints select 1; // For GUI display
+        private _hitpointNames = _hitpoints select 0;
+        private _selectionNames = _hitpoints select 1;
         private _damages = _hitpoints select 2;
 
         {
             private _selectionName = _selectionNames select _forEachIndex;
-            if (_selectionName != "") then { // Skip empty selections
+            if (_selectionName != "") then {
                 private _damage = _damages select _forEachIndex;
                 private _damagePercent = _damage * 100;
                 private _index = _list lbAdd format ["%1 - Damage: %2%%", _selectionName, [_damagePercent, 1, 1, false] call CBA_fnc_formatNumber];
-                _list lbSetData [_index, str _forEachIndex]; // Store index to map to hitpoint
+                _list lbSetData [_index, str _forEachIndex];
             };
         } forEach _selectionNames;
 
