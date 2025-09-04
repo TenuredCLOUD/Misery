@@ -32,6 +32,23 @@ class CLASS(RscProgress)
     texture = "#(argb,8,8,3)color(1,1,1,1)";
 };
 
+class CLASS(RscProgress_V)
+{
+    deletable = 0;
+    fade = 0;
+    access = 0;
+    type = CT_PROGRESS;
+    style = ST_VERTICAL;
+    colorFrame[] = {1,1,1,0.8};
+    colorBar[] = {1,1,1,1};
+    colorBackground[] = {0,0,0,0.3};
+    colorText[] = {1,1,1,0};
+    font = UI_MACRO_FONT;
+    sizeEx = UI_MACRO_TEXTSIZE;
+    shadow = 2;
+    texture = "#(argb,8,8,3)color(1,1,1,1)";
+};
+
 class CLASS(RscPicture)
 {
     access = 0;

@@ -24,7 +24,7 @@ if (_itemContainer isNotEqualTo -1) then {
 
     if (_containerCount > 1) then {
         player removeMagazine _item;
-        player addMagazine [_item, (_containerCount -1)];
+        [player, _item, _containerCount - 1, true] call CBA_fnc_addMagazine;
     } else {
         player removeMagazine _item;
         if (_replacementItem isNotEqualTo "") then {
