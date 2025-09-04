@@ -67,6 +67,7 @@ class CLASS(maintenance_ui)
             h = 2 * GUI_GRID_H;
             colorBackground[] = {0.2,0.2,0.2,0.7};
             colorActive[] = {0.5,0.5,0.5,0.7};
+            onButtonClick = QUOTE(call EFUNC(maintenance,addBattery));
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
@@ -81,6 +82,7 @@ class CLASS(maintenance_ui)
             h = 2 * GUI_GRID_H;
             colorBackground[] = {0.2,0.2,0.2,0.7};
             colorActive[] = {0.5,0.5,0.5,0.7};
+            onButtonClick = QUOTE(call EFUNC(maintenance,removeBattery));
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
@@ -95,6 +97,7 @@ class CLASS(maintenance_ui)
             h = 2 * GUI_GRID_H;
             colorBackground[] = {0.2,0.2,0.2,0.7};
             colorActive[] = {0.5,0.5,0.5,0.7};
+            onButtonClick = QUOTE(call EFUNC(maintenance,addOil));
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
@@ -109,6 +112,7 @@ class CLASS(maintenance_ui)
             h = 2 * GUI_GRID_H;
             colorBackground[] = {0.2,0.2,0.2,0.7};
             colorActive[] = {0.5,0.5,0.5,0.7};
+            onButtonClick = QUOTE(call EFUNC(maintenance,removeOil));
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
@@ -123,6 +127,7 @@ class CLASS(maintenance_ui)
             h = 2 * GUI_GRID_H;
             colorBackground[] = {0.2,0.2,0.2,0.7};
             colorActive[] = {0.5,0.5,0.5,0.7};
+            onButtonClick = QUOTE(call EFUNC(maintenance,addCoolant));
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
@@ -137,6 +142,7 @@ class CLASS(maintenance_ui)
             h = 2 * GUI_GRID_H;
             colorBackground[] = {0.2,0.2,0.2,0.7};
             colorActive[] = {0.5,0.5,0.5,0.7};
+            onButtonClick = QUOTE(call EFUNC(maintenance,removeCoolant));
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
@@ -151,6 +157,14 @@ class CLASS(maintenance_ui)
             h = 2 * GUI_GRID_H;
             colorBackground[] = {0.2,0.2,0.2,0.7};
             colorActive[] = {0.5,0.5,0.5,0.7};
+            onButtonClick = QUOTE(
+                private _dialog = ctrlParent (_this select 0);
+                private _list = _dialog displayCtrl 1500;
+                private _selected = lbCurSel _list;
+                if (_selected isEqualTo -1) exitWith {ctrlSetText [ARR_2(1001, 'No repair option selected...')]};
+                private _hitpoint = _list lbData _selected;
+                [ARR_2(_hitpoint, _selected)] call EFUNC(maintenance,repair);
+            );
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
@@ -158,7 +172,6 @@ class CLASS(maintenance_ui)
         {
             idc = 1601;
             colorFocused[] = {0.5,0.5,0.5,0.7};
-            onButtonClick = "";
             text = "Refuel"; //--- ToDo: Localize;
             x = 37 * GUI_GRID_W + GUI_GRID_X;
             y = 14 * GUI_GRID_H + GUI_GRID_Y;
@@ -166,6 +179,7 @@ class CLASS(maintenance_ui)
             h = 2 * GUI_GRID_H;
             colorBackground[] = {0.2,0.2,0.2,0.7};
             colorActive[] = {0.5,0.5,0.5,0.7};
+            onButtonClick = QUOTE(call EFUNC(maintenance,refuel));
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
@@ -173,7 +187,6 @@ class CLASS(maintenance_ui)
         {
             idc = 1608;
             colorFocused[] = {0.5,0.5,0.5,0.7};
-            onButtonClick = "";
             text = "Syphon"; //--- ToDo: Localize;
             x = 37 * GUI_GRID_W + GUI_GRID_X;
             y = 16.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -181,6 +194,7 @@ class CLASS(maintenance_ui)
             h = 2 * GUI_GRID_H;
             colorBackground[] = {0.2,0.2,0.2,0.7};
             colorActive[] = {0.5,0.5,0.5,0.7};
+            onButtonClick = QUOTE(call EFUNC(maintenance,syphon));
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
@@ -195,6 +209,14 @@ class CLASS(maintenance_ui)
             h = 2 * GUI_GRID_H;
             colorBackground[] = {0.2,0.2,0.2,0.7};
             colorActive[] = {0.5,0.5,0.5,0.7};
+            onButtonClick = QUOTE(
+                private _dialog = ctrlParent (_this select 0);
+                private _list = _dialog displayCtrl 1500;
+                private _selected = lbCurSel _list;
+                if (_selected isEqualTo -1) exitWith {ctrlSetText [ARR_2(1001, 'No scavenge option selected...')]};
+                private _hitpoint = _list lbData _selected;
+                [ARR_2(_hitpoint, _selected)] call EFUNC(maintenance,scavenge);
+            );
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };

@@ -15,51 +15,34 @@
  * Public: No
 */
 
-private _vehicleClasses = [];
-{
-    _vehicleClasses pushBack (_x select 0);
-} forEach EGVAR(common,vehicleData);
+["AllVehicles", "Init", {
+    private _vehicleClasses = [];
+    {
+        _vehicleClasses pushBack (_x select 0);
+    } forEach EGVAR(common,vehicleData);
 
-{
-    private _entity = _x;
-    private _vehicleType = typeOf _entity;
+    private _vehicleType = typeOf (_this select 0);
     if (_vehicleType in _vehicleClasses) then {
         private _vehicleData = EGVAR(common,vehicleData) select {(_x select 0) isEqualTo _vehicleType};
         private _batteryCount = if (_vehicleData isNotEqualTo []) then {_vehicleData select 0 select 6} else {1};
         private _batteryType = if (_vehicleData isNotEqualTo []) then {_vehicleData select 0 select 5} else {"misery_autoBattery"};
-        _entity setVariable [QGVAR(batteryCount), _batteryCount, true];
-        _entity setVariable [QGVAR(batteryType), _batteryType, true];
-        _entity setVariable [QGVAR(installedBatteries), 0, true];
-        _entity setVariable [QGVAR(batteryLevel), 0, true];
-        _entity setVariable [QGVAR(oilLevel), 0, true];
-        _entity setVariable [QGVAR(coolantLevel), 0, true];
+        (_this select 0) setVariable [QGVAR(batteryCount), _batteryCount, true];
+        (_this select 0) setVariable [QGVAR(batteryType), _batteryType, true];
+        (_this select 0) setVariable [QGVAR(installedBatteries), 0, true];
+        (_this select 0) setVariable [QGVAR(batteryLevel), 0, true];
+        (_this select 0) setVariable [QGVAR(oilLevel), 0, true];
+        (_this select 0) setVariable [QGVAR(coolantLevel), 0, true];
         if (GVAR(fuelOnStart) > 0) then {
-            _entity setFuel (random GVAR(fuelOnStart));
+            (_this select 0) setFuel (random GVAR(fuelOnStart));
         };
         if (GVAR(damageOnStart) > 0) then {
-            private _hitPoints = getAllHitPointsDamage _entity select 0;
+            private _hitPoints = getAllHitPointsDamage (_this select 0) select 0;
             {
-                _entity setHitPointDamage [_x, random GVAR(damageOnStart)];
+                (_this select 0) setHitPointDamage [_x, random GVAR(damageOnStart)];
             } forEach _hitPoints;
         };
         if (GVAR(preparedTools)) then {
-            [_entity] call FUNC(preparedVehicle);
+            [(_this select 0)] call FUNC(preparedVehicle);
         };
     };
-} forEach (allMissionObjects "Car") + (allMissionObjects "Tank") + (allMissionObjects "Air");
-
-addMissionEventHandler ["EntityCreated", {
-    params ["_entity"];
-    private _vehicleType = typeOf _entity;
-    if (_vehicleType in _vehicleClasses) then {
-        private _vehicleData = EGVAR(common,vehicleData) select {(_x select 0) isEqualTo _vehicleType};
-        private _batteryCount = if (_vehicleData isNotEqualTo []) then {_vehicleData select 0 select 6} else {1};
-        private _batteryType = if (_vehicleData isNotEqualTo []) then {_vehicleData select 0 select 5} else {"misery_autoBattery"};
-        _entity setVariable [QGVAR(batteryCount), _batteryCount, true];
-        _entity setVariable [QGVAR(batteryType), _batteryType, true];
-        _entity setVariable [QGVAR(installedBatteries), 0, true];
-        _entity setVariable [QGVAR(batteryLevel), 0, true];
-        _entity setVariable [QGVAR(oilLevel), 0, true];
-        _entity setVariable [QGVAR(coolantLevel), 0, true];
-    };
-}];
+}, true, ["Man", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler;

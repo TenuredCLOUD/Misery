@@ -21,81 +21,10 @@
     [player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
 
     private _list = findDisplay 274839 displayCtrl 1500;
-    private _addBatteryButton = findDisplay 274839 displayCtrl 1607;
-    private _removeBatteryButton = findDisplay 274839 displayCtrl 1606;
-    private _coolantButton = findDisplay 274839 displayCtrl 1605;
-    private _removeCoolantButton = findDisplay 274839 displayCtrl 1610;
-    private _oilButton = findDisplay 274839 displayCtrl 1604;
-    private _removeOilButton = findDisplay 274839 displayCtrl 1609;
-    private _repairButton = findDisplay 274839 displayCtrl 1600;
-    private _refuelButton = findDisplay 274839 displayCtrl 1601;
-    private _syphonButton = findDisplay 274839 displayCtrl 1608;
-    private _scavengeButton = findDisplay 274839 displayCtrl 1602;
-    private _statusText = findDisplay 274839 displayCtrl 1000;
-
-    _addBatteryButton ctrlAddEventHandler ["ButtonClick", {
-        params ["_control"];
-        call FUNC(addBattery);
-    }];
-
-    _removeBatteryButton ctrlAddEventHandler ["ButtonClick", {
-        params ["_control"];
-        call FUNC(removeBattery);
-    }];
-
-    _coolantButton ctrlAddEventHandler ["ButtonClick", {
-        params ["_control"];
-        call FUNC(addCoolant);
-    }];
-
-    _removeCoolantButton ctrlAddEventHandler ["ButtonClick", {
-        params ["_control"];
-        call FUNC(removeCoolant);
-    }];
-
-    _oilButton ctrlAddEventHandler ["ButtonClick", {
-        params ["_control"];
-        call FUNC(addOil);
-    }];
-
-    _removeOilButton ctrlAddEventHandler ["ButtonClick", {
-        params ["_control"];
-        call FUNC(removeOil);
-    }];
-
-    _refuelButton ctrlAddEventHandler ["ButtonClick", {
-        params ["_control"];
-        call FUNC(refuel);
-    }];
-
-    _syphonButton ctrlAddEventHandler ["ButtonClick", {
-        params ["_control"];
-        call FUNC(syphon);
-    }];
-
-    _repairButton ctrlAddEventHandler ["ButtonClick", {
-        params ["_control"];
-        private _dialog = ctrlParent _control;
-        private _list = _dialog displayCtrl 1500;
-        private _selected = lbCurSel _list;
-        if (_selected isEqualTo -1) exitWith {systemChat "No Repair option selected...";};
-        private _hitpoint = _list lbData _selected;
-        [_hitpoint, _selected] call FUNC(repair);
-    }];
-
-    _scavengeButton ctrlAddEventHandler ["ButtonClick", {
-        params ["_control"];
-        private _dialog = ctrlParent _control;
-        private _list = _dialog displayCtrl 1500;
-        private _selected = lbCurSel _list;
-        if (_selected isEqualTo -1) exitWith {systemChat "No Scavenge option selected...";};
-        private _hitpoint = _list lbData _selected;
-        [_hitpoint, _selected] call FUNC(scavenge);
-    }];
 
     [{
         params ["_args", "_handle"];
-        _args params ["_nearVehicle", "_vehicle", "_list", "_repairButton", "_refuelButton", "_scavengeButton", "_statusText", "_batteryStatusText"];
+        _args params ["_nearVehicle", "_vehicle", "_list", "_repairButton", "_refuelButton", "_scavengeButton", "_batteryStatusText"];
 
         [player] call EFUNC(common,nearVehicle) params ["", "", "_hasCrew"];
 
@@ -135,5 +64,5 @@
             };
         } forEach _selectionNames;
 
-    }, 0.5, [_nearVehicle, _vehicle, _list, _repairButton, _refuelButton, _scavengeButton, _statusText, _batteryStatusText]] call CBA_fnc_addPerFrameHandler;
+    }, 0.5, [_nearVehicle, _vehicle, _list, _repairButton, _refuelButton, _scavengeButton, _batteryStatusText]] call CBA_fnc_addPerFrameHandler;
 },[]] call CBA_fnc_waitUntilAndExecute;

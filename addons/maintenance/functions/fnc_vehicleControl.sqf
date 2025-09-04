@@ -27,6 +27,33 @@ GVAR(handleEngine) = {
     private _batteryType = _vehicle getVariable [QGVAR(batteryType), "misery_autoBattery"];
     private _batteryLevel = _vehicle getVariable [QGVAR(batteryLevel), 0];
     private _installedBatteries = _vehicle getVariable [QGVAR(installedBatteries), 0];
+    private _currentOilLevel = _vehicle getVariable [QGVAR(oilLevel), 0];
+    private _currentCoolantLevel = _vehicle getVariable [QGVAR(coolantLevel), 0];
+    private _currentEngineDamage = _vehicle getHitPointDamage "hitEngine";
+
+    if (isEngineOn _vehicle) then {
+        if (_currentOilLevel < 0.75 || _currentCoolantLevel < 0.75) then {
+            _vehicle setHitPointDamage ["hitEngine", _currentEngineDamage + 0.001];
+        };
+        if (_currentEngineDamage > 0.25) then {
+            _vehicle setVariable [QGVAR(oilLevel), _currentOilLevel - 0.001];
+            _vehicle setVariable [QGVAR(coolantLevel), _currentCoolantLevel - 0.001];
+            if (_currentOilLevel <= 0) then {
+                _vehicle setVariable [QGVAR(oilLevel), 0];
+            };
+            if (_currentCoolantLevel <= 0) then {
+                _vehicle setVariable [QGVAR(coolantLevel), 0];
+            };
+        };
+        if (_currentEngineDamage < 0.5) then {
+            _vehicle setVariable [QGVAR(batteryLevel), (_batteryLevel + 0.005) min 1];
+        } else {
+            _vehicle setVariable [QGVAR(batteryLevel), _batteryLevel - 0.001];
+            if (_batteryLevel <= 0) then {
+                _vehicle setVariable [QGVAR(batteryLevel), 0];
+            };
+        };
+    };
 
     if ((_installedBatteries > 0) && _installedBatteries < _requiredBatteries) then {
         if (random 1 > 0.5) then {
@@ -37,34 +64,26 @@ GVAR(handleEngine) = {
     if (inputAction "engineToggle" isEqualTo 1 && !isEngineOn _vehicle) then {
         if (_installedBatteries >= _requiredBatteries && _batteryLevel > 0) then {
             private _newBatteryLevel = _batteryLevel - (0.1 / _requiredBatteries);
-            _vehicle setVariable [QGVAR(batteryLevel), _newBatteryLevel max 0, true];
+            _vehicle setVariable [QGVAR(batteryLevel), _newBatteryLevel max 0];
         };
     };
 
-    if (isEngineOn _vehicle) then {
-        if (_vehicle getHitPointDamage "hitEngine" < 0.5) then {
-            private _chargingBatteryLevel = _batteryLevel + (0.05 / _requiredBatteries);
-            _vehicle setVariable [QGVAR(batteryLevel), _chargingBatteryLevel min 1, true];
-        } else {
-            private _drainBatteryLevel = _batteryLevel - (0.05 / _requiredBatteries);
-            _vehicle setVariable [QGVAR(batteryLevel), _drainBatteryLevel, true];
-            if (_batteryLevel <= 0) then {
-                _vehicle setVariable [QGVAR(batteryLevel), 0, true];
-            };
-        };
-    };
-
-    if (isLightOn _vehicle) then {
-        private _drainBatteryLevelLights = _batteryLevel - (0.001 / _requiredBatteries);
-        _vehicle setVariable [QGVAR(batteryLevel), _drainBatteryLevelLights, true];
+    if (isLightOn _vehicle && !isEngineOn _vehicle) then {
+        _vehicle setVariable [QGVAR(batteryLevel), _batteryLevel - 0.001];
         if (_batteryLevel <= 0) then {
-            _vehicle setVariable [QGVAR(batteryLevel), 0, true];
+            _vehicle setVariable [QGVAR(batteryLevel), 0];
         };
     };
 };
 
 player addEventHandler ["GetInMan", {
     params ["_unit", "_role", "_vehicle"];
+
+    if (_unit isEqualTo (currentPilot _vehicle)) then {
+        _unit setVariable [QGVAR(isPilot), true];
+    } else {
+        _unit setVariable [QGVAR(isPilot), false];
+    };
 
     if (typeOf _vehicle in MACRO_TANK_CLASSES) then {
 
@@ -125,7 +144,7 @@ player addEventHandler ["GetInMan", {
         };
     }];
 
-    _vehicle addEventHandler ["Engine", {
+    GVAR(handleVehicleEngine) = _vehicle addEventHandler ["Engine", {
 	    params ["_vehicle", "_engineState"];
         private _installedBatteries = _vehicle getVariable [QGVAR(installedBatteries), 0];
         private _requiredBatteries = _vehicle getVariable [QGVAR(batteryCount), 1];
@@ -157,7 +176,7 @@ player addEventHandler ["GetInMan", {
         };
     }];
 
-    _vehicle addEventHandler ["VisionModeChanged", {
+    GVAR(handleVehicleVision) = _vehicle addEventHandler ["VisionModeChanged", {
 	    params ["_person", "_visionMode", "_TIindex", "_visionModePrev", "_TIindexPrev", "_vehicle", "_turret"];
         private _installedBatteries = _vehicle getVariable [QGVAR(installedBatteries), 0];
         private _batteryLevel = _vehicle getVariable [QGVAR(batteryLevel), 0];
@@ -191,24 +210,65 @@ player addEventHandler ["GetInMan", {
         };
     }];
 
-    if !(isNull objectParent player) then {
+    if !(isNull objectParent _unit) then {
         [GVAR(handleEngine), 0.1, []] call CBA_fnc_addPerFrameHandler;
         call FUNC(vehicleStats);
     };
-}];
 
-player addEventHandler ["GetOutMan", {
-    params ["_unit", "_role", "_vehicle"];
-
-    if (isNull objectParent player) then {
-        [GVAR(engineHandle)] call CBA_fnc_removePerFrameHandler;
-        removeUserActionEventHandler ["headlights", "Activate", GVAR(handleLights)];
-
-        if (!isNil QGVAR(handleOptics)) then {
-            _unit removeEventHandler ["OpticsSwitch", GVAR(handleOptics)];
+    GVAR(trackPlayerSeats) = _unit addEventHandler ["SeatSwitchedMan", {
+        params ["_unit1", "_unit2", "_vehicle"];
+        if (_unit1 isEqualTo player || _unit2 isEqualTo player) then {
+            if (player isEqualTo (currentPilot _vehicle)) then {
+                player setVariable [QGVAR(isPilot), true];
+            } else {
+                player setVariable [QGVAR(isPilot), false];
+            };
         };
-        if (!isNil QGVAR(handleTurret)) then {
-            _vehicle removeEventHandler ["SeatSwitched", GVAR(handleTurret)];
+    }];
+
+    _vehicle addEventHandler ["GetOut", {
+	params ["_vehicle", "_role", "_unit", "_turret", "_isEject"];
+
+        if (_unit getVariable [QGVAR(isPilot), false] && {isLightOn _vehicle}) then {
+            [{
+                params ["_vehicle", "_unit"];
+
+                _unit action ["LightOff", _vehicle];
+            }, [_vehicle, _unit], 0.02] call CBA_fnc_waitAndExecute;
         };
-    };
+
+        _unit setVariable [QGVAR(isPilot), nil];
+
+        if (isNull objectParent _unit) then {
+            [GVAR(engineHandle)] call CBA_fnc_removePerFrameHandler;
+            removeUserActionEventHandler ["headlights", "Activate", GVAR(handleLights)];
+
+            if (!isNil QGVAR(handleOptics)) then {
+                _unit removeEventHandler ["OpticsSwitch", GVAR(handleOptics)];
+            };
+            if (!isNil QGVAR(trackPlayerSeats)) then {
+                _unit removeEventHandler ["SeatSwitchedMan", GVAR(trackPlayerSeats)];
+            };
+            if (!isNil QGVAR(handleTurret)) then {
+                _vehicle removeEventHandler ["SeatSwitched", GVAR(handleTurret)];
+            };
+            if (!isNil QGVAR(handleVehicleVision)) then {
+                _vehicle removeEventHandler ["VisionModeChanged", GVAR(handleVehicleVision)];
+            };
+            if (!isNil QGVAR(handleVehicleEngine)) then {
+                _vehicle removeEventHandler ["Engine", GVAR(handleVehicleEngine)];
+            };
+        };
+
+        // Sync vehicle vars to network to avoid network saturation
+        private _batteryLevel = _vehicle getVariable [QGVAR(batteryLevel), 0];
+        private _currentOilLevel = _vehicle getVariable [QGVAR(oilLevel), 0];
+        private _currentCoolantLevel = _vehicle getVariable [QGVAR(coolantLevel), 0];
+
+        _vehicle setVariable [QGVAR(batteryLevel), _batteryLevel, true];
+        _vehicle setVariable [QGVAR(oilLevel), _currentOilLevel, true];
+        _vehicle setVariable [QGVAR(coolantLevel), _currentCoolantLevel, true];
+
+        _vehicle removeEventHandler [_thisEvent, _thisEventHandler];
+    }];
 }];

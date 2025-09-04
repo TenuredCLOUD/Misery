@@ -23,13 +23,20 @@ showHUD [true, false, true, true, true, true, true, true, true, true, true];
 
     private _vehicle = vehicle player;
 
-    [_vehicle] call EFUNC(common,getObjectData) params ["_displayName", "_picture"];
+    [_vehicle] call EFUNC(common,getObjectData) params ["_displayName"];
 
     // Make sure driver or pilot / co-pilot get display only
     if (currentPilot _vehicle isEqualTo player) then {
         QGVAR(display) cutRsc [QUOTE(CLASS(vehicleStats_ui)), "PLAIN", 1, false];
     } else {
         QGVAR(display) cutText ["", "PLAIN"];
+        if (isLightOn _vehicle) then {
+            [{
+                params ["_vehicle"];
+
+                player action ["LightOff", _vehicle];
+            }, [_vehicle], 0.02] call CBA_fnc_waitAndExecute;
+        };
     };
 
     if (!alive player || isNull objectParent player) exitWith {
