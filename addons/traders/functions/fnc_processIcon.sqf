@@ -32,10 +32,10 @@
     if ([_selectedItem, "CfgVehicles"] call EFUNC(common,configCheck)) then {
         [_selectedItem] call EFUNC(common,getObjectData) params ["_objectDisplayName", "_objectPicture"];
         _iconCtrl ctrlSetText _objectPicture;
-        _iconTxt ctrlSetStructuredText parseText _objectDisplayName;
+        _iconTxt ctrlSetText _objectDisplayName;
     } else {
-        [_selectedItem] call EFUNC(common,getItemData) params ["", "_itemPicture", "_itemDescription"];
+        [_selectedItem] call EFUNC(common,getItemData) params ["_itemsDisplayName", "_itemPicture", "_itemDescription"];
         _iconCtrl ctrlSetText _itemPicture;
-        _iconTxt ctrlSetStructuredText parseText _itemDescription;
+        _iconTxt ctrlSetStructuredText composeText [_itemsDisplayName, lineBreak, _itemDescription];
     };
 }, []] call CBA_fnc_waitUntilAndExecute;

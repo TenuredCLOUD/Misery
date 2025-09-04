@@ -17,21 +17,10 @@ class CLASS(generator_ui)
         class CLASS(generator_prompt): RscText
         {
             idc = 1000;
-            text = "Power Generator"; //--- ToDo: Localize;
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
             y = 4.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 20.5 * GUI_GRID_W;
             h = 2 * GUI_GRID_H;
-            font = UI_MACRO_FONT;
-            sizeEx = UI_MACRO_TEXTSIZE;
-        };
-        class CLASS(generator_name): RscText
-        {
-            idc = 1002;
-            x = 27.5 * GUI_GRID_W + GUI_GRID_X;
-            y = 5 * GUI_GRID_H + GUI_GRID_Y;
-            w = 11 * GUI_GRID_W;
-            h = 2.5 * GUI_GRID_H;
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };

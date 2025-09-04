@@ -18,35 +18,31 @@
 [{!isNull findDisplay 982386},
 {
 
-    private ["_list","_PurchaseB","_Vehiclename","_repairPrice","_Found","_index"];
+    private _list = findDisplay 982386 displayCtrl 1500;
+    private _purchaseButton = findDisplay 982386 displayCtrl 1600;
 
-    _list = findDisplay 982386 displayCtrl 1500;
-    _PurchaseB = findDisplay 982386 displayCtrl 1600;
+    [player] call EFUNC(common,nearVehicle) params ["", "_nearestVehicle"];
 
-    if (EGVAR(common,targetVehicleType) isEqualTo "") exitWith {
-        _PurchaseB ctrlShow false;
+    if (_nearestVehicle isEqualTo []) exitWith {
+        _purchaseButton ctrlShow false;
     };
-
-    _Vehiclename = getText (configFile >> "CfgVehicles" >> EGVAR(common,targetVehicleType) >> "displayName");
 
     lbClear _list;
 
-    if (isNil "_Vehiclename") exitWith {};
-
-    _repairPrice = 0;
-    _Found = false;
+    private _repairPrice = 0;
+    private _found = false;
 
     {
-        if ((_x select 0) isEqualTo EGVAR(common,targetVehicleType)) then {
-            _Array = _x;
-            _Found = true;
+        if ((_x select 0) isEqualTo _nearestVehicle) then {
+            private _array = _x;
+            _found = true;
             _repairPrice = _x select 3;
         };
     } forEach EGVAR(common,vehicleData);
 
-    if !(_Found) exitWith {};
+    if !(_found) exitWith {};
 
-    _index = _list lbAdd format ["Repair (%1)", _repairPrice];
+    private _index = _list lbAdd format ["Repair (%1)", _repairPrice];
 
 }, []] call CBA_fnc_waitUntilAndExecute;
 

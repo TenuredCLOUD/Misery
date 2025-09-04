@@ -20,14 +20,18 @@ private _playerCash = player getVariable [QEGVAR(currency,funds), MACRO_PLAYER_D
 private _dialog = findDisplay 982384;
 private _purchaseButton = _dialog displayCtrl 1600;
 private _exitButton = _dialog displayCtrl 1601;
-private _vehicleName = getText (configFile >> "CfgVehicles" >> EGVAR(common,targetVehicleType) >> "displayName");
-private _target = EGVAR(common,targetVehicle);
 private _fuelCost = 0;
 private _totalLiters = 0;
 private _found = false;
 
+[player] call EFUNC(common,nearVehicle) params ["", "_nearestVehicle"];
+
+if (_nearestVehicle isEqualTo []) exitWith {};
+
+[_nearestVehicle] call EFUNC(common,getObjectData) params ["_displayName"];
+
 {
-    if ((_x select 0) isEqualTo EGVAR(common,targetVehicleType)) then {
+    if ((_x select 0) isEqualTo _nearestVehicle) then {
         _found = true;
         private _fuelTypeIndex = _x select 1;
         _fuelCost = GVAR(fuelCosts) select _fuelTypeIndex;
@@ -55,8 +59,8 @@ if (_playerCash < _fuelCost) exitWith {
     _dialog displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
 };
 
-if (fuel _target >= 1) exitWith {
-    private _displayFull = format ["%1 fuel tank is full...", _vehicleName];
+if (fuel _nearestVehicle >= 1) exitWith {
+    private _displayFull = format ["%1 fuel tank is full...", _displayName];
     ctrlSetText [1001, _displayFull];
     _purchaseButton ctrlShow true;
     _exitButton ctrlShow true;
@@ -70,11 +74,11 @@ private _fundsToDeduct = _fuelCost;
 
 [{
     params ["_args", "_handle"];
-    _args params ["_target", "_dialog", "_purchaseButton", "_exitButton", "_vehicleName", "_refuelInterrupt", "_playerCash", "_totalLiters", "_fundsToDeduct", "_fuelStep"];
+    _args params ["_nearestVehicle", "_dialog", "_purchaseButton", "_exitButton", "_displayName", "_refuelInterrupt", "_playerCash", "_totalLiters", "_fundsToDeduct", "_fuelStep"];
 
     private _currentFunds = player getVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
 
-    if (!alive _target || !(player getVariable [QCLASS(processRefuel), false])) exitWith {
+    if (!alive _nearestVehicle || !(player getVariable [QCLASS(processRefuel), false])) exitWith {
         player setVariable [QCLASS(processRefuel), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
         _handle call CBA_fnc_removePerFrameHandler;
@@ -89,15 +93,15 @@ private _fundsToDeduct = _fuelCost;
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
-    private _currentFuel = fuel _target;
+    private _currentFuel = fuel _nearestVehicle;
     private _fuelToAdd = _fuelStep min (1 - _currentFuel);
 
-    _target setFuel (_currentFuel + _fuelToAdd);
+    _nearestVehicle setFuel (_currentFuel + _fuelToAdd);
 
     private _displayedText = format [
         "Refueling...%1%2%1Tank level: %3%4%1 Funds:%1%5%1%6",
         endl,
-        _vehicleName,
+        _displayName,
         (_currentFuel + _fuelToAdd) * 100 toFixed 2,
         "%",
         EGVAR(currency,symbol),
@@ -110,12 +114,12 @@ private _fundsToDeduct = _fuelCost;
     if (_currentFuel + _fuelToAdd >= 1) exitWith {
         player setVariable [QCLASS(processRefuel), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
-        private _displayFull = format ["%1 fuel tank is full...", _vehicleName];
+        private _displayFull = format ["%1 fuel tank is full...", _displayName];
         ctrlSetText [1001, _displayFull];
         _purchaseButton ctrlShow true;
         _exitButton ctrlShow true;
         _handle call CBA_fnc_removePerFrameHandler;
     };
 }, 0.5, [
-_target, _dialog, _purchaseButton, _exitButton, _vehicleName, _refuelInterrupt, _playerCash, _totalLiters, _fundsToDeduct, _fuelStep
+_nearestVehicle, _dialog, _purchaseButton, _exitButton, _displayName, _refuelInterrupt, _playerCash, _totalLiters, _fundsToDeduct, _fuelStep
 ]] call CBA_fnc_addPerFrameHandler;

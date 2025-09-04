@@ -30,13 +30,7 @@ private _toBeReplaced = _recipe select 4;
 private _audio = _recipe select 5;
 private _outputXP = _recipe select 6;
 
-private _outputDisplayName = getText (configFile >> "CfgWeapons" >> _outputItem >> "displayName");
-if (_outputDisplayName isEqualTo "") then {
-    _outputDisplayName = getText (configFile >> "CfgMagazines" >> _outputItem >> "displayName");
-};
-if (_outputDisplayName isEqualTo "") then {
-    _outputDisplayName = _outputItem; // Fallback to classname
-};
+[_outputItem] call EFUNC(common,getItemData) params ["_displayName"];
 
 if (!([_requiredItems] call FUNC(canCraftCheck))) exitWith {
     ctrlSetText [1001, "You don’t have the required items..."];
@@ -81,7 +75,7 @@ private _currentStep = 0;
 
 [{
     params ["_args", "_handle"];
-    _args params ["_requiredItems", "_outputItem", "_outputCount", "_toBeReplaced", "_outputXP", "_dialog", "_craftButton", "_recipeButton", "_exitButton", "_craftInterrupt", "_totalSteps", "_currentStep", "_outputDisplayName", "_progressBar", "_soundSource"];
+    _args params ["_requiredItems", "_outputItem", "_outputCount", "_toBeReplaced", "_outputXP", "_dialog", "_craftButton", "_recipeButton", "_exitButton", "_craftInterrupt", "_totalSteps", "_currentStep", "_displayName", "_progressBar", "_soundSource"];
 
     if (!(player getVariable [QGVAR(isCrafting), false]) || !alive player) exitWith {
         player setVariable [QGVAR(isCrafting), nil];
@@ -101,7 +95,7 @@ private _currentStep = 0;
 
     private _progress = (_currentStep / _totalSteps);
     _progressBar progressSetPosition _progress;
-    ctrlSetText [1001, format ["Crafting %1... %2%3 complete", _outputDisplayName, (_progress * 100) toFixed 0, "%"]];
+    ctrlSetText [1001, format ["Crafting %1... %2%3 complete", _displayName, (_progress * 100) toFixed 0, "%"]];
 
     if (_currentStep >= _totalSteps) exitWith {
         {
@@ -131,9 +125,9 @@ private _currentStep = 0;
 
         private _currentXP = player getVariable [QGVAR(xp), MACRO_PLAYER_DEFAULTS_LOW];
         player setVariable [QGVAR(xp), _currentXP + _outputXP, true];
-        [parseText format ["<t font='PuristaMedium' size='1'>You gained %1 XP from crafting %2.</t>", _outputXP, _outputDisplayName], true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+        [parseText format ["<t font='PuristaMedium' size='1'>You gained %1 XP from crafting %2.</t>", _outputXP, _displayName], true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 
-        ctrlSetText [1001, format ["You crafted %1 %2!", _outputCount, _outputDisplayName]];
+        ctrlSetText [1001, format ["You crafted %1 %2!", _outputCount, _displayName]];
         _progressBar progressSetPosition 1;
         player setVariable [QGVAR(isCrafting), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _craftInterrupt];
@@ -153,5 +147,5 @@ private _currentStep = 0;
 }, 0.5, [
     _requiredItems, _outputItem, _outputCount, _toBeReplaced, _outputXP,
     _dialog, _craftButton, _recipeButton, _exitButton, _craftInterrupt,
-    _totalSteps, _currentStep, _outputDisplayName, _progressBar, _soundSource
+    _totalSteps, _currentStep, _displayName, _progressBar, _soundSource
 ]] call CBA_fnc_addPerFrameHandler;
