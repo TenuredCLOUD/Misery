@@ -49,6 +49,8 @@ _toolUsed select 3,
         deleteVehicle _soundDummy;
     };
 
+    [player, QCLASS(woodenlog)] call CBA_fnc_removeItem;
+
     [position player, [[QCLASS(firewood), selectRandom [1, 2]]]] call EFUNC(common,spawnLoot);
 
     if (_toolUsed select 1 isEqualTo 1) then {
