@@ -22,8 +22,7 @@
     private _fuelLevel = _generator getVariable [QGVAR(fuelLevel), 1];
 
     if (_fuelLevel >= 1) exitWith {
-        private _fuelFull = format ["<t font='PuristaMedium' size='0.7'>This generator has a full tank...</t>"];
-        [QEGVAR(common,tileText), _fuelFull] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), "This generator has a full tank..."] call CBA_fnc_localEvent;
     };
 
     private _fuelCan = "";
@@ -41,8 +40,7 @@
     };
 
     if !([[_fuelCan]] call EFUNC(common,hasItem)) exitWith {
-        private _needFuel = format ["<t font='PuristaMedium' size='0.7'>You need a %1 jerrycan to refuel this generator...</t>", _requiredFuelType];
-        [QEGVAR(common,tileText), _needFuel] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), format ["You need a %1 jerrycan to refuel this generator...", _requiredFuelType]] call CBA_fnc_localEvent;
     };
 
     [{
@@ -56,14 +54,12 @@
         };
 
         if !([[_fuelCan]] call EFUNC(common,hasItem)) exitWith {
-            private _needFuel = format ["<t font='PuristaMedium' size='0.7'>You need a %1 jerrycan to refuel this generator...</t>", _requiredFuelType];
-            [QEGVAR(common,tileText), _needFuel] call CBA_fnc_localEvent;
+            [QEGVAR(common,tileText), format ["You need a %1 jerrycan to refuel this generator...", _requiredFuelType]] call CBA_fnc_localEvent;
             _handle call CBA_fnc_removePerFrameHandler;
         };
 
         if (_fuelLevel >= 1) exitWith {
-            private _fuelFull = format ["<t font='PuristaMedium' size='0.7'>This generator has a full tank...</t>"];
-            [QEGVAR(common,tileText), _fuelFull] call CBA_fnc_localEvent;
+            [QEGVAR(common,tileText), "This generator has a full tank..."] call CBA_fnc_localEvent;
             _handle call CBA_fnc_removePerFrameHandler;
         };
 

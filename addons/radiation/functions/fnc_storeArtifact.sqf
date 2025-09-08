@@ -25,6 +25,5 @@ if ([_artifacts] call EFUNC(common,hasItem)) then {
     player removeItem _artifact;
     player removeItem QCLASS(leadContainer_Open);
     player addItem QCLASS(leadContainer_Closed);
-    private _artifactStoredStr = format ["<t font='PuristaMedium' size='0.7'>%1</t>", "You put the artifact in your lead lined container"];
-    [QEGVAR(common,tileText), _artifactStoredStr] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), "You put the artifact in your lead lined container"] call CBA_fnc_localEvent;
 };
