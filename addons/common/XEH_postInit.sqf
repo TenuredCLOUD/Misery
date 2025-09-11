@@ -55,7 +55,8 @@ GVAR(defaultLoadout) = [[[],[],[],[],[],[],"","",[],["ItemMap","","","ItemCompas
 
 [QGVAR(tileText), {
     params ["_text"];
-    [parseText _text, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+    private _formattedText = parseText format ["<t font='PuristaMedium' size='0.7'>%1</t>", _text];
+    [_formattedText, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(inventoryTile), {

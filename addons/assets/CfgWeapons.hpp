@@ -1217,6 +1217,58 @@ class CfgWeapons {
         };
     };
 
+    class CLASS(oilEmpty): CLASS(ItemCore) {
+        displayName = "Engine oil";
+        descriptionShort = "empty engine oil container";
+        picture = QPATHTOF(data\icons\CanisterDiesel.paa);
+        model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 50;
+        };
+    };
+
+    class CLASS(coolantEmpty): CLASS(ItemCore) {
+        displayName = "Engine coolant";
+        descriptionShort = "empty engine coolant container";
+        picture = QPATHTOF(data\icons\CanisterWater.paa);
+        model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 50;
+        };
+    };
+
+    class CLASS(spareTire): CLASS(ItemCore) {
+        displayName = "Spare tire";
+        descriptionShort = "used for vehicle repairs";
+        picture = QPATHTOF(data\icons\tire.paa);
+        model = "a3\structures_f\civ\garbage\tyre_f.p3d";
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 150;
+        };
+    };
+
+    class CLASS(emptyToolKit): CLASS(ItemCore) {
+        displayName = "Empty Tool kit";
+        descriptionShort = "needs parts to be of use...";
+        model = "a3\weapons_f\items\toolkit.p3d";
+        picture = QPATHTOF(data\icons\toolkit.paa);
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 25;
+        };
+    };
+
     class CLASS(stoneChunk): CLASS(ItemCore) {
         displayName = "$STR_MISERY_STONECHUNK_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_STONECHUNK_DESCRIPTION";
