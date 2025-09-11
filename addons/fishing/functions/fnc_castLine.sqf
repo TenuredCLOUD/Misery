@@ -57,15 +57,13 @@ ctrlSetText [1001, "Line cast!"];
     };
 
     if !([] call FUNC(hasGear)) exitWith {
-        private _lostFishingGearStr = format ["<t font='PuristaMedium' size='0.7'>You lost some gear! Fishing stopped...</t>"];
-        [QEGVAR(common,tileText), _lostFishingGearStr] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), "You lost some gear! Fishing stopped..."] call CBA_fnc_localEvent;
         [] call FUNC(exit);
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
     if !([] call FUNC(canFish)) exitWith {
-        private _noWaterStr = format ["<t font='PuristaMedium' size='0.7'>You moved away from the water! Fishing stopped...</t>"];
-        [QEGVAR(common,tileText), _noWaterStr] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), "You moved away from the water! Fishing stopped..."] call CBA_fnc_localEvent;
         [] call FUNC(exit);
         _handle call CBA_fnc_removePerFrameHandler;
     };
@@ -87,8 +85,7 @@ ctrlSetText [1001, "Line cast!"];
     GVAR(lineTension) = (GVAR(lineTension) + _tensionChange) max 0 min 1;
 
     if (GVAR(lineTension) > 0.95) then {
-        private _lineSnappedStr = format ["<t font='PuristaMedium' size='0.7'>Something broke or flew off the line!</t>"];
-        [QEGVAR(common,tileText), _lineSnappedStr] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), "Something broke or flew off the line!"] call CBA_fnc_localEvent;
         private _randomGearLoss = round selectRandom [1, 2, 3];
         switch (true) do {
             case (_randomGearLoss isEqualTo 1): {

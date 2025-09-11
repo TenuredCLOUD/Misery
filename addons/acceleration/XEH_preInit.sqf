@@ -2,12 +2,6 @@
 
 ADDON = false;
 
-#include "XEH_PREP.hpp"
-
 #include "initSettings.inc.sqf"
-
-GVAR(modLoadedCache) = createHashMap;
-
-call FUNC(modLoadedPrep);
 
 ADDON = true;

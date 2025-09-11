@@ -1,6 +1,7 @@
 class CfgVehicles {
     class Item_Base_F;
     class House_F;
+    class Thing;
 
     class CLASS(object_Firewood): Item_Base_F {
         displayName = "Firewood";
@@ -39,7 +40,7 @@ class CfgVehicles {
         MACRO_ADDITEM(CLASS(Object_Woodpanel),1);
     };
 
-    class CLASS(forge): House_F {
+    class CLASS(forge): Thing {
         armor = 2000;
         author = "Model credits: RBG_illustrations - Reworked by TenuredCLOUD";
         displayName = "$STR_MISERY_FORGE_DISPLAYNAME";

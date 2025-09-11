@@ -30,8 +30,7 @@ private _backpacks = _objectData select 8;
 
 private _pos = getPosATL _object;
 if (GVAR(searchedPositions) findIf {_x distance _pos < 0.5} isNotEqualTo -1) exitWith {
-    private _alreadySearchedStr = format ["<t font='PuristaMedium' size='0.7'>This has already been searched...</t>"];
-    [QEGVAR(common,tileText), _alreadySearchedStr] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), "This has already been searched..."] call CBA_fnc_localEvent;
 };
 
 private _canSearch = true;
@@ -42,8 +41,7 @@ if (_requiredTools isNotEqualTo []) then {
 };
 
 if (!_canSearch) exitWith {
-    private _noToolsStr = format ["<t font='PuristaMedium' size='0.7'>You need tools to search this...</t>"];
-    [QEGVAR(common,tileText), _noToolsStr] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), "You need tools to search this..."] call CBA_fnc_localEvent;
 };
 
 private _soundDummy = objNull;
@@ -73,8 +71,7 @@ if (_audio isNotEqualTo "") then {
         [_object] call FUNC(cacheSearched);
 
         if (random 100 > _searchChance) exitWith {
-            private _nothingFoundStr = format ["<t font='PuristaMedium' size='0.7'>Nothing found...</t>"];
-            [QEGVAR(common,tileText), _nothingFoundStr] call CBA_fnc_localEvent;
+            [QEGVAR(common,tileText), "Nothing found..."] call CBA_fnc_localEvent;
         };
 
         private _weaponCargo = [];
@@ -112,16 +109,13 @@ if (_audio isNotEqualTo "") then {
 
         if (_weaponCargo isNotEqualTo [] || _magazineCargo isNotEqualTo [] || _itemCargo isNotEqualTo [] || _backpackCargo isNotEqualTo []) then {
             private _holder = [getPosATL player, _weaponCargo, _magazineCargo, _itemCargo, _backpackCargo] call EFUNC(common,spawnLoot);
-            private _foundStr = format ["<t font='PuristaMedium' size='0.7'>You found some items...</t>"];
-            [QEGVAR(common,tileText), _foundStr] call CBA_fnc_localEvent;
+            [QEGVAR(common,tileText), "You found some items..."] call CBA_fnc_localEvent;
         } else {
-            private _nothingFoundStr = format ["<t font='PuristaMedium' size='0.7'>Nothing found...</t>"];
-            [QEGVAR(common,tileText), _nothingFoundStr] call CBA_fnc_localEvent;
+            [QEGVAR(common,tileText), "Nothing found..."] call CBA_fnc_localEvent;
         };
     },
     {
-        private _cancelledStr = format ["<t font='PuristaMedium' size='0.7'>Search cancelled...</t>"];
-        [QEGVAR(common,tileText), _cancelledStr] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), "Search cancelled..."] call CBA_fnc_localEvent;
 
         if (_soundDummy isNotEqualTo objNull) then {
             deleteVehicle _soundDummy;

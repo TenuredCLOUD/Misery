@@ -66,12 +66,7 @@ if (_animation isNotEqualTo "") then {
 [_dialog, lbCurSel (_dialog displayCtrl 2100)] call FUNC(populateItemsList);
 
 [{
-    params ["_args"];
-    _args params [
-        "_itemName", "_hungerValue", "_thirstValue", "_energyDeficitValue", "_exposureValue", "_radiationValue",
-        "_infectionValue", "_parasitesValue", "_toxicityValue", "_psychosisValue", "_addStatus", "_removeStatus",
-        "_removeOnUse", "_code", "_dialog"
-    ];
+    params ["_itemName", "_hungerValue", "_thirstValue", "_energyDeficitValue", "_exposureValue", "_radiationValue", "_infectionValue", "_parasitesValue", "_toxicityValue", "_psychosisValue", "_addStatus", "_removeStatus", "_removeOnUse", "_code", "_dialog"];
 
     call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "", "_exposure", "", "_radiation", "_infection", "_parasites", "_toxicity", "_psychosis", "_buffs", "_ailments"];
 

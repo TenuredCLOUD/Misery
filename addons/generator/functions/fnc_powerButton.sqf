@@ -23,8 +23,7 @@
 
     if ((ctrlText 1600) isEqualTo "Start") exitWith {
         if (insideBuilding player isEqualTo 1) exitWith {
-            private _noStartInside = format ["<t font='PuristaMedium' size='0.7'>You cannot start a generator while inside...</t>"];
-            [QEGVAR(common,tileText), _noStartInside] call CBA_fnc_localEvent;
+            [QEGVAR(common,tileText), "You cannot start a generator while inside..."] call CBA_fnc_localEvent;
         };
 
         [_generator, _generatorType] call FUNC(processAction);

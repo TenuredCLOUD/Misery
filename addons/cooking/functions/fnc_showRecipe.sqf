@@ -31,15 +31,9 @@ private _text = format ["Required Items for %1ing:", _cookingMethod];
     private _item = _x select 0;
     private _count = _x select 1;
 
-    private _itemDisplayName = getText (configFile >> "CfgWeapons" >> _item >> "displayName");
-    if (_itemDisplayName isEqualTo "") then {
-        _itemDisplayName = getText (configFile >> "CfgMagazines" >> _item >> "displayName");
-    };
-    if (_itemDisplayName isEqualTo "") then {
-        _itemDisplayName = _item;
-    };
+    [_item] call EFUNC(common,getItemData) params ["_displayName"];
 
-    _text = _text + format ["%3%1 x%2%3", _itemDisplayName, _count, endl];
+    _text = _text + format ["%3%1 x%2%3", _displayName, _count, endl];
 } forEach _requiredItems;
 
 ctrlSetText [1001, _text];

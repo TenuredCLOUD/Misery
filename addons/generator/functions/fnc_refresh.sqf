@@ -39,15 +39,17 @@
             _handle call CBA_fnc_removePerFrameHandler;
         };
 
+        private _iconName = _dialog displayCtrl 1000;
+
         private _fuelProgressBar = findDisplay 573849 displayCtrl 1004;
 
         private _powerButton = findDisplay 573849 displayCtrl 1600;
 
         private _refuelButton = findDisplay 573849 displayCtrl 1601;
 
-        private _generatorName = getText (configFile >> "CfgVehicles" >> _generatorType >> "displayName");
+        [_generatorType] call EFUNC(common,getObjectData) params ["_objectDisplayName"];
 
-        if (_generatorName isEqualTo "") exitWith {};
+        if (_objectDisplayName isEqualTo "") exitWith {};
 
         private _fuelLevel = _generator getVariable [QGVAR(fuelLevel), 1];
 
