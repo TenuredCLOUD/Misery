@@ -24,8 +24,7 @@ if (GVAR(woodCollection)) then {
         {
             [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
             if !([[QCLASS(woodenlog)]] call EFUNC(common,hasItem)) exitWith {
-                private _noWoodLogForSplitStr = format ["<t font='PuristaMedium' size='0.7'>%1</t>", localize "STR_MISERY_NOWOODENLOGSFORSPLITTING"];
-                [QEGVAR(common,tileText), _noWoodLogForSplitStr] call CBA_fnc_localEvent;
+                [QEGVAR(common,tileText), localize "STR_MISERY_NOWOODENLOGSFORSPLITTING"] call CBA_fnc_localEvent;
             };
 
             private _hasAxe = [[QCLASS(woodaxe), MACRO_AXES]] call EFUNC(common,hasItem);
@@ -34,8 +33,7 @@ if (GVAR(woodCollection)) then {
             if (_hasAxe || _hasSaw) then {
                 [_hasAxe, _hasSaw] call FUNC(splitWoodAction);
             } else {
-                private _noAxeOrSawForLogStr = format ["<t font='PuristaMedium' size='0.7'>%1</t>", localize "STR_MISERY_NOWOODAXEORCHAINSAWNOTI"];
-                [QEGVAR(common,tileText), _noAxeOrSawForLogStr] call CBA_fnc_localEvent;
+                [QEGVAR(common,tileText), localize "STR_MISERY_NOWOODAXEORCHAINSAWNOTI"] call CBA_fnc_localEvent;
             };
         },
         "",

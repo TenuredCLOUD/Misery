@@ -13,26 +13,39 @@
  *
 */
 
-// if (!hasInterface) exitWith {};
+if !([[QCLASS(chainsaw_Empty), QCLASS(chainsaw)]] call EFUNC(common,hasItem)) exitWith {[QEGVAR(common,tileText), format ["You don't have a chainsaw..."]] call CBA_fnc_localEvent};
 
-// if !([[QCLASS(chainsaw_Empty)]] call EFUNC(common,hasItem)) exitWith {titleText ["You have no chainsaw that needs fuel...", "PLAIN DOWN"];};
+[QCLASS(chainsaw)] call EFUNC(common,countMagazinesAmmo) params ["_currentFuel", "_maxFuel"];
 
-//   titleText ["You start to refuel your chainsaw...", "PLAIN DOWN"];
+if (_currentFuel isEqualTo _maxFuel) exitWith {
+    [QEGVAR(common,tileText), format ["Your chainsaw is already full of fuel..."]] call CBA_fnc_localEvent;
+};
 
-//   player removeItem QCLASS(sawFuel);
-//   player removeItem QCLASS(chainsaw_Empty);
+[{
+    params ["_args", "_handle"];
 
-//   private _random = [1, 10] call BIS_fnc_randomInt;
+    private _hasEmptySaw = [[QCLASS(chainsaw_Empty)]] call EFUNC(common,hasItem);
+    private _hasSaw = [[QCLASS(chainsaw)]] call EFUNC(common,hasItem);
 
-//   if (_random < 5) then {
-//       titleText ["You refueled your chainsaw, and have fuel to spare", "PLAIN DOWN"];
-//       player addItem QCLASS(sawFuel);
-//       player addItem QCLASS(chainsaw);
-//   };
+    if (_hasEmptySaw && !_hasSaw) then {
+        [player, QCLASS(chainsaw_Empty)] call CBA_fnc_removeItem;
+        [QCLASS(sawFuel)] call EFUNC(common,itemDecrement);
+        [player, QCLASS(chainsaw), 1] call CBA_fnc_addMagazine;
+    };
 
-//   if (_random > 5) then {
-//       titleText ["You refueled your chainsaw, but used the last of your fuel can...", "PLAIN DOWN"];
-//       player addItem QCLASS(chainsaw); // <<-- Add Refueled saw, no removal of Fuel can since it's already done
-//   };
+    if !([[QCLASS(sawFuel)]] call EFUNC(common,hasItem)) exitWith {
+        [QEGVAR(common,tileText), format ["You have no more fuel..."]] call CBA_fnc_localEvent;
+        _handle call CBA_fnc_removePerFrameHandler;
+    };
+
+    [QCLASS(sawFuel)] call EFUNC(common,itemDecrement);
+
+    [QCLASS(chainsaw)] call EFUNC(common,itemIncrement) params ["_incremented"];
+
+    if !(_incremented) exitWith {
+        [QEGVAR(common,tileText), format ["Chainsaw is full of fuel..."]] call CBA_fnc_localEvent;
+        _handle call CBA_fnc_removePerFrameHandler;
+    };
+}, 0, []] call CBA_fnc_addPerFrameHandler;
 
 
