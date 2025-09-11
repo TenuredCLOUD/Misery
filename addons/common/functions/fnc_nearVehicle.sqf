@@ -9,6 +9,7 @@
  * Return Value:
  * 0: Near Vehicle <BOOL>
  * 1: Nearest Vehicle <OBJECT>
+ * 2: Nearest Vehicle has crew <BOOL>
  *
  * Example:
  * [] call misery_common_fnc_nearVehicle
@@ -21,5 +22,7 @@ private _nearestObjects = nearestObjects [_object, [MACRO_VEHICLETYPES], 5];
 
 private _isNearVehicle = _nearestObjects isNotEqualTo [];
 
-[_isNearVehicle, _nearestObjects select 0]
+private _hasCrew = if (crew ((_nearestObjects) select 0) isNotEqualTo []) then {true} else {false};
+
+[_isNearVehicle, _nearestObjects select 0, _hasCrew]
 
