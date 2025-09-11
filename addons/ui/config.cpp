@@ -27,7 +27,6 @@ class CfgPatches {
 #include "menus\maintenance.hpp"
 #include "menus\rearmShop.hpp"
 #include "menus\refuelShop.hpp"
-#include "menus\refuelJerryCan.hpp"
 #include "menus\traderShop.hpp"
 #include "menus\moneyTakeMenu.hpp"
 //#include "\ui\menus\moneyGiveMenu.hpp"
