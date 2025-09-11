@@ -13,78 +13,55 @@
  *
 */
 
- [
-    player,
-    "Chop wood",
-    QPATHTOEF(icons,data\firewood_ca.paa),
-    QPATHTOEF(icons,data\firewood_ca.paa),
-    "call Misery_fnc_NearTreeAxe",
-    "call Misery_fnc_NearTreeAxe",
-    {
-    //Force holstering if WBKIMS disabled:
-    if (!MiseryWBKIMS) then {
-    if (currentWeapon player isNotEqualTo "") then {
-    player action["SWITCHWEAPON",player,player,-1];
+[player] call EFUNC(common,nearTree) params ["_found", "_nearestTree", "_damaged", "_hasAxe", "_hasSaw"];
+
+if !(_found) exitWith {
+    [QEGVAR(common,tileText), format ["You need to be near a tree to start chopping wood..."]] call CBA_fnc_localEvent;
+};
+
+if (_damaged) exitWith {
+    [QEGVAR(common,tileText), format ["Tree has fallen, doesn't have anymore wood..."]] call CBA_fnc_localEvent;
+};
+
+if !(_hasAxe) exitWith {
+    [QEGVAR(common,tileText), format ["You need an axe to start chopping wood..."]] call CBA_fnc_localEvent;
+};
+
+if (currentWeapon player isNotEqualTo "") then {
+    player action ["SWITCHWEAPON", player, player, -1];
+};
+
+private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position player);
+_soundDummy attachTo [player, [0, 0, 0], "Pelvis"];
+
+_soundDummy say3D [QCLASS(audio_sound_chopWood), 500];
+
+["Chopping wood...",
+15,
+{[player] call EFUNC(common,nearTree) params ["_found", "", "", "_hasAxe", ""]; _found && _hasAxe},
+{
+    params ["_args"];
+    _args params ["_nearestTree", "_soundDummy"];
+
+    if (_soundDummy isNotEqualTo objNull) then {
+        deleteVehicle _soundDummy;
     };
+
+    [position player, [[QCLASS(firewood), selectRandom [1, 2]]], [[QCLASS(woodenlog), 1]], [[QCLASS(woodensticks), selectRandom [1, 2, 3, 4, 5]]]] call EFUNC(common,spawnLoot);
+
+    {
+        _x setDamage 1;
+    } forEach _nearestTree;
+},
+{
+    params ["_args"];
+    _args params ["_nearestTree", "_soundDummy"];
+
+    if (_soundDummy isNotEqualTo objNull) then {
+        deleteVehicle _soundDummy;
     };
 
-    //soundsource:
-    private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position player);
-    player setVariable ["_TC_sound", true,true];
-    [_soundDummy, ["WoodChop01", 150]] remoteExec ["say3D", 0, _soundDummy];
-    [{
-    !(player getVariable ["_TC_sound", false])
-    },{
-    deleteVehicle _this;
-    }, _soundDummy] call CBA_fnc_waitUntilAndExecute;
-    },
-    {
-    private _prog = (_this select 4);
-    private _progcalc = round (_prog / 24 * 100);
-    titleText [format["Chopping progress... %1%2", _progcalc, "%"], "PLAIN DOWN"];
-    },
-    {
-        private ["_rfirewood","_rstick","_todelete","_woodtoground1","_woodtoground2","_woodtoground3"];
-
-        _rfirewood = [1, 2] call BIS_fnc_randomInt;
-        _rstick = [1, 5] call BIS_fnc_randomInt;
-
-        _todelete = [];
-
-        _woodtoground1 = "GroundWeaponHolder" createVehicle [0,0,0];
-        _woodtoground1 addItemCargoGlobal [QCLASS(firewood), _rfirewood];
-        _woodtoground1 enableCollisionWith player;
-        _woodtoground1 setPos (player modelToWorld [1,-.3,.1]);
-        _todelete append [_woodtoground1];
-
-        _woodtoground2 = "GroundWeaponHolder" createVehicle [0,0,0];
-        _woodtoground2 addItemCargoGlobal [QCLASS(woodenlog), 1];
-        _woodtoground2 enableCollisionWith player;
-        _woodtoground2 setPos (player modelToWorld [2,-.3,.1]);
-        _todelete append [_woodtoground2];
-
-        _woodtoground3 = "GroundWeaponHolder" createVehicle [0,0,0];
-        _woodtoground3 addItemCargoGlobal [QCLASS(woodensticks), _rstick];
-        _woodtoground3 enableCollisionWith player;
-        _woodtoground3 setPos (player modelToWorld [.5,-.3,.1]);
-        _todelete append [_woodtoground3];
-
-    //Simulate tree felling:
-    private _nearTrees = nearestTerrainObjects [player, ["TREE", "SMALL TREE"], 2.5, true, true];
-     {_x setDamage 1} forEach _nearTrees;
-
-    private _actionID = (_this select 2);
-    [player,_actionID] call BIS_fnc_holdActionRemove;
-    player setVariable ["_TC_sound", false,true];
-    },
-    {
-    player setVariable ["_TC_sound", false,true];
-    private _actionID = (_this select 2);
-    [player,_actionID] call BIS_fnc_holdActionRemove;
-    },
-    [],
-    15,
-    nil,
-    true,
-    false
-] call BIS_fnc_holdActionAdd;
+    [QEGVAR(common,tileText), "You stop cutting down the tree..."] call CBA_fnc_localEvent;
+},
+[_nearestTree, _soundDummy]
+] call CBA_fnc_progressBar;

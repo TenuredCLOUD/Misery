@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Digging for worms
+ * Dig for worms action
  *
  * Arguments:
  * None
@@ -10,21 +10,51 @@
  * None
  *
  * Example:
- * [] call misery_forage_fnc_digForWorms
+ * [] call misery_forestry_fnc_digForWorms
  *
 */
 
-if (call FUNC(canForage)) then {
-    player playActionNow "Crouch";
-    sleep 0.5;
-    player playActionNow "Gear"; //Use Gear instead of medical actions - Med actions without rifle can cause frame lag spike
-    sleep 3;
-    private _random = [1, 10] call BIS_fnc_randomInt;
+[player] call EFUNC(common,nearTree) params ["_found", "_nearestTree", "_damaged", "_hasAxe", "_hasSaw"];
 
-    if (_random > 7) then {
-        titleText ["You found some worms...", "PLAIN DOWN"];
-        player addItem QCLASS(worms);
-    } else {
-        titleText ["You didn't find anything...", "PLAIN DOWN"];
-    };
+if !(_found) exitWith {
+    [QEGVAR(common,tileText), format ["You need to be near foliage to search for worms..."]] call CBA_fnc_localEvent;
 };
+
+if (GVAR(digPositions) findIf {_x distance getPosATL player < 2.5} isNotEqualTo -1) exitWith {
+    [QEGVAR(common,tileText), "This area has already been dug up..."] call CBA_fnc_localEvent;
+};
+
+player playActionNow "Crouch";
+
+if (currentWeapon player isNotEqualTo "") then {
+    player action ["SWITCHWEAPON", player, player, -1];
+};
+
+["Digging for worms...",
+15,
+{[player] call EFUNC(common,nearTree) params ["_found", "", "", "", ""]; _found},
+{
+    if (random 1 > 0.7) then {
+        [QEGVAR(common,tileText), "You found some worms..."] call CBA_fnc_localEvent;
+        [player, QCLASS(worms)] call CBA_fnc_addItem;
+    } else {
+        [QEGVAR(common,tileText), "You didn't find anything..."] call CBA_fnc_localEvent;
+    };
+
+    private _position = getPosATL player;
+
+    // Check if position is already cached (within 2.5 meters)
+    if (GVAR(digPositions) findIf {_x distance _position < 2.5} isEqualTo -1) then {
+
+        GVAR(digPositions) pushBack _position;
+
+        publicVariable QGVAR(digPositions);
+
+        [QUOTE(COMPONENT_BEAUTIFIED), format ["Cached position %1 for worms", _position]] call EFUNC(common,debugMessage);
+    };
+},
+{
+    [QEGVAR(common,tileText), "You stop digging for worms..."] call CBA_fnc_localEvent;
+},
+[]
+] call CBA_fnc_progressBar;

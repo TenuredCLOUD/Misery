@@ -32,8 +32,6 @@ PREP(nearEntities);
 PREP(nearFire);
 PREP(nearRockSource);
 PREP(nearTree);
-PREP(nearTreeAxe);
-PREP(nearTreeSaw);
 PREP(nearVehicle);
 PREP(nearWell);
 PREP(parseVehicleData);
