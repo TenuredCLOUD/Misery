@@ -34,7 +34,7 @@ if (currentWeapon player isNotEqualTo "") then {
 15,
 {[player] call EFUNC(common,nearTree) params ["_found", "", "", "", ""]; _found},
 {
-    if (random 1 > 0.7) then {
+    if ([70] call EFUNC(common,rollChance)) then {
         [QEGVAR(common,tileText), "You found some worms..."] call CBA_fnc_localEvent;
         [player, QCLASS(worms)] call CBA_fnc_addItem;
     } else {

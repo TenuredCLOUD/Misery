@@ -44,7 +44,7 @@ _soundDummy say3D [QCLASS(audio_sound_dryGrass), 25];
         deleteVehicle _soundDummy;
     };
 
-    if (random 1 > 0.5) then {
+    if ([50] call EFUNC(common,rollChance)) then {
         [QEGVAR(common,tileText), "You found some tinder..."] call CBA_fnc_localEvent;
         [player, QCLASS(tinder)] call CBA_fnc_addItem;
     } else {
