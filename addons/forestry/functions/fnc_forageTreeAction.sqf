@@ -13,65 +13,63 @@
  *
 */
 
- [
-    player,
-    "Collect wood",
-    QPATHTOEF(icons,data\branch_ca.paa),
-    QPATHTOEF(icons,data\branch_ca.paa),
-    "call Misery_fnc_NearTree",
-    "call Misery_fnc_NearTree",
-    {
-    //Force holstering
-    if (currentWeapon player isNotEqualTo "") then {
-    player action["SWITCHWEAPON",player,player,-1];
+[player] call EFUNC(common,nearTree) params ["_found", "_nearestTree", "_damaged", "_hasAxe", "_hasSaw"];
+
+if !(_found) exitWith {
+    [QEGVAR(common,tileText), format ["You need to be near a tree to gather wood..."]] call CBA_fnc_localEvent;
+};
+
+if (_damaged) exitWith {
+    [QEGVAR(common,tileText), format ["Tree has fallen, doesn't have anymore wood..."]] call CBA_fnc_localEvent;
+};
+
+if (GVAR(gatheredPositions) findIf {_x distance getPosATL player < 2.5} isNotEqualTo -1) exitWith {
+    [QEGVAR(common,tileText), "This tree's dead wood has been gathered. The remaining wood can be gathered by cutting it down..."] call CBA_fnc_localEvent;
+};
+
+if (currentWeapon player isNotEqualTo "") then {
+    player action ["SWITCHWEAPON", player, player, -1];
+};
+
+private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position player);
+_soundDummy attachTo [player, [0, 0, 0], "Pelvis"];
+
+_soundDummy say3D [QCLASS(audio_sound_gatheringFirewood), 25];
+
+["Gathering wood...",
+60,
+{[player] call EFUNC(common,nearTree) params ["_found", "", "", "", ""]; _found},
+{
+    params ["_args"];
+    _args params ["_nearestTree", "_soundDummy"];
+
+    if (_soundDummy isNotEqualTo objNull) then {
+        deleteVehicle _soundDummy;
     };
 
-    //Search pockets, etc...
-    player playAction "Gear";
+    [position player, [[QCLASS(woodensticks), selectRandom [1, 2, 3, 4, 5]]]] call EFUNC(common,spawnLoot);
 
-    //soundsource:
+    private _position = getPosATL player;
 
-    private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position player);
-    _soundDummy attachTo [player, [0, 0, 0], "Pelvis"];
-    player setVariable ["_TC_sound", true,true];
-    [_soundDummy, ["GatheringFirewood", 50]] remoteExec ["say3D", 0, _soundDummy];
-    [{
-    !(player getVariable ["_TC_sound", false])
-    },{
-    deleteVehicle _this;
-    }, _soundDummy] call CBA_fnc_waitUntilAndExecute;
-    },
-    {
-    if (call Misery_fnc_NearTree) then {
-    titleText ["Gathering wood...", "PLAIN DOWN"];
+    // Check if position is already cached (within 2.5 meters)
+    if (GVAR(gatheredPositions) findIf {_x distance _position < 2.5} isEqualTo -1) then {
+
+        GVAR(gatheredPositions) pushBack _position;
+
+        publicVariable QGVAR(gatheredPositions);
+
+        [QUOTE(COMPONENT_BEAUTIFIED), format ["Cached position %1 for gathered wood", _position]] call EFUNC(common,debugMessage);
     };
-    },
-    {
+},
+{
+    params ["_args"];
+    _args params ["_nearestTree", "_soundDummy"];
 
-    private ["_rstick","_todelete","_woodtoground1"];
+    if (_soundDummy isNotEqualTo objNull) then {
+        deleteVehicle _soundDummy;
+    };
 
-        _rstick = [1, 2] call BIS_fnc_randomInt;
-
-        _todelete = [];
-
-        _woodtoground1 = "GroundWeaponHolder" createVehicle [0,0,0];
-        _woodtoground1 addItemCargoGlobal [QCLASS(woodensticks), _rstick];
-        _woodtoground1 enableCollisionWith player;
-        _woodtoground1 setPos (player modelToWorld [1,-.3,.1]);
-        _todelete append [_woodtoground1];
-
-    private _actionID = (_this select 2);
-    [player,_actionID] call BIS_fnc_holdActionRemove;
-    player setVariable ["_TC_sound", false,true];
-    },
-    {
-    player setVariable ["_TC_sound", false,true];
-    private _actionID = (_this select 2);
-    [player,_actionID] call BIS_fnc_holdActionRemove;
-    },
-    [],
-    120,
-    nil,
-    true,
-    false
-] call BIS_fnc_holdActionAdd;
+    [QEGVAR(common,tileText), "You stop gathering wood..."] call CBA_fnc_localEvent;
+},
+[_nearestTree, _soundDummy]
+] call CBA_fnc_progressBar;
