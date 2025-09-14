@@ -27,7 +27,7 @@
         };
 
         private _rainThreshold = [0.3, 0.7, 0.9] select (["small", "big", "barrel"] find _type);
-        private _rainChance = [0.25, 0.15, 0.15] select (["small", "big", "barrel"] find _type);
+        private _rainChance = [25, 15, 15] select (["small", "big", "barrel"] find _type);
 
         switch (true) do {
             case (inflamed _fire && _burnTimeLeft <= 0): {
@@ -36,7 +36,7 @@
                 _newActiveFires pushBack _x; // Keep for reignition
                 [QUOTE(COMPONENT_BEAUTIFIED), format ["%1 fire at %2 extinguished due to no fuel.", _type, getPosATL _fire]] call EFUNC(common,debugMessage);
             };
-            case (rain > _rainThreshold && random 1 < _rainChance && !([_fire] call FUNC(rainSafe))): {
+            case (rain > _rainThreshold && [_rainChance] call EFUNC(common,rollChance) && !([_fire] call FUNC(rainSafe))): {
                 _fire inflame false;
                 _x set [2, 0];
                 _newActiveFires pushBack _x;

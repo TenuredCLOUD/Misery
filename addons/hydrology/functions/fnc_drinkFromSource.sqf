@@ -39,7 +39,7 @@ playSound3D [QPATHTOEF(audio,sounds\items\drink.ogg), player, false, getPosASL p
 [0.015, "radiation"] call EFUNC(common,addStatusModifier);
 
 if (EGVAR(survival,ailments)) then {
-    if ((random 100) <= EGVAR(survival,turbidWaterChance)) then {
+    if ([EGVAR(survival,turbidWaterChance)] call EFUNC(common,rollChance)) then {
         [0.01, "parasites"] call EFUNC(common,addStatusModifier);
     };
 };

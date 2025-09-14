@@ -70,7 +70,7 @@ if (_audio isNotEqualTo "") then {
 
         [_object] call FUNC(cacheSearched);
 
-        if (random 100 > _searchChance) exitWith {
+        if ([_searchChance] call EFUNC(common,rollChance)) exitWith {
             [QEGVAR(common,tileText), "Nothing found..."] call CBA_fnc_localEvent;
         };
 
@@ -81,28 +81,28 @@ if (_audio isNotEqualTo "") then {
 
         {
             _x params ["_classname", "_amount", "_chance"];
-            if (random 100 <= _chance) then {
+            if ([_chance] call EFUNC(common,rollChance)) then {
                 _weaponCargo pushBack [_classname, _amount];
             };
         } forEach _weapons;
 
         {
             _x params ["_classname", "_amount", "_chance"];
-            if (random 100 <= _chance) then {
+            if ([_chance] call EFUNC(common,rollChance)) then {
                 _magazineCargo pushBack [_classname, _amount];
             };
         } forEach _magazines;
 
         {
             _x params ["_classname", "_amount", "_chance"];
-            if (random 100 <= _chance) then {
+            if ([_chance] call EFUNC(common,rollChance)) then {
                 _itemCargo pushBack [_classname, _amount];
             };
         } forEach _items;
 
         {
             _x params ["_classname", "_amount", "_chance"];
-            if (random 100 <= _chance) then {
+            if ([_chance] call EFUNC(common,rollChance)) then {
                 _backpackCargo pushBack [_classname, _amount];
             };
         } forEach _backpacks;
