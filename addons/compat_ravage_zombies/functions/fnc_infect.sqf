@@ -18,7 +18,7 @@ params ["_unit", "_source", "_damage", "_instigator"];
 // Must be a player, on foot being attacked by a zombie.
 if !(isPlayer _unit || isNull objectParent player || _instigator isKindOf "zombie") exitWith {};
 
-if ((random 100) <= GVAR(chance)) exitWith {
+if ([GVAR(chance)] call EFUNC(common,rollChance)) exitWith {
     [0.01, "infection"] call EFUNC(common,addStatusModifier);
 };
 

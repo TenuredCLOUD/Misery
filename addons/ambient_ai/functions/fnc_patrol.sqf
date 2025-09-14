@@ -28,7 +28,7 @@ params ["_group"];
         [_group, _waypoint, 500, 10, "MOVE", "SAFE", "YELLOW", "LIMITED", "STAG COLUMN", "_group call CBA_fnc_searchNearby", [3, 6, 9]] call CBA_fnc_taskPatrol;
 
         private _building = nearestBuilding leader _group;
-        if (_building distance leader _group < 100 && ((round(random 100)) < (round(random 100)))) then {
+        if (_building distance leader _group < 100 && ([50] call EFUNC(common,rollChance))) then {
             [_group] call CBA_fnc_taskDefend;
         };
 

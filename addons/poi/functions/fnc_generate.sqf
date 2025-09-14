@@ -104,7 +104,7 @@ if (count _composition >= 3) then {
         _obj enableDynamicSimulation true;
         _spawnedObjects pushBack _obj;
 
-        if (_class in ["Land_Campfire_F", "Land_FirePlace_F"] && {random 1 > 0.5}) then {
+        if (_class in ["Land_Campfire_F", "Land_FirePlace_F"] && [50] call EFUNC(common,rollChance)) then {
             _obj inflame true;
         };
 
@@ -242,7 +242,7 @@ if (_aiClass isNotEqualTo "") then {
         _unit setSkill ["aimingShake", _aiShake];
         _unit setSkill ["aimingSpeed", _aiSpeed];
 
-        if (random 1 > 0.5) then {_unit action ["sitDown", _unit];};
+        if ([50] call EFUNC(common,rollChance)) then {_unit action ["sitDown", _unit];};
     };
 
     {

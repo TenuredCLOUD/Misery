@@ -55,7 +55,7 @@ private _players = call EFUNC(common,listPlayers);
             // Adjust chance for military buildings
             private _chance = [GVAR(chance), GVAR(chance) * 2.5] select _isMilitary;
 
-            if (_chance < random 100) exitWith {continue};
+            if ([_chance] call EFUNC(common,rollChance)) exitWith {continue};
             [_x, _isMilitary, _isMedical, _isStore, _isGarage] call FUNC(generate);
             GVAR(building_used) pushBack _building;
         } forEach _buildingPositions;

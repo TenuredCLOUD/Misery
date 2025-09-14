@@ -19,8 +19,7 @@ private _display = findDisplay 982387;
 if (isNull _display) exitWith {};
 
 if (GVAR(isSnagged)) then {
-    private _success = random 100 < 30; // 30% chance to unsnag
-    if (_success) then {
+    if ([30] call EFUNC(common,rollChance)) then {
         GVAR(isSnagged) = false;
         ctrlSetText [1001, "Line unsnagged!"];
     } else {

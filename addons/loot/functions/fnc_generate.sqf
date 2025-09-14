@@ -135,7 +135,7 @@ switch (_lootType) do {
         };
         if (_clothingChoice != "") then {
             _itemCargo pushBack [_clothingChoice, 1];
-            if (GVAR(uniformItemChance) > random 100) then {
+            if ([GVAR(uniformItemChance)] call EFUNC(common,rollChance)) then {
                 private _itemAddProbabilityUniform = 0.5;
                 private _uniformItems = [];
                 if (_isMilitary) then {
@@ -169,7 +169,7 @@ switch (_lootType) do {
         };
         if (_vestChoice != "") then {
             _itemCargo pushBack [_vestChoice, 1];
-            if (GVAR(vestsItemChance) > random 100) then {
+            if ([GVAR(vestsItemChance)] call EFUNC(common,rollChance)) then {
                 private _itemAddProbabilityVest = 0.5;
                 private _vestItems = [];
                 if (_isMilitary) then {
@@ -203,7 +203,7 @@ switch (_lootType) do {
         };
         if (_backpackChoice != "") then {
             _backpackCargo pushBack [_backpackChoice, 1];
-            if (GVAR(backpacksItemChance) > random 100) then {
+            if ([GVAR(backpacksItemChance)] call EFUNC(common,rollChance)) then {
                 private _itemAddProbabilityPack = 0.5;
                 private _backpackItems = [];
                 if (_isMilitary) then {
