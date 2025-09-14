@@ -24,7 +24,7 @@ if (isNull _miningObject) exitWith {
 };
 
 private _miningTime = _objectData select 1;
-private _audio = _objectData select 3;
+private _audio = _objectData select 2;
 
 if !([[QCLASS(pickaxe)]] call EFUNC(common,hasItem)) exitWith {
     [QEGVAR(common,tileText), format ["You need a pickaxe to mine ore..."]] call CBA_fnc_localEvent;
@@ -53,9 +53,8 @@ _miningTime,
 {
     params ["_args"];
     _args params ["_object", "_objectData", "_miningTime", "_soundDummy"];
-    private _oreChance = _objectData select 2;
-    private _items = _objectData select 4;
-    private _oreDepletion = _objectData select 5;
+    private _items = _objectData select 3;
+    private _oreDepletion = _objectData select 4;
 
     if (_soundDummy isNotEqualTo objNull) then {
         deleteVehicle _soundDummy;
@@ -63,15 +62,11 @@ _miningTime,
 
     player setVariable [QGVAR(miningOre), nil];
 
-    if (random 100 > _oreChance) exitWith {
-        [QEGVAR(common,tileText), "No ore found..."] call CBA_fnc_localEvent;
-    };
-
     private _itemCargo = [];
 
     {
         _x params ["_classname", "_amount", "_chance"];
-        if (random 100 <= _chance) then {
+        if ([_chance] call EFUNC(common,rollChance)) then {
             _itemCargo pushBack [_classname, _amount];
         };
     } forEach _items;
@@ -83,7 +78,7 @@ _miningTime,
         [QEGVAR(common,tileText), "No ore found..."] call CBA_fnc_localEvent;
     };
 
-    if (random 100 > _oreDepletion) then {
+    if ([_oreDepletion] call EFUNC(common,rollChance)) then {
         private _position = getPosATL player;
 
         // Check if position is already cached (within 2.5 meters)

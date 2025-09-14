@@ -16,10 +16,10 @@
 [{
     params ["_args", "_handle"];
 
-    if (isNil {player getVariable [QGVAR(miningOre), true]}) exitWith {
+    if (isNil {player getVariable QGVAR(miningOre)}) exitWith {
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
     [QCLASS(pickaxe), QCLASS(pickaxe_Broken)] call EFUNC(common,itemDecrement);
 
-}, 1] call CBA_fnc_addPerFrameHandler;
+}, 5] call CBA_fnc_addPerFrameHandler;

@@ -37,6 +37,7 @@ PREP(nearTreeSaw);
 PREP(nearVehicle);
 PREP(nearWell);
 PREP(parseVehicleData);
+PREP(rollChance);
 PREP(spawnLoot);
 PREP(surfacePos);
 PREP(switchItem);
