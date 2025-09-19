@@ -114,7 +114,7 @@ class CLASS(anvil_ui)
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
-        class CLASS(anvil_progressBar): CLASS(RscProgress
+        class CLASS(anvil_progressBar): CLASS(RscProgress)
         {
             idc = 1010;
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
