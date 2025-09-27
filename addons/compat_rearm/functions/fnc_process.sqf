@@ -16,12 +16,13 @@
  * Public: No
 */
 
-private _playerCash = player getVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
 private _dialog = findDisplay 982383;
 private _purchaseButton = _dialog displayCtrl 1600;
 private _exitButton = _dialog displayCtrl 1601;
 private _resupplyPrice = 0;
 private _found = false;
+
+call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
 [player] call EFUNC(common,nearVehicle) params ["", "_nearestVehicle"];
 
@@ -48,7 +49,7 @@ private _rearmInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     };
 }];
 
-if (_playerCash < _resupplyPrice) exitWith {
+if (_funds < _resupplyPrice) exitWith {
     ctrlSetText [1001, "You cannot afford this!"];
     _purchaseButton ctrlShow true;
     _exitButton ctrlShow true;
@@ -72,7 +73,7 @@ _dummyVehicle enableSimulation false;
     private _currentFunds = player getVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
 
     if (!alive _nearestVehicle || !(player getVariable [QCLASS(processRearm), false])) exitWith {
-        player setVariable [QEGVAR(currency,funds), _currentFunds + _totalFundsDeducted];
+        [_totalFundsDeducted] call EFUNC(currency,modifyMoney);
         player setVariable [QCLASS(processRearm), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _rearmInterrupt];
         deleteVehicle _dummyVehicle;
@@ -83,7 +84,7 @@ _dummyVehicle enableSimulation false;
     };
 
     if (_currentFunds < _fundsToDeductPerStep) exitWith {
-        player setVariable [QEGVAR(currency,funds), _currentFunds + _totalFundsDeducted];
+        [_totalFundsDeducted] call EFUNC(currency,modifyMoney);
         player setVariable [QCLASS(processRearm), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _rearmInterrupt];
         ctrlSetText [1001, "You cannot afford this!"];
@@ -93,7 +94,7 @@ _dummyVehicle enableSimulation false;
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
-    player setVariable [QEGVAR(currency,funds), _currentFunds - _fundsToDeductPerStep];
+    [-_fundsToDeductPerStep] call EFUNC(currency,modifyMoney);
     _totalFundsDeducted = _totalFundsDeducted + _fundsToDeductPerStep;
 
     private _progress = (_step + 1) / _totalSteps;

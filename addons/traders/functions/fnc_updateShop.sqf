@@ -119,8 +119,8 @@
     };
 };
 
-    private _playerFunds = player getVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
-    ctrlSetText [1003, format ["%3: %1 %2", EGVAR(currency,symbol), [_playerFunds, 1, 2, true] call CBA_fnc_formatNumber, profileName]];
+    call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
+    ctrlSetText [1003, format ["%3: %1 %2", EGVAR(currency,symbol), [_funds, 1, 2, true] call CBA_fnc_formatNumber, profileName]];
     ctrlSetText [1002, format ["%3: %1 %2", EGVAR(currency,symbol), [_shopFunds, 1, 2, true] call CBA_fnc_formatNumber, _shopName]];
 
     [QUOTE(COMPONENT_BEAUTIFIED), format ["Listbox populated with %1 items", lbSize _list]] call EFUNC(common,debugMessage);
