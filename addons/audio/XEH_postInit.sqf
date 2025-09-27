@@ -22,9 +22,14 @@ if (hasInterface) then {
         [] call FUNC(ambientSoundScape);
     };
 
-    // Get all Music Tracks
-    GVAR(musicTracksMain) = ('getNumber (_x >> QGVAR(isMusic)) > 0' configClasses (configFile >> "CfgMusic")) apply {configName _x};
-    GVAR(musicTracks) = [];
+    if (GVAR(ambientMusicEnabled)) then {
+
+        // Get all Music Tracks
+        GVAR(musicTracksMain) = ('getNumber (_x >> QGVAR(isMusic)) > 0' configClasses (configFile >> "CfgMusic")) apply {configName _x};
+        GVAR(musicTracks) = [];
+
+        call FUNC(ambientMusic);
+    };
 
     // Forge Master List
     GVAR(forgeAudioList) = [];

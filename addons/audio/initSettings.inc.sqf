@@ -61,6 +61,17 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     }
 ] call CBA_fnc_addSetting;
 
+// Ambient Music
+[
+    QGVAR(ambientMusicEnabled),
+    "CHECKBOX",
+    [
+        "Ambient music", "Enable Misery's OST (utilize Ambient Music array for more music to be played)"
+    ],
+    _category,
+    false, 1, {}, true
+] call CBA_fnc_addSetting;
+
 [
     QGVAR(ambientMusicExtras),
     "EDITBOX",
