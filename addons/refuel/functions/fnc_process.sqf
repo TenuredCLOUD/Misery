@@ -77,7 +77,7 @@ private _fundsToDeduct = _fuelCost;
     params ["_args", "_handle"];
     _args params ["_nearestVehicle", "_dialog", "_purchaseButton", "_exitButton", "_displayName", "_refuelInterrupt", "_totalLiters", "_fundsToDeduct", "_fuelStep"];
 
-    private _currentFunds = player getVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
+    call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
     if (!alive _nearestVehicle || !(player getVariable [QCLASS(processRefuel), false])) exitWith {
         player setVariable [QCLASS(processRefuel), nil];
@@ -85,7 +85,7 @@ private _fundsToDeduct = _fuelCost;
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
-    if (_currentFunds < _fundsToDeduct) exitWith {
+    if (_funds < _fundsToDeduct) exitWith {
         player setVariable [QCLASS(processRefuel), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
         ctrlSetText [1001, "You cannot afford this!"];
@@ -106,7 +106,7 @@ private _fundsToDeduct = _fuelCost;
         (_currentFuel + _fuelToAdd) * 100 toFixed 2,
         "%",
         EGVAR(currency,symbol),
-        [_currentFunds, 1, 2, true] call CBA_fnc_formatNumber
+        [_funds, 1, 2, true] call CBA_fnc_formatNumber
     ];
     ctrlSetText [1001, _displayedText];
 

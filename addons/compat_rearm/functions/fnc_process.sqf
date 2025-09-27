@@ -70,7 +70,8 @@ _dummyVehicle enableSimulation false;
     private _totalSteps = 100;
     private _progress = (_step + 1) / _totalSteps;
     private _progressPercent = (_progress * 100) toFixed 2;
-    private _currentFunds = player getVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
+
+    call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
     if (!alive _nearestVehicle || !(player getVariable [QCLASS(processRearm), false])) exitWith {
         [_totalFundsDeducted] call EFUNC(currency,modifyMoney);
@@ -83,7 +84,7 @@ _dummyVehicle enableSimulation false;
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
-    if (_currentFunds < _fundsToDeductPerStep) exitWith {
+    if (_funds < _fundsToDeductPerStep) exitWith {
         [_totalFundsDeducted] call EFUNC(currency,modifyMoney);
         player setVariable [QCLASS(processRearm), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _rearmInterrupt];
@@ -105,7 +106,7 @@ _dummyVehicle enableSimulation false;
         _displayName,
         _progressPercent,
         EGVAR(currency,symbol),
-        [_currentFunds, 1, 2, true] call CBA_fnc_formatNumber
+        [_funds, 1, 2, true] call CBA_fnc_formatNumber
     ];
     ctrlSetText [1001, _displayedText];
 

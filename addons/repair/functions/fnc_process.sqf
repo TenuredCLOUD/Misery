@@ -74,7 +74,7 @@ private _fundsToDeduct = _repairPrice;
     params ["_args", "_handle"];
     _args params ["_nearestVehicle", "_dialog", "_purchaseButton", "_exitButton", "_displayName", "_repairsInterrupt", "_repairStep", "_fundsToDeduct"];
 
-    private _currentFunds = player getVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
+    call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
     if (!alive _nearestVehicle || !(player getVariable [QCLASS(processRepairs), false])) exitWith {
         player setVariable [QCLASS(processRepairs), nil];
@@ -82,7 +82,7 @@ private _fundsToDeduct = _repairPrice;
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
-    if (_currentFunds < _fundsToDeduct) exitWith {
+    if (_funds < _fundsToDeduct) exitWith {
         player setVariable [QCLASS(processRepairs), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _repairsInterrupt];
         ctrlSetText [1001, "You cannot afford this!"];
@@ -103,7 +103,7 @@ private _fundsToDeduct = _repairPrice;
         (1 - (_currentDamage - _repairAmount)) * 100 toFixed 2,
         "%",
         EGVAR(currency,symbol),
-        [_currentFunds, 1, 2, true] call CBA_fnc_formatNumber
+        [_funds, 1, 2, true] call CBA_fnc_formatNumber
     ];
     ctrlSetText [1001, _displayedText];
 
