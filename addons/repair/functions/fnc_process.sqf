@@ -18,8 +18,6 @@
 
 private _playerCash = player getVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
 private _dialog = findDisplay 982386;
-private _purchaseButton = _dialog displayCtrl 1600;
-private _exitButton = _dialog displayCtrl 1601;
 private _repairPrice = 0;
 private _found = false;
 
@@ -50,8 +48,7 @@ private _repairsInterrupt = _dialog displayAddEventHandler ["KeyDown", {
 
 if (_playerCash < _repairPrice) exitWith {
     ctrlSetText [1001, "You cannot afford this!"];
-    _purchaseButton ctrlShow true;
-    _exitButton ctrlShow true;
+    [982386, [1600, 1601], true] call EFUNC(common,displayShowControls);
     player setVariable [QCLASS(processRepairs), nil];
     _dialog displayRemoveEventHandler ["KeyDown", _repairsInterrupt];
 };
@@ -59,8 +56,7 @@ if (_playerCash < _repairPrice) exitWith {
 if (damage _nearestVehicle <= 0) exitWith {
     private _displayFull = format ["%1 is already fully repaired...", _displayName];
     ctrlSetText [1001, _displayFull];
-    _purchaseButton ctrlShow true;
-    _exitButton ctrlShow true;
+    [982386, [1600, 1601], true] call EFUNC(common,displayShowControls);
     player setVariable [QCLASS(processRepairs), nil];
     _dialog displayRemoveEventHandler ["KeyDown", _repairsInterrupt];
 };
@@ -71,7 +67,7 @@ private _fundsToDeduct = _repairPrice;
 
 [{
     params ["_args", "_handle"];
-    _args params ["_nearestVehicle", "_dialog", "_purchaseButton", "_exitButton", "_displayName", "_repairsInterrupt", "_playerCash", "_repairStep", "_fundsToDeduct"];
+    _args params ["_nearestVehicle", "_dialog", "_displayName", "_repairsInterrupt", "_playerCash", "_repairStep", "_fundsToDeduct"];
 
     private _currentFunds = player getVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
 
@@ -85,8 +81,7 @@ private _fundsToDeduct = _repairPrice;
         player setVariable [QCLASS(processRepairs), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _repairsInterrupt];
         ctrlSetText [1001, "You cannot afford this!"];
-        _purchaseButton ctrlShow true;
-        _exitButton ctrlShow true;
+        [982386, [1600, 1601], true] call EFUNC(common,displayShowControls);
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
@@ -113,10 +108,9 @@ private _fundsToDeduct = _repairPrice;
         _dialog displayRemoveEventHandler ["KeyDown", _repairsInterrupt];
         private _displayFull = format ["%1 has been fully repaired...", _displayName];
         ctrlSetText [1001, _displayFull];
-        _purchaseButton ctrlShow true;
-        _exitButton ctrlShow true;
+        [982386, [1600, 1601], true] call EFUNC(common,displayShowControls);
         _handle call CBA_fnc_removePerFrameHandler;
     };
 }, 0.5, [
-    _nearestVehicle, _dialog, _purchaseButton, _exitButton, _displayName, _repairsInterrupt, _playerCash, _repairStep, _fundsToDeduct
+    _nearestVehicle, _dialog, _displayName, _repairsInterrupt, _playerCash, _repairStep, _fundsToDeduct
 ]] call CBA_fnc_addPerFrameHandler;

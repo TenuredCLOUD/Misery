@@ -75,8 +75,8 @@
         } forEach _items;
 
         _buySellButton ctrlSetText "Buy";
-        _giftButton ctrlShow false;
-        _checkbox ctrlShow true;
+        [982390, [1603], false] call EFUNC(common,displayShowControls);
+        [982390, [2800], true] call EFUNC(common,displayShowControls);
         _buySellButton ctrlEnable (lbSize _list > 0);
 
     } else {
@@ -105,8 +105,8 @@
     } forEach _items;
 
     _buySellButton ctrlSetText "Sell";
-    _giftButton ctrlShow true;
-    _checkbox ctrlShow false;
+    [982390, [1603], true] call EFUNC(common,displayShowControls);
+    [982390, [2800], false] call EFUNC(common,displayShowControls);
     if (lbSize _list isEqualTo 0) then {
         _buySellButton ctrlEnable false;
         _giftButton ctrlEnable false;

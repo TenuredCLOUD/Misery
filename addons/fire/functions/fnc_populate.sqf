@@ -22,7 +22,7 @@ private _ignitionCombo = findDisplay 982388 displayCtrl 2102;
 private _craftProgressBar = findDisplay 982388 displayCtrl 1010;
 private _noteBox = findDisplay 982388 displayCtrl 1001;
 
-_craftProgressBar ctrlShow false;
+[982388, [1010], false] call EFUNC(common,displayShowControls);
 
 lbClear _tinderCombo;
 lbClear _fuelCombo;

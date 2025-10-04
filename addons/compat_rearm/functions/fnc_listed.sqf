@@ -18,12 +18,11 @@
 [{!isNull findDisplay 982383},
 {
     private _list = findDisplay 982383 displayCtrl 1500;
-    private _purchaseButton = findDisplay 982383 displayCtrl 1600;
 
     [player] call EFUNC(common,nearVehicle) params ["", "_nearestVehicle"];
 
     if (_nearestVehicle isEqualTo []) exitWith {
-        _purchaseButton ctrlShow false;
+        [982383, [1600], false] call EFUNC(common,displayShowControls);
     };
 
     lbClear _list;
@@ -46,7 +45,7 @@
 
     if (_resupplyPrice isEqualTo -1) then {
         _index = _list lbAdd "This vehicle cannot be resupplied...";
-        _purchaseButton ctrlShow false;
+        [982383, [1600], false] call EFUNC(common,displayShowControls);
     } else {
         _index = _list lbAdd format ["Resupply (%1)", _formattedPrice];
     };

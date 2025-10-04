@@ -98,8 +98,7 @@ disableSerialization;
     };
 
     if (!EGVAR(gasmask,enhanced)) then {
-        _gasMaskText ctrlShow false;
-        _gasMaskBar ctrlShow false;
+        [982377, [1016, 1017], false] call EFUNC(common,displayShowControls);
     } else {
         private _gearCase = switch (true) do {
             case (_gasMask > 0 && _scba isEqualTo 0): {"GasMask"};
@@ -108,24 +107,20 @@ disableSerialization;
         };
         switch (_gearCase) do {
             case "GasMask": {
-                    _gasMaskText ctrlShow true;
-                    _gasMaskBar ctrlShow true;
+                    [982377, [1016, 1017], true] call EFUNC(common,displayShowControls);
                     _gasMaskBar progressSetPosition _cartridgeEfficiency;
                 };
             case "SuppliedAir": {
-                    _gasMaskText ctrlShow false;
-                    _gasMaskBar ctrlShow false;
+                    [982377, [1016, 1017], false] call EFUNC(common,displayShowControls);
                 };
             default {
-                    _gasMaskText ctrlShow false;
-                    _gasMaskBar ctrlShow false;
+                    [982377, [1016, 1017], false] call EFUNC(common,displayShowControls);
                 };
         };
     };
 
     if (!EGVAR(temperature,enabled)) then {
-        _temperatureText ctrlShow false;
-        _temperatureValue ctrlShow false;
+        [982377, [1015, 1010], false] call EFUNC(common,displayShowControls);
     } else {
         _temperatureValue ctrlSetText (if (QCLASS(eru_On) in magazines player) then {format ["%1°C", [_thermalIndex, 1, 1, false] call CBA_fnc_formatNumber]} else {"No ERU"});
     };
@@ -138,11 +133,9 @@ disableSerialization;
     _fatigueBar progressSetPosition _fatigueValue;
 
     if (_wetness <= 0) then {
-        _wetnessText ctrlShow false;
-        _wetnessBar ctrlShow false;
+        [982377, [1007, 1018], false] call EFUNC(common,displayShowControls);
     } else {
-        _wetnessText ctrlShow true;
-        _wetnessBar ctrlShow true;
+        [982377, [1007, 1018], true] call EFUNC(common,displayShowControls);
         _wetnessBar progressSetPosition _wetness;
     };
 

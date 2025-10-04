@@ -26,14 +26,10 @@ if !([] call FUNC(hasGear)) exitWith {
 [] call FUNC(actionLogic);
 
 // Hide cast line button & exit button:
-{
-    findDisplay 982387 displayCtrl _x ctrlShow false;
-} forEach [1600, 1602];
+[982387, [1600, 1602], false] call EFUNC(common,displayShowControls);
 
 // Show progress bars:
-{
-    findDisplay 982387 displayCtrl _x ctrlShow true;
-} forEach [1010, 1011, 1012, 1013];
+[982387, [1010, 1011, 1012, 1013], true] call EFUNC(common,displayShowControls);
 
 // Starting values with casted line
 GVAR(lineOut) = 0.2;

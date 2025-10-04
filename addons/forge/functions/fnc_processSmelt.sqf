@@ -38,11 +38,9 @@ if (_forgeFuel isEqualTo 0) exitWith {
     ctrlSetText [1001, "This forge doesn't have enough fuel to smelt materials..."];
 };
 
-{
-   findDisplay 982388 displayCtrl _x ctrlShow false;
-} forEach [1600, 1602, 1604, 1603];
+[982388, [1600, 1602, 1604, 1603], false] call EFUNC(common,displayShowControls);
 
-_progressBar ctrlShow true;
+[982388, [1010], true] call EFUNC(common,displayShowControls);
 
 player playAction "Gear";
 
@@ -60,7 +58,7 @@ private _smeltInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key"];
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QGVAR(isSmelting), false];
-        _progressBar ctrlShow false;
+        [982388, [1010], false] call EFUNC(common,displayShowControls);
         [parseText "<t font='PuristaMedium' size='1'>Smelting interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
     };
 }];
@@ -77,8 +75,6 @@ _soundDummy say3D QCLASS(audio_sound_metalSmelt);
         "_requiredItems",
         "_outputItem",
         "_dialog",
-        "_smeltButton",
-        "_exitButton",
         "_smeltInterrupt",
         "_totalSteps",
         "_currentStep",
@@ -93,10 +89,8 @@ _soundDummy say3D QCLASS(audio_sound_metalSmelt);
         };
         player setVariable [QGVAR(isSmelting), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _smeltInterrupt];
-        {
-            findDisplay 982388 displayCtrl _x ctrlShow true;
-        } forEach [1600, 1602, 1604, 1603];
-        _progressBar ctrlShow false;
+        [982388, [1600, 1602, 1604, 1603], true] call EFUNC(common,displayShowControls);
+        [982388, [1010], false] call EFUNC(common,displayShowControls);
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
@@ -125,11 +119,8 @@ _soundDummy say3D QCLASS(audio_sound_metalSmelt);
             deleteVehicle _soundDummy;
         };
 
-        {
-            findDisplay 982388 displayCtrl _x ctrlShow true;
-        } forEach [1600, 1602, 1604, 1603];
-
-        _progressBar ctrlShow false;
+        [982388, [1600, 1602, 1604, 1603], true] call EFUNC(common,displayShowControls);
+        [982388, [1010], false] call EFUNC(common,displayShowControls);
 
         _handle call CBA_fnc_removePerFrameHandler;
     };
@@ -137,8 +128,6 @@ _soundDummy say3D QCLASS(audio_sound_metalSmelt);
     _requiredItems,
     _outputItem,
     _dialog,
-    _smeltButton,
-    _exitButton,
     _smeltInterrupt,
     _totalSteps,
     _currentStep,

@@ -46,7 +46,7 @@ private _fillInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key"];
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QCLASS(isFilling), false];
-        _progressBar ctrlShow false;
+        [982380, [1010], false] call EFUNC(common,displayShowControls);
         [parseText "<t font='PuristaMedium' size='1'>Filling interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
     };
 }];
@@ -60,9 +60,6 @@ private _currentStep = 0;
         "_requiredItem",
         "_outputItem",
         "_dialog",
-        "_fillButton",
-        "_drinkButton",
-        "_exitButton",
         "_fillInterrupt",
         "_totalSteps",
         "_currentStep",
@@ -103,9 +100,6 @@ private _currentStep = 0;
     _requiredItem,
     _outputItem,
     _dialog,
-    _fillButton,
-    _drinkButton,
-    _exitButton,
     _fillInterrupt,
     _totalSteps,
     _currentStep,

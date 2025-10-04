@@ -43,14 +43,10 @@ if (!([_requiredItems] call FUNC(canCookCheck))) exitWith {
     ctrlSetText [1001, "You don’t have the required items..."];
 };
 
-private _cookButton = _dialog displayCtrl 1600;
-private _recipeButton = _dialog displayCtrl 1601;
-private _exitButton = _dialog displayCtrl 1602;
 private _progressBar = _dialog displayCtrl 1010;
-_cookButton ctrlShow false;
-_recipeButton ctrlShow false;
-_exitButton ctrlShow false;
-_progressBar ctrlShow true;
+
+[982379, [1600, 1601, 1602], false] call EFUNC(common,displayShowControls);
+[982379, [1010], true] call EFUNC(common,displayShowControls);
 
 player playAction "Gear";
 
@@ -68,7 +64,7 @@ private _cookInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key"];
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QGVAR(isCooking), false];
-        _progressBar ctrlShow false;
+        [982379, [1010], false] call EFUNC(common,displayShowControls);
         if (_soundSource isNotEqualTo objNull) then {
             deleteVehicle _soundSource;
         };
@@ -82,15 +78,13 @@ private _currentStep = 0;
 
 [{
     params ["_args", "_handle"];
-    _args params ["_requiredItems", "_outputItem", "_outputCount", "_toBeReplaced", "_outputXP", "_cookingMethod", "_dialog", "_cookButton", "_recipeButton", "_exitButton", "_cookInterrupt", "_totalSteps", "_currentStep", "_displayName", "_progressBar", "_soundSource"];
+    _args params ["_requiredItems", "_outputItem", "_outputCount", "_toBeReplaced", "_outputXP", "_cookingMethod", "_dialog", "_cookInterrupt", "_totalSteps", "_currentStep", "_displayName", "_progressBar", "_soundSource"];
 
     if (!(player getVariable [QGVAR(isCooking), false]) || !alive player) exitWith {
         player setVariable [QGVAR(isCooking), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _cookInterrupt];
-        _cookButton ctrlShow true;
-        _recipeButton ctrlShow true;
-        _exitButton ctrlShow true;
-        _progressBar ctrlShow false;
+        [982379, [1600, 1601, 1602], true] call EFUNC(common,displayShowControls);
+        [982379, [1010], false] call EFUNC(common,displayShowControls);
         if (_soundSource isNotEqualTo objNull) then {
             deleteVehicle _soundSource;
         };
@@ -137,10 +131,8 @@ private _currentStep = 0;
         ctrlSetText [1001, format ["You %1ed %2 %3!", toLower _cookingMethod, _outputCount, _displayName]];
         player setVariable [QGVAR(isCooking), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _cookInterrupt];
-        _cookButton ctrlShow true;
-        _recipeButton ctrlShow true;
-        _exitButton ctrlShow true;
-        _progressBar ctrlShow false;
+        [982379, [1600, 1601, 1602], true] call EFUNC(common,displayShowControls);
+        [982379, [1010], false] call EFUNC(common,displayShowControls);
         if (_soundSource isNotEqualTo objNull) then {
             deleteVehicle _soundSource;
         };
@@ -152,6 +144,6 @@ private _currentStep = 0;
     };
 }, 0.5, [
     _requiredItems, _outputItem, _outputCount, _toBeReplaced, _outputXP, _cookingMethod,
-    _dialog, _cookButton, _recipeButton, _exitButton, _cookInterrupt,
+    _dialog, _cookInterrupt,
     _totalSteps, _currentStep, _displayName, _progressBar, _soundSource
 ]] call CBA_fnc_addPerFrameHandler;

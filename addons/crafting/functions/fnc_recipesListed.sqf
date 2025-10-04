@@ -19,8 +19,7 @@
     private _list = findDisplay 982376 displayCtrl 1500;
     private _playerXP = player getVariable [QGVAR(xp), MACRO_PLAYER_DEFAULTS_LOW];
 
-    private _progressBar = findDisplay 982376 displayCtrl 1010;
-    _progressBar ctrlShow false; // Hide progresss bar on GUI load
+    [982376, [1010], false] call EFUNC(common,displayShowControls);
 
     lbClear _list;
 

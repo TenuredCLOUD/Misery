@@ -24,7 +24,7 @@
 
     [{
         params ["_args", "_handle"];
-        _args params ["_nearVehicle", "_vehicle", "_list", "_repairButton", "_refuelButton", "_scavengeButton", "_batteryStatusText"];
+        _args params ["_nearVehicle", "_vehicle", "_list", "_batteryStatusText"];
 
         [player] call EFUNC(common,nearVehicle) params ["", "", "_hasCrew"];
 
@@ -39,8 +39,7 @@
         };
 
         if (isNil "_vehicle") exitWith {
-            _repairButton ctrlShow false;
-            _scavengeButton ctrlShow false;
+            [274839, [1600, 1602], false] call EFUNC(common,displayShowControls);
             ctrlSetText [1000, "No Vehicle to Repair..."];
         };
 
@@ -64,5 +63,5 @@
             };
         } forEach _selectionNames;
 
-    }, 0.5, [_nearVehicle, _vehicle, _list, _repairButton, _refuelButton, _scavengeButton, _batteryStatusText]] call CBA_fnc_addPerFrameHandler;
+    }, 0.5, [_nearVehicle, _vehicle, _list, _batteryStatusText]] call CBA_fnc_addPerFrameHandler;
 },[]] call CBA_fnc_waitUntilAndExecute;
