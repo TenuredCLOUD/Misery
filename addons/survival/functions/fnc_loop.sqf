@@ -61,7 +61,7 @@
     [_damaged, _hunger, _thirst, _ailments, _parasites, _toxicity, _infection, _isMultiplayer] call FUNC(handleAilments);
     [_decrementValue, _energyDeficit, _isMultiplayer] call FUNC(handleEnergy);
     [_decrementValue, _parasites, _hunger] call FUNC(handleHunger);
-    [_radiation, _parasites] call FUNC(handleRadiation);
+    [_radiation, _parasites, _hunger, _thirst] call FUNC(handleRadiation);
     [_exposure, _thermalIndexModifier, _wetnessModifier] call FUNC(handleTemperature);
     [_thirst] call FUNC(handleThirst);
     [_hunger, _thirst, _exposure] call FUNC(decayHealth) params ["_decay"];

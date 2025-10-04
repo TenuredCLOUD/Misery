@@ -1,6 +1,7 @@
 PREP(addStatusModifier);
 PREP(buildingPositions);
 PREP(buildingPositionsInside);
+PREP(chromaticEffect);
 PREP(combatLogPrevention);
 PREP(configCheck);
 PREP(countItem);

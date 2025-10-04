@@ -85,6 +85,16 @@ class CfgMagazines {
         scope = 2;
     };
 
+    class CLASS(deconKit): CLASS(FakeMagazine) {
+        count = 6;
+        descriptionShort = "- military decontamination kit";
+        displayName = "Decon Kit";
+        mass = 10;
+        model = "\a3\props_f_enoch\military\decontamination\deconkit_01_f.p3d";
+        picture = QPATHTOF(data\icons\deconKit.paa);
+        scope = 2;
+    };
+
     class CLASS(sleepingPills): CLASS(FakeMagazine) {
         count = 8;
         descriptionShort = "$STR_MISERY_SLEEPPACK_DESCRIPTION";

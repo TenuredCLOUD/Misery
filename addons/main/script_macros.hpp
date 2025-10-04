@@ -118,6 +118,7 @@
 #define MACRO_CRAFTINGSTATIONS "Land_Workbench_01_F", "Land_PortableDesk_01_olive_F"
 #define MACRO_ARTIFACTS QCLASS(artifact_01), QCLASS(artifact_02), QCLASS(artifact_03), QCLASS(artifact_04), QCLASS(artifact_05), QCLASS(artifact_06), QCLASS(artifact_07), QCLASS(artifact_08), QCLASS(artifact_09), QCLASS(artifact_10)
 #define MACRO_KNIVES "Weap_melee_knife", "Knife_kukri", "Knife_m3", "UNSC_Knife", "UNSC_Knife_reversed", "WBK_survival_weapon_4", "WBK_survival_weapon_4_r", "WBK_survival_weapon_3", "WBK_survival_weapon_3_r"
+#define MACRO_CANTOOLS QCLASS(canOpener), "rvg_canOpener", "rvg_toolkit", "rvg_guttingKnife"
 #define MACRO_FIRETYPES "MetalBarrel_burning_F", "Land_Campfire_F", "Land_FirePlace_F", "FirePlace_burning_F"
 #define MACRO_FIRE_TINDER QCLASS(tinder), "acex_intelitems_notepad", "rvg_money", "rvg_notepad", "rvg_docFolder"
 #define MACRO_FIRE_FUEL QCLASS(woodensticks), QCLASS(firewood)
@@ -140,7 +141,7 @@
 
 // Calculations - Radiation
 #define MACRO_BASE_DOSE 10
-#define MACRO_RADIATION_NUTRITIONLOSS(arg) ((arg) / 100) / 10
+#define MACRO_RADIATION_NUTRITIONLOSS(arg) ((arg) / 10) / 10
 #define MACRO_RADIATION_STAMINALOSS(arg) ((arg) / 10) / 10
 
 // Calculations - Temperature

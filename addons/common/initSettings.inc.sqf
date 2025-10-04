@@ -20,3 +20,12 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     true,
     1
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(promptSizes),
+    "SLIDER",
+    ["Text prompt sizes", "Text size of prompts & popups"],
+    _category,
+    [0.5, 1, 0.7, 2],
+    2
+] call CBA_fnc_addSetting;
