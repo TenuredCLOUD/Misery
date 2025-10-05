@@ -9,9 +9,9 @@ class CLASS(refuelVehicle_ui)
         {
             idc = -1;
             x = 2.5 * GUI_GRID_W + GUI_GRID_X;
-	        y = 0 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 35 * GUI_GRID_W;
-	        h = 18 * GUI_GRID_H;
+            y = 0 * GUI_GRID_H + GUI_GRID_Y;
+            w = 35 * GUI_GRID_W;
+            h = 18 * GUI_GRID_H;
             colorBackground[] = {0,0,0,0.7};
         };
         class CLASS(refuelVehicle_vehicleName): RscText
@@ -19,29 +19,29 @@ class CLASS(refuelVehicle_ui)
             idc = 1200;
             text = ""; //--- ToDo: Localize;
             x = 3 * GUI_GRID_W + GUI_GRID_X;
-	        y = 8 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 21 * GUI_GRID_W;
-	        h = 2.5 * GUI_GRID_H;
+            y = 8 * GUI_GRID_H + GUI_GRID_Y;
+            w = 21 * GUI_GRID_W;
+            h = 2.5 * GUI_GRID_H;
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(refuelVehicle_icon): RscPicture
         {
             idc = 1201;
-	        text = "";
-	        x = 6.5 * GUI_GRID_W + GUI_GRID_X;
-	        y = 4 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 5.5 * GUI_GRID_W;
-	        h = 3.5 * GUI_GRID_H;
+            text = "";
+            x = 6.5 * GUI_GRID_W + GUI_GRID_X;
+            y = 4 * GUI_GRID_H + GUI_GRID_Y;
+            w = 5.5 * GUI_GRID_W;
+            h = 3.5 * GUI_GRID_H;
         };
         class CLASS(refuelVehicle_prompt): RscText
         {
             idc = -1;
             text = "Refuel from pump"; //--- ToDo: Localize;
             x = 3.5 * GUI_GRID_W + GUI_GRID_X;
-	        y = 0 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 22 * GUI_GRID_W;
-	        h = 2.5 * GUI_GRID_H;
+            y = 0 * GUI_GRID_H + GUI_GRID_Y;
+            w = 22 * GUI_GRID_W;
+            h = 2.5 * GUI_GRID_H;
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
@@ -50,9 +50,9 @@ class CLASS(refuelVehicle_ui)
             idc = -1;
             text = QPATHTOEF(markers,data\fuel.paa);
             x = 26.5 * GUI_GRID_W + GUI_GRID_X;
-	        y = 3.5 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 5.5 * GUI_GRID_W;
-	        h = 3.5 * GUI_GRID_H;
+            y = 3.5 * GUI_GRID_H + GUI_GRID_Y;
+            w = 5.5 * GUI_GRID_W;
+            h = 3.5 * GUI_GRID_H;
         };
     };
     class Controls
@@ -61,9 +61,9 @@ class CLASS(refuelVehicle_ui)
         {
             idc = 1001;
             x = 3.5 * GUI_GRID_W + GUI_GRID_X;
-	        y = 13.5 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 33 * GUI_GRID_W;
-	        h = 3.5 * GUI_GRID_H;
+            y = 13.5 * GUI_GRID_H + GUI_GRID_Y;
+            w = 33 * GUI_GRID_W;
+            h = 3.5 * GUI_GRID_H;
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
@@ -74,9 +74,9 @@ class CLASS(refuelVehicle_ui)
             onButtonClick = QUOTE(call EFUNC(fuel,process));
             text = "Refuel"; //--- ToDo: Localize;
             x = 25.5 * GUI_GRID_W + GUI_GRID_X;
-	        y = 8.5 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 7.5 * GUI_GRID_W;
-	        h = 1.5 * GUI_GRID_H;
+            y = 8.5 * GUI_GRID_H + GUI_GRID_Y;
+            w = 7.5 * GUI_GRID_W;
+            h = 1.5 * GUI_GRID_H;
             colorBackground[] = {0.2,0.2,0.2,0.7};
             colorActive[] = {0.5,0.5,0.5,0.7};
             font = UI_MACRO_FONT;
@@ -89,9 +89,9 @@ class CLASS(refuelVehicle_ui)
             onButtonClick = QUOTE(closeDialog 2);
             text = "Exit"; //--- ToDo: Localize;
             x = 25.5 * GUI_GRID_W + GUI_GRID_X;
-	        y = 11 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 7.5 * GUI_GRID_W;
-	        h = 1.5 * GUI_GRID_H;
+            y = 11 * GUI_GRID_H + GUI_GRID_Y;
+            w = 7.5 * GUI_GRID_W;
+            h = 1.5 * GUI_GRID_H;
             colorBackground[] = {0.2,0.2,0.2,0.7};
             colorActive[] = {0.5,0.5,0.5,0.7};
             font = UI_MACRO_FONT;
