@@ -58,14 +58,4 @@ class CfgVehicles {
         model = QPATHTOF(data\models\medievalanvil.p3d);
         textSingular = "Anvil";
     };
-    class CLASS(jetFuel_Russian): House_F {
-        armor = 2000;
-        author = "Model credits: Tanks LuddePudde - Fuel pump castleonsandYT - Reworked by TenuredCLOUD";
-        displayName = "$STR_MISERY_JETFUELRU_DISPLAYNAME";
-        hiddenSelectionsMaterials[] = {QPATHTOF(data\rvmats\fueltanks.rvmat)};
-        MACRO_HOUSE_COMMON;
-        mapSize = 3;
-        model = QPATHTOF(data\models\twinjetfueltank.p3d);
-        textSingular = "Jet Fuel Station";
-    };
 };

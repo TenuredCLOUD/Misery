@@ -108,6 +108,9 @@ class CfgSounds {
     MACRO_SOUNDS(gasmaskBreathing,immersion);
     MACRO_SOUNDS(gasPump,immersion);
     MACRO_SOUNDS(gasPump30,immersion);
+    MACRO_SOUNDS(gasPumpRunning,immersion);
+    MACRO_SOUNDS(gasPumpStart,immersion);
+    MACRO_SOUNDS(gasPumpStop,immersion);
     MACRO_SOUNDS(gatheringFirewood,immersion);
     MACRO_SOUNDS(i25m,immersion);
     MACRO_SOUNDS(i50m,immersion);
