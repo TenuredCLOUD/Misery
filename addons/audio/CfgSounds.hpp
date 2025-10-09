@@ -138,14 +138,10 @@ class CfgSounds {
     MACRO_SOUNDS(waterBottle,immersion);
 
     // Inventory
-    MACRO_SOUNDS(backpackClose,inventory);
-    MACRO_SOUNDS(backpackOpen,inventory);
     MACRO_SOUNDS(drop01,inventory);
     MACRO_SOUNDS(drop02,inventory);
     MACRO_SOUNDS(inventoryClose,inventory);
-    MACRO_SOUNDS(inventoryCloseAlt,inventory);
     MACRO_SOUNDS(inventoryOpen,inventory);
-    MACRO_SOUNDS(inventoryOpenAlt,inventory);
     MACRO_SOUNDS(pickup,inventory);
     MACRO_SOUNDS(rummaging,inventory);
     MACRO_SOUNDS(unzipping,inventory);
