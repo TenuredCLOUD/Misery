@@ -34,7 +34,7 @@ private _buildingPositions = {
 } forEach _nearBuildings;
 
 for "_i" from 1 to _numArtifacts do {
-    private _useBuilding = random 1 > 0.5;
+    private _useBuilding = [50] call EFUNC(common,rollChance);
     private _randomPos = [[_currentMarker] call CBA_fnc_randPosArea, selectRandom _buildingPositions] select _useBuilding;
 
     private _groundHolder = createVehicle ["WeaponHolderSimulated", _randomPos, [], 0, "CAN_COLLIDE"];

@@ -50,7 +50,7 @@ if (!isServer) exitWith {};
 
                         private _price = [_basePrice, _stock, _stock, _minCostFactor, _maxCostFactor, true] call FUNC(calculatePrice);
 
-                        if (random 1 < 0.5) then {
+                        if ([50] call EFUNC(common,rollChance)) then {
                             if (_stock > 0) then {
                                 _itemData set [2, _stock - 1];
                             };

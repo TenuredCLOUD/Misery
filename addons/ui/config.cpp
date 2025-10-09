@@ -30,14 +30,17 @@ class CfgPatches {
 #include "menus\traderShop.hpp"
 #include "menus\moneyTakeMenu.hpp"
 //#include "\ui\menus\moneyGiveMenu.hpp"
+#include "menus\anvil.hpp"
 #include "menus\bank.hpp"
 #include "menus\inventoryFramework.hpp"
 #include "menus\generator.hpp"
 #include "menus\forge.hpp"
 #include "menus\furniture.hpp"
 #include "menus\vehicleFurniture.hpp"
+#include "menus\refuelVehicle.hpp"
 
 class RscTitles {
     #include "menus\geiger.hpp"
     #include "menus\eru.hpp"
+    #include "menus\vehicleStats.hpp"
 };

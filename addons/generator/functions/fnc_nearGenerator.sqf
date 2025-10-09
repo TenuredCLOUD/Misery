@@ -16,10 +16,10 @@
  *
 */
 
-params ["_object"];
+params ["_object", ["_distance", 2]];
 
 if (!isNull objectParent player) exitWith {};
 
-private _nearObjects = nearestObjects [_object, ["Land_Portable_generator_F", "Land_PowerGenerator_F"], 2];
+private _nearObjects = nearestObjects [_object, ["Land_Portable_generator_F", "Land_PowerGenerator_F"], _distance];
 
 [count _nearObjects > 0, _nearObjects select 0, typeOf (_nearObjects select 0)]
