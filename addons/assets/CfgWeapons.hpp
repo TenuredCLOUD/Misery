@@ -16,6 +16,18 @@ class CfgWeapons {
         };
     };
 
+    class CLASS(pickaxeHead): CLASS(ItemCore) {
+        displayName = "PickAxe Head";
+        descriptionShort = "the head of a pickaxe, useless without a handle";
+        picture = QPATHTOF(data\icons\pickHead.paa);
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 45;
+        };
+    };
+
     class CLASS(fishingPole): CLASS(ItemCore) {
         displayName = "$STR_MISERY_FISHINGPOLE_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_FISHINGPOLE_DESCRIPTION";
