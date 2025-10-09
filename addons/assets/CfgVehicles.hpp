@@ -44,7 +44,7 @@ class CfgVehicles {
         armor = 2000;
         author = "Model credits: RBG_illustrations - Reworked by TenuredCLOUD";
         displayName = "$STR_MISERY_FORGE_DISPLAYNAME";
-        MACRO_HOUSE_COMMON;
+        MACRO_THING_COMMON;
         mapSize = 3;
         model = QPATHTOF(data\models\forge.p3d);
         textSingular = "Forge";
