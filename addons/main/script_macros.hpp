@@ -162,6 +162,11 @@ QCLASS(guttingKnife), \
 #define MACRO_FACTIONS west, east, civilian, independent
 #define MACRO_FACTIONS_BASE_CLASS "B_Survivor_F", "O_G_Survivor_F", "C_man_1", "I_G_Survivor_F"
 
+// Animal processing / Field dressing
+#define MACRO_FIELDDRESS_SKINSOUNDS QEGVAR(audio,sound_skinning01), QEGVAR(audio,sound_skinning02), QEGVAR(audio,sound_skinning03)
+#define MACRO_FIELDDRESS_SAWSOUNDS QEGVAR(audio,sound_boneSaw), QEGVAR(audio,sound_cut01), QEGVAR(audio,sound_cut02), QEGVAR(audio,sound_cut03)
+#define MACRO_FIELDDRESS_ANIMALTYPES "Sheep_random_F", "Goat_random_F", "Cock_random_F", "Hen_random_F", "Rabbit_F"
+
 // Player Status
 #define MACRO_PLAYER_DEFAULTS_HIGH 1
 #define MACRO_PLAYER_DEFAULTS_LOW 0

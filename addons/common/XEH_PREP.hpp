@@ -28,6 +28,7 @@ PREP(lowerCaseArray);
 PREP(menuBlurEffect);
 PREP(modLoadedPrep);
 PREP(nearBuilding);
+PREP(nearCorpse);
 PREP(nearCraftingStation);
 PREP(nearEntities);
 PREP(nearFire);
