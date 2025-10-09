@@ -1,5 +1,6 @@
 PREP(axeAction);
 PREP(chainsawFuel);
+PREP(chainsawFuelDecrement);
 PREP(forageTreeAction);
 PREP(sawAction);
 PREP(splitWoodAction);

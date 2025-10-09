@@ -26,7 +26,7 @@ private _intersects = terrainIntersect [_pos, _pos2];
 if (!_intersects) exitWith {};
 
 if (!(((getPosASLW player select 2) < 0) || (underwater player))) then {
-    if (count (nearestTerrainObjects [player, ["BUSH"], 2.5, true, true]) > 0) then {
+    if (([player] call EFUNC(common,nearTree)) select 0) then {
         _canForage = true;
     };
 };
