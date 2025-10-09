@@ -26,7 +26,7 @@
     private _fuelProgressBar = findDisplay 982388 displayCtrl 1009;
     private _fuelTime = findDisplay 982388 displayCtrl 1008;
 
-    _fuelProgressBar ctrlShow false;
+    [982388, [1009], false] call EFUNC(common,displayShowControls);
 
     private _nearbyFire = objNull;
     private _burnTimeLeft = 0;
@@ -40,15 +40,15 @@
     } forEach GVAR(activeFires);
 
     if (!isNull _nearbyFire && {inflamed _nearbyFire}) then {
-        _fuelProgressBar ctrlShow true;
+        [982388, [1009], true] call EFUNC(common,displayShowControls);
         private _maxTime = [2700, 5400, 7200] select (["small", "big", "barrel"] find _type);
         _fuelProgressBar progressSetPosition (_burnTimeLeft / _maxTime);
         _fuelTime ctrlSetText format ["Burn Time: %1(s)", round _burnTimeLeft];
-        (findDisplay 982388 displayCtrl 1600) ctrlEnable false;
+        [982388, [1600], false] call EFUNC(common,displayEnableControls);
     } else {
         _fuelTime ctrlSetText "";
         if (!(player getVariable [QCLASS(isCraftingFire), nil]) && !ctrlEnabled (findDisplay 982388 displayCtrl 1600)) then {
-            (findDisplay 982388 displayCtrl 1600) ctrlEnable true;
+            [982388, [1600], true] call EFUNC(common,displayEnableControls);
         };
     };
 }, 1, []] call CBA_fnc_addPerFrameHandler;

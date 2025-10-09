@@ -21,14 +21,12 @@ private _list = _dialog displayCtrl 1503;
 private _selectedItem = _list lbData (lbCurSel _list);
 
 if (_selectedItem isEqualTo "") exitWith {
-    private _noItemSelectedStr = format ["<t font='PuristaMedium' size='0.7'>%1</t>", "No item selected..."];
-    [QEGVAR(common,inventoryTile), [_noItemSelectedStr, 10]] call CBA_fnc_localEvent;
+    [QEGVAR(common,inventoryTile), ["No item selected...", 10]] call CBA_fnc_localEvent;
 };
 
 private _itemData = GVAR(itemData) select {(_x select 0) isEqualTo _selectedItem} select 0;
 if (isNil "_itemData") exitWith {
-    private _noItemDataStr = format ["<t font='PuristaMedium' size='0.7'>%1</t>", "..."];
-    [QEGVAR(common,inventoryTile), [_noItemDataStr, 10]] call CBA_fnc_localEvent;
+    [QEGVAR(common,inventoryTile), ["...", 10]] call CBA_fnc_localEvent;
     [QUOTE(COMPONENT_BEAUTIFIED), format ["No item data found for %1...", _selectedItem]] call EFUNC(common,debugMessage);
 };
 
@@ -37,22 +35,24 @@ _itemData params ["_itemName", "_category", "_delay", "_hungerValue", "_thirstVa
 call EFUNC(protection,totalProtection) params ["_gasMask", "_scba"];
 
 if (_maskBlocksUse && {(_gasMask > 0 || _scba > 0)}) exitWith {
-    private _noMaskAllowedStr = format ["<t font='PuristaMedium' size='0.7'>%1</t>", "You cannot use this item with a mask equipped..."];
-    [QEGVAR(common,inventoryTile), [_noMaskAllowedStr, 10]] call CBA_fnc_localEvent;
+    [QEGVAR(common,inventoryTile), ["You cannot use this item with a mask equipped...", 10]] call CBA_fnc_localEvent;
 };
 
-private _validCanTools = [CLASS(canOpener), "rvg_canOpener", "rvg_toolkit", "rvg_guttingKnife"];
-if (_requiresCanOpener && {((items player + magazines player) findIf {_x in _validCanTools}) isEqualTo -1 && !(currentWeapon player in [MACRO_KNIVES])}) exitWith {
-    private _noCanOpenerStr = format ["<t font='PuristaMedium' size='0.7'>%1</t>", "You need a can opener or tools to use this..."];
-    [QEGVAR(common,inventoryTile), [_noCanOpenerStr, 10]] call CBA_fnc_localEvent;
+if (_requiresCanOpener && {((items player + magazines player) findIf {_x in [MACRO_CANTOOLS]}) isEqualTo -1 && !(currentWeapon player in [MACRO_KNIVES])}) exitWith {
+    [QEGVAR(common,inventoryTile), ["You need a can opener or tools to use this...", 10]] call CBA_fnc_localEvent;
 };
 
-if (_removeOnUse) then {[player, _itemName] call CBA_fnc_removeItem};
+if (_removeOnUse) then {
+    if ([_itemName, "CfgWeapons"] call EFUNC(common,configCheck)) then {
+        [player, _itemName] call CBA_fnc_removeItem;
+    } else {
+        [_itemName] call EFUNC(common,itemDecrement);
+    };
+};
 
 if (count _feedback >= 2) then {
-    private _feedbackText = format ["<t font='PuristaMedium' size='0.7'>%1</t>", _feedback select 0];
     private _feedbackTime = _feedback select 1;
-    [QEGVAR(common,inventoryTile), [_feedbackText, _feedbackTime]] call CBA_fnc_localEvent;
+    [QEGVAR(common,inventoryTile), [format [_feedback select 0, _feedbackTime]]] call CBA_fnc_localEvent;
 };
 
 if (_sound isNotEqualTo "") then {

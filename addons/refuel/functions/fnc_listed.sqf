@@ -17,12 +17,11 @@
 
 [{!isNull findDisplay 982384}, {
     private _list = findDisplay 982384 displayCtrl 1500;
-    private _purchaseButton = findDisplay 982384 displayCtrl 1600;
 
     [player] call EFUNC(common,nearVehicle) params ["", "_nearestVehicle"];
 
     if (_nearestVehicle isEqualTo []) exitWith {
-        _purchaseButton ctrlShow false;
+        [982384, [1600], false] call EFUNC(common,displayShowControls);
     };
 
     lbClear _list;

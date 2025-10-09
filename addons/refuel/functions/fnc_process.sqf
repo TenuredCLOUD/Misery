@@ -17,8 +17,6 @@
 */
 
 private _dialog = findDisplay 982384;
-private _purchaseButton = _dialog displayCtrl 1600;
-private _exitButton = _dialog displayCtrl 1601;
 private _fuelCost = 0;
 private _totalLiters = 0;
 private _found = false;
@@ -54,8 +52,7 @@ private _refuelInterrupt = _dialog displayAddEventHandler ["KeyDown", {
 
 if (_funds < _fuelCost) exitWith {
     ctrlSetText [1001, "You cannot afford this!"];
-    _purchaseButton ctrlShow true;
-    _exitButton ctrlShow true;
+    [982384, [1600, 1601], true] call EFUNC(common,displayShowControls);
     player setVariable [QCLASS(processRefuel), nil];
     _dialog displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
 };
@@ -63,8 +60,7 @@ if (_funds < _fuelCost) exitWith {
 if (fuel _nearestVehicle >= 1) exitWith {
     private _displayFull = format ["%1 fuel tank is full...", _displayName];
     ctrlSetText [1001, _displayFull];
-    _purchaseButton ctrlShow true;
-    _exitButton ctrlShow true;
+    [982384, [1600, 1601], true] call EFUNC(common,displayShowControls);
     player setVariable [QCLASS(processRefuel), nil];
     _dialog displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
 };
@@ -75,7 +71,7 @@ private _fundsToDeduct = _fuelCost;
 
 [{
     params ["_args", "_handle"];
-    _args params ["_nearestVehicle", "_dialog", "_purchaseButton", "_exitButton", "_displayName", "_refuelInterrupt", "_totalLiters", "_fundsToDeduct", "_fuelStep"];
+    _args params ["_nearestVehicle", "_dialog", "_displayName", "_refuelInterrupt", "_playerCash", "_totalLiters", "_fundsToDeduct", "_fuelStep"];
 
     call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
@@ -89,8 +85,7 @@ private _fundsToDeduct = _fuelCost;
         player setVariable [QCLASS(processRefuel), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
         ctrlSetText [1001, "You cannot afford this!"];
-        _purchaseButton ctrlShow true;
-        _exitButton ctrlShow true;
+        [982384, [1600, 1601], true] call EFUNC(common,displayShowControls);
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
@@ -117,10 +112,9 @@ private _fundsToDeduct = _fuelCost;
         _dialog displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
         private _displayFull = format ["%1 fuel tank is full...", _displayName];
         ctrlSetText [1001, _displayFull];
-        _purchaseButton ctrlShow true;
-        _exitButton ctrlShow true;
+        [982384, [1600, 1601], true] call EFUNC(common,displayShowControls);
         _handle call CBA_fnc_removePerFrameHandler;
     };
 }, 0.5, [
-_nearestVehicle, _dialog, _purchaseButton, _exitButton, _displayName, _refuelInterrupt, _totalLiters, _fundsToDeduct, _fuelStep
+_nearestVehicle, _dialog, _displayName, _refuelInterrupt, _playerCash, _totalLiters, _fundsToDeduct, _fuelStep
 ]] call CBA_fnc_addPerFrameHandler;

@@ -119,7 +119,10 @@
 #define MACRO_CRAFTINGSTATIONS "Land_Workbench_01_F", "Land_PortableDesk_01_olive_F"
 #define MACRO_ARTIFACTS QCLASS(artifact_01), QCLASS(artifact_02), QCLASS(artifact_03), QCLASS(artifact_04), QCLASS(artifact_05), QCLASS(artifact_06), QCLASS(artifact_07), QCLASS(artifact_08), QCLASS(artifact_09), QCLASS(artifact_10)
 
+#define MACRO_CANTOOLS QCLASS(canOpener), QCLASS(guttingKnife), "rvg_guttingKnife", "rvg_canOpener"
+
 #define MACRO_KNIVES \
+QCLASS(guttingKnife), \
 "Weap_melee_knife", \
 "Knife_kukri", \
 "Knife_m3", \
@@ -159,6 +162,11 @@
 #define MACRO_FACTIONS west, east, civilian, independent
 #define MACRO_FACTIONS_BASE_CLASS "B_Survivor_F", "O_G_Survivor_F", "C_man_1", "I_G_Survivor_F"
 
+// Animal processing / Field dressing
+#define MACRO_FIELDDRESS_SKINSOUNDS QEGVAR(audio,sound_skinning01), QEGVAR(audio,sound_skinning02), QEGVAR(audio,sound_skinning03)
+#define MACRO_FIELDDRESS_SAWSOUNDS QEGVAR(audio,sound_boneSaw), QEGVAR(audio,sound_cut01), QEGVAR(audio,sound_cut02), QEGVAR(audio,sound_cut03)
+#define MACRO_FIELDDRESS_ANIMALTYPES "Sheep_random_F", "Goat_random_F", "Cock_random_F", "Hen_random_F", "Rabbit_F"
+
 // Player Status
 #define MACRO_PLAYER_DEFAULTS_HIGH 1
 #define MACRO_PLAYER_DEFAULTS_LOW 0
@@ -169,7 +177,7 @@
 
 // Calculations - Radiation
 #define MACRO_BASE_DOSE 10
-#define MACRO_RADIATION_NUTRITIONLOSS(arg) ((arg) / 100) / 10
+#define MACRO_RADIATION_NUTRITIONLOSS(arg) ((arg) / 10) / 10
 #define MACRO_RADIATION_STAMINALOSS(arg) ((arg) / 10) / 10
 
 // Calculations - Temperature

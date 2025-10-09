@@ -41,7 +41,5 @@ if (GVAR(maxCarryMass) isNotEqualTo -1) then {
     _encumbrance ctrlSetText format ["Encumbrance: %1Kg ~ %2Lb(s)", _currentMass, round (_currentMass * 2.205)];
     _encumbranceBar progressSetPosition (_currentMass / GVAR(maxCarryMass));
 } else {
-    {
-        findDisplay 982389 displayCtrl _x ctrlShow false;
-    } forEach [1005, 1800];
+    [982389, [1005, 1800], false] call EFUNC(common,displayShowControls);
 };

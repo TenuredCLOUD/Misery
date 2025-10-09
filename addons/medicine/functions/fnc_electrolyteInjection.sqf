@@ -14,25 +14,6 @@
  *
 */
 
-fnc_electrolyte = {
-
-params ["_c", "_text"];
-
-if (!hasInterface || {!alive player}) exitWith {};
-if (_c isEqualTo 0) exitWith {titleText [_text, "PLAIN DOWN"];}; //exit loop
-player setVariable [QEGVAR(survival,thirst), (_MThirst + 5)];
-_c = _c - 1;
-
-[{ _this call fnc_electrolyte;}, [_c, _text], 10] call CBA_fnc_waitAndExecute;
-};
-
-if (!hasInterface || {!alive player}) exitWith {};
-
-private _MThirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH];
-
-titleText ["You inject the Electrolyte solution...", "PLAIN DOWN"];
-
-player removeItem QCLASS(electrolyte);
-private _c = 10;
-[{ _this call fnc_electrolyte;}, [_c, "The Electrolyte injection has worn off..."], 10] call CBA_fnc_waitAndExecute;
-
+[{
+    [0.5, "thirst"] call EFUNC(common,addStatusModifier);
+}, [], 15] call CBA_fnc_waitAndExecute;

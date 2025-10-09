@@ -19,8 +19,7 @@
 [{!isNull findDisplay 982380}, {
 private _list = findDisplay 982380 displayCtrl 1500;
 
-private _progressBar = findDisplay 982380 displayCtrl 1010;
-_progressBar ctrlShow false; // Hide progresss bar on GUI load
+[982380, [1010], false] call EFUNC(common,displayShowControls);
 
 lbClear _list;
 

@@ -36,14 +36,10 @@ if (!([_requiredItems] call FUNC(canCraftCheck))) exitWith {
     ctrlSetText [1001, "You don’t have the required items..."];
 };
 
-private _craftButton = _dialog displayCtrl 1600;
-private _recipeButton = _dialog displayCtrl 1601;
-private _exitButton = _dialog displayCtrl 1602;
 private _progressBar = _dialog displayCtrl 1010;
-_craftButton ctrlShow false;
-_recipeButton ctrlShow false;
-_exitButton ctrlShow false;
-_progressBar ctrlShow true;
+
+[982376, [1600, 1601, 1602], false] call EFUNC(common,displayShowControls);
+[982376, [1010], true] call EFUNC(common,displayShowControls);
 
 player playAction "Gear";
 
@@ -61,7 +57,7 @@ private _craftInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key"];
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QGVAR(isCrafting), false];
-        _progressBar ctrlShow false;
+        [982376, [1010], false] call EFUNC(common,displayShowControls);
         if (_soundSource isNotEqualTo objNull) then {
             deleteVehicle _soundSource;
         };
@@ -75,15 +71,13 @@ private _currentStep = 0;
 
 [{
     params ["_args", "_handle"];
-    _args params ["_requiredItems", "_outputItem", "_outputCount", "_toBeReplaced", "_outputXP", "_dialog", "_craftButton", "_recipeButton", "_exitButton", "_craftInterrupt", "_totalSteps", "_currentStep", "_displayName", "_progressBar", "_soundSource"];
+    _args params ["_requiredItems", "_outputItem", "_outputCount", "_toBeReplaced", "_outputXP", "_dialog", "_craftInterrupt", "_totalSteps", "_currentStep", "_displayName", "_progressBar", "_soundSource"];
 
     if (!(player getVariable [QGVAR(isCrafting), false]) || !alive player) exitWith {
         player setVariable [QGVAR(isCrafting), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _craftInterrupt];
-        _craftButton ctrlShow true;
-        _recipeButton ctrlShow true;
-        _exitButton ctrlShow true;
-        _progressBar ctrlShow false;
+        [982376, [1600, 1601, 1602], true] call EFUNC(common,displayShowControls);
+        [982376, [1010], false] call EFUNC(common,displayShowControls);
         if (_soundSource isNotEqualTo objNull) then {
             deleteVehicle _soundSource;
         };
@@ -131,10 +125,8 @@ private _currentStep = 0;
         _progressBar progressSetPosition 1;
         player setVariable [QGVAR(isCrafting), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _craftInterrupt];
-        _craftButton ctrlShow true;
-        _recipeButton ctrlShow true;
-        _exitButton ctrlShow true;
-        _progressBar ctrlShow false;
+        [982376, [1600, 1601, 1602], true] call EFUNC(common,displayShowControls);
+        [982376, [1010], false] call EFUNC(common,displayShowControls);
         if (_soundSource isNotEqualTo objNull) then {
             deleteVehicle _soundSource;
         };
@@ -146,6 +138,5 @@ private _currentStep = 0;
     };
 }, 0.5, [
     _requiredItems, _outputItem, _outputCount, _toBeReplaced, _outputXP,
-    _dialog, _craftButton, _recipeButton, _exitButton, _craftInterrupt,
-    _totalSteps, _currentStep, _displayName, _progressBar, _soundSource
+    _dialog, _craftInterrupt, _totalSteps, _currentStep, _displayName, _progressBar, _soundSource
 ]] call CBA_fnc_addPerFrameHandler;

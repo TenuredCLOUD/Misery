@@ -1,6 +1,7 @@
 PREP(addStatusModifier);
 PREP(buildingPositions);
 PREP(buildingPositionsInside);
+PREP(chromaticEffect);
 PREP(combatLogPrevention);
 PREP(configCheck);
 PREP(countItem);
@@ -27,6 +28,7 @@ PREP(lowerCaseArray);
 PREP(menuBlurEffect);
 PREP(modLoadedPrep);
 PREP(nearBuilding);
+PREP(nearCorpse);
 PREP(nearCraftingStation);
 PREP(nearEntities);
 PREP(nearFire);

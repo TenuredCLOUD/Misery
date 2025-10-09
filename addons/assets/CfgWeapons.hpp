@@ -129,6 +129,19 @@ class CfgWeapons {
         };
     };
 
+    class CLASS(antidote): CLASS(ItemCore) {
+        displayName = "Antidote injection";
+        descriptionShort = "- extremely efficient medical injection";
+        picture = QPATHTOF(data\icons\antidote.paa);
+        model = "a3\props_f_enoch\military\decontamination\antidotekit_01_f.p3d";
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 5;
+        };
+    };
+
     class CLASS(randomMedication): CLASS(ItemCore) {
         displayName = "$STR_MISERY_RANDOMMEDICATION_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_RANDOMMEDICATION_DESCRIPTION";
@@ -179,24 +192,37 @@ class CfgWeapons {
         };
     };
 
-    class CLASS(bearEnergy): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_BEARENERGY_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_BEARENERGY_DESCRIPTION";
-        picture = QPATHTOF(data\icons\Bearstrength.paa);
-        model = QPATHTOF(data\models\Bearenergy.p3d);
+    class CLASS(energyDrink): CLASS(ItemCore) {
+        displayName = "Energy drink";
+        descriptionShort = "- energy drink";
+        picture = QPATHTOF(data\icons\energyDrink.paa);
+        model = "a3\structures_f\items\food\can_v3_f.p3d";
         scope = 2;
         scopeCurator = 2;
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 8;
+            mass = 4;
         };
     };
 
-    class CLASS(sodaCan): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_BEARENERGY_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_BEARENERGY_DESCRIPTION";
-        picture = QPATHTOF(data\icons\Bearstrength.paa);
-        model = QPATHTOF(data\models\Pepsi_Soda.p3d);
+    class CLASS(soda_1): CLASS(ItemCore) {
+        displayName = "Soda";
+        descriptionShort = "- can of soda";
+        picture = QPATHTOF(data\icons\soda_1.paa);
+        model = "a3\structures_f\items\food\can_v2_f.p3d";
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 4;
+        };
+    };
+
+    class CLASS(soda_2): CLASS(ItemCore) {
+        displayName = "Soda";
+        descriptionShort = "- can of soda";
+        picture = QPATHTOF(data\icons\soda_2.paa);
+        model = "a3\structures_f\items\food\can_v1_f.p3d";
         scope = 2;
         scopeCurator = 2;
 
@@ -245,8 +271,8 @@ class CfgWeapons {
     };
 
     class CLASS(cereal): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_BEARENERGY_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_BEARENERGY_DESCRIPTION";
+        displayName = "Cereal";
+        descriptionShort = "- box of cereal";
         picture = QPATHTOF(data\icons\cereal.paa);
         model = "a3\structures_f_epa\items\food\cerealsbox_f.p3d";
         scope = 2;
@@ -258,8 +284,8 @@ class CfgWeapons {
     };
 
     class CLASS(orange): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_BEARENERGY_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_BEARENERGY_DESCRIPTION";
+        displayName = "Orange";
+        descriptionShort = "- fruit";
         picture = QPATHTOF(data\icons\orange.paa);
         model = "a3\props_f_orange\humanitarian\supplies\orange_01_f.p3d";
         scope = 2;
@@ -270,9 +296,9 @@ class CfgWeapons {
         };
     };
 
-    class CLASS(dryMilk): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_BEARENERGY_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_BEARENERGY_DESCRIPTION";
+    class CLASS(powderedMilk): CLASS(ItemCore) {
+        displayName = "Powdered milk";
+        descriptionShort = "- packaged dry milk";
         picture = QPATHTOF(data\icons\drymilk.paa);
         model = "a3\structures_f_epa\items\food\powderedmilk_f.p3d";
         scope = 2;
@@ -284,8 +310,8 @@ class CfgWeapons {
     };
 
     class CLASS(cannedBacon): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_BEARENERGY_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_BEARENERGY_DESCRIPTION";
+        displayName = "Canned bacon";
+        descriptionShort = "- canned cooked bacon";
         picture = QPATHTOF(data\icons\CannedBacon.paa);
         model = "a3\structures_f\items\food\tacticalbacon_f.p3d";
         scope = 2;
@@ -296,9 +322,9 @@ class CfgWeapons {
         };
     };
 
-    class CLASS(cannedBeans): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_BEARENERGY_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_BEARENERGY_DESCRIPTION";
+    class CLASS(bakedBeans): CLASS(ItemCore) {
+        displayName = "Baked beans";
+        descriptionShort = "- canned baked beans";
         picture = QPATHTOF(data\icons\CannedBeans.paa);
         model = "a3\structures_f_epa\items\food\bakedbeans_f.p3d";
         scope = 2;
@@ -503,17 +529,16 @@ class CfgWeapons {
         };
     };
 
-    class CLASS(castIronPot): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_CASTIRONPOT_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_CASTIRONPOT_DESCRIPTION";
-        picture = QPATHTOF(data\icons\castironpot.paa);
-        model = QPATHTOF(data\models\CastIron_Pot.p3d);
-        hiddenSelectionsMaterials[] = {QPATHTOF(data\rvmats\iron.rvmat)};
+    class CLASS(tinContainer): CLASS(ItemCore) {
+        displayName = "Tin container";
+        descriptionShort = "- camping tin for cooking";
+        picture = QPATHTOF(data\icons\tinContainer.paa);
+        model = "a3\structures_f_epa\items\vessels\tincontainer_f.p3d";
         scope = 2;
         scopeCurator = 2;
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 90;
+            mass = 50;
         };
     };
 

@@ -1,15 +1,6 @@
 private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 
 [
-    QGVAR(ailments),
-    "CHECKBOX",
-    ["Ailments", "Enable Ailments? (Enables bacterial infections, parasites, etc...)"],
-    _category,
-    false,
-    1
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(turbidWaterChance),
     "SLIDER",
     ["Turbid water disease chance", "% chance Turbid water consumption causes disease (0 to disable)"],
