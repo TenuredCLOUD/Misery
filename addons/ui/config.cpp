@@ -37,8 +37,10 @@ class CfgPatches {
 #include "menus\forge.hpp"
 #include "menus\furniture.hpp"
 #include "menus\vehicleFurniture.hpp"
+#include "menus\refuelVehicle.hpp"
 
 class RscTitles {
     #include "menus\geiger.hpp"
     #include "menus\eru.hpp"
+    #include "menus\vehicleStats.hpp"
 };
