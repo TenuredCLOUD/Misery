@@ -114,16 +114,45 @@
 "I_MBT_03_cannon_F"]
 
 // Item List Macros
-#define MACRO_FUELSTATIONS "Land_fs_feed_F", "Land_FuelStation_Feed_F", "Land_Ind_TankSmall2", "Land_Ind_TankSmall2_EP1", "Land_A_FuelStation_Feed", "Land_fuelstation", "Land_Ind_FuelStation_Feed_EP1"
+#define MACRO_FUELSTATIONS_LAND "Land_fs_feed_F", "Land_FuelStation_Feed_F", "Land_Ind_TankSmall2", "Land_Ind_TankSmall2_EP1", "Land_A_FuelStation_Feed", "Land_fuelstation", "Land_Ind_FuelStation_Feed_EP1"
+#define MACRO_FUELSTATIONS_AIR "B_Slingload_01_Fuel_F", "StorageBladder_01_fuel_forest_F", "StorageBladder_01_fuel_sand_F", "Land_Pod_Heli_Transport_04_fuel_F"
 #define MACRO_CRAFTINGSTATIONS "Land_Workbench_01_F", "Land_PortableDesk_01_olive_F"
 #define MACRO_ARTIFACTS QCLASS(artifact_01), QCLASS(artifact_02), QCLASS(artifact_03), QCLASS(artifact_04), QCLASS(artifact_05), QCLASS(artifact_06), QCLASS(artifact_07), QCLASS(artifact_08), QCLASS(artifact_09), QCLASS(artifact_10)
-#define MACRO_KNIVES QCLASS(guttingKnife), "Weap_melee_knife", "Knife_kukri", "Knife_m3", "UNSC_Knife", "UNSC_Knife_reversed", "WBK_survival_weapon_4", "WBK_survival_weapon_4_r", "WBK_survival_weapon_3", "WBK_survival_weapon_3_r"
+
+#define MACRO_KNIVES \
+"Weap_melee_knife", \
+"Knife_kukri", \
+"Knife_m3", \
+"UNSC_Knife", \
+"UNSC_Knife_reversed", \
+"WBK_survival_weapon_4", \
+"WBK_survival_weapon_4_r", \
+"WBK_survival_weapon_3", \
+"WBK_survival_weapon_3_r", \
+"tsp_meleeWeapon_ak", \
+"tsp_meleeWeapon_kabar", \
+"tsp_meleeWeapon_kitchen", \
+"tsp_meleeWeapon_m9", \
+"tsp_meleeWeapon_okc", \
+"tsp_meleeWeapon_socp", \
+"tsp_meleeWeapon_sog" \
+
+#define MACRO_AXES \
+"WBK_axe", \
+"WBK_brush_axe", \
+"WBK_craftedAxe", \
+"FireAxe", \
+"Axe", \
+"tsp_meleeWeapon_splittingaxe", \
+"tsp_meleeWeapon_fireaxe"
+
 #define MACRO_FIRETYPES "MetalBarrel_burning_F", "Land_Campfire_F", "Land_FirePlace_F", "FirePlace_burning_F"
 #define MACRO_FIRE_TINDER QCLASS(tinder), "acex_intelitems_notepad", "rvg_money", "rvg_notepad", "rvg_docFolder"
 #define MACRO_FIRE_FUEL QCLASS(woodensticks), QCLASS(firewood)
 #define MACRO_FIRE_IGNITION QCLASS(lighter), QCLASS(matchBox)
 #define MACRO_VEHICLETYPES "Car", "Tank", "Air", "Ship"
 #define MACRO_BUILDINGTYPES "House", "Building"
+#define MACRO_FOLIAGETYPES "TREE", "SMALL TREE", "BUSH"
 #define MACRO_GEMTYPES  QCLASS(malachite), QCLASS(ruby), QCLASS(sapphire), QCLASS(amethyst), QCLASS(diamond), QCLASS(emerald)
 #define MACRO_RESPIRATOR_MASKS "g_airpurifyingrespirator_01_f", "g_airpurifyingrespirator_02_black_f", "g_airpurifyingrespirator_02_olive_f", "g_airpurifyingrespirator_02_sand_f"
 #define MACRO_RESPIRATOR_MASKS_NOFILTER "g_airpurifyingrespirator_01_nofilter_f", "g_airpurifyingrespirator_02_black_nofilter_f", "g_airpurifyingrespirator_02_olive_nofilter_f", "g_airpurifyingrespirator_02_sand_nofilter_f"

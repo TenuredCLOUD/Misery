@@ -9,15 +9,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
         "Enable Extra Character Immersion? (Enables Player coughing, sneezing when sick or cold, and stomach growling if you are starting to get hungry.)"
     ],
     _category,
-    false, 1,
-    {
-        params ["_value"];
-        if (hasInterface) then {
-            call EFUNC(survival,hungerImmersion);
-            call EFUNC(temperature,coldImmersion);
-            call EFUNC(temperature,feverImmersion);
-        };
-    }
+    false, 1, {}, true
 ] call CBA_fnc_addSetting;
 
 // Enhanced Inventory Sounds
@@ -67,6 +59,17 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
         params ["_value"];
         GVAR(ambientSoundScapeExtras) = parseSimpleArray _value;
     }
+] call CBA_fnc_addSetting;
+
+// Ambient Music
+[
+    QGVAR(ambientMusicEnabled),
+    "CHECKBOX",
+    [
+        "Ambient music", "Enable Misery's OST (utilize Ambient Music array for more music to be played)"
+    ],
+    _category,
+    false, 1, {}, true
 ] call CBA_fnc_addSetting;
 
 [

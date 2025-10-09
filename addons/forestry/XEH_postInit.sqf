@@ -1,46 +1,13 @@
 #include "script_component.hpp"
 
 if (GVAR(woodCollection)) then {
-    [
-        "forestryChopWood_menu",
-        localize "STR_MISERY_CHOPWOOD",
-        {call EFUNC(common,nearTreeAxe)},
-        {
-            [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-            if ([["WBK_axe","WBK_brush_axe","WBK_craftedAxe","FireAxe","Axe",QCLASS(woodaxe)]] call EFUNC(common,hasItem)) then {
-                [] call FUNC(axeAction);
-            } else {
-                private _noAxeForWoodStr = format ["<t font='PuristaMedium' size='0.7'>%1</t>", localize "STR_MISERY_NOAXEFORWOODNOTI"];
-                [QEGVAR(common,tileText), _noAxeForWoodStr] call CBA_fnc_localEvent;
-            };
-        },
-        "",
-        QPATHTOEF(icons,data\firewood_ca.paa),
-        ""
-    ] call EFUNC(actions,addAction);
 
-    [
-        "forestrySawWood_menu",
-        localize "STR_MISERY_SAWWOOD",
-        {call EFUNC(common,nearTreeSaw)},
-        {
-            [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-            if !([[QCLASS(chainsaw)]] call EFUNC(common,hasItem)) then {
-                private _noChainsawForWoodStr = format ["<t font='PuristaMedium' size='0.7'>%1</t>", localize "STR_MISERY_NOCHAINSAWFORWOODNOTI"];
-                [QEGVAR(common,tileText), _noChainsawForWoodStr] call CBA_fnc_localEvent;
-            } else {
-                [] call FUNC(sawAction);
-            };
-        },
-        "",
-        QPATHTOEF(icons,data\chainsaw_ca.paa),
-        ""
-    ] call EFUNC(actions,addAction);
+    GVAR(gatheredPositions) = [];
 
     [
         "forestryCollectWood_menu",
         localize "STR_MISERY_COLLECTWOOD",
-        {call EFUNC(common,nearTree)},
+        {([player] call EFUNC(common,nearTree)) select 0},
         {
             [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
             [] call FUNC(forageTreeAction);
@@ -57,15 +24,16 @@ if (GVAR(woodCollection)) then {
         {
             [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
             if !([[QCLASS(woodenlog)]] call EFUNC(common,hasItem)) exitWith {
-                private _noWoodLogForSplitStr = format ["<t font='PuristaMedium' size='0.7'>%1</t>", localize "STR_MISERY_NOWOODENLOGSFORSPLITTING"];
-                [QEGVAR(common,tileText), _noWoodLogForSplitStr] call CBA_fnc_localEvent;
+                [QEGVAR(common,tileText), localize "STR_MISERY_NOWOODENLOGSFORSPLITTING"] call CBA_fnc_localEvent;
             };
 
-            if ([[QCLASS(chainsaw), "WBK_axe", "WBK_brush_axe", "WBK_craftedAxe", "FireAxe", "Axe", QCLASS(woodaxe)]] call EFUNC(common,hasItem)) then {
-                [] call FUNC(splitWoodAction);
+            private _hasAxe = [[QCLASS(woodaxe), MACRO_AXES]] call EFUNC(common,hasItem);
+            private _hasSaw = [[QCLASS(chainsaw)]] call EFUNC(common,hasItem);
+
+            if (_hasAxe || _hasSaw) then {
+                [_hasAxe, _hasSaw] call FUNC(splitWoodAction);
             } else {
-                private _noAxeOrSawForLogStr = format ["<t font='PuristaMedium' size='0.7'>%1</t>", localize "STR_MISERY_NOWOODAXEORCHAINSAWNOTI"];
-                [QEGVAR(common,tileText), _noAxeOrSawForLogStr] call CBA_fnc_localEvent;
+                [QEGVAR(common,tileText), localize "STR_MISERY_NOWOODAXEORCHAINSAWNOTI"] call CBA_fnc_localEvent;
             };
         },
         "",
@@ -75,6 +43,10 @@ if (GVAR(woodCollection)) then {
 };
 
 if (GVAR(foraging)) then {
+
+    GVAR(tinderPositions) = [];
+    GVAR(digPositions) = [];
+
     [
         "foraging_menu",
         localize "STR_MISERY_FORAGE",
