@@ -119,7 +119,10 @@
 #define MACRO_CRAFTINGSTATIONS "Land_Workbench_01_F", "Land_PortableDesk_01_olive_F"
 #define MACRO_ARTIFACTS QCLASS(artifact_01), QCLASS(artifact_02), QCLASS(artifact_03), QCLASS(artifact_04), QCLASS(artifact_05), QCLASS(artifact_06), QCLASS(artifact_07), QCLASS(artifact_08), QCLASS(artifact_09), QCLASS(artifact_10)
 
+#define MACRO_CANTOOLS QCLASS(canOpener), QCLASS(guttingKnife), "rvg_guttingKnife", "rvg_canOpener"
+
 #define MACRO_KNIVES \
+QCLASS(guttingKnife), \
 "Weap_melee_knife", \
 "Knife_kukri", \
 "Knife_m3", \
