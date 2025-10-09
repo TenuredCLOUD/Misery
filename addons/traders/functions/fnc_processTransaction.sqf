@@ -27,7 +27,8 @@ private _shopFunds = _shop select 3;
 private _selectedItem = _list lbData _currSelection;
 private _itemIndex = _items findIf {(_x select 0) isEqualTo _selectedItem};
 private _itemData = _items select _itemIndex;
-private _playerFunds = player getVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
+
+call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
 if (isNull _dialog) exitWith {};
 
@@ -49,7 +50,7 @@ private _sellPrice = [_basePrice, _itemData select 2, _minCostFactor, _maxCostFa
 
 switch (true) do {
     case (_buttonAction isEqualTo "Buy"): {
-        if (_playerFunds < _buyPrice) exitWith {
+        if (_funds < _buyPrice) exitWith {
             ctrlSetText [1001, "You cannot afford this!"];
         };
         if (_stock isEqualTo 0) exitWith {
@@ -60,7 +61,7 @@ switch (true) do {
         };
         _itemData set [2, _stock - 1];
         _trader setVariable [QGVAR(shop), _shop, true];
-        player setVariable [QEGVAR(currency,funds), _playerFunds - _buyPrice, true];
+        [-_buyPrice] call EFUNC(currency,modifyMoney);
         _shop set [3, _shopFunds + _buyPrice];
         _trader setVariable [QGVAR(shop), _shop, true];
         if (_purchaseCode isNotEqualTo "") then {
@@ -81,7 +82,7 @@ switch (true) do {
         };
         _itemData set [2, _stock + 1];
         _trader setVariable [QGVAR(shop), _shop, true];
-        player setVariable [QEGVAR(currency,funds), _playerFunds + _sellPrice, true];
+        [_sellPrice] call EFUNC(currency,modifyMoney);
         _shop set [3, _shopFunds - _sellPrice];
         _trader setVariable [QGVAR(shop), _shop, true];
         if (_itemName in magazines player) then {
