@@ -117,7 +117,7 @@
 #define MACRO_FUELSTATIONS "Land_fs_feed_F", "Land_FuelStation_Feed_F", "Land_Ind_TankSmall2", "Land_Ind_TankSmall2_EP1", "Land_A_FuelStation_Feed", "Land_fuelstation", "Land_Ind_FuelStation_Feed_EP1"
 #define MACRO_CRAFTINGSTATIONS "Land_Workbench_01_F", "Land_PortableDesk_01_olive_F"
 #define MACRO_ARTIFACTS QCLASS(artifact_01), QCLASS(artifact_02), QCLASS(artifact_03), QCLASS(artifact_04), QCLASS(artifact_05), QCLASS(artifact_06), QCLASS(artifact_07), QCLASS(artifact_08), QCLASS(artifact_09), QCLASS(artifact_10)
-#define MACRO_KNIVES "Weap_melee_knife", "Knife_kukri", "Knife_m3", "UNSC_Knife", "UNSC_Knife_reversed", "WBK_survival_weapon_4", "WBK_survival_weapon_4_r", "WBK_survival_weapon_3", "WBK_survival_weapon_3_r"
+#define MACRO_KNIVES QCLASS(guttingKnife), "Weap_melee_knife", "Knife_kukri", "Knife_m3", "UNSC_Knife", "UNSC_Knife_reversed", "WBK_survival_weapon_4", "WBK_survival_weapon_4_r", "WBK_survival_weapon_3", "WBK_survival_weapon_3_r"
 #define MACRO_FIRETYPES "MetalBarrel_burning_F", "Land_Campfire_F", "Land_FirePlace_F", "FirePlace_burning_F"
 #define MACRO_FIRE_TINDER QCLASS(tinder), "acex_intelitems_notepad", "rvg_money", "rvg_notepad", "rvg_docFolder"
 #define MACRO_FIRE_FUEL QCLASS(woodensticks), QCLASS(firewood)
@@ -129,6 +129,11 @@
 #define MACRO_RESPIRATOR_MASKS_NOFILTER "g_airpurifyingrespirator_01_nofilter_f", "g_airpurifyingrespirator_02_black_nofilter_f", "g_airpurifyingrespirator_02_olive_nofilter_f", "g_airpurifyingrespirator_02_sand_nofilter_f"
 #define MACRO_FACTIONS west, east, civilian, independent
 #define MACRO_FACTIONS_BASE_CLASS "B_Survivor_F", "O_G_Survivor_F", "C_man_1", "I_G_Survivor_F"
+
+// Animal processing / Field dressing
+#define MACRO_FIELDDRESS_SKINSOUNDS QEGVAR(audio,sound_skinning01), QEGVAR(audio,sound_skinning02), QEGVAR(audio,sound_skinning03)
+#define MACRO_FIELDDRESS_SAWSOUNDS QEGVAR(audio,sound_boneSaw), QEGVAR(audio,sound_cut01), QEGVAR(audio,sound_cut02), QEGVAR(audio,sound_cut03)
+#define MACRO_FIELDDRESS_ANIMALTYPES "Sheep_random_F", "Goat_random_F", "Cock_random_F", "Hen_random_F", "Rabbit_F"
 
 // Player Status
 #define MACRO_PLAYER_DEFAULTS_HIGH 1

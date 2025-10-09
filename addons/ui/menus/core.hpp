@@ -20,7 +20,7 @@ class CLASS(RscProgress)
     deletable = 0;
     fade = 0;
     access = 0;
-    type = CT_PROGRESS;
+    type = 8;
     style = ST_HORIZONTAL;
     colorFrame[] = {1,1,1,0.8};
     colorBar[] = {1,1,1,1};
@@ -37,7 +37,7 @@ class CLASS(RscProgress_V)
     deletable = 0;
     fade = 0;
     access = 0;
-    type = CT_PROGRESS;
+    type = 8;
     style = ST_VERTICAL;
     colorFrame[] = {1,1,1,0.8};
     colorBar[] = {1,1,1,1};
@@ -53,7 +53,7 @@ class CLASS(RscPicture)
 {
     access = 0;
     idc = -1;
-    type = CT_STATIC;
+    type = 0;
     style = ST_PICTURE;
     colorBackground[] = {0,0,0,0};
     colorText[] = {1,1,1,1};
