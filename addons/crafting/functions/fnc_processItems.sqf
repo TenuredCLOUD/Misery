@@ -111,7 +111,7 @@ private _currentStep = 0;
             private _itemToReplace = _toBeReplaced select 0;
             private _chance = _toBeReplaced select 1;
             private _replacementItem = _toBeReplaced select 2;
-            if (random 1 < _chance) then {
+            if ([_chance] call EFUNC(common,rollChance)) then {
                 [player, _itemToReplace] call CBA_fnc_removeItem;
                 [player, _replacementItem, true] call CBA_fnc_addItem;
             };

@@ -29,8 +29,7 @@ if (GVAR(lineOut) <= 0 && GVAR(fishOn)) then {
     _fishHolder setPos (player modelToWorld [0.3, -0.3, 0]);
 
     // Random bait loss from fish digesting it
-    private _random = [1, 2] call BIS_fnc_randomInt;
-    if (_random isEqualTo 1) then {
+    if ([50] call EFUNC(common,rollChance)) then {
         [player, QCLASS(worms)] call CBA_fnc_removeItem;
     };
     [] call FUNC(exit);

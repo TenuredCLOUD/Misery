@@ -31,6 +31,13 @@
         cost = 0; \
         vehicleClass = QCLASS(Objects)
 
+#define MACRO_THING_COMMON \
+    scope = 2; \
+    scopeCurator = 2; \
+    destrType = "DestructNo"; \
+    cost = 0; \
+    vehicleClass = QCLASS(Objects)
+
 #define MACRO_ADDITEM(ITEM,COUNT) \
     class TransportItems { \
         class _xx_##ITEM { \

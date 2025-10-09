@@ -44,7 +44,7 @@ class CfgVehicles {
         armor = 2000;
         author = "Model credits: RBG_illustrations - Reworked by TenuredCLOUD";
         displayName = "$STR_MISERY_FORGE_DISPLAYNAME";
-        MACRO_HOUSE_COMMON;
+        MACRO_THING_COMMON;
         mapSize = 3;
         model = QPATHTOF(data\models\forge.p3d);
         textSingular = "Forge";
@@ -57,15 +57,5 @@ class CfgVehicles {
         mapSize = 2;
         model = QPATHTOF(data\models\medievalanvil.p3d);
         textSingular = "Anvil";
-    };
-    class CLASS(jetFuel_Russian): House_F {
-        armor = 2000;
-        author = "Model credits: Tanks LuddePudde - Fuel pump castleonsandYT - Reworked by TenuredCLOUD";
-        displayName = "$STR_MISERY_JETFUELRU_DISPLAYNAME";
-        hiddenSelectionsMaterials[] = {QPATHTOF(data\rvmats\fueltanks.rvmat)};
-        MACRO_HOUSE_COMMON;
-        mapSize = 3;
-        model = QPATHTOF(data\models\twinjetfueltank.p3d);
-        textSingular = "Jet Fuel Station";
     };
 };

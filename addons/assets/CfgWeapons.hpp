@@ -3,19 +3,6 @@ class CfgWeapons {
     class CBA_MiscItem_ItemInfo;
     class CLASS(ItemCore): CBA_MiscItem {};
 
-    class CLASS(pickaxe): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_PICKAXE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_PICKAXE_DESCRIPTION";
-        picture = QPATHTOF(data\icons\pickaxe.paa);
-        model = QPATHTOF(data\models\pickaxe.p3d);
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 85;
-        };
-    };
-
     class CLASS(pickaxe_Broken): CLASS(ItemCore) {
         displayName = "$STR_MISERY_PICKAXEBROKEN_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_PICKAXEBROKEN_DESCRIPTION";
@@ -26,6 +13,18 @@ class CfgWeapons {
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 85;
+        };
+    };
+
+    class CLASS(pickaxeHead): CLASS(ItemCore) {
+        displayName = "PickAxe Head";
+        descriptionShort = "the head of a pickaxe, useless without a handle";
+        picture = QPATHTOF(data\icons\pickHead.paa);
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 45;
         };
     };
 

@@ -104,12 +104,11 @@ ctrlSetText [1001, "Line cast!"];
 
     // Random chance for snag or fish bite
     if (!GVAR(isSnagged) && !GVAR(fishOn)) then {
-        private _randomHookEvent = round random 100;
         switch (true) do {
-            case (_randomHookEvent < 1): {
+            case ([1] call EFUNC(common,rollChance)): {
                 GVAR(isSnagged) = true;
             };
-            case (_randomHookEvent > 98): {
+            case ([2] call EFUNC(common,rollChance)): {
                 GVAR(fishOn) = true;
                 GVAR(fishStrength) = random [0.3, 0.5, 0.7];
             };

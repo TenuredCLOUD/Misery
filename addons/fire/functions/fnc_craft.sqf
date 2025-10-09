@@ -154,11 +154,11 @@ private _currentStep = 0;
 
     if (_currentStep >= _totalSteps) then {
 
-        private _isSuccessful = round random 10 > 1;
+        private _isSuccessful = [90] call EFUNC(common,rollChance);
 
     // Rain check & chance to fail:
         if (rain > 0.3) then {
-            _isSuccessful = _isSuccessful && round random 10 > 5;
+            _isSuccessful = _isSuccessful && [50] call EFUNC(common,rollChance);
         };
 
     // Tinder and ignition source depletion:

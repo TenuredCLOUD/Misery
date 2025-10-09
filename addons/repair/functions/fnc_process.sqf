@@ -16,10 +16,11 @@
  * Public: No
 */
 
-private _playerCash = player getVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
 private _dialog = findDisplay 982386;
 private _repairPrice = 0;
 private _found = false;
+
+call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
 [player] call EFUNC(common,nearVehicle) params ["", "_nearestVehicle"];
 
@@ -46,7 +47,7 @@ private _repairsInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     };
 }];
 
-if (_playerCash < _repairPrice) exitWith {
+if (_funds < _repairPrice) exitWith {
     ctrlSetText [1001, "You cannot afford this!"];
     [982386, [1600, 1601], true] call EFUNC(common,displayShowControls);
     player setVariable [QCLASS(processRepairs), nil];
@@ -69,7 +70,7 @@ private _fundsToDeduct = _repairPrice;
     params ["_args", "_handle"];
     _args params ["_nearestVehicle", "_dialog", "_displayName", "_repairsInterrupt", "_playerCash", "_repairStep", "_fundsToDeduct"];
 
-    private _currentFunds = player getVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
+    call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
     if (!alive _nearestVehicle || !(player getVariable [QCLASS(processRepairs), false])) exitWith {
         player setVariable [QCLASS(processRepairs), nil];
@@ -77,7 +78,7 @@ private _fundsToDeduct = _repairPrice;
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
-    if (_playerCash < _fundsToDeduct) exitWith {
+    if (_funds < _fundsToDeduct) exitWith {
         player setVariable [QCLASS(processRepairs), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _repairsInterrupt];
         ctrlSetText [1001, "You cannot afford this!"];
@@ -97,11 +98,11 @@ private _fundsToDeduct = _repairPrice;
         (1 - (_currentDamage - _repairAmount)) * 100 toFixed 2,
         "%",
         EGVAR(currency,symbol),
-        [_currentFunds, 1, 2, true] call CBA_fnc_formatNumber
+        [_funds, 1, 2, true] call CBA_fnc_formatNumber
     ];
     ctrlSetText [1001, _displayedText];
 
-    player setVariable [QEGVAR(currency,funds), _currentFunds - _fundsToDeduct];
+    [-_fundsToDeduct] call EFUNC(currency,modifyMoney);
 
     if (damage _nearestVehicle <= 0) exitWith {
         player setVariable [QCLASS(processRepairs), nil];

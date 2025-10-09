@@ -174,6 +174,16 @@ class CfgMagazines {
         scope = 2;
     };
 
+    class CLASS(pickaxe): CLASS(FakeMagazine) {
+        count = 1000;
+        descriptionShort = "$STR_MISERY_PICKAXE_DESCRIPTION";
+        displayName = "$STR_MISERY_PICKAXE_DISPLAYNAME";
+        mass = 85;
+        model = QPATHTOF(data\models\pickaxe.p3d);
+        picture = QPATHTOF(data\icons\pickaxe.paa);
+        scope = 2;
+    };
+
     class CLASS(eru_On): CLASS(FakeMagazine) {
         ace_disableRepacking = 1;
         count = 100;

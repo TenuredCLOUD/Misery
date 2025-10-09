@@ -16,11 +16,12 @@
  * Public: No
 */
 
-private _playerCash = player getVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
 private _dialog = findDisplay 982384;
 private _fuelCost = 0;
 private _totalLiters = 0;
 private _found = false;
+
+call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
 [player] call EFUNC(common,nearVehicle) params ["", "_nearestVehicle"];
 
@@ -49,7 +50,7 @@ private _refuelInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     };
 }];
 
-if (_playerCash < _fuelCost) exitWith {
+if (_funds < _fuelCost) exitWith {
     ctrlSetText [1001, "You cannot afford this!"];
     [982384, [1600, 1601], true] call EFUNC(common,displayShowControls);
     player setVariable [QCLASS(processRefuel), nil];
@@ -72,7 +73,7 @@ private _fundsToDeduct = _fuelCost;
     params ["_args", "_handle"];
     _args params ["_nearestVehicle", "_dialog", "_displayName", "_refuelInterrupt", "_playerCash", "_totalLiters", "_fundsToDeduct", "_fuelStep"];
 
-    private _currentFunds = player getVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
+    call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
     if (!alive _nearestVehicle || !(player getVariable [QCLASS(processRefuel), false])) exitWith {
         player setVariable [QCLASS(processRefuel), nil];
@@ -80,7 +81,7 @@ private _fundsToDeduct = _fuelCost;
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
-    if (_playerCash < _fundsToDeduct) exitWith {
+    if (_funds < _fundsToDeduct) exitWith {
         player setVariable [QCLASS(processRefuel), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
         ctrlSetText [1001, "You cannot afford this!"];
@@ -100,11 +101,11 @@ private _fundsToDeduct = _fuelCost;
         (_currentFuel + _fuelToAdd) * 100 toFixed 2,
         "%",
         EGVAR(currency,symbol),
-        [_currentFunds, 1, 2, true] call CBA_fnc_formatNumber
+        [_funds, 1, 2, true] call CBA_fnc_formatNumber
     ];
     ctrlSetText [1001, _displayedText];
 
-    player setVariable [QEGVAR(currency,funds), _currentFunds - _fundsToDeduct];
+    [-_fundsToDeduct] call EFUNC(currency,modifyMoney);
 
     if (_currentFuel + _fuelToAdd >= 1) exitWith {
         player setVariable [QCLASS(processRefuel), nil];
