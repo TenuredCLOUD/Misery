@@ -139,9 +139,3 @@ private _displayedText = "";
 
     ctrlSetText [1001, format ["%1%2%3%2%4%2%5", _text, endl, [_vehicle] call EFUNC(common,getObjectData) select 0, _tanklvl, (fuel _vehicle) * 100]];
 }, 0.5, [_vehicle, _pumpInterrupt, _totalLiters, _text, _tanklvl, _displayedText]] call CBA_fnc_addPerFrameHandler;
-
-
-
-
-
-
