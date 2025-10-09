@@ -56,7 +56,7 @@ GVAR(handleEngine) = {
     };
 
     if ((_installedBatteries > 0) && _installedBatteries < _requiredBatteries) then {
-        if (random 1 > 0.5) then {
+        if ([50] call EFUNC(common,rollChance)) then {
             _vehicle engineOn false;
         };
     };
