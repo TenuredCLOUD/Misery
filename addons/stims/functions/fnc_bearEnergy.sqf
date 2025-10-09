@@ -14,15 +14,6 @@
  *
 */
 
-_MSleepiness = player getVariable [QEGVAR(survival,energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
-
-if (!hasInterface) exitWith {};
-
-  if (alive player) exitWith {
-
 if !(isMultiplayer) then {
-  player setVariable [QEGVAR(survival,energyDeficit), (_MSleepiness - 10)];
+    [-0.1, "energy"] call EFUNC(common,addStatusModifier);
 };
-
-};
-

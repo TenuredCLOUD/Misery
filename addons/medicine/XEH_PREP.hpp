@@ -1,4 +1,5 @@
 PREP(antibiotic);
+PREP(antidote);
 PREP(antiparasitic);
 PREP(caffetinTablets);
 PREP(caffieneTablets);
@@ -6,9 +7,11 @@ PREP(cenestin);
 PREP(charcoalTablets);
 PREP(clozapine);
 PREP(clozapineInjection);
+PREP(deconKit);
 PREP(electrolyteInjection);
 PREP(glucoseInjection);
 PREP(painPill);
+PREP(potassiumIodate);
 PREP(randomPharm);
 PREP(sleepingPill);
 PREP(thbdInjection);

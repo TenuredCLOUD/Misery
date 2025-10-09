@@ -50,12 +50,12 @@ GVAR(defaultLoadout) = [[[],[],[],[],[],[],"","",[],["ItemMap","","","ItemCompas
 
 [QGVAR(titleText), {
     params ["_text"];
-    titleText [format ["<t font='PuristaMedium'>%1</t>", _text], "PLAIN DOWN", -1, true, true];
+    titleText [format ["<t font='%1' size='%2'>%3</t>", UI_MACRO_FONT, GVAR(promptSizes), _text], "PLAIN DOWN", -1, true, true];
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(tileText), {
     params ["_text"];
-    private _formattedText = parseText format ["<t font='PuristaMedium' size='0.7'>%1</t>", _text];
+    private _formattedText = parseText format ["<t font='%1' size='%2'>%3</t>", UI_MACRO_FONT, GVAR(promptSizes), _text];
     [_formattedText, true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
 }] call CBA_fnc_addEventHandler;
 
@@ -64,7 +64,7 @@ GVAR(defaultLoadout) = [[[],[],[],[],[],[],"","",[],["ItemMap","","","ItemCompas
     private _display = findDisplay 982377;
     if (isNull _display) exitWith {};
     private _noteBox = _display displayCtrl 1022;
-    _noteBox ctrlSetStructuredText parseText _text;
+    _noteBox ctrlSetStructuredText parseText format ["<t font='%1' size='%2'>%3</t>", UI_MACRO_FONT, GVAR(promptSizes), _text];
 
     [{
         params ["_display", "_noteBox"];

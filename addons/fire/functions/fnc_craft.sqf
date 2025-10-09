@@ -75,11 +75,9 @@ switch (true) do {
 };
 
 // Disable buttons and show progress bar
-{
-    _display displayCtrl _x ctrlEnable false;
-} forEach [1600, 1601, 1602];
+[982388, [1600, 1601, 1602], false] call EFUNC(common,displayEnableControls);
 
-_progressBar ctrlShow true;
+[982388, [1010], true] call EFUNC(common,displayShowControls);
 
 // Determine fuel type for new fires
 if (!_isReignition) then {
@@ -136,9 +134,7 @@ private _currentStep = 0;
     if (!(player getVariable [QCLASS(isCraftingFire), false]) || !alive player) exitWith {
         player setVariable [QCLASS(isCraftingFire), nil];
         _display displayRemoveEventHandler ["KeyDown", _craftInterrupt];
-        {
-            _display displayCtrl _x ctrlEnable true;
-        } forEach [1600, 1601, 1602];
+        [982388, [1600, 1601, 1602], true] call EFUNC(common,displayEnableControls);
         [player, _tinder] call CBA_fnc_removeItem;
         [_ignition] call EFUNC(common,itemDecrement);
         _noteBox ctrlSetText "Fire crafting interrupted, tinder lost...";
@@ -181,9 +177,7 @@ private _currentStep = 0;
 
         player setVariable [QCLASS(isCraftingFire), nil];
         _display displayRemoveEventHandler ["KeyDown", _craftInterrupt];
-        {
-            _display displayCtrl _x ctrlEnable true;
-        } forEach [1600, 1601, 1602];
+        [982388, [1600, 1601, 1602], true] call EFUNC(common,displayEnableControls);
         call FUNC(populate);
         [_handle] call CBA_fnc_removePerFrameHandler;
     };

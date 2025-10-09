@@ -14,33 +14,11 @@
  *
 */
 
-private _MInfection = player getVariable [QEGVAR(survival,infection), MACRO_PLAYER_DEFAULTS_LOW];
-private _MExposure = player getVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW];
-private _ailments = player getVariable QCLASS(ailments);
-
-if (!hasInterface) exitWith {};
-
- if ((call EFUNC(protection,totalProtection) select 0) > 0 || (call EFUNC(protection,totalProtection) select 1) > 0) exitWith {
-    titleText ["You cannot take medicine while wearing a mask...", "PLAIN DOWN"];
-};
-
-if ((_MInfection > 1) || (_ailments find "PARASITES" isNotEqualTo -1)) then {
-
-    titleText ["You take some Caffetin tablets...", "PLAIN DOWN"];
-    playSound3D [QPATHTOEF(audio,sounds\inventory\Items\CrinklingPlastic.ogg), player, false, getPosASL player, 4, 1, 10];
-
-    player removeItem QCLASS(caffetin);
-
-     if (EGVAR(common,ace)) then {
+if ("ace_medical" call EFUNC(common,isModLoaded)) then {
     [player, QCLASS(caffetin), 120, 300, 1, 0, 1, 1] call ace_medical_status_fnc_addMedicationAdjustment;
-    };
-
-  sleep 60;
-
-  player setVariable [QEGVAR(survival,exposure), (_MExposure - 25)];
-
-    if (_MExposure > 0) then {player setVariable [QEGVAR(survival,exposure), MACRO_PLAYER_DEFAULTS_LOW]};
-
-} else {
-//Nothing
 };
+
+[{
+    [-0.2, "infection"] call EFUNC(common,addStatusModifier);
+    [-0.2, "exposure"] call EFUNC(common,addStatusModifier);
+}, [], 15] call CBA_fnc_waitAndExecute;

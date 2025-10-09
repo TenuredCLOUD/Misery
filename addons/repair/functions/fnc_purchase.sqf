@@ -27,8 +27,7 @@ if (_selectedIndex isEqualTo -1) exitWith {
 
 if (_selectedIndex isNotEqualTo -1) exitWith {
 
-_purchaseButton ctrlShow false;
-_exitButton ctrlShow false;
+[982386, [1600, 1601], false] call EFUNC(common,displayShowControls);
 
 [] call FUNC(process);
 };

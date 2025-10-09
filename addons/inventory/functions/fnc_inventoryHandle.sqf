@@ -18,6 +18,7 @@ player addEventHandler ["InventoryOpened", {
         !(isNull (findDisplay 602))
     }, {
         private _display = findDisplay 46 createDisplay QCLASS(inventoryFramework_ui);
+        player setVariable [QEGVAR(actions,currentParentID), ""];
         [] call EFUNC(actions,displayActions);
 
         // Populate category combo

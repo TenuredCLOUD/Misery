@@ -16,7 +16,7 @@
 
 // Early exit if sleep is blocked.
 if (EGVAR(psychosis,enabled) && EGVAR(psychosis,sleepBlocked)) exitWith {
-    titleText [format ["<t font='PuristaMedium' size='0.7'>%1</t>", localize "STR_MISERY_CANTSLEEPFEAR"], "PLAIN DOWN", -1, true, true];
+    [QEGVAR(common,titleText), localize "STR_MISERY_CANTSLEEPFEAR"] call CBA_fnc_localEvent;
     [QUOTE(COMPONENT_BEAUTIFIED), "Sleep is blocked by fear."] call EFUNC(common,debugMessage);
 };
 
@@ -24,11 +24,11 @@ call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDefi
 call FUNC(hourSelected) params ["_selectedHour"];
 
 if (_selectedHour isEqualTo 0) exitWith {
-    titleText [format ["<t font='PuristaMedium' size='0.7'>%1</t>", localize "STR_MISERY_SLEEPNOHOURSELECT"], "PLAIN DOWN", -1, true, true];
+    [QEGVAR(common,titleText), localize "STR_MISERY_SLEEPNOHOURSELECT"] call CBA_fnc_localEvent;
 };
 
 if (_energyDeficit < 0.15) exitWith {
-    titleText [format ["<t font='PuristaMedium' size='0.7'>%1</t>", localize "STR_MISERY_SLEEPNOTTIRED"], "PLAIN DOWN", -1, true, true];
+    [QEGVAR(common,titleText), localize "STR_MISERY_SLEEPNOTTIRED"] call CBA_fnc_localEvent;
 };
 
 if (animationState player isNotEqualTo "amovpsitmstpsnonwnondnon_ground") then {
@@ -44,7 +44,7 @@ cutText ["", "BLACK OUT", 2];
 }, _selectedHour, 3] call CBA_fnc_waitAndExecute;
 
 [{
-    titleText [format ["<t font='PuristaMedium' size='0.7'>%1</t>", format [localize "STR_MISERY_SLEPTFORHOWLONG", _this]], "PLAIN DOWN", -1, true, true];
+    [QEGVAR(common,titleText), format [localize "STR_MISERY_SLEPTFORHOWLONG", _this]] call CBA_fnc_localEvent;
     player setFatigue 1;
 }, _selectedHour, 6] call CBA_fnc_waitAndExecute;
 
@@ -53,12 +53,16 @@ cutText ["", "BLACK OUT", 2];
 }, [], 8] call CBA_fnc_waitAndExecute;
 
 [{
-    player switchMove "Acts_UnconsciousStandUp_part1";
+    //player switchMove "Acts_UnconsciousStandUp_part1";
     player setVariable [QCLASS(isSleeping), false];
 
-    // Decrement hunger, thirst and energy deficit.
-    player setVariable [QEGVAR(survival,energyDeficit), GVAR(energyDeficitAfterSleep)];
-    /*
-    * ToDo: Add modifier function for hunger thirst and decrease them from sleep.
-    */
-}, [], 10] call CBA_fnc_waitAndExecute;
+    // Calculate hunger and thirst decrement
+    private _hungerThirstDecrement = (_this * 0.02) + (0 max (_this - 8)) * 0.03;
+    // Calculate energy reduction (reset to 0 at 8 hours, penalty after 8)
+    private _energyReduction = (1 min (_this * 0.125)) - (0 max (_this - 8)) * 0.05;
+
+    // Apply to player variables
+    [-_hungerThirstDecrement, "hunger"] call EFUNC(common,addStatusModifier);
+    [-_hungerThirstDecrement, "thirst"] call EFUNC(common,addStatusModifier);
+    [-_energyReduction, "energy"] call EFUNC(common,addStatusModifier);
+}, _selectedHour, 10] call CBA_fnc_waitAndExecute;

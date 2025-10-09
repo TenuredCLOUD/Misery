@@ -14,7 +14,3 @@ if (isMultiplayer) exitWith {};
     QPATHTOEF(icons,data\sleepy_ca.paa),
     ""
 ] call EFUNC(actions,addAction);
-
-GVAR(energyDeficitAfterSleep) = 0;
-GVAR(hungerDecrease) = 0.25;
-GVAR(thirstDecrease) = 0.25;

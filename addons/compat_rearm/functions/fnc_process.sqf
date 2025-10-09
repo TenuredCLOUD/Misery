@@ -17,8 +17,6 @@
 */
 
 private _dialog = findDisplay 982383;
-private _purchaseButton = _dialog displayCtrl 1600;
-private _exitButton = _dialog displayCtrl 1601;
 private _resupplyPrice = 0;
 private _found = false;
 
@@ -51,8 +49,7 @@ private _rearmInterrupt = _dialog displayAddEventHandler ["KeyDown", {
 
 if (_funds < _resupplyPrice) exitWith {
     ctrlSetText [1001, "You cannot afford this!"];
-    _purchaseButton ctrlShow true;
-    _exitButton ctrlShow true;
+    [982383, [1600, 1601], true] call EFUNC(common,displayShowControls);
     player setVariable [QCLASS(processRearm), nil];
     _dialog displayRemoveEventHandler ["KeyDown", _rearmInterrupt];
 };
@@ -65,7 +62,7 @@ _dummyVehicle enableSimulation false;
 
 [{
     params ["_args", "_handle"];
-    _args params ["_nearestVehicle", "_dialog", "_purchaseButton", "_exitButton", "_displayName", "_rearmInterrupt", "_fundsToDeductPerStep", "_step", "_totalFundsDeducted", "_dummyVehicle"];
+    _args params ["_nearestVehicle", "_dialog", "_displayName", "_rearmInterrupt", "_fundsToDeductPerStep", "_step", "_totalFundsDeducted", "_dummyVehicle"];
 
     private _totalSteps = 100;
     private _progress = (_step + 1) / _totalSteps;
@@ -79,8 +76,7 @@ _dummyVehicle enableSimulation false;
         _dialog displayRemoveEventHandler ["KeyDown", _rearmInterrupt];
         deleteVehicle _dummyVehicle;
         ctrlSetText [1001, "Resupply interrupted..."];
-        _purchaseButton ctrlShow true;
-        _exitButton ctrlShow true;
+        [982383, [1600, 1601], true] call EFUNC(common,displayShowControls);
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
@@ -89,8 +85,7 @@ _dummyVehicle enableSimulation false;
         player setVariable [QCLASS(processRearm), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _rearmInterrupt];
         ctrlSetText [1001, "You cannot afford this!"];
-        _purchaseButton ctrlShow true;
-        _exitButton ctrlShow true;
+        [982383, [1600, 1601], true] call EFUNC(common,displayShowControls);
         deleteVehicle _dummyVehicle;
         _handle call CBA_fnc_removePerFrameHandler;
     };
@@ -116,8 +111,7 @@ _dummyVehicle enableSimulation false;
         _dialog displayRemoveEventHandler ["KeyDown", _rearmInterrupt];
         private _displayFull = format ["%1 has been fully resupplied...", _displayName];
         ctrlSetText [1001, _displayFull];
-        _purchaseButton ctrlShow true;
-        _exitButton ctrlShow true;
+        [982383, [1600, 1601], true] call EFUNC(common,displayShowControls);
         deleteVehicle _dummyVehicle;
         _handle call CBA_fnc_removePerFrameHandler;
     };
@@ -125,5 +119,5 @@ _dummyVehicle enableSimulation false;
     _args set [7, _step + 1];
     _args set [8, _totalFundsDeducted];
 }, 0.5, [
-    _nearestVehicle, _dialog, _purchaseButton, _exitButton, _displayName, _rearmInterrupt, _fundsToDeductPerStep, 0, _totalFundsDeducted, _dummyVehicle
+    _nearestVehicle, _dialog, _displayName, _rearmInterrupt, _fundsToDeductPerStep, 0, _totalFundsDeducted, _dummyVehicle
 ]] call CBA_fnc_addPerFrameHandler;
