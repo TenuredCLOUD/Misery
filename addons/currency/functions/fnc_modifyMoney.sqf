@@ -18,11 +18,10 @@
 
 params ["_amount", "_isBank"];
 
+call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds", "_bankedFunds"];
+
 if (_isBank) exitWith {
-    private _currentBankedFunds = player getVariable [QGVAR(bankedFunds), MACRO_PLAYER_DEFAULTS_LOW];
-    player setVariable [QGVAR(bankedFunds), _currentBankedFunds + _amount];
+    player setVariable [QGVAR(bankedFunds), _bankedFunds + _amount];
 };
 
-private _currentFunds = player getVariable [QGVAR(funds), MACRO_PLAYER_DEFAULTS_LOW];
-
-player setVariable [QGVAR(funds), _currentFunds + _amount];
+player setVariable [QGVAR(funds), _funds + _amount];

@@ -1,9 +1,9 @@
-PREP(corpseCondition);
-PREP(createBanks);
+PREP(bankRefresh);
 PREP(fundsDeposit);
 PREP(fundsWithdraw);
-PREP(loop);
+PREP(generateBank);
+PREP(giveMoney);
+PREP(giveMoneyRefresh);
 PREP(modifyMoney);
-PREP(registerBanks);
-PREP(searchCorpse);
-PREP(takeMoneyFromCorpse);
+PREP(takeMoney);
+PREP(takeMoneyRefresh);
