@@ -5654,5 +5654,19 @@
             <Japanese>死体の皮</Japanese>
             <Turkish>Ceset derisi</Turkish>
         </Key>
+        <Key ID="STR_MISERY_PICKAXEHEAD_DISPLAYNAME">
+            <English>PickAxe Head</English>
+            <Czech>Hlava krumpáče</Czech>
+            <French>Tête de pioche</French>
+            <Spanish>Cabeza de pico</Spanish>
+            <Italian>Testa del piccone</Italian>
+            <Polish>Głowica kilofa</Polish>
+            <Portuguese>Cabeça de picareta</Portuguese>
+            <Russian>Головка кирки</Russian>
+            <German>Spitzhacke-Kopf</German>
+            <Korean>곡괭이 머리</Korean>
+            <Japanese>つるはしヘッド</Japanese>
+            <Turkish>Kazma Kafası</Turkish>
+        </Key>
     </Package>
 </Project>

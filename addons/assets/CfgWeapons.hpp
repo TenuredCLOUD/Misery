@@ -17,7 +17,7 @@ class CfgWeapons {
     };
 
     class CLASS(pickaxeHead): CLASS(ItemCore) {
-        displayName = "PickAxe Head";
+        displayName = "$STR_MISERY_PICKAXEHEAD_DISPLAYNAME"
         descriptionShort = "the head of a pickaxe, useless without a handle";
         picture = QPATHTOF(data\icons\pickHead.paa);
         scope = 2;
