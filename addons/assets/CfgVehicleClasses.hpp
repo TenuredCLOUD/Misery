@@ -1,5 +1,5 @@
 class CfgVehicleClasses {
     class CLASS(Objects) {
-        displayName = "Misery";
+        displayName = "$STR_MISERY_MISERY_DISPLAYNAME";
     };
 };
