@@ -46,7 +46,7 @@ if !([[QCLASS(anvilHammer)]] call EFUNC(common,hasITem)) exitWith {ctrlSetText [
 
 [274840, [1600, 1602, 1603], false] call EFUNC(common,displayEnableControls);
 
-_progressBar ctrlShow true;
+[274840, [1010], true] call EFUNC(common,displayShowControls);
 
 player playAction "Gear";
 
@@ -58,7 +58,7 @@ private _smithInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key"];
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QGVAR(isSmithing), false];
-        _progressBar ctrlShow false;
+        [274840, [1010], false] call EFUNC(common,displayShowControls);
         [parseText "<t font='PuristaMedium' size='1'>Smithing interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
     };
 }];
@@ -75,8 +75,6 @@ _soundDummy say3D QCLASS(audio_sound_anvilHammer);
         "_requiredItems",
         "_outputItem",
         "_dialog",
-        "_smeltButton",
-        "_exitButton",
         "_smithInterrupt",
         "_totalSteps",
         "_currentStep",
@@ -92,7 +90,7 @@ _soundDummy say3D QCLASS(audio_sound_anvilHammer);
         player setVariable [QGVAR(isSmithing), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _smithInterrupt];
         [274840, [1600, 1602, 1603], true] call EFUNC(common,displayEnableControls);
-        _progressBar ctrlShow false;
+        [274840, [1010], false] call EFUNC(common,displayShowControls);
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
@@ -122,8 +120,7 @@ _soundDummy say3D QCLASS(audio_sound_anvilHammer);
         };
 
         [274840, [1600, 1602, 1603], true] call EFUNC(common,displayEnableControls);
-
-        _progressBar ctrlShow false;
+        [274840, [1010], false] call EFUNC(common,displayShowControls);
 
         _handle call CBA_fnc_removePerFrameHandler;
     };
@@ -131,8 +128,6 @@ _soundDummy say3D QCLASS(audio_sound_anvilHammer);
     _requiredItems,
     _outputItem,
     _dialog,
-    _smeltButton,
-    _exitButton,
     _smithInterrupt,
     _totalSteps,
     _currentStep,

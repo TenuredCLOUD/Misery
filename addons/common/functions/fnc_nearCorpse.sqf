@@ -21,4 +21,4 @@ params ["_object", "_type", "_radius"];
 private _corpses = nearestObjects [_object, _type, _radius];
 private _deadCorpses = _corpses select { !alive _x };
 
-[count _deadCorpses > 0, _deadCorpses select 0]
+[_deadCorpses isNotEqualTo [], _deadCorpses select 0]

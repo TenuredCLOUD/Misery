@@ -14,7 +14,7 @@
 */
 
 // If chemical zone check fails, system will not function.
-if !(call EFUNC(common,checkAreas)) exitWith {
+if !(call FUNC(checkAreas)) exitWith {
     [QUOTE(COMPONENT_BEAUTIFIED), "Marker check system failed, detectors disabled."] call EFUNC(common,debugMessage);
 };
 

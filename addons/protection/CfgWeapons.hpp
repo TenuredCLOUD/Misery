@@ -76,14 +76,14 @@ class CfgWeapons {
     class VestItem;
     class Vest_Camo_Base;
     class CLASS(Rebreather) : Vest_Camo_Base {
+        access = 3;
+        scope = 2;
         GVAR(gasmask) = 0;
         GVAR(scba) = 1;
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 1;
         GVAR(eyeProtection) = 0;
         GVAR(hearingProtection) = 0;
-        access = 3;
-        scope = 2;
         canShootInWater = 1;
         selectionFireAnim = "zasleh";
         type = 701;

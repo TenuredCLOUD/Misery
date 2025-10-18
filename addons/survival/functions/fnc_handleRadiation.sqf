@@ -19,13 +19,16 @@
 
 params ["_radiation", "_parasites", "_hunger", "_thirst"];
 
+private _finalRadiation = ((_radiation + GVAR(radiationModifiers)) min 1) max 0;
+GVAR(radiationModifiers) = 0;
+player setVariable [QGVAR(radiation), _finalRadiation];
+
 if (_radiation > 0) then {
     [-0.001, "radiation"] call EFUNC(common,addStatusModifier);
-    private _random = [1, 10] call BIS_fnc_randomInt;
 
-    if (_random isEqualTo 5 && _radiation > 0.05 && GVAR(ailments)) then {
+    if ([15] call EFUNC(common,rollChance) && _radiation > 0.05) then {
         if (_parasites > 0) then {
-            player setVariable [QGVAR(parasites), MACRO_PLAYER_DEFAULTS_LOW];
+            [-1, "parasites"] call EFUNC(common,addStatusModifier);
         };
     };
 
@@ -43,13 +46,17 @@ if (_radiation > 0) then {
         [-_scaledNutrientLoss, "thirst"] call EFUNC(common,addStatusModifier);
     };
 
-    addCamShake [1, 5, 10];
+    if (_radiation > 0.025) then {
+        if ([25] call EFUNC(common,rollChance)) then {
+            addCamShake [1, 5, 10];
 
-    if ((call EFUNC(protection,totalProtection) select 0) < 1 && (call EFUNC(protection,totalProtection) select 1) < 1) then {
-        player say3D [QEGVAR(audio,sound_cough),10,1,2,0];
-    } else {
-        if ((call EFUNC(protection,totalProtection) select 0) > 0 || (call EFUNC(protection,totalProtection) select 1) > 0) then {
-            player say3D [QEGVAR(audio,sound_coughMuffled),10,1,2,0];
+            if ((call EFUNC(protection,totalProtection) select 0) < 1 && (call EFUNC(protection,totalProtection) select 1) < 1) then {
+                player say3D [QEGVAR(audio,sound_cough),10,1,2,0];
+            } else {
+                if ((call EFUNC(protection,totalProtection) select 0) > 0 || (call EFUNC(protection,totalProtection) select 1) > 0) then {
+                    player say3D [QEGVAR(audio,sound_coughMuffled),10,1,2,0];
+                };
+            };
         };
     };
 };

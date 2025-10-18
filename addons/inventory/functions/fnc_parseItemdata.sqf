@@ -42,7 +42,7 @@ GVAR(itemData) = [];
     private _feedback = [];
     if (!isNil {(_x >> "feedback")}) then {
         private _feedbackRaw = getArray (_x >> "feedback");
-        if (count _feedbackRaw > 0) then {
+        if (_feedbackRaw isNotEqualTo []) then {
             _feedback = if (count _feedbackRaw isEqualTo 1) then {[_feedbackRaw select 0, 10]} else {_feedbackRaw};
         };
     };

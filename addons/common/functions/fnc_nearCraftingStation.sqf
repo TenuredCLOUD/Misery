@@ -21,4 +21,4 @@ if (!isNull objectParent player) exitWith {};
 
 private _nearObjects = nearestObjects [player, _craftingStations, _distance];
 
-count _nearObjects > 0
+_nearObjects isNotEqualTo []

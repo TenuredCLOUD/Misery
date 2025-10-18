@@ -26,13 +26,15 @@ private _damaged = false;
 private _hasAxe = [[QCLASS(woodaxe), MACRO_AXES]] call FUNC(hasItem);
 private _hasSaw = [[QCLASS(chainsaw)]] call FUNC(hasItem);
 
+private _nearestTree = objNull;
+
 if (isNull objectParent _object) then {
 
-    if (count (nearestTerrainObjects [_object, [MACRO_FOLIAGETYPES], 2.5, true, true]) > 0) then {
+    if (nearestTerrainObjects [_object, [MACRO_FOLIAGETYPES], 2.5, true, true] isNotEqualTo []) then {
         _found = true;
     };
 
-    private _nearestTree = nearestTerrainObjects [_object, [MACRO_FOLIAGETYPES], 2.5, true, true];
+    _nearestTree = nearestTerrainObjects [_object, [MACRO_FOLIAGETYPES], 2.5, true, true];
 
     {
         if (damage _x isEqualTo 1) then {

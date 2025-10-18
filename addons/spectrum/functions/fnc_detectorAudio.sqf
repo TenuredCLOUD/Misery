@@ -23,6 +23,9 @@
         private _randomSpook = round (random 50);
         private _audioSource = objNull;
 
+        private _psuedoPhantom = objNull;
+        private _psuedoSpook = objNull;
+
         if (_randomAudio isEqualTo 5) then {
             _audioSource = playSound selectRandom [MACRO_STATICWEIRD_SOUNDS];
         } else {
@@ -32,7 +35,7 @@
         [_audioSource, _handle] call FUNC(audioLogic);
 
         if (_randomRemnant isEqualTo 25 && "remnant" call EFUNC(common,isModLoaded)) then {
-            _group = creategroup [civilian, true];
+            _group = createGroup [civilian, true];
             _pos = getPos player;
             _pos = [_pos select 0, _pos select 1, _pos select 2];
             _pos = _pos vectorAdd [50, 0, 0];
@@ -45,7 +48,7 @@
         };
 
         if (_randomSpook isEqualTo 25 && "DSA_Spooks" call EFUNC(common,isModLoaded)) then {
-            _group = creategroup [civilian, true];
+            _group = createGroup [civilian, true];
             _pos = getPos player;
             _pos = [_pos select 0, _pos select 1, _pos select 2];
             _pos = _pos vectorAdd [50, 0, 0];

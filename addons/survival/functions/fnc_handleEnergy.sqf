@@ -23,6 +23,7 @@ if (_isMultiplayer) exitWith {};
 
 [+_decrementValue, "energy"] call EFUNC(common,addStatusModifier);
 private _finalEnergy = ((_energyDeficit + GVAR(energyModifiers)) min 1) max 0;
+GVAR(energyModifiers) = 0;
 player setVariable [QGVAR(energyDeficit), _finalEnergy];
 
 private _isSleeping = player getVariable [QEGVAR(sleep,isSleeping), false];

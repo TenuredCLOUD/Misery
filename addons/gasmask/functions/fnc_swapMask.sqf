@@ -25,4 +25,8 @@ if (_goggles in _respirators) then {
 
     removeGoggles player;
     player addGoggles _noFilterMask;
+} else {
+    removeGoggles player;
+    GVAR(lastMask) = _goggles;
+    [player, QCLASS(gasMask_Empty), true] call CBA_fnc_addItem;
 };

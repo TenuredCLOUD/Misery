@@ -4,10 +4,4 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
-#include "initSettings.inc.sqf"
-
-GVAR(items) = [];
-GVAR(itemEffects) = [];
-GVAR(itemCustomActions) = [];
-
 ADDON = true;

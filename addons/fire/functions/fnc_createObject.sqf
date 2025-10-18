@@ -25,12 +25,7 @@ if (_fuel isNotEqualTo "") then {
 
 private _pos = player getRelPos [1.5, 0];
 private _fireClass = ["FirePlace_burning_F", "Campfire_burning_F"] select (_fuelType isEqualTo "big");
-private _object = createVehicle [_fireClass, _pos, [], 0, "CAN_COLLIDE"];
-_pos = [_pos select 0, _pos select 1, ((getPosATL player) select 2) + 1];
-_object setPos _pos;
-_pos = (_object call EFUNC(common,surfacePos)) select 0;
-_object setPosASL _pos;
-_object setDir (getDir player);
+private _object = createVehicle [_fireClass, player modelToWorld [0, 2, 0], [], 0, "CAN_COLLIDE"];
 
 GVAR(activeFires) pushBack [_object, _fuelType, _burnTimeLeft];
 
