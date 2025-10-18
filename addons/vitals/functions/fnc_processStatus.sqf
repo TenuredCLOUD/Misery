@@ -22,5 +22,6 @@ private _selectedData = _array select {(_x select 0) isEqualTo _selectedItem} pa
 
 if (count _selectedData > 0) then {
     _selectedData params ["_name", "", "_description"];
-    [QEGVAR(common,inventoryTile), [format [_name, _description, 10]]] call CBA_fnc_localEvent;
+    private _status = format ["%1%2%3", _name, endl, _description];
+    [QEGVAR(common,inventoryTile), [_status, 10]] call CBA_fnc_localEvent;
 };
