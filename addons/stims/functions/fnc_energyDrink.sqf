@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * BearEnergy usage
+ * Energy drink usage
  *
  * Arguments:
  * None
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call misery_stims_fnc_bearEnergy;
+ * [] call misery_stims_fnc_energyDrink;
  *
 */
 

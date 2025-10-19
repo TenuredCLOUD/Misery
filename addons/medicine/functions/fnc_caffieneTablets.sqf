@@ -25,9 +25,7 @@ if (isMultiplayer) exitWith {
     }, [], 600] call CBA_fnc_waitAndExecute;
 };
 
-[{
-    [-0.15, "energy"] call EFUNC(common,addStatusModifier);
-}, [], 15] call CBA_fnc_waitAndExecute;
+[-0.15, "energy"] call EFUNC(common,addStatusModifier);
 
 [3, 2] call EFUNC(common,chromaticEffect);
 
