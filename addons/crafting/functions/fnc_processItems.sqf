@@ -58,9 +58,6 @@ private _craftInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QGVAR(isCrafting), false];
         [982376, [1010], false] call EFUNC(common,displayShowControls);
-        if (_soundSource isNotEqualTo objNull) then {
-            deleteVehicle _soundSource;
-        };
         [parseText "<t font='PuristaMedium' size='1'>Crafting interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
     };
 }];

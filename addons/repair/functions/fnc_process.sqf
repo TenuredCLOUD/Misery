@@ -68,7 +68,7 @@ private _fundsToDeduct = _repairPrice;
 
 [{
     params ["_args", "_handle"];
-    _args params ["_nearestVehicle", "_dialog", "_displayName", "_repairsInterrupt", "_playerCash", "_repairStep", "_fundsToDeduct"];
+    _args params ["_nearestVehicle", "_dialog", "_displayName", "_repairsInterrupt", "_repairStep", "_fundsToDeduct"];
 
     call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
@@ -113,5 +113,5 @@ private _fundsToDeduct = _repairPrice;
         _handle call CBA_fnc_removePerFrameHandler;
     };
 }, 0.5, [
-    _nearestVehicle, _dialog, _displayName, _repairsInterrupt, _playerCash, _repairStep, _fundsToDeduct
+    _nearestVehicle, _dialog, _displayName, _repairsInterrupt, _repairStep, _fundsToDeduct
 ]] call CBA_fnc_addPerFrameHandler;

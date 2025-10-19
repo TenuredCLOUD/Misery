@@ -71,7 +71,7 @@ private _fundsToDeduct = _fuelCost;
 
 [{
     params ["_args", "_handle"];
-    _args params ["_nearestVehicle", "_dialog", "_displayName", "_refuelInterrupt", "_playerCash", "_totalLiters", "_fundsToDeduct", "_fuelStep"];
+    _args params ["_nearestVehicle", "_dialog", "_displayName", "_refuelInterrupt", "_totalLiters", "_fundsToDeduct", "_fuelStep"];
 
     call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
@@ -116,5 +116,5 @@ private _fundsToDeduct = _fuelCost;
         _handle call CBA_fnc_removePerFrameHandler;
     };
 }, 0.5, [
-_nearestVehicle, _dialog, _displayName, _refuelInterrupt, _playerCash, _totalLiters, _fundsToDeduct, _fuelStep
+_nearestVehicle, _dialog, _displayName, _refuelInterrupt, _totalLiters, _fundsToDeduct, _fuelStep
 ]] call CBA_fnc_addPerFrameHandler;

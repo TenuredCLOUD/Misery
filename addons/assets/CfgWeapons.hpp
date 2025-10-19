@@ -338,8 +338,8 @@ class CfgWeapons {
     class CLASS(leadContainer_Open): CLASS(ItemCore) {
         displayName = "$STR_MISERY_LEADCONTAINEROPEN_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_LEADCONTAINEROPEN_DESCRIPTION";
-        picture = QPATHTOF(data\icons\artifactcontaineropen.paa);
-        model = "a3\structures_f_bootcamp\items\food\foodcontainer_01_f.p3d";
+        picture = QPATHTOF(data\icons\cbrn_container.paa);
+        model = "a3\props_f_enoch\military\decontamination\cbrncase_01_f.p3d";
         scope = 2;
         scopeCurator = 2;
 
@@ -351,8 +351,8 @@ class CfgWeapons {
     class CLASS(leadContainer_Closed): CLASS(ItemCore) {
         displayName = "$STR_MISERY_LEADCONTAINERCLOSED_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_LEADCONTAINERCLOSED_DESCRIPTION";
-        picture = QPATHTOF(data\icons\artifactcontaineropen.paa);
-        model = "a3\structures_f_bootcamp\items\food\foodcontainer_01_f.p3d";
+        picture = QPATHTOF(data\icons\cbrn_container.paa);
+        model = "a3\props_f_enoch\military\decontamination\cbrncase_01_f.p3d";
         scope = 2;
         scopeCurator = 2;
 

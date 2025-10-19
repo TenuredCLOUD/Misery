@@ -33,7 +33,7 @@ if (!isNil "_crateWeaponArray" && {count _crateWeaponArray > 0}) then {
         switch (_crateWeaponMagArray) do {
             case "BASIC": {
                 private _compatibleMags = getArray (configFile >> "CfgWeapons" >> _selectedWeapon >> "magazines");
-                if (count _compatibleMags > 0) then {
+                if (_compatibleMags isNotEqualTo []) then {
                     for "_j" from 1 to _maxAllowedCrateItems do {
                         _ammoBox addMagazineCargoGlobal [_compatibleMags select 0, 1];
                     };
@@ -41,7 +41,7 @@ if (!isNil "_crateWeaponArray" && {count _crateWeaponArray > 0}) then {
             };
             case "ALL": {
                 private _compatibleMags = getArray (configFile >> "CfgWeapons" >> _selectedWeapon >> "magazines");
-                if (count _compatibleMags > 0) then {
+                if (_compatibleMags isNotEqualTo []) then {
                     for "_j" from 1 to _maxAllowedCrateItems do {
                         _ammoBox addMagazineCargoGlobal [selectRandom _compatibleMags, 1];
                     };
@@ -53,7 +53,7 @@ if (!isNil "_crateWeaponArray" && {count _crateWeaponArray > 0}) then {
         switch (_crateWeaponAttchArray) do {
             case "BASIC": {
                 private _compatibleAttachments = compatibleItems _selectedWeapon;
-                if (count _compatibleAttachments > 0) then {
+                if (_compatibleAttachments isNotEqualTo []) then {
                     for "_k" from 1 to _maxAllowedCrateItems do {
                         _ammoBox addItemCargoGlobal [_compatibleAttachments select 0, 1];
                     };
@@ -61,7 +61,7 @@ if (!isNil "_crateWeaponArray" && {count _crateWeaponArray > 0}) then {
             };
             case "ALL": {
                 private _compatibleAttachments = compatibleItems _selectedWeapon;
-                if (count _compatibleAttachments > 0) then {
+                if (_compatibleAttachments isNotEqualTo []) then {
                     for "_k" from 1 to _maxAllowedCrateItems do {
                         _ammoBox addItemCargoGlobal [selectRandom _compatibleAttachments, 1];
                     };

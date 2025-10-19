@@ -11,7 +11,7 @@ class CLASS(geiger_ui)
         class CLASS(geiger_background): RscPicture
         {
             idc = -1;
-            text = QPATHTOEF(ui,menus\ui\Geiger.paa);
+            text = QPATHTOEF(ui,menus\ui\geiger_ca.paa);
             x = 39.5 * GUI_GRID_W + GUI_GRID_X;
             y = 20.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 10.5 * GUI_GRID_W;

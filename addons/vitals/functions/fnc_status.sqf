@@ -50,10 +50,10 @@ disableSerialization;
         private _removeCondition = getText (_x >> "removeCondition");
 
         if (call compile _showCondition) then {
-            ["buff", _name, _image, _description] call EFUNC(vitals,addBuffOrAilment);
+            ["buff", _name, _image, _description] call FUNC(addBuffOrAilment);
         };
         if (call compile _removeCondition) then {
-            ["buff", _name] call EFUNC(vitals,removeBuffOrAilment);
+            ["buff", _name] call FUNC(removeBuffOrAilment);
         };
     } forEach _buffConfigs;
 
@@ -66,10 +66,10 @@ disableSerialization;
         private _removeCondition = getText (_x >> "removeCondition");
 
         if (call compile _showCondition) then {
-            ["ailment", _name, _image, _description] call EFUNC(vitals,addBuffOrAilment);
+            ["ailment", _name, _image, _description] call FUNC(addBuffOrAilment);
         };
         if (call compile _removeCondition) then {
-            ["ailment", _name] call EFUNC(vitals,removeBuffOrAilment);
+            ["ailment", _name] call FUNC(removeBuffOrAilment);
         };
     } forEach _ailmentConfigs;
 

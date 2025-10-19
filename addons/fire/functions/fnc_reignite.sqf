@@ -30,8 +30,6 @@ private _isBarrelFire = _fuelType isEqualTo "barrel";
 
 switch (true) do {
     case (_isUpgrade): {
-        private _pos = getPosATL _nearbyFire;
-        private _dir = getDir _nearbyFire;
         deleteVehicle _nearbyFire;
 
         if (_fireIndex >= 0 && _fireIndex < count GVAR(activeFires)) then {
@@ -39,12 +37,7 @@ switch (true) do {
         };
 
         private _fireClass = "Campfire_burning_F";
-        private _object = createVehicle [_fireClass, _pos, [], 0, "CAN_COLLIDE"];
-        _pos = [_pos select 0, _pos select 1, ((getPosATL player) select 2) + 1];
-        _object setPos _pos;
-        _pos = (_object call EFUNC(common,surfacePos)) select 0;
-        _object setPosASL _pos;
-        _object setDir _dir;
+        private _object = createVehicle [_fireClass, player modelToWorld [0, 2, 0], [], 0, "CAN_COLLIDE"];
 
         [player, _fuel] call CBA_fnc_removeItem;
 
@@ -56,8 +49,6 @@ switch (true) do {
         [QUOTE(COMPONENT_BEAUTIFIED), format ["Upgraded small fire at %1 to big fire with %2(s) burn time.", getPosATL _object, _burnTimeLeft]] call EFUNC(common,debugMessage);
     };
     case (_isDowngrade): {
-        private _pos = getPosATL _nearbyFire;
-        private _dir = getDir _nearbyFire;
         deleteVehicle _nearbyFire;
 
         if (_fireIndex >= 0 && _fireIndex < count GVAR(activeFires)) then {
@@ -65,12 +56,7 @@ switch (true) do {
         };
 
         private _fireClass = "FirePlace_burning_F";
-        private _object = createVehicle [_fireClass, _pos, [], 0, "CAN_COLLIDE"];
-        _pos = [_pos select 0, _pos select 1, ((getPosATL player) select 2) + 1];
-        _object setPos _pos;
-        _pos = (_object call EFUNC(common,surfacePos)) select 0;
-        _object setPosASL _pos;
-        _object setDir _dir;
+        private _object = createVehicle [_fireClass, player modelToWorld [0, 2, 0], [], 0, "CAN_COLLIDE"];
 
         [player, _fuel] call CBA_fnc_removeItem;
 

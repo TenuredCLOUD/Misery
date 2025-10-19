@@ -39,6 +39,8 @@
             _handle call CBA_fnc_removePerFrameHandler;
         };
 
+        private _dialog = findDisplay 573849;
+
         private _iconName = _dialog displayCtrl 1000;
 
         private _fuelProgressBar = findDisplay 573849 displayCtrl 1004;
@@ -59,6 +61,7 @@
         private _shutDownState = _generator getVariable [QGVAR(shuttingDown), false];
         private _powerState = "";
         private _powerButtonText = "";
+        private _showPowerButton = false;
         private _showRefuelButton = false;
 
         switch (true) do {

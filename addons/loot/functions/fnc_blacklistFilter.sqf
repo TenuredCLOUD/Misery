@@ -16,7 +16,7 @@
 
 params ["_array"];
 private _filteredArray = _array select {!(_x in GVAR(itemsBlacklist))};
-if (count _filteredArray > 0) then {
+if (_filteredArray isNotEqualTo []) then {
     selectRandom _filteredArray;
 } else {
     if (count GVAR(itemsBlacklist) > 0) then {""} else {selectRandom _array};

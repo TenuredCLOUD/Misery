@@ -44,7 +44,7 @@ if !(_found) exitWith {};
 player setVariable [QGVAR(usingPump), true];
 
 // Initial button disabler
-[733835, [1600, 1601], true] call EFUNC(common,displayShowControls);
+[733835, [1600, 1601], false] call EFUNC(common,displayShowControls);
 
 private _pumpInterrupt = (findDisplay 733835) displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];

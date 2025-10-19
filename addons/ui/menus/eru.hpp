@@ -11,7 +11,7 @@ class CLASS(eru_ui)
         class CLASS(eru_background): RscPicture
         {
             idc = -1;
-            text = QPATHTOEF(ui,menus\ui\eru.paa);
+            text = QPATHTOEF(ui,menus\ui\eru_ca.paa);
             x = 48.5 * GUI_GRID_W + GUI_GRID_X;
             y = 28.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 13 * GUI_GRID_W;

@@ -18,6 +18,4 @@ if ("ace_medical" call EFUNC(common,isModLoaded)) then {
     [player, QCLASS(antidote), 60, 10, -10, 0, -10, 1] call ace_medical_status_fnc_addMedicationAdjustment;
 };
 
-[{
-    [-1, "toxicity"] call EFUNC(common,addStatusModifier);
-}, [], 15] call CBA_fnc_waitAndExecute;
+[-1, "toxicity"] call EFUNC(common,addStatusModifier);

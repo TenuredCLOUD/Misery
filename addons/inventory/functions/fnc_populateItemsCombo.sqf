@@ -23,7 +23,7 @@ private _inventoryItems = items player;
 {
     private _itemClass = toUpper _x;
     private _itemData = GVAR(itemData) select {toUpper (_x select 0) isEqualTo _itemClass};
-    if (count _itemData > 0) then {
+    if (_itemData isNotEqualTo []) then {
         [_itemClass] call EFUNC(common,getItemData) params ["_displayName"];
         private _index = _combo lbAdd _displayName;
         _combo lbSetData [_index, _itemClass];

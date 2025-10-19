@@ -14,6 +14,4 @@
  *
 */
 
-[{
-    [0.5, "hunger"] call EFUNC(common,addStatusModifier);
-}, [], 15] call CBA_fnc_waitAndExecute;
+[0.5, "hunger"] call EFUNC(common,addStatusModifier);

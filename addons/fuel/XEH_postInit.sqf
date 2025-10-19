@@ -15,4 +15,17 @@ if (isServer) then {
         QPATHTOEF(markers,data\fuel.paa),
         ""
     ] call EFUNC(actions,addAction);
+
+    [
+        "refuel_fuelCan_pump_menu",
+        "Refill fuel can at pump",
+        {[[MACRO_FUELSTATIONS_LAND], 2.5] call EFUNC(common,nearCraftingStation) || [[MACRO_FUELSTATIONS_AIR], 5] call EFUNC(common,nearCraftingStation)},
+        {
+            [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
+            createDialog QCLASS(refuelfuelCan_ui);
+        },
+        "",
+        QPATHTOEF(markers,data\fuel.paa),
+        ""
+    ] call EFUNC(actions,addAction);
 };
