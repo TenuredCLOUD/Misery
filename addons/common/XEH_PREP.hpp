@@ -30,6 +30,7 @@ PREP(nearCorpse);
 PREP(nearCraftingStation);
 PREP(nearEntities);
 PREP(nearFire);
+PREP(nearPlayer);
 PREP(nearRockSource);
 PREP(nearTree);
 PREP(nearVehicle);
