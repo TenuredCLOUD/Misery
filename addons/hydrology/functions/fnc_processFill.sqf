@@ -21,9 +21,6 @@ private _dialog = findDisplay 982380;
 private _selectedItem = lbData [1500, (lbCurSel 1500)];
 private _recipe = GVAR(containers) select {(_x select 0) isEqualTo _selectedItem} select 0;
 
-private _fillButton = _dialog displayCtrl 1600;
-private _drinkButton = _dialog displayCtrl 1601;
-private _exitButton = _dialog displayCtrl 1602;
 private _progressBar = _dialog displayCtrl 1010;
 
 if (isNil "_recipe") exitWith { ctrlSetText [1001, "No matching container found."]; };
@@ -32,27 +29,16 @@ private _requiredItem = _recipe select 0;
 private _outputItem = _recipe select 1;
 private _fillingTime = _recipe select 2;
 
-private _playerItems = (items player) + (magazines player);
-private _hasItem = _requiredItem in _playerItems;
-
-if (!_hasItem) exitWith {
+if !([[_requiredItem]] call EFUNC(common,hasItem)) exitWith {
     ctrlSetText [1001, "You don’t have that container..."];
 };
 
-_fillButton ctrlShow false;
-_drinkButton ctrlShow false;
-_exitButton ctrlShow false;
-_progressBar ctrlShow true;
+[982380, [1600, 1601, 1602], false] call EFUNC(common,displayShowControls);
+[982380, [1010], true] call EFUNC(common,displayShowControls);
 
 player playAction "Gear";
 
-private _outputDisplayName = getText (configFile >> "CfgWeapons" >> _outputItem >> "displayName");
-if (_outputDisplayName isEqualTo "") then {
-    _outputDisplayName = getText (configFile >> "CfgMagazines" >> _outputItem >> "displayName");
-};
-if (_outputDisplayName isEqualTo "") then {
-    _outputDisplayName = _outputItem;
-};
+[_outputItem] call EFUNC(common,getItemData) params ["_displayName"];
 
 player setVariable [QCLASS(isFilling), true];
 
@@ -60,7 +46,7 @@ private _fillInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key"];
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QCLASS(isFilling), false];
-        _progressBar ctrlShow false;
+        [982380, [1010], false] call EFUNC(common,displayShowControls);
         [parseText "<t font='PuristaMedium' size='1'>Filling interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
     };
 }];
@@ -74,23 +60,18 @@ private _currentStep = 0;
         "_requiredItem",
         "_outputItem",
         "_dialog",
-        "_fillButton",
-        "_drinkButton",
-        "_exitButton",
         "_fillInterrupt",
         "_totalSteps",
         "_currentStep",
-        "_outputDisplayName",
+        "_displayName",
         "_progressBar"
     ];
 
     if (!(player getVariable [QCLASS(isFilling), false]) || !alive player) exitWith {
         player setVariable [QCLASS(isFilling), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _fillInterrupt];
-        _fillButton ctrlShow true;
-        _drinkButton ctrlShow true;
-        _exitButton ctrlShow true;
-        _progressBar ctrlShow false;
+        [982380, [1600, 1601, 1602], true] call EFUNC(common,displayShowControls);
+        [982380, [1010], false] call EFUNC(common,displayShowControls);
         [_handle] call CBA_fnc_removePerFrameHandler;
     };
 
@@ -102,21 +83,16 @@ private _currentStep = 0;
     ctrlSetText [1001, format ["Filling Container... %1%2 complete", (_progress * 100) toFixed 0, "%"]];
 
     if (_currentStep >= _totalSteps) then {
-        if (_requiredItem in items player) then {
-            player removeItem _requiredItem;
-        } else {
-            player removeMagazine _requiredItem;
-        };
+
+        [player, _requiredItem] call CBA_fnc_removeItem;
 
         [player, _outputItem, true] call CBA_fnc_addItem;
 
-        ctrlSetText [1001, format ["You filled: %1...", _outputDisplayName]];
+        ctrlSetText [1001, format ["You filled: %1...", _displayName]];
         player setVariable [QCLASS(isFilling), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _fillInterrupt];
-        _fillButton ctrlShow true;
-        _drinkButton ctrlShow true;
-        _exitButton ctrlShow true;
-        _progressBar ctrlShow false;
+        [982380, [1600, 1601, 1602], true] call EFUNC(common,displayShowControls);
+        [982380, [1010], false] call EFUNC(common,displayShowControls);
 
         [_handle] call CBA_fnc_removePerFrameHandler;
     };
@@ -124,12 +100,9 @@ private _currentStep = 0;
     _requiredItem,
     _outputItem,
     _dialog,
-    _fillButton,
-    _drinkButton,
-    _exitButton,
     _fillInterrupt,
     _totalSteps,
     _currentStep,
-    _outputDisplayName,
+    _displayName,
     _progressBar
 ]] call CBA_fnc_addPerFrameHandler;

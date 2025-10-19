@@ -14,7 +14,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "SLIDER",
     ["AI Money Chance", "Chance that an AI will have money."],
     _category,
-    [0.1, 1, 0.5, 0, true],
+    [1, 100, 50, 0, true],
     1
 ] call CBA_fnc_addSetting;
 

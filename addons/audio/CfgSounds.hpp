@@ -108,6 +108,9 @@ class CfgSounds {
     MACRO_SOUNDS(gasmaskBreathing,immersion);
     MACRO_SOUNDS(gasPump,immersion);
     MACRO_SOUNDS(gasPump30,immersion);
+    MACRO_SOUNDS(gasPumpRunning,immersion);
+    MACRO_SOUNDS(gasPumpStart,immersion);
+    MACRO_SOUNDS(gasPumpStop,immersion);
     MACRO_SOUNDS(gatheringFirewood,immersion);
     MACRO_SOUNDS(i25m,immersion);
     MACRO_SOUNDS(i50m,immersion);
@@ -138,14 +141,10 @@ class CfgSounds {
     MACRO_SOUNDS(waterBottle,immersion);
 
     // Inventory
-    MACRO_SOUNDS(backpackClose,inventory);
-    MACRO_SOUNDS(backpackOpen,inventory);
     MACRO_SOUNDS(drop01,inventory);
     MACRO_SOUNDS(drop02,inventory);
     MACRO_SOUNDS(inventoryClose,inventory);
-    MACRO_SOUNDS(inventoryCloseAlt,inventory);
     MACRO_SOUNDS(inventoryOpen,inventory);
-    MACRO_SOUNDS(inventoryOpenAlt,inventory);
     MACRO_SOUNDS(pickup,inventory);
     MACRO_SOUNDS(rummaging,inventory);
     MACRO_SOUNDS(unzipping,inventory);

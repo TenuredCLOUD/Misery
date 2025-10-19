@@ -17,41 +17,38 @@
 
 [{!isNull findDisplay 982383},
 {
-private _list = findDisplay 982383 displayCtrl 1500;
-private _purchaseButton = findDisplay 982383 displayCtrl 1600;
+    private _list = findDisplay 982383 displayCtrl 1500;
 
-if (EGVAR(common,targetVehicleType) isEqualTo "") exitWith {
-    _purchaseButton ctrlShow false;
-};
+    [player] call EFUNC(common,nearVehicle) params ["", "_nearestVehicle"];
 
-private _vehicleName = getText (configFile >> "CfgVehicles" >> EGVAR(common,targetVehicleType) >> "displayName");
+    if (_nearestVehicle isEqualTo []) exitWith {
+        [982383, [1600], false] call EFUNC(common,displayShowControls);
+    };
 
-lbClear _list;
+    lbClear _list;
 
-if (isNil "_vehicleName") exitWith {};
-
-private _resupplyPrice = 0;
-private _found = false;
+    private _resupplyPrice = 0;
+    private _found = false;
 
     {
-        if ((_x select 0) isEqualTo EGVAR(common,targetVehicleType)) then {
+        if ((_x select 0) isEqualTo _nearestVehicle) then {
             _array = _x;
             _found = true;
             _resupplyPrice = _x select 4;
         };
     } forEach EGVAR(common,vehicleData);
 
-if !(_found) exitWith {};
+    if !(_found) exitWith {};
 
-private _formattedPrice = _resupplyPrice;
-private _index = 0;
+    private _formattedPrice = _resupplyPrice;
+    private _index = 0;
 
-if (_resupplyPrice isEqualTo -1) then {
-    _index = _list lbAdd "This vehicle cannot be resupplied...";
-    _purchaseButton ctrlShow false;
-} else {
-    _index = _list lbAdd format ["Resupply (%1)", _formattedPrice];
-};
+    if (_resupplyPrice isEqualTo -1) then {
+        _index = _list lbAdd "This vehicle cannot be resupplied...";
+        [982383, [1600], false] call EFUNC(common,displayShowControls);
+    } else {
+        _index = _list lbAdd format ["Resupply (%1)", _formattedPrice];
+    };
 }, []] call CBA_fnc_waitUntilAndExecute;
 
 

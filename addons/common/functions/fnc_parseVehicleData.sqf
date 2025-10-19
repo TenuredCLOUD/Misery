@@ -18,10 +18,14 @@ GVAR(vehicleData) = [];
 {
     private _vehicleName = configName _x;
     private _fuelType = getNumber (_x >> "fuelType");
-    private _liters = getNumber (_x >> "liters");
+    private _fuelLiters = getNumber (_x >> "fuelLiters");
+    private _coolantLiters = getNumber (_x >> "coolantLiters");
+    private _oilLiters = getNumber (_x >> "oilLiters");
     private _repairPrice = getNumber (_x >> "repairPrice");
     private _resupplyPrice = getNumber (_x >> "resupplyPrice");
-    GVAR(vehicleData) pushBack [_vehicleName, _fuelType, _liters, _repairPrice, _resupplyPrice];
+    private _batteryType = getText (_x >> "batteryType");
+    private _batteryCount = getNumber (_x >> "batteryCount");
+    GVAR(vehicleData) pushBack [_vehicleName, _fuelType, _fuelLiters, _repairPrice, _resupplyPrice, _batteryType, _batteryCount, _coolantLiters, _oilLiters];
 } forEach ("true" configClasses (missionConfigFile >> "CfgMisery_VehicleData"));
 
 // Broadcast the vehicle data across all clients

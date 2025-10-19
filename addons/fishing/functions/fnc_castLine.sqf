@@ -26,14 +26,10 @@ if !([] call FUNC(hasGear)) exitWith {
 [] call FUNC(actionLogic);
 
 // Hide cast line button & exit button:
-{
-    findDisplay 982387 displayCtrl _x ctrlShow false;
-} forEach [1600, 1602];
+[982387, [1600, 1602], false] call EFUNC(common,displayShowControls);
 
 // Show progress bars:
-{
-    findDisplay 982387 displayCtrl _x ctrlShow true;
-} forEach [1010, 1011, 1012, 1013];
+[982387, [1010, 1011, 1012, 1013], true] call EFUNC(common,displayShowControls);
 
 // Starting values with casted line
 GVAR(lineOut) = 0.2;
@@ -57,15 +53,13 @@ ctrlSetText [1001, "Line cast!"];
     };
 
     if !([] call FUNC(hasGear)) exitWith {
-        private _lostFishingGearStr = format ["<t font='PuristaMedium' size='0.7'>You lost some gear! Fishing stopped...</t>"];
-        [QEGVAR(common,tileText), _lostFishingGearStr] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), "You lost some gear! Fishing stopped..."] call CBA_fnc_localEvent;
         [] call FUNC(exit);
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
     if !([] call FUNC(canFish)) exitWith {
-        private _noWaterStr = format ["<t font='PuristaMedium' size='0.7'>You moved away from the water! Fishing stopped...</t>"];
-        [QEGVAR(common,tileText), _noWaterStr] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), "You moved away from the water! Fishing stopped..."] call CBA_fnc_localEvent;
         [] call FUNC(exit);
         _handle call CBA_fnc_removePerFrameHandler;
     };
@@ -87,8 +81,7 @@ ctrlSetText [1001, "Line cast!"];
     GVAR(lineTension) = (GVAR(lineTension) + _tensionChange) max 0 min 1;
 
     if (GVAR(lineTension) > 0.95) then {
-        private _lineSnappedStr = format ["<t font='PuristaMedium' size='0.7'>Something broke or flew off the line!</t>"];
-        [QEGVAR(common,tileText), _lineSnappedStr] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), "Something broke or flew off the line!"] call CBA_fnc_localEvent;
         private _randomGearLoss = round selectRandom [1, 2, 3];
         switch (true) do {
             case (_randomGearLoss isEqualTo 1): {
@@ -111,12 +104,11 @@ ctrlSetText [1001, "Line cast!"];
 
     // Random chance for snag or fish bite
     if (!GVAR(isSnagged) && !GVAR(fishOn)) then {
-        private _randomHookEvent = round random 100;
         switch (true) do {
-            case (_randomHookEvent < 1): {
+            case ([1] call EFUNC(common,rollChance)): {
                 GVAR(isSnagged) = true;
             };
-            case (_randomHookEvent > 98): {
+            case ([2] call EFUNC(common,rollChance)): {
                 GVAR(fishOn) = true;
                 GVAR(fishStrength) = random [0.3, 0.5, 0.7];
             };

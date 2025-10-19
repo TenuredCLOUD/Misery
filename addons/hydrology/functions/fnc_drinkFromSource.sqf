@@ -18,13 +18,8 @@
 */
 
 private _dialog = findDisplay 982380;
-private _fillButton = _dialog displayCtrl 1600;
-private _drinkButton = _dialog displayCtrl 1601;
-private _exitButton = _dialog displayCtrl 1602;
 
-_fillButton ctrlShow false;
-_drinkButton ctrlShow false;
-_exitButton ctrlShow false;
+[982380, [1600, 1601, 1602], false] call EFUNC(common,displayShowControls);
 
 if ("ace_field_rations" call EFUNC(common,isModLoaded)) then {
     player switchMove "ace_field_rations_drinkFromSourceLow";
@@ -38,12 +33,8 @@ playSound3D [QPATHTOEF(audio,sounds\items\drink.ogg), player, false, getPosASL p
 
 [0.015, "radiation"] call EFUNC(common,addStatusModifier);
 
-if (EGVAR(survival,ailments)) then {
-    if ((random 100) <= EGVAR(survival,turbidWaterChance)) then {
-        [0.01, "parasites"] call EFUNC(common,addStatusModifier);
-    };
+if ([EGVAR(survival,turbidWaterChance)] call EFUNC(common,rollChance)) then {
+    [0.01, "parasites"] call EFUNC(common,addStatusModifier);
 };
 
-_fillButton ctrlShow true;
-_drinkButton ctrlShow true;
-_exitButton ctrlShow true;
+[982380, [1600, 1601, 1602], true] call EFUNC(common,displayShowControls);

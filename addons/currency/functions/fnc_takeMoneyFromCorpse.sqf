@@ -21,7 +21,7 @@ if (isNull _corpse) exitWith {};
 
 private _cashFound = 0;
 
-if (random 1 > GVAR(corpseHasMoneyChance)) then {
+if ([GVAR(corpseHasMoneyChance)] call EFUNC(common,rollChance)) then {
     private _midAiMoney = GVAR(minAiMoney) + GVAR(maxAiMoney) / 2;
     _cashFound = floor random [GVAR(minAiMoney), _midAiMoney, GVAR(maxAiMoney)];
 };

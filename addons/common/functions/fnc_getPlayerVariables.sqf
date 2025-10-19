@@ -59,4 +59,8 @@ private _bankedFunds = player getVariable [QEGVAR(currency,bankedFunds), MACRO_P
 // Gas Mask
 private _cartridgeEfficiency = player getVariable [QEGVAR(gasmask,cartridgeEfficiency), MACRO_PLAYER_DEFAULTS_HIGH];
 
-[_hunger, _thirst, _energyDeficit, _thermalIndex, _exposure, _wetness, _radiation, _infection, _parasites, _toxicity, _psychosis, _buffs, _ailments, _funds, _bankedFunds, _cartridgeEfficiency]
+// Power / simulated battery life
+private _chemicalDetectorPower = player getVariable [QEGVAR(chemical,detectorPower), MACRO_PLAYER_DEFAULTS_HIGH];
+private _spectrumDevicePower = player getVariable [QEGVAR(spectrum,detectorPower), MACRO_PLAYER_DEFAULTS_HIGH];
+
+[_hunger, _thirst, _energyDeficit, _thermalIndex, _exposure, _wetness, _radiation, _infection, _parasites, _toxicity, _psychosis, _buffs, _ailments, _funds, _bankedFunds, _cartridgeEfficiency, _chemicalDetectorPower, _spectrumDevicePower]

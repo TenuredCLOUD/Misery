@@ -1,4 +1,3 @@
-PREP(displayActions);
 PREP(handleItemUse);
 PREP(initInventoryDialog);
 PREP(initItems);
@@ -7,4 +6,3 @@ PREP(parseItemData);
 PREP(populateCategories);
 PREP(populateItemsCombo);
 PREP(populateItemsList);
-PREP(selectAction);

@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * THBD injection (non-stim) (rad removal)
+ * THBD injection (non-stim) (radiation removal)
  *
  * Arguments:
  * None
@@ -14,20 +14,11 @@
  *
 */
 
-if (!hasInterface) exitWith {};
-
-if (EGVAR(common,ace)) then {
-[player, QCLASS(thrombomodulin), 120, 300, 1, 0, 1, 1] call ace_medical_status_fnc_addMedicationAdjustment;
+if ("ace_medical" call EFUNC(common,isModLoaded)) then {
+    [player, QCLASS(thrombomodulin), 120, 300, 1, 0, 1, 1] call ace_medical_status_fnc_addMedicationAdjustment;
 };
 
-titleText ["You inject the Thrombomodulin...", "PLAIN DOWN"];
-
-player removeItem QCLASS(thrombomodulin);
-
 [{
-    player setVariable [QEGVAR(survival,radiation), -2500 - random 500];
-    if ((player getVariable [QEGVAR(survival,radiation), 0]) < 0) then {
-        player setVariable [QEGVAR(survival,radiation), 0];
-    };
-}, [], 10] call CBA_fnc_waitAndExecute;
+    [-0.025, "radiation"] call EFUNC(common,addStatusModifier);
+}, [], 15] call CBA_fnc_waitAndExecute;
 

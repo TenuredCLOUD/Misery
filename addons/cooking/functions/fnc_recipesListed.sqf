@@ -19,8 +19,7 @@
     private _list = findDisplay 982379 displayCtrl 1500;
     private _playerXP = player getVariable [QGVAR(xp), MACRO_PLAYER_DEFAULTS_LOW];
 
-    private _progressBar = findDisplay 982379 displayCtrl 1010;
-    _progressBar ctrlShow false; // Hide progresss bar on GUI load
+    [982379, [1010], false] call EFUNC(common,displayShowControls);
 
     lbClear _list;
 
@@ -29,13 +28,8 @@
         private _requiredXP = _x select 7;
 
         if (_playerXP >= _requiredXP) then {
-            private _displayName = getText (configFile >> "CfgWeapons" >> _outputItem >> "displayName");
-            if (_displayName isEqualTo "") then {
-                _displayName = getText (configFile >> "CfgMagazines" >> _outputItem >> "displayName");
-            };
-            if (_displayName isEqualTo "") then {
-                _displayName = _outputItem;
-            };
+
+            [_outputItem] call EFUNC(common,getItemData) params ["_displayName"];
 
             private _index = _list lbAdd _displayName;
             _list lbSetData [_index, _outputItem];

@@ -1,6 +1,7 @@
 class CfgVehicles {
     class Item_Base_F;
     class House_F;
+    class Thing;
 
     class CLASS(object_Firewood): Item_Base_F {
         displayName = "Firewood";
@@ -39,11 +40,11 @@ class CfgVehicles {
         MACRO_ADDITEM(CLASS(Object_Woodpanel),1);
     };
 
-    class CLASS(forge): House_F {
+    class CLASS(forge): Thing {
         armor = 2000;
         author = "Model credits: RBG_illustrations - Reworked by TenuredCLOUD";
         displayName = "$STR_MISERY_FORGE_DISPLAYNAME";
-        MACRO_HOUSE_COMMON;
+        MACRO_THING_COMMON;
         mapSize = 3;
         model = QPATHTOF(data\models\forge.p3d);
         textSingular = "Forge";
@@ -56,42 +57,5 @@ class CfgVehicles {
         mapSize = 2;
         model = QPATHTOF(data\models\medievalanvil.p3d);
         textSingular = "Anvil";
-    };
-    class CLASS(jetFuel_Russian): House_F {
-        armor = 2000;
-        author = "Model credits: Tanks LuddePudde - Fuel pump castleonsandYT - Reworked by TenuredCLOUD";
-        displayName = "$STR_MISERY_JETFUELRU_DISPLAYNAME";
-        hiddenSelectionsMaterials[] = {QPATHTOF(data\rvmats\fueltanks.rvmat)};
-        MACRO_HOUSE_COMMON;
-        mapSize = 3;
-        model = QPATHTOF(data\models\twinjetfueltank.p3d);
-        textSingular = "Jet Fuel Station";
-    };
-    class CLASS(100KVA_Generator): House_F {
-        armor = 2000;
-        author = "Model credits: tasraven - Reworked by TenuredCLOUD";
-        displayName = "$STR_MISERY_100KVAGEN_DISPLAYNAME";
-        MACRO_HOUSE_COMMON;
-        mapSize = 3;
-        model = QPATHTOF(data\models\100kva_generator.p3d);
-        textSingular = "100KVA Generator";
-    };
-    class CLASS(heavilyUsedGas_Generator): House_F {
-        armor = 2000;
-        author = "Model credits: DennisHNguyen - Reworked by TenuredCLOUD";
-        displayName = "$STR_MISERY_HeavilyUsedGen_Gas_DISPLAYNAME";
-        MACRO_HOUSE_COMMON;
-        mapSize = 3;
-        model = QPATHTOF(data\models\used_gen_gas.p3d);
-        textSingular = "Heavily used Genrator - Petrol";
-    };
-    class CLASS(heavilyUsedDiesel_Generator): House_F {
-        armor = 2000;
-        author = "Model credits: Daniel_Bakunin - Reworked by TenuredCLOUD";
-        displayName = "$STR_MISERY_HeavilyUsedGen_Diesel_DISPLAYNAME";
-        MACRO_HOUSE_COMMON;
-        mapSize = 3;
-        model = QPATHTOF(data\models\used_gen_diesel.p3d);
-        textSingular = "Heavily used Generator - Diesel";
     };
 };

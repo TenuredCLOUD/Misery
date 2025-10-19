@@ -24,8 +24,6 @@
 
 params ["_damaged", "_hunger", "_thirst", "_ailments", "_parasites", "_toxicity", "_infection", "_isMultiplayer"];
 
-if !(GVAR(ailments)) exitWith {};
-
 // Initial values are checked before comparing, otherwise values will never change.
 
 // Parasites - Always gets worse, reset if medication is used
@@ -35,10 +33,6 @@ player setVariable [QGVAR(parasites), _finalParasites];
 
 if (_parasites > 0) then {
     [0.001, "parasites"] call EFUNC(common,addStatusModifier);
-
-    if (_parasites isEqualTo 1) then {
-        [player, (_parasites / 100)] call EFUNC(common,specialDamage);
-    };
 } else {
     player setVariable [QGVAR(parasites), MACRO_PLAYER_DEFAULTS_LOW];
 };
@@ -58,9 +52,6 @@ switch (true) do {
     case (!_damaged && _hunger >= 0.75 && _thirst >= 0.75 && _toxicity > 0): {
         [-0.001, "toxicity"] call EFUNC(common,addStatusModifier);
     };
-    case (_toxicity isEqualTo 1): {
-        [player, (_toxicity / 100)] call EFUNC(common,specialDamage);
-    };
 };
 
 // Infection - Heal if not damaged and well-fed/hydrated, otherwise gets worse
@@ -78,21 +69,4 @@ switch (true) do {
     case (!_damaged && _hunger >= 0.75 && _thirst >= 0.75 && _infection > 0): {
         [-0.001, "infection"] call EFUNC(common,addStatusModifier);
     };
-    case (_infection isEqualTo 1): {
-        [player, (_infection / 100)] call EFUNC(common,specialDamage);
-    };
 };
-
-if (_isMultiplayer) exitWith {};
-
-private _isSleeping = player getVariable [QGVAR(isSleeping), false];
-private _inhumanlyExhausted = (_ailments findIf {(_x select 0) isEqualTo "Inhumanely Exhausted"}) > -1;
-
-if (_inhumanlyExhausted && !(_isSleeping) && (random 100) < 25) then {
-    if ("ace_medical" call EFUNC(common,isModLoaded)) then {
-        [player, true, 5, true] call ace_medical_fnc_setUnconscious;
-    } else {
-        [player, random 4] call EFUNC(common,stun);
-    };
-};
-

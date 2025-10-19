@@ -1,3 +1,6 @@
+PREP(ailmentDamage);
+PREP(ailmentDecay);
+PREP(decayHealth);
 PREP(handleAilments);
 PREP(handleEnergy);
 PREP(handleHunger);
@@ -5,3 +8,5 @@ PREP(handleRadiation);
 PREP(handleTemperature);
 PREP(handleThirst);
 PREP(loop);
+PREP(setUnconscious);
+PREP(visualizeDecay);
