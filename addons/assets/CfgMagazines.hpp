@@ -269,7 +269,7 @@ class CfgMagazines {
         picture = QPATHTOF(data\icons\autobatt_heavy.paa);
         scope = 2;
     };
-    
+
     // duplicate ?
     class CLASS(matches): CLASS(FakeMagazine) {
         count = 20;
@@ -494,8 +494,8 @@ class CfgMagazines {
 
     class CLASS(fuelSystemKit): CLASS(FakeMagazine) {
         count = 10;
-        descriptionShort = "$STR_MISERY_FEULSYSTEMKIT_DESCRIPTION$";
-        displayName = "$STR_MISERY_FEULSYSTEMKIT_DISPLAYNAME$";
+        descriptionShort = "$STR_MISERY_FUELSYSTEMKIT_DESCRIPTION$";
+        displayName = "$STR_MISERY_FUELSYSTEMKIT_DISPLAYNAME$";
         mass = 70;
         model = "a3\weapons_f\items\toolkit.p3d";
         picture = QPATHTOF(data\icons\toolkit.paa);

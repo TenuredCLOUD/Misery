@@ -17,7 +17,7 @@ class CfgWeapons {
     };
 
     class CLASS(pickaxeHead): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_PICKAXEHEAD_DISPLAYNAME"
+        displayName = "$STR_MISERY_PICKAXEHEAD_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_PICKAXEHEAD_DESCRIPTION";
         picture = QPATHTOF(data\icons\pickHead.paa);
         scope = 2;
