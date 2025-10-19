@@ -18,4 +18,4 @@ params ["_entities", "_distance"];
 
 private _nearEntities = player nearEntities [_entities, _distance];
 
-count _nearEntities > 0
+_nearEntities isNotEqualTo []

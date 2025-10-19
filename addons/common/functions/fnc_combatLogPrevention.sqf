@@ -19,7 +19,7 @@ if !(GVAR(combatLogPreventionEnabled) || isMultiplayer) exitWith {};
     [{
         if (!isNull findDisplay 49) then {
             [{
-                ["_args", "_handle"];
+                params ["_args", "_handle"];
                 _args params [["_iteration", 5], ["_time", 0]];
 
                 if (!isNull findDisplay 49) then {
@@ -35,7 +35,7 @@ if !(GVAR(combatLogPreventionEnabled) || isMultiplayer) exitWith {};
                             _abortButton ctrlSetText "Logout";
                             _abortButton ctrlEnable true;
                             if (!isNil QEGVAR(persistence,enabled) && EGVAR(persistence,enabled)) then {
-                                [QEGVAR(persistence,saveDataToServer), FUNC(multiplayerDataSave)] call CBA_fnc_addEventHandler;
+                                [QEGVAR(persistence,saveDataToServer), EFUNC(persistence,multiplayerDataSave)] call CBA_fnc_addEventHandler;
                             };
                         };
                     };

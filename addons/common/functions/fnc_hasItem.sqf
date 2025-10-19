@@ -32,4 +32,4 @@ GVAR(itemsCache) = [GVAR(itemsCache)] call FUNC(lowerCaseArray);
 
 private _itemCheck = _items arrayIntersect GVAR(itemsCache);
 
-count _itemCheck > 0
+_itemCheck isNotEqualTo []

@@ -8,3 +8,12 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     false,
     1
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(defaultMask),
+    "EDITBOX",
+    ["Default swapped mask", "The default mask that is returned when a player uses cartridges on a gasmask without cartridges (use when not using contact DLC gasmasks)"],
+    _category,
+    "G_AirPurifyingRespirator_01_F",
+    1
+] call CBA_fnc_addSetting;

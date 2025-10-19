@@ -161,10 +161,9 @@ class CLASS(maintenance_ui)
                 private _dialog = ctrlParent (_this select 0);
                 private _list = _dialog displayCtrl 1500;
                 private _selected = lbCurSel _list;
-                if (_selected isEqualTo -1) exitWith {ctrlSetText [ARR_2(1001, 'No repair option selected...')]};
+                if (_selected isEqualTo -1) exitWith {ctrlSetText [ARR_2(1001,'No repair option selected...')]};
                 private _hitpoint = _list lbData _selected;
-                [ARR_2(_hitpoint, _selected)] call EFUNC(maintenance,repair);
-            );
+                [ARR_2(_hitpoint,_selected)] call EFUNC(maintenance,repair));
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
@@ -213,10 +212,9 @@ class CLASS(maintenance_ui)
                 private _dialog = ctrlParent (_this select 0);
                 private _list = _dialog displayCtrl 1500;
                 private _selected = lbCurSel _list;
-                if (_selected isEqualTo -1) exitWith {ctrlSetText [ARR_2(1001, 'No scavenge option selected...')]};
+                if (_selected isEqualTo -1) exitWith {ctrlSetText [ARR_2(1001,'No scavenge option selected...')]};
                 private _hitpoint = _list lbData _selected;
-                [ARR_2(_hitpoint, _selected)] call EFUNC(maintenance,scavenge);
-            );
+                [ARR_2(_hitpoint,_selected)] call EFUNC(maintenance,scavenge));
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };

@@ -24,6 +24,8 @@ private _furnitureCfg = missionConfigFile >> "CfgMisery_Furniture" >> _className
 private _itemMass = getNumber (_furnitureCfg >> "mass");
 private _itemName = getText (configFile >> "CfgVehicles" >> _className >> "displayName");
 
+[_vehicle] call EFUNC(common,getObjectData) params ["_displayName"];
+
 private _vehicleCfg = missionConfigFile >> "CfgMisery_VehicleData" >> (typeOf _vehicle);
 private _maxCargoMass = getNumber (_vehicleCfg >> "maxCargoMass");
 
@@ -31,7 +33,7 @@ private _currentCargoMass = _vehicle getVariable [QGVAR(furnitureCargoMass), 0];
 private _inventory = _vehicle getVariable [QGVAR(furnitureCargoInventory), []];
 
 if (_currentCargoMass + _itemMass > _maxCargoMass) exitWith {
-    private _tooHeavyTip = format ["Cannot load %1 (too heavy, %2 kg) into %3", _itemName, _itemMass, getText (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")];
+    private _tooHeavyTip = format ["Cannot load %1 (too heavy, %2 kg) into %3", _itemName, _itemMass, _displayName];
     [_tooHeavyTip, 1, [1, 1, 1, 1]] call CBA_fnc_notify;
 };
 
@@ -45,5 +47,5 @@ _inventory pushBack _className;
 _vehicle setVariable [QGVAR(furnitureCargoInventory), _inventory, true];
 _vehicle setVariable [QGVAR(furnitureCargoMass), _currentCargoMass + _itemMass, true];
 
-private _addedTip = format ["Loaded %1 (%2 kg) into %3", _itemName, _itemMass, getText (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")];
+private _addedTip = format ["Loaded %1 (%2 kg) into %3", _itemName, _itemMass, _displayName];
 [_addedTip, 1, [1, 1, 1, 1]] call CBA_fnc_notify;

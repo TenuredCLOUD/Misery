@@ -22,12 +22,16 @@
     // Handle artifact dosage
     call EFUNC(protection,totalProtection) params ["", "", "_skinProtection", "_respiratoryProtection", "_eyeProtection"];
 
-    private _skinDeficit = MACRO_BASE_DOSE * ((1 - _skinProtection) / 1);
-    private _respiratoryDeficit = MACRO_BASE_DOSE * ((1 - _respiratoryProtection) / 1);
-    private _eyeDeficit = MACRO_BASE_DOSE * ((1 - _eyeProtection) / 1);
-    private _effectiveDose = (_skinDeficit + _respiratoryDeficit + _eyeDeficit) max 0; // with enough protection values can turn negative
+    private _skinDeficit = MACRO_BASE_DOSE * ((1 - _skinProtection) / 1) max 0;
+    private _respiratoryDeficit = MACRO_BASE_DOSE * ((1 - _respiratoryProtection) / 1) max 0;
+    private _eyeDeficit = MACRO_BASE_DOSE * ((1 - _eyeProtection) / 1) max 0;
+    private _effectiveDose = _skinDeficit + _respiratoryDeficit + _eyeDeficit;
 
-    [_effectiveDose, "radiation"] call EFUNC(common,addStatusModifier);
+    //Only damage player if exposure is greater than 0 - with enough protection values can turn negative, also reduce damage recieved to player
+    if (_effectiveDose > 0) then {
+        _effectiveDose = _effectiveDose / 300;
+        [_effectiveDose, "radiation"] call EFUNC(common,addStatusModifier);
+    };
 
     [QUOTE(COMPONENT_BEAUTIFIED), format ["Artifact Radiation Protection: Skin %1%4, Respiratory %2%4, Eye %3%4", _skinProtection, _respiratoryProtection, _eyeProtection, "%"]] call EFUNC(common,debugMessage);
     [QUOTE(COMPONENT_BEAUTIFIED), format ["Effective Artifact Radiation Dose: %1", _effectiveDose]] call EFUNC(common,debugMessage);

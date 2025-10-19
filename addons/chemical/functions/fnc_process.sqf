@@ -32,11 +32,10 @@
 
     //Only damage player if exposure is greater than 0 - with enough protection values can turn negative, also reduce damage recieved to player
     if (_effectiveExposure > 0) then {
-    _effectiveExposure = _effectiveExposure / 3;
+        _effectiveExposure = _effectiveExposure / 300;
     };
 
-    // TODO: Compat ACE
-    if (EGVAR(common,ace)) then {
+    if ("ace_medical" call EFUNC(common,isModLoaded)) then {
         [player, _effectiveExposure, "body", "stab"] call ace_medical_fnc_addDamageToUnit;
     } else {
         private _damage = damage player;
@@ -45,4 +44,4 @@
 
     private _msg = format ["Chemical Area Protection: Skin %1%4, Respiratory %2%4, Eye %3%4", (_skinProtection * 100), (_respiratoryProtection * 100), (_eyeProtection * 100), "%"];
     [QUOTE(COMPONENT_BEAUTIFIED), _msg] call EFUNC(common,debugMessage);
-}, 1] call CBA_fnc_addPerFrameHandler;
+}, 15] call CBA_fnc_addPerFrameHandler;

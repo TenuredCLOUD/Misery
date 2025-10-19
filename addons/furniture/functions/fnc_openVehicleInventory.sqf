@@ -24,7 +24,8 @@ private _unloadButton = _dialog displayCtrl 1600;
 private _vehicleInfo = _dialog displayCtrl 1001;
 
 private _inventory = _vehicle getVariable [QGVAR(furnitureCargoInventory), []];
-private _vehicleName = getText (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName");
+
+[_vehicle] call EFUNC(common,getObjectData) params ["_displayName"];
 
 lbClear _listBox;
 {
@@ -49,7 +50,7 @@ _unloadButton ctrlAddEventHandler ["ButtonClick", {
 
 }];
 
-_vehicleInfo ctrlSetText format ["%1", _vehicleName];
+_vehicleInfo ctrlSetText format ["%1", _displayName];
 player setVariable [QGVAR(targetVehicle), _vehicle];
 
 [{

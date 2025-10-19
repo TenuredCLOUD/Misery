@@ -113,14 +113,18 @@
 "I_LT_01_cannon_F", \
 "I_MBT_03_cannon_F"]
 
-// Item List Macros
+// Crafting stations / Fuel stations
 #define MACRO_FUELSTATIONS_LAND "Land_fs_feed_F", "Land_FuelStation_Feed_F", "Land_Ind_TankSmall2", "Land_Ind_TankSmall2_EP1", "Land_A_FuelStation_Feed", "Land_fuelstation", "Land_Ind_FuelStation_Feed_EP1"
 #define MACRO_FUELSTATIONS_AIR "B_Slingload_01_Fuel_F", "StorageBladder_01_fuel_forest_F", "StorageBladder_01_fuel_sand_F", "Land_Pod_Heli_Transport_04_fuel_F"
 #define MACRO_CRAFTINGSTATIONS "Land_Workbench_01_F", "Land_PortableDesk_01_olive_F"
+
+// Artifacts
 #define MACRO_ARTIFACTS QCLASS(artifact_01), QCLASS(artifact_02), QCLASS(artifact_03), QCLASS(artifact_04), QCLASS(artifact_05), QCLASS(artifact_06), QCLASS(artifact_07), QCLASS(artifact_08), QCLASS(artifact_09), QCLASS(artifact_10)
 
+// Can openers
 #define MACRO_CANTOOLS QCLASS(canOpener), QCLASS(guttingKnife), "rvg_guttingKnife", "rvg_canOpener"
 
+// Knifes
 #define MACRO_KNIVES \
 QCLASS(guttingKnife), \
 "Weap_melee_knife", \
@@ -140,6 +144,7 @@ QCLASS(guttingKnife), \
 "tsp_meleeWeapon_socp", \
 "tsp_meleeWeapon_sog" \
 
+// Axes
 #define MACRO_AXES \
 "WBK_axe", \
 "WBK_brush_axe", \
@@ -149,16 +154,33 @@ QCLASS(guttingKnife), \
 "tsp_meleeWeapon_splittingaxe", \
 "tsp_meleeWeapon_fireaxe"
 
+// Fire crafting
 #define MACRO_FIRETYPES "MetalBarrel_burning_F", "Land_Campfire_F", "Land_FirePlace_F", "FirePlace_burning_F"
 #define MACRO_FIRE_TINDER QCLASS(tinder), "acex_intelitems_notepad", "rvg_money", "rvg_notepad", "rvg_docFolder"
 #define MACRO_FIRE_FUEL QCLASS(woodensticks), QCLASS(firewood)
 #define MACRO_FIRE_IGNITION QCLASS(lighter), QCLASS(matchBox)
+
+// Vehicle types
 #define MACRO_VEHICLETYPES "Car", "Tank", "Air", "Ship"
+
+// Houses / Loot
 #define MACRO_BUILDINGTYPES "House", "Building"
+
+// Foliage / Forestry
 #define MACRO_FOLIAGETYPES "TREE", "SMALL TREE", "BUSH"
-#define MACRO_GEMTYPES  QCLASS(malachite), QCLASS(ruby), QCLASS(sapphire), QCLASS(amethyst), QCLASS(diamond), QCLASS(emerald)
+
+// Mining
+#define MACRO_GEMTYPES QCLASS(malachite), QCLASS(ruby), QCLASS(sapphire), QCLASS(amethyst), QCLASS(diamond), QCLASS(emerald)
+
+// Gasmasks
 #define MACRO_RESPIRATOR_MASKS "g_airpurifyingrespirator_01_f", "g_airpurifyingrespirator_02_black_f", "g_airpurifyingrespirator_02_olive_f", "g_airpurifyingrespirator_02_sand_f"
 #define MACRO_RESPIRATOR_MASKS_NOFILTER "g_airpurifyingrespirator_01_nofilter_f", "g_airpurifyingrespirator_02_black_nofilter_f", "g_airpurifyingrespirator_02_olive_nofilter_f", "g_airpurifyingrespirator_02_sand_nofilter_f"
+
+// Fuel cans
+#define MACRO_FUEL_CANS QCLASS(petrol), QCLASS(diesel), QCLASS(jetFuel)
+#define MACRO_FUEL_CANS_EMPTY QCLASS(petrolEmpty), QCLASS(dieselEmpty), QCLASS(jetFuelEmpty)
+
+// Ambient AI
 #define MACRO_FACTIONS west, east, civilian, independent
 #define MACRO_FACTIONS_BASE_CLASS "B_Survivor_F", "O_G_Survivor_F", "C_man_1", "I_G_Survivor_F"
 
@@ -176,7 +198,7 @@ QCLASS(guttingKnife), \
 #define MACRO_BASE_CHEMICAL_DOSE 1
 
 // Calculations - Radiation
-#define MACRO_BASE_DOSE 10
+#define MACRO_BASE_DOSE 1
 #define MACRO_RADIATION_NUTRITIONLOSS(arg) ((arg) / 10) / 10
 #define MACRO_RADIATION_STAMINALOSS(arg) ((arg) / 10) / 10
 
@@ -192,7 +214,7 @@ QCLASS(guttingKnife), \
 #define WETNESS_RATE 0.015
 
 // IMS animations for compat:
-#define MACRO_ANIMATION_IMS_SPRINT "am_kulak_sprintf", "melee_sprintf", "melee_sprintfl","melee_sprintfr"
+#define MACRO_ANIMATION_IMS_SPRINT "am_kulak_sprintf", "melee_sprintf", "melee_sprintfl", "melee_sprintfr"
 
 // UI Macros
 #define CT_STATIC 0 // Static text/picture

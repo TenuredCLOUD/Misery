@@ -28,7 +28,7 @@ params ["_classname"];
         if (_unsafeProjectiles findIf {_x isEqualTo _projectile} isNotEqualTo -1) then {
             _unit call FUNC(destroy);
             if (isPlayer _instigator) then {
-                private _displayName = getText (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
+                [_unit] call EFUNC(common,getObjectData) params ["_displayName"];
                 private _text = format [localize "STR_MISERY_ANIMALOBLITERATED", _displayName];
                 [QEGVAR(common,titleText), _text, _instigator] call CBA_fnc_targetEvent;
             };

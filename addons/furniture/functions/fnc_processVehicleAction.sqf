@@ -20,8 +20,7 @@
 params ["_className", "_vehicle", ["_actionType", "unload"], "_caller", "_target", "_actionId"];
 
 private _dialog = findDisplay 982390;
-private _displayName = getText (configFile >> "CfgVehicles" >> _className >> "displayName");
-private _vehicleName = getText (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName");
+[_vehicle] call EFUNC(common,getObjectData) params ["_displayName"];
 private _progressBar = _dialog displayCtrl 1800;
 
 player setVariable [QGVAR(processVehicleAction), true];
@@ -46,7 +45,7 @@ private _progressText = format ["%1 %2...", _actionText, _displayName];
 },
 {
     params ["_args"];
-    _args params ["_className", "_vehicle", "_actionType", "_caller", "_target", "_actionId", "_dialog", "_interrupt", "_vehicleName", "_displayName", "_progressBar"];
+    _args params ["_className", "_vehicle", "_actionType", "_caller", "_target", "_actionId", "_dialog", "_interrupt", "_displayName", "_progressBar"];
 
     if (_actionType isEqualTo "unload") then {
         private _inventory = _vehicle getVariable [QGVAR(furnitureCargoInventory), []];
@@ -75,7 +74,7 @@ private _progressText = format ["%1 %2...", _actionText, _displayName];
 },
 {
     params ["_args"];
-    _args params ["_className", "_vehicle", "_actionType", "_caller", "_target", "_actionId", "_dialog", "_interrupt", "_vehicleName", "_displayName", "_progressBar"];
+    _args params ["_className", "_vehicle", "_actionType", "_caller", "_target", "_actionId", "_dialog", "_interrupt", "_displayName", "_progressBar"];
 
     if (_actionType isEqualTo "unload") then {
         _dialog displayRemoveEventHandler ["KeyDown", _interrupt];
@@ -86,4 +85,4 @@ private _progressText = format ["%1 %2...", _actionText, _displayName];
     };
     player setVariable [QGVAR(processVehicleAction), nil];
 },
-[_className, _vehicle, _actionType, _caller, _target, _actionId, _dialog, _interrupt, _vehicleName, _displayName, _progressBar]] call CBA_fnc_progressBar;
+[_className, _vehicle, _actionType, _caller, _target, _actionId, _dialog, _interrupt, _displayName, _progressBar]] call CBA_fnc_progressBar;

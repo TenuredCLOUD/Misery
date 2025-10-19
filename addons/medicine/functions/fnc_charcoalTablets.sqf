@@ -14,6 +14,4 @@
  *
 */
 
-[{
-    [-0.25, "toxicity"] call EFUNC(common,addStatusModifier);
-}, [], 15] call CBA_fnc_waitAndExecute;
+[-0.25, "toxicity"] call EFUNC(common,addStatusModifier);

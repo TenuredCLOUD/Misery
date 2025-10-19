@@ -11,9 +11,7 @@ GVAR(processedMarkers) = [];
 
 if !(hasInterface) exitWith {};
 
-if (EGVAR(radiation,enhancedArtifacts)) then {
 [] call FUNC(exposure);
-};
 
 //Artifact Light emission handling:
 player addEventHandler ["Take", {

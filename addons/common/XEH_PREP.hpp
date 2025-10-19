@@ -1,6 +1,4 @@
 PREP(addStatusModifier);
-PREP(buildingPositions);
-PREP(buildingPositionsInside);
 PREP(chromaticEffect);
 PREP(combatLogPrevention);
 PREP(configCheck);
@@ -39,7 +37,6 @@ PREP(nearWell);
 PREP(parseVehicleData);
 PREP(rollChance);
 PREP(spawnLoot);
-PREP(surfacePos);
 PREP(switchItem);
 PREP(switchMagazine);
 PREP(switchPowerState);

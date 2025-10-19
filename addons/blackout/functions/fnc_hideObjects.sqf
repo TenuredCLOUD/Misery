@@ -101,7 +101,7 @@ private _modelSource = [
             _directReplacement setDir _direction;
             _directReplacement setVectorUp _vectorUp;
 
-            [_directReplacement] call _fnc_damageLights;
+            [_directReplacement] call FUNC(damageLights);
 
             _replacementBuildings pushBack _directReplacement;
         };

@@ -23,5 +23,5 @@
         _audioSource = playSound QEGVAR(audio,sound_gasPumpRunning);
 
         [_audioSource, _handle] call FUNC(audioLogic);
-    }, 30, []] call CBA_fnc_addPerFrameHandler;
+    }, 24, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;

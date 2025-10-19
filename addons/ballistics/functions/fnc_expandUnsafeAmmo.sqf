@@ -22,6 +22,6 @@ private _ammoList = GVAR(ballisticsMap) get _classname;
 
 GVAR(ballisticsMap) set [_classname, _newAmmo];
 
-diag_log format ["[MISERY] - Extended unsafe ammo for (%1) with (%2)", _classname, _unsafeAmmo];
+[QUOTE(COMPONENT_BEAUTIFIED), format ["Extended unsafe ammo for (%1) with (%2)", _classname, _unsafeAmmo]] call EFUNC(common,debugMessage);
 
 _classname call FUNC(registerEventHandlers);

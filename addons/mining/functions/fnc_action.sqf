@@ -52,7 +52,7 @@ _miningTime,
 {[[QCLASS(pickaxe)]] call EFUNC(common,hasItem)},
 {
     params ["_args"];
-    _args params ["_object", "_objectData", "_miningTime", "_soundDummy"];
+    _args params ["_objectData", "_miningTime", "_soundDummy"];
     private _items = _objectData select 3;
     private _oreDepletion = _objectData select 4;
 
@@ -94,7 +94,7 @@ _miningTime,
 },
 {
     params ["_args"];
-    _args params ["_object", "_objectData", "_miningTime", "_soundDummy"];
+    _args params ["_objectData", "_miningTime", "_soundDummy"];
 
     player setVariable [QGVAR(miningOre), nil];
 
@@ -104,5 +104,5 @@ _miningTime,
 
     [QEGVAR(common,tileText), "You stop mining..."] call CBA_fnc_localEvent;
 },
-[_object, _objectData, _miningTime, _soundDummy]
+[_objectData, _miningTime, _soundDummy]
 ] call CBA_fnc_progressBar;

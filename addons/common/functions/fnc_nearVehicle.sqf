@@ -22,7 +22,7 @@ private _nearestObjects = nearestObjects [_object, [MACRO_VEHICLETYPES], 5];
 
 private _isNearVehicle = _nearestObjects isNotEqualTo [];
 
-private _hasCrew = if (crew ((_nearestObjects) select 0) isNotEqualTo []) then {true} else {false};
+private _hasCrew = [false, true] select (crew (_nearestObjects select 0) isNotEqualTo []);
 
 [_isNearVehicle, _nearestObjects select 0, _hasCrew]
 

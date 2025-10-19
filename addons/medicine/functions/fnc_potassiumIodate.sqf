@@ -18,6 +18,4 @@ if ("ace_medical" call EFUNC(common,isModLoaded)) then {
     [player, QCLASS(potassiumIodate), 120, 300, 1, 0, 1, 1] call ace_medical_status_fnc_addMedicationAdjustment;
 };
 
-[{
-    [-0.02, "radiation"] call EFUNC(common,addStatusModifier);
-}, [], 15] call CBA_fnc_waitAndExecute;
+[-0.02, "radiation"] call EFUNC(common,addStatusModifier);

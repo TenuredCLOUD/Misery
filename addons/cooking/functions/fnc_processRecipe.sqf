@@ -65,9 +65,6 @@ private _cookInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QGVAR(isCooking), false];
         [982379, [1010], false] call EFUNC(common,displayShowControls);
-        if (_soundSource isNotEqualTo objNull) then {
-            deleteVehicle _soundSource;
-        };
         [parseText "<t font='PuristaMedium' size='1'>Cooking interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
     };
 }];

@@ -44,6 +44,8 @@ switch (_unitCase) do {
     };
 };
 
+private _unit = objNull;
+
 private _group = createGroup GVAR(factionType);
 
 private _numEntities = [1, GVAR(groupSize)] call BIS_fnc_randomInt;
@@ -77,7 +79,7 @@ for "_i" from 1 to _numEntities do {
     private _randomammocount = [1, GVAR(ammoCount)] call BIS_fnc_randomInt;
 
     if (GVAR(spawnChance) > (random 100)) then {
-        private _unit = _group createUnit [GVAR(aiClass), _outsidePos, [], 0, "FORM"];
+        _unit = _group createUnit [GVAR(aiClass), _outsidePos, [], 0, "FORM"];
     };
 
     _unit addEventHandler ["Killed", {
