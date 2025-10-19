@@ -423,7 +423,7 @@
         </Key>
         <Key ID="STR_MISERY_18VBAT_DESCRIPTION">
             <English>18v battery for handheld tools</English>
-            <Czech>18v baterie pro ruční nářadí</Czech>
+            <Czech>Baterie 18V pro AKU nářadí</Czech>
             <French>Batterie 18v pour outils portatifs</French>
             <Spanish>Batería de 18v para herramientas de mano</Spanish>
             <Italian>Batteria 18v per utensili portatili</Italian>
@@ -437,7 +437,7 @@
         </Key>
         <Key ID="STR_MISERY_18VBAT_DISPLAYNAME">
             <English>18v battery</English>
-            <Czech>18v baterie</Czech>
+            <Czech>Baterie 18V</Czech>
             <French>Batterie 18v</French>
             <Spanish>Batería de 18v</Spanish>
             <Italian>Batteria 18v</Italian>
@@ -465,7 +465,7 @@
         </Key>
         <Key ID="STR_MISERY_9VBAT_DESCRIPTION">
             <English>old 9V battery</English>
-            <Czech>stará 9V baterie</Czech>
+            <Czech>stará baterie 9V</Czech>
             <French>vieille pile 9V</French>
             <Spanish>batería vieja de 9V</Spanish>
             <Italian>vecchia batteria da 9V</Italian>
@@ -479,7 +479,7 @@
         </Key>
         <Key ID="STR_MISERY_9VBAT_DISPLAYNAME">
             <English>9V battery</English>
-            <Czech>9V baterie</Czech>
+            <Czech>baterie 9V</Czech>
             <French>Pile 9V</French>
             <Spanish>Batería de 9V</Spanish>
             <Italian>Batteria da 9V</Italian>
@@ -563,7 +563,7 @@
         </Key>
         <Key ID="STR_MISERY_ANTIBIOTICPILL_DESCRIPTION">
             <English>Used to treat bacterial infections &lt;br/&gt; - Antibiotic medication</English>
-            <Czech>Používá se k léčbě bakteriálních infekcí &lt;br/&gt; - Antibiotický lék</Czech>
+            <Czech>Používá se k léčbě bakteriálních infekcí &lt;br/&gt; - Antibiotikum</Czech>
             <French>Utilisé pour traiter les infections bactériennes &lt;br/&gt; - Médicament antibiotique</French>
             <Spanish>Se usa para tratar infecciones bacterianas &lt;br/&gt; - Medicamento antibiótico</Spanish>
             <Italian>Usato per trattare le infezioni batteriche &lt;br/&gt; - Farmaco antibiotico</Italian>
@@ -591,7 +591,7 @@
         </Key>
         <Key ID="STR_MISERY_ANTIBIOTIC_DESCRIPTION">
             <English>Contains antibiotic pills</English>
-            <Czech>Obsahuje antibiotické tablety</Czech>
+            <Czech>Obsahuje antibiotické pilulky</Czech>
             <French>Contient des comprimés d'antibiotiques</French>
             <Spanish>Contiene pastillas de antibióticos</Spanish>
             <Italian>Contiene pillole di antibiotici</Italian>
@@ -619,7 +619,7 @@
         </Key>
         <Key ID="STR_MISERY_ANTIPARASITICPILL_DESCRIPTION">
             <English>Used to treat parasitic infections &lt;br/&gt; - Anti parasitic medication</English>
-            <Czech>Používá se k léčbě parazitárních infekcí &lt;br/&gt; - Antiparazitární lék</Czech>
+            <Czech>Používá se k léčbě parazitárních onemocnění &lt;br/&gt; - Antiparazitární lék</Czech>
             <French>Utilisé pour traiter les infections parasitaires &lt;br/&gt; - Médicament antiparasitaire</French>
             <Spanish>Se usa para tratar infecciones parasitarias &lt;br/&gt; - Medicamento antiparasitario</Spanish>
             <Italian>Usato per trattare le infezioni parassitarie &lt;br/&gt; - Farmaco antiparassitario</Italian>
@@ -647,7 +647,7 @@
         </Key>
         <Key ID="STR_MISERY_ANTIPARASITIC_DESCRIPTION">
             <English>Contains anti parasitic pills</English>
-            <Czech>Obsahuje antiparazitární tablety</Czech>
+            <Czech>Obsahuje antiparazitární pilulky</Czech>
             <French>Contient des comprimés antiparasitaires</French>
             <Spanish>Contiene pastillas antiparasitarias</Spanish>
             <Italian>Contiene pillole antiparassitarie</Italian>
@@ -675,7 +675,7 @@
         </Key>
         <Key ID="STR_MISERY_ANVILHAMMER_DESCRIPTION">
             <English>An Old striking hammer, has some good weight to it &lt;br/&gt; - Smithing item</English>
-            <Czech>Staré úderné kladivo, má dobrou váhu &lt;br/&gt; - Kovářský předmět</Czech>
+            <Czech>Staré ploché kladivo, má dobrou váhu &lt;br/&gt; - Kovářský předmět</Czech>
             <French>Un vieux marteau de frappe, a un bon poids &lt;br/&gt; - Objet de forge</French>
             <Spanish>Un viejo martillo de golpe, tiene un buen peso &lt;br/&gt; - Objeto de herrería</Spanish>
             <Italian>Un vecchio martello battente, ha un buon peso &lt;br/&gt; - Oggetto di forgiatura</Italian>
@@ -689,7 +689,7 @@
         </Key>
         <Key ID="STR_MISERY_ANVILHAMMER_DISPLAYNAME">
             <English>Striking Hammer</English>
-            <Czech>Úderové kladivo</Czech>
+            <Czech>Ploché kladivo</Czech>
             <French>Marteau de frappe</French>
             <Spanish>Martillo de golpe</Spanish>
             <Italian>Martello battente</Italian>
@@ -717,7 +717,7 @@
         </Key>
         <Key ID="STR_MISERY_ARTIFACT_DESCRIPTION">
             <English>A strange object that emits radiation, probably highly sought after by researchers.&lt;br/&gt; - Emits radiation&lt;br/&gt; - Rarity</English>
-            <Czech>Podivný předmět, který vyzařuje radiaci, pravděpodobně velmi vyhledávaný výzkumníky.&lt;br/&gt; - Vyzařuje radiaci&lt;br/&gt; - Vzácnost</Czech>
+            <Czech>Podivný předmět, který vyzařuje radiaci, pravděpodobně velmi žádaný výzkumníky.&lt;br/&gt; - Vyzařuje radiaci&lt;br/&gt; - Vzácnost</Czech>
             <French>Un objet étrange qui émet des radiations, probablement très recherché par les chercheurs.&lt;br/&gt; - Émet des radiations&lt;br/&gt; - Rareté</French>
             <Spanish>Un extraño objeto que emite radiación, probablemente muy buscado por los investigadores.&lt;br/&gt; - Emite radiación&lt;br/&gt; - Rareza</Spanish>
             <Italian>Uno strano oggetto che emette radiazioni, probabilmente molto ricercato dai ricercatori.&lt;br/&gt; - Emette radiazioni&lt;br/&gt; - Rarità</Italian>
@@ -745,7 +745,7 @@
         </Key>
         <Key ID="STR_MISERY_AUTOBATTHEAVY_DESCRIPTION">
             <English>An old 8D Deep cycle Automotive battery. Very heavy... &lt;br/&gt; - Refueling item &lt;br/&gt; - Crafting item</English>
-            <Czech>Stará automobilová baterie 8D s hlubokým cyklem. Velmi těžká... &lt;br/&gt; - Položka pro doplňování paliva &lt;br/&gt; - Položka pro řemeslníky</Czech>
+            <Czech>Stará autobaterie 8D s hlubokým cyklem. Velmi těžká... &lt;br/&gt; - Položka pro doplňování paliva &lt;br/&gt; - Předmět pro výrobu</Czech>
             <French>Une vieille batterie automobile 8D à décharge profonde. Très lourde... &lt;br/&gt; - Objet de ravitaillement &lt;br/&gt; - Objet d'artisanat</French>
             <Spanish>Una vieja batería de automoción de ciclo profundo 8D. Muy pesada... &lt;br/&gt; - Objeto de repostaje &lt;br/&gt; - Objeto de artesanía</Spanish>
             <Italian>Una vecchia batteria automobilistica a ciclo profondo 8D. Molto pesante... &lt;br/&gt; - Oggetto per il rifornimento di carburante</Italian>
@@ -759,7 +759,7 @@
         </Key>
         <Key ID="STR_MISERY_AUTOBATTHEAVY_DISPLAYNAME">
             <English>Automotive Battery (Heavy Duty)</English>
-            <Czech>Automobilové baterie (Heavy Duty)</Czech>
+            <Czech>Autobaterie (Heavy Duty)</Czech>
             <French>Batterie automobile (usage intensif)</French>
             <Spanish>Batería de automóvil (Heavy Duty)</Spanish>
             <Italian>Batteria per autoveicoli (per impieghi gravosi)</Italian>
@@ -829,7 +829,7 @@
         </Key>
         <Key ID="STR_MISERY_BONESAW_DESCRIPTION">
             <English>Bone saw, used for collecting specimens.&lt;br/&gt; - Research tool</English>
-            <Czech>Kostní pila, používá se ke sběru vzorků.&lt;br/&gt; - Výzkumný nástroj</Czech>
+            <Czech>Pila na kosti, používá se ke sběru vzorků.&lt;br/&gt; - Výzkumný nástroj</Czech>
             <French>Scie à os, utilisée pour collecter des spécimens.&lt;br/&gt; - Outil de recherche</French>
             <Spanish>Sierra para huesos, utilizada para recolectar muestras.&lt;br/&gt; - Herramienta de investigación</Spanish>
             <Italian>Seghetto per ossa, utilizzato per raccogliere campioni.&lt;br/&gt; - Strumento di ricerca</Italian>
@@ -843,7 +843,7 @@
         </Key>
         <Key ID="STR_MISERY_BONESAW_DISPLAYNAME">
             <English>Bone saw</English>
-            <Czech>Kostní pila</Czech>
+            <Czech>Pila na kosti</Czech>
             <French>Scie à os</French>
             <Spanish>Sierra para huesos</Spanish>
             <Italian>Seghetto per ossa</Italian>
@@ -857,7 +857,7 @@
         </Key>
         <Key ID="STR_MISERY_BOXNAILS_DESCRIPTION">
             <English>A box of wood nails&lt;br/&gt; - Base crafting</English>
-            <Czech>Krabice dřevěných hřebíků&lt;br/&gt; - Základní výroba</Czech>
+            <Czech>Krabice hřebíků&lt;br/&gt; - Základní stavební materiál</Czech>
             <French>Une boîte de clous en bois&lt;br/&gt; - Création de base</French>
             <Spanish>Una caja de clavos de madera&lt;br/&gt; - Elaboración de bases</Spanish>
             <Italian>Una scatola di chiodi di legno&lt;br/&gt; - Creazione di basi</Italian>
@@ -969,7 +969,7 @@
         </Key>
         <Key ID="STR_MISERY_CAMONET_DESCRIPTION">
             <English>Some camo netting &lt;br/&gt; - Crafting item</English>
-            <Czech>Maskovací síť &lt;br/&gt; - Řemeslný předmět</Czech>
+            <Czech>Maskovací síť &lt;br/&gt; - Předmět pro výrobu</Czech>
             <French>Un peu de filet de camouflage &lt;br/&gt; - Objet d'artisanat</French>
             <Spanish>Un poco de red de camuflaje &lt;br/&gt; - Objeto de artesanía</Spanish>
             <Italian>Un po' di rete mimetica &lt;br/&gt; - Oggetto per il crafting</Italian>
@@ -1052,7 +1052,7 @@
         </Key>
         <Key ID="STR_MISERY_CANTEENCLEAN_DISPLAYNAME">
             <English>Canteen (Clean)</English>
-            <Czech>Jídelna (čistá)</Czech>
+            <Czech>Čutora (čistá)</Czech>
             <French>Cantine (propre)</French>
             <Spanish>Cantina (limpia)</Spanish>
             <Italian>Mensa (pulita)</Italian>
@@ -1066,7 +1066,7 @@
         </Key>
         <Key ID="STR_MISERY_CANTEENDIRTY_DESCRIPTION">
             <English>This canteen contains water straight from the environment, it has a foul strong odor...</English>
-            <Czech>Tato čutora obsahuje vodu přímo z prostředí, má silný zápach...</Czech>
+            <Czech>Tato čutora obsahuje vodu přímo z přírody, má nepříjemný silný zápach...</Czech>
             <French>Cette gourde contient de l'eau provenant directement de l'environnement, elle a une odeur forte et nauséabonde...</French>
             <Spanish>Esta cantimplora contiene agua directamente del medio ambiente, tiene un olor fétido y fuerte...</Spanish>
             <Polish>Ta manierka zawiera wodę prosto ze środowiska, ma nieprzyjemny, silny zapach...</Polish>
@@ -1079,7 +1079,7 @@
         </Key>
         <Key ID="STR_MISERY_CANTEENDIRTY_DISPLAYNAME">
             <English>Canteen (Dirty)</English>
-            <Czech>Jídelna (špinavá)</Czech>
+            <Czech>Čutora (špinavá)</Czech>
             <French>Cantine (sale)</French>
             <Spanish>Cantina (sucia)</Spanish>
             <Italian>Mensa (sporca)</Italian>
@@ -1093,7 +1093,7 @@
         </Key>
         <Key ID="STR_MISERY_CANTEENEMPTY_DESCRIPTION">
             <English>An empty canteen</English>
-            <Czech>Prázdná jídelna</Czech>
+            <Czech>Prázdná čutora</Czech>
             <French>Une cantine vide</French>
             <Spanish>Una cantimplora vacía</Spanish>
             <Polish>Pusta stołówka</Polish>
@@ -1106,7 +1106,7 @@
         </Key>
         <Key ID="STR_MISERY_CANTEENEMPTY_DISPLAYNAME">
             <English>Canteen (Empty)</English>
-            <Czech>Jídelna (prázdná)</Czech>
+            <Czech>Čutora (prázdná)</Czech>
             <French>Cantine (vide)</French>
             <Spanish>Cantina (vacía)</Spanish>
             <Italian>Mensa (vuota)</Italian>
@@ -1120,7 +1120,7 @@
         </Key>
         <Key ID="STR_MISERY_CANTEENPURIFIED_DESCRIPTION">
             <English>This canteen holds water that's been treated with purification tablets, removing all traces of radiation and biological contaminants</English>
-            <Czech>V této čutorce je voda ošetřená čisticími tabletami, které odstraňují všechny stopy radiace a biologických kontaminantů.</Czech>
+            <Czech>V této čutoře je voda ošetřená čisticími tabletami, které odstraňují všechny stopy radiace a biologických kontaminantů.</Czech>
             <French>Cette gourde contient de l'eau qui a été traitée avec des comprimés de purification, éliminant toute trace de radiation et de contaminants biologiques</French>
             <Spanish>Esta cantimplora contiene agua tratada con pastillas purificadoras que eliminan todo rastro de radiación y contaminantes biológicos</Spanish>
             <Polish>Ta manierka zawiera wodę, która została oczyszczona za pomocą tabletek oczyszczających, usuwających wszelkie ślady promieniowania i zanieczyszczeń biologicznych</Polish>
@@ -1133,7 +1133,7 @@
         </Key>
         <Key ID="STR_MISERY_CANTEENPURIFIED_DISPLAYNAME">
             <English>Canteen (Purified)</English>
-            <Czech>Kantýna (čištěná)</Czech>
+            <Czech>Čutora (Čistá)</Czech>
             <French>Cantine (purifiée)</French>
             <Spanish>Cantina (purificada)</Spanish>
             <Italian>Mensa (depurata)</Italian>
@@ -1189,7 +1189,7 @@
         </Key>
         <Key ID="STR_MISERY_CBRNPARTS_DESCRIPTION">
             <English>A deconstructed CBRN suit...&lt;br/&gt; - Crafting item</English>
-            <Czech>Dekonstruovaný oblek CBRN...&lt;br/&gt; - Předmět pro výrobu</Czech>
+            <Czech>Rozebraný oblek CBRN...&lt;br/&gt; - Předmět pro výrobu</Czech>
             <French>Une combinaison CBRN déconstruite...&lt;br/&gt; - Objet d'artisanat</French>
             <Spanish>Un traje CBRN deconstruido...&lt;br/&gt; - Objeto de fabricación</Spanish>
             <Italian>Una tuta CBRN decostruita...&lt;br/&gt; - Oggetto di creazione</Italian>
@@ -1217,7 +1217,7 @@
         </Key>
         <Key ID="STR_MISERY_CENESTINBOTTLE_DESCRIPTION">
             <English>Contains Cenestin pills</English>
-            <Czech>Obsahuje tablety Cenestin</Czech>
+            <Czech>Obsahuje tablety Cenestinu</Czech>
             <French>Contient des pilules Cenestin</French>
             <Spanish>Contiene píldoras Cenestin</Spanish>
             <Italian>Contiene pillole Cenestin</Italian>
@@ -1231,7 +1231,7 @@
         </Key>
         <Key ID="STR_MISERY_CENESTINBOTTLE_DISPLAYNAME">
             <English>Cenestin bottle</English>
-            <Czech>Láhev Cenestin</Czech>
+            <Czech>Láhev Cenestinu</Czech>
             <French>Flacon de Cenestin</French>
             <Spanish>Botella de Cenestin</Spanish>
             <Italian>Flacone di Cenestin</Italian>
@@ -1245,7 +1245,7 @@
         </Key>
         <Key ID="STR_MISERY_CENESTIN_DESCRIPTION">
             <English>Used to help with blood coagulation, contains estrogen hormone.&lt;br/&gt; - Blood density medication</English>
-            <Czech>Používá se k podpoře srážlivosti krve, obsahuje estrogenní hormon.&lt;br/&gt; - Léky na hustotu krve</Czech>
+            <Czech>Používá se k podpoře srážlivosti krve, obsahuje hormon estrogen.&lt;br/&gt; - Léky na hustotu krve</Czech>
             <French>Utilisé pour aider à la coagulation du sang, contient une hormone œstrogène.&lt;br/&gt; - Médicament pour la densité sanguine</French>
             <Spanish>Se usa para ayudar a la coagulación de la sangre, contiene hormona estrógeno.&lt;br/&gt; - Medicamento para la densidad de la sangre</Spanish>
             <Italian>Utilizzato per aiutare la coagulazione del sangue, contiene ormone estrogeno.&lt;br/&gt; - Farmaco per la densità del sangue</Italian>
@@ -1273,7 +1273,7 @@
         </Key>
         <Key ID="STR_MISERY_CHAINSAWEMPTY_DESCRIPTION">
             <English>- Gas tank is empty, useless...&lt;br/&gt; - Tool&lt;br/&gt; - Needs fuel</English>
-            <Czech>- Palivová nádrž je prázdná, k ničemu...&lt;br/&gt; - Nástroj&lt;br/&gt; - Potřebuje palivo</Czech>
+            <Czech>- Palivová nádrž je prázdná, k ničemu...&lt;br/&gt; - Nářadí&lt;br/&gt; - Potřebuje palivo</Czech>
             <French>- Le réservoir d'essence est vide, inutile...&lt;br/&gt; - Outil&lt;br/&gt; - A besoin de carburant</French>
             <Spanish>- El tanque de gasolina está vacío, inútil...&lt;br/&gt; - Herramienta&lt;br/&gt; - Necesita combustible</Spanish>
             <Italian>- Serbatoio del gas vuoto, inutile...&lt;br/&gt; - Strumento&lt;br/&gt; - Ha bisogno di carburante</Italian>
@@ -1301,7 +1301,7 @@
         </Key>
         <Key ID="STR_MISERY_CHAINSAW_DESCRIPTION">
             <English>- makes wood collection easy&lt;br/&gt; - Tool</English>
-            <Czech>- usnadňuje sběr dřeva&lt;br/&gt; - Nástroj</Czech>
+            <Czech>- usnadňuje těžbu dřeva&lt;br/&gt; - Nářadí</Czech>
             <French>- facilite la collecte du bois&lt;br/&gt; - Outil</French>
             <Spanish>- facilita la recolección de madera&lt;br/&gt; - Herramienta</Spanish>
             <Italian>- rende facile la raccolta del legno&lt;br/&gt; - Strumento</Italian>
@@ -1357,7 +1357,7 @@
         </Key>
         <Key ID="STR_MISERY_CHARCOALTABS_DISPLAYNAME">
             <English>Charcoal tablets</English>
-            <Czech>Tablety s aktivním uhlím</Czech>
+            <Czech>Tablety aktivního uhlí</Czech>
             <French>Comprimés de charbon actif</French>
             <Spanish>Tabletas de carbón activado</Spanish>
             <Italian>Compresse di carbone attivo</Italian>
@@ -1497,7 +1497,7 @@
         </Key>
         <Key ID="STR_MISERY_CLOZAPINEPILL_DESCRIPTION">
             <English>Used to treat symptoms of psychosis such as delusions, hallucinations, paranoia, or confused thoughts, as well as schizophrenia &lt;br/&gt; - Antipsychotic medication</English>
-            <Czech>Používá se k léčbě příznaků psychózy, jako jsou bludy, halucinace, paranoia nebo zmatené myšlenky, stejně jako schizofrenie &lt;br/&gt; - Antipsychotikum</Czech>
+            <Czech>Používá se k léčbě příznaků psychózy, jako jsou bludy, halucinace, paranoia nebo zmatené myšlenky, a také schizofrenie &lt;br/&gt; - Antipsychotikum</Czech>
             <French>Utilisé pour traiter les symptômes de la psychose tels que les délires, les hallucinations, la paranoïa ou les pensées confuses, ainsi que la schizophrénie &lt;br/&gt; - Médicament antipsychotique</French>
             <Spanish>Se usa para tratar los síntomas de la psicosis, como delirios, alucinaciones, paranoia o pensamientos confusos, así como la esquizofrenia &lt;br/&gt; - Medicamento antipsicótico</Spanish>
             <Italian>Usato per trattare i sintomi della psicosi come deliri, allucinazioni, paranoia o pensieri confusi, così come la schizofrenia &lt;br/&gt; - Farmaco antipsicotico</Italian>
@@ -1525,7 +1525,7 @@
         </Key>
         <Key ID="STR_MISERY_CLOZAPINE_DESCRIPTION">
             <English>Used to treat symptoms of psychosis such as delusions, hallucinations, paranoia, or confused thoughts, as well as schizophrenia, injected rather than ingested &lt;br/&gt; - Antipsychotic medication</English>
-            <Czech>Používá se k léčbě příznaků psychózy, jako jsou bludy, halucinace, paranoia nebo zmatené myšlenky, stejně jako schizofrenie, injekčně spíše než požití &lt;br/&gt; - Antipsychotikum</Czech>
+            <Czech>Používá se k léčbě příznaků psychózy, jako jsou bludy, halucinace, paranoia nebo zmatené myšlenky, a také schizofrenie, užívá se spíše injekčně než požitím &lt;br/&gt; - Antipsychotikum</Czech>
             <French>Utilisé pour traiter les symptômes de la psychose tels que les délires, les hallucinations, la paranoïa ou les pensées confuses, ainsi que la schizophrénie, injecté plutôt qu'ingéré &lt;br/&gt; - Médicament antipsychotique</French>
             <Spanish>Se usa para tratar los síntomas de la psicosis, como delirios, alucinaciones, paranoia o pensamientos confusos, así como la esquizofrenia, inyectado en lugar de ingerido &lt;br/&gt; - Medicamento antipsicótico</Spanish>
             <Italian>Usato per trattare i sintomi della psicosi come deliri, allucinazioni, paranoia o pensieri confusi, così come la schizofrenia, iniettato piuttosto che ingerito &lt;br/&gt; - Farmaco antipsicotico</Italian>
@@ -1581,7 +1581,7 @@
         </Key>
         <Key ID="STR_MISERY_COCAINE_DESCRIPTION">
             <English>A highly valuable, unhealthy substance.  Illegal to trade.</English>
-            <Czech>Velmi cenná, nezdravá látka. Nelegální obchod.</Czech>
+            <Czech>Velmi cenná, nezdravá látka. Nelegální k obchodování.</Czech>
             <French>Une substance très précieuse et malsaine. Commerce illégal.</French>
             <Spanish>Una sustancia muy valiosa e insalubre. Comercio ilegal.</Spanish>
             <Italian>Una sostanza molto preziosa e malsana. Commercio illegale.</Italian>
@@ -1875,7 +1875,7 @@
         </Key>
         <Key ID="STR_MISERY_CRAFTINGHAMMER_DISPLAYNAME">
             <English>Ball peen Hammer</English>
-            <Czech>Kulový kladivo</Czech>
+            <Czech>Kulové kladivo</Czech>
             <French>Marteau à panne ronde</French>
             <Spanish>Martillo de bola</Spanish>
             <Italian>Martello a penna a sfera</Italian>
@@ -1917,7 +1917,7 @@
         </Key>
         <Key ID="STR_MISERY_CheckGearweight">
             <English>Check Gear weight</English>
-            <Czech>Kontrola hmotnosti převodovky</Czech>
+            <Czech>Kontrola hmotnosti vybavení</Czech>
             <French>Vérifier le poids de l'engrenage</French>
             <Spanish>Comprobar el peso del engranaje</Spanish>
             <Italian>Controllare il peso dell'ingranaggio</Italian>
@@ -1931,7 +1931,7 @@
         </Key>
         <Key ID="STR_MISERY_ClothingInsulationVAL">
             <English>Clothing Insulation: (%1)</English>
-            <Czech>Izolace oděvů: (%1)</Czech>
+            <Czech>Izolace oděvu: (%1)</Czech>
             <French>Isolation des vêtements : (%1)</French>
             <Spanish>Aislamiento de la ropa: (%1)</Spanish>
             <Italian>Isolamento dell'abbigliamento: (%1)</Italian>
@@ -1945,7 +1945,7 @@
         </Key>
         <Key ID="STR_MISERY_ClothingWarmthVAL">
             <English>Clothing Warmth: %1°C&lt;br/&gt;&lt;br/&gt;</English>
-            <Czech>Teplota oblečení: %1°C&lt;br/&gt;&lt;br/&gt;</Czech>
+            <Czech>Hřejivost oblečení: %1°C&lt;br/&gt;&lt;br/&gt;</Czech>
             <French>Chaleur des vêtements : %1°C&lt;br/&gt;&lt;br/&gt;</French>
             <Spanish>Calor de la ropa: %1°C&lt;br/&gt;&lt;br/&gt;</Spanish>
             <Italian>Calore dell'abbigliamento: %1°C&lt;br/&gt;&lt;br/&gt;</Italian>
@@ -1959,7 +1959,7 @@
         </Key>
         <Key ID="STR_MISERY_DEADGEIGER_DESCRIPTION">
             <English>Dead Geiger counter, went through too many rads and burned out, completely useless.&lt;br/&gt; - Random Junk</English>
-            <Czech>Mrtvý Geigerův počítač, prošel příliš mnoha radami a vyhořel, zcela k ničemu.&lt;br/&gt; - Náhodný odpad</Czech>
+            <Czech>Mrtvý Geigerův počítač, prošel příliš velkou radiací a vyhořel, zcela k ničemu.&lt;br/&gt; - Náhodný odpad</Czech>
             <French>Compteur Geiger mort, a traversé trop de rads et a grillé, complètement inutile.&lt;br/&gt; - Déchet aléatoire</French>
             <Spanish>Contador Geiger muerto, pasó por demasiadas rads y se quemó, completamente inútil.&lt;br/&gt; - Basura al azar</Spanish>
             <Italian>Contatore Geiger guasto, ha passato troppe radiazioni e si è bruciato, completamente inutile.&lt;br/&gt; - Junk casuale</Italian>
@@ -2015,7 +2015,7 @@
         </Key>
         <Key ID="STR_MISERY_DELETECHARACTER">
             <English>Delete Character</English>
-            <Czech>Odstranit znak</Czech>
+            <Czech>Smazat herní postavu</Czech>
             <French>Supprimer un caractère</French>
             <Spanish>Borrar carácter</Spanish>
             <Italian>Cancellare il carattere</Italian>
@@ -2029,7 +2029,7 @@
         </Key>
         <Key ID="STR_MISERY_DELETECHARACTERSUCCESS">
             <English>%1, Your character data has been deleted...</English>
-            <Czech>%1, Data vaší postavy byla smazána...</Czech>
+            <Czech>%1, Data vaší herní postavy byla smazána...</Czech>
             <French>%1, Les données de votre personnage ont été supprimées...</French>
             <Spanish>%1, Los datos de tu personaje han sido borrados...</Spanish>
             <Italian>%1, I dati del personaggio sono stati cancellati...</Italian>
@@ -2043,7 +2043,7 @@
         </Key>
         <Key ID="STR_MISERY_DELETECHARACTERWARNING">
             <English>%1, Click again to confirm deletion, this will also terminate current character...</English>
-            <Czech>%1, Opětovným kliknutím potvrdíte smazání, čímž také ukončíte aktuální znak...</Czech>
+            <Czech>%1, Opětovným kliknutím potvrdíte smazání, čímž eliminujete současnou herní postavu...</Czech>
             <French>%1, Cliquez à nouveau pour confirmer la suppression, cela mettra également fin au caractère actuel...</French>
             <Spanish>%1, Haga clic de nuevo para confirmar la eliminación, esto también terminará el carácter actual...</Spanish>
             <Italian>%1, Cliccare di nuovo per confermare l'eliminazione, questo terminerà anche il carattere corrente...</Italian>
@@ -2155,7 +2155,7 @@
         </Key>
         <Key ID="STR_MISERY_DUCTTAPE_DESCRIPTION">
             <English>Old duct tape, has many uses &lt;br/&gt; - Crafting item</English>
-            <Czech>Stará izolační páska, má mnoho použití &lt;br/&gt; - Řemeslný předmět</Czech>
+            <Czech>Stará izolační páska, má mnoho použití &lt;br/&gt; - Předmět pro výrobu</Czech>
             <French>Vieux ruban adhésif, a de nombreuses utilisations &lt;br/&gt; - Objet d'artisanat</French>
             <Spanish>Cinta adhesiva vieja, tiene muchos usos &lt;br/&gt; - Objeto de artesanía</Spanish>
             <Italian>Vecchio nastro adesivo, ha molti usi &lt;br/&gt; - Oggetto per il crafting</Italian>
@@ -2337,7 +2337,7 @@
         </Key>
         <Key ID="STR_MISERY_ELECTRICHANDSAWNOBATTERY_DESCRIPTION">
             <English>Useless without a battery&lt;br/&gt; - Base crafting&lt;br/&gt; - Requires 18v battery</English>
-            <Czech>Bez baterie nepoužitelné&lt;br/&gt; - Základní výroba&lt;br/&gt; - Vyžaduje 18V baterii</Czech>
+            <Czech>Bez baterie nepoužitelné&lt;br/&gt; - Stavební nářadí&lt;br/&gt; - Vyžaduje baterii 18V</Czech>
             <French>Inutile sans batterie&lt;br/&gt; - Création de base&lt;br/&gt; - Nécessite une batterie 18v</French>
             <Spanish>Inservible sin batería&lt;br/&gt; - Elaboración de bases&lt;br/&gt; - Requiere batería de 18v</Spanish>
             <Italian>Inutile senza batteria&lt;br/&gt; - Creazione di basi&lt;br/&gt; - Richiede batteria da 18v</Italian>
@@ -2365,7 +2365,7 @@
         </Key>
         <Key ID="STR_MISERY_ELECTRICHANDSAW_DESCRIPTION">
             <English>A battery powered saw&lt;br/&gt; - Base crafting</English>
-            <Czech>Akumulátorová pila&lt;br/&gt; - Základní výroba</Czech>
+            <Czech>Akumulátorová pila&lt;br/&gt; - Stavební nářadí</Czech>
             <French>Une scie à batterie&lt;br/&gt; - Création de base</French>
             <Spanish>Una sierra a batería&lt;br/&gt; - Elaboración de bases</Spanish>
             <Italian>Una sega a batteria&lt;br/&gt; - Creazione di basi</Italian>
@@ -2393,7 +2393,7 @@
         </Key>
         <Key ID="STR_MISERY_ELECTROLYTE_DESCRIPTION">
             <English>A pre-mixed Electrolyte solution, can aid with rehydration.&lt;br/&gt; - Reduces Thirst</English>
-            <Czech>Předem namíchaný roztok elektrolytů může pomoci s rehydratací.&lt;br/&gt; - Snižuje žízeň</Czech>
+            <Czech>Předem namíchaný roztok elektrolytů, může pomoci s rehydratací.&lt;br/&gt; - Snižuje žízeň</Czech>
             <French>Une solution électrolytique prémélangée peut aider à la réhydratation.&lt;br/&gt; - Réduit la soif</French>
             <Spanish>Una solución de electrolitos premezclada puede ayudar a la rehidratación.&lt;br/&gt; - Reduce la sed</Spanish>
             <Italian>Una soluzione elettrolitica premiscelata può aiutare con la reidratazione.&lt;br/&gt; - Riduce la sete</Italian>
@@ -2449,7 +2449,7 @@
         </Key>
         <Key ID="STR_MISERY_EMPTYDIESEL_DESCRIPTION">
             <English>An empty Jerrycan used for fuel collection...&lt;br/&gt; - Fuel item &lt;br/&gt; - Empty</English>
-            <Czech>Prázdný kanystr používaná ke sběru paliva...&lt;br/&gt; - Palivový předmět&lt;br/&gt; - Prázdný</Czech>
+            <Czech>Prázdný kanystr používaný k přepravě a skladování paliva...&lt;br/&gt; - Palivový předmět&lt;br/&gt; - Prázdný</Czech>
             <French>Un jerrican vide utilisé pour la collecte de carburant...&lt;br/&gt; - Objet carburant&lt;br/&gt; - Vide</French>
             <Spanish>Un bidón vacío utilizado para la recolección de combustible...&lt;br/&gt; - Artículo de combustible&lt;br/&gt; - Vacío</Spanish>
             <Italian>Una tanica vuota usata per la raccolta del carburante...&lt;br/&gt; - Oggetto del carburante&lt;br/&gt; - Vuoto</Italian>
@@ -2477,7 +2477,7 @@
         </Key>
         <Key ID="STR_MISERY_EMPTYJET_DESCRIPTION">
             <English>An empty Jerrycan used for fuel collection...&lt;br/&gt; - Fuel item &lt;br/&gt; - Empty</English>
-            <Czech>Prázdná kanystr používaná ke sběru paliva...&lt;br/&gt; - Palivový předmět&lt;br/&gt; - Prázdný</Czech>
+            <Czech>Prázdný kanystr používaný k přepravě a skladování paliva...&lt;br/&gt; - Palivový předmět&lt;br/&gt; - Prázdný</Czech>
             <French>Un jerrican vide utilisé pour la collecte de carburant...&lt;br/&gt; - Objet carburant&lt;br/&gt; - Vide</French>
             <Spanish>Un bidón vacío utilizado para la recolección de combustible...&lt;br/&gt; - Artículo de combustible&lt;br/&gt; - Vacío</Spanish>
             <Italian>Una tanica vuota usata per la raccolta del carburante...&lt;br/&gt; - Oggetto del carburante&lt;br/&gt; - Vuoto</Italian>
@@ -2505,7 +2505,7 @@
         </Key>
         <Key ID="STR_MISERY_EMPTYPETROL_DESCRIPTION">
             <English>An empty Jerrycan used for fuel collection...&lt;br/&gt; - Fuel item &lt;br/&gt; - Empty</English>
-            <Czech>Prázdný kanystr používaná ke sběru paliva...&lt;br/&gt; - Palivový předmět&lt;br/&gt; - Prázdný</Czech>
+            <Czech>Prázdný kanystr používaný k přepravě a skladování paliva...&lt;br/&gt; - Palivový předmět&lt;br/&gt; - Prázdný</Czech>
             <French>Un jerrican vide utilisé pour la collecte de carburant...&lt;br/&gt; - Objet carburant&lt;br/&gt; - Vide</French>
             <Spanish>Un bidón vacío utilizado para la recolección de combustible...&lt;br/&gt; - Artículo de combustible&lt;br/&gt; - Vacío</Spanish>
             <Italian>Una tanica vuota usata per la raccolta del carburante...&lt;br/&gt; - Oggetto del carburante&lt;br/&gt; - Vuoto</Italian>
@@ -2757,7 +2757,7 @@
         </Key>
         <Key ID="STR_MISERY_FISHINGSPOOL_DESCRIPTION">
             <English>Used with collapsible fishing pole&lt;br/&gt; - Fishing gear</English>
-            <Czech>Používá se se skládacím rybářským prutem&lt;br/&gt; - Rybářské vybavení</Czech>
+            <Czech>Používá se s skládacím rybářským prutem&lt;br/&gt; - Rybářské vybavení</Czech>
             <French>À utiliser avec la canne à pêche pliante&lt;br/&gt; - Matériel de pêche</French>
             <Spanish>Se utiliza con la caña de pescar plegable&lt;br/&gt; - Equipo de pesca</Spanish>
             <Italian>Da utilizzare con la canna da pesca pieghevole&lt;br/&gt; - Attrezzatura da pesca</Italian>
@@ -2785,7 +2785,7 @@
         </Key>
         <Key ID="STR_MISERY_FORAGE">
             <English>Forage</English>
-            <Czech>Shánět potravu</Czech>
+            <Czech>Přehrabování</Czech>
             <French>Fourrager</French>
             <Spanish>Forrajear</Spanish>
             <Italian>Foraggiare</Italian>
@@ -2799,7 +2799,7 @@
         </Key>
         <Key ID="STR_MISERY_FORAGE_DIGFORWORMS">
             <English>Dig for worms</English>
-            <Czech>Kopání pro červy</Czech>
+            <Czech>Vykopat červy</Czech>
             <French>Creuser pour trouver des vers</French>
             <Spanish>Excavar en busca de lombrices</Spanish>
             <Italian>Scavare per trovare i vermi</Italian>
@@ -2813,7 +2813,7 @@
         </Key>
         <Key ID="STR_MISERY_FORAGE_SEARCHFORTINDER">
             <English>Search for tinder</English>
-            <Czech>Hledání tinder</Czech>
+            <Czech>Hledat troud</Czech>
             <French>Recherche de tinder</French>
             <Spanish>Buscar tinder</Spanish>
             <Italian>Ricerca di tinder</Italian>
@@ -2827,7 +2827,7 @@
         </Key>
         <Key ID="STR_MISERY_FORGE_DISPLAYNAME">
             <English>Smelting Forge</English>
-            <Czech>Tavící kovárna</Czech>
+            <Czech>Tavící pec</Czech>
             <French>Forge de fusion</French>
             <Spanish>Fragua de fundición</Spanish>
             <Italian>Fucina di fusione</Italian>
@@ -2841,7 +2841,7 @@
         </Key>
         <Key ID="STR_MISERY_FSCREWDRIVER_DESCRIPTION">
             <English>Flathead screwdriver &lt;br/&gt; - Crafting item</English>
-            <Czech>Ploché šroubovák &lt;br/&gt; - Řemeslný předmět</Czech>
+            <Czech>Plochý šroubovák &lt;br/&gt; - Nářadí</Czech>
             <French>Tournevis plat &lt;br/&gt; - Objet d'artisanat</French>
             <Spanish>Destornillador de punta plana &lt;br/&gt; - Objeto de artesanía</Spanish>
             <Italian>Cacciavite a taglio &lt;br/&gt; - Oggetto per il crafting</Italian>
@@ -2883,6 +2883,7 @@
         </Key>
         <Key ID="STR_MISERY_FUELPUMPREQTIP">
             <English>Using a fuel pump requires: &lt;br/&gt; Automotive battery &lt;br/&gt;&lt;br/&gt; Refilling a fuel Jerrycan requirements: &lt;br/&gt; Automotive battery and Empty Fuel canister (Petrol or Diesel)</English>
+			<Czech>Požadavky pro použití palivového čerpadla: &lt;br/&gt; Autobaterie &lt;br/&gt;&lt;br/&gt; Požadavky pro naplnění palivového kanystru: &lt;br/&gt; Autobaterie a prázdný palivový kanistr (Benzínový nebo Naftový)</Czech>
         </Key>
         <Key ID="STR_MISERY_FUELSYSTEMKIT_DESCRIPTION">
             <English>fuel system kit used for vehicle repair</English>
@@ -2914,7 +2915,7 @@
         </Key>
         <Key ID="STR_MISERY_GASCARTRIDGE_DESCRIPTION">
             <English>Respirator filter cartridges &lt;br/&gt; - Gasmask item</English>
-            <Czech>Filtrační náboje respirátoru &lt;br/&gt; - Položka plynové masky</Czech>
+            <Czech>Filtrační patrona respirátoru &lt;br/&gt; - Díl plynové masky</Czech>
             <French>Cartouches filtrantes pour respirateur &lt;br/&gt; - Article de masque à gaz</French>
             <Spanish>Cartuchos de filtro de respirador &lt;br/&gt; - Artículo de máscara de gas</Spanish>
             <Italian>Cartucce filtro respiratore &lt;br/&gt; - Articolo per maschera antigas</Italian>
@@ -2928,7 +2929,7 @@
         </Key>
         <Key ID="STR_MISERY_GASCARTRIDGE_DISPLAYNAME">
             <English>Gasmask cartridges</English>
-            <Czech>Plynová maska náboje</Czech>
+            <Czech>Patrony plynové masky</Czech>
             <French>Cartouches de masque à gaz</French>
             <Spanish>Cartuchos de máscara de gas</Spanish>
             <Italian>Cartucce per maschera antigas</Italian>
@@ -2942,7 +2943,7 @@
         </Key>
         <Key ID="STR_MISERY_GASMASKEMPTY_DESCRIPTION">
             <English>Gasmask that doesn't have cartridges, useless</English>
-            <Czech>Plynová maska bez nábojů, k ničemu</Czech>
+            <Czech>Plynová maska bez filtračních patron, k ničemu</Czech>
             <French>Masque à gaz sans cartouches, inutile</French>
             <Spanish>Máscara de gas que no tiene cartuchos, inútil</Spanish>
             <Italian>Maschera antigas senza cartucce, inutile</Italian>
@@ -2956,7 +2957,7 @@
         </Key>
         <Key ID="STR_MISERY_GASMASKEMPTY_DISPLAYNAME">
             <English>Gasmask (no cartridges)</English>
-            <Czech>Plynová maska (bez nábojů)</Czech>
+            <Czech>Plynová maska (bez filtračních patron)</Czech>
             <French>Masque à gaz (pas de cartouches)</French>
             <Spanish>Máscara de gas (sin cartuchos)</Spanish>
             <Italian>Maschera antigas (no cartucce)</Italian>
@@ -2998,7 +2999,7 @@
         </Key>
         <Key ID="STR_MISERY_GLUCOSE_DESCRIPTION">
             <English>A Glucose syringe, can help the body cope with severe hunger.&lt;br/&gt; - Reduces Hunger</English>
-            <Czech>Injekční stříkačka s glukózou může pomoci tělu vyrovnat se s těžkým hladem.&lt;br/&gt; - Snižuje hlad</Czech>
+            <Czech>Injekční stříkačka s glukózou, může pomoci tělu vyrovnat se s těžkým hladem.&lt;br/&gt; - Snižuje hlad</Czech>
             <French>Une seringue de glucose peut aider le corps à faire face à une faim intense.&lt;br/&gt; - Réduit la faim</French>
             <Spanish>Una jeringa de glucosa puede ayudar al cuerpo a lidiar con el hambre severa.&lt;br/&gt; - Reduce el hambre</Spanish>
             <Italian>Una siringa di glucosio può aiutare il corpo a far fronte alla fame severa.&lt;br/&gt; - Riduce la fame</Italian>
@@ -3026,7 +3027,7 @@
         </Key>
         <Key ID="STR_MISERY_GOLDINGOT_DESCRIPTION">
             <English>Worth a small fortune&lt;br/&gt; - Smithing item&lt;br/&gt; - Rarity</English>
-            <Czech>Stojí malé jmění&lt;br/&gt; - Předmět pro kováře&lt;br/&gt; - Vzácnost</Czech>
+            <Czech>Stojí malé jmění&lt;br/&gt; - Kovářský předmět&lt;br/&gt; - Vzácnost</Czech>
             <French>Vaut une petite fortune&lt;br/&gt; - Objet de forge&lt;br/&gt; - Rareté</French>
             <Spanish>Vale una pequeña fortuna&lt;br/&gt; - Artículo de herrería&lt;br/&gt; - Rareza</Spanish>
             <Italian>Vale una piccola fortuna&lt;br/&gt; - Oggetto per la forgiatura&lt;br/&gt; - Rarità</Italian>
@@ -3054,7 +3055,7 @@
         </Key>
         <Key ID="STR_MISERY_GOLDORE_DESCRIPTION">
             <English>Can be used at a Smelting Forge&lt;br/&gt; - Crafting item &lt;br/&gt; - Smelting item</English>
-            <Czech>Lze použít v Tavící peci&lt;br/&gt; - Předmět pro výrobu&lt;br/&gt; - Předmět pro tavení</Czech>
+            <Czech>Lze použít v Tavící peci&lt;br/&gt; - Předmět pro výrobu&lt;br/&gt; - Předmět pro tavbu</Czech>
             <French>Peut être utilisé dans une Forge de fusion&lt;br/&gt; - Objet d'artisanat&lt;br/&gt; - Objet de fusion</French>
             <Spanish>Se puede usar en una Forja de fundición&lt;br/&gt; - Artículo de fabricación&lt;br/&gt; - Artículo de fundición</Spanish>
             <Italian>Può essere utilizzato in una Forgia di fusione&lt;br/&gt; - Oggetto per la creazione&lt;br/&gt; - Oggetto per la fusione</Italian>
@@ -3082,7 +3083,7 @@
         </Key>
         <Key ID="STR_MISERY_GOLDPIECE_DESCRIPTION">
             <English>Small piece of Gold ore&lt;br/&gt; - Crafting item &lt;br/&gt; - Smelting item</English>
-            <Czech>Malý kus zlaté rudy&lt;br/&gt; - Předmět pro výrobu&lt;br/&gt; - Předmět pro tavení</Czech>
+            <Czech>Malý kus zlaté rudy&lt;br/&gt; - Předmět pro výrobu&lt;br/&gt; - Předmět pro tavbu</Czech>
             <French>Petit morceau de minerai d'or&lt;br/&gt; - Objet d'artisanat&lt;br/&gt; - Objet de fusion</French>
             <Spanish>Pequeño trozo de mineral de oro&lt;br/&gt; - Artículo de fabricación&lt;br/&gt; - Artículo de fundición</Spanish>
             <Italian>Piccolo pezzo di minerale d'oro&lt;br/&gt; - Oggetto per la creazione&lt;br/&gt; - Oggetto per la fusione</Italian>
@@ -3110,7 +3111,7 @@
         </Key>
         <Key ID="STR_MISERY_GUITAR_DESCRIPTION">
             <English>A Guitar, an instrument that can bring some life to these gloomy days...&lt;br/&gt; - Instrument</English>
-            <Czech>Kytara, nástroj, který může vnést trochu života do těchto ponurých dnů...&lt;br/&gt; - Nástroj</Czech>
+            <Czech>Kytara, hudební nástroj, který může vnést trochu života do těchto ponurých dnů...&lt;br/&gt; - Hudební nástroj</Czech>
             <French>Une Guitare, un instrument qui peut donner un peu de vie à ces jours moroses...&lt;br/&gt; - Instrument</French>
             <Spanish>Una Guitarra, un instrumento que puede dar algo de vida a estos días sombríos...&lt;br/&gt; - Instrumento</Spanish>
             <Italian>Una Chitarra, uno strumento che può portare un po' di vita in questi giorni bui...&lt;br/&gt; - Strumento</Italian>
@@ -3152,7 +3153,7 @@
         </Key>
         <Key ID="STR_MISERY_GUTTINGKNIFE_DISPLAYNAME">
             <English>Specimen Hunting knife</English>
-            <Czech>Lovecký nůž na vzorky</Czech>
+            <Czech>Lovecký nůž pro odběr vzorků</Czech>
             <French>Couteau de chasse pour spécimens</French>
             <Spanish>Cuchillo de caza para especímenes</Spanish>
             <Italian>Coltello da caccia per campioni</Italian>
@@ -3166,7 +3167,7 @@
         </Key>
         <Key ID="STR_MISERY_GearweightVAL">
             <English>Gear weight feels like: ~ %2kg (%1lbs)</English>
-            <Czech>Hmotnost převodovky se zdá být: ~ %2kg (%1lbs)</Czech>
+            <Czech>Hmotnost vybavení se zdá být: ~ %2kg (%1lbs)</Czech>
             <French>Le poids de l'engrenage ressemble à.. : ~ %2kg (%1lbs)</French>
             <Spanish>El peso del engranaje se siente como: ~ %2kg (%1lbs)</Spanish>
             <Italian>Il peso dell'ingranaggio sembra: ~ %2kg (%1lbs)</Italian>
@@ -3191,6 +3192,90 @@
             <Korean>[가이거]</Korean>
             <Japanese>[ガイガー]</Japanese>
             <Turkish>[Geiger]</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_HEADLAMPOFF_DESCRIPTION">
+            <English>Helps light the way in the dark</English>
+            <Czech>Pomáhá osvětlit cestu ve tmě</Czech>
+            <French>Aide à éclairer le chemin dans l'obscurité</French>
+            <Spanish>Ayuda a iluminar el camino en la oscuridad</Spanish>
+            <Italian>Aiuta a illuminare la strada al buio</Italian>
+            <Polish>Pomaga oświetlić drogę w ciemności</Polish>
+            <Portuguese>Ajuda a iluminar o caminho no escuro</Portuguese>
+            <Russian>Помогает осветить путь в темноте</Russian>
+            <German>Hilft, den Weg im Dunkeln zu erleuchten</German>
+            <Korean>어둠 속에서 길을 밝히는 데 도움이 됩니다.</Korean>
+            <Japanese>暗闇の中で道を照らすのに役立ちます</Japanese>
+            <Turkish>Karanlıkta yolu aydınlatmaya yardımcı olur</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_HEADLAMPOFF_DISPLAYNAME">
+            <English>Headlamp (OFF)</English>
+            <Czech>Čelovka (VYPNUTÁ)</Czech>
+            <French>Lampe frontale (ÉTEINTE)</French>
+            <Spanish>Linterna frontal (APAGADA)</Spanish>
+            <Italian>Lampada frontale (SPENTA)</Italian>
+            <Polish>Latarka czołowa (WYŁĄCZONA)</Polish>
+            <Portuguese>Lanterna frontal (DESLIGADA)</Portuguese>
+            <Russian>Налобный фонарь (ВЫКЛ)</Russian>
+            <German>Stirnlampe (AUS)</German>
+            <Korean>헤드 램프(OFF)</Korean>
+            <Japanese>ヘッドランプ（OFF）</Japanese>
+            <Turkish>Kafa Lambası (KAPALI)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_HEADLAMPON_DESCRIPTION">
+            <English>Helps light the way in the dark</English>
+            <Czech>Pomáhá osvětlit cestu ve tmě</Czech>
+            <French>Aide à éclairer le chemin dans l'obscurité</French>
+            <Spanish>Ayuda a iluminar el camino en la oscuridad</Spanish>
+            <Italian>Aiuta a illuminare la strada al buio</Italian>
+            <Polish>Pomaga oświetlić drogę w ciemności</Polish>
+            <Portuguese>Ajuda a iluminar o caminho no escuro</Portuguese>
+            <Russian>Помогает осветить путь в темноте</Russian>
+            <German>Hilft, den Weg im Dunkeln zu erleuchten</German>
+            <Korean>어둠 속에서 길을 밝히는 데 도움이 됩니다.</Korean>
+            <Japanese>暗闇の中で道を照らすのに役立ちます</Japanese>
+            <Turkish>Karanlıkta yolu aydınlatmaya yardımcı olur</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_HEADLAMPON_DISPLAYNAME">
+            <English>Headlamp (ON)</English>
+            <Czech>Čelovka (ZAPNUTO)</Czech>
+            <French>Lampe frontale (ALLUMÉE)</French>
+            <Spanish>Linterna frontal (ENCENDIDA)</Spanish>
+            <Italian>Lampada frontale (ACCESA)</Italian>
+            <Polish>Latarka czołowa (WŁĄCZONA)</Polish>
+            <Portuguese>Lanterna frontal (LIGADA)</Portuguese>
+            <Russian>Налобный фонарь (ВКЛ)</Russian>
+            <German>Stirnlampe (EIN)</German>
+            <Korean>헤드 램프(ON)</Korean>
+            <Japanese>ヘッドランプ（ON）</Japanese>
+            <Turkish>Kafa Lambası (AÇIK)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_HEADLAMP_NB_DESCRIPTION">
+            <English>Useless without a battery&lt;br/&gt; - Requires 9v battery</English>
+            <Czech>Bez baterie nepoužitelná&lt;br/&gt; - Vyžaduje baterii 9V</Czech>
+            <French>Inutile sans pile&lt;br/&gt; - Nécessite une pile 9v</French>
+            <Spanish>Inservible sin batería&lt;br/&gt; - Requiere batería de 9v</Spanish>
+            <Italian>Inutile senza batteria&lt;br/&gt; - Richiede batteria da 9v</Italian>
+            <Polish>Bezużyteczny bez baterii&lt;br/&gt; - Wymaga baterii 9v</Polish>
+            <Portuguese>Inútil sem bateria&lt;br/&gt; - Requer bateria de 9v</Portuguese>
+            <Russian>Бесполезен без батареи&lt;br/&gt; - Требуется батарея 9v</Russian>
+            <German>Ohne Batterie nutzlos&lt;br/&gt; - Benötigt 9-V-Batterie</German>
+            <Korean>배터리가 없으면 쓸모가 없습니다.&lt;br/&gt; - 9v 배터리 필요</Korean>
+            <Japanese>電池がないと役に立たない&lt;br/&gt; - 9V電池が必要</Japanese>
+            <Turkish>Pilsiz işe yaramaz&lt;br/&gt; - 9v pil gerektirir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_HEADLAMP_NB_DISPLAYNAME">
+            <English>Headlamp (No battery)</English>
+            <Czech>Čelovka (Bez baterie)</Czech>
+            <French>Lampe frontale (Pas de pile)</French>
+            <Spanish>Linterna frontal (Sin batería)</Spanish>
+            <Italian>Lampada frontale (Batteria scarica)</Italian>
+            <Polish>Latarka czołowa (Brak baterii)</Polish>
+            <Portuguese>Lanterna frontal (Sem bateria)</Portuguese>
+            <Russian>Налобный фонарь (Без батареи)</Russian>
+            <German>Stirnlampe (Keine Batterie)</German>
+            <Korean>헤드 램프(배터리 없음)</Korean>
+            <Japanese>ヘッドランプ（電池切れ）</Japanese>
+            <Turkish>Kafa Lambası (Pilsiz)</Turkish>
         </Key>
         <Key ID="STR_MISERY_HEATPACK_DESCRIPTION">
             <English>Single use heatpack&lt;br/&gt; - Increases temperature</English>
@@ -3292,7 +3377,7 @@
         </Key>
         <Key ID="STR_MISERY_IBUILDOPENNOTOOLS">
             <English>You need a Striking Hammer, Ball peen Hammer, Or Small hammer to build...</English>
-            <Czech>Ke stavbě potřebujete úderové kladivo, kuličkové kladivo nebo malé kladivo...</Czech>
+            <Czech>Ke stavbě potřebujete ploché kladivo, kulové kladivo nebo malé kladívko...</Czech>
             <French>Vous avez besoin d'un marteau à percussion, d'un marteau à bille ou d'un petit marteau pour construire...</French>
             <Spanish>Necesita un martillo percutor, un martillo de bola o un martillo pequeño para...</Spanish>
             <Italian>Per costruire è necessario un martello perforatore, un martello a sfera o un martello piccolo...</Italian>
@@ -3306,7 +3391,7 @@
         </Key>
         <Key ID="STR_MISERY_IRONINGOT_DESCRIPTION">
             <English>Can be used at an anvil&lt;br/&gt; - Crafting item &lt;br/&gt; - Smithing item</English>
-            <Czech>Lze použít na kovadlině&lt;br/&gt; - Předmět pro výrobu&lt;br/&gt; - Předmět pro kováře</Czech>
+            <Czech>Lze použít na kovadlině&lt;br/&gt; - Předmět pro výrobu&lt;br/&gt; - Kovářský předmět</Czech>
             <French>Peut être utilisé sur une enclume&lt;br/&gt; - Objet d'artisanat&lt;br/&gt; - Objet de forge</French>
             <Spanish>Se puede usar en un yunque&lt;br/&gt; - Artículo de fabricación&lt;br/&gt; - Artículo de herrería</Spanish>
             <Italian>Può essere utilizzato su un'incudine&lt;br/&gt; - Oggetto per la creazione&lt;br/&gt; - Oggetto per la forgiatura</Italian>
@@ -3334,7 +3419,7 @@
         </Key>
         <Key ID="STR_MISERY_IRONORE_DESCRIPTION">
             <English>Can be used at a Smelting Forge&lt;br/&gt; - Crafting item &lt;br/&gt; - Smelting item</English>
-            <Czech>Lze použít v Tavící peci&lt;br/&gt; - Předmět pro výrobu&lt;br/&gt; - Předmět pro tavení</Czech>
+            <Czech>Lze použít v Tavící peci&lt;br/&gt; - Předmět pro výrobu&lt;br/&gt; - Předmět pro tavbu</Czech>
             <French>Peut être utilisé dans une Forge de fusion&lt;br/&gt; - Objet d'artisanat&lt;br/&gt; - Objet de fusion</French>
             <Spanish>Se puede usar en una Forja de fundición&lt;br/&gt; - Artículo de fabricación&lt;br/&gt; - Artículo de fundición</Spanish>
             <Italian>Può essere utilizzato in una Forgia di fusione&lt;br/&gt; - Oggetto per la creazione&lt;br/&gt; - Oggetto per la fusione</Italian>
@@ -3362,7 +3447,7 @@
         </Key>
         <Key ID="STR_MISERY_IRONPIECE_DESCRIPTION">
             <English>Small chunk of Iron ore&lt;br/&gt; - Crafting item &lt;br/&gt; - Smelting item</English>
-            <Czech>Malý kus železné rudy&lt;br/&gt; - Předmět pro výrobu&lt;br/&gt; - Předmět pro tavení</Czech>
+            <Czech>Malý kus železné rudy&lt;br/&gt; - Předmět pro výrobu&lt;br/&gt; - Předmět pro tavbu</Czech>
             <French>Petit morceau de minerai de fer&lt;br/&gt; - Objet d'artisanat&lt;br/&gt; - Objet de fusion</French>
             <Spanish>Pequeño trozo de mineral de hierro&lt;br/&gt; - Artículo de fabricación&lt;br/&gt; - Artículo de fundición</Spanish>
             <Italian>Piccolo pezzo di minerale di ferro&lt;br/&gt; - Oggetto per la creazione&lt;br/&gt; - Oggetto per la fusione</Italian>
@@ -3432,6 +3517,7 @@
         </Key>
         <Key ID="STR_MISERY_JETFUELPUMPREQTIP">
             <English>Using a Jetfuel pump requires: &lt;br/&gt; Automotive battery &lt;br/&gt; &lt;br/&gt; Refilling a Jetfuel Jerrycan requirements: &lt;br/&gt; Automotive battery and Empty Fuel canister (Jet Fuel)</English>
+			<Czech>Požadavky pro použití palivového čerpadla (Jet fuel) vyžaduje: &lt;br/&gt; Autobaterii baterii &lt;br/&gt; &lt;br/&gt; Požadavky pro naplnění kanystru (Jet fuel): &lt;br/&gt; Autobaterii a prázdný kanystr (Jet Fuel)</Czech>
         </Key>
         <Key ID="STR_MISERY_JETFUELRU_DISPLAYNAME">
             <English>Jet Fuel Refueling station</English>
@@ -3561,7 +3647,7 @@
         </Key>
         <Key ID="STR_MISERY_LEADCONTAINERCLOSED_DESCRIPTION">
             <English>A lead isolated container that holds something. The container itself feels mildly warm to the touch, almost as if it's storing some sort of heat energy.&lt;br/&gt; - Contains an artifact &lt;br/&gt; - Rarity</English>
-            <Czech>Olovem izolovaný kontejner, který něco drží. Samotný kontejner je na dotek mírně teplý, téměř jako by ukládal nějakou tepelnou energii.&lt;br/&gt; - Obsahuje artefakt &lt;br/&gt; - Vzácnost</Czech>
+            <Czech>Olovem izolovaný kontejner, který něco obsahuje. Kontejner je na dotek mírně teplý, téměř jako by ukládal nějakou tepelnou energii.&lt;br/&gt; - Obsahuje artefakt &lt;br/&gt; - Vzácnost</Czech>
             <French>Un conteneur isolé au plomb qui contient quelque chose. Le conteneur lui-même semble légèrement chaud au toucher, presque comme s'il stockait une sorte d'énergie thermique.&lt;br/&gt; - Contient un artefact &lt;br/&gt; - Rareté</French>
             <Spanish>Un contenedor aislado de plomo que contiene algo. El contenedor en sí mismo se siente ligeramente caliente al tacto, casi como si estuviera almacenando algún tipo de energía térmica.&lt;br/&gt; - Contiene un artefacto &lt;br/&gt; - Rareza</Spanish>
             <Italian>Un contenitore isolato in piombo che contiene qualcosa. Il contenitore stesso sembra leggermente caldo al tatto, quasi come se stesse immagazzinando una sorta di energia termica.&lt;br/&gt; - Contiene un artefatto &lt;br/&gt; - Rarità</Italian>
@@ -3575,7 +3661,7 @@
         </Key>
         <Key ID="STR_MISERY_LEADCONTAINERCLOSED_DISPLAYNAME">
             <English>Lead Lined container (closed)</English>
-            <Czech>Olověné kontejner (uzavřený)</Czech>
+            <Czech>Olověný kontejner (uzavřený)</Czech>
             <French>Conteneur doublé de plomb (fermé)</French>
             <Spanish>Contenedor revestido de plomo (cerrado)</Spanish>
             <Italian>Contenitore rivestito di piombo (chiuso)</Italian>
@@ -3645,7 +3731,7 @@
         </Key>
         <Key ID="STR_MISERY_LITHIUMBATTERY_DESCRIPTION">
             <English>3200mAh Lithium battery</English>
-            <Czech>3200mAh lithium-iontová baterie</Czech>
+            <Czech>Lithiová baterie 3200mAh</Czech>
             <French>Batterie au lithium 3200mAh</French>
             <Spanish>Batería de litio de 3200 mAh</Spanish>
             <Italian>Batteria al litio da 3200 mAh</Italian>
@@ -3659,7 +3745,7 @@
         </Key>
         <Key ID="STR_MISERY_LITHIUMBATTERY_DISPLAYNAME">
             <English>Lithium battery</English>
-            <Czech>Lithium-iontová baterie</Czech>
+            <Czech>Lithiová baterie</Czech>
             <French>Batterie au lithium</French>
             <Spanish>Batería de litio</Spanish>
             <Italian>Batteria al litio</Italian>
@@ -3729,7 +3815,7 @@
         </Key>
         <Key ID="STR_MISERY_MATCHESPACK_DESCRIPTION">
             <English>A pack of matches &lt;br/&gt; - Fire crafting</English>
-            <Czech>Balíček zápalek &lt;br/&gt; - Výroba ohně</Czech>
+            <Czech>Krabička zápalek &lt;br/&gt; - Výroba ohně</Czech>
             <French>Un paquet d'allumettes &lt;br/&gt; - Artisanat du feu</French>
             <Spanish>Un paquete de cerillas &lt;br/&gt; - Artesanía del fuego</Spanish>
             <Italian>Una confezione di fiammiferi &lt;br/&gt; - Lavorazione del fuoco</Italian>
@@ -3743,7 +3829,7 @@
         </Key>
         <Key ID="STR_MISERY_MATCHESPACK_DISPLAYNAME">
             <English>Pack of matches</English>
-            <Czech>Balíček zápalek</Czech>
+            <Czech>Krabička zápalek</Czech>
             <French>Paquet d'allumettes</French>
             <Spanish>Paquete de cerillas</Spanish>
             <Italian>Confezione di fiammiferi</Italian>
@@ -3757,7 +3843,7 @@
         </Key>
         <Key ID="STR_MISERY_MATRYOSHKA_DESCRIPTION">
             <English>Matryoshka, Slavic little trinket.&lt;br/&gt; - Random Junk</English>
-            <Czech>Matrjoška, slovanská malá cetka.&lt;br/&gt; - Náhodný odpad</Czech>
+            <Czech>Matrjoška, malá slovanská cetka.&lt;br/&gt; - Náhodný odpad</Czech>
             <French>Matryoshka, petit bibelot slave.&lt;br/&gt; - Déchet aléatoire</French>
             <Spanish>Matryoshka, pequeña baratija eslava.&lt;br/&gt; - Basura al azar</Spanish>
             <Italian>Matryoshka, piccolo gingillo slavo.&lt;br/&gt; - Junk casuale</Italian>
@@ -3869,7 +3955,7 @@
         </Key>
         <Key ID="STR_MISERY_NEEDLETHREAD_DESCRIPTION">
             <English>some thread with a needle &lt;br/&gt; - Crafting item</English>
-            <Czech>trochu nitě s jehlou &lt;br/&gt; - Řemeslný předmět</Czech>
+            <Czech>trochu nitě s jehlou &lt;br/&gt; - Předmět pro výrobu</Czech>
             <French>un peu de fil avec une aiguille &lt;br/&gt; - Objet d'artisanat</French>
             <Spanish>un poco de hilo con una aguja &lt;br/&gt; - Objeto de artesanía</Spanish>
             <Italian>un po' di filo con un ago &lt;br/&gt; - Oggetto per il crafting</Italian>
@@ -3911,7 +3997,7 @@
         </Key>
         <Key ID="STR_MISERY_NOCHAINSAWFORWOODNOTI">
             <English>You don't have a chainsaw to saw any wood...</English>
-            <Czech>Nemáte motorovou pilu na řezání dřeva...</Czech>
+            <Czech>Nemáš motorovou pilu na řezání dřeva...</Czech>
             <French>Vous n'avez pas besoin de tronçonneuse pour scier du bois...</French>
             <Spanish>No tienes una motosierra para serrar madera...</Spanish>
             <Italian>Non hai una motosega per segare la legna...</Italian>
@@ -3925,7 +4011,7 @@
         </Key>
         <Key ID="STR_MISERY_NOGUITAR">
             <English>You don't have a Guitar...</English>
-            <Czech>Nemáte kytaru...</Czech>
+            <Czech>Nemáš kytaru...</Czech>
             <French>Vous n'avez pas de guitare...</French>
             <Spanish>No tienes una guitarra...</Spanish>
             <Italian>Non hai una chitarra...</Italian>
@@ -3939,7 +4025,7 @@
         </Key>
         <Key ID="STR_MISERY_NOLLCONTAINER">
             <English>You don't have a Lead container...</English>
-            <Czech>Nemáte olověný kontejner...</Czech>
+            <Czech>Nemáš olověný kontejner...</Czech>
             <French>Vous n'avez pas de conteneur de plomb...</French>
             <Spanish>No tienes un contenedor de plomo...</Spanish>
             <Italian>Non avete un contenitore per il piombo...</Italian>
@@ -3953,7 +4039,7 @@
         </Key>
         <Key ID="STR_MISERY_NOWOODAXEORCHAINSAWNOTI">
             <English>You don't have a chainsaw, or Woodaxe...</English>
-            <Czech>Nemáte motorovou pilu ani sekeru na dřevo...</Czech>
+            <Czech>Nemáš motorovou pilu ani sekeru...</Czech>
             <French>Vous n'avez pas de tronçonneuse, ni de hache à bois...</French>
             <Spanish>Usted no tiene una motosierra, o Woodaxe ...</Spanish>
             <Italian>Non hai una motosega o un'ascia da legno...</Italian>
@@ -3967,7 +4053,7 @@
         </Key>
         <Key ID="STR_MISERY_NOWOODENLOGSFORSPLITTING">
             <English>You don't have any wooden logs...</English>
-            <Czech>Nemáte žádné dřevěné klády...</Czech>
+            <Czech>Nemáš žádné dřevěné klády...</Czech>
             <French>Vous n'avez pas de rondins de bois...</French>
             <Spanish>No tienes troncos de madera...</Spanish>
             <Italian>Non avete tronchi di legno...</Italian>
@@ -3981,7 +4067,7 @@
         </Key>
         <Key ID="STR_MISERY_OLDWATCH_DESCRIPTION">
             <English>Old broken watch, mechanism inside is broken.&lt;br/&gt; - Random Junk</English>
-            <Czech>Staré rozbité hodinky, mechanismus uvnitř je rozbitý.&lt;br/&gt; - Náhodný odpad</Czech>
+            <Czech>Staré rozbité hodinky, vnitřní mechanismus je rozbitý.&lt;br/&gt; - Náhodný odpad</Czech>
             <French>Ancienne montre cassée, mécanisme à l'intérieur est cassé.&lt;br/&gt; - Déchet aléatoire</French>
             <Spanish>Reloj viejo roto, el mecanismo interior está roto.&lt;br/&gt; - Basura al azar</Spanish>
             <Italian>Vecchio orologio rotto, meccanismo interno rotto.&lt;br/&gt; - Junk casuale</Italian>
@@ -4233,7 +4319,7 @@
         </Key>
         <Key ID="STR_MISERY_PHOTOS_DESCRIPTION">
             <English>Old photos, good times. Save them for the sentimental value or sell them.&lt;br/&gt; - Random Junk</English>
-            <Czech>Staré fotky, dobré časy. Uschovejte si je pro sentimentální hodnotu nebo je prodejte.&lt;br/&gt; - Náhodný odpad</Czech>
+            <Czech>Fotky... staré dobré časy. Nech si je pro vzpomínky nebo je prodej.&lt;br/&gt; - Náhodný odpad</Czech>
             <French>Vieilles photos, bons moments. Gardez-les pour leur valeur sentimentale ou vendez-les.&lt;br/&gt; - Déchet aléatoire</French>
             <Spanish>Fotos antiguas, buenos tiempos. Guárdalas por su valor sentimental o véndelas.&lt;br/&gt; - Basura al azar</Spanish>
             <Italian>Vecchie foto, bei momenti. Conservale per il valore sentimentale o vendile.&lt;br/&gt; - Junk casuale</Italian>
@@ -4261,7 +4347,7 @@
         </Key>
         <Key ID="STR_MISERY_PICKAXEBROKEN_DESCRIPTION">
             <English>Needs to be repaired&lt;br/&gt; - Mining item &lt;br/&gt; - Broken</English>
-            <Czech>Potřebuje opravit&lt;br/&gt; - Těžební předmět &lt;br/&gt; - Rozbitý</Czech>
+            <Czech>Vyžaduje opravu&lt;br/&gt; - Těžební nářadí &lt;br/&gt; - Rozbitý</Czech>
             <French>Doit être réparé&lt;br/&gt; - Objet minier &lt;br/&gt; - Cassé</French>
             <Spanish>Necesita reparación&lt;br/&gt; - Objeto minero &lt;br/&gt; - Roto</Spanish>
             <Italian>Deve essere riparato&lt;br/&gt; - Oggetto minerario &lt;br/&gt; - Rotto</Italian>
@@ -4275,7 +4361,7 @@
         </Key>
         <Key ID="STR_MISERY_PICKAXEBROKEN_DISPLAYNAME">
             <English>Shoddy Pickaxe (broken)</English>
-            <Czech>Shodný krumpáč (rozbitý)</Czech>
+            <Czech>Nekvalitní krumpáč (rozbitý)</Czech>
             <French>Pioche de mauvaise qualité (cassée)</French>
             <Spanish>Piqueta de mala calidad (rota)</Spanish>
             <Italian>Piccone scadente (rotto)</Italian>
@@ -4317,7 +4403,7 @@
         </Key>
         <Key ID="STR_MISERY_PICKAXE_DESCRIPTION">
             <English>Used for mining ore, looks rough...&lt;br/&gt; - Mining item</English>
-            <Czech>Používá se k těžbě rudy, vypadá drsně...</Czech>
+            <Czech>Používá se k těžbě rudy, vypadá drsně...&lt;br/&gt; - Těžební nářadí</Czech>
             <French>Utilisé pour l'extraction de minerais, il a l'air brut...</French>
             <Spanish>Se utiliza para la extracción de mineral, parece áspero...</Spanish>
             <Italian>Utilizzato per l'estrazione di minerali, sembra...</Italian>
@@ -4331,7 +4417,7 @@
         </Key>
         <Key ID="STR_MISERY_PICKAXE_DISPLAYNAME">
             <English>Shoddy Pickaxe</English>
-            <Czech>Shodný krumpáč</Czech>
+            <Czech>Nekvalitní krumpáč</Czech>
             <French>Pioches de pacotille</French>
             <Spanish>Piqueta de mala calidad</Spanish>
             <Italian>Piccone scadente</Italian>
@@ -4373,7 +4459,7 @@
         </Key>
         <Key ID="STR_MISERY_PLIERS_DESCRIPTION">
             <English>A pair of heavy duty pliers &lt;br/&gt; - Crafting item</English>
-            <Czech>Pár robustních kleští &lt;br/&gt; - Řemeslný předmět</Czech>
+            <Czech>Pár robustních kleští &lt;br/&gt; - Nářadí pro výrobu</Czech>
             <French>Une paire de pinces robustes &lt;br/&gt; - Objet d'artisanat</French>
             <Spanish>Un par de alicates de alta resistencia &lt;br/&gt; - Objeto de artesanía</Spanish>
             <Italian>Un paio di pinze per impieghi gravosi &lt;br/&gt; - Oggetto per il crafting</Italian>
@@ -4443,7 +4529,7 @@
         </Key>
         <Key ID="STR_MISERY_PSCREWDRIVER_DESCRIPTION">
             <English>Phillips screwdriver &lt;br/&gt; - Crafting item</English>
-            <Czech>Křížový šroubovák &lt;br/&gt; - Řemeslný předmět</Czech>
+            <Czech>Křížový šroubovák &lt;br/&gt; - Nářadí pro výrobu</Czech>
             <French>Tournevis cruciforme &lt;br/&gt; - Objet d'artisanat</French>
             <Spanish>Destornillador Phillips &lt;br/&gt; - Objeto de artesanía</Spanish>
             <Italian>Cacciavite a croce &lt;br/&gt; - Oggetto per il crafting</Italian>
@@ -4471,7 +4557,7 @@
         </Key>
         <Key ID="STR_MISERY_RANDOMMEDICATION_DESCRIPTION">
             <English>A pile of random pills, and pharmaceuticals, more than half are not labeled. It's probably not smart to use any of these...&lt;br/&gt; - Unhealthy&lt;br/&gt; - Unknown effects</English>
-            <Czech>Kopa náhodných pilulek a léčiv, více než polovina není označena. Pravděpodobně není moudré používat žádný z nich...&lt;br/&gt; - Nezdravý&lt;br/&gt; - Neznámé účinky</Czech>
+            <Czech>Hromada náhodných pilulek a léčiv, více než polovina není označena. Pravděpodobně není moudré používat žádný z nich...&lt;br/&gt; - Nezdravý&lt;br/&gt; - Neznámé účinky</Czech>
             <French>Un tas de pilules et de produits pharmaceutiques aléatoires, plus de la moitié ne sont pas étiquetés. Il n'est probablement pas judicieux d'utiliser l'un d'entre eux...&lt;br/&gt; - Malsain&lt;br/&gt; - Effets inconnus</French>
             <Spanish>Un montón de píldoras y productos farmacéuticos al azar, más de la mitad no están etiquetados. Probablemente no sea inteligente usar ninguno de estos...&lt;br/&gt; - Insalubre&lt;br/&gt; - Efectos desconocidos</Spanish>
             <Italian>Un mucchio di pillole e farmaci casuali, più della metà non sono etichettati. Probabilmente non è intelligente usare nessuno di questi...&lt;br/&gt; - Malsano&lt;br/&gt; - Effetti sconosciuti</Italian>
@@ -4583,7 +4669,7 @@
         </Key>
         <Key ID="STR_MISERY_RECRUITUNIT">
             <English>Recruit %1 (%2 %3)</English>
-            <Czech>Nábor %1 (%2 %3)</Czech>
+            <Czech>Rekrutace %1 (%2 %3)</Czech>
             <French>Recruter %1 (%2 %3)</French>
             <Spanish>Reclutar %1 (%2 %3)</Spanish>
             <Italian>Reclutamento %1 (%2 %3)</Italian>
@@ -4597,7 +4683,7 @@
         </Key>
         <Key ID="STR_MISERY_RECRUITUNIT_FAIL">
             <English>You don't have enough money to recruit %1</English>
-            <Czech>Nemáte dostatek peněz na nábor zaměstnanců %1</Czech>
+            <Czech>Nemáte dostatek peněz na rekrutaci %1</Czech>
             <French>Vous n'avez pas assez d'argent pour recruter %1</French>
             <Spanish>No tienes suficiente dinero para contratar %1</Spanish>
             <Italian>Non avete abbastanza soldi per reclutare %1</Italian>
@@ -4611,7 +4697,7 @@
         </Key>
         <Key ID="STR_MISERY_RECRUITUNIT_SUCCESS">
             <English>You have recruited %1 for %2 %3</English>
-            <Czech>Přijali jste %1 pro %2 %3</Czech>
+            <Czech>Rekrutovali jste %1 za %2 %3</Czech>
             <French>Vous avez recruté %1 pour %2 %3</French>
             <Spanish>Ha contratado a %1 para %2 %3</Spanish>
             <Italian>Avete reclutato %1 per %2 %3</Italian>
@@ -4639,7 +4725,7 @@
         </Key>
         <Key ID="STR_MISERY_REFUELCOSTSNOTI">
             <English>Refuel costs: &lt;br/&gt; &lt;br/&gt; Land Vehicles: (%1) &lt;br/&gt; Sea Vehicles: (%2) &lt;br/&gt; Armored Vehicles - Tanks: (%3) &lt;br/&gt; Aircraft - Helicopters: (%4) &lt;br/&gt; Aircraft - Planes: (%5)</English>
-            <Czech>Náklady na pohonné hmoty: &lt;br/&gt; &lt;br/&gt; Pozemní vozidla: (%1) &lt;br/&gt; Námořní vozidla: (%2) &lt;br/&gt; obrněná vozidla - tanky: (%3) &lt;br/&gt; letadla - vrtulníky: (%4) &lt;br/&gt; letadla - letadla: (%5)</Czech>
+            <Czech>Náklady na pohonné hmoty: &lt;br/&gt; &lt;br/&gt; Pozemní vozidla: (%1) &lt;br/&gt; Námořní vozidla: (%2) &lt;br/&gt; Obrněná vozidla - tanky: (%3) &lt;br/&gt; Vrtulníky: (%4) &lt;br/&gt; Letadla: (%5)</Czech>
             <French>Coût du ravitaillement : &lt;br/&gt; &lt;br/&gt; Véhicules terrestres : (%1) &lt;br/&gt; Véhicules maritimes : (%2) &lt;br/&gt; Véhicules blindés - Chars : (%3) &lt;br/&gt; Avions - Hélicoptères : (%4) &lt;br/&gt; Avions - Avions : (%5)</French>
             <Spanish>Costes de repostaje: &lt;br/&gt; &lt;br/&gt; Vehículos terrestres: (%1) &lt;br/&gt; Vehículos Marítimos: (%2) &lt;br/&gt; Vehículos Blindados - Tanques: (%3) &lt;br/&gt; Aviones - Helicópteros: (%4) &lt;br/&gt; Aviones - Aviones: (%5)</Spanish>
             <Italian>Costi di rifornimento: &lt;br/&gt; &lt;br/&gt; Veicoli terrestri: (%1) &lt;br/&gt; Veicoli marini: (%2) &lt;br/&gt; Veicoli corazzati - Carri armati: (%3) &lt;br/&gt; Aerei - Elicotteri: (%4) &lt;br/&gt; Aerei - Aerei: (%5)</Italian>
@@ -4667,7 +4753,7 @@
         </Key>
         <Key ID="STR_MISERY_REPAIRCOSTSNOTI">
             <English>Repair costs:&lt;br/&gt; &lt;br/&gt; Land Vehicles: (%1) &lt;br/&gt; Sea Vehicles: (%2) &lt;br/&gt; Armored Vehicles - Tanks: (%3) &lt;br/&gt; Aircraft - Helicopters: (%4) &lt;br/&gt; Aircraft - Planes: (%5)</English>
-            <Czech>Náklady na opravy:&lt;br/&gt; &lt;br/&gt; Pozemní vozidla: (%1) &lt;br/&gt; Námořní vozidla: (%2) &lt;br/&gt; obrněná vozidla - tanky: (%3) &lt;br/&gt; letadla - vrtulníky: (%4) &lt;br/&gt; letadla - letadla: (%5)</Czech>
+            <Czech>Náklady na opravy:&lt;br/&gt; &lt;br/&gt; Pozemní vozidla: (%1) &lt;br/&gt; Námořní vozidla: (%2) &lt;br/&gt; Obrněná vozidla - tanky: (%3) &lt;br/&gt; Vrtulníky: (%4) &lt;br/&gt; Letadla: (%5)</Czech>
             <French>Coûts de réparation:&lt;br/&gt; &lt;br/&gt; Véhicules terrestres : (%1) &lt;br/&gt; Véhicules maritimes : (%2) &lt;br/&gt; Véhicules blindés - Chars : (%3) &lt;br/&gt; Avions - Hélicoptères : (%4) &lt;br/&gt; Avions - Avions : (%5)</French>
             <Spanish>Costes de reparación:&lt;br/&gt; &lt;br/&gt; Vehículos terrestres: (%1) &lt;br/&gt; Vehículos Marítimos: (%2) &lt;br/&gt; Vehículos blindados - Tanques: (%3) &lt;br/&gt; Aviones - Helicópteros: (%4) &lt;br/&gt; Aviones - Aviones: (%5)</Spanish>
             <Italian>Costi di riparazione:&lt;br/&gt; &lt;br/&gt; Veicoli terrestri: (%1) &lt;br/&gt; Veicoli marini: (%2) &lt;br/&gt; Veicoli blindati - Carri armati: (%3) &lt;br/&gt; Aerei - Elicotteri: (%4) &lt;br/&gt; Aerei - Aerei: (%5)</Italian>
@@ -4751,7 +4837,7 @@
         </Key>
         <Key ID="STR_MISERY_RESUPPLYCOSTSNOTI">
             <English>Resupply costs:&lt;br/&gt; &lt;br/&gt; Land Vehicles: (%1) &lt;br/&gt; Sea Vehicles: (%2) &lt;br/&gt; Armored Vehicles - Tanks: (%3) &lt;br/&gt; Aircraft - Helicopters: (%4) &lt;br/&gt; Aircraft - Planes: (%5)</English>
-            <Czech>Náklady na doplnění zásob:&lt;br/&gt; &lt;br/&gt; Pozemní vozidla: (%1) &lt;br/&gt; Námořní vozidla: (%2) &lt;br/&gt; Obrněná vozidla - tanky: (%3) &lt;br/&gt; Letadla - vrtulníky: (%4) &lt;br/&gt; Letadla - letadla: (%5)</Czech>
+            <Czech>Náklady na doplnění zásob:&lt;br/&gt; &lt;br/&gt; Pozemní vozidla: (%1) &lt;br/&gt; Námořní vozidla: (%2) &lt;br/&gt; Obrněná vozidla - tanky: (%3) &lt;br/&gt; Vrtulníky: (%4) &lt;br/&gt; Letadla: (%5)</Czech>
             <French>Coûts de ravitaillement :&lt;br/&gt; &lt;br/&gt; Véhicules terrestres : (%1) &lt;br/&gt; Véhicules maritimes : (%2) &lt;br/&gt; Véhicules blindés - Chars : (%3) &lt;br/&gt; Avions - Hélicoptères : (%4) &lt;br/&gt; Avions - Avions : (%5)</French>
             <Spanish>Costes de reabastecimiento:&lt;br/&gt; &lt;br/&gt; Vehículos terrestres: (%1) &lt;br/&gt; Vehículos Marítimos: (%2) &lt;br/&gt; Vehículos Blindados - Tanques: (%3) &lt;br/&gt; Aviones - Helicópteros: (%4) &lt;br/&gt; Aviones - Aviones: (%5)</Spanish>
             <Italian>Costi di rifornimento:&lt;br/&gt; &lt;br/&gt; Veicoli terrestri: (%1) &lt;br/&gt; Veicoli marittimi: (%2) &lt;br/&gt; Veicoli corazzati - Carri armati: (%3) &lt;br/&gt; Aerei - Elicotteri: (%4) &lt;br/&gt; Aerei - Aerei: (%5)</Italian>
@@ -4793,7 +4879,7 @@
         </Key>
         <Key ID="STR_MISERY_RFHIGHNOBATTERY_DISPLAYNAME">
             <English>RF detector (No battery)</English>
-            <Czech>RF detektor (bez baterie)</Czech>
+            <Czech>Detektor rádiových vln (bez baterie)</Czech>
             <French>Détecteur RF (sans batterie)</French>
             <Spanish>Detector de RF (sin batería)</Spanish>
             <Italian>Rivelatore RF (senza batteria)</Italian>
@@ -4807,7 +4893,7 @@
         </Key>
         <Key ID="STR_MISERY_RFHIGHRANGEOFF_DISPLAYNAME">
             <English>RF detector (OFF)</English>
-            <Czech>RF detektor (VYP.)</Czech>
+            <Czech>Detektor rádiových vln (VYP.)</Czech>
             <French>Détecteur RF (ARRÊT)</French>
             <Spanish>Detector de RF (APAGADO)</Spanish>
             <Italian>Rivelatore RF (SPENTO)</Italian>
@@ -4821,7 +4907,7 @@
         </Key>
         <Key ID="STR_MISERY_RFHIGHRANGEON_DISPLAYNAME">
             <English>RF detector (ON)</English>
-            <Czech>RF detektor (ZAP.)</Czech>
+            <Czech>Detektor rádiových vln (ZAP.)</Czech>
             <French>Détecteur RF (MARCHE)</French>
             <Spanish>Detector de RF (ENCENDIDO)</Spanish>
             <Italian>Rivelatore RF (ACCESO)</Italian>
@@ -4835,7 +4921,7 @@
         </Key>
         <Key ID="STR_MISERY_RFHIGHRANGE_DESCRIPTION">
             <English>- Dual purpose detection unit, used for detection of various abnormal RF readings as well as EMF readings (anomalies)&lt;br/&gt; - Some claim this device attracts unknown entities&lt;br/&gt; - High / Medium range capable</English>
-            <Czech>- Detekční jednotka s dvojím účelem, používaná k detekci různých abnormálních hodnot RF a hodnot EMF (anomálií)&lt;br/&gt; - Někteří tvrdí, že toto zařízení přitahuje neznámé entity&lt;br/&gt; - Vysoký/střední dosah</Czech>
+            <Czech>- Detekční jednotka s dvojím využitím, používaná k detekci různých abnormálních hodnot rádiových vln a hodnot elektro magnetického pole (anomálií)&lt;br/&gt; - Někteří tvrdí, že toto zařízení přitahuje neznámé entity&lt;br/&gt; - Vysoký/střední dosah</Czech>
             <French>- Unité de détection à double usage, utilisée pour la détection de diverses lectures RF anormales ainsi que des lectures EMF (anomalies)&lt;br/&gt; - Certains prétendent que cet appareil attire des entités inconnues&lt;br/&gt; - Capable de haute/moyenne portée</French>
             <Spanish>- Unidad de detección de doble propósito, utilizada para la detección de diversas lecturas de RF anormales, así como lecturas de EMF (anomalías)&lt;br/&gt; - Algunos afirman que este dispositivo atrae entidades desconocidas&lt;br/&gt; - Capaz de alto/medio alcance</Spanish>
             <Italian>- Unità di rilevamento a doppio scopo, utilizzata per il rilevamento di varie letture RF anomale e letture EMF (anomalie)&lt;br/&gt; - Alcuni affermano che questo dispositivo attiri entità sconosciute&lt;br/&gt; - Capacità di portata alta/media</Italian>
@@ -4877,7 +4963,7 @@
         </Key>
         <Key ID="STR_MISERY_ROPE_DESCRIPTION">
             <English>small bit of rope &lt;br/&gt; - Crafting item</English>
-            <Czech>malý kus lana &lt;br/&gt; - Řemeslný předmět</Czech>
+            <Czech>kousek lana &lt;br/&gt; - Předmět pro výrobu</Czech>
             <French>petit morceau de corde &lt;br/&gt; - Objet d'artisanat</French>
             <Spanish>pequeño trozo de cuerda &lt;br/&gt; - Objeto de artesanía</Spanish>
             <Italian>piccolo pezzo di corda &lt;br/&gt; - Oggetto per il crafting</Italian>
@@ -4989,7 +5075,7 @@
         </Key>
         <Key ID="STR_MISERY_SAVECHARACTER">
             <English>Save Character</English>
-            <Czech>Uložit postavu</Czech>
+            <Czech>Uložit herní postavu</Czech>
             <French>Sauvegarder le caractère</French>
             <Spanish>Guardar carácter</Spanish>
             <Italian>Salva il personaggio</Italian>
@@ -5003,7 +5089,7 @@
         </Key>
         <Key ID="STR_MISERY_SAVECHARACTERNOTIF">
             <English>%1, your character data has been saved...</English>
-            <Czech>%1, data vaší postavy byla uložena...</Czech>
+            <Czech>%1, data vaší herní postavy byla uložena...</Czech>
             <French>%1, les données de votre personnage ont été sauvegardées...</French>
             <Spanish>%1, los datos de tu personaje han sido guardados...</Spanish>
             <Italian>%1, i dati del personaggio sono stati salvati...</Italian>
@@ -5017,7 +5103,7 @@
         </Key>
         <Key ID="STR_MISERY_SAWFUEL_DESCRIPTION">
             <English>Can of 2 stroke fuel&lt;br/&gt; - Fuel item</English>
-            <Czech>Plechovke paliva pro dvoutaktní motory&lt;br/&gt; - Palivový předmět</Czech>
+            <Czech>Plechovka paliva pro dvoutaktní motory&lt;br/&gt; - Palivový předmět</Czech>
             <French>Bidon de carburant 2 temps&lt;br/&gt; - Objet carburant</French>
             <Spanish>Lata de combustible de 2 tiempos&lt;br/&gt; - Objeto de combustible</Spanish>
             <Italian>Lattina di carburante a 2 tempi&lt;br/&gt; - Oggetto carburante</Italian>
@@ -5059,7 +5145,7 @@
         </Key>
         <Key ID="STR_MISERY_SLEDGHAMMER_DESCRIPTION">
             <English>Sledgehammer, extremely heavy, but also very useful&lt;br/&gt; - Tool</English>
-            <Czech>Sledgehammer, extrémně těžký, ale také velmi užitečný&lt;br/&gt; - Nástroj</Czech>
+            <Czech>Velké kladivo 'Perlík', extrémně těžké, ale velmi užitečné&lt;br/&gt; - Nářadí</Czech>
             <French>Masse, extrêmement lourde, mais aussi très utile&lt;br/&gt; - Outil</French>
             <Spanish>Mazo, extremadamente pesado, pero también muy útil&lt;br/&gt; - Herramienta</Spanish>
             <Italian>Mazza, estremamente pesante, ma anche molto utile&lt;br/&gt; - Strumento</Italian>
@@ -5073,7 +5159,7 @@
         </Key>
         <Key ID="STR_MISERY_SLEDGHAMMER_DISPLAYNAME">
             <English>Sledgehammer</English>
-            <Czech>Sledgehammer</Czech>
+            <Czech>Těžké kladivo "Perlík"</Czech>
             <French>Masse</French>
             <Spanish>Mazo</Spanish>
             <Italian>Mazza</Italian>
@@ -5087,7 +5173,7 @@
         </Key>
         <Key ID="STR_MISERY_SLEEP10HOURS">
             <English>10 hours</English>
-            <Czech>10 hodiny</Czech>
+            <Czech>10 hodin</Czech>
             <French>10 heures</French>
             <Spanish>10 horas</Spanish>
             <Italian>10 ore</Italian>
@@ -5101,7 +5187,7 @@
         </Key>
         <Key ID="STR_MISERY_SLEEP11HOURS">
             <English>11 hours</English>
-            <Czech>11 hodiny</Czech>
+            <Czech>11 hodin</Czech>
             <French>11 heures</French>
             <Spanish>11 horas</Spanish>
             <Italian>11 ore</Italian>
@@ -5115,7 +5201,7 @@
         </Key>
         <Key ID="STR_MISERY_SLEEP12HOURS">
             <English>12 hours</English>
-            <Czech>12 hodiny</Czech>
+            <Czech>12 hodin</Czech>
             <French>12 heures</French>
             <Spanish>12 horas</Spanish>
             <Italian>12 ore</Italian>
@@ -5129,7 +5215,7 @@
         </Key>
         <Key ID="STR_MISERY_SLEEP1HOUR">
             <English>1 hour</English>
-            <Czech>1 hodina</Czech>
+            <Czech>1 hodinu</Czech>
             <French>1 heure</French>
             <Spanish>1 hora</Spanish>
             <Italian>1 ora</Italian>
@@ -5185,7 +5271,7 @@
         </Key>
         <Key ID="STR_MISERY_SLEEP5HOURS">
             <English>5 hours</English>
-            <Czech>5 hodiny</Czech>
+            <Czech>5 hodin</Czech>
             <French>5 heures</French>
             <Spanish>5 horas</Spanish>
             <Italian>5 ore</Italian>
@@ -5199,7 +5285,7 @@
         </Key>
         <Key ID="STR_MISERY_SLEEP6HOURS">
             <English>6 hours</English>
-            <Czech>6 hodiny</Czech>
+            <Czech>6 hodin</Czech>
             <French>6 heures</French>
             <Spanish>6 horas</Spanish>
             <Italian>6 ore</Italian>
@@ -5213,7 +5299,7 @@
         </Key>
         <Key ID="STR_MISERY_SLEEP7HOURS">
             <English>7 hours</English>
-            <Czech>7 hodiny</Czech>
+            <Czech>7 hodin</Czech>
             <French>7 heures</French>
             <Spanish>7 horas</Spanish>
             <Italian>7 ore</Italian>
@@ -5227,7 +5313,7 @@
         </Key>
         <Key ID="STR_MISERY_SLEEP8HOURS">
             <English>8 hours</English>
-            <Czech>8 hodiny</Czech>
+            <Czech>8 hodin</Czech>
             <French>8 heures</French>
             <Spanish>8 horas</Spanish>
             <Italian>8 ore</Italian>
@@ -5241,7 +5327,7 @@
         </Key>
         <Key ID="STR_MISERY_SLEEP9HOURS">
             <English>9 hours</English>
-            <Czech>9 hodiny</Czech>
+            <Czech>9 hodin</Czech>
             <French>9 heures</French>
             <Spanish>9 horas</Spanish>
             <Italian>9 ore</Italian>
@@ -5269,7 +5355,7 @@
         </Key>
         <Key ID="STR_MISERY_SLEEPNOHOURSELECT">
             <English>You need to select how long you wish to sleep...</English>
-            <Czech>Musíte si vybrat, jak dlouho chcete spát...</Czech>
+            <Czech>Vyberte si, jak dlouho chcete spát...</Czech>
             <French>Vous devez sélectionner la durée de votre sommeil...</French>
             <Spanish>Tienes que seleccionar cuánto tiempo quieres dormir...</Spanish>
             <Italian>È necessario selezionare la durata del sonno...</Italian>
@@ -5283,7 +5369,7 @@
         </Key>
         <Key ID="STR_MISERY_SLEEPNOTTIRED">
             <English>You aren't tired enough to sleep yet...</English>
-            <Czech>Ještě nejsi dost unavený na to, abys spal...</Czech>
+            <Czech>Ještě nejste dostatečně unavený na to, abyste spal...</Czech>
             <French>Vous n'êtes pas encore assez fatigué pour dormir...</French>
             <Spanish>Aún no estás lo suficientemente cansado para dormir...</Spanish>
             <Italian>Non sei ancora abbastanza stanco per dormire...</Italian>
@@ -5367,7 +5453,7 @@
         </Key>
         <Key ID="STR_MISERY_SLEEPTIP">
             <English>Care should be taken when sleeping in excessive amounts...</English>
-            <Czech>Při nadměrném množství spánku je třeba dbát na opatrnost...</Czech>
+            <Czech>Při nadměrném množství spánku je třeba dbát na opatrnosti...</Czech>
             <French>Il convient d'être prudent lorsque l'on dort en quantités excessives...</French>
             <Spanish>Hay que tener cuidado cuando se duerme en cantidades excesivas...</Spanish>
             <Italian>Occorre prestare attenzione quando si dorme in quantità eccessive...</Italian>
@@ -5395,7 +5481,7 @@
         </Key>
         <Key ID="STR_MISERY_SPLITWOODLOG">
             <English>Split Wood Log</English>
-            <Czech>Dělená dřevěná kulatina</Czech>
+            <Czech>Rozštípaný špalek</Czech>
             <French>Bûche de bois fendue</French>
             <Spanish>Tronco de madera hendido</Spanish>
             <Italian>Tronco di legno spaccato</Italian>
@@ -5409,7 +5495,7 @@
         </Key>
         <Key ID="STR_MISERY_STARTFISHING">
             <English>Start Fishing</English>
-            <Czech>Začít s rybařením</Czech>
+            <Czech>Začít rybařit</Czech>
             <French>Commencer à pêcher</French>
             <Spanish>Empezar a pescar</Spanish>
             <Italian>Inizia a pescare</Italian>
@@ -5423,7 +5509,7 @@
         </Key>
         <Key ID="STR_MISERY_STARTFISHINGACT">
             <English>Fish</English>
-            <Czech>Ryby</Czech>
+            <Czech>Rybaření</Czech>
             <French>Poisson</French>
             <Spanish>Pescado</Spanish>
             <Italian>Pesce</Italian>
@@ -5437,7 +5523,7 @@
         </Key>
         <Key ID="STR_MISERY_STARTFISHINGREQUIRMENTS">
             <English>Fishing requirements</English>
-            <Czech>Požadavky na rybolov</Czech>
+            <Czech>Požadavky pro rybolov</Czech>
             <French>Exigences en matière de pêche</French>
             <Spanish>Requisitos de pesca</Spanish>
             <Italian>Requisiti per la pesca</Italian>
@@ -5465,7 +5551,7 @@
         </Key>
         <Key ID="STR_MISERY_STITCHWOUNDS">
             <English>Stitch Wounds</English>
-            <Czech>Rány po šití</Czech>
+            <Czech>Zašítí ran</Czech>
             <French>Suture des plaies</French>
             <Spanish>Suturar heridas</Spanish>
             <Italian>Ferite da sutura</Italian>
@@ -5521,7 +5607,7 @@
         </Key>
         <Key ID="STR_MISERY_STONECHUNK_DISPLAYNAME">
             <English>Stone chunks</English>
-            <Czech>Kousy kamene</Czech>
+            <Czech>Kusy kamene</Czech>
             <French>Morceaux de pierre</French>
             <Spanish>Trozo de piedras</Spanish>
             <Italian>Pezzi di pietra</Italian>
@@ -5591,7 +5677,7 @@
         </Key>
         <Key ID="STR_MISERY_THROMBOMODULINSTIMPACK_DESCRIPTION">
             <English>Thbd Stimpack, this single use stimpack administers an extremely high dose of Thrombomodulin(Thbd), use with caution.&lt;br/&gt; - Radiation medication</English>
-            <Czech>Thbd Stimpack, tento jednorázový stimpack podává extrémně vysokou dávku trombomodulinu (Thbd), používejte opatrně.&lt;br/&gt; - Radiační lék</Czech>
+            <Czech>Thbd stimulant, tento jednorázový stimulant podává extrémně vysokou dávku trombomodulinu (Thbd), používejte opatrně.&lt;br/&gt; - Radiační lék</Czech>
             <French>Thbd Stimpack, ce stimpack à usage unique administre une dose extrêmement élevée de thrombomoduline(Thbd), à utiliser avec prudence.&lt;br/&gt; - Médicament contre les radiations</French>
             <Spanish>Thbd Stimpack, este stimpack de un solo uso administra una dosis extremadamente alta de trombomodulina(Thbd), úselo con precaución.&lt;br/&gt; - Medicamento para la radiación</Spanish>
             <Italian>Thbd Stimpack, questo Stimpack monouso somministra una dose estremamente elevata di Trombomodulina(Thbd), utilizzare con cautela.&lt;br/&gt; - Farmaco per le radiazioni</Italian>
@@ -5605,7 +5691,7 @@
         </Key>
         <Key ID="STR_MISERY_THROMBOMODULINSTIMPACK_DISPLAYNAME">
             <English>Thbd Stimpack</English>
-            <Czech>Thbd Stimpack</Czech>
+            <Czech>Thbd Stimulant</Czech>
             <French>Thbd Stimpack</French>
             <Spanish>Thbd Stimpack</Spanish>
             <Italian>Thbd Stimpack</Italian>
@@ -5661,7 +5747,7 @@
         </Key>
         <Key ID="STR_MISERY_TINDER_DISPLAYNAME">
             <English>Tinder</English>
-            <Czech>Tinder</Czech>
+            <Czech>Troud</Czech>
             <French>Aamadou</French>
             <Spanish>Yesca</Spanish>
             <Italian>Esca</Italian>
@@ -5703,7 +5789,7 @@
         </Key>
         <Key ID="STR_MISERY_TOYSOLDIER_DESCRIPTION">
             <English>Time traveling Army men, when you used it to play 'war' with dozens of these in the backyard. Now you're the 'toy' and 'war' is playing with you.&lt;br/&gt; - Random Junk</English>
-            <Czech>Cestující vojáci, když jste je používali k hraní „války“ s desítkami z nich na dvorku. Teď jsi „hračka“ a „válka“ si s tebou hraje.&lt;br/&gt; - Náhodný odpad</Czech>
+            <Czech>Časem cestující vojáčci, kdysi sis s desítkami z nich hrál na dvorku 'na válku'. Teď jsi 'hračka' ty a 'válka' si hraje s tebou.&lt;br/&gt; - Náhodný odpad</Czech>
             <French>Soldats de l'armée qui voyagent dans le temps, quand vous les utilisiez pour jouer à la «guerre» avec des dizaines d'entre eux dans l'arrière-cour. Maintenant, vous êtes le "jouet" et la "guerre" joue avec vous.&lt;br/&gt; - Déchet aléatoire</French>
             <Spanish>Soldados del ejército que viajan en el tiempo, cuando los usabas para jugar a la "guerra" con docenas de estos en el patio trasero. Ahora eres el "juguete" y la "guerra" está jugando contigo.&lt;br/&gt; - Basura al azar</Spanish>
             <Italian>Soldatini che viaggiano nel tempo, quando li usavi per giocare alla "guerra" con dozzine di questi nel cortile sul retro. Ora sei il "giocattolo" e la "guerra" sta giocando con te.&lt;br/&gt; - Junk casuale</Italian>
@@ -5717,7 +5803,7 @@
         </Key>
         <Key ID="STR_MISERY_TOYSOLDIER_DISPLAYNAME">
             <English>Toy Soldier</English>
-            <Czech>Hračky voják</Czech>
+            <Czech>Plastový vojáček</Czech>
             <French>Soldat de plomb</French>
             <Spanish>Soldado de juguete</Spanish>
             <Italian>Soldatino</Italian>
@@ -5829,7 +5915,7 @@
         </Key>
         <Key ID="STR_MISERY_TURNOFFRFDETEC">
             <English>Turn off RF detector</English>
-            <Czech>Vypnutí RF detektoru</Czech>
+            <Czech>Vypnutí detektoru rádiových vln</Czech>
             <French>Désactiver le détecteur de radiofréquences</French>
             <Spanish>Apagar el detector de RF</Spanish>
             <Italian>Spegnere il rilevatore RF</Italian>
@@ -5857,7 +5943,7 @@
         </Key>
         <Key ID="STR_MISERY_TURNONGEIGERBOOTUP">
             <English>You turn on your Geiger...</English>
-            <Czech>Zapněte Geigerův přístroj...</Czech>
+            <Czech>Zapnul jste Geigerův přístroj...</Czech>
             <French>Vous allumez votre Geiger...</French>
             <Spanish>Enciendes tu Geiger...</Spanish>
             <Italian>Accendi il tuo Geiger...</Italian>
@@ -5885,7 +5971,7 @@
         </Key>
         <Key ID="STR_MISERY_TURNONGEIGERTURNOFF">
             <English>You turn off your Geiger...</English>
-            <Czech>Vypněte Geigerův přístroj...</Czech>
+            <Czech>Vypnul jste Geigerův přístroj...</Czech>
             <French>Vous éteignez votre Geiger...</French>
             <Spanish>Apagas tu Geiger...</Spanish>
             <Italian>Spegni il tuo Geiger...</Italian>
@@ -5913,7 +5999,7 @@
         </Key>
         <Key ID="STR_MISERY_TURNONRFDETECNOITEM">
             <English>You don't have an RF detector...</English>
-            <Czech>Nemáte RF detektor...</Czech>
+            <Czech>Nemáte detektor rádiových vln...</Czech>
             <French>Vous n'avez pas de détecteur de radiofréquences...</French>
             <Spanish>No tienes un detector de radiofrecuencia...</Spanish>
             <Italian>Non hai un rilevatore RF...</Italian>
@@ -5955,7 +6041,7 @@
         </Key>
         <Key ID="STR_MISERY_USEFIRE">
             <English>Use Fire</English>
-            <Czech>Používat oheň</Czech>
+            <Czech>Použít oheň</Czech>
             <French>Utiliser le feu</French>
             <Spanish>Usa fuego</Spanish>
             <Italian>Usa il fuoco</Italian>
@@ -5969,7 +6055,7 @@
         </Key>
         <Key ID="STR_MISERY_USEFIRE_COOK">
             <English>Cook</English>
-            <Czech>Cook</Czech>
+            <Czech>Vařit/opékat</Czech>
             <French>Cuisiner</French>
             <Spanish>Cocinero</Spanish>
             <Italian>Cuoco</Italian>
@@ -5983,7 +6069,7 @@
         </Key>
         <Key ID="STR_MISERY_USEFORGE">
             <English>Use Forge</English>
-            <Czech>Použít Forge</Czech>
+            <Czech>Použít výheň</Czech>
             <French>Utiliser la forge</French>
             <Spanish>Utilizar Forja</Spanish>
             <Italian>Utilizzare la Fucina</Italian>
@@ -6011,7 +6097,7 @@
         </Key>
         <Key ID="STR_MISERY_USEJERRYCANCLEAN">
             <English>Use Jerrycan (Clean)</English>
-            <Czech>Použití nádoby Jerrycan (Clean)</Czech>
+            <Czech>Použití kanystru (Čistý)</Czech>
             <French>Utiliser un jerrycan (propre)</French>
             <Spanish>Utilizar bidón (limpio)</Spanish>
             <Italian>Utilizzare la tanica (pulita)</Italian>
@@ -6025,7 +6111,7 @@
         </Key>
         <Key ID="STR_MISERY_USEJERRYCANDIRTY">
             <English>Use Jerrycan (Dirty)</English>
-            <Czech>Použití Jerrycan (Dirty)</Czech>
+            <Czech>Použití kanystru (Špinavý)</Czech>
             <French>Utiliser un jerrycan (sale)</French>
             <Spanish>Usar Jerrycan (sucio)</Spanish>
             <Italian>Utilizzare la tanica (sporca)</Italian>
@@ -6053,7 +6139,7 @@
         </Key>
         <Key ID="STR_MISERY_USESLEDGE">
             <English>Use Sledgehammer</English>
-            <Czech>Použití Sledgehammer</Czech>
+            <Czech>Použití Velkého kladiva 'Perlíku'</Czech>
             <French>Utiliser la masse</French>
             <Spanish>Usa el mazo</Spanish>
             <Italian>Utilizzare la mazza</Italian>
@@ -6067,7 +6153,7 @@
         </Key>
         <Key ID="STR_MISERY_USESLEDGENOTOOLTIP">
             <English>You need to be close enough to a base, and need a sledgehammer to demolish base objects...</English>
-            <Czech>Musíte být dostatečně blízko základny a k demolici objektů základny potřebujete kladivo...</Czech>
+            <Czech>K demolici základny musíte mít velké kladivo 'perlík' a musíte být dostatečne blízko základny...</Czech>
             <French>Vous devez être suffisamment proche d'une base, et avoir besoin d'un marteau-pilon pour démolir les objets de la base...</French>
             <Spanish>Necesitas estar lo suficientemente cerca de una base, y necesitas un mazo para demoler los objetos de la base...</Spanish>
             <Italian>È necessario essere abbastanza vicini a una base e avere una mazza per demolire gli oggetti della base...</Italian>
@@ -6165,7 +6251,7 @@
         </Key>
         <Key ID="STR_MISERY_VODKA_DESCRIPTION">
             <English>Premium Vodka, distilled somewhere in Chernarus&lt;br/&gt; - Reduces Radiation&lt;br/&gt; - Unhealthy</English>
-            <Czech>Prémiová vodka, destilovaná někde v Chernarus&lt;br/&gt; - Snižuje radiaci&lt;br/&gt; - Nezdravé</Czech>
+            <Czech>Prémiová vodka, destilovaná někde v Chernarusi&lt;br/&gt; - Snižuje radiaci&lt;br/&gt; - Nezdravé</Czech>
             <French>Vodka premium, distillée quelque part à Chernarus&lt;br/&gt; - Réduit les radiations&lt;br/&gt; - Mauvais pour la santé</French>
             <Spanish>Vodka Premium, destilada en algún lugar de Chernarus&lt;br/&gt; - Reduce la radiación&lt;br/&gt; - No saludable</Spanish>
             <Polish>Wódka premium, destylowana gdzieś w Chernarus&lt;br/&gt; - Zmniejsza promieniowanie&lt;br/&gt; - Niezdrowo</Polish>
@@ -6219,7 +6305,7 @@
         </Key>
         <Key ID="STR_MISERY_WATERBOTTLEDIRTY_DESCRIPTION">
             <English>This water bottle contains water straight from the environment, it has a foul strong odor...</English>
-            <Czech>Tato láhev na vodu obsahuje vodu přímo z životního prostředí, má nepříjemný silný zápach...</Czech>
+            <Czech>Tato láhev na vodu obsahuje vodu přímo z přírody, má nepříjemný silný zápach...</Czech>
             <French>Cette bouteille d'eau contient de l'eau provenant directement de l'environnement, elle a une odeur forte et nauséabonde...</French>
             <Spanish>Esta botella de agua contiene agua directamente del medio ambiente, tiene un olor fétido y fuerte...</Spanish>
             <Polish>Ta butelka na wodę zawiera wodę prosto ze środowiska, ma nieprzyjemny, silny zapach....</Polish>
@@ -6286,7 +6372,7 @@
         </Key>
         <Key ID="STR_MISERY_WATERBOTTLEPURIFIED_DISPLAYNAME">
             <English>Water Bottle (Purified)</English>
-            <Czech>Láhev na vodu (čištěnou)</Czech>
+            <Czech>Láhev na vodu (vyčištěná)</Czech>
             <French>Bouteille d'eau (purifiée)</French>
             <Spanish>Botella de agua (purificada)</Spanish>
             <Italian>Bottiglia d'acqua (purificata)</Italian>
@@ -6468,7 +6554,7 @@
         </Key>
         <Key ID="STR_MISERY_WOODAXE_DESCRIPTION">
             <English>Axe for cutting wood&lt;br/&gt; - Tool</English>
-            <Czech>Sekera na štípání dřeva&lt;br/&gt; - Nástroj</Czech>
+            <Czech>Sekera na štípání dřeva&lt;br/&gt; - Nářadí</Czech>
             <French>Hache pour couper du bois&lt;br/&gt; - Outil</French>
             <Spanish>Hacha para cortar madera&lt;br/&gt; - Herramienta</Spanish>
             <Italian>Ascia per tagliare la legna&lt;br/&gt; - Strumento</Italian>
@@ -6482,7 +6568,7 @@
         </Key>
         <Key ID="STR_MISERY_WOODAXE_DISPLAYNAME">
             <English>Wood Axe</English>
-            <Czech>Dřevěná sekera</Czech>
+            <Czech>Sekera</Czech>
             <French>Hache à bois</French>
             <Spanish>Hacha de madera</Spanish>
             <Italian>Ascia per legno</Italian>
@@ -6496,7 +6582,7 @@
         </Key>
         <Key ID="STR_MISERY_WOODENLOG_DESCRIPTION">
             <English>A stout wooden log, can probably be used to make some lumber&lt;br/&gt; - Base crafting</English>
-            <Czech>Silný dřevěný kmen, pravděpodobně může být použit k výrobě řeziva&lt;br/&gt; - Základní výroba</Czech>
+            <Czech>Silný dřevěný kmen, pravděpodobně může být použit k výrobě řeziva&lt;br/&gt; - Základní stavební materiál</Czech>
             <French>Une grosse bûche de bois, peut probablement être utilisée pour fabriquer du bois d'œuvre&lt;br/&gt; - Création de base</French>
             <Spanish>Un grueso tronco de madera, probablemente se puede usar para hacer madera&lt;br/&gt; - Elaboración de bases</Spanish>
             <Italian>Un grosso tronco di legno, probabilmente può essere usato per fare del legname&lt;br/&gt; - Creazione di basi</Italian>
@@ -6524,7 +6610,7 @@
         </Key>
         <Key ID="STR_MISERY_WOODENSTICKS_DESCRIPTION">
             <English>- some wood sticks&lt;br/&gt; - Fire crafting</English>
-            <Czech>- pár dřevěných tyčinek&lt;br/&gt; - Rozdělávání ohně</Czech>
+            <Czech>- pár dřevěných klacíků&lt;br/&gt; - Rozdělávání ohně</Czech>
             <French>- quelques bâtons de bois&lt;br/&gt; - Création de feu</French>
             <Spanish>- algunos palitos de madera&lt;br/&gt; - Encendido de fuego</Spanish>
             <Italian>- alcuni bastoncini di legno&lt;br/&gt; - Accensione del fuoco</Italian>
@@ -6538,7 +6624,7 @@
         </Key>
         <Key ID="STR_MISERY_WOODENSTICKS_DISPLAYNAME">
             <English>Wood Sticks</English>
-            <Czech>Dřevěné tyčinky</Czech>
+            <Czech>Dřevěné klacíky</Czech>
             <French>Bâtons de bois</French>
             <Spanish>Palitos de madera</Spanish>
             <Italian>Bastoni di legno</Italian>
@@ -6552,7 +6638,7 @@
         </Key>
         <Key ID="STR_MISERY_WOODNAIL_DESCRIPTION">
             <English>Wood nail&lt;br/&gt; - Crafting item</English>
-            <Czech>Dřevěný hřebík&lt;br/&gt; - Předmět pro výrobu</Czech>
+            <Czech>Hřebík&lt;br/&gt; - Předmět pro výrobu</Czech>
             <French>Clou en bois&lt;br/&gt; - Objet d'artisanat</French>
             <Spanish>Clavo de madera&lt;br/&gt; - Objeto de fabricación</Spanish>
             <Italian>Chiodo di legno&lt;br/&gt; - Oggetto di creazione</Italian>
@@ -6566,7 +6652,7 @@
         </Key>
         <Key ID="STR_MISERY_WOODNAIL_DISPLAYNAME">
             <English>Wood nail</English>
-            <Czech>Dřevěný hřebík</Czech>
+            <Czech>Hřebík</Czech>
             <French>Clou en bois</French>
             <Spanish>Clavo de madera</Spanish>
             <Italian>Chiodo di legno</Italian>
@@ -6636,7 +6722,7 @@
         </Key>
         <Key ID="STR_MISERY_WRENCH_DESCRIPTION">
             <English>Can be useful&lt;br/&gt; - Crafting item</English>
-            <Czech>Může být užitečné&lt;br/&gt; - Předmět pro výrobu</Czech>
+            <Czech>Může být užitečné&lt;br/&gt; - Nářadí</Czech>
             <French>Peut être utile&lt;br/&gt; - Objet d'artisanat</French>
             <Spanish>Puede ser útil&lt;br/&gt; - Objeto de fabricación</Spanish>
             <Italian>Può essere utile&lt;br/&gt; - Oggetto di creazione</Italian>
@@ -6664,7 +6750,7 @@
         </Key>
         <Key ID="STR_MISERY_ZOMBIEBRAIN_DESCRIPTION">
             <English>A mucous covered brain... The stench is awful...&lt;br/&gt; - Infected parts &lt;br/&gt; - Research item</English>
-            <Czech>Mozek pokrytý hlenem... Ten zápach je hrozný...&lt;br/&gt; - Infikované části &lt;br/&gt; - Předmět výzkumu</Czech>
+            <Czech>Mozek pokrytý hlenem... Fuj to je smrad...&lt;br/&gt; - Infikované části &lt;br/&gt; - Předmět výzkumu</Czech>
             <French>Un cerveau couvert de mucus... La puanteur est horrible...&lt;br/&gt; - Parties infectées &lt;br/&gt; - Objet de recherche</French>
             <Spanish>Un cerebro cubierto de mucosidad... El hedor es horrible...&lt;br/&gt; - Partes infectadas &lt;br/&gt; - Objeto de investigación</Spanish>
             <Italian>Un cervello ricoperto di muco... La puzza è terribile...&lt;br/&gt; - Parti infette &lt;br/&gt; - Oggetto di ricerca</Italian>
@@ -6748,7 +6834,7 @@
         </Key>
         <Key ID="STR_MISERY_ZOMBIEHAND_DESCRIPTION">
             <English>A lifeless limb, once capable of love and creation, now a chilling reminder of mortality. Its cold touch holds secrets of the infection, but demands careful handling. &lt;br/&gt; - Infected Parts &lt;br/&gt; - Research Item</English>
-            <Czech>Bezživotná končetina, kdysi schopná lásky a tvoření, je nyní mrazivou připomínkou smrtelnosti. Její chladný dotek skrývá tajemství infekce, ale vyžaduje opatrné zacházení. &lt;br/&gt; - Infikované Části &lt;br/&gt; - Výzkumný Předmět</Czech>
+            <Czech>Nehybná končetina, kdysi schopná lásky a tvoření, je nyní mrazivou připomínkou smrtelnosti. Její chladný dotek skrývá tajemství infekce, ale vyžaduje opatrné zacházení. &lt;br/&gt; - Infikované Části &lt;br/&gt; - Výzkumný Předmět</Czech>
             <French>Un membre sans vie, autrefois capable d'amour et de création, est désormais un rappel glaçant de la mortalité. Son toucher froid recèle des secrets de l'infection, mais exige une manipulation prudente. &lt;br/&gt; - Parties Infectées &lt;br/&gt; - Objet de Recherche</French>
             <Spanish>Un miembro sin vida, que alguna vez fue capaz de amar y crear, ahora es un escalofriante recordatorio de la mortalidad. Su frío tacto esconde secretos de la infección, pero exige un cuidadoso manejo. &lt;br/&gt; - Partes Infectadas &lt;br/&gt; - Objeto de Investigación</Spanish>
             <Italian>Un arto senza vita, un tempo capace di amore e creazione, ora un agghiacciante monito della mortalità. Il suo tocco gelido custodisce i segreti dell'infezione, ma richiede un'attenta manipolazione. &lt;br/&gt; - Parti Infettate &lt;br/&gt; - Oggetto di Ricerca</Italian>
@@ -6804,7 +6890,7 @@
         </Key>
         <Key ID="STR_MISERY_ZOMBIESKIN_DESCRIPTION">
             <English>A torso cut of a corpse's skin... The lesions smell horrible...&lt;br/&gt; - Infected parts &lt;br/&gt; - Research item</English>
-            <Czech>Řez torza kůže mrtvoly... Léze strašně páchnou...&lt;br/&gt; - Infikované části &lt;br/&gt; - Předmět výzkumu</Czech>
+            <Czech>Kus kůže z torza mrtvoly... Léze strašně páchnou...&lt;br/&gt; - Infikované části &lt;br/&gt; - Předmět výzkumu</Czech>
             <French>Une coupe de torse de la peau d'un cadavre... Les lésions sentent horriblement mauvais...&lt;br/&gt; - Parties infectées &lt;br/&gt; - Objet de recherche</French>
             <Spanish>Un corte en el torso de la piel de un cadáver... Las lesiones huelen horrible...&lt;br/&gt; - Partes infectadas &lt;br/&gt; - Objeto de investigación</Spanish>
             <Italian>Un taglio sul torso della pelle di un cadavere... Le lesioni hanno un odore terribile...&lt;br/&gt; - Parti infette &lt;br/&gt; - Oggetto di ricerca</Italian>
