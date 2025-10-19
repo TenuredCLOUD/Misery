@@ -27,31 +27,28 @@ if (_currentMarker in GVAR(processedMarkers)) exitWith {
     [QUOTE(COMPONENT_BEAUTIFIED), format ["Artifacts already generated for %1", _currentMarker]] call EFUNC(common,debugMessage);
 };
 
-private _artifacts = [MACRO_ARTIFACTS];
-private _buildingPositions = [];
+[_centerPos, _radius] call EFUNC(common,nearBuilding) params ["", "", "_nearBuildings"];
 
-// Get building positions
-private _nearBuildings = nearestObjects [_centerPos, ["House", "Building"], _radius, true];
-
-{
-    if (([_x] call BIS_fnc_buildingPositions) == 0) then {continue};
-
-    _buildingPositions pushBack _x;
+private _buildingPositions = {
+    _x buildingPos -1;
 } forEach _nearBuildings;
 
 for "_i" from 1 to _numArtifacts do {
-    private _useBuilding = random 1 > 0.5;
+    private _useBuilding = [50] call EFUNC(common,rollChance);
     private _randomPos = [[_currentMarker] call CBA_fnc_randPosArea, selectRandom _buildingPositions] select _useBuilding;
-    private _artifact = selectRandom _artifacts;
 
-    [_randomPos, [],[], [[_artifact, 1]]] call EFUNC(common,spawnLoot);
+    private _groundHolder = createVehicle ["WeaponHolderSimulated", _randomPos, [], 0, "CAN_COLLIDE"];
+
+    removeFromRemainsCollector [_groundHolder];
+
+    _groundHolder addItemCargoGlobal [selectRandom [MACRO_ARTIFACTS], 1];
 
     // Emission system
-    private _light = "#lightpoint" createVehicle [0,0,0];
+    private _light = "#lightpoint" createVehicleLocal [0,0,0];
     _light setLightBrightness (0.05 + (selectMax _markerSize * 0.001));
     _light setLightColor [random [0.4, 0.5, 0.6], random [0.4, 0.5, 0.6], random [0.4, 0.5, 0.6]];
-    _light lightAttachObject [_holder, [0, 0, 0.5]];
-    _holder setVariable [QGVAR(lightEmission), _light];
+    _light lightAttachObject [_groundHolder, [0, 0, 0.5]];
+    _groundHolder setVariable [QGVAR(lightEmission), _light];
 
     // Debug markers
     if (GVAR(debug)) then {
@@ -64,4 +61,3 @@ for "_i" from 1 to _numArtifacts do {
 
 // Mark marker as processed
 GVAR(processedMarkers) pushBackUnique _currentMarker;
-

@@ -18,14 +18,8 @@ player addEventHandler ["InventoryOpened", {
         !(isNull (findDisplay 602))
     }, {
         private _display = findDisplay 46 createDisplay QCLASS(inventoryFramework_ui);
+        player setVariable [QEGVAR(actions,currentParentID), ""];
         [] call EFUNC(actions,displayActions);
-
-        // Vehicle data
-        private _position = getPos player;
-        private _vehicles = [];
-        { _vehicles append (nearestObjects [_position, [_x], 5]); } forEach ["Car", "Tank", "Air", "Ship"];
-        EGVAR(common,targetVehicle) = if (count _vehicles > 0) then {_vehicles select 0} else {objNull};
-        EGVAR(common,targetVehicleType) = typeOf EGVAR(common,targetVehicle);
 
         // Populate category combo
         private _combo = _display displayCtrl 2100;
@@ -33,8 +27,8 @@ player addEventHandler ["InventoryOpened", {
         private _playerItems = (items player) + (magazines player);
         private _availableCategories = [];
         {
-            private _itemCategory = _x select 0;
-            private _itemName = _x select 1;
+            private _itemCategory = _x select 1;
+            private _itemName = _x select 0;
             if (_itemName in _playerItems && !(_itemCategory in _availableCategories)) then {
                 _availableCategories pushBack _itemCategory;
                 private _idx = _combo lbAdd _itemCategory;
@@ -89,8 +83,8 @@ player addEventHandler ["Put", {
         private _playerItems = (items player) + (magazines player);
         private _availableCategories = [];
         {
-            private _itemCategory = _x select 0;
-            private _itemName = _x select 1;
+            private _itemCategory = _x select 1;
+            private _itemName = _x select 0;
             if (_itemName in _playerItems && !(_itemCategory in _availableCategories)) then {
                 _availableCategories pushBack _itemCategory;
                 private _idx = _combo lbAdd _itemCategory;
@@ -114,8 +108,8 @@ player addEventHandler ["Take", {
         private _playerItems = (items player) + (magazines player);
         private _availableCategories = [];
         {
-            private _itemCategory = _x select 0;
-            private _itemName = _x select 1;
+            private _itemCategory = _x select 1;
+            private _itemName = _x select 0;
             if (_itemName in _playerItems && !(_itemCategory in _availableCategories)) then {
                 _availableCategories pushBack _itemCategory;
                 private _idx = _combo lbAdd _itemCategory;

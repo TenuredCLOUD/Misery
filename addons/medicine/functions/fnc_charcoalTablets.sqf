@@ -14,25 +14,6 @@
  *
 */
 
-private _MPoison = player getVariable [QEGVAR(survival,toxicity), MACRO_PLAYER_DEFAULTS_LOW];
-
-if (!hasInterface) exitWith {};
-
- if ((call EFUNC(protection,totalProtection) select 0) > 0 || (call EFUNC(protection,totalProtection) select 1) > 0) exitWith {
-    titleText ["You cannot take medicine while wearing a mask...", "PLAIN DOWN"];
-};
-
-  if (alive player) then {
-
-    playSound3D [QPATHTOEF(audio,sounds\inventory\Items\CrinklingPlastic.ogg), player, false, getPosASL player, 4, 1, 10];
-
-  player removeItem QCLASS(charcoalTablets);
-  titleText ["You take some Charcoal tablets...", "PLAIN DOWN"];
-
-  sleep 60;
-
-if (_MPoison > 0) then {
-    player setVariable [QEGVAR(survival,toxicity), MACRO_PLAYER_DEFAULTS_LOW];
-};
-
-};
+[{
+    [-0.25, "toxicity"] call EFUNC(common,addStatusModifier);
+}, [], 15] call CBA_fnc_waitAndExecute;

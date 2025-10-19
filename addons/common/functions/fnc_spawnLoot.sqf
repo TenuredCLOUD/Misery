@@ -28,6 +28,7 @@ if (_position select 2 < 2) then {
 };
 
 private _groundHolder = createVehicle ["WeaponHolderSimulated", _position, [], 0, "CAN_COLLIDE"];
+removeFromRemainsCollector [_groundHolder];
 
 if (_weaponCargo isNotEqualTo []) then {
     {

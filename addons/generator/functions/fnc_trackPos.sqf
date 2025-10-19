@@ -4,7 +4,7 @@
  * Generator Position Tracking
  *
  * Arguments:
- * None
+ * 0: Generator <OBJECT>
  *
  * Return Value:
  * None
@@ -14,20 +14,25 @@
  *
 */
 
-_Generator = _this select 0;
+params ["_generator"];
 
-_lastPos = getPosATL _Generator;
+private _lastPos = getPosATL _generator;
 
-while {true} do {
-    _currentPos = getPosATL _Generator;
+[{
+    params ["_args", "_handle"];
+    _args params ["_generator", "_lastPos"];
+
+    _currentPos = getPosATL _generator;
 
     //Check if generator is "Moving" (Base item framework of somekind? if so kill running gen)
     if (_currentPos distance _lastPos > 0.01) exitWith {
-        _Generator setVariable [QCLASS(generatorRunning), false, true];
+        _generator setVariable [QGVAR(isRunning), false, true];
+        _handle call CBA_fnc_removePerFrameHandler;
     };
 
     //Check if generator no longer exists
-    if (isNull _Generator) exitWith {
-        _Generator setVariable [QCLASS(generatorRunning), false, true];
+    if (isNull _generator) exitWith {
+        _generator setVariable [QGVAR(isRunning), false, true];
+        _handle call CBA_fnc_removePerFrameHandler;
     };
-};
+}, 0.5, [_generator, _lastPos]] call CBA_fnc_addPerFrameHandler;

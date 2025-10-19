@@ -30,6 +30,4 @@ if (currentWeapon player isNotEqualTo "") then {
 createDialog QCLASS(fishing_ui);
 
 // Hide progress bars and interactive buttons:
-{
-    findDisplay 982387 displayCtrl _x ctrlShow false;
-} forEach [1010, 1011, 1012, 1013];
+[982387, [1010, 1011, 1012, 1013], false] call EFUNC(common,displayShowControls);

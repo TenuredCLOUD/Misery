@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Chances parasites
+ * Raw meat exposure parasite chance
  *
  * Arguments:
  * None
@@ -14,23 +14,8 @@
  *
 */
 
-if (alive player) exitWith {
-
-  if ((random 100) > Miseryrawmeatchance) exitWith {
-  titleText ["You consumed some raw meat, your stomach churns ominously. \n You feel a wave of unease wash over you...", "PLAIN DOWN"]; //Needs localization
-  };
-
-  titleText ["You consumed some raw meat, your stomach churns ominously. \n You feel a wave of unease wash over you...", "PLAIN DOWN"];
-
-  player setVariable [QCLASS(rawMeatLogged), true];
-
-  _time = time + 180;
-    [_time] spawn {
-        private ["_TimeA"];
-        _TimeA=_this select 0;
-        waitUntil {(!alive player) or (time > _TimeA)};
-      player setVariable [QCLASS(rawMeatLogged), nil];
-      private _ailments = player getVariable QCLASS(ailments);
-        if (alive player) then {_ailments pushBackUnique "PARASITES"; player setVariable [QCLASS(ailments), _ailments];}; //<< sick from raw meat
-    };
+if ([EGVAR(survival,meatDiseaseChance)] call EFUNC(common,rollChance)) then {
+    [{
+        [0.01, "parasites"] call EFUNC(common,addStatusModifier);
+    }, [], 60] call CBA_fnc_waitAndExecute;
 };

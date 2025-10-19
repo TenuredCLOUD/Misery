@@ -28,8 +28,7 @@ if (_goggles in _respirators) then {
     removeGoggles player;
     player addGoggles _filteredMask;
 
-    private _cartridgeReplaceStr = format ["<t font='PuristaMedium' size='0.7'>%1</t>", "You replace the cartridges on your gasmask..."];
-    [QEGVAR(common,tileText), _cartridgeReplaceStr] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), "You replace the cartridges on your gasmask..."] call CBA_fnc_localEvent;
 
     player setVariable [GVAR(cartridgeEfficiency), MACRO_PLAYER_DEFAULTS_HIGH];
 };

@@ -19,20 +19,14 @@
 [{!isNull findDisplay 982380}, {
 private _list = findDisplay 982380 displayCtrl 1500;
 
-private _progressBar = findDisplay 982380 displayCtrl 1010;
-_progressBar ctrlShow false; // Hide progresss bar on GUI load
+[982380, [1010], false] call EFUNC(common,displayShowControls);
 
 lbClear _list;
 
     {
         private _requiredItem = _x select 0;
-        private _displayName = getText (configFile >> "CfgWeapons" >> _requiredItem >> "displayName");
-        if (_displayName isEqualTo "") then {
-            _displayName = getText (configFile >> "CfgMagazines" >> _requiredItem >> "displayName");
-        };
-        if (_displayName isEqualTo "") then {
-            _displayName = _requiredItem;
-        };
+
+        [_requiredItem] call EFUNC(common,getItemData) params ["_displayName"];
 
         private _index = _list lbAdd _displayName;
         _list lbSetData [_index, _requiredItem];

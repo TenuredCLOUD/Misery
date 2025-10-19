@@ -14,16 +14,14 @@
  *
 */
 
-if (!hasInterface) exitWith {};
-
 private _hasMatch = [[QCLASS(matches)]] call EFUNC(common,hasItem);
 private _hasLighter = [[QCLASS(lighter)]] call EFUNC(common,hasItem);
 
 if !(_hasMatch && _hasLighter) exitWith {
-    titleText ["You need a lighter or matches to smoke...", "PLAIN DOWN"];
+    [QEGVAR(common,tileText), "You need a lighter or matches to smoke..."] call CBA_fnc_localEvent;
 };
 
-titleText ["You light up a cigar...", "PLAIN DOWN"];
+[QEGVAR(common,tileText), "You light up a cigar..."] call CBA_fnc_localEvent;
 
 player removeItem QCLASS(cigar);
 
@@ -36,11 +34,11 @@ if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
 };
 
 if (_hasMatch) exitWith {
-    [QCLASS(matches), ""] call EFUNC(common,itemDecrement);
+    [QCLASS(matches)] call EFUNC(common,itemDecrement);
     playSound3D [QPATHTOEF(audio,sounds\immersion\Matchsmoking.ogg), player, false, getPosASL player, 4, 1, 10];
 };
 
 if (_hasLighter) exitWith {
-    [QCLASS(lighter), ""] call EFUNC(common,itemDecrement);
+    [QCLASS(lighter)] call EFUNC(common,itemDecrement);
     playSound3D [QPATHTOEF(audio,sounds\immersion\Lightersmoking.ogg), player, false, getPosASL player, 4, 1, 10];
 };

@@ -17,13 +17,12 @@
 
 [{!isNull findDisplay 982384}, {
     private _list = findDisplay 982384 displayCtrl 1500;
-    private _purchaseButton = findDisplay 982384 displayCtrl 1600;
 
-    if (EGVAR(common,targetVehicleType) isEqualTo "") exitWith {
-        _purchaseButton ctrlShow false;
+    [player] call EFUNC(common,nearVehicle) params ["", "_nearestVehicle"];
+
+    if (_nearestVehicle isEqualTo []) exitWith {
+        [982384, [1600], false] call EFUNC(common,displayShowControls);
     };
-
-    private _vehicleName = getText (configFile >> "CfgVehicles" >> EGVAR(common,targetVehicleType) >> "displayName");
 
     lbClear _list;
 
@@ -32,7 +31,7 @@
     private _totalLiters = 0;
 
     {
-        if ((_x select 0) isEqualTo EGVAR(common,targetVehicleType)) then {
+        if ((_x select 0) isEqualTo _nearestVehicle) then {
             _found = true;
             private _fuelTypeIndex = _x select 1;
             _fuelCost = GVAR(fuelCosts) select _fuelTypeIndex;

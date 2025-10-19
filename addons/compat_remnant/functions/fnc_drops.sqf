@@ -17,7 +17,7 @@
 addMissionEventHandler ["EntityKilled", {
 params ["_killed", "_killer"];
 if (_killed isKindOf "myst_phantom_hidden_f" || _killed isKindOf "myst_phantom_naked_f") then {
-if ((random 100) > GVAR(dropChance)) exitWith {};
+if ([GVAR(dropChance)] call EFUNC(common,rollChance)) exitWith {};
 [getPosATL _killed, [], [], [[selectRandom [MACRO_ARTIFACTS], 1]]] call EFUNC(common,spawnLoot);
 };
     }];

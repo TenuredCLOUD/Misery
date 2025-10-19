@@ -4793,20 +4793,6 @@
             <Japanese>ガイガーをオフにする</Japanese>
             <Turkish>Geiger'ı kapatın</Turkish>
         </Key>
-        <Key ID="STR_MISERY_TURNOFFHEADLAMP">
-            <English>Turn off Headlamp</English>
-            <Czech>Vypnout čelovku</Czech>
-            <French>Éteignez le phare</French>
-            <Spanish>Apaga el faro</Spanish>
-            <Italian>Spegni il faro</Italian>
-            <Polish>Wyłącz światło czołowe</Polish>
-            <Portuguese>Apague o farol</Portuguese>
-            <Russian>Выключить фару</Russian>
-            <German>Schalte den Scheinwerfer aus</German>
-            <Korean>전등을 끄십시오</Korean>
-            <Japanese>ヘッドライトをオフにする</Japanese>
-            <Turkish>Baş lambayı kapat</Turkish>
-        </Key>
         <Key ID="STR_MISERY_TURNOFFRFDETEC">
             <English>Turn off RF detector</English>
             <Czech>Vypnutí detektoru rádiových vln</Czech>
@@ -4876,34 +4862,6 @@
             <Korean>가이거를 끄면...</Korean>
             <Japanese>ガイガーを止めて...</Japanese>
             <Turkish>Geiger'ını kapat.</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_TURNONHEADLAMP">
-            <English>Turn on Headlamp</English>
-            <Czech>Zapnout čelovku</Czech>
-            <French>Allume le phare</French>
-            <Spanish>Enciende el faro</Spanish>
-            <Italian>Accendi il faro</Italian>
-            <Polish>Włącz światło czołowe</Polish>
-            <Portuguese>Acender o farol</Portuguese>
-            <Russian>Включить фару</Russian>
-            <German>Schalte den Scheinwerfer ein</German>
-            <Korean>전등을 켜십시오</Korean>
-            <Japanese>ヘッドライトをオンにする</Japanese>
-            <Turkish>Baş lambayı aç</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_TURNONHEADLAMPNOITEM">
-            <English>You don't have a Headlamp...</English>
-            <Czech>Nemáte čelovku...</Czech>
-            <French>Vous n'avez pas de lampe frontale...</French>
-            <Spanish>No tienes un faro...</Spanish>
-            <Italian>Non hai una lampada frontale...</Italian>
-            <Polish>Nie masz latarki czołowej...</Polish>
-            <Portuguese>Você não tem um farol...</Portuguese>
-            <Russian>У вас нет налобного фонаря...</Russian>
-            <German>Sie haben keine Stirnlampe...</German>
-            <Korean>헤드램프가 없습니다...</Korean>
-            <Japanese>ヘッドランプがない...</Japanese>
-            <Turkish>Farın yok...</Turkish>
         </Key>
         <Key ID="STR_MISERY_TURNONRFDETEC">
             <English>Turn on RF detector</English>
