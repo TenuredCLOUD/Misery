@@ -17,8 +17,8 @@ class CfgWeapons {
     };
 
     class CLASS(pickaxeHead): CLASS(ItemCore) {
-        displayName = "PickAxe Head";
-        descriptionShort = "the head of a pickaxe, useless without a handle";
+        displayName = "$STR_MISERY_PICKAXEHEAD_DISPLAYNAME";
+        descriptionShort = "$STR_MISERY_PICKAXEHEAD_DESCRIPTION";
         picture = QPATHTOF(data\icons\pickHead.paa);
         scope = 2;
         scopeCurator = 2;
@@ -67,8 +67,8 @@ class CfgWeapons {
     };
 
     class CLASS(lantern_NoBattery): CLASS(ItemCore) {
-        displayName = "Lantern (No battery)";
-        descriptionShort = "- Useless without batteries...";
+        displayName = "$STR_MISERY_LANTERNNOBATTERY_DISPLAYNAME";
+        descriptionShort = "STR_MISERY_LANTERNNOBATTERY_DESCRIPTION";
         picture = QPATHTOF(data\icons\lantern.paa);
         model = "a3\structures_f\civ\camping\camping_light_off_f.p3d";
         scope = 2;
@@ -130,8 +130,8 @@ class CfgWeapons {
     };
 
     class CLASS(antidote): CLASS(ItemCore) {
-        displayName = "Antidote injection";
-        descriptionShort = "- extremely efficient medical injection";
+        displayName = "$STR_MISERY_ANTIDOTE_DISPLAYNAME";
+        descriptionShort = "$STR_MISERY_ANTIDOTE_DESCRIPTION";
         picture = QPATHTOF(data\icons\antidote.paa);
         model = "a3\props_f_enoch\military\decontamination\antidotekit_01_f.p3d";
         scope = 2;
@@ -193,8 +193,8 @@ class CfgWeapons {
     };
 
     class CLASS(energyDrink): CLASS(ItemCore) {
-        displayName = "Energy drink";
-        descriptionShort = "- energy drink";
+        displayName = "$STR_MISERY_ENERGYDRINK_DISPLAYNAME";
+        descriptionShort = "$STR_MISERY_ENERGYDRINK_DESCRIPTION";
         picture = QPATHTOF(data\icons\energyDrink.paa);
         model = "a3\structures_f\items\food\can_v3_f.p3d";
         scope = 2;
@@ -206,8 +206,8 @@ class CfgWeapons {
     };
 
     class CLASS(soda_1): CLASS(ItemCore) {
-        displayName = "Soda";
-        descriptionShort = "- can of soda";
+        displayName = "$STR_MISERY_SODA_DISPLAYNAME";
+        descriptionShort = "$STR_MISERY_SODA_DESCRIPTION";
         picture = QPATHTOF(data\icons\soda_1.paa);
         model = "a3\structures_f\items\food\can_v2_f.p3d";
         scope = 2;
@@ -219,8 +219,8 @@ class CfgWeapons {
     };
 
     class CLASS(soda_2): CLASS(ItemCore) {
-        displayName = "Soda";
-        descriptionShort = "- can of soda";
+        displayName = "$STR_MISERY_SODA_DISPLAYNAME";
+        descriptionShort = "$STR_MISERY_SODA_DESCRIPTION";
         picture = QPATHTOF(data\icons\soda_2.paa);
         model = "a3\structures_f\items\food\can_v1_f.p3d";
         scope = 2;
@@ -271,8 +271,8 @@ class CfgWeapons {
     };
 
     class CLASS(cereal): CLASS(ItemCore) {
-        displayName = "Cereal";
-        descriptionShort = "- box of cereal";
+        displayName = "$STR_MISERY_CEREAL_DISPLAYNAME";
+        descriptionShort = "$STR_MISERY_CEREAL_DESCRIPTION";
         picture = QPATHTOF(data\icons\cereal.paa);
         model = "a3\structures_f_epa\items\food\cerealsbox_f.p3d";
         scope = 2;
@@ -284,8 +284,8 @@ class CfgWeapons {
     };
 
     class CLASS(orange): CLASS(ItemCore) {
-        displayName = "Orange";
-        descriptionShort = "- fruit";
+        displayName = "$STR_MISERY_ORANGE_DISPLAYNAME";
+        descriptionShort = "$STR_MISERY_ORANGE_DESCRIPTION";
         picture = QPATHTOF(data\icons\orange.paa);
         model = "a3\props_f_orange\humanitarian\supplies\orange_01_f.p3d";
         scope = 2;
@@ -297,8 +297,8 @@ class CfgWeapons {
     };
 
     class CLASS(powderedMilk): CLASS(ItemCore) {
-        displayName = "Powdered milk";
-        descriptionShort = "- packaged dry milk";
+        displayName = "$STR_MISERY_POWDEREDMILK_DISPLAYNAME";
+        descriptionShort = "$STR_MISERY_POWDEREDMILK_DESCRIPTION";
         picture = QPATHTOF(data\icons\drymilk.paa);
         model = "a3\structures_f_epa\items\food\powderedmilk_f.p3d";
         scope = 2;
@@ -310,8 +310,8 @@ class CfgWeapons {
     };
 
     class CLASS(cannedBacon): CLASS(ItemCore) {
-        displayName = "Canned bacon";
-        descriptionShort = "- canned cooked bacon";
+        displayName = "$STR_MISERY_CANNEDBACON_DISPLAYNAME";
+        descriptionShort = "$STR_MISERY_CANNEDBACON_DESCRIPTION";
         picture = QPATHTOF(data\icons\CannedBacon.paa);
         model = "a3\structures_f\items\food\tacticalbacon_f.p3d";
         scope = 2;
@@ -323,8 +323,8 @@ class CfgWeapons {
     };
 
     class CLASS(bakedBeans): CLASS(ItemCore) {
-        displayName = "Baked beans";
-        descriptionShort = "- canned baked beans";
+        displayName = "$STR_MISERY_BAKEDBEANS_DISPLAYNAME";
+        descriptionShort = "$STR_MISERY_BAKEDBEANS_DESCRIPTION";
         picture = QPATHTOF(data\icons\CannedBeans.paa);
         model = "a3\structures_f_epa\items\food\bakedbeans_f.p3d";
         scope = 2;
@@ -530,8 +530,8 @@ class CfgWeapons {
     };
 
     class CLASS(tinContainer): CLASS(ItemCore) {
-        displayName = "Tin container";
-        descriptionShort = "- camping tin for cooking";
+        displayName = "$STR_MISERY_TINCONTAINER_DISPLAYNAME";
+        descriptionShort = "$STR_MISERY_TINCONTAINER_DESCRIPTION";
         picture = QPATHTOF(data\icons\tinContainer.paa);
         model = "a3\structures_f_epa\items\vessels\tincontainer_f.p3d";
         scope = 2;
@@ -569,8 +569,8 @@ class CfgWeapons {
     };
 
     class CLASS(cookedMeat): CLASS(ItemCore) {
-        displayName = "Cooked Meat";
-        descriptionShort = "Meat that's been cooked";
+        displayName = "$STR_MISERY_COOKEDMEAT_DISPLAYNAME";
+        descriptionShort = "STR_MISERY_COOKEDMEAT_DESCRIPTION";
         picture = QPATHTOF(data\icons\cookedmeat.paa);
         model = QPATHTOF(data\models\cookedmeat.p3d);
         scope = 2;
@@ -582,8 +582,8 @@ class CfgWeapons {
     };
 
     class CLASS(rawMeat): CLASS(ItemCore) {
-        displayName = "Raw Meat";
-        descriptionShort = "Raw meat, needs to be cooked";
+        displayName = "$STR_MISERY_RAWMEAT_DISPLAYNAME";
+        descriptionShort = "$STR_MISERY_RAWMEAT_DESCRIPTION";
         picture = QPATHTOF(data\icons\rawmeat.paa);
         model = QPATHTOF(data\models\rawmeat.p3d);
         scope = 2;
@@ -1242,8 +1242,8 @@ class CfgWeapons {
     };
 
     class CLASS(oilEmpty): CLASS(ItemCore) {
-        displayName = "Engine oil";
-        descriptionShort = "empty engine oil container";
+        displayName = "$STR_MISERY_ENGINEOIL_DISPLAYNAME";
+        descriptionShort = "$STR_MISERY_ENGINEOIL_DESCRIPTION";
         picture = QPATHTOF(data\icons\CanisterDiesel.paa);
         model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
         scope = 2;
@@ -1255,8 +1255,8 @@ class CfgWeapons {
     };
 
     class CLASS(coolantEmpty): CLASS(ItemCore) {
-        displayName = "Engine coolant";
-        descriptionShort = "empty engine coolant container";
+        displayName = "$STR_MISERY_ENGINECOOLANT_DISPLAYNAME";
+        descriptionShort = "$STR_MISERY_ENGINECOOLANT_DESCRIPTION";
         picture = QPATHTOF(data\icons\CanisterWater.paa);
         model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
         scope = 2;
@@ -1268,8 +1268,8 @@ class CfgWeapons {
     };
 
     class CLASS(spareTire): CLASS(ItemCore) {
-        displayName = "Spare tire";
-        descriptionShort = "used for vehicle repairs";
+        displayName = "$STR_MISERY_SPARETIRE_DISPLAYNAME";
+        descriptionShort = "$STR_MISERY_SPARETIRE_DESCRIPTION";
         picture = QPATHTOF(data\icons\tire.paa);
         model = "a3\structures_f\civ\garbage\tyre_f.p3d";
         scope = 2;
@@ -1281,8 +1281,8 @@ class CfgWeapons {
     };
 
     class CLASS(emptyToolKit): CLASS(ItemCore) {
-        displayName = "Empty Tool kit";
-        descriptionShort = "needs parts to be of use...";
+        displayName = "$STR_MISERY_EMPTYTOOLKIT_DISPLAYNAME";
+        descriptionShort = "$STR_MISERY_EMPTYTOOLKIT_DESCRIPTION";
         model = "a3\weapons_f\items\toolkit.p3d";
         picture = QPATHTOF(data\icons\toolkit.paa);
         scope = 2;

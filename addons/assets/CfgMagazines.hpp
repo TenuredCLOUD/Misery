@@ -87,8 +87,8 @@ class CfgMagazines {
 
     class CLASS(deconKit): CLASS(FakeMagazine) {
         count = 6;
-        descriptionShort = "- military decontamination kit";
-        displayName = "Decon Kit";
+        descriptionShort = "$STR_MISERY_DECONKIT_DESCRIPTION";
+        displayName = "$STR_MISERY_DECONKIT_DISPLAYNAME";
         mass = 10;
         model = "\a3\props_f_enoch\military\decontamination\deconkit_01_f.p3d";
         picture = QPATHTOF(data\icons\deconKit.paa);
@@ -107,8 +107,8 @@ class CfgMagazines {
 
     class CLASS(potassiumIodate): CLASS(FakeMagazine) {
         count = 15;
-        descriptionShort = "Contains Anti-Radiation tablets";
-        displayName = "Potassium Iodate";
+        descriptionShort = "$STR_MISERY_POTASSIUMIODATE_DESCRIPTION";
+        displayName = "$STR_MISERY_POTASSIUMIODATE_DISPLAYNAME";
         mass = 2;
         model = "\a3\structures_f_epa\Items\Medical\VitaminBottle_F.p3d";
         picture = QPATHTOF(data\icons\potassiumiodate2.paa);
@@ -137,8 +137,8 @@ class CfgMagazines {
 
     class CLASS(matchBox): CLASS(FakeMagazine) {
         count = 20;
-        descriptionShort = "box of weathered matches";
-        displayName = "Match Box";
+        descriptionShort = "$STR_MISERY_MATCHBOX_DESCRIPTION";
+        displayName = "$STR_MISERY_MATCHBOX_DISPLAYNAME";
         mass = 1;
         model = "a3\structures_f_epa\items\tools\matches_f.p3d";
         picture = QPATHTOF(data\icons\matchBox.paa);
@@ -207,8 +207,8 @@ class CfgMagazines {
     class CLASS(lantern_On): CLASS(FakeMagazine) {
         ace_disableRepacking = 1;
         count = 100;
-        descriptionShort = "- Helps light the way in the dark...";
-        displayName = "Lantern (On)";
+        descriptionShort = "$STR_MISERY_LANTERNON_DESCRIPTION";
+        displayName = "$STR_MISERY_LANTERNON_DISPLAYNAME";
         mass = 10;
         picture = QPATHTOF(data\icons\lantern.paa);
         model = "a3\structures_f_epb\civ\camping\camping_light_f.p3d";
@@ -218,8 +218,8 @@ class CfgMagazines {
     class CLASS(lantern_Off): CLASS(FakeMagazine) {
         ace_disableRepacking = 1;
         count = 100;
-        descriptionShort = "- Equipped with batteries";
-        displayName = "Lantern (Off)";
+        descriptionShort = "$STR_MISERY_LANTERNOFF_DESCRIPTION";
+        displayName = "$STR_MISERY_LANTERNOFF_DISPLAYNAME";
         mass = 10;
         picture = QPATHTOF(data\icons\lantern.paa);
         model = "a3\structures_f\civ\camping\camping_light_off_f.p3d";
@@ -240,8 +240,8 @@ class CfgMagazines {
     class CLASS(geiger_Off): CLASS(FakeMagazine) {
         ace_disableRepacking = 1;
         scope = 2;
-        displayName = "$STR_MISERY_PERSONALGEIGEROFF_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_PERSONALGEIGEROFF_DESCRIPTION";
+        displayName = "$STR_MISERY_PERSONALGEIGEROFF_DESCRIPTION";
+        descriptionShort = "$STR_MISERY_PERSONALGEIGEROFF_DISPLAYNAME";
         picture = QPATHTOF(data\icons\personalgeigernobattery.paa);
         model = "\A3\Weapons_F\Items\minedetector.p3d";
         count = 100;
@@ -267,6 +267,17 @@ class CfgMagazines {
         mass = 200;
         model = "a3\structures_f_bootcamp\items\electronics\carbattery_01_f.p3d";
         picture = QPATHTOF(data\icons\autobatt_heavy.paa);
+        scope = 2;
+    };
+
+    // duplicate ?
+    class CLASS(matches): CLASS(FakeMagazine) {
+        count = 20;
+        descriptionShort = "$STR_MISERY_MATCHBOX_DESCRIPTION";
+        displayName = "$STR_MISERY_MATCHBOX_DISPLAYNAME";
+        mass = 3;
+        model = "a3\structures_f_epa\items\tools\matches_f.p3d";
+        picture = QPATHTOF(data\icons\matchespack.paa);
         scope = 2;
     };
 
@@ -443,8 +454,8 @@ class CfgMagazines {
 
     class CLASS(coolant): CLASS(FakeMagazine) {
         count = 20;
-        descriptionShort = "engine coolant";
-        displayName = "Coolant (5Gal / 20L)";
+        descriptionShort = "$STR_MISERY_COOLANT_DESCRIPTION";
+        displayName = "$STR_MISERY_COOLANT_DISPLAYNAME";
         mass = 120;
         model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
         picture = QPATHTOF(data\icons\canisterwater.paa);
@@ -453,8 +464,8 @@ class CfgMagazines {
 
     class CLASS(engineOil): CLASS(FakeMagazine) {
         count = 20;
-        descriptionShort = "engine oil";
-        displayName = "Engine oil (5Gal / 20L)";
+        descriptionShort = "$STR_MISERY_ENGINEOIL_DESCRIPTION";
+        displayName = "$STR_MISERY_ENGINEOIL_DISPLAYNAME";
         mass = 50;
         model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
         picture = QPATHTOF(data\icons\canisterdiesel.paa);
@@ -463,8 +474,8 @@ class CfgMagazines {
 
     class CLASS(metalFabricationKit): CLASS(FakeMagazine) {
         count = 5;
-        descriptionShort = "metal fabrication kit used for vehicle repair";
-        displayName = "Metal fabrication kit";
+        descriptionShort = "$STR_MISERY_METALFABKIT_DESCRIPTION";
+        displayName = "$STR_MISERY_METALFABKIT_DISPLAYNAME";
         mass = 150;
         model = "a3\weapons_f\items\toolkit.p3d";
         picture = QPATHTOF(data\icons\toolkit.paa);
@@ -473,8 +484,8 @@ class CfgMagazines {
 
     class CLASS(enginePartsKit): CLASS(FakeMagazine) {
         count = 10;
-        descriptionShort = "engine parts kit used for vehicle repair";
-        displayName = "Engine parts kit";
+        descriptionShort = "STR_MISERY_ENGINEPARTKIT_DESCRIPTION";
+        displayName = "$STR_MISERY_ENGINEPARTKIT_DISPLAYNAME";
         mass = 70;
         model = "a3\weapons_f\items\toolkit.p3d";
         picture = QPATHTOF(data\icons\toolkit.paa);
@@ -483,8 +494,8 @@ class CfgMagazines {
 
     class CLASS(fuelSystemKit): CLASS(FakeMagazine) {
         count = 10;
-        descriptionShort = "fuel system kit used for vehicle repair";
-        displayName = "Fuel system kit";
+        descriptionShort = "$STR_MISERY_FUELSYSTEMKIT_DESCRIPTION";
+        displayName = "$STR_MISERY_FUELSYSTEMKIT_DISPLAYNAME";
         mass = 70;
         model = "a3\weapons_f\items\toolkit.p3d";
         picture = QPATHTOF(data\icons\toolkit.paa);
@@ -493,8 +504,8 @@ class CfgMagazines {
 
     class CLASS(electronicRepairKit): CLASS(FakeMagazine) {
         count = 20;
-        descriptionShort = "electronics repair kit used for vehicle repair";
-        displayName = "Electronics repair kit";
+        descriptionShort = "$STR_MISERY_ELECREPAIRKIT_DESCRIPTION";
+        displayName = "$STR_MISERY_ELECREPAIRKIT_DISPLAYNAME";
         mass = 50;
         model = "a3\weapons_f\items\toolkit.p3d";
         picture = QPATHTOF(data\icons\toolkit.paa);
@@ -503,8 +514,8 @@ class CfgMagazines {
 
     class CLASS(glassRepairKit): CLASS(FakeMagazine) {
         count = 15;
-        descriptionShort = "glass repair kit used for vehicle repair";
-        displayName = "Glass repair kit";
+        descriptionShort = "$STR_MISERY_GLASSREPAIRKIT_DESCRIPTION";
+        displayName = "$STR_MISERY_GLASSREPAIRKIT_DISPLAYNAME";
         mass = 50;
         model = "a3\weapons_f\items\toolkit.p3d";
         picture = QPATHTOF(data\icons\toolkit.paa);
@@ -513,8 +524,8 @@ class CfgMagazines {
 
     class CLASS(tirePatchKit): CLASS(FakeMagazine) {
         count = 10;
-        descriptionShort = "tire patch kit used for vehicle repair";
-        displayName = "Tire patch kit";
+        descriptionShort = "$STR_MISERY_TIREPATCHKIT_DESCRIPTION";
+        displayName = "$STR_MISERY_TIREPATCHKIT_DISPLAYNAME";
         mass = 50;
         model = "a3\weapons_f\items\toolkit.p3d";
         picture = QPATHTOF(data\icons\toolkit.paa);
@@ -523,8 +534,8 @@ class CfgMagazines {
 
     class CLASS(trackRepairKit): CLASS(FakeMagazine) {
         count = 4;
-        descriptionShort = "track repair kit used for vehicle repair";
-        displayName = "Track repair kit";
+        descriptionShort = "$STR_MISERY_TRACKREPAIRKIT_DESCRIPTION";
+        displayName = "$STR_MISERY_TRACKREPAIRKIT_DISPLAYNAME";
         mass = 150;
         model = "a3\weapons_f\items\toolkit.p3d";
         picture = QPATHTOF(data\icons\toolkit.paa);
@@ -533,8 +544,8 @@ class CfgMagazines {
 
     class CLASS(rotorRepairKit): CLASS(FakeMagazine) {
         count = 4;
-        descriptionShort = "rotor repair kit used for aircraft repairs";
-        displayName = "Rotor repair kit";
+        descriptionShort = "$STR_MISERY_ROTORREPAIRKIT_DESCRIPTION";
+        displayName = "$STR_MISERY_ROTORREPAIRKIT_DISPLAYNAME";
         mass = 150;
         model = "a3\weapons_f\items\toolkit.p3d";
         picture = QPATHTOF(data\icons\toolkit.paa);
@@ -543,8 +554,8 @@ class CfgMagazines {
 
     class CLASS(winchRepairKit): CLASS(FakeMagazine) {
         count = 10;
-        descriptionShort = "winch repair kit used for vehicles repairs";
-        displayName = "Winch repair kit";
+        descriptionShort = "$STR_MISERY_WINCHREPAIRKIT_DESCRIPTION";
+        displayName = "$STR_MISERY_WINCHREPAIRKIT_DISPLAYNAME";
         mass = 100;
         model = "a3\weapons_f\items\toolkit.p3d";
         picture = QPATHTOF(data\icons\toolkit.paa);
@@ -553,8 +564,8 @@ class CfgMagazines {
 
     class CLASS(hydraulicRepairKit): CLASS(FakeMagazine) {
         count = 5;
-        descriptionShort = "hydraulic repair kit used for vehicles repairs";
-        displayName = "Hydraulic repair kit";
+        descriptionShort = "$STR_MISERY_HYDREPAIRKIT_DESCRIPTION";
+        displayName = "$STR_MISERY_HYDREPAIRKIT_DISPLAYNAME";
         mass = 100;
         model = "a3\weapons_f\items\toolkit.p3d";
         picture = QPATHTOF(data\icons\toolkit.paa);
@@ -563,8 +574,8 @@ class CfgMagazines {
 
     class CLASS(aerodynamicControlKit): CLASS(FakeMagazine) {
         count = 5;
-        descriptionShort = "aerodynamic controls kit used for aircraft repairs";
-        displayName = "Aerodynamic controls kit";
+        descriptionShort = "STR_MISERY_AEROCONTROLKIT_DESCRIPTION";
+        displayName = "$STR_MISERY_AEROCONTROLKIT_DISPLAYNAME";
         mass = 100;
         model = "a3\weapons_f\items\toolkit.p3d";
         picture = QPATHTOF(data\icons\toolkit.paa);
@@ -573,8 +584,8 @@ class CfgMagazines {
 
     class CLASS(transmissionRepairKit): CLASS(FakeMagazine) {
         count = 5;
-        descriptionShort = "transmission repair kit used for vehicle repairs";
-        displayName = "Transmission repair kit";
+        descriptionShort = "$STR_MISERY_TRANSREPAIRKIT_DESCRIPTION";
+        displayName = "$STR_MISERY_TRANSREPAIRKIT_DISPLAYNAME";
         mass = 100;
         model = "a3\weapons_f\items\toolkit.p3d";
         picture = QPATHTOF(data\icons\toolkit.paa);
@@ -583,8 +594,8 @@ class CfgMagazines {
 
     class CLASS(landingGearKit): CLASS(FakeMagazine) {
         count = 5;
-        descriptionShort = "landing gear kit used for aircraft repairs";
-        displayName = "Landing gear kit";
+        descriptionShort = "$STR_MISERY_LANDGEARKIT_DESCRIPTION";
+        displayName = "$STR_MISERY_LANDGEARKIT_DISPLAYNAME";
         mass = 100;
         model = "a3\weapons_f\items\toolkit.p3d";
         picture = QPATHTOF(data\icons\toolkit.paa);
@@ -593,8 +604,8 @@ class CfgMagazines {
 
     class CLASS(weaponSystemKit): CLASS(FakeMagazine) {
         count = 10;
-        descriptionShort = "weapons systems kit used for vehicle repairs";
-        displayName = "Weapon system kit";
+        descriptionShort = "$STR_MISERY_WEAPONSYSKIT_DESCRIPTION";
+        displayName = "$STR_MISERY_WEAPONSYSKIT_DISPLAYNAME";
         mass = 150;
         model = "a3\weapons_f\items\toolkit.p3d";
         picture = QPATHTOF(data\icons\toolkit.paa);
@@ -603,8 +614,8 @@ class CfgMagazines {
 
     class CLASS(countermeasureKit): CLASS(FakeMagazine) {
         count = 10;
-        descriptionShort = "counter measures kit used for vehicle repairs";
-        displayName = "Counter measure kit";
+        descriptionShort = "$STR_MISERY_COUNTMEASUREKIT_DESCRIPTION";
+        displayName = "$STR_MISERY_COUNTMEASUREKIT_DISPLAYNAME";
         mass = 100;
         model = "a3\weapons_f\items\toolkit.p3d";
         picture = QPATHTOF(data\icons\toolkit.paa);
