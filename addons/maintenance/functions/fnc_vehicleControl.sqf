@@ -93,7 +93,7 @@ player addEventHandler ["GetInMan", {
         if (_batteryLevel <= 0 && {_turretPath isNotEqualTo [-1]}) then {
             _vehicle setTurretLimits [_turretPath, 0, 0, 0, 0];
         } else {
-            _vehicle setTurretLimits [_turretPath];
+            _vehicle setTurretLimits [[0]]; // reset turret to config defaults
         };
 
         GVAR(handleTurret) = _vehicle addEventHandler ["SeatSwitched", {
@@ -107,7 +107,7 @@ player addEventHandler ["GetInMan", {
                     if (_batteryLevel <= 0) then {
                         _vehicle setTurretLimits [_turretPath, 0, 0, 0, 0];
                     } else {
-                        _vehicle setTurretLimits [_turretPath];
+                        _vehicle setTurretLimits [[0]]; // reset turret to config defaults
                     };
                 };
             } forEach [_unit1, _unit2];
