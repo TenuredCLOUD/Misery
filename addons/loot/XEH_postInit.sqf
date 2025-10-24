@@ -27,7 +27,7 @@ if (isClass (missionConfigFile >> "CfgMisery_SearchableObjects")) then {
             [_object, _objectData] call FUNC(searchObject)
         },
         "",
-        QUOTE(a3\missions_f_oldman\data\img\holdactions\holdaction_box_ca.paa),
+        QUOTE(a3\ui_f\data\igui\cfg\simpletasks\types\box_ca.paa),
         ""
     ] call EFUNC(actions,addAction);
 } else {
