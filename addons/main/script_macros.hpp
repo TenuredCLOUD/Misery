@@ -139,7 +139,7 @@
 "CUP_postel_panelak2", \
 "CUP_armchair", \
 "CUP_lobby_chair", \
-"CUP_Church_chair" \
+"CUP_Church_chair"
 
 // Artifacts
 #define MACRO_ARTIFACTS QCLASS(artifact_01), QCLASS(artifact_02), QCLASS(artifact_03), QCLASS(artifact_04), QCLASS(artifact_05), QCLASS(artifact_06), QCLASS(artifact_07), QCLASS(artifact_08), QCLASS(artifact_09), QCLASS(artifact_10)
