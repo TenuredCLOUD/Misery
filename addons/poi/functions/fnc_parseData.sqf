@@ -120,7 +120,7 @@ private _pois = missionConfigFile >> "CfgMisery_POI" >> "Areas";
             };
         } else {
             if (GVAR(activeCount) >= GVAR(maxActive)) then {continue};
-            if ([_poi select 34] call EFUNC(common,rollChance)) then {continue};
+            if ((random 100) > (_poi select 34)) then {continue};
 
             private _spawnPos = _pos;
 
@@ -256,7 +256,7 @@ private _pois = missionConfigFile >> "CfgMisery_POI" >> "Areas";
             };
         } else {
             if (GVAR(activeCount) >= GVAR(maxActive)) then {continue};
-            if ([_poi select 34] call EFUNC(common,rollChance)) then {continue};
+            if ((random 100) > (_poi select 34)) then {continue};
 
             private _spawnPos = _pos;
 
