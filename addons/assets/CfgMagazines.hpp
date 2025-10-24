@@ -387,7 +387,6 @@ class CfgMagazines {
         descriptionShort = "$STR_MISERY_COFFEEGROUNDS_DESCRIPTION";
         displayName = "$STR_MISERY_COFFEEGROUNDS_DISPLAYNAME";
         mass = 10;
-        model = QPATHTOF(data\models\coffeegrounds.p3d);
         picture = QPATHTOF(data\icons\coffeegrounds.paa);
         scope = 2;
     };
