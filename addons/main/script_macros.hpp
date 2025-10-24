@@ -118,6 +118,29 @@
 #define MACRO_FUELSTATIONS_AIR "B_Slingload_01_Fuel_F", "StorageBladder_01_fuel_forest_F", "StorageBladder_01_fuel_sand_F", "Land_Pod_Heli_Transport_04_fuel_F"
 #define MACRO_CRAFTINGSTATIONS "Land_Workbench_01_F", "Land_PortableDesk_01_olive_F"
 
+// Beds
+#define MACRO_BEDS \
+"Land_WoodenBed_01_F", \
+"Land_Sun_chair_green_F", \
+"Land_ArmChair_01_F", \
+"Land_Sleeping_bag_F", \
+"Land_Sleeping_bag_blue_F", \
+"Land_Sleeping_bag_brown_F", \
+"Land_Ground_sheet_F", \
+"Land_Ground_sheet_blue_F", \
+"Land_Ground_sheet_khaki_F", \
+"Land_Ground_sheet_OPFOR_F", \
+"Land_Ground_sheet_yellow_F", \
+"CUP_bed_big", \
+"CUP_bed_husbands", \
+"CUP_vojenska_palanda", \
+"CUP_postel_manz_kov", \
+"CUP_postel_panelak1", \
+"CUP_postel_panelak2", \
+"CUP_armchair", \
+"CUP_lobby_chair", \
+"CUP_Church_chair" \
+
 // Artifacts
 #define MACRO_ARTIFACTS QCLASS(artifact_01), QCLASS(artifact_02), QCLASS(artifact_03), QCLASS(artifact_04), QCLASS(artifact_05), QCLASS(artifact_06), QCLASS(artifact_07), QCLASS(artifact_08), QCLASS(artifact_09), QCLASS(artifact_10)
 
