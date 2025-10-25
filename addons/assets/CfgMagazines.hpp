@@ -270,17 +270,6 @@ class CfgMagazines {
         scope = 2;
     };
 
-    // duplicate ?
-    class CLASS(matches): CLASS(FakeMagazine) {
-        count = 20;
-        descriptionShort = "$STR_MISERY_MATCHBOX_DESCRIPTION";
-        displayName = "$STR_MISERY_MATCHBOX_DISPLAYNAME";
-        mass = 3;
-        model = "a3\structures_f_epa\items\tools\matches_f.p3d";
-        picture = QPATHTOF(data\icons\matchespack.paa);
-        scope = 2;
-    };
-
     class CLASS(cigarettePack): CLASS(FakeMagazine) {
         count = 20;
         descriptionShort = "$STR_MISERY_CIGARETTEPACK_DESCRIPTION";

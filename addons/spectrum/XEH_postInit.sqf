@@ -10,7 +10,7 @@
     if (isServer) then {
         call FUNC(updateDetector);
         [
-            "chemicalDetector_menu",
+            "spectrumDetector_menu",
             "Add lithium batteries to spectrum device",
             {
                 [["hgun_esd_01_dummy_F"]] call EFUNC(common,hasItem) && ([QCLASS(lithiumBattery)] call EFUNC(common,countItem) > 1)

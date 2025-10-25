@@ -17,10 +17,6 @@ if (isServer) then {
     }];
 };
 
-["CBA_settingsInitialized", {
-    [] call FUNC(loop);
-}] call CBA_fnc_addEventHandler;
-
 [
     "searchForMoney_menu",
     format ["%1 Search for money", GVAR(symbol)],
