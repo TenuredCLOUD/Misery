@@ -20,7 +20,7 @@ private _ammoList = GVAR(ballisticsMap) get _classname;
 
 {_ammoList pushBackUnique _x} forEach _unsafeAmmo;
 
-GVAR(ballisticsMap) set [_classname, _newAmmo];
+GVAR(ballisticsMap) set [_classname, _ammoList];
 
 [QUOTE(COMPONENT_BEAUTIFIED), format ["Extended unsafe ammo for (%1) with (%2)", _classname, _unsafeAmmo]] call EFUNC(common,debugMessage);
 

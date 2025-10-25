@@ -105,7 +105,7 @@ private _modelSource = [
 
             _replacementBuildings pushBack _directReplacement;
         };
-    } forEach _blackoutStuctureOverride;
+    } forEach _blackoutStructureRemove;
 
     if ((typeOf _object) in _terminateSource) then {
         _object hideObjectGlobal true;

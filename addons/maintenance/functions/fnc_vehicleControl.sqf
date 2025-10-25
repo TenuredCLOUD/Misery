@@ -90,10 +90,16 @@ player addEventHandler ["GetInMan", {
         private _turretPath = _vehicle unitTurret _unit;
         private _batteryLevel = _vehicle getVariable [QGVAR(batteryLevel), 0];
 
+        private _turretCfg = [_vehicle, _turretPath] call BIS_fnc_turretConfig;
+        private _minTurn = (getNumber (_turretCfg >> "minTurn"));
+        private _maxTurn = (getNumber (_turretCfg >> "maxTurn"));
+        private _minElev = (getNumber (_turretCfg >> "minElev"));
+        private _maxElev = (getNumber (_turretCfg >> "maxElev"));
+
         if (_batteryLevel <= 0 && {_turretPath isNotEqualTo [-1]}) then {
             _vehicle setTurretLimits [_turretPath, 0, 0, 0, 0];
         } else {
-            _vehicle setTurretLimits [[0]]; // reset turret to config defaults
+            _vehicle setTurretLimits [_turretPath, _minTurn, _maxTurn, _minElev, _maxElev];
         };
 
         GVAR(handleTurret) = _vehicle addEventHandler ["SeatSwitched", {
@@ -104,10 +110,17 @@ player addEventHandler ["GetInMan", {
             {
                 private _turretPath = _vehicle unitTurret _x;
                 if (_turretPath isNotEqualTo [-1]) then {
+
+                    private _turretCfg = [_vehicle, _turretPath] call BIS_fnc_turretConfig;
+                    private _minTurn = (getNumber (_turretCfg >> "minTurn"));
+                    private _maxTurn = (getNumber (_turretCfg >> "maxTurn"));
+                    private _minElev = (getNumber (_turretCfg >> "minElev"));
+                    private _maxElev = (getNumber (_turretCfg >> "maxElev"));
+
                     if (_batteryLevel <= 0) then {
                         _vehicle setTurretLimits [_turretPath, 0, 0, 0, 0];
                     } else {
-                        _vehicle setTurretLimits [[0]]; // reset turret to config defaults
+                        _vehicle setTurretLimits [_turretPath, _minTurn, _maxTurn, _minElev, _maxElev];
                     };
                 };
             } forEach [_unit1, _unit2];
