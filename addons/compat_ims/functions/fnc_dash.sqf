@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [] call misery_ims_fnc_dash
+ * [] call misery_compat_ims_fnc_dash
  *
 */
 
@@ -40,6 +40,6 @@
 
     [QUOTE(COMPONENT_BEAUTIFIED), "Dash Compat cycle."] call EFUNC(common,debugMessage);
 
-}, 0.1, []] call CBA_fnc_addPerFrameHandler;
+    }, 0.1, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;
 
