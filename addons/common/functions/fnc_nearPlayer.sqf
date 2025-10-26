@@ -22,4 +22,4 @@ if (!isMultiplayer) exitWith {[false, objNull]};
 private _nearestObjects = nearestObjects [_object, ["CAManBase"], _radius];
 private _players = _nearestObjects select { _x in (allPlayers - entities "HeadlessClient_F") && alive _x };
 
-[count _players > 0, if (count _players > 0) then { _players select 0 } else { objNull }]
+[_players isNotEqualTo [], if (_players isNotEqualTo []) then { _players select 0 } else { objNull }]

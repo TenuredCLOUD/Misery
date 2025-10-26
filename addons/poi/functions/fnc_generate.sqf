@@ -281,11 +281,17 @@ if (EGVAR(common,debugMode) >= 1) then {
 };
 
 if (!isNil "grad_persistence_blacklist") then {
-    private _classes = _composition select { _forEachIndex mod 3 isEqualTo 0 };
+    private _gradBlacklistClasses = [];
+    {
+        if (_forEachIndex mod 3 isEqualTo 0) then {
+            _gradBlacklistClasses pushBack _x;
+        };
+    } forEach _composition;
+
     {
         if ((grad_persistence_blacklist find (toLower _x) isEqualTo -1) && (grad_persistence_blacklist find (toUpper _x) isEqualTo -1)) then {
             [_x] call grad_persistence_fnc_blacklistClasses;
             [QUOTE(COMPONENT_BEAUTIFIED), format ["Blacklisted class %1 for GRAD persistence", _x]] call EFUNC(common,debugMessage);
         };
-    } forEach _classes;
+    } forEach _gradBlacklistClasses;
 };

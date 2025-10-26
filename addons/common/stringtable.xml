@@ -2883,7 +2883,7 @@
         </Key>
         <Key ID="STR_MISERY_FUELPUMPREQTIP">
             <English>Using a fuel pump requires: &lt;br/&gt; Automotive battery &lt;br/&gt;&lt;br/&gt; Refilling a fuel Jerrycan requirements: &lt;br/&gt; Automotive battery and Empty Fuel canister (Petrol or Diesel)</English>
-			<Czech>Požadavky pro použití palivového čerpadla: &lt;br/&gt; Autobaterie &lt;br/&gt;&lt;br/&gt; Požadavky pro naplnění palivového kanystru: &lt;br/&gt; Autobaterie a prázdný palivový kanistr (Benzínový nebo Naftový)</Czech>
+            <Czech>Požadavky pro použití palivového čerpadla: &lt;br/&gt; Autobaterie &lt;br/&gt;&lt;br/&gt; Požadavky pro naplnění palivového kanystru: &lt;br/&gt; Autobaterie a prázdný palivový kanistr (Benzínový nebo Naftový)</Czech>
         </Key>
         <Key ID="STR_MISERY_FUELSYSTEMKIT_DESCRIPTION">
             <English>fuel system kit used for vehicle repair</English>
@@ -3517,7 +3517,7 @@
         </Key>
         <Key ID="STR_MISERY_JETFUELPUMPREQTIP">
             <English>Using a Jetfuel pump requires: &lt;br/&gt; Automotive battery &lt;br/&gt; &lt;br/&gt; Refilling a Jetfuel Jerrycan requirements: &lt;br/&gt; Automotive battery and Empty Fuel canister (Jet Fuel)</English>
-			<Czech>Požadavky pro použití palivového čerpadla (Jet fuel) vyžaduje: &lt;br/&gt; Autobaterii baterii &lt;br/&gt; &lt;br/&gt; Požadavky pro naplnění kanystru (Jet fuel): &lt;br/&gt; Autobaterii a prázdný kanystr (Jet Fuel)</Czech>
+            <Czech>Požadavky pro použití palivového čerpadla (Jet fuel) vyžaduje: &lt;br/&gt; Autobaterii baterii &lt;br/&gt; &lt;br/&gt; Požadavky pro naplnění kanystru (Jet fuel): &lt;br/&gt; Autobaterii a prázdný kanystr (Jet Fuel)</Czech>
         </Key>
         <Key ID="STR_MISERY_JETFUELRU_DISPLAYNAME">
             <English>Jet Fuel Refueling station</English>
