@@ -14,6 +14,7 @@
 */
 
 private _terrainObjects = call FUNC(nearObjects);
+private _terrainHouses = call FUNC(nearHouses);
 private _replacementBuildings = [];
 
 private _blackoutStructureRemove = [
@@ -53,7 +54,8 @@ private _blackoutStructureRemove = [
     ["Land_Flush_Light_green_F"],
     ["Land_Flush_Light_yellow_F"],
     ["Land_Flush_Light_red_F"],
-    ["Land_fs_roof_F"],
+    ["Land_fs_roof_F", "Land_FuelStation_Shed_F"],
+    ["Land_fs_feed_F", "Land_FuelStation_Feed_F"],
     ["Land_spp_Tower_F", "Land_spp_Tower_ruins_F"],
     ["Land_dp_smallFactory_F"],
     //Contact DLC
@@ -72,7 +74,6 @@ private _terminateSource = [
 ];
 
 private _modelSource = [
-    "fs_sign_f.p3d",
     "runway_edgelight.p3d",
     "runway_edgelight_blue_f.p3d",
     "powlines_woodl.p3d",
@@ -88,22 +89,24 @@ private _modelSource = [
     [_object] call FUNC(damageLights);
 
     {
-        _x params ["_building", ["_replacementBuilding", objNull]];
+        _x params ["_buildingClass", ["_replacementBuilding", ""]];
 
-        _building hideObjectGlobal true;
+        if (typeOf _object isEqualTo _buildingClass) then {
+            _object hideObjectGlobal true;
 
-        if (!isNull _replacementBuilding) then {
-            private _position = getPosATL _building;
-            private _direction = getDir _building;
-            private _vectorUp = vectorUp _building;
+            if (_replacementBuilding isNotEqualTo "") then {
+                private _position = getPosATL _object;
+                private _direction = getDir _object;
+                private _vectorUp = vectorUp _object;
 
-            private _directReplacement = createVehicle [_replacementBuilding, _position, [], 0, "CAN_COLLIDE"];
-            _directReplacement setDir _direction;
-            _directReplacement setVectorUp _vectorUp;
+                private _directReplacement = createVehicle [_replacementBuilding, _position, [], 0, "CAN_COLLIDE"];
+                _directReplacement setDir _direction;
+                _directReplacement setVectorUp _vectorUp;
 
-            [_directReplacement] call FUNC(damageLights);
+                [_directReplacement] call FUNC(damageLights);
 
-            _replacementBuildings pushBack _directReplacement;
+                _replacementBuildings pushBack _directReplacement;
+            };
         };
     } forEach _blackoutStructureRemove;
 
@@ -116,6 +119,29 @@ private _modelSource = [
         _object hideObjectGlobal true;
     };
 } forEach _terrainObjects;
+
+// Extra - for house terrain objects since some fuel sign objects are stubborn & not detected by nearObjects
+{
+    private _houseObject = _x;
+    private _houseModelInfo = getModelInfo _houseObject select 0;
+
+    if (_houseModelInfo isEqualTo "fs_price_f.p3d") then {
+        _houseObject hideObjectGlobal true;
+
+        private _housePosition = getPosATL _houseObject;
+        private _houseDirection = getDir _houseObject;
+        private _houseVectorUp = vectorUp _houseObject;
+        private _houseDirectReplacement = createVehicle ["Land_FuelStation_Sign_F", _housePosition, [], 0, "CAN_COLLIDE"];
+
+        _houseDirectReplacement setDir _houseDirection;
+        _houseDirectReplacement setVectorUp _houseVectorUp;
+        _replacementBuildings pushBack _houseDirectReplacement;
+    };
+
+    if (_houseModelInfo isEqualTo "fs_sign_f.p3d") then {
+        _houseObject hideObjectGlobal true;
+    };
+} forEach _terrainHouses;
 
 if (!isNil "grad_persistence_blacklist") then {
     {
