@@ -67,8 +67,8 @@ class CfgMagazines {
 
     class CLASS(antiparasitic): CLASS(FakeMagazine) {
         count = 8;
-        descriptionShort = "$STR_MISERY_ANTIPARASITIC_DESCRIPTION";
-        displayName = "$STR_MISERY_ANTIPARASITIC_DISPLAYNAME";
+        descriptionShort = CSTRING(Antiparasitic_Description);
+        displayName = CSTRING(Antiparasitic_DisplayName);
         mass = 2;
         model = "\a3\structures_f_epa\Items\Medical\Antibiotic_F.p3d";
         picture = QPATHTOF(data\icons\antiparasites.paa);
@@ -77,8 +77,8 @@ class CfgMagazines {
 
     class CLASS(antibiotic): CLASS(FakeMagazine) {
         count = 8;
-        descriptionShort = CSTRING(Antiparasitic_Description);
-        displayName = CSTRING(Antiparasitic_DisplayName);
+        descriptionShort = CSTRING(Antibiotic_Description);
+        displayName = CSTRING(Antibiotic_DisplayName);
         mass = 2;
         model = "\a3\structures_f_epa\Items\Medical\Antibiotic_F.p3d";
         picture = QPATHTOF(data\icons\antibiotics.paa);
