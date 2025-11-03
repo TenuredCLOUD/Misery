@@ -1,0 +1,1706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Assets">
+        <Key ID="STR_MISERY_Assets_Antiparasitic_Description">
+            <English>Contains anti parasitic pills</English>
+            <Czech>Obsahuje antiparazitární pilulky</Czech>
+            <French>Contient des comprimés antiparasitaires</French>
+            <Spanish>Contiene pastillas antiparasitarias</Spanish>
+            <Italian>Contiene pillole antiparassitarie</Italian>
+            <Polish>Zawiera tabletki przeciwpasożytnicze</Polish>
+            <Portuguese>Contém comprimidos antiparasitários</Portuguese>
+            <Russian>Содержит противопаразитарные таблетки</Russian>
+            <German>Enthält Anti-Parasiten-Pillen</German>
+            <Korean>항기생충제 알약이 들어 있습니다.</Korean>
+            <Japanese>抗寄生虫剤が含まれています</Japanese>
+            <Turkish>Anti paraziter haplar içerir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_Antiparasitic_DisplayName">
+            <English>Anti parasitic package</English>
+            <Czech>Antiparazitární balení</Czech>
+            <French>Paquet antiparasitaire</French>
+            <Spanish>Paquete antiparasitario</Spanish>
+            <Italian>Confezione antiparassitaria</Italian>
+            <Polish>Opakowanie przeciwpasożytnicze</Polish>
+            <Portuguese>Pacote antiparasitário</Portuguese>
+            <Russian>Противопаразитарная упаковка</Russian>
+            <German>Anti-Parasiten-Packung</German>
+            <Korean>항기생충제 패키지</Korean>
+            <Japanese>抗寄生虫パッケージ</Japanese>
+            <Turkish>Anti paraziter paket</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_Caffeine_Description">
+            <English>Gives a boost of energy&lt;br/&gt; - Non-narcotic Stimulant</English>
+            <Czech>Dodává energii&lt;br/&gt; - Nenarkotický stimulant</Czech>
+            <French>Donne un regain d'énergie&lt;br/&gt; - Stimulant non narcotique</French>
+            <Spanish>Brinda un impulso de energía&lt;br/&gt; - Estimulante no narcótico</Spanish>
+            <Italian>Fornisce una sferzata di energia&lt;br/&gt; - Stimolanti non narcotici</Italian>
+            <Polish>Dodaje energii&lt;br/&gt; - Nienarkotyczny stymulant</Polish>
+            <Portuguese>Dá um impulso de energia&lt;br/&gt; - Estimulante não narcótico</Portuguese>
+            <Russian>Придает заряд энергии&lt;br/&gt; - Ненаркотический стимулятор</Russian>
+            <German>Verleiht Energie&lt;br/&gt; - Nicht-narkotische Stimulans</German>
+            <Korean>에너지 부스팅&lt;br/&gt; - 비마약성 각성제</Korean>
+            <Japanese>エネルギーを高めます&lt;br/&gt; -非麻薬性刺激剤</Japanese>
+            <Turkish>Enerji artışı sağlar&lt;br/&gt; - Narkotik olmayan uyarıcı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_Caffeine_DisplayName">
+            <English>Caffeine tablets</English>
+            <Czech>Tablety kofeinu</Czech>
+            <French>Comprimés de caféine</French>
+            <Spanish>Tabletas de cafeína</Spanish>
+            <Italian>Compresse di caffeina</Italian>
+            <Polish>Tabletki z kofeiną</Polish>
+            <Portuguese>Comprimidos de cafeína</Portuguese>
+            <Russian>Таблетки кофеина</Russian>
+            <German>Koffeintabletten</German>
+            <Korean>카페인 정제</Korean>
+            <Japanese>カフェイン錠</Japanese>
+            <Turkish>Kafein tabletleri</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_Caffetin_Description">
+            <English>Contains Caffetin tablets</English>
+            <Czech>Obsahuje tablety Caffetin</Czech>
+            <French>Contient des comprimés de Caffetin</French>
+            <Spanish>Contiene tabletas de Caffetin</Spanish>
+            <Italian>Contiene compresse di Caffetin</Italian>
+            <Polish>Zawiera tabletki Caffetin</Polish>
+            <Portuguese>Contém comprimidos de Caffetin</Portuguese>
+            <Russian>Содержит таблетки Caffetin</Russian>
+            <German>Enthält Caffetin-Tabletten</German>
+            <Korean>카페틴 정제 함유</Korean>
+            <Japanese>カフェチン錠が含まれています</Japanese>
+            <Turkish>Caffetin tabletleri içerir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_Caffetin_DisplayName">
+            <English>Caffetin package</English>
+            <Czech>Balení Caffetin</Czech>
+            <French>Paquet de Caffetin</French>
+            <Spanish>Paquete de Caffetin</Spanish>
+            <Italian>Confezione di Caffetin</Italian>
+            <Polish>Opakowanie Caffetin</Polish>
+            <Portuguese>Pacote de Caffetin</Portuguese>
+            <Russian>Упаковка Caffetin</Russian>
+            <German>Caffetin-Packung</German>
+            <Korean>카페틴 패키지</Korean>
+            <Japanese>カフェチンパッケージ</Japanese>
+            <Turkish>Caffetin paketi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_CenestinBottle_Description">
+            <English>Contains Cenestin pills</English>
+            <Czech>Obsahuje tablety Cenestinu</Czech>
+            <French>Contient des pilules Cenestin</French>
+            <Spanish>Contiene píldoras Cenestin</Spanish>
+            <Italian>Contiene pillole Cenestin</Italian>
+            <Polish>Zawiera tabletki Cenestin</Polish>
+            <Portuguese>Contém comprimidos de Cenestin</Portuguese>
+            <Russian>Содержит таблетки Ценестин</Russian>
+            <German>Enthält Cenestin-Pillen</German>
+            <Korean>Cenestin 알약 함유</Korean>
+            <Japanese>Cenestin錠剤が含まれています</Japanese>
+            <Turkish>Cenestin hapları içerir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_CenestinBottle_DisplayName">
+            <English>Cenestin bottle</English>
+            <Czech>Láhev Cenestinu</Czech>
+            <French>Flacon de Cenestin</French>
+            <Spanish>Botella de Cenestin</Spanish>
+            <Italian>Flacone di Cenestin</Italian>
+            <Polish>Butelka Cenestin</Polish>
+            <Portuguese>Frasco de Cenestin</Portuguese>
+            <Russian>Бутылка Ценестина</Russian>
+            <German>Cenestin Flasche</German>
+            <Korean>Cenestin 병</Korean>
+            <Japanese>Cenestinボトル</Japanese>
+            <Turkish>Cenestin şişesi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_Chainsaw_Description">
+            <English>- makes wood collection easy&lt;br/&gt; - Tool</English>
+            <Czech>- usnadňuje těžbu dřeva&lt;br/&gt; - Nářadí</Czech>
+            <French>- facilite la collecte du bois&lt;br/&gt; - Outil</French>
+            <Spanish>- facilita la recolección de madera&lt;br/&gt; - Herramienta</Spanish>
+            <Italian>- rende facile la raccolta del legno&lt;br/&gt; - Strumento</Italian>
+            <Polish>- ułatwia zbieranie drewna&lt;br/&gt; - Narzędzie</Polish>
+            <Portuguese>- facilita a coleta de madeira&lt;br/&gt; - Ferramenta</Portuguese>
+            <Russian>- облегчает сбор древесины&lt;br/&gt; - Инструмент</Russian>
+            <German>- macht das Sammeln von Holz einfach&lt;br/&gt; - Werkzeug</German>
+            <Korean>- 나무 수집이 쉬워집니다&lt;br/&gt; - 도구</Korean>
+            <Japanese>- 木材の収集が簡単になります&lt;br/&gt; - 道具</Japanese>
+            <Turkish>- odun toplamayı kolaylaştırır&lt;br/&gt; - Araç</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_Chainsaw_DisplayName">
+            <English>Chainsaw</English>
+            <Czech>Motorová pila</Czech>
+            <French>Tronçonneuse</French>
+            <Spanish>Motosierra</Spanish>
+            <Italian>Motosega</Italian>
+            <Polish>Piła łańcuchowa</Polish>
+            <Portuguese>Motosserra</Portuguese>
+            <Russian>Бензопила</Russian>
+            <German>Kettensäge</German>
+            <Korean>전기톱</Korean>
+            <Japanese>チェーンソー</Japanese>
+            <Turkish>Motorlu testere</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_CharcoalTabs_Description">
+            <English>Used to remove toxins from the body&lt;br/&gt; - Toxin removal medication</English>
+            <Czech>Používá se k odstranění toxinů z těla&lt;br/&gt; - Lék na odstranění toxinů</Czech>
+            <French>Utilisé pour éliminer les toxines du corps&lt;br/&gt; - Médicament d'élimination des toxines</French>
+            <Spanish>Se usa para eliminar toxinas del cuerpo&lt;br/&gt; - Medicamento para la eliminación de toxinas</Spanish>
+            <Italian>Usato per rimuovere le tossine dal corpo&lt;br/&gt; - Farmaco per la rimozione delle tossine</Italian>
+            <Polish>Stosowany w celu usunięcia toksyn z organizmu&lt;br/&gt; - Lek na usuwanie toksyn</Polish>
+            <Portuguese>Usado para remover toxinas do corpo&lt;br/&gt; - Medicamento para remoção de toxinas</Portuguese>
+            <Russian>Используется для выведения токсинов из организма&lt;br/&gt; - Препарат для выведения токсинов</Russian>
+            <German>Wird verwendet, um Giftstoffe aus dem Körper zu entfernen&lt;br/&gt; - Medikament zur Entfernung von Giftstoffen</German>
+            <Korean>체내 독소 제거에 사용&lt;br/&gt; - 독소 제거제</Korean>
+            <Japanese>体から毒素を取り除くために使用されます&lt;br/&gt; -毒素除去薬</Japanese>
+            <Turkish>Vücuttan toksinleri atmak için kullanılır&lt;br/&gt; - Toksin giderici ilaç</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_CharcoalTabs_DisplayName">
+            <English>Charcoal tablets</English>
+            <Czech>Tablety aktivního uhlí</Czech>
+            <French>Comprimés de charbon actif</French>
+            <Spanish>Tabletas de carbón activado</Spanish>
+            <Italian>Compresse di carbone attivo</Italian>
+            <Polish>Tabletki z węglem aktywnym</Polish>
+            <Portuguese>Comprimidos de carvão ativado</Portuguese>
+            <Russian>Таблетки активированного угля</Russian>
+            <German>Aktivkohletabletten</German>
+            <Korean>숯 정제</Korean>
+            <Japanese>木炭錠</Japanese>
+            <Turkish>Aktif kömür tabletleri</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_ClozapineBox_Description">
+            <English>Contains Clozapine pills</English>
+            <Czech>Obsahuje tablety Clozapine</Czech>
+            <French>Contient des comprimés de clozapine</French>
+            <Spanish>Contiene pastillas de clozapina</Spanish>
+            <Italian>Contiene pillole di clozapina</Italian>
+            <Polish>Zawiera tabletki Clozapine</Polish>
+            <Portuguese>Contém comprimidos de Clozapina</Portuguese>
+            <Russian>Содержит таблетки клозапина</Russian>
+            <German>Enthält Clozapin-Tabletten</German>
+            <Korean>클로자핀 알약이 들어 있습니다.</Korean>
+            <Japanese>クロザピン錠が含まれています</Japanese>
+            <Turkish>Klozapin hapları içerir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_ClozapineBox_DisplayName">
+            <English>Clozapine box</English>
+            <Czech>Krabička Clozapine</Czech>
+            <French>Boîte de clozapine</French>
+            <Spanish>Caja de clozapina</Spanish>
+            <Italian>Scatola di clozapina</Italian>
+            <Polish>Pudełko Clozapine</Polish>
+            <Portuguese>Caixa de Clozapina</Portuguese>
+            <Russian>Коробка клозапина</Russian>
+            <German>Clozapin-Schachtel</German>
+            <Korean>클로자핀 상자</Korean>
+            <Japanese>クロザピンボックス</Japanese>
+            <Turkish>Klozapin kutusu</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_DeconKit_Description">
+            <English>military decontamination kit</English>
+            <Czech>vojenská dekontaminační souprava</Czech>
+            <French>kit de décontamination militaire</French>
+            <Spanish>kit de descontaminación militar</Spanish>
+            <Italian>kit di decontaminazione militare</Italian>
+            <Polish>wojskowy zestaw do dekontaminacji</Polish>
+            <Portuguese>kit de descontaminação militar</Portuguese>
+            <Russian>военный комплект для дезактивации</Russian>
+            <German>Militärisches Dekontaminationsset</German>
+            <Korean>군용 오염 제거 키트</Korean>
+            <Japanese>軍用除染キット</Japanese>
+            <Turkish>askeri dekontaminasyon kiti</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_DeconKit_DisplayName">
+            <English>Decon Kit</English>
+            <Czech>Decon Kit</Czech>
+            <French>Kit de décontamination</French>
+            <Spanish>Decon Kit</Spanish>
+            <Italian>Kit di decomposizione</Italian>
+            <Polish>Zestaw Dekon</Polish>
+            <Portuguese>Kit de descontaminação</Portuguese>
+            <Russian>Декон комплект</Russian>
+            <German>Dekon-Set</German>
+            <Korean>디콘 키트</Korean>
+            <Japanese>デコンキット</Japanese>
+            <Turkish>Dekont Kiti</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_ERUOff_Description">
+            <English>Personal digital assistant&lt;br/&gt; - Information</English>
+            <Czech>Osobní digitální asistent&lt;br/&gt; - Informace</Czech>
+            <French>Assistant numérique personnel&lt;br/&gt; - Information</French>
+            <Spanish>Asistente digital personal&lt;br/&gt; - Información</Spanish>
+            <Italian>Assistente digitale personale&lt;br/&gt; - Informazioni</Italian>
+            <Polish>Personalny asystent cyfrowy&lt;br/&gt; - Informacje</Polish>
+            <Portuguese>Assistente digital pessoal&lt;br/&gt; - Informações</Portuguese>
+            <Russian>Персональный цифровой помощник&lt;br/&gt; - Информация</Russian>
+            <German>Personal Digital Assistant&lt;br/&gt; - Information</German>
+            <Korean>개인 정보 단말기&lt;br/&gt; - 정보</Korean>
+            <Japanese>パーソナルデジタルアシスタント&lt;br/&gt; - 情報</Japanese>
+            <Turkish>Kişisel dijital asistan&lt;br/&gt; - Bilgi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_ERUOff_DisplayName">
+            <English>ERU (OFF)</English>
+            <Czech>ERU (VYPNUTO)</Czech>
+            <French>ERU (OFF)</French>
+            <Spanish>ERU (APAGADO)</Spanish>
+            <Italian>ERU (OFF)</Italian>
+            <Polish>ERU (WYŁ.)</Polish>
+            <Portuguese>ERU (DESLIGADO)</Portuguese>
+            <Russian>КПК (ВЫКЛ)</Russian>
+            <German>ERU (AUS)</German>
+            <Korean>ERU(꺼짐)</Korean>
+            <Japanese>ERU（OFF）</Japanese>
+            <Turkish>ERU (KAPALI)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_ERU_Description">
+            <English>Personal digital assistant&lt;br/&gt; - Information</English>
+            <Czech>Osobní digitální asistent&lt;br/&gt; - Informace</Czech>
+            <French>Assistant numérique personnel&lt;br/&gt; - Information</French>
+            <Spanish>Asistente digital personal&lt;br/&gt; - Información</Spanish>
+            <Italian>Assistente digitale personale&lt;br/&gt; - Informazioni</Italian>
+            <Polish>Personalny asystent cyfrowy&lt;br/&gt; - Informacje</Polish>
+            <Portuguese>Assistente digital pessoal&lt;br/&gt; - Informações</Portuguese>
+            <Russian>Персональный цифровой помощник&lt;br/&gt; - Информация</Russian>
+            <German>Personal Digital Assistant&lt;br/&gt; - Information</German>
+            <Korean>개인 정보 단말기&lt;br/&gt; - 정보</Korean>
+            <Japanese>パーソナルデジタルアシスタント&lt;br/&gt; - 情報</Japanese>
+            <Turkish>Kişisel dijital asistan&lt;br/&gt; - Bilgi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_ERU_DisplayName">
+            <English>ERU (ON)</English>
+            <Czech>ERU (ZAPNUTO)</Czech>
+            <French>ERU (ON)</French>
+            <Spanish>ERU (ENCENDIDO)</Spanish>
+            <Italian>ERU (ON)</Italian>
+            <Polish>ERU (WŁ.)</Polish>
+            <Portuguese>ERU (LIGADO)</Portuguese>
+            <Russian>КПК (ВКЛ)</Russian>
+            <German>ERU (EIN)</German>
+            <Korean>ERU(켜짐)</Korean>
+            <Japanese>ERU（ON）</Japanese>
+            <Turkish>ERU (AÇIK)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_ElectricHandSaw_Description">
+            <English>A battery powered saw&lt;br/&gt; - Base crafting</English>
+            <Czech>Akumulátorová pila&lt;br/&gt; - Stavební nářadí</Czech>
+            <French>Une scie à batterie&lt;br/&gt; - Création de base</French>
+            <Spanish>Una sierra a batería&lt;br/&gt; - Elaboración de bases</Spanish>
+            <Italian>Una sega a batteria&lt;br/&gt; - Creazione di basi</Italian>
+            <Polish>Piła akumulatorowa&lt;br/&gt; - Tworzenie bazy</Polish>
+            <Portuguese>Uma serra elétrica&lt;br/&gt; - Criação de base</Portuguese>
+            <Russian>Пила с батарейным питанием&lt;br/&gt; - Базовое изготовление</Russian>
+            <German>Eine akkubetriebene Säge&lt;br/&gt; - Basis Handwerk</German>
+            <Korean>배터리로 작동되는 톱&lt;br/&gt; - 기지 제작</Korean>
+            <Japanese>バッテリー駆動のこぎり&lt;br/&gt; - ベースクラフト</Japanese>
+            <Turkish>Akülü testere&lt;br/&gt; - Temel işçiliği</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_ElectricHandSaw_DisplayName">
+            <English>Electric Hand saw</English>
+            <Czech>Elektrická ruční pila</Czech>
+            <French>Scie à main électrique</French>
+            <Spanish>Sierra de mano eléctrica</Spanish>
+            <Italian>Sega elettrica a mano</Italian>
+            <Polish>Piła ręczna elektryczna</Polish>
+            <Portuguese>Serra elétrica manual</Portuguese>
+            <Russian>Электрическая ручная пила</Russian>
+            <German>Elektrische Handsäge</German>
+            <Korean>전기 핸드 톱</Korean>
+            <Japanese>電動ハンドソー</Japanese>
+            <Turkish>Elektrikli El Testeresi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_GeigerOff_DisplayName">
+            <English>Personal Geiger Counter (OFF)</English>
+            <Czech>Osobní Geigerův počítač (VYPNUTO)</Czech>
+            <French>Compteur Geiger personnel (ÉTEINT)</French>
+            <Spanish>Contador Geiger personal (APAGADO)</Spanish>
+            <Italian>Contatore Geiger personale (SPENTO)</Italian>
+            <Polish>Osobisty licznik Geigera (WYŁĄCZONY)</Polish>
+            <Portuguese>Contador Geiger pessoal (DESLIGADO)</Portuguese>
+            <Russian>Личный счетчик Гейгера (ВЫКЛ)</Russian>
+            <German>Persönliches Geigerzähler (AUS)</German>
+            <Korean>개인용 가이거 계수기(OFF)</Korean>
+            <Japanese>個人用ガイガーカウンター（OFF）</Japanese>
+            <Turkish>Kişisel Geiger Sayacı (KAPALI)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_GeigerOn_DisplayName">
+            <English>Personal Geiger Counter (ON)</English>
+            <Czech>Osobní Geigerův počítač (ZAPNUTO)</Czech>
+            <French>Compteur Geiger personnel (ALLUMÉ)</French>
+            <Spanish>Contador Geiger personal (ENCENDIDO)</Spanish>
+            <Italian>Contatore Geiger personale (ACCESO)</Italian>
+            <Polish>Osobisty licznik Geigera (WŁĄCZONY)</Polish>
+            <Portuguese>Contador Geiger pessoal (LIGADO)</Portuguese>
+            <Russian>Личный счетчик Гейгера (ВКЛ)</Russian>
+            <German>Persönliches Geigerzähler (EIN)</German>
+            <Korean>개인용 가이거 계수기(ON)</Korean>
+            <Japanese>個人用ガイガーカウンター（ON）</Japanese>
+            <Turkish>Kişisel Geiger Sayacı (AÇIK)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_Geiger_Description">
+            <English>Used to detect radiation on the body</English>
+            <Czech>Používá se k detekci radiace na těle</Czech>
+            <French>Utilisé pour détecter les radiations sur le corps</French>
+            <Spanish>Se utiliza para detectar la radiación en el cuerpo</Spanish>
+            <Italian>Utilizzato per rilevare le radiazioni sul corpo</Italian>
+            <Polish>Służy do wykrywania promieniowania na ciele</Polish>
+            <Portuguese>Usado para detectar radiação no corpo</Portuguese>
+            <Russian>Используется для обнаружения радиации на теле</Russian>
+            <German>Wird verwendet, um Strahlung am Körper zu erkennen</German>
+            <Korean>신체의 방사능을 감지하는 데 사용됩니다.</Korean>
+            <Japanese>体内の放射線を検出するために使用されます</Japanese>
+            <Turkish>Vücuttaki radyasyonu tespit etmek için kullanılır</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_LanternOff_Description">
+            <English>Equipped with batteries</English>
+            <Czech>Vybaveno bateriemi</Czech>
+            <French>Equipé de piles</French>
+            <Spanish>Equipado con baterías</Spanish>
+            <Italian>Dotato di batterie</Italian>
+            <Polish>Wyposażony w baterie</Polish>
+            <Portuguese>Equipado com baterias</Portuguese>
+            <Russian>Оснащен аккумуляторами</Russian>
+            <German>Ausgestattet mit Batterien</German>
+            <Korean>배터리 장착</Korean>
+            <Japanese>電池を搭載</Japanese>
+            <Turkish>Pillerle donatılmıştır</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_LanternOff_DisplayName">
+            <English>Lantern (Off)</English>
+            <Czech>Lucerna (vypnuto)</Czech>
+            <French>Lanterne (éteinte)</French>
+            <Spanish>Linterna (apagada)</Spanish>
+            <Italian>Lanterna (spenta)</Italian>
+            <Polish>Latarnia (wyłączona)</Polish>
+            <Portuguese>Lanterna (desligada)</Portuguese>
+            <Russian>Фонарь (Выкл.)</Russian>
+            <German>Laterne (Aus)</German>
+            <Korean>랜턴(끄기)</Korean>
+            <Japanese>ランタン（オフ）</Japanese>
+            <Turkish>Fener (Kapalı)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_LanternOn_Description">
+            <English>Helps light the way in the dark...</English>
+            <Czech>Pomáhá osvětlit cestu ve tmě...</Czech>
+            <French>Aide à éclairer le chemin dans l'obscurité...</French>
+            <Spanish>Ayuda a iluminar el camino en la oscuridad...</Spanish>
+            <Italian>Aiuta a illuminare la strada nell'oscurità...</Italian>
+            <Polish>Pomaga oświetlić drogę w ciemności...</Polish>
+            <Portuguese>Ajuda a iluminar o caminho no escuro...</Portuguese>
+            <Russian>Помогает осветить путь в темноте...</Russian>
+            <German>Hilft, den Weg im Dunkeln zu erhellen...</German>
+            <Korean>어둠 속에서 길을 밝히는 데 도움이 됩니다...</Korean>
+            <Japanese>暗闇で道を照らすのに役立ちます...</Japanese>
+            <Turkish>Karanlıkta yolu aydınlatmaya yardımcı olur...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_LanternOn_DisplayName">
+            <English>Lantern (On)</English>
+            <Czech>Lucerna (zapnutá)</Czech>
+            <French>Lanterne (Allumée)</French>
+            <Spanish>Linterna (encendida)</Spanish>
+            <Italian>Lanterna (accesa)</Italian>
+            <Polish>Latarnia (włączona)</Polish>
+            <Portuguese>Lanterna (ligada)</Portuguese>
+            <Russian>Фонарь (Вкл.)</Russian>
+            <German>Laterne (Ein)</German>
+            <Korean>랜턴(켜짐)</Korean>
+            <Japanese>ランタン（オン）</Japanese>
+            <Turkish>Fener (Açık)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_Lighter_Description">
+            <English>Old lighter...&lt;br/&gt; - Fire crafting</English>
+            <Czech>Starý zapalovač...&lt;br/&gt; - Rozdělávání ohně</Czech>
+            <French>Vieux briquet...&lt;br/&gt; - Création de feu</French>
+            <Spanish>Encendedor viejo...&lt;br/&gt; - Encendido de fuego</Spanish>
+            <Italian>Vecchio accendino...&lt;br/&gt; - Accensione del fuoco</Italian>
+            <Polish>Stara zapalniczka...&lt;br/&gt; - Rozpalanie ognia</Polish>
+            <Portuguese>Isqueiro velho...&lt;br/&gt; - Artesanato de fogo</Portuguese>
+            <Russian>Старая зажигалка...&lt;br/&gt; - Разведение огня</Russian>
+            <German>Altes Feuerzeug...&lt;br/&gt; - Feuer machen</German>
+            <Korean>오래된 라이터...&lt;br/&gt; - 불 제작</Korean>
+            <Japanese>古いライター...&lt;br/&gt; - 火起こし</Japanese>
+            <Turkish>Eski çakmak...&lt;br/&gt; - Ateş yakma</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_Lighter_DisplayName">
+            <English>Lighter</English>
+            <Czech>Zapalovač</Czech>
+            <French>Briquet</French>
+            <Spanish>Encendedor</Spanish>
+            <Italian>Accendino</Italian>
+            <Polish>Zapalniczka</Polish>
+            <Portuguese>Isqueiro</Portuguese>
+            <Russian>Зажигалка</Russian>
+            <German>Feuerzeug</German>
+            <Korean>라이터</Korean>
+            <Japanese>ライター</Japanese>
+            <Turkish>Çakmak</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_MatchBox_Description">
+            <English>box of weathered matches</English>
+            <Czech>krabička zvětralých zápalek</Czech>
+            <French>boîte d'allumettes patinées</French>
+            <Spanish>caja de cerillas desgastadas</Spanish>
+            <Italian>scatola di fiammiferi stagionati</Italian>
+            <Polish>pudełko zwietrzałych zapałek</Polish>
+            <Portuguese>caixa de fósforos desgastados</Portuguese>
+            <Russian>коробок обветренных спичек</Russian>
+            <German>Schachtel mit verwitterten Streichhölzern</German>
+            <Korean>풍화된 성냥 상자</Korean>
+            <Japanese>風化したマッチの箱</Japanese>
+            <Turkish>yıpranmış kibrit kutusu</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_MatchBox_DisplayName">
+            <English>Match Box</English>
+            <Czech>Match Box</Czech>
+            <French>Boîte d'allumettes</French>
+            <Spanish>Caja de cerillas</Spanish>
+            <Italian>Scatola di fiammiferi</Italian>
+            <Polish>Pudełko zapałek</Polish>
+            <Portuguese>Caixa de fósforos</Portuguese>
+            <Russian>Спичечный коробок</Russian>
+            <German>Streichholzschachtel</German>
+            <Korean>성냥갑</Korean>
+            <Japanese>マッチ箱</Japanese>
+            <Turkish>Kibrit Kutusu</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_Pain_Description">
+            <English>Contains pain pills</English>
+            <Czech>Obsahuje léky proti bolesti</Czech>
+            <French>Contient des comprimés contre la douleur</French>
+            <Spanish>Contiene pastillas para el dolor</Spanish>
+            <Italian>Contiene antidolorifici</Italian>
+            <Polish>Zawiera tabletki przeciwbólowe</Polish>
+            <Portuguese>Contém comprimidos para dor</Portuguese>
+            <Russian>Содержит обезболивающие таблетки</Russian>
+            <German>Enthält Schmerzmittel</German>
+            <Korean>진통제 함유</Korean>
+            <Japanese>鎮痛剤が含まれています</Japanese>
+            <Turkish>Ağrı kesici hapları içerir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_Pain_DisplayName">
+            <English>Pain pills</English>
+            <Czech>Léky proti bolesti</Czech>
+            <French>Comprimés contre la douleur</French>
+            <Spanish>Pastillas para el dolor</Spanish>
+            <Italian>Antidolorifici</Italian>
+            <Polish>Tabletki przeciwbólowe</Polish>
+            <Portuguese>Comprimidos para dor</Portuguese>
+            <Russian>Обезболивающие таблетки</Russian>
+            <German>Schmerzmittel</German>
+            <Korean>진통제</Korean>
+            <Japanese>鎮痛剤</Japanese>
+            <Turkish>Ağrı kesici haplar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_Pickaxe_Description">
+            <English>Used for mining ore, looks rough...&lt;br/&gt; - Mining item</English>
+            <Czech>Používá se k těžbě rudy, vypadá drsně...&lt;br/&gt; - Těžební nářadí</Czech>
+            <French>Utilisé pour l'extraction de minerais, il a l'air brut...</French>
+            <Spanish>Se utiliza para la extracción de mineral, parece áspero...</Spanish>
+            <Italian>Utilizzato per l'estrazione di minerali, sembra...</Italian>
+            <Polish>Używany do wydobywania rudy, wygląda...</Polish>
+            <Portuguese>Utilizado para a extração de minério, tem um aspeto rugoso...</Portuguese>
+            <Russian>Используется для добычи руды, выглядит грубо...</Russian>
+            <German>Wird für den Erzabbau verwendet, sieht grob aus...</German>
+            <Korean>광석 채굴에 사용되며 거칠어 보입니다...</Korean>
+            <Japanese>鉱石を採掘するために使用され、粗く見える...</Japanese>
+            <Turkish>Maden cevheri çıkarmak için kullanılır, kaba görünür...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_Pickaxe_DisplayName">
+            <English>Shoddy Pickaxe</English>
+            <Czech>Nekvalitní krumpáč</Czech>
+            <French>Pioches de pacotille</French>
+            <Spanish>Piqueta de mala calidad</Spanish>
+            <Italian>Piccone scadente</Italian>
+            <Polish>Tandetny kilof</Polish>
+            <Portuguese>Picareta de má qualidade</Portuguese>
+            <Russian>Некачественная кирка</Russian>
+            <German>Schlampige Spitzhacke</German>
+            <Korean>조잡한 곡괭이</Korean>
+            <Japanese>粗末なつるはし</Japanese>
+            <Turkish>Kalitesiz Kazma</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_PotassiumIodate_Description">
+            <English>Contains Anti-Radiation tablets</English>
+            <Czech>Obsahuje antiradiační tablety</Czech>
+            <French>Contient des comprimés anti-radiations</French>
+            <Spanish>Contiene tabletas antirradiación.</Spanish>
+            <Italian>Contiene compresse anti-radiazioni</Italian>
+            <Polish>Zawiera tabletki antyradiacyjne</Polish>
+            <Portuguese>Contém comprimidos anti-radiação</Portuguese>
+            <Russian>Содержит противорадиационные таблетки.</Russian>
+            <German>Enthält Anti-Strahlen-Tabletten</German>
+            <Korean>방사선 방지 정제가 포함되어 있습니다.</Korean>
+            <Japanese>抗放射線錠剤が含まれています</Japanese>
+            <Turkish>Anti-Radyasyon tabletleri içerir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_PotassiumIodate_DisplayName">
+            <English>Potassium Iodate</English>
+            <Czech>Jodičnan draselný</Czech>
+            <French>Iodate de potassium</French>
+            <Spanish>Yodato de potasio</Spanish>
+            <Italian>Iodato di potassio</Italian>
+            <Polish>Jodan potasu</Polish>
+            <Portuguese>Iodato de Potássio</Portuguese>
+            <Russian>Йодат калия</Russian>
+            <German>Kaliumjodat</German>
+            <Korean>요오드산칼륨</Korean>
+            <Japanese>ヨウ素酸カリウム</Japanese>
+            <Turkish>Potasyum İyodat</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_SawFuel_Description">
+            <English>Can of 2 stroke fuel&lt;br/&gt; - Fuel item</English>
+            <Czech>Plechovka paliva pro dvoutaktní motory&lt;br/&gt; - Palivový předmět</Czech>
+            <French>Bidon de carburant 2 temps&lt;br/&gt; - Objet carburant</French>
+            <Spanish>Lata de combustible de 2 tiempos&lt;br/&gt; - Objeto de combustible</Spanish>
+            <Italian>Lattina di carburante a 2 tempi&lt;br/&gt; - Oggetto carburante</Italian>
+            <Polish>Puszka paliwa 2-suwowego&lt;br/&gt; - Przedmiot paliwowy</Polish>
+            <Portuguese>Lata de combustível de 2 tempos&lt;br/&gt; - Item de combustível</Portuguese>
+            <Russian>Банка двухтактного топлива&lt;br/&gt; - Топливный предмет</Russian>
+            <German>Dose 2-Takt-Kraftstoff&lt;br/&gt; - Kraftstoffgegenstand</German>
+            <Korean>2행정 연료 캔&lt;br/&gt; - 연료 아이템</Korean>
+            <Japanese>2ストローク燃料缶&lt;br/&gt; - 燃料アイテム</Japanese>
+            <Turkish>2 zamanlı yakıt kutusu&lt;br/&gt; - Yakıt maddesi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_SawFuel_DisplayName">
+            <English>Saw fuel</English>
+            <Czech>Palivo pro motorové pily</Czech>
+            <French>Carburant pour tronçonneuse</French>
+            <Spanish>Combustible para motosierras</Spanish>
+            <Italian>Carburante per motoseghe</Italian>
+            <Polish>Paliwo do piły łańcuchowej</Polish>
+            <Portuguese>Combustível para motosserra</Portuguese>
+            <Russian>Топливо для бензопил</Russian>
+            <German>Sägenkraftstoff</German>
+            <Korean>톱 연료</Korean>
+            <Japanese>チェーンソー燃料</Japanese>
+            <Turkish>Motorlu testere yakıtı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_SleepPack_Description">
+            <English>Contains sleeping pills</English>
+            <Czech>Obsahuje prášky na spaní</Czech>
+            <French>Contient des somnifères</French>
+            <Spanish>Contiene pastillas para dormir</Spanish>
+            <Italian>Contiene sonniferi</Italian>
+            <Polish>Zawiera tabletki nasenne</Polish>
+            <Portuguese>Contém comprimidos para dormir</Portuguese>
+            <Russian>Содержит снотворное</Russian>
+            <German>Enthält Schlaftabletten</German>
+            <Korean>수면제가 들어 있습니다.</Korean>
+            <Japanese>睡眠薬が含まれています</Japanese>
+            <Turkish>Uyku hapı içerir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_SleepPack_DisplayName">
+            <English>Sleeping pills package</English>
+            <Czech>Balení prášků na spaní</Czech>
+            <French>Paquet de somnifères</French>
+            <Spanish>Paquete de pastillas para dormir</Spanish>
+            <Italian>Confezione di sonniferi</Italian>
+            <Polish>Opakowanie tabletek nasennych</Polish>
+            <Portuguese>Pacote de comprimidos para dormir</Portuguese>
+            <Russian>Упаковка снотворного</Russian>
+            <German>Schlaftabletten-Packung</German>
+            <Korean>수면제 패키지</Korean>
+            <Japanese>睡眠薬のパッケージ</Japanese>
+            <Turkish>Uyku hapı paketi</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_2x4_DisplayName">
+            <English>2x4</English>
+            <Czech>2x4</Czech>
+            <French>2x4</French>
+            <Spanish>2x4</Spanish>
+            <Italian>2x4</Italian>
+            <Polish>2x4</Polish>
+            <Portuguese>2x4</Portuguese>
+            <Russian>2х4</Russian>
+            <German>2x4</German>
+            <Korean>2x4</Korean>
+            <Japanese>2x4</Japanese>
+            <Turkish>2x4</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_2x8_DisplayName">
+            <English>2x8</English>
+            <Czech>2x8</Czech>
+            <French>2x8</French>
+            <Spanish>2x8</Spanish>
+            <Italian>2x8</Italian>
+            <Polish>2x8</Polish>
+            <Portuguese>2x8</Portuguese>
+            <Russian>2х8</Russian>
+            <German>2x8</German>
+            <Korean>2x8</Korean>
+            <Japanese>2x8</Japanese>
+            <Turkish>2x8</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_AerodynamicControlKit_Description">
+            <English>aerodynamic controls kit used for aircraft repairs</English>
+            <Czech>sada aerodynamického ovládání používaná při opravách letadel</Czech>
+            <French>kit de commandes aérodynamiques utilisé pour les réparations d'avions</French>
+            <Spanish>kit de controles aerodinámicos utilizado para reparaciones de aviones</Spanish>
+            <Italian>kit controlli aerodinamici utilizzato per le riparazioni degli aerei</Italian>
+            <Polish>zestaw kontroli aerodynamicznej stosowany przy naprawach samolotów</Polish>
+            <Portuguese>kit de controles aerodinâmicos usado para reparos de aeronaves</Portuguese>
+            <Russian>комплект аэродинамического управления, используемый при ремонте самолетов</Russian>
+            <German>aerodynamisches Steuerungsset für Flugzeugreparaturen</German>
+            <Korean>항공기 수리에 사용되는 공기 역학적 제어 키트</Korean>
+            <Japanese>航空機の修理に使用される空力制御キット</Japanese>
+            <Turkish>Uçak onarımlarında kullanılan aerodinamik kontrol kiti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_AerodynamicControlKit_DisplayName">
+            <English>Aerodynamic controls kit</English>
+            <Czech>Sada aerodynamického ovládání</Czech>
+            <French>Kit de commandes aérodynamiques</French>
+            <Spanish>Kit de controles aerodinámicos</Spanish>
+            <Italian>Kit controlli aerodinamici</Italian>
+            <Polish>Zestaw kontroli aerodynamicznej</Polish>
+            <Portuguese>Kit de controles aerodinâmicos</Portuguese>
+            <Russian>Комплект аэродинамического управления</Russian>
+            <German>Aerodynamisches Steuerungsset</German>
+            <Korean>공기역학적 제어 키트</Korean>
+            <Japanese>空力コントロールキット</Japanese>
+            <Turkish>Aerodinamik kontrol kiti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_Anvil_DisplayName">
+            <English>Smithing Anvil</English>
+            <Czech>Kovářská kovadlina</Czech>
+            <French>Enclume de forge</French>
+            <Spanish>Yunque de herrería</Spanish>
+            <Italian>Incudine da fabbro</Italian>
+            <Polish>Kowadło kowalskie</Polish>
+            <Portuguese>Bigorna de ferreiro</Portuguese>
+            <Russian>Кузнечный горн</Russian>
+            <German>Schmiedeamboss</German>
+            <Korean>대장장이 모루</Korean>
+            <Japanese>鍛冶屋の金床</Japanese>
+            <Turkish>Demirci Örsü</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_AutoBatteryHeavy_Description">
+            <English>An old 8D Deep cycle Automotive battery. Very heavy... &lt;br/&gt; - Refueling item &lt;br/&gt; - Crafting item</English>
+            <Czech>Stará autobaterie 8D s hlubokým cyklem. Velmi těžká... &lt;br/&gt; - Položka pro doplňování paliva &lt;br/&gt; - Předmět pro výrobu</Czech>
+            <French>Une vieille batterie automobile 8D à décharge profonde. Très lourde... &lt;br/&gt; - Objet de ravitaillement &lt;br/&gt; - Objet d'artisanat</French>
+            <Spanish>Una vieja batería de automoción de ciclo profundo 8D. Muy pesada... &lt;br/&gt; - Objeto de repostaje &lt;br/&gt; - Objeto de artesanía</Spanish>
+            <Italian>Una vecchia batteria automobilistica a ciclo profondo 8D. Molto pesante... &lt;br/&gt; - Oggetto per il rifornimento di carburante</Italian>
+            <Polish>Stary akumulator samochodowy o głębokim cyklu 8D. Bardzo ciężki... &lt;br/&gt; - Przedmiot do tankowania &lt;br/&gt; - Przedmiot do craftingu</Polish>
+            <Portuguese>Uma bateria automotiva antiga de ciclo profundo 8D. Muito pesada... &lt;br/&gt; - Item de reabastecimento &lt;br/&gt; - Item de artesanato</Portuguese>
+            <Russian>Старый автомобильный аккумулятор глубокого цикла 8D. Очень тяжелый... &lt;br/&gt; - предмет для заправки &lt;br/&gt; - предмет для крафтинга</Russian>
+            <German>Eine alte 8D Deep Cycle Automotive Batterie. Sehr schwer... &lt;br/&gt; - Gegenstand zum Tanken &lt;br/&gt; - Gegenstand zum Basteln</German>
+            <Korean>오래된 8D 딥 사이클 자동차 배터리입니다. 매우 무겁습니다... &lt;br/&gt; - 연료 보급 아이템 &lt;br/&gt; - 제작 아이템</Korean>
+            <Japanese>古い8Dディープサイクル自動車用バッテリーです。とても重い... &lt;br/&gt; - 給油アイテム &lt;br/&gt; - クラフトアイテム</Japanese>
+            <Turkish>Eski bir 8D Derin Döngü Otomotiv aküsü. Çok ağır... &lt;br/&gt; - Yakıt ikmali eşyası &lt;br/&gt; - Üretim eşyası</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_AutoBatteryHeavy_DisplayName">
+            <English>Automotive Battery (Heavy Duty)</English>
+            <Czech>Autobaterie (Heavy Duty)</Czech>
+            <French>Batterie automobile (usage intensif)</French>
+            <Spanish>Batería de automóvil (Heavy Duty)</Spanish>
+            <Italian>Batteria per autoveicoli (per impieghi gravosi)</Italian>
+            <Polish>Akumulator samochodowy (Heavy Duty)</Polish>
+            <Portuguese>Bateria automotiva (serviço pesado)</Portuguese>
+            <Russian>Автомобильный аккумулятор (сверхмощный)</Russian>
+            <German>Autobatterie (Hochleistungsbatterie)</German>
+            <Korean>자동차 배터리(헤비 듀티)</Korean>
+            <Japanese>自動車用バッテリー（重負荷）</Japanese>
+            <Turkish>Otomotiv Aküsü (Ağır Hizmet Tipi)</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_AutoBattery_Description">
+            <English>An old Automotive battery... &lt;br/&gt; - Refueling item &lt;br/&gt; - Crafting item</English>
+            <Czech>Stará autobaterie... &lt;br/&gt; - Předmět pro doplnění paliva&lt;br/&gt; - Předmět pro výrobu</Czech>
+            <French>Une vieille batterie automobile... &lt;br/&gt; - Objet de ravitaillement&lt;br/&gt; - Objet d'artisanat</French>
+            <Spanish>Una batería de automóvil vieja... &lt;br/&gt; - Artículo de repostaje&lt;br/&gt; - Artículo de fabricación</Spanish>
+            <Italian>Una vecchia batteria per auto... &lt;br/&gt; - Oggetto per il rifornimento&lt;br/&gt; - Oggetto per la creazione</Italian>
+            <Polish>Stary akumulator samochodowy... &lt;br/&gt; - Przedmiot do tankowania&lt;br/&gt; - Przedmiot do tworzenia</Polish>
+            <Portuguese>Uma bateria automotiva antiga... &lt;br/&gt; - Item de reabastecimento&lt;br/&gt; - Item de criação</Portuguese>
+            <Russian>Старый автомобильный аккумулятор... &lt;br/&gt; - Предмет для заправки&lt;br/&gt; - Предмет для крафта</Russian>
+            <German>Eine alte Autobatterie... &lt;br/&gt; - Tankgegenstand&lt;br/&gt; - Bastelgegenstand</German>
+            <Korean>오래된 자동차 배터리... &lt;br/&gt; - 급유 아이템&lt;br/&gt; - 제작 아이템</Korean>
+            <Japanese>古い自動車用バッテリー... &lt;br/&gt; - 給油アイテム&lt;br/&gt; - クラフトアイテム</Japanese>
+            <Turkish>Eski bir Otomotiv aküsü... &lt;br/&gt; - Yakıt ikmali öğesi&lt;br/&gt; - Üretim öğesi</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_AutoBattery_DisplayName">
+            <English>Automotive Battery</English>
+            <Czech>Autobaterie</Czech>
+            <French>Batterie automobile</French>
+            <Spanish>Batería de automóvil</Spanish>
+            <Italian>Batteria per auto</Italian>
+            <Polish>Akumulator samochodowy</Polish>
+            <Portuguese>Bateria Automotiva</Portuguese>
+            <Russian>Автомобильный аккумулятор</Russian>
+            <German>Autobatterie</German>
+            <Korean>자동차 배터리</Korean>
+            <Japanese>自動車用バッテリー</Japanese>
+            <Turkish>Otomotiv Aküsü</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_CanteenClean_Description">
+            <English>This canteen is filled with boiled water. It's free from biological contaminants, but might still contain radiation</English>
+            <Czech>Tato čutora je naplněna převařenou vodou. Neobsahuje biologické kontaminanty, ale může obsahovat radiaci</Czech>
+            <French>Cette gourde est remplie d'eau bouillie. Elle est exempte de contaminants biologiques, mais peut encore contenir des radiations</French>
+            <Spanish>Esta cantimplora está llena de agua hervida. Está libre de contaminantes biológicos, pero aún puede contener radiación</Spanish>
+            <Polish>Ta manierka jest wypełniona przegotowaną wodą. Jest wolna od zanieczyszczeń biologicznych, ale może zawierać promieniowanie</Polish>
+            <Portuguese>Este cantil está cheio de água fervida. Ela está livre de contaminantes biológicos, mas ainda pode conter radiação</Portuguese>
+            <Russian>Эта фляга наполнена кипяченой водой. Она не содержит биологических загрязнений, но может содержать радиацию</Russian>
+            <German>Diese Feldflasche ist mit abgekochtem Wasser gefüllt. Es ist frei von biologischen Verunreinigungen, kann aber noch Strahlung enthalten</German>
+            <Korean>이 수통은 끓인 물로 채워져 있습니다. 생물학적 오염 물질은 없지만 방사능이 포함되어 있을 수 있습니다</Korean>
+            <Japanese>この水筒には沸騰したお湯が入っている。生物学的汚染はないが、放射能が含まれている可能性がある。</Japanese>
+            <Turkish>Bu matara kaynamış suyla dolu. Biyolojik kirleticilerden arındırılmış ama yine de radyasyon içerebilir</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_CanteenClean_DisplayName">
+            <English>Canteen (Clean)</English>
+            <Czech>Čutora (čistá)</Czech>
+            <French>Cantine (propre)</French>
+            <Spanish>Cantina (limpia)</Spanish>
+            <Italian>Mensa (pulita)</Italian>
+            <Polish>Kantyna (czysta)</Polish>
+            <Portuguese>Cantina (limpa)</Portuguese>
+            <Russian>Столовая (чистая)</Russian>
+            <German>Kantine (sauber)</German>
+            <Korean>매점 (클린)</Korean>
+            <Japanese>社員食堂（清潔）</Japanese>
+            <Turkish>Kantin (Temiz)</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_CanteenDirty_Description">
+            <English>This canteen contains water straight from the environment, it has a foul strong odor...</English>
+            <Czech>Tato čutora obsahuje vodu přímo z přírody, má nepříjemný silný zápach...</Czech>
+            <French>Cette gourde contient de l'eau provenant directement de l'environnement, elle a une odeur forte et nauséabonde...</French>
+            <Spanish>Esta cantimplora contiene agua directamente del medio ambiente, tiene un olor fétido y fuerte...</Spanish>
+            <Polish>Ta manierka zawiera wodę prosto ze środowiska, ma nieprzyjemny, silny zapach...</Polish>
+            <Portuguese>Esse cantil contém água diretamente do meio ambiente, tem um odor forte e desagradável...</Portuguese>
+            <Russian>Эта фляга содержит воду прямо из окружающей среды, она имеет неприятный сильный запах...</Russian>
+            <German>Diese Feldflasche enthält Wasser, das direkt aus der Umwelt stammt und einen üblen, starken Geruch hat...</German>
+            <Korean>이 수통에는 환경에서 바로 나온 물이 들어있어 악취가 심합니다 ...</Korean>
+            <Japanese>この水筒は環境から直接採水しているため、悪臭が強い。</Japanese>
+            <Turkish>Bu matara doğrudan çevreden gelen su içerir, kötü ve güçlü bir kokusu vardır...</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_CanteenDirty_DisplayName">
+            <English>Canteen (Dirty)</English>
+            <Czech>Čutora (špinavá)</Czech>
+            <French>Cantine (sale)</French>
+            <Spanish>Cantina (sucia)</Spanish>
+            <Italian>Mensa (sporca)</Italian>
+            <Polish>Kantyna (brudna)</Polish>
+            <Portuguese>Cantina (suja)</Portuguese>
+            <Russian>Столовая (грязная)</Russian>
+            <German>Kantine (schmutzig)</German>
+            <Korean>매점 (더티)</Korean>
+            <Japanese>社員食堂（汚い）</Japanese>
+            <Turkish>Kantin (Kirli)</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_CanteenPurified_Description">
+            <English>This canteen holds water that's been treated with purification tablets, removing all traces of radiation and biological contaminants</English>
+            <Czech>V této čutoře je voda ošetřená čisticími tabletami, které odstraňují všechny stopy radiace a biologických kontaminantů.</Czech>
+            <French>Cette gourde contient de l'eau qui a été traitée avec des comprimés de purification, éliminant toute trace de radiation et de contaminants biologiques</French>
+            <Spanish>Esta cantimplora contiene agua tratada con pastillas purificadoras que eliminan todo rastro de radiación y contaminantes biológicos</Spanish>
+            <Polish>Ta manierka zawiera wodę, która została oczyszczona za pomocą tabletek oczyszczających, usuwających wszelkie ślady promieniowania i zanieczyszczeń biologicznych</Polish>
+            <Portuguese>Esse cantil contém água que foi tratada com pastilhas de purificação, removendo todos os traços de radiação e contaminantes biológicos</Portuguese>
+            <Russian>В этой фляге хранится вода, прошедшая очистку таблетками, удаляющими все следы радиации и биологических загрязнений</Russian>
+            <German>Diese Feldflasche enthält Wasser, das mit Reinigungstabletten behandelt wurde, um alle Spuren von Strahlung und biologischen Verunreinigungen zu entfernen</German>
+            <Korean>이 수통에는 정화 정제로 처리된 물을 보관하여 방사능과 생물학적 오염 물질의 흔적을 모두 제거합니다</Korean>
+            <Japanese>この水筒は、浄化錠剤で処理され、放射能や生物学的汚染物質を取り除いた水を入れる。</Japanese>
+            <Turkish>Bu matara, radyasyon ve biyolojik kirleticilerin tüm izlerini ortadan kaldıran arıtma tabletleri ile işlenmiş su içerir</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_CanteenPurified_DisplayName">
+            <English>Canteen (Purified)</English>
+            <Czech>Čutora (Čistá)</Czech>
+            <French>Cantine (purifiée)</French>
+            <Spanish>Cantina (purificada)</Spanish>
+            <Italian>Mensa (depurata)</Italian>
+            <Polish>Kantyna (oczyszczona)</Polish>
+            <Portuguese>Cantina (purificada)</Portuguese>
+            <Russian>Столовая (очищенная)</Russian>
+            <German>Kantine (gereinigt)</German>
+            <Korean>매점 (정제)</Korean>
+            <Japanese>社員食堂（精製）</Japanese>
+            <Turkish>Kantin (Arıtılmış)</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_Cigar_Description">
+            <English>High quality, rolled cigar, expensive but a favorite while listening to campfire tales...&lt;br/&gt; - Reduces Radiation&lt;br/&gt; - Unhealthy</English>
+            <Czech>Vysoce kvalitní ručně balené doutníky, drahé, ale oblíbené při poslechu táborových příběhů...&lt;br/&gt; - Snižuje radiaci&lt;br/&gt; - Nezdravé</Czech>
+            <French>Cigare roulé de haute qualité, cher mais un favori en écoutant des histoires de feu de camp...&lt;br/&gt; - Réduit les radiations&lt;br/&gt; - Malsain</French>
+            <Spanish>Cigarro enrollado de alta calidad, caro pero uno de los favoritos mientras se escuchan historias de fogatas...&lt;br/&gt; - Reduce la radiación&lt;br/&gt; - No saludable</Spanish>
+            <Italian>Sigaro arrotolato di alta qualità, costoso ma uno dei preferiti mentre si ascoltano racconti intorno al fuoco...&lt;br/&gt; - Riduce le radiazioni&lt;br/&gt; - Non salutare</Italian>
+            <Polish>Wysokiej jakości cygaro zwijane, drogie, ale ulubione podczas słuchania opowieści przy ognisku...&lt;br/&gt; - Redukuje promieniowanie&lt;br/&gt; - Niezdrowe</Polish>
+            <Portuguese>Charuto enrolado de alta qualidade, caro, mas um favorito enquanto se ouve contos de fogueira...&lt;br/&gt; - Reduz Radiação&lt;br/&gt; - Não saudável</Portuguese>
+            <Russian>Высококачественная скрученная сигара, дорогая, но любимая во время прослушивания рассказов у костра...&lt;br/&gt; - Снижает радиацию&lt;br/&gt; - Вредно для здоровья</Russian>
+            <German>Hochwertige, gerollte Zigarre, teuer, aber ein Favorit beim Lauschen von Lagerfeuergeschichten...&lt;br/&gt; - Reduziert Strahlung&lt;br/&gt; - Ungesund</German>
+            <Korean>고품질의 롤링 시가, 비싸지만 모닥불 이야기를 들으면서 좋아하는...&lt;br/&gt; - 방사능 감소&lt;br/&gt; - 건강에 해로운</Korean>
+            <Japanese>高品質の巻き葉巻、高価ですが、キャンプファイヤーの話を聴きながらのお気に入り...&lt;br/&gt; - 放射線を減らす&lt;br/&gt; - 不健康</Japanese>
+            <Turkish>Yüksek kaliteli, sarılmış puro, pahalı ama kamp ateşi hikayeleri dinlerken favori...&lt;br/&gt; - Radyasyonu Azaltır&lt;br/&gt; - Sağlıksız</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_Cigar_DisplayName">
+            <English>Cigar</English>
+            <Czech>Doutník</Czech>
+            <French>Cigare</French>
+            <Spanish>Cigarro</Spanish>
+            <Italian>Sigaro</Italian>
+            <Polish>Cygaro</Polish>
+            <Portuguese>Charuto</Portuguese>
+            <Russian>Сигара</Russian>
+            <German>Zigarre</German>
+            <Korean>시가</Korean>
+            <Japanese>葉巻</Japanese>
+            <Turkish>Puro</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_CigarettePack_Description">
+            <English>A pack of soviet cigarettes, helps take the edge off any situation...&lt;br/&gt; - Reduces Radiation&lt;br/&gt; - Unhealthy</English>
+            <Czech>Krabička sovětských cigaret, která pomůže zmírnit každou situaci...&lt;br/&gt; - Snižuje radiaci&lt;br/&gt; - Nezdravé</Czech>
+            <French>Un paquet de cigarettes soviétiques, aide à faire passer n'importe quelle situation...&lt;br/&gt; - Réduit les radiations&lt;br/&gt; - Malsain</French>
+            <Spanish>Un paquete de cigarrillos soviéticos, ayuda a aliviar cualquier situación...&lt;br/&gt; - Reduce la radiación&lt;br/&gt; - No saludable</Spanish>
+            <Italian>Un pacchetto di sigarette sovietiche, aiuta a smorzare ogni situazione...&lt;br/&gt; - Riduce le radiazioni&lt;br/&gt; - Non salutare</Italian>
+            <Polish>Papierosy sowieckie, pomagają rozładować napięcie w każdej sytuacji...&lt;br/&gt; - Redukuje promieniowanie&lt;br/&gt; - Niezdrowe</Polish>
+            <Portuguese>Um maço de cigarros soviéticos, ajuda a aliviar qualquer situação...&lt;br/&gt; - Reduz Radiação&lt;br/&gt; - Não saudável</Portuguese>
+            <Russian>Пачка советских сигарет, помогает снять напряжение в любой ситуации...&lt;br/&gt; - Снижает радиацию&lt;br/&gt; - Вредно для здоровья</Russian>
+            <German>Eine Packung sowjetischer Zigaretten, hilft, jede Situation zu entspannen...&lt;br/&gt; - Reduziert Strahlung&lt;br/&gt; - Ungesund</German>
+            <Korean>소련 담배 한 갑, 어떤 상황에서도 긴장을 풀어줍니다...&lt;br/&gt; - 방사능 감소&lt;br/&gt; - 건강에 해로운</Korean>
+            <Japanese>ソビエトのタバコの箱は、どんな状況でも緊張をほぐすのに役立ちます...&lt;br/&gt; - 放射線を減らす&lt;br/&gt; - 不健康</Japanese>
+            <Turkish>Bir paket Sovyet sigarası, her durumu hafifletmeye yardımcı olur...&lt;br/&gt; - Radyasyonu Azaltır&lt;br/&gt; - Sağlıksız</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_CigarettePack_DisplayName">
+            <English>Pack of cigarettes</English>
+            <Czech>Krabička cigaret</Czech>
+            <French>Paquet de cigarettes</French>
+            <Spanish>Paquete de cigarrillos</Spanish>
+            <Italian>Pacchetto di sigarette</Italian>
+            <Polish>Papierosy</Polish>
+            <Portuguese>Maço de cigarros</Portuguese>
+            <Russian>Пачка сигарет</Russian>
+            <German>Schachtel Zigaretten</German>
+            <Korean>담배 한 갑</Korean>
+            <Japanese>たばこの箱</Japanese>
+            <Turkish>Bir paket sigara</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_CoffeeGrounds_Description">
+            <English>Coffee grounds for making coffee</English>
+            <Czech>Kávová sedlina na přípravu kávy</Czech>
+            <French>Marc de café pour faire du café</French>
+            <Spanish>Café molido para hacer café</Spanish>
+            <Italian>Caffè macinato per fare il caffè</Italian>
+            <Polish>Fusy z kawy do parzenia kawy</Polish>
+            <Portuguese>Pó de café para fazer café</Portuguese>
+            <Russian>Кофейная гуща для приготовления кофе</Russian>
+            <German>Kaffeesatz zum Kaffeekochen</German>
+            <Korean>커피를 만들기 위한 커피 찌꺼기</Korean>
+            <Japanese>コーヒーを作るためのコーヒーかす</Japanese>
+            <Turkish>Kahve yapmak için Kahve Telvesi</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_CoffeeGrounds_DisplayName">
+            <English>Coffee Grounds</English>
+            <Czech>Kávová sedlina</Czech>
+            <French>Marc de café</French>
+            <Spanish>Café molido</Spanish>
+            <Italian>Caffè macinato</Italian>
+            <Polish>Fusy z kawy</Polish>
+            <Portuguese>Pó de café</Portuguese>
+            <Russian>Кофейная гуща</Russian>
+            <German>Kaffeesatz</German>
+            <Korean>커피 찌꺼기</Korean>
+            <Japanese>コーヒーかす</Japanese>
+            <Turkish>Kahve Telvesi</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_Coolant_Description">
+            <English>engine coolant</English>
+            <Czech>chladicí kapalina motoru</Czech>
+            <French>liquide de refroidissement moteur</French>
+            <Spanish>refrigerante del motor</Spanish>
+            <Italian>liquido di raffreddamento del motore</Italian>
+            <Polish>płyn chłodzący silnik</Polish>
+            <Portuguese>refrigerante do motor</Portuguese>
+            <Russian>охлаждающая жидкость двигателя</Russian>
+            <German>Motorkühlmittel</German>
+            <Korean>엔진 냉각수</Korean>
+            <Japanese>エンジン冷却液</Japanese>
+            <Turkish>motor soğutma sıvısı</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_Coolant_DisplayName">
+            <English>Coolant (5Gal / 20L)</English>
+            <Czech>Chladicí kapalina (5Gal / 20L)</Czech>
+            <French>Liquide de refroidissement (5Gal / 20L)</French>
+            <Spanish>Refrigerante (5 galones / 20 l)</Spanish>
+            <Italian>Liquido refrigerante (5 galloni / 20 litri)</Italian>
+            <Polish>Płyn chłodzący (5 galonów / 20 l)</Polish>
+            <Portuguese>Refrigerante (5Gal / 20L)</Portuguese>
+            <Russian>Охлаждающая жидкость (5 галлонов/20 л)</Russian>
+            <German>Kühlmittel (5Gal / 20L)</German>
+            <Korean>냉각수 (5Gal / 20L)</Korean>
+            <Japanese>クーラント(5ガロン/20L)</Japanese>
+            <Turkish>Soğutma Sıvısı (5Gal / 20L)</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_CounterMeasureKit_Description">
+            <English>counter measures kit used for vehicle repairs</English>
+            <Czech>sada protiopatření používaná při opravách vozidel</Czech>
+            <French>kit de contre-mesures utilisé pour la réparation des véhicules</French>
+            <Spanish>kit de contramedidas utilizado para reparaciones de vehículos</Spanish>
+            <Italian>kit di contromisure utilizzato per le riparazioni dei veicoli</Italian>
+            <Polish>zestaw środków zaradczych stosowany przy naprawach pojazdów</Polish>
+            <Portuguese>kit de contramedidas usado para reparos de veículos</Portuguese>
+            <Russian>комплект противодействия, используемый при ремонте транспортных средств</Russian>
+            <German>Gegenmaßnahmen-Set für Fahrzeugreparaturen</German>
+            <Korean>차량 수리에 사용되는 대책 키트</Korean>
+            <Japanese>車の修理に使用される対策キット</Japanese>
+            <Turkish>Araç onarımlarında kullanılan karşı önlemler kiti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_CounterMeasureKit_DisplayName">
+            <English>Counter measure kit</English>
+            <Czech>Sada protiopatření</Czech>
+            <French>Kit de contre-mesure</French>
+            <Spanish>Kit de contramedida</Spanish>
+            <Italian>Kit contromisure</Italian>
+            <Polish>Zestaw przeciwdziałający</Polish>
+            <Portuguese>Kit de contramedidas</Portuguese>
+            <Russian>Комплект контрмер</Russian>
+            <German>Gegenmaßnahmen-Set</German>
+            <Korean>대책 키트</Korean>
+            <Japanese>対策キット</Japanese>
+            <Turkish>Karşı tedbir kiti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_Diesel_DisplayName">
+            <English>Diesel (5Gal / 20L)</English>
+            <Czech>Nafta (5 galonů / 20 l)</Czech>
+            <French>Diesel (5 Gallons / 20L)</French>
+            <Spanish>Diésel (5 galones / 20 L)</Spanish>
+            <Italian>Diesel (5 galloni / 20 L)</Italian>
+            <Polish>Diesel (5 galonów / 20 l)</Polish>
+            <Portuguese>Diesel (5 Galões / 20L)</Portuguese>
+            <Russian>Дизель (5 галлонов / 20 л)</Russian>
+            <German>Diesel (5 Gallonen / 20 l)</German>
+            <Korean>디젤(5갤런/20L)</Korean>
+            <Japanese>ディーゼル（5ガロン/20L）</Japanese>
+            <Turkish>Dizel (5 Galon / 20L)</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_ElectronicRepairKit_Description">
+            <English>electronics repair kit used for vehicle repair</English>
+            <Czech>sada na opravu elektroniky používaná pro opravy vozidel</Czech>
+            <French>kit de réparation électronique utilisé pour la réparation de véhicules</French>
+            <Spanish>kit de reparación de electrónica utilizado para la reparación de vehículos</Spanish>
+            <Italian>kit di riparazione elettronica utilizzato per la riparazione del veicolo</Italian>
+            <Polish>zestaw do naprawy elektroniki używany do naprawy pojazdów</Polish>
+            <Portuguese>kit de reparo eletrônico usado para reparo de veículos</Portuguese>
+            <Russian>комплект для ремонта электроники, используемый для ремонта автомобиля</Russian>
+            <German>Elektronik-Reparatursatz für die Fahrzeugreparatur</German>
+            <Korean>차량 수리에 사용되는 전자 수리 키트</Korean>
+            <Japanese>車の修理に使用される電子修理キット</Japanese>
+            <Turkish>Araç onarımı için kullanılan elektronik tamir seti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_ElectronicRepairKit_DisplayName">
+            <English>Electronics repair kit</English>
+            <Czech>Sada na opravu elektroniky</Czech>
+            <French>Kit de réparation électronique</French>
+            <Spanish>kit de reparación de electrónica</Spanish>
+            <Italian>Kit di riparazione elettronica</Italian>
+            <Polish>Zestaw do naprawy elektroniki</Polish>
+            <Portuguese>Kit de reparo eletrônico</Portuguese>
+            <Russian>Комплект для ремонта электроники</Russian>
+            <German>Elektronik-Reparaturset</German>
+            <Korean>전자제품 수리 키트</Korean>
+            <Japanese>電子機器修理キット</Japanese>
+            <Turkish>Elektronik tamir takımı</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_EngineOil_Description">
+            <English>empty engine oil container</English>
+            <Czech>prázdnou nádobu na motorový olej</Czech>
+            <French>bidon d'huile moteur vide</French>
+            <Spanish>contenedor de aceite de motor vacío</Spanish>
+            <Italian>contenitore dell'olio motore vuoto</Italian>
+            <Polish>pusty pojemnik na olej silnikowy</Polish>
+            <Portuguese>recipiente de óleo do motor vazio</Portuguese>
+            <Russian>пустой контейнер из-под моторного масла</Russian>
+            <German>leeren Motorölbehälter</German>
+            <Korean>빈 엔진 오일 용기</Korean>
+            <Japanese>空のエンジンオイル容器</Japanese>
+            <Turkish>boş motor yağı kabı</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_EngineOil_DisplayName">
+            <English>Engine oil</English>
+            <Czech>Motorový olej</Czech>
+            <French>Huile moteur</French>
+            <Spanish>aceite de motor</Spanish>
+            <Italian>Olio motore</Italian>
+            <Polish>Olej silnikowy</Polish>
+            <Portuguese>Óleo de motor</Portuguese>
+            <Russian>Моторное масло</Russian>
+            <German>Motoröl</German>
+            <Korean>엔진오일</Korean>
+            <Japanese>エンジンオイル</Japanese>
+            <Turkish>Motor yağı</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_EnginePartsKit_Description">
+            <English>engine parts kit used for vehicle repair</English>
+            <Czech>sada dílů motoru používaná pro opravy vozidel</Czech>
+            <French>kit de pièces de moteur utilisé pour la réparation de véhicules</French>
+            <Spanish>kit de piezas de motor utilizado para la reparación de vehículos</Spanish>
+            <Italian>kit di parti del motore utilizzato per la riparazione del veicolo</Italian>
+            <Polish>zestaw części do silnika używany do naprawy pojazdów</Polish>
+            <Portuguese>kit de peças de motor usado para reparo de veículos</Portuguese>
+            <Russian>комплект деталей двигателя, используемый для ремонта автомобиля</Russian>
+            <German>Motorteilesatz für die Fahrzeugreparatur</German>
+            <Korean>차량 수리에 사용되는 엔진 부품 키트</Korean>
+            <Japanese>車の修理に使用されるエンジン部品キット</Japanese>
+            <Turkish>Araç onarımı için kullanılan motor parçaları kiti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_EnginePartsKit_DisplayName">
+            <English>Engine parts kit</English>
+            <Czech>Sada dílů motoru</Czech>
+            <French>Kit de pièces moteur</French>
+            <Spanish>kit de piezas del motor</Spanish>
+            <Italian>Kit ricambi motore</Italian>
+            <Polish>Zestaw części do silnika</Polish>
+            <Portuguese>Kit de peças do motor</Portuguese>
+            <Russian>Комплект деталей двигателя</Russian>
+            <German>Motorteilesatz</German>
+            <Korean>엔진 부품 키트</Korean>
+            <Japanese>エンジンパーツキット</Japanese>
+            <Turkish>Motor parçaları kiti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_FireWood_DisplayName">
+            <English>Firewood</English>
+            <Czech>Palivové dříví</Czech>
+            <French>Bois de chauffage</French>
+            <Spanish>Leña</Spanish>
+            <Italian>Legna da ardere</Italian>
+            <Polish>Drewno opałowe</Polish>
+            <Portuguese>Lenha</Portuguese>
+            <Russian>Дрова</Russian>
+            <German>Brennholz</German>
+            <Korean>장작</Korean>
+            <Japanese>薪</Japanese>
+            <Turkish>Yakacak odun</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_FishingRod_DisplayName">
+            <English>Collapsible Fishing Rod</English>
+            <Czech>Skládací rybářský prut</Czech>
+            <French>Canne à pêche pliable</French>
+            <Spanish>Caña de pescar plegable</Spanish>
+            <Italian>Canna da pesca pieghevole</Italian>
+            <Polish>Składana wędka</Polish>
+            <Portuguese>Vara de pesca dobrável</Portuguese>
+            <Russian>Складная удочка</Russian>
+            <German>Zusammenklappbare Angelrute</German>
+            <Korean>접이식 낚싯대</Korean>
+            <Japanese>折りたたみ可能な釣り竿</Japanese>
+            <Turkish>Katlanabilir Olta</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_Forge_DisplayName">
+            <English>Smelting Forge</English>
+            <Czech>Tavící pec</Czech>
+            <French>Forge de fusion</French>
+            <Spanish>Fragua de fundición</Spanish>
+            <Italian>Fucina di fusione</Italian>
+            <Polish>Kuźnia hutnicza</Polish>
+            <Portuguese>Forja de fundição</Portuguese>
+            <Russian>Плавильная кузница</Russian>
+            <German>Schmelzschmiede</German>
+            <Korean>제련 대장간</Korean>
+            <Japanese>製錬鍛冶場</Japanese>
+            <Turkish>Eritme Demirhanesi</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_FuelGeneric_Description">
+            <English>Full of fuel&lt;br/&gt; - Fuel item</English>
+            <Czech>Plný paliva&lt;br/&gt; - Palivový předmět</Czech>
+            <French>Plein de carburant&lt;br/&gt; - Objet carburant</French>
+            <Spanish>Lleno de combustible&lt;br/&gt; - Artículo de combustible</Spanish>
+            <Italian>Pieno di carburante&lt;br/&gt; - Oggetto del carburante</Italian>
+            <Polish>Pełny paliwa&lt;br/&gt; - Przedmiot paliwowy</Polish>
+            <Portuguese>Cheio de combustível&lt;br/&gt; - Item de combustível</Portuguese>
+            <Russian>Полный топлива&lt;br/&gt; - Топливный предмет</Russian>
+            <German>Voll mit Treibstoff&lt;br/&gt; - Kraftstoffgegenstand</German>
+            <Korean>연료 가득&lt;br/&gt; - 연료 아이템</Korean>
+            <Japanese>燃料がいっぱい&lt;br/&gt; - 燃料アイテム</Japanese>
+            <Turkish>Yakıt dolu&lt;br/&gt; - Yakıt öğesi</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_FuelSystemKit_Description">
+            <English>fuel system kit used for vehicle repair</English>
+            <Czech>sada palivového systému používaná pro opravu vozidla</Czech>
+            <French>kit de système de carburant utilisé pour la réparation de véhicules</French>
+            <Spanish>kit de sistema de combustible utilizado para la reparación de vehículos</Spanish>
+            <Italian>kit del sistema di alimentazione utilizzato per la riparazione del veicolo</Italian>
+            <Polish>zestaw układu paliwowego używany do naprawy pojazdów</Polish>
+            <Portuguese>kit de sistema de combustível usado para reparo de veículos</Portuguese>
+            <Russian>комплект топливной системы, используемый при ремонте автомобиля</Russian>
+            <German>Kraftstoffsystemsatz zur Fahrzeugreparatur</German>
+            <Korean>차량 수리에 사용되는 연료 시스템 키트</Korean>
+            <Japanese>車両修理に使用される燃料システムキット</Japanese>
+            <Turkish>Araç onarımında kullanılan yakıt sistemi kiti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_FuelSystemKit_DisplayName">
+            <English>Fuel system kit</English>
+            <Czech>Sada palivového systému</Czech>
+            <French>Kit système de carburant</French>
+            <Spanish>kit de sistema de combustible</Spanish>
+            <Italian>Kit sistema di alimentazione</Italian>
+            <Polish>Zestaw układu paliwowego</Polish>
+            <Portuguese>Kit sistema de combustível</Portuguese>
+            <Russian>Комплект топливной системы</Russian>
+            <German>Kraftstoffsystem-Kit</German>
+            <Korean>연료 시스템 키트</Korean>
+            <Japanese>燃料システムキット</Japanese>
+            <Turkish>Yakıt sistemi kiti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_GlassRepairKit_Description">
+            <English>glass repair kit used for vehicle repair</English>
+            <Czech>sada na opravu skla používaná při opravách vozidel</Czech>
+            <French>kit de réparation de verre utilisé pour la réparation de véhicules</French>
+            <Spanish>kit de reparación de vidrios utilizado para la reparación de vehículos</Spanish>
+            <Italian>kit di riparazione del vetro utilizzato per la riparazione del veicolo</Italian>
+            <Polish>zestaw do naprawy szyb używany do naprawy pojazdów</Polish>
+            <Portuguese>kit de reparo de vidro usado para reparo de veículos</Portuguese>
+            <Russian>комплект для ремонта стекол, используемый для ремонта автомобилей</Russian>
+            <German>Glasreparaturset für die Fahrzeugreparatur</German>
+            <Korean>차량 수리에 사용되는 유리 수리 키트</Korean>
+            <Japanese>車の修理に使用するガラス修理キット</Japanese>
+            <Turkish>Araç tamirinde kullanılan cam tamir takımı</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_GlassRepairKit_DisplayName">
+            <English>Glass repair kit</English>
+            <Czech>Sada na opravu skla</Czech>
+            <French>Kit de réparation de vitre</French>
+            <Spanish>kit de reparación de vidrio</Spanish>
+            <Italian>Kit per la riparazione del vetro</Italian>
+            <Polish>Zestaw do naprawy szkła</Polish>
+            <Portuguese>Kit de reparo de vidro</Portuguese>
+            <Russian>Комплект для ремонта стекла</Russian>
+            <German>Glasreparaturset</German>
+            <Korean>유리 수리 키트</Korean>
+            <Japanese>ガラス修理キット</Japanese>
+            <Turkish>Cam tamir takımı</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_HydraulicRepairKit_Description">
+            <English>hydraulic repair kit used for vehicles repairs</English>
+            <Czech>hydraulická opravná sada používaná pro opravy vozidel</Czech>
+            <French>kit de réparation hydraulique utilisé pour la réparation des véhicules</French>
+            <Spanish>kit de reparación hidráulica utilizado para reparaciones de vehículos</Spanish>
+            <Italian>kit di riparazione idraulica utilizzato per le riparazioni dei veicoli</Italian>
+            <Polish>hydrauliczny zestaw naprawczy stosowany przy naprawach pojazdów</Polish>
+            <Portuguese>kit de reparo hidráulico usado para reparos de veículos</Portuguese>
+            <Russian>комплект для ремонта гидравлики, используемый для ремонта автомобилей</Russian>
+            <German>Hydraulik-Reparatursatz für Fahrzeugreparaturen</German>
+            <Korean>차량 수리에 사용되는 유압 수리 키트</Korean>
+            <Japanese>車の修理に使用される油圧修理キット</Japanese>
+            <Turkish>Araç onarımlarında kullanılan hidrolik tamir takımı</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_HydraulicRepairKit_DisplayName">
+            <English>Hydraulic repair kit</English>
+            <Czech>Sada na opravu hydrauliky</Czech>
+            <French>Kit de réparation hydraulique</French>
+            <Spanish>kit de reparación hidráulica</Spanish>
+            <Italian>Kit di riparazione idraulica</Italian>
+            <Polish>Zestaw naprawczy hydrauliki</Polish>
+            <Portuguese>Kit de reparo hidráulico</Portuguese>
+            <Russian>Гидравлический ремкомплект</Russian>
+            <German>Hydraulik-Reparatursatz</German>
+            <Korean>유압 수리 키트</Korean>
+            <Japanese>油圧修理キット</Japanese>
+            <Turkish>Hidrolik tamir takımı</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_JerryCanWaterFullDirty_Description">
+            <English>Full of dirty water</English>
+            <Czech>Plný špinavé vody</Czech>
+            <French>Plein d'eau sale</French>
+            <Spanish>Lleno de agua sucia</Spanish>
+            <Italian>Pieno d'acqua sporca</Italian>
+            <Polish>Pełna brudnej wody</Polish>
+            <Portuguese>Cheio de água suja</Portuguese>
+            <Russian>Полный грязной воды</Russian>
+            <German>Voll mit schmutzigem Wasser</German>
+            <Korean>더러운 물로 가득</Korean>
+            <Japanese>汚れた水でいっぱい</Japanese>
+            <Turkish>Kirli su dolu</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_JerryCanWaterFullDirty_DisplayName">
+            <English>Water 'Dirty' (5Gal / 20L)</English>
+            <Czech>Voda 'Špinavá' (5 galonů / 20L)</Czech>
+            <French>Eau 'Sale' (5 gallons / 20L)</French>
+            <Spanish>Agua 'Sucia' (5 galones / 20L)</Spanish>
+            <Italian>Acqua 'Sporco' (5 galloni / 20L)</Italian>
+            <Polish>Woda 'Brudna' (5 galonów / 20L)</Polish>
+            <Portuguese>Água 'Suja' (5 galões / 20L)</Portuguese>
+            <Russian>Вода 'Грязная' (5 галлонов / 20 л)</Russian>
+            <German>Wasser 'Schmutzig' (5 Gallonen / 20L)</German>
+            <Korean>물 '더러운' (5갤런 / 20L)</Korean>
+            <Japanese>水「汚れた」（5ガロン/ 20L）</Japanese>
+            <Turkish>Su 'Kirli' (5 Galon / 20L)</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_JerryCanWaterFull_Description">
+            <English>Full of water</English>
+            <Czech>Plný vody</Czech>
+            <French>Plein d'eau</French>
+            <Spanish>Lleno de agua</Spanish>
+            <Italian>Pieno d'acqua</Italian>
+            <Polish>Pełna wody</Polish>
+            <Portuguese>Cheio de água</Portuguese>
+            <Russian>Полный воды</Russian>
+            <German>Voll mit Wasser</German>
+            <Korean>물이 가득</Korean>
+            <Japanese>水がいっぱい</Japanese>
+            <Turkish>Su dolu</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_JerryCanWaterFull_DisplayName">
+            <English>Water (5Gal / 20L)</English>
+            <Czech>Voda (5 galonů / 20L)</Czech>
+            <French>Eau (5 gallons / 20L)</French>
+            <Spanish>Agua (5 galones / 20L)</Spanish>
+            <Italian>Acqua (5 galloni / 20L)</Italian>
+            <Polish>Woda (5 galonów / 20L)</Polish>
+            <Portuguese>Água (5 galões / 20L)</Portuguese>
+            <Russian>Вода (5 галлонов / 20 л)</Russian>
+            <German>Wasser (5 Gallonen / 20L)</German>
+            <Korean>물 (5갤런 / 20L)</Korean>
+            <Japanese>水（5ガロン/ 20L）</Japanese>
+            <Turkish>Su (5 Galon / 20L)</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_JetFuel_DisplayName">
+            <English>Jet Fuel (5Gal / 20L)</English>
+            <Czech>Palivo pro tryskové motory (5 galonů / 20 l)</Czech>
+            <French>Carburant Jet (5 Gallons / 20L)</French>
+            <Spanish>Combustible para aviones (5 galones / 20 L)</Spanish>
+            <Italian>Carburante per jet (5 galloni / 20 L)</Italian>
+            <Polish>Paliwo do silników odrzutowych (5 galonów / 20 l)</Polish>
+            <Portuguese>Combustível de Aviação (5 Galões / 20L)</Portuguese>
+            <Russian>Авиационное топливо (5 галлонов / 20 л)</Russian>
+            <German>Jet-Treibstoff (5 Gallonen / 20 l)</German>
+            <Korean>제트 연료(5갤런/20L)</Korean>
+            <Japanese>ジェット燃料（5ガロン/20L）</Japanese>
+            <Turkish>Jet Yakıtı (5 Galon / 20L)</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_LandingGearKit_Description">
+            <English>landing gear kit used for aircraft repairs</English>
+            <Czech>sada podvozku používaná pro opravy letadel</Czech>
+            <French>kit de train d'atterrissage utilisé pour les réparations d'avions</French>
+            <Spanish>kit de tren de aterrizaje utilizado para reparaciones de aviones</Spanish>
+            <Italian>kit carrello di atterraggio utilizzato per le riparazioni degli aerei</Italian>
+            <Polish>zestaw podwozia używany do napraw samolotów</Polish>
+            <Portuguese>kit de trem de pouso usado para reparos de aeronaves</Portuguese>
+            <Russian>комплект шасси, используемый для ремонта самолетов</Russian>
+            <German>Fahrwerkssatz für Flugzeugreparaturen</German>
+            <Korean>항공기 수리에 사용되는 랜딩 기어 키트</Korean>
+            <Japanese>航空機の修理に使用される着陸装置キット</Japanese>
+            <Turkish>Uçak onarımlarında kullanılan iniş takımı kiti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_LandingGearKit_DisplayName">
+            <English>Landing gear kit</English>
+            <Czech>Sada podvozku</Czech>
+            <French>Kit train d'atterrissage</French>
+            <Spanish>kit de tren de aterrizaje</Spanish>
+            <Italian>Kit carrello di atterraggio</Italian>
+            <Polish>Zestaw podwozia</Polish>
+            <Portuguese>Kit de trem de pouso</Portuguese>
+            <Russian>Комплект шасси</Russian>
+            <German>Fahrwerkssatz</German>
+            <Korean>랜딩 기어 키트</Korean>
+            <Japanese>ランディングギアキット</Japanese>
+            <Turkish>İniş takımı kiti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_MetalFabricationKit_Description">
+            <English>metal fabrication kit used for vehicle repair</English>
+            <Czech>sada na kovovýrobu používaná pro opravy vozidel</Czech>
+            <French>kit de fabrication métallique utilisé pour la réparation de véhicules</French>
+            <Spanish>kit de fabricación de metal utilizado para la reparación de vehículos</Spanish>
+            <Italian>kit di fabbricazione in metallo utilizzato per la riparazione del veicolo</Italian>
+            <Polish>zestaw do produkcji metalu używany do naprawy pojazdów</Polish>
+            <Portuguese>kit de fabricação de metal usado para reparo de veículos</Portuguese>
+            <Russian>металлический набор для изготовления, используемый для ремонта автомобилей</Russian>
+            <German>Metallbausatz für die Fahrzeugreparatur</German>
+            <Korean>차량 수리에 사용되는 금속 제조 키트</Korean>
+            <Japanese>車の修理に使用される金属製作キット</Japanese>
+            <Turkish>araç onarımı için kullanılan metal imalat kiti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_MetalFabricationKit_DisplayName">
+            <English>Metal fabrication kit</English>
+            <Czech>Sada na kovovýrobu</Czech>
+            <French>Kit de fabrication métallique</French>
+            <Spanish>kit de fabricación de metales</Spanish>
+            <Italian>Kit di fabbricazione in metallo</Italian>
+            <Polish>Zestaw do obróbki metalu</Polish>
+            <Portuguese>Kit de fabricação de metal</Portuguese>
+            <Russian>Металлический набор для изготовления</Russian>
+            <German>Metallbausatz</German>
+            <Korean>금속 제작 키트</Korean>
+            <Japanese>金属製作キット</Japanese>
+            <Turkish>Metal imalat kiti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_Petrol_DisplayName">
+            <English>Petrol (5Gal / 20L)</English>
+            <Czech>Benzín (5 galonů / 20 l)</Czech>
+            <French>Essence (5 Gallons / 20L)</French>
+            <Spanish>Gasolina (5 galones / 20 L)</Spanish>
+            <Italian>Benzina (5 galloni / 20 L)</Italian>
+            <Polish>Benzyna (5 galonów / 20 l)</Polish>
+            <Portuguese>Gasolina (5 Galões / 20L)</Portuguese>
+            <Russian>Бензин (5 галлонов / 20 л)</Russian>
+            <German>Benzin (5 Gallonen / 20 l)</German>
+            <Korean>휘발유(5갤런/20L)</Korean>
+            <Japanese>ガソリン（5ガロン/20L）</Japanese>
+            <Turkish>Benzin (5 Galon / 20L)</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_Rice_Description">
+            <English>Package of Rice &lt;br/&gt; - Needs to be cooked</English>
+            <Czech>Balení rýže &lt;br/&gt; - je třeba uvařit</Czech>
+            <French>Paquet de riz &lt;br/&gt; - Doit être cuit</French>
+            <Spanish>Paquete de arroz &lt;br/&gt; - Necesita cocción</Spanish>
+            <Italian>Pacchetto di riso &lt;br/&gt; - Deve essere cotto</Italian>
+            <Polish>Opakowanie ryżu &lt;br/&gt; - wymaga ugotowania</Polish>
+            <Portuguese>Pacote de arroz &lt;br/&gt; - Precisa ser cozido</Portuguese>
+            <Russian>Пакет риса &lt;br/&gt; - Необходимо сварить</Russian>
+            <German>Paket Reis &lt;br/&gt; - muss gekocht werden</German>
+            <Korean>쌀 포장 &lt;br/&gt; - 조리 필요</Korean>
+            <Japanese>米のパッケージ &lt;br/&gt; - 炊く必要がある。</Japanese>
+            <Turkish>Paket Pirinç &lt;br/&gt; - Pişirilmesi gerekiyor</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_Rice_DisplayName">
+            <English>Rice</English>
+            <Czech>Rýže</Czech>
+            <French>Riz</French>
+            <Spanish>Arroz</Spanish>
+            <Italian>Il riso</Italian>
+            <Polish>Ryż</Polish>
+            <Portuguese>Arroz</Portuguese>
+            <Russian>Рис</Russian>
+            <German>Reis</German>
+            <Korean>쌀</Korean>
+            <Japanese>米</Japanese>
+            <Turkish>Pirinç</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_RotorRepairKit_Description">
+            <English>rotor repair kit used for aircraft repairs</English>
+            <Czech>sada na opravu rotoru používaná při opravách letadel</Czech>
+            <French>kit de réparation de rotor utilisé pour les réparations d'avions</French>
+            <Spanish>kit de reparación de rotores utilizado para reparaciones de aviones</Spanish>
+            <Italian>kit di riparazione del rotore utilizzato per le riparazioni degli aerei</Italian>
+            <Polish>zestaw naprawczy wirnika stosowany przy naprawach samolotów</Polish>
+            <Portuguese>kit de reparo de rotor usado para reparos de aeronaves</Portuguese>
+            <Russian>Ремкомплект несущего винта, используемый для ремонта самолетов</Russian>
+            <German>Rotorreparatursatz für Flugzeugreparaturen</German>
+            <Korean>항공기 수리에 사용되는 로터 수리 키트</Korean>
+            <Japanese>航空機の修理に使用されるローター修理キット</Japanese>
+            <Turkish>uçak onarımlarında kullanılan rotor tamir takımı</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_RotorRepairKit_DisplayName">
+            <English>Rotor repair kit</English>
+            <Czech>Sada na opravu rotoru</Czech>
+            <French>Kit de réparation de rotor</French>
+            <Spanish>kit de reparación de rotores</Spanish>
+            <Italian>Kit di riparazione del rotore</Italian>
+            <Polish>Zestaw naprawczy wirnika</Polish>
+            <Portuguese>Kit de reparo do rotor</Portuguese>
+            <Russian>Ремкомплект ротора</Russian>
+            <German>Rotor-Reparatursatz</German>
+            <Korean>로터 수리 키트</Korean>
+            <Japanese>ローター修理キット</Japanese>
+            <Turkish>Rotor tamir takımı</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_TirePatchKit_Description">
+            <English>tire patch kit used for vehicle repair</English>
+            <Czech>sada na opravu pneumatik používaná při opravách vozidel</Czech>
+            <French>kit de réparation de pneus utilisé pour la réparation de véhicules</French>
+            <Spanish>kit de parche de neumáticos utilizado para la reparación de vehículos</Spanish>
+            <Italian>kit di toppe per pneumatici utilizzato per la riparazione del veicolo</Italian>
+            <Polish>zestaw do łatania opon używany do naprawy pojazdów</Polish>
+            <Portuguese>kit de remendo de pneus usado para reparo de veículos</Portuguese>
+            <Russian>комплект для ремонта шин, используемый для ремонта автомобиля</Russian>
+            <German>Reifenflickenset zur Fahrzeugreparatur</German>
+            <Korean>차량 수리에 사용되는 타이어 패치 키트</Korean>
+            <Japanese>車の修理に使用するタイヤパッチキット</Japanese>
+            <Turkish>Araç onarımı için kullanılan lastik yama kiti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_TirePatchKit_DisplayName">
+            <English>Tire patch kit</English>
+            <Czech>Sada na opravu pneumatik</Czech>
+            <French>Kit de réparation de pneus</French>
+            <Spanish>Kit de parches para neumáticos</Spanish>
+            <Italian>Kit toppa pneumatici</Italian>
+            <Polish>Zestaw łatek do opon</Polish>
+            <Portuguese>Kit de remendo de pneu</Portuguese>
+            <Russian>Комплект для ремонта шин</Russian>
+            <German>Reifenflickenset</German>
+            <Korean>타이어 패치 키트</Korean>
+            <Japanese>タイヤパッチキット</Japanese>
+            <Turkish>Lastik yama kiti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_TrackRepairKit_Description">
+            <English>track repair kit used for vehicle repair</English>
+            <Czech>souprava na opravu kolejí používaná pro opravy vozidel</Czech>
+            <French>kit de réparation de chenilles utilisé pour la réparation de véhicules</French>
+            <Spanish>kit de reparación de vías utilizado para la reparación de vehículos</Spanish>
+            <Italian>kit di riparazione cingoli utilizzato per la riparazione del veicolo</Italian>
+            <Polish>zestaw do naprawy torów używany do naprawy pojazdów</Polish>
+            <Portuguese>kit de reparo de esteira usado para reparo de veículos</Portuguese>
+            <Russian>комплект для ремонта гусениц, используемый для ремонта транспортных средств</Russian>
+            <German>Gleisreparaturset zur Fahrzeugreparatur</German>
+            <Korean>차량 수리에 사용되는 트랙 수리 키트</Korean>
+            <Japanese>車両の修理に使用される線路修理キット</Japanese>
+            <Turkish>Araç tamirinde kullanılan parça tamir takımı</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_TrackRepairKit_DisplayName">
+            <English>Track repair kit</English>
+            <Czech>Sada na opravu kolejí</Czech>
+            <French>Kit de réparation de chenille</French>
+            <Spanish>Kit de reparación de vías</Spanish>
+            <Italian>Kit per la riparazione dei binari</Italian>
+            <Polish>Zestaw naprawczy gąsienic</Polish>
+            <Portuguese>Kit de reparo de esteira</Portuguese>
+            <Russian>Комплект для ремонта гусеницы</Russian>
+            <German>Gleisreparaturset</German>
+            <Korean>트랙 수리 키트</Korean>
+            <Japanese>線路修理キット</Japanese>
+            <Turkish>Palet tamir takımı</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_TransmissionRepairKit_Description">
+            <English>transmission repair kit used for vehicle repairs</English>
+            <Czech>sada na opravu převodovky používaná při opravách vozidel</Czech>
+            <French>kit de réparation de transmission utilisé pour les réparations de véhicules</French>
+            <Spanish>kit de reparación de transmisión utilizado para reparaciones de vehículos</Spanish>
+            <Italian>kit di riparazione della trasmissione utilizzato per le riparazioni del veicolo</Italian>
+            <Polish>zestaw naprawczy do skrzyń biegów stosowany przy naprawach pojazdów</Polish>
+            <Portuguese>kit de reparo de transmissão usado para reparos de veículos</Portuguese>
+            <Russian>Ремкомплект трансмиссии, используемый для ремонта автомобиля</Russian>
+            <German>Getriebereparatursatz für Fahrzeugreparaturen</German>
+            <Korean>차량 수리에 사용되는 변속기 수리 키트</Korean>
+            <Japanese>車の修理に使用されるトランスミッション修理キット</Japanese>
+            <Turkish>Araç onarımlarında kullanılan şanzıman tamir takımı</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_TransmissionRepairKit_DisplayName">
+            <English>Transmission repair kit</English>
+            <Czech>Sada na opravu převodovky</Czech>
+            <French>Kit de réparation de transmission</French>
+            <Spanish>kit de reparación de transmisión</Spanish>
+            <Italian>Kit di riparazione della trasmissione</Italian>
+            <Polish>Zestaw naprawczy skrzyni biegów</Polish>
+            <Portuguese>Kit de reparo de transmissão</Portuguese>
+            <Russian>Ремкомплект коробки передач</Russian>
+            <German>Getriebe-Reparatursatz</German>
+            <Korean>변속기 수리 키트</Korean>
+            <Japanese>トランスミッション修理キット</Japanese>
+            <Turkish>Şanzıman tamir takımı</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_Vodka_Description">
+            <English>Premium Vodka, distilled somewhere in Chernarus&lt;br/&gt; - Reduces Radiation&lt;br/&gt; - Unhealthy</English>
+            <Czech>Prémiová vodka, destilovaná někde v Chernarusi&lt;br/&gt; - Snižuje radiaci&lt;br/&gt; - Nezdravé</Czech>
+            <French>Vodka premium, distillée quelque part à Chernarus&lt;br/&gt; - Réduit les radiations&lt;br/&gt; - Mauvais pour la santé</French>
+            <Spanish>Vodka Premium, destilada en algún lugar de Chernarus&lt;br/&gt; - Reduce la radiación&lt;br/&gt; - No saludable</Spanish>
+            <Polish>Wódka premium, destylowana gdzieś w Chernarus&lt;br/&gt; - Zmniejsza promieniowanie&lt;br/&gt; - Niezdrowo</Polish>
+            <Portuguese>Vodka Premium, destilada em algum lugar de Chernarus&lt;br/&gt; - Reduz a radiação&lt;br/&gt; - Prejudicial à saúde</Portuguese>
+            <Russian>Премиум-водка, дистиллированная где-то в Чернарусе&lt;br/&gt; - Снижает уровень радиации&lt;br/&gt; - Нездорово</Russian>
+            <German>Premium-Wodka, destilliert irgendwo in Tschernarus&lt;br/&gt; - Reduziert Strahlung&lt;br/&gt; - Ungesund</German>
+            <Korean>체르나루스 어디선가 증류된 프리미엄 보드카&lt;br/&gt; - 방사능 감소&lt;br/&gt; - 건강에 해롭습니다</Korean>
+            <Japanese>チェルナルス産のプレミアムウォッカ&lt;br/&gt; - 放射線量を減らす&lt;br/&gt; - 健康に悪い</Japanese>
+            <Turkish>Chernarus'ta bir yerde damıtılan premium votka&lt;br/&gt; - Radyasyon azaltır&lt;br/&gt; - Sağlıksız</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_Vodka_DisplayName">
+            <English>Vodka</English>
+            <Czech>Vodka</Czech>
+            <French>Vodka</French>
+            <Spanish>Vodka</Spanish>
+            <Italian>Vodka</Italian>
+            <Polish>Wódka</Polish>
+            <Portuguese>Vodka</Portuguese>
+            <Russian>Водка</Russian>
+            <German>Wodka</German>
+            <Korean>보드카</Korean>
+            <Japanese>ウォッカ</Japanese>
+            <Turkish>Votka</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_WaterBottleClean_Description">
+            <English>This water bottle is filled with boiled water. It's free from biological contaminants, but might still contain radiation</English>
+            <Czech>Tato láhev na vodu je naplněna převařenou vodou. Neobsahuje biologické kontaminanty, ale může obsahovat radiaci</Czech>
+            <French>Cette bouteille d'eau est remplie d'eau bouillie. Elle est exempte de contaminants biologiques, mais peut encore contenir des radiations</French>
+            <Spanish>Esta botella de agua está llena de agua hervida. Está libre de contaminantes biológicos, pero aún puede contener radiación</Spanish>
+            <Polish>Ta butelka na wodę jest wypełniona przegotowaną wodą. Jest ona wolna od zanieczyszczeń biologicznych, ale nadal może zawierać promieniowanie</Polish>
+            <Portuguese>Esta garrafa de água está cheia de água fervida. Ela está livre de contaminantes biológicos, mas ainda pode conter radiação</Portuguese>
+            <Russian>Эта бутылка для воды наполнена кипяченой водой. Она не содержит биологических загрязнений, но может содержать радиацию</Russian>
+            <German>Diese Wasserflasche ist mit abgekochtem Wasser gefüllt. Es ist frei von biologischen Verunreinigungen, kann aber noch Strahlung enthalten</German>
+            <Korean>이 물병은 끓인 물로 채워져 있습니다. 생물학적 오염 물질은 없지만 방사능이 포함되어 있을 수 있습니다</Korean>
+            <Japanese>この水筒には沸騰したお湯が入っている。生物学的汚染物質は含まれていないが、放射線が含まれている可能性がある。</Japanese>
+            <Turkish>Bu su şişesi kaynamış su ile doldurulmuştur. Biyolojik kirleticilerden arındırılmıştır, ancak yine de radyasyon içerebilir</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_WaterBottleClean_DisplayName">
+            <English>Water Bottle (Clean)</English>
+            <Czech>Láhev na vodu (čistá)</Czech>
+            <French>Bouteille d'eau (propre)</French>
+            <Spanish>Botella de agua (limpia)</Spanish>
+            <Italian>Bottiglia d'acqua (pulita)</Italian>
+            <Polish>Butelka na wodę (czysta)</Polish>
+            <Portuguese>Garrafa de água (limpa)</Portuguese>
+            <Russian>Бутылка для воды (чистая)</Russian>
+            <German>Wasserflasche (sauber)</German>
+            <Korean>물병(깨끗한)</Korean>
+            <Japanese>水筒（清潔なもの）</Japanese>
+            <Turkish>Su Şişesi (Temiz)</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_WaterBottleDirty_Description">
+            <English>This water bottle contains water straight from the environment, it has a foul strong odor...</English>
+            <Czech>Tato láhev na vodu obsahuje vodu přímo z přírody, má nepříjemný silný zápach...</Czech>
+            <French>Cette bouteille d'eau contient de l'eau provenant directement de l'environnement, elle a une odeur forte et nauséabonde...</French>
+            <Spanish>Esta botella de agua contiene agua directamente del medio ambiente, tiene un olor fétido y fuerte...</Spanish>
+            <Polish>Ta butelka na wodę zawiera wodę prosto ze środowiska, ma nieprzyjemny, silny zapach....</Polish>
+            <Portuguese>Essa garrafa de água contém água diretamente do meio ambiente e tem um odor forte e desagradável...</Portuguese>
+            <Russian>Эта бутылка для воды содержит воду прямо из окружающей среды, она имеет неприятный сильный запах...</Russian>
+            <German>Diese Wasserflasche enthält Wasser direkt aus der Umwelt, es hat einen fauligen, starken Geruch...</German>
+            <Korean>이 물병에는 환경에서 바로 나온 물이 들어 있으며 악취가 강합니다 ...</Korean>
+            <Japanese>この水筒は環境から直接採水しているため、悪臭が強い。</Japanese>
+            <Turkish>Bu su şişesi doğrudan çevreden gelen suyu içerir, kötü ve güçlü bir kokusu vardır...</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_WaterBottleDirty_DisplayName">
+            <English>Water Bottle (Dirty)</English>
+            <Czech>Láhev na vodu (špinavá)</Czech>
+            <French>Bouteille d'eau (sale)</French>
+            <Spanish>Botella de agua (sucia)</Spanish>
+            <Italian>Bottiglia d'acqua (sporca)</Italian>
+            <Polish>Butelka na wodę (brudna)</Polish>
+            <Portuguese>Garrafa de água (suja)</Portuguese>
+            <Russian>Бутылка для воды (грязная)</Russian>
+            <German>Wasserflasche (schmutzig)</German>
+            <Korean>물병(더러운)</Korean>
+            <Japanese>水筒（汚れている）</Japanese>
+            <Turkish>Su Şişesi (Kirli)</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_WaterBottlePurified_Description">
+            <English>This water bottle holds water that's been treated with purification tablets, removing all traces of radiation and biological contaminants</English>
+            <Czech>Tato láhev na vodu obsahuje vodu ošetřenou čisticími tabletami, které odstraňují všechny stopy radiace a biologických kontaminantů</Czech>
+            <French>Cette gourde contient de l'eau qui a été traitée avec des comprimés de purification, éliminant toute trace de radiation et de contaminants biologiques</French>
+            <Spanish>Esta botella de agua contiene agua tratada con pastillas purificadoras que eliminan todo rastro de radiación y contaminantes biológicos</Spanish>
+            <Polish>Ta butelka na wodę zawiera wodę, która została oczyszczona za pomocą tabletek oczyszczających, usuwając wszelkie ślady promieniowania i zanieczyszczeń biologicznych</Polish>
+            <Portuguese>Essa garrafa de água contém água que foi tratada com pastilhas de purificação, removendo todos os traços de radiação e contaminantes biológicos</Portuguese>
+            <Russian>В эту бутылку для воды помещается вода, обработанная очищающими таблетками, которые удаляют все следы радиации и биологических загрязнений</Russian>
+            <German>Diese Wasserflasche enthält Wasser, das mit Reinigungstabletten behandelt wurde, die alle Spuren von Strahlung und biologischen Verunreinigungen entfernen</German>
+            <Korean>이 물병에는 정화 정제로 처리된 물을 담아 방사능과 생물학적 오염 물질의 흔적을 모두 제거합니다</Korean>
+            <Japanese>この水筒は、浄化錠剤で処理され、放射能や生物学的汚染物質を除去した水を入れることができる。</Japanese>
+            <Turkish>Bu su şişesi, radyasyon ve biyolojik kirleticilerin tüm izlerini ortadan kaldıran arıtma tabletleri ile işlenmiş suyu tutar</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_WaterBottlePurified_DisplayName">
+            <English>Water Bottle (Purified)</English>
+            <Czech>Láhev na vodu (vyčištěná)</Czech>
+            <French>Bouteille d'eau (purifiée)</French>
+            <Spanish>Botella de agua (purificada)</Spanish>
+            <Italian>Bottiglia d'acqua (purificata)</Italian>
+            <Polish>Butelka na wodę (oczyszczoną)</Polish>
+            <Portuguese>Garrafa de água (purificada)</Portuguese>
+            <Russian>Бутылка для воды (очищенной)</Russian>
+            <German>Wasserflasche (gereinigt)</German>
+            <Korean>물병(정수)</Korean>
+            <Japanese>水筒（精製水）</Japanese>
+            <Turkish>Su Şişesi (Arıtılmış)</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_WeaponSystemKit_Description">
+            <English>weapons systems kit used for vehicle repairs</English>
+            <Czech>sada zbraňových systémů používaná pro opravy vozidel</Czech>
+            <French>kit de systèmes d'armes utilisé pour la réparation des véhicules</French>
+            <Spanish>kit de sistemas de armas utilizado para reparaciones de vehículos</Spanish>
+            <Italian>kit di sistemi d'arma utilizzati per la riparazione di veicoli</Italian>
+            <Polish>zestaw systemów uzbrojenia używany do naprawy pojazdów</Polish>
+            <Portuguese>kit de sistemas de armas usado para reparos de veículos</Portuguese>
+            <Russian>комплект систем вооружения, используемый для ремонта транспортных средств</Russian>
+            <German>Waffensystemsatz für Fahrzeugreparaturen</German>
+            <Korean>차량 수리에 사용되는 무기 시스템 키트</Korean>
+            <Japanese>車両の修理に使用される兵器システムキット</Japanese>
+            <Turkish>Araç onarımlarında kullanılan silah sistemleri kiti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_WeaponSystemKit_DisplayName">
+            <English>Weapon system kit</English>
+            <Czech>Sada zbraňového systému</Czech>
+            <French>Kit de système d'arme</French>
+            <Spanish>kit de sistema de armas</Spanish>
+            <Italian>Kit sistema d'arma</Italian>
+            <Polish>Zestaw systemu broni</Polish>
+            <Portuguese>Kit de sistema de armas</Portuguese>
+            <Russian>Комплект системы вооружения</Russian>
+            <German>Waffensystem-Bausatz</German>
+            <Korean>무기 시스템 키트</Korean>
+            <Japanese>ウェポンシステムキット</Japanese>
+            <Turkish>Silah sistemi kiti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_WinchRepairKit_Description">
+            <English>winch repair kit used for vehicles repairs</English>
+            <Czech>sada na opravu navijáku používaná při opravách vozidel</Czech>
+            <French>kit de réparation de treuil utilisé pour la réparation des véhicules</French>
+            <Spanish>kit de reparación de cabrestante utilizado para reparaciones de vehículos</Spanish>
+            <Italian>kit di riparazione per verricello utilizzato per la riparazione di veicoli</Italian>
+            <Polish>Zestaw naprawczy wyciągarki używany do naprawy pojazdów</Polish>
+            <Portuguese>kit de reparo de guincho usado para reparos de veículos</Portuguese>
+            <Russian>Ремкомплект лебедки, используемый для ремонта транспортных средств</Russian>
+            <German>Winden-Reparatursatz für Fahrzeugreparaturen</German>
+            <Korean>차량 수리에 사용되는 윈치 수리 키트</Korean>
+            <Japanese>車両の修理に使用されるウインチ修理キット</Japanese>
+            <Turkish>Araç onarımlarında kullanılan vinç tamir takımı</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_WinchRepairKit_DisplayName">
+            <English>Winch repair kit</English>
+            <Czech>Sada na opravu navijáku</Czech>
+            <French>Kit de réparation de treuil</French>
+            <Spanish>kit de reparación de cabrestante</Spanish>
+            <Italian>Kit riparazione verricello</Italian>
+            <Polish>Zestaw naprawczy wyciągarki</Polish>
+            <Portuguese>Kit de reparo de guincho</Portuguese>
+            <Russian>Ремкомплект лебедки</Russian>
+            <German>Winden-Reparatursatz</German>
+            <Korean>윈치 수리 키트</Korean>
+            <Japanese>ウインチ修理キット</Japanese>
+            <Turkish>Vinç tamir takımı</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_WolfBeer_Description">
+            <English>A favorite among survivors&lt;br/&gt; - Unhealthy</English>
+            <Czech>Oblíbený mezi přeživšími&lt;br/&gt; - Nezdravé</Czech>
+            <French>Un favori parmi les survivants&lt;br/&gt; - Mauvais pour la santé</French>
+            <Spanish>Un favorito entre los sobrevivientes&lt;br/&gt; - No saludable</Spanish>
+            <Italian>Un favorito tra i sopravvissuti&lt;br/&gt; - Non salutare</Italian>
+            <Polish>Ulubiony wśród ocalałych&lt;br/&gt; - Niezdrowy</Polish>
+            <Portuguese>Um favorito entre os sobreviventes&lt;br/&gt; - Prejudicial à saúde</Portuguese>
+            <Russian>Любимый напиток выживших&lt;br/&gt; - Нездоровый</Russian>
+            <German>Ein Favorit unter den Überlebenden&lt;br/&gt; - Ungesund</German>
+            <Korean>생존자 사이에서 인기있는 맥주&lt;br/&gt; - 건강에 해롭습니다</Korean>
+            <Japanese>生存者の間で人気があります&lt;br/&gt; - 健康に悪い</Japanese>
+            <Turkish>Hayatta kalanlar arasında favori&lt;br/&gt; - Sağlıksız</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_WolfBeer_DisplayName">
+            <English>Big Wolf Beer</English>
+            <Czech>Pivo Big Wolf</Czech>
+            <French>Bière Big Wolf</French>
+            <Spanish>Cerveza Big Wolf</Spanish>
+            <Italian>Birra Big Wolf</Italian>
+            <Polish>Piwo Big Wolf</Polish>
+            <Portuguese>Cerveja Big Wolf</Portuguese>
+            <Russian>Пиво Big Wolf</Russian>
+            <German>Big Wolf Bier</German>
+            <Korean>빅 울프 맥주</Korean>
+            <Japanese>ビッグウルフビール</Japanese>
+            <Turkish>Büyük Kurt Birası</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_WoodPanel_DisplayName">
+            <English>Woodpanel</English>
+            <Czech>Dřevěný panel</Czech>
+            <French>Panneau de bois</French>
+            <Spanish>Panel de madera</Spanish>
+            <Italian>Pannello in legno</Italian>
+            <Polish>Panel drewniany</Polish>
+            <Portuguese>Painel de madeira</Portuguese>
+            <Russian>Деревянная панель</Russian>
+            <German>Holzplatte</German>
+            <Korean>목판</Korean>
+            <Japanese>ウッドパネル</Japanese>
+            <Turkish>Ahşap Panel</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_WoodenLog_Description">
+            <English>A stout wooden log, can probably be used to make some lumber&lt;br/&gt; - Base crafting</English>
+            <Czech>Silný dřevěný kmen, pravděpodobně může být použit k výrobě řeziva&lt;br/&gt; - Základní stavební materiál</Czech>
+            <French>Une grosse bûche de bois, peut probablement être utilisée pour fabriquer du bois d'œuvre&lt;br/&gt; - Création de base</French>
+            <Spanish>Un grueso tronco de madera, probablemente se puede usar para hacer madera&lt;br/&gt; - Elaboración de bases</Spanish>
+            <Italian>Un grosso tronco di legno, probabilmente può essere usato per fare del legname&lt;br/&gt; - Creazione di basi</Italian>
+            <Polish>Gruba kłoda drewna, prawdopodobnie można ją wykorzystać do produkcji drewna&lt;br/&gt; - Tworzenie bazy</Polish>
+            <Portuguese>Uma tora de madeira robusta, provavelmente pode ser usada para fazer madeira&lt;br/&gt; - Criação de base</Portuguese>
+            <Russian>Толстый деревянный брус, вероятно, можно использовать для изготовления пиломатериалов&lt;br/&gt; - Базовое изготовление</Russian>
+            <German>Ein dicker Holzstamm, kann wahrscheinlich zur Herstellung von Bauholz verwendet werden&lt;br/&gt; - Basis Handwerk</German>
+            <Korean>굵은 나무 통나무, 아마도 목재를 만드는 데 사용할 수 있습니다.&lt;br/&gt; - 기지 제작</Korean>
+            <Japanese>頑丈な木の丸太は、おそらく木材を作るために使用できます&lt;br/&gt; - ベースクラフト</Japanese>
+            <Turkish>Sağlam bir ahşap kütük, muhtemelen kereste yapmak için kullanılabilir&lt;br/&gt; - Temel işçiliği</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_WoodenLog_DisplayName">
+            <English>Wooden Log</English>
+            <Czech>Dřevěný kmen</Czech>
+            <French>Bûche de bois</French>
+            <Spanish>Tronco de madera</Spanish>
+            <Italian>Tronco di legno</Italian>
+            <Polish>Kłoda drewna</Polish>
+            <Portuguese>Tora de madeira</Portuguese>
+            <Russian>Деревянное бревно</Russian>
+            <German>Holzstamm</German>
+            <Korean>나무 통나무</Korean>
+            <Japanese>木の丸太</Japanese>
+            <Turkish>Ahşap kütük</Turkish>
+        </Key>
+    </Package>
+</Project>
