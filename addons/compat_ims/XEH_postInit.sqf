@@ -21,7 +21,7 @@ if (isServer) then {
     } forEach _WBKIMSfunctions;
 
 //WBKIMS Force compat to Ravage zeds (This insures they no longer scream when killed):
-if (EGVAR(common,checkRavage)) then {
+if ("ravage" call EFUNC(common,isModLoaded)) then {
     {
         if (_x isKindOf "zombie") then {
             _x setVariable ["IMS_EventHandler_Hit",{

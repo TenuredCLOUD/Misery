@@ -1,8 +1,10 @@
+private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
+
 [
     QGVAR(hudShow),
     "CHECKBOX",
     ["WBK IMS HUD", "Enable IMS HUD"],
-    "Misery - WBK IMS HUD settings",
+    _category,
     false,
-    2
+    1
 ] call CBA_fnc_addSetting;
