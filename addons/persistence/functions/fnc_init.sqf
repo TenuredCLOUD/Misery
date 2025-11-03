@@ -20,12 +20,25 @@ if (isServer) then {
     [{
         call FUNC(autoSave);
     }, [], GVAR(autosaveTimer)] call CBA_fnc_waitAndExecute;
+
+    [{
+        call FUNC(gradSave);
+    }, [], GVAR(gradAutosaveTimer)] call CBA_fnc_waitAndExecute;
 };
 
 // New player or Respawned player
 player addEventHandler ["Respawn", {
     [false] call FUNC(newPlayer);
 }];
+
+// Singleplayer hardcore
+if (!isMultiplayer && GVAR(hardcore)) then {
+    player addEventHandler ["Killed", {
+        if (!isNil "grad_persistence_blacklist") then {
+            [missionName] call grad_persistence_fnc_clearMissionData;
+        };
+    }];
+};
 
 // Callback for multiplayer
 if (isMultiplayer) exitWith {

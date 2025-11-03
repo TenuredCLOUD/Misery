@@ -177,6 +177,10 @@ for "_i" from 1 to _numEntities do {
     _unit setSkill ["aimingShake", GVAR(shake)];
     _unit setSkill ["aimingSpeed", GVAR(speed)];
 
+    if (!isNil "grad_persistence_blacklist") then {
+        [_unit] call grad_persistence_fnc_blacklistObjects;
+    };
+
     if !(isMultiplayer) then {
         if (side _unit isEqualTo side player) then {
             private _equipmentMass = loadAbs _unit / getNumber (configFile >> "CfgInventoryGlobalVariable" >> "maxSoldierLoad");
