@@ -71,7 +71,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(gradAdminActions),
     "CHECKBOX",
-    ["GRAD Persistence admin actions", "Give admin level players higher privilege actions for database control (Requires GRAD persistence)"],
+    ["GRAD Persistence admin actions", "Gives admin level players higher privilege actions for database control (Requires GRAD persistence)"],
     _category,
     false,
     1

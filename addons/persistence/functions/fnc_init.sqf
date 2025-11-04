@@ -17,13 +17,35 @@
 if (isServer) then {
     [] call FUNC(loadData);
 
-    [{
-        call FUNC(autoSave);
-    }, [], GVAR(autosaveTimer)] call CBA_fnc_waitAndExecute;
+    if (GVAR(autosaveInterval) isNotEqualTo 0) then {
+        [{
+            call FUNC(autoSave);
+        }, [], GVAR(autosaveTimer)] call CBA_fnc_waitAndExecute;
+    };
 
-    [{
-        call FUNC(gradSave);
-    }, [], GVAR(gradAutosaveTimer)] call CBA_fnc_waitAndExecute;
+    if (GVAR(gradAutosaveInterval) isNotEqualTo 0) then {
+        [{
+            call FUNC(gradSave);
+        }, [], GVAR(gradAutosaveTimer)] call CBA_fnc_waitAndExecute;
+    };
+};
+
+// If GRAD Persistence is being used, and admin actions are enabled - add actions to admins, or SP player
+if (GVAR(gradAdminActions)) then {
+    [
+        "grad_db_menu",
+        "GRAD Persistence",
+        {
+            call BIS_fnc_admin isEqualTo 2 || !isMultiplayer
+        },
+        {
+            [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
+            createDialog QCLASS(grad_persistence_compat_ui);
+        },
+        "",
+        QPATHTOEF(icons,data\savedisk_ca.paa),
+        ""
+    ] call EFUNC(actions,addAction);
 };
 
 // New player or Respawned player

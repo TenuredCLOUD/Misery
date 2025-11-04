@@ -40,6 +40,7 @@ class CfgPatches {
 #include "menus\vehicleFurniture.hpp"
 #include "menus\refuelVehicle.hpp"
 #include "menus\refill_fuelCan.hpp"
+#include "menus\grad_persistence.hpp"
 
 class RscTitles {
     #include "menus\geiger.hpp"
