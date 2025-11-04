@@ -2,6 +2,7 @@ PREP(autosave);
 PREP(clientDataGet);
 PREP(clientDataSet);
 PREP(formatSaveName);
+PREP(gradSave);
 PREP(init);
 PREP(loadData);
 PREP(multiplayerDataLoad);
