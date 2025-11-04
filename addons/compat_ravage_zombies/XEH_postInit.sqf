@@ -35,3 +35,16 @@ if (GVAR(specimensEnabled)) then {
         ""
     ] call EFUNC(actions,addAction);
 };
+
+// Auto swap logic for Rvg tires and toolkits
+player addEventHandler ["Take", {
+	params ["_unit", "_container", "_item"];
+
+    if (_item isEqualTo "rvg_toolkit") then {
+        [_unit, "rvg_toolkit", "ToolKit"] call EFUNC(common,weaponSwap);
+    };
+
+    if (_item isEqualTo "rvg_tire") then {
+        [_unit, "rvg_tire", QCLASS(spareTire)] call EFUNC(common,weaponSwap);
+    };
+}];
