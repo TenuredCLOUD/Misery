@@ -141,6 +141,27 @@
 "CUP_lobby_chair", \
 "CUP_Church_chair"
 
+#define MACRO_BED_MODELS \
+"woodenbed_01_f.p3d", \
+"bed_big_a.p3d", \
+"bed_husbands.p3d", \
+"vojenska_palanda.p3d", \
+"postel_manz_kov.p3d", \
+"sofa_01_f.p3d", \
+"Land_ArmChair_01_F", \
+"armchair.p3d", \
+"armchair_big.p3d", \
+"postel_panelak1.p3d", \
+"postel_panelak2.p3d", \
+"sleeping_bag_f.p3d", \
+"sleeping_bag_blue_f.p3d", \
+"sleeping_bag_brown_f.p3d", \
+"ground_sheet_f.p3d", \
+"ground_sheet_blue_f.p3d", \
+"ground_sheet_khaki_f.p3d", \
+"ground_sheet_opfor_f.p3d", \
+"ground_sheet_yellow_f.p3d"
+
 // Artifacts
 #define MACRO_ARTIFACTS QCLASS(artifact_01), QCLASS(artifact_02), QCLASS(artifact_03), QCLASS(artifact_04), QCLASS(artifact_05), QCLASS(artifact_06), QCLASS(artifact_07), QCLASS(artifact_08), QCLASS(artifact_09), QCLASS(artifact_10)
 
