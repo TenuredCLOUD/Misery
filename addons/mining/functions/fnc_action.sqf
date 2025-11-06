@@ -27,7 +27,7 @@ private _miningTime = _objectData select 1;
 private _audio = _objectData select 2;
 
 if !([[QCLASS(pickaxe)]] call EFUNC(common,hasItem)) exitWith {
-    [QEGVAR(common,tileText), format ["You need a pickaxe to mine ore..."]] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize "STR_MISERY_MINEORENOTOOLS"] call CBA_fnc_localEvent;
 };
 
 if (GVAR(minedPositions) findIf {_x distance getPosATL player < 2.5} isNotEqualTo -1) exitWith {

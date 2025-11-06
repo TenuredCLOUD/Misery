@@ -4206,48 +4206,6 @@
             <Japanese>木斧</Japanese>
             <Turkish>Tahta balta</Turkish>
         </Key>
-        <Key ID="STR_Misery_Assets_WoodNail_Description">
-            <English>Wood nail&lt;br/&gt; - Crafting item</English>
-            <Czech>Hřebík&lt;br/&gt; - Předmět pro výrobu</Czech>
-            <French>Clou en bois&lt;br/&gt; - Objet d'artisanat</French>
-            <Spanish>Clavo de madera&lt;br/&gt; - Objeto de fabricación</Spanish>
-            <Italian>Chiodo di legno&lt;br/&gt; - Oggetto di creazione</Italian>
-            <Polish>Drewniany gwóźdź&lt;br/&gt; - Przedmiot do tworzenia</Polish>
-            <Portuguese>Prego de madeira&lt;br/&gt; - Item de criação</Portuguese>
-            <Russian>Деревянный гвоздь&lt;br/&gt; - Предмет для крафта</Russian>
-            <German>Holznagel&lt;br/&gt; - Handwerksgegenstand</German>
-            <Korean>나무 못&lt;br/&gt; - 제작 아이템</Korean>
-            <Japanese>木釘&lt;br/&gt; - クラフトアイテム</Japanese>
-            <Turkish>Ahşap çivi&lt;br/&gt; - Üretim eşyası</Turkish>
-        </Key>
-        <Key ID="STR_Misery_Assets_WoodNail_DisplayName">
-            <English>Wood nail</English>
-            <Czech>Hřebík</Czech>
-            <French>Clou en bois</French>
-            <Spanish>Clavo de madera</Spanish>
-            <Italian>Chiodo di legno</Italian>
-            <Polish>Drewniany gwóźdź</Polish>
-            <Portuguese>Prego de madeira</Portuguese>
-            <Russian>Деревянный гвоздь</Russian>
-            <German>Holznagel</German>
-            <Korean>나무 못</Korean>
-            <Japanese>木釘</Japanese>
-            <Turkish>Ahşap çivi</Turkish>
-        </Key>
-        <Key ID="STR_Misery_Assets_WoodPanel_DisplayName">
-            <English>Woodpanel</English>
-            <Czech>Dřevěný panel</Czech>
-            <French>Panneau de bois</French>
-            <Spanish>Panel de madera</Spanish>
-            <Italian>Pannello in legno</Italian>
-            <Polish>Panel drewniany</Polish>
-            <Portuguese>Painel de madeira</Portuguese>
-            <Russian>Деревянная панель</Russian>
-            <German>Holzplatte</German>
-            <Korean>목판</Korean>
-            <Japanese>ウッドパネル</Japanese>
-            <Turkish>Ahşap Panel</Turkish>
-        </Key>
         <Key ID="STR_Misery_Assets_WoodPlank_Description">
             <English>Wooden plank&lt;br/&gt; - Crafting item</English>
             <Czech>Dřevěná prkna&lt;br/&gt; - Předmět pro výrobu</Czech>

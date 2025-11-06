@@ -1050,18 +1050,6 @@ class CfgWeapons {
         };
     };
 
-    class CLASS(woodnail): CLASS(ItemCore) {
-        displayName = CSTRING(WoodNail_DisplayName);
-        descriptionShort = CSTRING(WoodNail_Description);
-        picture = QPATHTOF(data\icons\Woodnail.paa);
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 0;
-        };
-    };
-
     class CLASS(woodensticks): CLASS(ItemCore) {
         displayName = CSTRING(WoodenSticks_DisplayName);
         descriptionShort = CSTRING(WoodenSticks_Description);
@@ -1098,18 +1086,6 @@ class CfgWeapons {
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 225;
-        };
-    };
-
-    class CLASS(boxNails): CLASS(ItemCore) {
-        displayName = CSTRING(BoxNails_DisplayName);
-        descriptionShort = CSTRING(BoxNails_Description);
-        picture = QPATHTOF(data\icons\boxnails.paa);
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 0;
         };
     };
 

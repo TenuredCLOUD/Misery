@@ -145,6 +145,15 @@ class CfgMagazines {
         scope = 2;
     };
 
+    class CLASS(boxNails): CLASS(FakeMagazine) {
+        count = 20;
+        descriptionShort = CSTRING(BoxNails_Description);
+        displayName = CSTRING(BoxNails_DisplayName);
+        mass = 2;
+        picture = QPATHTOF(data\icons\boxnails.paa);
+        scope = 2;
+    };
+
     class CLASS(electricHandsaw): CLASS(FakeMagazine) {
         count = 10;
         descriptionShort = CSTRING(ElectricHandSaw_Description);
