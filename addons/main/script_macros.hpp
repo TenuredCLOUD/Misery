@@ -139,20 +139,21 @@
 "CUP_postel_panelak2", \
 "CUP_armchair", \
 "CUP_lobby_chair", \
-"CUP_Church_chair"
+"CUP_Church_chair", \
+"Land_TentA_F", \
+"Land_TentDome_F", \
+"rvg_dome_tent_blu", \
+"rvg_dome_tent_grn", \
+"rvg_dome_tent_gry", \
+"Land_TentSolar_01_bluewhite_F", \
+"Land_TentSolar_01_olive_F", \
+"Land_TentSolar_01_redwhite_F", \
+"Land_TentSolar_01_sand_F"
 
 #define MACRO_BED_MODELS \
 "woodenbed_01_f.p3d", \
-"bed_big_a.p3d", \
-"bed_husbands.p3d", \
-"vojenska_palanda.p3d", \
-"postel_manz_kov.p3d", \
-"sofa_01_f.p3d", \
-"Land_ArmChair_01_F", \
-"armchair.p3d", \
-"armchair_big.p3d", \
-"postel_panelak1.p3d", \
-"postel_panelak2.p3d", \
+"sun_chair_green_f.p3d", \
+"armchair_01_f.p3d", \
 "sleeping_bag_f.p3d", \
 "sleeping_bag_blue_f.p3d", \
 "sleeping_bag_brown_f.p3d", \
@@ -160,7 +161,25 @@
 "ground_sheet_blue_f.p3d", \
 "ground_sheet_khaki_f.p3d", \
 "ground_sheet_opfor_f.p3d", \
-"ground_sheet_yellow_f.p3d"
+"ground_sheet_yellow_f.p3d", \
+"bed_big_a.p3d", \
+"bed_husbands.p3d", \
+"vojenska_palanda.p3d", \
+"postel_manz_kov.p3d", \
+"postel_panelak1.p3d", \
+"postel_panelak2.p3d", \
+"armchair.p3d", \
+"lobby_chair.p3d", \
+"church_chair.p3d", \
+"tenta_f.p3d", \
+"tentdome_f.p3d", \
+"rvg_dome_tent_blu.p3d", \
+"rvg_dome_tent_grn.p3d", \
+"rvg_dome_tent.p3d", \
+"tentsolar_01_f.p3d", \
+"tentsolar_01_f.p3d", \
+"tentsolar_01_f.p3d", \
+"tentsolar_01_f.p3d"
 
 // Artifacts
 #define MACRO_ARTIFACTS QCLASS(artifact_01), QCLASS(artifact_02), QCLASS(artifact_03), QCLASS(artifact_04), QCLASS(artifact_05), QCLASS(artifact_06), QCLASS(artifact_07), QCLASS(artifact_08), QCLASS(artifact_09), QCLASS(artifact_10)
