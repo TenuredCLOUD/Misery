@@ -31,7 +31,8 @@ player setVariable [QGVAR(selectedFurniture), ""];
 private _inventory = player getVariable [QGVAR(furnitureInventory), []];
 
 {
-    private _displayName = getText (configFile >> "CfgVehicles" >> _x >> "displayName");
+    [_x] call EFUNC(common,getObjectData) params ["_displayName"];
+    //private _displayName = getText (configFile >> "CfgVehicles" >> _x >> "displayName");
     private _index = _list lbAdd _displayName;
     _list lbSetData [_index, _x];
 } forEach _inventory;

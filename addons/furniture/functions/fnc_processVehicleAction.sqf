@@ -54,18 +54,19 @@ private _progressText = format ["%1 %2...", _actionText, _displayName];
             _inventory deleteAt _index;
             _vehicle setVariable [QGVAR(furnitureCargoInventory), _inventory, true];
             private _furnitureCfg = missionConfigFile >> "CfgMisery_Furniture" >> _className;
-            private _itemMass = getNumber (_furnitureCfg >> "mass");
+            private _itemMass = [[_className] call EFUNC(common,getObjectMass), getNumber (_furnitureCfg >> "mass")] select (isNumber (_furnitureCfg >> "mass"));
+            private _maxCargoMass = [maxLoad _vehicle, getNumber (_vehicleCfg >> "maxCargoMass")] select (isNumber (_vehicleCfg >> "maxCargoMass"));
             private _currentCargoMass = _vehicle getVariable [QGVAR(furnitureCargoMass), 0];
             _vehicle setVariable [QGVAR(furnitureCargoMass), _currentCargoMass - _itemMass max 0, true];
             [_className] call FUNC(addToInventory);
             private _listBox = _dialog displayCtrl 1500;
             _listBox lbDelete _index;
-            _progressBar progressSetPosition ((_currentCargoMass - _itemMass) / (getNumber (missionConfigFile >> "CfgMisery_VehicleData" >> (typeOf _vehicle) >> "maxCargoMass") max 0.01));
+            _progressBar progressSetPosition ((_currentCargoMass - _itemMass) / _maxCargoMass);
         };
     } else {
         [_className, _vehicle, _caller, _target, _actionId] call FUNC(addToVehicleInventory);
         private _currentCargoMass = _vehicle getVariable [QGVAR(furnitureCargoMass), 0];
-        _progressBar progressSetPosition (_currentCargoMass / (getNumber (missionConfigFile >> "CfgMisery_VehicleData" >> (typeOf _vehicle) >> "maxCargoMass") max 0.01));
+        _progressBar progressSetPosition (_currentCargoMass / _maxCargoMass);
     };
 
     player setVariable [QGVAR(processVehicleAction), nil];

@@ -17,7 +17,6 @@
 params ["_className"];
 
 private _furnitureCfg = missionConfigFile >> "CfgMisery_Furniture" >> _className;
-private _snapToSurface = getNumber (_furnitureCfg >> "snapToSurface");
 
 // Remove from inventory
 private _inventory = player getVariable [QGVAR(furnitureInventory), []];
@@ -38,8 +37,12 @@ player setVariable [QGVAR(isForcedplacement), false];
 // Disable collision & simulation locally
 player disableCollisionWith _object;
 _object enableSimulation false;
+_object setPhysicsCollisionFlag false;
 
-[_object, _snapToSurface] call FUNC(trackHeight);
+// Force holster of weapon
+call EFUNC(holster,action);
+
+[_object, GVAR(snapToSurface)] call FUNC(trackHeight);
 [] call FUNC(trackMouse);
 [] call FUNC(watchState);
 player forceWalk true;

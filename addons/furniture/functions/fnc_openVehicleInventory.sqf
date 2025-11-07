@@ -29,9 +29,10 @@ private _inventory = _vehicle getVariable [QGVAR(furnitureCargoInventory), []];
 
 lbClear _listBox;
 {
-    private _displayName = getText (configFile >> "CfgVehicles" >> _x >> "displayName");
+    [_x] call EFUNC(common,getObjectData) params ["_displayName"];
+    //private _displayName = getText (configFile >> "CfgVehicles" >> _x >> "displayName");
     private _furnitureCfg = missionConfigFile >> "CfgMisery_Furniture" >> _x;
-    private _itemMass = getNumber (_furnitureCfg >> "mass");
+    private _itemMass = [[_x] call EFUNC(common,getObjectMass), getNumber (_furnitureCfg >> "mass")] select (isNumber (_furnitureCfg >> "mass"));
     private _index = _listBox lbAdd format ["%1 (%2 kg)", _displayName, _itemMass];
     _listBox lbSetData [_index, _x];
 } forEach _inventory;
@@ -61,7 +62,7 @@ player setVariable [QGVAR(targetVehicle), _vehicle];
     private _progressBar = _dialog displayCtrl 1800;
     private _currentCargoMass = _vehicle getVariable [QGVAR(furnitureCargoMass), 0];
     private _vehicleCfg = missionConfigFile >> "CfgMisery_VehicleData" >> (typeOf _vehicle);
-    private _maxCargoMass = getNumber (_vehicleCfg >> "maxCargoMass");
+    private _maxCargoMass = [maxLoad _vehicle, getNumber (_vehicleCfg >> "maxCargoMass")] select (isNumber (_vehicleCfg >> "maxCargoMass"));
 
     if (isNull _dialog) exitWith {
         [_handle] call CBA_fnc_removePerFrameHandler;
