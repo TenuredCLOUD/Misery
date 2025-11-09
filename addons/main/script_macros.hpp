@@ -255,7 +255,8 @@ QCLASS(guttingKnife), \
 [QUOTE(rvg_tire), QCLASS(spareTire)], \
 [QUOTE(rvg_matches), QCLASS(matchBox)], \
 [QUOTE(rvg_canOpener), QCLASS(canOpener)], \
-[QUOTE(rvg_guttingKnife), QCLASS(guttingKnife)] \
+[QUOTE(rvg_guttingKnife), QCLASS(guttingKnife)], \
+[QUOTE(rvg_Geiger), QCLASS(geiger_Off)] \
 ]
 
 // RVG Meds
