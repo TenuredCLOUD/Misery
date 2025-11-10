@@ -24,7 +24,7 @@ GVAR(handleEngine) = {
     GVAR(engineHandle) = _handle;
 
     private _requiredBatteries = _vehicle getVariable [QGVAR(batteryCount), 1];
-    private _batteryType = _vehicle getVariable [QGVAR(batteryType), "misery_autoBattery"];
+    private _batteryType = _vehicle getVariable [QGVAR(batteryType), 0];
     private _batteryLevel = _vehicle getVariable [QGVAR(batteryLevel), 0];
     private _installedBatteries = _vehicle getVariable [QGVAR(installedBatteries), 0];
     private _currentOilLevel = _vehicle getVariable [QGVAR(oilLevel), 0];

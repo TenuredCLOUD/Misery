@@ -28,14 +28,15 @@ if (_installedBatteries <= 0) exitWith {
     ctrlSetText [1001, format ["%1 has no batteries left to remove...", [_vehicle] call EFUNC(common,getObjectData) select 0]];
 };
 
-private _batteryType = _vehicle getVariable [QGVAR(batteryType), "misery_autoBattery"];
+private _batteryType = _vehicle getVariable [QGVAR(batteryType), 0];
+private _batteryClass = [QCLASS(autoBattery), QCLASS(autoBattery_Heavy)] select (_batteryType isEqualTo 1);
 
 if (_installedBatteries > 0) then {
     [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], false] call EFUNC(common,displayEnableControls);
 
     player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
     [{
-        params ["_vehicle", "_batteryType", "_installedBatteries", "_batteryCount", "_batteryLevel"];
+        params ["_vehicle", "_batteryType", "_batteryClass", "_installedBatteries", "_batteryCount", "_batteryLevel"];
         private _chargePerBattery = (((_batteryLevel * 100) / _installedBatteries) * _batteryCount);
         _installedBatteries = _installedBatteries - 1;
         _vehicle setVariable [QGVAR(installedBatteries), _installedBatteries, true];
@@ -44,7 +45,7 @@ if (_installedBatteries > 0) then {
             _vehicle setVariable [QGVAR(batteryLevel), 0, true];
         };
         [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
-        [player, _batteryType, _chargePerBattery, true] call CBA_fnc_addMagazine;
+        [player, _batteryClass, _chargePerBattery, true] call CBA_fnc_addMagazine;
         [_vehicle] call FUNC(listed);
-    }, [_vehicle, _batteryType, _installedBatteries, _batteryCount, _batteryLevel], 3] call CBA_fnc_waitAndExecute;
+    }, [_vehicle, _batteryType, _batteryClass, _installedBatteries, _batteryCount, _batteryLevel], 3] call CBA_fnc_waitAndExecute;
 };
