@@ -23,7 +23,7 @@ GVAR(rotationHandle) = ["MouseZChanged", {
 
     private _scrollDir = if (_scroll > 0) then {1} else {-1};
     private _rotation = _object getVariable [QGVAR(rotation), 0];
-    private _increment = getNumber (missionConfigFile >> "CfgMisery_Furniture" >> (typeOf _object) >> "rotationIncrement");
+    private _increment = GVAR(rotationIncrement);
     _rotation = _rotation + (_scrollDir * _increment);
     _object setDir _rotation;
     _object setVariable [QGVAR(rotation), _rotation];
@@ -34,7 +34,8 @@ GVAR(clickHandle) = ["MouseButtonDown", {
 
     private _object = player getVariable [QGVAR(placingObject), objNull];
     private _className = player getVariable [QGVAR(selectedFurniture), ""];
-    private _displayName = getText (configFile >> "CfgVehicles" >> _className >> "displayName");
+    //private _displayName = getText (configFile >> "CfgVehicles" >> _className >> "displayName");
+    [_className] call EFUNC(common,getObjectData) params ["_displayName"];
     private _isForcedPlacement = player getVariable [QGVAR(isForcedplacement), nil];
 
     // Safety incase no object exists
@@ -61,7 +62,7 @@ GVAR(clickHandle) = ["MouseButtonDown", {
 
             if (!_isForcedPlacement) then {
                 private _furnitureCfg = missionConfigFile >> "CfgMisery_Furniture" >> _className;
-                private _itemMass = getNumber (_furnitureCfg >> "mass");
+                private _itemMass = [[_className] call EFUNC(common,getObjectMass), getNumber (_furnitureCfg >> "mass")] select (isNumber (_furnitureCfg >> "mass"));
                 private _currentMass = player getVariable [QGVAR(furnitureLoad), MACRO_PLAYER_DEFAULTS_LOW];
                 private _newMass = _currentMass - _itemMass max 0;
                 player setVariable [QGVAR(furnitureLoad), _newMass];
@@ -79,7 +80,8 @@ GVAR(clickHandle) = ["MouseButtonDown", {
 
     if (_button isEqualTo 1) then {
         private _className = player getVariable [QGVAR(selectedFurniture), ""];
-        private _displayName = getText (configFile >> "CfgVehicles" >> _className >> "displayName");
+        //private _displayName = getText (configFile >> "CfgVehicles" >> _className >> "displayName");
+        [_className] call EFUNC(common,getObjectData) params ["_displayName"];
         private _posASL = getPosASL _object;
         private _rotation = _object getVariable [QGVAR(rotation), 0];
 

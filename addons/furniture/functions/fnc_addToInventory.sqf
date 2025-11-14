@@ -18,11 +18,12 @@ params ["_className"];
 
 private _inventory = player getVariable [QGVAR(furnitureInventory), []];
 private _currentMass = player getVariable [QGVAR(furnitureLoad), MACRO_PLAYER_DEFAULTS_LOW];
-
 private _furnitureCfg = missionConfigFile >> "CfgMisery_Furniture" >> _className;
-private _itemMass = getNumber (_furnitureCfg >> "mass");
+private _itemMass = [[_className] call EFUNC(common,getObjectMass), getNumber (_furnitureCfg >> "mass")] select (isNumber (_furnitureCfg >> "mass"));
 
-private _itemName = getText (configFile >> "CfgVehicles" >> _className >> "displayName");
+//private _itemName = getText (configFile >> "CfgVehicles" >> _className >> "displayName");
+
+[_className] call EFUNC(common,getObjectData) params ["_itemName"];
 
 if ((GVAR(maxCarryMass) isNotEqualTo -1) && _currentMass + _itemMass > GVAR(maxCarryMass)) exitWith {
     private _tooHeavyTip = format ["Cannot carry %1 (too heavy, %2 kg). Place it now...", _itemName, _itemMass];

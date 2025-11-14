@@ -28,6 +28,15 @@ _serverObject setDir _rotation;
 // Re-enable collision & simulation locally
 player enableCollisionWith _serverObject;
 _serverObject enableSimulation true;
+_serverObject setPhysicsCollisionFlag true;
+
+// If placement is a crate, remove contents
+if (_serverObject isKindOf "ReammoBox_F") then {
+    clearMagazineCargoGlobal _serverObject;
+    clearWeaponCargoGlobal _serverObject;
+    clearItemCargoGlobal _serverObject;
+    clearBackpackCargoGlobal _serverObject;
+};
 
 private _placed = player getVariable [QGVAR(placedFurniture), []];
 _placed pushBack _serverObject;

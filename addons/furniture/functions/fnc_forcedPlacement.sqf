@@ -16,8 +16,8 @@
 
 params ["_className"];
 
-private _furnitureCfg = missionConfigFile >> "CfgMisery_Furniture" >> _className;
-private _snapToSurface = getNumber (_furnitureCfg >> "snapToSurface");
+// private _furnitureCfg = missionConfigFile >> "CfgMisery_Furniture" >> _className;
+// private _snapToSurface = getNumber (_furnitureCfg >> "snapToSurface");
 
 // Create object locally
 private _object = createVehicleLocal [_className, [0,0,0], [], 0, "CAN_COLLIDE"];
@@ -28,8 +28,9 @@ player setVariable [QGVAR(isForcedplacement), true];
 // Disable collision & simulation locally
 player disableCollisionWith _object;
 _object enableSimulation false;
+_object setPhysicsCollisionFlag false;
 
-[_object, _snapToSurface] call FUNC(trackHeight);
+[_object, GVAR(snapToSurface)] call FUNC(trackHeight);
 [] call FUNC(trackMouse);
 [] call FUNC(watchState);
 player forceWalk true;
