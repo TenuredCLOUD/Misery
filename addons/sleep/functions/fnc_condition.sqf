@@ -22,4 +22,15 @@ private _object = cursorObject;
 
 private _model = getModelInfo _object select 0;
 
-_nearObjects isNotEqualTo [] || _nearTerrainObjects isNotEqualTo [] || vehicle player isKindOf "Car" || _model in [MACRO_BED_MODELS]
+private _vehicleConfig = "";
+
+private _canSleepInVehicle = false;
+
+if !(isNull objectParent player) then {
+    _vehicleConfig = configOf (vehicle player);
+    if (getNumber (_vehicleConfig >> "transportSoldier") > 1) then {
+        _canSleepInVehicle = true;
+    };
+};
+
+_nearObjects isNotEqualTo [] || _nearTerrainObjects isNotEqualTo [] || (vehicle player isKindOf "Car" && _canSleepInVehicle) || _model in [MACRO_BED_MODELS]
