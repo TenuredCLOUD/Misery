@@ -6,7 +6,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     ["Speed display", "True - KM/H | False - MPH"],
     _category,
     false,
-    0
+    2
 ] call CBA_fnc_addSetting;
 
 [

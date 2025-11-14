@@ -68,7 +68,7 @@
 
         private _fuelLevel = fuel _vehicle;
         private _batteryLevel = _vehicle getVariable [QGVAR(batteryLevel), 100];
-        private _batteryType = _vehicle getVariable [QGVAR(batteryType), "misery_autoBattery"];
+        private _batteryType = _vehicle getVariable [QGVAR(batteryType), 0];
         private _requiredBatteries = _vehicle getVariable [QGVAR(batteryCount), 1];
         private _oilLevel = _vehicle getVariable [QGVAR(oilLevel), 0];
         private _coolantLevel = _vehicle getVariable [QGVAR(coolantLevel), 0];
