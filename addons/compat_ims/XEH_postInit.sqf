@@ -63,16 +63,37 @@ if ("ravage" call EFUNC(common,isModLoaded)) then {
 
 if (!hasInterface) exitWith {};
 
-WBK_ShowHud = GVAR(hudShow);
+[{!isNil "WBK_ShowHud"}, {
+    WBK_ShowHud = false;
+}, []] call CBA_fnc_waitUntilAndExecute;
 
 // WBK IMS Handle for Dash / sprint w/ no stamina (overrides to enforce stamina depletion)
 [] call FUNC(dash);
 
+// Auto swap logic for basic item conversion to IMS melee weapons
+player addEventHandler ["Take", {
+	params ["_unit", "_container", "_item"];
+    // Knives & Axes
+    private _toolGear = MACRO_IMS_COMPAT findIf { _item isEqualTo (_x select 0) };
+    if (_toolGear isNotEqualTo -1) then {
+        private _oldToolItem = _item;
+        private _newToolItem = (MACRO_IMS_COMPAT select _toolGear) select 1;
+        if ([_unit, _oldToolItem] call CBA_fnc_removeItem) then {
+            [_unit, _newToolItem, true] call CBA_fnc_addItem;
+        };
+    };
+}];
+
 player addEventHandler ["InventoryOpened", {
-    [player, QCLASS(woodaxe), "WBK_axe"] call EFUNC(common,weaponSwap);
-    [player, QCLASS(sledgehammer), "WBK_survival_weapon_2"] call EFUNC(common,weaponSwap);
-    [player, QCLASS(craftingHammer), "WBK_SmallHammer"] call EFUNC(common,weaponSwap);
-    [player, QCLASS(anvilHammer), "WBK_SmallHammer"] call EFUNC(common,weaponSwap);
-    [player, "rvg_guttingKnife", selectRandom [MACRO_KNIVES]] call EFUNC(common,weaponSwap);
-    [player, QCLASS(guttingKnife), selectRandom [MACRO_KNIVES]] call EFUNC(common,weaponSwap);
+    params ["_unit", "_primaryContainer", "_secondaryContainer"];
+    // Knives & Axes
+    {
+        private _oldToolItem = _x select 0;
+        private _newToolItem = _x select 1;
+
+        if ([[_oldToolItem]] call EFUNC(common,hasItem)) then {
+            [_unit, _oldToolItem] call CBA_fnc_removeItem;
+            [_unit, _newToolItem, true] call CBA_fnc_addItem;
+        };
+    } forEach MACRO_IMS_COMPAT;
 }];
