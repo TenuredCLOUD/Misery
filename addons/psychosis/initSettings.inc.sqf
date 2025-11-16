@@ -10,11 +10,20 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(textEnabled),
+    "CHECKBOX",
+    ["Text notifiers", "Enable psychosis text notifications?"],
+    _category,
+    false,
+    1
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(cycleTimer),
     "LIST",
     ["Psychosis Cycle Timer", "How often is the psychosis value updated?"],
     _category,
-    [[15, 30, 60], ["10 Seconds", "30 Seconds", "60 Seconds"], 0],
+    [[15, 30, 60], ["15 Seconds", "30 Seconds", "60 Seconds"], 0],
     1
 ] call CBA_fnc_addSetting;
 
@@ -41,7 +50,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "SLIDER",
     ["Psychosis at Night Increase", "Added psychosis value from Night time"],
     _category,
-    [0.1, 1, 0.25, 3],
+    [0.1, 1, 0.25, 2],
     1
 ] call CBA_fnc_addSetting;
 
@@ -50,6 +59,6 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "SLIDER",
     ["Unnatural Entities Increase", "Additional psychosis value from strange entities (Anomalies, Spooks, Zombies etc.)"],
     _category,
-    [0.1, 1, 0.25, 3],
+    [0.1, 1, 0.25, 2],
     1
 ] call CBA_fnc_addSetting;

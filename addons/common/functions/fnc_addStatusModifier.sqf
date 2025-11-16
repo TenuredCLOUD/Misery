@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [-1, "Psychosis"] call misery_common_fnc_addModifier
+ * [-1, "Psychosis"] call misery_common_fnc_addStatusModifier
  *
 */
 

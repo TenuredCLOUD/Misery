@@ -27,7 +27,7 @@ if ([50] call EFUNC(common,rollChance)) then {
 
 if (_psychosisLevel < 0.25) exitWith {};
 
-if ([50] call EFUNC(common,rollChance)) then {
+if ([5] call EFUNC(common,rollChance) && GVAR(textEnabled)) then {
     private _text = GVAR(randomTextLines) select (_psychosisLevel > 0.5);
     [QEGVAR(common,titleText), [selectRandom _text]] call CBA_fnc_localEvent;
 };
@@ -42,5 +42,13 @@ GVAR(sleepBlocked) = true;
 
 if ([50] call EFUNC(common,rollChance)) then {
     enableCamShake true;
-    addCamShake [1, GVAR(cycleTimer), 2];
+    addCamShake [2, GVAR(cycleTimer), 2];
 };
+
+if (_psychosisLevel < 0.75) exitWith {
+    if (GVAR(terrifiedState)) then {
+        GVAR(terrifiedState) = false;
+    };
+};
+
+GVAR(terrifiedState) = true;
