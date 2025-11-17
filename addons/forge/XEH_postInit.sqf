@@ -12,7 +12,7 @@ if (isClass (missionConfigFile >> "CfgMisery_ForgeData")) then {
 
     [
         "forge_menu",
-        "Use Forge",
+        localize "STR_MISERY_USEFORGE",
         {[[QCLASS(forge)], 2.5] call EFUNC(common,nearCraftingStation)},
         {
             [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
