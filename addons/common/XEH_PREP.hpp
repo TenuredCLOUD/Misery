@@ -15,6 +15,7 @@ PREP(getObjectMass);
 PREP(getPlayerVariables);
 PREP(getSimplifiedLoadout);
 PREP(grabComposition);
+PREP(grabParentClass);
 PREP(handgunAttachments);
 PREP(hasItem);
 PREP(isInside);
