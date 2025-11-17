@@ -181,6 +181,42 @@
 "tentsolar_01_f.p3d", \
 "tentsolar_01_f.p3d"
 
+// Door locks - building models that don't lock
+#define MACRO_NODOORLOCK_MODELS \
+"ds_housev_1t.p3d", \
+"shed_w03.p3d", \
+"ind_garage01.p3d", \
+"a_office02.p3d", \
+"strazni_vez.p3d", \
+"ds_housev_2t1.p3d", \
+"shed_m03.p3d", \
+"shed_w02.p3d", \
+"misc_waterstation.p3d", \
+"ds_housev_2i.p3d", \
+"ds_housev_2l.p3d", \
+"shed_01_f.p3d", \
+"ds_housev_3i1.p3d", \
+"sara_zluty_statek_in.p3d", \
+"ds_housev_3i4.p3d", \
+"ds_housev_3i2.p3d", \
+"ds_housev_1l2.p3d", \
+"sara_domek_zluty.p3d", \
+"church_03.p3d", \
+"shed_w01.p3d", \
+"shed_m01.p3d", \
+"barn_metal.p3d", \
+"nav_boathouse.p3d", \
+"ds_housev_2t2.p3d", \
+"ds_housev_3i3.p3d", \
+"shed_wooden.p3d", \
+"a_tvtower_base.p3d", \
+"garaz_long_open.p3d", \
+"budova4_in.p3d", \
+"ind_pec_02.p3d", \
+"rail_station_big_f.p3d", \
+"a_hospital.p3d", \
+"a_office02.p3d"
+
 // Artifacts
 #define MACRO_ARTIFACTS QCLASS(artifact_01), QCLASS(artifact_02), QCLASS(artifact_03), QCLASS(artifact_04), QCLASS(artifact_05), QCLASS(artifact_06), QCLASS(artifact_07), QCLASS(artifact_08), QCLASS(artifact_09), QCLASS(artifact_10)
 
