@@ -23,7 +23,7 @@ params ["_className", "_displayName", "_serverObject"];
     format ["Load %1 in nearby vehicle", _displayName],
     QUOTE(a3\data_f_destroyer\data\ui\igui\cfg\holdactions\holdaction_loadvehicle_ca.paa),
     QUOTE(a3\data_f_destroyer\data\ui\igui\cfg\holdactions\holdaction_loadvehicle_ca.paa),
-    QUOTE(_this distance _target < 2 && [ARR_1(_target)] call EFUNC(common,nearVehicle) params [ARR_2('','_nearestVehicle')]; _nearestVehicle isNotEqualTo objNull),
+    QUOTE(_this distance _target < 2 && ([ARR_1(_target)] call EFUNC(common,nearVehicle)) select 0),
     QUOTE(_caller distance _target < 2),
     {},
     {},
@@ -33,6 +33,9 @@ params ["_className", "_displayName", "_serverObject"];
         [_target] call EFUNC(common,nearVehicle) params ["", "_nearestVehicle"];
         if (_nearestVehicle isEqualTo objNull) exitWith {
             ["No vehicle nearby!", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
+        };
+        if !([_target] call EFUNC(common,emptyObject)) exitWith {
+            ["Remove objects cargo before loading...", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
         };
         [_className, _nearestVehicle, "load", _caller, _target, _actionId] call FUNC(processVehicleAction);
     },

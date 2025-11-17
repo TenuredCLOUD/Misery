@@ -21,14 +21,15 @@
 params ["_className", "_vehicle", "_caller", "_target", "_actionId"];
 
 private _furnitureCfg = missionConfigFile >> "CfgMisery_Furniture" >> _className;
-private _itemMass = getNumber (_furnitureCfg >> "mass");
-private _itemName = getText (configFile >> "CfgVehicles" >> _className >> "displayName");
+private _itemMass = [[_className] call EFUNC(common,getObjectMass), getNumber (_furnitureCfg >> "mass")] select (isNumber (_furnitureCfg >> "mass"));
+
+//private _itemName = getText (configFile >> "CfgVehicles" >> _className >> "displayName");
+[_className] call EFUNC(common,getObjectData) params ["_itemName"];
 
 [_vehicle] call EFUNC(common,getObjectData) params ["_displayName"];
 
 private _vehicleCfg = missionConfigFile >> "CfgMisery_VehicleData" >> (typeOf _vehicle);
-private _maxCargoMass = getNumber (_vehicleCfg >> "maxCargoMass");
-
+private _maxCargoMass = [maxLoad _vehicle, getNumber (_vehicleCfg >> "maxCargoMass")] select (isNumber (_vehicleCfg >> "maxCargoMass"));
 private _currentCargoMass = _vehicle getVariable [QGVAR(furnitureCargoMass), 0];
 private _inventory = _vehicle getVariable [QGVAR(furnitureCargoInventory), []];
 
