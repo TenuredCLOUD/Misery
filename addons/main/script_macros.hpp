@@ -279,6 +279,65 @@ QCLASS(guttingKnife), \
 // IMS animations for compat:
 #define MACRO_ANIMATION_IMS_SPRINT "am_kulak_sprintf", "melee_sprintf", "melee_sprintfl", "melee_sprintfr"
 
+// Ravage compat:
+
+// RVG Tents / Sleeping bags
+#define MACRO_RVG_CAMPING [ \
+[QUOTE(rvg_foldedTent), QUOTE(Land_TentDome_F)], \
+[QUOTE(rvg_foldedTent_grey), QUOTE(Land_TentDome_F)], \
+[QUOTE(rvg_foldedTent_blue), QUOTE(Land_TentDome_F)], \
+[QUOTE(rvg_sleepingBag_Blue), QUOTE(Land_Sleeping_bag_F)] \
+]
+
+// RVG Tools
+#define MACRO_RVG_TOOLS [ \
+[QUOTE(rvg_toolkit), QUOTE(ToolKit)], \
+[QUOTE(rvg_tire), QCLASS(spareTire)], \
+[QUOTE(rvg_matches), QCLASS(matchBox)], \
+[QUOTE(rvg_canOpener), QCLASS(canOpener)], \
+[QUOTE(rvg_guttingKnife), QCLASS(guttingKnife)], \
+[QUOTE(rvg_Geiger), QCLASS(geiger_Off)] \
+]
+
+// RVG Meds
+#define MACRO_RVG_MEDS [ \
+[QUOTE(rvg_antiRad), QCLASS(potassiumIodate)], \
+[QUOTE(rvg_purificationTablets), QCLASS(pureTablets)] \
+]
+
+// RVG Food & Drink
+#define MACRO_RVG_FOOD [ \
+[QUOTE(rvg_beans), QCLASS(bakedBeans)], \
+[QUOTE(rvg_bacon), QCLASS(cannedBacon)], \
+[QUOTE(rvg_milk), QCLASS(powderedMilk)], \
+[QUOTE(rvg_rice), QCLASS(rice)], \
+[QUOTE(rvg_rustyCan), QCLASS(bakedBeans)], \
+[QUOTE(rvg_Rabbit_Meat), QCLASS(rawMeat)], \
+[QUOTE(rvg_Rabbit_Meat_Cooked), QCLASS(cookedMeat)], \
+[QUOTE(rvg_Chicken_Meat), QCLASS(rawMeat)], \
+[QUOTE(rvg_Chicken_Meat_Cooked), QCLASS(cookedMeat)], \
+[QUOTE(rvg_Sheep_Meat), QCLASS(rawMeat)], \
+[QUOTE(rvg_Sheep_Meat_Cooked), QCLASS(cookedMeat)], \
+[QUOTE(rvg_Boar_Meat), QCLASS(rawMeat)], \
+[QUOTE(rvg_Boar_Meat_Cooked), QCLASS(cookedMeat)], \
+[QUOTE(rvg_Buffalo_Meat), QCLASS(rawMeat)], \
+[QUOTE(rvg_Buffalo_Meat_Cooked), QCLASS(cookedMeat)], \
+[QUOTE(rvg_spirit), QCLASS(soda_2)], \
+[QUOTE(rvg_franta), QCLASS(soda_1)], \
+[QUOTE(rvg_plasticBottle), QCLASS(waterBottle_Dirty)], \
+[QUOTE(rvg_plasticBottlePurified), QCLASS(waterBottle_Clean)], \
+[QUOTE(rvg_canteen), QCLASS(canteen_Dirty)], \
+[QUOTE(rvg_canteenPurified), QCLASS(canteen_Clean)], \
+[QUOTE(rvg_plasticBottleEmpty), QCLASS(waterBottle_Empty)], \
+[QUOTE(rvg_canteenEmpty), QCLASS(canteen_Empty)] \
+]
+
+// RVG Fuel
+#define MACRO_RVG_FUEL [ \
+[QUOTE(rvg_canisterFuel), QCLASS(petrol)], \
+[QUOTE(rvg_canisterFuel_Empty), QCLASS(petrolEmpty)] \
+]
+
 // UI Macros
 #define CT_STATIC 0 // Static text/picture
 #define CT_BUTTON 1 // Button
