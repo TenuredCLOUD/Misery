@@ -207,6 +207,22 @@ QCLASS(guttingKnife), \
 "tsp_meleeWeapon_socp", \
 "tsp_meleeWeapon_sog" \
 
+// IMS melee weapons conversion
+#define MACRO_IMS_COMPAT [ \
+    [QCLASS(guttingKnife), QUOTE(Knife_m3)], \
+    [QCLASS(woodaxe), QUOTE(WBK_axe)], \
+    [QCLASS(sledgehammer), QUOTE(WBK_survival_weapon_2)], \
+    [QCLASS(craftingHammer), QUOTE(WBK_SmallHammer)], \
+    [QCLASS(anvilHammer), QUOTE(WBK_SmallHammer)] \
+]
+
+// TSP melee weapons conversion
+#define MACRO_TSP_COMPAT [ \
+    [QCLASS(guttingKnife), QUOTE(tsp_meleeWeapon_kabar)], \
+    [QCLASS(woodaxe), QUOTE(tsp_meleeWeapon_splittingaxe)], \
+    [QCLASS(sledgehammer), QUOTE(tsp_meleeWeapon_sledge_black)] \
+]
+
 // Axes
 #define MACRO_AXES \
 "WBK_axe", \
