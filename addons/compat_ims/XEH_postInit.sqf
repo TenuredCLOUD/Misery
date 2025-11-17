@@ -88,8 +88,7 @@ player addEventHandler ["InventoryOpened", {
     params ["_unit", "_primaryContainer", "_secondaryContainer"];
     // Knives & Axes
     {
-        private _oldToolItem = _x select 0;
-        private _newToolItem = _x select 1;
+        _x params ["_oldToolItem", "_newToolItem"];
 
         if ([[_oldToolItem]] call EFUNC(common,hasItem)) then {
             [_unit, _oldToolItem] call CBA_fnc_removeItem;
