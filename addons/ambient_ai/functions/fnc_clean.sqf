@@ -17,14 +17,14 @@
 
 private _players = call EFUNC(common,listPlayers);
 
-if (count GVAR(registeredEntities) isEqualTo 0) exitWith {};
+if (GVAR(registeredEntities) isEqualTo []) exitWith {};
 
 {
     private _group = _x;
     private _leader = leader _group;
     {
         private _distance = _x distance2D _leader;
-        if (_distance < GVAR(deleteDistance)) exitWith {continue};
+        if (_distance < GVAR(deletionDistance)) exitWith {continue};
 
         GVAR(registeredEntities) deleteAt _forEachIndex;
         {deleteVehicle _x} forEach (units _group);
