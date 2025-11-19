@@ -10,11 +10,20 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(maxAnimalUnits),
+    QGVAR(maxPopulation),
     "SLIDER",
     ["Maximum animals", "Maximum animals allowed to spawn"],
     _category,
     [1, 50, 10, 0],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(clusterSize),
+    "SLIDER",
+    ["Cluster size", "Possible amount of animals to spawn each cycle"],
+    _category,
+    [1, 20, 5, 0],
     1
 ] call CBA_fnc_addSetting;
 
@@ -55,19 +64,21 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(animalCycleLength),
-    "SLIDER",
-    ["Cycle length", "Time in seconds between spawn checks"],
-    _category,
-    [1, 300, 30, 0],
-    1
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(animalSpawnChance),
     "SLIDER",
     ["Spawn chance %", "% chance per cycle that clusters will spawn"],
     _category,
     [1, 100, 10, 0],
     1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(animalCycleLength),
+    "LIST",
+    ["Spawn check interval", "Time in seconds between spawn checks"],
+    _category,
+    [[30, 60, 120, 180, 300], ["30 seconds", "1 Minute", "2 Minutes", "3 Minutes", "5 Minutes"], 0],
+    1,
+    {},
+    true
 ] call CBA_fnc_addSetting;
