@@ -17,7 +17,7 @@
 params ["_vehicle"];
 
 private _found = false;
-private _batteryType = "";
+private _batteryType = 0;
 
 {
     if ((_x select 0) isEqualTo typeOf _vehicle) then {
@@ -27,9 +27,9 @@ private _batteryType = "";
     };
 } forEach EGVAR(common,vehicleData);
 
-if (_batteryType isNotEqualTo "") then {
-    [_vehicle, _batteryType, selectRandom [0, 1], true] call CBA_fnc_addItemCargo;
-};
+private _batteryClass = [QCLASS(autoBattery), QCLASS(autoBattery_Heavy)] select (_batteryType isEqualTo 1);
+
+[_vehicle, _batteryClass, selectRandom [0, 1], true] call CBA_fnc_addItemCargo;
 
 if (_vehicle isKindOf "Car") then {
     [_vehicle, QCLASS(spareTire), selectRandom [0, 1], true] call CBA_fnc_addItemCargo;

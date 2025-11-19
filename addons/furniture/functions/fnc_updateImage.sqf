@@ -23,6 +23,7 @@ if (isNull _imageCtrl) exitWith {};
 _imageCtrl ctrlSetText "";
 
 if (_className isNotEqualTo "") then {
-    private _objectImage = getText (configFile >> "CfgVehicles" >> _className >> "editorPreview");
-    _imageCtrl ctrlSetText _objectImage;
+    //private _objectImage = getText (configFile >> "CfgVehicles" >> _className >> "editorPreview");
+    [_className] call EFUNC(common,getObjectData) params ["", "_picture"];
+    _imageCtrl ctrlSetText _picture;
 };

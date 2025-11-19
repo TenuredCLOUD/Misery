@@ -17,9 +17,10 @@
 params ["_control", "_index"];
 
 private _className = _control lbData _index;
-private _displayName = getText (configFile >> "CfgVehicles" >> _className >> "displayName");
+//private _displayName = getText (configFile >> "CfgVehicles" >> _className >> "displayName");
+[_className] call EFUNC(common,getObjectData) params ["_displayName"];
 private _furnitureCfg = missionConfigFile >> "CfgMisery_Furniture" >> _className;
-private _itemMass = getNumber (_furnitureCfg >> "mass");
+private _itemMass = [[_className] call EFUNC(common,getObjectMass), getNumber (_furnitureCfg >> "mass")] select (isNumber (_furnitureCfg >> "mass"));
 
 private _display = findDisplay 982389;
 if (isNull _display) then {

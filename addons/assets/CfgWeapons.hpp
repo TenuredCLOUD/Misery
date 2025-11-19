@@ -1293,6 +1293,19 @@ class CfgWeapons {
         };
     };
 
+    class CLASS(lockKit): CLASS(ItemCore) {
+        displayName = "Door lock kit";
+        descriptionShort = "electronic door locking kit, prevents unauthorized entry once installed";
+        model = "a3\weapons_f\items\toolkit.p3d";
+        picture = QPATHTOF(data\icons\toolkit.paa);
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 25;
+        };
+    };
+
     class CLASS(stoneChunk): CLASS(ItemCore) {
         displayName = "$STR_MISERY_STONECHUNK_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_STONECHUNK_DESCRIPTION";

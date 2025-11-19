@@ -139,20 +139,21 @@
 "CUP_postel_panelak2", \
 "CUP_armchair", \
 "CUP_lobby_chair", \
-"CUP_Church_chair"
+"CUP_Church_chair", \
+"Land_TentA_F", \
+"Land_TentDome_F", \
+"rvg_dome_tent_blu", \
+"rvg_dome_tent_grn", \
+"rvg_dome_tent_gry", \
+"Land_TentSolar_01_bluewhite_F", \
+"Land_TentSolar_01_olive_F", \
+"Land_TentSolar_01_redwhite_F", \
+"Land_TentSolar_01_sand_F"
 
 #define MACRO_BED_MODELS \
 "woodenbed_01_f.p3d", \
-"bed_big_a.p3d", \
-"bed_husbands.p3d", \
-"vojenska_palanda.p3d", \
-"postel_manz_kov.p3d", \
-"sofa_01_f.p3d", \
-"Land_ArmChair_01_F", \
-"armchair.p3d", \
-"armchair_big.p3d", \
-"postel_panelak1.p3d", \
-"postel_panelak2.p3d", \
+"sun_chair_green_f.p3d", \
+"armchair_01_f.p3d", \
 "sleeping_bag_f.p3d", \
 "sleeping_bag_blue_f.p3d", \
 "sleeping_bag_brown_f.p3d", \
@@ -160,7 +161,61 @@
 "ground_sheet_blue_f.p3d", \
 "ground_sheet_khaki_f.p3d", \
 "ground_sheet_opfor_f.p3d", \
-"ground_sheet_yellow_f.p3d"
+"ground_sheet_yellow_f.p3d", \
+"bed_big_a.p3d", \
+"bed_husbands.p3d", \
+"vojenska_palanda.p3d", \
+"postel_manz_kov.p3d", \
+"postel_panelak1.p3d", \
+"postel_panelak2.p3d", \
+"armchair.p3d", \
+"lobby_chair.p3d", \
+"church_chair.p3d", \
+"tenta_f.p3d", \
+"tentdome_f.p3d", \
+"rvg_dome_tent_blu.p3d", \
+"rvg_dome_tent_grn.p3d", \
+"rvg_dome_tent.p3d", \
+"tentsolar_01_f.p3d", \
+"tentsolar_01_f.p3d", \
+"tentsolar_01_f.p3d", \
+"tentsolar_01_f.p3d"
+
+// Door locks - building models that don't lock
+#define MACRO_NODOORLOCK_MODELS \
+"ds_housev_1t.p3d", \
+"shed_w03.p3d", \
+"ind_garage01.p3d", \
+"a_office02.p3d", \
+"strazni_vez.p3d", \
+"ds_housev_2t1.p3d", \
+"shed_m03.p3d", \
+"shed_w02.p3d", \
+"misc_waterstation.p3d", \
+"ds_housev_2i.p3d", \
+"ds_housev_2l.p3d", \
+"shed_01_f.p3d", \
+"ds_housev_3i1.p3d", \
+"sara_zluty_statek_in.p3d", \
+"ds_housev_3i4.p3d", \
+"ds_housev_3i2.p3d", \
+"ds_housev_1l2.p3d", \
+"sara_domek_zluty.p3d", \
+"church_03.p3d", \
+"shed_w01.p3d", \
+"shed_m01.p3d", \
+"barn_metal.p3d", \
+"nav_boathouse.p3d", \
+"ds_housev_2t2.p3d", \
+"ds_housev_3i3.p3d", \
+"shed_wooden.p3d", \
+"a_tvtower_base.p3d", \
+"garaz_long_open.p3d", \
+"budova4_in.p3d", \
+"ind_pec_02.p3d", \
+"rail_station_big_f.p3d", \
+"a_hospital.p3d", \
+"a_office02.p3d"
 
 // Artifacts
 #define MACRO_ARTIFACTS QCLASS(artifact_01), QCLASS(artifact_02), QCLASS(artifact_03), QCLASS(artifact_04), QCLASS(artifact_05), QCLASS(artifact_06), QCLASS(artifact_07), QCLASS(artifact_08), QCLASS(artifact_09), QCLASS(artifact_10)
@@ -187,6 +242,22 @@ QCLASS(guttingKnife), \
 "tsp_meleeWeapon_okc", \
 "tsp_meleeWeapon_socp", \
 "tsp_meleeWeapon_sog" \
+
+// IMS melee weapons conversion
+#define MACRO_IMS_COMPAT [ \
+    [QCLASS(guttingKnife), QUOTE(Knife_m3)], \
+    [QCLASS(woodaxe), QUOTE(WBK_axe)], \
+    [QCLASS(sledgehammer), QUOTE(WBK_survival_weapon_2)], \
+    [QCLASS(craftingHammer), QUOTE(WBK_SmallHammer)], \
+    [QCLASS(anvilHammer), QUOTE(WBK_SmallHammer)] \
+]
+
+// TSP melee weapons conversion
+#define MACRO_TSP_COMPAT [ \
+    [QCLASS(guttingKnife), QUOTE(tsp_meleeWeapon_kabar)], \
+    [QCLASS(woodaxe), QUOTE(tsp_meleeWeapon_splittingaxe)], \
+    [QCLASS(sledgehammer), QUOTE(tsp_meleeWeapon_sledge_black)] \
+]
 
 // Axes
 #define MACRO_AXES \
@@ -259,6 +330,65 @@ QCLASS(guttingKnife), \
 
 // IMS animations for compat:
 #define MACRO_ANIMATION_IMS_SPRINT "am_kulak_sprintf", "melee_sprintf", "melee_sprintfl", "melee_sprintfr"
+
+// Ravage compat:
+
+// RVG Tents / Sleeping bags
+#define MACRO_RVG_CAMPING [ \
+[QUOTE(rvg_foldedTent), QUOTE(Land_TentDome_F)], \
+[QUOTE(rvg_foldedTent_grey), QUOTE(Land_TentDome_F)], \
+[QUOTE(rvg_foldedTent_blue), QUOTE(Land_TentDome_F)], \
+[QUOTE(rvg_sleepingBag_Blue), QUOTE(Land_Sleeping_bag_F)] \
+]
+
+// RVG Tools
+#define MACRO_RVG_TOOLS [ \
+[QUOTE(rvg_toolkit), QUOTE(ToolKit)], \
+[QUOTE(rvg_tire), QCLASS(spareTire)], \
+[QUOTE(rvg_matches), QCLASS(matchBox)], \
+[QUOTE(rvg_canOpener), QCLASS(canOpener)], \
+[QUOTE(rvg_guttingKnife), QCLASS(guttingKnife)], \
+[QUOTE(rvg_Geiger), QCLASS(geiger_Off)] \
+]
+
+// RVG Meds
+#define MACRO_RVG_MEDS [ \
+[QUOTE(rvg_antiRad), QCLASS(potassiumIodate)], \
+[QUOTE(rvg_purificationTablets), QCLASS(pureTablets)] \
+]
+
+// RVG Food & Drink
+#define MACRO_RVG_FOOD [ \
+[QUOTE(rvg_beans), QCLASS(bakedBeans)], \
+[QUOTE(rvg_bacon), QCLASS(cannedBacon)], \
+[QUOTE(rvg_milk), QCLASS(powderedMilk)], \
+[QUOTE(rvg_rice), QCLASS(rice)], \
+[QUOTE(rvg_rustyCan), QCLASS(bakedBeans)], \
+[QUOTE(rvg_Rabbit_Meat), QCLASS(rawMeat)], \
+[QUOTE(rvg_Rabbit_Meat_Cooked), QCLASS(cookedMeat)], \
+[QUOTE(rvg_Chicken_Meat), QCLASS(rawMeat)], \
+[QUOTE(rvg_Chicken_Meat_Cooked), QCLASS(cookedMeat)], \
+[QUOTE(rvg_Sheep_Meat), QCLASS(rawMeat)], \
+[QUOTE(rvg_Sheep_Meat_Cooked), QCLASS(cookedMeat)], \
+[QUOTE(rvg_Boar_Meat), QCLASS(rawMeat)], \
+[QUOTE(rvg_Boar_Meat_Cooked), QCLASS(cookedMeat)], \
+[QUOTE(rvg_Buffalo_Meat), QCLASS(rawMeat)], \
+[QUOTE(rvg_Buffalo_Meat_Cooked), QCLASS(cookedMeat)], \
+[QUOTE(rvg_spirit), QCLASS(soda_2)], \
+[QUOTE(rvg_franta), QCLASS(soda_1)], \
+[QUOTE(rvg_plasticBottle), QCLASS(waterBottle_Dirty)], \
+[QUOTE(rvg_plasticBottlePurified), QCLASS(waterBottle_Clean)], \
+[QUOTE(rvg_canteen), QCLASS(canteen_Dirty)], \
+[QUOTE(rvg_canteenPurified), QCLASS(canteen_Clean)], \
+[QUOTE(rvg_plasticBottleEmpty), QCLASS(waterBottle_Empty)], \
+[QUOTE(rvg_canteenEmpty), QCLASS(canteen_Empty)] \
+]
+
+// RVG Fuel
+#define MACRO_RVG_FUEL [ \
+[QUOTE(rvg_canisterFuel), QCLASS(petrol)], \
+[QUOTE(rvg_canisterFuel_Empty), QCLASS(petrolEmpty)] \
+]
 
 // UI Macros
 #define CT_STATIC 0 // Static text/picture

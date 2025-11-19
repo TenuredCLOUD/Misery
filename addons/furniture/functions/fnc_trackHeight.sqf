@@ -39,7 +39,7 @@ params ["_object", "_snapToSurface"];
     private _maxHeight = 2;
     private _finalPos = _surfacePos;
 
-    if (_snapToSurface == 1 && _height < 0.1) then {
+    if (_snapToSurface isEqualTo 1 && _height < 0.1) then {
         _finalPos = [_surfacePos select 0, _surfacePos select 1, _groundPos select 2];
     } else {
         if (_height > _maxHeight) then {
