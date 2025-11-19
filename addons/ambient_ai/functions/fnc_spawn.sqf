@@ -16,7 +16,7 @@
  * Public: No
 */
 
-if ((count GVAR(registeredEntities)) >= GVAR(maxUnits)) exitWith {};
+if ((count GVAR(registeredEntities)) >= GVAR(maxGroups)) exitWith {};
 
 private _unitCase = switch (true) do {
     case (GVAR(faction) isEqualTo 0): {"BLUFOR"};
@@ -53,6 +53,9 @@ private _numEntities = [1, GVAR(groupSize)] call BIS_fnc_randomInt;
 private _players = call EFUNC(common,listPlayers);
 private _selectedPlayer = selectRandom _players;
 
+// If no players in game exit spawner
+if (_players isEqualTo []) exitWith {};
+
 private _markerPos = getPosATL _selectedPlayer;
 private _playerUID = getPlayerUID _selectedPlayer;
 
@@ -62,162 +65,32 @@ _marker setMarkerShapeLocal "ELLIPSE";
 _marker setMarkerSizeLocal [GVAR(markerSizeX), GVAR(markerSizeY)];
 _marker setMarkerAlphaLocal 0;
 
+private _outsidePos = [_marker, true] call CBA_fnc_randPosArea;
+
 for "_i" from 1 to _numEntities do {
-    private _outsidePos = [_marker, true] call CBA_fnc_randPosArea;
 
-        if (_outsidePos isEqualTo [] || surfaceIsWater _outsidePos) exitWith {
-            [QUOTE(COMPONENT_BEAUTIFIED), "AI Spawner: Invalid position or position in water, skipping"] call EFUNC(common,debugMessage);
-            continue;
-        };
+    if (_outsidePos isEqualTo [] || surfaceIsWater _outsidePos) exitWith {
+        [QUOTE(COMPONENT_BEAUTIFIED), "AI Spawner: Invalid position or position in water, skipping"] call EFUNC(common,debugMessage);
+        continue;
+    };
 
-    private _randomweaploadout = [0, 5] call BIS_fnc_randomInt;
-    private _randomvestloadout = [1, 2] call BIS_fnc_randomInt;
-    private _randombackpackloadout = [1, 2] call BIS_fnc_randomInt;
-    private _randomNVGloadout = [1, 2] call BIS_fnc_randomInt;
-    private _randomFacewearloadout = [1, 2] call BIS_fnc_randomInt;
-    private _randomHeadgearloadout = [1, 2] call BIS_fnc_randomInt;
-    private _randomammocount = [1, GVAR(ammoCount)] call BIS_fnc_randomInt;
-
-    if (GVAR(spawnChance) > (random 100)) then {
+    if ([GVAR(spawnChance)] call EFUNC(common,rollChance)) then {
         _unit = _group createUnit [GVAR(aiClass), _outsidePos, [], 0, "FORM"];
     };
 
     _unit addEventHandler ["Killed", {
-    params ["_unit"];
-    addToRemainsCollector [_unit];
+        params ["_unit"];
+        addToRemainsCollector [_unit];
     }];
 
-    removeAllWeapons _unit;
-    removeAllItems _unit;
-    removeAllAssignedItems _unit;
-    removeUniform _unit;
-    removeVest _unit;
-    removeBackpack _unit;
-    removeHeadgear _unit;
-    removeGoggles _unit;
+    [_unit] call FUNC(randomGear);
 
-    if (_randomweaploadout isEqualTo 0) then {
-        if (count GVAR(primaryWeapons) > 0) then {[_unit, selectRandom GVAR(primaryWeapons), 0] call BIS_fnc_addWeapon};
-        if (count GVAR(secondaryWeapons) > 0) then {[_unit, selectRandom GVAR(secondaryWeapons), 0] call BIS_fnc_addWeapon};
-        if (count GVAR(launcherWeapons) > 0) then {[_unit, selectRandom GVAR(launcherWeapons), 0] call BIS_fnc_addWeapon};
+    if !(isMultiplayer) then {
+        [_unit] call FUNC(addRecruitOption);
     };
-
-    if (_randomweaploadout isEqualTo 1) then {
-        if (count GVAR(primaryWeapons) > 0) then {[_unit, selectRandom GVAR(primaryWeapons), 0] call BIS_fnc_addWeapon};
-    };
-
-    if (_randomweaploadout isEqualTo 2) then {
-        if (count GVAR(secondaryWeapons) > 0) then {[_unit, selectRandom GVAR(secondaryWeapons), 0] call BIS_fnc_addWeapon};
-    };
-
-    if (_randomweaploadout isEqualTo 3) then {
-        if (count GVAR(primaryWeapons) > 0) then {[_unit, selectRandom GVAR(primaryWeapons), 0] call BIS_fnc_addWeapon};
-        if (count GVAR(secondaryWeapons) > 0) then {[_unit, selectRandom GVAR(secondaryWeapons), 0] call BIS_fnc_addWeapon};
-    };
-
-    if (_randomweaploadout isEqualTo 4) then {
-        if (count GVAR(primaryWeapons) > 0) then {[_unit, selectRandom GVAR(primaryWeapons), 0] call BIS_fnc_addWeapon};
-        if (count GVAR(launcherWeapons) > 0) then {[_unit, selectRandom GVAR(launcherWeapons), 0] call BIS_fnc_addWeapon};
-    };
-
-    if (_randomweaploadout isEqualTo 5) then {
-        if (count GVAR(secondaryWeapons) > 0) then {[_unit, selectRandom GVAR(secondaryWeapons), 0] call BIS_fnc_addWeapon};
-        if (count GVAR(launcherWeapons) > 0) then {[_unit, selectRandom GVAR(launcherWeapons), 0] call BIS_fnc_addWeapon};
-    };
-
-    if (count GVAR(uniform) > 0) then {_unit forceAddUniform selectRandom GVAR(uniform)};
-
-    if (_randomvestloadout isEqualTo 1) then {
-        if (count GVAR(vest) > 0) then {_unit addVest selectRandom GVAR(vest)};
-    };
-
-    if (_randombackpackloadout isEqualTo 1) then {
-        if (count GVAR(backpack) > 0) then {_unit addBackpack selectRandom GVAR(backpack)};
-    };
-
-    if (_randomNVGloadout isEqualTo 1) then {
-        if (count GVAR(nvgs) > 0) then {_unit linkItem selectRandom GVAR(nvgs)};
-    };
-
-    if (_randomFacewearloadout isEqualTo 1) then {
-        if (count GVAR(facewear) > 0) then {_unit addGoggles selectRandom GVAR(facewear)};
-    };
-
-    if (_randomHeadgearloadout isEqualTo 1) then {
-        if (count GVAR(headgear) > 0) then {_unit addHeadgear selectRandom GVAR(headgear)};
-    };
-
-    if ((_unit ammo (primaryWeapon _unit)) isEqualTo 0) then {
-        _magazinearrayP = getArray (configFile >> "CfgWeapons" >> primaryWeapon _unit >> "magazines");
-        if (_magazinearrayP isNotEqualTo []) then {
-            _magP = _magazinearrayP select 0;
-            for "_j" from 1 to _randomammocount do {_unit addMagazine _magP;};
-        };
-    };
-
-    if ((_unit ammo (handgunWeapon _unit)) isEqualTo 0) then {
-        _magazinearrayH = getArray (configFile >> "CfgWeapons" >> handgunWeapon _unit >> "magazines");
-        if (_magazinearrayH isNotEqualTo []) then {
-            _magH = _magazinearrayH select 0;
-            for "_j" from 1 to _randomammocount do {_unit addMagazine _magH;};
-        };
-    };
-
-    if ((_unit ammo (secondaryWeapon _unit)) isEqualTo 0) then {
-        _magazinearrayS = getArray (configFile >> "CfgWeapons" >> secondaryWeapon _unit >> "magazines");
-        if (_magazinearrayS isNotEqualTo []) then {
-            _magS = _magazinearrayS select 0;
-            for "_j" from 1 to _randomammocount do {_unit addMagazine _magS;};
-        };
-    };
-
-    reload _unit;
-
-    _unit setSkill ["aimingAccuracy", GVAR(accuracy)];
-    _unit setSkill ["aimingShake", GVAR(shake)];
-    _unit setSkill ["aimingSpeed", GVAR(speed)];
 
     if (!isNil "grad_persistence_blacklist") then {
         [_unit] call grad_persistence_fnc_blacklistObjects;
-    };
-
-    if !(isMultiplayer) then {
-        if (side _unit isEqualTo side player) then {
-            private _equipmentMass = loadAbs _unit / getNumber (configFile >> "CfgInventoryGlobalVariable" >> "maxSoldierLoad");
-            private _recruitmentCost = 500 * round(_equipmentMass * 100);
-            private _Unitidentity = name _unit;
-
-            [
-                _unit,
-                format [localize "STR_MISERY_RECRUITUNIT", _Unitidentity, EGVAR(money,symbol), [_recruitmentCost, 1, 2, true] call CBA_fnc_formatNumber],
-                "\a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa",
-                "\a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa",
-                "_this distance _target < 3",
-                "_caller distance _target < 3",
-                {},
-                {},
-                {
-                    params ["_target", "_caller", "_actionId", "_arguments"];
-                    private _recruitmentCost = _arguments select 0;
-                    private _Unitidentity = _arguments select 1;
-                    private _playerMoney = _caller getVariable QCLASS(currency);
-                    if (_playerMoney >= _recruitmentCost) then {
-                        _caller setVariable [QCLASS(currency), _playerMoney - _recruitmentCost];
-                        [_target] joinSilent _caller;
-                        [_target,_actionId] call BIS_fnc_holdActionRemove;
-                        [QEGVAR(common,tileText), format [localize "STR_MISERY_RECRUITUNIT_SUCCESS", _Unitidentity, EGVAR(money,symbol), [_recruitmentCost, 1, 2, true] call CBA_fnc_formatNumber]] call CBA_fnc_localEvent;
-                    } else {
-                        [QEGVAR(common,tileText), format [localize "STR_MISERY_RECRUITUNIT_FAIL",_Unitidentity]] call CBA_fnc_localEvent;
-                    };
-                },
-                {},
-                [_recruitmentCost, _Unitidentity],
-                0.1,
-                nil,
-                false,
-                false
-            ] call BIS_fnc_holdActionAdd;
-        };
     };
 };
 
@@ -225,14 +98,6 @@ for "_i" from 1 to _numEntities do {
     deleteMarkerLocal _this;
 }, _marker, 1] call CBA_fnc_waitAndExecute;
 
-{
-    if (count GVAR(items) > 0) then {
-        for "_i" from 1 to 5 do {_x addItem (selectRandom GVAR(items));};
-    };
-} forEach (units _group);
-
 _group enableDynamicSimulation true;
 
 GVAR(registeredEntities) pushBack _group;
-
-[_group] call FUNC(patrol);
