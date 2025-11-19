@@ -89,7 +89,7 @@ private _currentStep = 0;
     };
 
     _currentStep = _currentStep + 1;
-    _args set [12, _currentStep];
+    _args set [9, _currentStep];
 
     private _progress = (_currentStep / _totalSteps);
     _progressBar progressSetPosition _progress;
