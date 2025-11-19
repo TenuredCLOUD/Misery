@@ -10,20 +10,20 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(groupSize),
+    QGVAR(clusterSize),
     "SLIDER",
-    ["Group size", "Possible size of group ai can be generated with"],
+    ["Cluster size", "Possible amount of creatures to spawn each cycle"],
     _category,
-    [1, 100, 5, 0],
+    [1, 20, 5, 0],
     1
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(maxUnits),
+    QGVAR(maxPopulation),
     "SLIDER",
-    ["Maximum units", "Maximum units allowed to spawn"],
+    ["Maximum population", "Maximum creatures allowed to spawn"],
     _category,
-    [1, 150, 20, 0],
+    [1, 150, 15, 0],
     1
 ] call CBA_fnc_addSetting;
 
@@ -290,9 +290,11 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 
 [
     QGVAR(cycleLength),
-    "SLIDER",
-    ["Cycle length", "Time in seconds between spawn checks"],
+    "LIST",
+    ["Spawn check interval", "Time in seconds between spawn checks"],
     _category,
-    [1, 3600, 30, 0],
-    1
+    [[30, 60, 120, 180, 300], ["30 seconds", "1 Minute", "2 Minutes", "3 Minutes", "5 Minutes"], 0],
+    1,
+    {},
+    true
 ] call CBA_fnc_addSetting;

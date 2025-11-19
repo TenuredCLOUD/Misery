@@ -16,12 +16,15 @@
  * Public: No
 */
 
-if ((count GVAR(registeredEntities)) >= GVAR(maxUnits)) exitWith {};
+if ((count GVAR(registeredEntities)) >= GVAR(maxPopulation)) exitWith {};
 
-private _numEntities = [1, GVAR(groupSize)] call BIS_fnc_randomInt;
+private _numEntities = [1, GVAR(clusterSize)] call BIS_fnc_randomInt;
 
 private _players = call EFUNC(common,listPlayers);
 private _selectedPlayer = selectRandom _players;
+
+// If no players in game exit spawner
+if (_players isEqualTo []) exitWith {};
 
 private _markerPos = getPosATL _selectedPlayer;
 private _playerUID = getPlayerUID _selectedPlayer;
@@ -33,6 +36,9 @@ _marker setMarkerSizeLocal [GVAR(markerSizeX), GVAR(markerSizeY)];
 _marker setMarkerAlphaLocal 0;
 
 for "_i" from 1 to _numEntities do {
+
+    // recheck every spawn cycle
+    if ((count GVAR(registeredEntities)) >= GVAR(maxPopulation)) exitWith {break};
 
     private _outsidePos = [_marker, true] call CBA_fnc_randPosArea;
 
@@ -50,9 +56,9 @@ for "_i" from 1 to _numEntities do {
     if ([GVAR(spawnChance)] call EFUNC(common,rollChance)) then {
         if (_type isEqualType "") then {
             private _class = if (_type isEqualTo "GOLIATH") then {
-                selectRandom [MACRO_WZC_SPECIAL]
+                selectRandom [MACRO_WZC_SPECIAL];
             } else {
-                selectRandom [MACRO_WZC_SPECIAL_ZOMBIES]
+                selectRandom [MACRO_WZC_SPECIAL_ZOMBIES];
             };
             _unit = _group createUnit [_class, _outsidePos, [], 0, "NONE"];
         } else {

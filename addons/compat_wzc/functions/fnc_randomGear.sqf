@@ -58,7 +58,7 @@ if ([GVAR(bagChance)] call EFUNC(common,rollChance)) then {
 
 if ([GVAR(itemsChance)] call EFUNC(common,rollChance)) then {
     if (count _items > 0) then {
-        for "_i" from 1 to selectRandom [1, 2, 3, 4, 5] do {
+        for "_i" from 1 to 2 do {
             _unit addItem (selectRandom _items);
         };
     };
