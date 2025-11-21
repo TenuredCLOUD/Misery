@@ -55,3 +55,11 @@ GVAR(defaultLoadout) = [[[],[],[],[],[],[],"","",[],["ItemMap","","","ItemCompas
     (findDisplay 46 createDisplay QCLASS(inventoryFramework_ui)) closeDisplay 1;
     (findDisplay 602) closeDisplay 2;
 }] call CBA_fnc_addEventHandler;
+
+[QGVAR(radioBroadcast), {
+    params ["_callsign", "_text"];
+
+    if !([[MACRO_RADIOS]] call EFUNC(common,hasItem)) exitWith {};
+
+    systemChat format ["[%1] %2", _callsign, _text];
+}] call CBA_fnc_addEventHandler;
