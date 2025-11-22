@@ -5,8 +5,6 @@
  *
  * Arguments:
  * 0: Decrement Value <NUMBER>
- * 1: Parasites <NUMBER>
- * 2: Hunger <NUMBER>
  *
  * Return Value:
  * None
@@ -17,7 +15,9 @@
  * Public: No
 */
 
-params ["_decrementValue", "_parasites", "_hunger"];
+params ["_decrementValue"];
+
+call EFUNC(common,getPlayerVariables) params ["_hunger", "", "", "", "", "", "", "", "_parasites"];
 
 if (_parasites > 0) then {
     [-_decrementValue, "hunger"] call EFUNC(common,addStatusModifier);

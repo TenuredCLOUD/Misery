@@ -4,29 +4,23 @@
  * Core temperature mechanics
  *
  * Arguments:
- * 0: Thermal Index <NUMBER>
- * 1: Exposure <NUMBER>
- * 2: Parasites <NUMBER>
- * 3: Infection <NUMBER>
+ * None
  *
  * Return Value:
  * 0: Array of Variables <ARRAY>
- *     0: Exposure Modifier <NUMBER>
- *     1: Hunger Modifier <NUMBER>
- *     2: Thirst Modifier <NUMBER>
- *     3: ThermalIndex Modifier <NUMBER>
- *     4: Wetness Modifier <NUMBER>
+ *     0: ThermalIndex Modifier <NUMBER>
+ *     1: Wetness Modifier <NUMBER>
  *
  *
  * Example:
- * [_thermalIndex, _exposure, _wetness, _parasites, _infection] call misery_temperature_fnc_core;
+ * [] call misery_temperature_fnc_core;
  *
  * Public: No
 */
 
-params ["_thermalIndex", "_exposure", "_wetness", "_parasites", "_infection"];
+call EFUNC(common,getPlayerVariables) params ["", "", "", "_thermalIndex", "_exposure", "_wetness", "", "_infection", "_parasites"];
 
-if !(GVAR(enabled)) exitWith {[0, 0, 0, 0, 0]};
+if !(GVAR(enabled)) exitWith {[0, 0]};
 
 // Get environmental data
 call FUNC(environment) params ["_airTemp", "_seaTemp"];
@@ -128,4 +122,8 @@ _wetnessModifier = (_wetnessModifier max 0) min 1;
 // Finalize ThermalIndex
 _thermalIndexModifier = (_thermalIndexModifier max TEMP_MIN) min TEMP_MAX;
 
-[_exposureModifier, _hungerModifier, _thirstModifier, _thermalIndexModifier, _wetnessModifier]
+[_exposureModifier, "exposure"] call EFUNC(common,addStatusModifier);
+[-_hungerModifier, "hunger"] call EFUNC(common,addStatusModifier);
+[-_thirstModifier, "thirst"] call EFUNC(common,addStatusModifier);
+
+[_thermalIndexModifier, _wetnessModifier]

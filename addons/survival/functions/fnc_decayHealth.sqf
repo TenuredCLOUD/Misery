@@ -4,9 +4,7 @@
  * Health deteriation check
  *
  * Arguments:
- * 0: Hunger <NUMBER>
- * 1: Thirst <NUMBER>
- * 2: Exposure <NUMBER>
+ * None
  *
  * Return Value:
  * Decay Health <BOOL>
@@ -16,7 +14,7 @@
  *
 */
 
-params ["_hunger", "_thirst", "_exposure"];
+call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "", "", "_exposure"];
 
 private _decayHealth = false;
 
