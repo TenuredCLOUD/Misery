@@ -5,8 +5,7 @@
  *
  * Arguments:
  * 0: Decrement Value <NUMBER>
- * 1: Energy Deficit <NUMBER>
- * 2: Is Multiplayer <BOOL>
+ * 1: Is Multiplayer <BOOL>
  *
  * Return Value:
  * None
@@ -17,7 +16,9 @@
  * Public: No
 */
 
-params ["_decrementValue", "_energyDeficit", "_isMultiplayer"];
+params ["_decrementValue", "_isMultiplayer"];
+
+call EFUNC(common,getPlayerVariables) params ["", "", "_energyDeficit"];
 
 if (_isMultiplayer) exitWith {};
 
@@ -29,9 +30,5 @@ player setVariable [QGVAR(energyDeficit), _finalEnergy];
 private _isSleeping = player getVariable [QEGVAR(sleep,isSleeping), false];
 
 if (_energyDeficit > 0.9 && !(_isSleeping) && [25] call EFUNC(common,rollChance)) then {
-    if ("ace_medical" call EFUNC(common,isModLoaded)) then {
-        [player, true, 5, true] call ace_medical_fnc_setUnconscious;
-    } else {
-        [player, random 5] call FUNC(setUnconscious);
-    };
+    [[player, random 5] call FUNC(setUnconscious), [player, true, 5, true] call ace_medical_fnc_setUnconscious] select ("ace_medical" call EFUNC(common,isModLoaded));
 };

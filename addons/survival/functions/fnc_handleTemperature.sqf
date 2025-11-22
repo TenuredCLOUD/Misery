@@ -4,9 +4,8 @@
  * Handles temperature related effects for survival loop
  *
  * Arguments:
- * 0: Exposure <NUMBER>
- * 1: ThermalIndex Modifier <NUMBER>
- * 2: Wetness Modifier <NUMBER>
+ * 0: ThermalIndex Modifier <NUMBER>
+ * 1: Wetness Modifier <NUMBER>
  *
  * Return Value:
  * None
@@ -17,7 +16,9 @@
  * Public: No
 */
 
-params ["_exposure", "_thermalIndexModifier", "_wetnessModifier"];
+params ["_thermalIndexModifier", "_wetnessModifier"];
+
+call EFUNC(common,getPlayerVariables) params ["", "", "", "", "_exposure"];
 
 if !(EGVAR(temperature,enabled)) exitWith {};
 
