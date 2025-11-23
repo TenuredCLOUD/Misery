@@ -6,6 +6,9 @@ if (hasInterface) then {
     if (GVAR(infectionEnabled)) then {
         call FUNC(infect);
     };
+    if (GVAR(zedEnabled)) then {
+        call FUNC(checkInfection);
+    };
 };
 
 if (!isServer) exitWith {};

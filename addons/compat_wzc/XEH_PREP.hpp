@@ -1,5 +1,7 @@
+PREP(checkInfection);
 PREP(clean);
 PREP(convertToArray);
+PREP(convertToZombie);
 PREP(findClass);
 PREP(infect);
 PREP(loiter);

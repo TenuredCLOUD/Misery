@@ -244,6 +244,15 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(zedEnabled),
+    "CHECKBOX",
+    ["Zombification", "Enables infection to cause player zombification"],
+    _category,
+    false,
+    1
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(infectionChance),
     "SLIDER",
     ["Infection Chance", "Infection chance from zombies"],
