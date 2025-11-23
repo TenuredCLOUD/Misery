@@ -18,14 +18,17 @@
 player addEventHandler ["VisionModeChanged", {
     params ["_player", "_visionMode", "_tiIndex", "_previousVisionMode", "_previousTiIndex", "_vehicle", "_turret"];
 
-    private _cameraView = cameraView;
-
     if (_visionMode isEqualTo 0) exitWith {};
-    if (_cameraView isEqualTo "INTERNAL") exitWith {};
+    if (cameraView isEqualTo "INTERNAL") exitWith {};
 
-    if (_cameraView isEqualTo "EXTERNAL") then {
+    if (cameraView isEqualTo "EXTERNAL") then {
         player action ["nvGogglesOff", player];
     };
 
 }];
 
+GVAR(viewHandle) = addUserActionEventHandler ["personView", "Activate", {
+    if (isNull objectParent player && cameraView isEqualTo "INTERNAL" && currentVisionMode player > 0) then {
+        player action ["nvGogglesOff", player];
+    };
+}];
