@@ -16,15 +16,12 @@
 
 if (!hasInterface) exitWith {};
 
-private _fatigue = player getVariable [QCLASS(energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
-private _psychosis = player getVariable [EGVAR(psychosis,state), MACRO_PLAYER_DEFAULTS_LOW];
-
 if (EGVAR(psychosis,enabled)) then {
-    [-0.35, "psychosis"] call EFUNC(common,addStatusModifier);
+    [-0.02, "psychosis"] call EFUNC(common,addStatusModifier);
 };
+
+[-0.015, "radiation"] call EFUNC(common,addStatusModifier);
 
 if (isMultiplayer) exitWith {};
 
-player setVariable [QCLASS(energyDeficit), _fatigue + 15];
-
-// ToDo: Add Radiation Reduction
+[0.015, "energy"] call EFUNC(common,addStatusModifier);
