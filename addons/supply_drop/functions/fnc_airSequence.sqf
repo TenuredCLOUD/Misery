@@ -22,8 +22,7 @@ if (_players isEqualTo []) exitWith {};
 private _dropZone = [getPosATL selectRandom _players, selectRandom GVAR(dropZones)] select (GVAR(dropZones) isNotEqualTo []);
 
 private _heli = createVehicle [selectRandom GVAR(heliTypes), [0, 0, 0], [], 0, "FLY"];
-createVehicleCrew _heli;
-private _heliGroup = group driver _heli;
+private _heliGroup = createVehicleCrew _heli;
 _heli setDir (_heli getDir _dropZone);
 
 _heli enableRopeAttach true;
@@ -61,9 +60,7 @@ if (!isNil "grad_persistence_blacklist") then {
 addToRemainsCollector [_heli];
 addToRemainsCollector [_crate];
 
-{
-    addToRemainsCollector [_x];
-} forEach crew _heli;
+addToRemainsCollector (crew _heli);
 
 [{
     params ["_args", "_handle"];

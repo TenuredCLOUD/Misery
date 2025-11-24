@@ -14,9 +14,9 @@
  *
 */
 
-private _players = call EFUNC(common,listPlayers);
-
 if (GVAR(activeDrops) isEqualTo []) exitWith {};
+
+private _players = call EFUNC(common,listPlayers);
 
 {
     private _crate = _x;
