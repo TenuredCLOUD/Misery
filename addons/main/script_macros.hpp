@@ -120,10 +120,10 @@
 
 // Radios
 #define MACRO_RADIOS \
-"ItemRadio", \
-"rhs_radio_R187P1", \
-"rhs_radio_R169P1", \
-"rhsusf_radio_anprc152"
+    "ItemRadio", \
+    "rhs_radio_R187P1", \
+    "rhs_radio_R169P1", \
+    "rhsusf_radio_anprc152"
 
 // Beds
 #define MACRO_BEDS \
