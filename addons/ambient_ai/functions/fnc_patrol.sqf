@@ -24,7 +24,7 @@
 
         {
             _x enableGunLights "forceOn";
-        } forEach units _group;
+        } forEach (units _group);
 
         [_group, position (_nearestTown select 2), 300, 8, "MOVE", "AWARE", "RED", "LIMITED", "STAG COLUMN", "_group call CBA_fnc_searchNearby", [3, 6, 9]] call CBA_fnc_taskPatrol;
 
