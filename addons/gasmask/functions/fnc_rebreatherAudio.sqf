@@ -18,6 +18,8 @@
     params ["_args", "_handle"];
     _args params ["_lastBreathTime"];
 
+    if (isGamePaused) exitWith {};
+
     call EFUNC(protection,totalProtection) params ["", "_scba"];
 
     if (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled}) exitWith {}; // Kill audible breath if ACE advanced fatigue is enabled
