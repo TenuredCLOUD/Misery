@@ -4,7 +4,7 @@
  * Handles thirst related things for survival loop.
  *
  * Arguments:
- * 0: Thirst <NUMBER>
+ * None
  *
  * Return Value:
  * None
@@ -15,7 +15,7 @@
  * Public: No
 */
 
-params ["_thirst"];
+call EFUNC(common,getPlayerVariables) params ["", "_thirst"];
 
 private _finalThirst = ((_thirst + GVAR(thirstModifiers)) min 1) max 0;
 GVAR(thirstModifiers) = 0;

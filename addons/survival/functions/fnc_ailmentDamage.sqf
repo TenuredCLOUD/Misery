@@ -18,9 +18,6 @@
 
 params ["_object", "_value", "_bodyPart"];
 
-if ("ace_medical" call EFUNC(common,isModLoaded)) then {
-    [_object, _value, _bodyPart, "unknown", objNull, [], true] call ace_medical_fnc_addDamageToUnit;
-} else {
-    _totalDamage = (damage _object) + _value;
-    _object setDamage _totalDamage;
-};
+private _totalDamage = (damage _object) + _value;
+
+[_object setDamage _totalDamage, [_object, _value, _bodyPart, "unknown", objNull, [], true] call ace_medical_fnc_addDamageToUnit] select ("ace_medical" call EFUNC(common,isModLoaded));
