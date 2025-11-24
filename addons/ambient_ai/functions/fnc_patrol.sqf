@@ -20,7 +20,7 @@
     {
         private _group = _x;
         private _leader = leader _group;
-        private _nearestTown = nearestLocations [position _leader, ["NameCity","NameVillage","NameCityCapital"], 5000];
+        private _nearestTown = nearestLocations [position _leader, ["NameCity", "NameVillage", "NameCityCapital"], 5000];
 
         {
             _x enableGunLights "forceOn";
