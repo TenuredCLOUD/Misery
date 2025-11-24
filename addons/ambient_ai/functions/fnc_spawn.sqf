@@ -18,6 +18,11 @@
 
 if ((count GVAR(registeredEntities)) >= GVAR(maxGroups)) exitWith {};
 
+private _players = call EFUNC(common,listPlayers);
+if (_players isEqualTo []) exitWith {}; // If no players in game exit spawner
+
+private _selectedPlayer = selectRandom _players;
+
 private _unitCase = switch (true) do {
     case (GVAR(faction) isEqualTo 0): {"BLUFOR"};
     case (GVAR(faction) isEqualTo 1): {"OPFOR"};
