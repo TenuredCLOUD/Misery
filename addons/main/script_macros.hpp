@@ -243,6 +243,12 @@ QCLASS(guttingKnife), \
 "tsp_meleeWeapon_socp", \
 "tsp_meleeWeapon_sog" \
 
+//Hammers
+#define MACRO_ANVIL_HAMMERS \
+    QCLASS(craftingHammer), \
+    QCLASS(anvilHammer), \
+    QUOTE(WBK_SmallHammer)
+
 // IMS melee weapons conversion
 #define MACRO_IMS_COMPAT [ \
     [QCLASS(guttingKnife), QUOTE(Knife_m3)], \
