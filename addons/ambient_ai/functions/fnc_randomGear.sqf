@@ -34,33 +34,52 @@ removeBackpack _unit;
 removeHeadgear _unit;
 removeGoggles _unit;
 
-if (_randomweaploadout isEqualTo 0) then {
-    if (count GVAR(primaryWeapons) > 0) then {[_unit, selectRandom GVAR(primaryWeapons), 0] call BIS_fnc_addWeapon};
-    if (count GVAR(secondaryWeapons) > 0) then {[_unit, selectRandom GVAR(secondaryWeapons), 0] call BIS_fnc_addWeapon};
-    if (count GVAR(launcherWeapons) > 0) then {[_unit, selectRandom GVAR(launcherWeapons), 0] call BIS_fnc_addWeapon};
-};
-
-if (_randomweaploadout isEqualTo 1) then {
-    if (count GVAR(primaryWeapons) > 0) then {[_unit, selectRandom GVAR(primaryWeapons), 0] call BIS_fnc_addWeapon};
-};
-
-if (_randomweaploadout isEqualTo 2) then {
-    if (count GVAR(secondaryWeapons) > 0) then {[_unit, selectRandom GVAR(secondaryWeapons), 0] call BIS_fnc_addWeapon};
-};
-
-if (_randomweaploadout isEqualTo 3) then {
-    if (count GVAR(primaryWeapons) > 0) then {[_unit, selectRandom GVAR(primaryWeapons), 0] call BIS_fnc_addWeapon};
-    if (count GVAR(secondaryWeapons) > 0) then {[_unit, selectRandom GVAR(secondaryWeapons), 0] call BIS_fnc_addWeapon};
-};
-
-if (_randomweaploadout isEqualTo 4) then {
-    if (count GVAR(primaryWeapons) > 0) then {[_unit, selectRandom GVAR(primaryWeapons), 0] call BIS_fnc_addWeapon};
-    if (count GVAR(launcherWeapons) > 0) then {[_unit, selectRandom GVAR(launcherWeapons), 0] call BIS_fnc_addWeapon};
-};
-
-if (_randomweaploadout isEqualTo 5) then {
-    if (count GVAR(secondaryWeapons) > 0) then {[_unit, selectRandom GVAR(secondaryWeapons), 0] call BIS_fnc_addWeapon};
-    if (count GVAR(launcherWeapons) > 0) then {[_unit, selectRandom GVAR(launcherWeapons), 0] call BIS_fnc_addWeapon};
+switch (_randomweaploadout) do {
+    case 0: {
+        if (count GVAR(primaryWeapons) > 0) then {
+            [_unit, selectRandom GVAR(primaryWeapons), 0] call BIS_fnc_addWeapon;
+        };
+        if (count GVAR(secondaryWeapons) > 0) then {
+            [_unit, selectRandom GVAR(secondaryWeapons), 0] call BIS_fnc_addWeapon;
+        };
+        if (count GVAR(launcherWeapons) > 0) then {
+            [_unit, selectRandom GVAR(launcherWeapons), 0] call BIS_fnc_addWeapon;
+        };
+    };
+    case 1: {
+        if (count GVAR(primaryWeapons) > 0) then {
+            [_unit, selectRandom GVAR(primaryWeapons), 0] call BIS_fnc_addWeapon;
+        };
+    };
+    case 2: {
+        if (count GVAR(secondaryWeapons) > 0) then {
+            [_unit, selectRandom GVAR(secondaryWeapons), 0] call BIS_fnc_addWeapon;
+        };
+    };
+    case 3: {
+        if (count GVAR(primaryWeapons) > 0) then {
+            [_unit, selectRandom GVAR(primaryWeapons), 0] call BIS_fnc_addWeapon;
+        };
+        if (count GVAR(secondaryWeapons) > 0) then {
+            [_unit, selectRandom GVAR(secondaryWeapons), 0] call BIS_fnc_addWeapon;
+        };
+    };
+    case 4: {
+        if (count GVAR(primaryWeapons) > 0) then {
+            [_unit, selectRandom GVAR(primaryWeapons), 0] call BIS_fnc_addWeapon;
+        };
+        if (count GVAR(launcherWeapons) > 0) then {
+            [_unit, selectRandom GVAR(launcherWeapons), 0] call BIS_fnc_addWeapon;
+        };
+    };
+    case 5: {
+        if (count GVAR(secondaryWeapons) > 0) then {
+            [_unit, selectRandom GVAR(secondaryWeapons), 0] call BIS_fnc_addWeapon;
+        };
+        if (count GVAR(launcherWeapons) > 0) then {
+            [_unit, selectRandom GVAR(launcherWeapons), 0] call BIS_fnc_addWeapon;
+        };
+    };
 };
 
 if (count GVAR(uniform) > 0) then {_unit forceAddUniform selectRandom GVAR(uniform)};
