@@ -55,11 +55,6 @@ private _group = createGroup GVAR(factionType);
 
 private _numEntities = [1, GVAR(groupSize)] call BIS_fnc_randomInt;
 
-private _players = call EFUNC(common,listPlayers);
-private _selectedPlayer = selectRandom _players;
-
-// If no players in game exit spawner
-if (_players isEqualTo []) exitWith {};
 
 private _markerPos = getPosATL _selectedPlayer;
 private _playerUID = getPlayerUID _selectedPlayer;
