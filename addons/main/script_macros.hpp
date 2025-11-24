@@ -245,9 +245,9 @@ QCLASS(guttingKnife), \
 
 //Hammers
 #define MACRO_ANVIL_HAMMERS \
-QCLASS(craftingHammer), \
-QCLASS(anvilHammer), \
-QUOTE(WBK_SmallHammer)
+    QCLASS(craftingHammer), \
+    QCLASS(anvilHammer), \
+    QUOTE(WBK_SmallHammer)
 
 // IMS melee weapons conversion
 #define MACRO_IMS_COMPAT [ \
