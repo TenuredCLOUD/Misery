@@ -118,6 +118,13 @@
 #define MACRO_FUELSTATIONS_AIR "B_Slingload_01_Fuel_F", "StorageBladder_01_fuel_forest_F", "StorageBladder_01_fuel_sand_F", "Land_Pod_Heli_Transport_04_fuel_F"
 #define MACRO_CRAFTINGSTATIONS "Land_Workbench_01_F", "Land_PortableDesk_01_olive_F"
 
+// Radios
+#define MACRO_RADIOS \
+    "ItemRadio", \
+    "rhs_radio_R187P1", \
+    "rhs_radio_R169P1", \
+    "rhsusf_radio_anprc152"
+
 // Beds
 #define MACRO_BEDS \
 "Land_WoodenBed_01_F", \
