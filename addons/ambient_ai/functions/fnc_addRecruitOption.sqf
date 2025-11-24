@@ -20,7 +20,7 @@ params ["_unit"];
 
 if (side _unit isEqualTo side player) then {
     private _equipmentMass = loadAbs _unit / getNumber (configFile >> "CfgInventoryGlobalVariable" >> "maxSoldierLoad");
-    private _recruitmentCost = 500 * round(_equipmentMass * 100);
+    private _recruitmentCost = 500 * round (_equipmentMass * 100);
     private _unitIdentity = name _unit;
 
     [
