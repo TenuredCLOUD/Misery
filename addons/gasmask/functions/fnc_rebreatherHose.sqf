@@ -25,7 +25,7 @@ player addEventHandler ["SlotItemChanged", {
 
     if (_maskIndex isNotEqualTo -1 && backpack _unit isEqualTo _pack) then {
         if (_assigned) then {
-            (backpackContainer _unit) setObjectTexture [1, "a3\supplies_f_enoch\bags\data\b_cur_01_co.paa"];
+            (backpackContainer _unit) setObjectTextureGlobal [1, "a3\supplies_f_enoch\bags\data\b_cur_01_co.paa"];
             (backpackContainer _unit) setObjectTexture [2, "a3\supplies_f_enoch\bags\data\b_cur_01_co.paa"];
             _unit linkItem "G_AirPurifyingRespirator_01_nofilter_F";
         } else {
