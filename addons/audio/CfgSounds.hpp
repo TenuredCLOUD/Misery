@@ -197,10 +197,6 @@ class CfgSounds {
 
     // Radio
     MACRO_SOUNDS(eas,radio);
-    MACRO_SOUNDS(radio,radio);
-    MACRO_SOUNDS(song01,radio);
-    MACRO_SOUNDS(song02,radio);
-    MACRO_SOUNDS(song03,radio);
 
     // Rumbles
     MACRO_SOUNDS(rumble,rumbles);
