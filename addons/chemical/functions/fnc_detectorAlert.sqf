@@ -22,6 +22,8 @@ if !(call FUNC(checkAreas)) exitWith {
     [{
         params ["_args", "_handle"];
 
+        if (isGamePaused) exitWith {};
+
         private _threatLevel = player getVariable [QGVAR(detectedThreat), 0];
 
         if !("ChemicalDetector_01_watch_F" in assignedItems player || isNil "_threatLevel") exitWith {

@@ -12,8 +12,11 @@
  * Example:
  * [] call misery_chemical_fnc_process
 */
+
 [{
     params ["_args", "_handle"];
+
+    if (isGamePaused) exitWith {};
 
     private _leftArea = GVAR(areas) findIf {player inArea _x} isEqualTo -1;
 
@@ -25,9 +28,9 @@
     [] call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "_skinProtection", "_respiratoryProtection", "_eyeProtection", "_hearingProtection"];
 
     // Values can never be below zero.
-    private _skinDeficit = (MACRO_BASE_CHEMICAL_DOSE * ((1 - _skinProtection) / 1)) max 0;
-    private _respiratoryDeficit = MACRO_BASE_CHEMICAL_DOSE * ((1 - _respiratoryProtection) / 1) max 0;
-    private _eyeDeficit = MACRO_BASE_CHEMICAL_DOSE * ((1 - _eyeProtection) / 1) max 0;
+    private _skinDeficit = (MACRO_BASE_CHEMICAL_DOSE * ((1 - _skinProtection) ^ 1.5)) max 0;
+    private _respiratoryDeficit = MACRO_BASE_CHEMICAL_DOSE * ((1 - _respiratoryProtection) ^ 1.5) max 0;
+    private _eyeDeficit = MACRO_BASE_CHEMICAL_DOSE * ((1 - _eyeProtection) ^ 1.5) max 0;
     private _effectiveExposure = _skinDeficit + _respiratoryDeficit + _eyeDeficit;
 
     //Only damage player if exposure is greater than 0 - with enough protection values can turn negative, also reduce damage recieved to player
