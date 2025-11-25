@@ -18,6 +18,19 @@ if (!hasInterface) exitWith {};
     if (GVAR(rebreatherHoses)) then {
         call FUNC(rebreatherHose);
     };
+
+    // Only create mask break events, if enabled in ACE
+    if (!isNil "ace_goggles_effects" && ace_goggles_effects >= 2) then {
+        ["ace_glassesCracked", {
+            params ["_unit"];
+            if (_unit isEqualTo player) then {
+                [QEGVAR(common,tileText), format ["%1 is broken, removing equipment...", [goggles player] call EFUNC(common,getItemData) select 0]] call CBA_fnc_localEvent;
+                [{
+                    player unlinkItem goggles player;
+                }, [], 2] call CBA_fnc_waitAndExecute;
+            };
+        }] call CBA_fnc_addEventHandler;
+    };
 }] call CBA_fnc_addEventHandler;
 
 // For gasmask cartridge efficiency.
