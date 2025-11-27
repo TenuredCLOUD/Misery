@@ -33,6 +33,8 @@ if (_toxicity > 0.25) then {
 };
 
 if (_psychosis isEqualTo 1) then {
-    [player, 1 / 8, "head"] call FUNC(ailmentDamage);
+    if ([15] call EFUNC(common,rollChance)) then {
+        [player, 1 / 8, "head"] call FUNC(ailmentDamage);
+    };
 };
 

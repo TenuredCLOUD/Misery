@@ -16,6 +16,8 @@
 [{
     params ["_args", "_handle"];
 
+    if (isGamePaused) exitWith {};
+
     private _leftArea = GVAR(areas) findIf {player inArea _x} isEqualTo -1;
 
     if (_leftArea) exitWith {

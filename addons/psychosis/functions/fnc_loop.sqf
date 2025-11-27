@@ -37,6 +37,12 @@ if (_finalPsychosis > 0) then {
     [QGVAR(update), _finalPsychosis] call CBA_fnc_localEvent;
 };
 
+if (_finalPsychosis < 0.75) then {
+    if (GVAR(terrifiedState)) then {
+        GVAR(terrifiedState) = false;
+    };
+};
+
 [{
     call FUNC(loop);
 }, [], GVAR(cycleTimer)] call CBA_fnc_waitAndExecute;
