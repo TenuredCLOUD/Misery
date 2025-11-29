@@ -24,7 +24,7 @@ if (_damaged) exitWith {
 };
 
 if !(_hasSaw) exitWith {
-    [QEGVAR(common,tileText), format ["You need a chainsaw with fuel to start cutting wood..."]] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize "STR_MISERY_NOCHAINSAWFORWOODNOTI"] call CBA_fnc_localEvent;
 };
 
 if (currentWeapon player isNotEqualTo "") then {
