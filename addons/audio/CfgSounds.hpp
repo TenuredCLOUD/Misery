@@ -11,6 +11,96 @@
 class CfgSounds {
     sounds[] = {};
 
+    class CLASS(heart_5)
+	{
+        name = QUOTE(heart_5);
+		sound[] = {"a3\sounds_f\characters\human-sfx\other\heart_4_1.wss", 0.7, 1};
+	};
+
+    class CLASS(heart_6)
+	{
+        name = QUOTE(heart_6);
+		sound[] = {"a3\sounds_f\characters\human-sfx\other\heart_4_2.wss", 0.7, 1};
+	};
+
+    class CLASS(heart_7)
+	{
+        name = QUOTE(heart_7);
+		sound[] = {"a3\sounds_f\characters\human-sfx\other\heart_4_3.wss", 0.7, 1};
+	};
+
+    class CLASS(heart_8)
+	{
+        name = QUOTE(heart_8);
+		sound[] = {"a3\sounds_f\characters\human-sfx\other\heart_4_4.wss", 0.7, 1};
+	};
+
+    class CLASS(heart_9)
+	{
+        name = QUOTE(heart_9);
+		sound[] = {"a3\sounds_f\characters\human-sfx\other\heart_4_5.wss", 0.7, 1};
+	};
+
+    class CLASS(breath_high_01)
+	{
+        name = QUOTE(breath_high_01);
+		sound[] = {"a3\sounds_f\characters\human-sfx\person3\p3_breath_high_01.wss", 0.7, 1};
+	};
+
+    class CLASS(breath_high_02)
+	{
+        name = QUOTE(breath_high_02);
+		sound[] = {"a3\sounds_f\characters\human-sfx\person3\p3_breath_high_02.wss", 0.7, 1};
+	};
+
+    class CLASS(breath_high_03)
+	{
+        name = QUOTE(breath_high_03);
+		sound[] = {"a3\sounds_f\characters\human-sfx\person3\p3_breath_high_03.wss", 0.7, 1};
+	};
+
+    class CLASS(breath_high_04)
+	{
+        name = QUOTE(breath_high_04);
+		sound[] = {"a3\sounds_f\characters\human-sfx\person3\p3_breath_high_04.wss", 0.7, 1};
+	};
+
+    class CLASS(breath_high_05)
+	{
+        name = QUOTE(breath_high_05);
+		sound[] = {"a3\sounds_f\characters\human-sfx\person3\p3_breath_high_05.wss", 0.7, 1};
+	};
+
+    class CLASS(breath_high_06)
+	{
+        name = QUOTE(breath_high_06);
+		sound[] = {"a3\sounds_f\characters\human-sfx\person3\p3_breath_high_06.wss", 0.7, 1};
+	};
+
+    class CLASS(breath_high_07)
+	{
+        name = QUOTE(breath_high_07);
+		sound[] = {"a3\sounds_f\characters\human-sfx\person3\p3_breath_high_07.wss", 0.7, 1};
+	};
+
+    class CLASS(breath_high_08)
+	{
+        name = QUOTE(breath_high_08);
+		sound[] = {"a3\sounds_f\characters\human-sfx\person3\p3_breath_high_08.wss", 0.7, 1};
+	};
+
+    class CLASS(breath_high_09)
+	{
+        name = QUOTE(breath_high_09);
+		sound[] = {"a3\sounds_f\characters\human-sfx\person3\p3_breath_high_09.wss", 0.7, 1};
+	};
+
+    class CLASS(breath_high_10)
+	{
+        name = QUOTE(breath_high_10);
+		sound[] = {"a3\sounds_f\characters\human-sfx\person3\p3_breath_high_10.wss", 0.7, 1};
+	};
+
     // Ambience Sounds - Day
     MACRO_SOUNDS(ambienceDay,ambience);
     MACRO_SOUNDS(dayAmbience1,ambience);

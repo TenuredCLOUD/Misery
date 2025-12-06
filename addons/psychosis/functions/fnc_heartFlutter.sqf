@@ -20,14 +20,21 @@
 
         if (isGamePaused) exitWith {};
 
+        call EFUNC(protection,totalProtection) params ["", "_scba"];
+
         if (!GVAR(terrifiedState) || !alive player) exitWith {
             _handle call CBA_fnc_removePerFrameHandler;
             call FUNC(heartFlutter);
         };
 
-        playSound selectRandom [MACRO_PSYCHOSIS_HEARTFLUTTER];
-        playSound selectRandom [MACRO_PSYCHOSIS_BREATH];
+        if ([50] call EFUNC(common,rollChance)) then {
+            playSound selectRandom [MACRO_PSYCHOSIS_HEARTFLUTTER];
+        };
+
+        if (_scba < 1 && [50] call EFUNC(common,rollChance)) then {
+            playSound selectRandom [MACRO_PSYCHOSIS_BREATH];
+        };
 
         [player, QUOTE(psychosisEffect), 2, 2, 15, 0, 15, 1] call ace_medical_status_fnc_addMedicationAdjustment;
-    }, 3, []] call CBA_fnc_addPerFrameHandler;
+    }, 5, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;
