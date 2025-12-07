@@ -18,8 +18,8 @@
 // NATO APR & CUR
 player addEventHandler ["SlotItemChanged", {
     params ["_unit", "_name", "_slot", "_assigned", "_weapon"];
-
-    private _maskIndex = MACRO_RESPIRATOR_MASKS_CUR findIf { (toLower _name) isEqualTo (_x select 0) };
+    private _lowercaseName = toLower _name;
+    private _maskIndex = MACRO_RESPIRATOR_MASKS_CUR findIf {_lowercaseName isEqualTo (_x select 0)};
 
     private _pack = (MACRO_RESPIRATOR_MASKS_CUR select _maskIndex) select 1;
 
@@ -39,7 +39,8 @@ player addEventHandler ["SlotItemChanged", {
 player addEventHandler ["SlotItemChanged", {
     params ["_unit", "_name", "_slot", "_assigned", "_weapon"];
 
-    private _maskIndex = MACRO_RESPIRATOR_MASKS_SCBA findIf { (toLower _name) isEqualTo (_x select 0) };
+    private _lowercaseName = toLower _name;
+    private _maskIndex = MACRO_RESPIRATOR_MASKS_SCBA findIf {_lowercaseName isEqualTo (_x select 0)};
 
     private _pack = (MACRO_RESPIRATOR_MASKS_SCBA select _maskIndex) select 1;
 
