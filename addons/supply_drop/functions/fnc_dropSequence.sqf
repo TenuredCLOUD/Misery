@@ -29,6 +29,8 @@ _heli flyInHeight 100;
 [{
     params ["_heliGroup", "_heli", "_crate"];
 
+    _crate allowDamage false;
+
     _heli setSlingLoad objNull;
 
     private _smoke = "SmokeShellOrange" createVehicle position _crate;
