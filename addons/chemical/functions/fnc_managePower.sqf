@@ -18,6 +18,8 @@
     [{
         params ["_args", "_handle"];
 
+        if (isGamePaused) exitWith {};
+
         if !("ChemicalDetector_01_watch_F" in assignedItems player) exitWith {
             _handle call CBA_fnc_removePerFrameHandler;
             call FUNC(managePower)
