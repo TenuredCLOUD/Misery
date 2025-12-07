@@ -1,0 +1,10 @@
+PREP(checkInfection);
+PREP(clean);
+PREP(convertToArray);
+PREP(convertToZombie);
+PREP(findClass);
+PREP(infect);
+PREP(loiter);
+PREP(loop);
+PREP(randomGear);
+PREP(spawn);

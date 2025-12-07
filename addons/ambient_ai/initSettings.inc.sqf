@@ -24,16 +24,16 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "SLIDER",
     ["Group size", "Possible size of group ai can be generated with"],
     _category,
-    [1, 100, 5, 0],
+    [1, 15, 5, 0],
     1
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(maxUnits),
+    QGVAR(maxGroups),
     "SLIDER",
-    ["Maximum units", "Maximum units allowed to spawn"],
+    ["Maximum groups", "Maximum groups allowed to spawn"],
     _category,
-    [1, 150, 20, 0],
+    [1, 20, 2, 0],
     1
 ] call CBA_fnc_addSetting;
 
@@ -42,7 +42,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "EDITBOX",
     ["Primary weapons", "Possible primary weapons for ai"],
     _category,
-    "[]",
+    "['arifle_MX_F']",
     1
 ] call CBA_fnc_addSetting;
 
@@ -51,7 +51,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "EDITBOX",
     ["Secondary weapons", "Possible secondary weapons for ai"],
     _category,
-    "[]",
+    "['hgun_Pistol_heavy_01_MRD_F']",
     1
 ] call CBA_fnc_addSetting;
 
@@ -60,7 +60,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "EDITBOX",
     ["launcher weapons", "Possible launcher weapons for ai"],
     _category,
-    "[]",
+    "['launch_NLAW_F']",
     1
 ] call CBA_fnc_addSetting;
 
@@ -78,7 +78,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "EDITBOX",
     ["Items", "Possible item loot for ai"],
     _category,
-    "[]",
+    "['FirstAidKit']",
     1
 ] call CBA_fnc_addSetting;
 
@@ -87,7 +87,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "EDITBOX",
     ["NVGs", "Possible night vision for ai"],
     _category,
-    "[]",
+    "['NVGoggles']",
     1
 ] call CBA_fnc_addSetting;
 
@@ -96,7 +96,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "EDITBOX",
     ["Facewear", "Possible facewear for ai"],
     _category,
-    "[]",
+    "['G_Balaclava_oli']",
     1
 ] call CBA_fnc_addSetting;
 
@@ -105,7 +105,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "EDITBOX",
     ["Headgear", "Possible headgear for ai"],
     _category,
-    "[]",
+    "['H_Booniehat_eaf']",
     1
 ] call CBA_fnc_addSetting;
 
@@ -114,7 +114,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "EDITBOX",
     ["Uniform", "Possible uniforms for ai"],
     _category,
-    "[]",
+    "['U_B_CTRG_Soldier_F']",
     1
 ] call CBA_fnc_addSetting;
 
@@ -123,7 +123,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "EDITBOX",
     ["Vest", "Possible vests for ai"],
     _category,
-    "[]",
+    "['V_PlateCarrier1_rgr_noflag_F']",
     1
 ] call CBA_fnc_addSetting;
 
@@ -132,7 +132,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "EDITBOX",
     ["Backpack", "Possible backpacks for ai"],
     _category,
-    "[]",
+    "['B_FieldPack_Base']",
     1
 ] call CBA_fnc_addSetting;
 
@@ -210,9 +210,11 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 
 [
     QGVAR(cycleLength),
-    "SLIDER",
-    ["Cycle length", "Time in seconds between spawn checks"],
+    "LIST",
+    ["Spawn check interval", "Time in seconds between spawn checks"],
     _category,
-    [1, 3600, 30, 0],
-    1
+    [[30, 60, 120, 180, 300], ["30 seconds", "1 Minute", "2 Minutes", "3 Minutes", "5 Minutes"], 0],
+    1,
+    {},
+    true
 ] call CBA_fnc_addSetting;

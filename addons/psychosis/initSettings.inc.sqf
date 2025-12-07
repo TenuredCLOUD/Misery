@@ -41,7 +41,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "SLIDER",
     ["Psychosis Decrease", "How much psychosis naturally decreases."],
     _category,
-    [0.01, 1, 0.05, 2],
+    [0.0001, 1, 0.005, 4],
     1
 ] call CBA_fnc_addSetting;
 
@@ -50,7 +50,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "SLIDER",
     ["Psychosis at Night Increase", "Added psychosis value from Night time"],
     _category,
-    [0.1, 1, 0.25, 2],
+    [0.0001, 1, 0.0005, 4],
     1
 ] call CBA_fnc_addSetting;
 
@@ -59,6 +59,6 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "SLIDER",
     ["Unnatural Entities Increase", "Additional psychosis value from strange entities (Anomalies, Spooks, Zombies etc.)"],
     _category,
-    [0.1, 1, 0.25, 2],
+    [0.0001, 1, 0.0025, 4],
     1
 ] call CBA_fnc_addSetting;

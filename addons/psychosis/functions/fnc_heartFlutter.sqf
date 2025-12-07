@@ -18,6 +18,8 @@
     [{
         params ["_args", "_handle"];
 
+        if (isGamePaused) exitWith {};
+
         if (!GVAR(terrifiedState) || !alive player) exitWith {
             _handle call CBA_fnc_removePerFrameHandler;
             call FUNC(heartFlutter);

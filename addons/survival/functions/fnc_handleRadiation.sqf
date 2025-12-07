@@ -4,9 +4,7 @@
  * Handles radiation related things for survival loop.
  *
  * Arguments:
- * 0: Decrement Value <NUMBER>
- * 1: Parasites <NUMBER>
- * 2: Hunger <NUMBER>
+ * None
  *
  * Return Value:
  * None
@@ -17,14 +15,14 @@
  * Public: No
 */
 
-params ["_radiation", "_parasites", "_hunger", "_thirst"];
+call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "", "", "", "", "_radiation", "", "_parasites"];
 
 private _finalRadiation = ((_radiation + GVAR(radiationModifiers)) min 1) max 0;
 GVAR(radiationModifiers) = 0;
 player setVariable [QGVAR(radiation), _finalRadiation];
 
 if (_radiation > 0) then {
-    [-0.001, "radiation"] call EFUNC(common,addStatusModifier);
+    [-0.0001, "radiation"] call EFUNC(common,addStatusModifier);
 
     if ([15] call EFUNC(common,rollChance) && _radiation > 0.05) then {
         if (_parasites > 0) then {
@@ -40,11 +38,7 @@ if (_radiation > 0) then {
 
     player setStamina ((getStamina player) - _scaledStaminaLoss);
 
-    if ([50] call EFUNC(common,rollChance)) then {
-        [-_scaledNutrientLoss, "hunger"] call EFUNC(common,addStatusModifier);
-    } else {
-        [-_scaledNutrientLoss, "thirst"] call EFUNC(common,addStatusModifier);
-    };
+    [[-_scaledNutrientLoss, "hunger"] call EFUNC(common,addStatusModifier), [-_scaledNutrientLoss, "thirst"] call EFUNC(common,addStatusModifier)] select ([50] call EFUNC(common,rollChance));
 
     if (_radiation > 0.025) then {
         if ([25] call EFUNC(common,rollChance)) then {
