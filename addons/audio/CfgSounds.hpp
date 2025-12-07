@@ -11,26 +11,23 @@
 class CfgSounds {
     sounds[] = {};
 
-    class CLASS(diver_breath_1)
-    {
+    class CLASS(diver_breath_1) {
         name = QUOTE(diver_breath_1);
         sound[] = {"a3\sounds_f\characters\human-sfx\diver-breath-1.wss", 0.7, 1};
+        titles[] = {};
     };
 
-    class CLASS(diver_breath_2)
-    {
+    class CLASS(diver_breath_2): CLASS(diver_breath_1) {
         name = QUOTE(diver_breath_2);
         sound[] = {"a3\sounds_f\characters\human-sfx\diver-breath-2.wss", 0.7, 1};
     };
 
-    class CLASS(diver_breath_3)
-    {
+    class CLASS(diver_breath_3): CLASS(diver_breath_1) {
         name = QUOTE(diver_breath_3);
         sound[] = {"a3\sounds_f\characters\human-sfx\diver-breath-3.wss", 0.7, 1};
     };
 
-    class CLASS(diver_breath_4)
-    {
+    class CLASS(diver_breath_4): CLASS(diver_breath_1) {
         name = QUOTE(diver_breath_4);
         sound[] = {"a3\sounds_f\characters\human-sfx\diver-breath-4.wss", 0.7, 1};
     };
