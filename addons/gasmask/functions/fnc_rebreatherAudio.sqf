@@ -18,6 +18,8 @@
     params ["_args", "_handle"];
     _args params ["_lastBreathTime"];
 
+    if (isGamePaused) exitWith {};
+
     call EFUNC(protection,totalProtection) params ["", "_scba"];
 
     if (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled}) exitWith {}; // Kill audible breath if ACE advanced fatigue is enabled
@@ -28,7 +30,7 @@
 
     if (CBA_missionTime - _lastBreathTime >= _breathDelay) then {
         private _pitch = 0.8 + random 0.1 + getFatigue player;
-        player say3D [QEGVAR(audio,sound_gasmaskBreathing), 10, _pitch];
+        player say3D [selectRandom [MACRO_REBREATHER_SOUNDS], 10, _pitch];
 
         _args set [0, CBA_missionTime];
 

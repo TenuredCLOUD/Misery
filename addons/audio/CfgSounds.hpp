@@ -11,6 +11,27 @@
 class CfgSounds {
     sounds[] = {};
 
+    class CLASS(diver_breath_1) {
+        name = QUOTE(diver_breath_1);
+        sound[] = {"a3\sounds_f\characters\human-sfx\diver-breath-1.wss", 0.7, 1};
+        titles[] = {};
+    };
+
+    class CLASS(diver_breath_2): CLASS(diver_breath_1) {
+        name = QUOTE(diver_breath_2);
+        sound[] = {"a3\sounds_f\characters\human-sfx\diver-breath-2.wss", 0.7, 1};
+    };
+
+    class CLASS(diver_breath_3): CLASS(diver_breath_1) {
+        name = QUOTE(diver_breath_3);
+        sound[] = {"a3\sounds_f\characters\human-sfx\diver-breath-3.wss", 0.7, 1};
+    };
+
+    class CLASS(diver_breath_4): CLASS(diver_breath_1) {
+        name = QUOTE(diver_breath_4);
+        sound[] = {"a3\sounds_f\characters\human-sfx\diver-breath-4.wss", 0.7, 1};
+    };
+
     // Ambience Sounds - Day
     MACRO_SOUNDS(ambienceDay,ambience);
     MACRO_SOUNDS(dayAmbience1,ambience);
@@ -105,7 +126,6 @@ class CfgSounds {
     MACRO_SOUNDS(beer,immersion);
     MACRO_SOUNDS(cauterizing,immersion);
     MACRO_SOUNDS(dryGrass,immersion);
-    MACRO_SOUNDS(gasmaskBreathing,immersion);
     MACRO_SOUNDS(gasPump,immersion);
     MACRO_SOUNDS(gasPump30,immersion);
     MACRO_SOUNDS(gasPumpRunning,immersion);
