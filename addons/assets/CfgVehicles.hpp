@@ -4,37 +4,37 @@ class CfgVehicles {
     class Thing;
 
     class CLASS(object_Firewood): Item_Base_F {
-        displayName = "$STR_MISERY_FIREWOOD_DISPLAYNAME";
+        displayName = CSTRING(FireWood_DisplayName);
         MACRO_ITEM_COMMON;
 
         MACRO_ADDITEM(CLASS(Object_Firewood),1);
     };
     class CLASS(object_Woodenlog): Item_Base_F {
-        displayName = "STR_MISERY_WOODENLOG_DESCRIPTION";
+        displayName = CSTRING(WoodenLog_DisplayName);
         MACRO_ITEM_COMMON;
 
         MACRO_ADDITEM(CLASS(Object_Woodenlog),1);
     };
     class CLASS(object_CollapsibleFishingRod): Item_Base_F {
-        displayName = "$STR_MISERY_FISHINGROD_DISPLAYNAME";
+        displayName = CSTRING(FishingRod_DisplayName);
         MACRO_ITEM_COMMON;
 
         MACRO_ADDITEM(CLASS(Object_CollapsibleFishingRod),1);
     };
     class CLASS(object_2x4): Item_Base_F {
-        displayName = "$STR_MISERY_2X4_DISPLAYNAME";
+        displayName = CSTRING(2x4_DisplayName);
         MACRO_ITEM_COMMON;
 
         MACRO_ADDITEM(CLASS(Object_2x4),1);
     };
     class CLASS(object_2x8): Item_Base_F {
-        displayName = "$STR_MISERY_WOOD2X8_DISPLAYNAME";
+        displayName = CSTRING(2x8_DisplayName);
         MACRO_ITEM_COMMON;
 
         MACRO_ADDITEM(CLASS(Object_2x8),1);
     };
     class CLASS(object_Woodpanel): Item_Base_F {
-        displayName = "$STR_MISERY_WOODPANEL_DISPLAYNAME";
+        displayName = CSTRING(WoodPanel_DisplayName);
         MACRO_ITEM_COMMON;
 
         MACRO_ADDITEM(CLASS(Object_Woodpanel),1);
@@ -43,7 +43,7 @@ class CfgVehicles {
     class CLASS(forge): Thing {
         armor = 2000;
         author = "Model credits: RBG_illustrations - Reworked by TenuredCLOUD";
-        displayName = "$STR_MISERY_FORGE_DISPLAYNAME";
+        displayName = CSTRING(Forge_DisplayName);
         MACRO_THING_COMMON;
         mapSize = 3;
         model = QPATHTOF(data\models\forge.p3d);
@@ -52,7 +52,7 @@ class CfgVehicles {
     class CLASS(anvil): House_F {
         armor = 3;
         author = "Model credits: Margot D. - Reworked by TenuredCLOUD";
-        displayName = "$STR_MISERY_ANVIL_DISPLAYNAME";
+        displayName = CSTRING(Anvil_DisplayName);
         MACRO_HOUSE_COMMON;
         mapSize = 2;
         model = QPATHTOF(data\models\medievalanvil.p3d);
