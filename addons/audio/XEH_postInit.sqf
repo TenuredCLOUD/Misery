@@ -37,11 +37,15 @@ if (hasInterface) then {
     if (GVAR(enhancedInventorySounds)) then {
         // Inventory Sounds
         player addEventHandler ["InventoryClosed", {
-            playSound QCLASS(audio_sound_inventoryClose);
+            if (backpack player isNotEqualTo "") then {
+                playSound QCLASS(audio_sound_inventoryClose);
+            };
         }];
 
         player addEventHandler ["InventoryOpened", {
-            playSound QCLASS(audio_sound_inventoryOpen);
+            if (backpack player isNotEqualTo "") then {
+                playSound QCLASS(audio_sound_inventoryOpen);
+            };
         }];
 
         player addEventHandler ["Take", {
