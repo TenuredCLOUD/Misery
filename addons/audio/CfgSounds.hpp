@@ -247,7 +247,6 @@ class CfgSounds {
     MACRO_SOUNDS(skinning03,skin);
 
     // Spooky
-    MACRO_SOUNDS(spookyAlpha01,spooky);
     MACRO_SOUNDS(spookyAlpha02,spooky);
     MACRO_SOUNDS(spookyAlpha03,spooky);
     MACRO_SOUNDS(spookyBravo01,spooky);
