@@ -42,8 +42,8 @@
     [-_decrementValue, _randomNutrientSelection] call EFUNC(common,addStatusModifier);
 
     // Temperature
-    call EFUNC(temperature,core) params ["_thermalIndexModifier", "_wetnessModifier"];
-    [_thermalIndexModifier, _wetnessModifier] call FUNC(handleTemperature);
+    call EFUNC(temperature,core);
+    call FUNC(handleTemperature);
 
     // Ailments & Needs
     call FUNC(handleAilments);

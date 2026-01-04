@@ -46,8 +46,12 @@ disableSerialization;
         _textControlTimeDate ctrlSetText format ["%1 %2", _time, _date];
 
         switch (true) do {
-            case (!isNil QGVAR(temperature)): {
+            case (!isNil QGVAR(temperatureEnvironment)): {
                 _textControlReadings ctrlSetText format ["AIR: %1°C SEA: %2°C", parseNumber (((call EFUNC(temperature,environment)) select 0) toFixed 1), parseNumber (((call EFUNC(temperature,environment)) select 1) toFixed 1)];
+            };
+            case (!isNil QGVAR(temperatureBody)): {
+                call EFUNC(common,getPlayerVariables) params ["", "", "", "_thermalIndex"];
+                _textControlReadings ctrlSetText format ["EXPOSURE: %1°C", [_thermalIndex, 1, 1, false] call CBA_fnc_formatNumber];
             };
             case (!isNil QGVAR(compass)): {
                 _direction = round (getDir player);

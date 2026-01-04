@@ -20,7 +20,7 @@
 
 call EFUNC(common,getPlayerVariables) params ["", "", "", "_thermalIndex", "_exposure", "_wetness", "", "_infection", "_parasites"];
 
-if !(GVAR(enabled)) exitWith {[0, 0]};
+if !(GVAR(enabled)) exitWith {};
 
 // Get environmental data
 call FUNC(environment) params ["_airTemp", "_seaTemp"];
@@ -34,7 +34,7 @@ private _tempImpact = switch (true) do {
 };
 
 // Adjust for clothing warmth, reduced by wetness
-private _clothesWarmth = (player call FUNC(clothing)) select 0;
+[player] call FUNC(clothing) params ["_clothesWarmth"];
 _clothesWarmth = _clothesWarmth * (1 - _wetness * 0.5); // Up to 50% loss when soaked
 private _effectiveTempImpact = _tempImpact - (_clothesWarmth / 50); // Max warmth negates impact
 _effectiveTempImpact = (_effectiveTempImpact max -1) min 1;
@@ -54,39 +54,82 @@ switch (true) do {
         if (_thermalIndex < TEMP_NEUTRAL) then {
             _exposureModifier = NEUTRAL_RATE; // Warm up
             _thermalIndexModifier = _thermalIndex + 1 min TEMP_NEUTRAL; // Slow warming
-            _wetnessModifier = -0.025; // Dry faster near fire
+            if (_wetness > 0) then {
+                _wetnessModifier = -0.025; // Dry faster near fire
+            };
         };
         if (_thermalIndex > TEMP_NEUTRAL + 5) then {
             _exposureModifier = _exposureModifier + (EXPOSURE_RATE * 0.15);
         };
     };
+    // case (insideBuilding player isEqualTo 1): {
+    //     _exposureModifier = -_exposure * NEUTRAL_RATE; // Trend to 0
+    //     _thermalIndexModifier = _thermalIndex + ((TEMP_NEUTRAL - _thermalIndex) * 0.1); // Near neutral
+    //     if (_wetness > 0) then {
+    //         _wetnessModifier = -0.01; // Dry indoors
+    //     };
+    // };
     case (insideBuilding player isEqualTo 1): {
-        _exposureModifier = -_exposure * NEUTRAL_RATE; // Trend to 0
-        _thermalIndexModifier = _thermalIndex + ((TEMP_NEUTRAL - _thermalIndex) * 0.1); // Near neutral
-        _wetnessModifier = -0.01; // Dry indoors
+        // Building provides ~10°C insulation (without generator running, if near running generator, building will float more to neutral temperature)
+        private _generatorPower = false;
+
+        [player, 150] call EFUNC(generator,nearGenerator) params ["", "_generator"];
+
+        if (!isNil "_generator" && _generator getVariable [QEGVAR(generator,isRunning), false]) then {
+            _generatorPower = true;
+        };
+
+        if (_generatorPower) then {
+            _thermalIndexModifier = _thermalIndex + ((TEMP_NEUTRAL - _thermalIndex) * 0.1); // Near neutral
+            _exposureModifier = -_exposure * NEUTRAL_RATE; // Trend to 0
+            if (_wetness > 0) then {
+                _wetnessModifier = -0.012; // Dry indoors (faster with power)
+            };
+        } else {
+            private _buildingInsulation = 10;
+            private _shelterTemp = _airTemp + _buildingInsulation;
+            _thermalIndexModifier = _thermalIndex + ((_shelterTemp - _thermalIndex) * 0.1);
+            _exposureModifier = -_exposure * NEUTRAL_RATE; // Trend to 0
+            if (_wetness > 0) then {
+                _wetnessModifier = -0.01; // Dry indoors (slower no power)
+            };
+        };
     };
     case !(isNull objectParent player): {
         _exposureModifier = -_exposure * NEUTRAL_RATE; // Trend to 0
         _thermalIndexModifier = _thermalIndex + ((TEMP_NEUTRAL - _thermalIndex) * 0.08); // Less neutral
-        _wetnessModifier = -0.01; // Dry in vehicle
+        if (_wetness > 0) then {
+            _wetnessModifier = -0.01; // Dry in vehicle
+        };
     };
     default {
         // Exposed to elements
         _exposureModifier = _exposureModifier + (EXPOSURE_RATE * 0.1);
-        if (rain > 0) then {
+
+        // Water / Wetness
+        private _rainWet = false;
+        private _waterWet = false;
+
+        private _hasWetsuit = ((toLower uniform player) find "wetsuit") > -1;
+        if (rain > 0 && !_hasWetsuit) then {
             _wetnessModifier = rain * 0.03;
+            private _rainWet = true;
+        };
+        if (surfaceIsWater getPosATL player) then {
+            if (!_hasWetsuit && _seaTemp < TEMP_NEUTRAL) then {
+                private _waterImpact = ((TEMP_NEUTRAL - _seaTemp) / (TEMP_NEUTRAL - TEMP_MIN));
+                _exposureModifier = _exposureModifier - (EXPOSURE_RATE * 1.1 * _waterImpact);
+            };
+            _wetnessModifier = 0.25;
+            private _waterWet = true;
+        };
+        // Default dry slightly if no rain & not in water
+        if (!_rainWet && !_waterWet) then {
+            if (_wetness > 0) then {
+                _wetnessModifier = -0.005;
+            };
         };
     };
-};
-
-// Water
-private _hasWetsuit = ((toLower uniform player) find "wetsuit") > -1;
-if (underwater player) then {
-    if (!_hasWetsuit && _seaTemp < TEMP_NEUTRAL) then {
-        private _waterImpact = ((TEMP_NEUTRAL - _seaTemp) / (TEMP_NEUTRAL - TEMP_MIN));
-        _exposureModifier = _exposureModifier - (EXPOSURE_RATE * 1.1 * _waterImpact);
-    };
-    _wetnessModifier = 0.25;
 };
 
 // Wetness
@@ -116,14 +159,34 @@ if (GVAR(deficiency)) then {
 };
 
 // Finalize Wetness
-_wetnessModifier = _wetness + _wetnessModifier;
-_wetnessModifier = (_wetnessModifier max 0) min 1;
+//_wetnessModifier = _wetness + _wetnessModifier;
+
+//systemChat format ["Wetness: %1", _wetnessModifier];
 
 // Finalize ThermalIndex
-_thermalIndexModifier = (_thermalIndexModifier max TEMP_MIN) min TEMP_MAX;
+//_thermalIndexModifier = (_thermalIndexModifier max TEMP_MIN) min TEMP_MAX;
 
+// Temperature severity scaling
+private _tempSeverity = 1;
+
+// Cold severity
+if (_thermalIndex < TEMP_MIN) then {
+    private _coldExcess = abs(_thermalIndex - TEMP_MIN);
+    _tempSeverity = _tempSeverity * (1 + (_coldExcess * 0.5));
+    _exposureModifier = _exposureModifier * _tempSeverity;
+};
+
+// Heat severity
+if (_thermalIndex > TEMP_MAX) then {
+    private _heatExcess = _thermalIndex - TEMP_MAX;
+    _tempSeverity = _tempSeverity * (1 + (_heatExcess * 0.5));
+    _exposureModifier = _exposureModifier * _tempSeverity;
+};
+
+//systemChat format ["Exposure: %1", _exposureModifier];
+
+[_thermalIndexModifier, "thermalindex"] call EFUNC(common,addStatusModifier);
+[_wetnessModifier, "wetness"] call EFUNC(common,addStatusModifier);
 [_exposureModifier, "exposure"] call EFUNC(common,addStatusModifier);
 [-_hungerModifier, "hunger"] call EFUNC(common,addStatusModifier);
 [-_thirstModifier, "thirst"] call EFUNC(common,addStatusModifier);
-
-[_thermalIndexModifier, _wetnessModifier]
