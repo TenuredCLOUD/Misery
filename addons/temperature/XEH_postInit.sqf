@@ -1,5 +1,13 @@
 #include "script_component.hpp"
 
+GVAR(exposureModifiers) = 0;
+GVAR(thermalIndexModifiers) = 0;
+GVAR(wetnessModifiers) = 0;
+
+if (GVAR(breathFogAllowed)) then {
+    [] call FUNC(breathFog);
+};
+
 if !(GVAR(clothingCheckAction)) exitWith {};
 
 [

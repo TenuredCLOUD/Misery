@@ -32,7 +32,7 @@ private _vest = vest _unit;
 private _headgear = headgear _unit;
 private _facewear = goggles _unit;
 
-if (_uniform != "") then {
+if (_uniform isNotEqualTo "") then {
     if (isClass _config && {isNumber (_config >> _uniform >> "insulation")}) then {
         _uniformWarmth = getNumber (_config >> _uniform >> "insulation");
     } else {
@@ -55,7 +55,7 @@ if (_uniform != "") then {
     };
 };
 
-if (_vest != "") then {
+if (_vest isNotEqualTo "") then {
     if (isClass _config && {isNumber (_config >> _vest >> "insulation")}) then {
         _vestWarmth = getNumber (_config >> _vest >> "insulation");
     } else {
@@ -66,7 +66,7 @@ if (_vest != "") then {
     };
 };
 
-if (_headgear != "") then {
+if (_headgear isNotEqualTo "") then {
     if (isClass _config && {isNumber (_config >> _headgear >> "insulation")}) then {
         _headgearWarmth = getNumber (_config >> _headgear >> "insulation");
     } else {
@@ -80,7 +80,7 @@ if (_headgear != "") then {
     };
 };
 
-if (_facewear != "") then {
+if (_facewear isNotEqualTo "") then {
     if (isClass _config && {isNumber (_config >> _facewear >> "insulation")}) then {
         _facewearWarmth = getNumber (_config >> _facewear >> "insulation");
     } else {

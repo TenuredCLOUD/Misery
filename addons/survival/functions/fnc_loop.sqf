@@ -24,17 +24,17 @@
     if (isGamePaused) exitWith {};
 
     private _isMultiplayer = isMultiplayer;
-    private _decrementValue = 0.0001;
+    private _decrementValue = 3.333e-6; //0.0001;
 
     private _weightDeficiency = 0;
 
     if (EGVAR(weight,deficiency)) then {
-        _weightDeficiency = (call EFUNC(weight,calculated)) / 500; // Max ~0.001 at 50kg
+        _weightDeficiency = (call EFUNC(weight,calculated)) / 15000; //500; // Max ~0.001 at 50kg
     };
 
     // If player is not on foot, reduction stays at a low value.
     if (isNull objectParent player) then {
-        private _speedPenalty = abs (speed player) / 100000;
+        private _speedPenalty = abs (speed player) / 3000000; //100000;
         _decrementValue = _decrementValue + _speedPenalty + _weightDeficiency;
     };
 
@@ -55,5 +55,5 @@
     [_decay] call FUNC(visualizeDecay);
     call FUNC(ailmentDecay);
 
-}, 30] call CBA_fnc_addPerFrameHandler;
+}, 2] call CBA_fnc_addPerFrameHandler; //30
 
