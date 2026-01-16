@@ -22,13 +22,11 @@
 */
 
 private _airTemp = 0;
-private _seaTemp = 0;
+private _seaTemp = nil;
 
 if (isClass (missionConfigFile >> "CfgMisery_TemperatureData" >> "DailyTemps")) then {
     _airTemp = getArray (missionConfigFile >> "CfgMisery_TemperatureData" >> "DailyTemps" >> "airTemps");
-    _seaTemp = getArray (missionConfigFile >> "CfgMisery_TemperatureData" >> "DailyTemps" >> "seaTemps");
     _airTemp = _airTemp select (date select 3);
-    _seaTemp = _seaTemp select (date select 3);
 } else {
     ambientTemperature params ["_airTemp", "_seaTemp"];
 };
@@ -64,6 +62,11 @@ if (isClass (missionConfigFile >> "CfgMisery_TemperatureData" >> "DailyTemps")) 
     // Cap temperature between -50°C and 55°C
     _windChillIndexCelsius = (_windChillIndexCelsius max -50) min 55;
 
-    _seaTemp = _seaTemp max 0;
+    // Automatically calculate seaTemp & cap at 1°C so water doesn't freeze
+    if (isNil "_seaTemp" || {_seaTemp isEqualTo 0}) then {
+        _seaTemp = linearConversion [-20, 40, _airTemp, 1, 25, true];
+    };
+
+    _seaTemp = _seaTemp max 1;
 
     [_windChillIndexCelsius, _seaTemp, _breathFog]

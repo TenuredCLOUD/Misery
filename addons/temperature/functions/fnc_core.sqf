@@ -7,10 +7,7 @@
  * None
  *
  * Return Value:
- * 0: Array of Variables <ARRAY>
- *     0: ThermalIndex Modifier <NUMBER>
- *     1: Wetness Modifier <NUMBER>
- *
+ * None
  *
  * Example:
  * [] call misery_temperature_fnc_core;
@@ -22,208 +19,138 @@ call EFUNC(common,getPlayerVariables) params ["", "", "", "_thermalIndex", "_exp
 
 if !(GVAR(enabled)) exitWith {};
 
-// Get environmental data
 call FUNC(environment) params ["_airTemp", "_seaTemp"];
 
-// Calculate base temperature impact (-1 to 1)
-private _tempDelta = _thermalIndex - TEMP_NEUTRAL;
-private _tempImpact = switch (true) do {
-    case (_thermalIndex < TEMP_NEUTRAL): { (_tempDelta / (TEMP_NEUTRAL - TEMP_MIN)) }; // -1 to 0
-    case (_thermalIndex > TEMP_NEUTRAL): { (_tempDelta / (TEMP_MAX - TEMP_NEUTRAL)) }; // 0 to 1
-    default { 0 };
-};
-
-// Adjust for clothing warmth, reduced by wetness
 [player] call FUNC(clothing) params ["_clothesWarmth"];
-_clothesWarmth = _clothesWarmth * (1 - _wetness * 0.5); // Up to 50% loss when soaked
-private _effectiveTempImpact = _tempImpact - (_clothesWarmth / 50); // Max warmth negates impact
-_effectiveTempImpact = (_effectiveTempImpact max -1) min 1;
+_clothesWarmth = _clothesWarmth * (1 - _wetness * 0.5);
 
-// Base modifiers
-private _exposureModifier = EXPOSURE_RATE * _effectiveTempImpact; // -0.033 to 0.033
-private _hungerModifier = HUNGER_RATE;
-private _thirstModifier = THIRST_RATE;
-private _thermalIndexModifier = _airTemp + (_clothesWarmth / 5); // Very slow drift
+private _wetnessChill = linearConversion [0, 1, _wetness, 0, 0.8, true];
+private _ambientTarget = linearConversion [TEMP_MIN, TEMP_MAX, _airTemp, -1, 1, true];
+private _targetExposure = _ambientTarget;
+private _thermalIndexModifier = _airTemp + (_clothesWarmth / 5);
 private _wetnessModifier = 0;
+private _changeMultiplier = 1;
 
 call EFUNC(common,nearFire) params ["", "_isInflamed"];
 
-// Environment
 switch (true) do {
+    case (GVAR(thermalPackHeatActive)): {
+        _targetExposure = 0.1;
+        _changeMultiplier = 50;
+    };
+    case (GVAR(thermalPackColdActive)): {
+        _targetExposure = -0.1;
+        _changeMultiplier = 50;
+    };
+    case (GVAR(thermalBagActive)): {
+        _targetExposure = 0;
+        _thermalIndexModifier = TEMP_NEUTRAL;
+        _wetnessModifier = -0.01;
+        _changeMultiplier = 50;
+    };
     case (insideBuilding player isEqualTo 1 && _isInflamed): {
-        // Building provides ~10°C insulation (without generator running, if near running generator, building will float more to neutral temperature)
-        private _generatorPower = false;
-
         [player, 150] call EFUNC(generator,nearGenerator) params ["", "_generator"];
+        private _hasPower = (!isNil "_generator" && {_generator getVariable [QEGVAR(generator,isRunning), false]});
 
-        if (!isNil "_generator" && _generator getVariable [QEGVAR(generator,isRunning), false]) then {
-            _generatorPower = true;
-        };
-
-        if (_generatorPower) then {
-            _thermalIndexModifier = _thermalIndex + ((TEMP_NEUTRAL - _thermalIndex) * 0.1); // Near neutral
-            _exposureModifier = NEUTRAL_RATE + 6.266667e-3; // Trend to 0
-            if (_wetness > 0) then {
-                _wetnessModifier = -NEUTRAL_RATE - 6.266667e-3; // Dry indoors (faster with power) //0.015
-            };
+        if (_hasPower) then {
+            _targetExposure = 0.25 - (_wetnessChill * 0.5);
+            _thermalIndexModifier = (_airTemp + 30) min 35;
+            _wetnessModifier = -0.01;
+            _changeMultiplier = 50;
         } else {
-            private _shelterFireTemp = _airTemp + 20;
-            _thermalIndexModifier = _thermalIndex + ((_shelterFireTemp - _thermalIndex) * 0.1);
-            _exposureModifier = NEUTRAL_RATE + 6.266667e-3; // Trend to 0
-            if (_wetness > 0) then {
-                _wetnessModifier = -NEUTRAL_RATE - 6.266667e-3; // Dry indoors (slower no power) //0.01
-            };
-        };
-        if (_thermalIndex > TEMP_NEUTRAL) then {
-            _exposureModifier = _exposureModifier + (EXPOSURE_RATE * 0.15);
+            _targetExposure = ([0.5, 0.1] select (_airTemp < TEMP_NEUTRAL)) - (_wetnessChill * 0.5);
+            _thermalIndexModifier = (_airTemp + 20) min 35;
+            _wetnessModifier = -0.005;
+            _changeMultiplier = 50;
         };
     };
     case (_isInflamed): {
-            _exposureModifier = NEUTRAL_RATE + 6.266667e-3; // Warm up
-            _thermalIndexModifier = _thermalIndex + 1 min (_airTemp + 20); // Slow warming (20C above ambient temperature to simulate fire temperature difference)
-            if (_wetness > 0) then {
-                _wetnessModifier = -NEUTRAL_RATE - 6.266667e-3; // Dry faster near fire //0.025
-            };
-        if (_thermalIndex > TEMP_NEUTRAL) then {
-            _exposureModifier = _exposureModifier + (EXPOSURE_RATE * 0.15);
-        };
+        _targetExposure = ([0.5, 0.1] select (_airTemp < TEMP_NEUTRAL)) - (_wetnessChill * 0.5);
+        _thermalIndexModifier = (_airTemp + 20) min 35;
+        _wetnessModifier = -0.005;
+        _changeMultiplier = 50;
     };
     case (insideBuilding player isEqualTo 1): {
-        // Building provides ~10°C insulation (without generator running, if near running generator, building will float more to neutral temperature)
-        private _generatorPower = false;
-
         [player, 150] call EFUNC(generator,nearGenerator) params ["", "_generator"];
+        private _hasPower = (!isNil "_generator" && {_generator getVariable [QEGVAR(generator,isRunning), false]});
 
-        if (!isNil "_generator" && _generator getVariable [QEGVAR(generator,isRunning), false]) then {
-            _generatorPower = true;
-        };
-
-        if (_generatorPower) then {
-            _thermalIndexModifier = _thermalIndex + ((TEMP_NEUTRAL - _thermalIndex) * 0.1); // Near neutral
-            _exposureModifier = NEUTRAL_RATE + 1.436e-1; // Trend to 0
-            if (_wetness > 0) then {
-                _wetnessModifier = -NEUTRAL_RATE - 1.436e-1; // Dry indoors (faster with power) //0.015
-            };
+        if (_hasPower) then {
+            _targetExposure = 0 - (_wetnessChill * 0.2);
+            _thermalIndexModifier = TEMP_NEUTRAL;
+            _wetnessModifier = -0.001;
+            _changeMultiplier = 50;
         } else {
-            private _shelterTemp = _airTemp + 10;
-            _thermalIndexModifier = _thermalIndex + ((_shelterTemp - _thermalIndex) * 0.1);
-            _exposureModifier = NEUTRAL_RATE; // Trend to 0
-            if (_wetness > 0) then {
-                _wetnessModifier = -NEUTRAL_RATE; // Dry indoors (slower no power) //0.01
-            };
+            _targetExposure = ((_ambientTarget + 0.3) min 0) - _wetnessChill;
+            _thermalIndexModifier = _airTemp + 10;
+            _wetnessModifier = -0.0001;
+            _changeMultiplier = 50;
         };
     };
     case !(isNull objectParent player): {
-        private _config = missionConfigFile >> "CfgMisery_VehicleData";
-        private _shelteredVeh = false;
-
-        if (isClass _config && {isNumber (_config >> typeOf vehicle player >> "shelter")}) then {
-            _shelterValue = getNumber (_config >> typeOf vehicle player >> "shelter");
-            if (_shelterValue > 0 && isEngineOn vehicle player) then {
-                _shelteredVeh = true;
-                _thermalIndexModifier = _thermalIndex + ((TEMP_NEUTRAL - _thermalIndex) * 0.1); // Near neutral
-                _exposureModifier = NEUTRAL_RATE + 1.196e-1; // Trend to 0
-                if (_wetness > 0) then {
-                    _wetnessModifier = -NEUTRAL_RATE - 1.196e-1; // Dry in vehicle // 0.012
-                };
-            };
+        if (_shelteredVeh) then {
+            _targetExposure = 0 - (_wetnessChill * 0.3);
+            _thermalIndexModifier = TEMP_NEUTRAL;
+            _wetnessModifier = -0.001;
+            _changeMultiplier = 50;
         } else {
-            if (getNumber (configOf (vehicle player) >> "transportSoldier") > 0 && isEngineOn vehicle player) then {
-                _shelteredVeh = true;
-                _thermalIndexModifier = _thermalIndex + ((TEMP_NEUTRAL - _thermalIndex) * 0.1); // Near neutral
-                _exposureModifier = NEUTRAL_RATE + 1.196e-1; // Trend to 0
-                if (_wetness > 0) then {
-                    _wetnessModifier = -NEUTRAL_RATE - 1.196e-1; // Dry in vehicle
-                };
-            };
-        };
-        if !(_shelteredVeh) then {
-            // Continue exposure if vehicle isn't defined as a shelter
-            _exposureModifier = _exposureModifier + (EXPOSURE_RATE * 0.1);
+            _targetExposure = (_ambientTarget + 0.1) - _wetnessChill;
+            _thermalIndexModifier = _airTemp + (_clothesWarmth / 10);
         };
     };
     default {
-        // Exposed to elements
-        _exposureModifier = _exposureModifier + (EXPOSURE_RATE * 0.1);
+        private _hasWetsuit = ((toLower uniform player) find "wetsuit") > -1;
+        private _isSwimming = (animationState player in [MACRO_ANIMATION_SWIMMING]);
 
-        // Water / Wetness
         private _rainWet = false;
         private _waterWet = false;
-        private _waterImpact = ((TEMP_NEUTRAL - _seaTemp) / (TEMP_NEUTRAL - TEMP_MIN));
 
-        private _hasWetsuit = ((toLower uniform player) find "wetsuit") > -1;
-        if (rain > 0 && !_hasWetsuit) then {
-            _wetnessModifier = rain * 0.03;
-            _rainWet = true;
-        };
-        if (surfaceIsWater getPosWorld player) then {
-            if (!_hasWetsuit && _seaTemp < TEMP_NEUTRAL) then {
-                //_exposureModifier = _exposureModifier - (EXPOSURE_RATE * 1.1 * _waterImpact);
-                _exposureModifier = -1 * _waterImpact;
-            };
-            _wetnessModifier = 0.01;
+        if (surfaceIsWater getPosWorld player || _isSwimming) then {
             _waterWet = true;
-        };
-        if (animationState player in [MACRO_ANIMATION_SWIMMING]) then {
+            _thermalIndexModifier = _seaTemp;
+            _targetExposure = linearConversion [TEMP_MIN, TEMP_MAX, _seaTemp, -1, 1, true];
+            _wetnessModifier = [0.05, 1.0] select (_isSwimming);
+
             if (!_hasWetsuit && _seaTemp < TEMP_NEUTRAL) then {
-                //_exposureModifier = _exposureModifier - (EXPOSURE_RATE * 1.1 * _waterImpact);
-                _exposureModifier = -1 * _waterImpact;
+                _targetExposure = -1;
             };
-            _wetnessModifier = 1;
-            _waterWet = true;
-        };
-        // Default dry slightly if no rain & not in water
-        if (!_rainWet && !_waterWet) then {
-            if (_wetness > 0) then {
-                _wetnessModifier = -1.66667e-4; //0.005
+        } else {
+            _targetExposure = linearConversion [TEMP_MIN, TEMP_MAX, (_airTemp + (_clothesWarmth / 5)), -1, 1, true];
+            _targetExposure = (_targetExposure - _wetnessChill) max -1;
+
+            if (rain > 0 && !_hasWetsuit) then {
+                _wetnessModifier = rain * 0.03;
+                _rainWet = true;
+            } else {
+                if (!_rainWet && !_waterWet) then {
+                    _wetnessModifier = -0.00001;
+                };
             };
         };
     };
 };
 
-// Wetness
-if (_wetness > 0) then {
-    private _wetImpact = _wetness * WETNESS_RATE;
-    if (_thermalIndex < TEMP_NEUTRAL) then {
-       // _exposureModifier = _exposureModifier - _wetImpact;
-       _exposureModifier = (_exposureModifier - _wetImpact) * (1 + _wetness);
-    } else {
-        //_exposureModifier = _exposureModifier + (_wetImpact * 0.5);
-        _exposureModifier = _exposureModifier + (_wetImpact * 0.5);
-    };
+private _driftChange = NEUTRAL_RATE * _changeMultiplier;
+private _exposureModifier = (_targetExposure - _exposure) * _driftChange;
+
+if (_wetness > 0 && _thermalIndex < TEMP_NEUTRAL) then {
+    _exposureModifier = (_exposureModifier - (_wetness * WETNESS_RATE * 5)) * (3 + _wetness);
 };
 
-// Sickness
+private _hungerModifier = HUNGER_RATE;
+private _thirstModifier = THIRST_RATE;
+
+private _impactAbs = abs(_exposure);
+
 if (_parasites > 0 || _infection > 0) then {
-    _exposureModifier = _exposureModifier + (EXPOSURE_RATE * SICKNESS_FACTOR * abs _effectiveTempImpact);
-    _thirstModifier = _thirstModifier + (THIRST_RATE * 1.2 * abs _effectiveTempImpact);
-    _hungerModifier = _hungerModifier + (HUNGER_RATE * 0.5 * abs _effectiveTempImpact);
+    _exposureModifier = _exposureModifier + (EXPOSURE_RATE * SICKNESS_FACTOR * _impactAbs);
 };
 
-// Deficiency
 if (GVAR(deficiency)) then {
     if (_thermalIndex < TEMP_NEUTRAL) then {
-        _hungerModifier = _hungerModifier + (HUNGER_RATE * abs _effectiveTempImpact);
+        _hungerModifier = _hungerModifier + (HUNGER_RATE * _impactAbs);
     } else {
-        _thirstModifier = _thirstModifier + (THIRST_RATE * abs _effectiveTempImpact);
+        _thirstModifier = _thirstModifier + (THIRST_RATE * _impactAbs);
     };
-};
-
-// Temperature severity scaling
-private _tempSeverity = 1;
-
-// Cold severity
-if (_thermalIndex < TEMP_MIN) then {
-    private _coldExcess = abs(_thermalIndex - TEMP_MIN);
-    _tempSeverity = _tempSeverity * (1 + (_coldExcess * 0.5));
-    _exposureModifier = _exposureModifier * _tempSeverity;
-};
-
-// Heat severity
-if (_thermalIndex > TEMP_MAX) then {
-    private _heatExcess = _thermalIndex - TEMP_MAX;
-    _tempSeverity = _tempSeverity * (1 + (_heatExcess * 0.5));
-    _exposureModifier = _exposureModifier * _tempSeverity;
 };
 
 [_thermalIndexModifier, "thermalindex"] call EFUNC(common,addStatusModifier);

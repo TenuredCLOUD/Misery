@@ -609,5 +609,15 @@ class CfgMagazines {
         picture = QPATHTOF(data\icons\toolkit.paa);
         scope = 2;
     };
+
+    class CLASS(thermalRegulationKit): CLASS(FakeMagazine) {
+        count = 4;
+        descriptionShort = "Advanced thermoregulation kit equipped with moisture-wicking cloth and medical grade equipment to maintain optimal body temperature in harsh conditions, can be used in any climate.";
+        displayName = "Field thermal regulation kit";
+        mass = 40;
+        model = "a3\weapons_f\items\toolkit.p3d";
+        picture = QPATHTOF(data\icons\toolkit.paa);
+        scope = 2;
+    };
 };
 
