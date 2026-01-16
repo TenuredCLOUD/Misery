@@ -87,6 +87,19 @@ switch (true) do {
         };
     };
     case !(isNull objectParent player): {
+        private _config = missionConfigFile >> "CfgMisery_VehicleData";
+        private _shelteredVeh = false;
+
+        if (isClass _config && {isNumber (_config >> typeOf vehicle player >> "shelter")}) then {
+            _shelterValue = getNumber (_config >> typeOf vehicle player >> "shelter");
+            if (_shelterValue > 0 && isEngineOn vehicle player) then {
+                _shelteredVeh = true;
+            };
+        } else {
+            if (getNumber (configOf (vehicle player) >> "transportSoldier") > 0 && isEngineOn vehicle player) then {
+                _shelteredVeh = true;
+            };
+        };
         if (_shelteredVeh) then {
             _targetExposure = 0 - (_wetnessChill * 0.3);
             _thermalIndexModifier = TEMP_NEUTRAL;

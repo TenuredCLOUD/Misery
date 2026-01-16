@@ -25,7 +25,7 @@ private _vestWarmth = 0;
 private _headgearWarmth = 0;
 private _facewearWarmth = 0;
 
-private _config = missionConfigFile >> "CfgMisery_TemperatureData" >> "ClothingOverrides";
+private _config = missionConfigFile >> "CfgMisery_GearData" >> "GearValues";
 
 private _uniform = uniform _unit;
 private _vest = vest _unit;
