@@ -28,7 +28,7 @@ class CLASS(refuelfuelCan_ui)
         class CLASS(refuelVehicle_fuel_icon): RscPicture
         {
             idc = -1;
-            text = QPATHTOEF(markers,data\fuel.paa);
+            text = QPATHTOEF(markers,data\fuel_ca.paa);
             x = 26.5 * GUI_GRID_W + GUI_GRID_X;
             y = 3.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 5.5 * GUI_GRID_W;

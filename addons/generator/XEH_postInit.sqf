@@ -12,7 +12,7 @@ if (isServer) then {
             createDialog QCLASS(generator_ui);
         },
         "",
-        "",
+        QPATHTOEF(icons,data\cable_ca.paa),
         ""
     ] call EFUNC(actions,addAction);
 };

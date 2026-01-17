@@ -10,7 +10,7 @@ if (GVAR(enabled)) then {
             call EFUNC(actions,displayActions);
         },
         "",
-        QPATHTOEF(icons,data\fish_ca.paa),
+        QPATHTOEF(icons,data\fishing_hook_ca.paa),
         ""
     ] call EFUNC(actions,addAction);
 
@@ -23,7 +23,7 @@ if (GVAR(enabled)) then {
             [] call FUNC(action);
         },
         "fishing_menu",
-        QPATHTOEF(icons,data\fish_ca.paa),
+        QPATHTOEF(icons,data\fishing_hook_ca.paa),
         ""
     ] call EFUNC(actions,addAction);
 
@@ -35,7 +35,7 @@ if (GVAR(enabled)) then {
             [QEGVAR(common,tileText), localize "STR_MISERY_STARTFISHINGREQUIRMENTS_LISTED"] call CBA_fnc_localEvent;
         },
         "fishing_menu",
-        QPATHTOEF(icons,data\fish_ca.paa),
+        QPATHTOEF(icons,data\fishing_hook_ca.paa),
         ""
     ] call EFUNC(actions,addAction);
 };

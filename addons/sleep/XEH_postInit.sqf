@@ -11,6 +11,6 @@ if (isMultiplayer) exitWith {};
     createDialog QCLASS(sleepMenu_ui);
     },
     "",
-    QPATHTOEF(icons,data\sleepy_ca.paa),
+    QPATHTOEF(icons,data\bed_ca.paa),
     ""
 ] call EFUNC(actions,addAction);

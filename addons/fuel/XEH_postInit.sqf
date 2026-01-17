@@ -12,7 +12,7 @@ if (isServer) then {
             createDialog QCLASS(refuelVehicle_ui);
         },
         "",
-        QPATHTOEF(markers,data\fuel.paa),
+        QPATHTOEF(markers,data\fuel_ca.paa),
         ""
     ] call EFUNC(actions,addAction);
 
@@ -25,7 +25,7 @@ if (isServer) then {
             createDialog QCLASS(refuelfuelCan_ui);
         },
         "",
-        QPATHTOEF(markers,data\fuel.paa),
+        QPATHTOEF(markers,data\fuel_ca.paa),
         ""
     ] call EFUNC(actions,addAction);
 };

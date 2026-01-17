@@ -17,7 +17,7 @@
             call FUNC(storeArtifact);
             },
             "",
-            "",
+            QPATHTOEF(icons,data\package_open_ca.paa),
             ""
         ] call EFUNC(actions,addAction);
 

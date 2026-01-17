@@ -11,7 +11,7 @@ if (isServer) then {
             call FUNC(batteries);
         },
         "",
-        "",
+        QPATHTOEF(icons,data\battery_charging_ca.paa),
         ""
     ] call EFUNC(actions,addAction);
 

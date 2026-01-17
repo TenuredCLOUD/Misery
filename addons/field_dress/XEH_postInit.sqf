@@ -12,7 +12,7 @@ if (GVAR(enabled)) then {
             call FUNC(skin);
         },
         "",
-        "a3\modules_f_curator\data\portraitanimals_ca.paa",
+        QPATHTOEF(icons,data\paw_print_ca.paa),
         ""
     ] call EFUNC(actions,addAction);
 };
