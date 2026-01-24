@@ -9,6 +9,7 @@ PREP(displayEnableControls);
 PREP(displayShowControls);
 PREP(emptyObject);
 PREP(getItemData);
+PREP(getLookedAtTarget);
 PREP(getMagazineCapacity);
 PREP(getObjectData);
 PREP(getObjectMass);

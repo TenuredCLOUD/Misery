@@ -14,13 +14,9 @@
  *
 */
 
-private _nearObjects = nearestObjects [player, [MACRO_BEDS], 2.5];
+[2] call EFUNC(common,getLookedAtTarget) params ["_object"];
 
-private _nearTerrainObjects = nearestTerrainObjects [player, [MACRO_BEDS], 2.5];
-
-private _object = cursorObject;
-
-private _model = getModelInfo _object select 0;
+private _modelInfo = getModelInfo _object select 0;
 
 private _vehicleConfig = "";
 
@@ -33,4 +29,4 @@ if !(isNull objectParent player) then {
     };
 };
 
-_nearObjects isNotEqualTo [] || _nearTerrainObjects isNotEqualTo [] || (vehicle player isKindOf "Car" && _canSleepInVehicle) || _model in [MACRO_BED_MODELS]
+(vehicle player isKindOf "Car" && _canSleepInVehicle) || _modelInfo in [MACRO_BED_MODELS]
