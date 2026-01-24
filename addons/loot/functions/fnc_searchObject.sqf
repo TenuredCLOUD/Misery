@@ -35,13 +35,20 @@ if (GVAR(searchedPositions) findIf {_x distance _pos < 0.5} isNotEqualTo -1) exi
 
 private _canSearch = true;
 if (_requiredTools isNotEqualTo []) then {
-    if !(_requiredTools call EFUNC(common,hasItem)) exitWith {
+    if !([_requiredTools] call EFUNC(common,hasItem)) exitWith {
         _canSearch = false;
     };
 };
 
 if (!_canSearch) exitWith {
-    [QEGVAR(common,tileText), "You need tools to search this..."] call CBA_fnc_localEvent;
+    private _toolNames = [];
+    {
+        ([_x] call EFUNC(common,getItemData)) params ["_displayName"];
+        _toolNames pushBack _displayName;
+    } forEach _requiredTools;
+
+    private _listString = _toolNames joinString "and ";
+    [QEGVAR(common,tileText), format ["You need a %1 to search this...", _listString]] call CBA_fnc_localEvent;
 };
 
 private _soundDummy = objNull;
