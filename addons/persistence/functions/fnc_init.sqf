@@ -32,6 +32,9 @@ if (isServer) then {
 
 // If GRAD Persistence is being used, and admin actions are enabled - add actions to admins, or SP player
 if (GVAR(gradAdminActions)) then {
+    GVAR(gradPersistenceTag) = getText (missionConfigFile >> "CfgGradPersistence" >> "missionTag");
+    if (GVAR(gradPersistenceTag) isEqualTo "") then {GVAR(gradPersistenceTag) = missionName};
+
     [
         "grad_db_menu",
         "GRAD Persistence",

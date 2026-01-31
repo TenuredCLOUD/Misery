@@ -52,7 +52,7 @@ class CLASS(grad_persistence_compat_ui)
             colorActive[] = {0.5, 0.5, 0.5, 0.7};
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
-            onButtonClick = QUOTE([ARR_2(false,0)] call grad_persistence_fnc_saveMission);
+            onButtonClick = QUOTE([ARR_2(false,0)] remoteExec [ARR_2('grad_persistence_fnc_saveMission',2)]);
         };
         class misery_gradPersistence_wipe: RscButton
         {
@@ -67,7 +67,7 @@ class CLASS(grad_persistence_compat_ui)
             colorActive[] = {0.5, 0.5, 0.5, 0.7};
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
-            onButtonClick = QUOTE([ARR_1(missionName)] call grad_persistence_fnc_clearMissionData);
+            onButtonClick = QUOTE([ARR_1(EGVAR(persistence,gradPersistenceTag))] remoteExec [ARR_2('grad_persistence_fnc_clearMissionData',2)]);
         };
         class misery_gradPersistence_cancel_wipe: RscButton
         {
