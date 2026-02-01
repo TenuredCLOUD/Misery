@@ -36,32 +36,33 @@ class CLASS(grad_persistence_compat_ui)
             h = 3.5 * GUI_GRID_H;
         };
     };
-
     class Controls
     {
         class misery_gradPersistence_save: RscButton
         {
             idc = -1;
             text = "Save world"; //--- ToDo: Localize;
-            x = 14 * GUI_GRID_W + GUI_GRID_X;
-            y = 8.5 * GUI_GRID_H + GUI_GRID_Y;
-            w = 12 * GUI_GRID_W;
-            h = 1.5 * GUI_GRID_H;
+            x = 4.5 * GUI_GRID_W + GUI_GRID_X;
+	        y = 9 * GUI_GRID_H + GUI_GRID_Y;
+	        w = 12 * GUI_GRID_W;
+	        h = 1.5 * GUI_GRID_H;
+            colorText[] = {0,0.8,0,1};
             colorBackground[] = {0.2, 0.2, 0.2, 0.7};
             colorFocused[] = {0.5, 0.5, 0.5, 0.7};
             colorActive[] = {0.5, 0.5, 0.5, 0.7};
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
-            onButtonClick = QUOTE([ARR_2(false,0)] remoteExec [ARR_2('grad_persistence_fnc_saveMission',2)]);
+            onButtonClick = QUOTE([ARR_2(EGVAR(persistence,gradWarning),0)] remoteExec [ARR_2('grad_persistence_fnc_saveMission',2)]);
         };
         class misery_gradPersistence_wipe: RscButton
         {
             idc = -1;
             text = "Wipe world data"; //--- ToDo: Localize;
-            x = 14 * GUI_GRID_W + GUI_GRID_X;
-            y = 10.5 * GUI_GRID_H + GUI_GRID_Y;
-            w = 12 * GUI_GRID_W;
-            h = 1.5 * GUI_GRID_H;
+            x = 23.5 * GUI_GRID_W + GUI_GRID_X;
+	        y = 9 * GUI_GRID_H + GUI_GRID_Y;
+	        w = 12 * GUI_GRID_W;
+	        h = 1.5 * GUI_GRID_H;
+            colorText[] = {0.9,0,0,1};
             colorBackground[] = {0.2, 0.2, 0.2, 0.7};
             colorFocused[] = {0.5, 0.5, 0.5, 0.7};
             colorActive[] = {0.5, 0.5, 0.5, 0.7};
@@ -74,9 +75,9 @@ class CLASS(grad_persistence_compat_ui)
             idc = -1;
             text = "Cancel"; //--- ToDo: Localize;
             x = 14 * GUI_GRID_W + GUI_GRID_X;
-            y = 14.5 * GUI_GRID_H + GUI_GRID_Y;
-            w = 12 * GUI_GRID_W;
-            h = 1.5 * GUI_GRID_H;
+	        y = 15 * GUI_GRID_H + GUI_GRID_Y;
+	        w = 12 * GUI_GRID_W;
+	        h = 1.5 * GUI_GRID_H;
             colorBackground[] = {0.2, 0.2, 0.2, 0.7};
             colorFocused[] = {0.5, 0.5, 0.5, 0.7};
             colorActive[] = {0.5, 0.5, 0.5, 0.7};
@@ -86,4 +87,3 @@ class CLASS(grad_persistence_compat_ui)
         };
     };
 };
-
