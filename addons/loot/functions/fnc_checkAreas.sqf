@@ -25,7 +25,7 @@ private _failedMarkers = [];
     private _marker = _x;
     private _markerShape = markerShape _marker;
     if (_markerShape isNotEqualTo "RECTANGLE" && _markerShape isNotEqualTo "ELLIPSE") then {
-        private _msg = format ["Doorlock blacklist marker (%1) is either not an area marker or does not exist, remove it from the list.", _marker];
+        private _msg = format ["Loot blacklist marker (%1) is either not an area marker or does not exist, remove it from the list.", _marker];
         [QUOTE(COMPONENT_BEAUTIFIED), _msg] call EFUNC(common,debugMessage);
         _failedMarkers pushBackUnique _marker;
     };
