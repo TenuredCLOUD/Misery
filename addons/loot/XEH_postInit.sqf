@@ -34,3 +34,6 @@ if (isClass (missionConfigFile >> "CfgMisery_SearchableObjects")) then {
     [QUOTE(COMPONENT_BEAUTIFIED), "CfgMisery_SearchableObjects class not found in description.ext, skipping data parser..."] call EFUNC(common,debugMessage);
 };
 
+[{CBA_missionTime > 1}, {
+    call FUNC(checkAreas);
+}, []] call CBA_fnc_waitUntilAndExecute;

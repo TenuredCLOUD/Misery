@@ -1,5 +1,6 @@
 PREP(blacklistFilter);
 PREP(cacheSearched);
+PREP(checkAreas);
 PREP(generate);
 PREP(loop);
 PREP(parseData);
