@@ -23,6 +23,9 @@
     if (_leftArea) exitWith {
         player setVariable [QGVAR(insideArea), false, true];
         _handle call CBA_fnc_removePerFrameHandler;
+        [{
+            QGVAR(display) cutText ["", "PLAIN"];
+        }, [], 15] call CBA_fnc_waitAndExecute;
     };
 
     [] call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "_skinProtection", "_respiratoryProtection", "_eyeProtection", "_hearingProtection"];
@@ -49,6 +52,7 @@
         };
         if (_eyeProtection < 1) then {
             [player, _finalEyeDeficit, "Head", "burn"] call ace_medical_fnc_addDamageToUnit;
+            QGVAR(display) cutRsc [QCLASS(bloodshot_ui), "PLAIN", 1, false];
         };
     } else {
         if (_skinProtection < 1) then {
@@ -60,6 +64,7 @@
         };
         if (_eyeProtection < 1) then {
             player setHitPointDamage ["hitHead", _finalEyeDeficit];
+            QGVAR(display) cutRsc [QCLASS(bloodshot_ui), "PLAIN", 1, false];
         };
     };
 
