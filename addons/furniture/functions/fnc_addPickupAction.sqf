@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [] call misery_furniture_fnc_condition
+ * [] call misery_furniture_fnc_addPickupAction
  *
 */
 

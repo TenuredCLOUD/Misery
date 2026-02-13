@@ -53,7 +53,11 @@ player setVariable [QGVAR(isForcedplacement), nil];
 GVAR(objectPlacementDone) = true;
 
 // Add hold action to object for retrieval
-[_className, _displayName, _serverObject] call FUNC(addPickupAction);
+if !(_className isKindOf "StaticWeapon") then {
+    [_className, _displayName, _serverObject] call FUNC(addPickupAction);
+};
 
 // Add hold action to object for vehicle loading
-[_className, _displayName, _serverObject] call FUNC(addLoadAction);
+if !(_className isKindOf "StaticWeapon") then {
+    [_className, _displayName, _serverObject] call FUNC(addLoadAction);
+};
