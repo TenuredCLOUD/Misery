@@ -41,6 +41,6 @@ private _validActions = _actionRegistry select {
 
 // Automatically add cancel button if in submenu
 if (_currentParent != "") then {
-    private _index = _list lbAdd "Cancel";
+    private _index = _list lbAdd localize "STR_MISERY_CANCEL";
     _list lbSetData [_index, "CANCEL_ROOT"];
 };

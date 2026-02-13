@@ -4,8 +4,8 @@ class CfgWeapons {
     class CLASS(ItemCore): CBA_MiscItem {};
 
     class CLASS(pickaxe_Broken): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_PICKAXEBROKEN_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_PICKAXEBROKEN_DESCRIPTION";
+        displayName = CSTRING(PickaxeBroken_DisplayName);
+        descriptionShort = CSTRING(PickaxeBroken_Description);
         picture = QPATHTOF(data\icons\brokenpickaxe.paa);
         model = QPATHTOF(data\models\pickaxe.p3d);
         scope = 2;
@@ -17,8 +17,8 @@ class CfgWeapons {
     };
 
     class CLASS(pickaxeHead): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_PICKAXEHEAD_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_PICKAXEHEAD_DESCRIPTION";
+        displayName = CSTRING(PickaxeHead_DisplayName);
+        descriptionShort = CSTRING(PickaxeHead_Description);
         picture = QPATHTOF(data\icons\pickHead.paa);
         scope = 2;
         scopeCurator = 2;
@@ -29,8 +29,8 @@ class CfgWeapons {
     };
 
     class CLASS(fishingPole): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_FISHINGPOLE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_FISHINGPOLE_DESCRIPTION";
+        displayName = CSTRING(FishingPole_DisplayName);
+        descriptionShort = CSTRING(FishingPole_Description);
         picture = QPATHTOF(data\icons\fishingpole2.paa);
         model = QPATHTOF(data\models\fishingrod.p3d);
         scope = 2;
@@ -42,8 +42,8 @@ class CfgWeapons {
     };
 
     class CLASS(fishingSpool): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_FISHINGSPOOL_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_FISHINGSPOOL_DESCRIPTION";
+        displayName = CSTRING(FishingSpool_DisplayName);
+        descriptionShort = CSTRING(FishingSpool_Description);
         picture = QPATHTOF(data\icons\fishingspool.paa);
         scope = 2;
         scopeCurator = 2;
@@ -54,8 +54,8 @@ class CfgWeapons {
     };
 
     class CLASS(geiger_NoBattery): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_PERSONALGEIGERNOBATTERY_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_PERSONALGEIGERNOBATTERY_DESCRIPTION";
+        displayName = CSTRING(GeigerNoBattery_DisplayName);
+        descriptionShort = CSTRING(RequiresLithiumBattery_Description);
         picture = QPATHTOF(data\icons\personalgeigernobattery.paa);
         model = "\A3\Weapons_F\Items\MineDetector.p3d";
         scope = 2;
@@ -67,8 +67,8 @@ class CfgWeapons {
     };
 
     class CLASS(lantern_NoBattery): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_LANTERNNOBATTERY_DISPLAYNAME";
-        descriptionShort = "STR_MISERY_LANTERNNOBATTERY_DESCRIPTION";
+        displayName = CSTRING(LanternNoBattery_DisplayName);
+        descriptionShort = CSTRING(RequiresLithiumBattery_Description);
         picture = QPATHTOF(data\icons\lantern.paa);
         model = "a3\structures_f\civ\camping\camping_light_off_f.p3d";
         scope = 2;
@@ -80,8 +80,8 @@ class CfgWeapons {
     };
 
     class CLASS(clozapine): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_CLOZAPINE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_CLOZAPINE_DESCRIPTION";
+        displayName = CSTRING(Clozapine_DisplayName);
+        descriptionShort = CSTRING(Clozapine_Description);
         picture = QPATHTOF(data\icons\Clozapineinjection.paa);
         scope = 2;
         scopeCurator = 2;
@@ -92,8 +92,8 @@ class CfgWeapons {
     };
 
     class CLASS(cocaine): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_COCAINE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_COCAINE_DESCRIPTION";
+        displayName = CSTRING(Cocaine_DisplayName);
+        descriptionShort = CSTRING(Cocaine_Description);
         picture = QPATHTOF(data\icons\cocaine.paa);
         scope = 2;
         scopeCurator = 2;
@@ -104,8 +104,8 @@ class CfgWeapons {
     };
 
     class CLASS(thrombomodulin): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_THROMBOMODULIN_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_THROMBOMODULIN_DESCRIPTION";
+        displayName = CSTRING(thbd_DisplayName);
+        descriptionShort = CSTRING(thbd_Description);
         picture = QPATHTOF(data\icons\Thbd.paa);
         model = "a3\props_f_orange\humanitarian\garbage\medicalgarbage_01_injector_f.p3d";
         scope = 2;
@@ -117,8 +117,8 @@ class CfgWeapons {
     };
 
     class CLASS(thrombomodulin_Stimpack): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_THROMBOMODULINSTIMPACK_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_THROMBOMODULINSTIMPACK_DESCRIPTION";
+        displayName = CSTRING(thbdStimpack_DisplayName);
+        descriptionShort = CSTRING(thbdStimpack_Description);
         picture = QPATHTOF(data\icons\Thbdstim.paa);
         model = "a3\props_f_orange\humanitarian\garbage\medicalgarbage_01_injector_f.p3d";
         scope = 2;
@@ -130,8 +130,8 @@ class CfgWeapons {
     };
 
     class CLASS(antidote): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ANTIDOTE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ANTIDOTE_DESCRIPTION";
+        displayName = CSTRING(Antidote_DisplayName);
+        descriptionShort = CSTRING(Antidote_Description);
         picture = QPATHTOF(data\icons\antidote.paa);
         model = "a3\props_f_enoch\military\decontamination\antidotekit_01_f.p3d";
         scope = 2;
@@ -143,8 +143,8 @@ class CfgWeapons {
     };
 
     class CLASS(randomMedication): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_RANDOMMEDICATION_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_RANDOMMEDICATION_DESCRIPTION";
+        displayName = CSTRING(RandomMedication_DisplayName);
+        descriptionShort = CSTRING(RandomMedication_Description);
         picture = QPATHTOF(data\icons\medication.paa);
         scope = 2;
         scopeCurator = 2;
@@ -155,8 +155,8 @@ class CfgWeapons {
     };
 
     class CLASS(fishhook): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_FISHHOOK_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_FISHHOOK_DESCRIPTION";
+        displayName = CSTRING(FishHook_DisplayName);
+        descriptionShort = CSTRING(FishHook_Description);
         picture = QPATHTOF(data\icons\fishhook.paa);
         scope = 2;
         scopeCurator = 2;
@@ -167,8 +167,8 @@ class CfgWeapons {
     };
 
     class CLASS(worms): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_WORMS_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_WORMS_DESCRIPTION";
+        displayName = CSTRING(Worms_DisplayName);
+        descriptionShort = CSTRING(Worms_Description);
         picture = QPATHTOF(data\icons\worms.paa);
         scope = 2;
         scopeCurator = 2;
@@ -179,8 +179,8 @@ class CfgWeapons {
     };
 
     class CLASS(lithiumBattery): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_LITHIUMBATTERY_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_LITHIUMBATTERY_DESCRIPTION";
+        displayName = CSTRING(LithiumBattery_DisplayName);
+        descriptionShort = CSTRING(LithiumBattery_Description);
         picture = QPATHTOF(data\icons\NitecoreBATT.paa);
         scope = 2;
         scopeCurator = 2;
@@ -191,8 +191,8 @@ class CfgWeapons {
     };
 
     class CLASS(energyDrink): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ENERGYDRINK_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ENERGYDRINK_DESCRIPTION";
+        displayName = CSTRING(EnergyDrink_DisplayName);
+        descriptionShort = CSTRING(EnergyDrink_Description);
         picture = QPATHTOF(data\icons\energyDrink.paa);
         model = "a3\structures_f\items\food\can_v3_f.p3d";
         scope = 2;
@@ -204,8 +204,8 @@ class CfgWeapons {
     };
 
     class CLASS(soda_1): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_SODA_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_SODA_DESCRIPTION";
+        displayName = CSTRING(Soda_DisplayName);
+        descriptionShort = CSTRING(Soda_Description);
         picture = QPATHTOF(data\icons\soda_1.paa);
         model = "a3\structures_f\items\food\can_v2_f.p3d";
         scope = 2;
@@ -217,8 +217,8 @@ class CfgWeapons {
     };
 
     class CLASS(soda_2): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_SODA_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_SODA_DESCRIPTION";
+        displayName = CSTRING(Soda_DisplayName);
+        descriptionShort = CSTRING(Soda_Description);
         picture = QPATHTOF(data\icons\soda_2.paa);
         model = "a3\structures_f\items\food\can_v1_f.p3d";
         scope = 2;
@@ -230,8 +230,8 @@ class CfgWeapons {
     };
 
     class CLASS(canOpener): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_CANOPENER_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_CANOPENER_DESCRIPTION";
+        displayName = CSTRING(CanOpener_DisplayName);
+        descriptionShort = CSTRING(CanOpener_Description);
         picture = QPATHTOF(data\icons\canOpener.paa);
         model = "a3\structures_f_epa\items\tools\canopener_f.p3d";
         scope = 2;
@@ -245,8 +245,8 @@ class CfgWeapons {
     class CLASS(canteen_Empty): CLASS(ItemCore) {
         scope = 2;
         author = "TenuredCLOUD";
-        displayName = "$STR_MISERY_CANTEENEMPTY_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_CANTEENEMPTY_DESCRIPTION";
+        displayName = CSTRING(CanteenEmpty_DisplayName);
+        descriptionShort = CSTRING(CanteenEmpty_Description);
         picture = QPATHTOF(data\icons\canteen.paa);
         model = "a3\structures_f_epa\items\food\canteen_f.p3d";
 
@@ -258,8 +258,8 @@ class CfgWeapons {
     class CLASS(waterBottle_Empty): CLASS(ItemCore) {
         scope = 2;
         author = "TenuredCLOUD";
-        displayName = "$STR_MISERY_WATERBOTTLEEMPTY_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_WATERBOTTLEEMPTY_DESCRIPTION";
+        displayName = CSTRING(WaterBottleEmpty_DisplayName);
+        descriptionShort = CSTRING(WaterBottleEmpty_Description);
         picture = QPATHTOF(data\icons\waterbottle.paa);
         model = "a3\structures_f_epa\items\food\bottleplastic_v2_f.p3d";
 
@@ -269,8 +269,8 @@ class CfgWeapons {
     };
 
     class CLASS(cereal): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_CEREAL_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_CEREAL_DESCRIPTION";
+        displayName = CSTRING(Cereal_DisplayName);
+        descriptionShort = CSTRING(Cereal_Description);
         picture = QPATHTOF(data\icons\cereal.paa);
         model = "a3\structures_f_epa\items\food\cerealsbox_f.p3d";
         scope = 2;
@@ -282,8 +282,8 @@ class CfgWeapons {
     };
 
     class CLASS(orange): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ORANGE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ORANGE_DESCRIPTION";
+        displayName = CSTRING(Orange_DisplayName);
+        descriptionShort = CSTRING(Orange_Description);
         picture = QPATHTOF(data\icons\orange.paa);
         model = "a3\props_f_orange\humanitarian\supplies\orange_01_f.p3d";
         scope = 2;
@@ -295,8 +295,8 @@ class CfgWeapons {
     };
 
     class CLASS(powderedMilk): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_POWDEREDMILK_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_POWDEREDMILK_DESCRIPTION";
+        displayName = CSTRING(PowderedMilk_DisplayName);
+        descriptionShort = CSTRING(PowderedMilk_Description);
         picture = QPATHTOF(data\icons\drymilk.paa);
         model = "a3\structures_f_epa\items\food\powderedmilk_f.p3d";
         scope = 2;
@@ -308,8 +308,8 @@ class CfgWeapons {
     };
 
     class CLASS(cannedBacon): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_CANNEDBACON_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_CANNEDBACON_DESCRIPTION";
+        displayName = CSTRING(CannedBacon_DisplayName);
+        descriptionShort = CSTRING(CannedBacon_Description);
         picture = QPATHTOF(data\icons\CannedBacon.paa);
         model = "a3\structures_f\items\food\tacticalbacon_f.p3d";
         scope = 2;
@@ -321,8 +321,8 @@ class CfgWeapons {
     };
 
     class CLASS(bakedBeans): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_BAKEDBEANS_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_BAKEDBEANS_DESCRIPTION";
+        displayName = CSTRING(BakedBeans_DisplayName);
+        descriptionShort = CSTRING(BakedBeans_Description);
         picture = QPATHTOF(data\icons\CannedBeans.paa);
         model = "a3\structures_f_epa\items\food\bakedbeans_f.p3d";
         scope = 2;
@@ -334,8 +334,8 @@ class CfgWeapons {
     };
 
     class CLASS(leadContainer_Open): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_LEADCONTAINEROPEN_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_LEADCONTAINEROPEN_DESCRIPTION";
+        displayName = CSTRING(LeadContainerOpen_DisplayName);
+        descriptionShort = CSTRING(LeadContainerOpen_Description);
         picture = QPATHTOF(data\icons\cbrn_container.paa);
         model = "a3\props_f_enoch\military\decontamination\cbrncase_01_f.p3d";
         scope = 2;
@@ -347,8 +347,8 @@ class CfgWeapons {
     };
 
     class CLASS(leadContainer_Closed): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_LEADCONTAINERCLOSED_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_LEADCONTAINERCLOSED_DESCRIPTION";
+        displayName = CSTRING(LeadContainerClosed_DisplayName);
+        descriptionShort = CSTRING(LeadContainerClosed_Description);
         picture = QPATHTOF(data\icons\cbrn_container.paa);
         model = "a3\props_f_enoch\military\decontamination\cbrncase_01_f.p3d";
         scope = 2;
@@ -360,8 +360,8 @@ class CfgWeapons {
     };
 
     class CLASS(artifact_01): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ARTIFACT_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ARTIFACT_DESCRIPTION";
+        displayName = CSTRING(Artifact_DisplayName);
+        descriptionShort = CSTRING(Artifact_Description);
         picture = QPATHTOF(data\icons\Artifact01.paa);
         model = QPATHTOF(data\models\artifact.p3d);
         scope = 2;
@@ -373,8 +373,8 @@ class CfgWeapons {
     };
 
     class CLASS(artifact_02): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ARTIFACT_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ARTIFACT_DESCRIPTION";
+        displayName = CSTRING(Artifact_DisplayName);
+        descriptionShort = CSTRING(Artifact_Description);
         picture = QPATHTOF(data\icons\Artifact02.paa);
         model = QPATHTOF(data\models\artifact.p3d);
         scope = 2;
@@ -386,8 +386,8 @@ class CfgWeapons {
     };
 
     class CLASS(artifact_03): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ARTIFACT_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ARTIFACT_DESCRIPTION";
+        displayName = CSTRING(Artifact_DisplayName);
+        descriptionShort = CSTRING(Artifact_Description);
         picture = QPATHTOF(data\icons\Artifact03.paa);
         model = QPATHTOF(data\models\artifact.p3d);
         scope = 2;
@@ -399,8 +399,8 @@ class CfgWeapons {
     };
 
     class CLASS(artifact_04): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ARTIFACT_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ARTIFACT_DESCRIPTION";
+        displayName = CSTRING(Artifact_DisplayName);
+        descriptionShort = CSTRING(Artifact_Description);
         picture = QPATHTOF(data\icons\Artifact04.paa);
         model = QPATHTOF(data\models\artifact.p3d);
         scope = 2;
@@ -412,8 +412,8 @@ class CfgWeapons {
     };
 
     class CLASS(artifact_05): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ARTIFACT_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ARTIFACT_DESCRIPTION";
+        displayName = CSTRING(Artifact_DisplayName);
+        descriptionShort = CSTRING(Artifact_Description);
         picture = QPATHTOF(data\icons\Artifact05.paa);
         model = QPATHTOF(data\models\artifact.p3d);
         scope = 2;
@@ -425,8 +425,8 @@ class CfgWeapons {
     };
 
     class CLASS(artifact_06): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ARTIFACT_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ARTIFACT_DESCRIPTION";
+        displayName = CSTRING(Artifact_DisplayName);
+        descriptionShort = CSTRING(Artifact_Description);
         picture = QPATHTOF(data\icons\Artifact06.paa);
         model = QPATHTOF(data\models\artifact.p3d);
         scope = 2;
@@ -438,8 +438,8 @@ class CfgWeapons {
     };
 
     class CLASS(artifact_07): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ARTIFACT_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ARTIFACT_DESCRIPTION";
+        displayName = CSTRING(Artifact_DisplayName);
+        descriptionShort = CSTRING(Artifact_Description);
         picture = QPATHTOF(data\icons\Artifact07.paa);
         model = QPATHTOF(data\models\artifact.p3d);
         scope = 2;
@@ -451,8 +451,8 @@ class CfgWeapons {
     };
 
     class CLASS(artifact_08): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ARTIFACT_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ARTIFACT_DESCRIPTION";
+        displayName = CSTRING(Artifact_DisplayName);
+        descriptionShort = CSTRING(Artifact_Description);
         picture = QPATHTOF(data\icons\Artifact08.paa);
         model = QPATHTOF(data\models\artifact.p3d);
         scope = 2;
@@ -464,8 +464,8 @@ class CfgWeapons {
     };
 
     class CLASS(artifact_09): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ARTIFACT_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ARTIFACT_DESCRIPTION";
+        displayName = CSTRING(Artifact_DisplayName);
+        descriptionShort = CSTRING(Artifact_Description);
         picture = QPATHTOF(data\icons\Artifact09.paa);
         model = QPATHTOF(data\models\artifact.p3d);
         scope = 2;
@@ -477,8 +477,8 @@ class CfgWeapons {
     };
 
     class CLASS(artifact_10): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ARTIFACT_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ARTIFACT_DESCRIPTION";
+        displayName = CSTRING(Artifact_DisplayName);
+        descriptionShort = CSTRING(Artifact_Description);
         picture = QPATHTOF(data\icons\Artifact10.paa);
         model = QPATHTOF(data\models\artifact.p3d);
         scope = 2;
@@ -490,8 +490,8 @@ class CfgWeapons {
     };
 
     class CLASS(heatpack): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_HEATPACK_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_HEATPACK_DESCRIPTION";
+        displayName = CSTRING(HeatPack_DisplayName);
+        descriptionShort = CSTRING(HeatPack_Description);
         picture = QPATHTOF(data\icons\hotpack.paa);
         model = "a3\structures_f_epa\items\medical\heatpack_f.p3d";
         scope = 2;
@@ -503,8 +503,8 @@ class CfgWeapons {
     };
 
     class CLASS(coldpack): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_COLDPACK_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_COLDPACK_DESCRIPTION";
+        displayName = CSTRING(ColdPack_DisplayName);
+        descriptionShort = CSTRING(ColdPack_Description);
         picture = QPATHTOF(data\icons\coldpack.paa);
         scope = 2;
         scopeCurator = 2;
@@ -515,8 +515,8 @@ class CfgWeapons {
     };
 
     class CLASS(waterJerryCan_Empty): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_WATERJERRYE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_WATERJERRYE_DESCRIPTION";
+        displayName = CSTRING(JerryCanWaterEmpty_DisplayName);
+        descriptionShort = CSTRING(JerryCanWaterEmpty_Description);
         picture = QPATHTOF(data\icons\CanisterWater.paa);
         model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
         scope = 2;
@@ -528,8 +528,8 @@ class CfgWeapons {
     };
 
     class CLASS(tinContainer): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_TINCONTAINER_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_TINCONTAINER_DESCRIPTION";
+        displayName = CSTRING(TinContainer_DisplayName);
+        descriptionShort = CSTRING(TinContainer_Description);
         picture = QPATHTOF(data\icons\tinContainer.paa);
         model = "a3\structures_f_epa\items\vessels\tincontainer_f.p3d";
         scope = 2;
@@ -541,8 +541,8 @@ class CfgWeapons {
     };
 
     class CLASS(cookedFish): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_COOKEDFISH_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_COOKEDFISH_DESCRIPTION";
+        displayName = CSTRING(CookedFish_DisplayName);
+        descriptionShort = CSTRING(CookedFish_Description);
         picture = QPATHTOF(data\icons\cookedfish.paa);
         model = QPATHTOF(data\models\fishcooked.p3d);
         scope = 2;
@@ -554,8 +554,8 @@ class CfgWeapons {
     };
 
     class CLASS(rawFish): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_RAWFISH_1_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_RAWFISH_1_DESCRIPTION";
+        displayName = CSTRING(RawFish_DisplayName);
+        descriptionShort = CSTRING(RawFish_Description);
         picture = QPATHTOF(data\icons\rawfish.paa);
         model = QPATHTOF(data\models\fish.p3d);
         scope = 2;
@@ -567,8 +567,8 @@ class CfgWeapons {
     };
 
     class CLASS(cookedMeat): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_COOKEDMEAT_DISPLAYNAME";
-        descriptionShort = "STR_MISERY_COOKEDMEAT_DESCRIPTION";
+        displayName = CSTRING(CookedMeat_DisplayName);
+        descriptionShort = CSTRING(CookedMeat_Description);
         picture = QPATHTOF(data\icons\cookedmeat.paa);
         model = QPATHTOF(data\models\cookedmeat.p3d);
         scope = 2;
@@ -580,8 +580,8 @@ class CfgWeapons {
     };
 
     class CLASS(rawMeat): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_RAWMEAT_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_RAWMEAT_DESCRIPTION";
+        displayName = CSTRING(RawMeat_DisplayName);
+        descriptionShort = CSTRING(RawMeat_Description);
         picture = QPATHTOF(data\icons\rawmeat.paa);
         model = QPATHTOF(data\models\rawmeat.p3d);
         scope = 2;
@@ -593,8 +593,8 @@ class CfgWeapons {
     };
 
     class CLASS(coffeeMug): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_COFFEEMUG_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_COFFEEMUG_DESCRIPTION";
+        displayName = CSTRING(CoffeeMug_DisplayName);
+        descriptionShort = CSTRING(CoffeeMug_Description);
         picture = QPATHTOF(data\icons\coffeemug.paa);
         scope = 2;
         scopeCurator = 2;
@@ -605,8 +605,8 @@ class CfgWeapons {
     };
 
     class CLASS(coffeeBrewed): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_COFFEEBREWED_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_COFFEEBREWED_DESCRIPTION";
+        displayName = CSTRING(CoffeeBrewed_DisplayName);
+        descriptionShort = CSTRING(CoffeeBrewed_Description);
         picture = QPATHTOF(data\icons\coffeebrewed.paa);
         scope = 2;
         scopeCurator = 2;
@@ -617,8 +617,8 @@ class CfgWeapons {
     };
 
     class CLASS(gasMask_Empty): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_GASMASKEMPTY_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_GASMASKEMPTY_DESCRIPTION";
+        displayName = CSTRING(GasMaskEmpty_DisplayName);
+        descriptionShort = CSTRING(GasMaskEmpty_Description);
         picture = QPATHTOF(data\icons\gasmask.paa);
         scope = 2;
         scopeCurator = 2;
@@ -628,8 +628,8 @@ class CfgWeapons {
     };
 
     class CLASS(gasCartridge): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_GASCARTRIDGE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_GASCARTRIDGE_DESCRIPTION";
+        displayName = CSTRING(GasCartridge_DisplayName);
+        descriptionShort = CSTRING(GasCartridge_Description);
         picture = QPATHTOF(data\icons\maskcartridges.paa);
         scope = 2;
         scopeCurator = 2;
@@ -640,8 +640,8 @@ class CfgWeapons {
     };
 
     class CLASS(18vBattery): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_18VBAT_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_18VBAT_DESCRIPTION";
+        displayName = CSTRING(18VBattery_DisplayName);
+        descriptionShort = CSTRING(18VBattery_Description);
         picture = QPATHTOF(data\icons\18vbat.paa);
         scope = 2;
         scopeCurator = 2;
@@ -652,8 +652,8 @@ class CfgWeapons {
     };
 
     class CLASS(ductTape): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_DUCTTAPE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_DUCTTAPE_DESCRIPTION";
+        displayName = CSTRING(DuctTape_DisplayName);
+        descriptionShort = CSTRING(DuctTape_Description);
         picture = QPATHTOF(data\icons\ducttape.paa);
         model = "a3\structures_f_epa\items\tools\ducttape_f.p3d";
         scope = 2;
@@ -665,8 +665,8 @@ class CfgWeapons {
     };
 
     class CLASS(phillipsScrewdriver): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_PSCREWDRIVER_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_PSCREWDRIVER_DESCRIPTION";
+        displayName = CSTRING(Phillips_DisplayName);
+        descriptionShort = CSTRING(Phillips_Description);
         picture = QPATHTOF(data\icons\phillips.paa);
         model = "a3\structures_f\items\tools\screwdriver_v2_f.p3d";
         scope = 2;
@@ -678,8 +678,8 @@ class CfgWeapons {
     };
 
     class CLASS(flatheadScrewdriver): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_FSCREWDRIVER_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_FSCREWDRIVER_DESCRIPTION";
+        displayName = CSTRING(Flathead_DisplayName);
+        descriptionShort = CSTRING(Flathead_Description);
         picture = QPATHTOF(data\icons\flathead.paa);
         model = "a3\structures_f\items\tools\screwdriver_v1_f.p3d";
         scope = 2;
@@ -691,8 +691,8 @@ class CfgWeapons {
     };
 
     class CLASS(pliers): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_PLIERS_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_PLIERS_DESCRIPTION";
+        displayName = CSTRING(Pliers_DisplayName);
+        descriptionShort = CSTRING(Pliers_Description);
         picture = QPATHTOF(data\icons\pliers.paa);
         model = "a3\structures_f\items\tools\pliers_f.p3d";
         scope = 2;
@@ -704,8 +704,8 @@ class CfgWeapons {
     };
 
     class CLASS(camoNet): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_CAMONET_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_CAMONET_DESCRIPTION";
+        displayName = CSTRING(CamoNet_DisplayName);
+        descriptionShort = CSTRING(CamoNet_Description);
         picture = QPATHTOF(data\icons\camonet.paa);
         model = QPATHTOF(data\models\camonet.p3d);
         scope = 2;
@@ -717,8 +717,8 @@ class CfgWeapons {
     };
 
     class CLASS(9vBattery): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_9VBAT_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_9VBAT_DESCRIPTION";
+        displayName = CSTRING(9VBattery_DisplayName);
+        descriptionShort = CSTRING(9VBattery_Description);
         picture = QPATHTOF(data\icons\9Vbat.paa);
         scope = 2;
         scopeCurator = 2;
@@ -729,8 +729,8 @@ class CfgWeapons {
     };
 
     class CLASS(copperWire): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_COPPWIRE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_COPPWIRE_DESCRIPTION";
+        displayName = CSTRING(CopperWire_DisplayName);
+        descriptionShort = CSTRING(CopperWire_Description);
         picture = QPATHTOF(data\icons\copperwire.paa);
         model = "a3\structures_f_epa\items\tools\metalwire_f.p3d";
         scope = 2;
@@ -742,8 +742,8 @@ class CfgWeapons {
     };
 
     class CLASS(rope): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ROPE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ROPE_DESCRIPTION";
+        displayName = CSTRING(Rope_DisplayName);
+        descriptionShort = CSTRING(Rope_Description);
         picture = QPATHTOF(data\icons\rope.paa);
         scope = 2;
         scopeCurator = 2;
@@ -754,8 +754,8 @@ class CfgWeapons {
     };
 
     class CLASS(needleThread): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_NEEDLETHREAD_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_NEEDLETHREAD_DESCRIPTION";
+        displayName = CSTRING(NeedleThread_DisplayName);
+        descriptionShort = CSTRING(NeedleThread_Description);
         picture = QPATHTOF(data\icons\needlethread.paa);
         scope = 2;
         scopeCurator = 2;
@@ -766,8 +766,8 @@ class CfgWeapons {
     };
 
     class CLASS(circuitBoard): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_CIRCUITBOARD_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_CIRCUITBOARD_DESCRIPTION";
+        displayName = CSTRING(CircuitBoard_DisplayName);
+        descriptionShort = CSTRING(CircuitBoard_Description);
         picture = QPATHTOF(data\icons\CircutBoard.paa);
         scope = 2;
         scopeCurator = 2;
@@ -778,8 +778,8 @@ class CfgWeapons {
     };
 
     class CLASS(geiger_dead): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_DEADGEIGER_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_DEADGEIGER_DESCRIPTION";
+        displayName = CSTRING(GeigerDead_DisplayName);
+        descriptionShort = CSTRING(GeigerDead_Description);
         picture = QPATHTOF(data\icons\DeadGeiger.paa);
         scope = 2;
         scopeCurator = 2;
@@ -790,8 +790,8 @@ class CfgWeapons {
     };
 
     class CLASS(dragonVase): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_DRAGONVASE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_DRAGONVASE_DESCRIPTION";
+        displayName = CSTRING(DragonVase_DisplayName);
+        descriptionShort = CSTRING(DragonVase_Description);
         picture = QPATHTOF(data\icons\DragonVase.paa);
         scope = 2;
         scopeCurator = 2;
@@ -802,8 +802,8 @@ class CfgWeapons {
     };
 
     class CLASS(matryoshka): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_MATRYOSHKA_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_MATRYOSHKA_DESCRIPTION";
+        displayName = CSTRING(Matryoshka_DisplayName);
+        descriptionShort = CSTRING(Matryoshka_Description);
         picture = QPATHTOF(data\icons\Matryoshka.paa);
         scope = 2;
         scopeCurator = 2;
@@ -814,8 +814,8 @@ class CfgWeapons {
     };
 
     class CLASS(oldWatch): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_OLDWATCH_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_OLDWATCH_DESCRIPTION";
+        displayName = CSTRING(OldWatch_DisplayName);
+        descriptionShort = CSTRING(OldWatch_Description);
         picture = QPATHTOF(data\icons\OldWatch.paa);
         scope = 2;
         scopeCurator = 2;
@@ -826,8 +826,8 @@ class CfgWeapons {
     };
 
     class CLASS(phone): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_PHONE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_PHONE_DESCRIPTION";
+        displayName = CSTRING(Phone_DisplayName);
+        descriptionShort = CSTRING(Phone_Description);
         picture = QPATHTOF(data\icons\Phone.paa);
         scope = 2;
         scopeCurator = 2;
@@ -838,8 +838,8 @@ class CfgWeapons {
     };
 
     class CLASS(photos): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_PHOTOS_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_PHOTOS_DESCRIPTION";
+        displayName = CSTRING(Photos_DisplayName);
+        descriptionShort = CSTRING(Photos_Description);
         picture = QPATHTOF(data\icons\Photos.paa);
         model = "a3\structures_f\items\documents\filephotos_f.p3d";
         scope = 2;
@@ -851,8 +851,8 @@ class CfgWeapons {
     };
 
     class CLASS(toySoldier): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_TOYSOLDIER_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_TOYSOLDIER_DESCRIPTION";
+        displayName = CSTRING(ToySoldier_DisplayName);
+        descriptionShort = CSTRING(ToySoldier_Description);
         picture = QPATHTOF(data\icons\ToySoldier.paa);
         scope = 2;
         scopeCurator = 2;
@@ -863,8 +863,8 @@ class CfgWeapons {
     };
 
     class CLASS(vintageShipBottle): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_VINTAGESHIPBOTTLE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_VINTAGESHIPBOTTLE_DESCRIPTION";
+        displayName = CSTRING(ShipBottle_DisplayName);
+        descriptionShort = CSTRING(ShipBottle_Description);
         picture = QPATHTOF(data\icons\VintageShipBottle.paa);
         scope = 2;
         scopeCurator = 2;
@@ -875,8 +875,8 @@ class CfgWeapons {
     };
 
     class CLASS(zombie_Head): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ZOMBIEHEAD_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ZOMBIEHEAD_DESCRIPTION";
+        displayName = CSTRING(ZombieHead_DisplayName);
+        descriptionShort = CSTRING(ZombieHead_Description);
         picture = QPATHTOF(data\icons\head.paa);
         scope = 2;
         scopeCurator = 2;
@@ -887,8 +887,8 @@ class CfgWeapons {
     };
 
     class CLASS(zombie_Hand): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ZOMBIEHAND_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ZOMBIEHAND_DESCRIPTION";
+        displayName = CSTRING(ZombieHand_DisplayName);
+        descriptionShort = CSTRING(ZombieHand_Description);
         picture = QPATHTOF(data\icons\hand.paa);
         scope = 2;
         scopeCurator = 2;
@@ -899,8 +899,8 @@ class CfgWeapons {
     };
 
     class CLASS(zombie_Eye): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ZOMBIEEYE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ZOMBIEEYE_DESCRIPTION";
+        displayName = CSTRING(ZombieEye_DisplayName);
+        descriptionShort = CSTRING(ZombieEye_Description);
         picture = QPATHTOF(data\icons\eye.paa);
         scope = 2;
         scopeCurator = 2;
@@ -911,8 +911,8 @@ class CfgWeapons {
     };
 
     class CLASS(zombie_Foot): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ZOMBIEFOOT_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ZOMBIEFOOT_DESCRIPTION";
+        displayName = CSTRING(ZombieFoot_DisplayName);
+        descriptionShort = CSTRING(ZombieFoot_Description);
         picture = QPATHTOF(data\icons\foot.paa);
         scope = 2;
         scopeCurator = 2;
@@ -923,8 +923,8 @@ class CfgWeapons {
     };
 
     class CLASS(zombie_Brain): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ZOMBIEBRAIN_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ZOMBIEBRAIN_DESCRIPTION";
+        displayName = CSTRING(ZombieBrain_DisplayName);
+        descriptionShort = CSTRING(ZombieBrain_Description);
         picture = QPATHTOF(data\icons\brain.paa);
         scope = 2;
         scopeCurator = 2;
@@ -935,8 +935,8 @@ class CfgWeapons {
     };
 
     class CLASS(zombie_Skin): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ZOMBIESKIN_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ZOMBIESKIN_DESCRIPTION";
+        displayName = CSTRING(ZombieSkin_DisplayName);
+        descriptionShort = CSTRING(ZombieSkin_Description);
         picture = QPATHTOF(data\icons\skin.paa);
         scope = 2;
         scopeCurator = 2;
@@ -947,8 +947,8 @@ class CfgWeapons {
     };
 
     class CLASS(boneSaw): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_BONESAW_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_BONESAW_DESCRIPTION";
+        displayName = CSTRING(BoneSaw_DisplayName);
+        descriptionShort = CSTRING(BoneSaw_Description);
         picture = QPATHTOF(data\icons\hacksaw.paa);
         model = "\a3\structures_f\Items\Tools\Saw_F.p3d";
         scope = 2;
@@ -960,8 +960,8 @@ class CfgWeapons {
     };
 
     class CLASS(guttingKnife): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_GUTTINGKNIFE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_GUTTINGKNIFE_DESCRIPTION";
+        displayName = CSTRING(GuttingKnife_DisplayName);
+        descriptionShort = CSTRING(GuttingKnife_Description);
         picture = QPATHTOF(data\icons\GuttingKnife.paa);
         scope = 2;
         scopeCurator = 2;
@@ -972,8 +972,8 @@ class CfgWeapons {
     };
 
     class CLASS(woodaxe): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_WOODAXE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_WOODAXE_DESCRIPTION";
+        displayName = CSTRING(WoodAxe_DisplayName);
+        descriptionShort = CSTRING(WoodAxe_Description);
         picture = QPATHTOF(data\icons\Woodaxe.paa);
         model = "a3\structures_f\items\tools\axe_f.p3d";
         scope = 2;
@@ -985,8 +985,8 @@ class CfgWeapons {
     };
 
     class CLASS(sledgehammer): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_SLEDGHAMMER_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_SLEDGHAMMER_DESCRIPTION";
+        displayName = CSTRING(Sledgehammer_DisplayName);
+        descriptionShort = CSTRING(Sledgehammer_Description);
         picture = QPATHTOF(data\icons\sledgehammer.paa);
         model = QPATHTOF(data\models\sledgehammer.p3d);
         scope = 2;
@@ -998,8 +998,8 @@ class CfgWeapons {
     };
 
     class CLASS(tinder): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_TINDER_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_TINDER_DESCRIPTION";
+        displayName = CSTRING(Tinder_DisplayName);
+        descriptionShort = CSTRING(Tinder_Description);
         picture = QPATHTOF(data\icons\tinder.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1010,8 +1010,8 @@ class CfgWeapons {
     };
 
     class CLASS(cbrn_parts): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_CBRNPARTS_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_CBRNPARTS_DESCRIPTION";
+        displayName = CSTRING(CBRNParts_DisplayName);
+        descriptionShort = CSTRING(CBRNParts_Description);
         picture = QPATHTOF(data\icons\CBRN_Parts.paa);
         model = "a3\supplies_f_orange\bags\b_messenger_f.p3d";
         scope = 2;
@@ -1023,8 +1023,8 @@ class CfgWeapons {
     };
 
     class CLASS(chainsaw_Empty): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_CHAINSAWEMPTY_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_CHAINSAWEMPTY_DESCRIPTION";
+        displayName = CSTRING(ChainsawEmpty_DisplayName);
+        descriptionShort = CSTRING(ChainsawEmpty_Description);
         picture = QPATHTOF(data\icons\chainsaw.paa);
         model = QPATHTOF(data\models\chainsaw.p3d);
         scope = 2;
@@ -1036,8 +1036,8 @@ class CfgWeapons {
     };
 
     class CLASS(woodplank): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_WOODPLANK_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_WOODPLANK_DESCRIPTION";
+        displayName = CSTRING(WoodPlank_DisplayName);
+        descriptionShort = CSTRING(WoodPlank_Description);
         picture = QPATHTOF(data\icons\woodplank.paa);
         model = QPATHTOF(data\models\woodplank.p3d);
         scope = 2;
@@ -1048,21 +1048,9 @@ class CfgWeapons {
         };
     };
 
-    class CLASS(woodnail): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_WOODNAIL_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_WOODNAIL_DESCRIPTION";
-        picture = QPATHTOF(data\icons\Woodnail.paa);
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 0;
-        };
-    };
-
     class CLASS(woodensticks): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_WOODENSTICKS_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_WOODENSTICKS_DESCRIPTION";
+        displayName = CSTRING(WoodenSticks_DisplayName);
+        descriptionShort = CSTRING(WoodenSticks_Description);
         picture = QPATHTOF(data\icons\woodsticks.paa);
         model = QPATHTOF(data\models\woodsticks.p3d);
         scope = 2;
@@ -1074,8 +1062,8 @@ class CfgWeapons {
     };
 
     class CLASS(firewood): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_FIREWOOD_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_FIREWOOD_DESCRIPTION";
+        displayName = CSTRING(Firewood_DisplayName);
+        descriptionShort = CSTRING(Firewood_Description);
         picture = QPATHTOF(data\icons\firewood.paa);
         model = QPATHTOF(data\models\firewoodbundle.p3d);
         scope = 2;
@@ -1087,8 +1075,8 @@ class CfgWeapons {
     };
 
     class CLASS(woodenlog): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_WOODENLOG_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_WOODENLOG_DESCRIPTION";
+        displayName = CSTRING(WoodenLog_DisplayName);
+        descriptionShort = CSTRING(WoodenLog_Description);
         picture = QPATHTOF(data\icons\woodenlog.paa);
         model = QPATHTOF(data\models\bigwoodlog.p3d);
         scope = 2;
@@ -1099,21 +1087,9 @@ class CfgWeapons {
         };
     };
 
-    class CLASS(boxNails): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_BOXNAILS_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_BOXNAILS_DESCRIPTION";
-        picture = QPATHTOF(data\icons\boxnails.paa);
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 0;
-        };
-    };
-
     class CLASS(craftingHammer): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_CRAFTINGHAMMER_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_CRAFTINGHAMMER_DESCRIPTION";
+        displayName = CSTRING(CraftingHammer_DisplayName);
+        descriptionShort = CSTRING(CraftingHammer_Description);
         picture = QPATHTOF(data\icons\craftinghammer.paa);
         model = QPATHTOF(data\models\craftinghammer.p3d);
         scope = 2;
@@ -1125,8 +1101,8 @@ class CfgWeapons {
     };
 
     class CLASS(anvilHammer): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ANVILHAMMER_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ANVILHAMMER_DESCRIPTION";
+        displayName = CSTRING(AnvilHammer_DisplayName);
+        descriptionShort = CSTRING(AnvilHammer_Description);
         picture = QPATHTOF(data\icons\anvilhammer.paa);
         model = QPATHTOF(data\models\anvilhammer.p3d);
         scope = 2;
@@ -1138,8 +1114,8 @@ class CfgWeapons {
     };
 
     class CLASS(electricHandSaw_NoBattery): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ELECTRICHANDSAWNOBATTERY_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ELECTRICHANDSAWNOBATTERY_DESCRIPTION";
+        displayName = CSTRING(ElectricHandSawNoBattery_DisplayName);
+        descriptionShort = CSTRING(RequiresLithiumBattery_Description);
         picture = QPATHTOF(data\icons\ElectricHandCircularSaw.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1150,8 +1126,8 @@ class CfgWeapons {
     };
 
     class CLASS(wrench): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_WRENCH_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_WRENCH_DESCRIPTION";
+        displayName = CSTRING(Wrench_DisplayName);
+        descriptionShort = CSTRING(Wrench_Description);
         picture = QPATHTOF(data\icons\wrench.paa);
         model = "a3\structures_f\items\tools\wrench_f.p3d";
         scope = 2;
@@ -1163,8 +1139,8 @@ class CfgWeapons {
     };
 
     class CLASS(glucose): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_GLUCOSE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_GLUCOSE_DESCRIPTION";
+        displayName = CSTRING(Glucose_DisplayName);
+        descriptionShort = CSTRING(Glucose_Description);
         picture = QPATHTOF(data\icons\Glucose.paa);
         model = "a3\props_f_orange\humanitarian\garbage\medicalgarbage_01_injector_f.p3d";
         scope = 2;
@@ -1176,8 +1152,8 @@ class CfgWeapons {
     };
 
     class CLASS(electrolyte): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ELECTROLYTE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ELECTROLYTE_DESCRIPTION";
+        displayName = CSTRING(Electrolyte_DisplayName);
+        descriptionShort = CSTRING(Electrolyte_Description);
         picture = QPATHTOF(data\icons\Electrolyte.paa);
         model = "a3\props_f_orange\humanitarian\garbage\medicalgarbage_01_injector_f.p3d";
         scope = 2;
@@ -1189,8 +1165,8 @@ class CfgWeapons {
     };
 
     class CLASS(eru_NoBattery): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ERU_NB_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ERU_NB_DESCRIPTION";
+        displayName = CSTRING(ERUNoBattery_DisplayName);
+        descriptionShort = CSTRING(RequiresLithiumBattery_Description);
         picture = QPATHTOF(data\icons\ERU_OFF.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1201,8 +1177,8 @@ class CfgWeapons {
     };
 
     class CLASS(jetFuelEmpty): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_EMPTYJET_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_EMPTYJET_DESCRIPTION";
+        displayName = CSTRING(JetFuelEmpty_DisplayName);
+        descriptionShort = CSTRING(JetFuelEmpty_Description);
         picture = QPATHTOF(data\icons\CanisterJetFuel.paa);
         model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
         scope = 2;
@@ -1214,8 +1190,8 @@ class CfgWeapons {
     };
 
     class CLASS(dieselEmpty): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_EMPTYDIESEL_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_EMPTYDIESEL_DESCRIPTION";
+        displayName = CSTRING(DieselEmpty_DisplayName);
+        descriptionShort = CSTRING(DieselEmpty_Description);
         picture = QPATHTOF(data\icons\CanisterDiesel.paa);
         model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
         scope = 2;
@@ -1227,8 +1203,8 @@ class CfgWeapons {
     };
 
     class CLASS(petrolEmpty): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_EMPTYPETROL_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_EMPTYPETROL_DESCRIPTION";
+        displayName = CSTRING(PetrolEmpty_DisplayName);
+        descriptionShort = CSTRING(PetrolEmpty_Description);
         picture = QPATHTOF(data\icons\CanisterPetrol.paa);
         model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
         scope = 2;
@@ -1240,8 +1216,8 @@ class CfgWeapons {
     };
 
     class CLASS(oilEmpty): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ENGINEOIL_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ENGINEOIL_DESCRIPTION";
+        displayName = CSTRING(EngineOilEmpty_DisplayName);
+        descriptionShort = CSTRING(EngineOilEmpty_Description);
         picture = QPATHTOF(data\icons\CanisterDiesel.paa);
         model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
         scope = 2;
@@ -1253,8 +1229,8 @@ class CfgWeapons {
     };
 
     class CLASS(coolantEmpty): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_ENGINECOOLANT_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_ENGINECOOLANT_DESCRIPTION";
+        displayName = CSTRING(EngineCoolant_DisplayName);
+        descriptionShort = CSTRING(EngineCoolant_Description);
         picture = QPATHTOF(data\icons\CanisterWater.paa);
         model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
         scope = 2;
@@ -1266,8 +1242,8 @@ class CfgWeapons {
     };
 
     class CLASS(spareTire): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_SPARETIRE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_SPARETIRE_DESCRIPTION";
+        displayName = CSTRING(SpareTire_DisplayName);
+        descriptionShort = CSTRING(SpareTire_Description);
         picture = QPATHTOF(data\icons\tire.paa);
         model = "a3\structures_f\civ\garbage\tyre_f.p3d";
         scope = 2;
@@ -1279,8 +1255,8 @@ class CfgWeapons {
     };
 
     class CLASS(emptyToolKit): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_EMPTYTOOLKIT_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_EMPTYTOOLKIT_DESCRIPTION";
+        displayName = CSTRING(EmptyToolKit_DisplayName);
+        descriptionShort = CSTRING(EmptyToolKit_Description);
         model = "a3\weapons_f\items\toolkit.p3d";
         picture = QPATHTOF(data\icons\toolkit.paa);
         scope = 2;
@@ -1305,8 +1281,8 @@ class CfgWeapons {
     };
 
     class CLASS(stoneChunk): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_STONECHUNK_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_STONECHUNK_DESCRIPTION";
+        displayName = CSTRING(StoneChunk_DisplayName);
+        descriptionShort = CSTRING(StoneChunk_Description);
         picture = QPATHTOF(data\icons\stonepieces.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1317,8 +1293,8 @@ class CfgWeapons {
     };
 
     class CLASS(ironIngot): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_IRONINGOT_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_IRONINGOT_DESCRIPTION";
+        displayName = CSTRING(IronIngot_DisplayName);
+        descriptionShort = CSTRING(IronIngot_Description);
         picture = QPATHTOF(data\icons\ironingot.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1329,8 +1305,8 @@ class CfgWeapons {
     };
 
     class CLASS(ironOre): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_IRONORE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_IRONORE_DESCRIPTION";
+        displayName = CSTRING(IronOre_DisplayName);
+        descriptionShort = CSTRING(IronOre_Description);
         picture = QPATHTOF(data\icons\ironore.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1341,8 +1317,8 @@ class CfgWeapons {
     };
 
     class CLASS(ironPiece): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_IRONPIECE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_IRONPIECE_DESCRIPTION";
+        displayName = CSTRING(IronPiece_DisplayName);
+        descriptionShort = CSTRING(IronPiece_Description);
         picture = QPATHTOF(data\icons\ironpiece.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1353,8 +1329,8 @@ class CfgWeapons {
     };
 
     class CLASS(goldIngot): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_GOLDINGOT_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_GOLDINGOT_DESCRIPTION";
+        displayName = CSTRING(GoldIngot_DisplayName);
+        descriptionShort = CSTRING(GoldIngot_Description);
         picture = QPATHTOF(data\icons\goldingot.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1365,8 +1341,8 @@ class CfgWeapons {
     };
 
     class CLASS(goldOre): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_GOLDORE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_GOLDORE_DESCRIPTION";
+        displayName = CSTRING(GoldOre_DisplayName);
+        descriptionShort = CSTRING(GoldOre_Description);
         picture = QPATHTOF(data\icons\goldore.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1377,8 +1353,8 @@ class CfgWeapons {
     };
 
     class CLASS(goldPiece): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_GOLDPIECE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_GOLDPIECE_DESCRIPTION";
+        displayName = CSTRING(GoldPiece_DisplayName);
+        descriptionShort = CSTRING(GoldPiece_Description);
         picture = QPATHTOF(data\icons\goldpiece.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1389,8 +1365,8 @@ class CfgWeapons {
     };
 
     class CLASS(coalOre): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_COALORE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_COALORE_DESCRIPTION";
+        displayName = CSTRING(CoalOre_DisplayName);
+        descriptionShort = CSTRING(CoalOre_Description);
         picture = QPATHTOF(data\icons\coalore.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1401,8 +1377,8 @@ class CfgWeapons {
     };
 
     class CLASS(malachite): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_MALACHITE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_MALACHITE_DESCRIPTION";
+        displayName = CSTRING(Malachite_DisplayName);
+        descriptionShort = CSTRING(Malachite_Description);
         picture = QPATHTOF(data\icons\malachite.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1413,8 +1389,8 @@ class CfgWeapons {
     };
 
     class CLASS(ruby): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_RUBY_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_RUBY_DESCRIPTION";
+        displayName = CSTRING(Ruby_DisplayName);
+        descriptionShort = CSTRING(Ruby_Description);
         picture = QPATHTOF(data\icons\ruby.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1425,8 +1401,8 @@ class CfgWeapons {
     };
 
     class CLASS(sapphire): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_SAPPHIRE_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_SAPPHIRE_DESCRIPTION";
+        displayName = CSTRING(Sapphire_DisplayName);
+        descriptionShort = CSTRING(Sapphire_Description);
         picture = QPATHTOF(data\icons\sapphire.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1437,8 +1413,8 @@ class CfgWeapons {
     };
 
     class CLASS(amethyst): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_AMETHYST_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_AMETHYST_DESCRIPTION";
+        displayName = CSTRING(Amethyst_DisplayName);
+        descriptionShort = CSTRING(Amethyst_Description);
         picture = QPATHTOF(data\icons\amethyst.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1449,8 +1425,8 @@ class CfgWeapons {
     };
 
     class CLASS(diamond): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_DIAMOND_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_DIAMOND_DESCRIPTION";
+        displayName = CSTRING(Diamond_DisplayName);
+        descriptionShort = CSTRING(Diamond_Description);
         picture = QPATHTOF(data\icons\diamond.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1461,8 +1437,8 @@ class CfgWeapons {
     };
 
     class CLASS(emerald): CLASS(ItemCore) {
-        displayName = "$STR_MISERY_EMERALD_DISPLAYNAME";
-        descriptionShort = "$STR_MISERY_EMERALD_DESCRIPTION";
+        displayName = CSTRING(Emerald_DisplayName);
+        descriptionShort = CSTRING(Emerald_Description);
         picture = QPATHTOF(data\icons\emerald.paa);
         scope = 2;
         scopeCurator = 2;

@@ -24,7 +24,7 @@ _trader setVariable [QGVAR(isTreating), false, true];
 // Add hold action
 [
     _trader,
-    "Request treatment",
+    localize "STR_MISERY_REQTREATMENT",
     QUOTE(a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa),
     QUOTE(a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa),
     QUOTE(_this distance _target < 3 && !(_target getVariable [ARR_2(QUOTE(QGVAR(isTreating)),false)])),
