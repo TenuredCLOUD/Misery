@@ -346,19 +346,29 @@ QCLASS(guttingKnife), \
 
 // Calculations - Radiation
 #define MACRO_BASE_DOSE 1
-#define MACRO_RADIATION_NUTRITIONLOSS(arg) ((arg) / 10) / 10
-#define MACRO_RADIATION_STAMINALOSS(arg) ((arg) / 10) / 10
+#define MACRO_RADIATION_NUTRITIONLOSS(arg) ((arg) / 300) / 300 //((arg) / 10) / 10
+#define MACRO_RADIATION_STAMINALOSS(arg) ((arg) / 300) / 300 //((arg) / 10) / 10
 
 // Calculations - Temperature
 #define TEMP_NEUTRAL 20
-#define TEMP_MIN -30
+#define TEMP_MIN -50
 #define TEMP_MAX 55
-#define EXPOSURE_RATE 0.033
-#define HUNGER_RATE 0.00035
-#define THIRST_RATE 0.0007
-#define NEUTRAL_RATE 0.012
-#define SICKNESS_FACTOR 0.5
-#define WETNESS_RATE 0.015
+#define EXPOSURE_RATE 1.1e-3 //0.033
+#define HUNGER_RATE 1.4e-5 //0.00035
+#define THIRST_RATE 2.8e-5 //0.0007
+#define NEUTRAL_RATE 4e-4 //0.012
+#define SICKNESS_FACTOR 1.6666667e-2 //0.5
+#define WETNESS_RATE 5e-4 //0.015
+
+// Swimming animations:
+#define MACRO_ANIMATION_SWIMMING \
+"asswpercmstpsnonwnondnon", \
+"aswmpercmrunsnonwnondl", \
+"asswpercmrunsnonwnondr", \
+"asswpercmrunsnonwnondb", \
+"asswpercmrunsnonwnondf", \
+"asswpercmrunsnonwnondf", \
+"aswmpercmrunsnonwnondfl"
 
 // IMS animations for compat:
 #define MACRO_ANIMATION_IMS_SPRINT "am_kulak_sprintf", "melee_sprintf", "melee_sprintfl", "melee_sprintfr"
