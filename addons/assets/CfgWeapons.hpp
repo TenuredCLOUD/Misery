@@ -158,8 +158,6 @@ class CfgWeapons {
         displayName = "$STR_MISERY_FISHHOOK_DISPLAYNAME";
         descriptionShort = "$STR_MISERY_FISHHOOK_DESCRIPTION";
         picture = QPATHTOF(data\icons\fishhook.paa);
-        model = QPATHTOF(data\models\fishhook.p3d);
-        hiddenSelectionsMaterials[] = {"\z\misery\addons\assets\data\models\ui\fishhook.rvmat"};
         scope = 2;
         scopeCurator = 2;
 
