@@ -4,7 +4,6 @@
 
 #define MACRO_PSYCHOSIS_SOUNDS \
 QCLASS(audio_sound_stage01), \
-QCLASS(audio_sound_spookyAlpha01), \
 QCLASS(audio_sound_spookyAlpha02), \
 QCLASS(audio_sound_spookyAlpha03), \
 QCLASS(audio_sound_spookyBravo01), \

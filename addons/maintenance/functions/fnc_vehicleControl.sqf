@@ -79,6 +79,8 @@ GVAR(handleEngine) = {
 player addEventHandler ["GetInMan", {
     params ["_unit", "_role", "_vehicle"];
 
+    if (_vehicle isKindOf "StaticWeapon") exitWith {};
+
     if (_unit isEqualTo (currentPilot _vehicle)) then {
         _unit setVariable [QGVAR(isPilot), true];
     } else {

@@ -4,7 +4,7 @@ class CfgWeapons {
     class U_I_Wetsuit_rvg: Uniform_Base {
         EGVAR(protection,gasmask) = 0;
         EGVAR(protection,scba) = 0;
-        EGVAR(protection,skinProtection) = 1;
+        EGVAR(protection,skinProtection) = 0.75;
         EGVAR(protection,respiratoryProtection) = 0;
         EGVAR(protection,eyeProtection) = 0;
         EGVAR(protection,hearingProtection) = 0;
@@ -13,7 +13,7 @@ class CfgWeapons {
     class U_O_Wetsuit_rvg: Uniform_Base {
         EGVAR(protection,gasmask) = 0;
         EGVAR(protection,scba) = 0;
-        EGVAR(protection,skinProtection) = 1;
+        EGVAR(protection,skinProtection) = 0.75;
         EGVAR(protection,respiratoryProtection) = 0;
         EGVAR(protection,eyeProtection) = 0;
         EGVAR(protection,hearingProtection) = 0;
@@ -22,7 +22,7 @@ class CfgWeapons {
     class U_B_Wetsuit_rvg: Uniform_Base {
         EGVAR(protection,gasmask) = 0;
         EGVAR(protection,scba) = 0;
-        EGVAR(protection,skinProtection) = 1;
+        EGVAR(protection,skinProtection) = 0.75;
         EGVAR(protection,respiratoryProtection) = 0;
         EGVAR(protection,eyeProtection) = 0;
         EGVAR(protection,hearingProtection) = 0;

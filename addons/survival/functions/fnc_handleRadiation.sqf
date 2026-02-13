@@ -22,7 +22,7 @@ GVAR(radiationModifiers) = 0;
 player setVariable [QGVAR(radiation), _finalRadiation];
 
 if (_radiation > 0) then {
-    [-0.001, "radiation"] call EFUNC(common,addStatusModifier);
+    [-0.0001, "radiation"] call EFUNC(common,addStatusModifier);
 
     if ([15] call EFUNC(common,rollChance) && _radiation > 0.05) then {
         if (_parasites > 0) then {
