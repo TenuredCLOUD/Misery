@@ -14,10 +14,12 @@
  *
 */
 
+if (GVAR(areas) findIf {player inArea _x} isNotEqualTo -1) exitWith {
+    ["Cannot install door locks at this location...", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
+};
+
 if !([[QCLASS(lockKit)]] call EFUNC(common,hasItem)) exitWith {
     ["No door lock kit in inventory...", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
 };
-
-[player, QCLASS(lockKit)] call CBA_fnc_removeItem;
 
 [] call FUNC(promptPin);
