@@ -42,7 +42,7 @@ class CLASS(craftingFramework_ui) {
         };
         class CLASS(crafting_icon): RscPicture {
             idc = 1501;
-            text = QPATHTOEF(icons,data\crafting_ca.paa);
+            text = QPATHTOEF(icons,data\hammer_ca.paa);
             x = 29 * GUI_GRID_W + GUI_GRID_X;
             y = 1.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 5.5 * GUI_GRID_W;

@@ -19,7 +19,7 @@ if (isClass (missionConfigFile >> "CfgMisery_ForgeData")) then {
             createDialog QCLASS(forge_ui);
         },
         "",
-        QPATHTOEF(icons,data\ingot_ca.paa),
+        QPATHTOEF(icons,data\anvil_ca.paa),
         ""
     ] call EFUNC(actions,addAction);
 } else {

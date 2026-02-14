@@ -15,7 +15,7 @@ if (isServer) then {
             createDialog QCLASS(maintenance_ui);
         },
         "",
-        "",
+        QPATHTOEF(markers,data\wrench_ca.paa),
         ""
     ] call EFUNC(actions,addAction);
 };

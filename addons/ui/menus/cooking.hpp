@@ -42,7 +42,7 @@ class CLASS(cookingFramework_ui) {
         };
         class CLASS(cooking_icon): RscPicture {
             idc = 1501;
-            text = QPATHTOEF(icons,data\boilwater_ca.paa);
+            text = QPATHTOEF(icons,data\cooking_ca.paa);
             x = 29 * GUI_GRID_W + GUI_GRID_X;
             y = 1.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 5.5 * GUI_GRID_W;
