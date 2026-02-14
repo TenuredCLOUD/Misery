@@ -23,6 +23,9 @@
     if (_leftArea) exitWith {
         player setVariable [QGVAR(insideArea), false, true];
         _handle call CBA_fnc_removePerFrameHandler;
+        [{
+            QGVAR(display) cutText ["", "PLAIN"];
+        }, [], 15] call CBA_fnc_waitAndExecute;
     };
 
     private _totalProtection = call EFUNC(protection,totalProtection);
@@ -39,6 +42,7 @@
 
     if (_hearingProtection < 1) then {
         [player setHitPointDamage ["hitHead", _damageMultiplier], [player, _damageMultiplier, "head", "unknown"] call ace_medical_fnc_addDamageToUnit] select ("ace_medical" call EFUNC(common,isModLoaded));
+        QGVAR(display) cutRsc [QCLASS(tunnel_ui), "PLAIN", 1, false];
     };
 
     if (EGVAR(psychosis,enabled)) then {
