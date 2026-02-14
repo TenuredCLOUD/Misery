@@ -16,10 +16,7 @@ GVAR(terrifiedState) = false;
 
         [QGVAR(update), FUNC(effects)] call CBA_fnc_addEventHandler;
 
-        // Add heart fluttering if ACE is loaded
-        if ("ace_main" call EFUNC(common,isModLoaded)) then {
-            call FUNC(heartFlutter);
-        };
+        call FUNC(heartFlutter);
     };
 }] call CBA_fnc_addEventHandler;
 

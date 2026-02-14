@@ -16,11 +16,16 @@
 [{
     params ["_args", "_handle"];
 
+    if (isGamePaused) exitWith {};
+
     private _leftArea = GVAR(areas) findIf {player inArea _x} isEqualTo -1;
 
     if (_leftArea) exitWith {
         player setVariable [QGVAR(insideArea), false, true];
         _handle call CBA_fnc_removePerFrameHandler;
+        [{
+            QGVAR(display) cutText ["", "PLAIN"];
+        }, [], 15] call CBA_fnc_waitAndExecute;
     };
 
     private _totalProtection = call EFUNC(protection,totalProtection);
@@ -28,19 +33,16 @@
     private _damageMultiplier = 0;
     private _psychModifier = 0;
 
-    if (_hearingProtection >= 1) then {
-        _damageMultiplier = 0;
-        _psychModifier = EGVAR(psychosis,unnaturalIncrease) / 1000; // If high protection, always make players psych degrade by lower values
-    } else {
-        _damageMultiplier = ((1 - _hearingProtection) / 1) / 3;
-        _psychModifier = ((1 - _hearingProtection) / 1) / 3;
-    };
+    _damageMultiplier = (1 * ((1 - _hearingProtection) ^ 1.5) min 0.15) max 0;
+    _psychModifier = 1 * ((1 - _hearingProtection) ^ 1.5) max 0.001;
 
     [QUOTE(COMPONENT_BEAUTIFIED), format ["Damage Multiplier %1", _damageMultiplier]] call EFUNC(common,debugMessage);
+    [QUOTE(COMPONENT_BEAUTIFIED), format ["Psychosis Modifier: %1", _psychModifier]] call EFUNC(common,debugMessage);
     [QUOTE(COMPONENT_BEAUTIFIED), format ["Hearing Protection: %1%2", (_hearingProtection * 100), "%"]] call EFUNC(common,debugMessage);
 
     if (_hearingProtection < 1) then {
-        [player setHitPointDamage ["hitHead", _damageMultiplier], [player, _damageMultiplier, "head", "punch"] call ace_medical_fnc_addDamageToUnit] select ("ace_medical" call EFUNC(common,isModLoaded));
+        [player setHitPointDamage ["hitHead", _damageMultiplier], [player, _damageMultiplier, "head", "unknown"] call ace_medical_fnc_addDamageToUnit] select ("ace_medical" call EFUNC(common,isModLoaded));
+        QGVAR(display) cutRsc [QCLASS(tunnel_ui), "PLAIN", 1, false];
     };
 
     if (EGVAR(psychosis,enabled)) then {
