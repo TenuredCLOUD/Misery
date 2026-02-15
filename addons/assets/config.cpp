@@ -3,8 +3,8 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {};
-        weapons[] = {QCLASS(ItemCore)};
+        units[] = {MACRO_VEHICLES};
+        weapons[] = {MACRO_WEAPONS};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {QCLASS(common)};
         authors[] = {"TenuredCLOUD"};

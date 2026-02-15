@@ -40,7 +40,11 @@
     [QUOTE(COMPONENT_BEAUTIFIED), format ["Hearing Protection: %1%2", (_hearingProtection * 100), "%"]] call EFUNC(common,debugMessage);
 
     if (_hearingProtection < 1) then {
-        [player setHitPointDamage ["hitHead", _damageMultiplier], [player, _damageMultiplier, "head", "punch"] call ace_medical_fnc_addDamageToUnit] select ("ace_medical" call EFUNC(common,isModLoaded));
+        if ("ace_medical" call EFUNC(common,isModLoaded)) then {
+            [player, _damageMultiplier, "head", "punch"] call ace_medical_fnc_addDamageToUnit;
+        } else {
+            player setHitPointDamage ["hitHead", _damageMultiplier];
+        };
     };
 
     if (EGVAR(psychosis,enabled)) then {
