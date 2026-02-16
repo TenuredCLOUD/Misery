@@ -19,11 +19,11 @@ if (isClass (missionConfigFile >> "CfgMisery_SearchableObjects")) then {
         "searchObject_menu",
         "Search...",
         {
-            [player] call FUNC(searchCondition) select 0
+            [] call FUNC(searchCondition) select 0
         },
         {
             [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-            [player] call FUNC(searchCondition) params ["", "_object", "_objectData"];
+            [] call FUNC(searchCondition) params ["", "_object", "_objectData"];
             [_object, _objectData] call FUNC(searchObject)
         },
         "",
