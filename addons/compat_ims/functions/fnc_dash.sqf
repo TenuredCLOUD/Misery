@@ -37,7 +37,11 @@
             [QUOTE(COMPONENT_BEAUTIFIED), "Dash compat cycle checks reinitialized."] call EFUNC(common,debugMessage);
         };
 
-        [player setFatigue (_fatigueValue + 0.01), player setVariable ["ace_advanced_fatigue_aimFatigue", _fatigueValue + 0.01]] select (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled});
+        if (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled}) then {
+            player setVariable ["ace_advanced_fatigue_aimFatigue", _fatigueValue + 0.01];
+        } else {
+            player setFatigue (_fatigueValue + 0.01);
+        };
 
         [QUOTE(COMPONENT_BEAUTIFIED), "Dash Compat cycle."] call EFUNC(common,debugMessage);
     }, 0.1, []] call CBA_fnc_addPerFrameHandler;
