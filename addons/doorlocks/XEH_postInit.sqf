@@ -48,4 +48,10 @@ if (isServer) then {
     [{
         call FUNC(applyBuildingStates);
     }, [], 1] call CBA_fnc_waitAndExecute;
+
+    if (GVAR(areas) isNotEqualTo "[]") then {
+        [{CBA_missionTime > 1}, {
+            call FUNC(checkAreas);
+        }, []] call CBA_fnc_waitUntilAndExecute;
+    };
 };

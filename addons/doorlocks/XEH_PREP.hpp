@@ -1,4 +1,5 @@
 PREP(applyBuildingStates);
+PREP(checkAreas);
 PREP(countDoors);
 PREP(disableLocks);
 PREP(enableLocks);
