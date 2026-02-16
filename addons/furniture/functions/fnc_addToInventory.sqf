@@ -16,6 +16,10 @@
 
 params ["_className"];
 
+if (_className isKindOf "StaticWeapon") exitWith {
+    [_className] call FUNC(forcedPlacement);
+};
+
 private _inventory = player getVariable [QGVAR(furnitureInventory), []];
 private _currentMass = player getVariable [QGVAR(furnitureLoad), MACRO_PLAYER_DEFAULTS_LOW];
 private _furnitureCfg = missionConfigFile >> "CfgMisery_Furniture" >> _className;
