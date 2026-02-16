@@ -17,11 +17,11 @@
 
 params ["_decay"];
 
-private _targetLevel = [0, 0.1] select _decay;
+private _targetLevel = [0, 3.333333e-3] select _decay; //0.1
 GVAR(decayLevel) = GVAR(decayLevel) + _targetLevel;
 
 if (GVAR(decayLevel) > 0 && !_decay) then {
-    GVAR(decayLevel) = GVAR(decayLevel) - 0.25;
+    GVAR(decayLevel) = GVAR(decayLevel) - 8.333333e-3; //0.25
 };
 
 GVAR(decayLevel) = GVAR(decayLevel) max 0 min 1;

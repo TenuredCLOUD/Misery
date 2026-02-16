@@ -27,8 +27,14 @@ switch (_status) do {
     case "energy": {
         EGVAR(survival,energyModifiers) = EGVAR(survival,energyModifiers) + _modifier;
     };
+    case "thermalindex": {
+        EGVAR(temperature,thermalIndexModifiers) = _modifier;
+    };
     case "exposure": {
         EGVAR(temperature,exposureModifiers) = EGVAR(temperature,exposureModifiers) + _modifier;
+    };
+    case "wetness": {
+        EGVAR(temperature,wetnessModifiers) = EGVAR(temperature,wetnessModifiers) + _modifier;
     };
     case "hunger": {
         EGVAR(survival,hungerModifiers) = EGVAR(survival,hungerModifiers) + _modifier;
