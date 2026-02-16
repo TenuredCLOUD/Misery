@@ -37,29 +37,23 @@ QUOTE(WBK_SpecialZombie_Smasher_Hellbeast_1), \
 QUOTE(WBK_SpecialZombie_Smasher_Acid_1)
 
 #define MACRO_PSYCHOSIS_HEARTFLUTTER \
-QUOTE(ACE_heartbeat_fast_1), \
-QUOTE(ACE_heartbeat_fast_2), \
-QUOTE(ACE_heartbeat_fast_3)
+QCLASS(heart_5), \
+QCLASS(heart_6), \
+QCLASS(heart_7), \
+QCLASS(heart_8), \
+QCLASS(heart_9)
 
 #define MACRO_PSYCHOSIS_BREATH \
-QUOTE(ace_advanced_fatigue_breathLow0), \
-QUOTE(ace_advanced_fatigue_breathLow1), \
-QUOTE(ace_advanced_fatigue_breathLow2), \
-QUOTE(ace_advanced_fatigue_breathLow3), \
-QUOTE(ace_advanced_fatigue_breathLow4), \
-QUOTE(ace_advanced_fatigue_breathLow5), \
-QUOTE(ace_advanced_fatigue_breathMid0), \
-QUOTE(ace_advanced_fatigue_breathMid1), \
-QUOTE(ace_advanced_fatigue_breathMid2), \
-QUOTE(ace_advanced_fatigue_breathMid3), \
-QUOTE(ace_advanced_fatigue_breathMid4), \
-QUOTE(ace_advanced_fatigue_breathMid5), \
-QUOTE(ace_advanced_fatigue_breathMax0), \
-QUOTE(ace_advanced_fatigue_breathMax1), \
-QUOTE(ace_advanced_fatigue_breathMax2), \
-QUOTE(ace_advanced_fatigue_breathMax3), \
-QUOTE(ace_advanced_fatigue_breathMax4), \
-QUOTE(ace_advanced_fatigue_breathMax5)
+QCLASS(breath_high_01), \
+QCLASS(breath_high_02), \
+QCLASS(breath_high_03), \
+QCLASS(breath_high_04), \
+QCLASS(breath_high_05), \
+QCLASS(breath_high_06), \
+QCLASS(breath_high_07), \
+QCLASS(breath_high_08), \
+QCLASS(breath_high_09), \
+QCLASS(breath_high_10)
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE

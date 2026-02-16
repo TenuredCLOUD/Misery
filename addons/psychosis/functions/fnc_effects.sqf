@@ -45,10 +45,8 @@ if ([50] call EFUNC(common,rollChance)) then {
     addCamShake [2, GVAR(cycleTimer), 2];
 };
 
-if (_psychosisLevel < 0.75) exitWith {
-    if (GVAR(terrifiedState)) then {
-        GVAR(terrifiedState) = false;
+if (_psychosisLevel > 0.75) then {
+    if (!GVAR(terrifiedState)) then {
+        GVAR(terrifiedState) = true;
     };
 };
-
-GVAR(terrifiedState) = true;

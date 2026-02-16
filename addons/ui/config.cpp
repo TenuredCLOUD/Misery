@@ -47,5 +47,6 @@ class RscTitles {
     #include "menus\geiger.hpp"
     #include "menus\eru.hpp"
     #include "menus\vehicleStats.hpp"
+    #include "menus\tunnel_overlay.hpp"
     #include "menus\bloodShot_overlay.hpp"
 };
