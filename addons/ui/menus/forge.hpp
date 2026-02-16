@@ -39,7 +39,7 @@ class CLASS(forge_ui)
         class CLASS(forge_icon): RscPicture
         {
             idc = 1200;
-            text = QPATHTOEF(icons,data\ingot_ca.paa);
+            text = QPATHTOEF(icons,data\anvil_ca.paa);
             x = 33 * GUI_GRID_W + GUI_GRID_X;
             y = 3 * GUI_GRID_H + GUI_GRID_Y;
             w = 5.5 * GUI_GRID_W;

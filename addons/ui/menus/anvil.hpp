@@ -39,7 +39,7 @@ class CLASS(anvil_ui)
         class CLASS(anvil_icon): RscPicture
         {
             idc = -1;
-            text = QPATHTOEF(icons,data\ingot_ca.paa);
+            text = QPATHTOEF(icons,data\anvil_ca.paa);
             x = 31 * GUI_GRID_W + GUI_GRID_X;
             y = 2 * GUI_GRID_H + GUI_GRID_Y;
             w = 5.5 * GUI_GRID_W;

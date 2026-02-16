@@ -34,7 +34,7 @@ private _totals = call FUNC(backpack);
 {
     private _currentGearArray = _x;
 
-    if !(_currentGearArray isEqualTo MACRO_NO_PROTECTIONS) then {
+    if (_currentGearArray isNotEqualTo MACRO_NO_PROTECTIONS) then {
         {
             private _currentValue = _totals select _forEachIndex;
             _totals set [_forEachIndex, _currentValue + _x];
