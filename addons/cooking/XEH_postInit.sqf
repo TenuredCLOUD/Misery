@@ -14,7 +14,7 @@ if (isServer) then {
                 player setVariable [QEGVAR(actions,currentParentID), ""];
             },
             "fire_menu",
-            QPATHTOEF(icons,data\boilwater_ca.paa),
+            QPATHTOEF(icons,data\cooking_ca.paa),
             ""
         ] call EFUNC(actions,addAction);
 

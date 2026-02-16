@@ -10,6 +10,6 @@ if !(GVAR(clothingCheckAction)) exitWith {};
     call FUNC(insulation);
     },
     "",
-    "",
+    QPATHTOEF(icons,data\layers_plus_ca.paa),
     ""
 ] call EFUNC(actions,addAction);

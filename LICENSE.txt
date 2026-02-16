@@ -28,17 +28,23 @@ Some folders of this project may contain a separate LICENSE file. Should
 that be the case, everything in that folder and all subfolders is subject
 to that license instead.
 
-The asset models used in this mod are licensed under **Creative Commons Attribution (CC:BY)** and **Creative Commons Zero (CC0)** licenses. 
+This project incorporates icons from Lucide, licensed under the MIT License. A copy of the license is included in the following directories:
 
-The specific license attribution for each asset, as well as the original licenses of the assets, can be found within the respective asset folder directory in the LICENSE.txt file.
+- /addons/icons/data/LICENSE
 
-If you wish to use these assets in another mod as a derivative work, it is **legally mandatory** to include the appropriate attribution as specified in the asset folder directory's license. 
+- /addons/markers/data/LICENSE
+
+The model assets used in this mod are licensed under **Creative Commons Attribution (CC:BY)** and **Creative Commons Zero (CC0)** licenses.
+
+The specific license attribution for each asset, as well as the original licenses of the assets, can be found within:
+
+- /addons/assets/LICENSE
+
+If you wish to use these assets in another mod as a derivative work, it is **legally mandatory** to include the appropriate attribution as specified in the asset folder directory's license.
 
 This includes both the original license attribution and credit to the original creator of the asset.
 
-Beyond the original asset attribution, it is necessary to acknowledge the work I, TenuredCLOUD, have done to port these assets to Arma 3. 
-
-This includes any modifications, enhancements, or other adaptations made for their use. Credit can be given directly or retained by preserving the original asset LICENSE.txt file, if it is included with the assets. 
+You must also include any modifications, enhancements, or other adaptations made for their use. Credit can be given directly or retained by preserving the original asset LICENSE.txt file, if it is included with the assets.
 
 Both methods of credit acknowledgment are acceptable.
 
