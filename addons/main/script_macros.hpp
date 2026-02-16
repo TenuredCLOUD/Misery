@@ -289,7 +289,7 @@ QCLASS(guttingKnife), \
 #define MACRO_FIRE_IGNITION QCLASS(lighter), QCLASS(matchBox)
 
 // Vehicle types
-#define MACRO_VEHICLETYPES "Car", "Tank", "Air", "Ship"
+#define MACRO_VEHICLETYPES "Car", "Tank", "Air", "Ship", "Motorcycle"
 
 // Houses / Loot
 #define MACRO_BUILDINGTYPES "House", "Building"
