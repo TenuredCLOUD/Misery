@@ -18,7 +18,7 @@ if (isClass (missionConfigFile >> "CfgMisery_AnvilData")) then {
             createDialog QCLASS(anvil_ui);
         },
         "",
-        QPATHTOEF(icons,data\ingot_ca.paa),
+        QPATHTOEF(icons,data\anvil_ca.paa),
         ""
     ] call EFUNC(actions,addAction);
 } else {

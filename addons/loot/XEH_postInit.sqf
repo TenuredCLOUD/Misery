@@ -19,18 +19,21 @@ if (isClass (missionConfigFile >> "CfgMisery_SearchableObjects")) then {
         "searchObject_menu",
         "Search...",
         {
-            [player] call FUNC(searchCondition) select 0
+            [] call FUNC(searchCondition) select 0
         },
         {
             [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-            [player] call FUNC(searchCondition) params ["", "_object", "_objectData"];
+            [] call FUNC(searchCondition) params ["", "_object", "_objectData"];
             [_object, _objectData] call FUNC(searchObject)
         },
         "",
-        QUOTE(a3\ui_f\data\igui\cfg\simpletasks\types\box_ca.paa),
+        QPATHTOEF(icons,data\scan_search_ca.paa),
         ""
     ] call EFUNC(actions,addAction);
 } else {
     [QUOTE(COMPONENT_BEAUTIFIED), "CfgMisery_SearchableObjects class not found in description.ext, skipping data parser..."] call EFUNC(common,debugMessage);
 };
 
+[{CBA_missionTime > 1}, {
+    call FUNC(checkAreas);
+}, []] call CBA_fnc_waitUntilAndExecute;

@@ -27,7 +27,7 @@ if (isServer) then {
         createDialog QCLASS(moneyTake_ui);
     },
     "",
-    "",
+    QPATHTOEF(icons,data\hand_helping_ca.paa),
     ""
 ] call EFUNC(actions,addAction);
 
@@ -41,6 +41,6 @@ if (isServer) then {
         createDialog QCLASS(moneyGive_ui);
     },
     "",
-    "",
+    QPATHTOEF(icons,data\hand_helping_ca.paa),
     ""
 ] call EFUNC(actions,addAction);

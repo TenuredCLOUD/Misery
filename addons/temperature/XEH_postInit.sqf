@@ -1,5 +1,16 @@
 #include "script_component.hpp"
 
+GVAR(exposureModifiers) = 0;
+GVAR(thermalIndexModifiers) = 0;
+GVAR(wetnessModifiers) = 0;
+GVAR(thermalBagActive) = false;
+GVAR(thermalPackHeatActive) = false;
+GVAR(thermalPackColdActive) = false;
+
+if (GVAR(breathFogAllowed)) then {
+    [] call FUNC(breathFog);
+};
+
 if !(GVAR(clothingCheckAction)) exitWith {};
 
 [
@@ -10,6 +21,6 @@ if !(GVAR(clothingCheckAction)) exitWith {};
     call FUNC(insulation);
     },
     "",
-    "",
+    QPATHTOEF(icons,data\layers_plus_ca.paa),
     ""
 ] call EFUNC(actions,addAction);

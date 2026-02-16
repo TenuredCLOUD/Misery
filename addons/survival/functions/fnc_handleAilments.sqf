@@ -25,7 +25,7 @@ GVAR(parasiteModifiers) = 0;
 player setVariable [QGVAR(parasites), _finalParasites];
 
 if (_parasites > 0) then {
-    [0.01, "parasites"] call EFUNC(common,addStatusModifier);
+    [3.33333e-4, "parasites"] call EFUNC(common,addStatusModifier); //0.01
 };
 if (_parasites < 0) then {
     player setVariable [QGVAR(parasites), MACRO_PLAYER_DEFAULTS_LOW];
@@ -38,9 +38,9 @@ player setVariable [QGVAR(toxicity), _finalToxicity];
 
 if (_toxicity > 0) then {
     if (_damaged || _hunger < 0.75 || _thirst < 0.75) then {
-        [0.01, "toxicity"] call EFUNC(common,addStatusModifier);
+        [3.33333e-4, "toxicity"] call EFUNC(common,addStatusModifier);
     } else {
-        [-0.005, "toxicity"] call EFUNC(common,addStatusModifier);
+        [-1.66667e-4, "toxicity"] call EFUNC(common,addStatusModifier); //0.005
     };
 };
 if (_toxicity < 0) then {
@@ -54,9 +54,9 @@ player setVariable [QGVAR(infection), _finalInfection];
 
 if (_infection > 0) then {
     if (_damaged || _hunger < 0.75 || _thirst < 0.75) then {
-        [0.01, "infection"] call EFUNC(common,addStatusModifier);
+        [3.33333e-4, "infection"] call EFUNC(common,addStatusModifier);
     } else {
-        [-0.005, "infection"] call EFUNC(common,addStatusModifier);
+        [-1.66667e-4, "infection"] call EFUNC(common,addStatusModifier); //0.005
     };
 };
 if (_infection < 0) then {

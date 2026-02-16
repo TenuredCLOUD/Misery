@@ -28,7 +28,7 @@ class CLASS(fishing_ui)
         class CLASS(fishing_icon): RscPicture
         {
             idc = -1;
-            text = "\z\misery\addons\icons\data\fish_ca.paa";
+            text = "\z\misery\addons\icons\data\fishing_hook_ca.paa";
             x = 31 * GUI_GRID_W + GUI_GRID_X;
             y = 1.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 5.5 * GUI_GRID_W;

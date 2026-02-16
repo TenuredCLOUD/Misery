@@ -11,7 +11,7 @@ if (hasInterface) then {
             [] call FUNC(installLocks);
         },
         "",
-        QUOTE(a3\modules_f\data\editterrainobject\texturechecked_door_ca.paa),
+        QPATHTOEF(icons,data\key_round_ca.paa),
         ""
     ] call EFUNC(actions,addAction);
 
@@ -25,7 +25,7 @@ if (hasInterface) then {
             [] call FUNC(promptPin);
         },
         "",
-        QUOTE(a3\modules_f\data\editterrainobject\textureunchecked_door_ca.paa),
+        QPATHTOEF(icons,data\door_open_ca.paa),
         ""
     ] call EFUNC(actions,addAction);
 
@@ -39,7 +39,7 @@ if (hasInterface) then {
             [] call FUNC(promptPin);
         },
         "",
-        QUOTE(a3\modules_f\data\editterrainobject\texturedoor_locked_ca.paa),
+        QPATHTOEF(icons,data\door_closed_locked_ca.paa),
         ""
     ] call EFUNC(actions,addAction);
 };
@@ -48,4 +48,10 @@ if (isServer) then {
     [{
         call FUNC(applyBuildingStates);
     }, [], 1] call CBA_fnc_waitAndExecute;
+
+    if (GVAR(areas) isNotEqualTo "[]") then {
+        [{CBA_missionTime > 1}, {
+            call FUNC(checkAreas);
+        }, []] call CBA_fnc_waitUntilAndExecute;
+    };
 };

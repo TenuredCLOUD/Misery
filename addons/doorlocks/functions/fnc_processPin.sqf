@@ -23,6 +23,7 @@ if (_building isEqualTo objNull) exitWith {};
 if (GVAR(pinMode) isEqualTo 0) then {
     _building setVariable [QGVAR(doorPin), _pin, true];
     private _pinSetTip = format ["Locking PIN has been set: %1", [_pin, 1, 0, false]call CBA_fnc_formatNumber];
+    [player, QCLASS(lockKit)] call CBA_fnc_removeItem;
     [_pinSetTip, 1, [1, 1, 1, 1]] call CBA_fnc_notify;
     [] call FUNC(enableLocks);
     [_building, true, _pin] call FUNC(updateBuildingState);

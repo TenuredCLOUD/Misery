@@ -20,26 +20,26 @@
  *
 */
 
-// Values are added onto the backpack array.
-private _backpack = call FUNC(backpack);
-private _facewear = call FUNC(facewear);
-private _headgear = call FUNC(headgear);
-private _uniform = call FUNC(uniform);
-private _vest = call FUNC(vest);
+// Gather all protection arrays
+private _allGear = [
+    call FUNC(facewear),
+    call FUNC(headgear),
+    call FUNC(uniform),
+    call FUNC(vest)
+];
+
+// Start with the backpack as the base
+private _totals = call FUNC(backpack);
 
 {
-    _backpack params ["_gas", "_scba", "_skin", "_resp", "_eye", "_hear"];
-    _x params ["_newGas", "_newSCBA", "_newSkin", "_newResp", "_newEye", "_newHear"];
+    private _currentGearArray = _x;
 
-    // Skip arrays of 0s
-    if (_x isEqualTo MACRO_NO_PROTECTIONS) exitWith {continue};
+    if !(_currentGearArray isEqualTo MACRO_NO_PROTECTIONS) then {
+        {
+            private _currentValue = _totals select _forEachIndex;
+            _totals set [_forEachIndex, _currentValue + _x];
+        } forEach _currentGearArray;
+    };
+} forEach _allGear;
 
-    _backpack set [0, _gas + _newGas];
-    _backpack set [1, _scba + _newSCBA];
-    _backpack set [2, _skin + _newSkin];
-    _backpack set [3, _resp + _newResp];
-    _backpack set [4, _eye + _newEye];
-    _backpack set [5, _hear + _newHear];
-} forEach [_facewear, _headgear, _uniform, _vest];
-
-_backpack
+_totals

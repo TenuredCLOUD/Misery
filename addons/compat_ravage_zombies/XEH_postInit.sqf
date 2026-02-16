@@ -18,7 +18,7 @@ if (GVAR(specimensEnabled)) then {
             call FUNC(skinCorpse);
         },
         "",
-        QPATHTOEF(icons,data\zedhand_ca.paa),
+        QPATHTOEF(icons,data\slice_ca.paa),
         ""
     ] call EFUNC(actions,addAction);
 
@@ -31,7 +31,7 @@ if (GVAR(specimensEnabled)) then {
             call FUNC(sawCorpse);
         },
         "",
-        QPATHTOEF(icons,data\zedhand_ca.paa),
+        QPATHTOEF(icons,data\slice_ca.paa),
         ""
     ] call EFUNC(actions,addAction);
 };

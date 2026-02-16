@@ -13,7 +13,7 @@ if (isServer) then {
                 createDialog QCLASS(craftingFramework_ui);
             },
             "",
-            QPATHTOEF(icons,data\crafting_ca.paa),
+            QPATHTOEF(icons,data\hammer_ca.paa),
             ""
         ] call EFUNC(actions,addAction);
     } else {

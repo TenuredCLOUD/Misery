@@ -1,7 +1,7 @@
 class CfgMarkers {
     class GVAR(ammo) {
         color[] = {1, 1, 1, 1};
-        icon = QPATHTOF(data\ammo.paa);
+        icon = QPATHTOF(data\container_ca.paa);
         markerClass = QGVAR(map);
         name = "Ammo";
         scope = 2;
@@ -10,82 +10,72 @@ class CfgMarkers {
     };
 
     class GVAR(banker): GVAR(ammo) {
-        icon = QPATHTOF(data\banker.paa);
-        name = "Banker";
+        icon = QPATHTOF(data\vault_ca.paa);
+        name = "Bank";
     };
 
     class GVAR(base_materials): GVAR(ammo) {
-        icon = QPATHTOF(data\basematerial.paa);
+        icon = QPATHTOF(data\house_plus_ca.paa);
         name = "Base Materials";
     };
 
     class GVAR(base_trader): GVAR(ammo) {
-        icon = QPATHTOF(data\basetrader.paa);
+        icon = QPATHTOF(data\tent_ca.paa);
         name = "Base Trader";
     };
 
-    class GVAR(ecologists): GVAR(ammo) {
-        icon = QPATHTOF(data\gasmask.paa);
-        name = "Ecologists";
+    class GVAR(research): GVAR(ammo) {
+        icon = QPATHTOF(data\flask_conical_ca.paa);
+        name = "Research Team";
     };
 
     class GVAR(forge_anvil): GVAR(ammo) {
-        icon = QPATHTOF(data\anvil.paa);
+        icon = QPATHTOF(data\anvil_ca.paa);
         name = "Forge & Anvil";
     };
 
     class GVAR(fuel): GVAR(ammo) {
-        icon = QPATHTOF(data\fuel.paa);
+        icon = QPATHTOF(data\fuel_ca.paa);
         name = "Fuel";
     };
 
-    class GVAR(heli_wreck): GVAR(ammo) {
-        icon = QPATHTOF(data\heliwreck.paa);
-        name = "Helicopter Wreck";
-    };
-
-    class GVAR(lumber_mill): GVAR(ammo) {
-        icon = QPATHTOF(data\lumber.paa);
-        name = "Lumber Mill";
-    };
-
     class GVAR(mechanic): GVAR(ammo) {
-        icon = QPATHTOF(data\mechanic.paa);
+        icon = QPATHTOF(data\wrench_ca.paa);
         name = "Mechanic";
     };
 
     class GVAR(medical): GVAR(ammo) {
-        icon = QPATHTOF(data\medical.paa);
+        icon = QPATHTOF(data\pillbottle_ca.paa);
         name = "Medical";
     };
 
     class GVAR(military): GVAR(ammo) {
-        icon = QPATHTOF(data\military.paa);
+        icon = QPATHTOF(data\shield_user_ca.paa);
         name = "Military Zone";
     };
 
     class GVAR(mining): GVAR(ammo) {
-        icon = QPATHTOF(data\mining.paa);
+        icon = QPATHTOF(data\stone_ca.paa);
         name = "Mining";
     };
 
     class GVAR(radiation_zone): GVAR(ammo) {
-        icon = QPATHTOF(data\radzone.paa);
+        icon = QPATHTOF(data\radiation_ca.paa);
         name = "Radiation Zone";
     };
 
     class GVAR(safezone): GVAR(ammo) {
-        icon = QPATHTOF(data\safezone.paa);
+        icon = QPATHTOF(data\shield_check_ca.paa);
         name = "Safezone";
     };
 
     class GVAR(skull): GVAR(ammo) {
-        icon = QPATHTOF(data\skull.paa);
+        icon = QPATHTOF(data\skull_ca.paa);
         name = "Skull";
     };
 
     class GVAR(trader_presence): GVAR(ammo) {
-        icon = QPATHTOF(data\trader.paa);
+        icon = QPATHTOF(data\hand_coins_ca.paa);
         name = "Trader";
     };
 };
