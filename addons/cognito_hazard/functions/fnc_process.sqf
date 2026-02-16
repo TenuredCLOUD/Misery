@@ -43,8 +43,10 @@
     if (_hearingProtection < 1) then {
         if ("ace_medical" call EFUNC(common,isModLoaded)) then {
             [player, _damageMultiplier, "head", "punch"] call ace_medical_fnc_addDamageToUnit;
+            QGVAR(display) cutRsc [QCLASS(tunnel_ui), "PLAIN", 1, false];
         } else {
             player setHitPointDamage ["hitHead", _damageMultiplier];
+            QGVAR(display) cutRsc [QCLASS(tunnel_ui), "PLAIN", 1, false];
         };
     };
 
