@@ -26,7 +26,7 @@ private _players = call EFUNC(common,listPlayers);
     {
         private _building = _x;
         private _buildingType = typeOf _building;
-        if (_buildingType in GVAR(buildingBlacklist) || _building in GVAR(building_used)) exitWith {continue};
+        if (_buildingType in GVAR(buildingBlacklist) || _building in GVAR(building_used) || GVAR(areas) findIf {_building inArea _x} isNotEqualTo -1) exitWith {continue};
 
         private _buildingPositions = _building buildingPos -1;
 
