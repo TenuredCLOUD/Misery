@@ -48,7 +48,11 @@
         };
         if (_respiratoryProtection < 1) then {
             [player, _finalRespiratoryDeficit, "Body", "burn"] call ace_medical_fnc_addDamageToUnit;
-            [player setFatigue (_fatigueValue + 1), player setVariable ["ace_advanced_fatigue_aimFatigue", _fatigueValue + 1]] select (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled});
+            if (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled}) then {
+                player setVariable ["ace_advanced_fatigue_aimFatigue", _fatigueValue + 1];
+            } else {
+                player setFatigue (_fatigueValue + 1);
+            };
         };
         if (_eyeProtection < 1) then {
             [player, _finalEyeDeficit, "Head", "burn"] call ace_medical_fnc_addDamageToUnit;
@@ -60,7 +64,11 @@
         };
         if (_respiratoryProtection < 1) then {
             player setHitPointDamage ["hitBody", _finalRespiratoryDeficit];
-            [player setFatigue (_fatigueValue + 1), player setVariable ["ace_advanced_fatigue_aimFatigue", _fatigueValue + 1]] select (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled});
+            if (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled}) then {
+                player setVariable ["ace_advanced_fatigue_aimFatigue", _fatigueValue + 1];
+            } else {
+                player setFatigue (_fatigueValue + 1);
+            };
         };
         if (_eyeProtection < 1) then {
             player setHitPointDamage ["hitHead", _finalEyeDeficit];

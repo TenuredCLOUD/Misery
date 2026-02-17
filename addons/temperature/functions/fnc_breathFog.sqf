@@ -47,7 +47,7 @@ _fogLogic attachTo [player, [0, 0.15, 0.1], "neck", true];
     } forEach _this;
 }, [_fogLogic, _fogEffect], 2] call CBA_fnc_waitAndExecute;
 
-[QUOTE(COMPONENT_BEAUTIFIED), format ["BreathFog: Delay %1s | Fatigue %2%3 | Active: %4", round(_delay), round(_fatigueValue * 100), "%", true]] call EFUNC(common,debugMessage);
+[QUOTE(COMPONENT_BEAUTIFIED), format ["BreathFog: Delay %1s | Fatigue %2%3 | Active: %4", GVAR(breathDelay), round(_fatigueValue * 100), "%", true]] call EFUNC(common,debugMessage);
 
 [{
     call FUNC(breathFog);
