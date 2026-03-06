@@ -55,7 +55,7 @@
 
         {
             private _selectionName = _selectionNames select _forEachIndex;
-            if (_selectionName != "") then {
+            if (_selectionName isNotEqualTo "") then {
                 private _damage = _damages select _forEachIndex;
                 private _damagePercent = _damage * 100;
                 private _index = _list lbAdd format ["%1 - Damage: %2%%", _selectionName, [_damagePercent, 1, 1, false] call CBA_fnc_formatNumber];

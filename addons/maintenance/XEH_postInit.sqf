@@ -20,7 +20,7 @@ if (isServer) then {
     ] call EFUNC(actions,addAction);
 };
 
-if (hasInterface) then {
+if (hasInterface && !GVAR(difficulty)) then {
     call FUNC(vehicleControl);
 
     // Add ACE interactions for ace wheels & tracks since even with ace repair disabled players can still interact with spare repair items on vehicles
