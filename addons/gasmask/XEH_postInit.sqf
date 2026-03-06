@@ -24,10 +24,13 @@ if (!hasInterface) exitWith {};
         ["ace_glassesCracked", {
             params ["_unit"];
             if (_unit isEqualTo player) then {
-                [QEGVAR(common,tileText), format ["%1 is broken, removing equipment...", [goggles player] call EFUNC(common,getItemData) select 0]] call CBA_fnc_localEvent;
-                [{
-                    player unlinkItem goggles player;
-                }, [], 2] call CBA_fnc_waitAndExecute;
+                if ([_unit] call ace_goggles_fnc_isGogglesVisible) then {
+                    [QEGVAR(common,tileText), format ["%1 broken, removing equipment...", [goggles _unit] call EFUNC(common,getItemData) select 0]] call CBA_fnc_localEvent;
+                    [{
+                        params ["_unit"];
+                        _unit unlinkItem goggles _unit;
+                    }, [_unit], 2] call CBA_fnc_waitAndExecute;
+                };
             };
         }] call CBA_fnc_addEventHandler;
     };
