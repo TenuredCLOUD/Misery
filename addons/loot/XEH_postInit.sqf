@@ -3,11 +3,14 @@
 if (!isServer) exitWith {};
 
 if (isClass (missionConfigFile >> "CfgMisery_LootData")) then {
-    [] call FUNC(parseData);
+    [{CBA_missionTime > 1}, {
+        call FUNC(parseData);
+        call FUNC(checkAreas);
 
-    [{
-        [] call FUNC(loop)
-    }, [], 1] call CBA_fnc_waitAndExecute;
+        [{
+            [] call FUNC(loop)
+        }, [], 1] call CBA_fnc_waitAndExecute;
+    }, []] call CBA_fnc_waitUntilAndExecute;
 } else {
     [QUOTE(COMPONENT_BEAUTIFIED), "CfgMisery_LootData class not found in description.ext, skipping data parser..."] call EFUNC(common,debugMessage);
 };
@@ -33,7 +36,3 @@ if (isClass (missionConfigFile >> "CfgMisery_SearchableObjects")) then {
 } else {
     [QUOTE(COMPONENT_BEAUTIFIED), "CfgMisery_SearchableObjects class not found in description.ext, skipping data parser..."] call EFUNC(common,debugMessage);
 };
-
-[{CBA_missionTime > 1}, {
-    call FUNC(checkAreas);
-}, []] call CBA_fnc_waitUntilAndExecute;
