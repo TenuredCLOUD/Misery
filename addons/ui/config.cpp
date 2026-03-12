@@ -18,6 +18,7 @@ class CfgPatches {
 #include "menus\fontChange.hpp"
 #include "menus\sleep.hpp"
 #include "menus\crafting.hpp"
+#include "menus\devils_luck.hpp"
 #include "menus\fireCrafting.hpp"
 #include "menus\fishing.hpp"
 #include "menus\cooking.hpp"
