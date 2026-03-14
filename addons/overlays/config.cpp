@@ -6,14 +6,8 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {QCLASS(main)};
+        requiredAddons[] = {QCLASS(common)};
         authors[] = {"TenuredCLOUD"};
         VERSION_CONFIG;
     };
 };
-
-#include "CfgEventHandlers.hpp"
-#include "CfgFactionClasses.hpp"
-
-#include "ui\core.hpp"
-#include "ui\menus.hpp"
