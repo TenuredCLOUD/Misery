@@ -32,11 +32,11 @@ if (!isServer) exitWith {};
                     continue;
                 };
 
-                if (_player distance _dealer > 1000) then {
+                if (_player distance _dealer > GVAR(gamblingDistance)) then {
                     private _funds = _dealer getVariable [QGVAR(dealerFunds), 50000];
 
                     if ([50] call EFUNC(common,rollChance)) then {
-                        private _simulatedBet = (floor(random 500)) + 10;
+                        private _simulatedBet = (floor(random 1000)) + 250;
 
                         // Simulated AI winning / losing bets
                         if ([40] call EFUNC(common,rollChance)) then {
@@ -48,6 +48,6 @@ if (!isServer) exitWith {};
                 };
             } forEach GVAR(activeDealers);
         } forEach _players;
-    }, 1800, []] call CBA_fnc_addPerFrameHandler;
-    [QUOTE(COMPONENT_BEAUTIFIED), format ["Started trackDealers PFH with %1 dealers, cycle: 30mins", count GVAR(activeDealers)]] call EFUNC(common,debugMessage);
+    }, GVAR(gamblingCycle), []] call CBA_fnc_addPerFrameHandler;
+    [QUOTE(COMPONENT_BEAUTIFIED), format ["Started trackDealers PFH with %1 dealers, cycle: %2s", count GVAR(activeDealers), GVAR(gamblingCycle)]] call EFUNC(common,debugMessage);
 }, []] call CBA_fnc_waitUntilAndExecute;

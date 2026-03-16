@@ -36,4 +36,6 @@
 
     ctrlSetText [2223, format ["Dealer: %1 %2", EGVAR(currency,symbol), [_dealerFunds, 1, 2, true] call CBA_fnc_formatNumber]];
 
+    _dealer setVariable [QGVAR(isActive), true, true];
+
 }, []] call CBA_fnc_waitUntilAndExecute;
