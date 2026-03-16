@@ -13,13 +13,16 @@
  * [] call misery_devils_luck_fnc_handleRoll;
 */
 
-private _display = findDisplay 3384575825;
-
-if (isNull _display) exitWith {};
-
 private _bet = GVAR(currentBet);
 private _prediction = GVAR(currentPrediction);
 private _oldTotal = GVAR(currentTotal);
+
+private _dealer = player getVariable [QGVAR(currentDealer), objNull];
+
+private _dealerFunds = _dealer getVariable [QGVAR(dealerFunds), 50000];
+if (_dealerFunds <= 0) exitWith {
+    ctrlSetText [1104, "This dealer has no more funds... Come back later..."];
+};
 
 call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
@@ -60,13 +63,31 @@ if (!_tie) then {
 };
 
 if (_won) then {
-    [_bet] call EFUNC(currency,modifyMoney);
-    private _winnerText = format ["Winner! You gained %2%1", _bet, EGVAR(currency,symbol)];
+    private _payout = _bet min _dealerFunds;
+    [_payout] call EFUNC(currency,modifyMoney);
+    _dealer setVariable [QGVAR(dealerFunds), _dealerFunds - _payout, true];
+
+    private _winnerText = format ["Winner! You gained %2 %1", [_payout, 1, 2, true] call CBA_fnc_formatNumber, EGVAR(currency,symbol)];
+    if (_payout < _bet) then {
+        _winnerText = _winnerText + " (This dealer is broke!)";
+    };
+
     ctrlSetText [1104, _winnerText];
 } else {
     [-_bet] call EFUNC(currency,modifyMoney);
-    private _loserText = ["Better luck next time...", "Tie! The House always wins..."] select _tie;
+    _dealer setVariable [QGVAR(dealerFunds), _dealerFunds + _bet, true];
+
+    private _baseMsg = ["Better luck next time...", "Tie! The House always wins..."] select _tie;
+    private _loserText = format ["%1 You lost %3 %2", _baseMsg, [_bet, 1, 2, true] call CBA_fnc_formatNumber, EGVAR(currency,symbol)];
     ctrlSetText [1104, _loserText];
 };
+
+call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
+
+ctrlSetText [2222, format ["%3: %1 %2", EGVAR(currency,symbol), [_funds, 1, 2, true] call CBA_fnc_formatNumber, profileName]];
+
+private _dealerFundsUpdated = _dealer getVariable [QGVAR(dealerFunds), 50000];
+
+ctrlSetText [2223, format ["Dealer: %1 %2", EGVAR(currency,symbol), [_dealerFundsUpdated, 1, 2, true] call CBA_fnc_formatNumber]];
 
 GVAR(currentTotal) = _newTotal;

@@ -78,4 +78,9 @@ class CfgMarkers {
         icon = QPATHTOF(data\hand_coins_ca.paa);
         name = "Trader";
     };
+
+    class GVAR(dealer_presence): GVAR(ammo) {
+        icon = QPATHTOF(data\dices_ca.paa);
+        name = "Dealer";
+    };
 };

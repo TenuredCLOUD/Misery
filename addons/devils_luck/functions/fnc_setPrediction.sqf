@@ -15,8 +15,6 @@
 
 params ["_isHigher"];
 
-private _display = findDisplay 3384575825;
-
 private _val = parseNumber _isHigher;
 
 private _text = ["LOWER", "HIGHER"] select _isHigher;

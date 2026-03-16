@@ -1,5 +1,8 @@
 PREP(generateGameMaster);
 PREP(handleRoll);
 PREP(loadMenu);
+PREP(rules);
 PREP(setPrediction);
-PREP(updateMenu);
+PREP(trackDealers);
+PREP(unloadMenu);
+PREP(updateBetDisplay);

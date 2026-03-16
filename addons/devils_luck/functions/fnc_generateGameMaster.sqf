@@ -16,16 +16,21 @@
 
 params ["_object"];
 
+_object getVariable [QGVAR(dealerFunds), 50000];
+_object setVariable [QGVAR(isActive), false, true];
+
 [
     _object,
     "Play Devil's Luck",
     QPATHTOEF(icons,data\dices_ca.paa),
     QPATHTOEF(icons,data\dices_ca.paa),
-    QUOTE(_this distance _target < 3),
-    QUOTE(_caller distance _target < 3),
+    QUOTE(_this distance _target < 3 && !(_target getVariable [ARR_2(QUOTE(QGVAR(isActive)),false)])),
+    QUOTE(_caller distance _target < 3 && !(_target getVariable [ARR_2(QUOTE(QGVAR(isActive)),false)])),
     {},
     {},
     {
+        params ["_target", "_caller", "_actionId", "_arguments"];
+        _caller setVariable [QGVAR(currentDealer), _target];
         createDialog QCLASS(devils_luck_ui);
     },
     {},
@@ -35,4 +40,7 @@ params ["_object"];
     false,
     false
 ] call BIS_fnc_holdActionAdd;
+
+GVAR(activeDealers) pushBackUnique _object;
+publicVariable QGVAR(activeDealers);
 
