@@ -44,9 +44,13 @@ private _requiredForRepair = "";
 private _hitpointLower = toLower _hitpoint; //toLower _selectionName;
 private _hitpointDamage = _vehicle getHitIndex _index;
 
-{
-    if ((_x select 0) in _hitpointLower) exitWith {_requiredForRepair = _x select 1};
-} forEach MACRO_MAINTENANCE_REPAIR;
+if !(GVAR(difficulty)) then {
+    {
+        if ((_x select 0) in _hitpointLower) exitWith {_requiredForRepair = _x select 1};
+    } forEach MACRO_MAINTENANCE_REPAIR;
+} else {
+    _requiredForRepair = "ToolKit";
+};
 
 switch (true) do {
     case ("wheel" in _hitpointLower): {
@@ -104,7 +108,9 @@ switch (true) do {
             player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
             [{
                 params ["_vehicle", "_requiredForRepair", "_index", "_selectionName"];
-                [_requiredForRepair, QCLASS(emptyToolKit)] call EFUNC(common,itemDecrement);
+                if !(GVAR(difficulty)) then {
+                    [_requiredForRepair, QCLASS(emptyToolKit)] call EFUNC(common,itemDecrement);
+                };
                 _vehicle setHitIndex [_index, 0];
                 ctrlSetText [1001, format ["Repaired %1 with %2.", _selectionName, [_requiredForRepair] call EFUNC(common,getItemData) select 0]];
                 [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);

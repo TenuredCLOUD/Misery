@@ -29,7 +29,15 @@ private _batteryType = 0;
 
 private _batteryClass = [QCLASS(autoBattery), QCLASS(autoBattery_Heavy)] select (_batteryType isEqualTo 1);
 
-[_vehicle, _batteryClass, selectRandom [0, 1], true] call CBA_fnc_addItemCargo;
+if (!GVAR(difficulty)) then {
+    [_vehicle, _batteryClass, selectRandom [0, 1], true] call CBA_fnc_addItemCargo;
+};
+
+if (GVAR(difficulty)) exitWith {
+    if ([15] call EFUNC(common,rollChance)) then {
+        [_vehicle, QUOTE(ToolKit), 1, true] call CBA_fnc_addItemCargo;
+    };
+};
 
 if (_vehicle isKindOf "Car") then {
     [_vehicle, QCLASS(spareTire), selectRandom [0, 1], true] call CBA_fnc_addItemCargo;
