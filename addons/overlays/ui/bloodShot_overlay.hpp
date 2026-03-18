@@ -11,7 +11,7 @@ class CLASS(bloodshot_ui)
         class CLASS(bloodshot_background): RscPicture
         {
             idc = -1;
-            text = QPATHTOEF(ui,menus\ui\overlaybloodshot_ca.paa);
+            text = QPATHTOEF(overlays,ui\overlaybloodshot_ca.paa);
             x = -28.5 * GUI_GRID_W + GUI_GRID_X;
             y = -10.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 97 * GUI_GRID_W;
