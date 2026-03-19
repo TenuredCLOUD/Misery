@@ -6,6 +6,7 @@
 #include "\z\misery\addons\currency\ui\bank.hpp"
 #include "\z\misery\addons\currency\ui\moneyGiveMenu.hpp"
 #include "\z\misery\addons\currency\ui\moneyTakeMenu.hpp"
+#include "\z\misery\addons\devils_luck\ui\devils_luck.hpp"
 #include "\z\misery\addons\doorlocks\ui\doorLock.hpp"
 #include "\z\misery\addons\fire\ui\fireCrafting.hpp"
 #include "\z\misery\addons\fishing\ui\fishing.hpp"
