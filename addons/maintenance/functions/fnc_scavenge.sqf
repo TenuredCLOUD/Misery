@@ -44,9 +44,13 @@ private _scavengedItem = "";
 private _hitpointLower = toLower _selectionName;
 private _hitpointDamage = _vehicle getHitIndex _index;
 
-{
-    if ((_x select 0) in _hitpointLower) exitWith {_scavengedItem = _x select 1};
-} forEach MACRO_MAINTENANCE_SCAVENGE;
+if !(GVAR(difficulty)) then {
+    {
+        if ((_x select 0) in _hitpointLower) exitWith {_scavengedItem = _x select 1};
+    } forEach MACRO_MAINTENANCE_SCAVENGE;
+} else {
+    _scavengedItem = "";
+};
 
 switch (true) do {
     case ("wheel" in _hitpointLower): {
@@ -59,7 +63,11 @@ switch (true) do {
         player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
         [{
             params ["_vehicle", "_index", "_selectionName", "_scavengedItem"];
-            [player, _scavengedItem, true] call CBA_fnc_addItem;
+            if !(GVAR(difficulty)) then {
+                [player, _scavengedItem, true] call CBA_fnc_addItem;
+            } else {
+                [player, QCLASS(spareTire), true] call CBA_fnc_addItem;
+            };
             _vehicle setHitIndex [_index, 1];
             ctrlSetText [1001, format ["%1 scavenged...", _selectionName]];
             [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);

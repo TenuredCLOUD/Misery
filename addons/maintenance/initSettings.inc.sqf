@@ -10,6 +10,15 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(difficulty),
+    "CHECKBOX",
+    ["Easier maintenance", "When enabled maintenance doesn't require as many parts for repairs"],
+    _category,
+    true,
+    1
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(fuelOnStart),
     "SLIDER",
     ["Fuel on start", "Possible starting fuel for vehicles on scenario start (if set to 0 3den handles fuel levels)"],

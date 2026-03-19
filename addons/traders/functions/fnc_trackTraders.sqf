@@ -39,6 +39,7 @@ if (!isServer) exitWith {};
                         continue;
                     };
                     private _items = _shop select 2;
+                    private _shopFunds = _shop select 3;
 
                     {
                         private _itemData = _x;
@@ -48,16 +49,20 @@ if (!isServer) exitWith {};
                         private _minCostFactor = _itemData select 3;
                         private _maxCostFactor = _itemData select 4;
 
-                        private _price = [_basePrice, _stock, _stock, _minCostFactor, _maxCostFactor, true] call FUNC(calculatePrice);
+                        private _price = [_basePrice, _stock, _minCostFactor, _maxCostFactor, true] call FUNC(calculatePrice);
 
                         if ([50] call EFUNC(common,rollChance)) then {
                             if (_stock > 0) then {
                                 _itemData set [2, _stock - 1];
+                                _shopFunds = _shopFunds + _price;
                             };
                         } else {
                             _itemData set [2, _stock + 1];
+                            _shopFunds = _shopFunds - _price;
                         };
                     } forEach _items;
+
+                    _shop set [3, (_shopFunds max 0)];
 
                     _trader setVariable [QGVAR(shop), _shop, true];
                 };

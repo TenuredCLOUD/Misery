@@ -8,7 +8,7 @@ class CLASS(tunnel_ui) {
     class ControlsBackground {
         class CLASS(tunnel_background): RscPicture {
             idc = -1;
-            text = QPATHTOEF(ui,menus\ui\overlaytunnel_ca.paa);
+            text = QPATHTOEF(overlays,ui\overlaytunnel_ca.paa);
             x = -28.5 * GUI_GRID_W + GUI_GRID_X;
             y = -10.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 97 * GUI_GRID_W;
