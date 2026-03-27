@@ -27,8 +27,3 @@ private _finalHunger = ((_hunger + GVAR(hungerModifiers)) min 1) max 0;
 GVAR(hungerModifiers) = 0;
 player setVariable [QGVAR(hunger), _finalHunger];
 
-if (EGVAR(audio,enhancedCharacterEffects)) then {
-    if (_finalHunger < 0.75) then {
-        player say3D [QEGVAR(audio,sound_stomachGrowl), 10, 1, 2, 0];
-    };
-};

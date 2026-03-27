@@ -1,6 +1,7 @@
 PREP(ailmentDamage);
 PREP(ailmentDecay);
 PREP(decayHealth);
+PREP(feedback);
 PREP(handleAilments);
 PREP(handleEnergy);
 PREP(handleHunger);

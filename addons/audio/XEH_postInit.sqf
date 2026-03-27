@@ -56,9 +56,5 @@ if (hasInterface) then {
             playSound QCLASS(audio_sound_drop02);
         }];
     };
-
-    if (GVAR(enhancedCharacterEffects)) then {
-        call EFUNC(temperature,immersion);
-    };
 };
 

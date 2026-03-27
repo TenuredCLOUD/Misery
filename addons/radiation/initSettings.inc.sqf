@@ -8,3 +8,12 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "[]",
     1
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(radioactiveRain),
+    "CHECKBOX",
+    ["Enable Radioactive rain", "Enables radioactive rain"],
+    _category,
+    false,
+    1
+] call CBA_fnc_addSetting;

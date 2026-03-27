@@ -4,6 +4,5 @@ PREP(coldPack);
 PREP(core);
 PREP(environment);
 PREP(heatPack);
-PREP(immersion);
 PREP(insulation);
 PREP(thermalKit);
