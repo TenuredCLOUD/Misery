@@ -1,12 +1,9 @@
-class CLASS(refuelfuelCan_ui)
-{
+class CLASS(refuelfuelCan_ui) {
     idd = 733836;
     onLoad = QUOTE([733836] call EFUNC(common,menuBlurEffect); [] call EFUNC(fuel,fuelCanListed));
 
-    class ControlsBackground
-    {
-        class CLASS(refuelVehicle_background): CLASS(RscText)
-        {
+    class ControlsBackground {
+        class CLASS(refuelVehicle_background): CLASS(RscText) {
             idc = -1;
             x = 2.5 * GUI_GRID_W + GUI_GRID_X;
             y = 0 * GUI_GRID_H + GUI_GRID_Y;
@@ -14,8 +11,7 @@ class CLASS(refuelfuelCan_ui)
             h = 18 * GUI_GRID_H;
             colorBackground[] = {0,0,0,0.7};
         };
-        class CLASS(refuelVehicle_prompt): RscText
-        {
+        class CLASS(refuelVehicle_prompt): RscText {
             idc = -1;
             text = "Refill fuel can from pump"; //--- ToDo: Localize;
             x = 3.5 * GUI_GRID_W + GUI_GRID_X;
@@ -25,8 +21,7 @@ class CLASS(refuelfuelCan_ui)
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
-        class CLASS(refuelVehicle_fuel_icon): RscPicture
-        {
+        class CLASS(refuelVehicle_fuel_icon): RscPicture {
             idc = -1;
             text = QPATHTOEF(markers,data\fuel_ca.paa);
             x = 26.5 * GUI_GRID_W + GUI_GRID_X;
@@ -37,10 +32,8 @@ class CLASS(refuelfuelCan_ui)
             sizeEx = UI_MACRO_TEXTSIZE;
         };
     };
-    class Controls
-    {
-        class CLASS(refuelVehicle_noteBox): RscText
-        {
+    class Controls {
+        class CLASS(refuelVehicle_noteBox): RscText {
             idc = 1001;
             x = 3.5 * GUI_GRID_W + GUI_GRID_X;
             y = 13.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -49,8 +42,7 @@ class CLASS(refuelfuelCan_ui)
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
-        class CLASS(refuelVehicle_refuel): RscButton
-        {
+        class CLASS(refuelVehicle_refuel): RscButton {
             idc = 1600;
             colorFocused[] = {0.5,0.5,0.5,0.7};
             onButtonClick = QUOTE(call EFUNC(fuel,processFuelCan));
@@ -64,8 +56,7 @@ class CLASS(refuelfuelCan_ui)
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
-        class CLASS(refuelVehicle_exit): RscButton
-        {
+        class CLASS(refuelVehicle_exit): RscButton {
             idc = 1601;
             colorFocused[] = {0.5,0.5,0.5,0.7};
             onButtonClick = QUOTE(closeDialog 2);
@@ -79,8 +70,7 @@ class CLASS(refuelfuelCan_ui)
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
-        class CLASS(Listed_fuelCan): RscListBox
-        {
+        class CLASS(Listed_fuelCan): RscListBox {
             idc = 1500;
             x = 4 * GUI_GRID_W + GUI_GRID_X;
             y = 3.5 * GUI_GRID_H + GUI_GRID_Y;
