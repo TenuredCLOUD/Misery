@@ -673,34 +673,6 @@
             <Japanese>18Vバッテリー</Japanese>
             <Turkish>18v pil</Turkish>
         </Key>
-        <Key ID="STR_Misery_Assets_2x4_DisplayName">
-            <English>2x4</English>
-            <Czech>2x4</Czech>
-            <French>2x4</French>
-            <Spanish>2x4</Spanish>
-            <Italian>2x4</Italian>
-            <Polish>2x4</Polish>
-            <Portuguese>2x4</Portuguese>
-            <Russian>2х4</Russian>
-            <German>2x4</German>
-            <Korean>2x4</Korean>
-            <Japanese>2x4</Japanese>
-            <Turkish>2x4</Turkish>
-        </Key>
-        <Key ID="STR_Misery_Assets_2x8_DisplayName">
-            <English>2x8</English>
-            <Czech>2x8</Czech>
-            <French>2x8</French>
-            <Spanish>2x8</Spanish>
-            <Italian>2x8</Italian>
-            <Polish>2x8</Polish>
-            <Portuguese>2x8</Portuguese>
-            <Russian>2х8</Russian>
-            <German>2x8</German>
-            <Korean>2x8</Korean>
-            <Japanese>2x8</Japanese>
-            <Turkish>2x8</Turkish>
-        </Key>
         <Key ID="STR_Misery_Assets_9VBattery_Description">
             <English>old 9V battery</English>
             <Czech>stará baterie 9V</Czech>
@@ -2222,20 +2194,6 @@
             <Korean>접이식 낚싯대</Korean>
             <Japanese>折りたたみ式釣り竿</Japanese>
             <Turkish>Katlanabilir olta</Turkish>
-        </Key>
-        <Key ID="STR_Misery_Assets_FishingRod_DisplayName">
-            <English>Collapsible Fishing Rod</English>
-            <Czech>Skládací rybářský prut</Czech>
-            <French>Canne à pêche pliable</French>
-            <Spanish>Caña de pescar plegable</Spanish>
-            <Italian>Canna da pesca pieghevole</Italian>
-            <Polish>Składana wędka</Polish>
-            <Portuguese>Vara de pesca dobrável</Portuguese>
-            <Russian>Складная удочка</Russian>
-            <German>Zusammenklappbare Angelrute</German>
-            <Korean>접이식 낚싯대</Korean>
-            <Japanese>折りたたみ可能な釣り竿</Japanese>
-            <Turkish>Katlanabilir Olta</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_FishingSpool_Description">
             <English>Used with collapsible fishing pole&lt;br/&gt; - Fishing gear</English>

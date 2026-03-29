@@ -43,20 +43,6 @@
             <Japanese>恐怖に苛まれ、眠りは遠い記憶となる。恐怖の幻覚に悩まされ、恐怖の感覚を覚える。あなたは狂気へと堕ちていく...。</Japanese>
             <Turkish>Korkudan işkence görüyorsunuz ve uyku uzak bir anı. Size musallat olan dehşetli halüsinasyonlar görüyor ve sizi dehşete düşüren hisler hissediyorsunuz. Deliliğe doğru sürükleniyorsunuz...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Common_CharacterHardcoreSavingActive">
-            <English>%1, Hardcore saving mode is active: you must be near a fire to save your character...</English>
-            <Czech>%1, je aktivní režim Hardcore saving: pro záchranu postavy musíte být v blízkosti ohně...</Czech>
-            <French>%1, Le mode de sauvegarde hardcore est actif : vous devez être près d'un feu pour sauver votre personnage...</French>
-            <Spanish>%1, El modo de salvación Hardcore está activo: debes estar cerca de un fuego para salvar a tu personaje...</Spanish>
-            <Italian>%1, è attiva la modalità di salvataggio Hardcore: devi essere vicino a un fuoco per salvare il tuo personaggio...</Italian>
-            <Polish>%1, Tryb ratunkowy Hardcore jest aktywny: musisz znajdować się w pobliżu ognia, aby uratować swoją postać...</Polish>
-            <Portuguese>%1, o modo de salvamento hardcore está ativo: você deve estar perto de um incêndio para salvar seu personagem...</Portuguese>
-            <Russian>%1, активирован хардкорный режим сохранения: вы должны быть рядом с огнем, чтобы спасти своего персонажа...</Russian>
-            <German>%1, Hardcore-Speichermodus ist aktiv: Du musst in der Nähe eines Feuers sein, um deinen Charakter zu retten...</German>
-            <Korean>%1, 하드코어 저장 모드가 활성화되어 있습니다: 캐릭터를 저장하려면 불 근처에 있어야 합니다...</Korean>
-            <Japanese>%1、ハードコアセーブモードが有効です：キャラクターをセーブするには火の近くにいなければなりません...</Japanese>
-            <Turkish>%1, Zorlu tasarruf modu aktif: karakterinizi kurtarmak için ateşin yakınında olmalısınız...</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Common_CheckClothing">
             <English>Check Clothing</English>
             <Czech>Kontrola oblečení</Czech>
@@ -155,6 +141,20 @@
             <Japanese>ワークベンチを使う</Japanese>
             <Turkish>Workbench Kullanın</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Common_DisplayName">
+            <English>Misery</English>
+            <Czech>Bída</Czech>
+            <French>Misère</French>
+            <Spanish>Miseria</Spanish>
+            <Italian>Miseria</Italian>
+            <Polish>Nędza</Polish>
+            <Portuguese>Miséria</Portuguese>
+            <Russian>Невзгоды</Russian>
+            <German>Elend</German>
+            <Korean>불행</Korean>
+            <Japanese>悲惨</Japanese>
+            <Turkish>Sefalet</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Common_DrinkFromSource">
             <English>Drink from source</English>
             <Czech>Pití ze zdroje</Czech>
@@ -224,20 +224,6 @@
             <Korean>기어 무게는 다음과 같이 느껴집니다: ~ %2kg (%1lbs)</Korean>
             <Japanese>ギア重量はこんな感じ： ~ 2kg (%1lbs)</Japanese>
             <Turkish>Dişli ağırlığı gibi hissediyor: ~ %2kg (%1lbs)</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_MISERY_DisplayName">
-            <English>Misery</English>
-            <Czech>Bída</Czech>
-            <French>Misère</French>
-            <Spanish>Miseria</Spanish>
-            <Italian>Miseria</Italian>
-            <Polish>Nędza</Polish>
-            <Portuguese>Miséria</Portuguese>
-            <Russian>Невзгоды</Russian>
-            <German>Elend</German>
-            <Korean>불행</Korean>
-            <Japanese>悲惨</Japanese>
-            <Turkish>Sefalet</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_MineOre">
             <English>Mine Ore</English>
