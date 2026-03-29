@@ -13,7 +13,7 @@ if (_miningEnabled) then {
 if (_miningEnabled) then {
     [
         "mineOre_menu",
-        localize "STR_MISERY_MINEORE",
+        localize ECSTRING(common,MineOre),
         {
             [player] call FUNC(condition) select 0
         },

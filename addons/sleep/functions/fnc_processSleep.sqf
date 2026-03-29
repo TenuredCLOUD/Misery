@@ -16,7 +16,7 @@
 
 // Early exit if sleep is blocked.
 if (EGVAR(psychosis,enabled) && EGVAR(psychosis,sleepBlocked)) exitWith {
-    [QEGVAR(common,titleText), localize "STR_MISERY_CANTSLEEPFEAR"] call CBA_fnc_localEvent;
+    [QEGVAR(common,titleText), localize ECSTRING(common,CantSleepFear)] call CBA_fnc_localEvent;
     [QUOTE(COMPONENT_BEAUTIFIED), "Sleep is blocked by fear."] call EFUNC(common,debugMessage);
 };
 
@@ -24,11 +24,11 @@ call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDefi
 call FUNC(hourSelected) params ["_selectedHour"];
 
 if (_selectedHour isEqualTo 0) exitWith {
-    [QEGVAR(common,titleText), localize "STR_MISERY_SLEEPNOHOURSELECT"] call CBA_fnc_localEvent;
+    [QEGVAR(common,titleText), localize ECSTRING(common,SleepNoHourSelect)] call CBA_fnc_localEvent;
 };
 
 if (_energyDeficit < 0.15) exitWith {
-    [QEGVAR(common,titleText), localize "STR_MISERY_SLEEPNOTTIRED"] call CBA_fnc_localEvent;
+    [QEGVAR(common,titleText), localize ECSTRING(common,SleepNotTired)] call CBA_fnc_localEvent;
 };
 
 if (animationState player isNotEqualTo "amovpsitmstpsnonwnondnon_ground") then {
@@ -44,7 +44,7 @@ cutText ["", "BLACK OUT", 2];
 }, _selectedHour, 3] call CBA_fnc_waitAndExecute;
 
 [{
-    [QEGVAR(common,titleText), format [localize "STR_MISERY_SLEPTFORHOWLONG", _this]] call CBA_fnc_localEvent;
+    [QEGVAR(common,titleText), format [localize ECSTRING(common,SleptForHowLong), _this]] call CBA_fnc_localEvent;
     player setFatigue 1;
 }, _selectedHour, 6] call CBA_fnc_waitAndExecute;
 

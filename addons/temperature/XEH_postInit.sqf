@@ -15,7 +15,7 @@ if !(GVAR(clothingCheckAction)) exitWith {};
 
 [
     "insulation_check_menu",
-    localize "STR_MISERY_CheckClothing",
+    localize ECSTRING(common,CheckClothing),
     {true},
     {
     call FUNC(insulation);

@@ -2,7 +2,7 @@
 
 [
     "fire_menu",
-    localize "STR_MISERY_USEFIRE",
+    localize ECSTRING(common,UseFire),
     {call EFUNC(common,nearFire) params ["_nearestFire"]; _nearestFire isNotEqualTo []},
     {
         player setVariable [QEGVAR(actions,currentParentID), "fire_menu"];

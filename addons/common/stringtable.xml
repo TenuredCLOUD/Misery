@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="Misery_Main_Translations">
     <Package name="Misery_MainSTR_Language_Compat">
-        <Key ID="STR_MISERY_ANIMALOBLITERATED">
+        <Key ID="STR_MISERY_Common_AnimalObliterated">
             <English>The %1 was obliterated...</English>
             <Czech>%1 bylo vymazáno...</Czech>
             <French>Le %1 a été oblitéré...</French>
@@ -15,7 +15,7 @@
             <Japanese>%1 が消された...</Japanese>
             <Turkish>%1 yok edildi...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_CANCEL">
+        <Key ID="STR_MISERY_Common_Cancel">
             <English>Cancel</English>
             <Czech>Zrušit</Czech>
             <French>Annuler</French>
@@ -29,7 +29,7 @@
             <Japanese>キャンセル</Japanese>
             <Turkish>İptal</Turkish>
         </Key>
-        <Key ID="STR_MISERY_CANTSLEEPFEAR">
+        <Key ID="STR_MISERY_Common_CantSleepFear">
             <English>You are tormented by fear, and sleep is a distant memory. You hallucinate horrors that haunt you, and feel sensations that terrify you. You are descending into madness…</English>
             <Czech>Trápí vás strach a spánek je jen vzdálenou vzpomínkou. Máte halucinace, které vás pronásledují, a cítíte pocity, které vás děsí. Propadáte se do šílenství...</Czech>
             <French>Vous êtes tourmenté par la peur et le sommeil n'est plus qu'un lointain souvenir. Vous avez des hallucinations qui vous hantent et des sensations qui vous terrifient. Vous sombrez dans la folie...</French>
@@ -43,7 +43,7 @@
             <Japanese>恐怖に苛まれ、眠りは遠い記憶となる。恐怖の幻覚に悩まされ、恐怖の感覚を覚える。あなたは狂気へと堕ちていく...。</Japanese>
             <Turkish>Korkudan işkence görüyorsunuz ve uyku uzak bir anı. Size musallat olan dehşetli halüsinasyonlar görüyor ve sizi dehşete düşüren hisler hissediyorsunuz. Deliliğe doğru sürükleniyorsunuz...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_CHARACTERHARDCORESAVINGACTIVE">
+        <Key ID="STR_MISERY_Common_CharacterHardcoreSavingActive">
             <English>%1, Hardcore saving mode is active: you must be near a fire to save your character...</English>
             <Czech>%1, je aktivní režim Hardcore saving: pro záchranu postavy musíte být v blízkosti ohně...</Czech>
             <French>%1, Le mode de sauvegarde hardcore est actif : vous devez être près d'un feu pour sauver votre personnage...</French>
@@ -57,49 +57,7 @@
             <Japanese>%1、ハードコアセーブモードが有効です：キャラクターをセーブするには火の近くにいなければなりません...</Japanese>
             <Turkish>%1, Zorlu tasarruf modu aktif: karakterinizi kurtarmak için ateşin yakınında olmalısınız...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_COLLECTWATER">
-            <English>Collect Water</English>
-            <Czech>Sbírat vodu</Czech>
-            <French>Recueillir de l'eau</French>
-            <Spanish>Recoger agua</Spanish>
-            <Italian>Raccogliere acqua</Italian>
-            <Polish>Zbieraj wodę</Polish>
-            <Portuguese>Colete água</Portuguese>
-            <Russian>Собирать воду</Russian>
-            <German>Wasser sammeln</German>
-            <Korean>물 모으기</Korean>
-            <Japanese>水を集める</Japanese>
-            <Turkish>Su topla</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_COLLECTWOOD">
-            <English>Collect wood</English>
-            <Czech>Sbírat dřevo</Czech>
-            <French>Collecter du bois</French>
-            <Spanish>Recoger madera</Spanish>
-            <Italian>Raccogliere il legno</Italian>
-            <Polish>Zbieraj drewno</Polish>
-            <Portuguese>Coletar madeira</Portuguese>
-            <Russian>Соберите древесину</Russian>
-            <German>Holz sammeln</German>
-            <Korean>나무 수집</Korean>
-            <Japanese>木材を集める</Japanese>
-            <Turkish>Odun toplayın</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_CRAFTINGWORKBENCH">
-            <English>Use Workbench</English>
-            <Czech>Použití pracovního stolu</Czech>
-            <French>Utiliser l'atelier</French>
-            <Spanish>Utilizar Workbench</Spanish>
-            <Italian>Utilizzare il Workbench</Italian>
-            <Polish>Korzystanie z Workbench</Polish>
-            <Portuguese>Usar o Workbench</Portuguese>
-            <Russian>Используйте верстак</Russian>
-            <German>Workbench verwenden</German>
-            <Korean>워크벤치 사용</Korean>
-            <Japanese>ワークベンチを使う</Japanese>
-            <Turkish>Workbench Kullanın</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_CheckClothing">
+        <Key ID="STR_MISERY_Common_CheckClothing">
             <English>Check Clothing</English>
             <Czech>Kontrola oblečení</Czech>
             <French>Vérifier les vêtements</French>
@@ -113,7 +71,7 @@
             <Japanese>チェックウェア</Japanese>
             <Turkish>Kıyafetleri Kontrol Edin</Turkish>
         </Key>
-        <Key ID="STR_MISERY_CheckGearweight">
+        <Key ID="STR_MISERY_Common_CheckGearWeight">
             <English>Check Gear weight</English>
             <Czech>Kontrola hmotnosti vybavení</Czech>
             <French>Vérifier le poids de l'engrenage</French>
@@ -127,7 +85,7 @@
             <Japanese>ギア重量チェック</Japanese>
             <Turkish>Dişli ağırlığını kontrol edin</Turkish>
         </Key>
-        <Key ID="STR_MISERY_ClothingInsulationVAL">
+        <Key ID="STR_MISERY_Common_ClothingInsulationVal">
             <English>Clothing Insulation: (%1)</English>
             <Czech>Izolace oděvu: (%1)</Czech>
             <French>Isolation des vêtements : (%1)</French>
@@ -141,7 +99,7 @@
             <Japanese>衣服の断熱性: (%1)</Japanese>
             <Turkish>Giysi Yalıtımı: (%1)</Turkish>
         </Key>
-        <Key ID="STR_MISERY_ClothingWarmthVAL">
+        <Key ID="STR_MISERY_Common_ClothingWarmthVal">
             <English>Clothing Warmth: %1°C&lt;br/&gt;&lt;br/&gt;</English>
             <Czech>Hřejivost oblečení: %1°C&lt;br/&gt;&lt;br/&gt;</Czech>
             <French>Chaleur des vêtements : %1°C&lt;br/&gt;&lt;br/&gt;</French>
@@ -155,7 +113,49 @@
             <Japanese>衣類の暖かさ: %1°C&lt;br/&gt;&lt;br/&gt;</Japanese>
             <Turkish>Giysi Sıcaklığı: %1°C&lt;br/&gt;&lt;br/&gt;</Turkish>
         </Key>
-        <Key ID="STR_MISERY_DRINKFROMSOURCE">
+        <Key ID="STR_MISERY_Common_CollectWater">
+            <English>Collect Water</English>
+            <Czech>Sbírat vodu</Czech>
+            <French>Recueillir de l'eau</French>
+            <Spanish>Recoger agua</Spanish>
+            <Italian>Raccogliere acqua</Italian>
+            <Polish>Zbieraj wodę</Polish>
+            <Portuguese>Colete água</Portuguese>
+            <Russian>Собирать воду</Russian>
+            <German>Wasser sammeln</German>
+            <Korean>물 모으기</Korean>
+            <Japanese>水を集める</Japanese>
+            <Turkish>Su topla</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_CollectWood">
+            <English>Collect wood</English>
+            <Czech>Sbírat dřevo</Czech>
+            <French>Collecter du bois</French>
+            <Spanish>Recoger madera</Spanish>
+            <Italian>Raccogliere il legno</Italian>
+            <Polish>Zbieraj drewno</Polish>
+            <Portuguese>Coletar madeira</Portuguese>
+            <Russian>Соберите древесину</Russian>
+            <German>Holz sammeln</German>
+            <Korean>나무 수집</Korean>
+            <Japanese>木材を集める</Japanese>
+            <Turkish>Odun toplayın</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_CraftingWorkbench">
+            <English>Use Workbench</English>
+            <Czech>Použití pracovního stolu</Czech>
+            <French>Utiliser l'atelier</French>
+            <Spanish>Utilizar Workbench</Spanish>
+            <Italian>Utilizzare il Workbench</Italian>
+            <Polish>Korzystanie z Workbench</Polish>
+            <Portuguese>Usar o Workbench</Portuguese>
+            <Russian>Используйте верстак</Russian>
+            <German>Workbench verwenden</German>
+            <Korean>워크벤치 사용</Korean>
+            <Japanese>ワークベンチを使う</Japanese>
+            <Turkish>Workbench Kullanın</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_DrinkFromSource">
             <English>Drink from source</English>
             <Czech>Pití ze zdroje</Czech>
             <French>Boire à la source</French>
@@ -169,7 +169,7 @@
             <Japanese>ソースから飲む</Japanese>
             <Turkish>Kaynağından iç</Turkish>
         </Key>
-        <Key ID="STR_MISERY_FORAGE">
+        <Key ID="STR_MISERY_Common_Forage">
             <English>Forage</English>
             <Czech>Přehrabování</Czech>
             <French>Fourrager</French>
@@ -183,7 +183,7 @@
             <Japanese>採集する</Japanese>
             <Turkish>Yem aramak</Turkish>
         </Key>
-        <Key ID="STR_MISERY_FORAGE_DIGFORWORMS">
+        <Key ID="STR_MISERY_Common_ForageDigForWorms">
             <English>Dig for worms</English>
             <Czech>Vykopat červy</Czech>
             <French>Creuser pour trouver des vers</French>
@@ -197,7 +197,7 @@
             <Japanese>ミミズを掘る</Japanese>
             <Turkish>Solucanlar için kazın</Turkish>
         </Key>
-        <Key ID="STR_MISERY_FORAGE_SEARCHFORTINDER">
+        <Key ID="STR_MISERY_Common_ForageSearchForTinder">
             <English>Search for tinder</English>
             <Czech>Hledat troud</Czech>
             <French>Recherche de tinder</French>
@@ -211,7 +211,7 @@
             <Japanese>ティンダーで検索</Japanese>
             <Turkish>Tinder için ara</Turkish>
         </Key>
-        <Key ID="STR_MISERY_GearweightVAL">
+        <Key ID="STR_MISERY_Common_GearWeightVal">
             <English>Gear weight feels like: ~ %2kg (%1lbs)</English>
             <Czech>Hmotnost vybavení se zdá být: ~ %2kg (%1lbs)</Czech>
             <French>Le poids de l'engrenage ressemble à.. : ~ %2kg (%1lbs)</French>
@@ -225,35 +225,7 @@
             <Japanese>ギア重量はこんな感じ： ~ 2kg (%1lbs)</Japanese>
             <Turkish>Dişli ağırlığı gibi hissediyor: ~ %2kg (%1lbs)</Turkish>
         </Key>
-        <Key ID="STR_MISERY_MINEORE">
-            <English>Mine Ore</English>
-            <Czech>Důlní ruda</Czech>
-            <French>Mine Minerai</French>
-            <Spanish>Mineral de mina</Spanish>
-            <Italian>Minerale</Italian>
-            <Polish>Ruda kopalniana</Polish>
-            <Portuguese>Mineração de minério</Portuguese>
-            <Russian>Шахта Руда</Russian>
-            <German>Bergwerkserz</German>
-            <Korean>광산 광석</Korean>
-            <Japanese>鉱山鉱石</Japanese>
-            <Turkish>Maden Cevheri</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_MINEORENOTOOLS">
-            <English>You don't have the required items to mine ore...</English>
-            <Czech>Nemáte potřebné předměty k těžbě rudy...</Czech>
-            <French>Vous n'avez pas les éléments nécessaires pour extraire du minerai...</French>
-            <Spanish>No tienes los objetos necesarios para extraer mineral...</Spanish>
-            <Italian>Non hai gli oggetti necessari per estrarre il minerale...</Italian>
-            <Polish>Nie masz wymaganych przedmiotów do wydobywania rudy...</Polish>
-            <Portuguese>Você não tem os itens necessários para extrair minério...</Portuguese>
-            <Russian>У вас нет необходимых предметов для добычи руды...</Russian>
-            <German>Sie haben nicht die erforderlichen Gegenstände, um Erz abzubauen...</German>
-            <Korean>광석 채굴에 필요한 아이템이 없습니다...</Korean>
-            <Japanese>鉱石を採掘するのに必要なアイテムを持っていない...。</Japanese>
-            <Turkish>Maden çıkarmak için gerekli eşyalara sahip değilsiniz...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_MISERY_DISPLAYNAME">
+        <Key ID="STR_MISERY_Common_MISERY_DisplayName">
             <English>Misery</English>
             <Czech>Bída</Czech>
             <French>Misère</French>
@@ -267,7 +239,35 @@
             <Japanese>悲惨</Japanese>
             <Turkish>Sefalet</Turkish>
         </Key>
-        <Key ID="STR_MISERY_NOAXEFORWOODNOTI">
+        <Key ID="STR_MISERY_Common_MineOre">
+            <English>Mine Ore</English>
+            <Czech>Důlní ruda</Czech>
+            <French>Mine Minerai</French>
+            <Spanish>Mineral de mina</Spanish>
+            <Italian>Minerale</Italian>
+            <Polish>Ruda kopalniana</Polish>
+            <Portuguese>Mineração de minério</Portuguese>
+            <Russian>Шахта Руда</Russian>
+            <German>Bergwerkserz</German>
+            <Korean>광산 광석</Korean>
+            <Japanese>鉱山鉱石</Japanese>
+            <Turkish>Maden Cevheri</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_MineOreNoTools">
+            <English>You don't have the required items to mine ore...</English>
+            <Czech>Nemáte potřebné předměty k těžbě rudy...</Czech>
+            <French>Vous n'avez pas les éléments nécessaires pour extraire du minerai...</French>
+            <Spanish>No tienes los objetos necesarios para extraer mineral...</Spanish>
+            <Italian>Non hai gli oggetti necessari per estrarre il minerale...</Italian>
+            <Polish>Nie masz wymaganych przedmiotów do wydobywania rudy...</Polish>
+            <Portuguese>Você não tem os itens necessários para extrair minério...</Portuguese>
+            <Russian>У вас нет необходимых предметов для добычи руды...</Russian>
+            <German>Sie haben nicht die erforderlichen Gegenstände, um Erz abzubauen...</German>
+            <Korean>광석 채굴에 필요한 아이템이 없습니다...</Korean>
+            <Japanese>鉱石を採掘するのに必要なアイテムを持っていない...。</Japanese>
+            <Turkish>Maden çıkarmak için gerekli eşyalara sahip değilsiniz...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_NoAxeForWoodNoti">
             <English>You don't have an Axe to chop any wood...</English>
             <Czech>Nemáš sekeru na štípání dřeva...</Czech>
             <French>Vous n'avez pas de hache pour couper du bois...</French>
@@ -281,7 +281,7 @@
             <Japanese>薪を割る斧がないじゃないか...。</Japanese>
             <Turkish>Odun kesmek için baltan yok.</Turkish>
         </Key>
-        <Key ID="STR_MISERY_NOCHAINSAWFORWOODNOTI">
+        <Key ID="STR_MISERY_Common_NoChainsawForWoodNoti">
             <English>You don't have a chainsaw to saw any wood...</English>
             <Czech>Nemáš motorovou pilu na řezání dřeva...</Czech>
             <French>Vous n'avez pas besoin de tronçonneuse pour scier du bois...</French>
@@ -295,7 +295,7 @@
             <Japanese>チェンソーがないと薪が切れない...。</Japanese>
             <Turkish>Odun kesmek için elektrikli testereniz yok...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_NOWOODAXEORCHAINSAWNOTI">
+        <Key ID="STR_MISERY_Common_NoWoodAxeOrChainsawNoti">
             <English>You don't have a chainsaw, or Woodaxe...</English>
             <Czech>Nemáš motorovou pilu ani sekeru...</Czech>
             <French>Vous n'avez pas de tronçonneuse, ni de hache à bois...</French>
@@ -309,7 +309,7 @@
             <Japanese>チェーンソーもウッドアックスも持っていない...。</Japanese>
             <Turkish>Motorlu testeren ya da odun baltan yok.</Turkish>
         </Key>
-        <Key ID="STR_MISERY_NOWOODENLOGSFORSPLITTING">
+        <Key ID="STR_MISERY_Common_NoWoodenLogsForSplitting">
             <English>You don't have any wooden logs...</English>
             <Czech>Nemáš žádné dřevěné klády...</Czech>
             <French>Vous n'avez pas de rondins de bois...</French>
@@ -323,7 +323,7 @@
             <Japanese>木の丸太がないじゃないか...。</Japanese>
             <Turkish>Hiç tahta kütüğün yok...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_RECRUITUNIT">
+        <Key ID="STR_MISERY_Common_RecruitUnit">
             <English>Recruit %1 (%2 %3)</English>
             <Czech>Rekrutace %1 (%2 %3)</Czech>
             <French>Recruter %1 (%2 %3)</French>
@@ -337,7 +337,7 @@
             <Japanese>リクルート %1 (%2 %3)</Japanese>
             <Turkish>İşe Alım %1 (%2 %3)</Turkish>
         </Key>
-        <Key ID="STR_MISERY_RECRUITUNIT_FAIL">
+        <Key ID="STR_MISERY_Common_RecruitUnit_Fail">
             <English>You don't have enough money to recruit %1</English>
             <Czech>Nemáte dostatek peněz na rekrutaci %1</Czech>
             <French>Vous n'avez pas assez d'argent pour recruter %1</French>
@@ -351,7 +351,7 @@
             <Japanese>採用するのに十分な資金がない %1</Japanese>
             <Turkish>İşe almak için yeterli paranız yok %1</Turkish>
         </Key>
-        <Key ID="STR_MISERY_RECRUITUNIT_SUCCESS">
+        <Key ID="STR_MISERY_Common_RecruitUnit_Success">
             <English>You have recruited %1 for %2 %3</English>
             <Czech>Rekrutovali jste %1 za %2 %3</Czech>
             <French>Vous avez recruté %1 pour %2 %3</French>
@@ -365,7 +365,7 @@
             <Japanese>あなたは %1 を採用した。 %2 %3</Japanese>
             <Turkish>%1 için işe aldınız %2 %3</Turkish>
         </Key>
-        <Key ID="STR_MISERY_REQREFUEL">
+        <Key ID="STR_MISERY_Common_ReqRefuel">
             <English>Request refuel</English>
             <Czech>Žádost o doplnění paliva</Czech>
             <French>Demande de ravitaillement</French>
@@ -379,7 +379,7 @@
             <Japanese>給油を依頼する</Japanese>
             <Turkish>Yakıt ikmali talep edin</Turkish>
         </Key>
-        <Key ID="STR_MISERY_REQREPAIRS">
+        <Key ID="STR_MISERY_Common_ReqRepairs">
             <English>Request repairs</English>
             <Czech>Žádost o opravu</Czech>
             <French>Demande de réparation</French>
@@ -393,7 +393,7 @@
             <Japanese>修理を依頼する</Japanese>
             <Turkish>Onarım talep edin</Turkish>
         </Key>
-        <Key ID="STR_MISERY_REQRESUPPLY">
+        <Key ID="STR_MISERY_Common_ReqResupply">
             <English>Request resupply</English>
             <Czech>Žádost o doplnění zásob</Czech>
             <French>Demande de réapprovisionnement</French>
@@ -407,7 +407,7 @@
             <Japanese>補給を要請する</Japanese>
             <Turkish>İkmal talebi</Turkish>
         </Key>
-        <Key ID="STR_MISERY_REQTREATMENT">
+        <Key ID="STR_MISERY_Common_ReqTreatment">
             <English>Request treatment</English>
             <Czech>Žádost o ošetření</Czech>
             <French>Demande de traitement</French>
@@ -421,7 +421,7 @@
             <Japanese>治療を依頼する</Japanese>
             <Turkish>Tedavi talep edin</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SLEEP10HOURS">
+        <Key ID="STR_MISERY_Common_Sleep10Hours">
             <English>10 hours</English>
             <Czech>10 hodin</Czech>
             <French>10 heures</French>
@@ -435,7 +435,7 @@
             <Japanese>10時間</Japanese>
             <Turkish>10 saat</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SLEEP11HOURS">
+        <Key ID="STR_MISERY_Common_Sleep11Hours">
             <English>11 hours</English>
             <Czech>11 hodin</Czech>
             <French>11 heures</French>
@@ -449,7 +449,7 @@
             <Japanese>11時間</Japanese>
             <Turkish>11 saat</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SLEEP12HOURS">
+        <Key ID="STR_MISERY_Common_Sleep12Hours">
             <English>12 hours</English>
             <Czech>12 hodin</Czech>
             <French>12 heures</French>
@@ -463,7 +463,7 @@
             <Japanese>12時間</Japanese>
             <Turkish>12 saat</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SLEEP1HOUR">
+        <Key ID="STR_MISERY_Common_Sleep1Hour">
             <English>1 hour</English>
             <Czech>1 hodinu</Czech>
             <French>1 heure</French>
@@ -477,7 +477,7 @@
             <Japanese>1時間</Japanese>
             <Turkish>1 saat</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SLEEP2HOURS">
+        <Key ID="STR_MISERY_Common_Sleep2Hours">
             <English>2 hours</English>
             <Czech>2 hodiny</Czech>
             <French>2 heures</French>
@@ -491,7 +491,7 @@
             <Japanese>2時間</Japanese>
             <Turkish>2 saat</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SLEEP3HOURS">
+        <Key ID="STR_MISERY_Common_Sleep3Hours">
             <English>3 hours</English>
             <Czech>3 hodiny</Czech>
             <French>3 heures</French>
@@ -505,7 +505,7 @@
             <Japanese>3時間</Japanese>
             <Turkish>3 saat</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SLEEP4HOURS">
+        <Key ID="STR_MISERY_Common_Sleep4Hours">
             <English>4 hours</English>
             <Czech>4 hodiny</Czech>
             <French>4 heures</French>
@@ -519,7 +519,7 @@
             <Japanese>4時間</Japanese>
             <Turkish>4 saat</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SLEEP5HOURS">
+        <Key ID="STR_MISERY_Common_Sleep5Hours">
             <English>5 hours</English>
             <Czech>5 hodin</Czech>
             <French>5 heures</French>
@@ -533,7 +533,7 @@
             <Japanese>5時間</Japanese>
             <Turkish>5 saat</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SLEEP6HOURS">
+        <Key ID="STR_MISERY_Common_Sleep6Hours">
             <English>6 hours</English>
             <Czech>6 hodin</Czech>
             <French>6 heures</French>
@@ -547,7 +547,7 @@
             <Japanese>6時間</Japanese>
             <Turkish>6 saat</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SLEEP7HOURS">
+        <Key ID="STR_MISERY_Common_Sleep7Hours">
             <English>7 hours</English>
             <Czech>7 hodin</Czech>
             <French>7 heures</French>
@@ -561,7 +561,7 @@
             <Japanese>7時間</Japanese>
             <Turkish>7 saat</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SLEEP8HOURS">
+        <Key ID="STR_MISERY_Common_Sleep8Hours">
             <English>8 hours</English>
             <Czech>8 hodin</Czech>
             <French>8 heures</French>
@@ -575,7 +575,7 @@
             <Japanese>8時間</Japanese>
             <Turkish>8 saat</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SLEEP9HOURS">
+        <Key ID="STR_MISERY_Common_Sleep9Hours">
             <English>9 hours</English>
             <Czech>9 hodin</Czech>
             <French>9 heures</French>
@@ -589,7 +589,7 @@
             <Japanese>9時間</Japanese>
             <Turkish>9 saat</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SLEEPBUTTON">
+        <Key ID="STR_MISERY_Common_SleepButton">
             <English>Sleep...</English>
             <Czech>Spánek...</Czech>
             <French>Dormir...</French>
@@ -603,7 +603,7 @@
             <Japanese>眠れ...</Japanese>
             <Turkish>Uyu.</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SLEEPNOHOURSELECT">
+        <Key ID="STR_MISERY_Common_SleepNoHourSelect">
             <English>You need to select how long you wish to sleep...</English>
             <Czech>Vyberte si, jak dlouho chcete spát...</Czech>
             <French>Vous devez sélectionner la durée de votre sommeil...</French>
@@ -617,7 +617,7 @@
             <Japanese>睡眠時間を選択する必要がある。</Japanese>
             <Turkish>Ne kadar süre uyumak istediğinizi seçmeniz gerekiyor...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SLEEPNOTTIRED">
+        <Key ID="STR_MISERY_Common_SleepNotTired">
             <English>You aren't tired enough to sleep yet...</English>
             <Czech>Ještě nejste dostatečně unavený na to, abyste spal...</Czech>
             <French>Vous n'êtes pas encore assez fatigué pour dormir...</French>
@@ -631,7 +631,7 @@
             <Japanese>まだ眠るほど疲れてはいないだろう...。</Japanese>
             <Turkish>Henüz uyuyacak kadar yorgun değilsin...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SLEEPPROMT">
+        <Key ID="STR_MISERY_Common_SleepPrompt">
             <English>How long do you want to sleep?</English>
             <Czech>Jak dlouho chcete spát?</Czech>
             <French>Combien de temps voulez-vous dormir ?</French>
@@ -645,7 +645,7 @@
             <Japanese>どれくらい寝たい？</Japanese>
             <Turkish>Ne kadar uyumak istiyorsun?</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SLEEPTIP">
+        <Key ID="STR_MISERY_Common_SleepTip">
             <English>Care should be taken when sleeping in excessive amounts...</English>
             <Czech>Při nadměrném množství spánku je třeba dbát na opatrnosti...</Czech>
             <French>Il convient d'être prudent lorsque l'on dort en quantités excessives...</French>
@@ -659,7 +659,7 @@
             <Japanese>過度の睡眠には注意が必要である。</Japanese>
             <Turkish>Aşırı miktarda uyurken dikkatli olunmalıdır...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SLEPTFORHOWLONG">
+        <Key ID="STR_MISERY_Common_SleptForHowLong">
             <English>You slept for %1 hour(s)...</English>
             <Czech>Spali jste %1 hodinu(y)...</Czech>
             <French>Vous avez dormi pendant %1 heure(s)...</French>
@@ -673,7 +673,7 @@
             <Japanese>%1 時間眠った。</Japanese>
             <Turkish>%1 saat(ler) boyunca uyudunuz...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SPLITWOODLOG">
+        <Key ID="STR_MISERY_Common_SplitWoodLog">
             <English>Split Wood Log</English>
             <Czech>Rozštípaný špalek</Czech>
             <French>Bûche de bois fendue</French>
@@ -687,7 +687,7 @@
             <Japanese>スプリット・ウッド・ログ</Japanese>
             <Turkish>Bölünmüş Ahşap Kütük</Turkish>
         </Key>
-        <Key ID="STR_MISERY_STARTFISHING">
+        <Key ID="STR_MISERY_Common_StartFishing">
             <English>Start Fishing</English>
             <Czech>Začít rybařit</Czech>
             <French>Commencer à pêcher</French>
@@ -701,7 +701,7 @@
             <Japanese>釣り始める</Japanese>
             <Turkish>Balık tutmaya başla</Turkish>
         </Key>
-        <Key ID="STR_MISERY_STARTFISHINGACT">
+        <Key ID="STR_MISERY_Common_StartFishingAct">
             <English>Fish</English>
             <Czech>Rybaření</Czech>
             <French>Poisson</French>
@@ -715,7 +715,7 @@
             <Japanese>魚</Japanese>
             <Turkish>Balık</Turkish>
         </Key>
-        <Key ID="STR_MISERY_STARTFISHINGREQUIRMENTS">
+        <Key ID="STR_MISERY_Common_StartFishingRequirements">
             <English>Fishing requirements</English>
             <Czech>Požadavky pro rybolov</Czech>
             <French>Exigences en matière de pêche</French>
@@ -729,7 +729,7 @@
             <Japanese>釣りの条件</Japanese>
             <Turkish>Balıkçılık gereksinimleri</Turkish>
         </Key>
-        <Key ID="STR_MISERY_STARTFISHINGREQUIRMENTS_LISTED">
+        <Key ID="STR_MISERY_Common_StartFishingRequirements_Listed">
             <English>Fishing requires the following items: &lt;br/&gt; Fishing rod &lt;br/&gt; Fishing spool &lt;br/&gt; Fish hook &lt;br/&gt; Worms for bait</English>
             <Czech>K rybaření jsou potřeba následující předměty: &lt;br/&gt; Rybářský prut &lt;br/&gt; Rybářská cívka &lt;br/&gt; Rybářský háček &lt;br/&gt; Červi na návnadu.</Czech>
             <French>La pêche nécessite les éléments suivants : &lt;br/&gt; Canne à pêche &lt;br/&gt; Bobine de pêche &lt;br/&gt; Hameçon &lt;br/&gt; Vers pour l'appât</French>
@@ -743,7 +743,7 @@
             <Japanese>釣りに必要なもの： &lt;br/&gt; 釣り竿 &lt;br/&gt; 釣り糸 &lt;br/&gt; 釣り針 &lt;br/&gt; エサ用のワーム</Japanese>
             <Turkish>Balık tutmak için aşağıdaki malzemeler gereklidir: &lt;br/&gt; Olta &lt;br/&gt; Olta makarası &lt;br/&gt; Balık kancası &lt;br/&gt; Yem için solucanlar</Turkish>
         </Key>
-        <Key ID="STR_MISERY_STOREARTIFACT">
+        <Key ID="STR_MISERY_Common_StoreArtifact">
             <English>Store Artifact</English>
             <Czech>Uložit artefakt</Czech>
             <French>Magasin d'artefacts</French>
@@ -757,7 +757,7 @@
             <Japanese>ストアアーティファクト</Japanese>
             <Turkish>Store Artifact</Turkish>
         </Key>
-        <Key ID="STR_MISERY_USEANVIL">
+        <Key ID="STR_MISERY_Common_UseAnvil">
             <English>Use Anvil</English>
             <Czech>Použití kovadliny</Czech>
             <French>Utiliser l'enclume</French>
@@ -771,7 +771,7 @@
             <Japanese>アンビルを使う</Japanese>
             <Turkish>Örs kullanın</Turkish>
         </Key>
-        <Key ID="STR_MISERY_USEFIRE">
+        <Key ID="STR_MISERY_Common_UseFire">
             <English>Use Fire</English>
             <Czech>Použít oheň</Czech>
             <French>Utiliser le feu</French>
@@ -785,7 +785,7 @@
             <Japanese>火を使う</Japanese>
             <Turkish>Ateş kullan</Turkish>
         </Key>
-        <Key ID="STR_MISERY_USEFIRE_COOK">
+        <Key ID="STR_MISERY_Common_UseFire_Cook">
             <English>Cook</English>
             <Czech>Vařit/opékat</Czech>
             <French>Cuisiner</French>
@@ -799,7 +799,7 @@
             <Japanese>クック</Japanese>
             <Turkish>Aşçı</Turkish>
         </Key>
-        <Key ID="STR_MISERY_USEFORGE">
+        <Key ID="STR_MISERY_Common_UseForge">
             <English>Use Forge</English>
             <Czech>Použít výheň</Czech>
             <French>Utiliser la forge</French>

@@ -6,7 +6,7 @@ if (isServer) then {
 
         [
             "cooking_menu",
-            localize "STR_MISERY_USEFIRE_COOK",
+            localize ECSTRING(common,UseFire_Cook),
             {player getVariable [QEGVAR(actions,currentParentID), ""] isEqualTo "fire_menu" && call EFUNC(common,nearFire) params ["_nearestFire", "_isInflamed"]; _nearestFire isNotEqualTo [] && _isInflamed},
             {
                 [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;

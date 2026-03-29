@@ -6,7 +6,7 @@ if (isServer) then {
 
         [
             "hydrology_menu",
-            localize "STR_MISERY_COLLECTWATER",
+            localize ECSTRING(common,CollectWater),
             {call EFUNC(common,nearWell)},
             {
             [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;

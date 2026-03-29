@@ -3,128 +3,126 @@
 #include "\z\misery\addons\main\script_mod.hpp"
 
 #define MACRO_WEAPONS \
-QCLASS(ItemCore), \
-QCLASS(pickaxe_Broken), \
-QCLASS(pickaxeHead), \
-QCLASS(fishingPole), \
-QCLASS(fishingSpool), \
-QCLASS(geiger_NoBattery), \
-QCLASS(lantern_NoBattery), \
-QCLASS(clozapine), \
-QCLASS(cocaine), \
-QCLASS(thrombomodulin), \
-QCLASS(thrombomodulin_Stimpack), \
-QCLASS(antidote), \
-QCLASS(randomMedication), \
-QCLASS(fishhook), \
-QCLASS(worms), \
-QCLASS(lithiumBattery), \
-QCLASS(energyDrink), \
-QCLASS(soda_1), \
-QCLASS(soda_2), \
-QCLASS(canOpener), \
-QCLASS(canteen_Empty), \
-QCLASS(waterBottle_Empty), \
-QCLASS(cereal), \
-QCLASS(orange), \
-QCLASS(powderedMilk), \
-QCLASS(cannedBacon), \
-QCLASS(bakedBeans), \
-QCLASS(leadContainer_Open), \
-QCLASS(leadContainer_Closed), \
-QCLASS(artifact_01), \
-QCLASS(artifact_02), \
-QCLASS(artifact_03), \
-QCLASS(artifact_04), \
-QCLASS(artifact_05), \
-QCLASS(artifact_06), \
-QCLASS(artifact_07), \
-QCLASS(artifact_08), \
-QCLASS(artifact_09), \
-QCLASS(artifact_10), \
-QCLASS(heatpack), \
-QCLASS(coldpack), \
-QCLASS(waterJerryCan_Empty), \
-QCLASS(tinContainer), \
-QCLASS(cookedFish), \
-QCLASS(rawFish), \
-QCLASS(cookedMeat), \
-QCLASS(rawMeat), \
-QCLASS(coffeeMug), \
-QCLASS(coffeeBrewed), \
-QCLASS(gasMask_Empty), \
-QCLASS(gasCartridge), \
-QCLASS(18vBattery), \
-QCLASS(ductTape), \
-QCLASS(phillipsScrewdriver), \
-QCLASS(flatheadScrewdriver), \
-QCLASS(pliers), \
-QCLASS(camoNet), \
-QCLASS(9vBattery), \
-QCLASS(copperWire), \
-QCLASS(rope), \
-QCLASS(needleThread), \
-QCLASS(circuitBoard), \
-QCLASS(geiger_dead), \
-QCLASS(dragonVase), \
-QCLASS(matryoshka), \
-QCLASS(oldWatch), \
-QCLASS(phone), \
-QCLASS(photos), \
-QCLASS(toySoldier), \
-QCLASS(vintageShipBottle), \
-QCLASS(zombie_Head), \
-QCLASS(zombie_Hand), \
-QCLASS(zombie_Eye), \
-QCLASS(zombie_Foot), \
-QCLASS(zombie_Brain), \
-QCLASS(zombie_Skin), \
-QCLASS(boneSaw), \
-QCLASS(guttingKnife), \
-QCLASS(woodaxe), \
-QCLASS(sledgehammer), \
-QCLASS(tinder), \
-QCLASS(cbrn_parts), \
-QCLASS(chainsaw_Empty), \
-QCLASS(woodplank), \
-QCLASS(woodnail), \
-QCLASS(woodensticks), \
-QCLASS(firewood), \
-QCLASS(woodenlog), \
-QCLASS(boxNails), \
-QCLASS(craftingHammer), \
-QCLASS(anvilHammer), \
-QCLASS(electricHandSaw_NoBattery), \
-QCLASS(wrench), \
-QCLASS(glucose), \
-QCLASS(electrolyte), \
-QCLASS(eru_NoBattery), \
-QCLASS(jetFuelEmpty), \
-QCLASS(dieselEmpty), \
-QCLASS(petrolEmpty), \
-QCLASS(oilEmpty), \
-QCLASS(coolantEmpty), \
-QCLASS(spareTire), \
-QCLASS(emptyToolKit), \
-QCLASS(lockKit), \
-QCLASS(stoneChunk), \
-QCLASS(ironIngot), \
-QCLASS(ironOre), \
-QCLASS(ironPiece), \
-QCLASS(goldIngot), \
-QCLASS(goldOre), \
-QCLASS(goldPiece), \
-QCLASS(coalOre), \
-QCLASS(malachite), \
-QCLASS(ruby), \
-QCLASS(sapphire), \
-QCLASS(amethyst), \
-QCLASS(diamond), \
-QCLASS(emerald)
+    QCLASS(18vBattery), \
+    QCLASS(9vBattery), \
+    QCLASS(amethyst), \
+    QCLASS(antidote), \
+    QCLASS(anvilHammer), \
+    QCLASS(artifact_01), \
+    QCLASS(artifact_02), \
+    QCLASS(artifact_03), \
+    QCLASS(artifact_04), \
+    QCLASS(artifact_05), \
+    QCLASS(artifact_06), \
+    QCLASS(artifact_07), \
+    QCLASS(artifact_08), \
+    QCLASS(artifact_09), \
+    QCLASS(artifact_10), \
+    QCLASS(bakedBeans), \
+    QCLASS(boneSaw), \
+    QCLASS(camoNet), \
+    QCLASS(cannedBacon), \
+    QCLASS(canOpener), \
+    QCLASS(canteen_Empty), \
+    QCLASS(cbrn_parts), \
+    QCLASS(cereal), \
+    QCLASS(chainsaw_Empty), \
+    QCLASS(circuitBoard), \
+    QCLASS(clozapine), \
+    QCLASS(coalOre), \
+    QCLASS(cocaine), \
+    QCLASS(coffeeBrewed), \
+    QCLASS(coffeeMug), \
+    QCLASS(coldpack), \
+    QCLASS(cookedFish), \
+    QCLASS(cookedMeat), \
+    QCLASS(coolantEmpty), \
+    QCLASS(copperWire), \
+    QCLASS(craftingHammer), \
+    QCLASS(diamond), \
+    QCLASS(dieselEmpty), \
+    QCLASS(dragonVase), \
+    QCLASS(ductTape), \
+    QCLASS(electricHandSaw_NoBattery), \
+    QCLASS(electrolyte), \
+    QCLASS(emerald), \
+    QCLASS(emptyToolKit), \
+    QCLASS(energyDrink), \
+    QCLASS(eru_NoBattery), \
+    QCLASS(firewood), \
+    QCLASS(fishhook), \
+    QCLASS(fishingPole), \
+    QCLASS(fishingSpool), \
+    QCLASS(flatheadScrewdriver), \
+    QCLASS(gasCartridge), \
+    QCLASS(gasMask_Empty), \
+    QCLASS(geiger_dead), \
+    QCLASS(geiger_NoBattery), \
+    QCLASS(glucose), \
+    QCLASS(goldIngot), \
+    QCLASS(goldOre), \
+    QCLASS(goldPiece), \
+    QCLASS(guttingKnife), \
+    QCLASS(heatpack), \
+    QCLASS(ironIngot), \
+    QCLASS(ironOre), \
+    QCLASS(ironPiece), \
+    QCLASS(ItemCore), \
+    QCLASS(jetFuelEmpty), \
+    QCLASS(lantern_NoBattery), \
+    QCLASS(leadContainer_Closed), \
+    QCLASS(leadContainer_Open), \
+    QCLASS(lithiumBattery), \
+    QCLASS(lockKit), \
+    QCLASS(malachite), \
+    QCLASS(matryoshka), \
+    QCLASS(needleThread), \
+    QCLASS(oilEmpty), \
+    QCLASS(oldWatch), \
+    QCLASS(orange), \
+    QCLASS(petrolEmpty), \
+    QCLASS(phillipsScrewdriver), \
+    QCLASS(phone), \
+    QCLASS(photos), \
+    QCLASS(pickaxe_Broken), \
+    QCLASS(pickaxeHead), \
+    QCLASS(pliers), \
+    QCLASS(powderedMilk), \
+    QCLASS(randomMedication), \
+    QCLASS(rawFish), \
+    QCLASS(rawMeat), \
+    QCLASS(rope), \
+    QCLASS(ruby), \
+    QCLASS(sapphire), \
+    QCLASS(sledgehammer), \
+    QCLASS(soda_1), \
+    QCLASS(soda_2), \
+    QCLASS(spareTire), \
+    QCLASS(stoneChunk), \
+    QCLASS(thrombomodulin), \
+    QCLASS(thrombomodulin_Stimpack), \
+    QCLASS(tinContainer), \
+    QCLASS(tinder), \
+    QCLASS(toySoldier), \
+    QCLASS(vintageShipBottle), \
+    QCLASS(waterBottle_Empty), \
+    QCLASS(waterJerryCan_Empty), \
+    QCLASS(woodaxe), \
+    QCLASS(woodenlog), \
+    QCLASS(woodensticks), \
+    QCLASS(woodplank), \
+    QCLASS(worms), \
+    QCLASS(wrench), \
+    QCLASS(zombie_Brain), \
+    QCLASS(zombie_Eye), \
+    QCLASS(zombie_Foot), \
+    QCLASS(zombie_Hand), \
+    QCLASS(zombie_Head), \
+    QCLASS(zombie_Skin)
 
 #define MACRO_VEHICLES \
-QCLASS(forge), \
-QCLASS(anvil)
+    QCLASS(forge), \
+    QCLASS(anvil)
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE

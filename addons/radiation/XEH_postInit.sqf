@@ -10,7 +10,7 @@
 
         [
             "leadContainers_menu",
-            localize "STR_MISERY_STOREARTIFACT",
+            localize ECSTRING(common,StoreArtifact),
             {[[QCLASS(leadContainer_Open)]] call EFUNC(common,hasItem) && [[MACRO_ARTIFACTS]] call EFUNC(common,hasItem)},
             {
             [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;

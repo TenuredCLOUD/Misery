@@ -20,7 +20,7 @@ if !(call FUNC(checkAreas)) exitWith {
 
 [
     "repair_menu",
-    localize "STR_MISERY_REQREPAIRS",
+    localize ECSTRING(common,ReqRepairs),
     {GVAR(areas) findIf {player inArea _x} isNotEqualTo -1},
     {
         [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
