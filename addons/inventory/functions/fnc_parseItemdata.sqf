@@ -35,8 +35,6 @@ GVAR(itemData) = [];
     private _removeOnUse = if (isNil {(_x >> "removeOnUse")}) then {false} else {getNumber (_x >> "removeOnUse") isEqualTo 1};
     private _sound = if (isNil {(_x >> "sound")}) then {""} else {getText (_x >> "sound")};
     private _animation = if (isNil {(_x >> "animation")}) then {""} else {getText (_x >> "animation")};
-    private _addStatus = if (isNil {(_x >> "addStatus")}) then {[]} else {getArray (_x >> "addStatus")};
-    private _removeStatus = if (isNil {(_x >> "removeStatus")}) then {[]} else {getArray (_x >> "removeStatus")};
     private _code = if (isNil {(_x >> "code")}) then {""} else {getText (_x >> "code")};
 
     private _feedback = [];
@@ -64,8 +62,6 @@ GVAR(itemData) = [];
         _requiresCanOpener,
         _removeOnUse,
         _sound,
-        _addStatus,
-        _removeStatus,
         _feedback,
         _animation,
         _code
