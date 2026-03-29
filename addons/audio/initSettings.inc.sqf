@@ -6,10 +6,10 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "CHECKBOX",
     [
         "Character Enhanced effects",
-        "Enable Extra Character Immersion? (Enables Player coughing, sneezing when sick or cold, and stomach growling if you are starting to get hungry.)"
+        "Enable Extra Character Immersion? (Enables audible and visual feedback for the survival framework)"
     ],
     _category,
-    false, 1, {}, true
+    true, 1, {}, true
 ] call CBA_fnc_addSetting;
 
 // Enhanced Inventory Sounds

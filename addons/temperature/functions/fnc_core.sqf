@@ -149,8 +149,8 @@ if (_wetness > 0 && _thermalIndex < TEMP_NEUTRAL) then {
     _exposureModifier = (_exposureModifier - (_wetness * WETNESS_RATE * 5)) * (3 + _wetness);
 };
 
-private _hungerModifier = HUNGER_RATE;
-private _thirstModifier = THIRST_RATE;
+private _hungerModifier = HUNGER_RATE * EGVAR(survival,metabolicCoef);
+private _thirstModifier = THIRST_RATE * EGVAR(survival,metabolicCoef);
 
 private _impactAbs = abs(_exposure);
 
@@ -168,6 +168,6 @@ if (GVAR(deficiency)) then {
 
 [_thermalIndexModifier, "thermalindex"] call EFUNC(common,addStatusModifier);
 [_wetnessModifier, "wetness"] call EFUNC(common,addStatusModifier);
-[_exposureModifier, "exposure"] call EFUNC(common,addStatusModifier);
+[_exposureModifier * EGVAR(survival,metabolicCoef), "exposure"] call EFUNC(common,addStatusModifier);
 [-_hungerModifier, "hunger"] call EFUNC(common,addStatusModifier);
 [-_thirstModifier, "thirst"] call EFUNC(common,addStatusModifier);

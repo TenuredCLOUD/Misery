@@ -30,9 +30,9 @@
 
     [] call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "_skinProtection", "_respiratoryProtection", "_eyeProtection", "_hearingProtection"];
 
-    private _skinDeficit = (MACRO_BASE_CHEMICAL_DOSE * ((1 - _skinProtection) ^ 1.5)) max 0;
-    private _respiratoryDeficit = (MACRO_BASE_CHEMICAL_DOSE * ((1 - _respiratoryProtection) ^ 1.5)) max 0;
-    private _eyeDeficit = (MACRO_BASE_CHEMICAL_DOSE * ((1 - _eyeProtection) ^ 1.5)) max 0;
+    private _skinDeficit = (1 * ((1 - _skinProtection) ^ 1.5)) max 0;
+    private _respiratoryDeficit = (1 * ((1 - _respiratoryProtection) ^ 1.5)) max 0;
+    private _eyeDeficit = (1 * ((1 - _eyeProtection) ^ 1.5)) max 0;
     private _randomPartAce = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"];
     private _randomPart = ["hitHead", "hitBody", "hitHands", "hitLegs"];
 
