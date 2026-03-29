@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+// Exit system if ACE cargo is enabled
+if (!isNil "ace_cargo_enable" && {ace_cargo_enable}) exitWith {};
+
 if !(GVAR(enabled)) exitWith {};
 
 player setVariable [QGVAR(furnitureInventory), []];
@@ -16,7 +19,7 @@ player setVariable [QGVAR(placedFurniture), []];
         GVAR(objectPlacementCancelled) = false;
     },
     "",
-    "",
+    QPATHTOEF(icons,data\replace_ca.paa),
     ""
 ] call EFUNC(actions,addAction);
 
@@ -30,7 +33,7 @@ player setVariable [QGVAR(placedFurniture), []];
         [_nearestVehicle] call FUNC(openVehicleInventory);
     },
     "",
-    "",
+    QPATHTOEF(icons,data\package_open_ca.paa),
     ""
 ] call EFUNC(actions,addAction);
 

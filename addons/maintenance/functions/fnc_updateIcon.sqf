@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [vehicle player] call misery_maintenance_fnc_icon;
+ * [vehicle player] call misery_maintenance_fnc_updateIcon;
  *
  * Public: No
 */
@@ -68,7 +68,7 @@
 
         private _fuelLevel = fuel _vehicle;
         private _batteryLevel = _vehicle getVariable [QGVAR(batteryLevel), 100];
-        private _batteryType = _vehicle getVariable [QGVAR(batteryType), "misery_autoBattery"];
+        private _batteryType = _vehicle getVariable [QGVAR(batteryType), 0];
         private _requiredBatteries = _vehicle getVariable [QGVAR(batteryCount), 1];
         private _oilLevel = _vehicle getVariable [QGVAR(oilLevel), 0];
         private _coolantLevel = _vehicle getVariable [QGVAR(coolantLevel), 0];
@@ -83,20 +83,26 @@
 
         ctrlSetText [1003, format ["Battery - %1/%2", _installedBatteries, _requiredBatteries]];
 
-        switch (true) do {
-            case (_batteryCount isEqualTo 0): {
-                [274839, [2011, 2001, 1003], false] call EFUNC(common,displayShowControls);
-            };
-            case (_fuelLiters isEqualTo 0): {
-                [274839, [2000, 2010], false] call EFUNC(common,displayShowControls);
-            };
-            case (_oilLiters isEqualTo 0): {
-                [274839, [2012, 2002], false] call EFUNC(common,displayShowControls);
-            };
-            case (_coolantLiters isEqualTo 0): {
-                [274839, [2013, 2003], false] call EFUNC(common,displayShowControls);
-            };
-    };
+        if (_batteryCount isEqualTo 0) then {
+            [274839, [2011, 2001, 1003], false] call EFUNC(common,displayShowControls);
+        };
+
+        if (_fuelLiters isEqualTo 0) then {
+            [274839, [2000, 2010], false] call EFUNC(common,displayShowControls);
+        };
+
+        if (_oilLiters isEqualTo 0) then {
+            [274839, [2012, 2002], false] call EFUNC(common,displayShowControls);
+        };
+
+        if (_coolantLiters isEqualTo 0) then {
+            [274839, [2013, 2003], false] call EFUNC(common,displayShowControls);
+        };
+
+        // Hide extra Maintenance menu items if easier maintenance enabled
+        if (GVAR(difficulty)) then {
+            [274839, [2011, 2001, 1003, 2012, 2002, 2013, 2003, 1607, 1606, 1604, 1609, 1605, 1610], false] call EFUNC(common,displayShowControls);
+        };
 
         ctrlSetText [1200, format ["%1", _picture]];
         ctrlSetText [1002, format ["%1", _displayName]];

@@ -95,7 +95,7 @@ _soundDummy say3D QCLASS(audio_sound_metalSmelt);
     };
 
     _currentStep = _currentStep + 1;
-    _args set [7, _currentStep];
+    _args set [5, _currentStep];
 
     private _progress = (_currentStep / _totalSteps);
     _progressBar progressSetPosition _progress;

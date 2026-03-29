@@ -13,7 +13,7 @@ if (GVAR(woodCollection)) then {
             [] call FUNC(forageTreeAction);
         },
         "",
-        QPATHTOEF(icons,data\branch_ca.paa),
+        QPATHTOEF(icons,data\trees_ca.paa),
         ""
     ] call EFUNC(actions,addAction);
 
@@ -37,7 +37,7 @@ if (GVAR(woodCollection)) then {
             };
         },
         "",
-        QPATHTOEF(icons,data\firewood_ca.paa),
+        QPATHTOEF(icons,data\axe_ca.paa),
         ""
     ] call EFUNC(actions,addAction);
 };
@@ -56,7 +56,7 @@ if (GVAR(foraging)) then {
             call EFUNC(actions,displayActions);
         },
         "",
-        "",
+        QPATHTOEF(icons,data\leaf_ca.paa),
         ""
     ] call EFUNC(actions,addAction);
 
@@ -69,7 +69,7 @@ if (GVAR(foraging)) then {
             [] call FUNC(digForWorms);
         },
         "foraging_menu",
-        "",
+        QPATHTOEF(icons,data\shovel_ca.paa),
         ""
     ] call EFUNC(actions,addAction);
 
@@ -82,7 +82,7 @@ if (GVAR(foraging)) then {
             [] call FUNC(searchForTinder);
         },
         "foraging_menu",
-        "",
+        QPATHTOEF(icons,data\shovel_ca.paa),
         ""
     ] call EFUNC(actions,addAction);
 };

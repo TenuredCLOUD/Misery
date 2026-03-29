@@ -4,24 +4,22 @@
  * Health deterioration check from ailments
  *
  * Arguments:
- * 0: Radiation <NUMBER>
- * 1: Infection <NUMBER>
- * 2: Parasites <NUMBER>
- * 3: Toxicity <NUMBER>
- * 4: Psychosis <NUMBER>
+ * None
  *
  * Return Value:
- * Decay Health <BOOL>
+ * None
  *
  * Example:
  * [] call misery_survival_fnc_ailmentDecay;
  *
 */
 
-params ["_radiation", "_infection", "_parasites", "_toxicity", "_psychosis"];
+call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "_radiation", "_infection", "_parasites", "_toxicity", "_psychosis"];
 
 if (_radiation > 0.025) then {
-    [player, _radiation / 5, "body"] call FUNC(ailmentDamage);
+    if ([5] call EFUNC(common,rollChance)) then {
+        [player, _radiation / 5, "body"] call FUNC(ailmentDamage);
+    };
 };
 
 if (_infection isEqualTo 1) then {
@@ -37,6 +35,8 @@ if (_toxicity > 0.25) then {
 };
 
 if (_psychosis isEqualTo 1) then {
-    [player, 1 / 8, "head"] call FUNC(ailmentDamage);
+    if ([5] call EFUNC(common,rollChance)) then {
+        [player, 1 / 8, "head"] call FUNC(ailmentDamage);
+    };
 };
 

@@ -17,3 +17,21 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     [-1, 50, 25, 0],
     1
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(rotationIncrement),
+    "SLIDER",
+    ["Rotational increments", "How much will scrolling rotate furniture during placement (value represents degrees)"],
+    _category,
+    [1, 360, 15, 0],
+    2
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(snapToSurface),
+    "CHECKBOX",
+    ["Surface snapping", "Enable automatic surface snapping during furniture placement?"],
+    _category,
+    true,
+    2
+] call CBA_fnc_addSetting;

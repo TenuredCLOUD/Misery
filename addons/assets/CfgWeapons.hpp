@@ -158,8 +158,6 @@ class CfgWeapons {
         displayName = CSTRING(FishHook_DisplayName);
         descriptionShort = CSTRING(FishHook_Description);
         picture = QPATHTOF(data\icons\fishhook.paa);
-        model = QPATHTOF(data\models\fishhook.p3d);
-        hiddenSelectionsMaterials[] = {"\z\misery\addons\assets\data\models\ui\fishhook.rvmat"};
         scope = 2;
         scopeCurator = 2;
 
@@ -1259,6 +1257,19 @@ class CfgWeapons {
     class CLASS(emptyToolKit): CLASS(ItemCore) {
         displayName = CSTRING(EmptyToolKit_DisplayName);
         descriptionShort = CSTRING(EmptyToolKit_Description);
+        model = "a3\weapons_f\items\toolkit.p3d";
+        picture = QPATHTOF(data\icons\toolkit.paa);
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 25;
+        };
+    };
+
+    class CLASS(lockKit): CLASS(ItemCore) {
+        displayName = "Door lock kit";
+        descriptionShort = "electronic door locking kit, prevents unauthorized entry once installed";
         model = "a3\weapons_f\items\toolkit.p3d";
         picture = QPATHTOF(data\icons\toolkit.paa);
         scope = 2;

@@ -14,3 +14,6 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "CfgFactionClasses.hpp"
+
+#include "ui\core.hpp"
+#include "ui\menus.hpp"

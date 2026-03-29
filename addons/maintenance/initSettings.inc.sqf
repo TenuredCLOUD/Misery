@@ -6,7 +6,16 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     ["Speed display", "True - KM/H | False - MPH"],
     _category,
     false,
-    0
+    2
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(difficulty),
+    "CHECKBOX",
+    ["Easier maintenance", "When enabled maintenance doesn't require as many parts for repairs"],
+    _category,
+    true,
+    1
 ] call CBA_fnc_addSetting;
 
 [

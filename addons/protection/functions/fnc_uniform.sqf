@@ -25,13 +25,22 @@ if (_uniform isEqualTo "") exitWith {
     MACRO_NO_PROTECTIONS
 };
 
-private _uniformCfg = configFile >> "CfgWeapons" >> _uniform;
+private _modConfig = configFile >> "CfgWeapons" >> _uniform;
+private _missionConfig = missionConfigFile >> "CfgMisery_GearData" >> "GearValues" >> _uniform;
 
-private _gasMask = getNumber (_uniformCfg >> QGVAR(gasmask));
-private _scba = getNumber (_uniformCfg >> QGVAR(scba));
-private _skinProtection = getNumber (_uniformCfg >> QGVAR(skinProtection));
-private _respiratoryProtection = getNumber (_uniformCfg >> QGVAR(respiratoryProtection));
-private _eyeProtection = getNumber (_uniformCfg >> QGVAR(eyeProtection));
-private _hearingProtection = getNumber (_uniformCfg >> QGVAR(hearingProtection));
+private _attributes = [
+    QGVAR(gasmask),
+    QGVAR(scba),
+    QGVAR(skinProtection),
+    QGVAR(respiratoryProtection),
+    QGVAR(eyeProtection),
+    QGVAR(hearingProtection)
+];
 
-[_gasMask, _scba, _skinProtection, _respiratoryProtection, _eyeProtection, _hearingProtection]
+_attributes apply {
+    if (isClass _missionConfig && {isNumber (_missionConfig >> _x)}) then {
+        getNumber (_missionConfig >> _x)
+    } else {
+        getNumber (_modConfig >> _x)
+    };
+};

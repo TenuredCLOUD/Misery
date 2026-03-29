@@ -24,17 +24,23 @@ if (GVAR(modifiers) isNotEqualTo 0) then {
 
 private _night = call FUNC(night);
 private _phantoms = call FUNC(phantoms);
-private _radiationZone = call FUNC(radiationZone);
 private _spooks = call FUNC(spook);
 private _zombies = call FUNC(zombies);
+private _webZC = call FUNC(webZC);
 
 // Value cannot be negative.
-private _finalPsychosis = ((_psychosis + _night + _phantoms + _radiationZone + _spooks + _zombies) min 1) max 0;
+private _finalPsychosis = ((_psychosis + _night + _phantoms + _spooks + _zombies + _webZC) min 1) max 0;
 
 player setVariable [QGVAR(state), _finalPsychosis];
 
 if (_finalPsychosis > 0) then {
     [QGVAR(update), _finalPsychosis] call CBA_fnc_localEvent;
+};
+
+if (_finalPsychosis < 0.75) then {
+    if (GVAR(terrifiedState)) then {
+        GVAR(terrifiedState) = false;
+    };
 };
 
 [{

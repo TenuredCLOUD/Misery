@@ -18,9 +18,10 @@
 
 params ["_object", "_value", "_bodyPart"];
 
+private _totalDamage = (damage _object) + _value;
+
 if ("ace_medical" call EFUNC(common,isModLoaded)) then {
     [_object, _value, _bodyPart, "unknown", objNull, [], true] call ace_medical_fnc_addDamageToUnit;
 } else {
-    _totalDamage = (damage _object) + _value;
     _object setDamage _totalDamage;
 };

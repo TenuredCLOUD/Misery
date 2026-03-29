@@ -42,7 +42,7 @@ if (_forgeFuel isEqualTo 0) exitWith {
     ctrlSetText [1001, "Nearest forge doesn't have enough fuel to reheat ingots..."];
 };
 
-if !([[QCLASS(anvilHammer)]] call EFUNC(common,hasITem)) exitWith {ctrlSetText [1001, "You need a striking hammer to process ingots..."]};
+if !([[MACRO_ANVIL_HAMMERS]] call EFUNC(common,hasItem)) exitWith {ctrlSetText [1001, "You need a hammer to process ingots..."]};
 
 [274840, [1600, 1602, 1603], false] call EFUNC(common,displayEnableControls);
 
@@ -95,7 +95,7 @@ _soundDummy say3D QCLASS(audio_sound_anvilHammer);
     };
 
     _currentStep = _currentStep + 1;
-    _args set [7, _currentStep];
+    _args set [5, _currentStep];
 
     private _progress = (_currentStep / _totalSteps);
     _progressBar progressSetPosition _progress;

@@ -15,12 +15,15 @@
  *
 */
 
-if ((count GVAR(registeredEntities)) >= GVAR(maxAnimalUnits)) exitWith {};
+if ((count GVAR(registeredEntities)) >= GVAR(maxPopulation)) exitWith {};
+
+private _numEntities = [1, GVAR(clusterSize)] call BIS_fnc_randomInt;
 
 private _players = call EFUNC(common,listPlayers);
 private _selectedPlayer = selectRandom _players;
 
-private _clusters = selectRandom [1, 2, 3];
+// If no players in game exit spawner
+if (_players isEqualTo []) exitWith {};
 
 private _markerPos = getPosATL _selectedPlayer;
 private _playerUID = getPlayerUID _selectedPlayer;
@@ -30,21 +33,20 @@ _marker setMarkerShapeLocal "ELLIPSE";
 _marker setMarkerSizeLocal [GVAR(markerSizeX), GVAR(markerSizeY)];
 _marker setMarkerAlphaLocal 0;
 
-for "_i" from 1 to _clusters do {
-    (selectRandom GVAR(animalTypes)) params ["_animalClass", "_animalCount"];
+for "_i" from 1 to _numEntities do {
 
-    for "_z" from 0 to _animalCount - 1 do {
-        private _outsidePos = [_marker, true] call CBA_fnc_randPosArea;
+    if ((count GVAR(registeredEntities)) >= GVAR(maxPopulation)) exitWith {break};
 
-        // Check if _outsidePos is valid and not water
-        if (_outsidePos isEqualTo [] || surfaceIsWater _outsidePos) exitWith {
-           if (GVAR(debug)) then {systemChat "[Misery Animal spawner] Invalid position or position in water, skipping..."};
-            continue;
-        };
-        if ([GVAR(animalSpawnChance)] call EFUNC(common,rollChance)) then {
-    private _createdAnimal = createAgent [_animalClass, _outsidePos, [], 0, "CAN_COLLIDE"];
-    GVAR(registeredEntities) pushBack _createdAnimal;
-        };
+    private _outsidePos = [_marker, true] call CBA_fnc_randPosArea;
+
+    // Check if _outsidePos is valid and not water
+    if (_outsidePos isEqualTo [] || surfaceIsWater _outsidePos) exitWith {
+        if (GVAR(debug)) then {systemChat "[Misery Animal spawner] Invalid position or position in water, skipping..."};
+        continue;
+    };
+    if ([GVAR(animalSpawnChance)] call EFUNC(common,rollChance)) then {
+        private _createdAnimal = createAgent [selectRandom [MACRO_FIELDDRESS_ANIMALTYPES], _outsidePos, [], 0, "CAN_COLLIDE"];
+        GVAR(registeredEntities) pushBack _createdAnimal;
     };
 };
 

@@ -1,6 +1,7 @@
 #include "script_component.hpp"
 
 GVAR(autosaveTimer) = GVAR(autosaveInterval) * 60;
+GVAR(gradAutosaveTimer) = GVAR(gradAutosaveInterval) * 60;
 GVAR(saveName) = call FUNC(formatSaveName);
 
 // Multiplayer save/load

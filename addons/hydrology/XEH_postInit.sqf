@@ -13,7 +13,7 @@ if (isServer) then {
             createDialog QCLASS(hydrology_ui);
             },
             "",
-            QPATHTOEF(icons,data\well_ca.paa),
+            QPATHTOEF(icons,data\waves_arrow_up_ca.paa),
             ""
         ] call EFUNC(actions,addAction);
 

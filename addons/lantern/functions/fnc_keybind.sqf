@@ -20,6 +20,10 @@ if ([[QCLASS(lantern_Off)]] call EFUNC(common,hasItem)) then {
 
         private _lantern = "Land_Camping_Light_F" createVehicle position player;
 
+        if (!isNil "grad_persistence_blacklist") then {
+            [_lantern] call grad_persistence_fnc_blacklistObjects;
+        };
+
         [_lantern, [player, [-0.17, -0.14, -0.06], "Pelvis", true]] remoteExec ["attachTo", [0, -2] select isDedicated, _lantern];
 
         player setVariable [QGVAR(state), _lantern, true];

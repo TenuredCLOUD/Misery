@@ -1,6 +1,8 @@
 PREP(breathFog);
 PREP(clothing);
+PREP(coldPack);
 PREP(core);
 PREP(environment);
-PREP(immersion);
+PREP(heatPack);
 PREP(insulation);
+PREP(thermalKit);

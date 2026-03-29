@@ -13,6 +13,12 @@
  * [] call misery_persistence_fnc_saveGame
 */
 
+call EFUNC(common,nearFire) params ["", "_isInflamed"];
+
+if (GVAR(hardcore) && !_isInflamed) exitWith {
+    ["Hardcore mode enabled, you need to be near a lit fire to save...", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
+};
+
 if (GVAR(blockSave)) exitWith {
     [QUOTE(COMPONENT_BEAUTIFIED), "Save is already in progress. Cancelling second save"] call EFUNC(common,debugMessage);
 };

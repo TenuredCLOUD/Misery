@@ -17,6 +17,8 @@
 [{
     params ["_args", "_handle"];
 
+    if (isGamePaused) exitWith {};
+
     call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "", "_respiratory"];
     call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "_cartridgeEfficiency"];
 

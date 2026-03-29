@@ -4,7 +4,7 @@
  * Handles thirst related things for survival loop.
  *
  * Arguments:
- * 0: Thirst <NUMBER>
+ * 0: Decrement Value <NUMBER>
  *
  * Return Value:
  * None
@@ -15,7 +15,13 @@
  * Public: No
 */
 
-params ["_thirst"];
+params ["_decrementValue"];
+
+call EFUNC(common,getPlayerVariables) params ["", "_thirst", "", "", "", "", "", "", "_parasites"];
+
+if (_parasites > 0) then {
+    [-_decrementValue, "thirst"] call EFUNC(common,addStatusModifier);
+};
 
 private _finalThirst = ((_thirst + GVAR(thirstModifiers)) min 1) max 0;
 GVAR(thirstModifiers) = 0;

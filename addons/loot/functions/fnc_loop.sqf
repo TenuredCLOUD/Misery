@@ -18,6 +18,13 @@ if (!GVAR(enabled)) exitWith {};
 
 private _players = call EFUNC(common,listPlayers);
 
+// if no players in game, rerun loop after timedown
+if (_players isEqualTo []) exitWith {
+    [{
+        [] call FUNC(loop);
+    }, [], 10] call CBA_fnc_waitAndExecute;
+};
+
 {
     private _player = _x;
 
@@ -26,7 +33,11 @@ private _players = call EFUNC(common,listPlayers);
     {
         private _building = _x;
         private _buildingType = typeOf _building;
-        if (_buildingType in GVAR(buildingBlacklist) || _building in GVAR(building_used)) exitWith {continue};
+        //if (_buildingType in GVAR(buildingBlacklist) || _building in GVAR(building_used) || GVAR(areas) findIf {_building inArea _x} isNotEqualTo -1) exitWith {continue};
+
+        if (_buildingType in GVAR(buildingBlacklist)) exitWith {continue};
+        if (_building in GVAR(building_used)) exitWith {continue};
+        if (GVAR(areas) isNotEqualTo [] && GVAR(areas) findIf { _building inArea _x } isNotEqualTo -1) exitWith {continue};
 
         private _buildingPositions = _building buildingPos -1;
 

@@ -11,7 +11,7 @@ if !(GVAR(action)) exitWith {};
         [QEGVAR(common,inventoryTile), [format [localize "STR_MISERY_GearweightVAL", round(_bagweightload * 100), round((_bagweightload * 100) / 2.2)], 5]] call CBA_fnc_localEvent;
     },
     "",
-    "",
+    QPATHTOEF(icons,data\weight_tilde_ca.paa),
     ""
 ] call EFUNC(actions,addAction);
 

@@ -22,7 +22,8 @@ private _modPrep = [
     ["NerdMods_iBuild", isClass (configFile >> "CfgPatches" >> "NerdMods_iBuild")],
     ["remnant", isClass (configFile >> "CfgPatches" >> "remnant")],
     ["DSA_Spooks",  isClass (configFile >> "CfgPatches" >> "DSA_Spooks")],
-    ["WBK_MeleeMechanics", isClass (configFile >> "CfgPatches" >> "WBK_MeleeMechanics")]
+    ["WBK_MeleeMechanics", isClass (configFile >> "CfgPatches" >> "WBK_MeleeMechanics")],
+    ["WBK_ZombieCreatures", isClass (configFile >> "CfgPatches" >> "WBK_ZombieCreatures")]
 ];
 
 {
