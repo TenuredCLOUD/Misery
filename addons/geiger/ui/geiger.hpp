@@ -1,15 +1,12 @@
-class CLASS(geiger_ui)
-{
+class CLASS(geiger_ui) {
     idd = 982344;
     duration = 10000000000;
     onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QEGVAR(geiger,ui)),_this select 0)]);
     fadein = 0;
     fadeout = 0;
 
-    class ControlsBackground
-    {
-        class CLASS(geiger_background): RscPicture
-        {
+    class ControlsBackground {
+        class CLASS(geiger_background): RscPicture {
             idc = -1;
             text = QPATHTOEF(geiger,ui\geiger_ca.paa);
             x = 39.5 * GUI_GRID_W + GUI_GRID_X;
@@ -18,10 +15,8 @@ class CLASS(geiger_ui)
             h = 14.5 * GUI_GRID_H;
         };
     };
-    class Controls
-    {
-        class CLASS(geiger_readings): RscText
-        {
+    class Controls {
+        class CLASS(geiger_readings): RscText {
             idc = 1000;
             x = 43.5 * GUI_GRID_W + GUI_GRID_X;
             y = 23 * GUI_GRID_H + GUI_GRID_Y;

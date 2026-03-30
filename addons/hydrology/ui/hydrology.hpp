@@ -1,12 +1,9 @@
-class CLASS(hydrology_ui)
-{
+class CLASS(hydrology_ui) {
     idd = 982380;
     onLoad = QUOTE([982380] call EFUNC(common,menuBlurEffect); [] call EFUNC(hydrology,containersListed); [] call EFUNC(hydrology,icon));
 
-    class ControlsBackground
-    {
-        class CLASS(hydrology_background): CLASS(RscText)
-        {
+    class ControlsBackground {
+        class CLASS(hydrology_background): CLASS(RscText) {
             idc = -1;
             colorBackground[] = {0, 0, 0, 0.7};
             x = 0 * GUI_GRID_W + GUI_GRID_X;
@@ -14,8 +11,7 @@ class CLASS(hydrology_ui)
             w = 40 * GUI_GRID_W;
             h = 25 * GUI_GRID_H;
         };
-        class CLASS(hydrology_itemSelectionTip): RscText
-        {
+        class CLASS(hydrology_itemSelectionTip): RscText {
             idc = -1;
             text = "Containers:"; //--- ToDo: Localize;
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
@@ -25,8 +21,7 @@ class CLASS(hydrology_ui)
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
-        class CLASS(hydrology_prompt): RscText
-        {
+        class CLASS(hydrology_prompt): RscText {
             idc = -1;
             text = "What container would you like to fill?"; //--- ToDo: Localize;
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
@@ -36,8 +31,7 @@ class CLASS(hydrology_ui)
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
-        class CLASS(hydrology_icon): RscPicture
-        {
+        class CLASS(hydrology_icon): RscPicture {
             idc = 1200;
             text = QPATHTOEF(icons,data\waves_arrow_up_ca.paa);
             x = 28.5 * GUI_GRID_W + GUI_GRID_X;
@@ -47,10 +41,8 @@ class CLASS(hydrology_ui)
         };
     };
 
-    class Controls
-    {
-        class CLASS(hydrology_list_1): RscListBox
-        {
+    class Controls {
+        class CLASS(hydrology_list_1): RscListBox {
             idc = 1500;
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
             y = 4 * GUI_GRID_H + GUI_GRID_Y;
@@ -59,8 +51,7 @@ class CLASS(hydrology_ui)
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
-        class CLASS(hydrology_FillContainer_Button): RscButton
-        {
+        class CLASS(hydrology_FillContainer_Button): RscButton {
             idc = 1600;
             text = "Fill container"; //--- ToDo: Localize;
             x = 19 * GUI_GRID_W + GUI_GRID_X;
@@ -74,8 +65,7 @@ class CLASS(hydrology_ui)
             colorActive[] = {0.5, 0.5, 0.5, 0.7};
             onButtonClick = QUOTE([] call EFUNC(hydrology,processFill));
         };
-        class CLASS(hydrology_drinkFromSource_Button): RscButton
-        {
+        class CLASS(hydrology_drinkFromSource_Button): RscButton {
             idc = 1601;
             text = "Drink from source"; //--- ToDo: Localize;
             x = 18.5 * GUI_GRID_W + GUI_GRID_X;
@@ -89,8 +79,7 @@ class CLASS(hydrology_ui)
             colorActive[] = {0.5, 0.5, 0.5, 0.7};
             onButtonClick = QUOTE([] call EFUNC(hydrology,drinkFromSource));
         };
-        class CLASS(hydrology_exit): RscButton
-        {
+        class CLASS(hydrology_exit): RscButton {
             idc = 1602;
             text = "Exit";
             x = 19 * GUI_GRID_W + GUI_GRID_X;
@@ -104,8 +93,7 @@ class CLASS(hydrology_ui)
             colorActive[] = {0.5, 0.5, 0.5, 0.7};
             onButtonClick = QUOTE(closeDialog 2);
         };
-        class CLASS(hydrology_noteBox): RscText
-        {
+        class CLASS(hydrology_noteBox): RscText {
             idc = 1001;
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
             y = 20.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -114,8 +102,7 @@ class CLASS(hydrology_ui)
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
-        class CLASS(hydrology_progressBar): CLASS(RscProgress)
-        {
+        class CLASS(hydrology_progressBar): CLASS(RscProgress) {
             idc = 1010;
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
             y = 18.5 * GUI_GRID_H + GUI_GRID_Y;

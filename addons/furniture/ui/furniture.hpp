@@ -33,8 +33,7 @@ class CLASS(furniture_ui) {
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
-        class CLASS(furniture_icon): RscPicture
-        {
+        class CLASS(furniture_icon): RscPicture {
             idc = 1200;
             x = 28.5 * GUI_GRID_W + GUI_GRID_X;
             y = 3 * GUI_GRID_H + GUI_GRID_Y;

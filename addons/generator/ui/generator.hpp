@@ -1,12 +1,9 @@
-class CLASS(generator_ui)
-{
+class CLASS(generator_ui) {
     idd = 573849;
     onLoad = QUOTE([573849] call EFUNC(common,menuBlurEffect); [] call EFUNC(generator,refresh); [] call EFUNC(generator,icon));
 
-    class ControlsBackground
-    {
-        class CLASS(generator_background): CLASS(RscText)
-        {
+    class ControlsBackground {
+        class CLASS(generator_background): CLASS(RscText) {
             idc = 1800;
             x = 0 * GUI_GRID_W + GUI_GRID_X;
             y = 4.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -14,8 +11,7 @@ class CLASS(generator_ui)
             h = 16.5 * GUI_GRID_H;
             colorBackground[] = {0, 0, 0, 0.7};
         };
-        class CLASS(generator_prompt): RscText
-        {
+        class CLASS(generator_prompt): RscText {
             idc = 1000;
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
             y = 4.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -24,8 +20,7 @@ class CLASS(generator_ui)
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
-        class CLASS(generator_fuellvl): RscText
-        {
+        class CLASS(generator_fuellvl): RscText {
             idc = 1003;
             text = "Fuel:"; //--- ToDo: Localize;
             x = 1 * GUI_GRID_W + GUI_GRID_X;
@@ -35,16 +30,14 @@ class CLASS(generator_ui)
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
-        class CLASS(generator_fuelProgressBar): CLASS(RscProgress)
-        {
+        class CLASS(generator_fuelProgressBar): CLASS(RscProgress) {
             idc = 1004;
             x = 3.84 * GUI_GRID_W + GUI_GRID_X;
             y = 10.83 * GUI_GRID_H + GUI_GRID_Y;
             w = 8 * GUI_GRID_W;
             h = 0.5 * GUI_GRID_H;
         };
-        class CLASS(generator_powerState): RscText
-        {
+        class CLASS(generator_powerState): RscText {
             idc = 1001;
             text = "'On / Off'"; //--- ToDo: Localize;
             x = 1 * GUI_GRID_W + GUI_GRID_X;
@@ -56,10 +49,8 @@ class CLASS(generator_ui)
         };
     };
 
-    class Controls
-    {
-        class CLASS(generator_startStop_button): RscButton
-        {
+    class Controls {
+        class CLASS(generator_startStop_button): RscButton {
             idc = 1600;
             x = 1.5 * GUI_GRID_W + GUI_GRID_X;
             y = 14.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -72,8 +63,7 @@ class CLASS(generator_ui)
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
-        class CLASS(generator_refuel_button): RscButton
-        {
+        class CLASS(generator_refuel_button): RscButton {
             idc = 1601;
             text = "Refuel"; //--- ToDo: Localize;
             x = 1.5 * GUI_GRID_W + GUI_GRID_X;
@@ -87,8 +77,7 @@ class CLASS(generator_ui)
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
-        class CLASS(generator_exitButton): RscButton
-        {
+        class CLASS(generator_exitButton): RscButton {
             idc = 1602;
             text = "Exit"; //--- ToDo: Localize;
             x = 30 * GUI_GRID_W + GUI_GRID_X;

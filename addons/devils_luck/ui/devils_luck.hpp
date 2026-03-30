@@ -22,8 +22,7 @@ class CLASS(devils_luck_ui) {
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
-        class CLASS(devils_luck_player_funds): RscText
-        {
+        class CLASS(devils_luck_player_funds): RscText {
             idc = 2222;
             x = 28 * GUI_GRID_W + GUI_GRID_X;
             y = 2 * GUI_GRID_H + GUI_GRID_Y;
@@ -32,8 +31,7 @@ class CLASS(devils_luck_ui) {
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
-        class CLASS(devils_luck_dealer_funds): RscText
-        {
+        class CLASS(devils_luck_dealer_funds): RscText {
             idc = 2223;
             x = 28 * GUI_GRID_W + GUI_GRID_X;
             y = 0 * GUI_GRID_H + GUI_GRID_Y;
@@ -90,8 +88,7 @@ class CLASS(devils_luck_ui) {
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
-        class CLASS(devils_luck_bet_update): RscButton
-        {
+        class CLASS(devils_luck_bet_update): RscButton {
             idc = -1;
             onButtonClick = QUOTE([] call EFUNC(devils_luck,updateBetDisplay));
             text = "Place Bet";
@@ -146,8 +143,7 @@ class CLASS(devils_luck_ui) {
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
-        class CLASS(devils_luck_help_tips): RscButton
-        {
+        class CLASS(devils_luck_help_tips): RscButton {
             onButtonClick = QUOTE([] call EFUNC(devils_luck,rules));
             idc = 1606;
             text = "Rules";
