@@ -206,7 +206,7 @@ class CfgMagazines {
     class CLASS(eru_Off): CLASS(FakeMagazine) {
         ace_disableRepacking = 1;
         count = 100;
-        descriptionShort = CSTRING(ERUOff_Description);
+        descriptionShort = CSTRING(ERU_Description);
         displayName = CSTRING(ERUOff_DisplayName);
         mass = 7;
         picture = QPATHTOF(data\icons\eru_off.paa);
