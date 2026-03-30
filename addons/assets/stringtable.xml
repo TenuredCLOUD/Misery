@@ -253,20 +253,6 @@
             <Japanese>デコンキット</Japanese>
             <Turkish>Dekont Kiti</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Assets_ERUOff_Description">
-            <English>Personal digital assistant&lt;br/&gt; - Information</English>
-            <Czech>Osobní digitální asistent&lt;br/&gt; - Informace</Czech>
-            <French>Assistant numérique personnel&lt;br/&gt; - Information</French>
-            <Spanish>Asistente digital personal&lt;br/&gt; - Información</Spanish>
-            <Italian>Assistente digitale personale&lt;br/&gt; - Informazioni</Italian>
-            <Polish>Personalny asystent cyfrowy&lt;br/&gt; - Informacje</Polish>
-            <Portuguese>Assistente digital pessoal&lt;br/&gt; - Informações</Portuguese>
-            <Russian>Персональный цифровой помощник&lt;br/&gt; - Информация</Russian>
-            <German>Personal Digital Assistant&lt;br/&gt; - Information</German>
-            <Korean>개인 정보 단말기&lt;br/&gt; - 정보</Korean>
-            <Japanese>パーソナルデジタルアシスタント&lt;br/&gt; - 情報</Japanese>
-            <Turkish>Kişisel dijital asistan&lt;br/&gt; - Bilgi</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Assets_ERUOff_DisplayName">
             <English>ERU (OFF)</English>
             <Czech>ERU (VYPNUTO)</Czech>
@@ -282,18 +268,18 @@
             <Turkish>ERU (KAPALI)</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_ERU_Description">
-            <English>Personal digital assistant&lt;br/&gt; - Information</English>
-            <Czech>Osobní digitální asistent&lt;br/&gt; - Informace</Czech>
-            <French>Assistant numérique personnel&lt;br/&gt; - Information</French>
-            <Spanish>Asistente digital personal&lt;br/&gt; - Información</Spanish>
-            <Italian>Assistente digitale personale&lt;br/&gt; - Informazioni</Italian>
-            <Polish>Personalny asystent cyfrowy&lt;br/&gt; - Informacje</Polish>
-            <Portuguese>Assistente digital pessoal&lt;br/&gt; - Informações</Portuguese>
-            <Russian>Персональный цифровой помощник&lt;br/&gt; - Информация</Russian>
-            <German>Personal Digital Assistant&lt;br/&gt; - Information</German>
-            <Korean>개인 정보 단말기&lt;br/&gt; - 정보</Korean>
-            <Japanese>パーソナルデジタルアシスタント&lt;br/&gt; - 情報</Japanese>
-            <Turkish>Kişisel dijital asistan&lt;br/&gt; - Bilgi</Turkish>
+            <English>Environmental Reading Unit&lt;br/&gt; - Information</English>
+            <Czech>Jednotka pro čtení prostředí&lt;br/&gt; - Informace</Czech>
+            <French>Unité de lecture environnementale&lt;br/&gt; - Informations</French>
+            <Spanish>Unidad de lectura ambiental&lt;br/&gt; - Información</Spanish>
+            <Italian>Unità di lettura ambientale&lt;br/&gt; - Informazioni</Italian>
+            <Polish>Jednostka odczytu środowiskowego&lt;br/&gt; - Informacje</Polish>
+            <Portuguese>Unidade de leitura ambiental&lt;br/&gt; - Informações</Portuguese>
+            <Russian>Блок мониторинга среды&lt;br/&gt; - Информация</Russian>
+            <German>Umwelt-Leseeinheit&lt;br/&gt; - Informationen</German>
+            <Korean>환경 판독 장치&lt;br/&gt; - 정보</Korean>
+            <Japanese>環境読取装置&lt;br/&gt; - 情報</Japanese>
+            <Turkish>Çevresel Okuma Ünitesi&lt;br/&gt; - Bilgi</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_ERU_DisplayName">
             <English>ERU (ON)</English>
