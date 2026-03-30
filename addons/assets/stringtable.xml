@@ -589,6 +589,34 @@
             <Japanese>ヨウ素酸カリウム</Japanese>
             <Turkish>Potasyum İyodat</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Assets_PureTabs_Description">
+            <English>Contains water purification tablets</English>
+            <Czech>Obsahuje tablety na čištění vody</Czech>
+            <French>Contient des comprimés de purification d'eau</French>
+            <Spanish>Contiene pastillas potabilizadoras de agua</Spanish>
+            <Italian>Contiene compresse per la purificazione dell'acqua</Italian>
+            <Polish>Zawiera tabletki do uzdatniania wody</Polish>
+            <Portuguese>Contém pastilhas de purificação de água</Portuguese>
+            <Russian>Содержит таблетки для очистки воды</Russian>
+            <German>Enthält Wasserreinigungstabletten</German>
+            <Korean>수질 정화용 알약 포함</Korean>
+            <Japanese>浄水剤が含まれています</Japanese>
+            <Turkish>Su temizleme tabletleri içerir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_PureTabs_DisplayName">
+            <English>Aqua tablets</English>
+            <Czech>Aqua tablety</Czech>
+            <French>Comprimés Aqua</French>
+            <Spanish>Pastillas Aqua</Spanish>
+            <Italian>Compresse Aqua</Italian>
+            <Polish>Tabletki Aqua</Polish>
+            <Portuguese>Pastilhas Aqua</Portuguese>
+            <Russian>Таблетки Аква</Russian>
+            <German>Aqua-Tabletten</German>
+            <Korean>아쿠아 정제</Korean>
+            <Japanese>アクアタブレット</Japanese>
+            <Turkish>Aqua tabletleri</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Assets_SawFuel_Description">
             <English>Can of 2 stroke fuel&lt;br/&gt; - Fuel item</English>
             <Czech>Plechovka paliva pro dvoutaktní motory&lt;br/&gt; - Palivový předmět</Czech>

@@ -9,12 +9,12 @@ class CfgMagazines {
     };
 
     class CLASS(pureTablets): CLASS(FakeMagazine) {
-        count = 30;
-        descriptionShort = CSTRING(Pain_Description);
-        displayName = CSTRING(Pain_DisplayName);
+        count = 10;
+        descriptionShort = CSTRING(PureTabs_Description);
+        displayName = CSTRING(PureTabs_DisplayName);
         mass = 2;
         model = "a3\structures_f_epa\items\medical\waterpurificationtablets_f.p3d";
-        picture = QPATHTOF(data\icons\painkillers.paa);
+        picture = QPATHTOF(data\icons\pureTabs_ca.paa);
         scope = 2;
     };
 
