@@ -67,7 +67,7 @@ class CLASS(hydrology_ui) {
         };
         class CLASS(hydrology_drinkFromSource_Button): RscButton {
             idc = 1601;
-            text = "Drink from source"; //--- ToDo: Localize;
+            text = ECSTRING(common,DrinkFromSource);
             x = 18.5 * GUI_GRID_W + GUI_GRID_X;
             y = 9.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 8.5 * GUI_GRID_W;

@@ -24,7 +24,7 @@ if (_damaged) exitWith {
 };
 
 if !(_hasAxe) exitWith {
-    [QEGVAR(common,tileText), format ["You need an axe to start chopping wood..."]] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize ECSTRING(common,NoAxeForWoodNoti)] call CBA_fnc_localEvent;
 };
 
 if (currentWeapon player isNotEqualTo "") then {

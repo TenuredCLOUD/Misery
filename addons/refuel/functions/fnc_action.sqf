@@ -20,7 +20,7 @@ if !(call FUNC(checkAreas)) exitWith {
 
 [
     "refuel_menu",
-    localize "STR_MISERY_REQREFUEL",
+    localize ECSTRING(common,ReqRefuel),
     {GVAR(areas) findIf {player inArea _x} isNotEqualTo -1},
     {
     [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;

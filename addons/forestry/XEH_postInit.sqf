@@ -6,7 +6,7 @@ if (GVAR(woodCollection)) then {
 
     [
         "forestryCollectWood_menu",
-        localize "STR_MISERY_COLLECTWOOD",
+        localize ECSTRING(common,CollectWood),
         {([player] call EFUNC(common,nearTree)) select 0},
         {
             [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
@@ -19,12 +19,12 @@ if (GVAR(woodCollection)) then {
 
     [
         "forestrySplitLog_menu",
-        localize "STR_MISERY_SPLITWOODLOG",
+        localize ECSTRING(common,SplitWoodLog),
         {[[QCLASS(woodenlog)]] call EFUNC(common,hasItem)},
         {
             [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
             if !([[QCLASS(woodenlog)]] call EFUNC(common,hasItem)) exitWith {
-                [QEGVAR(common,tileText), localize "STR_MISERY_NOWOODENLOGSFORSPLITTING"] call CBA_fnc_localEvent;
+                [QEGVAR(common,tileText), localize ECSTRING(common,NoWoodenLogsForSplitting)] call CBA_fnc_localEvent;
             };
 
             private _hasAxe = [[QCLASS(woodaxe), MACRO_AXES]] call EFUNC(common,hasItem);
@@ -33,7 +33,7 @@ if (GVAR(woodCollection)) then {
             if (_hasAxe || _hasSaw) then {
                 [_hasAxe, _hasSaw] call FUNC(splitWoodAction);
             } else {
-                [QEGVAR(common,tileText), localize "STR_MISERY_NOWOODAXEORCHAINSAWNOTI"] call CBA_fnc_localEvent;
+                [QEGVAR(common,tileText), localize ECSTRING(common,NoWoodAxeOrChainsawNoti)] call CBA_fnc_localEvent;
             };
         },
         "",
@@ -49,7 +49,7 @@ if (GVAR(foraging)) then {
 
     [
         "foraging_menu",
-        localize "STR_MISERY_FORAGE",
+        localize ECSTRING(common,Forage),
         {call FUNC(canForage)},
         {
             player setVariable [QEGVAR(actions,currentParentID), "foraging_menu"];
@@ -62,7 +62,7 @@ if (GVAR(foraging)) then {
 
     [
         "forageWorms_menu",
-        localize "STR_MISERY_FORAGE_DIGFORWORMS",
+        localize ECSTRING(common,ForageDigForWorms),
         {player getVariable [QEGVAR(actions,currentParentID), ""] isEqualTo "foraging_menu"},
         {
             [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
@@ -75,7 +75,7 @@ if (GVAR(foraging)) then {
 
     [
         "forageTinder_menu",
-        localize "STR_MISERY_FORAGE_SEARCHFORTINDER",
+        localize ECSTRING(common,ForageSearchForTinder),
         {player getVariable [QEGVAR(actions,currentParentID), ""] isEqualTo "foraging_menu"},
         {
             [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;

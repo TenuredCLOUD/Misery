@@ -4,11 +4,11 @@ if !(GVAR(action)) exitWith {};
 
 [
     "weightCheck_menu",
-    localize "STR_MISERY_CheckGearweight",
+    localize ECSTRING(common,CheckGearWeight),
     {true},
     {
         private _bagweightload = loadAbs player / getNumber (configFile >> "CfgInventoryGlobalVariable" >> "maxSoldierLoad");
-        [QEGVAR(common,inventoryTile), [format [localize "STR_MISERY_GearweightVAL", round(_bagweightload * 100), round((_bagweightload * 100) / 2.2)], 5]] call CBA_fnc_localEvent;
+        [QEGVAR(common,inventoryTile), [format [localize ECSTRING(common,GearWeightVal), round(_bagweightload * 100), round((_bagweightload * 100) / 2.2)], 5]] call CBA_fnc_localEvent;
     },
     "",
     QPATHTOEF(icons,data\weight_tilde_ca.paa),

@@ -20,7 +20,7 @@ if !(call FUNC(checkAreas)) exitWith {
 
 [
     "rearm_menu",
-    localize "STR_MISERY_REQRESUPPLY",
+    localize ECSTRING(common,ReqResupply),
     {GVAR(areas) findIf {player inArea _x} isNotEqualTo -1},
     {
     [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
