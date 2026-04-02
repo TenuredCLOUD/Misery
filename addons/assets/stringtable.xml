@@ -337,6 +337,34 @@
             <Japanese>エンジンオイル</Japanese>
             <Turkish>motor yağı</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Assets_FieldThermalRegulationKit_Description">
+            <English>Advanced thermoregulation kit equipped with moisture-wicking cloth and medical grade equipment to maintain optimal body temperature in harsh conditions, can be used in any climate.</English>
+            <Czech>Pokročilá souprava pro termoregulaci vybavená tkaninou odvádějící vlhkost a lékařským vybavením pro udržení optimální tělesné teploty v drsných podmínkách, použitelná v jakémkoli klimatu.</Czech>
+            <French>Kit de thermorégulation avancé équipé de tissus anti-humidité et de matériel médical pour maintenir une température corporelle optimale dans des conditions difficiles, utilisable sous n'importe quel climat.</French>
+            <Spanish>Kit de termorregulación avanzado equipado con tejido que absorbe la humedad y equipo de calidad médica para mantener la temperatura corporal óptima en condiciones extremas, apto para cualquier clima.</Spanish>
+            <Italian>Kit di termoregolazione avanzato dotato di tessuto traspirante e attrezzature di grado medico per mantenere la temperatura corporea ottimale in condizioni difficili, utilizzabile in qualsiasi clima.</Italian>
+            <Polish>Zaawansowany zestaw do termoregulacji wyposażony w materiał odprowadzający wilgoć i sprzęt medyczny, pozwalający utrzymać optymalną temperaturę ciała w trudnych warunkach, do użytku w każdym klimacie.</Polish>
+            <Portuguese>Kit de termorregulação avançado equipado com tecido de absorção de humidade e equipamento de qualidade médica para manter a temperatura corporal ideal em condições rigorosas, pode ser utilizado em qualquer clima.</Portuguese>
+            <Russian>Улучшенный комплект терморегуляции, оснащенный влагоотводящей тканью и медицинским оборудованием для поддержания оптимальной температуры тела в суровых условиях; может использоваться в любом климате.</Russian>
+            <German>Fortschrittliches Thermoregulations-Kit, ausgestattet mit feuchtigkeitsableitendem Gewebe und medizinischer Ausrüstung, um die optimale Körpertemperatur unter rauen Bedingungen aufrechtzuerhalten; kann in jedem Klima verwendet werden.</German>
+            <Korean>수분 흡수 천과 의료 등급 장비를 갖춘 고급 체온 조절 키트로, 가혹한 조건에서도 최적의 체온을 유지하며 모든 기후에서 사용할 수 있습니다.</Korean>
+            <Japanese>吸湿速乾性に優れた生地と医療グレードの機器を備えた高度な体温調節キット。過酷な条件下でも最適な体温を維持し、あらゆる気候で使用可能です。</Japanese>
+            <Turkish>Sert koşullarda optimum vücut ısısını korumak için nem emici kumaş ve tıbbi sınıf ekipmanla donatılmış, her türlü iklimde kullanılabilen gelişmiş termoregülasyon kiti.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_FieldThermalRegulationKit_DisplayName">
+            <English>Field thermal regulation kit</English>
+            <Czech>Polní souprava pro termoregulaci</Czech>
+            <French>Kit de thermorégulation de terrain</French>
+            <Spanish>Kit de termorregulación de campo</Spanish>
+            <Italian>Kit di termoregolazione da campo</Italian>
+            <Polish>Polowy zestaw termoregulacyjny</Polish>
+            <Portuguese>Kit de termorregulação de campo</Portuguese>
+            <Russian>Полевой комплект терморегуляции</Russian>
+            <German>Feld-Thermoregulations-Kit</German>
+            <Korean>야전 체온 조절 키트</Korean>
+            <Japanese>野外体温調節キット</Japanese>
+            <Turkish>Saha termoregülasyon kiti</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Assets_GeigerOff_DisplayName">
             <English>Personal Geiger Counter (OFF)</English>
             <Czech>Osobní Geigerův počítač (VYPNUTO)</Czech>
