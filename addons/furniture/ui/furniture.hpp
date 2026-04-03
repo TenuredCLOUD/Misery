@@ -70,7 +70,7 @@ class CLASS(furniture_ui) {
             idc = 1602;
             colorFocused[] = {0.5,0.5,0.5,0.7};
             onButtonClick = QUOTE(closeDialog 2);
-            text = "Exit"; //--- ToDo: Localize;
+            text = ECSTRING(common,Exit);
             x = 20.5 * GUI_GRID_W + GUI_GRID_X;
             y = 14.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;

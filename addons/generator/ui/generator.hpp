@@ -79,7 +79,7 @@ class CLASS(generator_ui) {
         };
         class CLASS(generator_exitButton): RscButton {
             idc = 1602;
-            text = "Exit"; //--- ToDo: Localize;
+            text = ECSTRING(common,Exit);
             x = 30 * GUI_GRID_W + GUI_GRID_X;
             y = 17.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 8 * GUI_GRID_W;

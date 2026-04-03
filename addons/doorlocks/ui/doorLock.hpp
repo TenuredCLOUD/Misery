@@ -13,7 +13,7 @@ class CLASS(doorLock_ui) {
         };
         class misery_doorLock_prompt: RscText {
             idc = 1000;
-            text = "PIN Entry:"; //--- ToDo: Localize;
+            text = ECSTRING(common,PINEntryLabel);
             x = 12.5 * GUI_GRID_W + GUI_GRID_X;
             y = 8.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 11 * GUI_GRID_W;
@@ -34,7 +34,7 @@ class CLASS(doorLock_ui) {
         };
         class misery_doorLock_enter: RscButton {
             idc = 1600;
-            text = "Enter"; //--- ToDo: Localize;
+            text = ECSTRING(common,Enter);
             x = 16 * GUI_GRID_W + GUI_GRID_X;
             y = 13.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 8 * GUI_GRID_W;

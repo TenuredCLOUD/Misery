@@ -35,7 +35,7 @@ class CLASS(fireCrafting_ui) {
             idc = 1600;
             colorFocused[] = {0.5,0.5,0.5,0.7};
             onButtonClick = QUOTE([] call EFUNC(fire,craft));
-            text = "Craft";
+            text = ECSTRING(common,Craft);
             x = 29.5 * GUI_GRID_W + GUI_GRID_X;
             y = 9.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;
@@ -63,7 +63,7 @@ class CLASS(fireCrafting_ui) {
             idc = 1602;
             colorFocused[] = {0.5,0.5,0.5,0.7};
             onButtonClick = "closeDialog 2";
-            text = "Exit";
+            text = ECSTRING(common,Exit);
             x = 29.5 * GUI_GRID_W + GUI_GRID_X;
             y = 14.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;

@@ -13,7 +13,7 @@ class CLASS(craftingFramework_ui) {
         };
         class CLASS(crafting_prompt): RscText {
             idc = -1;
-            text = "What would you like to craft?"; //--- ToDo: Localize;
+            text = ECSTRING(common,CraftPrompt);
             x = -3.5 * GUI_GRID_W + GUI_GRID_X;
             y = 0 * GUI_GRID_H + GUI_GRID_Y;
             w = 22 * GUI_GRID_W;
@@ -23,7 +23,7 @@ class CLASS(craftingFramework_ui) {
         };
         class CLASS(crafting_itemSelectionTip): RscText {
             idc = -1;
-            text = "Blueprints:"; //--- ToDo: Localize;
+            text = ECSTRING(common,Blueprints);
             x = -3.5 * GUI_GRID_W + GUI_GRID_X;
             y = 2 * GUI_GRID_H + GUI_GRID_Y;
             w = 6 * GUI_GRID_W;
@@ -61,7 +61,7 @@ class CLASS(craftingFramework_ui) {
         };
         class CLASS(crafting_button): RscButton {
             idc = 1600;
-            text = "Craft";
+            text = ECSTRING(common,Craft);
             x = 16.5 * GUI_GRID_W + GUI_GRID_X;
             y = 6.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;
@@ -75,7 +75,7 @@ class CLASS(craftingFramework_ui) {
         };
         class CLASS(crafting_knownRecipes): RscButton {
             idc = 1601;
-            text = "Show Recipe";
+            text = ECSTRING(common,ShowRecipe);
             x = 16.5 * GUI_GRID_W + GUI_GRID_X;
             y = 9 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;
@@ -89,7 +89,7 @@ class CLASS(craftingFramework_ui) {
         };
         class CLASS(crafting_exitButton): RscButton {
             idc = 1602;
-            text = "Exit";
+            text = ECSTRING(common,Exit);
             x = 16.5 * GUI_GRID_W + GUI_GRID_X;
             y = 11.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;

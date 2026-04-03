@@ -13,16 +13,16 @@
  * [] call misery_devils_luck_fnc_rules;
 */
 
-private _helpTitle = "<t color='#ff0000' size='1.5' shadow='2'>DEVIL'S LUCK</t><br/>";
+private _helpTitle = format ["<t color='#ff0000' size='1.5' shadow='2'>%1</t><br/>", localize ECSTRING(common,RulesTitle)];
 
 private _rules = [
-    "1. <t color='#f0c040'>The Setup:</t> The game begins with a total of 7. ",
-    "2. <t color='#f0c040'>Your Bet:</t> Enter your bet in the edit box, funds are deducted or rewarded instantly upon rolling.",
-    "3. <t color='#f0c040'>The Goal:</t> Predict if the sum of two 6-sided dice will be HIGHER or LOWER than the current total.",
-    "4. <t color='#f0c040'>The House Edge:</t> If the new roll is EQUAL to the current total, you lose immediately. The House always wins.",
-    "5. <t color='#f0c040'>Limits:</t> Every Game Master has limited funds, if you bleed them dry, the game ends."
+    format ["1. <t color='#f0c040'>%1</t> %2", localize ECSTRING(common,Rule1_Title), localize ECSTRING(common,Rule1_Desc)],
+    format ["2. <t color='#f0c040'>%1</t> %2", localize ECSTRING(common,Rule2_Title), localize ECSTRING(common,Rule2_Desc)],
+    format ["3. <t color='#f0c040'>%1</t> %2", localize ECSTRING(common,Rule3_Title), localize ECSTRING(common,Rule3_Desc)],
+    format ["4. <t color='#f0c040'>%1</t> %2", localize ECSTRING(common,Rule4_Title), localize ECSTRING(common,Rule4_Desc)],
+    format ["5. <t color='#f0c040'>%1</t> %2", localize ECSTRING(common,Rule5_Title), localize ECSTRING(common,Rule5_Desc)]
 ];
 
-private _tip = "<br/><br/><t size='0.8'>Pro Tip: Probabilities shift toward the middle (7). A 2 or 12 is your best chance to strike...</t>";
+private _tip = format ["<br/><br/><t size='0.8'>%1</t>", localize ECSTRING(common,ProTip_Body)];
 
 hint parseText (_helpTitle + (_rules joinString "<br/>") + _tip);

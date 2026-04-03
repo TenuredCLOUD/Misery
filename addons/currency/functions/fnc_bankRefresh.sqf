@@ -29,7 +29,7 @@
 
     private _playerBankParsed = _bankedFunds call BIS_fnc_parseNumber;
     private _playerBankFormatted = [_playerBankParsed, 1, 2, true] call CBA_fnc_formatNumber;
-    private _playerBankText = format ["%3: %1 %2", GVAR(symbol), _playerBankFormatted, "Bank Account"];
+    private _playerBankText = format ["%3: %1 %2", GVAR(symbol), _playerBankFormatted, ECSTRING(common,BankAccount)];
 
     ctrlSetText [1000, format ["%1", GVAR(bankName)]];
     ctrlSetText [1001, _playerFundsText];

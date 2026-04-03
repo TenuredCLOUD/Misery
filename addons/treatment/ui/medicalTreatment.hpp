@@ -53,7 +53,7 @@ class CLASS(medicalTreatment_ui) {
         class CLASS(medicalTreatment_purchase): RscButton {
             idc = 1600;
             colorFocused[] = {0.5,0.5,0.5,0.7};
-            text = "Purchase"; //--- ToDo: Localize;
+            text = ECSTRING(common,Purchase);
             x = 25 * GUI_GRID_W + GUI_GRID_X;
             y = 9.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7 * GUI_GRID_W;
@@ -67,7 +67,7 @@ class CLASS(medicalTreatment_ui) {
         class CLASS(medicalTreatment_exit): RscButton {
             idc = 1601;
             colorFocused[] = {0.5,0.5,0.5,0.7};
-            text = "Exit"; //--- ToDo: Localize;
+            text = ECSTRING(common,Exit);
             x = 25 * GUI_GRID_W + GUI_GRID_X;
             y = 12.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7 * GUI_GRID_W;

@@ -51,7 +51,7 @@ class CLASS(refuelShop_ui) {
         };
         class CLASS(refuelShop_purchase): RscButton {
             idc = 1600;
-            text = "Purchase";
+            text = ECSTRING(common,Purchase);
             x = 29.5 * GUI_GRID_W + GUI_GRID_X;
             y = 9.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7 * GUI_GRID_W;
@@ -65,7 +65,7 @@ class CLASS(refuelShop_ui) {
         };
         class CLASS(refuelShop_exit): RscButton {
             idc = 1601;
-            text = "Exit";
+            text = ECSTRING(common,Exit);
             x = 29.5 * GUI_GRID_W + GUI_GRID_X;
             y = 12.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7 * GUI_GRID_W;

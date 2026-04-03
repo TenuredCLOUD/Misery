@@ -13,7 +13,7 @@ class CLASS(anvil_ui) {
         };
         class CLASS(forge_itemSelectionTip): RscText {
             idc = -1;
-            text = "Recipes:"; //--- ToDo: Localize;
+            text = ECSTRING(common,RecipesList);
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
             y = 2 * GUI_GRID_H + GUI_GRID_Y;
             w = 11 * GUI_GRID_W;
@@ -23,7 +23,7 @@ class CLASS(anvil_ui) {
         };
         class CLASS(anvil_prompt): RscText {
             idc = -1;
-            text = "Smithing Anvil"; //--- ToDo: Localize;
+            text = ECSTRING(common,SmithingAnvil);
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
             y = 0 * GUI_GRID_H + GUI_GRID_Y;
             w = 22 * GUI_GRID_W;
@@ -55,7 +55,7 @@ class CLASS(anvil_ui) {
             idc = 1600;
             colorFocused[] = {0.5,0.5,0.5,0.7};
             onButtonClick = QUOTE([] call EFUNC(anvil,process));
-            text = "Craft"; //--- ToDo: Localize;
+            text = ECSTRING(common,Craft);
             x = 19 * GUI_GRID_W + GUI_GRID_X;
             y = 7.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;
@@ -69,7 +69,7 @@ class CLASS(anvil_ui) {
             idc = 1603;
             colorFocused[] = {0.5,0.5,0.5,0.7};
             onButtonClick = QUOTE([] call EFUNC(anvil,showRecipe));
-            text = "Show Recipe"; //--- ToDo: Localize;
+            text = ECSTRING(common,ShowRecipe);
             x = 19 * GUI_GRID_W + GUI_GRID_X;
             y = 9.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;
@@ -83,7 +83,7 @@ class CLASS(anvil_ui) {
             idc = 1602;
             colorFocused[] = {0.5,0.5,0.5,0.7};
             onButtonClick = QUOTE(closeDialog 2);
-            text = "Exit"; //--- ToDo: Localize;
+            text = ECSTRING(common,Exit);
             x = 31.5 * GUI_GRID_W + GUI_GRID_X;
             y = 15.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;

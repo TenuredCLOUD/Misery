@@ -20,7 +20,7 @@ private _betValue = _amount max 0;
 
 private _betDisplay = [_betValue, 1, 2, true] call CBA_fnc_formatNumber;
 
-private _betText = format ["Current Bet: %2 %1", _betDisplay, EGVAR(currency,symbol)];
+private _betText = format ["%3 %2 %1", _betDisplay, EGVAR(currency,symbol), localize ECSTRING(common,CurrentBetLabel)];
 ctrlSetText [1102, _betText];
 
 GVAR(currentBet) = _betValue;

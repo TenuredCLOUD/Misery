@@ -69,7 +69,7 @@ class CLASS(fishing_ui) {
         class CLASS(fishing_exit): RscButton {
             idc = 1602;
             colorFocused[] = {0.5,0.5,0.5,0.7};
-            text = "Exit";
+            text = ECSTRING(common,Exit);
             x = 31.5 * GUI_GRID_W + GUI_GRID_X;
             y = 18 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;

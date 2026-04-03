@@ -68,7 +68,7 @@ class CLASS(vehicleFurniture_ui) {
         };
         class CLASS(vehicleFurniture_exit): RscButton {
             idc = 1602;
-            text = "Exit";
+            text = ECSTRING(common,Exit);
             x = 20.5 * GUI_GRID_W + GUI_GRID_X;
             y = 14.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;

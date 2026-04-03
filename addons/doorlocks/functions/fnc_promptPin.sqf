@@ -24,7 +24,7 @@ _enter ctrlAddEventHandler ["ButtonClick", {
     private _pin = ((ctrlText ((findDisplay 696677) displayCtrl 1400))) call BIS_fnc_parseNumber;
 
     if !(_pin isEqualType 0) exitWith {
-        ["PIN must be a number...", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
+        [localize ECSTRING(common,PINMustBeNumber), 1, [1, 1, 1, 1]] call CBA_fnc_notify;
     };
 
     [_pin] call FUNC(processPin);
