@@ -24,25 +24,25 @@ private _progressBar = _dialog displayCtrl 1010;
 
 [player] call FUNC(nearestForgeStats) params ["_closestForge", "_forgeFuel"];
 
-if (isNil "_recipe") exitWith {ctrlSetText [1001, "No matching material found..."]};
+if (isNil "_recipe") exitWith {ctrlSetText [1001, localize LSTRING(NoMaterial)]};
 
 private _outputItem = _recipe select 0;
 private _requiredItems = _recipe select 1;
 private _smeltTime = _recipe select 2;
 
 if !([_requiredItems] call FUNC(canProcessCheck)) exitWith {
-    ctrlSetText [1001, "You don’t have those materials..."];
+    ctrlSetText [1001, localize LSTRING(MissingItems)];
 };
 
 if (isNull _closestForge) exitWith {
-    ctrlSetText [1001, "You need a forge near your anvil in order to smith items..."];
+    ctrlSetText [1001, localize LSTRING(NeedForge)];
 };
 
 if (_forgeFuel isEqualTo 0) exitWith {
-    ctrlSetText [1001, "Nearest forge doesn't have enough fuel to reheat ingots..."];
+    ctrlSetText [1001, localize LSTRING(NoFuel)];
 };
 
-if !([[MACRO_ANVIL_HAMMERS]] call EFUNC(common,hasItem)) exitWith {ctrlSetText [1001, "You need a hammer to process ingots..."]};
+if !([[MACRO_ANVIL_HAMMERS]] call EFUNC(common,hasItem)) exitWith {ctrlSetText [1001, localize LSTRING(NeedHammer)]};
 
 [274840, [1600, 1602, 1603], false] call EFUNC(common,displayEnableControls);
 
@@ -59,7 +59,7 @@ private _smithInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QGVAR(isSmithing), false];
         [274840, [1010], false] call EFUNC(common,displayShowControls);
-        [parseText "<t font='PuristaMedium' size='1'>Smithing interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+        [QEGVAR(common,tileText), localize LSTRING(Interrupted)] call CBA_fnc_localEvent;
     };
 }];
 
@@ -99,7 +99,7 @@ _soundDummy say3D QCLASS(audio_sound_anvilHammer);
 
     private _progress = (_currentStep / _totalSteps);
     _progressBar progressSetPosition _progress;
-    ctrlSetText [1001, format ["Smithing materials... %1%2 complete", (_progress * 100) toFixed 0, "%"]];
+    ctrlSetText [1001, format [localize LSTRING(Progress), (_progress * 100) toFixed 0, "%"]];
 
     if (_currentStep >= _totalSteps) then {
         {
@@ -112,7 +112,7 @@ _soundDummy say3D QCLASS(audio_sound_anvilHammer);
 
         [player, _outputItem, true] call CBA_fnc_addItem;
 
-        ctrlSetText [1001, format ["You successfully smithed: %1...", _displayName]];
+        ctrlSetText [1001, format [localize LSTRING(Success), _displayName]];
         player setVariable [QGVAR(isSmithing), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _smithInterrupt];
         if (_soundDummy isNotEqualTo objNull) then {

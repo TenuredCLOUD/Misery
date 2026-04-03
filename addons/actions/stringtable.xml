@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Actions">
+        <Key ID="STR_MISERY_Actions_AlreadyRegistered">
+            <English>Action %1 already registered!</English>
+            <Czech>Akce %1 je již zaregistrována!</Czech>
+            <French>Action %1 déjà enregistrée !</French>
+            <Spanish>¡La acción %1 ya está registrada!</Spanish>
+            <Italian>Azione %1 già registrata!</Italian>
+            <Polish>Akcja %1 jest już zarejestrowana!</Polish>
+            <Portuguese>Ação %1 já registrada!</Portuguese>
+            <Russian>Действие %1 уже зарегистрировано!</Russian>
+            <German>Aktion %1 bereits registriert!</German>
+            <Korean>동작 %1이(가) 이미 등록되었습니다!</Korean>
+            <Japanese>アクション %1 は既に登録されています！</Japanese>
+            <Turkish>%1 eylemi zaten kayıtlı!</Turkish>
+        </Key>
+    </Package>
+</Project>

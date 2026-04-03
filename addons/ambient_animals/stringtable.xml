@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Ambient_Animals">
+        <Key ID="STR_MISERY_Ambient_Animals_Wildlife">
+            <English>Ambient wildlife</English>
+            <Czech>Okolní zvěř</Czech>
+            <French>Faune ambiante</French>
+            <Spanish>Vida silvestre ambiental</Spanish>
+            <Italian>Fauna selvatica d'ambiente</Italian>
+            <Polish>Ambientowa dzika przyroda</Polish>
+            <Portuguese>Vida selvagem ambiente</Portuguese>
+            <Russian>Окружающая дикая природа</Russian>
+            <German>Umgebende Tierwelt</German>
+            <Korean>주변 야생 동물</Korean>
+            <Japanese>周囲の野生動物</Japanese>
+            <Turkish>Ortam yaban hayatı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_Animals_EnableWildlife">
+            <English>Enable roaming ambient wildlife?</English>
+            <Czech>Povolit toulání okolní zvěře?</Czech>
+            <French>Activer l'errance de la faune ambiante ?</French>
+            <Spanish>¿Habilitar vida silvestre ambiental errante?</Spanish>
+            <Italian>Abilitare la fauna selvatica errante?</Italian>
+            <Polish>Włączyć błąkającą się dziką przyrodę?</Polish>
+            <Portuguese>Ativar vida selvagem errante?</Portuguese>
+            <Russian>Включить бродячую дикую природу?</Russian>
+            <German>Streunende Tierwelt aktivieren?</German>
+            <Korean>배회하는 야생 동물을 활성화하시겠습니까?</Korean>
+            <Japanese>徘徊する野生動物を有効にしますか？</Japanese>
+            <Turkish>Gezici yaban hayatı etkinleştirilsin mi?</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_Animals_MaxAnimals">
+            <English>Maximum animals</English>
+            <Czech>Maximum zvířat</Czech>
+            <French>Maximum d'animaux</French>
+            <Spanish>Máximo de animales</Spanish>
+            <Italian>Massimo animali</Italian>
+            <Polish>Maksymalna liczba zwierząt</Polish>
+            <Portuguese>Máximo de animais</Portuguese>
+            <Russian>Максимум животных</Russian>
+            <German>Maximale Anzahl an Tieren</German>
+            <Korean>최대 동물 수</Korean>
+            <Japanese>最大動物数</Japanese>
+            <Turkish>Maksimum hayvan</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_Animals_MaxAnimalsDesc">
+            <English>Maximum animals allowed to spawn</English>
+            <Czech>Maximální povolený počet zvířat</Czech>
+            <French>Nombre maximum d'animaux autorisés à apparaître</French>
+            <Spanish>Máximo de animales permitidos para aparecer</Spanish>
+            <Italian>Numero massimo di animali che possono apparire</Italian>
+            <Polish>Maksymalna liczba zwierząt, które mogą się pojawić</Polish>
+            <Portuguese>Número máximo de animais permitidos a aparecer</Portuguese>
+            <Russian>Максимальное количество животных для появления</Russian>
+            <German>Maximale Anzahl an Tieren, die spawnen dürfen</German>
+            <Korean>스폰 가능한 최대 동물 수</Korean>
+            <Japanese>スポーン可能な最大動物数</Japanese>
+            <Turkish>Oluşmasına izin verilen maksimum hayvan sayısı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_Animals_ClusterSize">
+            <English>Cluster size</English>
+            <Czech>Velikost shluku</Czech>
+            <French>Taille du groupe</French>
+            <Spanish>Tamaño del grupo</Spanish>
+            <Italian>Dimensione del gruppo</Italian>
+            <Polish>Wielkość grupy</Polish>
+            <Portuguese>Tamanho do grupo</Portuguese>
+            <Russian>Размер группы</Russian>
+            <German>Gruppengröße</German>
+            <Korean>클러스터 크기</Korean>
+            <Japanese>クラスターサイズ</Japanese>
+            <Turkish>Küme boyutu</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_Animals_ClusterSizeDesc">
+            <English>Possible amount of animals to spawn each cycle</English>
+            <Czech>Možné množství zvířat k vytvoření v každém cyklu</Czech>
+            <French>Nombre possible d'animaux à faire apparaître à chaque cycle</French>
+            <Spanish>Cantidad posible de animales para aparecer en cada ciclo</Spanish>
+            <Italian>Numero possibile di animali che appaiono ad ogni ciclo</Italian>
+            <Polish>Możliwa liczba zwierząt do pojawienia się w każdym cyklu</Polish>
+            <Portuguese>Quantidade possível de animais a aparecer em cada ciclo</Portuguese>
+            <Russian>Возможное количество животных для появления в каждом цикле</Russian>
+            <German>Mögliche Anzahl an Tieren, die pro Zyklus spawnen</German>
+            <Korean>각 사이클마다 스폰 가능한 동물 수</Korean>
+            <Japanese>各サイクルでスポーン可能な動物の数</Japanese>
+            <Turkish>Her döngüde oluşabilecek olası hayvan miktarı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_Animals_MinDist">
+            <English>Minimum distance</English>
+            <Czech>Minimální vzdálenost</Czech>
+            <French>Distance minimale</French>
+            <Spanish>Distancia mínima</Spanish>
+            <Italian>Distanza minima</Italian>
+            <Polish>Minimalna odległość</Polish>
+            <Portuguese>Distância mínima</Portuguese>
+            <Russian>Минимальная дистанция</Russian>
+            <German>Mindestentfernung</German>
+            <Korean>최소 거리</Korean>
+            <Japanese>最小距離</Japanese>
+            <Turkish>Minimum mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_Animals_MinDistDesc">
+            <English>Minimum distance at which animals can spawn</English>
+            <Czech>Minimální vzdálenost, ve které se zvířata mohou tvořit</Czech>
+            <French>Distance minimale à laquelle les animaux peuvent apparaître</French>
+            <Spanish>Distancia mínima a la que pueden aparecer animales</Spanish>
+            <Italian>Distanza minima alla quale gli animali possono apparire</Italian>
+            <Polish>Minimalna odległość, w której mogą pojawiać się zwierzęta</Polish>
+            <Portuguese>Distância mínima na qual os animais podem aparecer</Portuguese>
+            <Russian>Минимальное расстояние, на котором могут появляться животные</Russian>
+            <German>Mindestentfernung, in der Tiere spawnen können</German>
+            <Korean>동물이 스폰될 수 있는 최소 거리</Korean>
+            <Japanese>動物がスポーンできる最小距離</Japanese>
+            <Turkish>Hayvanların oluşabileceği minimum mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_Animals_MaxDist">
+            <English>Maximum distance</English>
+            <Czech>Maximální vzdálenost</Czech>
+            <French>Distance maximale</French>
+            <Spanish>Distancia máxima</Spanish>
+            <Italian>Distanza massima</Italian>
+            <Polish>Maksymalna odległość</Polish>
+            <Portuguese>Distância máxima</Portuguese>
+            <Russian>Максимальная дистанция</Russian>
+            <German>Maximalentfernung</German>
+            <Korean>최대 거리</Korean>
+            <Japanese>最大距離</Japanese>
+            <Turkish>Maksimum mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_Animals_MaxDistDesc">
+            <English>Maximum distance at which animals can spawn</English>
+            <Czech>Maximální vzdálenost, ve které se zvířata mohou tvořit</Czech>
+            <French>Distance maximale à laquelle les animaux peuvent apparaître</French>
+            <Spanish>Distancia máxima a la que pueden aparecer animales</Spanish>
+            <Italian>Distanza massima alla quale gli animali possono apparire</Italian>
+            <Polish>Maksymalna odległość, w której mogą pojawiać się zwierzęta</Polish>
+            <Portuguese>Distância máxima na qual os animais podem aparecer</Portuguese>
+            <Russian>Максимальное расстояние, на котором могут появляться животные</Russian>
+            <German>Maximalentfernung, in der Tiere spawnen können</German>
+            <Korean>동물이 스폰될 수 있는 최대 거리</Korean>
+            <Japanese>動物がスポーンできる最大距離</Japanese>
+            <Turkish>Hayvanların oluşabileceği maksimum mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_Animals_SafeDist">
+            <English>Safe distance</English>
+            <Czech>Bezpečná vzdálenost</Czech>
+            <French>Distance de sécurité</French>
+            <Spanish>Distancia de seguridad</Spanish>
+            <Italian>Distanza di sicurezza</Italian>
+            <Polish>Bezpieczna odległość</Polish>
+            <Portuguese>Distância de segurança</Portuguese>
+            <Russian>Безопасная дистанция</Russian>
+            <German>Sicherheitsabstand</German>
+            <Korean>안전 거리</Korean>
+            <Japanese>安全距離</Japanese>
+            <Turkish>Güvenli mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_Animals_SafeDistDesc">
+            <English>Minimum distance at which animals can spawn from other players</English>
+            <Czech>Minimální vzdálenost, ve které se zvířata mohou tvořit od ostatních hráčů</Czech>
+            <French>Distance minimale à laquelle les animaux peuvent apparaître par rapport aux autres joueurs</French>
+            <Spanish>Distancia mínima a la que pueden aparecer animales de otros jugadores</Spanish>
+            <Italian>Distanza minima alla quale gli animali possono apparire rispetto ad altri giocatori</Italian>
+            <Polish>Minimalna odległość, w której mogą pojawiać się zwierzęta od innych graczy</Polish>
+            <Portuguese>Distância mínima na qual os animais podem aparecer em relação a outros jogadores</Portuguese>
+            <Russian>Минимальное расстояние от других игроков, на котором могут появляться животные</Russian>
+            <German>Mindestentfernung, in der Tiere von anderen Spielern spawnen können</German>
+            <Korean>다른 플레이어로부터 동물이 스폰될 수 있는 최소 거리</Korean>
+            <Japanese>他のプレイヤーから動物がスポーンできる最小距離</Japanese>
+            <Turkish>Hayvanların diğer oyunculardan oluşabileceği minimum mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_Animals_DeleteDist">
+            <English>Delete distance</English>
+            <Czech>Vzdálenost pro smazání</Czech>
+            <French>Distance de suppression</French>
+            <Spanish>Distancia de eliminación</Spanish>
+            <Italian>Distanza di eliminazione</Italian>
+            <Polish>Odległość usuwania</Polish>
+            <Portuguese>Distância de exclusão</Portuguese>
+            <Russian>Дистанция удаления</Russian>
+            <German>Entfernungsdistanz</German>
+            <Korean>삭제 거리</Korean>
+            <Japanese>削除距離</Japanese>
+            <Turkish>Silme mesafesi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_Animals_DeleteDistDesc">
+            <English>Minimum distance from a player at which animals will be deleted</English>
+            <Czech>Minimální vzdálenost od hráče, ve které budou zvířata smazána</Czech>
+            <French>Distance minimale d'un joueur à laquelle les animaux seront supprimés</French>
+            <Spanish>Distancia mínima de un jugador a la que se eliminarán los animales</Spanish>
+            <Italian>Distanza minima da un giocatore alla quale gli animali verranno eliminati</Italian>
+            <Polish>Minimalna odległość od gracza, przy której zwierzęta zostaną usunięte</Polish>
+            <Portuguese>Distância mínima de um jogador na qual os animais serão excluídos</Portuguese>
+            <Russian>Минимальное расстояние от игрока, на котором животные будут удалены</Russian>
+            <German>Mindestentfernung von einem Spieler, bei der Tiere gelöscht werden</German>
+            <Korean>동물이 삭제될 플레이어와의 최소 거리</Korean>
+            <Japanese>動物が削除されるプレイヤーからの最小距離</Japanese>
+            <Turkish>Hayvanların silineceği bir oyuncuya olan minimum mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_Animals_SpawnChance">
+            <English>Spawn chance %</English>
+            <Czech>Šance na vytvoření %</Czech>
+            <French>Chance d'apparition %</French>
+            <Spanish>Probabilidad de aparición %</Spanish>
+            <Italian>Probabilità di apparizione %</Italian>
+            <Polish>Szansa na pojawienie się %</Polish>
+            <Portuguese>Chance de aparecer %</Portuguese>
+            <Russian>Шанс появления %</Russian>
+            <German>Spawn-Chance %</German>
+            <Korean>스폰 확률 %</Korean>
+            <Japanese>スポーン確率 %</Japanese>
+            <Turkish>Oluşma şansı %</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_Animals_SpawnChanceDesc">
+            <English>% chance per cycle that clusters will spawn</English>
+            <Czech>% šance v každém cyklu, že se shluky vytvoří</Czech>
+            <French>% de chance par cycle que des groupes apparaissent</French>
+            <Spanish>% de probabilidad por ciclo de que aparezcan grupos</Spanish>
+            <Italian>% di probabilità per ciclo che i gruppi appaiano</Italian>
+            <Polish>% szansy na cykl, że grupy się pojawią</Polish>
+            <Portuguese>% de chance por ciclo de que os grupos apareçam</Portuguese>
+            <Russian>% шанса на цикл, что группы появятся</Russian>
+            <German>% Chance pro Zyklus, dass Gruppen spawnen</German>
+            <Korean>사이클당 클러스터가 스폰될 확률 %</Korean>
+            <Japanese>サイクルごとにクラスターがスポーンする確率 %</Japanese>
+            <Turkish>Kümelerin oluşma döngüsü başına % şans</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_Animals_CheckInterval">
+            <English>Spawn check interval</English>
+            <Czech>Interval kontroly vytvoření</Czech>
+            <French>Intervalle de vérification d'apparition</French>
+            <Spanish>Intervalo de verificación de aparición</Spanish>
+            <Italian>Intervallo di controllo apparizione</Italian>
+            <Polish>Interwał sprawdzania pojawiania się</Polish>
+            <Portuguese>Intervalo de verificação de aparecimento</Portuguese>
+            <Russian>Интервал проверки появления</Russian>
+            <German>Intervall der Spawn-Prüfung</German>
+            <Korean>스폰 확인 간격</Korean>
+            <Japanese>スポーン確認間隔</Japanese>
+            <Turkish>Oluşma kontrol aralığı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_Animals_CheckIntervalDesc">
+            <English>Time in seconds between spawn checks</English>
+            <Czech>Čas v sekundách mezi kontrolami vytvoření</Czech>
+            <French>Temps en secondes entre les vérifications d'apparition</French>
+            <Spanish>Tiempo en segundos entre comprobaciones de aparición</Spanish>
+            <Italian>Tempo in secondi tra i controlli di apparizione</Italian>
+            <Polish>Czas w sekundach między sprawdzaniami pojawiania się</Polish>
+            <Portuguese>Tempo em segundos entre verificações de aparecimento</Portuguese>
+            <Russian>Время в секундах между проверками появления</Russian>
+            <German>Zeit in Sekunden zwischen Spawn-Prüfungen</German>
+            <Korean>스폰 확인 사이의 시간(초)</Korean>
+            <Japanese>スポーン確認の間隔（秒）</Japanese>
+            <Turkish>Oluşma kontrolleri arasındaki saniye cinsinden süre</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_Animals_InvalidPos">
+            <English>Invalid position or position in water, skipping...</English>
+            <Czech>Neplatná pozice nebo pozice ve vodě, přeskakuji...</Czech>
+            <French>Position invalide ou dans l'eau, omission...</French>
+            <Spanish>Posición no válida o en el agua, omitiendo...</Spanish>
+            <Italian>Posizione non valida o in acqua, salto...</Italian>
+            <Polish>Nieprawidłowa pozycja lub pozycja w wodzie, pomijanie...</Polish>
+            <Portuguese>Posição inválida ou na água, pulando...</Portuguese>
+            <Russian>Неверная позиция или позиция в воде, пропуск...</Russian>
+            <German>Ungültige Position oder Position im Wasser, überspringe...</German>
+            <Korean>유효하지 않은 위치이거나 물속 위치입니다. 건너뛰는 중...</Korean>
+            <Japanese>無効な位置または水中の位置です。スキップします...</Japanese>
+            <Turkish>Geçersiz konum veya su içinde konum, atlanıyor...</Turkish>
+        </Key>
+    </Package>
+</Project>

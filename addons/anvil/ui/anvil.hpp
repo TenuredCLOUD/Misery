@@ -23,7 +23,7 @@ class CLASS(anvil_ui) {
         };
         class CLASS(anvil_prompt): RscText {
             idc = -1;
-            text = ECSTRING(common,SmithingAnvil);
+            text = ECSTRING(anvil,SmithingAnvil);
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
             y = 0 * GUI_GRID_H + GUI_GRID_Y;
             w = 22 * GUI_GRID_W;

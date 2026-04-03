@@ -70,7 +70,7 @@ private _outsidePos = [_marker, true] call CBA_fnc_randPosArea;
 for "_i" from 1 to _numEntities do {
 
     if (_outsidePos isEqualTo [] || surfaceIsWater _outsidePos) exitWith {
-        [QUOTE(COMPONENT_BEAUTIFIED), "AI Spawner: Invalid position or position in water, skipping"] call EFUNC(common,debugMessage);
+        [QUOTE(COMPONENT_BEAUTIFIED), localize LSTRING(SpawnerInvalidPos)] call EFUNC(common,debugMessage);
         continue;
     };
 

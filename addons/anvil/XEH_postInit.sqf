@@ -11,7 +11,7 @@ if (isClass (missionConfigFile >> "CfgMisery_AnvilData")) then {
 
     [
         "anvil_menu",
-        localize ECSTRING(common,UseAnvil),
+        localize LSTRING(UseAnvil),
         {[[QCLASS(anvil)], 2.5] call EFUNC(common,nearCraftingStation)},
         {
             [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;

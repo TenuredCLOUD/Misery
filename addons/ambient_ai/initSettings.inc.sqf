@@ -3,7 +3,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(enabled),
     "CHECKBOX",
-    ["Ambient AI", "Enable roaming ambient ai?"],
+    [LSTRING(Ambient_AI), LSTRING(EnableRoamingAI)],
     _category,
     false,
     1
@@ -12,7 +12,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(faction),
     "LIST",
-    ["Faction list", "Faction to spawn"],
+    [LSTRING(FactionList), LSTRING(FactionToSpawn)],
     _category,
     [[0, 1, 2, 3],
     ["West / BLUFOR","East / OPFOR","Civilian","Independant"], 1],
@@ -22,7 +22,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(groupSize),
     "SLIDER",
-    ["Group size", "Possible size of group ai can be generated with"],
+    [LSTRING(GroupSize), LSTRING(GroupSizeDesc)],
     _category,
     [1, 15, 5, 0],
     1
@@ -31,7 +31,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(maxGroups),
     "SLIDER",
-    ["Maximum groups", "Maximum groups allowed to spawn"],
+    [LSTRING(MaxGroups), LSTRING(MaxGroupsDesc)],
     _category,
     [1, 20, 2, 0],
     1
@@ -40,7 +40,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(primaryWeapons),
     "EDITBOX",
-    ["Primary weapons", "Possible primary weapons for ai"],
+    [LSTRING(PrimaryWeapons), LSTRING(PrimaryWeaponsDesc)],
     _category,
     "['arifle_MX_F']",
     1
@@ -49,7 +49,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(secondaryWeapons),
     "EDITBOX",
-    ["Secondary weapons", "Possible secondary weapons for ai"],
+    [LSTRING(SecondaryWeapons), LSTRING(SecondaryWeaponsDesc)],
     _category,
     "['hgun_Pistol_heavy_01_MRD_F']",
     1
@@ -58,7 +58,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(launcherWeapons),
     "EDITBOX",
-    ["launcher weapons", "Possible launcher weapons for ai"],
+    [LSTRING(LauncherWeapons), LSTRING(LauncherWeaponsDesc)],
     _category,
     "['launch_NLAW_F']",
     1
@@ -67,7 +67,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(ammoCount),
     "SLIDER",
-    ["Ammo count", "Ammo count for ai (randomly selected)"],
+    [LSTRING(AmmoCount), LSTRING(AmmoCountDesc)],
     _category,
     [1, 15, 5, 0],
     1
@@ -76,7 +76,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(items),
     "EDITBOX",
-    ["Items", "Possible item loot for ai"],
+    [LSTRING(Items), LSTRING(ItemsDesc)],
     _category,
     "['FirstAidKit']",
     1
@@ -85,7 +85,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(nvgs),
     "EDITBOX",
-    ["NVGs", "Possible night vision for ai"],
+    [LSTRING(NVGs), LSTRING(NVGsDesc)],
     _category,
     "['NVGoggles']",
     1
@@ -94,7 +94,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(facewear),
     "EDITBOX",
-    ["Facewear", "Possible facewear for ai"],
+    [LSTRING(Facewear), LSTRING(FacewearDesc)],
     _category,
     "['G_Balaclava_oli']",
     1
@@ -103,7 +103,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(headgear),
     "EDITBOX",
-    ["Headgear", "Possible headgear for ai"],
+    [LSTRING(Headgear), LSTRING(HeadgearDesc)],
     _category,
     "['H_Booniehat_eaf']",
     1
@@ -112,7 +112,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(uniform),
     "EDITBOX",
-    ["Uniform", "Possible uniforms for ai"],
+    [LSTRING(Uniform), LSTRING(UniformDesc)],
     _category,
     "['U_B_CTRG_Soldier_F']",
     1
@@ -121,7 +121,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(vest),
     "EDITBOX",
-    ["Vest", "Possible vests for ai"],
+    [LSTRING(Vest), LSTRING(VestDesc)],
     _category,
     "['V_PlateCarrier1_rgr_noflag_F']",
     1
@@ -130,7 +130,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(backpack),
     "EDITBOX",
-    ["Backpack", "Possible backpacks for ai"],
+    [LSTRING(Backpack), LSTRING(BackpackDesc)],
     _category,
     "['B_FieldPack_Base']",
     1
@@ -139,7 +139,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(accuracy),
     "SLIDER",
-    ["Accuracy", "Aiming accuracy"],
+    [LSTRING(Accuracy), LSTRING(AimingAccuracy)],
     _category,
     [0.01, 1, 0.25, 2],
     1
@@ -148,7 +148,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(shake),
     "SLIDER",
-    ["Shake", "Aiming shake"],
+    [LSTRING(Shake), LSTRING(AimingShake)],
     _category,
     [0.01, 1, 0.25, 2],
     1
@@ -157,7 +157,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(speed),
     "SLIDER",
-    ["Speed", "Aiming speed"],
+    [LSTRING(Speed), LSTRING(AimingSpeed)],
     _category,
     [0.01, 1, 0.25, 2],
     1
@@ -166,7 +166,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(spawnChance),
     "SLIDER",
-    ["Spawn Chance", "% chance to generate ai group"],
+    [LSTRING(SpawnChance), LSTRING(SpawnChanceDesc)],
     _category,
     [1, 100, 100, 0],
     1
@@ -175,7 +175,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(minimumDistance),
     "SLIDER",
-    ["Minimum Distance", "Minimum distance ai groups can spawn from players"],
+    [LSTRING(MinDist), LSTRING(MinDistDesc)],
     _category,
     [150, 15000, 750, 0],
     1
@@ -184,7 +184,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(maximumDistance),
     "SLIDER",
-    ["Maximum Distance", "Maximum distance ai groups can spawn from players"],
+    [LSTRING(MaxDist), LSTRING(MaxDistDesc)],
     _category,
     [150, 15000, 750, 0],
     1
@@ -193,7 +193,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(safeDistance),
     "SLIDER",
-    ["Safe distance", "Minimum distance at which ai can spawn from other players"],
+    [LSTRING(SafeDist), LSTRING(SafeDistDesc)],
     _category,
     [25, 5000, 200, 0],
     1
@@ -202,7 +202,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(deletionDistance),
     "SLIDER",
-    ["Deletion distance", "Distance from players at which ai will be deleted"],
+    [LSTRING(DeletionDist), LSTRING(DeletionDistDesc)],
     _category,
     [25, 20000, 200, 0],
     1
@@ -211,7 +211,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(cycleLength),
     "LIST",
-    ["Spawn check interval", "Time in seconds between spawn checks"],
+    [LSTRING(CheckInterval), LSTRING(CheckIntervalDesc)],
     _category,
     [[30, 60, 120, 180, 300], ["30 seconds", "1 Minute", "2 Minutes", "3 Minutes", "5 Minutes"], 0],
     1,

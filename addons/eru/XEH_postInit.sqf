@@ -8,7 +8,7 @@ if !(isServer) exitWith {};
 
 [
     "eru_menu",
-    "Add lithium battery to ERU",
+    localize ECSTRING(common,ERUActionAddBattery),
     {
         [[QCLASS(lithiumBattery), QCLASS(eru_NoBattery)]] call EFUNC(common,hasItem)
     },

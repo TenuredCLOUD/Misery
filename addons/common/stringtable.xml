@@ -43,20 +43,6 @@
             <Japanese>レシピ:</Japanese>
             <Turkish>Tarifler:</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Common_SmithingAnvil">
-            <English>Smithing Anvil</English>
-            <Czech>Kovářská kovadlina</Czech>
-            <French>Enclume de forgeron</French>
-            <Spanish>Yunque de herrería</Spanish>
-            <Italian>Incudine da fabbro</Italian>
-            <Polish>Kowadło kowalskie</Polish>
-            <Portuguese>Bigorna de ferreiro</Portuguese>
-            <Russian>Кузнечная наковальня</Russian>
-            <German>Schmiedeamboss</German>
-            <Korean>대장간 모역</Korean>
-            <Japanese>鍛冶屋の金床</Japanese>
-            <Turkish>Demirci Örsü</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Common_Exit">
             <English>Exit</English>
             <Czech>Odejít</Czech>
@@ -939,6 +925,188 @@
             <Japanese>PINは数字で入力してください...</Japanese>
             <Turkish>PIN bir sayı olmalıdır...</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Common_NoLithiumBatteries">
+            <English>You don't have any lithium batteries...</English>
+            <Czech>Nemáte žádné lithiové baterie...</Czech>
+            <French>Vous n'avez pas de piles au lithium...</French>
+            <Spanish>No tienes baterías de litio...</Spanish>
+            <Italian>Non hai batterie al litio...</Italian>
+            <Polish>Nie masz baterii litowych...</Polish>
+            <Portuguese>Você não tem baterias de lítio...</Portuguese>
+            <Russian>У вас нет литиевых батареек...</Russian>
+            <German>Du hast keine Lithium-Batterien...</German>
+            <Korean>리튬 배터리가 없습니다...</Korean>
+            <Japanese>リチウム電池を持っていません...</Japanese>
+            <Turkish>Hiç lityum pilin yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_NoERUNeedsBatteries">
+            <English>You don't have an ERU that needs batteries...</English>
+            <Czech>Nemáte ERU, která by potřebovala baterie...</Czech>
+            <French>Vous n'avez pas d'ERU nécessitant des piles...</French>
+            <Spanish>No tienes un ERU que necesite baterías...</Spanish>
+            <Italian>Non hai un ERU che necessiti di batterie...</Italian>
+            <Polish>Nie masz ERU wymagającego baterii...</Polish>
+            <Portuguese>Você não tem um ERU que precise de baterias...</Portuguese>
+            <Russian>У вас нет ERU, требующего батареек...</Russian>
+            <German>Du hast kein ERU, das Batterien benötigt...</German>
+            <Korean>배터리가 필요한 ERU가 없습니다...</Korean>
+            <Japanese>電池が必要なERUを持っていません...</Japanese>
+            <Turkish>Pile ihtiyacı olan bir ERU'n yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_AddBatteryToERU">
+            <English>You add a lithium battery to your ERU</English>
+            <Czech>Přidali jste lithiovou baterii do ERU</Czech>
+            <French>Vous ajoutez une pile au lithium à votre ERU</French>
+            <Spanish>Añades una batería de litio a tu ERU</Spanish>
+            <Italian>Hai aggiunto una batteria al litio al tuo ERU</Italian>
+            <Polish>Dodajesz baterię litową do ERU</Polish>
+            <Portuguese>Você adiciona uma bateria de lítio ao seu ERU</Portuguese>
+            <Russian>Вы вставили литиевую батарейку в ERU</Russian>
+            <German>Du legst eine Lithium-Batterie in dein ERU ein</German>
+            <Korean>ERU에 리튬 배터리를 추가합니다</Korean>
+            <Japanese>ERUにリチウム電池を追加しました</Japanese>
+            <Turkish>ERU'na lityum pil ekledin</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_AirLabel">
+            <English>AIR:</English>
+            <Czech>VZDUCH:</Czech>
+            <French>AIR :</French>
+            <Spanish>AIRE:</Spanish>
+            <Italian>ARIA:</Italian>
+            <Polish>POWIETRZE:</Polish>
+            <Portuguese>AR:</Portuguese>
+            <Russian>ВОЗДУХ:</Russian>
+            <German>LUFT:</German>
+            <Korean>대기:</Korean>
+            <Japanese>空気:</Japanese>
+            <Turkish>HAVA:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_SeaLabel">
+            <English>SEA:</English>
+            <Czech>MOŘE:</Czech>
+            <French>MER :</French>
+            <Spanish>MAR:</Spanish>
+            <Italian>MARE:</Italian>
+            <Polish>MORZE:</Polish>
+            <Portuguese>MAR:</Portuguese>
+            <Russian>МОРЕ:</Russian>
+            <German>MEER:</German>
+            <Korean>해수:</Korean>
+            <Japanese>海水:</Japanese>
+            <Turkish>DENİZ:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_ExposureLabel">
+            <English>EXPOSURE:</English>
+            <Czech>EXPOZICE:</Czech>
+            <French>EXPOSITION :</French>
+            <Spanish>EXPOSICIÓN:</Spanish>
+            <Italian>ESPOSIZIONE:</Italian>
+            <Polish>EKSPOZYCJA:</Polish>
+            <Portuguese>EXPOSIÇÃO:</Portuguese>
+            <Russian>ОБЛУЧЕНИЕ:</Russian>
+            <German>EXPOSITION:</German>
+            <Korean>노출:</Korean>
+            <Japanese>露出:</Japanese>
+            <Turkish>MARUZİYET:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_CompassLabel">
+            <English>COMPASS:</English>
+            <Czech>KOMPAS:</Czech>
+            <French>BOUSSOLE :</French>
+            <Spanish>BRÚJULA:</Spanish>
+            <Italian>BUSSOLA:</Italian>
+            <Polish>KOMPAS:</Polish>
+            <Portuguese>BÚSSOLA:</Portuguese>
+            <Russian>КОМПАС:</Russian>
+            <German>KOMPASS:</German>
+            <Korean>나침반:</Korean>
+            <Japanese>コンパス:</Japanese>
+            <Turkish>PUSULA:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_NoData">
+            <English>* NO DATA *</English>
+            <Czech>* ŽÁDNÁ DATA *</Czech>
+            <French>* AUCUNE DONNÉE *</French>
+            <Spanish>* SIN DATOS *</Spanish>
+            <Italian>* NESSUN DATO *</Italian>
+            <Polish>* BRAK DANYCH *</Polish>
+            <Portuguese>* SEM DADOS *</Portuguese>
+            <Russian>* НЕТ ДАННЫХ *</Russian>
+            <German>* KEINE DATEN *</German>
+            <Korean>* 데이터 없음 *</Korean>
+            <Japanese>* データなし *</Japanese>
+            <Turkish>* VERİ YOK *</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_ERUActionAddBattery">
+            <English>Add lithium battery to ERU</English>
+            <Czech>Přidat lithiovou baterii do ERU</Czech>
+            <French>Ajouter une pile au lithium à l'ERU</French>
+            <Spanish>Añadir batería de litio al ERU</Spanish>
+            <Italian>Aggiungi batteria al litio all'ERU</Italian>
+            <Polish>Dodaj baterię litową do ERU</Polish>
+            <Portuguese>Adicionar bateria de lítio ao ERU</Portuguese>
+            <Russian>Добавить литиевую батарейку в ERU</Russian>
+            <German>Lithium-Batterie zum ERU hinzufügen</German>
+            <Korean>ERU에 리튬 배터리 추가</Korean>
+            <Japanese>ERUにリチウム電池を追加</Japanese>
+            <Turkish>ERU'ya lityum pil ekle</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_ERUActionToggleERU">
+            <English>Toggle ERU</English>
+            <Czech>Přepnout ERU</Czech>
+            <French>Basculer l'ERU</French>
+            <Spanish>Alternar ERU</Spanish>
+            <Italian>Attiva/Disattiva ERU</Italian>
+            <Polish>Przełącz ERU</Polish>
+            <Portuguese>Alternar ERU</Portuguese>
+            <Russian>Переключить ERU</Russian>
+            <German>ERU umschalten</German>
+            <Korean>ERU 토글</Korean>
+            <Japanese>ERUの切り替え</Japanese>
+            <Turkish>ERU'yu Aç/Kapat</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_ERUCompassSetting">
+            <English>Compass Setting</English>
+            <Czech>Nastavení kompasu</Czech>
+            <French>Réglage de la boussole</French>
+            <Spanish>Ajuste de brújula</Spanish>
+            <Italian>Impostazione bussola</Italian>
+            <Polish>Ustawienia kompasu</Polish>
+            <Portuguese>Configuração da Bússola</Portuguese>
+            <Russian>Настройка компаса</Russian>
+            <German>Kompass-Einstellung</German>
+            <Korean>나침반 설정</Korean>
+            <Japanese>コンパス設定</Japanese>
+            <Turkish>Pusula Ayarı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_ERUTempEnv">
+            <English>Temperature Readings (Environment)</English>
+            <Czech>Měření teploty (prostředí)</Czech>
+            <French>Lectures de température (environnement)</French>
+            <Spanish>Lecturas de temperatura (entorno)</Spanish>
+            <Italian>Letture temperatura (ambiente)</Italian>
+            <Polish>Odczyty temperatury (otoczenie)</Polish>
+            <Portuguese>Leituras de Temperatura (Ambiente)</Portuguese>
+            <Russian>Показания температуры (среда)</Russian>
+            <German>Temperaturmesswerte (Umgebung)</German>
+            <Korean>온도 측정 (환경)</Korean>
+            <Japanese>温度測定（環境）</Japanese>
+            <Turkish>Sıcaklık Okumaları (Ortam)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_ERUTempExp">
+            <English>Temperature Readings (Exposure)</English>
+            <Czech>Měření teploty (expozice)</Czech>
+            <French>Lectures de température (exposition)</French>
+            <Spanish>Lecturas de temperatura (exposición)</Spanish>
+            <Italian>Letture temperatura (esposizione)</Italian>
+            <Polish>Odczyty temperatury (ekspozycja)</Polish>
+            <Portuguese>Leituras de Temperatura (Exposição)</Portuguese>
+            <Russian>Показания температуры (воздействие)</Russian>
+            <German>Temperaturmesswerte (Exposition)</German>
+            <Korean>온도 측정 (노출)</Korean>
+            <Japanese>温度測定（露出）</Japanese>
+            <Turkish>Sıcaklık Okumaları (Maruziyet)</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Common_CantSleepFear">
             <English>You are tormented by fear, and sleep is a distant memory. You hallucinate horrors that haunt you, and feel sensations that terrify you. You are descending into madness…</English>
             <Czech>Trápí vás strach a spánek je jen vzdálenou vzpomínkou. Máte halucinace, které vás pronásledují, a cítíte pocity, které vás děsí. Propadáte se do šílenství...</Czech>
@@ -1218,48 +1386,6 @@
             <Korean>나무 통나무가 없는데...</Korean>
             <Japanese>木の丸太がないじゃないか...。</Japanese>
             <Turkish>Hiç tahta kütüğün yok...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_RecruitUnit">
-            <English>Recruit %1 (%2 %3)</English>
-            <Czech>Rekrutace %1 (%2 %3)</Czech>
-            <French>Recruter %1 (%2 %3)</French>
-            <Spanish>Reclutar %1 (%2 %3)</Spanish>
-            <Italian>Reclutamento %1 (%2 %3)</Italian>
-            <Polish>Rekrutacja %1 (%2 %3)</Polish>
-            <Portuguese>Recrutamento %1 (%2 %3)</Portuguese>
-            <Russian>Набирайте %1 (%2 %3)</Russian>
-            <German>Rekrutieren %1 (%2 %3)</German>
-            <Korean>모집 %1 (%2 %3)</Korean>
-            <Japanese>リクルート %1 (%2 %3)</Japanese>
-            <Turkish>İşe Alım %1 (%2 %3)</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_RecruitUnit_Fail">
-            <English>You don't have enough money to recruit %1</English>
-            <Czech>Nemáte dostatek peněz na rekrutaci %1</Czech>
-            <French>Vous n'avez pas assez d'argent pour recruter %1</French>
-            <Spanish>No tienes suficiente dinero para contratar %1</Spanish>
-            <Italian>Non avete abbastanza soldi per reclutare %1</Italian>
-            <Polish>Nie masz wystarczająco dużo pieniędzy na rekrutację %1</Polish>
-            <Portuguese>Você não tem dinheiro suficiente para recrutar %1</Portuguese>
-            <Russian>У вас не хватает денег на рекрутинг %1</Russian>
-            <German>Sie haben nicht genug Geld, um neue Mitarbeiter einzustellen %1</German>
-            <Korean>채용할 자금이 충분하지 않습니다. %1</Korean>
-            <Japanese>採用するのに十分な資金がない %1</Japanese>
-            <Turkish>İşe almak için yeterli paranız yok %1</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_RecruitUnit_Success">
-            <English>You have recruited %1 for %2 %3</English>
-            <Czech>Rekrutovali jste %1 za %2 %3</Czech>
-            <French>Vous avez recruté %1 pour %2 %3</French>
-            <Spanish>Ha contratado a %1 para %2 %3</Spanish>
-            <Italian>Avete reclutato %1 per %2 %3</Italian>
-            <Polish>Zwerbowałeś %1 do %2 %3</Polish>
-            <Portuguese>Você recrutou %1 para %2 %3</Portuguese>
-            <Russian>Вы набрали %1 для %2 %3</Russian>
-            <German>Sie haben %1 rekrutiert für %2 %3</German>
-            <Korean>%1을(를) 채용했습니다. %2 %3</Korean>
-            <Japanese>あなたは %1 を採用した。 %2 %3</Japanese>
-            <Turkish>%1 için işe aldınız %2 %3</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_ReqRefuel">
             <English>Request refuel</English>
@@ -1652,20 +1778,6 @@
             <Korean>아티팩트 저장</Korean>
             <Japanese>ストアアーティファクト</Japanese>
             <Turkish>Store Artifact</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_UseAnvil">
-            <English>Use Anvil</English>
-            <Czech>Použití kovadliny</Czech>
-            <French>Utiliser l'enclume</French>
-            <Spanish>Usar yunque</Spanish>
-            <Italian>Utilizzare l'incudine</Italian>
-            <Polish>Użyj kowadła</Polish>
-            <Portuguese>Usar bigorna</Portuguese>
-            <Russian>Используйте наковальню</Russian>
-            <German>Amboss verwenden</German>
-            <Korean>모루 사용</Korean>
-            <Japanese>アンビルを使う</Japanese>
-            <Turkish>Örs kullanın</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_UseFire">
             <English>Use Fire</English>
