@@ -44,10 +44,10 @@
     private _index = 0;
 
     if (_resupplyPrice isEqualTo -1) then {
-        _index = _list lbAdd "This vehicle cannot be resupplied...";
+        _index = _list lbAdd localize LSTRING(CannotResupply);
         [982383, [1600], false] call EFUNC(common,displayShowControls);
     } else {
-        _index = _list lbAdd format ["Resupply (%1)", _formattedPrice];
+        _index = _list lbAdd format [localize LSTRING(ActionName), _formattedPrice];
     };
 }, []] call CBA_fnc_waitUntilAndExecute;
 

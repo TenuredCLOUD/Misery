@@ -48,7 +48,7 @@ private _repairsInterrupt = _dialog displayAddEventHandler ["KeyDown", {
 }];
 
 if (_funds < _repairPrice) exitWith {
-    ctrlSetText [1001, "You cannot afford this!"];
+    ctrlSetText [1001, localize ECSTRING(common,TooExpensive)];
     [982386, [1600, 1601], true] call EFUNC(common,displayShowControls);
     player setVariable [QCLASS(processRepairs), nil];
     _dialog displayRemoveEventHandler ["KeyDown", _repairsInterrupt];
@@ -81,7 +81,7 @@ private _fundsToDeduct = _repairPrice;
     if (_funds < _fundsToDeduct) exitWith {
         player setVariable [QCLASS(processRepairs), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _repairsInterrupt];
-        ctrlSetText [1001, "You cannot afford this!"];
+        ctrlSetText [1001, localize ECSTRING(common,TooExpensive)];
         [982386, [1600, 1601], true] call EFUNC(common,displayShowControls);
         _handle call CBA_fnc_removePerFrameHandler;
     };

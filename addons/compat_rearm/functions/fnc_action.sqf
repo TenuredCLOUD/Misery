@@ -20,11 +20,11 @@ if !(call FUNC(checkAreas)) exitWith {
 
 [
     "rearm_menu",
-    localize ECSTRING(common,ReqResupply),
+    localize LSTRING(ReqResupply),
     {GVAR(areas) findIf {player inArea _x} isNotEqualTo -1},
     {
-    [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-    createDialog QCLASS(rearmShop_ui);
+        [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
+        createDialog QCLASS(rearmShop_ui);
     },
     "",
     "",

@@ -13,7 +13,7 @@ class CLASS(rearmShop_ui) {
         };
         class CLASS(rearmShop_prompt): RscText {
             idc = -1;
-            text = ECSTRING(common,VehicleResupply);
+            text = ECSTRING(compat_rearm,VehicleResupply);
             x = 1.6 * GUI_GRID_W + GUI_GRID_X;
             y = 0.24 * GUI_GRID_H + GUI_GRID_Y;
             w = 20.5 * GUI_GRID_W;

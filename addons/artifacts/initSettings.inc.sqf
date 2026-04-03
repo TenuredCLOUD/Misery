@@ -3,7 +3,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(debug),
     "CHECKBOX",
-    ["Enable artifact spawns debugging", "Enable or disable artifact debugging"],
+    [LSTRING(DebugEnable), LSTRING(DebugEnableDesc)],
     _category,
     false,
     1
@@ -12,7 +12,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(areas),
     "EDITBOX",
-    ["Artifact spawn Areas", "ELLIPSE or RECTANGLE marker names covering the artifact spawn areas as strings ['Artifact_spawn_1', 'Artifact_spawn_2']"],
+    [LSTRING(SpawnAreas), LSTRING(SpawnAreasDesc)],
     _category,
     "[]",
     1

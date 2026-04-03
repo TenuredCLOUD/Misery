@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Cognito">
+        <Key ID="STR_MISERY_Cognito_Cognitohazards">
+            <English>Cognitohazards</English>
+            <Czech>Kognitivní hrozby</Czech>
+            <French>Cognitohazards</French>
+            <Spanish>Cognitopeligros</Spanish>
+            <Italian>Cognitopericoli</Italian>
+            <Polish>Zagrożenia poznawcze</Polish>
+            <Portuguese>Cognitoperigos</Portuguese>
+            <Russian>Когнитивные угрозы</Russian>
+            <German>Cognitohazards</German>
+            <Korean>인지재해</Korean>
+            <Japanese>認識災害</Japanese>
+            <Turkish>Bilişsel Tehlikeler</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Cognito_EnableAudio">
+            <English>Enable audio based Cognitohazard zones?</English>
+            <Czech>Povolit zóny kognitivních hrozeb založené na zvuku?</Czech>
+            <French>Activer les zones de cognitohazard basées sur l'audio ?</French>
+            <Spanish>¿Habilitar zonas de cognitopeligro basadas en audio?</Spanish>
+            <Italian>Abilitare zone di cognitopericolo basate sull'audio?</Italian>
+            <Polish>Włączyć strefy zagrożeń poznawczych opartych na dźwięku?</Polish>
+            <Portuguese>Ativar zonas de cognitoperigo baseadas em áudio?</Portuguese>
+            <Russian>Включить зоны когнитивных угроз на основе звука?</Russian>
+            <German>Audiobasierte Cognitohazard-Zonen aktivieren?</German>
+            <Korean>오디오 기반 인지재해 구역을 활성화하시겠습니까?</Korean>
+            <Japanese>オーディオベースの認識災害ゾーンを有効にしますか？</Japanese>
+            <Turkish>Ses tabanlı Bilişsel Tehlike bölgeleri etkinleştirilsin mi?</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Cognito_Areas">
+            <English>Cognitohazardous Areas</English>
+            <Czech>Oblasti s kognitivní hrozbou</Czech>
+            <French>Zones cognitohazardous</French>
+            <Spanish>Áreas cognitopeligrosas</Spanish>
+            <Italian>Aree cognitopericolose</Italian>
+            <Polish>Obszary zagrożenia poznawczego</Polish>
+            <Portuguese>Áreas de cognitoperigo</Portuguese>
+            <Russian>Зоны когнитивной опасности</Russian>
+            <German>Cognitohazard-Gebiete</German>
+            <Korean>인지재해 구역</Korean>
+            <Japanese>認識災害エリア</Japanese>
+            <Turkish>Bilişsel Tehlike Alanları</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Cognito_AreasDesc">
+            <English>ELLIPSE or RECTANGLE marker names covering the Cognitohazard area as strings ['CognitoHaz_1', 'CognitoHaz_2']</English>
+            <Czech>Názvy markerů ELLIPSE nebo RECTANGLE pokrývající oblast kognitivní hrozby jako řetězce ['CognitoHaz_1', 'CognitoHaz_2']</Czech>
+            <French>Noms des marqueurs ELLIPSE ou RECTANGLE couvrant la zone de cognitohazard sous forme de chaînes ['CognitoHaz_1', 'CognitoHaz_2']</French>
+            <Spanish>Nombres de marcadores ELLIPSE o RECTANGLE que cubren el área de cognitopeligro como cadenas ['CognitoHaz_1', 'CognitoHaz_2']</Spanish>
+            <Italian>Nomi dei marcatori ELLIPSE o RECTANGLE che coprono l'area di cognitopericolo come stringhe ['CognitoHaz_1', 'CognitoHaz_2']</Italian>
+            <Polish>Nazwy markerów ELLIPSE lub RECTANGLE pokrywające obszar zagrożenia poznawczego jako ciągi znaków ['CognitoHaz_1', 'CognitoHaz_2']</Polish>
+            <Portuguese>Nomes dos marcadores ELLIPSE ou RECTANGLE cobrindo a área de cognitoperigo como strings ['CognitoHaz_1', 'CognitoHaz_2']</Portuguese>
+            <Russian>Имена маркеров ELLIPSE или RECTANGLE, охватывающие зону когнитивной опасности, в виде строк ['CognitoHaz_1', 'CognitoHaz_2']</Russian>
+            <German>ELLIPSE- oder RECTANGLE-Markernamen, die das Cognitohazard-Gebiet abdecken, als Strings ['CognitoHaz_1', 'CognitoHaz_2']</German>
+            <Korean>인지재해 구역을 포함하는 ELLIPSE 또는 RECTANGLE 마커 이름 (문자열 형식) ['CognitoHaz_1', 'CognitoHaz_2']</Korean>
+            <Japanese>認識災害エリアをカバーする ELLIPSE または RECTANGLE マーカーの名前。文字列形式 ['CognitoHaz_1', 'CognitoHaz_2']</Japanese>
+            <Turkish>Bilişsel Tehlike alanını kapsayan dize biçimindeki ELLIPSE veya RECTANGLE işaretçi adları ['CognitoHaz_1', 'CognitoHaz_2']</Turkish>
+        </Key>
+    </Package>
+</Project>

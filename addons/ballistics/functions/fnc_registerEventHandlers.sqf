@@ -29,7 +29,7 @@ params ["_classname"];
             _unit call FUNC(destroy);
             if (isPlayer _instigator) then {
                 [_unit] call EFUNC(common,getObjectData) params ["_displayName"];
-                private _text = format [localize ECSTRING(common,AnimalObliterated), _displayName];
+                private _text = format [localize LSTRING(AnimalObliterated), _displayName];
                 [QEGVAR(common,titleText), _text, _instigator] call CBA_fnc_targetEvent;
             };
         };

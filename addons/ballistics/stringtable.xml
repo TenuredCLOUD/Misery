@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Ballistics">
+        <Key ID="STR_MISERY_Ballistics_AnimalObliterated">
+            <English>The %1 was obliterated...</English>
+            <Czech>%1 bylo vymazáno...</Czech>
+            <French>Le %1 a été oblitéré...</French>
+            <Spanish>El %1 fue obliterado...</Spanish>
+            <Italian>Il %1 è stato cancellato...</Italian>
+            <Polish>%1 został zatarty...</Polish>
+            <Portuguese>O %1 foi obliterado...</Portuguese>
+            <Russian>%1 был уничтожен...</Russian>
+            <German>Der %1 wurde ausgelöscht...</German>
+            <Korean>%1 이(가) 지워졌습니다...</Korean>
+            <Japanese>%1 が消された...</Japanese>
+            <Turkish>%1 yok edildi...</Turkish>
+        </Key>
+    </Package>
+</Project>

@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="Misery_Main_Translations">
     <Package name="Misery_MainSTR_Language_Compat">
-        <Key ID="STR_MISERY_Common_AnimalObliterated">
-            <English>The %1 was obliterated...</English>
-            <Czech>%1 bylo vymazáno...</Czech>
-            <French>Le %1 a été oblitéré...</French>
-            <Spanish>El %1 fue obliterado...</Spanish>
-            <Italian>Il %1 è stato cancellato...</Italian>
-            <Polish>%1 został zatarty...</Polish>
-            <Portuguese>O %1 foi obliterado...</Portuguese>
-            <Russian>%1 был уничтожен...</Russian>
-            <German>Der %1 wurde ausgelöscht...</German>
-            <Korean>%1 이(가) 지워졌습니다...</Korean>
-            <Japanese>%1 が消された...</Japanese>
-            <Turkish>%1 yok edildi...</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Common_Cancel">
             <English>Cancel</English>
             <Czech>Zrušit</Czech>
@@ -99,20 +85,6 @@
             <Japanese>製作</Japanese>
             <Turkish>Zanaat</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Common_VehicleResupply">
-            <English>Vehicle Resupply</English>
-            <Czech>Doplnění zásob vozidla</Czech>
-            <French>Ravitaillement du véhicule</French>
-            <Spanish>Reabastecimiento de vehículo</Spanish>
-            <Italian>Rifornimento veicolo</Italian>
-            <Polish>Zaopatrzenie pojazdu</Polish>
-            <Portuguese>Reabastecimento do veículo</Portuguese>
-            <Russian>Пополнение запасов транспорта</Russian>
-            <German>Fahrzeug-Aufstockung</German>
-            <Korean>차량 보급</Korean>
-            <Japanese>車両補給</Japanese>
-            <Turkish>Araç İkmali</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Common_Cook">
             <English>Cook</English>
             <Czech>Vařit</Czech>
@@ -126,6 +98,20 @@
             <Korean>요리하기</Korean>
             <Japanese>料理する</Japanese>
             <Turkish>Pişir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_TooExpensive">
+            <English>You cannot afford this!</English>
+            <Czech>Tohle si nemůžete dovolit!</Czech>
+            <French>Vous n'avez pas les moyens !</French>
+            <Spanish>¡No puedes permitirte esto!</Spanish>
+            <Italian>Non puoi permettertelo!</Italian>
+            <Polish>Nie stać Cię na to!</Polish>
+            <Portuguese>Você não tem dinheiro para isso!</Portuguese>
+            <Russian>Вы не можете себе это позволить!</Russian>
+            <German>Das kannst du dir nicht leisten!</German>
+            <Korean>이것을 지불할 여유가 없습니다!</Korean>
+            <Japanese>これを購入する余裕がありません！</Japanese>
+            <Turkish>Buna gücünüz yetmez!</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_CookPrompt">
             <English>What would you like to cook?</English>
@@ -1414,20 +1400,6 @@
             <Korean>수리 요청하기</Korean>
             <Japanese>修理を依頼する</Japanese>
             <Turkish>Onarım talep edin</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_ReqResupply">
-            <English>Request resupply</English>
-            <Czech>Žádost o doplnění zásob</Czech>
-            <French>Demande de réapprovisionnement</French>
-            <Spanish>Solicitar reabastecimiento</Spanish>
-            <Italian>Richiesta di rifornimento</Italian>
-            <Polish>Żądanie uzupełnienia zapasów</Polish>
-            <Portuguese>Solicitação de reabastecimento</Portuguese>
-            <Russian>Запрос на пополнение запасов</Russian>
-            <German>Nachschub anfordern</German>
-            <Korean>재보급 요청</Korean>
-            <Japanese>補給を要請する</Japanese>
-            <Turkish>İkmal talebi</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_ReqTreatment">
             <English>Request treatment</English>

@@ -51,7 +51,7 @@ private _sellPrice = [_basePrice, _itemData select 2, _minCostFactor, _maxCostFa
 switch (true) do {
     case (_buttonAction isEqualTo "Buy"): {
         if (_funds < _buyPrice) exitWith {
-            ctrlSetText [1001, "You cannot afford this!"];
+            ctrlSetText [1001, localize ECSTRING(common,TooExpensive)];
         };
         if (_stock isEqualTo 0) exitWith {
             ctrlSetText [1001, format ["Out of stock: %1", [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck))]];

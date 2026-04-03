@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Chemical">
+        <Key ID="STR_MISERY_Chemical_ChemicalAreas">
+            <English>Chemical Areas</English>
+            <Czech>Chemické oblasti</Czech>
+            <French>Zones chimiques</French>
+            <Spanish>Áreas químicas</Spanish>
+            <Italian>Aree chimiche</Italian>
+            <Polish>Obszary chemiczne</Polish>
+            <Portuguese>Áreas químicas</Portuguese>
+            <Russian>Химические зоны</Russian>
+            <German>Chemische Gebiete</German>
+            <Korean>화학 구역</Korean>
+            <Japanese>化学エリア</Japanese>
+            <Turkish>Kimyasal Alanlar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Chemical_ChemicalAreasDesc">
+            <English>ELLIPSE or RECTANGLE marker names covering the radioactive area as strings ['Chemical_1', 'Chemical_2']</English>
+            <Czech>Názvy markerů ELLIPSE nebo RECTANGLE pokrývající radioaktivní oblast jako řetězce ['Chemical_1', 'Chemical_2']</Czech>
+            <French>Noms des marqueurs ELLIPSE ou RECTANGLE couvrant la zone radioactive sous forme de chaînes ['Chemical_1', 'Chemical_2']</French>
+            <Spanish>Nombres de marcadores ELLIPSE o RECTANGLE que cubren el área radiactiva como cadenas ['Chemical_1', 'Chemical_2']</Spanish>
+            <Italian>Nomi dei marcatori ELLIPSE o RECTANGLE che coprono l'area radioattiva come stringhe ['Chemical_1', 'Chemical_2']</Italian>
+            <Polish>Nazwy markerów ELLIPSE lub RECTANGLE pokrywające obszar radioaktywny jako ciągi znaków ['Chemical_1', 'Chemical_2']</Polish>
+            <Portuguese>Nomes dos marcadores ELLIPSE ou RECTANGLE cobrindo a área radioativa como strings ['Chemical_1', 'Chemical_2']</Portuguese>
+            <Russian>Имена маркеров ELLIPSE или RECTANGLE, охватывающие радиоактивную зону, в виде строк ['Chemical_1', 'Chemical_2']</Russian>
+            <German>ELLIPSE- oder RECTANGLE-Markernamen, die das radioaktive Gebiet abdecken, als Strings ['Chemical_1', 'Chemical_2']</German>
+            <Korean>방사능 구역을 포함하는 ELLIPSE 또는 RECTANGLE 마커 이름 (문자열 형식) ['Chemical_1', 'Chemical_2']</Korean>
+            <Japanese>放射能エリアをカバーする ELLIPSE または RECTANGLE マーカーの名前。文字列形式 ['Chemical_1', 'Chemical_2']</Japanese>
+            <Turkish>Radyoaktif alanı kapsayan dize biçimindeki ELLIPSE veya RECTANGLE işaretçi adları ['Chemical_1', 'Chemical_2']</Turkish>
+        </Key>
+
+        <Key ID="STR_MISERY_Chemical_InitialColor">
+            <English>Chemical areas initial color</English>
+            <Czech>Počáteční barva chemických oblastí</Czech>
+            <French>Couleur initiale des zones chimiques</French>
+            <Spanish>Color inicial de las áreas químicas</Spanish>
+            <Italian>Colore iniziale delle aree chimiche</Italian>
+            <Polish>Początkowy kolor obszarów chemicznych</Polish>
+            <Portuguese>Cor inicial das áreas químicas</Portuguese>
+            <Russian>Начальный цвет химических зон</Russian>
+            <German>Ausgangsfarbe der chemischen Gebiete</German>
+            <Korean>화학 구역 초기 색상</Korean>
+            <Japanese>化学エリアの初期色</Japanese>
+            <Turkish>Kimyasal alanların başlangıç rengi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Chemical_InitialColorDesc">
+            <English>Initial starting color of chemical zones - RGBA format</English>
+            <Czech>Počáteční barva chemických zón - formát RGBA</Czech>
+            <French>Couleur de départ initiale des zones chimiques - format RGBA</French>
+            <Spanish>Color inicial de las zonas químicas - formato RGBA</Spanish>
+            <Italian>Colore iniziale delle zone chimiche - formato RGBA</Italian>
+            <Polish>Początkowy kolor stref chemicznych - format RGBA</Polish>
+            <Portuguese>Cor inicial das zonas químicas - formato RGBA</Portuguese>
+            <Russian>Начальный цвет химических зон - формат RGBA</Russian>
+            <German>Anfängliche Startfarbe der chemischen Zonen - RGBA-Format</German>
+            <Korean>화학 구역의 초기 시작 색상 - RGBA 형식</Korean>
+            <Japanese>化学ゾーンの初期開始色 - RGBA形式</Japanese>
+            <Turkish>Kimyasal bölgelerin başlangıç rengi - RGBA formatı</Turkish>
+        </Key>
+
+        <Key ID="STR_MISERY_Chemical_FinalColor">
+            <English>Chemical areas final color</English>
+            <Czech>Konečná barva chemických oblastí</Czech>
+            <French>Couleur finale des zones chimiques</French>
+            <Spanish>Color final de las áreas químicas</Spanish>
+            <Italian>Colore finale delle aree chimiche</Italian>
+            <Polish>Finalny kolor obszarów chemicznych</Polish>
+            <Portuguese>Cor final das áreas químicas</Portuguese>
+            <Russian>Конечный цвет химических зон</Russian>
+            <German>Endfarbe der chemischen Gebiete</German>
+            <Korean>화학 구역 최종 색상</Korean>
+            <Japanese>化学エリアの最終色</Japanese>
+            <Turkish>Kimyasal alanların final rengi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Chemical_FinalColorDesc">
+            <English>Final color of chemical zones - RGBA format</English>
+            <Czech>Konečná barva chemických zón - formát RGBA</Czech>
+            <French>Couleur finale des zones chimiques - format RGBA</French>
+            <Spanish>Color final de las zonas químicas - formato RGBA</Spanish>
+            <Italian>Colore finale delle zone chimiche - formato RGBA</Italian>
+            <Polish>Finalny kolor stref chemicznych - format RGBA</Polish>
+            <Portuguese>Cor final das zonas químicas - formato RGBA</Portuguese>
+            <Russian>Конечный цвет химических зон - формат RGBA</Russian>
+            <German>Endfarbe der chemischen Zonen - RGBA-Format</German>
+            <Korean>화학 구역의 최종 색상 - RGBA 형식</Korean>
+            <Japanese>化学ゾーンの最終色 - RGBA形式</Japanese>
+            <Turkish>Kimyasal bölgelerin final rengi - RGBA formatı</Turkish>
+        </Key>
+    </Package>
+</Project>
