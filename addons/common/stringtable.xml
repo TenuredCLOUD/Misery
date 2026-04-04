@@ -57,6 +57,48 @@
             <Japanese>購入</Japanese>
             <Turkish>Satın Al</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Common_NoRecipeSelect">
+            <English>No recipe selected...</English>
+            <Czech>Není vybrán žádný recept...</Czech>
+            <French>Aucune recette sélectionnée...</French>
+            <Spanish>Ninguna receta seleccionada...</Spanish>
+            <Italian>Nessuna ricetta selezionata...</Italian>
+            <Polish>Nie wybrano przepisu...</Polish>
+            <Portuguese>Nenhuma receita selecionada...</Portuguese>
+            <Russian>Рецепт не выбран...</Russian>
+            <German>Kein Rezept ausgewählt...</German>
+            <Korean>선택된 레시피가 없습니다...</Korean>
+            <Japanese>レシピが選択されていません...</Japanese>
+            <Turkish>Tarif seçilmedi...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_NoRecipeMatch">
+            <English>No matching recipe found.</English>
+            <Czech>Nebyl nalezen žádný odpovídající recept.</Czech>
+            <French>Aucune recette correspondante trouvée.</French>
+            <Spanish>No se encontró ninguna receta coincidente.</Spanish>
+            <Italian>Nessuna ricetta corrispondente trovata.</Italian>
+            <Polish>Nie znaleziono pasującego przepisu.</Polish>
+            <Portuguese>Nenhuma receita correspondente encontrada.</Portuguese>
+            <Russian>Подходящий рецепт не найден.</Russian>
+            <German>Kein passendes Rezept gefunden.</German>
+            <Korean>일치하는 레시피를 찾을 수 없습니다.</Korean>
+            <Japanese>一致するレシピが見つかりません。</Japanese>
+            <Turkish>Eşleşen tarif bulunamadı.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_MissingItems">
+            <English>You don’t have the required items...</English>
+            <Czech>Nemáte požadované položky...</Czech>
+            <French>Vous n'avez pas les objets requis...</French>
+            <Spanish>No tienes los objetos requeridos...</Spanish>
+            <Italian>Non hai gli oggetti necessari...</Italian>
+            <Polish>Nie masz wymaganych przedmiotów...</Polish>
+            <Portuguese>Não tens os itens necessários...</Portuguese>
+            <Russian>У вас нет необходимых предметов...</Russian>
+            <German>Du hast nicht die benötigten Gegenstände...</German>
+            <Korean>필요한 아이템이 없습니다...</Korean>
+            <Japanese>必要なアイテムを持っていません...</Japanese>
+            <Turkish>Gerekli öğelere sahip değilsiniz...</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Common_ShowRecipe">
             <English>Show Recipe</English>
             <Czech>Zobrazit recept</Czech>
@@ -85,20 +127,6 @@
             <Japanese>製作</Japanese>
             <Turkish>Zanaat</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Common_Cook">
-            <English>Cook</English>
-            <Czech>Vařit</Czech>
-            <French>Cuisiner</French>
-            <Spanish>Cocinar</Spanish>
-            <Italian>Cucina</Italian>
-            <Polish>Gotuj</Polish>
-            <Portuguese>Cozinhar</Portuguese>
-            <Russian>Приготовить</Russian>
-            <German>Kochen</German>
-            <Korean>요리하기</Korean>
-            <Japanese>料理する</Japanese>
-            <Turkish>Pişir</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Common_TooExpensive">
             <English>You cannot afford this!</English>
             <Czech>Tohle si nemůžete dovolit!</Czech>
@@ -112,20 +140,6 @@
             <Korean>이것을 지불할 여유가 없습니다!</Korean>
             <Japanese>これを購入する余裕がありません！</Japanese>
             <Turkish>Buna gücünüz yetmez!</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_CookPrompt">
-            <English>What would you like to cook?</English>
-            <Czech>Co byste chtěli uvařit?</Czech>
-            <French>Que voulez-vous cuisiner ?</French>
-            <Spanish>¿Qué te gustaría cocinar?</Spanish>
-            <Italian>Cosa ti piacerebbe cucinare?</Italian>
-            <Polish>Co chcesz ugotować?</Polish>
-            <Portuguese>O que gostaria de cozinhar?</Portuguese>
-            <Russian>Что бы вы хотели приготовить?</Russian>
-            <German>Was möchtest du kochen?</German>
-            <Korean>무엇을 요리하시겠습니까?</Korean>
-            <Japanese>何を料理しますか？</Japanese>
-            <Turkish>Ne pişirmek istersiniz?</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_CraftPrompt">
             <English>What would you like to craft?</English>
@@ -1191,20 +1205,6 @@
             <Japanese>木材を集める</Japanese>
             <Turkish>Odun toplayın</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Common_CraftingWorkbench">
-            <English>Use Workbench</English>
-            <Czech>Použití pracovního stolu</Czech>
-            <French>Utiliser l'atelier</French>
-            <Spanish>Utilizar Workbench</Spanish>
-            <Italian>Utilizzare il Workbench</Italian>
-            <Polish>Korzystanie z Workbench</Polish>
-            <Portuguese>Usar o Workbench</Portuguese>
-            <Russian>Используйте верстак</Russian>
-            <German>Workbench verwenden</German>
-            <Korean>워크벤치 사용</Korean>
-            <Japanese>ワークベンチを使う</Japanese>
-            <Turkish>Workbench Kullanın</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Common_DisplayName">
             <English>Misery</English>
             <Czech>Bída</Czech>
@@ -1764,20 +1764,6 @@
             <Korean>불 사용</Korean>
             <Japanese>火を使う</Japanese>
             <Turkish>Ateş kullan</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_UseFire_Cook">
-            <English>Cook</English>
-            <Czech>Vařit/opékat</Czech>
-            <French>Cuisiner</French>
-            <Spanish>Cocinero</Spanish>
-            <Italian>Cuoco</Italian>
-            <Polish>Kucharz</Polish>
-            <Portuguese>Cozinheiro</Portuguese>
-            <Russian>Повар</Russian>
-            <German>Kochen</German>
-            <Korean>Cook</Korean>
-            <Japanese>クック</Japanese>
-            <Turkish>Aşçı</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_UseForge">
             <English>Use Forge</English>

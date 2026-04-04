@@ -6,7 +6,7 @@ if (isServer) then {
 
         [
             "crafting_menu",
-            localize ECSTRING(common,CraftingWorkbench),
+            localize LSTRING(Action),
             {[[MACRO_CRAFTINGSTATIONS], 1.5] call EFUNC(common,nearCraftingStation)},
             {
                 [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;

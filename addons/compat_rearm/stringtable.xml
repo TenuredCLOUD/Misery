@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
-    <Package name="Rearm_Compat">
-        <Key ID="STR_MISERY_Rearm_Compat_Areas">
+    <Package name="Compat_Rearm">
+        <Key ID="STR_MISERY_Compat_Rearm_Areas">
             <English>Rearming Areas</English>
             <Czech>Oblasti přezbrojení</Czech>
             <French>Zones de réarmement</French>
@@ -15,7 +15,7 @@
             <Japanese>弾薬補給エリア</Japanese>
             <Turkish>Yeniden Mühimmatlandırma Alanları</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Rearm_Compat_AreasDesc">
+        <Key ID="STR_MISERY_Compat_Rearm_AreasDesc">
             <English>ELLIPSE or RECTANGLE marker names covering the rearming area as strings ['Rearm_1', 'Rearm_2']</English>
             <Czech>Názvy markerů ELLIPSE nebo RECTANGLE pokrývající oblast přezbrojení jako řetězce ['Rearm_1', 'Rearm_2']</Czech>
             <French>Noms des marqueurs ELLIPSE ou RECTANGLE couvrant la zone de réarmement sous forme de chaînes ['Rearm_1', 'Rearm_2']</French>
@@ -29,7 +29,7 @@
             <Japanese>弾薬補給エリアをカバーする ELLIPSE または RECTANGLE マーカーの名前。文字列形式 ['Rearm_1', 'Rearm_2']</Japanese>
             <Turkish>Yeniden mühimmatlandırma alanını kapsayan dize biçimindeki ELLIPSE veya RECTANGLE işaretçi adları ['Rearm_1', 'Rearm_2']</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Rearm_Compat_ReqResupply">
+        <Key ID="STR_MISERY_Compat_Rearm_ReqResupply">
             <English>Request resupply</English>
             <Czech>Žádost o doplnění zásob</Czech>
             <French>Demande de réapprovisionnement</French>
@@ -43,7 +43,7 @@
             <Japanese>補給を要請する</Japanese>
             <Turkish>İkmal talebi</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Rearm_Compat_NoVehicle">
+        <Key ID="STR_MISERY_Compat_Rearm_NoVehicle">
             <English>No Vehicle to Rearm...</English>
             <Czech>Žádné vozidlo k přezbrojení...</Czech>
             <French>Aucun véhicule à réarmer...</French>
@@ -57,7 +57,7 @@
             <Japanese>弾薬補給する車両がありません...</Japanese>
             <Turkish>Yeniden mühimmatlandırılacak araç yok...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Rearm_Compat_CannotResupply">
+        <Key ID="STR_MISERY_Compat_Rearm_CannotResupply">
             <English>This vehicle cannot be resupplied...</English>
             <Czech>Toto vozidlo nelze přezbrojit...</Czech>
             <French>Ce véhicule ne peut pas être réapprovisionné...</French>
@@ -71,7 +71,7 @@
             <Japanese>この車両は補給できません...</Japanese>
             <Turkish>Bu araç yeniden mühimmatlandırılamaz...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Rearm_Compat_ActionName">
+        <Key ID="STR_MISERY_Compat_Rearm_ActionName">
             <English>Resupply (%1)</English>
             <Czech>Přezbrojit (%1)</Czech>
             <French>Réapprovisionner (%1)</French>
@@ -85,7 +85,7 @@
             <Japanese>補給 (%1)</Japanese>
             <Turkish>Yeniden Mühimmatlandır (%1)</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Rearm_Compat_Interrupted">
+        <Key ID="STR_MISERY_Compat_Rearm_Interrupted">
             <English>Resupply interrupted...</English>
             <Czech>Přezbrojování přerušeno...</Czech>
             <French>Réapprovisionnement interrompu...</French>
@@ -99,7 +99,7 @@
             <Japanese>補給が中断されました...</Japanese>
             <Turkish>Yeniden mühimmatlandırma yarıda kesildi...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Rearm_Compat_ProgressStatus">
+        <Key ID="STR_MISERY_Compat_Rearm_ProgressStatus">
             <English>Resupplying...%1%2%1Progress: %3%%%1Funds:%1%4%1%5</English>
             <Czech>Přezbrojování...%1%2%1Postup: %3%%%1Finance:%1%4%1%5</Czech>
             <French>Réapprovisionnement...%1%2%1Progression : %3%%%1Fonds :%1%4%1%5</French>
@@ -113,7 +113,7 @@
             <Japanese>補給中...%1%2%1進行状況: %3%%%1資金:%1%4%1%5</Japanese>
             <Turkish>Yeniden mühimmatlandırılıyor...%1%2%1İlerleme: %3%%%1Fonlar:%1%4%1%5</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Rearm_Compat_Success">
+        <Key ID="STR_MISERY_Compat_Rearm_Success">
             <English>%1 has been fully resupplied...</English>
             <Czech>%1 byl plně přezbrojen...</Czech>
             <French>%1 a été entièrement réapprovisionné...</French>
@@ -127,7 +127,7 @@
             <Japanese>%1 の補給が完了しました...</Japanese>
             <Turkish>%1 tamamen yeniden mühimmatlandırıldı...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Rearm_Compat_NoOption">
+        <Key ID="STR_MISERY_Compat_Rearm_NoOption">
             <English>No Resupply option selected...</English>
             <Czech>Nebyla vybrána žádná možnost přezbrojení...</Czech>
             <French>Aucune option de réapprovisionnement sélectionnée...</French>
@@ -141,7 +141,7 @@
             <Japanese>補給オプションが選択されていません...</Japanese>
             <Turkish>Yeniden mühimmatlandırma seçeneği seçilmedi...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Rearm_Compat_VehicleResupply">
+        <Key ID="STR_MISERY_Compat_Rearm_VehicleResupply">
             <English>Vehicle Resupply</English>
             <Czech>Doplnění zásob vozidla</Czech>
             <French>Ravitaillement du véhicule</French>

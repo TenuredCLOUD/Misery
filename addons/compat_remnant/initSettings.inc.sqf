@@ -3,7 +3,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(enabled),
     "CHECKBOX",
-    ["Artifact drops", "Allow Phantoms to drop artifacts?"],
+    [LSTRING(Drops), LSTRING(DropsDesc)],
     _category,
     false,
     1
@@ -12,7 +12,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(dropChance),
     "SLIDER",
-    ["Artifact drop chance", "% chance per phantom kill to drop an artifact"],
+    [LSTRING(DropChance), LSTRING(DropChanceDesc)],
     _category,
     [0, 100, 50, 0],
     1

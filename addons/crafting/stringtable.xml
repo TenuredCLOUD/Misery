@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Crafting">
+        <Key ID="STR_MISERY_Crafting_Action">
+            <English>Use Workbench</English>
+            <Czech>Použití pracovního stolu</Czech>
+            <French>Utiliser l'atelier</French>
+            <Spanish>Utilizar Workbench</Spanish>
+            <Italian>Utilizzare il Workbench</Italian>
+            <Polish>Korzystanie z Workbench</Polish>
+            <Portuguese>Usar o Workbench</Portuguese>
+            <Russian>Используйте верстак</Russian>
+            <German>Workbench verwenden</German>
+            <Korean>워크벤치 사용</Korean>
+            <Japanese>ワークベンチを使う</Japanese>
+            <Turkish>Workbench Kullanın</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Crafting_Interrupted">
+            <English>Crafting interrupted...</English>
+            <Czech>Výroba přerušena...</Czech>
+            <French>Artisanat interrompu...</French>
+            <Spanish>Artesanía interrumpida...</Spanish>
+            <Italian>Creazione interrotta...</Italian>
+            <Polish>Rzemiosło przerwane...</Polish>
+            <Portuguese>Criação interrompida...</Portuguese>
+            <Russian>Cоздание прервано...</Russian>
+            <German>Herstellung unterbrochen...</German>
+            <Korean>제작이 중단되었습니다...</Korean>
+            <Japanese>クラフトが中断されました...</Japanese>
+            <Turkish>Zanaat kesintiye uğradı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Crafting_Progress">
+            <English>Crafting %1... %2%3 complete</English>
+            <Czech>Vyrábění %1... %2%3 hotovo</Czech>
+            <French>Fabrication de %1... %2%3 terminé</French>
+            <Spanish>Fabricando %1... %2%3 completado</Spanish>
+            <Italian>Creazione di %1... %2%3 completato</Italian>
+            <Polish>Wytwarzanie %1... ukończono %2%3</Polish>
+            <Portuguese>Fabricando %1... %2%3 concluído</Portuguese>
+            <Russian>Изготовление %1... %2%3 завершено</Russian>
+            <German>Stelle %1 her... %2%3 abgeschlossen</German>
+            <Korean>%1 제작 중... %2%3 완료</Korean>
+            <Japanese>%1をクラフト中... %2%3 完了</Japanese>
+            <Turkish>%1 üretiliyor... %%%2 tamamlandı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Crafting_GainXP">
+            <English>You gained %1 XP from crafting %2.</English>
+            <Czech>Získali jste %1 zkušeností za výrobu %2.</Czech>
+            <French>Vous avez gagné %1 XP en fabriquant %2.</French>
+            <Spanish>Has ganado %1 XP al fabricar %2.</Spanish>
+            <Italian>Hai guadagnato %1 XP creando %2.</Italian>
+            <Polish>Zyskałeś %1 PD za wytworzenie %2.</Polish>
+            <Portuguese>Ganhaste %1 XP ao fabricar %2.</Portuguese>
+            <Russian>Вы получили %1 опыта за изготовление %2.</Russian>
+            <German>Du hast %1 EP durch die Herstellung von %2 erhalten.</German>
+            <Korean>%2 제작을 통해 %1 XP를 획득했습니다.</Korean>
+            <Japanese>%2のクラフトにより %1 XPを獲得しました。</Japanese>
+            <Turkish>%2 üreterek %1 TP kazandınız.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Crafting_Success">
+            <English>You crafted %1 %2!</English>
+            <Czech>Vyrobil jste %1 %2!</Czech>
+            <French>Vous avez fabriqué %1 %2 !</French>
+            <Spanish>¡Has fabricado %1 %2!</Spanish>
+            <Italian>Hai creato %1 %2!</Italian>
+            <Polish>Wytworzyłeś %1 %2!</Polish>
+            <Portuguese>Tu fabricaste %1 %2!</Portuguese>
+            <Russian>Вы изготовили %1 %2!</Russian>
+            <German>Du hast %1 %2 hergestellt!</German>
+            <Korean>%1개의 %2을(를) 제작했습니다!</Korean>
+            <Japanese>%1個の%2をクラフトしました！</Japanese>
+            <Turkish>%1 adet %2 ürettiniz!</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Crafting_Required">
+            <English>Required Items:</English>
+            <Czech>Požadované položky:</Czech>
+            <French>Objets requis :</French>
+            <Spanish>Objetos requeridos:</Spanish>
+            <Italian>Oggetti necessari:</Italian>
+            <Polish>Wymagane przedmioty:</Polish>
+            <Portuguese>Itens necessários:</Portuguese>
+            <Russian>Необходимые предметы:</Russian>
+            <German>Benötigte Gegenstände:</German>
+            <Korean>필요한 아이템:</Korean>
+            <Japanese>必要なアイテム:</Japanese>
+            <Turkish>Gerekli öğeler:</Turkish>
+        </Key>
+    </Package>
+</Project>

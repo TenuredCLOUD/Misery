@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
-    <Package name="Ravage_Compat">
-        <Key ID="STR_MISERY_Ravage_Compat_AlreadyProcessed">
+    <Package name="Compat_Ravage">
+        <Key ID="STR_MISERY_Compat_Ravage_AlreadyProcessed">
             <English>This corpse is being processed already...</English>
             <Czech>Tato mrtvola je již zpracovávána...</Czech>
             <French>Ce cadavre est déjà en cours de traitement...</French>
@@ -15,7 +15,7 @@
             <Japanese>この死体はすでに処理されています...</Japanese>
             <Turkish>Bu ceset zaten işleniyor...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Ravage_Compat_StartSawing">
+        <Key ID="STR_MISERY_Compat_Ravage_StartSawing">
             <English>You start to saw the corpse...</English>
             <Czech>Začínáte řezat mrtvolu pilou...</Czech>
             <French>Vous commencez à scier le cadavre...</French>
@@ -29,7 +29,7 @@
             <Japanese>死体をのこぎりで切り始めます...</Japanese>
             <Turkish>Cesedi testereyle kesmeye başlıyorsun...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Ravage_Compat_RottenSpecimen">
+        <Key ID="STR_MISERY_Compat_Ravage_RottenSpecimen">
             <English>You collect your specimen, but the rest of the corpse is too rotten for any more specimens...</English>
             <Czech>Odebrali jste vzorek, ale zbytek mrtvoly je příliš shnilý na další vzorky...</Czech>
             <French>Vous collectez votre spécimen, mais le reste du cadavre est trop pourri pour d'autres spécimens...</French>
@@ -43,7 +43,7 @@
             <Japanese>検体を採取しましたが、死体の残りの部分は腐敗が進んでいるため、これ以上の検体採取は不可能です...</Japanese>
             <Turkish>Örneği topladın ama cesedin geri kalanı daha fazla örnek için çok çürümüş...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Ravage_Compat_StopSawing">
+        <Key ID="STR_MISERY_Compat_Ravage_StopSawing">
             <English>You stop sawing the corpse...</English>
             <Czech>Přestáváte řezat mrtvolu...</Czech>
             <French>Vous arrêtez de scier le cadavre...</French>
@@ -57,7 +57,7 @@
             <Japanese>死体をのこぎりで切るのをやめます...</Japanese>
             <Turkish>Cesedi kesmeyi bırakıyorsun...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Ravage_Compat_StartSkinning">
+        <Key ID="STR_MISERY_Compat_Ravage_StartSkinning">
             <English>You start to skin the corpse...</English>
             <Czech>Začínáte stahovat mrtvolu z kůže...</Czech>
             <French>Vous commencez à écorcher le cadavre...</French>
@@ -71,7 +71,7 @@
             <Japanese>死体の皮を剥ぎ始めます...</Japanese>
             <Turkish>Cesedi yüzmeye başlıyorsun...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Ravage_Compat_StopSkinning">
+        <Key ID="STR_MISERY_Compat_Ravage_StopSkinning">
             <English>You stop skinning the corpse...</English>
             <Czech>Přestáváte stahovat mrtvolu z kůže...</Czech>
             <French>Vous arrêtez d'écorcher le cadavre...</French>
@@ -85,7 +85,7 @@
             <Japanese>死体の皮を剥ぐのをやめます...</Japanese>
             <Turkish>Cesedi yüzmeyi bırakıyorsun...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Ravage_Compat_Infection">
+        <Key ID="STR_MISERY_Compat_Ravage_Infection">
             <English>Ravage Zombie infection</English>
             <Czech>Ravage infekce od zombií</Czech>
             <French>Infection zombie Ravage</French>
@@ -99,7 +99,7 @@
             <Japanese>Ravage ゾンビ感染</Japanese>
             <Turkish>Ravage Zombi enfeksiyonu</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Ravage_Compat_InfectionDesc">
+        <Key ID="STR_MISERY_Compat_Ravage_InfectionDesc">
             <English>Allow Zombies to inflict disease? (Requires Ravage Zombie Module)</English>
             <Czech>Povolit zombiím způsobovat nemoc? (Vyžaduje Ravage Zombie Module)</Czech>
             <French>Autoriser les zombies à infliger des maladies ? (Nécessite le module Ravage Zombie)</French>
@@ -113,7 +113,7 @@
             <Japanese>ゾンビが病気を引き起こすことを許可しますか？ (Ravage ゾンビモジュールが必要)</Japanese>
             <Turkish>Zombilerin hastalık bulaştırmasına izin verilsin mi? (Ravage Zombi Modülü gerektirir)</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Ravage_Compat_Specimens">
+        <Key ID="STR_MISERY_Compat_Ravage_Specimens">
             <English>Ravage Zombie specimens</English>
             <Czech>Vzorky Ravage zombií</Czech>
             <French>Spécimens de zombies Ravage</French>
@@ -127,7 +127,7 @@
             <Japanese>Ravage ゾンビ検体</Japanese>
             <Turkish>Ravage Zombi örnekleri</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Ravage_Compat_SpecimensDesc">
+        <Key ID="STR_MISERY_Compat_Ravage_SpecimensDesc">
             <English>Allow specimen collection from zombies?</English>
             <Czech>Povolit sběr vzorků ze zombií?</Czech>
             <French>Autoriser la collecte de spécimens sur les zombies ?</French>
@@ -141,7 +141,7 @@
             <Japanese>ゾンビからの検体採取を許可しますか？</Japanese>
             <Turkish>Zombilerden örnek toplanmasına izin verilsin mi?</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Ravage_Compat_InfectionChance">
+        <Key ID="STR_MISERY_Compat_Ravage_InfectionChance">
             <English>Ravage Zombie Infection chance</English>
             <Czech>Šance na Ravage infekci od zombií</Czech>
             <French>Chance d'infection zombie Ravage</French>
@@ -155,7 +155,7 @@
             <Japanese>Ravage ゾンビ感染確率</Japanese>
             <Turkish>Ravage Zombi Enfeksiyon şansı</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Ravage_Compat_InfectionChanceDesc">
+        <Key ID="STR_MISERY_Compat_Ravage_InfectionChanceDesc">
             <English>% chance per zombie hit to become infected...</English>
             <Czech>% šance na infekci při každém zásahu zombií...</Czech>
             <French>% de chance d'être infecté par coup de zombie...</French>

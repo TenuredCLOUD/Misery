@@ -13,7 +13,7 @@ class CLASS(cookingFramework_ui) {
         };
         class CLASS(cooking_prompt): RscText {
             idc = -1;
-            text = ECSTRING(common,CookPrompt);
+            text = ECSTRING(cooking,CookPrompt);
             x = -3.5 * GUI_GRID_W + GUI_GRID_X;
             y = 0 * GUI_GRID_H + GUI_GRID_Y;
             w = 22 * GUI_GRID_W;
@@ -61,7 +61,7 @@ class CLASS(cookingFramework_ui) {
         };
         class CLASS(cooking_button): RscButton {
             idc = 1600;
-            text = ECSTRING(common,Cook);
+            text = ECSTRING(cooking,Cook);
             x = 16.5 * GUI_GRID_W + GUI_GRID_X;
             y = 6.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;

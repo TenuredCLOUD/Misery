@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Cooking">
+        <Key ID="STR_MISERY_Cooking_Action">
+            <English>Cook</English>
+            <Czech>Vařit/opékat</Czech>
+            <French>Cuisiner</French>
+            <Spanish>Cocinero</Spanish>
+            <Italian>Cuoco</Italian>
+            <Polish>Kucharz</Polish>
+            <Portuguese>Cozinheiro</Portuguese>
+            <Russian>Повар</Russian>
+            <German>Kochen</German>
+            <Korean>Cook</Korean>
+            <Japanese>クック</Japanese>
+            <Turkish>Aşçı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Cooking_CookPrompt">
+            <English>What would you like to cook?</English>
+            <Czech>Co byste chtěli uvařit?</Czech>
+            <French>Que voulez-vous cuisiner ?</French>
+            <Spanish>¿Qué te gustaría cocinar?</Spanish>
+            <Italian>Cosa ti piacerebbe cucinare?</Italian>
+            <Polish>Co chcesz ugotować?</Polish>
+            <Portuguese>O que gostaria de cozinhar?</Portuguese>
+            <Russian>Что бы вы хотели приготовить?</Russian>
+            <German>Was möchtest du kochen?</German>
+            <Korean>무엇을 요리하시겠습니까?</Korean>
+            <Japanese>何を料理しますか？</Japanese>
+            <Turkish>Ne pişirmek istersiniz?</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Cooking_Cook">
+            <English>Cook</English>
+            <Czech>Vařit</Czech>
+            <French>Cuisiner</French>
+            <Spanish>Cocinar</Spanish>
+            <Italian>Cucina</Italian>
+            <Polish>Gotuj</Polish>
+            <Portuguese>Cozinhar</Portuguese>
+            <Russian>Приготовить</Russian>
+            <German>Kochen</German>
+            <Korean>요리하기</Korean>
+            <Japanese>料理する</Japanese>
+            <Turkish>Pişir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Cooking_LowXP">
+            <English>You need %1 cooking XP to make this (you have %2).</English>
+            <Czech>K výrobě tohoto potřebujete %1 zkušeností s vařením (máte %2).</Czech>
+            <French>Vous avez besoin de %1 XP en cuisine pour faire ceci (vous avez %2).</French>
+            <Spanish>Necesitas %1 de XP en cocina para hacer esto (tienes %2).</Spanish>
+            <Italian>Hai bisogno di %1 XP in cucina per farlo (ne hai %2).</Italian>
+            <Polish>Potrzebujesz %1 PD gotowania, aby to zrobić (masz %2).</Polish>
+            <Portuguese>Precisas de %1 XP de culinária para fazer isto (tens %2).</Portuguese>
+            <Russian>Вам нужно %1 опыта кулинарии, чтобы сделать это (у вас %2).</Russian>
+            <German>Du benötigst %1 Koch-EP, um dies herzustellen (du hast %2).</German>
+            <Korean>이것을 만들려면 %1 요리 XP가 필요합니다 (현재 %2 보유).</Korean>
+            <Japanese>これを作るには %1 の料理XPが必要です（現在は %2）。</Japanese>
+            <Turkish>Bunu yapmak için %1 yemek pişirme TP'sine ihtiyacınız var (%2 TP'niz var).</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Cooking_Interrupted">
+            <English>Cooking interrupted...</English>
+            <Czech>Vaření přerušeno...</Czech>
+            <French>Cuisiner interrompu...</French>
+            <Spanish>Cocina interrumpida...</Spanish>
+            <Italian>Cottura interrotta...</Italian>
+            <Polish>Gotowanie przerwane...</Polish>
+            <Portuguese>Culinária interrompida...</Portuguese>
+            <Russian>Приготовление прервано...</Russian>
+            <German>Kochen unterbrochen...</German>
+            <Korean>요리가 중단되었습니다...</Korean>
+            <Japanese>料理が中断されました...</Japanese>
+            <Turkish>Yemek pişirme kesintiye uğradı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Cooking_Progress">
+            <English>%1ing %2... %3%4 complete</English>
+            <Czech>%1ím %2... %3%4 hotovo</Czech>
+            <French>%1 de %2... %3%4 terminé</French>
+            <Spanish>%1ando %2... %3%4 completado</Spanish>
+            <Italian>%1ando %2... %3%4 completato</Italian>
+            <Polish>%1 %2... ukończono %3%4</Polish>
+            <Portuguese>%1ando %2... %3%4 concluído</Portuguese>
+            <Russian>%1 %2... %3%4 завершено</Russian>
+            <German>%1e %2... %3%4 abgeschlossen</German>
+            <Korean>%2 %1 중... %3%4 완료</Korean>
+            <Japanese>%2を%1中... %3%4 完了</Japanese>
+            <Turkish>%2 %1iliyor... %%%3 tamamlandı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Cooking_GainXP">
+            <English>You gained %1 XP from %2ing %3.</English>
+            <Czech>Získali jste %1 zkušeností za %2í %3.</Czech>
+            <French>Vous avez gagné %1 XP en %2ant %3.</French>
+            <Spanish>Has ganado %1 XP al %2ar %3.</Spanish>
+            <Italian>Hai guadagnato %1 XP %1ando %3.</Italian>
+            <Polish>Zyskałeś %1 PD za %2 %3.</Polish>
+            <Portuguese>Ganhaste %1 XP ao %2ar %3.</Portuguese>
+            <Russian>Вы получили %1 опыта за %2 %3.</Russian>
+            <German>Du hast %1 EP durch das %2 von %3 erhalten.</German>
+            <Korean>%3을(를) %2하여 %1 XP를 획득했습니다.</Korean>
+            <Japanese>%3の%2により %1 XPを獲得しました。</Japanese>
+            <Turkish>%3 %2erek %1 TP kazandınız.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Cooking_Success">
+            <English>You %1ed %2 %3!</English>
+            <Czech>U%1il jste %2 %3!</Czech>
+            <French>Vous avez %1é %2 %3!</French>
+            <Spanish>¡Has %1ado %2 %3!</Spanish>
+            <Italian>Hai %1ato %2 %3!</Italian>
+            <Polish>%1łeś %2 %3!</Polish>
+            <Portuguese>Tu %1aste %2 %3!</Portuguese>
+            <Russian>Вы %1 %2 %3!</Russian>
+            <German>Du hast %2 %3 ge%1t!</German>
+            <Korean>%2개의 %3을(를) %1했습니다!</Korean>
+            <Japanese>%2個の%3を%1しました！</Japanese>
+            <Turkish>%2 adet %3 %1diniz!</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Cooking_Required">
+            <English>Required Items for %1ing:</English>
+            <Czech>Požadované položky pro %2í:</Czech>
+            <French>Objets requis pour %1 :</French>
+            <Spanish>Objetos requeridos para %1ar:</Spanish>
+            <Italian>Oggetti necessari per %1are:</Italian>
+            <Polish>Wymagane przedmioty do %1:</Polish>
+            <Portuguese>Itens necessários para %1ar:</Portuguese>
+            <Russian>Необходимые предметы для %1:</Russian>
+            <German>Benötigte Gegenstände zum %1en:</German>
+            <Korean>%1에 필요한 아이템:</Korean>
+            <Japanese>%1に必要なアイテム:</Japanese>
+            <Turkish>%1 için gerekli öğeler:</Turkish>
+        </Key>
+    </Package>
+</Project>
