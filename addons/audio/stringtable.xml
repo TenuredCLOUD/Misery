@@ -3,6 +3,8 @@
     <Package name="Audio">
         <Key ID="STR_MISERY_Audio_EnhancedCharEffects">
             <English>Character Enhanced effects</English>
+            <Chinesesimp>角色强化效果</Chinesesimp>
+            <Chinese>角色強化效果</Chinese>
             <Czech>Vylepšené efekty postavy</Czech>
             <French>Effets de personnage améliorés</French>
             <Spanish>Efectos de personaje mejorados</Spanish>
@@ -17,6 +19,8 @@
         </Key>
         <Key ID="STR_MISERY_Audio_EnhancedCharEffects_Desc">
             <English>Enable Extra Character Immersion? (Enables audible and visual feedback for the survival framework)</English>
+            <Chinesesimp>开启额外角色沉浸感？(开启生存系统的视听反馈)</Chinesesimp>
+            <Chinese>開啟額外角色沉浸感？(開啟生存系統的視聽反饋)</Chinese>
             <Czech>Povolit extra imerzi postavy? (Povolí zvukovou a vizuální zpětnou vazbu pro survival systém)</Czech>
             <French>Activer l'immersion supplémentaire du personnage ? (Active les retours sonores et visuels pour le système de survie)</French>
             <Spanish>¿Habilitar inmersión extra del personaje? (Activa retroalimentación visual y auditiva para el sistema de supervivencia)</Spanish>
@@ -32,6 +36,8 @@
 
         <Key ID="STR_MISERY_Audio_EnhancedInvSounds">
             <English>Enhanced Inventory sounds</English>
+            <Chinesesimp>强化库存声音</Chinesesimp>
+            <Chinese>強化庫存聲音</Chinese>
             <Czech>Vylepšené zvuky inventáře</Czech>
             <French>Sons d'inventaire améliorés</French>
             <Spanish>Sonidos de inventario mejorados</Spanish>
@@ -46,6 +52,8 @@
         </Key>
         <Key ID="STR_MISERY_Audio_EnhancedInvSounds_Desc">
             <English>Enable Inventory audio overhaul?</English>
+            <Chinesesimp>开启库存音频重制？</Chinesesimp>
+            <Chinese>開啟庫存音頻重製？</Chinese>
             <Czech>Povolit přepracování zvuků inventáře?</Czech>
             <French>Activer la refonte audio de l'inventaire ?</French>
             <Spanish>¿Habilitar la renovación de audio del inventario?</Spanish>
@@ -61,6 +69,8 @@
 
         <Key ID="STR_MISERY_Audio_AmbientSoundscape">
             <English>Ambient audio soundscape overhaul</English>
+            <Chinesesimp>环境音效景观重制</Chinesesimp>
+            <Chinese>環境音效景觀重製</Chinese>
             <Czech>Přepracování okolního zvukového prostředí</Czech>
             <French>Refonte de l'ambiance sonore environnementale</French>
             <Spanish>Renovación del paisaje sonoro ambiental</Spanish>
@@ -75,6 +85,8 @@
         </Key>
         <Key ID="STR_MISERY_Audio_AmbientSoundscape_Desc">
             <English>Enable Extra world audio with input sounds? (must utilize the 'Ambient soundscape array' data)</English>
+            <Chinesesimp>开启带有输入声音的额外世界音频？(必须使用“环境音效景观数组”数据)</Chinesesimp>
+            <Chinese>開啟帶有輸入聲音的額外世界音頻？(必須使用“環境音效景觀數組”數據)</Chinese>
             <Czech>Povolit extra zvuky světa? (musí využívat data z 'Ambient soundscape array')</Czech>
             <French>Activer l'audio mondial supplémentaire ? (doit utiliser les données de 'Ambient soundscape array')</French>
             <Spanish>¿Habilitar audio mundial extra? (debe utilizar los datos de 'Ambient soundscape array')</Spanish>
@@ -90,6 +102,8 @@
 
         <Key ID="STR_MISERY_Audio_ForgeAmbience">
             <English>Ambient audio for Forges</English>
+            <Chinesesimp>熔炉环境音效</Chinesesimp>
+            <Chinese>熔爐環境音效</Chinese>
             <Czech>Okolní zvuk pro výhně</Czech>
             <French>Ambiance sonore pour les forges</French>
             <Spanish>Audio ambiental para forjas</Spanish>
@@ -104,6 +118,8 @@
         </Key>
         <Key ID="STR_MISERY_Audio_ForgeAmbience_Desc">
             <English>Enable Audio loop for forges? (Makes them crackle and hum - immersion)</English>
+            <Chinesesimp>开启熔炉音频循环？(使其产生噼啪声和嗡嗡声 - 增强沉浸感)</Chinesesimp>
+            <Chinese>開啟熔爐音頻循環？(使其產生噼啪聲和嗡嗡聲 - 增強沉浸感)</Chinese>
             <Czech>Povolit zvukovou smyčku pro výhně? (Vytváří praskání a hučení - imerze)</Czech>
             <French>Activer la boucle audio pour les forges ? (Crée des crépitements et des bourdonnements)</French>
             <Spanish>¿Habilitar bucle de audio para forjas? (Hace que crepiten y zumben - inmersión)</Spanish>
@@ -119,6 +135,8 @@
 
         <Key ID="STR_MISERY_Audio_AmbientSoundscapeArray">
             <English>Ambient soundscape array</English>
+            <Chinesesimp>环境音效景观数组</Chinesesimp>
+            <Chinese>環境音效景觀數組</Chinese>
             <Czech>Pole okolního zvukového prostředí</Czech>
             <French>Tableau d'ambiance sonore environnementale</French>
             <Spanish>Matriz de paisaje sonoro ambiental</Spanish>
@@ -133,6 +151,8 @@
         </Key>
         <Key ID="STR_MISERY_Audio_AmbientSoundscapeArray_Desc">
             <English>Listed sounds to play randomly around players (Format: Mysound_1,Mysound_2,etc...)</English>
+            <Chinesesimp>随机在玩家周围播放的声音列表 (格式: Mysound_1,Mysound_2 等...)</Chinesesimp>
+            <Chinese>隨機在玩家周圍播放的聲音列表 (格式: Mysound_1,Mysound_2 等...)</Chinese>
             <Czech>Seznam zvuků pro náhodné přehrávání kolem hráčů (Formát: Zvuk_1,Zvuk_2,atd...)</Czech>
             <French>Liste des sons à jouer aléatoirement autour des joueurs (Format : Son_1,Son_2,etc...)</French>
             <Spanish>Lista de sonidos para reproducir aleatoriamente alrededor de los jugadores (Formato: Sonido_1,Sonido_2,etc...)</Spanish>
@@ -148,6 +168,8 @@
 
         <Key ID="STR_MISERY_Audio_AmbientMusic">
             <English>Ambient music</English>
+            <Chinesesimp>环境音乐</Chinesesimp>
+            <Chinese>環境音樂</Chinese>
             <Czech>Okolní hudba</Czech>
             <French>Musique d'ambiance</French>
             <Spanish>Música ambiental</Spanish>
@@ -162,6 +184,8 @@
         </Key>
         <Key ID="STR_MISERY_Audio_AmbientMusic_Desc">
             <English>Enable Misery's OST (utilize Ambient Music array for more music to be played)</English>
+            <Chinesesimp>开启 Misery 的原声带 (利用环境音乐数组播放更多音乐)</Chinesesimp>
+            <Chinese>開啟 Misery 的原聲帶 (利用環境音樂數組播放更多音樂)</Chinese>
             <Czech>Povolit Misery OST (pro více hudby využijte Ambient Music array)</Czech>
             <French>Activer l'OST de Misery (utilisez le tableau Ambient Music pour plus de musiques)</French>
             <Spanish>¿Habilitar la BSO de Misery? (utiliza la matriz Ambient Music para reproducir más música)</Spanish>
@@ -177,6 +201,8 @@
 
         <Key ID="STR_MISERY_Audio_AmbientMusicArray">
             <English>Ambient Music array</English>
+            <Chinesesimp>环境音乐数组</Chinesesimp>
+            <Chinese>環境音樂數組</Chinese>
             <Czech>Pole okolní hudby</Czech>
             <French>Tableau de musique d'ambiance</French>
             <Spanish>Matriz de música ambiental</Spanish>
@@ -191,6 +217,8 @@
         </Key>
         <Key ID="STR_MISERY_Audio_AmbientMusicArray_Desc">
             <English>Listed music to play randomly for players (Format: Mymusic_1,Mymusic_2,etc...)</English>
+            <Chinesesimp>为玩家随机播放的音乐列表 (格式: Mymusic_1,Mymusic_2 等...)</Chinesesimp>
+            <Chinese>為玩家隨機播放的音樂列表 (格式: Mymusic_1,Mymusic_2 等...)</Chinese>
             <Czech>Seznam skladeb pro náhodné přehrávání (Formát: Hudba_1,Hudba_2,atd...)</Czech>
             <French>Liste des musiques à jouer aléatoirement (Format : Musique_1,Musique_2,etc...)</French>
             <Spanish>Lista de canciones para reproducir aleatoriamente (Formato: Música_1,Música_2,etc...)</Spanish>

@@ -3,6 +3,8 @@
     <Package name="Acceleration">
         <Key ID="STR_MISERY_Acceleration_NoTimeAccel">
             <English>No time acceleration</English>
+            <Chinesesimp>无时间加速</Chinesesimp>
+            <Chinese>無時間加速</Chinese>
             <Czech>Žádné zrychlení času</Czech>
             <French>Pas d'accélération du temps</French>
             <Spanish>Sin aceleración de tiempo</Spanish>
@@ -17,6 +19,8 @@
         </Key>
         <Key ID="STR_MISERY_Acceleration_NoTimeAccel_Desc">
             <English>When enabled time acceleration in SP is no longer allowed</English>
+            <Chinesesimp>开启后，单人模式下将不再允许时间加速</Chinesesimp>
+            <Chinese>開啟後，單人模式下將不再允許時間加速</Chinese>
             <Czech>Když je povoleno, zrychlení času v SP již není dovoleno</Czech>
             <French>Une fois activée, l'accélération du temps en SP n'est plus autorisée</French>
             <Spanish>Cuando está activado, la aceleración de tiempo en SP ya no está permitida</Spanish>

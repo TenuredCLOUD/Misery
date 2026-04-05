@@ -3,6 +3,8 @@
     <Package name="Fishing">
         <Key ID="STR_MISERY_Fishing_Name">
             <English>Fishing</English>
+            <Chinesesimp>钓鱼</Chinesesimp>
+            <Chinese>釣魚</Chinese>
             <Czech>Rybaření</Czech>
             <French>Pêche</French>
             <Spanish>Pesca</Spanish>
@@ -17,6 +19,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_Desc">
             <English>Enable Fishing near open water sources? (Requires fishing rod, bait, hook, and fishing spool...)</English>
+            <Chinesesimp>开启在开放水源附近的钓鱼功能？(需要钓鱼竿、诱饵、鱼钩和渔线轮...)</Chinesesimp>
+            <Chinese>開啟在開放水源附近的釣魚功能？(需要釣魚竿、誘餌、魚鉤和漁線輪...)</Chinese>
             <Czech>Povolit rybaření u otevřených vodních zdrojů? (Vyžaduje rybářský prut, návnadu, háček a naviják...)</Czech>
             <French>Autoriser la pêche près des sources d'eau libre ? (Nécessite une canne à pêche, un appât, un hameçon et un moulinet...)</French>
             <Spanish>¿Permitir la pesca cerca de fuentes de agua abierta? (Requiere caña de pescar, cebo, anzuelo y carrete...)</Spanish>
@@ -31,6 +35,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_PullRod">
             <English>Pull fishing Rod</English>
+            <Chinesesimp>拉鱼竿</Chinesesimp>
+            <Chinese>拉魚竿</Chinese>
             <Czech>Zatáhnout za prut</Czech>
             <French>Tirer la canne à pêche</French>
             <Spanish>Tirar de la caña</Spanish>
@@ -45,6 +51,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_ReelIn">
             <English>Reel In</English>
+            <Chinesesimp>收线</Chinesesimp>
+            <Chinese>收線</Chinese>
             <Czech>Navíjet</Czech>
             <French>Mouliner</French>
             <Spanish>Recoger carrete</Spanish>
@@ -59,6 +67,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_ReelOut">
             <English>Reel Out</English>
+            <Chinesesimp>放线</Chinesesimp>
+            <Chinese>放線</Chinese>
             <Czech>Odvíjet</Czech>
             <French>Relâcher la ligne</French>
             <Spanish>Soltar carrete</Spanish>
@@ -73,6 +83,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_NeedWater">
             <English>You need to be near water or on a watercraft to fish!</English>
+            <Chinesesimp>你需要靠近水边或在船上才能钓鱼！</Chinesesimp>
+            <Chinese>你需要靠近水邊或在船上才能釣魚！</Chinese>
             <Czech>K rybaření musíte být u vody nebo na plavidle!</Czech>
             <French>Vous devez être près de l'eau ou sur une embarcation pour pêcher !</French>
             <Spanish>¡Necesitas estar cerca del agua o en una embarcación para pescar!</Spanish>
@@ -87,6 +99,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_NeedGear">
             <English>You need a fishing pole, spool, hook, and bait to fish!</English>
+            <Chinesesimp>你需要钓竿、线轮、鱼钩和诱饵才能钓鱼！</Chinesesimp>
+            <Chinese>你需要釣竿、線輪、魚鉤和誘餌才能釣魚！</Chinese>
             <Czech>K rybaření potřebujete prut, naviják, háček a návnadu!</Czech>
             <French>Il vous faut une canne, un moulinet, un hameçon et un appât pour pêcher !</French>
             <Spanish>¡Necesitas una caña, carrete, anzuelo y cebo para pescar!</Spanish>
@@ -101,6 +115,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_NeedWaterCast">
             <English>You need to be near water or on a watercraft to cast!</English>
+            <Chinesesimp>你需要靠近水边或在船上才能抛线！</Chinesesimp>
+            <Chinese>你需要靠近水邊或在船上才能拋線！</Chinese>
             <Czech>K nahození musíte být u vody nebo na plavidle!</Czech>
             <French>Vous devez être près de l'eau ou sur une embarcation pour lancer !</French>
             <Spanish>¡Necesitas estar cerca del agua o en una embarcación para lanzar!</Spanish>
@@ -115,6 +131,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_NeedGearCast">
             <English>You need a fishing pole, spool, hook, and bait to cast!</English>
+            <Chinesesimp>你需要钓竿、线轮、鱼钩和诱饵才能抛线！</Chinesesimp>
+            <Chinese>你需要釣竿、線輪、魚鉤和誘餌才能拋線！</Chinese>
             <Czech>K nahození potřebujete prut, naviják, háček a návnadu!</Czech>
             <French>Il vous faut une canne, un moulinet, un hameçon et un appât pour lancer !</French>
             <Spanish>¡Necesitas una caña, carrete, anzuelo y cebo para lanzar!</Spanish>
@@ -129,6 +147,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_LineCast">
             <English>Line cast!</English>
+            <Chinesesimp>已抛线！</Chinesesimp>
+            <Chinese>已拋線！</Chinese>
             <Czech>Nahozeno!</Czech>
             <French>Ligne lancée !</French>
             <Spanish>¡Línea lanzada!</Spanish>
@@ -143,6 +163,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_LostGear">
             <English>You lost some gear! Fishing stopped...</English>
+            <Chinesesimp>你丢失了一些装备！钓鱼已停止...</Chinesesimp>
+            <Chinese>你丟失了一些裝備！釣魚已停止...</Chinese>
             <Czech>Ztratil jsi část vybavení! Rybaření ukončeno...</Czech>
             <French>Vous avez perdu de l'équipement ! Pêche interrompue...</French>
             <Spanish>¡Has perdido equipo! Pesca detenida...</Spanish>
@@ -157,6 +179,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_MovedAway">
             <English>You moved away from the water! Fishing stopped...</English>
+            <Chinesesimp>你离开了水边！钓鱼已停止...</Chinesesimp>
+            <Chinese>你離開了水邊！釣魚已停止...</Chinese>
             <Czech>Vzdálil jsi se od vody! Rybaření ukončeno...</Czech>
             <French>Vous vous êtes éloigné de l'eau ! Pêche interrompue...</French>
             <Spanish>¡Te has alejado del agua! Pesca detenida...</Spanish>
@@ -171,6 +195,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_BrokenLine">
             <English>Something broke or flew off the line!</English>
+            <Chinesesimp>线断了或者有什么东西从线上飞走了！</Chinesesimp>
+            <Chinese>線斷了或者有什麼東西從線上飛走了！</Chinese>
             <Czech>Něco se zlomilo nebo utrhlo z vlasce!</Czech>
             <French>Quelque chose s'est cassé ou s'est détaché de la ligne !</French>
             <Spanish>¡Algo se rompió o se soltó de la línea!</Spanish>
@@ -185,6 +211,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_Snagged">
             <English>The line is snagged. Try pulling the rod or reeling out.</English>
+            <Chinesesimp>线挂住了。尝试拉动鱼竿或放线。</Chinesesimp>
+            <Chinese>線掛住了。嘗試拉動魚竿或放線。</Chinese>
             <Czech>Vlasec je uvízlý. Zkuste zatáhnout za prut nebo odvíjet.</Czech>
             <French>La ligne est accrochée. Essayez de tirer la canne ou de relâcher du fil.</French>
             <Spanish>La línea se ha enganchado. Intenta tirar de la caña o soltar carrete.</Spanish>
@@ -199,6 +227,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_FishOn">
             <English>A fish is on! Reel in carefully and pull the rod to tire it.</English>
+            <Chinesesimp>鱼上钩了！小心收线并拉动鱼竿使其精疲力竭。</Chinesesimp>
+            <Chinese>魚上鉤了！小心收線並拉動魚竿使其精疲力竭。</Chinese>
             <Czech>Ryba na háčku! Navíjejte opatrně a tahem prutu ji unavte.</Czech>
             <French>Un poisson a mordu ! Moulinez prudemment et tirez la canne pour le fatiguer.</French>
             <Spanish>¡Hay un pez! Recoge con cuidado y tira de la caña para cansarlo.</Spanish>
@@ -213,6 +243,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_Waiting">
             <English>Waiting for a bite...</English>
+            <Chinesesimp>等待鱼儿咬钩...</Chinesesimp>
+            <Chinese>等待魚兒咬鉤...</Chinese>
             <Czech>Čekání na záběr...</Czech>
             <French>En attente d'une touche...</French>
             <Spanish>Esperando que piquen...</Spanish>
@@ -227,6 +259,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_Unsnagged">
             <English>Line unsnagged!</English>
+            <Chinesesimp>线已解开！</Chinesesimp>
+            <Chinese>線已解開！</Chinese>
             <Czech>Vlasec uvolněn!</Czech>
             <French>Ligne dégagée !</French>
             <Spanish>¡Línea desenganchada!</Spanish>
@@ -241,6 +275,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_StillSnagged">
             <English>Still snagged, keep trying!</English>
+            <Chinesesimp>仍然挂着，继续尝试！</Chinesesimp>
+            <Chinese>仍然掛著，繼續嘗試！</Chinese>
             <Czech>Stále uvízlé, zkoušejte dál!</Czech>
             <French>Toujours accroché, continuez d'essayer !</French>
             <Spanish>Sigue enganchada, ¡sigue intentándolo!</Spanish>
@@ -255,6 +291,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_FishTired">
             <English>Fish is tired! Reel it in!</English>
+            <Chinesesimp>鱼累了！快收线！</Chinesesimp>
+            <Chinese>魚累了！快收線！</Chinese>
             <Czech>Ryba je unavená! Navíjejte!</Czech>
             <French>Le poisson est fatigué ! Moulinez !</French>
             <Spanish>¡El pez está cansado! ¡Recógelo!</Spanish>
@@ -269,6 +307,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_FishFighting">
             <English>Fish is fighting, keep pulling!</English>
+            <Chinesesimp>鱼在挣扎，继续拉！</Chinesesimp>
+            <Chinese>魚在掙扎，繼續拉！</Chinese>
             <Czech>Ryba bojuje, dál táhněte!</Czech>
             <French>Le poisson se bat, continuez de tirer !</French>
             <Spanish>El pez está luchando, ¡sigue tirando!</Spanish>
@@ -283,6 +323,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_NoResistance">
             <English>Nothing to pull against.</English>
+            <Chinesesimp>没什么可拉的。</Chinesesimp>
+            <Chinese>沒什麼可拉的。</Chinese>
             <Czech>Není za co tahat.</Czech>
             <French>Rien au bout de la ligne.</French>
             <Spanish>Nada de lo que tirar.</Spanish>
@@ -297,6 +339,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_CaughtFish">
             <English>You caught a fish.</English>
+            <Chinesesimp>你钓到了一条鱼。</Chinesesimp>
+            <Chinese>你釣到了一條魚。</Chinese>
             <Czech>Chytil jsi rybu.</Czech>
             <French>Vous avez attrapé un poisson.</French>
             <Spanish>Has atrapado un pez.</Spanish>
@@ -311,6 +355,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_FullyReeledIn">
             <English>Line fully reeled in.</English>
+            <Chinesesimp>线已完全收回。</Chinesesimp>
+            <Chinese>線已完全收回。</Chinese>
             <Czech>Vlasec plně navinut.</Czech>
             <French>Ligne entièrement moulinée.</French>
             <Spanish>Línea totalmente recogida.</Spanish>
@@ -325,6 +371,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_FullyReeledOut">
             <English>Line fully reeled out.</English>
+            <Chinesesimp>线已完全放出。</Chinesesimp>
+            <Chinese>線已完全放出。</Chinese>
             <Czech>Vlasec plně odvinut.</Czech>
             <French>Ligne entièrement relâchée.</French>
             <Spanish>Línea totalmente soltada.</Spanish>
@@ -339,6 +387,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_TensionLabel">
             <English>Line tension:</English>
+            <Chinesesimp>线张力:</Chinesesimp>
+            <Chinese>線張力:</Chinese>
             <Czech>Napětí vlasce:</Czech>
             <French>Tension de la ligne :</French>
             <Spanish>Tensión de la línea:</Spanish>
@@ -353,6 +403,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_LineOutLabel">
             <English>Line out:</English>
+            <Chinesesimp>出线长度:</Chinesesimp>
+            <Chinese>出線長度:</Chinese>
             <Czech>Délka vlasce:</Czech>
             <French>Ligne sortie :</French>
             <Spanish>Línea fuera:</Spanish>
@@ -367,6 +419,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_CastAction">
             <English>Cast line</English>
+            <Chinesesimp>抛线</Chinesesimp>
+            <Chinese>拋線</Chinese>
             <Czech>Nahodit vlasec</Czech>
             <French>Lancer la ligne</French>
             <Spanish>Lanzar línea</Spanish>
@@ -381,6 +435,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_StartAction">
             <English>Start Fishing</English>
+            <Chinesesimp>开始钓鱼</Chinesesimp>
+            <Chinese>開始釣魚</Chinese>
             <Czech>Začít rybařit</Czech>
             <French>Commencer à pêcher</French>
             <Spanish>Empezar a pescar</Spanish>
@@ -395,6 +451,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_Action">
             <English>Fish</English>
+            <Chinesesimp>钓鱼</Chinesesimp>
+            <Chinese>釣魚</Chinese>
             <Czech>Rybaření</Czech>
             <French>Poisson</French>
             <Spanish>Pescado</Spanish>
@@ -409,6 +467,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_Requirements">
             <English>Fishing requirements</English>
+            <Chinesesimp>钓鱼需求</Chinesesimp>
+            <Chinese>釣魚需求</Chinese>
             <Czech>Požadavky pro rybolov</Czech>
             <French>Exigences en matière de pêche</French>
             <Spanish>Requisitos de pesca</Spanish>
@@ -423,6 +483,8 @@
         </Key>
         <Key ID="STR_MISERY_Fishing_RequirementsListed">
             <English>Fishing requires the following items: &lt;br/&gt; Fishing rod &lt;br/&gt; Fishing spool &lt;br/&gt; Fish hook &lt;br/&gt; Worms for bait</English>
+            <Chinesesimp>钓鱼需要以下物品: &lt;br/&gt; 钓鱼竿 &lt;br/&gt; 渔线轮 &lt;br/&gt; 鱼钩 &lt;br/&gt; 诱饵用蠕虫</Chinesesimp>
+            <Chinese>釣魚需要以下物品: &lt;br/&gt; 釣魚竿 &lt;br/&gt; 漁線輪 &lt;br/&gt; 魚鉤 &lt;br/&gt; 誘餌用蠕蟲</Chinese>
             <Czech>K rybaření jsou potřeba následující předměty: &lt;br/&gt; Rybářský prut &lt;br/&gt; Rybářská cívka &lt;br/&gt; Rybářský háček &lt;br/&gt; Červi na návnadu.</Czech>
             <French>La pêche nécessite les éléments suivants : &lt;br/&gt; Canne à pêche &lt;br/&gt; Bobine de pêche &lt;br/&gt; Hameçon &lt;br/&gt; Vers pour l'appât</French>
             <Spanish>Para pescar se necesitan los siguientes artículos: &lt;br/&gt; Caña de pescar &lt;br/&gt; Carrete de pesca &lt;br/&gt; Anzuelo &lt;br/&gt; Gusanos para cebo</Spanish>

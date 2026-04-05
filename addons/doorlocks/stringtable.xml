@@ -3,6 +3,8 @@
     <Package name="DoorLocks">
         <Key ID="STR_MISERY_DoorLocks_PINEntryLabel">
             <English>PIN Entry:</English>
+            <Chinesesimp>PIN 输入:</Chinesesimp>
+            <Chinese>PIN 輸入:</Chinese>
             <Czech>Zadání PIN:</Czech>
             <French>Saisie du PIN :</French>
             <Spanish>Entrada de PIN:</Spanish>
@@ -17,6 +19,8 @@
         </Key>
         <Key ID="STR_MISERY_DoorLocks_Enter">
             <English>Enter</English>
+            <Chinesesimp>确认</Chinesesimp>
+            <Chinese>確認</Chinese>
             <Czech>Potvrdit</Czech>
             <French>Entrer</French>
             <Spanish>Entrar</Spanish>
@@ -31,6 +35,8 @@
         </Key>
         <Key ID="STR_MISERY_DoorLocks_DoorsUnlocked">
             <English>Doors unlocked</English>
+            <Chinesesimp>门已解锁</Chinesesimp>
+            <Chinese>門已解鎖</Chinese>
             <Czech>Dveře odemčeny</Czech>
             <French>Portes déverrouillées</French>
             <Spanish>Puertas desbloqueadas</Spanish>
@@ -45,6 +51,8 @@
         </Key>
         <Key ID="STR_MISERY_DoorLocks_DoorsAlreadyLocked">
             <English>Doors are already locked...</English>
+            <Chinesesimp>门已经锁上了...</Chinesesimp>
+            <Chinese>門已經鎖上了...</Chinese>
             <Czech>Dveře jsou již zamčeny...</Czech>
             <French>Les portes sont déjà verrouillées...</French>
             <Spanish>Las puertas ya están bloqueadas...</Spanish>
@@ -59,6 +67,8 @@
         </Key>
         <Key ID="STR_MISERY_DoorLocks_DoorsLocked">
             <English>Doors locked</English>
+            <Chinesesimp>门已锁上</Chinesesimp>
+            <Chinese>門已鎖上</Chinese>
             <Czech>Dveře zamčeny</Czech>
             <French>Portes verrouillées</French>
             <Spanish>Puertas bloqueadas</Spanish>
@@ -73,6 +83,8 @@
         </Key>
         <Key ID="STR_MISERY_DoorLocks_CannotInstallLock">
             <English>Cannot install door locks at this location...</English>
+            <Chinesesimp>无法在此位置安装门锁...</Chinesesimp>
+            <Chinese>無法在此位置安裝門鎖...</Chinese>
             <Czech>Na tomto místě nelze nainstalovat zámky dveří...</Czech>
             <French>Impossible d'installer des verrous ici...</French>
             <Spanish>No se pueden instalar cerraduras en esta ubicación...</Spanish>
@@ -87,6 +99,8 @@
         </Key>
         <Key ID="STR_MISERY_DoorLocks_NoLockKit">
             <English>No door lock kit in inventory...</English>
+            <Chinesesimp>库存中没有门锁套件...</Chinesesimp>
+            <Chinese>庫存中沒有門鎖套件...</Chinese>
             <Czech>V inventáři chybí sada pro uzamčení dveří...</Czech>
             <French>Pas de kit de verrouillage dans l'inventaire...</French>
             <Spanish>No hay kit de cerradura en el inventario...</Spanish>
@@ -101,6 +115,8 @@
         </Key>
         <Key ID="STR_MISERY_DoorLocks_PINSet">
             <English>Locking PIN has been set:</English>
+            <Chinesesimp>锁定 PIN 已设置:</Chinesesimp>
+            <Chinese>鎖定 PIN 已設置:</Chinese>
             <Czech>Zamykací PIN byl nastaven:</Czech>
             <French>Le code PIN de verrouillage a été défini :</French>
             <Spanish>Se ha establecido el PIN de bloqueo:</Spanish>
@@ -115,6 +131,8 @@
         </Key>
         <Key ID="STR_MISERY_DoorLocks_WrongPIN">
             <English>Wrong PIN...</English>
+            <Chinesesimp>PIN 错误...</Chinesesimp>
+            <Chinese>PIN 錯誤...</Chinese>
             <Czech>Nesprávný PIN...</Czech>
             <French>Code PIN incorrect...</French>
             <Spanish>PIN incorrecto...</Spanish>
@@ -129,6 +147,8 @@
         </Key>
         <Key ID="STR_MISERY_DoorLocks_PINMustBeNumber">
             <English>PIN must be a number...</English>
+            <Chinesesimp>PIN 必须是数字...</Chinesesimp>
+            <Chinese>PIN 必須是數字...</Chinese>
             <Czech>PIN musí být číslo...</Czech>
             <French>Le PIN doit être un nombre...</French>
             <Spanish>El PIN debe ser un número...</Spanish>
@@ -143,6 +163,8 @@
         </Key>
         <Key ID="STR_MISERY_DoorLocks_Blacklist">
             <English>Blacklisted lockable areas</English>
+            <Chinesesimp>黑名单锁定区域</Chinesesimp>
+            <Chinese>黑名單鎖定區域</Chinese>
             <Czech>Zakázané oblasti pro zamykání</Czech>
             <French>Zones de verrouillage sur liste noire</French>
             <Spanish>Áreas de bloqueo en lista negra</Spanish>
@@ -157,6 +179,8 @@
         </Key>
         <Key ID="STR_MISERY_DoorLocks_BlacklistDesc">
             <English>ELLIPSE or RECTANGLE marker names covering the blacklisted area as strings ['noLocks_1', 'noLocks_2']</English>
+            <Chinesesimp>覆盖黑名单区域的 ELLIPSE 或 RECTANGLE 标记名称，格式为字符串 ['noLocks_1', 'noLocks_2']</Chinesesimp>
+            <Chinese>覆蓋黑名單區域的 ELLIPSE 或 RECTANGLE 標記名稱，格式為字符串 ['noLocks_1', 'noLocks_2']</Chinese>
             <Czech>Názvy značek ELLIPSE nebo RECTANGLE pokrývající zakázanou oblast jako řetězce ['noLocks_1', 'noLocks_2']</Czech>
             <French>Noms des marqueurs ELLIPSE ou RECTANGLE couvrant la zone sur liste noire sous forme de chaînes ['noLocks_1', 'noLocks_2']</French>
             <Spanish>Nombres de marcadores ELLIPSE o RECTANGLE que cubren el área en lista negra como cadenas ['noLocks_1', 'noLocks_2']</Spanish>
@@ -171,6 +195,8 @@
         </Key>
         <Key ID="STR_MISERY_DoorLocks_Install">
             <English>Install Door Locks</English>
+            <Chinesesimp>安装门锁</Chinesesimp>
+            <Chinese>安裝門鎖</Chinese>
             <Czech>Instalovat zámky dveří</Czech>
             <French>Installer des verrous de porte</French>
             <Spanish>Instalar cerraduras de puerta</Spanish>
@@ -185,6 +211,8 @@
         </Key>
         <Key ID="STR_MISERY_DoorLocks_Unlock">
             <English>Unlock Doors</English>
+            <Chinesesimp>解锁门</Chinesesimp>
+            <Chinese>解鎖門</Chinese>
             <Czech>Odemknout dveře</Czech>
             <French>Déverrouiller les portes</French>
             <Spanish>Desbloquear puertas</Spanish>
@@ -199,6 +227,8 @@
         </Key>
         <Key ID="STR_MISERY_DoorLocks_Lock">
             <English>Lock Doors</English>
+            <Chinesesimp>锁定门</Chinesesimp>
+            <Chinese>鎖定門</Chinese>
             <Czech>Zamknout dveře</Czech>
             <French>Verrouiller les portes</French>
             <Spanish>Bloquear puertas</Spanish>

@@ -3,6 +3,8 @@
     <Package name="Currency">
         <Key ID="STR_MISERY_Currency_BankAccount">
             <English>Bank Account</English>
+            <Chinesesimp>银行账户</Chinesesimp>
+            <Chinese>銀行帳戶</Chinese>
             <Czech>Bankovní účet</Czech>
             <French>Compte bancaire</French>
             <Spanish>Cuenta bancaria</Spanish>
@@ -17,6 +19,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_Take">
             <English>Take</English>
+            <Chinesesimp>取出</Chinesesimp>
+            <Chinese>取出</Chinese>
             <Czech>Vzít</Czech>
             <French>Prendre</French>
             <Spanish>Tomar</Spanish>
@@ -31,6 +35,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_TakeFunds">
             <English>Take funds</English>
+            <Chinesesimp>取出资金</Chinesesimp>
+            <Chinese>取出資金</Chinese>
             <Czech>Vybrat prostředky</Czech>
             <French>Prendre des fonds</French>
             <Spanish>Tomar fondos</Spanish>
@@ -45,6 +51,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_Give">
             <English>Give</English>
+            <Chinesesimp>给予</Chinesesimp>
+            <Chinese>給予</Chinese>
             <Czech>Dát</Czech>
             <French>Donner</French>
             <Spanish>Dar</Spanish>
@@ -59,6 +67,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_GiveFunds">
             <English>Give funds</English>
+            <Chinesesimp>给予资金</Chinesesimp>
+            <Chinese>給予資金</Chinese>
             <Czech>Darovat prostředky</Czech>
             <French>Donner des fonds</French>
             <Spanish>Dar fondos</Spanish>
@@ -73,6 +83,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_Withdraw">
             <English>Withdraw</English>
+            <Chinesesimp>取款</Chinesesimp>
+            <Chinese>取款</Chinese>
             <Czech>Vybrat</Czech>
             <French>Retirer</French>
             <Spanish>Retirar</Spanish>
@@ -87,6 +99,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_Deposit">
             <English>Deposit</English>
+            <Chinesesimp>存款</Chinesesimp>
+            <Chinese>存款</Chinese>
             <Czech>Uložit</Czech>
             <French>Déposer</French>
             <Spanish>Depositar</Spanish>
@@ -101,6 +115,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_DepositWithdrawTax">
             <English>Deposit %1%3 tax | Withdraw %2%3 tax</English>
+            <Chinesesimp>存款 %1%3 税 | 取款 %2%3 税</Chinesesimp>
+            <Chinese>存款 %1%3 稅 | 取款 %2%3 稅</Chinese>
             <Czech>Vložit %1%3 daň | Vybrat %2%3 daň</Czech>
             <French>Dépôt %1%3 taxe | Retrait %2%3 taxe</French>
             <Spanish>Depositar %1%3 impuesto | Retirar %2%3 impuesto</Spanish>
@@ -115,6 +131,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_MaxDepositTax">
             <English>Max deposit (after tax): %2 %1</English>
+            <Chinesesimp>最大存款 (税后): %2 %1</Chinesesimp>
+            <Chinese>最大存款 (稅後): %2 %1</Chinese>
             <Czech>Maximální vklad (po zdanění): %2 %1</Czech>
             <French>Dépôt max (après taxe): %2 %1</French>
             <Spanish>Depósito máx. (tras impuestos): %2 %1</Spanish>
@@ -129,6 +147,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_NoFundsDeposit">
             <English>No funds to deposit</English>
+            <Chinesesimp>无资金可存</Chinesesimp>
+            <Chinese>無資金可存</Chinese>
             <Czech>Žádné prostředky k vkladu</Czech>
             <French>Aucun fonds à déposer</French>
             <Spanish>No hay fondos para depositar</Spanish>
@@ -143,6 +163,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_MaxWithdrawTax">
             <English>Max withdrawal (after tax): %2 %1</English>
+            <Chinesesimp>最大取款 (税后): %2 %1</Chinesesimp>
+            <Chinese>最大取款 (稅後): %2 %1</Chinese>
             <Czech>Maximální výběr (po zdanění): %2 %1</Czech>
             <French>Retrait max (après taxe): %2 %1</French>
             <Spanish>Retiro máx. (tras impuestos): %2 %1</Spanish>
@@ -157,6 +179,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_NoFundsWithdraw">
             <English>No funds to withdraw</English>
+            <Chinesesimp>无资金可取</Chinesesimp>
+            <Chinese>無資金可取</Chinese>
             <Czech>Žádné prostředky k výběru</Czech>
             <French>Aucun fonds à retirer</French>
             <Spanish>No hay fondos para retirar</Spanish>
@@ -171,6 +195,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_NoTaxes">
             <English>No taxes applied</English>
+            <Chinesesimp>无需交税</Chinesesimp>
+            <Chinese>無需交稅</Chinese>
             <Czech>Žádné daně se neuplatňují</Czech>
             <French>Aucune taxe appliquée</French>
             <Spanish>Sin impuestos aplicados</Spanish>
@@ -185,6 +211,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_MaxDeposit">
             <English>Max deposit: %2 %1</English>
+            <Chinesesimp>最大存款: %2 %1</Chinesesimp>
+            <Chinese>最大存款: %2 %1</Chinese>
             <Czech>Max. vklad: %2 %1</Czech>
             <French>Dépôt max: %2 %1</French>
             <Spanish>Depósito máx: %2 %1</Spanish>
@@ -199,6 +227,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_MaxWithdraw">
             <English>Max withdrawal: %2 %1</English>
+            <Chinesesimp>最大取款: %2 %1</Chinesesimp>
+            <Chinese>最大取款: %2 %1</Chinese>
             <Czech>Max. výběr: %2 %1</Czech>
             <French>Retrait max: %2 %1</French>
             <Spanish>Retiro máx: %2 %1</Spanish>
@@ -213,6 +243,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_InvalidDeposit">
             <English>Invalid deposit amount...</English>
+            <Chinesesimp>存款金额无效...</Chinesesimp>
+            <Chinese>存款金額無效...</Chinese>
             <Czech>Neplatná částka vkladu...</Czech>
             <French>Montant de dépôt invalide...</French>
             <Spanish>Cantidad de depósito no válida...</Spanish>
@@ -227,6 +259,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_NotEnoughDeposit">
             <English>You don't have enough funds for this deposit...</English>
+            <Chinesesimp>你没有足够的资金进行此次存款...</Chinesesimp>
+            <Chinese>你沒有足夠的資金進行此次存款...</Chinese>
             <Czech>Nemáte dostatek prostředků pro tento vklad...</Czech>
             <French>Vous n'avez pas assez de fonds pour ce dépôt...</French>
             <Spanish>No tienes fondos suficientes para este depósito...</Spanish>
@@ -241,6 +275,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_DepositedTax">
             <English>Deposited: %2 %1 (Tax: %2 %3)</English>
+            <Chinesesimp>已存入: %2 %1 (税费: %2 %3)</Chinesesimp>
+            <Chinese>已存入: %2 %1 (稅費: %2 %3)</Chinese>
             <Czech>Vloženo: %2 %1 (Daň: %2 %3)</Czech>
             <French>Déposé: %2 %1 (Taxe: %2 %3)</French>
             <Spanish>Depositado: %2 %1 (Impuesto: %2 %3)</Spanish>
@@ -255,6 +291,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_Deposited">
             <English>Deposited: %2 %1</English>
+            <Chinesesimp>已存入: %2 %1</Chinesesimp>
+            <Chinese>已存入: %2 %1</Chinese>
             <Czech>Vloženo: %2 %1</Czech>
             <French>Déposé: %2 %1</French>
             <Spanish>Depositado: %2 %1</Spanish>
@@ -269,6 +307,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_InvalidWithdraw">
             <English>Invalid withdrawal amount...</English>
+            <Chinesesimp>取款金额无效...</Chinesesimp>
+            <Chinese>取款金額無效...</Chinese>
             <Czech>Neplatná částka výběru...</Czech>
             <French>Montant de retrait invalide...</French>
             <Spanish>Cantidad de retiro no válida...</Spanish>
@@ -283,6 +323,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_NotEnoughWithdraw">
             <English>You don't have enough funds for this withdrawal...</English>
+            <Chinesesimp>你没有足够的资金进行此次取款...</Chinesesimp>
+            <Chinese>你沒有足夠的資金進行此次取款...</Chinese>
             <Czech>Nemáte dostatek prostředků pro tento výběr...</Czech>
             <French>Vous n'avez pas assez de fonds pour ce retrait...</French>
             <Spanish>No tienes fondos suficientes para este retiro...</Spanish>
@@ -297,6 +339,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_WithdrewTax">
             <English>Withdrew: %2 %1 (Tax: %2 %3)</English>
+            <Chinesesimp>已取出: %2 %1 (税费: %2 %3)</Chinesesimp>
+            <Chinese>已取出: %2 %1 (稅費: %2 %3)</Chinese>
             <Czech>Vybráno: %2 %1 (Daň: %2 %3)</Czech>
             <French>Retiré: %2 %1 (Taxe: %2 %3)</French>
             <Spanish>Retirado: %2 %1 (Impuesto: %2 %3)</Spanish>
@@ -311,6 +355,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_Withdrew">
             <English>Withdrew: %2 %1</English>
+            <Chinesesimp>已取出: %2 %1</Chinesesimp>
+            <Chinese>已取出: %2 %1</Chinese>
             <Czech>Vybráno: %2 %1</Czech>
             <French>Retiré: %2 %1</French>
             <Spanish>Retirado: %2 %1</Spanish>
@@ -325,6 +371,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_OpenAction">
             <English>Open %1</English>
+            <Chinesesimp>打开 %1</Chinesesimp>
+            <Chinese>打開 %1</Chinese>
             <Czech>Otevřít %1</Czech>
             <French>Ouvrir %1</French>
             <Spanish>Abrir %1</Spanish>
@@ -339,6 +387,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_NoPlayer">
             <English>No player nearby...</English>
+            <Chinesesimp>附近没有玩家...</Chinesesimp>
+            <Chinese>附近沒有玩家...</Chinese>
             <Czech>Žádný hráč poblíž...</Czech>
             <French>Aucun joueur à proximité...</French>
             <Spanish>No hay ningún jugador cerca...</Spanish>
@@ -353,6 +403,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_InvalidAmount">
             <English>Invalid amount...</English>
+            <Chinesesimp>金额无效...</Chinesesimp>
+            <Chinese>金額無效...</Chinese>
             <Czech>Neplatná částka...</Czech>
             <French>Montant invalide...</French>
             <Spanish>Cantidad no válida...</Spanish>
@@ -367,6 +419,8 @@
         </Key>
          <Key ID="STR_MISERY_Currency_NoMoreFundsCorpse">
             <English>This corpse has no more funds...</English>
+            <Chinesesimp>这具尸体没有更多资金了...</Chinesesimp>
+            <Chinese>這具屍體沒有更多資金了...</Chinese>
             <Czech>Tato mrtvola již nemá žádné prostředky...</Czech>
             <French>Ce cadavre n'a plus de fonds...</French>
             <Spanish>Este cadáver ya no tiene fondos...</Spanish>
@@ -381,6 +435,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_NotEnoughGift">
             <English>You don't have enough funds to gift this much...</English>
+            <Chinesesimp>你没有足够的资金赠送这么多...</Chinesesimp>
+            <Chinese>你沒有足夠的資金贈送這麼多...</Chinese>
             <Czech>Nemáte dostatek prostředků na darování takové částky...</Czech>
             <French>Vous n'avez pas assez de fonds pour donner autant...</French>
             <Spanish>No tienes fondos suficientes para regalar tanto...</Spanish>
@@ -395,6 +451,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_Gifted">
             <English>Money gifted: %2 %1</English>
+            <Chinesesimp>赠送金额: %2 %1</Chinesesimp>
+            <Chinese>贈送金額: %2 %1</Chinese>
             <Czech>Peníze darovány: %2 %1</Czech>
             <French>Argent donné: %2 %1</French>
             <Spanish>Dinero regalado: %2 %1</Spanish>
@@ -409,6 +467,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_NoCorpse">
             <English>No corpse nearby...</English>
+            <Chinesesimp>附近没有尸体...</Chinesesimp>
+            <Chinese>附近沒有屍體...</Chinese>
             <Czech>Žádná mrtvola poblíž...</Czech>
             <French>Aucun cadavre à proximité...</French>
             <Spanish>No hay cadáveres cerca...</Spanish>
@@ -423,6 +483,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_Taken">
             <English>Money taken: %2 %1</English>
+            <Chinesesimp>获取金额: %2 %1</Chinesesimp>
+            <Chinese>獲取金額: %2 %1</Chinese>
             <Czech>Peníze vzaty: %2 %1</Czech>
             <French>Argent récupéré: %2 %1</French>
             <Spanish>Dinero tomado: %2 %1</Spanish>
@@ -437,6 +499,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_Symbol">
             <English>Money Symbol</English>
+            <Chinesesimp>货币符号</Chinesesimp>
+            <Chinese>貨幣符號</Chinese>
             <Czech>Symbol měny</Czech>
             <French>Symbole monétaire</French>
             <Spanish>Símbolo de dinero</Spanish>
@@ -451,6 +515,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_SymbolDesc">
             <English>Symbol to use for currency</English>
+            <Chinesesimp>用于货币的符号</Chinesesimp>
+            <Chinese>用於貨幣的符號</Chinese>
             <Czech>Symbol použitý pro měnu</Czech>
             <French>Symbole à utiliser pour la monnaie</French>
             <Spanish>Símbolo a usar para la moneda</Spanish>
@@ -465,6 +531,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_BankName">
             <English>Bank name</English>
+            <Chinesesimp>银行名称</Chinesesimp>
+            <Chinese>銀行名稱</Chinese>
             <Czech>Název banky</Czech>
             <French>Nom de la banque</French>
             <Spanish>Nombre del banco</Spanish>
@@ -479,6 +547,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_BankNameDesc">
             <English>Name of the centralized bank network</English>
+            <Chinesesimp>中央银行网络的名称</Chinesesimp>
+            <Chinese>中央銀行網絡的名稱</Chinese>
             <Czech>Název centralizované bankovní sítě</Czech>
             <French>Nom du réseau bancaire centralisé</French>
             <Spanish>Nombre de la red bancaria centralizada</Spanish>
@@ -493,6 +563,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_TaxesMode">
             <English>Bank Taxes Mode</English>
+            <Chinesesimp>银行税费模式</Chinesesimp>
+            <Chinese>銀行稅費模式</Chinese>
             <Czech>Režim bankovních daní</Czech>
             <French>Mode des taxes bancaires</French>
             <Spanish>Modo de impuestos bancarios</Spanish>
@@ -507,6 +579,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_TaxesModeDesc">
             <English>Sets the difficulty of bank transaction taxes, reflecting economic conditions</English>
+            <Chinesesimp>设置银行交易税费的难度，反映经济状况</Chinesesimp>
+            <Chinese>設置銀行交易稅費的難度，反映經濟狀況</Chinese>
             <Czech>Nastavuje obtížnost daní z bankovních transakcí odrážející ekonomické podmínky</Czech>
             <French>Définit la difficulté des taxes sur les transactions bancaires selon les conditions économiques</French>
             <Spanish>Establece la dificultad de los impuestos por transacciones bancarias, reflejando las condiciones económicas</Spanish>
@@ -521,6 +595,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_DescNone">
             <English>Transactions are free (0% tax)</English>
+            <Chinesesimp>交易免费 (0% 税)</Chinesesimp>
+            <Chinese>交易免費 (0% 稅)</Chinese>
             <Czech>Transakce jsou zdarma (0% daň)</Czech>
             <French>Les transactions sont gratuites (0% taxe)</French>
             <Spanish>Las transacciones son gratuitas (0% impuesto)</Spanish>
@@ -535,6 +611,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_DescStable">
             <English>Minimal taxes for deposits and withdrawals</English>
+            <Chinesesimp>存取款的最低税费</Chinesesimp>
+            <Chinese>存取款的最低稅費</Chinese>
             <Czech>Minimální daně pro vklady a výběry</Czech>
             <French>Taxes minimales pour les dépôts et retraits</French>
             <Spanish>Impuestos mínimos para depósitos y retiros</Spanish>
@@ -549,6 +627,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_DescRecession">
             <English>Moderate taxes, deposits slightly costlier</English>
+            <Chinesesimp>中等税费，存款成本略高</Chinesesimp>
+            <Chinese>中等稅費，存款成本略高</Chinese>
             <Czech>Mírné daně, vklady jsou mírně nákladnější</Czech>
             <French>Taxes modérées, dépôts légèrement plus coûteux</French>
             <Spanish>Impuestos moderados, depósitos ligeramente más caros</Spanish>
@@ -563,6 +643,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_DescHyperinflation">
             <English>High taxes, withdrawals heavily penalized</English>
+            <Chinesesimp>高额税费，取款受到严厉惩罚</Chinesesimp>
+            <Chinese>高額稅費，取款受到嚴厲懲罰</Chinese>
             <Czech>Vysoké daně, výběry jsou silně penalizovány</Czech>
             <French>Taxes élevées, retraits fortement pénalisés</French>
             <Spanish>Impuestos altos, retiros fuertemente penalizados</Spanish>
@@ -577,6 +659,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_DescCollapse">
             <English>Crippling taxes, banking is a last resort</English>
+            <Chinesesimp>极高税费，银行是最后手段</Chinesesimp>
+            <Chinese>極高稅費，銀行是最後手段</Chinese>
             <Czech>Zničující daně, bankovnictví je poslední možností</Czech>
             <French>Taxes écrasantes, la banque est un dernier recours</French>
             <Spanish>Impuestos asfixiantes, la banca es el último recurso</Spanish>
@@ -591,6 +675,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_AIMoneyChance">
             <English>AI Money Chance</English>
+            <Chinesesimp>AI 携带资金概率</Chinesesimp>
+            <Chinese>AI 攜帶資金概率</Chinese>
             <Czech>Šance na peníze u AI</Czech>
             <French>Chance d'argent de l'IA</French>
             <Spanish>Probabilidad de dinero en IA</Spanish>
@@ -605,6 +691,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_AIMoneyChanceDesc">
             <English>Chance that an AI will have money.</English>
+            <Chinesesimp>AI 携带资金的概率。</Chinesesimp>
+            <Chinese>AI 攜帶資金的概率。</Chinese>
             <Czech>Šance, že AI bude mít peníze.</Czech>
             <French>Chance qu'une IA possède de l'argent.</French>
             <Spanish>Probabilidad de que una IA tenga dinero.</Spanish>
@@ -619,6 +707,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_MinAIMoney">
             <English>Minimum AI Money</English>
+            <Chinesesimp>AI 最小携带资金</Chinesesimp>
+            <Chinese>AI 最小攜帶資金</Chinese>
             <Czech>Minimální peníze AI</Czech>
             <French>Argent minimum de l'IA</French>
             <Spanish>Dinero mínimo de IA</Spanish>
@@ -633,6 +723,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_MinAIMoneyDesc">
             <English>The minimum AI can potentially have for cash. (Capped at 5,000)</English>
+            <Chinesesimp>AI 可能携带的最小现金金额。(上限 5,000)</Chinesesimp>
+            <Chinese>AI 可能攜帶的最小現金金額。(上限 5,000)</Chinese>
             <Czech>Minimální hotovost, kterou může AI mít. (Limit 5 000)</Czech>
             <French>Le montant minimum d'argent qu'une IA peut avoir. (Limité à 5 000)</French>
             <Spanish>El mínimo de efectivo que una IA puede tener. (Límite 5.000)</Spanish>
@@ -647,6 +739,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_MaxAIMoney">
             <English>Maximum AI Money</English>
+            <Chinesesimp>AI 最大携带资金</Chinesesimp>
+            <Chinese>AI 最大攜帶資金</Chinese>
             <Czech>Maximální peníze AI</Czech>
             <French>Argent maximum de l'IA</French>
             <Spanish>Dinero máximo de IA</Spanish>
@@ -661,6 +755,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_MaxAIMoneyDesc">
             <English>The maximum AI can potentially have for cash. (Capped at 10,000)</English>
+            <Chinesesimp>AI 可能携带的最大现金金额。(上限 10,000)</Chinesesimp>
+            <Chinese>AI 可能攜帶的最大現金金額。(上限 10,000)</Chinese>
             <Czech>Maximální hotovost, kterou může AI mít. (Limit 10 000)</Czech>
             <French>Le montant maximum d'argent qu'une IA peut avoir. (Limité à 10 000)</French>
             <Spanish>El máximo de efectivo que una IA puede tener. (Límite 10.000)</Spanish>
@@ -675,6 +771,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_SearchAction">
             <English>%1 Search for money</English>
+            <Chinesesimp>%1 搜寻资金</Chinesesimp>
+            <Chinese>%1 搜尋資金</Chinese>
             <Czech>%1 Hledat peníze</Czech>
             <French>%1 Chercher de l'argent</French>
             <Spanish>%1 Buscar dinero</Spanish>
@@ -689,6 +787,8 @@
         </Key>
         <Key ID="STR_MISERY_Currency_GiftAction">
             <English>%1 Gift money</English>
+            <Chinesesimp>%1 赠送资金</Chinesesimp>
+            <Chinese>%1 贈送資金</Chinese>
             <Czech>%1 Darovat peníze</Czech>
             <French>%1 Donner de l'argent</French>
             <Spanish>%1 Regalar dinero</Spanish>

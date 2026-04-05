@@ -3,6 +3,8 @@
     <Package name="ERU">
         <Key ID="STR_MISERY_ERU_NoERUNeedsBatteries">
             <English>You don't have an ERU that needs batteries...</English>
+            <Chinesesimp>你没有需要电池的环境读取装置...</Chinesesimp>
+            <Chinese>你沒有需要電池的環境讀取裝置...</Chinese>
             <Czech>Nemáte ERU, která by potřebovala baterie...</Czech>
             <French>Vous n'avez pas d'ERU nécessitant des piles...</French>
             <Spanish>No tienes un ERU que necesite baterías...</Spanish>
@@ -17,6 +19,8 @@
         </Key>
         <Key ID="STR_MISERY_ERU_AddBatteryToERU">
             <English>You add a lithium battery to your ERU</English>
+            <Chinesesimp>你向环境读取装置添加了一块锂电池</Chinesesimp>
+            <Chinese>你向環境讀取裝置添加了一塊鋰電池</Chinese>
             <Czech>Přidali jste lithiovou baterii do ERU</Czech>
             <French>Vous ajoutez une pile au lithium à votre ERU</French>
             <Spanish>Añades una batería de litio a tu ERU</Spanish>
@@ -31,6 +35,8 @@
         </Key>
         <Key ID="STR_MISERY_ERU_AirLabel">
             <English>AIR:</English>
+            <Chinesesimp>空气:</Chinesesimp>
+            <Chinese>空氣:</Chinese>
             <Czech>VZDUCH:</Czech>
             <French>AIR :</French>
             <Spanish>AIRE:</Spanish>
@@ -45,6 +51,8 @@
         </Key>
         <Key ID="STR_MISERY_ERU_SeaLabel">
             <English>SEA:</English>
+            <Chinesesimp>海水:</Chinesesimp>
+            <Chinese>海水:</Chinese>
             <Czech>MOŘE:</Czech>
             <French>MER :</French>
             <Spanish>MAR:</Spanish>
@@ -59,6 +67,8 @@
         </Key>
         <Key ID="STR_MISERY_ERU_ExposureLabel">
             <English>EXPOSURE:</English>
+            <Chinesesimp>暴露:</Chinesesimp>
+            <Chinese>暴露:</Chinese>
             <Czech>EXPOZICE:</Czech>
             <French>EXPOSITION :</French>
             <Spanish>EXPOSICIÓN:</Spanish>
@@ -73,6 +83,8 @@
         </Key>
         <Key ID="STR_MISERY_ERU_CompassLabel">
             <English>COMPASS:</English>
+            <Chinesesimp>指南针:</Chinesesimp>
+            <Chinese>指南針:</Chinese>
             <Czech>KOMPAS:</Czech>
             <French>BOUSSOLE :</French>
             <Spanish>BRÚJULA:</Spanish>
@@ -87,6 +99,8 @@
         </Key>
         <Key ID="STR_MISERY_ERU_NoData">
             <English>* NO DATA *</English>
+            <Chinesesimp>* 无数据 *</Chinesesimp>
+            <Chinese>* 無數據 *</Chinese>
             <Czech>* ŽÁDNÁ DATA *</Czech>
             <French>* AUCUNE DONNÉE *</French>
             <Spanish>* SIN DATOS *</Spanish>
@@ -101,6 +115,8 @@
         </Key>
         <Key ID="STR_MISERY_ERU_ERUActionAddBattery">
             <English>Add lithium battery to ERU</English>
+            <Chinesesimp>向环境读取装置添加锂电池</Chinesesimp>
+            <Chinese>向環境讀取裝置添加鋰電池</Chinese>
             <Czech>Přidat lithiovou baterii do ERU</Czech>
             <French>Ajouter une pile au lithium à l'ERU</French>
             <Spanish>Añadir batería de litio al ERU</Spanish>
@@ -115,6 +131,8 @@
         </Key>
         <Key ID="STR_MISERY_ERU_ERUActionToggleERU">
             <English>Toggle ERU</English>
+            <Chinesesimp>切换环境读取装置</Chinesesimp>
+            <Chinese>切換環境讀取裝置</Chinese>
             <Czech>Přepnout ERU</Czech>
             <French>Basculer l'ERU</French>
             <Spanish>Alternar ERU</Spanish>
@@ -129,6 +147,8 @@
         </Key>
         <Key ID="STR_MISERY_ERU_ERUCompassSetting">
             <English>Compass Setting</English>
+            <Chinesesimp>指南针设置</Chinesesimp>
+            <Chinese>指南針設置</Chinese>
             <Czech>Nastavení kompasu</Czech>
             <French>Réglage de la boussole</French>
             <Spanish>Ajuste de brújula</Spanish>
@@ -143,6 +163,8 @@
         </Key>
         <Key ID="STR_MISERY_ERU_ERUTempEnv">
             <English>Temperature Readings (Environment)</English>
+            <Chinesesimp>温度读数 (环境)</Chinesesimp>
+            <Chinese>溫度讀數 (環境)</Chinese>
             <Czech>Měření teploty (prostředí)</Czech>
             <French>Lectures de température (environnement)</French>
             <Spanish>Lecturas de temperatura (entorno)</Spanish>
@@ -157,6 +179,8 @@
         </Key>
         <Key ID="STR_MISERY_ERU_ERUTempExp">
             <English>Temperature Readings (Exposure)</English>
+            <Chinesesimp>温度读数 (暴露)</Chinesesimp>
+            <Chinese>溫度讀數 (暴露)</Chinese>
             <Czech>Měření teploty (expozice)</Czech>
             <French>Lectures de température (exposition)</French>
             <Spanish>Lecturas de temperatura (exposición)</Spanish>

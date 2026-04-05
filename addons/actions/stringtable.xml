@@ -3,6 +3,8 @@
     <Package name="Actions">
         <Key ID="STR_MISERY_Actions_AlreadyRegistered">
             <English>Action %1 already registered!</English>
+            <Chinesesimp>动作 %1 已注册！</Chinesesimp>
+            <Chinese>動作 %1 已註冊！</Chinese>
             <Czech>Akce %1 je již zaregistrována!</Czech>
             <French>Action %1 déjà enregistrée !</French>
             <Spanish>¡La acción %1 ya está registrada!</Spanish>

@@ -3,6 +3,8 @@
     <Package name="Forestry">
         <Key ID="STR_MISERY_Forestry_CollectionName">
             <English>Wood collection</English>
+            <Chinesesimp>木材收集</Chinesesimp>
+            <Chinese>木材收集</Chinese>
             <Czech>Sběr dřeva</Czech>
             <French>Collecte de bois</French>
             <Spanish>Recolección de madera</Spanish>
@@ -17,6 +19,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_CollectionDesc">
             <English>Enable Wood collection actions? (Wood gathering and log splitting actions)</English>
+            <Chinesesimp>开启木材收集动作？(木材采集和原木劈开动作)</Chinesesimp>
+            <Chinese>開啟木材收集動作？(木材採集和原木劈開動作)</Chinese>
             <Czech>Povolit akce sběru dřeva? (Sběr dřeva a štípání polen)</Czech>
             <French>Activer les actions de collecte de bois ? (Ramassage de bois et fendage de bûches)</French>
             <Spanish>¿Habilitar acciones de recolección de madera? (Recolección de madera y división de troncos)</Spanish>
@@ -31,6 +35,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_ForagingName">
             <English>Foraging</English>
+            <Chinesesimp>采集</Chinesesimp>
+            <Chinese>採集</Chinese>
             <Czech>Sběr plodů a surovin</Czech>
             <French>Cueillette</French>
             <Spanish>Forrajeo</Spanish>
@@ -45,6 +51,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_ForagingDesc">
             <English>Enable Foraging? (Enables digging for worms, and searching for tinder actions)</English>
+            <Chinesesimp>开启采集？(开启挖蠕虫和寻找引火物动作)</Chinesesimp>
+            <Chinese>開啟採集？(開啟挖蠕蟲和尋找引火物動作)</Chinese>
             <Czech>Povolit sběr? (Povolí kopání žížal a hledání troudu)</Czech>
             <French>Activer la cueillette ? (Permet de creuser pour trouver des vers et de chercher de l'amadou)</French>
             <Spanish>¿Habilitar forrajeo? (Permite cavar en busca de gusanos y buscar yesca)</Spanish>
@@ -59,6 +67,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_NeedTreeChopping">
             <English>You need to be near a tree to start chopping wood...</English>
+            <Chinesesimp>你需要靠近一棵树才能开始砍木头...</Chinesesimp>
+            <Chinese>你需要靠近一棵樹才能開始砍木頭...</Chinese>
             <Czech>K sekání dřeva musíte být u stromu...</Czech>
             <French>Vous devez être près d'un arbre pour commencer à couper du bois...</French>
             <Spanish>Necesitas estar cerca de un árbol para empezar a picar madera...</Spanish>
@@ -73,6 +83,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_TreeEmpty">
             <English>Tree has fallen, doesn't have anymore wood...</English>
+            <Chinesesimp>树已经倒了，没有更多木头了...</Chinesesimp>
+            <Chinese>樹已經倒了，沒有更多木頭了...</Chinese>
             <Czech>Strom padl, už v něm není žádné dřevo...</Czech>
             <French>L'arbre est tombé, il n'y a plus de bois...</French>
             <Spanish>El árbol ha caído, ya no tiene madera...</Spanish>
@@ -87,6 +99,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_ChoppingProgress">
             <English>Chopping wood...</English>
+            <Chinesesimp>正在砍木头...</Chinesesimp>
+            <Chinese>正在砍木頭...</Chinese>
             <Czech>Sekání dřeva...</Czech>
             <French>Coupe du bois...</French>
             <Spanish>Picando madera...</Spanish>
@@ -101,6 +115,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_StopCutting">
             <English>You stop cutting down the tree...</English>
+            <Chinesesimp>你停止了砍树...</Chinesesimp>
+            <Chinese>你停止了砍樹...</Chinese>
             <Czech>Přestali jste kácet strom...</Czech>
             <French>Vous arrêtez d'abattre l'arbre...</French>
             <Spanish>Dejas de talar el árbol...</Spanish>
@@ -115,6 +131,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_NoChainsaw">
             <English>You don't have a chainsaw...</English>
+            <Chinesesimp>你没有链锯...</Chinesesimp>
+            <Chinese>你沒有鏈鋸...</Chinese>
             <Czech>Nemáte motorovou pilu...</Czech>
             <French>Vous n'avez pas de tronçonneuse...</French>
             <Spanish>No tienes una motosierra...</Spanish>
@@ -129,6 +147,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_ChainsawFull">
             <English>Your chainsaw is already full of fuel...</English>
+            <Chinesesimp>你的链锯已经装满燃料了...</Chinesesimp>
+            <Chinese>你的鏈鋸已經裝滿燃料了...</Chinese>
             <Czech>Vaše motorová pila je již plná paliva...</Czech>
             <French>Votre tronçonneuse est déjà pleine de carburant...</French>
             <Spanish>Tu motosierra ya está llena de combustible...</Spanish>
@@ -143,6 +163,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_NoFuel">
             <English>You have no more fuel...</English>
+            <Chinesesimp>你没有更多燃料了...</Chinesesimp>
+            <Chinese>你沒有更多燃料了...</Chinese>
             <Czech>Nemáte žádné další palivo...</Czech>
             <French>Vous n'avez plus de carburant...</French>
             <Spanish>No tienes más combustible...</Spanish>
@@ -157,6 +179,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_FuelStatusFull">
             <English>Chainsaw is full of fuel...</English>
+            <Chinesesimp>链锯已装满燃料...</Chinesesimp>
+            <Chinese>鏈鋸已裝滿燃料...</Chinese>
             <Czech>Motorová pila je plná paliva...</Czech>
             <French>La tronçonneuse est pleine de carburant...</French>
             <Spanish>La motosierra está llena de combustible...</Spanish>
@@ -171,6 +195,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_NearFoliage">
             <English>You need to be near foliage to search for worms...</English>
+            <Chinesesimp>你需要靠近植物丛才能寻找蠕虫...</Chinesesimp>
+            <Chinese>你需要靠近植物叢才能尋找蠕蟲...</Chinese>
             <Czech>K hledání žížal musíte být u vegetace...</Czech>
             <French>Vous devez être près de la végétation pour chercher des vers...</French>
             <Spanish>Necesitas estar cerca de follaje para buscar gusanos...</Spanish>
@@ -185,6 +211,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_AreaDug">
             <English>This area has already been dug up...</English>
+            <Chinesesimp>这个区域已经被挖过了...</Chinesesimp>
+            <Chinese>這個區域已經被挖過了...</Chinese>
             <Czech>Tato oblast již byla prokopána...</Czech>
             <French>Cette zone a déjà été fouillée...</French>
             <Spanish>Esta zona ya ha sido excavada...</Spanish>
@@ -199,6 +227,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_DiggingWorms">
             <English>Digging for worms...</English>
+            <Chinesesimp>正在挖蠕虫...</Chinesesimp>
+            <Chinese>正在挖蠕蟲...</Chinese>
             <Czech>Kopání žížal...</Czech>
             <French>Creusement pour des vers...</French>
             <Spanish>Cavando en busca de gusanos...</Spanish>
@@ -213,6 +243,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_FoundWorms">
             <English>You found some worms...</English>
+            <Chinesesimp>你发现了一些蠕虫...</Chinesesimp>
+            <Chinese>你發現了一些蠕蟲...</Chinese>
             <Czech>Našli jste žížaly...</Czech>
             <French>Vous avez trouvé des vers...</French>
             <Spanish>Has encontrado algunos gusanos...</Spanish>
@@ -227,6 +259,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_FoundNothing">
             <English>You didn't find anything...</English>
+            <Chinesesimp>你什么也没发现...,</Chinesesimp>
+            <Chinese>你什麼也沒發現...</Chinese>
             <Czech>Nic jste nenašli...</Czech>
             <French>Vous n'avez rien trouvé...</French>
             <Spanish>No has encontrado nada...</Spanish>
@@ -241,6 +275,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_StopDigging">
             <English>You stop digging for worms...</English>
+            <Chinesesimp>你停止了挖蠕虫...</Chinesesimp>
+            <Chinese>你停止了挖蠕蟲...</Chinese>
             <Czech>Přestali jste kopat žížaly...</Czech>
             <French>Vous arrêtez de creuser pour des vers...</French>
             <Spanish>Dejas de cavar en busca de gusanos...</Spanish>
@@ -255,6 +291,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_NeedTreeGathering">
             <English>You need to be near a tree to gather wood...</English>
+            <Chinesesimp>你需要靠近一棵树才能采集木材...</Chinesesimp>
+            <Chinese>你需要靠近一棵樹才能採集木材...</Chinese>
             <Czech>Ke sběru dřeva musíte být u stromu...</Czech>
             <French>Vous devez être près d'un arbre pour ramasser du bois...</French>
             <Spanish>Necesitas estar cerca de un árbol para recolectar madera...</Spanish>
@@ -269,6 +307,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_DeadGathered">
             <English>This tree's dead wood has been gathered. The remaining wood can be gathered by cutting it down...</English>
+            <Chinesesimp>这棵树的枯木已经被采集了。剩下的木头可以通过砍树来采集...</Chinesesimp>
+            <Chinese>這棵樹的枯木已經被採集了。剩下的木頭可以通過砍樹來採集...</Chinese>
             <Czech>Mrtvé dřevo tohoto stromu již bylo sebráno. Zbytek dřeva lze získat pokácením...</Czech>
             <French>Le bois mort de cet arbre a été ramassé. Le bois restant peut être récupéré en l'abattant...</French>
             <Spanish>La madera muerta de este árbol ya ha sido recolectada. El resto se puede obtener talándolo...</Spanish>
@@ -283,6 +323,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_GatheringProgress">
             <English>Gathering wood...</English>
+            <Chinesesimp>正在采集木材...</Chinesesimp>
+            <Chinese>正在採集木材...</Chinese>
             <Czech>Sběr dřeva...</Czech>
             <French>Ramassage de bois...</French>
             <Spanish>Recolectando madera...</Spanish>
@@ -297,6 +339,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_StopGathering">
             <English>You stop gathering wood...</English>
+            <Chinesesimp>你停止了采集木材...</Chinesesimp>
+            <Chinese>你停止了採集木材...</Chinese>
             <Czech>Přestali jste sbírat dřevo...</Czech>
             <French>Vous arrêtez de ramasser du bois...</French>
             <Spanish>Dejas de recolectar madera...</Spanish>
@@ -311,6 +355,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_NeedTreeSawing">
             <English>You need to be near a tree to start cutting wood...</English>
+            <Chinesesimp>你需要靠近一棵树才能开始锯木头...</Chinesesimp>
+            <Chinese>你需要靠近一棵樹才能開始鋸木頭...</Chinese>
             <Czech>K řezání dřeva musíte být u stromu...</Czech>
             <French>Vous devez être près d'un arbre pour commencer à couper du bois...</French>
             <Spanish>Necesitas estar cerca de un árbol para empezar a cortar madera...</Spanish>
@@ -325,6 +371,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_SawingProgress">
             <English>Sawing tree...</English>
+            <Chinesesimp>正在锯树...</Chinesesimp>
+            <Chinese>正在鋸樹...</Chinese>
             <Czech>Řezání stromu...</Czech>
             <French>Sciage de l'arbre...</French>
             <Spanish>Serrando el árbol...</Spanish>
@@ -339,6 +387,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_StopSawing">
             <English>You stop sawing the tree...</English>
+            <Chinesesimp>你停止了锯树...</Chinesesimp>
+            <Chinese>你停止了鋸樹...</Chinese>
             <Czech>Přestali jste řezat strom...</Czech>
             <French>Vous arrêtez de scier l'arbre...</French>
             <Spanish>Dejas de serrar el árbol...</Spanish>
@@ -353,6 +403,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_NearTreeTinder">
             <English>You need to be near a tree to search for tinder...</English>
+            <Chinesesimp>你需要靠近一棵树才能寻找引火物...</Chinesesimp>
+            <Chinese>你需要靠近一棵樹才能尋找引火物...</Chinese>
             <Czech>K hledání troudu musíte být u stromu...</Czech>
             <French>Vous devez être près d'un arbre pour chercher de l'amadou...</French>
             <Spanish>Necesitas estar cerca de un árbol para buscar yesca...</Spanish>
@@ -367,6 +419,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_AreaSearched">
             <English>This area has already been searched...</English>
+            <Chinesesimp>这个区域已经搜索过了...</Chinesesimp>
+            <Chinese>這個區域已經搜索過了...</Chinese>
             <Czech>Tato oblast již byla prohledána...</Czech>
             <French>Cette zone a déjà été fouillée...</French>
             <Spanish>Esta zona ya ha sido registrada...</Spanish>
@@ -381,6 +435,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_SearchingTinder">
             <English>Searching for tinder...</English>
+            <Chinesesimp>正在寻找引火物...</Chinesesimp>
+            <Chinese>正在尋找引火物...</Chinese>
             <Czech>Hledání troudu...</Czech>
             <French>Recherche d'amadou...</French>
             <Spanish>Buscando yesca...</Spanish>
@@ -395,6 +451,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_FoundTinder">
             <English>You found some tinder...</English>
+            <Chinesesimp>你发现了一些引火物...</Chinesesimp>
+            <Chinese>你發現了一些引火物...</Chinese>
             <Czech>Našli jste troud...</Czech>
             <French>Vous avez trouvé de l'amadou...</French>
             <Spanish>Has encontrado algo de yesca...</Spanish>
@@ -409,6 +467,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_StopSearchingTinder">
             <English>You stop searching for tinder...</English>
+            <Chinesesimp>你停止了寻找引火物...</Chinesesimp>
+            <Chinese>你停止了尋找引火物...</Chinese>
             <Czech>Přestali jste hledat troud...</Czech>
             <French>Vous arrêtez de chercher de l'amadou...</French>
             <Spanish>Dejas de buscar yesca...</Spanish>
@@ -423,6 +483,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_ChoppingLog">
             <English>Chopping log...</English>
+            <Chinesesimp>正在劈原木...</Chinesesimp>
+            <Chinese>正在劈原木...</Chinese>
             <Czech>Sekání polena...</Czech>
             <French>Coupe d'une bûche...</French>
             <Spanish>Picando tronco...</Spanish>
@@ -437,6 +499,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_SawingLog">
             <English>Sawing log...</English>
+            <Chinesesimp>正在锯原木...</Chinesesimp>
+            <Chinese>正在鋸原木...</Chinese>
             <Czech>Řezání polena...</Czech>
             <French>Sciage d'une bûche...</French>
             <Spanish>Serrando tronco...</Spanish>
@@ -451,6 +515,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_StopSawingLog">
             <English>You stop sawing the log...</English>
+            <Chinesesimp>你停止了锯原木...</Chinesesimp>
+            <Chinese>你停止了鋸原木...</Chinese>
             <Czech>Přestali jste řezat poleno...</Czech>
             <French>Vous arrêtez de scier la bûche...</French>
             <Spanish>Dejas de serrar el tronco...</Spanish>
@@ -465,6 +531,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_StopSplittingLog">
             <English>You stop splitting the log...</English>
+            <Chinesesimp>你停止了劈原木...</Chinesesimp>
+            <Chinese>你停止了劈原木...</Chinese>
             <Czech>Přestali jste štípat poleno...</Czech>
             <French>Vous arrêtez de fendre la bûche...</French>
             <Spanish>Dejas de dividir el tronco...</Spanish>
@@ -479,6 +547,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_CollectWood">
             <English>Collect wood</English>
+            <Chinesesimp>采集木材</Chinesesimp>
+            <Chinese>採集木材</Chinese>
             <Czech>Sbírat dřevo</Czech>
             <French>Collecter du bois</French>
             <Spanish>Recoger madera</Spanish>
@@ -493,6 +563,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_SplitWoodLog">
             <English>Split Wood Log</English>
+            <Chinesesimp>劈原木</Chinesesimp>
+            <Chinese>劈原木</Chinese>
             <Czech>Rozštípaný špalek</Czech>
             <French>Bûche de bois fendue</French>
             <Spanish>Tronco de madera hendido</Spanish>
@@ -507,6 +579,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_NoWoodAxeOrChainsawNoti">
             <English>You don't have a chainsaw, or Woodaxe...</English>
+            <Chinesesimp>你没有链锯或伐木斧...</Chinesesimp>
+            <Chinese>你沒有鏈鋸或伐木斧...</Chinese>
             <Czech>Nemáš motorovou pilu ani sekeru...</Czech>
             <French>Vous n'avez pas de tronçonneuse, ni de hache à bois...</French>
             <Spanish>Usted no tiene una motosierra, o Woodaxe ...</Spanish>
@@ -521,6 +595,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_NoWoodenLogsForSplitting">
             <English>You don't have any wooden logs...</English>
+            <Chinesesimp>你没有任何原木...</Chinesesimp>
+            <Chinese>你沒有任何原木...</Chinese>
             <Czech>Nemáš žádné dřevěné klády...</Czech>
             <French>Vous n'avez pas de rondins de bois...</French>
             <Spanish>No tienes troncos de madera...</Spanish>
@@ -535,6 +611,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_Forage">
             <English>Forage</English>
+            <Chinesesimp>采集</Chinesesimp>
+            <Chinese>採集</Chinese>
             <Czech>Přehrabování</Czech>
             <French>Fourrager</French>
             <Spanish>Forrajear</Spanish>
@@ -549,6 +627,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_ForageDigForWorms">
             <English>Dig for worms</English>
+            <Chinesesimp>挖蠕虫</Chinesesimp>
+            <Chinese>挖蠕蟲</Chinese>
             <Czech>Vykopat červy</Czech>
             <French>Creuser pour trouver des vers</French>
             <Spanish>Excavar en busca de lombrices</Spanish>
@@ -563,6 +643,8 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_ForageSearchForTinder">
             <English>Search for tinder</English>
+            <Chinesesimp>寻找引火物</Chinesesimp>
+            <Chinese>尋找引火物</Chinese>
             <Czech>Hledat troud</Czech>
             <French>Recherche de tinder</French>
             <Spanish>Buscar tinder</Spanish>

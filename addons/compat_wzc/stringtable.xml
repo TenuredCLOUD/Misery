@@ -3,6 +3,8 @@
     <Package name="Compat_WZC">
         <Key ID="STR_MISERY_Compat_WZC_Enabled">
             <English>Ambient Webknight Zombies &amp; Creatures</English>
+            <Chinesesimp>环境 Webknight 僵尸与生物</Chinesesimp>
+            <Chinese>環境 Webknight 殭屍與生物</Chinese>
             <Czech>Ambientní Webknight zombie a stvoření</Czech>
             <French>Zombies et créatures ambiantes Webknight</French>
             <Spanish>Zombis y criaturas ambientales de Webknight</Spanish>
@@ -17,6 +19,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_EnabledDesc">
             <English>Enables random spawning of creatures</English>
+            <Chinesesimp>开启生物的随机生成</Chinesesimp>
+            <Chinese>開啟生物的隨機生成</Chinese>
             <Czech>Povolí náhodné spawnování stvoření</Czech>
             <French>Active l'apparition aléatoire de créatures</French>
             <Spanish>Permite la aparición aleatoria de criaturas</Spanish>
@@ -31,6 +35,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_ClusterSize">
             <English>Cluster size</English>
+            <Chinesesimp>族群大小</Chinesesimp>
+            <Chinese>族群大小</Chinese>
             <Czech>Velikost skupiny</Czech>
             <French>Taille de la grappe</French>
             <Spanish>Tamaño del grupo</Spanish>
@@ -45,6 +51,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_ClusterSizeDesc">
             <English>Possible amount of creatures to spawn each cycle</English>
+            <Chinesesimp>每个周期可能生成的生物数量</Chinesesimp>
+            <Chinese>每個週期可能生成的生物數量</Chinese>
             <Czech>Možné množství stvoření pro spawn v každém cyklu</Czech>
             <French>Quantité possible de créatures à faire apparaître à chaque cycle</French>
             <Spanish>Cantidad posible de criaturas que aparecerán en cada ciclo</Spanish>
@@ -59,6 +67,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_MaxPopulation">
             <English>Maximum population</English>
+            <Chinesesimp>最大数量</Chinesesimp>
+            <Chinese>最大數量</Chinese>
             <Czech>Maximální populace</Czech>
             <French>Population maximale</French>
             <Spanish>Población máxima</Spanish>
@@ -73,6 +83,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_MaxPopulationDesc">
             <English>Maximum creatures allowed to spawn</English>
+            <Chinesesimp>允许生成的最大生物数</Chinesesimp>
+            <Chinese>允許生成的最大生物數</Chinese>
             <Czech>Maximální povolený počet stvoření pro spawn</Czech>
             <French>Nombre maximum de créatures autorisées à apparaître</French>
             <Spanish>Máximo de criaturas permitidas para aparecer</Spanish>
@@ -87,6 +99,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_SpawnChance">
             <English>Spawn Chance - Overall</English>
+            <Chinesesimp>生成概率 - 总计</Chinesesimp>
+            <Chinese>生成概率 - 總計</Chinese>
             <Czech>Šance na spawn - celková</Czech>
             <French>Chance d'apparition - Globale</French>
             <Spanish>Probabilidad de aparición - General</Spanish>
@@ -101,6 +115,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_SpawnChanceDesc">
             <English>Spawn chance for creatures, to be generated</English>
+            <Chinesesimp>生物生成的概率</Chinesesimp>
+            <Chinese>生物生成的概率</Chinese>
             <Czech>Šance, že budou stvoření vygenerována</Czech>
             <French>Chance d'apparition des créatures à générer</French>
             <Spanish>Probabilidad de que se generen criaturas</Spanish>
@@ -115,6 +131,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_NightOnly">
             <English>Night only</English>
+            <Chinesesimp>仅限夜间</Chinesesimp>
+            <Chinese>僅限夜間</Chinese>
             <Czech>Pouze v noci</Czech>
             <French>Nuit seulement</French>
             <Spanish>Solo de noche</Spanish>
@@ -129,6 +147,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_NightOnlyDesc">
             <English>Allows special types to only spawn at night time</English>
+            <Chinesesimp>允许特殊类型仅在夜间生成</Chinesesimp>
+            <Chinese>允許特殊類型僅在夜間生成</Chinese>
             <Czech>Umožňuje speciálním typům spawn pouze v nočních hodinách</Czech>
             <French>Permet aux types spéciaux d'apparaître uniquement la nuit</French>
             <Spanish>Permite que los tipos especiales solo aparezcan por la noche</Spanish>
@@ -143,6 +163,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_ChanceSpecial">
             <English>Chance - Special infected</English>
+            <Chinesesimp>概率 - 特殊感染者</Chinesesimp>
+            <Chinese>概率 - 特殊感染者</Chinese>
             <Czech>Šance - speciální nakažení</Czech>
             <French>Chance - Infectés spéciaux</French>
             <Spanish>Probabilidad - Infectados especiales</Spanish>
@@ -157,6 +179,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_ChanceSpecialDesc">
             <English>Spawn chance for special infected (screamers, etc...)</English>
+            <Chinesesimp>特殊感染者 (尖叫者等) 的生成概率</Chinesesimp>
+            <Chinese>特殊感染者 (尖叫者等) 的生成概率</Chinese>
             <Czech>Šance na spawn speciálních nakažených (screamery, atd...)</Czech>
             <French>Chance d'apparition pour les infectés spéciaux (screamers, etc.)</French>
             <Spanish>Probabilidad de aparición de infectados especiales (screamers, etc...)</Spanish>
@@ -171,6 +195,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_ChanceGoliath">
             <English>Chance - Goliath &amp; Smashers</English>
+            <Chinesesimp>概率 - 歌利亚与粉碎者</Chinesesimp>
+            <Chinese>概率 - 歌利亞與粉碎者</Chinese>
             <Czech>Šance - Goliáši a Smasheři</Czech>
             <French>Chance - Goliath et Smashers</French>
             <Spanish>Probabilidad - Goliath y Smashers</Spanish>
@@ -185,6 +211,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_ChanceGoliathDesc">
             <English>Spawn chance for goliath and smashers</English>
+            <Chinesesimp>歌利亚与粉碎者的生成概率</Chinesesimp>
+            <Chinese>歌利亞與粉碎者的生成概率</Chinese>
             <Czech>Šance na spawn goliášů a smasherů</Czech>
             <French>Chance d'apparition pour les goliaths et les smashers</French>
             <Spanish>Probabilidad de aparición de goliaths y smashers</Spanish>
@@ -199,6 +227,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_CivClothing">
             <English>Civilian clothing</English>
+            <Chinesesimp>平民服装</Chinesesimp>
+            <Chinese>平民服裝</Chinese>
             <Czech>Civilní oblečení</Czech>
             <French>Vêtements civils</French>
             <Spanish>Ropa civil</Spanish>
@@ -213,6 +243,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_MilClothing">
             <English>Military clothing</English>
+            <Chinesesimp>军用服装</Chinesesimp>
+            <Chinese>軍用服裝</Chinese>
             <Czech>Vojenské oblečení</Czech>
             <French>Vêtements militaires</French>
             <Spanish>Ropa militar</Spanish>
@@ -227,6 +259,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_ClothingChance">
             <English>Clothing Chance</English>
+            <Chinesesimp>服装概率</Chinesesimp>
+            <Chinese>服裝概率</Chinese>
             <Czech>Šance na oblečení</Czech>
             <French>Chance de vêtements</French>
             <Spanish>Probabilidad de vestimenta</Spanish>
@@ -241,6 +275,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_ClothingChanceDesc">
             <English>Chance for civilian clothing vs military clothing (ex. 100% = always civilian clothing)</English>
+            <Chinesesimp>平民服装与军用服装的比例 (例如 100% = 总是平民服装)</Chinesesimp>
+            <Chinese>平民服裝與軍用服裝的比例 (例如 100% = 總是平民服裝)</Chinese>
             <Czech>Šance na civilní vs. vojenské oblečení (např. 100% = vždy civilní)</Czech>
             <French>Chance pour les vêtements civils par rapport aux vêtements militaires (ex. 100% = toujours civil)</French>
             <Spanish>Probabilidad de ropa civil frente a militar (ej. 100% = siempre civil)</Spanish>
@@ -255,6 +291,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_CivHeadgear">
             <English>Headgear Civilian</English>
+            <Chinesesimp>平民头部装备</Chinesesimp>
+            <Chinese>平民頭部裝備</Chinese>
             <Czech>Civilní pokrývky hlavy</Czech>
             <French>Couvre-chefs civils</French>
             <Spanish>Cascos civiles</Spanish>
@@ -269,6 +307,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_MilHeadgear">
             <English>Headgear Military</English>
+            <Chinesesimp>军用头部装备</Chinesesimp>
+            <Chinese>軍用頭部裝備</Chinese>
             <Czech>Vojenské pokrývky hlavy</Czech>
             <French>Couvre-chefs militaires</French>
             <Spanish>Cascos militares</Spanish>
@@ -283,6 +323,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_HeadgearChance">
             <English>Headgear Chance</English>
+            <Chinesesimp>头部装备概率</Chinesesimp>
+            <Chinese>頭部裝備概率</Chinese>
             <Czech>Šance na pokrývku hlavy</Czech>
             <French>Chance de couvre-chef</French>
             <Spanish>Probabilidad de casco</Spanish>
@@ -297,6 +339,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_CivFacewear">
             <English>Facewear Civilian</English>
+            <Chinesesimp>平民面部装备</Chinesesimp>
+            <Chinese>平民面部裝備</Chinese>
             <Czech>Civilní doplňky obličeje</Czech>
             <French>Accessoires de visage civils</French>
             <Spanish>Accesorios faciales civiles</Spanish>
@@ -311,6 +355,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_MilFacewear">
             <English>Facewear Military</English>
+            <Chinesesimp>军用面部装备</Chinesesimp>
+            <Chinese>軍用面部裝備</Chinese>
             <Czech>Vojenské doplňky obličeje</Czech>
             <French>Accessoires de visage militaires</French>
             <Spanish>Accesorios faciales militares</Spanish>
@@ -325,6 +371,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_FacewearChance">
             <English>Facewear Chance</English>
+            <Chinesesimp>面部装备概率</Chinesesimp>
+            <Chinese>面部裝備概率</Chinese>
             <Czech>Šance na doplňky obličeje</Czech>
             <French>Chance d'accessoire de visage</French>
             <Spanish>Probabilidad de accesorio facial</Spanish>
@@ -339,6 +387,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_CivVests">
             <English>Vests Civilian</English>
+            <Chinesesimp>平民背心</Chinesesimp>
+            <Chinese>平民背心</Chinese>
             <Czech>Civilní vesty</Czech>
             <French>Gilets civils</French>
             <Spanish>Chalecos civiles</Spanish>
@@ -353,6 +403,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_MilVests">
             <English>Vests Military</English>
+            <Chinesesimp>军用背心</Chinesesimp>
+            <Chinese>軍用背心</Chinese>
             <Czech>Vojenské vesty</Czech>
             <French>Gilets militaires</French>
             <Spanish>Chalecos militares</Spanish>
@@ -367,6 +419,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_VestChance">
             <English>Vest Chance</English>
+            <Chinesesimp>背心概率</Chinesesimp>
+            <Chinese>背心概率</Chinese>
             <Czech>Šance na vestu</Czech>
             <French>Chance de gilet</French>
             <Spanish>Probabilidad de chaleco</Spanish>
@@ -381,6 +435,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_CivBags">
             <English>Bags Civilian</English>
+            <Chinesesimp>平民背包</Chinesesimp>
+            <Chinese>平民背包</Chinese>
             <Czech>Civilní batohy</Czech>
             <French>Sacs civils</French>
             <Spanish>Mochilas civiles</Spanish>
@@ -395,6 +451,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_MilBags">
             <English>Bags Military</English>
+            <Chinesesimp>军用背包</Chinesesimp>
+            <Chinese>軍用背包</Chinese>
             <Czech>Vojenské batohy</Czech>
             <French>Sacs militaires</French>
             <Spanish>Mochilas militares</Spanish>
@@ -409,6 +467,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_BagChance">
             <English>Bag Chance</English>
+            <Chinesesimp>背包概率</Chinesesimp>
+            <Chinese>背包概率</Chinese>
             <Czech>Šance na batoh</Czech>
             <French>Chance de sac</French>
             <Spanish>Probabilidad de mochila</Spanish>
@@ -423,6 +483,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_CivItems">
             <English>Items Civilian</English>
+            <Chinesesimp>平民物品</Chinesesimp>
+            <Chinese>平民物品</Chinese>
             <Czech>Civilní předměty</Czech>
             <French>Objets civils</French>
             <Spanish>Objetos civiles</Spanish>
@@ -437,6 +499,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_MilItems">
             <English>Items Military</English>
+            <Chinesesimp>军用物品</Chinesesimp>
+            <Chinese>軍用物品</Chinese>
             <Czech>Vojenské předměty</Czech>
             <French>Objets militaires</French>
             <Spanish>Objetos militares</Spanish>
@@ -451,6 +515,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_ItemsChance">
             <English>Items Chance</English>
+            <Chinesesimp>物品概率</Chinesesimp>
+            <Chinese>物品概率</Chinese>
             <Czech>Šance na předměty</Czech>
             <French>Chance d'objets</French>
             <Spanish>Probabilidad de objetos</Spanish>
@@ -465,6 +531,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_WeaponsList">
             <English>Weapons list</English>
+            <Chinesesimp>武器列表</Chinesesimp>
+            <Chinese>武器列表</Chinese>
             <Czech>Seznam zbraní</Czech>
             <French>Liste d'armes</French>
             <Spanish>Lista de armas</Spanish>
@@ -479,6 +547,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_WeaponsListDesc">
             <English>Possible weapons for triggerman zombie types</English>
+            <Chinesesimp>枪手型僵尸可能使用的武器</Chinesesimp>
+            <Chinese>槍手型殭屍可能使用的武器</Chinese>
             <Czech>Možné zbraně pro typy zombií triggerman</Czech>
             <French>Armes possibles pour les types de zombies triggerman</French>
             <Spanish>Armas posibles para los tipos de zombis triggerman</Spanish>
@@ -493,6 +563,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_InfectionEnabled">
             <English>Zombie infection</English>
+            <Chinesesimp>僵尸感染</Chinesesimp>
+            <Chinese>殭屍感染</Chinese>
             <Czech>Infekce zombií</Czech>
             <French>Infection zombie</French>
             <Spanish>Infección zombi</Spanish>
@@ -507,6 +579,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_InfectionEnabledDesc">
             <English>Enables infection chance from zombies</English>
+            <Chinesesimp>开启被僵尸感染的概率</Chinesesimp>
+            <Chinese>開啟被殭屍感染的概率</Chinese>
             <Czech>Povolí šanci na infekci od zombií</Czech>
             <French>Active les chances d'infection par les zombies</French>
             <Spanish>Permite la probabilidad de infección por zombis</Spanish>
@@ -521,6 +595,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_Zombification">
             <English>Zombification</English>
+            <Chinesesimp>僵尸化</Chinesesimp>
+            <Chinese>殭屍化</Chinese>
             <Czech>Zombifikace</Czech>
             <French>Zombification</French>
             <Spanish>Zombificación</Spanish>
@@ -535,6 +611,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_ZombificationDesc">
             <English>Enables infection to cause player zombification</English>
+            <Chinesesimp>开启感染导致玩家僵尸化</Chinesesimp>
+            <Chinese>開啟感染導致玩家殭屍化</Chinese>
             <Czech>Povolí, aby infekce způsobila zombifikaci hráče</Czech>
             <French>Permet à l'infection de provoquer la zombification du joueur</French>
             <Spanish>Permite que la infección cause la zombificación del jugador</Spanish>
@@ -549,6 +627,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_InfectionChance">
             <English>Infection Chance</English>
+            <Chinesesimp>感染概率</Chinesesimp>
+            <Chinese>感染概率</Chinese>
             <Czech>Šance na infekci</Czech>
             <French>Chance d'infection</French>
             <Spanish>Probabilidad de infección</Spanish>
@@ -563,6 +643,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_InfectionChance_ZomDesc">
             <English>Infection chance from zombies</English>
+            <Chinesesimp>被僵尸感染的概率</Chinesesimp>
+            <Chinese>被殭屍感染的概率</Chinese>
             <Czech>Šance na infekci od zombií</Czech>
             <French>Chance d'infection par les zombies</French>
             <Spanish>Probabilidad de infección por zombis</Spanish>
@@ -577,6 +659,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_MinDist">
             <English>Minimum Distance</English>
+            <Chinesesimp>最小距离</Chinesesimp>
+            <Chinese>最小距離</Chinese>
             <Czech>Minimální vzdálenost</Czech>
             <French>Distance minimale</French>
             <Spanish>Distancia mínima</Spanish>
@@ -591,6 +675,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_MinDistDesc">
             <English>Minimum distance groups can spawn from players</English>
+            <Chinesesimp>族群在玩家附近的最小生成距离</Chinesesimp>
+            <Chinese>族群在玩家附近的最小生成距離</Chinese>
             <Czech>Minimální vzdálenost, ve které se mohou skupiny spawnovat od hráčů</Czech>
             <French>Distance minimale à laquelle les groupes peuvent apparaître par rapport aux joueurs</French>
             <Spanish>Distancia mínima a la que los grupos pueden aparecer de los jugadores</Spanish>
@@ -605,6 +691,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_MaxDist">
             <English>Maximum Distance</English>
+            <Chinesesimp>最大距离</Chinesesimp>
+            <Chinese>最大距離</Chinese>
             <Czech>Maximální vzdálenost</Czech>
             <French>Distance maximale</French>
             <Spanish>Distancia máxima</Spanish>
@@ -619,6 +707,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_MaxDistDesc">
             <English>Maximum distance groups can spawn from players</English>
+            <Chinesesimp>族群在玩家附近的最大生成距离</Chinesesimp>
+            <Chinese>族群在玩家附近的最大生成距離</Chinese>
             <Czech>Maximální vzdálenost, ve které se mohou skupiny spawnovat od hráčů</Czech>
             <French>Distance maximale à laquelle les groupes peuvent apparaître par rapport aux joueurs</French>
             <Spanish>Distancia máxima a la que los grupos pueden aparecer de los jugadores</Spanish>
@@ -633,6 +723,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_SafeDist">
             <English>Safe distance</English>
+            <Chinesesimp>安全距离</Chinesesimp>
+            <Chinese>安全距離</Chinese>
             <Czech>Bezpečná vzdálenost</Czech>
             <French>Distance de sécurité</French>
             <Spanish>Distancia de seguridad</Spanish>
@@ -647,6 +739,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_SafeDistDesc">
             <English>Minimum distance at which creatures can spawn from other players</English>
+            <Chinesesimp>生物在其他玩家附近的最小生成距离</Chinesesimp>
+            <Chinese>生物在其他玩家附近的最小生成距離</Chinese>
             <Czech>Minimální vzdálenost, ve které se mohou stvoření spawnovat od ostatních hráčů</Czech>
             <French>Distance minimale à laquelle les créatures peuvent apparaître par rapport aux autres joueurs</French>
             <Spanish>Distancia mínima a la que las criaturas pueden aparecer de otros jugadores</Spanish>
@@ -661,6 +755,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_DelDist">
             <English>Deletion distance</English>
+            <Chinesesimp>删除距离</Chinesesimp>
+            <Chinese>刪除距離</Chinese>
             <Czech>Vzdálenost pro smazání</Czech>
             <French>Distance de suppression</French>
             <Spanish>Distancia de eliminación</Spanish>
@@ -675,6 +771,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_DelDistDesc">
             <English>Distance from players at which creatures will be deleted</English>
+            <Chinesesimp>远离玩家后生物被删除的距离</Chinesesimp>
+            <Chinese>遠離玩家後生物被刪除的距離</Chinese>
             <Czech>Vzdálenost od hráčů, při které budou stvoření smazána</Czech>
             <French>Distance des joueurs à laquelle les créatures seront supprimées</French>
             <Spanish>Distancia de los jugadores a la que se eliminarán las criaturas</Spanish>
@@ -689,6 +787,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_Cycle">
             <English>Spawn check interval</English>
+            <Chinesesimp>生成检查间隔</Chinesesimp>
+            <Chinese>生成檢查間隔</Chinese>
             <Czech>Interval kontroly spawnu</Czech>
             <French>Intervalle de vérification d'apparition</French>
             <Spanish>Intervalo de comprobación de aparición</Spanish>
@@ -703,6 +803,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_WZC_CycleDesc">
             <English>Time in seconds between spawn checks</English>
+            <Chinesesimp>生成检查之间的时间间隔 (秒)</Chinesesimp>
+            <Chinese>生成檢查之間的時間間隔 (秒)</Chinese>
             <Czech>Čas v sekundách mezi kontrolami spawnu</Czech>
             <French>Temps en secondes entre les vérifications d'apparition</French>
             <Spanish>Tiempo en segundos entre comprobaciones de aparición</Spanish>

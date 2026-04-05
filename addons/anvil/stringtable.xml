@@ -3,6 +3,8 @@
     <Package name="Anvil">
         <Key ID="STR_MISERY_Anvil_UseAnvil">
             <English>Use Anvil</English>
+            <Chinesesimp>使用铁砧</Chinesesimp>
+            <Chinese>使用鐵砧</Chinese>
             <Czech>Použití kovadliny</Czech>
             <French>Utiliser l'enclume</French>
             <Spanish>Usar yunque</Spanish>
@@ -17,6 +19,8 @@
         </Key>
         <Key ID="STR_MISERY_Anvil_SmithingAnvil">
             <English>Smithing Anvil</English>
+            <Chinesesimp>锻造铁砧</Chinesesimp>
+            <Chinese>鍛造鐵砧</Chinese>
             <Czech>Kovářská kovadlina</Czech>
             <French>Enclume de forgeron</French>
             <Spanish>Yunque de herrería</Spanish>
@@ -31,6 +35,8 @@
         </Key>
         <Key ID="STR_MISERY_Anvil_NoMaterial">
             <English>No matching material found...</English>
+            <Chinesesimp>未找到匹配的材料...</Chinesesimp>
+            <Chinese>未找到匹配的材料...</Chinese>
             <Czech>Nenalezen žádný odpovídající materiál...</Czech>
             <French>Aucun matériau correspondant trouvé...</French>
             <Spanish>No se encontró material coincidente...</Spanish>
@@ -45,6 +51,8 @@
         </Key>
         <Key ID="STR_MISERY_Anvil_MissingItems">
             <English>You don’t have those materials...</English>
+            <Chinesesimp>你没有那些材料...</Chinesesimp>
+            <Chinese>你沒有那些材料...</Chinese>
             <Czech>Tyto materiály nemáte...</Czech>
             <French>Vous n'avez pas ces matériaux...</French>
             <Spanish>No tienes esos materiales...</Spanish>
@@ -59,6 +67,8 @@
         </Key>
         <Key ID="STR_MISERY_Anvil_NeedForge">
             <English>You need a forge near your anvil in order to smith items...</English>
+            <Chinesesimp>你需要在铁砧附近有一个熔炉才能锻造物品...</Chinesesimp>
+            <Chinese>你需要在鐵砧附近有一個熔爐才能鍛造物品...</Chinese>
             <Czech>K vykování předmětů potřebujete výheň poblíž kovadliny...</Czech>
             <French>Vous avez besoin d'une forge près de votre enclume pour forger des objets...</French>
             <Spanish>Necesitas una forja cerca de tu yunque para forjar objetos...</Spanish>
@@ -73,6 +83,8 @@
         </Key>
         <Key ID="STR_MISERY_Anvil_NoFuel">
             <English>Nearest forge doesn't have enough fuel to reheat ingots...</English>
+            <Chinesesimp>最近的熔炉没有足够的燃料来重新加热金属锭...</Chinesesimp>
+            <Chinese>最近的熔爐沒有足夠的燃料來重新加熱金屬錠...</Chinese>
             <Czech>Nejbližší výheň nemá dostatek paliva pro ohřátí ingotů...</Czech>
             <French>La forge la plus proche n'a pas assez de combustible pour réchauffer les lingots...</French>
             <Spanish>La forja más cercana no tiene suficiente combustible para recalentar los lingotes...</Spanish>
@@ -87,6 +99,8 @@
         </Key>
         <Key ID="STR_MISERY_Anvil_NeedHammer">
             <English>You need a hammer to process ingots...</English>
+            <Chinesesimp>你需要一把锤子来处理金属锭...</Chinesesimp>
+            <Chinese>你需要一把錘子來處理金屬錠...</Chinese>
             <Czech>K opracování ingotů potřebujete kladivo...</Czech>
             <French>Vous avez besoin d'un marteau pour traiter les lingots...</French>
             <Spanish>Necesitas un martillo para procesar los lingotes...</Spanish>
@@ -101,6 +115,8 @@
         </Key>
         <Key ID="STR_MISERY_Anvil_Interrupted">
             <English>Smithing interrupted...</English>
+            <Chinesesimp>锻造已中断...</Chinesesimp>
+            <Chinese>鍛造已中斷...</Chinese>
             <Czech>Kování přerušeno...</Czech>
             <French>Forgeage interrompu...</French>
             <Spanish>Herrería interrumpida...</Spanish>
@@ -115,6 +131,8 @@
         </Key>
         <Key ID="STR_MISERY_Anvil_Progress">
             <English>Smithing materials... %1%2 complete</English>
+            <Chinesesimp>正在锻造材料... %1%2 已完成</Chinesesimp>
+            <Chinese>正在鍛造材料... %1%2 已完成</Chinese>
             <Czech>Kování materiálů... %1 %2 hotovo</Czech>
             <French>Forgeage des matériaux... %1%2 terminé</French>
             <Spanish>Forjando materiales... %1%2 completado</Spanish>
@@ -129,6 +147,8 @@
         </Key>
         <Key ID="STR_MISERY_Anvil_Success">
             <English>You successfully smithed: %1...</English>
+            <Chinesesimp>你成功锻造了: %1...</Chinesesimp>
+            <Chinese>你成功鍛造了: %1...</Chinese>
             <Czech>Úspěšně jsi vykoval: %1...</Czech>
             <French>Vous avez forgé avec succès : %1...</French>
             <Spanish>Has forjado con éxito: %1...</Spanish>
@@ -143,6 +163,8 @@
         </Key>
         <Key ID="STR_MISERY_Anvil_NoSmeltSelected">
             <English>No smelt materials selected...</English>
+            <Chinesesimp>未选择熔炼材料...</Chinesesimp>
+            <Chinese>未選擇熔煉材料...</Chinese>
             <Czech>Nebyly vybrány žádné materiály k tavení...</Czech>
             <French>Aucun matériau de fusion sélectionné...</French>
             <Spanish>No se han seleccionado materiales para fundir...</Spanish>
@@ -157,6 +179,8 @@
         </Key>
         <Key ID="STR_MISERY_Anvil_RequiredMaterials">
             <English>Required materials:</English>
+            <Chinesesimp>所需材料:</Chinesesimp>
+            <Chinese>所需材料:</Chinese>
             <Czech>Požadované materiály:</Czech>
             <French>Matériaux requis :</French>
             <Spanish>Materiales requeridos:</Spanish>
