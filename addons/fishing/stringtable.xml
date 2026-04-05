@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Fishing">
+        <Key ID="STR_MISERY_Fishing_Name">
+            <English>Fishing</English>
+            <Czech>Rybaření</Czech>
+            <French>Pêche</French>
+            <Spanish>Pesca</Spanish>
+            <Italian>Pesca</Italian>
+            <Polish>Wędkarstwo</Polish>
+            <Portuguese>Pesca</Portuguese>
+            <Russian>Рыбалка</Russian>
+            <German>Angeln</German>
+            <Korean>낚시</Korean>
+            <Japanese>釣り</Japanese>
+            <Turkish>Balıkçılık</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_Desc">
+            <English>Enable Fishing near open water sources? (Requires fishing rod, bait, hook, and fishing spool...)</English>
+            <Czech>Povolit rybaření u otevřených vodních zdrojů? (Vyžaduje rybářský prut, návnadu, háček a naviják...)</Czech>
+            <French>Autoriser la pêche près des sources d'eau libre ? (Nécessite une canne à pêche, un appât, un hameçon et un moulinet...)</French>
+            <Spanish>¿Permitir la pesca cerca de fuentes de agua abierta? (Requiere caña de pescar, cebo, anzuelo y carrete...)</Spanish>
+            <Italian>Abilitare la pesca vicino a specchi d'acqua? (Richiede canna da pesca, esca, amo e mulinello...)</Italian>
+            <Polish>Zezwolić na łowienie ryb w pobliżu zbiorników wodnych? (Wymaga wędki, przynęty, haczyka i kołowrotka...)</Polish>
+            <Portuguese>Permitir a pesca perto de fontes de água aberta? (Requer vara de pescar, isca, anzol e carretel...)</Portuguese>
+            <Russian>Разрешить рыбалку у открытых источников воды? (Требуется удочка, наживка, крючок и катушка...)</Russian>
+            <German>Angeln in der Nähe von offenen Gewässern erlauben? (Erfordert Angelrute, Köder, Haken und Angelrolle...)</German>
+            <Korean>개방된 수역 근처에서 낚시를 허용하시겠습니까? (낚싯대, 미끼, 바늘, 낚시 릴이 필요합니다...)</Korean>
+            <Japanese>開けた水域の近くで釣りを許可しますか？（釣竿、餌、針、リールが必要です...）</Japanese>
+            <Turkish>Açık su kaynaklarının yakınında balık tutmaya izin verilsin mi? (Olta kamışı, yem, kanca ve makara gerektirir...)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_PullRod">
+            <English>Pull fishing Rod</English>
+            <Czech>Zatáhnout za prut</Czech>
+            <French>Tirer la canne à pêche</French>
+            <Spanish>Tirar de la caña</Spanish>
+            <Italian>Tira la canna da pesca</Italian>
+            <Polish>Pociągnij wędkę</Polish>
+            <Portuguese>Puxar a vara de pescar</Portuguese>
+            <Russian>Подсечь удочкой</Russian>
+            <German>Angelrute ziehen</German>
+            <Korean>낚싯대 당기기</Korean>
+            <Japanese>釣竿を引く</Japanese>
+            <Turkish>Oltayı çek</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_ReelIn">
+            <English>Reel In</English>
+            <Czech>Navíjet</Czech>
+            <French>Mouliner</French>
+            <Spanish>Recoger carrete</Spanish>
+            <Italian>Riavvolgere</Italian>
+            <Polish>Zwiń żyłkę</Polish>
+            <Portuguese>Recolher linha</Portuguese>
+            <Russian>Сматывать леску</Russian>
+            <German>Einholen</German>
+            <Korean>릴 감기</Korean>
+            <Japanese>リールを巻く</Japanese>
+            <Turkish>Makara Sar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_ReelOut">
+            <English>Reel Out</English>
+            <Czech>Odvíjet</Czech>
+            <French>Relâcher la ligne</French>
+            <Spanish>Soltar carrete</Spanish>
+            <Italian>Svolgere</Italian>
+            <Polish>Rozwiń żyłkę</Polish>
+            <Portuguese>Soltar linha</Portuguese>
+            <Russian>Разматывать леску</Russian>
+            <German>Auswerfen/Nachlassen</German>
+            <Korean>릴 풀기</Korean>
+            <Japanese>リールを出す</Japanese>
+            <Turkish>Makara Boşalt</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_NeedWater">
+            <English>You need to be near water or on a watercraft to fish!</English>
+            <Czech>K rybaření musíte být u vody nebo na plavidle!</Czech>
+            <French>Vous devez être près de l'eau ou sur une embarcation pour pêcher !</French>
+            <Spanish>¡Necesitas estar cerca del agua o en una embarcación para pescar!</Spanish>
+            <Italian>Devi essere vicino all'acqua o su un'imbarcazione per pescare!</Italian>
+            <Polish>Musisz być nad wodą lub na jednostce pływającej, aby łowić ryby!</Polish>
+            <Portuguese>Você precisa estar perto da água ou em uma embarcação para pescar!</Portuguese>
+            <Russian>Для рыбалки нужно быть у воды или на плавсредстве!</Russian>
+            <German>Du musst dich in der Nähe von Wasser oder auf einem Wasserfahrzeug befinden, um zu angeln!</German>
+            <Korean>낚시를 하려면 물 근처에 있거나 배 위에 있어야 합니다!</Korean>
+            <Japanese>釣りをするには水辺にいるか、船舶に乗っている必要があります！</Japanese>
+            <Turkish>Balık tutmak için su kenarında veya bir teknede olmalısınız!</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_NeedGear">
+            <English>You need a fishing pole, spool, hook, and bait to fish!</English>
+            <Czech>K rybaření potřebujete prut, naviják, háček a návnadu!</Czech>
+            <French>Il vous faut une canne, un moulinet, un hameçon et un appât pour pêcher !</French>
+            <Spanish>¡Necesitas una caña, carrete, anzuelo y cebo para pescar!</Spanish>
+            <Italian>Hai bisogno di canna, mulinello, amo e esca per pescare!</Italian>
+            <Polish>Do łowienia potrzebujesz wędki, kołowrotka, haczyka i przynęty!</Polish>
+            <Portuguese>Você precisa de uma vara, carretel, anzol e isca para pescar!</Portuguese>
+            <Russian>Для рыбалки нужны удочка, катушка, крючок и наживка!</Russian>
+            <German>Du benötigst eine Angelrute, eine Rolle, einen Haken und einen Köder zum Angeln!</German>
+            <Korean>낚시를 하려면 낚싯대, 릴, 바늘, 미끼가 필요합니다!</Korean>
+            <Japanese>釣りをするには竿、リール、針、餌が必要です！</Japanese>
+            <Turkish>Balık tutmak için olta, makara, kanca ve yeme ihtiyacınız var!</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_NeedWaterCast">
+            <English>You need to be near water or on a watercraft to cast!</English>
+            <Czech>K nahození musíte být u vody nebo na plavidle!</Czech>
+            <French>Vous devez être près de l'eau ou sur une embarcation pour lancer !</French>
+            <Spanish>¡Necesitas estar cerca del agua o en una embarcación para lanzar!</Spanish>
+            <Italian>Devi essere vicino all'acqua o su un'imbarcazione per lanciare!</Italian>
+            <Polish>Musisz być nad wodą lub na jednostce pływającej, aby zarzucić wędkę!</Polish>
+            <Portuguese>Você precisa estar perto da água ou em uma embarcação para lançar!</Portuguese>
+            <Russian>Для заброса нужно быть у воды или на плавсредстве!</Russian>
+            <German>Du musst dich in der Nähe von Wasser oder auf einem Wasserfahrzeug befinden, um auszuwerfen!</German>
+            <Korean>낚시줄을 던지려면 물 근처에 있거나 배 위에 있어야 합니다!</Korean>
+            <Japanese>キャストするには水辺にいるか、船舶に乗っている必要があります！</Japanese>
+            <Turkish>Oltayı atmak için su kenarında veya bir teknede olmalısınız!</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_NeedGearCast">
+            <English>You need a fishing pole, spool, hook, and bait to cast!</English>
+            <Czech>K nahození potřebujete prut, naviják, háček a návnadu!</Czech>
+            <French>Il vous faut une canne, un moulinet, un hameçon et un appât pour lancer !</French>
+            <Spanish>¡Necesitas una caña, carrete, anzuelo y cebo para lanzar!</Spanish>
+            <Italian>Hai bisogno di canna, mulinello, amo e esca per lanciare!</Italian>
+            <Polish>Do zarzucenia potrzebujesz wędki, kołowrotka, haczyka i przynęty!</Polish>
+            <Portuguese>Você precisa de uma vara, carretel, anzol e isca para lançar!</Portuguese>
+            <Russian>Для заброса нужны удочка, катушка, крючок и наживка!</Russian>
+            <German>Du benötigst eine Angelrute, eine Rolle, einen Haken und einen Köder zum Auswerfen!</German>
+            <Korean>낚시줄을 던지려면 낚싯대, 릴, 바늘, 미끼가 필요합니다!</Korean>
+            <Japanese>キャストするには竿、リール、針、餌が必要です！</Japanese>
+            <Turkish>Oltayı atmak için olta, makara, kanca ve yeme ihtiyacınız var!</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_LineCast">
+            <English>Line cast!</English>
+            <Czech>Nahozeno!</Czech>
+            <French>Ligne lancée !</French>
+            <Spanish>¡Línea lanzada!</Spanish>
+            <Italian>Lenza lanciata!</Italian>
+            <Polish>Żyłka zarzucona!</Polish>
+            <Portuguese>Linha lançada!</Portuguese>
+            <Russian>Леска заброшена!</Russian>
+            <German>Leine ausgeworfen!</German>
+            <Korean>낚시줄 투척!</Korean>
+            <Japanese>キャスト完了！</Japanese>
+            <Turkish>Olta atıldı!</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_LostGear">
+            <English>You lost some gear! Fishing stopped...</English>
+            <Czech>Ztratil jsi část vybavení! Rybaření ukončeno...</Czech>
+            <French>Vous avez perdu de l'équipement ! Pêche interrompue...</French>
+            <Spanish>¡Has perdido equipo! Pesca detenida...</Spanish>
+            <Italian>Hai perso dell'attrezzatura! Pesca interrotta...</Italian>
+            <Polish>Straciłeś część sprzętu! Wędkarstwo przerwane...</Polish>
+            <Portuguese>Você perdeu algum equipamento! Pesca interrompida...</Portuguese>
+            <Russian>Вы потеряли снаряжение! Рыбалка прекращена...</Russian>
+            <German>Du hast Ausrüstung verloren! Angeln abgebrochen...</German>
+            <Korean>장비를 잃어버렸습니다! 낚시가 중단되었습니다...</Korean>
+            <Japanese>道具を失いました！釣りを中断します...</Japanese>
+            <Turkish>Ekipman kaybettiniz! Balık tutma durduruldu...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_MovedAway">
+            <English>You moved away from the water! Fishing stopped...</English>
+            <Czech>Vzdálil jsi se od vody! Rybaření ukončeno...</Czech>
+            <French>Vous vous êtes éloigné de l'eau ! Pêche interrompue...</French>
+            <Spanish>¡Te has alejado del agua! Pesca detenida...</Spanish>
+            <Italian>Ti sei allontanato dall'acqua! Pesca interrotta...</Italian>
+            <Polish>Oddaliłeś się od wody! Wędkarstwo przerwane...</Polish>
+            <Portuguese>Você se afastou da água! Pesca interrompida...</Portuguese>
+            <Russian>Вы отошли от воды! Рыбалка прекращена...</Russian>
+            <German>Du hast dich vom Wasser entfernt! Angeln abgebrochen...</German>
+            <Korean>물에서 너무 멀어졌습니다! 낚시가 중단되었습니다...</Korean>
+            <Japanese>水辺から離れました！釣りを中断します...</Japanese>
+            <Turkish>Sudan uzaklaştınız! Balık tutma durduruldu...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_BrokenLine">
+            <English>Something broke or flew off the line!</English>
+            <Czech>Něco se zlomilo nebo utrhlo z vlasce!</Czech>
+            <French>Quelque chose s'est cassé ou s'est détaché de la ligne !</French>
+            <Spanish>¡Algo se rompió o se soltó de la línea!</Spanish>
+            <Italian>Qualcosa si è rotto o è saltato via dalla lenza!</Italian>
+            <Polish>Coś się urwało lub spadło z żyłki!</Polish>
+            <Portuguese>Algo quebrou ou se soltou da linha!</Portuguese>
+            <Russian>Что-то сломалось или сорвалось с лески!</Russian>
+            <German>Etwas ist gebrochen oder von der Leine geflogen!</German>
+            <Korean>낚시줄이 끊어지거나 무언가 떨어져 나갔습니다!</Korean>
+            <Japanese>何かが壊れたか、ラインから外れました！</Japanese>
+            <Turkish>Bir şey kırıldı veya oltadan fırladı!</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_Snagged">
+            <English>The line is snagged. Try pulling the rod or reeling out.</English>
+            <Czech>Vlasec je uvízlý. Zkuste zatáhnout za prut nebo odvíjet.</Czech>
+            <French>La ligne est accrochée. Essayez de tirer la canne ou de relâcher du fil.</French>
+            <Spanish>La línea se ha enganchado. Intenta tirar de la caña o soltar carrete.</Spanish>
+            <Italian>La lenza è incagliata. Prova a tirare la canna o a svolgere.</Italian>
+            <Polish>Żyłka się zahaczyła. Spróbuj pociągnąć wędkę lub rozwinąć żyłkę.</Polish>
+            <Portuguese>A linha está presa. Tente puxar a vara ou soltar linha.</Portuguese>
+            <Russian>Леска зацепилась. Попробуйте подсечь или размотать леску.</Russian>
+            <German>Die Leine hat sich verfangen. Versuche, an der Rute zu ziehen oder nachzulassen.</German>
+            <Korean>낚시줄이 걸렸습니다. 낚싯대를 당기거나 릴을 풀어보십시오.</Korean>
+            <Japanese>ラインが根掛かりしました。竿を引くかリールを出してみてください。</Japanese>
+            <Turkish>Olta takıldı. Kamışı çekmeyi veya makarayı boşaltmayı deneyin.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_FishOn">
+            <English>A fish is on! Reel in carefully and pull the rod to tire it.</English>
+            <Czech>Ryba na háčku! Navíjejte opatrně a tahem prutu ji unavte.</Czech>
+            <French>Un poisson a mordu ! Moulinez prudemment et tirez la canne pour le fatiguer.</French>
+            <Spanish>¡Hay un pez! Recoge con cuidado y tira de la caña para cansarlo.</Spanish>
+            <Italian>C'è un pesce! Riavvolgi con cura e tira la canna per stancarlo.</Italian>
+            <Polish>Ryba na haku! Zwijaj ostrożnie i ciągnij wędkę, aby ją zmęczyć.</Polish>
+            <Portuguese>Um peixe fisgou! Recolha com cuidado e puxe a vara para cansá-lo.</Portuguese>
+            <Russian>Рыба на крючке! Осторожно сматывайте и подсекайте, чтобы измотать её.</Russian>
+            <German>Ein Fisch hat angebissen! Hol vorsichtig ein und zieh an der Rute, um ihn zu ermüden.</German>
+            <Korean>물고기가 걸렸습니다! 조심스럽게 릴을 감고 낚싯대를 당겨 물고기의 힘을 빼십시오.</Korean>
+            <Japanese>魚が掛かりました！慎重にリールを巻き、竿を引いて疲れさせてください。</Japanese>
+            <Turkish>Balık yakalandı! Dikkatlice makarayı sarın ve yormak için kamışı çekin.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_Waiting">
+            <English>Waiting for a bite...</English>
+            <Czech>Čekání na záběr...</Czech>
+            <French>En attente d'une touche...</French>
+            <Spanish>Esperando que piquen...</Spanish>
+            <Italian>In attesa di un morso...</Italian>
+            <Polish>Czekanie na branie...</Polish>
+            <Portuguese>Esperando uma fisgada...</Portuguese>
+            <Russian>Ожидание клёва...</Russian>
+            <German>Warten auf einen Biss...</German>
+            <Korean>입질을 기다리는 중...</Korean>
+            <Japanese>アタリを待っています...</Japanese>
+            <Turkish>Isırık bekleniyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_Unsnagged">
+            <English>Line unsnagged!</English>
+            <Czech>Vlasec uvolněn!</Czech>
+            <French>Ligne dégagée !</French>
+            <Spanish>¡Línea desenganchada!</Spanish>
+            <Italian>Lenza liberata!</Italian>
+            <Polish>Żyłka odhaczona!</Polish>
+            <Portuguese>Linha desprendida!</Portuguese>
+            <Russian>Леска освобождена!</Russian>
+            <German>Leine befreit!</German>
+            <Korean>낚시줄이 풀렸습니다!</Korean>
+            <Japanese>根掛かりが外れました！</Japanese>
+            <Turkish>Olta kurtarıldı!</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_StillSnagged">
+            <English>Still snagged, keep trying!</English>
+            <Czech>Stále uvízlé, zkoušejte dál!</Czech>
+            <French>Toujours accroché, continuez d'essayer !</French>
+            <Spanish>Sigue enganchada, ¡sigue intentándolo!</Spanish>
+            <Italian>Ancora incagliata, continua a provare!</Italian>
+            <Polish>Wciąż zahaczona, próbuj dalej!</Polish>
+            <Portuguese>Ainda presa, continue tentando!</Portuguese>
+            <Russian>Все еще зацеплено, продолжайте попытки!</Russian>
+            <German>Immer noch verfangen, versuch es weiter!</German>
+            <Korean>여전히 걸려 있습니다. 계속 시도하십시오!</Korean>
+            <Japanese>まだ根掛かりしています。続けてください！</Japanese>
+            <Turkish>Hala takılı, denemeye devam edin!</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_FishTired">
+            <English>Fish is tired! Reel it in!</English>
+            <Czech>Ryba je unavená! Navíjejte!</Czech>
+            <French>Le poisson est fatigué ! Moulinez !</French>
+            <Spanish>¡El pez está cansado! ¡Recógelo!</Spanish>
+            <Italian>Il pesce è stanco! Riavvolgi!</Italian>
+            <Polish>Ryba jest zmęczona! Zwijaj!</Polish>
+            <Portuguese>O peixe está cansado! Recolha!</Portuguese>
+            <Russian>Рыба измотана! Сматывайте!</Russian>
+            <German>Der Fisch ist müde! Hol ihn ein!</German>
+            <Korean>물고기가 지쳤습니다! 릴을 감으세요!</Korean>
+            <Japanese>魚が疲れました！リールを巻いてください！</Japanese>
+            <Turkish>Balık yoruldu! Makarayı sarın!</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_FishFighting">
+            <English>Fish is fighting, keep pulling!</English>
+            <Czech>Ryba bojuje, dál táhněte!</Czech>
+            <French>Le poisson se bat, continuez de tirer !</French>
+            <Spanish>El pez está luchando, ¡sigue tirando!</Spanish>
+            <Italian>Il pesce sta lottando, continua a tirare!</Italian>
+            <Polish>Ryba walczy, ciągnij dalej!</Polish>
+            <Portuguese>O peixe está lutando, continue puxando!</Portuguese>
+            <Russian>Рыба сопротивляется, продолжайте тянуть!</Russian>
+            <German>Der Fisch kämpft, zieh weiter!</German>
+            <Korean>물고기가 저항 중입니다. 계속 당기세요!</Korean>
+            <Japanese>魚が抵抗しています。引き続けてください！</Japanese>
+            <Turkish>Balık direniyor, çekmeye devam edin!</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_NoResistance">
+            <English>Nothing to pull against.</English>
+            <Czech>Není za co tahat.</Czech>
+            <French>Rien au bout de la ligne.</French>
+            <Spanish>Nada de lo que tirar.</Spanish>
+            <Italian>Niente contro cui tirare.</Italian>
+            <Polish>Brak oporu przy ciągnięciu.</Polish>
+            <Portuguese>Nada para puxar.</Portuguese>
+            <Russian>Нечего тянуть.</Russian>
+            <German>Kein Widerstand beim Ziehen.</German>
+            <Korean>당겨지는 것이 없습니다.</Korean>
+            <Japanese>手応えがありません。</Japanese>
+            <Turkish>Çekilecek bir direnç yok.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_CaughtFish">
+            <English>You caught a fish.</English>
+            <Czech>Chytil jsi rybu.</Czech>
+            <French>Vous avez attrapé un poisson.</French>
+            <Spanish>Has atrapado un pez.</Spanish>
+            <Italian>Hai catturato un pesce.</Italian>
+            <Polish>Złapałeś rybę.</Polish>
+            <Portuguese>Você pegou um peixe.</Portuguese>
+            <Russian>Вы поймали рыбу.</Russian>
+            <German>Du hast einen Fisch gefangen.</German>
+            <Korean>물고기를 잡았습니다.</Korean>
+            <Japanese>魚を釣りました。</Japanese>
+            <Turkish>Bir balık yakaladın.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_FullyReeledIn">
+            <English>Line fully reeled in.</English>
+            <Czech>Vlasec plně navinut.</Czech>
+            <French>Ligne entièrement moulinée.</French>
+            <Spanish>Línea totalmente recogida.</Spanish>
+            <Italian>Lenza completamente riavvolta.</Italian>
+            <Polish>Żyłka całkowicie zwinięta.</Polish>
+            <Portuguese>Linha totalmente recolhida.</Portuguese>
+            <Russian>Леска полностью смотана.</Russian>
+            <German>Leine vollständig eingeholt.</German>
+            <Korean>낚시줄을 완전히 감았습니다.</Korean>
+            <Japanese>ラインをすべて巻き取りました。</Japanese>
+            <Turkish>Olta tamamen sarıldı.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_FullyReeledOut">
+            <English>Line fully reeled out.</English>
+            <Czech>Vlasec plně odvinut.</Czech>
+            <French>Ligne entièrement relâchée.</French>
+            <Spanish>Línea totalmente soltada.</Spanish>
+            <Italian>Lenza completamente svolta.</Italian>
+            <Polish>Żyłka całkowicie rozwinięta.</Polish>
+            <Portuguese>Linha totalmente solta.</Portuguese>
+            <Russian>Леска полностью размотана.</Russian>
+            <German>Leine vollständig nachgelassen.</German>
+            <Korean>낚시줄을 완전히 풀었습니다.</Korean>
+            <Japanese>ラインをすべて出しました。</Japanese>
+            <Turkish>Olta tamamen boşaltıldı.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_TensionLabel">
+            <English>Line tension:</English>
+            <Czech>Napětí vlasce:</Czech>
+            <French>Tension de la ligne :</French>
+            <Spanish>Tensión de la línea:</Spanish>
+            <Italian>Tensione della lenza:</Italian>
+            <Polish>Napięcie żyłki:</Polish>
+            <Portuguese>Tensão da linha:</Portuguese>
+            <Russian>Натяжение лески:</Russian>
+            <German>Schnurspannung:</German>
+            <Korean>줄 장력:</Korean>
+            <Japanese>ラインの張力:</Japanese>
+            <Turkish>Olta gerginliği:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_LineOutLabel">
+            <English>Line out:</English>
+            <Czech>Délka vlasce:</Czech>
+            <French>Ligne sortie :</French>
+            <Spanish>Línea fuera:</Spanish>
+            <Italian>Lenza fuori:</Italian>
+            <Polish>Wypuszczona żyłka:</Polish>
+            <Portuguese>Linha para fora:</Portuguese>
+            <Russian>Выпущено лески:</Russian>
+            <German>Ausgeworfene Leine:</German>
+            <Korean>줄 길이:</Korean>
+            <Japanese>ラインの長さ:</Japanese>
+            <Turkish>Salınan olta:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_CastAction">
+            <English>Cast line</English>
+            <Czech>Nahodit vlasec</Czech>
+            <French>Lancer la ligne</French>
+            <Spanish>Lanzar línea</Spanish>
+            <Italian>Lancia lenza</Italian>
+            <Polish>Zarzuć żyłkę</Polish>
+            <Portuguese>Lançar linha</Portuguese>
+            <Russian>Забросить леску</Russian>
+            <German>Leine auswerfen</German>
+            <Korean>낚시줄 던지기</Korean>
+            <Japanese>ラインをキャスト</Japanese>
+            <Turkish>Olta at</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_StartAction">
+            <English>Start Fishing</English>
+            <Czech>Začít rybařit</Czech>
+            <French>Commencer à pêcher</French>
+            <Spanish>Empezar a pescar</Spanish>
+            <Italian>Inizia a pescare</Italian>
+            <Polish>Zacząć łowić</Polish>
+            <Portuguese>Comece a pescar</Portuguese>
+            <Russian>Начать рыбалку</Russian>
+            <German>Angeln beginnen</German>
+            <Korean>낚시 시작</Korean>
+            <Japanese>釣り始める</Japanese>
+            <Turkish>Balık tutmaya başla</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_Action">
+            <English>Fish</English>
+            <Czech>Rybaření</Czech>
+            <French>Poisson</French>
+            <Spanish>Pescado</Spanish>
+            <Italian>Pesce</Italian>
+            <Polish>Ryba</Polish>
+            <Portuguese>Peixes</Portuguese>
+            <Russian>Рыба</Russian>
+            <German>Fisch</German>
+            <Korean>물고기</Korean>
+            <Japanese>魚</Japanese>
+            <Turkish>Balık</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_Requirements">
+            <English>Fishing requirements</English>
+            <Czech>Požadavky pro rybolov</Czech>
+            <French>Exigences en matière de pêche</French>
+            <Spanish>Requisitos de pesca</Spanish>
+            <Italian>Requisiti per la pesca</Italian>
+            <Polish>Wymagania dotyczące połowów</Polish>
+            <Portuguese>Requisitos de pesca</Portuguese>
+            <Russian>Требования к рыболовству</Russian>
+            <German>Anforderungen an die Fischerei</German>
+            <Korean>낚시 요구 사항</Korean>
+            <Japanese>釣りの条件</Japanese>
+            <Turkish>Balıkçılık gereksinimleri</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fishing_RequirementsListed">
+            <English>Fishing requires the following items: &lt;br/&gt; Fishing rod &lt;br/&gt; Fishing spool &lt;br/&gt; Fish hook &lt;br/&gt; Worms for bait</English>
+            <Czech>K rybaření jsou potřeba následující předměty: &lt;br/&gt; Rybářský prut &lt;br/&gt; Rybářská cívka &lt;br/&gt; Rybářský háček &lt;br/&gt; Červi na návnadu.</Czech>
+            <French>La pêche nécessite les éléments suivants : &lt;br/&gt; Canne à pêche &lt;br/&gt; Bobine de pêche &lt;br/&gt; Hameçon &lt;br/&gt; Vers pour l'appât</French>
+            <Spanish>Para pescar se necesitan los siguientes artículos: &lt;br/&gt; Caña de pescar &lt;br/&gt; Carrete de pesca &lt;br/&gt; Anzuelo &lt;br/&gt; Gusanos para cebo</Spanish>
+            <Italian>La pesca richiede i seguenti articoli: &lt;br/&gt; Canna da pesca &lt;br/&gt; Bobina da pesca &lt;br/&gt; Amo da pesca &lt;br/&gt; Vermi per esca</Italian>
+            <Polish>Wędkowanie wymaga następujących przedmiotów: &lt;br/&gt; Wędka &lt;br/&gt; Szpula wędkarska &lt;br/&gt; Haczyk &lt;br/&gt; Robaki na przynętę</Polish>
+            <Portuguese>A pesca requer os seguintes itens: &lt;br/&gt; Vara de pesca &lt;br/&gt; Carretel de pesca &lt;br/&gt; Anzol &lt;br/&gt; Minhocas para isca</Portuguese>
+            <Russian>Для рыбалки необходимы следующие предметы: &lt;br/&gt; удочка &lt;br/&gt; катушка &lt;br/&gt; рыболовный крючок &lt;br/&gt; черви для наживки</Russian>
+            <German>Zum Angeln werden folgende Gegenstände benötigt: &lt;br/&gt; Angelrute &lt;br/&gt; Angelspule &lt;br/&gt; Angelhaken &lt;br/&gt; Würmer als Köder</German>
+            <Korean>낚시에는 다음 물품이 필요합니다: 낚싯대, 낚싯줄, 낚싯바늘, 낚싯바늘, 미끼용 지렁이.</Korean>
+            <Japanese>釣りに必要なもの： &lt;br/&gt; 釣り竿 &lt;br/&gt; 釣り糸 &lt;br/&gt; 釣り針 &lt;br/&gt; エサ用のワーム</Japanese>
+            <Turkish>Balık tutmak için aşağıdaki malzemeler gereklidir: &lt;br/&gt; Olta &lt;br/&gt; Olta makarası &lt;br/&gt; Balık kancası &lt;br/&gt; Yem için solucanlar</Turkish>
+        </Key>
+    </Package>
+</Project>

@@ -2,7 +2,7 @@
 
 [
     "fire_menu",
-    localize ECSTRING(common,UseFire),
+    localize LSTRING(Action),
     {call EFUNC(common,nearFire) params ["_nearestFire"]; _nearestFire isNotEqualTo []},
     {
         player setVariable [QEGVAR(actions,currentParentID), "fire_menu"];
@@ -16,7 +16,7 @@
 
 [
     "fireStatus_menu",
-    "Check fire",
+    localize LSTRING(CheckAction),
     {player getVariable [QEGVAR(actions,currentParentID), ""] isEqualTo "fire_menu"},
     {
         [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;

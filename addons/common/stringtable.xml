@@ -267,20 +267,6 @@
             <Japanese>水を集める</Japanese>
             <Turkish>Su topla</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Common_CollectWood">
-            <English>Collect wood</English>
-            <Czech>Sbírat dřevo</Czech>
-            <French>Collecter du bois</French>
-            <Spanish>Recoger madera</Spanish>
-            <Italian>Raccogliere il legno</Italian>
-            <Polish>Zbieraj drewno</Polish>
-            <Portuguese>Coletar madeira</Portuguese>
-            <Russian>Соберите древесину</Russian>
-            <German>Holz sammeln</German>
-            <Korean>나무 수집</Korean>
-            <Japanese>木材を集める</Japanese>
-            <Turkish>Odun toplayın</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Common_DisplayName">
             <English>Misery</English>
             <Czech>Bída</Czech>
@@ -308,48 +294,6 @@
             <Korean>소스에서 마시기</Korean>
             <Japanese>ソースから飲む</Japanese>
             <Turkish>Kaynağından iç</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_Forage">
-            <English>Forage</English>
-            <Czech>Přehrabování</Czech>
-            <French>Fourrager</French>
-            <Spanish>Forrajear</Spanish>
-            <Italian>Foraggiare</Italian>
-            <Polish>Przeszukiwać w poszukiwaniu pożywienia</Polish>
-            <Portuguese>Forragear</Portuguese>
-            <Russian>Охотиться за кормом</Russian>
-            <German>Futter suchen</German>
-            <Korean>채집하다</Korean>
-            <Japanese>採集する</Japanese>
-            <Turkish>Yem aramak</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_ForageDigForWorms">
-            <English>Dig for worms</English>
-            <Czech>Vykopat červy</Czech>
-            <French>Creuser pour trouver des vers</French>
-            <Spanish>Excavar en busca de lombrices</Spanish>
-            <Italian>Scavare per trovare i vermi</Italian>
-            <Polish>Kopanie w poszukiwaniu robaków</Polish>
-            <Portuguese>Cavar em busca de minhocas</Portuguese>
-            <Russian>Копайте червей</Russian>
-            <German>Nach Würmern graben</German>
-            <Korean>벌레 찾기</Korean>
-            <Japanese>ミミズを掘る</Japanese>
-            <Turkish>Solucanlar için kazın</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_ForageSearchForTinder">
-            <English>Search for tinder</English>
-            <Czech>Hledat troud</Czech>
-            <French>Recherche de tinder</French>
-            <Spanish>Buscar tinder</Spanish>
-            <Italian>Ricerca di tinder</Italian>
-            <Polish>Wyszukiwanie tinder</Polish>
-            <Portuguese>Busca por tinder</Portuguese>
-            <Russian>Поиск тиндера</Russian>
-            <German>Suche nach tinder</German>
-            <Korean>틴더 검색</Korean>
-            <Japanese>ティンダーで検索</Japanese>
-            <Turkish>Tinder için ara</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_GearWeightVal">
             <English>Gear weight feels like: ~ %2kg (%1lbs)</English>
@@ -420,34 +364,6 @@
             <Korean>나무를 톱질할 전기톱이 없는데...</Korean>
             <Japanese>チェンソーがないと薪が切れない...。</Japanese>
             <Turkish>Odun kesmek için elektrikli testereniz yok...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_NoWoodAxeOrChainsawNoti">
-            <English>You don't have a chainsaw, or Woodaxe...</English>
-            <Czech>Nemáš motorovou pilu ani sekeru...</Czech>
-            <French>Vous n'avez pas de tronçonneuse, ni de hache à bois...</French>
-            <Spanish>Usted no tiene una motosierra, o Woodaxe ...</Spanish>
-            <Italian>Non hai una motosega o un'ascia da legno...</Italian>
-            <Polish>Nie masz piły łańcuchowej ani topora do drewna...</Polish>
-            <Portuguese>Você não tem uma motosserra ou um machado de madeira...</Portuguese>
-            <Russian>У вас нет ни бензопилы, ни деревянного топорика...</Russian>
-            <German>Sie haben keine Kettensäge oder Woodaxe...</German>
-            <Korean>전기톱이나 우닥스가 없으시군요...</Korean>
-            <Japanese>チェーンソーもウッドアックスも持っていない...。</Japanese>
-            <Turkish>Motorlu testeren ya da odun baltan yok.</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_NoWoodenLogsForSplitting">
-            <English>You don't have any wooden logs...</English>
-            <Czech>Nemáš žádné dřevěné klády...</Czech>
-            <French>Vous n'avez pas de rondins de bois...</French>
-            <Spanish>No tienes troncos de madera...</Spanish>
-            <Italian>Non avete tronchi di legno...</Italian>
-            <Polish>Nie masz żadnych drewnianych bali...</Polish>
-            <Portuguese>Você não tem nenhuma tora de madeira...</Portuguese>
-            <Russian>У вас нет деревянных поленьев...</Russian>
-            <German>Sie haben keine Holzscheite...</German>
-            <Korean>나무 통나무가 없는데...</Korean>
-            <Japanese>木の丸太がないじゃないか...。</Japanese>
-            <Turkish>Hiç tahta kütüğün yok...</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_ReqRefuel">
             <English>Request refuel</English>
@@ -743,76 +659,6 @@
             <Japanese>%1 時間眠った。</Japanese>
             <Turkish>%1 saat(ler) boyunca uyudunuz...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Common_SplitWoodLog">
-            <English>Split Wood Log</English>
-            <Czech>Rozštípaný špalek</Czech>
-            <French>Bûche de bois fendue</French>
-            <Spanish>Tronco de madera hendido</Spanish>
-            <Italian>Tronco di legno spaccato</Italian>
-            <Polish>Podzielona kłoda drewna</Polish>
-            <Portuguese>Toras de madeira rachadas</Portuguese>
-            <Russian>Расколотое деревянное бревно</Russian>
-            <German>Holzscheit gespalten</German>
-            <Korean>분할된 나무 통나무</Korean>
-            <Japanese>スプリット・ウッド・ログ</Japanese>
-            <Turkish>Bölünmüş Ahşap Kütük</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_StartFishing">
-            <English>Start Fishing</English>
-            <Czech>Začít rybařit</Czech>
-            <French>Commencer à pêcher</French>
-            <Spanish>Empezar a pescar</Spanish>
-            <Italian>Inizia a pescare</Italian>
-            <Polish>Zacząć łowić</Polish>
-            <Portuguese>Comece a pescar</Portuguese>
-            <Russian>Начать рыбалку</Russian>
-            <German>Angeln beginnen</German>
-            <Korean>낚시 시작</Korean>
-            <Japanese>釣り始める</Japanese>
-            <Turkish>Balık tutmaya başla</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_StartFishingAct">
-            <English>Fish</English>
-            <Czech>Rybaření</Czech>
-            <French>Poisson</French>
-            <Spanish>Pescado</Spanish>
-            <Italian>Pesce</Italian>
-            <Polish>Ryba</Polish>
-            <Portuguese>Peixes</Portuguese>
-            <Russian>Рыба</Russian>
-            <German>Fisch</German>
-            <Korean>물고기</Korean>
-            <Japanese>魚</Japanese>
-            <Turkish>Balık</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_StartFishingRequirements">
-            <English>Fishing requirements</English>
-            <Czech>Požadavky pro rybolov</Czech>
-            <French>Exigences en matière de pêche</French>
-            <Spanish>Requisitos de pesca</Spanish>
-            <Italian>Requisiti per la pesca</Italian>
-            <Polish>Wymagania dotyczące połowów</Polish>
-            <Portuguese>Requisitos de pesca</Portuguese>
-            <Russian>Требования к рыболовству</Russian>
-            <German>Anforderungen an die Fischerei</German>
-            <Korean>낚시 요구 사항</Korean>
-            <Japanese>釣りの条件</Japanese>
-            <Turkish>Balıkçılık gereksinimleri</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_StartFishingRequirements_Listed">
-            <English>Fishing requires the following items: &lt;br/&gt; Fishing rod &lt;br/&gt; Fishing spool &lt;br/&gt; Fish hook &lt;br/&gt; Worms for bait</English>
-            <Czech>K rybaření jsou potřeba následující předměty: &lt;br/&gt; Rybářský prut &lt;br/&gt; Rybářská cívka &lt;br/&gt; Rybářský háček &lt;br/&gt; Červi na návnadu.</Czech>
-            <French>La pêche nécessite les éléments suivants : &lt;br/&gt; Canne à pêche &lt;br/&gt; Bobine de pêche &lt;br/&gt; Hameçon &lt;br/&gt; Vers pour l'appât</French>
-            <Spanish>Para pescar se necesitan los siguientes artículos: &lt;br/&gt; Caña de pescar &lt;br/&gt; Carrete de pesca &lt;br/&gt; Anzuelo &lt;br/&gt; Gusanos para cebo</Spanish>
-            <Italian>La pesca richiede i seguenti articoli: &lt;br/&gt; Canna da pesca &lt;br/&gt; Bobina da pesca &lt;br/&gt; Amo da pesca &lt;br/&gt; Vermi per esca</Italian>
-            <Polish>Wędkowanie wymaga następujących przedmiotów: &lt;br/&gt; Wędka &lt;br/&gt; Szpula wędkarska &lt;br/&gt; Haczyk &lt;br/&gt; Robaki na przynętę</Polish>
-            <Portuguese>A pesca requer os seguintes itens: &lt;br/&gt; Vara de pesca &lt;br/&gt; Carretel de pesca &lt;br/&gt; Anzol &lt;br/&gt; Minhocas para isca</Portuguese>
-            <Russian>Для рыбалки необходимы следующие предметы: &lt;br/&gt; удочка &lt;br/&gt; катушка &lt;br/&gt; рыболовный крючок &lt;br/&gt; черви для наживки</Russian>
-            <German>Zum Angeln werden folgende Gegenstände benötigt: &lt;br/&gt; Angelrute &lt;br/&gt; Angelspule &lt;br/&gt; Angelhaken &lt;br/&gt; Würmer als Köder</German>
-            <Korean>낚시에는 다음 물품이 필요합니다: 낚싯대, 낚싯줄, 낚싯바늘, 낚싯바늘, 미끼용 지렁이.</Korean>
-            <Japanese>釣りに必要なもの： &lt;br/&gt; 釣り竿 &lt;br/&gt; 釣り糸 &lt;br/&gt; 釣り針 &lt;br/&gt; エサ用のワーム</Japanese>
-            <Turkish>Balık tutmak için aşağıdaki malzemeler gereklidir: &lt;br/&gt; Olta &lt;br/&gt; Olta makarası &lt;br/&gt; Balık kancası &lt;br/&gt; Yem için solucanlar</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Common_StoreArtifact">
             <English>Store Artifact</English>
             <Czech>Uložit artefakt</Czech>
@@ -826,20 +672,6 @@
             <Korean>아티팩트 저장</Korean>
             <Japanese>ストアアーティファクト</Japanese>
             <Turkish>Store Artifact</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_UseFire">
-            <English>Use Fire</English>
-            <Czech>Použít oheň</Czech>
-            <French>Utiliser le feu</French>
-            <Spanish>Usa fuego</Spanish>
-            <Italian>Usa il fuoco</Italian>
-            <Polish>Używaj ognia</Polish>
-            <Portuguese>Use fogo</Portuguese>
-            <Russian>Использовать огонь</Russian>
-            <German>Feuer benutzen</German>
-            <Korean>불 사용</Korean>
-            <Japanese>火を使う</Japanese>
-            <Turkish>Ateş kullan</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_UseForge">
             <English>Use Forge</English>

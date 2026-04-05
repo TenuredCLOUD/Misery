@@ -19,7 +19,7 @@
 private _audioSource = playSound selectRandom [MACRO_FIELDDRESS_SKINSOUNDS];
 
 if (_animal getVariable [QGVAR(processingSkin), false]) exitWith {
-    [QEGVAR(common,tileText), "This animal is being processed already..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(AlreadyProcessed)] call CBA_fnc_localEvent;
 };
 
 if (isNil {_animal getVariable QGVAR(processingSkin)}) then {
@@ -49,7 +49,7 @@ switch (true) do {
 
 player playAction "Gear";
 
-["You start to field dress the animal...",
+[localize LSTRING(Start),
 15,
 {_isNear},
 {
@@ -68,7 +68,7 @@ player playAction "Gear";
 
     [_animal] call EFUNC(ballistics,destroy);
 
-    [QEGVAR(common,tileText), "You got some raw meat..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(Success)] call CBA_fnc_localEvent;
 },
 {
     params ["_args"];
@@ -80,7 +80,7 @@ player playAction "Gear";
         deleteVehicle _audioSource;
     };
 
-    [QEGVAR(common,tileText), "You stop field dressing the animal..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(Stop)] call CBA_fnc_localEvent;
 
     // Reset processing
     _animal setVariable [QGVAR(fieldDressing), nil, true];

@@ -5,7 +5,7 @@ if !(hasInterface) exitWith {};
 if (GVAR(enabled)) then {
     [
         "field_dress_menu",
-        "Field dress animal",
+        localize LSTRING(Action),
         {[[MACRO_KNIVES]] call EFUNC(common,hasItem) && ([player, [MACRO_FIELDDRESS_ANIMALTYPES], 2] call EFUNC(common,nearCorpse)) select 0},
         {
             [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;

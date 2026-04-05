@@ -43,7 +43,7 @@
         [982388, [1009], true] call EFUNC(common,displayShowControls);
         private _maxTime = [2700, 5400, 7200] select (["small", "big", "barrel"] find _type);
         _fuelProgressBar progressSetPosition (_burnTimeLeft / _maxTime);
-        _fuelTime ctrlSetText format ["Burn Time: %1(s)", round _burnTimeLeft];
+        _fuelTime ctrlSetText format [localize LSTRING(BurnTime), round _burnTimeLeft];
         [982388, [1600], false] call EFUNC(common,displayEnableControls);
     } else {
         _fuelTime ctrlSetText "";

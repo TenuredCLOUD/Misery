@@ -13,12 +13,12 @@
  *
 */
 
-if !([[QCLASS(chainsaw_Empty), QCLASS(chainsaw)]] call EFUNC(common,hasItem)) exitWith {[QEGVAR(common,tileText), format ["You don't have a chainsaw..."]] call CBA_fnc_localEvent};
+if !([[QCLASS(chainsaw_Empty), QCLASS(chainsaw)]] call EFUNC(common,hasItem)) exitWith {[QEGVAR(common,tileText), format [localize LSTRING(NoChainsaw)]] call CBA_fnc_localEvent};
 
 [QCLASS(chainsaw)] call EFUNC(common,countMagazinesAmmo) params ["_currentFuel", "_maxFuel"];
 
 if (_currentFuel isEqualTo _maxFuel) exitWith {
-    [QEGVAR(common,tileText), format ["Your chainsaw is already full of fuel..."]] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), format [localize LSTRING(ChainsawFull)]] call CBA_fnc_localEvent;
 };
 
 [{
@@ -34,7 +34,7 @@ if (_currentFuel isEqualTo _maxFuel) exitWith {
     };
 
     if !([[QCLASS(sawFuel)]] call EFUNC(common,hasItem)) exitWith {
-        [QEGVAR(common,tileText), format ["You have no more fuel..."]] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), format [localize LSTRING(NoFuel)]] call CBA_fnc_localEvent;
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
@@ -43,7 +43,7 @@ if (_currentFuel isEqualTo _maxFuel) exitWith {
     [QCLASS(chainsaw)] call EFUNC(common,itemIncrement) params ["_incremented"];
 
     if !(_incremented) exitWith {
-        [QEGVAR(common,tileText), format ["Chainsaw is full of fuel..."]] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), format [localize LSTRING(FuelStatusFull)]] call CBA_fnc_localEvent;
         _handle call CBA_fnc_removePerFrameHandler;
     };
 }, 0, []] call CBA_fnc_addPerFrameHandler;

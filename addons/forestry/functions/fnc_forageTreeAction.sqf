@@ -16,15 +16,15 @@
 [player] call EFUNC(common,nearTree) params ["_found", "_nearestTree", "_damaged", "_hasAxe", "_hasSaw"];
 
 if !(_found) exitWith {
-    [QEGVAR(common,tileText), format ["You need to be near a tree to gather wood..."]] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), format [localize LSTRING(NeedTreeGathering)]] call CBA_fnc_localEvent;
 };
 
 if (_damaged) exitWith {
-    [QEGVAR(common,tileText), format ["Tree has fallen, doesn't have anymore wood..."]] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), format [localize LSTRING(TreeEmpty)]] call CBA_fnc_localEvent;
 };
 
 if (GVAR(gatheredPositions) findIf {_x distance getPosATL player < 2.5} isNotEqualTo -1) exitWith {
-    [QEGVAR(common,tileText), "This tree's dead wood has been gathered. The remaining wood can be gathered by cutting it down..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(DeadGathered)] call CBA_fnc_localEvent;
 };
 
 if (currentWeapon player isNotEqualTo "") then {
@@ -36,7 +36,7 @@ _soundDummy attachTo [player, [0, 0, 0], "Pelvis"];
 
 _soundDummy say3D [QCLASS(audio_sound_gatheringFirewood), 25];
 
-["Gathering wood...",
+[localize LSTRING(GatheringProgress),
 60,
 {[player] call EFUNC(common,nearTree) params ["_found", "", "", "", ""]; _found},
 {
@@ -69,7 +69,7 @@ _soundDummy say3D [QCLASS(audio_sound_gatheringFirewood), 25];
         deleteVehicle _soundDummy;
     };
 
-    [QEGVAR(common,tileText), "You stop gathering wood..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(StopGathering)] call CBA_fnc_localEvent;
 },
 [_nearestTree, _soundDummy]
 ] call CBA_fnc_progressBar;

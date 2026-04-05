@@ -17,11 +17,11 @@
 [player] call EFUNC(common,nearTree) params ["_found", "_nearestTree", "_damaged", "_hasAxe", "_hasSaw"];
 
 if !(_found) exitWith {
-    [QEGVAR(common,tileText), format ["You need to be near foliage to search for worms..."]] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), format [localize LSTRING(NearFoliage)]] call CBA_fnc_localEvent;
 };
 
 if (GVAR(digPositions) findIf {_x distance getPosATL player < 2.5} isNotEqualTo -1) exitWith {
-    [QEGVAR(common,tileText), "This area has already been dug up..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(AreaDug)] call CBA_fnc_localEvent;
 };
 
 player playActionNow "Crouch";
@@ -30,15 +30,15 @@ if (currentWeapon player isNotEqualTo "") then {
     player action ["SWITCHWEAPON", player, player, -1];
 };
 
-["Digging for worms...",
+[localize LSTRING(DiggingWorms),
 15,
 {[player] call EFUNC(common,nearTree) params ["_found", "", "", "", ""]; _found},
 {
     if ([70] call EFUNC(common,rollChance)) then {
-        [QEGVAR(common,tileText), "You found some worms..."] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), localize LSTRING(FoundWorms)] call CBA_fnc_localEvent;
         [player, QCLASS(worms)] call CBA_fnc_addItem;
     } else {
-        [QEGVAR(common,tileText), "You didn't find anything..."] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), localize LSTRING(FoundNothing)] call CBA_fnc_localEvent;
     };
 
     private _position = getPosATL player;
@@ -54,7 +54,7 @@ if (currentWeapon player isNotEqualTo "") then {
     };
 },
 {
-    [QEGVAR(common,tileText), "You stop digging for worms..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(StopDigging)] call CBA_fnc_localEvent;
 },
 []
 ] call CBA_fnc_progressBar;
