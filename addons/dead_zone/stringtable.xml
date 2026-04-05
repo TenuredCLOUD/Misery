@@ -3,6 +3,8 @@
     <Package name="Dead_Zone">
         <Key ID="STR_MISERY_Dead_Zone_Areas">
             <English>Dead Zone Areas</English>
+            <Chinesesimp>死亡地带区域</Chinesesimp>
+            <Chinese>死亡地帶區域</Chinese>
             <Czech>Oblasti mrtvé zóny</Czech>
             <French>Zones d'exclusion</French>
             <Spanish>Áreas de zona muerta</Spanish>
@@ -17,6 +19,8 @@
         </Key>
         <Key ID="STR_MISERY_Dead_Zone_DeadZonesDesc">
             <English>ELLIPSE or RECTANGLE marker names covering the barrage areas as strings ['Deadzone_1', 'Deadzone_2']</English>
+            <Chinesesimp>覆盖弹幕区域的 ELLIPSE 或 RECTANGLE 标记名称，格式为字符串 ['Deadzone_1', 'Deadzone_2']</Chinesesimp>
+            <Chinese>覆蓋彈幕區域的 ELLIPSE 或 RECTANGLE 標記名稱，格式為字符串 ['Deadzone_1', 'Deadzone_2']</Chinese>
             <Czech>Názvy značek ELLIPSE nebo RECTANGLE pokrývající oblasti palby jako řetězce ['Deadzone_1', 'Deadzone_2']</Czech>
             <French>Noms des marqueurs ELLIPSE ou RECTANGLE couvrant les zones de barrage sous forme de chaînes ['Deadzone_1', 'Deadzone_2']</French>
             <Spanish>Nombres de marcadores ELLIPSE o RECTANGLE que cubren las áreas de bombardeo como cadenas ['Deadzone_1', 'Deadzone_2']</Spanish>
@@ -31,6 +35,8 @@
         </Key>
         <Key ID="STR_MISERY_Dead_Zone_Delay">
             <English>Barrage delay</English>
+            <Chinesesimp>弹幕延迟</Chinesesimp>
+            <Chinese>彈幕延遲</Chinese>
             <Czech>Prodleva palby</Czech>
             <French>Délai du barrage</French>
             <Spanish>Retraso del bombardeo</Spanish>
@@ -45,6 +51,8 @@
         </Key>
         <Key ID="STR_MISERY_Dead_Zone_DelayDesc">
             <English>Global delay between each shell barrage</English>
+            <Chinesesimp>每次炮火弹幕之间的全局延迟</Chinesesimp>
+            <Chinese>每次砲火彈幕之間的全局延遲</Chinese>
             <Czech>Globální prodleva mezi jednotlivými salvami granátů</Czech>
             <French>Délai global entre chaque barrage d'obus</French>
             <Spanish>Retraso global entre cada ráfaga de proyectiles</Spanish>
@@ -59,6 +67,8 @@
         </Key>
         <Key ID="STR_MISERY_Dead_Zone_ShellTypes">
             <English>Shell Types</English>
+            <Chinesesimp>炮弹类型</Chinesesimp>
+            <Chinese>砲彈類型</Chinese>
             <Czech>Typy granátů</Czech>
             <French>Types d'obus</French>
             <Spanish>Tipos de proyectiles</Spanish>
@@ -73,6 +83,8 @@
         </Key>
         <Key ID="STR_MISERY_Dead_Zone_ShellTypesDesc">
             <English>Pool of shell classnames to randomly use ['Sh_82mm_AMOS', 'Sh_155mm_AMOS']</English>
+            <Chinesesimp>随机使用的炮弹类名池 ['Sh_82mm_AMOS', 'Sh_155mm_AMOS']</Chinesesimp>
+            <Chinese>隨機使用的砲彈類名池 ['Sh_82mm_AMOS', 'Sh_155mm_AMOS']</Chinese>
             <Czech>Seznam classnamů granátů pro náhodné použití ['Sh_82mm_AMOS', 'Sh_155mm_AMOS']</Czech>
             <French>Liste des classnames d'obus à utiliser aléatoirement ['Sh_82mm_AMOS', 'Sh_155mm_AMOS']</French>
             <Spanish>Lista de classnames de proyectiles para usar aleatoriamente ['Sh_82mm_AMOS', 'Sh_155mm_AMOS']</Spanish>
@@ -87,6 +99,8 @@
         </Key>
         <Key ID="STR_MISERY_Dead_Zone_Radius">
             <English>Barrage radius</English>
+            <Chinesesimp>弹幕半径</Chinesesimp>
+            <Chinese>彈幕半徑</Chinese>
             <Czech>Poloměr palby</Czech>
             <French>Rayon du barrage</French>
             <Spanish>Radio del bombardeo</Spanish>
@@ -101,6 +115,8 @@
         </Key>
         <Key ID="STR_MISERY_Dead_Zone_RadiusDesc">
             <English>Radius of target area in meters</English>
+            <Chinesesimp>目标区域半径（以米为单位）</Chinesesimp>
+            <Chinese>目標區域半徑（以米為單位）</Chinese>
             <Czech>Poloměr cílové oblasti v metrech</Czech>
             <French>Rayon de la zone cible en mètres</French>
             <Spanish>Radio del área objetivo en metros</Spanish>
@@ -115,6 +131,8 @@
         </Key>
         <Key ID="STR_MISERY_Dead_Zone_Density">
             <English>Barrage density</English>
+            <Chinesesimp>弹幕密度</Chinesesimp>
+            <Chinese>彈幕密度</Chinese>
             <Czech>Hustota palby</Czech>
             <French>Densité du barrage</French>
             <Spanish>Densidad del bombardeo</Spanish>
@@ -129,6 +147,8 @@
         </Key>
         <Key ID="STR_MISERY_Dead_Zone_DensityDesc">
             <English>How many rounds are fired each barrage</English>
+            <Chinesesimp>每次弹幕射击的轮数</Chinesesimp>
+            <Chinese>每次彈幕射擊的輪數</Chinese>
             <Czech>Kolik ran je vystřeleno při každé salvě</Czech>
             <French>Nombre de coups tirés lors de chaque barrage</French>
             <Spanish>Cuántos disparos se realizan en cada bombardeo</Spanish>

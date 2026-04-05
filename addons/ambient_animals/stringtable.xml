@@ -3,6 +3,8 @@
     <Package name="Ambient_Animals">
         <Key ID="STR_MISERY_Ambient_Animals_Wildlife">
             <English>Ambient wildlife</English>
+            <Chinesesimp>环境野生动物</Chinesesimp>
+            <Chinese>環境野生動物</Chinese>
             <Czech>Okolní zvěř</Czech>
             <French>Faune ambiante</French>
             <Spanish>Vida silvestre ambiental</Spanish>
@@ -17,6 +19,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_Animals_EnableWildlife">
             <English>Enable roaming ambient wildlife?</English>
+            <Chinesesimp>开启漫游环境野生动物？</Chinesesimp>
+            <Chinese>開啟漫遊環境野生動物？</Chinese>
             <Czech>Povolit toulání okolní zvěře?</Czech>
             <French>Activer l'errance de la faune ambiante ?</French>
             <Spanish>¿Habilitar vida silvestre ambiental errante?</Spanish>
@@ -31,6 +35,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_Animals_MaxAnimals">
             <English>Maximum animals</English>
+            <Chinesesimp>最大动物数</Chinesesimp>
+            <Chinese>最大動物數</Chinese>
             <Czech>Maximum zvířat</Czech>
             <French>Maximum d'animaux</French>
             <Spanish>Máximo de animales</Spanish>
@@ -45,6 +51,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_Animals_MaxAnimalsDesc">
             <English>Maximum animals allowed to spawn</English>
+            <Chinesesimp>允许生成的最大动物数</Chinesesimp>
+            <Chinese>允許生成的最大動物數</Chinese>
             <Czech>Maximální povolený počet zvířat</Czech>
             <French>Nombre maximum d'animaux autorisés à apparaître</French>
             <Spanish>Máximo de animales permitidos para aparecer</Spanish>
@@ -59,6 +67,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_Animals_ClusterSize">
             <English>Cluster size</English>
+            <Chinesesimp>族群大小</Chinesesimp>
+            <Chinese>族群大小</Chinese>
             <Czech>Velikost shluku</Czech>
             <French>Taille du groupe</French>
             <Spanish>Tamaño del grupo</Spanish>
@@ -73,6 +83,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_Animals_ClusterSizeDesc">
             <English>Possible amount of animals to spawn each cycle</English>
+            <Chinesesimp>每个周期可能生成的动物数量</Chinesesimp>
+            <Chinese>每個週期可能生成的動物數量</Chinese>
             <Czech>Možné množství zvířat k vytvoření v každém cyklu</Czech>
             <French>Nombre possible d'animaux à faire apparaître à chaque cycle</French>
             <Spanish>Cantidad posible de animales para aparecer en cada ciclo</Spanish>
@@ -87,6 +99,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_Animals_MinDist">
             <English>Minimum distance</English>
+            <Chinesesimp>最小距离</Chinesesimp>
+            <Chinese>最小距離</Chinese>
             <Czech>Minimální vzdálenost</Czech>
             <French>Distance minimale</French>
             <Spanish>Distancia mínima</Spanish>
@@ -101,6 +115,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_Animals_MinDistDesc">
             <English>Minimum distance at which animals can spawn</English>
+            <Chinesesimp>动物生成的最小距离</Chinesesimp>
+            <Chinese>動物生成的最小距離</Chinese>
             <Czech>Minimální vzdálenost, ve které se zvířata mohou tvořit</Czech>
             <French>Distance minimale à laquelle les animaux peuvent apparaître</French>
             <Spanish>Distancia mínima a la que pueden aparecer animales</Spanish>
@@ -115,6 +131,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_Animals_MaxDist">
             <English>Maximum distance</English>
+            <Chinesesimp>最大距离</Chinesesimp>
+            <Chinese>最大距離</Chinese>
             <Czech>Maximální vzdálenost</Czech>
             <French>Distance maximale</French>
             <Spanish>Distancia máxima</Spanish>
@@ -129,6 +147,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_Animals_MaxDistDesc">
             <English>Maximum distance at which animals can spawn</English>
+            <Chinesesimp>动物生成的最大距离</Chinesesimp>
+            <Chinese>動物生成的最大距離</Chinese>
             <Czech>Maximální vzdálenost, ve které se zvířata mohou tvořit</Czech>
             <French>Distance maximale à laquelle les animaux peuvent apparaître</French>
             <Spanish>Distancia máxima a la que pueden aparecer animales</Spanish>
@@ -143,6 +163,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_Animals_SafeDist">
             <English>Safe distance</English>
+            <Chinesesimp>安全距离</Chinesesimp>
+            <Chinese>安全距離</Chinese>
             <Czech>Bezpečná vzdálenost</Czech>
             <French>Distance de sécurité</French>
             <Spanish>Distancia de seguridad</Spanish>
@@ -157,6 +179,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_Animals_SafeDistDesc">
             <English>Minimum distance at which animals can spawn from other players</English>
+            <Chinesesimp>动物在其他玩家附近的最小生成距离</Chinesesimp>
+            <Chinese>動物在其他玩家附近的最小生成距離</Chinese>
             <Czech>Minimální vzdálenost, ve které se zvířata mohou tvořit od ostatních hráčů</Czech>
             <French>Distance minimale à laquelle les animaux peuvent apparaître par rapport aux autres joueurs</French>
             <Spanish>Distancia mínima a la que pueden aparecer animales de otros jugadores</Spanish>
@@ -171,6 +195,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_Animals_DeleteDist">
             <English>Delete distance</English>
+            <Chinesesimp>删除距离</Chinesesimp>
+            <Chinese>刪除距離</Chinese>
             <Czech>Vzdálenost pro smazání</Czech>
             <French>Distance de suppression</French>
             <Spanish>Distancia de eliminación</Spanish>
@@ -185,6 +211,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_Animals_DeleteDistDesc">
             <English>Minimum distance from a player at which animals will be deleted</English>
+            <Chinesesimp>远离玩家后动物被删除的最小距离</Chinesesimp>
+            <Chinese>遠離玩家後動物被刪除的最小距離</Chinese>
             <Czech>Minimální vzdálenost od hráče, ve které budou zvířata smazána</Czech>
             <French>Distance minimale d'un joueur à laquelle les animaux seront supprimés</French>
             <Spanish>Distancia mínima de un jugador a la que se eliminarán los animales</Spanish>
@@ -199,6 +227,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_Animals_SpawnChance">
             <English>Spawn chance %</English>
+            <Chinesesimp>生成概率 %</Chinesesimp>
+            <Chinese>生成概率 %</Chinese>
             <Czech>Šance na vytvoření %</Czech>
             <French>Chance d'apparition %</French>
             <Spanish>Probabilidad de aparición %</Spanish>
@@ -213,6 +243,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_Animals_SpawnChanceDesc">
             <English>% chance per cycle that clusters will spawn</English>
+            <Chinesesimp>每个周期族群生成的百分比概率</Chinesesimp>
+            <Chinese>每個週期族群生成的百分比概率</Chinese>
             <Czech>% šance v každém cyklu, že se shluky vytvoří</Czech>
             <French>% de chance par cycle que des groupes apparaissent</French>
             <Spanish>% de probabilidad por ciclo de que aparezcan grupos</Spanish>
@@ -227,6 +259,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_Animals_CheckInterval">
             <English>Spawn check interval</English>
+            <Chinesesimp>生成检查间隔</Chinesesimp>
+            <Chinese>生成檢查間隔</Chinese>
             <Czech>Interval kontroly vytvoření</Czech>
             <French>Intervalle de vérification d'apparition</French>
             <Spanish>Intervalo de verificación de aparición</Spanish>
@@ -241,6 +275,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_Animals_CheckIntervalDesc">
             <English>Time in seconds between spawn checks</English>
+            <Chinesesimp>生成检查之间的时间间隔 (秒)</Chinesesimp>
+            <Chinese>生成檢查之間的時間間隔 (秒)</Chinese>
             <Czech>Čas v sekundách mezi kontrolami vytvoření</Czech>
             <French>Temps en secondes entre les vérifications d'apparition</French>
             <Spanish>Tiempo en segundos entre comprobaciones de aparición</Spanish>
@@ -255,6 +291,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_Animals_InvalidPos">
             <English>Invalid position or position in water, skipping...</English>
+            <Chinesesimp>位置无效或位置在水中，正在跳过...</Chinesesimp>
+            <Chinese>位置無效或位置在水中，正在跳過...</Chinese>
             <Czech>Neplatná pozice nebo pozice ve vodě, přeskakuji...</Czech>
             <French>Position invalide ou dans l'eau, omission...</French>
             <Spanish>Posición no válida o en el agua, omitiendo...</Spanish>

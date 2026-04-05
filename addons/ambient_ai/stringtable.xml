@@ -3,6 +3,8 @@
     <Package name="Ambient_AI">
         <Key ID="STR_MISERY_Ambient_AI_RecruitUnit">
             <English>Recruit %1 (%2 %3)</English>
+            <Chinesesimp>招募 %1 (%2 %3)</Chinesesimp>
+            <Chinese>招募 %1 (%2 %3)</Chinese>
             <Czech>Rekrutace %1 (%2 %3)</Czech>
             <French>Recruter %1 (%2 %3)</French>
             <Spanish>Reclutar %1 (%2 %3)</Spanish>
@@ -17,6 +19,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_RecruitUnit_Fail">
             <English>You don't have enough money to recruit %1</English>
+            <Chinesesimp>你没有足够的钱来招募 %1</Chinesesimp>
+            <Chinese>你沒有足夠的錢來招募 %1</Chinese>
             <Czech>Nemáte dostatek peněz na rekrutaci %1</Czech>
             <French>Vous n'avez pas assez d'argent pour recruter %1</French>
             <Spanish>No tienes suficiente dinero para contratar %1</Spanish>
@@ -31,6 +35,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_RecruitUnit_Success">
             <English>You have recruited %1 for %2 %3</English>
+            <Chinesesimp>你招募了 %1，花费 %2 %3</Chinesesimp>
+            <Chinese>你招募了 %1，花費 %2 %3</Chinese>
             <Czech>Rekrutovali jste %1 za %2 %3</Czech>
             <French>Vous avez recruté %1 pour %2 %3</French>
             <Spanish>Ha contratado a %1 para %2 %3</Spanish>
@@ -45,6 +51,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_SpawnerInvalidPos">
             <English>AI Spawner: Invalid position or position in water, skipping</English>
+            <Chinesesimp>AI 生成器: 位置无效或位置在水中，正在跳过</Chinesesimp>
+            <Chinese>AI 生成器: 位置無效或位置在水中，正在跳過</Chinese>
             <Czech>AI Spawner: Neplatná pozice nebo pozice ve vodě, přeskakuji</Czech>
             <French>Générateur d'IA : Position invalide ou dans l'eau, ignorer</French>
             <Spanish>Generador de IA: Posición no válida o en el agua, omitiendo</Spanish>
@@ -59,6 +67,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_Ambient_AI">
             <English>Ambient AI</English>
+            <Chinesesimp>环境 AI</Chinesesimp>
+            <Chinese>環境 AI</Chinese>
             <Czech>Okolní AI</Czech>
             <French>IA ambiante</French>
             <Spanish>IA ambiental</Spanish>
@@ -73,6 +83,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_EnableRoamingAI">
             <English>Enable roaming ambient ai?</English>
+            <Chinesesimp>开启漫游环境 AI？</Chinesesimp>
+            <Chinese>開啟漫遊環境 AI？</Chinese>
             <Czech>Povolit potulující se okolní AI?</Czech>
             <French>Activer l'IA ambiante itinérante ?</French>
             <Spanish>¿Activar IA ambiental errante?</Spanish>
@@ -87,6 +99,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_FactionList">
             <English>Faction list</English>
+            <Chinesesimp>阵营列表</Chinesesimp>
+            <Chinese>陣營列表</Chinese>
             <Czech>Seznam frakcí</Czech>
             <French>Liste des factions</French>
             <Spanish>Lista de facciones</Spanish>
@@ -101,6 +115,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_FactionToSpawn">
             <English>Faction to spawn</English>
+            <Chinesesimp>生成阵营</Chinesesimp>
+            <Chinese>生成陣營</Chinese>
             <Czech>Frakce k vytvoření</Czech>
             <French>Faction à générer</French>
             <Spanish>Facción a generar</Spanish>
@@ -115,6 +131,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_GroupSize">
             <English>Group size</English>
+            <Chinesesimp>小组大小</Chinesesimp>
+            <Chinese>小組大小</Chinese>
             <Czech>Velikost skupiny</Czech>
             <French>Taille du groupe</French>
             <Spanish>Tamaño del grupo</Spanish>
@@ -129,6 +147,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_GroupSizeDesc">
             <English>Possible size of group ai can be generated with</English>
+            <Chinesesimp>AI 小组生成时的可能大小</Chinesesimp>
+            <Chinese>AI 小組生成時的可能大小</Chinese>
             <Czech>Možná velikost skupiny, se kterou může být AI vytvořena</Czech>
             <French>Taille possible du groupe d'IA généré</French>
             <Spanish>Posible tamaño del grupo de IA a generar</Spanish>
@@ -143,6 +163,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_MaxGroups">
             <English>Maximum groups</English>
+            <Chinesesimp>最大小组数</Chinesesimp>
+            <Chinese>最大小組數</Chinese>
             <Czech>Maximální počet skupin</Czech>
             <French>Nombre maximum de groupes</French>
             <Spanish>Máximo de grupos</Spanish>
@@ -157,6 +179,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_MaxGroupsDesc">
             <English>Maximum groups allowed to spawn</English>
+            <Chinesesimp>允许生成的最大小组数</Chinesesimp>
+            <Chinese>允許生成的最大小組數</Chinese>
             <Czech>Maximální povolený počet vytvořených skupin</Czech>
             <French>Nombre maximum de groupes autorisés à apparaître</French>
             <Spanish>Máximo de grupos permitidos para generar</Spanish>
@@ -171,6 +195,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_PrimaryWeapons">
             <English>Primary weapons</English>
+            <Chinesesimp>主武器</Chinesesimp>
+            <Chinese>主武器</Chinese>
             <Czech>Primární zbraně</Czech>
             <French>Armes principales</French>
             <Spanish>Armas principales</Spanish>
@@ -185,6 +211,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_PrimaryWeaponsDesc">
             <English>Possible primary weapons for ai</English>
+            <Chinesesimp>AI 可能使用的主武器</Chinesesimp>
+            <Chinese>AI 可能使用的主武器</Chinese>
             <Czech>Možné primární zbraně pro AI</Czech>
             <French>Armes principales possibles pour l'IA</French>
             <Spanish>Posibles armas principales para la IA</Spanish>
@@ -199,6 +227,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_SecondaryWeapons">
             <English>Secondary weapons</English>
+            <Chinesesimp>副武器</Chinesesimp>
+            <Chinese>副武器</Chinese>
             <Czech>Sekundární zbraně</Czech>
             <French>Armes secondaires</French>
             <Spanish>Armas secundarias</Spanish>
@@ -213,6 +243,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_SecondaryWeaponsDesc">
             <English>Possible secondary weapons for ai</English>
+            <Chinesesimp>AI 可能使用的副武器</Chinesesimp>
+            <Chinese>AI 可能使用的副武器</Chinese>
             <Czech>Možné sekundární zbraně pro AI</Czech>
             <French>Armes secondaires possibles pour l'IA</French>
             <Spanish>Posibles armas secundarias para la IA</Spanish>
@@ -227,6 +259,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_LauncherWeapons">
             <English>launcher weapons</English>
+            <Chinesesimp>发射器武器</Chinesesimp>
+            <Chinese>發射器武器</Chinese>
             <Czech>Odpalovací zařízení</Czech>
             <French>Lanceurs</French>
             <Spanish>Lanzadores</Spanish>
@@ -241,6 +275,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_LauncherWeaponsDesc">
             <English>Possible launcher weapons for ai</English>
+            <Chinesesimp>AI 可能使用的发射器武器</Chinesesimp>
+            <Chinese>AI 可能使用的發射器武器</Chinese>
             <Czech>Možná odpalovací zařízení pro AI</Czech>
             <French>Lanceurs possibles pour l'IA</French>
             <Spanish>Posibles lanzadores para la IA</Spanish>
@@ -255,6 +291,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_AmmoCount">
             <English>Ammo count</English>
+            <Chinesesimp>弹药数量</Chinesesimp>
+            <Chinese>彈藥數量</Chinese>
             <Czech>Počet munice</Czech>
             <French>Quantité de munitions</French>
             <Spanish>Cantidad de munición</Spanish>
@@ -269,6 +307,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_AmmoCountDesc">
             <English>Ammo count for ai (randomly selected)</English>
+            <Chinesesimp>AI 的弹药数量 (随机选择)</Chinesesimp>
+            <Chinese>AI 的彈藥數量 (隨機選擇)</Chinese>
             <Czech>Počet munice pro AI (náhodně vybráno)</Czech>
             <French>Quantité de munitions pour l'IA (choisie au hasard)</French>
             <Spanish>Cantidad de munición para la IA (seleccionada al azar)</Spanish>
@@ -283,6 +323,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_Items">
             <English>Items</English>
+            <Chinesesimp>物品</Chinesesimp>
+            <Chinese>物品</Chinese>
             <Czech>Předměty</Czech>
             <French>Objets</French>
             <Spanish>Objetos</Spanish>
@@ -297,6 +339,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_ItemsDesc">
             <English>Possible item loot for ai</English>
+            <Chinesesimp>AI 可能掉落的物品</Chinesesimp>
+            <Chinese>AI 可能掉落的物品</Chinese>
             <Czech>Možná kořist předmětů pro AI</Czech>
             <French>Butin d'objets possible pour l'IA</French>
             <Spanish>Posibles objetos de botín para la IA</Spanish>
@@ -311,6 +355,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_NVGs">
             <English>NVGs</English>
+            <Chinesesimp>夜视仪</Chinesesimp>
+            <Chinese>夜視儀</Chinese>
             <Czech>Noktovizory</Czech>
             <French>Vision nocturne</French>
             <Spanish>Visores nocturnos</Spanish>
@@ -325,6 +371,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_NVGsDesc">
             <English>Possible night vision for ai</English>
+            <Chinesesimp>AI 可能使用的夜视仪</Chinesesimp>
+            <Chinese>AI 可能使用的夜視儀</Chinese>
             <Czech>Možné noktovizory pro AI</Czech>
             <French>Vision nocturne possible pour l'IA</French>
             <Spanish>Posibles visores nocturnos para la IA</Spanish>
@@ -339,6 +387,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_Facewear">
             <English>Facewear</English>
+            <Chinesesimp>面部装备</Chinesesimp>
+            <Chinese>面部裝備</Chinese>
             <Czech>Doplňky obličeje</Czech>
             <French>Accessoires de visage</French>
             <Spanish>Accesorios faciales</Spanish>
@@ -353,6 +403,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_FacewearDesc">
             <English>Possible facewear for ai</English>
+            <Chinesesimp>AI 可能使用的面部装备</Chinesesimp>
+            <Chinese>AI 可能使用的面部裝備</Chinese>
             <Czech>Možné doplňky obličeje pro AI</Czech>
             <French>Accessoires de visage possibles pour l'IA</French>
             <Spanish>Posibles accesorios faciales para la IA</Spanish>
@@ -367,6 +419,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_Headgear">
             <English>Headgear</English>
+            <Chinesesimp>头部装备</Chinesesimp>
+            <Chinese>頭部裝備</Chinese>
             <Czech>Pokrývka hlavy</Czech>
             <French>Casques et chapeaux</French>
             <Spanish>Cascos/Sombreros</Spanish>
@@ -381,6 +435,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_HeadgearDesc">
             <English>Possible headgear for ai</English>
+            <Chinesesimp>AI 可能使用的头部装备</Chinesesimp>
+            <Chinese>AI 可能使用的頭部裝備</Chinese>
             <Czech>Možné pokrývky hlavy pro AI</Czech>
             <French>Casques possibles pour l'IA</French>
             <Spanish>Posibles cascos para la IA</Spanish>
@@ -395,6 +451,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_Uniform">
             <English>Uniform</English>
+            <Chinesesimp>制服</Chinesesimp>
+            <Chinese>制服</Chinese>
             <Czech>Uniforma</Czech>
             <French>Uniforme</French>
             <Spanish>Uniforme</Spanish>
@@ -409,6 +467,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_UniformDesc">
             <English>Possible uniforms for ai</English>
+            <Chinesesimp>AI 可能使用的制服</Chinesesimp>
+            <Chinese>AI 可能使用的制服</Chinese>
             <Czech>Možné uniformy pro AI</Czech>
             <French>Uniformes possibles pour l'IA</French>
             <Spanish>Posibles uniformes para la IA</Spanish>
@@ -423,6 +483,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_Vest">
             <English>Vest</English>
+            <Chinesesimp>背心</Chinesesimp>
+            <Chinese>背心</Chinese>
             <Czech>Vesta</Czech>
             <French>Gilet</French>
             <Spanish>Chaleco</Spanish>
@@ -437,6 +499,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_VestDesc">
             <English>Possible vests for ai</English>
+            <Chinesesimp>AI 可能使用的背心</Chinesesimp>
+            <Chinese>AI 可能使用的背心</Chinese>
             <Czech>Možné vesty pro AI</Czech>
             <French>Gilets possibles pour l'IA</French>
             <Spanish>Posibles chalecos para la IA</Spanish>
@@ -451,6 +515,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_Backpack">
             <English>Backpack</English>
+            <Chinesesimp>背包</Chinesesimp>
+            <Chinese>背包</Chinese>
             <Czech>Batoh</Czech>
             <French>Sac à dos</French>
             <Spanish>Mochila</Spanish>
@@ -465,6 +531,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_BackpackDesc">
             <English>Possible backpacks for ai</English>
+            <Chinesesimp>AI 可能使用的背包</Chinesesimp>
+            <Chinese>AI 可能使用的背包</Chinese>
             <Czech>Možné batohy pro AI</Czech>
             <French>Sacs à dos possibles pour l'IA</French>
             <Spanish>Posibles mochilas para la IA</Spanish>
@@ -479,6 +547,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_Accuracy">
             <English>Accuracy</English>
+            <Chinesesimp>准确度</Chinesesimp>
+            <Chinese>準確度</Chinese>
             <Czech>Přesnost</Czech>
             <French>Précision</French>
             <Spanish>Precisión</Spanish>
@@ -493,6 +563,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_AimingAccuracy">
             <English>Aiming accuracy</English>
+            <Chinesesimp>瞄准准确度</Chinesesimp>
+            <Chinese>瞄準準確度</Chinese>
             <Czech>Přesnost míření</Czech>
             <French>Précision de visée</French>
             <Spanish>Precisión de apuntado</Spanish>
@@ -507,6 +579,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_Shake">
             <English>Shake</English>
+            <Chinesesimp>抖动</Chinesesimp>
+            <Chinese>抖動</Chinese>
             <Czech>Třes</Czech>
             <French>Tremblement</French>
             <Spanish>Temblor</Spanish>
@@ -521,6 +595,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_AimingShake">
             <English>Aiming shake</English>
+            <Chinesesimp>瞄准抖动</Chinesesimp>
+            <Chinese>瞄準抖動</Chinese>
             <Czech>Třes při míření</Czech>
             <French>Tremblement de visée</French>
             <Spanish>Temblor al apuntar</Spanish>
@@ -535,6 +611,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_Speed">
             <English>Speed</English>
+            <Chinesesimp>速度</Chinesesimp>
+            <Chinese>速度</Chinese>
             <Czech>Rychlost</Czech>
             <French>Vitesse</French>
             <Spanish>Velocidad</Spanish>
@@ -549,6 +627,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_AimingSpeed">
             <English>Aiming speed</English>
+            <Chinesesimp>瞄准速度</Chinesesimp>
+            <Chinese>瞄準速度</Chinese>
             <Czech>Rychlost míření</Czech>
             <French>Vitesse de visée</French>
             <Spanish>Velocidad de apuntado</Spanish>
@@ -563,6 +643,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_SpawnChance">
             <English>Spawn Chance</English>
+            <Chinesesimp>生成概率</Chinesesimp>
+            <Chinese>生成概率</Chinese>
             <Czech>Šance na vytvoření</Czech>
             <French>Chance d'apparition</French>
             <Spanish>Probabilidad de aparición</Spanish>
@@ -577,6 +659,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_SpawnChanceDesc">
             <English>% chance to generate ai group</English>
+            <Chinesesimp>生成 AI 小组的百分比概率</Chinesesimp>
+            <Chinese>生成 AI 小組的百分比概率</Chinese>
             <Czech>% šance na vytvoření skupiny AI</Czech>
             <French>% de chance de générer un groupe d'IA</French>
             <Spanish>% de probabilidad de generar un grupo de IA</Spanish>
@@ -591,6 +675,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_MinDist">
             <English>Minimum Distance</English>
+            <Chinesesimp>最小距离</Chinesesimp>
+            <Chinese>最小距離</Chinese>
             <Czech>Minimální vzdálenost</Czech>
             <French>Distance minimale</French>
             <Spanish>Distancia mínima</Spanish>
@@ -605,6 +691,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_MinDistDesc">
             <English>Minimum distance ai groups can spawn from players</English>
+            <Chinesesimp>AI 小组在玩家附近的最小生成距离</Chinesesimp>
+            <Chinese>AI 小組在玩家附近的最小生成距離</Chinese>
             <Czech>Minimální vzdálenost, ve které se mohou skupiny AI vytvořit od hráčů</Czech>
             <French>Distance minimale à laquelle les groupes d'IA peuvent apparaître par rapport aux joueurs</French>
             <Spanish>Distancia mínima a la que los grupos de IA pueden aparecer de los jugadores</Spanish>
@@ -619,6 +707,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_MaxDist">
             <English>Maximum Distance</English>
+            <Chinesesimp>最大距离</Chinesesimp>
+            <Chinese>最大距離</Chinese>
             <Czech>Maximální vzdálenost</Czech>
             <French>Distance maximale</French>
             <Spanish>Distancia máxima</Spanish>
@@ -633,6 +723,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_MaxDistDesc">
             <English>Maximum distance ai groups can spawn from players</English>
+            <Chinesesimp>AI 小组在玩家附近的最大生成距离</Chinesesimp>
+            <Chinese>AI 小組在玩家附近的最大生成距離</Chinese>
             <Czech>Maximální vzdálenost, ve které se mohou skupiny AI vytvořit od hráčů</Czech>
             <French>Distance maximale à laquelle les groupes d'IA peuvent apparaître par rapport aux joueurs</French>
             <Spanish>Distancia máxima a la que los grupos de IA pueden aparecer de los jugadores</Spanish>
@@ -647,6 +739,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_SafeDist">
             <English>Safe distance</English>
+            <Chinesesimp>安全距离</Chinesesimp>
+            <Chinese>安全距離</Chinese>
             <Czech>Bezpečná vzdálenost</Czech>
             <French>Distance de sécurité</French>
             <Spanish>Distancia de seguridad</Spanish>
@@ -661,6 +755,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_SafeDistDesc">
             <English>Minimum distance at which ai can spawn from other players</English>
+            <Chinesesimp>AI 在其他玩家附近的最小生成距离</Chinesesimp>
+            <Chinese>AI 在其他玩家附近的最小生成距離</Chinese>
             <Czech>Minimální vzdálenost, ve které se AI může vytvořit od ostatních hráčů</Czech>
             <French>Distance minimale à laquelle l'IA peut apparaître par rapport aux autres joueurs</French>
             <Spanish>Distancia mínima a la que la IA puede aparecer de otros jugadores</Spanish>
@@ -675,6 +771,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_DeletionDist">
             <English>Deletion distance</English>
+            <Chinesesimp>删除距离</Chinesesimp>
+            <Chinese>刪除距離</Chinese>
             <Czech>Vzdálenost pro smazání</Czech>
             <French>Distance de suppression</French>
             <Spanish>Distancia de eliminación</Spanish>
@@ -689,6 +787,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_DeletionDistDesc">
             <English>Distance from players at which ai will be deleted</English>
+            <Chinesesimp>远离玩家后 AI 被删除的距离</Chinesesimp>
+            <Chinese>遠離玩家後 AI 被刪除的距離</Chinese>
             <Czech>Vzdálenost od hráčů, při které bude AI smazána</Czech>
             <French>Distance par rapport aux joueurs à laquelle l'IA sera supprimée</French>
             <Spanish>Distancia de los jugadores a la que se eliminará la IA</Spanish>
@@ -703,6 +803,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_CheckInterval">
             <English>Spawn check interval</English>
+            <Chinesesimp>生成检查间隔</Chinesesimp>
+            <Chinese>生成檢查間隔</Chinese>
             <Czech>Interval kontroly vytváření</Czech>
             <French>Intervalle de vérification d'apparition</French>
             <Spanish>Intervalo de comprobación de aparición</Spanish>
@@ -717,6 +819,8 @@
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_CheckIntervalDesc">
             <English>Time in seconds between spawn checks</English>
+            <Chinesesimp>生成检查之间的时间间隔 (秒)</Chinesesimp>
+            <Chinese>生成檢查之間的時間間隔 (秒)</Chinese>
             <Czech>Čas v sekundách mezi kontrolami vytvoření</Czech>
             <French>Temps en secondes entre les vérifications d'apparition</French>
             <Spanish>Tiempo en segundos entre comprobaciones de aparición</Spanish>

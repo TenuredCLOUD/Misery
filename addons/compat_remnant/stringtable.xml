@@ -3,6 +3,8 @@
     <Package name="Compat_Remnant">
         <Key ID="STR_MISERY_Compat_Remnant_Drops">
             <English>Artifact drops</English>
+            <Chinesesimp>神器掉落</Chinesesimp>
+            <Chinese>神器掉落</Chinese>
             <Czech>Padání artefaktů</Czech>
             <French>Butin d'artéfacts</French>
             <Spanish>Botín de artefactos</Spanish>
@@ -17,6 +19,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_Remnant_DropsDesc">
             <English>Allow Phantoms to drop artifacts?</English>
+            <Chinesesimp>允许幽灵掉落神器？</Chinesesimp>
+            <Chinese>允許幽靈掉落神器？</Chinese>
             <Czech>Povolit fantomům upouštět artefakty?</Czech>
             <French>Autoriser les Fantômes à lâcher des artéfacts ?</French>
             <Spanish>¿Permitir que los Fantasmas suelten artefactos?</Spanish>
@@ -31,6 +35,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_Remnant_DropChance">
             <English>Artifact drop chance</English>
+            <Chinesesimp>神器掉落概率</Chinesesimp>
+            <Chinese>神器掉落概率</Chinese>
             <Czech>Šance na vypadnutí artefaktu</Czech>
             <French>Chance de butin d'artéfact</French>
             <Spanish>Probabilidad de botín de artefacto</Spanish>
@@ -45,6 +51,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_Remnant_DropChanceDesc">
             <English>% chance per phantom kill to drop an artifact</English>
+            <Chinesesimp>每次击杀幽灵时掉落神器的百分比概率</Chinesesimp>
+            <Chinese>每次擊殺幽靈時掉落神器的百分比概率</Chinese>
             <Czech>% šance na vypadnutí artefaktu při zabití fantoma</Czech>
             <French>% de chance de trouver un artéfact par fantôme tué</French>
             <Spanish>% de probabilidad por cada fantasma muerto de soltar un artefacto</Spanish>

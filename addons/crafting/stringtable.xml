@@ -3,6 +3,8 @@
     <Package name="Crafting">
         <Key ID="STR_MISERY_Crafting_Action">
             <English>Use Workbench</English>
+            <Chinesesimp>使用工作台</Chinesesimp>
+            <Chinese>使用工作台</Chinese>
             <Czech>Použití pracovního stolu</Czech>
             <French>Utiliser l'atelier</French>
             <Spanish>Utilizar Workbench</Spanish>
@@ -17,6 +19,8 @@
         </Key>
         <Key ID="STR_MISERY_Crafting_Interrupted">
             <English>Crafting interrupted...</English>
+            <Chinesesimp>制作已中断...</Chinesesimp>
+            <Chinese>製作已中斷...</Chinese>
             <Czech>Výroba přerušena...</Czech>
             <French>Artisanat interrompu...</French>
             <Spanish>Artesanía interrumpida...</Spanish>
@@ -31,6 +35,8 @@
         </Key>
         <Key ID="STR_MISERY_Crafting_Progress">
             <English>Crafting %1... %2%3 complete</English>
+            <Chinesesimp>正在制作 %1... %2%3 已完成</Chinesesimp>
+            <Chinese>正在製作 %1... %2%3 已完成</Chinese>
             <Czech>Vyrábění %1... %2%3 hotovo</Czech>
             <French>Fabrication de %1... %2%3 terminé</French>
             <Spanish>Fabricando %1... %2%3 completado</Spanish>
@@ -45,6 +51,8 @@
         </Key>
         <Key ID="STR_MISERY_Crafting_GainXP">
             <English>You gained %1 XP from crafting %2.</English>
+            <Chinesesimp>你通过制作 %2 获得了 %1 经验值。</Chinesesimp>
+            <Chinese>你通過製作 %2 獲得了 %1 經驗值。</Chinese>
             <Czech>Získali jste %1 zkušeností za výrobu %2.</Czech>
             <French>Vous avez gagné %1 XP en fabriquant %2.</French>
             <Spanish>Has ganado %1 XP al fabricar %2.</Spanish>
@@ -59,6 +67,8 @@
         </Key>
         <Key ID="STR_MISERY_Crafting_Success">
             <English>You crafted %1 %2!</English>
+            <Chinesesimp>你制作了 %1 个 %2！</Chinesesimp>
+            <Chinese>你製作了 %1 個 %2！</Chinese>
             <Czech>Vyrobil jste %1 %2!</Czech>
             <French>Vous avez fabriqué %1 %2 !</French>
             <Spanish>¡Has fabricado %1 %2!</Spanish>
@@ -73,6 +83,8 @@
         </Key>
         <Key ID="STR_MISERY_Crafting_Required">
             <English>Required Items:</English>
+            <Chinesesimp>所需物品:</Chinesesimp>
+            <Chinese>所需物品:</Chinese>
             <Czech>Požadované položky:</Czech>
             <French>Objets requis :</French>
             <Spanish>Objetos requeridos:</Spanish>

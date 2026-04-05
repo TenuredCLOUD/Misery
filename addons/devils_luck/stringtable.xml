@@ -3,6 +3,8 @@
     <Package name="Devils_Luck">
         <Key ID="STR_MISERY_Devils_Luck_PlayDevilsLuck">
             <English>Play Devil's Luck</English>
+            <Chinesesimp>玩“恶魔的运气”</Chinesesimp>
+            <Chinese>玩“惡魔的運氣”</Chinese>
             <Czech>Hrát Ďáblovo štěstí</Czech>
             <French>Jouer à la Chance du Diable</French>
             <Spanish>Jugar a la Suerte del diablo</Spanish>
@@ -17,6 +19,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_DevilsLuck">
             <English>Devil's Luck</English>
+            <Chinesesimp>恶魔的运气</Chinesesimp>
+            <Chinese>惡魔的運氣</Chinese>
             <Czech>Ďáblovo štěstí</Czech>
             <French>Chance du Diable</French>
             <Spanish>Suerte del diablo</Spanish>
@@ -31,6 +35,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_PlaceBet">
             <English>Place Bet</English>
+            <Chinesesimp>下注</Chinesesimp>
+            <Chinese>下注</Chinese>
             <Czech>Vsadit</Czech>
             <French>Parier</French>
             <Spanish>Apostar</Spanish>
@@ -45,6 +51,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_PredictHigher">
             <English>Predict Higher</English>
+            <Chinesesimp>预测更高</Chinesesimp>
+            <Chinese>預測更高</Chinese>
             <Czech>Tipovat vyšší</Czech>
             <French>Prédire plus haut</French>
             <Spanish>Predecir mayor</Spanish>
@@ -59,6 +67,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_PredictLower">
             <English>Predict Lower</English>
+            <Chinesesimp>预测更低</Chinesesimp>
+            <Chinese>預測更低</Chinese>
             <Czech>Tipovat nižší</Czech>
             <French>Prédire plus bas</French>
             <Spanish>Predecir menor</Spanish>
@@ -73,6 +83,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_Roll">
             <English>ROLL</English>
+            <Chinesesimp>摇骰</Chinesesimp>
+            <Chinese>搖骰</Chinese>
             <Czech>HODIT</Czech>
             <French>LANCER</French>
             <Spanish>TIRAR</Spanish>
@@ -87,6 +99,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_Rules">
             <English>Rules</English>
+            <Chinesesimp>规则</Chinesesimp>
+            <Chinese>規則</Chinese>
             <Czech>Pravidla</Czech>
             <French>Règles</French>
             <Spanish>Reglas</Spanish>
@@ -101,6 +115,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_LeaveGame">
             <English>Leave Game</English>
+            <Chinesesimp>离开游戏</Chinesesimp>
+            <Chinese>離開遊戲</Chinese>
             <Czech>Opustit hru</Czech>
             <French>Quitter le jeu</French>
             <Spanish>Salir del juego</Spanish>
@@ -115,6 +131,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_PlaceYourBets">
             <English>Place your bets...</English>
+            <Chinesesimp>请下注...</Chinesesimp>
+            <Chinese>請下注...</Chinese>
             <Czech>Vsaďte si...</Czech>
             <French>Faites vos jeux...</French>
             <Spanish>Hagan sus apuestas...</Spanish>
@@ -129,6 +147,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_CurrentBetPrompt">
             <English>Current Bet: 0</English>
+            <Chinesesimp>当前下注: 0</Chinesesimp>
+            <Chinese>當前下注: 0</Chinese>
             <Czech>Aktuální sázka: 0</Czech>
             <French>Pari actuel : 0</French>
             <Spanish>Apuesta actual: 0</Spanish>
@@ -143,6 +163,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_PredictionNone">
             <English>Prediction: NONE</English>
+            <Chinesesimp>预测: 无</Chinesesimp>
+            <Chinese>預測: 無</Chinese>
             <Czech>Tip: ŽÁDNÝ</Czech>
             <French>Prédiction : AUCUNE</French>
             <Spanish>Predicción: NINGUNA</Spanish>
@@ -157,6 +179,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_DealerNoFunds">
             <English>This dealer has no more funds... Come back later...</English>
+            <Chinesesimp>这位荷官没有更多资金了... 请稍后再来...</Chinesesimp>
+            <Chinese>這位荷官沒有更多資金了... 請稍後再來...</Chinese>
             <Czech>Tento krupiér již nemá peníze... Přijďte později...</Czech>
             <French>Ce croupier n'a plus de fonds... Revenez plus tard...</French>
             <Spanish>Este crupier no tiene más fondos... Vuelve más tarde...</Spanish>
@@ -171,6 +195,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_NeedToBet">
             <English>You need to bet something...</English>
+            <Chinesesimp>你需要下点注...</Chinesesimp>
+            <Chinese>你需要下點注...</Chinese>
             <Czech>Musíte něco vsadit...</Czech>
             <French>Vous devez parier quelque chose...</French>
             <Spanish>Tienes que apostar algo...</Spanish>
@@ -185,6 +211,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_PickHigherLower">
             <English>Pick Higher or Lower...</English>
+            <Chinesesimp>选择更高或更低...</Chinesesimp>
+            <Chinese>選擇更高或更低...</Chinese>
             <Czech>Vyberte vyšší nebo nižší...</Czech>
             <French>Choisissez plus haut ou plus bas...</French>
             <Spanish>Elige mayor o menor...</Spanish>
@@ -199,6 +227,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_NoFundsToWager">
             <English>You don't have the funds to wager that bet...</English>
+            <Chinesesimp>你没有足够的资金进行那次下注...</Chinesesimp>
+            <Chinese>你沒有足夠的資金進行那次下注...</Chinese>
             <Czech>Nemáte dostatek prostředků na tuto sázku...</Czech>
             <French>Vous n'avez pas les fonds nécessaires pour ce pari...</French>
             <Spanish>No tienes fondos para realizar esa apuesta...</Spanish>
@@ -213,6 +243,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_WinnerGained">
             <English>Winner! You gained</English>
+            <Chinesesimp>赢了！你获得了</Chinesesimp>
+            <Chinese>贏了！你獲得了</Chinese>
             <Czech>Vítěz! Získali jste</Czech>
             <French>Gagné ! Vous avez gagné</French>
             <Spanish>¡Ganador! Has ganado</Spanish>
@@ -227,6 +259,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_DealerBroke">
             <English>(This dealer is broke!)</English>
+            <Chinesesimp>(这位荷官破产了！)</Chinesesimp>
+            <Chinese>(這位荷官破產了！)</Chinese>
             <Czech>(Tento krupiér je na mizině!)</Czech>
             <French>(Ce croupier est fauché !)</French>
             <Spanish>(¡Este crupier está en la quiebra!)</Spanish>
@@ -241,6 +275,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_BetterLuckNextTime">
             <English>Better luck next time...</English>
+            <Chinesesimp>下次好运...</Chinesesimp>
+            <Chinese>下次好運...</Chinese>
             <Czech>Příště více štěstí...</Czech>
             <French>Plus de chance la prochaine fois...</French>
             <Spanish>Más suerte la próxima vez...</Spanish>
@@ -255,6 +291,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_TieHouseWins">
             <English>Tie! The House always wins...</English>
+            <Chinesesimp>平局！庄家总是赢家...</Chinesesimp>
+            <Chinese>平局！莊家總是贏家...</Chinese>
             <Czech>Remíza! Kasino vždy vyhrává...</Czech>
             <French>Égalité ! La maison gagne toujours...</French>
             <Spanish>¡Empate! La casa siempre gana...</Spanish>
@@ -269,6 +307,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_YouLost">
             <English>You lost</English>
+            <Chinesesimp>你输了</Chinesesimp>
+            <Chinese>你輸了</Chinese>
             <Czech>Prohráli jste</Czech>
             <French>Vous avez perdu</French>
             <Spanish>Has perdido</Spanish>
@@ -283,6 +323,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_DealerLabel">
             <English>Dealer:</English>
+            <Chinesesimp>荷官:</Chinesesimp>
+            <Chinese>荷官:</Chinese>
             <Czech>Krupiér:</Czech>
             <French>Croupier :</French>
             <Spanish>Crupier:</Spanish>
@@ -297,6 +339,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_RulesTitle">
             <English>DEVIL'S LUCK</English>
+            <Chinesesimp>恶魔的运气</Chinesesimp>
+            <Chinese>惡魔的運氣</Chinese>
             <Czech>ĎÁBLOVO ŠTĚSTÍ</Czech>
             <French>CHANCE DU DIABLE</French>
             <Spanish>SUERTE DEL DIABLO</Spanish>
@@ -311,6 +355,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_Rule1_Title">
             <English>The Setup:</English>
+            <Chinesesimp>准备:</Chinesesimp>
+            <Chinese>準備:</Chinese>
             <Czech>Příprava:</Czech>
             <French>La mise en place :</French>
             <Spanish>Configuración:</Spanish>
@@ -325,6 +371,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_Rule1_Desc">
             <English>The game begins with a total of 7.</English>
+            <Chinesesimp>游戏开始时的总数为 7。</Chinesesimp>
+            <Chinese>遊戲開始時的總數為 7。</Chinese>
             <Czech>Hra začíná se součtem 7.</Czech>
             <French>Le jeu commence avec un total de 7.</French>
             <Spanish>El juego comienza con un total de 7.</Spanish>
@@ -339,6 +387,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_Rule2_Title">
             <English>Your Bet:</English>
+            <Chinesesimp>你的下注:</Chinesesimp>
+            <Chinese>你的下注:</Chinese>
             <Czech>Sázka:</Czech>
             <French>Votre pari :</French>
             <Spanish>Tu apuesta:</Spanish>
@@ -353,6 +403,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_Rule2_Desc">
             <English>Enter your bet in the edit box, funds are deducted or rewarded instantly upon rolling.</English>
+            <Chinesesimp>在输入框中输入你的赌注，摇骰后资金会立即扣除或发放。</Chinesesimp>
+            <Chinese>在輸入框中輸入你的賭注，搖骰後資金會立即扣除或發放。</Chinese>
             <Czech>Zadejte sázku do pole, prostředky jsou odečteny nebo připsány ihned po hodu.</Czech>
             <French>Entrez votre pari dans la case, les fonds sont déduits ou crédités instantanément après le lancer.</French>
             <Spanish>Introduce tu apuesta, los fondos se deducen o premian al instante al tirar.</Spanish>
@@ -367,6 +419,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_Rule3_Title">
             <English>The Goal:</English>
+            <Chinesesimp>目标:</Chinesesimp>
+            <Chinese>目標:</Chinese>
             <Czech>Cíl:</Czech>
             <French>L'objectif :</French>
             <Spanish>El objetivo:</Spanish>
@@ -381,6 +435,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_Rule3_Desc">
             <English>Predict if the sum of two 6-sided dice will be HIGHER or LOWER than the current total.</English>
+            <Chinesesimp>预测两个 6 面骰子的总和会比当前总数更高还是更低。</Chinesesimp>
+            <Chinese>預測兩個 6 面骰子的總和會比當前總數更高還是更低。</Chinese>
             <Czech>Předpovězte, zda bude součet dvou šestistěnných kostek VYŠŠÍ nebo NIŽŠÍ než aktuální hodnota.</Czech>
             <French>Prédisez si la somme de deux dés à 6 faces sera SUPÉRIEURE ou INFÉRIEURE au total actuel.</French>
             <Spanish>Predice si la suma de dos dados de 6 caras será MAYOR o MENOR que el total actual.</Spanish>
@@ -395,6 +451,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_Rule4_Title">
             <English>The House Edge:</English>
+            <Chinesesimp>庄家优势:</Chinesesimp>
+            <Chinese>莊家優勢:</Chinese>
             <Czech>Výhoda kasina:</Czech>
             <French>L'avantage de la maison :</French>
             <Spanish>Ventaja de la casa:</Spanish>
@@ -409,6 +467,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_Rule4_Desc">
             <English>If the new roll is EQUAL to the current total, you lose immediately. The House always wins.</English>
+            <Chinesesimp>如果新摇出的总数等于当前总数，你立即输掉比赛。庄家总是赢家。</Chinesesimp>
+            <Chinese>如果新搖出的總數等於當前總數，你立即輸掉比賽。莊家總是贏家。</Chinese>
             <Czech>Pokud je nový hod ROVEN aktuálnímu součtu, okamžitě prohráváte. Kasino vždy vyhrává.</Czech>
             <French>Si le nouveau lancer est ÉGAL au total actuel, vous perdez immédiatement. La maison gagne toujours.</French>
             <Spanish>Si la nueva tirada es IGUAL al total actual, pierdes inmediatamente. La casa siempre gana.</Spanish>
@@ -423,6 +483,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_Rule5_Title">
             <English>Limits:</English>
+            <Chinesesimp>限制:</Chinesesimp>
+            <Chinese>限制:</Chinese>
             <Czech>Limity:</Czech>
             <French>Limites :</French>
             <Spanish>Límites:</Spanish>
@@ -437,6 +499,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_Rule5_Desc">
             <English>Every Game Master has limited funds, if you bleed them dry, the game ends.</English>
+            <Chinesesimp>每位游戏主管都有有限的资金，如果你把他们榨干，游戏就会结束。</Chinesesimp>
+            <Chinese>每位遊戲主管都有有限的資金，如果你把他們榨乾，遊戲就會結束。</Chinese>
             <Czech>Každý krupiér má omezené prostředky, pokud ho oberete o vše, hra končí.</Czech>
             <French>Chaque maître de jeu a des fonds limités. Si vous le videz de son argent, le jeu s'arrête.</French>
             <Spanish>Cada director de juego tiene fondos limitados; si lo dejas seco, el juego termina.</Spanish>
@@ -451,6 +515,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_ProTip_Body">
             <English>Pro Tip: Probabilities shift toward the middle (7). A 2 or 12 is your best chance to strike...</English>
+            <Chinesesimp>专业提示: 概率向中间 (7) 偏移。2 或 12 是你出击的最佳机会...</Chinesesimp>
+            <Chinese>專業提示: 概率向中間 (7) 偏移。2 或 12 是你出擊的最佳機會...</Chinese>
             <Czech>Tip: Pravděpodobnost se přiklání ke středu (7). 2 nebo 12 je vaše nejlepší šance na úspěch...</Czech>
             <French>Conseil d'expert : Les probabilités tendent vers le milieu (7). Un 2 ou un 12 est votre meilleure chance de gagner gros...</French>
             <Spanish>Consejo: Las probabilidades se inclinan hacia el centro (7). Un 2 o un 12 es tu mejor oportunidad para ganar...</Spanish>
@@ -465,6 +531,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_Lower">
             <English>LOWER</English>
+            <Chinesesimp>更低</Chinesesimp>
+            <Chinese>更低</Chinese>
             <Czech>NIŽŠÍ</Czech>
             <French>PLUS BAS</French>
             <Spanish>MENOR</Spanish>
@@ -479,6 +547,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_Higher">
             <English>HIGHER</English>
+            <Chinesesimp>更高</Chinesesimp>
+            <Chinese>更高</Chinese>
             <Czech>VYŠŠÍ</Czech>
             <French>PLUS HAUT</French>
             <Spanish>MAYOR</Spanish>
@@ -493,6 +563,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_PredictionLabel">
             <English>Prediction:</English>
+            <Chinesesimp>预测:</Chinesesimp>
+            <Chinese>預測:</Chinese>
             <Czech>Předpověď:</Czech>
             <French>Prédiction :</French>
             <Spanish>Predicción:</Spanish>
@@ -507,6 +579,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_CurrentBetLabel">
             <English>Current Bet:</English>
+            <Chinesesimp>当前下注:</Chinesesimp>
+            <Chinese>當前下注:</Chinese>
             <Czech>Aktuální sázka:</Czech>
             <French>Pari actuel :</French>
             <Spanish>Apuesta actual:</Spanish>
@@ -521,6 +595,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_DistanceCheck">
             <English>Distance check</English>
+            <Chinesesimp>距离检查</Chinesesimp>
+            <Chinese>距離檢查</Chinese>
             <Czech>Kontrola vzdálenosti</Czech>
             <French>Vérification de distance</French>
             <Spanish>Comprobación de distancia</Spanish>
@@ -535,6 +611,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_DistanceCheckDesc">
             <English>Distance that the dealer manager checks for players near dealers in meters</English>
+            <Chinesesimp>荷官管理器检查荷官附近玩家的距离（以米为单位）</Chinesesimp>
+            <Chinese>荷官管理器檢查荷官附近玩家的距離（以米為單位）</Chinese>
             <Czech>Vzdálenost v metrech, ve které správce dealerů kontroluje přítomnost hráčů</Czech>
             <French>Distance en mètres à laquelle le gestionnaire des dealers vérifie la présence de joueurs</French>
             <Spanish>Distancia en metros a la que el administrador de traficantes busca jugadores cerca</Spanish>
@@ -549,6 +627,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_Cycle">
             <English>Changing cycle 'Dynamic AI gambling'</English>
+            <Chinesesimp>更改周期“动态 AI 赌博”</Chinesesimp>
+            <Chinese>更改週期“動態 AI 賭博”</Chinese>
             <Czech>Cyklus změny 'Dynamické AI hazardní hry'</Czech>
             <French>Cycle de changement 'Jeux d'argent IA dynamiques'</French>
             <Spanish>Ciclo de cambio 'Juego de azar dinámico de IA'</Spanish>
@@ -563,6 +643,8 @@
         </Key>
         <Key ID="STR_MISERY_Devils_Luck_CycleDesc">
             <English>Time in seconds per cycle (default: 1800 - 30 minutes)</English>
+            <Chinesesimp>每个周期的秒数 (默认: 1800 - 30 分钟)</Chinesesimp>
+            <Chinese>每個週期的秒數 (默認: 1800 - 30 分鐘)</Chinese>
             <Czech>Čas v sekundách na cyklus (výchozí: 1800 - 30 minut)</Czech>
             <French>Temps en secondes par cycle (par défaut : 1800 - 30 minutes)</French>
             <Spanish>Tiempo en segundos por ciclo (por defecto: 1800 - 30 minutos)</Spanish>

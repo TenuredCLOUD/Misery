@@ -3,6 +3,8 @@
     <Package name="Fire">
         <Key ID="STR_MISERY_Fire_BurnTime">
             <English>Burn Time: %1(s)</English>
+            <Chinesesimp>燃烧时间: %1(秒)</Chinesesimp>
+            <Chinese>燃燒時間: %1(秒)</Chinese>
             <Czech>Doba hoření: %1 s</Czech>
             <French>Temps de combustion : %1(s)</French>
             <Spanish>Tiempo de combustión: %1(s)</Spanish>
@@ -17,6 +19,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_SelectTinder">
             <English>Select tinder source...</English>
+            <Chinesesimp>选择引火物...</Chinesesimp>
+            <Chinese>選擇引火物...</Chinese>
             <Czech>Vyberte troud...</Czech>
             <French>Sélectionner l'amadou...</French>
             <Spanish>Seleccionar yesca...</Spanish>
@@ -31,6 +35,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_SelectIgnition">
             <English>Select ignition source...</English>
+            <Chinesesimp>选择点火源...</Chinesesimp>
+            <Chinese>選擇點火源...</Chinese>
             <Czech>Vyberte zdroj zapálení...</Czech>
             <French>Sélectionner la source d'allumage...</French>
             <Spanish>Seleccionar fuente de ignición...</Spanish>
@@ -45,6 +51,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_SelectFuel">
             <English>Select fuel for new fire...</English>
+            <Chinesesimp>选择新火堆的燃料...</Chinesesimp>
+            <Chinese>選擇新火堆的燃料...</Chinese>
             <Czech>Vyberte palivo pro nový oheň...</Czech>
             <French>Sélectionner le combustible...</French>
             <Spanish>Seleccionar combustible para el fuego...</Spanish>
@@ -59,6 +67,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_InvalidFuel">
             <English>Invalid fuel for new fire...</English>
+            <Chinesesimp>新火堆燃料无效...</Chinesesimp>
+            <Chinese>新火堆燃料無效...</Chinese>
             <Czech>Neplatné palivo pro nový oheň...</Czech>
             <French>Combustible invalide pour un nouveau feu...</French>
             <Spanish>Combustible no válido para el fuego...</Spanish>
@@ -73,6 +83,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_RefuelFirewood">
             <English>Use firewood to refuel this fire...</English>
+            <Chinesesimp>使用柴火为火堆补充燃料...</Chinesesimp>
+            <Chinese>使用柴火為火堆補充燃料...</Chinese>
             <Czech>Použijte palivové dříví k doplnění ohně...</Czech>
             <French>Utilisez du bois pour raviver ce feu...</French>
             <Spanish>Usa leña para alimentar este fuego...</Spanish>
@@ -87,6 +99,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_Interrupted">
             <English>Fire crafting interrupted...</English>
+            <Chinesesimp>生火制作已中断...</Chinesesimp>
+            <Chinese>生火製作已中斷...</Chinese>
             <Czech>Vytváření ohně přerušeno...</Czech>
             <French>Fabrication du feu interrompue...</French>
             <Spanish>Creación de fuego interrumpida...</Spanish>
@@ -101,6 +115,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_InterruptedTinder">
             <English>Fire crafting interrupted, tinder lost...</English>
+            <Chinesesimp>生火制作已中断，引火物已丢失...</Chinesesimp>
+            <Chinese>生火製作已中斷，引火物已丟失...</Chinese>
             <Czech>Vytváření ohně přerušeno, troud ztracen...</Czech>
             <French>Fabrication du feu interrompue, amadou perdu...</French>
             <Spanish>Creación de fuego interrumpida, yesca perdida...</Spanish>
@@ -115,6 +131,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_CraftingProgress">
             <English>Crafting %1 fire... %2%3 complete</English>
+            <Chinesesimp>正在制作 %1 火堆... %2%3 已完成</Chinesesimp>
+            <Chinese>正在製作 %1 火堆... %2%3 已完成</Chinese>
             <Czech>Vytváření %1 ohně... %2%3 hotovo</Czech>
             <French>Fabrication d'un feu de %1... %2%3 terminé</French>
             <Spanish>Creando fuego de %1... %2%3 completado</Spanish>
@@ -129,6 +147,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_Failed">
             <English>Failed to craft fire...</English>
+            <Chinesesimp>生火制作失败...</Chinesesimp>
+            <Chinese>生火製作失敗...</Chinese>
             <Czech>Nepodařilo se rozdělat oheň...</Czech>
             <French>Échec de la fabrication du feu...</French>
             <Spanish>Error al crear el fuego...</Spanish>
@@ -143,6 +163,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_Success">
             <English>Fire crafted successfully!</English>
+            <Chinesesimp>火堆制作成功！</Chinesesimp>
+            <Chinese>火堆製作成功！</Chinese>
             <Czech>Oheň byl úspěšně rozdělán!</Czech>
             <French>Feu réussi !</French>
             <Spanish>¡Fuego creado con éxito!</Spanish>
@@ -157,6 +179,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_ExtinguishNone">
             <English>No nearby fire to extinguish...</English>
+            <Chinesesimp>附近没有可熄灭的火...</Chinesesimp>
+            <Chinese>附近沒有可熄滅的火...</Chinese>
             <Czech>V blízkosti není žádný oheň k uhašení...</Czech>
             <French>Aucun feu à éteindre à proximité...</French>
             <Spanish>No hay ningún fuego cerca para extinguir...</Spanish>
@@ -171,6 +195,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_Extinguished">
             <English>Fire extinguished...</English>
+            <Chinesesimp>火已熄灭...</Chinesesimp>
+            <Chinese>火已熄滅...</Chinese>
             <Czech>Oheň uhašen...</Czech>
             <French>Feu éteint...</French>
             <Spanish>Fuego extinguido...</Spanish>
@@ -185,6 +211,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_AlreadyExtinguished">
             <English>Fire is already extinguished...</English>
+            <Chinesesimp>火已经熄灭了...</Chinesesimp>
+            <Chinese>火已經熄滅了...</Chinese>
             <Czech>Oheň je již uhašen...</Czech>
             <French>Le feu est déjà éteint...</French>
             <Spanish>El fuego ya está extinguido...</Spanish>
@@ -199,6 +227,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_NotFound">
             <English>No nearby fire found.</English>
+            <Chinesesimp>未发现附近的火。</Chinesesimp>
+            <Chinese>未發現附近的火。</Chinese>
             <Czech>Nenalezen žádný oheň v blízkosti.</Czech>
             <French>Aucun feu trouvé à proximité.</French>
             <Spanish>No se encontró ningún fuego cerca.</Spanish>
@@ -213,6 +243,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_ReignitedUpgraded">
             <English>Fire reignited and upgraded...</English>
+            <Chinesesimp>火堆已重新点燃并升级...</Chinesesimp>
+            <Chinese>火堆已重新點燃並升級...</Chinese>
             <Czech>Oheň znovu zapálen a vylepšen...</Czech>
             <French>Feu rallumé et amélioré...</French>
             <Spanish>Fuego reencendido y mejorado...</Spanish>
@@ -227,6 +259,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_ReignitedDowngraded">
             <English>Fire reignited and downgraded...</English>
+            <Chinesesimp>火堆已重新点燃但降级了...</Chinesesimp>
+            <Chinese>火堆已重新點燃但降級了...</Chinese>
             <Czech>Oheň znovu zapálen a oslaben...</Czech>
             <French>Feu rallumé et rétrogradé...</French>
             <Spanish>Fuego reencendido y degradado...</Spanish>
@@ -241,6 +275,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_ReignitedBarrel">
             <English>Barrel fire reignited successfully...</English>
+            <Chinesesimp>油桶火堆已成功重新点燃...</Chinesesimp>
+            <Chinese>油桶火堆已成功重新點燃...</Chinese>
             <Czech>Oheň v sudu úspěšně znovu zapálen...</Czech>
             <French>Feu de baril rallumé avec succès...</French>
             <Spanish>Fuego de barril reencendido con éxito...</Spanish>
@@ -255,6 +291,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_ReignitedSuccess">
             <English>Fire reignited successfully...</English>
+            <Chinesesimp>火堆成功重新点燃...</Chinesesimp>
+            <Chinese>火堆成功重新點燃...</Chinese>
             <Czech>Oheň úspěšně znovu zapálen...</Czech>
             <French>Feu rallumé avec succès...</French>
             <Spanish>Fuego reencendido con éxito...</Spanish>
@@ -269,6 +307,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_Action">
             <English>Use Fire</English>
+            <Chinesesimp>使用火堆</Chinesesimp>
+            <Chinese>使用火堆</Chinese>
             <Czech>Použít oheň</Czech>
             <French>Utiliser le feu</French>
             <Spanish>Usa fuego</Spanish>
@@ -283,6 +323,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_CheckAction">
             <English>Check fire</English>
+            <Chinesesimp>检查火堆</Chinesesimp>
+            <Chinese>檢查火堆</Chinese>
             <Czech>Zkontrolovat oheň</Czech>
             <French>Vérifier le feu</French>
             <Spanish>Revisar fuego</Spanish>
@@ -297,6 +339,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_CraftingLabel">
             <English>Fire crafting</English>
+            <Chinesesimp>生火制作</Chinesesimp>
+            <Chinese>生火製作</Chinese>
             <Czech>Vytváření ohně</Czech>
             <French>Fabrication du feu</French>
             <Spanish>Creación de fuego</Spanish>
@@ -311,6 +355,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_ExtinguishButton">
             <English>Extinguish</English>
+            <Chinesesimp>熄灭</Chinesesimp>
+            <Chinese>熄滅</Chinese>
             <Czech>Uhasit</Czech>
             <French>Éteindre</French>
             <Spanish>Extinguir</Spanish>
@@ -325,6 +371,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_TinderLabel">
             <English>Tinder:</English>
+            <Chinesesimp>引火物:</Chinesesimp>
+            <Chinese>引火物:</Chinese>
             <Czech>Troud:</Czech>
             <French>Amadou :</French>
             <Spanish>Yesca:</Spanish>
@@ -339,6 +387,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_FuelLabel">
             <English>Fuel source:</English>
+            <Chinesesimp>燃料源:</Chinesesimp>
+            <Chinese>燃料源:</Chinese>
             <Czech>Zdroj paliva:</Czech>
             <French>Source de combustible :</French>
             <Spanish>Fuente de combustible:</Spanish>
@@ -353,6 +403,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_IgnitionLabel">
             <English>Ignition source:</English>
+            <Chinesesimp>点火源:</Chinesesimp>
+            <Chinese>點火源:</Chinese>
             <Czech>Zdroj zapálení:</Czech>
             <French>Source d'allumage :</French>
             <Spanish>Fuente de ignición:</Spanish>
@@ -367,6 +419,8 @@
         </Key>
         <Key ID="STR_MISERY_Fire_BurnTimeLabel">
             <English>Burn time:</English>
+            <Chinesesimp>燃烧时间:</Chinesesimp>
+            <Chinese>燃燒時間:</Chinese>
             <Czech>Doba hoření:</Czech>
             <French>Temps de combustion :</French>
             <Spanish>Tiempo de combustión:</Spanish>

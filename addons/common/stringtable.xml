@@ -3,6 +3,8 @@
     <Package name="Misery_MainSTR_Language_Compat">
         <Key ID="STR_MISERY_Common_Cancel">
             <English>Cancel</English>
+            <Chinesesimp>取消</Chinesesimp>
+            <Chinese>取消</Chinese>
             <Czech>Zrušit</Czech>
             <French>Annuler</French>
             <Spanish>Cancelar</Spanish>
@@ -17,6 +19,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_RecipesList">
             <English>Recipes:</English>
+            <Chinesesimp>配方:</Chinesesimp>
+            <Chinese>配方:</Chinese>
             <Czech>Recepty:</Czech>
             <French>Recettes :</French>
             <Spanish>Recetas:</Spanish>
@@ -31,6 +35,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_Exit">
             <English>Exit</English>
+            <Chinesesimp>退出</Chinesesimp>
+            <Chinese>退出</Chinese>
             <Czech>Odejít</Czech>
             <French>Quitter</French>
             <Spanish>Salir</Spanish>
@@ -45,6 +51,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_Purchase">
             <English>Purchase</English>
+            <Chinesesimp>购买</Chinesesimp>
+            <Chinese>購買</Chinese>
             <Czech>Koupit</Czech>
             <French>Acheter</French>
             <Spanish>Comprar</Spanish>
@@ -59,6 +67,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_NoRecipeSelect">
             <English>No recipe selected...</English>
+            <Chinesesimp>未选择配方...</Chinesesimp>
+            <Chinese>未選擇配方...</Chinese>
             <Czech>Není vybrán žádný recept...</Czech>
             <French>Aucune recette sélectionnée...</French>
             <Spanish>Ninguna receta seleccionada...</Spanish>
@@ -73,6 +83,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_NoRecipeMatch">
             <English>No matching recipe found.</English>
+            <Chinesesimp>未找到匹配的配方。</Chinesesimp>
+            <Chinese>未找到匹配的配方。</Chinese>
             <Czech>Nebyl nalezen žádný odpovídající recept.</Czech>
             <French>Aucune recette correspondante trouvée.</French>
             <Spanish>No se encontró ninguna receta coincidente.</Spanish>
@@ -87,6 +99,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_MissingItems">
             <English>You don’t have the required items...</English>
+            <Chinesesimp>你没有所需的物品...</Chinesesimp>
+            <Chinese>你沒有所需的物品...</Chinese>
             <Czech>Nemáte požadované položky...</Czech>
             <French>Vous n'avez pas les objets requis...</French>
             <Spanish>No tienes los objetos requeridos...</Spanish>
@@ -101,6 +115,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_ShowRecipe">
             <English>Show Recipe</English>
+            <Chinesesimp>显示配方</Chinesesimp>
+            <Chinese>顯示配方</Chinese>
             <Czech>Zobrazit recept</Czech>
             <French>Afficher la recette</French>
             <Spanish>Mostrar receta</Spanish>
@@ -115,6 +131,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_Craft">
             <English>Craft</English>
+            <Chinesesimp>制作</Chinesesimp>
+            <Chinese>製作</Chinese>
             <Czech>Vyrobit</Czech>
             <French>Artisanat</French>
             <Spanish>Fabricar</Spanish>
@@ -129,6 +147,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_TooExpensive">
             <English>You cannot afford this!</English>
+            <Chinesesimp>你负担不起这个！</Chinesesimp>
+            <Chinese>你負擔不起這個！</Chinese>
             <Czech>Tohle si nemůžete dovolit!</Czech>
             <French>Vous n'avez pas les moyens !</French>
             <Spanish>¡No puedes permitirte esto!</Spanish>
@@ -143,6 +163,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_CraftPrompt">
             <English>What would you like to craft?</English>
+            <Chinesesimp>你想制作什么？</Chinesesimp>
+            <Chinese>你想製作什麼？</Chinese>
             <Czech>Co byste chtěli vyrobit?</Czech>
             <French>Que voulez-vous fabriquer ?</French>
             <Spanish>¿Qué te gustaría fabricar?</Spanish>
@@ -157,6 +179,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_Blueprints">
             <English>Blueprints:</English>
+            <Chinesesimp>蓝图:</Chinesesimp>
+            <Chinese>藍圖:</Chinese>
             <Czech>Plány:</Czech>
             <French>Schémas :</French>
             <Spanish>Planos:</Spanish>
@@ -171,6 +195,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_NoLithiumBatteries">
             <English>You don't have any lithium batteries...</English>
+            <Chinesesimp>你没有任何锂电池...</Chinesesimp>
+            <Chinese>你沒有任何鋰電池...</Chinese>
             <Czech>Nemáte žádné lithiové baterie...</Czech>
             <French>Vous n'avez pas de piles au lithium...</French>
             <Spanish>No tienes baterías de litio...</Spanish>
@@ -185,6 +211,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_CantSleepFear">
             <English>You are tormented by fear, and sleep is a distant memory. You hallucinate horrors that haunt you, and feel sensations that terrify you. You are descending into madness…</English>
+            <Chinesesimp>你被恐惧折磨，睡眠已成遥远记忆。你幻觉出萦绕不散的恐怖，感受到令你惊悚的异觉。你正坠入疯狂……</Chinesesimp>
+            <Chinese>你被恐懼折磨，睡眠已成遙遠記憶。你幻覺出縈繞不散的恐怖，感受到令你惊悚的異覺。你正墜入瘋狂……</Chinese>
             <Czech>Trápí vás strach a spánek je jen vzdálenou vzpomínkou. Máte halucinace, které vás pronásledují, a cítíte pocity, které vás děsí. Propadáte se do šílenství...</Czech>
             <French>Vous êtes tourmenté par la peur et le sommeil n'est plus qu'un lointain souvenir. Vous avez des hallucinations qui vous hantent et des sensations qui vous terrifient. Vous sombrez dans la folie...</French>
             <Spanish>Te atormenta el miedo y el sueño es un recuerdo lejano. Alucinas horrores que te persiguen y sientes sensaciones que te aterrorizan. Desciendes hacia la locura...</Spanish>
@@ -199,6 +227,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_CheckClothing">
             <English>Check Clothing</English>
+            <Chinesesimp>检查衣物</Chinesesimp>
+            <Chinese>檢查衣物</Chinese>
             <Czech>Kontrola oblečení</Czech>
             <French>Vérifier les vêtements</French>
             <Spanish>Comprobar la ropa</Spanish>
@@ -213,6 +243,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_CheckGearWeight">
             <English>Check Gear weight</English>
+            <Chinesesimp>检查装备重量</Chinesesimp>
+            <Chinese>檢查裝備重量</Chinese>
             <Czech>Kontrola hmotnosti vybavení</Czech>
             <French>Vérifier le poids de l'engrenage</French>
             <Spanish>Comprobar el peso del engranaje</Spanish>
@@ -227,6 +259,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_ClothingInsulationVal">
             <English>Clothing Insulation: (%1)</English>
+            <Chinesesimp>衣物绝缘: (%1)</Chinesesimp>
+            <Chinese>衣物絕緣: (%1)</Chinese>
             <Czech>Izolace oděvu: (%1)</Czech>
             <French>Isolation des vêtements : (%1)</French>
             <Spanish>Aislamiento de la ropa: (%1)</Spanish>
@@ -241,6 +275,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_ClothingWarmthVal">
             <English>Clothing Warmth: %1°C&lt;br/&gt;&lt;br/&gt;</English>
+            <Chinesesimp>衣物保暖: %1°C&lt;br/&gt;&lt;br/&gt;</Chinesesimp>
+            <Chinese>衣物保暖: %1°C&lt;br/&gt;&lt;br/&gt;</Chinese>
             <Czech>Hřejivost oblečení: %1°C&lt;br/&gt;&lt;br/&gt;</Czech>
             <French>Chaleur des vêtements : %1°C&lt;br/&gt;&lt;br/&gt;</French>
             <Spanish>Calor de la ropa: %1°C&lt;br/&gt;&lt;br/&gt;</Spanish>
@@ -255,6 +291,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_CollectWater">
             <English>Collect Water</English>
+            <Chinesesimp>收集水</Chinesesimp>
+            <Chinese>收集水</Chinese>
             <Czech>Sbírat vodu</Czech>
             <French>Recueillir de l'eau</French>
             <Spanish>Recoger agua</Spanish>
@@ -269,6 +307,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_DisplayName">
             <English>Misery</English>
+            <Chinesesimp>苦难</Chinesesimp>
+            <Chinese>苦難</Chinese>
             <Czech>Bída</Czech>
             <French>Misère</French>
             <Spanish>Miseria</Spanish>
@@ -283,6 +323,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_DrinkFromSource">
             <English>Drink from source</English>
+            <Chinesesimp>从源头饮水</Chinesesimp>
+            <Chinese>從源頭飲水</Chinese>
             <Czech>Pití ze zdroje</Czech>
             <French>Boire à la source</French>
             <Spanish>Beber de la fuente</Spanish>
@@ -297,6 +339,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_GearWeightVal">
             <English>Gear weight feels like: ~ %2kg (%1lbs)</English>
+            <Chinesesimp>装备重量感觉约为: ~ %2kg (%1lbs)</Chinesesimp>
+            <Chinese>裝備重量感覺約為: ~ %2kg (%1lbs)</Chinese>
             <Czech>Hmotnost vybavení se zdá být: ~ %2kg (%1lbs)</Czech>
             <French>Le poids de l'engrenage ressemble à.. : ~ %2kg (%1lbs)</French>
             <Spanish>El peso del engranaje se siente como: ~ %2kg (%1lbs)</Spanish>
@@ -311,6 +355,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_MineOre">
             <English>Mine Ore</English>
+            <Chinesesimp>采矿</Chinesesimp>
+            <Chinese>採礦</Chinese>
             <Czech>Důlní ruda</Czech>
             <French>Mine Minerai</French>
             <Spanish>Mineral de mina</Spanish>
@@ -325,6 +371,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_MineOreNoTools">
             <English>You don't have the required items to mine ore...</English>
+            <Chinesesimp>你没有采矿所需的物品...</Chinesesimp>
+            <Chinese>你沒有採礦所需的物品...</Chinese>
             <Czech>Nemáte potřebné předměty k těžbě rudy...</Czech>
             <French>Vous n'avez pas les éléments nécessaires pour extraire du minerai...</French>
             <Spanish>No tienes los objetos necesarios para extraer mineral...</Spanish>
@@ -339,6 +387,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_NoAxeForWoodNoti">
             <English>You don't have an Axe to chop any wood...</English>
+            <Chinesesimp>你没有可以砍木头的斧头...</Chinesesimp>
+            <Chinese>你沒有可以砍木頭的斧頭...</Chinese>
             <Czech>Nemáš sekeru na štípání dřeva...</Czech>
             <French>Vous n'avez pas de hache pour couper du bois...</French>
             <Spanish>No tienes un hacha para cortar madera...</Spanish>
@@ -353,6 +403,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_NoChainsawForWoodNoti">
             <English>You don't have a chainsaw to saw any wood...</English>
+            <Chinesesimp>你没有可以锯木头的链锯...</Chinesesimp>
+            <Chinese>你沒有可以鋸木頭的鏈鋸...</Chinese>
             <Czech>Nemáš motorovou pilu na řezání dřeva...</Czech>
             <French>Vous n'avez pas besoin de tronçonneuse pour scier du bois...</French>
             <Spanish>No tienes una motosierra para serrar madera...</Spanish>
@@ -367,6 +419,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_ReqRefuel">
             <English>Request refuel</English>
+            <Chinesesimp>请求加油</Chinesesimp>
+            <Chinese>請求加油</Chinese>
             <Czech>Žádost o doplnění paliva</Czech>
             <French>Demande de ravitaillement</French>
             <Spanish>Solicitar repostaje</Spanish>
@@ -381,6 +435,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_ReqRepairs">
             <English>Request repairs</English>
+            <Chinesesimp>请求修理</Chinesesimp>
+            <Chinese>請求修理</Chinese>
             <Czech>Žádost o opravu</Czech>
             <French>Demande de réparation</French>
             <Spanish>Solicitar reparaciones</Spanish>
@@ -395,6 +451,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_ReqTreatment">
             <English>Request treatment</English>
+            <Chinesesimp>请求治疗</Chinesesimp>
+            <Chinese>請求治療</Chinese>
             <Czech>Žádost o ošetření</Czech>
             <French>Demande de traitement</French>
             <Spanish>Solicitar tratamiento</Spanish>
@@ -409,6 +467,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_Sleep10Hours">
             <English>10 hours</English>
+            <Chinesesimp>10 小时</Chinesesimp>
+            <Chinese>10 小時</Chinese>
             <Czech>10 hodin</Czech>
             <French>10 heures</French>
             <Spanish>10 horas</Spanish>
@@ -423,6 +483,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_Sleep11Hours">
             <English>11 hours</English>
+            <Chinesesimp>11 小时</Chinesesimp>
+            <Chinese>11 小時</Chinese>
             <Czech>11 hodin</Czech>
             <French>11 heures</French>
             <Spanish>11 horas</Spanish>
@@ -437,6 +499,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_Sleep12Hours">
             <English>12 hours</English>
+            <Chinesesimp>12 小时</Chinesesimp>
+            <Chinese>12 小時</Chinese>
             <Czech>12 hodin</Czech>
             <French>12 heures</French>
             <Spanish>12 horas</Spanish>
@@ -451,6 +515,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_Sleep1Hour">
             <English>1 hour</English>
+            <Chinesesimp>1 小时</Chinesesimp>
+            <Chinese>1 小時</Chinese>
             <Czech>1 hodinu</Czech>
             <French>1 heure</French>
             <Spanish>1 hora</Spanish>
@@ -465,6 +531,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_Sleep2Hours">
             <English>2 hours</English>
+            <Chinesesimp>2 小时</Chinesesimp>
+            <Chinese>2 小時</Chinese>
             <Czech>2 hodiny</Czech>
             <French>2 heures</French>
             <Spanish>2 horas</Spanish>
@@ -479,6 +547,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_Sleep3Hours">
             <English>3 hours</English>
+            <Chinesesimp>3 小时</Chinesesimp>
+            <Chinese>3 小時</Chinese>
             <Czech>3 hodiny</Czech>
             <French>3 heures</French>
             <Spanish>3 horas</Spanish>
@@ -493,6 +563,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_Sleep4Hours">
             <English>4 hours</English>
+            <Chinesesimp>4 小时</Chinesesimp>
+            <Chinese>4 小時</Chinese>
             <Czech>4 hodiny</Czech>
             <French>4 heures</French>
             <Spanish>4 horas</Spanish>
@@ -507,6 +579,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_Sleep5Hours">
             <English>5 hours</English>
+            <Chinesesimp>5 小时</Chinesesimp>
+            <Chinese>5 小時</Chinese>
             <Czech>5 hodin</Czech>
             <French>5 heures</French>
             <Spanish>5 horas</Spanish>
@@ -521,6 +595,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_Sleep6Hours">
             <English>6 hours</English>
+            <Chinesesimp>6 小时</Chinesesimp>
+            <Chinese>6 小時</Chinese>
             <Czech>6 hodin</Czech>
             <French>6 heures</French>
             <Spanish>6 horas</Spanish>
@@ -535,6 +611,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_Sleep7Hours">
             <English>7 hours</English>
+            <Chinesesimp>7 小时</Chinesesimp>
+            <Chinese>7 小時</Chinese>
             <Czech>7 hodin</Czech>
             <French>7 heures</French>
             <Spanish>7 horas</Spanish>
@@ -549,6 +627,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_Sleep8Hours">
             <English>8 hours</English>
+            <Chinesesimp>8 小时</Chinesesimp>
+            <Chinese>8 小時</Chinese>
             <Czech>8 hodin</Czech>
             <French>8 heures</French>
             <Spanish>8 horas</Spanish>
@@ -563,6 +643,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_Sleep9Hours">
             <English>9 hours</English>
+            <Chinesesimp>9 小时</Chinesesimp>
+            <Chinese>9 小時</Chinese>
             <Czech>9 hodin</Czech>
             <French>9 heures</French>
             <Spanish>9 horas</Spanish>
@@ -577,6 +659,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_SleepButton">
             <English>Sleep...</English>
+            <Chinesesimp>睡觉...</Chinesesimp>
+            <Chinese>睡覺...</Chinese>
             <Czech>Spánek...</Czech>
             <French>Dormir...</French>
             <Spanish>Duerme...</Spanish>
@@ -591,6 +675,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_SleepNoHourSelect">
             <English>You need to select how long you wish to sleep...</English>
+            <Chinesesimp>你需要选择你想睡多久...</Chinesesimp>
+            <Chinese>你需要選擇你想睡多久...</Chinese>
             <Czech>Vyberte si, jak dlouho chcete spát...</Czech>
             <French>Vous devez sélectionner la durée de votre sommeil...</French>
             <Spanish>Tienes que seleccionar cuánto tiempo quieres dormir...</Spanish>
@@ -605,6 +691,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_SleepNotTired">
             <English>You aren't tired enough to sleep yet...</English>
+            <Chinesesimp>你还没累到可以睡觉的时候...</Chinesesimp>
+            <Chinese>你還沒累到可以睡覺的時候...</Chinese>
             <Czech>Ještě nejste dostatečně unavený na to, abyste spal...</Czech>
             <French>Vous n'êtes pas encore assez fatigué pour dormir...</French>
             <Spanish>Aún no estás lo suficientemente cansado para dormir...</Spanish>
@@ -619,6 +707,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_SleepPrompt">
             <English>How long do you want to sleep?</English>
+            <Chinesesimp>你想睡多久？</Chinesesimp>
+            <Chinese>你想睡多久？</Chinese>
             <Czech>Jak dlouho chcete spát?</Czech>
             <French>Combien de temps voulez-vous dormir ?</French>
             <Spanish>¿Cuánto tiempo quieres dormir?</Spanish>
@@ -633,6 +723,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_SleepTip">
             <English>Care should be taken when sleeping in excessive amounts...</English>
+            <Chinesesimp>过度睡眠时应注意...</Chinesesimp>
+            <Chinese>過度睡眠時應注意...</Chinese>
             <Czech>Při nadměrném množství spánku je třeba dbát na opatrnosti...</Czech>
             <French>Il convient d'être prudent lorsque l'on dort en quantités excessives...</French>
             <Spanish>Hay que tener cuidado cuando se duerme en cantidades excesivas...</Spanish>
@@ -647,6 +739,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_SleptForHowLong">
             <English>You slept for %1 hour(s)...</English>
+            <Chinesesimp>你睡了 %1 小时...</Chinesesimp>
+            <Chinese>你睡了 %1 小時...</Chinese>
             <Czech>Spali jste %1 hodinu(y)...</Czech>
             <French>Vous avez dormi pendant %1 heure(s)...</French>
             <Spanish>Has dormido %1 hora(s)...</Spanish>
@@ -661,6 +755,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_StoreArtifact">
             <English>Store Artifact</English>
+            <Chinesesimp>存放神器</Chinesesimp>
+            <Chinese>存放神器</Chinese>
             <Czech>Uložit artefakt</Czech>
             <French>Magasin d'artefacts</French>
             <Spanish>Almacenar artefacto</Spanish>
@@ -675,6 +771,8 @@
         </Key>
         <Key ID="STR_MISERY_Common_UseForge">
             <English>Use Forge</English>
+            <Chinesesimp>使用锻炉</Chinesesimp>
+            <Chinese>使用鍛爐</Chinese>
             <Czech>Použít výheň</Czech>
             <French>Utiliser la forge</French>
             <Spanish>Utilizar Forja</Spanish>

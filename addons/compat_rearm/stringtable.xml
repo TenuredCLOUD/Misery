@@ -3,6 +3,8 @@
     <Package name="Compat_Rearm">
         <Key ID="STR_MISERY_Compat_Rearm_Areas">
             <English>Rearming Areas</English>
+            <Chinesesimp>重新补给区域</Chinesesimp>
+            <Chinese>重新補給區域</Chinese>
             <Czech>Oblasti přezbrojení</Czech>
             <French>Zones de réarmement</French>
             <Spanish>Áreas de rearme</Spanish>
@@ -17,6 +19,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_Rearm_AreasDesc">
             <English>ELLIPSE or RECTANGLE marker names covering the rearming area as strings ['Rearm_1', 'Rearm_2']</English>
+            <Chinesesimp>覆盖重新补给区域的 ELLIPSE 或 RECTANGLE 标记名称，格式为字符串 ['Rearm_1', 'Rearm_2']</Chinesesimp>
+            <Chinese>覆蓋重新補給區域的 ELLIPSE 或 RECTANGLE 標記名稱，格式為字符串 ['Rearm_1', 'Rearm_2']</Chinese>
             <Czech>Názvy markerů ELLIPSE nebo RECTANGLE pokrývající oblast přezbrojení jako řetězce ['Rearm_1', 'Rearm_2']</Czech>
             <French>Noms des marqueurs ELLIPSE ou RECTANGLE couvrant la zone de réarmement sous forme de chaînes ['Rearm_1', 'Rearm_2']</French>
             <Spanish>Nombres de marcadores ELLIPSE o RECTANGLE que cubren el área de rearme como cadenas ['Rearm_1', 'Rearm_2']</Spanish>
@@ -31,6 +35,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_Rearm_ReqResupply">
             <English>Request resupply</English>
+            <Chinesesimp>请求补给</Chinesesimp>
+            <Chinese>請求補給</Chinese>
             <Czech>Žádost o doplnění zásob</Czech>
             <French>Demande de réapprovisionnement</French>
             <Spanish>Solicitar reabastecimiento</Spanish>
@@ -45,6 +51,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_Rearm_NoVehicle">
             <English>No Vehicle to Rearm...</English>
+            <Chinesesimp>没有可重新补给的载具...</Chinesesimp>
+            <Chinese>沒有可重新補給的載具...</Chinese>
             <Czech>Žádné vozidlo k přezbrojení...</Czech>
             <French>Aucun véhicule à réarmer...</French>
             <Spanish>¡No hay vehículo para rearmar!</Spanish>
@@ -59,6 +67,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_Rearm_CannotResupply">
             <English>This vehicle cannot be resupplied...</English>
+            <Chinesesimp>此载具无法重新补给...</Chinesesimp>
+            <Chinese>此載具無法重新補給...</Chinese>
             <Czech>Toto vozidlo nelze přezbrojit...</Czech>
             <French>Ce véhicule ne peut pas être réapprovisionné...</French>
             <Spanish>Este vehículo no puede ser reabastecido...</Spanish>
@@ -73,6 +83,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_Rearm_ActionName">
             <English>Resupply (%1)</English>
+            <Chinesesimp>补给 (%1)</Chinesesimp>
+            <Chinese>補給 (%1)</Chinese>
             <Czech>Přezbrojit (%1)</Czech>
             <French>Réapprovisionner (%1)</French>
             <Spanish>Reabastecer (%1)</Spanish>
@@ -87,6 +99,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_Rearm_Interrupted">
             <English>Resupply interrupted...</English>
+            <Chinesesimp>补给已中断...</Chinesesimp>
+            <Chinese>補給已中斷...</Chinese>
             <Czech>Přezbrojování přerušeno...</Czech>
             <French>Réapprovisionnement interrompu...</French>
             <Spanish>Reabastecimiento interrumpido...</Spanish>
@@ -101,6 +115,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_Rearm_ProgressStatus">
             <English>Resupplying...%1%2%1Progress: %3%%%1Funds:%1%4%1%5</English>
+            <Chinesesimp>正在补给...%1%2%1进度: %3%%%1资金:%1%4%1%5</Chinesesimp>
+            <Chinese>正在補給...%1%2%1進度: %3%%%1資金:%1%4%1%5</Chinese>
             <Czech>Přezbrojování...%1%2%1Postup: %3%%%1Finance:%1%4%1%5</Czech>
             <French>Réapprovisionnement...%1%2%1Progression : %3%%%1Fonds :%1%4%1%5</French>
             <Spanish>Reabasteciendo...%1%2%1Progreso: %3%%%1Fondos:%1%4%1%5</Spanish>
@@ -115,6 +131,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_Rearm_Success">
             <English>%1 has been fully resupplied...</English>
+            <Chinesesimp>%1 已完成全部补给...</Chinesesimp>
+            <Chinese>%1 已完成全部補給...</Chinese>
             <Czech>%1 byl plně přezbrojen...</Czech>
             <French>%1 a été entièrement réapprovisionné...</French>
             <Spanish>%1 ha sido reabastecido por completo...</Spanish>
@@ -129,6 +147,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_Rearm_NoOption">
             <English>No Resupply option selected...</English>
+            <Chinesesimp>未选择补给选项...</Chinesesimp>
+            <Chinese>未選擇補給選項...</Chinese>
             <Czech>Nebyla vybrána žádná možnost přezbrojení...</Czech>
             <French>Aucune option de réapprovisionnement sélectionnée...</French>
             <Spanish>No se ha seleccionado ninguna opción de reabastecimiento...</Spanish>
@@ -143,6 +163,8 @@
         </Key>
         <Key ID="STR_MISERY_Compat_Rearm_VehicleResupply">
             <English>Vehicle Resupply</English>
+            <Chinesesimp>载具补给</Chinesesimp>
+            <Chinese>載具補給</Chinese>
             <Czech>Doplnění zásob vozidla</Czech>
             <French>Ravitaillement du véhicule</French>
             <Spanish>Reabastecimiento de vehículo</Spanish>
