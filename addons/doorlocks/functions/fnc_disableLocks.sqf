@@ -22,4 +22,4 @@ for "_i" from 1 to _doorCount do {
 
 _building setVariable [QGVAR(doorsLocked), false, true];
 
-[localize ECSTRING(common,DoorsUnlocked), 1, [1, 1, 1, 1]] call CBA_fnc_notify;
+[localize LSTRING(DoorsUnlocked), 1, [1, 1, 1, 1]] call CBA_fnc_notify;

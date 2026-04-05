@@ -83,7 +83,7 @@ class CLASS(banking_ui) {
         class CLASS(bank_deposit): RscButton {
             idc = 1600;
             onButtonClick = QUOTE([] call EFUNC(currency,fundsDeposit));
-            text = ECSTRING(common,Deposit);
+            text = ECSTRING(currency,Deposit);
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
             y = 11.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;
@@ -97,7 +97,7 @@ class CLASS(banking_ui) {
         class CLASS(bank_withdraw): RscButton {
             idc = 1601;
             onButtonClick = QUOTE([] call EFUNC(currency,fundsWithdraw));
-            text = ECSTRING(common,Withdraw);
+            text = ECSTRING(currency,Withdraw);
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
             y = 14.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;

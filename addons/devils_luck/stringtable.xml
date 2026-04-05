@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Devils_Luck">
+        <Key ID="STR_MISERY_Devils_Luck_PlayDevilsLuck">
+            <English>Play Devil's Luck</English>
+            <Czech>Hrát Ďáblovo štěstí</Czech>
+            <French>Jouer à la Chance du Diable</French>
+            <Spanish>Jugar a la Suerte del diablo</Spanish>
+            <Italian>Gioca alla Fortuna del diavolo</Italian>
+            <Polish>Zagraj w Diabelskie szczęście</Polish>
+            <Portuguese>Jogar Sorte do Diabo</Portuguese>
+            <Russian>Играть в «Дьявольское везение»</Russian>
+            <German>Teufelsglück spielen</German>
+            <Korean>악마의 운 플레이</Korean>
+            <Japanese>「悪魔の幸運」をプレイ</Japanese>
+            <Turkish>Şeytanın Şansını Oyna</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_DevilsLuck">
+            <English>Devil's Luck</English>
+            <Czech>Ďáblovo štěstí</Czech>
+            <French>Chance du Diable</French>
+            <Spanish>Suerte del diablo</Spanish>
+            <Italian>Fortuna del diavolo</Italian>
+            <Polish>Diabelskie szczęście</Polish>
+            <Portuguese>Sorte do Diabo</Portuguese>
+            <Russian>Дьявольское везение</Russian>
+            <German>Teufelsglück</German>
+            <Korean>악마의 운</Korean>
+            <Japanese>悪魔の幸運</Japanese>
+            <Turkish>Şeytanın Şansı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_PlaceBet">
+            <English>Place Bet</English>
+            <Czech>Vsadit</Czech>
+            <French>Parier</French>
+            <Spanish>Apostar</Spanish>
+            <Italian>Punta</Italian>
+            <Polish>Postaw zakład</Polish>
+            <Portuguese>Apostar</Portuguese>
+            <Russian>Сделать ставку</Russian>
+            <German>Wette platzieren</German>
+            <Korean>베팅하기</Korean>
+            <Japanese>賭ける</Japanese>
+            <Turkish>Bahis Yap</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_PredictHigher">
+            <English>Predict Higher</English>
+            <Czech>Tipovat vyšší</Czech>
+            <French>Prédire plus haut</French>
+            <Spanish>Predecir mayor</Spanish>
+            <Italian>Prevedi più alto</Italian>
+            <Polish>Obstaw wyższą</Polish>
+            <Portuguese>Prever maior</Portuguese>
+            <Russian>Предсказать большее</Russian>
+            <German>Höher vorhersagen</German>
+            <Korean>높음 예측</Korean>
+            <Japanese>高いと予想</Japanese>
+            <Turkish>Yüksek Tahmin Et</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_PredictLower">
+            <English>Predict Lower</English>
+            <Czech>Tipovat nižší</Czech>
+            <French>Prédire plus bas</French>
+            <Spanish>Predecir menor</Spanish>
+            <Italian>Prevedi più basso</Italian>
+            <Polish>Obstaw niższą</Polish>
+            <Portuguese>Prever menor</Portuguese>
+            <Russian>Предсказать меньшее</Russian>
+            <German>Tiefer vorhersagen</German>
+            <Korean>낮음 예측</Korean>
+            <Japanese>低いと予想</Japanese>
+            <Turkish>Düşük Tahmin Et</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_Roll">
+            <English>ROLL</English>
+            <Czech>HODIT</Czech>
+            <French>LANCER</French>
+            <Spanish>TIRAR</Spanish>
+            <Italian>LANCIA</Italian>
+            <Polish>RZUT</Polish>
+            <Portuguese>ROLAR</Portuguese>
+            <Russian>БРОСОК</Russian>
+            <German>WÜRFELN</German>
+            <Korean>굴리기</Korean>
+            <Japanese>ダイスを振る</Japanese>
+            <Turkish>ZAR AT</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_Rules">
+            <English>Rules</English>
+            <Czech>Pravidla</Czech>
+            <French>Règles</French>
+            <Spanish>Reglas</Spanish>
+            <Italian>Regole</Italian>
+            <Polish>Zasady</Polish>
+            <Portuguese>Regras</Portuguese>
+            <Russian>Правила</Russian>
+            <German>Regeln</German>
+            <Korean>규칙</Korean>
+            <Japanese>ルール</Japanese>
+            <Turkish>Kurallar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_LeaveGame">
+            <English>Leave Game</English>
+            <Czech>Opustit hru</Czech>
+            <French>Quitter le jeu</French>
+            <Spanish>Salir del juego</Spanish>
+            <Italian>Esci dal gioco</Italian>
+            <Polish>Opuść grę</Polish>
+            <Portuguese>Sair do jogo</Portuguese>
+            <Russian>Выйти из игры</Russian>
+            <German>Spiel verlassen</German>
+            <Korean>게임 나가기</Korean>
+            <Japanese>ゲームを終了</Japanese>
+            <Turkish>Oyundan Ayrıl</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_PlaceYourBets">
+            <English>Place your bets...</English>
+            <Czech>Vsaďte si...</Czech>
+            <French>Faites vos jeux...</French>
+            <Spanish>Hagan sus apuestas...</Spanish>
+            <Italian>Fate le vostre puntate...</Italian>
+            <Polish>Postaw zakłady...</Polish>
+            <Portuguese>Façam suas apostas...</Portuguese>
+            <Russian>Сделайте ваши ставки...</Russian>
+            <German>Einsätze bitte...</German>
+            <Korean>베팅해 주세요...</Korean>
+            <Japanese>賭けてください...</Japanese>
+            <Turkish>Bahislerinizi yapın...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_CurrentBetPrompt">
+            <English>Current Bet: 0</English>
+            <Czech>Aktuální sázka: 0</Czech>
+            <French>Pari actuel : 0</French>
+            <Spanish>Apuesta actual: 0</Spanish>
+            <Italian>Puntata attuale: 0</Italian>
+            <Polish>Aktualny zakład: 0</Polish>
+            <Portuguese>Aposta atual: 0</Portuguese>
+            <Russian>Текущая ставка: 0</Russian>
+            <German>Aktueller Einsatz: 0</German>
+            <Korean>현재 베팅: 0</Korean>
+            <Japanese>現在の賭け金: 0</Japanese>
+            <Turkish>Mevcut Bahis: 0</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_PredictionNone">
+            <English>Prediction: NONE</English>
+            <Czech>Tip: ŽÁDNÝ</Czech>
+            <French>Prédiction : AUCUNE</French>
+            <Spanish>Predicción: NINGUNA</Spanish>
+            <Italian>Previsione: NESSUNA</Italian>
+            <Polish>Typ: BRAK</Polish>
+            <Portuguese>Previsão: NENHUMA</Portuguese>
+            <Russian>Прогноз: НЕТ</Russian>
+            <German>Vorhersage: KEINE</German>
+            <Korean>예측: 없음</Korean>
+            <Japanese>予想: なし</Japanese>
+            <Turkish>Tahmin: YOK</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_DealerNoFunds">
+            <English>This dealer has no more funds... Come back later...</English>
+            <Czech>Tento krupiér již nemá peníze... Přijďte později...</Czech>
+            <French>Ce croupier n'a plus de fonds... Revenez plus tard...</French>
+            <Spanish>Este crupier no tiene más fondos... Vuelve más tarde...</Spanish>
+            <Italian>Questo banco non ha più fondi... Torna più tardi...</Italian>
+            <Polish>Ten krupier nie ma już środków... Wróć później...</Polish>
+            <Portuguese>Este croupier não tem mais fundos... Volte mais tarde...</Portuguese>
+            <Russian>У этого дилера закончились средства... Приходите позже...</Russian>
+            <German>Dieser Dealer hat kein Geld mehr... Komm später wieder...</German>
+            <Korean>이 딜러는 자금이 소진되었습니다... 나중에 다시 오세요...</Korean>
+            <Japanese>このディーラーは資金切れです... また後で来てください...</Japanese>
+            <Turkish>Bu krupiyenin parası kalmadı... Daha sonra gel...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_NeedToBet">
+            <English>You need to bet something...</English>
+            <Czech>Musíte něco vsadit...</Czech>
+            <French>Vous devez parier quelque chose...</French>
+            <Spanish>Tienes que apostar algo...</Spanish>
+            <Italian>Devi puntare qualcosa...</Italian>
+            <Polish>Musisz coś postawić...</Polish>
+            <Portuguese>Você precisa apostar algo...</Portuguese>
+            <Russian>Нужно что-нибудь поставить...</Russian>
+            <German>Du musst etwas setzen...</German>
+            <Korean>무언가를 베팅해야 합니다...</Korean>
+            <Japanese>何かを賭ける必要があります...</Japanese>
+            <Turkish>Bir şey bahis yapmalısın...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_PickHigherLower">
+            <English>Pick Higher or Lower...</English>
+            <Czech>Vyberte vyšší nebo nižší...</Czech>
+            <French>Choisissez plus haut ou plus bas...</French>
+            <Spanish>Elige mayor o menor...</Spanish>
+            <Italian>Scegli più alto o più basso...</Italian>
+            <Polish>Wybierz wyższą lub niższą...</Polish>
+            <Portuguese>Escolha maior ou menor...</Portuguese>
+            <Russian>Выберите больше или меньше...</Russian>
+            <German>Wähle höher oder tiefer...</German>
+            <Korean>높음 또는 낮음을 선택하세요...</Korean>
+            <Japanese>高いか低いか選んでください...</Japanese>
+            <Turkish>Yüksek veya Düşük seç...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_NoFundsToWager">
+            <English>You don't have the funds to wager that bet...</English>
+            <Czech>Nemáte dostatek prostředků na tuto sázku...</Czech>
+            <French>Vous n'avez pas les fonds nécessaires pour ce pari...</French>
+            <Spanish>No tienes fondos para realizar esa apuesta...</Spanish>
+            <Italian>Non hai i fondi per piazzare questa scommessa...</Italian>
+            <Polish>Nie masz środków, aby postawić ten zakład...</Polish>
+            <Portuguese>Você não tem fundos para fazer essa aposta...</Portuguese>
+            <Russian>У вас недостаточно средств для этой ставки...</Russian>
+            <German>Du hast nicht genug Geld für diesen Einsatz...</German>
+            <Korean>해당 베팅을 할 자금이 부족합니다...</Korean>
+            <Japanese>その賭け金に見合う資金がありません...</Japanese>
+            <Turkish>Bu bahsi oynamak için yeterli paran yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_WinnerGained">
+            <English>Winner! You gained</English>
+            <Czech>Vítěz! Získali jste</Czech>
+            <French>Gagné ! Vous avez gagné</French>
+            <Spanish>¡Ganador! Has ganado</Spanish>
+            <Italian>Vittoria! Hai ottenuto</Italian>
+            <Polish>Wygrana! Zyskujesz</Polish>
+            <Portuguese>Vencedor! Você ganhou</Portuguese>
+            <Russian>Победа! Вы получили</Russian>
+            <German>Gewinner! Du hast</German>
+            <Korean>승리! 획득했습니다:</Korean>
+            <Japanese>勝利！獲得しました:</Japanese>
+            <Turkish>Kazandın! Kazancın:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_DealerBroke">
+            <English>(This dealer is broke!)</English>
+            <Czech>(Tento krupiér je na mizině!)</Czech>
+            <French>(Ce croupier est fauché !)</French>
+            <Spanish>(¡Este crupier está en la quiebra!)</Spanish>
+            <Italian>(Questo banco è al verde!)</Italian>
+            <Polish>(Ten krupier jest spłukany!)</Polish>
+            <Portuguese>(Este croupier está falido!)</Portuguese>
+            <Russian>(Этот дилер на мели!)</Russian>
+            <German>(Dieser Dealer ist pleite!)</German>
+            <Korean>(이 딜러는 파산했습니다!)</Korean>
+            <Japanese>(このディーラーは一文無しだ！)</Japanese>
+            <Turkish>(Bu krupiye meteliksiz!)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_BetterLuckNextTime">
+            <English>Better luck next time...</English>
+            <Czech>Příště více štěstí...</Czech>
+            <French>Plus de chance la prochaine fois...</French>
+            <Spanish>Más suerte la próxima vez...</Spanish>
+            <Italian>Più fortuna la prossima volta...</Italian>
+            <Polish>Więcej szczęścia następnym razem...</Polish>
+            <Portuguese>Mais sorte na próxima vez...</Portuguese>
+            <Russian>Повезёт в другой раз...</Russian>
+            <German>Viel Glück beim nächsten Mal...</German>
+            <Korean>다음 기회에 행운을 빕니다...</Korean>
+            <Japanese>次こそは幸運を...</Japanese>
+            <Turkish>Bir dahaki sefere bol şans...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_TieHouseWins">
+            <English>Tie! The House always wins...</English>
+            <Czech>Remíza! Kasino vždy vyhrává...</Czech>
+            <French>Égalité ! La maison gagne toujours...</French>
+            <Spanish>¡Empate! La casa siempre gana...</Spanish>
+            <Italian>Pareggio! Il banco vince sempre...</Italian>
+            <Polish>Remis! Kasyno zawsze wygrywa...</Polish>
+            <Portuguese>Empate! A casa sempre vence...</Portuguese>
+            <Russian>Ничья! Казино всегда выигрывает...</Russian>
+            <German>Unentschieden! Die Bank gewinnt immer...</German>
+            <Korean>무승부! 항상 하우스가 승리합니다...</Korean>
+            <Japanese>引き分け！常に胴元が勝ちます...</Japanese>
+            <Turkish>Berabere! Her zaman kasa kazanır...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_YouLost">
+            <English>You lost</English>
+            <Czech>Prohráli jste</Czech>
+            <French>Vous avez perdu</French>
+            <Spanish>Has perdido</Spanish>
+            <Italian>Hai perso</Italian>
+            <Polish>Przegrałeś</Polish>
+            <Portuguese>Você perdeu</Portuguese>
+            <Russian>Вы проиграли</Russian>
+            <German>Du hast verloren</German>
+            <Korean>당신이 졌습니다</Korean>
+            <Japanese>あなたの負けです</Japanese>
+            <Turkish>Kaybettin</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_DealerLabel">
+            <English>Dealer:</English>
+            <Czech>Krupiér:</Czech>
+            <French>Croupier :</French>
+            <Spanish>Crupier:</Spanish>
+            <Italian>Banco:</Italian>
+            <Polish>Krupier:</Polish>
+            <Portuguese>Croupier:</Portuguese>
+            <Russian>Дилер:</Russian>
+            <German>Dealer:</German>
+            <Korean>딜러:</Korean>
+            <Japanese>ディーラー:</Japanese>
+            <Turkish>Krupiye:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_RulesTitle">
+            <English>DEVIL'S LUCK</English>
+            <Czech>ĎÁBLOVO ŠTĚSTÍ</Czech>
+            <French>CHANCE DU DIABLE</French>
+            <Spanish>SUERTE DEL DIABLO</Spanish>
+            <Italian>FORTUNA DEL DIAVOLO</Italian>
+            <Polish>DIABELSKIE SZCZĘŚCIE</Polish>
+            <Portuguese>SORTE DO DIABO</Portuguese>
+            <Russian>ДЬЯВОЛЬСКОЕ ВЕЗЕНИЕ</Russian>
+            <German>TEUFELSGLÜCK</German>
+            <Korean>악마의 운</Korean>
+            <Japanese>悪魔の幸運</Japanese>
+            <Turkish>ŞEYTANIN ŞANSI</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_Rule1_Title">
+            <English>The Setup:</English>
+            <Czech>Příprava:</Czech>
+            <French>La mise en place :</French>
+            <Spanish>Configuración:</Spanish>
+            <Italian>Preparazione:</Italian>
+            <Polish>Ustawienie:</Polish>
+            <Portuguese>O Início:</Portuguese>
+            <Russian>Начало:</Russian>
+            <German>Der Aufbau:</German>
+            <Korean>설정:</Korean>
+            <Japanese>セットアップ:</Japanese>
+            <Turkish>Kurulum:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_Rule1_Desc">
+            <English>The game begins with a total of 7.</English>
+            <Czech>Hra začíná se součtem 7.</Czech>
+            <French>Le jeu commence avec un total de 7.</French>
+            <Spanish>El juego comienza con un total de 7.</Spanish>
+            <Italian>Il gioco inizia con un totale di 7.</Italian>
+            <Polish>Gra rozpoczyna się z sumą 7.</Polish>
+            <Portuguese>O jogo começa com um total de 7.</Portuguese>
+            <Russian>Игра начинается с суммы 7.</Russian>
+            <German>Das Spiel beginnt mit einer Summe von 7.</German>
+            <Korean>게임은 총합 7로 시작합니다.</Korean>
+            <Japanese>ゲームは合計7から始まります。</Japanese>
+            <Turkish>Oyun toplam 7 ile başlar.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_Rule2_Title">
+            <English>Your Bet:</English>
+            <Czech>Sázka:</Czech>
+            <French>Votre pari :</French>
+            <Spanish>Tu apuesta:</Spanish>
+            <Italian>La tua puntata:</Italian>
+            <Polish>Twój zakład:</Polish>
+            <Portuguese>Sua Aposta:</Portuguese>
+            <Russian>Ваша ставка:</Russian>
+            <German>Dein Einsatz:</German>
+            <Korean>베팅:</Korean>
+            <Japanese>賭け金:</Japanese>
+            <Turkish>Bahsin:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_Rule2_Desc">
+            <English>Enter your bet in the edit box, funds are deducted or rewarded instantly upon rolling.</English>
+            <Czech>Zadejte sázku do pole, prostředky jsou odečteny nebo připsány ihned po hodu.</Czech>
+            <French>Entrez votre pari dans la case, les fonds sont déduits ou crédités instantanément après le lancer.</French>
+            <Spanish>Introduce tu apuesta, los fondos se deducen o premian al instante al tirar.</Spanish>
+            <Italian>Inserisci la puntata, i fondi vengono detratte o assegnati istantaneamente al lancio.</Italian>
+            <Polish>Wpisz zakład w pole, środki są pobierane lub wypłacane natychmiast po rzucie.</Polish>
+            <Portuguese>Insira sua aposta, os fundos são deduzidos ou recompensados instantaneamente ao rolar.</Portuguese>
+            <Russian>Введите сумму; средства списываются или начисляются сразу после броска.</Russian>
+            <German>Gib deinen Einsatz ein, das Geld wird beim Würfeln sofort abgezogen oder gutgeschrieben.</German>
+            <Korean>입력창에 베팅액을 입력하세요. 주사위를 굴리면 즉시 차감되거나 지급됩니다.</Korean>
+            <Japanese>入力欄に賭け金を入力します。ダイスを振ると即座に資金が減算または加算されます。</Japanese>
+            <Turkish>Bahsini kutuya gir, zar atıldığında miktar anında düşülür veya eklenir.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_Rule3_Title">
+            <English>The Goal:</English>
+            <Czech>Cíl:</Czech>
+            <French>L'objectif :</French>
+            <Spanish>El objetivo:</Spanish>
+            <Italian>L'obiettivo:</Italian>
+            <Polish>Cel:</Polish>
+            <Portuguese>O Objetivo:</Portuguese>
+            <Russian>Цель:</Russian>
+            <German>Das Ziel:</German>
+            <Korean>목표:</Korean>
+            <Japanese>目的:</Japanese>
+            <Turkish>Hedef:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_Rule3_Desc">
+            <English>Predict if the sum of two 6-sided dice will be HIGHER or LOWER than the current total.</English>
+            <Czech>Předpovězte, zda bude součet dvou šestistěnných kostek VYŠŠÍ nebo NIŽŠÍ než aktuální hodnota.</Czech>
+            <French>Prédisez si la somme de deux dés à 6 faces sera SUPÉRIEURE ou INFÉRIEURE au total actuel.</French>
+            <Spanish>Predice si la suma de dos dados de 6 caras será MAYOR o MENOR que el total actual.</Spanish>
+            <Italian>Prevedi se la somma di due dadi a 6 facce sarà SUPERIORE o INFERIORE al totale attuale.</Italian>
+            <Polish>Przewidź, czy suma dwóch 6-ściennych kości będzie WYŻSZA czy NIŻSZA od obecnej sumy.</Polish>
+            <Portuguese>Preveja se a soma de dois dados de 6 lados será MAIOR ou MENOR que o total atual.</Portuguese>
+            <Russian>Угадайте, будет ли сумма двух костей БОЛЬШЕ или МЕНЬШЕ текущего числа.</Russian>
+            <German>Vorhersage, ob die Summe zweier 6-seitiger Würfel HÖHER oder TIEFER als der aktuelle Wert sein wird.</German>
+            <Korean>주사위 두 개의 합이 현재 수치보다 높을지 낮을지 예측하세요.</Korean>
+            <Japanese>2つの6面ダイスの合計が、現在の数値より高いか低いかを予想します。</Japanese>
+            <Turkish>İki adet 6 yüzlü zarın toplamının mevcut sayıdan YÜKSEK mi yoksa DÜŞÜK mü olacağını tahmin et.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_Rule4_Title">
+            <English>The House Edge:</English>
+            <Czech>Výhoda kasina:</Czech>
+            <French>L'avantage de la maison :</French>
+            <Spanish>Ventaja de la casa:</Spanish>
+            <Italian>Vantaggio del banco:</Italian>
+            <Polish>Przewaga kasyna:</Polish>
+            <Portuguese>Vantagem da Casa:</Portuguese>
+            <Russian>Преимущество заведения:</Russian>
+            <German>Hausvorteil:</German>
+            <Korean>하우스 엣지:</Korean>
+            <Japanese>胴元の利点:</Japanese>
+            <Turkish>Kasa Avantajı:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_Rule4_Desc">
+            <English>If the new roll is EQUAL to the current total, you lose immediately. The House always wins.</English>
+            <Czech>Pokud je nový hod ROVEN aktuálnímu součtu, okamžitě prohráváte. Kasino vždy vyhrává.</Czech>
+            <French>Si le nouveau lancer est ÉGAL au total actuel, vous perdez immédiatement. La maison gagne toujours.</French>
+            <Spanish>Si la nueva tirada es IGUAL al total actual, pierdes inmediatamente. La casa siempre gana.</Spanish>
+            <Italian>Se il nuovo lancio è UGUALE al totale attuale, perdi immediatamente. Il banco vince sempre.</Italian>
+            <Polish>Jeśli nowy rzut jest RÓWNY obecnej sumie, natychmiast przegrywasz. Kasyno zawsze wygrywa.</Polish>
+            <Portuguese>Se o novo resultado for IGUAL ao total atual, você perde imediatamente. A casa sempre vence.</Portuguese>
+            <Russian>Если выпавшее число РАВНО текущему, вы сразу проигрываете. Казино всегда в выигрыше.</Russian>
+            <German>Wenn der neue Wurf GLEICH dem aktuellen Wert ist, verlierst du sofort. Die Bank gewinnt immer.</German>
+            <Korean>주사위 합이 현재 수치와 같으면 즉시 패배합니다. 하우스는 항상 승리합니다.</Korean>
+            <Japanese>新しい出目が現在の合計と同じ場合、即座に負けとなります。常に胴元が勝ちます。</Japanese>
+            <Turkish>Eğer yeni atılan zar mevcut toplama EŞİTSE, anında kaybedersin. Her zaman kasa kazanır.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_Rule5_Title">
+            <English>Limits:</English>
+            <Czech>Limity:</Czech>
+            <French>Limites :</French>
+            <Spanish>Límites:</Spanish>
+            <Italian>Limiti:</Italian>
+            <Polish>Limity:</Polish>
+            <Portuguese>Limites:</Portuguese>
+            <Russian>Лимиты:</Russian>
+            <German>Limits:</German>
+            <Korean>한도:</Korean>
+            <Japanese>制限:</Japanese>
+            <Turkish>Limitler:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_Rule5_Desc">
+            <English>Every Game Master has limited funds, if you bleed them dry, the game ends.</English>
+            <Czech>Každý krupiér má omezené prostředky, pokud ho oberete o vše, hra končí.</Czech>
+            <French>Chaque maître de jeu a des fonds limités. Si vous le videz de son argent, le jeu s'arrête.</French>
+            <Spanish>Cada director de juego tiene fondos limitados; si lo dejas seco, el juego termina.</Spanish>
+            <Italian>Ogni banco ha fondi limitati; se lo prosciughi, il gioco finisce.</Italian>
+            <Polish>Każdy mistrz gry ma ograniczone środki; jeśli go spłuczesz, gra się kończy.</Polish>
+            <Portuguese>Cada Mestre de Jogo tem fundos limitados; se você os deixar sem nada, o jogo termina.</Portuguese>
+            <Russian>У каждого дилера ограниченный запас денег; если он обанкротится, игра окончена.</Russian>
+            <German>Jeder Spielleiter hat begrenzte Mittel. Wenn du ihn ausnimmst, endet das Spiel.</German>
+            <Korean>모든 딜러는 자금이 한정되어 있습니다. 자금을 모두 따내면 게임이 종료됩니다.</Korean>
+            <Japanese>ディーラーの資金には限りがあります。資金を使い果たさせるとゲームは終了します。</Japanese>
+            <Turkish>Her oyun yöneticisinin sınırlı parası vardır, eğer onları kurutursan oyun biter.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_ProTip_Body">
+            <English>Pro Tip: Probabilities shift toward the middle (7). A 2 or 12 is your best chance to strike...</English>
+            <Czech>Tip: Pravděpodobnost se přiklání ke středu (7). 2 nebo 12 je vaše nejlepší šance na úspěch...</Czech>
+            <French>Conseil d'expert : Les probabilités tendent vers le milieu (7). Un 2 ou un 12 est votre meilleure chance de gagner gros...</French>
+            <Spanish>Consejo: Las probabilidades se inclinan hacia el centro (7). Un 2 o un 12 es tu mejor oportunidad para ganar...</Spanish>
+            <Italian>Suggerimento: Le probabilità tendono verso il centro (7). Un 2 o un 12 sono la tua migliore occasione per colpire...</Italian>
+            <Polish>Porada: Prawdopodobieństwo dąży do środka (7). 2 lub 12 to Twoja najlepsza szansa na wygraną...</Polish>
+            <Portuguese>Dica: As probabilidades tendem para o meio (7). Um 2 ou 12 é a sua melhor chance de ganhar muito...</Portuguese>
+            <Russian>Совет: Вероятность смещена к середине (7). Числа 2 или 12 — ваш лучший шанс на успех...</Russian>
+            <German>Profi-Tipp: Die Wahrscheinlichkeit neigt zur Mitte (7). Eine 2 oder 12 ist deine beste Chance abzukassieren...</German>
+            <Korean>팁: 확률은 중간(7)에 집중됩니다. 2나 12가 나왔을 때가 큰 점수를 노릴 최고의 기회입니다...</Korean>
+            <Japanese>ヒント: 確率は中央（7）に偏ります。2または12は、一撃を狙う最大のチャンスです...</Japanese>
+            <Turkish>İpucu: Olasılıklar ortaya (7) doğru kayar. 2 veya 12, vurmak için en iyi şansındır...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_Lower">
+            <English>LOWER</English>
+            <Czech>NIŽŠÍ</Czech>
+            <French>PLUS BAS</French>
+            <Spanish>MENOR</Spanish>
+            <Italian>PIÙ BASSO</Italian>
+            <Polish>NIŻSZA</Polish>
+            <Portuguese>MENOR</Portuguese>
+            <Russian>МЕНЬШЕ</Russian>
+            <German>TIEFER</German>
+            <Korean>낮음</Korean>
+            <Japanese>低い</Japanese>
+            <Turkish>DÜŞÜK</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_Higher">
+            <English>HIGHER</English>
+            <Czech>VYŠŠÍ</Czech>
+            <French>PLUS HAUT</French>
+            <Spanish>MAYOR</Spanish>
+            <Italian>PIÙ ALTO</Italian>
+            <Polish>WYŻSZA</Polish>
+            <Portuguese>MAIOR</Portuguese>
+            <Russian>БОЛЬШЕ</Russian>
+            <German>HÖHER</German>
+            <Korean>높음</Korean>
+            <Japanese>高い</Japanese>
+            <Turkish>YÜKSEK</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_PredictionLabel">
+            <English>Prediction:</English>
+            <Czech>Předpověď:</Czech>
+            <French>Prédiction :</French>
+            <Spanish>Predicción:</Spanish>
+            <Italian>Previsione:</Italian>
+            <Polish>Przewidywanie:</Polish>
+            <Portuguese>Previsão:</Portuguese>
+            <Russian>Прогноз:</Russian>
+            <German>Vorhersage:</German>
+            <Korean>예측:</Korean>
+            <Japanese>予想:</Japanese>
+            <Turkish>Tahmin:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_CurrentBetLabel">
+            <English>Current Bet:</English>
+            <Czech>Aktuální sázka:</Czech>
+            <French>Pari actuel :</French>
+            <Spanish>Apuesta actual:</Spanish>
+            <Italian>Puntata attuale:</Italian>
+            <Polish>Aktualny zakład:</Polish>
+            <Portuguese>Aposta Atual:</Portuguese>
+            <Russian>Текущая ставка:</Russian>
+            <German>Aktueller Einsatz:</German>
+            <Korean>현재 베팅:</Korean>
+            <Japanese>現在の賭け金:</Japanese>
+            <Turkish>Mevcut Bahis:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_DistanceCheck">
+            <English>Distance check</English>
+            <Czech>Kontrola vzdálenosti</Czech>
+            <French>Vérification de distance</French>
+            <Spanish>Comprobación de distancia</Spanish>
+            <Italian>Controllo distanza</Italian>
+            <Polish>Sprawdzenie odległości</Polish>
+            <Portuguese>Verificação de distância</Portuguese>
+            <Russian>Проверка дистанции</Russian>
+            <German>Entfernungsprüfung</German>
+            <Korean>거리 확인</Korean>
+            <Japanese>距離チェック</Japanese>
+            <Turkish>Mesafe kontrolü</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_DistanceCheckDesc">
+            <English>Distance that the dealer manager checks for players near dealers in meters</English>
+            <Czech>Vzdálenost v metrech, ve které správce dealerů kontroluje přítomnost hráčů</Czech>
+            <French>Distance en mètres à laquelle le gestionnaire des dealers vérifie la présence de joueurs</French>
+            <Spanish>Distancia en metros a la que el administrador de traficantes busca jugadores cerca</Spanish>
+            <Italian>Distanza in metri entro cui il gestore dei mercanti controlla la presenza di giocatori</Italian>
+            <Polish>Odległość w metrach, na której menedżer handlarzy sprawdza obecność graczy</Polish>
+            <Portuguese>Distância em metros que o gerente de negociantes verifica por jogadores próximos</Portuguese>
+            <Russian>Дистанция в метрах, на которой менеджер торговцев проверяет наличие игроков рядом</Russian>
+            <German>Entfernung in Metern, in der der Dealer-Manager nach Spielern in der Nähe sucht</German>
+            <Korean>딜러 매니저가 딜러 주변의 플레이어를 확인하는 거리(미터 단위)</Korean>
+            <Japanese>ディーラーマネージャーがディーラー付近のプレイヤーを確認する距離（メートル）</Japanese>
+            <Turkish>Satıcı yöneticisinin satıcıların yakınındaki oyuncuları kontrol ettiği metre cinsinden mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_Cycle">
+            <English>Changing cycle 'Dynamic AI gambling'</English>
+            <Czech>Cyklus změny 'Dynamické AI hazardní hry'</Czech>
+            <French>Cycle de changement 'Jeux d'argent IA dynamiques'</French>
+            <Spanish>Ciclo de cambio 'Juego de azar dinámico de IA'</Spanish>
+            <Italian>Ciclo di modifica 'Gioco d'azzardo IA dinamico'</Italian>
+            <Polish>Cykl zmian 'Dynamiczny hazard AI'</Polish>
+            <Portuguese>Ciclo de mudança 'Jogo de azar dinâmico de IA'</Portuguese>
+            <Russian>Цикл изменения «Динамические азартные игры ИИ»</Russian>
+            <German>Änderungszyklus 'Dynamisches KI-Glücksspiel'</German>
+            <Korean>변경 주기 '다이나믹 AI 도박'</Korean>
+            <Japanese>変更サイクル「ダイナミックAIギャンブル」</Japanese>
+            <Turkish>Değişim döngüsü 'Dinamik Yapay Zeka kumarı'</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Devils_Luck_CycleDesc">
+            <English>Time in seconds per cycle (default: 1800 - 30 minutes)</English>
+            <Czech>Čas v sekundách na cyklus (výchozí: 1800 - 30 minut)</Czech>
+            <French>Temps en secondes par cycle (par défaut : 1800 - 30 minutes)</French>
+            <Spanish>Tiempo en segundos por ciclo (por defecto: 1800 - 30 minutos)</Spanish>
+            <Italian>Tempo in secondi per ciclo (predefinito: 1800 - 30 minuti)</Italian>
+            <Polish>Czas w sekundach na cykl (domyślnie: 1800 - 30 minut)</Polish>
+            <Portuguese>Tempo em segundos por ciclo (padrão: 1800 - 30 minutos)</Portuguese>
+            <Russian>Время в секундах на цикл (по умолчанию: 1800 — 30 минут)</Russian>
+            <German>Zeit in Sekunden pro Zyklus (Standard: 1800 - 30 Minuten)</German>
+            <Korean>사이클당 시간(초) (기본값: 1800 - 30분)</Korean>
+            <Japanese>サイクルあたりの時間（秒）（デフォルト：1800 - 30分）</Japanese>
+            <Turkish>Döngü başına saniye cinsinden süre (varsayılan: 1800 - 30 dakika)</Turkish>
+        </Key>
+    </Package>
+</Project>

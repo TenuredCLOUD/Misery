@@ -21,9 +21,9 @@
     GVAR(currentTotal) = 7;
 
     ctrlSetText [1101, "7"];
-    ctrlSetText [1103, localize ECSTRING(common,PredictionNone)];
+    ctrlSetText [1103, localize LSTRING(PredictionNone)];
 
-    private _betText = format ["%2 %1 0", EGVAR(currency,symbol), localize ECSTRING(common,CurrentBetLabel)];
+    private _betText = format ["%2 %1 0", EGVAR(currency,symbol), localize LSTRING(CurrentBetLabel)];
 
     ctrlSetText [1102, _betText];
 
@@ -34,7 +34,7 @@
     private _dealer = player getVariable [QGVAR(currentDealer), objNull];
     private _dealerFunds = _dealer getVariable [QGVAR(dealerFunds), 50000];
 
-    ctrlSetText [2223, format ["%3 %1 %2", EGVAR(currency,symbol), [_dealerFunds, 1, 2, true] call CBA_fnc_formatNumber, localize ECSTRING(common,DealerLabel)]];
+    ctrlSetText [2223, format ["%3 %1 %2", EGVAR(currency,symbol), [_dealerFunds, 1, 2, true] call CBA_fnc_formatNumber, localize LSTRING(DealerLabel)]];
 
     _dealer setVariable [QGVAR(isActive), true, true];
 

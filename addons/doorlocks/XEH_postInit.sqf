@@ -3,7 +3,7 @@
 if (hasInterface) then {
     [
         "installLock_menu",
-        "Install Door Locks",
+        localize LSTRING(Install),
         {[[QCLASS(lockKit)]] call EFUNC(common,hasItem) && {call FUNC(countDoors) params ["_doorCount", "_building", "_noLock"]; !_noLock && _doorCount > 0 && !isNull _building && isNil {_building getVariable QGVAR(doorPin)}}},
         {
             [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
@@ -17,7 +17,7 @@ if (hasInterface) then {
 
     [
         "unlockDoors_menu",
-        "Unlock Doors",
+        localize LSTRING(Unlock),
         {call FUNC(countDoors) params ["_doorCount", "_building"]; _doorCount > 0 && !isNull _building && (_building getVariable [QGVAR(doorsLocked), false])},
         {
             [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
@@ -31,7 +31,7 @@ if (hasInterface) then {
 
     [
         "lockDoors_menu",
-        "Lock Doors",
+        localize LSTRING(Lock),
         {call FUNC(countDoors) params ["_doorCount", "_building"]; _doorCount > 0 && !isNull _building && !(_building getVariable [QGVAR(doorsLocked), false]) && {!isNil {_building getVariable QGVAR(doorPin)}}},
         {
             [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;

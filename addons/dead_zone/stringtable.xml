@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Dead_Zone">
+        <Key ID="STR_MISERY_Dead_Zone_Areas">
+            <English>Dead Zone Areas</English>
+            <Czech>Oblasti mrtvé zóny</Czech>
+            <French>Zones d'exclusion</French>
+            <Spanish>Áreas de zona muerta</Spanish>
+            <Italian>Aree zona morta</Italian>
+            <Polish>Obszary martwej strefy</Polish>
+            <Portuguese>Áreas de zona morta</Portuguese>
+            <Russian>Мертвые зоны</Russian>
+            <German>Todeszonen-Bereiche</German>
+            <Korean>데드 존 구역</Korean>
+            <Japanese>デッドゾーンエリア</Japanese>
+            <Turkish>Ölü Bölge Alanları</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Dead_Zone_DeadZonesDesc">
+            <English>ELLIPSE or RECTANGLE marker names covering the barrage areas as strings ['Deadzone_1', 'Deadzone_2']</English>
+            <Czech>Názvy značek ELLIPSE nebo RECTANGLE pokrývající oblasti palby jako řetězce ['Deadzone_1', 'Deadzone_2']</Czech>
+            <French>Noms des marqueurs ELLIPSE ou RECTANGLE couvrant les zones de barrage sous forme de chaînes ['Deadzone_1', 'Deadzone_2']</French>
+            <Spanish>Nombres de marcadores ELLIPSE o RECTANGLE que cubren las áreas de bombardeo como cadenas ['Deadzone_1', 'Deadzone_2']</Spanish>
+            <Italian>Nomi dei marcatori ELLIPSE o RECTANGLE che coprono le aree di sbarramento come stringhe ['Deadzone_1', 'Deadzone_2']</Italian>
+            <Polish>Nazwy znaczników ELLIPSE lub RECTANGLE pokrywające obszary ostrzału jako ciągi znaków ['Deadzone_1', 'Deadzone_2']</Polish>
+            <Portuguese>Nomes dos marcadores ELLIPSE ou RECTANGLE que cobrem as áreas de barragem como strings ['Deadzone_1', 'Deadzone_2']</Portuguese>
+            <Russian>Имена маркеров ELLIPSE или RECTANGLE, покрывающих зоны обстрела, в виде строк ['Deadzone_1', 'Deadzone_2']</Russian>
+            <German>ELLIPSE- oder RECTANGLE-Markernamen, die die Sperrfeuerbereiche abdecken, als Strings ['Deadzone_1', 'Deadzone_2']</German>
+            <Korean>사격 구역을 덮는 ELLIPSE 또는 RECTANGLE 마커 이름 문자열 ['Deadzone_1', 'Deadzone_2']</Korean>
+            <Japanese>弾幕エリアをカバーする ELLIPSE または RECTANGLE マーカー名の文字列 ['Deadzone_1', 'Deadzone_2']</Japanese>
+            <Turkish>Baraj alanlarını kapsayan ELLIPSE veya RECTANGLE işaretçi adları dizeleri ['Deadzone_1', 'Deadzone_2']</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Dead_Zone_Delay">
+            <English>Barrage delay</English>
+            <Czech>Prodleva palby</Czech>
+            <French>Délai du barrage</French>
+            <Spanish>Retraso del bombardeo</Spanish>
+            <Italian>Ritardo sbarramento</Italian>
+            <Polish>Opóźnienie ostrzału</Polish>
+            <Portuguese>Atraso da barragem</Portuguese>
+            <Russian>Задержка обстрела</Russian>
+            <German>Sperrfeuer-Verzögerung</German>
+            <Korean>포격 지연 시간</Korean>
+            <Japanese>弾幕の遅延</Japanese>
+            <Turkish>Baraj gecikmesi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Dead_Zone_DelayDesc">
+            <English>Global delay between each shell barrage</English>
+            <Czech>Globální prodleva mezi jednotlivými salvami granátů</Czech>
+            <French>Délai global entre chaque barrage d'obus</French>
+            <Spanish>Retraso global entre cada ráfaga de proyectiles</Spanish>
+            <Italian>Ritardo globale tra ogni sbarramento di proiettili</Italian>
+            <Polish>Globalne opóźnienie między każdą salwą pocisków</Polish>
+            <Portuguese>Atraso global entre cada barragem de granadas</Portuguese>
+            <Russian>Глобальная задержка между каждым артиллерийским обстрелом</Russian>
+            <German>Globale Verzögerung zwischen jeder Granatensalve</German>
+            <Korean>각 포격 사이의 전역 지연 시간</Korean>
+            <Japanese>各弾幕間のグローバルな遅延時間</Japanese>
+            <Turkish>Her mermi barajı arasındaki küresel gecikme</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Dead_Zone_ShellTypes">
+            <English>Shell Types</English>
+            <Czech>Typy granátů</Czech>
+            <French>Types d'obus</French>
+            <Spanish>Tipos de proyectiles</Spanish>
+            <Italian>Tipi di proiettili</Italian>
+            <Polish>Typy pocisków</Polish>
+            <Portuguese>Tipos de granadas</Portuguese>
+            <Russian>Типы снарядов</Russian>
+            <German>Granatentypen</German>
+            <Korean>포탄 종류</Korean>
+            <Japanese>砲弾の種類</Japanese>
+            <Turkish>Mermi Türleri</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Dead_Zone_ShellTypesDesc">
+            <English>Pool of shell classnames to randomly use ['Sh_82mm_AMOS', 'Sh_155mm_AMOS']</English>
+            <Czech>Seznam classnamů granátů pro náhodné použití ['Sh_82mm_AMOS', 'Sh_155mm_AMOS']</Czech>
+            <French>Liste des classnames d'obus à utiliser aléatoirement ['Sh_82mm_AMOS', 'Sh_155mm_AMOS']</French>
+            <Spanish>Lista de classnames de proyectiles para usar aleatoriamente ['Sh_82mm_AMOS', 'Sh_155mm_AMOS']</Spanish>
+            <Italian>Elenco dei classname dei proiettili da usare casualmente ['Sh_82mm_AMOS', 'Sh_155mm_AMOS']</Italian>
+            <Polish>Pula nazw klas pocisków do losowego użycia ['Sh_82mm_AMOS', 'Sh_155mm_AMOS']</Polish>
+            <Portuguese>Pool de classnames de granadas para usar aleatoriamente ['Sh_82mm_AMOS', 'Sh_155mm_AMOS']</Portuguese>
+            <Russian>Список классов снарядов для случайного использования ['Sh_82mm_AMOS', 'Sh_155mm_AMOS']</Russian>
+            <German>Pool von Granaten-Classnames zur zufälligen Verwendung ['Sh_82mm_AMOS', 'Sh_155mm_AMOS']</German>
+            <Korean>무작위로 사용할 포탄 클래스 이름 목록 ['Sh_82mm_AMOS', 'Sh_155mm_AMOS']</Korean>
+            <Japanese>ランダムに使用する砲弾クラス名のプール ['Sh_82mm_AMOS', 'Sh_155mm_AMOS']</Japanese>
+            <Turkish>Rastgele kullanılacak mermi sınıf adları havuzu ['Sh_82mm_AMOS', 'Sh_155mm_AMOS']</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Dead_Zone_Radius">
+            <English>Barrage radius</English>
+            <Czech>Poloměr palby</Czech>
+            <French>Rayon du barrage</French>
+            <Spanish>Radio del bombardeo</Spanish>
+            <Italian>Raggio sbarramento</Italian>
+            <Polish>Promień ostrzału</Polish>
+            <Portuguese>Raio da barragem</Portuguese>
+            <Russian>Радиус обстрела</Russian>
+            <German>Sperrfeuer-Radius</German>
+            <Korean>포격 반경</Korean>
+            <Japanese>弾幕の半径</Japanese>
+            <Turkish>Baraj yarıçapı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Dead_Zone_RadiusDesc">
+            <English>Radius of target area in meters</English>
+            <Czech>Poloměr cílové oblasti v metrech</Czech>
+            <French>Rayon de la zone cible en mètres</French>
+            <Spanish>Radio del área objetivo en metros</Spanish>
+            <Italian>Raggio dell'area bersaglio in metri</Italian>
+            <Polish>Promień obszaru docelowego w metrach</Polish>
+            <Portuguese>Raio da área alvo em metros</Portuguese>
+            <Russian>Радиус целевой зоны в метрах</Russian>
+            <German>Radius des Zielgebiets in Metern</German>
+            <Korean>대상 구역의 반경(미터 단위)</Korean>
+            <Japanese>ターゲットエリアの半径（メートル）</Japanese>
+            <Turkish>Metre cinsinden hedef alan yarıçapı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Dead_Zone_Density">
+            <English>Barrage density</English>
+            <Czech>Hustota palby</Czech>
+            <French>Densité du barrage</French>
+            <Spanish>Densidad del bombardeo</Spanish>
+            <Italian>Densità sbarramento</Italian>
+            <Polish>Gęstość ostrzału</Polish>
+            <Portuguese>Densidade da barragem</Portuguese>
+            <Russian>Плотность обстрела</Russian>
+            <German>Sperrfeuer-Dichte</German>
+            <Korean>포격 밀도</Korean>
+            <Japanese>弾幕の密度</Japanese>
+            <Turkish>Baraj yoğunluğu</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Dead_Zone_DensityDesc">
+            <English>How many rounds are fired each barrage</English>
+            <Czech>Kolik ran je vystřeleno při každé salvě</Czech>
+            <French>Nombre de coups tirés lors de chaque barrage</French>
+            <Spanish>Cuántos disparos se realizan en cada bombardeo</Spanish>
+            <Italian>Quanti colpi vengono sparati per ogni sbarramento</Italian>
+            <Polish>Ile pocisków jest wystrzeliwanych w każdej salwie</Polish>
+            <Portuguese>Quantos disparos são feitos em cada barragem</Portuguese>
+            <Russian>Сколько выстрелов производится при каждом обстреле</Russian>
+            <German>Wie viele Schüsse pro Sperrfeuer abgefeuert werden</German>
+            <Korean>각 포격 시 발사되는 탄수</Korean>
+            <Japanese>各弾幕で発射される弾丸の数</Japanese>
+            <Turkish>Her barajda kaç mermi ateşlenir</Turkish>
+        </Key>
+    </Package>
+</Project>
