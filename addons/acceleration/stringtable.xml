@@ -3,8 +3,6 @@
     <Package name="Acceleration">
         <Key ID="STR_MISERY_Acceleration_NoTimeAccel">
             <English>No time acceleration</English>
-            <Chinesesimp>无时间加速</Chinesesimp>
-            <Chinese>無時間加速</Chinese>
             <Czech>Žádné zrychlení času</Czech>
             <French>Pas d'accélération du temps</French>
             <Spanish>Sin aceleración de tiempo</Spanish>
@@ -15,12 +13,12 @@
             <German>Keine Zeitbeschleunigung</German>
             <Korean>시간 가속 없음</Korean>
             <Japanese>時間の加速なし</Japanese>
+            <Chinese>無時間加速</Chinese>
+            <Chinesesimp>无时间加速</Chinesesimp>
             <Turkish>Zaman hızlandırma yok</Turkish>
         </Key>
         <Key ID="STR_MISERY_Acceleration_NoTimeAccel_Desc">
             <English>When enabled time acceleration in SP is no longer allowed</English>
-            <Chinesesimp>开启后，单人模式下将不再允许时间加速</Chinesesimp>
-            <Chinese>開啟後，單人模式下將不再允許時間加速</Chinese>
             <Czech>Když je povoleno, zrychlení času v SP již není dovoleno</Czech>
             <French>Une fois activée, l'accélération du temps en SP n'est plus autorisée</French>
             <Spanish>Cuando está activado, la aceleración de tiempo en SP ya no está permitida</Spanish>
@@ -31,6 +29,8 @@
             <German>Wenn aktiviert, ist Zeitbeschleunigung im SP nicht mehr erlaubt</German>
             <Korean>활성화 시 싱글 플레이어에서 시간 가속을 사용할 수 없습니다</Korean>
             <Japanese>有効にすると、SPでの時間の加速が許可されなくなります</Japanese>
+            <Chinese>開啟後，單人模式下將不再允許時間加速</Chinese>
+            <Chinesesimp>开启后，单人模式下将不再允许时间加速</Chinesesimp>
             <Turkish>Etkinleştirildiğinde, SP'de zaman hızlandırmaya artık izin verilmez</Turkish>
         </Key>
     </Package>

@@ -3,8 +3,6 @@
     <Package name="Crafting">
         <Key ID="STR_MISERY_Crafting_Action">
             <English>Use Workbench</English>
-            <Chinesesimp>使用工作台</Chinesesimp>
-            <Chinese>使用工作台</Chinese>
             <Czech>Použití pracovního stolu</Czech>
             <French>Utiliser l'atelier</French>
             <Spanish>Utilizar Workbench</Spanish>
@@ -15,44 +13,12 @@
             <German>Workbench verwenden</German>
             <Korean>워크벤치 사용</Korean>
             <Japanese>ワークベンチを使う</Japanese>
+            <Chinese>使用工作台</Chinese>
+            <Chinesesimp>使用工作台</Chinesesimp>
             <Turkish>Workbench Kullanın</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Crafting_Interrupted">
-            <English>Crafting interrupted...</English>
-            <Chinesesimp>制作已中断...</Chinesesimp>
-            <Chinese>製作已中斷...</Chinese>
-            <Czech>Výroba přerušena...</Czech>
-            <French>Artisanat interrompu...</French>
-            <Spanish>Artesanía interrumpida...</Spanish>
-            <Italian>Creazione interrotta...</Italian>
-            <Polish>Rzemiosło przerwane...</Polish>
-            <Portuguese>Criação interrompida...</Portuguese>
-            <Russian>Cоздание прервано...</Russian>
-            <German>Herstellung unterbrochen...</German>
-            <Korean>제작이 중단되었습니다...</Korean>
-            <Japanese>クラフトが中断されました...</Japanese>
-            <Turkish>Zanaat kesintiye uğradı...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Crafting_Progress">
-            <English>Crafting %1... %2%3 complete</English>
-            <Chinesesimp>正在制作 %1... %2%3 已完成</Chinesesimp>
-            <Chinese>正在製作 %1... %2%3 已完成</Chinese>
-            <Czech>Vyrábění %1... %2%3 hotovo</Czech>
-            <French>Fabrication de %1... %2%3 terminé</French>
-            <Spanish>Fabricando %1... %2%3 completado</Spanish>
-            <Italian>Creazione di %1... %2%3 completato</Italian>
-            <Polish>Wytwarzanie %1... ukończono %2%3</Polish>
-            <Portuguese>Fabricando %1... %2%3 concluído</Portuguese>
-            <Russian>Изготовление %1... %2%3 завершено</Russian>
-            <German>Stelle %1 her... %2%3 abgeschlossen</German>
-            <Korean>%1 제작 중... %2%3 완료</Korean>
-            <Japanese>%1をクラフト中... %2%3 完了</Japanese>
-            <Turkish>%1 üretiliyor... %%%2 tamamlandı</Turkish>
         </Key>
         <Key ID="STR_MISERY_Crafting_GainXP">
             <English>You gained %1 XP from crafting %2.</English>
-            <Chinesesimp>你通过制作 %2 获得了 %1 经验值。</Chinesesimp>
-            <Chinese>你通過製作 %2 獲得了 %1 經驗值。</Chinese>
             <Czech>Získali jste %1 zkušeností za výrobu %2.</Czech>
             <French>Vous avez gagné %1 XP en fabriquant %2.</French>
             <Spanish>Has ganado %1 XP al fabricar %2.</Spanish>
@@ -63,28 +29,44 @@
             <German>Du hast %1 EP durch die Herstellung von %2 erhalten.</German>
             <Korean>%2 제작을 통해 %1 XP를 획득했습니다.</Korean>
             <Japanese>%2のクラフトにより %1 XPを獲得しました。</Japanese>
+            <Chinese>你通過製作 %2 獲得了 %1 經驗值。</Chinese>
+            <Chinesesimp>你通过制作 %2 获得了 %1 经验值。</Chinesesimp>
             <Turkish>%2 üreterek %1 TP kazandınız.</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Crafting_Success">
-            <English>You crafted %1 %2!</English>
-            <Chinesesimp>你制作了 %1 个 %2！</Chinesesimp>
-            <Chinese>你製作了 %1 個 %2！</Chinese>
-            <Czech>Vyrobil jste %1 %2!</Czech>
-            <French>Vous avez fabriqué %1 %2 !</French>
-            <Spanish>¡Has fabricado %1 %2!</Spanish>
-            <Italian>Hai creato %1 %2!</Italian>
-            <Polish>Wytworzyłeś %1 %2!</Polish>
-            <Portuguese>Tu fabricaste %1 %2!</Portuguese>
-            <Russian>Вы изготовили %1 %2!</Russian>
-            <German>Du hast %1 %2 hergestellt!</German>
-            <Korean>%1개의 %2을(를) 제작했습니다!</Korean>
-            <Japanese>%1個の%2をクラフトしました！</Japanese>
-            <Turkish>%1 adet %2 ürettiniz!</Turkish>
+        <Key ID="STR_MISERY_Crafting_Interrupted">
+            <English>Crafting interrupted...</English>
+            <Czech>Výroba přerušena...</Czech>
+            <French>Artisanat interrompu...</French>
+            <Spanish>Artesanía interrumpida...</Spanish>
+            <Italian>Creazione interrotta...</Italian>
+            <Polish>Rzemiosło przerwane...</Polish>
+            <Portuguese>Criação interrompida...</Portuguese>
+            <Russian>Cоздание прервано...</Russian>
+            <German>Herstellung unterbrochen...</German>
+            <Korean>제작이 중단되었습니다...</Korean>
+            <Japanese>クラフトが中断されました...</Japanese>
+            <Chinese>製作已中斷...</Chinese>
+            <Chinesesimp>制作已中断...</Chinesesimp>
+            <Turkish>Zanaat kesintiye uğradı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Crafting_Progress">
+            <English>Crafting %1... %2%3 complete</English>
+            <Czech>Vyrábění %1... %2%3 hotovo</Czech>
+            <French>Fabrication de %1... %2%3 terminé</French>
+            <Spanish>Fabricando %1... %2%3 completado</Spanish>
+            <Italian>Creazione di %1... %2%3 completato</Italian>
+            <Polish>Wytwarzanie %1... ukończono %2%3</Polish>
+            <Portuguese>Fabricando %1... %2%3 concluído</Portuguese>
+            <Russian>Изготовление %1... %2%3 завершено</Russian>
+            <German>Stelle %1 her... %2%3 abgeschlossen</German>
+            <Korean>%1 제작 중... %2%3 완료</Korean>
+            <Japanese>%1をクラフト中... %2%3 完了</Japanese>
+            <Chinese>正在製作 %1... %2%3 已完成</Chinese>
+            <Chinesesimp>正在制作 %1... %2%3 已完成</Chinesesimp>
+            <Turkish>%1 üretiliyor... %%%2 tamamlandı</Turkish>
         </Key>
         <Key ID="STR_MISERY_Crafting_Required">
             <English>Required Items:</English>
-            <Chinesesimp>所需物品:</Chinesesimp>
-            <Chinese>所需物品:</Chinese>
             <Czech>Požadované položky:</Czech>
             <French>Objets requis :</French>
             <Spanish>Objetos requeridos:</Spanish>
@@ -95,7 +77,25 @@
             <German>Benötigte Gegenstände:</German>
             <Korean>필요한 아이템:</Korean>
             <Japanese>必要なアイテム:</Japanese>
+            <Chinese>所需物品:</Chinese>
+            <Chinesesimp>所需物品:</Chinesesimp>
             <Turkish>Gerekli öğeler:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Crafting_Success">
+            <English>You crafted %1 %2!</English>
+            <Czech>Vyrobil jste %1 %2!</Czech>
+            <French>Vous avez fabriqué %1 %2 !</French>
+            <Spanish>¡Has fabricado %1 %2!</Spanish>
+            <Italian>Hai creato %1 %2!</Italian>
+            <Polish>Wytworzyłeś %1 %2!</Polish>
+            <Portuguese>Tu fabricaste %1 %2!</Portuguese>
+            <Russian>Вы изготовили %1 %2!</Russian>
+            <German>Du hast %1 %2 hergestellt!</German>
+            <Korean>%1개의 %2을(를) 제작했습니다!</Korean>
+            <Japanese>%1個の%2をクラフトしました！</Japanese>
+            <Chinese>你製作了 %1 個 %2！</Chinese>
+            <Chinesesimp>你制作了 %1 个 %2！</Chinesesimp>
+            <Turkish>%1 adet %2 ürettiniz!</Turkish>
         </Key>
     </Package>
 </Project>

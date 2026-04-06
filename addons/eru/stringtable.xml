@@ -1,26 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
     <Package name="ERU">
-        <Key ID="STR_MISERY_ERU_NoERUNeedsBatteries">
-            <English>You don't have an ERU that needs batteries...</English>
-            <Chinesesimp>你没有需要电池的环境读取装置...</Chinesesimp>
-            <Chinese>你沒有需要電池的環境讀取裝置...</Chinese>
-            <Czech>Nemáte ERU, která by potřebovala baterie...</Czech>
-            <French>Vous n'avez pas d'ERU nécessitant des piles...</French>
-            <Spanish>No tienes un ERU que necesite baterías...</Spanish>
-            <Italian>Non hai un ERU che necessiti di batterie...</Italian>
-            <Polish>Nie masz ERU wymagającego baterii...</Polish>
-            <Portuguese>Você não tem um ERU que precise de baterias...</Portuguese>
-            <Russian>У вас нет ERU, требующего батареек...</Russian>
-            <German>Du hast kein ERU, das Batterien benötigt...</German>
-            <Korean>배터리가 필요한 ERU가 없습니다...</Korean>
-            <Japanese>電池が必要なERUを持っていません...</Japanese>
-            <Turkish>Pile ihtiyacı olan bir ERU'n yok...</Turkish>
-        </Key>
         <Key ID="STR_MISERY_ERU_AddBatteryToERU">
             <English>You add a lithium battery to your ERU</English>
-            <Chinesesimp>你向环境读取装置添加了一块锂电池</Chinesesimp>
-            <Chinese>你向環境讀取裝置添加了一塊鋰電池</Chinese>
             <Czech>Přidali jste lithiovou baterii do ERU</Czech>
             <French>Vous ajoutez une pile au lithium à votre ERU</French>
             <Spanish>Añades una batería de litio a tu ERU</Spanish>
@@ -31,12 +13,12 @@
             <German>Du legst eine Lithium-Batterie in dein ERU ein</German>
             <Korean>ERU에 리튬 배터리를 추가합니다</Korean>
             <Japanese>ERUにリチウム電池を追加しました</Japanese>
+            <Chinese>你向環境讀取裝置添加了一塊鋰電池</Chinese>
+            <Chinesesimp>你向环境读取装置添加了一块锂电池</Chinesesimp>
             <Turkish>ERU'na lityum pil ekledin</Turkish>
         </Key>
         <Key ID="STR_MISERY_ERU_AirLabel">
             <English>AIR:</English>
-            <Chinesesimp>空气:</Chinesesimp>
-            <Chinese>空氣:</Chinese>
             <Czech>VZDUCH:</Czech>
             <French>AIR :</French>
             <Spanish>AIRE:</Spanish>
@@ -47,44 +29,12 @@
             <German>LUFT:</German>
             <Korean>대기:</Korean>
             <Japanese>空気:</Japanese>
+            <Chinese>空氣:</Chinese>
+            <Chinesesimp>空气:</Chinesesimp>
             <Turkish>HAVA:</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_ERU_SeaLabel">
-            <English>SEA:</English>
-            <Chinesesimp>海水:</Chinesesimp>
-            <Chinese>海水:</Chinese>
-            <Czech>MOŘE:</Czech>
-            <French>MER :</French>
-            <Spanish>MAR:</Spanish>
-            <Italian>MARE:</Italian>
-            <Polish>MORZE:</Polish>
-            <Portuguese>MAR:</Portuguese>
-            <Russian>МОРЕ:</Russian>
-            <German>MEER:</German>
-            <Korean>해수:</Korean>
-            <Japanese>海水:</Japanese>
-            <Turkish>DENİZ:</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_ERU_ExposureLabel">
-            <English>EXPOSURE:</English>
-            <Chinesesimp>暴露:</Chinesesimp>
-            <Chinese>暴露:</Chinese>
-            <Czech>EXPOZICE:</Czech>
-            <French>EXPOSITION :</French>
-            <Spanish>EXPOSICIÓN:</Spanish>
-            <Italian>ESPOSIZIONE:</Italian>
-            <Polish>EKSPOZYCJA:</Polish>
-            <Portuguese>EXPOSIÇÃO:</Portuguese>
-            <Russian>ОБЛУЧЕНИЕ:</Russian>
-            <German>EXPOSITION:</German>
-            <Korean>노출:</Korean>
-            <Japanese>露出:</Japanese>
-            <Turkish>MARUZİYET:</Turkish>
         </Key>
         <Key ID="STR_MISERY_ERU_CompassLabel">
             <English>COMPASS:</English>
-            <Chinesesimp>指南针:</Chinesesimp>
-            <Chinese>指南針:</Chinese>
             <Czech>KOMPAS:</Czech>
             <French>BOUSSOLE :</French>
             <Spanish>BRÚJULA:</Spanish>
@@ -95,28 +45,12 @@
             <German>KOMPASS:</German>
             <Korean>나침반:</Korean>
             <Japanese>コンパス:</Japanese>
+            <Chinese>指南針:</Chinese>
+            <Chinesesimp>指南针:</Chinesesimp>
             <Turkish>PUSULA:</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_ERU_NoData">
-            <English>* NO DATA *</English>
-            <Chinesesimp>* 无数据 *</Chinesesimp>
-            <Chinese>* 無數據 *</Chinese>
-            <Czech>* ŽÁDNÁ DATA *</Czech>
-            <French>* AUCUNE DONNÉE *</French>
-            <Spanish>* SIN DATOS *</Spanish>
-            <Italian>* NESSUN DATO *</Italian>
-            <Polish>* BRAK DANYCH *</Polish>
-            <Portuguese>* SEM DADOS *</Portuguese>
-            <Russian>* НЕТ ДАННЫХ *</Russian>
-            <German>* KEINE DATEN *</German>
-            <Korean>* 데이터 없음 *</Korean>
-            <Japanese>* データなし *</Japanese>
-            <Turkish>* VERİ YOK *</Turkish>
         </Key>
         <Key ID="STR_MISERY_ERU_ERUActionAddBattery">
             <English>Add lithium battery to ERU</English>
-            <Chinesesimp>向环境读取装置添加锂电池</Chinesesimp>
-            <Chinese>向環境讀取裝置添加鋰電池</Chinese>
             <Czech>Přidat lithiovou baterii do ERU</Czech>
             <French>Ajouter une pile au lithium à l'ERU</French>
             <Spanish>Añadir batería de litio al ERU</Spanish>
@@ -127,12 +61,12 @@
             <German>Lithium-Batterie zum ERU hinzufügen</German>
             <Korean>ERU에 리튬 배터리 추가</Korean>
             <Japanese>ERUにリチウム電池を追加</Japanese>
+            <Chinese>向環境讀取裝置添加鋰電池</Chinese>
+            <Chinesesimp>向环境读取装置添加锂电池</Chinesesimp>
             <Turkish>ERU'ya lityum pil ekle</Turkish>
         </Key>
         <Key ID="STR_MISERY_ERU_ERUActionToggleERU">
             <English>Toggle ERU</English>
-            <Chinesesimp>切换环境读取装置</Chinesesimp>
-            <Chinese>切換環境讀取裝置</Chinese>
             <Czech>Přepnout ERU</Czech>
             <French>Basculer l'ERU</French>
             <Spanish>Alternar ERU</Spanish>
@@ -143,12 +77,12 @@
             <German>ERU umschalten</German>
             <Korean>ERU 토글</Korean>
             <Japanese>ERUの切り替え</Japanese>
+            <Chinese>切換環境讀取裝置</Chinese>
+            <Chinesesimp>切换环境读取装置</Chinesesimp>
             <Turkish>ERU'yu Aç/Kapat</Turkish>
         </Key>
         <Key ID="STR_MISERY_ERU_ERUCompassSetting">
             <English>Compass Setting</English>
-            <Chinesesimp>指南针设置</Chinesesimp>
-            <Chinese>指南針設置</Chinese>
             <Czech>Nastavení kompasu</Czech>
             <French>Réglage de la boussole</French>
             <Spanish>Ajuste de brújula</Spanish>
@@ -159,12 +93,12 @@
             <German>Kompass-Einstellung</German>
             <Korean>나침반 설정</Korean>
             <Japanese>コンパス設定</Japanese>
+            <Chinese>指南針設置</Chinese>
+            <Chinesesimp>指南针设置</Chinesesimp>
             <Turkish>Pusula Ayarı</Turkish>
         </Key>
         <Key ID="STR_MISERY_ERU_ERUTempEnv">
             <English>Temperature Readings (Environment)</English>
-            <Chinesesimp>温度读数 (环境)</Chinesesimp>
-            <Chinese>溫度讀數 (環境)</Chinese>
             <Czech>Měření teploty (prostředí)</Czech>
             <French>Lectures de température (environnement)</French>
             <Spanish>Lecturas de temperatura (entorno)</Spanish>
@@ -175,12 +109,12 @@
             <German>Temperaturmesswerte (Umgebung)</German>
             <Korean>온도 측정 (환경)</Korean>
             <Japanese>温度測定（環境）</Japanese>
+            <Chinese>溫度讀數 (環境)</Chinese>
+            <Chinesesimp>温度读数 (环境)</Chinesesimp>
             <Turkish>Sıcaklık Okumaları (Ortam)</Turkish>
         </Key>
         <Key ID="STR_MISERY_ERU_ERUTempExp">
             <English>Temperature Readings (Exposure)</English>
-            <Chinesesimp>温度读数 (暴露)</Chinesesimp>
-            <Chinese>溫度讀數 (暴露)</Chinese>
             <Czech>Měření teploty (expozice)</Czech>
             <French>Lectures de température (exposition)</French>
             <Spanish>Lecturas de temperatura (exposición)</Spanish>
@@ -191,7 +125,73 @@
             <German>Temperaturmesswerte (Exposition)</German>
             <Korean>온도 측정 (노출)</Korean>
             <Japanese>温度測定（露出）</Japanese>
+            <Chinese>溫度讀數 (暴露)</Chinese>
+            <Chinesesimp>温度读数 (暴露)</Chinesesimp>
             <Turkish>Sıcaklık Okumaları (Maruziyet)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_ERU_ExposureLabel">
+            <English>EXPOSURE:</English>
+            <Czech>EXPOZICE:</Czech>
+            <French>EXPOSITION :</French>
+            <Spanish>EXPOSICIÓN:</Spanish>
+            <Italian>ESPOSIZIONE:</Italian>
+            <Polish>EKSPOZYCJA:</Polish>
+            <Portuguese>EXPOSIÇÃO:</Portuguese>
+            <Russian>ОБЛУЧЕНИЕ:</Russian>
+            <German>EXPOSITION:</German>
+            <Korean>노출:</Korean>
+            <Japanese>露出:</Japanese>
+            <Chinese>暴露:</Chinese>
+            <Chinesesimp>暴露:</Chinesesimp>
+            <Turkish>MARUZİYET:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_ERU_NoData">
+            <English>* NO DATA *</English>
+            <Czech>* ŽÁDNÁ DATA *</Czech>
+            <French>* AUCUNE DONNÉE *</French>
+            <Spanish>* SIN DATOS *</Spanish>
+            <Italian>* NESSUN DATO *</Italian>
+            <Polish>* BRAK DANYCH *</Polish>
+            <Portuguese>* SEM DADOS *</Portuguese>
+            <Russian>* НЕТ ДАННЫХ *</Russian>
+            <German>* KEINE DATEN *</German>
+            <Korean>* 데이터 없음 *</Korean>
+            <Japanese>* データなし *</Japanese>
+            <Chinese>* 無數據 *</Chinese>
+            <Chinesesimp>* 无数据 *</Chinesesimp>
+            <Turkish>* VERİ YOK *</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_ERU_NoERUNeedsBatteries">
+            <English>You don't have an ERU that needs batteries...</English>
+            <Czech>Nemáte ERU, která by potřebovala baterie...</Czech>
+            <French>Vous n'avez pas d'ERU nécessitant des piles...</French>
+            <Spanish>No tienes un ERU que necesite baterías...</Spanish>
+            <Italian>Non hai un ERU che necessiti di batterie...</Italian>
+            <Polish>Nie masz ERU wymagającego baterii...</Polish>
+            <Portuguese>Você não tem um ERU que precise de baterias...</Portuguese>
+            <Russian>У вас нет ERU, требующего батареек...</Russian>
+            <German>Du hast kein ERU, das Batterien benötigt...</German>
+            <Korean>배터리가 필요한 ERU가 없습니다...</Korean>
+            <Japanese>電池が必要なERUを持っていません...</Japanese>
+            <Chinese>你沒有需要電池的環境讀取裝置...</Chinese>
+            <Chinesesimp>你没有需要电池的环境读取装置...</Chinesesimp>
+            <Turkish>Pile ihtiyacı olan bir ERU'n yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_ERU_SeaLabel">
+            <English>SEA:</English>
+            <Czech>MOŘE:</Czech>
+            <French>MER :</French>
+            <Spanish>MAR:</Spanish>
+            <Italian>MARE:</Italian>
+            <Polish>MORZE:</Polish>
+            <Portuguese>MAR:</Portuguese>
+            <Russian>МОРЕ:</Russian>
+            <German>MEER:</German>
+            <Korean>해수:</Korean>
+            <Japanese>海水:</Japanese>
+            <Chinese>海水:</Chinese>
+            <Chinesesimp>海水:</Chinesesimp>
+            <Turkish>DENİZ:</Turkish>
         </Key>
     </Package>
 </Project>

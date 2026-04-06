@@ -3,8 +3,6 @@
     <Package name="Artifacts">
         <Key ID="STR_MISERY_Artifacts_DebugEnable">
             <English>Enable artifact spawns debugging</English>
-            <Chinesesimp>启用神器生成调试</Chinesesimp>
-            <Chinese>啟用神器生成調試</Chinese>
             <Czech>Povolit ladění vytváření artefaktů</Czech>
             <French>Activer le débogage de l'apparition d'artéfacts</French>
             <Spanish>Habilitar depuración de aparición de artefactos</Spanish>
@@ -15,12 +13,12 @@
             <German>Debugging für Artefakt-Spawns aktivieren</German>
             <Korean>아티팩트 스폰 디버깅 활성화</Korean>
             <Japanese>アーティファクトのスポーンデバッグを有効にする</Japanese>
+            <Chinese>啟用神器生成調試</Chinese>
+            <Chinesesimp>启用神器生成调试</Chinesesimp>
             <Turkish>Eser oluşumu hata ayıklamasını etkinleştir</Turkish>
         </Key>
         <Key ID="STR_MISERY_Artifacts_DebugEnableDesc">
             <English>Enable or disable artifact debugging</English>
-            <Chinesesimp>启用或禁用神器调试</Chinesesimp>
-            <Chinese>啟用或禁用神器調試</Chinese>
             <Czech>Povolit nebo zakázat ladění artefaktů</Czech>
             <French>Activer ou désactiver le débogage des artéfacts</French>
             <Spanish>Habilitar o deshabilitar la depuración de artefactos</Spanish>
@@ -31,12 +29,12 @@
             <German>Artefakt-Debugging aktivieren oder deaktivieren</German>
             <Korean>아티팩트 디버깅 활성화 또는 비활성화</Korean>
             <Japanese>アーティファクトのデバッグを有効または無効にする</Japanese>
+            <Chinese>啟用或禁用神器調試</Chinese>
+            <Chinesesimp>启用或禁用神器调试</Chinesesimp>
             <Turkish>Eser hata ayıklamasını etkinleştir veya devre dışı bırak</Turkish>
         </Key>
         <Key ID="STR_MISERY_Artifacts_SpawnAreas">
             <English>Artifact spawn Areas</English>
-            <Chinesesimp>神器生成区域</Chinesesimp>
-            <Chinese>神器生成區域</Chinese>
             <Czech>Oblasti vytváření artefaktů</Czech>
             <French>Zones d'apparition d'artéfacts</French>
             <Spanish>Áreas de aparición de artefactos</Spanish>
@@ -47,12 +45,12 @@
             <German>Artefakt-Spawn-Gebiete</German>
             <Korean>아티팩트 스폰 구역</Korean>
             <Japanese>アーティファクトのスポーンエリア</Japanese>
+            <Chinese>神器生成區域</Chinese>
+            <Chinesesimp>神器生成区域</Chinesesimp>
             <Turkish>Eser oluşum alanları</Turkish>
         </Key>
         <Key ID="STR_MISERY_Artifacts_SpawnAreasDesc">
             <English>ELLIPSE or RECTANGLE marker names covering the artifact spawn areas as strings ['Artifact_spawn_1', 'Artifact_spawn_2']</English>
-            <Chinesesimp>覆盖神器生成区域的 ELLIPSE 或 RECTANGLE 标记名称，格式为字符串 ['Artifact_spawn_1', 'Artifact_spawn_2']</Chinesesimp>
-            <Chinese>覆蓋神器生成區域的 ELLIPSE 或 RECTANGLE 標記名稱，格式為字符串 ['Artifact_spawn_1', 'Artifact_spawn_2']</Chinese>
             <Czech>Názvy markerů ELLIPSE nebo RECTANGLE pokrývající oblasti vytváření artefaktů jako řetězce ['Artifact_spawn_1', 'Artifact_spawn_2']</Czech>
             <French>Noms des marqueurs ELLIPSE ou RECTANGLE couvrant les zones d'apparition sous forme de chaînes ['Artifact_spawn_1', 'Artifact_spawn_2']</French>
             <Spanish>Nombres de marcadores ELLIPSE o RECTANGLE que cubren las áreas de aparición como cadenas ['Artifact_spawn_1', 'Artifact_spawn_2']</Spanish>
@@ -63,6 +61,8 @@
             <German>ELLIPSE- oder RECTANGLE-Markernamen, die die Artefakt-Spawn-Gebiete abdecken, als Strings ['Artifact_spawn_1', 'Artifact_spawn_2']</German>
             <Korean>아티팩트 스폰 구역을 포함하는 ELLIPSE 또는 RECTANGLE 마커 이름 (문자열 형식) ['Artifact_spawn_1', 'Artifact_spawn_2']</Korean>
             <Japanese>アーティファクトのスポーンエリアをカバーする ELLIPSE または RECTANGLE マーカーの名前。文字列形式 ['Artifact_spawn_1', 'Artifact_spawn_2']</Japanese>
+            <Chinese>覆蓋神器生成區域的 ELLIPSE 或 RECTANGLE 標記名稱，格式為字符串 ['Artifact_spawn_1', 'Artifact_spawn_2']</Chinese>
+            <Chinesesimp>覆盖神器生成区域的 ELLIPSE 或 RECTANGLE 标记名称，格式为字符串 ['Artifact_spawn_1', 'Artifact_spawn_2']</Chinesesimp>
             <Turkish>Eser oluşum alanlarını kapsayan dize biçimindeki ELLIPSE veya RECTANGLE işaretçi adları ['Artifact_spawn_1', 'Artifact_spawn_2']</Turkish>
         </Key>
     </Package>

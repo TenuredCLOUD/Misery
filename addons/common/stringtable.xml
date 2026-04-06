@@ -1,186 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="Misery_Main_Translations">
     <Package name="Misery_MainSTR_Language_Compat">
-        <Key ID="STR_MISERY_Common_Cancel">
-            <English>Cancel</English>
-            <Chinesesimp>取消</Chinesesimp>
-            <Chinese>取消</Chinese>
-            <Czech>Zrušit</Czech>
-            <French>Annuler</French>
-            <Spanish>Cancelar</Spanish>
-            <Italian>Annullamento</Italian>
-            <Polish>Anuluj</Polish>
-            <Portuguese>Cancelar</Portuguese>
-            <Russian>Отмена</Russian>
-            <German>Abbrechen</German>
-            <Korean>취소</Korean>
-            <Japanese>キャンセル</Japanese>
-            <Turkish>İptal</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_RecipesList">
-            <English>Recipes:</English>
-            <Chinesesimp>配方:</Chinesesimp>
-            <Chinese>配方:</Chinese>
-            <Czech>Recepty:</Czech>
-            <French>Recettes :</French>
-            <Spanish>Recetas:</Spanish>
-            <Italian>Ricette:</Italian>
-            <Polish>Receptury:</Polish>
-            <Portuguese>Receitas:</Portuguese>
-            <Russian>Рецепты:</Russian>
-            <German>Rezepte:</German>
-            <Korean>레시피:</Korean>
-            <Japanese>レシピ:</Japanese>
-            <Turkish>Tarifler:</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_Exit">
-            <English>Exit</English>
-            <Chinesesimp>退出</Chinesesimp>
-            <Chinese>退出</Chinese>
-            <Czech>Odejít</Czech>
-            <French>Quitter</French>
-            <Spanish>Salir</Spanish>
-            <Italian>Esci</Italian>
-            <Polish>Wyjście</Polish>
-            <Portuguese>Sair</Portuguese>
-            <Russian>Выход</Russian>
-            <German>Beenden</German>
-            <Korean>나가기</Korean>
-            <Japanese>閉じる</Japanese>
-            <Turkish>Çıkış</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_Purchase">
-            <English>Purchase</English>
-            <Chinesesimp>购买</Chinesesimp>
-            <Chinese>購買</Chinese>
-            <Czech>Koupit</Czech>
-            <French>Acheter</French>
-            <Spanish>Comprar</Spanish>
-            <Italian>Acquista</Italian>
-            <Polish>Kup</Polish>
-            <Portuguese>Comprar</Portuguese>
-            <Russian>Купить</Russian>
-            <German>Kaufen</German>
-            <Korean>구매</Korean>
-            <Japanese>購入</Japanese>
-            <Turkish>Satın Al</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_NoRecipeSelect">
-            <English>No recipe selected...</English>
-            <Chinesesimp>未选择配方...</Chinesesimp>
-            <Chinese>未選擇配方...</Chinese>
-            <Czech>Není vybrán žádný recept...</Czech>
-            <French>Aucune recette sélectionnée...</French>
-            <Spanish>Ninguna receta seleccionada...</Spanish>
-            <Italian>Nessuna ricetta selezionata...</Italian>
-            <Polish>Nie wybrano przepisu...</Polish>
-            <Portuguese>Nenhuma receita selecionada...</Portuguese>
-            <Russian>Рецепт не выбран...</Russian>
-            <German>Kein Rezept ausgewählt...</German>
-            <Korean>선택된 레시피가 없습니다...</Korean>
-            <Japanese>レシピが選択されていません...</Japanese>
-            <Turkish>Tarif seçilmedi...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_NoRecipeMatch">
-            <English>No matching recipe found.</English>
-            <Chinesesimp>未找到匹配的配方。</Chinesesimp>
-            <Chinese>未找到匹配的配方。</Chinese>
-            <Czech>Nebyl nalezen žádný odpovídající recept.</Czech>
-            <French>Aucune recette correspondante trouvée.</French>
-            <Spanish>No se encontró ninguna receta coincidente.</Spanish>
-            <Italian>Nessuna ricetta corrispondente trovata.</Italian>
-            <Polish>Nie znaleziono pasującego przepisu.</Polish>
-            <Portuguese>Nenhuma receita correspondente encontrada.</Portuguese>
-            <Russian>Подходящий рецепт не найден.</Russian>
-            <German>Kein passendes Rezept gefunden.</German>
-            <Korean>일치하는 레시피를 찾을 수 없습니다.</Korean>
-            <Japanese>一致するレシピが見つかりません。</Japanese>
-            <Turkish>Eşleşen tarif bulunamadı.</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_MissingItems">
-            <English>You don’t have the required items...</English>
-            <Chinesesimp>你没有所需的物品...</Chinesesimp>
-            <Chinese>你沒有所需的物品...</Chinese>
-            <Czech>Nemáte požadované položky...</Czech>
-            <French>Vous n'avez pas les objets requis...</French>
-            <Spanish>No tienes los objetos requeridos...</Spanish>
-            <Italian>Non hai gli oggetti necessari...</Italian>
-            <Polish>Nie masz wymaganych przedmiotów...</Polish>
-            <Portuguese>Não tens os itens necessários...</Portuguese>
-            <Russian>У вас нет необходимых предметов...</Russian>
-            <German>Du hast nicht die benötigten Gegenstände...</German>
-            <Korean>필요한 아이템이 없습니다...</Korean>
-            <Japanese>必要なアイテムを持っていません...</Japanese>
-            <Turkish>Gerekli öğelere sahip değilsiniz...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_ShowRecipe">
-            <English>Show Recipe</English>
-            <Chinesesimp>显示配方</Chinesesimp>
-            <Chinese>顯示配方</Chinese>
-            <Czech>Zobrazit recept</Czech>
-            <French>Afficher la recette</French>
-            <Spanish>Mostrar receta</Spanish>
-            <Italian>Mostra ricetta</Italian>
-            <Polish>Pokaż recepturę</Polish>
-            <Portuguese>Mostrar receita</Portuguese>
-            <Russian>Показать рецепт</Russian>
-            <German>Rezept anzeigen</German>
-            <Korean>레시피 보기</Korean>
-            <Japanese>レシピを表示</Japanese>
-            <Turkish>Tarifi Göster</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_Craft">
-            <English>Craft</English>
-            <Chinesesimp>制作</Chinesesimp>
-            <Chinese>製作</Chinese>
-            <Czech>Vyrobit</Czech>
-            <French>Artisanat</French>
-            <Spanish>Fabricar</Spanish>
-            <Italian>Crea</Italian>
-            <Polish>Wytwórz</Polish>
-            <Portuguese>Fabricar</Portuguese>
-            <Russian>Создать</Russian>
-            <German>Herstellen</German>
-            <Korean>제작</Korean>
-            <Japanese>製作</Japanese>
-            <Turkish>Zanaat</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_TooExpensive">
-            <English>You cannot afford this!</English>
-            <Chinesesimp>你负担不起这个！</Chinesesimp>
-            <Chinese>你負擔不起這個！</Chinese>
-            <Czech>Tohle si nemůžete dovolit!</Czech>
-            <French>Vous n'avez pas les moyens !</French>
-            <Spanish>¡No puedes permitirte esto!</Spanish>
-            <Italian>Non puoi permettertelo!</Italian>
-            <Polish>Nie stać Cię na to!</Polish>
-            <Portuguese>Você não tem dinheiro para isso!</Portuguese>
-            <Russian>Вы не можете себе это позволить!</Russian>
-            <German>Das kannst du dir nicht leisten!</German>
-            <Korean>이것을 지불할 여유가 없습니다!</Korean>
-            <Japanese>これを購入する余裕がありません！</Japanese>
-            <Turkish>Buna gücünüz yetmez!</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_CraftPrompt">
-            <English>What would you like to craft?</English>
-            <Chinesesimp>你想制作什么？</Chinesesimp>
-            <Chinese>你想製作什麼？</Chinese>
-            <Czech>Co byste chtěli vyrobit?</Czech>
-            <French>Que voulez-vous fabriquer ?</French>
-            <Spanish>¿Qué te gustaría fabricar?</Spanish>
-            <Italian>Cosa ti piacerebbe creare?</Italian>
-            <Polish>Co chcesz wytworzyć?</Polish>
-            <Portuguese>O que gostaria de fabricar?</Portuguese>
-            <Russian>Что бы вы хотели создать?</Russian>
-            <German>Was möchtest du herstellen?</German>
-            <Korean>무엇을 제작하시겠습니까?</Korean>
-            <Japanese>何を製作しますか？</Japanese>
-            <Turkish>Ne üretmek istersiniz?</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Common_Blueprints">
             <English>Blueprints:</English>
-            <Chinesesimp>蓝图:</Chinesesimp>
-            <Chinese>藍圖:</Chinese>
             <Czech>Plány:</Czech>
             <French>Schémas :</French>
             <Spanish>Planos:</Spanish>
@@ -191,28 +13,28 @@
             <German>Baupläne:</German>
             <Korean>청사진:</Korean>
             <Japanese>設計図:</Japanese>
+            <Chinese>藍圖:</Chinese>
+            <Chinesesimp>蓝图:</Chinesesimp>
             <Turkish>Şemalar:</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Common_NoLithiumBatteries">
-            <English>You don't have any lithium batteries...</English>
-            <Chinesesimp>你没有任何锂电池...</Chinesesimp>
-            <Chinese>你沒有任何鋰電池...</Chinese>
-            <Czech>Nemáte žádné lithiové baterie...</Czech>
-            <French>Vous n'avez pas de piles au lithium...</French>
-            <Spanish>No tienes baterías de litio...</Spanish>
-            <Italian>Non hai batterie al litio...</Italian>
-            <Polish>Nie masz baterii litowych...</Polish>
-            <Portuguese>Você não tem baterias de lítio...</Portuguese>
-            <Russian>У вас нет литиевых батареек...</Russian>
-            <German>Du hast keine Lithium-Batterien...</German>
-            <Korean>리튬 배터리가 없습니다...</Korean>
-            <Japanese>リチウム電池を持っていません...</Japanese>
-            <Turkish>Hiç lityum pilin yok...</Turkish>
+        <Key ID="STR_MISERY_Common_Cancel">
+            <English>Cancel</English>
+            <Czech>Zrušit</Czech>
+            <French>Annuler</French>
+            <Spanish>Cancelar</Spanish>
+            <Italian>Annullamento</Italian>
+            <Polish>Anuluj</Polish>
+            <Portuguese>Cancelar</Portuguese>
+            <Russian>Отмена</Russian>
+            <German>Abbrechen</German>
+            <Korean>취소</Korean>
+            <Japanese>キャンセル</Japanese>
+            <Chinese>取消</Chinese>
+            <Chinesesimp>取消</Chinesesimp>
+            <Turkish>İptal</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_CantSleepFear">
             <English>You are tormented by fear, and sleep is a distant memory. You hallucinate horrors that haunt you, and feel sensations that terrify you. You are descending into madness…</English>
-            <Chinesesimp>你被恐惧折磨，睡眠已成遥远记忆。你幻觉出萦绕不散的恐怖，感受到令你惊悚的异觉。你正坠入疯狂……</Chinesesimp>
-            <Chinese>你被恐懼折磨，睡眠已成遙遠記憶。你幻覺出縈繞不散的恐怖，感受到令你惊悚的異覺。你正墜入瘋狂……</Chinese>
             <Czech>Trápí vás strach a spánek je jen vzdálenou vzpomínkou. Máte halucinace, které vás pronásledují, a cítíte pocity, které vás děsí. Propadáte se do šílenství...</Czech>
             <French>Vous êtes tourmenté par la peur et le sommeil n'est plus qu'un lointain souvenir. Vous avez des hallucinations qui vous hantent et des sensations qui vous terrifient. Vous sombrez dans la folie...</French>
             <Spanish>Te atormenta el miedo y el sueño es un recuerdo lejano. Alucinas horrores que te persiguen y sientes sensaciones que te aterrorizan. Desciendes hacia la locura...</Spanish>
@@ -223,12 +45,12 @@
             <German>Sie werden von Angst gequält, und an Schlaf ist nicht mehr zu denken. Du halluzinierst von Schrecken, die dich heimsuchen, und spürst Empfindungen, die dich erschrecken. Du bist dabei, dem Wahnsinn zu verfallen...</German>
             <Korean>당신은 두려움에 시달리고 잠은 아득한 기억으로 남습니다. 당신은 당신을 괴롭히는 공포를 환각하고 당신을 두렵게하는 감각을 느낍니다. 당신은 광기에 빠져들고 있습니다...</Korean>
             <Japanese>恐怖に苛まれ、眠りは遠い記憶となる。恐怖の幻覚に悩まされ、恐怖の感覚を覚える。あなたは狂気へと堕ちていく...。</Japanese>
+            <Chinese>你被恐懼折磨，睡眠已成遙遠記憶。你幻覺出縈繞不散的恐怖，感受到令你惊悚的異覺。你正墜入瘋狂……</Chinese>
+            <Chinesesimp>你被恐惧折磨，睡眠已成遥远记忆。你幻觉出萦绕不散的恐怖，感受到令你惊悚的异觉。你正坠入疯狂……</Chinesesimp>
             <Turkish>Korkudan işkence görüyorsunuz ve uyku uzak bir anı. Size musallat olan dehşetli halüsinasyonlar görüyor ve sizi dehşete düşüren hisler hissediyorsunuz. Deliliğe doğru sürükleniyorsunuz...</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_CheckClothing">
             <English>Check Clothing</English>
-            <Chinesesimp>检查衣物</Chinesesimp>
-            <Chinese>檢查衣物</Chinese>
             <Czech>Kontrola oblečení</Czech>
             <French>Vérifier les vêtements</French>
             <Spanish>Comprobar la ropa</Spanish>
@@ -239,12 +61,12 @@
             <German>Check Kleidung</German>
             <Korean>의류 확인</Korean>
             <Japanese>チェックウェア</Japanese>
+            <Chinese>檢查衣物</Chinese>
+            <Chinesesimp>检查衣物</Chinesesimp>
             <Turkish>Kıyafetleri Kontrol Edin</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_CheckGearWeight">
             <English>Check Gear weight</English>
-            <Chinesesimp>检查装备重量</Chinesesimp>
-            <Chinese>檢查裝備重量</Chinese>
             <Czech>Kontrola hmotnosti vybavení</Czech>
             <French>Vérifier le poids de l'engrenage</French>
             <Spanish>Comprobar el peso del engranaje</Spanish>
@@ -255,12 +77,12 @@
             <German>Getriebegewicht prüfen</German>
             <Korean>기어 무게 확인</Korean>
             <Japanese>ギア重量チェック</Japanese>
+            <Chinese>檢查裝備重量</Chinese>
+            <Chinesesimp>检查装备重量</Chinesesimp>
             <Turkish>Dişli ağırlığını kontrol edin</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_ClothingInsulationVal">
             <English>Clothing Insulation: (%1)</English>
-            <Chinesesimp>衣物绝缘: (%1)</Chinesesimp>
-            <Chinese>衣物絕緣: (%1)</Chinese>
             <Czech>Izolace oděvu: (%1)</Czech>
             <French>Isolation des vêtements : (%1)</French>
             <Spanish>Aislamiento de la ropa: (%1)</Spanish>
@@ -271,12 +93,12 @@
             <German>Isolierung der Kleidung: (%1)</German>
             <Korean>의류 단열: (%1)</Korean>
             <Japanese>衣服の断熱性: (%1)</Japanese>
+            <Chinese>衣物絕緣: (%1)</Chinese>
+            <Chinesesimp>衣物绝缘: (%1)</Chinesesimp>
             <Turkish>Giysi Yalıtımı: (%1)</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_ClothingWarmthVal">
             <English>Clothing Warmth: %1°C&lt;br/&gt;&lt;br/&gt;</English>
-            <Chinesesimp>衣物保暖: %1°C&lt;br/&gt;&lt;br/&gt;</Chinesesimp>
-            <Chinese>衣物保暖: %1°C&lt;br/&gt;&lt;br/&gt;</Chinese>
             <Czech>Hřejivost oblečení: %1°C&lt;br/&gt;&lt;br/&gt;</Czech>
             <French>Chaleur des vêtements : %1°C&lt;br/&gt;&lt;br/&gt;</French>
             <Spanish>Calor de la ropa: %1°C&lt;br/&gt;&lt;br/&gt;</Spanish>
@@ -287,12 +109,12 @@
             <German>Kleidung Wärme: %1°C&lt;br/&gt;&lt;br/&gt;</German>
             <Korean>의류 보온성: %1°C&lt;br/&gt;&lt;br/&gt;</Korean>
             <Japanese>衣類の暖かさ: %1°C&lt;br/&gt;&lt;br/&gt;</Japanese>
+            <Chinese>衣物保暖: %1°C&lt;br/&gt;&lt;br/&gt;</Chinese>
+            <Chinesesimp>衣物保暖: %1°C&lt;br/&gt;&lt;br/&gt;</Chinesesimp>
             <Turkish>Giysi Sıcaklığı: %1°C&lt;br/&gt;&lt;br/&gt;</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_CollectWater">
             <English>Collect Water</English>
-            <Chinesesimp>收集水</Chinesesimp>
-            <Chinese>收集水</Chinese>
             <Czech>Sbírat vodu</Czech>
             <French>Recueillir de l'eau</French>
             <Spanish>Recoger agua</Spanish>
@@ -303,12 +125,44 @@
             <German>Wasser sammeln</German>
             <Korean>물 모으기</Korean>
             <Japanese>水を集める</Japanese>
+            <Chinese>收集水</Chinese>
+            <Chinesesimp>收集水</Chinesesimp>
             <Turkish>Su topla</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_Craft">
+            <English>Craft</English>
+            <Czech>Vyrobit</Czech>
+            <French>Artisanat</French>
+            <Spanish>Fabricar</Spanish>
+            <Italian>Crea</Italian>
+            <Polish>Wytwórz</Polish>
+            <Portuguese>Fabricar</Portuguese>
+            <Russian>Создать</Russian>
+            <German>Herstellen</German>
+            <Korean>제작</Korean>
+            <Japanese>製作</Japanese>
+            <Chinese>製作</Chinese>
+            <Chinesesimp>制作</Chinesesimp>
+            <Turkish>Zanaat</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_CraftPrompt">
+            <English>What would you like to craft?</English>
+            <Czech>Co byste chtěli vyrobit?</Czech>
+            <French>Que voulez-vous fabriquer ?</French>
+            <Spanish>¿Qué te gustaría fabricar?</Spanish>
+            <Italian>Cosa ti piacerebbe creare?</Italian>
+            <Polish>Co chcesz wytworzyć?</Polish>
+            <Portuguese>O que gostaria de fabricar?</Portuguese>
+            <Russian>Что бы вы хотели создать?</Russian>
+            <German>Was möchtest du herstellen?</German>
+            <Korean>무엇을 제작하시겠습니까?</Korean>
+            <Japanese>何を製作しますか？</Japanese>
+            <Chinese>你想製作什麼？</Chinese>
+            <Chinesesimp>你想制作什么？</Chinesesimp>
+            <Turkish>Ne üretmek istersiniz?</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_DisplayName">
             <English>Misery</English>
-            <Chinesesimp>苦难</Chinesesimp>
-            <Chinese>苦難</Chinese>
             <Czech>Bída</Czech>
             <French>Misère</French>
             <Spanish>Miseria</Spanish>
@@ -319,12 +173,12 @@
             <German>Elend</German>
             <Korean>불행</Korean>
             <Japanese>悲惨</Japanese>
+            <Chinese>苦難</Chinese>
+            <Chinesesimp>苦难</Chinesesimp>
             <Turkish>Sefalet</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_DrinkFromSource">
             <English>Drink from source</English>
-            <Chinesesimp>从源头饮水</Chinesesimp>
-            <Chinese>從源頭飲水</Chinese>
             <Czech>Pití ze zdroje</Czech>
             <French>Boire à la source</French>
             <Spanish>Beber de la fuente</Spanish>
@@ -335,12 +189,28 @@
             <German>Trinken von der Quelle</German>
             <Korean>소스에서 마시기</Korean>
             <Japanese>ソースから飲む</Japanese>
+            <Chinese>從源頭飲水</Chinese>
+            <Chinesesimp>从源头饮水</Chinesesimp>
             <Turkish>Kaynağından iç</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_Exit">
+            <English>Exit</English>
+            <Czech>Odejít</Czech>
+            <French>Quitter</French>
+            <Spanish>Salir</Spanish>
+            <Italian>Esci</Italian>
+            <Polish>Wyjście</Polish>
+            <Portuguese>Sair</Portuguese>
+            <Russian>Выход</Russian>
+            <German>Beenden</German>
+            <Korean>나가기</Korean>
+            <Japanese>閉じる</Japanese>
+            <Chinese>退出</Chinese>
+            <Chinesesimp>退出</Chinesesimp>
+            <Turkish>Çıkış</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_GearWeightVal">
             <English>Gear weight feels like: ~ %2kg (%1lbs)</English>
-            <Chinesesimp>装备重量感觉约为: ~ %2kg (%1lbs)</Chinesesimp>
-            <Chinese>裝備重量感覺約為: ~ %2kg (%1lbs)</Chinese>
             <Czech>Hmotnost vybavení se zdá být: ~ %2kg (%1lbs)</Czech>
             <French>Le poids de l'engrenage ressemble à.. : ~ %2kg (%1lbs)</French>
             <Spanish>El peso del engranaje se siente como: ~ %2kg (%1lbs)</Spanish>
@@ -351,12 +221,12 @@
             <German>Das Getriebegewicht fühlt sich an wie: ~ %2kg (%1lbs)</German>
             <Korean>기어 무게는 다음과 같이 느껴집니다: ~ %2kg (%1lbs)</Korean>
             <Japanese>ギア重量はこんな感じ： ~ 2kg (%1lbs)</Japanese>
+            <Chinese>裝備重量感覺約為: ~ %2kg (%1lbs)</Chinese>
+            <Chinesesimp>装备重量感觉约为: ~ %2kg (%1lbs)</Chinesesimp>
             <Turkish>Dişli ağırlığı gibi hissediyor: ~ %2kg (%1lbs)</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_MineOre">
             <English>Mine Ore</English>
-            <Chinesesimp>采矿</Chinesesimp>
-            <Chinese>採礦</Chinese>
             <Czech>Důlní ruda</Czech>
             <French>Mine Minerai</French>
             <Spanish>Mineral de mina</Spanish>
@@ -367,12 +237,12 @@
             <German>Bergwerkserz</German>
             <Korean>광산 광석</Korean>
             <Japanese>鉱山鉱石</Japanese>
+            <Chinese>採礦</Chinese>
+            <Chinesesimp>采矿</Chinesesimp>
             <Turkish>Maden Cevheri</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_MineOreNoTools">
             <English>You don't have the required items to mine ore...</English>
-            <Chinesesimp>你没有采矿所需的物品...</Chinesesimp>
-            <Chinese>你沒有採礦所需的物品...</Chinese>
             <Czech>Nemáte potřebné předměty k těžbě rudy...</Czech>
             <French>Vous n'avez pas les éléments nécessaires pour extraire du minerai...</French>
             <Spanish>No tienes los objetos necesarios para extraer mineral...</Spanish>
@@ -383,12 +253,28 @@
             <German>Sie haben nicht die erforderlichen Gegenstände, um Erz abzubauen...</German>
             <Korean>광석 채굴에 필요한 아이템이 없습니다...</Korean>
             <Japanese>鉱石を採掘するのに必要なアイテムを持っていない...。</Japanese>
+            <Chinese>你沒有採礦所需的物品...</Chinese>
+            <Chinesesimp>你没有采矿所需的物品...</Chinesesimp>
             <Turkish>Maden çıkarmak için gerekli eşyalara sahip değilsiniz...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_MissingItems">
+            <English>You don’t have the required items...</English>
+            <Czech>Nemáte požadované položky...</Czech>
+            <French>Vous n'avez pas les objets requis...</French>
+            <Spanish>No tienes los objetos requeridos...</Spanish>
+            <Italian>Non hai gli oggetti necessari...</Italian>
+            <Polish>Nie masz wymaganych przedmiotów...</Polish>
+            <Portuguese>Não tens os itens necessários...</Portuguese>
+            <Russian>У вас нет необходимых предметов...</Russian>
+            <German>Du hast nicht die benötigten Gegenstände...</German>
+            <Korean>필요한 아이템이 없습니다...</Korean>
+            <Japanese>必要なアイテムを持っていません...</Japanese>
+            <Chinese>你沒有所需的物品...</Chinese>
+            <Chinesesimp>你没有所需的物品...</Chinesesimp>
+            <Turkish>Gerekli öğelere sahip değilsiniz...</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_NoAxeForWoodNoti">
             <English>You don't have an Axe to chop any wood...</English>
-            <Chinesesimp>你没有可以砍木头的斧头...</Chinesesimp>
-            <Chinese>你沒有可以砍木頭的斧頭...</Chinese>
             <Czech>Nemáš sekeru na štípání dřeva...</Czech>
             <French>Vous n'avez pas de hache pour couper du bois...</French>
             <Spanish>No tienes un hacha para cortar madera...</Spanish>
@@ -399,12 +285,12 @@
             <German>Du hast keine Axt, um Holz zu hacken...</German>
             <Korean>나무를 자를 도끼가 없는데...</Korean>
             <Japanese>薪を割る斧がないじゃないか...。</Japanese>
+            <Chinese>你沒有可以砍木頭的斧頭...</Chinese>
+            <Chinesesimp>你没有可以砍木头的斧头...</Chinesesimp>
             <Turkish>Odun kesmek için baltan yok.</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_NoChainsawForWoodNoti">
             <English>You don't have a chainsaw to saw any wood...</English>
-            <Chinesesimp>你没有可以锯木头的链锯...</Chinesesimp>
-            <Chinese>你沒有可以鋸木頭的鏈鋸...</Chinese>
             <Czech>Nemáš motorovou pilu na řezání dřeva...</Czech>
             <French>Vous n'avez pas besoin de tronçonneuse pour scier du bois...</French>
             <Spanish>No tienes una motosierra para serrar madera...</Spanish>
@@ -415,12 +301,92 @@
             <German>Sie haben keine Kettensäge, um Holz zu sägen...</German>
             <Korean>나무를 톱질할 전기톱이 없는데...</Korean>
             <Japanese>チェンソーがないと薪が切れない...。</Japanese>
+            <Chinese>你沒有可以鋸木頭的鏈鋸...</Chinese>
+            <Chinesesimp>你没有可以锯木头的链锯...</Chinesesimp>
             <Turkish>Odun kesmek için elektrikli testereniz yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_NoLithiumBatteries">
+            <English>You don't have any lithium batteries...</English>
+            <Czech>Nemáte žádné lithiové baterie...</Czech>
+            <French>Vous n'avez pas de piles au lithium...</French>
+            <Spanish>No tienes baterías de litio...</Spanish>
+            <Italian>Non hai batterie al litio...</Italian>
+            <Polish>Nie masz baterii litowych...</Polish>
+            <Portuguese>Você não tem baterias de lítio...</Portuguese>
+            <Russian>У вас нет литиевых батареек...</Russian>
+            <German>Du hast keine Lithium-Batterien...</German>
+            <Korean>리튬 배터리가 없습니다...</Korean>
+            <Japanese>リチウム電池を持っていません...</Japanese>
+            <Chinese>你沒有任何鋰電池...</Chinese>
+            <Chinesesimp>你没有任何锂电池...</Chinesesimp>
+            <Turkish>Hiç lityum pilin yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_NoRecipeMatch">
+            <English>No matching recipe found.</English>
+            <Czech>Nebyl nalezen žádný odpovídající recept.</Czech>
+            <French>Aucune recette correspondante trouvée.</French>
+            <Spanish>No se encontró ninguna receta coincidente.</Spanish>
+            <Italian>Nessuna ricetta corrispondente trovata.</Italian>
+            <Polish>Nie znaleziono pasującego przepisu.</Polish>
+            <Portuguese>Nenhuma receita correspondente encontrada.</Portuguese>
+            <Russian>Подходящий рецепт не найден.</Russian>
+            <German>Kein passendes Rezept gefunden.</German>
+            <Korean>일치하는 레시피를 찾을 수 없습니다.</Korean>
+            <Japanese>一致するレシピが見つかりません。</Japanese>
+            <Chinese>未找到匹配的配方。</Chinese>
+            <Chinesesimp>未找到匹配的配方。</Chinesesimp>
+            <Turkish>Eşleşen tarif bulunamadı.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_NoRecipeSelect">
+            <English>No recipe selected...</English>
+            <Czech>Není vybrán žádný recept...</Czech>
+            <French>Aucune recette sélectionnée...</French>
+            <Spanish>Ninguna receta seleccionada...</Spanish>
+            <Italian>Nessuna ricetta selezionata...</Italian>
+            <Polish>Nie wybrano przepisu...</Polish>
+            <Portuguese>Nenhuma receita selecionada...</Portuguese>
+            <Russian>Рецепт не выбран...</Russian>
+            <German>Kein Rezept ausgewählt...</German>
+            <Korean>선택된 레시피가 없습니다...</Korean>
+            <Japanese>レシピが選択されていません...</Japanese>
+            <Chinese>未選擇配方...</Chinese>
+            <Chinesesimp>未选择配方...</Chinesesimp>
+            <Turkish>Tarif seçilmedi...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_Purchase">
+            <English>Purchase</English>
+            <Czech>Koupit</Czech>
+            <French>Acheter</French>
+            <Spanish>Comprar</Spanish>
+            <Italian>Acquista</Italian>
+            <Polish>Kup</Polish>
+            <Portuguese>Comprar</Portuguese>
+            <Russian>Купить</Russian>
+            <German>Kaufen</German>
+            <Korean>구매</Korean>
+            <Japanese>購入</Japanese>
+            <Chinese>購買</Chinese>
+            <Chinesesimp>购买</Chinesesimp>
+            <Turkish>Satın Al</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_RecipesList">
+            <English>Recipes:</English>
+            <Czech>Recepty:</Czech>
+            <French>Recettes :</French>
+            <Spanish>Recetas:</Spanish>
+            <Italian>Ricette:</Italian>
+            <Polish>Receptury:</Polish>
+            <Portuguese>Receitas:</Portuguese>
+            <Russian>Рецепты:</Russian>
+            <German>Rezepte:</German>
+            <Korean>레시피:</Korean>
+            <Japanese>レシピ:</Japanese>
+            <Chinese>配方:</Chinese>
+            <Chinesesimp>配方:</Chinesesimp>
+            <Turkish>Tarifler:</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_ReqRefuel">
             <English>Request refuel</English>
-            <Chinesesimp>请求加油</Chinesesimp>
-            <Chinese>請求加油</Chinese>
             <Czech>Žádost o doplnění paliva</Czech>
             <French>Demande de ravitaillement</French>
             <Spanish>Solicitar repostaje</Spanish>
@@ -431,12 +397,12 @@
             <German>Tanken anfordern</German>
             <Korean>급유 요청하기</Korean>
             <Japanese>給油を依頼する</Japanese>
+            <Chinese>請求加油</Chinese>
+            <Chinesesimp>请求加油</Chinesesimp>
             <Turkish>Yakıt ikmali talep edin</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_ReqRepairs">
             <English>Request repairs</English>
-            <Chinesesimp>请求修理</Chinesesimp>
-            <Chinese>請求修理</Chinese>
             <Czech>Žádost o opravu</Czech>
             <French>Demande de réparation</French>
             <Spanish>Solicitar reparaciones</Spanish>
@@ -447,12 +413,12 @@
             <German>Reparaturen anfordern</German>
             <Korean>수리 요청하기</Korean>
             <Japanese>修理を依頼する</Japanese>
+            <Chinese>請求修理</Chinese>
+            <Chinesesimp>请求修理</Chinesesimp>
             <Turkish>Onarım talep edin</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_ReqTreatment">
             <English>Request treatment</English>
-            <Chinesesimp>请求治疗</Chinesesimp>
-            <Chinese>請求治療</Chinese>
             <Czech>Žádost o ošetření</Czech>
             <French>Demande de traitement</French>
             <Spanish>Solicitar tratamiento</Spanish>
@@ -463,12 +429,28 @@
             <German>Behandlung anfordern</German>
             <Korean>치료 요청하기</Korean>
             <Japanese>治療を依頼する</Japanese>
+            <Chinese>請求治療</Chinese>
+            <Chinesesimp>请求治疗</Chinesesimp>
             <Turkish>Tedavi talep edin</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_ShowRecipe">
+            <English>Show Recipe</English>
+            <Czech>Zobrazit recept</Czech>
+            <French>Afficher la recette</French>
+            <Spanish>Mostrar receta</Spanish>
+            <Italian>Mostra ricetta</Italian>
+            <Polish>Pokaż recepturę</Polish>
+            <Portuguese>Mostrar receita</Portuguese>
+            <Russian>Показать рецепт</Russian>
+            <German>Rezept anzeigen</German>
+            <Korean>레시피 보기</Korean>
+            <Japanese>レシピを表示</Japanese>
+            <Chinese>顯示配方</Chinese>
+            <Chinesesimp>显示配方</Chinesesimp>
+            <Turkish>Tarifi Göster</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_Sleep10Hours">
             <English>10 hours</English>
-            <Chinesesimp>10 小时</Chinesesimp>
-            <Chinese>10 小時</Chinese>
             <Czech>10 hodin</Czech>
             <French>10 heures</French>
             <Spanish>10 horas</Spanish>
@@ -479,12 +461,12 @@
             <German>10 Stunden</German>
             <Korean>10 시간</Korean>
             <Japanese>10時間</Japanese>
+            <Chinese>10 小時</Chinese>
+            <Chinesesimp>10 小时</Chinesesimp>
             <Turkish>10 saat</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_Sleep11Hours">
             <English>11 hours</English>
-            <Chinesesimp>11 小时</Chinesesimp>
-            <Chinese>11 小時</Chinese>
             <Czech>11 hodin</Czech>
             <French>11 heures</French>
             <Spanish>11 horas</Spanish>
@@ -495,12 +477,12 @@
             <German>11 Stunden</German>
             <Korean>11 시간</Korean>
             <Japanese>11時間</Japanese>
+            <Chinese>11 小時</Chinese>
+            <Chinesesimp>11 小时</Chinesesimp>
             <Turkish>11 saat</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_Sleep12Hours">
             <English>12 hours</English>
-            <Chinesesimp>12 小时</Chinesesimp>
-            <Chinese>12 小時</Chinese>
             <Czech>12 hodin</Czech>
             <French>12 heures</French>
             <Spanish>12 horas</Spanish>
@@ -511,12 +493,12 @@
             <German>12 Stunden</German>
             <Korean>12 시간</Korean>
             <Japanese>12時間</Japanese>
+            <Chinese>12 小時</Chinese>
+            <Chinesesimp>12 小时</Chinesesimp>
             <Turkish>12 saat</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_Sleep1Hour">
             <English>1 hour</English>
-            <Chinesesimp>1 小时</Chinesesimp>
-            <Chinese>1 小時</Chinese>
             <Czech>1 hodinu</Czech>
             <French>1 heure</French>
             <Spanish>1 hora</Spanish>
@@ -527,12 +509,12 @@
             <German>1 Stunde</German>
             <Korean>1 시간</Korean>
             <Japanese>1時間</Japanese>
+            <Chinese>1 小時</Chinese>
+            <Chinesesimp>1 小时</Chinesesimp>
             <Turkish>1 saat</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_Sleep2Hours">
             <English>2 hours</English>
-            <Chinesesimp>2 小时</Chinesesimp>
-            <Chinese>2 小時</Chinese>
             <Czech>2 hodiny</Czech>
             <French>2 heures</French>
             <Spanish>2 horas</Spanish>
@@ -543,12 +525,12 @@
             <German>2 Stunden</German>
             <Korean>2 시간</Korean>
             <Japanese>2時間</Japanese>
+            <Chinese>2 小時</Chinese>
+            <Chinesesimp>2 小时</Chinesesimp>
             <Turkish>2 saat</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_Sleep3Hours">
             <English>3 hours</English>
-            <Chinesesimp>3 小时</Chinesesimp>
-            <Chinese>3 小時</Chinese>
             <Czech>3 hodiny</Czech>
             <French>3 heures</French>
             <Spanish>3 horas</Spanish>
@@ -559,12 +541,12 @@
             <German>3 Stunden</German>
             <Korean>3 시간</Korean>
             <Japanese>3時間</Japanese>
+            <Chinese>3 小時</Chinese>
+            <Chinesesimp>3 小时</Chinesesimp>
             <Turkish>3 saat</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_Sleep4Hours">
             <English>4 hours</English>
-            <Chinesesimp>4 小时</Chinesesimp>
-            <Chinese>4 小時</Chinese>
             <Czech>4 hodiny</Czech>
             <French>4 heures</French>
             <Spanish>4 horas</Spanish>
@@ -575,12 +557,12 @@
             <German>4 Stunden</German>
             <Korean>4 시간</Korean>
             <Japanese>4時間</Japanese>
+            <Chinese>4 小時</Chinese>
+            <Chinesesimp>4 小时</Chinesesimp>
             <Turkish>4 saat</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_Sleep5Hours">
             <English>5 hours</English>
-            <Chinesesimp>5 小时</Chinesesimp>
-            <Chinese>5 小時</Chinese>
             <Czech>5 hodin</Czech>
             <French>5 heures</French>
             <Spanish>5 horas</Spanish>
@@ -591,12 +573,12 @@
             <German>5 Stunden</German>
             <Korean>5 시간</Korean>
             <Japanese>5時間</Japanese>
+            <Chinese>5 小時</Chinese>
+            <Chinesesimp>5 小时</Chinesesimp>
             <Turkish>5 saat</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_Sleep6Hours">
             <English>6 hours</English>
-            <Chinesesimp>6 小时</Chinesesimp>
-            <Chinese>6 小時</Chinese>
             <Czech>6 hodin</Czech>
             <French>6 heures</French>
             <Spanish>6 horas</Spanish>
@@ -607,12 +589,12 @@
             <German>6 Stunden</German>
             <Korean>6 시간</Korean>
             <Japanese>6時間</Japanese>
+            <Chinese>6 小時</Chinese>
+            <Chinesesimp>6 小时</Chinesesimp>
             <Turkish>6 saat</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_Sleep7Hours">
             <English>7 hours</English>
-            <Chinesesimp>7 小时</Chinesesimp>
-            <Chinese>7 小時</Chinese>
             <Czech>7 hodin</Czech>
             <French>7 heures</French>
             <Spanish>7 horas</Spanish>
@@ -623,12 +605,12 @@
             <German>7 Stunden</German>
             <Korean>7 시간</Korean>
             <Japanese>7時間</Japanese>
+            <Chinese>7 小時</Chinese>
+            <Chinesesimp>7 小时</Chinesesimp>
             <Turkish>7 saat</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_Sleep8Hours">
             <English>8 hours</English>
-            <Chinesesimp>8 小时</Chinesesimp>
-            <Chinese>8 小時</Chinese>
             <Czech>8 hodin</Czech>
             <French>8 heures</French>
             <Spanish>8 horas</Spanish>
@@ -639,12 +621,12 @@
             <German>8 Stunden</German>
             <Korean>8 시간</Korean>
             <Japanese>8時間</Japanese>
+            <Chinese>8 小時</Chinese>
+            <Chinesesimp>8 小时</Chinesesimp>
             <Turkish>8 saat</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_Sleep9Hours">
             <English>9 hours</English>
-            <Chinesesimp>9 小时</Chinesesimp>
-            <Chinese>9 小時</Chinese>
             <Czech>9 hodin</Czech>
             <French>9 heures</French>
             <Spanish>9 horas</Spanish>
@@ -655,12 +637,12 @@
             <German>9 Stunden</German>
             <Korean>9 시간</Korean>
             <Japanese>9時間</Japanese>
+            <Chinese>9 小時</Chinese>
+            <Chinesesimp>9 小时</Chinesesimp>
             <Turkish>9 saat</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_SleepButton">
             <English>Sleep...</English>
-            <Chinesesimp>睡觉...</Chinesesimp>
-            <Chinese>睡覺...</Chinese>
             <Czech>Spánek...</Czech>
             <French>Dormir...</French>
             <Spanish>Duerme...</Spanish>
@@ -671,12 +653,12 @@
             <German>Schlafen...</German>
             <Korean>수면...</Korean>
             <Japanese>眠れ...</Japanese>
+            <Chinese>睡覺...</Chinese>
+            <Chinesesimp>睡觉...</Chinesesimp>
             <Turkish>Uyu.</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_SleepNoHourSelect">
             <English>You need to select how long you wish to sleep...</English>
-            <Chinesesimp>你需要选择你想睡多久...</Chinesesimp>
-            <Chinese>你需要選擇你想睡多久...</Chinese>
             <Czech>Vyberte si, jak dlouho chcete spát...</Czech>
             <French>Vous devez sélectionner la durée de votre sommeil...</French>
             <Spanish>Tienes que seleccionar cuánto tiempo quieres dormir...</Spanish>
@@ -687,12 +669,12 @@
             <German>Sie müssen auswählen, wie lange Sie schlafen möchten...</German>
             <Korean>수면 시간을 선택해야 합니다...</Korean>
             <Japanese>睡眠時間を選択する必要がある。</Japanese>
+            <Chinese>你需要選擇你想睡多久...</Chinese>
+            <Chinesesimp>你需要选择你想睡多久...</Chinesesimp>
             <Turkish>Ne kadar süre uyumak istediğinizi seçmeniz gerekiyor...</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_SleepNotTired">
             <English>You aren't tired enough to sleep yet...</English>
-            <Chinesesimp>你还没累到可以睡觉的时候...</Chinesesimp>
-            <Chinese>你還沒累到可以睡覺的時候...</Chinese>
             <Czech>Ještě nejste dostatečně unavený na to, abyste spal...</Czech>
             <French>Vous n'êtes pas encore assez fatigué pour dormir...</French>
             <Spanish>Aún no estás lo suficientemente cansado para dormir...</Spanish>
@@ -703,12 +685,12 @@
             <German>Du bist noch nicht müde genug, um zu schlafen...</German>
             <Korean>아직 잠을 잘 만큼 피곤하지 않으세요...</Korean>
             <Japanese>まだ眠るほど疲れてはいないだろう...。</Japanese>
+            <Chinese>你還沒累到可以睡覺的時候...</Chinese>
+            <Chinesesimp>你还没累到可以睡觉的时候...</Chinesesimp>
             <Turkish>Henüz uyuyacak kadar yorgun değilsin...</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_SleepPrompt">
             <English>How long do you want to sleep?</English>
-            <Chinesesimp>你想睡多久？</Chinesesimp>
-            <Chinese>你想睡多久？</Chinese>
             <Czech>Jak dlouho chcete spát?</Czech>
             <French>Combien de temps voulez-vous dormir ?</French>
             <Spanish>¿Cuánto tiempo quieres dormir?</Spanish>
@@ -719,12 +701,12 @@
             <German>Wie lange wollen Sie schlafen?</German>
             <Korean>얼마나 자고 싶으세요?</Korean>
             <Japanese>どれくらい寝たい？</Japanese>
+            <Chinese>你想睡多久？</Chinese>
+            <Chinesesimp>你想睡多久？</Chinesesimp>
             <Turkish>Ne kadar uyumak istiyorsun?</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_SleepTip">
             <English>Care should be taken when sleeping in excessive amounts...</English>
-            <Chinesesimp>过度睡眠时应注意...</Chinesesimp>
-            <Chinese>過度睡眠時應注意...</Chinese>
             <Czech>Při nadměrném množství spánku je třeba dbát na opatrnosti...</Czech>
             <French>Il convient d'être prudent lorsque l'on dort en quantités excessives...</French>
             <Spanish>Hay que tener cuidado cuando se duerme en cantidades excesivas...</Spanish>
@@ -735,12 +717,12 @@
             <German>Vorsicht ist geboten, wenn man übermäßig viel schläft...</German>
             <Korean>과도한 양의 수면을 취할 때는주의를 기울여야합니다 ...</Korean>
             <Japanese>過度の睡眠には注意が必要である。</Japanese>
+            <Chinese>過度睡眠時應注意...</Chinese>
+            <Chinesesimp>过度睡眠时应注意...</Chinesesimp>
             <Turkish>Aşırı miktarda uyurken dikkatli olunmalıdır...</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_SleptForHowLong">
             <English>You slept for %1 hour(s)...</English>
-            <Chinesesimp>你睡了 %1 小时...</Chinesesimp>
-            <Chinese>你睡了 %1 小時...</Chinese>
             <Czech>Spali jste %1 hodinu(y)...</Czech>
             <French>Vous avez dormi pendant %1 heure(s)...</French>
             <Spanish>Has dormido %1 hora(s)...</Spanish>
@@ -751,12 +733,12 @@
             <German>Sie haben %1 Stunde(n) lang geschlafen...</German>
             <Korean>%1 시간 동안 잠을 잤습니다...</Korean>
             <Japanese>%1 時間眠った。</Japanese>
+            <Chinese>你睡了 %1 小時...</Chinese>
+            <Chinesesimp>你睡了 %1 小时...</Chinesesimp>
             <Turkish>%1 saat(ler) boyunca uyudunuz...</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_StoreArtifact">
             <English>Store Artifact</English>
-            <Chinesesimp>存放神器</Chinesesimp>
-            <Chinese>存放神器</Chinese>
             <Czech>Uložit artefakt</Czech>
             <French>Magasin d'artefacts</French>
             <Spanish>Almacenar artefacto</Spanish>
@@ -767,12 +749,28 @@
             <German>Artefakt speichern</German>
             <Korean>아티팩트 저장</Korean>
             <Japanese>ストアアーティファクト</Japanese>
+            <Chinese>存放神器</Chinese>
+            <Chinesesimp>存放神器</Chinesesimp>
             <Turkish>Store Artifact</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_TooExpensive">
+            <English>You cannot afford this!</English>
+            <Czech>Tohle si nemůžete dovolit!</Czech>
+            <French>Vous n'avez pas les moyens !</French>
+            <Spanish>¡No puedes permitirte esto!</Spanish>
+            <Italian>Non puoi permettertelo!</Italian>
+            <Polish>Nie stać Cię na to!</Polish>
+            <Portuguese>Você não tem dinheiro para isso!</Portuguese>
+            <Russian>Вы не можете себе это позволить!</Russian>
+            <German>Das kannst du dir nicht leisten!</German>
+            <Korean>이것을 지불할 여유가 없습니다!</Korean>
+            <Japanese>これを購入する余裕がありません！</Japanese>
+            <Chinese>你負擔不起這個！</Chinese>
+            <Chinesesimp>你负担不起这个！</Chinesesimp>
+            <Turkish>Buna gücünüz yetmez!</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_UseForge">
             <English>Use Forge</English>
-            <Chinesesimp>使用锻炉</Chinesesimp>
-            <Chinese>使用鍛爐</Chinese>
             <Czech>Použít výheň</Czech>
             <French>Utiliser la forge</French>
             <Spanish>Utilizar Forja</Spanish>
@@ -783,6 +781,8 @@
             <German>Schmiede verwenden</German>
             <Korean>위조 사용</Korean>
             <Japanese>フォージを使う</Japanese>
+            <Chinese>使用鍛爐</Chinese>
+            <Chinesesimp>使用锻炉</Chinesesimp>
             <Turkish>Forge kullanın</Turkish>
         </Key>
     </Package>

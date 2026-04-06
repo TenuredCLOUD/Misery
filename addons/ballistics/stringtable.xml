@@ -3,8 +3,6 @@
     <Package name="Ballistics">
         <Key ID="STR_MISERY_Ballistics_AnimalObliterated">
             <English>The %1 was obliterated...</English>
-            <Chinesesimp>%1 已被消灭...</Chinesesimp>
-            <Chinese>%1 已被消滅...</Chinese>
             <Czech>%1 bylo vymazáno...</Czech>
             <French>Le %1 a été oblitéré...</French>
             <Spanish>El %1 fue obliterado...</Spanish>
@@ -15,6 +13,8 @@
             <German>Der %1 wurde ausgelöscht...</German>
             <Korean>%1 이(가) 지워졌습니다...</Korean>
             <Japanese>%1 が消された...</Japanese>
+            <Chinese>%1 已被消滅...</Chinese>
+            <Chinesesimp>%1 已被消灭...</Chinesesimp>
             <Turkish>%1 yok edildi...</Turkish>
         </Key>
     </Package>

@@ -1,170 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
     <Package name="DoorLocks">
-        <Key ID="STR_MISERY_DoorLocks_PINEntryLabel">
-            <English>PIN Entry:</English>
-            <Chinesesimp>PIN 输入:</Chinesesimp>
-            <Chinese>PIN 輸入:</Chinese>
-            <Czech>Zadání PIN:</Czech>
-            <French>Saisie du PIN :</French>
-            <Spanish>Entrada de PIN:</Spanish>
-            <Italian>Inserimento PIN:</Italian>
-            <Polish>Wprowadź PIN:</Polish>
-            <Portuguese>Inserir PIN:</Portuguese>
-            <Russian>Ввод PIN-кода:</Russian>
-            <German>PIN-Eingabe:</German>
-            <Korean>PIN 입력:</Korean>
-            <Japanese>PIN入力:</Japanese>
-            <Turkish>PIN Girişi:</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_DoorLocks_Enter">
-            <English>Enter</English>
-            <Chinesesimp>确认</Chinesesimp>
-            <Chinese>確認</Chinese>
-            <Czech>Potvrdit</Czech>
-            <French>Entrer</French>
-            <Spanish>Entrar</Spanish>
-            <Italian>Invio</Italian>
-            <Polish>Zatwierdź</Polish>
-            <Portuguese>Confirmar</Portuguese>
-            <Russian>Ввод</Russian>
-            <German>Eingabe</German>
-            <Korean>입력</Korean>
-            <Japanese>決定</Japanese>
-            <Turkish>Giriş</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_DoorLocks_DoorsUnlocked">
-            <English>Doors unlocked</English>
-            <Chinesesimp>门已解锁</Chinesesimp>
-            <Chinese>門已解鎖</Chinese>
-            <Czech>Dveře odemčeny</Czech>
-            <French>Portes déverrouillées</French>
-            <Spanish>Puertas desbloqueadas</Spanish>
-            <Italian>Porte sbloccate</Italian>
-            <Polish>Drzwi otwarte</Polish>
-            <Portuguese>Portas destrancadas</Portuguese>
-            <Russian>Двери разблокированы</Russian>
-            <German>Türen entriegelt</German>
-            <Korean>문 잠금 해제됨</Korean>
-            <Japanese>ドアのロックを解除しました</Japanese>
-            <Turkish>Kapı kilitleri açıldı</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_DoorLocks_DoorsAlreadyLocked">
-            <English>Doors are already locked...</English>
-            <Chinesesimp>门已经锁上了...</Chinesesimp>
-            <Chinese>門已經鎖上了...</Chinese>
-            <Czech>Dveře jsou již zamčeny...</Czech>
-            <French>Les portes sont déjà verrouillées...</French>
-            <Spanish>Las puertas ya están bloqueadas...</Spanish>
-            <Italian>Le porte sono già bloccate...</Italian>
-            <Polish>Drzwi są już zamknięte...</Polish>
-            <Portuguese>As portas já estão trancadas...</Portuguese>
-            <Russian>Двери уже заперты...</Russian>
-            <German>Türen sind bereits verriegelt...</German>
-            <Korean>문이 이미 잠겨 있습니다...</Korean>
-            <Japanese>ドアはすでにロックされています...</Japanese>
-            <Turkish>Kapılar zaten kilitli...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_DoorLocks_DoorsLocked">
-            <English>Doors locked</English>
-            <Chinesesimp>门已锁上</Chinesesimp>
-            <Chinese>門已鎖上</Chinese>
-            <Czech>Dveře zamčeny</Czech>
-            <French>Portes verrouillées</French>
-            <Spanish>Puertas bloqueadas</Spanish>
-            <Italian>Porte bloccate</Italian>
-            <Polish>Drzwi zamknięte</Polish>
-            <Portuguese>Portas trancadas</Portuguese>
-            <Russian>Двери заперты</Russian>
-            <German>Türen verriegelt</German>
-            <Korean>문 잠김</Korean>
-            <Japanese>ドアをロックしました</Japanese>
-            <Turkish>Kapılar kilitlendi</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_DoorLocks_CannotInstallLock">
-            <English>Cannot install door locks at this location...</English>
-            <Chinesesimp>无法在此位置安装门锁...</Chinesesimp>
-            <Chinese>無法在此位置安裝門鎖...</Chinese>
-            <Czech>Na tomto místě nelze nainstalovat zámky dveří...</Czech>
-            <French>Impossible d'installer des verrous ici...</French>
-            <Spanish>No se pueden instalar cerraduras en esta ubicación...</Spanish>
-            <Italian>Impossibile installare serrature in questa posizione...</Italian>
-            <Polish>Nie można zainstalować zamków w tym miejscu...</Polish>
-            <Portuguese>Não é possível instalar trancas neste local...</Portuguese>
-            <Russian>Невозможно установить замки в этом месте...</Russian>
-            <German>Türschlösser können hier nicht installiert werden...</German>
-            <Korean>이 위치에는 도어락을 설치할 수 없습니다...</Korean>
-            <Japanese>この場所にはドアロックを設置できません...</Japanese>
-            <Turkish>Bu konumda kapı kilidi kurulamaz...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_DoorLocks_NoLockKit">
-            <English>No door lock kit in inventory...</English>
-            <Chinesesimp>库存中没有门锁套件...</Chinesesimp>
-            <Chinese>庫存中沒有門鎖套件...</Chinese>
-            <Czech>V inventáři chybí sada pro uzamčení dveří...</Czech>
-            <French>Pas de kit de verrouillage dans l'inventaire...</French>
-            <Spanish>No hay kit de cerradura en el inventario...</Spanish>
-            <Italian>Nessun kit serratura nell'inventario...</Italian>
-            <Polish>Brak zestawu do zamków w ekwipunku...</Polish>
-            <Portuguese>Nenhum kit de tranca no inventário...</Portuguese>
-            <Russian>В инвентаре нет комплекта дверных замков...</Russian>
-            <German>Kein Türschloss-Satz im Inventar...</German>
-            <Korean>인벤토리에 도어락 키트가 없습니다...</Korean>
-            <Japanese>インベントリにドアロックキットがありません...</Japanese>
-            <Turkish>Envanterde kapı kilidi kiti yok...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_DoorLocks_PINSet">
-            <English>Locking PIN has been set:</English>
-            <Chinesesimp>锁定 PIN 已设置:</Chinesesimp>
-            <Chinese>鎖定 PIN 已設置:</Chinese>
-            <Czech>Zamykací PIN byl nastaven:</Czech>
-            <French>Le code PIN de verrouillage a été défini :</French>
-            <Spanish>Se ha establecido el PIN de bloqueo:</Spanish>
-            <Italian>Il PIN di blocco è stato impostato:</Italian>
-            <Polish>Kod PIN został ustawiony:</Polish>
-            <Portuguese>O PIN de bloqueio foi definido:</Portuguese>
-            <Russian>Установлен PIN-код блокировки:</Russian>
-            <German>Sperr-PIN wurde festgelegt:</German>
-            <Korean>잠금 PIN이 설정되었습니다:</Korean>
-            <Japanese>ロック用PINが設定されました:</Japanese>
-            <Turkish>Kilitleme PIN kodu ayarlandı:</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_DoorLocks_WrongPIN">
-            <English>Wrong PIN...</English>
-            <Chinesesimp>PIN 错误...</Chinesesimp>
-            <Chinese>PIN 錯誤...</Chinese>
-            <Czech>Nesprávný PIN...</Czech>
-            <French>Code PIN incorrect...</French>
-            <Spanish>PIN incorrecto...</Spanish>
-            <Italian>PIN errato...</Italian>
-            <Polish>Błędny PIN...</Polish>
-            <Portuguese>PIN incorreto...</Portuguese>
-            <Russian>Неверный PIN-код...</Russian>
-            <German>Falsche PIN...</German>
-            <Korean>PIN 번호가 틀렸습니다...</Korean>
-            <Japanese>PINが正しくありません...</Japanese>
-            <Turkish>Yanlış PIN...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_DoorLocks_PINMustBeNumber">
-            <English>PIN must be a number...</English>
-            <Chinesesimp>PIN 必须是数字...</Chinesesimp>
-            <Chinese>PIN 必須是數字...</Chinese>
-            <Czech>PIN musí být číslo...</Czech>
-            <French>Le PIN doit être un nombre...</French>
-            <Spanish>El PIN debe ser un número...</Spanish>
-            <Italian>Il PIN deve essere un numero...</Italian>
-            <Polish>PIN musi być liczbą...</Polish>
-            <Portuguese>O PIN deve ser um número...</Portuguese>
-            <Russian>PIN-код должен быть числом...</Russian>
-            <German>Die PIN muss eine Nummer sein...</German>
-            <Korean>PIN은 숫자여야 합니다...</Korean>
-            <Japanese>PINは数字で入力してください...</Japanese>
-            <Turkish>PIN bir sayı olmalıdır...</Turkish>
-        </Key>
         <Key ID="STR_MISERY_DoorLocks_Blacklist">
             <English>Blacklisted lockable areas</English>
-            <Chinesesimp>黑名单锁定区域</Chinesesimp>
-            <Chinese>黑名單鎖定區域</Chinese>
             <Czech>Zakázané oblasti pro zamykání</Czech>
             <French>Zones de verrouillage sur liste noire</French>
             <Spanish>Áreas de bloqueo en lista negra</Spanish>
@@ -175,12 +13,12 @@
             <German>Gesperrte abschließbare Bereiche</German>
             <Korean>잠금 금지 구역</Korean>
             <Japanese>ロック禁止エリア</Japanese>
+            <Chinese>黑名單鎖定區域</Chinese>
+            <Chinesesimp>黑名单锁定区域</Chinesesimp>
             <Turkish>Kara listeye alınmış kilitlenebilir alanlar</Turkish>
         </Key>
         <Key ID="STR_MISERY_DoorLocks_BlacklistDesc">
             <English>ELLIPSE or RECTANGLE marker names covering the blacklisted area as strings ['noLocks_1', 'noLocks_2']</English>
-            <Chinesesimp>覆盖黑名单区域的 ELLIPSE 或 RECTANGLE 标记名称，格式为字符串 ['noLocks_1', 'noLocks_2']</Chinesesimp>
-            <Chinese>覆蓋黑名單區域的 ELLIPSE 或 RECTANGLE 標記名稱，格式為字符串 ['noLocks_1', 'noLocks_2']</Chinese>
             <Czech>Názvy značek ELLIPSE nebo RECTANGLE pokrývající zakázanou oblast jako řetězce ['noLocks_1', 'noLocks_2']</Czech>
             <French>Noms des marqueurs ELLIPSE ou RECTANGLE couvrant la zone sur liste noire sous forme de chaînes ['noLocks_1', 'noLocks_2']</French>
             <Spanish>Nombres de marcadores ELLIPSE o RECTANGLE que cubren el área en lista negra como cadenas ['noLocks_1', 'noLocks_2']</Spanish>
@@ -191,12 +29,92 @@
             <German>ELLIPSE- oder RECTANGLE-Markernamen, die den gesperrten Bereich abdecken, als Strings ['noLocks_1', 'noLocks_2']</German>
             <Korean>금지 구역을 덮는 ELLIPSE 또는 RECTANGLE 마커 이름 문자열 ['noLocks_1', 'noLocks_2']</Korean>
             <Japanese>禁止エリアをカバーする ELLIPSE または RECTANGLE マーカー名の文字列 ['noLocks_1', 'noLocks_2']</Japanese>
+            <Chinese>覆蓋黑名單區域的 ELLIPSE 或 RECTANGLE 標記名稱，格式為字符串 ['noLocks_1', 'noLocks_2']</Chinese>
+            <Chinesesimp>覆盖黑名单区域的 ELLIPSE 或 RECTANGLE 标记名称，格式为字符串 ['noLocks_1', 'noLocks_2']</Chinesesimp>
             <Turkish>Kara listeye alınan alanı kapsayan ELLIPSE veya RECTANGLE işaretçi adları dizeleri ['noLocks_1', 'noLocks_2']</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_DoorLocks_CannotInstallLock">
+            <English>Cannot install door locks at this location...</English>
+            <Czech>Na tomto místě nelze nainstalovat zámky dveří...</Czech>
+            <French>Impossible d'installer des verrous ici...</French>
+            <Spanish>No se pueden instalar cerraduras en esta ubicación...</Spanish>
+            <Italian>Impossibile installare serrature in questa posizione...</Italian>
+            <Polish>Nie można zainstalować zamków w tym miejscu...</Polish>
+            <Portuguese>Não é possível instalar trancas neste local...</Portuguese>
+            <Russian>Невозможно установить замки в этом месте...</Russian>
+            <German>Türschlösser können hier nicht installiert werden...</German>
+            <Korean>이 위치에는 도어락을 설치할 수 없습니다...</Korean>
+            <Japanese>この場所にはドアロックを設置できません...</Japanese>
+            <Chinese>無法在此位置安裝門鎖...</Chinese>
+            <Chinesesimp>无法在此位置安装门锁...</Chinesesimp>
+            <Turkish>Bu konumda kapı kilidi kurulamaz...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_DoorLocks_DoorsAlreadyLocked">
+            <English>Doors are already locked...</English>
+            <Czech>Dveře jsou již zamčeny...</Czech>
+            <French>Les portes sont déjà verrouillées...</French>
+            <Spanish>Las puertas ya están bloqueadas...</Spanish>
+            <Italian>Le porte sono già bloccate...</Italian>
+            <Polish>Drzwi są już zamknięte...</Polish>
+            <Portuguese>As portas já estão trancadas...</Portuguese>
+            <Russian>Двери уже заперты...</Russian>
+            <German>Türen sind bereits verriegelt...</German>
+            <Korean>문이 이미 잠겨 있습니다...</Korean>
+            <Japanese>ドアはすでにロックされています...</Japanese>
+            <Chinese>門已經鎖上了...</Chinese>
+            <Chinesesimp>门已经锁上了...</Chinesesimp>
+            <Turkish>Kapılar zaten kilitli...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_DoorLocks_DoorsLocked">
+            <English>Doors locked</English>
+            <Czech>Dveře zamčeny</Czech>
+            <French>Portes verrouillées</French>
+            <Spanish>Puertas bloqueadas</Spanish>
+            <Italian>Porte bloccate</Italian>
+            <Polish>Drzwi zamknięte</Polish>
+            <Portuguese>Portas trancadas</Portuguese>
+            <Russian>Двери заперты</Russian>
+            <German>Türen verriegelt</German>
+            <Korean>문 잠김</Korean>
+            <Japanese>ドアをロックしました</Japanese>
+            <Chinese>門已鎖上</Chinese>
+            <Chinesesimp>门已锁上</Chinesesimp>
+            <Turkish>Kapılar kilitlendi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_DoorLocks_DoorsUnlocked">
+            <English>Doors unlocked</English>
+            <Czech>Dveře odemčeny</Czech>
+            <French>Portes déverrouillées</French>
+            <Spanish>Puertas desbloqueadas</Spanish>
+            <Italian>Porte sbloccate</Italian>
+            <Polish>Drzwi otwarte</Polish>
+            <Portuguese>Portas destrancadas</Portuguese>
+            <Russian>Двери разблокированы</Russian>
+            <German>Türen entriegelt</German>
+            <Korean>문 잠금 해제됨</Korean>
+            <Japanese>ドアのロックを解除しました</Japanese>
+            <Chinese>門已解鎖</Chinese>
+            <Chinesesimp>门已解锁</Chinesesimp>
+            <Turkish>Kapı kilitleri açıldı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_DoorLocks_Enter">
+            <English>Enter</English>
+            <Czech>Potvrdit</Czech>
+            <French>Entrer</French>
+            <Spanish>Entrar</Spanish>
+            <Italian>Invio</Italian>
+            <Polish>Zatwierdź</Polish>
+            <Portuguese>Confirmar</Portuguese>
+            <Russian>Ввод</Russian>
+            <German>Eingabe</German>
+            <Korean>입력</Korean>
+            <Japanese>決定</Japanese>
+            <Chinese>確認</Chinese>
+            <Chinesesimp>确认</Chinesesimp>
+            <Turkish>Giriş</Turkish>
         </Key>
         <Key ID="STR_MISERY_DoorLocks_Install">
             <English>Install Door Locks</English>
-            <Chinesesimp>安装门锁</Chinesesimp>
-            <Chinese>安裝門鎖</Chinese>
             <Czech>Instalovat zámky dveří</Czech>
             <French>Installer des verrous de porte</French>
             <Spanish>Instalar cerraduras de puerta</Spanish>
@@ -207,28 +125,12 @@
             <German>Türschlösser installieren</German>
             <Korean>문 잠금 장치 설치</Korean>
             <Japanese>ドアロックを設置する</Japanese>
+            <Chinese>安裝門鎖</Chinese>
+            <Chinesesimp>安装门锁</Chinesesimp>
             <Turkish>Kapı Kilitlerini Tak</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_DoorLocks_Unlock">
-            <English>Unlock Doors</English>
-            <Chinesesimp>解锁门</Chinesesimp>
-            <Chinese>解鎖門</Chinese>
-            <Czech>Odemknout dveře</Czech>
-            <French>Déverrouiller les portes</French>
-            <Spanish>Desbloquear puertas</Spanish>
-            <Italian>Sblocca porte</Italian>
-            <Polish>Odblokuj drzwi</Polish>
-            <Portuguese>Destrancar portas</Portuguese>
-            <Russian>Открыть двери</Russian>
-            <German>Türen entriegeln</German>
-            <Korean>문 잠금 해제</Korean>
-            <Japanese>ドアのロックを解除する</Japanese>
-            <Turkish>Kapıların Kilidini Aç</Turkish>
         </Key>
         <Key ID="STR_MISERY_DoorLocks_Lock">
             <English>Lock Doors</English>
-            <Chinesesimp>锁定门</Chinesesimp>
-            <Chinese>鎖定門</Chinese>
             <Czech>Zamknout dveře</Czech>
             <French>Verrouiller les portes</French>
             <Spanish>Bloquear puertas</Spanish>
@@ -239,7 +141,105 @@
             <German>Türen verriegeln</German>
             <Korean>문 잠그기</Korean>
             <Japanese>ドアをロックする</Japanese>
+            <Chinese>鎖定門</Chinese>
+            <Chinesesimp>锁定门</Chinesesimp>
             <Turkish>Kapıları Kilitle</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_DoorLocks_NoLockKit">
+            <English>No door lock kit in inventory...</English>
+            <Czech>V inventáři chybí sada pro uzamčení dveří...</Czech>
+            <French>Pas de kit de verrouillage dans l'inventaire...</French>
+            <Spanish>No hay kit de cerradura en el inventario...</Spanish>
+            <Italian>Nessun kit serratura nell'inventario...</Italian>
+            <Polish>Brak zestawu do zamków w ekwipunku...</Polish>
+            <Portuguese>Nenhum kit de tranca no inventário...</Portuguese>
+            <Russian>В инвентаре нет комплекта дверных замков...</Russian>
+            <German>Kein Türschloss-Satz im Inventar...</German>
+            <Korean>인벤토리에 도어락 키트가 없습니다...</Korean>
+            <Japanese>インベントリにドアロックキットがありません...</Japanese>
+            <Chinese>庫存中沒有門鎖套件...</Chinese>
+            <Chinesesimp>库存中没有门锁套件...</Chinesesimp>
+            <Turkish>Envanterde kapı kilidi kiti yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_DoorLocks_PINEntryLabel">
+            <English>PIN Entry:</English>
+            <Czech>Zadání PIN:</Czech>
+            <French>Saisie du PIN :</French>
+            <Spanish>Entrada de PIN:</Spanish>
+            <Italian>Inserimento PIN:</Italian>
+            <Polish>Wprowadź PIN:</Polish>
+            <Portuguese>Inserir PIN:</Portuguese>
+            <Russian>Ввод PIN-кода:</Russian>
+            <German>PIN-Eingabe:</German>
+            <Korean>PIN 입력:</Korean>
+            <Japanese>PIN入力:</Japanese>
+            <Chinese>PIN 輸入:</Chinese>
+            <Chinesesimp>PIN 输入:</Chinesesimp>
+            <Turkish>PIN Girişi:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_DoorLocks_PINMustBeNumber">
+            <English>PIN must be a number...</English>
+            <Czech>PIN musí být číslo...</Czech>
+            <French>Le PIN doit être un nombre...</French>
+            <Spanish>El PIN debe ser un número...</Spanish>
+            <Italian>Il PIN deve essere un numero...</Italian>
+            <Polish>PIN musi być liczbą...</Polish>
+            <Portuguese>O PIN deve ser um número...</Portuguese>
+            <Russian>PIN-код должен быть числом...</Russian>
+            <German>Die PIN muss eine Nummer sein...</German>
+            <Korean>PIN은 숫자여야 합니다...</Korean>
+            <Japanese>PINは数字で入力してください...</Japanese>
+            <Chinese>PIN 必須是數字...</Chinese>
+            <Chinesesimp>PIN 必须是数字...</Chinesesimp>
+            <Turkish>PIN bir sayı olmalıdır...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_DoorLocks_PINSet">
+            <English>Locking PIN has been set:</English>
+            <Czech>Zamykací PIN byl nastaven:</Czech>
+            <French>Le code PIN de verrouillage a été défini :</French>
+            <Spanish>Se ha establecido el PIN de bloqueo:</Spanish>
+            <Italian>Il PIN di blocco è stato impostato:</Italian>
+            <Polish>Kod PIN został ustawiony:</Polish>
+            <Portuguese>O PIN de bloqueio foi definido:</Portuguese>
+            <Russian>Установлен PIN-код блокировки:</Russian>
+            <German>Sperr-PIN wurde festgelegt:</German>
+            <Korean>잠금 PIN이 설정되었습니다:</Korean>
+            <Japanese>ロック用PINが設定されました:</Japanese>
+            <Chinese>鎖定 PIN 已設置:</Chinese>
+            <Chinesesimp>锁定 PIN 已设置:</Chinesesimp>
+            <Turkish>Kilitleme PIN kodu ayarlandı:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_DoorLocks_Unlock">
+            <English>Unlock Doors</English>
+            <Czech>Odemknout dveře</Czech>
+            <French>Déverrouiller les portes</French>
+            <Spanish>Desbloquear puertas</Spanish>
+            <Italian>Sblocca porte</Italian>
+            <Polish>Odblokuj drzwi</Polish>
+            <Portuguese>Destrancar portas</Portuguese>
+            <Russian>Открыть двери</Russian>
+            <German>Türen entriegeln</German>
+            <Korean>문 잠금 해제</Korean>
+            <Japanese>ドアのロックを解除する</Japanese>
+            <Chinese>解鎖門</Chinese>
+            <Chinesesimp>解锁门</Chinesesimp>
+            <Turkish>Kapıların Kilidini Aç</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_DoorLocks_WrongPIN">
+            <English>Wrong PIN...</English>
+            <Czech>Nesprávný PIN...</Czech>
+            <French>Code PIN incorrect...</French>
+            <Spanish>PIN incorrecto...</Spanish>
+            <Italian>PIN errato...</Italian>
+            <Polish>Błędny PIN...</Polish>
+            <Portuguese>PIN incorreto...</Portuguese>
+            <Russian>Неверный PIN-код...</Russian>
+            <German>Falsche PIN...</German>
+            <Korean>PIN 번호가 틀렸습니다...</Korean>
+            <Japanese>PINが正しくありません...</Japanese>
+            <Chinese>PIN 錯誤...</Chinese>
+            <Chinesesimp>PIN 错误...</Chinesesimp>
+            <Turkish>Yanlış PIN...</Turkish>
         </Key>
     </Package>
 </Project>

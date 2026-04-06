@@ -1,682 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
     <Package name="Currency">
-        <Key ID="STR_MISERY_Currency_BankAccount">
-            <English>Bank Account</English>
-            <Chinesesimp>银行账户</Chinesesimp>
-            <Chinese>銀行帳戶</Chinese>
-            <Czech>Bankovní účet</Czech>
-            <French>Compte bancaire</French>
-            <Spanish>Cuenta bancaria</Spanish>
-            <Italian>Conto bancario</Italian>
-            <Polish>Konto bankowe</Polish>
-            <Portuguese>Conta bancária</Portuguese>
-            <Russian>Банковский счет</Russian>
-            <German>Bankkonto</German>
-            <Korean>은행 계좌</Korean>
-            <Japanese>銀行口座</Japanese>
-            <Turkish>Banka Hesabı</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_Take">
-            <English>Take</English>
-            <Chinesesimp>取出</Chinesesimp>
-            <Chinese>取出</Chinese>
-            <Czech>Vzít</Czech>
-            <French>Prendre</French>
-            <Spanish>Tomar</Spanish>
-            <Italian>Prendi</Italian>
-            <Polish>Weź</Polish>
-            <Portuguese>Pegar</Portuguese>
-            <Russian>Взять</Russian>
-            <German>Nehmen</German>
-            <Korean>기져가기</Korean>
-            <Japanese>取る</Japanese>
-            <Turkish>Al</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_TakeFunds">
-            <English>Take funds</English>
-            <Chinesesimp>取出资金</Chinesesimp>
-            <Chinese>取出資金</Chinese>
-            <Czech>Vybrat prostředky</Czech>
-            <French>Prendre des fonds</French>
-            <Spanish>Tomar fondos</Spanish>
-            <Italian>Preleva fondi</Italian>
-            <Polish>Pobierz środki</Polish>
-            <Portuguese>Retirar fundos</Portuguese>
-            <Russian>Взять средства</Russian>
-            <German>Geld nehmen</German>
-            <Korean>자금 수령</Korean>
-            <Japanese>資金を受け取る</Japanese>
-            <Turkish>Para al</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_Give">
-            <English>Give</English>
-            <Chinesesimp>给予</Chinesesimp>
-            <Chinese>給予</Chinese>
-            <Czech>Dát</Czech>
-            <French>Donner</French>
-            <Spanish>Dar</Spanish>
-            <Italian>Dai</Italian>
-            <Polish>Daj</Polish>
-            <Portuguese>Dar</Portuguese>
-            <Russian>Дать</Russian>
-            <German>Geben</German>
-            <Korean>주기</Korean>
-            <Japanese>渡す</Japanese>
-            <Turkish>Ver</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_GiveFunds">
-            <English>Give funds</English>
-            <Chinesesimp>给予资金</Chinesesimp>
-            <Chinese>給予資金</Chinese>
-            <Czech>Darovat prostředky</Czech>
-            <French>Donner des fonds</French>
-            <Spanish>Dar fondos</Spanish>
-            <Italian>Invia fondi</Italian>
-            <Polish>Przekaż środki</Polish>
-            <Portuguese>Enviar fundos</Portuguese>
-            <Russian>Передать средства</Russian>
-            <German>Geld geben</German>
-            <Korean>자금 송금</Korean>
-            <Japanese>資金を渡す</Japanese>
-            <Turkish>Para gönder</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_Withdraw">
-            <English>Withdraw</English>
-            <Chinesesimp>取款</Chinesesimp>
-            <Chinese>取款</Chinese>
-            <Czech>Vybrat</Czech>
-            <French>Retirer</French>
-            <Spanish>Retirar</Spanish>
-            <Italian>Preleva</Italian>
-            <Polish>Wycofaj</Polish>
-            <Portuguese>Levantar</Portuguese>
-            <Russian>Забрать</Russian>
-            <German>Entnehmen</German>
-            <Korean>출금/꺼내기</Korean>
-            <Japanese>引き出す</Japanese>
-            <Turkish>Çek</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_Deposit">
-            <English>Deposit</English>
-            <Chinesesimp>存款</Chinesesimp>
-            <Chinese>存款</Chinese>
-            <Czech>Uložit</Czech>
-            <French>Déposer</French>
-            <Spanish>Depositar</Spanish>
-            <Italian>Deposita</Italian>
-            <Polish>Depozyt</Polish>
-            <Portuguese>Depositar</Portuguese>
-            <Russian>Положить</Russian>
-            <German>Einlagern</German>
-            <Korean>입금/보관</Korean>
-            <Japanese>預ける</Japanese>
-            <Turkish>Yatır</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_DepositWithdrawTax">
-            <English>Deposit %1%3 tax | Withdraw %2%3 tax</English>
-            <Chinesesimp>存款 %1%3 税 | 取款 %2%3 税</Chinesesimp>
-            <Chinese>存款 %1%3 稅 | 取款 %2%3 稅</Chinese>
-            <Czech>Vložit %1%3 daň | Vybrat %2%3 daň</Czech>
-            <French>Dépôt %1%3 taxe | Retrait %2%3 taxe</French>
-            <Spanish>Depositar %1%3 impuesto | Retirar %2%3 impuesto</Spanish>
-            <Italian>Deposito %1%3 tassa | Prelievo %2%3 tassa</Italian>
-            <Polish>Depozyt %1%3 podatek | Wypłata %2%3 podatek</Polish>
-            <Portuguese>Depositar %1%3 taxa | Retirar %2%3 taxa</Portuguese>
-            <Russian>Депозит %1%3 налог | Снятие %2%3 налог</Russian>
-            <German>Einzahlen %1%3 Steuer | Auszahlen %2%3 Steuer</German>
-            <Korean>입금 %1%3 세금 | 출금 %2%3 세금</Korean>
-            <Japanese>預金 %1%3 税金 | 引き出し %2%3 税金</Japanese>
-            <Turkish>Yatırma %1%3 vergi | Çekme %2%3 vergi</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_MaxDepositTax">
-            <English>Max deposit (after tax): %2 %1</English>
-            <Chinesesimp>最大存款 (税后): %2 %1</Chinesesimp>
-            <Chinese>最大存款 (稅後): %2 %1</Chinese>
-            <Czech>Maximální vklad (po zdanění): %2 %1</Czech>
-            <French>Dépôt max (après taxe): %2 %1</French>
-            <Spanish>Depósito máx. (tras impuestos): %2 %1</Spanish>
-            <Italian>Deposito massimo (tasse incluse): %2 %1</Italian>
-            <Polish>Maks. depozyt (po opodatkowaniu): %2 %1</Polish>
-            <Portuguese>Depósito máx. (após taxas): %2 %1</Portuguese>
-            <Russian>Макс. депозит (после налога): %2 %1</Russian>
-            <German>Max. Einzahlung (nach Steuern): %2 %1</German>
-            <Korean>최대 입금액 (세후): %2 %1</Korean>
-            <Japanese>最大預金額（税引後）: %2 %1</Japanese>
-            <Turkish>Maks. yatırma (vergi sonrası): %2 %1</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_NoFundsDeposit">
-            <English>No funds to deposit</English>
-            <Chinesesimp>无资金可存</Chinesesimp>
-            <Chinese>無資金可存</Chinese>
-            <Czech>Žádné prostředky k vkladu</Czech>
-            <French>Aucun fonds à déposer</French>
-            <Spanish>No hay fondos para depositar</Spanish>
-            <Italian>Nessun fondo da depositare</Italian>
-            <Polish>Brak środków do depozytu</Polish>
-            <Portuguese>Sem fundos para depositar</Portuguese>
-            <Russian>Нет средств для депозита</Russian>
-            <German>Keine Mittel zum Einzahlen</German>
-            <Korean>입금할 자금이 없습니다</Korean>
-            <Japanese>預金する資金がありません</Japanese>
-            <Turkish>Yatırılacak fon yok</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_MaxWithdrawTax">
-            <English>Max withdrawal (after tax): %2 %1</English>
-            <Chinesesimp>最大取款 (税后): %2 %1</Chinesesimp>
-            <Chinese>最大取款 (稅後): %2 %1</Chinese>
-            <Czech>Maximální výběr (po zdanění): %2 %1</Czech>
-            <French>Retrait max (après taxe): %2 %1</French>
-            <Spanish>Retiro máx. (tras impuestos): %2 %1</Spanish>
-            <Italian>Prelievo massimo (tasse incluse): %2 %1</Italian>
-            <Polish>Maks. wypłata (po opodatkowaniu): %2 %1</Polish>
-            <Portuguese>Retirada máx. (após taxas): %2 %1</Portuguese>
-            <Russian>Макс. снятие (после налога): %2 %1</Russian>
-            <German>Max. Auszahlung (nach Steuern): %2 %1</German>
-            <Korean>최대 출금액 (세후): %2 %1</Korean>
-            <Japanese>最大引き出し額（税引後）: %2 %1</Japanese>
-            <Turkish>Maks. çekme (vergi sonrası): %2 %1</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_NoFundsWithdraw">
-            <English>No funds to withdraw</English>
-            <Chinesesimp>无资金可取</Chinesesimp>
-            <Chinese>無資金可取</Chinese>
-            <Czech>Žádné prostředky k výběru</Czech>
-            <French>Aucun fonds à retirer</French>
-            <Spanish>No hay fondos para retirar</Spanish>
-            <Italian>Nessun fondo da prelevare</Italian>
-            <Polish>Brak środków do wypłaty</Polish>
-            <Portuguese>Sem fundos para retirar</Portuguese>
-            <Russian>Нет средств для снятия</Russian>
-            <German>Keine Mittel zum Auszahlen</German>
-            <Korean>출금할 자금이 없습니다</Korean>
-            <Japanese>引き出す資金がありません</Japanese>
-            <Turkish>Çekilecek fon yok</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_NoTaxes">
-            <English>No taxes applied</English>
-            <Chinesesimp>无需交税</Chinesesimp>
-            <Chinese>無需交稅</Chinese>
-            <Czech>Žádné daně se neuplatňují</Czech>
-            <French>Aucune taxe appliquée</French>
-            <Spanish>Sin impuestos aplicados</Spanish>
-            <Italian>Nessuna tassa applicata</Italian>
-            <Polish>Brak naliczonych podatków</Polish>
-            <Portuguese>Sem taxas aplicadas</Portuguese>
-            <Russian>Налоги не применяются</Russian>
-            <German>Keine Steuern angewendet</German>
-            <Korean>세금이 적용되지 않음</Korean>
-            <Japanese>税金は適用されません</Japanese>
-            <Turkish>Vergi uygulanmadı</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_MaxDeposit">
-            <English>Max deposit: %2 %1</English>
-            <Chinesesimp>最大存款: %2 %1</Chinesesimp>
-            <Chinese>最大存款: %2 %1</Chinese>
-            <Czech>Max. vklad: %2 %1</Czech>
-            <French>Dépôt max: %2 %1</French>
-            <Spanish>Depósito máx: %2 %1</Spanish>
-            <Italian>Deposito max: %2 %1</Italian>
-            <Polish>Maks. depozyt: %2 %1</Polish>
-            <Portuguese>Depósito máx: %2 %1</Portuguese>
-            <Russian>Макс. депозит: %2 %1</Russian>
-            <German>Max. Einzahlung: %2 %1</German>
-            <Korean>최대 입금: %2 %1</Korean>
-            <Japanese>最大預金: %2 %1</Japanese>
-            <Turkish>Maks. yatırma: %2 %1</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_MaxWithdraw">
-            <English>Max withdrawal: %2 %1</English>
-            <Chinesesimp>最大取款: %2 %1</Chinesesimp>
-            <Chinese>最大取款: %2 %1</Chinese>
-            <Czech>Max. výběr: %2 %1</Czech>
-            <French>Retrait max: %2 %1</French>
-            <Spanish>Retiro máx: %2 %1</Spanish>
-            <Italian>Prelievo max: %2 %1</Italian>
-            <Polish>Maks. wypłata: %2 %1</Polish>
-            <Portuguese>Retirada máx: %2 %1</Portuguese>
-            <Russian>Макс. снятие: %2 %1</Russian>
-            <German>Max. Auszahlung: %2 %1</German>
-            <Korean>최대 출금: %2 %1</Korean>
-            <Japanese>最大引き出し: %2 %1</Japanese>
-            <Turkish>Maks. çekme: %2 %1</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_InvalidDeposit">
-            <English>Invalid deposit amount...</English>
-            <Chinesesimp>存款金额无效...</Chinesesimp>
-            <Chinese>存款金額無效...</Chinese>
-            <Czech>Neplatná částka vkladu...</Czech>
-            <French>Montant de dépôt invalide...</French>
-            <Spanish>Cantidad de depósito no válida...</Spanish>
-            <Italian>Importo del deposito non valido...</Italian>
-            <Polish>Nieprawidłowa kwota depozytu...</Polish>
-            <Portuguese>Quantia de depósito inválida...</Portuguese>
-            <Russian>Неверная сумма депозита...</Russian>
-            <German>Ungültiger Einzahlungsbetrag...</German>
-            <Korean>잘못된 입금 금액...</Korean>
-            <Japanese>無効な預金額です...</Japanese>
-            <Turkish>Geçersiz yatırma tutarı...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_NotEnoughDeposit">
-            <English>You don't have enough funds for this deposit...</English>
-            <Chinesesimp>你没有足够的资金进行此次存款...</Chinesesimp>
-            <Chinese>你沒有足夠的資金進行此次存款...</Chinese>
-            <Czech>Nemáte dostatek prostředků pro tento vklad...</Czech>
-            <French>Vous n'avez pas assez de fonds pour ce dépôt...</French>
-            <Spanish>No tienes fondos suficientes para este depósito...</Spanish>
-            <Italian>Non hai abbastanza fondi per questo deposito...</Italian>
-            <Polish>Nie masz wystarczających środków na ten depozyt...</Polish>
-            <Portuguese>Você não tem fundos suficientes para este depósito...</Portuguese>
-            <Russian>У вас недостаточно средств для этого депозита...</Russian>
-            <German>Nicht genügend Mittel für diese Einzahlung...</German>
-            <Korean>입금할 자금이 부족합니다...</Korean>
-            <Japanese>この預金に必要な資金が不足しています...</Japanese>
-            <Turkish>Bu yatırma işlemi için yeterli fonunuz yok...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_DepositedTax">
-            <English>Deposited: %2 %1 (Tax: %2 %3)</English>
-            <Chinesesimp>已存入: %2 %1 (税费: %2 %3)</Chinesesimp>
-            <Chinese>已存入: %2 %1 (稅費: %2 %3)</Chinese>
-            <Czech>Vloženo: %2 %1 (Daň: %2 %3)</Czech>
-            <French>Déposé: %2 %1 (Taxe: %2 %3)</French>
-            <Spanish>Depositado: %2 %1 (Impuesto: %2 %3)</Spanish>
-            <Italian>Depositato: %2 %1 (Tassa: %2 %3)</Italian>
-            <Polish>Zdeponowano: %2 %1 (Podatek: %2 %3)</Polish>
-            <Portuguese>Depositado: %2 %1 (Taxa: %2 %3)</Portuguese>
-            <Russian>Депозит: %2 %1 (Налог: %2 %3)</Russian>
-            <German>Eingezahlt: %2 %1 (Steuer: %2 %3)</German>
-            <Korean>입금 완료: %2 %1 (세금: %2 %3)</Korean>
-            <Japanese>預金完了: %2 %1 (税金: %2 %3)</Japanese>
-            <Turkish>Yatırıldı: %2 %1 (Vergi: %2 %3)</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_Deposited">
-            <English>Deposited: %2 %1</English>
-            <Chinesesimp>已存入: %2 %1</Chinesesimp>
-            <Chinese>已存入: %2 %1</Chinese>
-            <Czech>Vloženo: %2 %1</Czech>
-            <French>Déposé: %2 %1</French>
-            <Spanish>Depositado: %2 %1</Spanish>
-            <Italian>Depositato: %2 %1</Italian>
-            <Polish>Zdeponowano: %2 %1</Polish>
-            <Portuguese>Depositado: %2 %1</Portuguese>
-            <Russian>Депозит: %2 %1</Russian>
-            <German>Eingezahlt: %2 %1</German>
-            <Korean>입금 완료: %2 %1</Korean>
-            <Japanese>預金完了: %2 %1</Japanese>
-            <Turkish>Yatırıldı: %2 %1</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_InvalidWithdraw">
-            <English>Invalid withdrawal amount...</English>
-            <Chinesesimp>取款金额无效...</Chinesesimp>
-            <Chinese>取款金額無效...</Chinese>
-            <Czech>Neplatná částka výběru...</Czech>
-            <French>Montant de retrait invalide...</French>
-            <Spanish>Cantidad de retiro no válida...</Spanish>
-            <Italian>Importo del prelievo non valido...</Italian>
-            <Polish>Nieprawidłowa kwota wypłaty...</Polish>
-            <Portuguese>Quantia de retirada inválida...</Portuguese>
-            <Russian>Неверная сумма снятия...</Russian>
-            <German>Ungültiger Auszahlungsbetrag...</German>
-            <Korean>잘못된 출금 금액...</Korean>
-            <Japanese>無効な引き出し額です...</Japanese>
-            <Turkish>Geçersiz çekme tutarı...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_NotEnoughWithdraw">
-            <English>You don't have enough funds for this withdrawal...</English>
-            <Chinesesimp>你没有足够的资金进行此次取款...</Chinesesimp>
-            <Chinese>你沒有足夠的資金進行此次取款...</Chinese>
-            <Czech>Nemáte dostatek prostředků pro tento výběr...</Czech>
-            <French>Vous n'avez pas assez de fonds pour ce retrait...</French>
-            <Spanish>No tienes fondos suficientes para este retiro...</Spanish>
-            <Italian>Non hai abbastanza fondi per questo prelievo...</Italian>
-            <Polish>Nie masz wystarczających środków na tę wypłatę...</Polish>
-            <Portuguese>Você não tem fundos suficientes para esta retirada...</Portuguese>
-            <Russian>У вас недостаточно средств для этого снятия...</Russian>
-            <German>Nicht genügend Mittel für diese Auszahlung...</German>
-            <Korean>출금할 자금이 부족합니다...</Korean>
-            <Japanese>この引き出しに必要な資金가 부족합니다...</Japanese>
-            <Turkish>Bu çekme işlemi için yeterli fonunuz yok...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_WithdrewTax">
-            <English>Withdrew: %2 %1 (Tax: %2 %3)</English>
-            <Chinesesimp>已取出: %2 %1 (税费: %2 %3)</Chinesesimp>
-            <Chinese>已取出: %2 %1 (稅費: %2 %3)</Chinese>
-            <Czech>Vybráno: %2 %1 (Daň: %2 %3)</Czech>
-            <French>Retiré: %2 %1 (Taxe: %2 %3)</French>
-            <Spanish>Retirado: %2 %1 (Impuesto: %2 %3)</Spanish>
-            <Italian>Prelevato: %2 %1 (Tassa: %2 %3)</Italian>
-            <Polish>Wypłacono: %2 %1 (Podatek: %2 %3)</Polish>
-            <Portuguese>Retirado: %2 %1 (Taxa: %2 %3)</Portuguese>
-            <Russian>Снято: %2 %1 (Налог: %2 %3)</Russian>
-            <German>Abgehoben: %2 %1 (Steuer: %2 %3)</German>
-            <Korean>출금 완료: %2 %1 (세금: %2 %3)</Korean>
-            <Japanese>引き出し完了: %2 %1 (税金: %2 %3)</Japanese>
-            <Turkish>Çekildi: %2 %1 (Vergi: %2 %3)</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_Withdrew">
-            <English>Withdrew: %2 %1</English>
-            <Chinesesimp>已取出: %2 %1</Chinesesimp>
-            <Chinese>已取出: %2 %1</Chinese>
-            <Czech>Vybráno: %2 %1</Czech>
-            <French>Retiré: %2 %1</French>
-            <Spanish>Retirado: %2 %1</Spanish>
-            <Italian>Prelevato: %2 %1</Italian>
-            <Polish>Wypłacono: %2 %1</Polish>
-            <Portuguese>Retirado: %2 %1</Portuguese>
-            <Russian>Снято: %2 %1</Russian>
-            <German>Abgehoben: %2 %1</German>
-            <Korean>출금 완료: %2 %1</Korean>
-            <Japanese>引き出し完了: %2 %1</Japanese>
-            <Turkish>Çekildi: %2 %1</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_OpenAction">
-            <English>Open %1</English>
-            <Chinesesimp>打开 %1</Chinesesimp>
-            <Chinese>打開 %1</Chinese>
-            <Czech>Otevřít %1</Czech>
-            <French>Ouvrir %1</French>
-            <Spanish>Abrir %1</Spanish>
-            <Italian>Apri %1</Italian>
-            <Polish>Otwórz %1</Polish>
-            <Portuguese>Abrir %1</Portuguese>
-            <Russian>Открыть %1</Russian>
-            <German>Öffne %1</German>
-            <Korean>%1 열기</Korean>
-            <Japanese>%1 を開く</Japanese>
-            <Turkish>%1 Aç</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_NoPlayer">
-            <English>No player nearby...</English>
-            <Chinesesimp>附近没有玩家...</Chinesesimp>
-            <Chinese>附近沒有玩家...</Chinese>
-            <Czech>Žádný hráč poblíž...</Czech>
-            <French>Aucun joueur à proximité...</French>
-            <Spanish>No hay ningún jugador cerca...</Spanish>
-            <Italian>Nessun giocatore nelle vicinanze...</Italian>
-            <Polish>Brak gracza w pobliżu...</Polish>
-            <Portuguese>Nenhum jogador por perto...</Portuguese>
-            <Russian>Рядом нет игроков...</Russian>
-            <German>Kein Spieler in der Nähe...</German>
-            <Korean>주변에 플레이어가 없습니다...</Korean>
-            <Japanese>近くにプレイヤーがいません...</Japanese>
-            <Turkish>Yakında oyuncu yok...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_InvalidAmount">
-            <English>Invalid amount...</English>
-            <Chinesesimp>金额无效...</Chinesesimp>
-            <Chinese>金額無效...</Chinese>
-            <Czech>Neplatná částka...</Czech>
-            <French>Montant invalide...</French>
-            <Spanish>Cantidad no válida...</Spanish>
-            <Italian>Importo non valido...</Italian>
-            <Polish>Nieprawidłowa kwota...</Polish>
-            <Portuguese>Quantia inválida...</Portuguese>
-            <Russian>Неверная сумма...</Russian>
-            <German>Ungültiger Betrag...</German>
-            <Korean>잘못된 금액...</Korean>
-            <Japanese>無効な金額です...</Japanese>
-            <Turkish>Geçersiz tutar...</Turkish>
-        </Key>
-         <Key ID="STR_MISERY_Currency_NoMoreFundsCorpse">
-            <English>This corpse has no more funds...</English>
-            <Chinesesimp>这具尸体没有更多资金了...</Chinesesimp>
-            <Chinese>這具屍體沒有更多資金了...</Chinese>
-            <Czech>Tato mrtvola již nemá žádné prostředky...</Czech>
-            <French>Ce cadavre n'a plus de fonds...</French>
-            <Spanish>Este cadáver ya no tiene fondos...</Spanish>
-            <Italian>Questo cadavere non ha più fondi...</Italian>
-            <Polish>Te zwłoki nie mają już więcej środków...</Polish>
-            <Portuguese>Este corpo não tem mais fundos...</Portuguese>
-            <Russian>У этого трупа больше нет средств...</Russian>
-            <German>Diese Leiche hat keine Mittel mehr...</German>
-            <Korean>이 시체에는 더 이상 자금이 없습니다...</Korean>
-            <Japanese>この死体にはもう資金がありません...</Japanese>
-            <Turkish>Bu cesette başka fon kalmadı...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_NotEnoughGift">
-            <English>You don't have enough funds to gift this much...</English>
-            <Chinesesimp>你没有足够的资金赠送这么多...</Chinesesimp>
-            <Chinese>你沒有足夠的資金贈送這麼多...</Chinese>
-            <Czech>Nemáte dostatek prostředků na darování takové částky...</Czech>
-            <French>Vous n'avez pas assez de fonds pour donner autant...</French>
-            <Spanish>No tienes fondos suficientes para regalar tanto...</Spanish>
-            <Italian>Non hai abbastanza fondi per regalare questa cifra...</Italian>
-            <Polish>Nie masz wystarczających środków, aby podarować tyle...</Polish>
-            <Portuguese>Você não tem fundos suficientes para presentear tanto...</Portuguese>
-            <Russian>У вас недостаточно средств, чтобы подарить столько...</Russian>
-            <German>Nicht genügend Mittel, um so viel zu verschenken...</German>
-            <Korean>이만큼 선물할 자금이 부족합니다...</Korean>
-            <Japanese>これほどの金額をギフトにする資金がありません...</Japanese>
-            <Turkish>Bu kadar hediye etmek için yeterli fonunuz yok...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_Gifted">
-            <English>Money gifted: %2 %1</English>
-            <Chinesesimp>赠送金额: %2 %1</Chinesesimp>
-            <Chinese>贈送金額: %2 %1</Chinese>
-            <Czech>Peníze darovány: %2 %1</Czech>
-            <French>Argent donné: %2 %1</French>
-            <Spanish>Dinero regalado: %2 %1</Spanish>
-            <Italian>Denaro regalato: %2 %1</Italian>
-            <Polish>Podarowane pieniądze: %2 %1</Polish>
-            <Portuguese>Dinheiro presenteado: %2 %1</Portuguese>
-            <Russian>Деньги подарены: %2 %1</Russian>
-            <German>Geld verschenkt: %2 %1</German>
-            <Korean>선물한 돈: %2 %1</Korean>
-            <Japanese>ギフトしたお金: %2 %1</Japanese>
-            <Turkish>Hediye edilen para: %2 %1</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_NoCorpse">
-            <English>No corpse nearby...</English>
-            <Chinesesimp>附近没有尸体...</Chinesesimp>
-            <Chinese>附近沒有屍體...</Chinese>
-            <Czech>Žádná mrtvola poblíž...</Czech>
-            <French>Aucun cadavre à proximité...</French>
-            <Spanish>No hay cadáveres cerca...</Spanish>
-            <Italian>Nessun cadavere nelle vicinanze...</Italian>
-            <Polish>Brak zwłok w pobliżu...</Polish>
-            <Portuguese>Nenhum corpo por perto...</Portuguese>
-            <Russian>Рядом нет трупов...</Russian>
-            <German>Leiche nicht in der Nähe...</German>
-            <Korean>주변에 시체가 없습니다...</Korean>
-            <Japanese>近くに死体がありません...</Japanese>
-            <Turkish>Yakında ceset yok...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_Taken">
-            <English>Money taken: %2 %1</English>
-            <Chinesesimp>获取金额: %2 %1</Chinesesimp>
-            <Chinese>獲取金額: %2 %1</Chinese>
-            <Czech>Peníze vzaty: %2 %1</Czech>
-            <French>Argent récupéré: %2 %1</French>
-            <Spanish>Dinero tomado: %2 %1</Spanish>
-            <Italian>Denaro prelevato: %2 %1</Italian>
-            <Polish>Zabrane pieniądze: %2 %1</Polish>
-            <Portuguese>Dinheiro retirado: %2 %1</Portuguese>
-            <Russian>Деньги взяты: %2 %1</Russian>
-            <German>Geld genommen: %2 %1</German>
-            <Korean>획득한 돈: %2 %1</Korean>
-            <Japanese>入手したお金: %2 %1</Japanese>
-            <Turkish>Alınan para: %2 %1</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_Symbol">
-            <English>Money Symbol</English>
-            <Chinesesimp>货币符号</Chinesesimp>
-            <Chinese>貨幣符號</Chinese>
-            <Czech>Symbol měny</Czech>
-            <French>Symbole monétaire</French>
-            <Spanish>Símbolo de dinero</Spanish>
-            <Italian>Simbolo valuta</Italian>
-            <Polish>Symbol pieniędzy</Polish>
-            <Portuguese>Símbolo monetário</Portuguese>
-            <Russian>Символ валюты</Russian>
-            <German>Währungssymbol</German>
-            <Korean>화폐 기호</Korean>
-            <Japanese>通貨記号</Japanese>
-            <Turkish>Para Sembolü</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_SymbolDesc">
-            <English>Symbol to use for currency</English>
-            <Chinesesimp>用于货币的符号</Chinesesimp>
-            <Chinese>用於貨幣的符號</Chinese>
-            <Czech>Symbol použitý pro měnu</Czech>
-            <French>Symbole à utiliser pour la monnaie</French>
-            <Spanish>Símbolo a usar para la moneda</Spanish>
-            <Italian>Simbolo da utilizzare per la valuta</Italian>
-            <Polish>Symbol używany dla waluty</Polish>
-            <Portuguese>Símbolo a ser usado para a moeda</Portuguese>
-            <Russian>Символ, используемый для валюты</Russian>
-            <German>Symbol für die Währung</German>
-            <Korean>통화에 사용할 기호</Korean>
-            <Japanese>通貨に使用する記号</Japanese>
-            <Turkish>Para birimi için kullanılacak sembol</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_BankName">
-            <English>Bank name</English>
-            <Chinesesimp>银行名称</Chinesesimp>
-            <Chinese>銀行名稱</Chinese>
-            <Czech>Název banky</Czech>
-            <French>Nom de la banque</French>
-            <Spanish>Nombre del banco</Spanish>
-            <Italian>Nome della banca</Italian>
-            <Polish>Nazwa banku</Polish>
-            <Portuguese>Nome do banco</Portuguese>
-            <Russian>Название банка</Russian>
-            <German>Bankname</German>
-            <Korean>은행 이름</Korean>
-            <Japanese>銀行名</Japanese>
-            <Turkish>Banka adı</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_BankNameDesc">
-            <English>Name of the centralized bank network</English>
-            <Chinesesimp>中央银行网络的名称</Chinesesimp>
-            <Chinese>中央銀行網絡的名稱</Chinese>
-            <Czech>Název centralizované bankovní sítě</Czech>
-            <French>Nom du réseau bancaire centralisé</French>
-            <Spanish>Nombre de la red bancaria centralizada</Spanish>
-            <Italian>Nome della rete bancaria centralizzata</Italian>
-            <Polish>Nazwa scentralizowanej sieci bankowej</Polish>
-            <Portuguese>Nome da rede bancária centralizada</Portuguese>
-            <Russian>Название централизованной банковской сети</Russian>
-            <German>Name des zentralisierten Bankennetzwerks</German>
-            <Korean>중앙 집중식 은행 네트워크 이름</Korean>
-            <Japanese>中央銀行ネットワークの名前</Japanese>
-            <Turkish>Merkezi banka ağının adı</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_TaxesMode">
-            <English>Bank Taxes Mode</English>
-            <Chinesesimp>银行税费模式</Chinesesimp>
-            <Chinese>銀行稅費模式</Chinese>
-            <Czech>Režim bankovních daní</Czech>
-            <French>Mode des taxes bancaires</French>
-            <Spanish>Modo de impuestos bancarios</Spanish>
-            <Italian>Modalità tasse bancarie</Italian>
-            <Polish>Tryb podatków bankowych</Polish>
-            <Portuguese>Modo de taxas bancárias</Portuguese>
-            <Russian>Режим банковских налогов</Russian>
-            <German>Bankensteuer-Modus</German>
-            <Korean>은행 세금 모드</Korean>
-            <Japanese>銀行税モード</Japanese>
-            <Turkish>Banka Vergileri Modu</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_TaxesModeDesc">
-            <English>Sets the difficulty of bank transaction taxes, reflecting economic conditions</English>
-            <Chinesesimp>设置银行交易税费的难度，反映经济状况</Chinesesimp>
-            <Chinese>設置銀行交易稅費的難度，反映經濟狀況</Chinese>
-            <Czech>Nastavuje obtížnost daní z bankovních transakcí odrážející ekonomické podmínky</Czech>
-            <French>Définit la difficulté des taxes sur les transactions bancaires selon les conditions économiques</French>
-            <Spanish>Establece la dificultad de los impuestos por transacciones bancarias, reflejando las condiciones económicas</Spanish>
-            <Italian>Imposta la difficoltà delle tasse sulle transazioni bancarie, riflettendo le condizioni economiche</Italian>
-            <Polish>Ustawia trudność podatków od transakcji bankowych, odzwierciedlając warunki ekonomiczne</Polish>
-            <Portuguese>Define a dificuldade das taxas de transação bancária, refletindo as condições econômicas</Portuguese>
-            <Russian>Устанавливает сложность налогов на банковские операции, отражая экономические условия</Russian>
-            <German>Legt den Schwierigkeitsgrad der Banktransaktionssteuern fest und spiegelt die wirtschaftlichen Bedingungen wider</German>
-            <Korean>경제 상황을 반영하여 은행 거래세의 난이도를 설정합니다</Korean>
-            <Japanese>経済状況を反映した銀行取引税の難易度を設定します</Japanese>
-            <Turkish>Ekonomik koşulları yansıtan banka işlem vergilerinin zorluğunu ayarlar</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_DescNone">
-            <English>Transactions are free (0% tax)</English>
-            <Chinesesimp>交易免费 (0% 税)</Chinesesimp>
-            <Chinese>交易免費 (0% 稅)</Chinese>
-            <Czech>Transakce jsou zdarma (0% daň)</Czech>
-            <French>Les transactions sont gratuites (0% taxe)</French>
-            <Spanish>Las transacciones son gratuitas (0% impuesto)</Spanish>
-            <Italian>Le transazioni sono gratuite (0% tasse)</Italian>
-            <Polish>Transakcje są darmowe (0% podatku)</Polish>
-            <Portuguese>As transações são gratuitas (taxa de 0%)</Portuguese>
-            <Russian>Транзакции бесплатны (налог 0%)</Russian>
-            <German>Transaktionen sind kostenlos (0% Steuer)</German>
-            <Korean>거래가 무료입니다 (세금 0%)</Korean>
-            <Japanese>取引は無料です (税金0%)</Japanese>
-            <Turkish>İşlemler ücretsizdir (%0 vergi)</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_DescStable">
-            <English>Minimal taxes for deposits and withdrawals</English>
-            <Chinesesimp>存取款的最低税费</Chinesesimp>
-            <Chinese>存取款的最低稅費</Chinese>
-            <Czech>Minimální daně pro vklady a výběry</Czech>
-            <French>Taxes minimales pour les dépôts et retraits</French>
-            <Spanish>Impuestos mínimos para depósitos y retiros</Spanish>
-            <Italian>Tasse minime per depositi e prelievi</Italian>
-            <Polish>Minimalne podatki dla depozytów i wypłat</Polish>
-            <Portuguese>Taxas mínimas para depósitos e retiradas</Portuguese>
-            <Russian>Минимальные налоги на депозиты и снятие</Russian>
-            <German>Minimale Steuern für Ein- und Auszahlungen</German>
-            <Korean>입금 및 출금에 대한 최소 세금</Korean>
-            <Japanese>預金と引き出しに対する最小限の税金</Japanese>
-            <Turkish>Yatırma ve çekme işlemleri için minimum vergi</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_DescRecession">
-            <English>Moderate taxes, deposits slightly costlier</English>
-            <Chinesesimp>中等税费，存款成本略高</Chinesesimp>
-            <Chinese>中等稅費，存款成本略高</Chinese>
-            <Czech>Mírné daně, vklady jsou mírně nákladnější</Czech>
-            <French>Taxes modérées, dépôts légèrement plus coûteux</French>
-            <Spanish>Impuestos moderados, depósitos ligeramente más caros</Spanish>
-            <Italian>Tasse moderate, depositi leggermente più costosi</Italian>
-            <Polish>Umiarkowane podatki, depozyty nieco droższe</Polish>
-            <Portuguese>Taxas moderadas, depósitos ligeiramente mais caros</Portuguese>
-            <Russian>Умеренные налоги, депозиты немного дороже</Russian>
-            <German>Moderate Steuern, Einzahlungen etwas teurer</German>
-            <Korean>적당한 세금, 입금이 약간 더 비쌉니다</Korean>
-            <Japanese>中程度の税金、預金がわずかに高くなります</Japanese>
-            <Turkish>Orta düzeyde vergiler, yatırmalar biraz daha maliyetli</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_DescHyperinflation">
-            <English>High taxes, withdrawals heavily penalized</English>
-            <Chinesesimp>高额税费，取款受到严厉惩罚</Chinesesimp>
-            <Chinese>高額稅費，取款受到嚴厲懲罰</Chinese>
-            <Czech>Vysoké daně, výběry jsou silně penalizovány</Czech>
-            <French>Taxes élevées, retraits fortement pénalisés</French>
-            <Spanish>Impuestos altos, retiros fuertemente penalizados</Spanish>
-            <Italian>Tasse elevate, prelievi pesantemente penalizzati</Italian>
-            <Polish>Wysokie podatki, wypłaty mocno karane</Polish>
-            <Portuguese>Taxas altas, retiradas fortemente penalizadas</Portuguese>
-            <Russian>Высокие налоги, снятие средств сильно наказывается</Russian>
-            <German>Hohe Steuern, Auszahlungen stark bestraft</German>
-            <Korean>높은 세금, 출금 시 막대한 불이익</Korean>
-            <Japanese>高い税金、引き出しに重い罰則</Japanese>
-            <Turkish>Yüksek vergiler, çekme işlemleri ağır şekilde cezalandırılır</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_DescCollapse">
-            <English>Crippling taxes, banking is a last resort</English>
-            <Chinesesimp>极高税费，银行是最后手段</Chinesesimp>
-            <Chinese>極高稅費，銀行是最後手段</Chinese>
-            <Czech>Zničující daně, bankovnictví je poslední možností</Czech>
-            <French>Taxes écrasantes, la banque est un dernier recours</French>
-            <Spanish>Impuestos asfixiantes, la banca es el último recurso</Spanish>
-            <Italian>Tasse paralizzanti, la banca è l'ultima risorsa</Italian>
-            <Polish>Paraliżujące podatki, bankowość to ostateczność</Polish>
-            <Portuguese>Taxas incapacitantes, o banco é o último recurso</Portuguese>
-            <Russian>Убийственные налоги, банк — это крайняя мера</Russian>
-            <German>Vernichtende Steuern, Banking ist der letzte Ausweg</German>
-            <Korean>심각한 세금, 은행은 최후의 수단입니다</Korean>
-            <Japanese>壊滅的な税金、銀行は最後の手段です</Japanese>
-            <Turkish>Ağır vergiler, bankacılık son çaredir</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Currency_AIMoneyChance">
             <English>AI Money Chance</English>
-            <Chinesesimp>AI 携带资金概率</Chinesesimp>
-            <Chinese>AI 攜帶資金概率</Chinese>
             <Czech>Šance na peníze u AI</Czech>
             <French>Chance d'argent de l'IA</French>
             <Spanish>Probabilidad de dinero en IA</Spanish>
@@ -687,12 +13,12 @@
             <German>KI-Geldchance</German>
             <Korean>AI 소지금 확률</Korean>
             <Japanese>AIの所持金確率</Japanese>
+            <Chinese>AI 攜帶資金概率</Chinese>
+            <Chinesesimp>AI 携带资金概率</Chinesesimp>
             <Turkish>Yapay Zeka Para Şansı</Turkish>
         </Key>
         <Key ID="STR_MISERY_Currency_AIMoneyChanceDesc">
             <English>Chance that an AI will have money.</English>
-            <Chinesesimp>AI 携带资金的概率。</Chinesesimp>
-            <Chinese>AI 攜帶資金的概率。</Chinese>
             <Czech>Šance, že AI bude mít peníze.</Czech>
             <French>Chance qu'une IA possède de l'argent.</French>
             <Spanish>Probabilidad de que una IA tenga dinero.</Spanish>
@@ -703,92 +29,204 @@
             <German>Wahrscheinlichkeit, dass eine KI Geld hat.</German>
             <Korean>AI가 돈을 가지고 있을 확률입니다.</Korean>
             <Japanese>AIがお金を持っている確率です。</Japanese>
+            <Chinese>AI 攜帶資金的概率。</Chinese>
+            <Chinesesimp>AI 携带资金的概率。</Chinesesimp>
             <Turkish>Bir yapay zekanın parası olma şansı.</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Currency_MinAIMoney">
-            <English>Minimum AI Money</English>
-            <Chinesesimp>AI 最小携带资金</Chinesesimp>
-            <Chinese>AI 最小攜帶資金</Chinese>
-            <Czech>Minimální peníze AI</Czech>
-            <French>Argent minimum de l'IA</French>
-            <Spanish>Dinero mínimo de IA</Spanish>
-            <Italian>Denaro minimo AI</Italian>
-            <Polish>Minimalne pieniądze AI</Polish>
-            <Portuguese>Dinheiro mínimo da IA</Portuguese>
-            <Russian>Мин. денег у ИИ</Russian>
-            <German>Minimales KI-Geld</German>
-            <Korean>최소 AI 소지금</Korean>
-            <Japanese>最小AI所持金</Japanese>
-            <Turkish>Minimum Yapay Zeka Parası</Turkish>
+        <Key ID="STR_MISERY_Currency_BankAccount">
+            <English>Bank Account</English>
+            <Czech>Bankovní účet</Czech>
+            <French>Compte bancaire</French>
+            <Spanish>Cuenta bancaria</Spanish>
+            <Italian>Conto bancario</Italian>
+            <Polish>Konto bankowe</Polish>
+            <Portuguese>Conta bancária</Portuguese>
+            <Russian>Банковский счет</Russian>
+            <German>Bankkonto</German>
+            <Korean>은행 계좌</Korean>
+            <Japanese>銀行口座</Japanese>
+            <Chinese>銀行帳戶</Chinese>
+            <Chinesesimp>银行账户</Chinesesimp>
+            <Turkish>Banka Hesabı</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Currency_MinAIMoneyDesc">
-            <English>The minimum AI can potentially have for cash. (Capped at 5,000)</English>
-            <Chinesesimp>AI 可能携带的最小现金金额。(上限 5,000)</Chinesesimp>
-            <Chinese>AI 可能攜帶的最小現金金額。(上限 5,000)</Chinese>
-            <Czech>Minimální hotovost, kterou může AI mít. (Limit 5 000)</Czech>
-            <French>Le montant minimum d'argent qu'une IA peut avoir. (Limité à 5 000)</French>
-            <Spanish>El mínimo de efectivo que una IA puede tener. (Límite 5.000)</Spanish>
-            <Italian>Il minimo di contanti che un'AI può avere. (Limite 5.000)</Italian>
-            <Polish>Minimalna gotówka, jaką może mieć AI. (Limit 5 000)</Polish>
-            <Portuguese>O mínimo de dinheiro que uma IA pode ter. (Limite de 5.000)</Portuguese>
-            <Russian>Минимум наличных, который может быть у ИИ. (Лимит 5 000)</Russian>
-            <German>Das Minimum an Bargeld, das eine KI haben kann. (Begrenzt auf 5.000)</German>
-            <Korean>AI가 가질 수 있는 최소 현금입니다. (최대 5,000)</Korean>
-            <Japanese>AIが持てる最小の現金。 (上限 5,000)</Japanese>
-            <Turkish>Yapay zekanın sahip olabileceği minimum nakit. (5.000 ile sınırlı)</Turkish>
+        <Key ID="STR_MISERY_Currency_BankName">
+            <English>Bank name</English>
+            <Czech>Název banky</Czech>
+            <French>Nom de la banque</French>
+            <Spanish>Nombre del banco</Spanish>
+            <Italian>Nome della banca</Italian>
+            <Polish>Nazwa banku</Polish>
+            <Portuguese>Nome do banco</Portuguese>
+            <Russian>Название банка</Russian>
+            <German>Bankname</German>
+            <Korean>은행 이름</Korean>
+            <Japanese>銀行名</Japanese>
+            <Chinese>銀行名稱</Chinese>
+            <Chinesesimp>银行名称</Chinesesimp>
+            <Turkish>Banka adı</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Currency_MaxAIMoney">
-            <English>Maximum AI Money</English>
-            <Chinesesimp>AI 最大携带资金</Chinesesimp>
-            <Chinese>AI 最大攜帶資金</Chinese>
-            <Czech>Maximální peníze AI</Czech>
-            <French>Argent maximum de l'IA</French>
-            <Spanish>Dinero máximo de IA</Spanish>
-            <Italian>Denaro massimo AI</Italian>
-            <Polish>Maksymalne pieniądze AI</Polish>
-            <Portuguese>Dinheiro máximo da IA</Portuguese>
-            <Russian>Макс. денег у ИИ</Russian>
-            <German>Maximales KI-Geld</German>
-            <Korean>최대 AI 소지금</Korean>
-            <Japanese>最大AI所持金</Japanese>
-            <Turkish>Maksimum Yapay Zeka Parası</Turkish>
+        <Key ID="STR_MISERY_Currency_BankNameDesc">
+            <English>Name of the centralized bank network</English>
+            <Czech>Název centralizované bankovní sítě</Czech>
+            <French>Nom du réseau bancaire centralisé</French>
+            <Spanish>Nombre de la red bancaria centralizada</Spanish>
+            <Italian>Nome della rete bancaria centralizzata</Italian>
+            <Polish>Nazwa scentralizowanej sieci bankowej</Polish>
+            <Portuguese>Nome da rede bancária centralizada</Portuguese>
+            <Russian>Название централизованной банковской сети</Russian>
+            <German>Name des zentralisierten Bankennetzwerks</German>
+            <Korean>중앙 집중식 은행 네트워크 이름</Korean>
+            <Japanese>中央銀行ネットワークの名前</Japanese>
+            <Chinese>中央銀行網絡的名稱</Chinese>
+            <Chinesesimp>中央银行网络的名称</Chinesesimp>
+            <Turkish>Merkezi banka ağının adı</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Currency_MaxAIMoneyDesc">
-            <English>The maximum AI can potentially have for cash. (Capped at 10,000)</English>
-            <Chinesesimp>AI 可能携带的最大现金金额。(上限 10,000)</Chinesesimp>
-            <Chinese>AI 可能攜帶的最大現金金額。(上限 10,000)</Chinese>
-            <Czech>Maximální hotovost, kterou může AI mít. (Limit 10 000)</Czech>
-            <French>Le montant maximum d'argent qu'une IA peut avoir. (Limité à 10 000)</French>
-            <Spanish>El máximo de efectivo que una IA puede tener. (Límite 10.000)</Spanish>
-            <Italian>Il massimo di contanti che un'AI può avere. (Limite 10.000)</Italian>
-            <Polish>Maksymalna gotówka, jaką może mieć AI. (Limit 10 000)</Polish>
-            <Portuguese>O máximo de dinheiro que uma IA pode ter. (Limite de 10.000)</Portuguese>
-            <Russian>Максимум наличных, который может быть у ИИ. (Лимит 10 000)</Russian>
-            <German>Das Maximum an Bargeld, das eine KI haben kann. (Begrenzt auf 10.000)</German>
-            <Korean>AI가 가질 수 있는 최대 현금입니다. (최대 10,000)</Korean>
-            <Japanese>AIが持てる最大の現金。 (上限 10,000)</Japanese>
-            <Turkish>Yapay zekanın sahip olabileceği maksimum nakit. (10.000 ile sınırlı)</Turkish>
+        <Key ID="STR_MISERY_Currency_Deposit">
+            <English>Deposit</English>
+            <Czech>Uložit</Czech>
+            <French>Déposer</French>
+            <Spanish>Depositar</Spanish>
+            <Italian>Deposita</Italian>
+            <Polish>Depozyt</Polish>
+            <Portuguese>Depositar</Portuguese>
+            <Russian>Положить</Russian>
+            <German>Einlagern</German>
+            <Korean>입금/보관</Korean>
+            <Japanese>預ける</Japanese>
+            <Chinese>存款</Chinese>
+            <Chinesesimp>存款</Chinesesimp>
+            <Turkish>Yatır</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Currency_SearchAction">
-            <English>%1 Search for money</English>
-            <Chinesesimp>%1 搜寻资金</Chinesesimp>
-            <Chinese>%1 搜尋資金</Chinese>
-            <Czech>%1 Hledat peníze</Czech>
-            <French>%1 Chercher de l'argent</French>
-            <Spanish>%1 Buscar dinero</Spanish>
-            <Italian>%1 Cerca denaro</Italian>
-            <Polish>%1 Szukaj pieniędzy</Polish>
-            <Portuguese>%1 Procurar dinheiro</Portuguese>
-            <Russian>%1 Искать деньги</Russian>
-            <German>%1 Nach Geld suchen</German>
-            <Korean>%1 돈 검색</Korean>
-            <Japanese>%1 お金を探す</Japanese>
-            <Turkish>%1 Para ara</Turkish>
+        <Key ID="STR_MISERY_Currency_DepositWithdrawTax">
+            <English>Deposit %1%3 tax | Withdraw %2%3 tax</English>
+            <Czech>Vložit %1%3 daň | Vybrat %2%3 daň</Czech>
+            <French>Dépôt %1%3 taxe | Retrait %2%3 taxe</French>
+            <Spanish>Depositar %1%3 impuesto | Retirar %2%3 impuesto</Spanish>
+            <Italian>Deposito %1%3 tassa | Prelievo %2%3 tassa</Italian>
+            <Polish>Depozyt %1%3 podatek | Wypłata %2%3 podatek</Polish>
+            <Portuguese>Depositar %1%3 taxa | Retirar %2%3 taxa</Portuguese>
+            <Russian>Депозит %1%3 налог | Снятие %2%3 налог</Russian>
+            <German>Einzahlen %1%3 Steuer | Auszahlen %2%3 Steuer</German>
+            <Korean>입금 %1%3 세금 | 출금 %2%3 세금</Korean>
+            <Japanese>預金 %1%3 税金 | 引き出し %2%3 税金</Japanese>
+            <Chinese>存款 %1%3 稅 | 取款 %2%3 稅</Chinese>
+            <Chinesesimp>存款 %1%3 税 | 取款 %2%3 税</Chinesesimp>
+            <Turkish>Yatırma %1%3 vergi | Çekme %2%3 vergi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_Deposited">
+            <English>Deposited: %2 %1</English>
+            <Czech>Vloženo: %2 %1</Czech>
+            <French>Déposé: %2 %1</French>
+            <Spanish>Depositado: %2 %1</Spanish>
+            <Italian>Depositato: %2 %1</Italian>
+            <Polish>Zdeponowano: %2 %1</Polish>
+            <Portuguese>Depositado: %2 %1</Portuguese>
+            <Russian>Депозит: %2 %1</Russian>
+            <German>Eingezahlt: %2 %1</German>
+            <Korean>입금 완료: %2 %1</Korean>
+            <Japanese>預金完了: %2 %1</Japanese>
+            <Chinese>已存入: %2 %1</Chinese>
+            <Chinesesimp>已存入: %2 %1</Chinesesimp>
+            <Turkish>Yatırıldı: %2 %1</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_DepositedTax">
+            <English>Deposited: %2 %1 (Tax: %2 %3)</English>
+            <Czech>Vloženo: %2 %1 (Daň: %2 %3)</Czech>
+            <French>Déposé: %2 %1 (Taxe: %2 %3)</French>
+            <Spanish>Depositado: %2 %1 (Impuesto: %2 %3)</Spanish>
+            <Italian>Depositato: %2 %1 (Tassa: %2 %3)</Italian>
+            <Polish>Zdeponowano: %2 %1 (Podatek: %2 %3)</Polish>
+            <Portuguese>Depositado: %2 %1 (Taxa: %2 %3)</Portuguese>
+            <Russian>Депозит: %2 %1 (Налог: %2 %3)</Russian>
+            <German>Eingezahlt: %2 %1 (Steuer: %2 %3)</German>
+            <Korean>입금 완료: %2 %1 (세금: %2 %3)</Korean>
+            <Japanese>預金完了: %2 %1 (税金: %2 %3)</Japanese>
+            <Chinese>已存入: %2 %1 (稅費: %2 %3)</Chinese>
+            <Chinesesimp>已存入: %2 %1 (税费: %2 %3)</Chinesesimp>
+            <Turkish>Yatırıldı: %2 %1 (Vergi: %2 %3)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_DescCollapse">
+            <English>Crippling taxes, banking is a last resort</English>
+            <Czech>Zničující daně, bankovnictví je poslední možností</Czech>
+            <French>Taxes écrasantes, la banque est un dernier recours</French>
+            <Spanish>Impuestos asfixiantes, la banca es el último recurso</Spanish>
+            <Italian>Tasse paralizzanti, la banca è l'ultima risorsa</Italian>
+            <Polish>Paraliżujące podatki, bankowość to ostateczność</Polish>
+            <Portuguese>Taxas incapacitantes, o banco é o último recurso</Portuguese>
+            <Russian>Убийственные налоги, банк — это крайняя мера</Russian>
+            <German>Vernichtende Steuern, Banking ist der letzte Ausweg</German>
+            <Korean>심각한 세금, 은행은 최후의 수단입니다</Korean>
+            <Japanese>壊滅的な税金、銀行は最後の手段です</Japanese>
+            <Chinese>極高稅費，銀行是最後手段</Chinese>
+            <Chinesesimp>极高税费，银行是最后手段</Chinesesimp>
+            <Turkish>Ağır vergiler, bankacılık son çaredir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_DescHyperinflation">
+            <English>High taxes, withdrawals heavily penalized</English>
+            <Czech>Vysoké daně, výběry jsou silně penalizovány</Czech>
+            <French>Taxes élevées, retraits fortement pénalisés</French>
+            <Spanish>Impuestos altos, retiros fuertemente penalizados</Spanish>
+            <Italian>Tasse elevate, prelievi pesantemente penalizzati</Italian>
+            <Polish>Wysokie podatki, wypłaty mocno karane</Polish>
+            <Portuguese>Taxas altas, retiradas fortemente penalizadas</Portuguese>
+            <Russian>Высокие налоги, снятие средств сильно наказывается</Russian>
+            <German>Hohe Steuern, Auszahlungen stark bestraft</German>
+            <Korean>높은 세금, 출금 시 막대한 불이익</Korean>
+            <Japanese>高い税金、引き出しに重い罰則</Japanese>
+            <Chinese>高額稅費，取款受到嚴厲懲罰</Chinese>
+            <Chinesesimp>高额税费，取款受到严厉惩罚</Chinesesimp>
+            <Turkish>Yüksek vergiler, çekme işlemleri ağır şekilde cezalandırılır</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_DescNone">
+            <English>Transactions are free (0% tax)</English>
+            <Czech>Transakce jsou zdarma (0% daň)</Czech>
+            <French>Les transactions sont gratuites (0% taxe)</French>
+            <Spanish>Las transacciones son gratuitas (0% impuesto)</Spanish>
+            <Italian>Le transazioni sono gratuite (0% tasse)</Italian>
+            <Polish>Transakcje są darmowe (0% podatku)</Polish>
+            <Portuguese>As transações são gratuitas (taxa de 0%)</Portuguese>
+            <Russian>Транзакции бесплатны (налог 0%)</Russian>
+            <German>Transaktionen sind kostenlos (0% Steuer)</German>
+            <Korean>거래가 무료입니다 (세금 0%)</Korean>
+            <Japanese>取引は無料です (税金0%)</Japanese>
+            <Chinese>交易免費 (0% 稅)</Chinese>
+            <Chinesesimp>交易免费 (0% 税)</Chinesesimp>
+            <Turkish>İşlemler ücretsizdir (%0 vergi)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_DescRecession">
+            <English>Moderate taxes, deposits slightly costlier</English>
+            <Czech>Mírné daně, vklady jsou mírně nákladnější</Czech>
+            <French>Taxes modérées, dépôts légèrement plus coûteux</French>
+            <Spanish>Impuestos moderados, depósitos ligeramente más caros</Spanish>
+            <Italian>Tasse moderate, depositi leggermente più costosi</Italian>
+            <Polish>Umiarkowane podatki, depozyty nieco droższe</Polish>
+            <Portuguese>Taxas moderadas, depósitos ligeiramente mais caros</Portuguese>
+            <Russian>Умеренные налоги, депозиты немного дороже</Russian>
+            <German>Moderate Steuern, Einzahlungen etwas teurer</German>
+            <Korean>적당한 세금, 입금이 약간 더 비쌉니다</Korean>
+            <Japanese>中程度の税金、預金がわずかに高くなります</Japanese>
+            <Chinese>中等稅費，存款成本略高</Chinese>
+            <Chinesesimp>中等税费，存款成本略高</Chinesesimp>
+            <Turkish>Orta düzeyde vergiler, yatırmalar biraz daha maliyetli</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_DescStable">
+            <English>Minimal taxes for deposits and withdrawals</English>
+            <Czech>Minimální daně pro vklady a výběry</Czech>
+            <French>Taxes minimales pour les dépôts et retraits</French>
+            <Spanish>Impuestos mínimos para depósitos y retiros</Spanish>
+            <Italian>Tasse minime per depositi e prelievi</Italian>
+            <Polish>Minimalne podatki dla depozytów i wypłat</Polish>
+            <Portuguese>Taxas mínimas para depósitos e retiradas</Portuguese>
+            <Russian>Минимальные налоги на депозиты и снятие</Russian>
+            <German>Minimale Steuern für Ein- und Auszahlungen</German>
+            <Korean>입금 및 출금에 대한 최소 세금</Korean>
+            <Japanese>預金と引き出しに対する最小限の税金</Japanese>
+            <Chinese>存取款的最低稅費</Chinese>
+            <Chinesesimp>存取款的最低税费</Chinesesimp>
+            <Turkish>Yatırma ve çekme işlemleri için minimum vergi</Turkish>
         </Key>
         <Key ID="STR_MISERY_Currency_GiftAction">
             <English>%1 Gift money</English>
-            <Chinesesimp>%1 赠送资金</Chinesesimp>
-            <Chinese>%1 贈送資金</Chinese>
             <Czech>%1 Darovat peníze</Czech>
             <French>%1 Donner de l'argent</French>
             <Spanish>%1 Regalar dinero</Spanish>
@@ -799,7 +237,569 @@
             <German>%1 Geld verschenken</German>
             <Korean>%1 돈 선물하기</Korean>
             <Japanese>%1 お金をギフトする</Japanese>
+            <Chinese>%1 贈送資金</Chinese>
+            <Chinesesimp>%1 赠送资金</Chinesesimp>
             <Turkish>%1 Para hediye et</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_Gifted">
+            <English>Money gifted: %2 %1</English>
+            <Czech>Peníze darovány: %2 %1</Czech>
+            <French>Argent donné: %2 %1</French>
+            <Spanish>Dinero regalado: %2 %1</Spanish>
+            <Italian>Denaro regalato: %2 %1</Italian>
+            <Polish>Podarowane pieniądze: %2 %1</Polish>
+            <Portuguese>Dinheiro presenteado: %2 %1</Portuguese>
+            <Russian>Деньги подарены: %2 %1</Russian>
+            <German>Geld verschenkt: %2 %1</German>
+            <Korean>선물한 돈: %2 %1</Korean>
+            <Japanese>ギフトしたお金: %2 %1</Japanese>
+            <Chinese>贈送金額: %2 %1</Chinese>
+            <Chinesesimp>赠送金额: %2 %1</Chinesesimp>
+            <Turkish>Hediye edilen para: %2 %1</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_Give">
+            <English>Give</English>
+            <Czech>Dát</Czech>
+            <French>Donner</French>
+            <Spanish>Dar</Spanish>
+            <Italian>Dai</Italian>
+            <Polish>Daj</Polish>
+            <Portuguese>Dar</Portuguese>
+            <Russian>Дать</Russian>
+            <German>Geben</German>
+            <Korean>주기</Korean>
+            <Japanese>渡す</Japanese>
+            <Chinese>給予</Chinese>
+            <Chinesesimp>给予</Chinesesimp>
+            <Turkish>Ver</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_GiveFunds">
+            <English>Give funds</English>
+            <Czech>Darovat prostředky</Czech>
+            <French>Donner des fonds</French>
+            <Spanish>Dar fondos</Spanish>
+            <Italian>Invia fondi</Italian>
+            <Polish>Przekaż środki</Polish>
+            <Portuguese>Enviar fundos</Portuguese>
+            <Russian>Передать средства</Russian>
+            <German>Geld geben</German>
+            <Korean>자금 송금</Korean>
+            <Japanese>資金を渡す</Japanese>
+            <Chinese>給予資金</Chinese>
+            <Chinesesimp>给予资金</Chinesesimp>
+            <Turkish>Para gönder</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_InvalidAmount">
+            <English>Invalid amount...</English>
+            <Czech>Neplatná částka...</Czech>
+            <French>Montant invalide...</French>
+            <Spanish>Cantidad no válida...</Spanish>
+            <Italian>Importo non valido...</Italian>
+            <Polish>Nieprawidłowa kwota...</Polish>
+            <Portuguese>Quantia inválida...</Portuguese>
+            <Russian>Неверная сумма...</Russian>
+            <German>Ungültiger Betrag...</German>
+            <Korean>잘못된 금액...</Korean>
+            <Japanese>無効な金額です...</Japanese>
+            <Chinese>金額無效...</Chinese>
+            <Chinesesimp>金额无效...</Chinesesimp>
+            <Turkish>Geçersiz tutar...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_InvalidDeposit">
+            <English>Invalid deposit amount...</English>
+            <Czech>Neplatná částka vkladu...</Czech>
+            <French>Montant de dépôt invalide...</French>
+            <Spanish>Cantidad de depósito no válida...</Spanish>
+            <Italian>Importo del deposito non valido...</Italian>
+            <Polish>Nieprawidłowa kwota depozytu...</Polish>
+            <Portuguese>Quantia de depósito inválida...</Portuguese>
+            <Russian>Неверная сумма депозита...</Russian>
+            <German>Ungültiger Einzahlungsbetrag...</German>
+            <Korean>잘못된 입금 금액...</Korean>
+            <Japanese>無効な預金額です...</Japanese>
+            <Chinese>存款金額無效...</Chinese>
+            <Chinesesimp>存款金额无效...</Chinesesimp>
+            <Turkish>Geçersiz yatırma tutarı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_InvalidWithdraw">
+            <English>Invalid withdrawal amount...</English>
+            <Czech>Neplatná částka výběru...</Czech>
+            <French>Montant de retrait invalide...</French>
+            <Spanish>Cantidad de retiro no válida...</Spanish>
+            <Italian>Importo del prelievo non valido...</Italian>
+            <Polish>Nieprawidłowa kwota wypłaty...</Polish>
+            <Portuguese>Quantia de retirada inválida...</Portuguese>
+            <Russian>Неверная сумма снятия...</Russian>
+            <German>Ungültiger Auszahlungsbetrag...</German>
+            <Korean>잘못된 출금 금액...</Korean>
+            <Japanese>無効な引き出し額です...</Japanese>
+            <Chinese>取款金額無效...</Chinese>
+            <Chinesesimp>取款金额无效...</Chinesesimp>
+            <Turkish>Geçersiz çekme tutarı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_MaxAIMoney">
+            <English>Maximum AI Money</English>
+            <Czech>Maximální peníze AI</Czech>
+            <French>Argent maximum de l'IA</French>
+            <Spanish>Dinero máximo de IA</Spanish>
+            <Italian>Denaro massimo AI</Italian>
+            <Polish>Maksymalne pieniądze AI</Polish>
+            <Portuguese>Dinheiro máximo da IA</Portuguese>
+            <Russian>Макс. денег у ИИ</Russian>
+            <German>Maximales KI-Geld</German>
+            <Korean>최대 AI 소지금</Korean>
+            <Japanese>最大AI所持金</Japanese>
+            <Chinese>AI 最大攜帶資金</Chinese>
+            <Chinesesimp>AI 最大携带资金</Chinesesimp>
+            <Turkish>Maksimum Yapay Zeka Parası</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_MaxAIMoneyDesc">
+            <English>The maximum AI can potentially have for cash. (Capped at 10,000)</English>
+            <Czech>Maximální hotovost, kterou může AI mít. (Limit 10 000)</Czech>
+            <French>Le montant maximum d'argent qu'une IA peut avoir. (Limité à 10 000)</French>
+            <Spanish>El máximo de efectivo que una IA puede tener. (Límite 10.000)</Spanish>
+            <Italian>Il massimo di contanti che un'AI può avere. (Limite 10.000)</Italian>
+            <Polish>Maksymalna gotówka, jaką może mieć AI. (Limit 10 000)</Polish>
+            <Portuguese>O máximo de dinheiro que uma IA pode ter. (Limite de 10.000)</Portuguese>
+            <Russian>Максимум наличных, который может быть у ИИ. (Лимит 10 000)</Russian>
+            <German>Das Maximum an Bargeld, das eine KI haben kann. (Begrenzt auf 10.000)</German>
+            <Korean>AI가 가질 수 있는 최대 현금입니다. (최대 10,000)</Korean>
+            <Japanese>AIが持てる最大の現金。 (上限 10,000)</Japanese>
+            <Chinese>AI 可能攜帶的最大現金金額。(上限 10,000)</Chinese>
+            <Chinesesimp>AI 可能携带的最大现金金额。(上限 10,000)</Chinesesimp>
+            <Turkish>Yapay zekanın sahip olabileceği maksimum nakit. (10.000 ile sınırlı)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_MaxDeposit">
+            <English>Max deposit: %2 %1</English>
+            <Czech>Max. vklad: %2 %1</Czech>
+            <French>Dépôt max: %2 %1</French>
+            <Spanish>Depósito máx: %2 %1</Spanish>
+            <Italian>Deposito max: %2 %1</Italian>
+            <Polish>Maks. depozyt: %2 %1</Polish>
+            <Portuguese>Depósito máx: %2 %1</Portuguese>
+            <Russian>Макс. депозит: %2 %1</Russian>
+            <German>Max. Einzahlung: %2 %1</German>
+            <Korean>최대 입금: %2 %1</Korean>
+            <Japanese>最大預金: %2 %1</Japanese>
+            <Chinese>最大存款: %2 %1</Chinese>
+            <Chinesesimp>最大存款: %2 %1</Chinesesimp>
+            <Turkish>Maks. yatırma: %2 %1</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_MaxDepositTax">
+            <English>Max deposit (after tax): %2 %1</English>
+            <Czech>Maximální vklad (po zdanění): %2 %1</Czech>
+            <French>Dépôt max (après taxe): %2 %1</French>
+            <Spanish>Depósito máx. (tras impuestos): %2 %1</Spanish>
+            <Italian>Deposito massimo (tasse incluse): %2 %1</Italian>
+            <Polish>Maks. depozyt (po opodatkowaniu): %2 %1</Polish>
+            <Portuguese>Depósito máx. (após taxas): %2 %1</Portuguese>
+            <Russian>Макс. депозит (после налога): %2 %1</Russian>
+            <German>Max. Einzahlung (nach Steuern): %2 %1</German>
+            <Korean>최대 입금액 (세후): %2 %1</Korean>
+            <Japanese>最大預金額（税引後）: %2 %1</Japanese>
+            <Chinese>最大存款 (稅後): %2 %1</Chinese>
+            <Chinesesimp>最大存款 (税后): %2 %1</Chinesesimp>
+            <Turkish>Maks. yatırma (vergi sonrası): %2 %1</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_MaxWithdraw">
+            <English>Max withdrawal: %2 %1</English>
+            <Czech>Max. výběr: %2 %1</Czech>
+            <French>Retrait max: %2 %1</French>
+            <Spanish>Retiro máx: %2 %1</Spanish>
+            <Italian>Prelievo max: %2 %1</Italian>
+            <Polish>Maks. wypłata: %2 %1</Polish>
+            <Portuguese>Retirada máx: %2 %1</Portuguese>
+            <Russian>Макс. снятие: %2 %1</Russian>
+            <German>Max. Auszahlung: %2 %1</German>
+            <Korean>최대 출금: %2 %1</Korean>
+            <Japanese>最大引き出し: %2 %1</Japanese>
+            <Chinese>最大取款: %2 %1</Chinese>
+            <Chinesesimp>最大取款: %2 %1</Chinesesimp>
+            <Turkish>Maks. çekme: %2 %1</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_MaxWithdrawTax">
+            <English>Max withdrawal (after tax): %2 %1</English>
+            <Czech>Maximální výběr (po zdanění): %2 %1</Czech>
+            <French>Retrait max (après taxe): %2 %1</French>
+            <Spanish>Retiro máx. (tras impuestos): %2 %1</Spanish>
+            <Italian>Prelievo massimo (tasse incluse): %2 %1</Italian>
+            <Polish>Maks. wypłata (po opodatkowaniu): %2 %1</Polish>
+            <Portuguese>Retirada máx. (após taxas): %2 %1</Portuguese>
+            <Russian>Макс. снятие (после налога): %2 %1</Russian>
+            <German>Max. Auszahlung (nach Steuern): %2 %1</German>
+            <Korean>최대 출금액 (세후): %2 %1</Korean>
+            <Japanese>最大引き出し額（税引後）: %2 %1</Japanese>
+            <Chinese>最大取款 (稅後): %2 %1</Chinese>
+            <Chinesesimp>最大取款 (税后): %2 %1</Chinesesimp>
+            <Turkish>Maks. çekme (vergi sonrası): %2 %1</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_MinAIMoney">
+            <English>Minimum AI Money</English>
+            <Czech>Minimální peníze AI</Czech>
+            <French>Argent minimum de l'IA</French>
+            <Spanish>Dinero mínimo de IA</Spanish>
+            <Italian>Denaro minimo AI</Italian>
+            <Polish>Minimalne pieniądze AI</Polish>
+            <Portuguese>Dinheiro mínimo da IA</Portuguese>
+            <Russian>Мин. денег у ИИ</Russian>
+            <German>Minimales KI-Geld</German>
+            <Korean>최소 AI 소지금</Korean>
+            <Japanese>最小AI所持金</Japanese>
+            <Chinese>AI 最小攜帶資金</Chinese>
+            <Chinesesimp>AI 最小携带资金</Chinesesimp>
+            <Turkish>Minimum Yapay Zeka Parası</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_MinAIMoneyDesc">
+            <English>The minimum AI can potentially have for cash. (Capped at 5,000)</English>
+            <Czech>Minimální hotovost, kterou může AI mít. (Limit 5 000)</Czech>
+            <French>Le montant minimum d'argent qu'une IA peut avoir. (Limité à 5 000)</French>
+            <Spanish>El mínimo de efectivo que una IA puede tener. (Límite 5.000)</Spanish>
+            <Italian>Il minimo di contanti che un'AI può avere. (Limite 5.000)</Italian>
+            <Polish>Minimalna gotówka, jaką może mieć AI. (Limit 5 000)</Polish>
+            <Portuguese>O mínimo de dinheiro que uma IA pode ter. (Limite de 5.000)</Portuguese>
+            <Russian>Минимум наличных, который может быть у ИИ. (Лимит 5 000)</Russian>
+            <German>Das Minimum an Bargeld, das eine KI haben kann. (Begrenzt auf 5.000)</German>
+            <Korean>AI가 가질 수 있는 최소 현금입니다. (최대 5,000)</Korean>
+            <Japanese>AIが持てる最小の現金。 (上限 5,000)</Japanese>
+            <Chinese>AI 可能攜帶的最小現金金額。(上限 5,000)</Chinese>
+            <Chinesesimp>AI 可能携带的最小现金金额。(上限 5,000)</Chinesesimp>
+            <Turkish>Yapay zekanın sahip olabileceği minimum nakit. (5.000 ile sınırlı)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_NoCorpse">
+            <English>No corpse nearby...</English>
+            <Czech>Žádná mrtvola poblíž...</Czech>
+            <French>Aucun cadavre à proximité...</French>
+            <Spanish>No hay cadáveres cerca...</Spanish>
+            <Italian>Nessun cadavere nelle vicinanze...</Italian>
+            <Polish>Brak zwłok w pobliżu...</Polish>
+            <Portuguese>Nenhum corpo por perto...</Portuguese>
+            <Russian>Рядом нет трупов...</Russian>
+            <German>Leiche nicht in der Nähe...</German>
+            <Korean>주변에 시체가 없습니다...</Korean>
+            <Japanese>近くに死体がありません...</Japanese>
+            <Chinese>附近沒有屍體...</Chinese>
+            <Chinesesimp>附近没有尸体...</Chinesesimp>
+            <Turkish>Yakında ceset yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_NoFundsDeposit">
+            <English>No funds to deposit</English>
+            <Czech>Žádné prostředky k vkladu</Czech>
+            <French>Aucun fonds à déposer</French>
+            <Spanish>No hay fondos para depositar</Spanish>
+            <Italian>Nessun fondo da depositare</Italian>
+            <Polish>Brak środków do depozytu</Polish>
+            <Portuguese>Sem fundos para depositar</Portuguese>
+            <Russian>Нет средств для депозита</Russian>
+            <German>Keine Mittel zum Einzahlen</German>
+            <Korean>입금할 자금이 없습니다</Korean>
+            <Japanese>預金する資金がありません</Japanese>
+            <Chinese>無資金可存</Chinese>
+            <Chinesesimp>无资金可存</Chinesesimp>
+            <Turkish>Yatırılacak fon yok</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_NoFundsWithdraw">
+            <English>No funds to withdraw</English>
+            <Czech>Žádné prostředky k výběru</Czech>
+            <French>Aucun fonds à retirer</French>
+            <Spanish>No hay fondos para retirar</Spanish>
+            <Italian>Nessun fondo da prelevare</Italian>
+            <Polish>Brak środków do wypłaty</Polish>
+            <Portuguese>Sem fundos para retirar</Portuguese>
+            <Russian>Нет средств для снятия</Russian>
+            <German>Keine Mittel zum Auszahlen</German>
+            <Korean>출금할 자금이 없습니다</Korean>
+            <Japanese>引き出す資金がありません</Japanese>
+            <Chinese>無資金可取</Chinese>
+            <Chinesesimp>无资金可取</Chinesesimp>
+            <Turkish>Çekilecek fon yok</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_NoMoreFundsCorpse">
+            <English>This corpse has no more funds...</English>
+            <Czech>Tato mrtvola již nemá žádné prostředky...</Czech>
+            <French>Ce cadavre n'a plus de fonds...</French>
+            <Spanish>Este cadáver ya no tiene fondos...</Spanish>
+            <Italian>Questo cadavere non ha più fondi...</Italian>
+            <Polish>Te zwłoki nie mają już więcej środków...</Polish>
+            <Portuguese>Este corpo não tem mais fundos...</Portuguese>
+            <Russian>У этого трупа больше нет средств...</Russian>
+            <German>Diese Leiche hat keine Mittel mehr...</German>
+            <Korean>이 시체에는 더 이상 자금이 없습니다...</Korean>
+            <Japanese>この死体にはもう資金がありません...</Japanese>
+            <Chinese>這具屍體沒有更多資金了...</Chinese>
+            <Chinesesimp>这具尸体没有更多资金了...</Chinesesimp>
+            <Turkish>Bu cesette başka fon kalmadı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_NoPlayer">
+            <English>No player nearby...</English>
+            <Czech>Žádný hráč poblíž...</Czech>
+            <French>Aucun joueur à proximité...</French>
+            <Spanish>No hay ningún jugador cerca...</Spanish>
+            <Italian>Nessun giocatore nelle vicinanze...</Italian>
+            <Polish>Brak gracza w pobliżu...</Polish>
+            <Portuguese>Nenhum jogador por perto...</Portuguese>
+            <Russian>Рядом нет игроков...</Russian>
+            <German>Kein Spieler in der Nähe...</German>
+            <Korean>주변에 플레이어가 없습니다...</Korean>
+            <Japanese>近くにプレイヤーがいません...</Japanese>
+            <Chinese>附近沒有玩家...</Chinese>
+            <Chinesesimp>附近没有玩家...</Chinesesimp>
+            <Turkish>Yakında oyuncu yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_NoTaxes">
+            <English>No taxes applied</English>
+            <Czech>Žádné daně se neuplatňují</Czech>
+            <French>Aucune taxe appliquée</French>
+            <Spanish>Sin impuestos aplicados</Spanish>
+            <Italian>Nessuna tassa applicata</Italian>
+            <Polish>Brak naliczonych podatków</Polish>
+            <Portuguese>Sem taxas aplicadas</Portuguese>
+            <Russian>Налоги не применяются</Russian>
+            <German>Keine Steuern angewendet</German>
+            <Korean>세금이 적용되지 않음</Korean>
+            <Japanese>税金は適用されません</Japanese>
+            <Chinese>無需交稅</Chinese>
+            <Chinesesimp>无需交税</Chinesesimp>
+            <Turkish>Vergi uygulanmadı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_NotEnoughDeposit">
+            <English>You don't have enough funds for this deposit...</English>
+            <Czech>Nemáte dostatek prostředků pro tento vklad...</Czech>
+            <French>Vous n'avez pas assez de fonds pour ce dépôt...</French>
+            <Spanish>No tienes fondos suficientes para este depósito...</Spanish>
+            <Italian>Non hai abbastanza fondi per questo deposito...</Italian>
+            <Polish>Nie masz wystarczających środków na ten depozyt...</Polish>
+            <Portuguese>Você não tem fundos suficientes para este depósito...</Portuguese>
+            <Russian>У вас недостаточно средств для этого депозита...</Russian>
+            <German>Nicht genügend Mittel für diese Einzahlung...</German>
+            <Korean>입금할 자금이 부족합니다...</Korean>
+            <Japanese>この預金に必要な資金が不足しています...</Japanese>
+            <Chinese>你沒有足夠的資金進行此次存款...</Chinese>
+            <Chinesesimp>你没有足够的资金进行此次存款...</Chinesesimp>
+            <Turkish>Bu yatırma işlemi için yeterli fonunuz yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_NotEnoughGift">
+            <English>You don't have enough funds to gift this much...</English>
+            <Czech>Nemáte dostatek prostředků na darování takové částky...</Czech>
+            <French>Vous n'avez pas assez de fonds pour donner autant...</French>
+            <Spanish>No tienes fondos suficientes para regalar tanto...</Spanish>
+            <Italian>Non hai abbastanza fondi per regalare questa cifra...</Italian>
+            <Polish>Nie masz wystarczających środków, aby podarować tyle...</Polish>
+            <Portuguese>Você não tem fundos suficientes para presentear tanto...</Portuguese>
+            <Russian>У вас недостаточно средств, чтобы подарить столько...</Russian>
+            <German>Nicht genügend Mittel, um so viel zu verschenken...</German>
+            <Korean>이만큼 선물할 자금이 부족합니다...</Korean>
+            <Japanese>これほどの金額をギフトにする資金がありません...</Japanese>
+            <Chinese>你沒有足夠的資金贈送這麼多...</Chinese>
+            <Chinesesimp>你没有足够的资金赠送这么多...</Chinesesimp>
+            <Turkish>Bu kadar hediye etmek için yeterli fonunuz yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_NotEnoughWithdraw">
+            <English>You don't have enough funds for this withdrawal...</English>
+            <Czech>Nemáte dostatek prostředků pro tento výběr...</Czech>
+            <French>Vous n'avez pas assez de fonds pour ce retrait...</French>
+            <Spanish>No tienes fondos suficientes para este retiro...</Spanish>
+            <Italian>Non hai abbastanza fondi per questo prelievo...</Italian>
+            <Polish>Nie masz wystarczających środków na tę wypłatę...</Polish>
+            <Portuguese>Você não tem fundos suficientes para esta retirada...</Portuguese>
+            <Russian>У вас недостаточно средств для этого снятия...</Russian>
+            <German>Nicht genügend Mittel für diese Auszahlung...</German>
+            <Korean>출금할 자금이 부족합니다...</Korean>
+            <Japanese>この引き出しに必要な資金가 부족합니다...</Japanese>
+            <Chinese>你沒有足夠的資金進行此次取款...</Chinese>
+            <Chinesesimp>你没有足够的资金进行此次取款...</Chinesesimp>
+            <Turkish>Bu çekme işlemi için yeterli fonunuz yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_OpenAction">
+            <English>Open %1</English>
+            <Czech>Otevřít %1</Czech>
+            <French>Ouvrir %1</French>
+            <Spanish>Abrir %1</Spanish>
+            <Italian>Apri %1</Italian>
+            <Polish>Otwórz %1</Polish>
+            <Portuguese>Abrir %1</Portuguese>
+            <Russian>Открыть %1</Russian>
+            <German>Öffne %1</German>
+            <Korean>%1 열기</Korean>
+            <Japanese>%1 を開く</Japanese>
+            <Chinese>打開 %1</Chinese>
+            <Chinesesimp>打开 %1</Chinesesimp>
+            <Turkish>%1 Aç</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_SearchAction">
+            <English>%1 Search for money</English>
+            <Czech>%1 Hledat peníze</Czech>
+            <French>%1 Chercher de l'argent</French>
+            <Spanish>%1 Buscar dinero</Spanish>
+            <Italian>%1 Cerca denaro</Italian>
+            <Polish>%1 Szukaj pieniędzy</Polish>
+            <Portuguese>%1 Procurar dinheiro</Portuguese>
+            <Russian>%1 Искать деньги</Russian>
+            <German>%1 Nach Geld suchen</German>
+            <Korean>%1 돈 검색</Korean>
+            <Japanese>%1 お金を探す</Japanese>
+            <Chinese>%1 搜尋資金</Chinese>
+            <Chinesesimp>%1 搜寻资金</Chinesesimp>
+            <Turkish>%1 Para ara</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_Symbol">
+            <English>Money Symbol</English>
+            <Czech>Symbol měny</Czech>
+            <French>Symbole monétaire</French>
+            <Spanish>Símbolo de dinero</Spanish>
+            <Italian>Simbolo valuta</Italian>
+            <Polish>Symbol pieniędzy</Polish>
+            <Portuguese>Símbolo monetário</Portuguese>
+            <Russian>Символ валюты</Russian>
+            <German>Währungssymbol</German>
+            <Korean>화폐 기호</Korean>
+            <Japanese>通貨記号</Japanese>
+            <Chinese>貨幣符號</Chinese>
+            <Chinesesimp>货币符号</Chinesesimp>
+            <Turkish>Para Sembolü</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_SymbolDesc">
+            <English>Symbol to use for currency</English>
+            <Czech>Symbol použitý pro měnu</Czech>
+            <French>Symbole à utiliser pour la monnaie</French>
+            <Spanish>Símbolo a usar para la moneda</Spanish>
+            <Italian>Simbolo da utilizzare per la valuta</Italian>
+            <Polish>Symbol używany dla waluty</Polish>
+            <Portuguese>Símbolo a ser usado para a moeda</Portuguese>
+            <Russian>Символ, используемый для валюты</Russian>
+            <German>Symbol für die Währung</German>
+            <Korean>통화에 사용할 기호</Korean>
+            <Japanese>通貨に使用する記号</Japanese>
+            <Chinese>用於貨幣的符號</Chinese>
+            <Chinesesimp>用于货币的符号</Chinesesimp>
+            <Turkish>Para birimi için kullanılacak sembol</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_Take">
+            <English>Take</English>
+            <Czech>Vzít</Czech>
+            <French>Prendre</French>
+            <Spanish>Tomar</Spanish>
+            <Italian>Prendi</Italian>
+            <Polish>Weź</Polish>
+            <Portuguese>Pegar</Portuguese>
+            <Russian>Взять</Russian>
+            <German>Nehmen</German>
+            <Korean>기져가기</Korean>
+            <Japanese>取る</Japanese>
+            <Chinese>取出</Chinese>
+            <Chinesesimp>取出</Chinesesimp>
+            <Turkish>Al</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_TakeFunds">
+            <English>Take funds</English>
+            <Czech>Vybrat prostředky</Czech>
+            <French>Prendre des fonds</French>
+            <Spanish>Tomar fondos</Spanish>
+            <Italian>Preleva fondi</Italian>
+            <Polish>Pobierz środki</Polish>
+            <Portuguese>Retirar fundos</Portuguese>
+            <Russian>Взять средства</Russian>
+            <German>Geld nehmen</German>
+            <Korean>자금 수령</Korean>
+            <Japanese>資金を受け取る</Japanese>
+            <Chinese>取出資金</Chinese>
+            <Chinesesimp>取出资金</Chinesesimp>
+            <Turkish>Para al</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_Taken">
+            <English>Money taken: %2 %1</English>
+            <Czech>Peníze vzaty: %2 %1</Czech>
+            <French>Argent récupéré: %2 %1</French>
+            <Spanish>Dinero tomado: %2 %1</Spanish>
+            <Italian>Denaro prelevato: %2 %1</Italian>
+            <Polish>Zabrane pieniądze: %2 %1</Polish>
+            <Portuguese>Dinheiro retirado: %2 %1</Portuguese>
+            <Russian>Деньги взяты: %2 %1</Russian>
+            <German>Geld genommen: %2 %1</German>
+            <Korean>획득한 돈: %2 %1</Korean>
+            <Japanese>入手したお金: %2 %1</Japanese>
+            <Chinese>獲取金額: %2 %1</Chinese>
+            <Chinesesimp>获取金额: %2 %1</Chinesesimp>
+            <Turkish>Alınan para: %2 %1</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_TaxesMode">
+            <English>Bank Taxes Mode</English>
+            <Czech>Režim bankovních daní</Czech>
+            <French>Mode des taxes bancaires</French>
+            <Spanish>Modo de impuestos bancarios</Spanish>
+            <Italian>Modalità tasse bancarie</Italian>
+            <Polish>Tryb podatków bankowych</Polish>
+            <Portuguese>Modo de taxas bancárias</Portuguese>
+            <Russian>Режим банковских налогов</Russian>
+            <German>Bankensteuer-Modus</German>
+            <Korean>은행 세금 모드</Korean>
+            <Japanese>銀行税モード</Japanese>
+            <Chinese>銀行稅費模式</Chinese>
+            <Chinesesimp>银行税费模式</Chinesesimp>
+            <Turkish>Banka Vergileri Modu</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_TaxesModeDesc">
+            <English>Sets the difficulty of bank transaction taxes, reflecting economic conditions</English>
+            <Czech>Nastavuje obtížnost daní z bankovních transakcí odrážející ekonomické podmínky</Czech>
+            <French>Définit la difficulté des taxes sur les transactions bancaires selon les conditions économiques</French>
+            <Spanish>Establece la dificultad de los impuestos por transacciones bancarias, reflejando las condiciones económicas</Spanish>
+            <Italian>Imposta la difficoltà delle tasse sulle transazioni bancarie, riflettendo le condizioni economiche</Italian>
+            <Polish>Ustawia trudność podatków od transakcji bankowych, odzwierciedlając warunki ekonomiczne</Polish>
+            <Portuguese>Define a dificuldade das taxas de transação bancária, refletindo as condições econômicas</Portuguese>
+            <Russian>Устанавливает сложность налогов на банковские операции, отражая экономические условия</Russian>
+            <German>Legt den Schwierigkeitsgrad der Banktransaktionssteuern fest und spiegelt die wirtschaftlichen Bedingungen wider</German>
+            <Korean>경제 상황을 반영하여 은행 거래세의 난이도를 설정합니다</Korean>
+            <Japanese>経済状況を反映した銀行取引税の難易度を設定します</Japanese>
+            <Chinese>設置銀行交易稅費的難度，反映經濟狀況</Chinese>
+            <Chinesesimp>设置银行交易税费的难度，反映经济状况</Chinesesimp>
+            <Turkish>Ekonomik koşulları yansıtan banka işlem vergilerinin zorluğunu ayarlar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_Withdraw">
+            <English>Withdraw</English>
+            <Czech>Vybrat</Czech>
+            <French>Retirer</French>
+            <Spanish>Retirar</Spanish>
+            <Italian>Preleva</Italian>
+            <Polish>Wycofaj</Polish>
+            <Portuguese>Levantar</Portuguese>
+            <Russian>Забрать</Russian>
+            <German>Entnehmen</German>
+            <Korean>출금/꺼내기</Korean>
+            <Japanese>引き出す</Japanese>
+            <Chinese>取款</Chinese>
+            <Chinesesimp>取款</Chinesesimp>
+            <Turkish>Çek</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_Withdrew">
+            <English>Withdrew: %2 %1</English>
+            <Czech>Vybráno: %2 %1</Czech>
+            <French>Retiré: %2 %1</French>
+            <Spanish>Retirado: %2 %1</Spanish>
+            <Italian>Prelevato: %2 %1</Italian>
+            <Polish>Wypłacono: %2 %1</Polish>
+            <Portuguese>Retirado: %2 %1</Portuguese>
+            <Russian>Снято: %2 %1</Russian>
+            <German>Abgehoben: %2 %1</German>
+            <Korean>출금 완료: %2 %1</Korean>
+            <Japanese>引き出し完了: %2 %1</Japanese>
+            <Chinese>已取出: %2 %1</Chinese>
+            <Chinesesimp>已取出: %2 %1</Chinesesimp>
+            <Turkish>Çekildi: %2 %1</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_WithdrewTax">
+            <English>Withdrew: %2 %1 (Tax: %2 %3)</English>
+            <Czech>Vybráno: %2 %1 (Daň: %2 %3)</Czech>
+            <French>Retiré: %2 %1 (Taxe: %2 %3)</French>
+            <Spanish>Retirado: %2 %1 (Impuesto: %2 %3)</Spanish>
+            <Italian>Prelevato: %2 %1 (Tassa: %2 %3)</Italian>
+            <Polish>Wypłacono: %2 %1 (Podatek: %2 %3)</Polish>
+            <Portuguese>Retirado: %2 %1 (Taxa: %2 %3)</Portuguese>
+            <Russian>Снято: %2 %1 (Налог: %2 %3)</Russian>
+            <German>Abgehoben: %2 %1 (Steuer: %2 %3)</German>
+            <Korean>출금 완료: %2 %1 (세금: %2 %3)</Korean>
+            <Japanese>引き出し完了: %2 %1 (税金: %2 %3)</Japanese>
+            <Chinese>已取出: %2 %1 (稅費: %2 %3)</Chinese>
+            <Chinesesimp>已取出: %2 %1 (税费: %2 %3)</Chinesesimp>
+            <Turkish>Çekildi: %2 %1 (Vergi: %2 %3)</Turkish>
         </Key>
     </Package>
 </Project>

@@ -1,175 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
     <Package name="Audio">
-        <Key ID="STR_MISERY_Audio_EnhancedCharEffects">
-            <English>Character Enhanced effects</English>
-            <Chinesesimp>角色强化效果</Chinesesimp>
-            <Chinese>角色強化效果</Chinese>
-            <Czech>Vylepšené efekty postavy</Czech>
-            <French>Effets de personnage améliorés</French>
-            <Spanish>Efectos de personaje mejorados</Spanish>
-            <Italian>Effetti personaggio migliorati</Italian>
-            <Polish>Ulepszone efekty postaci</Polish>
-            <Portuguese>Efeitos de personagem aprimorados</Portuguese>
-            <Russian>Улучшенные эффекты персонажа</Russian>
-            <German>Erweiterte Charakpereffekte</German>
-            <Korean>강화된 캐릭터 효과</Korean>
-            <Japanese>強化されたキャラクターエフェクト</Japanese>
-            <Turkish>Geliştirilmiş karakter efektleri</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Audio_EnhancedCharEffects_Desc">
-            <English>Enable Extra Character Immersion? (Enables audible and visual feedback for the survival framework)</English>
-            <Chinesesimp>开启额外角色沉浸感？(开启生存系统的视听反馈)</Chinesesimp>
-            <Chinese>開啟額外角色沉浸感？(開啟生存系統的視聽反饋)</Chinese>
-            <Czech>Povolit extra imerzi postavy? (Povolí zvukovou a vizuální zpětnou vazbu pro survival systém)</Czech>
-            <French>Activer l'immersion supplémentaire du personnage ? (Active les retours sonores et visuels pour le système de survie)</French>
-            <Spanish>¿Habilitar inmersión extra del personaje? (Activa retroalimentación visual y auditiva para el sistema de supervivencia)</Spanish>
-            <Italian>Abilitare l'immersione extra del personaggio? (Attiva feedback visivo e uditivo per il sistema di sopravvivenza)</Italian>
-            <Polish>Włączyć dodatkową immersję postaci? (Włącza dźwiękowe i wizualne sprzężenie zwrotne dla systemu przetrwania)</Polish>
-            <Portuguese>Ativar imersão extra de personagem? (Ativa feedback visual e sonoro para o sistema de sobrevivência)</Portuguese>
-            <Russian>Включить дополнительное погружение персонажа? (Включает звуковую и визуальную обратную связь для системы выживания)</Russian>
-            <German>Zusätzliche Charakter-Immersion aktivieren? (Ermöglicht akustisches und visuelles Feedback für das Survival-System)</German>
-            <Korean>추가 캐릭터 몰입감을 활성화하시겠습니까? (서바이벌 프레임워크에 대한 시청각 피드백 활성화)</Korean>
-            <Japanese>キャラクターの没入感を高めますか？（サバイバルフレームワークの視覚・聴覚フィードバックを有効にします）</Japanese>
-            <Turkish>Ekstra karakter etkileşimi etkinleştirilsin mi? (Hayatta kalma sistemi için sesli ve görsel geri bildirim sağlar)</Turkish>
-        </Key>
-
-        <Key ID="STR_MISERY_Audio_EnhancedInvSounds">
-            <English>Enhanced Inventory sounds</English>
-            <Chinesesimp>强化库存声音</Chinesesimp>
-            <Chinese>強化庫存聲音</Chinese>
-            <Czech>Vylepšené zvuky inventáře</Czech>
-            <French>Sons d'inventaire améliorés</French>
-            <Spanish>Sonidos de inventario mejorados</Spanish>
-            <Italian>Suoni inventario migliorati</Italian>
-            <Polish>Ulepszone dźwięki ekwipunku</Polish>
-            <Portuguese>Sons de inventário aprimorados</Portuguese>
-            <Russian>Улучшенные звуки инвентаря</Russian>
-            <German>Erweiterte Inventar-Sounds</German>
-            <Korean>강화된 인벤토리 사운드</Korean>
-            <Japanese>強化されたインベントリ音</Japanese>
-            <Turkish>Geliştirilmiş envanter sesleri</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Audio_EnhancedInvSounds_Desc">
-            <English>Enable Inventory audio overhaul?</English>
-            <Chinesesimp>开启库存音频重制？</Chinesesimp>
-            <Chinese>開啟庫存音頻重製？</Chinese>
-            <Czech>Povolit přepracování zvuků inventáře?</Czech>
-            <French>Activer la refonte audio de l'inventaire ?</French>
-            <Spanish>¿Habilitar la renovación de audio del inventario?</Spanish>
-            <Italian>Abilitare la revisione audio dell'inventario?</Italian>
-            <Polish>Włączyć przebudowę dźwięków ekwipunku?</Polish>
-            <Portuguese>Ativar a reformulação de áudio do inventário?</Portuguese>
-            <Russian>Включить переработку звуков инвентаря?</Russian>
-            <German>Inventar-Audio-Überarbeitung aktivieren?</German>
-            <Korean>인벤토리 오디오 개편을 활성화하시겠습니까?</Korean>
-            <Japanese>インベントリオーディオのオーバーホールを有効にしますか？</Japanese>
-            <Turkish>Envanter ses revizyonu etkinleştirilsin mi?</Turkish>
-        </Key>
-
-        <Key ID="STR_MISERY_Audio_AmbientSoundscape">
-            <English>Ambient audio soundscape overhaul</English>
-            <Chinesesimp>环境音效景观重制</Chinesesimp>
-            <Chinese>環境音效景觀重製</Chinese>
-            <Czech>Přepracování okolního zvukového prostředí</Czech>
-            <French>Refonte de l'ambiance sonore environnementale</French>
-            <Spanish>Renovación del paisaje sonoro ambiental</Spanish>
-            <Italian>Revisione del panorama sonoro ambientale</Italian>
-            <Polish>Przebudowa ambientowej scenerii dźwiękowej</Polish>
-            <Portuguese>Reformulação do ambiente sonoro</Portuguese>
-            <Russian>Переработка окружающего звукового пространства</Russian>
-            <German>Umgebungs-Audio-Soundscape-Überarbeitung</German>
-            <Korean>주변 오디오 사운드스케이프 개편</Korean>
-            <Japanese>環境音サウンドスケープレビュー</Japanese>
-            <Turkish>Ortam ses manzarası revizyonu</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Audio_AmbientSoundscape_Desc">
-            <English>Enable Extra world audio with input sounds? (must utilize the 'Ambient soundscape array' data)</English>
-            <Chinesesimp>开启带有输入声音的额外世界音频？(必须使用“环境音效景观数组”数据)</Chinesesimp>
-            <Chinese>開啟帶有輸入聲音的額外世界音頻？(必須使用“環境音效景觀數組”數據)</Chinese>
-            <Czech>Povolit extra zvuky světa? (musí využívat data z 'Ambient soundscape array')</Czech>
-            <French>Activer l'audio mondial supplémentaire ? (doit utiliser les données de 'Ambient soundscape array')</French>
-            <Spanish>¿Habilitar audio mundial extra? (debe utilizar los datos de 'Ambient soundscape array')</Spanish>
-            <Italian>Abilitare l'audio ambientale extra? (deve utilizzare i dati di 'Ambient soundscape array')</Italian>
-            <Polish>Włączyć dodatkowe dźwięki świata? (musi wykorzystywać dane z 'Ambient soundscape array')</Polish>
-            <Portuguese>Ativar áudio mundial extra? (deve utilizar os dados de 'Ambient soundscape array')</Portuguese>
-            <Russian>Включить дополнительные звуки мира? (необходимо использовать данные 'Ambient soundscape array')</Russian>
-            <German>Zusätzliches Welt-Audio mit Eingabesounds aktivieren? (muss die Daten aus dem 'Umgebungs-Soundscape-Array' verwenden)</German>
-            <Korean>입력 사운드와 함께 추가 월드 오디오를 활성화하시겠습니까? ('주변 사운드스케이프 배열' 데이터를 활용해야 합니다)</Korean>
-            <Japanese>追加のワールドオーディオを有効にしますか？（「環境音サウンドスケープ配列」データを利用する必要があります）</Japanese>
-            <Turkish>Giriş sesleriyle ekstra dünya sesi etkinleştirilsin mi? ('Ortam ses manzarası dizisi' verilerini kullanmalıdır)</Turkish>
-        </Key>
-
-        <Key ID="STR_MISERY_Audio_ForgeAmbience">
-            <English>Ambient audio for Forges</English>
-            <Chinesesimp>熔炉环境音效</Chinesesimp>
-            <Chinese>熔爐環境音效</Chinese>
-            <Czech>Okolní zvuk pro výhně</Czech>
-            <French>Ambiance sonore pour les forges</French>
-            <Spanish>Audio ambiental para forjas</Spanish>
-            <Italian>Audio ambientale per le fucine</Italian>
-            <Polish>Ambientowe dźwięky dla kuźni</Polish>
-            <Portuguese>Áudio ambiente para forjas</Portuguese>
-            <Russian>Окружающий звук для кузниц</Russian>
-            <German>Umgebungs-Audio für Essen</German>
-            <Korean>화덕 주변 오디오</Korean>
-            <Japanese>鍛冶場の環境音</Japanese>
-            <Turkish>Ocaklar için ortam sesi</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Audio_ForgeAmbience_Desc">
-            <English>Enable Audio loop for forges? (Makes them crackle and hum - immersion)</English>
-            <Chinesesimp>开启熔炉音频循环？(使其产生噼啪声和嗡嗡声 - 增强沉浸感)</Chinesesimp>
-            <Chinese>開啟熔爐音頻循環？(使其產生噼啪聲和嗡嗡聲 - 增強沉浸感)</Chinese>
-            <Czech>Povolit zvukovou smyčku pro výhně? (Vytváří praskání a hučení - imerze)</Czech>
-            <French>Activer la boucle audio pour les forges ? (Crée des crépitements et des bourdonnements)</French>
-            <Spanish>¿Habilitar bucle de audio para forjas? (Hace que crepiten y zumben - inmersión)</Spanish>
-            <Italian>Abilitare il loop audio per le fucine? (Produce scoppiettii e ronzii - immersione)</Italian>
-            <Polish>Włączyć pętlę dźwiękową dla kuźni? (Powoduje trzaski i szum - immersja)</Polish>
-            <Portuguese>Ativar loop de áudio para forjas? (Faz com que estalem e zumbam - imersão)</Portuguese>
-            <Russian>Включить аудио-петлю для кузниц? (Создает треск и гул для погружения)</Russian>
-            <German>Audio-Schleife für Essen aktivieren? (Erzeugt Knistern und Summen - Immersion)</German>
-            <Korean>화덕 오디오 루프를 활성화하시겠습니까? (타닥거리는 소리와 웅웅거리는 소리 추가 - 몰입감)</Korean>
-            <Japanese>鍛冶場のオーディオループを有効にしますか？（パチパチ音やうなり音を追加します）</Japanese>
-            <Turkish>Ocaklar için ses döngüsü etkinleştirilsin mi? (Çatırtı ve vızıltı ekler - etkileşim)</Turkish>
-        </Key>
-
-        <Key ID="STR_MISERY_Audio_AmbientSoundscapeArray">
-            <English>Ambient soundscape array</English>
-            <Chinesesimp>环境音效景观数组</Chinesesimp>
-            <Chinese>環境音效景觀數組</Chinese>
-            <Czech>Pole okolního zvukového prostředí</Czech>
-            <French>Tableau d'ambiance sonore environnementale</French>
-            <Spanish>Matriz de paisaje sonoro ambiental</Spanish>
-            <Italian>Array del panorama sonoro ambientale</Italian>
-            <Polish>Tablica ambientowej scenerii dźwiękowej</Polish>
-            <Portuguese>Matriz de ambiente sonoro</Portuguese>
-            <Russian>Массив окружающего звукового пространства</Russian>
-            <German>Umgebungs-Soundscape-Array</German>
-            <Korean>주변 사운드스케이프 배열</Korean>
-            <Japanese>環境音サウンドスケープ配列</Japanese>
-            <Turkish>Ortam ses manzarası dizisi</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Audio_AmbientSoundscapeArray_Desc">
-            <English>Listed sounds to play randomly around players (Format: Mysound_1,Mysound_2,etc...)</English>
-            <Chinesesimp>随机在玩家周围播放的声音列表 (格式: Mysound_1,Mysound_2 等...)</Chinesesimp>
-            <Chinese>隨機在玩家周圍播放的聲音列表 (格式: Mysound_1,Mysound_2 等...)</Chinese>
-            <Czech>Seznam zvuků pro náhodné přehrávání kolem hráčů (Formát: Zvuk_1,Zvuk_2,atd...)</Czech>
-            <French>Liste des sons à jouer aléatoirement autour des joueurs (Format : Son_1,Son_2,etc...)</French>
-            <Spanish>Lista de sonidos para reproducir aleatoriamente alrededor de los jugadores (Formato: Sonido_1,Sonido_2,etc...)</Spanish>
-            <Italian>Elenco dei suoni da riprodurre casualmente intorno ai giocatori (Formato: Suono_1,Suono_2,etc...)</Italian>
-            <Polish>Lista dźwięków do losowego odtwarzania wokół graczy (Format: Dźwięk_1,Dźwięk_2,itp...)</Polish>
-            <Portuguese>Lista de sons para tocar aleatoriamente ao redor dos jogadores (Formato: Som_1,Som_2,etc...)</Portuguese>
-            <Russian>Список звуков для случайного воспроизведения вокруг игроков (Формат: Звук_1,Звук_2 и т. д.)</Russian>
-            <German>Gelistete Sounds, die zufällig um Spieler herum abgespielt werden (Format: Sound_1,Sound_2,etc...)</German>
-            <Korean>플레이어 주변에서 무작위로 재생할 사운드 목록 (형식: Mysound_1,Mysound_2 등...)</Korean>
-            <Japanese>プレイヤーの周囲でランダムに再生されるサウンドのリスト（形式：Mysound_1, Mysound_2など）</Japanese>
-            <Turkish>Oyuncuların etrafında rastgele çalınacak seslerin listesi (Biçim: Mysound_1,Mysound_2,vb...)</Turkish>
-        </Key>
-
         <Key ID="STR_MISERY_Audio_AmbientMusic">
             <English>Ambient music</English>
-            <Chinesesimp>环境音乐</Chinesesimp>
-            <Chinese>環境音樂</Chinese>
             <Czech>Okolní hudba</Czech>
             <French>Musique d'ambiance</French>
             <Spanish>Música ambiental</Spanish>
@@ -180,29 +13,12 @@
             <German>Umgebungsmusik</German>
             <Korean>주변 음악</Korean>
             <Japanese>環境音楽</Japanese>
+            <Chinese>環境音樂</Chinese>
+            <Chinesesimp>环境音乐</Chinesesimp>
             <Turkish>Ortam müziği</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Audio_AmbientMusic_Desc">
-            <English>Enable Misery's OST (utilize Ambient Music array for more music to be played)</English>
-            <Chinesesimp>开启 Misery 的原声带 (利用环境音乐数组播放更多音乐)</Chinesesimp>
-            <Chinese>開啟 Misery 的原聲帶 (利用環境音樂數組播放更多音樂)</Chinese>
-            <Czech>Povolit Misery OST (pro více hudby využijte Ambient Music array)</Czech>
-            <French>Activer l'OST de Misery (utilisez le tableau Ambient Music pour plus de musiques)</French>
-            <Spanish>¿Habilitar la BSO de Misery? (utiliza la matriz Ambient Music para reproducir más música)</Spanish>
-            <Italian>Abilitare l'OST di Misery? (utilizzare l'array Ambient Music per riprodurre più musica)</Italian>
-            <Polish>Włączyć OST Misery? (użyj tablicy Ambient Music, aby odtwarzać więcej muzyki)</Polish>
-            <Portuguese>Ativar a OST do Misery? (utilize a matriz Ambient Music para tocar mais músicas)</Portuguese>
-            <Russian>Включить OST Misery (используйте массив Ambient Music для добавления музыки)</Russian>
-            <German>Miseris OST aktivieren (verwende das Umgebungsmusik-Array für weitere Titel)</German>
-            <Korean>Misery OST 활성화 (더 많은 음악을 재생하려면 주변 음악 배열 활용)</Korean>
-            <Japanese>Misery OSTを有効にする（追加の音楽を再生するには環境音楽配列を利用してください）</Japanese>
-            <Turkish>Misery OST'sini etkinleştir (daha fazla müzik çalınması için Ortam Müziği dizisini kullanın)</Turkish>
-        </Key>
-
         <Key ID="STR_MISERY_Audio_AmbientMusicArray">
             <English>Ambient Music array</English>
-            <Chinesesimp>环境音乐数组</Chinesesimp>
-            <Chinese>環境音樂數組</Chinese>
             <Czech>Pole okolní hudby</Czech>
             <French>Tableau de musique d'ambiance</French>
             <Spanish>Matriz de música ambiental</Spanish>
@@ -213,12 +29,12 @@
             <German>Umgebungsmusik-Array</German>
             <Korean>주변 음악 배열</Korean>
             <Japanese>環境音楽配列</Japanese>
+            <Chinese>環境音樂數組</Chinese>
+            <Chinesesimp>环境音乐数组</Chinesesimp>
             <Turkish>Ortam müziği dizisi</Turkish>
         </Key>
         <Key ID="STR_MISERY_Audio_AmbientMusicArray_Desc">
             <English>Listed music to play randomly for players (Format: Mymusic_1,Mymusic_2,etc...)</English>
-            <Chinesesimp>为玩家随机播放的音乐列表 (格式: Mymusic_1,Mymusic_2 等...)</Chinesesimp>
-            <Chinese>為玩家隨機播放的音樂列表 (格式: Mymusic_1,Mymusic_2 等...)</Chinese>
             <Czech>Seznam skladeb pro náhodné přehrávání (Formát: Hudba_1,Hudba_2,atd...)</Czech>
             <French>Liste des musiques à jouer aléatoirement (Format : Musique_1,Musique_2,etc...)</French>
             <Spanish>Lista de canciones para reproducir aleatoriamente (Formato: Música_1,Música_2,etc...)</Spanish>
@@ -229,7 +45,185 @@
             <German>Gelistete Musik, die zufällig für Spieler abgespielt wird (Format: Musik_1,Musik_2,etc...)</German>
             <Korean>플레이어에게 무작위로 재생할 음악 목록 (형식: Mymusic_1,Mymusic_2 등...)</Korean>
             <Japanese>プレイヤーにランダムに再生される音楽のリスト（形式：Mymusic_1, Mymusic_2など）</Japanese>
+            <Chinese>為玩家隨機播放的音樂列表 (格式: Mymusic_1,Mymusic_2 等...)</Chinese>
+            <Chinesesimp>为玩家随机播放的音乐列表 (格式: Mymusic_1,Mymusic_2 等...)</Chinesesimp>
             <Turkish>Oyuncular için rastgele çalınacak müziklerin listesi (Biçim: Mymusic_1,Mymusic_2,vb...)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Audio_AmbientMusic_Desc">
+            <English>Enable Misery's OST (utilize Ambient Music array for more music to be played)</English>
+            <Czech>Povolit Misery OST (pro více hudby využijte Ambient Music array)</Czech>
+            <French>Activer l'OST de Misery (utilisez le tableau Ambient Music pour plus de musiques)</French>
+            <Spanish>¿Habilitar la BSO de Misery? (utiliza la matriz Ambient Music para reproducir más música)</Spanish>
+            <Italian>Abilitare l'OST di Misery? (utilizzare l'array Ambient Music per riprodurre più musica)</Italian>
+            <Polish>Włączyć OST Misery? (użyj tablicy Ambient Music, aby odtwarzać więcej muzyki)</Polish>
+            <Portuguese>Ativar a OST do Misery? (utilize a matriz Ambient Music para tocar mais músicas)</Portuguese>
+            <Russian>Включить OST Misery (используйте массив Ambient Music для добавления музыки)</Russian>
+            <German>Miseris OST aktivieren (verwende das Umgebungsmusik-Array für weitere Titel)</German>
+            <Korean>Misery OST 활성화 (더 많은 음악을 재생하려면 주변 음악 배열 활용)</Korean>
+            <Japanese>Misery OSTを有効にする（追加の音楽を再生するには環境音楽配列を利用してください）</Japanese>
+            <Chinese>開啟 Misery 的原聲帶 (利用環境音樂數組播放更多音樂)</Chinese>
+            <Chinesesimp>开启 Misery 的原声带 (利用环境音乐数组播放更多音乐)</Chinesesimp>
+            <Turkish>Misery OST'sini etkinleştir (daha fazla müzik çalınması için Ortam Müziği dizisini kullanın)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Audio_AmbientSoundscape">
+            <English>Ambient audio soundscape overhaul</English>
+            <Czech>Přepracování okolního zvukového prostředí</Czech>
+            <French>Refonte de l'ambiance sonore environnementale</French>
+            <Spanish>Renovación del paisaje sonoro ambiental</Spanish>
+            <Italian>Revisione del panorama sonoro ambientale</Italian>
+            <Polish>Przebudowa ambientowej scenerii dźwiękowej</Polish>
+            <Portuguese>Reformulação do ambiente sonoro</Portuguese>
+            <Russian>Переработка окружающего звукового пространства</Russian>
+            <German>Umgebungs-Audio-Soundscape-Überarbeitung</German>
+            <Korean>주변 오디오 사운드스케이프 개편</Korean>
+            <Japanese>環境音サウンドスケープレビュー</Japanese>
+            <Chinese>環境音效景觀重製</Chinese>
+            <Chinesesimp>环境音效景观重制</Chinesesimp>
+            <Turkish>Ortam ses manzarası revizyonu</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Audio_AmbientSoundscapeArray">
+            <English>Ambient soundscape array</English>
+            <Czech>Pole okolního zvukového prostředí</Czech>
+            <French>Tableau d'ambiance sonore environnementale</French>
+            <Spanish>Matriz de paisaje sonoro ambiental</Spanish>
+            <Italian>Array del panorama sonoro ambientale</Italian>
+            <Polish>Tablica ambientowej scenerii dźwiękowej</Polish>
+            <Portuguese>Matriz de ambiente sonoro</Portuguese>
+            <Russian>Массив окружающего звукового пространства</Russian>
+            <German>Umgebungs-Soundscape-Array</German>
+            <Korean>주변 사운드스케이프 배열</Korean>
+            <Japanese>環境音サウンドスケープ配列</Japanese>
+            <Chinese>環境音效景觀數組</Chinese>
+            <Chinesesimp>环境音效景观数组</Chinesesimp>
+            <Turkish>Ortam ses manzarası dizisi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Audio_AmbientSoundscapeArray_Desc">
+            <English>Listed sounds to play randomly around players (Format: Mysound_1,Mysound_2,etc...)</English>
+            <Czech>Seznam zvuků pro náhodné přehrávání kolem hráčů (Formát: Zvuk_1,Zvuk_2,atd...)</Czech>
+            <French>Liste des sons à jouer aléatoirement autour des joueurs (Format : Son_1,Son_2,etc...)</French>
+            <Spanish>Lista de sonidos para reproducir aleatoriamente alrededor de los jugadores (Formato: Sonido_1,Sonido_2,etc...)</Spanish>
+            <Italian>Elenco dei suoni da riprodurre casualmente intorno ai giocatori (Formato: Suono_1,Suono_2,etc...)</Italian>
+            <Polish>Lista dźwięków do losowego odtwarzania wokół graczy (Format: Dźwięk_1,Dźwięk_2,itp...)</Polish>
+            <Portuguese>Lista de sons para tocar aleatoriamente ao redor dos jogadores (Formato: Som_1,Som_2,etc...)</Portuguese>
+            <Russian>Список звуков для случайного воспроизведения вокруг игроков (Формат: Звук_1,Звук_2 и т. д.)</Russian>
+            <German>Gelistete Sounds, die zufällig um Spieler herum abgespielt werden (Format: Sound_1,Sound_2,etc...)</German>
+            <Korean>플레이어 주변에서 무작위로 재생할 사운드 목록 (형식: Mysound_1,Mysound_2 등...)</Korean>
+            <Japanese>プレイヤーの周囲でランダムに再生されるサウンドのリスト（形式：Mysound_1, Mysound_2など）</Japanese>
+            <Chinese>隨機在玩家周圍播放的聲音列表 (格式: Mysound_1,Mysound_2 等...)</Chinese>
+            <Chinesesimp>随机在玩家周围播放的声音列表 (格式: Mysound_1,Mysound_2 等...)</Chinesesimp>
+            <Turkish>Oyuncuların etrafında rastgele çalınacak seslerin listesi (Biçim: Mysound_1,Mysound_2,vb...)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Audio_AmbientSoundscape_Desc">
+            <English>Enable Extra world audio with input sounds? (must utilize the 'Ambient soundscape array' data)</English>
+            <Czech>Povolit extra zvuky světa? (musí využívat data z 'Ambient soundscape array')</Czech>
+            <French>Activer l'audio mondial supplémentaire ? (doit utiliser les données de 'Ambient soundscape array')</French>
+            <Spanish>¿Habilitar audio mundial extra? (debe utilizar los datos de 'Ambient soundscape array')</Spanish>
+            <Italian>Abilitare l'audio ambientale extra? (deve utilizzare i dati di 'Ambient soundscape array')</Italian>
+            <Polish>Włączyć dodatkowe dźwięki świata? (musi wykorzystywać dane z 'Ambient soundscape array')</Polish>
+            <Portuguese>Ativar áudio mundial extra? (deve utilizar os dados de 'Ambient soundscape array')</Portuguese>
+            <Russian>Включить дополнительные звуки мира? (необходимо использовать данные 'Ambient soundscape array')</Russian>
+            <German>Zusätzliches Welt-Audio mit Eingabesounds aktivieren? (muss die Daten aus dem 'Umgebungs-Soundscape-Array' verwenden)</German>
+            <Korean>입력 사운드와 함께 추가 월드 오디오를 활성화하시겠습니까? ('주변 사운드스케이프 배열' 데이터를 활용해야 합니다)</Korean>
+            <Japanese>追加のワールドオーディオを有効にしますか？（「環境音サウンドスケープ配列」データを利用する必要があります）</Japanese>
+            <Chinese>開啟帶有輸入聲音的額外世界音頻？(必須使用“環境音效景觀數組”數據)</Chinese>
+            <Chinesesimp>开启带有输入声音的额外世界音频？(必须使用“环境音效景观数组”数据)</Chinesesimp>
+            <Turkish>Giriş sesleriyle ekstra dünya sesi etkinleştirilsin mi? ('Ortam ses manzarası dizisi' verilerini kullanmalıdır)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Audio_EnhancedCharEffects">
+            <English>Character Enhanced effects</English>
+            <Czech>Vylepšené efekty postavy</Czech>
+            <French>Effets de personnage améliorés</French>
+            <Spanish>Efectos de personaje mejorados</Spanish>
+            <Italian>Effetti personaggio migliorati</Italian>
+            <Polish>Ulepszone efekty postaci</Polish>
+            <Portuguese>Efeitos de personagem aprimorados</Portuguese>
+            <Russian>Улучшенные эффекты персонажа</Russian>
+            <German>Erweiterte Charakpereffekte</German>
+            <Korean>강화된 캐릭터 효과</Korean>
+            <Japanese>強化されたキャラクターエフェクト</Japanese>
+            <Chinese>角色強化效果</Chinese>
+            <Chinesesimp>角色强化效果</Chinesesimp>
+            <Turkish>Geliştirilmiş karakter efektleri</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Audio_EnhancedCharEffects_Desc">
+            <English>Enable Extra Character Immersion? (Enables audible and visual feedback for the survival framework)</English>
+            <Czech>Povolit extra imerzi postavy? (Povolí zvukovou a vizuální zpětnou vazbu pro survival systém)</Czech>
+            <French>Activer l'immersion supplémentaire du personnage ? (Active les retours sonores et visuels pour le système de survie)</French>
+            <Spanish>¿Habilitar inmersión extra del personaje? (Activa retroalimentación visual y auditiva para el sistema de supervivencia)</Spanish>
+            <Italian>Abilitare l'immersione extra del personaggio? (Attiva feedback visivo e uditivo per il sistema di sopravvivenza)</Italian>
+            <Polish>Włączyć dodatkową immersję postaci? (Włącza dźwiękowe i wizualne sprzężenie zwrotne dla systemu przetrwania)</Polish>
+            <Portuguese>Ativar imersão extra de personagem? (Ativa feedback visual e sonoro para o sistema de sobrevivência)</Portuguese>
+            <Russian>Включить дополнительное погружение персонажа? (Включает звуковую и визуальную обратную связь для системы выживания)</Russian>
+            <German>Zusätzliche Charakter-Immersion aktivieren? (Ermöglicht akustisches und visuelles Feedback für das Survival-System)</German>
+            <Korean>추가 캐릭터 몰입감을 활성화하시겠습니까? (서바이벌 프레임워크에 대한 시청각 피드백 활성화)</Korean>
+            <Japanese>キャラクターの没入感を高めますか？（サバイバルフレームワークの視覚・聴覚フィードバックを有効にします）</Japanese>
+            <Chinese>開啟額外角色沉浸感？(開啟生存系統的視聽反饋)</Chinese>
+            <Chinesesimp>开启额外角色沉浸感？(开启生存系统的视听反馈)</Chinesesimp>
+            <Turkish>Ekstra karakter etkileşimi etkinleştirilsin mi? (Hayatta kalma sistemi için sesli ve görsel geri bildirim sağlar)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Audio_EnhancedInvSounds">
+            <English>Enhanced Inventory sounds</English>
+            <Czech>Vylepšené zvuky inventáře</Czech>
+            <French>Sons d'inventaire améliorés</French>
+            <Spanish>Sonidos de inventario mejorados</Spanish>
+            <Italian>Suoni inventario migliorati</Italian>
+            <Polish>Ulepszone dźwięki ekwipunku</Polish>
+            <Portuguese>Sons de inventário aprimorados</Portuguese>
+            <Russian>Улучшенные звуки инвентаря</Russian>
+            <German>Erweiterte Inventar-Sounds</German>
+            <Korean>강화된 인벤토리 사운드</Korean>
+            <Japanese>強化されたインベントリ音</Japanese>
+            <Chinese>強化庫存聲音</Chinese>
+            <Chinesesimp>强化库存声音</Chinesesimp>
+            <Turkish>Geliştirilmiş envanter sesleri</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Audio_EnhancedInvSounds_Desc">
+            <English>Enable Inventory audio overhaul?</English>
+            <Czech>Povolit přepracování zvuků inventáře?</Czech>
+            <French>Activer la refonte audio de l'inventaire ?</French>
+            <Spanish>¿Habilitar la renovación de audio del inventario?</Spanish>
+            <Italian>Abilitare la revisione audio dell'inventario?</Italian>
+            <Polish>Włączyć przebudowę dźwięków ekwipunku?</Polish>
+            <Portuguese>Ativar a reformulação de áudio do inventário?</Portuguese>
+            <Russian>Включить переработку звуков инвентаря?</Russian>
+            <German>Inventar-Audio-Überarbeitung aktivieren?</German>
+            <Korean>인벤토리 오디오 개편을 활성화하시겠습니까?</Korean>
+            <Japanese>インベントリオーディオのオーバーホールを有効にしますか？</Japanese>
+            <Chinese>開啟庫存音頻重製？</Chinese>
+            <Chinesesimp>开启库存音频重制？</Chinesesimp>
+            <Turkish>Envanter ses revizyonu etkinleştirilsin mi?</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Audio_ForgeAmbience">
+            <English>Ambient audio for Forges</English>
+            <Czech>Okolní zvuk pro výhně</Czech>
+            <French>Ambiance sonore pour les forges</French>
+            <Spanish>Audio ambiental para forjas</Spanish>
+            <Italian>Audio ambientale per le fucine</Italian>
+            <Polish>Ambientowe dźwięky dla kuźni</Polish>
+            <Portuguese>Áudio ambiente para forjas</Portuguese>
+            <Russian>Окружающий звук для кузниц</Russian>
+            <German>Umgebungs-Audio für Essen</German>
+            <Korean>화덕 주변 오디오</Korean>
+            <Japanese>鍛冶場の環境音</Japanese>
+            <Chinese>熔爐環境音效</Chinese>
+            <Chinesesimp>熔炉环境音效</Chinesesimp>
+            <Turkish>Ocaklar için ortam sesi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Audio_ForgeAmbience_Desc">
+            <English>Enable Audio loop for forges? (Makes them crackle and hum - immersion)</English>
+            <Czech>Povolit zvukovou smyčku pro výhně? (Vytváří praskání a hučení - imerze)</Czech>
+            <French>Activer la boucle audio pour les forges ? (Crée des crépitements et des bourdonnements)</French>
+            <Spanish>¿Habilitar bucle de audio para forjas? (Hace que crepiten y zumben - inmersión)</Spanish>
+            <Italian>Abilitare il loop audio per le fucine? (Produce scoppiettii e ronzii - immersione)</Italian>
+            <Polish>Włączyć pętlę dźwiękową dla kuźni? (Powoduje trzaski i szum - immersja)</Polish>
+            <Portuguese>Ativar loop de áudio para forjas? (Faz com que estalem e zumbam - imersão)</Portuguese>
+            <Russian>Включить аудио-петлю для кузниц? (Создает треск и гул для погружения)</Russian>
+            <German>Audio-Schleife für Essen aktivieren? (Erzeugt Knistern und Summen - Immersion)</German>
+            <Korean>화덕 오디오 루프를 활성화하시겠습니까? (타닥거리는 소리와 웅웅거리는 소리 추가 - 몰입감)</Korean>
+            <Japanese>鍛冶場のオーディオループを有効にしますか？（パチパチ音やうなり音を追加します）</Japanese>
+            <Chinese>開啟熔爐音頻循環？(使其產生噼啪聲和嗡嗡聲 - 增強沉浸感)</Chinese>
+            <Chinesesimp>开启熔炉音频循环？(使其产生噼啪声和嗡嗡声 - 增强沉浸感)</Chinesesimp>
+            <Turkish>Ocaklar için ses döngüsü etkinleştirilsin mi? (Çatırtı ve vızıltı ekler - etkileşim)</Turkish>
         </Key>
     </Package>
 </Project>

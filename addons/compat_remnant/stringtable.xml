@@ -1,42 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
     <Package name="Compat_Remnant">
-        <Key ID="STR_MISERY_Compat_Remnant_Drops">
-            <English>Artifact drops</English>
-            <Chinesesimp>神器掉落</Chinesesimp>
-            <Chinese>神器掉落</Chinese>
-            <Czech>Padání artefaktů</Czech>
-            <French>Butin d'artéfacts</French>
-            <Spanish>Botín de artefactos</Spanish>
-            <Italian>Rilascio artefatti</Italian>
-            <Polish>Drop artefaktów</Polish>
-            <Portuguese>Drop de artefatos</Portuguese>
-            <Russian>Выпадение артефактов</Russian>
-            <German>Artefakt-Drops</German>
-            <Korean>아티팩트 드롭</Korean>
-            <Japanese>アーティファクトのドロップ</Japanese>
-            <Turkish>Eser düşürme</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Compat_Remnant_DropsDesc">
-            <English>Allow Phantoms to drop artifacts?</English>
-            <Chinesesimp>允许幽灵掉落神器？</Chinesesimp>
-            <Chinese>允許幽靈掉落神器？</Chinese>
-            <Czech>Povolit fantomům upouštět artefakty?</Czech>
-            <French>Autoriser les Fantômes à lâcher des artéfacts ?</French>
-            <Spanish>¿Permitir que los Fantasmas suelten artefactos?</Spanish>
-            <Italian>Consentire ai Fantasmi di rilasciać artefatti?</Italian>
-            <Polish>Czy fantomy mogą upuszczać artefakty?</Polish>
-            <Portuguese>Permitir que Fantasmas dropem artefatos?</Portuguese>
-            <Russian>Разрешить Фантомам оставлять артефакты?</Russian>
-            <German>Sollen Phantome Artefakte fallen lassen?</German>
-            <Korean>팬텀이 아티팩트를 드롭하도록 허용하시겠습니까?</Korean>
-            <Japanese>ファントムがアーティファクトをドロップすることを許可しますか？</Japanese>
-            <Turkish>Hayaletlerin eser düşürmesine izin verilsin mi?</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Compat_Remnant_DropChance">
             <English>Artifact drop chance</English>
-            <Chinesesimp>神器掉落概率</Chinesesimp>
-            <Chinese>神器掉落概率</Chinese>
             <Czech>Šance na vypadnutí artefaktu</Czech>
             <French>Chance de butin d'artéfact</French>
             <Spanish>Probabilidad de botín de artefacto</Spanish>
@@ -47,12 +13,12 @@
             <German>Artefakt-Drop-Chance</German>
             <Korean>아티팩트 드롭 확률</Korean>
             <Japanese>アーティファクトのドロップ確率</Japanese>
+            <Chinese>神器掉落概率</Chinese>
+            <Chinesesimp>神器掉落概率</Chinesesimp>
             <Turkish>Eser düşürme şansı</Turkish>
         </Key>
         <Key ID="STR_MISERY_Compat_Remnant_DropChanceDesc">
             <English>% chance per phantom kill to drop an artifact</English>
-            <Chinesesimp>每次击杀幽灵时掉落神器的百分比概率</Chinesesimp>
-            <Chinese>每次擊殺幽靈時掉落神器的百分比概率</Chinese>
             <Czech>% šance na vypadnutí artefaktu při zabití fantoma</Czech>
             <French>% de chance de trouver un artéfact par fantôme tué</French>
             <Spanish>% de probabilidad por cada fantasma muerto de soltar un artefacto</Spanish>
@@ -63,7 +29,41 @@
             <German>% Chance pro Phantom-Kill, ein Artefakt fallen zu lassen</German>
             <Korean>팬텀 처치 시 아티팩트가 드롭될 확률(%)</Korean>
             <Japanese>ファントムを倒した際にアーティファクトがドロップする確率(%)</Japanese>
+            <Chinese>每次擊殺幽靈時掉落神器的百分比概率</Chinese>
+            <Chinesesimp>每次击杀幽灵时掉落神器的百分比概率</Chinesesimp>
             <Turkish>Hayalet öldürme başına eser düşme % şansı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_Remnant_Drops">
+            <English>Artifact drops</English>
+            <Czech>Padání artefaktů</Czech>
+            <French>Butin d'artéfacts</French>
+            <Spanish>Botín de artefactos</Spanish>
+            <Italian>Rilascio artefatti</Italian>
+            <Polish>Drop artefaktów</Polish>
+            <Portuguese>Drop de artefatos</Portuguese>
+            <Russian>Выпадение артефактов</Russian>
+            <German>Artefakt-Drops</German>
+            <Korean>아티팩트 드롭</Korean>
+            <Japanese>アーティファクトのドロップ</Japanese>
+            <Chinese>神器掉落</Chinese>
+            <Chinesesimp>神器掉落</Chinesesimp>
+            <Turkish>Eser düşürme</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_Remnant_DropsDesc">
+            <English>Allow Phantoms to drop artifacts?</English>
+            <Czech>Povolit fantomům upouštět artefakty?</Czech>
+            <French>Autoriser les Fantômes à lâcher des artéfacts ?</French>
+            <Spanish>¿Permitir que los Fantasmas suelten artefactos?</Spanish>
+            <Italian>Consentire ai Fantasmi di rilasciać artefatti?</Italian>
+            <Polish>Czy fantomy mogą upuszczać artefakty?</Polish>
+            <Portuguese>Permitir que Fantasmas dropem artefatos?</Portuguese>
+            <Russian>Разрешить Фантомам оставлять артефакты?</Russian>
+            <German>Sollen Phantome Artefakte fallen lassen?</German>
+            <Korean>팬텀이 아티팩트를 드롭하도록 허용하시겠습니까?</Korean>
+            <Japanese>ファントムがアーティファクトをドロップすることを許可しますか？</Japanese>
+            <Chinese>允許幽靈掉落神器？</Chinese>
+            <Chinesesimp>允许幽灵掉落神器？</Chinesesimp>
+            <Turkish>Hayaletlerin eser düşürmesine izin verilsin mi?</Turkish>
         </Key>
     </Package>
 </Project>

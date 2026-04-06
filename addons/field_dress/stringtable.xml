@@ -1,58 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
     <Package name="Field_Dress">
-        <Key ID="STR_MISERY_Field_Dress_Name">
-            <English>Field dressing</English>
-            <Chinesesimp>剥皮处理</Chinesesimp>
-            <Chinese>剝皮處理</Chinese>
-            <Czech>Polní vyvrhování</Czech>
-            <French>Éviscération sur le terrain</French>
-            <Spanish>Despiece de campo</Spanish>
-            <Italian>Eviscerazione sul campo</Italian>
-            <Polish>Patroszenie w terenie</Polish>
-            <Portuguese>Limpeza de campo</Portuguese>
-            <Russian>Полевая разделка</Russian>
-            <German>Aufbrechen im Feld</German>
-            <Korean>야외 해체</Korean>
-            <Japanese>フィールド解体</Japanese>
-            <Turkish>Saha temizleme</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Field_Dress_Desc">
-            <English>Allow field dressing of animals?</English>
-            <Chinesesimp>允许对动物进行剥皮处理？</Chinesesimp>
-            <Chinese>允許對動物進行剝皮處理？</Chinese>
-            <Czech>Povolit polní vyvrhování zvířat?</Czech>
-            <French>Autoriser l'éviscération des animaux sur le terrain ?</French>
-            <Spanish>¿Permitir el despiece de animales en el campo?</Spanish>
-            <Italian>Consentire l'eviscerazione degli animali sul campo?</Italian>
-            <Polish>Zezwolić na patroszenie zwierząt w terenie?</Polish>
-            <Portuguese>Permitir a limpeza de animais no campo?</Portuguese>
-            <Russian>Разрешить полевую разделку животных?</Russian>
-            <German>Das Aufbrechen von Tieren im Feld erlauben?</German>
-            <Korean>동물 야외 해체를 허용하시겠습니까?</Korean>
-            <Japanese>動物のフィールド解体を許可しますか？</Japanese>
-            <Turkish>Hayvanların sahada temizlenmesine izin verilsin mi?</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Field_Dress_Action">
-            <English>Field dress animal</English>
-            <Chinesesimp>剥皮处理动物</Chinesesimp>
-            <Chinese>剝皮處理動物</Chinese>
-            <Czech>Vyvrhnout zvíře</Czech>
-            <French>Éviscérer l'animal</French>
-            <Spanish>Despiezar animal</Spanish>
-            <Italian>Eviscera animale</Italian>
-            <Polish>Patrosz zwierzę</Polish>
-            <Portuguese>Limpar animal</Portuguese>
-            <Russian>Разделать животное</Russian>
-            <German>Tier aufbrechen</German>
-            <Korean>동물 해체하기</Korean>
-            <Japanese>動物を解体する</Japanese>
-            <Turkish>Hayvanı temizle</Turkish>
-        </Key>
         <Key ID="STR_MISERY_FieldDressing_AlreadyProcessed">
             <English>This animal is being processed already...</English>
-            <Chinesesimp>这只动物已经在处理中了...</Chinesesimp>
-            <Chinese>這隻動物已經在處理中了...</Chinese>
             <Czech>Toto zvíře se již zpracovává...</Czech>
             <French>Cet animal est déjà en cours de traitement...</French>
             <Spanish>Este animal ya está siendo procesado...</Spanish>
@@ -63,12 +13,12 @@
             <German>Dieses Tier wird bereits verarbeitet...</German>
             <Korean>이 동물은 이미 해체 중입니다...</Korean>
             <Japanese>この動物はすでに解体されています...</Japanese>
+            <Chinese>這隻動物已經在處理中了...</Chinese>
+            <Chinesesimp>这只动物已经在处理中了...</Chinesesimp>
             <Turkish>Bu hayvan zaten işleniyor...</Turkish>
         </Key>
         <Key ID="STR_MISERY_FieldDressing_Start">
             <English>You start to field dress the animal...</English>
-            <Chinesesimp>你开始对动物进行剥皮处理...</Chinesesimp>
-            <Chinese>你開始對動物進行剝皮處理...</Chinese>
             <Czech>Začínáte vyvrhovat zvíře...</Czech>
             <French>Vous commencez l'éviscération de l'animal...</French>
             <Spanish>Empiezas a despiezar al animal...</Spanish>
@@ -79,28 +29,12 @@
             <German>Du beginnst, das Tier aufzubrechen...</German>
             <Korean>동물 해체를 시작합니다...</Korean>
             <Japanese>動物のフィールド解体を開始します...</Japanese>
+            <Chinese>你開始對動物進行剝皮處理...</Chinese>
+            <Chinesesimp>你开始对动物进行剥皮处理...</Chinesesimp>
             <Turkish>Hayvanı sahada temizlemeye başlıyorsunuz...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_FieldDressing_Success">
-            <English>You got some raw meat...</English>
-            <Chinesesimp>你获得了一些生肉...</Chinesesimp>
-            <Chinese>你獲得了一些生肉...</Chinese>
-            <Czech>Získal jsi syrové maso...</Czech>
-            <French>Vous avez obtenu de la viande crue...</French>
-            <Spanish>Has obtenido carne cruda...</Spanish>
-            <Italian>Hai ottenuto della carne cruda...</Italian>
-            <Polish>Otrzymałeś surowe mięso...</Polish>
-            <Portuguese>Você conseguiu carne crua...</Portuguese>
-            <Russian>Вы получили сырое мясо...</Russian>
-            <German>Du hast rohes Fleisch erhalten...</German>
-            <Korean>생고기를 얻었습니다...</Korean>
-            <Japanese>生肉を手に入れました...</Japanese>
-            <Turkish>Biraz çiğ et aldın...</Turkish>
         </Key>
         <Key ID="STR_MISERY_FieldDressing_Stop">
             <English>You stop field dressing the animal...</English>
-            <Chinesesimp>你停止了对动物的剥皮处理...</Chinesesimp>
-            <Chinese>你停止了對動物的剝皮處理...</Chinese>
             <Czech>Přestali jste vyvrhovat zvíře...</Czech>
             <French>Vous arrêtez l'éviscération de l'animal...</French>
             <Spanish>Dejas de despiezar al animal...</Spanish>
@@ -111,7 +45,73 @@
             <German>Du hörst auf, das Tier aufzubrechen...</German>
             <Korean>동물 해체를 중단합니다...</Korean>
             <Japanese>動物のフィールド解体を中止しました...</Japanese>
+            <Chinese>你停止了對動物的剝皮處理...</Chinese>
+            <Chinesesimp>你停止了对动物的剥皮处理...</Chinesesimp>
             <Turkish>Hayvanı temizlemeyi bıraktınız...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_FieldDressing_Success">
+            <English>You got some raw meat...</English>
+            <Czech>Získal jsi syrové maso...</Czech>
+            <French>Vous avez obtenu de la viande crue...</French>
+            <Spanish>Has obtenido carne cruda...</Spanish>
+            <Italian>Hai ottenuto della carne cruda...</Italian>
+            <Polish>Otrzymałeś surowe mięso...</Polish>
+            <Portuguese>Você conseguiu carne crua...</Portuguese>
+            <Russian>Вы получили сырое мясо...</Russian>
+            <German>Du hast rohes Fleisch erhalten...</German>
+            <Korean>생고기를 얻었습니다...</Korean>
+            <Japanese>生肉を手に入れました...</Japanese>
+            <Chinese>你獲得了一些生肉...</Chinese>
+            <Chinesesimp>你获得了一些生肉...</Chinesesimp>
+            <Turkish>Biraz çiğ et aldın...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Field_Dress_Action">
+            <English>Field dress animal</English>
+            <Czech>Vyvrhnout zvíře</Czech>
+            <French>Éviscérer l'animal</French>
+            <Spanish>Despiezar animal</Spanish>
+            <Italian>Eviscera animale</Italian>
+            <Polish>Patrosz zwierzę</Polish>
+            <Portuguese>Limpar animal</Portuguese>
+            <Russian>Разделать животное</Russian>
+            <German>Tier aufbrechen</German>
+            <Korean>동물 해체하기</Korean>
+            <Japanese>動物を解体する</Japanese>
+            <Chinese>剝皮處理動物</Chinese>
+            <Chinesesimp>剥皮处理动物</Chinesesimp>
+            <Turkish>Hayvanı temizle</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Field_Dress_Desc">
+            <English>Allow field dressing of animals?</English>
+            <Czech>Povolit polní vyvrhování zvířat?</Czech>
+            <French>Autoriser l'éviscération des animaux sur le terrain ?</French>
+            <Spanish>¿Permitir el despiece de animales en el campo?</Spanish>
+            <Italian>Consentire l'eviscerazione degli animali sul campo?</Italian>
+            <Polish>Zezwolić na patroszenie zwierząt w terenie?</Polish>
+            <Portuguese>Permitir a limpeza de animais no campo?</Portuguese>
+            <Russian>Разрешить полевую разделку животных?</Russian>
+            <German>Das Aufbrechen von Tieren im Feld erlauben?</German>
+            <Korean>동물 야외 해체를 허용하시겠습니까?</Korean>
+            <Japanese>動物のフィールド解体を許可しますか？</Japanese>
+            <Chinese>允許對動物進行剝皮處理？</Chinese>
+            <Chinesesimp>允许对动物进行剥皮处理？</Chinesesimp>
+            <Turkish>Hayvanların sahada temizlenmesine izin verilsin mi?</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Field_Dress_Name">
+            <English>Field dressing</English>
+            <Czech>Polní vyvrhování</Czech>
+            <French>Éviscération sur le terrain</French>
+            <Spanish>Despiece de campo</Spanish>
+            <Italian>Eviscerazione sul campo</Italian>
+            <Polish>Patroszenie w terenie</Polish>
+            <Portuguese>Limpeza de campo</Portuguese>
+            <Russian>Полевая разделка</Russian>
+            <German>Aufbrechen im Feld</German>
+            <Korean>야외 해체</Korean>
+            <Japanese>フィールド解体</Japanese>
+            <Chinese>剝皮處理</Chinese>
+            <Chinesesimp>剥皮处理</Chinesesimp>
+            <Turkish>Saha temizleme</Turkish>
         </Key>
     </Package>
 </Project>
