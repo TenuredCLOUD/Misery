@@ -365,6 +365,24 @@ QCLASS(guttingKnife), \
 // IMS animations for compat:
 #define MACRO_ANIMATION_IMS_SPRINT "am_kulak_sprintf", "melee_sprintf", "melee_sprintfl", "melee_sprintfr"
 
+// Survival gesture list (lower cased for strict comparisons):
+#define MACRO_ANIMATION_GESTURES \
+QEGVAR(animations,drinkbottle), \
+QEGVAR(animations,drinkflask), \
+QEGVAR(animations,drinksoda), \
+QEGVAR(animations,eatcanned), \
+QEGVAR(animations,eatpackaged), \
+QEGVAR(animations,cigarretein), \
+QEGVAR(animations,cigarreteloop), \
+QEGVAR(animations,cigarreteout), \
+QEGVAR(animations,cigarretein_mainweap), \
+QEGVAR(animations,cigarreteloop_mainweap), \
+QEGVAR(animations,cigarreteout_mainweap), \
+QEGVAR(animations,thermalpack), \
+QEGVAR(animations,pillbottle), \
+QEGVAR(animations,gasmask), \
+QEGVAR(animations,candybar)
+
 // Ravage compat:
 
 // RVG Tents / Sleeping bags
