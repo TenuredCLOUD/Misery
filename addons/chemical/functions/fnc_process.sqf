@@ -40,22 +40,22 @@
     private _finalRespiratoryDeficit = _respiratoryDeficit / 3;
     private _finalEyeDeficit = _eyeDeficit / 3;
 
-    private _fatigueValue = [getFatigue player, player getVariable ["ace_advanced_fatigue_aimFatigue", 0]] select (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled});
+    private _fatigueValue = [getFatigue player, player getVariable [QACEGVAR(advanced_fatigue,aimFatigue), 0]] select (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)});
 
-    if ("ace_medical" call EFUNC(common,isModLoaded)) then {
+    if (QCLASSACE(medical) call EFUNC(common,isModLoaded)) then {
         if (_skinProtection < 1) then {
-            [player, _finalSkinDeficit, selectRandom _randomPartAce, "burn"] call ace_medical_fnc_addDamageToUnit;
+            [player, _finalSkinDeficit, selectRandom _randomPartAce, "burn"] call ACEFUNC(medical,addDamageToUnit);
         };
         if (_respiratoryProtection < 1) then {
-            [player, _finalRespiratoryDeficit, "Body", "burn"] call ace_medical_fnc_addDamageToUnit;
-            if (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled}) then {
-                player setVariable ["ace_advanced_fatigue_aimFatigue", _fatigueValue + 1];
+            [player, _finalRespiratoryDeficit, "Body", "burn"] call ACEFUNC(medical,addDamageToUnit);
+            if (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)}) then {
+                player setVariable [QACEGVAR(advanced_fatigue,aimFatigue), _fatigueValue + 1];
             } else {
                 player setFatigue (_fatigueValue + 1);
             };
         };
         if (_eyeProtection < 1) then {
-            [player, _finalEyeDeficit, "Head", "burn"] call ace_medical_fnc_addDamageToUnit;
+            [player, _finalEyeDeficit, "Head", "burn"] call ACEFUNC(medical,addDamageToUnit);
             QGVAR(display) cutRsc [QCLASS(bloodshot_ui), "PLAIN", 1, false];
         };
     } else {
@@ -64,8 +64,8 @@
         };
         if (_respiratoryProtection < 1) then {
             player setHitPointDamage ["hitBody", _finalRespiratoryDeficit];
-            if (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled}) then {
-                player setVariable ["ace_advanced_fatigue_aimFatigue", _fatigueValue + 1];
+            if (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)}) then {
+                player setVariable [QACEGVAR(advanced_fatigue,aimFatigue), _fatigueValue + 1];
             } else {
                 player setFatigue (_fatigueValue + 1);
             };

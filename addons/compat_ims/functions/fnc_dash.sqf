@@ -20,7 +20,7 @@
     [{
         params ["_args", "_handle"];
 
-        private _fatigueValue = [getFatigue player, player getVariable ["ace_advanced_fatigue_aimFatigue", 0]] select (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled});
+        private _fatigueValue = [getFatigue player, player getVariable [QACEGVAR(advanced_fatigue,aimFatigue), 0]] select (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)});
 
         if (!(animationState player in [MACRO_ANIMATION_IMS_SPRINT]) || (!alive player) || (_fatigueValue >= 0.9)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
@@ -37,8 +37,8 @@
             [QUOTE(COMPONENT_BEAUTIFIED), "Dash compat cycle checks reinitialized."] call EFUNC(common,debugMessage);
         };
 
-        if (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled}) then {
-            player setVariable ["ace_advanced_fatigue_aimFatigue", _fatigueValue + 0.01];
+        if (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)}) then {
+            player setVariable [QACEGVAR(advanced_fatigue,aimFatigue), _fatigueValue + 0.01];
         } else {
             player setFatigue (_fatigueValue + 0.01);
         };

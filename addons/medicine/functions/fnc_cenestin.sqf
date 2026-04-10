@@ -14,11 +14,11 @@
  *
 */
 
-if ("ace_medical" call EFUNC(common,isModLoaded)) then {
-    [player, QCLASS(cenestinBottle), 120, 300, 1, 0, 1, 1] call ace_medical_status_fnc_addMedicationAdjustment;
+if (QCLASSACE(medical) call EFUNC(common,isModLoaded)) then {
+    [player, QCLASS(cenestinBottle), 120, 300, 1, 0, 1, 1] call ACEFUNC(medical_status,addMedicationAdjustment);
 
     {
-        [player, _x, "FieldDressing"] call ace_medical_treatment_fnc_bandageLocal;
+        [player, _x, "FieldDressing"] call ACEFUNC(medical_treatment,bandageLocal);
     } forEach ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"];
 } else {
     private _playerhealth = damage player;

@@ -106,7 +106,7 @@ _dummyVehicle enableSimulation false;
     ctrlSetText [1001, _displayedText];
 
     if (_step >= _totalSteps - 1) exitWith {
-        [_dummyVehicle, _nearestVehicle] call ace_rearm_fnc_rearmEntireVehicleSuccess;
+        [_dummyVehicle, _nearestVehicle] call ACEFUNC(rearm,rearmEntireVehicleSuccess);
         player setVariable [QCLASS(processRearm), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _rearmInterrupt];
         private _displayFull = format ["%1 has been fully resupplied...", _displayName];

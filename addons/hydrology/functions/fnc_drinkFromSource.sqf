@@ -21,8 +21,8 @@ private _dialog = findDisplay 982380;
 
 [982380, [1600, 1601, 1602], false] call EFUNC(common,displayShowControls);
 
-if ("ace_field_rations" call EFUNC(common,isModLoaded)) then {
-    player switchMove "ace_field_rations_drinkFromSourceLow";
+if (QCLASSACE(field_rations) call EFUNC(common,isModLoaded)) then {
+    player switchMove QACEGVAR(field_rations,drinkFromSourceLow);
 } else {
     player playAction "Gear";
 };

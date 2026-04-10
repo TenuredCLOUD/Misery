@@ -18,8 +18,8 @@ if !(isMultiplayer) then {
     [-0.25, "energy"] call EFUNC(common,addStatusModifier);
 };
 
-if ("ace_medical" call EFUNC(common,isModLoaded)) then {
-    [player, QCLASS(cocaine), 0, 1800, 25, 0, 25, 1] call ace_medical_status_fnc_addMedicationAdjustment;
+if (QCLASSACE(medical) call EFUNC(common,isModLoaded)) then {
+    [player, QCLASS(cocaine), 0, 1800, 25, 0, 25, 1] call ACEFUNC(medical_status,addMedicationAdjustment);
 };
 
 [3, 2] call EFUNC(common,chromaticEffect);
