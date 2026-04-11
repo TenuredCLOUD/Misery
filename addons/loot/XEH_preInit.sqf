@@ -2,6 +2,8 @@
 
 ADDON = false;
 
+GVAR(building_used) = [];
+
 #include "XEH_PREP.hpp"
 
 #include "initSettings.inc.sqf"
