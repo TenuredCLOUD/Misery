@@ -13,6 +13,7 @@
  * 0: None
  *
  * Examples:
+ * Facewear - ["CfgGlasses", "CUP_", -3] call misery_common_fnc_dumpModClasses;
  * Magazines - ["CfgMagazines", "CUP_", -2] call misery_common_fnc_dumpModClasses;
  * Backpacks - ["CfgVehicles", "CUP_", -1] call misery_common_fnc_dumpModClasses;
  * No filter - ["CfgVehicles", "CUP_"] call misery_common_fnc_dumpModClasses;
@@ -48,6 +49,16 @@ private _classes = (configFile >> _configType) call BIS_fnc_returnChildren;
                 if (getNumber (_x >> "isBackpack") isEqualTo 1) then { _isMatch = true; };
             };
 
+            // Use -2 specifically for Magazines
+            if (_configType isEqualTo "CfgMagazines" && _numericFilter isEqualTo -2) then {
+                _isMatch = true;
+            };
+
+            // Use -3 specifically for Facewear
+            if (_configType isEqualTo "CfgGlasses" && _numericFilter isEqualTo -3) then {
+                _isMatch = true;
+            };
+
             // Standard ItemInfo and Weapon types
             if (_configType isEqualTo "CfgWeapons") then {
                 if (getNumber (_x >> "ItemInfo" >> "type") isEqualTo _numericFilter) then {
@@ -56,11 +67,6 @@ private _classes = (configFile >> _configType) call BIS_fnc_returnChildren;
                 if (getNumber (_x >> "type") isEqualTo _numericFilter) then {
                     _isMatch = true;
                 };
-            };
-
-            // Use -2 specifically for Magazines
-            if (_configType isEqualTo "CfgMagazines" && _numericFilter isEqualTo -2) then {
-                _isMatch = true;
             };
         };
 
