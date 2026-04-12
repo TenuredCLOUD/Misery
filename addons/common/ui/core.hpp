@@ -24,8 +24,8 @@ class RscPicture {
     idc = -1;
     type = 0;
     style = 48; // ST_PICTURE
-    colorBackground[] = {0,0,0,0};
-    colorText[] = {1,1,1,1};
+    colorBackground[] = {0, 0, 0, 0};
+    colorText[] = {1, 1, 1, 1};
     font = "PuristaMedium";
     sizeEx = 0;
     lineSpacing = 0;
@@ -59,9 +59,9 @@ class RscListBox {
     arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
     shadow = 0;
     class ListScrollBar {
-        color[] = {1,1,1,0.6};
-        colorActive[] = {1,1,1,1};
-        colorDisabled[] = {1,1,1,0.3};
+        color[] = {1, 1, 1, 0.6};
+        colorActive[] = {1, 1, 1, 1};
+        colorDisabled[] = {1, 1, 1, 0.3};
         thumb = "#(argb,8,8,3)color(1,1,1,1)";
         arrowEmpty = "#(argb,8,8,3)color(1,1,1,1)";
         arrowFull = "#(argb,8,8,3)color(1,1,1,1)";
@@ -105,7 +105,7 @@ class RscFrame {
     style = 64;
     shadow = 2;
     colorBackground[] = {0, 0, 0, 1};
-    colorText[] = {1,1,1,1};
+    colorText[] = {1, 1, 1, 1};
     font = "PuristaMedium";
     sizeEx = 0.02;
     text = "";
@@ -159,8 +159,8 @@ class CLASS(BackGround): RscBackGround {
     h = QUOTE(UI_MACRO_H);
     font = UI_MACRO_FONT;
     sizeEx = UI_MACRO_TEXTSIZE;
-    colorBackground[] = {0,0,0,1};
-    colorText[] = {0.5,0.5,0.5,1};
+    colorBackground[] = {0, 0, 0, 1};
+    colorText[] = {0.5, 0.5, 0.5, 1};
     text = "";
     lineSpacing = 1;
 };
@@ -171,10 +171,10 @@ class CLASS(RscProgress): RscProgress {
     access = 0;
     type = 8;
     style = 0; // ST_HORIZONTAL
-    colorFrame[] = {1,1,1,0.8};
-    colorBar[] = {1,1,1,1};
-    colorBackground[] = {0,0,0,0.3};
-    colorText[] = {1,1,1,0};
+    colorFrame[] = {1, 1, 1, 0.8};
+    colorBar[] = {1, 1, 1, 1};
+    colorBackground[] = {0, 0, 0, 0.3};
+    colorText[] = {1, 1, 1, 0};
     font = UI_MACRO_FONT;
     sizeEx = UI_MACRO_TEXTSIZE;
     shadow = 2;
@@ -186,8 +186,8 @@ class CLASS(RscPicture): RscPicture {
     idc = -1;
     type = 0;
     style = 48;
-    colorBackground[] = {0,0,0,0};
-    colorText[] = {1,1,1,1};
+    colorBackground[] = {0, 0, 0, 0};
+    colorText[] = {1, 1, 1, 1};
     font = UI_MACRO_FONT;
     sizeEx = 0;
     lineSpacing = 0;
@@ -208,12 +208,12 @@ class CLASS(RscText): RscText {
     type = 0;
     style = UI_MACRO_STYLE;
     shadow = 1;
-    colorShadow[] = {0,0,0,0.5};
+    colorShadow[] = {0, 0, 0, 0.5};
     font = UI_MACRO_FONT;
     SizeEx = UI_MACRO_TEXTSIZE;
     text = "";
-    colorText[] = {1,1,1,1};
-    colorBackground[] = {0,0,0,0};
+    colorText[] = {1, 1, 1, 1};
+    colorBackground[] = {0, 0, 0, 0};
     linespacing = 1;
 };
 
@@ -223,13 +223,13 @@ class CLASS(ActiveText) : CLASS(RscText) {
     style = UI_MACRO_STYLE;
     color[] = UI_MACRO_COLOR1;
     colorActive[] = UI_MACRO_COLOR1;
-    colorDisabled[] = {1,1,1,0.3};
+    colorDisabled[] = {1, 1, 1, 0.3};
     colorText[] = UI_MACRO_COLOR1;
     colorBackground[] = UI_MACRO_COLOR2;
-    soundEnter[] = {"",0,1};
-    soundPush[] = {"",0,1};
-    soundClick[] = {"", 0,1};
-    soundEscape[] = {"",0,1 };
+    soundEnter[] = {"", 0, 1};
+    soundPush[] = {"", 0, 1};
+    soundClick[] = {"", 0, 1};
+    soundEscape[] = {"", 0, 1 };
     action = "";
     text = "";
     default = "false";
@@ -252,16 +252,16 @@ class CLASS(RscListBox): RscListBox {
     colorBackground[] = UI_MACRO_COLOR4;
     colorSelectBackground[] = UI_MACRO_COLOR7;
     colorSelectBackground2[] = UI_MACRO_COLOR7;
-    colorScrollbar[] = {0.2,0.2,0.2,1};
+    colorScrollbar[] = {0.2, 0.2, 0.2, 1};
     arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
     arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
     wholeHeight = 0.45;
     rowHeight = 0.04;
     color[] = UI_MACRO_COLOR1;
     colorActive[] = UI_MACRO_COLOR1;
-    colorDisabled[] = {0,0,0,0.3};
+    colorDisabled[] = {0, 0, 0, 0.3};
     SizeEx = UI_MACRO_TEXTSIZE;
-    soundSelect[] = {"",0.1,1};
+    soundSelect[] = {"", 0.1, 1};
     maxHistoryDelay = 1;
     autoScrollSpeed = -1;
     autoScrollDelay = 5;
@@ -270,9 +270,9 @@ class CLASS(RscListBox): RscListBox {
     pictureColorSelect[] = UI_MACRO_COLOR1;
     pictureColorDisabled[] = UI_MACRO_COLOR1;
     class ListScrollBar {
-        color[] = {1,1,1,0.6};
-        colorActive[] = {1,1,1,1};
-        colorDisabled[] = {1,1,1,0.3};
+        color[] = {1, 1, 1, 0.6};
+        colorActive[] = {1, 1, 1, 1};
+        colorDisabled[] = {1, 1, 1, 0.3};
         thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
         arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
         arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
@@ -284,8 +284,8 @@ class CLASS(StructuredText): RscStructuredText {
     idc = -1;
     type = 13;
     style = UI_MACRO_STYLE;
-    colorText[] = {1,1,1,1};
-    colorBackground[] = {0,0,0,0};
+    colorText[] = {1, 1, 1, 1};
+    colorBackground[] = {0, 0, 0, 0};
     x = 0.5;
     y = 0.5;
     w = 0.5;
@@ -298,8 +298,8 @@ class CLASS(StructuredText): RscStructuredText {
         color = "#ffffff";
         align = "left";
         valign = "middle";
-        shadow = "false";
-        shadowColor = "#ff0000";
+        shadow = 0;
+        shadowColor = "#00000000";
         size = "1";
     };
 };
@@ -312,10 +312,10 @@ class CLASS(RscEdit): RscEdit {
     y = 0;
     h = 0.04;
     w = 0.2;
-    colorDisabled[] = {1,1,1,0.25};
-    colorBackground[] = {0,0,0,0.5};
-    colorText[] = {1,1,1,1};
-    colorSelection[] = {1,1,1,0.25};
+    colorDisabled[] = {1, 1, 1, 0.25};
+    colorBackground[] = {0, 0, 0, 0.5};
+    colorText[] = {1, 1, 1, 1};
+    colorSelection[] = {1, 1, 1, 0.25};
     font = UI_MACRO_FONT;
     SizeEx = UI_MACRO_TEXTSIZE;
     autocomplete = "";
