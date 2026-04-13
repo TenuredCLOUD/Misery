@@ -25,7 +25,7 @@
  * Helmets - ["CfgWeapons", "CUP_", 605] call misery_common_fnc_dumpModClasses;
  * NVGs - ["CfgWeapons", "CUP_", 616] call misery_common_fnc_dumpModClasses;
  * Radios/GPS - ["CfgWeapons", "CUP_", 901] call misery_common_fnc_dumpModClasses;
- * Muzzles - ["CfgWeapons", "CUP_muzzle_", 101] call misery_common_fnc_dumpModClasses;
+ * Muzzles - ["CfgWeapons", "CUP_", 101] call misery_common_fnc_dumpModClasses;
  * Optics - ["CfgWeapons", "CUP_", 201] call misery_common_fnc_dumpModClasses;
  * Flashlights - ["CfgWeapons", "CUP_", 301] call misery_common_fnc_dumpModClasses;
  * Bipods - ["CfgWeapons", "CUP_", 602] call misery_common_fnc_dumpModClasses;
@@ -89,4 +89,4 @@ private _classes = (configFile >> _configType) call BIS_fnc_returnChildren;
 
 diag_log format ["--- END DUMP: %1 ---", _configType];
 
-systemChat format ["%1 Export complete.", _prefix];
+systemChat format ["%1 Export (ID:%2) complete. Check your RPT log.", _prefix, _numericFilter];
