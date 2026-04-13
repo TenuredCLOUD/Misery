@@ -36,6 +36,9 @@
     } else {
         [_selectedItem] call EFUNC(common,getItemData) params ["_itemsDisplayName", "_itemPicture", "_itemDescription"];
         _iconCtrl ctrlSetText _itemPicture;
-        _iconTxt ctrlSetStructuredText composeText [_itemsDisplayName, lineBreak, _itemDescription];
+
+        private _parsedDescription = parseText _itemDescription;
+
+        _iconTxt ctrlSetStructuredText composeText [_itemsDisplayName, lineBreak, _parsedDescription];
     };
 }, []] call CBA_fnc_waitUntilAndExecute;
