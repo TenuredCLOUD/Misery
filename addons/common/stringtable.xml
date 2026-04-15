@@ -769,21 +769,5 @@
             <Chinesesimp>你负担不起这个！</Chinesesimp>
             <Turkish>Buna gücünüz yetmez!</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Common_UseForge">
-            <English>Use Forge</English>
-            <Czech>Použít výheň</Czech>
-            <French>Utiliser la forge</French>
-            <Spanish>Utilizar Forja</Spanish>
-            <Italian>Utilizzare la Fucina</Italian>
-            <Polish>Użyj Forge</Polish>
-            <Portuguese>Usar o Forge</Portuguese>
-            <Russian>Используйте кузницу</Russian>
-            <German>Schmiede verwenden</German>
-            <Korean>위조 사용</Korean>
-            <Japanese>フォージを使う</Japanese>
-            <Chinese>使用鍛爐</Chinese>
-            <Chinesesimp>使用锻炉</Chinesesimp>
-            <Turkish>Forge kullanın</Turkish>
-        </Key>
     </Package>
 </Project>

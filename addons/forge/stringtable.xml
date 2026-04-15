@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Forge">
+        <Key ID="STR_MISERY_Forge_Action">
+            <English>Use Forge</English>
+            <Czech>Použít výheň</Czech>
+            <French>Utiliser la forge</French>
+            <Spanish>Utilizar Forja</Spanish>
+            <Italian>Utilizzare la Fucina</Italian>
+            <Polish>Użyj Forge</Polish>
+            <Portuguese>Usar o Forge</Portuguese>
+            <Russian>Используйте кузницу</Russian>
+            <German>Schmiede verwenden</German>
+            <Korean>위조 사용</Korean>
+            <Japanese>フォージを使う</Japanese>
+            <Chinese>使用鍛爐</Chinese>
+            <Chinesesimp>使用锻炉</Chinesesimp>
+            <Turkish>Forge kullanın</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forge_AddedCoal">
+            <English>Coal ore x1 added...</English>
+            <Czech>Hliník uhlíku x1 přidán...</Czech>
+            <French>Or du charbon x1 ajouté...</French>
+            <Spanish>Carbón x1 añadido...</Spanish>
+            <Italian>Mina di carbone x1 aggiunta...</Italian>
+            <Polish>Węglowodór x1 dodany...</Polish>
+            <Portuguese>Carvão x1 adicionado...</Portuguese>
+            <Russian>Уголь x1 добавлен...</Russian>
+            <German>Kohle x1 hinzugefügt...</German>
+            <Korean>석탄 x1 추가됨...</Korean>
+            <Japanese>炭 x1 追加しました...</Japanese>
+            <Chinese>添加了煤炭 x1...</Chinese>
+            <Chinesesimp>添加了煤炭 x1...</Chinesesimp>
+            <Turkish>Kömür x1 eklendi...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forge_FullCoal">
+            <English>This forge has plenty of coal...</English>
+            <Czech>Tento pečící přístroj má dostatek uhlíku...</Czech>
+            <French>Cette forge a beaucoup de charbon...</French>
+            <Spanish>Esta forja tiene mucha carbón...</Spanish>
+            <Italian>Questo forno ha abbastanza carbone...</Italian>
+            <Polish>Ten pełnizel ma wystarczającą ilość węgla...</Polish>
+            <Portuguese>Esta forge tem muita carvão...</Portuguese>
+            <Russian>У этой печи достаточно угля...</Russian>
+            <German>Diese Schmelzofen hat genügend Kohle...</German>
+            <Korean>이 용광로에는 충분한 석탄이 있습니다...</Korean>
+            <Japanese>この炉には十分な炭があります...</Japanese>
+            <Chinese>这台熔炉有足够的煤炭...</Chinese>
+            <Chinesesimp>这台熔炉有足够的煤炭...</Chinesesimp>
+            <Turkish>Bu forf yeterli kadar kömür var...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forge_Interrupted">
+            <English>Smelting interrupted...</English>
+            <Czech>Vytopení přerušeno...</Czech>
+            <French>Fondre interrompu...</French>
+            <Spanish>Fundición interrumpida...</Spanish>
+            <Italian>Fonder interrotta...</Italian>
+            <Polish>Smeltowanie przerwane...</Polish>
+            <Portuguese>Fundição interrompida...</Portuguese>
+            <Russian>Выплавка прервана...</Russian>
+            <German>Schmelzen unterbrochen...</German>
+            <Korean>재료 냉각이 중단되었습니다...</Korean>
+            <Japanese>溶かし方が中断されました...</Japanese>
+            <Chinese>熔化被中断...</Chinese>
+            <Chinesesimp>熔化被中断...</Chinesesimp>
+            <Turkish>Eritme işlemi kesildi...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forge_NeedsCoal">
+            <English>You need coal ore to refuel this forge...</English>
+            <Czech>Potřebujete hliník uhlíku, abyste naplnili tento pečící přístroj...</Czech>
+            <French>Vous avez besoin d'or du charbon pour raviver cette forge...</French>
+            <Spanish>Necesitas carbón para recargar esta forja...</Spanish>
+            <Italian>Hai bisogno di mina di carbone per rifornire questo forno...</Italian>
+            <Polish>Potrzebujesz węglowodór do napłenienia tego pełnizla...</Polish>
+            <Portuguese>Você precisa de carvão para recarregar esta forge...</Portuguese>
+            <Russian>Нужно угля для того, чтобы заправить эту печь...</Russian>
+            <German>Sie benötigen Kohle zum Aufpumpen dieser Schmelzofen...</German>
+            <Korean>이 용광로를 재충전하려면 석탄을 필요로 합니다...</Korean>
+            <Japanese>この炉を再充填するには炭が必要です...</Japanese>
+            <Chinese>你需要煤炭来给这台熔炉加油...</Chinese>
+            <Chinesesimp>你需要煤炭来给这台熔炉加油...</Chinesesimp>
+            <Turkish>Bu forfi yeniden yüklemek için kömür gerekmektedir...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forge_NoMaterialFound">
+            <English>No matching material found...</English>
+            <Czech>Nenalezen žádný odpovídající materiál...</Czech>
+            <French>Aucun matériau correspondant trouvé...</French>
+            <Spanish>No se encontró ningún material coincidente...</Spanish>
+            <Italian>Nessun materiale corrispondente trovato...</Italian>
+            <Polish>Nie znaleziono pasującego materiału...</Polish>
+            <Portuguese>Nenhum material correspondente encontrado...</Portuguese>
+            <Russian>Нет соответствующего материала...</Russian>
+            <German>Kein passendes Material gefunden...</German>
+            <Korean>일치하는 재료를 찾을 수 없습니다...</Korean>
+            <Japanese>一致する素材が見つかりません...</Japanese>
+            <Chinese>找不到匹配的材料...</Chinese>
+            <Chinesesimp>找不到匹配的材料...</Chinesesimp>
+            <Turkish>Eşleşen bir malzeme bulunamadı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forge_NoMaterialSelected">
+            <English>No smelting materials selected...</English>
+            <Czech>Není vybrán žádný vytápěcí materiál...</Czech>
+            <French>Aucun matériau pour la fonte sélectionné...</French>
+            <Spanish>No se seleccionaron materiales para fundir...</Spanish>
+            <Italian>Nessun materiale per il fonderio selezionato...</Italian>
+            <Polish>Brak wybranych materiałów do smeltowania...</Polish>
+            <Portuguese>Nenhum material para fundir selecionado...</Portuguese>
+            <Russian>Не выбраны материалы для выплавки...</Russian>
+            <German>Keine Materialien für das Schmelzen ausgewählt...</German>
+            <Korean>선택된 재료가 없습니다...</Korean>
+            <Japanese>溶かすための素材が選択されていません...</Japanese>
+            <Chinese>没有选择任何融化材料...</Chinese>
+            <Chinesesimp>没有选择任何融化材料...</Chinesesimp>
+            <Turkish>Eritmek için hiçbir malzeme seçilmedi...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forge_NoMaterials">
+            <English>You don’t have those materials...</English>
+            <Czech>Nemáte tyto materiály...</Czech>
+            <French>Vous n'avez pas ces matériaux...</French>
+            <Spanish>No tienes esos materiales...</Spanish>
+            <Italian>Non hai quei materiali...</Italian>
+            <Polish>Nie masz tych materiałów...</Polish>
+            <Portuguese>Você não tem esses materiais...</Portuguese>
+            <Russian>У вас нет этих материалов...</Russian>
+            <German>Sie haben diese Materialien nicht...</German>
+            <Korean>그런 재료가 없습니다...</Korean>
+            <Japanese>その素材はありません...</Japanese>
+            <Chinese>你没有这些材料...</Chinese>
+            <Chinesesimp>你没有这些材料...</Chinesesimp>
+            <Turkish>Bu malları yoksunuz...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forge_NotEnoughFuel">
+            <English>This forge doesn't have enough fuel to smelt materials...</English>
+            <Czech>Tento pečící přístroj nemá dostatek paliva na vytopení materiálů...</Czech>
+            <French>Cette forge n'a pas assez de carburant pour fondre des matériaux...</French>
+            <Spanish>Esta forja no tiene suficiente combustible para fundir materiales...</Spanish>
+            <Italian>Questo forno non ha abbastanza carburante per fonder materiale...</Italian>
+            <Polish>Ten pełnizel nie ma wystarczającej ilości paliwa do smeltowania materiałów...</Polish>
+            <Portuguese>Esta forge não tem combustível suficiente para fundir materiais...</Portuguese>
+            <Russian>Эта печь не имеет достаточно топлива для выплавки материалов...</Russian>
+            <German>Diese Schmelzofen hat nicht genügend Brennstoff, um Materialien zu schmelzen...</German>
+            <Korean>이 용광로는 재료를 냉각하기에 충분한 연료가 없습니다...</Korean>
+            <Japanese>この炉には素材を溶かすのに十分な燃料がありません...</Japanese>
+            <Chinese>这台熔炉没有足够的燃料来融化材料...</Chinese>
+            <Chinesesimp>这台熔炉没有足够的燃料来融化材料...</Chinesesimp>
+            <Turkish>Bu forf yeterli yakıtta bulunmamakta, malzemeleri eritme...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forge_RequiredMaterial">
+            <English>Required materials:</English>
+            <Czech>Požadované materiály:</Czech>
+            <French>Matières requises :</French>
+            <Spanish>Materiales requeridos:</Spanish>
+            <Italian>Materiale richiesto:</Italian>
+            <Polish>Wymagane materiały:</Polish>
+            <Portuguese>Materiais necessários:</Portuguese>
+            <Russian>Необходимые материалы:</Russian>
+            <German>Erforderliche Materialien:</German>
+            <Korean>필요한 재료:</Korean>
+            <Japanese>必要な素材:</Japanese>
+            <Chinese>所需材料:</Chinese>
+            <Chinesesimp>所需材料:</Chinesesimp>
+            <Turkish>Gerekli malzemeler:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forge_SmeltProgress">
+            <English>Smelting materials... %1%2 complete</English>
+            <Czech>Vytápění materiálů... %1%2 dokončeno</Czech>
+            <French>Fondre des matériaux... %1%2 terminé</French>
+            <Spanish>Fundiendo materiales... %1%2 completado</Spanish>
+            <Italian>Fonder materiale... %1%2 completato</Italian>
+            <Polish>Smeltowanie materiałów... %1%2 zakończone</Polish>
+            <Portuguese>Fundindo materiais... %1%2 concluído</Portuguese>
+            <Russian>Выплавка материалов... %1%2 завершена</Russian>
+            <German>Materialien schmelzen... %1%2 abgeschlossen</German>
+            <Korean>재료 냉각 중... %1%2 완료됨</Korean>
+            <Japanese>素材を溶かしています... %1%2 完了</Japanese>
+            <Chinese>正在融化材料... %1%2 完成</Chinese>
+            <Chinesesimp>正在融化材料... %1%2 完成</Chinesesimp>
+            <Turkish>Malzemeler eritiliyor... %1%2 tamamlandı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forge_Smelted">
+            <English>You smelted: %1...</English>
+            <Czech>Vytapili jste: %1...</Czech>
+            <French>Vous avez fondus : %1...</French>
+            <Spanish>Hazte fundido: %1...</Spanish>
+            <Italian>Hai fondu: %1...</Italian>
+            <Polish>Zalewano: %1...</Polish>
+            <Portuguese>Você fundiu: %1...</Portuguese>
+            <Russian>Вы выплавили: %1...</Russian>
+            <German>Sie haben gegossen: %1...</German>
+            <Korean>당신은 %1을 냉각했습니다...</Korean>
+            <Japanese>あなたは%1を溶かしました...</Japanese>
+            <Chinese>你融化了: %1...</Chinese>
+            <Chinesesimp>你融化了: %1...</Chinesesimp>
+            <Turkish>Yaptığınız eritimi: %1...</Turkish>
+        </Key>
+    </Package>
+</Project>

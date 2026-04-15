@@ -22,11 +22,11 @@ private _dialog = findDisplay 733835;
 private _nearLandFuel = [[MACRO_FUELSTATIONS_LAND], 2.5] call EFUNC(common,nearCraftingStation);
 private _nearAirFuel = [[MACRO_FUELSTATIONS_AIR], 10] call EFUNC(common,nearCraftingStation);
 
-if (isNil "_vehicle") exitWith { ctrlSetText [1001, "No vehicle to refuel..."]; };
+if (isNil "_vehicle") exitWith { ctrlSetText [1001, localize LSTRING(NoVehicle)]; };
 
-if (_vehicle isKindOf "Air" && _nearLandFuel) exitWith { ctrlSetText [1001, "Wrong fuel station for this vehicle..."]; };
+if (_vehicle isKindOf "Air" && _nearLandFuel) exitWith { ctrlSetText [1001, localize LSTRING(WrongStation)]; };
 
-if (_vehicle isKindOf "Land" && _nearAirFuel) exitWith { ctrlSetText [1001, "Wrong fuel station for this vehicle..."]; };
+if (_vehicle isKindOf "Land" && _nearAirFuel) exitWith { ctrlSetText [1001, localize LSTRING(WrongStation)]; };
 
 private _found = false;
 private _totalLiters = 0;
@@ -50,7 +50,7 @@ private _pumpInterrupt = (findDisplay 733835) displayAddEventHandler ["KeyDown",
     params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QGVAR(usingPump),false];
-        [QEGVAR(common,tileText), format ["Refueling interrupted..."]] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), format [localize LSTRING(RefuelingInterrupted)]] call CBA_fnc_localEvent;
     };
 }];
 
@@ -58,7 +58,7 @@ if (fuel _vehicle >= 1) exitWith {
     player setVariable [QGVAR(usingPump), nil];
     (findDisplay 733835) displayRemoveEventHandler ["KeyDown", _pumpInterrupt];
     _vehicle setFuel 1;
-    ctrlSetText [1001, format ["%1 fuel tank is full...", [_vehicle] call EFUNC(common,getObjectData) select 0]];
+    ctrlSetText [1001, format [localize LSTRING(TankFull), [_vehicle] call EFUNC(common,getObjectData) select 0]];
     [733835, [1600, 1601], true] call EFUNC(common,displayShowControls);
 };
 
@@ -66,8 +66,8 @@ GVAR(pumpingFuel) = true;
 playSound QEGVAR(audio,sound_gasPumpStart);
 call FUNC(pumpAudio);
 
-private _text = "Refueling...";
-private _tanklvl = "Tank level:";
+private _text = localize LSTRING(Refueling);
+private _tanklvl = localize LSTRING(TankLevel);
 private _displayedText = "";
 
 [{
@@ -101,7 +101,7 @@ private _displayedText = "";
         player setVariable [QGVAR(usingPump), nil];
         (findDisplay 733835) displayRemoveEventHandler ["KeyDown", _pumpInterrupt];
         _vehicle setFuel 1;
-        ctrlSetText [1001, format ["%1 fuel tank is full...", [_vehicle] call EFUNC(common,getObjectData) select 0]];
+        ctrlSetText [1001, format [localize LSTRING(TankFull), [_vehicle] call EFUNC(common,getObjectData) select 0]];
         [733835, [1600, 1601], true] call EFUNC(common,displayShowControls);
         GVAR(pumpingFuel) = false;
         playSound QEGVAR(audio,sound_gasPumpStop);
@@ -111,7 +111,7 @@ private _displayedText = "";
     if (!GVAR(usingGenerator) && !GVAR(usingBattery)) exitWith {
         player setVariable [QGVAR(usingPump), nil];
         (findDisplay 733835) displayRemoveEventHandler ["KeyDown", _pumpInterrupt];
-        ctrlSetText [1001, "You have no power source to operate this fuel pump..."];
+        ctrlSetText [1001, localize LSTRING(NoPowerSource)];
         [733835, [1600, 1601], true] call EFUNC(common,displayShowControls);
         GVAR(pumpingFuel) = false;
         playSound QEGVAR(audio,sound_gasPumpStop);
