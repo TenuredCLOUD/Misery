@@ -25,6 +25,20 @@ private _serverObject = createVehicle [_className, [0,0,0], [], 0, "CAN_COLLIDE"
 _serverObject setPosASL _posASL;
 _serverObject setDir _rotation;
 
+// Add marker to server object so loot doesn't spawn in or on it when session is reloaded
+private _markerTAG = _className + str diag_tickTime;
+private _placementMarker = createMarkerLocal [_markerTAG, getPosWorld _serverObject];
+_placementMarker setMarkerShapeLocal "ELLIPSE";
+_placementMarker setMarkerSizeLocal [sizeOf _className, sizeOf _className];
+_placementMarker setMarkerAlpha 0;
+
+EGVAR(loot,areas) pushBack _placementMarker;
+
+publicVariableServer QEGVAR(loot,areas);
+
+// Tag marker to object so if it's picked up in session it will be removed
+_serverObject setVariable [QGVAR(associatedMarker), _placementMarker, true];
+
 // Re-enable collision & simulation locally
 player enableCollisionWith _serverObject;
 _serverObject enableSimulation true;

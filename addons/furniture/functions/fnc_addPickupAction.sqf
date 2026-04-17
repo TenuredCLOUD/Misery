@@ -33,6 +33,19 @@ params ["_className", "_displayName", "_serverObject"];
         if !([_target] call EFUNC(common,emptyObject)) exitWith {
             ["Remove objects cargo before picking it up...", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
         };
+
+        // Find and remove loot blacklisting marker
+        private _marker = _target getVariable [QGVAR(associatedMarker), ""];
+
+        if (_marker isNotEqualTo "") then {
+            private _index = EGVAR(loot,areas) find _marker;
+            if (_index isNotEqualTo -1) then {
+                EGVAR(loot,areas) deleteAt _index;
+                publicVariableServer QEGVAR(loot,areas);
+            };
+            deleteMarker _marker;
+        };
+
         [_className] call FUNC(addToInventory);
         private _placed = _caller getVariable [QGVAR(placedFurniture), []];
         _placed deleteAt (_placed find _target);

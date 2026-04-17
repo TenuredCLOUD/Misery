@@ -16,6 +16,12 @@
 
 params ["_className"];
 
+if ([_className] call FUNC(isStructure)) exitWith {
+    [_className] call EFUNC(common,getObjectData) params ["_itemName"];
+    private _cannotMoveBuilding = format ["%1 is a structure... You cannot place it...", _itemName];
+    [_cannotMoveBuilding, 1, [1, 1, 1, 1]] call CBA_fnc_notify;
+};
+
 // private _furnitureCfg = missionConfigFile >> "CfgMisery_Furniture" >> _className;
 // private _snapToSurface = getNumber (_furnitureCfg >> "snapToSurface");
 
@@ -24,6 +30,14 @@ private _object = createVehicleLocal [_className, [0,0,0], [], 0, "CAN_COLLIDE"]
 player setVariable [QGVAR(placingObject), _object];
 player setVariable [QGVAR(selectedFurniture), _className];
 player setVariable [QGVAR(isForcedplacement), true];
+
+// Blacklist object in loot spawner for current session, only if it has positions for loot to spawn
+private _buildingPositions = _object buildingPos -1;
+
+if (_buildingPositions isNotEqualTo []) then {
+    EGVAR(loot,buildingBlacklist) pushBackUnique _className;
+    publicVariableServer QEGVAR(loot,buildingBlacklist);
+};
 
 // Disable collision & simulation locally
 player disableCollisionWith _object;
