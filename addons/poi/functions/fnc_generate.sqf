@@ -102,6 +102,9 @@ if (count _composition >= 3) then {
         _obj setPosATL [_objPos select 0, _objPos select 1, 0];
         _obj setDir _dir;
         _obj enableDynamicSimulation true;
+
+        _obj setVariable [QGRADGVAR(persistence,isExcluded), true];
+
         _spawnedObjects pushBack _obj;
 
         if (_class in ["Land_Campfire_F", "Land_FirePlace_F"] && [50] call EFUNC(common,rollChance)) then {
@@ -128,6 +131,9 @@ if (count _composition >= 3) then {
                 [0.25], 1, 0, "", "", _smokeEffect];
                 _smokeEffect setParticleRandom [0, [0.5, 0.5, 0], [0.3, 0.3, 0.5], 0, 0.5, [0, 0, 0, 0.1], 0, 0];
                 _smokeEffect setDropInterval 0.05;
+
+                _smokeEffect setVariable [QGRADGVAR(persistence,isExcluded), true];
+
                 _spawnedObjects pushBack _smokeEffect;
             };
         };
@@ -151,6 +157,9 @@ if (_groundLoot isEqualTo 1 && {count _groundLootItems > 0}) then {
         };
         _holder setPosATL [_safePos select 0, _safePos select 1, 0];
         _holder addItemCargoGlobal [_item, 1];
+
+        _holder setVariable [QGRADGVAR(persistence,isExcluded), true];
+
         _spawnedObjects pushBack _holder;
     };
 };
@@ -261,6 +270,8 @@ if (_aiClass isNotEqualTo "") then {
     _group setCombatMode "RED";
     _group setBehaviour "SAFE";
     _group enableDynamicSimulation true;
+
+    _group setVariable [QGRADGVAR(persistence,isExcluded), true];
 };
 
 _poi set [35, true];
@@ -280,31 +291,3 @@ if (EGVAR(common,debugMode) >= 1) then {
     _poi pushBack _marker;
 };
 
-if (!isNil "grad_persistence_blacklist") then {
-
-    // Blacklist units in groups if spawned
-    if (!isNil "_group") then {
-        [_group] call grad_persistence_fnc_blacklistObjects;
-    };
-
-    // Blacklist all spawned objects
-    if (!isNil "_spawnedObjects") then {
-        {
-            [_x] call grad_persistence_fnc_blacklistObjects;
-        } forEach _spawnedObjects
-    };
-
-    // private _gradBlacklistClasses = [];
-    // {
-    //     if (_forEachIndex mod 3 isEqualTo 0) then {
-    //         _gradBlacklistClasses pushBack _x;
-    //     };
-    // } forEach _composition;
-
-    //{
-        // if ((grad_persistence_blacklist find (toLower _x) isEqualTo -1) && (grad_persistence_blacklist find (toUpper _x) isEqualTo -1)) then {
-        //     [_x] call grad_persistence_fnc_blacklistClasses;
-        //     [QUOTE(COMPONENT_BEAUTIFIED), format ["Blacklisted class %1 for GRAD persistence", _x]] call EFUNC(common,debugMessage);
-        // };
-    //} forEach _gradBlacklistClasses;
-};

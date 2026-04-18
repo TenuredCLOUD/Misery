@@ -60,7 +60,7 @@ player addEventHandler ["Respawn", {
 if (!isMultiplayer && GVAR(hardcore)) then {
     player addEventHandler ["Killed", {
         if (!isNil "grad_persistence_blacklist") then {
-            [missionName] call grad_persistence_fnc_clearMissionData;
+            [missionName] call GRADFUNC(persistence,clearMissionData);
         };
     }];
 };

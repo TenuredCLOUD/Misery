@@ -48,11 +48,12 @@ _heliGroup move _dropZone;
 ]] call CBA_fnc_globalEvent;
 
 // Blacklist all objects from saving
-if (!isNil "grad_persistence_blacklist") then {
-    [_heli] call grad_persistence_fnc_blacklistObjects;
-    [_crate] call grad_persistence_fnc_blacklistObjects;
+_heli setVariable [QGRADGVAR(persistence,isExcluded), true];
+_crate setVariable [QGRADGVAR(persistence,isExcluded), true];
+
+if (!isNil QGRADGVAR(persistence,blacklist)) then {
     {
-        [_x] call grad_persistence_fnc_blacklistObjects;
+        [_x] call GRADFUNC(persistence,blacklistObjects);
     } forEach crew _heli;
 };
 
