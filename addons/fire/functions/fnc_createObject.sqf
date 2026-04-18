@@ -27,9 +27,7 @@ private _pos = player getRelPos [1.5, 0];
 private _fireClass = ["FirePlace_burning_F", "Campfire_burning_F"] select (_fuelType isEqualTo "big");
 private _object = createVehicle [_fireClass, player modelToWorld [0, 2, 0], [], 0, "CAN_COLLIDE"];
 
-if (!isNil "grad_persistence_blacklist") then {
-    [_object] call grad_persistence_fnc_blacklistObjects;
-};
+_object setVariable [QGRADGVAR(persistence,isExcluded), true, true];
 
 GVAR(activeFires) pushBack [_object, _fuelType, _burnTimeLeft];
 

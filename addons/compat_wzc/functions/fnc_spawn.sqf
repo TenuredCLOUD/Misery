@@ -61,27 +61,28 @@ for "_i" from 1 to _numEntities do {
                 selectRandom [MACRO_WZC_SPECIAL_ZOMBIES];
             };
             _unit = _group createUnit [_class, _outsidePos, [], 0, "NONE"];
+            _unit setVariable [QGRADGVAR(persistence,isExcluded), true];
+            _unit addEventHandler ["Killed", {
+                params ["_unit"];
+                addToRemainsCollector [_unit];
+            }];
+            _unit enableDynamicSimulation true;
+            GVAR(registeredEntities) pushBack _group;
         } else {
             private _unit = _group createUnit ["WBK_C_ExportClass", _outsidePos, [], 0, "NONE"];
             [_unit, _type] call FUNC(randomGear);
             [_unit, _type] call WBK_LoadAIThroughEden;
             _unit setDamage 0.5; // apply blood effect to all regular zombie types
             _unit setSpeaker "NoVoice"; // ensure no callouts, even with single grouped units
+            _unit setVariable [QGRADGVAR(persistence,isExcluded), true];
+            _unit addEventHandler ["Killed", {
+                params ["_unit"];
+                addToRemainsCollector [_unit];
+            }];
+            _unit enableDynamicSimulation true;
+            GVAR(registeredEntities) pushBack _group;
         };
     };
-
-    _unit addEventHandler ["Killed", {
-        params ["_unit"];
-        addToRemainsCollector [_unit];
-    }];
-
-    if (!isNil "grad_persistence_blacklist") then {
-        [_unit] call grad_persistence_fnc_blacklistObjects;
-    };
-
-    _unit enableDynamicSimulation true;
-
-    GVAR(registeredEntities) pushBack _group;
 };
 
 [{

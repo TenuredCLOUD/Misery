@@ -5,6 +5,18 @@
 #define QCLASS(var1) QUOTE(DOUBLES(PREFIX,var1))
 #define DFUNC(var1) TRIPLES(ADDON,fnc,var1)
 
+// GRAD reference macros
+#define GRAD_PREFIX grad
+
+#define GRADGVAR(module,var) TRIPLES(GRAD_PREFIX,module,var)
+#define QGRADGVAR(module,var) QUOTE(GRADGVAR(module,var))
+
+#define CLASSGRAD(var) DOUBLES(GRAD_PREFIX,var)
+#define QCLASSGRAD(var) QUOTE(CLASSGRAD(var))
+
+#define GRADFUNC(var1,var2) TRIPLES(DOUBLES(GRAD_PREFIX,var1),fnc,var2)
+#define QGRADFUNC(var1,var2) QUOTE(GRADFUNC(var1,var2))
+
 #ifdef DISABLE_COMPILE_CACHE
     #undef PREP
     #define PREP(fncName) DFUNC(fncName) = compile preprocessFileLineNumbers QPATHTOF(functions\DOUBLES(fnc,fncName).sqf)
