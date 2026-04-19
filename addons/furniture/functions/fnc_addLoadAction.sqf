@@ -31,12 +31,32 @@ params ["_className", "_displayName", "_serverObject"];
         params ["_target", "_caller", "_actionId", "_arguments"];
         _arguments params ["_className"];
         [_target] call EFUNC(common,nearVehicle) params ["", "_nearestVehicle"];
+
+        if (_target getVariable [QGVAR(placmentOwner),""] isNotEqualTo (getPlayerUID _caller)) exitWith {
+            ["You do not own this...", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
+        };
+
         if (_nearestVehicle isEqualTo objNull) exitWith {
             ["No vehicle nearby!", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
         };
         if !([_target] call EFUNC(common,emptyObject)) exitWith {
             ["Remove objects cargo before loading...", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
         };
+
+        // Remove owner
+        _target setVariable [QGVAR(placmentOwner), nil, true];
+
+        // Find and remove tracked object
+        private _objectTag = vehicleVarName _target;
+        if (!isNil "_objectTag") then {
+            private _index = GVAR(registeredPlacement) find _objectTag;
+
+            if (_index isNotEqualTo -1) then {
+                GVAR(registeredPlacement) deleteAt _index;
+                publicVariableServer QGVAR(registeredPlacement);
+            };
+        };
+
         [_className, _nearestVehicle, "load", _caller, _target, _actionId] call FUNC(processVehicleAction);
     },
     {},

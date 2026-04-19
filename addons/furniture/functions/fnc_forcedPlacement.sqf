@@ -31,13 +31,14 @@ player setVariable [QGVAR(placingObject), _object];
 player setVariable [QGVAR(selectedFurniture), _className];
 player setVariable [QGVAR(isForcedplacement), true];
 
-// Blacklist object in loot spawner for current session, only if it has positions for loot to spawn
-private _buildingPositions = _object buildingPos -1;
+// Track dummy object
+private _objectTag = format ["dummy_%1_%2", _className, round(diag_tickTime * random 5)];
 
-if (_buildingPositions isNotEqualTo []) then {
-    EGVAR(loot,buildingBlacklist) pushBackUnique _className;
-    publicVariableServer QEGVAR(loot,buildingBlacklist);
-};
+[_object, _objectTag] remoteExec ["setVehicleVarName", 0, _object];
+missionNamespace setVariable [_objectTag, _object, true];
+
+GVAR(registeredPlacement) pushBack _objectTag;
+publicVariableServer QGVAR(registeredPlacement);
 
 // Disable collision & simulation locally
 player disableCollisionWith _object;

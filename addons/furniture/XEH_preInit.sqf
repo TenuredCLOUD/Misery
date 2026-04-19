@@ -2,6 +2,8 @@
 
 ADDON = false;
 
+GVAR(registeredPlacement) = [];
+
 #include "XEH_PREP.hpp"
 
 #include "initSettings.inc.sqf"

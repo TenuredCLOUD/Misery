@@ -19,25 +19,33 @@
 
 params ["_object", "_className", "_posASL", "_rotation", "_displayName"];
 
+// Remove dummy object from tracking prior to deletion
+private _dummyObjectTag = vehicleVarName _object;
+if (!isNil "_dummyObjectTag") then {
+    private _index = GVAR(registeredPlacement) find _dummyObjectTag;
+
+        if (_index isNotEqualTo -1) then {
+        GVAR(registeredPlacement) deleteAt _index;
+        publicVariableServer QGVAR(registeredPlacement);
+    };
+};
+
 deleteVehicle _object;
 
 private _serverObject = createVehicle [_className, [0,0,0], [], 0, "CAN_COLLIDE"];
 _serverObject setPosASL _posASL;
 _serverObject setDir _rotation;
 
-// Add marker to server object so loot doesn't spawn in or on it when session is reloaded
-private _markerTAG = _className + str diag_tickTime;
-private _placementMarker = createMarkerLocal [_markerTAG, getPosWorld _serverObject];
-_placementMarker setMarkerShapeLocal "ELLIPSE";
-_placementMarker setMarkerSizeLocal [sizeOf _className, sizeOf _className];
-_placementMarker setMarkerAlpha 0;
+// Track new server object, and owner (must be passed to GRAD persistence if you want to track it permanently)
+private _objectTag = format ["%1_%2", _className, round(diag_tickTime * random 5)];
 
-EGVAR(loot,areas) pushBack _placementMarker;
+[_serverObject, _objectTag] remoteExec ["setVehicleVarName", 0, _serverObject];
+missionNamespace setVariable [_objectTag, _serverObject, true];
 
-publicVariableServer QEGVAR(loot,areas);
+_serverObject setVariable [QGVAR(placementOwner), getPlayerUID player, true];
 
-// Tag marker to object so if it's picked up in session it will be removed
-_serverObject setVariable [QGVAR(associatedMarker), _placementMarker, true];
+GVAR(registeredPlacement) pushBack _objectTag;
+publicVariableServer QGVAR(registeredPlacement);
 
 // Re-enable collision & simulation locally
 player enableCollisionWith _serverObject;

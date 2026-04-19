@@ -30,20 +30,27 @@ params ["_className", "_displayName", "_serverObject"];
     {
         params ["_target", "_caller", "_actionId", "_arguments"];
         _arguments params ["_className"];
+
+        if (_target getVariable [QGVAR(placmentOwner),""] isNotEqualTo (getPlayerUID _caller)) exitWith {
+            ["You do not own this...", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
+        };
+
         if !([_target] call EFUNC(common,emptyObject)) exitWith {
             ["Remove objects cargo before picking it up...", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
         };
 
-        // Find and remove loot blacklisting marker
-        private _marker = _target getVariable [QGVAR(associatedMarker), ""];
+        // Remove owner
+        _target setVariable [QGVAR(placmentOwner), nil, true];
 
-        if (_marker isNotEqualTo "") then {
-            private _index = EGVAR(loot,areas) find _marker;
+        // Find and remove tracked object
+        private _objectTag = vehicleVarName _target;
+        if (!isNil "_objectTag") then {
+            private _index = GVAR(registeredPlacement) find _objectTag;
+
             if (_index isNotEqualTo -1) then {
-                EGVAR(loot,areas) deleteAt _index;
-                publicVariableServer QEGVAR(loot,areas);
+                GVAR(registeredPlacement) deleteAt _index;
+                publicVariableServer QGVAR(registeredPlacement);
             };
-            deleteMarker _marker;
         };
 
         [_className] call FUNC(addToInventory);

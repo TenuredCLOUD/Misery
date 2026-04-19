@@ -4,6 +4,8 @@ PREP(addToInventory);
 PREP(addToVehicleInventory);
 PREP(condition);
 PREP(createObject);
+PREP(dropFromMenu);
+PREP(dropFurniture);
 PREP(encumbered);
 PREP(forcedPlacement);
 PREP(IsStructure);
