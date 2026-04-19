@@ -58,9 +58,9 @@ class CLASS(furniture_ui) {
             onButtonClick = QUOTE([] call EFUNC(furniture,placeFromMenu));
             text = "Place object"; //--- ToDo: Localize;
             x = 20.5 * GUI_GRID_W + GUI_GRID_X;
-	        y = 11 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 7.5 * GUI_GRID_W;
-	        h = 1.5 * GUI_GRID_H;
+            y = 11 * GUI_GRID_H + GUI_GRID_Y;
+            w = 7.5 * GUI_GRID_W;
+            h = 1.5 * GUI_GRID_H;
             colorBackground[] = {0.2,0.2,0.2,0.7};
             colorActive[] = {0.5,0.5,0.5,0.7};
             font = UI_MACRO_FONT;
@@ -68,16 +68,16 @@ class CLASS(furniture_ui) {
         };
         class CLASS(furniture_dropObject): RscButton
         {
-	        idc = 1601;
-	        colorFocused[] = {0.5,0.5,0.5,0.7};
-	        onButtonClick = QUOTE([] call EFUNC(furniture,dropFromMenu));
-	        text = "Drop Object"; //--- ToDo: Localize;
-	        x = 20.5 * GUI_GRID_W + GUI_GRID_X;
-	        y = 13.5 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 7.5 * GUI_GRID_W;
-	        h = 1.5 * GUI_GRID_H;
-	        colorBackground[] = {0.2,0.2,0.2,0.7};
-	        colorActive[] = {0.5,0.5,0.5,0.7};
+            idc = 1601;
+            colorFocused[] = {0.5,0.5,0.5,0.7};
+            onButtonClick = QUOTE([] call EFUNC(furniture,dropFromMenu));
+            text = "Drop Object"; //--- ToDo: Localize;
+            x = 20.5 * GUI_GRID_W + GUI_GRID_X;
+            y = 13.5 * GUI_GRID_H + GUI_GRID_Y;
+            w = 7.5 * GUI_GRID_W;
+            h = 1.5 * GUI_GRID_H;
+            colorBackground[] = {0.2,0.2,0.2,0.7};
+            colorActive[] = {0.5,0.5,0.5,0.7};
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
@@ -87,9 +87,9 @@ class CLASS(furniture_ui) {
             onButtonClick = QUOTE(closeDialog 2);
             text = "Exit"; //--- ToDo: Localize;
             x = 31 * GUI_GRID_W + GUI_GRID_X;
-	        y = 16 * GUI_GRID_H + GUI_GRID_Y;
-	        w = 7.5 * GUI_GRID_W;
-	        h = 1.5 * GUI_GRID_H;
+            y = 16 * GUI_GRID_H + GUI_GRID_Y;
+            w = 7.5 * GUI_GRID_W;
+            h = 1.5 * GUI_GRID_H;
             colorBackground[] = {0.2,0.2,0.2,0.7};
             colorActive[] = {0.5,0.5,0.5,0.7};
             font = UI_MACRO_FONT;
