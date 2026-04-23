@@ -40,7 +40,7 @@ _object enableSimulation false;
 _object setPhysicsCollisionFlag false;
 
 // Force holster of weapon
-call EFUNC(holster,action);
+[player] call ace_weaponselect_fnc_putWeaponAway;
 
 [_object, GVAR(snapToSurface)] call FUNC(trackHeight);
 [] call FUNC(trackMouse);

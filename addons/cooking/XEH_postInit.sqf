@@ -4,19 +4,24 @@ if (isServer) then {
     if (isClass (missionConfigFile >> "CfgMisery_CookingData")) then {
         [] call FUNC(parseData);
 
-        [
-            "cooking_menu",
+        private _cookingAction = [
+            QGVAR(cooking_menu),
             localize ECSTRING(common,UseFire_Cook),
-            {player getVariable [QEGVAR(actions,currentParentID), ""] isEqualTo "fire_menu" && call EFUNC(common,nearFire) params ["_nearestFire", "_isInflamed"]; _nearestFire isNotEqualTo [] && _isInflamed},
-            {
-                [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-                createDialog QCLASS(cookingFramework_ui);
-                player setVariable [QEGVAR(actions,currentParentID), ""];
-            },
-            "fire_menu",
             QPATHTOEF(icons,data\cooking_ca.paa),
-            ""
-        ] call EFUNC(actions,addAction);
+            {
+                params ["_target", "_player"];
+                createDialog QCLASS(cookingFramework_ui);
+            },
+            {call EFUNC(common,nearFire) params ["_nearestFire", "_isInflamed"]; _nearestFire isNotEqualTo [] && _isInflamed},
+            {},
+            ["_target", "_player"],
+            [0, 0, 0],
+            3
+        ] call ace_interact_menu_fnc_createAction;
+
+        {
+            [_x, 0, ["ACE_MainActions", QEGVAR(fire,fire_menu)], _cookingAction] call ace_interact_menu_fnc_addActionToClass;
+        } forEach [MACRO_FIRETYPES];
 
     } else {
         [QUOTE(COMPONENT_BEAUTIFIED), "CfgMisery_CookingData class not found in description.ext, skipping data parser..."] call EFUNC(common,debugMessage);

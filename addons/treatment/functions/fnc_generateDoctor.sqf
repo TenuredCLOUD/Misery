@@ -21,25 +21,20 @@ if (isNull _trader) exitWith {};
 
 _trader setVariable [QGVAR(isTreating), false, true];
 
-// Add hold action
-[
-    _trader,
+private _traderAction = [
+    QGVAR(accessDoctor),
     localize ECSTRING(common,ReqTreatment),
-    QUOTE(a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa),
-    QUOTE(a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa),
-    QUOTE(_this distance _target < 3 && !(_target getVariable [ARR_2(QUOTE(QGVAR(isTreating)),false)])),
-    QUOTE(_caller distance _target < 3 && !(_target getVariable [ARR_2(QUOTE(QGVAR(isTreating)),false)])),
-    {},
-    {},
+    QPATHTOEF(markers,data\pillbottle_ca.paa),
     {
-        params ["_target", "_caller", "_actionId", "_arguments"];
-        _caller setVariable [QGVAR(currentDoctor), _target];
+        params ["_target", "_player"];
+        _player setVariable [QGVAR(currentDoctor), _target];
         createDialog QCLASS(medicalTreatment_ui);
     },
+    {true},
     {},
-    [_trader],
-    1,
-    nil,
-    false,
-    false
-] call BIS_fnc_holdActionAdd;
+    ["_target", "_player"],
+    [0, 0, 0],
+    3
+] call ace_interact_menu_fnc_createAction;
+
+[_trader, 0, ["ACE_MainActions"], _traderAction] call ace_interact_menu_fnc_addActionToObject;

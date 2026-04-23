@@ -30,28 +30,23 @@ _shop params ["_traderClass", "_shopName", "_items", "_shopFunds"];
 _trader setVariable [QGVAR(shop), _shop, true];
 _trader setVariable [QGVAR(isBusy), false, true];
 
-// Add hold action
-[
-    _trader,
+private _traderAction = [
+    QGVAR(accessTrader),
     format ["Open %1", _shopName],
-    QUOTE(a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa),
-    QUOTE(a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa),
-    QUOTE(_this distance _target < 3 && !(_target getVariable [ARR_2(QUOTE(QGVAR(isBusy)),false)])),
-    QUOTE(_caller distance _target < 3 && !(_target getVariable [ARR_2(QUOTE(QGVAR(isBusy)),false)])),
-    {},
-    {},
+    QPATHTOEF(markers,data\hand_coins_ca.paa),
     {
-        params ["_target", "_caller", "_actionId", "_arguments"];
-        _caller setVariable [QGVAR(currentTrader), _target];
+        params ["_target", "_player"];
+        _player setVariable [QGVAR(currentTrader), _target];
         createDialog QCLASS(traderShop_ui);
     },
+    {true},
     {},
-    [_shopName, _trader],
-    1,
-    nil,
-    false,
-    false
-] call BIS_fnc_holdActionAdd;
+    ["_target", "_player"],
+    [0, 0, 0],
+    3
+] call ace_interact_menu_fnc_createAction;
+
+[_trader, 0, ["ACE_MainActions"], _traderAction] call ace_interact_menu_fnc_addActionToObject;
 
 GVAR(activeTraders) pushBackUnique _trader;
 publicVariable QGVAR(activeTraders);

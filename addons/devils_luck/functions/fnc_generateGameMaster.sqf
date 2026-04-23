@@ -19,27 +19,28 @@ params ["_object"];
 _object getVariable [QGVAR(dealerFunds), 50000];
 _object setVariable [QGVAR(isActive), false, true];
 
-[
-    _object,
+private _gameMasterAction = [
+    QGVAR(playDevilsLuck),
     "Play Devil's Luck",
     QPATHTOEF(icons,data\dices_ca.paa),
-    QPATHTOEF(icons,data\dices_ca.paa),
-    QUOTE(_this distance _target < 3 && !(_target getVariable [ARR_2(QUOTE(QGVAR(isActive)),false)])),
-    QUOTE(_caller distance _target < 3 && !(_target getVariable [ARR_2(QUOTE(QGVAR(isActive)),false)])),
-    {},
-    {},
     {
-        params ["_target", "_caller", "_actionId", "_arguments"];
-        _caller setVariable [QGVAR(currentDealer), _target];
+        params ["_target", "_player"];
+
+        if (_target getVariable [QGVAR(isActive), false]) exitWith {
+            [QEGVAR(common,tileText), "Dealer is busy, try again later..."] call CBA_fnc_localEvent;
+        };
+
+        _player setVariable [QGVAR(currentDealer), _target];
         createDialog QCLASS(devils_luck_ui);
     },
+    {true},
     {},
-    [],
-    1,
-    nil,
-    false,
-    false
-] call BIS_fnc_holdActionAdd;
+    ["_target", "_player"],
+    [0, 0, 0],
+    3
+] call ace_interact_menu_fnc_createAction;
+
+[_object, 0, ["ACE_MainActions"], _gameMasterAction] call ace_interact_menu_fnc_addActionToObject;
 
 GVAR(activeDealers) pushBackUnique _object;
 publicVariable QGVAR(activeDealers);

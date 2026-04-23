@@ -130,4 +130,20 @@ if (isNil QEGVAR(common,vehicleData)) then {
     if (GVAR(preparedTools)) then {
         [_vehicle] call FUNC(preparedVehicle);
     };
+
+    private _maintenanceAction = [
+        QGVAR(maintenance_menu),
+        "Vehicle Maintenance",
+        QPATHTOEF(markers,data\wrench_ca.paa),
+        {
+            params ["_target", "_player"];
+            createDialog QCLASS(maintenance_ui);
+        },
+        {
+            params ["_target", "_player"];
+            ([_player] call EFUNC(common,nearVehicle)) select 0
+        }
+    ] call ace_interact_menu_fnc_createAction;
+
+    [_vehicle, 0, ["ACE_MainActions"], _maintenanceAction] call ace_interact_menu_fnc_addActionToObject;
 }, true, ["Man", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler;

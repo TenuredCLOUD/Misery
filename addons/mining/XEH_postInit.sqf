@@ -11,20 +11,19 @@ if (_miningEnabled) then {
 };
 
 if (_miningEnabled) then {
-    [
-        "mineOre_menu",
+    private _mineOreAction = [
+        QGVAR(searchObject_menu),
         localize ECSTRING(common,MineOre),
+        QPATHTOEF(icons,data\pickaxe_ca.paa),
         {
-            [player] call FUNC(condition) select 0
-        },
-        {
-            [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
             [player] call FUNC(condition) params ["_found", "_miningObject", "_objectData"];
             [_found, _miningObject, _objectData] call FUNC(action);
         },
-        "",
-        QPATHTOEF(icons,data\pickaxe_ca.paa),
-        ""
-    ] call EFUNC(actions,addAction);
+        {
+            [player] call FUNC(condition) select 0
+        }
+    ] call ace_interact_menu_fnc_createAction;
+
+    [player, 1, ["ACE_SelfActions"], _mineOreAction] call ace_interact_menu_fnc_addActionToObject;
 };
 
