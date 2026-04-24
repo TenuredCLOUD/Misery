@@ -82,5 +82,5 @@ private _giftMoneyAction = [
     3
 ] call ace_interact_menu_fnc_createAction;
 
-["CAManBase", 0, ["ACE_MainActions"], _searchForMoneyAction] call ace_interact_menu_fnc_addActionToClass;
-["CAManBase", 0, ["ACE_MainActions"], _giftMoneyAction] call ace_interact_menu_fnc_addActionToClass;
+["CAManBase", 0, ["ACE_MainActions"], _searchForMoneyAction] call ace_interact_menu_fnc_addActionToObject;
+["CAManBase", 0, ["ACE_MainActions"], _giftMoneyAction] call ace_interact_menu_fnc_addActionToObject;

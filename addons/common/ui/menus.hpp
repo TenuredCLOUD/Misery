@@ -17,9 +17,8 @@
 #include "\z\misery\addons\furniture\ui\vehicleFurniture.hpp"
 #include "\z\misery\addons\generator\ui\generator.hpp"
 #include "\z\misery\addons\hydrology\ui\hydrology.hpp"
-#include "\z\misery\addons\inventory\ui\inventoryActions.hpp"
-#include "\z\misery\addons\inventory\ui\inventoryFramework.hpp"
-#include "\z\misery\addons\inventory\ui\inventoryText.hpp"
+// #include "\z\misery\addons\inventory\ui\inventoryActions.hpp"
+// #include "\z\misery\addons\inventory\ui\inventoryText.hpp"
 #include "\z\misery\addons\maintenance\ui\maintenance.hpp"
 #include "\z\misery\addons\persistence\ui\grad_persistence.hpp"
 #include "\z\misery\addons\refuel\ui\refuelShop.hpp"
@@ -27,6 +26,7 @@
 #include "\z\misery\addons\sleep\ui\sleep.hpp"
 #include "\z\misery\addons\traders\ui\traderShop.hpp"
 #include "\z\misery\addons\treatment\ui\medicalTreatment.hpp"
+#include "\z\misery\addons\vitals\ui\vitalsFramework.hpp"
 
 class RscTitles {
     #include "\z\misery\addons\eru\ui\eru.hpp"
