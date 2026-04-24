@@ -5,6 +5,18 @@
 #define QCLASS(var1) QUOTE(DOUBLES(PREFIX,var1))
 #define DFUNC(var1) TRIPLES(ADDON,fnc,var1)
 
+// ACE3 reference macros
+#define ACE_PREFIX ace
+
+#define ACEGVAR(module,var) TRIPLES(ACE_PREFIX,module,var)
+#define QACEGVAR(module,var) QUOTE(ACEGVAR(module,var))
+
+#define CLASSACE(var) DOUBLES(ACE_PREFIX,var)
+#define QCLASSACE(var) QUOTE(CLASSACE(var))
+
+#define ACEFUNC(var1,var2) TRIPLES(DOUBLES(ACE_PREFIX,var1),fnc,var2)
+#define QACEFUNC(var1,var2) QUOTE(ACEFUNC(var1,var2))
+
 #ifdef DISABLE_COMPILE_CACHE
     #undef PREP
     #define PREP(fncName) DFUNC(fncName) = compile preprocessFileLineNumbers QPATHTOF(functions\DOUBLES(fnc,fncName).sqf)

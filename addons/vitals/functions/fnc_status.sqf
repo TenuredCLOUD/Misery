@@ -87,8 +87,8 @@ disableSerialization;
         _ailmentsList lbSetPicture [_index, _ailmentImage];
     } forEach (player getVariable ["ailments", []]);
 
-    if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
-        private _health = player getVariable ["ace_medical_bloodVolume", 6];
+    if (isClass (configFile >> "CfgPatches" >> QCLASSACE(main))) then {
+        private _health = player getVariable [QACEGVAR(medical,bloodVolume), 6];
         _healthText ctrlSetText "Blood:";
         _healthBar progressSetPosition (_health / 6);
     } else {
@@ -126,7 +126,7 @@ disableSerialization;
 
     _hungerBar progressSetPosition _hunger;
     _thirstBar progressSetPosition _thirst;
-    private _fatigueValue = [getFatigue player, player getVariable ["ace_advanced_fatigue_aimFatigue", 0]] select (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled});
+    private _fatigueValue = [getFatigue player, player getVariable [QACEGVAR(advanced_fatigue,aimFatigue), 0]] select (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)});
     _fatigueBar progressSetPosition _fatigueValue;
 
     if (_wetness <= 0) then {

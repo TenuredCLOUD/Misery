@@ -40,7 +40,7 @@
     };
 
     if (isNull objectParent player) then {
-        private _fatigue = [getFatigue player, player getVariable ["ace_advanced_fatigue_aimFatigue", 0]] select (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled});
+        private _fatigue = [getFatigue player, player getVariable [QACEGVAR(advanced_fatigue,aimFatigue), 0]] select (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)});
         private _fatiguePenalty = _fatigue * _fatigueMultiplier;
         _decrementValue = _decrementValue + _fatiguePenalty;
     };

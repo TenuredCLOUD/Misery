@@ -194,7 +194,7 @@ class CfgMagazines {
     };
 
     class CLASS(eru_On): CLASS(FakeMagazine) {
-        ace_disableRepacking = 1;
+        CLASSACE(disableRepacking) = 1;
         count = 100;
         descriptionShort = CSTRING(ERU_Description);
         displayName = CSTRING(ERU_DisplayName);
@@ -204,7 +204,7 @@ class CfgMagazines {
     };
 
     class CLASS(eru_Off): CLASS(FakeMagazine) {
-        ace_disableRepacking = 1;
+        CLASSACE(disableRepacking) = 1;
         count = 100;
         descriptionShort = CSTRING(ERU_Description);
         displayName = CSTRING(ERUOff_DisplayName);
@@ -214,7 +214,7 @@ class CfgMagazines {
     };
 
     class CLASS(lantern_On): CLASS(FakeMagazine) {
-        ace_disableRepacking = 1;
+        CLASSACE(disableRepacking) = 1;
         count = 100;
         descriptionShort = CSTRING(LanternOn_Description);
         displayName = CSTRING(LanternOn_DisplayName);
@@ -225,7 +225,7 @@ class CfgMagazines {
     };
 
     class CLASS(lantern_Off): CLASS(FakeMagazine) {
-        ace_disableRepacking = 1;
+        CLASSACE(disableRepacking) = 1;
         count = 100;
         descriptionShort = CSTRING(LanternOff_Description);
         displayName = CSTRING(LanternOff_DisplayName);
@@ -236,7 +236,7 @@ class CfgMagazines {
     };
 
     class CLASS(geiger_On): CLASS(FakeMagazine) {
-        ace_disableRepacking = 1;
+        CLASSACE(disableRepacking) = 1;
         count = 100;
         descriptionShort = CSTRING(Geiger_Description);
         displayName = CSTRING(GeigerOn_DisplayName);
@@ -247,7 +247,7 @@ class CfgMagazines {
     };
 
     class CLASS(geiger_Off): CLASS(FakeMagazine) {
-        ace_disableRepacking = 1;
+        CLASSACE(disableRepacking) = 1;
         scope = 2;
         descriptionShort = CSTRING(Geiger_Description);
         displayName = CSTRING(GeigerOff_DisplayName);
@@ -258,7 +258,7 @@ class CfgMagazines {
     };
 
     class CLASS(autoBattery): CLASS(FakeMagazine) {
-        ace_disableRepacking = 1;
+        CLASSACE(disableRepacking) = 1;
         count = 100;
         descriptionShort = CSTRING(AutoBattery_Description);
         displayName = CSTRING(AutoBattery_DisplayName);
@@ -269,7 +269,7 @@ class CfgMagazines {
     };
 
     class CLASS(autoBattery_Heavy): CLASS(FakeMagazine) {
-        ace_disableRepacking = 1;
+        CLASSACE(disableRepacking) = 1;
         count = 100;
         descriptionShort = CSTRING(AutoBatteryHeavy_Description);
         displayName = CSTRING(AutoBatteryHeavy_DisplayName);
