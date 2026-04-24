@@ -35,8 +35,6 @@ if (isServer) then {
 };
 
 if (hasInterface) then {
-    call FUNC(managePower);
-
     player addEventHandler ["Put", {
         params ["_unit", "_container", "_item"];
         if (_item isEqualTo QCLASS(lantern_On) && {local _unit}) then {
@@ -61,4 +59,23 @@ if (hasInterface) then {
             };
         };
     }];
+
+    // Safety fallback for auto-removal of lanterns if still active (on load / reload)
+    [{!isNull player && !isNull findDisplay 46}, {
+        if ([[QCLASS(lantern_On)]] call EFUNC(common,hasItem)) then {
+            if (!isNil {player getVariable [QGVAR(state), nil]}) then {
+                private _lantern = player getVariable [QGVAR(state), nil];
+
+                [_lantern] remoteExec ["deleteVehicle", [0, -2] select isDedicated, _lantern];
+
+                [player, [QCLASS(lantern_On), QCLASS(lantern_Off)], false] call EFUNC(common,switchPowerState);
+
+                player setVariable [QGVAR(state), nil, true];
+            } else {
+                // Fallback for reloader issues
+                [player, [QCLASS(lantern_On), QCLASS(lantern_Off)], false] call EFUNC(common,switchPowerState);
+            };
+        };
+    }, []] call CBA_fnc_waitUntilAndExecute;
 };
+
