@@ -48,6 +48,8 @@ GVAR(clickHandle) = ["MouseButtonDown", {
     };
 
     if (_button isEqualTo 0) then {
+        ["", "", ""] call ace_interaction_fnc_showMouseHint;
+
         [format ["Placing... %1", _displayName],
         5,
         {true},
@@ -79,6 +81,9 @@ GVAR(clickHandle) = ["MouseButtonDown", {
     };
 
     if (_button isEqualTo 1) then {
+
+        ["", "", ""] call ace_interaction_fnc_showMouseHint;
+
         private _className = player getVariable [QGVAR(selectedFurniture), ""];
         //private _displayName = getText (configFile >> "CfgVehicles" >> _className >> "displayName");
         [_className] call EFUNC(common,getObjectData) params ["_displayName"];

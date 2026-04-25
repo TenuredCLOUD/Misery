@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 // Exit system if ACE cargo is enabled
-if (!isNil "ace_cargo_enable" && {ace_cargo_enable}) exitWith {};
+//if (!isNil "ace_cargo_enable" && {ace_cargo_enable}) exitWith {};
 
 if !(GVAR(enabled)) exitWith {};
 

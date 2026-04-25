@@ -36,6 +36,10 @@ private _serverObject = createVehicle [_className, [0,0,0], [], 0, "CAN_COLLIDE"
 _serverObject setPosASL _posASL;
 _serverObject setDir _rotation;
 
+// Grab mass of object and push it to placed object for ACE cargo actions (make the object load-able automatically)
+private _itemMass = [_className] call EFUNC(common,getObjectMass);
+[_serverObject, (_itemMass) min 1] call ace_cargo_fnc_setSize;
+
 // Track new server object, and owner (must be passed to GRAD persistence if you want to track it permanently)
 private _objectTag = format ["%1_%2", _className, round(diag_tickTime * random 5)];
 
@@ -77,9 +81,4 @@ GVAR(objectPlacementDone) = true;
 // Add hold action to object for retrieval
 if !(_className isKindOf "StaticWeapon") then {
     [_className, _displayName, _serverObject] call FUNC(addPickupAction);
-};
-
-// Add hold action to object for vehicle loading
-if !(_className isKindOf "StaticWeapon") then {
-    [_className, _displayName, _serverObject] call FUNC(addLoadAction);
 };

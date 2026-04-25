@@ -1,4 +1,3 @@
-PREP(addLoadAction);
 PREP(addPickupAction);
 PREP(addToInventory);
 PREP(addToVehicleInventory);

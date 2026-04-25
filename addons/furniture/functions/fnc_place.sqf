@@ -62,4 +62,4 @@ call EFUNC(holster,action);
 [] call FUNC(watchState);
 player forceWalk true;
 
-["Left mouse to place object, Right mouse to cancel, Scroll to rotate", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
+["Place", "Cancel", "Rotate"] call ace_interaction_fnc_showMouseHint;

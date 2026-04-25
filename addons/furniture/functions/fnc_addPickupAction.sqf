@@ -18,20 +18,17 @@
 
 params ["_className", "_displayName", "_serverObject"];
 
-[
-    _serverObject,
+private _pickupAction = [
+    QGVAR(pickup_menu),
     format ["Pick up %1", _displayName],
     QUOTE(a3\missions_f_oldman\data\img\holdactions\holdaction_box_ca.paa),
-    QUOTE(a3\missions_f_oldman\data\img\holdactions\holdaction_box_ca.paa),
-    QUOTE(_this distance _target < 2),
-    QUOTE(_caller distance _target < 2),
-    {},
-    {},
     {
-        params ["_target", "_caller", "_actionId", "_arguments"];
-        _arguments params ["_className"];
+        params ["_target", "_player", "_args"];
+        _args params ["_className"];
 
-        if (_target getVariable [QGVAR(placmentOwner),""] isNotEqualTo (getPlayerUID _caller)) exitWith {
+        private _owner = _target getVariable [QGVAR(placementOwner), ""];
+
+        if (_owner isNotEqualTo "" && {_owner isNotEqualTo (getPlayerUID player)}) exitWith {
             ["You do not own this...", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
         };
 
@@ -40,7 +37,7 @@ params ["_className", "_displayName", "_serverObject"];
         };
 
         // Remove owner
-        _target setVariable [QGVAR(placmentOwner), nil, true];
+        _target setVariable [QGVAR(placementOwner), nil, true];
 
         // Find and remove tracked object
         private _objectTag = vehicleVarName _target;
@@ -54,16 +51,16 @@ params ["_className", "_displayName", "_serverObject"];
         };
 
         [_className] call FUNC(addToInventory);
-        private _placed = _caller getVariable [QGVAR(placedFurniture), []];
+        private _placed = player getVariable [QGVAR(placedFurniture), []];
         _placed deleteAt (_placed find _target);
-        _caller setVariable [QGVAR(placedFurniture), _placed];
-        [_target, _actionId] call BIS_fnc_holdActionRemove;
+        player setVariable [QGVAR(placedFurniture), _placed];
         deleteVehicle _target;
     },
+    {true},
     {},
     [_className],
-    2,
-    nil,
-    false,
-    false
-] call BIS_fnc_holdActionAdd;
+    [0, 0, 0],
+    3
+] call ace_interact_menu_fnc_createAction;
+
+[_serverObject, 0, ["ACE_MainActions"], _pickupAction] call ace_interact_menu_fnc_addActionToObject;
