@@ -35,6 +35,6 @@
             playSound selectRandom [MACRO_PSYCHOSIS_BREATH];
         };
 
-        [player, QUOTE(psychosisEffect), 2, 2, 15, 0, 15, 1] call ace_medical_status_fnc_addMedicationAdjustment;
+        [player, QUOTE(psychosisEffect), 2, 2, 15, 0, 15, 1] call ACEFUNC(medical_status,addMedicationAdjustment);
     }, 5, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;

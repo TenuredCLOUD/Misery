@@ -18,6 +18,12 @@ if ([[QCLASS(lantern_Off)]] call EFUNC(common,hasItem)) then {
     if (isNil {player getVariable [QGVAR(state), nil]}) then {
         [player, [QCLASS(lantern_On), QCLASS(lantern_Off)], true] call EFUNC(common,switchPowerState);
 
+        if ([40] call EFUNC(common,rollChance)) then {
+            [QCLASS(lantern_On), QCLASS(lantern_NoBattery)] call EFUNC(common,itemDecrement);
+        };
+        // Run logic check regardless of deduction
+        call FUNC(logicCheck);
+
         private _lantern = "Land_Camping_Light_F" createVehicle position player;
 
         if (!isNil "grad_persistence_blacklist") then {

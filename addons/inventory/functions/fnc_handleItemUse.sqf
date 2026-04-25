@@ -42,6 +42,10 @@ if (_requiresCanOpener && {((items player + magazines player) findIf {_x in [MAC
     [QEGVAR(common,inventoryTile), ["You need a can opener or tools to use this...", 10]] call CBA_fnc_localEvent;
 };
 
+if (gestureState player in [MACRO_ANIMATION_GESTURES]) exitWith {
+    [QEGVAR(common,inventoryTile), ["You are already consuming something else...", 10]] call CBA_fnc_localEvent;
+};
+
 if (_removeOnUse) then {
     if ([_itemName, "CfgWeapons"] call EFUNC(common,configCheck)) then {
         [player, _itemName] call CBA_fnc_removeItem;

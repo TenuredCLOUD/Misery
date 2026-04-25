@@ -14,8 +14,8 @@
  *
 */
 
-if ("ace_medical" call EFUNC(common,isModLoaded)) then {
-    [player, QCLASS(antiparasitic), 10, 60, -15, 0, -15, 1] call ace_medical_status_fnc_addMedicationAdjustment;
+if (QCLASSACE(medical) call EFUNC(common,isModLoaded)) then {
+    [player, QCLASS(antiparasitic), 10, 60, -15, 0, -15, 1] call ACEFUNC(medical_status,addMedicationAdjustment);
 };
 
 [-1, "parasites"] call EFUNC(common,addStatusModifier);
