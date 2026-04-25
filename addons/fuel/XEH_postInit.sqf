@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-if ("ace_refuel" call EFUNC(common,isModLoaded)) exitWith {};
+if (QCLASSACE(refuel) call EFUNC(common,isModLoaded)) exitWith {};
 
 if (isServer) then {
     [

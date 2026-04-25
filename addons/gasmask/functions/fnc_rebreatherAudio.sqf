@@ -22,7 +22,7 @@
 
     call EFUNC(protection,totalProtection) params ["", "_scba"];
 
-    if (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled}) exitWith {}; // Kill audible breath if ACE advanced fatigue is enabled
+    if (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)}) exitWith {}; // Kill audible breath if ACE advanced fatigue is enabled
 
     if (_scba < 1) exitWith {};
 

@@ -16,16 +16,16 @@
 
 [3, 2] call EFUNC(common,chromaticEffect);
 
-if ("ace_medical" call EFUNC(common,isModLoaded)) then {
-    [player, QCLASS(randomMedication), 0, 300, -40, 0, -40] call ace_medical_status_fnc_addMedicationAdjustment;
+if (QCLASSACE(medical) call EFUNC(common,isModLoaded)) then {
+    [player, QCLASS(randomMedication), 0, 300, -40, 0, -40] call ACEFUNC(medical_status,addMedicationAdjustment);
 };
 
 [-0.5, "thirst"] call EFUNC(common,addStatusModifier);
 [-0.5, "hunger"] call EFUNC(common,addStatusModifier);
 [0.1, "toxicity"] call EFUNC(common,addStatusModifier);
 
-if ("ace_medical" call EFUNC(common,isModLoaded)) then {
-    [player, true, 10, true] call ace_medical_fnc_setUnconscious;
+if (QCLASSACE(medical) call EFUNC(common,isModLoaded)) then {
+    [player, true, 10, true] call ACEFUNC(medical,setUnconscious);
 } else {
     [player, 5] call EFUNC(survival,setUnconscious);
 };

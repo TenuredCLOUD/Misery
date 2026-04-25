@@ -113,7 +113,7 @@ disableSerialization;
 
     _hungerBar progressSetPosition _hunger;
     _thirstBar progressSetPosition _thirst;
-    private _fatigueValue = [getFatigue player, player getVariable ["ace_advanced_fatigue_aimFatigue", 0]] select (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled});
+    private _fatigueValue = [getFatigue player, player getVariable [QACEGVAR(advanced_fatigue,aimFatigue), 0]] select (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)});
     _fatigueBar progressSetPosition _fatigueValue;
 
     if (_wetness <= 0) then {

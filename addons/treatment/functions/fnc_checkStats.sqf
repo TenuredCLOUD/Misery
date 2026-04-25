@@ -33,8 +33,8 @@ _needsTreatment = true;
 
 switch (_treatmeant) do {
     case 1: {
-        if ("ace_medical" call EFUNC(common,isModLoaded)) then {
-            if !(player call ace_medical_fnc_isInjured) then {
+        if (QCLASSACE(medical) call EFUNC(common,isModLoaded)) then {
+            if !(player call ACEFUNC(medical,isInjured)) then {
                 _needsTreatment = false;
             };
         } else {
