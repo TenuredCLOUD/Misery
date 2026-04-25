@@ -16,6 +16,12 @@
 
 params ["_className"];
 
+if ([_className] call FUNC(isStructure)) exitWith {
+    [_className] call EFUNC(common,getObjectData) params ["_itemName"];
+    private _cannotMoveBuilding = format ["%1 is a structure... You cannot store this in your inventory...", _itemName];
+    [_cannotMoveBuilding, 1, [1, 1, 1, 1]] call CBA_fnc_notify;
+};
+
 if (_className isKindOf "StaticWeapon") exitWith {
     [_className] call FUNC(forcedPlacement);
 };

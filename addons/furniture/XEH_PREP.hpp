@@ -1,11 +1,13 @@
-PREP(addLoadAction);
 PREP(addPickupAction);
 PREP(addToInventory);
 PREP(addToVehicleInventory);
 PREP(condition);
 PREP(createObject);
+PREP(dropFromMenu);
+PREP(dropFurniture);
 PREP(encumbered);
 PREP(forcedPlacement);
+PREP(IsStructure);
 PREP(openInventory);
 PREP(openVehicleInventory);
 PREP(place);

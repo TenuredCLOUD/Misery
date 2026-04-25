@@ -35,6 +35,7 @@ if (_players isEqualTo []) exitWith {
 
         if (_buildingType in GVAR(buildingBlacklist)) exitWith {continue};
         if (_building in GVAR(building_used)) exitWith {continue};
+        if (vehicleVarName _building in EGVAR(furniture,registeredPlacement)) exitWith {continue};
         if (GVAR(areas) isNotEqualTo [] && GVAR(areas) findIf { _building inArea _x } isNotEqualTo -1) exitWith {continue};
 
         private _buildingPositions = _building buildingPos -1;

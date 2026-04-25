@@ -48,6 +48,8 @@ GVAR(clickHandle) = ["MouseButtonDown", {
     };
 
     if (_button isEqualTo 0) then {
+        ["", "", ""] call ace_interaction_fnc_showMouseHint;
+
         [format ["Placing... %1", _displayName],
         5,
         {true},
@@ -79,17 +81,41 @@ GVAR(clickHandle) = ["MouseButtonDown", {
     };
 
     if (_button isEqualTo 1) then {
+
+        ["", "", ""] call ace_interaction_fnc_showMouseHint;
+
         private _className = player getVariable [QGVAR(selectedFurniture), ""];
         //private _displayName = getText (configFile >> "CfgVehicles" >> _className >> "displayName");
         [_className] call EFUNC(common,getObjectData) params ["_displayName"];
         private _posASL = getPosASL _object;
         private _rotation = _object getVariable [QGVAR(rotation), 0];
 
+        // Remove dummy object from tracking prior to deletion
+        private _dummyObjectTag = vehicleVarName _object;
+        if (!isNil "_dummyObjectTag") then {
+            private _index = GVAR(registeredPlacement) find _dummyObjectTag;
+
+                if (_index isNotEqualTo -1) then {
+                GVAR(registeredPlacement) deleteAt _index;
+                publicVariableServer QGVAR(registeredPlacement);
+            };
+        };
+
         if (_isForcedPlacement) then {
             private _tooHeavyTip = format ["%1 is too heavy and has been dropped to the ground...", _displayName];
             [_tooHeavyTip, 1, [1, 1, 1, 1]] call CBA_fnc_notify;
             [_object, _className, _posASL, _rotation, _displayName] call FUNC(createObject);
         } else {
+            // Remove dummy object from tracking prior to deletion
+            private _dummyObjectTag = vehicleVarName _object;
+            if (!isNil "_dummyObjectTag") then {
+                private _index = GVAR(registeredPlacement) find _dummyObjectTag;
+
+                    if (_index isNotEqualTo -1) then {
+                    GVAR(registeredPlacement) deleteAt _index;
+                    publicVariableServer QGVAR(registeredPlacement);
+                };
+            };
             deleteVehicle _object;
             player setVariable [QGVAR(placingObject), nil];
             player setVariable [QGVAR(isForcedplacement), nil];
