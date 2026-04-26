@@ -32,7 +32,7 @@
     private _found = false;
 
     {
-        if ((_x select 0) isEqualTo _nearestVehicle) then {
+        if ((_x select 0) isEqualTo typeOf _nearestVehicle) then {
             private _array = _x;
             _found = true;
             _repairPrice = _x select 3;

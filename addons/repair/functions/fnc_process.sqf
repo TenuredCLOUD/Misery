@@ -29,7 +29,7 @@ if (_nearestVehicle isEqualTo []) exitWith {};
 [_nearestVehicle] call EFUNC(common,getObjectData) params ["_displayName"];
 
 {
-    if ((_x select 0) isEqualTo _nearestVehicle) then {
+    if ((_x select 0) isEqualTo typeOf _nearestVehicle) then {
         _found = true;
         _repairPrice = _x select 3;
     };
@@ -54,21 +54,21 @@ if (_funds < _repairPrice) exitWith {
     _dialog displayRemoveEventHandler ["KeyDown", _repairsInterrupt];
 };
 
-if (damage _nearestVehicle <= 0) exitWith {
-    private _displayFull = format ["%1 is already fully repaired...", _displayName];
-    ctrlSetText [1001, _displayFull];
+private _hitData = getAllHitPointsDamage _nearestVehicle;
+if (_hitData isEqualTo [] || {(_hitData select 2) findIf {_x > 0} isEqualTo -1}) exitWith {
+    ctrlSetText [1001, format ["%1 is already fully repaired...", _displayName]];
     [982386, [1600, 1601], true] call EFUNC(common,displayShowControls);
     player setVariable [QCLASS(processRepairs), nil];
     _dialog displayRemoveEventHandler ["KeyDown", _repairsInterrupt];
 };
 
 private _totalSteps = 100;
-private _repairStep = 1 / _totalSteps;
-private _fundsToDeduct = _repairPrice;
+private _repairStep = 0.05;
+private _fundsPerTick = _repairPrice / _totalSteps;
 
 [{
     params ["_args", "_handle"];
-    _args params ["_nearestVehicle", "_dialog", "_displayName", "_repairsInterrupt", "_repairStep", "_fundsToDeduct"];
+    _args params ["_nearestVehicle", "_dialog", "_displayName", "_repairsInterrupt", "_repairStep", "_fundsPerTick"];
 
     call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
@@ -78,7 +78,7 @@ private _fundsToDeduct = _repairPrice;
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
-    if (_funds < _fundsToDeduct) exitWith {
+    if (_funds < _fundsPerTick) exitWith {
         player setVariable [QCLASS(processRepairs), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _repairsInterrupt];
         ctrlSetText [1001, "You cannot afford this!"];
@@ -86,32 +86,38 @@ private _fundsToDeduct = _repairPrice;
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
-    private _currentDamage = damage _nearestVehicle;
-    private _repairAmount = _repairStep min _currentDamage;
+    private _hitPoints = getAllHitPointsDamage _nearestVehicle;
+    private _names = _hitPoints select 0;
+    private _damages = _hitPoints select 2;
 
-    _nearestVehicle setDamage (_currentDamage - _repairAmount);
+    private _targetIndex = _damages findIf { _x > 0 };
+
+    if (_targetIndex isEqualTo -1) exitWith {
+        player setVariable [QCLASS(processRepairs), nil];
+        _dialog displayRemoveEventHandler ["KeyDown", _repairsInterrupt];
+        ctrlSetText [1001, format ["%1 has been fully repaired...", _displayName]];
+        [982386, [1600, 1601], true] call EFUNC(common,displayShowControls);
+        _handle call CBA_fnc_removePerFrameHandler;
+    };
+
+    private _partName = _names select _targetIndex;
+    private _partDamage = _damages select _targetIndex;
+    private _newDamage = (_partDamage - _repairStep) max 0;
+
+    [_nearestVehicle, [_partName, _newDamage]] remoteExecCall ["setHitPointDamage", _nearestVehicle];
+
+    [-_fundsPerTick] call EFUNC(currency,modifyMoney);
 
     private _displayedText = format [
-        "Repairing...%1%2%1Repair progress: %3%4 Funds:%1%5%1%6",
+        "Repairing %2...%1Fixing: %3%1Funds: %4 %5",
         endl,
         _displayName,
-        (1 - (_currentDamage - _repairAmount)) * 100 toFixed 2,
-        "%",
+        _partName,
         EGVAR(currency,symbol),
         [_funds, 1, 2, true] call CBA_fnc_formatNumber
     ];
     ctrlSetText [1001, _displayedText];
 
-    [-_fundsToDeduct] call EFUNC(currency,modifyMoney);
-
-    if (damage _nearestVehicle <= 0) exitWith {
-        player setVariable [QCLASS(processRepairs), nil];
-        _dialog displayRemoveEventHandler ["KeyDown", _repairsInterrupt];
-        private _displayFull = format ["%1 has been fully repaired...", _displayName];
-        ctrlSetText [1001, _displayFull];
-        [982386, [1600, 1601], true] call EFUNC(common,displayShowControls);
-        _handle call CBA_fnc_removePerFrameHandler;
-    };
-}, 0.5, [
-    _nearestVehicle, _dialog, _displayName, _repairsInterrupt, _repairStep, _fundsToDeduct
+}, 0.2, [
+_nearestVehicle, _dialog, _displayName, _repairsInterrupt, _repairStep, _fundsPerTick
 ]] call CBA_fnc_addPerFrameHandler;
