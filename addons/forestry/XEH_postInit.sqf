@@ -14,9 +14,9 @@ if (GVAR(woodCollection)) then {
         {
             insideBuilding player isEqualTo 0 && ([player] call EFUNC(common,nearTree)) select 0
         }
-    ] call ace_interact_menu_fnc_createAction;
+    ] call ACEFUNC(interact_menu,createAction);
 
-    [player, 1, ["ACE_SelfActions"], _forestryCollectWood] call ace_interact_menu_fnc_addActionToObject;
+    [player, 1, [QUOTE(ACE_SelfActions)], _forestryCollectWood] call ACEFUNC(interact_menu,addActionToObject);
 
     private _forestrySplitLog = [
         QGVAR(forestrySplitLog_menu),
@@ -39,9 +39,9 @@ if (GVAR(woodCollection)) then {
         {
             [[QCLASS(woodenlog)]] call EFUNC(common,hasItem)
         }
-    ] call ace_interact_menu_fnc_createAction;
+    ] call ACEFUNC(interact_menu,createAction);
 
-    [player, 1, ["ACE_SelfActions"], _forestrySplitLog] call ace_interact_menu_fnc_addActionToObject;
+    [player, 1, [QUOTE(ACE_SelfActions)], _forestrySplitLog] call ACEFUNC(interact_menu,addActionToObject);
 };
 
 if (GVAR(foraging)) then {
@@ -57,9 +57,9 @@ if (GVAR(foraging)) then {
         {
             call FUNC(canForage)
         }
-    ] call ace_interact_menu_fnc_createAction;
+    ] call ACEFUNC(interact_menu,createAction);
 
-    [player, 1, ["ACE_SelfActions"], _foragingMenu] call ace_interact_menu_fnc_addActionToObject;
+    [player, 1, [QUOTE(ACE_SelfActions)], _foragingMenu] call ACEFUNC(interact_menu,addActionToObject);
 
     private _foragingWormsMenu = [
         QGVAR(foragingWorms_menu),
@@ -69,9 +69,9 @@ if (GVAR(foraging)) then {
             [] call FUNC(digForWorms)
         },
         {true}
-    ] call ace_interact_menu_fnc_createAction;
+    ] call ACEFUNC(interact_menu,createAction);
 
-    [player, 1, ["ACE_SelfActions", QGVAR(foraging_menu)], _foragingWormsMenu] call ace_interact_menu_fnc_addActionToObject;
+    [player, 1, [QUOTE(ACE_SelfActions), QGVAR(foraging_menu)], _foragingWormsMenu] call ACEFUNC(interact_menu,addActionToObject);
 
     private _foragingTinderMenu = [
         QGVAR(foragingTinder_menu),
@@ -81,7 +81,7 @@ if (GVAR(foraging)) then {
             [] call FUNC(searchForTinder)
         },
         {true}
-    ] call ace_interact_menu_fnc_createAction;
+    ] call ACEFUNC(interact_menu,createAction);
 
-    [player, 1, ["ACE_SelfActions", QGVAR(foraging_menu)], _foragingTinderMenu] call ace_interact_menu_fnc_addActionToObject;
+    [player, 1, [QUOTE(ACE_SelfActions), QGVAR(foraging_menu)], _foragingTinderMenu] call ACEFUNC(interact_menu,addActionToObject);
 };

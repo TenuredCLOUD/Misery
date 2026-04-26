@@ -18,9 +18,9 @@
             {
                 [[QCLASS(leadContainer_Open)]] call EFUNC(common,hasItem) && [[MACRO_ARTIFACTS]] call EFUNC(common,hasItem)
             }
-        ] call ace_interact_menu_fnc_createAction;
+        ] call ACEFUNC(interact_menu,createAction);
 
-        [player, 1, ["ACE_SelfActions"], _leadContainer] call ace_interact_menu_fnc_addActionToObject;
+        [player, 1, [QUOTE(ACE_SelfActions)], _leadContainer] call ACEFUNC(interact_menu,addActionToObject);
 
 
         // Reactivate Geiger if picking up active one:

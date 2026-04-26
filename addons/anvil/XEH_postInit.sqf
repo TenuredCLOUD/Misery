@@ -22,9 +22,9 @@ if (isClass (missionConfigFile >> "CfgMisery_AnvilData")) then {
         ["_target", "_player"],
         [0, 0, 0],
         3
-    ] call ace_interact_menu_fnc_createAction;
+    ] call ACEFUNC(interact_menu,createAction);
 
-    [QCLASS(anvil), 0, ["ACE_MainActions"], _anvilAction] call ace_interact_menu_fnc_addActionToClass;
+    [QCLASS(anvil), 0, [QUOTE(ACE_MainActions)], _anvilAction] call ACEFUNC(interact_menu,addActionToClass);
 } else {
     [QUOTE(COMPONENT_BEAUTIFIED), "CfgMisery_AnvilData class not found in description.ext, skipping data parser..."] call EFUNC(common,debugMessage);
 };

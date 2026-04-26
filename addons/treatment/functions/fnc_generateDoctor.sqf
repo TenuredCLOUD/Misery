@@ -35,6 +35,6 @@ private _traderAction = [
     ["_target", "_player"],
     [0, 0, 0],
     3
-] call ace_interact_menu_fnc_createAction;
+] call ACEFUNC(interact_menu,createAction);
 
-[_trader, 0, ["ACE_MainActions"], _traderAction] call ace_interact_menu_fnc_addActionToObject;
+[_trader, 0, [QUOTE(ACE_MainActions)], _traderAction] call ACEFUNC(interact_menu,addActionToObject);

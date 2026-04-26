@@ -29,9 +29,9 @@ if (isClass (missionConfigFile >> "CfgMisery_SearchableObjects")) then {
         {
             [] call FUNC(searchCondition) select 0
         }
-    ] call ace_interact_menu_fnc_createAction;
+    ] call ACEFUNC(interact_menu,createAction);
 
-    [player, 1, ["ACE_SelfActions"], _searchAction] call ace_interact_menu_fnc_addActionToObject;
+    [player, 1, [QUOTE(ACE_SelfActions)], _searchAction] call ACEFUNC(interact_menu,addActionToObject);
 
 } else {
     [QUOTE(COMPONENT_BEAUTIFIED), "CfgMisery_SearchableObjects class not found in description.ext, skipping data parser..."] call EFUNC(common,debugMessage);

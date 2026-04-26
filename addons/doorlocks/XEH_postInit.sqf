@@ -12,9 +12,9 @@ if (hasInterface) then {
         {
             [[QCLASS(lockKit)]] call EFUNC(common,hasItem) && {call FUNC(countDoors) params ["_doorCount", "_building", "_noLock"]; !_noLock && _doorCount > 0 && !isNull _building && isNil {_building getVariable QGVAR(doorPin)}}
         }
-    ] call ace_interact_menu_fnc_createAction;
+    ] call ACEFUNC(interact_menu,createAction);
 
-    [player, 1, ["ACE_SelfActions"], _installLock] call ace_interact_menu_fnc_addActionToObject;
+    [player, 1, [QUOTE(ACE_SelfActions)], _installLock] call ACEFUNC(interact_menu,addActionToObject);
 
     private _unlockDoors = [
         "unlockDoors_ace",
@@ -27,9 +27,9 @@ if (hasInterface) then {
         {
             call FUNC(countDoors) params ["_doorCount", "_building"]; _doorCount > 0 && !isNull _building && (_building getVariable [QGVAR(doorsLocked), false])
         }
-    ] call ace_interact_menu_fnc_createAction;
+    ] call ACEFUNC(interact_menu,createAction);
 
-    [player, 1, ["ACE_SelfActions"], _unlockDoors] call ace_interact_menu_fnc_addActionToObject;
+    [player, 1, [QUOTE(ACE_SelfActions)], _unlockDoors] call ACEFUNC(interact_menu,addActionToObject);
 
     private _lockDoors = [
         "lockDoors_ace",
@@ -42,9 +42,9 @@ if (hasInterface) then {
         {
             call FUNC(countDoors) params ["_doorCount", "_building"]; _doorCount > 0 && !isNull _building && !(_building getVariable [QGVAR(doorsLocked), false]) && {!isNil {_building getVariable QGVAR(doorPin)}}
         }
-    ] call ace_interact_menu_fnc_createAction;
+    ] call ACEFUNC(interact_menu,createAction);
 
-    [player, 1, ["ACE_SelfActions"], _lockDoors] call ace_interact_menu_fnc_addActionToObject;
+    [player, 1, [QUOTE(ACE_SelfActions)], _lockDoors] call ACEFUNC(interact_menu,addActionToObject);
 };
 
 if (isServer) then {

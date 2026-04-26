@@ -23,9 +23,9 @@ if (isClass (missionConfigFile >> "CfgMisery_ForgeData")) then {
         ["_target", "_player"],
         [0, 0, 0],
         3
-    ] call ace_interact_menu_fnc_createAction;
+    ] call ACEFUNC(interact_menu,createAction);
 
-    [QCLASS(forge), 0, ["ACE_MainActions"], _forgeAction] call ace_interact_menu_fnc_addActionToClass;
+    [QCLASS(forge), 0, [QUOTE(ACE_MainActions)], _forgeAction] call ACEFUNC(interact_menu,addActionToClass);
 
 } else {
     [QUOTE(COMPONENT_BEAUTIFIED), "CfgMisery_ForgeData class not found in description.ext, skipping data parser..."] call EFUNC(common,debugMessage);

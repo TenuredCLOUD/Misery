@@ -20,10 +20,10 @@ if (GVAR(enabled)) then {
         ["_target", "_player"],
         [0, 0, 0],
         3
-    ] call ace_interact_menu_fnc_createAction;
+    ] call ACEFUNC(interact_menu,createAction);
 
     {
-        [_x, 0, ["ACE_MainActions"], _fieldDressAction] call ace_interact_menu_fnc_addActionToClass;
+        [_x, 0, [QUOTE(ACE_MainActions)], _fieldDressAction] call ACEFUNC(interact_menu,addActionToClass);
     } forEach [MACRO_FIELDDRESS_ANIMALTYPES];
 };
 
@@ -34,7 +34,7 @@ if (GVAR(dispatchEnabled)) then {
         QPATHTOEF(icons,data\paw_print_ca.paa),
         {
             params ["_target", "_player"];
-            playSound selectRandom ["ACE_fracture_1", "ACE_fracture_2", "ACE_fracture_3", "ACE_fracture_4"];
+            playSound selectRandom [QCLASSACE(fracture_1), QCLASSACE(fracture_2), QCLASSACE(fracture_3), QCLASSACE(fracture_4)];
             _target setDamage 1;
         },
         {
@@ -45,9 +45,9 @@ if (GVAR(dispatchEnabled)) then {
         ["_target", "_player"],
         [0, 0, 0],
         3
-    ] call ace_interact_menu_fnc_createAction;
+    ] call ACEFUNC(interact_menu,createAction);
 
     {
-        [_x, 0, ["ACE_MainActions"], _dispatchAction] call ace_interact_menu_fnc_addActionToClass;
+        [_x, 0, [QUOTE(ACE_MainActions)], _dispatchAction] call ACEFUNC(interact_menu,addActionToClass);
     } forEach [MACRO_FIELDDRESS_SMALLANIMALTYPES];
 };

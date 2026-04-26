@@ -38,9 +38,9 @@ private _gameMasterAction = [
     ["_target", "_player"],
     [0, 0, 0],
     3
-] call ace_interact_menu_fnc_createAction;
+] call ACEFUNC(interact_menu,createAction);
 
-[_object, 0, ["ACE_MainActions"], _gameMasterAction] call ace_interact_menu_fnc_addActionToObject;
+[_object, 0, [QUOTE(ACE_MainActions)], _gameMasterAction] call ACEFUNC(interact_menu,addActionToObject);
 
 GVAR(activeDealers) pushBackUnique _object;
 publicVariable QGVAR(activeDealers);

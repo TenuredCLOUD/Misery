@@ -21,7 +21,7 @@ private _dialog = findDisplay 982380;
 
 [982380, [1600, 1601, 1602], false] call EFUNC(common,displayShowControls);
 
-player switchMove "ace_field_rations_drinkFromSourceLow";
+player switchMove QACEGVAR(field_rations,drinkFromSourceLow);
 
 playSound3D [QPATHTOEF(audio,sounds\items\drink.ogg), player, false, getPosASL player, 4, 1, 10];
 

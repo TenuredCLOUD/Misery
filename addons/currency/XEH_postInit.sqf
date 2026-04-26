@@ -17,35 +17,6 @@ if (isServer) then {
     }];
 };
 
-// [
-//     "searchForMoney_menu",
-//     format ["%1 Search for money", GVAR(symbol)],
-//     {([player, ["CAManBase"], 2] call EFUNC(common,nearCorpse)) select 0},
-//     {
-//         [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-//         player playAction "Gear";
-//         createDialog QCLASS(moneyTake_ui);
-//     },
-//     "",
-//     QPATHTOEF(icons,data\hand_helping_ca.paa),
-//     ""
-// ] call EFUNC(actions,addAction);
-
-// [
-//     "giftMoney_menu",
-//     format ["%1 Gift money", GVAR(symbol)],
-//     {([player, 2] call EFUNC(common,nearPlayer)) select 0},
-//     {
-//         [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-//         player playAction "Gear";
-//         createDialog QCLASS(moneyGive_ui);
-//     },
-//     "",
-//     QPATHTOEF(icons,data\hand_helping_ca.paa),
-//     ""
-// ] call EFUNC(actions,addAction);
-
-
 private _searchForMoneyAction = [
     QGVAR(searchForMoney_menu),
     format ["%1 Search for money", GVAR(symbol)],
@@ -62,7 +33,7 @@ private _searchForMoneyAction = [
     ["_target", "_player"],
     [0, 0, 0],
     3
-] call ace_interact_menu_fnc_createAction;
+] call ACEFUNC(interact_menu,createAction);
 
 private _giftMoneyAction = [
     QGVAR(giftMoney_menu),
@@ -80,7 +51,7 @@ private _giftMoneyAction = [
     ["_target", "_player"],
     [0, 0, 0],
     3
-] call ace_interact_menu_fnc_createAction;
+] call ACEFUNC(interact_menu,createAction);
 
-["CAManBase", 0, ["ACE_MainActions"], _searchForMoneyAction] call ace_interact_menu_fnc_addActionToObject;
-["CAManBase", 0, ["ACE_MainActions"], _giftMoneyAction] call ace_interact_menu_fnc_addActionToObject;
+["CAManBase", 0, [QUOTE(ACE_MainActions)], _searchForMoneyAction] call ACEFUNC(interact_menu,addActionToClass);
+["CAManBase", 0, [QUOTE(ACE_MainActions)], _giftMoneyAction] call ACEFUNC(interact_menu,addActionToClass);

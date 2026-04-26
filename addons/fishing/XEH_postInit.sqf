@@ -9,9 +9,9 @@ if (GVAR(enabled)) then {
         {
             call FUNC(canFish)
         }
-    ] call ace_interact_menu_fnc_createAction;
+    ] call ACEFUNC(interact_menu,createAction);
 
-    [player, 1, ["ACE_SelfActions"], _fishingMainMenu] call ace_interact_menu_fnc_addActionToObject;
+    [player, 1, [QUOTE(ACE_SelfActions)], _fishingMainMenu] call ACEFUNC(interact_menu,addActionToObject);
 
     private _fishingActionMenu = [
         QGVAR(fishingAction_menu),
@@ -21,9 +21,9 @@ if (GVAR(enabled)) then {
             [] call FUNC(action);
         },
         {true}
-    ] call ace_interact_menu_fnc_createAction;
+    ] call ACEFUNC(interact_menu,createAction);
 
-    [player, 1, ["ACE_SelfActions", QGVAR(fishing_menu)], _fishingActionMenu] call ace_interact_menu_fnc_addActionToObject;
+    [player, 1, [QUOTE(ACE_SelfActions), QGVAR(fishing_menu)], _fishingActionMenu] call ACEFUNC(interact_menu,addActionToObject);
 
     private _fishingRequirementsMenu = [
         QGVAR(fishingRequirements_menu),
@@ -33,7 +33,7 @@ if (GVAR(enabled)) then {
             [QEGVAR(common,tileText), localize ECSTRING(common,StartFishingRequirements_Listed)] call CBA_fnc_localEvent;
         },
         {true}
-    ] call ace_interact_menu_fnc_createAction;
+    ] call ACEFUNC(interact_menu,createAction);
 
-    [player, 1, ["ACE_SelfActions", QGVAR(fishing_menu)], _fishingRequirementsMenu] call ace_interact_menu_fnc_addActionToObject;
+    [player, 1, [QUOTE(ACE_SelfActions), QGVAR(fishing_menu)], _fishingRequirementsMenu] call ACEFUNC(interact_menu,addActionToObject);
 };

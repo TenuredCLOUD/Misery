@@ -17,10 +17,10 @@ if (isServer) then {
             ["_target", "_player"],
             [0, 0, 0],
             3
-        ] call ace_interact_menu_fnc_createAction;
+        ] call ACEFUNC(interact_menu,createAction);
 
         {
-            [_x, 0, ["ACE_MainActions"], _craftingAction] call ace_interact_menu_fnc_addActionToClass;
+            [_x, 0, [QUOTE(ACE_MainActions)], _craftingAction] call ACEFUNC(interact_menu,addActionToClass);
         } forEach [MACRO_CRAFTINGSTATIONS];
     } else {
         [QUOTE(COMPONENT_BEAUTIFIED), "CfgMisery_CraftingData class not found in description.ext, skipping data parser..."] call EFUNC(common,debugMessage);

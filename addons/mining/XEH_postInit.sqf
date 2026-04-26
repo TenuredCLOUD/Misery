@@ -22,8 +22,8 @@ if (_miningEnabled) then {
         {
             [player] call FUNC(condition) select 0
         }
-    ] call ace_interact_menu_fnc_createAction;
+    ] call ACEFUNC(interact_menu,createAction);
 
-    [player, 1, ["ACE_SelfActions"], _mineOreAction] call ace_interact_menu_fnc_addActionToObject;
+    [player, 1, [QUOTE(ACE_SelfActions)], _mineOreAction] call ACEFUNC(interact_menu,addActionToObject);
 };
 

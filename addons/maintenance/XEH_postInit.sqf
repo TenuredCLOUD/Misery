@@ -64,7 +64,7 @@ if (hasInterface && !GVAR(difficulty)) then {
             3
         ] call ACEFUNC(interact_menu,createAction);
 
-        [QCLASSACE(Track), 0, [QCLASSACE(MainActions)], _trackAction] call ACEFUNC(interact_menu,addActionToClass);
+        [QCLASSACE(Track), 0, [QUOTE(ACE_MainActions)], _trackAction] call ACEFUNC(interact_menu,addActionToClass);
 
         private _wheelAction = [
             QGVAR(aceSalvageTire),
@@ -104,6 +104,6 @@ if (hasInterface && !GVAR(difficulty)) then {
             3
         ] call ACEFUNC(interact_menu,createAction);
 
-        [QCLASSACE(Wheel), 0, [QCLASSACE(MainActions)], _wheelAction] call ACEFUNC(interact_menu,addActionToClass);
+        [QCLASSACE(Wheel), 0, [QUOTE(ACE_MainActions)], _wheelAction] call ACEFUNC(interact_menu,addActionToClass);
     };
 };

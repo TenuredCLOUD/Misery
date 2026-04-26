@@ -49,7 +49,7 @@ private _bankAction = [
     ["_target", "_player"],
     [0, 0, 0],
     3
-] call ace_interact_menu_fnc_createAction;
+] call ACEFUNC(interact_menu,createAction);
 
-[_object, 0, ["ACE_MainActions"], _bankAction] call ace_interact_menu_fnc_addActionToObject;
+[_object, 0, [QUOTE(ACE_MainActions)], _bankAction] call ACEFUNC(interact_menu,addActionToObject);
 

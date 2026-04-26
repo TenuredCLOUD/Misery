@@ -21,8 +21,8 @@ private _addBatterytoGeiger = [
     {
         [[QCLASS(lithiumBattery), QCLASS(geiger_NoBattery)]] call EFUNC(common,hasItem)
     }
-] call ace_interact_menu_fnc_createAction;
+] call ACEFUNC(interact_menu,createAction);
 
-[player, 1, ["ACE_SelfActions"], _addBatterytoGeiger] call ace_interact_menu_fnc_addActionToObject;
+[player, 1, [QUOTE(ACE_SelfActions)], _addBatterytoGeiger] call ACEFUNC(interact_menu,addActionToObject);
 
 

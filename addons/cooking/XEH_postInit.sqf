@@ -17,10 +17,10 @@ if (isServer) then {
             ["_target", "_player"],
             [0, 0, 0],
             3
-        ] call ace_interact_menu_fnc_createAction;
+        ] call ACEFUNC(interact_menu,createAction);
 
         {
-            [_x, 0, ["ACE_MainActions", QEGVAR(fire,fire_menu)], _cookingAction] call ace_interact_menu_fnc_addActionToClass;
+            [_x, 0, [QUOTE(ACE_MainActions), QEGVAR(fire,fire_menu)], _cookingAction] call ACEFUNC(interact_menu,addActionToClass);
         } forEach [MACRO_FIRETYPES];
 
     } else {
