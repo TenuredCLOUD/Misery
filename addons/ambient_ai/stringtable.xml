@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Ambient_AI">
+        <Key ID="STR_MISERY_Ambient_AI_Accuracy">
+            <English>Accuracy</English>
+            <Czech>Přesnost</Czech>
+            <French>Précision</French>
+            <Spanish>Precisión</Spanish>
+            <Italian>Precisione</Italian>
+            <Polish>Celność</Polish>
+            <Portuguese>Precisão</Portuguese>
+            <Russian>Точность</Russian>
+            <German>Genauigkeit</German>
+            <Korean>명중률</Korean>
+            <Japanese>精度</Japanese>
+            <Chinese>準確度</Chinese>
+            <Chinesesimp>准确度</Chinesesimp>
+            <Turkish>Doğruluk</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_AimingAccuracy">
+            <English>Aiming accuracy</English>
+            <Czech>Přesnost míření</Czech>
+            <French>Précision de visée</French>
+            <Spanish>Precisión de apuntado</Spanish>
+            <Italian>Precisione di mira</Italian>
+            <Polish>Dokładność celowania</Polish>
+            <Portuguese>Precisão de pontaria</Portuguese>
+            <Russian>Точность прицеливания</Russian>
+            <German>Zielgenauigkeit</German>
+            <Korean>조준 명중률</Korean>
+            <Japanese>照準精度</Japanese>
+            <Chinese>瞄準準確度</Chinese>
+            <Chinesesimp>瞄准准确度</Chinesesimp>
+            <Turkish>Nişan alma doğruluğu</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_AimingShake">
+            <English>Aiming shake</English>
+            <Czech>Třes při míření</Czech>
+            <French>Tremblement de visée</French>
+            <Spanish>Temblor al apuntar</Spanish>
+            <Italian>Oscillazione della mira</Italian>
+            <Polish>Drżenie podczas celowania</Polish>
+            <Portuguese>Tremor de pontaria</Portuguese>
+            <Russian>Тряска при прицеливании</Russian>
+            <German>Zittern beim Zielen</German>
+            <Korean>조준 흔들림</Korean>
+            <Japanese>照準の手ぶれ</Japanese>
+            <Chinese>瞄準抖動</Chinese>
+            <Chinesesimp>瞄准抖动</Chinesesimp>
+            <Turkish>Nişan alma sarsıntısı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_AimingSpeed">
+            <English>Aiming speed</English>
+            <Czech>Rychlost míření</Czech>
+            <French>Vitesse de visée</French>
+            <Spanish>Velocidad de apuntado</Spanish>
+            <Italian>Velocità di mira</Italian>
+            <Polish>Prędkość celowania</Polish>
+            <Portuguese>Velocidade de pontaria</Portuguese>
+            <Russian>Скорость прицеливания</Russian>
+            <German>Zielgeschwindigkeit</German>
+            <Korean>조준 속도</Korean>
+            <Japanese>照準速度</Japanese>
+            <Chinese>瞄準速度</Chinese>
+            <Chinesesimp>瞄准速度</Chinesesimp>
+            <Turkish>Nişan alma hızı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_Ambient_AI">
+            <English>Ambient AI</English>
+            <Czech>Okolní AI</Czech>
+            <French>IA ambiante</French>
+            <Spanish>IA ambiental</Spanish>
+            <Italian>IA ambientale</Italian>
+            <Polish>Otoczenie AI</Polish>
+            <Portuguese>IA Ambiente</Portuguese>
+            <Russian>Окружающий ИИ</Russian>
+            <German>Umgebungs-KI</German>
+            <Korean>주변 AI</Korean>
+            <Japanese>環境AI</Japanese>
+            <Chinese>環境 AI</Chinese>
+            <Chinesesimp>环境 AI</Chinesesimp>
+            <Turkish>Ortam Yapay Zekası</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_AmmoCount">
+            <English>Ammo count</English>
+            <Czech>Počet munice</Czech>
+            <French>Quantité de munitions</French>
+            <Spanish>Cantidad de munición</Spanish>
+            <Italian>Quantità munizioni</Italian>
+            <Polish>Ilość amunicji</Polish>
+            <Portuguese>Quantidade de munição</Portuguese>
+            <Russian>Количество боеприпасов</Russian>
+            <German>Munitionsanzahl</German>
+            <Korean>탄약 수</Korean>
+            <Japanese>弾薬数</Japanese>
+            <Chinese>彈藥數量</Chinese>
+            <Chinesesimp>弹药数量</Chinesesimp>
+            <Turkish>Mühimmat sayısı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_AmmoCountDesc">
+            <English>Ammo count for ai (randomly selected)</English>
+            <Czech>Počet munice pro AI (náhodně vybráno)</Czech>
+            <French>Quantité de munitions pour l'IA (choisie au hasard)</French>
+            <Spanish>Cantidad de munición para la IA (seleccionada al azar)</Spanish>
+            <Italian>Quantità munizioni per l'IA (selezionata casualmente)</Italian>
+            <Polish>Ilość amunicji dla AI (wybierana losowo)</Polish>
+            <Portuguese>Quantidade de munição para a IA (selecionada aleatoriamente)</Portuguese>
+            <Russian>Количество боеприпасов для ИИ (выбирается случайно)</Russian>
+            <German>Munitionsanzahl für die KI (zufällig ausgewählt)</German>
+            <Korean>AI의 탄약 수 (무작위 선택)</Korean>
+            <Japanese>AIの弾薬数（ランダムに選択）</Japanese>
+            <Chinese>AI 的彈藥數量 (隨機選擇)</Chinese>
+            <Chinesesimp>AI 的弹药数量 (随机选择)</Chinesesimp>
+            <Turkish>Yapay zeka için mühimmat sayısı (rastgele seçilir)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_Backpack">
+            <English>Backpack</English>
+            <Czech>Batoh</Czech>
+            <French>Sac à dos</French>
+            <Spanish>Mochila</Spanish>
+            <Italian>Zaino</Italian>
+            <Polish>Plecak</Polish>
+            <Portuguese>Mochila</Portuguese>
+            <Russian>Рюкзак</Russian>
+            <German>Rucksack</German>
+            <Korean>배낭</Korean>
+            <Japanese>バックパック</Japanese>
+            <Chinese>背包</Chinese>
+            <Chinesesimp>背包</Chinesesimp>
+            <Turkish>Sırt çantası</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_BackpackDesc">
+            <English>Possible backpacks for ai</English>
+            <Czech>Možné batohy pro AI</Czech>
+            <French>Sacs à dos possibles pour l'IA</French>
+            <Spanish>Posibles mochilas para la IA</Spanish>
+            <Italian>Possibili zaini per l'IA</Italian>
+            <Polish>Możliwe plecaki dla AI</Polish>
+            <Portuguese>Possíveis mochilas para a IA</Portuguese>
+            <Russian>Возможные рюкзаки для ИИ</Russian>
+            <German>Mögliche Rucksäcke für die KI</German>
+            <Korean>AI가 착용할 수 있는 배낭</Korean>
+            <Japanese>AIが装備可能なバックパック</Japanese>
+            <Chinese>AI 可能使用的背包</Chinese>
+            <Chinesesimp>AI 可能使用的背包</Chinesesimp>
+            <Turkish>Yapay zeka için olası sırt çantaları</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_CheckInterval">
+            <English>Spawn check interval</English>
+            <Czech>Interval kontroly vytváření</Czech>
+            <French>Intervalle de vérification d'apparition</French>
+            <Spanish>Intervalo de comprobación de aparición</Spanish>
+            <Italian>Intervallo di controllo spawn</Italian>
+            <Polish>Interwał sprawdzania tworzenia</Polish>
+            <Portuguese>Intervalo de verificação de geração</Portuguese>
+            <Russian>Интервал проверки спавна</Russian>
+            <German>Spawn-Prüfintervall</German>
+            <Korean>생성 확인 간격</Korean>
+            <Japanese>スポーン確認間隔</Japanese>
+            <Chinese>生成檢查間隔</Chinese>
+            <Chinesesimp>生成检查间隔</Chinesesimp>
+            <Turkish>Oluşma kontrol aralığı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_CheckIntervalDesc">
+            <English>Time in seconds between spawn checks</English>
+            <Czech>Čas v sekundách mezi kontrolami vytvoření</Czech>
+            <French>Temps en secondes entre les vérifications d'apparition</French>
+            <Spanish>Tiempo en segundos entre comprobaciones de aparición</Spanish>
+            <Italian>Tempo in secondi tra i controlli di spawn</Italian>
+            <Polish>Czas w sekundach między sprawdzeniami tworzenia</Polish>
+            <Portuguese>Tempo em segundos entre as verificações de geração</Portuguese>
+            <Russian>Время в секундах между проверками спавна</Russian>
+            <German>Zeit in Sekunden zwischen den Spawn-Prüfungen</German>
+            <Korean>생성 확인 사이의 시간 (초)</Korean>
+            <Japanese>スポーン確認の間隔（秒）</Japanese>
+            <Chinese>生成檢查之間的時間間隔 (秒)</Chinese>
+            <Chinesesimp>生成检查之间的时间间隔 (秒)</Chinesesimp>
+            <Turkish>Oluşma kontrolleri arasındaki saniye cinsinden süre</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_DeletionDist">
+            <English>Deletion distance</English>
+            <Czech>Vzdálenost pro smazání</Czech>
+            <French>Distance de suppression</French>
+            <Spanish>Distancia de eliminación</Spanish>
+            <Italian>Distanza di eliminazione</Italian>
+            <Polish>Odległość usuwania</Polish>
+            <Portuguese>Distância de Exclusão</Portuguese>
+            <Russian>Расстояние удаления</Russian>
+            <German>Entfernungs-Löschung</German>
+            <Korean>제거 거리</Korean>
+            <Japanese>削除距離</Japanese>
+            <Chinese>刪除距離</Chinese>
+            <Chinesesimp>删除距离</Chinesesimp>
+            <Turkish>Silme mesafesi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_DeletionDistDesc">
+            <English>Distance from players at which ai will be deleted</English>
+            <Czech>Vzdálenost od hráčů, při které bude AI smazána</Czech>
+            <French>Distance par rapport aux joueurs à laquelle l'IA sera supprimée</French>
+            <Spanish>Distancia de los jugadores a la que se eliminará la IA</Spanish>
+            <Italian>Distanza dai giocatori a cui l'IA verrà eliminata</Italian>
+            <Polish>Odległość od graczy, przy której AI zostanie usunięte</Polish>
+            <Portuguese>Distância dos jogadores em que a IA será excluída</Portuguese>
+            <Russian>Расстояние от игроков, на котором ИИ будет удален</Russian>
+            <German>Entfernung von Spielern, ab der die KI gelöscht wird</German>
+            <Korean>플레이어로부터 AI가 제거되는 거리</Korean>
+            <Japanese>プレイヤーからAIが削除される距離</Japanese>
+            <Chinese>遠離玩家後 AI 被刪除的距離</Chinese>
+            <Chinesesimp>远离玩家后 AI 被删除的距离</Chinesesimp>
+            <Turkish>Yapay zekanın oyunculardan ne kadar uzakta silineceği</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_EnableRoamingAI">
+            <English>Enable roaming ambient ai?</English>
+            <Czech>Povolit potulující se okolní AI?</Czech>
+            <French>Activer l'IA ambiante itinérante ?</French>
+            <Spanish>¿Activar IA ambiental errante?</Spanish>
+            <Italian>Abilitare l'IA ambientale errante?</Italian>
+            <Polish>Włączyć wędrujące otoczenie AI?</Polish>
+            <Portuguese>Ativar IA ambiente itinerante?</Portuguese>
+            <Russian>Включить бродячий окружающий ИИ?</Russian>
+            <German>Streunende Umgebungs-KI aktivieren?</German>
+            <Korean>배회하는 주변 AI를 활성화하시겠습니까?</Korean>
+            <Japanese>徘徊する環境AIを有効にしますか？</Japanese>
+            <Chinese>開啟漫遊環境 AI？</Chinese>
+            <Chinesesimp>开启漫游环境 AI？</Chinesesimp>
+            <Turkish>Gezici ortam yapay zekası etkinleştirilsin mi?</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_Facewear">
+            <English>Facewear</English>
+            <Czech>Doplňky obličeje</Czech>
+            <French>Accessoires de visage</French>
+            <Spanish>Accesorios faciales</Spanish>
+            <Italian>Accessori volto</Italian>
+            <Polish>Akcesoria twarzy</Polish>
+            <Portuguese>Acessórios de Rosto</Portuguese>
+            <Russian>Аксессуары для лица</Russian>
+            <German>Gesichtsbekleidung</German>
+            <Korean>얼굴 소품</Korean>
+            <Japanese>フェイスウェア</Japanese>
+            <Chinese>面部裝備</Chinese>
+            <Chinesesimp>面部装备</Chinesesimp>
+            <Turkish>Yüz aksesuarları</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_FacewearDesc">
+            <English>Possible facewear for ai</English>
+            <Czech>Možné doplňky obličeje pro AI</Czech>
+            <French>Accessoires de visage possibles pour l'IA</French>
+            <Spanish>Posibles accesorios faciales para la IA</Spanish>
+            <Italian>Possibili accessori volto per l'IA</Italian>
+            <Polish>Możliwe akcesoria twarzy dla AI</Polish>
+            <Portuguese>Possíveis acessórios de rosto para a IA</Portuguese>
+            <Russian>Возможные аксессуары для лица ИИ</Russian>
+            <German>Mögliche Gesichtsbekleidung für die KI</German>
+            <Korean>AI가 착용할 수 있는 얼굴 소품</Korean>
+            <Japanese>AIが装備可能なフェイスウェア</Japanese>
+            <Chinese>AI 可能使用的面部裝備</Chinese>
+            <Chinesesimp>AI 可能使用的面部装备</Chinesesimp>
+            <Turkish>Yapay zeka için olası yüz aksesuarları</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_FactionList">
+            <English>Faction list</English>
+            <Czech>Seznam frakcí</Czech>
+            <French>Liste des factions</French>
+            <Spanish>Lista de facciones</Spanish>
+            <Italian>Elenco fazioni</Italian>
+            <Polish>Lista frakcji</Polish>
+            <Portuguese>Lista de facções</Portuguese>
+            <Russian>Список фракций</Russian>
+            <German>Fraktionsliste</German>
+            <Korean>진영 목록</Korean>
+            <Japanese>派閥リスト</Japanese>
+            <Chinese>陣營列表</Chinese>
+            <Chinesesimp>阵营列表</Chinesesimp>
+            <Turkish>Grup listesi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_FactionToSpawn">
+            <English>Faction to spawn</English>
+            <Czech>Frakce k vytvoření</Czech>
+            <French>Faction à générer</French>
+            <Spanish>Facción a generar</Spanish>
+            <Italian>Fazione da generare</Italian>
+            <Polish>Frakcja do stworzenia</Polish>
+            <Portuguese>Facção para gerar</Portuguese>
+            <Russian>Фракция для спавна</Russian>
+            <German>Zu spawnende Fraktion</German>
+            <Korean>생성할 진영</Korean>
+            <Japanese>スポーンする派閥</Japanese>
+            <Chinese>生成陣營</Chinese>
+            <Chinesesimp>生成阵营</Chinesesimp>
+            <Turkish>Oluşturulacak grup</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_GroupSize">
+            <English>Group size</English>
+            <Czech>Velikost skupiny</Czech>
+            <French>Taille du groupe</French>
+            <Spanish>Tamaño del grupo</Spanish>
+            <Italian>Dimensione del gruppo</Italian>
+            <Polish>Wielkość grupy</Polish>
+            <Portuguese>Tamanho do grupo</Portuguese>
+            <Russian>Размер группы</Russian>
+            <German>Gruppengröße</German>
+            <Korean>그룹 크기</Korean>
+            <Japanese>グループサイズ</Japanese>
+            <Chinese>小組大小</Chinese>
+            <Chinesesimp>小组大小</Chinesesimp>
+            <Turkish>Grup boyutu</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_GroupSizeDesc">
+            <English>Possible size of group ai can be generated with</English>
+            <Czech>Možná velikost skupiny, se kterou může být AI vytvořena</Czech>
+            <French>Taille possible du groupe d'IA généré</French>
+            <Spanish>Posible tamaño del grupo de IA a generar</Spanish>
+            <Italian>Possibile dimensione del gruppo IA generato</Italian>
+            <Polish>Możliwa wielkość grupy, z jaką może powstać AI</Polish>
+            <Portuguese>Possível tamanho do grupo de IA que pode ser gerado</Portuguese>
+            <Russian>Возможный размер группы ИИ при создании</Russian>
+            <German>Mögliche Größe der erzeugten KI-Gruppe</German>
+            <Korean>생성될 AI 그룹의 가능한 크기</Korean>
+            <Japanese>生成されるAIグループの可能なサイズ</Japanese>
+            <Chinese>AI 小組生成時的可能大小</Chinese>
+            <Chinesesimp>AI 小组生成时的可能大小</Chinesesimp>
+            <Turkish>Yapay zekanın oluşturulabileceği olası grup boyutu</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_Headgear">
+            <English>Headgear</English>
+            <Czech>Pokrývka hlavy</Czech>
+            <French>Casques et chapeaux</French>
+            <Spanish>Cascos/Sombreros</Spanish>
+            <Italian>Copricapi</Italian>
+            <Polish>Nakrycie głowy</Polish>
+            <Portuguese>Capacetes/Chapéus</Portuguese>
+            <Russian>Головные уборы</Russian>
+            <German>Kopfbedeckung</German>
+            <Korean>헤드기어</Korean>
+            <Japanese>ヘッドギア</Japanese>
+            <Chinese>頭部裝備</Chinese>
+            <Chinesesimp>头部装备</Chinesesimp>
+            <Turkish>Başlık</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_HeadgearDesc">
+            <English>Possible headgear for ai</English>
+            <Czech>Možné pokrývky hlavy pro AI</Czech>
+            <French>Casques possibles pour l'IA</French>
+            <Spanish>Posibles cascos para la IA</Spanish>
+            <Italian>Possibili copricapi per l'IA</Italian>
+            <Polish>Możliwe nakrycia głowy dla AI</Polish>
+            <Portuguese>Possíveis capacetes para a IA</Portuguese>
+            <Russian>Возможные головные уборы для ИИ</Russian>
+            <German>Mögliche Kopfbedeckung für die KI</German>
+            <Korean>AI가 착용할 수 있는 헤드기어</Korean>
+            <Japanese>AIが装備可能なヘッドギア</Japanese>
+            <Chinese>AI 可能使用的頭部裝備</Chinese>
+            <Chinesesimp>AI 可能使用的头部装备</Chinesesimp>
+            <Turkish>Yapay zeka için olası başlıklar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_Items">
+            <English>Items</English>
+            <Czech>Předměty</Czech>
+            <French>Objets</French>
+            <Spanish>Objetos</Spanish>
+            <Italian>Oggetti</Italian>
+            <Polish>Przedmioty</Polish>
+            <Portuguese>Itens</Portuguese>
+            <Russian>Предметы</Russian>
+            <German>Gegenstände</German>
+            <Korean>아이템</Korean>
+            <Japanese>アイテム</Japanese>
+            <Chinese>物品</Chinese>
+            <Chinesesimp>物品</Chinesesimp>
+            <Turkish>Eşyalar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_ItemsDesc">
+            <English>Possible item loot for ai</English>
+            <Czech>Možná kořist předmětů pro AI</Czech>
+            <French>Butin d'objets possible pour l'IA</French>
+            <Spanish>Posibles objetos de botín para la IA</Spanish>
+            <Italian>Possibili oggetti di bottino per l'IA</Italian>
+            <Polish>Możliwe przedmioty do znalezienia przy AI</Polish>
+            <Portuguese>Possíveis itens de saque para a IA</Portuguese>
+            <Russian>Возможная добыча предметов с ИИ</Russian>
+            <German>Mögliche Beutegegenstände der KI</German>
+            <Korean>AI가 소지할 수 있는 아이템 전리품</Korean>
+            <Japanese>AIから入手可能なアイテム</Japanese>
+            <Chinese>AI 可能掉落的物品</Chinese>
+            <Chinesesimp>AI 可能掉落的物品</Chinesesimp>
+            <Turkish>Yapay zeka için olası eşya ganimetleri</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_LauncherWeapons">
+            <English>launcher weapons</English>
+            <Czech>Odpalovací zařízení</Czech>
+            <French>Lanceurs</French>
+            <Spanish>Lanzadores</Spanish>
+            <Italian>Lanciatori</Italian>
+            <Polish>Wyrzutnie</Polish>
+            <Portuguese>Lançadores</Portuguese>
+            <Russian>Пусковые установки</Russian>
+            <German>Werferwaffen</German>
+            <Korean>런처 무기</Korean>
+            <Japanese>ランチャー</Japanese>
+            <Chinese>發射器武器</Chinese>
+            <Chinesesimp>发射器武器</Chinesesimp>
+            <Turkish>Fırlatıcı silahlar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_LauncherWeaponsDesc">
+            <English>Possible launcher weapons for ai</English>
+            <Czech>Možná odpalovací zařízení pro AI</Czech>
+            <French>Lanceurs possibles pour l'IA</French>
+            <Spanish>Posibles lanzadores para la IA</Spanish>
+            <Italian>Possibili lanciatori per l'IA</Italian>
+            <Polish>Możliwe wyrzutnie dla AI</Polish>
+            <Portuguese>Possíveis lançadores para a IA</Portuguese>
+            <Russian>Возможные пусковые установки для ИИ</Russian>
+            <German>Mögliche Werfer für die KI</German>
+            <Korean>AI가 가질 수 있는 런처 목록</Korean>
+            <Japanese>AIが装備可能なランチャー</Japanese>
+            <Chinese>AI 可能使用的發射器武器</Chinese>
+            <Chinesesimp>AI 可能使用的发射器武器</Chinesesimp>
+            <Turkish>Yapay zeka için olası fırlatıcı silahlar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_MaxDist">
+            <English>Maximum Distance</English>
+            <Czech>Maximální vzdálenost</Czech>
+            <French>Distance maximale</French>
+            <Spanish>Distancia máxima</Spanish>
+            <Italian>Distanza massima</Italian>
+            <Polish>Maksymalna odległość</Polish>
+            <Portuguese>Distância Máxima</Portuguese>
+            <Russian>Максимальное расстояние</Russian>
+            <German>Maximalentfernung</German>
+            <Korean>최대 거리</Korean>
+            <Japanese>最大距離</Japanese>
+            <Chinese>最大距離</Chinese>
+            <Chinesesimp>最大距离</Chinesesimp>
+            <Turkish>Maksimum Mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_MaxDistDesc">
+            <English>Maximum distance ai groups can spawn from players</English>
+            <Czech>Maximální vzdálenost, ve které se mohou skupiny AI vytvořit od hráčů</Czech>
+            <French>Distance maximale à laquelle les groupes d'IA peuvent apparaître par rapport aux joueurs</French>
+            <Spanish>Distancia máxima a la que los grupos de IA pueden aparecer de los jugadores</Spanish>
+            <Italian>Distanza massima in cui i gruppi IA possono spawnare rispetto ai giocatori</Italian>
+            <Polish>Maksymalna odległość, w jakiej grupy AI mogą tworzyć się od graczy</Polish>
+            <Portuguese>Distância máxima em que os grupos de IA podem surgir dos jogadores</Portuguese>
+            <Russian>Максимальное расстояние появления групп ИИ от игроков</Russian>
+            <German>Maximalentfernung, in der KI-Gruppen von Spielern entfernt spawnen können</German>
+            <Korean>플레이어로부터 AI 그룹이 생성될 수 있는 최대 거리</Korean>
+            <Japanese>プレイヤーからAIグループがスポーンできる最大距離</Japanese>
+            <Chinese>AI 小組在玩家附近的最大生成距離</Chinese>
+            <Chinesesimp>AI 小组在玩家附近的最大生成距离</Chinesesimp>
+            <Turkish>Yapay zeka gruplarının oyunculardan oluşabileceği maksimum mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_MaxGroups">
+            <English>Maximum groups</English>
+            <Czech>Maximální počet skupin</Czech>
+            <French>Nombre maximum de groupes</French>
+            <Spanish>Máximo de grupos</Spanish>
+            <Italian>Massimo gruppi</Italian>
+            <Polish>Maksymalna liczba grup</Polish>
+            <Portuguese>Máximo de grupos</Portuguese>
+            <Russian>Максимум групп</Russian>
+            <German>Maximale Gruppen</German>
+            <Korean>최대 그룹 수</Korean>
+            <Japanese>最大グループ数</Japanese>
+            <Chinese>最大小組數</Chinese>
+            <Chinesesimp>最大小组数</Chinesesimp>
+            <Turkish>Maksimum grup</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_MaxGroupsDesc">
+            <English>Maximum groups allowed to spawn</English>
+            <Czech>Maximální povolený počet vytvořených skupin</Czech>
+            <French>Nombre maximum de groupes autorisés à apparaître</French>
+            <Spanish>Máximo de grupos permitidos para generar</Spanish>
+            <Italian>Massimo gruppi autorizzati a spawnare</Italian>
+            <Polish>Maksymalna dozwolona liczba grup do stworzenia</Polish>
+            <Portuguese>Máximo de grupos permitidos para gerar</Portuguese>
+            <Russian>Максимально допустимое количество групп</Russian>
+            <German>Maximal zulässige Anzahl an Gruppen</German>
+            <Korean>생성 가능한 최대 그룹 수</Korean>
+            <Japanese>スポーン可能な最大グループ数</Japanese>
+            <Chinese>允許生成的最大小組數</Chinese>
+            <Chinesesimp>允许生成的最大小组数</Chinesesimp>
+            <Turkish>Oluşturulmasına izin verilen maksimum grup sayısı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_MinDist">
+            <English>Minimum Distance</English>
+            <Czech>Minimální vzdálenost</Czech>
+            <French>Distance minimale</French>
+            <Spanish>Distancia mínima</Spanish>
+            <Italian>Distanza minima</Italian>
+            <Polish>Minimalna odległość</Polish>
+            <Portuguese>Distância Mínima</Portuguese>
+            <Russian>Минимальное расстояние</Russian>
+            <German>Mindestentfernung</German>
+            <Korean>최소 거리</Korean>
+            <Japanese>最小距離</Japanese>
+            <Chinese>最小距離</Chinese>
+            <Chinesesimp>最小距离</Chinesesimp>
+            <Turkish>Minimum Mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_MinDistDesc">
+            <English>Minimum distance ai groups can spawn from players</English>
+            <Czech>Minimální vzdálenost, ve které se mohou skupiny AI vytvořit od hráčů</Czech>
+            <French>Distance minimale à laquelle les groupes d'IA peuvent apparaître par rapport aux joueurs</French>
+            <Spanish>Distancia mínima a la que los grupos de IA pueden aparecer de los jugadores</Spanish>
+            <Italian>Distanza minima in cui i gruppi IA possono spawnare rispetto ai giocatori</Italian>
+            <Polish>Minimalna odległość, w jakiej grupy AI mogą tworzyć się od graczy</Polish>
+            <Portuguese>Distância mínima em que os grupos de IA podem surgir dos jogadores</Portuguese>
+            <Russian>Минимальное расстояние появления групп ИИ от игроков</Russian>
+            <German>Mindestentfernung, in der KI-Gruppen von Spielern entfernt spawnen können</German>
+            <Korean>플레이어로부터 AI 그룹이 생성될 수 있는 최소 거리</Korean>
+            <Japanese>プレイヤーからAIグループがスポーンできる最小距離</Japanese>
+            <Chinese>AI 小組在玩家附近的最小生成距離</Chinese>
+            <Chinesesimp>AI 小组在玩家附近的最小生成距离</Chinesesimp>
+            <Turkish>Yapay zeka gruplarının oyunculardan oluşabileceği minimum mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_NVGs">
+            <English>NVGs</English>
+            <Czech>Noktovizory</Czech>
+            <French>Vision nocturne</French>
+            <Spanish>Visores nocturnos</Spanish>
+            <Italian>Visori notturni</Italian>
+            <Polish>Noktowizja</Polish>
+            <Portuguese>Visão Noturna</Portuguese>
+            <Russian>ПНВ</Russian>
+            <German>Nachtsichtgeräte</German>
+            <Korean>야간 투시경</Korean>
+            <Japanese>夜間暗視装置</Japanese>
+            <Chinese>夜視儀</Chinese>
+            <Chinesesimp>夜视仪</Chinesesimp>
+            <Turkish>Gece görüş gözlükleri</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_NVGsDesc">
+            <English>Possible night vision for ai</English>
+            <Czech>Možné noktovizory pro AI</Czech>
+            <French>Vision nocturne possible pour l'IA</French>
+            <Spanish>Posibles visores nocturnos para la IA</Spanish>
+            <Italian>Possibili visori notturni per l'IA</Italian>
+            <Polish>Możliwa noktowizja dla AI</Polish>
+            <Portuguese>Possível visão noturna para a IA</Portuguese>
+            <Russian>Возможные ПНВ для ИИ</Russian>
+            <German>Mögliche Nachtsichtgeräte für die KI</German>
+            <Korean>AI가 가질 수 있는 야간 투시 장비</Korean>
+            <Japanese>AIが装備可能な夜間暗視装置</Japanese>
+            <Chinese>AI 可能使用的夜視儀</Chinese>
+            <Chinesesimp>AI 可能使用的夜视仪</Chinesesimp>
+            <Turkish>Yapay zeka için olası gece görüşü</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_PrimaryWeapons">
+            <English>Primary weapons</English>
+            <Czech>Primární zbraně</Czech>
+            <French>Armes principales</French>
+            <Spanish>Armas principales</Spanish>
+            <Italian>Armi primarie</Italian>
+            <Polish>Broń główna</Polish>
+            <Portuguese>Armas primárias</Portuguese>
+            <Russian>Основное оружие</Russian>
+            <German>Primärwaffen</German>
+            <Korean>주무기</Korean>
+            <Japanese>メイン武器</Japanese>
+            <Chinese>主武器</Chinese>
+            <Chinesesimp>主武器</Chinesesimp>
+            <Turkish>Birincil silahlar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_PrimaryWeaponsDesc">
+            <English>Possible primary weapons for ai</English>
+            <Czech>Možné primární zbraně pro AI</Czech>
+            <French>Armes principales possibles pour l'IA</French>
+            <Spanish>Posibles armas principales para la IA</Spanish>
+            <Italian>Possibili armi primarie per l'IA</Italian>
+            <Polish>Możliwa broń główna dla AI</Polish>
+            <Portuguese>Possíveis armas primárias para a IA</Portuguese>
+            <Russian>Возможное основное оружие для ИИ</Russian>
+            <German>Mögliche Primärwaffen für die KI</German>
+            <Korean>AI가 가질 수 있는 주무기 목록</Korean>
+            <Japanese>AIが装備可能なメイン武器</Japanese>
+            <Chinese>AI 可能使用的主武器</Chinese>
+            <Chinesesimp>AI 可能使用的主武器</Chinesesimp>
+            <Turkish>Yapay zeka için olası birincil silahlar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_RecruitUnit">
+            <English>Recruit %1 (%2 %3)</English>
+            <Czech>Rekrutace %1 (%2 %3)</Czech>
+            <French>Recruter %1 (%2 %3)</French>
+            <Spanish>Reclutar %1 (%2 %3)</Spanish>
+            <Italian>Reclutamento %1 (%2 %3)</Italian>
+            <Polish>Rekrutacja %1 (%2 %3)</Polish>
+            <Portuguese>Recrutamento %1 (%2 %3)</Portuguese>
+            <Russian>Набирайте %1 (%2 %3)</Russian>
+            <German>Rekrutieren %1 (%2 %3)</German>
+            <Korean>모집 %1 (%2 %3)</Korean>
+            <Japanese>リクルート %1 (%2 %3)</Japanese>
+            <Chinese>招募 %1 (%2 %3)</Chinese>
+            <Chinesesimp>招募 %1 (%2 %3)</Chinesesimp>
+            <Turkish>İşe Alım %1 (%2 %3)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_RecruitUnit_Fail">
+            <English>You don't have enough money to recruit %1</English>
+            <Czech>Nemáte dostatek peněz na rekrutaci %1</Czech>
+            <French>Vous n'avez pas assez d'argent pour recruter %1</French>
+            <Spanish>No tienes suficiente dinero para contratar %1</Spanish>
+            <Italian>Non avete abbastanza soldi per reclutare %1</Italian>
+            <Polish>Nie masz wystarczająco dużo pieniędzy na rekrutację %1</Polish>
+            <Portuguese>Você não tem dinheiro suficiente para recrutar %1</Portuguese>
+            <Russian>У вас не хватает денег на рекрутинг %1</Russian>
+            <German>Sie haben nicht genug Geld, um neue Mitarbeiter einzustellen %1</German>
+            <Korean>채용할 자금이 충분하지 않습니다. %1</Korean>
+            <Japanese>採用するのに十分な資金がない %1</Japanese>
+            <Chinese>你沒有足夠的錢來招募 %1</Chinese>
+            <Chinesesimp>你没有足够的钱来招募 %1</Chinesesimp>
+            <Turkish>İşe almak için yeterli paranız yok %1</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_RecruitUnit_Success">
+            <English>You have recruited %1 for %2 %3</English>
+            <Czech>Rekrutovali jste %1 za %2 %3</Czech>
+            <French>Vous avez recruté %1 pour %2 %3</French>
+            <Spanish>Ha contratado a %1 para %2 %3</Spanish>
+            <Italian>Avete reclutato %1 per %2 %3</Italian>
+            <Polish>Zwerbowałeś %1 do %2 %3</Polish>
+            <Portuguese>Você recrutou %1 para %2 %3</Portuguese>
+            <Russian>Вы набрали %1 для %2 %3</Russian>
+            <German>Sie haben %1 rekrutiert für %2 %3</German>
+            <Korean>%1을(를) 채용했습니다. %2 %3</Korean>
+            <Japanese>あなたは %1 を採用した。 %2 %3</Japanese>
+            <Chinese>你招募了 %1，花費 %2 %3</Chinese>
+            <Chinesesimp>你招募了 %1，花费 %2 %3</Chinesesimp>
+            <Turkish>%1 için işe aldınız %2 %3</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_SafeDist">
+            <English>Safe distance</English>
+            <Czech>Bezpečná vzdálenost</Czech>
+            <French>Distance de sécurité</French>
+            <Spanish>Distancia de seguridad</Spanish>
+            <Italian>Distanza di sicurezza</Italian>
+            <Polish>Bezpieczna odległość</Polish>
+            <Portuguese>Distância de Segurança</Portuguese>
+            <Russian>Безопасное расстояние</Russian>
+            <German>Sicherheitsabstand</German>
+            <Korean>안전 거리</Korean>
+            <Japanese>安全距離</Japanese>
+            <Chinese>安全距離</Chinese>
+            <Chinesesimp>安全距离</Chinesesimp>
+            <Turkish>Güvenli mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_SafeDistDesc">
+            <English>Minimum distance at which ai can spawn from other players</English>
+            <Czech>Minimální vzdálenost, ve které se AI může vytvořit od ostatních hráčů</Czech>
+            <French>Distance minimale à laquelle l'IA peut apparaître par rapport aux autres joueurs</French>
+            <Spanish>Distancia mínima a la que la IA puede aparecer de otros jugadores</Spanish>
+            <Italian>Distanza minima in cui l'IA può spawnare rispetto agli altri giocatori</Italian>
+            <Polish>Minimalna odległość, w jakiej AI może tworzyć się od innych graczy</Polish>
+            <Portuguese>Distância mínima em que a IA pode surgir de outros jogadores</Portuguese>
+            <Russian>Минимальное расстояние, на котором ИИ может появиться от других игроков</Russian>
+            <German>Mindestentfernung, in der die KI von anderen Spielern entfernt spawnen kann</German>
+            <Korean>다른 플레이어로부터 AI가 생성될 수 있는 최소 거리</Korean>
+            <Japanese>他のプレイヤーからAIがスポーンできる最小距離</Japanese>
+            <Chinese>AI 在其他玩家附近的最小生成距離</Chinese>
+            <Chinesesimp>AI 在其他玩家附近的最小生成距离</Chinesesimp>
+            <Turkish>Yapay zekanın diğer oyunculardan oluşabileceği minimum mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_SecondaryWeapons">
+            <English>Secondary weapons</English>
+            <Czech>Sekundární zbraně</Czech>
+            <French>Armes secondaires</French>
+            <Spanish>Armas secundarias</Spanish>
+            <Italian>Armi secondarie</Italian>
+            <Polish>Broń boczna</Polish>
+            <Portuguese>Armas secundárias</Portuguese>
+            <Russian>Вторичное оружие</Russian>
+            <German>Sekundärwaffen</German>
+            <Korean>보조무기</Korean>
+            <Japanese>サブ武器</Japanese>
+            <Chinese>副武器</Chinese>
+            <Chinesesimp>副武器</Chinesesimp>
+            <Turkish>İkincil silahlar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_SecondaryWeaponsDesc">
+            <English>Possible secondary weapons for ai</English>
+            <Czech>Možné sekundární zbraně pro AI</Czech>
+            <French>Armes secondaires possibles pour l'IA</French>
+            <Spanish>Posibles armas secundarias para la IA</Spanish>
+            <Italian>Possibili armi secondarie per l'IA</Italian>
+            <Polish>Możliwa broń boczna dla AI</Polish>
+            <Portuguese>Possíveis armas secundárias para a IA</Portuguese>
+            <Russian>Возможное вторичное оружие для ИИ</Russian>
+            <German>Mögliche Sekundärwaffen für die KI</German>
+            <Korean>AI가 가질 수 있는 보조무기 목록</Korean>
+            <Japanese>AIが装備可能なサブ武器</Japanese>
+            <Chinese>AI 可能使用的副武器</Chinese>
+            <Chinesesimp>AI 可能使用的副武器</Chinesesimp>
+            <Turkish>Yapay zeka için olası ikincil silahlar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_Shake">
+            <English>Shake</English>
+            <Czech>Třes</Czech>
+            <French>Tremblement</French>
+            <Spanish>Temblor</Spanish>
+            <Italian>Oscillazione</Italian>
+            <Polish>Drżenie</Polish>
+            <Portuguese>Tremor</Portuguese>
+            <Russian>Тряска</Russian>
+            <German>Zittern</German>
+            <Korean>흔들림</Korean>
+            <Japanese>手ぶれ</Japanese>
+            <Chinese>抖動</Chinese>
+            <Chinesesimp>抖动</Chinesesimp>
+            <Turkish>Sarsıntı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_SpawnChance">
+            <English>Spawn Chance</English>
+            <Czech>Šance na vytvoření</Czech>
+            <French>Chance d'apparition</French>
+            <Spanish>Probabilidad de aparición</Spanish>
+            <Italian>Probabilità di spawn</Italian>
+            <Polish>Szansa na stworzenie</Polish>
+            <Portuguese>Chance de Gerar</Portuguese>
+            <Russian>Шанс появления</Russian>
+            <German>Spawn-Chance</German>
+            <Korean>생성 확률</Korean>
+            <Japanese>スポーン確率</Japanese>
+            <Chinese>生成概率</Chinese>
+            <Chinesesimp>生成概率</Chinesesimp>
+            <Turkish>Oluşma Şansı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_SpawnChanceDesc">
+            <English>% chance to generate ai group</English>
+            <Czech>% šance na vytvoření skupiny AI</Czech>
+            <French>% de chance de générer un groupe d'IA</French>
+            <Spanish>% de probabilidad de generar un grupo de IA</Spanish>
+            <Italian>% di probabilità di generare un gruppo IA</Italian>
+            <Polish>% szans na stworzenie grupy AI</Polish>
+            <Portuguese>% de chance de gerar um grupo de IA</Portuguese>
+            <Russian>% шанс на создание группы ИИ</Russian>
+            <German>% Chance, eine KI-Gruppe zu erzeugen</German>
+            <Korean>AI 그룹이 생성될 확률 (%)</Korean>
+            <Japanese>AIグループが生成される確率（％）</Japanese>
+            <Chinese>生成 AI 小組的百分比概率</Chinese>
+            <Chinesesimp>生成 AI 小组的百分比概率</Chinesesimp>
+            <Turkish>Yapay zeka grubu oluşturma şansı (%)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_SpawnerInvalidPos">
+            <English>AI Spawner: Invalid position or position in water, skipping</English>
+            <Czech>AI Spawner: Neplatná pozice nebo pozice ve vodě, přeskakuji</Czech>
+            <French>Générateur d'IA : Position invalide ou dans l'eau, ignorer</French>
+            <Spanish>Generador de IA: Posición no válida o en el agua, omitiendo</Spanish>
+            <Italian>Generatore IA: Posizione non valida o in acqua, salto</Italian>
+            <Polish>AI Spawner: Nieprawidłowa pozycja lub pozycja w wodzie, pomijanie</Polish>
+            <Portuguese>Gerador de IA: Posição inválida ou na água, pulando</Portuguese>
+            <Russian>AI Spawner: Неверная позиция или позиция в воде, пропуск</Russian>
+            <German>KI-Spawner: Ungültige Position oder Position im Wasser, wird übersprungen</German>
+            <Korean>AI 생성기: 잘못된 위치이거나 수중 위치이므로 건너뜁니다</Korean>
+            <Japanese>AIスポナー: 位置が無効または水中のため、スキップします</Japanese>
+            <Chinese>AI 生成器: 位置無效或位置在水中，正在跳過</Chinese>
+            <Chinesesimp>AI 生成器: 位置无效或位置在水中，正在跳过</Chinesesimp>
+            <Turkish>Yapay Zeka Oluşturucu: Geçersiz konum veya su içinde konum, atlanıyor</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_Speed">
+            <English>Speed</English>
+            <Czech>Rychlost</Czech>
+            <French>Vitesse</French>
+            <Spanish>Velocidad</Spanish>
+            <Italian>Velocità</Italian>
+            <Polish>Prędkość</Polish>
+            <Portuguese>Velocidade</Portuguese>
+            <Russian>Скорость</Russian>
+            <German>Geschwindigkeit</German>
+            <Korean>속도</Korean>
+            <Japanese>速度</Japanese>
+            <Chinese>速度</Chinese>
+            <Chinesesimp>速度</Chinesesimp>
+            <Turkish>Hız</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_Uniform">
+            <English>Uniform</English>
+            <Czech>Uniforma</Czech>
+            <French>Uniforme</French>
+            <Spanish>Uniforme</Spanish>
+            <Italian>Uniforme</Italian>
+            <Polish>Uniform</Polish>
+            <Portuguese>Uniforme</Portuguese>
+            <Russian>Униформа</Russian>
+            <German>Uniform</German>
+            <Korean>복장</Korean>
+            <Japanese>制服</Japanese>
+            <Chinese>制服</Chinese>
+            <Chinesesimp>制服</Chinesesimp>
+            <Turkish>Üniforma</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_UniformDesc">
+            <English>Possible uniforms for ai</English>
+            <Czech>Možné uniformy pro AI</Czech>
+            <French>Uniformes possibles pour l'IA</French>
+            <Spanish>Posibles uniformes para la IA</Spanish>
+            <Italian>Possibili uniformi per l'IA</Italian>
+            <Polish>Możliwe mundury dla AI</Polish>
+            <Portuguese>Possíveis uniformes para a IA</Portuguese>
+            <Russian>Возможная униформа для ИИ</Russian>
+            <German>Mögliche Uniformen für die KI</German>
+            <Korean>AI가 착용할 수 있는 복장</Korean>
+            <Japanese>AIが着用可能な制服</Japanese>
+            <Chinese>AI 可能使用的制服</Chinese>
+            <Chinesesimp>AI 可能使用的制服</Chinesesimp>
+            <Turkish>Yapay zeka için olası üniformalar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_Vest">
+            <English>Vest</English>
+            <Czech>Vesta</Czech>
+            <French>Gilet</French>
+            <Spanish>Chaleco</Spanish>
+            <Italian>Gilet</Italian>
+            <Polish>Kamizelka</Polish>
+            <Portuguese>Colete</Portuguese>
+            <Russian>Жилет</Russian>
+            <German>Weste</German>
+            <Korean>조끼</Korean>
+            <Japanese>ベスト</Japanese>
+            <Chinese>背心</Chinese>
+            <Chinesesimp>背心</Chinesesimp>
+            <Turkish>Yelek</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_VestDesc">
+            <English>Possible vests for ai</English>
+            <Czech>Možné vesty pro AI</Czech>
+            <French>Gilets possibles pour l'IA</French>
+            <Spanish>Posibles chalecos para la IA</Spanish>
+            <Italian>Possibili gilet per l'IA</Italian>
+            <Polish>Możliwe kamizelki dla AI</Polish>
+            <Portuguese>Possíveis coletes para a IA</Portuguese>
+            <Russian>Возможные жилеты для ИИ</Russian>
+            <German>Mögliche Westen für die KI</German>
+            <Korean>AI가 착용할 수 있는 조끼</Korean>
+            <Japanese>AIが装備可能なベスト</Japanese>
+            <Chinese>AI 可能使用的背心</Chinese>
+            <Chinesesimp>AI 可能使用的背心</Chinesesimp>
+            <Turkish>Yapay zeka için olası yelekler</Turkish>
+        </Key>
+    </Package>
+</Project>

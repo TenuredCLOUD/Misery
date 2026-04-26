@@ -21,7 +21,7 @@ _object setVariable [QGVAR(isActive), false, true];
 
 [
     _object,
-    "Play Devil's Luck",
+    localize LSTRING(PlayDevilsLuck),
     QPATHTOEF(icons,data\dices_ca.paa),
     QPATHTOEF(icons,data\dices_ca.paa),
     QUOTE(_this distance _target < 3 && !(_target getVariable [ARR_2(QUOTE(QGVAR(isActive)),false)])),

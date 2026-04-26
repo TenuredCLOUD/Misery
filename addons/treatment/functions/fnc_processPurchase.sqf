@@ -37,7 +37,7 @@ if !([_name] call FUNC(checkStats)) exitWith {
 };
 
 if (_funds < _price) exitWith {
-    ctrlSetText [1001, "You cannot afford this!"];
+    ctrlSetText [1001, localize ECSTRING(common,TooExpensive)];
     [982381, [1600, 1601], true] call EFUNC(common,displayShowControls);
 };
 

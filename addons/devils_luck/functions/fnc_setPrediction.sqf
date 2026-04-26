@@ -17,10 +17,10 @@ params ["_isHigher"];
 
 private _val = parseNumber _isHigher;
 
-private _text = ["LOWER", "HIGHER"] select _isHigher;
+private _text = [localize LSTRING(Lower), localize LSTRING(Higher)] select _isHigher;
 
 GVAR(currentPrediction) = _val;
 
-private _predictionText = format ["Prediction: %1", _text];
+private _predictionText = format ["%2 %1", _text, localize LSTRING(PredictionLabel)];
 
 ctrlSetText [1103, _predictionText];

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Artifacts">
+        <Key ID="STR_MISERY_Artifacts_DebugEnable">
+            <English>Enable artifact spawns debugging</English>
+            <Czech>Povolit ladění vytváření artefaktů</Czech>
+            <French>Activer le débogage de l'apparition d'artéfacts</French>
+            <Spanish>Habilitar depuración de aparición de artefactos</Spanish>
+            <Italian>Abilita il debug della generazione di artefatti</Italian>
+            <Polish>Włącz debugowanie spawnowania artefaktů</Polish>
+            <Portuguese>Ativar depuração de surgimento de artefatos</Portuguese>
+            <Russian>Включить отладку появления артефактов</Russian>
+            <German>Debugging für Artefakt-Spawns aktivieren</German>
+            <Korean>아티팩트 스폰 디버깅 활성화</Korean>
+            <Japanese>アーティファクトのスポーンデバッグを有効にする</Japanese>
+            <Chinese>啟用神器生成調試</Chinese>
+            <Chinesesimp>启用神器生成调试</Chinesesimp>
+            <Turkish>Eser oluşumu hata ayıklamasını etkinleştir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Artifacts_DebugEnableDesc">
+            <English>Enable or disable artifact debugging</English>
+            <Czech>Povolit nebo zakázat ladění artefaktů</Czech>
+            <French>Activer ou désactiver le débogage des artéfacts</French>
+            <Spanish>Habilitar o deshabilitar la depuración de artefactos</Spanish>
+            <Italian>Abilita o disabilita il debug degli artefatti</Italian>
+            <Polish>Włącz lub wyłącz debugowanie artefaktów</Polish>
+            <Portuguese>Ativar ou desativar a depuração de artefatos</Portuguese>
+            <Russian>Включить или отключить отладку артефактов</Russian>
+            <German>Artefakt-Debugging aktivieren oder deaktivieren</German>
+            <Korean>아티팩트 디버깅 활성화 또는 비활성화</Korean>
+            <Japanese>アーティファクトのデバッグを有効または無効にする</Japanese>
+            <Chinese>啟用或禁用神器調試</Chinese>
+            <Chinesesimp>启用或禁用神器调试</Chinesesimp>
+            <Turkish>Eser hata ayıklamasını etkinleştir veya devre dışı bırak</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Artifacts_SpawnAreas">
+            <English>Artifact spawn Areas</English>
+            <Czech>Oblasti vytváření artefaktů</Czech>
+            <French>Zones d'apparition d'artéfacts</French>
+            <Spanish>Áreas de aparición de artefactos</Spanish>
+            <Italian>Aree di generazione artefatti</Italian>
+            <Polish>Obszary spawnowania artefaktów</Polish>
+            <Portuguese>Áreas de surgimento de artefatos</Portuguese>
+            <Russian>Зоны появления артефактов</Russian>
+            <German>Artefakt-Spawn-Gebiete</German>
+            <Korean>아티팩트 스폰 구역</Korean>
+            <Japanese>アーティファクトのスポーンエリア</Japanese>
+            <Chinese>神器生成區域</Chinese>
+            <Chinesesimp>神器生成区域</Chinesesimp>
+            <Turkish>Eser oluşum alanları</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Artifacts_SpawnAreasDesc">
+            <English>ELLIPSE or RECTANGLE marker names covering the artifact spawn areas as strings ['Artifact_spawn_1', 'Artifact_spawn_2']</English>
+            <Czech>Názvy markerů ELLIPSE nebo RECTANGLE pokrývající oblasti vytváření artefaktů jako řetězce ['Artifact_spawn_1', 'Artifact_spawn_2']</Czech>
+            <French>Noms des marqueurs ELLIPSE ou RECTANGLE couvrant les zones d'apparition sous forme de chaînes ['Artifact_spawn_1', 'Artifact_spawn_2']</French>
+            <Spanish>Nombres de marcadores ELLIPSE o RECTANGLE que cubren las áreas de aparición como cadenas ['Artifact_spawn_1', 'Artifact_spawn_2']</Spanish>
+            <Italian>Nomi dei marcatori ELLIPSE o RECTANGLE che coprono le aree di generazione come stringhe ['Artifact_spawn_1', 'Artifact_spawn_2']</Italian>
+            <Polish>Nazwy markerów ELLIPSE lub RECTANGLE pokrywające obszary spawnowania jako ciągi znaków ['Artifact_spawn_1', 'Artifact_spawn_2']</Polish>
+            <Portuguese>Nomes dos marcadores ELLIPSE ou RECTANGLE cobrindo as áreas de surgimento como strings ['Artifact_spawn_1', 'Artifact_spawn_2']</Portuguese>
+            <Russian>Имена маркеров ELLIPSE или RECTANGLE, охватывающие зоны появления, в виде строк ['Artifact_spawn_1', 'Artifact_spawn_2']</Russian>
+            <German>ELLIPSE- oder RECTANGLE-Markernamen, die die Artefakt-Spawn-Gebiete abdecken, als Strings ['Artifact_spawn_1', 'Artifact_spawn_2']</German>
+            <Korean>아티팩트 스폰 구역을 포함하는 ELLIPSE 또는 RECTANGLE 마커 이름 (문자열 형식) ['Artifact_spawn_1', 'Artifact_spawn_2']</Korean>
+            <Japanese>アーティファクトのスポーンエリアをカバーする ELLIPSE または RECTANGLE マーカーの名前。文字列形式 ['Artifact_spawn_1', 'Artifact_spawn_2']</Japanese>
+            <Chinese>覆蓋神器生成區域的 ELLIPSE 或 RECTANGLE 標記名稱，格式為字符串 ['Artifact_spawn_1', 'Artifact_spawn_2']</Chinese>
+            <Chinesesimp>覆盖神器生成区域的 ELLIPSE 或 RECTANGLE 标记名称，格式为字符串 ['Artifact_spawn_1', 'Artifact_spawn_2']</Chinesesimp>
+            <Turkish>Eser oluşum alanlarını kapsayan dize biçimindeki ELLIPSE veya RECTANGLE işaretçi adları ['Artifact_spawn_1', 'Artifact_spawn_2']</Turkish>
+        </Key>
+    </Package>
+</Project>

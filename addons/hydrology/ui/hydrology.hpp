@@ -81,7 +81,7 @@ class CLASS(hydrology_ui) {
         };
         class CLASS(hydrology_exit): RscButton {
             idc = 1602;
-            text = "Exit";
+            text = ECSTRING(common,Exit);
             x = 19 * GUI_GRID_W + GUI_GRID_X;
             y = 11.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;

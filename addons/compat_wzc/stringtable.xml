@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Compat_WZC">
+        <Key ID="STR_MISERY_Compat_WZC_BagChance">
+            <English>Bag Chance</English>
+            <Czech>Šance na batoh</Czech>
+            <French>Chance de sac</French>
+            <Spanish>Probabilidad de mochila</Spanish>
+            <Italian>Probabilità zaino</Italian>
+            <Polish>Szansa na torbę</Polish>
+            <Portuguese>Chance de mochila</Portuguese>
+            <Russian>Шанс сумки</Russian>
+            <German>Rucksackchance</German>
+            <Korean>배낭 확률</Korean>
+            <Japanese>バッグの確率</Japanese>
+            <Chinese>背包概率</Chinese>
+            <Chinesesimp>背包概率</Chinesesimp>
+            <Turkish>Çanta Şansı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_ChanceGoliath">
+            <English>Chance - Goliath &amp; Smashers</English>
+            <Czech>Šance - Goliáši a Smasheři</Czech>
+            <French>Chance - Goliath et Smashers</French>
+            <Spanish>Probabilidad - Goliath y Smashers</Spanish>
+            <Italian>Probabilità - Goliath e Smasher</Italian>
+            <Polish>Szansa - Goliaci i Miażdżyciele</Polish>
+            <Portuguese>Chance - Goliath e Smashers</Portuguese>
+            <Russian>Шанс - Голиафы и Смэшеры</Russian>
+            <German>Chance - Goliaths &amp; Smasher</German>
+            <Korean>확률 - 골리앗 및 스매셔</Korean>
+            <Japanese>確率 - ゴリアテとスマッシャー</Japanese>
+            <Chinese>概率 - 歌利亞與粉碎者</Chinese>
+            <Chinesesimp>概率 - 歌利亚与粉碎者</Chinesesimp>
+            <Turkish>Şans - Goliath ve Smashers</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_ChanceGoliathDesc">
+            <English>Spawn chance for goliath and smashers</English>
+            <Czech>Šance na spawn goliášů a smasherů</Czech>
+            <French>Chance d'apparition pour les goliaths et les smashers</French>
+            <Spanish>Probabilidad de aparición de goliaths y smashers</Spanish>
+            <Italian>Probabilità di spawn per goliath e smasher</Italian>
+            <Polish>Szansa na odrodzenie goliata i miażdżycieli</Polish>
+            <Portuguese>Chance de spawn para goliaths e smashers</Portuguese>
+            <Russian>Шанс появления голиафов и смэшеров</Russian>
+            <German>Spawn-Chance für Goliath und Smasher</German>
+            <Korean>골리앗 및 스매셔 생성 확률</Korean>
+            <Japanese>ゴリアテとスマッシャーのスポーン確率</Japanese>
+            <Chinese>歌利亞與粉碎者的生成概率</Chinese>
+            <Chinesesimp>歌利亚与粉碎者的生成概率</Chinesesimp>
+            <Turkish>Goliath ve smashers'ın oluşma şansı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_ChanceSpecial">
+            <English>Chance - Special infected</English>
+            <Czech>Šance - speciální nakažení</Czech>
+            <French>Chance - Infectés spéciaux</French>
+            <Spanish>Probabilidad - Infectados especiales</Spanish>
+            <Italian>Probabilità - Infetti speciali</Italian>
+            <Polish>Szansa - specjalni zarażeni</Polish>
+            <Portuguese>Chance - Infectados especiais</Portuguese>
+            <Russian>Шанс - Особые зараженные</Russian>
+            <German>Chance - Spezialinfizierte</German>
+            <Korean>확률 - 특수 감염체</Korean>
+            <Japanese>確率 - 特殊感染者</Japanese>
+            <Chinese>概率 - 特殊感染者</Chinese>
+            <Chinesesimp>概率 - 特殊感染者</Chinesesimp>
+            <Turkish>Şans - Özel enfekteler</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_ChanceSpecialDesc">
+            <English>Spawn chance for special infected (screamers, etc...)</English>
+            <Czech>Šance na spawn speciálních nakažených (screamery, atd...)</Czech>
+            <French>Chance d'apparition pour les infectés spéciaux (screamers, etc.)</French>
+            <Spanish>Probabilidad de aparición de infectados especiales (screamers, etc...)</Spanish>
+            <Italian>Probabilità di spawn per infetti speciali (screamer, ecc...)</Italian>
+            <Polish>Szansa na odrodzenie specjalnych zarażonych (wyjce itp...)</Polish>
+            <Portuguese>Chance de spawn para infectados especiais (screamers, etc...)</Portuguese>
+            <Russian>Шанс появления особых зараженных (крикуны и т. д.)</Russian>
+            <German>Spawn-Chance für Spezialinfizierte (Screamer usw.)</German>
+            <Korean>특수 감염체(스크리머 등) 생성 확률</Korean>
+            <Japanese>特殊感染者（スクリーマーなど）のスポーン確率</Japanese>
+            <Chinese>特殊感染者 (尖叫者等) 的生成概率</Chinese>
+            <Chinesesimp>特殊感染者 (尖叫者等) 的生成概率</Chinesesimp>
+            <Turkish>Özel enfektelerin oluşma şansı (çığlık atanlar vb...)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_CivBags">
+            <English>Bags Civilian</English>
+            <Czech>Civilní batohy</Czech>
+            <French>Sacs civils</French>
+            <Spanish>Mochilas civiles</Spanish>
+            <Italian>Zaini civili</Italian>
+            <Polish>Torby cywilne</Polish>
+            <Portuguese>Mochilas civis</Portuguese>
+            <Russian>Гражданские сумки</Russian>
+            <German>Zivile Rucksäcke</German>
+            <Korean>민간용 배낭</Korean>
+            <Japanese>民生用バッグ</Japanese>
+            <Chinese>平民背包</Chinese>
+            <Chinesesimp>平民背包</Chinesesimp>
+            <Turkish>Sivil Çantalar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_CivClothing">
+            <English>Civilian clothing</English>
+            <Czech>Civilní oblečení</Czech>
+            <French>Vêtements civils</French>
+            <Spanish>Ropa civil</Spanish>
+            <Italian>Abbigliamento civile</Italian>
+            <Polish>Ubrania cywilne</Polish>
+            <Portuguese>Roupas civis</Portuguese>
+            <Russian>Гражданская одежда</Russian>
+            <German>Zivilkleidung</German>
+            <Korean>민간인 의류</Korean>
+            <Japanese>市民の服装</Japanese>
+            <Chinese>平民服裝</Chinese>
+            <Chinesesimp>平民服装</Chinesesimp>
+            <Turkish>Sivil kıyafetler</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_CivFacewear">
+            <English>Facewear Civilian</English>
+            <Czech>Civilní doplňky obličeje</Czech>
+            <French>Accessoires de visage civils</French>
+            <Spanish>Accesorios faciales civiles</Spanish>
+            <Italian>Accessori viso civili</Italian>
+            <Polish>Cywilne akcesoria na twarz</Polish>
+            <Portuguese>Acessórios faciais civis</Portuguese>
+            <Russian>Гражданские маски</Russian>
+            <German>Ziviler Gesichtsschutz</German>
+            <Korean>민간용 페이스웨어</Korean>
+            <Japanese>民生用フェイスウェア</Japanese>
+            <Chinese>平民面部裝備</Chinese>
+            <Chinesesimp>平民面部装备</Chinesesimp>
+            <Turkish>Sivil Yüz Aksesuarları</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_CivHeadgear">
+            <English>Headgear Civilian</English>
+            <Czech>Civilní pokrývky hlavy</Czech>
+            <French>Couvre-chefs civils</French>
+            <Spanish>Cascos civiles</Spanish>
+            <Italian>Copricapi civili</Italian>
+            <Polish>Cywilne nakrycia głowy</Polish>
+            <Portuguese>Capacetes civis</Portuguese>
+            <Russian>Гражданские головные уборы</Russian>
+            <German>Zivile Kopfbedeckung</German>
+            <Korean>민간용 헤드기어</Korean>
+            <Japanese>民生用ヘッドギア</Japanese>
+            <Chinese>平民頭部裝備</Chinese>
+            <Chinesesimp>平民头部装备</Chinesesimp>
+            <Turkish>Sivil Başlıklar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_CivItems">
+            <English>Items Civilian</English>
+            <Czech>Civilní předměty</Czech>
+            <French>Objets civils</French>
+            <Spanish>Objetos civiles</Spanish>
+            <Italian>Oggetti civili</Italian>
+            <Polish>Przedmioty cywilne</Polish>
+            <Portuguese>Itens civis</Portuguese>
+            <Russian>Гражданские предметы</Russian>
+            <German>Zivile Gegenstände</German>
+            <Korean>민간용 아이템</Korean>
+            <Japanese>民生用アイテム</Japanese>
+            <Chinese>平民物品</Chinese>
+            <Chinesesimp>平民物品</Chinesesimp>
+            <Turkish>Sivil Eşyalar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_CivVests">
+            <English>Vests Civilian</English>
+            <Czech>Civilní vesty</Czech>
+            <French>Gilets civils</French>
+            <Spanish>Chalecos civiles</Spanish>
+            <Italian>Gilet civili</Italian>
+            <Polish>Kamizelki cywilne</Polish>
+            <Portuguese>Coletes civis</Portuguese>
+            <Russian>Гражданские жилеты</Russian>
+            <German>Zivile Westen</German>
+            <Korean>민간용 조끼</Korean>
+            <Japanese>民生用ベスト</Japanese>
+            <Chinese>平民背心</Chinese>
+            <Chinesesimp>平民背心</Chinesesimp>
+            <Turkish>Sivil Yelekler</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_ClothingChance">
+            <English>Clothing Chance</English>
+            <Czech>Šance na oblečení</Czech>
+            <French>Chance de vêtements</French>
+            <Spanish>Probabilidad de vestimenta</Spanish>
+            <Italian>Probabilità vestiario</Italian>
+            <Polish>Szansa na ubranie</Polish>
+            <Portuguese>Chance de vestuário</Portuguese>
+            <Russian>Шанс одежды</Russian>
+            <German>Kleidungschance</German>
+            <Korean>의상 확률</Korean>
+            <Japanese>服装の確率</Japanese>
+            <Chinese>服裝概率</Chinese>
+            <Chinesesimp>服装概率</Chinesesimp>
+            <Turkish>Giysi Şansı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_ClothingChanceDesc">
+            <English>Chance for civilian clothing vs military clothing (ex. 100% = always civilian clothing)</English>
+            <Czech>Šance na civilní vs. vojenské oblečení (např. 100% = vždy civilní)</Czech>
+            <French>Chance pour les vêtements civils par rapport aux vêtements militaires (ex. 100% = toujours civil)</French>
+            <Spanish>Probabilidad de ropa civil frente a militar (ej. 100% = siempre civil)</Spanish>
+            <Italian>Probabilità di abiti civili rispetto a quelli militari (es. 100% = sempre civili)</Italian>
+            <Polish>Szansa na ubrania cywilne vs wojskowe (np. 100% = zawsze cywilne)</Polish>
+            <Portuguese>Chance de roupas civis vs militares (ex: 100% = sempre civil)</Portuguese>
+            <Russian>Шанс гражданской одежды против военной (например, 100% = всегда гражданская)</Russian>
+            <German>Chance für Zivilkleidung gegenüber Militärkleidung (z.B. 100% = immer zivil)</German>
+            <Korean>민간인 의상 대 군복의 비율 (예: 100% = 항상 민간인 의상)</Korean>
+            <Japanese>市民の服装対軍服の確率（例：100% = 常に市民の服装）</Japanese>
+            <Chinese>平民服裝與軍用服裝的比例 (例如 100% = 總是平民服裝)</Chinese>
+            <Chinesesimp>平民服装与军用服装的比例 (例如 100% = 总是平民服装)</Chinesesimp>
+            <Turkish>Sivil kıyafet ve askeri kıyafet şansı (ör. %100 = her zaman sivil kıyafet)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_ClusterSize">
+            <English>Cluster size</English>
+            <Czech>Velikost skupiny</Czech>
+            <French>Taille de la grappe</French>
+            <Spanish>Tamaño del grupo</Spanish>
+            <Italian>Dimensione del gruppo</Italian>
+            <Polish>Wielkość grupy</Polish>
+            <Portuguese>Tamanho do grupo</Portuguese>
+            <Russian>Размер группы</Russian>
+            <German>Clustergröße</German>
+            <Korean>클러스터 크기</Korean>
+            <Japanese>クラスターサイズ</Japanese>
+            <Chinese>族群大小</Chinese>
+            <Chinesesimp>族群大小</Chinesesimp>
+            <Turkish>Küme boyutu</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_ClusterSizeDesc">
+            <English>Possible amount of creatures to spawn each cycle</English>
+            <Czech>Možné množství stvoření pro spawn v každém cyklu</Czech>
+            <French>Quantité possible de créatures à faire apparaître à chaque cycle</French>
+            <Spanish>Cantidad posible de criaturas que aparecerán en cada ciclo</Spanish>
+            <Italian>Quantità possibile di creature da generare in ogni ciclo</Italian>
+            <Polish>Możliwa liczba stworzeń odradzanych w każdym cyklu</Polish>
+            <Portuguese>Quantidade possível de criaturas para spawnar a cada ciclo</Portuguese>
+            <Russian>Возможное количество существ для спавна в каждом цикле</Russian>
+            <German>Mögliche Anzahl von Kreaturen pro Zyklus</German>
+            <Korean>매 주기마다 생성될 수 있는 생명체의 수</Korean>
+            <Japanese>各サイクルでスポーン可能なクリーチャーの数</Japanese>
+            <Chinese>每個週期可能生成的生物數量</Chinese>
+            <Chinesesimp>每个周期可能生成的生物数量</Chinesesimp>
+            <Turkish>Her döngüde oluşabilecek yaratık miktarı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_Cycle">
+            <English>Spawn check interval</English>
+            <Czech>Interval kontroly spawnu</Czech>
+            <French>Intervalle de vérification d'apparition</French>
+            <Spanish>Intervalo de comprobación de aparición</Spanish>
+            <Italian>Intervallo controllo spawn</Italian>
+            <Polish>Częstotliwość sprawdzania odrodzeń</Polish>
+            <Portuguese>Intervalo de verificação de spawn</Portuguese>
+            <Russian>Интервал проверки спавна</Russian>
+            <German>Spawn-Prüfintervall</German>
+            <Korean>스폰 확인 간격</Korean>
+            <Japanese>スポーン確認の間隔</Japanese>
+            <Chinese>生成檢查間隔</Chinese>
+            <Chinesesimp>生成检查间隔</Chinesesimp>
+            <Turkish>Oluşma kontrol aralığı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_CycleDesc">
+            <English>Time in seconds between spawn checks</English>
+            <Czech>Čas v sekundách mezi kontrolami spawnu</Czech>
+            <French>Temps en secondes entre les vérifications d'apparition</French>
+            <Spanish>Tiempo en segundos entre comprobaciones de aparición</Spanish>
+            <Italian>Tempo in secondi tra i scontrolli dello spawn</Italian>
+            <Polish>Czas w sekundách między sprawdzeniami odrodzeń</Polish>
+            <Portuguese>Tempo em segundos entre as verificações de spawn</Portuguese>
+            <Russian>Время в секундах между проверками появления</Russian>
+            <German>Zeit in Sekunden zwischen den Spawn-Prüfungen</German>
+            <Korean>스폰 확인 사이의 시간(초)</Korean>
+            <Japanese>スポーン確認の実行間隔（秒）</Japanese>
+            <Chinese>生成檢查之間的時間間隔 (秒)</Chinese>
+            <Chinesesimp>生成检查之间的时间间隔 (秒)</Chinesesimp>
+            <Turkish>Oluşma kontrolleri arasındaki saniye cinsinden süre</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_DelDist">
+            <English>Deletion distance</English>
+            <Czech>Vzdálenost pro smazání</Czech>
+            <French>Distance de suppression</French>
+            <Spanish>Distancia de eliminación</Spanish>
+            <Italian>Distanza di eliminazione</Italian>
+            <Polish>Odległość usuwania</Polish>
+            <Portuguese>Distância de exclusão</Portuguese>
+            <Russian>Расстояние удаления</Russian>
+            <German>Entfernungsdistanz</German>
+            <Korean>삭제 거리</Korean>
+            <Japanese>削除距離</Japanese>
+            <Chinese>刪除距離</Chinese>
+            <Chinesesimp>删除距离</Chinesesimp>
+            <Turkish>Silme mesafesi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_DelDistDesc">
+            <English>Distance from players at which creatures will be deleted</English>
+            <Czech>Vzdálenost od hráčů, při které budou stvoření smazána</Czech>
+            <French>Distance des joueurs à laquelle les créatures seront supprimées</French>
+            <Spanish>Distancia de los jugadores a la que se eliminarán las criaturas</Spanish>
+            <Italian>Distanza dai giocatori alla quale le creature verranno eliminate</Italian>
+            <Polish>Odległość od graczy, przy której stworzenia zostaną usunięte</Polish>
+            <Portuguese>Distância dos jogadores em que as criaturas serão excluídas</Portuguese>
+            <Russian>Расстояние от игроков, на котором существа будут удалены</Russian>
+            <German>Entfernung zum Spieler, ab der Kreaturen gelöscht werden</German>
+            <Korean>플레이어로부터 생명체가 삭제되는 거리</Korean>
+            <Japanese>プレイヤーからクリーチャーが削除される距離</Japanese>
+            <Chinese>遠離玩家後生物被刪除的距離</Chinese>
+            <Chinesesimp>远离玩家后生物被删除的距离</Chinesesimp>
+            <Turkish>Yaratıkların oyunculardan silineceği mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_Enabled">
+            <English>Ambient Webknight Zombies &amp; Creatures</English>
+            <Czech>Ambientní Webknight zombie a stvoření</Czech>
+            <French>Zombies et créatures ambiantes Webknight</French>
+            <Spanish>Zombis y criaturas ambientales de Webknight</Spanish>
+            <Italian>Zombie e creature ambientali Webknight</Italian>
+            <Polish>Ambientalne zombie i stworzenia Webknight</Polish>
+            <Portuguese>Zumbis e criaturas ambientais Webknight</Portuguese>
+            <Russian>Окружающие зомби и существа Webknight</Russian>
+            <German>Ambient Webknight Zombies &amp; Kreaturen</German>
+            <Korean>Ambient Webknight 좀비 및 생명체</Korean>
+            <Japanese>Ambient Webknight ゾンビとクリーチャー</Japanese>
+            <Chinese>環境 Webknight 殭屍與生物</Chinese>
+            <Chinesesimp>环境 Webknight 僵尸与生物</Chinesesimp>
+            <Turkish>Ortam Webknight Zombileri ve Yaratıkları</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_EnabledDesc">
+            <English>Enables random spawning of creatures</English>
+            <Czech>Povolí náhodné spawnování stvoření</Czech>
+            <French>Active l'apparition aléatoire de créatures</French>
+            <Spanish>Permite la aparición aleatoria de criaturas</Spanish>
+            <Italian>Abilita lo spawn casuale di creature</Italian>
+            <Polish>Włącza losowe odradzanie się stworzeń</Polish>
+            <Portuguese>Ativa o surgimento aleatório de criaturas</Portuguese>
+            <Russian>Включает случайное появление существ</Russian>
+            <German>Aktiviert das zufällige Erscheinen von Kreaturen</German>
+            <Korean>생명체의 무작위 생성을 활성화합니다</Korean>
+            <Japanese>クリーチャーのランダムなスポーンを有効にします</Japanese>
+            <Chinese>開啟生物的隨機生成</Chinese>
+            <Chinesesimp>开启生物的随机生成</Chinesesimp>
+            <Turkish>Yaratıkların rastgele oluşmasını sağlar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_FacewearChance">
+            <English>Facewear Chance</English>
+            <Czech>Šance na doplňky obličeje</Czech>
+            <French>Chance d'accessoire de visage</French>
+            <Spanish>Probabilidad de accesorio facial</Spanish>
+            <Italian>Probabilità accessorio viso</Italian>
+            <Polish>Szansa na akcesoria na twarz</Polish>
+            <Portuguese>Chance de acessório facial</Portuguese>
+            <Russian>Шанс маски</Russian>
+            <German>Gesichtsschutzschance</German>
+            <Korean>페이스웨어 확률</Korean>
+            <Japanese>フェイスウェアの確率</Japanese>
+            <Chinese>面部裝備概率</Chinese>
+            <Chinesesimp>面部装备概率</Chinesesimp>
+            <Turkish>Yüz Aksesuarı Şansı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_HeadgearChance">
+            <English>Headgear Chance</English>
+            <Czech>Šance na pokrývku hlavy</Czech>
+            <French>Chance de couvre-chef</French>
+            <Spanish>Probabilidad de casco</Spanish>
+            <Italian>Probabilità copricapo</Italian>
+            <Polish>Szansa na nakrycie głowy</Polish>
+            <Portuguese>Chance de capacete</Portuguese>
+            <Russian>Шанс головного убора</Russian>
+            <German>Kopfbedeckungschance</German>
+            <Korean>헤드기어 확률</Korean>
+            <Japanese>ヘッドギアの確率</Japanese>
+            <Chinese>頭部裝備概率</Chinese>
+            <Chinesesimp>头部装备概率</Chinesesimp>
+            <Turkish>Başlık Şansı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_InfectionChance">
+            <English>Infection Chance</English>
+            <Czech>Šance na infekci</Czech>
+            <French>Chance d'infection</French>
+            <Spanish>Probabilidad de infección</Spanish>
+            <Italian>Probabilità infezione</Italian>
+            <Polish>Szansa na infekcję</Polish>
+            <Portuguese>Chance de infecção</Portuguese>
+            <Russian>Шанс заражения</Russian>
+            <German>Infektionschance</German>
+            <Korean>감염 확률</Korean>
+            <Japanese>感染確率</Japanese>
+            <Chinese>感染概率</Chinese>
+            <Chinesesimp>感染概率</Chinesesimp>
+            <Turkish>Bulaşma Şansı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_InfectionChance_ZomDesc">
+            <English>Infection chance from zombies</English>
+            <Czech>Šance na infekci od zombií</Czech>
+            <French>Chance d'infection par les zombies</French>
+            <Spanish>Probabilidad de infección por zombis</Spanish>
+            <Italian>Probabilità di infezione da parte degli zombie</Italian>
+            <Polish>Szansa na infekcję od zombie</Polish>
+            <Portuguese>Chance de infecção por zumbis</Portuguese>
+            <Russian>Шанс заражения от зомби</Russian>
+            <German>Infektionschance durch Zombies</German>
+            <Korean>좀비에 의한 감염 확률</Korean>
+            <Japanese>ゾンビからの感染確率</Japanese>
+            <Chinese>被殭屍感染的概率</Chinese>
+            <Chinesesimp>被僵尸感染的概率</Chinesesimp>
+            <Turkish>Zombilerden bulaşma şansı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_InfectionEnabled">
+            <English>Zombie infection</English>
+            <Czech>Infekce zombií</Czech>
+            <French>Infection zombie</French>
+            <Spanish>Infección zombi</Spanish>
+            <Italian>Infezione zombie</Italian>
+            <Polish>Infekcja zombie</Polish>
+            <Portuguese>Infecção zumbi</Portuguese>
+            <Russian>Инфекция зомби</Russian>
+            <German>Zombie-Infektion</German>
+            <Korean>좀비 감염</Korean>
+            <Japanese>ゾンビ感染</Japanese>
+            <Chinese>殭屍感染</Chinese>
+            <Chinesesimp>僵尸感染</Chinesesimp>
+            <Turkish>Zombi enfeksiyonu</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_InfectionEnabledDesc">
+            <English>Enables infection chance from zombies</English>
+            <Czech>Povolí šanci na infekci od zombií</Czech>
+            <French>Active les chances d'infection par les zombies</French>
+            <Spanish>Permite la probabilidad de infección por zombis</Spanish>
+            <Italian>Abilita la probabilità di infezione da parte degli zombie</Italian>
+            <Polish>Włącza szansę na infekcję od zombie</Polish>
+            <Portuguese>Ativa a chance de infecção por zumbis</Portuguese>
+            <Russian>Включает шанс заражения от зомби</Russian>
+            <German>Aktiviert die Infektionschance durch Zombies</German>
+            <Korean>좀비에 의한 감염 확률을 활성화합니다</Korean>
+            <Japanese>ゾンビからの感染確率を有効にします</Japanese>
+            <Chinese>開啟被殭屍感染的概率</Chinese>
+            <Chinesesimp>开启被僵尸感染的概率</Chinesesimp>
+            <Turkish>Zombilerden bulaşma şansını etkinleştirir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_ItemsChance">
+            <English>Items Chance</English>
+            <Czech>Šance na předměty</Czech>
+            <French>Chance d'objets</French>
+            <Spanish>Probabilidad de objetos</Spanish>
+            <Italian>Probabilità oggetti</Italian>
+            <Polish>Szansa na przedmioty</Polish>
+            <Portuguese>Chance de itens</Portuguese>
+            <Russian>Шанс предметов</Russian>
+            <German>Gegenstandschance</German>
+            <Korean>아이템 확률</Korean>
+            <Japanese>アイテムの確率</Japanese>
+            <Chinese>物品概率</Chinese>
+            <Chinesesimp>物品概率</Chinesesimp>
+            <Turkish>Eşya Şansı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_MaxDist">
+            <English>Maximum Distance</English>
+            <Czech>Maximální vzdálenost</Czech>
+            <French>Distance maximale</French>
+            <Spanish>Distancia máxima</Spanish>
+            <Italian>Distanza massima</Italian>
+            <Polish>Maksymalna odległość</Polish>
+            <Portuguese>Distância máxima</Portuguese>
+            <Russian>Максимальное расстояние</Russian>
+            <German>Maximalentfernung</German>
+            <Korean>최대 거리</Korean>
+            <Japanese>最大距離</Japanese>
+            <Chinese>最大距離</Chinese>
+            <Chinesesimp>最大距离</Chinesesimp>
+            <Turkish>Maksimum Mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_MaxDistDesc">
+            <English>Maximum distance groups can spawn from players</English>
+            <Czech>Maximální vzdálenost, ve které se mohou skupiny spawnovat od hráčů</Czech>
+            <French>Distance maximale à laquelle les groupes peuvent apparaître par rapport aux joueurs</French>
+            <Spanish>Distancia máxima a la que los grupos pueden aparecer de los jugadores</Spanish>
+            <Italian>Distanza massima alla quale i gruppi possono apparire dai giocatori</Italian>
+            <Polish>Maksymalna odległość, w jakiej grupy mogą się odradzać od graczy</Polish>
+            <Portuguese>Distância máxima em que grupos podem spawnar dos jogadores</Portuguese>
+            <Russian>Максимальное расстояние, на котором группы могут появляться от игроков</Russian>
+            <German>Maximale Entfernung, in der Gruppen von Spielern spawnen können</German>
+            <Korean>플레이어로부터 그룹이 생성될 수 있는 최대 거리</Korean>
+            <Japanese>プレイヤーからグループがスポーンできる最大距離</Japanese>
+            <Chinese>族群在玩家附近的最大生成距離</Chinese>
+            <Chinesesimp>族群在玩家附近的最大生成距离</Chinesesimp>
+            <Turkish>Grupların oyunculardan oluşabileceği maksimum mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_MaxPopulation">
+            <English>Maximum population</English>
+            <Czech>Maximální populace</Czech>
+            <French>Population maximale</French>
+            <Spanish>Población máxima</Spanish>
+            <Italian>Popolazione massima</Italian>
+            <Polish>Maksymalna populacja</Polish>
+            <Portuguese>População máxima</Portuguese>
+            <Russian>Максимальная популяция</Russian>
+            <German>Maximale Population</German>
+            <Korean>최대 개체수</Korean>
+            <Japanese>最大個体数</Japanese>
+            <Chinese>最大數量</Chinese>
+            <Chinesesimp>最大数量</Chinesesimp>
+            <Turkish>Maksimum popülasyon</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_MaxPopulationDesc">
+            <English>Maximum creatures allowed to spawn</English>
+            <Czech>Maximální povolený počet stvoření pro spawn</Czech>
+            <French>Nombre maximum de créatures autorisées à apparaître</French>
+            <Spanish>Máximo de criaturas permitidas para aparecer</Spanish>
+            <Italian>Numero massimo di creature che possono essere generate</Italian>
+            <Polish>Maksymalna dozwolona liczba stworzeń</Polish>
+            <Portuguese>Máximo de criaturas permitidas para spawnar</Portuguese>
+            <Russian>Максимальное количество существ для спавна</Russian>
+            <German>Maximale Anzahl an Kreaturen, die spawnen dürfen</German>
+            <Korean>생성 가능한 최대 생명체 수</Korean>
+            <Japanese>スポーン可能なクリーチャーの最大数</Japanese>
+            <Chinese>允許生成的最大生物數</Chinese>
+            <Chinesesimp>允许生成的最大生物数</Chinesesimp>
+            <Turkish>Oluşmasına izin verilen maksimum yaratık sayısı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_MilBags">
+            <English>Bags Military</English>
+            <Czech>Vojenské batohy</Czech>
+            <French>Sacs militaires</French>
+            <Spanish>Mochilas militares</Spanish>
+            <Italian>Zaini militari</Italian>
+            <Polish>Torby wojskowe</Polish>
+            <Portuguese>Mochilas militares</Portuguese>
+            <Russian>Военные сумки</Russian>
+            <German>Militärische Rucksäcke</German>
+            <Korean>군용 배낭</Korean>
+            <Japanese>軍用バッグ</Japanese>
+            <Chinese>軍用背包</Chinese>
+            <Chinesesimp>军用背包</Chinesesimp>
+            <Turkish>Askeri Çantalar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_MilClothing">
+            <English>Military clothing</English>
+            <Czech>Vojenské oblečení</Czech>
+            <French>Vêtements militaires</French>
+            <Spanish>Ropa militar</Spanish>
+            <Italian>Abbigliamento militare</Italian>
+            <Polish>Ubrania wojskowe</Polish>
+            <Portuguese>Roupas militares</Portuguese>
+            <Russian>Военная одежда</Russian>
+            <German>Militärkleidung</German>
+            <Korean>군복</Korean>
+            <Japanese>軍服</Japanese>
+            <Chinese>軍用服裝</Chinese>
+            <Chinesesimp>军用服装</Chinesesimp>
+            <Turkish>Askeri kıyafetler</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_MilFacewear">
+            <English>Facewear Military</English>
+            <Czech>Vojenské doplňky obličeje</Czech>
+            <French>Accessoires de visage militaires</French>
+            <Spanish>Accesorios faciales militares</Spanish>
+            <Italian>Accessori viso militari</Italian>
+            <Polish>Wojskowe akcesoria na twarz</Polish>
+            <Portuguese>Acessórios faciais militares</Portuguese>
+            <Russian>Военные маски</Russian>
+            <German>Militärischer Gesichtsschutz</German>
+            <Korean>군용 페이스웨어</Korean>
+            <Japanese>軍用フェイスウェア</Japanese>
+            <Chinese>軍用面部裝備</Chinese>
+            <Chinesesimp>军用面部装备</Chinesesimp>
+            <Turkish>Askeri Yüz Aksesuarları</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_MilHeadgear">
+            <English>Headgear Military</English>
+            <Czech>Vojenské pokrývky hlavy</Czech>
+            <French>Couvre-chefs militaires</French>
+            <Spanish>Cascos militares</Spanish>
+            <Italian>Copricapi militari</Italian>
+            <Polish>Wojskowe nakrycia głowy</Polish>
+            <Portuguese>Capacetes militares</Portuguese>
+            <Russian>Военные головные уборы</Russian>
+            <German>Militärische Kopfbedeckung</German>
+            <Korean>군용 헤드기어</Korean>
+            <Japanese>軍用ヘッドギア</Japanese>
+            <Chinese>軍用頭部裝備</Chinese>
+            <Chinesesimp>军用头部装备</Chinesesimp>
+            <Turkish>Askeri Başlıklar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_MilItems">
+            <English>Items Military</English>
+            <Czech>Vojenské předměty</Czech>
+            <French>Objets militaires</French>
+            <Spanish>Objetos militares</Spanish>
+            <Italian>Oggetti militari</Italian>
+            <Polish>Przedmioty wojskowe</Polish>
+            <Portuguese>Itens militares</Portuguese>
+            <Russian>Военные предметы</Russian>
+            <German>Militärische Gegenstände</German>
+            <Korean>군용 아이템</Korean>
+            <Japanese>軍用アイテム</Japanese>
+            <Chinese>軍用物品</Chinese>
+            <Chinesesimp>军用物品</Chinesesimp>
+            <Turkish>Askeri Eşyalar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_MilVests">
+            <English>Vests Military</English>
+            <Czech>Vojenské vesty</Czech>
+            <French>Gilets militaires</French>
+            <Spanish>Chalecos militares</Spanish>
+            <Italian>Gilet militari</Italian>
+            <Polish>Kamizelki wojskowe</Polish>
+            <Portuguese>Coletes militares</Portuguese>
+            <Russian>Военные жилеты</Russian>
+            <German>Militärische Westen</German>
+            <Korean>군용 조끼</Korean>
+            <Japanese>軍用ベスト</Japanese>
+            <Chinese>軍用背心</Chinese>
+            <Chinesesimp>军用背心</Chinesesimp>
+            <Turkish>Askeri Yelekler</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_MinDist">
+            <English>Minimum Distance</English>
+            <Czech>Minimální vzdálenost</Czech>
+            <French>Distance minimale</French>
+            <Spanish>Distancia mínima</Spanish>
+            <Italian>Distanza minima</Italian>
+            <Polish>Minimalna odległość</Polish>
+            <Portuguese>Distância mínima</Portuguese>
+            <Russian>Минимальное расстояние</Russian>
+            <German>Mindestentfernung</German>
+            <Korean>최소 거리</Korean>
+            <Japanese>最短距離</Japanese>
+            <Chinese>最小距離</Chinese>
+            <Chinesesimp>最小距离</Chinesesimp>
+            <Turkish>Minimum Mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_MinDistDesc">
+            <English>Minimum distance groups can spawn from players</English>
+            <Czech>Minimální vzdálenost, ve které se mohou skupiny spawnovat od hráčů</Czech>
+            <French>Distance minimale à laquelle les groupes peuvent apparaître par rapport aux joueurs</French>
+            <Spanish>Distancia mínima a la que los grupos pueden aparecer de los jugadores</Spanish>
+            <Italian>Distanza minima alla quale i gruppi possono apparire dai giocatori</Italian>
+            <Polish>Minimalna odległość, w jakiej grupy mogą się odradzać od graczy</Polish>
+            <Portuguese>Distância mínima em que grupos podem spawnar dos jogadores</Portuguese>
+            <Russian>Минимальное расстояние, на котором группы могут появляться от игроков</Russian>
+            <German>Mindestentfernung, in der Gruppen von Spielern spawnen können</German>
+            <Korean>플레이어로부터 그룹이 생성될 수 있는 최소 거리</Korean>
+            <Japanese>プレイヤーからグループがスポーンできる最小距離</Japanese>
+            <Chinese>族群在玩家附近的最小生成距離</Chinese>
+            <Chinesesimp>族群在玩家附近的最小生成距离</Chinesesimp>
+            <Turkish>Grupların oyunculardan oluşabileceği minimum mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_NightOnly">
+            <English>Night only</English>
+            <Czech>Pouze v noci</Czech>
+            <French>Nuit seulement</French>
+            <Spanish>Solo de noche</Spanish>
+            <Italian>Solo di notte</Italian>
+            <Polish>Tylko w nocy</Polish>
+            <Portuguese>Apenas à noite</Portuguese>
+            <Russian>Только ночью</Russian>
+            <German>Nur nachts</German>
+            <Korean>밤에만</Korean>
+            <Japanese>夜間のみ</Japanese>
+            <Chinese>僅限夜間</Chinese>
+            <Chinesesimp>仅限夜间</Chinesesimp>
+            <Turkish>Sadece gece</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_NightOnlyDesc">
+            <English>Allows special types to only spawn at night time</English>
+            <Czech>Umožňuje speciálním typům spawn pouze v nočních hodinách</Czech>
+            <French>Permet aux types spéciaux d'apparaître uniquement la nuit</French>
+            <Spanish>Permite que los tipos especiales solo aparezcan por la noche</Spanish>
+            <Italian>Consente ai tipi speciali di apparire solo di notte</Italian>
+            <Polish>Pozwala na odradzanie się typów specjalnych tylko w nocy</Polish>
+            <Portuguese>Permite que tipos especiais surjam apenas à noite</Portuguese>
+            <Russian>Позволяет особым типам появляться только в ночное время</Russian>
+            <German>Ermöglicht es Spezialtypen, nur nachts zu spawnen</German>
+            <Korean>특수 유형이 밤에만 생성되도록 허용합니다</Korean>
+            <Japanese>特殊なタイプが夜間のみスポーンするようにします</Japanese>
+            <Chinese>允許特殊類型僅在夜間生成</Chinese>
+            <Chinesesimp>允许特殊类型仅在夜间生成</Chinesesimp>
+            <Turkish>Özel türlerin yalnızca gece vakti oluşmasına izin verir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_SafeDist">
+            <English>Safe distance</English>
+            <Czech>Bezpečná vzdálenost</Czech>
+            <French>Distance de sécurité</French>
+            <Spanish>Distancia de seguridad</Spanish>
+            <Italian>Distanza di sicurezza</Italian>
+            <Polish>Bezpieczna odległość</Polish>
+            <Portuguese>Distância de segurança</Portuguese>
+            <Russian>Безопасное расстояние</Russian>
+            <German>Sicherheitsabstand</German>
+            <Korean>안전 거리</Korean>
+            <Japanese>安全距離</Japanese>
+            <Chinese>安全距離</Chinese>
+            <Chinesesimp>安全距离</Chinesesimp>
+            <Turkish>Güvenli mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_SafeDistDesc">
+            <English>Minimum distance at which creatures can spawn from other players</English>
+            <Czech>Minimální vzdálenost, ve které se mohou stvoření spawnovat od ostatních hráčů</Czech>
+            <French>Distance minimale à laquelle les créatures peuvent apparaître par rapport aux autres joueurs</French>
+            <Spanish>Distancia mínima a la que las criaturas pueden aparecer de otros jugadores</Spanish>
+            <Italian>Distanza minima alla quale le creature possono apparire dagli altri giocatori</Italian>
+            <Polish>Minimalna odległość, w jakiej stworzenia mogą się odradzać od innych graczy</Polish>
+            <Portuguese>Distância mínima em que as criaturas podem spawnar de outros jogadores</Portuguese>
+            <Russian>Минимальное расстояние, на котором существа могут появляться рядом с другими игроками</Russian>
+            <German>Mindestabstand, in dem Kreaturen von anderen Spielern spawnen können</German>
+            <Korean>다른 플레이어로부터 생명체가 생성될 수 있는 최소 거리</Korean>
+            <Japanese>他のプレイヤーからクリーチャーがスポーンできる最小距離</Japanese>
+            <Chinese>生物在其他玩家附近的最小生成距離</Chinese>
+            <Chinesesimp>生物在其他玩家附近的最小生成距离</Chinesesimp>
+            <Turkish>Yaratıkların diğer oyunculardan oluşabileceği minimum mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_SpawnChance">
+            <English>Spawn Chance - Overall</English>
+            <Czech>Šance na spawn - celková</Czech>
+            <French>Chance d'apparition - Globale</French>
+            <Spanish>Probabilidad de aparición - General</Spanish>
+            <Italian>Probabilità di spawn - Generale</Italian>
+            <Polish>Szansa na odrodzenie - ogólna</Polish>
+            <Portuguese>Chance de spawn - Geral</Portuguese>
+            <Russian>Шанс спавна - Общий</Russian>
+            <German>Spawn-Chance - Gesamt</German>
+            <Korean>스폰 확률 - 전체</Korean>
+            <Japanese>スポーン確率 - 全体</Japanese>
+            <Chinese>生成概率 - 總計</Chinese>
+            <Chinesesimp>生成概率 - 总计</Chinesesimp>
+            <Turkish>Oluşma Şansı - Genel</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_SpawnChanceDesc">
+            <English>Spawn chance for creatures, to be generated</English>
+            <Czech>Šance, že budou stvoření vygenerována</Czech>
+            <French>Chance d'apparition des créatures à générer</French>
+            <Spanish>Probabilidad de que se generen criaturas</Spanish>
+            <Italian>Probabilità di generazione delle creature</Italian>
+            <Polish>Szansa na wygenerowanie stworzeń</Polish>
+            <Portuguese>Chance de spawn para criaturas a serem geradas</Portuguese>
+            <Russian>Шанс появления существ при генерации</Russian>
+            <German>Spawn-Chance für zu generierende Kreaturen</German>
+            <Korean>생명체가 생성될 확률</Korean>
+            <Japanese>クリーチャーが生成されるスポーン確率</Japanese>
+            <Chinese>生物生成的概率</Chinese>
+            <Chinesesimp>生物生成的概率</Chinesesimp>
+            <Turkish>Yaratıkların oluşma şansı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_VestChance">
+            <English>Vest Chance</English>
+            <Czech>Šance na vestu</Czech>
+            <French>Chance de gilet</French>
+            <Spanish>Probabilidad de chaleco</Spanish>
+            <Italian>Probabilità gilet</Italian>
+            <Polish>Szansa na kamizelkę</Polish>
+            <Portuguese>Chance de colete</Portuguese>
+            <Russian>Шанс жилета</Russian>
+            <German>Westenchance</German>
+            <Korean>조끼 확률</Korean>
+            <Japanese>ベストの確率</Japanese>
+            <Chinese>背心概率</Chinese>
+            <Chinesesimp>背心概率</Chinesesimp>
+            <Turkish>Yelek Şansı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_WeaponsList">
+            <English>Weapons list</English>
+            <Czech>Seznam zbraní</Czech>
+            <French>Liste d'armes</French>
+            <Spanish>Lista de armas</Spanish>
+            <Italian>Elenco armi</Italian>
+            <Polish>Lista broni</Polish>
+            <Portuguese>Lista de armas</Portuguese>
+            <Russian>Список оружия</Russian>
+            <German>Waffenliste</German>
+            <Korean>무기 목록</Korean>
+            <Japanese>武器リスト</Japanese>
+            <Chinese>武器列表</Chinese>
+            <Chinesesimp>武器列表</Chinesesimp>
+            <Turkish>Silah listesi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_WeaponsListDesc">
+            <English>Possible weapons for triggerman zombie types</English>
+            <Czech>Možné zbraně pro typy zombií triggerman</Czech>
+            <French>Armes possibles pour les types de zombies triggerman</French>
+            <Spanish>Armas posibles para los tipos de zombis triggerman</Spanish>
+            <Italian>Armi possibili per i tipi di zombie triggerman</Italian>
+            <Polish>Możliwa broń dla zombie typu triggerman</Polish>
+            <Portuguese>Armas possíveis para os tipos de zumbis triggerman</Portuguese>
+            <Russian>Возможное оружие для зомби-стрелков</Russian>
+            <German>Mögliche Waffen für Triggerman-Zombies</German>
+            <Korean>트리거맨 좀비가 가질 수 있는 무기</Korean>
+            <Japanese>トリガーマンゾンビタイプが所持可能な武器</Japanese>
+            <Chinese>槍手型殭屍可能使用的武器</Chinese>
+            <Chinesesimp>枪手型僵尸可能使用的武器</Chinesesimp>
+            <Turkish>Tetikçi zombi türleri için olası silahlar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_Zombification">
+            <English>Zombification</English>
+            <Czech>Zombifikace</Czech>
+            <French>Zombification</French>
+            <Spanish>Zombificación</Spanish>
+            <Italian>Zombificazione</Italian>
+            <Polish>Zombifikacja</Polish>
+            <Portuguese>Zumbificação</Portuguese>
+            <Russian>Зомбификация</Russian>
+            <German>Zombifizierung</German>
+            <Korean>좀비화</Korean>
+            <Japanese>ゾンビ化</Japanese>
+            <Chinese>殭屍化</Chinese>
+            <Chinesesimp>僵尸化</Chinesesimp>
+            <Turkish>Zombileşme</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_WZC_ZombificationDesc">
+            <English>Enables infection to cause player zombification</English>
+            <Czech>Povolí, aby infekce způsobila zombifikaci hráče</Czech>
+            <French>Permet à l'infection de provoquer la zombification du joueur</French>
+            <Spanish>Permite que la infección cause la zombificación del jugador</Spanish>
+            <Italian>Abilita l'infezione per causare la zombificazione del giocatore</Italian>
+            <Polish>Pozwala infekcji na zombifikację gracza</Polish>
+            <Portuguese>Ativa a infecção para causar zumbificação do jogador</Portuguese>
+            <Russian>Позволяет инфекции вызывать зомбификацию игрока</Russian>
+            <German>Ermöglicht es der Infektion, die Zombifizierung des Spielers zu verursachen</German>
+            <Korean>감염으로 인한 플레이어 좀비화를 활성화합니다</Korean>
+            <Japanese>感染によるプレイヤーのゾンビ化を有効にします</Japanese>
+            <Chinese>開啟感染導致玩家殭屍化</Chinese>
+            <Chinesesimp>开启感染导致玩家僵尸化</Chinesesimp>
+            <Turkish>Enfeksiyonun oyuncunun zombileşmesine neden olmasını sağlar</Turkish>
+        </Key>
+    </Package>
+</Project>

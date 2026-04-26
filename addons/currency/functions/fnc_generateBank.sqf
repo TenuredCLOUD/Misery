@@ -18,7 +18,7 @@ params ["_object"];
 
 [
     _object,
-    format ["Open %1", GVAR(bankName)],
+    format [localize LSTRING(OpenAction), GVAR(bankName)],
     QUOTE(a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa),
     QUOTE(a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa),
     QUOTE(_this distance _target < 3),

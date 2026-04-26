@@ -25,9 +25,9 @@ private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position player);
 _soundDummy attachTo [player, [0, 0, 0], "Pelvis"];
 
 private _toolUsed = switch (true) do {
-    case (_hasAxe && !_hasSaw): {[QCLASS(audio_sound_chopWood), 0, "Chopping log...", 10]};
-    case (_hasSaw && !_hasAxe): {[QCLASS(audio_sound_chainsawSplit), 1, "Sawing log...", 15]};
-    case (_hasAxe && _hasSaw): {[QCLASS(audio_sound_chainsawSplit), 1, "Sawing log...", 15]};
+    case (_hasAxe && !_hasSaw): {[QCLASS(audio_sound_chopWood), 0, localize LSTRING(ChoppingLog), 10]};
+    case (_hasSaw && !_hasAxe): {[QCLASS(audio_sound_chainsawSplit), 1, localize LSTRING(SawingLog), 15]};
+    case (_hasAxe && _hasSaw): {[QCLASS(audio_sound_chainsawSplit), 1, localize LSTRING(SawingLog), 15]};
 };
 
 _soundDummy say3D [_toolUsed select 0, 500];
@@ -67,9 +67,9 @@ _toolUsed select 3,
 
     if (_toolUsed select 1 isEqualTo 1) then {
         player setVariable [QGVAR(cuttingWood), nil];
-        [QEGVAR(common,tileText), "You stop sawing the log..."] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), localize LSTRING(StopSawingLog)] call CBA_fnc_localEvent;
     } else {
-        [QEGVAR(common,tileText), "You stop splitting the log..."] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), localize LSTRING(StopSplittingLog)] call CBA_fnc_localEvent;
     };
 },
 [_toolUsed]

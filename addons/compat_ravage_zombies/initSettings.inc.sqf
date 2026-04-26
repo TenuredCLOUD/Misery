@@ -3,7 +3,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(enabled),
     "CHECKBOX",
-    ["Ravage Zombie infection", "Allow Zombies to inflict disease? (Requires Ravage Zombie Module)"],
+    [LSTRING(Infection), LSTRING(InfectionDesc)],
     _category,
     false,
     1
@@ -12,7 +12,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(specimensEnabled),
     "CHECKBOX",
-    ["Ravage Zombie specimens", "Allow specimen collection from zombies?"],
+    [LSTRING(Specimens), LSTRING(SpecimensDesc)],
     _category,
     false,
     1
@@ -21,7 +21,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(chance),
     "SLIDER",
-    ["Ravage Zombie Infection chance", "% chance per zombie hit to become infected..."],
+    [LSTRING(InfectionChance), LSTRING(InfectionChanceDesc)],
     _category,
     [0, 100, 0, 0],
     1

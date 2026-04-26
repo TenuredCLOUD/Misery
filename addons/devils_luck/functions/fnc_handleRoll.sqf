@@ -21,21 +21,21 @@ private _dealer = player getVariable [QGVAR(currentDealer), objNull];
 
 private _dealerFunds = _dealer getVariable [QGVAR(dealerFunds), 50000];
 if (_dealerFunds <= 0) exitWith {
-    ctrlSetText [1104, "This dealer has no more funds... Come back later..."];
+    ctrlSetText [1104, localize LSTRING(DealerNoFunds)];
 };
 
 call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
 if (_bet <= 0) exitWith {
-    ctrlSetText [1104, "You need to bet something..."];
+    ctrlSetText [1104, localize LSTRING(NeedToBet)];
 };
 
 if (_prediction isEqualTo -1) exitWith {
-    ctrlSetText [1104, "Pick Higher or Lower..."];
+    ctrlSetText [1104, localize LSTRING(PickHigherLower)];
 };
 
 if (_funds < _bet) exitWith {
-    ctrlSetText [1104, "You don't have the funds to wager that bet..."];
+    ctrlSetText [1104, localize LSTRING(NoFundsToWager)];
 };
 
 private _d1 = floor(random 6) + 1;
@@ -67,9 +67,9 @@ if (_won) then {
     [_payout] call EFUNC(currency,modifyMoney);
     _dealer setVariable [QGVAR(dealerFunds), _dealerFunds - _payout, true];
 
-    private _winnerText = format ["Winner! You gained %2 %1", [_payout, 1, 2, true] call CBA_fnc_formatNumber, EGVAR(currency,symbol)];
+    private _winnerText = format ["%3%2 %1", [_payout, 1, 2, true] call CBA_fnc_formatNumber, EGVAR(currency,symbol), localize LSTRING(WinnerGained)];
     if (_payout < _bet) then {
-        _winnerText = _winnerText + " (This dealer is broke!)";
+        _winnerText = _winnerText + localize LSTRING(DealerBroke);
     };
 
     ctrlSetText [1104, _winnerText];
@@ -77,8 +77,8 @@ if (_won) then {
     [-_bet] call EFUNC(currency,modifyMoney);
     _dealer setVariable [QGVAR(dealerFunds), _dealerFunds + _bet, true];
 
-    private _baseMsg = ["Better luck next time...", "Tie! The House always wins..."] select _tie;
-    private _loserText = format ["%1 You lost %3 %2", _baseMsg, [_bet, 1, 2, true] call CBA_fnc_formatNumber, EGVAR(currency,symbol)];
+    private _baseMsg = [localize LSTRING(BetterLuckNextTime), localize LSTRING(TieHouseWins)] select _tie;
+    private _loserText = format ["%1 %4 %3 %2", _baseMsg, [_bet, 1, 2, true] call CBA_fnc_formatNumber, EGVAR(currency,symbol), localize LSTRING(YouLost)];
     ctrlSetText [1104, _loserText];
 };
 
@@ -88,6 +88,6 @@ ctrlSetText [2222, format ["%3: %1 %2", EGVAR(currency,symbol), [_funds, 1, 2, t
 
 private _dealerFundsUpdated = _dealer getVariable [QGVAR(dealerFunds), 50000];
 
-ctrlSetText [2223, format ["Dealer: %1 %2", EGVAR(currency,symbol), [_dealerFundsUpdated, 1, 2, true] call CBA_fnc_formatNumber]];
+ctrlSetText [2223, format ["%3 %1 %2", EGVAR(currency,symbol), [_dealerFundsUpdated, 1, 2, true] call CBA_fnc_formatNumber, localize LSTRING(DealerLabel)]];
 
 GVAR(currentTotal) = _newTotal;

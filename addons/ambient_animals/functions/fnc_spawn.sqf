@@ -41,7 +41,7 @@ for "_i" from 1 to _numEntities do {
 
     // Check if _outsidePos is valid and not water
     if (_outsidePos isEqualTo [] || surfaceIsWater _outsidePos) exitWith {
-        if (GVAR(debug)) then {systemChat "[Misery Animal spawner] Invalid position or position in water, skipping..."};
+        if (GVAR(debug)) then {[QUOTE(COMPONENT_BEAUTIFIED), localize LSTRING(InvalidPos)] call EFUNC(common,debugMessage);};
         continue;
     };
     if ([GVAR(animalSpawnChance)] call EFUNC(common,rollChance)) then {

@@ -14,7 +14,7 @@ class CLASS(moneyGive_ui) {
         };
         class CLASS(moneyGiveMenu_prompt): RscText {
             idc = 1000;
-            text = "Give funds"; //--- ToDo: Localize;
+            text = ECSTRING(currency,GiveFunds);
             x = 4 * GUI_GRID_W + GUI_GRID_X;
             y = 5.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 11 * GUI_GRID_W;
@@ -36,7 +36,7 @@ class CLASS(moneyGive_ui) {
         class CLASS(moneyGiveMenu_gift): RscButton {
             idc = 1600;
             onButtonClick = QUOTE([] call EFUNC(currency,giveMoney));
-            text = "Give"; //--- ToDo: Localize;
+            text = ECSTRING(currency,Give);
             x = 14.5 * GUI_GRID_W + GUI_GRID_X;
             y = 10.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 8 * GUI_GRID_W;

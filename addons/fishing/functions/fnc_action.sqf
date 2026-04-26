@@ -15,11 +15,11 @@
 */
 
 if !([] call FUNC(canFish)) exitWith {
-    ctrlSetText [1001, "You need to be near water or on a watercraft to fish!"];
+    ctrlSetText [1001, localize LSTRING(NeedWater)];
 };
 
 if !([] call FUNC(hasGear)) exitWith {
-    ctrlSetText [1001, "You need a fishing pole, spool, hook, and bait to fish!"];
+    ctrlSetText [1001, localize LSTRING(NeedGear)];
 };
 
 // Force holstering

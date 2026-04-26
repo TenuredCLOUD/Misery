@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Compat_Rearm">
+        <Key ID="STR_MISERY_Compat_Rearm_ActionName">
+            <English>Resupply (%1)</English>
+            <Czech>Přezbrojit (%1)</Czech>
+            <French>Réapprovisionner (%1)</French>
+            <Spanish>Reabastecer (%1)</Spanish>
+            <Italian>Rifornimento (%1)</Italian>
+            <Polish>Uzupełnij (%1)</Polish>
+            <Portuguese>Reabastecer (%1)</Portuguese>
+            <Russian>Пополнить БК (%1)</Russian>
+            <German>Aufmunitionieren (%1)</German>
+            <Korean>재보급 (%1)</Korean>
+            <Japanese>補給 (%1)</Japanese>
+            <Chinese>補給 (%1)</Chinese>
+            <Chinesesimp>补给 (%1)</Chinesesimp>
+            <Turkish>Yeniden Mühimmatlandır (%1)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_Rearm_Areas">
+            <English>Rearming Areas</English>
+            <Czech>Oblasti přezbrojení</Czech>
+            <French>Zones de réarmement</French>
+            <Spanish>Áreas de rearme</Spanish>
+            <Italian>Aree di riarmo</Italian>
+            <Polish>Strefy przezbrajania</Polish>
+            <Portuguese>Áreas de rearmamento</Portuguese>
+            <Russian>Зоны пополнения БК</Russian>
+            <German>Aufmunitionierungsbereiche</German>
+            <Korean>재보급 구역</Korean>
+            <Japanese>弾薬補給エリア</Japanese>
+            <Chinese>重新補給區域</Chinese>
+            <Chinesesimp>重新补给区域</Chinesesimp>
+            <Turkish>Yeniden Mühimmatlandırma Alanları</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_Rearm_AreasDesc">
+            <English>ELLIPSE or RECTANGLE marker names covering the rearming area as strings ['Rearm_1', 'Rearm_2']</English>
+            <Czech>Názvy markerů ELLIPSE nebo RECTANGLE pokrývající oblast přezbrojení jako řetězce ['Rearm_1', 'Rearm_2']</Czech>
+            <French>Noms des marqueurs ELLIPSE ou RECTANGLE couvrant la zone de réarmement sous forme de chaînes ['Rearm_1', 'Rearm_2']</French>
+            <Spanish>Nombres de marcadores ELLIPSE o RECTANGLE que cubren el área de rearme como cadenas ['Rearm_1', 'Rearm_2']</Spanish>
+            <Italian>Nomi dei marcatori ELLIPSE o RECTANGLE che coprono l'area di riarmo come stringhe ['Rearm_1', 'Rearm_2']</Italian>
+            <Polish>Nazwy markerów ELLIPSE lub RECTANGLE pokrywające obszar przezbrajania jako ciągi znaków ['Rearm_1', 'Rearm_2']</Polish>
+            <Portuguese>Nomes dos marcadores ELLIPSE ou RECTANGLE cobrindo a área de rearmamento como strings ['Rearm_1', 'Rearm_2']</Portuguese>
+            <Russian>Имена маркеров ELLIPSE или RECTANGLE, охватывающие зону пополнения БК, в виде строк ['Rearm_1', 'Rearm_2']</Russian>
+            <German>ELLIPSE- oder RECTANGLE-Markernamen, die den Aufmunitionierungsbereich abdecken, als Strings ['Rearm_1', 'Rearm_2']</German>
+            <Korean>재보급 구역을 포함하는 ELLIPSE 또는 RECTANGLE 마커 이름 (문자열 형식) ['Rearm_1', 'Rearm_2']</Korean>
+            <Japanese>弾薬補給エリアをカバーする ELLIPSE または RECTANGLE マーカーの名前。文字列形式 ['Rearm_1', 'Rearm_2']</Japanese>
+            <Chinese>覆蓋重新補給區域的 ELLIPSE 或 RECTANGLE 標記名稱，格式為字符串 ['Rearm_1', 'Rearm_2']</Chinese>
+            <Chinesesimp>覆盖重新补给区域的 ELLIPSE 或 RECTANGLE 标记名称，格式为字符串 ['Rearm_1', 'Rearm_2']</Chinesesimp>
+            <Turkish>Yeniden mühimmatlandırma alanını kapsayan dize biçimindeki ELLIPSE veya RECTANGLE işaretçi adları ['Rearm_1', 'Rearm_2']</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_Rearm_CannotResupply">
+            <English>This vehicle cannot be resupplied...</English>
+            <Czech>Toto vozidlo nelze přezbrojit...</Czech>
+            <French>Ce véhicule ne peut pas être réapprovisionné...</French>
+            <Spanish>Este vehículo no puede ser reabastecido...</Spanish>
+            <Italian>Questo veicolo non può essere rifornito...</Italian>
+            <Polish>Tego pojazdu nie można uzupełnić...</Polish>
+            <Portuguese>Este veículo não pode ser reabastecido...</Portuguese>
+            <Russian>Эту технику нельзя пополнить...</Russian>
+            <German>Dieses Fahrzeug kann nicht aufmunitioniert werden...</German>
+            <Korean>이 차량은 재보급할 수 없습니다...</Korean>
+            <Japanese>この車両は補給できません...</Japanese>
+            <Chinese>此載具無法重新補給...</Chinese>
+            <Chinesesimp>此载具无法重新补给...</Chinesesimp>
+            <Turkish>Bu araç yeniden mühimmatlandırılamaz...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_Rearm_Interrupted">
+            <English>Resupply interrupted...</English>
+            <Czech>Přezbrojování přerušeno...</Czech>
+            <French>Réapprovisionnement interrompu...</French>
+            <Spanish>Reabastecimiento interrumpido...</Spanish>
+            <Italian>Rifornimento interrotto...</Italian>
+            <Polish>Uzupełnianie przerwane...</Polish>
+            <Portuguese>Reabastecimento interrompido...</Portuguese>
+            <Russian>Пополнение БК прервано...</Russian>
+            <German>Aufmunitionieren unterbrochen...</German>
+            <Korean>재보급이 중단되었습니다...</Korean>
+            <Japanese>補給が中断されました...</Japanese>
+            <Chinese>補給已中斷...</Chinese>
+            <Chinesesimp>补给已中断...</Chinesesimp>
+            <Turkish>Yeniden mühimmatlandırma yarıda kesildi...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_Rearm_NoOption">
+            <English>No Resupply option selected...</English>
+            <Czech>Nebyla vybrána žádná možnost přezbrojení...</Czech>
+            <French>Aucune option de réapprovisionnement sélectionnée...</French>
+            <Spanish>No se ha seleccionado ninguna opción de reabastecimiento...</Spanish>
+            <Italian>Nessuna opzione di rifornimento selezionata...</Italian>
+            <Polish>Nie wybrano opcji uzupełniania...</Polish>
+            <Portuguese>Nenhuma opção de reabastecimiento selecionada...</Portuguese>
+            <Russian>Опция пополнения не выбрана...</Russian>
+            <German>Keine Aufmunitionierungsoption ausgewählt...</German>
+            <Korean>재보급 옵션이 선택되지 않았습니다...</Korean>
+            <Japanese>補給オプションが選択されていません...</Japanese>
+            <Chinese>未選擇補給選項...</Chinese>
+            <Chinesesimp>未选择补给选项...</Chinesesimp>
+            <Turkish>Yeniden mühimmatlandırma seçeneği seçilmedi...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_Rearm_NoVehicle">
+            <English>No Vehicle to Rearm...</English>
+            <Czech>Žádné vozidlo k přezbrojení...</Czech>
+            <French>Aucun véhicule à réarmer...</French>
+            <Spanish>¡No hay vehículo para rearmar!</Spanish>
+            <Italian>Nessun veicolo da riarmare...</Italian>
+            <Polish>Brak pojazdu do przezbrojenia...</Polish>
+            <Portuguese>Nenhum veículo para rearmar...</Portuguese>
+            <Russian>Нет техники для пополнения БК...</Russian>
+            <German>Kein Fahrzeug zum Aufmunitionieren...</German>
+            <Korean>재보급할 차량이 없습니다...</Korean>
+            <Japanese>弾薬補給する車両がありません...</Japanese>
+            <Chinese>沒有可重新補給的載具...</Chinese>
+            <Chinesesimp>没有可重新补给的载具...</Chinesesimp>
+            <Turkish>Yeniden mühimmatlandırılacak araç yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_Rearm_ProgressStatus">
+            <English>Resupplying...%1%2%1Progress: %3%%%1Funds:%1%4%1%5</English>
+            <Czech>Přezbrojování...%1%2%1Postup: %3%%%1Finance:%1%4%1%5</Czech>
+            <French>Réapprovisionnement...%1%2%1Progression : %3%%%1Fonds :%1%4%1%5</French>
+            <Spanish>Reabasteciendo...%1%2%1Progreso: %3%%%1Fondos:%1%4%1%5</Spanish>
+            <Italian>Rifornimento...%1%2%1Progresso: %3%%%1Fondi:%1%4%1%5</Italian>
+            <Polish>Uzupełnianie...%1%2%1Postęp: %3%%%1Fundusze:%1%4%1%5</Polish>
+            <Portuguese>Reabastecendo...%1%2%1Progresso: %3%%%1Fundos:%1%4%1%5</Portuguese>
+            <Russian>Пополнение...%1%2%1Прогресс: %3%%%1Средства:%1%4%1%5</Russian>
+            <German>Aufmunitionieren...%1%2%1Fortschritt: %3%%%1Guthaben:%1%4%1%5</German>
+            <Korean>재보급 중...%1%2%1진행률: %3%%%1자금:%1%4%1%5</Korean>
+            <Japanese>補給中...%1%2%1進行状況: %3%%%1資金:%1%4%1%5</Japanese>
+            <Chinese>正在補給...%1%2%1進度: %3%%%1資金:%1%4%1%5</Chinese>
+            <Chinesesimp>正在补给...%1%2%1进度: %3%%%1资金:%1%4%1%5</Chinesesimp>
+            <Turkish>Yeniden mühimmatlandırılıyor...%1%2%1İlerleme: %3%%%1Fonlar:%1%4%1%5</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_Rearm_ReqResupply">
+            <English>Request resupply</English>
+            <Czech>Žádost o doplnění zásob</Czech>
+            <French>Demande de réapprovisionnement</French>
+            <Spanish>Solicitar reabastecimiento</Spanish>
+            <Italian>Richiesta di rifornimento</Italian>
+            <Polish>Żądanie uzupełnienia zapasów</Polish>
+            <Portuguese>Solicitação de reabastecimento</Portuguese>
+            <Russian>Запрос на пополнение запасов</Russian>
+            <German>Nachschub anfordern</German>
+            <Korean>재보급 요청</Korean>
+            <Japanese>補給を要請する</Japanese>
+            <Chinese>請求補給</Chinese>
+            <Chinesesimp>请求补给</Chinesesimp>
+            <Turkish>İkmal talebi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_Rearm_Success">
+            <English>%1 has been fully resupplied...</English>
+            <Czech>%1 byl plně přezbrojen...</Czech>
+            <French>%1 a été entièrement réapprovisionné...</French>
+            <Spanish>%1 ha sido reabastecido por completo...</Spanish>
+            <Italian>%1 è stato completamente rifornito...</Italian>
+            <Polish>%1 został w pełni uzupełniony...</Polish>
+            <Portuguese>%1 foi totalmente reabastecido...</Portuguese>
+            <Russian>%1 был полностью пополнен...</Russian>
+            <German>%1 wurde vollständig aufmunitioniert...</German>
+            <Korean>%1이(가) 완전히 재보급되었습니다...</Korean>
+            <Japanese>%1 の補給が完了しました...</Japanese>
+            <Chinese>%1 已完成全部補給...</Chinese>
+            <Chinesesimp>%1 已完成全部补给...</Chinesesimp>
+            <Turkish>%1 tamamen yeniden mühimmatlandırıldı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_Rearm_VehicleResupply">
+            <English>Vehicle Resupply</English>
+            <Czech>Doplnění zásob vozidla</Czech>
+            <French>Ravitaillement du véhicule</French>
+            <Spanish>Reabastecimiento de vehículo</Spanish>
+            <Italian>Rifornimento veicolo</Italian>
+            <Polish>Zaopatrzenie pojazdu</Polish>
+            <Portuguese>Reabastecimento do veículo</Portuguese>
+            <Russian>Пополнение запасов транспорта</Russian>
+            <German>Fahrzeug-Aufstockung</German>
+            <Korean>차량 보급</Korean>
+            <Japanese>車両補給</Japanese>
+            <Chinese>載具補給</Chinese>
+            <Chinesesimp>载具补给</Chinesesimp>
+            <Turkish>Araç İkmali</Turkish>
+        </Key>
+    </Package>
+</Project>

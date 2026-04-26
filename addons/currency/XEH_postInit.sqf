@@ -19,7 +19,7 @@ if (isServer) then {
 
 [
     "searchForMoney_menu",
-    format ["%1 Search for money", GVAR(symbol)],
+    format [localize LSTRING(SearchAction), GVAR(symbol)],
     {([player, ["CAManBase"], 2] call EFUNC(common,nearCorpse)) select 0},
     {
         [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
@@ -33,7 +33,7 @@ if (isServer) then {
 
 [
     "giftMoney_menu",
-    format ["%1 Gift money", GVAR(symbol)],
+    format [localize LSTRING(GiftAction), GVAR(symbol)],
     {([player, 2] call EFUNC(common,nearPlayer)) select 0},
     {
         [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;

@@ -35,4 +35,4 @@ GVAR(activeFires) pushBack [_object, _fuelType, _burnTimeLeft];
 
 publicVariable QGVAR(activeFires);
 
-_noteBox ctrlSetText "Fire crafted successfully!";
+_noteBox ctrlSetText localize LSTRING(Success);

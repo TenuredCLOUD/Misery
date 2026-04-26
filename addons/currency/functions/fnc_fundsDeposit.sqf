@@ -19,11 +19,11 @@ call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", ""
 private _amount = (ctrlText ((findDisplay 483729) displayCtrl 1400)) call BIS_fnc_parseNumber;
 
 if (_amount <= 0) exitWith {
-    [QEGVAR(common,tileText), "Invalid deposit amount..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(InvalidDeposit)] call CBA_fnc_localEvent;
 };
 
 if (_amount > _funds) exitWith {
-    [QEGVAR(common,tileText), "You don't have enough funds for this deposit..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(NotEnoughDeposit)] call CBA_fnc_localEvent;
 };
 
 private _taxAmount = 0;
@@ -42,9 +42,9 @@ if (GVAR(bankTax)) then {
 [_taxxedFunds, true] call FUNC(modifyMoney);
 
 private _message = if (_taxAmount > 0) then {
-    format ["Deposited: %2 %1 (Tax: %2 %3)", [_taxxedFunds, 1, 2, true] call CBA_fnc_formatNumber, GVAR(symbol), [_taxAmount, 1, 2, true] call CBA_fnc_formatNumber]
+    format [localize LSTRING(DepositedTax), [_taxxedFunds, 1, 2, true] call CBA_fnc_formatNumber, GVAR(symbol), [_taxAmount, 1, 2, true] call CBA_fnc_formatNumber]
 } else {
-    format ["Deposited: %2 %1", [_taxxedFunds, 1, 2, true] call CBA_fnc_formatNumber, GVAR(symbol)]
+    format [localize LSTRING(Deposited), [_taxxedFunds, 1, 2, true] call CBA_fnc_formatNumber, GVAR(symbol)]
 };
 
 [QEGVAR(common,tileText), _message] call CBA_fnc_localEvent;

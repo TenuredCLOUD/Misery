@@ -43,12 +43,12 @@ private _rearmInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key"];
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QCLASS(processRearm), false];
-        [parseText "<t font='PuristaMedium' size='1'>Resupply interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+        [QEGVAR(common,tileText), localize LSTRING(Interrupted)] call CBA_fnc_localEvent;
     };
 }];
 
 if (_funds < _resupplyPrice) exitWith {
-    ctrlSetText [1001, "You cannot afford this!"];
+    ctrlSetText [1001, localize ECSTRING(common,TooExpensive)];
     [982383, [1600, 1601], true] call EFUNC(common,displayShowControls);
     player setVariable [QCLASS(processRearm), nil];
     _dialog displayRemoveEventHandler ["KeyDown", _rearmInterrupt];
@@ -75,7 +75,7 @@ _dummyVehicle enableSimulation false;
         player setVariable [QCLASS(processRearm), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _rearmInterrupt];
         deleteVehicle _dummyVehicle;
-        ctrlSetText [1001, "Resupply interrupted..."];
+        ctrlSetText [1001, localize LSTRING(Interrupted)];
         [982383, [1600, 1601], true] call EFUNC(common,displayShowControls);
         _handle call CBA_fnc_removePerFrameHandler;
     };
@@ -84,7 +84,7 @@ _dummyVehicle enableSimulation false;
         [_totalFundsDeducted] call EFUNC(currency,modifyMoney);
         player setVariable [QCLASS(processRearm), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _rearmInterrupt];
-        ctrlSetText [1001, "You cannot afford this!"];
+        ctrlSetText [1001, localize ECSTRING(common,TooExpensive)];
         [982383, [1600, 1601], true] call EFUNC(common,displayShowControls);
         deleteVehicle _dummyVehicle;
         _handle call CBA_fnc_removePerFrameHandler;
@@ -96,7 +96,7 @@ _dummyVehicle enableSimulation false;
     private _progress = (_step + 1) / _totalSteps;
     private _progressPercent = (_progress * 100) toFixed 2;
     private _displayedText = format [
-        "Resupplying...%1%2%1Progress: %3%%%1Funds:%1%4%1%5",
+        localize LSTRING(ProgressStatus),
         endl,
         _displayName,
         _progressPercent,
@@ -109,7 +109,7 @@ _dummyVehicle enableSimulation false;
         [_dummyVehicle, _nearestVehicle] call ACEFUNC(rearm,rearmEntireVehicleSuccess);
         player setVariable [QCLASS(processRearm), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _rearmInterrupt];
-        private _displayFull = format ["%1 has been fully resupplied...", _displayName];
+        private _displayFull = format [localize LSTRING(Success), _displayName];
         ctrlSetText [1001, _displayFull];
         [982383, [1600, 1601], true] call EFUNC(common,displayShowControls);
         deleteVehicle _dummyVehicle;

@@ -19,7 +19,7 @@
 private _audioSource = playSound selectRandom [MACRO_FIELDDRESS_SAWSOUNDS];
 
 if (_corpse getVariable [QGVAR(processingSkin), false]) exitWith {
-    [QEGVAR(common,tileText), "This corpse is being processed already..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(AlreadyProcessed)] call CBA_fnc_localEvent;
 };
 
 if (isNil {_corpse getVariable QGVAR(processingSkin)}) then {
@@ -28,7 +28,7 @@ if (isNil {_corpse getVariable QGVAR(processingSkin)}) then {
 
 player playAction "Gear";
 
-["You start to saw the corpse...",
+[localize LSTRING(StartSawing),
 15,
 {_isNear},
 {
@@ -60,7 +60,7 @@ player playAction "Gear";
 
     [player, _specimen, true] call CBA_fnc_addItem;
 
-    [QEGVAR(common,tileText), "You collect your specimen, but the rest of the corpse is too rotten for any more specimens..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(RottenSpecimen)] call CBA_fnc_localEvent;
 },
 {
     params ["_args"];
@@ -72,7 +72,7 @@ player playAction "Gear";
         deleteVehicle _audioSource;
     };
 
-    [QEGVAR(common,tileText), "You stop sawing the corpse..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(StopSawing)] call CBA_fnc_localEvent;
 
     // Reset processing
     _corpse setVariable [QGVAR(processingSaw), nil, true];

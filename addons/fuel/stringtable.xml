@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Fuel">
+        <Key ID="STR_MISERY_Fuel_FillingInterrupted">
+            <English>Filling interrupted...</English>
+            <Czech>Naplnění přerušeno...</Czech>
+            <French>Remplissage interrompu...</French>
+            <Spanish>Llenado interrumpido...</Spanish>
+            <Italian>Riempiemento interrotto...</Italian>
+            <Polish>Wypełnienie przerwane...</Polish>
+            <Portuguese>Preenchimento interrompido...</Portuguese>
+            <Russian>Заполнение прервано...</Russian>
+            <German>Auffüllen unterbrochen...</German>
+            <Korean>채우기 중단됨...</Korean>
+            <Japanese>充填が中断されました...</Japanese>
+            <Chinese>填充被中断了...</Chinese>
+            <Chinesesimp>填充被中断了...</Chinesesimp>
+            <Turkish>Doldurma işlemi kesildi...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fuel_NoFuelCan">
+            <English>No selected fuel can to fill...</English>
+            <Czech>Žádný vybraný nádrž na naplnění...</Czech>
+            <French>Aucune citerne de carburant sélectionnée à remplir...</French>
+            <Spanish>Ninguna tinaco seleccionado para llenar...</Spanish>
+            <Italian>Nessuna serbatoio selezionato da rifornire...</Italian>
+            <Polish>Brak wybranego zbiornika paliwa do wypełnienia...</Polish>
+            <Portuguese>Nenhum tinaco selecionado para encher...</Portuguese>
+            <Russian>Нет выбранного бака для заправки...</Russian>
+            <German>Keine ausgewählte Tankkanister zum Auffüllen...</German>
+            <Korean>채울 연료 탱크가 없습니다...</Korean>
+            <Japanese>補給するタンクが選択されていません...</Japanese>
+            <Chinese>没有选择的油箱来填充...</Chinese>
+            <Chinesesimp>没有选择的油箱来填充...</Chinesesimp>
+            <Turkish>Doldurmak için seçilmiş bir yakıt bantı yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fuel_NoFuelCanToFill">
+            <English>You have no fuel can to fill...</English>
+            <Czech>Nemáte žádný nádrž na naplnění...</Czech>
+            <French>Vous n'avez aucune citerne de carburant à remplir...</French>
+            <Spanish>No tienes ningún tinaco para llenar...</Spanish>
+            <Italian>Non hai nessun serbatoio da rifornire...</Italian>
+            <Polish>Nie masz zbiornika paliwa do wypełnienia...</Polish>
+            <Portuguese>Você não tem nenhum tinaco para encher...</Portuguese>
+            <Russian>У вас нет бака для заправки...</Russian>
+            <German>Sie haben keinen Tankkanister zum Auffüllen...</German>
+            <Korean>채울 연료 탱크가 없습니다...</Korean>
+            <Japanese>補給するタンクがありません...</Japanese>
+            <Chinese>没有油箱可以填充...</Chinese>
+            <Chinesesimp>没有油箱可以填充...</Chinesesimp>
+            <Turkish>Doldurmak için hiçbir yakıt bantı yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fuel_NoPowerSource">
+            <English>You have no power source to operate this fuel pump...</English>
+            <Czech>Nemáte zdroj energie k provozu této pompy...</Czech>
+            <French>Vous n'avez aucune source d'énergie pour faire fonctionner cette pompe à essence...</French>
+            <Spanish>No tienes una fuente de energía para operar este pozol...</Spanish>
+            <Italian>Non hai un'origine di energia per operare questa pompa...</Italian>
+            <Polish>Nie masz źródła energii do działania tej bombki...</Polish>
+            <Portuguese>Você não tem uma fonte de energia para operar esta bomba...</Portuguese>
+            <Russian>У вас нет источника энергии для работы этой насосной установки...</Russian>
+            <German>Sie haben keine Energiequelle, um diese Tankstelle zu betreiben...</German>
+            <Korean>이 주유소를 작동시키기 위한 에너지 소스가 없습니다...</Korean>
+            <Japanese>この給油所を動作させるためのエネルギー源がありません...</Japanese>
+            <Chinese>你没有能源来操作这个加油泵...</Chinese>
+            <Chinesesimp>你没有能源来操作这个加油泵...</Chinesesimp>
+            <Turkish>Bu yakıt pompasını çalıştırmak için bir enerji kaynağı yoktur...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fuel_NoVehicle">
+            <English>No vehicle to refuel...</English>
+            <Czech>Žádné vozidlo k naplňování...</Czech>
+            <French>Aucun véhicule à recharger...</French>
+            <Spanish>Ningún vehículo para repostar...</Spanish>
+            <Italian>Nessun veicolo da rifornire...</Italian>
+            <Polish>Brak pojazdu do zatankowania...</Polish>
+            <Portuguese>Nenhum veículo para encher...</Portuguese>
+            <Russian>Нет транспортного средства для заправки...</Russian>
+            <German>Kein Fahrzeug zum Benzinieren...</German>
+            <Korean>주유할 차량이 없습니다...</Korean>
+            <Japanese>給油する車がありません...</Japanese>
+            <Chinese>没有车辆可供加油...</Chinese>
+            <Chinesesimp>没有车辆可供加油...</Chinesesimp>
+            <Turkish>Yakıt doldurmak için araç yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fuel_PumpingFuel">
+            <English>Pumping fuel...</English>
+            <Czech>Napálení paliva...</Czech>
+            <French>Pompage de carburant...</French>
+            <Spanish>Bombear combustible...</Spanish>
+            <Italian>Pompaggio di carburante...</Italian>
+            <Polish>Nasycanie paliwem...</Polish>
+            <Portuguese>Bomba de combustível...</Portuguese>
+            <Russian>Заправка...</Russian>
+            <German>Benzinieren...</German>
+            <Korean>연료 펌핑 중...</Korean>
+            <Japanese>燃料ポンプ中...</Japanese>
+            <Chinese>加油中...</Chinese>
+            <Chinesesimp>加油中...</Chinesesimp>
+            <Turkish>Yakıt pompalıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fuel_RefillFuelCanAtPump">
+            <English>Refill fuel can at pump</English>
+            <Czech>Napleněte nádrž na pompe</Czech>
+            <French>Réglez la citerne au distributeur</French>
+            <Spanish>Llenar tinaco en la bomba</Spanish>
+            <Italian>Riempiere il serbatoio alla pompa</Italian>
+            <Polish>Wypełnijcie zbiornik paliwa u bomby</Polish>
+            <Portuguese>Preencha o tinaco na bomba</Portuguese>
+            <Russian>Заполните бак у насоса</Russian>
+            <German>Tankkanister an der Tankstelle auffüllen</German>
+            <Korean>주유소에서 연료 탱크 채우기</Korean>
+            <Japanese>給油所でタンクを補給する</Japanese>
+            <Chinese>在加油泵处填充油箱</Chinese>
+            <Chinesesimp>在加油泵处填充油箱</Chinesesimp>
+            <Turkish>Nasosda yakıt bantını doldur</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fuel_RefuelAtPump">
+            <English>Refuel at pump</English>
+            <Czech>Naplňte na pompe</Czech>
+            <French>Réglez au distributeur</French>
+            <Spanish>Repostar en la bomba</Spanish>
+            <Italian>Riforniti alla pompa</Italian>
+            <Polish>Zatankujcie u bomby</Polish>
+            <Portuguese>Reabasteça na bomba</Portuguese>
+            <Russian>Заправиться у насоса</Russian>
+            <German>Benzinieren an der Tankstelle</German>
+            <Korean>주유소에서 주유하기</Korean>
+            <Japanese>給油所で給油する</Japanese>
+            <Chinese>在加油泵处加油</Chinese>
+            <Chinesesimp>在加油泵处加油</Chinesesimp>
+            <Turkish>Nasosda yakıt al</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fuel_Refueling">
+            <English>Refueling...</English>
+            <Czech>Naplňování...</Czech>
+            <French>Rechargement...</French>
+            <Spanish>Repostaje...</Spanish>
+            <Italian>Rifornimento...</Italian>
+            <Polish>Zatankowanie...</Polish>
+            <Portuguese>Enchimento...</Portuguese>
+            <Russian>Заправка...</Russian>
+            <German>Benzinieren...</German>
+            <Korean>주유 중...</Korean>
+            <Japanese>給油中...</Japanese>
+            <Chinese>加油中...</Chinese>
+            <Chinesesimp>加油中...</Chinesesimp>
+            <Turkish>Yakıt doldurma...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fuel_RefuelingInterrupted">
+            <English>Refueling interrupted...</English>
+            <Czech>Naplňování přerušeno...</Czech>
+            <French>Rechargement interrompu...</French>
+            <Spanish>Repostaje interrumpido...</Spanish>
+            <Italian>Rifornimento interrotto...</Italian>
+            <Polish>Zatankowanie przerwane...</Polish>
+            <Portuguese>Enchimento interrompido...</Portuguese>
+            <Russian>Заправка прервана...</Russian>
+            <German>Benzinieren unterbrochen...</German>
+            <Korean>주유 중단됨...</Korean>
+            <Japanese>給油が中断されました...</Japanese>
+            <Chinese>加油被中断了...</Chinese>
+            <Chinesesimp>加油被中断了...</Chinesesimp>
+            <Turkish>Yakıt doldurma işlemi kesildi...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fuel_StopPumpingFuel">
+            <English>You stop pumping fuel...</English>
+            <Czech>Ukončíte napálení paliva...</Czech>
+            <French>Vous arrêtez le pompage de carburant...</French>
+            <Spanish>Detienes la bomba de combustible...</Spanish>
+            <Italian>Interrompi il pompaggio di carburante...</Italian>
+            <Polish>Zatrzymaj nasycanie paliwem...</Polish>
+            <Portuguese>Você para a bomba de combustível...</Portuguese>
+            <Russian>Вы прекращаете заправку...</Russian>
+            <German>Sie stoppen das Benzinieren...</German>
+            <Korean>연료 펌핑을 중단합니다...</Korean>
+            <Japanese>燃料ポンプを停止します...</Japanese>
+            <Chinese>你停止加油...</Chinese>
+            <Chinesesimp>你停止加油...</Chinesesimp>
+            <Turkish>Yakıt pompalamayı durduruyorsunuz...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fuel_TankFull">
+            <English>%1 fuel tank is full...</English>
+            <Czech>Tank %1 je plný...</Czech>
+            <French>Tank %1 est plein...</French>
+            <Spanish>El tanque de combustible %1 está lleno...</Spanish>
+            <Italian>Tanque di carburante %1 è pieno...</Italian>
+            <Polish>Tank paliwna %1 jest pełny...</Polish>
+            <Portuguese>O tanque de combustível %1 está cheio...</Portuguese>
+            <Russian>Бак %1 полон...</Russian>
+            <German>Tank %1 ist voll...</German>
+            <Korean>%1 연료 탱크가 가득 찼습니다...</Korean>
+            <Japanese>燃料タンク %1 が満タンです...</Japanese>
+            <Chinese>燃料箱 %1 已满...</Chinese>
+            <Chinesesimp>燃料箱 %1 已满...</Chinesesimp>
+            <Turkish>%1 yakıt bantı dolu...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fuel_TankLevel">
+            <English>Tank level:</English>
+            <Czech>Úroveň nádrže:</Czech>
+            <French>Niveau du réservoir :</French>
+            <Spanish>Nivel del tanque :</Spanish>
+            <Italian>Livello del serbatoio :</Italian>
+            <Polish>Poziom zbiornika paliwa :</Polish>
+            <Portuguese>Nível do tanque :</Portuguese>
+            <Russian>Уровень топлива:</Russian>
+            <German>Tankstand:</German>
+            <Korean>연료 수준:</Korean>
+            <Japanese>タンクレベル：</Japanese>
+            <Chinese>油箱水平：</Chinese>
+            <Chinesesimp>油箱水平：</Chinesesimp>
+            <Turkish>Tank düzeyi:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fuel_WrongStation">
+            <English>Wrong fuel station for this vehicle...</English>
+            <Czech>Nesprávná pumpa pro toto vozidlo...</Czech>
+            <French>Mauvaise pompe pour ce véhicule...</French>
+            <Spanish>Pozo incorrecto para este vehículo...</Spanish>
+            <Italian>Pompa errata per questo veicolo...</Italian>
+            <Polish>Nieprawidłowa stacja benzynowania dla tego pojazdu...</Polish>
+            <Portuguese>Bomba errada para este veículo...</Portuguese>
+            <Russian>Неправильная станция для данного автомобиля...</Russian>
+            <German>Falsche Tankstelle für dieses Fahrzeug...</German>
+            <Korean>이 차량에 맞는 주유소가 아닙니다...</Korean>
+            <Japanese>この車に適した給油所ではありません...</Japanese>
+            <Chinese>这个车辆的加油站不对...</Chinese>
+            <Chinesesimp>这个车辆的加油站不对...</Chinesesimp>
+            <Turkish>Bu aracı için doğru bir yakıt istasyonu bulunmamaktadır...</Turkish>
+        </Key>
+    </Package>
+</Project>

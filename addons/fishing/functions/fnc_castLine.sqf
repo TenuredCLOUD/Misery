@@ -15,11 +15,11 @@
 */
 
 if !([] call FUNC(canFish)) exitWith {
-    ctrlSetText [1001, "You need to be near water or on a watercraft to cast!"];
+    ctrlSetText [1001, localize LSTRING(NeedWaterCast)];
 };
 
 if !([] call FUNC(hasGear)) exitWith {
-    ctrlSetText [1001, "You need a fishing pole, spool, hook, and bait to cast!"];
+    ctrlSetText [1001, localize LSTRING(NeedGearCast)];
 };
 
 // Put fishing rod in players hand:
@@ -38,7 +38,7 @@ GVAR(isSnagged) = false;
 GVAR(fishOn) = false;
 GVAR(fishStrength) = 0;
 
-ctrlSetText [1001, "Line cast!"];
+ctrlSetText [1001, localize LSTRING(LineCast)];
 
 [{
     params ["_args", "_handle"];
@@ -53,13 +53,13 @@ ctrlSetText [1001, "Line cast!"];
     };
 
     if !([] call FUNC(hasGear)) exitWith {
-        [QEGVAR(common,tileText), "You lost some gear! Fishing stopped..."] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), localize LSTRING(LostGear)] call CBA_fnc_localEvent;
         [] call FUNC(exit);
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
     if !([] call FUNC(canFish)) exitWith {
-        [QEGVAR(common,tileText), "You moved away from the water! Fishing stopped..."] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), localize LSTRING(MovedAway)] call CBA_fnc_localEvent;
         [] call FUNC(exit);
         _handle call CBA_fnc_removePerFrameHandler;
     };
@@ -81,7 +81,7 @@ ctrlSetText [1001, "Line cast!"];
     GVAR(lineTension) = (GVAR(lineTension) + _tensionChange) max 0 min 1;
 
     if (GVAR(lineTension) > 0.95) then {
-        [QEGVAR(common,tileText), "Something broke or flew off the line!"] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), localize LSTRING(BrokenLine)] call CBA_fnc_localEvent;
         private _randomGearLoss = round selectRandom [1, 2, 3];
         switch (true) do {
             case (_randomGearLoss isEqualTo 1): {
@@ -122,13 +122,13 @@ ctrlSetText [1001, "Line cast!"];
 
     switch (true) do {
             case (GVAR(isSnagged)): {
-                _noteText = "The line is snagged. Try pulling the rod or reeling out.";
+                _noteText = localize LSTRING(Snagged);
             };
             case (GVAR(fishOn)): {
-                _noteText = "A fish is on! Reel in carefully and pull the rod to tire it.";
+                _noteText = localize LSTRING(FishOn);
             };
             default {
-                _noteText = "Waiting for a bite...";
+                _noteText = localize LSTRING(Waiting);
             };
         };
 

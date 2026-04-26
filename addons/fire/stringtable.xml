@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Fire">
+        <Key ID="STR_MISERY_Fire_Action">
+            <English>Use Fire</English>
+            <Czech>Použít oheň</Czech>
+            <French>Utiliser le feu</French>
+            <Spanish>Usa fuego</Spanish>
+            <Italian>Usa il fuoco</Italian>
+            <Polish>Używaj ognia</Polish>
+            <Portuguese>Use fogo</Portuguese>
+            <Russian>Использовать огонь</Russian>
+            <German>Feuer benutzen</German>
+            <Korean>불 사용</Korean>
+            <Japanese>火を使う</Japanese>
+            <Chinese>使用火堆</Chinese>
+            <Chinesesimp>使用火堆</Chinesesimp>
+            <Turkish>Ateş kullan</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_AlreadyExtinguished">
+            <English>Fire is already extinguished...</English>
+            <Czech>Oheň je již uhašen...</Czech>
+            <French>Le feu est déjà éteint...</French>
+            <Spanish>El fuego ya está extinguido...</Spanish>
+            <Italian>Il fuoco è già spento...</Italian>
+            <Polish>Ogień jest już ugaszony...</Polish>
+            <Portuguese>O fogo já está extinguido...</Portuguese>
+            <Russian>Огонь уже потушен...</Russian>
+            <German>Feuer ist bereits gelöscht...</German>
+            <Korean>불이 이미 꺼져 있습니다...</Korean>
+            <Japanese>火はすでに消えています...</Japanese>
+            <Chinese>火已經熄滅了...</Chinese>
+            <Chinesesimp>火已经熄灭了...</Chinesesimp>
+            <Turkish>Ateş zaten söndürülmüş...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_BurnTime">
+            <English>Burn Time: %1(s)</English>
+            <Czech>Doba hoření: %1 s</Czech>
+            <French>Temps de combustion : %1(s)</French>
+            <Spanish>Tiempo de combustión: %1(s)</Spanish>
+            <Italian>Tempo di combustione: %1(s)</Italian>
+            <Polish>Czas palenia: %1(s)</Polish>
+            <Portuguese>Tempo de queima: %1(s)</Portuguese>
+            <Russian>Время горения: %1 сек.</Russian>
+            <German>Brenndauer: %1(s)</German>
+            <Korean>연소 시간: %1초</Korean>
+            <Japanese>燃焼時間: %1秒</Japanese>
+            <Chinese>燃燒時間: %1(秒)</Chinese>
+            <Chinesesimp>燃烧时间: %1(秒)</Chinesesimp>
+            <Turkish>Yanma Süresi: %1(sn)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_BurnTimeLabel">
+            <English>Burn time:</English>
+            <Czech>Doba hoření:</Czech>
+            <French>Temps de combustion :</French>
+            <Spanish>Tiempo de combustión:</Spanish>
+            <Italian>Tempo di combustione:</Italian>
+            <Polish>Czas palenia:</Polish>
+            <Portuguese>Tempo de queima:</Portuguese>
+            <Russian>Время горения:</Russian>
+            <German>Brenndauer:</German>
+            <Korean>연소 시간:</Korean>
+            <Japanese>燃焼時間:</Japanese>
+            <Chinese>燃燒時間:</Chinese>
+            <Chinesesimp>燃烧时间:</Chinesesimp>
+            <Turkish>Yanma süresi:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_CheckAction">
+            <English>Check fire</English>
+            <Czech>Zkontrolovat oheň</Czech>
+            <French>Vérifier le feu</French>
+            <Spanish>Revisar fuego</Spanish>
+            <Italian>Controlla fuoco</Italian>
+            <Polish>Sprawdź ogień</Polish>
+            <Portuguese>Verificar fogo</Portuguese>
+            <Russian>Проверить огонь</Russian>
+            <German>Feuer prüfen</German>
+            <Korean>불 확인</Korean>
+            <Japanese>火を確認</Japanese>
+            <Chinese>檢查火堆</Chinese>
+            <Chinesesimp>检查火堆</Chinesesimp>
+            <Turkish>Ateşi kontrol et</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_CraftingLabel">
+            <English>Fire crafting</English>
+            <Czech>Vytváření ohně</Czech>
+            <French>Fabrication du feu</French>
+            <Spanish>Creación de fuego</Spanish>
+            <Italian>Creazione fuoco</Italian>
+            <Polish>Tworzenie ognia</Polish>
+            <Portuguese>Criação de fogo</Portuguese>
+            <Russian>Создание огня</Russian>
+            <German>Feuermachen</German>
+            <Korean>불 지피기</Korean>
+            <Japanese>火の作成</Japanese>
+            <Chinese>生火製作</Chinese>
+            <Chinesesimp>生火制作</Chinesesimp>
+            <Turkish>Ateş yakma</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_CraftingProgress">
+            <English>Crafting %1 fire... %2%3 complete</English>
+            <Czech>Vytváření %1 ohně... %2%3 hotovo</Czech>
+            <French>Fabrication d'un feu de %1... %2%3 terminé</French>
+            <Spanish>Creando fuego de %1... %2%3 completado</Spanish>
+            <Italian>Creazione fuoco di %1... %2%3 completato</Italian>
+            <Polish>Tworzenie ognia (%1)... %2%3 ukończone</Polish>
+            <Portuguese>Criando fogo de %1... %2%3 concluído</Portuguese>
+            <Russian>Создание %1 огня... %2%3 завершено</Russian>
+            <German>Erstelle %1 Feuer... %2%3 abgeschlossen</German>
+            <Korean>%1 불 지피는 중... %2%3 완료</Korean>
+            <Japanese>%1 の火を作成中... %2%3 完了</Japanese>
+            <Chinese>正在製作 %1 火堆... %2%3 已完成</Chinese>
+            <Chinesesimp>正在制作 %1 火堆... %2%3 已完成</Chinesesimp>
+            <Turkish>%1 ateşi yakılıyor... %%2%3 tamamlandı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_ExtinguishButton">
+            <English>Extinguish</English>
+            <Czech>Uhasit</Czech>
+            <French>Éteindre</French>
+            <Spanish>Extinguir</Spanish>
+            <Italian>Estinguere</Italian>
+            <Polish>Ugaś</Polish>
+            <Portuguese>Extinguir</Portuguese>
+            <Russian>Потушить</Russian>
+            <German>Löschen</German>
+            <Korean>불 끄기</Korean>
+            <Japanese>消火する</Japanese>
+            <Chinese>熄滅</Chinese>
+            <Chinesesimp>熄灭</Chinesesimp>
+            <Turkish>Söndür</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_ExtinguishNone">
+            <English>No nearby fire to extinguish...</English>
+            <Czech>V blízkosti není žádný oheň k uhašení...</Czech>
+            <French>Aucun feu à éteindre à proximité...</French>
+            <Spanish>No hay ningún fuego cerca para extinguir...</Spanish>
+            <Italian>Nessun fuoco vicino da estinguere...</Italian>
+            <Polish>Brak ognia w pobliżu do ugaszenia...</Polish>
+            <Portuguese>Nenhum fogo próximo para extinguir...</Portuguese>
+            <Russian>Поблизости нет огня, который можно потушить...</Russian>
+            <German>Kein Feuer in der Nähe zum Löschen...</German>
+            <Korean>주변에 끌 불이 없습니다...</Korean>
+            <Japanese>近くに消すべき火がありません...</Japanese>
+            <Chinese>附近沒有可熄滅的火...</Chinese>
+            <Chinesesimp>附近没有可熄灭的火...</Chinesesimp>
+            <Turkish>Yakınlarda söndürülecek ateş yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_Extinguished">
+            <English>Fire extinguished...</English>
+            <Czech>Oheň uhašen...</Czech>
+            <French>Feu éteint...</French>
+            <Spanish>Fuego extinguido...</Spanish>
+            <Italian>Fuoco estinto...</Italian>
+            <Polish>Ogień ugaszony...</Polish>
+            <Portuguese>Fogo extinguido...</Portuguese>
+            <Russian>Огонь потушен...</Russian>
+            <German>Feuer gelöscht...</German>
+            <Korean>불을 껐습니다...</Korean>
+            <Japanese>火を消しました...</Japanese>
+            <Chinese>火已熄滅...</Chinese>
+            <Chinesesimp>火已熄灭...</Chinesesimp>
+            <Turkish>Ateş söndürüldü...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_Failed">
+            <English>Failed to craft fire...</English>
+            <Czech>Nepodařilo se rozdělat oheň...</Czech>
+            <French>Échec de la fabrication du feu...</French>
+            <Spanish>Error al crear el fuego...</Spanish>
+            <Italian>Impossibile creare il fuoco...</Italian>
+            <Polish>Nie udało się rozniecić ognia...</Polish>
+            <Portuguese>Falha ao criar o fogo...</Portuguese>
+            <Russian>Не удалось разжечь огонь...</Russian>
+            <German>Feuermachen fehlgeschlagen...</German>
+            <Korean>불 지피기에 실패했습니다...</Korean>
+            <Japanese>火の作成に失敗しました...</Japanese>
+            <Chinese>生火製作失敗...</Chinese>
+            <Chinesesimp>生火制作失败...</Chinesesimp>
+            <Turkish>Ateş yakılamadı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_FuelLabel">
+            <English>Fuel source:</English>
+            <Czech>Zdroj paliva:</Czech>
+            <French>Source de combustible :</French>
+            <Spanish>Fuente de combustible:</Spanish>
+            <Italian>Fonte di combustibile:</Italian>
+            <Polish>Źródło paliwa:</Polish>
+            <Portuguese>Fonte de combustível:</Portuguese>
+            <Russian>Источник топлива:</Russian>
+            <German>Brennstoffquelle:</German>
+            <Korean>연료원:</Korean>
+            <Japanese>燃料源:</Japanese>
+            <Chinese>燃料源:</Chinese>
+            <Chinesesimp>燃料源:</Chinesesimp>
+            <Turkish>Yakıt kaynağı:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_IgnitionLabel">
+            <English>Ignition source:</English>
+            <Czech>Zdroj zapálení:</Czech>
+            <French>Source d'allumage :</French>
+            <Spanish>Fuente de ignición:</Spanish>
+            <Italian>Fonte di accensione:</Italian>
+            <Polish>Źródło zapłonu:</Polish>
+            <Portuguese>Fonte de ignição:</Portuguese>
+            <Russian>Источник зажигания:</Russian>
+            <German>Zündquelle:</German>
+            <Korean>점화원:</Korean>
+            <Japanese>着火源:</Japanese>
+            <Chinese>點火源:</Chinese>
+            <Chinesesimp>点火源:</Chinesesimp>
+            <Turkish>Ateşleme kaynağı:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_Interrupted">
+            <English>Fire crafting interrupted...</English>
+            <Czech>Vytváření ohně přerušeno...</Czech>
+            <French>Fabrication du feu interrompue...</French>
+            <Spanish>Creación de fuego interrumpida...</Spanish>
+            <Italian>Creazione del fuoco interrotta...</Italian>
+            <Polish>Tworzenie ognia przerwane...</Polish>
+            <Portuguese>Criação de fogo interrompida...</Portuguese>
+            <Russian>Создание огня прервано...</Russian>
+            <German>Feuermachen unterbrochen...</German>
+            <Korean>불 지피기가 중단되었습니다...</Korean>
+            <Japanese>火の作成が中断されました...</Japanese>
+            <Chinese>生火製作已中斷...</Chinese>
+            <Chinesesimp>生火制作已中断...</Chinesesimp>
+            <Turkish>Ateş yakma işlemi kesintiye uğradı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_InterruptedTinder">
+            <English>Fire crafting interrupted, tinder lost...</English>
+            <Czech>Vytváření ohně přerušeno, troud ztracen...</Czech>
+            <French>Fabrication du feu interrompue, amadou perdu...</French>
+            <Spanish>Creación de fuego interrumpida, yesca perdida...</Spanish>
+            <Italian>Creazione del fuoco interrotta, esca persa...</Italian>
+            <Polish>Tworzenie ognia przerwane, rozpałka przepadła...</Polish>
+            <Portuguese>Criação de fogo interrompida, isca perdida...</Portuguese>
+            <Russian>Создание огня прервано, трут потерян...</Russian>
+            <German>Feuermachen unterbrochen, Zunder verloren...</German>
+            <Korean>불 지피기 중단, 부싯깃을 잃었습니다...</Korean>
+            <Japanese>火の作成が中断され、火口を失いました...</Japanese>
+            <Chinese>生火製作已中斷，引火物已丟失...</Chinese>
+            <Chinesesimp>生火制作已中断，引火物已丢失...</Chinesesimp>
+            <Turkish>Ateş yakma kesintiye uğradı, kav kayboldu...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_InvalidFuel">
+            <English>Invalid fuel for new fire...</English>
+            <Czech>Neplatné palivo pro nový oheň...</Czech>
+            <French>Combustible invalide pour un nouveau feu...</French>
+            <Spanish>Combustible no válido para el fuego...</Spanish>
+            <Italian>Combustibile non valido per il nuovo fuoco...</Italian>
+            <Polish>Nieprawidłowe paliwo do ognia...</Polish>
+            <Portuguese>Combustível inválido para o novo fogo...</Portuguese>
+            <Russian>Неверное топливо для нового огня...</Russian>
+            <German>Ungültiger Brennstoff für neues Feuer...</German>
+            <Korean>새 불을 지피기에 부적절한 연료입니다...</Korean>
+            <Japanese>新しい火の燃料として無効です...</Japanese>
+            <Chinese>新火堆燃料無效...</Chinese>
+            <Chinesesimp>新火堆燃料无效...</Chinesesimp>
+            <Turkish>Yeni ateş için geçersiz yakıt...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_NotFound">
+            <English>No nearby fire found.</English>
+            <Czech>Nenalezen žádný oheň v blízkosti.</Czech>
+            <French>Aucun feu trouvé à proximité.</French>
+            <Spanish>No se encontró ningún fuego cerca.</Spanish>
+            <Italian>Nessun fuoco trovato nelle vicinanze.</Italian>
+            <Polish>Nie znaleziono ognia w pobliżu.</Polish>
+            <Portuguese>Nenhum fogo próximo encontrado.</Portuguese>
+            <Russian>Поблизости огня не обнаружено.</Russian>
+            <German>Kein Feuer in der Nähe gefunden.</German>
+            <Korean>주변에 불이 없습니다.</Korean>
+            <Japanese>近くに火が見つかりません。</Japanese>
+            <Chinese>未發現附近的火。</Chinese>
+            <Chinesesimp>未发现附近的火。</Chinesesimp>
+            <Turkish>Yakınlarda ateş bulunamadı.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_RefuelFirewood">
+            <English>Use firewood to refuel this fire...</English>
+            <Czech>Použijte palivové dříví k doplnění ohně...</Czech>
+            <French>Utilisez du bois pour raviver ce feu...</French>
+            <Spanish>Usa leña para alimentar este fuego...</Spanish>
+            <Italian>Usa legna per alimentare questo fuoco...</Italian>
+            <Polish>Użyj drewna opałowego, aby podsycić ogień...</Polish>
+            <Portuguese>Use lenha para reabastecer este fogo...</Portuguese>
+            <Russian>Используйте дрова, чтобы разжечь этот огонь...</Russian>
+            <German>Brennholz verwenden, um das Feuer zu schüren...</German>
+            <Korean>장작을 사용하여 불을 보충하십시오...</Korean>
+            <Japanese>薪を使って火を補充してください...</Japanese>
+            <Chinese>使用柴火為火堆補充燃料...</Chinese>
+            <Chinesesimp>使用柴火为火堆补充燃料...</Chinesesimp>
+            <Turkish>Bu ateşi beslemek için odun kullan...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_ReignitedBarrel">
+            <English>Barrel fire reignited successfully...</English>
+            <Czech>Oheň v sudu úspěšně znovu zapálen...</Czech>
+            <French>Feu de baril rallumé avec succès...</French>
+            <Spanish>Fuego de barril reencendido con éxito...</Spanish>
+            <Italian>Fuoco nel barile riacceso con successo...</Italian>
+            <Polish>Ogień w beczce pomyślnie rozniecony...</Polish>
+            <Portuguese>Fogo no barril reacendido com sucesso...</Portuguese>
+            <Russian>Огонь в бочке успешно разожжен...</Russian>
+            <German>Fassfeuer erfolgreich neu entfacht...</German>
+            <Korean>드럼통 불이 성공적으로 다시 붙었습니다...</Korean>
+            <Japanese>ドラム缶の火が正常に再点火されました...</Japanese>
+            <Chinese>油桶火堆已成功重新點燃...</Chinese>
+            <Chinesesimp>油桶火堆已成功重新点燃...</Chinesesimp>
+            <Turkish>Varil ateşi başarıyla yeniden yakıldı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_ReignitedDowngraded">
+            <English>Fire reignited and downgraded...</English>
+            <Czech>Oheň znovu zapálen a oslaben...</Czech>
+            <French>Feu rallumé et rétrogradé...</French>
+            <Spanish>Fuego reencendido y degradado...</Spanish>
+            <Italian>Fuoco riacceso e depotenziato...</Italian>
+            <Polish>Ogień ponownie rozniecony i osłabiony...</Polish>
+            <Portuguese>Fogo reacendido e rebaixado...</Portuguese>
+            <Russian>Огонь снова разожжен и ухудшен...</Russian>
+            <German>Feuer neu entfacht und herabgestuft...</German>
+            <Korean>불이 다시 붙었으나 다운그레이드되었습니다...</Korean>
+            <Japanese>火が再点火されましたが、ダウングレードされました...</Japanese>
+            <Chinese>火堆已重新點燃但降級了...</Chinese>
+            <Chinesesimp>火堆已重新点燃但降级了...</Chinesesimp>
+            <Turkish>Ateş yeniden yakıldı ve düşürüldü...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_ReignitedSuccess">
+            <English>Fire reignited successfully...</English>
+            <Czech>Oheň úspěšně znovu zapálen...</Czech>
+            <French>Feu rallumé avec succès...</French>
+            <Spanish>Fuego reencendido con éxito...</Spanish>
+            <Italian>Fuoco riacceso con successo...</Italian>
+            <Polish>Ogień pomyślnie ponownie rozniecony...</Polish>
+            <Portuguese>Fogo reacendido com sucesso...</Portuguese>
+            <Russian>Огонь успешно разожжен заново...</Russian>
+            <German>Feuer erfolgreich neu entfacht...</German>
+            <Korean>불이 성공적으로 다시 붙었습니다...</Korean>
+            <Japanese>火の再点火に成功しました...</Japanese>
+            <Chinese>火堆成功重新點燃...</Chinese>
+            <Chinesesimp>火堆成功重新点燃...</Chinesesimp>
+            <Turkish>Ateş başarıyla yeniden yakıldı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_ReignitedUpgraded">
+            <English>Fire reignited and upgraded...</English>
+            <Czech>Oheň znovu zapálen a vylepšen...</Czech>
+            <French>Feu rallumé et amélioré...</French>
+            <Spanish>Fuego reencendido y mejorado...</Spanish>
+            <Italian>Fuoco riacceso e potenziato...</Italian>
+            <Polish>Ogień ponownie rozniecony i ulepszony...</Polish>
+            <Portuguese>Fogo reacendido e melhorado...</Portuguese>
+            <Russian>Огонь снова разожжен и улучшен...</Russian>
+            <German>Feuer neu entfacht und aufgewertet...</German>
+            <Korean>불이 다시 붙고 업그레이드되었습니다...</Korean>
+            <Japanese>火が再点火され、アップグレードされました...</Japanese>
+            <Chinese>火堆已重新點燃並升級...</Chinese>
+            <Chinesesimp>火堆已重新点燃并升级...</Chinesesimp>
+            <Turkish>Ateş yeniden yakıldı ve yükseltildi...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_SelectFuel">
+            <English>Select fuel for new fire...</English>
+            <Czech>Vyberte palivo pro nový oheň...</Czech>
+            <French>Sélectionner le combustible...</French>
+            <Spanish>Seleccionar combustible para el fuego...</Spanish>
+            <Italian>Seleziona combustibile per il fuoco...</Italian>
+            <Polish>Wybierz paliwo do nowego ognia...</Polish>
+            <Portuguese>Selecionar combustível para o novo fogo...</Portuguese>
+            <Russian>Выберите топливо для нового огня...</Russian>
+            <German>Brennstoff für neues Feuer auswählen...</German>
+            <Korean>새 불을 지필 연료를 선택하십시오...</Korean>
+            <Japanese>新しい火の燃料を選択...</Japanese>
+            <Chinese>選擇新火堆的燃料...</Chinese>
+            <Chinesesimp>选择新火堆的燃料...</Chinesesimp>
+            <Turkish>Yeni ateş için yakıt seç...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_SelectIgnition">
+            <English>Select ignition source...</English>
+            <Czech>Vyberte zdroj zapálení...</Czech>
+            <French>Sélectionner la source d'allumage...</French>
+            <Spanish>Seleccionar fuente de ignición...</Spanish>
+            <Italian>Seleziona fonte di accensione...</Italian>
+            <Polish>Wybierz źródło zapłonu...</Polish>
+            <Portuguese>Selecionar fonte de ignição...</Portuguese>
+            <Russian>Выберите источник зажигания...</Russian>
+            <German>Zündquelle auswählen...</German>
+            <Korean>점화원 선택...</Korean>
+            <Japanese>着火源を選択...</Japanese>
+            <Chinese>選擇點火源...</Chinese>
+            <Chinesesimp>选择点火源...</Chinesesimp>
+            <Turkish>Ateşleme kaynağını seç...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_SelectTinder">
+            <English>Select tinder source...</English>
+            <Czech>Vyberte troud...</Czech>
+            <French>Sélectionner l'amadou...</French>
+            <Spanish>Seleccionar yesca...</Spanish>
+            <Italian>Seleziona esca...</Italian>
+            <Polish>Wybierz rozpałkę...</Polish>
+            <Portuguese>Selecionar isca de fogo...</Portuguese>
+            <Russian>Выберите трут...</Russian>
+            <German>Zunderquelle auswählen...</German>
+            <Korean>부싯깃 소스 선택...</Korean>
+            <Japanese>火口（ほくち）を選択...</Japanese>
+            <Chinese>選擇引火物...</Chinese>
+            <Chinesesimp>选择引火物...</Chinesesimp>
+            <Turkish>Kav kaynağını seç...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_Success">
+            <English>Fire crafted successfully!</English>
+            <Czech>Oheň byl úspěšně rozdělán!</Czech>
+            <French>Feu réussi !</French>
+            <Spanish>¡Fuego creado con éxito!</Spanish>
+            <Italian>Fuoco creato con successo!</Italian>
+            <Polish>Ogień został pomyślnie rozniecony!</Polish>
+            <Portuguese>Fogo criado com sucesso!</Portuguese>
+            <Russian>Огонь успешно разведен!</Russian>
+            <German>Feuer erfolgreich entfacht!</German>
+            <Korean>불 지피기에 성공했습니다!</Korean>
+            <Japanese>火の作成に成功しました！</Japanese>
+            <Chinese>火堆製作成功！</Chinese>
+            <Chinesesimp>火堆制作成功！</Chinesesimp>
+            <Turkish>Ateş başarıyla yakıldı!</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Fire_TinderLabel">
+            <English>Tinder:</English>
+            <Czech>Troud:</Czech>
+            <French>Amadou :</French>
+            <Spanish>Yesca:</Spanish>
+            <Italian>Esca:</Italian>
+            <Polish>Rozpałka:</Polish>
+            <Portuguese>Isca de fogo:</Portuguese>
+            <Russian>Трут:</Russian>
+            <German>Zunder:</German>
+            <Korean>부싯깃:</Korean>
+            <Japanese>火口:</Japanese>
+            <Chinese>引火物:</Chinese>
+            <Chinesesimp>引火物:</Chinesesimp>
+            <Turkish>Kav:</Turkish>
+        </Key>
+    </Package>
+</Project>

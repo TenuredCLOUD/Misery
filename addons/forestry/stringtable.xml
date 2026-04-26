@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Forestry">
+        <Key ID="STR_MISERY_Forestry_AreaDug">
+            <English>This area has already been dug up...</English>
+            <Czech>Tato oblast již byla prokopána...</Czech>
+            <French>Cette zone a déjà été fouillée...</French>
+            <Spanish>Esta zona ya ha sido excavada...</Spanish>
+            <Italian>Quest'area è già stata scavata...</Italian>
+            <Polish>Ten obszar został już przekopany...</Polish>
+            <Portuguese>Esta área já foi escavada...</Portuguese>
+            <Russian>Эта область уже перекопана...</Russian>
+            <German>Dieser Bereich wurde bereits umgegraben...</German>
+            <Korean>이 지역은 이미 파헤쳐졌습니다...</Korean>
+            <Japanese>この場所はすでに掘り返されています...</Japanese>
+            <Chinese>這個區域已經被挖過了...</Chinese>
+            <Chinesesimp>这个区域已经被挖过了...</Chinesesimp>
+            <Turkish>Bu alan zaten kazılmış...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_AreaSearched">
+            <English>This area has already been searched...</English>
+            <Czech>Tato oblast již byla prohledána...</Czech>
+            <French>Cette zone a déjà été fouillée...</French>
+            <Spanish>Esta zona ya ha sido registrada...</Spanish>
+            <Italian>Quest'area è già stata perlustrata...</Italian>
+            <Polish>Ten obszar został już przeszukany...</Polish>
+            <Portuguese>Esta área já foi revistada...</Portuguese>
+            <Russian>Эта область уже осмотрена...</Russian>
+            <German>Dieser Bereich wurde bereits durchsucht...</German>
+            <Korean>이 지역은 이미 검색되었습니다...</Korean>
+            <Japanese>この場所はすでに捜索済みです...</Japanese>
+            <Chinese>這個區域已經搜索過了...</Chinese>
+            <Chinesesimp>这个区域已经搜索过了...</Chinesesimp>
+            <Turkish>Bu alan zaten arandı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_ChainsawFull">
+            <English>Your chainsaw is already full of fuel...</English>
+            <Czech>Vaše motorová pila je již plná paliva...</Czech>
+            <French>Votre tronçonneuse est déjà pleine de carburant...</French>
+            <Spanish>Tu motosierra ya está llena de combustible...</Spanish>
+            <Italian>La tua motosega è già piena di carburante...</Italian>
+            <Polish>Twoja piła mechaniczna ma już pełny bak...</Polish>
+            <Portuguese>Sua motosserra já está cheia de combustível...</Portuguese>
+            <Russian>Ваша бензопила уже заправлена...</Russian>
+            <German>Deine Kettensäge ist bereits vollgetankt...</German>
+            <Korean>전기톱에 연료가 이미 가득 차 있습니다...</Korean>
+            <Japanese>チェーンソーはすでに燃料でいっぱいです...</Japanese>
+            <Chinese>你的鏈鋸已經裝滿燃料了...</Chinese>
+            <Chinesesimp>你的链锯已经装满燃料了...</Chinesesimp>
+            <Turkish>Motorlu testerenizin yakıtı zaten dolu...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_ChoppingLog">
+            <English>Chopping log...</English>
+            <Czech>Sekání polena...</Czech>
+            <French>Coupe d'une bûche...</French>
+            <Spanish>Picando tronco...</Spanish>
+            <Italian>Tagliando il tronco...</Italian>
+            <Polish>Rąbanie kłody...</Polish>
+            <Portuguese>Cortando tora...</Portuguese>
+            <Russian>Рубка полена...</Russian>
+            <German>Holzstamm hacken...</German>
+            <Korean>통나무 패는 중...</Korean>
+            <Japanese>丸太を割っています...</Japanese>
+            <Chinese>正在劈原木...</Chinese>
+            <Chinesesimp>正在劈原木...</Chinesesimp>
+            <Turkish>Kütük kesiliyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_ChoppingProgress">
+            <English>Chopping wood...</English>
+            <Czech>Sekání dřeva...</Czech>
+            <French>Coupe du bois...</French>
+            <Spanish>Picando madera...</Spanish>
+            <Italian>Tagliando la legna...</Italian>
+            <Polish>Rąbanie drewna...</Polish>
+            <Portuguese>Cortando madeira...</Portuguese>
+            <Russian>Рубка дров...</Russian>
+            <German>Holzhacken...</German>
+            <Korean>장작 패는 중...</Korean>
+            <Japanese>薪を割っています...</Japanese>
+            <Chinese>正在砍木頭...</Chinese>
+            <Chinesesimp>正在砍木头...</Chinesesimp>
+            <Turkish>Odun kesiliyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_CollectWood">
+            <English>Collect wood</English>
+            <Czech>Sbírat dřevo</Czech>
+            <French>Collecter du bois</French>
+            <Spanish>Recoger madera</Spanish>
+            <Italian>Raccogliere il legno</Italian>
+            <Polish>Zbieraj drewno</Polish>
+            <Portuguese>Coletar madeira</Portuguese>
+            <Russian>Соберите древесину</Russian>
+            <German>Holz sammeln</German>
+            <Korean>나무 수집</Korean>
+            <Japanese>木材を集める</Japanese>
+            <Chinese>採集木材</Chinese>
+            <Chinesesimp>采集木材</Chinesesimp>
+            <Turkish>Odun toplayın</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_CollectionDesc">
+            <English>Enable Wood collection actions? (Wood gathering and log splitting actions)</English>
+            <Czech>Povolit akce sběru dřeva? (Sběr dřeva a štípání polen)</Czech>
+            <French>Activer les actions de collecte de bois ? (Ramassage de bois et fendage de bûches)</French>
+            <Spanish>¿Habilitar acciones de recolección de madera? (Recolección de madera y división de troncos)</Spanish>
+            <Italian>Abilitare le azioni di raccolta legna? (Raccolta legna e spaccatura tronchi)</Italian>
+            <Polish>Włączyć akcje pozyskiwania drewna? (Zbieranie drewna i rąbanie kłód)</Polish>
+            <Portuguese>Ativar ações de coleta de madeira? (Coleta de madeira e divisão de toras)</Portuguese>
+            <Russian>Включить действия по сбору древесины? (Сбор дров и колка бревен)</Russian>
+            <German>Holzsammelaktionen aktivieren? (Holz sammeln und Baumstämme spalten)</German>
+            <Korean>목재 수집 액션을 활성화하시겠습니까? (목재 채집 및 장작 패기)</Korean>
+            <Japanese>木材収集アクションを有効にしますか？（薪拾いと丸太割りアクション）</Japanese>
+            <Chinese>開啟木材收集動作？(木材採集和原木劈開動作)</Chinese>
+            <Chinesesimp>开启木材收集动作？(木材采集和原木劈开动作)</Chinesesimp>
+            <Turkish>Odun toplama eylemleri etkinleştirilsin mi? (Odun toplama ve kütük yarma eylemleri)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_CollectionName">
+            <English>Wood collection</English>
+            <Czech>Sběr dřeva</Czech>
+            <French>Collecte de bois</French>
+            <Spanish>Recolección de madera</Spanish>
+            <Italian>Raccolta legna</Italian>
+            <Polish>Pozyskiwanie drewna</Polish>
+            <Portuguese>Coleta de madeira</Portuguese>
+            <Russian>Сбор древесины</Russian>
+            <German>Holzsammlung</German>
+            <Korean>목재 수집</Korean>
+            <Japanese>木材の収集</Japanese>
+            <Chinese>木材收集</Chinese>
+            <Chinesesimp>木材收集</Chinesesimp>
+            <Turkish>Odun toplama</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_DeadGathered">
+            <English>This tree's dead wood has been gathered. The remaining wood can be gathered by cutting it down...</English>
+            <Czech>Mrtvé dřevo tohoto stromu již bylo sebráno. Zbytek dřeva lze získat pokácením...</Czech>
+            <French>Le bois mort de cet arbre a été ramassé. Le bois restant peut être récupéré en l'abattant...</French>
+            <Spanish>La madera muerta de este árbol ya ha sido recolectada. El resto se puede obtener talándolo...</Spanish>
+            <Italian>La legna secca di questo albero è stata raccolta. La legna rimanente può essere ottenuta abbattendolo...</Italian>
+            <Polish>Suche drewno z tego drzewa zostało już zebrane. Pozostałe drewno można pozyskać przez jego ścięcie...</Polish>
+            <Portuguese>A madeira morta desta árvore foi coletada. A madeira restante pode ser obtida derrubando-a...</Portuguese>
+            <Russian>Сухая древесина этого дерева уже собрана. Остальную древесину можно получить, срубив его...</Russian>
+            <German>Das Totholz dieses Baumes wurde bereits gesammelt. Das restliche Holz kann durch Fällen gewonnen werden...</German>
+            <Korean>이 나무의 죽은 목재는 이미 수집되었습니다. 남은 목재는 나무를 베어야 수집할 수 있습니다...</Korean>
+            <Japanese>この木の枯れ木はすでに拾われました。残りの木材は伐採することで入手できます...</Japanese>
+            <Chinese>這棵樹的枯木已經被採集了。剩下的木頭可以通過砍樹來採集...</Chinese>
+            <Chinesesimp>这棵树的枯木已经被采集了。剩下的木头可以通过砍树来采集...</Chinesesimp>
+            <Turkish>Bu ağacın kurumuş dalları toplandı. Kalan odunlar ağaç kesilerek toplanabilir...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_DiggingWorms">
+            <English>Digging for worms...</English>
+            <Czech>Kopání žížal...</Czech>
+            <French>Creusement pour des vers...</French>
+            <Spanish>Cavando en busca de gusanos...</Spanish>
+            <Italian>Scavando per i vermi...</Italian>
+            <Polish>Kopanie w poszukiwaniu robaków...</Polish>
+            <Portuguese>Cavando em busca de minhocas...</Portuguese>
+            <Russian>Копание червей...</Russian>
+            <German>Nach Würmern graben...</German>
+            <Korean>지렁이 파는 중...</Korean>
+            <Japanese>ミミズを掘っています...</Japanese>
+            <Chinese>正在挖蠕蟲...</Chinese>
+            <Chinesesimp>正在挖蠕虫...</Chinesesimp>
+            <Turkish>Solucan kazılıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_Forage">
+            <English>Forage</English>
+            <Czech>Přehrabování</Czech>
+            <French>Fourrager</French>
+            <Spanish>Forrajear</Spanish>
+            <Italian>Foraggiare</Italian>
+            <Polish>Przeszukiwać w poszukiwaniu pożywienia</Polish>
+            <Portuguese>Forragear</Portuguese>
+            <Russian>Охотиться за кормом</Russian>
+            <German>Futter suchen</German>
+            <Korean>채집하다</Korean>
+            <Japanese>採集する</Japanese>
+            <Chinese>採集</Chinese>
+            <Chinesesimp>采集</Chinesesimp>
+            <Turkish>Yem aramak</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_ForageDigForWorms">
+            <English>Dig for worms</English>
+            <Czech>Vykopat červy</Czech>
+            <French>Creuser pour trouver des vers</French>
+            <Spanish>Excavar en busca de lombrices</Spanish>
+            <Italian>Scavare per trovare i vermi</Italian>
+            <Polish>Kopanie w poszukiwaniu robaków</Polish>
+            <Portuguese>Cavar em busca de minhocas</Portuguese>
+            <Russian>Копайте червей</Russian>
+            <German>Nach Würmern graben</German>
+            <Korean>벌레 찾기</Korean>
+            <Japanese>ミミズを掘る</Japanese>
+            <Chinese>挖蠕蟲</Chinese>
+            <Chinesesimp>挖蠕虫</Chinesesimp>
+            <Turkish>Solucanlar için kazın</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_ForageSearchForTinder">
+            <English>Search for tinder</English>
+            <Czech>Hledat troud</Czech>
+            <French>Recherche de tinder</French>
+            <Spanish>Buscar tinder</Spanish>
+            <Italian>Ricerca di tinder</Italian>
+            <Polish>Wyszukiwanie tinder</Polish>
+            <Portuguese>Busca por tinder</Portuguese>
+            <Russian>Поиск тиндера</Russian>
+            <German>Suche nach tinder</German>
+            <Korean>틴더 검색</Korean>
+            <Japanese>ティンダーで検索</Japanese>
+            <Chinese>尋找引火物</Chinese>
+            <Chinesesimp>寻找引火物</Chinesesimp>
+            <Turkish>Tinder için ara</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_ForagingDesc">
+            <English>Enable Foraging? (Enables digging for worms, and searching for tinder actions)</English>
+            <Czech>Povolit sběr? (Povolí kopání žížal a hledání troudu)</Czech>
+            <French>Activer la cueillette ? (Permet de creuser pour trouver des vers et de chercher de l'amadou)</French>
+            <Spanish>¿Habilitar forrajeo? (Permite cavar en busca de gusanos y buscar yesca)</Spanish>
+            <Italian>Abilitare la ricerca di cibo? (Permette di scavare per i vermi e cercare esche)</Italian>
+            <Polish>Włączyć zbieractwo? (Umożliwia kopanie w poszukiwaniu robaków i szukanie rozpałki)</Polish>
+            <Portuguese>Ativar busca por recursos? (Permite cavar em busca de minhocas e procurar isca de fogo)</Portuguese>
+            <Russian>Включить собирательство? (Позволяет копать червей и искать трут)</Russian>
+            <German>Sammeln aktivieren? (Ermöglicht das Graben nach Würmern und das Suchen nach Zunder)</German>
+            <Korean>채집을 활성화하시겠습니까? (지렁이 파기 및 부싯깃 찾기 활성화)</Korean>
+            <Japanese>採集を有効にしますか？（ミミズ掘りと火口探しアクションを有効にします）</Japanese>
+            <Chinese>開啟採集？(開啟挖蠕蟲和尋找引火物動作)</Chinese>
+            <Chinesesimp>开启采集？(开启挖蠕虫和寻找引火物动作)</Chinesesimp>
+            <Turkish>Yiyecek arama etkinleştirilsin mi? (Solucan kazma ve kav arama eylemlerini etkinleştirir)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_ForagingName">
+            <English>Foraging</English>
+            <Czech>Sběr plodů a surovin</Czech>
+            <French>Cueillette</French>
+            <Spanish>Forrajeo</Spanish>
+            <Italian>Ricerca di cibo</Italian>
+            <Polish>Zbieractwo</Polish>
+            <Portuguese>Busca por recursos</Portuguese>
+            <Russian>Собирательство</Russian>
+            <German>Sammeln</German>
+            <Korean>채집</Korean>
+            <Japanese>採集</Japanese>
+            <Chinese>採集</Chinese>
+            <Chinesesimp>采集</Chinesesimp>
+            <Turkish>Yiyecek arama</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_FoundNothing">
+            <English>You didn't find anything...</English>
+            <Czech>Nic jste nenašli...</Czech>
+            <French>Vous n'avez rien trouvé...</French>
+            <Spanish>No has encontrado nada...</Spanish>
+            <Italian>Non hai trovato nulla...</Italian>
+            <Polish>Niczego nie znalazłeś...</Polish>
+            <Portuguese>Você não encontrou nada...</Portuguese>
+            <Russian>Вы ничего не нашли...</Russian>
+            <German>Du hast nichts gefunden...</German>
+            <Korean>아무것도 찾지 못했습니다...</Korean>
+            <Japanese>何も見つかりませんでした...</Japanese>
+            <Chinese>你什麼也沒發現...</Chinese>
+            <Chinesesimp>你什么也没发现...,</Chinesesimp>
+            <Turkish>Hiçbir şey bulamadın...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_FoundTinder">
+            <English>You found some tinder...</English>
+            <Czech>Našli jste troud...</Czech>
+            <French>Vous avez trouvé de l'amadou...</French>
+            <Spanish>Has encontrado algo de yesca...</Spanish>
+            <Italian>Hai trovato un'esca...</Italian>
+            <Polish>Znalazłeś rozpałkę...</Polish>
+            <Portuguese>Você encontrou um pouco de isca de fogo...</Portuguese>
+            <Russian>Вы нашли трут...</Russian>
+            <German>Du hast Zunder gefunden...</German>
+            <Korean>부싯깃을 좀 찾았습니다...</Korean>
+            <Japanese>火口を見つけました...</Japanese>
+            <Chinese>你發現了一些引火物...</Chinese>
+            <Chinesesimp>你发现了一些引火物...</Chinesesimp>
+            <Turkish>Biraz kav buldun...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_FoundWorms">
+            <English>You found some worms...</English>
+            <Czech>Našli jste žížaly...</Czech>
+            <French>Vous avez trouvé des vers...</French>
+            <Spanish>Has encontrado algunos gusanos...</Spanish>
+            <Italian>Hai trovato dei vermi...</Italian>
+            <Polish>Znalazłeś kilka robaków...</Polish>
+            <Portuguese>Você encontrou algumas minhocas...</Portuguese>
+            <Russian>Вы нашли червей...</Russian>
+            <German>Du hast einige Würmer gefunden...</German>
+            <Korean>지렁이를 몇 마리 찾았습니다...</Korean>
+            <Japanese>ミミズを見つけました...</Japanese>
+            <Chinese>你發現了一些蠕蟲...</Chinese>
+            <Chinesesimp>你发现了一些蠕虫...</Chinesesimp>
+            <Turkish>Biraz solucan buldun...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_FuelStatusFull">
+            <English>Chainsaw is full of fuel...</English>
+            <Czech>Motorová pila je plná paliva...</Czech>
+            <French>La tronçonneuse est pleine de carburant...</French>
+            <Spanish>La motosierra está llena de combustible...</Spanish>
+            <Italian>La motosega è piena di carburante...</Italian>
+            <Polish>Piła mechaniczna jest zatankowana do pełna...</Polish>
+            <Portuguese>A motosserra está cheia de combustível...</Portuguese>
+            <Russian>Бензопила полностью заправлена...</Russian>
+            <German>Die Kettensäge ist vollgetankt...</German>
+            <Korean>전기톱에 연료가 가득 찼습니다...</Korean>
+            <Japanese>チェーンソーの燃料が満タンです...</Japanese>
+            <Chinese>鏈鋸已裝滿燃料...</Chinese>
+            <Chinesesimp>链锯已装满燃料...</Chinesesimp>
+            <Turkish>Motorlu testerenin yakıtı dolu...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_GatheringProgress">
+            <English>Gathering wood...</English>
+            <Czech>Sběr dřeva...</Czech>
+            <French>Ramassage de bois...</French>
+            <Spanish>Recolectando madera...</Spanish>
+            <Italian>Raccogliendo legna...</Italian>
+            <Polish>Zbieranie drewna...</Polish>
+            <Portuguese>Coletando madeira...</Portuguese>
+            <Russian>Сбор дров...</Russian>
+            <German>Holz sammeln...</German>
+            <Korean>목재 채집 중...</Korean>
+            <Japanese>薪を拾っています...</Japanese>
+            <Chinese>正在採集木材...</Chinese>
+            <Chinesesimp>正在采集木材...</Chinesesimp>
+            <Turkish>Odun toplanıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_NearFoliage">
+            <English>You need to be near foliage to search for worms...</English>
+            <Czech>K hledání žížal musíte být u vegetace...</Czech>
+            <French>Vous devez être près de la végétation pour chercher des vers...</French>
+            <Spanish>Necesitas estar cerca de follaje para buscar gusanos...</Spanish>
+            <Italian>Devi essere vicino al fogliame per cercare i vermi...</Italian>
+            <Polish>Musisz być blisko roślinności, aby szukać robaków...</Polish>
+            <Portuguese>Você precisa estar perto de folhagens para procurar minhocas...</Portuguese>
+            <Russian>Чтобы искать червей, нужно быть рядом с растительностью...</Russian>
+            <German>Du musst in der Nähe von Laub sein, um nach Würmern zu suchen...</German>
+            <Korean>지렁이를 찾으려면 수풀 근처에 있어야 합니다...</Korean>
+            <Japanese>ミミズを探すには草むらの近くにいる必要があります...</Japanese>
+            <Chinese>你需要靠近植物叢才能尋找蠕蟲...</Chinese>
+            <Chinesesimp>你需要靠近植物丛才能寻找蠕虫...</Chinesesimp>
+            <Turkish>Solucan aramak için yeşilliklerin yakınında olmalısınız...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_NearTreeTinder">
+            <English>You need to be near a tree to search for tinder...</English>
+            <Czech>K hledání troudu musíte být u stromu...</Czech>
+            <French>Vous devez être près d'un arbre pour chercher de l'amadou...</French>
+            <Spanish>Necesitas estar cerca de un árbol para buscar yesca...</Spanish>
+            <Italian>Devi essere vicino a un albero per cercare un'esca...</Italian>
+            <Polish>Musisz być blisko drzewa, aby szukać rozpałki...</Polish>
+            <Portuguese>Você precisa estar perto de uma árvore para procurar isca de fogo...</Portuguese>
+            <Russian>Чтобы искать трут, нужно быть рядом с деревом...</Russian>
+            <German>Du musst in der Nähe eines Baumes sein, um nach Zunder zu suchen...</German>
+            <Korean>부싯깃을 찾으려면 나무 근처에 있어야 합니다...</Korean>
+            <Japanese>火口を探すには木の近くにいる必要があります...</Japanese>
+            <Chinese>你需要靠近一棵樹才能尋找引火物...</Chinese>
+            <Chinesesimp>你需要靠近一棵树才能寻找引火物...</Chinesesimp>
+            <Turkish>Kav aramak için bir ağacın yanında olmalısınız...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_NeedTreeChopping">
+            <English>You need to be near a tree to start chopping wood...</English>
+            <Czech>K sekání dřeva musíte být u stromu...</Czech>
+            <French>Vous devez être près d'un arbre pour commencer à couper du bois...</French>
+            <Spanish>Necesitas estar cerca de un árbol para empezar a picar madera...</Spanish>
+            <Italian>Devi essere vicino a un albero per iniziare a tagliare la legna...</Italian>
+            <Polish>Musisz być blisko drzewa, aby zacząć rąbać drewno...</Polish>
+            <Portuguese>Você precisa estar perto de uma árvore para começar a cortar madeira...</Portuguese>
+            <Russian>Чтобы начать рубить дрова, нужно быть рядом с деревом...</Russian>
+            <German>Du musst in der Nähe eines Baumes sein, um mit dem Holzhacken zu beginnen...</German>
+            <Korean>장작을 패려면 나무 근처에 있어야 합니다...</Korean>
+            <Japanese>薪割りを始めるには木の近くにいる必要があります...</Japanese>
+            <Chinese>你需要靠近一棵樹才能開始砍木頭...</Chinese>
+            <Chinesesimp>你需要靠近一棵树才能开始砍木头...</Chinesesimp>
+            <Turkish>Odun kesmeye başlamak için bir ağacın yanında olmalısınız...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_NeedTreeGathering">
+            <English>You need to be near a tree to gather wood...</English>
+            <Czech>Ke sběru dřeva musíte být u stromu...</Czech>
+            <French>Vous devez être près d'un arbre pour ramasser du bois...</French>
+            <Spanish>Necesitas estar cerca de un árbol para recolectar madera...</Spanish>
+            <Italian>Devi essere vicino a un albero per raccogliere la legna...</Italian>
+            <Polish>Musisz być blisko drzewa, aby zebrać drewno...</Polish>
+            <Portuguese>Você precisa estar perto de uma árvore para coletar madeira...</Portuguese>
+            <Russian>Чтобы собрать дрова, нужно быть рядом с деревом...</Russian>
+            <German>Du musst in der Nähe eines Baumes sein, um Holz zu sammeln...</German>
+            <Korean>목재를 채집하려면 나무 근처에 있어야 합니다...</Korean>
+            <Japanese>薪を拾うには木の近くにいる必要があります...</Japanese>
+            <Chinese>你需要靠近一棵樹才能採集木材...</Chinese>
+            <Chinesesimp>你需要靠近一棵树才能采集木材...</Chinesesimp>
+            <Turkish>Odun toplamak için bir ağacın yanında olmalısınız...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_NeedTreeSawing">
+            <English>You need to be near a tree to start cutting wood...</English>
+            <Czech>K řezání dřeva musíte být u stromu...</Czech>
+            <French>Vous devez être près d'un arbre pour commencer à couper du bois...</French>
+            <Spanish>Necesitas estar cerca de un árbol para empezar a cortar madera...</Spanish>
+            <Italian>Devi essere vicino a un albero per iniziare a segare la legna...</Italian>
+            <Polish>Musisz być blisko drzewa, aby zacząć ciąć drewno...</Polish>
+            <Portuguese>Você precisa estar perto de uma árvore para começar a cortar madeira...</Portuguese>
+            <Russian>Чтобы начать пилить дрова, нужно быть рядом с деревом...</Russian>
+            <German>Du musst in der Nähe eines Baumes sein, um mit dem Holzschneiden zu beginnen...</German>
+            <Korean>목재를 자르려면 나무 근처에 있어야 합니다...</Korean>
+            <Japanese>木を切り始めるには木の近くにいる必要があります...</Japanese>
+            <Chinese>你需要靠近一棵樹才能開始鋸木頭...</Chinese>
+            <Chinesesimp>你需要靠近一棵树才能开始锯木头...</Chinesesimp>
+            <Turkish>Odun kesmeye başlamak için bir ağacın yanında olmalısınız...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_NoChainsaw">
+            <English>You don't have a chainsaw...</English>
+            <Czech>Nemáte motorovou pilu...</Czech>
+            <French>Vous n'avez pas de tronçonneuse...</French>
+            <Spanish>No tienes una motosierra...</Spanish>
+            <Italian>Non hai una motosega...</Italian>
+            <Polish>Nie masz piły mechanicznej...</Polish>
+            <Portuguese>Você não tem uma motosserra...</Portuguese>
+            <Russian>У вас нет бензопилы...</Russian>
+            <German>Du hast keine Kettensäge...</German>
+            <Korean>전기톱이 없습니다...</Korean>
+            <Japanese>チェーンソーを持っていません...</Japanese>
+            <Chinese>你沒有鏈鋸...</Chinese>
+            <Chinesesimp>你没有链锯...</Chinesesimp>
+            <Turkish>Motorlu testereniz yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_NoFuel">
+            <English>You have no more fuel...</English>
+            <Czech>Nemáte žádné další palivo...</Czech>
+            <French>Vous n'avez plus de carburant...</French>
+            <Spanish>No tienes más combustible...</Spanish>
+            <Italian>Non hai più carburante...</Italian>
+            <Polish>Nie masz już więcej paliwa...</Polish>
+            <Portuguese>Você não tem mais combustível...</Portuguese>
+            <Russian>У вас больше нет топлива...</Russian>
+            <German>Du hast keinen Kraftstoff mehr...</German>
+            <Korean>연료가 더 이상 없습니다...</Korean>
+            <Japanese>燃料がもうありません...</Japanese>
+            <Chinese>你沒有更多燃料了...</Chinese>
+            <Chinesesimp>你没有更多燃料了...</Chinesesimp>
+            <Turkish>Daha fazla yakıtınız kalmadı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_NoWoodAxeOrChainsawNoti">
+            <English>You don't have a chainsaw, or Woodaxe...</English>
+            <Czech>Nemáš motorovou pilu ani sekeru...</Czech>
+            <French>Vous n'avez pas de tronçonneuse, ni de hache à bois...</French>
+            <Spanish>Usted no tiene una motosierra, o Woodaxe ...</Spanish>
+            <Italian>Non hai una motosega o un'ascia da legno...</Italian>
+            <Polish>Nie masz piły łańcuchowej ani topora do drewna...</Polish>
+            <Portuguese>Você não tem uma motosserra ou um machado de madeira...</Portuguese>
+            <Russian>У вас нет ни бензопилы, ни деревянного топорика...</Russian>
+            <German>Sie haben keine Kettensäge oder Woodaxe...</German>
+            <Korean>전기톱이나 우닥스가 없으시군요...</Korean>
+            <Japanese>チェーンソーもウッドアックスも持っていない...。</Japanese>
+            <Chinese>你沒有鏈鋸或伐木斧...</Chinese>
+            <Chinesesimp>你没有链锯或伐木斧...</Chinesesimp>
+            <Turkish>Motorlu testeren ya da odun baltan yok.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_NoWoodenLogsForSplitting">
+            <English>You don't have any wooden logs...</English>
+            <Czech>Nemáš žádné dřevěné klády...</Czech>
+            <French>Vous n'avez pas de rondins de bois...</French>
+            <Spanish>No tienes troncos de madera...</Spanish>
+            <Italian>Non avete tronchi di legno...</Italian>
+            <Polish>Nie masz żadnych drewnianych bali...</Polish>
+            <Portuguese>Você não tem nenhuma tora de madeira...</Portuguese>
+            <Russian>У вас нет деревянных поленьев...</Russian>
+            <German>Sie haben keine Holzscheite...</German>
+            <Korean>나무 통나무가 없는데...</Korean>
+            <Japanese>木の丸太がないじゃないか...。</Japanese>
+            <Chinese>你沒有任何原木...</Chinese>
+            <Chinesesimp>你没有任何原木...</Chinesesimp>
+            <Turkish>Hiç tahta kütüğün yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_SawingLog">
+            <English>Sawing log...</English>
+            <Czech>Řezání polena...</Czech>
+            <French>Sciage d'une bûche...</French>
+            <Spanish>Serrando tronco...</Spanish>
+            <Italian>Segando il tronco...</Italian>
+            <Polish>Piłowanie kłody...</Polish>
+            <Portuguese>Serrando tora...</Portuguese>
+            <Russian>Пил полена...</Russian>
+            <German>Holzstamm sägen...</German>
+            <Korean>통나무 톱질 중...</Korean>
+            <Japanese>丸太をのこぎりで切っています...</Japanese>
+            <Chinese>正在鋸原木...</Chinese>
+            <Chinesesimp>正在锯原木...</Chinesesimp>
+            <Turkish>Kütük testereyle kesiliyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_SawingProgress">
+            <English>Sawing tree...</English>
+            <Czech>Řezání stromu...</Czech>
+            <French>Sciage de l'arbre...</French>
+            <Spanish>Serrando el árbol...</Spanish>
+            <Italian>Segando l'albero...</Italian>
+            <Polish>Piłowanie drzewa...</Polish>
+            <Portuguese>Serrando a árvore...</Portuguese>
+            <Russian>Пил дерева...</Russian>
+            <German>Baum sägen...</German>
+            <Korean>나무 톱질 중...</Korean>
+            <Japanese>木をのこぎりで切っています...</Japanese>
+            <Chinese>正在鋸樹...</Chinese>
+            <Chinesesimp>正在锯树...</Chinesesimp>
+            <Turkish>Ağaç testereyle kesiliyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_SearchingTinder">
+            <English>Searching for tinder...</English>
+            <Czech>Hledání troudu...</Czech>
+            <French>Recherche d'amadou...</French>
+            <Spanish>Buscando yesca...</Spanish>
+            <Italian>Cercando l'esca...</Italian>
+            <Polish>Szukanie rozpałki...</Polish>
+            <Portuguese>Procurando isca de fogo...</Portuguese>
+            <Russian>Поиск трута...</Russian>
+            <German>Nach Zunder suchen...</German>
+            <Korean>부싯깃 찾는 중...</Korean>
+            <Japanese>火口を探しています...</Japanese>
+            <Chinese>正在尋找引火物...</Chinese>
+            <Chinesesimp>正在寻找引火物...</Chinesesimp>
+            <Turkish>Kav aranıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_SplitWoodLog">
+            <English>Split Wood Log</English>
+            <Czech>Rozštípaný špalek</Czech>
+            <French>Bûche de bois fendue</French>
+            <Spanish>Tronco de madera hendido</Spanish>
+            <Italian>Tronco di legno spaccato</Italian>
+            <Polish>Podzielona kłoda drewna</Polish>
+            <Portuguese>Toras de madeira rachadas</Portuguese>
+            <Russian>Расколотое деревянное бревно</Russian>
+            <German>Holzscheit gespalten</German>
+            <Korean>분할된 나무 통나무</Korean>
+            <Japanese>スプリット・ウッド・ログ</Japanese>
+            <Chinese>劈原木</Chinese>
+            <Chinesesimp>劈原木</Chinesesimp>
+            <Turkish>Bölünmüş Ahşap Kütük</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_StopCutting">
+            <English>You stop cutting down the tree...</English>
+            <Czech>Přestali jste kácet strom...</Czech>
+            <French>Vous arrêtez d'abattre l'arbre...</French>
+            <Spanish>Dejas de talar el árbol...</Spanish>
+            <Italian>Smetti di abbattere l'albero...</Italian>
+            <Polish>Przestajesz ścinać drzewo...</Polish>
+            <Portuguese>Você para de derrubar a árvore...</Portuguese>
+            <Russian>Вы прекратили валку дерева...</Russian>
+            <German>Du hörst auf, den Baum zu fällen...</German>
+            <Korean>나무 베기를 중단합니다...</Korean>
+            <Japanese>木を伐採するのをやめました...</Japanese>
+            <Chinese>你停止了砍樹...</Chinese>
+            <Chinesesimp>你停止了砍树...</Chinesesimp>
+            <Turkish>Ağacı kesmeyi bıraktınız...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_StopDigging">
+            <English>You stop digging for worms...</English>
+            <Czech>Přestali jste kopat žížaly...</Czech>
+            <French>Vous arrêtez de creuser pour des vers...</French>
+            <Spanish>Dejas de cavar en busca de gusanos...</Spanish>
+            <Italian>Smetti di scavare per i vermi...</Italian>
+            <Polish>Przestajesz kopać w poszukiwaniu robaków...</Polish>
+            <Portuguese>Você para de cavar em busca de minhocas...</Portuguese>
+            <Russian>Вы прекратили копать червей...</Russian>
+            <German>Du hörst auf, nach Würmern zu graben...</German>
+            <Korean>지렁이 파기를 중단합니다...</Korean>
+            <Japanese>ミミズを掘るのをやめました...</Japanese>
+            <Chinese>你停止了挖蠕蟲...</Chinese>
+            <Chinesesimp>你停止了挖蠕虫...</Chinesesimp>
+            <Turkish>Solucan kazmayı bıraktınız...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_StopGathering">
+            <English>You stop gathering wood...</English>
+            <Czech>Přestali jste sbírat dřevo...</Czech>
+            <French>Vous arrêtez de ramasser du bois...</French>
+            <Spanish>Dejas de recolectar madera...</Spanish>
+            <Italian>Smetti di raccogliere la legna...</Italian>
+            <Polish>Przestajesz zbierać drewno...</Polish>
+            <Portuguese>Você para de coletar madeira...</Portuguese>
+            <Russian>Вы прекратили сбор дров...</Russian>
+            <German>Du hörst auf, Holz zu sammeln...</German>
+            <Korean>목재 채집을 중단합니다...</Korean>
+            <Japanese>薪拾いをやめました...</Japanese>
+            <Chinese>你停止了採集木材...</Chinese>
+            <Chinesesimp>你停止了采集木材...</Chinesesimp>
+            <Turkish>Odun toplamayı bıraktınız...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_StopSawing">
+            <English>You stop sawing the tree...</English>
+            <Czech>Přestali jste řezat strom...</Czech>
+            <French>Vous arrêtez de scier l'arbre...</French>
+            <Spanish>Dejas de serrar el árbol...</Spanish>
+            <Italian>Smetti di segare l'albero...</Italian>
+            <Polish>Przestajesz piłować drzewo...</Polish>
+            <Portuguese>Você para de serrar a árvore...</Portuguese>
+            <Russian>Вы прекратили пилить дерево...</Russian>
+            <German>Du hörst auf, den Baum zu sägen...</German>
+            <Korean>나무 톱질을 중단합니다...</Korean>
+            <Japanese>木ののこぎり引きをやめました...</Japanese>
+            <Chinese>你停止了鋸樹...</Chinese>
+            <Chinesesimp>你停止了锯树...</Chinesesimp>
+            <Turkish>Ağacı testereyle kesmeyi bıraktınız...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_StopSawingLog">
+            <English>You stop sawing the log...</English>
+            <Czech>Přestali jste řezat poleno...</Czech>
+            <French>Vous arrêtez de scier la bûche...</French>
+            <Spanish>Dejas de serrar el tronco...</Spanish>
+            <Italian>Smetti di segare il tronco...</Italian>
+            <Polish>Przestajesz piłować kłodę...</Polish>
+            <Portuguese>Você para de serrar a tora...</Portuguese>
+            <Russian>Вы прекратили пилить полено...</Russian>
+            <German>Du hörst auf, den Holzstamm zu sägen...</German>
+            <Korean>통나무 톱질을 중단합니다...</Korean>
+            <Japanese>丸太ののこぎり引きをやめました...</Japanese>
+            <Chinese>你停止了鋸原木...</Chinese>
+            <Chinesesimp>你停止了锯原木...</Chinesesimp>
+            <Turkish>Kütüğü testereyle kesmeyi bıraktınız...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_StopSearchingTinder">
+            <English>You stop searching for tinder...</English>
+            <Czech>Přestali jste hledat troud...</Czech>
+            <French>Vous arrêtez de chercher de l'amadou...</French>
+            <Spanish>Dejas de buscar yesca...</Spanish>
+            <Italian>Smetti di cercare l'esca...</Italian>
+            <Polish>Przestajesz szukać rozpałki...</Polish>
+            <Portuguese>Você para de procurar isca de fogo...</Portuguese>
+            <Russian>Вы прекратили поиск трута...</Russian>
+            <German>Du hörst auf, nach Zunder zu suchen...</German>
+            <Korean>부싯깃 찾기를 중단합니다...</Korean>
+            <Japanese>火口を探すのをやめました...</Japanese>
+            <Chinese>你停止了尋找引火物...</Chinese>
+            <Chinesesimp>你停止了寻找引火物...</Chinesesimp>
+            <Turkish>Kav aramayı bıraktınız...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_StopSplittingLog">
+            <English>You stop splitting the log...</English>
+            <Czech>Přestali jste štípat poleno...</Czech>
+            <French>Vous arrêtez de fendre la bûche...</French>
+            <Spanish>Dejas de dividir el tronco...</Spanish>
+            <Italian>Smetti di spaccare il tronco...</Italian>
+            <Polish>Przestajesz rąbać kłodę...</Polish>
+            <Portuguese>Você para de dividir a tora...</Portuguese>
+            <Russian>Вы прекратили колоть полено...</Russian>
+            <German>Du hörst auf, den Holzstamm zu spalten...</German>
+            <Korean>장작 패기를 중단합니다...</Korean>
+            <Japanese>丸太を割るのをやめました...</Japanese>
+            <Chinese>你停止了劈原木...</Chinese>
+            <Chinesesimp>你停止了劈原木...</Chinesesimp>
+            <Turkish>Kütüğü yarmayı bıraktınız...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_TreeEmpty">
+            <English>Tree has fallen, doesn't have anymore wood...</English>
+            <Czech>Strom padl, už v něm není žádné dřevo...</Czech>
+            <French>L'arbre est tombé, il n'y a plus de bois...</French>
+            <Spanish>El árbol ha caído, ya no tiene madera...</Spanish>
+            <Italian>L'albero è caduto, non ha più legna...</Italian>
+            <Polish>Drzewo upadło, nie ma już więcej drewna...</Polish>
+            <Portuguese>A árvore caiu, não tem mais madeira...</Portuguese>
+            <Russian>Дерево упало, в нем больше нет древесины...</Russian>
+            <German>Der Baum ist gefallen, er hat kein Holz mehr...</German>
+            <Korean>나무가 쓰러져 더 이상 목재가 없습니다...</Korean>
+            <Japanese>木が倒れました。もう木材はありません...</Japanese>
+            <Chinese>樹已經倒了，沒有更多木頭了...</Chinese>
+            <Chinesesimp>树已经倒了，没有更多木头了...</Chinesesimp>
+            <Turkish>Ağaç devrildi, artık odun yok...</Turkish>
+        </Key>
+    </Package>
+</Project>

@@ -33,7 +33,7 @@ private _actionRegistry = player getVariable [QGVAR(actionRegistry), []];
 
 // Check if action already exists
 if ((_actionRegistry findIf { _x select 0 isEqualTo _id }) > -1) exitWith {
-    [QUOTE(COMPONENT_BEAUTIFIED), format ["Action %1 already registered!", _id]] call EFUNC(common,debugMessage);
+    [QUOTE(COMPONENT_BEAUTIFIED), format [localize LSTRING(AlreadyRegistered), _id]] call EFUNC(common,debugMessage);
 };
 
 _actionRegistry pushBack [

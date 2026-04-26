@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Compat_Ravage">
+        <Key ID="STR_MISERY_Compat_Ravage_AlreadyProcessed">
+            <English>This corpse is being processed already...</English>
+            <Czech>Tato mrtvola je již zpracovávána...</Czech>
+            <French>Ce cadavre est déjà en cours de traitement...</French>
+            <Spanish>Este cadáver ya está siendo procesado...</Spanish>
+            <Italian>Questo cadavere è già in fase di elaborazione...</Italian>
+            <Polish>To ciało jest już przetwarzane...</Polish>
+            <Portuguese>Este cadáver já está sendo processado...</Portuguese>
+            <Russian>Этот труп уже обрабатывается...</Russian>
+            <German>Diese Leiche wird bereits verarbeitet...</German>
+            <Korean>이 시체는 이미 처리 중입니다...</Korean>
+            <Japanese>この死体はすでに処理されています...</Japanese>
+            <Chinese>這具屍體已經在處理中了...</Chinese>
+            <Chinesesimp>这具尸体已经在处理中了...</Chinesesimp>
+            <Turkish>Bu ceset zaten işleniyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_Ravage_Infection">
+            <English>Ravage Zombie infection</English>
+            <Czech>Ravage infekce od zombií</Czech>
+            <French>Infection zombie Ravage</French>
+            <Spanish>Infección zombi de Ravage</Spanish>
+            <Italian>Infezione zombie Ravage</Italian>
+            <Polish>Infekcja zombie Ravage</Polish>
+            <Portuguese>Infecção zumbi Ravage</Portuguese>
+            <Russian>Инфекция зомби Ravage</Russian>
+            <German>Ravage Zombie-Infektion</German>
+            <Korean>Ravage 좀비 감염</Korean>
+            <Japanese>Ravage ゾンビ感染</Japanese>
+            <Chinese>Ravage 殭屍感染</Chinese>
+            <Chinesesimp>Ravage 僵尸感染</Chinesesimp>
+            <Turkish>Ravage Zombi enfeksiyonu</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_Ravage_InfectionChance">
+            <English>Ravage Zombie Infection chance</English>
+            <Czech>Šance na Ravage infekci od zombií</Czech>
+            <French>Chance d'infection zombie Ravage</French>
+            <Spanish>Probabilidad de infección zombi de Ravage</Spanish>
+            <Italian>Probabilità di infezione zombie Ravage</Italian>
+            <Polish>Szansa na infekcję zombie Ravage</Polish>
+            <Portuguese>Chance de infecção zumbi Ravage</Portuguese>
+            <Russian>Шанс заражения зомби Ravage</Russian>
+            <German>Ravage Zombie-Infektionschance</German>
+            <Korean>Ravage 좀비 감염 확률</Korean>
+            <Japanese>Ravage ゾンビ感染確率</Japanese>
+            <Chinese>Ravage 殭屍感染概率</Chinese>
+            <Chinesesimp>Ravage 僵尸感染概率</Chinesesimp>
+            <Turkish>Ravage Zombi Enfeksiyon şansı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_Ravage_InfectionChanceDesc">
+            <English>% chance per zombie hit to become infected...</English>
+            <Czech>% šance na infekci při každém zásahu zombií...</Czech>
+            <French>% de chance d'être infecté par coup de zombie...</French>
+            <Spanish>% de probabilidad por golpe de zombi de resultar infectado...</Spanish>
+            <Italian>% di probabilità per ogni colpo subito da uno zombie di essere infettati...</Italian>
+            <Polish>% szansy na zarażenie przy każdym uderzeniu zombie...</Polish>
+            <Portuguese>% de chance por golpe de zumbi de ser infectado...</Portuguese>
+            <Russian>% шанс заразиться при каждом ударе зомби...</Russian>
+            <German>% Chance pro Zombie-Treffer, infiziert zu werden...</German>
+            <Korean>좀비에게 피격될 때마다 감염될 확률(%)...</Korean>
+            <Japanese>ゾンビの攻撃を受けるごとに感染する確率(%)...</Japanese>
+            <Chinese>每次被殭屍擊中時感染的百分比概率...</Chinese>
+            <Chinesesimp>每次被僵尸击中时感染的百分比概率...</Chinesesimp>
+            <Turkish>Zombi darbesi başına enfekte olma % şansı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_Ravage_InfectionDesc">
+            <English>Allow Zombies to inflict disease? (Requires Ravage Zombie Module)</English>
+            <Czech>Povolit zombiím způsobovat nemoc? (Vyžaduje Ravage Zombie Module)</Czech>
+            <French>Autoriser les zombies à infliger des maladies ? (Nécessite le module Ravage Zombie)</French>
+            <Spanish>¿Permitir que los zombis inflijan enfermedades? (Requiere el módulo Ravage Zombie)</Spanish>
+            <Italian>Consentire agli zombie di infliggere malattie? (Richiede il modulo Ravage Zombie)</Italian>
+            <Polish>Pozwolić zombie na zarażanie chorobą? (Wymaga modułu Ravage Zombie)</Polish>
+            <Portuguese>Permitir que zumbis causem doenças? (Requer o módulo Ravage Zombie)</Portuguese>
+            <Russian>Разрешить зомби переносить болезни? (Требуется модуль Ravage Zombie)</Russian>
+            <German>Sollen Zombies Krankheiten verursachen können? (Erfordert Ravage Zombie-Modul)</German>
+            <Korean>좀비가 질병을 유발하도록 허용하시겠습니까? (Ravage 좀비 모듈 필요)</Korean>
+            <Japanese>ゾンビが病気を引き起こすことを許可しますか？ (Ravage ゾンビモジュールが必要)</Japanese>
+            <Chinese>允許殭屍傳播疾病？(需要 Ravage 殭屍模塊)</Chinese>
+            <Chinesesimp>允许僵尸传播疾病？(需要 Ravage 僵尸模块)</Chinesesimp>
+            <Turkish>Zombilerin hastalık bulaştırmasına izin verilsin mi? (Ravage Zombi Modülü gerektirir)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_Ravage_RottenSpecimen">
+            <English>You collect your specimen, but the rest of the corpse is too rotten for any more specimens...</English>
+            <Czech>Odebrali jste vzorek, ale zbytek mrtvoly je příliš shnilý na další vzorky...</Czech>
+            <French>Vous collectez votre spécimen, mais le reste du cadavre est trop pourri pour d'autres spécimens...</French>
+            <Spanish>Recoges tu espécimen, pero el resto del cadáver está demasiado podrido para más espécimenes...</Spanish>
+            <Italian>Raccogli il tuo campione, ma il resto del cadavere è troppo marcio per altri campioni...</Italian>
+            <Polish>Pobierasz próbkę, ale reszta ciała jest zbyt zgniła na kolejne próbki...</Polish>
+            <Portuguese>Você coleta seu espécime, mas o resto do cadáver está podre demais para mais espécimes...</Portuguese>
+            <Russian>Вы собрали образец, но остальная часть трупа слишком сгнила для других образцов...</Russian>
+            <German>Du sammelst deine Probe, aber der Rest der Leiche ist zu verrottet für weitere Proben...</German>
+            <Korean>표본을 수집했지만, 시체의 나머지 부분이 너무 부패하여 더 이상의 표본을 수집할 수 없습니다...</Korean>
+            <Japanese>検体を採取しましたが、死体の残りの部分は腐敗が進んでいるため、これ以上の検体採取は不可能です...</Japanese>
+            <Chinese>你採集了標本，但屍體的其餘部分太腐爛了，無法再採集更多標本...</Chinese>
+            <Chinesesimp>你采集了标本，但尸体的其余部分太腐烂了，无法再采集更多标本...</Chinesesimp>
+            <Turkish>Örneği topladın ama cesedin geri kalanı daha fazla örnek için çok çürümüş...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_Ravage_Specimens">
+            <English>Ravage Zombie specimens</English>
+            <Czech>Vzorky Ravage zombií</Czech>
+            <French>Spécimens de zombies Ravage</French>
+            <Spanish>Espécimenes zombi de Ravage</Spanish>
+            <Italian>Campioni zombie Ravage</Italian>
+            <Polish>Próbki zombie Ravage</Polish>
+            <Portuguese>Espécimes zumbi Ravage</Portuguese>
+            <Russian>Образцы зомби Ravage</Russian>
+            <German>Ravage Zombie-Proben</German>
+            <Korean>Ravage 좀비 표본</Korean>
+            <Japanese>Ravage ゾンビ検体</Japanese>
+            <Chinese>Ravage 殭屍標本</Chinese>
+            <Chinesesimp>Ravage 僵尸标本</Chinesesimp>
+            <Turkish>Ravage Zombi örnekleri</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_Ravage_SpecimensDesc">
+            <English>Allow specimen collection from zombies?</English>
+            <Czech>Povolit sběr vzorků ze zombií?</Czech>
+            <French>Autoriser la collecte de spécimens sur les zombies ?</French>
+            <Spanish>¿Permitir la recolección de espécimenes de zombis?</Spanish>
+            <Italian>Consentire la raccolta di campioni dagli zombie?</Italian>
+            <Polish>Pozwolić na zbieranie próbek od zombie?</Polish>
+            <Portuguese>Permitir a coleta de espécimes de zumbis?</Portuguese>
+            <Russian>Разрешить сбор образцов с зомби?</Russian>
+            <German>Soll das Sammeln von Proben von Zombies erlaubt sein?</German>
+            <Korean>좀비로부터 표본 수집을 허용하시겠습니까?</Korean>
+            <Japanese>ゾンビからの検体採取を許可しますか？</Japanese>
+            <Chinese>允許從殭屍身上採集標本？</Chinese>
+            <Chinesesimp>允许从僵尸身上采集标本？</Chinesesimp>
+            <Turkish>Zombilerden örnek toplanmasına izin verilsin mi?</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_Ravage_StartSawing">
+            <English>You start to saw the corpse...</English>
+            <Czech>Začínáte řezat mrtvolu pilou...</Czech>
+            <French>Vous commencez à scier le cadavre...</French>
+            <Spanish>Empiezas a serrar el cadáver...</Spanish>
+            <Italian>Inizi a segare il cadavere...</Italian>
+            <Polish>Zaczynasz piłować ciało...</Polish>
+            <Portuguese>Você começa a serrar o cadáver...</Portuguese>
+            <Russian>Вы начинаете распиливать труп...</Russian>
+            <German>Du beginnst, die Leiche zu sägen...</German>
+            <Korean>시체를 톱질하기 시작합니다...</Korean>
+            <Japanese>死体をのこぎりで切り始めます...</Japanese>
+            <Chinese>你開始鋸屍體...</Chinese>
+            <Chinesesimp>你开始锯尸体...</Chinesesimp>
+            <Turkish>Cesedi testereyle kesmeye başlıyorsun...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_Ravage_StartSkinning">
+            <English>You start to skin the corpse...</English>
+            <Czech>Začínáte stahovat mrtvolu z kůže...</Czech>
+            <French>Vous commencez à écorcher le cadavre...</French>
+            <Spanish>Empiezas a desollar el cadáver...</Spanish>
+            <Italian>Inizi a scuoiare il cadavere...</Italian>
+            <Polish>Zaczynasz obdzierać ciało ze skóry...</Polish>
+            <Portuguese>Você começa a esfolar o cadáver...</Portuguese>
+            <Russian>Вы начинаете снимать кожу с трупа...</Russian>
+            <German>Du beginnst, die Leiche zu häuten...</German>
+            <Korean>시체의 가죽을 벗기기 시작합니다...</Korean>
+            <Japanese>死体の皮を剥ぎ始めます...</Japanese>
+            <Chinese>你開始剝屍體的皮...</Chinese>
+            <Chinesesimp>你开始剥尸体的皮...</Chinesesimp>
+            <Turkish>Cesedi yüzmeye başlıyorsun...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_Ravage_StopSawing">
+            <English>You stop sawing the corpse...</English>
+            <Czech>Přestáváte řezat mrtvolu...</Czech>
+            <French>Vous arrêtez de scier le cadavre...</French>
+            <Spanish>Dejas de serrar el cadáver...</Spanish>
+            <Italian>Smetti di segare il cadavere...</Italian>
+            <Polish>Przestajesz piłować ciało...</Polish>
+            <Portuguese>Você para de serrar o cadáver...</Portuguese>
+            <Russian>Вы перестаете распиливать труп...</Russian>
+            <German>Du hörst auf, die Leiche zu sägen...</German>
+            <Korean>시체 톱질을 중단합니다...</Korean>
+            <Japanese>死体をのこぎりで切るのをやめます...</Japanese>
+            <Chinese>你停止了鋸屍體...</Chinese>
+            <Chinesesimp>你停止了锯尸体...</Chinesesimp>
+            <Turkish>Cesedi kesmeyi bırakıyorsun...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_Ravage_StopSkinning">
+            <English>You stop skinning the corpse...</English>
+            <Czech>Přestáváte stahovat mrtvolu z kůže...</Czech>
+            <French>Vous arrêtez d'écorcher le cadavre...</French>
+            <Spanish>Dejas de desollar el cadáver...</Spanish>
+            <Italian>Smetti di scuoiare il cadavere...</Italian>
+            <Polish>Przestajesz obdzierać ciało ze skóry...</Polish>
+            <Portuguese>Você para de esfolar o cadáver...</Portuguese>
+            <Russian>Вы перестаете снимать кожу с трупа...</Russian>
+            <German>Du hörst auf, die Leiche zu häuten...</German>
+            <Korean>시체 가죽 벗기기를 중단합니다...</Korean>
+            <Japanese>死体の皮を剥ぐのをやめます...</Japanese>
+            <Chinese>你停止了剝屍體的皮...</Chinese>
+            <Chinesesimp>你停止了剥尸体的皮...</Chinesesimp>
+            <Turkish>Cesedi yüzmeyi bırakıyorsun...</Turkish>
+        </Key>
+    </Package>
+</Project>

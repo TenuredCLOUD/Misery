@@ -203,7 +203,7 @@ class CLASS(maintenance_ui) {
         class CLASS(maintenance_exit): RscButton {
             idc = 1603;
             colorFocused[] = {0.5,0.5,0.5,0.7};
-            text = "Exit"; //--- ToDo: Localize;
+            text = ECSTRING(common,Exit);
             x = 37 * GUI_GRID_W + GUI_GRID_X;
             y = 21.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7 * GUI_GRID_W;

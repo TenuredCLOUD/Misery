@@ -51,7 +51,7 @@ private _refuelInterrupt = _dialog displayAddEventHandler ["KeyDown", {
 }];
 
 if (_funds < _fuelCost) exitWith {
-    ctrlSetText [1001, "You cannot afford this!"];
+    ctrlSetText [1001, localize ECSTRING(common,TooExpensive)];
     [982384, [1600, 1601], true] call EFUNC(common,displayShowControls);
     player setVariable [QCLASS(processRefuel), nil];
     _dialog displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
@@ -84,7 +84,7 @@ private _fundsToDeduct = _fuelCost;
     if (_funds < _fundsToDeduct) exitWith {
         player setVariable [QCLASS(processRefuel), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
-        ctrlSetText [1001, "You cannot afford this!"];
+        ctrlSetText [1001, localize ECSTRING(common,TooExpensive)];
         [982384, [1600, 1601], true] call EFUNC(common,displayShowControls);
         _handle call CBA_fnc_removePerFrameHandler;
     };

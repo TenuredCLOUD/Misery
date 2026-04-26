@@ -19,7 +19,7 @@ private _dialog = findDisplay 982383;
 private _selectedIndex = lbCurSel 1500; // Get the index of the selected item
 
 if (_selectedIndex isEqualTo -1) exitWith {
-    ctrlSetText [1001, "No Resupply option selected..."];
+    ctrlSetText [1001, localize LSTRING(NoOption)];
 };
 
 if (_selectedIndex isNotEqualTo -1) exitWith {

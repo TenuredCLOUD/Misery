@@ -13,6 +13,8 @@
             <German>Enthält Antibiotikatabletten</German>
             <Korean>항생제 알약이 들어 있습니다.</Korean>
             <Japanese>抗生物質の錠剤が含まれています</Japanese>
+            <Chinese>含有抗生素藥片</Chinese>
+            <Chinesesimp>含有抗生素药片</Chinesesimp>
             <Turkish>Antibiyotik hapları içerir</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_Antibiotic_DisplayName">
@@ -27,6 +29,8 @@
             <German>Antibiotika-Packung</German>
             <Korean>항생제 패키지</Korean>
             <Japanese>抗生物質パッケージ</Japanese>
+            <Chinese>抗生素包裝</Chinese>
+            <Chinesesimp>抗生素包装</Chinesesimp>
             <Turkish>Antibiyotik paketi</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_Antiparasitic_Description">
@@ -41,6 +45,8 @@
             <German>Enthält Anti-Parasiten-Pillen</German>
             <Korean>항기생충제 알약이 들어 있습니다.</Korean>
             <Japanese>抗寄生虫剤が含まれています</Japanese>
+            <Chinese>含有抗寄生蟲藥片</Chinese>
+            <Chinesesimp>含有抗寄生虫药片</Chinesesimp>
             <Turkish>Anti paraziter haplar içerir</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_Antiparasitic_DisplayName">
@@ -55,6 +61,8 @@
             <German>Anti-Parasiten-Packung</German>
             <Korean>항기생충제 패키지</Korean>
             <Japanese>抗寄生虫パッケージ</Japanese>
+            <Chinese>抗寄生蟲藥物包裝</Chinese>
+            <Chinesesimp>抗寄生虫药物包装</Chinesesimp>
             <Turkish>Anti paraziter paket</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_Caffeine_Description">
@@ -69,6 +77,8 @@
             <German>Verleiht Energie&lt;br/&gt; - Nicht-narkotische Stimulans</German>
             <Korean>에너지 부스팅&lt;br/&gt; - 비마약성 각성제</Korean>
             <Japanese>エネルギーを高めます&lt;br/&gt; -非麻薬性刺激剤</Japanese>
+            <Chinese>提供能量提升&lt;br/&gt; - 非麻醉性興奮劑</Chinese>
+            <Chinesesimp>提供能量提升&lt;br/&gt; - 非麻醉性兴奋剂</Chinesesimp>
             <Turkish>Enerji artışı sağlar&lt;br/&gt; - Narkotik olmayan uyarıcı</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_Caffeine_DisplayName">
@@ -83,6 +93,8 @@
             <German>Koffeintabletten</German>
             <Korean>카페인 정제</Korean>
             <Japanese>カフェイン錠</Japanese>
+            <Chinese>咖啡因片</Chinese>
+            <Chinesesimp>咖啡因片</Chinesesimp>
             <Turkish>Kafein tabletleri</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_Caffetin_Description">
@@ -97,6 +109,8 @@
             <German>Enthält Caffetin-Tabletten</German>
             <Korean>카페틴 정제 함유</Korean>
             <Japanese>カフェチン錠が含まれています</Japanese>
+            <Chinese>含有加合百服藥片</Chinese>
+            <Chinesesimp>含有加合百服药片</Chinesesimp>
             <Turkish>Caffetin tabletleri içerir</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_Caffetin_DisplayName">
@@ -111,6 +125,8 @@
             <German>Caffetin-Packung</German>
             <Korean>카페틴 패키지</Korean>
             <Japanese>カフェチンパッケージ</Japanese>
+            <Chinese>加合百服包裝</Chinese>
+            <Chinesesimp>加合百服包装</Chinesesimp>
             <Turkish>Caffetin paketi</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_CenestinBottle_Description">
@@ -125,6 +141,8 @@
             <German>Enthält Cenestin-Pillen</German>
             <Korean>Cenestin 알약 함유</Korean>
             <Japanese>Cenestin錠剤が含まれています</Japanese>
+            <Chinese>含有結合雌激素藥片</Chinese>
+            <Chinesesimp>含有结合雌激素药片</Chinesesimp>
             <Turkish>Cenestin hapları içerir</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_CenestinBottle_DisplayName">
@@ -139,6 +157,8 @@
             <German>Cenestin Flasche</German>
             <Korean>Cenestin 병</Korean>
             <Japanese>Cenestinボトル</Japanese>
+            <Chinese>結合雌激素瓶</Chinese>
+            <Chinesesimp>结合雌激素瓶</Chinesesimp>
             <Turkish>Cenestin şişesi</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_Chainsaw_Description">
@@ -153,6 +173,8 @@
             <German>- macht das Sammeln von Holz einfach&lt;br/&gt; - Werkzeug</German>
             <Korean>- 나무 수집이 쉬워집니다&lt;br/&gt; - 도구</Korean>
             <Japanese>- 木材の収集が簡単になります&lt;br/&gt; - 道具</Japanese>
+            <Chinese>- 讓木材收集變得容易&lt;br/&gt; - 工具</Chinese>
+            <Chinesesimp>- 让木材收集变得容易&lt;br/&gt; - 工具</Chinesesimp>
             <Turkish>- odun toplamayı kolaylaştırır&lt;br/&gt; - Araç</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_Chainsaw_DisplayName">
@@ -167,6 +189,8 @@
             <German>Kettensäge</German>
             <Korean>전기톱</Korean>
             <Japanese>チェーンソー</Japanese>
+            <Chinese>鏈鋸</Chinese>
+            <Chinesesimp>链锯</Chinesesimp>
             <Turkish>Motorlu testere</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_CharcoalTabs_Description">
@@ -181,6 +205,8 @@
             <German>Wird verwendet, um Giftstoffe aus dem Körper zu entfernen&lt;br/&gt; - Medikament zur Entfernung von Giftstoffen</German>
             <Korean>체내 독소 제거에 사용&lt;br/&gt; - 독소 제거제</Korean>
             <Japanese>体から毒素を取り除くために使用されます&lt;br/&gt; -毒素除去薬</Japanese>
+            <Chinese>用於清除體內毒素&lt;br/&gt; - 排毒藥物</Chinese>
+            <Chinesesimp>用于清除体内毒素&lt;br/&gt; - 排毒药物</Chinesesimp>
             <Turkish>Vücuttan toksinleri atmak için kullanılır&lt;br/&gt; - Toksin giderici ilaç</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_CharcoalTabs_DisplayName">
@@ -195,6 +221,8 @@
             <German>Aktivkohletabletten</German>
             <Korean>숯 정제</Korean>
             <Japanese>木炭錠</Japanese>
+            <Chinese>木炭片</Chinese>
+            <Chinesesimp>木炭片</Chinesesimp>
             <Turkish>Aktif kömür tabletleri</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_ClozapineBox_Description">
@@ -209,6 +237,8 @@
             <German>Enthält Clozapin-Tabletten</German>
             <Korean>클로자핀 알약이 들어 있습니다.</Korean>
             <Japanese>クロザピン錠が含まれています</Japanese>
+            <Chinese>含有氯氮平藥片</Chinese>
+            <Chinesesimp>含有氯氮平药片</Chinesesimp>
             <Turkish>Klozapin hapları içerir</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_ClozapineBox_DisplayName">
@@ -223,6 +253,8 @@
             <German>Clozapin-Schachtel</German>
             <Korean>클로자핀 상자</Korean>
             <Japanese>クロザピンボックス</Japanese>
+            <Chinese>氯氮平盒</Chinese>
+            <Chinesesimp>氯氮平盒</Chinesesimp>
             <Turkish>Klozapin kutusu</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_DeconKit_Description">
@@ -237,6 +269,8 @@
             <German>Militärisches Dekontaminationsset</German>
             <Korean>군용 오염 제거 키트</Korean>
             <Japanese>軍用除染キット</Japanese>
+            <Chinese>軍事洗消套件</Chinese>
+            <Chinesesimp>军事洗消套件</Chinesesimp>
             <Turkish>askeri dekontaminasyon kiti</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_DeconKit_DisplayName">
@@ -251,6 +285,8 @@
             <German>Dekon-Set</German>
             <Korean>디콘 키트</Korean>
             <Japanese>デコンキット</Japanese>
+            <Chinese>淨化套件</Chinese>
+            <Chinesesimp>净化套件</Chinesesimp>
             <Turkish>Dekont Kiti</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_ERUOff_DisplayName">
@@ -265,6 +301,8 @@
             <German>ERU (AUS)</German>
             <Korean>ERU(꺼짐)</Korean>
             <Japanese>ERU（OFF）</Japanese>
+            <Chinese>環境讀取裝置 (關閉)</Chinese>
+            <Chinesesimp>环境读取装置 (关闭)</Chinesesimp>
             <Turkish>ERU (KAPALI)</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_ERU_Description">
@@ -279,6 +317,8 @@
             <German>Umwelt-Leseeinheit&lt;br/&gt; - Informationen</German>
             <Korean>환경 판독 장치&lt;br/&gt; - 정보</Korean>
             <Japanese>環境読取装置&lt;br/&gt; - 情報</Japanese>
+            <Chinese>環境讀取裝置&lt;br/&gt; - 信息</Chinese>
+            <Chinesesimp>环境读取装置&lt;br/&gt; - 信息</Chinesesimp>
             <Turkish>Çevresel Okuma Ünitesi&lt;br/&gt; - Bilgi</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_ERU_DisplayName">
@@ -293,6 +333,8 @@
             <German>ERU (EIN)</German>
             <Korean>ERU(켜짐)</Korean>
             <Japanese>ERU（ON）</Japanese>
+            <Chinese>環境讀取裝置 (開啟)</Chinese>
+            <Chinesesimp>环境读取装置 (开启)</Chinesesimp>
             <Turkish>ERU (AÇIK)</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_ElectricHandSaw_Description">
@@ -307,6 +349,8 @@
             <German>Eine akkubetriebene Säge&lt;br/&gt; - Basis Handwerk</German>
             <Korean>배터리로 작동되는 톱&lt;br/&gt; - 기지 제작</Korean>
             <Japanese>バッテリー駆動のこぎり&lt;br/&gt; - ベースクラフト</Japanese>
+            <Chinese>電池供電的鋸&lt;br/&gt; - 基礎製作</Chinese>
+            <Chinesesimp>电池供电的锯&lt;br/&gt; - 基础制作</Chinesesimp>
             <Turkish>Akülü testere&lt;br/&gt; - Temel işçiliği</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_ElectricHandSaw_DisplayName">
@@ -321,6 +365,8 @@
             <German>Elektrische Handsäge</German>
             <Korean>전기 핸드 톱</Korean>
             <Japanese>電動ハンドソー</Japanese>
+            <Chinese>電動手鋸</Chinese>
+            <Chinesesimp>电动手锯</Chinesesimp>
             <Turkish>Elektrikli El Testeresi</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_EngineOil_Description">
@@ -335,6 +381,8 @@
             <German>Motoröl</German>
             <Korean>엔진 오일</Korean>
             <Japanese>エンジンオイル</Japanese>
+            <Chinese>發動機油</Chinese>
+            <Chinesesimp>发动机油</Chinesesimp>
             <Turkish>motor yağı</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_FieldThermalRegulationKit_Description">
@@ -377,6 +425,8 @@
             <German>Persönliches Geigerzähler (AUS)</German>
             <Korean>개인용 가이거 계수기(OFF)</Korean>
             <Japanese>個人用ガイガーカウンター（OFF）</Japanese>
+            <Chinese>個人蓋革計數器 (關閉)</Chinese>
+            <Chinesesimp>个人盖革计数器 (关闭)</Chinesesimp>
             <Turkish>Kişisel Geiger Sayacı (KAPALI)</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_GeigerOn_DisplayName">
@@ -391,6 +441,8 @@
             <German>Persönliches Geigerzähler (EIN)</German>
             <Korean>개인용 가이거 계수기(ON)</Korean>
             <Japanese>個人用ガイガーカウンター（ON）</Japanese>
+            <Chinese>個人蓋革計數器 (開啟)</Chinese>
+            <Chinesesimp>个人盖革计数器 (开启)</Chinesesimp>
             <Turkish>Kişisel Geiger Sayacı (AÇIK)</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_Geiger_Description">
@@ -405,6 +457,8 @@
             <German>Wird verwendet, um Strahlung am Körper zu erkennen</German>
             <Korean>신체의 방사능을 감지하는 데 사용됩니다.</Korean>
             <Japanese>体内の放射線を検出するために使用されます</Japanese>
+            <Chinese>用於探測身體輻射</Chinese>
+            <Chinesesimp>用于探测身体辐射</Chinesesimp>
             <Turkish>Vücuttaki radyasyonu tespit etmek için kullanılır</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_LanternOff_Description">
@@ -419,6 +473,8 @@
             <German>Ausgestattet mit Batterien</German>
             <Korean>배터리 장착</Korean>
             <Japanese>電池を搭載</Japanese>
+            <Chinese>配備電池</Chinese>
+            <Chinesesimp>配备电池</Chinesesimp>
             <Turkish>Pillerle donatılmıştır</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_LanternOff_DisplayName">
@@ -433,6 +489,8 @@
             <German>Laterne (Aus)</German>
             <Korean>랜턴(끄기)</Korean>
             <Japanese>ランタン（オフ）</Japanese>
+            <Chinese>燈籠 (關閉)</Chinese>
+            <Chinesesimp>灯笼 (关闭)</Chinesesimp>
             <Turkish>Fener (Kapalı)</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_LanternOn_Description">
@@ -447,6 +505,8 @@
             <German>Hilft, den Weg im Dunkeln zu erhellen...</German>
             <Korean>어둠 속에서 길을 밝히는 데 도움이 됩니다...</Korean>
             <Japanese>暗闇で道を照らすのに役立ちます...</Japanese>
+            <Chinese>在黑暗中照亮道路...</Chinese>
+            <Chinesesimp>在黑暗中照亮道路...</Chinesesimp>
             <Turkish>Karanlıkta yolu aydınlatmaya yardımcı olur...</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_LanternOn_DisplayName">
@@ -461,6 +521,8 @@
             <German>Laterne (Ein)</German>
             <Korean>랜턴(켜짐)</Korean>
             <Japanese>ランタン（オン）</Japanese>
+            <Chinese>燈籠 (開啟)</Chinese>
+            <Chinesesimp>灯笼 (开启)</Chinesesimp>
             <Turkish>Fener (Açık)</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_Lighter_Description">
@@ -475,6 +537,8 @@
             <German>Altes Feuerzeug...&lt;br/&gt; - Feuer machen</German>
             <Korean>오래된 라이터...&lt;br/&gt; - 불 제작</Korean>
             <Japanese>古いライター...&lt;br/&gt; - 火起こし</Japanese>
+            <Chinese>舊打火機...&lt;br/&gt; - 生火製作</Chinese>
+            <Chinesesimp>旧打火机...&lt;br/&gt; - 生火制作</Chinesesimp>
             <Turkish>Eski çakmak...&lt;br/&gt; - Ateş yakma</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_Lighter_DisplayName">
@@ -489,6 +553,8 @@
             <German>Feuerzeug</German>
             <Korean>라이터</Korean>
             <Japanese>ライター</Japanese>
+            <Chinese>打火機</Chinese>
+            <Chinesesimp>打火机</Chinesesimp>
             <Turkish>Çakmak</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_MatchBox_Description">
@@ -503,6 +569,8 @@
             <German>Schachtel mit verwitterten Streichhölzern</German>
             <Korean>풍화된 성냥 상자</Korean>
             <Japanese>風化したマッチの箱</Japanese>
+            <Chinese>一盒風化的火柴</Chinese>
+            <Chinesesimp>一盒风化的火柴</Chinesesimp>
             <Turkish>yıpranmış kibrit kutusu</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_MatchBox_DisplayName">
@@ -517,6 +585,8 @@
             <German>Streichholzschachtel</German>
             <Korean>성냥갑</Korean>
             <Japanese>マッチ箱</Japanese>
+            <Chinese>火柴盒</Chinese>
+            <Chinesesimp>火柴盒</Chinesesimp>
             <Turkish>Kibrit Kutusu</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_Pain_Description">
@@ -531,6 +601,8 @@
             <German>Enthält Schmerzmittel</German>
             <Korean>진통제 함유</Korean>
             <Japanese>鎮痛剤が含まれています</Japanese>
+            <Chinese>含有止痛藥</Chinese>
+            <Chinesesimp>含有止痛药</Chinesesimp>
             <Turkish>Ağrı kesici hapları içerir</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_Pain_DisplayName">
@@ -545,6 +617,8 @@
             <German>Schmerzmittel</German>
             <Korean>진통제</Korean>
             <Japanese>鎮痛剤</Japanese>
+            <Chinese>止痛藥</Chinese>
+            <Chinesesimp>止痛药</Chinesesimp>
             <Turkish>Ağrı kesici haplar</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_Pickaxe_Description">
@@ -559,6 +633,8 @@
             <German>Wird für den Erzabbau verwendet, sieht grob aus...</German>
             <Korean>광석 채굴에 사용되며 거칠어 보입니다...</Korean>
             <Japanese>鉱石を採掘するために使用され、粗く見える...</Japanese>
+            <Chinese>用於採礦，看起來很粗糙...&lt;br/&gt; - 採礦物品</Chinese>
+            <Chinesesimp>用于采矿，看起来很粗糙...&lt;br/&gt; - 采矿物品</Chinesesimp>
             <Turkish>Maden cevheri çıkarmak için kullanılır, kaba görünür...</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_Pickaxe_DisplayName">
@@ -573,6 +649,8 @@
             <German>Schlampige Spitzhacke</German>
             <Korean>조잡한 곡괭이</Korean>
             <Japanese>粗末なつるはし</Japanese>
+            <Chinese>劣質鎬</Chinese>
+            <Chinesesimp>劣质镐</Chinesesimp>
             <Turkish>Kalitesiz Kazma</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_PotassiumIodate_Description">
@@ -587,6 +665,8 @@
             <German>Enthält Anti-Strahlen-Tabletten</German>
             <Korean>방사선 방지 정제가 포함되어 있습니다.</Korean>
             <Japanese>抗放射線錠剤が含まれています</Japanese>
+            <Chinese>含有抗輻射藥片</Chinese>
+            <Chinesesimp>含有抗辐射药片</Chinesesimp>
             <Turkish>Anti-Radyasyon tabletleri içerir</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_PotassiumIodate_DisplayName">
@@ -601,6 +681,8 @@
             <German>Kaliumjodat</German>
             <Korean>요오드산칼륨</Korean>
             <Japanese>ヨウ素酸カリウム</Japanese>
+            <Chinese>碘酸鉀</Chinese>
+            <Chinesesimp>碘酸钾</Chinesesimp>
             <Turkish>Potasyum İyodat</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_PureTabs_Description">
@@ -615,6 +697,8 @@
             <German>Enthält Wasserreinigungstabletten</German>
             <Korean>수질 정화용 알약 포함</Korean>
             <Japanese>浄水剤が含まれています</Japanese>
+            <Chinese>含有淨水片</Chinese>
+            <Chinesesimp>含有净水片</Chinesesimp>
             <Turkish>Su temizleme tabletleri içerir</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_PureTabs_DisplayName">
@@ -629,6 +713,8 @@
             <German>Aqua-Tabletten</German>
             <Korean>아쿠아 정제</Korean>
             <Japanese>アクアタブレット</Japanese>
+            <Chinese>淨水片</Chinese>
+            <Chinesesimp>净水片</Chinesesimp>
             <Turkish>Aqua tabletleri</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_SawFuel_Description">
@@ -643,6 +729,8 @@
             <German>Dose 2-Takt-Kraftstoff&lt;br/&gt; - Kraftstoffgegenstand</German>
             <Korean>2행정 연료 캔&lt;br/&gt; - 연료 아이템</Korean>
             <Japanese>2ストローク燃料缶&lt;br/&gt; - 燃料アイテム</Japanese>
+            <Chinese>一罐二衝程燃料&lt;br/&gt; - 燃料物品</Chinese>
+            <Chinesesimp>一罐二冲程燃料&lt;br/&gt; - 燃料物品</Chinesesimp>
             <Turkish>2 zamanlı yakıt kutusu&lt;br/&gt; - Yakıt maddesi</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_SawFuel_DisplayName">
@@ -657,6 +745,8 @@
             <German>Sägenkraftstoff</German>
             <Korean>톱 연료</Korean>
             <Japanese>チェーンソー燃料</Japanese>
+            <Chinese>鋸機燃料</Chinese>
+            <Chinesesimp>锯机燃料</Chinesesimp>
             <Turkish>Motorlu testere yakıtı</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_SleepPack_Description">
@@ -671,6 +761,8 @@
             <German>Enthält Schlaftabletten</German>
             <Korean>수면제가 들어 있습니다.</Korean>
             <Japanese>睡眠薬が含まれています</Japanese>
+            <Chinese>含有安眠藥</Chinese>
+            <Chinesesimp>含有安眠药</Chinesesimp>
             <Turkish>Uyku hapı içerir</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_SleepPack_DisplayName">
@@ -685,6 +777,8 @@
             <German>Schlaftabletten-Packung</German>
             <Korean>수면제 패키지</Korean>
             <Japanese>睡眠薬のパッケージ</Japanese>
+            <Chinese>安眠藥包裝</Chinese>
+            <Chinesesimp>安眠药包装</Chinesesimp>
             <Turkish>Uyku hapı paketi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_18VBattery_Description">
@@ -699,6 +793,8 @@
             <German>18-V-Akku für handgeführte Werkzeuge</German>
             <Korean>핸드 헬드 도구용 18v 배터리</Korean>
             <Japanese>ハンドヘルドツール用の18Vバッテリー</Japanese>
+            <Chinese>手持工具用 18V 電池</Chinese>
+            <Chinesesimp>手持工具用 18V 电池</Chinesesimp>
             <Turkish>El aletleri için 18v pil</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_18VBattery_DisplayName">
@@ -713,6 +809,8 @@
             <German>18-V-Akku</German>
             <Korean>18v 배터리</Korean>
             <Japanese>18Vバッテリー</Japanese>
+            <Chinese>18V 電池</Chinese>
+            <Chinesesimp>18V 电池</Chinesesimp>
             <Turkish>18v pil</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_9VBattery_Description">
@@ -727,6 +825,8 @@
             <German>alte 9-V-Batterie</German>
             <Korean>오래된 9V 배터리</Korean>
             <Japanese>古い9V電池</Japanese>
+            <Chinese>舊的 9V 電池</Chinese>
+            <Chinesesimp>旧的 9V 电池</Chinesesimp>
             <Turkish>eski 9V pil</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_9VBattery_DisplayName">
@@ -741,6 +841,8 @@
             <German>9-V-Batterie</German>
             <Korean>9V 배터리</Korean>
             <Japanese>9V電池</Japanese>
+            <Chinese>9V 電池</Chinese>
+            <Chinesesimp>9V 电池</Chinesesimp>
             <Turkish>9V pil</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_AerodynamicControlKit_Description">
@@ -755,6 +857,8 @@
             <German>aerodynamisches Steuerungsset für Flugzeugreparaturen</German>
             <Korean>항공기 수리에 사용되는 공기 역학적 제어 키트</Korean>
             <Japanese>航空機の修理に使用される空力制御キット</Japanese>
+            <Chinese>用於飛機維修的气动控制套件</Chinese>
+            <Chinesesimp>用于飞机维修的气动控制套件</Chinesesimp>
             <Turkish>Uçak onarımlarında kullanılan aerodinamik kontrol kiti</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_AerodynamicControlKit_DisplayName">
@@ -769,6 +873,8 @@
             <German>Aerodynamisches Steuerungsset</German>
             <Korean>공기역학적 제어 키트</Korean>
             <Japanese>空力コントロールキット</Japanese>
+            <Chinese>氣動控制套件</Chinese>
+            <Chinesesimp>气动控制套件</Chinesesimp>
             <Turkish>Aerodinamik kontrol kiti</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Amethyst_Description">
@@ -783,6 +889,8 @@
             <German>Roher Amethyst, ungeschnitten&lt;br/&gt; - Seltenheit</German>
             <Korean>원시 자수정, 자르지 않은&lt;br/&gt; - 희귀도</Korean>
             <Japanese>未加工のアメジスト、未カット&lt;br/&gt; - レアリティ</Japanese>
+            <Chinese>原始紫水晶，未切割&lt;br/&gt; - 稀有度</Chinese>
+            <Chinesesimp>原始紫水晶，未切割&lt;br/&gt; - 稀有度</Chinesesimp>
             <Turkish>Ham Ametist, kesilmemiş&lt;br/&gt; - Nadirlik</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Amethyst_DisplayName">
@@ -797,6 +905,8 @@
             <German>Amethyst</German>
             <Korean>자수정</Korean>
             <Japanese>アメジスト</Japanese>
+            <Chinese>紫水晶</Chinese>
+            <Chinesesimp>紫水晶</Chinesesimp>
             <Turkish>Ametist</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Antidote_Description">
@@ -811,6 +921,8 @@
             <German>äußerst wirksame medizinische Injektion</German>
             <Korean>매우 효율적인 의료 주사</Korean>
             <Japanese>非常に効率的な医療用注射</Japanese>
+            <Chinese>極其有效的醫療注射劑</Chinese>
+            <Chinesesimp>极其有效的医疗注射剂</Chinesesimp>
             <Turkish>son derece verimli tıbbi enjeksiyon</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Antidote_DisplayName">
@@ -825,6 +937,8 @@
             <German>Gegenmittel-Injektion</German>
             <Korean>해독제 주사</Korean>
             <Japanese>解毒剤注射</Japanese>
+            <Chinese>解毒劑注射</Chinese>
+            <Chinesesimp>解毒剂注射</Chinesesimp>
             <Turkish>Panzehir enjeksiyonu</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_AnvilHammer_Description">
@@ -839,6 +953,8 @@
             <German>Ein alter Schlaghammer, hat ein gutes Gewicht &lt;br/&gt; - Schmiedegegenstand</German>
             <Korean>오래된 스트라이킹 해머, 무게감이 있습니다.&lt;br/&gt; - 대장간 아이템</Korean>
             <Japanese>古い打撃ハンマーは、それにいくつかの良い重量を持っています&lt;br/&gt; - 鍛冶アイテム</Japanese>
+            <Chinese>一把舊的敲擊錘，很有分量&lt;br/&gt; - 鍛造物品</Chinese>
+            <Chinesesimp>一把旧的敲击锤，很有分量&lt;br/&gt; - 锻造物品</Chinesesimp>
             <Turkish>Eski bir Vurmalı Çekiç, iyi bir ağırlığa sahiptir&lt;br/&gt; - Demircilik eşyası</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_AnvilHammer_DisplayName">
@@ -853,6 +969,8 @@
             <German>Schlaghammer</German>
             <Korean>스트라이킹 해머</Korean>
             <Japanese>打撃ハンマー</Japanese>
+            <Chinese>敲擊錘</Chinese>
+            <Chinesesimp>敲击锤</Chinesesimp>
             <Turkish>Vurmalı Çekiç</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Anvil_DisplayName">
@@ -867,6 +985,8 @@
             <German>Schmiedeamboss</German>
             <Korean>대장장이 모루</Korean>
             <Japanese>鍛冶屋の金床</Japanese>
+            <Chinese>鍛造砧</Chinese>
+            <Chinesesimp>锻造砧</Chinesesimp>
             <Turkish>Demirci Örsü</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Artifact_Description">
@@ -881,6 +1001,8 @@
             <German>Ein seltsames Objekt, das Strahlung emittiert und wahrscheinlich von Forschern sehr gesucht wird.&lt;br/&gt; - Emittiert Strahlung&lt;br/&gt; - Seltenheit</German>
             <Korean>방사선을 방출하는 이상한 물체로 연구자들이 많이 찾는 것 같습니다.&lt;br/&gt; - 방사선 방출&lt;br/&gt; - 희귀도</Korean>
             <Japanese>放射線を放出する奇妙な物体で、おそらく研究者に非常に求められています。&lt;br/&gt; -放射線を放出します&lt;br/&gt; -レア度</Japanese>
+            <Chinese>一個發射輻射的奇怪物體，可能深受研究人員的追捧。&lt;br/&gt; - 發射輻射&lt;br/&gt; - 稀有度</Chinese>
+            <Chinesesimp>一个发射辐射的奇怪物体，可能深受研究人员的追捧。&lt;br/&gt; - 发射辐射&lt;br/&gt; - 稀有度</Chinesesimp>
             <Turkish>Radyasyon yayan, muhtemelen araştırmacılar tarafından çok aranan garip bir nesne.&lt;br/&gt; - Radyasyon yayar&lt;br/&gt; - Nadirlik</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Artifact_DisplayName">
@@ -895,6 +1017,8 @@
             <German>Artefakt</German>
             <Korean>유물</Korean>
             <Japanese>アーティファクト</Japanese>
+            <Chinese>神器</Chinese>
+            <Chinesesimp>神器</Chinesesimp>
             <Turkish>Eser</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_AutoBatteryHeavy_Description">
@@ -909,6 +1033,8 @@
             <German>Eine alte 8D Deep Cycle Automotive Batterie. Sehr schwer... &lt;br/&gt; - Gegenstand zum Tanken &lt;br/&gt; - Gegenstand zum Basteln</German>
             <Korean>오래된 8D 딥 사이클 자동차 배터리입니다. 매우 무겁습니다... &lt;br/&gt; - 연료 보급 아이템 &lt;br/&gt; - 제작 아이템</Korean>
             <Japanese>古い8Dディープサイクル自動車用バッテリーです。とても重い... &lt;br/&gt; - 給油アイテム &lt;br/&gt; - クラフトアイテム</Japanese>
+            <Chinese>一個舊的 8D 深循環汽車電池。非常重...&lt;br/&gt; - 加油物品&lt;br/&gt; - 製作物品</Chinese>
+            <Chinesesimp>一个旧的 8D 深循环汽车电池。非常重...&lt;br/&gt; - 加油物品&lt;br/&gt; - 制作物品</Chinesesimp>
             <Turkish>Eski bir 8D Derin Döngü Otomotiv aküsü. Çok ağır... &lt;br/&gt; - Yakıt ikmali eşyası &lt;br/&gt; - Üretim eşyası</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_AutoBatteryHeavy_DisplayName">
@@ -923,6 +1049,8 @@
             <German>Autobatterie (Hochleistungsbatterie)</German>
             <Korean>자동차 배터리(헤비 듀티)</Korean>
             <Japanese>自動車用バッテリー（重負荷）</Japanese>
+            <Chinese>汽車電池 (重型)</Chinese>
+            <Chinesesimp>汽车电池 (重型)</Chinesesimp>
             <Turkish>Otomotiv Aküsü (Ağır Hizmet Tipi)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_AutoBattery_Description">
@@ -937,6 +1065,8 @@
             <German>Eine alte Autobatterie... &lt;br/&gt; - Tankgegenstand&lt;br/&gt; - Bastelgegenstand</German>
             <Korean>오래된 자동차 배터리... &lt;br/&gt; - 급유 아이템&lt;br/&gt; - 제작 아이템</Korean>
             <Japanese>古い自動車用バッテリー... &lt;br/&gt; - 給油アイテム&lt;br/&gt; - クラフトアイテム</Japanese>
+            <Chinese>一個舊的汽車電池...&lt;br/&gt; - 加油物品&lt;br/&gt; - 製作物品</Chinese>
+            <Chinesesimp>一个旧的汽车电池...&lt;br/&gt; - 加油物品&lt;br/&gt; - 制作物品</Chinesesimp>
             <Turkish>Eski bir Otomotiv aküsü... &lt;br/&gt; - Yakıt ikmali öğesi&lt;br/&gt; - Üretim öğesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_AutoBattery_DisplayName">
@@ -951,6 +1081,8 @@
             <German>Autobatterie</German>
             <Korean>자동차 배터리</Korean>
             <Japanese>自動車用バッテリー</Japanese>
+            <Chinese>汽車電池</Chinese>
+            <Chinesesimp>汽车电池</Chinesesimp>
             <Turkish>Otomotiv Aküsü</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_BakedBeans_Description">
@@ -965,6 +1097,8 @@
             <German>gebackene Bohnen aus der Dose</German>
             <Korean>통조림 구운 콩</Korean>
             <Japanese>ベイクドビーンズの缶詰</Japanese>
+            <Chinese>罐裝烘豆</Chinese>
+            <Chinesesimp>罐装烘豆</Chinesesimp>
             <Turkish>konserve kuru fasulye</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_BakedBeans_DisplayName">
@@ -979,6 +1113,8 @@
             <German>Gebackene Bohnen</German>
             <Korean>구운 콩 요리</Korean>
             <Japanese>ベイクドビーンズ</Japanese>
+            <Chinese>烘豆</Chinese>
+            <Chinesesimp>烘豆</Chinesesimp>
             <Turkish>Kuru fasulye</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_BoneSaw_Description">
@@ -993,6 +1129,8 @@
             <German>Knochensäge, zum Sammeln von Proben verwendet.&lt;br/&gt; - Forschungswerkzeug</German>
             <Korean>표본 수집에 사용되는 뼈톱입니다.&lt;br/&gt; - 연구 도구</Korean>
             <Japanese>標本の採取に使用される骨鋸。&lt;br/&gt; - 研究ツール</Japanese>
+            <Chinese>骨鋸，用於收集標本。&lt;br/&gt; - 研究工具</Chinese>
+            <Chinesesimp>骨锯，用于收集标本。&lt;br/&gt; - 研究工具</Chinesesimp>
             <Turkish>Örnek toplamak için kullanılan kemik testeresi.&lt;br/&gt; - Araştırma aracı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_BoneSaw_DisplayName">
@@ -1007,6 +1145,8 @@
             <German>Knochensäge</German>
             <Korean>뼈톱</Korean>
             <Japanese>骨鋸</Japanese>
+            <Chinese>骨鋸</Chinese>
+            <Chinesesimp>骨锯</Chinesesimp>
             <Turkish>Kemik testeresi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_BoxNails_Description">
@@ -1021,6 +1161,8 @@
             <German>Eine Schachtel Holznägel&lt;br/&gt; - Basis Handwerk</German>
             <Korean>나무못 상자&lt;br/&gt; - 기지 제작</Korean>
             <Japanese>木釘の箱&lt;br/&gt; - ベースクラフト</Japanese>
+            <Chinese>一盒木釘&lt;br/&gt; - 基礎製作</Chinese>
+            <Chinesesimp>一盒木钉&lt;br/&gt; - 基础制作</Chinesesimp>
             <Turkish>Bir kutu ahşap çivi&lt;br/&gt; - Temel işçiliği</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_BoxNails_DisplayName">
@@ -1035,6 +1177,8 @@
             <German>Nägel</German>
             <Korean>못</Korean>
             <Japanese>釘</Japanese>
+            <Chinese>釘子</Chinese>
+            <Chinesesimp>钉子</Chinesesimp>
             <Turkish>Çiviler</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CBRNParts_Description">
@@ -1049,6 +1193,8 @@
             <German>Ein dekonstruierter CBRN-Anzug...&lt;br/&gt; - Handwerksgegenstand</German>
             <Korean>해체된 화생방 슈트...&lt;br/&gt; - 제작 아이템</Korean>
             <Japanese>解体されたCBRNスーツ...&lt;br/&gt; - クラフトアイテム</Japanese>
+            <Chinese>一件解構的 CBRN 套裝...&lt;br/&gt; - 製作物品</Chinese>
+            <Chinesesimp>一件解构的 CBRN 套装...&lt;br/&gt; - 制作物品</Chinesesimp>
             <Turkish>Parçalanmış bir CBRN kıyafeti...&lt;br/&gt; - Üretim eşyası</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CBRNParts_DisplayName">
@@ -1063,6 +1209,8 @@
             <German>CBRN-Teile</German>
             <Korean>화생방 부품</Korean>
             <Japanese>CBRN部品</Japanese>
+            <Chinese>CBRN 零件</Chinese>
+            <Chinesesimp>CBRN 零件</Chinesesimp>
             <Turkish>CBRN Parçaları</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CamoNet_Description">
@@ -1077,6 +1225,8 @@
             <German>Ein Tarnnetz &lt;br/&gt; - Handwerksgegenstand</German>
             <Korean>위장 그물 &lt;br/&gt; - 제작 아이템</Korean>
             <Japanese>カモフラージュネット &lt;br/&gt; - クラフトアイテム</Japanese>
+            <Chinese>一些迷彩網&lt;br/&gt; - 製作物品</Chinese>
+            <Chinesesimp>一些迷彩网&lt;br/&gt; - 制作物品</Chinesesimp>
             <Turkish>Biraz kamuflaj ağı &lt;br/&gt; - El işi öğesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CamoNet_DisplayName">
@@ -1091,6 +1241,8 @@
             <German>Tarnnetz</German>
             <Korean>위장 그물</Korean>
             <Japanese>カモフラージュネット</Japanese>
+            <Chinese>迷彩網</Chinese>
+            <Chinesesimp>迷彩网</Chinesesimp>
             <Turkish>Kamuflaj ağı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CanOpener_Description">
@@ -1105,6 +1257,8 @@
             <German>Dosenöffner &lt;br/&gt; - Werkzeug</German>
             <Korean>깡통따개 &lt;br/&gt; - 도구</Korean>
             <Japanese>缶切り &lt;br/&gt; - 工具</Japanese>
+            <Chinese>開罐器&lt;br/&gt; - 工具</Chinese>
+            <Chinesesimp>开罐器&lt;br/&gt; - 工具</Chinesesimp>
             <Turkish>Konserve açacağı &lt;br/&gt; - Alet</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CanOpener_DisplayName">
@@ -1119,6 +1273,8 @@
             <German>Dosenöffner</German>
             <Korean>캔따개</Korean>
             <Japanese>缶切り</Japanese>
+            <Chinese>開罐器</Chinese>
+            <Chinesesimp>开罐器</Chinesesimp>
             <Turkish>Konserve açacağı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CannedBacon_Description">
@@ -1133,6 +1289,8 @@
             <German>gekochter Speck aus der Dose</German>
             <Korean>통조림 요리 베이컨</Korean>
             <Japanese>缶詰の調理済みベーコン</Japanese>
+            <Chinese>罐裝熟培根</Chinese>
+            <Chinesesimp>罐装熟培根</Chinesesimp>
             <Turkish>konserve pişmiş pastırma</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CannedBacon_DisplayName">
@@ -1147,6 +1305,8 @@
             <German>Speck aus der Dose</German>
             <Korean>베이컨 통조림</Korean>
             <Japanese>ベーコンの缶詰</Japanese>
+            <Chinese>罐裝培根</Chinese>
+            <Chinesesimp>罐装培根</Chinesesimp>
             <Turkish>Konserve pastırma</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CanteenClean_Description">
@@ -1160,6 +1320,8 @@
             <German>Diese Feldflasche ist mit abgekochtem Wasser gefüllt. Es ist frei von biologischen Verunreinigungen, kann aber noch Strahlung enthalten</German>
             <Korean>이 수통은 끓인 물로 채워져 있습니다. 생물학적 오염 물질은 없지만 방사능이 포함되어 있을 수 있습니다</Korean>
             <Japanese>この水筒には沸騰したお湯が入っている。生物学的汚染はないが、放射能が含まれている可能性がある。</Japanese>
+            <Chinese>這口水壺裝滿了開水。它沒有生物污染物，但可能仍含有輻射</Chinese>
+            <Chinesesimp>这口水壶装满了开水。它没有生物污染物，但可能仍含有辐射</Chinesesimp>
             <Turkish>Bu matara kaynamış suyla dolu. Biyolojik kirleticilerden arındırılmış ama yine de radyasyon içerebilir</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CanteenClean_DisplayName">
@@ -1174,6 +1336,8 @@
             <German>Kantine (sauber)</German>
             <Korean>매점 (클린)</Korean>
             <Japanese>社員食堂（清潔）</Japanese>
+            <Chinese>水壺 (乾淨)</Chinese>
+            <Chinesesimp>水壶 (干净)</Chinesesimp>
             <Turkish>Kantin (Temiz)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CanteenDirty_Description">
@@ -1187,6 +1351,8 @@
             <German>Diese Feldflasche enthält Wasser, das direkt aus der Umwelt stammt und einen üblen, starken Geruch hat...</German>
             <Korean>이 수통에는 환경에서 바로 나온 물이 들어있어 악취가 심합니다 ...</Korean>
             <Japanese>この水筒は環境から直接採水しているため、悪臭が強い。</Japanese>
+            <Chinese>這口水壺裡裝著直接取自環境的水，有一種強烈的臭味...</Chinese>
+            <Chinesesimp>这口水壶里装着直接取自环境的水，有一种强烈的臭味...</Chinesesimp>
             <Turkish>Bu matara doğrudan çevreden gelen su içerir, kötü ve güçlü bir kokusu vardır...</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CanteenDirty_DisplayName">
@@ -1201,6 +1367,8 @@
             <German>Kantine (schmutzig)</German>
             <Korean>매점 (더티)</Korean>
             <Japanese>社員食堂（汚い）</Japanese>
+            <Chinese>水壺 (髒)</Chinese>
+            <Chinesesimp>水壶 (脏)</Chinesesimp>
             <Turkish>Kantin (Kirli)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CanteenEmpty_Description">
@@ -1214,6 +1382,8 @@
             <German>Eine leere Kantine</German>
             <Korean>빈 매점</Korean>
             <Japanese>空の水筒</Japanese>
+            <Chinese>一個空水壺</Chinese>
+            <Chinesesimp>一个空水壶</Chinesesimp>
             <Turkish>Boş bir kantin</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CanteenEmpty_DisplayName">
@@ -1228,6 +1398,8 @@
             <German>Kantine (leer)</German>
             <Korean>매점 (비어 있음)</Korean>
             <Japanese>社員食堂（空）</Japanese>
+            <Chinese>水壺 (空)</Chinese>
+            <Chinesesimp>水壶 (空)</Chinesesimp>
             <Turkish>Kantin (Boş)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CanteenPurified_Description">
@@ -1241,6 +1413,8 @@
             <German>Diese Feldflasche enthält Wasser, das mit Reinigungstabletten behandelt wurde, um alle Spuren von Strahlung und biologischen Verunreinigungen zu entfernen</German>
             <Korean>이 수통에는 정화 정제로 처리된 물을 보관하여 방사능과 생물학적 오염 물질의 흔적을 모두 제거합니다</Korean>
             <Japanese>この水筒は、浄化錠剤で処理され、放射能や生物学的汚染物質を取り除いた水を入れる。</Japanese>
+            <Chinese>這口水壺裝的是經過淨水片處理的水，去處了所有輻射和生物污染物的痕跡</Chinese>
+            <Chinesesimp>这口水壶装的是经过净水片处理的水，去处了所有辐射和生物污染物的痕迹</Chinesesimp>
             <Turkish>Bu matara, radyasyon ve biyolojik kirleticilerin tüm izlerini ortadan kaldıran arıtma tabletleri ile işlenmiş su içerir</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CanteenPurified_DisplayName">
@@ -1255,6 +1429,8 @@
             <German>Kantine (gereinigt)</German>
             <Korean>매점 (정제)</Korean>
             <Japanese>社員食堂（精製）</Japanese>
+            <Chinese>水壺 (已淨化)</Chinese>
+            <Chinesesimp>水壶 (已净化)</Chinesesimp>
             <Turkish>Kantin (Arıtılmış)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Cereal_Description">
@@ -1269,6 +1445,8 @@
             <German>Schachtel Müsli</German>
             <Korean>시리얼 상자</Korean>
             <Japanese>シリアルの箱</Japanese>
+            <Chinese>一盒穀物</Chinese>
+            <Chinesesimp>一盒谷物</Chinesesimp>
             <Turkish>mısır gevreği kutusu</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Cereal_DisplayName">
@@ -1283,6 +1461,8 @@
             <German>Getreide</German>
             <Korean>시리얼</Korean>
             <Japanese>穀物</Japanese>
+            <Chinese>穀物</Chinese>
+            <Chinesesimp>谷物</Chinesesimp>
             <Turkish>Mısır gevreği</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ChainsawEmpty_Description">
@@ -1297,6 +1477,8 @@
             <German>- Benzintank ist leer, nutzlos...&lt;br/&gt; - Werkzeug&lt;br/&gt; - Braucht Kraftstoff</German>
             <Korean>- 연료 탱크가 비어있어 쓸모가 없습니다...&lt;br/&gt; - 도구&lt;br/&gt; - 연료 필요</Korean>
             <Japanese>- ガスタンクが空で役に立たない...&lt;br/&gt; - 道具&lt;br/&gt; - 燃料が必要</Japanese>
+            <Chinese>- 油箱是空的，沒用...&lt;br/&gt; - 工具&lt;br/&gt; - 需要燃料</Chinese>
+            <Chinesesimp>- 油箱是空的，没用...&lt;br/&gt; - 工具&lt;br/&gt; - 需要燃料</Chinesesimp>
             <Turkish>- Benzin deposu boş, işe yaramaz...&lt;br/&gt; - Araç&lt;br/&gt; - Yakıta ihtiyacı var</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ChainsawEmpty_DisplayName">
@@ -1311,6 +1493,8 @@
             <German>Kettensäge (Kein Kraftstoff)</German>
             <Korean>전기톱 (연료 없음)</Korean>
             <Japanese>チェーンソー（燃料なし）</Japanese>
+            <Chinese>鏈鋸 (無燃料)</Chinese>
+            <Chinesesimp>链锯 (无燃料)</Chinesesimp>
             <Turkish>Motorlu testere (Yakıtsız)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Cigar_Description">
@@ -1325,6 +1509,8 @@
             <German>Hochwertige, gerollte Zigarre, teuer, aber ein Favorit beim Lauschen von Lagerfeuergeschichten...&lt;br/&gt; - Reduziert Strahlung&lt;br/&gt; - Ungesund</German>
             <Korean>고품질의 롤링 시가, 비싸지만 모닥불 이야기를 들으면서 좋아하는...&lt;br/&gt; - 방사능 감소&lt;br/&gt; - 건강에 해로운</Korean>
             <Japanese>高品質の巻き葉巻、高価ですが、キャンプファイヤーの話を聴きながらのお気に入り...&lt;br/&gt; - 放射線を減らす&lt;br/&gt; - 不健康</Japanese>
+            <Chinese>高品質捲制雪茄，價格昂貴，但在聽篝火故事時很受歡迎...&lt;br/&gt; - 減少輻射&lt;br/&gt; - 不健康</Chinese>
+            <Chinesesimp>高品质卷制雪茄，价格昂贵，但在听篝火故事时很受欢迎...&lt;br/&gt; - 减少辐射&lt;br/&gt; - 不健康</Chinesesimp>
             <Turkish>Yüksek kaliteli, sarılmış puro, pahalı ama kamp ateşi hikayeleri dinlerken favori...&lt;br/&gt; - Radyasyonu Azaltır&lt;br/&gt; - Sağlıksız</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Cigar_DisplayName">
@@ -1339,6 +1525,8 @@
             <German>Zigarre</German>
             <Korean>시가</Korean>
             <Japanese>葉巻</Japanese>
+            <Chinese>雪茄</Chinese>
+            <Chinesesimp>雪茄</Chinesesimp>
             <Turkish>Puro</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CigarettePack_Description">
@@ -1353,6 +1541,8 @@
             <German>Eine Packung sowjetischer Zigaretten, hilft, jede Situation zu entspannen...&lt;br/&gt; - Reduziert Strahlung&lt;br/&gt; - Ungesund</German>
             <Korean>소련 담배 한 갑, 어떤 상황에서도 긴장을 풀어줍니다...&lt;br/&gt; - 방사능 감소&lt;br/&gt; - 건강에 해로운</Korean>
             <Japanese>ソビエトのタバコの箱は、どんな状況でも緊張をほぐすのに役立ちます...&lt;br/&gt; - 放射線を減らす&lt;br/&gt; - 不健康</Japanese>
+            <Chinese>一包蘇聯香菸，有助於緩解任何情況下的緊張情緒...&lt;br/&gt; - 減少輻射&lt;br/&gt; - 不健康</Chinese>
+            <Chinesesimp>一包苏联香烟，有助于缓解任何情况下的紧张情绪...&lt;br/&gt; - 减少辐射&lt;br/&gt; - 不健康</Chinesesimp>
             <Turkish>Bir paket Sovyet sigarası, her durumu hafifletmeye yardımcı olur...&lt;br/&gt; - Radyasyonu Azaltır&lt;br/&gt; - Sağlıksız</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CigarettePack_DisplayName">
@@ -1367,6 +1557,8 @@
             <German>Schachtel Zigaretten</German>
             <Korean>담배 한 갑</Korean>
             <Japanese>たばこの箱</Japanese>
+            <Chinese>一包香菸</Chinese>
+            <Chinesesimp>一包香烟</Chinesesimp>
             <Turkish>Bir paket sigara</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CircuitBoard_Description">
@@ -1381,6 +1573,8 @@
             <German>Kleine Leiterplatte, einige Teile sind kaputt und rostig.&lt;br/&gt; - Zufälliger Müll</German>
             <Korean>작은 회로 기판, 일부 부품이 깨지고 녹슬었습니다.&lt;br/&gt; - 임의의 정크</Korean>
             <Japanese>小さな回路基板、一部の部品が壊れて錆びています。&lt;br/&gt; - ランダムジャンク</Japanese>
+            <Chinese>小電路板，有些零件損壞且生鏽。&lt;br/&gt; - 隨機垃圾</Chinese>
+            <Chinesesimp>小电路板，有些零件损坏且生锈。&lt;br/&gt; - 随机垃圾</Chinesesimp>
             <Turkish>Küçük devre kartı, bazı parçalar kırılmış ve paslanmış.&lt;br/&gt; - Rastgele Önemsiz</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CircuitBoard_DisplayName">
@@ -1395,6 +1589,8 @@
             <German>Defekte Leiterplatte</German>
             <Korean>죽은 회로 기판</Korean>
             <Japanese>デッド回路基板</Japanese>
+            <Chinese>報廢的電路板</Chinese>
+            <Chinesesimp>报废的电路板</Chinesesimp>
             <Turkish>Ölü Devre Kartı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Clozapine_Description">
@@ -1409,6 +1605,8 @@
             <German>Wird zur Behandlung von Symptomen einer Psychose wie Wahnvorstellungen, Halluzinationen, Paranoia oder Verwirrtheit sowie von Schizophrenie eingesetzt, injiziert statt eingenommen &lt;br/&gt; - Antipsychotikum</German>
             <Korean>망상, 환각, 편집증, 혼란스러운 생각과 같은 정신병 증상과 정신 분열증 치료에 사용, 섭취보다는 주사 &lt;br/&gt; - 항정신병 약물</Korean>
             <Japanese>妄想、幻覚、妄想、混乱した思考などの精神病の症状や統合失調症の治療に使用され、摂取ではなく注射されます&lt;br/&gt; -抗精神病薬</Japanese>
+            <Chinese>用於治療妄想、幻覺、偏執或思想混亂等精神病症狀，以及精神分裂症，注射而非口服&lt;br/&gt; - 抗精神病藥物</Chinese>
+            <Chinesesimp>用于治疗妄想、幻觉、偏执或思想混乱等精神病症状，以及精神分裂症，注射而非口服&lt;br/&gt; - 抗精神病药物</Chinesesimp>
             <Turkish>Psikozun sanrılar, halüsinasyonlar, paranoya veya kafa karışıklığı gibi semptomlarının yanı sıra şizofreni tedavisinde kullanılır, yutmak yerine enjekte edilir &lt;br/&gt; - Antipsikotikler</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Clozapine_DisplayName">
@@ -1423,6 +1621,8 @@
             <German>Clozapin-Injektion</German>
             <Korean>클로자핀 주사</Korean>
             <Japanese>クロザピン注射</Japanese>
+            <Chinese>氯氮平注射液</Chinese>
+            <Chinesesimp>氯氮平注射液</Chinesesimp>
             <Turkish>Klozapin Enjeksiyonu</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CoalOre_Description">
@@ -1437,6 +1637,8 @@
             <German>Primärer Bestandteil einer Schmelzerei&lt;br/&gt; - Bastelgegenstand&lt;br/&gt; - Schmiedebrennstoff</German>
             <Korean>제련 대장간의 주요 재료&lt;br/&gt; - 제작 아이템&lt;br/&gt; - 대장간 연료</Korean>
             <Japanese>製錬炉の主原料&lt;br/&gt; - クラフトアイテム&lt;br/&gt; - 炉の燃料</Japanese>
+            <Chinese>熔煉爐的主要成分&lt;br/&gt; - 製作物品&lt;br/&gt; - 熔爐燃料</Chinese>
+            <Chinesesimp>熔炼炉的主要成分&lt;br/&gt; - 制作物品&lt;br/&gt; - 熔炉燃料</Chinesesimp>
             <Turkish>Bir Eritme Ocağındaki ana bileşen&lt;br/&gt; - Üretim öğesi&lt;br/&gt; - Ocak yakıtı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CoalOre_DisplayName">
@@ -1451,6 +1653,8 @@
             <German>Kohleerz</German>
             <Korean>석탄 광석</Korean>
             <Japanese>石炭鉱石</Japanese>
+            <Chinese>煤礦</Chinese>
+            <Chinesesimp>煤矿</Chinesesimp>
             <Turkish>Kömür Cevheri</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Cocaine_Description">
@@ -1465,6 +1669,8 @@
             <German>Eine sehr wertvolle, ungesunde Substanz. Illegaler Handel.</German>
             <Korean>매우 가치 있고 건강에 해로운 물질입니다. 불법 거래.</Korean>
             <Japanese>非常に価値があり、不健康な物質。違法取引。</Japanese>
+            <Chinese>一種非常有價值、不健康的物質。非法交易。</Chinese>
+            <Chinesesimp>一种非常有价值、不健康的物质。非法交易。</Chinesesimp>
             <Turkish>Çok değerli, sağlıksız bir madde. Yasadışı ticaret.</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Cocaine_DisplayName">
@@ -1479,6 +1685,8 @@
             <German>Kokain</German>
             <Korean>코카인</Korean>
             <Japanese>コカイン</Japanese>
+            <Chinese>可卡因</Chinese>
+            <Chinesesimp>可卡因</Chinesesimp>
             <Turkish>Kokain</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CoffeeBrewed_Description">
@@ -1493,6 +1701,8 @@
             <German>Eine Kaffeetasse mit gebrühtem Kaffee</German>
             <Korean>끓인 커피가 담긴 커피 잔</Korean>
             <Japanese>淹れたてのコーヒーが入ったコーヒーマグ</Japanese>
+            <Chinese>裝著煮好的咖啡的咖啡杯</Chinese>
+            <Chinesesimp>装着煮好的咖啡的咖啡杯</Chinesesimp>
             <Turkish>Kahve Kupası ile Kahve</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CoffeeBrewed_DisplayName">
@@ -1507,6 +1717,8 @@
             <German>Kaffee</German>
             <Korean>커피</Korean>
             <Japanese>コーヒー</Japanese>
+            <Chinese>咖啡</Chinese>
+            <Chinesesimp>咖啡</Chinesesimp>
             <Turkish>Kahve</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CoffeeGrounds_Description">
@@ -1521,6 +1733,8 @@
             <German>Kaffeesatz zum Kaffeekochen</German>
             <Korean>커피를 만들기 위한 커피 찌꺼기</Korean>
             <Japanese>コーヒーを作るためのコーヒーかす</Japanese>
+            <Chinese>用於衝泡咖啡的咖啡粉</Chinese>
+            <Chinesesimp>用于冲泡咖啡的咖啡粉</Chinesesimp>
             <Turkish>Kahve yapmak için Kahve Telvesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CoffeeGrounds_DisplayName">
@@ -1535,6 +1749,8 @@
             <German>Kaffeesatz</German>
             <Korean>커피 찌꺼기</Korean>
             <Japanese>コーヒーかす</Japanese>
+            <Chinese>咖啡粉</Chinese>
+            <Chinesesimp>咖啡粉</Chinesesimp>
             <Turkish>Kahve Telvesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CoffeeMug_Description">
@@ -1549,6 +1765,8 @@
             <German>Eine leere Kaffeetasse</German>
             <Korean>빈 커피 잔</Korean>
             <Japanese>空のコーヒーマグ</Japanese>
+            <Chinese>一個空咖啡杯</Chinese>
+            <Chinesesimp>一个空咖啡杯</Chinesesimp>
             <Turkish>Boş Kahve Kupası</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CoffeeMug_DisplayName">
@@ -1563,6 +1781,8 @@
             <German>Kaffeetasse</German>
             <Korean>커피 잔</Korean>
             <Japanese>コーヒーマグ</Japanese>
+            <Chinese>咖啡杯</Chinese>
+            <Chinesesimp>咖啡杯</Chinesesimp>
             <Turkish>Kahve Kupası</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ColdPack_Description">
@@ -1577,6 +1797,8 @@
             <German>Einweg-Kühlpack&lt;br/&gt; - Senkt die Temperatur</German>
             <Korean>일회용 콜드팩&lt;br/&gt; - 체온을 낮춰줍니다.</Korean>
             <Japanese>使い捨てコールドパック&lt;br/&gt; -体温を下げる</Japanese>
+            <Chinese>一次性冷敷袋&lt;br/&gt; - 降低溫度</Chinese>
+            <Chinesesimp>一次性冷敷袋&lt;br/&gt; - 降低温度</Chinesesimp>
             <Turkish>Tek kullanımlık soğuk paket&lt;br/&gt; - Sıcaklığı düşürür</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ColdPack_DisplayName">
@@ -1591,6 +1813,8 @@
             <German>Kühlpack</German>
             <Korean>콜드팩</Korean>
             <Japanese>コールドパック</Japanese>
+            <Chinese>冷敷袋</Chinese>
+            <Chinesesimp>冷敷袋</Chinesesimp>
             <Turkish>Soğuk paket</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CookedFish_Description">
@@ -1605,6 +1829,8 @@
             <German>Fisch, der gekocht wurde</German>
             <Korean>익힌 생선</Korean>
             <Japanese>調理された魚</Japanese>
+            <Chinese>已烹飪的魚</Chinese>
+            <Chinesesimp>已烹饪的鱼</Chinesesimp>
             <Turkish>Pişmiş balık</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CookedFish_DisplayName">
@@ -1619,6 +1845,8 @@
             <German>Gekochter Fisch</German>
             <Korean>익힌 생선</Korean>
             <Japanese>焼き魚</Japanese>
+            <Chinese>熟魚</Chinese>
+            <Chinesesimp>熟鱼</Chinesesimp>
             <Turkish>Pişmiş balık</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CookedMeat_Description">
@@ -1633,6 +1861,8 @@
             <German>Fleisch, das gekocht wurde</German>
             <Korean>다 익은 고기</Korean>
             <Japanese>調理済みのお肉</Japanese>
+            <Chinese>已烹飪的肉</Chinese>
+            <Chinesesimp>已烹饪的肉</Chinesesimp>
             <Turkish>Pişmiş et</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CookedMeat_DisplayName">
@@ -1647,6 +1877,8 @@
             <German>Gekochtes Fleisch</German>
             <Korean>익힌 고기</Korean>
             <Japanese>調理した肉</Japanese>
+            <Chinese>熟肉</Chinese>
+            <Chinesesimp>熟肉</Chinesesimp>
             <Turkish>Pişmiş Et</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Coolant_Description">
@@ -1661,6 +1893,8 @@
             <German>Motorkühlmittel</German>
             <Korean>엔진 냉각수</Korean>
             <Japanese>エンジン冷却液</Japanese>
+            <Chinese>發動機冷卻液</Chinese>
+            <Chinesesimp>发动机冷却液</Chinesesimp>
             <Turkish>motor soğutma sıvısı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Coolant_DisplayName">
@@ -1675,6 +1909,8 @@
             <German>Kühlmittel (5Gal / 20L)</German>
             <Korean>냉각수 (5Gal / 20L)</Korean>
             <Japanese>クーラント(5ガロン/20L)</Japanese>
+            <Chinese>冷卻液 (5加侖 / 20升)</Chinese>
+            <Chinesesimp>冷却液 (5加仑 / 20升)</Chinesesimp>
             <Turkish>Soğutma Sıvısı (5Gal / 20L)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CopperWire_Description">
@@ -1689,6 +1925,8 @@
             <German>kleine Rolle Kupferdraht 20g &lt;br/&gt; - Handwerksgegenstand</German>
             <Korean>20g 구리선 작은 롤 &lt;br/&gt; - 제작 아이템</Korean>
             <Japanese>20gの銅線の小巻 &lt;br/&gt; - クラフトアイテム</Japanese>
+            <Chinese>一小卷 20g 銅線&lt;br/&gt; - 製作物品</Chinese>
+            <Chinesesimp>一小卷 20g 铜线&lt;br/&gt; - 制作物品</Chinesesimp>
             <Turkish>20g bakır tel küçük rulo &lt;br/&gt; - El işi öğesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CopperWire_DisplayName">
@@ -1703,6 +1941,8 @@
             <German>Kupferdraht</German>
             <Korean>구리선</Korean>
             <Japanese>銅線</Japanese>
+            <Chinese>銅線</Chinese>
+            <Chinesesimp>铜线</Chinesesimp>
             <Turkish>Bakır tel</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CounterMeasureKit_Description">
@@ -1717,6 +1957,8 @@
             <German>Gegenmaßnahmen-Set für Fahrzeugreparaturen</German>
             <Korean>차량 수리에 사용되는 대책 키트</Korean>
             <Japanese>車の修理に使用される対策キット</Japanese>
+            <Chinese>用於車輛維修的對抗措施套件</Chinese>
+            <Chinesesimp>用于车辆维修的对抗措施套件</Chinesesimp>
             <Turkish>Araç onarımlarında kullanılan karşı önlemler kiti</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CounterMeasureKit_DisplayName">
@@ -1731,6 +1973,8 @@
             <German>Gegenmaßnahmen-Set</German>
             <Korean>대책 키트</Korean>
             <Japanese>対策キット</Japanese>
+            <Chinese>對抗措施套件</Chinese>
+            <Chinesesimp>对抗措施套件</Chinesesimp>
             <Turkish>Karşı tedbir kiti</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CraftingHammer_Description">
@@ -1745,6 +1989,8 @@
             <German>Ein alter Kugelhammer &lt;br/&gt; - Handwerksgegenstand</German>
             <Korean>오래된 볼 핀 해머&lt;br/&gt; - 제작 아이템</Korean>
             <Japanese>古いボールピンハンマー&lt;br/&gt; - クラフトアイテム</Japanese>
+            <Chinese>一把舊球頭錘&lt;br/&gt; - 製作物品</Chinese>
+            <Chinesesimp>一把旧球头锤&lt;br/&gt; - 制作物品</Chinesesimp>
             <Turkish>Eski bir Yuvarlak Çekiç &lt;br/&gt; - Üretim eşyası</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CraftingHammer_DisplayName">
@@ -1759,6 +2005,8 @@
             <German>Kugelhammer</German>
             <Korean>볼 핀 해머</Korean>
             <Japanese>ボールピンハンマー</Japanese>
+            <Chinese>球頭錘</Chinese>
+            <Chinesesimp>球头锤</Chinesesimp>
             <Turkish>Yuvarlak Çekiç</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Diamond_Description">
@@ -1773,6 +2021,8 @@
             <German>Roher Diamant, ungeschnitten&lt;br/&gt; - Seltenheit</German>
             <Korean>원시 다이아몬드, 자르지 않은&lt;br/&gt; - 희귀도</Korean>
             <Japanese>未加工のダイヤモンド、未カット&lt;br/&gt; - レアリティ</Japanese>
+            <Chinese>原始鑽石，未切割&lt;br/&gt; - 稀有度</Chinese>
+            <Chinesesimp>原始钻石，未切割&lt;br/&gt; - 稀有度</Chinesesimp>
             <Turkish>Ham Elmas, kesilmemiş&lt;br/&gt; - Nadirlik</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Diamond_DisplayName">
@@ -1787,6 +2037,8 @@
             <German>Diamant</German>
             <Korean>다이아몬드</Korean>
             <Japanese>ダイヤモンド</Japanese>
+            <Chinese>鑽石</Chinese>
+            <Chinesesimp>钻石</Chinesesimp>
             <Turkish>Elmas</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_DieselEmpty_Description">
@@ -1801,6 +2053,8 @@
             <German>Ein leerer Benzinkanister zur Kraftstoffsammlung...&lt;br/&gt; - Kraftstoffgegenstand&lt;br/&gt; - Leer</German>
             <Korean>연료 수집에 사용되는 빈 제리캔...&lt;br/&gt; - 연료 아이템&lt;br/&gt; - 비어 있음</Korean>
             <Japanese>燃料の収集に使用される空のジェリカン...&lt;br/&gt; - 燃料アイテム&lt;br/&gt; - 空</Japanese>
+            <Chinese>用於收集燃料的空油桶...&lt;br/&gt; - 燃料物品&lt;br/&gt; - 空</Chinese>
+            <Chinesesimp>用于收集燃料的空油桶...&lt;br/&gt; - 燃料物品&lt;br/&gt; - 空</Chinesesimp>
             <Turkish>Yakıt toplamak için kullanılan boş bir Jerrycan...&lt;br/&gt; - Yakıt öğesi&lt;br/&gt; - Boş</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_DieselEmpty_DisplayName">
@@ -1815,6 +2069,8 @@
             <German>Diesel (leer)</German>
             <Korean>디젤(빈)</Korean>
             <Japanese>ディーゼル（空）</Japanese>
+            <Chinese>柴油 (空)</Chinese>
+            <Chinesesimp>柴油 (空)</Chinesesimp>
             <Turkish>Dizel (Boş)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Diesel_DisplayName">
@@ -1829,6 +2085,8 @@
             <German>Diesel (5 Gallonen / 20 l)</German>
             <Korean>디젤(5갤런/20L)</Korean>
             <Japanese>ディーゼル（5ガロン/20L）</Japanese>
+            <Chinese>柴油 (5加侖 / 20升)</Chinese>
+            <Chinesesimp>柴油 (5加仑 / 20升)</Chinesesimp>
             <Turkish>Dizel (5 Galon / 20L)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_DragonVase_Description">
@@ -1843,6 +2101,8 @@
             <German>Schönes kleines Schmuckstück.&lt;br/&gt; - Zufälliger Müll</German>
             <Korean>아름다운 작은 장신구.&lt;br/&gt; - 임의의 정크</Korean>
             <Japanese>美しい小さな装身具。&lt;br/&gt; - ランダムジャンク</Japanese>
+            <Chinese>精美的小飾品。&lt;br/&gt; - 隨機垃圾</Chinese>
+            <Chinesesimp>精美的小饰品。&lt;br/&gt; - 随机垃圾</Chinesesimp>
             <Turkish>Güzel küçük biblo.&lt;br/&gt; - Rastgele Önemsiz</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_DragonVase_DisplayName">
@@ -1857,6 +2117,8 @@
             <German>Drachenvase</German>
             <Korean>용병</Korean>
             <Japanese>龍の花瓶</Japanese>
+            <Chinese>龍紋花瓶</Chinese>
+            <Chinesesimp>龙纹花瓶</Chinesesimp>
             <Turkish>Ejderha Vazosu</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_DuctTape_Description">
@@ -1871,6 +2133,8 @@
             <German>Altes Klebeband, hat viele Verwendungsmöglichkeiten &lt;br/&gt; - Handwerksgegenstand</German>
             <Korean>오래된 덕트 테이프, 용도가 다양합니다 &lt;br/&gt; - 제작 아이템</Korean>
             <Japanese>古いダクトテープ、用途はたくさんあります &lt;br/&gt; - クラフトアイテム</Japanese>
+            <Chinese>舊膠帶，有很多用途&lt;br/&gt; - 製作物品</Chinese>
+            <Chinesesimp>旧胶带，有很多用途&lt;br/&gt; - 制作物品</Chinesesimp>
             <Turkish>Eski koli bandı, birçok kullanım alanı vardır &lt;br/&gt; - El işi öğesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_DuctTape_DisplayName">
@@ -1885,6 +2149,8 @@
             <German>Klebeband</German>
             <Korean>덕트 테이프</Korean>
             <Japanese>ダクトテープ</Japanese>
+            <Chinese>膠帶</Chinese>
+            <Chinesesimp>胶带</Chinesesimp>
             <Turkish>Koli Bandı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ERUNoBattery_DisplayName">
@@ -1899,6 +2165,8 @@
             <German>ERU (keine Batterie)</German>
             <Korean>ERU(배터리 없음)</Korean>
             <Japanese>ERU（バッテリーなし）</Japanese>
+            <Chinese>環境讀取裝置 (無電池)</Chinese>
+            <Chinesesimp>环境读取装置 (无电池)</Chinesesimp>
             <Turkish>ERU (Pilsiz)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ElectricHandSawNoBattery_DisplayName">
@@ -1913,6 +2181,8 @@
             <German>Elektrische Handsäge (ohne Akku)</German>
             <Korean>전기 핸드 톱(배터리 없음)</Korean>
             <Japanese>電動ハンドソー（バッテリーなし）</Japanese>
+            <Chinese>電動手鋸 (無電池)</Chinese>
+            <Chinesesimp>电动手锯 (无电池)</Chinesesimp>
             <Turkish>Elektrikli El Testeresi (pilsiz)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Electrolyte_Description">
@@ -1927,6 +2197,8 @@
             <German>Eine vorgemischte Elektrolytlösung kann bei der Rehydrierung helfen.&lt;br/&gt; - Reduziert Durst</German>
             <Korean>미리 혼합된 전해질 용액은 재수화에 도움이 될 수 있습니다.&lt;br/&gt; - 갈증 감소</Korean>
             <Japanese>あらかじめ混合された電解質溶液は、水分補給に役立ちます。&lt;br/&gt; - 喉の渇きを軽減します</Japanese>
+            <Chinese>預混合電解質溶液，有助於補水。&lt;br/&gt; - 減少口渴</Chinese>
+            <Chinesesimp>预混合电解质溶液，有助于补水。&lt;br/&gt; - 减少口渴</Chinesesimp>
             <Turkish>Önceden karıştırılmış Elektrolit solüsyonu, rehidrasyona yardımcı olabilir.&lt;br/&gt; - Susuzluğu azaltır</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Electrolyte_DisplayName">
@@ -1941,6 +2213,8 @@
             <German>Elektrolyt-Injektion</German>
             <Korean>전해질 주사</Korean>
             <Japanese>電解質注射</Japanese>
+            <Chinese>電解質注射液</Chinese>
+            <Chinesesimp>电解质注射液</Chinesesimp>
             <Turkish>Elektrolit Enjeksiyonu</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ElectronicRepairKit_Description">
@@ -1955,6 +2229,8 @@
             <German>Elektronik-Reparatursatz für die Fahrzeugreparatur</German>
             <Korean>차량 수리에 사용되는 전자 수리 키트</Korean>
             <Japanese>車の修理に使用される電子修理キット</Japanese>
+            <Chinese>用於車輛維修的電子維修套件</Chinese>
+            <Chinesesimp>用于车辆维修的电子维修套件</Chinesesimp>
             <Turkish>Araç onarımı için kullanılan elektronik tamir seti</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ElectronicRepairKit_DisplayName">
@@ -1969,6 +2245,8 @@
             <German>Elektronik-Reparaturset</German>
             <Korean>전자제품 수리 키트</Korean>
             <Japanese>電子機器修理キット</Japanese>
+            <Chinese>電子維修套件</Chinese>
+            <Chinesesimp>电子维修套件</Chinesesimp>
             <Turkish>Elektronik tamir takımı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Emerald_Description">
@@ -1983,6 +2261,8 @@
             <German>Roher Smaragd, ungeschnitten&lt;br/&gt; - Seltenheit</German>
             <Korean>원시 에메랄드, 자르지 않은&lt;br/&gt; - 희귀도</Korean>
             <Japanese>未加工のエメラルド、未カット&lt;br/&gt; - レアリティ</Japanese>
+            <Chinese>原始祖母綠，未切割&lt;br/&gt; - 稀有度</Chinese>
+            <Chinesesimp>原始祖母绿，未切割&lt;br/&gt; - 稀有度</Chinesesimp>
             <Turkish>Ham Zümrüt, kesilmemiş&lt;br/&gt; - Nadirlik</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Emerald_DisplayName">
@@ -1997,6 +2277,8 @@
             <German>Smaragd</German>
             <Korean>에메랄드</Korean>
             <Japanese>エメラルド</Japanese>
+            <Chinese>祖母綠</Chinese>
+            <Chinesesimp>祖母绿</Chinesesimp>
             <Turkish>Zümrüt</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_EmptyToolKit_Description">
@@ -2011,6 +2293,8 @@
             <German>braucht Teile, um von Nutzen zu sein...</German>
             <Korean>사용할 부품이 필요합니다..</Korean>
             <Japanese>使用するには部品が必要です...</Japanese>
+            <Chinese>需要零件才能使用...</Chinese>
+            <Chinesesimp>需要零件才能使用...</Chinesesimp>
             <Turkish>Kullanılacak parçalara ihtiyaç var...</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_EmptyToolKit_DisplayName">
@@ -2025,6 +2309,8 @@
             <German>Leerer Werkzeugsatz</German>
             <Korean>빈 도구 키트</Korean>
             <Japanese>空のツールキット</Japanese>
+            <Chinese>空的工具箱</Chinese>
+            <Chinesesimp>空的工具箱</Chinesesimp>
             <Turkish>Boş Araç kiti</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_EnergyDrink_Description">
@@ -2039,6 +2325,8 @@
             <German>Energy-Drink</German>
             <Korean>에너지 드링크</Korean>
             <Japanese>エナジードリンク</Japanese>
+            <Chinese>能量飲料</Chinese>
+            <Chinesesimp>能量饮料</Chinesesimp>
             <Turkish>enerji içeceği</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_EnergyDrink_DisplayName">
@@ -2053,6 +2341,8 @@
             <German>Energy-Drink</German>
             <Korean>에너지 드링크</Korean>
             <Japanese>エナジードリンク</Japanese>
+            <Chinese>能量飲料</Chinese>
+            <Chinesesimp>能量饮料</Chinesesimp>
             <Turkish>Enerji içeceği</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_EngineCoolant_Description">
@@ -2067,6 +2357,8 @@
             <German>leeren Motorkühlmittelbehälter</German>
             <Korean>빈 엔진 냉각수 용기</Korean>
             <Japanese>空のエンジン冷却液コンテナ</Japanese>
+            <Chinese>空的發動機冷卻液容器</Chinese>
+            <Chinesesimp>空的发动机冷却液容器</Chinesesimp>
             <Turkish>boş motor soğutma sıvısı kabı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_EngineCoolant_DisplayName">
@@ -2081,6 +2373,8 @@
             <German>Motorkühlmittel</German>
             <Korean>엔진 냉각수</Korean>
             <Japanese>エンジン冷却液</Japanese>
+            <Chinese>發動機冷卻液</Chinese>
+            <Chinesesimp>发动机冷却液</Chinesesimp>
             <Turkish>Motor soğutma sıvısı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_EngineOilEmpty_Description">
@@ -2095,6 +2389,8 @@
             <German>leeren Motorölbehälter</German>
             <Korean>빈 엔진 오일 용기</Korean>
             <Japanese>空のエンジンオイル容器</Japanese>
+            <Chinese>空的發動機油容器</Chinese>
+            <Chinesesimp>空的发动机油容器</Chinesesimp>
             <Turkish>boş motor yağı kabı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_EngineOilEmpty_DisplayName">
@@ -2109,6 +2405,8 @@
             <German>Motoröl</German>
             <Korean>엔진오일</Korean>
             <Japanese>エンジンオイル</Japanese>
+            <Chinese>發動機油</Chinese>
+            <Chinesesimp>发动机油</Chinesesimp>
             <Turkish>Motor yağı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_EngineOil_DisplayName">
@@ -2123,6 +2421,8 @@
             <German>Motoröl (5Gal / 20L)</German>
             <Korean>엔진오일(5Gal/20L)</Korean>
             <Japanese>エンジンオイル(5ガロン/20L)</Japanese>
+            <Chinese>發動機油 (5加侖 / 20升)</Chinese>
+            <Chinesesimp>发动机油 (5加仑 / 20升)</Chinesesimp>
             <Turkish>Motor yağı (5Gal / 20L)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_EnginePartsKit_Description">
@@ -2137,6 +2437,8 @@
             <German>Motorteilesatz für die Fahrzeugreparatur</German>
             <Korean>차량 수리에 사용되는 엔진 부품 키트</Korean>
             <Japanese>車の修理に使用されるエンジン部品キット</Japanese>
+            <Chinese>用於車輛維修的發動機零件套件</Chinese>
+            <Chinesesimp>用于车辆维修的发动机零件套件</Chinesesimp>
             <Turkish>Araç onarımı için kullanılan motor parçaları kiti</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_EnginePartsKit_DisplayName">
@@ -2151,6 +2453,8 @@
             <German>Motorteilesatz</German>
             <Korean>엔진 부품 키트</Korean>
             <Japanese>エンジンパーツキット</Japanese>
+            <Chinese>發動機零件套件</Chinese>
+            <Chinesesimp>发动机零件套件</Chinesesimp>
             <Turkish>Motor parçaları kiti</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_FireWood_DisplayName">
@@ -2165,6 +2469,8 @@
             <German>Brennholz</German>
             <Korean>장작</Korean>
             <Japanese>薪</Japanese>
+            <Chinese>柴火</Chinese>
+            <Chinesesimp>柴火</Chinesesimp>
             <Turkish>Yakacak odun</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Firewood_Description">
@@ -2179,6 +2485,8 @@
             <German>Etwas Holz zum Feuer machen&lt;br/&gt; - Feuer machen</German>
             <Korean>불을 피울 수 있는 나무&lt;br/&gt; - 불 제작</Korean>
             <Japanese>火起こし用の木&lt;br/&gt; - 火起こし</Japanese>
+            <Chinese>一些用於生火製作的木材&lt;br/&gt; - 生火製作</Chinese>
+            <Chinesesimp>一些用于生火制作的木材&lt;br/&gt; - 生火制作</Chinesesimp>
             <Turkish>Ateş yakmak için biraz odun&lt;br/&gt; - Ateş yakma</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_FishHook_Description">
@@ -2193,6 +2501,8 @@
             <German>Verwendet mit Angelspule&lt;br/&gt; - Angelausrüstung</German>
             <Korean>낚시 스풀과 함께 사용&lt;br/&gt; - 낚시 장비</Korean>
             <Japanese>釣りスプールと一緒に使用&lt;br/&gt; -釣り道具</Japanese>
+            <Chinese>與漁線輪配合使用&lt;br/&gt; - 釣魚裝備</Chinese>
+            <Chinesesimp>与渔线轮配合使用&lt;br/&gt; - 钓鱼装备</Chinesesimp>
             <Turkish>Balıkçılık makarası ile kullanılır&lt;br/&gt; - Balıkçılık malzemeleri</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_FishHook_DisplayName">
@@ -2207,6 +2517,8 @@
             <German>Angelhaken</German>
             <Korean>낚시 바늘</Korean>
             <Japanese>釣り針</Japanese>
+            <Chinese>魚鉤</Chinese>
+            <Chinesesimp>鱼钩</Chinesesimp>
             <Turkish>Balıkçılık kancası</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_FishingPole_Description">
@@ -2221,6 +2533,8 @@
             <German>Ermöglicht das Angeln&lt;br/&gt; - Angelausrüstung</German>
             <Korean>낚시 가능&lt;br/&gt; - 낚시 장비</Korean>
             <Japanese>釣りを可能にする&lt;br/&gt; - 釣り道具</Japanese>
+            <Chinese>允許垂釣&lt;br/&gt; - 釣魚裝備</Chinese>
+            <Chinesesimp>允许垂钓&lt;br/&gt; - 钓鱼装备</Chinesesimp>
             <Turkish>Balık tutmayı sağlar&lt;br/&gt; - Balıkçılık malzemeleri</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_FishingPole_DisplayName">
@@ -2235,6 +2549,8 @@
             <German>Zusammenklappbare Angelrute</German>
             <Korean>접이식 낚싯대</Korean>
             <Japanese>折りたたみ式釣り竿</Japanese>
+            <Chinese>折疊魚竿</Chinese>
+            <Chinesesimp>折叠鱼竿</Chinesesimp>
             <Turkish>Katlanabilir olta</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_FishingSpool_Description">
@@ -2249,6 +2565,8 @@
             <German>Wird mit zusammenklappbarer Angelrute verwendet&lt;br/&gt; - Angelausrüstung</German>
             <Korean>접이식 낚싯대와 함께 사용&lt;br/&gt; - 낚시 장비</Korean>
             <Japanese>折りたたみ式釣り竿と一緒に使用&lt;br/&gt; - 釣り道具</Japanese>
+            <Chinese>與折疊魚竿配合使用&lt;br/&gt; - 釣魚裝備</Chinese>
+            <Chinesesimp>与折叠鱼竿配合使用&lt;br/&gt; - 钓鱼装备</Chinesesimp>
             <Turkish>Katlanabilir olta ile kullanılır&lt;br/&gt; - Balıkçılık malzemeleri</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_FishingSpool_DisplayName">
@@ -2263,6 +2581,8 @@
             <German>Angelspule</German>
             <Korean>낚시 스풀</Korean>
             <Japanese>釣り用スプール</Japanese>
+            <Chinese>漁線輪</Chinese>
+            <Chinesesimp>渔线轮</Chinesesimp>
             <Turkish>Balıkçılık makarası</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Flathead_Description">
@@ -2277,6 +2597,8 @@
             <German>Schlitzschraubendreher &lt;br/&gt; - Handwerksgegenstand</German>
             <Korean>일자 드라이버 &lt;br/&gt; - 제작 아이템</Korean>
             <Japanese>マイナスドライバー &lt;br/&gt; - クラフトアイテム</Japanese>
+            <Chinese>一字螺絲刀&lt;br/&gt; - 製作物品</Chinese>
+            <Chinesesimp>一字螺丝刀&lt;br/&gt; - 制作物品</Chinesesimp>
             <Turkish>Düz tornavida &lt;br/&gt; - El işi öğesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Flathead_DisplayName">
@@ -2291,6 +2613,8 @@
             <German>Schlitzschraubendreher</German>
             <Korean>일자 드라이버</Korean>
             <Japanese>マイナスドライバー</Japanese>
+            <Chinese>一字螺絲刀</Chinese>
+            <Chinesesimp>一字螺丝刀</Chinesesimp>
             <Turkish>Düz uçlu tornavida</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Forge_DisplayName">
@@ -2305,6 +2629,8 @@
             <German>Schmelzschmiede</German>
             <Korean>제련 대장간</Korean>
             <Japanese>製錬鍛冶場</Japanese>
+            <Chinese>熔煉爐</Chinese>
+            <Chinesesimp>熔炼炉</Chinesesimp>
             <Turkish>Eritme Demirhanesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_FuelGeneric_Description">
@@ -2319,6 +2645,8 @@
             <German>Voll mit Treibstoff&lt;br/&gt; - Kraftstoffgegenstand</German>
             <Korean>연료 가득&lt;br/&gt; - 연료 아이템</Korean>
             <Japanese>燃料がいっぱい&lt;br/&gt; - 燃料アイテム</Japanese>
+            <Chinese>裝滿燃料&lt;br/&gt; - 燃料物品</Chinese>
+            <Chinesesimp>装满燃料&lt;br/&gt; - 燃料物品</Chinesesimp>
             <Turkish>Yakıt dolu&lt;br/&gt; - Yakıt öğesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_FuelSystemKit_Description">
@@ -2333,6 +2661,8 @@
             <German>Kraftstoffsystemsatz zur Fahrzeugreparatur</German>
             <Korean>차량 수리에 사용되는 연료 시스템 키트</Korean>
             <Japanese>車両修理に使用される燃料システムキット</Japanese>
+            <Chinese>用於車輛維修的燃料系統套件</Chinese>
+            <Chinesesimp>用于车辆维修的燃料系统套件</Chinesesimp>
             <Turkish>Araç onarımında kullanılan yakıt sistemi kiti</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_FuelSystemKit_DisplayName">
@@ -2347,6 +2677,8 @@
             <German>Kraftstoffsystem-Kit</German>
             <Korean>연료 시스템 키트</Korean>
             <Japanese>燃料システムキット</Japanese>
+            <Chinese>燃料系統套件</Chinese>
+            <Chinesesimp>燃料系统套件</Chinesesimp>
             <Turkish>Yakıt sistemi kiti</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_GasCartridge_Description">
@@ -2361,6 +2693,8 @@
             <German>Respiratorfilterpatronen &lt;br/&gt; - Gasmaskengegenstand</German>
             <Korean>방독면 필터 카트리지 &lt;br/&gt; - 방독면 아이템</Korean>
             <Japanese>防毒マスクフィルターカートリッジ &lt;br/&gt; - ガスマスクアイテム</Japanese>
+            <Chinese>呼吸器濾毒罐&lt;br/&gt; - 防毒面具物品</Chinese>
+            <Chinesesimp>呼吸器滤毒罐&lt;br/&gt; - 防毒面具物品</Chinesesimp>
             <Turkish>Solunum filtresi kartuşları &lt;br/&gt; - Gaz Maskesi öğesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_GasCartridge_DisplayName">
@@ -2375,6 +2709,8 @@
             <German>Gasmaskenpatronen</German>
             <Korean>방독면 카트리지</Korean>
             <Japanese>ガスマスクカートリッジ</Japanese>
+            <Chinese>防毒面具濾毒罐</Chinese>
+            <Chinesesimp>防毒面具滤毒罐</Chinesesimp>
             <Turkish>Gaz Maskesi kartuşları</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_GasMaskEmpty_Description">
@@ -2389,6 +2725,8 @@
             <German>Gasmaske, die keine Patronen hat, nutzlos</German>
             <Korean>카트리지가 없는 방독면, 쓸모없음</Korean>
             <Japanese>カートリッジがないガスマスク、役に立たない</Japanese>
+            <Chinese>沒有濾毒罐的防毒面具，沒用</Chinese>
+            <Chinesesimp>没有滤毒罐的防毒面具，没用</Chinesesimp>
             <Turkish>Kartuşu olmayan Gaz Maskesi, işe yaramaz</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_GasMaskEmpty_DisplayName">
@@ -2403,6 +2741,8 @@
             <German>Gasmaske (keine Patronen)</German>
             <Korean>방독면 (카트리지 없음)</Korean>
             <Japanese>ガスマスク（カートリッジなし）</Japanese>
+            <Chinese>防毒面具 (無濾毒罐)</Chinese>
+            <Chinesesimp>防毒面具 (无滤毒罐)</Chinesesimp>
             <Turkish>Gaz Maskesi (kartuş yok)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_GeigerDead_Description">
@@ -2417,6 +2757,8 @@
             <German>Defekter Geigerzähler, hat zu viele Rads durchgemacht und ist durchgebrannt, völlig nutzlos.&lt;br/&gt; - Zufälliger Müll</German>
             <Korean>죽은 가이거 계수기, 너무 많은 라드를 통과하여 타 버려 완전히 쓸모가 없습니다.&lt;br/&gt; - 임의의 정크</Korean>
             <Japanese>デッドガイガーカウンター、あまりにも多くのラドを通過して燃え尽き、完全に役に立たない。&lt;br/&gt; - ランダムジャンク</Japanese>
+            <Chinese>報廢的蓋革計數器，經歷了太多的輻射並燒毀了，完全沒用。&lt;br/&gt; - 隨機垃圾</Chinese>
+            <Chinesesimp>报废的盖革计数器，经历了太多的辐射并烧毁了，完全没用。&lt;br/&gt; - 随机垃圾</Chinesesimp>
             <Turkish>Ölü Geiger sayacı, çok fazla rad geçti ve yandı, tamamen işe yaramaz.&lt;br/&gt; - Rastgele Önemsiz</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_GeigerDead_DisplayName">
@@ -2431,6 +2773,8 @@
             <German>Defekter Geigerzähler</German>
             <Korean>죽은 가이거 계수기</Korean>
             <Japanese>デッドガイガー</Japanese>
+            <Chinese>報廢的蓋革計數器</Chinese>
+            <Chinesesimp>报废的盖革计数器</Chinesesimp>
             <Turkish>Ölü Geiger</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_GeigerNoBattery_DisplayName">
@@ -2445,6 +2789,8 @@
             <German>Persönliches Geigerzähler (Keine Batterie)</German>
             <Korean>개인용 가이거 계수기(배터리 없음)</Korean>
             <Japanese>個人用ガイガーカウンター（電池切れ）</Japanese>
+            <Chinese>個人蓋革計數器 (無電池)</Chinese>
+            <Chinesesimp>个人盖革计数器 (无电池)</Chinesesimp>
             <Turkish>Kişisel Geiger Sayacı (Pilsiz)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_GlassRepairKit_Description">
@@ -2459,6 +2805,8 @@
             <German>Glasreparaturset für die Fahrzeugreparatur</German>
             <Korean>차량 수리에 사용되는 유리 수리 키트</Korean>
             <Japanese>車の修理に使用するガラス修理キット</Japanese>
+            <Chinese>用於車輛維修的玻璃維修套件</Chinese>
+            <Chinesesimp>用于车辆维修的玻璃维修套件</Chinesesimp>
             <Turkish>Araç tamirinde kullanılan cam tamir takımı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_GlassRepairKit_DisplayName">
@@ -2473,6 +2821,8 @@
             <German>Glasreparaturset</German>
             <Korean>유리 수리 키트</Korean>
             <Japanese>ガラス修理キット</Japanese>
+            <Chinese>玻璃維修套件</Chinese>
+            <Chinesesimp>玻璃维修套件</Chinesesimp>
             <Turkish>Cam tamir takımı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Glucose_Description">
@@ -2487,6 +2837,8 @@
             <German>Eine Glukosespritze kann dem Körper helfen, mit starkem Hunger fertig zu werden.&lt;br/&gt; - Reduziert Hunger</German>
             <Korean>포도당 주사기는 심한 배고픔에 대처하는 데 도움이 될 수 있습니다.&lt;br/&gt; - 배고픔 감소</Korean>
             <Japanese>グルコース注射器は、体が深刻な空腹に対処するのに役立ちます。&lt;br/&gt; - 空腹感を軽減します</Japanese>
+            <Chinese>葡萄糖注射器，可以幫助身體應對嚴重飢餓。&lt;br/&gt; - 減少飢餓感</Chinese>
+            <Chinesesimp>葡萄糖注射器，可以帮助身体应对严重饥饿。&lt;br/&gt; - 减少饥饿感</Chinesesimp>
             <Turkish>Glikoz Enjektörü, vücudun şiddetli açlıkla baş etmesine yardımcı olabilir.&lt;br/&gt; - Açlığı azaltır</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Glucose_DisplayName">
@@ -2501,6 +2853,8 @@
             <German>Glukoseinspritzung</German>
             <Korean>포도당 주사</Korean>
             <Japanese>グルコース注射</Japanese>
+            <Chinese>葡萄糖注射液</Chinese>
+            <Chinesesimp>葡萄糖注射液</Chinesesimp>
             <Turkish>Glikoz Enjeksiyonu</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_GoldIngot_Description">
@@ -2515,6 +2869,8 @@
             <German>Ein kleines Vermögen wert&lt;br/&gt; - Schmiedegegenstand&lt;br/&gt; - Seltenheit</German>
             <Korean>작은 재산 가치&lt;br/&gt; - 대장장이 아이템&lt;br/&gt; - 희귀도</Korean>
             <Japanese>小さな財産の価値がある&lt;br/&gt; - 鍛冶アイテム&lt;br/&gt; - レアリティ</Japanese>
+            <Chinese>價值不菲&lt;br/&gt; - 鍛造物品&lt;br/&gt; - 稀有度</Chinese>
+            <Chinesesimp>价值不菲&lt;br/&gt; - 锻造物品&lt;br/&gt; - 稀有度</Chinesesimp>
             <Turkish>Küçük bir servet değerinde&lt;br/&gt; - Demircilik öğesi&lt;br/&gt; - Nadirlik</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_GoldIngot_DisplayName">
@@ -2529,6 +2885,8 @@
             <German>Goldbarren</German>
             <Korean>금괴</Korean>
             <Japanese>金インゴット</Japanese>
+            <Chinese>金錠</Chinese>
+            <Chinesesimp>金锭</Chinesesimp>
             <Turkish>Altın Külçesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_GoldOre_Description">
@@ -2543,6 +2901,8 @@
             <German>Kann in einer Schmelzerei verwendet werden&lt;br/&gt; - Bastelgegenstand&lt;br/&gt; - Schmelzgegenstand</German>
             <Korean>제련 대장간에서 사용할 수 있습니다.&lt;br/&gt; - 제작 아이템&lt;br/&gt; - 제련 아이템</Korean>
             <Japanese>製錬炉で使用できます&lt;br/&gt; - クラフトアイテム&lt;br/&gt; - 製錬アイテム</Japanese>
+            <Chinese>可在熔煉爐使用&lt;br/&gt; - 製作物品&lt;br/&gt; - 熔煉物品</Chinese>
+            <Chinesesimp>可在熔炼炉使用&lt;br/&gt; - 制作物品&lt;br/&gt; - 熔炼物品</Chinesesimp>
             <Turkish>Bir Eritme Ocağında kullanılabilir&lt;br/&gt; - Üretim öğesi&lt;br/&gt; - Eritme öğesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_GoldOre_DisplayName">
@@ -2557,6 +2917,8 @@
             <German>Golderz</German>
             <Korean>금광석</Korean>
             <Japanese>金鉱石</Japanese>
+            <Chinese>金礦石</Chinese>
+            <Chinesesimp>金矿石</Chinesesimp>
             <Turkish>Altın Cevheri</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_GoldPiece_Description">
@@ -2571,6 +2933,8 @@
             <German>Kleines Stück Golderz&lt;br/&gt; - Bastelgegenstand&lt;br/&gt; - Schmelzgegenstand</German>
             <Korean>작은 금광석 덩어리&lt;br/&gt; - 제작 아이템&lt;br/&gt; - 제련 아이템</Korean>
             <Japanese>鉄鉱石の小さな塊&lt;br/&gt; - クラフトアイテム&lt;br/&gt; - 製錬アイテム</Japanese>
+            <Chinese>小塊金礦石&lt;br/&gt; - 製作物品&lt;br/&gt; - 熔煉物品</Chinese>
+            <Chinesesimp>小块金矿石&lt;br/&gt; - 制作物品&lt;br/&gt; - 熔炼物品</Chinesesimp>
             <Turkish>Küçük bir altın cevheri parçası&lt;br/&gt; - Üretim öğesi&lt;br/&gt; - Eritme öğesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_GoldPiece_DisplayName">
@@ -2585,6 +2949,8 @@
             <German>Goldstück</German>
             <Korean>금 조각</Korean>
             <Japanese>金片</Japanese>
+            <Chinese>金塊</Chinese>
+            <Chinesesimp>金块</Chinesesimp>
             <Turkish>Altın Parçası</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_GuttingKnife_Description">
@@ -2599,6 +2965,8 @@
             <German>Jagdmesser, für Forschungszwecke verwendet.&lt;br/&gt; - Forschungswerkzeug</German>
             <Korean>연구 목적으로 사용되는 사냥용 칼입니다.&lt;br/&gt; - 연구 도구</Korean>
             <Japanese>研究用に使用される狩猟用ナイフ。&lt;br/&gt; - 研究ツール</Japanese>
+            <Chinese>獵刀，用於研究目的。&lt;br/&gt; - 研究工具</Chinese>
+            <Chinesesimp>猎刀，用于研究目的。&lt;br/&gt; - 研究工具</Chinesesimp>
             <Turkish>Araştırma amaçlı kullanılan av bıçağı.&lt;br/&gt; - Araştırma aracı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_GuttingKnife_DisplayName">
@@ -2613,6 +2981,8 @@
             <German>Jagdmesser für Proben</German>
             <Korean>표본 사냥용 칼</Korean>
             <Japanese>試料採取用狩猟ナイフ</Japanese>
+            <Chinese>標本獵刀</Chinese>
+            <Chinesesimp>标本猎刀</Chinesesimp>
             <Turkish>Örnek Av Bıçağı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_HeatPack_Description">
@@ -2627,6 +2997,8 @@
             <German>Einweg-Wärmekissen&lt;br/&gt; - Erhöht die Temperatur</German>
             <Korean>일회용 핫팩&lt;br/&gt; - 체온을 높여줍니다.</Korean>
             <Japanese>使い捨てヒートパック&lt;br/&gt; -体温を上げる</Japanese>
+            <Chinese>一次性暖寶寶&lt;br/&gt; - 提高溫度</Chinese>
+            <Chinesesimp>一次性暖宝宝&lt;br/&gt; - 提高温度</Chinesesimp>
             <Turkish>Tek kullanımlık ısı paketi&lt;br/&gt; - Sıcaklığı artırır</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_HeatPack_DisplayName">
@@ -2641,6 +3013,8 @@
             <German>Wärmekissen</German>
             <Korean>핫팩</Korean>
             <Japanese>ヒートパック</Japanese>
+            <Chinese>暖寶寶</Chinese>
+            <Chinesesimp>暖宝宝</Chinesesimp>
             <Turkish>Isı paketi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_HydraulicRepairKit_Description">
@@ -2655,6 +3029,8 @@
             <German>Hydraulik-Reparatursatz für Fahrzeugreparaturen</German>
             <Korean>차량 수리에 사용되는 유압 수리 키트</Korean>
             <Japanese>車の修理に使用される油圧修理キット</Japanese>
+            <Chinese>用於車輛維修的液壓維修套件</Chinese>
+            <Chinesesimp>用于车辆维修的液压维修套件</Chinesesimp>
             <Turkish>Araç onarımlarında kullanılan hidrolik tamir takımı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_HydraulicRepairKit_DisplayName">
@@ -2669,6 +3045,8 @@
             <German>Hydraulik-Reparatursatz</German>
             <Korean>유압 수리 키트</Korean>
             <Japanese>油圧修理キット</Japanese>
+            <Chinese>液壓維修套件</Chinese>
+            <Chinesesimp>液压维修套件</Chinesesimp>
             <Turkish>Hidrolik tamir takımı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_IronIngot_Description">
@@ -2683,6 +3061,8 @@
             <German>Kann an einem Amboss verwendet werden&lt;br/&gt; - Bastelgegenstand&lt;br/&gt; - Schmiedegegenstand</German>
             <Korean>모루에서 사용할 수 있습니다.&lt;br/&gt; - 제작 아이템&lt;br/&gt; - 대장장이 아이템</Korean>
             <Japanese>金床で使用できます&lt;br/&gt; - クラフトアイテム&lt;br/&gt; - 鍛冶アイテム</Japanese>
+            <Chinese>可在鐵砧上使用&lt;br/&gt; - 製作物品&lt;br/&gt; - 鍛造物品</Chinese>
+            <Chinesesimp>可在铁砧上使用&lt;br/&gt; - 制作物品&lt;br/&gt; - 锻造物品</Chinesesimp>
             <Turkish>Bir örs üzerinde kullanılabilir&lt;br/&gt; - Üretim öğesi&lt;br/&gt; - Demircilik öğesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_IronIngot_DisplayName">
@@ -2697,6 +3077,8 @@
             <German>Eisenbarren</German>
             <Korean>철괴</Korean>
             <Japanese>鉄インゴット</Japanese>
+            <Chinese>鐵錠</Chinese>
+            <Chinesesimp>铁锭</Chinesesimp>
             <Turkish>Demir Külçesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_IronOre_Description">
@@ -2711,6 +3093,8 @@
             <German>Kann in einer Schmelzerei verwendet werden&lt;br/&gt; - Bastelgegenstand&lt;br/&gt; - Schmelzgegenstand</German>
             <Korean>제련 대장간에서 사용할 수 있습니다.&lt;br/&gt; - 제작 아이템&lt;br/&gt; - 제련 아이템</Korean>
             <Japanese>製錬炉で使用できます&lt;br/&gt; - クラフトアイテム&lt;br/&gt; - 製錬アイテム</Japanese>
+            <Chinese>可在熔煉爐使用&lt;br/&gt; - 製作物品&lt;br/&gt; - 熔煉物品</Chinese>
+            <Chinesesimp>可在熔炼炉使用&lt;br/&gt; - 制作物品&lt;br/&gt; - 熔炼物品</Chinesesimp>
             <Turkish>Bir Eritme Ocağında kullanılabilir&lt;br/&gt; - Üretim öğesi&lt;br/&gt; - Eritme öğesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_IronOre_DisplayName">
@@ -2725,6 +3109,8 @@
             <German>Eisenerz</German>
             <Korean>철광석</Korean>
             <Japanese>鉄鉱石</Japanese>
+            <Chinese>鐵礦石</Chinese>
+            <Chinesesimp>铁矿石</Chinesesimp>
             <Turkish>Demir Cevheri</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_IronPiece_Description">
@@ -2739,6 +3125,8 @@
             <German>Kleines Stück Eisenerz&lt;br/&gt; - Bastelgegenstand&lt;br/&gt; - Schmelzgegenstand</German>
             <Korean>작은 철광석 덩어리&lt;br/&gt; - 제작 아이템&lt;br/&gt; - 제련 아이템</Korean>
             <Japanese>鉄鉱石の小さな塊&lt;br/&gt; - クラフトアイテム&lt;br/&gt; - 製錬アイテム</Japanese>
+            <Chinese>小塊鐵礦石&lt;br/&gt; - 製作物品&lt;br/&gt; - 熔煉物品</Chinese>
+            <Chinesesimp>小块铁矿石&lt;br/&gt; - 制作物品&lt;br/&gt; - 熔炼物品</Chinesesimp>
             <Turkish>Küçük bir Demir cevheri parçası&lt;br/&gt; - Üretim öğesi&lt;br/&gt; - Eritme öğesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_IronPiece_DisplayName">
@@ -2753,6 +3141,8 @@
             <German>Eisenstück</German>
             <Korean>철 조각</Korean>
             <Japanese>鉄片</Japanese>
+            <Chinese>鐵塊</Chinese>
+            <Chinesesimp>铁块</Chinesesimp>
             <Turkish>Demir Parçası</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_JerryCanWaterEmpty_Description">
@@ -2767,6 +3157,8 @@
             <German>Ein leerer Kanister zur Wassersammlung...</German>
             <Korean>물 수집에 사용되는 빈 제리캔...</Korean>
             <Japanese>水を集めるために使用される空のジェリカン...</Japanese>
+            <Chinese>用於收集水的空油桶...</Chinese>
+            <Chinesesimp>用于收集水的空油桶...</Chinesesimp>
             <Turkish>Su toplamak için kullanılan boş bir Jerrycan...</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_JerryCanWaterEmpty_DisplayName">
@@ -2781,6 +3173,8 @@
             <German>Wasser (Leer)</German>
             <Korean>물 (비어 있음)</Korean>
             <Japanese>水（空）</Japanese>
+            <Chinese>水 (空)</Chinese>
+            <Chinesesimp>水 (空)</Chinesesimp>
             <Turkish>Su (Boş)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_JerryCanWaterFullDirty_Description">
@@ -2795,6 +3189,8 @@
             <German>Voll mit schmutzigem Wasser</German>
             <Korean>더러운 물로 가득</Korean>
             <Japanese>汚れた水でいっぱい</Japanese>
+            <Chinese>裝滿髒水</Chinese>
+            <Chinesesimp>装满脏水</Chinesesimp>
             <Turkish>Kirli su dolu</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_JerryCanWaterFullDirty_DisplayName">
@@ -2809,6 +3205,8 @@
             <German>Wasser 'Schmutzig' (5 Gallonen / 20L)</German>
             <Korean>물 '더러운' (5갤런 / 20L)</Korean>
             <Japanese>水「汚れた」（5ガロン/ 20L）</Japanese>
+            <Chinese>髒水 (5加侖 / 20升)</Chinese>
+            <Chinesesimp>脏水 (5加仑 / 20升)</Chinesesimp>
             <Turkish>Su 'Kirli' (5 Galon / 20L)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_JerryCanWaterFull_Description">
@@ -2823,6 +3221,8 @@
             <German>Voll mit Wasser</German>
             <Korean>물이 가득</Korean>
             <Japanese>水がいっぱい</Japanese>
+            <Chinese>裝滿水</Chinese>
+            <Chinesesimp>装满水</Chinesesimp>
             <Turkish>Su dolu</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_JerryCanWaterFull_DisplayName">
@@ -2837,6 +3237,8 @@
             <German>Wasser (5 Gallonen / 20L)</German>
             <Korean>물 (5갤런 / 20L)</Korean>
             <Japanese>水（5ガロン/ 20L）</Japanese>
+            <Chinese>水 (5加侖 / 20升)</Chinese>
+            <Chinesesimp>水 (5加仑 / 20升)</Chinesesimp>
             <Turkish>Su (5 Galon / 20L)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_JetFuelEmpty_Description">
@@ -2851,6 +3253,8 @@
             <German>Ein leerer Benzinkanister zur Kraftstoffsammlung...&lt;br/&gt; - Kraftstoffgegenstand&lt;br/&gt; - Leer</German>
             <Korean>연료 수집에 사용되는 빈 제리캔...&lt;br/&gt; - 연료 아이템&lt;br/&gt; - 비어 있음</Korean>
             <Japanese>燃料の収集に使用される空のジェリカン...&lt;br/&gt; - 燃料アイテム&lt;br/&gt; - 空</Japanese>
+            <Chinese>用於收集燃料的空油桶...&lt;br/&gt; - 燃料物品&lt;br/&gt; - 空</Chinese>
+            <Chinesesimp>用于收集燃料的空油桶...&lt;br/&gt; - 燃料物品&lt;br/&gt; - 空</Chinesesimp>
             <Turkish>Yakıt toplamak için kullanılan boş bir Jerrycan...&lt;br/&gt; - Yakıt öğesi&lt;br/&gt; - Boş</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_JetFuelEmpty_DisplayName">
@@ -2865,6 +3269,8 @@
             <German>Jet-Treibstoff (leer)</German>
             <Korean>제트 연료(빈)</Korean>
             <Japanese>ジェット燃料（空）</Japanese>
+            <Chinese>航空燃油 (空)</Chinese>
+            <Chinesesimp>航空燃油 (空)</Chinesesimp>
             <Turkish>Jet Yakıtı (Boş)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_JetFuel_DisplayName">
@@ -2879,6 +3285,8 @@
             <German>Jet-Treibstoff (5 Gallonen / 20 l)</German>
             <Korean>제트 연료(5갤런/20L)</Korean>
             <Japanese>ジェット燃料（5ガロン/20L）</Japanese>
+            <Chinese>航空燃油 (5加侖 / 20升)</Chinese>
+            <Chinesesimp>航空燃油 (5加仑 / 20升)</Chinesesimp>
             <Turkish>Jet Yakıtı (5 Galon / 20L)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_LandingGearKit_Description">
@@ -2893,6 +3301,8 @@
             <German>Fahrwerkssatz für Flugzeugreparaturen</German>
             <Korean>항공기 수리에 사용되는 랜딩 기어 키트</Korean>
             <Japanese>航空機の修理に使用される着陸装置キット</Japanese>
+            <Chinese>用於飛機維修的起落架套件</Chinese>
+            <Chinesesimp>用于飞机维修的起落架套件</Chinesesimp>
             <Turkish>Uçak onarımlarında kullanılan iniş takımı kiti</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_LandingGearKit_DisplayName">
@@ -2907,6 +3317,8 @@
             <German>Fahrwerkssatz</German>
             <Korean>랜딩 기어 키트</Korean>
             <Japanese>ランディングギアキット</Japanese>
+            <Chinese>起落架套件</Chinese>
+            <Chinesesimp>起落架套件</Chinesesimp>
             <Turkish>İniş takımı kiti</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_LanternNoBattery_DisplayName">
@@ -2921,6 +3333,8 @@
             <German>Laterne (keine Batterie)</German>
             <Korean>랜턴(배터리 없음)</Korean>
             <Japanese>ランタン（電池なし）</Japanese>
+            <Chinese>燈籠 (無電池)</Chinese>
+            <Chinesesimp>灯笼 (无电池)</Chinesesimp>
             <Turkish>Fener (Pil yok)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_LeadContainerClosed_Description">
@@ -2935,6 +3349,8 @@
             <German>Ein bleiisolierter Behälter, der etwas enthält. Der Behälter selbst fühlt sich leicht warm an, fast so, als würde er irgendeine Art von Wärmeenergie speichern.&lt;br/&gt; - Enthält ein Artefakt &lt;br/&gt; - Seltenheit</German>
             <Korean>무언가를 담고 있는 납으로 분리된 용기입니다. 용기 자체는 만지면 약간 따뜻하게 느껴지며 마치 일종의 열 에너지를 저장하는 것처럼 느껴집니다.&lt;br/&gt; - 유물을 포함 &lt;br/&gt; - 희귀도</Korean>
             <Japanese>何かを保持する鉛で隔離された容器。容器自体は、まるで何らかの熱エネルギーを蓄えているかのように、触ると少し暖かく感じます。&lt;br/&gt; -アーティファクトが含まれています&lt;br/&gt; -レア度</Japanese>
+            <Chinese>一個裝著東西的鉛隔離容器。容器本身摸起來微溫，仿佛儲存著某种熱能。&lt;br/&gt; - 含有神器&lt;br/&gt; - 稀有度</Chinese>
+            <Chinesesimp>一个装着东西的铅隔离容器。容器本身摸起来微温，仿佛储存着某种热能。&lt;br/&gt; - 含有神器&lt;br/&gt; - 稀有度</Chinesesimp>
             <Turkish>İçinde bir şey bulunan kurşun izolasyonlu bir konteyner. Konteynerin kendisi hafif sıcak hissediyor, sanki bir çeşit ısı enerjisi depoluyor gibi.&lt;br/&gt; - Bir eser içeriyor &lt;br/&gt; - Nadirlik</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_LeadContainerClosed_DisplayName">
@@ -2949,6 +3365,8 @@
             <German>Blei ausgekleideter Behälter (geschlossen)</German>
             <Korean>납이 깔린 용기(닫힘)</Korean>
             <Japanese>鉛で裏打ちされた容器（閉じている）</Japanese>
+            <Chinese>襯鉛容器 (關閉)</Chinese>
+            <Chinesesimp>衬铅容器 (关闭)</Chinesesimp>
             <Turkish>Kurşun Kaplı konteyner (kapalı)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_LeadContainerOpen_Description">
@@ -2963,6 +3381,8 @@
             <German>Ein bleiisolierter Behälter zur Lagerung radioaktiver Stoffe wie Atommüll oder anderer gefährlicher Stoffe</German>
             <Korean>핵 폐기물 또는 기타 유해 물질과 같은 방사성 물질을 저장하는 데 사용되는 납으로 분리된 용기</Korean>
             <Japanese>核廃棄物やその他の危険物質などの放射性物質を保管するために使用される鉛で隔離された容器</Japanese>
+            <Chinese>用於儲存放射性物質（如核廢料或其他有害物質）的鉛隔離容器</Chinese>
+            <Chinesesimp>用于储存放射性物质（如核废料或其他有害物质）的铅隔离容器</Chinesesimp>
             <Turkish>Nükleer atık veya diğer tehlikeli maddeler gibi radyoaktif maddelerin depolanması için kullanılan kurşun izolasyonlu bir konteyner</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_LeadContainerOpen_DisplayName">
@@ -2977,6 +3397,8 @@
             <German>Blei ausgekleideter Behälter (offen)</German>
             <Korean>납이 깔린 용기(열림)</Korean>
             <Japanese>鉛で裏打ちされた容器（開いている）</Japanese>
+            <Chinese>襯鉛容器 (開啟)</Chinese>
+            <Chinesesimp>衬铅容器 (开启)</Chinesesimp>
             <Turkish>Kurşun Kaplı konteyner (açık)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_LithiumBattery_Description">
@@ -2991,6 +3413,8 @@
             <German>3200mAh Lithiumbatterie</German>
             <Korean>3200mAh 리튬 배터리</Korean>
             <Japanese>3200mAhリチウム電池</Japanese>
+            <Chinese>3200mAh 鋰電池</Chinese>
+            <Chinesesimp>3200mAh 锂电池</Chinesesimp>
             <Turkish>3200mAh Lityum pil</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_LithiumBattery_DisplayName">
@@ -3005,6 +3429,8 @@
             <German>Lithiumbatterie</German>
             <Korean>리튬 배터리</Korean>
             <Japanese>リチウム電池</Japanese>
+            <Chinese>鋰電池</Chinese>
+            <Chinesesimp>锂电池</Chinesesimp>
             <Turkish>Lityum pil</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Malachite_Description">
@@ -3019,6 +3445,8 @@
             <German>Roher Malachit, ungeschnitten&lt;br/&gt; - Seltenheit</German>
             <Korean>원시 공작석, 자르지 않은&lt;br/&gt; - 희귀도</Korean>
             <Japanese>未加工のマラカイト、未カット&lt;br/&gt; - レアリティ</Japanese>
+            <Chinese>原始孔雀石，未切割&lt;br/&gt; - 稀有度</Chinese>
+            <Chinesesimp>原始孔雀石，未切割&lt;br/&gt; - 稀有度</Chinesesimp>
             <Turkish>Ham Malakit, kesilmemiş&lt;br/&gt; - Nadirlik</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Malachite_DisplayName">
@@ -3033,6 +3461,8 @@
             <German>Malachit</German>
             <Korean>공작석</Korean>
             <Japanese>マラカイト</Japanese>
+            <Chinese>孔雀石</Chinese>
+            <Chinesesimp>孔雀石</Chinesesimp>
             <Turkish>Malakit</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Matryoshka_Description">
@@ -3047,6 +3477,8 @@
             <German>Matrjoschka, slawisches kleines Schmuckstück.&lt;br/&gt; - Zufälliger Müll</German>
             <Korean>마트료시카, 슬라브 작은 장신구.&lt;br/&gt; - 임의의 정크</Korean>
             <Japanese>マトリョーシカ、スラブの小さな装身具。&lt;br/&gt; - ランダムジャンク</Japanese>
+            <Chinese>俄羅斯套娃，斯拉夫小飾品。&lt;br/&gt; - 隨機垃圾</Chinese>
+            <Chinesesimp>俄罗斯套娃，斯拉夫小饰品。&lt;br/&gt; - 随机垃圾</Chinesesimp>
             <Turkish>Matruşka, Slav küçük biblo.&lt;br/&gt; - Rastgele Önemsiz</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Matryoshka_DisplayName">
@@ -3061,6 +3493,8 @@
             <German>Matrjoschka</German>
             <Korean>마트료시카</Korean>
             <Japanese>マトリョーシカ</Japanese>
+            <Chinese>俄羅斯套娃</Chinese>
+            <Chinesesimp>俄罗斯套娃</Chinesesimp>
             <Turkish>Matruşka</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_MetalFabricationKit_Description">
@@ -3075,6 +3509,8 @@
             <German>Metallbausatz für die Fahrzeugreparatur</German>
             <Korean>차량 수리에 사용되는 금속 제조 키트</Korean>
             <Japanese>車の修理に使用される金属製作キット</Japanese>
+            <Chinese>用於車輛維修的金屬加工套件</Chinese>
+            <Chinesesimp>用于车辆维修的金属加工套件</Chinesesimp>
             <Turkish>araç onarımı için kullanılan metal imalat kiti</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_MetalFabricationKit_DisplayName">
@@ -3089,6 +3525,8 @@
             <German>Metallbausatz</German>
             <Korean>금속 제작 키트</Korean>
             <Japanese>金属製作キット</Japanese>
+            <Chinese>金屬加工套件</Chinese>
+            <Chinesesimp>金属加工套件</Chinesesimp>
             <Turkish>Metal imalat kiti</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_NeedleThread_Description">
@@ -3103,6 +3541,8 @@
             <German>etwas Faden mit einer Nadel &lt;br/&gt; - Handwerksgegenstand</German>
             <Korean>바늘과 실 &lt;br/&gt; - 제작 아이템</Korean>
             <Japanese>針と糸 &lt;br/&gt; - クラフトアイテム</Japanese>
+            <Chinese>帶針的線&lt;br/&gt; - 製作物品</Chinese>
+            <Chinesesimp>带针的线&lt;br/&gt; - 制作物品</Chinesesimp>
             <Turkish>iğneli iplik &lt;br/&gt; - El işi öğesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_NeedleThread_DisplayName">
@@ -3117,6 +3557,8 @@
             <German>Nadel und Faden</German>
             <Korean>바늘과 실</Korean>
             <Japanese>針と糸</Japanese>
+            <Chinese>針線</Chinese>
+            <Chinesesimp>针线</Chinesesimp>
             <Turkish>İğne ve iplik</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_OldWatch_Description">
@@ -3131,6 +3573,8 @@
             <German>Alte kaputte Uhr, Mechanismus im Inneren ist kaputt.&lt;br/&gt; - Zufälliger Müll</German>
             <Korean>오래된 망가진 시계, 내부 메커니즘이 고장났습니다.&lt;br/&gt; - 임의의 정크</Korean>
             <Japanese>古い壊れた時計、内部のメカニズムが壊れています。&lt;br/&gt; - ランダムジャンク</Japanese>
+            <Chinese>舊的破錶，內部機械裝置已壞。&lt;br/&gt; - 隨機垃圾</Chinese>
+            <Chinesesimp>旧的破表，内部机械装置已坏。&lt;br/&gt; - 随机垃圾</Chinesesimp>
             <Turkish>Eski bozuk saat, içindeki mekanizma bozuk.&lt;br/&gt; - Rastgele Önemsiz</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_OldWatch_DisplayName">
@@ -3145,6 +3589,8 @@
             <German>Alte Uhr</German>
             <Korean>오래된 시계</Korean>
             <Japanese>古い時計</Japanese>
+            <Chinese>舊錶</Chinese>
+            <Chinesesimp>旧表</Chinesesimp>
             <Turkish>Eski Saat</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Orange_Description">
@@ -3159,6 +3605,8 @@
             <German>Obst</German>
             <Korean>과일</Korean>
             <Japanese>フルーツ</Japanese>
+            <Chinese>水果</Chinese>
+            <Chinesesimp>水果</Chinesesimp>
             <Turkish>meyve</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Orange_DisplayName">
@@ -3173,6 +3621,8 @@
             <German>Orange</German>
             <Korean>주황색</Korean>
             <Japanese>オレンジ</Japanese>
+            <Chinese>橙子</Chinese>
+            <Chinesesimp>橙子</Chinesesimp>
             <Turkish>Turuncu</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_PetrolEmpty_Description">
@@ -3187,6 +3637,8 @@
             <German>Ein leerer Benzinkanister zur Kraftstoffsammlung...&lt;br/&gt; - Kraftstoffgegenstand&lt;br/&gt; - Leer</German>
             <Korean>연료 수집에 사용되는 빈 제리캔...&lt;br/&gt; - 연료 아이템&lt;br/&gt; - 비어 있음</Korean>
             <Japanese>燃料の収集に使用される空のジェリカン...&lt;br/&gt; - 燃料アイテム&lt;br/&gt; - 空</Japanese>
+            <Chinese>用於收集燃料的空油桶...&lt;br/&gt; - 燃料物品&lt;br/&gt; - 空</Chinese>
+            <Chinesesimp>用于收集燃料的空油桶...&lt;br/&gt; - 燃料物品&lt;br/&gt; - 空</Chinesesimp>
             <Turkish>Yakıt toplamak için kullanılan boş bir Jerrycan...&lt;br/&gt; - Yakıt öğesi&lt;br/&gt; - Boş</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_PetrolEmpty_DisplayName">
@@ -3201,6 +3653,8 @@
             <German>Benzin (leer)</German>
             <Korean>휘발유(빈)</Korean>
             <Japanese>ガソリン（空）</Japanese>
+            <Chinese>汽油 (空)</Chinese>
+            <Chinesesimp>汽油 (空)</Chinesesimp>
             <Turkish>Benzin (Boş)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Petrol_DisplayName">
@@ -3215,6 +3669,8 @@
             <German>Benzin (5 Gallonen / 20 l)</German>
             <Korean>휘발유(5갤런/20L)</Korean>
             <Japanese>ガソリン（5ガロン/20L）</Japanese>
+            <Chinese>汽油 (5加侖 / 20升)</Chinese>
+            <Chinesesimp>汽油 (5加仑 / 20升)</Chinesesimp>
             <Turkish>Benzin (5 Galon / 20L)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Phillips_Description">
@@ -3229,6 +3685,8 @@
             <German>Kreuzschlitzschraubendreher &lt;br/&gt; - Handwerksgegenstand</German>
             <Korean>필립스 스크루 드라이버 &lt;br/&gt; - 제작 아이템</Korean>
             <Japanese>プラスドライバー &lt;br/&gt; - クラフトアイテム</Japanese>
+            <Chinese>十字螺絲刀&lt;br/&gt; - 製作物品</Chinese>
+            <Chinesesimp>十字螺丝刀&lt;br/&gt; - 制作物品</Chinesesimp>
             <Turkish>Phillips tornavida &lt;br/&gt; - El işi öğesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Phillips_DisplayName">
@@ -3243,6 +3701,8 @@
             <German>Kreuzschlitzschraubendreher</German>
             <Korean>십자 드라이버</Korean>
             <Japanese>プラスドライバー</Japanese>
+            <Chinese>十字螺絲刀</Chinese>
+            <Chinesesimp>十字螺丝刀</Chinesesimp>
             <Turkish>Yıldız tornavida</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Phone_Description">
@@ -3257,6 +3717,8 @@
             <German>Ein altes kaputtes Telefon.&lt;br/&gt; - Zufälliger Müll</German>
             <Korean>오래된 고장난 전화기.&lt;br/&gt; - 임의의 정크</Korean>
             <Japanese>古い壊れた電話。&lt;br/&gt; - ランダムジャンク</Japanese>
+            <Chinese>一部舊的破手機。&lt;br/&gt; - 隨機垃圾</Chinese>
+            <Chinesesimp>一部旧的破手机。&lt;br/&gt; - 随机垃圾</Chinesesimp>
             <Turkish>Eski bir bozuk telefon.&lt;br/&gt; - Rastgele Önemsiz</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Phone_DisplayName">
@@ -3271,6 +3733,8 @@
             <German>Defektes Telefon</German>
             <Korean>고장난 전화기</Korean>
             <Japanese>壊れた電話</Japanese>
+            <Chinese>壞手機</Chinese>
+            <Chinesesimp>坏手机</Chinesesimp>
             <Turkish>Kırık Telefon</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Photos_Description">
@@ -3285,6 +3749,8 @@
             <German>Alte Fotos, gute Zeiten. Bewahren Sie sie aus sentimentalem Wert auf oder verkaufen Sie sie.&lt;br/&gt; - Zufälliger Müll</German>
             <Korean>오래된 사진, 좋은 시간. 감상적인 가치를 위해 저장하거나 판매하십시오.&lt;br/&gt; - 임의의 정크</Korean>
             <Japanese>古い写真、楽しい時間。感傷的な価値のためにそれらを保存するか、それらを販売します。&lt;br/&gt; - ランダムジャンク</Japanese>
+            <Chinese>舊照片，美好的時光。為了紀念價值保存它們，或者賣掉它們。&lt;br/&gt; - 隨機垃圾</Chinese>
+            <Chinesesimp>旧照片，美好的时光。为了纪念价值保存它们，或者卖掉它们。&lt;br/&gt; - 随机垃圾</Chinesesimp>
             <Turkish>Eski fotoğraflar, güzel zamanlar. Duygusal değeri için saklayın veya satın.&lt;br/&gt; - Rastgele Önemsiz</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Photos_DisplayName">
@@ -3299,6 +3765,8 @@
             <German>Fotos</German>
             <Korean>사진</Korean>
             <Japanese>写真</Japanese>
+            <Chinese>照片</Chinese>
+            <Chinesesimp>照片</Chinesesimp>
             <Turkish>Fotoğraflar</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_PickaxeBroken_Description">
@@ -3313,6 +3781,8 @@
             <German>Muss repariert werden&lt;br/&gt; - Bergbauartikel &lt;br/&gt; - Zerbrochen</German>
             <Korean>수리 필요&lt;br/&gt; - 채굴 아이템 &lt;br/&gt; - 파손됨</Korean>
             <Japanese>修理が必要&lt;br/&gt; - 採掘アイテム&lt;br/&gt; - 壊れた。</Japanese>
+            <Chinese>需要修理&lt;br/&gt; - 採礦物品&lt;br/&gt; - 損壞</Chinese>
+            <Chinesesimp>需要修理&lt;br/&gt; - 采矿物品&lt;br/&gt; - 损坏</Chinesesimp>
             <Turkish>Onarılması gerekiyor&lt;br/&gt; - Madencilik öğesi &lt;br/&gt; - Kırık</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_PickaxeBroken_DisplayName">
@@ -3327,6 +3797,8 @@
             <German>Schlampige Spitzhacke (gebrochen)</German>
             <Korean>조잡한 곡괭이 (부러짐)</Korean>
             <Japanese>粗末なツルハシ（壊れた）</Japanese>
+            <Chinese>劣質鎬 (損壞)</Chinese>
+            <Chinesesimp>劣质镐 (损坏)</Chinesesimp>
             <Turkish>Kalitesiz Kazma (kırık)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_PickaxeHead_Description">
@@ -3341,6 +3813,8 @@
             <German>der Kopf einer Spitzhacke, nutzlos ohne Griff</German>
             <Korean>곡괭이 머리는 손잡이가 없으면 쓸모가 없다</Korean>
             <Japanese>つるはしの頭、ハンドルがないと役に立たない</Japanese>
+            <Chinese>鎬頭，沒有柄就沒用</Chinese>
+            <Chinesesimp>镐头，没有柄就没用</Chinesesimp>
             <Turkish>kazmanın başı, sapı olmadan işe yaramaz</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_PickaxeHead_DisplayName">
@@ -3355,6 +3829,8 @@
             <German>Spitzhacke-Kopf</German>
             <Korean>곡괭이 머리</Korean>
             <Japanese>つるはしヘッド</Japanese>
+            <Chinese>鎬頭</Chinese>
+            <Chinesesimp>镐头</Chinesesimp>
             <Turkish>Kazma Kafası</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Pliers_Description">
@@ -3369,6 +3845,8 @@
             <German>Ein Paar Hochleistungszangen &lt;br/&gt; - Handwerksgegenstand</German>
             <Korean>튼튼한 플라이어 한 쌍 &lt;br/&gt; - 제작 아이템</Korean>
             <Japanese>頑丈なペンチのペア&lt;br/&gt; - クラフトアイテム</Japanese>
+            <Chinese>一把重型鉗子&lt;br/&gt; - 製作物品</Chinese>
+            <Chinesesimp>一把重型钳子&lt;br/&gt; - 制作物品</Chinesesimp>
             <Turkish>Bir çift ağır hizmet tipi pense &lt;br/&gt; - El işi öğesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Pliers_DisplayName">
@@ -3383,6 +3861,8 @@
             <German>Zangen</German>
             <Korean>플라이어</Korean>
             <Japanese>ペンチ</Japanese>
+            <Chinese>鉗子</Chinese>
+            <Chinesesimp>钳子</Chinesesimp>
             <Turkish>Pense</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_PowderedMilk_Description">
@@ -3397,6 +3877,8 @@
             <German>abgepackte Trockenmilch</German>
             <Korean>포장 분유</Korean>
             <Japanese>パックされた粉ミルク</Japanese>
+            <Chinese>包裝奶粉</Chinese>
+            <Chinesesimp>包装奶粉</Chinesesimp>
             <Turkish>paketlenmiş kuru süt</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_PowderedMilk_DisplayName">
@@ -3411,6 +3893,8 @@
             <German>Milchpulver</German>
             <Korean>분유</Korean>
             <Japanese>粉乳</Japanese>
+            <Chinese>奶粉</Chinese>
+            <Chinesesimp>奶粉</Chinesesimp>
             <Turkish>Süt tozu</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_RandomMedication_Description">
@@ -3425,6 +3909,8 @@
             <German>Ein Haufen zufälliger Pillen und Arzneimittel, mehr als die Hälfte sind nicht gekennzeichnet. Es ist wahrscheinlich nicht klug, eines davon zu verwenden...&lt;br/&gt; - Ungesund&lt;br/&gt; - Unbekannte Effekte</German>
             <Korean>무작위로 쌓인 알약과 의약품 중 절반 이상이 라벨이 부착되어 있지 않습니다. 이것들을 사용하는 것은 아마도 현명하지 않을 것입니다...&lt;br/&gt; - 건강에 해로운&lt;br/&gt; - 알 수 없는 효과</Korean>
             <Japanese>ランダムな錠剤と医薬品の山で、半分以上がラベル付けされていません。これらのいずれかを使用することはおそらく賢明ではありません...&lt;br/&gt; -不健康&lt;br/&gt; -未知の効果</Japanese>
+            <Chinese>一堆隨意的藥片和藥品，超過一半沒有標籤。使用這些東西可能並不明智...&lt;br/&gt; - 不健康&lt;br/&gt; - 未知效果</Chinese>
+            <Chinesesimp>一堆随意的药片和药品，超过一半没有标签。使用这些东西可能并不明智...&lt;br/&gt; - 不健康&lt;br/&gt; - 未知效果</Chinesesimp>
             <Turkish>Rastgele haplar ve farmasötiklerden oluşan bir yığın, yarısından fazlası etiketlenmemiş. Muhtemelen bunlardan herhangi birini kullanmak akıllıca değil...&lt;br/&gt; - Sağlıksız&lt;br/&gt; - Bilinmeyen etkiler</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_RandomMedication_DisplayName">
@@ -3439,6 +3925,8 @@
             <German>Zufällige Arzneimittel</German>
             <Korean>임의의 의약품</Korean>
             <Japanese>ランダムな医薬品</Japanese>
+            <Chinese>隨機藥品</Chinese>
+            <Chinesesimp>随机药品</Chinesesimp>
             <Turkish>Rastgele farmasötik ilaçlar</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_RawFish_Description">
@@ -3453,6 +3941,8 @@
             <German>Fisch, muss gekocht werden</German>
             <Korean>생선, 요리해야 함</Korean>
             <Japanese>魚、調理する必要があります</Japanese>
+            <Chinese>魚，需要烹飪</Chinese>
+            <Chinesesimp>鱼，需要烹饪</Chinesesimp>
             <Turkish>Balık, pişirilmesi gerekiyor</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_RawFish_DisplayName">
@@ -3467,6 +3957,8 @@
             <German>Fisch</German>
             <Korean>생선</Korean>
             <Japanese>魚</Japanese>
+            <Chinese>魚</Chinese>
+            <Chinesesimp>鱼</Chinesesimp>
             <Turkish>Balık</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_RawMeat_Description">
@@ -3481,6 +3973,8 @@
             <German>Rohes Fleisch, muss gekocht werden</German>
             <Korean>생고기, 익혀야 함</Korean>
             <Japanese>生肉なので調理が必要</Japanese>
+            <Chinese>生肉，需要烹飪</Chinese>
+            <Chinesesimp>生肉，需要烹饪</Chinesesimp>
             <Turkish>Çiğ etin pişirilmesi gerekiyor</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_RawMeat_DisplayName">
@@ -3495,6 +3989,8 @@
             <German>Rohes Fleisch</German>
             <Korean>생고기</Korean>
             <Japanese>生肉</Japanese>
+            <Chinese>生肉</Chinese>
+            <Chinesesimp>生肉</Chinesesimp>
             <Turkish>Çiğ Et</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_RequiresLithiumBattery_Description">
@@ -3509,6 +4005,8 @@
             <German>Ohne Batterie nutzlos&lt;br/&gt; - Benötigt Lithiumbatterie</German>
             <Korean>배터리가 없으면 쓸모가 없습니다.&lt;br/&gt; - 리튬 배터리 필요</Korean>
             <Japanese>電池がないと役に立たない&lt;br/&gt; - リチウム電池が必要</Japanese>
+            <Chinese>沒有電池就沒用&lt;br/&gt; - 需要鋰電池</Chinese>
+            <Chinesesimp>没有电池就没用&lt;br/&gt; - 需要锂电池</Chinesesimp>
             <Turkish>Pilsiz işe yaramaz&lt;br/&gt; - Lityum pil gerektirir</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Rice_Description">
@@ -3523,6 +4021,8 @@
             <German>Paket Reis &lt;br/&gt; - muss gekocht werden</German>
             <Korean>쌀 포장 &lt;br/&gt; - 조리 필요</Korean>
             <Japanese>米のパッケージ &lt;br/&gt; - 炊く必要がある。</Japanese>
+            <Chinese>一包大米&lt;br/&gt; - 需要烹飪</Chinese>
+            <Chinesesimp>一包大米&lt;br/&gt; - 需要烹饪</Chinesesimp>
             <Turkish>Paket Pirinç &lt;br/&gt; - Pişirilmesi gerekiyor</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Rice_DisplayName">
@@ -3537,6 +4037,8 @@
             <German>Reis</German>
             <Korean>쌀</Korean>
             <Japanese>米</Japanese>
+            <Chinese>大米</Chinese>
+            <Chinesesimp>大米</Chinesesimp>
             <Turkish>Pirinç</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Rope_Description">
@@ -3551,6 +4053,8 @@
             <German>kleines Stück Seil &lt;br/&gt; - Handwerksgegenstand</German>
             <Korean>작은 밧줄 조각 &lt;br/&gt; - 제작 아이템</Korean>
             <Japanese>少しのロー &lt;br/&gt; - クラフトアイテム</Japanese>
+            <Chinese>一小段繩子&lt;br/&gt; - 製作物品</Chinese>
+            <Chinesesimp>一小段绳子&lt;br/&gt; - 制作物品</Chinesesimp>
             <Turkish>küçük bir parça ip &lt;br/&gt; - El işi öğesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Rope_DisplayName">
@@ -3565,6 +4069,8 @@
             <German>Seil</German>
             <Korean>밧줄</Korean>
             <Japanese>ロープ</Japanese>
+            <Chinese>繩子</Chinese>
+            <Chinesesimp>绳子</Chinesesimp>
             <Turkish>İp</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_RotorRepairKit_Description">
@@ -3579,6 +4085,8 @@
             <German>Rotorreparatursatz für Flugzeugreparaturen</German>
             <Korean>항공기 수리에 사용되는 로터 수리 키트</Korean>
             <Japanese>航空機の修理に使用されるローター修理キット</Japanese>
+            <Chinese>用於飛機維修的旋翼維修套件</Chinese>
+            <Chinesesimp>用于飞机维修的旋翼维修套件</Chinesesimp>
             <Turkish>uçak onarımlarında kullanılan rotor tamir takımı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_RotorRepairKit_DisplayName">
@@ -3593,6 +4101,8 @@
             <German>Rotor-Reparatursatz</German>
             <Korean>로터 수리 키트</Korean>
             <Japanese>ローター修理キット</Japanese>
+            <Chinese>旋翼維修套件</Chinese>
+            <Chinesesimp>旋翼维修套件</Chinesesimp>
             <Turkish>Rotor tamir takımı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Ruby_Description">
@@ -3607,6 +4117,8 @@
             <German>Roher Rubin, ungeschnitten&lt;br/&gt; - Seltenheit</German>
             <Korean>원시 루비, 자르지 않은&lt;br/&gt; - 희귀도</Korean>
             <Japanese>未加工のルビー、未カット&lt;br/&gt; - レアリティ</Japanese>
+            <Chinese>原始紅寶石，未切割&lt;br/&gt; - 稀有度</Chinese>
+            <Chinesesimp>原始红宝石，未切割&lt;br/&gt; - 稀有度</Chinesesimp>
             <Turkish>Ham Yakut, kesilmemiş&lt;br/&gt; - Nadirlik</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Ruby_DisplayName">
@@ -3621,6 +4133,8 @@
             <German>Rubin</German>
             <Korean>루비</Korean>
             <Japanese>ルビー</Japanese>
+            <Chinese>紅寶石</Chinese>
+            <Chinesesimp>红宝石</Chinesesimp>
             <Turkish>Yakut</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Sapphire_Description">
@@ -3635,6 +4149,8 @@
             <German>Roher Saphir, ungeschnitten&lt;br/&gt; - Seltenheit</German>
             <Korean>원시 사파이어, 자르지 않은&lt;br/&gt; - 희귀도</Korean>
             <Japanese>未加工のサファイア、未カット&lt;br/&gt; - レアリティ</Japanese>
+            <Chinese>原始藍寶石，未切割&lt;br/&gt; - 稀有度</Chinese>
+            <Chinesesimp>原始蓝宝石，未切割&lt;br/&gt; - 稀有度</Chinesesimp>
             <Turkish>Ham Safir, kesilmemiş&lt;br/&gt; - Nadirlik</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Sapphire_DisplayName">
@@ -3649,6 +4165,8 @@
             <German>Saphir</German>
             <Korean>사파이어</Korean>
             <Japanese>サファイア</Japanese>
+            <Chinese>藍寶石</Chinese>
+            <Chinesesimp>蓝宝石</Chinesesimp>
             <Turkish>Safir</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ShipBottle_Description">
@@ -3663,6 +4181,8 @@
             <German>Wunderschönes Vintage-Schiff in einer Flasche. Bringt in diesen harten Zeiten Trost und Wärme. Könnte von Wert sein. &lt;br/&gt; - Zufälliger Müll</German>
             <Korean>병 안에 담긴 아름다운 빈티지 배. 이 어려운 시기에 위로와 따뜻함을 선사합니다. 약간의 가치가 있을 수 있습니다. &lt;br/&gt; - 잡동사니</Korean>
             <Japanese>ボトルの中に納められた美しいビンテージ船。厳しい時代の中で、安らぎと温もりをもたらします。多少の価値があるかもしれません。 &lt;br/&gt; - ガラクタ</Japanese>
+            <Chinese>瓶中精美的復古帆船。在這些艱難的時刻提供慰藉和溫暖。可能具有一定價值。&lt;br/&gt; - 隨機垃圾</Chinese>
+            <Chinesesimp>瓶中精美的复古帆船。在这些艰难的时刻提供慰藉和温暖。可能具有一定价值。&lt;br/&gt; - 随机垃圾</Chinesesimp>
             <Turkish>Şişe içinde güzel bir vintage gemi. Bu zor zamanlarda rahatlık ve sıcaklık sağlar. Değerli olabilir. &lt;br/&gt; - Rastgele Önemsiz</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ShipBottle_DisplayName">
@@ -3677,6 +4197,8 @@
             <German>Vintage Flasche mit Schiff im Inneren</German>
             <Korean>빈티지 병 안의 배</Korean>
             <Japanese>ビンテージ船のボトル</Japanese>
+            <Chinese>復古瓶中船</Chinese>
+            <Chinesesimp>复古瓶中船</Chinesesimp>
             <Turkish>Vintage Gemide Şişe</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Sledgehammer_Description">
@@ -3691,6 +4213,8 @@
             <German>Vorschlaghammer, extrem schwer, aber auch sehr nützlich&lt;br/&gt; - Werkzeug</German>
             <Korean>매우 무겁지만 매우 유용한 슬레지해머&lt;br/&gt; - 도구</Korean>
             <Japanese>非常に重いが非常に便利なスレッジハンマー&lt;br/&gt; - 道具</Japanese>
+            <Chinese>大錘，非常重，但也非常有用&lt;br/&gt; - 工具</Chinese>
+            <Chinesesimp>大锤，非常重，但也非常有用&lt;br/&gt; - 工具</Chinesesimp>
             <Turkish>Balyoz, son derece ağır ama aynı zamanda çok kullanışlı&lt;br/&gt; - Araç</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Sledgehammer_DisplayName">
@@ -3705,6 +4229,8 @@
             <German>Vorschlaghammer</German>
             <Korean>큰 망치</Korean>
             <Japanese>スレッジハンマー</Japanese>
+            <Chinese>大錘</Chinese>
+            <Chinesesimp>大锤</Chinesesimp>
             <Turkish>Balyoz</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Soda_Description">
@@ -3719,6 +4245,8 @@
             <German>Dose Limonade</German>
             <Korean>소다 캔</Korean>
             <Japanese>ソーダの缶</Japanese>
+            <Chinese>一罐汽水</Chinese>
+            <Chinesesimp>一罐汽水</Chinesesimp>
             <Turkish>soda kutusu</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Soda_DisplayName">
@@ -3733,6 +4261,8 @@
             <German>Soda</German>
             <Korean>소다</Korean>
             <Japanese>ソーダ</Japanese>
+            <Chinese>汽水</Chinese>
+            <Chinesesimp>汽水</Chinesesimp>
             <Turkish>Soda</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_SpareTire_Description">
@@ -3747,6 +4277,8 @@
             <German>Wird für Fahrzeugreparaturen verwendet</German>
             <Korean>차량 수리에 사용</Korean>
             <Japanese>車の修理に使用される</Japanese>
+            <Chinese>用於車輛維修</Chinese>
+            <Chinesesimp>用于车辆维修</Chinesesimp>
             <Turkish>araç tamirinde kullanılır</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_SpareTire_DisplayName">
@@ -3761,6 +4293,8 @@
             <German>Ersatzreifen</German>
             <Korean>스페어 타이어</Korean>
             <Japanese>スペアタイヤ</Japanese>
+            <Chinese>備胎</Chinese>
+            <Chinesesimp>备胎</Chinesesimp>
             <Turkish>Yedek lastik</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_StoneChunk_Description">
@@ -3775,6 +4309,8 @@
             <German>Extrem häufiges nutzloses Objekt, ein Nebenprodukt des Erzabbaus...&lt;br/&gt; - Müll</German>
             <Korean>매우 흔하고 쓸모없는 아이템, 광석 채굴의 부산물...&lt;br/&gt; - 쓰레기</Korean>
             <Japanese>非常に一般的な役に立たないアイテム、鉱石の採掘による副産物...&lt;br/&gt; - ジャンク</Japanese>
+            <Chinese>非常常見的無用物品，採礦的副產品...&lt;br/&gt; - 垃圾</Chinese>
+            <Chinesesimp>非常常见的无用物品，采矿的副产品...&lt;br/&gt; - 垃圾</Chinesesimp>
             <Turkish>Son derece yaygın işe yaramaz bir öğe, cevher madenciliğinin bir yan ürünü...&lt;br/&gt; - Hurda</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_StoneChunk_DisplayName">
@@ -3789,6 +4325,8 @@
             <German>Steinbrocken</German>
             <Korean>돌 덩어리</Korean>
             <Japanese>石の塊</Japanese>
+            <Chinese>石塊</Chinese>
+            <Chinesesimp>石块</Chinesesimp>
             <Turkish>Taş parçaları</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_TinContainer_Description">
@@ -3803,6 +4341,8 @@
             <German>Campingdose zum Kochen</German>
             <Korean>요리용 캠핑틴</Korean>
             <Japanese>キャンプ用調理用缶</Japanese>
+            <Chinese>露營烹飪錫盒</Chinese>
+            <Chinesesimp>露营烹饪锡盒</Chinesesimp>
             <Turkish>yemek pişirmek için kamp tenekesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_TinContainer_DisplayName">
@@ -3817,6 +4357,8 @@
             <German>Blechbehälter</German>
             <Korean>주석 용기</Korean>
             <Japanese>ブリキの容器</Japanese>
+            <Chinese>錫盒</Chinese>
+            <Chinesesimp>锡盒</Chinesesimp>
             <Turkish>Teneke konteyner</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Tinder_Description">
@@ -3831,6 +4373,8 @@
             <German>Ein bisschen Gras und Stöcke zum Feuer machen...&lt;br/&gt; - Feuer machen</German>
             <Korean>불을 피울 수 있는 풀과 나뭇가지...&lt;br/&gt; - 불 제작</Korean>
             <Japanese>火起こし用の草と棒...&lt;br/&gt; - 火起こし</Japanese>
+            <Chinese>一些用於生火的草和木棍...&lt;br/&gt; - 生火製作</Chinese>
+            <Chinesesimp>一些用于生火的草和木棍...&lt;br/&gt; - 生火制作</Chinesesimp>
             <Turkish>Ateş yakmak için biraz ot ve çubuk...&lt;br/&gt; - Ateş yakma</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Tinder_DisplayName">
@@ -3845,6 +4389,8 @@
             <German>Zunder</German>
             <Korean>불쏘시개</Korean>
             <Japanese>火口</Japanese>
+            <Chinese>引火物</Chinese>
+            <Chinesesimp>引火物</Chinesesimp>
             <Turkish>Çıra</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_TirePatchKit_Description">
@@ -3859,6 +4405,8 @@
             <German>Reifenflickenset zur Fahrzeugreparatur</German>
             <Korean>차량 수리에 사용되는 타이어 패치 키트</Korean>
             <Japanese>車の修理に使用するタイヤパッチキット</Japanese>
+            <Chinese>用於車輛維修的補胎套件</Chinese>
+            <Chinesesimp>用于车辆维修的补胎套件</Chinesesimp>
             <Turkish>Araç onarımı için kullanılan lastik yama kiti</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_TirePatchKit_DisplayName">
@@ -3873,6 +4421,8 @@
             <German>Reifenflickenset</German>
             <Korean>타이어 패치 키트</Korean>
             <Japanese>タイヤパッチキット</Japanese>
+            <Chinese>補胎套件</Chinese>
+            <Chinesesimp>补胎套件</Chinesesimp>
             <Turkish>Lastik yama kiti</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ToySoldier_Description">
@@ -3887,6 +4437,8 @@
             <German>Zeitreisende Army-Männer, als Sie damit mit Dutzenden von ihnen im Hinterhof "Krieg" spielten. Jetzt bist du das "Spielzeug" und "Krieg" spielt mit dir.&lt;br/&gt; - Zufälliger Müll</German>
             <Korean>시간 여행하는 군대 병사, 뒷마당에서 수십 명의 병사들과 함께 '전쟁'을 할 때 사용했습니다. 이제 당신은 '장난감'이고 '전쟁'이 당신과 함께 놀고 있습니다.&lt;br/&gt; - 임의의 정크</Korean>
             <Japanese>タイムトラベルをする軍隊の男性、裏庭で数十人の軍隊と「戦争」をするためにそれを使用したとき。 今、あなたは「おもちゃ」であり、「戦争」はあなたと遊んでいます。&lt;br/&gt; - ランダムジャンク</Japanese>
+            <Chinese>時光旅行的小綠兵，當年你曾在後院用幾十個這樣的玩具玩“打仗”。現在你是“玩具”，而“戰爭”在玩弄你。&lt;br/&gt; - 隨機垃圾</Chinese>
+            <Chinesesimp>时光旅行的小绿兵，当年你曾在后院用几十个这样的玩具玩“打仗”。现在你是“玩具”，而“战争”在玩弄你。&lt;br/&gt; - 随机垃圾</Chinesesimp>
             <Turkish>Zamanın içinde yolculuk eden oyuncak askerler, arka bahçede düzinelercesiyle "savaş" oynamak için kullanırdın. Şimdi "oyuncak" sensin ve "savaş" seninle oynuyor.&lt;br/&gt; - Rastgele Önemsiz</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ToySoldier_DisplayName">
@@ -3901,6 +4453,8 @@
             <German>Spielzeugsoldat</German>
             <Korean>장난감 군인</Korean>
             <Japanese>おもちゃの兵隊</Japanese>
+            <Chinese>玩具兵</Chinese>
+            <Chinesesimp>玩具兵</Chinesesimp>
             <Turkish>Oyuncak Asker</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_TrackRepairKit_Description">
@@ -3915,6 +4469,8 @@
             <German>Gleisreparaturset zur Fahrzeugreparatur</German>
             <Korean>차량 수리에 사용되는 트랙 수리 키트</Korean>
             <Japanese>車両の修理に使用される線路修理キット</Japanese>
+            <Chinese>用於車輛維修的履帶維修套件</Chinese>
+            <Chinesesimp>用于车辆维修的履带维修套件</Chinesesimp>
             <Turkish>Araç tamirinde kullanılan parça tamir takımı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_TrackRepairKit_DisplayName">
@@ -3929,6 +4485,8 @@
             <German>Gleisreparaturset</German>
             <Korean>트랙 수리 키트</Korean>
             <Japanese>線路修理キット</Japanese>
+            <Chinese>履帶維修套件</Chinese>
+            <Chinesesimp>履带维修套件</Chinesesimp>
             <Turkish>Palet tamir takımı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_TransmissionRepairKit_Description">
@@ -3943,6 +4501,8 @@
             <German>Getriebereparatursatz für Fahrzeugreparaturen</German>
             <Korean>차량 수리에 사용되는 변속기 수리 키트</Korean>
             <Japanese>車の修理に使用されるトランスミッション修理キット</Japanese>
+            <Chinese>用於車輛維修的變速箱維修套件</Chinese>
+            <Chinesesimp>用于车辆维修的变速箱维修套件</Chinesesimp>
             <Turkish>Araç onarımlarında kullanılan şanzıman tamir takımı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_TransmissionRepairKit_DisplayName">
@@ -3957,6 +4517,8 @@
             <German>Getriebe-Reparatursatz</German>
             <Korean>변속기 수리 키트</Korean>
             <Japanese>トランスミッション修理キット</Japanese>
+            <Chinese>變速箱維修套件</Chinese>
+            <Chinesesimp>变速箱维修套件</Chinesesimp>
             <Turkish>Şanzıman tamir takımı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Vodka_Description">
@@ -3970,6 +4532,8 @@
             <German>Premium-Wodka, destilliert irgendwo in Tschernarus&lt;br/&gt; - Reduziert Strahlung&lt;br/&gt; - Ungesund</German>
             <Korean>체르나루스 어디선가 증류된 프리미엄 보드카&lt;br/&gt; - 방사능 감소&lt;br/&gt; - 건강에 해롭습니다</Korean>
             <Japanese>チェルナルス産のプレミアムウォッカ&lt;br/&gt; - 放射線量を減らす&lt;br/&gt; - 健康に悪い</Japanese>
+            <Chinese>高級伏特加，在黑俄羅斯某處蒸餾而成&lt;br/&gt; - 減少輻射&lt;br/&gt; - 不健康</Chinese>
+            <Chinesesimp>高级伏特加，在黑俄罗斯某处蒸馏而成&lt;br/&gt; - 减少辐射&lt;br/&gt; - 不健康</Chinesesimp>
             <Turkish>Chernarus'ta bir yerde damıtılan premium votka&lt;br/&gt; - Radyasyon azaltır&lt;br/&gt; - Sağlıksız</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Vodka_DisplayName">
@@ -3984,6 +4548,8 @@
             <German>Wodka</German>
             <Korean>보드카</Korean>
             <Japanese>ウォッカ</Japanese>
+            <Chinese>伏特加</Chinese>
+            <Chinesesimp>伏特加</Chinesesimp>
             <Turkish>Votka</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_WaterBottleClean_Description">
@@ -3997,6 +4563,8 @@
             <German>Diese Wasserflasche ist mit abgekochtem Wasser gefüllt. Es ist frei von biologischen Verunreinigungen, kann aber noch Strahlung enthalten</German>
             <Korean>이 물병은 끓인 물로 채워져 있습니다. 생물학적 오염 물질은 없지만 방사능이 포함되어 있을 수 있습니다</Korean>
             <Japanese>この水筒には沸騰したお湯が入っている。生物学的汚染物質は含まれていないが、放射線が含まれている可能性がある。</Japanese>
+            <Chinese>這口水瓶裝滿了開水。它沒有生物污染物，但可能仍含有輻射</Chinese>
+            <Chinesesimp>这口水瓶装满了开水。它没有生物污染物，但可能仍含有辐射</Chinesesimp>
             <Turkish>Bu su şişesi kaynamış su ile doldurulmuştur. Biyolojik kirleticilerden arındırılmıştır, ancak yine de radyasyon içerebilir</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_WaterBottleClean_DisplayName">
@@ -4011,6 +4579,8 @@
             <German>Wasserflasche (sauber)</German>
             <Korean>물병(깨끗한)</Korean>
             <Japanese>水筒（清潔なもの）</Japanese>
+            <Chinese>水瓶 (乾淨)</Chinese>
+            <Chinesesimp>水瓶 (干净)</Chinesesimp>
             <Turkish>Su Şişesi (Temiz)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_WaterBottleDirty_Description">
@@ -4024,6 +4594,8 @@
             <German>Diese Wasserflasche enthält Wasser direkt aus der Umwelt, es hat einen fauligen, starken Geruch...</German>
             <Korean>이 물병에는 환경에서 바로 나온 물이 들어 있으며 악취가 강합니다 ...</Korean>
             <Japanese>この水筒は環境から直接採水しているため、悪臭が強い。</Japanese>
+            <Chinese>這口水瓶裡裝著直接取自環境的水，有一種強烈的臭味...</Chinese>
+            <Chinesesimp>这口水瓶里装着直接取自环境的水，有一种强烈的臭味...</Chinesesimp>
             <Turkish>Bu su şişesi doğrudan çevreden gelen suyu içerir, kötü ve güçlü bir kokusu vardır...</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_WaterBottleDirty_DisplayName">
@@ -4038,6 +4610,8 @@
             <German>Wasserflasche (schmutzig)</German>
             <Korean>물병(더러운)</Korean>
             <Japanese>水筒（汚れている）</Japanese>
+            <Chinese>水瓶 (髒)</Chinese>
+            <Chinesesimp>水瓶 (脏)</Chinesesimp>
             <Turkish>Su Şişesi (Kirli)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_WaterBottleEmpty_Description">
@@ -4051,6 +4625,8 @@
             <German>Eine leere Wasserflasche</German>
             <Korean>빈 물병</Korean>
             <Japanese>空の水筒</Japanese>
+            <Chinese>一個空水瓶</Chinese>
+            <Chinesesimp>一个空水瓶</Chinesesimp>
             <Turkish>Boş bir su şişesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_WaterBottleEmpty_DisplayName">
@@ -4065,6 +4641,8 @@
             <German>Wasserflasche (leer)</German>
             <Korean>물병(빈)</Korean>
             <Japanese>水筒（空）</Japanese>
+            <Chinese>水瓶 (空)</Chinese>
+            <Chinesesimp>水瓶 (空)</Chinesesimp>
             <Turkish>Su Şişesi (Boş)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_WaterBottlePurified_Description">
@@ -4078,6 +4656,8 @@
             <German>Diese Wasserflasche enthält Wasser, das mit Reinigungstabletten behandelt wurde, die alle Spuren von Strahlung und biologischen Verunreinigungen entfernen</German>
             <Korean>이 물병에는 정화 정제로 처리된 물을 담아 방사능과 생물학적 오염 물질의 흔적을 모두 제거합니다</Korean>
             <Japanese>この水筒は、浄化錠剤で処理され、放射能や生物学的汚染物質を除去した水を入れることができる。</Japanese>
+            <Chinese>這口水瓶裝的是經過淨水片處理的水，去處了所有輻射和生物污染物的痕跡</Chinese>
+            <Chinesesimp>这口水瓶装的是经过净水片处理的水，去处了所有辐射和生物污染物的痕迹</Chinesesimp>
             <Turkish>Bu su şişesi, radyasyon ve biyolojik kirleticilerin tüm izlerini ortadan kaldıran arıtma tabletleri ile işlenmiş suyu tutar</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_WaterBottlePurified_DisplayName">
@@ -4092,6 +4672,8 @@
             <German>Wasserflasche (gereinigt)</German>
             <Korean>물병(정수)</Korean>
             <Japanese>水筒（精製水）</Japanese>
+            <Chinese>水瓶 (已淨化)</Chinese>
+            <Chinesesimp>水瓶 (已净化)</Chinesesimp>
             <Turkish>Su Şişesi (Arıtılmış)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_WeaponSystemKit_Description">
@@ -4106,6 +4688,8 @@
             <German>Waffensystemsatz für Fahrzeugreparaturen</German>
             <Korean>차량 수리에 사용되는 무기 시스템 키트</Korean>
             <Japanese>車両の修理に使用される兵器システムキット</Japanese>
+            <Chinese>用於車輛維修的武器系統套件</Chinese>
+            <Chinesesimp>用于车辆维修的武器系统套件</Chinesesimp>
             <Turkish>Araç onarımlarında kullanılan silah sistemleri kiti</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_WeaponSystemKit_DisplayName">
@@ -4120,6 +4704,8 @@
             <German>Waffensystem-Bausatz</German>
             <Korean>무기 시스템 키트</Korean>
             <Japanese>ウェポンシステムキット</Japanese>
+            <Chinese>武器系統套件</Chinese>
+            <Chinesesimp>武器系统套件</Chinesesimp>
             <Turkish>Silah sistemi kiti</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_WinchRepairKit_Description">
@@ -4134,6 +4720,8 @@
             <German>Winden-Reparatursatz für Fahrzeugreparaturen</German>
             <Korean>차량 수리에 사용되는 윈치 수리 키트</Korean>
             <Japanese>車両の修理に使用されるウインチ修理キット</Japanese>
+            <Chinese>用於車輛維修的絞盤維修套件</Chinese>
+            <Chinesesimp>用于车辆维修的绞盘维修套件</Chinesesimp>
             <Turkish>Araç onarımlarında kullanılan vinç tamir takımı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_WinchRepairKit_DisplayName">
@@ -4148,6 +4736,8 @@
             <German>Winden-Reparatursatz</German>
             <Korean>윈치 수리 키트</Korean>
             <Japanese>ウインチ修理キット</Japanese>
+            <Chinese>絞盤維修套件</Chinese>
+            <Chinesesimp>绞盘维修套件</Chinesesimp>
             <Turkish>Vinç tamir takımı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_WolfBeer_Description">
@@ -4162,6 +4752,8 @@
             <German>Ein Favorit unter den Überlebenden&lt;br/&gt; - Ungesund</German>
             <Korean>생존자 사이에서 인기있는 맥주&lt;br/&gt; - 건강에 해롭습니다</Korean>
             <Japanese>生存者の間で人気があります&lt;br/&gt; - 健康に悪い</Japanese>
+            <Chinese>倖存者的最愛&lt;br/&gt; - 不健康</Chinese>
+            <Chinesesimp>幸存者的最爱&lt;br/&gt; - 不健康</Chinesesimp>
             <Turkish>Hayatta kalanlar arasında favori&lt;br/&gt; - Sağlıksız</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_WolfBeer_DisplayName">
@@ -4176,6 +4768,8 @@
             <German>Big Wolf Bier</German>
             <Korean>빅 울프 맥주</Korean>
             <Japanese>ビッグウルフビール</Japanese>
+            <Chinese>大狼啤酒</Chinese>
+            <Chinesesimp>大狼啤酒</Chinesesimp>
             <Turkish>Büyük Kurt Birası</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_WoodAxe_Description">
@@ -4190,6 +4784,8 @@
             <German>Axt zum Holzhacken&lt;br/&gt; - Werkzeug</German>
             <Korean>나무를 자르는 도끼&lt;br/&gt; - 도구</Korean>
             <Japanese>木を切る斧&lt;br/&gt; - 道具</Japanese>
+            <Chinese>伐木斧&lt;br/&gt; - 工具</Chinese>
+            <Chinesesimp>伐木斧&lt;br/&gt; - 工具</Chinesesimp>
             <Turkish>Odun kesmek için balta&lt;br/&gt; - Araç</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_WoodAxe_DisplayName">
@@ -4204,6 +4800,8 @@
             <German>Holzaxt</German>
             <Korean>나무 도끼</Korean>
             <Japanese>木斧</Japanese>
+            <Chinese>伐木斧</Chinese>
+            <Chinesesimp>伐木斧</Chinesesimp>
             <Turkish>Tahta balta</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_WoodPlank_Description">
@@ -4218,6 +4816,8 @@
             <German>Holzplanke&lt;br/&gt; - Handwerksgegenstand</German>
             <Korean>나무 판자&lt;br/&gt; - 제작 아이템</Korean>
             <Japanese>木の板&lt;br/&gt; - クラフトアイテム</Japanese>
+            <Chinese>木板&lt;br/&gt; - 製作物品</Chinese>
+            <Chinesesimp>木板&lt;br/&gt; - 制作物品</Chinesesimp>
             <Turkish>Ahşap tahta&lt;br/&gt; - Üretim eşyası</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_WoodPlank_DisplayName">
@@ -4232,6 +4832,8 @@
             <German>Holzplanke</German>
             <Korean>나무 판자</Korean>
             <Japanese>木の板</Japanese>
+            <Chinese>木板</Chinese>
+            <Chinesesimp>木板</Chinesesimp>
             <Turkish>Ahşap tahta</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_WoodenLog_Description">
@@ -4246,6 +4848,8 @@
             <German>Ein dicker Holzstamm, kann wahrscheinlich zur Herstellung von Bauholz verwendet werden&lt;br/&gt; - Basis Handwerk</German>
             <Korean>굵은 나무 통나무, 아마도 목재를 만드는 데 사용할 수 있습니다.&lt;br/&gt; - 기지 제작</Korean>
             <Japanese>頑丈な木の丸太は、おそらく木材を作るために使用できます&lt;br/&gt; - ベースクラフト</Japanese>
+            <Chinese>一根粗壯的木原木，可能可以用來製作一些木材&lt;br/&gt; - 基礎製作</Chinese>
+            <Chinesesimp>一根粗壮的木原木，可能可以用来制作一些木材&lt;br/&gt; - 基础制作</Chinesesimp>
             <Turkish>Sağlam bir ahşap kütük, muhtemelen kereste yapmak için kullanılabilir&lt;br/&gt; - Temel işçiliği</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_WoodenLog_DisplayName">
@@ -4260,6 +4864,8 @@
             <German>Holzstamm</German>
             <Korean>나무 통나무</Korean>
             <Japanese>木の丸太</Japanese>
+            <Chinese>原木</Chinese>
+            <Chinesesimp>原木</Chinesesimp>
             <Turkish>Ahşap kütük</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_WoodenSticks_Description">
@@ -4274,6 +4880,8 @@
             <German>- ein paar Holzstäbchen&lt;br/&gt; - Feuer machen</German>
             <Korean>- 나뭇가지&lt;br/&gt; - 불 제작</Korean>
             <Japanese>- 木の棒&lt;br/&gt; - 火起こし</Japanese>
+            <Chinese>- 一些木棍&lt;br/&gt; - 生火製作</Chinese>
+            <Chinesesimp>- 一些木棍&lt;br/&gt; - 生火制作</Chinesesimp>
             <Turkish>- birkaç tahta çubuk&lt;br/&gt; - Ateş yakma</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_WoodenSticks_DisplayName">
@@ -4288,6 +4896,8 @@
             <German>Holzstäbchen</German>
             <Korean>나뭇가지</Korean>
             <Japanese>木の棒</Japanese>
+            <Chinese>木棍</Chinese>
+            <Chinesesimp>木棍</Chinesesimp>
             <Turkish>Tahta çubuklar</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Worms_Description">
@@ -4302,6 +4912,8 @@
             <German>Verwendet als Angelköder&lt;br/&gt; - Angelausrüstung</German>
             <Korean>낚시 미끼로 사용&lt;br/&gt; - 낚시 장비</Korean>
             <Japanese>釣り餌として使用&lt;br/&gt; -釣り道具</Japanese>
+            <Chinese>用作魚餌&lt;br/&gt; - 釣魚裝備</Chinese>
+            <Chinesesimp>用作鱼饵&lt;br/&gt; - 钓鱼装备</Chinesesimp>
             <Turkish>Balık yemi olarak kullanılır&lt;br/&gt; - Balıkçılık malzemeleri</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Worms_DisplayName">
@@ -4316,6 +4928,8 @@
             <German>Würmer</German>
             <Korean>지렁이</Korean>
             <Japanese>ワーム</Japanese>
+            <Chinese>蠕蟲</Chinese>
+            <Chinesesimp>蠕虫</Chinesesimp>
             <Turkish>Solucanlar</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Wrench_Description">
@@ -4330,6 +4944,8 @@
             <German>Kann nützlich sein&lt;br/&gt; - Handwerksgegenstand</German>
             <Korean>유용할 수 있습니다.&lt;br/&gt; - 제작 아이템</Korean>
             <Japanese>役立つかもしれません&lt;br/&gt; - クラフトアイテム</Japanese>
+            <Chinese>會有用的&lt;br/&gt; - 製作物品</Chinese>
+            <Chinesesimp>会有用的&lt;br/&gt; - 制作物品</Chinesesimp>
             <Turkish>Faydalı olabilir&lt;br/&gt; - Üretim eşyası</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Wrench_DisplayName">
@@ -4344,6 +4960,8 @@
             <German>Schraubenschlüssel</German>
             <Korean>렌치</Korean>
             <Japanese>レンチ</Japanese>
+            <Chinese>扳手</Chinese>
+            <Chinesesimp>扳手</Chinesesimp>
             <Turkish>İngiliz anahtarı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ZombieBrain_Description">
@@ -4358,6 +4976,8 @@
             <German>Ein mit Schleim bedecktes Gehirn... Der Gestank ist schrecklich...&lt;br/&gt; - Infizierte Teile &lt;br/&gt; - Forschungsgegenstand</German>
             <Korean>점액으로 뒤덮인 뇌... 악취가 심하다...&lt;br/&gt; - 감염된 부분 &lt;br/&gt; - 연구 항목</Korean>
             <Japanese>粘液で覆われた脳...悪臭がひどい...&lt;br/&gt; - 感染した部位 &lt;br/&gt; - 研究対象</Japanese>
+            <Chinese>被粘液覆蓋的大腦... 惡臭難聞...&lt;br/&gt; - 感染部位&lt;br/&gt; - 研究物品</Chinese>
+            <Chinesesimp>被粘液覆盖的大脑... 恶臭难闻...&lt;br/&gt; - 感染部位&lt;br/&gt; - 研究物品</Chinesesimp>
             <Turkish>Mukus kaplı bir beyin... Koku berbat...&lt;br/&gt; - Enfekte parçalar &lt;br/&gt; - Araştırma öğesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ZombieBrain_DisplayName">
@@ -4372,6 +4992,8 @@
             <German>Leiche Gehirn</German>
             <Korean>시체 뇌</Korean>
             <Japanese>死体脳</Japanese>
+            <Chinese>屍體大腦</Chinese>
+            <Chinesesimp>尸体大脑</Chinesesimp>
             <Turkish>Ceset beyni</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ZombieEye_Description">
@@ -4386,6 +5008,8 @@
             <German>Ein verrottendes Auge, ohne Pupillen... Nur ein schwarzes, endloses Nichts...&lt;br/&gt; - Infizierte Teile &lt;br/&gt; - Forschungsgegenstand</German>
             <Korean>썩어가는 눈, 동공이 없다... 그저 검고 끝없는 공허만이...&lt;br/&gt; - 감염된 부위 &lt;br/&gt; - 연구 아이템</Korean>
             <Japanese>腐った目、瞳孔はない...ただ黒い底なしの虚無が...&lt;br/&gt; - 感染部位 &lt;br/&gt; - 研究アイテム</Japanese>
+            <Chinese>一個失明的眼球，曾經充滿活力的虹膜已被腐爛所吞噬。&lt;br/&gt; 它凝視著深淵，映照出永無止境的黑暗。&lt;br/&gt; - 感染零件&lt;br/&gt; - 研究項目</Chinese>
+            <Chinesesimp>一个失明的眼球，曾经充满活力的虹膜已被腐烂所吞噬。&lt;br/&gt; 它凝视着深渊，映照出永无止境的黑暗。&lt;br/&gt; - 感染零件&lt;br/&gt; - 研究项目</Chinesesimp>
             <Turkish>Çürüyen bir göz, gözbebekleri yok... Sadece siyah, sonsuz bir boşluk...&lt;br/&gt; - Enfekte Parçalar &lt;br/&gt; - Araştırma Öğesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ZombieEye_DisplayName">
@@ -4400,6 +5024,8 @@
             <German>Auge einer Leiche</German>
             <Korean>시체 눈</Korean>
             <Japanese>死体の目</Japanese>
+            <Chinese>屍體眼睛</Chinese>
+            <Chinesesimp>尸体眼睛</Chinesesimp>
             <Turkish>Ceset Gözü</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ZombieFoot_Description">
@@ -4414,6 +5040,8 @@
             <German>Ein ekelhafter Fuß einer Leiche...&lt;br/&gt; - Infizierte Teile &lt;br/&gt; - Forschungsgegenstand</German>
             <Korean>역겨운 시체의 발...&lt;br/&gt; - 감염된 부분 &lt;br/&gt; - 연구 항목</Korean>
             <Japanese>気持ち悪い死体の足...&lt;br/&gt; - 感染した部位 &lt;br/&gt; - 研究対象</Japanese>
+            <Chinese>一個噁心的屍體足部...&lt;br/&gt; - 感染部位&lt;br/&gt; - 研究物品</Chinese>
+            <Chinesesimp>一个恶心的尸体足部...&lt;br/&gt; - 感染部位&lt;br/&gt; - 研究物品</Chinesesimp>
             <Turkish>İğrenç bir ceset ayağı...&lt;br/&gt; - Enfekte parçalar &lt;br/&gt; - Araştırma öğesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ZombieFoot_DisplayName">
@@ -4428,6 +5056,8 @@
             <German>Leiche Fuß</German>
             <Korean>시체 발</Korean>
             <Japanese>死体足</Japanese>
+            <Chinese>屍體足部</Chinese>
+            <Chinesesimp>尸体足部</Chinesesimp>
             <Turkish>Ceset ayağı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ZombieHand_Description">
@@ -4442,6 +5072,8 @@
             <German>Eine leblose Gliedmaße, die einst zu Liebe und Schöpfung fähig war, ist nun eine schaurige Mahnung der Sterblichkeit. Ihre kalte Berührung birgt Geheimnisse der Infektion, verlangt aber umsichtigen Umgang. &lt;br/&gt; - Infizierte Teile &lt;br/&gt; - Forschungsgegenstand</German>
             <Korean>한때 사랑과 창조를 할 수 있었던 생명 없는 팔. 이제는 죽음의 냉혹한 흔적일 뿐입니다. 차가운 손길은 감염의 비밀을 간직하고 있지만, 조심스럽게 다루어야 합니다. &lt;br/&gt; - 감염된 부위 &lt;br/&gt; - 연구 아이템</Korean>
             <Japanese>かつて愛と創造を生み出した手は、今や死の冷たい証。その冷たい手は感染の秘密を握っているが、慎重な取り扱いが必要だ。 &lt;br/&gt; - 感染部位 &lt;br/&gt; - 研究アイテム</Japanese>
+            <Chinese>一個毫無生氣的肢體，曾經能夠愛和創造，現在卻在冷酷地提醒著死亡。它冰冷的觸碰握有感染的秘密，但需要小心處理。&lt;br/&gt; - 感染零件&lt;br/&gt; - 研究項目</Chinese>
+            <Chinesesimp>一个毫无生气的肢体，曾经能够爱和创造，现在却在冷酷地提醒着死亡。它冰冷的触碰握有感染的秘密，但需要小心处理。&lt;br/&gt; - 感染零件&lt;br/&gt; - 研究项目</Chinesesimp>
             <Turkish>Bir zamanlar sevgi ve yaratıma muktedir olan cansız bir uzuv, şimdi ölümlülüğün tüyler ürpertici bir hatırlatıcısı. Soğuk dokunuşu enfeksiyonun sırlarını barındırıyor, ancak dikkatli bir şekilde ele alınması gerekiyor. &lt;br/&gt; - Enfekte Parçalar &lt;br/&gt; - Araştırma Öğesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ZombieHand_DisplayName">
@@ -4456,6 +5088,8 @@
             <German>Hand einer Leiche</German>
             <Korean>시체 손</Korean>
             <Japanese>死体手</Japanese>
+            <Chinese>屍體手部</Chinese>
+            <Chinesesimp>尸体手部</Chinesesimp>
             <Turkish>Ceset Eli</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ZombieHead_Description">
@@ -4470,6 +5104,8 @@
             <German>Ein grausiger Anblick, der einst ein Mensch war. Die Verwesung hat seine Züge zu einer makabren Fratze verzogen. Wertvoll für die Forschung, aber mit Vorsicht zu behandeln. &lt;br/&gt; - Infizierte Teile &lt;br/&gt; - Forschungsgegenstand</German>
             <Korean>한때는 인간이었던 존재의 끔찍한 잔재. 부패가 그 얼굴을 섬뜩한 가면으로 뒤틀어 놓았다. 연구 가치가 있지만 조심히 다루어야 합니다. &lt;br/&gt; - 감염된 부위 &lt;br/&gt; - 연구 아이템</Korean>
             <Japanese>かつて人間だったものの恐ろしい名残。腐敗がその顔を不気味な仮面へと歪めている。研究価値はあるが、取り扱いには注意が必要。 &lt;br/&gt; - 感染部位 &lt;br/&gt; - 研究アイテム</Japanese>
+            <Chinese>一個曾經作為人類的可怕提醒。腐爛已將它的面容扭曲成一副毛骨悚然的面具。對研究很有價值，但處理時要小心。&lt;br/&gt; - 感染零件&lt;br/&gt; - 研究項目</Chinese>
+            <Chinesesimp>一个曾经作为人类的可怕提醒。腐烂已将它的面容扭曲成一副毛骨悚然的面具。对研究很有价值，但处理时要小心。&lt;br/&gt; - 感染零件&lt;br/&gt; - 研究项目</Chinesesimp>
             <Turkish>Bir zamanlar insan olan şeyin tüyler ürpertici bir kalıntısı. Çürüme, yüz hatlarını ürkütücü bir maskeye dönüştürmüş. Araştırma için değerli, ancak dikkatli kullanılması gerekir. &lt;br/&gt; - Enfekte Parçalar &lt;br/&gt; - Araştırma Öğesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ZombieHead_DisplayName">
@@ -4484,6 +5120,8 @@
             <German>Kopf einer Leiche</German>
             <Korean>시체 머리</Korean>
             <Japanese>死体頭部</Japanese>
+            <Chinese>屍體頭部</Chinese>
+            <Chinesesimp>尸体头部</Chinesesimp>
             <Turkish>Ceset Kafası</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ZombieSkin_Description">
@@ -4498,6 +5136,8 @@
             <German>Ein Torsoschnitt aus der Haut einer Leiche... Die Läsionen riechen schrecklich...&lt;br/&gt; - Infizierte Teile &lt;br/&gt; - Forschungsgegenstand</German>
             <Korean>시체 피부의 몸통 절단... 병변 냄새가 끔찍합니다...&lt;br/&gt; - 감염된 부분 &lt;br/&gt; - 연구 항목</Korean>
             <Japanese>死体の皮膚の胴体切断...病変の臭いがひどい...&lt;br/&gt; - 感染した部位 &lt;br/&gt; - 研究対象</Japanese>
+            <Chinese>從屍體上切下的一塊軀幹皮膚... 傷口的味道太難聞了...&lt;br/&gt; - 感染部位&lt;br/&gt; - 研究物品</Chinese>
+            <Chinesesimp>从尸体上切下的一块躯干皮肤... 伤口的味道太难闻了...&lt;br/&gt; - 感染部位&lt;br/&gt; - 研究物品</Chinesesimp>
             <Turkish>Bir cesedin derisinin gövde kesiği... Yaralar korkunç kokuyor...&lt;br/&gt; - Enfekte parçalar &lt;br/&gt; - Araştırma öğesi</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ZombieSkin_DisplayName">
@@ -4526,6 +5166,8 @@
             <German>Thbd Stimpack, dieser Stimpack zum einmaligen Gebrauch verabreicht eine extrem hohe Dosis Thrombomodulin(Thbd), Vorsicht.&lt;br/&gt; - Strahlenmedikament</German>
             <Korean>Thbd Stimpack, 이 일회용 스팀팩은 매우 높은 용량의 Thrombomodulin(Thbd)을 투여하므로 주의해서 사용하십시오.&lt;br/&gt; - 방사선 약물</Korean>
             <Japanese>Thbdスティムパック、この使い捨てのスティムパックは、非常に高用量のThrombomodulin（Thbd）を投与します。注意して使用してください。&lt;br/&gt; -放射線治療薬</Japanese>
+            <Chinese>Thbd 興奮劑，這種一次性興奮劑含有極高劑量的血栓調節蛋白 (Thbd)，請謹慎使用。&lt;br/&gt; - 輻射藥物</Chinese>
+            <Chinesesimp>Thbd 兴奋剂，这种一次性兴奋剂含有极高剂量的血栓调节蛋白 (Thbd)，请谨慎使用。&lt;br/&gt; - 辐射药物</Chinesesimp>
             <Turkish>Thbd Stimpack, bu tek kullanımlık stimpack, son derece yüksek bir Trombomodulin(Thbd) dozu uygular, dikkatli kullanın.&lt;br/&gt; - Radyasyon ilacı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_thbdStimpack_DisplayName">
@@ -4540,6 +5182,8 @@
             <German>Thbd Stimpack</German>
             <Korean>Thbd Stimpack</Korean>
             <Japanese>Thbdスティムパック</Japanese>
+            <Chinese>Thbd 興奮劑</Chinese>
+            <Chinesesimp>Thbd 兴奋剂</Chinesesimp>
             <Turkish>Thbd Stimpack</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_thbd_Description">
@@ -4554,6 +5198,8 @@
             <German>Thrombomodulin(Thbd) Dieses Gen kodiert einen Rezeptor auf der Zelloberfläche, der die Blutproduktion und andere Prozesse reguliert. Kann bei schwerer Strahlenexposition helfen.&lt;br/&gt; - Strahlenmedikament</German>
             <Korean>Thrombomodulin(Thbd) 이 유전자는 혈액 생산 및 기타 과정을 조절하는 데 도움이 되는 세포 표면 수용체를 코딩합니다. 심각한 방사선 노출에 도움이 될 수 있습니다.&lt;br/&gt; - 방사선 약물</Korean>
             <Japanese>Thrombomodulin（Thbd）この遺伝子は、血液産生やその他のプロセスを調節するのに役立つ細胞表面受容体をコードしています。重度の放射線被曝を助けることができます。&lt;br/&gt; -放射線治療薬</Japanese>
+            <Chinese>血栓調節蛋白 (Thbd) 該基因編碼一種細胞表面受體，有助於調節血液生成和其他過程。可以幫助處理嚴重的輻射暴露。&lt;br/&gt; - 輻射藥物</Chinese>
+            <Chinesesimp>血栓调节蛋白 (Thbd) 该基因编码一种细胞表面受体，有助于调节血液生成和其他过程。可以帮助处理严重的辐射暴露。&lt;br/&gt; - 辐射药物</Chinesesimp>
             <Turkish>Trombomodulin(Thbd) Bu gen, kan üretimini ve diğer süreçleri düzenlemeye yardımcı olan bir hücre yüzeyi reseptörünü kodlar. Ciddi radyasyon maruziyetine yardımcı olabilir.&lt;br/&gt; - Radyasyon ilacı</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_thbd_DisplayName">
@@ -4568,6 +5214,8 @@
             <German>Thbd-Injektion</German>
             <Korean>Thbd 주사</Korean>
             <Japanese>Thbd注射</Japanese>
+            <Chinese>Thbd 注射液</Chinese>
+            <Chinesesimp>Thbd 注射液</Chinesesimp>
             <Turkish>Thbd Enjeksiyonu</Turkish>
         </Key>
     </Package>

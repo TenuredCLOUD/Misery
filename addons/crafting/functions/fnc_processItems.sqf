@@ -20,7 +20,7 @@ private _dialog = findDisplay 982376;
 private _selectedOutputItem = lbData [1500, (lbCurSel 1500)];
 private _recipe = GVAR(craftingRecipes) select {(_x select 0) isEqualTo _selectedOutputItem} select 0;
 
-if (isNil "_recipe") exitWith { ctrlSetText [1001, "No matching recipe found."]; };
+if (isNil "_recipe") exitWith { ctrlSetText [1001, localize ECSTRING(common,NoRecipeMatch)]; };
 
 private _outputItem = _recipe select 0;
 private _requiredItems = _recipe select 1;
@@ -33,7 +33,7 @@ private _outputXP = _recipe select 6;
 [_outputItem] call EFUNC(common,getItemData) params ["_displayName"];
 
 if (!([_requiredItems] call FUNC(canCraftCheck))) exitWith {
-    ctrlSetText [1001, "You don’t have the required items..."];
+    ctrlSetText [1001, localize ECSTRING(common,MissingItems)];
 };
 
 private _progressBar = _dialog displayCtrl 1010;
@@ -58,7 +58,7 @@ private _craftInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QGVAR(isCrafting), false];
         [982376, [1010], false] call EFUNC(common,displayShowControls);
-        [parseText "<t font='PuristaMedium' size='1'>Crafting interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+        [QEGVAR(common,tileText), localize LSTRING(Interrupted)] call CBA_fnc_localEvent;
     };
 }];
 
@@ -86,7 +86,7 @@ private _currentStep = 0;
 
     private _progress = (_currentStep / _totalSteps);
     _progressBar progressSetPosition _progress;
-    ctrlSetText [1001, format ["Crafting %1... %2%3 complete", _displayName, (_progress * 100) toFixed 0, "%"]];
+    ctrlSetText [1001, format [localize LSTRING(Progress), _displayName, (_progress * 100) toFixed 0, "%"]];
 
     if (_currentStep >= _totalSteps) exitWith {
         {
@@ -116,9 +116,9 @@ private _currentStep = 0;
 
         private _currentXP = player getVariable [QGVAR(xp), MACRO_PLAYER_DEFAULTS_LOW];
         player setVariable [QGVAR(xp), _currentXP + _outputXP, true];
-        [parseText format ["<t font='PuristaMedium' size='1'>You gained %1 XP from crafting %2.</t>", _outputXP, _displayName], true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+        [QEGVAR(common,tileText), format [localize LSTRING(GainXP), _outputXP, _displayName]] call CBA_fnc_localEvent;
 
-        ctrlSetText [1001, format ["You crafted %1 %2!", _outputCount, _displayName]];
+        ctrlSetText [1001, format [localize LSTRING(Success), _outputCount, _displayName]];
         _progressBar progressSetPosition 1;
         player setVariable [QGVAR(isCrafting), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _craftInterrupt];

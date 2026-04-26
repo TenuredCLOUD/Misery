@@ -3,7 +3,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(symbol),
     "EDITBOX",
-    ["Money Symbol", "Symbol to use for currency"],
+    [LSTRING(Symbol), LSTRING(SymbolDesc)],
     _category,
     "$",
     1
@@ -12,7 +12,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(bankName),
     "EDITBOX",
-    ["Bank name", "Name of the centralized bank network"],
+    [LSTRING(BankName), LSTRING(BankNameDesc)],
     _category,
     "New World Bank",
     1
@@ -21,16 +21,16 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(bankTax),
     "LIST",
-    ["Bank Taxes Mode", "Sets the difficulty of bank transaction taxes, reflecting economic conditions"],
+    [LSTRING(TaxesMode), LSTRING(TaxesModeDesc)],
     _category,
     [
         ["none", "stable", "recession", "hyperinflation", "collapse"],
         [
-            "Transactions are free (0% tax)",
-            "Minimal taxes for deposits and withdrawals",
-            "Moderate taxes, deposits slightly costlier",
-            "High taxes, withdrawals heavily penalized",
-            "Crippling taxes, banking is a last resort"
+            localize LSTRING(DescNone),
+            localize LSTRING(DescStable),
+            localize LSTRING(DescRecession),
+            localize LSTRING(DescHyperinflation),
+            localize LSTRING(DescCollapse)
         ],
         0
     ],
@@ -70,7 +70,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(corpseHasMoneyChance),
     "SLIDER",
-    ["AI Money Chance", "Chance that an AI will have money."],
+    [LSTRING(AIMoneyChance), LSTRING(AIMoneyChanceDesc)],
     _category,
     [1, 100, 25, 0],
     1
@@ -79,7 +79,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(minAiMoney),
     "SLIDER",
-    ["Minimum AI Money", "The minimum AI can potentially have for cash. (Capped at 5,000)"],
+    [LSTRING(MinAIMoney), LSTRING(MinAIMoneyDesc)],
     _category,
     [1, 5000, 1, -1, false],
     1
@@ -88,7 +88,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(maxAiMoney),
     "SLIDER",
-    ["Maximum AI Money", "The maximum AI can potentially have for cash. (Capped at 10,000)"],
+    [LSTRING(MaxAIMoney), LSTRING(MaxAIMoneyDesc)],
     _category,
     [1, 10000, 100, -1, false],
     1

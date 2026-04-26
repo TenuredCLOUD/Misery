@@ -20,15 +20,15 @@
     params ["_forge", "_fuelLevel"];
 
     if (_fuelLevel >= 1) exitWith {
-        ctrlSetText [1001, "This forge has plenty of coal..."];
+        ctrlSetText [1001, localize LSTRING(FullCoal)];
     };
 
     if !([[QCLASS(coalOre)]] call EFUNC(common,hasItem)) exitWith {
-        ctrlSetText [1001, "You need coal ore to refuel this forge..."];
+        ctrlSetText [1001, localize LSTRING(NeedsCoal)];
     };
 
     [player, QCLASS(coalOre)] call CBA_fnc_removeItem;
-    ctrlSetText [1001, "Coal ore x1 added..."];
+    ctrlSetText [1001, localize LSTRING(AddedCoal)];
 
     _forge setVariable [QGVAR(fuel), _fuelLevel + 0.05, true];
 

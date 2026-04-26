@@ -3,7 +3,7 @@
 if (GVAR(enabled)) then {
     [
         "fishing_menu",
-        localize ECSTRING(common,StartFishing),
+        localize LSTRING(Action),
         {call FUNC(canFish)},
         {
             player setVariable [QEGVAR(actions,currentParentID), "fishing_menu"];
@@ -16,7 +16,7 @@ if (GVAR(enabled)) then {
 
     [
         "fishingAction_menu",
-        localize ECSTRING(common,StartFishingAct),
+        localize LSTRING(StartAction),
         {player getVariable [QEGVAR(actions,currentParentID), ""] isEqualTo "fishing_menu"},
         {
             [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
@@ -29,10 +29,10 @@ if (GVAR(enabled)) then {
 
     [
         "fishingRequirements_menu",
-        localize ECSTRING(common,StartFishingRequirements),
+        localize LSTRING(Requirements),
         {player getVariable [QEGVAR(actions,currentParentID), ""] isEqualTo "fishing_menu"},
         {
-            [QEGVAR(common,tileText), localize ECSTRING(common,StartFishingRequirements_Listed)] call CBA_fnc_localEvent;
+            [QEGVAR(common,tileText), localize LSTRING(RequirementsListed)] call CBA_fnc_localEvent;
         },
         "fishing_menu",
         QPATHTOEF(icons,data\fishing_hook_ca.paa),

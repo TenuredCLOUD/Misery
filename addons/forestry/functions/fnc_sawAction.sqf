@@ -16,11 +16,11 @@
 [player] call EFUNC(common,nearTree) params ["_found", "_nearestTree", "_damaged", "_hasAxe", "_hasSaw"];
 
 if !(_found) exitWith {
-    [QEGVAR(common,tileText), format ["You need to be near a tree to start cutting wood..."]] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), format [localize LSTRING(NeedTreeSawing)]] call CBA_fnc_localEvent;
 };
 
 if (_damaged) exitWith {
-    [QEGVAR(common,tileText), format ["Tree has fallen, doesn't have anymore wood..."]] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), format [localize LSTRING(TreeEmpty)]] call CBA_fnc_localEvent;
 };
 
 if !(_hasSaw) exitWith {
@@ -40,7 +40,7 @@ player setVariable [QGVAR(cuttingWood), true];
 
 call FUNC(chainsawFuelDecrement);
 
-["Sawing tree...",
+[localize LSTRING(SawingProgress),
 45,
 {[player] call EFUNC(common,nearTree) params ["_found", "", "", "", "_hasSaw"]; _found && _hasSaw},
 {
@@ -67,7 +67,7 @@ call FUNC(chainsawFuelDecrement);
         deleteVehicle _soundDummy;
     };
 
-    [QEGVAR(common,tileText), "You stop sawing the tree..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(StopSawing)] call CBA_fnc_localEvent;
 
     player setVariable [QGVAR(cuttingWood), nil];
 },

@@ -24,18 +24,18 @@ private _progressBar = _dialog displayCtrl 1010;
 
 [player] call FUNC(stats) params ["", "_forgeFuel"];
 
-if (isNil "_recipe") exitWith {ctrlSetText [1001, "No matching material found..."];};
+if (isNil "_recipe") exitWith {ctrlSetText [1001, localize LSTRING(NoMaterialFound)];};
 
 private _outputItem = _recipe select 0;
 private _requiredItems = _recipe select 1;
 private _smeltTime = _recipe select 2;
 
 if !([_requiredItems] call FUNC(canSmeltCheck)) exitWith {
-    ctrlSetText [1001, "You don’t have those materials..."];
+    ctrlSetText [1001, localize LSTRING(NoMaterials)];
 };
 
 if (_forgeFuel isEqualTo 0) exitWith {
-    ctrlSetText [1001, "This forge doesn't have enough fuel to smelt materials..."];
+    ctrlSetText [1001, localize LSTRING(NotEnoughFuel)];
 };
 
 [982388, [1600, 1602, 1604, 1603], false] call EFUNC(common,displayShowControls);
@@ -59,7 +59,7 @@ private _smeltInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QGVAR(isSmelting), false];
         [982388, [1010], false] call EFUNC(common,displayShowControls);
-        [parseText "<t font='PuristaMedium' size='1'>Smelting interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+        [QEGVAR(common,tileText), localize LSTRING(Interrupted)] call CBA_fnc_localEvent;
     };
 }];
 
@@ -99,7 +99,7 @@ _soundDummy say3D QCLASS(audio_sound_metalSmelt);
 
     private _progress = (_currentStep / _totalSteps);
     _progressBar progressSetPosition _progress;
-    ctrlSetText [1001, format ["Smelting materials... %1%2 complete", (_progress * 100) toFixed 0, "%"]];
+    ctrlSetText [1001, format [localize LSTRING(SmeltProgress), (_progress * 100) toFixed 0, "%"]];
 
     if (_currentStep >= _totalSteps) then {
         {
@@ -112,7 +112,7 @@ _soundDummy say3D QCLASS(audio_sound_metalSmelt);
 
         [player, _outputItem, true] call CBA_fnc_addItem;
 
-        ctrlSetText [1001, format ["You smelted: %1...", _outputDisplayName]];
+        ctrlSetText [1001, format [localize LSTRING(Smelted), _outputDisplayName]];
         player setVariable [QGVAR(isSmelting), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _smeltInterrupt];
         if (_soundDummy isNotEqualTo objNull) then {

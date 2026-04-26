@@ -13,7 +13,7 @@ class CLASS(fireCrafting_ui) {
         };
         class CLASS(fireCrafting_prompt): RscText {
             idc = -1;
-            text = "Fire crafting";
+            text = ECSTRING(fire,CraftingLabel);
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
             y = 0 * GUI_GRID_H + GUI_GRID_Y;
             w = 22 * GUI_GRID_W;
@@ -35,7 +35,7 @@ class CLASS(fireCrafting_ui) {
             idc = 1600;
             colorFocused[] = {0.5,0.5,0.5,0.7};
             onButtonClick = QUOTE([] call EFUNC(fire,craft));
-            text = "Craft";
+            text = ECSTRING(common,Craft);
             x = 29.5 * GUI_GRID_W + GUI_GRID_X;
             y = 9.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;
@@ -49,7 +49,7 @@ class CLASS(fireCrafting_ui) {
             idc = 1601;
             colorFocused[] = {0.5,0.5,0.5,0.7};
             onButtonClick = QUOTE([] call EFUNC(fire,extinguish));
-            text = "Extinguish";
+            text = ECSTRING(fire,ExtinguishButton);
             x = 29.5 * GUI_GRID_W + GUI_GRID_X;
             y = 12 * GUI_GRID_H + GUI_GRID_Y;
             w = 8.5 * GUI_GRID_W;
@@ -63,7 +63,7 @@ class CLASS(fireCrafting_ui) {
             idc = 1602;
             colorFocused[] = {0.5,0.5,0.5,0.7};
             onButtonClick = "closeDialog 2";
-            text = "Exit";
+            text = ECSTRING(common,Exit);
             x = 29.5 * GUI_GRID_W + GUI_GRID_X;
             y = 14.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;
@@ -118,7 +118,7 @@ class CLASS(fireCrafting_ui) {
         };
         class CLASS(fireCrafting_tinder_prompt): RscText {
             idc = 1002;
-            text = "Tinder:";
+            text = ECSTRING(fire,TinderLabel);
             x = 3 * GUI_GRID_W + GUI_GRID_X;
             y = 5 * GUI_GRID_H + GUI_GRID_Y;
             w = 22 * GUI_GRID_W;
@@ -128,7 +128,7 @@ class CLASS(fireCrafting_ui) {
         };
         class CLASS(fireCrafting_fuel_prompt): RscText {
             idc = 1003;
-            text = "Fuel source:";
+            text = ECSTRING(fire,FuelLabel);
             x = 3 * GUI_GRID_W + GUI_GRID_X;
             y = 8 * GUI_GRID_H + GUI_GRID_Y;
             w = 22 * GUI_GRID_W;
@@ -138,7 +138,7 @@ class CLASS(fireCrafting_ui) {
         };
         class CLASS(fireCrafting_ignitionSource_prompt): RscText {
             idc = 1006;
-            text = "Ignition source:";
+            text = ECSTRING(fire,IgnitionLabel);
             x = 3 * GUI_GRID_W + GUI_GRID_X;
             y = 11 * GUI_GRID_H + GUI_GRID_Y;
             w = 22 * GUI_GRID_W;
@@ -155,7 +155,7 @@ class CLASS(fireCrafting_ui) {
         };
         class CLASS(fireCrafting_fuelTime_prompt): RscText {
             idc = 1008;
-            text = "Burn time:";
+            text = ECSTRING(fire,BurnTimeLabel);
             x = 28 * GUI_GRID_W + GUI_GRID_X;
             y = 6 * GUI_GRID_H + GUI_GRID_Y;
             w = 11.5 * GUI_GRID_W;

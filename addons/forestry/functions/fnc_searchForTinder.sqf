@@ -17,11 +17,11 @@
 [player] call EFUNC(common,nearTree) params ["_found", "_nearestTree", "_damaged", "_hasAxe", "_hasSaw"];
 
 if !(_found) exitWith {
-    [QEGVAR(common,tileText), format ["You need to be near a tree to search for tinder..."]] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), format [localize LSTRING(NearTreeTinder)]] call CBA_fnc_localEvent;
 };
 
 if (GVAR(tinderPositions) findIf {_x distance getPosATL player < 2.5} isNotEqualTo -1) exitWith {
-    [QEGVAR(common,tileText), "This area has already been searched..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(AreaSearched)] call CBA_fnc_localEvent;
 };
 
 if (currentWeapon player isNotEqualTo "") then {
@@ -33,7 +33,7 @@ _soundDummy attachTo [player, [0, 0, 0], "Pelvis"];
 
 _soundDummy say3D [QCLASS(audio_sound_dryGrass), 25];
 
-["Searching for tinder...",
+[localize LSTRING(SearchingTinder),
 15,
 {[player] call EFUNC(common,nearTree) params ["_found", "", "", "", ""]; _found},
 {
@@ -45,10 +45,10 @@ _soundDummy say3D [QCLASS(audio_sound_dryGrass), 25];
     };
 
     if ([50] call EFUNC(common,rollChance)) then {
-        [QEGVAR(common,tileText), "You found some tinder..."] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), localize LSTRING(FoundTinder)] call CBA_fnc_localEvent;
         [player, QCLASS(tinder)] call CBA_fnc_addItem;
     } else {
-        [QEGVAR(common,tileText), "You didn't find anything..."] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), localize LSTRING(FoundNothing)] call CBA_fnc_localEvent;
     };
 
     private _position = getPosATL player;
@@ -71,7 +71,7 @@ _soundDummy say3D [QCLASS(audio_sound_dryGrass), 25];
         deleteVehicle _soundDummy;
     };
 
-    [QEGVAR(common,tileText), "You stop searching for tinder..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(StopSearchingTinder)] call CBA_fnc_localEvent;
 },
 [_nearestTree, _soundDummy]
 ] call CBA_fnc_progressBar;

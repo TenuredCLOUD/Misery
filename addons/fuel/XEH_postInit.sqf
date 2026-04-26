@@ -5,7 +5,7 @@ if (QCLASSACE(refuel) call EFUNC(common,isModLoaded)) exitWith {};
 if (isServer) then {
     [
         "refuel_pump_menu",
-        "Refuel at pump",
+        localize LSTRING(RefuelAtPump),
         {[[MACRO_FUELSTATIONS_LAND], 2.5] call EFUNC(common,nearCraftingStation) || [[MACRO_FUELSTATIONS_AIR], 10] call EFUNC(common,nearCraftingStation)},
         {
             [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
@@ -18,7 +18,7 @@ if (isServer) then {
 
     [
         "refuel_fuelCan_pump_menu",
-        "Refill fuel can at pump",
+        localize LSTRING(RefillFuelCanAtPump),
         {[[MACRO_FUELSTATIONS_LAND], 2.5] call EFUNC(common,nearCraftingStation) || [[MACRO_FUELSTATIONS_AIR], 5] call EFUNC(common,nearCraftingStation)},
         {
             [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;

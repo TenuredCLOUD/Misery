@@ -3,7 +3,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(enabled),
     "CHECKBOX",
-    ["Ambient Webknight Zombies & Creatures", "Enables random spawning of creatures"],
+    [LSTRING(Enabled), LSTRING(EnabledDesc)],
     _category,
     false,
     1
@@ -12,7 +12,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(clusterSize),
     "SLIDER",
-    ["Cluster size", "Possible amount of creatures to spawn each cycle"],
+    [LSTRING(ClusterSize), LSTRING(ClusterSizeDesc)],
     _category,
     [1, 20, 5, 0],
     1
@@ -21,7 +21,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(maxPopulation),
     "SLIDER",
-    ["Maximum population", "Maximum creatures allowed to spawn"],
+    [LSTRING(MaxPopulation), LSTRING(MaxPopulationDesc)],
     _category,
     [1, 150, 15, 0],
     1
@@ -30,7 +30,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(spawnChance),
     "SLIDER",
-    ["Spawn Chance - Overall", "Spawn chance for creatures, to be generated"],
+    [LSTRING(SpawnChance), LSTRING(SpawnChanceDesc)],
     _category,
     [0, 100, 75, 0],
     1
@@ -39,7 +39,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(nightOnly),
     "CHECKBOX",
-    ["Night only", "Allows special types to only spawn at night time"],
+    [LSTRING(NightOnly), LSTRING(NightOnlyDesc)],
     _category,
     true,
     1
@@ -48,7 +48,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(spawnChanceSpecial),
     "SLIDER",
-    ["Chance - Special infected", "Spawn chance for special infected (screamers, etc...)"],
+    [LSTRING(ChanceSpecial), LSTRING(ChanceSpecialDesc)],
     _category,
     [0, 100, 15, 0],
     1
@@ -57,7 +57,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(spawnChanceGoliath),
     "SLIDER",
-    ["Chance - Goliath & Smashers", "Spawn chance for goliath and smashers"],
+    [LSTRING(ChanceGoliath), LSTRING(ChanceGoliathDesc)],
     _category,
     [0, 100, 1, 0],
     1
@@ -66,7 +66,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(clothingCiv),
     "EDITBOX",
-    ["Civilian clothing", "Possible civilian clothes for zombies"],
+    [LSTRING(CivClothing), LSTRING(CivClothing)],
     _category,
     "['U_C_Poor_1','U_C_Poor_2','U_C_Poloshirt_blue','U_C_Poloshirt_burgundy','U_C_Poloshirt_redwhite','U_C_Poloshirt_salmon','U_C_Poloshirt_striped','U_C_Poloshirt_tricolour','U_C_WorkerCoveralls']",
     1
@@ -75,7 +75,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(clothingMil),
     "EDITBOX",
-    ["Military clothing", "Possible military clothes for zombies"],
+    [LSTRING(MilClothing), LSTRING(MilClothing)],
     _category,
     "['U_B_CombatUniform_mcam','U_B_CombatUniform_mcam_tshirt']",
     1
@@ -84,7 +84,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(clothingChance),
     "SLIDER",
-    ["Clothing Chance", "Chance for civilian clothing vs military clothing (ex. 100% = always civilian clothing)"],
+    [LSTRING(ClothingChance), LSTRING(ClothingChanceDesc)],
     _category,
     [0, 100, 90, 0],
     1
@@ -93,7 +93,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(headgearCiv),
     "EDITBOX",
-    ["Headgear Civilian", "Possible civilian headgear for zombies"],
+    [LSTRING(CivHeadgear), LSTRING(CivHeadgear)],
     _category,
     "['H_Cap_blk','H_Cap_blu','H_Cap_grn','H_Cap_red','H_Cap_oli']",
     1
@@ -102,7 +102,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(headgearMil),
     "EDITBOX",
-    ["Headgear Military", "Possible military headgear for zombies"],
+    [LSTRING(MilHeadgear), LSTRING(MilHeadgear)],
     _category,
     "['H_HelmetB','H_HelmetB_black']",
     1
@@ -111,7 +111,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(headgearChance),
     "SLIDER",
-    ["Headgear Chance", "Chance for headgear to spawn on zombies"],
+    [LSTRING(HeadgearChance), LSTRING(HeadgearChance)],
     _category,
     [0, 100, 50, 0],
     1
@@ -120,7 +120,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(facewearCiv),
     "EDITBOX",
-    ["Facewear Civilian", "Possible civilian facewear for zombies"],
+    [LSTRING(CivFacewear), LSTRING(CivFacewear)],
     _category,
     "[]",
     1
@@ -129,7 +129,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(facewearMil),
     "EDITBOX",
-    ["Facewear Military", "Possible military facewear for zombies"],
+    [LSTRING(MilFacewear), LSTRING(MilFacewear)],
     _category,
     "['G_Balaclava_Tropentarn','G_Balaclava_Flecktarn']",
     1
@@ -138,7 +138,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(facewearChance),
     "SLIDER",
-    ["Facewear Chance", "Chance for facewear to spawn on zombies"],
+    [LSTRING(FacewearChance), LSTRING(FacewearChance)],
     _category,
     [0, 100, 50, 0],
     1
@@ -147,7 +147,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(vestCiv),
     "EDITBOX",
-    ["Vests Civilian", "Possible civilian vests for zombies"],
+    [LSTRING(CivVests), LSTRING(CivVests)],
     _category,
     "[]",
     1
@@ -156,7 +156,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(vestMil),
     "EDITBOX",
-    ["Vests Military", "Possible military vests for zombies"],
+    [LSTRING(MilVests), LSTRING(MilVests)],
     _category,
     "['V_HarnessO_brn','V_HarnessOGL_gry','V_TacVest_camo','V_TacVest_blk_POLICE']",
     1
@@ -165,7 +165,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(vestChance),
     "SLIDER",
-    ["Vest Chance", "Chance for vests to spawn on zombies"],
+    [LSTRING(VestChance), LSTRING(VestChance)],
     _category,
     [0, 100, 50, 0],
     1
@@ -174,7 +174,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(bagCiv),
     "EDITBOX",
-    ["Bags Civilian", "Possible civilian bags for zombies"],
+    [LSTRING(CivBags), LSTRING(CivBags)],
     _category,
     "['B_CivilianBackpack_01_Everyday_Black_F','B_CivilianBackpack_01_Sport_Blue_F','B_CivilianBackpack_01_Sport_Green_F','B_CivilianBackpack_01_Sport_Red_F']",
     1
@@ -183,7 +183,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(bagMil),
     "EDITBOX",
-    ["Bags Military", "Possible military bags for zombies"],
+    [LSTRING(MilBags), LSTRING(MilBags)],
     _category,
     "['B_FieldPack_oli','B_FieldPack_blk','B_AssaultPack_blk']",
     1
@@ -192,7 +192,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(bagChance),
     "SLIDER",
-    ["Bag Chance", "Chance for bags to spawn on zombies"],
+    [LSTRING(BagChance), LSTRING(BagChance)],
     _category,
     [0, 100, 50, 0],
     1
@@ -201,7 +201,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(itemsCiv),
     "EDITBOX",
-    ["Items Civilian", "Possible civilian items for zombies"],
+    [LSTRING(CivItems), LSTRING(CivItems)],
     _category,
     "[]",
     1
@@ -210,7 +210,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(itemsMil),
     "EDITBOX",
-    ["Items Military", "Possible military items for zombies"],
+    [LSTRING(MilItems), LSTRING(MilItems)],
     _category,
     "['FirstAidKit','ItemMap','ItemWatch']",
     1
@@ -219,7 +219,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(itemsChance),
     "SLIDER",
-    ["Items Chance", "Chance for items to spawn on zombies"],
+    [LSTRING(ItemsChance), LSTRING(ItemsChance)],
     _category,
     [0, 100, 50, 0],
     1
@@ -228,7 +228,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(weapons),
     "EDITBOX",
-    ["Weapons list", "Possible weapons for triggerman zombie types"],
+    [LSTRING(WeaponsList), LSTRING(WeaponsListDesc)],
     _category,
     "['arifle_MX_F']",
     1
@@ -237,7 +237,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(infectionEnabled),
     "CHECKBOX",
-    ["Zombie infection", "Enables infection chance from zombies"],
+    [LSTRING(InfectionEnabled), LSTRING(InfectionEnabledDesc)],
     _category,
     false,
     1
@@ -246,7 +246,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(zedEnabled),
     "CHECKBOX",
-    ["Zombification", "Enables infection to cause player zombification"],
+    [LSTRING(Zombification), LSTRING(ZombificationDesc)],
     _category,
     false,
     1
@@ -255,7 +255,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(infectionChance),
     "SLIDER",
-    ["Infection Chance", "Infection chance from zombies"],
+    [LSTRING(InfectionChance), LSTRING(InfectionChance_ZomDesc)],
     _category,
     [0, 100, 50, 0],
     1
@@ -264,7 +264,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(minimumDistance),
     "SLIDER",
-    ["Minimum Distance", "Minimum distance groups can spawn from players"],
+    [LSTRING(MinDist), LSTRING(MinDistDesc)],
     _category,
     [150, 15000, 750, 0],
     1
@@ -273,7 +273,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(maximumDistance),
     "SLIDER",
-    ["Maximum Distance", "Maximum distance groups can spawn from players"],
+    [LSTRING(MaxDist), LSTRING(MaxDistDesc)],
     _category,
     [150, 15000, 750, 0],
     1
@@ -282,7 +282,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(safeDistance),
     "SLIDER",
-    ["Safe distance", "Minimum distance at which creatures can spawn from other players"],
+    [LSTRING(SafeDist), LSTRING(SafeDistDesc)],
     _category,
     [25, 5000, 200, 0],
     1
@@ -291,7 +291,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(deletionDistance),
     "SLIDER",
-    ["Deletion distance", "Distance from players at which creatures will be deleted"],
+    [LSTRING(DelDist), LSTRING(DelDistDesc)],
     _category,
     [25, 20000, 200, 0],
     1
@@ -300,7 +300,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(cycleLength),
     "LIST",
-    ["Spawn check interval", "Time in seconds between spawn checks"],
+    [LSTRING(Cycle), LSTRING(CycleDesc)],
     _category,
     [[30, 60, 120, 180, 300], ["30 seconds", "1 Minute", "2 Minutes", "3 Minutes", "5 Minutes"], 0],
     1,

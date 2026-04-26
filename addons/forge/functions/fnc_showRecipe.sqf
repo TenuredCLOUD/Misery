@@ -20,11 +20,11 @@ private _selectedItem = lbData [1500, (lbCurSel 1500)];
 private _recipe = GVAR(data) select {(_x select 0) isEqualTo _selectedItem} select 0;
 
 if (isNil "_recipe") exitWith {
-    ctrlSetText [1001, "No smelt materials selected..."];
+    ctrlSetText [1001, localize LSTRING(NoMaterialSelected)];
 };
 
 private _requiredItems = _recipe select 1;
-private _text = "Required materials:";
+private _text = localize LSTRING(RequiredMaterial);
 
 {
     private _item = _x select 0;

@@ -4,10 +4,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(enhancedCharacterEffects),
     "CHECKBOX",
-    [
-        "Character Enhanced effects",
-        "Enable Extra Character Immersion? (Enables audible and visual feedback for the survival framework)"
-    ],
+    [LSTRING(EnhancedCharEffects), LSTRING(EnhancedCharEffects_Desc)],
     _category,
     true, 1, {}, true
 ] call CBA_fnc_addSetting;
@@ -16,10 +13,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(enhancedInventorySounds),
     "CHECKBOX",
-    [
-        "Enhanced Inventory sounds",
-        "Enable Inventory audio overhaul?"
-    ],
+    [LSTRING(EnhancedInvSounds), LSTRING(EnhancedInvSounds_Desc)],
     _category,
     false, 1, {}, true
 ] call CBA_fnc_addSetting;
@@ -28,9 +22,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(ambientSoundScape),
     "CHECKBOX",
-    [
-        "Ambient audio soundscape overhaul", "Enable Extra world audio with input sounds? (must utilize the 'Ambient soundscape array' data)"
-    ],
+    [LSTRING(AmbientSoundscape), LSTRING(AmbientSoundscape_Desc)],
     _category,
     false, 1, {}, true
 ] call CBA_fnc_addSetting;
@@ -39,9 +31,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(forgeAmbience),
     "CHECKBOX",
-    [
-        "Ambient audio for Forges", "Enable Audio loop for forges? (Makes them crackle & hum - immersion)"
-    ],
+    [LSTRING(ForgeAmbience), LSTRING(ForgeAmbience_Desc)],
     _category,
     false, 1, {}, true
 ] call CBA_fnc_addSetting;
@@ -50,9 +40,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(ambientSoundScapeExtras),
     "EDITBOX",
-    [
-        "Ambient soundscape array", "Listed sounds to play randomly around players (Format: Mysound_1,Mysound_2,etc...)"
-    ],
+    [LSTRING(AmbientSoundscapeArray), LSTRING(AmbientSoundscapeArrayDesc)],
     _category,
     "[]", 1,
     {
@@ -65,9 +53,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(ambientMusicEnabled),
     "CHECKBOX",
-    [
-        "Ambient music", "Enable Misery's OST (utilize Ambient Music array for more music to be played)"
-    ],
+    [LSTRING(AmbientMusic), LSTRING(AmbientMusicDesc)],
     _category,
     false, 1, {}, true
 ] call CBA_fnc_addSetting;
@@ -75,9 +61,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(ambientMusicExtras),
     "EDITBOX",
-    [
-        "Ambient Music array", "Listed music to play randomly for players (Format: Mymusic_1,Mymusic_2,etc...)"
-    ],
+    [LSTRING(AmbientMusicArray), LSTRING(AmbientMusicArrayDesc)],
     _category,
     "[]", 1,
     {

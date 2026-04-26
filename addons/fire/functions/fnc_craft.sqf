@@ -28,11 +28,11 @@ private _ignition = _ignitionCombo lbData (lbCurSel _ignitionCombo);
 call EFUNC(common,nearFire) params ["_nearbyFireObjects", "_nearbyIsInflamed"];
 
 if (_tinder isEqualTo "") exitWith {
-    _noteBox ctrlSetText "Select tinder source...";
+    _noteBox ctrlSetText localize LSTRING(SelectTinder);
 };
 
 if (_ignition isEqualTo "") exitWith {
-    _noteBox ctrlSetText "Select ignition source...";
+    _noteBox ctrlSetText localize LSTRING(SelectIgnition);
 };
 
 private _nearbyFire = objNull;
@@ -64,13 +64,13 @@ if (isNull _nearbyFire) then {
 
 switch (true) do {
     case (!_isReignition && _fuel isEqualTo ""): {
-        _noteBox ctrlSetText "Select fuel for new fire...";
+        _noteBox ctrlSetText localize LSTRING(SelectFuel);
     };
     case (!_isReignition && !(_fuel in [MACRO_FIRE_FUEL])): {
-        _noteBox ctrlSetText "Invalid fuel for new fire...";
+        _noteBox ctrlSetText localize LSTRING(InvalidFuel);
     };
     case (_isReignition && _fuel != "" && _fuelType in ["big", "barrel"] && _fuel != QCLASS(firewood)): {
-        _noteBox ctrlSetText "Use firewood to refuel this fire...";
+        _noteBox ctrlSetText localize LSTRING(RefuelFirewood);
     };
 };
 
@@ -100,7 +100,7 @@ private _craftInterrupt = _display displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key"];
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QCLASS(isCraftingFire), false];
-        [parseText "<t font='PuristaMedium' size='1'>Fire crafting interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+        [QEGVAR(common,tileText), localize LSTRING(Interrupted)] call CBA_fnc_localEvent;
     };
 }];
 
@@ -137,7 +137,7 @@ private _currentStep = 0;
         [982388, [1600, 1601, 1602], true] call EFUNC(common,displayEnableControls);
         [player, _tinder] call CBA_fnc_removeItem;
         [_ignition] call EFUNC(common,itemDecrement);
-        _noteBox ctrlSetText "Fire crafting interrupted, tinder lost...";
+        _noteBox ctrlSetText localize LSTRING(InterruptedTinder);
         call FUNC(populate);
         [_handle] call CBA_fnc_removePerFrameHandler;
     };
@@ -150,7 +150,7 @@ private _currentStep = 0;
 
     _progressBar progressSetPosition _progress;
 
-    _noteBox ctrlSetText format ["Crafting %1 fire... %2%3 complete", _fuelType, (_progress * 100) toFixed 0, "%"];
+    _noteBox ctrlSetText format [localize LSTRING(CraftingProgress), _fuelType, (_progress * 100) toFixed 0, "%"];
 
     if (_currentStep >= _totalSteps) then {
 
@@ -172,7 +172,7 @@ private _currentStep = 0;
                 [_fuel, _fuelType, _noteBox] call FUNC(createObject);
             };
         } else {
-            _noteBox ctrlSetText "Failed to craft fire...";
+            _noteBox ctrlSetText localize LSTRING(Failed);
         };
 
         player setVariable [QCLASS(isCraftingFire), nil];
