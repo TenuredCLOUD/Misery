@@ -72,6 +72,7 @@ switch (true) do {
         };
         ctrlSetText [1001, format ["%1 purchased for %2 %3", [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck)), EGVAR(currency,symbol), [_buyPrice, 1, 2, true] call CBA_fnc_formatNumber]];
         [] call FUNC(updateShop);
+        [] call FUNC(processIcon);
     };
     case (_buttonAction isEqualTo "Sell"): {
         if ([_itemName] call EFUNC(common,countItem) isEqualTo 0) exitWith {
@@ -92,6 +93,7 @@ switch (true) do {
         };
         ctrlSetText [1001, format ["%1 sold for %2 %3", [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck)), EGVAR(currency,symbol), [_sellPrice, 1, 2, true] call CBA_fnc_formatNumber]];
         [] call FUNC(updateShop);
+        [] call FUNC(processIcon);
     };
     case (_buttonAction isEqualTo "Gift Item"): {
         if (_trader getVariable [QGVAR(giftClicked), false]) then {
@@ -120,6 +122,7 @@ switch (true) do {
             }, [_trader], 5] call CBA_fnc_waitAndExecute;
         };
         [] call FUNC(updateShop);
+        [] call FUNC(processIcon);
     };
     default {
         [QUOTE(COMPONENT_BEAUTIFIED), format ["Invalid action: %1", _buttonAction]] call EFUNC(common,debugMessage);
