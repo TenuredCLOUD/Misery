@@ -14,16 +14,16 @@
  *
 */
 
-[player, ["zombie"], 2] call EFUNC(common,nearCorpse) params ["_isNear", "_corpse"];
+params ["_corpse"];
 
 private _audioSource = playSound selectRandom [MACRO_FIELDDRESS_SAWSOUNDS];
 
-if (_corpse getVariable [QGVAR(processingSkin), false]) exitWith {
+if (_corpse getVariable [QGVAR(processingSaw), false]) exitWith {
     [QEGVAR(common,tileText), "This corpse is being processed already..."] call CBA_fnc_localEvent;
 };
 
-if (isNil {_corpse getVariable QGVAR(processingSkin)}) then {
-    _corpse setVariable [QGVAR(processingSkin), true, true];
+if (isNil {_corpse getVariable QGVAR(processingSaw)}) then {
+    _corpse setVariable [QGVAR(processingSaw), true, true];
 };
 
 player playAction "Gear";

@@ -16,14 +16,14 @@
 
 params [["_canForage", false]];
 
-if (!isNull objectParent player) exitWith {};
-if (insideBuilding player isEqualTo 1) exitWith {};
+if (!isNull objectParent player) exitWith {false};
+if (insideBuilding player isEqualTo 1) exitWith {false};
 
 private _pos = positionCameraToWorld [0, 0, 0];
 private _pos2 = _pos vectorAdd (getCameraViewDirection player vectorMultiply 4);
 private _intersects = terrainIntersect [_pos, _pos2];
 
-if (!_intersects) exitWith {};
+if (!_intersects) exitWith {false};
 
 if (!(((getPosASLW player select 2) < 0) || (underwater player))) then {
     if (([player] call EFUNC(common,nearTree)) select 0) then {

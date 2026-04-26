@@ -17,30 +17,41 @@ if (isServer) then {
     }];
 };
 
-[
-    "searchForMoney_menu",
+private _searchForMoneyAction = [
+    QGVAR(searchForMoney_menu),
     format ["%1 Search for money", GVAR(symbol)],
-    {([player, ["CAManBase"], 2] call EFUNC(common,nearCorpse)) select 0},
+    QPATHTOEF(icons,data\hand_helping_ca.paa),
     {
-        [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-        player playAction "Gear";
+        params ["_target", "_player"];
         createDialog QCLASS(moneyTake_ui);
     },
-    "",
-    QPATHTOEF(icons,data\hand_helping_ca.paa),
-    ""
-] call EFUNC(actions,addAction);
-
-[
-    "giftMoney_menu",
-    format ["%1 Gift money", GVAR(symbol)],
-    {([player, 2] call EFUNC(common,nearPlayer)) select 0},
     {
-        [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-        player playAction "Gear";
+        params ["_target", "_player"];
+        !alive _target
+    },
+    {},
+    ["_target", "_player"],
+    [0, 0, 0],
+    3
+] call ACEFUNC(interact_menu,createAction);
+
+private _giftMoneyAction = [
+    QGVAR(giftMoney_menu),
+    format ["%1 Gift money", GVAR(symbol)],
+    QPATHTOEF(icons,data\hand_helping_ca.paa),
+    {
+        params ["_target", "_player"];
         createDialog QCLASS(moneyGive_ui);
     },
-    "",
-    QPATHTOEF(icons,data\hand_helping_ca.paa),
-    ""
-] call EFUNC(actions,addAction);
+    {
+        params ["_target", "_player"];
+        (alive _target) && (isPlayer _target) && {!(_target isKindOf "WBK_C_ExportClass")}
+    },
+    {},
+    ["_target", "_player"],
+    [0, 0, 0],
+    3
+] call ACEFUNC(interact_menu,createAction);
+
+["CAManBase", 0, [QUOTE(ACE_MainActions)], _searchForMoneyAction] call ACEFUNC(interact_menu,addActionToClass);
+["CAManBase", 0, [QUOTE(ACE_MainActions)], _giftMoneyAction] call ACEFUNC(interact_menu,addActionToClass);

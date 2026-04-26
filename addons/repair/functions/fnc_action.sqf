@@ -18,15 +18,20 @@ if !(call FUNC(checkAreas)) exitWith {
     [QUOTE(COMPONENT_BEAUTIFIED), "Marker check system failed, system disabled."] call EFUNC(common,debugMessage);
 };
 
-[
-    "repair_menu",
-    localize ECSTRING(common,ReqRepairs),
-    {GVAR(areas) findIf {player inArea _x} isNotEqualTo -1},
-    {
-        [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-        createDialog QCLASS(repairShop_ui);
-    },
-    "",
-    "",
-    ""
-] call EFUNC(actions,addAction);
+["AllVehicles", "Init", {
+    params ["_vehicle"];
+
+    private _requestRepairsAction = [
+        QGVAR(repair_menu),
+        localize ECSTRING(common,ReqRepairs),
+        QPATHTOEF(markers,data\wrench_ca.paa),
+        {
+            createDialog QCLASS(repairShop_ui);
+        },
+        {
+            GVAR(areas) findIf {player inArea _x} isNotEqualTo -1
+        }
+    ] call ACEFUNC(interact_menu,createAction);
+
+    [_vehicle, 0, [QUOTE(ACE_MainActions)], _requestRepairsAction] call ACEFUNC(interact_menu,addActionToObject);
+}, true, ["Man", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler;

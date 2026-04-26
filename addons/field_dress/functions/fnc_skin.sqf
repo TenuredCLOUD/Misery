@@ -14,7 +14,7 @@
  *
 */
 
-[player, [MACRO_FIELDDRESS_ANIMALTYPES], 2] call EFUNC(common,nearCorpse) params ["_isNear", "_animal"];
+params ["_animal"];
 
 private _audioSource = playSound selectRandom [MACRO_FIELDDRESS_SKINSOUNDS];
 

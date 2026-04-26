@@ -8,18 +8,19 @@
     if (hasInterface) then {
         [QGVAR(radiationEvent), FUNC(process)] call CBA_fnc_addEventHandler;
 
-        [
-            "leadContainers_menu",
+        private _leadContainer = [
+            QGVAR(leadContainers_menu),
             localize ECSTRING(common,StoreArtifact),
-            {[[QCLASS(leadContainer_Open)]] call EFUNC(common,hasItem) && [[MACRO_ARTIFACTS]] call EFUNC(common,hasItem)},
-            {
-            [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-            call FUNC(storeArtifact);
-            },
-            "",
             QPATHTOEF(icons,data\package_open_ca.paa),
-            ""
-        ] call EFUNC(actions,addAction);
+            {
+                call FUNC(storeArtifact)
+            },
+            {
+                [[QCLASS(leadContainer_Open)]] call EFUNC(common,hasItem) && [[MACRO_ARTIFACTS]] call EFUNC(common,hasItem)
+            }
+        ] call ACEFUNC(interact_menu,createAction);
+
+        [player, 1, [QUOTE(ACE_SelfActions)], _leadContainer] call ACEFUNC(interact_menu,addActionToObject);
 
 
         // Reactivate Geiger if picking up active one:

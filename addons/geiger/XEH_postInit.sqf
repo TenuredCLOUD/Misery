@@ -11,19 +11,18 @@ if (hasInterface) then {
 
 if !(isServer) exitWith {};
 
-[
-    "geiger_menu",
+private _addBatterytoGeiger = [
+    QGVAR(geiger_menu),
     "Add lithium battery to geiger",
+    QPATHTOEF(icons,data\battery_charging_ca.paa),
+    {
+        call FUNC(batteries)
+    },
     {
         [[QCLASS(lithiumBattery), QCLASS(geiger_NoBattery)]] call EFUNC(common,hasItem)
-    },
-    {
-        [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-        call FUNC(batteries);
-    },
-    "",
-    QPATHTOEF(icons,data\battery_charging_ca.paa),
-    ""
-] call EFUNC(actions,addAction);
+    }
+] call ACEFUNC(interact_menu,createAction);
+
+[player, 1, [QUOTE(ACE_SelfActions)], _addBatterytoGeiger] call ACEFUNC(interact_menu,addActionToObject);
 
 

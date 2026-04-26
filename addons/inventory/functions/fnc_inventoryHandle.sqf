@@ -13,6 +13,8 @@
  * [] call misery_inventory_fnc_inventoryHandle
  */
 
+if ("ace_medical" call EFUNC(common,isModLoaded)) exitWith {};
+
 player addEventHandler ["InventoryOpened", {
     [{
         !(isNull (findDisplay 602))

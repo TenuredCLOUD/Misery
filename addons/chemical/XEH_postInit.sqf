@@ -4,20 +4,20 @@
     if (isServer) then {
         call FUNC(inArea);
         call FUNC(updateDetector);
-        [
-            "chemicalDetector_menu",
+
+        private _chemicalDetectorBatteries = [
+            QGVAR(chemicalDetector_menu),
             "Add 9v batteries to chemical detector",
+            QPATHTOEF(icons,data\battery_charging_ca.paa),
             {
-                [["ChemicalDetector_01_black_F"]] call EFUNC(common,hasItem) && ([QCLASS(9vBattery)] call EFUNC(common,countItem) > 1)
-            },
-            {
-                [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
                 call FUNC(batteries);
             },
-            "",
-            QPATHTOEF(icons,data\battery_charging_ca.paa),
-            ""
-        ] call EFUNC(actions,addAction);
+            {
+                [["ChemicalDetector_01_black_F"]] call EFUNC(common,hasItem) && ([QCLASS(9vBattery)] call EFUNC(common,countItem) > 1)
+            }
+        ] call ACEFUNC(interact_menu,createAction);
+
+        [player, 1, [QUOTE(ACE_SelfActions)], _chemicalDetectorBatteries] call ACEFUNC(interact_menu,addActionToObject);
     };
 
     if (hasInterface) then {

@@ -10,18 +10,23 @@ if (isClass (missionConfigFile >> "CfgMisery_ForgeData")) then {
     [] call FUNC(parseData);
     [] call FUNC(burnFuel);
 
-    [
-        "forge_menu",
+    private _forgeAction = [
+        QGVAR(forge_menu),
         localize ECSTRING(common,UseForge),
-        {[[QCLASS(forge)], 2.5] call EFUNC(common,nearCraftingStation)},
+        QPATHTOEF(icons,data\anvil_ca.paa),
         {
-            [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
+            params ["_target", "_player"];
             createDialog QCLASS(forge_ui);
         },
-        "",
-        QPATHTOEF(icons,data\anvil_ca.paa),
-        ""
-    ] call EFUNC(actions,addAction);
+        {true},
+        {},
+        ["_target", "_player"],
+        [0, 0, 0],
+        3
+    ] call ACEFUNC(interact_menu,createAction);
+
+    [QCLASS(forge), 0, [QUOTE(ACE_MainActions)], _forgeAction] call ACEFUNC(interact_menu,addActionToClass);
+
 } else {
     [QUOTE(COMPONENT_BEAUTIFIED), "CfgMisery_ForgeData class not found in description.ext, skipping data parser..."] call EFUNC(common,debugMessage);
 };

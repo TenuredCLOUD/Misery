@@ -4,18 +4,24 @@ if (isServer) then {
     if (isClass (missionConfigFile >> "CfgMisery_CraftingData")) then {
         [] call FUNC(parseData);
 
-        [
-            "crafting_menu",
+        private _craftingAction = [
+            QGVAR(crafting_menu),
             localize ECSTRING(common,CraftingWorkbench),
-            {[[MACRO_CRAFTINGSTATIONS], 1.5] call EFUNC(common,nearCraftingStation)},
+            QPATHTOEF(icons,data\hammer_ca.paa),
             {
-                [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
+                params ["_target", "_player"];
                 createDialog QCLASS(craftingFramework_ui);
             },
-            "",
-            QPATHTOEF(icons,data\hammer_ca.paa),
-            ""
-        ] call EFUNC(actions,addAction);
+            {true},
+            {},
+            ["_target", "_player"],
+            [0, 0, 0],
+            3
+        ] call ACEFUNC(interact_menu,createAction);
+
+        {
+            [_x, 0, [QUOTE(ACE_MainActions)], _craftingAction] call ACEFUNC(interact_menu,addActionToClass);
+        } forEach [MACRO_CRAFTINGSTATIONS];
     } else {
         [QUOTE(COMPONENT_BEAUTIFIED), "CfgMisery_CraftingData class not found in description.ext, skipping data parser..."] call EFUNC(common,debugMessage);
     };

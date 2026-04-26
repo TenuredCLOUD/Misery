@@ -35,20 +35,19 @@ if (GVAR(gradAdminActions)) then {
     GVAR(gradPersistenceTag) = getText (missionConfigFile >> "CfgGradPersistence" >> "missionTag");
     if (GVAR(gradPersistenceTag) isEqualTo "") then {GVAR(gradPersistenceTag) = missionName};
 
-    [
-        "grad_db_menu",
+    private _gradSaveAction = [
+        QGVAR(grad_db_menu),
         "GRAD Persistence",
+        QPATHTOEF(icons,data\savedisk_ca.paa),
+        {
+            createDialog QCLASS(grad_persistence_compat_ui)
+        },
         {
             call BIS_fnc_admin isEqualTo 2 || !isMultiplayer
-        },
-        {
-            [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-            createDialog QCLASS(grad_persistence_compat_ui);
-        },
-        "",
-        QPATHTOEF(icons,data\savedisk_ca.paa),
-        ""
-    ] call EFUNC(actions,addAction);
+        }
+    ] call ACEFUNC(interact_menu,createAction);
+
+    [player, 1, [QUOTE(ACE_SelfActions)], _gradSaveAction] call ACEFUNC(interact_menu,addActionToObject);
 };
 
 // New player or Respawned player

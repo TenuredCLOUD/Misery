@@ -87,16 +87,6 @@ disableSerialization;
         _ailmentsList lbSetPicture [_index, _ailmentImage];
     } forEach (player getVariable ["ailments", []]);
 
-    if (isClass (configFile >> "CfgPatches" >> QCLASSACE(main))) then {
-        private _health = player getVariable [QACEGVAR(medical,bloodVolume), 6];
-        _healthText ctrlSetText "Blood:";
-        _healthBar progressSetPosition (_health / 6);
-    } else {
-        private _health = 1 - (damage player);
-        _healthText ctrlSetText "Health:";
-        _healthBar progressSetPosition _health;
-    };
-
     if (!EGVAR(gasmask,enhanced)) then {
         [982377, [1016, 1017], false] call EFUNC(common,displayShowControls);
     } else {
@@ -118,9 +108,6 @@ disableSerialization;
                 };
         };
     };
-
-    // auto hide temp readings, moved to ERU only
-    [982377, [1015, 1010], false] call EFUNC(common,displayShowControls);
 
     _currencyValue ctrlSetText (format ["%1 %2", EGVAR(currency,symbol), [_funds, 1, 2, true] call CBA_fnc_formatNumber]);
 
