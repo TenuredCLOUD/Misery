@@ -11,17 +11,16 @@ if (hasInterface) then {
 
 if !(isServer) exitWith {};
 
-[
-    "eru_menu",
+private _eruBatteries = [
+    QGVAR(eru_menu),
     "Add lithium battery to ERU",
+    QPATHTOEF(icons,data\battery_charging_ca.paa),
     {
-        [[QCLASS(lithiumBattery), QCLASS(eru_NoBattery)]] call EFUNC(common,hasItem)
-    },
-    {
-        [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
         call FUNC(batteries);
     },
-    "",
-    QPATHTOEF(icons,data\battery_charging_ca.paa),
-    ""
-] call EFUNC(actions,addAction);
+    {
+        [[QCLASS(lithiumBattery), QCLASS(eru_NoBattery)]] call EFUNC(common,hasItem)
+    }
+] call ACEFUNC(interact_menu,createAction);
+
+[player, 1, [QUOTE(ACE_SelfActions)], _eruBatteries] call ACEFUNC(interact_menu,addActionToObject);

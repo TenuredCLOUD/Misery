@@ -2,15 +2,16 @@
 
 if (isMultiplayer) exitWith {};
 
-[
-    "sleep_menu",
+private _sleepAction = [
+    QGVAR(sleep_menu),
     "Sleep",
-    {call FUNC(condition)},
-    {
-    [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-    createDialog QCLASS(sleepMenu_ui);
-    },
-    "",
     QPATHTOEF(icons,data\bed_ca.paa),
-    ""
-] call EFUNC(actions,addAction);
+    {
+        createDialog QCLASS(sleepMenu_ui);
+    },
+    {
+        call FUNC(condition);
+    }
+] call ACEFUNC(interact_menu,createAction);
+
+[player, 1, [QUOTE(ACE_SelfActions)], _sleepAction] call ACEFUNC(interact_menu,addActionToObject);

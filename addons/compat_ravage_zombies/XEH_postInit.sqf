@@ -62,11 +62,11 @@ player addEventHandler ["Take", {
     // Tents & sleeping bags
     private _campingGear = MACRO_RVG_CAMPING findIf { _item isEqualTo (_x select 0) };
     // Only push swap logic if furniture framework is enabled
-    if (_campingGear isNotEqualTo -1 && EGVAR(furniture,enabled)) then {
+    if (_campingGear isNotEqualTo -1 && !isNil QUOTE(grad_fortifications_playerInventorySize)) then {
         private _oldCampItem = _item;
         private _campKitToAdd = (MACRO_RVG_CAMPING select _campingGear) select 1;
         [_unit, _oldCampItem] call CBA_fnc_removeItem;
-        [_campKitToAdd] call EFUNC(furniture,addToInventory);
+        [player, _campKitToAdd] call grad_fortifications_fnc_addFort;
     };
 
     // Tools
@@ -125,9 +125,9 @@ player addEventHandler ["InventoryOpened", {
         private _oldCampItem = _x select 0;
         private _newCampItem = _x select 1;
 
-        if ([[_oldCampItem]] call EFUNC(common,hasItem) && EGVAR(furniture,enabled)) then {
+        if ([[_oldCampItem]] call EFUNC(common,hasItem) && !isNil QUOTE(grad_fortifications_playerInventorySize)) then {
             [_unit, _oldCampItem] call CBA_fnc_removeItem;
-            [_newCampItem] call EFUNC(furniture,addToInventory);
+            [player, _newCampItem] call grad_fortifications_fnc_addFort;
         };
     } forEach MACRO_RVG_CAMPING;
 

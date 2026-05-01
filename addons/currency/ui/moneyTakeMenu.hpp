@@ -1,6 +1,6 @@
 class CLASS(moneyTake_ui) {
     idd = 358492;
-    onLoad = QUOTE([358492] call EFUNC(common,menuBlurEffect); [] call EFUNC(currency,takeMoneyRefresh));
+    onLoad = QUOTE([358492] call EFUNC(common,menuBlurEffect));
     onUnload = QUOTE(player playAction '');
 
     class ControlsBackground {
@@ -51,15 +51,6 @@ class CLASS(moneyTake_ui) {
             idc = 1001;
             x = 22.65 * GUI_GRID_W + GUI_GRID_X;
             y = 7.59 * GUI_GRID_H + GUI_GRID_Y;
-            w = 11 * GUI_GRID_W;
-            h = 2 * GUI_GRID_H;
-            font = UI_MACRO_FONT;
-            sizeEx = UI_MACRO_TEXTSIZE;
-        };
-        class CLASS(moneyTakeMenu_playersFunds): RscText {
-            idc = 1002;
-            x = 23.23 * GUI_GRID_W + GUI_GRID_X;
-            y = 5.75 * GUI_GRID_H + GUI_GRID_Y;
             w = 11 * GUI_GRID_W;
             h = 2 * GUI_GRID_H;
             font = UI_MACRO_FONT;

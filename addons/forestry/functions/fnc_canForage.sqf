@@ -14,7 +14,7 @@
  *
 */
 
-params [["_canForage", false]];
+private _canForage = false;
 
 if (!isNull objectParent player) exitWith {false};
 if (insideBuilding player isEqualTo 1) exitWith {false};
@@ -31,4 +31,4 @@ if (!(((getPosASLW player select 2) < 0) || (underwater player))) then {
     };
 };
 
-_canforage
+_canForage

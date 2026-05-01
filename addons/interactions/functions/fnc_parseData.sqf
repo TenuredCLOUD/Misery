@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Item data parser for CfgMisery_ItemData from description.ext
+ * Iteraction data parser for CfgMisery_IteractionData from missionConfig
  *
  * Arguments:
  * None
@@ -10,10 +10,10 @@
  * None
  *
  * Example:
- * [] call misery_inventory_fnc_parseItemData;
+ * [] call misery_interactions_fnc_parseData;
  */
 
-GVAR(itemData) = [];
+GVAR(data) = [];
 
 {
     private _itemName = configName _x;
@@ -33,6 +33,7 @@ GVAR(itemData) = [];
     private _maskBlocksUse = if (isNil {(_x >> "maskBlocksUse")}) then {false} else {getNumber (_x >> "maskBlocksUse") isEqualTo 1};
     private _requiresCanOpener = if (isNil {(_x >> "requiresCanOpener")}) then {false} else {getNumber (_x >> "requiresCanOpener") isEqualTo 1};
     private _removeOnUse = if (isNil {(_x >> "removeOnUse")}) then {false} else {getNumber (_x >> "removeOnUse") isEqualTo 1};
+    private _replacement = if (isNil {(_x >> "replacement")}) then {""} else {getText (_x >> "replacement")};
     private _sound = if (isNil {(_x >> "sound")}) then {""} else {getText (_x >> "sound")};
     private _animation = if (isNil {(_x >> "animation")}) then {""} else {getText (_x >> "animation")};
     private _code = if (isNil {(_x >> "code")}) then {""} else {getText (_x >> "code")};
@@ -45,7 +46,7 @@ GVAR(itemData) = [];
         };
     };
 
-    GVAR(itemData) pushBack [
+    GVAR(data) pushBack [
         _itemName,
         _category,
         _delay,
@@ -61,11 +62,12 @@ GVAR(itemData) = [];
         _maskBlocksUse,
         _requiresCanOpener,
         _removeOnUse,
+        _replacement,
         _sound,
         _feedback,
         _animation,
         _code
     ];
-} forEach ("true" configClasses (missionConfigFile >> "CfgMisery_ItemData"));
+} forEach ("true" configClasses (missionConfigFile >> "CfgMisery_InteractionData"));
 
-publicVariable QGVAR(itemData);
+publicVariable QGVAR(data);

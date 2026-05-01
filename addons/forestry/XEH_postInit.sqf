@@ -12,7 +12,7 @@ if (GVAR(woodCollection)) then {
             [] call FUNC(forageTreeAction);
         },
         {
-            insideBuilding player isEqualTo 0 && ([player] call EFUNC(common,nearTree)) select 0
+            insideBuilding player isNotEqualTo 1 && ([player] call EFUNC(common,nearTree)) select 0
         }
     ] call ACEFUNC(interact_menu,createAction);
 

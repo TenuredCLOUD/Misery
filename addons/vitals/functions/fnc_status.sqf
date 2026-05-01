@@ -20,11 +20,8 @@ disableSerialization;
     if (isNull findDisplay 982377) exitWith {};
 
     private _vitalsDisplay = findDisplay 982377;
-    private _temperatureText = _vitalsDisplay displayCtrl 1015;
-    private _temperatureValue = _vitalsDisplay displayCtrl 1010;
     private _gasMaskText = _vitalsDisplay displayCtrl 1016;
     private _gasMaskBar = _vitalsDisplay displayCtrl 1017;
-    private _currencyValue = _vitalsDisplay displayCtrl 1009;
     private _healthText = _vitalsDisplay displayCtrl 1008;
     private _healthBar = _vitalsDisplay displayCtrl 1011;
     private _hungerBar = _vitalsDisplay displayCtrl 1012;
@@ -108,8 +105,6 @@ disableSerialization;
                 };
         };
     };
-
-    _currencyValue ctrlSetText (format ["%1 %2", EGVAR(currency,symbol), [_funds, 1, 2, true] call CBA_fnc_formatNumber]);
 
     _hungerBar progressSetPosition _hunger;
     _thirstBar progressSetPosition _thirst;
