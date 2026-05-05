@@ -41,13 +41,8 @@
     [QUOTE(COMPONENT_BEAUTIFIED), format ["Hearing Protection: %1%2", (_hearingProtection * 100), "%"]] call EFUNC(common,debugMessage);
 
     if (_hearingProtection < 1) then {
-        if (QCLASSACE(medical) call EFUNC(common,isModLoaded)) then {
-            [player, _damageMultiplier, "head", "punch"] call ACEFUNC(medical,addDamageToUnit);
-            QGVAR(display) cutRsc [QCLASS(tunnel_ui), "PLAIN", 1, false];
-        } else {
-            player setHitPointDamage ["hitHead", _damageMultiplier];
-            QGVAR(display) cutRsc [QCLASS(tunnel_ui), "PLAIN", 1, false];
-        };
+        [player, _damageMultiplier, "head", "punch"] call ACEFUNC(medical,addDamageToUnit);
+        QGVAR(display) cutRsc [QCLASS(tunnel_ui), "PLAIN", 1, false];
     };
 
     if (EGVAR(psychosis,enabled)) then {

@@ -24,9 +24,6 @@ if (QCLASSACE(medical) call EFUNC(common,isModLoaded)) then {
 [-0.5, "hunger"] call EFUNC(common,addStatusModifier);
 [0.1, "toxicity"] call EFUNC(common,addStatusModifier);
 
-if (QCLASSACE(medical) call EFUNC(common,isModLoaded)) then {
-    [player, true, 10, true] call ACEFUNC(medical,setUnconscious);
-} else {
-    [player, 5] call EFUNC(survival,setUnconscious);
-};
+[player, true, 10, true] call ACEFUNC(medical,setUnconscious);
+
 

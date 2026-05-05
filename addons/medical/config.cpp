@@ -6,12 +6,13 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {QCLASS(common)};
+        requiredAddons[] = {QCLASS(common), QCLASSACE(medical_treatment)};
         authors[] = {"TenuredCLOUD"};
         VERSION_CONFIG;
     };
 };
 
 #include "CfgEventHandlers.hpp"
-
+#include "ACE_Medical_Treatment.hpp"
+#include "ACE_Medical_Treatment_Actions.hpp"
 

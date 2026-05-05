@@ -9,6 +9,7 @@ class CfgMagazines {
     };
 
     class CLASS(pureTablets): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 10;
         descriptionShort = CSTRING(PureTabs_Description);
         displayName = CSTRING(PureTabs_DisplayName);
@@ -19,6 +20,7 @@ class CfgMagazines {
     };
 
     class CLASS(painkillers): CLASS(FakeMagazine) {
+        CLASSACE(isMedicalItem) = 1;
         count = 15;
         descriptionShort = CSTRING(Pain_Description);
         displayName = CSTRING(Pain_DisplayName);
@@ -29,6 +31,7 @@ class CfgMagazines {
     };
 
     class CLASS(caffeine): CLASS(FakeMagazine) {
+        CLASSACE(isMedicalItem) = 1;
         count = 8;
         descriptionShort = CSTRING(Caffeine_Description);
         displayName = CSTRING(Caffeine_DisplayName);
@@ -38,6 +41,7 @@ class CfgMagazines {
     };
 
     class CLASS(charcoalTablets): CLASS(FakeMagazine) {
+        CLASSACE(isMedicalItem) = 1;
         count = 10;
         descriptionShort = CSTRING(CharcoalTabs_Description);
         displayName = CSTRING(CharcoalTabs_DisplayName);
@@ -47,6 +51,7 @@ class CfgMagazines {
     };
 
     class CLASS(caffetin): CLASS(FakeMagazine) {
+        CLASSACE(isMedicalItem) = 1;
         count = 4;
         descriptionShort = CSTRING(Caffetin_Description);
         displayName = CSTRING(Caffetin_DisplayName);
@@ -57,6 +62,7 @@ class CfgMagazines {
     };
 
     class CLASS(clozapineBox): CLASS(FakeMagazine) {
+        CLASSACE(isMedicalItem) = 1;
         count = 8;
         descriptionShort = CSTRING(ClozapineBox_Description);
         displayName = CSTRING(ClozapineBox_DisplayName);
@@ -66,6 +72,7 @@ class CfgMagazines {
     };
 
     class CLASS(antiparasitic): CLASS(FakeMagazine) {
+        CLASSACE(isMedicalItem) = 1;
         count = 8;
         descriptionShort = CSTRING(Antiparasitic_Description);
         displayName = CSTRING(Antiparasitic_DisplayName);
@@ -76,6 +83,7 @@ class CfgMagazines {
     };
 
     class CLASS(antibiotic): CLASS(FakeMagazine) {
+        CLASSACE(isMedicalItem) = 1;
         count = 8;
         descriptionShort = CSTRING(Antibiotic_Description);
         displayName = CSTRING(Antibiotic_DisplayName);
@@ -86,6 +94,7 @@ class CfgMagazines {
     };
 
     class CLASS(deconKit): CLASS(FakeMagazine) {
+        CLASSACE(isMedicalItem) = 1;
         count = 6;
         descriptionShort = CSTRING(DeconKit_Description);
         displayName = CSTRING(DeconKit_DisplayName);
@@ -96,6 +105,7 @@ class CfgMagazines {
     };
 
     class CLASS(sleepingPills): CLASS(FakeMagazine) {
+        CLASSACE(isMedicalItem) = 1;
         count = 8;
         descriptionShort = CSTRING(SleepPack_Description);
         displayName = CSTRING(SleepPack_DisplayName);
@@ -106,6 +116,7 @@ class CfgMagazines {
     };
 
     class CLASS(potassiumIodate): CLASS(FakeMagazine) {
+        CLASSACE(isMedicalItem) = 1;
         count = 15;
         descriptionShort = CSTRING(PotassiumIodate_Description);
         displayName = CSTRING(PotassiumIodate_DisplayName);
@@ -116,6 +127,7 @@ class CfgMagazines {
     };
 
     class CLASS(cenestinBottle): CLASS(FakeMagazine) {
+        CLASSACE(isMedicalItem) = 1;
         count = 15;
         descriptionShort = CSTRING(CenestinBottle_Description);
         displayName = CSTRING(CenestinBottle_DisplayName);
@@ -126,6 +138,7 @@ class CfgMagazines {
     };
 
     class CLASS(lighter): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 100;
         descriptionShort = CSTRING(Lighter_Description);
         displayName = CSTRING(Lighter_DisplayName);
@@ -136,6 +149,7 @@ class CfgMagazines {
     };
 
     class CLASS(matchBox): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 20;
         descriptionShort = CSTRING(MatchBox_Description);
         displayName = CSTRING(MatchBox_DisplayName);
@@ -146,6 +160,7 @@ class CfgMagazines {
     };
 
     class CLASS(boxNails): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 20;
         descriptionShort = CSTRING(BoxNails_Description);
         displayName = CSTRING(BoxNails_DisplayName);
@@ -155,6 +170,7 @@ class CfgMagazines {
     };
 
     class CLASS(electricHandsaw): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 10;
         descriptionShort = CSTRING(ElectricHandSaw_Description);
         displayName = CSTRING(ElectricHandSaw_DisplayName);
@@ -164,6 +180,7 @@ class CfgMagazines {
     };
 
     class CLASS(chainsaw): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 25;
         descriptionShort = CSTRING(Chainsaw_Description);
         displayName = CSTRING(Chainsaw_DisplayName);
@@ -174,6 +191,7 @@ class CfgMagazines {
     };
 
     class CLASS(sawFuel): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 100;
         descriptionShort = CSTRING(SawFuel_Description);
         displayName = CSTRING(SawFuel_DisplayName);
@@ -184,6 +202,7 @@ class CfgMagazines {
     };
 
     class CLASS(pickaxe): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 1000;
         descriptionShort = CSTRING(Pickaxe_Description);
         displayName = CSTRING(Pickaxe_DisplayName);
@@ -280,6 +299,7 @@ class CfgMagazines {
     };
 
     class CLASS(cigarettePack): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 20;
         descriptionShort = CSTRING(CigarettePack_Description);
         displayName = CSTRING(CigarettePack_DisplayName);
@@ -290,6 +310,7 @@ class CfgMagazines {
     };
 
     class CLASS(cigar): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 4;
         descriptionShort = CSTRING(Cigar_Description);
         displayName = CSTRING(Cigar_DisplayName);
@@ -299,6 +320,7 @@ class CfgMagazines {
     };
 
     class CLASS(wolfBeer): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 4;
         descriptionShort = CSTRING(WolfBeer_Description);
         displayName = CSTRING(WolfBeer_DisplayName);
@@ -310,6 +332,7 @@ class CfgMagazines {
     };
 
     class CLASS(vodka): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 8;
         descriptionShort = CSTRING(Vodka_Description);
         displayName = CSTRING(Vodka_DisplayName);
@@ -321,6 +344,7 @@ class CfgMagazines {
     };
 
     class CLASS(canteen_Purified): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 8;
         descriptionShort = CSTRING(CanteenPurified_Description);
         displayName = CSTRING(CanteenPurified_DisplayName);
@@ -331,6 +355,7 @@ class CfgMagazines {
     };
 
     class CLASS(canteen_Clean): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 8;
         descriptionShort = CSTRING(CanteenClean_Description);
         displayName = CSTRING(CanteenClean_DisplayName);
@@ -341,6 +366,7 @@ class CfgMagazines {
     };
 
     class CLASS(canteen_Dirty): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 8;
         descriptionShort = CSTRING(CanteenDirty_Description);
         displayName = CSTRING(CanteenDirty_DisplayName);
@@ -351,6 +377,7 @@ class CfgMagazines {
     };
 
     class CLASS(waterBottle_Purified): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 4;
         descriptionShort = CSTRING(WaterBottlePurified_Description);
         displayName = CSTRING(WaterBottlePurified_DisplayName);
@@ -361,6 +388,7 @@ class CfgMagazines {
     };
 
     class CLASS(waterBottle_Clean): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 4;
         descriptionShort = CSTRING(WaterBottleClean_Description);
         displayName = CSTRING(WaterBottleClean_DisplayName);
@@ -371,6 +399,7 @@ class CfgMagazines {
     };
 
     class CLASS(waterBottle_Dirty): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 4;
         descriptionShort = CSTRING(WaterBottleDirty_Description);
         displayName = CSTRING(WaterBottleDirty_DisplayName);
@@ -381,6 +410,7 @@ class CfgMagazines {
     };
 
     class CLASS(coffeeGrounds): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 4;
         descriptionShort = CSTRING(CoffeeGrounds_Description);
         displayName = CSTRING(CoffeeGrounds_DisplayName);
@@ -390,6 +420,7 @@ class CfgMagazines {
     };
 
     class CLASS(rice): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 20;
         descriptionShort = CSTRING(Rice_Description);
         displayName = CSTRING(Rice_DisplayName);
@@ -400,6 +431,7 @@ class CfgMagazines {
     };
 
     class CLASS(waterJerryCan_Full): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 20;
         descriptionShort = CSTRING(JerryCanWaterFull_Description);
         displayName = CSTRING(JerryCanWaterFull_DisplayName);
@@ -410,6 +442,7 @@ class CfgMagazines {
     };
 
     class CLASS(waterJerryCan_FullDirty): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 20;
         descriptionShort = CSTRING(JerryCanWaterFullDirty_Description);
         displayName = CSTRING(JerryCanWaterFullDirty_DisplayName);
@@ -420,6 +453,7 @@ class CfgMagazines {
     };
 
     class CLASS(jetFuel): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 20;
         descriptionShort = CSTRING(FuelGeneric_Description);
         displayName = CSTRING(JetFuel_DisplayName);
@@ -430,6 +464,7 @@ class CfgMagazines {
     };
 
     class CLASS(diesel): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 20;
         descriptionShort = CSTRING(FuelGeneric_Description);
         displayName = CSTRING(Diesel_DisplayName);
@@ -440,6 +475,7 @@ class CfgMagazines {
     };
 
     class CLASS(petrol): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 20;
         descriptionShort = CSTRING(FuelGeneric_Description);
         displayName = CSTRING(Petrol_DisplayName);
@@ -450,6 +486,7 @@ class CfgMagazines {
     };
 
     class CLASS(coolant): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 20;
         descriptionShort = CSTRING(Coolant_Description);
         displayName = CSTRING(Coolant_DisplayName);
@@ -460,6 +497,7 @@ class CfgMagazines {
     };
 
     class CLASS(engineOil): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 20;
         descriptionShort = CSTRING(EngineOil_Description);
         displayName = CSTRING(EngineOil_DisplayName);
@@ -470,6 +508,7 @@ class CfgMagazines {
     };
 
     class CLASS(metalFabricationKit): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 5;
         descriptionShort = CSTRING(MetalFabricationKit_Description);
         displayName = CSTRING(MetalFabricationKit_DisplayName);
@@ -480,6 +519,7 @@ class CfgMagazines {
     };
 
     class CLASS(enginePartsKit): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 10;
         descriptionShort = CSTRING(EnginePartsKit_Description);
         displayName = CSTRING(EnginePartsKit_DisplayName);
@@ -490,6 +530,7 @@ class CfgMagazines {
     };
 
     class CLASS(fuelSystemKit): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 10;
         descriptionShort = CSTRING(FuelSystemKit_Description);
         displayName = CSTRING(FuelSystemKit_DisplayName);
@@ -500,6 +541,7 @@ class CfgMagazines {
     };
 
     class CLASS(electronicRepairKit): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 20;
         descriptionShort = CSTRING(ElectronicRepairKit_Description);
         displayName = CSTRING(ElectronicRepairKit_DisplayName);
@@ -510,6 +552,7 @@ class CfgMagazines {
     };
 
     class CLASS(glassRepairKit): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 15;
         descriptionShort = CSTRING(GlassRepairKit_Description);
         displayName = CSTRING(GlassRepairKit_DisplayName);
@@ -520,6 +563,7 @@ class CfgMagazines {
     };
 
     class CLASS(tirePatchKit): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 10;
         descriptionShort = CSTRING(TirePatchKit_Description);
         displayName = CSTRING(TirePatchKit_DisplayName);
@@ -530,6 +574,7 @@ class CfgMagazines {
     };
 
     class CLASS(trackRepairKit): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 4;
         descriptionShort = CSTRING(TrackRepairKit_Description);
         displayName = CSTRING(TrackRepairKit_DisplayName);
@@ -540,6 +585,7 @@ class CfgMagazines {
     };
 
     class CLASS(rotorRepairKit): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 4;
         descriptionShort = CSTRING(RotorRepairKit_Description);
         displayName = CSTRING(RotorRepairKit_DisplayName);
@@ -550,6 +596,7 @@ class CfgMagazines {
     };
 
     class CLASS(winchRepairKit): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 10;
         descriptionShort = CSTRING(WinchRepairKit_Description);
         displayName = CSTRING(WinchRepairKit_DisplayName);
@@ -560,6 +607,7 @@ class CfgMagazines {
     };
 
     class CLASS(hydraulicRepairKit): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 5;
         descriptionShort = CSTRING(HydraulicRepairKit_Description);
         displayName = CSTRING(HydraulicRepairKit_DisplayName);
@@ -570,6 +618,7 @@ class CfgMagazines {
     };
 
     class CLASS(aerodynamicControlKit): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 5;
         descriptionShort = CSTRING(AerodynamicControlKit_Description);
         displayName = CSTRING(AerodynamicControlKit_DisplayName);
@@ -580,6 +629,7 @@ class CfgMagazines {
     };
 
     class CLASS(transmissionRepairKit): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 5;
         descriptionShort = CSTRING(TransmissionRepairKit_Description);
         displayName = CSTRING(TransmissionRepairKit_DisplayName);
@@ -590,6 +640,7 @@ class CfgMagazines {
     };
 
     class CLASS(landingGearKit): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 5;
         descriptionShort = CSTRING(LandingGearKit_Description);
         displayName = CSTRING(LandingGearKit_DisplayName);
@@ -600,6 +651,7 @@ class CfgMagazines {
     };
 
     class CLASS(weaponSystemKit): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 10;
         descriptionShort = CSTRING(WeaponSystemKit_Description);
         displayName = CSTRING(WeaponSystemKit_DisplayName);
@@ -610,6 +662,7 @@ class CfgMagazines {
     };
 
     class CLASS(countermeasureKit): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 10;
         descriptionShort = CSTRING(CounterMeasureKit_Description);
         displayName = CSTRING(CounterMeasureKit_DisplayName);
@@ -620,6 +673,7 @@ class CfgMagazines {
     };
 
     class CLASS(thermalRegulationKit): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
         count = 4;
         descriptionShort = CSTRING(FieldThermalRegulationKit_Description);
         displayName = CSTRING(FieldThermalRegulationKit_DisplayName);

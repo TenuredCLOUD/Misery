@@ -1,10 +1,10 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Cocaine usage
+ * Cocaine usage utilizing ACE medical API
  *
  * Arguments:
- * None
+ * 0: Effectiviness <NUMBER>
  *
  * Return Value:
  * None
@@ -14,19 +14,28 @@
  *
 */
 
-if !(isMultiplayer) then {
-    [-0.25, "energy"] call EFUNC(common,addStatusModifier);
+params ["_value"];
+
+if (_value > 0.2) then {
+
+    if !(isMultiplayer) then {
+        [-0.002, "energy"] call EFUNC(common,addStatusModifier);
+    };
+
+    [0.001, "hunger"] call EFUNC(common,addStatusModifier);
 };
 
-if (QCLASSACE(medical) call EFUNC(common,isModLoaded)) then {
-    [player, QCLASS(cocaine), 0, 1800, 25, 0, 25, 1] call ACEFUNC(medical_status,addMedicationAdjustment);
+// Simulated withdrawal symptoms, energy & hunger crash with tremors
+if (_value < 0.2) then {
+
+    if !(isMultiplayer) then {
+        [0.0015, "energy"] call EFUNC(common,addStatusModifier);
+    };
+
+    [-0.0012, "hunger"] call EFUNC(common,addStatusModifier);
+
+    if !(player getVariable [QGVAR(tremor), false]) then {
+        [player, 120] call EFUNC(medical,tremor);
+    };
 };
 
-[3, 2] call EFUNC(common,chromaticEffect);
-
-player enableFatigue false;
-
-[{
-    player enableFatigue true;
-    player setFatigue 0;
-}, [], 1200] call CBA_fnc_waitAndExecute;
