@@ -28,7 +28,7 @@
         }, [], 15] call CBA_fnc_waitAndExecute;
     };
 
-    private _totalProtection = call EFUNC(protection,totalProtection);
+    private _totalProtection = [player] call EFUNC(protection,totalProtection);
     private _hearingProtection = _totalProtection select 5;
     private _damageMultiplier = 0;
     private _psychModifier = 0;

@@ -4,6 +4,7 @@
  * Cocaine usage utilizing ACE medical API
  *
  * Arguments:
+ * 0: Dose amount <NUMBER>
  * 0: Effectiviness <NUMBER>
  *
  * Return Value:
@@ -14,28 +15,15 @@
  *
 */
 
-params ["_value"];
+params ["_dose", "_value"];
 
-if (_value > 0.2) then {
+private _baseRate = -0.00011 * _dose;
+private _baseERate = -0.00055 * _dose;
+private _intensity = linearConversion [0, 1, _value, 0, 1, false];
 
-    if !(isMultiplayer) then {
-        [-0.002, "energy"] call EFUNC(common,addStatusModifier);
-    };
-
-    [0.001, "hunger"] call EFUNC(common,addStatusModifier);
+if !(isMultiplayer) then {
+    [_baseERate * _intensity, "energy"] call EFUNC(common,addStatusModifier);
 };
 
-// Simulated withdrawal symptoms, energy & hunger crash with tremors
-if (_value < 0.2) then {
-
-    if !(isMultiplayer) then {
-        [0.0015, "energy"] call EFUNC(common,addStatusModifier);
-    };
-
-    [-0.0012, "hunger"] call EFUNC(common,addStatusModifier);
-
-    if !(player getVariable [QGVAR(tremor), false]) then {
-        [player, 120] call EFUNC(medical,tremor);
-    };
-};
+[_baseRate * _intensity, "hunger"] call EFUNC(common,addStatusModifier);
 

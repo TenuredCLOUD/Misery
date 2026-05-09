@@ -33,7 +33,7 @@ disableSerialization;
     private _ailmentsList = _vitalsDisplay displayCtrl 1502;
 
     call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "", "_exposure", "_wetness", "_radiation", "_infection", "_parasites", "_toxicity", "_psychosis", "_buffs", "_ailments", "_funds", "", "_cartridgeEfficiency"];
-    call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "_skinProtection", "_respiratoryProtection", "_eyeProtection", "_hearingProtection"];
+    [player] call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "_skinProtection", "_respiratoryProtection", "_eyeProtection", "_hearingProtection"];
 
     lbClear _buffsList;
     lbClear _ailmentsList;

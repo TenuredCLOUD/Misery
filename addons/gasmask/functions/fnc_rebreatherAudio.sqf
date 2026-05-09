@@ -20,7 +20,7 @@
 
     if (isGamePaused) exitWith {};
 
-    call EFUNC(protection,totalProtection) params ["", "_scba"];
+    [player] call EFUNC(protection,totalProtection) params ["", "_scba"];
 
     if (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)}) exitWith {}; // Kill audible breath if ACE advanced fatigue is enabled
 

@@ -1,29 +1,32 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Random pharm usage
+ * Random Medication usage utilizing ACE medical API
  *
  * Arguments:
- * None
+ * 0: Dose amount <NUMBER>
+ * 0: Effectiviness <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call misery_medicine_fnc_randomPharm;
+ * [] call misery_medical_fnc_randomPharm;
  *
 */
 
-[3, 2] call EFUNC(common,chromaticEffect);
+params ["_dose", "_value"];
 
-if (QCLASSACE(medical) call EFUNC(common,isModLoaded)) then {
-    [player, QCLASS(randomMedication), 0, 300, -40, 0, -40] call ACEFUNC(medical_status,addMedicationAdjustment);
+private _baseRate = -0.00055 * _dose;
+private _baseTRate = 0.00011 * _dose;
+private _intensity = linearConversion [0, 1, _value, 0, 1, false];
+
+[_baseRate * _intensity, "thirst"] call EFUNC(common,addStatusModifier);
+
+[_baseRate * _intensity, "thirst"] call EFUNC(common,addStatusModifier);
+[_baseRate * _intensity, "hunger"] call EFUNC(common,addStatusModifier);
+[_baseTRate * _intensity, "toxicity"] call EFUNC(common,addStatusModifier);
+
+if ([0.5] call EFUNC(common,rollChance)) then {
+    [player, true, 5, true] call ACEFUNC(medical,setUnconscious);
 };
-
-[-0.5, "thirst"] call EFUNC(common,addStatusModifier);
-[-0.5, "hunger"] call EFUNC(common,addStatusModifier);
-[0.1, "toxicity"] call EFUNC(common,addStatusModifier);
-
-[player, true, 10, true] call ACEFUNC(medical,setUnconscious);
-
-

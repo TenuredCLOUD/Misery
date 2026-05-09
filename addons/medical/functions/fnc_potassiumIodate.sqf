@@ -1,21 +1,23 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Potassium Iodate pill usage (radiation removal)
+ * Potassium Iodate usage utilizing ACE medical API
  *
  * Arguments:
- * None
+ * 0: Dose amount <NUMBER>
+ * 0: Effectiviness <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call misery_medicine_fnc_potassiumIodate;
+ * [] call misery_medical_fnc_potassiumIodate;
  *
 */
 
-if (QCLASSACE(medical) call EFUNC(common,isModLoaded)) then {
-    [player, QCLASS(potassiumIodate), 120, 300, 1, 0, 1, 1] call ACEFUNC(medical_status,addMedicationAdjustment);
-};
+params ["_dose", "_value"];
 
-[-0.02, "radiation"] call EFUNC(common,addStatusModifier);
+private _baseRate = -0.00011 * _dose;
+private _intensity = linearConversion [0, 1, _value, 0, 1, false];
+
+[_baseRate * _intensity, "thirst"] call EFUNC(common,addStatusModifier);

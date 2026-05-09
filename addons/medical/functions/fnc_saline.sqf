@@ -4,7 +4,7 @@
  * Saline rehydration utilizing ACE medical API
  *
  * Arguments:
- * 0: Volume <NUMBER>
+ * 0: Flow rate <NUMBER>
  *
  * Return Value:
  * None
@@ -14,9 +14,16 @@
  *
 */
 
-params ["_value"];
+params ["_flowRate"];
 
-if (_value > 0.1) then {
-    [0.001, "thirst"] call EFUNC(common,addStatusModifier);
-};
+// ACE internal constant for mL/s
+private _aceBaseFlow = 4.1667;
 
+private _hydrationPerML = 0.0001;
+
+// Grab mL transfused this exact cycle
+private _mlTransfused = _flowRate * _aceBaseFlow;
+
+private _hydrationRate = _mlTransfused * _hydrationPerML;
+
+[_hydrationRate, "thirst"] call EFUNC(common,addStatusModifier);

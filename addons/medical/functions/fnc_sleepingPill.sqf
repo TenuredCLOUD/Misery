@@ -1,23 +1,26 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * sleep pill usage
+ * Sleeping pill usage utilizing ACE medical API
  *
  * Arguments:
- * None
+ * 0: Dose amount <NUMBER>
+ * 0: Effectiviness <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call misery_medicine_fnc_sleepingPill;
+ * [] call misery_medical_fnc_sleepingPill;
  *
 */
 
+params ["_dose", "_value"];
+
 if (isMultiplayer) exitWith {};
 
-if (QCLASSACE(medical) call EFUNC(common,isModLoaded)) then {
-    [player, QCLASS(sleepingPills), 10, 60, -10, 0, -10, 1] call ACEFUNC(medical_status,addMedicationAdjustment);
-};
+private _baseRate = 0.00055 * _dose;
+private _intensity = linearConversion [0, 1, _value, 0, 1, false];
 
-[1, "energy"] call EFUNC(common,addStatusModifier);
+[_baseRate * _intensity, "energy"] call EFUNC(common,addStatusModifier);
+

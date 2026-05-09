@@ -1,21 +1,23 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Antiparasitic pill usage
+ * Antiparasitic pill usage utilizing ACE medical API
  *
  * Arguments:
- * None
+ * 0: Dose amount <NUMBER>
+ * 0: Effectiviness <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call misery_medicine_fnc_antiparasitic;
+ * [] call misery_medical_fnc_antiparasitic;
  *
 */
 
-if (QCLASSACE(medical) call EFUNC(common,isModLoaded)) then {
-    [player, QCLASS(antiparasitic), 10, 60, -15, 0, -15, 1] call ACEFUNC(medical_status,addMedicationAdjustment);
-};
+params ["_dose", "_value"];
 
-[-1, "parasites"] call EFUNC(common,addStatusModifier);
+private _baseRate = -0.00055 * _dose;
+private _intensity = linearConversion [0, 1, _value, 0, 1, false];
+
+[_baseRate * _intensity, "parasites"] call EFUNC(common,addStatusModifier);

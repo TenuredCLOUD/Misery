@@ -21,7 +21,7 @@
 
     if (isGamePaused) exitWith {};
 
-    private _activeMeds = [player] call ACEFUNC(medical_status,getAllMedicationCount);
+    private _activeMeds = [player, false] call ACEFUNC(medical_status,getAllMedicationCount);
     private _activeIVs = player call ACEFUNC(medical,getIVs);
 
     if (_activeMeds isEqualTo [] && _activeIVs isEqualTo []) exitWith {};
@@ -37,13 +37,13 @@
             // Grab function through missionNamespace data
             private _function = missionNamespace getVariable [_functionName, nil];
 
-            [_effectiveness] call _function;
+            [_dose, _effectiveness] call _function;
         };
 
     } forEach _activeMeds;
 
     {
-        _x params ["_volume", "", "", "", "", "_ivClass"];
+        _x params ["", "", "", "", "_flowRate", "_ivClass"];
 
         private _index = MACRO_MEDICATION_REGISTRY findIf { toLower(_x select 0) isEqualTo toLower(_ivClass) };
 
@@ -53,7 +53,7 @@
             // Grab function through missionNamespace data
             private _function = missionNamespace getVariable [_functionName, nil];
 
-            [_volume] call _function;
+            [_flowRate] call _function;
         };
 
     } forEach _activeIVs;

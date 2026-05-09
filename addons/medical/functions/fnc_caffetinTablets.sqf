@@ -1,22 +1,23 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Caffetin tablets usage
+ * Caffetin tablets usage utilizing ACE medical API
  *
  * Arguments:
- * None
+ * 0: Dose amount <NUMBER>
+ * 0: Effectiviness <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call misery_medicine_fnc_caffetinTablets;
+ * [] call misery_medical_fnc_caffetinTablets;
  *
 */
 
-if (QCLASSACE(medical) call EFUNC(common,isModLoaded)) then {
-    [player, QCLASS(caffetin), 120, 300, 1, 0, 1, 1] call ACEFUNC(medical_status,addMedicationAdjustment);
-};
+params ["_dose", "_value"];
 
-[-0.2, "infection"] call EFUNC(common,addStatusModifier);
-[-0.2, "exposure"] call EFUNC(common,addStatusModifier);
+private _baseRate = -0.00055 * _dose;
+private _intensity = linearConversion [0, 1, _value, 0, 1, false];
+
+[_baseRate * _intensity, "infection"] call EFUNC(common,addStatusModifier);

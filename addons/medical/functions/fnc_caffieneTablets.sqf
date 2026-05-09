@@ -1,40 +1,28 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Caffeine usage
+ * Caffeine usage utilizing ACE medical API
  *
  * Arguments:
- * None
+ * 0: Dose amount <NUMBER>
+ * 0: Effectiviness <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call misery_medicine_fnc_caffieneTablets;
+ * [] call misery_medical_fnc_caffieneTablets;
  *
 */
 
-if (isMultiplayer) exitWith {
-    [3, 2] call EFUNC(common,chromaticEffect);
+params ["_dose", "_value"];
 
-    player enableFatigue false;
+if (isMultiplayer) exitWith {};
 
-    [{
-        player enableFatigue true;
-        player setFatigue 0;
-    }, [], 600] call CBA_fnc_waitAndExecute;
-};
+private _baseRate = 0.00055 * _dose;
+private _intensity = linearConversion [0, 1, _value, 0, 1, false];
 
-[-0.15, "energy"] call EFUNC(common,addStatusModifier);
-
-[3, 2] call EFUNC(common,chromaticEffect);
-
-player enableFatigue false;
-
-[{
-    player enableFatigue true;
-    player setFatigue 0;
-}, [], 600] call CBA_fnc_waitAndExecute;
+[_baseRate * _intensity, "energy"] call EFUNC(common,addStatusModifier);
 
 
 

@@ -4,7 +4,7 @@
  * Uniform protection ratings return
  *
  * Arguments:
- * None
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * Uniform Protection Ratings <ARRAY>
@@ -20,7 +20,9 @@
  *
 */
 
-private _uniform = uniform player;
+params ["_unit"];
+
+private _uniform = uniform _unit;
 if (_uniform isEqualTo "") exitWith {
     MACRO_NO_PROTECTIONS
 };

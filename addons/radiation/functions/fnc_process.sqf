@@ -18,7 +18,7 @@
 
     if (isGamePaused) exitWith {};
 
-    call EFUNC(protection,totalProtection) params ["", "", "_skinProtection", "_respiratoryProtection", "_eyeProtection"];
+    [player] call EFUNC(protection,totalProtection) params ["", "", "_skinProtection", "_respiratoryProtection", "_eyeProtection"];
 
     // Non-linear deficits for better scaling, even with protection of 3 very small radiation leaks occur
     private _skinDeficit = (1 * ((1 - _skinProtection) ^ 1.5)) max 0.001;

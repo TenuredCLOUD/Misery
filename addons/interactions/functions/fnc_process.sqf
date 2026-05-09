@@ -36,7 +36,7 @@
 
 params ["_itemName", "_category", "_delay", "_hungerValue", "_thirstValue", "_energyDeficitValue", "_exposureValue", "_radiationValue", "_infectionValue", "_parasitesValue", "_toxicityValue", "_psychosisValue", "_maskBlocksUse", "_requiresCanOpener", "_removeOnUse", "_replacement", "_sound", "_feedback", "_animation", "_code"];
 
-call EFUNC(protection,totalProtection) params ["_gasMask", "_scba"];
+[player] call EFUNC(protection,totalProtection) params ["_gasMask", "_scba"];
 
 if (_maskBlocksUse && {(_gasMask > 0 || _scba > 0)}) exitWith {
     [QEGVAR(common,tileText), ["You cannot use this item with a mask equipped...", 10]] call CBA_fnc_localEvent;

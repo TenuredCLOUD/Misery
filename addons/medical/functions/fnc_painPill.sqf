@@ -1,22 +1,23 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Pain pill usage
+ * Pain pill usage utilizing ACE medical API
  *
  * Arguments:
- * None
+ * 0: Dose amount <NUMBER>
+ * 0: Effectiviness <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call misery_medicine_fnc_painPill;
+ * [] call misery_medical_fnc_painPill;
  *
 */
 
-if (QCLASSACE(medical) call EFUNC(common,isModLoaded)) then {
-    [player, QCLASS(painkillers), 120, 300, -1, 0.5, -1, 1] call ACEFUNC(medical_status,addMedicationAdjustment);
-} else {
-    private _playerhealth = damage player;
-    player setDamage [_playerhealth - 0.05, false];
-};
+params ["_dose", "_value"];
+
+private _baseRate = -0.00011 * _dose;
+private _intensity = linearConversion [0, 1, _value, 0, 1, false];
+
+[_baseRate * _intensity, "hunger"] call EFUNC(common,addStatusModifier);
