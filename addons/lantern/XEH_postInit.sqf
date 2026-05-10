@@ -2,18 +2,20 @@
 
 // Blacklist the camping lantern for GRAD persistence
 if (isServer) then {
-    [
-        "lantern_menu",
+
+    private _lanternBatteries = [
+        QGVAR(lantern_menu),
         "Add 9v battery to lantern",
-        {[[QCLASS(9vBattery), QCLASS(lantern_NoBattery)]] call EFUNC(common,hasItem)},
+        QPATHTOEF(icons,data\battery_charging_ca.paa),
         {
-            [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
             call FUNC(batteries);
         },
-        "",
-        QPATHTOEF(icons,data\battery_charging_ca.paa),
-        ""
-    ] call EFUNC(actions,addAction);
+        {
+            [[QCLASS(9vBattery), QCLASS(lantern_NoBattery)]] call EFUNC(common,hasItem)
+        }
+    ] call ACEFUNC(interact_menu,createAction);
+
+    [player, 1, [QUOTE(ACE_SelfActions)], _lanternBatteries] call ACEFUNC(interact_menu,addActionToObject);
 
     // if (!isNil "grad_persistence_blacklist") then {
     //     if ((grad_persistence_blacklist find (toLower "Land_Camping_Light_F") isEqualTo -1) && (grad_persistence_blacklist find (toUpper "Land_Camping_Light_F") isEqualTo -1)) then {

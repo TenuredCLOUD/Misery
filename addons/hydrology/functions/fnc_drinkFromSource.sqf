@@ -21,11 +21,7 @@ private _dialog = findDisplay 982380;
 
 [982380, [1600, 1601, 1602], false] call EFUNC(common,displayShowControls);
 
-if (QCLASSACE(field_rations) call EFUNC(common,isModLoaded)) then {
-    player switchMove QACEGVAR(field_rations,drinkFromSourceLow);
-} else {
-    player playAction "Gear";
-};
+player switchMove QACEGVAR(field_rations,drinkFromSourceLow);
 
 playSound3D [QPATHTOEF(audio,sounds\items\drink.ogg), player, false, getPosASL player, 4, 1, 10];
 

@@ -18,10 +18,4 @@
 
 params ["_object", "_value", "_bodyPart"];
 
-private _totalDamage = (damage _object) + _value;
-
-if (QCLASSACE(medical) call EFUNC(common,isModLoaded)) then {
-    [_object, _value, _bodyPart, "unknown", objNull, [], true] call ACEFUNC(medical,addDamageToUnit);
-} else {
-    _object setDamage _totalDamage;
-};
+[_object, _value, _bodyPart, "unknown", objNull, [], true] call ACEFUNC(medical,addDamageToUnit);

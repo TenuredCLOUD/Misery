@@ -19,7 +19,7 @@
 
     if (isGamePaused) exitWith {};
 
-    call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "", "_respiratory"];
+    [player] call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "", "_respiratory"];
     call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "_cartridgeEfficiency"];
 
     if (_scba >= 1) exitWith {};

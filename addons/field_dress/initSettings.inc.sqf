@@ -8,3 +8,12 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     false,
     1
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(dispatchEnabled),
+    "CHECKBOX",
+    ["Small game dispatching", "Allows neck snapping for smaller animals"],
+    _category,
+    false,
+    1
+] call CBA_fnc_addSetting;

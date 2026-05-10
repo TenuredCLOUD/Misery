@@ -126,7 +126,7 @@
 "I_MBT_03_cannon_F"]
 
 // Crafting stations / Fuel stations
-#define MACRO_FUELSTATIONS_LAND "Land_fs_feed_F", "Land_FuelStation_Feed_F", "Land_Ind_TankSmall2", "Land_Ind_TankSmall2_EP1", "Land_A_FuelStation_Feed", "Land_fuelstation", "Land_Ind_FuelStation_Feed_EP1"
+#define MACRO_FUELSTATIONS_LAND "Land_fs_feed_F", "Land_FuelStation_Feed_F", "Land_FuelStation_03_pump_F", "Land_Ind_TankSmall2", "Land_Ind_TankSmall2_EP1", "Land_A_FuelStation_Feed", "Land_fuelstation", "Land_Ind_FuelStation_Feed_EP1"
 #define MACRO_FUELSTATIONS_AIR "B_Slingload_01_Fuel_F", "StorageBladder_01_fuel_forest_F", "StorageBladder_01_fuel_sand_F", "Land_Pod_Heli_Transport_04_fuel_F"
 #define MACRO_CRAFTINGSTATIONS "Land_Workbench_01_F", "Land_PortableDesk_01_olive_F"
 
@@ -347,6 +347,7 @@ QCLASS(guttingKnife), \
 #define MACRO_FIELDDRESS_SKINSOUNDS QEGVAR(audio,sound_skinning01), QEGVAR(audio,sound_skinning02), QEGVAR(audio,sound_skinning03)
 #define MACRO_FIELDDRESS_SAWSOUNDS QEGVAR(audio,sound_boneSaw), QEGVAR(audio,sound_cut01), QEGVAR(audio,sound_cut02), QEGVAR(audio,sound_cut03)
 #define MACRO_FIELDDRESS_ANIMALTYPES "Sheep_random_F", "Goat_random_F", "Cock_random_F", "Hen_random_F", "Rabbit_F"
+#define MACRO_FIELDDRESS_SMALLANIMALTYPES "Cock_random_F", "Hen_random_F", "Rabbit_F"
 
 // Player Status
 #define MACRO_PLAYER_DEFAULTS_HIGH 1
