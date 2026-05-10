@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Dose amount <NUMBER>
- * 0: Effectiviness <NUMBER>
+ * 1: Effectiviness <NUMBER>
  *
  * Return Value:
  * None

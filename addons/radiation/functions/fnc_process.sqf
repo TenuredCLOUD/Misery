@@ -26,6 +26,23 @@
     private _eyeDeficit = (1 * ((1 - _eyeProtection) ^ 1.5)) max 0.001;
     private _baseEffectiveDose = _skinDeficit + _respiratoryDeficit + _eyeDeficit;
 
+    private _radResistance = 1.0;
+    private _activeMeds = [player, false] call ACEFUNC(medical_status,getAllMedicationCount);
+
+    {
+        _x params ["_className", "_dose", "_effectiveness"];
+
+        if (_className isEqualTo QCLASS(potassiumIodate)) then {
+            private _bufferPI = linearConversion [0, 1, _effectiveness, 1.0, 0.2, true];
+            _radResistance = _radResistance * _bufferPI;
+        };
+
+        if (_className isEqualTo QCLASS(deconKit)) then {
+            private _bufferDK = linearConversion [0, 1, _effectiveness, 1.0, 0.6, true];
+            _radResistance = _radResistance * _bufferDK;
+        };
+    } forEach _activeMeds;
+
     private _zoneDose = 0;
     private _rainDose = 0;
 
@@ -55,7 +72,7 @@
         };
     };
 
-    private _totalDose = _zoneDose + _rainDose;
+    private _totalDose = (_zoneDose + _rainDose) * _radResistance;
 
     if (_totalDose > 0) then {
         [_totalDose, "radiation"] call EFUNC(common,addStatusModifier);

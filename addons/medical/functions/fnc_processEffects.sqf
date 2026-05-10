@@ -22,6 +22,7 @@
     if (isGamePaused) exitWith {};
 
     private _activeMeds = [player, false] call ACEFUNC(medical_status,getAllMedicationCount);
+    private _currentBloodstream = _activeMeds apply { toLower (_x select 0) };
     private _activeIVs = player call ACEFUNC(medical,getIVs);
 
     if (_activeMeds isEqualTo [] && _activeIVs isEqualTo []) exitWith {};
@@ -39,6 +40,20 @@
 
             [_dose, _effectiveness] call _function;
         };
+
+        [_className] call FUNC(getMedicationData) params ["", "", "", "", "", "", "", "_incompatibleMedication", "", "_maxDose"];
+
+        // Simulated overdose
+        if (_dose > _maxDose) then {
+            [player, _className, _dose, _maxDose, _className] call ACEFUNC(medical_treatment,overDose);
+        };
+
+        // Incompatible Interaction
+        {
+            if (toLower _x in _currentBloodstream) then {
+                [player, _className, _dose, _maxDose, _x] call ACEFUNC(medical_treatment,overDose);
+            };
+        } forEach _incompatibleMedication;
 
     } forEach _activeMeds;
 
@@ -58,3 +73,4 @@
 
     } forEach _activeIVs;
 }, 1, []] call CBA_fnc_addPerFrameHandler;
+

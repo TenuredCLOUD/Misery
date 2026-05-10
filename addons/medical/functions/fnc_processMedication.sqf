@@ -31,16 +31,20 @@ if ([_className, "CfgMagazines"] call EFUNC(common,configCheck)) then {
 
 // [QACEGVAR(medical_treatment,medicationLocal), [_patient, _bodyPart, _classname], _patient] call CBA_fnc_targetEvent;
 
-private _index = MACRO_MEDICATION_REGISTRY findIf { toLower(_x select 0) isEqualTo toLower(_className) };
+[_className] call FUNC(getMedicationData) params ["_painAdjust", "_timeInSystem", "_timeTillMaxEffect", "_viscosityChange", "_hrIncreaseLow", "_hrIncreaseNormal", "_hrIncreaseHigh", "_incompatibleMedication", "_dose", "_maxDose"];
 
-if (_index isNotEqualTo -1) then {
-    private _entry = MACRO_MEDICATION_REGISTRY select _index;
-    _entry params ["", "", "_timeInSystem", "_duration", "_hrAdjust", "_painAdjust", "_flowAdjust", "_doseValue"];
+private _heartRate = _patient getVariable [QACEGVAR(medical,heartRate), 80];
 
-    [_patient, _className, _timeInSystem, _duration, _hrAdjust, _painAdjust, _flowAdjust, _doseValue] call ACEFUNC(medical_status,addMedicationAdjustment);
+private _hrIncrease = [_hrIncreaseLow, _hrIncreaseNormal, _hrIncreaseHigh] select (floor ((0 max _heartRate min 110) / 55));
 
-    if (_className in [MACRO_MEDICATION_STRONG]) then {
-        [15, 2] call EFUNC(common,chromaticEffect);
-        [_patient, _className] call FUNC(withdrawal);
-    };
+_hrIncrease params ["_minIncrease", "_maxIncrease"];
+
+private _heartRateChange = _minIncrease + random (_maxIncrease - _minIncrease);
+
+[_patient, _className, _timeTillMaxEffect, _timeInSystem, _heartRateChange, _painAdjust, _viscosityChange, _dose] call ACEFUNC(medical_status,addMedicationAdjustment);
+
+if (_className in [MACRO_MEDICATION_STRONG]) then {
+    [15, 2] call EFUNC(common,chromaticEffect);
+    [_patient, _className] call FUNC(withdrawal);
 };
+
