@@ -18,7 +18,7 @@
 private _clothingWarmth = format [localize ECSTRING(common,ClothingWarmthVal), ((player call FUNC(clothing)) select 0)];
 
 if ([[QCLASS(eru_On)]] call EFUNC(common,hasItem)) then {
-    [QEGVAR(common,inventoryTile), [format [_clothingWarmth, localize ECSTRING(common,ClothingInsulationVal), ((player call FUNC(clothing)) select 2), 5]]] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), [format [_clothingWarmth, localize ECSTRING(common,ClothingInsulationVal), ((player call FUNC(clothing)) select 2), 5]]] call CBA_fnc_localEvent;
 } else {
-    [QEGVAR(common,inventoryTile), [format [localize ECSTRING(common,ClothingInsulationVal), ((player call FUNC(clothing)) select 2)], 5]] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), [format [localize ECSTRING(common,ClothingInsulationVal), ((player call FUNC(clothing)) select 2)], 5]] call CBA_fnc_localEvent;
 };

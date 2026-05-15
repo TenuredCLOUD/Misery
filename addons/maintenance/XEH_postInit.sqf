@@ -5,19 +5,6 @@ if (!isNil QACEGVAR(repair,enabled) && {ACEGVAR(repair,enabled)}) exitWith {};
 
 if (isServer) then {
     call FUNC(initVehicles);
-
-    [
-        "maintenance_menu",
-        "Vehicle Maintenance",
-        {([player] call EFUNC(common,nearVehicle)) select 0},
-        {
-            [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-            createDialog QCLASS(maintenance_ui);
-        },
-        "",
-        QPATHTOEF(markers,data\wrench_ca.paa),
-        ""
-    ] call EFUNC(actions,addAction);
 };
 
 if (hasInterface && !GVAR(difficulty)) then {
@@ -77,7 +64,7 @@ if (hasInterface && !GVAR(difficulty)) then {
             3
         ] call ACEFUNC(interact_menu,createAction);
 
-        [QCLASSACE(Track), 0, [QCLASSACE(MainActions)], _trackAction] call ACEFUNC(interact_menu,addActionToClass);
+        [QCLASSACE(Track), 0, [QUOTE(ACE_MainActions)], _trackAction] call ACEFUNC(interact_menu,addActionToClass);
 
         private _wheelAction = [
             QGVAR(aceSalvageTire),
@@ -117,6 +104,6 @@ if (hasInterface && !GVAR(difficulty)) then {
             3
         ] call ACEFUNC(interact_menu,createAction);
 
-        [QCLASSACE(Wheel), 0, [QCLASSACE(MainActions)], _wheelAction] call ACEFUNC(interact_menu,addActionToClass);
+        [QCLASSACE(Wheel), 0, [QUOTE(ACE_MainActions)], _wheelAction] call ACEFUNC(interact_menu,addActionToClass);
     };
 };

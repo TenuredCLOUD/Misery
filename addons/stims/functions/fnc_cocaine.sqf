@@ -1,10 +1,11 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Cocaine usage
+ * Cocaine usage utilizing ACE medical API
  *
  * Arguments:
- * None
+ * 0: Dose amount <NUMBER>
+ * 0: Effectiviness <NUMBER>
  *
  * Return Value:
  * None
@@ -14,19 +15,15 @@
  *
 */
 
+params ["_dose", "_value"];
+
+private _baseRate = -0.00011 * _dose;
+private _baseERate = -0.00055 * _dose;
+private _intensity = linearConversion [0, 1, _value, 0, 1, false];
+
 if !(isMultiplayer) then {
-    [-0.25, "energy"] call EFUNC(common,addStatusModifier);
+    [_baseERate * _intensity, "energy"] call EFUNC(common,addStatusModifier);
 };
 
-if (QCLASSACE(medical) call EFUNC(common,isModLoaded)) then {
-    [player, QCLASS(cocaine), 0, 1800, 25, 0, 25, 1] call ACEFUNC(medical_status,addMedicationAdjustment);
-};
+[_baseRate * _intensity, "hunger"] call EFUNC(common,addStatusModifier);
 
-[3, 2] call EFUNC(common,chromaticEffect);
-
-player enableFatigue false;
-
-[{
-    player enableFatigue true;
-    player setFatigue 0;
-}, [], 1200] call CBA_fnc_waitAndExecute;

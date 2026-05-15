@@ -25,6 +25,7 @@ private _feedBackCompleted = false;
 if (_hunger < 0.75) then {
     if ([1] call EFUNC(common,rollChance)) then {
         playSound selectRandom [MACRO_SURVIVAL_PAIN_HUNGER];
+        player playGesture QEGVAR(animations,hungry);
         _feedBackCompleted = true;
     };
 };

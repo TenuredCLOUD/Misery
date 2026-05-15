@@ -20,7 +20,7 @@
 
         if (isGamePaused) exitWith {};
 
-        call EFUNC(protection,totalProtection) params ["", "_scba"];
+        [player] call EFUNC(protection,totalProtection) params ["", "_scba"];
 
         if (!GVAR(terrifiedState) || !alive player) exitWith {
             _handle call CBA_fnc_removePerFrameHandler;

@@ -28,7 +28,7 @@
         }, [], 15] call CBA_fnc_waitAndExecute;
     };
 
-    private _totalProtection = call EFUNC(protection,totalProtection);
+    private _totalProtection = [player] call EFUNC(protection,totalProtection);
     private _hearingProtection = _totalProtection select 5;
     private _damageMultiplier = 0;
     private _psychModifier = 0;
@@ -41,13 +41,8 @@
     [QUOTE(COMPONENT_BEAUTIFIED), format ["Hearing Protection: %1%2", (_hearingProtection * 100), "%"]] call EFUNC(common,debugMessage);
 
     if (_hearingProtection < 1) then {
-        if (QCLASSACE(medical) call EFUNC(common,isModLoaded)) then {
-            [player, _damageMultiplier, "head", "punch"] call ACEFUNC(medical,addDamageToUnit);
-            QGVAR(display) cutRsc [QCLASS(tunnel_ui), "PLAIN", 1, false];
-        } else {
-            player setHitPointDamage ["hitHead", _damageMultiplier];
-            QGVAR(display) cutRsc [QCLASS(tunnel_ui), "PLAIN", 1, false];
-        };
+        [player, _damageMultiplier, "head", "punch"] call ACEFUNC(medical,addDamageToUnit);
+        QGVAR(display) cutRsc [QCLASS(tunnel_ui), "PLAIN", 1, false];
     };
 
     if (EGVAR(psychosis,enabled)) then {

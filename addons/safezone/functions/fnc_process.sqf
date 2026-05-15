@@ -13,7 +13,7 @@
  * [] call misery_safezone_fnc_process
 */
 
-[QEGVAR(common,titleText), "You are entering a safezone.."] call CBA_fnc_localEvent;
+[QEGVAR(common,tileText), "You are entering a safezone.."] call CBA_fnc_localEvent;
 
 // Handle Damage
 player allowDamage false;
@@ -39,7 +39,7 @@ player setVariable [QGVAR(index), _index];
 
         private _index = player getVariable [QGVAR(index), 0];
         player removeEventHandler ["Fired", _index];
-        [QEGVAR(common,titleText), "You have left a safezone.."] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), "You have left a safezone.."] call CBA_fnc_localEvent;
 
         player setVariable [QGVAR(insideArea), false, true];
 

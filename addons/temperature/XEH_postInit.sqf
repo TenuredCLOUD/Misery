@@ -13,14 +13,14 @@ if (GVAR(breathFogAllowed)) then {
 
 if !(GVAR(clothingCheckAction)) exitWith {};
 
-[
-    "insulation_check_menu",
+private _insulationCheckAction = [
+    QGVAR(insulation_check_menu),
     localize ECSTRING(common,CheckClothing),
-    {true},
-    {
-    call FUNC(insulation);
-    },
-    "",
     QPATHTOEF(icons,data\layers_plus_ca.paa),
-    ""
-] call EFUNC(actions,addAction);
+    {
+        call FUNC(insulation);
+    },
+    {true}
+] call ACEFUNC(interact_menu,createAction);
+
+[player, 1, [QUOTE(ACE_SelfActions), QUOTE(ACE_Equipment)], _insulationCheckAction] call ACEFUNC(interact_menu,addActionToObject);
