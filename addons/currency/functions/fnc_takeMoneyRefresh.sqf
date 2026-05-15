@@ -4,7 +4,7 @@
  * Take money menu UI
  *
  * Arguments:
- * None
+ * 0: Corpse <OBJECT>
  *
  * Return Value:
  * None
@@ -14,26 +14,26 @@
  *
 */
 
-[{
-    params ["_args", "_handle"];
+params ["_corpse"];
 
-    if (isNull findDisplay 358492) exitWith {
-        _handle call CBA_fnc_removePerFrameHandler;
-    };
+[{!isNull findDisplay 358492}, {
+    params ["_corpse"];
+    [{
+        params ["_args", "_handle"];
+        _args params ["_corpse"];
 
-    call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
+        if (isNull findDisplay 358492) exitWith {
+            _handle call CBA_fnc_removePerFrameHandler;
+        };
 
-    [player, ["CAManBase"], 2] call EFUNC(common,nearCorpse) params ["_isNear", "_corpse"];
-    private _corpseFunds = _corpse getVariable [QGVAR(funds), MACRO_PLAYER_DEFAULTS_LOW];
+        call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
-    private _playerFundsParsed = _funds call BIS_fnc_parseNumber;
-    private _playerFundsFormatted = [_playerFundsParsed, 1, 2, true] call CBA_fnc_formatNumber;
-    private _playerFundsText = format ["%3: %1 %2", GVAR(symbol), _playerFundsFormatted, profileName];
+        private _corpseFunds = _corpse getVariable [QGVAR(funds), MACRO_PLAYER_DEFAULTS_LOW];
 
-    private _corpseFundsParsed = _corpseFunds call BIS_fnc_parseNumber;
-    private _corpseFundsFormatted = [_corpseFundsParsed, 1, 2, true] call CBA_fnc_formatNumber;
-    private _corpseFundsText = format ["%3: %1 %2", GVAR(symbol), _corpseFundsFormatted, "Corpse"];
+        private _corpseFundsParsed = _corpseFunds call BIS_fnc_parseNumber;
+        private _corpseFundsFormatted = [_corpseFundsParsed, 1, 2, true] call CBA_fnc_formatNumber;
+        private _corpseFundsText = format ["%3: %1 %2", GVAR(symbol), _corpseFundsFormatted, "Corpse"];
 
-    ctrlSetText [1001, _corpseFundsText];
-    ctrlSetText [1002, _playerFundsText];
-}, 0.1] call CBA_fnc_addPerFrameHandler;
+        ctrlSetText [1001, _corpseFundsText];
+    }, 0.1, [_corpse]] call CBA_fnc_addPerFrameHandler;
+}, [_corpse]] call CBA_fnc_waitUntilAndExecute;

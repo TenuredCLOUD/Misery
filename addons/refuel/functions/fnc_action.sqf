@@ -18,15 +18,20 @@ if !(call FUNC(checkAreas)) exitWith {
     [QUOTE(COMPONENT_BEAUTIFIED), "Marker check system failed, system disabled."] call EFUNC(common,debugMessage);
 };
 
-[
-    "refuel_menu",
-    localize ECSTRING(common,ReqRefuel),
-    {GVAR(areas) findIf {player inArea _x} isNotEqualTo -1},
-    {
-    [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-    createDialog QCLASS(refuelShop_ui);
-    },
-    "",
-    "",
-    ""
-] call EFUNC(actions,addAction);
+["AllVehicles", "Init", {
+    params ["_vehicle"];
+
+    private _requestRefuelAction = [
+        QGVAR(refuel_menu),
+        localize ECSTRING(common,ReqRefuel),
+        QPATHTOEF(markers,data\fuel_ca.paa),
+        {
+            createDialog QCLASS(refuelShop_ui);
+        },
+        {
+            GVAR(areas) findIf {player inArea _x} isNotEqualTo -1
+        }
+    ] call ACEFUNC(interact_menu,createAction);
+
+    [_vehicle, 0, [QUOTE(ACE_MainActions)], _requestRefuelAction] call ACEFUNC(interact_menu,addActionToObject);
+}, true, ["Man", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler;

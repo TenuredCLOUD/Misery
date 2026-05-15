@@ -4,7 +4,7 @@
  * Facewear protection ratings return
  *
  * Arguments:
- * None
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * Facewear Protection Ratings <ARRAY>
@@ -20,7 +20,9 @@
  *
 */
 
-private _facewear = goggles player;
+params ["_unit"];
+
+private _facewear = goggles _unit;
 if (_facewear isEqualTo "") exitWith {
     MACRO_NO_PROTECTIONS
 };

@@ -4,7 +4,7 @@
  * Total protection ratings return
  *
  * Arguments:
- * None
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * Total Protection Ratings <ARRAY>
@@ -20,16 +20,18 @@
  *
 */
 
+params ["_unit"];
+
 // Gather all protection arrays
 private _allGear = [
-    call FUNC(facewear),
-    call FUNC(headgear),
-    call FUNC(uniform),
-    call FUNC(vest)
+    _unit call FUNC(facewear),
+    _unit call FUNC(headgear),
+    _unit call FUNC(uniform),
+    _unit call FUNC(vest)
 ];
 
 // Start with the backpack as the base
-private _totals = call FUNC(backpack);
+private _totals = _unit call FUNC(backpack);
 
 {
     private _currentGearArray = _x;

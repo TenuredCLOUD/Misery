@@ -21,6 +21,6 @@ private _allObjects = _center nearObjects ["All", worldSize];
     private _type = toLower typeOf _x;
     if ("fuel" in _type || "tank" in _type || "feed" in _type) then {
         _x setFuelCargo 0;
-        _x setVariable ["ace_refuel_currentFuelCargo", 0, true];
+        _x setVariable [QACEGVAR(refuel,currentFuelCargo), 0, true];
     };
 } forEach _allObjects;

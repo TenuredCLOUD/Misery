@@ -18,15 +18,20 @@ if !(call FUNC(checkAreas)) exitWith {
     [QUOTE(COMPONENT_BEAUTIFIED), "Marker check system failed, system disabled."] call EFUNC(common,debugMessage);
 };
 
-[
-    "rearm_menu",
-    localize ECSTRING(common,ReqResupply),
-    {GVAR(areas) findIf {player inArea _x} isNotEqualTo -1},
-    {
-    [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-    createDialog QCLASS(rearmShop_ui);
-    },
-    "",
-    "",
-    ""
-] call EFUNC(actions,addAction);
+["AllVehicles", "Init", {
+    params ["_vehicle"];
+
+    private _requestRearmAction = [
+        QGVAR(rearm_menu),
+        localize ECSTRING(common,ReqResupply),
+        QUOTE(a3\weapons_f\ammoboxes\data\ui\map_ammoveh_f_ca.paa),
+        {
+            createDialog QCLASS(rearmShop_ui);
+        },
+        {
+            GVAR(areas) findIf {player inArea _x} isNotEqualTo -1
+        }
+    ] call ACEFUNC(interact_menu,createAction);
+
+    [_vehicle, 0, [QUOTE(ACE_MainActions)], _requestRearmAction] call ACEFUNC(interact_menu,addActionToObject);
+}, true, ["Man", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler;

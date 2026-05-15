@@ -60,6 +60,7 @@ for "_i" from 1 to _numEntities do {
             } else {
                 selectRandom [MACRO_WZC_SPECIAL_ZOMBIES];
             };
+            [_unit, _unit] call ACEFUNC(common,claim);
             _unit = _group createUnit [_class, _outsidePos, [], 0, "NONE"];
             _unit setVariable [QGRADGVAR(persistence,isExcluded), true];
             _unit addEventHandler ["Killed", {
@@ -81,6 +82,11 @@ for "_i" from 1 to _numEntities do {
             }];
             _unit enableDynamicSimulation true;
             GVAR(registeredEntities) pushBack _group;
+            [_unit, _unit] call ACEFUNC(common,claim);
+            // set var for money searching if chance exists
+            if (EGVAR(currency,corpseHasMoneyChance) > 0) then {
+                _unit setVariable [QEGVAR(currency,canSearch), true, true];
+            };
         };
     };
 };

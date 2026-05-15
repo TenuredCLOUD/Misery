@@ -41,9 +41,5 @@ GVAR(decayEffect) ppEffectAdjust [
 GVAR(decayEffect) ppEffectCommit 0.5;
 
 if (_decay && _intensity >= 1) then {
-    if ("ace_medical" call EFUNC(common,isModLoaded)) then {
-        [player, 0.33, "head", "unknown", objNull, [], true] call ace_medical_fnc_addDamageToUnit
-    } else {
-        player setHitPointDamage ["hitHead", 0.33]
-    };
+    [player, 0.33, "head", "unknown", objNull, [], true] call ACEFUNC(medical,addDamageToUnit);
 };

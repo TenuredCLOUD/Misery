@@ -28,52 +28,37 @@
         }, [], 15] call CBA_fnc_waitAndExecute;
     };
 
-    [] call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "_skinProtection", "_respiratoryProtection", "_eyeProtection", "_hearingProtection"];
+    [player] call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "_skinProtection", "_respiratoryProtection", "_eyeProtection", "_hearingProtection"];
 
     private _skinDeficit = (1 * ((1 - _skinProtection) ^ 1.5)) max 0;
     private _respiratoryDeficit = (1 * ((1 - _respiratoryProtection) ^ 1.5)) max 0;
     private _eyeDeficit = (1 * ((1 - _eyeProtection) ^ 1.5)) max 0;
     private _randomPartAce = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"];
-    private _randomPart = ["hitHead", "hitBody", "hitHands", "hitLegs"];
 
     private _finalSkinDeficit = _skinDeficit / 3;
     private _finalRespiratoryDeficit = _respiratoryDeficit / 3;
     private _finalEyeDeficit = _eyeDeficit / 3;
 
-    private _fatigueValue = [getFatigue player, player getVariable ["ace_advanced_fatigue_aimFatigue", 0]] select (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled});
+    private _fatigueValue = [getFatigue player, player getVariable [QACEGVAR(advanced_fatigue,aimFatigue), 0]] select (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)});
 
-    if ("ace_medical" call EFUNC(common,isModLoaded)) then {
-        if (_skinProtection < 1) then {
-            [player, _finalSkinDeficit, selectRandom _randomPartAce, "burn"] call ace_medical_fnc_addDamageToUnit;
+
+    if (_skinProtection < 1) then {
+        [player, _finalSkinDeficit, selectRandom _randomPartAce, "burn"] call ACEFUNC(medical,addDamageToUnit);
+    };
+
+    if (_respiratoryProtection < 1) then {
+        [player, _finalRespiratoryDeficit, "Body", "burn"] call ACEFUNC(medical,addDamageToUnit);
+
+        if (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)}) then {
+            player setVariable [QACEGVAR(advanced_fatigue,aimFatigue), _fatigueValue + 1];
+        } else {
+            player setFatigue (_fatigueValue + 1);
         };
-        if (_respiratoryProtection < 1) then {
-            [player, _finalRespiratoryDeficit, "Body", "burn"] call ace_medical_fnc_addDamageToUnit;
-            if (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled}) then {
-                player setVariable ["ace_advanced_fatigue_aimFatigue", _fatigueValue + 1];
-            } else {
-                player setFatigue (_fatigueValue + 1);
-            };
-        };
-        if (_eyeProtection < 1) then {
-            [player, _finalEyeDeficit, "Head", "burn"] call ace_medical_fnc_addDamageToUnit;
-            QGVAR(display) cutRsc [QCLASS(bloodshot_ui), "PLAIN", 1, false];
-        };
-    } else {
-        if (_skinProtection < 1) then {
-            player setHitPointDamage [selectRandom _randomPart, _finalSkinDeficit];
-        };
-        if (_respiratoryProtection < 1) then {
-            player setHitPointDamage ["hitBody", _finalRespiratoryDeficit];
-            if (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled}) then {
-                player setVariable ["ace_advanced_fatigue_aimFatigue", _fatigueValue + 1];
-            } else {
-                player setFatigue (_fatigueValue + 1);
-            };
-        };
-        if (_eyeProtection < 1) then {
-            player setHitPointDamage ["hitHead", _finalEyeDeficit];
-            QGVAR(display) cutRsc [QCLASS(bloodshot_ui), "PLAIN", 1, false];
-        };
+    };
+
+    if (_eyeProtection < 1) then {
+        [player, _finalEyeDeficit, "Head", "burn"] call ACEFUNC(medical,addDamageToUnit);
+        QGVAR(display) cutRsc [QCLASS(bloodshot_ui), "PLAIN", 1, false];
     };
 
     [QUOTE(COMPONENT_BEAUTIFIED), format ["Chemical Area Protection: Skin %1%4, Respiratory %2%4, Eye %3%4", (_skinProtection * 100), (_respiratoryProtection * 100), (_eyeProtection * 100), "%"]] call EFUNC(common,debugMessage);

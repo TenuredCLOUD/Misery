@@ -23,15 +23,18 @@ private _miningObject = objNull;
 private _objectData = [];
 
 {
-    private _model = (getModelInfo _x) select 0;
-    if (!isNil "_model") then {
-        private _index = GVAR(miningObjects) findIf {_x select 0 isEqualTo _model};
-        if (_index isNotEqualTo -1) then {
-            private _pos = getPosATL _x;
-            _miningObject = _x;
-            _objectData = GVAR(miningObjects) select _index;
-            break;
-        };
+    if (isNull _x) then { continue };
+
+    private _modelData = getModelInfo _x;
+    if (_modelData isEqualTo []) then { continue };
+
+    private _model = _modelData select 0;
+
+    private _index = GVAR(miningObjects) findIf {_x select 0 isEqualTo _model};
+    if (_index isNotEqualTo -1) then {
+        _miningObject = _x;
+        _objectData = GVAR(miningObjects) select _index;
+        break;
     };
 } forEach _nearObjects;
 

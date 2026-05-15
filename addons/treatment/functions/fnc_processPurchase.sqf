@@ -75,8 +75,8 @@ private _currentStep = 0;
         [-_price] call EFUNC(currency,modifyMoney);
 
         if (isNil "_action") then {
-            if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
-                [player] call ace_medical_treatment_fnc_fullHealLocal;
+            if ([QCLASSACE(medical)] call EFUNC(common,isModLoaded)) then {
+                [player] call ACEFUNC(medical_treatment,fullHealLocal);
             } else {
                 player setDamage 0;
             };

@@ -33,7 +33,7 @@ if (isClass (missionConfigFile >> "CfgMisery_TemperatureData" >> "DailyTemps")) 
 
     private _altitude = (getPosASL player) select 2;
 
-    _airTemp = [_airTemp - (_altitude / 1000) * 6.5, ace_weather_currentTemperature] select (!isNil "ace_weather_enabled" && {ace_weather_enabled}); // Temperature in Celsius at altitude or ace calculation
+    _airTemp = [_airTemp - (_altitude / 1000) * 6.5, ACEGVAR(weather,currentTemperature)] select (!isNil QACEGVAR(weather,enabled) && {ACEGVAR(weather,enabled)}); // Temperature in Celsius at altitude or ace calculation
 
     private _windChillIndexCelsius = _airTemp;
 

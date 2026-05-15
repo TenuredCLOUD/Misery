@@ -17,6 +17,8 @@
 
 [1] call EFUNC(common,getLookedAtTarget) params ["_object"];
 
+if (isNull _object) exitWith {[false, objNull, []]};
+
 private _modelInfo = getModelInfo _object select 0;
 
 private _searchableObject = objNull;

@@ -90,6 +90,16 @@ for "_i" from 1 to _numEntities do {
     };
 
     _unit setVariable [QGRADGVAR(persistence,isExcluded), true];
+    if (!isNil "grad_persistence_blacklist") then {
+        [_unit] call grad_persistence_fnc_blacklistObjects;
+    };
+
+    [_unit, _unit] call ACEFUNC(common,claim);
+
+    // set var for money searching if chance exists
+    if (EGVAR(currency,corpseHasMoneyChance) > 0) then {
+        _unit setVariable [QEGVAR(currency,canSearch), true, true];
+    };
 };
 
 [{

@@ -16,8 +16,8 @@
 
 private _damaged = false;
 
-if ("ace_medical" call EFUNC(common,isModLoaded)) then {
-    _damaged = player call ace_medical_fnc_isInjured;
+if (QCLASSACE(medical) call EFUNC(common,isModLoaded)) then {
+    _damaged = player call ACEFUNC(medical,isInjured);
 } else {
     _damaged = (damage player) > 0.25;
 };

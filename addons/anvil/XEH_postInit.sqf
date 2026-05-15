@@ -9,18 +9,22 @@ if !(isClass (missionConfigFile >> "CfgMisery_ForgeData")) exitWith {
 if (isClass (missionConfigFile >> "CfgMisery_AnvilData")) then {
     [] call FUNC(parseData);
 
-    [
-        "anvil_menu",
+    private _anvilAction = [
+        QGVAR(anvil_menu),
         localize ECSTRING(common,UseAnvil),
-        {[[QCLASS(anvil)], 2.5] call EFUNC(common,nearCraftingStation)},
+        QPATHTOEF(icons,data\anvil_ca.paa),
         {
-            [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
+            params ["_target", "_player"];
             createDialog QCLASS(anvil_ui);
         },
-        "",
-        QPATHTOEF(icons,data\anvil_ca.paa),
-        ""
-    ] call EFUNC(actions,addAction);
+        {true},
+        {},
+        ["_target", "_player"],
+        [0, 0, 0],
+        3
+    ] call ACEFUNC(interact_menu,createAction);
+
+    [QCLASS(anvil), 0, [QUOTE(ACE_MainActions)], _anvilAction] call ACEFUNC(interact_menu,addActionToClass);
 } else {
     [QUOTE(COMPONENT_BEAUTIFIED), "CfgMisery_AnvilData class not found in description.ext, skipping data parser..."] call EFUNC(common,debugMessage);
 };

@@ -9,5 +9,4 @@ PREP(handleRadiation);
 PREP(handleTemperature);
 PREP(handleThirst);
 PREP(loop);
-PREP(setUnconscious);
 PREP(visualizeDecay);

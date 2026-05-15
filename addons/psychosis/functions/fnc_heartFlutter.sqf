@@ -20,7 +20,7 @@
 
         if (isGamePaused) exitWith {};
 
-        call EFUNC(protection,totalProtection) params ["", "_scba"];
+        [player] call EFUNC(protection,totalProtection) params ["", "_scba"];
 
         if (!GVAR(terrifiedState) || !alive player) exitWith {
             _handle call CBA_fnc_removePerFrameHandler;
@@ -35,6 +35,6 @@
             playSound selectRandom [MACRO_PSYCHOSIS_BREATH];
         };
 
-        [player, QUOTE(psychosisEffect), 2, 2, 15, 0, 15, 1] call ace_medical_status_fnc_addMedicationAdjustment;
+        [player, QUOTE(psychosisEffect), 2, 2, 15, 0, 15, 1] call ACEFUNC(medical_status,addMedicationAdjustment);
     }, 5, []] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;
