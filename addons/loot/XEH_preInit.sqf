@@ -3,6 +3,7 @@
 ADDON = false;
 
 GVAR(building_used) = [];
+GVAR(activeLogic) = objNull;
 
 #include "XEH_PREP.hpp"
 

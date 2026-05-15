@@ -33,6 +33,7 @@ PREP(nearBuilding);
 PREP(nearCorpse);
 PREP(nearCraftingStation);
 PREP(nearEntities);
+PREP(nearEnvironmentSource);
 PREP(nearFire);
 PREP(nearPlayer);
 PREP(nearRockSource);

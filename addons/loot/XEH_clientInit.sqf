@@ -15,3 +15,13 @@ if (!hasInterface) exitWith {};
 
     publicVariableServer QGVAR(building_used);
 }, []] call CBA_fnc_waitUntilAndExecute;
+
+if (isClass (missionConfigFile >> "CfgMisery_SearchableObjects")) then {
+
+    [QCLASSACE(interactMenuOpened), {
+        params ["_type"];
+        if (_type isNotEqualTo 0) exitWith {};
+
+        [] call FUNC(searchInteraction);
+    }] call CBA_fnc_addEventHandler;
+};
