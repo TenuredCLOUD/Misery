@@ -61,7 +61,7 @@ class CLASS(repairShop_ui) {
             colorBackground[] = {0.2, 0.2, 0.2, 0.7};
             colorFocused[] = {0.5, 0.5, 0.5, 0.7};
             colorActive[] = {0.5, 0.5, 0.5, 0.7};
-            onButtonClick = QUOTE([] call EFUNC(repair,process));
+            onButtonClick = QUOTE([] call EFUNC(repair,purchase));
         };
         class CLASS(repairShop_exit): RscButton {
             idc = 1601;

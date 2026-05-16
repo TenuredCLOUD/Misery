@@ -20,14 +20,14 @@ if !(_found) exitWith {
     [QEGVAR(common,tileText), format ["You need to be near foliage to search for worms..."]] call CBA_fnc_localEvent;
 };
 
-if (GVAR(digPositions) findIf {_x distance getPosATL player < 2.5} isNotEqualTo -1) exitWith {
+if (GVAR(digPositions) findIf {_x distance getPosWorld player < 2.5} isNotEqualTo -1) exitWith {
     [QEGVAR(common,tileText), "This area has already been dug up..."] call CBA_fnc_localEvent;
 };
 
 player playActionNow "Crouch";
 
 if (currentWeapon player isNotEqualTo "") then {
-    player action ["SWITCHWEAPON", player, player, -1];
+    [player] call ACEFUNC(weaponselect,putWeaponAway);
 };
 
 ["Digging for worms...",
@@ -41,7 +41,7 @@ if (currentWeapon player isNotEqualTo "") then {
         [QEGVAR(common,tileText), "You didn't find anything..."] call CBA_fnc_localEvent;
     };
 
-    private _position = getPosATL player;
+    private _position = getPosWorld player;
 
     // Check if position is already cached (within 2.5 meters)
     if (GVAR(digPositions) findIf {_x distance _position < 2.5} isEqualTo -1) then {

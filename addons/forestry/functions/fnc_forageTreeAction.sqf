@@ -4,7 +4,9 @@
  * Wood foraging
  *
  * Arguments:
- * None
+ * 0: Found <BOOL>
+ * 1: Tree <OBJECT>
+ * 2: Damaged <BOOL>
  *
  * Return Value:
  * None
@@ -13,7 +15,7 @@
  *
 */
 
-[player] call EFUNC(common,nearTree) params ["_found", "_nearestTree", "_damaged", "_hasAxe", "_hasSaw"];
+params ["_found", "_tree", "_damaged"];
 
 if !(_found) exitWith {
     [QEGVAR(common,tileText), format ["You need to be near a tree to gather wood..."]] call CBA_fnc_localEvent;
@@ -23,15 +25,15 @@ if (_damaged) exitWith {
     [QEGVAR(common,tileText), format ["Tree has fallen, doesn't have anymore wood..."]] call CBA_fnc_localEvent;
 };
 
-if (GVAR(gatheredPositions) findIf {_x distance getPosATL player < 2.5} isNotEqualTo -1) exitWith {
+if (GVAR(gatheredPositions) findIf {_x distance getPosWorld player < 2.5} isNotEqualTo -1) exitWith {
     [QEGVAR(common,tileText), "This tree's dead wood has been gathered. The remaining wood can be gathered by cutting it down..."] call CBA_fnc_localEvent;
 };
 
 if (currentWeapon player isNotEqualTo "") then {
-    player action ["SWITCHWEAPON", player, player, -1];
+    [player] call ACEFUNC(weaponselect,putWeaponAway);
 };
 
-private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position player);
+private _soundDummy = "Land_HelipadEmpty_F" createVehicle (getPosWorld player);
 _soundDummy attachTo [player, [0, 0, 0], "Pelvis"];
 
 _soundDummy say3D [QCLASS(audio_sound_gatheringFirewood), 25];
@@ -41,15 +43,15 @@ _soundDummy say3D [QCLASS(audio_sound_gatheringFirewood), 25];
 {[player] call EFUNC(common,nearTree) params ["_found", "", "", "", ""]; _found},
 {
     params ["_args"];
-    _args params ["_nearestTree", "_soundDummy"];
+    _args params ["_tree", "_soundDummy"];
 
     if (_soundDummy isNotEqualTo objNull) then {
         deleteVehicle _soundDummy;
     };
 
-    [position player, [[QCLASS(woodensticks), selectRandom [1, 2, 3, 4, 5]]]] call EFUNC(common,spawnLoot);
+    [getPosATL player, [[QCLASS(woodensticks), selectRandom [1, 2, 3, 4, 5]]]] call EFUNC(common,spawnLoot);
 
-    private _position = getPosATL player;
+    private _position = getPosWorld player;
 
     // Check if position is already cached (within 2.5 meters)
     if (GVAR(gatheredPositions) findIf {_x distance _position < 2.5} isEqualTo -1) then {
@@ -63,7 +65,7 @@ _soundDummy say3D [QCLASS(audio_sound_gatheringFirewood), 25];
 },
 {
     params ["_args"];
-    _args params ["_nearestTree", "_soundDummy"];
+    _args params ["_tree", "_soundDummy"];
 
     if (_soundDummy isNotEqualTo objNull) then {
         deleteVehicle _soundDummy;
@@ -71,5 +73,5 @@ _soundDummy say3D [QCLASS(audio_sound_gatheringFirewood), 25];
 
     [QEGVAR(common,tileText), "You stop gathering wood..."] call CBA_fnc_localEvent;
 },
-[_nearestTree, _soundDummy]
+[_tree, _soundDummy]
 ] call CBA_fnc_progressBar;
