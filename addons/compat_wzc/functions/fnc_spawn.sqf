@@ -60,6 +60,7 @@ for "_i" from 1 to _numEntities do {
             } else {
                 selectRandom [MACRO_WZC_SPECIAL_ZOMBIES];
             };
+            [_unit, _unit] call ACEFUNC(common,claim);
             _unit = _group createUnit [_class, _outsidePos, [], 0, "NONE"];
         } else {
             private _unit = _group createUnit ["WBK_C_ExportClass", _outsidePos, [], 0, "NONE"];
@@ -67,6 +68,11 @@ for "_i" from 1 to _numEntities do {
             [_unit, _type] call WBK_LoadAIThroughEden;
             _unit setDamage 0.5; // apply blood effect to all regular zombie types
             _unit setSpeaker "NoVoice"; // ensure no callouts, even with single grouped units
+            [_unit, _unit] call ACEFUNC(common,claim);
+            // set var for money searching if chance exists
+            if (EGVAR(currency,corpseHasMoneyChance) > 0) then {
+                _unit setVariable [QEGVAR(currency,canSearch), true, true];
+            };
         };
     };
 

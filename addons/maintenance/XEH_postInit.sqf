@@ -1,30 +1,17 @@
 #include "script_component.hpp"
 
 // Exit system if ACE repair is enabled
-if (!isNil "ace_repair_enabled" && {ace_repair_enabled}) exitWith {};
+if (!isNil QACEGVAR(repair,enabled) && {ACEGVAR(repair,enabled)}) exitWith {};
 
 if (isServer) then {
     call FUNC(initVehicles);
-
-    [
-        "maintenance_menu",
-        "Vehicle Maintenance",
-        {([player] call EFUNC(common,nearVehicle)) select 0},
-        {
-            [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-            createDialog QCLASS(maintenance_ui);
-        },
-        "",
-        QPATHTOEF(markers,data\wrench_ca.paa),
-        ""
-    ] call EFUNC(actions,addAction);
 };
 
 if (hasInterface && !GVAR(difficulty)) then {
     call FUNC(vehicleControl);
 
     // Add ACE interactions for ace wheels & tracks since even with ace repair disabled players can still interact with spare repair items on vehicles
-    if ("ace_main" call EFUNC(common,isModLoaded)) then {
+    if (QCLASSACE(main) call EFUNC(common,isModLoaded)) then {
         private _trackAction = [
             QGVAR(aceSalvageTrack),
             QUOTE(Salvage Track parts),
@@ -68,16 +55,16 @@ if (hasInterface && !GVAR(difficulty)) then {
                 QUOTE(Salvaging track parts...),
                 {[[QUOTE(ToolKit)]] call EFUNC(common,hasItem) && ([[QCLASS(trackRepairKit)]] call EFUNC(common,hasItem) || [[QCLASS(emptyToolKit)]] call EFUNC(common,hasItem))},
                 []
-                ] call ace_common_fnc_progressBar;
+                ] call ACEFUNC(common,progressBar);
             },
             {true},
             {},
             ["_target", "_player"],
             [0, 0, 0],
             3
-        ] call ace_interact_menu_fnc_createAction;
+        ] call ACEFUNC(interact_menu,createAction);
 
-        ["ACE_Track", 0, ["ACE_MainActions"], _trackAction] call ace_interact_menu_fnc_addActionToClass;
+        [QCLASSACE(Track), 0, [QUOTE(ACE_MainActions)], _trackAction] call ACEFUNC(interact_menu,addActionToClass);
 
         private _wheelAction = [
             QGVAR(aceSalvageTire),
@@ -108,15 +95,15 @@ if (hasInterface && !GVAR(difficulty)) then {
                 QUOTE(Salvaging tire...),
                 {[[QUOTE(ToolKit)]] call EFUNC(common,hasItem)},
                 []
-                ] call ace_common_fnc_progressBar;
+                ] call ACEFUNC(common,progressBar);
             },
             {true},
             {},
             ["_target", "_player"],
             [0, 0, 0],
             3
-        ] call ace_interact_menu_fnc_createAction;
+        ] call ACEFUNC(interact_menu,createAction);
 
-        ["ACE_Wheel", 0, ["ACE_MainActions"], _wheelAction] call ace_interact_menu_fnc_addActionToClass;
+        [QCLASSACE(Wheel), 0, [QUOTE(ACE_MainActions)], _wheelAction] call ACEFUNC(interact_menu,addActionToClass);
     };
 };

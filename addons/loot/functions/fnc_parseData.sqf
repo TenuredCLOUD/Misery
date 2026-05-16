@@ -16,8 +16,6 @@
 
 private _config = missionConfigFile >> "CfgMisery_LootData" >> "LootPool";
 
-GVAR(building_used) = [];
-
 GVAR(chance) = getNumber (_config >> "chance");
 GVAR(uniformItemChance) = getNumber (_config >> "uniformItemChance");
 GVAR(vestsItemChance) = getNumber (_config >> "vestsItemChance");

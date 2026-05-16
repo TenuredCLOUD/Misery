@@ -2,18 +2,20 @@
 
 // Blacklist the camping lantern for GRAD persistence
 if (isServer) then {
-    [
-        "lantern_menu",
+
+    private _lanternBatteries = [
+        QGVAR(lantern_menu),
         "Add 9v battery to lantern",
-        {[[QCLASS(9vBattery), QCLASS(lantern_NoBattery)]] call EFUNC(common,hasItem)},
+        QPATHTOEF(icons,data\battery_charging_ca.paa),
         {
-            [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
             call FUNC(batteries);
         },
-        "",
-        QPATHTOEF(icons,data\battery_charging_ca.paa),
-        ""
-    ] call EFUNC(actions,addAction);
+        {
+            [[QCLASS(9vBattery), QCLASS(lantern_NoBattery)]] call EFUNC(common,hasItem)
+        }
+    ] call ACEFUNC(interact_menu,createAction);
+
+    [player, 1, [QUOTE(ACE_SelfActions)], _lanternBatteries] call ACEFUNC(interact_menu,addActionToObject);
 
     // if (!isNil "grad_persistence_blacklist") then {
     //     if ((grad_persistence_blacklist find (toLower "Land_Camping_Light_F") isEqualTo -1) && (grad_persistence_blacklist find (toUpper "Land_Camping_Light_F") isEqualTo -1)) then {
@@ -35,8 +37,6 @@ if (isServer) then {
 };
 
 if (hasInterface) then {
-    call FUNC(managePower);
-
     player addEventHandler ["Put", {
         params ["_unit", "_container", "_item"];
         if (_item isEqualTo QCLASS(lantern_On) && {local _unit}) then {
@@ -61,4 +61,23 @@ if (hasInterface) then {
             };
         };
     }];
+
+    // Safety fallback for auto-removal of lanterns if still active (on load / reload)
+    [{!isNull player && !isNull findDisplay 46}, {
+        if ([[QCLASS(lantern_On)]] call EFUNC(common,hasItem)) then {
+            if (!isNil {player getVariable [QGVAR(state), nil]}) then {
+                private _lantern = player getVariable [QGVAR(state), nil];
+
+                [_lantern] remoteExec ["deleteVehicle", [0, -2] select isDedicated, _lantern];
+
+                [player, [QCLASS(lantern_On), QCLASS(lantern_Off)], false] call EFUNC(common,switchPowerState);
+
+                player setVariable [QGVAR(state), nil, true];
+            } else {
+                // Fallback for reloader issues
+                [player, [QCLASS(lantern_On), QCLASS(lantern_Off)], false] call EFUNC(common,switchPowerState);
+            };
+        };
+    }, []] call CBA_fnc_waitUntilAndExecute;
 };
+

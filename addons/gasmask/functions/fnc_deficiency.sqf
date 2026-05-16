@@ -19,7 +19,7 @@
 
     if (isGamePaused) exitWith {};
 
-    call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "", "_respiratory"];
+    [player] call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "", "_respiratory"];
     call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "_cartridgeEfficiency"];
 
     if (_scba >= 1) exitWith {};
@@ -40,7 +40,7 @@
     };
 
     if (isNull objectParent player) then {
-        private _fatigue = [getFatigue player, player getVariable ["ace_advanced_fatigue_aimFatigue", 0]] select (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled});
+        private _fatigue = [getFatigue player, player getVariable [QACEGVAR(advanced_fatigue,aimFatigue), 0]] select (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)});
         private _fatiguePenalty = _fatigue * _fatigueMultiplier;
         _decrementValue = _decrementValue + _fatiguePenalty;
     };

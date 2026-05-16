@@ -1,31 +1,57 @@
 #include "script_component.hpp"
 
-if ("ace_refuel" call EFUNC(common,isModLoaded)) exitWith {};
+if (!isNil QACEGVAR(refuel,enabled) && ACEGVAR(refuel,enabled)) exitWith {};
 
-if (isServer) then {
-    [
-        "refuel_pump_menu",
-        localize LSTRING(RefuelAtPump),
-        {[[MACRO_FUELSTATIONS_LAND], 2.5] call EFUNC(common,nearCraftingStation) || [[MACRO_FUELSTATIONS_AIR], 10] call EFUNC(common,nearCraftingStation)},
-        {
-            [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-            createDialog QCLASS(refuelVehicle_ui);
-        },
-        "",
-        QPATHTOEF(markers,data\fuel_ca.paa),
-        ""
-    ] call EFUNC(actions,addAction);
+private _allFuelStations = [MACRO_FUELSTATIONS_LAND] + [MACRO_FUELSTATIONS_AIR];
 
-    [
-        "refuel_fuelCan_pump_menu",
-        localize LSTRING(RefillFuelCanAtPump),
-        {[[MACRO_FUELSTATIONS_LAND], 2.5] call EFUNC(common,nearCraftingStation) || [[MACRO_FUELSTATIONS_AIR], 5] call EFUNC(common,nearCraftingStation)},
-        {
-            [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-            createDialog QCLASS(refuelfuelCan_ui);
-        },
-        "",
-        QPATHTOEF(markers,data\fuel_ca.paa),
-        ""
-    ] call EFUNC(actions,addAction);
-};
+private _fuelPumpAction = [
+    QGVAR(fuel_pump_menu),
+    "Use fuel pump",
+    QPATHTOEF(markers,data\fuel_ca.paa),
+    {},
+    {true},
+    {},
+    ["_target", "_player"],
+    [0, 0, 0],
+    3
+] call ACEFUNC(interact_menu,createAction);
+
+{
+    [_x, 0, [QUOTE(ACE_MainActions)], _fuelPumpAction] call ACEFUNC(interact_menu,addActionToClass);
+} forEach _allFuelStations;
+
+private _refuelPumpAction = [
+    QGVAR(refuel_pump_menu),
+    "Refuel at pump",
+    QPATHTOEF(markers,data\fuel_ca.paa),
+    {
+        createDialog QCLASS(refuelVehicle_ui)
+    },
+    {true},
+    {},
+    ["_target", "_player"],
+    [0, 0, 0],
+    3
+] call ACEFUNC(interact_menu,createAction);
+
+{
+    [_x, 0, [QUOTE(ACE_MainActions), QGVAR(fuel_pump_menu)], _refuelPumpAction] call ACEFUNC(interact_menu,addActionToClass);
+} forEach _allFuelStations;
+
+private _refillPumpAction = [
+    QGVAR(refuel_fuelCan_pump_menu),
+    "Refill fuel can at pump",
+    QPATHTOEF(markers,data\fuel_ca.paa),
+    {
+        createDialog QCLASS(refuelfuelCan_ui)
+    },
+    {true},
+    {},
+    ["_target", "_player"],
+    [0, 0, 0],
+    3
+] call ACEFUNC(interact_menu,createAction);
+
+{
+    [_x, 0, [QUOTE(ACE_MainActions), QGVAR(fuel_pump_menu)], _refillPumpAction] call ACEFUNC(interact_menu,addActionToClass);
+} forEach _allFuelStations;

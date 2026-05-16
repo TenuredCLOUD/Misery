@@ -29,7 +29,7 @@ if (_psychosisLevel < 0.25) exitWith {};
 
 if ([5] call EFUNC(common,rollChance) && GVAR(textEnabled)) then {
     private _text = GVAR(randomTextLines) select (_psychosisLevel > 0.5);
-    [QEGVAR(common,titleText), [selectRandom _text]] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), [selectRandom _text]] call CBA_fnc_localEvent;
 };
 
 if (_psychosisLevel < 0.55) exitWith {

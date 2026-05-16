@@ -20,11 +20,8 @@ disableSerialization;
     if (isNull findDisplay 982377) exitWith {};
 
     private _vitalsDisplay = findDisplay 982377;
-    private _temperatureText = _vitalsDisplay displayCtrl 1015;
-    private _temperatureValue = _vitalsDisplay displayCtrl 1010;
     private _gasMaskText = _vitalsDisplay displayCtrl 1016;
     private _gasMaskBar = _vitalsDisplay displayCtrl 1017;
-    private _currencyValue = _vitalsDisplay displayCtrl 1009;
     private _healthText = _vitalsDisplay displayCtrl 1008;
     private _healthBar = _vitalsDisplay displayCtrl 1011;
     private _hungerBar = _vitalsDisplay displayCtrl 1012;
@@ -36,7 +33,7 @@ disableSerialization;
     private _ailmentsList = _vitalsDisplay displayCtrl 1502;
 
     call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "", "_exposure", "_wetness", "_radiation", "_infection", "_parasites", "_toxicity", "_psychosis", "_buffs", "_ailments", "_funds", "", "_cartridgeEfficiency"];
-    call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "_skinProtection", "_respiratoryProtection", "_eyeProtection", "_hearingProtection"];
+    [player] call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "_skinProtection", "_respiratoryProtection", "_eyeProtection", "_hearingProtection"];
 
     lbClear _buffsList;
     lbClear _ailmentsList;
@@ -87,16 +84,6 @@ disableSerialization;
         _ailmentsList lbSetPicture [_index, _ailmentImage];
     } forEach (player getVariable ["ailments", []]);
 
-    if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
-        private _health = player getVariable ["ace_medical_bloodVolume", 6];
-        _healthText ctrlSetText "Blood:";
-        _healthBar progressSetPosition (_health / 6);
-    } else {
-        private _health = 1 - (damage player);
-        _healthText ctrlSetText "Health:";
-        _healthBar progressSetPosition _health;
-    };
-
     if (!EGVAR(gasmask,enhanced)) then {
         [982377, [1016, 1017], false] call EFUNC(common,displayShowControls);
     } else {
@@ -119,14 +106,9 @@ disableSerialization;
         };
     };
 
-    // auto hide temp readings, moved to ERU only
-    [982377, [1015, 1010], false] call EFUNC(common,displayShowControls);
-
-    _currencyValue ctrlSetText (format ["%1 %2", EGVAR(currency,symbol), [_funds, 1, 2, true] call CBA_fnc_formatNumber]);
-
     _hungerBar progressSetPosition _hunger;
     _thirstBar progressSetPosition _thirst;
-    private _fatigueValue = [getFatigue player, player getVariable ["ace_advanced_fatigue_aimFatigue", 0]] select (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled});
+    private _fatigueValue = [getFatigue player, player getVariable [QACEGVAR(advanced_fatigue,aimFatigue), 0]] select (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)});
     _fatigueBar progressSetPosition _fatigueValue;
 
     if (_wetness <= 0) then {

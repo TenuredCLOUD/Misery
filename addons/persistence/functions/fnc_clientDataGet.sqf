@@ -50,11 +50,11 @@ switch (_stance) do {
 };
 
 private _damageType = typeName _damage;
-if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
+if ([QCLASSACE(medical)] call EFUNC(common,isModLoaded)) then {
     if (_damageType isEqualTo "STRING") then {
-        [player, _damage] call ace_medical_fnc_deserializeState;
+        [player, _damage] call ACEFUNC(medical,deserializeState);
     } else {
-        [player, MACRO_DEFAULT_ACE_DAMAGE] call ace_medical_fnc_deserializeState;
+        [player, MACRO_DEFAULT_ACE_DAMAGE] call ACEFUNC(medical,deserializeState);
     };
 } else {
     player setDamage _damage;

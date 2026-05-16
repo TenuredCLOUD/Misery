@@ -10,7 +10,7 @@ if (!hasInterface) exitWith {};
 
     if (GVAR(overlays)) then {
         // Only allow if ACE overlays aren't enabled
-        if (!isNil "ace_goggles_drawOverlay" && !ace_goggles_drawOverlay) then {
+        if (!isNil QACEGVAR(goggles,drawOverlay) && !ACEGVAR(goggles,drawOverlay)) then {
             call FUNC(overlays);
         };
     };
@@ -20,11 +20,11 @@ if (!hasInterface) exitWith {};
     };
 
     // Only create mask break events, if enabled in ACE
-    if (!isNil "ace_goggles_effects" && ace_goggles_effects >= 2) then {
-        ["ace_glassesCracked", {
+    if (!isNil QACEGVAR(goggles,effects) && ACEGVAR(goggles,effects) >= 2) then {
+        [QCLASSACE(glassesCracked), {
             params ["_unit"];
             if (_unit isEqualTo player) then {
-                if ([_unit] call ace_goggles_fnc_isGogglesVisible) then {
+                if ([_unit] call ACEFUNC(goggles,isGogglesVisible)) then {
                     [QEGVAR(common,tileText), format ["%1 broken, removing equipment...", [goggles _unit] call EFUNC(common,getItemData) select 0]] call CBA_fnc_localEvent;
                     [{
                         params ["_unit"];

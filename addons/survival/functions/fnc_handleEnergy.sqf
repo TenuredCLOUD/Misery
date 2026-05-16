@@ -29,10 +29,6 @@ player setVariable [QGVAR(energyDeficit), _finalEnergy];
 
 private _isSleeping = player getVariable [QEGVAR(sleep,isSleeping), false];
 
-if (_energyDeficit > 0.9 && !(_isSleeping) && [25] call EFUNC(common,rollChance)) then {
-    if ("ace_medical" call EFUNC(common,isModLoaded)) then {
-        [player, true, 5, true] call ace_medical_fnc_setUnconscious;
-    } else {
-        [player, 5] call FUNC(setUnconscious);
-    };
+if (_energyDeficit > 0.9 && !(_isSleeping) && [1] call EFUNC(common,rollChance)) then {
+    [player, true, 5, true] call ACEFUNC(medical,setUnconscious);
 };

@@ -4,25 +4,25 @@ if (GVAR(woodCollection)) then {
 
     GVAR(gatheredPositions) = [];
 
-    [
-        "forestryCollectWood_menu",
-        localize LSTRING(CollectWood),
-        {([player] call EFUNC(common,nearTree)) select 0},
+    private _forestryCollectWood = [
+        QGVAR(forestryCollectWood_menu),
+        localize ECSTRING(common,CollectWood),
+        QPATHTOEF(icons,data\trees_ca.paa),
         {
-            [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
             [] call FUNC(forageTreeAction);
         },
-        "",
-        QPATHTOEF(icons,data\trees_ca.paa),
-        ""
-    ] call EFUNC(actions,addAction);
-
-    [
-        "forestrySplitLog_menu",
-        localize LSTRING(SplitWoodLog),
-        {[[QCLASS(woodenlog)]] call EFUNC(common,hasItem)},
         {
-            [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
+            insideBuilding player isNotEqualTo 1 && ([player] call EFUNC(common,nearTree)) select 0
+        }
+    ] call ACEFUNC(interact_menu,createAction);
+
+    [player, 1, [QUOTE(ACE_SelfActions)], _forestryCollectWood] call ACEFUNC(interact_menu,addActionToObject);
+
+    private _forestrySplitLog = [
+        QGVAR(forestrySplitLog_menu),
+        localize ECSTRING(common,SplitWoodLog),
+        QPATHTOEF(icons,data\axe_ca.paa),
+        {
             if !([[QCLASS(woodenlog)]] call EFUNC(common,hasItem)) exitWith {
                 [QEGVAR(common,tileText), localize LSTRING(NoWoodenLogsForSplitting)] call CBA_fnc_localEvent;
             };
@@ -36,10 +36,12 @@ if (GVAR(woodCollection)) then {
                 [QEGVAR(common,tileText), localize LSTRING(NoWoodAxeOrChainsawNoti)] call CBA_fnc_localEvent;
             };
         },
-        "",
-        QPATHTOEF(icons,data\axe_ca.paa),
-        ""
-    ] call EFUNC(actions,addAction);
+        {
+            [[QCLASS(woodenlog)]] call EFUNC(common,hasItem)
+        }
+    ] call ACEFUNC(interact_menu,createAction);
+
+    [player, 1, [QUOTE(ACE_SelfActions)], _forestrySplitLog] call ACEFUNC(interact_menu,addActionToObject);
 };
 
 if (GVAR(foraging)) then {
@@ -47,42 +49,39 @@ if (GVAR(foraging)) then {
     GVAR(tinderPositions) = [];
     GVAR(digPositions) = [];
 
-    [
-        "foraging_menu",
-        localize LSTRING(Forage),
-        {call FUNC(canForage)},
-        {
-            player setVariable [QEGVAR(actions,currentParentID), "foraging_menu"];
-            call EFUNC(actions,displayActions);
-        },
-        "",
+    private _foragingMenu = [
+        QGVAR(foraging_menu),
+        localize ECSTRING(common,Forage),
         QPATHTOEF(icons,data\leaf_ca.paa),
-        ""
-    ] call EFUNC(actions,addAction);
-
-    [
-        "forageWorms_menu",
-        localize LSTRING(ForageDigForWorms),
-        {player getVariable [QEGVAR(actions,currentParentID), ""] isEqualTo "foraging_menu"},
+        {},
         {
-            [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-            [] call FUNC(digForWorms);
-        },
-        "foraging_menu",
-        QPATHTOEF(icons,data\shovel_ca.paa),
-        ""
-    ] call EFUNC(actions,addAction);
+            call FUNC(canForage)
+        }
+    ] call ACEFUNC(interact_menu,createAction);
 
-    [
-        "forageTinder_menu",
-        localize LSTRING(ForageSearchForTinder),
-        {player getVariable [QEGVAR(actions,currentParentID), ""] isEqualTo "foraging_menu"},
-        {
-            [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-            [] call FUNC(searchForTinder);
-        },
-        "foraging_menu",
+    [player, 1, [QUOTE(ACE_SelfActions)], _foragingMenu] call ACEFUNC(interact_menu,addActionToObject);
+
+    private _foragingWormsMenu = [
+        QGVAR(foragingWorms_menu),
+        localize ECSTRING(common,ForageDigForWorms),
         QPATHTOEF(icons,data\shovel_ca.paa),
-        ""
-    ] call EFUNC(actions,addAction);
+        {
+            [] call FUNC(digForWorms)
+        },
+        {true}
+    ] call ACEFUNC(interact_menu,createAction);
+
+    [player, 1, [QUOTE(ACE_SelfActions), QGVAR(foraging_menu)], _foragingWormsMenu] call ACEFUNC(interact_menu,addActionToObject);
+
+    private _foragingTinderMenu = [
+        QGVAR(foragingTinder_menu),
+        localize ECSTRING(common,ForageSearchForTinder),
+        QPATHTOEF(icons,data\leaf_ca.paa),
+        {
+            [] call FUNC(searchForTinder)
+        },
+        {true}
+    ] call ACEFUNC(interact_menu,createAction);
+
+    [player, 1, [QUOTE(ACE_SelfActions), QGVAR(foraging_menu)], _foragingTinderMenu] call ACEFUNC(interact_menu,addActionToObject);
 };

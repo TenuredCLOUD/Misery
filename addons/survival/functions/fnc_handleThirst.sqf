@@ -17,6 +17,8 @@
 
 params ["_decrementValue"];
 
+if (acex_field_rations_enabled) exitWith {};
+
 call EFUNC(common,getPlayerVariables) params ["", "_thirst", "", "", "", "", "", "", "_parasites"];
 
 if (_parasites > 0) then {

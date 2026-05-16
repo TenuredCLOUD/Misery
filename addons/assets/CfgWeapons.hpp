@@ -80,6 +80,7 @@ class CfgWeapons {
     };
 
     class CLASS(clozapine): CLASS(ItemCore) {
+        CLASSACE(isMedicalItem) = 1;
         displayName = CSTRING(Clozapine_DisplayName);
         descriptionShort = CSTRING(Clozapine_Description);
         picture = QPATHTOF(data\icons\Clozapineinjection.paa);
@@ -92,6 +93,7 @@ class CfgWeapons {
     };
 
     class CLASS(cocaine): CLASS(ItemCore) {
+        CLASSACE(isMedicalItem) = 1;
         displayName = CSTRING(Cocaine_DisplayName);
         descriptionShort = CSTRING(Cocaine_Description);
         picture = QPATHTOF(data\icons\cocaine.paa);
@@ -104,6 +106,7 @@ class CfgWeapons {
     };
 
     class CLASS(thrombomodulin): CLASS(ItemCore) {
+        CLASSACE(isMedicalItem) = 1;
         displayName = CSTRING(thbd_DisplayName);
         descriptionShort = CSTRING(thbd_Description);
         picture = QPATHTOF(data\icons\Thbd.paa);
@@ -117,6 +120,7 @@ class CfgWeapons {
     };
 
     class CLASS(thrombomodulin_Stimpack): CLASS(ItemCore) {
+        CLASSACE(isMedicalItem) = 1;
         displayName = CSTRING(thbdStimpack_DisplayName);
         descriptionShort = CSTRING(thbdStimpack_Description);
         picture = QPATHTOF(data\icons\Thbdstim.paa);
@@ -130,6 +134,7 @@ class CfgWeapons {
     };
 
     class CLASS(antidote): CLASS(ItemCore) {
+        CLASSACE(isMedicalItem) = 1;
         displayName = CSTRING(Antidote_DisplayName);
         descriptionShort = CSTRING(Antidote_Description);
         picture = QPATHTOF(data\icons\antidote.paa);
@@ -1139,6 +1144,7 @@ class CfgWeapons {
     };
 
     class CLASS(glucose): CLASS(ItemCore) {
+        CLASSACE(isMedicalItem) = 1;
         displayName = CSTRING(Glucose_DisplayName);
         descriptionShort = CSTRING(Glucose_Description);
         picture = QPATHTOF(data\icons\Glucose.paa);
@@ -1152,6 +1158,7 @@ class CfgWeapons {
     };
 
     class CLASS(electrolyte): CLASS(ItemCore) {
+        CLASSACE(isMedicalItem) = 1;
         displayName = CSTRING(Electrolyte_DisplayName);
         descriptionShort = CSTRING(Electrolyte_Description);
         picture = QPATHTOF(data\icons\Electrolyte.paa);

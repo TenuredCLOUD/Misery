@@ -15,14 +15,16 @@
 */
 
 if ([[QCLASS(geiger_Off)]] call EFUNC(common,hasItem)) then {
-    //[player, [QCLASS(geiger_On), QCLASS(geiger_Off)], true] call EFUNC(common,switchPowerState);
     playSound QEGVAR(audio,sound_geigerOn);
-    [[QCLASS(geiger_Off)], [QCLASS(geiger_On)]] call EFUNC(common,switchMagazine);
+    [player, [QCLASS(geiger_On), QCLASS(geiger_Off)], true] call EFUNC(common,switchPowerState);
+    // Chance to decrement battery by one tick on power cycle
+    if ([40] call EFUNC(common,rollChance)) then {
+        [QCLASS(geiger_On), QCLASS(geiger_NoBattery)] call EFUNC(common,itemDecrement);
+    };
     call FUNC(readings);
 };
 
 if ([[QCLASS(geiger_On)]] call EFUNC(common,hasItem)) then {
-    //[player, [QCLASS(geiger_On), QCLASS(geiger_Off)], false] call EFUNC(common,switchPowerState);
     playSound QEGVAR(audio,sound_geigerOff);
-    [[QCLASS(geiger_On)], [QCLASS(geiger_Off)]] call EFUNC(common,switchMagazine);
+    [player, [QCLASS(geiger_On), QCLASS(geiger_Off)], false] call EFUNC(common,switchPowerState);
 };

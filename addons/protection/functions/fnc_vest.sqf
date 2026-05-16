@@ -4,7 +4,7 @@
  * Vest protection ratings return
  *
  * Arguments:
- * None
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * Vest Protection Ratings <ARRAY>
@@ -20,7 +20,9 @@
  *
 */
 
-private _vest = vest player;
+params ["_unit"];
+
+private _vest = vest _unit;
 if (_vest isEqualTo "") exitWith {
     MACRO_NO_PROTECTIONS
 };

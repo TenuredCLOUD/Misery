@@ -9,31 +9,50 @@ if (GVAR(enabled)) then {
 ["CAManBase", "hit", {_this call FUNC(infect)}, true, [], true] call CBA_fnc_addClassEventHandler;
 
 if (GVAR(specimensEnabled)) then {
-    [
-        "rvg_zed_skin_menu",
-        "Collect specimen (skin)",
-        {[[MACRO_KNIVES]] call EFUNC(common,hasItem) && ([player, ["zombie"], 2] call EFUNC(common,nearCorpse)) select 0},
-        {
-            [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-            call FUNC(skinCorpse);
-        },
-        "",
-        QPATHTOEF(icons,data\slice_ca.paa),
-        ""
-    ] call EFUNC(actions,addAction);
 
-    [
-        "rvg_zed_saw_menu",
-        "Collect specimen (saw)",
-        {[[QCLASS(boneSaw)]] call EFUNC(common,hasItem) && ([player, ["zombie"], 2] call EFUNC(common,nearCorpse)) select 0},
-        {
-            [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-            call FUNC(sawCorpse);
-        },
-        "",
+    private _zedSkinAction = [
+        QGVAR(zed_skin_menu),
+        "Collect specimen (skin)",
         QPATHTOEF(icons,data\slice_ca.paa),
-        ""
-    ] call EFUNC(actions,addAction);
+        {
+            params ["_target", "_player"];
+            [_target] call FUNC(skinCorpse);
+        },
+        {
+            params ["_target", "_player"];
+            !alive _target && [[MACRO_KNIVES]] call EFUNC(common,hasItem);
+        },
+        {},
+        ["_target", "_player"],
+        [0, 0, 0],
+        3
+    ] call ACEFUNC(interact_menu,createAction);
+
+    {
+        [_x, 0, [QUOTE(ACE_MainActions)], _zedSkinAction] call ACEFUNC(interact_menu,addActionToClass);
+    } forEach GVAR(zombieTypes);
+
+    private _zedSawAction = [
+        QGVAR(zed_saw_menu),
+        "Collect specimen (saw)",
+        QPATHTOEF(icons,data\slice_ca.paa),
+        {
+            params ["_target", "_player"];
+            [_target] call FUNC(sawCorpse);
+        },
+        {
+            params ["_target", "_player"];
+            !alive _target && [[QCLASS(boneSaw)]] call EFUNC(common,hasItem);
+        },
+        {},
+        ["_target", "_player"],
+        [0, 0, 0],
+        3
+    ] call ACEFUNC(interact_menu,createAction);
+
+    {
+        [_x, 0, [QUOTE(ACE_MainActions)], _zedSawAction] call ACEFUNC(interact_menu,addActionToClass);
+    } forEach GVAR(zombieTypes);
 };
 
 // Auto swap logic for Rvg items to prevent conflicts
@@ -43,11 +62,11 @@ player addEventHandler ["Take", {
     // Tents & sleeping bags
     private _campingGear = MACRO_RVG_CAMPING findIf { _item isEqualTo (_x select 0) };
     // Only push swap logic if furniture framework is enabled
-    if (_campingGear isNotEqualTo -1 && EGVAR(furniture,enabled)) then {
+    if (_campingGear isNotEqualTo -1 && !isNil QUOTE(grad_fortifications_playerInventorySize)) then {
         private _oldCampItem = _item;
         private _campKitToAdd = (MACRO_RVG_CAMPING select _campingGear) select 1;
         [_unit, _oldCampItem] call CBA_fnc_removeItem;
-        [_campKitToAdd] call EFUNC(furniture,addToInventory);
+        [player, _campKitToAdd] call grad_fortifications_fnc_addFort;
     };
 
     // Tools
@@ -106,9 +125,9 @@ player addEventHandler ["InventoryOpened", {
         private _oldCampItem = _x select 0;
         private _newCampItem = _x select 1;
 
-        if ([[_oldCampItem]] call EFUNC(common,hasItem) && EGVAR(furniture,enabled)) then {
+        if ([[_oldCampItem]] call EFUNC(common,hasItem) && !isNil QUOTE(grad_fortifications_playerInventorySize)) then {
             [_unit, _oldCampItem] call CBA_fnc_removeItem;
-            [_newCampItem] call EFUNC(furniture,addToInventory);
+            [player, _newCampItem] call grad_fortifications_fnc_addFort;
         };
     } forEach MACRO_RVG_CAMPING;
 

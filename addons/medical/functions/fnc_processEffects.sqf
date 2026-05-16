@@ -1,0 +1,76 @@
+#include "..\script_component.hpp"
+/*
+ * Author: TenuredCLOUD
+ * Medication processor utilizing ACE medical API
+ * Handles Misery medication effects, as well as ACE saline rehydration
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call misery_medical_fnc_processEffects;
+ *
+*/
+
+[{
+
+    if (!alive player) exitWith {};
+
+    if (isGamePaused) exitWith {};
+
+    private _activeMeds = [player, false] call ACEFUNC(medical_status,getAllMedicationCount);
+    private _currentBloodstream = _activeMeds apply { toLower (_x select 0) };
+    private _activeIVs = player call ACEFUNC(medical,getIVs);
+
+    if (_activeMeds isEqualTo [] && _activeIVs isEqualTo []) exitWith {};
+
+    {
+        _x params ["_className", "_dose", "_effectiveness"];
+
+        private _index = MACRO_MEDICATION_REGISTRY findIf { toLower(_x select 0) isEqualTo toLower(_className) };
+
+        if (_index isNotEqualTo -1) then {
+            private _functionName = (MACRO_MEDICATION_REGISTRY select _index) select 1;
+
+            // Grab function through missionNamespace data
+            private _function = missionNamespace getVariable [_functionName, nil];
+
+            [_dose, _effectiveness] call _function;
+        };
+
+        [_className] call FUNC(getMedicationData) params ["", "", "", "", "", "", "", "_incompatibleMedication", "", "_maxDose"];
+
+        // Simulated overdose
+        if (_dose > _maxDose) then {
+            [player, _className, _dose, _maxDose, _className] call ACEFUNC(medical_treatment,overDose);
+        };
+
+        // Incompatible Interaction
+        {
+            if (toLower _x in _currentBloodstream) then {
+                [player, _className, _dose, _maxDose, _x] call ACEFUNC(medical_treatment,overDose);
+            };
+        } forEach _incompatibleMedication;
+
+    } forEach _activeMeds;
+
+    {
+        _x params ["", "", "", "", "_flowRate", "_ivClass"];
+
+        private _index = MACRO_MEDICATION_REGISTRY findIf { toLower(_x select 0) isEqualTo toLower(_ivClass) };
+
+        if (_index isNotEqualTo -1) then {
+            private _functionName = (MACRO_MEDICATION_REGISTRY select _index) select 1;
+
+            // Grab function through missionNamespace data
+            private _function = missionNamespace getVariable [_functionName, nil];
+
+            [_flowRate] call _function;
+        };
+
+    } forEach _activeIVs;
+}, 1, []] call CBA_fnc_addPerFrameHandler;
+

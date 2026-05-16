@@ -1,22 +1,26 @@
 #include "script_component.hpp"
 
 if (hasInterface) then {
-    call FUNC(managePower);
+    // Safety fallback if active eru is in players inventory (on load / reload)
+    [{!isNull player && !isNull findDisplay 46}, {
+        if ([[QCLASS(eru_On)]] call EFUNC(common,hasItem)) then {
+            [player, [QCLASS(eru_On), QCLASS(eru_Off)], false] call EFUNC(common,switchPowerState);
+        };
+    }, []] call CBA_fnc_waitUntilAndExecute;
 };
 
 if !(isServer) exitWith {};
 
-[
-    "eru_menu",
-    localize LSTRING(ERUActionAddBattery),
+private _eruBatteries = [
+    QGVAR(eru_menu),
+    "Add lithium battery to ERU",
+    QPATHTOEF(icons,data\battery_charging_ca.paa),
     {
-        [[QCLASS(lithiumBattery), QCLASS(eru_NoBattery)]] call EFUNC(common,hasItem)
-    },
-    {
-        [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
         call FUNC(batteries);
     },
-    "",
-    QPATHTOEF(icons,data\battery_charging_ca.paa),
-    ""
-] call EFUNC(actions,addAction);
+    {
+        [[QCLASS(lithiumBattery), QCLASS(eru_NoBattery)]] call EFUNC(common,hasItem)
+    }
+] call ACEFUNC(interact_menu,createAction);
+
+[player, 1, [QUOTE(ACE_SelfActions)], _eruBatteries] call ACEFUNC(interact_menu,addActionToObject);

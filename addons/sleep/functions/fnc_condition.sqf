@@ -16,7 +16,11 @@
 
 [2] call EFUNC(common,getLookedAtTarget) params ["_object"];
 
-private _modelInfo = getModelInfo _object select 0;
+private _modelInfo = "";
+
+if (!isNull _object) then {
+    _modelInfo = (getModelInfo _object) select 0;
+};
 
 private _vehicleConfig = "";
 

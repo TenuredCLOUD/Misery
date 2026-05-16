@@ -8,7 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {QCLASS(common), "CUP_Creatures_People_LoadOrder"};
         skipWhenMissingDependencies = 1;
-        skipWhenAnyAddonPresent[] = {"ace_compat_cup_units"};
+        skipWhenAnyAddonPresent[] = {QACEGVAR(compat_cup,units)};
         authors[] = {"TenuredCLOUD"};
         VERSION_CONFIG;
     };

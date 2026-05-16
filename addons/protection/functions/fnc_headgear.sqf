@@ -4,7 +4,7 @@
  * Headgear protection ratings return
  *
  * Arguments:
- * None
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * Headgear Protection Ratings <ARRAY>
@@ -20,7 +20,9 @@
  *
 */
 
-private _headgear = headgear player;
+params ["_unit"];
+
+private _headgear = headgear _unit;
 if (_headgear isEqualTo "") exitWith {
     MACRO_NO_PROTECTIONS
 };

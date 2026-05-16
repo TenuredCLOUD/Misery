@@ -16,9 +16,9 @@
 private _modPrep = [
     ["ravage", isClass (configFile >> "CfgPatches" >> "ravage")],
     ["VandeansonsApocalypse", isClass (configFile >> "CfgPatches" >> "VandeansonsApocalypse")],
-    ["ace_main", isClass (configFile >> "CfgPatches" >> "ace_main")],
-    ["ace_medical", isClass (configFile >> "CfgPatches" >> "ace_medical")],
-    ["ace_refuel", isClass (configFile >> "CfgPatches" >> "ace_refuel")],
+    [QCLASSACE(main), isClass (configFile >> "CfgPatches" >> QCLASSACE(main))],
+    [QCLASSACE(medical), isClass (configFile >> "CfgPatches" >> QCLASSACE(medical))],
+    [QCLASSACE(refuel), isClass (configFile >> "CfgPatches" >> QCLASSACE(refuel))],
     ["NerdMods_iBuild", isClass (configFile >> "CfgPatches" >> "NerdMods_iBuild")],
     ["remnant", isClass (configFile >> "CfgPatches" >> "remnant")],
     ["DSA_Spooks",  isClass (configFile >> "CfgPatches" >> "DSA_Spooks")],

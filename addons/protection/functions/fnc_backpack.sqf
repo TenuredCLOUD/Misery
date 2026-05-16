@@ -4,7 +4,7 @@
  * Backpack protection ratings return
  *
  * Arguments:
- * None
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * Backpack Protection Ratings <ARRAY>
@@ -20,7 +20,9 @@
  *
 */
 
-private _backpack = backpack player;
+params ["_unit"];
+
+private _backpack = backpack _unit;
 if (_backpack isEqualTo "") exitWith {
     MACRO_NO_PROTECTIONS
 };

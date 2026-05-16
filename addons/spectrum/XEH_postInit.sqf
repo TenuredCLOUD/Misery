@@ -9,26 +9,26 @@
 
     if (isServer) then {
         call FUNC(updateDetector);
-        [
-            "spectrumDetector_menu",
-            "Add lithium batteries to spectrum device",
-            {
-                [["hgun_esd_01_dummy_F"]] call EFUNC(common,hasItem) && ([QCLASS(lithiumBattery)] call EFUNC(common,countItem) > 1)
-            },
-            {
-                [QEGVAR(common,exitGui)] call CBA_fnc_localEvent;
-                call FUNC(batteries);
-            },
-            "",
-            QPATHTOEF(icons,data\battery_charging_ca.paa),
-            ""
-        ] call EFUNC(actions,addAction);
     };
 
     if (hasInterface) then {
         call FUNC(detectorAudio);
         call FUNC(entityDetection);
         call FUNC(managePower);
+
+        private _spectrumBatteries = [
+            QGVAR(spectrumDetector_menu),
+            "Add lithium batteries to spectrum device",
+            QPATHTOEF(icons,data\battery_charging_ca.paa),
+            {
+                call FUNC(batteries);
+            },
+            {
+                [["hgun_esd_01_dummy_F"]] call EFUNC(common,hasItem) && ([QCLASS(lithiumBattery)] call EFUNC(common,countItem) > 1)
+            }
+        ] call ACEFUNC(interact_menu,createAction);
+
+        [player, 1, [QUOTE(ACE_SelfActions)], _spectrumBatteries] call ACEFUNC(interact_menu,addActionToObject);
     };
 
     // Set Spectrum device frequency allowance to 1MHz - 1GHz:

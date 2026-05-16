@@ -14,8 +14,6 @@
  *
 */
 
-if (!GVAR(enabled)) exitWith {};
-
 private _players = call EFUNC(common,listPlayers);
 
 // if no players in game, rerun loop after timedown

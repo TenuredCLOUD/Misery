@@ -26,7 +26,7 @@ if (!_breathFog || !alive player) exitWith {
     }, [], 10] call CBA_fnc_waitAndExecute;
 };
 
-private _fatigueValue = [getFatigue player, player getVariable ["ace_advanced_fatigue_aimFatigue", 0]] select (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled});
+private _fatigueValue = [getFatigue player, player getVariable [QACEGVAR(advanced_fatigue,aimFatigue), 0]] select (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)});
 
 // Work delay calculation off fatigue value - 0 to 1 value, 12 seconds near 0 and 2 seconds near 1 (full fatigue)
 GVAR(breathDelay) = linearConversion [0, 1, _fatigueValue, 12, 2];
