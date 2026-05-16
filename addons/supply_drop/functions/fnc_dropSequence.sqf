@@ -42,11 +42,9 @@ _heli flyInHeight 100;
 
     _flare setVelocity [0, 0, -1];
 
-    if (!isNil "grad_persistence_blacklist") then {
-        [_smoke] call grad_persistence_fnc_blacklistObjects;
-        [_flare] call grad_persistence_fnc_blacklistObjects;
-        [_parachute] call grad_persistence_fnc_blacklistObjects;
-    };
+    _smoke setVariable [QGRADGVAR(persistence,isExcluded), true];
+    _flare setVariable [QGRADGVAR(persistence,isExcluded), true];
+    _parachute setVariable [QGRADGVAR(persistence,isExcluded), true];
 
     _heliGroup move [0, 0, 0];
     _heli flyInHeight 75;

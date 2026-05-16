@@ -143,9 +143,8 @@ private _modelSource = [
     };
 } forEach _terrainHouses;
 
-if (!isNil "grad_persistence_blacklist") then {
+if (!isNil QGRADGVAR(persistence,blacklist)) then {
     {
-        //[typeOf _x] call grad_persistence_fnc_blackListClasses;
-        [_x] call grad_persistence_fnc_blacklistObjects;
+        [_x] call GRADFUNC(persistence,blacklistObjects);
     } forEach _replacementBuildings;
 };
