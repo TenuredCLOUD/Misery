@@ -89,6 +89,7 @@ for "_i" from 1 to _numEntities do {
         [_unit] call FUNC(addRecruitOption);
     };
 
+    _unit setVariable [QGRADGVAR(persistence,isExcluded), true];
     if (!isNil "grad_persistence_blacklist") then {
         [_unit] call grad_persistence_fnc_blacklistObjects;
     };

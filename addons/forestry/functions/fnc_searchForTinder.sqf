@@ -25,7 +25,7 @@ if (GVAR(tinderPositions) findIf {_x distance getPosATL player < 2.5} isNotEqual
 };
 
 if (currentWeapon player isNotEqualTo "") then {
-    player action ["SWITCHWEAPON", player, player, -1];
+    [player] call ACEFUNC(weaponselect,putWeaponAway);
 };
 
 private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position player);
@@ -51,7 +51,7 @@ _soundDummy say3D [QCLASS(audio_sound_dryGrass), 25];
         [QEGVAR(common,tileText), localize LSTRING(FoundNothing)] call CBA_fnc_localEvent;
     };
 
-    private _position = getPosATL player;
+    private _position = getPosWorld player;
 
     // Check if position is already cached (within 2.5 meters)
     if (GVAR(tinderPositions) findIf {_x distance _position < 2.5} isEqualTo -1) then {

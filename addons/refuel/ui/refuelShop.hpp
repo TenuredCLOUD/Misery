@@ -61,7 +61,7 @@ class CLASS(refuelShop_ui) {
             colorBackground[] = {0.2, 0.2, 0.2, 0.7};
             colorFocused[] = {0.5, 0.5, 0.5, 0.7};
             colorActive[] = {0.5, 0.5, 0.5, 0.7};
-            onButtonClick = QUOTE([] call EFUNC(refuel,process));
+            onButtonClick = QUOTE([] call EFUNC(refuel,purchase));
         };
         class CLASS(refuelShop_exit): RscButton {
             idc = 1601;

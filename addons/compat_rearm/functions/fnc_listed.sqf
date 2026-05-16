@@ -31,7 +31,7 @@
     private _found = false;
 
     {
-        if ((_x select 0) isEqualTo _nearestVehicle) then {
+        if ((_x select 0) isEqualTo typeOf _nearestVehicle) then {
             _array = _x;
             _found = true;
             _resupplyPrice = _x select 4;

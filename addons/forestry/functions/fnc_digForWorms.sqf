@@ -27,7 +27,7 @@ if (GVAR(digPositions) findIf {_x distance getPosATL player < 2.5} isNotEqualTo 
 player playActionNow "Crouch";
 
 if (currentWeapon player isNotEqualTo "") then {
-    player action ["SWITCHWEAPON", player, player, -1];
+    [player] call ACEFUNC(weaponselect,putWeaponAway);
 };
 
 [localize LSTRING(DiggingWorms),
@@ -41,7 +41,7 @@ if (currentWeapon player isNotEqualTo "") then {
         [QEGVAR(common,tileText), localize LSTRING(FoundNothing)] call CBA_fnc_localEvent;
     };
 
-    private _position = getPosATL player;
+    private _position = getPosWorld player;
 
     // Check if position is already cached (within 2.5 meters)
     if (GVAR(digPositions) findIf {_x distance _position < 2.5} isEqualTo -1) then {
