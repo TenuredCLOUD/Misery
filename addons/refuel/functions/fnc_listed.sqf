@@ -31,7 +31,7 @@
     private _totalLiters = 0;
 
     {
-        if ((_x select 0) isEqualTo _nearestVehicle) then {
+        if ((_x select 0) isEqualTo typeOf _nearestVehicle) then {
             _found = true;
             private _fuelTypeIndex = _x select 1;
             _fuelCost = GVAR(fuelCosts) select _fuelTypeIndex;
