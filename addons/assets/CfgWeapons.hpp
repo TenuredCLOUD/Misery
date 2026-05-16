@@ -1290,6 +1290,7 @@ class CfgWeapons {
     class CLASS(stoneChunk): CLASS(ItemCore) {
         displayName = CSTRING(StoneChunk_DisplayName);
         descriptionShort = CSTRING(StoneChunk_Description);
+        model = "a3\weapons_f\ammo\stone_2.p3d";
         picture = QPATHTOF(data\icons\stonepieces.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1314,6 +1315,7 @@ class CfgWeapons {
     class CLASS(ironOre): CLASS(ItemCore) {
         displayName = CSTRING(IronOre_DisplayName);
         descriptionShort = CSTRING(IronOre_Description);
+        model = "a3\weapons_f\ammo\stone_2.p3d";
         picture = QPATHTOF(data\icons\ironore.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1326,6 +1328,7 @@ class CfgWeapons {
     class CLASS(ironPiece): CLASS(ItemCore) {
         displayName = CSTRING(IronPiece_DisplayName);
         descriptionShort = CSTRING(IronPiece_Description);
+        model = "a3\weapons_f\ammo\stone_2.p3d";
         picture = QPATHTOF(data\icons\ironpiece.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1350,6 +1353,7 @@ class CfgWeapons {
     class CLASS(goldOre): CLASS(ItemCore) {
         displayName = CSTRING(GoldOre_DisplayName);
         descriptionShort = CSTRING(GoldOre_Description);
+        model = "a3\weapons_f\ammo\stone_2.p3d";
         picture = QPATHTOF(data\icons\goldore.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1362,6 +1366,7 @@ class CfgWeapons {
     class CLASS(goldPiece): CLASS(ItemCore) {
         displayName = CSTRING(GoldPiece_DisplayName);
         descriptionShort = CSTRING(GoldPiece_Description);
+        model = "a3\weapons_f\ammo\stone_2.p3d";
         picture = QPATHTOF(data\icons\goldpiece.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1374,6 +1379,7 @@ class CfgWeapons {
     class CLASS(coalOre): CLASS(ItemCore) {
         displayName = CSTRING(CoalOre_DisplayName);
         descriptionShort = CSTRING(CoalOre_Description);
+        model = "a3\weapons_f\ammo\stone_2.p3d";
         picture = QPATHTOF(data\icons\coalore.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1386,6 +1392,7 @@ class CfgWeapons {
     class CLASS(malachite): CLASS(ItemCore) {
         displayName = CSTRING(Malachite_DisplayName);
         descriptionShort = CSTRING(Malachite_Description);
+        model = "a3\weapons_f\ammo\stone_2.p3d";
         picture = QPATHTOF(data\icons\malachite.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1398,6 +1405,7 @@ class CfgWeapons {
     class CLASS(ruby): CLASS(ItemCore) {
         displayName = CSTRING(Ruby_DisplayName);
         descriptionShort = CSTRING(Ruby_Description);
+        model = "a3\weapons_f\ammo\stone_2.p3d";
         picture = QPATHTOF(data\icons\ruby.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1410,6 +1418,7 @@ class CfgWeapons {
     class CLASS(sapphire): CLASS(ItemCore) {
         displayName = CSTRING(Sapphire_DisplayName);
         descriptionShort = CSTRING(Sapphire_Description);
+        model = "a3\weapons_f\ammo\stone_2.p3d";
         picture = QPATHTOF(data\icons\sapphire.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1422,6 +1431,7 @@ class CfgWeapons {
     class CLASS(amethyst): CLASS(ItemCore) {
         displayName = CSTRING(Amethyst_DisplayName);
         descriptionShort = CSTRING(Amethyst_Description);
+        model = "a3\weapons_f\ammo\stone_2.p3d";
         picture = QPATHTOF(data\icons\amethyst.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1434,6 +1444,7 @@ class CfgWeapons {
     class CLASS(diamond): CLASS(ItemCore) {
         displayName = CSTRING(Diamond_DisplayName);
         descriptionShort = CSTRING(Diamond_Description);
+        model = "a3\weapons_f\ammo\stone_2.p3d";
         picture = QPATHTOF(data\icons\diamond.paa);
         scope = 2;
         scopeCurator = 2;
@@ -1446,6 +1457,7 @@ class CfgWeapons {
     class CLASS(emerald): CLASS(ItemCore) {
         displayName = CSTRING(Emerald_DisplayName);
         descriptionShort = CSTRING(Emerald_Description);
+        model = "a3\weapons_f\ammo\stone_2.p3d";
         picture = QPATHTOF(data\icons\emerald.paa);
         scope = 2;
         scopeCurator = 2;
