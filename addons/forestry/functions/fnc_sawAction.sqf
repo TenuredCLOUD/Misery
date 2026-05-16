@@ -27,7 +27,7 @@ if (_damaged) exitWith {
 };
 
 if !(_hasSaw) exitWith {
-    [QEGVAR(common,tileText), localize ECSTRING(common,NoChainsawForWoodNoti)] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(NoChainsaw)] call CBA_fnc_localEvent;
 };
 
 if (currentWeapon player isNotEqualTo "") then {

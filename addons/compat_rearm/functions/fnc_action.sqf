@@ -23,7 +23,7 @@ if !(call FUNC(checkAreas)) exitWith {
 
     private _requestRearmAction = [
         QGVAR(rearm_menu),
-        localize ECSTRING(common,ReqResupply),
+        localize LSTRING(ReqResupply),
         QUOTE(a3\weapons_f\ammoboxes\data\ui\map_ammoveh_f_ca.paa),
         {
             createDialog QCLASS(rearmShop_ui);

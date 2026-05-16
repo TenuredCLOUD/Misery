@@ -23,14 +23,14 @@ private _recipe = GVAR(containers) select {(_x select 0) isEqualTo _selectedItem
 
 private _progressBar = _dialog displayCtrl 1010;
 
-if (isNil "_recipe") exitWith { ctrlSetText [1001, "No matching container found."]; };
+if (isNil "_recipe") exitWith { ctrlSetText [1001, localize LSTRING(NoMatchingContainer)]; };
 
 private _requiredItem = _recipe select 0;
 private _outputItem = _recipe select 1;
 private _fillingTime = _recipe select 2;
 
 if !([[_requiredItem]] call EFUNC(common,hasItem)) exitWith {
-    ctrlSetText [1001, "You don’t have that container..."];
+    ctrlSetText [1001, localize LSTRING(MissingContainer)];
 };
 
 [982380, [1600, 1601, 1602], false] call EFUNC(common,displayShowControls);
@@ -47,7 +47,7 @@ private _fillInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QCLASS(isFilling), false];
         [982380, [1010], false] call EFUNC(common,displayShowControls);
-        [parseText "<t font='PuristaMedium' size='1'>Filling interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+        [QEGVAR(common,tileText), localize LSTRING(Interrupted)] call CBA_fnc_localEvent;
     };
 }];
 
@@ -80,7 +80,7 @@ private _currentStep = 0;
 
     private _progress = (_currentStep / _totalSteps);
     _progressBar progressSetPosition _progress;
-    ctrlSetText [1001, format ["Filling Container... %1%2 complete", (_progress * 100) toFixed 0, "%"]];
+    ctrlSetText [1001, format [localize LSTRING(FillingProgress), (_progress * 100) toFixed 0, "%"]];
 
     if (_currentStep >= _totalSteps) then {
 
@@ -88,7 +88,7 @@ private _currentStep = 0;
 
         [player, _outputItem, true] call CBA_fnc_addItem;
 
-        ctrlSetText [1001, format ["You filled: %1...", _displayName]];
+        ctrlSetText [1001, format [localize LSTRING(FilledSuccess), _displayName]];
         player setVariable [QCLASS(isFilling), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _fillInterrupt];
         [982380, [1600, 1601, 1602], true] call EFUNC(common,displayShowControls);

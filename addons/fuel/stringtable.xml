@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
     <Package name="Fuel">
+        <Key ID="STR_MISERY_Fuel_Action">
+            <English>Use fuel pump</English>
+            <Czech>Použít palivové čerpadlo</Czech>
+            <French>Utiliser la pompe à carburant</French>
+            <Spanish>Usar bomba de combustible</Spanish>
+            <Italian>Usa pompa di carburante</Italian>
+            <Polish>Użyj dystrybutora paliwa</Polish>
+            <Portuguese>Usar bomba de combustível</Portuguese>
+            <Russian>Использовать топливный насос</Russian>
+            <German>Kraftstoffpumpe benutzen</German>
+            <Korean>연료 펌프 사용</Korean>
+            <Japanese>燃料ポンプを使用する</Japanese>
+            <Chinese>使用燃料幫浦</Chinese>
+            <Chinesesimp>使用燃料泵</Chinesesimp>
+            <Turkish>Yakıt pompasını kullan</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Fuel_FillingInterrupted">
             <English>Filling interrupted...</English>
             <Czech>Naplnění přerušeno...</Czech>

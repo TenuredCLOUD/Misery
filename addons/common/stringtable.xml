@@ -113,22 +113,6 @@
             <Chinesesimp>衣物保暖: %1°C&lt;br/&gt;&lt;br/&gt;</Chinesesimp>
             <Turkish>Giysi Sıcaklığı: %1°C&lt;br/&gt;&lt;br/&gt;</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Common_CollectWater">
-            <English>Collect Water</English>
-            <Czech>Sbírat vodu</Czech>
-            <French>Recueillir de l'eau</French>
-            <Spanish>Recoger agua</Spanish>
-            <Italian>Raccogliere acqua</Italian>
-            <Polish>Zbieraj wodę</Polish>
-            <Portuguese>Colete água</Portuguese>
-            <Russian>Собирать воду</Russian>
-            <German>Wasser sammeln</German>
-            <Korean>물 모으기</Korean>
-            <Japanese>水を集める</Japanese>
-            <Chinese>收集水</Chinese>
-            <Chinesesimp>收集水</Chinesesimp>
-            <Turkish>Su topla</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Common_Craft">
             <English>Craft</English>
             <Czech>Vyrobit</Czech>
@@ -177,22 +161,6 @@
             <Chinesesimp>苦难</Chinesesimp>
             <Turkish>Sefalet</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Common_DrinkFromSource">
-            <English>Drink from source</English>
-            <Czech>Pití ze zdroje</Czech>
-            <French>Boire à la source</French>
-            <Spanish>Beber de la fuente</Spanish>
-            <Italian>Bere alla fonte</Italian>
-            <Polish>Pij ze źródła</Polish>
-            <Portuguese>Beba da fonte</Portuguese>
-            <Russian>Напиток из источника</Russian>
-            <German>Trinken von der Quelle</German>
-            <Korean>소스에서 마시기</Korean>
-            <Japanese>ソースから飲む</Japanese>
-            <Chinese>從源頭飲水</Chinese>
-            <Chinesesimp>从源头饮水</Chinesesimp>
-            <Turkish>Kaynağından iç</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Common_Exit">
             <English>Exit</English>
             <Czech>Odejít</Czech>
@@ -224,6 +192,22 @@
             <Chinese>裝備重量感覺約為: ~ %2kg (%1lbs)</Chinese>
             <Chinesesimp>装备重量感觉约为: ~ %2kg (%1lbs)</Chinesesimp>
             <Turkish>Dişli ağırlığı gibi hissediyor: ~ %2kg (%1lbs)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_Interact">
+            <English>Interact</English>
+            <Czech>Interagovat</Czech>
+            <French>Interagir</French>
+            <Spanish>Interactuar</Spanish>
+            <Italian>Interagisci</Italian>
+            <Polish>Interakcja</Polish>
+            <Portuguese>Interagir</Portuguese>
+            <Russian>Взаимодействовать</Russian>
+            <German>Interagieren</German>
+            <Korean>상호작용</Korean>
+            <Japanese>インタラクト</Japanese>
+            <Chinese>互動</Chinese>
+            <Chinesesimp>互动</Chinesesimp>
+            <Turkish>Etkileşime geç</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_MineOre">
             <English>Mine Ore</English>
@@ -272,22 +256,6 @@
             <Chinese>你沒有所需的物品...</Chinese>
             <Chinesesimp>你没有所需的物品...</Chinesesimp>
             <Turkish>Gerekli öğelere sahip değilsiniz...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_NoAxeForWoodNoti">
-            <English>You don't have an Axe to chop any wood...</English>
-            <Czech>Nemáš sekeru na štípání dřeva...</Czech>
-            <French>Vous n'avez pas de hache pour couper du bois...</French>
-            <Spanish>No tienes un hacha para cortar madera...</Spanish>
-            <Italian>Non hai un'ascia per tagliare la legna...</Italian>
-            <Polish>Nie masz siekiery do rąbania drewna...</Polish>
-            <Portuguese>Você não tem um machado para cortar madeira...</Portuguese>
-            <Russian>У вас нет топора, чтобы рубить дрова...</Russian>
-            <German>Du hast keine Axt, um Holz zu hacken...</German>
-            <Korean>나무를 자를 도끼가 없는데...</Korean>
-            <Japanese>薪を割る斧がないじゃないか...。</Japanese>
-            <Chinese>你沒有可以砍木頭的斧頭...</Chinese>
-            <Chinesesimp>你没有可以砍木头的斧头...</Chinesesimp>
-            <Turkish>Odun kesmek için baltan yok.</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_NoChainsawForWoodNoti">
             <English>You don't have a chainsaw to saw any wood...</English>

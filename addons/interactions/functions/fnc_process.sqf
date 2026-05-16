@@ -39,15 +39,15 @@ params ["_itemName", "_category", "_delay", "_hungerValue", "_thirstValue", "_en
 [player] call EFUNC(protection,totalProtection) params ["_gasMask", "_scba"];
 
 if (_maskBlocksUse && {(_gasMask > 0 || _scba > 0)}) exitWith {
-    [QEGVAR(common,tileText), ["You cannot use this item with a mask equipped...", 10]] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), [localize LSTRING(MaskEquipped)]] call CBA_fnc_localEvent;
 };
 
 if (_requiresCanOpener && {((items player + magazines player) findIf {_x in [MACRO_CANTOOLS]}) isEqualTo -1 && !(currentWeapon player in [MACRO_KNIVES])}) exitWith {
-    [QEGVAR(common,tileText), ["You need a can opener or tools to use this...", 10]] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), [localize LSTRING(MissingTools)]] call CBA_fnc_localEvent;
 };
 
 if (gestureState player in [MACRO_ANIMATION_GESTURES]) exitWith {
-    [QEGVAR(common,tileText), ["You are already consuming something else...", 10]] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), [localize LSTRING(AlreadyConsuming)]] call CBA_fnc_localEvent;
 };
 
 if (_removeOnUse) then {

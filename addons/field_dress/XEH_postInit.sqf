@@ -6,7 +6,7 @@ if (GVAR(enabled)) then {
 
         private _fieldDressAction = [
         QGVAR(field_dress_menu),
-        "Field dress animal",
+        localize LSTRING(FDAction),
         QPATHTOEF(icons,data\paw_print_ca.paa),
         {
             params ["_target", "_player"];
@@ -30,7 +30,7 @@ if (GVAR(enabled)) then {
 if (GVAR(dispatchEnabled)) then {
     private _dispatchAction = [
         QGVAR(dispatch_menu),
-        "Snap neck",
+        localize LSTRING(SnapNeck),
         QPATHTOEF(icons,data\paw_print_ca.paa),
         {
             params ["_target", "_player"];

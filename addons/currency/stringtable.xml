@@ -81,6 +81,38 @@
             <Chinesesimp>中央银行网络的名称</Chinesesimp>
             <Turkish>Merkezi banka ağının adı</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Currency_Corpse">
+            <English>Corpse</English>
+            <Czech>Mrtvola</Czech>
+            <French>Cadavre</French>
+            <Spanish>Cadáver</Spanish>
+            <Italian>Cadavere</Italian>
+            <Polish>Trup</Polish>
+            <Portuguese>Cadáver</Portuguese>
+            <Russian>Труп</Russian>
+            <German>Leiche</German>
+            <Korean>시체</Korean>
+            <Japanese>死体</Japanese>
+            <Chinese>屍體</Chinese>
+            <Chinesesimp>尸体</Chinesesimp>
+            <Turkish>Ceset</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_CurrentFunds">
+            <English>Current funds</English>
+            <Czech>Aktuální finance</Czech>
+            <French>Fonds actuels</French>
+            <Spanish>Fondos actuales</Spanish>
+            <Italian>Fondi attuali</Italian>
+            <Polish>Aktualne fundusze</Polish>
+            <Portuguese>Fondos atuais</Portuguese>
+            <Russian>Текущие средства</Russian>
+            <German>Aktuelle Mittel</German>
+            <Korean>현재 자금</Korean>
+            <Japanese>現在の資金</Japanese>
+            <Chinese>當前資金</Chinese>
+            <Chinesesimp>当前资金</Chinesesimp>
+            <Turkish>Mevcut para</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Currency_Deposit">
             <English>Deposit</English>
             <Czech>Uložit</Czech>
@@ -224,6 +256,22 @@
             <Chinese>存取款的最低稅費</Chinese>
             <Chinesesimp>存取款的最低税费</Chinesesimp>
             <Turkish>Yatırma ve çekme işlemleri için minimum vergi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_Funds">
+            <English>Funds: %2 %1</English>
+            <Czech>Finance: %2 %1</Czech>
+            <French>Fonds : %2 %1</French>
+            <Spanish>Fondos: %2 %1</Spanish>
+            <Italian>Fondi: %2 %1</Italian>
+            <Polish>Fundusze: %2 %1</Polish>
+            <Portuguese>Fondos: %2 %1</Portuguese>
+            <Russian>Средства: %2 %1</Russian>
+            <German>Mittel: %2 %1</German>
+            <Korean>자금: %2 %1</Korean>
+            <Japanese>資金: %2 %1</Japanese>
+            <Chinese>資金: %2 %1</Chinese>
+            <Chinesesimp>资金: %2 %1</Chinesesimp>
+            <Turkish>Para: %2 %1</Turkish>
         </Key>
         <Key ID="STR_MISERY_Currency_GiftAction">
             <English>%1 Gift money</English>

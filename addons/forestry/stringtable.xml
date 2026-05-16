@@ -49,6 +49,22 @@
             <Chinesesimp>你的链锯已经装满燃料了...</Chinesesimp>
             <Turkish>Motorlu testerenizin yakıtı zaten dolu...</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Forestry_ChopDown">
+            <English>Chop down</English>
+            <Czech>Posekat</Czech>
+            <French>Abattre</French>
+            <Spanish>Talar</Spanish>
+            <Italian>Abbatti</Italian>
+            <Polish>Rąbać</Polish>
+            <Portuguese>Derrubar</Portuguese>
+            <Russian>Срубить</Russian>
+            <German>Fällen</German>
+            <Korean>베어내기</Korean>
+            <Japanese>切り倒す</Japanese>
+            <Chinese>砍倒</Chinese>
+            <Chinesesimp>砍倒</Chinesesimp>
+            <Turkish>Kesip devir</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Forestry_ChoppingLog">
             <English>Chopping log...</English>
             <Czech>Sekání polena...</Czech>
@@ -80,6 +96,38 @@
             <Chinese>正在砍木頭...</Chinese>
             <Chinesesimp>正在砍木头...</Chinesesimp>
             <Turkish>Odun kesiliyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_ChoppingWood">
+            <English>Chopping Wood</English>
+            <Czech>Štípání dřeva</Czech>
+            <French>Hachage de bois</French>
+            <Spanish>Corte de madera con hacha</Spanish>
+            <Italian>Spaccamento della legna</Italian>
+            <Polish>Rąbanie drewna</Polish>
+            <Portuguese>Cortar lenha</Portuguese>
+            <Russian>Колка дров</Russian>
+            <German>Holz hacken</German>
+            <Korean>장작 패기</Korean>
+            <Japanese>薪割り</Japanese>
+            <Chinese>劈柴</Chinese>
+            <Chinesesimp>劈柴</Chinesesimp>
+            <Turkish>Odun baltalama</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_ChoppingWoodDesc">
+            <English>Enable Wood chopping actions? (Disable if you want to make your own axe interactions)</English>
+            <Czech>Povolit akce pro štípání dřeva? (Zakážte, pokud si chcete vytvořit vlastní interakce s sekerou)</Czech>
+            <French>Activer les actions de hachage de bois ? (Désactivez si vous souhaitez créer vos propres interactions avec la hache)</French>
+            <Spanish>¿Activar acciones de corte de madera con hacha? (Desactívalo si quieres crear tus propias interacciones con el hacha)</Spanish>
+            <Italian>Abilitare le azioni di spaccamento della legna? (Disabilitare se si desidera creare le proprie interazioni con l'ascia)</Italian>
+            <Polish>Włączyć akcje rąbania drewna? (Wyłącz, jeśli chcesz stworzyć własne interakcje dla siekiery)</Polish>
+            <Portuguese>Ativar ações de cortar lenha? (Desative se quiser criar as suas próprias interações com o machado)</Portuguese>
+            <Russian>Включить действия по колке дров? (Отключите, если хотите настроить собственные взаимодействия с топором)</Russian>
+            <German>Aktionen zum Holzhacken aktivieren? (Deaktivieren, wenn Sie eigene Axt-Interaktionen erstellen möchten)</German>
+            <Korean>장작 패기 상호작용을 활성화하시겠습니까? (자체적인 도끼 상호작용을 만드려면 비활성화하세요)</Korean>
+            <Japanese>薪割りアクションを有効にしますか？ (独自の斧相互作用を作りたい場合は無効にしてください)</Japanese>
+            <Chinese>啟用劈柴動作？ (如果您想製作自己的斧頭互動，請將其禁用)</Chinese>
+            <Chinesesimp>启用劈柴动作？ (如果您想制作自己的斧头互动，请将其禁用)</Chinesesimp>
+            <Turkish>Odun baltalama eylemleri etkinleştirilsin mi? (Kendi balta etkileşimlerinizi oluşturmak istiyorsanız devre dışı bırakın)</Turkish>
         </Key>
         <Key ID="STR_MISERY_Forestry_CollectWood">
             <English>Collect wood</English>
@@ -128,6 +176,22 @@
             <Chinese>木材收集</Chinese>
             <Chinesesimp>木材收集</Chinesesimp>
             <Turkish>Odun toplama</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_CutDown">
+            <English>Cut down</English>
+            <Czech>Uříznout</Czech>
+            <French>Couper</French>
+            <Spanish>Cortar</Spanish>
+            <Italian>Taglia</Italian>
+            <Polish>Ściąć</Polish>
+            <Portuguese>Cortar</Portuguese>
+            <Russian>Срезать</Russian>
+            <German>Abschneiden</German>
+            <Korean>잘라내기</Korean>
+            <Japanese>切り取る</Japanese>
+            <Chinese>割下</Chinese>
+            <Chinesesimp>割下</Chinesesimp>
+            <Turkish>Kes</Turkish>
         </Key>
         <Key ID="STR_MISERY_Forestry_DeadGathered">
             <English>This tree's dead wood has been gathered. The remaining wood can be gathered by cutting it down...</English>
@@ -209,21 +273,37 @@
             <Chinesesimp>寻找引火物</Chinesesimp>
             <Turkish>Tinder için ara</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Forestry_Foraging">
+            <English>Foraging</English>
+            <Czech>Hledání potravy</Czech>
+            <French>Glanage</French>
+            <Spanish>Recolección silvestre</Spanish>
+            <Italian>Ricerca di cibo</Italian>
+            <Polish>Zbieractwo</Polish>
+            <Portuguese>Forrageamento</Portuguese>
+            <Russian>Собирательство</Russian>
+            <German>Nahrungssuche</German>
+            <Korean>자원 채집</Korean>
+            <Japanese>採集</Japanese>
+            <Chinese>覓食 / 採集</Chinese>
+            <Chinesesimp>觅食 / 采集</Chinesesimp>
+            <Turkish>Yiyecek arama</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Forestry_ForagingDesc">
-            <English>Enable Foraging? (Enables digging for worms, and searching for tinder actions)</English>
-            <Czech>Povolit sběr? (Povolí kopání žížal a hledání troudu)</Czech>
-            <French>Activer la cueillette ? (Permet de creuser pour trouver des vers et de chercher de l'amadou)</French>
-            <Spanish>¿Habilitar forrajeo? (Permite cavar en busca de gusanos y buscar yesca)</Spanish>
-            <Italian>Abilitare la ricerca di cibo? (Permette di scavare per i vermi e cercare esche)</Italian>
-            <Polish>Włączyć zbieractwo? (Umożliwia kopanie w poszukiwaniu robaków i szukanie rozpałki)</Polish>
-            <Portuguese>Ativar busca por recursos? (Permite cavar em busca de minhocas e procurar isca de fogo)</Portuguese>
-            <Russian>Включить собирательство? (Позволяет копать червей и искать трут)</Russian>
-            <German>Sammeln aktivieren? (Ermöglicht das Graben nach Würmern und das Suchen nach Zunder)</German>
-            <Korean>채집을 활성화하시겠습니까? (지렁이 파기 및 부싯깃 찾기 활성화)</Korean>
-            <Japanese>採集を有効にしますか？（ミミズ掘りと火口探しアクションを有効にします）</Japanese>
-            <Chinese>開啟採集？(開啟挖蠕蟲和尋找引火物動作)</Chinese>
-            <Chinesesimp>开启采集？(开启挖蠕虫和寻找引火物动作)</Chinesesimp>
-            <Turkish>Yiyecek arama etkinleştirilsin mi? (Solucan kazma ve kav arama eylemlerini etkinleştirir)</Turkish>
+            <English>Enable Foraging? (Enables digging for worms, and searching for tinder actions. Requires wood collection to be enabled)</English>
+            <Czech>Povolit hledání potravy? (Povolí akce jako kopání červů a hledání troudu. Vyžaduje zapnutý sběr dřeva)</Czech>
+            <French>Activer le glanage ? (Permet de chercher des vers en creusant et de chercher de l'amadou. Nécessite l'activation de la collecte de bois)</French>
+            <Spanish>¿Activar recolección silvestre? (Permite cavar en busca de lombrices y buscar yesca. Requiere que la recolección de madera esté activada)</Spanish>
+            <Italian>Abilitare la ricerca di cibo? (Abilita lo scavo per i vermi e le azioni di ricerca dell'esca. Richiede che la raccolta della legna sia abilitata)</Italian>
+            <Polish>Włączyć zbieractwo? (Umożliwia kopanie w poszukiwaniu robaków oraz szukanie rozpałki. Wymaga włączonego zbierania drewna)</Polish>
+            <Portuguese>Ativar forrageamento? (Permite cavar à procura de minhocas e procurar acendalhas. Requer que a coleta de madeira esteja ativa)</Portuguese>
+            <Russian>Включить собирательство? (Позволяет копать червей и искать трут для розжига. Требует включения функции сбора древесины)</Russian>
+            <German>Nahrungssuche aktivieren? (Ermöglicht das Graben nach Würmern und das Suchen nach Zunder. Erfordert die Aktivierung der Holzsammlung)</German>
+            <Korean>자원 채집을 활성화하시겠습니까? (지렁이 파기 및 불쏘시개 수색 상호작용이 활성화됩니다. 목재 채집 기능이 활성화되어 있어야 합니다)</Korean>
+            <Japanese>採集を有効にしますか？ (ミミズ掘りや火口捜索アクションが有効になります。薪集めが有効である必要があります)</Japanese>
+            <Chinese>啟用覓食/採集？ (啟用挖蠕蟲和尋找引火物動作。需要先啟用木材收集)</Chinese>
+            <Chinesesimp>启用觅食/采集？ (启用挖蠕虫和寻找引火物动作。需要先启用木材收集)</Chinesesimp>
+            <Turkish>Yiyecek arama etkinleştirilsin mi? (Solucan toplamak için kazma ve kav arama eylemlerini etkinleştirir. Odun toplamanın etkinleştirilmesini gerektirir)</Turkish>
         </Key>
         <Key ID="STR_MISERY_Forestry_ForagingName">
             <English>Foraging</English>
@@ -401,6 +481,22 @@
             <Chinesesimp>你需要靠近一棵树才能开始锯木头...</Chinesesimp>
             <Turkish>Odun kesmeye başlamak için bir ağacın yanında olmalısınız...</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Forestry_NoAxeForWoodNoti">
+            <English>You don't have an Axe to chop any wood...</English>
+            <Czech>Nemáš sekeru na štípání dřeva...</Czech>
+            <French>Vous n'avez pas de hache pour couper du bois...</French>
+            <Spanish>No tienes un hacha para cortar madera...</Spanish>
+            <Italian>Non hai un'ascia per tagliare la legna...</Italian>
+            <Polish>Nie masz siekiery do rąbania drewna...</Polish>
+            <Portuguese>Você não tem um machado para cortar madeira...</Portuguese>
+            <Russian>У вас нет топора, чтобы рубить дрова...</Russian>
+            <German>Du hast keine Axt, um Holz zu hacken...</German>
+            <Korean>나무를 자를 도끼가 없는데...</Korean>
+            <Japanese>薪を割る斧がないじゃないか...。</Japanese>
+            <Chinese>你沒有可以砍木頭的斧頭...</Chinese>
+            <Chinesesimp>你没有可以砍木头的斧头...</Chinesesimp>
+            <Turkish>Odun kesmek için baltan yok.</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Forestry_NoChainsaw">
             <English>You don't have a chainsaw...</English>
             <Czech>Nemáte motorovou pilu...</Czech>
@@ -496,6 +592,38 @@
             <Chinese>正在鋸樹...</Chinese>
             <Chinesesimp>正在锯树...</Chinesesimp>
             <Turkish>Ağaç testereyle kesiliyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_SawingWood">
+            <English>Sawing Wood</English>
+            <Czech>Řezání dřeva</Czech>
+            <French>Sciage de bois</French>
+            <Spanish>Aserrado de madera</Spanish>
+            <Italian>Taglio della legna con sega</Italian>
+            <Polish>Pilocenie drewna</Polish>
+            <Portuguese>Serrar madeira</Portuguese>
+            <Russian>Пиление древесины</Russian>
+            <German>Holz sägen</German>
+            <Korean>목재 톱질</Korean>
+            <Japanese>のこぎりでの木材カット</Japanese>
+            <Chinese>鋸木頭</Chinese>
+            <Chinesesimp>锯木头</Chinesesimp>
+            <Turkish>Odun testereleme</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_SawingWoodDesc">
+            <English>Enable Wood sawing actions? (Disable if you want to make your own saw interactions)</English>
+            <Czech>Povolit akce pro řezání dřeva? (Zakážte, pokud si chcete vytvořit vlastní interakce s pilou)</Czech>
+            <French>Activer les actions de sciage de bois ? (Désactivez si vous souhaitez créer vos propres interactions avec la scie)</French>
+            <Spanish>¿Activar acciones de aserrado de madera? (Desactívalo si quieres crear tus propias interacciones con la sierra)</Spanish>
+            <Italian>Abilitare le azioni di taglio della legna con sega? (Disabilitare se si desidera creare le proprie interazioni con la sega)</Italian>
+            <Polish>Włączyć akcje piłowania drewna? (Wyłącz, jeśli chcesz stworzyć własne interakcje dla piły)</Polish>
+            <Portuguese>Ativar ações de serrar madeira? (Desative se quiser criar as suas próprias interações com a serra)</Portuguese>
+            <Russian>Включить действия по пилению древесины? (Отключите, если хотите настроить собственные взаимодействия с пилой)</Russian>
+            <German>Aktionen zum Holzsägen aktivieren? (Deaktivieren, wenn Sie eigene Säge-Interaktionen erstellen möchten)</German>
+            <Korean>목재 톱질 상호작용을 활성화하시겠습니까? (자체적인 톱 상호작용을 만드려면 비활성화하세요)</Korean>
+            <Japanese>のこぎりでの木材カットアクションを有効にしますか？ (独自ののこぎり相互作用を作りたい場合は無効にしてください)</Japanese>
+            <Chinese>啟用鋸木頭動作？ (如果您想製作自己的鋸子互動，請將其禁用)</Chinese>
+            <Chinesesimp>启用锯木头动作？ (如果您想制作自己的锯子互动，请将其禁用)</Chinesesimp>
+            <Turkish>Odun testereleme eylemleri etkinleştirilsin mi? (Kendi testere etkileşimlerinizi oluşturmak istiyorsanız devre dışı bırakın)</Turkish>
         </Key>
         <Key ID="STR_MISERY_Forestry_SearchingTinder">
             <English>Searching for tinder...</English>
@@ -656,6 +784,38 @@
             <Chinese>樹已經倒了，沒有更多木頭了...</Chinese>
             <Chinesesimp>树已经倒了，没有更多木头了...</Chinesesimp>
             <Turkish>Ağaç devrildi, artık odun yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_WoodCollection">
+            <English>Wood collection</English>
+            <Czech>Sběr dřeva</Czech>
+            <French>Collecte de bois</French>
+            <Spanish>Recolección de madera</Spanish>
+            <Italian>Raccolta della legna</Italian>
+            <Polish>Zbieranie drewna</Polish>
+            <Portuguese>Coleta de madeira</Portuguese>
+            <Russian>Сбор древесины</Russian>
+            <German>Holzsammlung</German>
+            <Korean>목재 채집</Korean>
+            <Japanese>薪集め</Japanese>
+            <Chinese>木材收集</Chinese>
+            <Chinesesimp>木材收集</Chinesesimp>
+            <Turkish>Odun toplama</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Forestry_WoodCollectionDesc">
+            <English>Enable Wood collection actions? (Must be enabled for tree interaction, and log splitting)</English>
+            <Czech>Povolit akce pro sběr dřeva? (Musí být povoleno pro interakci se stromy a štípání polen)</Czech>
+            <French>Activer les actions de collecte de bois ? (Doit être activé pour l'interaction avec les arbres et le fendage de bûches)</French>
+            <Spanish>¿Activar acciones de recolección de madera? (Debe estar activado para la interacción con árboles y el corte de troncos)</Spanish>
+            <Italian>Abilitare le azioni di raccolta della legna? (Deve essere abilitato per l'interazione con gli alberi e lo spaccamento dei tronchi)</Italian>
+            <Polish>Włączyć akcje zbierania drewna? (Wymagane do interakcji z drzewami oraz rąbania kloców drewna)</Polish>
+            <Portuguese>Ativar ações de coleta de madeira? (Deve estar ativo para interação com árvores e divisão de lenha)</Portuguese>
+            <Russian>Включить действия по сбору древесины? (Необходимо для взаимодействия с деревьями и колки дров)</Russian>
+            <German>Aktionen zur Holzsammlung aktivieren? (Muss für Baum-Interaktionen und das Spalten von Holzscheiten aktiviert sein)</German>
+            <Korean>목재 채집 상호작용을 활성화하시겠습니까? (나무 상호작용 및 장작 쪼개기를 위해 활성화해야 합니다)</Korean>
+            <Japanese>薪集めのアクションを有効にしますか？ ( 나무와의 상호작용 및 대나무/통나무割りに必要です)</Japanese>
+            <Chinese>啟用木材收集動作？ (與樹木互動和劈柴時必須啟用)</Chinese>
+            <Chinesesimp>启用木材收集动作？ (与树木互动和劈柴时必须启用)</Chinesesimp>
+            <Turkish>Odun toplama eylemleri etkinleştirilsin mi? (Ağaç etkileşimi ve kütük yarma için etkinleştirilmelidir)</Turkish>
         </Key>
     </Package>
 </Project>

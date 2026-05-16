@@ -66,19 +66,19 @@
 
         switch (true) do {
             case (!_runState && !_shutDownState): {
-                _powerState = "OFF";
-                _powerButtonText = "Start";
+                _powerState = localize LSTRING(OFF);
+                _powerButtonText = localize LSTRING(Start);
                 _showPowerButton = true;
                 _showRefuelButton = true;
             };
             case (_runState && !_shutDownState): {
-                _powerState = "RUNNING";
-                _powerButtonText = "Stop";
+                _powerState = localize LSTRING(RUNNING);
+                _powerButtonText = localize LSTRING(Stop);
                 _showPowerButton = true;
                 _showRefuelButton = false;
             };
             case (_runState && _shutDownState): {
-                _powerState = "SHUTTING DOWN";
+                _powerState = localize LSTRING(SHUTTINGDOWN);
                 _showPowerButton = false;
                 _showRefuelButton = false;
             };
@@ -88,7 +88,7 @@
         _refuelButton ctrlEnable _showRefuelButton;
         _powerButton ctrlEnable _showPowerButton;
 
-        private _displayedState = format ["Power State: %1", _powerState];
+        private _displayedState = format [localize LSTRING(PowerState), _powerState];
         ctrlSetText [1001, _displayedState];
 
     }, 0, [_generator, _generatorType]] call CBA_fnc_addPerFrameHandler;

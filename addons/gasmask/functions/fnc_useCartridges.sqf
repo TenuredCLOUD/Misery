@@ -17,7 +17,7 @@
 private _goggles = toLower goggles player;
 
 if (_goggles isEqualTo "" && !([[QCLASS(gasMask_Empty)]] call EFUNC(common,hasItem))) exitWith {
-    [QEGVAR(common,tileText), "No valid mask available for cartridge replacement..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(NoValidMask)] call CBA_fnc_localEvent;
 };
 
 switch (true) do {
@@ -34,7 +34,7 @@ switch (true) do {
             removeGoggles player;
             player addGoggles _filteredMask;
 
-            [QEGVAR(common,tileText), "You replace the cartridges on your gasmask..."] call CBA_fnc_localEvent;
+            [QEGVAR(common,tileText), localize LSTRING(ReplacedCartridges)] call CBA_fnc_localEvent;
 
             player setVariable [GVAR(cartridgeEfficiency), MACRO_PLAYER_DEFAULTS_HIGH];
         };
@@ -44,13 +44,13 @@ switch (true) do {
             [player, QCLASS(gasCartridge)] call CBA_fnc_removeItem;
             [player, QCLASS(gasMask_Empty)] call CBA_fnc_removeItem;
             [player, GVAR(defaultMask), true] call CBA_fnc_addItem;
-            [QEGVAR(common,tileText), "You replace the cartridges on your gasmask..."] call CBA_fnc_localEvent;
+            [QEGVAR(common,tileText), localize LSTRING(ReplacedCartridges)] call CBA_fnc_localEvent;
         } else {
             [player, QCLASS(gasCartridge)] call CBA_fnc_removeItem;
             [player, QCLASS(gasMask_Empty)] call CBA_fnc_removeItem;
             [player, GVAR(lastMask), true] call CBA_fnc_addItem;
             GVAR(lastMask) = nil;
-            [QEGVAR(common,tileText), "You replace the cartridges on your gasmask..."] call CBA_fnc_localEvent;
+            [QEGVAR(common,tileText), localize LSTRING(ReplacedCartridges)] call CBA_fnc_localEvent;
         };
     };
 };

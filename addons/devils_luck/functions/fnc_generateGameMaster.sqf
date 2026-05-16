@@ -21,13 +21,13 @@ _object setVariable [QGVAR(isActive), false, true];
 
 private _gameMasterAction = [
     QGVAR(playDevilsLuck),
-    "Play Devil's Luck",
+    localize LSTRING(PlayDevilsLuck),
     QPATHTOEF(icons,data\dices_ca.paa),
     {
         params ["_target", "_player"];
 
         if (_target getVariable [QGVAR(isActive), false]) exitWith {
-            [QEGVAR(common,tileText), "Dealer is busy, try again later..."] call CBA_fnc_localEvent;
+            [QEGVAR(common,tileText), localize LSTRING(DealerBusy)] call CBA_fnc_localEvent;
         };
 
         _player setVariable [QGVAR(currentDealer), _target];

@@ -6,7 +6,7 @@ private _allFuelStations = [MACRO_FUELSTATIONS_LAND] + [MACRO_FUELSTATIONS_AIR];
 
 private _fuelPumpAction = [
     QGVAR(fuel_pump_menu),
-    "Use fuel pump",
+    localize LSTRING(Action),
     QPATHTOEF(markers,data\fuel_ca.paa),
     {},
     {true},
@@ -22,7 +22,7 @@ private _fuelPumpAction = [
 
 private _refuelPumpAction = [
     QGVAR(refuel_pump_menu),
-    "Refuel at pump",
+    localize LSTRING(RefuelAtPump),
     QPATHTOEF(markers,data\fuel_ca.paa),
     {
         createDialog QCLASS(refuelVehicle_ui)
@@ -40,7 +40,7 @@ private _refuelPumpAction = [
 
 private _refillPumpAction = [
     QGVAR(refuel_fuelCan_pump_menu),
-    "Refill fuel can at pump",
+    localize LSTRING(RefillFuelCanAtPump),
     QPATHTOEF(markers,data\fuel_ca.paa),
     {
         createDialog QCLASS(refuelfuelCan_ui)

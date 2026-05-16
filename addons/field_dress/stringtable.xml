@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
-    <Package name="Field_Dress">
+    <Package name="FieldDressing">
         <Key ID="STR_MISERY_FieldDressing_AlreadyProcessed">
             <English>This animal is being processed already...</English>
             <Czech>Toto zvíře se již zpracovává...</Czech>
@@ -16,6 +16,102 @@
             <Chinese>這隻動物已經在處理中了...</Chinese>
             <Chinesesimp>这只动物已经在处理中了...</Chinesesimp>
             <Turkish>Bu hayvan zaten işleniyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_FieldDressing_Desc">
+            <English>Allow field dressing of animals?</English>
+            <Czech>Povolit polní vyvrhování zvířat?</Czech>
+            <French>Autoriser l'éviscération des animaux sur le terrain ?</French>
+            <Spanish>¿Permitir el despiece de animales en el campo?</Spanish>
+            <Italian>Consentire l'eviscerazione degli animali sul campo?</Italian>
+            <Polish>Zezwolić na patroszenie zwierząt w terenie?</Polish>
+            <Portuguese>Permitir a limpeza de animais no campo?</Portuguese>
+            <Russian>Разрешить полевую разделку животных?</Russian>
+            <German>Das Aufbrechen von Tieren im Feld erlauben?</German>
+            <Korean>동물 야외 해체를 허용하시겠습니까?</Korean>
+            <Japanese>動物のフィールド解体を許可しますか？</Japanese>
+            <Chinese>允許對動物進行剝皮處理？</Chinese>
+            <Chinesesimp>允许对动物进行剥皮处理？</Chinesesimp>
+            <Turkish>Hayvanların sahada temizlenmesine izin verilsin mi?</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_FieldDressing_FDAction">
+            <English>Field dress animal</English>
+            <Czech>Vyvrhnout zvíře</Czech>
+            <French>Éviscérer l'animal</French>
+            <Spanish>Despiezar animal</Spanish>
+            <Italian>Eviscera animale</Italian>
+            <Polish>Patrosz zwierzę</Polish>
+            <Portuguese>Limpar animal</Portuguese>
+            <Russian>Разделать животное</Russian>
+            <German>Tier aufbrechen</German>
+            <Korean>동물 해체하기</Korean>
+            <Japanese>動物を解体する</Japanese>
+            <Chinese>剝皮處理動物</Chinese>
+            <Chinesesimp>剥皮处理动物</Chinesesimp>
+            <Turkish>Hayvanı temizle</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_FieldDressing_Name">
+            <English>Field dressing</English>
+            <Czech>Polní vyvrhování</Czech>
+            <French>Éviscération sur le terrain</French>
+            <Spanish>Despiece de campo</Spanish>
+            <Italian>Eviscerazione sul campo</Italian>
+            <Polish>Patroszenie w terenie</Polish>
+            <Portuguese>Limpeza de campo</Portuguese>
+            <Russian>Полевая разделка</Russian>
+            <German>Aufbrechen im Feld</German>
+            <Korean>야외 해체</Korean>
+            <Japanese>フィールド解体</Japanese>
+            <Chinese>剝皮處理</Chinese>
+            <Chinesesimp>剥皮处理</Chinesesimp>
+            <Turkish>Saha temizleme</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_FieldDressing_SGDispatching">
+            <English>Small game dispatching</English>
+            <Czech>Zneškodnění drobné zvěře</Czech>
+            <French>Abattage de petit gibier</French>
+            <Spanish>Despacho de caza menor</Spanish>
+            <Italian>Abbattimento piccola selvaggina</Italian>
+            <Polish>Dobijanie drobnej zwierzyny</Polish>
+            <Portuguese>Abate de caça menor</Portuguese>
+            <Russian>Добивание мелкой дичи</Russian>
+            <German>Kleinwild erlegen</German>
+            <Korean>소형 사냥감 처치</Korean>
+            <Japanese>小動物の息の根を止める</Japanese>
+            <Chinese>小動物處置</Chinese>
+            <Chinesesimp>小动物处置</Chinesesimp>
+            <Turkish>Küçük av hayvanlarını itlaf etme</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_FieldDressing_SGDispatchingDesc">
+            <English>Allows neck snapping for smaller animals</English>
+            <Czech>Umožňuje zlomit vaz menším zvířatům</Czech>
+            <French>Permet de briser le cou des petits animaux</French>
+            <Spanish>Permite romper el cuello a animales más pequeños</Spanish>
+            <Italian>Consente di spezzare il collo agli animali più piccoli</Italian>
+            <Polish>Umożliwia skręcanie karku mniejszym zwierzętom</Polish>
+            <Portuguese>Permite partir o pescoço a animais mais pequenos</Portuguese>
+            <Russian>Позволяет ломать шею мелким животным</Russian>
+            <German>Ermöglicht das Brechen des Genicks bei kleineren Tieren</German>
+            <Korean>작은 동물의 목을 꺾을 수 있게 합니다</Korean>
+            <Japanese>小動物の首を折ることができるようになります</Japanese>
+            <Chinese>允許對較小的動物進行扭斷脖子</Chinese>
+            <Chinesesimp>允许对较小的动物进行扭断脖子</Chinesesimp>
+            <Turkish>Küçük hayvanların boynunun kırılmasını sağlar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_FieldDressing_SnapNeck">
+            <English>Snap neck</English>
+            <Czech>Zlomit vaz</Czech>
+            <French>Briser le cou</French>
+            <Spanish>Romper el cuello</Spanish>
+            <Italian>Spezza il collo</Italian>
+            <Polish>Skręć kark</Polish>
+            <Portuguese>Partir o pescoço</Portuguese>
+            <Russian>Сломать шею</Russian>
+            <German>Genick brechen</German>
+            <Korean>목 꺾기</Korean>
+            <Japanese>首を折る</Japanese>
+            <Chinese>扭断脖子</Chinese>
+            <Chinesesimp>扭断脖子</Chinesesimp>
+            <Turkish>Boynunu kır</Turkish>
         </Key>
         <Key ID="STR_MISERY_FieldDressing_Start">
             <English>You start to field dress the animal...</English>
@@ -64,54 +160,6 @@
             <Chinese>你獲得了一些生肉...</Chinese>
             <Chinesesimp>你获得了一些生肉...</Chinesesimp>
             <Turkish>Biraz çiğ et aldın...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Field_Dress_Action">
-            <English>Field dress animal</English>
-            <Czech>Vyvrhnout zvíře</Czech>
-            <French>Éviscérer l'animal</French>
-            <Spanish>Despiezar animal</Spanish>
-            <Italian>Eviscera animale</Italian>
-            <Polish>Patrosz zwierzę</Polish>
-            <Portuguese>Limpar animal</Portuguese>
-            <Russian>Разделать животное</Russian>
-            <German>Tier aufbrechen</German>
-            <Korean>동물 해체하기</Korean>
-            <Japanese>動物を解体する</Japanese>
-            <Chinese>剝皮處理動物</Chinese>
-            <Chinesesimp>剥皮处理动物</Chinesesimp>
-            <Turkish>Hayvanı temizle</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Field_Dress_Desc">
-            <English>Allow field dressing of animals?</English>
-            <Czech>Povolit polní vyvrhování zvířat?</Czech>
-            <French>Autoriser l'éviscération des animaux sur le terrain ?</French>
-            <Spanish>¿Permitir el despiece de animales en el campo?</Spanish>
-            <Italian>Consentire l'eviscerazione degli animali sul campo?</Italian>
-            <Polish>Zezwolić na patroszenie zwierząt w terenie?</Polish>
-            <Portuguese>Permitir a limpeza de animais no campo?</Portuguese>
-            <Russian>Разрешить полевую разделку животных?</Russian>
-            <German>Das Aufbrechen von Tieren im Feld erlauben?</German>
-            <Korean>동물 야외 해체를 허용하시겠습니까?</Korean>
-            <Japanese>動物のフィールド解体を許可しますか？</Japanese>
-            <Chinese>允許對動物進行剝皮處理？</Chinese>
-            <Chinesesimp>允许对动物进行剥皮处理？</Chinesesimp>
-            <Turkish>Hayvanların sahada temizlenmesine izin verilsin mi?</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Field_Dress_Name">
-            <English>Field dressing</English>
-            <Czech>Polní vyvrhování</Czech>
-            <French>Éviscération sur le terrain</French>
-            <Spanish>Despiece de campo</Spanish>
-            <Italian>Eviscerazione sul campo</Italian>
-            <Polish>Patroszenie w terenie</Polish>
-            <Portuguese>Limpeza de campo</Portuguese>
-            <Russian>Полевая разделка</Russian>
-            <German>Aufbrechen im Feld</German>
-            <Korean>야외 해체</Korean>
-            <Japanese>フィールド解体</Japanese>
-            <Chinese>剝皮處理</Chinese>
-            <Chinesesimp>剥皮处理</Chinesesimp>
-            <Turkish>Saha temizleme</Turkish>
         </Key>
     </Package>
 </Project>

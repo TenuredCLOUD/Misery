@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
     <Package name="Chemical">
-        <Key ID="STR_MISERY_Chemical_ChemicalAreas">
+        <Key ID="STR_MISERY_Chemical_AddBatteries">
+            <English>Add 9V batteries to chemical detector</English>
+            <Czech>Vložte 9V baterie do chemického detektoru</Czech>
+            <French>Ajouter des piles 9V au détecteur chimique</French>
+            <Spanish>Añadir baterías de 9V al detector químico</Spanish>
+            <Italian>Aggiungi batterie da 9V al rilevatore chimico</Italian>
+            <Polish>Dodaj baterie 9V do detektora chemicznego</Polish>
+            <Portuguese>Adicionar baterias de 9V ao detetor químico</Portuguese>
+            <Russian>Вставить батарейки 9В в химический детектор</Russian>
+            <German>9V-Batterien in den Chemikalien-Detektor einsetzen</German>
+            <Korean>화학 탐지기에 9V 배터리 추가</Korean>
+            <Japanese>化学探知機に9V電池を入れる</Japanese>
+            <Chinese>將 9V 電池放入化學檢測器</Chinese>
+            <Chinesesimp>将 9V 电池放入化学检测器</Chinesesimp>
+            <Turkish>Kimyasal dedektöre 9V pil ekleyin</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Chemical_AddedBatteries">
+            <English>You add x2 9V batteries to your detector</English>
+            <Czech>Vložili jste 2x 9V baterie do svého detektoru</Czech>
+            <French>Vous ajoutez x2 piles 9V à votre détecteur</French>
+            <Spanish>Has añadido 2 baterías de 9V a tu detector</Spanish>
+            <Italian>Hai aggiunto 2 batterie da 9V al tuo rilevatore</Italian>
+            <Polish>Dodajesz 2x baterie 9V do swojego detektora</Polish>
+            <Portuguese>Adicionou 2x baterias de 9V ao seu detetor</Portuguese>
+            <Russian>Вы вставили 2 шт. батареек 9В в свой детектор</Russian>
+            <German>Du hast 2x 9V-Batterien in deinen Detektor eingesetzt</German>
+            <Korean>탐지기에 9V 배터리 2개를 추가했습니다</Korean>
+            <Japanese>探知機に9V電池を2個入れました</Japanese>
+            <Chinese>您將 2 個 9V 電池放入了您的檢測器</Chinese>
+            <Chinesesimp>您将 2 个 9V 电池放入了您的检测器</Chinesesimp>
+            <Turkish>Dedektörünüze 2 tane 9V pil eklediniz</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Chemical_Areas">
             <English>Chemical Areas</English>
             <Czech>Chemické oblasti</Czech>
             <French>Zones chimiques</French>
@@ -17,7 +49,7 @@
             <Chinesesimp>化学区域</Chinesesimp>
             <Turkish>Kimyasal Alanlar</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Chemical_ChemicalAreasDesc">
+        <Key ID="STR_MISERY_Chemical_AreasDesc">
             <English>ELLIPSE or RECTANGLE marker names covering the radioactive area as strings ['Chemical_1', 'Chemical_2']</English>
             <Czech>Názvy markerů ELLIPSE nebo RECTANGLE pokrývající radioaktivní oblast jako řetězce ['Chemical_1', 'Chemical_2']</Czech>
             <French>Noms des marqueurs ELLIPSE ou RECTANGLE couvrant la zone radioactive sous forme de chaînes ['Chemical_1', 'Chemical_2']</French>
@@ -96,6 +128,38 @@
             <Chinese>化學區域的初始起始顏色 - RGBA 格式</Chinese>
             <Chinesesimp>化学区域的初始起始颜色 - RGBA 格式</Chinesesimp>
             <Turkish>Kimyasal bölgelerin başlangıç rengi - RGBA formatı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Chemical_MissingBatteries">
+            <English>You don't have enough 9V batteries... (2 needed)</English>
+            <Czech>Nemáte dostatek 9V baterií... (jsou potřeba 2)</Czech>
+            <French>Vous n'avez pas assez de piles 9V... (2 requises)</French>
+            <Spanish>No tienes suficientes baterías de 9V... (se necesitan 2)</Spanish>
+            <Italian>Non hai abbastanza batterie da 9V... (ne servono 2)</Italian>
+            <Polish>Nie masz wystarczającej liczby baterii 9V... (wymagane 2)</Polish>
+            <Portuguese>Não tem baterias de 9V suficientes... (são necessárias 2)</Portuguese>
+            <Russian>Недостаточно батареек 9В... (требуется 2 шт.)</Russian>
+            <German>Nicht genügend 9V-Batterien vorhanden... (2 benötigt)</German>
+            <Korean>9V 배터리가 부족합니다... (2개 필요)</Korean>
+            <Japanese>9V電池が足りません... (2個必要)</Japanese>
+            <Chinese>您沒有足夠的 9V 電池... (需要 2 個)</Chinese>
+            <Chinesesimp>您没有足够的 9V 电池... (需要 2 个)</Chinesesimp>
+            <Turkish>Yeterli 9V piliniz yok... (2 tane gerekli)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Chemical_NoDetector">
+            <English>You don't have a detector that needs batteries...</English>
+            <Czech>Nemáte detektor, který by potřeboval baterie...</Czech>
+            <French>Vous n'avez pas de détecteur qui nécessite des piles...</French>
+            <Spanish>No tienes ningún detector que necesite baterías...</Spanish>
+            <Italian>Non hai un rilevatore che richieda batterie...</Italian>
+            <Polish>Nie masz detektora, który wymagałby baterii...</Polish>
+            <Portuguese>Não tem nenhum detetor que precise de baterias...</Portuguese>
+            <Russian>У вас нет детектора, которому требуются батарейки...</Russian>
+            <German>Du hast keinen Detektor, der Batterien benötigt...</German>
+            <Korean>배터리가 필요한 탐지기가 없습니다...</Korean>
+            <Japanese>電池が必要な探知機を持っていません...</Japanese>
+            <Chinese>您沒有需要電池的檢測器...</Chinese>
+            <Chinesesimp>您没有需要电池的检测器...</Chinesesimp>
+            <Turkish>Pille çalışan bir dedektörünüz yok...</Turkish>
         </Key>
     </Package>
 </Project>

@@ -32,7 +32,7 @@ params ["_corpse"];
 
         private _corpseFundsParsed = _corpseFunds call BIS_fnc_parseNumber;
         private _corpseFundsFormatted = [_corpseFundsParsed, 1, 2, true] call CBA_fnc_formatNumber;
-        private _corpseFundsText = format ["%3: %1 %2", GVAR(symbol), _corpseFundsFormatted, "Corpse"];
+        private _corpseFundsText = format ["%3: %1 %2", GVAR(symbol), _corpseFundsFormatted, localize LSTRING(Corpse)];
 
         ctrlSetText [1001, _corpseFundsText];
     }, 0.1, [_corpse]] call CBA_fnc_addPerFrameHandler;

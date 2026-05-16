@@ -2,7 +2,7 @@
 
 private _generatorAction = [
     QGVAR(generator_menu),
-    "Use Generator",
+    localize LSTRING(Action),
     QPATHTOEF(icons,data\cable_ca.paa),
     {
         params ["_target", "_player"];

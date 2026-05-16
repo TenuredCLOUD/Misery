@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Loot">
+        <Key ID="STR_MISERY_Loot_AlreadySearched">
+            <English>This has already been searched...</English>
+            <Czech>Toto již bylo prohledáno...</Czech>
+            <French>Cela a déjà été fouillé...</French>
+            <Spanish>Esto ya ha sido registrado...</Spanish>
+            <Italian>Questo è già stato cercato...</Italian>
+            <Polish>To zostało již przeszukane...</Polish>
+            <Portuguese>Isto já foi revistado...</Portuguese>
+            <Russian>Это уже было обыскано...</Russian>
+            <German>Dies wurde bereits durchsucht...</German>
+            <Korean>이미 수색 완료된 곳입니다...</Korean>
+            <Japanese>ここはすでに捜索済みです...</Japanese>
+            <Chinese>此處已經被搜尋過了...</Chinese>
+            <Chinesesimp>此处已被搜寻过了...</Chinesesimp>
+            <Turkish>Bu zaten arandı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Loot_ItemsFound">
+            <English>You found some items...</English>
+            <Czech>Našli jste nějaké předměty...</Czech>
+            <French>Vous avez trouvé des objets...</French>
+            <Spanish>Has encontrado algunos objetos...</Spanish>
+            <Italian>Hai trovato alcuni oggetti...</Italian>
+            <Polish>Znaleziono kilka przedmiotów...</Polish>
+            <Portuguese>Encontrou alguns itens...</Portuguese>
+            <Russian>Вы нашли несколько предметов...</Russian>
+            <German>Du hast einige Gegenstände gefunden...</German>
+            <Korean>몇 가지 아이템을 발견했습니다...</Korean>
+            <Japanese>いくつかのアイテムを発見しました...</Japanese>
+            <Chinese>您發現了一些物品...</Chinese>
+            <Chinesesimp>您发现了一些物品...</Chinesesimp>
+            <Turkish>Bazı eşyalar buldunuz...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Loot_NoLootAreas">
+            <English>No Loot Areas</English>
+            <Czech>Oblasti bez kořisti</Czech>
+            <French>Zones sans butin</French>
+            <Spanish>Zonas sin botín</Spanish>
+            <Italian>Zone senza bottino</Italian>
+            <Polish>Obszary bez łupu</Polish>
+            <Portuguese>Áreas sem saque</Portuguese>
+            <Russian>Зоны без лута</Russian>
+            <German>Keine-Beute-Zonen</German>
+            <Korean>루트 금지 구역</Korean>
+            <Japanese>ルート禁止エリア</Japanese>
+            <Chinese>無物資區域</Chinese>
+            <Chinesesimp>无物资区域</Chinesesimp>
+            <Turkish>Ganimetsiz Bölgeler</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Loot_NoLootAreasDesc">
+            <English>ELLIPSE or RECTANGLE marker names covering the blacklisted loot area as strings ['noLoot_1', 'noLoot_2']</English>
+            <Czech>Názvy markerů typu ELLIPSE nebo RECTANGLE pokrývající zakázanou oblast kořisti jako řetězce ['noLoot_1', 'noLoot_2']</Czech>
+            <French>Noms des marqueurs ELLIPSE ou RECTANGLE couvrant la zone de butin sur liste noire sous forme de chaînes ['noLoot_1', 'noLoot_2']</French>
+            <Spanish>Nombres de marcadores ELLIPSE o RECTANGLE que cubren el área de botín en lista negra como cadenas ['noLoot_1', 'noLoot_2']</Spanish>
+            <Italian>Nomi dei marcatori ELLIPSE o RECTANGLE che coprono l'area del bottino nella lista nera come stringhe ['noLoot_1', 'noLoot_2']</Italian>
+            <Polish>Nazwy markerów ELLIPSE lub RECTANGLE pokrywające zablokowany obszar łupu jako ciągi znaków ['noLoot_1', 'noLoot_2']</Polish>
+            <Portuguese>Nomes de marcadores ELLIPSE ou RECTANGLE que cobrem a área de saque na lista negra como strings ['noLoot_1', 'noLoot_2']</Portuguese>
+            <Russian>Имена маркеров ELLIPSE или RECTANGLE, закрывающие заблокированную для лута зону, в виде строк ['noLoot_1', 'noLoot_2']</Russian>
+            <German>Namen von ELLIPSE- oder RECTANGLE-Markern, die die gesperrte Beutezone abdecken, als Strings ['noLoot_1', 'noLoot_2']</German>
+            <Korean>블랙리스트 루팅 구역을 지정하는 타원(ELLIPSE) 또는 사각형(RECTANGLE) 마커 이름 배열 ['noLoot_1', 'noLoot_2']</Korean>
+            <Japanese>ブラックリストに登録されたルートエリアをカバーするELLIPSEまたはRECTANGLEのマーカー名（文字列形式 ['noLoot_1', 'noLoot_2']）</Japanese>
+            <Chinese>覆蓋黑名單物資區域的 ELLIPSE 或 RECTANGLE 標記名稱，格式為字串 ['noLoot_1', 'noLoot_2']</Chinese>
+            <Chinesesimp>覆盖黑名单物资区域的 ELLIPSE 或 RECTANGLE 标记名称，格式为字符串 ['noLoot_1', 'noLoot_2']</Chinesesimp>
+            <Turkish>Kara listeye alınmış ganimet bölgesini kapsayan ELLIPSE veya RECTANGLE işaretçi adları, dize biçiminde ['noLoot_1', 'noLoot_2']</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Loot_NothingFound">
+            <English>Nothing found...</English>
+            <Czech>Nic nenalezeno...</Czech>
+            <French>Rien n'a été trouvé...</French>
+            <Spanish>No se encontró nada...</Spanish>
+            <Italian>Non è stato trovato nulla...</Italian>
+            <Polish>Nic nie znaleziono...</Polish>
+            <Portuguese>Nada encontrado...</Portuguese>
+            <Russian>Ничего не найдено...</Russian>
+            <German>Nichts gefunden...</German>
+            <Korean>발견된 것이 없습니다...</Korean>
+            <Japanese>何も見つかりませんでした...</Japanese>
+            <Chinese>未發現任何物品...</Chinese>
+            <Chinesesimp>未发现任何物品...</Chinesesimp>
+            <Turkish>Hiçbir şey bulunamadı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Loot_ProgressSearching">
+            <English>Searching...</English>
+            <Czech>Prohledávání...</Czech>
+            <French>Recherche en cours...</French>
+            <Spanish>Buscando...</Spanish>
+            <Italian>Ricerca...</Italian>
+            <Polish>Przeszukiwanie...</Polish>
+            <Portuguese>A revistar...</Portuguese>
+            <Russian>Поиск...</Russian>
+            <German>Suche läuft...</German>
+            <Korean>수색 중...</Korean>
+            <Japanese>捜索中...</Japanese>
+            <Chinese>正在搜尋...</Chinese>
+            <Chinesesimp>正在搜寻...</Chinesesimp>
+            <Turkish>Aranıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Loot_SearchAction">
+            <English>Search object...</English>
+            <Czech>Prohledat objekt...</Czech>
+            <French>Fouiller l'objet...</French>
+            <Spanish>Buscar en el objeto...</Spanish>
+            <Italian>Cerca nell'oggetto...</Italian>
+            <Polish>Przeszukaj obiekt...</Polish>
+            <Portuguese>Revistar objeto...</Portuguese>
+            <Russian>Обыскать объект...</Russian>
+            <German>Objekt durchsuchen...</German>
+            <Korean>물품 수색...</Korean>
+            <Japanese>オブジェクトを捜索する...</Japanese>
+            <Chinese>搜尋物品...</Chinese>
+            <Chinesesimp>搜寻物品...</Chinesesimp>
+            <Turkish>Nesneyi ara...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Loot_SearchCancelled">
+            <English>Search cancelled...</English>
+            <Czech>Prohledávání zrušeno...</Czech>
+            <French>Recherche annulée...</French>
+            <Spanish>Búsqueda cancelada...</Spanish>
+            <Italian>Ricerca annullata...</Italian>
+            <Polish>Przeszukanie anulowane...</Polish>
+            <Portuguese>Busca cancelada...</Portuguese>
+            <Russian>Поиск отменен...</Russian>
+            <German>Suche abgebrochen...</German>
+            <Korean>수색이 취소되었습니다...</Korean>
+            <Japanese>捜索がキャンセルされました...</Japanese>
+            <Chinese>搜尋已取消...</Chinese>
+            <Chinesesimp>搜寻已取消...</Chinesesimp>
+            <Turkish>Arama iptal edildi...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Loot_ToolRequired">
+            <English>You need a %1 to search this...</English>
+            <Czech>K prohledání tohoto potřebujete %1...</Czech>
+            <French>Vous avez besoin d'un %1 pour fouiller ceci...</French>
+            <Spanish>Necesitas un %1 para registrar esto...</Spanish>
+            <Italian>Hai bisogno di un %1 per cercare questo...</Italian>
+            <Polish>Potrzebujesz %1, aby to przeszukać...</Polish>
+            <Portuguese>Precisa de um %1 para revistar isto...</Portuguese>
+            <Russian>Вам понадобится %1, чтобы обыскать это...</Russian>
+            <German>Du benötigst ein %1, um dies zu durchsucht...</German>
+            <Korean>이것을 수색하려면 %1이(가) 필요합니다...</Korean>
+            <Japanese>ここを捜索するには%1が必要です...</Japanese>
+            <Chinese>您需要一個 %1 來搜尋此處...</Chinese>
+            <Chinesesimp>您需要一个 %1 来搜寻此处...</Chinesesimp>
+            <Turkish>Bunu aramak için bir %1 ihtiyacınız var...</Turkish>
+        </Key>
+    </Package>
+</Project>

@@ -13,7 +13,7 @@ if !(isServer) exitWith {};
 
 private _addBatterytoGeiger = [
     QGVAR(geiger_menu),
-    "Add lithium battery to geiger",
+    localize LSTRING(BatteryAction),
     QPATHTOEF(icons,data\battery_charging_ca.paa),
     {
         call FUNC(batteries)

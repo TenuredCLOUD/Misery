@@ -3,7 +3,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(areas),
     "EDITBOX",
-    [LSTRING(ChemicalAreas), LSTRING(ChemicalAreasDesc)],
+    [LSTRING(Areas), LSTRING(AreasDesc)],
     _category,
     "[]",
     1

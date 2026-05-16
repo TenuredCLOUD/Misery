@@ -66,20 +66,20 @@
             <Turkish>Bu araç yeniden mühimmatlandırılamaz...</Turkish>
         </Key>
         <Key ID="STR_MISERY_Compat_Rearm_Interrupted">
-            <English>Resupply interrupted...</English>
-            <Czech>Přezbrojování přerušeno...</Czech>
-            <French>Réapprovisionnement interrompu...</French>
-            <Spanish>Reabastecimiento interrumpido...</Spanish>
-            <Italian>Rifornimento interrotto...</Italian>
-            <Polish>Uzupełnianie przerwane...</Polish>
-            <Portuguese>Reabastecimento interrompido...</Portuguese>
-            <Russian>Пополнение БК прервано...</Russian>
-            <German>Aufmunitionieren unterbrochen...</German>
-            <Korean>재보급이 중단되었습니다...</Korean>
-            <Japanese>補給が中断されました...</Japanese>
-            <Chinese>補給已中斷...</Chinese>
-            <Chinesesimp>补给已中断...</Chinesesimp>
-            <Turkish>Yeniden mühimmatlandırma yarıda kesildi...</Turkish>
+            <English>Resupply interrupted... (Refunded)</English>
+            <Czech>Doplňování zásob přerušeno... (Vráceno)</Czech>
+            <French>Ravitaillement interrompu... (Remboursé)</French>
+            <Spanish>Reabastecimiento interrumpido... (Reembolsado)</Spanish>
+            <Italian>Rifornimento interrotto... (Rimborsato)</Italian>
+            <Polish>Zaopatrzenie przerwane... (Zwrócono koszty)</Polish>
+            <Portuguese>Reabastecimento interrompido... (Reembolsado)</Portuguese>
+            <Russian>Пополнение запасов прервано... (Средства возвращены)</Russian>
+            <German>Nachschub unterbrochen... (Erstattet)</German>
+            <Korean>보급이 중단되었습니다... (환불됨)</Korean>
+            <Japanese>補給が中断されました... (返金済み)</Japanese>
+            <Chinese>補給中斷... (已退款)</Chinese>
+            <Chinesesimp>补给中断... (已退款)</Chinesesimp>
+            <Turkish>İkmal kesintiye uğradı... (İade edildi)</Turkish>
         </Key>
         <Key ID="STR_MISERY_Compat_Rearm_NoOption">
             <English>No Resupply option selected...</English>
@@ -112,6 +112,22 @@
             <Chinese>沒有可重新補給的載具...</Chinese>
             <Chinesesimp>没有可重新补给的载具...</Chinesesimp>
             <Turkish>Yeniden mühimmatlandırılacak araç yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_Rearm_OutOfFunds">
+            <English>You ran out of funds! (Refunded)</English>
+            <Czech>Došly vám finance! (Vráceno)</Czech>
+            <French>Vous n'avez plus de fonds ! (Remboursé)</French>
+            <Spanish>¡Te has quedado sin fondos! (Reembolsado)</Spanish>
+            <Italian>Hai esaurito i fondi! (Rimborsato)</Italian>
+            <Polish>Skończyły Ci się fundusze! (Zwrócono koszty)</Polish>
+            <Portuguese>Ficou sem fundos! (Reembolsado)</Portuguese>
+            <Russian>У вас закончились средства! (Средства возвращены)</Russian>
+            <German>Dir sind die Mittel ausgegangen! (Erstattet)</German>
+            <Korean>자금이 부족합니다! (환불됨)</Korean>
+            <Japanese>資金が不足しています！ (返金済み)</Japanese>
+            <Chinese>您的資金已用盡！ (已退款)</Chinese>
+            <Chinesesimp>您的资金已用尽！ (已退款)</Chinesesimp>
+            <Turkish>Paranız bitti! (İade edildi)</Turkish>
         </Key>
         <Key ID="STR_MISERY_Compat_Rearm_ProgressStatus">
             <English>Resupplying...%1%2%1Progress: %3%%%1Funds:%1%4%1%5</English>

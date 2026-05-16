@@ -33,7 +33,7 @@
 
             private _action = [
                 QGVAR(searchObject_menu),
-                "Search object...",
+                localize LSTRING(SearchAction),
                 QPATHTOEF(icons,data\scan_search_ca.paa),
                 {
                     params ["", "", "_params"];

@@ -97,6 +97,22 @@
             <Chinesesimp>(这位荷官破产了！)</Chinesesimp>
             <Turkish>(Bu krupiye meteliksiz!)</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Devils_Luck_DealerBusy">
+            <English>Dealer is busy, try again later...</English>
+            <Czech>Obchodník má napilno, zkuste to znovu později...</Czech>
+            <French>Le marchand est occupé, réessayez plus tard...</French>
+            <Spanish>El comerciante está ocupado, inténtalo de nuevo más tarde...</Spanish>
+            <Italian>Il mercante è occupato, riprova più tardi...</Italian>
+            <Polish>Handlarz jest zajęty, spróbuj ponownie później...</Polish>
+            <Portuguese>O negociante está ocupado, tente novamente mais tarde...</Portuguese>
+            <Russian>Торговец занят, попробуйте позже...</Russian>
+            <German>Händler ist beschäftigt, versuche es später noch einmal...</German>
+            <Korean>상인이 바쁩니다. 나중에 다시 시도하세요...</Korean>
+            <Japanese>ディーラーは忙しいです、後ほどもう一度お試しください...</Japanese>
+            <Chinese>商人正忙，請稍後再試...</Chinese>
+            <Chinesesimp>商人正忙，请稍后再试...</Chinesesimp>
+            <Turkish>Tüccar meşgul, daha sonra tekrar deneyin...</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Devils_Luck_DealerLabel">
             <English>Dealer:</English>
             <Czech>Krupiér:</Czech>

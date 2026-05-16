@@ -73,7 +73,7 @@ _dummyVehicle enableSimulation false;
         player setVariable [QCLASS(processRearm), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _rearmInterrupt];
         deleteVehicle _dummyVehicle;
-        ctrlSetText [1001, "Resupply interrupted... (Refunded)"];
+        ctrlSetText [1001, localize LSTRING(Interrupted)];
         [982383, [1600, 1601], true] call EFUNC(common,displayShowControls);
         _handle call CBA_fnc_removePerFrameHandler;
     };
@@ -82,7 +82,7 @@ _dummyVehicle enableSimulation false;
         [_totalFundsDeducted] call EFUNC(currency,modifyMoney);
         player setVariable [QCLASS(processRearm), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _rearmInterrupt];
-        ctrlSetText [1001, "You ran out of funds! (Refunded)"];
+        ctrlSetText [1001, localize LSTRING(OutOfFunds)];
         [982383, [1600, 1601], true] call EFUNC(common,displayShowControls);
         deleteVehicle _dummyVehicle;
         _handle call CBA_fnc_removePerFrameHandler;
@@ -92,7 +92,7 @@ _dummyVehicle enableSimulation false;
     _totalFundsDeducted = _totalFundsDeducted + _fundsToDeductPerStep;
 
     private _displayedText = format [
-        "Resupplying...%1%2%1Progress: %3%%%1Funds:%1%4%5",
+        localize LSTRING(ProgressStatus),
         endl,
         _displayName,
         _progressPercent,

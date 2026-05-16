@@ -22,7 +22,7 @@ class CLASS(generator_ui) {
         };
         class CLASS(generator_fuellvl): RscText {
             idc = 1003;
-            text = "Fuel:"; //--- ToDo: Localize;
+            text = ECSTRING(generator,FuelLabel); //--- ToDo: Localize;
             x = 1 * GUI_GRID_W + GUI_GRID_X;
             y = 10 * GUI_GRID_H + GUI_GRID_Y;
             w = 9.5 * GUI_GRID_W;
@@ -65,7 +65,7 @@ class CLASS(generator_ui) {
         };
         class CLASS(generator_refuel_button): RscButton {
             idc = 1601;
-            text = "Refuel"; //--- ToDo: Localize;
+            text = ECSTRING(generator,Refuel); //--- ToDo: Localize;
             x = 1.5 * GUI_GRID_W + GUI_GRID_X;
             y = 17.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 8 * GUI_GRID_W;
