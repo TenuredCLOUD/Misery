@@ -7,6 +7,7 @@ PREP(countMagazinesAmmo);
 PREP(debugMessage);
 PREP(displayEnableControls);
 PREP(displayShowControls);
+PREP(dumpModClasses);
 PREP(emptyObject);
 PREP(getItemData);
 PREP(getLookedAtTarget);
