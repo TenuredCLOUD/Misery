@@ -4,40 +4,38 @@
  * Check to allow mining action
  *
  * Arguments:
- * 0: Object <OBJECT>
+ * None
  *
  * Return Value:
  * 0: Mining object found <BOOL>
  * 1: Mining object <OBJECT>
  * 2: Objects data <ARRAY>
+ * 3: Intersection position of looked at object <ARRAY>
  *
  * Example:
  * [] call misery_mining_fnc_condition;
  *
 */
 
-params ["_object"];
+[2] call EFUNC(common,getLookedAtTarget) params ["_object", "_hitPos"];
 
-private _nearObjects = nearestTerrainObjects [_object, [], 2, true, true];
+if (isNull _object) exitWith {[false, objNull, [], [0, 0, 0]]};
+
+private _modelInfo = getModelInfo _object select 0;
+
 private _miningObject = objNull;
 private _objectData = [];
 
-{
-    if (isNull _x) then { continue };
+private _index = GVAR(miningObjects) findIf {_x select 0 isEqualTo _modelInfo};
 
-    private _modelData = getModelInfo _x;
-    if (_modelData isEqualTo []) then { continue };
+if (_index isNotEqualTo -1) then {
 
-    private _model = _modelData select 0;
+    private _pos = getPosATL _object;
 
-    private _index = GVAR(miningObjects) findIf {_x select 0 isEqualTo _model};
-    if (_index isNotEqualTo -1) then {
-        _miningObject = _x;
-        _objectData = GVAR(miningObjects) select _index;
-        break;
-    };
-} forEach _nearObjects;
+    _miningObject = _object;
+    _objectData = GVAR(miningObjects) select _index;
+};
 
 private _found = !isNull _miningObject;
 
-[_found, _miningObject, _objectData]
+[_found, _miningObject, _objectData, _hitPos]

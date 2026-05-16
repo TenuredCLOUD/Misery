@@ -18,10 +18,10 @@
 params ["_hasAxe", "_hasSaw"];
 
 if (currentWeapon player isNotEqualTo "") then {
-    player action ["SWITCHWEAPON", player, player, -1];
+    [player] call ACEFUNC(weaponselect,putWeaponAway);
 };
 
-private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position player);
+private _soundDummy = "Land_HelipadEmpty_F" createVehicle (getPosWorld player);
 _soundDummy attachTo [player, [0, 0, 0], "Pelvis"];
 
 private _toolUsed = switch (true) do {
@@ -51,7 +51,7 @@ _toolUsed select 3,
 
     [player, QCLASS(woodenlog)] call CBA_fnc_removeItem;
 
-    [position player, [[QCLASS(firewood), selectRandom [1, 2]]]] call EFUNC(common,spawnLoot);
+    [getPosATL player, [[QCLASS(firewood), selectRandom [1, 2]]]] call EFUNC(common,spawnLoot);
 
     if (_toolUsed select 1 isEqualTo 1) then {
         player setVariable [QGVAR(cuttingWood), nil];

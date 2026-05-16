@@ -6,4 +6,5 @@ PREP(loop);
 PREP(parseData);
 PREP(parseSearchData);
 PREP(searchCondition);
+PREP(searchInteraction);
 PREP(searchObject);

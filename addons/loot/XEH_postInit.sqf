@@ -17,22 +17,7 @@ if (isClass (missionConfigFile >> "CfgMisery_LootData")) then {
 
 if (isClass (missionConfigFile >> "CfgMisery_SearchableObjects")) then {
     [] call FUNC(parseSearchData);
-
-    private _searchAction = [
-        QGVAR(searchObject_menu),
-        "Search nearby object...",
-        QPATHTOEF(icons,data\scan_search_ca.paa),
-        {
-            [] call FUNC(searchCondition) params ["", "_object", "_objectData"];
-            [_object, _objectData] call FUNC(searchObject)
-        },
-        {
-            [] call FUNC(searchCondition) select 0
-        }
-    ] call ACEFUNC(interact_menu,createAction);
-
-    [player, 1, [QUOTE(ACE_SelfActions)], _searchAction] call ACEFUNC(interact_menu,addActionToObject);
-
 } else {
     [QUOTE(COMPONENT_BEAUTIFIED), "CfgMisery_SearchableObjects class not found in description.ext, skipping data parser..."] call EFUNC(common,debugMessage);
 };
+

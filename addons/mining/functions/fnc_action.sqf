@@ -30,18 +30,20 @@ if !([[QCLASS(pickaxe)]] call EFUNC(common,hasItem)) exitWith {
     [QEGVAR(common,tileText), localize ECSTRING(common,MineOreNoTools)] call CBA_fnc_localEvent;
 };
 
-if (GVAR(minedPositions) findIf {_x distance getPosATL player < 2.5} isNotEqualTo -1) exitWith {
+if (GVAR(minedPositions) findIf {_x distance getPosWorld player < 2.5} isNotEqualTo -1) exitWith {
     [QEGVAR(common,tileText), "This ore vein has been depleted..."] call CBA_fnc_localEvent;
 };
 
 if (currentWeapon player isNotEqualTo "") then {
-    player action ["SWITCHWEAPON", player, player, -1];
+    [player] call ACEFUNC(weaponselect,putWeaponAway);
 };
 
-private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position player);
+private _soundDummy = "Land_HelipadEmpty_F" createVehicle (getPosWorld player);
 _soundDummy attachTo [player, [0, 0, 0], "Pelvis"];
 
-_soundDummy say3D [_audio, 250];
+if (_audio isNotEqualTo "") then {
+    _soundDummy say3D [_audio, 250];
+};
 
 player setVariable [QGVAR(miningOre), true];
 
@@ -72,14 +74,16 @@ _miningTime,
     } forEach _items;
 
     if (_itemCargo isNotEqualTo []) then {
-        private _holder = [position player, _itemCargo] call EFUNC(common,spawnLoot);
+        private _holder = [getPosATL player, _itemCargo] call EFUNC(common,spawnLoot);
+        private _rockChunksSuccess = [getPosATL player, [[QCLASS(stoneChunk), random 5]]] call EFUNC(common,spawnLoot);
         [QEGVAR(common,tileText), "You found some ore..."] call CBA_fnc_localEvent;
     } else {
+        private _rockChunksFailure = [getPosATL player, [[QCLASS(stoneChunk), random 5]]] call EFUNC(common,spawnLoot);
         [QEGVAR(common,tileText), "No ore found..."] call CBA_fnc_localEvent;
     };
 
     if ([_oreDepletion] call EFUNC(common,rollChance)) then {
-        private _position = getPosATL player;
+        private _position = getPosWorld player;
 
         // Check if position is already cached (within 2.5 meters)
         if (GVAR(minedPositions) findIf {_x distance _position < 2.5} isEqualTo -1) then {

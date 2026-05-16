@@ -9,6 +9,7 @@
  *
  * Return Value:
  * 0: Object <OBJECT>
+ * 1: Intersection Point ASL <ARRAY>
  *
  * Example:
  * [] call misery_common_fnc_getLookedAtTarget
@@ -25,7 +26,11 @@ private _endPos = [_eyePosA + _vectorA * _distance, _eyePosB + _vectorB * _dista
 private _intersections = lineIntersectsSurfaces [[_eyePosA, _eyePosB, _eyePosC], _endPos, player, objNull, true, 1, "GEOM", "NONE"];
 
 if (count _intersections < 1) exitWith {
-    objNull
+    [objNull, [0, 0, 0]]
 };
 
-(_intersections select 0) select 2
+private _hitData = _intersections select 0;
+private _posASL = _hitData select 0;
+private _object = _hitData select 2;
+
+[_object, _posASL]

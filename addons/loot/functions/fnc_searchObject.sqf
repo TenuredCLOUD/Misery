@@ -28,8 +28,8 @@ private _magazines = _objectData select 6;
 private _items = _objectData select 7;
 private _backpacks = _objectData select 8;
 
-private _pos = getPosATL _object;
-if (GVAR(searchedPositions) findIf {_x distance _pos < 0.5} isNotEqualTo -1) exitWith {
+private _pos = getPosWorld _object;
+if (GVAR(searchedPositions) findIf {_x distance _pos < 0.4} isNotEqualTo -1) exitWith {
     [QEGVAR(common,tileText), "This has already been searched..."] call CBA_fnc_localEvent;
 };
 
@@ -51,10 +51,11 @@ if (!_canSearch) exitWith {
     [QEGVAR(common,tileText), format ["You need a %1 to search this...", _listString]] call CBA_fnc_localEvent;
 };
 
-private _soundDummy = objNull;
+private _soundDummy = "Land_HelipadEmpty_F" createVehicle (getPosWorld player);
+_soundDummy attachTo [player, [0, 0, 0], "Pelvis"];
+
 if (_audio isNotEqualTo "") then {
-    _soundDummy = "#particlesource" createVehicleLocal getPosATL player;
-    _soundDummy say3D _audio;
+    _soundDummy say3D [_audio, 50];
 };
 
 [
@@ -63,8 +64,7 @@ if (_audio isNotEqualTo "") then {
     {true},
     {
         params ["_args"];
-        private _object = _args select 0;
-        private _objectData = _args select 1;
+        _args params ["_object", "_objectData", "_soundDummy"];
         private _searchChance = _objectData select 2;
         private _weapons = _objectData select 5;
         private _magazines = _objectData select 6;
@@ -122,6 +122,14 @@ if (_audio isNotEqualTo "") then {
         };
     },
     {
+        params ["_args"];
+        _args params ["_object", "_objectData", "_soundDummy"];
+        private _searchChance = _objectData select 2;
+        private _weapons = _objectData select 5;
+        private _magazines = _objectData select 6;
+        private _items = _objectData select 7;
+        private _backpacks = _objectData select 8;
+
         [QEGVAR(common,tileText), "Search cancelled..."] call CBA_fnc_localEvent;
 
         if (_soundDummy isNotEqualTo objNull) then {
