@@ -29,7 +29,7 @@ if (_nearestVehicle isEqualTo []) exitWith {};
 [_nearestVehicle] call EFUNC(common,getObjectData) params ["_displayName"];
 
 {
-    if ((_x select 0) isEqualTo _nearestVehicle) then {
+    if ((_x select 0) isEqualTo typeOf _nearestVehicle) then {
         _found = true;
         _resupplyPrice = _x select 4;
     };
@@ -54,20 +54,18 @@ if (_funds < _resupplyPrice) exitWith {
     _dialog displayRemoveEventHandler ["KeyDown", _rearmInterrupt];
 };
 
-private _fundsToDeductPerStep = _resupplyPrice;
+private _totalSteps = 100;
+private _fundsToDeductPerStep = _resupplyPrice / _totalSteps;
 private _totalFundsDeducted = 0;
 
-private _dummyVehicle = "Land_HelipadEmpty_F" createVehicle [0,0,0];
+private _dummyVehicle = "Land_HelipadEmpty_F" createVehicleLocal [0,0,0];
 _dummyVehicle enableSimulation false;
 
 [{
     params ["_args", "_handle"];
-    _args params ["_nearestVehicle", "_dialog", "_displayName", "_rearmInterrupt", "_fundsToDeductPerStep", "_step", "_totalFundsDeducted", "_dummyVehicle"];
+    _args params ["_nearestVehicle", "_dialog", "_displayName", "_rearmInterrupt", "_fundsToDeductPerStep", "_step", "_totalFundsDeducted", "_dummyVehicle", "_totalSteps"];
 
-    private _totalSteps = 100;
-    private _progress = (_step + 1) / _totalSteps;
-    private _progressPercent = (_progress * 100) toFixed 2;
-
+    private _progressPercent = (((_step + 1) / _totalSteps) * 100) toFixed 2;
     call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
     if (!alive _nearestVehicle || !(player getVariable [QCLASS(processRearm), false])) exitWith {
@@ -75,7 +73,7 @@ _dummyVehicle enableSimulation false;
         player setVariable [QCLASS(processRearm), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _rearmInterrupt];
         deleteVehicle _dummyVehicle;
-        ctrlSetText [1001, "Resupply interrupted..."];
+        ctrlSetText [1001, "Resupply interrupted... (Refunded)"];
         [982383, [1600, 1601], true] call EFUNC(common,displayShowControls);
         _handle call CBA_fnc_removePerFrameHandler;
     };
@@ -84,7 +82,7 @@ _dummyVehicle enableSimulation false;
         [_totalFundsDeducted] call EFUNC(currency,modifyMoney);
         player setVariable [QCLASS(processRearm), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _rearmInterrupt];
-        ctrlSetText [1001, "You cannot afford this!"];
+        ctrlSetText [1001, "You ran out of funds! (Refunded)"];
         [982383, [1600, 1601], true] call EFUNC(common,displayShowControls);
         deleteVehicle _dummyVehicle;
         _handle call CBA_fnc_removePerFrameHandler;
@@ -93,10 +91,8 @@ _dummyVehicle enableSimulation false;
     [-_fundsToDeductPerStep] call EFUNC(currency,modifyMoney);
     _totalFundsDeducted = _totalFundsDeducted + _fundsToDeductPerStep;
 
-    private _progress = (_step + 1) / _totalSteps;
-    private _progressPercent = (_progress * 100) toFixed 2;
     private _displayedText = format [
-        "Resupplying...%1%2%1Progress: %3%%%1Funds:%1%4%1%5",
+        "Resupplying...%1%2%1Progress: %3%%%1Funds:%1%4%5",
         endl,
         _displayName,
         _progressPercent,
@@ -109,15 +105,15 @@ _dummyVehicle enableSimulation false;
         [_dummyVehicle, _nearestVehicle] call ACEFUNC(rearm,rearmEntireVehicleSuccess);
         player setVariable [QCLASS(processRearm), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _rearmInterrupt];
-        private _displayFull = format ["%1 has been fully resupplied...", _displayName];
-        ctrlSetText [1001, _displayFull];
+        ctrlSetText [1001, format ["%1 has been fully resupplied!", _displayName]];
         [982383, [1600, 1601], true] call EFUNC(common,displayShowControls);
         deleteVehicle _dummyVehicle;
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
-    _args set [7, _step + 1];
-    _args set [8, _totalFundsDeducted];
-}, 0.5, [
-    _nearestVehicle, _dialog, _displayName, _rearmInterrupt, _fundsToDeductPerStep, 0, _totalFundsDeducted, _dummyVehicle
+    _args set [5, _step + 1];
+    _args set [6, _totalFundsDeducted];
+
+}, 0.2, [
+    _nearestVehicle, _dialog, _displayName, _rearmInterrupt, _fundsToDeductPerStep, 0, _totalFundsDeducted, _dummyVehicle, _totalSteps
 ]] call CBA_fnc_addPerFrameHandler;
