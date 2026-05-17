@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Medical">
+        <Key ID="STR_MISERY_Medical_Antibiotic">
+            <English>Administer Antibiotics</English>
+            <Czech>Podat antibiotika</Czech>
+            <French>Administrer des antibiotiques</French>
+            <Spanish>Administrar antibióticos</Spanish>
+            <Italian>Somministrare antibiotici</Italian>
+            <Polish>Podaj antybiotyki</Polish>
+            <Portuguese>Administrar antibióticos</Portuguese>
+            <Russian>Ввести антибиотики</Russian>
+            <German>Antibiotika verabreichen</German>
+            <Korean>항생제 투여</Korean>
+            <Japanese>抗生物質を投与</Japanese>
+            <Chinese>注射/服用抗生素</Chinese>
+            <Chinesesimp>注射/服用抗生素</Chinesesimp>
+            <Turkish>Antibiyotik Uygula</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_AntibioticProgress">
+            <English>Administering antibiotics...</English>
+            <Czech>Podávají se antibiotika...</Czech>
+            <French>Administration d'antibiotiques...</French>
+            <Spanish>Administrando antibióticos...</Spanish>
+            <Italian>Somministrazione di antibiotici...</Italian>
+            <Polish>Podawanie antybiotyków...</Polish>
+            <Portuguese>Administrando antibióticos...</Portuguese>
+            <Russian>Введение антибиотиков...</Russian>
+            <German>Antibiotika werden verabreicht...</German>
+            <Korean>항생제 투여 중...</Korean>
+            <Japanese>抗生物質を投与中...</Japanese>
+            <Chinese>正在處置抗生素...</Chinese>
+            <Chinesesimp>正在处置抗生素...</Chinesesimp>
+            <Turkish>Antibiyotik uygulanıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_Antidote">
+            <English>Inject Antidote</English>
+            <Czech>Aplikovat protijed</Czech>
+            <French>Injecter un antidote</French>
+            <Spanish>Inyectar antídoto</Spanish>
+            <Italian>Iniettare l'antidoto</Italian>
+            <Polish>Wstrzyknij odtrutkę</Polish>
+            <Portuguese>Injetar antídoto</Portuguese>
+            <Russian>Ввести антидот</Russian>
+            <German>Gegengift injizieren</German>
+            <Korean>해독제 주사</Korean>
+            <Japanese>解毒剤を注射</Japanese>
+            <Chinese>注射解毒劑</Chinese>
+            <Chinesesimp>注射解毒剂</Chinesesimp>
+            <Turkish>Panzehir Enjekte Et</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_AntidoteProgress">
+            <English>Injecting antidote...</English>
+            <Czech>Aplikuje se protijed...</Czech>
+            <French>Injection d'un antidote...</French>
+            <Spanish>Inyectando antídoto...</Spanish>
+            <Italian>Iniezione dell'antidoto...</Italian>
+            <Polish>Wstrzykiwanie odtrutki...</Polish>
+            <Portuguese>Injetando antídoto...</Portuguese>
+            <Russian>Введение антидота...</Russian>
+            <German>Gegengift wird injiziert...</German>
+            <Korean>해독제 주사 중...</Korean>
+            <Japanese>解毒剤を注射中...</Japanese>
+            <Chinese>正在注射解毒劑...</Chinese>
+            <Chinesesimp>正在注射解毒剂...</Chinesesimp>
+            <Turkish>Panzehir enjekte ediliyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_Antiparasitic">
+            <English>Administer Antiparasitics</English>
+            <Czech>Podat antiparazitika</Czech>
+            <French>Administrer des antiparasitaires</French>
+            <Spanish>Administrar antiparasitarios</Spanish>
+            <Italian>Somministrare antiparassitari</Italian>
+            <Polish>Podaj środki przeciwpasożytnicze</Polish>
+            <Portuguese>Administrar antiparasitários</Portuguese>
+            <Russian>Ввести антипаразитарные средства</Russian>
+            <German>Antiparasitika verabreichen</German>
+            <Korean>구충제 투여</Korean>
+            <Japanese>駆虫薬を投与</Japanese>
+            <Chinese>服用抗寄生蟲藥</Chinese>
+            <Chinesesimp>服用抗寄生虫药</Chinesesimp>
+            <Turkish>Antiparaziter Uygula</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_AntiparasiticProgress">
+            <English>Administering antiparasitics...</English>
+            <Czech>Podávají se antiparazitika...</Czech>
+            <French>Administration d'antiparasitaires...</French>
+            <Spanish>Administrando antiparasitarios...</Spanish>
+            <Italian>Somministrazione di antiparassitari...</Italian>
+            <Polish>Podawanie środków przeciwpasożytniczych...</Polish>
+            <Portuguese>Administrando antiparasitários...</Portuguese>
+            <Russian>Введение антипаразитарных средств...</Russian>
+            <German>Antiparasitika werden verabreicht...</German>
+            <Korean>구충제 투여 중...</Korean>
+            <Japanese>駆虫薬を投与中...</Japanese>
+            <Chinese>正在處置抗寄生蟲藥...</Chinese>
+            <Chinesesimp>正在处置抗寄生虫药...</Chinesesimp>
+            <Turkish>Antiparaziter uygulanıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_Caffeine">
+            <English>Administer Caffeine tablets</English>
+            <Czech>Podat kofeinové tablety</Czech>
+            <French>Administrer des comprimés de caféine</French>
+            <Spanish>Administrar pastillas de cafeína</Spanish>
+            <Italian>Somministrare pastiglie di caffeina</Italian>
+            <Polish>Podaj tabletki z kofeiną</Polish>
+            <Portuguese>Administrar comprimidos de cafeína</Portuguese>
+            <Russian>Ввести таблетки кофеина</Russian>
+            <German>Koffeintabletten verabreichen</German>
+            <Korean>카페인 알약 투여</Korean>
+            <Japanese>カフェイン錠剤を投与</Japanese>
+            <Chinese>服用咖啡因片</Chinese>
+            <Chinesesimp>服用咖啡因片</Chinesesimp>
+            <Turkish>Kafein Hapı Uygula</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_CaffeineProgress">
+            <English>Administering caffeine...</English>
+            <Czech>Podává se kofein...</Czech>
+            <French>Administration de caféine...</French>
+            <Spanish>Administrando cafeína...</Spanish>
+            <Italian>Somministrazione di caffeina...</Italian>
+            <Polish>Podawanie kofeiny...</Polish>
+            <Portuguese>Administrando cafeína...</Portuguese>
+            <Russian>Введение кофеина...</Russian>
+            <German>Koffein wird verabreicht...</German>
+            <Korean>카페인 투여 중...</Korean>
+            <Japanese>カフェインを投与중...</Japanese>
+            <Chinese>正在處置咖啡因...</Chinese>
+            <Chinesesimp>正在处置咖啡因...</Chinesesimp>
+            <Turkish>Kafein uygulanıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_Caffetin">
+            <English>Administer Caffetin</English>
+            <Czech>Podat Caffetin</Czech>
+            <French>Administrer du Caffetin</French>
+            <Spanish>Administrar Caffetin</Spanish>
+            <Italian>Somministrare Caffetin</Italian>
+            <Polish>Podaj Caffetin</Polish>
+            <Portuguese>Administrar Caffetin</Portuguese>
+            <Russian>Ввести Каффетин</Russian>
+            <German>Caffetin verabreichen</German>
+            <Korean>카페틴 투여</Korean>
+            <Japanese>カフェティンを投与</Japanese>
+            <Chinese>服用咖啡汀</Chinese>
+            <Chinesesimp>服用咖啡汀</Chinesesimp>
+            <Turkish>Caffetin Uygula</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_CaffetinProgress">
+            <English>Administering caffetin...</English>
+            <Czech>Podává se Caffetin...</Czech>
+            <French>Administration de Caffetin...</French>
+            <Spanish>Administrando Caffetin...</Spanish>
+            <Italian>Somministrazione di Caffetin...</Italian>
+            <Polish>Podawanie Caffetinu...</Polish>
+            <Portuguese>Administrando Caffetin...</Portuguese>
+            <Russian>Введение Каффетина...</Russian>
+            <German>Caffetin wird verabreicht...</German>
+            <Korean>카페틴 투여 중...</Korean>
+            <Japanese>カフェティンを投与中...</Japanese>
+            <Chinese>正在處置咖啡汀...</Chinese>
+            <Chinesesimp>正在处置咖啡汀...</Chinesesimp>
+            <Turkish>Caffetin uygulanıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_CharcoalTablets">
+            <English>Administer Charcoal tablets</English>
+            <Czech>Podat aktivní uhlí</Czech>
+            <French>Administrer des comprimés de charbon</French>
+            <Spanish>Administrar pastillas de carbón</Spanish>
+            <Italian>Somministrare pastiglie di carbone</Italian>
+            <Polish>Podaj węgiel aktywny</Polish>
+            <Portuguese>Administrar pastilhas de carvão</Portuguese>
+            <Russian>Ввести активированный уголь</Russian>
+            <German>Kohletabletten verabreichen</German>
+            <Korean>활성탄 알약 투여</Korean>
+            <Japanese>活性炭錠剤を投与</Japanese>
+            <Chinese>服用活性炭片</Chinese>
+            <Chinesesimp>服用活性炭片</Chinesesimp>
+            <Turkish>Kömür Hapı Uygula</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_CharcoalTabletsProgress">
+            <English>Administering charcoal...</English>
+            <Czech>Podává se aktivní uhlí...</Czech>
+            <French>Administration de charbon...</French>
+            <Spanish>Administrando carbón...</Spanish>
+            <Italian>Somministrazione di carbone...</Italian>
+            <Polish>Podawanie węgla aktywnego...</Polish>
+            <Portuguese>Administrando carvão...</Portuguese>
+            <Russian>Введение активированного угля...</Russian>
+            <German>Kohle wird verabreicht...</German>
+            <Korean>활성탄 투여 중...</Korean>
+            <Japanese>活性炭を投与中...</Japanese>
+            <Chinese>正在處置活性炭...</Chinese>
+            <Chinesesimp>正在处置活性炭...</Chinesesimp>
+            <Turkish>Kömür uygulanıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_Clozapine">
+            <English>Inject Clozapine</English>
+            <Czech>Aplikovat klozapin</Czech>
+            <French>Injecter de la clozapine</French>
+            <Spanish>Inyectar clozapina</Spanish>
+            <Italian>Iniettare clozapina</Italian>
+            <Polish>Wstrzyknij klozapinę</Polish>
+            <Portuguese>Injetar clozapina</Portuguese>
+            <Russian>Ввести клозапин</Russian>
+            <German>Clozapin injizieren</German>
+            <Korean>클로자핀 주사</Korean>
+            <Japanese>クロザピンを注射</Japanese>
+            <Chinese>注射氯氮平</Chinese>
+            <Chinesesimp>注射氯氮平</Chinesesimp>
+            <Turkish>Klozapin Enjekte Et</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_ClozapineBox">
+            <English>Administer Clozapine</English>
+            <Czech>Podat klozapin</Czech>
+            <French>Administrer de la clozapine</French>
+            <Spanish>Administrar clozapina</Spanish>
+            <Italian>Somministrare clozapina</Italian>
+            <Polish>Podaj klozapinę</Polish>
+            <Portuguese>Administrar clozapina</Portuguese>
+            <Russian>Ввести клозапин (таблетки)</Russian>
+            <German>Clozapin verabreichen</German>
+            <Korean>클로자핀 투여</Korean>
+            <Japanese>クロザピンを投与</Japanese>
+            <Chinese>服用氯氮平</Chinese>
+            <Chinesesimp>服用氯氮平</Chinesesimp>
+            <Turkish>Klozapin Uygula</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_ClozapineBoxProgress">
+            <English>Administering clozapine...</English>
+            <Czech>Podává se klozapin...</Czech>
+            <French>Administration de clozapine...</French>
+            <Spanish>Administrando clozapina...</Spanish>
+            <Italian>Somministrazione di clozapina...</Italian>
+            <Polish>Podawanie klozapiny...</Polish>
+            <Portuguese>Administrando clozapina...</Portuguese>
+            <Russian>Введение клозапина (таблеток)...</Russian>
+            <German>Clozapin wird verabreicht...</German>
+            <Korean>클로자핀 투여 중...</Korean>
+            <Japanese>クロザピンを投与中...</Japanese>
+            <Chinese>正在處置氯氮平...</Chinese>
+            <Chinesesimp>正在处置氯氮平...</Chinesesimp>
+            <Turkish>Klozapin uygulanıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_ClozapineProgress">
+            <English>Injecting clozapine...</English>
+            <Czech>Aplikuje se klozapin...</Czech>
+            <French>Injection de clozapine...</French>
+            <Spanish>Inyectando clozapina...</Spanish>
+            <Italian>Iniezione di clozapina...</Italian>
+            <Polish>Wstrzykiwanie klozapiny...</Polish>
+            <Portuguese>Injetando clozapina...</Portuguese>
+            <Russian>Введение клозапина...</Russian>
+            <German>Clozapin wird injiziert...</German>
+            <Korean>클로자핀 주사 중...</Korean>
+            <Japanese>クロザピンを注射中...</Japanese>
+            <Chinese>正在注射氯氮平...</Chinese>
+            <Chinesesimp>正在注射氯氮平...</Chinesesimp>
+            <Turkish>Klozapin enjekte ediliyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_Cocaine">
+            <English>Snort Cocaine</English>
+            <Czech>Šňat kokain</Czech>
+            <French>Priser de la cocaïne</French>
+            <Spanish>Esnifar cocaína</Spanish>
+            <Italian>Sniffare cocaina</Italian>
+            <Polish>Wciągać kokainę</Polish>
+            <Portuguese>Cheirar cocaína</Portuguese>
+            <Russian>Нюхать кокаин</Russian>
+            <German>Kokain schnupfen</German>
+            <Korean>코카인 흡입</Korean>
+            <Japanese>コカインを吸入</Japanese>
+            <Chinese>吸食吸入式可卡因</Chinese>
+            <Chinesesimp>吸食吸入式可卡因</Chinesesimp>
+            <Turkish>Kokain Çek</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_CocaineProgress">
+            <English>Snorting cocaine...</English>
+            <Czech>Šňupe se kokain...</Czech>
+            <French>Prise de cocaïne en cours...</French>
+            <Spanish>Esnifando cocaína...</Spanish>
+            <Italian>Sniffando cocaina...</Italian>
+            <Polish>Wciąganie kokainy...</Polish>
+            <Portuguese>Cheirando cocaína...</Portuguese>
+            <Russian>Вдыхание кокаина...</Russian>
+            <German>Kokain wird geschnupft...</German>
+            <Korean>코카인 흡입 중...</Korean>
+            <Japanese>コカインを吸入中...</Japanese>
+            <Chinese>正在吸食可卡因...</Chinese>
+            <Chinesesimp>正在吸食可卡因...</Chinesesimp>
+            <Turkish>Kokain çekiliyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_DeconKit">
+            <English>Use Decontamination kit</English>
+            <Czech>Použít dekontaminační sadu</Czech>
+            <French>Utiliser le kit de décontamination</French>
+            <Spanish>Usar kit de descontaminación</Spanish>
+            <Italian>Usa kit di decontaminazione</Italian>
+            <Polish>Użyj zestawu odkażającego</Polish>
+            <Portuguese>Usar kit de descontaminação</Portuguese>
+            <Russian>Использовать дезинфекционный набор</Russian>
+            <German>Dekontaminationsset benutzen</German>
+            <Korean>제독 키트 사용</Korean>
+            <Japanese>除染キットを使用</Japanese>
+            <Chinese>使用洗消/防化工具箱</Chinese>
+            <Chinesesimp>使用洗消/防化工具箱</Chinesesimp>
+            <Turkish>Dekontaminasyon Kitini Kullan</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_DeconKitProgress">
+            <English>Using Decontamination kit...</English>
+            <Czech>Používá se dekontaminační sada...</Czech>
+            <French>Utilisation du kit de décontamination...</French>
+            <Spanish>Usando kit de descontaminación...</Spanish>
+            <Italian>Utilizzo del kit di decontaminazione...</Italian>
+            <Polish>Używanie zestawu odkażającego...</Polish>
+            <Portuguese>Usando kit de descontaminação...</Portuguese>
+            <Russian>Использование дезинфекционного набора...</Russian>
+            <German>Dekontaminationsset wird benutzt...</German>
+            <Korean>제독 키트 사용 중...</Korean>
+            <Japanese>除染キットを使用中...</Japanese>
+            <Chinese>正在使用洗消工具箱...</Chinese>
+            <Chinesesimp>正在使用洗消工具箱...</Chinesesimp>
+            <Turkish>Dekontaminasyon kiti kullanılıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_Electrolyte">
+            <English>Inject Electrolyte solution</English>
+            <Czech>Aplikovat elektrolytický roztok</Czech>
+            <French>Injecter une solution d'électrolytes</French>
+            <Spanish>Inyectar solución de electrolitos</Spanish>
+            <Italian>Iniettare soluzione elettrolitica</Italian>
+            <Polish>Wstrzyknij roztwór elektrolitów</Polish>
+            <Portuguese>Injetar solução eletrolítica</Portuguese>
+            <Russian>Ввести раствор электролитов</Russian>
+            <German>Elektrolytlösung injizieren</German>
+            <Korean>전해질 용액 주사</Korean>
+            <Japanese>电解質溶液を注射</Japanese>
+            <Chinese>注射電解質溶液</Chinese>
+            <Chinesesimp>注射电解质溶液</Chinesesimp>
+            <Turkish>Elektrolit Çözeltisi Enjekte Et</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_ElectrolyteProgress">
+            <English>Injecting solution...</English>
+            <Czech>Aplikuje se roztok...</Czech>
+            <French>Injection de la solution...</French>
+            <Spanish>Inyectando solución...</Spanish>
+            <Italian>Iniezione della soluzione...</Italian>
+            <Polish>Wstrzykiwanie roztworu...</Polish>
+            <Portuguese>Injetando solução...</Portuguese>
+            <Russian>Введение раствора...</Russian>
+            <German>Lösung wird injiziert...</German>
+            <Korean>용액 주사 중...</Korean>
+            <Japanese>溶液を注射中...</Japanese>
+            <Chinese>正在注射溶液...</Chinese>
+            <Chinesesimp>正在注射溶液...</Chinesesimp>
+            <Turkish>Çözelti enjekte ediliyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_Glucose">
+            <English>Inject Glucose</English>
+            <Czech>Aplikovat glukózu</Czech>
+            <French>Injecter du glucose</French>
+            <Spanish>Inyectar glucosa</Spanish>
+            <Italian>Iniettare glucosio</Italian>
+            <Polish>Wstrzyknij glukozę</Polish>
+            <Portuguese>Injetar glicose</Portuguese>
+            <Russian>Ввести глюкозу</Russian>
+            <German>Glukose injizieren</German>
+            <Korean>포도당 주사</Korean>
+            <Japanese>ブドウ糖を注射</Japanese>
+            <Chinese>注射葡萄糖</Chinese>
+            <Chinesesimp>注射葡萄糖</Chinesesimp>
+            <Turkish>Glikoz Enjekte Et</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_GlucoseProgress">
+            <English>Injecting glucose...</English>
+            <Czech>Aplikuje se glukóza...</Czech>
+            <French>Injection de glucose...</French>
+            <Spanish>Inyectando glucosa...</Spanish>
+            <Italian>Iniezione di glucosio...</Italian>
+            <Polish>Wstrzykiwanie glukozy...</Polish>
+            <Portuguese>Injetando glicose...</Portuguese>
+            <Russian>Введение глюкозы...</Russian>
+            <German>Glukose wird injiziert...</German>
+            <Korean>포도당 주사 중...</Korean>
+            <Japanese>ブドウ糖を注射中...</Japanese>
+            <Chinese>正在注射葡萄糖...</Chinese>
+            <Chinesesimp>正在注射葡萄糖...</Chinesesimp>
+            <Turkish>Glikoz enjekte ediliyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_Painkillers">
+            <English>Administer Pain pill</English>
+            <Czech>Podat pilulku na bolest</Czech>
+            <French>Administrer un analgésique</French>
+            <Spanish>Administrar pastilla para el dolor</Spanish>
+            <Italian>Somministrare pillola per il dolore</Italian>
+            <Polish>Podaj pigułkę przeciwbólową</Polish>
+            <Portuguese>Administrar pastilha para a dor</Portuguese>
+            <Russian>Ввести обезболивающее</Russian>
+            <German>Schmerztablette verabreichen</German>
+            <Korean>진통제 알약 투여</Korean>
+            <Japanese>痛み止めを投与</Japanese>
+            <Chinese>服用止痛藥片</Chinese>
+            <Chinesesimp>服用止痛药片</Chinesesimp>
+            <Turkish>Ağrı Kesici Hap Uygula</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_PainkillersProgress">
+            <English>Administering pain pill...</English>
+            <Czech>Podává se pilulka na bolest...</Czech>
+            <French>Administration d'un analgésique...</French>
+            <Spanish>Administrando pastilla para el dolor...</Spanish>
+            <Italian>Somministrazione di pillola per il dolore...</Italian>
+            <Polish>Podawanie pigułki przeciwbólowej...</Polish>
+            <Portuguese>Administrando pastilha para a dor...</Portuguese>
+            <Russian>Введение обезболивающего...</Russian>
+            <German>Schmerztablette wird verabreicht...</German>
+            <Korean>진통제 투여 중...</Korean>
+            <Japanese>痛み止めを投与中...</Japanese>
+            <Chinese>正在處置止痛藥...</Chinese>
+            <Chinesesimp>正在处置止痛药...</Chinesesimp>
+            <Turkish>Ağrı kesici hap uygulanıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_PotassiumIodate">
+            <English>Administer Potassium iodate</English>
+            <Czech>Podat jodičnan draselný</Czech>
+            <French>Administrer du iodate de potassium</French>
+            <Spanish>Administrar yodato de potasio</Spanish>
+            <Italian>Somministrare iodato di potassio</Italian>
+            <Polish>Podaj jodan potasu</Polish>
+            <Portuguese>Administrar iodato de potássio</Portuguese>
+            <Russian>Ввести йодат калия</Russian>
+            <German>Kaliumiodat verabreichen</German>
+            <Korean>요오드산 칼륨 투여</Korean>
+            <Japanese>ヨウ素酸カリウムを投与</Japanese>
+            <Chinese>服用碘酸鉀</Chinese>
+            <Chinesesimp>服用碘酸钾</Chinesesimp>
+            <Turkish>Potasyum İyodat Uygula</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_PotassiumIodateProgress">
+            <English>Administering potassium iodate...</English>
+            <Czech>Podává se jodičnan draselný...</Czech>
+            <French>Administration de iodate de potassium...</French>
+            <Spanish>Administrando yodato de potasio...</Spanish>
+            <Italian>Somministrazione di iodato di potassio...</Italian>
+            <Polish>Podawanie jodanu potasu...</Polish>
+            <Portuguese>Administrando iodato de potássio...</Portuguese>
+            <Russian>Введение йодата калия...</Russian>
+            <German>Kaliumiodat wird verabreicht...</German>
+            <Korean>요오드산 칼륨 투여 중...</Korean>
+            <Japanese>ヨウ素酸カリウムを投与中...</Japanese>
+            <Chinese>正在處置碘酸鉀...</Chinese>
+            <Chinesesimp>正在处置碘酸钾...</Chinesesimp>
+            <Turkish>Potasyum iyodat uygulanıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_RandomMedication">
+            <English>Administer Random pharmaceuticals</English>
+            <Czech>Podat náhodná farmaka</Czech>
+            <French>Administrer des produits pharmaceutiques aléatoires</French>
+            <Spanish>Administrar fármacos aleatorios</Spanish>
+            <Italian>Somministrare farmaci casuali</Italian>
+            <Polish>Podaj losowe leki</Polish>
+            <Portuguese>Administrar medicamentos aleatórios</Portuguese>
+            <Russian>Ввести случайные медикаменты</Russian>
+            <German>Zufällige Arzneimittel verabreichen</German>
+            <Korean>임의의 의약품 투여</Korean>
+            <Japanese>ランダムな医薬品を投与</Japanese>
+            <Chinese>服用未知/隨機藥物</Chinese>
+            <Chinesesimp>服用未知/随机药物</Chinesesimp>
+            <Turkish>Rastgele İlaç Uygula</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_RandomMedicationProgress">
+            <English>Administering random pharmaceuticals...</English>
+            <Czech>Podávají se náhodná farmaka...</Czech>
+            <French>Administration de produits pharmaceutiques aléatoires...</French>
+            <Spanish>Administrando fármacos aleatorios...</Spanish>
+            <Italian>Somministrazione di farmaci casuali...</Italian>
+            <Polish>Podawanie losowych leków...</Polish>
+            <Portuguese>Administrando medicamentos aleatórios...</Portuguese>
+            <Russian>Введение случайных медикаментов...</Russian>
+            <German>Zufällige Arzneimittel werden verabreicht...</German>
+            <Korean>임의의 의약품 투여 중...</Korean>
+            <Japanese>ランダムな医薬品を投与中...</Japanese>
+            <Chinese>正在處置隨機藥物...</Chinese>
+            <Chinesesimp>正在处置随机药物...</Chinesesimp>
+            <Turkish>Rastgele ilaç uygulanıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_SleepingPills">
+            <English>Administer Sleeping pill</English>
+            <Czech>Podat pilulku na spaní</Czech>
+            <French>Administrer un somnifère</French>
+            <Spanish>Administrar pastilla para dormir</Spanish>
+            <Italian>Somministrare pillola per dormire</Italian>
+            <Polish>Podaj pigułkę nasenną</Polish>
+            <Portuguese>Administrar pastilha para dormir</Portuguese>
+            <Russian>Ввести снотворное</Russian>
+            <German>Schlaftablette verabreichen</German>
+            <Korean>수면제 알약 투여</Korean>
+            <Japanese>睡眠薬を投与</Japanese>
+            <Chinese>服用安眠藥片</Chinese>
+            <Chinesesimp>服用安眠药片</Chinesesimp>
+            <Turkish>Uyku Hapı Uygula</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_SleepingPillsProgress">
+            <English>Administering sleeping pill...</English>
+            <Czech>Podává se pilulka na spaní...</Czech>
+            <French>Administration d'un somnifère...</French>
+            <Spanish>Administrando pastilla para dormir...</Spanish>
+            <Italian>Somministrazione di pillola per dormire...</Italian>
+            <Polish>Podawanie pigułki nasennej...</Polish>
+            <Portuguese>Administrando pastilha para dormir...</Portuguese>
+            <Russian>Введение снотворного...</Russian>
+            <German>Schlaftablette wird verabreicht...</German>
+            <Korean>수면제 투여 중...</Korean>
+            <Japanese>睡眠薬を投与中...</Japanese>
+            <Chinese>正在處置安眠藥...</Chinese>
+            <Chinesesimp>正在处置安眠药...</Chinesesimp>
+            <Turkish>Uyku hapı uygulanıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_Thrombomodulin">
+            <English>Inject Thrombomodulin</English>
+            <Czech>Aplikovat trombomodulin</Czech>
+            <French>Injecter de la thrombomoduline</French>
+            <Spanish>Inyectar trombomodulina</Spanish>
+            <Italian>Iniettare trombomodulina</Italian>
+            <Polish>Wstrzyknij trombomodulinę</Polish>
+            <Portuguese>Injetar trombomodulina</Portuguese>
+            <Russian>Ввести тромбомодулин</Russian>
+            <German>Thrombomodulin injizieren</German>
+            <Korean>트롬보모듈린 주사</Korean>
+            <Japanese>トロンボモジュリンを注射</Japanese>
+            <Chinese>注射血栓調節蛋白</Chinese>
+            <Chinesesimp>注射血栓调节蛋白</Chinesesimp>
+            <Turkish>Trombomodülin Enjekte Et</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_ThrombomodulinProgress">
+            <English>Injecting thrombomodulin...</English>
+            <Czech>Aplikuje se trombomodulin...</Czech>
+            <French>Injection de thrombomoduline...</French>
+            <Spanish>Inyectando trombomodulina...</Spanish>
+            <Italian>Iniezione di trombomodulina...</Italian>
+            <Polish>Wstrzykiwanie trombomoduliny...</Polish>
+            <Portuguese>Injetando trombomodulina...</Portuguese>
+            <Russian>Введение тромбомодулина...</Russian>
+            <German>Thrombomodulin wird injiziert...</German>
+            <Korean>트롬보모듈린 주사 중...</Korean>
+            <Japanese>トロンボモジュリンを注射中...</Japanese>
+            <Chinese>正在注射血栓調節蛋白...</Chinese>
+            <Chinesesimp>正在注射血栓调节蛋白...</Chinesesimp>
+            <Turkish>Trombomodülin enjekte ediliyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_ThrombomodulinStim">
+            <English>Inject Thrombomodulin Stimpack</English>
+            <Czech>Aplikovat stimulátor trombomodulinu</Czech>
+            <French>Injecter un stimpack de thrombomoduline</French>
+            <Spanish>Inyectar estimulante de trombomodulina</Spanish>
+            <Italian>Iniettare stimpack di trombomodulina</Italian>
+            <Polish>Wstrzyknij stymulant trombomoduliny</Polish>
+            <Portuguese>Injetar stimpack de trombomodulina</Portuguese>
+            <Russian>Ввести стимулятор тромбомодулина</Russian>
+            <German>Thrombomodulin-Stimpack injizieren</German>
+            <Korean>트롬보모듈린 스팀팩 주사</Korean>
+            <Japanese>トロンボモジュリン・スティムパックを注射</Japanese>
+            <Chinese>注射血栓調節蛋白興奮劑/針劑</Chinese>
+            <Chinesesimp>注射血栓调节蛋白兴奋剂/针剂</Chinesesimp>
+            <Turkish>Trombomodülin Stimpack Enjekte Et</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_ThrombomodulinStimProgress">
+            <English>Injecting thrombomodulin stimpack...</English>
+            <Czech>Aplikuje se stimulátor trombomodulinu...</Czech>
+            <French>Injection d'un stimpack de thrombomoduline...</French>
+            <Spanish>Inyectando estimulante de trombomodulina...</Spanish>
+            <Italian>Iniezione di stimpack di trombomodulina...</Italian>
+            <Polish>Wstrzykiwanie stymulanta trombomoduliny...</Polish>
+            <Portuguese>Injetando stimpack de trombomodulina...</Portuguese>
+            <Russian>Введение стимулятора тромбомодулина...</Russian>
+            <German>Thrombomodulin-Stimpack wird injiziert...</German>
+            <Korean>트롬보모듈린 스팀팩 주사 중...</Korean>
+            <Japanese>トロンボモジュリン・スティムパックを注射中...</Japanese>
+            <Chinese>正在注射血栓調節蛋白興奮劑...</Chinese>
+            <Chinesesimp>正在注射血栓调节蛋白兴奋剂...</Chinesesimp>
+            <Turkish>Trombomodülin stimpack enjekte ediliyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_UsedMedication">
+            <English>%1 used %2</English>
+            <Czech>%1 použil %2</Czech>
+            <French>%1 a utilisé %2</French>
+            <Spanish>%1 usó %2</Spanish>
+            <Italian>%1 ha usato %2</Italian>
+            <Polish>%1 użył %2</Polish>
+            <Portuguese>%1 usou %2</Portuguese>
+            <Russian>%1 использовал %2</Russian>
+            <German>%1 hat %2 benutzt</German>
+            <Korean>%1이(가) %2을(를) 사용했습니다</Korean>
+            <Japanese>%1が%2を使用しました</Japanese>
+            <Chinese>%1 使用了 %2</Chinese>
+            <Chinesesimp>%1 使用了 %2</Chinesesimp>
+            <Turkish>%1, %2 kullandı</Turkish>
+        </Key>
+    </Package>
+</Project>
