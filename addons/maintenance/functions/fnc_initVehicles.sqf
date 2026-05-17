@@ -133,7 +133,7 @@ if (isNil QEGVAR(common,vehicleData)) then {
 
     private _maintenanceAction = [
         QGVAR(maintenance_menu),
-        "Vehicle Maintenance",
+        localize LSTRING(Action),
         QPATHTOEF(markers,data\wrench_ca.paa),
         {
             createDialog QCLASS(maintenance_ui);

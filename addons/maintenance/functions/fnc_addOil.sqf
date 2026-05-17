@@ -18,7 +18,7 @@
 [player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
 
 if (isNull _vehicle) exitWith {
-    ctrlSetText [1001, format ["Invalid vehicle..."]];
+    ctrlSetText [1001, format [localize LSTRING(InvalidVehicle)]];
 };
 
 private _currentOilLevel = _vehicle getVariable [QGVAR(oilLevel), 0];
@@ -45,7 +45,7 @@ _oilInterrupt = (findDisplay 274839) displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QCLASS(processOil),false];
-        [QEGVAR(common,tileText), format ["Adding oil interrupted..."]] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), localize LSTRING(OilInterrupted)] call CBA_fnc_localEvent;
     };
 }];
 
@@ -55,18 +55,18 @@ if (_currentOilLevel >= 1) exitWith {
     player setVariable [QCLASS(processOil), nil];
     (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _oilInterrupt];
     _vehicle setVariable [QGVAR(oilLevel), 1, true];
-    ctrlSetText [1001, format ["%1 oil is full...", [_vehicle] call EFUNC(common,getObjectData) select 0]];
+    ctrlSetText [1001, format [localize LSTRING(OilFull), [_vehicle] call EFUNC(common,getObjectData) select 0]];
     [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
 };
 
 if (!_hasOil) exitWith {
     (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _oilInterrupt];
-    ctrlSetText [1001, format ["You need engine oil to refill %1...", [_vehicle] call EFUNC(common,getObjectData) select 0]];
+    ctrlSetText [1001, format [localize LSTRING(NeedEngineOil), [_vehicle] call EFUNC(common,getObjectData) select 0]];
     [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
 };
 
-private _text = "Adding oil...";
-private _oilLvl = "Oil level:";
+private _text = localize LSTRING(AddingOilProgress);
+private _oilLvl = localize LSTRING(OilLevelLabel);
 private _displayedText = "";
 
 [{
@@ -86,7 +86,7 @@ private _displayedText = "";
         player setVariable [QCLASS(processOil), nil];
         (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _oilInterrupt];
         _vehicle setVariable [QGVAR(oilLevel), 1, true];
-        ctrlSetText [1001, format ["%1 oil is full...", [_vehicle] call EFUNC(common,getObjectData) select 0]];
+        ctrlSetText [1001, format [localize LSTRING(OilFull), [_vehicle] call EFUNC(common,getObjectData) select 0]];
         [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
         _handle call CBA_fnc_removePerFrameHandler;
     };
@@ -96,7 +96,7 @@ private _displayedText = "";
     if (!_hasOil) exitWith {
         player setVariable [QCLASS(processOil), nil];
         (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _oilInterrupt];
-        ctrlSetText [1001, format ["You have run out of %1...", "Engine oil"]];
+        ctrlSetText [1001, localize LSTRING(OutOfOil)];
         [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
         _handle call CBA_fnc_removePerFrameHandler;
     };

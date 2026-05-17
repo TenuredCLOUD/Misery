@@ -62,7 +62,7 @@
         if !(_found) exitWith {};
 
         if (isNil "_vehicle") exitWith {
-            _iconName ctrlSetText "No Vehicle to Repair...";
+            _iconName ctrlSetText localize LSTRING(NoVehicleToRepair);
             [274839, [2010, 2000, 2011, 2001, 2012, 2002, 2013, 2003], false] call EFUNC(common,displayShowControls);
         };
 
@@ -81,7 +81,7 @@
         _oilBar progressSetPosition _oilLevel;
         _coolantBar progressSetPosition _coolantLevel;
 
-        ctrlSetText [1003, format ["Battery - %1/%2", _installedBatteries, _requiredBatteries]];
+        ctrlSetText [1003, format [localize LSTRING(BatteryStatusLabel), _installedBatteries, _requiredBatteries]];
 
         if (_batteryCount isEqualTo 0) then {
             [274839, [2011, 2001, 1003], false] call EFUNC(common,displayShowControls);
