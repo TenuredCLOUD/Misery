@@ -257,6 +257,70 @@
             <Chinesesimp>舱内有乘员在 %1，无法进行任何维护...</Chinesesimp>
             <Turkish>%1 içinde mürettebat var, bakım yapılamıyor...</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Maintenance_DamageOnStart">
+            <English>Damage on start</English>
+            <Czech>Poškození při startu</Czech>
+            <French>Dégâts au démarrage</French>
+            <Spanish>Daño al iniciar</Spanish>
+            <Italian>Danni all'avvio</Italian>
+            <Polish>Uszkodzenia na starcie</Polish>
+            <Portuguese>Danos ao iniciar</Portuguese>
+            <Russian>Повреждения на старте</Russian>
+            <German>Schaden bei Start</German>
+            <Korean>시작 시 피해량</Korean>
+            <Japanese>開始時の損傷</Japanese>
+            <Chinese>初始損害</Chinese>
+            <Chinesesimp>初始损害</Chinesesimp>
+            <Turkish>Başlangıç Hasarı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_DamageOnStartDesc">
+            <English>Possible starting damage for vehicles on scenario start (if set to 0 3den handles damage levels)</English>
+            <Czech>Možné startovní poškození vozidel při spuštění scénáře (pokud je nastaveno na 0, úroveň poškození řídí 3den)</Czech>
+            <French>Dégâts de départ possibles pour les véhicules au début du scénario (si défini sur 0, 3den gère les niveaux de dégâts)</French>
+            <Spanish>Posible daño inicial para los vehículos al comenzar el escenario (si se establece en 0, 3den gera los niveles de daño)</Spanish>
+            <Italian>Possibile danno iniziale per i veicoli all'avvio dello scenario (se impostato su 0, 3den gestisce i livelli di danno)</Italian>
+            <Polish>Możliwe uszkodzenia początkowe pojazdów na początku scenariusza (jeśli ustawione na 0, 3den zarządza poziomem uszkodzeń)</Polish>
+            <Portuguese>Possíveis danos iniciais para veículos no início do cenário (se definido para 0, o 3den gere os níveis de danos)</Portuguese>
+            <Russian>Возможный начальный урон для транспорта при старте сценария (при 0 уровень повреждений определяется в 3den)</Russian>
+            <German>Möglicher Startschaden für Fahrzeuge bei Szenariobeginn (falls auf 0 gesetzt, regelt 3den das Schadensniveau)</German>
+            <Korean>시나리오 시작 시 차량의 초기 피해량 (0으로 설정하면 3den 에디터 설정값을 따릅니다)</Korean>
+            <Japanese>シナリオ開始時の車両の初期損傷量（0に設定された場合は3denが損傷量を制御します）</Japanese>
+            <Chinese>任務開始时車輛的可能初始損害（如果設置為 0，則由 3den 編輯器處理損害度）</Chinese>
+            <Chinesesimp>任务开始时车辆的可能初始损害（如果设置为 0，则由 3den 编辑器处理损害度）</Chinesesimp>
+            <Turkish>Senaryo başlangıcında araçlar için olası başlangıç hasarı (0 olarak ayarlanırsa hasar seviyelerini 3den yönetir)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_EasierMaintenance">
+            <English>Easier maintenance</English>
+            <Czech>Snazší údržba</Czech>
+            <French>Entretien facile</French>
+            <Spanish>Mantenimiento más fácil</Spanish>
+            <Italian>Manutenzione facilitata</Italian>
+            <Polish>Łatwiejsza obsługa</Polish>
+            <Portuguese>Manutenção mais fácil</Portuguese>
+            <Russian>Упрощенное обслуживание</Russian>
+            <German>Einfachere Wartung</German>
+            <Korean>쉬운 정비</Korean>
+            <Japanese>簡単な整備</Japanese>
+            <Chinese>簡易維護</Chinese>
+            <Chinesesimp>简易维护</Chinesesimp>
+            <Turkish>Kolay Bakım</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_EasierMaintenanceDesc">
+            <English>When enabled maintenance doesn't require as many parts for repairs</English>
+            <Czech>Pokud je povoleno, údržba nevyžaduje k opravám tolik dílů</Czech>
+            <French>Lorsqu'il est activé, l'entretien ne nécessite pas autant de pièces pour les réparations</French>
+            <Spanish>Cuando está activado, el mantenimiento no requiere tantas piezas para las reparaciones</Spanish>
+            <Italian>Quando abilitato, la manutenzione non richiede così tanti componenti per le riparazioni</Italian>
+            <Polish>Gdy jest włączone, obsługa nie wymaga tak wielu części do naprawy</Polish>
+            <Portuguese>Quando ativado, a manutenção não requer tantas peças para reparações</Portuguese>
+            <Russian>Если включено, для обслуживания и ремонта требуется меньше деталей</Russian>
+            <German>Wenn aktiviert, werden für die Wartung und Reparaturen nicht so viele Bauteile benötigt</German>
+            <Korean>활성화하면 정비 시 수리에 필요한 부품 수가 줄어듭니다</Korean>
+            <Japanese>有効な場合、整備の修理に必要な部品数が少なくなります</Japanese>
+            <Chinese>啟用時，維修維護不需要那麼多零件</Chinese>
+            <Chinesesimp>启用时，维修维护不需要那么多零件</Chinesesimp>
+            <Turkish>Etkinleştirildiğinde, onarım bakımları o kadar fazla parça gerektirmez</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Maintenance_FuelDiesel">
             <English>Diesel</English>
             <Czech>Nafta</Czech>
@@ -288,6 +352,38 @@
             <Chinese>航空煤油</Chinese>
             <Chinesesimp>航空煤油</Chinesesimp>
             <Turkish>Jet Yakıtı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_FuelOnStart">
+            <English>Fuel on start</English>
+            <Czech>Palivo při startu</Czech>
+            <French>Carburant au démarrage</French>
+            <Spanish>Combustible al iniciar</Spanish>
+            <Italian>Carburante all'avvio</Italian>
+            <Polish>Paliwo na starcie</Polish>
+            <Portuguese>Combustível ao iniciar</Portuguese>
+            <Russian>Топливо на старте</Russian>
+            <German>Kraftstoff bei Start</German>
+            <Korean>시작 시 연료</Korean>
+            <Japanese>開始時の燃料</Japanese>
+            <Chinese>初始燃料</Chinese>
+            <Chinesesimp>初始燃料</Chinesesimp>
+            <Turkish>Başlangıç Yakıtı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_FuelOnStartDesc">
+            <English>Possible starting fuel for vehicles on scenario start (if set to 0 3den handles fuel levels)</English>
+            <Czech>Možné startovní palivo pro vozidla při spuštění scénáře (pokud je nastaveno na 0, úroveň paliva řídí 3den)</Czech>
+            <French>Carburant de départ possible pour les véhicules au début du scénario (si défini sur 0, 3den gère les niveaux de carburant)</French>
+            <Spanish>Posible combustible inicial para los vehículos al comenzar el escenario (si se establece en 0, 3den gestiona los niveles)</Spanish>
+            <Italian>Possibile carburante iniziale per i veicoli all'avvio dello scenario (se impostato su 0, 3den gestisce i livelli di carburante)</Italian>
+            <Polish>Możliwe paliwo startowe dla pojazdów na początku scenariusza (jeśli ustawione na 0, 3den zarządza poziomem paliwa)</Polish>
+            <Portuguese>Possível combustível inicial para veículos no início do cenário (se definido para 0, o 3den gere os níveis de combustível)</Portuguese>
+            <Russian>Возможный начальный уровень топлива для транспорта при старте сценария (при 0 уровень определяется в 3den)</Russian>
+            <German>Möglicher Startkraftstoff für Fahrzeuge bei Szenariobeginn (falls auf 0 gesetzt, regelt 3den den Kraftstoffstand)</German>
+            <Korean>시나리오 시작 시 차량의 초기 연료량 (0으로 설정하면 3den 에디터 설정값을 따릅니다)</Korean>
+            <Japanese>シナリオ開始時の車両の初期燃料量（0に設定された場合は3denが燃料量を制御します）</Japanese>
+            <Chinese>任務開始时車輛的可能初始燃料（如果設置為 0，則由 3den 編輯器處理燃料量）</Chinese>
+            <Chinesesimp>任务开始时车辆的可能初始燃料（如果设置为 0，则由 3den 编辑器处理燃料量）</Chinesesimp>
+            <Turkish>Senaryo başlangıcında araçlar için olası başlangıç yakıtı (0 olarak ayarlanırsa yakıt seviyelerini 3den yönetir)</Turkish>
         </Key>
         <Key ID="STR_MISERY_Maintenance_FuelPetrol">
             <English>Petrol</English>
@@ -1040,6 +1136,38 @@
             <Chinese>油箱油位：</Chinese>
             <Chinesesimp>油箱油位：</Chinesesimp>
             <Turkish>Depo seviyesi:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_TheyWerePrepared">
+            <English>They were prepared</English>
+            <Czech>Byli připraveni</Czech>
+            <French>Ils étaient préparés</French>
+            <Spanish>Estaban preparados</Spanish>
+            <Italian>Erano preparati</Italian>
+            <Polish>Byli przygotowani</Polish>
+            <Portuguese>Eles estavam preparados</Portuguese>
+            <Russian>Oni byli готовы</Russian>
+            <German>Sie waren vorbereitet</German>
+            <Korean>준비된 자들</Korean>
+            <Japanese>備えあれば憂いなし</Japanese>
+            <Chinese>有備無患</Chinese>
+            <Chinesesimp>有备无患</Chinesesimp>
+            <Turkish>Hazırlıklıydılar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_TheyWerePreparedDesc">
+            <English>When enabled some vehicles on scenario start will possess tools for repairs based on vehicle type</English>
+            <Czech>Pokud je povoleno, některá vozidla budou při spuštění scénáře obsahovat nástroje pro opravu podle typu vozidla</Czech>
+            <French>Lorsqu'il est activé, certains véhicules posséderont au début du scénario des outils de réparation basés sur le type de véhicule</French>
+            <Spanish>Cuando está activado, algunos vehículos tendrán herramientas de reparación al iniciar el escenario según el tipo de vehículo</Spanish>
+            <Italian>Quando abilitato, alcuni veicoli all'avvio dello scenario possederanno strumenti per le riparazioni in base al tipo di veicolo</Italian>
+            <Polish>Gdy jest włączone, niektóre pojazdy na początku scenariusza będą posiadać narzędzia do naprawy w zależności od typu pojazdu</Polish>
+            <Portuguese>Quando ativado, alguns veículos no início do cenário possuirão ferramentas para reparações com base no tipo de veículo</Portuguese>
+            <Russian>Если включено, некоторый транспорт при старте сценария будет содержать ремонтные инструменты в зависимости от типа машины</Russian>
+            <German>Wenn aktiviert, besitzen einige Fahrzeuge bei Szenariobeginn je nach Fahrzeugtyp Werkzeuge für Reparaturen</German>
+            <Korean>활성화하면 시나리오 시작 시 일부 차량에 차량 유형에 맞는 수리 도구가 포함됩니다</Korean>
+            <Japanese>有効な場合、シナリオ開始時に一部の車両に車両タイプに応じた修理工具が配備されます</Japanese>
+            <Chinese>啟用時，部分車輛在任務開始时將根據車輛類型配備相應的維修工具</Chinese>
+            <Chinesesimp>启用时，部分车辆在任务开始时将根据车辆类型配备相应的维修工具</Chinesesimp>
+            <Turkish>Etkinleştirildiğinde, senaryo başlangıcında bazı araçlar araç türüne bağlı olarak onarım araçlarına sahip olacaktır</Turkish>
         </Key>
         <Key ID="STR_MISERY_Maintenance_VehicleDamageStatus">
             <English>%1 - Damage: %2%%</English>

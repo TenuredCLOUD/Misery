@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Markers">
+        <Key ID="STR_MISERY_Markers_Ammo">
+            <English>Ammo</English>
+            <Czech>Munice</Czech>
+            <French>Munitions</French>
+            <Spanish>Munición</Spanish>
+            <Italian>Munizioni</Italian>
+            <Polish>Amunicja</Polish>
+            <Portuguese>Munição</Portuguese>
+            <Russian>Боеприпасы</Russian>
+            <German>Munition</German>
+            <Korean>탄약</Korean>
+            <Japanese>弾薬</Japanese>
+            <Chinese>彈藥</Chinese>
+            <Chinesesimp>弹药</Chinesesimp>
+            <Turkish>Mühimmat</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Markers_Bank">
+            <English>Bank</English>
+            <Czech>Banka</Czech>
+            <French>Banque</French>
+            <Spanish>Banco</Spanish>
+            <Italian>Banca</Italian>
+            <Polish>Bank</Polish>
+            <Portuguese>Banco</Portuguese>
+            <Russian>Банк</Russian>
+            <German>Bank</German>
+            <Korean>은행</Korean>
+            <Japanese>銀行</Japanese>
+            <Chinese>銀行</Chinese>
+            <Chinesesimp>银行</Chinesesimp>
+            <Turkish>Banka</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Markers_BaseMaterials">
+            <English>Base Materials</English>
+            <Czech>Základní materiály</Czech>
+            <French>Matériaux de base</French>
+            <Spanish>Materiales de base</Spanish>
+            <Italian>Materiali di base</Italian>
+            <Polish>Materiały bazowe</Polish>
+            <Portuguese>Materiais de base</Portuguese>
+            <Russian>Базовые материалы</Russian>
+            <German>Basismaterialien</German>
+            <Korean>기본 자재</Korean>
+            <Japanese>基本素材</Japanese>
+            <Chinese>基礎材料</Chinese>
+            <Chinesesimp>基础材料</Chinesesimp>
+            <Turkish>Temel Malzemeler</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Markers_BaseTrader">
+            <English>Base Trader</English>
+            <Czech>Obchodník na základně</Czech>
+            <French>Marchand de la base</French>
+            <Spanish>Comerciante de la base</Spanish>
+            <Italian>Mercante della base</Italian>
+            <Polish>Handlarz w bazie</Polish>
+            <Portuguese>Comerciante da base</Portuguese>
+            <Russian>Торговец базы</Russian>
+            <German>Basishändler</German>
+            <Korean>기지 상인</Korean>
+            <Japanese>拠点トレーダー</Japanese>
+            <Chinese>基地商人</Chinese>
+            <Chinesesimp>基地商人</Chinesesimp>
+            <Turkish>Üs Tüccarı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Markers_Dealer">
+            <English>Dealer</English>
+            <Czech>Dealer</Czech>
+            <French>Revendeur</French>
+            <Spanish>Distribuidor</Spanish>
+            <Italian>Spacciatore</Italian>
+            <Polish>Dealer</Polish>
+            <Portuguese>Negociante</Portuguese>
+            <Russian>Дилер</Russian>
+            <German>Dealer</German>
+            <Korean>딜러</Korean>
+            <Japanese>ディーラー</Japanese>
+            <Chinese>交易商</Chinese>
+            <Chinesesimp>交易商</Chinesesimp>
+            <Turkish>Bayi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Markers_ForgeAnvil">
+            <English>Forge &amp; Anvil</English>
+            <Czech>Kovárna a kovadlina</Czech>
+            <French>Forge et enclume</French>
+            <Spanish>Forja y yunque</Spanish>
+            <Italian>Forgia e incudine</Italian>
+            <Polish>Kuźnia i kowadło</Polish>
+            <Portuguese>Forja e bigorna</Portuguese>
+            <Russian>Кузница и наковальня</Russian>
+            <German>Schmiede &amp; Amboss</German>
+            <Korean>대장간과 모루</Korean>
+            <Japanese>鍛冶場と金床</Japanese>
+            <Chinese>鍛造 Forge 與鐵砧</Chinese>
+            <Chinesesimp>锻造 Forge 与铁砧</Chinesesimp>
+            <Turkish>Demirci ve Örs</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Markers_Fuel">
+            <English>Fuel</English>
+            <Czech>Palivo</Czech>
+            <French>Carburant</French>
+            <Spanish>Combustible</Spanish>
+            <Italian>Carburante</Italian>
+            <Polish>Paliwo</Polish>
+            <Portuguese>Combustível</Portuguese>
+            <Russian>Топливо</Russian>
+            <German>Kraftstoff</German>
+            <Korean>연료</Korean>
+            <Japanese>燃料</Japanese>
+            <Chinese>燃料</Chinese>
+            <Chinesesimp>燃料</Chinesesimp>
+            <Turkish>Yakıt</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Markers_Mechanic">
+            <English>Mechanic</English>
+            <Czech>Mechanik</Czech>
+            <French>Mécanicien</French>
+            <Spanish>Mecánico</Spanish>
+            <Italian>Meccanico</Italian>
+            <Polish>Mechanik</Polish>
+            <Portuguese>Mecânico</Portuguese>
+            <Russian>Механик</Russian>
+            <German>Mechaniker</German>
+            <Korean>정비사</Korean>
+            <Japanese>整備士</Japanese>
+            <Chinese>机械师</Chinese>
+            <Chinesesimp>机械师</Chinesesimp>
+            <Turkish>Tamirci</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Markers_Medical">
+            <English>Medical</English>
+            <Czech>Zdravotní</Czech>
+            <French>Médical</French>
+            <Spanish>Médico</Spanish>
+            <Italian>Medico</Italian>
+            <Polish>Medyczny</Polish>
+            <Portuguese>Médico</Portuguese>
+            <Russian>Медицина</Russian>
+            <German>Medizinisch</German>
+            <Korean>의료</Korean>
+            <Japanese>医療</Japanese>
+            <Chinese>醫療</Chinese>
+            <Chinesesimp>医疗</Chinesesimp>
+            <Turkish>Medikal</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Markers_MilitaryZone">
+            <English>Military Zone</English>
+            <Czech>Vojenská zóna</Czech>
+            <French>Zone militaire</French>
+            <Spanish>Zona militar</Spanish>
+            <Italian>Zona militare</Italian>
+            <Polish>Strefa wojskowa</Polish>
+            <Portuguese>Zona militar</Portuguese>
+            <Russian>Военная зона</Russian>
+            <German>Militärzone</German>
+            <Korean>군사 구역</Korean>
+            <Japanese>軍事地帯</Japanese>
+            <Chinese>軍事管制區</Chinese>
+            <Chinesesimp>军事管制区</Chinesesimp>
+            <Turkish>Askeri Bölge</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Markers_Mining">
+            <English>Mining</English>
+            <Czech>Těžba</Czech>
+            <French>Minage</French>
+            <Spanish>Minería</Spanish>
+            <Italian>Estrazione mineraria</Italian>
+            <Polish>Górnictwo</Polish>
+            <Portuguese>Mineração</Portuguese>
+            <Russian>Добыча ресурсов</Russian>
+            <German>Bergbau</German>
+            <Korean>채광</Korean>
+            <Japanese>採掘</Japanese>
+            <Chinese>採礦</Chinese>
+            <Chinesesimp>采矿</Chinesesimp>
+            <Turkish>Madencilik</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Markers_RadiationZone">
+            <English>Radiation Zone</English>
+            <Czech>Radiační zóna</Czech>
+            <French>Zone de radiation</French>
+            <Spanish>Zona de radiación</Spanish>
+            <Italian>Zona di radiazioni</Italian>
+            <Polish>Strefa radiacji</Polish>
+            <Portuguese>Zona de radiação</Portuguese>
+            <Russian>Зона радиации</Russian>
+            <German>Strahlungszone</German>
+            <Korean>방사능 구역</Korean>
+            <Japanese>放射能汚染地帯</Japanese>
+            <Chinese>輻射區</Chinese>
+            <Chinesesimp>辐射区</Chinesesimp>
+            <Turkish>Radyasyon Bölgesi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Markers_ResearchTeam">
+            <English>Research Team</English>
+            <Czech>Výzkumný tým</Czech>
+            <French>Équipe de recherche</French>
+            <Spanish>Equipo de investigación</Spanish>
+            <Italian>Team di ricerca</Italian>
+            <Polish>Zespół badawczy</Polish>
+            <Portuguese>Equipa de investigação</Portuguese>
+            <Russian>Исследовательская группа</Russian>
+            <German>Forschungsteam</German>
+            <Korean>연구팀</Korean>
+            <Japanese>研究 팀</Japanese>
+            <Chinese>研究團隊</Chinese>
+            <Chinesesimp>研究团队</Chinesesimp>
+            <Turkish>Araştırma Ekibi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Markers_Safezone">
+            <English>Safezone</English>
+            <Czech>Bezpečná zóna</Czech>
+            <French>Zone de sécurité</French>
+            <Spanish>Zona segura</Spanish>
+            <Italian>Zona sicura</Italian>
+            <Polish>Bezpieczna strefa</Polish>
+            <Portuguese>Zona segura</Portuguese>
+            <Russian>Безопасная зона</Russian>
+            <German>Sicherheitszone</German>
+            <Korean>안전 지대</Korean>
+            <Japanese>セーフゾーン</Japanese>
+            <Chinese>安全區</Chinese>
+            <Chinesesimp>安全区</Chinesesimp>
+            <Turkish>Güvenli Bölge</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Markers_Skull">
+            <English>Skull</English>
+            <Czech>Lebka</Czech>
+            <French>Crâne</French>
+            <Spanish>Calavera</Spanish>
+            <Italian>Teschio</Italian>
+            <Polish>Czaszka</Polish>
+            <Portuguese>Caveira</Portuguese>
+            <Russian>Череп</Russian>
+            <German>Totenkopf</German>
+            <Korean>해골</Korean>
+            <Japanese>スカル</Japanese>
+            <Chinese>骷髏</Chinese>
+            <Chinesesimp>骷髅</Chinesesimp>
+            <Turkish>Kafatası</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Markers_Trader">
+            <English>Trader</English>
+            <Czech>Obchodník</Czech>
+            <French>Marchand</French>
+            <Spanish>Comerciante</Spanish>
+            <Italian>Commerciante</Italian>
+            <Polish>Handlarz</Polish>
+            <Portuguese>Comerciante</Portuguese>
+            <Russian>Торговец</Russian>
+            <German>Händler</German>
+            <Korean>상인</Korean>
+            <Japanese>トレーダー</Japanese>
+            <Chinese>商人</Chinese>
+            <Chinesesimp>商人</Chinesesimp>
+            <Turkish>Tüccar</Turkish>
+        </Key>
+    </Package>
+</Project>

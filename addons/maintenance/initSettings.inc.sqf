@@ -3,7 +3,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(difficulty),
     "CHECKBOX",
-    ["Easier maintenance", "When enabled maintenance doesn't require as many parts for repairs"],
+    [LSTRING(EasierMaintenance), LSTRING(EasierMaintenanceDesc)],
     _category,
     true,
     1
@@ -12,7 +12,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(fuelOnStart),
     "SLIDER",
-    ["Fuel on start", "Possible starting fuel for vehicles on scenario start (if set to 0 3den handles fuel levels)"],
+    [LSTRING(FuelOnStart), LSTRING(FuelOnStartDesc)],
     _category,
     [0, 1, 0, 2],
     1
@@ -21,7 +21,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(damageOnStart),
     "SLIDER",
-    ["Damage on start", "Possible starting damage for vehicles on scenario start (if set to 0 3den handles damage levels)"],
+    [LSTRING(DamageOnStart), LSTRING(DamageOnStartDesc)],
     _category,
     [0, 1, 0, 2],
     1
@@ -30,7 +30,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(preparedTools),
     "CHECKBOX",
-    ["They were prepared", "When enabled some vehicles on scenario start will possess tools for repairs based on vehicle type"],
+    [LSTRING(TheyWerePrepared), LSTRING(TheyWerePreparedDesc)],
     _category,
     false,
     1
