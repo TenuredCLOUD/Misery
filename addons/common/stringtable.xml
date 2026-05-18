@@ -161,6 +161,22 @@
             <Chinesesimp>苦难</Chinesesimp>
             <Turkish>Sefalet</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Common_Enabled">
+            <English>Enabled</English>
+            <Czech>Povoleno</Czech>
+            <French>Activé</French>
+            <Spanish>Activado</Spanish>
+            <Italian>Abilitato</Italian>
+            <Polish>Włączone</Polish>
+            <Portuguese>Ativado</Portuguese>
+            <Russian>Включено</Russian>
+            <German>Aktiviert</German>
+            <Korean>활성화됨</Korean>
+            <Japanese>有効</Japanese>
+            <Chinese>已啟用</Chinese>
+            <Chinesesimp>已启用</Chinesesimp>
+            <Turkish>Etkin</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Common_Exit">
             <English>Exit</English>
             <Czech>Odejít</Czech>
@@ -209,37 +225,149 @@
             <Chinesesimp>互动</Chinesesimp>
             <Turkish>Etkileşime geç</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Common_MineOre">
-            <English>Mine Ore</English>
-            <Czech>Důlní ruda</Czech>
-            <French>Mine Minerai</French>
-            <Spanish>Mineral de mina</Spanish>
-            <Italian>Minerale</Italian>
-            <Polish>Ruda kopalniana</Polish>
-            <Portuguese>Mineração de minério</Portuguese>
-            <Russian>Шахта Руда</Russian>
-            <German>Bergwerkserz</German>
-            <Korean>광산 광석</Korean>
-            <Japanese>鉱山鉱石</Japanese>
-            <Chinese>採礦</Chinese>
-            <Chinesesimp>采矿</Chinesesimp>
-            <Turkish>Maden Cevheri</Turkish>
+        <Key ID="STR_MISERY_Common_Interval10Min">
+            <English>10 Minutes</English>
+            <Czech>10 minut</Czech>
+            <French>10 minutes</French>
+            <Spanish>10 minutos</Spanish>
+            <Italian>10 minuti</Italian>
+            <Polish>10 minut</Polish>
+            <Portuguese>10 minutos</Portuguese>
+            <Russian>10 минут</Russian>
+            <German>10 Minuten</German>
+            <Korean>10분</Korean>
+            <Japanese>10分</Japanese>
+            <Chinese>10 分鐘</Chinese>
+            <Chinesesimp>10 分钟</Chinesesimp>
+            <Turkish>10 Dakika</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Common_MineOreNoTools">
-            <English>You don't have the required items to mine ore...</English>
-            <Czech>Nemáte potřebné předměty k těžbě rudy...</Czech>
-            <French>Vous n'avez pas les éléments nécessaires pour extraire du minerai...</French>
-            <Spanish>No tienes los objetos necesarios para extraer mineral...</Spanish>
-            <Italian>Non hai gli oggetti necessari per estrarre il minerale...</Italian>
-            <Polish>Nie masz wymaganych przedmiotów do wydobywania rudy...</Polish>
-            <Portuguese>Você não tem os itens necessários para extrair minério...</Portuguese>
-            <Russian>У вас нет необходимых предметов для добычи руды...</Russian>
-            <German>Sie haben nicht die erforderlichen Gegenstände, um Erz abzubauen...</German>
-            <Korean>광석 채굴에 필요한 아이템이 없습니다...</Korean>
-            <Japanese>鉱石を採掘するのに必要なアイテムを持っていない...。</Japanese>
-            <Chinese>你沒有採礦所需的物品...</Chinese>
-            <Chinesesimp>你没有采矿所需的物品...</Chinesesimp>
-            <Turkish>Maden çıkarmak için gerekli eşyalara sahip değilsiniz...</Turkish>
+        <Key ID="STR_MISERY_Common_Interval15Min">
+            <English>15 Minutes</English>
+            <Czech>15 minut</Czech>
+            <French>15 minutes</French>
+            <Spanish>15 minutos</Spanish>
+            <Italian>15 minuti</Italian>
+            <Polish>15 minut</Polish>
+            <Portuguese>15 minutos</Portuguese>
+            <Russian>15 минут</Russian>
+            <German>15 Minuten</German>
+            <Korean>15분</Korean>
+            <Japanese>15分</Japanese>
+            <Chinese>15 分鐘</Chinese>
+            <Chinesesimp>15 分钟</Chinesesimp>
+            <Turkish>15 Dakika</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_Interval1Min">
+            <English>1 Minute</English>
+            <Czech>1 minuta</Czech>
+            <French>1 minute</French>
+            <Spanish>1 minuto</Spanish>
+            <Italian>1 minuto</Italian>
+            <Polish>1 minuta</Polish>
+            <Portuguese>1 minuto</Portuguese>
+            <Russian>1 минута</Russian>
+            <German>1 Minute</German>
+            <Korean>1분</Korean>
+            <Japanese>1分</Japanese>
+            <Chinese>1 分鐘</Chinese>
+            <Chinesesimp>1 分钟</Chinesesimp>
+            <Turkish>1 Dakika</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_Interval20Min">
+            <English>20 Minutes</English>
+            <Czech>20 minut</Czech>
+            <French>20 minutes</French>
+            <Spanish>20 minutos</Spanish>
+            <Italian>20 minuti</Italian>
+            <Polish>20 minut</Polish>
+            <Portuguese>20 minutos</Portuguese>
+            <Russian>20 минут</Russian>
+            <German>20 Minuten</German>
+            <Korean>20분</Korean>
+            <Japanese>20分</Japanese>
+            <Chinese>20 分鐘</Chinese>
+            <Chinesesimp>20 分钟</Chinesesimp>
+            <Turkish>20 Dakika</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_Interval25Min">
+            <English>25 Minutes</English>
+            <Czech>25 minut</Czech>
+            <French>25 minutes</French>
+            <Spanish>25 minutos</Spanish>
+            <Italian>25 minuti</Italian>
+            <Polish>25 minut</Polish>
+            <Portuguese>25 minutos</Portuguese>
+            <Russian>25 минут</Russian>
+            <German>25 Minuten</German>
+            <Korean>25분</Korean>
+            <Japanese>25分</Japanese>
+            <Chinese>25 分鐘</Chinese>
+            <Chinesesimp>25 分钟</Chinesesimp>
+            <Turkish>25 Dakika</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_Interval30Min">
+            <English>30 Minutes</English>
+            <Czech>30 minut</Czech>
+            <French>30 minutes</French>
+            <Spanish>30 minutos</Spanish>
+            <Italian>30 minuti</Italian>
+            <Polish>30 minut</Polish>
+            <Portuguese>30 minutos</Portuguese>
+            <Russian>30 минут</Russian>
+            <German>30 Minuten</German>
+            <Korean>30분</Korean>
+            <Japanese>30分</Japanese>
+            <Chinese>30 分鐘</Chinese>
+            <Chinesesimp>30 分钟</Chinesesimp>
+            <Turkish>30 Dakika</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_Interval40Min">
+            <English>40 Minutes</English>
+            <Czech>40 minut</Czech>
+            <French>40 minutes</French>
+            <Spanish>40 minutos</Spanish>
+            <Italian>40 minuti</Italian>
+            <Polish>40 minut</Polish>
+            <Portuguese>40 minutos</Portuguese>
+            <Russian>40 минут</Russian>
+            <German>40 Minuten</German>
+            <Korean>40분</Korean>
+            <Japanese>40分</Japanese>
+            <Chinese>40 分鐘</Chinese>
+            <Chinesesimp>40 分钟</Chinesesimp>
+            <Turkish>40 Dakika</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_Interval50Min">
+            <English>50 Minutes</English>
+            <Czech>50 minut</Czech>
+            <French>50 minutes</French>
+            <Spanish>50 minutos</Spanish>
+            <Italian>50 minuti</Italian>
+            <Polish>50 minut</Polish>
+            <Portuguese>50 minutos</Portuguese>
+            <Russian>50 минут</Russian>
+            <German>50 Minuten</German>
+            <Korean>50분</Korean>
+            <Japanese>50分</Japanese>
+            <Chinese>50 分鐘</Chinese>
+            <Chinesesimp>50 分钟</Chinesesimp>
+            <Turkish>50 Dakika</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_Interval60Min">
+            <English>60 Minutes</English>
+            <Czech>60 minut</Czech>
+            <French>60 minutes</French>
+            <Spanish>60 minutos</Spanish>
+            <Italian>60 minuti</Italian>
+            <Polish>60 minut</Polish>
+            <Portuguese>60 minutos</Portuguese>
+            <Russian>60 минут</Russian>
+            <German>60 Minuten</German>
+            <Korean>60분</Korean>
+            <Japanese>60分</Japanese>
+            <Chinese>60 分鐘</Chinese>
+            <Chinesesimp>60 分钟</Chinesesimp>
+            <Turkish>60 Dakika</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_MissingItems">
             <English>You don’t have the required items...</English>
@@ -256,6 +384,22 @@
             <Chinese>你沒有所需的物品...</Chinese>
             <Chinesesimp>你没有所需的物品...</Chinesesimp>
             <Turkish>Gerekli öğelere sahip değilsiniz...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_Never">
+            <English>Never</English>
+            <Czech>Nikdy</Czech>
+            <French>Jamais</French>
+            <Spanish>Nunca</Spanish>
+            <Italian>Mai</Italian>
+            <Polish>Nigdy</Polish>
+            <Portuguese>Nunca</Portuguese>
+            <Russian>Никогда</Russian>
+            <German>Nie</German>
+            <Korean>안 함</Korean>
+            <Japanese>なし</Japanese>
+            <Chinese>從不</Chinese>
+            <Chinesesimp>从不</Chinesesimp>
+            <Turkish>Asla</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_NoChainsawForWoodNoti">
             <English>You don't have a chainsaw to saw any wood...</English>

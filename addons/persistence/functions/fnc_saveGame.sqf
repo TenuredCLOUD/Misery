@@ -16,7 +16,7 @@
 call EFUNC(common,nearFire) params ["", "_isInflamed"];
 
 if (GVAR(hardcore) && !_isInflamed) exitWith {
-    ["Hardcore mode enabled, you need to be near a lit fire to save...", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
+    [localize LSTRING(HardcoreWarning), 1, [1, 1, 1, 1]] call CBA_fnc_notify;
 };
 
 if (GVAR(blockSave)) exitWith {

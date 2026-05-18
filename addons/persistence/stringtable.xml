@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Persistence">
+        <Key ID="STR_MISERY_Persistence_Autosave">
+            <English>Autosave Interval</English>
+            <Czech>Interval automatického ukládání</Czech>
+            <French>Intervalle d'autosave</French>
+            <Spanish>Intervalo de autoguardado</Spanish>
+            <Italian>Intervallo salvataggio automatico</Italian>
+            <Polish>Interwał automatycznego zapisu</Polish>
+            <Portuguese>Intervalo de gravação automática</Portuguese>
+            <Russian>Интервал автосохранения</Russian>
+            <German>Autospeicher-Intervall</German>
+            <Korean>자동 저장 간격</Korean>
+            <Japanese>オートセーブ間隔</Japanese>
+            <Chinese>自動存檔間隔</Chinese>
+            <Chinesesimp>自动存档间隔</Chinesesimp>
+            <Turkish>Otomatik Kaydetme Aralığı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_AutosaveDesc">
+            <English>How often would you like to autosave?</English>
+            <Czech>Jak často chcete automaticky ukládat?</Czech>
+            <French>À quelle fréquence souhaitez-vous effectuer une sauvegarde automatique ?</French>
+            <Spanish>¿Con qué frecuencia te gustaría que se guardara automáticamente?</Spanish>
+            <Italian>Ogni quanto tempo vorresti effettuare il salvataggio automatico?</Italian>
+            <Polish>Jak często chcesz automatycznie zapisyвать grę?</Polish>
+            <Portuguese>Com que frequência gostaria de gravar automaticamente?</Portuguese>
+            <Russian>Как часто вы хотите выполнять автосохранение?</Russian>
+            <German>Wie oft möchtest du automatisch speichern?</German>
+            <Korean>얼마나 자주 자동 저장하시겠습니까?</Korean>
+            <Japanese>どれくらいの頻度でオートセーブしますか？</Japanese>
+            <Chinese>您希望每隔多久自動存檔一次？</Chinese>
+            <Chinesesimp>您希望每隔多久自动存档一次？</Chinesesimp>
+            <Turkish>Ne sıklıkla otomatik kaydetmek istersiniz?</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_EnableHardcore">
+            <English>Enable Hardcore</English>
+            <Czech>Aktivovat hardcore</Czech>
+            <French>Activer le mode hardcore</French>
+            <Spanish>Activar hardcore</Spanish>
+            <Italian>Abilita hardcore</Italian>
+            <Polish>Włącz tryb hardcore</Polish>
+            <Portuguese>Ativar hardcore</Portuguese>
+            <Russian>Включить хардкор</Russian>
+            <German>Hardcore aktivieren</German>
+            <Korean>하드코어 활성화</Korean>
+            <Japanese>ハードコア有効化</Japanese>
+            <Chinese>啟用硬核模式</Chinese>
+            <Chinesesimp>启用硬核模式</Chinesesimp>
+            <Turkish>Hardcore Modunu Etkinleştir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_EnableHardcoreDesc">
+            <English>MP &amp; SP - Hardcore mode only allows saving when nearby a lit fire. (SP only - it will wipe world data when GRAD Persistence is used)</English>
+            <Czech>MP a SP - Hardcore mód umožňuje ukládání pouze v blízkosti zapáleného ohně. (Pouze SP - při použití GRAD persistence vymaže data světa)</Czech>
+            <French>MP &amp; Solo - Le mode hardcore permet uniquement de sauvegarder à proximité d'un feu allumé. (Solo uniquement - cela effacera les données du monde lorsque la persistance GRAD est utilisée)</French>
+            <Spanish>MP y SP - El modo hardcore solo permite guardar cerca de un fuego encendido. (Solo SP - borrará los datos del mundo cuando se use la persistencia GRAD)</Spanish>
+            <Italian>MP &amp; SP - La modalità hardcore consente il salvataggio solo in prossimità di un fuoco acceso. (Solo SP - cancellerà i dati del mondo quando viene utilizzata la persistenza GRAD)</Italian>
+            <Polish>MP i SP - Tryb hardcore pozwala na zapisywanie gry tylko w pobliżu rozpalonego ogniska. (Tylko SP - wyczyści dane świata, gdy używana jest persystencja GRAD)</Polish>
+            <Portuguese>MP &amp; SP - O modo hardcore apenas permite guardar perto de uma fogueira acesa. (Apenas SP - irá apagar os dados do mundo quando a persistência GRAD for usada)</Portuguese>
+            <Russian>МП и СП — Хардкорный режим позволяет сохраняться только у зажженного костра. (Только для СП — это сотрет данные мира при использовании персистенции GRAD)</Russian>
+            <German>MP &amp; SP - Der Hardcore-Modus erlaubt das Speichern nur in der Nähe eines brennenden Feuers. (Nur SP - löscht die Weltdaten, wenn die GRAD-Persistenz verwendet wird)</German>
+            <Korean>MP &amp; SP - 하드코어 모드에서는 불이 붙은 모닥불 근처에서만 저장할 수 있습니다. (SP 전용 - GRAD 지지형 저장 사용 시 기존 월드 데이터가 삭제됩니다)</Korean>
+            <Japanese>MP &amp; SP - ハードコアモードでは、火のついた焚き火の近くでのみセーブが可能です。（SPのみ - GRAD永続化が使用されている場合、ワールドデータを初期化します）</Japanese>
+            <Chinese>多人與單人 - 硬核模式下僅能在點燃的篝火旁存檔。（單人專用 - 使用 GRAD 存檔持久化時將會清除世界數據）</Chinese>
+            <Chinesesimp>多人与单人 - 硬核模式下仅能在点燃的篝火旁存档。（单人专用 - 使用 GRAD 存档持久化时将会清除世界数据）</Chinesesimp>
+            <Turkish>MP &amp; SP - Hardcore modu yalnızca yanan bir ateşin yakınındayken kaydetmeye izin verir. (Yalnızca SP - GRAD kalıcılığı kullanıldığında dünya verilerini temizler)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_EnableSaving">
+            <English>Enable Saving</English>
+            <Czech>Povolit ukládání</Czech>
+            <French>Activer la sauvegarde</French>
+            <Spanish>Permitir guardar</Spanish>
+            <Italian>Abilita salvataggio</Italian>
+            <Polish>Włącz zapisywanie</Polish>
+            <Portuguese>Ativar gravação</Portuguese>
+            <Russian>Включить сохранение</Russian>
+            <German>Speichern aktivieren</German>
+            <Korean>저장 활성화</Korean>
+            <Japanese>セーブ有効化</Japanese>
+            <Chinese>啟用存檔</Chinese>
+            <Chinesesimp>启用存档</Chinesesimp>
+            <Turkish>Kaydetmeyi Etkinleştir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_FreshStart">
+            <English>Fresh Start</English>
+            <Czech>Nový začátek</Czech>
+            <French>Nouveau départ</French>
+            <Spanish>Nuevo comienzo</Spanish>
+            <Italian>Nuovo inizio</Italian>
+            <Polish>Czysty start</Polish>
+            <Portuguese>Recomeço</Portuguese>
+            <Russian>Новый старт</Russian>
+            <German>Neuanfang</German>
+            <Korean>새로운 시작</Korean>
+            <Japanese>新しく始める</Japanese>
+            <Chinese>全新開始</Chinese>
+            <Chinesesimp>全新开始</Chinesesimp>
+            <Turkish>Yeni Başlangıç</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_FreshStartDesc">
+            <English>Start fresh in singleplayer?</English>
+            <Czech>Začít znovu v singleplayeru?</Czech>
+            <French>Recommencer à zéro en solo ?</French>
+            <Spanish>¿Empezar de cero en un jugador?</Spanish>
+            <Italian>Iniziare da capo in giocatore singolo?</Italian>
+            <Polish>Zacząć od nowa w trybie jednoosobowym?</Polish>
+            <Portuguese>Começar do zero no modo um jogador?</Portuguese>
+            <Russian>Начать заново в одиночной игре?</Russian>
+            <German>Im Einzelspieler neu anfangen?</German>
+            <Korean>싱글플레이어에서 새롭게 시작하시겠습니까?</Korean>
+            <Japanese>シングルプレイヤーで新しく始めますか？</Japanese>
+            <Chinese>要在單人模式中全新開始嗎？</Chinese>
+            <Chinesesimp>要在单人模式中全新开始吗？</Chinesesimp>
+            <Turkish>Tek oyunculuda yeni bir başlangıç yapılsın mı?</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_GradAdmin">
+            <English>GRAD Persistence admin actions</English>
+            <Czech>Administrátorské akce GRAD persistence</Czech>
+            <French>Actions admin de persistance GRAD</French>
+            <Spanish>Acciones de admin de persistencia GRAD</Spanish>
+            <Italian>Azioni admin persistenza GRAD</Italian>
+            <Polish>Uprawnienia administratora persystencji GRAD</Polish>
+            <Portuguese>Ações de administrador de persistência GRAD</Portuguese>
+            <Russian>Админ-действия персистенции GRAD</Russian>
+            <German>GRAD-Persistenz Admin-Aktionen</German>
+            <Korean>GRAD 지지형 저장 관리자 기능</Korean>
+            <Japanese>GRAD 永続化管理者アクション</Japanese>
+            <Chinese>GRAD 存檔持久化管理員權限</Chinese>
+            <Chinesesimp>GRAD 存档持久化管理员权限</Chinesesimp>
+            <Turkish>GRAD Kalıcılığı yönetici eylemleri</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_GradAdminDesc">
+            <English>Gives admin level players higher privilege actions for database control (Requires GRAD persistence)</English>
+            <Czech>Poskytuje hráčům na úrovni administrátora akce s vyššími privilegii pro správu databáze (Vyžaduje GRAD persistenci)</Czech>
+            <French>Donne aux administrateurs des actions à privilèges élevés pour le contrôle de la base de données (Nécessite la persistance GRAD)</French>
+            <Spanish>Otorga a los jugadores con nivel de administrador acciones de mayor privilegio para el control de la base de datos (Requiere persistencia GRAD)</Spanish>
+            <Italian>Fornisce ai giocatori di livello amministratore azioni con privilegi più elevati per il controllo del database (Richiede persistenza GRAD)</Italian>
+            <Polish>Daje graczom z uprawnieniami administratora dostęp do zaawansowanych akcji kontroli bazy danych (Wymaga persystencji GRAD)</Polish>
+            <Portuguese>Dá aos jogadores de nível administrador ações com privilégios mais elevados para controlo da base de dados (Requer persistência GRAD)</Portuguese>
+            <Russian>Предоставляет игрокам с правами администратора расширенные действия для управления базой данных (Требуется персистенция GRAD)</Russian>
+            <German>Gibt Spielern mit Admin-Rechten erweiterte Aktionen zur Datenbankkontrolle (Erfordert GRAD-Persistenz)</German>
+            <Korean>관리자 권한의 플레이어에게 데이터베이스 제어를 위한 상위 권한 기능을 부여합니다 (GRAD 지지형 저장 필요)</Korean>
+            <Japanese>管理者レベル의プレイヤーにデータベース管理のための上位権限アクションを付与します（GRAD永続化が必要です）</Japanese>
+            <Chinese>賦予管理員級別的玩家更高權限來控制與管理資料庫（需要 GRAD 存檔持久化功能）</Chinese>
+            <Chinesesimp>赋予管理员级别的玩家更高权限来控制与管理数据库（需要 GRAD 存档持久化功能）</Chinesesimp>
+            <Turkish>Yönetici seviyesindeki oyunculara veritabanı kontrolü için daha yüksek ayrıcalıklı eylemler sağlar (GRAD kalıcılığı gerektirir)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_GradAutosave">
+            <English>GRAD Persistence autosave interval</English>
+            <Czech>Interval automatického ukládání GRAD persistence</Czech>
+            <French>Intervalle d'autosave de persistance GRAD</French>
+            <Spanish>Intervalo de autoguardado de persistencia GRAD</Spanish>
+            <Italian>Intervallo salvataggio automatico persistenza GRAD</Italian>
+            <Polish>Interwał automatycznego zapisu persystencji GRAD</Polish>
+            <Portuguese>Intervalo de gravação automática de persistência GRAD</Portuguese>
+            <Russian>Интервал автосохранения персистенции GRAD</Russian>
+            <German>GRAD-Persistenz Autospeicher-Intervall</German>
+            <Korean>GRAD 지지형 저장 자동 저장 간격</Korean>
+            <Japanese>GRAD 永続化オートセーブ間隔</Japanese>
+            <Chinese>GRAD 存檔持久化自動存檔間隔</Chinese>
+            <Chinesesimp>GRAD 存档持久化自动存档间隔</Chinesesimp>
+            <Turkish>GRAD Kalıcılığı otomatik kaydetme aralığı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_GradAutosaveDesc">
+            <English>How often would you like the server to save? (Requires GRAD persistence)</English>
+            <Czech>Jak často chcete, aby server ukládal? (Vyžaduje GRAD persistenci)</Czech>
+            <French>À quelle fréquence souhaitez-vous que le serveur sauvegarde ? (Nécessite la persistance GRAD)</French>
+            <Spanish>¿Con qué frecuencia te gustaría que guardara el servidor? (Requiere persistencia GRAD)</Spanish>
+            <Italian>Ogni quanto tempo vorresti che il server salvasse? (Richiede persistenza GRAD)</Italian>
+            <Polish>Jak często serwer ma zapisywać dane? (Wymaga persystencji GRAD)</Polish>
+            <Portuguese>Com que frequência gostaria que o servidor gravasse? (Requer persistência GRAD)</Portuguese>
+            <Russian>Как часто сервер должен выполнять сохранение? (Требуется персистенция GRAD)</Russian>
+            <German>Wie oft soll der Server speichern? (Erfordert GRAD-Persistenz)</German>
+            <Korean>서버가 얼마나 자주 저장하도록 설정하시겠습니까? (GRAD 지지형 저장 필요)</Korean>
+            <Japanese>サーバーのセーブ頻度を設定します（GRAD永続化が必要です）</Japanese>
+            <Chinese>您希望伺服器每隔多久存檔一次？（需要 GRAD 存檔持久化功能）</Chinese>
+            <Chinesesimp>您希望服务器每隔多久存档一次？（需要 GRAD 存档持久化功能）</Chinesesimp>
+            <Turkish>Sunucunun ne sıklıkla kaydetmesini istersiniz? (GRAD kalıcılığı gerektirir)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_GradPersistence">
+            <English>GRAD Persistence</English>
+            <Czech>GRAD persistence</Czech>
+            <French>Persistance GRAD</French>
+            <Spanish>Persistencia GRAD</Spanish>
+            <Italian>Persistenza GRAD</Italian>
+            <Polish>Persystencja GRAD</Polish>
+            <Portuguese>Persistência GRAD</Portuguese>
+            <Russian>Персистенция GRAD</Russian>
+            <German>GRAD-Persistenz</German>
+            <Korean>GRAD 지지형 저장</Korean>
+            <Japanese>GRAD 永続化</Japanese>
+            <Chinese>GRAD 存檔持久化</Chinese>
+            <Chinesesimp>GRAD 存档持久化</Chinesesimp>
+            <Turkish>GRAD Kalıcılığı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_GradWarning">
+            <English>GRAD Persistence warning</English>
+            <Czech>Varování GRAD persistence</Czech>
+            <French>Avertissement de persistance GRAD</French>
+            <Spanish>Aviso de persistencia GRAD</Spanish>
+            <Italian>Avviso persistenza GRAD</Italian>
+            <Polish>Ostrzeżenie persystencji GRAD</Polish>
+            <Portuguese>Aviso de persistência GRAD</Portuguese>
+            <Russian>Предупреждение персистенции GRAD</Russian>
+            <German>GRAD-Persistenz Warnung</German>
+            <Korean>GRAD 지지형 저장 경고 고지</Korean>
+            <Japanese>GRAD 永続化警告表示</Japanese>
+            <Chinese>GRAD 存檔持久化提示</Chinese>
+            <Chinesesimp>GRAD 存档持久化提示</Chinesesimp>
+            <Turkish>GRAD Kalıcılığı Uyarısı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_GradWarningDesc">
+            <English>Show warning message for GRAD persistence when saving (Requires GRAD persistence)</English>
+            <Czech>Zobrazit varovnou zprávu pro GRAD persistenci při ukládání (Vyžaduje GRAD persistenci)</Czech>
+            <French>Afficher un message d'avertissement pour la persistance GRAD lors de la sauvegarde (Nécessite la persistance GRAD)</French>
+            <Spanish>Mostrar mensaje de advertencia para la persistencia GRAD al guardar (Requiere persistencia GRAD)</Spanish>
+            <Italian>Mostra un messaggio di avviso per la persistenza GRAD durante il salvataggio (Richiede persistenza GRAD)</Italian>
+            <Polish>Pokazuj wiadomość ostrzegawczą persystencji GRAD podczas zapisywania (Wymaga persystencji GRAD)</Polish>
+            <Portuguese>Mostrar mensagem de aviso para a persistência GRAD ao gravar (Requer persistência GRAD)</Portuguese>
+            <Russian>Показывать предупреждение персистенции GRAD при сохранении (Требуется персистенция GRAD)</Russian>
+            <German>Warnmeldung für GRAD-Persistenz beim Speichern anzeigen (Erfordert GRAD-Persistenz)</German>
+            <Korean>저장 시 GRAD 지지형 저장에 대한 경고 메시지를 표시합니다 (GRAD 지지형 저장 필요)</Korean>
+            <Japanese>セーブ時にGRAD永続化に関する警告メッセージを表示します（GRAD永続化が必要です）</Japanese>
+            <Chinese>當存檔時顯示 GRAD 存檔持久化的警告/提示訊息（需要 GRAD 存檔持久化功能）</Chinese>
+            <Chinesesimp>当存档时显示 GRAD 存档持久化的警告/提示信息（需要 GRAD 存档持久化功能）</Chinesesimp>
+            <Turkish>Kaydederken GRAD kalıcılığı için uyarı mesajı göster (GRAD kalıcılığı gerektirir)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_HardcoreWarning">
+            <English>Hardcore mode enabled, you need to be near a lit fire to save...</English>
+            <Czech>Hardcore mód aktivován, pro uložení musíš být blízko zapáleného ohně...</Czech>
+            <French>Mode hardcore activé, vous devez être près d'un feu allumé pour sauvegarder...</French>
+            <Spanish>Modo hardcore activado, necesitas estar cerca de un fuego encendido para guardar...</Spanish>
+            <Italian>Modalità hardcore attivata, devi essere vicino a un fuoco acceso per salvare...</Italian>
+            <Polish>Tryb hardcore włączony, musisz być w pobliżu rozpalonego ogniska, aby zapisać grę...</Polish>
+            <Portuguese>Modo hardcore ativado, precisa de estar perto de uma fogueira acesa para guardar...</Portuguese>
+            <Russian>Включен хардкорный режим, для сохранения нужно находиться у разожженного костра...</Russian>
+            <German>Hardcore-Modus aktiviert, du musst dich in der Nähe eines brennenden Feuers befinden, um zu speichern...</German>
+            <Korean>하드코어 모드가 활성화되었습니다. 저장을 하려면 불이 붙은 모닥불 근처에 있어야 합니다...</Korean>
+            <Japanese>ハードコアモードが有効です。セーブするには火のついた焚き火の近くにいる必要があります...</Japanese>
+            <Chinese>硬核模式已啟用，您需要靠近點燃的篝火才能存檔...</Chinese>
+            <Chinesesimp>硬核模式已启用，您需要靠近点燃的篝火才能存档...</Chinesesimp>
+            <Turkish>Hardcore mod etkinleştirildi, kaydetmek için yanan bir ateşin yakınında olmalısınız...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_SaveSlot">
+            <English>Save Slot</English>
+            <Czech>Pozice pro uložení</Czech>
+            <French>Emplacement de sauvegarde</French>
+            <Spanish>Ranura de guardado</Spanish>
+            <Italian>Slot di salvataggio</Italian>
+            <Polish>Slot zapisu</Polish>
+            <Portuguese>Espaço de gravação</Portuguese>
+            <Russian>Слот сохранения</Russian>
+            <German>Speicherplatz</German>
+            <Korean>저장 슬롯</Korean>
+            <Japanese>セーブスロット</Japanese>
+            <Chinese>存檔槽位</Chinese>
+            <Chinesesimp>存档槽位</Chinesesimp>
+            <Turkish>Kayıt Yuvası</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_SaveSlotDesc">
+            <English>Which save slot would you like to use?</English>
+            <Czech>Kterou pozici pro uložení chcete použít?</Czech>
+            <French>Quel emplacement de sauvegarde souhaitez-vous utiliser ?</French>
+            <Spanish>¿Qué ranura de guardado te gustaría usar?</Spanish>
+            <Italian>Quale slot di salvataggio vorresti utilizzare?</Italian>
+            <Polish>Którego slotu zapisu chcesz użyć?</Polish>
+            <Portuguese>Qual o espaço de gravação que gostaria de usar?</Portuguese>
+            <Russian>Какой слот сохранения вы хотите использовать?</Russian>
+            <German>Welchen Speicherplatz möchtest du verwenden?</German>
+            <Korean>어떤 저장 슬롯을 사용하시겠습니까?</Korean>
+            <Japanese>どのセーブスロットを使用しますか？</Japanese>
+            <Chinese>您想要使用哪一個存檔槽位？</Chinese>
+            <Chinesesimp>您想要使用哪一个存档槽位？</Chinesesimp>
+            <Turkish>Hangi kayıt yuvasını kullanmak istersiniz?</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_SaveWorld">
+            <English>Save world</English>
+            <Czech>Uložit svět</Czech>
+            <French>Sauvegarder le monde</French>
+            <Spanish>Guardar mundo</Spanish>
+            <Italian>Salva mondo</Italian>
+            <Polish>Zapisz świat</Polish>
+            <Portuguese>Guardar mundo</Portuguese>
+            <Russian>Сохранить мир</Russian>
+            <German>Welt speichern</German>
+            <Korean>월드 저장</Korean>
+            <Japanese>ワールドセーブ</Japanese>
+            <Chinese>保存世界數據</Chinese>
+            <Chinesesimp>保存世界数据</Chinesesimp>
+            <Turkish>Dünyayı Kaydet</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_WipeWorld">
+            <English>Wipe world data</English>
+            <Czech>Smazat data světa</Czech>
+            <French>Effacer les données du monde</French>
+            <Spanish>Borrar datos del mundo</Spanish>
+            <Italian>Cancella dati del mondo</Italian>
+            <Polish>Wyczyść dane świata</Polish>
+            <Portuguese>Apagar dados do mundo</Portuguese>
+            <Russian>Стереть данные мира</Russian>
+            <German>Weltdaten löschen</German>
+            <Korean>월드 데이터 초기화</Korean>
+            <Japanese>ワールドデータ初期化</Japanese>
+            <Chinese>清除世界數據</Chinese>
+            <Chinesesimp>清除世界数据</Chinesesimp>
+            <Turkish>Dünya Verilerini Temizle</Turkish>
+        </Key>
+    </Package>
+</Project>

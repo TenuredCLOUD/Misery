@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Mining">
+        <Key ID="STR_MISERY_Mining_Action">
+            <English>Mine Ore</English>
+            <Czech>Důlní ruda</Czech>
+            <French>Mine Minerai</French>
+            <Spanish>Mineral de mina</Spanish>
+            <Italian>Minerale</Italian>
+            <Polish>Ruda kopalniana</Polish>
+            <Portuguese>Mineração de minério</Portuguese>
+            <Russian>Шахта Руда</Russian>
+            <German>Bergwerkserz</German>
+            <Korean>광산 광석</Korean>
+            <Japanese>鉱山鉱石</Japanese>
+            <Chinese>採礦</Chinese>
+            <Chinesesimp>采矿</Chinesesimp>
+            <Turkish>Maden Cevheri</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Mining_ActionProgress">
+            <English>Mining ore...</English>
+            <Czech>Těží se ruda...</Czech>
+            <French>Extraction du minerai...</French>
+            <Spanish>Minando mineral...</Spanish>
+            <Italian>Estrazione del minerale...</Italian>
+            <Polish>Wydobywanie rudy...</Polish>
+            <Portuguese>Minerando minério...</Portuguese>
+            <Russian>Добыча руды...</Russian>
+            <German>Erz wird abgebaut...</German>
+            <Korean>광석 채광 중...</Korean>
+            <Japanese>鉱石を採掘中...</Japanese>
+            <Chinese>正在採掘礦石...</Chinese>
+            <Chinesesimp>正在采掘矿石...</Chinesesimp>
+            <Turkish>Cevher kazılıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Mining_Interrupted">
+            <English>You stop mining...</English>
+            <Czech>Zastavil jsi těžbu...</Czech>
+            <French>Vous arrêtez l'extraction...</French>
+            <Spanish>Dejas de minar...</Spanish>
+            <Italian>Hai smesso di estrarre...</Italian>
+            <Polish>Przerwano wydobycie...</Polish>
+            <Portuguese>Parou de minerar...</Portuguese>
+            <Russian>Вы прекратили добычу...</Russian>
+            <German>Du hörst auf abzubauen...</German>
+            <Korean>채광을 중단했습니다...</Korean>
+            <Japanese>採掘を中止しました...</Japanese>
+            <Chinese>您停止了採礦...</Chinese>
+            <Chinesesimp>您停止了采矿...</Chinesesimp>
+            <Turkish>Kazmayı bıraktın...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Mining_NoOreFound">
+            <English>No ore found...</English>
+            <Czech>Nenalezena žádná ruda...</Czech>
+            <French>Aucun minerai trouvé...</French>
+            <Spanish>No se encontró mineral...</Spanish>
+            <Italian>Nessun minerale trovato...</Italian>
+            <Polish>Nie znaleziono rudy...</Polish>
+            <Portuguese>Nenhum minério encontrado...</Portuguese>
+            <Russian>Руда не найдена...</Russian>
+            <German>Kein Erz gefunden...</German>
+            <Korean>광석을 찾지 못했습니다...</Korean>
+            <Japanese>鉱石は見つかりませんでした...</Japanese>
+            <Chinese>未找到礦石...</Chinese>
+            <Chinesesimp>未找到矿石...</Chinesesimp>
+            <Turkish>Cevher bulunamadı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Mining_NoSource">
+            <English>No mining source found...</English>
+            <Czech>Nenalezen žádný zdroj těžby...</Czech>
+            <French>Aucune source d'extraction trouvée...</French>
+            <Spanish>No se encontró ninguna fuente de minería...</Spanish>
+            <Italian>Nessuna fonte mineraria trovata...</Italian>
+            <Polish>Nie znaleziono źródła wydobycia...</Polish>
+            <Portuguese>Nenhuma fonte de mineração encontrada...</Portuguese>
+            <Russian>Источник добычи ресурсов не найден...</Russian>
+            <German>Keine Abbauquelle gefunden...</German>
+            <Korean>채광할 수 있는 광맥을 찾지 못했습니다...</Korean>
+            <Japanese>採掘ポイントが見つかりません...</Japanese>
+            <Chinese>未找到採礦源...</Chinese>
+            <Chinesesimp>未找到采矿源...</Chinesesimp>
+            <Turkish>Maden kaynağı bulunamadı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Mining_NoTools">
+            <English>You don't have the required items to mine ore...</English>
+            <Czech>Nemáte potřebné předměty k těžbě rudy...</Czech>
+            <French>Vous n'avez pas les éléments nécessaires pour extraire du minerai...</French>
+            <Spanish>No tienes los objetos necesarios para extraer mineral...</Spanish>
+            <Italian>Non hai gli oggetti necessari per estrarre il minerale...</Italian>
+            <Polish>Nie masz wymaganych przedmiotów do wydobywania rudy...</Polish>
+            <Portuguese>Você não tem os itens necessários para extrair minério...</Portuguese>
+            <Russian>У вас нет необходимых предметов для добычи руды...</Russian>
+            <German>Sie haben nicht die erforderlichen Gegenstände, um Erz abzubauen...</German>
+            <Korean>광석 채굴에 필요한 아이템이 없습니다...</Korean>
+            <Japanese>鉱石を採掘するのに必要なアイテムを持っていない...。</Japanese>
+            <Chinese>你沒有採礦所需的物品...</Chinese>
+            <Chinesesimp>你没有采矿所需的物品...</Chinesesimp>
+            <Turkish>Maden çıkarmak için gerekli eşyalara sahip değilsiniz...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Mining_Success">
+            <English>You found some ore...</English>
+            <Czech>Našel jsi nějakou rudu...</Czech>
+            <French>Vous avez trouvé du minerai...</French>
+            <Spanish>Has encontrado algo de mineral...</Spanish>
+            <Italian>Hai trovato del minerale...</Italian>
+            <Polish>Znaleziono rudę...</Polish>
+            <Portuguese>Encontrou algum minério...</Portuguese>
+            <Russian>Вы нашли немного руды...</Russian>
+            <German>Du hast etwas Erz gefunden...</German>
+            <Korean>광석을 발견했습니다...</Korean>
+            <Japanese>鉱石を見つけました...</Japanese>
+            <Chinese>您找到了部分礦石...</Chinese>
+            <Chinesesimp>您找到了部分矿石...</Chinesesimp>
+            <Turkish>Biraz cevher buldun...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Mining_VeinDepleted">
+            <English>This ore vein has been depleted...</English>
+            <Czech>Tato rudná žíla byla vyčerpána...</Czech>
+            <French>Vena de minerai épuisée...</French>
+            <Spanish>Esta veta de mineral se ha agotado...</Spanish>
+            <Italian>Questa vena di minerale è stata esaurita...</Italian>
+            <Polish>Ta żyła rudy została wyczerpana...</Polish>
+            <Portuguese>Esta veia de minério foi esgotada...</Portuguese>
+            <Russian>Жила руды истощена...</Russian>
+            <German>Diese Erzader ist erschöpft...</German>
+            <Korean>이 광맥은 고갈되었습니다...</Korean>
+            <Japanese>この鉱脈は掘り尽くされました...</Japanese>
+            <Chinese>該礦脈已枯竭...</Chinese>
+            <Chinesesimp>该矿脉已枯竭...</Chinesesimp>
+            <Turkish>Bu maden damarı tükendi...</Turkish>
+        </Key>
+    </Package>
+</Project>

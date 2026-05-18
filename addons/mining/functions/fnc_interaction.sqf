@@ -33,7 +33,7 @@
 
             private _action = [
                 QGVAR(mineOre_menu),
-                localize ECSTRING(common,MineOre),
+                localize LSTRING(Action),
                 QPATHTOEF(icons,data\pickaxe_ca.paa),
                 {
                     params ["", "", "_params"];
