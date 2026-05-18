@@ -23,7 +23,7 @@ _heli flyInHeight 100;
 
 [QEGVAR(common,radioBroadcast), [
     groupId _heliGroup,
-    "Dropping supply cargo, standby."
+    localize LSTRING(Dropping)
 ]] call CBA_fnc_globalEvent;
 
 [{
@@ -53,7 +53,7 @@ _heli flyInHeight 100;
 
     [QEGVAR(common,radioBroadcast), [
     groupId _heliGroup,
-    "Supply cargo delivered, heading back to HQ."
+    localize LSTRING(Delivered)
     ]] call CBA_fnc_globalEvent;
 
     [{

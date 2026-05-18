@@ -44,7 +44,7 @@ _heliGroup move _dropZone;
 
 [QEGVAR(common,radioBroadcast), [
     groupId _heliGroup,
-    format ["En-route to drop zone, GRID: %1", _dropZone]
+    format [localize LSTRING(EnRoute), _dropZone]
 ]] call CBA_fnc_globalEvent;
 
 // Blacklist all objects from saving

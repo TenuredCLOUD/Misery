@@ -3,7 +3,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(enabled),
     "CHECKBOX",
-    ["Enabled", "Enables dynamic supply drops"],
+    [ECSTRING(common,Enabled), LSTRING(EnableDesc)],
     _category,
     false,
     1
@@ -12,7 +12,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(dropMarkers),
     "EDITBOX",
-    ["Drop zones", "Possible drop zones for supply crates, leave blank if you want to select a random player's position on the map, must be a marker! ['DropZone_1', 'DropZone_2']"],
+    [LSTRING(DropZones), LSTRING(DropZonesDesc)],
     _category,
     "[]",
     1
@@ -21,7 +21,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(heliTypes),
     "EDITBOX",
-    ["Possible helicopters", "Possible helicopters to fly in supplies"],
+    [LSTRING(PossibleHelicopters), LSTRING(PossibleHelicoptersDesc)],
     _category,
     "['B_Heli_Transport_01_F']",
     1
@@ -30,7 +30,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(crateTypes),
     "EDITBOX",
-    ["Possible crates", "Possible crates helicopters will transport"],
+    [LSTRING(PossibleCrates), LSTRING(PossibleCratesDesc)],
     _category,
     "['B_supplyCrate_F']",
     1
@@ -39,7 +39,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(weapons),
     "EDITBOX",
-    ["Possible weapons", "Possible weapon supplies"],
+    [LSTRING(PossibleWeapons), LSTRING(PossibleWeaponsDesc)],
     _category,
     "['arifle_MX_F', 'hgun_Pistol_heavy_01_MRD_F', 'launch_NLAW_F']",
     1
@@ -48,7 +48,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(itemCount),
     "SLIDER",
-    ["Loot item count", "Loot amount per category, weapons, items, ammo, attachments, etc..."],
+    [LSTRING(LootItemCount), LSTRING(LootItemCountDesc)],
     _category,
     [1, 15, 1, 0],
     1
@@ -57,9 +57,9 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(ammoTier),
     "LIST",
-    ["Ammo type", "Type of ammo to spawn in crate"],
+    [LSTRING(AmmoType), LSTRING(AmmoTypeDesc)],
     _category,
-    [[0, 1, 2], ["Basic", "All", "None"], 0],
+    [[0, 1, 2], [ECSTRING(common,Basic), ECSTRING(common,All), ECSTRING(common,None)], 0],
     1,
     {},
     true
@@ -68,9 +68,9 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(attachmentTier),
     "LIST",
-    ["Attachment type", "Type of attachments to spawn in crate"],
+    [LSTRING(AttachmentType), LSTRING(AttachmentTypeDesc)],
     _category,
-    [[0, 1, 2], ["Basic", "All", "None"], 0],
+    [[0, 1, 2], [ECSTRING(common,Basic), ECSTRING(common,All), ECSTRING(common,None)], 0],
     1,
     {},
     true
@@ -79,7 +79,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(items),
     "EDITBOX",
-    ["Items", "Possible item supplies, headgear, facewear, nvgs, etc..."],
+    [LSTRING(Items), LSTRING(ItemsDesc)],
     _category,
     "['FirstAidKit']",
     1
@@ -88,7 +88,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(uniform),
     "EDITBOX",
-    ["Uniform", "Possible uniforms supplies"],
+    [LSTRING(Uniform), LSTRING(UniformDesc)],
     _category,
     "['U_B_CTRG_Soldier_F']",
     1
@@ -97,7 +97,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(vest),
     "EDITBOX",
-    ["Vest", "Possible vests supplies"],
+    [LSTRING(Vest), LSTRING(VestDesc)],
     _category,
     "['V_PlateCarrier1_rgr_noflag_F']",
     1
@@ -106,7 +106,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(backpack),
     "EDITBOX",
-    ["Backpack", "Possible backpack supplies"],
+    [LSTRING(Backpack), LSTRING(BackpackDesc)],
     _category,
     "['B_FieldPack_Base']",
     1
@@ -115,7 +115,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(spawnChance),
     "SLIDER",
-    ["Supply Drop chance", "% chance a supply drop will happen every check"],
+    [LSTRING(SupplyDropChance), LSTRING(SupplyDropChanceDesc)],
     _category,
     [1, 100, 10, 0],
     1
@@ -124,7 +124,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(deletionDistance),
     "SLIDER",
-    ["Deletion distance", "Distance from players when the system cleans up"],
+    [LSTRING(DeletionDistance), LSTRING(DeletionDistanceDesc)],
     _category,
     [25, 20000, 1500, 0],
     1
@@ -133,9 +133,9 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(cycleLength),
     "LIST",
-    ["Spawn check interval", "Time between drop checks"],
+    [LSTRING(SpawnCheckInterval), LSTRING(SpawnCheckIntervalDesc)],
     _category,
-    [[900, 1800, 3600, 7200], ["15 minutes", "30 minutes", "1 Hour", "2 Hours"], 1],
+    [[900, 1800, 3600, 7200], [ECSTRING(common,Interval15Min), ECSTRING(common,Interval30Min), ECSTRING(common,Interval1Hour), ECSTRING(common,Interval2Hour)], 1],
     1,
     {},
     true

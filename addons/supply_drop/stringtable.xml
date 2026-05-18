@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="SupplyDrop">
+        <Key ID="STR_MISERY_SupplyDrop_AmmoType">
+            <English>Ammo type</English>
+            <Czech>Typ munice</Czech>
+            <French>Type de munitions</French>
+            <Spanish>Tipo de munición</Spanish>
+            <Italian>Tipo munizioni</Italian>
+            <Polish>Typ amunicji</Polish>
+            <Portuguese>Tipo de munição</Portuguese>
+            <Russian>Тип патронов</Russian>
+            <German>Munitionstyp</German>
+            <Korean>탄약 유형 목록</Korean>
+            <Japanese>出現弾薬候補</Japanese>
+            <Chinese>彈藥種類</Chinese>
+            <Chinesesimp>弹药种类</Chinesesimp>
+            <Turkish>Mühimmat Türü</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_AmmoTypeDesc">
+            <English>Type of ammo to spawn in crate</English>
+            <Czech>Typy munice, které se mohou spawnout v bedně</Czech>
+            <French>Types de munitions à faire apparaître dans la caisse</French>
+            <Spanish>Tipo de munición que aparecerá en la caja</Spanish>
+            <Italian>Tipo di munizioni da generare nella cassa</Italian>
+            <Polish>Rodzaje amunicji do zespawnowania w skrzyni</Polish>
+            <Portuguese>Tipo de munição para surgir na caixa</Portuguese>
+            <Russian>Типы магазинов/патронов для спавна в ящике</Russian>
+            <German>Art der Munition, die in der Kiste gespawnt wird</German>
+            <Korean>보급 상자에 생성될 탄약/잡지 아이템 목록입니다</Korean>
+            <Japanese>補給箱内に出現する弾薬・マガジンの候補リストです</Japanese>
+            <Chinese>空投箱中可能出現的彈藥/彈匣物資列表</Chinese>
+            <Chinesesimp>空投箱中可能出现的弹药/弹匣物资列表</Chinesesimp>
+            <Turkish>Kasada doğacak mühimmat türü</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_AttachmentType">
+            <English>Attachment type</English>
+            <Czech>Typ doplňků</Czech>
+            <French>Type d'accessoires</French>
+            <Spanish>Tipo de accesorio</Spanish>
+            <Italian>Tipo accessori</Italian>
+            <Polish>Typ akcesoriów</Polish>
+            <Portuguese>Tipo de acessório</Portuguese>
+            <Russian>Тип модулей</Russian>
+            <German>Aufsatztyp</German>
+            <Korean>부착물 유형 목록</Korean>
+            <Japanese>出現アタッチメント候補</Japanese>
+            <Chinese>武器配件種類</Chinese>
+            <Chinesesimp>武器配件种类</Chinesesimp>
+            <Turkish>Eklenti Türü</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_AttachmentTypeDesc">
+            <English>Type of attachments to spawn in crate</English>
+            <Czech>Typy zbraňových doplňků, které se mohou spawnout v bedně</Czech>
+            <French>Types d'accessoires d'armes à faire apparaître dans la caisse</French>
+            <Spanish>Tipo de accesorios que aparecerán en la caja</Spanish>
+            <Italian>Tipo di accessori per armi da generare nella cassa</Italian>
+            <Polish>Rodzaje akcesoriów broni do zespawnowania w skrzyni</Polish>
+            <Portuguese>Tipo de acessórios para surgir na caixa</Portuguese>
+            <Russian>Типы оружейных модулей (прицелы, глушители и т.д.) для спавна в ящике</Russian>
+            <German>Art von Aufsätzen (Visierte, Schalldämpfer etc.), die in der Kiste gespawnt werden</German>
+            <Korean>보급 상자에 생성될 총기 부착물(조준경, 소멸기 등) 아이템 목록입니다</Korean>
+            <Japanese>補給箱内に出現する武器アタッチメントの候補リストです</Japanese>
+            <Chinese>空投箱中可能出現的武器配件（瞄具、抑制器等）列表</Chinese>
+            <Chinesesimp>空投箱中可能出现的武器配件（瞄具、抑制器等）列表</Chinesesimp>
+            <Turkish>Kasada doğacak eklenti türü</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_Backpack">
+            <English>Backpack</English>
+            <Czech>Batohy</Czech>
+            <French>Sac à dos</French>
+            <Spanish>Mochilas</Spanish>
+            <Italian>Zaini</Italian>
+            <Polish>Plecaki</Polish>
+            <Portuguese>Mochilas</Portuguese>
+            <Russian>Рюкзаки</Russian>
+            <German>Rucksäcke</German>
+            <Korean>배낭 목록</Korean>
+            <Japanese>バックパック</Japanese>
+            <Chinese>背包</Chinese>
+            <Chinesesimp>背包</Chinesesimp>
+            <Turkish>Sırt Çantası</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_BackpackDesc">
+            <English>Possible backpack supplies</English>
+            <Czech>Možné zásoby batohů</Czech>
+            <French>Fournitures de sacs à dos possibles</French>
+            <Spanish>Posibles suministros de mochilas</Spanish>
+            <Italian>Possibili rifornimenti di zaini</Italian>
+            <Polish>Plecaki, które mogą znaleźć się w zaopatrzeniu</Polish>
+            <Portuguese>Possíveis suprimentos de mochilas</Portuguese>
+            <Russian>Возможные варианты рюкзаков для спавна</Russian>
+            <German>Mögliche Rucksacklieferungen</German>
+            <Korean>보급 상자에 스폰될 수 있는 배낭 아이템 목록입니다</Korean>
+            <Japanese>補給箱内に出現するバックパックの候補リストです</Japanese>
+            <Chinese>空投箱中可能出現的背包物資列表</Chinese>
+            <Chinesesimp>空投箱中可能出现的背包物资列表</Chinesesimp>
+            <Turkish>Olası sırt çantası malzemeleri</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_DeletionDistance">
+            <English>Deletion distance</English>
+            <Czech>Vzdálenost pro smazání</Czech>
+            <French>Distance de suppression</French>
+            <Spanish>Distancia de eliminación</Spanish>
+            <Italian>Distanza di rimozione</Italian>
+            <Polish>Dystans usuwania</Polish>
+            <Portuguese>Distância de eliminação</Portuguese>
+            <Russian>Дистанция удаления</Russian>
+            <German>Entfernung für Bereinigung</German>
+            <Korean>정리 거리</Korean>
+            <Japanese>削除・クリーンアップ距離</Japanese>
+            <Chinese>清理刪除距離</Chinese>
+            <Chinesesimp>清理删除距离</Chinesesimp>
+            <Turkish>Silme Menzili</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_DeletionDistanceDesc">
+            <English>Distance from players when the system cleans up</English>
+            <Czech>Vzdálenost od hráčů, při které systém vyčistí (smaže) staré objekty výsadku</Czech>
+            <French>Distance par rapport os joueurs à laquelle le système nettoie et supprime les éléments</French>
+            <Spanish>Distancia respecto a los jugadores a la que el sistema limpia y elimina los objetos</Spanish>
+            <Italian>Distanza dai giocatori oltre la quale il sistema esegue la pulizia e rimozione dei vecchi oggetti</Italian>
+            <Polish>Odległość od graczy, przy której system usuwa i oczyszcza obiekty zrzutu</Polish>
+            <Portuguese>Distância dos jogadores quando o sistema limpa e remove os objetos</Portuguese>
+            <Russian>Расстояние от игроков, при превышении которого система удаляет отработавшие объекты аирдропа</Russian>
+            <German>Entfernung von Spielern, ab der das System ungenutzte Airdrop-Objekte löscht</German>
+            <Korean>플레이어와의 거리가 이 수치보다 멀어질 경우 시스템이 상자나 차량을 청소(삭제)합니다</Korean>
+            <Japanese>プレイヤーからの距離がこの設定値以上になった場合、システムが機体や空箱をクリーンアップします</Japanese>
+            <Chinese>當玩家遠離空投相關物件達到此距離時，系統將自動回收並刪除對應實體</Chinese>
+            <Chinesesimp>当玩家远离空投相关物件达到此距离时，系统将自动回收并删除对应实体</Chinesesimp>
+            <Turkish>Sistem temizlik yaparken oyunculara olan mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_Delivered">
+            <English>Supply cargo delivered, heading back to HQ.</English>
+            <Czech>Náklad zásob doručen, návrat na základnu.</Czech>
+            <French>Cargaison de ravitaillement livrée, retour au QG.</French>
+            <Spanish>Cargamento de suministros entregado, regresando a la base.</Spanish>
+            <Italian>Carico di rifornimenti consegnato, rientro al QG.</Italian>
+            <Polish>Zaopatrzenie dostarczone, powrót do bazy.</Polish>
+            <Portuguese>Carga de suprimentos entregue, a regressar ao QG.</Portuguese>
+            <Russian>Груз снабжения доставлен, возвращаемся в штаб.</Russian>
+            <German>Versorgungsgüter geliefert, kehre zum HQ zurück.</German>
+            <Korean>보급품 배달 완료, 본부로 복귀합니다.</Korean>
+            <Japanese>物資の投下完了、司令部へ帰投する。</Japanese>
+            <Chinese>補給物資已送達，正在返回總部。</Chinese>
+            <Chinesesimp>补给物资已送达，正在返回总部。</Chinesesimp>
+            <Turkish>Malzeme kargosu teslim edildi, karargaha dönülüyor.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_DropZones">
+            <English>Drop zones</English>
+            <Czech>Zóny výsadku</Czech>
+            <French>Zones de largage</French>
+            <Spanish>Zonas de lanzamiento</Spanish>
+            <Italian>Zone di lancio</Italian>
+            <Polish>Strefy zrzutu</Polish>
+            <Portuguese>Zonas de largada</Portuguese>
+            <Russian>Зоны высадки</Russian>
+            <German>Abwurfzonen</German>
+            <Korean>투하 구역 설정</Korean>
+            <Japanese>投下ポイント設定</Japanese>
+            <Chinese>空投投放區</Chinese>
+            <Chinesesimp>空投投放区</Chinesesimp>
+            <Turkish>Bırakma Bölgeleri</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_DropZonesDesc">
+            <English>Possible drop zones for supply crates, leave blank if you want to select a random player's position on the map, must be a marker! ['DropZone_1', 'DropZone_2']</English>
+            <Czech>Možné zóny výsadku pro bedny se zásobami. Ponechte prázdné, pokud chcete vybrat náhodnou pozici hráče na mapě. Musí se jednat o marker! ['DropZone_1', 'DropZone_2']</Czech>
+            <French>Zones de largage possibles pour les caisses de ravitaillement, laisser vide pour cibler la position d'un joueur aléatoire, doit être un marqueur ! ['DropZone_1', 'DropZone_2']</French>
+            <Spanish>Posibles zonas de lanzamiento para las cajas de suministros. Dejar en blanco para seleccionar la posición de un jugador aleatorio en el mapa. ¡Debe ser un marcador! ['DropZone_1', 'DropZone_2']</Spanish>
+            <Italian>Possibili zone di lancio per le casse di rifornimenti, lasciare vuoto per selezionare la posizione di un giocatore casuale sulla mappa, deve essere un marker! ['DropZone_1', 'DropZone_2']</Italian>
+            <Polish>Potencjalne strefy zrzutu skrzyń z zaopatrzeniem. Pozostaw puste, aby wybrać losową pozycję gracza na mapie. Musi to być marker! ['DropZone_1', 'DropZone_2']</Polish>
+            <Portuguese>Possíveis zonas de largada para caixas de suprimentos, deixe em branco para selecionar a posição de um jogador aleatório no mapa, tem de ser um marcador! ['DropZone_1', 'DropZone_2']</Portuguese>
+            <Russian>Возможные зоны сброса ящиков со снабжением, оставьте пустым для выбора случайной позиции игрока на карте, обязательно должен быть маркер! ['DropZone_1', 'DropZone_2']</Russian>
+            <German>Mögliche Abwurfzonen für Versorgungskisten. Leer lassen, um eine zufällige Spielerposition auf der Karte auszuwählen. Muss ein Marker sein! ['DropZone_1', 'DropZone_2']</German>
+            <Korean>보급 상자가 투하될 수 있는 구역 마커 이름입니다. 비워두면 맵상의 무작위 플레이어 위치에 투하됩니다. 반드시 마커 이름이어야 합니다! ['DropZone_1', 'DropZone_2']</Korean>
+            <Japanese>補給箱を投下する候補地です。空欄にするとマップ上のランダムなプレイヤーの位置が選ばれます。必ずマーカー名で指定してください！ ['DropZone_1', 'DropZone_2']</Japanese>
+            <Chinese>物資箱的可選空投區域，如果留空則會隨機選擇地圖上某位玩家的位置，此處必須填寫標記名稱！ ['DropZone_1', 'DropZone_2']</Chinese>
+            <Chinesesimp>物资箱的可选空投区域，如果留空则会随机选择地图上某位玩家的位置，此处必须填写标记名称！ ['DropZone_1', 'DropZone_2']</Chinesesimp>
+            <Turkish>Malzeme kasaları için olası bırakma bölgeleri, haritada rastgele bir oyuncunun konumunu seçmek istiyorsanız boş bırakın, bir işaretçi olmalıdır! ['DropZone_1', 'DropZone_2']</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_Dropping">
+            <English>Dropping supply cargo, standby.</English>
+            <Czech>Vysazování nákladu zásob, čekejte.</Czech>
+            <French>Largage de la cargaison de ravitaillement, patientez.</French>
+            <Spanish>Soltando cargamento de suministros, manténgase a la espera.</Spanish>
+            <Italian>Lancio del carico di rifornimenti in corso, attendere.</Italian>
+            <Polish>Zrzucanie ładunku z zaopatrzeniem, czekać.</Polish>
+            <Portuguese>A largar carga de suprimentos, aguarde.</Portuguese>
+            <Russian>Сброс груза снабжения, ожидайте.</Russian>
+            <German>Werfe Versorgungsgüter ab, bitte warten.</German>
+            <Korean>보급품 투하 중, 대기하십시오.</Korean>
+            <Japanese>物資を投下中、待機せよ。</Japanese>
+            <Chinese>正在投放補給物資，請稍候。</Chinese>
+            <Chinesesimp>正在投放补给物资，请稍候。</Chinesesimp>
+            <Turkish>Kargo malzemesi bırakılıyor, beklemede kalın.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_EnRoute">
+            <English>En-route to drop zone, GRID: %1</English>
+            <Czech>Na cestě do zóny výsadku, GRID: %1</Czech>
+            <French>En route vers la zone de largage, GRID : %1</French>
+            <Spanish>En ruta a la zona de lanzamiento, cuadrícula: %1</Spanish>
+            <Italian>In rotta verso la zona di lancio, coordinate: %1</Italian>
+            <Polish>W drodze do strefy zrzutu, GRID: %1</Polish>
+            <Portuguese>A caminho da zona de largada, GRID: %1</Portuguese>
+            <Russian>На пути к зоне высадки, квадрат: %1</Russian>
+            <German>Unterwegs zur Abwurfzone, Planquadrat: %1</German>
+            <Korean>투하 구역으로 비행 중, 좌표: %1</Korean>
+            <Japanese>投下ポイントへ移動中、座標: %1</Japanese>
+            <Chinese>正在前往物資投放區，地圖座標: %1</Chinese>
+            <Chinesesimp>正在前往物资投放区，地图坐标: %1</Chinesesimp>
+            <Turkish>Bırakma bölgesine doğru yolda, KOORDİNAT: %1</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_EnableDesc">
+            <English>Enables dynamic supply drops</English>
+            <Czech>Povolit dynamické shazování zásob</Czech>
+            <French>Activer les largages dynamiques</French>
+            <Spanish>Permitir entregas dinámicas de suministros</Spanish>
+            <Italian>Abilita i lanci di rifornimenti dinamici</Italian>
+            <Polish>Włącz dynamiczne zrzuty zaopatrzenia</Polish>
+            <Portuguese>Ativar largadas dinâmicas de suprimentos</Portuguese>
+            <Russian>Включить динамический сброс припасов</Russian>
+            <German>Dynamische Versorgungskisten aktivieren</German>
+            <Korean>동적 보급품 투하 활성화</Korean>
+            <Japanese>動的な補給物資投下を有効化</Japanese>
+            <Chinese>啟用動態物資空投</Chinese>
+            <Chinesesimp>启用动态物资空投</Chinesesimp>
+            <Turkish>Dinamik malzeme bırakmayı etkinleştirir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_Items">
+            <English>Items</English>
+            <Czech>Předměty</Czech>
+            <French>Objets</French>
+            <Spanish>Objetos</Spanish>
+            <Italian>Oggetti</Italian>
+            <Polish>Przedmioty</Polish>
+            <Portuguese>Itens</Portuguese>
+            <Russian>Предметы</Russian>
+            <German>Gegenstände</German>
+            <Korean>아이템 목록</Korean>
+            <Japanese>一般アイテム</Japanese>
+            <Chinese>一般物品</Chinese>
+            <Chinesesimp>一般物品</Chinesesimp>
+            <Turkish>Eşyalar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_ItemsDesc">
+            <English>Possible item supplies, headgear, facewear, nvgs, etc...</English>
+            <Czech>Možné zásoby předmětů - helmy, brýle/masky, NVG atd...</Czech>
+            <French>Fournitures d'objets possibles : casques, masques, NVG, etc.</French>
+            <Spanish>Posibles suministros de objetos: cascos, accesorios faciales, visión nocturna, etc...</Spanish>
+            <Italian>Possibili rifornimenti di oggetti vari: copricapi, elementi facciali, visori notturni, ecc...</Italian>
+            <Polish>Potencjalne przedmioty: nakrycia głowy, maski, gogle noktowizyjne itp...</Polish>
+            <Portuguese>Possíveis suprimentos de itens: capacetes, máscaras, visão noturna, etc...</Portuguese>
+            <Russian>Возможные общие предметы снабжения: головные уборы, маски, ПНВ и т.д...</Russian>
+            <German>Mögliche Gegenstände wie Helme, Gesichtsbekleidung, Nachtsichtgeräte usw...</German>
+            <Korean>보급 상자에 포함될 일반 아이템(헬멧, 안면 보호구, 야간 투視경 등) 목록입니다</Korean>
+            <Japanese>出現する装備・小物（ヘルメット、マスク、暗視装置など）の候補リストです</Japanese>
+            <Chinese>可能出現的個人裝備物品，如頭盔、面罩、夜視鏡等列表</Chinese>
+            <Chinesesimp>可能出现的个人装备物品，如头盔、面罩、夜视镜等列表</Chinesesimp>
+            <Turkish>Olası eşya malzemeleri; kasklar, yüz maskeleri, gece görüş gözlükleri vb...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_LootItemCount">
+            <English>Loot item count</English>
+            <Czech>Počet položek lootu</Czech>
+            <French>Nombre d'objets de butin</French>
+            <Spanish>Cantidad de objetos de botín</Spanish>
+            <Italian>Quantità oggetti bottino</Italian>
+            <Polish>Ilość przedmiotów łupu</Polish>
+            <Portuguese>Quantidade de itens de saque</Portuguese>
+            <Russian>Количество предметов лута</Russian>
+            <German>Beute-Gegenstandsanzahl</German>
+            <Korean>루트 아이템 개수</Korean>
+            <Japanese>ルートアイテム数</Japanese>
+            <Chinese>戰利品物品數量</Chinese>
+            <Chinesesimp>战利品物品数量</Chinesesimp>
+            <Turkish>Ganimet Eşya Sayısı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_LootItemCountDesc">
+            <English>Loot amount per category, weapons, items, ammo, attachments, etc...</English>
+            <Czech>Množství lootu pro každou kategorii - zbraně, předměty, munice, doplňky atd...</Czech>
+            <French>Quantité de butin par catégorie : armes, objets, munitions, accessoires, etc.</French>
+            <Spanish>Cantidad de botín por categoría: armas, objetos, munición, accesorios, etc...</Spanish>
+            <Italian>Quantità di bottino per categoria: armi, oggetti, munizioni, accessori, ecc...</Italian>
+            <Polish>Ilość łupu na kategorię: bronie, przedmioty, amunicja, akcesoria itp...</Polish>
+            <Portuguese>Quantidade de saque por categoria: armas, itens, munições, acessórios, etc...</Portuguese>
+            <Russian>Количество лута на каждую категорию: оружие, предметы, патроны, модули и т.д...</Russian>
+            <German>Beutemenge pro Kategorie: Waffen, Gegenstände, Munition, Visiere/Aufsätze usw...</German>
+            <Korean>각 카테고리별(무기, 아이템, 탄약, 부착물 등) 생성될 전리품의 수량입니다</Korean>
+            <Japanese>各カテゴリ（武器、アイテム, 弾약, アタッチメントなど）ごとの出現アイテム数です</Japanese>
+            <Chinese>各分類（武器、物品、彈藥、配件等）所生成的物資隨機總數上限</Chinese>
+            <Chinesesimp>各分类（武器、物品、弹药、配件等）所生成的物资随机总数上限</Chinesesimp>
+            <Turkish>Kategori başına ganimet miktarı; silahlar, eşyalar, mühimmatlar, eklentiler vb...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_PossibleCrates">
+            <English>Possible crates</English>
+            <Czech>Možné bedny</Czech>
+            <French>Caisses possibles</French>
+            <Spanish>Cajas posibles</Spanish>
+            <Italian>Casse possibili</Italian>
+            <Polish>Dostępne skrzynie</Polish>
+            <Portuguese>Caixas possíveis</Portuguese>
+            <Russian>Возможные ящики</Russian>
+            <German>Mögliche Kisten</German>
+            <Korean>사용 가능한 상자 유형</Korean>
+            <Japanese>使用補給箱候補</Japanese>
+            <Chinese>可選物資箱</Chinese>
+            <Chinesesimp>可选物资箱</Chinesesimp>
+            <Turkish>Olası Kasalar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_PossibleCratesDesc">
+            <English>Possible crates helicopters will transport</English>
+            <Czech>Možné typy beden, které budou vrtulníky transportovat</Czech>
+            <French>Caisses de ravitaillement que les hélicoptères vont transporter</French>
+            <Spanish>Posibles cajas que transportarán los helicópteros</Spanish>
+            <Italian>Possibili tipi di casse che gli elicotteri trasporteranno</Italian>
+            <Polish>Skrzynie, które będą transportowane przez śmigłowce</Polish>
+            <Portuguese>Possíveis caixas que os helicópteros irão transportar</Portuguese>
+            <Russian>Возможные классы ящиков, которые будут перевозить вертолеты</Russian>
+            <German>Mögliche Kisten, die von den Hubschraubern transportiert werden</German>
+            <Korean>헬리콥터가 운송할 보급 상자의 클래스 목록입니다</Korean>
+            <Japanese>ヘリコプターが輸送する補給箱の候補クラス名です</Japanese>
+            <Chinese>直升機將會掛載與運輸的可選物資箱型號</Chinese>
+            <Chinesesimp>直升机将会挂载与运输的可选物资箱型号</Chinesesimp>
+            <Turkish>Helikopterlerin taşıyacağı olası kasalar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_PossibleHelicopters">
+            <English>Possible helicopters</English>
+            <Czech>Možné vrtulníky</Czech>
+            <French>Hélicoptères possibles</French>
+            <Spanish>Helicópteros posibles</Spanish>
+            <Italian>Elicotteri possibili</Italian>
+            <Polish>Dostępne śmigłowce</Polish>
+            <Portuguese>Helicópteros possíveis</Portuguese>
+            <Russian>Возможные вертолеты</Russian>
+            <German>Mögliche Hubschrauber</German>
+            <Korean>사용 가능한 헬기 유형</Korean>
+            <Japanese>使用ヘリコプター候補</Japanese>
+            <Chinese>可選運輸直升機</Chinese>
+            <Chinesesimp>可选运输直升机</Chinesesimp>
+            <Turkish>Olası Helikopterler</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_PossibleHelicoptersDesc">
+            <English>Possible helicopters to fly in supplies</English>
+            <Czech>Možné typy vrtulníků, které doručí zásoby</Czech>
+            <French>Hélicoptères susceptibles de transporter le ravitaillement</French>
+            <Spanish>Posibles helicópteros para transportar los suministros</Spanish>
+            <Italian>Possibili elicotteri designati per il trasporto dei rifornimenti</Italian>
+            <Polish>Śmigłowce, które mogą zostać wysłane z zaopatrzeniem</Polish>
+            <Portuguese>Possíveis helicópteros para transportar suprimentos</Portuguese>
+            <Russian>Возможные классы вертолетов для доставки припасов</Russian>
+            <German>Mögliche Hubschrauber, die für den Transport von Vorräten eingesetzt werden</German>
+            <Korean>보급품을 공수할 수 있는 수송 헬리콥터 클래스 목록입니다</Korean>
+            <Japanese>物資を空輸するヘリコプターの候補クラス名です</Japanese>
+            <Chinese>用於執行補給任務的可選直升機類別列表</Chinese>
+            <Chinesesimp>用于执行补给任务的可选直升机类别列表</Chinesesimp>
+            <Turkish>Malzemeleri uçuracak olası helikopterler</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_PossibleWeapons">
+            <English>Possible weapons</English>
+            <Czech>Možné zbraně</Czech>
+            <French>Armes possibles</French>
+            <Spanish>Armas posibles</Spanish>
+            <Italian>Armi possibili</Italian>
+            <Polish>Dostępne bronie</Polish>
+            <Portuguese>Armas possíveis</Portuguese>
+            <Russian>Возможное оружие</Russian>
+            <German>Mögliche Waffen</German>
+            <Korean>사용 가능한 무기 목록</Korean>
+            <Japanese>出現武器候補</Japanese>
+            <Chinese>可選武器補給</Chinese>
+            <Chinesesimp>可选武器补给</Chinesesimp>
+            <Turkish>Olası Silahlar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_PossibleWeaponsDesc">
+            <English>Possible weapon supplies</English>
+            <Czech>Možné zásoby zbraní</Czech>
+            <French>Fournitures d'armes possibles</French>
+            <Spanish>Suministros de armas posibles</Spanish>
+            <Italian>Possibili rifornimenti di armi</Italian>
+            <Polish>Lista broni, które mogą pojawić się w zrzucie</Polish>
+            <Portuguese>Possíveis suprimentos de armas</Portuguese>
+            <Russian>Возможные варианты оружия для спавна в припасах</Russian>
+            <German>Mögliche Waffenlieferungen</German>
+            <Korean>보급 상자에 스폰될 수 있는 무기 아이템 목록입니다</Korean>
+            <Japanese>補給箱内に出現する武器の候補リストです</Japanese>
+            <Chinese>空投箱中可能出現的武器物資列表</Chinese>
+            <Chinesesimp>空投箱中可能出现的武器物资列表</Chinesesimp>
+            <Turkish>Olası silah malzemeleri</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_SpawnCheckInterval">
+            <English>Spawn check interval</English>
+            <Czech>Interval kontroly spawnu</Czech>
+            <French>Intervalle de vérification du spawn</French>
+            <Spanish>Intervalo de comprobación de aparición</Spanish>
+            <Italian>Intervallo controllo spawn</Italian>
+            <Polish>Interwał sprawdzania spawnu</Polish>
+            <Portuguese>Intervalo de verificação de surgimento</Portuguese>
+            <Russian>Интервал проверки спавна</Russian>
+            <German>Abwurf-Prüfintervall</German>
+            <Korean>스폰 확인 주기</Korean>
+            <Japanese>投下確認インターバル</Japanese>
+            <Chinese>生成檢查間隔</Chinese>
+            <Chinesesimp>生成检查间隔</Chinesesimp>
+            <Turkish>Doğma Kontrol Sıklığı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_SpawnCheckIntervalDesc">
+            <English>Time between drop checks</English>
+            <Czech>Časový rozestup mezi jednotlivými kontrolami šance na výsadek</Czech>
+            <French>Temps s'écoulant entre deux vérifications de largage</French>
+            <Spanish>Tiempo transcurrido entre cada comprobación de entrega de suministros</Spanish>
+            <Italian>Tempo che intercorre tra i cicli di controllo per i lanci</Italian>
+            <Polish>Czas pomiędzy kolejnymi procedurami sprawdzania szansy na zrzut</Polish>
+            <Portuguese>Tempo entre as verificações de largadas</Portuguese>
+            <Russian>Время между проверками условий для запуска нового аирдропа</Russian>
+            <German>Zeitspanne zwischen den Überprüfungen für neue Versorgungsabwürfe</German>
+            <Korean>보급품 투하 여부를 판단하는 주기의 시간 간격입니다</Korean>
+            <Japanese>投下判定イベントが実行される時間の間隔です</Japanese>
+            <Chinese>系統兩次空投判定循環之間的時間間隔</Chinese>
+            <Chinesesimp>系统两次空投判定循环之间的时间间隔</Chinesesimp>
+            <Turkish>Bırakma kontrolleri arasındaki süre</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_SupplyDropChance">
+            <English>Supply Drop chance</English>
+            <Czech>Šance na shození zásob</Czech>
+            <French>Chance de largage</French>
+            <Spanish>Probabilidad de entrega de suministros</Spanish>
+            <Italian>Probabilità lancio rifornimenti</Italian>
+            <Polish>Szansa na zrzut zaopatrzenia</Polish>
+            <Portuguese>Chance de largada de suprimentos</Portuguese>
+            <Russian>Шанс сброса припасов</Russian>
+            <German>Abwurfwahrscheinlichkeit</German>
+            <Korean>보급품 투하 확률</Korean>
+            <Japanese>物資投下確率</Japanese>
+            <Chinese>物資空投機率</Chinese>
+            <Chinesesimp>物资空投几率</Chinesesimp>
+            <Turkish>Malzeme Bırakma Şansı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_SupplyDropChanceDesc">
+            <English>% chance a supply drop will happen every check</English>
+            <Czech>Procentuální šance, že při každé kontrole dojde k shození zásob</Czech>
+            <French>Pourcentage de chance qu'un largage se produise à chaque vérification</French>
+            <Spanish>% de probabilidad de que ocurra una entrega de suministros en cada comprobación</Spanish>
+            <Italian>Percentuale di possibilità che un lancio si verifichi a ogni ciclo di controllo</Italian>
+            <Polish>Procentowa szansa na wystąpienie zrzutu zaopatrzenia przy każdym sprawdzeniu</Polish>
+            <Portuguese>Percentagem de chance de uma largada acontecer a cada verificação</Portuguese>
+            <Russian>Процентный шанс того, что сброс припасов произойдет при очередной проверке таймера</Russian>
+            <German>Prozentuale Chance, dass bei jeder Überprüfung ein Versorgungsabwurf stattfindet</German>
+            <Korean>매 주기가 체크될 때마다 보급품 공습이 발생할 퍼센트(%) 확률입니다</Korean>
+            <Japanese>チェック周期ごとに物資投下イベントが発生するパーセント（%）確率です</Japanese>
+            <Chinese>系統每次執行循環檢查時，觸發補給物資空投的百分比（%）機率</Chinese>
+            <Chinesesimp>系统每次执行循环检查时，触发补给物资空投的百分比（%）几率</Chinesesimp>
+            <Turkish>Her kontrolde malzeme bırakılma olasılığı yüzde (%) değeri</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_Uniform">
+            <English>Uniform</English>
+            <Czech>Uniformy</Czech>
+            <French>Uniformes</French>
+            <Spanish>Uniformes</Spanish>
+            <Italian>Uniformi</Italian>
+            <Polish>Mundury</Polish>
+            <Portuguese>Uniformes</Portuguese>
+            <Russian>Форма</Russian>
+            <German>Uniformen</German>
+            <Korean>군복 목록</Korean>
+            <Japanese>制服・戦闘服</Japanese>
+            <Chinese>軍服/制服</Chinese>
+            <Chinesesimp>军服/制服</Chinesesimp>
+            <Turkish>Üniforma</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_UniformDesc">
+            <English>Possible uniforms supplies</English>
+            <Czech>Možné zásoby uniform</Czech>
+            <French>Fournitures d'uniformes possibles</French>
+            <Spanish>Posibles suministros de uniformes</Spanish>
+            <Italian>Possibili rifornimenti di uniformi</Italian>
+            <Polish>Mundury, które mogą znaleźć się w zaopatrzeniu</Polish>
+            <Portuguese>Possíveis suprimentos de uniformes</Portuguese>
+            <Russian>Возможные варианты боевой формы для спавна</Russian>
+            <German>Mögliche Uniformlieferungen</German>
+            <Korean>보급 상자에 스폰될 수 있는 군복(의상) 아이템 목록입니다</Korean>
+            <Japanese>補給箱内に出現する戦闘服・衣服の候補リストです</Japanese>
+            <Chinese>空投箱中可能出現的軍服/作戰服物資列表</Chinese>
+            <Chinesesimp>空投箱中可能出现的军服/作战服物资列表</Chinesesimp>
+            <Turkish>Olası üniforma malzemeleri</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_Vest">
+            <English>Vest</English>
+            <Czech>Vesty</Czech>
+            <French>Gilets</French>
+            <Spanish>Chalecos</Spanish>
+            <Italian>Gilet</Italian>
+            <Polish>Kamizelki</Polish>
+            <Portuguese>Coletes</Portuguese>
+            <Russian>Жилеты</Russian>
+            <German>Westen</German>
+            <Korean>전술 조끼 목록</Korean>
+            <Japanese>ベスト・防弾チョッキ</Japanese>
+            <Chinese>戰術背心</Chinese>
+            <Chinesesimp>战术背心</Chinesesimp>
+            <Turkish>Yelek</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_SupplyDrop_VestDesc">
+            <English>Possible vests supplies</English>
+            <Czech>Možné zásoby vest</Czech>
+            <French>Fournitures de gilets tactiques possibles</French>
+            <Spanish>Posibles suministros de chalecos</Spanish>
+            <Italian>Possibili rifornimenti di gilet tattici/antiproiettile</Italian>
+            <Polish>Kamizelki taktyczne, które mogą znaleźć się w zaopatrzeniu</Polish>
+            <Portuguese>Possíveis suprimentos de coletes</Portuguese>
+            <Russian>Возможные варианты бронежилетов/разгрузок для спавна</Russian>
+            <German>Mögliche Westenlieferungen</German>
+            <Korean>보급 상자에 스폰될 수 있는 전술 조끼/방탄복 아이템 목록입니다</Korean>
+            <Japanese>補給箱内に出現するタクティカルベスト・防弾ベストの候補リストです</Japanese>
+            <Chinese>空投箱中可能出現的戰術背心/防彈衣物資列表</Chinese>
+            <Chinesesimp>空投箱中可能出现的战术背心/防弹衣物资列表</Chinesesimp>
+            <Turkish>Olası yelek malzemeleri</Turkish>
+        </Key>
+    </Package>
+</Project>

@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="Misery_Main_Translations">
     <Package name="Misery_MainSTR_Language_Compat">
+        <Key ID="STR_MISERY_Common_All">
+            <English>All</English>
+            <Czech>Vše</Czech>
+            <French>Tout</French>
+            <Spanish>Todo</Spanish>
+            <Italian>Tutto</Italian>
+            <Polish>Wszystko</Polish>
+            <Portuguese>Tudo</Portuguese>
+            <Russian>Все</Russian>
+            <German>Alle</German>
+            <Korean>전체</Korean>
+            <Japanese>すべて</Japanese>
+            <Chinese>全部</Chinese>
+            <Chinesesimp>全部</Chinesesimp>
+            <Turkish>Hepsi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_Basic">
+            <English>Basic</English>
+            <Czech>Základní</Czech>
+            <French>De base</French>
+            <Spanish>Básico</Spanish>
+            <Italian>Base</Italian>
+            <Polish>Podstawowe</Polish>
+            <Portuguese>Básico</Portuguese>
+            <Russian>Базовый</Russian>
+            <German>Basis</German>
+            <Korean>기본</Korean>
+            <Japanese>基本</Japanese>
+            <Chinese>基礎</Chinese>
+            <Chinesesimp>基础</Chinesesimp>
+            <Turkish>Temel</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Common_Blueprints">
             <English>Blueprints:</English>
             <Czech>Plány:</Czech>
@@ -33,22 +65,6 @@
             <Chinesesimp>取消</Chinesesimp>
             <Turkish>İptal</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Common_CheckClothing">
-            <English>Check Clothing</English>
-            <Czech>Kontrola oblečení</Czech>
-            <French>Vérifier les vêtements</French>
-            <Spanish>Comprobar la ropa</Spanish>
-            <Italian>Controlla l'abbigliamento</Italian>
-            <Polish>Sprawdź odzież</Polish>
-            <Portuguese>Verifique as roupas</Portuguese>
-            <Russian>Проверьте одежду</Russian>
-            <German>Check Kleidung</German>
-            <Korean>의류 확인</Korean>
-            <Japanese>チェックウェア</Japanese>
-            <Chinese>檢查衣物</Chinese>
-            <Chinesesimp>检查衣物</Chinesesimp>
-            <Turkish>Kıyafetleri Kontrol Edin</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Common_CheckGearWeight">
             <English>Check Gear weight</English>
             <Czech>Kontrola hmotnosti vybavení</Czech>
@@ -64,38 +80,6 @@
             <Chinese>檢查裝備重量</Chinese>
             <Chinesesimp>检查装备重量</Chinesesimp>
             <Turkish>Dişli ağırlığını kontrol edin</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_ClothingInsulationVal">
-            <English>Clothing Insulation: (%1)</English>
-            <Czech>Izolace oděvu: (%1)</Czech>
-            <French>Isolation des vêtements : (%1)</French>
-            <Spanish>Aislamiento de la ropa: (%1)</Spanish>
-            <Italian>Isolamento dell'abbigliamento: (%1)</Italian>
-            <Polish>Izolacja odzieży: (%1)</Polish>
-            <Portuguese>Isolamento da roupa: (%1)</Portuguese>
-            <Russian>Изоляция одежды: (%1)</Russian>
-            <German>Isolierung der Kleidung: (%1)</German>
-            <Korean>의류 단열: (%1)</Korean>
-            <Japanese>衣服の断熱性: (%1)</Japanese>
-            <Chinese>衣物絕緣: (%1)</Chinese>
-            <Chinesesimp>衣物绝缘: (%1)</Chinesesimp>
-            <Turkish>Giysi Yalıtımı: (%1)</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_ClothingWarmthVal">
-            <English>Clothing Warmth: %1°C&lt;br/&gt;&lt;br/&gt;</English>
-            <Czech>Hřejivost oblečení: %1°C&lt;br/&gt;&lt;br/&gt;</Czech>
-            <French>Chaleur des vêtements : %1°C&lt;br/&gt;&lt;br/&gt;</French>
-            <Spanish>Calor de la ropa: %1°C&lt;br/&gt;&lt;br/&gt;</Spanish>
-            <Italian>Calore dell'abbigliamento: %1°C&lt;br/&gt;&lt;br/&gt;</Italian>
-            <Polish>Ciepło odzieży: %1°C&lt;br/&gt;&lt;br/&gt;</Polish>
-            <Portuguese>Calor da roupa: %1°C&lt;br/&gt;&lt;br/&gt;</Portuguese>
-            <Russian>Теплота одежды: %1°C&lt;br/&gt;&lt;br/&gt;</Russian>
-            <German>Kleidung Wärme: %1°C&lt;br/&gt;&lt;br/&gt;</German>
-            <Korean>의류 보온성: %1°C&lt;br/&gt;&lt;br/&gt;</Korean>
-            <Japanese>衣類の暖かさ: %1°C&lt;br/&gt;&lt;br/&gt;</Japanese>
-            <Chinese>衣物保暖: %1°C&lt;br/&gt;&lt;br/&gt;</Chinese>
-            <Chinesesimp>衣物保暖: %1°C&lt;br/&gt;&lt;br/&gt;</Chinesesimp>
-            <Turkish>Giysi Sıcaklığı: %1°C&lt;br/&gt;&lt;br/&gt;</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_Craft">
             <English>Craft</English>
@@ -257,6 +241,22 @@
             <Chinesesimp>15 秒</Chinesesimp>
             <Turkish>15 Saniye</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Common_Interval1Hour">
+            <English>1 Hour</English>
+            <Czech>1 hodina</Czech>
+            <French>1 heure</French>
+            <Spanish>1 hora</Spanish>
+            <Italian>1 ora</Italian>
+            <Polish>1 godzina</Polish>
+            <Portuguese>1 hora</Portuguese>
+            <Russian>1 час</Russian>
+            <German>1 Stunde</German>
+            <Korean>1시간</Korean>
+            <Japanese>1時間</Japanese>
+            <Chinese>1 小時</Chinese>
+            <Chinesesimp>1 小时</Chinesesimp>
+            <Turkish>1 Saat</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Common_Interval1Min">
             <English>1 Minute</English>
             <Czech>1 minuta</Czech>
@@ -304,6 +304,22 @@
             <Chinese>25 分鐘</Chinese>
             <Chinesesimp>25 分钟</Chinesesimp>
             <Turkish>25 Dakika</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_Interval2Hours">
+            <English>2 Hours</English>
+            <Czech>2 hodiny</Czech>
+            <French>2 heures</French>
+            <Spanish>2 horas</Spanish>
+            <Italian>2 ore</Italian>
+            <Polish>2 godziny</Polish>
+            <Portuguese>2 horas</Portuguese>
+            <Russian>2 часа</Russian>
+            <German>2 Stunden</German>
+            <Korean>2시간</Korean>
+            <Japanese>2時間</Japanese>
+            <Chinese>2 小時</Chinese>
+            <Chinesesimp>2 小时</Chinesesimp>
+            <Turkish>2 Saat</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_Interval30Min">
             <English>30 Minutes</English>
@@ -496,6 +512,22 @@
             <Chinese>未選擇配方...</Chinese>
             <Chinesesimp>未选择配方...</Chinesesimp>
             <Turkish>Tarif seçilmedi...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_None">
+            <English>None</English>
+            <Czech>Žádné</Czech>
+            <French>Aucun</French>
+            <Spanish>Ninguno</Spanish>
+            <Italian>Nessuno</Italian>
+            <Polish>Brak</Polish>
+            <Portuguese>Nenhum</Portuguese>
+            <Russian>Нет</Russian>
+            <German>Keine</German>
+            <Korean>없음</Korean>
+            <Japanese>なし</Japanese>
+            <Chinese>無</Chinese>
+            <Chinesesimp>无</Chinesesimp>
+            <Turkish>Hiçbiri</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_Purchase">
             <English>Purchase</English>

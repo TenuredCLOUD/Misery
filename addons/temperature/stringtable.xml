@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Temperature">
+        <Key ID="STR_MISERY_Temperature_BreathCondensation">
+            <English>Breath Condensation</English>
+            <Czech>Kondenzace dechu</Czech>
+            <French>Condensation de la respiration</French>
+            <Spanish>Condensación del aliento</Spanish>
+            <Italian>Condensazione del respiro</Italian>
+            <Polish>Kondensacja oddechu</Polish>
+            <Portuguese>Condensação da respiração</Portuguese>
+            <Russian>Конденсация дыхания</Russian>
+            <German>Atemkondensation</German>
+            <Korean>입김 시각화</Korean>
+            <Japanese>吐息の白化現象</Japanese>
+            <Chinese>呼吸 white 氣/口 steam 凝結</Chinese>
+            <Chinesesimp>呼吸白气/口蒸汽凝结</Chinesesimp>
+            <Turkish>Nefes Yoğunlaşması</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Temperature_BreathCondensationDesc">
+            <English>Enable Breath Condensation? (Enables breath visibility in cold weather)</English>
+            <Czech>Povolit kondenzaci dechu? (Zpřístupní viditelný dech v chladném počasí)</Czech>
+            <French>Activer la condensation de la respiration ? (Rend la respiration visible par temps froid)</French>
+            <Spanish>¿Activar la condensación del aliento? (Permite ver el aliento en climas fríos)</Spanish>
+            <Italian>Abilitare la condensazione del respiro? (Rende visibile il respiro in condizioni di clima freddo)</Italian>
+            <Polish>Włączyć kondensację oddechu? (Sprawia, że oddech jest widoczny w niskich temperaturach)</Polish>
+            <Portuguese>Ativar a condensação da respiração? (Torna a respiração visível em tempo frio)</Portuguese>
+            <Russian>Включить конденсацию дыхания? (Включает отображение пара изо рта в холодную погоду)</Russian>
+            <German>Atemkondensation aktivieren? (Macht den Atem bei kaltem Wetter sichtbar)</German>
+            <Korean>입김 시각화 효과를 활성화하시겠습니까? (추운 날씨에서 입김이 보이게 설정합니다)</Korean>
+            <Japanese>吐息の白化現象を有効にしますか？（寒冷な天候時に吐息を視覚化します）</Japanese>
+            <Chinese>是否啟用呼吸口蒸汽機制？（在寒冷天氣下將會產生可見 purchasing 的呼出白气效果）</Chinese>
+            <Chinesesimp>是否启用呼吸口蒸汽机制？（在寒冷天气下将会产生可见的呼出白气效果）</Chinesesimp>
+            <Turkish>Nefes yoğunlaşması etkinleştirilsin mi? (Soğuk havalarda nefesin görünmesini sağlar)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Temperature_CheckClothing">
+            <English>Check Clothing</English>
+            <Czech>Kontrola oblečení</Czech>
+            <French>Vérifier les vêtements</French>
+            <Spanish>Comprobar la ropa</Spanish>
+            <Italian>Controlla l'abbigliamento</Italian>
+            <Polish>Sprawdź odzież</Polish>
+            <Portuguese>Verifique as roupas</Portuguese>
+            <Russian>Проверьте одежду</Russian>
+            <German>Check Kleidung</German>
+            <Korean>의류 확인</Korean>
+            <Japanese>チェックウェア</Japanese>
+            <Chinese>檢查衣物</Chinese>
+            <Chinesesimp>检查衣物</Chinesesimp>
+            <Turkish>Kıyafetleri Kontrol Edin</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Temperature_ClothingCheck">
+            <English>Clothing Check</English>
+            <Czech>Kontrola oblečení</Czech>
+            <French>Vérification des vêtements</French>
+            <Spanish>Comprobación de vestimenta</Spanish>
+            <Italian>Controllo abbigliamento</Italian>
+            <Polish>Sprawdzanie odzieży</Polish>
+            <Portuguese>Verificação de vestuário</Portuguese>
+            <Russian>Проверка одежды</Russian>
+            <German>Kleidungsüberprüfung</German>
+            <Korean>의류 방寒 상태 확인</Korean>
+            <Japanese>衣類の防寒チェック</Japanese>
+            <Chinese>檢查衣物保暖度</Chinese>
+            <Chinesesimp>检查衣物保暖度</Chinesesimp>
+            <Turkish>Giysi Kontrolü</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Temperature_ClothingCheckDesc">
+            <English>Enable manual clothing insulation check action? (more accurate with ERU unit)</English>
+            <Czech>Povolit akci pro ruční kontrolu izolace oblečení? (přesnější s jednotkou ERU)</Czech>
+            <French>Activer l'action de vérification manuelle de l'isolation des vêtements ? (plus précis avec une unité ERU)</French>
+            <Spanish>¿Activar la acción manual de comprobación de aislamiento de la ropa? (más preciso con la unidad ERU)</Spanish>
+            <Italian>Abilitare l'azione manuale di controllo dell'isolamento termico degli abiti? (più accurato se provvisti di unità ERU)</Italian>
+            <Polish>Włączyć akcję ręcznego sprawdzania izolacji odzieży? (dokładniejsze przy użyciu jednostki ERU)</Polish>
+            <Portuguese>Ativar a ação de verificação manual de isolamento de roupa? (mais preciso com a unidade ERU)</Portuguese>
+            <Russian>Включить ручное действие для проверки теплоизоляции одежды? (работает точнее при наличии прибора ERU)</Russian>
+            <German>Manuelle Überprüfung der Kleidungsisolation aktivieren? (genauer mit einer ERU-Einheit)</German>
+            <Korean>수동 의류 단열성 확인 상호작용을 활성화하시겠습니까? (ERU 장치 소지 시 더 정확한 측정이 가능합니다)</Korean>
+            <Japanese>手動での衣類断熱性チェックアクションを有効にしますか？（ERUユニットを使用するとより正確になります）</Japanese>
+            <Chinese>是否啟用手動檢查衣物隔熱/保暖度的交互動作？（裝備 ERU 儀器時檢測結果將更加精確）</Chinese>
+            <Chinesesimp>是否启用手动检查衣物隔热/保暖度的交互动作？（装备 ERU 仪器时检测结果将更加精确）</Chinesesimp>
+            <Turkish>Manuel giysi yalıtımı kontrol etme eylemi etkinleştirilsin mi? (ERU ünitesi ile daha doğrudur)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Temperature_ClothingInsulationVal">
+            <English>Clothing Insulation: (%1)</English>
+            <Czech>Izolace oděvu: (%1)</Czech>
+            <French>Isolation des vêtements : (%1)</French>
+            <Spanish>Aislamiento de la ropa: (%1)</Spanish>
+            <Italian>Isolamento dell'abbigliamento: (%1)</Italian>
+            <Polish>Izolacja odzieży: (%1)</Polish>
+            <Portuguese>Isolamento da roupa: (%1)</Portuguese>
+            <Russian>Изоляция одежды: (%1)</Russian>
+            <German>Isolierung der Kleidung: (%1)</German>
+            <Korean>의류 단열: (%1)</Korean>
+            <Japanese>衣服の断熱性: (%1)</Japanese>
+            <Chinese>衣物絕緣: (%1)</Chinese>
+            <Chinesesimp>衣物绝缘: (%1)</Chinesesimp>
+            <Turkish>Giysi Yalıtımı: (%1)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Temperature_ClothingStatus">
+            <English>Uniform: %1  Vest: %2  Headwear: %3  Facewear: %4</English>
+            <Czech>Uniforma: %1  Vesta: %2  Pokrývka hlavy: %3  Doplněk obličeje: %4</Czech>
+            <French>Uniforme : %1  Gilet : %2  Casque/Chapeau : %3  Masque/Lunettes : %4</French>
+            <Spanish>Uniforme: %1  Chaleco: %2  Prenda de cabeza: %3  Accesorio facial: %4</Spanish>
+            <Italian>Uniforme: %1  Gilet: %2  Copricapo: %3  Elemento facciale: %4</Italian>
+            <Polish>Mundur: %1  Kamizelka: %2  Nakrycie głowy: %3  Ochrona twarzy: %4</Polish>
+            <Portuguese>Uniforme: %1  Colete: %2  Capacete/Chapéu: %3  Acessório facial: %4</Portuguese>
+            <Russian>Форма: %1  Жилет: %2  Головной убор: %3  Защита лица: %4</Russian>
+            <German>Uniform: %1  Weste: %2  Kopfbedeckung: %3  Gesichtsbekleidung: %4</German>
+            <Korean>군복: %1  조끼: %2  헬멧/모자: %3  안면 보호구: %4</Korean>
+            <Japanese>戦闘服: %1  ベスト: %2  ヘッドギア: %3  フェイスウェア: %4</Japanese>
+            <Chinese>軍服: %1  戰術背心: %2  頭盔/頭飾: %3  面罩/眼罩: %4</Chinese>
+            <Chinesesimp>军服: %1  战术背心: %2  头盔/头饰: %3  面罩/眼罩: %4</Chinesesimp>
+            <Turkish>Üniforma: %1  Yelek: %2  Kask/Şapka: %3  Yüz Maskesi: %4</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Temperature_ClothingWarmthVal">
+            <English>Clothing Warmth: %1°C&lt;br/&gt;&lt;br/&gt;</English>
+            <Czech>Hřejivost oblečení: %1°C&lt;br/&gt;&lt;br/&gt;</Czech>
+            <French>Chaleur des vêtements : %1°C&lt;br/&gt;&lt;br/&gt;</French>
+            <Spanish>Calor de la ropa: %1°C&lt;br/&gt;&lt;br/&gt;</Spanish>
+            <Italian>Calore dell'abbigliamento: %1°C&lt;br/&gt;&lt;br/&gt;</Italian>
+            <Polish>Ciepło odzieży: %1°C&lt;br/&gt;&lt;br/&gt;</Polish>
+            <Portuguese>Calor da roupa: %1°C&lt;br/&gt;&lt;br/&gt;</Portuguese>
+            <Russian>Теплота одежды: %1°C&lt;br/&gt;&lt;br/&gt;</Russian>
+            <German>Kleidung Wärme: %1°C&lt;br/&gt;&lt;br/&gt;</German>
+            <Korean>의류 보온성: %1°C&lt;br/&gt;&lt;br/&gt;</Korean>
+            <Japanese>衣類の暖かさ: %1°C&lt;br/&gt;&lt;br/&gt;</Japanese>
+            <Chinese>衣物保暖: %1°C&lt;br/&gt;&lt;br/&gt;</Chinese>
+            <Chinesesimp>衣物保暖: %1°C&lt;br/&gt;&lt;br/&gt;</Chinesesimp>
+            <Turkish>Giysi Sıcaklığı: %1°C&lt;br/&gt;&lt;br/&gt;</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Temperature_Framework">
+            <English>Temperature Framework</English>
+            <Czech>Teplotní systém</Czech>
+            <French>Système de température</French>
+            <Spanish>Sistema de temperatura</Spanish>
+            <Italian>Sistema della temperatura</Italian>
+            <Polish>System temperatury</Polish>
+            <Portuguese>Sistema de temperatura</Portuguese>
+            <Russian>Система температуры</Russian>
+            <German>Temperatur-System</German>
+            <Korean>체온 메커니즘 설정</Korean>
+            <Japanese>体温システム設定</Japanese>
+            <Chinese>體溫模擬架構</Chinese>
+            <Chinesesimp>体温模拟架构</Chinesesimp>
+            <Turkish>Sıcaklık Sistemi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Temperature_FrameworkDesc">
+            <English>Enable Temperature framework? (Enables player temperature calculations)</English>
+            <Czech>Povolit teplotní systém? (Zapne výpočty tělesné teploty hráčů)</Czech>
+            <French>Activer le système de température ? (Active les calculs de température corporelle du joueur)</French>
+            <Spanish>¿Activar el sistema de temperatura? (Permite los cálculos de temperatura del jugador)</Spanish>
+            <Italian>Abilitare il sistema della temperatura? (Attiva il calcolo della temperatura corporea dei giocatori)</Italian>
+            <Polish>Włączyć system temperatury? (Aktywuje obliczenia temperatury ciała gracza)</Polish>
+            <Portuguese>Ativar o sistema de temperatura? (Ativa os cálculos de temperatura do jogador)</Portuguese>
+            <Russian>Включить систему температуры? (Активирует динамические расчеты температуры тела персонажей)</Russian>
+            <German>Temperatur-System aktivieren? (Aktiviert die Berechnungen der Spielertemperatur)</German>
+            <Korean>체온 프레임워크를 활성화하시겠습니까? (플레이어의 체온 및 환경 온도 계산을 적용합니다)</Korean>
+            <Japanese>体温システムを有効にしますか？（プレイヤーの体温計算処理を有効化します）</Japanese>
+            <Chinese>是否啟用體溫模擬架構？（啟用後將動態計算玩家體溫與環境熱量傳導）</Chinese>
+            <Chinesesimp>是否启用体温模拟架构？（启用后将动态计算玩家体温与环境热量传导）</Chinesesimp>
+            <Turkish>Sıcaklık sistemi etkinleştirilsin mi? (Oyuncu sıcaklık hesaplamalarını açar)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Temperature_Penalty">
+            <English>Temperature penalty</English>
+            <Czech>Postihy za teplotu</Czech>
+            <French>Pénalité de température</French>
+            <Spanish>Penalización por temperatura</Spanish>
+            <Italian>Penalità termica</Italian>
+            <Polish>Kary temperaturowe</Polish>
+            <Portuguese>Penalização por temperatura</Portuguese>
+            <Russian>Эффекты влияния температуры</Russian>
+            <German>Temperaturmalus</German>
+            <Korean>체온 이상 페널티</Korean>
+            <Japanese>体温異常ペナルティ</Japanese>
+            <Chinese>異常體溫負面狀態</Chinese>
+            <Chinesesimp>异常体温负面状态</Chinesesimp>
+            <Turkish>Sıcaklık Cezası</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Temperature_PenaltyDesc">
+            <English>Enable a penalty for players Temperature? (Cold - hunger increase / Hot or fever - thirst increase - Dynamically calculated)</English>
+            <Czech>Povolit postih za nevhodnou teplotu hráče? (Chlad - nárůst hladu / Horko nebo horečka - nárůst žízně - dynamicky počítáno)</Czech>
+            <French>Activer des pénalités liées à la température du joueur ? (Froid = augmentation de la faim / Chaud ou fièvre = augmentation de la soif - calculé dynamiquement)</French>
+            <Spanish>¿Activar penalizaciones por la temperatura del jugador? (Frío: aumenta el hambre / Calor o fiebre: aumenta la sed; se calcula dinámicamente)</Spanish>
+            <Italian>Abilitare malus legati alla temperatura dei giocatori? (Freddo: aumento della fame / Caldo o febbre: aumento della sete - calcolato in modo dinamico)</Italian>
+            <Polish>Włączyć kary za skrajną temperaturę gracza? (Zimno - szybszy wzrost głodu / Gorąco lub gorączka - szybszy wzrost pragnienia - obliczane dynamicznie)</Polish>
+            <Portuguese>Ativar penalizações para a temperatura do jogador? (Frio - aumento da fome / Calor ou febre - aumento da sede - calculado dinamicamente)</Portuguese>
+            <Russian>Включить дебаффы от аномальной температуры тела? (Холод — ускорение голода / Жара или лихорадка — ускорение жажды. Расчет производится динамически)</Russian>
+            <German>Malus für extreme Spielertemperaturen aktivieren? (Kälte erhöht den Hunger / Hitze oder Fieber erhöht den Durst - dynamisch berechnet)</German>
+            <Korean>체온 상태에 따른 생체 패널티를 적용하시겠습니까? (저체온증 - 허기 증가 속도 가속 / 고체온증 및 발열 - 갈증 증가 속도 가속 - 실시간 동적 계산)</Korean>
+            <Japanese>体温異常によるペナルティを有効にしますか？（寒冷：空腹度の増加加速 / 酷暑・発熱：渇き度の増加加速 - 動的に計算されます）</Japanese>
+            <Chinese>是否開啟異常體溫帶來的代謝負面懲罰？（寒冷：飢餓值加速消耗 / 炎熱或發燒：口渴值加速消耗 - 均為實體動態計算）</Chinese>
+            <Chinesesimp>是否开启异常体温带来的代谢负面惩罚？（寒冷：饥饿值加速消耗 / 炎热或发烧: 口渴值加速消耗 - 均为实体动态计算）</Chinesesimp>
+            <Turkish>Oyuncu sıcaklığı için bir ceza etkinleştirilsin mi? (Soğuk - açlık artışı / Sıcak veya ateş - susuzluk artışı - Dinamik olarak hesaplanır)</Turkish>
+        </Key>
+    </Package>
+</Project>

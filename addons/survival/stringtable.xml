@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Survival">
+        <Key ID="STR_MISERY_Survival_MetabolicCoefficient">
+            <English>Metabolic coefficient</English>
+            <Czech>Metabolický koeficient</Czech>
+            <French>Coefficient métabolique</French>
+            <Spanish>Coeficiente metabólico</Spanish>
+            <Italian>Coefficiente metabolico</Italian>
+            <Polish>Współczynnik metaboliczny</Polish>
+            <Portuguese>Coeficiente metabólico</Portuguese>
+            <Russian>Метаболический коэффициент</Russian>
+            <German>Stoffwechsel-Koeffizient</German>
+            <Korean>신진대사 계수 설정</Korean>
+            <Japanese>代謝係数設定</Japanese>
+            <Chinese>新陳代謝係數</Chinese>
+            <Chinesesimp>新陈代谢系数</Chinesesimp>
+            <Turkish>Metabolizma Katsayısı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Survival_MetabolicCoefficientDesc">
+            <English>Rate at which metabolic changes occur, sets rate of player's body resources and environmental resistance changes</English>
+            <Czech>Rychlost, s jakou dochází k metabolickým změnám; určuje tempo spotřeby tělesných zásob hráče a změn v odolnosti vůči prostředí</Czech>
+            <French>Vitesse à laquelle les changements métaboliques se produisent ; définit le taux d'évolution des ressources corporelles et de la résistance environnementale du joueur</French>
+            <Spanish>Velocidad a la que ocurren los cambios metabólicos; establece el ritmo de variación de los recursos corporales del jugador y su resistencia al entorno</Spanish>
+            <Italian>Velocità con cui si verificano i cambiamenti metabolici; determina il tasso di consumo delle risorse corporee e le variazioni di resistenza ambientale del giocatore</Italian>
+            <Polish>Tempo, w jakim zachodzą zmiany metaboliczne; określa szybkość zużycia zasobów organizmu gracza oraz zmian odporności na środowisko</Polish>
+            <Portuguese>Velocidade a que ocorrem as alterações metabólicas; define a taxa de variação dos recursos corporais do jogador e da sua resistência ambiental</Portuguese>
+            <Russian>Скорость протекания метаболических процессов; определяет темп расхода внутренних ресурсов персонажа и изменения его сопротивляемости окружающей среде</Russian>
+            <German>Geschwindigkeit, mit der Stoffwechseländerungen auftreten; bestimmt die Rate, mit der sich die Körperressourcen und die Umweltresistenz des Spielers verändern</German>
+            <Korean>신진대사 변화가 일어나는 속도 계수입니다. 플레이어의 생체 자원(갈증/허기) 소모 속도 및 환경 저항력 변화 수치를 제어합니다</Korean>
+            <Japanese>代謝変化が発生する速度です。プレイヤーの身体資源（空腹・渇き）の減少速度や環境耐性の変化率を決定します</Japanese>
+            <Chinese>新陳代謝變化的速率係數。用以控制玩家身體資源（飢餓、口渴值）的消耗速度及對環境抗性的變化率</Chinese>
+            <Chinesesimp>新陈代谢变化的速率系数。用以控制玩家身体资源（饥饿、口渴值）的消耗速度及对环境抗性的变化率</Chinesesimp>
+            <Turkish>Metabolik değişikliklerin gerçekleşme hızı; oyuncunun vücut kaynaklarının tüketim ve çevre direnci değişim oranını belirler</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Survival_RawMeatChance">
+            <English>Raw meat disease chance</English>
+            <Czech>Šance na nemoc ze syrového masa</Czech>
+            <French>Risque de maladie (viande crue)</French>
+            <Spanish>Probabilidad de enfermedad por carne cruda</Spanish>
+            <Italian>Probabilità malattia da carne cruda</Italian>
+            <Polish>Szansa na chorobę od surowego mięsa</Polish>
+            <Portuguese>Chance de doença por carne crua</Portuguese>
+            <Russian>Шанс заболеть от сырого мяса</Russian>
+            <German>Krankheitschance durch rohes Fleisch</German>
+            <Korean>날고기 질병 발생 확률</Korean>
+            <Japanese>生肉の病気発生確率</Japanese>
+            <Chinese>生肉生食疾病機率</Chinese>
+            <Chinesesimp>生肉生食疾病几率</Chinesesimp>
+            <Turkish>Çiğ et hastalık şansı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Survival_RawMeatChanceDesc">
+            <English>% chance Raw meat consumption causes disease (0 to disable)</English>
+            <Czech>Procentuální šance, že konzumace syrového masa způsobí nemoc (0 pro vypnutí)</Czech>
+            <French>Pourcentage de chance que la consommation de viande crue cause une maladie (0 pour désactiver)</French>
+            <Spanish>% de probabilidad de que el consumo de carne cruda cause enfermedades (0 para desactivar)</Spanish>
+            <Italian>% di possibilità che il consumo di carne cruda causi una malattia (0 per disabilitare)</Italian>
+            <Polish>Procentowa szansa, że spożycie surowego mięsa wywoła chorobę (0, aby wyłączyć)</Polish>
+            <Portuguese>% de chance de o consumo de carne crua causar doença (0 para desativar)</Portuguese>
+            <Russian>Процентный шанс того, что употребление сырого мяса вызовет болезнь (0 для отключения)</Russian>
+            <German>Prozentuale Chance, dass der Konsum von rohem Fleisch Krankheiten verursacht (0 zum Deaktivieren)</German>
+            <Korean>날고기를 먹었을 때 질병에 걸릴 퍼센트(%) 확률입니다 (0 입력 시 비활성화)</Korean>
+            <Japanese>生肉を摂取した際に病気にかかるパーセント（%）確率です（0で無効化）</Japanese>
+            <Chinese>食用未烹妊生肉時導致染病的百分比（%）機率（填寫 0 則停用該機制）</Chinese>
+            <Chinesesimp>食用未烹饪生肉时导致染病的百分比（%）几率（填写 0 则停用该机制）</Chinesesimp>
+            <Turkish>Çiğ et tüketiminin hastalığa neden olma yüzde (%) şansı (devre dışı bırakmak için 0 yazın)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Survival_TurbidWaterChance">
+            <English>Turbid water disease chance</English>
+            <Czech>Šance na nemoc z kalné vody</Czech>
+            <French>Risque de maladie (eau trouble)</French>
+            <Spanish>Probabilidad de enfermedad por agua turbia</Spanish>
+            <Italian>Probabilità malattia da acqua torbida</Italian>
+            <Polish>Szansa na chorobę od mętnej wody</Polish>
+            <Portuguese>Chance de doença por água turva</Portuguese>
+            <Russian>Шанс заболеть от мутной воды</Russian>
+            <German>Krankheitschance durch trübes Wasser</German>
+            <Korean>탁한 물 질병 발생 확률</Korean>
+            <Japanese>濁った水の病気発生確率</Japanese>
+            <Chinese>渾濁水源疾病機率</Chinese>
+            <Chinesesimp>浑浊水源疾病几率</Chinesesimp>
+            <Turkish>Bulanık su hastalık şansı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Survival_TurbidWaterChanceDesc">
+            <English>% chance Turbid water consumption causes disease (0 to disable)</English>
+            <Czech>Procentuální šance, že konzumace kalné vody způsobí nemoc (0 pro vypnutí)</Czech>
+            <French>Pourcentage de chance que la consommation d'eau trouble cause une maladie (0 pour désactiver)</French>
+            <Spanish>% de probabilidad de que el consumo de agua turbia cause enfermedades (0 para desactivar)</Spanish>
+            <Italian>% di possibilità che il consumo di acqua torbida causi una malattia (0 per disabilitare)</Italian>
+            <Polish>Procentowa szansa, że spożycie mętnej wody wywoła chorobę (0, aby wyłączyć)</Polish>
+            <Portuguese>% de chance de o consumo de água turva causar doença (0 para desativar)</Portuguese>
+            <Russian>Процентный шанс того, что употребление мутной воды вызовет болезнь (0 для отключения)</Russian>
+            <German>Prozentuale Chance, dass der Konsum von trübem Wasser Krankheiten verursacht (0 zum Deaktivieren)</German>
+            <Korean>탁한 물을 마셨을 때 질병에 걸릴 퍼센트(%) 확률입니다 (0 입력 시 비활성화)</Korean>
+            <Japanese>濁った水を摂取した際に病気にかかるパーセント（%）確率です（0で無効化）</Japanese>
+            <Chinese>飲用渾濁水源時導致染病的百分比（%）機率（填寫 0 則停用該機制）</Chinese>
+            <Chinesesimp>饮用浑浊水源时导致染病的百分比（%）几率（填写 0 则停用该机制）</Chinesesimp>
+            <Turkish>Bulanık su tüketiminin hastalığa neden olma yüzde (%) şansı (devre dışı bırakmak için 0 yazın)</Turkish>
+        </Key>
+    </Package>
+</Project>
