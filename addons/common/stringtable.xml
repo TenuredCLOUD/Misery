@@ -257,6 +257,22 @@
             <Chinesesimp>15 分钟</Chinesesimp>
             <Turkish>15 Dakika</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Common_Interval15Sec">
+            <English>15 Seconds</English>
+            <Czech>15 sekund</Czech>
+            <French>15 secondes</French>
+            <Spanish>15 segundos</Spanish>
+            <Italian>15 secondi</Italian>
+            <Polish>15 sekund</Polish>
+            <Portuguese>15 segundos</Portuguese>
+            <Russian>15 секунд</Russian>
+            <German>15 Sekunden</German>
+            <Korean>15초</Korean>
+            <Japanese>15秒</Japanese>
+            <Chinese>15 秒</Chinese>
+            <Chinesesimp>15 秒</Chinesesimp>
+            <Turkish>15 Saniye</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Common_Interval1Min">
             <English>1 Minute</English>
             <Czech>1 minuta</Czech>
@@ -321,6 +337,22 @@
             <Chinesesimp>30 分钟</Chinesesimp>
             <Turkish>30 Dakika</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Common_Interval30Sec">
+            <English>30 Seconds</English>
+            <Czech>30 sekund</Czech>
+            <French>30 secondes</French>
+            <Spanish>30 segundos</Spanish>
+            <Italian>30 secondi</Italian>
+            <Polish>30 sekund</Polish>
+            <Portuguese>30 segundos</Portuguese>
+            <Russian>30 секунд</Russian>
+            <German>30 Sekunden</German>
+            <Korean>30초</Korean>
+            <Japanese>30秒</Japanese>
+            <Chinese>30 秒</Chinese>
+            <Chinesesimp>30 秒</Chinesesimp>
+            <Turkish>30 Saniye</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Common_Interval40Min">
             <English>40 Minutes</English>
             <Czech>40 minut</Czech>
@@ -368,6 +400,22 @@
             <Chinese>60 分鐘</Chinese>
             <Chinesesimp>60 分钟</Chinesesimp>
             <Turkish>60 Dakika</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_Interval60Sec">
+            <English>60 Seconds</English>
+            <Czech>60 sekund</Czech>
+            <French>60 secondes</French>
+            <Spanish>60 segundos</Spanish>
+            <Italian>60 secondi</Italian>
+            <Polish>60 sekund</Polish>
+            <Portuguese>60 segundos</Portuguese>
+            <Russian>60 секунд</Russian>
+            <German>60 Sekunden</German>
+            <Korean>60초</Korean>
+            <Japanese>60秒</Japanese>
+            <Chinese>60 秒</Chinese>
+            <Chinesesimp>60 秒</Chinesesimp>
+            <Turkish>60 Saniye</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_MissingItems">
             <English>You don’t have the required items...</English>
@@ -496,22 +544,6 @@
             <Chinese>配方:</Chinese>
             <Chinesesimp>配方:</Chinesesimp>
             <Turkish>Tarifler:</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_ReqRefuel">
-            <English>Request refuel</English>
-            <Czech>Žádost o doplnění paliva</Czech>
-            <French>Demande de ravitaillement</French>
-            <Spanish>Solicitar repostaje</Spanish>
-            <Italian>Richiesta di rifornimento</Italian>
-            <Polish>Żądanie tankowania</Polish>
-            <Portuguese>Solicitar reabastecimento</Portuguese>
-            <Russian>Запрос на дозаправку</Russian>
-            <German>Tanken anfordern</German>
-            <Korean>급유 요청하기</Korean>
-            <Japanese>給油を依頼する</Japanese>
-            <Chinese>請求加油</Chinese>
-            <Chinesesimp>请求加油</Chinesesimp>
-            <Turkish>Yakıt ikmali talep edin</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_ReqRepairs">
             <English>Request repairs</English>

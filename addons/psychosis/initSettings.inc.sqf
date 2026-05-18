@@ -3,7 +3,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(enabled),
     "CHECKBOX",
-    ["Enabled", "Enable psychosis effects?"],
+    ["Enabled", LSTRING(EnablePsychosisDesc)],
     _category,
     false,
     1
@@ -12,7 +12,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(textEnabled),
     "CHECKBOX",
-    ["Text notifiers", "Enable psychosis text notifications?"],
+    [LSTRING(TextNotifiers), LSTRING(TextNotifiersDesc)],
     _category,
     false,
     1
@@ -21,16 +21,16 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(cycleTimer),
     "LIST",
-    ["Psychosis Cycle Timer", "How often is the psychosis value updated?"],
+    [LSTRING(PsychosisTimer), LSTRING(PsychosisTimerDesc)],
     _category,
-    [[15, 30, 60], ["15 Seconds", "30 Seconds", "60 Seconds"], 0],
+    [[15, 30, 60], [ECSTRING(common,Interval15Sec), ECSTRING(common,Interval30Sec), ECSTRING(common,Interval60Sec)], 0],
     1
 ] call CBA_fnc_addSetting;
 
 [
     QGVAR(night),
     "CHECKBOX",
-    ["Psychosis At Night", "Darkness can increase psychosis, while being near a fire or being inside will counteract it."],
+    [LSTRING(PsychosisAtNight), LSTRING(PsychosisAtNightDesc)],
     _category,
     false,
     1
@@ -39,7 +39,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(decrease),
     "SLIDER",
-    ["Psychosis Decrease", "How much psychosis naturally decreases."],
+    [LSTRING(PsychosisDecrease), LSTRING(PsychosisDecreaseDesc)],
     _category,
     [0.0001, 1, 0.005, 4],
     1
@@ -48,7 +48,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(nightIncrease),
     "SLIDER",
-    ["Psychosis at Night Increase", "Added psychosis value from Night time"],
+    [LSTRING(PsychosisNightInc), LSTRING(PsychosisNightIncDesc)],
     _category,
     [0.0001, 1, 0.0005, 4],
     1
@@ -57,7 +57,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(unnaturalIncrease),
     "SLIDER",
-    ["Unnatural Entities Increase", "Additional psychosis value from strange entities (Anomalies, Spooks, Zombies etc.)"],
+    [LSTRING(UnnaturalEntities), LSTRING(UnnaturalEntitiesDesc)],
     _category,
     [0.0001, 1, 0.0025, 4],
     1

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Radiation">
+        <Key ID="STR_MISERY_Radiation_RadioactiveAreas">
+            <English>Radioactive Areas</English>
+            <Czech>Radioaktivní oblasti</Czech>
+            <French>Zones radioactives</French>
+            <Spanish>Zonas radiactivas</Spanish>
+            <Italian>Aree radioattive</Italian>
+            <Polish>Strefy radioaktywne</Polish>
+            <Portuguese>Áreas radioativas</Portuguese>
+            <Russian>Радиоактивные зоны</Russian>
+            <German>Radioaktive Gebiete</German>
+            <Korean>방사능 구역 설정</Korean>
+            <Japanese>放射能汚染エリア設定</Japanese>
+            <Chinese>輻射區域</Chinese>
+            <Chinesesimp>辐射区域</Chinesesimp>
+            <Turkish>Radyoaktif Alanlar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Radiation_RadioactiveAreasDesc">
+            <English>ELLIPSE or RECTANGLE marker names covering the radioactive area as strings ['Radzone_1', 'Radzone_2']</English>
+            <Czech>Názvy markerů typu ELLIPSE nebo RECTANGLE pokrývajících radioaktivní oblast jako řetězce ['Radzone_1', 'Radzone_2']</Czech>
+            <French>Noms des marqueurs ELLIPSE ou RECTANGLE couvrant la zone radioactive sous forme de chaînes ['Radzone_1', 'Radzone_2']</French>
+            <Spanish>Nombres de los marcadores ELLIPSE o RECTANGLE que cubren el área radiactiva como cadenas ['Radzone_1', 'Radzone_2']</Spanish>
+            <Italian>Nomi dei marcadores ELLIPSE o RECTANGLE che coprono l'area radioattiva espressi come stringhe ['Radzone_1', 'Radzone_2']</Italian>
+            <Polish>Nazwy markerów ELLIPSE lub RECTANGLE pokrywających strefę radioaktywną jako ciągi tekstowe ['Radzone_1', 'Radzone_2']</Polish>
+            <Portuguese>Nomes dos marcadores ELLIPSE ou RECTANGLE cobrindo a área radioativa como strings ['Radzone_1', 'Radzone_2']</Portuguese>
+            <Russian>Имена маркеров типа ELLIPSE или RECTANGLE, покрывающих радиоактивную зону, в виде строк ['Radzone_1', 'Radzone_2']</Russian>
+            <German>ELLIPSE oder RECTANGLE Markernamen, die das radioaktive Gebiet abdecken, als Strings ['Radzone_1', 'Radzone_2']</German>
+            <Korean>방사능 구역을 지정하는 타원(ELLIPSE) 또는 사각형(RECTANGLE) 마커의 이름을 문자열 형태로 입력합니다 ['Radzone_1', 'Radzone_2']</Korean>
+            <Japanese>放射能汚染エリアをカバーする楕円（ELLIPSE）または長方形（RECTANGLE）マーカーの名前を文字列で指定します ['Radzone_1', 'Radzone_2']</Japanese>
+            <Chinese>以字串陣列形式輸入覆蓋輻射區域的橢圓（ELLIPSE）或矩形（RECTANGLE）標記名稱 ['Radzone_1', 'Radzone_2']</Chinese>
+            <Chinesesimp>以字符串数组形式输入覆盖辐射区域的椭圆（ELLIPSE）或矩形（RECTANGLE）标记名称 ['Radzone_1', 'Radzone_2']</Chinesesimp>
+            <Turkish>Radyoaktif alanı kapsayan ELLIPSE veya RECTANGLE işaretçi adlarını dize olarak yazın ['Radzone_1', 'Radzone_2']</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Radiation_RadioactiveRain">
+            <English>Enable Radioactive rain</English>
+            <Czech>Povolit radioaktivní déšť</Czech>
+            <French>Activer la pluie radioactive</French>
+            <Spanish>Activar lluvia radiactiva</Spanish>
+            <Italian>Abilita pioggia radioattiva</Italian>
+            <Polish>Włącz radioaktywny deszcz</Polish>
+            <Portuguese>Ativar chuva radioativa</Portuguese>
+            <Russian>Включить радиоактивный дождь</Russian>
+            <German>Radioaktiven Regen aktivieren</German>
+            <Korean>방사능 비 활성화</Korean>
+            <Japanese>放射能の雨を有効化</Japanese>
+            <Chinese>啟用輻射降雨</Chinese>
+            <Chinesesimp>启用辐射降雨</Chinesesimp>
+            <Turkish>Radyoaktif Yağmuru Etkinleştir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Radiation_RadioactiveRainDesc">
+            <English>Enables radioactive rain</English>
+            <Czech>Povolí radioaktivní déšť, který poškozuje postavy bez ochrany</Czech>
+            <French>Active la pluie radioactive qui affecte les personnages non protégés</French>
+            <Spanish>Activa la lluvia radiactiva que afecta a los personajes desprotegidos</Spanish>
+            <Italian>Attiva la pioggia radioattiva nel mondo di gioco</Italian>
+            <Polish>Włącza radioaktywny deszcz negatywnie wpływający na niechronionych graczy</Polish>
+            <Portuguese>Ativa a chuva radioativa que afeta personagens desprotegidos</Portuguese>
+            <Russian>Включает радиоактивные осадки, наносящие урон персонажам без защиты</Russian>
+            <German>Aktiviert radioaktiven Regen, der ungeschützte Charaktere schädigt</German>
+            <Korean>방사능이 포함된 비가 내리는 환경 요소를 활성화합니다</Korean>
+            <Japanese>保護装備のないキャラクターに影響を与える放射能の雨を有効にします</Japanese>
+            <Chinese>使能地圖上會隨機降下帶有輻射強度的酸雨/輻射雨</Chinese>
+            <Chinesesimp>使能地图上会随机降下带有辐射强度的酸雨/辐射雨</Chinesesimp>
+            <Turkish>Radyoaktif yağmuru etkinleştirir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Radiation_StoreLeadContainer">
+            <English>You put the artifact in your lead lined container</English>
+            <Czech>Vložil jsi artefakt do olovem vyloženého kontejneru</Czech>
+            <French>Vous placez l'artéfact dans votre conteneur doublé de plomb</French>
+            <Spanish>Has metido el artefacto en tu contenedor forrado de plomo</Spanish>
+            <Italian>Hai messo l'artefatto nel tuo contenitore rivestito di piombo</Italian>
+            <Polish>Schowałeś artefakt do ołowianego pojemnika</Polish>
+            <Portuguese>Colocou o artefacto no seu contentor revestido a chumbo</Portuguese>
+            <Russian>Вы положили артефакт в контейнер со свинцовой подкладкой</Russian>
+            <German>Du legst das Artefakt in deinen bleigefütterten Behälter</German>
+            <Korean>아티팩트를 납 차폐 보관함에 넣었습니다</Korean>
+            <Japanese>アーティファクトを鉛の保管容器に収納しました</Japanese>
+            <Chinese>您已將神器放回鉛襯防輻射容器中</Chinese>
+            <Chinesesimp>您已将神器放回铅衬防辐射容器中</Chinesesimp>
+            <Turkish>Artefaktı kurşun kaplı kutuna koydun</Turkish>
+        </Key>
+    </Package>
+</Project>

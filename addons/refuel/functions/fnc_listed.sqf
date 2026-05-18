@@ -41,7 +41,7 @@
 
     if !(_found) exitWith {};
 
-    private _index = _list lbAdd format ["Refuel (%1/L) %2L", _fuelCost, _totalLiters];
+    private _index = _list lbAdd format [localize LSTRING(Action), _fuelCost, _totalLiters];
 
 }, []] call CBA_fnc_waitUntilAndExecute;
 

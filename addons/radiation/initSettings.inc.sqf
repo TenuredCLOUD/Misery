@@ -3,7 +3,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(areas),
     "EDITBOX",
-    ["Radioactive Areas", "ELLIPSE or RECTANGLE marker names covering the radioactive area as strings ['Radzone_1', 'Radzone_2']"],
+    [LSTRING(RadioactiveAreas), LSTRING(RadioactiveAreasDesc)],
     _category,
     "[]",
     1
@@ -12,7 +12,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(radioactiveRain),
     "CHECKBOX",
-    ["Enable Radioactive rain", "Enables radioactive rain"],
+    [LSTRING(RadioactiveRain), LSTRING(RadioactiveRainDesc)],
     _category,
     false,
     1

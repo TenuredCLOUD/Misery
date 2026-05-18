@@ -21,8 +21,8 @@ GVAR(terrifiedState) = false;
 }] call CBA_fnc_addEventHandler;
 
 GVAR(randomTextLines) = [
-    ["You feel a lingering presence..", "You feel like you're being watched..", "You feel uneasy.."],
-    ["The shadows are moving..", "They're watching me..", "They follow in the darkness.."]
+    [localize LSTRING(LingeringPresence), localize LSTRING(BeingWatched), localize LSTRING(Uneasy)],
+    [localize LSTRING(ShadowsMoving), localize LSTRING(WatchingMe), localize LSTRING(FollowDarkness)]
 ];
 
 GVAR(modifiers) = 0;
