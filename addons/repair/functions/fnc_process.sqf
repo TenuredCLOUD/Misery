@@ -43,7 +43,7 @@ private _repairsInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key"];
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QCLASS(processRepairs), false];
-        [parseText "<t font='PuristaMedium' size='1'>Repairs interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+        [QEGVAR(common,tileText), localize LSTRING(Interrupted)] call CBA_fnc_localEvent;
     };
 }];
 
@@ -56,7 +56,7 @@ if (_funds < _repairPrice) exitWith {
 
 private _hitData = getAllHitPointsDamage _nearestVehicle;
 if (_hitData isEqualTo [] || {(_hitData select 2) findIf {_x > 0} isEqualTo -1}) exitWith {
-    ctrlSetText [1001, format ["%1 is already fully repaired...", _displayName]];
+    ctrlSetText [1001, format [localize LSTRING(AlreadyFullyRepaired), _displayName]];
     [982386, [1600, 1601], true] call EFUNC(common,displayShowControls);
     player setVariable [QCLASS(processRepairs), nil];
     _dialog displayRemoveEventHandler ["KeyDown", _repairsInterrupt];
@@ -95,7 +95,7 @@ private _fundsPerTick = _repairPrice / _totalSteps;
     if (_targetIndex isEqualTo -1) exitWith {
         player setVariable [QCLASS(processRepairs), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _repairsInterrupt];
-        ctrlSetText [1001, format ["%1 has been fully repaired...", _displayName]];
+        ctrlSetText [1001, format [localize LSTRING(Success), _displayName]];
         [982386, [1600, 1601], true] call EFUNC(common,displayShowControls);
         _handle call CBA_fnc_removePerFrameHandler;
     };
@@ -109,7 +109,7 @@ private _fundsPerTick = _repairPrice / _totalSteps;
     [-_fundsPerTick] call EFUNC(currency,modifyMoney);
 
     private _displayedText = format [
-        "Repairing %2...%1Fixing: %3%1Funds: %4 %5",
+        localize LSTRING(Progress),
         endl,
         _displayName,
         _partName,

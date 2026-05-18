@@ -41,7 +41,7 @@
 
     if !(_found) exitWith {};
 
-    private _index = _list lbAdd format ["Repair (%1)", _repairPrice];
+    private _index = _list lbAdd format [localize LSTRING(Action), _repairPrice];
 
 }, []] call CBA_fnc_waitUntilAndExecute;
 

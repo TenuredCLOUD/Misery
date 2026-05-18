@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Sleep">
+        <Key ID="STR_MISERY_Sleep_10Hours">
+            <English>10 hours</English>
+            <Czech>10 hodin</Czech>
+            <French>10 heures</French>
+            <Spanish>10 horas</Spanish>
+            <Italian>10 ore</Italian>
+            <Polish>10 godziny</Polish>
+            <Portuguese>10 horas</Portuguese>
+            <Russian>10 часа</Russian>
+            <German>10 Stunden</German>
+            <Korean>10 시간</Korean>
+            <Japanese>10時間</Japanese>
+            <Chinese>10 小時</Chinese>
+            <Chinesesimp>10 小时</Chinesesimp>
+            <Turkish>10 saat</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Sleep_11Hours">
+            <English>11 hours</English>
+            <Czech>11 hodin</Czech>
+            <French>11 heures</French>
+            <Spanish>11 horas</Spanish>
+            <Italian>11 ore</Italian>
+            <Polish>11 godziny</Polish>
+            <Portuguese>11 horas</Portuguese>
+            <Russian>11 часа</Russian>
+            <German>11 Stunden</German>
+            <Korean>11 시간</Korean>
+            <Japanese>11時間</Japanese>
+            <Chinese>11 小時</Chinese>
+            <Chinesesimp>11 小时</Chinesesimp>
+            <Turkish>11 saat</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Sleep_12Hours">
+            <English>12 hours</English>
+            <Czech>12 hodin</Czech>
+            <French>12 heures</French>
+            <Spanish>12 horas</Spanish>
+            <Italian>12 ore</Italian>
+            <Polish>12 godziny</Polish>
+            <Portuguese>12 horas</Portuguese>
+            <Russian>12 часа</Russian>
+            <German>12 Stunden</German>
+            <Korean>12 시간</Korean>
+            <Japanese>12時間</Japanese>
+            <Chinese>12 小時</Chinese>
+            <Chinesesimp>12 小时</Chinesesimp>
+            <Turkish>12 saat</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Sleep_1Hour">
+            <English>1 hour</English>
+            <Czech>1 hodinu</Czech>
+            <French>1 heure</French>
+            <Spanish>1 hora</Spanish>
+            <Italian>1 ora</Italian>
+            <Polish>1 godzina</Polish>
+            <Portuguese>1 hora</Portuguese>
+            <Russian>1 час</Russian>
+            <German>1 Stunde</German>
+            <Korean>1 시간</Korean>
+            <Japanese>1時間</Japanese>
+            <Chinese>1 小時</Chinese>
+            <Chinesesimp>1 小时</Chinesesimp>
+            <Turkish>1 saat</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Sleep_2Hours">
+            <English>2 hours</English>
+            <Czech>2 hodiny</Czech>
+            <French>2 heures</French>
+            <Spanish>2 horas</Spanish>
+            <Italian>2 ore</Italian>
+            <Polish>2 godziny</Polish>
+            <Portuguese>2 horas</Portuguese>
+            <Russian>2 часа</Russian>
+            <German>2 Stunden</German>
+            <Korean>2 시간</Korean>
+            <Japanese>2時間</Japanese>
+            <Chinese>2 小時</Chinese>
+            <Chinesesimp>2 小时</Chinesesimp>
+            <Turkish>2 saat</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Sleep_3Hours">
+            <English>3 hours</English>
+            <Czech>3 hodiny</Czech>
+            <French>3 heures</French>
+            <Spanish>3 horas</Spanish>
+            <Italian>3 ore</Italian>
+            <Polish>3 godziny</Polish>
+            <Portuguese>3 horas</Portuguese>
+            <Russian>3 часа</Russian>
+            <German>3 Stunden</German>
+            <Korean>3 시간</Korean>
+            <Japanese>3時間</Japanese>
+            <Chinese>3 小時</Chinese>
+            <Chinesesimp>3 小时</Chinesesimp>
+            <Turkish>3 saat</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Sleep_4Hours">
+            <English>4 hours</English>
+            <Czech>4 hodiny</Czech>
+            <French>4 heures</French>
+            <Spanish>4 horas</Spanish>
+            <Italian>4 ore</Italian>
+            <Polish>4 godziny</Polish>
+            <Portuguese>4 horas</Portuguese>
+            <Russian>4 часа</Russian>
+            <German>4 Stunden</German>
+            <Korean>4 시간</Korean>
+            <Japanese>4時間</Japanese>
+            <Chinese>4 小時</Chinese>
+            <Chinesesimp>4 小时</Chinesesimp>
+            <Turkish>4 saat</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Sleep_5Hours">
+            <English>5 hours</English>
+            <Czech>5 hodin</Czech>
+            <French>5 heures</French>
+            <Spanish>5 horas</Spanish>
+            <Italian>5 ore</Italian>
+            <Polish>5 godziny</Polish>
+            <Portuguese>5 horas</Portuguese>
+            <Russian>5 часа</Russian>
+            <German>5 Stunden</German>
+            <Korean>5 시간</Korean>
+            <Japanese>5時間</Japanese>
+            <Chinese>5 小時</Chinese>
+            <Chinesesimp>5 小时</Chinesesimp>
+            <Turkish>5 saat</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Sleep_6Hours">
+            <English>6 hours</English>
+            <Czech>6 hodin</Czech>
+            <French>6 heures</French>
+            <Spanish>6 horas</Spanish>
+            <Italian>6 ore</Italian>
+            <Polish>6 godziny</Polish>
+            <Portuguese>6 horas</Portuguese>
+            <Russian>6 часа</Russian>
+            <German>6 Stunden</German>
+            <Korean>6 시간</Korean>
+            <Japanese>6時間</Japanese>
+            <Chinese>6 小時</Chinese>
+            <Chinesesimp>6 小时</Chinesesimp>
+            <Turkish>6 saat</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Sleep_7Hours">
+            <English>7 hours</English>
+            <Czech>7 hodin</Czech>
+            <French>7 heures</French>
+            <Spanish>7 horas</Spanish>
+            <Italian>7 ore</Italian>
+            <Polish>7 godziny</Polish>
+            <Portuguese>7 horas</Portuguese>
+            <Russian>7 часа</Russian>
+            <German>7 Stunden</German>
+            <Korean>7 시간</Korean>
+            <Japanese>7時間</Japanese>
+            <Chinese>7 小時</Chinese>
+            <Chinesesimp>7 小时</Chinesesimp>
+            <Turkish>7 saat</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Sleep_8Hours">
+            <English>8 hours</English>
+            <Czech>8 hodin</Czech>
+            <French>8 heures</French>
+            <Spanish>8 horas</Spanish>
+            <Italian>8 ore</Italian>
+            <Polish>8 godziny</Polish>
+            <Portuguese>8 horas</Portuguese>
+            <Russian>8 часа</Russian>
+            <German>8 Stunden</German>
+            <Korean>8 시간</Korean>
+            <Japanese>8時間</Japanese>
+            <Chinese>8 小時</Chinese>
+            <Chinesesimp>8 小时</Chinesesimp>
+            <Turkish>8 saat</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Sleep_9Hours">
+            <English>9 hours</English>
+            <Czech>9 hodin</Czech>
+            <French>9 heures</French>
+            <Spanish>9 horas</Spanish>
+            <Italian>9 ore</Italian>
+            <Polish>9 godziny</Polish>
+            <Portuguese>9 horas</Portuguese>
+            <Russian>9 часа</Russian>
+            <German>9 Stunden</German>
+            <Korean>9 시간</Korean>
+            <Japanese>9時間</Japanese>
+            <Chinese>9 小時</Chinese>
+            <Chinesesimp>9 小时</Chinesesimp>
+            <Turkish>9 saat</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Sleep_Button">
+            <English>Sleep...</English>
+            <Czech>Spánek...</Czech>
+            <French>Dormir...</French>
+            <Spanish>Duerme...</Spanish>
+            <Italian>Dormire...</Italian>
+            <Polish>Sen...</Polish>
+            <Portuguese>Dormir...</Portuguese>
+            <Russian>Спи...</Russian>
+            <German>Schlafen...</German>
+            <Korean>수면...</Korean>
+            <Japanese>眠れ...</Japanese>
+            <Chinese>睡覺...</Chinese>
+            <Chinesesimp>睡觉...</Chinesesimp>
+            <Turkish>Uyu.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Sleep_Fear">
+            <English>You are tormented by fear, and sleep is a distant memory. You hallucinate horrors that haunt you, and feel sensations that terrify you. You are descending into madness…</English>
+            <Czech>Trápí vás strach a spánek je jen vzdálenou vzpomínkou. Máte halucinace, které vás pronásledují, a cítíte pocity, které vás děsí. Propadáte se do šílenství...</Czech>
+            <French>Vous êtes tourmenté par la peur et le sommeil n'est plus qu'un lointain souvenir. Vous avez des hallucinations qui vous hantent et des sensations qui vous terrifient. Vous sombrez dans la folie...</French>
+            <Spanish>Te atormenta el miedo y el sueño es un recuerdo lejano. Alucinas horrores que te persiguen y sientes sensaciones que te aterrorizan. Desciendes hacia la locura...</Spanish>
+            <Italian>Siete tormentati dalla paura e il sonno è un ricordo lontano. Avete allucinazioni che vi perseguitano e sensazioni che vi terrorizzano. State scendendo nella follia...</Italian>
+            <Polish>Dręczy cię strach, a sen jest odległym wspomnieniem. Masz halucynacje, które cię prześladują i odczuwasz doznania, które cię przerażają. Popadasz w obłęd...</Polish>
+            <Portuguese>O medo atormenta-te e o sono é uma memória distante. Alucinas com horrores que te perseguem e sentes sensações que te aterrorizam. Estás a cair na loucura...</Portuguese>
+            <Russian>Вас мучает страх, а сон - далекое воспоминание. Вы видите ужасы, которые преследуют вас, и испытываете ощущения, которые приводят вас в ужас. Вы погружаетесь в безумие...</Russian>
+            <German>Sie werden von Angst gequält, und an Schlaf ist nicht mehr zu denken. Du halluzinierst von Schrecken, die dich heimsuchen, und spürst Empfindungen, die dich erschrecken. Du bist dabei, dem Wahnsinn zu verfallen...</German>
+            <Korean>당신은 두려움에 시달리고 잠은 아득한 기억으로 남습니다. 당신은 당신을 괴롭히는 공포를 환각하고 당신을 두렵게하는 감각을 느낍니다. 당신은 광기에 빠져들고 있습니다...</Korean>
+            <Japanese>恐怖に苛まれ、眠りは遠い記憶となる。恐怖の幻覚に悩まされ、恐怖の感覚を覚える。あなたは狂気へと堕ちていく...。</Japanese>
+            <Chinese>你被恐懼折磨，睡眠已成遙遠記憶。你幻覺出縈繞不散的恐怖，感受到令你惊悚的異覺。你正墜入瘋狂……</Chinese>
+            <Chinesesimp>你被恐惧折磨，睡眠已成遥远记忆。你幻觉出萦绕不散的恐怖，感受到令你惊悚的异觉。你正坠入疯狂……</Chinesesimp>
+            <Turkish>Korkudan işkence görüyorsunuz ve uyku uzak bir anı. Size musallat olan dehşetli halüsinasyonlar görüyor ve sizi dehşete düşüren hisler hissediyorsunuz. Deliliğe doğru sürükleniyorsunuz...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Sleep_NoHourSelect">
+            <English>You need to select how long you wish to sleep...</English>
+            <Czech>Vyberte si, jak dlouho chcete spát...</Czech>
+            <French>Vous devez sélectionner la durée de votre sommeil...</French>
+            <Spanish>Tienes que seleccionar cuánto tiempo quieres dormir...</Spanish>
+            <Italian>È necessario selezionare la durata del sonno...</Italian>
+            <Polish>Musisz wybrać, jak długo chcesz spać...</Polish>
+            <Portuguese>É necessário selecionar o tempo que deseja dormir...</Portuguese>
+            <Russian>Вам нужно выбрать, сколько времени вы хотите спать...</Russian>
+            <German>Sie müssen auswählen, wie lange Sie schlafen möchten...</German>
+            <Korean>수면 시간을 선택해야 합니다...</Korean>
+            <Japanese>睡眠時間を選択する必要がある。</Japanese>
+            <Chinese>你需要選擇你想睡多久...</Chinese>
+            <Chinesesimp>你需要选择你想睡多久...</Chinesesimp>
+            <Turkish>Ne kadar süre uyumak istediğinizi seçmeniz gerekiyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Sleep_NotTired">
+            <English>You aren't tired enough to sleep yet...</English>
+            <Czech>Ještě nejste dostatečně unavený na to, abyste spal...</Czech>
+            <French>Vous n'êtes pas encore assez fatigué pour dormir...</French>
+            <Spanish>Aún no estás lo suficientemente cansado para dormir...</Spanish>
+            <Italian>Non sei ancora abbastanza stanco per dormire...</Italian>
+            <Polish>Nie jesteś jeszcze wystarczająco zmęczony, by spać...</Polish>
+            <Portuguese>Ainda não estás suficientemente cansado para dormir...</Portuguese>
+            <Russian>Вы еще не настолько устали, чтобы спать...</Russian>
+            <German>Du bist noch nicht müde genug, um zu schlafen...</German>
+            <Korean>아직 잠을 잘 만큼 피곤하지 않으세요...</Korean>
+            <Japanese>まだ眠るほど疲れてはいないだろう...。</Japanese>
+            <Chinese>你還沒累到可以睡覺的時候...</Chinese>
+            <Chinesesimp>你还没累到可以睡觉的时候...</Chinesesimp>
+            <Turkish>Henüz uyuyacak kadar yorgun değilsin...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Sleep_Prompt">
+            <English>How long do you want to sleep?</English>
+            <Czech>Jak dlouho chcete spát?</Czech>
+            <French>Combien de temps voulez-vous dormir ?</French>
+            <Spanish>¿Cuánto tiempo quieres dormir?</Spanish>
+            <Italian>Quanto tempo vuoi dormire?</Italian>
+            <Polish>Jak długo chcesz spać?</Polish>
+            <Portuguese>Quanto tempo queres dormir?</Portuguese>
+            <Russian>Как долго вы хотите спать?</Russian>
+            <German>Wie lange wollen Sie schlafen?</German>
+            <Korean>얼마나 자고 싶으세요?</Korean>
+            <Japanese>どれくらい寝たい？</Japanese>
+            <Chinese>你想睡多久？</Chinese>
+            <Chinesesimp>你想睡多久？</Chinesesimp>
+            <Turkish>Ne kadar uyumak istiyorsun?</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Sleep_SleptFor">
+            <English>You slept for %1 hour(s)...</English>
+            <Czech>Spali jste %1 hodinu(y)...</Czech>
+            <French>Vous avez dormi pendant %1 heure(s)...</French>
+            <Spanish>Has dormido %1 hora(s)...</Spanish>
+            <Italian>Hai dormito per %1 ora/e...</Italian>
+            <Polish>Spałeś przez %1 godzin(y)...</Polish>
+            <Portuguese>Dormiu durante %1 hora(s)...</Portuguese>
+            <Russian>Вы проспали %1 час(ов)...</Russian>
+            <German>Sie haben %1 Stunde(n) lang geschlafen...</German>
+            <Korean>%1 시간 동안 잠을 잤습니다...</Korean>
+            <Japanese>%1 時間眠った。</Japanese>
+            <Chinese>你睡了 %1 小時...</Chinese>
+            <Chinesesimp>你睡了 %1 小时...</Chinesesimp>
+            <Turkish>%1 saat(ler) boyunca uyudunuz...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Sleep_Tip">
+            <English>Care should be taken when sleeping in excessive amounts...</English>
+            <Czech>Při nadměrném množství spánku je třeba dbát na opatrnosti...</Czech>
+            <French>Il convient d'être prudent lorsque l'on dort en quantités excessives...</French>
+            <Spanish>Hay que tener cuidado cuando se duerme en cantidades excesivas...</Spanish>
+            <Italian>Occorre prestare attenzione quando si dorme in quantità eccessive...</Italian>
+            <Polish>Należy zachować ostrożność podczas spania w nadmiernych ilościach...</Polish>
+            <Portuguese>Deve-se ter cuidado ao dormir em quantidades excessivas...</Portuguese>
+            <Russian>Следует соблюдать осторожность, если вы спите в чрезмерном количестве...</Russian>
+            <German>Vorsicht ist geboten, wenn man übermäßig viel schläft...</German>
+            <Korean>과도한 양의 수면을 취할 때는주의를 기울여야합니다 ...</Korean>
+            <Japanese>過度の睡眠には注意が必要である。</Japanese>
+            <Chinese>過度睡眠時應注意...</Chinese>
+            <Chinesesimp>过度睡眠时应注意...</Chinesesimp>
+            <Turkish>Aşırı miktarda uyurken dikkatli olunmalıdır...</Turkish>
+        </Key>
+    </Package>
+</Project>

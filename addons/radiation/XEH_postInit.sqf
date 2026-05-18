@@ -10,7 +10,7 @@
 
         private _leadContainer = [
             QGVAR(leadContainers_menu),
-            localize ECSTRING(common,StoreArtifact),
+            localize LSTRING(StoreArtifact),
             QPATHTOEF(icons,data\package_open_ca.paa),
             {
                 call FUNC(storeArtifact)

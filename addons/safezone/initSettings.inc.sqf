@@ -3,7 +3,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(areas),
     "EDITBOX",
-    ["Safe Zone Areas", "ELLIPSE or RECTANGLE marker names covering the safezone area as strings ['Safezone_1', 'Safezone_2']"],
+    [LSTRING(SafezoneAreas), LSTRING(SafezoneAreasDesc)],
     _category,
     "[]",
     1

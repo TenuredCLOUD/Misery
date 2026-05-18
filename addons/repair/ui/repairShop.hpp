@@ -13,7 +13,7 @@ class CLASS(repairShop_ui) {
         };
         class CLASS(repairShop_prompt): RscText {
             idc = -1;
-            text = "Vehicle Repair";
+            text = ECSTRING(repair,Prompt);
             x = 1.6 * GUI_GRID_W + GUI_GRID_X;
             y = 0.24 * GUI_GRID_H + GUI_GRID_Y;
             w = 20.5 * GUI_GRID_W;

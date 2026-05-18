@@ -65,6 +65,22 @@
             <Chinesesimp>使能地图上会随机降下带有辐射强度的酸雨/辐射雨</Chinesesimp>
             <Turkish>Radyoaktif yağmuru etkinleştirir</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Radiation_StoreArtifact">
+            <English>Store Artifact</English>
+            <Czech>Uložit artefakt</Czech>
+            <French>Magasin d'artefacts</French>
+            <Spanish>Almacenar artefacto</Spanish>
+            <Italian>Conservare l'artefatto</Italian>
+            <Polish>Sklep z artefaktami</Polish>
+            <Portuguese>Armazenar artefato</Portuguese>
+            <Russian>Магазин артефактов</Russian>
+            <German>Artefakt speichern</German>
+            <Korean>아티팩트 저장</Korean>
+            <Japanese>ストアアーティファクト</Japanese>
+            <Chinese>存放神器</Chinese>
+            <Chinesesimp>存放神器</Chinesesimp>
+            <Turkish>Store Artifact</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Radiation_StoreLeadContainer">
             <English>You put the artifact in your lead lined container</English>
             <Czech>Vložil jsi artefakt do olovem vyloženého kontejneru</Czech>

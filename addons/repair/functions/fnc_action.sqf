@@ -23,7 +23,7 @@ if !(call FUNC(checkAreas)) exitWith {
 
     private _requestRepairsAction = [
         QGVAR(repair_menu),
-        localize ECSTRING(common,ReqRepairs),
+        localize LSTRING(ReqRepairs),
         QPATHTOEF(markers,data\wrench_ca.paa),
         {
             createDialog QCLASS(repairShop_ui);
