@@ -209,6 +209,22 @@
             <Chinesesimp>睡觉...</Chinesesimp>
             <Turkish>Uyu.</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Sleep_Action">
+            <English>Sleep</English>
+            <Czech>Spát</Czech>
+            <French>Dormir</French>
+            <Spanish>Dormir</Spanish>
+            <Italian>Dormi</Italian>
+            <Polish>Spij</Polish>
+            <Portuguese>Dormir</Portuguese>
+            <Russian>Спать</Russian>
+            <German>Schlafen</German>
+            <Korean>수면</Korean>
+            <Japanese>睡眠</Japanese>
+            <Chinese>睡眠</Chinese>
+            <Chinesesimp>睡眠</Chinesesimp>
+            <Turkish>Uyu</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Sleep_Fear">
             <English>You are tormented by fear, and sleep is a distant memory. You hallucinate horrors that haunt you, and feel sensations that terrify you. You are descending into madness…</English>
             <Czech>Trápí vás strach a spánek je jen vzdálenou vzpomínkou. Máte halucinace, které vás pronásledují, a cítíte pocity, které vás děsí. Propadáte se do šílenství...</Czech>

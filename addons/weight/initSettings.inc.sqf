@@ -3,7 +3,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(deficiency),
     "CHECKBOX",
-    ["Weight penalty", "Enable a penalty for players gear weight? (Enables a deficiency to hunger / thirst for player weight, also increases tired calc values in SP - Dynamically calculated)"],
+    [LSTRING(Penalty), LSTRING(PenaltyDesc)],
     _category,
     false,
     1

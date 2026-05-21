@@ -14,7 +14,7 @@ class CLASS(medicalTreatment_ui) {
         };
         class CLASS(medicalTreatment_prompt): RscText {
             idc = -1;
-            text = "Medical Treatment"; //--- ToDo: Localize;
+            text = ECSTRING(treatment,MedicalTreatment);
             x = 1.6 * GUI_GRID_W + GUI_GRID_X;
             y = 0.24 * GUI_GRID_H + GUI_GRID_Y;
             w = 20.5 * GUI_GRID_W;

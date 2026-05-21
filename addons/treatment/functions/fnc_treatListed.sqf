@@ -27,12 +27,12 @@
 
     //[name, price, action, duration]
     GVAR(data) = [
-        ["Treat Wounds", GVAR(woundCost), nil, GVAR(woundDuration)],
-        ["Treat Radiation", GVAR(radiationCost), {player setVariable [QEGVAR(survival,radiation), MACRO_PLAYER_DEFAULTS_LOW]}, GVAR(radiationDuration)],
-        ["Treat Infection", GVAR(infectionCost), {player setVariable [QEGVAR(survival,infection), MACRO_PLAYER_DEFAULTS_LOW]}, GVAR(infectionDuration)],
-        ["Treat Parasites", GVAR(parasiteCost), {player setVariable [QEGVAR(survival,parasites), MACRO_PLAYER_DEFAULTS_LOW]}, GVAR(parasiteDuration)],
-        ["Treat Toxicity", GVAR(toxicCost), {player setVariable [QEGVAR(survival,toxicity), MACRO_PLAYER_DEFAULTS_LOW]}, GVAR(toxicDuration)],
-        ["Treat Psychosis", GVAR(psychosisCost), {player setVariable [QEGVAR(psychosis,state), MACRO_PLAYER_DEFAULTS_LOW]}, GVAR(psychosisDuration)]
+        [localize LSTRING(TreatWounds), GVAR(woundCost), nil, GVAR(woundDuration)],
+        [localize LSTRING(TreatRadiation), GVAR(radiationCost), {player setVariable [QEGVAR(survival,radiation), MACRO_PLAYER_DEFAULTS_LOW]}, GVAR(radiationDuration)],
+        [localize LSTRING(TreatInfection), GVAR(infectionCost), {player setVariable [QEGVAR(survival,infection), MACRO_PLAYER_DEFAULTS_LOW]}, GVAR(infectionDuration)],
+        [localize LSTRING(TreatParasites), GVAR(parasiteCost), {player setVariable [QEGVAR(survival,parasites), MACRO_PLAYER_DEFAULTS_LOW]}, GVAR(parasiteDuration)],
+        [localize LSTRING(TreatToxicity), GVAR(toxicCost), {player setVariable [QEGVAR(survival,toxicity), MACRO_PLAYER_DEFAULTS_LOW]}, GVAR(toxicDuration)],
+        [localize LSTRING(TreatPsychosis), GVAR(psychosisCost), {player setVariable [QEGVAR(psychosis,state), MACRO_PLAYER_DEFAULTS_LOW]}, GVAR(psychosisDuration)]
     ];
 
     publicVariable QGVAR(data);

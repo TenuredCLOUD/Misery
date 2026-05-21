@@ -561,22 +561,6 @@
             <Chinesesimp>配方:</Chinesesimp>
             <Turkish>Tarifler:</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Common_ReqTreatment">
-            <English>Request treatment</English>
-            <Czech>Žádost o ošetření</Czech>
-            <French>Demande de traitement</French>
-            <Spanish>Solicitar tratamiento</Spanish>
-            <Italian>Richiesta di trattamento</Italian>
-            <Polish>Żądanie leczenia</Polish>
-            <Portuguese>Solicitar tratamento</Portuguese>
-            <Russian>Запрос на лечение</Russian>
-            <German>Behandlung anfordern</German>
-            <Korean>치료 요청하기</Korean>
-            <Japanese>治療を依頼する</Japanese>
-            <Chinese>請求治療</Chinese>
-            <Chinesesimp>请求治疗</Chinesesimp>
-            <Turkish>Tedavi talep edin</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Common_ShowRecipe">
             <English>Show Recipe</English>
             <Czech>Zobrazit recept</Czech>

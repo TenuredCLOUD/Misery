@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
-    <Package name="SupplyDrop">
-        <Key ID="STR_MISERY_SupplyDrop_AmmoType">
+    <Package name="Supply_Drop">
+        <Key ID="STR_MISERY_Supply_Drop_AmmoType">
             <English>Ammo type</English>
             <Czech>Typ munice</Czech>
             <French>Type de munitions</French>
@@ -17,7 +17,7 @@
             <Chinesesimp>弹药种类</Chinesesimp>
             <Turkish>Mühimmat Türü</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_AmmoTypeDesc">
+        <Key ID="STR_MISERY_Supply_Drop_AmmoTypeDesc">
             <English>Type of ammo to spawn in crate</English>
             <Czech>Typy munice, které se mohou spawnout v bedně</Czech>
             <French>Types de munitions à faire apparaître dans la caisse</French>
@@ -33,7 +33,7 @@
             <Chinesesimp>空投箱中可能出现的弹药/弹匣物资列表</Chinesesimp>
             <Turkish>Kasada doğacak mühimmat türü</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_AttachmentType">
+        <Key ID="STR_MISERY_Supply_Drop_AttachmentType">
             <English>Attachment type</English>
             <Czech>Typ doplňků</Czech>
             <French>Type d'accessoires</French>
@@ -49,7 +49,7 @@
             <Chinesesimp>武器配件种类</Chinesesimp>
             <Turkish>Eklenti Türü</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_AttachmentTypeDesc">
+        <Key ID="STR_MISERY_Supply_Drop_AttachmentTypeDesc">
             <English>Type of attachments to spawn in crate</English>
             <Czech>Typy zbraňových doplňků, které se mohou spawnout v bedně</Czech>
             <French>Types d'accessoires d'armes à faire apparaître dans la caisse</French>
@@ -65,7 +65,7 @@
             <Chinesesimp>空投箱中可能出现的武器配件（瞄具、抑制器等）列表</Chinesesimp>
             <Turkish>Kasada doğacak eklenti türü</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_Backpack">
+        <Key ID="STR_MISERY_Supply_Drop_Backpack">
             <English>Backpack</English>
             <Czech>Batohy</Czech>
             <French>Sac à dos</French>
@@ -81,7 +81,7 @@
             <Chinesesimp>背包</Chinesesimp>
             <Turkish>Sırt Çantası</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_BackpackDesc">
+        <Key ID="STR_MISERY_Supply_Drop_BackpackDesc">
             <English>Possible backpack supplies</English>
             <Czech>Možné zásoby batohů</Czech>
             <French>Fournitures de sacs à dos possibles</French>
@@ -97,7 +97,7 @@
             <Chinesesimp>空投箱中可能出现的背包物资列表</Chinesesimp>
             <Turkish>Olası sırt çantası malzemeleri</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_DeletionDistance">
+        <Key ID="STR_MISERY_Supply_Drop_DeletionDistance">
             <English>Deletion distance</English>
             <Czech>Vzdálenost pro smazání</Czech>
             <French>Distance de suppression</French>
@@ -113,7 +113,7 @@
             <Chinesesimp>清理删除距离</Chinesesimp>
             <Turkish>Silme Menzili</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_DeletionDistanceDesc">
+        <Key ID="STR_MISERY_Supply_Drop_DeletionDistanceDesc">
             <English>Distance from players when the system cleans up</English>
             <Czech>Vzdálenost od hráčů, při které systém vyčistí (smaže) staré objekty výsadku</Czech>
             <French>Distance par rapport os joueurs à laquelle le système nettoie et supprime les éléments</French>
@@ -129,7 +129,7 @@
             <Chinesesimp>当玩家远离空投相关物件达到此距离时，系统将自动回收并删除对应实体</Chinesesimp>
             <Turkish>Sistem temizlik yaparken oyunculara olan mesafe</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_Delivered">
+        <Key ID="STR_MISERY_Supply_Drop_Delivered">
             <English>Supply cargo delivered, heading back to HQ.</English>
             <Czech>Náklad zásob doručen, návrat na základnu.</Czech>
             <French>Cargaison de ravitaillement livrée, retour au QG.</French>
@@ -145,7 +145,7 @@
             <Chinesesimp>补给物资已送达，正在返回总部。</Chinesesimp>
             <Turkish>Malzeme kargosu teslim edildi, karargaha dönülüyor.</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_DropZones">
+        <Key ID="STR_MISERY_Supply_Drop_DropZones">
             <English>Drop zones</English>
             <Czech>Zóny výsadku</Czech>
             <French>Zones de largage</French>
@@ -161,7 +161,7 @@
             <Chinesesimp>空投投放区</Chinesesimp>
             <Turkish>Bırakma Bölgeleri</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_DropZonesDesc">
+        <Key ID="STR_MISERY_Supply_Drop_DropZonesDesc">
             <English>Possible drop zones for supply crates, leave blank if you want to select a random player's position on the map, must be a marker! ['DropZone_1', 'DropZone_2']</English>
             <Czech>Možné zóny výsadku pro bedny se zásobami. Ponechte prázdné, pokud chcete vybrat náhodnou pozici hráče na mapě. Musí se jednat o marker! ['DropZone_1', 'DropZone_2']</Czech>
             <French>Zones de largage possibles pour les caisses de ravitaillement, laisser vide pour cibler la position d'un joueur aléatoire, doit être un marqueur ! ['DropZone_1', 'DropZone_2']</French>
@@ -177,7 +177,7 @@
             <Chinesesimp>物资箱的可选空投区域，如果留空则会随机选择地图上某位玩家的位置，此处必须填写标记名称！ ['DropZone_1', 'DropZone_2']</Chinesesimp>
             <Turkish>Malzeme kasaları için olası bırakma bölgeleri, haritada rastgele bir oyuncunun konumunu seçmek istiyorsanız boş bırakın, bir işaretçi olmalıdır! ['DropZone_1', 'DropZone_2']</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_Dropping">
+        <Key ID="STR_MISERY_Supply_Drop_Dropping">
             <English>Dropping supply cargo, standby.</English>
             <Czech>Vysazování nákladu zásob, čekejte.</Czech>
             <French>Largage de la cargaison de ravitaillement, patientez.</French>
@@ -193,7 +193,7 @@
             <Chinesesimp>正在投放补给物资，请稍候。</Chinesesimp>
             <Turkish>Kargo malzemesi bırakılıyor, beklemede kalın.</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_EnRoute">
+        <Key ID="STR_MISERY_Supply_Drop_EnRoute">
             <English>En-route to drop zone, GRID: %1</English>
             <Czech>Na cestě do zóny výsadku, GRID: %1</Czech>
             <French>En route vers la zone de largage, GRID : %1</French>
@@ -209,7 +209,7 @@
             <Chinesesimp>正在前往物资投放区，地图坐标: %1</Chinesesimp>
             <Turkish>Bırakma bölgesine doğru yolda, KOORDİNAT: %1</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_EnableDesc">
+        <Key ID="STR_MISERY_Supply_Drop_EnableDesc">
             <English>Enables dynamic supply drops</English>
             <Czech>Povolit dynamické shazování zásob</Czech>
             <French>Activer les largages dynamiques</French>
@@ -225,7 +225,7 @@
             <Chinesesimp>启用动态物资空投</Chinesesimp>
             <Turkish>Dinamik malzeme bırakmayı etkinleştirir</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_Items">
+        <Key ID="STR_MISERY_Supply_Drop_Items">
             <English>Items</English>
             <Czech>Předměty</Czech>
             <French>Objets</French>
@@ -241,7 +241,7 @@
             <Chinesesimp>一般物品</Chinesesimp>
             <Turkish>Eşyalar</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_ItemsDesc">
+        <Key ID="STR_MISERY_Supply_Drop_ItemsDesc">
             <English>Possible item supplies, headgear, facewear, nvgs, etc...</English>
             <Czech>Možné zásoby předmětů - helmy, brýle/masky, NVG atd...</Czech>
             <French>Fournitures d'objets possibles : casques, masques, NVG, etc.</French>
@@ -257,7 +257,7 @@
             <Chinesesimp>可能出现的个人装备物品，如头盔、面罩、夜视镜等列表</Chinesesimp>
             <Turkish>Olası eşya malzemeleri; kasklar, yüz maskeleri, gece görüş gözlükleri vb...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_LootItemCount">
+        <Key ID="STR_MISERY_Supply_Drop_LootItemCount">
             <English>Loot item count</English>
             <Czech>Počet položek lootu</Czech>
             <French>Nombre d'objets de butin</French>
@@ -273,7 +273,7 @@
             <Chinesesimp>战利品物品数量</Chinesesimp>
             <Turkish>Ganimet Eşya Sayısı</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_LootItemCountDesc">
+        <Key ID="STR_MISERY_Supply_Drop_LootItemCountDesc">
             <English>Loot amount per category, weapons, items, ammo, attachments, etc...</English>
             <Czech>Množství lootu pro každou kategorii - zbraně, předměty, munice, doplňky atd...</Czech>
             <French>Quantité de butin par catégorie : armes, objets, munitions, accessoires, etc.</French>
@@ -289,7 +289,7 @@
             <Chinesesimp>各分类（武器、物品、弹药、配件等）所生成的物资随机总数上限</Chinesesimp>
             <Turkish>Kategori başına ganimet miktarı; silahlar, eşyalar, mühimmatlar, eklentiler vb...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_PossibleCrates">
+        <Key ID="STR_MISERY_Supply_Drop_PossibleCrates">
             <English>Possible crates</English>
             <Czech>Možné bedny</Czech>
             <French>Caisses possibles</French>
@@ -305,7 +305,7 @@
             <Chinesesimp>可选物资箱</Chinesesimp>
             <Turkish>Olası Kasalar</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_PossibleCratesDesc">
+        <Key ID="STR_MISERY_Supply_Drop_PossibleCratesDesc">
             <English>Possible crates helicopters will transport</English>
             <Czech>Možné typy beden, které budou vrtulníky transportovat</Czech>
             <French>Caisses de ravitaillement que les hélicoptères vont transporter</French>
@@ -321,7 +321,7 @@
             <Chinesesimp>直升机将会挂载与运输的可选物资箱型号</Chinesesimp>
             <Turkish>Helikopterlerin taşıyacağı olası kasalar</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_PossibleHelicopters">
+        <Key ID="STR_MISERY_Supply_Drop_PossibleHelicopters">
             <English>Possible helicopters</English>
             <Czech>Možné vrtulníky</Czech>
             <French>Hélicoptères possibles</French>
@@ -337,7 +337,7 @@
             <Chinesesimp>可选运输直升机</Chinesesimp>
             <Turkish>Olası Helikopterler</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_PossibleHelicoptersDesc">
+        <Key ID="STR_MISERY_Supply_Drop_PossibleHelicoptersDesc">
             <English>Possible helicopters to fly in supplies</English>
             <Czech>Možné typy vrtulníků, které doručí zásoby</Czech>
             <French>Hélicoptères susceptibles de transporter le ravitaillement</French>
@@ -353,7 +353,7 @@
             <Chinesesimp>用于执行补给任务的可选直升机类别列表</Chinesesimp>
             <Turkish>Malzemeleri uçuracak olası helikopterler</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_PossibleWeapons">
+        <Key ID="STR_MISERY_Supply_Drop_PossibleWeapons">
             <English>Possible weapons</English>
             <Czech>Možné zbraně</Czech>
             <French>Armes possibles</French>
@@ -369,7 +369,7 @@
             <Chinesesimp>可选武器补给</Chinesesimp>
             <Turkish>Olası Silahlar</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_PossibleWeaponsDesc">
+        <Key ID="STR_MISERY_Supply_Drop_PossibleWeaponsDesc">
             <English>Possible weapon supplies</English>
             <Czech>Možné zásoby zbraní</Czech>
             <French>Fournitures d'armes possibles</French>
@@ -385,7 +385,7 @@
             <Chinesesimp>空投箱中可能出现的武器物资列表</Chinesesimp>
             <Turkish>Olası silah malzemeleri</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_SpawnCheckInterval">
+        <Key ID="STR_MISERY_Supply_Drop_SpawnCheckInterval">
             <English>Spawn check interval</English>
             <Czech>Interval kontroly spawnu</Czech>
             <French>Intervalle de vérification du spawn</French>
@@ -401,7 +401,7 @@
             <Chinesesimp>生成检查间隔</Chinesesimp>
             <Turkish>Doğma Kontrol Sıklığı</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_SpawnCheckIntervalDesc">
+        <Key ID="STR_MISERY_Supply_Drop_SpawnCheckIntervalDesc">
             <English>Time between drop checks</English>
             <Czech>Časový rozestup mezi jednotlivými kontrolami šance na výsadek</Czech>
             <French>Temps s'écoulant entre deux vérifications de largage</French>
@@ -417,7 +417,7 @@
             <Chinesesimp>系统两次空投判定循环之间的时间间隔</Chinesesimp>
             <Turkish>Bırakma kontrolleri arasındaki süre</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_SupplyDropChance">
+        <Key ID="STR_MISERY_Supply_Drop_SupplyDropChance">
             <English>Supply Drop chance</English>
             <Czech>Šance na shození zásob</Czech>
             <French>Chance de largage</French>
@@ -433,7 +433,7 @@
             <Chinesesimp>物资空投几率</Chinesesimp>
             <Turkish>Malzeme Bırakma Şansı</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_SupplyDropChanceDesc">
+        <Key ID="STR_MISERY_Supply_Drop_SupplyDropChanceDesc">
             <English>% chance a supply drop will happen every check</English>
             <Czech>Procentuální šance, že při každé kontrole dojde k shození zásob</Czech>
             <French>Pourcentage de chance qu'un largage se produise à chaque vérification</French>
@@ -449,7 +449,7 @@
             <Chinesesimp>系统每次执行循环检查时，触发补给物资空投的百分比（%）几率</Chinesesimp>
             <Turkish>Her kontrolde malzeme bırakılma olasılığı yüzde (%) değeri</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_Uniform">
+        <Key ID="STR_MISERY_Supply_Drop_Uniform">
             <English>Uniform</English>
             <Czech>Uniformy</Czech>
             <French>Uniformes</French>
@@ -465,7 +465,7 @@
             <Chinesesimp>军服/制服</Chinesesimp>
             <Turkish>Üniforma</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_UniformDesc">
+        <Key ID="STR_MISERY_Supply_Drop_UniformDesc">
             <English>Possible uniforms supplies</English>
             <Czech>Možné zásoby uniform</Czech>
             <French>Fournitures d'uniformes possibles</French>
@@ -481,7 +481,7 @@
             <Chinesesimp>空投箱中可能出现的军服/作战服物资列表</Chinesesimp>
             <Turkish>Olası üniforma malzemeleri</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_Vest">
+        <Key ID="STR_MISERY_Supply_Drop_Vest">
             <English>Vest</English>
             <Czech>Vesty</Czech>
             <French>Gilets</French>
@@ -497,7 +497,7 @@
             <Chinesesimp>战术背心</Chinesesimp>
             <Turkish>Yelek</Turkish>
         </Key>
-        <Key ID="STR_MISERY_SupplyDrop_VestDesc">
+        <Key ID="STR_MISERY_Supply_Drop_VestDesc">
             <English>Possible vests supplies</English>
             <Czech>Možné zásoby vest</Czech>
             <French>Fournitures de gilets tactiques possibles</French>

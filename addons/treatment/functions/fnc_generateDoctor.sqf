@@ -23,7 +23,7 @@ _trader setVariable [QGVAR(isTreating), false, true];
 
 private _traderAction = [
     QGVAR(accessDoctor),
-    localize ECSTRING(common,ReqTreatment),
+    localize LSTRING(Request),
     QPATHTOEF(markers,data\pillbottle_ca.paa),
     {
         params ["_target", "_player"];

@@ -3,7 +3,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(enabled),
     "CHECKBOX",
-    ["Enabled", LSTRING(EnablePsychosisDesc)],
+    [ECSTRING(common,Enabled), LSTRING(EnablePsychosisDesc)],
     _category,
     false,
     1

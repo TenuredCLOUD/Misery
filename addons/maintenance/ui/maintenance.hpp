@@ -13,7 +13,7 @@ class CLASS(maintenance_ui) {
         };
         class CLASS(maintenance_prompt): RscText {
             idc = 1000;
-            text = "Vehicle Maintenance"; //--- ToDo: Localize;
+            text = "Vehicle Maintenance";
             x = -4.5 * GUI_GRID_W + GUI_GRID_X;
             y = 0.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 20.5 * GUI_GRID_W;

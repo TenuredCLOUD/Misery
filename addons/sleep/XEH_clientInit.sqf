@@ -4,7 +4,7 @@ if (isMultiplayer) exitWith {};
 
 private _sleepAction = [
     QGVAR(sleep_menu),
-    "Sleep",
+    localize LSTRING(Action),
     QPATHTOEF(icons,data\bed_ca.paa),
     {
         createDialog QCLASS(sleepMenu_ui);
