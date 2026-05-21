@@ -6,7 +6,7 @@ if (isServer) then {
 
         private _cookingAction = [
             QGVAR(cooking_menu),
-            localize ECSTRING(common,UseFire_Cook),
+            localize LSTRING(Cook),
             QPATHTOEF(icons,data\cooking_ca.paa),
             {
                 params ["_target", "_player"];

@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
     <Package name="Cooking">
-        <Key ID="STR_MISERY_Cooking_Action">
-            <English>Cook</English>
-            <Czech>Vařit/opékat</Czech>
-            <French>Cuisiner</French>
-            <Spanish>Cocinero</Spanish>
-            <Italian>Cuoco</Italian>
-            <Polish>Kucharz</Polish>
-            <Portuguese>Cozinheiro</Portuguese>
-            <Russian>Повар</Russian>
-            <German>Kochen</German>
-            <Korean>Cook</Korean>
-            <Japanese>クック</Japanese>
-            <Chinese>烹飪</Chinese>
-            <Chinesesimp>烹饪</Chinesesimp>
-            <Turkish>Aşçı</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Cooking_Cook">
             <English>Cook</English>
             <Czech>Vařit</Czech>

@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Traders">
+        <Key ID="STR_MISERY_Traders_Buy">
+            <English>Buy</English>
+            <Czech>Koupit</Czech>
+            <French>Acheter</French>
+            <Spanish>Comprar</Spanish>
+            <Italian>Compra</Italian>
+            <Polish>Kup</Polish>
+            <Portuguese>Comprar</Portuguese>
+            <Russian>Купить</Russian>
+            <German>Kaufen</German>
+            <Korean>구매</Korean>
+            <Japanese>購入</Japanese>
+            <Chinese>購買</Chinese>
+            <Chinesesimp>购买</Chinesesimp>
+            <Turkish>Satın Al</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_BuyMenu">
+            <English>Buy Menu</English>
+            <Czech>Menu nákupu</Czech>
+            <French>Menu d'achat</French>
+            <Spanish>Menú de compra</Spanish>
+            <Italian>Menu acquisto</Italian>
+            <Polish>Menu kupna</Polish>
+            <Portuguese>Menu de compra</Portuguese>
+            <Russian>Меню покупки</Russian>
+            <German>Kaufmenü</German>
+            <Korean>구매 메뉴</Korean>
+            <Japanese>購入メニュー</Japanese>
+            <Chinese>購買選單</Chinese>
+            <Chinesesimp>购买菜单</Chinesesimp>
+            <Turkish>Satın Alma Menüsü</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_CompatibleFilter">
+            <English>Only show compatible weapon items</English>
+            <Czech>Zobrazit pouze kompatibilní zbraňové doplňky</Czech>
+            <French>Afficher uniquement les objets d'armes compatibles</French>
+            <Spanish>Solo mostrar objetos de armas compatibles</Spanish>
+            <Italian>Mostra solo accessori per armi compatibili</Italian>
+            <Polish>Pokaż tylko kompatybilne akcesoria do broni</Polish>
+            <Portuguese>Mostrar apenas itens de armas compatíveis</Portuguese>
+            <Russian>Показывать только совместимые оружейные модули</Russian>
+            <German>Nur kompatible Waffenteile anzeigen</German>
+            <Korean>호환되는 총기 부착물만 표시</Korean>
+            <Japanese>互換性のある武器アタッチメントのみ表示</Japanese>
+            <Chinese>僅顯示相容的武器配件</Chinese>
+            <Chinesesimp>仅显示兼容的武器配件</Chinesesimp>
+            <Turkish>Yalnızca uyumlu silah eşyalarını göster</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_Depression">
+            <English>depression</English>
+            <Czech>deprese</Czech>
+            <French>dépression</French>
+            <Spanish>depresión</Spanish>
+            <Italian>depressione</Italian>
+            <Polish>depresja</Polish>
+            <Portuguese>depressão</Portuguese>
+            <Russian>депрессия</Russian>
+            <German>Depression</German>
+            <Korean>공황</Korean>
+            <Japanese>大恐慌</Japanese>
+            <Chinese>經濟大蕭條</Chinese>
+            <Chinesesimp>经济大萧条</Chinesesimp>
+            <Turkish>depresyon</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_DepressionDesc">
+            <English>Brutal, hardest level of the economy.</English>
+            <Czech>Brutální, nejtěžší úroveň ekonomiky.</Czech>
+            <French>Brutal, le niveau le plus difficile de l'économie.</French>
+            <Spanish>Brutal, el nivel más difícil de la economía.</Spanish>
+            <Italian>Brutale, il livello più difficile dell'economia.</Italian>
+            <Polish>Brutalny, najtrudniejszy poziom ekonomii.</Polish>
+            <Portuguese>Brutal, o nível mais difícil da economia.</Portuguese>
+            <Russian>Жестокий, самый хардкорный уровень выживания в экономике.</Russian>
+            <German>Brutal, der härteste Grad der Wirtschaft.</German>
+            <Korean>잔혹하고 가장 가혹한 극한의 경제 난이도입니다.</Korean>
+            <Japanese>非情かつ最も過酷な、極限の経済難易度です。</Japanese>
+            <Chinese>極其殘酷、物資極度匱乏的最高難度經濟崩潰狀態。</Chinese>
+            <Chinesesimp>极其残酷、物资极度匮乏的最高难度经济崩溃状态。</Chinesesimp>
+            <Turkish>Acımasız, ekonominin en zor seviyesi.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_DistanceCheck">
+            <English>Distance check</English>
+            <Czech>Kontrola vzdálenosti</Czech>
+            <French>Vérification de distance</French>
+            <Spanish>Comprobación de distancia</Spanish>
+            <Italian>Controllo distanza</Italian>
+            <Polish>Sprawdzanie odległości</Polish>
+            <Portuguese>Verificação de distância</Portuguese>
+            <Russian>Проверка дистанции</Russian>
+            <German>Entfernungsprüfung</German>
+            <Korean>거리 감지 범위</Korean>
+            <Japanese>距離チェック範囲</Japanese>
+            <Chinese>距離檢測範圍</Chinese>
+            <Chinesesimp>距离检测范围</Chinesesimp>
+            <Turkish>Mesafe Kontrolü</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_DistanceCheckDesc">
+            <English>Distance that the shop manager checks for players near traders in meters</English>
+            <Czech>Vzdálenost v metrech, ve které správce obchodu kontroluje přítomnost hráčů v blízkosti obchodníků</Czech>
+            <French>Distance en mètres à laquelle le gestionnaire de la boutique vérifie la présence de joueurs près des marchands</French>
+            <Spanish>Distancia en metros a la que el gestor de la tienda comprueba si hay jugadores cerca de los comerciantes</Spanish>
+            <Italian>Distanza in metri entro la quale il gestore del negozio verifica la presenza di giocatori vicino ai commercianti</Italian>
+            <Polish>Odległość w metrach, na jaką zarządca sklepu sprawdza obecność graczy w pobliżu handlarzy</Polish>
+            <Portuguese>Distância em metros que o gestor da loja verifica se existem jogadores perto dos comerciantes</Portuguese>
+            <Russian>Расстояние в метрах, в пределах которого менеджер магазина проверяет наличие игроков рядом с торговцами</Russian>
+            <German>Entfernung in Metern, in der der Ladenmanager nach Spielern in der Nähe von Händlern sucht</German>
+            <Korean>상점 관리 시스템이 상인 주변의 플레이어를 감지하는 거리(미터 단위)입니다</Korean>
+            <Japanese>ショップ管理システムが商人周辺의プレイヤーを検知する距離（メートル単位）です</Japanese>
+            <Chinese>商店管理系統檢測交易商周邊玩家是否存在物資交互的範圍（公尺）</Chinese>
+            <Chinesesimp>商店管理系统检测交易商周边玩家是否存在物资交互的范围（米）</Chinesesimp>
+            <Turkish>Mağaza yöneticisinin tüccarların yakınındaki oyuncuları kontrol ettiği metre cinsinden mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_EconomyMode">
+            <English>Economy Mode</English>
+            <Czech>Hospodářský režim</Czech>
+            <French>Mode économique</French>
+            <Spanish>Modo de economía</Spanish>
+            <Italian>Modalità economia</Italian>
+            <Polish>Tryb ekonomii</Polish>
+            <Portuguese>Modo de economia</Portuguese>
+            <Russian>Экономический режим</Russian>
+            <German>Wirtschaftsmodus</German>
+            <Korean>경제 난이도 모드</Korean>
+            <Japanese>経済難易度モード</Japanese>
+            <Chinese>經濟難易度模式</Chinese>
+            <Chinesesimp>经济难易度模式</Chinesesimp>
+            <Turkish>Ekonomi Modu</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_EconomyModeDesc">
+            <English>Sets trader economy difficulty</English>
+            <Czech>Určuje obtížnost ekonomiky u obchodníků</Czech>
+            <French>Définit la difficulté de l'économie des marchands</French>
+            <Spanish>Establece la dificultad de la economía de los comerciantes</Spanish>
+            <Italian>Imposta la difficoltà dell'economia dei commercianti</Italian>
+            <Polish>Ustawia poziom trudności ekonomii u handlarzy</Polish>
+            <Portuguese>Define a dificuldade da economia dos comerciantes</Portuguese>
+            <Russian>Устанавливает общую сложность торговой экономики</Russian>
+            <German>Legt den Schwierigkeitsgrad der Händlerwirtschaft fest</German>
+            <Korean>상점 거래 및 가치 산정에 대한 경제 난이도를 설정합니다</Korean>
+            <Japanese>商人取引における経済の難易度を設定します</Japanese>
+            <Chinese>設定交易商體系的物價與資源經濟難易度等級</Chinese>
+            <Chinesesimp>设置交易商体系的物价与资源经济难易度等级</Chinesesimp>
+            <Turkish>Tüccar ekonomisi zorluğunu ayarlar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_Gift">
+            <English>Gift Item</English>
+            <Czech>Darovat předmět</Czech>
+            <French>Offrir l'objet</French>
+            <Spanish>Regalar objeto</Spanish>
+            <Italian>Regala oggetto</Italian>
+            <Polish>Podaruj przedmiot</Polish>
+            <Portuguese>Oferecer item</Portuguese>
+            <Russian>Подарить предмет</Russian>
+            <German>Gegenstand verschenken</German>
+            <Korean>아이템 선물</Korean>
+            <Japanese>アイテムを贈る</Japanese>
+            <Chinese>贈送物品</Chinese>
+            <Chinesesimp>赠送物品</Chinesesimp>
+            <Turkish>Eşyayı Hediye Et</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_GiftConfirm">
+            <English>Confirm gift of %1?</English>
+            <Czech>Potvrdit darování %1?</Czech>
+            <French>Confirmer le don de %1 ?</French>
+            <Spanish>¿Confirmar el regalo de %1?</Spanish>
+            <Italian>Confermare il regalo di %1?</Italian>
+            <Polish>Potwierdzić podarowanie %1?</Polish>
+            <Portuguese>Confirmar oferta de %1?</Portuguese>
+            <Russian>Подтвердить передачу в подарок %1?</Russian>
+            <German>Schenkung von %1 bestätigen?</German>
+            <Korean>%1 선물을 확정하시겠습니까?</Korean>
+            <Japanese>%1 を贈ってもよろしいですか？</Japanese>
+            <Chinese>確定要贈送 %1 嗎？</Chinese>
+            <Chinesesimp>确定要赠送 %1 吗？</Chinesesimp>
+            <Turkish>%1 hediye edilmesini onaylıyor musunuz?</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_GiftSuccess">
+            <English>Successfully gifted %1</English>
+            <Czech>Předmět %1 byl úspěšně darován</Czech>
+            <French>%1 offert avec succès</French>
+            <Spanish>Se ha regalado %1 con éxito</Spanish>
+            <Italian>%1 regalato con successo</Italian>
+            <Polish>Pomyślnie podarowano %1</Polish>
+            <Portuguese>%1 oferecido com sucesso</Portuguese>
+            <Russian>Предмет %1 успешно подарен</Russian>
+            <German>%1 erfolgreich verschenkt</German>
+            <Korean>%1을(를) 성공적으로 선물했습니다</Korean>
+            <Japanese>%1 を正常に贈りました</Japanese>
+            <Chinese>成功贈送了 %1</Chinese>
+            <Chinesesimp>成功赠送了 %1</Chinesesimp>
+            <Turkish>%1 başarıyla hediye edildi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_Hyperinflation">
+            <English>hyperinflation</English>
+            <Czech>hyperinflace</Czech>
+            <French>hyperinflation</French>
+            <Spanish>hiperinflación</Spanish>
+            <Italian>iperinflazione</Italian>
+            <Polish>hiperinflacja</Polish>
+            <Portuguese>hiperinflação</Portuguese>
+            <Russian>гиперинфляция</Russian>
+            <German>Hyperinflation</German>
+            <Korean>초인플레이션</Korean>
+            <Japanese>ハイパーインフレ</Japanese>
+            <Chinese>惡性通貨膨脹</Chinese>
+            <Chinesesimp>恶性通货膨胀</Chinesesimp>
+            <Turkish>hiperenflasyon</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_HyperinflationDesc">
+            <English>Harder variant of the market.</English>
+            <Czech>Těžší varianta trhu.</Czech>
+            <French>Une variante plus difficile du marché.</French>
+            <Spanish>Variante más difícil del mercado.</Spanish>
+            <Italian>Variante più difficile del mercato.</Italian>
+            <Polish>Trudniejszy wariant rynku.</Polish>
+            <Portuguese>Variante mais difícil do mercado.</Portuguese>
+            <Russian>Более сложный и непредсказуемый вариант рынка.</Russian>
+            <German>Eine schwerere Variante des Marktes.</German>
+            <Korean>더 까다로운 조건의 하드코어 시장 구조입니다.</Korean>
+            <Japanese>より厳しく高難度な市場状態です。</Japanese>
+            <Chinese>難度更高、物價顯著上漲的市場變體。</Chinese>
+            <Chinesesimp>难度更高、物价显著上涨的市场变体。</Chinesesimp>
+            <Turkish>Piyasanın daha zor bir varyasyonu.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_InvalidAction">
+            <English>Invalid action: %1</English>
+            <Czech>Neplatná akce: %1</Czech>
+            <French>Action invalide : %1</French>
+            <Spanish>Acción no válida: %1</Spanish>
+            <Italian>Azione non valida: %1</Italian>
+            <Polish>Nieprawidłowa akcja: %1</Polish>
+            <Portuguese>Ação inválida: %1</Portuguese>
+            <Russian>Неверное действие: %1</Russian>
+            <German>Ungültige Aktion: %1</German>
+            <Korean>올바르지 않은 상호작용: %1</Korean>
+            <Japanese>無効なアクション: %1</Japanese>
+            <Chinese>無效操作: %1</Chinese>
+            <Chinesesimp>无效操作: %1</Chinesesimp>
+            <Turkish>Geçersiz eylem: %1</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_Inventory">
+            <English>Inventory: %1</English>
+            <Czech>Inventář: %1</Czech>
+            <French>Inventaire : %1</French>
+            <Spanish>Inventario: %1</Spanish>
+            <Italian>Inventario: %1</Italian>
+            <Polish>Ekwipunek: %1</Polish>
+            <Portuguese>Inventário: %1</Portuguese>
+            <Russian>Инвентарь: %1</Russian>
+            <German>Inventar: %1</German>
+            <Korean>소지품: %1</Korean>
+            <Japanese>インベントリ: %1</Japanese>
+            <Chinese>物資清單: %1</Chinese>
+            <Chinesesimp>物资清单: %1</Chinesesimp>
+            <Turkish>Envanter: %1</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_MarketShift">
+            <English>Changing cycle 'Market shift'</English>
+            <Czech>Cyklus změny trhu 'Market shift'</Czech>
+            <French>Cycle de changement 'Fluctuation du marché'</French>
+            <Spanish>Ciclo de cambio 'Fluctuación del mercado'</Spanish>
+            <Italian>Ciclo di variazione 'Fluttuazione del mercato'</Italian>
+            <Polish>Cykl zmian 'Fluktuacja rynku'</Polish>
+            <Portuguese>Ciclo de mudança 'Flutuação de mercado'</Portuguese>
+            <Russian>Цикл изменения цен «Сдвиг рынка»</Russian>
+            <German>Änderungszyklus 'Marktverschiebung'</German>
+            <Korean>시장 변동 주기 설정 'Market shift'</Korean>
+            <Japanese>市場変動サイクル設定 'Market shift'</Japanese>
+            <Chinese>市場演變週期 'Market shift'</Chinese>
+            <Chinesesimp>市场演变周期 'Market shift'</Chinesesimp>
+            <Turkish>Değişim döngüsü 'Piyasa değişimi'</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_MarketShiftDesc">
+            <English>Time in seconds per cycle (default: 3600 - 1 Real time hour)</English>
+            <Czech>Čas v sekundách na jeden cyklus (výchozí: 3600 - 1 hodina reálného času)</Czech>
+            <French>Durée en secondes par cycle (par défaut : 3600 - 1 heure de temps réel)</French>
+            <Spanish>Tiempo en segundos por ciclo (por defecto: 3600 - 1 hora de tiempo real)</Spanish>
+            <Italian>Tempo in secondi per ciclo (predefinito: 3600 - 1 ora di tempo reale)</Italian>
+            <Polish>Czas w sekundach na cykl (domyślnie: 3600 - 1 godzina czasu rzeczywistego)</Polish>
+            <Portuguese>Tempo em segundos por ciclo (padrão: 3600 - 1 hora de tempo real)</Portuguese>
+            <Russian>Время в секундах на один цикл обновления рынка (по умолчанию: 3600 — 1 час реального времени)</Russian>
+            <German>Zeit in Sekunden pro Zyklus (Standard: 3600 - 1 Echtzeitchronik)</German>
+            <Korean>시장 경제가 변동하는 한 주기의 시간(초 단위)입니다 (기본값: 3600 - 실제 시간 1시간)</Korean>
+            <Japanese>市場経済が変動する1サイクルの時間（秒単位）です（デフォルト: 3600 - リアル時間1時間）</Japanese>
+            <Chinese>市場經濟動態重置與演變的單次循環時間（秒）（預設值: 3600，即現實時間 1 小時）</Chinese>
+            <Chinesesimp>市场经济动态重置与演变的单次循环时间（秒）（默认值: 3600，即现实时间 1 小时）</Chinesesimp>
+            <Turkish>Döngü başına saniye cinsinden süre (varsayılan: 3600 - 1 Gerçek zamanlı saat)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_MissingItem">
+            <English>You don't have this item...</English>
+            <Czech>Tuto položku nevlastníš...</Czech>
+            <French>Vous ne possédez pas cet objet...</French>
+            <Spanish>No tienes este objeto...</Spanish>
+            <Italian>Non possiedi questo oggetto...</Italian>
+            <Polish>Nie posiadasz tego przedmiotu...</Polish>
+            <Portuguese>Não tens este item...</Portuguese>
+            <Russian>У вас нет этого предмета...</Russian>
+            <German>Du hast diesen Gegenstand nicht...</German>
+            <Korean>이 아이템을 소지하고 있지 않습니다...</Korean>
+            <Japanese>このアイテムを所持していません...</Japanese>
+            <Chinese>您未擁有此物品...</Chinese>
+            <Chinesesimp>您未拥有此物品...</Chinesesimp>
+            <Turkish>Bu eşyaya sahip değilsiniz...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_NoSelection">
+            <English>No item selected...</English>
+            <Czech>Není vybrána žádná položka...</Czech>
+            <French>Aucun objet sélectionné...</French>
+            <Spanish>Ningún objeto seleccionado...</Spanish>
+            <Italian>Nessun oggetto selezionato...</Italian>
+            <Polish>Nie wybrano przedmiotu...</Polish>
+            <Portuguese>Nenhum item selecionado...</Portuguese>
+            <Russian>Предмет не выбран...</Russian>
+            <German>Kein Gegenstand ausgewählt...</German>
+            <Korean>선택된 아이템이 없습니다...</Korean>
+            <Japanese>アイテムが選択されていません...</Japanese>
+            <Chinese>未選擇任何物品...</Chinese>
+            <Chinesesimp>未选择任何物品...</Chinesesimp>
+            <Turkish>Hiçbir eşya seçilmedi...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_Normal">
+            <English>normal</English>
+            <Czech>normální</Czech>
+            <French>normal</French>
+            <Spanish>normal</Spanish>
+            <Italian>normale</Italian>
+            <Polish>normalny</Polish>
+            <Portuguese>normal</Portuguese>
+            <Russian>нормальный</Russian>
+            <German>normal</German>
+            <Korean>일반</Korean>
+            <Japanese>通常</Japanese>
+            <Chinese>標準</Chinese>
+            <Chinesesimp>标准</Chinesesimp>
+            <Turkish>normal</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_NormalDesc">
+            <English>The most stable market.</English>
+            <Czech>Nejstabilnější trh.</Czech>
+            <French>Le marché le plus stable.</French>
+            <Spanish>El mercado más estable.</Spanish>
+            <Italian>Il mercato più stabile.</Italian>
+            <Polish>Najbardziej stabilny rynek.</Polish>
+            <Portuguese>O mercado mais estável.</Portuguese>
+            <Russian>Самый стабильный рынок.</Russian>
+            <German>Der stabilste Markt.</German>
+            <Korean>가장 안정적인 형태의 시장 구조입니다.</Korean>
+            <Japanese>最も安定した市場状態です。</Japanese>
+            <Chinese>最為穩定均衡的市場經濟狀態。</Chinese>
+            <Chinesesimp>最为稳定均衡的市场经济状态。</Chinesesimp>
+            <Turkish>En istikrarlı piyasa.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_NothingToSell">
+            <English>You have nothing to sell...</English>
+            <Czech>Nemáš nic k prodeji...</Czech>
+            <French>Vous n'avez rien à vendre...</French>
+            <Spanish>No tienes nada que vender...</Spanish>
+            <Italian>Non hai nulla da vendere...</Italian>
+            <Polish>Nie masz nic do sprzedania...</Polish>
+            <Portuguese>Não tens nada para vender...</Portuguese>
+            <Russian>Вам нечего продавать...</Russian>
+            <German>Du hast nichts zu verkaufen...</German>
+            <Korean>판매할 아이템이 없습니다...</Korean>
+            <Japanese>売却できるアイテムがありません...</Japanese>
+            <Chinese>您沒有任何可出售 purchasing 的物品...</Chinese>
+            <Chinesesimp>您没有任何可出售的物品...</Chinesesimp>
+            <Turkish>Satacak hiçbir şeyiniz yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_OpenAction">
+            <English>Open %1</English>
+            <Czech>Otevřít %1</Czech>
+            <French>Ouvrir %1</French>
+            <Spanish>Abrir %1</Spanish>
+            <Italian>Apri %1</Italian>
+            <Polish>Otwórz %1</Polish>
+            <Portuguese>Abrir %1</Portuguese>
+            <Russian>Открыть %1</Russian>
+            <German>Öffne %1</German>
+            <Korean>%1 열기</Korean>
+            <Japanese>%1 を開く</Japanese>
+            <Chinese>打開 %1</Chinese>
+            <Chinesesimp>打开 %1</Chinesesimp>
+            <Turkish>%1 Aç</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_OutOfStock">
+            <English>Out of stock: %1</English>
+            <Czech>Není skladem: %1</Czech>
+            <French>Rupture de stock : %1</French>
+            <Spanish>Agotado: %1</Spanish>
+            <Italian>Esaurito: %1</Italian>
+            <Polish>Brak w magazynie: %1</Polish>
+            <Portuguese>Esgotado: %1</Portuguese>
+            <Russian>Нет в наличии: %1</Russian>
+            <German>Nicht vorrätig: %1</German>
+            <Korean>품절: %1</Korean>
+            <Japanese>在庫切れ: %1</Japanese>
+            <Chinese>商品缺貨: %1</Chinese>
+            <Chinesesimp>商品缺货: %1</Chinesesimp>
+            <Turkish>Stokta yok: %1</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_PriceInfo">
+            <English>Price: %1 %2</English>
+            <Czech>Cena: %1 %2</Czech>
+            <French>Prix : %1 %2</French>
+            <Spanish>Precio: %1 %2</Spanish>
+            <Italian>Prezzo: %1 %2</Italian>
+            <Polish>Cena: %1 %2</Polish>
+            <Portuguese>Preço: %1 %2</Portuguese>
+            <Russian>Цена: %1 %2</Russian>
+            <German>Preis: %1 %2</German>
+            <Korean>가격: %1 %2</Korean>
+            <Japanese>価格: %1 %2</Japanese>
+            <Chinese>價格: %1 %2</Chinese>
+            <Chinesesimp>价格: %1 %2</Chinesesimp>
+            <Turkish>Fiyat: %1 %2</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_PurchaseSuccess">
+            <English>%1 purchased for %2 %3</English>
+            <Czech>Zakoupeno %1 za %2 %3</Czech>
+            <French>%1 acheté pour %2 %3</French>
+            <Spanish>%1 comprado por %2 %3</Spanish>
+            <Italian>%1 acquistato per %2 %3</Italian>
+            <Polish>Zakupiono %1 za %2 %3</Polish>
+            <Portuguese>%1 comprado por %2 %3</Portuguese>
+            <Russian>%1 куплено за %2 %3</Russian>
+            <German>%1 für %2 %3 gekauft</German>
+            <Korean>%1을(를) %2 %3에 구매했습니다</Korean>
+            <Japanese>%1 を %2 %3 で購入しました</Japanese>
+            <Chinese>已花費 %2 %3 購買了 %1</Chinese>
+            <Chinesesimp>已花费 %2 %3 购买了 %1</Chinesesimp>
+            <Turkish>%1, %2 %3 karşılığında satın alındı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_Recession">
+            <English>recession</English>
+            <Czech>recese</Czech>
+            <French>récession</French>
+            <Spanish>recesión</Spanish>
+            <Italian>recessione</Italian>
+            <Polish>recesja</Polish>
+            <Portuguese>recessão</Portuguese>
+            <Russian>рецессия</Russian>
+            <German>Rezession</German>
+            <Korean>경기 침체</Korean>
+            <Japanese>景기 후퇴</Japanese>
+            <Chinese>經濟衰退</Chinese>
+            <Chinesesimp>经济衰退</Chinesesimp>
+            <Turkish>resesyon</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_RecessionDesc">
+            <English>A Medium level of difficulty with the market.</English>
+            <Czech>Střední úroveň obtížnosti trhu.</Czech>
+            <French>Un niveau de difficulté moyen pour le marché.</French>
+            <Spanish>Un nivel de dificultad medio para el mercado.</Spanish>
+            <Italian>Un livello di difficoltà medio per il mercato.</Italian>
+            <Polish>Średni poziom trudności rynku.</Polish>
+            <Portuguese>Um nível médio de dificuldade com o mercado.</Portuguese>
+            <Russian>Средний уровень сложности рыночных отношений.</Russian>
+            <German>Ein mittlerer Schwierigkeitsgrad für den Markt.</German>
+            <Korean>중간 정도의 난이도를 가진 시장 구조입니다.</Korean>
+            <Japanese>中程度の難易度を持つ市場状態です。</Japanese>
+            <Chinese>中等难度的市場交易體系。</Chinese>
+            <Chinesesimp>中等难度的市场交易体系。</Chinesesimp>
+            <Turkish>Piyasada orta düzeyde bir zorluk derecesi.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_Sell">
+            <English>Sell</English>
+            <Czech>Prodat</Czech>
+            <French>Vendre</French>
+            <Spanish>Vender</Spanish>
+            <Italian>Vendi</Italian>
+            <Polish>Sprzedaj</Polish>
+            <Portuguese>Vender</Portuguese>
+            <Russian>Продать</Russian>
+            <German>Verkaufen</German>
+            <Korean>판매</Korean>
+            <Japanese>売却</Japanese>
+            <Chinese>出售</Chinese>
+            <Chinesesimp>出售</Chinesesimp>
+            <Turkish>Sat</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_SellMenu">
+            <English>Sell Menu</English>
+            <Czech>Menu prodeje</Czech>
+            <French>Menu de vente</French>
+            <Spanish>Menú de venta</Spanish>
+            <Italian>Menu vendita</Italian>
+            <Polish>Menu sprzedaży</Polish>
+            <Portuguese>Menu de venda</Portuguese>
+            <Russian>Меню продажи</Russian>
+            <German>Verkaufsmenü</German>
+            <Korean>판매 메뉴</Korean>
+            <Japanese>売却メニュー</Japanese>
+            <Chinese>出售選單</Chinese>
+            <Chinesesimp>出售菜单</Chinesesimp>
+            <Turkish>Satış Menüsü</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_SellSuccess">
+            <English>%1 sold for %2 %3</English>
+            <Czech>%1 prodáno za %2 %3</Czech>
+            <French>%1 vendu pour %2 %3</French>
+            <Spanish>%1 vendido por %2 %3</Spanish>
+            <Italian>%1 venduto per %2 %3</Italian>
+            <Polish>Sprzedano %1 za %2 %3</Polish>
+            <Portuguese>%1 vendido por %2 %3</Portuguese>
+            <Russian>%1 продано за %2 %3</Russian>
+            <German>%1 für %2 %3 verkauft</German>
+            <Korean>%1을(를) %2 %3에 판매했습니다</Korean>
+            <Japanese>%1 を %2 %3 で売却しました</Japanese>
+            <Chinese>已將 %1 以 %2 %3 的價格出售</Chinese>
+            <Chinesesimp>已将 %1 以 %2 %3 的价格出售</Chinesesimp>
+            <Turkish>%1, %2 %3 karşılığında satıldı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_StockInfo">
+            <English>Stock: %1</English>
+            <Czech>Skladem: %1</Czech>
+            <French>Stock : %1</French>
+            <Spanish>Existencias: %1</Spanish>
+            <Italian>Scorte: %1</Italian>
+            <Polish>Zapas: %1</Polish>
+            <Portuguese>Stock: %1</Portuguese>
+            <Russian>Запас: %1</Russian>
+            <German>Bestand: %1</German>
+            <Korean>재고: %1</Korean>
+            <Japanese>在庫: %1</Japanese>
+            <Chinese>庫存: %1</Chinese>
+            <Chinesesimp>库存: %1</Chinesesimp>
+            <Turkish>Stok: %1</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Traders_TraderInsufficientFunds">
+            <English>Trader cannot afford this transaction!</English>
+            <Czech>Obchodník si tuto transakci nemůže dovolit!</Czech>
+            <French>Le marchand n'a pas les moyens pour cette transaction !</French>
+            <Spanish>¡El comerciante no puede permitirse esta transacción!</Spanish>
+            <Italian>Il commerciante non può permettersi questa transazione!</Italian>
+            <Polish>Handlarz nemá wystarczających środków na tę transakcję!</Polish>
+            <Portuguese>O comerciante não tem fundos para esta transação!</Portuguese>
+            <Russian>У торговца недостаточно средств для этой сделки!</Russian>
+            <German>Der Händler kann sich diese Transaktion nicht leisten!</German>
+            <Korean>상인의 자금이 부족하여 거래할 수 없습니다!</Korean>
+            <Japanese>商人の資金が不足しているため取引できません！</Japanese>
+            <Chinese>商人資金不足，無法支付此筆交易！</Chinese>
+            <Chinesesimp>商人资金不足，无法支付此笔交易！</Chinesesimp>
+            <Turkish>Tüccarın bu işlemi gerçekleştirmek için parası yetmiyor!</Turkish>
+        </Key>
+    </Package>
+</Project>

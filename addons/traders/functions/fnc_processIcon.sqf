@@ -42,12 +42,12 @@
 
         private _isBuy = GVAR(currentAction) isEqualTo "buy";
         private _price = [_basePrice, _stock, _minCostFactor, _maxCostFactor, _isBuy] call FUNC(calculatePrice);
-        _priceStr = format ["Price: %1 %2", EGVAR(currency,symbol), [_price, 1, 2, true] call CBA_fnc_formatNumber];
+        _priceStr = format [localize LSTRING(PriceInfo), EGVAR(currency,symbol), [_price, 1, 2, true] call CBA_fnc_formatNumber];
 
         if (_isBuy) then {
-            _stockStr = format ["Stock: %1", round(_stock)];
+            _stockStr = format [localize LSTRING(StockInfo), round(_stock)];
         } else {
-            _stockStr = format ["Inventory: %1", [_itemName] call EFUNC(common,countItem)];
+            _stockStr = format [localize LSTRING(Inventory), [_itemName] call EFUNC(common,countItem)];
         };
     };
 

@@ -6,7 +6,7 @@ if (isServer) then {
 
         private _craftingAction = [
             QGVAR(crafting_menu),
-            localize ECSTRING(common,CraftingWorkbench),
+            localize LSTRING(Action),
             QPATHTOEF(icons,data\hammer_ca.paa),
             {
                 params ["_target", "_player"];

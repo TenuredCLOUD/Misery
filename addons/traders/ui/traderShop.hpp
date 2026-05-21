@@ -88,7 +88,7 @@ class CLASS(traderShop_ui) {
         };
         class CLASS(traderShop_sell): RscButton {
             idc = 1602;
-            text = QUOTE(Buy); //--- ToDo: Localize;
+            text = ECSTRING(traders,Buy);
             x = 0.5625;
             y = 0.54;
             w = 0.175;
@@ -102,7 +102,7 @@ class CLASS(traderShop_ui) {
         };
         class CLASS(traderShop_gift): RscButton {
             idc = 1603;
-            text = QUOTE(Gift Item); //--- ToDo: Localize;
+            text = ECSTRING(traders,Gift);
             x = 0.5625;
             y = 0.64;
             w = 0.175;
@@ -116,7 +116,7 @@ class CLASS(traderShop_ui) {
         };
         class CLASS(traderShop_buyMenu): RscButton {
             idc = 1600;
-            text = QUOTE(Sell Menu); //--- ToDo: Localize;
+            text = ECSTRING(traders,SellMenu);
             x = 0.5625;
             y = 0.74;
             w = 0.175;
@@ -130,7 +130,7 @@ class CLASS(traderShop_ui) {
         };
         class CLASS(traderShop_exit): RscButton {
             idc = 1601;
-            text = QUOTE(Exit); //--- ToDo: Localize;
+            text = ECSTRING(common,Exit);
             x = 0.95;
             y = 0.94;
             w = 0.175;
@@ -144,7 +144,7 @@ class CLASS(traderShop_ui) {
         };
         class CLASS(traderShop_showCompats): CLASS(Checkbox) {
             idc = 2800;
-            tooltip = QUOTE(Only show compatible weapon items);
+            tooltip = ECSTRING(traders,CompatibleFilter);
             x = 0.53025;
             y = -0.0328;
             w = 0.0375;

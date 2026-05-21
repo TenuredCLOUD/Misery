@@ -18,10 +18,10 @@ private _hasMatch = [[QCLASS(matches)]] call EFUNC(common,hasItem);
 private _hasLighter = [[QCLASS(lighter)]] call EFUNC(common,hasItem);
 
 if !(_hasMatch && _hasLighter) exitWith {
-    [QEGVAR(common,tileText), "You need a lighter or matches to smoke..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(NoFireSource)] call CBA_fnc_localEvent;
 };
 
-[QEGVAR(common,tileText), "You light up a cigarette..."] call CBA_fnc_localEvent;
+[QEGVAR(common,tileText), localize LSTRING(LightCigarette)] call CBA_fnc_localEvent;
 
 [QCLASS(cigarettePack)] call EFUNC(common,itemDecrement);
 
