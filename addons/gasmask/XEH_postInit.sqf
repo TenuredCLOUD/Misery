@@ -8,13 +8,6 @@ if (!hasInterface) exitWith {};
         call FUNC(rebreatherAudio);
     };
 
-    if (GVAR(overlays)) then {
-        // Only allow if ACE overlays aren't enabled
-        if (!isNil QACEGVAR(goggles,drawOverlay) && !ACEGVAR(goggles,drawOverlay)) then {
-            call FUNC(overlays);
-        };
-    };
-
     if (GVAR(rebreatherHoses)) then {
         call FUNC(rebreatherHose);
     };
