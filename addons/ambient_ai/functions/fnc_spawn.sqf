@@ -85,8 +85,11 @@ for "_i" from 1 to _numEntities do {
 
     [_unit] call FUNC(randomGear);
 
+    [_unit, _unit] call ACEFUNC(common,claim);
+
     if !(isMultiplayer) then {
         [_unit] call FUNC(addRecruitOption);
+        [_unit] call FUNC(addGearOption);
     };
 
     _unit setVariable [QGRADGVAR(persistence,isExcluded), true];

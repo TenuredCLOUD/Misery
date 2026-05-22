@@ -625,6 +625,22 @@
             <Chinesesimp>东方 / 红方</Chinesesimp>
             <Turkish>Doğu / OPFOR</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Ambient_AI_OpenInventory">
+            <English>Open inventory</English>
+            <Czech>Otevřít inventář</Czech>
+            <French>Ouvrir l'inventaire</French>
+            <Spanish>Abrir inventario</Spanish>
+            <Italian>Apri inventario</Italian>
+            <Polish>Otwórz ekwipunek</Polish>
+            <Portuguese>Abrir inventário</Portuguese>
+            <Russian>Открыть инвентарь</Russian>
+            <German>Inventar öffnen</German>
+            <Korean>인벤토리 열기</Korean>
+            <Japanese>インベントリを開く</Japanese>
+            <Chinese>打開背包 / 打開物品欄</Chinese>
+            <Chinesesimp>打开背包 / 打开物品栏</Chinesesimp>
+            <Turkish>Envanteri aç</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Ambient_AI_PrimaryWeapons">
             <English>Primary weapons</English>
             <Czech>Primární zbraně</Czech>

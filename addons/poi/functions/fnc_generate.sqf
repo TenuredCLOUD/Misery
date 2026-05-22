@@ -251,6 +251,13 @@ if (_aiClass isNotEqualTo "") then {
         _unit setSkill ["aimingShake", _aiShake];
         _unit setSkill ["aimingSpeed", _aiSpeed];
 
+        [_unit, _unit] call ACEFUNC(common,claim);
+
+        if !(isMultiplayer) then {
+            [_unit] call EFUNC(ambient_ai,addRecruitOption);
+            [_unit] call EFUNC(ambient_ai,addGearOption);
+        };
+
         if ([50] call EFUNC(common,rollChance)) then {_unit action ["sitDown", _unit];};
     };
 

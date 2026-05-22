@@ -1,3 +1,4 @@
+PREP(addGearOption);
 PREP(addRecruitOption);
 PREP(clean);
 PREP(convertToArray);
