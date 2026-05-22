@@ -1,0 +1,1653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Maintenance">
+        <Key ID="STR_MISERY_Maintenance_Action">
+            <English>Vehicle Maintenance</English>
+            <Czech>Údržba vozidla</Czech>
+            <French>Entretien du véhicule</French>
+            <Spanish>Mantenimiento del vehículo</Spanish>
+            <Italian>Manutenzione del veicolo</Italian>
+            <Polish>Obsługa pojazdów</Polish>
+            <Portuguese>Manutenção do veículo</Portuguese>
+            <Russian>Обслуживание транспорта</Russian>
+            <German>Fahrzeugwartung</German>
+            <Korean>차량 정비</Korean>
+            <Japanese>車両整備</Japanese>
+            <Chinese>車輛維護</Chinese>
+            <Chinesesimp>车辆维护</Chinesesimp>
+            <Turkish>Araç Bakımı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_AddBattery">
+            <English>Add battery</English>
+            <Czech>Vložit baterii</Czech>
+            <French>Installer la batterie</French>
+            <Spanish>Instalar batería</Spanish>
+            <Italian>Installa batteria</Italian>
+            <Polish>Włóż akumulator</Polish>
+            <Portuguese>Instalar bateria</Portuguese>
+            <Russian>Установить аккумулятор</Russian>
+            <German>Batterie einbauen</German>
+            <Korean>배터리 장착</Korean>
+            <Japanese>バッテリーを装着</Japanese>
+            <Chinese>安裝蓄電池</Chinese>
+            <Chinesesimp>安装蓄电池</Chinesesimp>
+            <Turkish>Batarya ekle</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_AddCoolant">
+            <English>Add coolant</English>
+            <Czech>Doplnit chladicí kapalinu</Czech>
+            <French>Ajouter du liquide de refroidissement</French>
+            <Spanish>Añadir refrigerante</Spanish>
+            <Italian>Aggiungi refrigerante</Italian>
+            <Polish>Dolej płyn chłodniczy</Polish>
+            <Portuguese>Adicionar refrigerante</Portuguese>
+            <Russian>Долить антифриз</Russian>
+            <German>Kühlmittel nachfüllen</German>
+            <Korean>냉각수 보충</Korean>
+            <Japanese>冷却水を注入</Japanese>
+            <Chinese>加注冷卻液</Chinese>
+            <Chinesesimp>加注冷却液</Chinesesimp>
+            <Turkish>Antifriz ekle</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_AddOil">
+            <English>Add oil</English>
+            <Czech>Doplnit olej</Czech>
+            <French>Ajouter de l'huile</French>
+            <Spanish>Añadir aceite</Spanish>
+            <Italian>Aggiungi olio</Italian>
+            <Polish>Dolej olej</Polish>
+            <Portuguese>Adicionar óleo</Portuguese>
+            <Russian>Долить масло</Russian>
+            <German>Öl nachfüllen</German>
+            <Korean>엔진오일 보충</Korean>
+            <Japanese>オイルを注入</Japanese>
+            <Chinese>加注機油</Chinese>
+            <Chinesesimp>加注机油</Chinesesimp>
+            <Turkish>Yağ ekle</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_AddingOilProgress">
+            <English>Adding oil...</English>
+            <Czech>Doplňování oleje...</Czech>
+            <French>Ajout d'huile...</French>
+            <Spanish>Añadiendo aceite...</Spanish>
+            <Italian>Aggiunta olio...</Italian>
+            <Polish>Dodawanie oleju...</Polish>
+            <Portuguese>A adicionar óleo...</Portuguese>
+            <Russian>Добавление масла...</Russian>
+            <German>Öl wird eingefüllt...</German>
+            <Korean>오일 보충 중...</Korean>
+            <Japanese>オイルを補給中...</Japanese>
+            <Chinese>正在添加機油...</Chinese>
+            <Chinesesimp>正在添加机油...</Chinesesimp>
+            <Turkish>Yağ ekleniyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_AllBatteriesInstalled">
+            <English>All batteries already installed...</English>
+            <Czech>Všechny baterie jsou již nainstalovány...</Czech>
+            <French>Toutes les piles sont déjà installées...</French>
+            <Spanish>Todas las baterías ya están instaladas...</Spanish>
+            <Italian>Tutte le batterie sono già installate...</Italian>
+            <Polish>Wszystkie baterie są już zamontowane...</Polish>
+            <Portuguese>Todas as baterias já estão instaladas...</Portuguese>
+            <Russian>Все батареи уже установлены...</Russian>
+            <German>Alle Batterien sind bereits eingebaut...</German>
+            <Korean>모든 배터리가 이미 설치되어 있습니다...</Korean>
+            <Japanese>すべてのバッテリーがすでに取り付けられています...</Japanese>
+            <Chinese>所有電池皆已安裝...</Chinese>
+            <Chinesesimp>所有电池皆已安装...</Chinesesimp>
+            <Turkish>Tüm piller zaten takılmış...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_BatteryInstalledCount">
+            <English>Installed (x1) %1. Total batteries: %2/%3.</English>
+            <Czech>Nainstalováno (x1) %1. Celkem baterií: %2/%3.</Czech>
+            <French>Installé (x1) %1. Total des piles : %2/%3.</French>
+            <Spanish>Instalado (x1) %1. Baterías totales: %2/%3.</Spanish>
+            <Italian>Installata (x1) %1. Batterie totali: %2/%3.</Italian>
+            <Polish>Zamontowano (x1) %1. Łącznie baterii: %2/%3.</Polish>
+            <Portuguese>Instalado (x1) %1. Total de baterias: %2/%3.</Portuguese>
+            <Russian>Установлено (x1) %1. Всего батарей: %2/%3.</Russian>
+            <German>Eingebaut (x1) %1. Batterien insgesamt: %2/%3.</German>
+            <Korean>설치됨 (x1) %1. 전체 배터리: %2/%3.</Korean>
+            <Japanese>取り付け完了 (x1) %1。総バッテリー数: %2/%3。</Japanese>
+            <Chinese>已安裝 (x1) %1。總電池數：%2/%3。</Chinese>
+            <Chinesesimp>已安装 (x1) %1。总电池数：%2/%3。</Chinesesimp>
+            <Turkish>Takıldı (x1) %1. Toplam pil: %2/%3.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_BatteryStatusLabel">
+            <English>Battery - %1/%2</English>
+            <Czech>Baterie - %1/%2</Czech>
+            <French>Batterie - %1/%2</French>
+            <Spanish>Batería - %1/%2</Spanish>
+            <Italian>Batteria - %1/%2</Italian>
+            <Polish>Akumulator - %1/%2</Polish>
+            <Portuguese>Bateria - %1/%2</Portuguese>
+            <Russian>Аккумулятор — %1/%2</Russian>
+            <German>Batterie - %1/%2</German>
+            <Korean>배터리 - %1/%2</Korean>
+            <Japanese>バッテリー - %1/%2</Japanese>
+            <Chinese>電池 - %1/%2</Chinese>
+            <Chinesesimp>电池 - %1/%2</Chinesesimp>
+            <Turkish>Batarya - %1/%2</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_BatteryStatusParentheses">
+            <English>(Batteries: %1/%2)</English>
+            <Czech>(Baterie: %1/%2)</Czech>
+            <French>(Batteries : %1/%2)</French>
+            <Spanish>(Baterías: %1/%2)</Spanish>
+            <Italian>(Batterie: %1/%2)</Italian>
+            <Polish>(Akumulatory: %1/%2)</Polish>
+            <Portuguese>(Baterias: %1/%2)</Portuguese>
+            <Russian>(Аккумуляторы: %1/%2)</Russian>
+            <German>(Batterien: %1/%2)</German>
+            <Korean>(배터리: %1/%2)</Korean>
+            <Japanese>(バッテリー: %1/%2)</Japanese>
+            <Chinese>(電池：%1/%2)</Chinese>
+            <Chinesesimp>(电池：%1/%2)</Chinesesimp>
+            <Turkish>(Bataryalar: %1/%2)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_CannotRepair">
+            <English>Cannot repair %1...</English>
+            <Czech>Nelze opravit %1...</Czech>
+            <French>Impossible de réparer %1...</French>
+            <Spanish>No se puede reparar %1...</Spanish>
+            <Italian>Impossibile riparare %1...</Italian>
+            <Polish>Nie można naprawić %1...</Polish>
+            <Portuguese>Não é possível reparar %1...</Portuguese>
+            <Russian>Невозможно отремонтировать %1...</Russian>
+            <German>%1 kann nicht repariert werden...</German>
+            <Korean>%1을(를) 수리할 수 없습니다...</Korean>
+            <Japanese>%1を修理できません...</Japanese>
+            <Chinese>無法維修 %1...</Chinese>
+            <Chinesesimp>无法维修 %1...</Chinesesimp>
+            <Turkish>%1 onarılamıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_CannotScavenge">
+            <English>Cannot scavenge %1...</English>
+            <Czech>Nelze rozebrat %1...</Czech>
+            <French>Impossible de récupérer %1...</French>
+            <Spanish>No se puede desguazar %1...</Spanish>
+            <Italian>Impossibile recuperare %1...</Italian>
+            <Polish>Nie można zdemontować %1...</Polish>
+            <Portuguese>Não é possível reaproveitar %1...</Portuguese>
+            <Russian>Невозможно извлечь %1...</Russian>
+            <German>%1 kann nicht demontiert werden...</German>
+            <Korean>%1을(를) 회수할 수 없습니다...</Korean>
+            <Japanese>%1を回収できません...</Japanese>
+            <Chinese>無法回收 %1...</Chinese>
+            <Chinesesimp>无法回收 %1...</Chinesesimp>
+            <Turkish>%1 sökülemez...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_Component">
+            <English>Maintenance</English>
+            <Czech>Údržba</Czech>
+            <French>Maintenance</French>
+            <Spanish>Mantenimiento</Spanish>
+            <Italian>Manutenzione</Italian>
+            <Polish>Konserwacja</Polish>
+            <Portuguese>Manutenção</Portuguese>
+            <Russian>Обслуживание</Russian>
+            <German>Wartung</German>
+            <Korean>정비</Korean>
+            <Japanese>メンテナンス</Japanese>
+            <Chinese>維護 / 保養</Chinese>
+            <Chinesesimp>维护 / 保养</Chinesesimp>
+            <Turkish>Bakım</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_ContainerFullOrUnavailable">
+            <English>%1 is full or no longer available...</English>
+            <Czech>%1 je plný nebo již není dostupný...</Czech>
+            <French>%1 est plein ou n'est plus disponible...</French>
+            <Spanish>%1 está lleno o ya no está disponible...</Spanish>
+            <Italian>%1 è pieno o non è più disponibile...</Italian>
+            <Polish>%1 jest pełny lub nie jest już dostępny...</Polish>
+            <Portuguese>%1 está cheio ou já não está disponível...</Portuguese>
+            <Russian>%1 заполнен или более недоступен...</Russian>
+            <German>%1 ist voll oder nicht mehr verfügbar...</German>
+            <Korean>%1이(가) 가득 찼거나 더 이상 사용할 수 없습니다...</Korean>
+            <Japanese>%1は満タンか、または利用できません...</Japanese>
+            <Chinese>%1 已滿或不再可用...</Chinese>
+            <Chinesesimp>%1 已满或不再可用...</Chinesesimp>
+            <Turkish>%1 dolu veya artık mevcut değil...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_Coolant">
+            <English>You need engine coolant to refill %1...</English>
+            <Czech>K doplnění %1 potřebujete chladicí kapalinu do motoru...</Czech>
+            <French>Vous avez besoin de liquide de refroidissement pour ravitailler %1...</French>
+            <Spanish>Necesitas refrigerante de motor para rellenar %1...</Spanish>
+            <Italian>Hai bisogno di liquido refrigerante per motore per rifornire %1...</Italian>
+            <Polish>Potrzebujesz płynu chłodniczego, aby napełnić %1...</Polish>
+            <Portuguese>Precisa de líquido de refrigeração de motor para reabastecer %1...</Portuguese>
+            <Russian>Вам нужен хладагент для двигателя, чтобы заправить %1...</Russian>
+            <German>Du benötigst Motorkühlmittel, um %1 aufzufüllen...</German>
+            <Korean>%1을(를) 보충하려면 엔진 냉각수가 필요합니다...</Korean>
+            <Japanese>%1に給유하려면 エンジン冷却水が必要です...</Japanese>
+            <Chinese>您需要引擎冷卻液來為 %1 加注...</Chinese>
+            <Chinesesimp>您需要引擎冷却液来为 %1 加注...</Chinesesimp>
+            <Turkish>%1 doldurmak için motor soğutma sıvısına ihtiyacınız var...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_CoolantFull">
+            <English>%1 coolant is full...</English>
+            <Czech>Chladicí kapalina u %1 je plná...</Czech>
+            <French>Le liquide de refroidissement de %1 est plein...</French>
+            <Spanish>El refrigerante de %1 está lleno...</Spanish>
+            <Italian>Il liquido refrigerante di %1 è pieno...</Italian>
+            <Polish>Płyn chłodniczy w %1 jest pełny...</Polish>
+            <Portuguese>O líquido de refrigeração de %1 está cheio...</Portuguese>
+            <Russian>Хладагент в %1 заполнен...</Russian>
+            <German>%1-Kühlmittel ist voll...</German>
+            <Korean>%1의 냉각수가 가득 찼습니다...</Korean>
+            <Japanese>%1의 冷却水は満タンです...</Japanese>
+            <Chinese>%1 的冷卻液已滿...</Chinese>
+            <Chinesesimp>%1 的冷却液已满...</Chinesesimp>
+            <Turkish>%1 soğutma sıvısı dolu...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_CoolantInterrupted">
+            <English>Adding coolant interrupted...</English>
+            <Czech>Doplňování chladicí kapaliny přerušeno...</Czech>
+            <French>Ajout de liquide de refroidissement interrompu...</French>
+            <Spanish>Adición de refrigerante interrumpida...</Spanish>
+            <Italian>Aggiunta del liquido refrigerante interrotta...</Italian>
+            <Polish>Dodawanie płynu chłodniczego przerwane...</Polish>
+            <Portuguese>Adição de líquido de refrigeração interrompida...</Portuguese>
+            <Russian>Добавление хладагента прервано...</Russian>
+            <German>Einfüllen von Kühlmittel unterbrochen...</German>
+            <Korean>냉각수 보충이 중단되었습니다...</Korean>
+            <Japanese>冷却水の補給が中断されました...</Japanese>
+            <Chinese>添加冷卻液中斷...</Chinese>
+            <Chinesesimp>添加冷却液中断...</Chinesesimp>
+            <Turkish>Soğutma sıvısı ekleme işlemi kesintiye uğradı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_CoolantIsEmpty">
+            <English>%1 coolant is empty...</English>
+            <Czech>Chladicí kapalina u %1 je prázdná...</Czech>
+            <French>Le liquide de refroidissement de %1 est vide...</French>
+            <Spanish>El refrigerante de %1 está vacío...</Spanish>
+            <Italian>Il liquido di raffreddamento di %1 è vuoto...</Italian>
+            <Polish>Płyn chłodniczy w %1 jest pusty...</Polish>
+            <Portuguese>O líquido de refrigeração de %1 está vazio...</Portuguese>
+            <Russian>Охлаждающая жидкость в %1 пуста...</Russian>
+            <German>%1-Kühlmittel ist leer...</German>
+            <Korean>%1의 냉각수가 비어 있습니다...</Korean>
+            <Japanese>%1の冷却水が空です...</Japanese>
+            <Chinese>%1 的冷卻液已空...</Chinese>
+            <Chinesesimp>%1 的冷却液已空...</Chinesesimp>
+            <Turkish>%1 soğutma sıvısı boş...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_CoolantLabel">
+            <English>Coolant:</English>
+            <Czech>Chladicí kapalina:</Czech>
+            <French>Liquide de refroidissement :</French>
+            <Spanish>Refrigerante:</Spanish>
+            <Italian>Refrigerante:</Italian>
+            <Polish>Płyn chłodniczy:</Polish>
+            <Portuguese>Refrigerante:</Portuguese>
+            <Russian>Антифриз:</Russian>
+            <German>Kühlmittel:</German>
+            <Korean>냉각수:</Korean>
+            <Japanese>冷却水:</Japanese>
+            <Chinese>冷卻液:</Chinese>
+            <Chinesesimp>冷却液:</Chinesesimp>
+            <Turkish>Antifriz:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_CoolantLevelLabel">
+            <English>coolant level:</English>
+            <Czech>hladina chladicí kapaliny:</Czech>
+            <French>niveau de liquide de refroidissement :</French>
+            <Spanish>nivel de refrigerante:</Spanish>
+            <Italian>livello liquido di raffreddamento:</Italian>
+            <Polish>poziom płynu chłodniczego:</Polish>
+            <Portuguese>nível de líquido de refrigeração:</Portuguese>
+            <Russian>уровень охлаждающей жидкости:</Russian>
+            <German>Kühlmittelstand:</German>
+            <Korean>냉각수 레벨:</Korean>
+            <Japanese>冷却水残量:</Japanese>
+            <Chinese>冷卻液位：</Chinese>
+            <Chinesesimp>冷却液位：</Chinesesimp>
+            <Turkish>soğutma sıvısı seviyesi:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_CoolantProgress">
+            <English>Adding coolant...</English>
+            <Czech>Doplňování chladicí kapaliny...</Czech>
+            <French>Ajout de liquide de refroidissement...</French>
+            <Spanish>Añadiendo refrigerante...</Spanish>
+            <Italian>Aggiunta liquido refrigerante...</Italian>
+            <Polish>Dodawanie płynu chłodniczego...</Polish>
+            <Portuguese>A adicionar líquido de refrigeração...</Portuguese>
+            <Russian>Добавление хладагента...</Russian>
+            <German>Kühlmittel wird eingefüllt...</German>
+            <Korean>냉각수 보충 중...</Korean>
+            <Japanese>冷却水を補給中...</Japanese>
+            <Chinese>正在添加冷卻液...</Chinese>
+            <Chinesesimp>正在添加冷却液...</Chinesesimp>
+            <Turkish>Soğutma sıvısı ekleniyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_CrewPresent">
+            <English>Crew is present in %1, preventing any maintenance...</English>
+            <Czech>V %1 je posádka, což znemožňuje jakoukoli údržbu...</Czech>
+            <French>L'équipage est présent dans %1, empêchant tout entretien...</French>
+            <Spanish>La tripulación está presente en %1, lo que impide el mantenimiento...</Spanish>
+            <Italian>L'equipaggio è presente in %1, impedendo la manutenzione...</Italian>
+            <Polish>Załoga znajduje się w %1, co uniemożliwia obsługę...</Polish>
+            <Portuguese>A tripulação está presente em %1, impedindo a manutenção...</Portuguese>
+            <Russian>В %1 находится экипаж, обслуживание невозможно...</Russian>
+            <German>Besatzung ist in %1 anwesend, Wartung blockiert...</German>
+            <Korean>%1에 승무원이 탑승해 있어 정비할 수 없습니다...</Korean>
+            <Japanese>%1に搭乗員がいるため、整備を行えません...</Japanese>
+            <Chinese>艙內有乘员在 %1，無法進行任何維護...</Chinese>
+            <Chinesesimp>舱内有乘员在 %1，无法进行任何维护...</Chinesesimp>
+            <Turkish>%1 içinde mürettebat var, bakım yapılamıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_DamageOnStart">
+            <English>Damage on start</English>
+            <Czech>Poškození při startu</Czech>
+            <French>Dégâts au démarrage</French>
+            <Spanish>Daño al iniciar</Spanish>
+            <Italian>Danni all'avvio</Italian>
+            <Polish>Uszkodzenia na starcie</Polish>
+            <Portuguese>Danos ao iniciar</Portuguese>
+            <Russian>Повреждения на старте</Russian>
+            <German>Schaden bei Start</German>
+            <Korean>시작 시 피해량</Korean>
+            <Japanese>開始時の損傷</Japanese>
+            <Chinese>初始損害</Chinese>
+            <Chinesesimp>初始损害</Chinesesimp>
+            <Turkish>Başlangıç Hasarı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_DamageOnStartDesc">
+            <English>Possible starting damage for vehicles on scenario start (if set to 0 3den handles damage levels)</English>
+            <Czech>Možné startovní poškození vozidel při spuštění scénáře (pokud je nastaveno na 0, úroveň poškození řídí 3den)</Czech>
+            <French>Dégâts de départ possibles pour les véhicules au début du scénario (si défini sur 0, 3den gère les niveaux de dégâts)</French>
+            <Spanish>Posible daño inicial para los vehículos al comenzar el escenario (si se establece en 0, 3den gera los niveles de daño)</Spanish>
+            <Italian>Possibile danno iniziale per i veicoli all'avvio dello scenario (se impostato su 0, 3den gestisce i livelli di danno)</Italian>
+            <Polish>Możliwe uszkodzenia początkowe pojazdów na początku scenariusza (jeśli ustawione na 0, 3den zarządza poziomem uszkodzeń)</Polish>
+            <Portuguese>Possíveis danos iniciais para veículos no início do cenário (se definido para 0, o 3den gere os níveis de danos)</Portuguese>
+            <Russian>Возможный начальный урон для транспорта при старте сценария (при 0 уровень повреждений определяется в 3den)</Russian>
+            <German>Möglicher Startschaden für Fahrzeuge bei Szenariobeginn (falls auf 0 gesetzt, regelt 3den das Schadensniveau)</German>
+            <Korean>시나리오 시작 시 차량의 초기 피해량 (0으로 설정하면 3den 에디터 설정값을 따릅니다)</Korean>
+            <Japanese>シナリオ開始時の車両の初期損傷量（0に設定された場合は3denが損傷量を制御します）</Japanese>
+            <Chinese>任務開始时車輛的可能初始損害（如果設置為 0，則由 3den 編輯器處理損害度）</Chinese>
+            <Chinesesimp>任务开始时车辆的可能初始损害（如果设置为 0，则由 3den 编辑器处理损害度）</Chinesesimp>
+            <Turkish>Senaryo başlangıcında araçlar için olası başlangıç hasarı (0 olarak ayarlanırsa hasar seviyelerini 3den yönetir)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_EasierMaintenance">
+            <English>Easier maintenance</English>
+            <Czech>Snazší údržba</Czech>
+            <French>Entretien facile</French>
+            <Spanish>Mantenimiento más fácil</Spanish>
+            <Italian>Manutenzione facilitata</Italian>
+            <Polish>Łatwiejsza obsługa</Polish>
+            <Portuguese>Manutenção mais fácil</Portuguese>
+            <Russian>Упрощенное обслуживание</Russian>
+            <German>Einfachere Wartung</German>
+            <Korean>쉬운 정비</Korean>
+            <Japanese>簡単な整備</Japanese>
+            <Chinese>簡易維護</Chinese>
+            <Chinesesimp>简易维护</Chinesesimp>
+            <Turkish>Kolay Bakım</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_EasierMaintenanceDesc">
+            <English>When enabled maintenance doesn't require as many parts for repairs</English>
+            <Czech>Pokud je povoleno, údržba nevyžaduje k opravám tolik dílů</Czech>
+            <French>Lorsqu'il est activé, l'entretien ne nécessite pas autant de pièces pour les réparations</French>
+            <Spanish>Cuando está activado, el mantenimiento no requiere tantas piezas para las reparaciones</Spanish>
+            <Italian>Quando abilitato, la manutenzione non richiede così tanti componenti per le riparazioni</Italian>
+            <Polish>Gdy jest włączone, obsługa nie wymaga tak wielu części do naprawy</Polish>
+            <Portuguese>Quando ativado, a manutenção não requer tantas peças para reparações</Portuguese>
+            <Russian>Если включено, для обслуживания и ремонта требуется меньше деталей</Russian>
+            <German>Wenn aktiviert, werden für die Wartung und Reparaturen nicht so viele Bauteile benötigt</German>
+            <Korean>활성화하면 정비 시 수리에 필요한 부품 수가 줄어듭니다</Korean>
+            <Japanese>有効な場合、整備の修理に必要な部品数が少なくなります</Japanese>
+            <Chinese>啟用時，維修維護不需要那麼多零件</Chinese>
+            <Chinesesimp>启用时，维修维护不需要那么多零件</Chinesesimp>
+            <Turkish>Etkinleştirildiğinde, onarım bakımları o kadar fazla parça gerektirmez</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_FuelDiesel">
+            <English>Diesel</English>
+            <Czech>Nafta</Czech>
+            <French>Diesel</French>
+            <Spanish>Diésel</Spanish>
+            <Italian>Diesel</Italian>
+            <Polish>Diesel</Polish>
+            <Portuguese>Diesel</Portuguese>
+            <Russian>Дизель</Russian>
+            <German>Diesel</German>
+            <Korean>디젤</Korean>
+            <Japanese>ディーゼル</Japanese>
+            <Chinese>柴油</Chinese>
+            <Chinesesimp>柴油</Chinesesimp>
+            <Turkish>Dizel</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_FuelJetFuel">
+            <English>JetFuel</English>
+            <Czech>Letecké palivo</Czech>
+            <French>Kérosène</French>
+            <Spanish>Combustible de aviación</Spanish>
+            <Italian>Carburante avio</Italian>
+            <Polish>Paliwo lotnicze</Polish>
+            <Portuguese>Combustível de aviação</Portuguese>
+            <Russian>Авиационное топливо</Russian>
+            <German>Flugkraftstoff</German>
+            <Korean>항공유</Korean>
+            <Japanese>航空燃料</Japanese>
+            <Chinese>航空煤油</Chinese>
+            <Chinesesimp>航空煤油</Chinesesimp>
+            <Turkish>Jet Yakıtı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_FuelLabel">
+            <English>Fuel:</English>
+            <Czech>Palivo:</Czech>
+            <French>Carburant :</French>
+            <Spanish>Combustible:</Spanish>
+            <Italian>Carburante:</Italian>
+            <Polish>Paliwo:</Polish>
+            <Portuguese>Combustível:</Portuguese>
+            <Russian>Топливо:</Russian>
+            <German>Kraftstoff:</German>
+            <Korean>연료:</Korean>
+            <Japanese>燃料:</Japanese>
+            <Chinese>燃料:</Chinese>
+            <Chinesesimp>燃料:</Chinesesimp>
+            <Turkish>Yakıt:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_FuelOnStart">
+            <English>Fuel on start</English>
+            <Czech>Palivo při startu</Czech>
+            <French>Carburant au démarrage</French>
+            <Spanish>Combustible al iniciar</Spanish>
+            <Italian>Carburante all'avvio</Italian>
+            <Polish>Paliwo na starcie</Polish>
+            <Portuguese>Combustível ao iniciar</Portuguese>
+            <Russian>Топливо на старте</Russian>
+            <German>Kraftstoff bei Start</German>
+            <Korean>시작 시 연료</Korean>
+            <Japanese>開始時の燃料</Japanese>
+            <Chinese>初始燃料</Chinese>
+            <Chinesesimp>初始燃料</Chinesesimp>
+            <Turkish>Başlangıç Yakıtı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_FuelOnStartDesc">
+            <English>Possible starting fuel for vehicles on scenario start (if set to 0 3den handles fuel levels)</English>
+            <Czech>Možné startovní palivo pro vozidla při spuštění scénáře (pokud je nastaveno na 0, úroveň paliva řídí 3den)</Czech>
+            <French>Carburant de départ possible pour les véhicules au début du scénario (si défini sur 0, 3den gère les niveaux de carburant)</French>
+            <Spanish>Posible combustible inicial para los vehículos al comenzar el escenario (si se establece en 0, 3den gestiona los niveles)</Spanish>
+            <Italian>Possibile carburante iniziale per i veicoli all'avvio dello scenario (se impostato su 0, 3den gestisce i livelli di carburante)</Italian>
+            <Polish>Możliwe paliwo startowe dla pojazdów na początku scenariusza (jeśli ustawione na 0, 3den zarządza poziomem paliwa)</Polish>
+            <Portuguese>Possível combustível inicial para veículos no início do cenário (se definido para 0, o 3den gere os níveis de combustível)</Portuguese>
+            <Russian>Возможный начальный уровень топлива для транспорта при старте сценария (при 0 уровень определяется в 3den)</Russian>
+            <German>Möglicher Startkraftstoff für Fahrzeuge bei Szenariobeginn (falls auf 0 gesetzt, regelt 3den den Kraftstoffstand)</German>
+            <Korean>시나리오 시작 시 차량의 초기 연료량 (0으로 설정하면 3den 에디터 설정값을 따릅니다)</Korean>
+            <Japanese>シナリオ開始時の車両の初期燃料量（0に設定された場合は3denが燃料量を制御します）</Japanese>
+            <Chinese>任務開始时車輛的可能初始燃料（如果設置為 0，則由 3den 編輯器處理燃料量）</Chinese>
+            <Chinesesimp>任务开始时车辆的可能初始燃料（如果设置为 0，则由 3den 编辑器处理燃料量）</Chinesesimp>
+            <Turkish>Senaryo başlangıcında araçlar için olası başlangıç yakıtı (0 olarak ayarlanırsa yakıt seviyelerini 3den yönetir)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_FuelPetrol">
+            <English>Petrol</English>
+            <Czech>Benzín</Czech>
+            <French>Essence</French>
+            <Spanish>Gasolina</Spanish>
+            <Italian>Benzina</Italian>
+            <Polish>Benzyna</Polish>
+            <Portuguese>Gasolina</Portuguese>
+            <Russian>Бензин</Russian>
+            <German>Benzin</German>
+            <Korean>휘발유</Korean>
+            <Japanese>ガソリン</Japanese>
+            <Chinese>汽油</Chinese>
+            <Chinesesimp>汽油</Chinesesimp>
+            <Turkish>Benzin</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_FuelTankEmpty">
+            <English>%1 fuel tank is empty...</English>
+            <Czech>Palivová nádrž %1 je prázdná...</Czech>
+            <French>Le réservoir de carburant de %1 est vide...</French>
+            <Spanish>El tanque de combustible de %1 está vacío...</Spanish>
+            <Italian>Il serbatoio di %1 è vuoto...</Italian>
+            <Polish>Bak paliwa %1 jest pusty...</Polish>
+            <Portuguese>O depósito de combustível de %1 está vazio...</Portuguese>
+            <Russian>Топливный бак %1 пуст...</Russian>
+            <German>%1-Kraftstofftank ist leer...</German>
+            <Korean>%1의 연료 탱크가 비어 있습니다...</Korean>
+            <Japanese>%1の燃料タンクは空です...</Japanese>
+            <Chinese>%1 的油箱已空...</Chinese>
+            <Chinesesimp>%1 的油箱已空...</Chinesesimp>
+            <Turkish>%1 yakıt deposu boş...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_FuelTankFull">
+            <English>%1 fuel tank is full...</English>
+            <Czech>Palivová nádrž %1 je plná...</Czech>
+            <French>Le réservoir de carburant de %1 est plein...</French>
+            <Spanish>El tanque de combustible de %1 está lleno...</Spanish>
+            <Italian>Il serbatoio di %1 è pieno...</Italian>
+            <Polish>Bak paliwa %1 jest pełny...</Polish>
+            <Portuguese>O depósito de combustível de %1 está cheio...</Portuguese>
+            <Russian>Топливный бак %1 заполнен...</Russian>
+            <German>%1-Kraftstofftank ist voll...</German>
+            <Korean>%1의 연료 탱크가 가득 찼습니다...</Korean>
+            <Japanese>%1の燃料タンクは満タンです...</Japanese>
+            <Chinese>%1 的油箱已滿...</Chinese>
+            <Chinesesimp>%1 的油箱已满...</Chinesesimp>
+            <Turkish>%1 yakıt deposu dolu...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_InvalidHitpoint">
+            <English>Invalid hitpoint...</English>
+            <Czech>Neplatný bod zásahu...</Czech>
+            <French>Point d'impact invalide...</French>
+            <Spanish>Punto de impacto no válido...</Spanish>
+            <Italian>Punto di impatto non valido...</Italian>
+            <Polish>Nieprawidłowy punkt trafienia...</Polish>
+            <Portuguese>Ponto de impacto inválido...</Portuguese>
+            <Russian>Неверная зона повреждения...</Russian>
+            <German>Ungültiger Trefferpunkt...</German>
+            <Korean>올바르지 않은 피격 지점입니다...</Korean>
+            <Japanese>無効なヒットポイントです...</Japanese>
+            <Chinese>無效的部位...</Chinese>
+            <Chinesesimp>无效的部位...</Chinesesimp>
+            <Turkish>Geçersiz hasar noktası...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_InvalidVehicle">
+            <English>Invalid vehicle...</English>
+            <Czech>Neplatné vozidlo...</Czech>
+            <French>Véhicule invalide...</French>
+            <Spanish>Vehículo no válido...</Spanish>
+            <Italian>Veicolo non valido...</Italian>
+            <Polish>Nieprawidłowy pojazd...</Polish>
+            <Portuguese>Veículo inválido...</Portuguese>
+            <Russian>Неверное транспортное средство...</Russian>
+            <German>Ungültiges Fahrzeug...</German>
+            <Korean>유효하지 않은 차량입니다...</Korean>
+            <Japanese>無効な車両です...</Japanese>
+            <Chinese>無效 advisory 車輛...</Chinese>
+            <Chinesesimp>无效车辆...</Chinesesimp>
+            <Turkish>Geçersiz araç...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_ItemToolKit">
+            <English>ToolKit</English>
+            <Czech>Sada nářadí</Czech>
+            <French>Boîte à outils</French>
+            <Spanish>Kit de herramientas</Spanish>
+            <Italian>Kit di attrezzi</Italian>
+            <Polish>Zestaw narzędzi</Polish>
+            <Portuguese>Kit de ferramentas</Portuguese>
+            <Russian>Набор инструментов</Russian>
+            <German>Werkzeugkasten</German>
+            <Korean>툴킷</Korean>
+            <Japanese>ツールキット</Japanese>
+            <Chinese>工具箱</Chinese>
+            <Chinesesimp>工具箱</Chinesesimp>
+            <Turkish>Alet Çantası</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_NeedCoolantContainers">
+            <English>You need %1 or %2 to start draining coolant from %3...</English>
+            <Czech>Potřebujete %1 nebo %2 k zahájení vypouštění chladicí kapaliny z %3...</Czech>
+            <French>Vous avez besoin de %1 ou %2 pour commencer à vidanger le liquide de refroidissement de %3...</French>
+            <Spanish>Necesitas %1 o %2 para empezar a drenar el refrigerante de %3...</Spanish>
+            <Italian>Hai bisogno di %1 o %2 per iniziare a scaricare il liquido di raffreddamento da %3...</Italian>
+            <Polish>Potrzebujesz %1 lub %2, aby rozpocząć spuszczanie płynu chłodniczego z %3...</Polish>
+            <Portuguese>Precisa de %1 ou %2 para começar a drenar o líquido de refrigeração de %3...</Portuguese>
+            <Russian>Вам нужно %1 или %2, чтобы начать слив охлаждающей жидкости из %3...</Russian>
+            <German>Du benötigst %1 oder %2, um das Ablassen von Kühlmittel aus %3 zu starten...</German>
+            <Korean>%3에서 냉각수 배출을 시작하려면 %1 또는 %2이(가) 필요합니다...</Korean>
+            <Japanese>%3から冷却水の抜き取りを開始するには、%1または%2が必要です...</Japanese>
+            <Chinese>您需要 %1 或 %2 才能開始從 %3 排出冷卻液...</Chinese>
+            <Chinesesimp>您需要 %1 或 %2 才能开始从 %3 排出冷却液...</Chinesesimp>
+            <Turkish>%3 aracından soğutma sıvısını boşaltmak için %1 veya %2 ihtiyacınız var...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_NeedEngineOil">
+            <English>You need engine oil to refill %1...</English>
+            <Czech>K doplnění %1 potřebujete motorový olej...</Czech>
+            <French>Vous avez besoin d'huile moteur pour ravitailler %1...</French>
+            <Spanish>Necesitas aceite de motor para rellenar %1...</Spanish>
+            <Italian>Hai bisogno di olio motore per rifornire %1...</Italian>
+            <Polish>Potrzebujesz oleju silnikowego, aby napełnić %1...</Polish>
+            <Portuguese>Precisa de óleo de motor para reabastecer %1...</Portuguese>
+            <Russian>Вам нужно моторное масло, чтобы заправить %1...</Russian>
+            <German>Du benötigst Motoröl, um %1 aufzufüllen...</German>
+            <Korean>%1을(를) 보충하려면 엔진 오일이 필요합니다...</Korean>
+            <Japanese>%1に給油するにはエンジンオイルが必要です...</Japanese>
+            <Chinese>您需要引擎機油來為 %1 加注...</Chinese>
+            <Chinesesimp>您需要引擎机油来为 %1 加注...</Chinesesimp>
+            <Turkish>%1 doldurmak için motor yağına ihtiyacınız var...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_NeedItemToInstall">
+            <English>Need (x1) %1 to install.</English>
+            <Czech>K instalaci je potřeba (x1) %1.</Czech>
+            <French>Besoin de (x1) %1 pour l'installer.</French>
+            <Spanish>Se necesita (x1) %1 para instalar.</Spanish>
+            <Italian>Serve (x1) %1 per installare.</Italian>
+            <Polish>Wymaga (x1) %1 do montażu.</Polish>
+            <Portuguese>Necessita de (x1) %1 para instalar.</Portuguese>
+            <Russian>Для установки требуется (x1) %1.</Russian>
+            <German>Benötigt (x1) %1 zum Einbauen.</German>
+            <Korean>설치하려면 (x1) %1이(가) 필요합니다.</Korean>
+            <Japanese>取り付けるには (x1) %1 が必要です。</Japanese>
+            <Chinese>需要 (x1) %1 才能安裝。</Chinese>
+            <Chinesesimp>需要 (x1) %1 才能安装。</Chinesesimp>
+            <Turkish>Takmak için (x1) %1 gerekiyor.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_NeedOilContainers">
+            <English>You need %1 or %2 to start draining oil from %3...</English>
+            <Czech>Potřebujete %1 nebo %2 k zahájení vypouštění oleje z %3...</Czech>
+            <French>Vous avez besoin de %1 ou %2 pour commencer à vidanger l'huile de %3...</French>
+            <Spanish>Necesitas %1 o %2 para empezar a drenar el aceite de %3...</Spanish>
+            <Italian>Hai bisogno di %1 o %2 per iniziare a scaricare l'olio da %3...</Italian>
+            <Polish>Potrzebujesz %1 lub %2, aby rozpocząć spuszczanie oleju z %3...</Polish>
+            <Portuguese>Precisa de %1 ou %2 para começar a drenar o óleo de %3...</Portuguese>
+            <Russian>Вам нужно %1 или %2, чтобы начать слив масла из %3...</Russian>
+            <German>Du benötigst %1 oder %2, um das Ablassen von Öl aus %3 zu starten...</German>
+            <Korean>%3에서 오일 배출을 시작하려면 %1 또는 %2이(가) 필요합니다...</Korean>
+            <Japanese>%3からオイルの抜き取りを開始するには、%1または%2が必要です...</Japanese>
+            <Chinese>您需要 %1 或 %2 才能開始從 %3 排出機油...</Chinese>
+            <Chinesesimp>您需要 %1 或 %2 才能开始从 %3 排出机油...</Chinesesimp>
+            <Turkish>%3 aracından yağı boşaltmak için %1 veya %2 ihtiyacınız var...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_NeedRepairItem">
+            <English>You need %1 in order to repair %2...</English>
+            <Czech>Potřebujete %1 k opravě %2...</Czech>
+            <French>Vous avez besoin de %1 pour réparer %2...</French>
+            <Spanish>Necesitas %1 para reparar %2...</Spanish>
+            <Italian>Hai bisogno di %1 per riparare %2...</Italian>
+            <Polish>Potrzebujesz %1, aby naprawić %2...</Polish>
+            <Portuguese>Precisa de %1 para reparar %2...</Portuguese>
+            <Russian>Вам нужно %1, чтобы отремонтировать %2...</Russian>
+            <German>Du benötigst %1, um %2 zu reparieren...</German>
+            <Korean>%2을(를) 수리하려면 %1이(가) 필요합니다...</Korean>
+            <Japanese>%2を修理するには%1が必要です...</Japanese>
+            <Chinese>您需要 %1 才能維修 %2...</Chinese>
+            <Chinesesimp>您需要 %1 才能维修 %2...</Chinesesimp>
+            <Turkish>%2 onarmak için %1 ihtiyacınız var...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_NeedScavengeTools">
+            <English>You need %1 or an %2 in order to scavenge %3...</English>
+            <Czech>Potřebujete %1 nebo %2 k rozebrání %3...</Czech>
+            <French>Vous avez besoin de %1 ou d'un %2 pour récupérer %3...</French>
+            <Spanish>Necesitas %1 o un %2 para desguazar %3...</Spanish>
+            <Italian>Hai bisogno di %1 o di un %2 per recuperare %3...</Italian>
+            <Polish>Potrzebujesz %1 lub %2, aby zdemontować %3...</Polish>
+            <Portuguese>Precisa de %1 ou um %2 para reaproveitar %3...</Portuguese>
+            <Russian>Вам нужно %1 или %2, чтобы демонтировать %3...</Russian>
+            <German>Du benötigst %1 oder %2, um %3 zu demontieren...</German>
+            <Korean>%3을(를) 회수하려면 %1 또는 %2이(가) 필요합니다...</Korean>
+            <Japanese>%3から回収するには%1または%2が必要です...</Japanese>
+            <Chinese>您需要 %1 或 %2 才能從 %3 回收零件...</Chinese>
+            <Chinesesimp>您需要 %1 或 %2 才能从 %3 回收零件...</Chinesesimp>
+            <Turkish>%3 sökmek için %1 veya %2 ihtiyacınız var...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_NeedSpareTire">
+            <English>You need a spare tire to repair wheel.</English>
+            <Czech>K opravě kola potřebujete rezervní pneumatiku.</Czech>
+            <French>Vous avez besoin d'un pneu de rechange pour réparer la roue.</French>
+            <Spanish>Necesitas un neumático de repuesto para reparar la rueda.</Spanish>
+            <Italian>Hai bisogno di uno pneumatico di scorta per riparare la ruota.</Italian>
+            <Polish>Potrzebujesz koła zapasowego, aby naprawić koło.</Polish>
+            <Portuguese>Precisa de um pneu sobressalente para reparar a roda.</Portuguese>
+            <Russian>Вам нужна запасная шина, чтобы починить колесо.</Russian>
+            <German>Du benötigst einen Ersatzreifen, um das Rad zu reparieren.</German>
+            <Korean>바퀴를 수리하려면 예비 타이어가 필요합니다.</Korean>
+            <Japanese>ホイールを修理するにはスペアタイヤが必要です。</Japanese>
+            <Chinese>您需要一個備胎來修復車輪。</Chinese>
+            <Chinesesimp>您需要一个备胎来修复车轮。</Chinesesimp>
+            <Turkish>Tekerleği onarmak için yedek lastiğe ihtiyacınız var.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_NeedSyphonContainers">
+            <English>You need %1 or %2 to syphon fuel...</English>
+            <Czech>K odčerpání paliva potřebujete %1 nebo %2...</Czech>
+            <French>Vous avez besoin de %1 ou %2 pour siphonner du carburant...</French>
+            <Spanish>Necesitas %1 o %2 para sifonar combustible...</Spanish>
+            <Italian>Hai bisogno di %1 o %2 per sifonare il carburante...</Italian>
+            <Polish>Potrzebujesz %1 lub %2, aby spuścić paliwo...</Polish>
+            <Portuguese>Precisa de %1 ou %2 para sifonar combustível...</Portuguese>
+            <Russian>Вам нужно %1 или %2, чтобы слить топливо...</Russian>
+            <German>Du benötigst %1 oder %2, um Kraftstoff abzusaugen...</German>
+            <Korean>연료를 추출하려면 %1 또는 %2이(가) 필요합니다...</Korean>
+            <Japanese>燃料をサイフォンで抜き取るには%1または%2が必要です...</Japanese>
+            <Chinese>您需要 %1 或 %2 才能虹吸燃料...</Chinese>
+            <Chinesesimp>您需要 %1 或 %2 才能虹吸燃料...</Chinesesimp>
+            <Turkish>Yakıt çekmek için %1 veya %2 ihtiyacınız var...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_NeedTirePatchKit">
+            <English>You need a tire patch kit to repair wheel.</English>
+            <Czech>K opravě kola potřebujete sadu na opravu pneumatik.</Czech>
+            <French>Vous avez besoin d'un kit de réparation de pneus pour réparer la roue.</French>
+            <Spanish>Necesitas un kit de parches para neumáticos para reparar la rueda.</Spanish>
+            <Italian>Hai bisogno di un kit di riparazione pneumatici per riparare la ruota.</Italian>
+            <Polish>Potrzebujesz zestawu naprawczego do opon, aby naprawić koło.</Polish>
+            <Portuguese>Precisa de um kit de reparação de pneus para reparar a roda.</Portuguese>
+            <Russian>Вам нужен набор для ремонта шин, чтобы починить колесо.</Russian>
+            <German>Du benötigst ein Reifenreparaturset, um das Rad zu reparieren.</German>
+            <Korean>바퀴를 수리하려면 타이어 패치 키트가 필요합니다.</Korean>
+            <Japanese>ホイールを修理するにはタイヤパンク修理キットが必要です。</Japanese>
+            <Chinese>您需要輪胎補丁工具箱才能修復車輪。</Chinese>
+            <Chinesesimp>您需要轮胎补丁工具箱才能修复车轮。</Chinesesimp>
+            <Turkish>Tekerleği onarmak için lastik yama kitine ihtiyacınız var.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_NeedToolkitBattery">
+            <English>You need a toolkit to install a battery...</English>
+            <Czech>K instalaci baterie potřebujete sadu nářadí...</Czech>
+            <French>Vous avez besoin d'une boîte à outils pour installer une pile...</French>
+            <Spanish>Necesitas un kit de herramientas para instalar una batería...</Spanish>
+            <Italian>Hai bisogno di un kit di attrezzi per installare una batteria...</Italian>
+            <Polish>Potrzebujesz zestawu narzędzi, aby zamontować baterię...</Polish>
+            <Portuguese>Precisa de um kit de ferramentas para instalar uma bateria...</Portuguese>
+            <Russian>Вам нужен набор инструментов, чтобы установить батарею...</Russian>
+            <German>Du benötigst einen Werkzeugkasten, um eine Batterie einzubauen...</German>
+            <Korean>배터리를 설치하려면 툴킷이 필요합니다...</Korean>
+            <Japanese>バッテリーを取り付けるにはツールキットが必要です...</Japanese>
+            <Chinese>您需要工具箱才能安裝電池...</Chinese>
+            <Chinesesimp>您需要工具箱才能安装电池...</Chinesesimp>
+            <Turkish>Pil takmak için bir alet çantasına ihtiyacınız var...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_NeedToolkitRepair">
+            <English>You need a toolkit to repair vehicles...</English>
+            <Czech>K opravě vozidel potřebujete sadu nářadí...</Czech>
+            <French>Vous avez besoin d'une boîte à outils pour réparer des véhicules...</French>
+            <Spanish>Necesitas un kit de herramientas para reparar vehículos...</Spanish>
+            <Italian>Hai bisogno di un kit di attrezzi per riparare i veicoli...</Italian>
+            <Polish>Potrzebujesz zestawu narzędzi, aby naprawiać pojazdy...</Polish>
+            <Portuguese>Precisa de um kit de ferramentas para reparar veículos...</Portuguese>
+            <Russian>Вам нужен набор инструментов, чтобы ремонтивать транспорт...</Russian>
+            <German>Du benötigst einen Werkzeugkasten, um Fahrzeuge zu reparieren...</German>
+            <Korean>차량을 수리하려면 툴킷이 필요합니다...</Korean>
+            <Japanese>車両を修理するにはツールキットが必要です...</Japanese>
+            <Chinese>您需要工具箱才能維修車輛...</Chinese>
+            <Chinesesimp>您需要工具箱才能维修车辆...</Chinesesimp>
+            <Turkish>Araçları onarmak için bir alet çantasına ihtiyacınız var...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_NeedToolkitScavenge">
+            <English>You need a toolkit to scavenge from vehicles...</English>
+            <Czech>K rozebírání vozidel potřebujete sadu nářadí...</Czech>
+            <French>Vous avez besoin d'une boîte à outils pour récupérer des pièces sur des véhicules...</French>
+            <Spanish>Necesitas un kit de herramientas para desguazar vehículos...</Spanish>
+            <Italian>Hai bisogno di un kit di attrezzi per recuperare componenti dai veicoli...</Italian>
+            <Polish>Potrzebujesz zestawu narzędzi, aby demontować części z pojazdów...</Polish>
+            <Portuguese>Precisa de um kit de ferramentas para desmantelar veículos...</Portuguese>
+            <Russian>Вам нужен набор инструментов, чтобы разбирать транспорт...</Russian>
+            <German>Du benötigst einen Werkzeugkasten, um Bauteile aus Fahrzeugen zu gewinnen...</German>
+            <Korean>차량에서 부품을 회수하려면 툴킷이 필요합니다...</Korean>
+            <Japanese>車両から部品を回収するにはツールキットが必要です...</Japanese>
+            <Chinese>您需要工具箱才能從車輛中回收零件...</Chinese>
+            <Chinesesimp>您需要工具箱才能从车辆中回收零件...</Chinesesimp>
+            <Turkish>Araçlardan parça sökmek için bir alet çantasına ihtiyacınız var...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_NeedToolkitSyphon">
+            <English>You need a toolkit to syphon fuel...</English>
+            <Czech>K odčerpání paliva potřebujete sadu nářadí...</Czech>
+            <French>Vous avez besoin d'une boîte à outils pour siphonner du carburant...</French>
+            <Spanish>Necesitas un kit de herramientas para sifonar combustible...</Spanish>
+            <Italian>Hai bisogno di un kit di attrezzi per sifonare il carburante...</Italian>
+            <Polish>Potrzebujesz zestawu narzędzi, aby spuścić paliwo...</Polish>
+            <Portuguese>Precisa de um kit de ferramentas para sifonar combustível...</Portuguese>
+            <Russian>Вам нужен набор инструментов, чтобы слить топливо...</Russian>
+            <German>Du benötigst einen Werkzeugkasten, um Kraftstoff abzusaugen...</German>
+            <Korean>연료를 사이펀으로 추출하려면 툴킷이 필요합니다...</Korean>
+            <Japanese>燃料をサイフォンで抜き取るにはツールキットが必要です...</Japanese>
+            <Chinese>您需要工具箱才能虹吸燃料...</Chinese>
+            <Chinesesimp>您需要工具箱才能虹吸燃料...</Chinesesimp>
+            <Turkish>Yakıt çekmek için bir alet çantasına ihtiyacınız var...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_NeedToolkitUninstallBattery">
+            <English>You need a toolkit to uninstall a battery...</English>
+            <Czech>K odinstalaci baterie potřebujete sadu nářadí...</Czech>
+            <French>Vous avez besoin d'une boîte à outils pour démonter une pile...</French>
+            <Spanish>Necesitas un kit de herramientas para desinstalar una batería...</Spanish>
+            <Italian>Hai bisogno di un kit di attrezzi per disinstallare una batteria...</Italian>
+            <Polish>Potrzebujesz zestawu narzędzi, aby zdemontować baterię...</Polish>
+            <Portuguese>Precisa de um kit de ferramentas para desinstalar uma bateria...</Portuguese>
+            <Russian>Вам нужен набор инструментов, чтобы извлечь батарею...</Russian>
+            <German>Du benötigst einen Werkzeugkasten, um eine Batterie auszubauen...</German>
+            <Korean>배터리를 제거하려면 툴킷이 필요합니다...</Korean>
+            <Japanese>バッテリーを取り外すにはツールキットが必要です...</Japanese>
+            <Chinese>您需要工具箱才能拆卸電池...</Chinese>
+            <Chinesesimp>您需要工具箱才能拆卸电池...</Chinesesimp>
+            <Turkish>Pili sökmek için bir alet çantasına ihtiyacınız var...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_NoBatteriesToRemove">
+            <English>%1 has no batteries left to remove...</English>
+            <Czech>V %1 nezbývají žádné baterie k vyjmutí...</Czech>
+            <French>%1 n'a plus de piles à retirer...</French>
+            <Spanish>%1 no tiene más baterías para retirar...</Spanish>
+            <Italian>%1 non ha più batterie da rimuovere...</Italian>
+            <Polish>В %1 nie pozostały żadne baterie do wyjęcia...</Polish>
+            <Portuguese>%1 não tem mais baterias para remover...</Portuguese>
+            <Russian>В %1 не осталось батарей для извлечения...</Russian>
+            <German>%1 hat keine Batterien mehr zum Ausbauen...</German>
+            <Korean>%1에 남아있는 배터리가 없어 제거할 수 없습니다...</Korean>
+            <Japanese>%1には取り外せるバッテリーが残っていません...</Japanese>
+            <Chinese>%1 已無剩餘電池可供拆卸...</Chinese>
+            <Chinesesimp>%1 已无剩余电池可供拆卸...</Chinesesimp>
+            <Turkish>%1 içinde çıkarılacak pil kalmadı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_NoRepairSelected">
+            <English>No repair option selected...</English>
+            <Czech>Není vybrána žádná možnost opravy...</Czech>
+            <French>Aucune option de réparation sélectionnée...</French>
+            <Spanish>Ninguna opción de reparación seleccionada...</Spanish>
+            <Italian>Nessuna opzione di riparazione selezionata...</Italian>
+            <Polish>Nie wybrano opcji naprawy...</Polish>
+            <Portuguese>Nenhuma opção de reparação selecionada...</Portuguese>
+            <Russian>Вариант ремонта не выбран...</Russian>
+            <German>Keine Reparaturoption ausgewählt...</German>
+            <Korean>선택된 수리 옵션이 없습니다...</Korean>
+            <Japanese>修理オプションが選択されていません...</Japanese>
+            <Chinese>未選擇任何維修項目...</Chinese>
+            <Chinesesimp>未选择任何维修项目...</Chinesesimp>
+            <Turkish>Hiçbir onarım seçeneği seçilmedi...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_NoScavengeSelected">
+            <English>No scavenge option selected...</English>
+            <Czech>Není vybrána žádná možnost prohledání...</Czech>
+            <French>Aucune option de récupération sélectionnée...</French>
+            <Spanish>Ninguna opción de desvalijamiento seleccionada...</Spanish>
+            <Italian>Nessuna opzione di smantellamento selezionata...</Italian>
+            <Polish>Nie wybrano opcji demontażu...</Polish>
+            <Portuguese>Nenhuma opção de canibalização selecionada...</Portuguese>
+            <Russian>Вариант разбора не выбран...</Russian>
+            <German>Keine Option zum Ausschachten ausgewählt...</German>
+            <Korean>선택된 부품 채굴 옵션이 없습니다...</Korean>
+            <Japanese>回収オプションが選択されていません...</Japanese>
+            <Chinese>未選擇任何搜刮/拆卸項目...</Chinese>
+            <Chinesesimp>未选择任何搜刮/拆卸项目...</Chinesesimp>
+            <Turkish>Hiçbir parça sökme seçeneği seçilmedi...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_NoVehicleToRepair">
+            <English>No Vehicle to Repair...</English>
+            <Czech>Žádné vozidlo k opravě...</Czech>
+            <French>Aucun véhicule à réparer...</French>
+            <Spanish>No hay ningún vehículo para reparar...</Spanish>
+            <Italian>Nessun veicolo da riparare...</Italian>
+            <Polish>Brak pojazdu do naprawy...</Polish>
+            <Portuguese>Nenhum veículo para reparar...</Portuguese>
+            <Russian>Нет транспорта для ремонта...</Russian>
+            <German>Kein Fahrzeug zu reparieren...</German>
+            <Korean>수리할 차량이 없습니다...</Korean>
+            <Japanese>修理する車両がありません...</Japanese>
+            <Chinese>沒有可維修的車輛...</Chinese>
+            <Chinesesimp>没有可维修的车辆...</Chinesesimp>
+            <Turkish>Onarılacak Araç Yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_OilFull">
+            <English>%1 oil is full...</English>
+            <Czech>Oleje u %1 je plný...</Czech>
+            <French>L'huile de %1 est pleine...</French>
+            <Spanish>El aceite de %1 está lleno...</Spanish>
+            <Italian>L'olio di %1 è pieno...</Italian>
+            <Polish>Olej w %1 jest pełny...</Polish>
+            <Portuguese>O óleo de %1 está cheio...</Portuguese>
+            <Russian>Масло в %1 заполнено...</Russian>
+            <German>%1-Öl ist voll...</German>
+            <Korean>%1의 오일이 가득 찼습니다...</Korean>
+            <Japanese>%1のオイルは満タンです...</Japanese>
+            <Chinese>%1 的機油已滿...</Chinese>
+            <Chinesesimp>%1 的机油已满...</Chinesesimp>
+            <Turkish>%1 yağı dolu...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_OilInterrupted">
+            <English>Adding oil interrupted...</English>
+            <Czech>Doplňování oleje přerušeno...</Czech>
+            <French>Ajout d'huile interrompu...</French>
+            <Spanish>Adición de aceite interrumpida...</Spanish>
+            <Italian>Aggiunta dell'olio interrotta...</Italian>
+            <Polish>Dodawanie oleju przerwane...</Polish>
+            <Portuguese>Adição de óleo interrompida...</Portuguese>
+            <Russian>Добавление масла прервано...</Russian>
+            <German>Einfüllen von Öl unterbrochen...</German>
+            <Korean>오일 보충이 중단되었습니다...</Korean>
+            <Japanese>オイルの補給が中断されました...</Japanese>
+            <Chinese>添加機油中斷...</Chinese>
+            <Chinesesimp>添加机油中断...</Chinesesimp>
+            <Turkish>Yağ ekleme işlemi kesintiye uğradı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_OilIsEmpty">
+            <English>%1 oil is empty...</English>
+            <Czech>Olej u %1 je prázdný...</Czech>
+            <French>L'huile de %1 est vide...</French>
+            <Spanish>El aceite de %1 está vacío...</Spanish>
+            <Italian>L'olio di %1 è vuoto...</Italian>
+            <Polish>Olej w %1 jest pusty...</Polish>
+            <Portuguese>O óleo de %1 está vazio...</Portuguese>
+            <Russian>Масло в %1 пусто...</Russian>
+            <German>%1-Öl ist leer...</German>
+            <Korean>%1의 오일이 비어 있습니다...</Korean>
+            <Japanese>%1의 オイルが空です...</Japanese>
+            <Chinese>%1 的機油已空...</Chinese>
+            <Chinesesimp>%1 的机油已空...</Chinesesimp>
+            <Turkish>%1 yağı boş...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_OilLabel">
+            <English>Oil:</English>
+            <Czech>Olej:</Czech>
+            <French>Huile :</French>
+            <Spanish>Aceite:</Spanish>
+            <Italian>Olio:</Italian>
+            <Polish>Olej:</Polish>
+            <Portuguese>Óleo:</Portuguese>
+            <Russian>Масло:</Russian>
+            <German>Öl:</German>
+            <Korean>엔진오일:</Korean>
+            <Japanese>オイル:</Japanese>
+            <Chinese>機油:</Chinese>
+            <Chinesesimp>机油:</Chinesesimp>
+            <Turkish>Yağ:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_OilLevelLabel">
+            <English>Oil level:</English>
+            <Czech>Hladina oleje:</Czech>
+            <French>Niveau d'huile :</French>
+            <Spanish>Nivel de aceite:</Spanish>
+            <Italian>Livello olio:</Italian>
+            <Polish>Poziom oleju:</Polish>
+            <Portuguese>Nível de óleo:</Portuguese>
+            <Russian>Уровень масла:</Russian>
+            <German>Ölstand:</German>
+            <Korean>오일 레벨:</Korean>
+            <Japanese>オイル残量:</Japanese>
+            <Chinese>機油位：</Chinese>
+            <Chinesesimp>机油位：</Chinesesimp>
+            <Turkish>Yağ seviyesi:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_OutOfCoolant">
+            <English>You have run out of Engine coolant</English>
+            <Czech>Došla vám chladicí kapalina do motoru</Czech>
+            <French>Vous n'avez plus de liquide de refroidissement pour moteur</French>
+            <Spanish>Se te ha acabado el refrigerante de motor</Spanish>
+            <Italian>Hai esaurito il liquido refrigerante per motore</Italian>
+            <Polish>Skończył ci się płyn chłodniczy do silnika</Polish>
+            <Portuguese>Ficou sem líquido de refrigeração de motor</Portuguese>
+            <Russian>У вас закончился хладагент для двигателя</Russian>
+            <German>Du hast kein Motorkühlmittel mehr</German>
+            <Korean>엔진 냉각수가 부족합니다</Korean>
+            <Japanese>エンジン冷却水がなくなりました</Japanese>
+            <Chinese>您的引擎冷卻液已耗盡</Chinese>
+            <Chinesesimp>您的引擎冷却液已耗尽</Chinesesimp>
+            <Turkish>Motor soğutma sıvınız bitti</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_OutOfFuel">
+            <English>You have run out of %1...</English>
+            <Czech>Došlo vám %1...</Czech>
+            <French>Vous n'avez plus de %1...</French>
+            <Spanish>Se te ha acabado el %1...</Spanish>
+            <Italian>Hai esaurito il %1...</Italian>
+            <Polish>Skończyło ci się %1...</Polish>
+            <Portuguese>Ficou sem %1...</Portuguese>
+            <Russian>У вас закончился %1...</Russian>
+            <German>Du hast kein %1 mehr...</German>
+            <Korean>%1이(가) 부족합니다...</Korean>
+            <Japanese>%1がなくなりました...</Japanese>
+            <Chinese>您的 %1 已耗盡...</Chinese>
+            <Chinesesimp>您的 %1 已耗尽...</Chinesesimp>
+            <Turkish>%1 bitti...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_OutOfOil">
+            <English>You have run out of Engine oil</English>
+            <Czech>Došel vám motorový olej</Czech>
+            <French>Vous n'avez plus d'huile moteur</French>
+            <Spanish>Se te ha acabado el aceite de motor</Spanish>
+            <Italian>Hai esaurito l'olio motore</Italian>
+            <Polish>Skończył ci się olej silnikowy</Polish>
+            <Portuguese>Ficou sem óleo de motor</Portuguese>
+            <Russian>У вас закончилось моторное масло</Russian>
+            <German>Du hast kein Motoröl mehr</German>
+            <Korean>엔진 오일이 부족합니다</Korean>
+            <Japanese>エンジンオイルがなくなりました</Japanese>
+            <Chinese>您的引擎機油已耗盡</Chinese>
+            <Chinesesimp>您的引擎机油已耗尽</Chinesesimp>
+            <Turkish>Motor yağınız bitti</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_PatchedWheelKit">
+            <English>Patched wheel with tire patch kit.</English>
+            <Czech>Kolo záplatováno sadou na opravu pneumatik.</Czech>
+            <French>Roue rapiécée avec le kit de réparation de pneus.</French>
+            <Spanish>Rueda parcheada con el kit de parches para neumáticos.</Spanish>
+            <Italian>Ruota riparata con il kit di riparazione pneumatici.</Italian>
+            <Polish>Załatano koło za pomocą zestawu naprawczego do opon.</Polish>
+            <Portuguese>Roda remendada com kit de reparação de pneus.</Portuguese>
+            <Russian>Колесо залатано набором для ремонта шин.</Russian>
+            <German>Rad mit Reifenreparaturset geflickt.</German>
+            <Korean>타이어 패치 키트로 바퀴를 때웠습니다.</Korean>
+            <Japanese>タイヤパンク修理キットでホイールを補修しました。</Japanese>
+            <Chinese>已用輪胎補丁工具箱修補車輪。</Chinese>
+            <Chinesesimp>已用轮胎补丁工具箱修补车轮。</Chinesesimp>
+            <Turkish>Tekerlek lastik yama kiti ile yamandı.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_PowerLabel">
+            <English>Power:</English>
+            <Czech>Napájení / Baterie:</Czech>
+            <French>Énergie :</French>
+            <Spanish>Energía:</Spanish>
+            <Italian>Potenza:</Italian>
+            <Polish>Zasilanie:</Polish>
+            <Portuguese>Potência:</Portuguese>
+            <Russian>Заряд батареи:</Russian>
+            <German>Strom:</German>
+            <Korean>전력:</Korean>
+            <Japanese>電力:</Japanese>
+            <Chinese>電量:</Chinese>
+            <Chinesesimp>电量:</Chinesesimp>
+            <Turkish>Güç:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_Refuel">
+            <English>Refuel</English>
+            <Czech>Natankovat</Czech>
+            <French>Ravitailler en carburant</French>
+            <Spanish>Repostar</Spanish>
+            <Italian>Rifornisci carburante</Italian>
+            <Polish>Zatankuj</Polish>
+            <Portuguese>Reabastecer</Portuguese>
+            <Russian>Заправить</Russian>
+            <German>Tanken</German>
+            <Korean>주유</Korean>
+            <Japanese>給油</Japanese>
+            <Chinese>加油</Chinese>
+            <Chinesesimp>加油</Chinesesimp>
+            <Turkish>Yakıt İkmali Yap</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_RefuelingInterrupted">
+            <English>Refueling interrupted...</English>
+            <Czech>Doplňování paliva přerušeno...</Czech>
+            <French>Ravitaillement interrompu...</French>
+            <Spanish>Reabastecimiento interrumpido...</Spanish>
+            <Italian>Rifornimento interrotto...</Italian>
+            <Polish>Tankowanie przerwane...</Polish>
+            <Portuguese>Reabastecimento interrompido...</Portuguese>
+            <Russian>Заправка прервана...</Russian>
+            <German>Betankung unterbrochen...</German>
+            <Korean>연료 보충이 중단되었습니다...</Korean>
+            <Japanese>給油が中断されました...</Japanese>
+            <Chinese>加油中斷...</Chinese>
+            <Chinesesimp>加油中断...</Chinesesimp>
+            <Turkish>Yakıt ikmali kesintiye uğradı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_RefuelingProgress">
+            <English>Refueling...</English>
+            <Czech>Doplňování paliva...</Czech>
+            <French>Ravitaillement...</French>
+            <Spanish>Reabasteciendo...</Spanish>
+            <Italian>Rifornimento...</Italian>
+            <Polish>Tankowanie...</Polish>
+            <Portuguese>A reabastecer...</Portuguese>
+            <Russian>Заправка...</Russian>
+            <German>Betankung läuft...</German>
+            <Korean>연료 보충 중...</Korean>
+            <Japanese>給油中...</Japanese>
+            <Chinese>正在加油...</Chinese>
+            <Chinesesimp>正在加油...</Chinesesimp>
+            <Turkish>Yakıt ikmali yapılıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_RemoveBattery">
+            <English>Remove battery</English>
+            <Czech>Vyjmout baterii</Czech>
+            <French>Retirer la batterie</French>
+            <Spanish>Retirar batería</Spanish>
+            <Italian>Rimuovi batteria</Italian>
+            <Polish>Wyjmij akumulator</Polish>
+            <Portuguese>Retirar bateria</Portuguese>
+            <Russian>Снять аккумулятор</Russian>
+            <German>Batterie ausbauen</German>
+            <Korean>배터리 탈거</Korean>
+            <Japanese>バッテリーを取り外し</Japanese>
+            <Chinese>拆卸蓄電池</Chinese>
+            <Chinesesimp>拆卸蓄电池</Chinesesimp>
+            <Turkish>Bataryayı sök</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_RemoveCoolant">
+            <English>Remove coolant</English>
+            <Czech>Vypustit chladicí kapalinu</Czech>
+            <French>Vidanger le liquide de refroidissement</French>
+            <Spanish>Vaciar refrigerante</Spanish>
+            <Italian>Rimuovi refrigerante</Italian>
+            <Polish>Spuść płyn chłodniczy</Polish>
+            <Portuguese>Retirar refrigerante</Portuguese>
+            <Russian>Слить антифриз</Russian>
+            <German>Kühlmittel ablassen</German>
+            <Korean>냉각수 배출</Korean>
+            <Japanese>冷却水を抜く</Japanese>
+            <Chinese>排放冷卻液</Chinese>
+            <Chinesesimp>排放冷却液</Chinesesimp>
+            <Turkish>Antifrizi boşalt</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_RemoveOil">
+            <English>Remove oil</English>
+            <Czech>Vypustit olej</Czech>
+            <French>Vidanger l'huile</French>
+            <Spanish>Vaciar aceite</Spanish>
+            <Italian>Rimuovi olio</Italian>
+            <Polish>Spuść olej</Polish>
+            <Portuguese>Retirar óleo</Portuguese>
+            <Russian>Слить масло</Russian>
+            <German>Öl ablassen</German>
+            <Korean>엔진오일 배출</Korean>
+            <Japanese>オイルを抜く</Japanese>
+            <Chinese>排放機油</Chinese>
+            <Chinesesimp>排放机油</Chinesesimp>
+            <Turkish>Yağı boşalt</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_RemovingCoolantInterrupted">
+            <English>Removing coolant interrupted...</English>
+            <Czech>Odebírání chladicí kapaliny přerušeno...</Czech>
+            <French>Retrait du liquide de refroidissement interrompu...</French>
+            <Spanish>Extracción de refrigerante interrumpida...</Spanish>
+            <Italian>Rimozione del liquido di raffreddamento interrotta...</Italian>
+            <Polish>Usuwanie płynu chłodniczego przerwane...</Polish>
+            <Portuguese>Remoção de líquido de refrigeração interrompida...</Portuguese>
+            <Russian>Слив охлаждающей жидкости прерван...</Russian>
+            <German>Ablassen von Kühlmittel unterbrochen...</German>
+            <Korean>냉각수 배출이 중단되었습니다...</Korean>
+            <Japanese>冷却水の抜き取りが中断されました...</Japanese>
+            <Chinese>排放冷卻液中斷...</Chinese>
+            <Chinesesimp>排放冷却液中断...</Chinesesimp>
+            <Turkish>Soğutma sıvısı çıkarma işlemi kesintiye uğradı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_RemovingCoolantProgress">
+            <English>Removing coolant...</English>
+            <Czech>Odebírání chladicí kapaliny...</Czech>
+            <French>Retrait du liquide de refroidissement...</French>
+            <Spanish>Extrayendo refrigerante...</Spanish>
+            <Italian>Rimozione liquido di raffreddamento...</Italian>
+            <Polish>Usuwanie płynu chłodniczego...</Polish>
+            <Portuguese>A remover líquido de refrigeração...</Portuguese>
+            <Russian>Слив охлаждающей жидкости...</Russian>
+            <German>Kühlmittel wird abgelassen...</German>
+            <Korean>냉각수 배출 중...</Korean>
+            <Japanese>冷却水を抜き取り中...</Japanese>
+            <Chinese>正在排放冷卻液...</Chinese>
+            <Chinesesimp>正在排放冷却液...</Chinesesimp>
+            <Turkish>Soğutma sıvısı çıkarılıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_RemovingOilInterrupted">
+            <English>Removing oil interrupted...</English>
+            <Czech>Odebírání oleje přerušeno...</Czech>
+            <French>Retrait de l'huile interrompu...</French>
+            <Spanish>Extracción de aceite interrumpida...</Spanish>
+            <Italian>Rimozione dell'olio interrotta...</Italian>
+            <Polish>Usuwanie oleju przerwane...</Polish>
+            <Portuguese>Remoção de óleo interrompida...</Portuguese>
+            <Russian>Слив масла прерван...</Russian>
+            <German>Ablassen von Öl unterbrochen...</German>
+            <Korean>오일 배출이 중단되었습니다...</Korean>
+            <Japanese>オイルの抜き取りが中断されました...</Japanese>
+            <Chinese>排放機油中斷...</Chinese>
+            <Chinesesimp>排放机油中断...</Chinesesimp>
+            <Turkish>Yağ çıkarma işlemi kesintiye uğradı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_RemovingOilProgress">
+            <English>Removing oil...</English>
+            <Czech>Odebírání oleje...</Czech>
+            <French>Retrait de l'huile...</French>
+            <Spanish>Extrayendo aceite...</Spanish>
+            <Italian>Rimozione olio...</Italian>
+            <Polish>Usuwanie oleju...</Polish>
+            <Portuguese>A remover óleo...</Portuguese>
+            <Russian>Слив масла...</Russian>
+            <German>Öl wird abgelassen...</German>
+            <Korean>오일 배출 중...</Korean>
+            <Japanese>オイルを抜き取り中...</Japanese>
+            <Chinese>正在排放機油...</Chinese>
+            <Chinesesimp>正在排放机油...</Chinesesimp>
+            <Turkish>Yağ çıkarılıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_Repair">
+            <English>Repair</English>
+            <Czech>Opravit</Czech>
+            <French>Réparer</French>
+            <Spanish>Reparar</Spanish>
+            <Italian>Ripara</Italian>
+            <Polish>Napraw</Polish>
+            <Portuguese>Reparar</Portuguese>
+            <Russian>Ремонтировать</Russian>
+            <German>Reparieren</German>
+            <Korean>수리</Korean>
+            <Japanese>修理</Japanese>
+            <Chinese>維修</Chinese>
+            <Chinesesimp>维修</Chinesesimp>
+            <Turkish>Onar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_RepairedHitpointSuccess">
+            <English>Repaired %1 with %2.</English>
+            <Czech>Opraveno %1 pomocí %2.</Czech>
+            <French>Réparé %1 avec %2.</French>
+            <Spanish>Reparado %1 con %2.</Spanish>
+            <Italian>Riparato %1 con %2.</Italian>
+            <Polish>Naprawiono %1 za pomocą %2.</Polish>
+            <Portuguese>Reparado %1 com %2.</Portuguese>
+            <Russian>Отремонтировано %1 с помощью %2.</Russian>
+            <German>%1 mit %2 repariert.</German>
+            <Korean>%2(으)로 %1을(를) 수리했습니다.</Korean>
+            <Japanese>%2で%1を修理しました。</Japanese>
+            <Chinese>已用 %2 修復 %1。</Chinese>
+            <Chinesesimp>已用 %2 修复 %1。</Chinesesimp>
+            <Turkish>%1, %2 kullanılarak onarıldı.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_RepairedWheelSpare">
+            <English>Repaired wheel with spare tire</English>
+            <Czech>Kolo opraveno rezervní pneumatikou</Czech>
+            <French>Roue réparée avec le pneu de rechange</French>
+            <Spanish>Rueda reparada con neumático de repuesto</Spanish>
+            <Italian>Ruota riparata con pneumatico di scorta</Italian>
+            <Polish>Naprawiono koło za pomocą koła zapasowego</Polish>
+            <Portuguese>Roda reparada com pneu sobressalente</Portuguese>
+            <Russian>Колесо отремонтировано запасной шиной</Russian>
+            <German>Rad mit Ersatzreifen repariert</German>
+            <Korean>예비 타이어로 바퀴를 수리했습니다</Korean>
+            <Japanese>スペアタイヤでホイールを修理しました</Japanese>
+            <Chinese>已用備胎修復車輪</Chinese>
+            <Chinesesimp>已用备胎修复车轮</Chinesesimp>
+            <Turkish>Tekerlek yedek lastikle onarıldı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_RequiresFuelType">
+            <English>%1 requires %2...</English>
+            <Czech>%1 vyžaduje %2...</Czech>
+            <French>%1 nécessite %2...</French>
+            <Spanish>%1 requiere %2...</Spanish>
+            <Italian>%1 richiede %2...</Italian>
+            <Polish>%1 wymaga %2...</Polish>
+            <Portuguese>%1 requer %2...</Portuguese>
+            <Russian>%1 требует %2...</Russian>
+            <German>%1 benötigt %2...</German>
+            <Korean>%1에는 %2이(가) 필요합니다...</Korean>
+            <Japanese>%1には%2が必要です...</Japanese>
+            <Chinese>%1 需要 %2...</Chinese>
+            <Chinesesimp>%1 需要 %2...</Chinesesimp>
+            <Turkish>%1 için %2 gerekiyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_Scavenge">
+            <English>Scavenge</English>
+            <Czech>Prohledat</Czech>
+            <French>Récupérer des pièces</French>
+            <Spanish>Desvalijar</Spanish>
+            <Italian>Raccogli rottami</Italian>
+            <Polish>Przeszukaj / Demontuj</Polish>
+            <Portuguese>Canibalizar</Portuguese>
+            <Russian>Разобрать на запчасти</Russian>
+            <German>Ausschachten</German>
+            <Korean>부품 채굴</Korean>
+            <Japanese>パーツを回収</Japanese>
+            <Chinese>搜刮零件</Chinese>
+            <Chinesesimp>搜刮零件</Chinesesimp>
+            <Turkish>Parça Sök</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_ScavengeNoInventoryRoom">
+            <English>%1 doesn't have enough room left for scavenging %2...</English>
+            <Czech>%1 nemá dostatek místa pro rozebrání %2...</Czech>
+            <French>%1 n'a pas assez de place pour récupérer %2...</French>
+            <Spanish>%1 no tiene suficiente espacio para desguazar %2...</Spanish>
+            <Italian>%1 non ha abbastanza spazio per recuperare %2...</Italian>
+            <Polish>%1 nie ma wystarczająco dużo miejsca na demontaż %2...</Polish>
+            <Portuguese>%1 não tem espaço suficiente para reaproveitar %2...</Portuguese>
+            <Russian>У %1 недостаточно места для разбора %2...</Russian>
+            <German>%1 hat nicht genug Platz, um %2 zu verstauen...</German>
+            <Korean>%1에 %2을(를) 회수해 넣을 공간이 부족합니다...</Korean>
+            <Japanese>%1には%2を回収するための十分な空き容量がありません...</Japanese>
+            <Chinese>%1 沒有足夠的空间來回收 %2...</Chinese>
+            <Chinesesimp>%1 没有足够的空间来回收 %2...</Chinesesimp>
+            <Turkish>%1, %2 sökmek için yeterli alana sahip değil...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_ScavengeTooDamaged">
+            <English>%1 is too damaged to scavenge...</English>
+            <Czech>%1 je příliš poškozený na rozebrání...</Czech>
+            <French>%1 est trop endommagé pour être récupéré...</French>
+            <Spanish>%1 está demasiado dañado para desguazar...</Spanish>
+            <Italian>%1 è troppo danneggiato per recuperare componenti...</Italian>
+            <Polish>%1 jest zbyt uszkodzony, aby demontować części...</Polish>
+            <Portuguese>%1 está demasiado danificado para reaproveitar...</Portuguese>
+            <Russian>%1 слишком поврежден для разбора...</Russian>
+            <German>%1 ist zu stark beschädigt, um Bauteile zu gewinnen...</German>
+            <Korean>%1은(는) 너무 많이 손상되어 부품을 회수할 수 없습니다...</Korean>
+            <Japanese>%1は損傷が激しいため部品を回収できません...</Japanese>
+            <Chinese>%1 損壞 severe，無法回收零件...</Chinese>
+            <Chinesesimp>%1 损坏 severe，无法回收零件...</Chinesesimp>
+            <Turkish>%1 parça sökmek için çok hasarlı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_ScavengedFromUsed">
+            <English>Scavenged %1 from %3, used %2...</English>
+            <Czech>Získáno %1 z %3, použito %2...</Czech>
+            <French>%1 récupéré sur %3, %2 utilisé...</French>
+            <Spanish>Desguasado %1 de %3, usado %2...</Spanish>
+            <Italian>Recuperato %1 da %3, usato %2...</Italian>
+            <Polish>Zdemontowano %1 z %3, użyto %2...</Polish>
+            <Portuguese>Reaproveitado %1 de %3, usado %2...</Portuguese>
+            <Russian>Извлечено %1 из %3, использовано %2...</Russian>
+            <German>%1 aus %3 gewonnen, %2 benutzt...</German>
+            <Korean>%3에서 %1을(를) 회수했으며, %2을(를) 사용했습니다...</Korean>
+            <Japanese>%3から%1を回収、%2を使用しました...</Japanese>
+            <Chinese>已從 %3 回收 %1，使用了 %2...</Chinese>
+            <Chinesesimp>已从 %3 回收 %1，使用了 %2...</Chinesesimp>
+            <Turkish>%3 üzerinden %1 söküldü, %2 kullanıldı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_ScavengedPartsFrom">
+            <English>Scavenged parts for %1 from %2...</English>
+            <Czech>Rozebrány díly pro %1 z %2...</Czech>
+            <French>Pièces récupérées pour %1 sur %2...</French>
+            <Spanish>Partes desguazadas para %1 desde %2...</Spanish>
+            <Italian>Componenti recuperati per %1 da %2...</Italian>
+            <Polish>Zdemontowano części do %1 z %2...</Polish>
+            <Portuguese>Peças reaproveitadas para %1 a partir de %2...</Portuguese>
+            <Russian>Извлечены детали для %1 из %2...</Russian>
+            <German>Bauteile für %1 aus %2 gewonnen...</German>
+            <Korean>%2에서 %1용 부품을 회수했습니다...</Korean>
+            <Japanese>%2から%1用の部品を回収しました...</Japanese>
+            <Chinese>已從 %2 回收 %1 的零件...</Chinese>
+            <Chinesesimp>已从 %2 回收 %1 的零件...</Chinesesimp>
+            <Turkish>%2 üzerinden %1 için parça söküldü...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_ScavengedSuccess">
+            <English>%1 scavenged...</English>
+            <Czech>%1 rozebráno...</Czech>
+            <French>%1 récupéré...</French>
+            <Spanish>%1 desguazado...</Spanish>
+            <Italian>%1 recuperato...</Italian>
+            <Polish>Zdemontowano %1...</Polish>
+            <Portuguese>%1 reaproveitado...</Portuguese>
+            <Russian>%1 демонтирован...</Russian>
+            <German>%1 erfolgreich demontiert...</German>
+            <Korean>%1 회수 완료...</Korean>
+            <Japanese>%1を回収しました...</Japanese>
+            <Chinese>已回收 %1...</Chinese>
+            <Chinesesimp>已回收 %1...</Chinesesimp>
+            <Turkish>%1 söküldü...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_Syphon">
+            <English>Syphon</English>
+            <Czech>Odsát palivo</Czech>
+            <French>Siphonner</French>
+            <Spanish>Sifonar combustible</Spanish>
+            <Italian>Sifona carburante</Italian>
+            <Polish>Spuść paliwo (syfon)</Polish>
+            <Portuguese>Sifonar</Portuguese>
+            <Russian>Слить топливо (сифон)</Russian>
+            <German>Siphonieren</German>
+            <Korean>연료 흡입</Korean>
+            <Japanese>燃料を吸い出す</Japanese>
+            <Chinese>虹吸燃料</Chinese>
+            <Chinesesimp>虹吸燃料</Chinesesimp>
+            <Turkish>Yakıt Çek</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_SyphoningInterrupted">
+            <English>Syphoning interrupted...</English>
+            <Czech>Odčerpávání přerušeno...</Czech>
+            <French>Siphonnement interrompu...</French>
+            <Spanish>Sifonado interrumpido...</Spanish>
+            <Italian>Sifonamento interrotto...</Italian>
+            <Polish>Spuszczanie paliwa przerwane...</Polish>
+            <Portuguese>Sifonagem interrompida...</Portuguese>
+            <Russian>Слив топлива прерван...</Russian>
+            <German>Absaugen unterbrochen...</German>
+            <Korean>연료 추출이 중단되었습니다...</Korean>
+            <Japanese>サイフォンでの抜き取りが中断されました...</Japanese>
+            <Chinese>虹吸中斷...</Chinese>
+            <Chinesesimp>虹吸中断...</Chinesesimp>
+            <Turkish>Yakıt çekme işlemi kesintiye uğradı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_SyphoningProgress">
+            <English>Syphoning fuel...</English>
+            <Czech>Odčerpávání paliva...</Czech>
+            <French>Siphonnement du carburant...</French>
+            <Spanish>Sifonando combustible...</Spanish>
+            <Italian>Sifonamento carburante...</Italian>
+            <Polish>Spuszczanie paliwa...</Polish>
+            <Portuguese>A sifonar combustível...</Portuguese>
+            <Russian>Слив топлива...</Russian>
+            <German>Kraftstoff wird abgesaugt...</German>
+            <Korean>연료 추출 중...</Korean>
+            <Japanese>燃料をサイフォンで抜き取り中...</Japanese>
+            <Chinese>正在虹吸燃料...</Chinese>
+            <Chinesesimp>正在虹吸燃料...</Chinesesimp>
+            <Turkish>Yakıt çekiliyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_TankLevelLabel">
+            <English>Tank level:</English>
+            <Czech>Hladina v nádrži:</Czech>
+            <French>Niveau du réservoir :</French>
+            <Spanish>Nivel del tanque:</Spanish>
+            <Italian>Livello serbatoio:</Italian>
+            <Polish>Poziom zbiornika:</Polish>
+            <Portuguese>Nível do depósito:</Portuguese>
+            <Russian>Уровень бака:</Russian>
+            <German>Tankinhalt:</German>
+            <Korean>연료 탱크 잔량:</Korean>
+            <Japanese>タンク残量:</Japanese>
+            <Chinese>油箱油位：</Chinese>
+            <Chinesesimp>油箱油位：</Chinesesimp>
+            <Turkish>Depo seviyesi:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_TheyWerePrepared">
+            <English>They were prepared</English>
+            <Czech>Byli připraveni</Czech>
+            <French>Ils étaient préparés</French>
+            <Spanish>Estaban preparados</Spanish>
+            <Italian>Erano preparati</Italian>
+            <Polish>Byli przygotowani</Polish>
+            <Portuguese>Eles estavam preparados</Portuguese>
+            <Russian>Oni byli готовы</Russian>
+            <German>Sie waren vorbereitet</German>
+            <Korean>준비된 자들</Korean>
+            <Japanese>備えあれば憂いなし</Japanese>
+            <Chinese>有備無患</Chinese>
+            <Chinesesimp>有备无患</Chinesesimp>
+            <Turkish>Hazırlıklıydılar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_TheyWerePreparedDesc">
+            <English>When enabled some vehicles on scenario start will possess tools for repairs based on vehicle type</English>
+            <Czech>Pokud je povoleno, některá vozidla budou při spuštění scénáře obsahovat nástroje pro opravu podle typu vozidla</Czech>
+            <French>Lorsqu'il est activé, certains véhicules posséderont au début du scénario des outils de réparation basés sur le type de véhicule</French>
+            <Spanish>Cuando está activado, algunos vehículos tendrán herramientas de reparación al iniciar el escenario según el tipo de vehículo</Spanish>
+            <Italian>Quando abilitato, alcuni veicoli all'avvio dello scenario possederanno strumenti per le riparazioni in base al tipo di veicolo</Italian>
+            <Polish>Gdy jest włączone, niektóre pojazdy na początku scenariusza będą posiadać narzędzia do naprawy w zależności od typu pojazdu</Polish>
+            <Portuguese>Quando ativado, alguns veículos no início do cenário possuirão ferramentas para reparações com base no tipo de veículo</Portuguese>
+            <Russian>Если включено, некоторый транспорт при старте сценария будет содержать ремонтные инструменты в зависимости от типа машины</Russian>
+            <German>Wenn aktiviert, besitzen einige Fahrzeuge bei Szenariobeginn je nach Fahrzeugtyp Werkzeuge für Reparaturen</German>
+            <Korean>활성화하면 시나리오 시작 시 일부 차량에 차량 유형에 맞는 수리 도구가 포함됩니다</Korean>
+            <Japanese>有効な場合、シナリオ開始時に一部の車両に車両タイプに応じた修理工具が配備されます</Japanese>
+            <Chinese>啟用時，部分車輛在任務開始时將根據車輛類型配備相應的維修工具</Chinese>
+            <Chinesesimp>启用时，部分车辆在任务开始时将根据车辆类型配备相应的维修工具</Chinesesimp>
+            <Turkish>Etkinleştirildiğinde, senaryo başlangıcında bazı araçlar araç türüne bağlı olarak onarım araçlarına sahip olacaktır</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_TireSalvageFailed">
+            <English>Failed to salvage spare tire...</English>
+            <Czech>Nepodařilo se demontovat rezervní pneumatiku...</Czech>
+            <French>Échec de la récupération de la roue de secours...</French>
+            <Spanish>Error al recuperar la rueda de repuesto...</Spanish>
+            <Italian>Impossibile recuperare la ruota di scorta...</Italian>
+            <Polish>Nie udało się odzyskać koła zapasowego...</Polish>
+            <Portuguese>Falha ao recuperar o pneu sobressalente...</Portuguese>
+            <Russian>Не удалось снять запасное колесо...</Russian>
+            <German>Demontage des Ersatzreifens fehlgeschlagen...</German>
+            <Korean>예비 타이어를 회수하는 데 실패했습니다...</Korean>
+            <Japanese>スペアタイヤの回収に失敗しました...</Japanese>
+            <Chinese>未能回收備胎...</Chinese>
+            <Chinesesimp>未能回收备胎...</Chinesesimp>
+            <Turkish>Yedek lastiği sökme işlemi başarısız oldu...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_TireSalvageProgress">
+            <English>Salvaging tire...</English>
+            <Czech>Demontáž pneumatiky...</Czech>
+            <French>Récupération du pneu...</French>
+            <Spanish>Desmontando neumático...</Spanish>
+            <Italian>Smontaggio dello pneumatico...</Italian>
+            <Polish>Demontaż opony...</Polish>
+            <Portuguese>A retirar o pneu...</Portuguese>
+            <Russian>Снятие колеса...</Russian>
+            <German>Reifen wird demontiert...</German>
+            <Korean>타이어 회수 중...</Korean>
+            <Japanese>タイヤを回収中...</Japanese>
+            <Chinese>正在拆卸並回收輪胎...</Chinese>
+            <Chinesesimp>正在拆卸并回收轮胎...</Chinesesimp>
+            <Turkish>Lastik sökülüyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_TireSalvageSuccess">
+            <English>Salvaged %1...</English>
+            <Czech>Získána %1...</Czech>
+            <French>%1 récupéré...</French>
+            <Spanish>%1 salvado...</Spanish>
+            <Italian>%1 recuperato...</Italian>
+            <Polish>Odzyskano %1...</Polish>
+            <Portuguese>%1 recuperado...</Portuguese>
+            <Russian>Снята %1...</Russian>
+            <German>%1 erfolgreich demontiert...</German>
+            <Korean>%1을(를) 회수했습니다...</Korean>
+            <Japanese>%1 を回収しました...</Japanese>
+            <Chinese>已回收 %1...</Chinese>
+            <Chinesesimp>已回收 %1...</Chinesesimp>
+            <Turkish>%1 kurtarıldı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_TireSalvageToolsRequired">
+            <English>You need a toolkit to salvage tires...</English>
+            <Czech>K demontáži pneumatik potřebuješ sadu nářadí...</Czech>
+            <French>Vous avez besoin d'une boîte à outils pour récupérer des pneus...</French>
+            <Spanish>Necesitas un kit de herramientas para recuperar neumáticos...</Spanish>
+            <Italian>Hai bisogno di una cassetta degli attrezzi per smontare gli pneumatici...</Italian>
+            <Polish>Potrzebujesz zestawu narzędzi, aby odzyskać opony...</Polish>
+            <Portuguese>Necessitas de un kit de ferramentas para recuperar pneus...</Portuguese>
+            <Russian>Вам нужен набор инструментов, чтобы снять колеса...</Russian>
+            <German>Du brauchst einen Werkzeugkasten, um Reifen zu demontieren...</German>
+            <Korean>타이어를 회수하려면 도구 상자가 필요합니다...</Korean>
+            <Japanese>タイヤの回収にはツールキットが必要です...</Japanese>
+            <Chinese>您需要工具箱才能拆卸並回收輪胎...</Chinese>
+            <Chinesesimp>您需要工具箱才能拆卸并回收轮胎...</Chinesesimp>
+            <Turkish>Lastikleri sökmek için bir tamir çantasına ihtiyacınız var...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_ToolToolkit">
+            <English>(x1 Toolkit)</English>
+            <Czech>(1x Sada nářadí)</Czech>
+            <French>(x1 Boîte à outils)</French>
+            <Spanish>(x1 Kit de herramientas)</Spanish>
+            <Italian>(x1 Cassetta degli attrezzi)</Italian>
+            <Polish>(x1 Zestaw narzędzi)</Polish>
+            <Portuguese>(x1 Kit de ferramentas)</Portuguese>
+            <Russian>(x1 Набор инструментов)</Russian>
+            <German>(x1 Werkzeugkasten)</German>
+            <Korean>(x1 도구 상자)</Korean>
+            <Japanese>(x1 ツールキット)</Japanese>
+            <Chinese>(x1 工具箱)</Chinese>
+            <Chinesesimp>(x1 工具箱)</Chinesesimp>
+            <Turkish>(x1 Tamir Çantası)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_ToolsTrackRepairKit">
+            <English>(x1 Empty Toolkit or x1 Track repair kit)</English>
+            <Czech>(1x Prázdná sada nářadí nebo 1x Sada na opravu pásů)</Czech>
+            <French>(x1 Boîte à outils vide ou x1 Kit de réparation de chenille)</French>
+            <Spanish>(x1 Kit de herramientas vacío o x1 Kit de reparación de orugas)</Spanish>
+            <Italian>(x1 Cassetta attrezzi vuota o x1 Kit riparazione cingoli)</Italian>
+            <Polish>(x1 Pusty zestaw narzędzi lub x1 Zestaw do naprawy gąsienic)</Polish>
+            <Portuguese>(x1 Kit de ferramentas vazio ou x1 Kit de reparação de lagartas)</Portuguese>
+            <Russian>(x1 Пустой набор инструментов или x1 Комплект для ремонта гусениц)</Russian>
+            <German>(x1 Leerer Werkzeugkasten oder x1 Ketten-Reparatursatz)</German>
+            <Korean>(x1 빈 도구 상자 또는 x1 궤도 수리 키트)</Korean>
+            <Japanese>(x1 空의 ツールキット または x1 履帯修理キット)</Japanese>
+            <Chinese>(x1 空工具箱 或 x1 履帶修復工具包)</Chinese>
+            <Chinesesimp>(x1 空工具箱 或 x1 履带修复工具包)</Chinesesimp>
+            <Turkish>(x1 Boş Tamir Çantası veya x1 Palet tamir kiti)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_TrackSalvageProgress">
+            <English>Salvaging track parts...</English>
+            <Czech>Demontáž dílů pásů...</Czech>
+            <French>Récupération des pièces de chenille...</French>
+            <Spanish>Desvalijando piezas de la oruga...</Spanish>
+            <Italian>Recupero componenti dai cingoli...</Italian>
+            <Polish>Demontaż części gąsienic...</Polish>
+            <Portuguese>A canibalizar peças de lagarta...</Portuguese>
+            <Russian>Снятие деталей гусеницы...</Russian>
+            <German>Kettenteile werden ausgebaut...</German>
+            <Korean>궤도 부품 채굴 중...</Korean>
+            <Japanese>履帯パーツを回収中...</Japanese>
+            <Chinese>正在搜刮履帶零件...</Chinese>
+            <Chinesesimp>正在搜刮履带零件...</Chinesesimp>
+            <Turkish>Palet parçaları sökülüyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_TrackScavengeFailed">
+            <English>Failed to scavenge parts from track...</English>
+            <Czech>Nepodařilo se získat díly z pásů...</Czech>
+            <French>Échec de la récupération des pièces de chenille...</French>
+            <Spanish>Error al desvalijar piezas de la oruga...</Spanish>
+            <Italian>Impossibile recuperare componenti dai cingoli...</Italian>
+            <Polish>Nie udało se odzyskać części z gąsienicy...</Polish>
+            <Portuguese>Falha ao canibalizar peças da lagarta...</Portuguese>
+            <Russian>Не удалось снять запчасти с гусеницы...</Russian>
+            <German>Ausbau von Kettenteilen fehlgeschlagen...</German>
+            <Korean>궤도에서 부품을 채굴하는 데 실패했습니다...</Korean>
+            <Japanese>履帯からのパーツ回収に失敗しました...</Japanese>
+            <Chinese>未能從履帶中搜刮出零件...</Chinese>
+            <Chinesesimp>未能从履带中搜刮出零件...</Chinesesimp>
+            <Turkish>Paletten parça sökme işlemi başarısız oldu...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_TrackScavengeNoSpace">
+            <English>%1 doesn't have enough room left for scavenging track parts...</English>
+            <Czech>%1 nemá dostatek místa pro uložení dílů z pásů...</Czech>
+            <French>%1 n'a pas assez d'espace pour stocker les pièces de chenille...</French>
+            <Spanish>¡%1 no tiene suficiente espacio para las piezas de la oruga!</Spanish>
+            <Italian>%1 nao ha abbastanza spazio per ospitare i componenti dei cingoli...</Italian>
+            <Polish>%1 nie ma wystarczająco dużo miejsca na odzyskane części gąsienic...</Polish>
+            <Portuguese>%1 não tem espaço suficiente para as peças de lagarta...</Portuguese>
+            <Russian>У %1 недостаточно места для снятых деталей гусеницы...</Russian>
+            <German>%1 hat nicht genug Platz für ausgebauten Kettenteile...</German>
+            <Korean>%1에 궤도 부품을 채굴해 넣을 공간이 부족합니다...</Korean>
+            <Japanese>%1 に履帯パーツを回収するための十分な空き容量がありません...</Japanese>
+            <Chinese>%1 的儲物空間不足，無法容納搜刮出的履帶零件...</Chinese>
+            <Chinesesimp>%1 的储物空间不足，无法容纳搜刮出的履带零件...</Chinesesimp>
+            <Turkish>%1 içinde palet parçaları sökmek için yeterli alan yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_TrackScavengeSuccess">
+            <English>Scavenged parts for %1 from track...</English>
+            <Czech>Z pásů byly získány náhradní díly pro %1...</Czech>
+            <French>Pièces de chenille pour %1 récupérées...</French>
+            <Spanish>Se han desvalijado piezas de la oruga para %1...</Spanish>
+            <Italian>Componenti per %1 recuperati dai cingoli...</Italian>
+            <Polish>Odzyskano części gąsienic dla %1...</Polish>
+            <Portuguese>Peças de lagarta para %1 canibalizadas...</Portuguese>
+            <Russian>С гусеницы были сняты запчасти для %1...</Russian>
+            <German>Ersatzteile für %1 aus der Kette ausgebaut...</German>
+            <Korean>궤도에서 %1의 예비 부품을 채굴했습니다...</Korean>
+            <Japanese>履帯から %1 用のパーツを回収しました...</Japanese>
+            <Chinese>成功從履帶搜刮出用於 %1 的零件...</Chinese>
+            <Chinesesimp>成功从履带搜刮出用于 %1 的零件...</Chinesesimp>
+            <Turkish>Paletten %1 için parçalar söküldü...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_TrackScavengeToolsRequired">
+            <English>You need Tools for scavenging tank track parts: %1 %2</English>
+            <Czech>K demontáži dílů tankových pásů potřebuješ nástroje: %1 %2</Czech>
+            <French>Outils nécessaires pour démonter des pièces de chenille : %1 %2</French>
+            <Spanish>Necesitas herramientas para desvalijar piezas de oruga de tanque: %1 %2</Spanish>
+            <Italian>Strumenti necessari per smontare parti di cingoli di carri armati: %1 %2</Italian>
+            <Polish>Potrzebujesz narzędzi do demontażu części gąsienic pancernych: %1 %2</Polish>
+            <Portuguese>Necessitas de ferramentas para canibalizar peças de lagarta de tanque: %1 %2</Portuguese>
+            <Russian>Вам нужны инструменты для снятия деталей танковой гусеницы: %1 %2</Russian>
+            <German>Werkzeuge zum Ausbau von Panzerkettenteilen benötigt: %1 %2</German>
+            <Korean>전차 궤도 부품을 채굴하려면 도구가 필요합니다: %1 %2</Korean>
+            <Japanese>戦車履帯パーツの回収には工具が必要です: %1 %2</Japanese>
+            <Chinese>您需要專用工具才能拆卸坦克履帶零件: %1 %2</Chinese>
+            <Chinesesimp>您需要专用工具才能拆卸坦克履带零件: %1 %2</Chinesesimp>
+            <Turkish>Tank paleti parçalarını sökmek için Aletlere ihtiyacınız var: %1 %2</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_VehicleDamageStatus">
+            <English>%1 - Damage: %2%%</English>
+            <Czech>%1 - Poškození: %2%%</Czech>
+            <French>%1 - Dégâts : %2%%</French>
+            <Spanish>%1 - Daño: %2%%</Spanish>
+            <Italian>%1 - Danni: %2%%</Italian>
+            <Polish>%1 - Uszkodzenia: %2%%</Polish>
+            <Portuguese>%1 - Danos: %2%%</Portuguese>
+            <Russian>%1 — Повреждения: %2%%</Russian>
+            <German>%1 - Schaden: %2%%</German>
+            <Korean>%1 - 피해량: %2%%</Korean>
+            <Japanese>%1 - 損傷: %2%%</Japanese>
+            <Chinese>%1 - 損害：%2%%</Chinese>
+            <Chinesesimp>%1 - 损害：%2%%</Chinesesimp>
+            <Turkish>%1 - Hasar: %%2%%</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_VehicleLabel">
+            <English>Vehicle: %1</English>
+            <Czech>Vozidlo: %1</Czech>
+            <French>Véhicule : %1</French>
+            <Spanish>Vehículo: %1</Spanish>
+            <Italian>Veicolo: %1</Italian>
+            <Polish>Pojazd: %1</Polish>
+            <Portuguese>Veículo: %1</Portuguese>
+            <Russian>Транспорт: %1</Russian>
+            <German>Fahrzeug: %1</German>
+            <Korean>차량: %1</Korean>
+            <Japanese>車両: %1</Japanese>
+            <Chinese>車輛：%1</Chinese>
+            <Chinesesimp>车辆：%1</Chinesesimp>
+            <Turkish>Araç: %1</Turkish>
+        </Key>
+    </Package>
+</Project>

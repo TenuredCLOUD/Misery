@@ -19,7 +19,7 @@ private _dialog = findDisplay 733836;
 
 private _selectedFuelCan = lbData [1500, (lbCurSel 1500)];
 
-if (_selectedFuelCan isEqualTo "") exitWith { ctrlSetText [1001, "No selected fuel can to fill..."] };
+if (_selectedFuelCan isEqualTo "") exitWith { ctrlSetText [1001, localize LSTRING(NoFuelCan)] };
 
 player setVariable [QGVAR(usingPump), true];
 
@@ -30,7 +30,7 @@ private _pumpInterrupt = (findDisplay 733836) displayAddEventHandler ["KeyDown",
     params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QGVAR(usingPump), false];
-        [QEGVAR(common,tileText), format ["Filling interrupted..."]] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), format [localize LSTRING(FillingInterrupted)]] call CBA_fnc_localEvent;
     };
 }];
 
@@ -38,7 +38,7 @@ private _preCheckIndex = [MACRO_FUEL_CANS] find _selectedFuelCan;
 private _preCheckCanNoFuel = [MACRO_FUEL_CANS_EMPTY] select _preCheckIndex;
 
 if (!([[_preCheckCanNoFuel]] call EFUNC(common,hasItem)) && !([[_selectedFuelCan]] call EFUNC(common,hasItem))) exitWith {
-    ctrlSetText [1001, "You have no fuel can to fill..."];
+    ctrlSetText [1001, localize LSTRING(NoFuelCanToFill)];
     [733836, [1600, 1601], true] call EFUNC(common,displayShowControls);
     player setVariable [QGVAR(usingPump), false];
     (findDisplay 733836) displayRemoveEventHandler ["KeyDown", _pumpInterrupt];
@@ -76,14 +76,14 @@ call FUNC(pumpAudio);
     if (!GVAR(usingGenerator) && !GVAR(usingBattery)) exitWith {
         player setVariable [QGVAR(usingPump), nil];
         (findDisplay 733836) displayRemoveEventHandler ["KeyDown", _pumpInterrupt];
-        ctrlSetText [1001, "You have no power source to operate this fuel pump..."];
+        ctrlSetText [1001, localize LSTRING(NoPowerSource)];
         [733836, [1600, 1601], true] call EFUNC(common,displayShowControls);
         GVAR(pumpingFuel) = false;
         playSound QEGVAR(audio,sound_gasPumpStop);
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
-    ctrlSetText [1001, "Pumping fuel..."];
+    ctrlSetText [1001, localize LSTRING(PumpingFuel)];
 
     // Add matching magazine type of fuel can to player if they have empty variant
     if !([[_selectedFuelCan]] call EFUNC(common,hasItem)) then {
@@ -99,7 +99,7 @@ call FUNC(pumpAudio);
         if !(_incremented) exitWith {
             player setVariable [QGVAR(usingPump), nil];
             (findDisplay 733836) displayRemoveEventHandler ["KeyDown", _pumpInterrupt];
-            ctrlSetText [1001, "You stop pumping fuel..."];
+            ctrlSetText [1001, localize LSTRING(StopPumpingFuel)];
             [733836, [1600, 1601], true] call EFUNC(common,displayShowControls);
             GVAR(pumpingFuel) = false;
             playSound QEGVAR(audio,sound_gasPumpStop);
@@ -113,7 +113,7 @@ call FUNC(pumpAudio);
         if !(_incremented) exitWith {
             player setVariable [QGVAR(usingPump), nil];
             (findDisplay 733836) displayRemoveEventHandler ["KeyDown", _pumpInterrupt];
-            ctrlSetText [1001, "You stop pumping fuel..."];
+            ctrlSetText [1001, localize LSTRING(StopPumpingFuel)];
             [733836, [1600, 1601], true] call EFUNC(common,displayShowControls);
             GVAR(pumpingFuel) = false;
             playSound QEGVAR(audio,sound_gasPumpStop);

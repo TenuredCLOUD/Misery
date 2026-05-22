@@ -2,7 +2,7 @@
 
 GVAR(searchForMoneyAction) = [
     QGVAR(searchForMoney_menu),
-    format ["%1 Search for money", GVAR(symbol)],
+    format [localize LSTRING(SearchAction), GVAR(symbol)],
     QPATHTOEF(icons,data\hand_helping_ca.paa),
     {
         params ["_target", "_player"];
@@ -21,7 +21,7 @@ GVAR(searchForMoneyAction) = [
 
 private _giftMoneyAction = [
     QGVAR(giftMoney_menu),
-    format ["%1 Gift money", GVAR(symbol)],
+    format [localize LSTRING(GiftAction), GVAR(symbol)],
     QPATHTOEF(icons,data\hand_helping_ca.paa),
     {
         params ["_target", "_player"];
@@ -42,11 +42,11 @@ private _giftMoneyAction = [
 
 private _fundsCheckAction = [
     QGVAR(check_menu),
-    "Current funds",
+    localize LSTRING(CurrentFunds),
     QPATHTOEF(icons,data\wallet_ca.paa),
     {
         call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
-        [QEGVAR(common,tileText), format ["Funds: %2 %1", [_funds, 1, 2, true] call CBA_fnc_formatNumber, GVAR(symbol)]] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), format [localize LSTRING(Funds), [_funds, 1, 2, true] call CBA_fnc_formatNumber, GVAR(symbol)]] call CBA_fnc_localEvent;
     },
     {true}
 ] call ACEFUNC(interact_menu,createAction);

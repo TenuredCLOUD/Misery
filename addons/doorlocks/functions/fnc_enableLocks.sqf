@@ -17,7 +17,7 @@
 call FUNC(countDoors) params ["_doorCount", "_building"];
 
 if (_building getVariable [QGVAR(doorsLocked), false]) exitWith {
-    ["Doors are already locked...", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
+    [localize LSTRING(DoorsAlreadyLocked), 1, [1, 1, 1, 1]] call CBA_fnc_notify;
 };
 
 for "_i" from 1 to _doorCount do {
@@ -26,4 +26,4 @@ for "_i" from 1 to _doorCount do {
 
 _building setVariable [QGVAR(doorsLocked), true, true];
 
-["Doors locked", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
+[localize LSTRING(DoorsLocked), 1, [1, 1, 1, 1]] call CBA_fnc_notify;

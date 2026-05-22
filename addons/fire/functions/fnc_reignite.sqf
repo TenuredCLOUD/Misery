@@ -20,7 +20,7 @@
 params ["_nearbyFire", "_fuel", "_fuelType", "_fireIndex", "_noteBox"];
 
 if (isNull _nearbyFire) exitWith {
-    _noteBox ctrlSetText "No nearby fire found.";
+    _noteBox ctrlSetText localize LSTRING(NotFound);
     [QUOTE(COMPONENT_BEAUTIFIED), "Reignition failed: No nearby fire."] call EFUNC(common,debugMessage);
 };
 
@@ -45,7 +45,7 @@ switch (true) do {
         GVAR(activeFires) pushBack [_object, "big", _burnTimeLeft];
         publicVariable QGVAR(activeFires);
 
-        _noteBox ctrlSetText "Fire reignited and upgraded...";
+        _noteBox ctrlSetText localize LSTRING(ReignitedUpgraded);
         [QUOTE(COMPONENT_BEAUTIFIED), format ["Upgraded small fire at %1 to big fire with %2(s) burn time.", getPosATL _object, _burnTimeLeft]] call EFUNC(common,debugMessage);
     };
     case (_isDowngrade): {
@@ -64,7 +64,7 @@ switch (true) do {
         GVAR(activeFires) pushBack [_object, "small", _burnTimeLeft];
         publicVariable QGVAR(activeFires);
 
-        _noteBox ctrlSetText "Fire reignited and downgraded...";
+        _noteBox ctrlSetText localize LSTRING(ReignitedDowngraded);
         [QUOTE(COMPONENT_BEAUTIFIED), format ["Downgraded big fire at %1 to small fire with %2(s) burn time.", getPosATL _object, _burnTimeLeft]] call EFUNC(common,debugMessage);
     };
     case (_isBarrelFire): {
@@ -80,7 +80,7 @@ switch (true) do {
     };
     publicVariable QGVAR(activeFires);
 
-    _noteBox ctrlSetText "Barrel fire reignited successfully...";
+    _noteBox ctrlSetText localize LSTRING(ReignitedBarrel);
     [QUOTE(COMPONENT_BEAUTIFIED), format ["Reignited barrel fire at %1 with %2(s) burn time.", getPosATL _nearbyFire, _burnTimeLeft]] call EFUNC(common,debugMessage);
     };
     default {
@@ -96,7 +96,7 @@ switch (true) do {
     };
     publicVariable QGVAR(activeFires);
 
-    _noteBox ctrlSetText "Fire reignited successfully...";
+    _noteBox ctrlSetText localize LSTRING(ReignitedSuccess);
     [QUOTE(COMPONENT_BEAUTIFIED), format ["Reignited %1 fire at %2 with %3(s) burn time.", _fuelType, getPosATL _nearbyFire, _burnTimeLeft]] call EFUNC(common,debugMessage);
     };
 };

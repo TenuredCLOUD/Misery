@@ -21,12 +21,12 @@ params ["_name"];
 call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "_radiation", "_infection", "_parasites", "_toxicity", "_psychosis"];
 
 private _treatmeant = switch (true) do {
-    case (_name isEqualTo "Treat Wounds"): {1};
-    case (_name isEqualTo "Treat Radiation"): {2};
-    case (_name isEqualTo "Treat Infection"): {3};
-    case (_name isEqualTo "Treat Parasites"): {4};
-    case (_name isEqualTo "Treat Toxicity"): {5};
-    case (_name isEqualTo "Treat Psychosis"): {6};
+    case (_name isEqualTo LSTRING(TreatWounds)): {1};
+    case (_name isEqualTo LSTRING(TreatRadiation)): {2};
+    case (_name isEqualTo LSTRING(TreatInfection)): {3};
+    case (_name isEqualTo LSTRING(TreatParasites)): {4};
+    case (_name isEqualTo LSTRING(TreatToxicity)): {5};
+    case (_name isEqualTo LSTRING(TreatPsychosis)): {6};
 };
 
 _needsTreatment = true;

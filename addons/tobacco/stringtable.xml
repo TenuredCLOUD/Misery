@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Tobacco">
+        <Key ID="STR_MISERY_Tobacco_LightCigar">
+            <English>You light up a cigar...</English>
+            <Czech>Zapaluješ si doutník...</Czech>
+            <French>Vous allumez un cigare...</French>
+            <Spanish>Enciendes un puro...</Spanish>
+            <Italian>Accendi un sigaro...</Italian>
+            <Polish>Opalasz cygaro...</Polish>
+            <Portuguese>Acendes un charuto...</Portuguese>
+            <Russian>Вы закуриваете сигару...</Russian>
+            <German>Du zündest dir eine Zigarre an...</German>
+            <Korean>시가에 불을 붙입니다...</Korean>
+            <Japanese>叶巻に火をつけました...</Japanese>
+            <Chinese>您點燃了一根雪茄...</Chinese>
+            <Chinesesimp>您点燃了一根雪茄...</Chinesesimp>
+            <Turkish>Bir puro yakıyorsunuz...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Tobacco_LightCigarette">
+            <English>You light up a cigarette...</English>
+            <Czech>Zapaluješ si cigaretu...</Czech>
+            <French>Vous allumez une cigarette...</French>
+            <Spanish>Enciendes un cigarrillo...</Spanish>
+            <Italian>Accendi una sigaretta...</Italian>
+            <Polish>Zapalasz papierosa...</Polish>
+            <Portuguese>Acendes um cigarro...</Portuguese>
+            <Russian>Вы закуриваете сигарету...</Russian>
+            <German>Du zündest dir eine Zigarette an...</German>
+            <Korean>담배에 불을 붙입니다...</Korean>
+            <Japanese>タバコに火をつけました...</Japanese>
+            <Chinese>您點燃了一根香菸...</Chinese>
+            <Chinesesimp>您点燃了一根香烟...</Chinesesimp>
+            <Turkish>Bir sigara yakıyorsunuz...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Tobacco_NoFireSource">
+            <English>You need a lighter or matches to smoke...</English>
+            <Czech>K zapálení potřebuješ zapalovač nebo zápalky...</Czech>
+            <French>Vous avez besoin d'un briquet ou d'allumettes pour fumer...</French>
+            <Spanish>Necesitas un encendedor o fósforos para fumar...</Spanish>
+            <Italian>Hai bisogno di un accendino o di fiammiferi per fumare...</Italian>
+            <Polish>Potrzebujesz zapalniczki lub zapałek, aby zapalić...</Polish>
+            <Portuguese>Precisas de um isqueiro ou fósforos para fumar...</Portuguese>
+            <Russian>Вам нужна зажигалка или спички, чтобы закурить...</Russian>
+            <German>Du brauchst ein Feuerzeug oder Streichhölzer, um zu rauchen...</German>
+            <Korean>담배를 피우려면 라이터나 성냥이 필요합니다...</Korean>
+            <Japanese>タバコを吸うにはライターかマッチが必要です...</Japanese>
+            <Chinese>您需要打火機或火柴才能抽菸...</Chinese>
+            <Chinesesimp>您需要打火机或火柴才能抽烟...</Chinesesimp>
+            <Turkish>Sigara içmek için çakmak veya kibrite ihtiyacınız var...</Turkish>
+        </Key>
+    </Package>
+</Project>

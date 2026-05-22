@@ -29,7 +29,7 @@
         [player] call EFUNC(common,nearVehicle) params ["", "", "_hasCrew"];
 
         if (_hasCrew) exitWith {
-            [QEGVAR(common,tileText), format ["Crew is present in %1, preventing any maintenance...", [_vehicle] call EFUNC(common,getObjectData) select 0]] call CBA_fnc_localEvent;
+            [QEGVAR(common,tileText), format [localize LSTRING(CrewPresent), [_vehicle] call EFUNC(common,getObjectData) select 0]] call CBA_fnc_localEvent;
             _handle call CBA_fnc_removePerFrameHandler;
             (findDisplay 274839) closeDisplay 2;
         };
@@ -40,10 +40,10 @@
 
         if (isNil "_vehicle") exitWith {
             [274839, [1600, 1602], false] call EFUNC(common,displayShowControls);
-            ctrlSetText [1000, "No Vehicle to Repair..."];
+            ctrlSetText [1000, localize LSTRING(NoVehicleToRepair)];
         };
 
-        ctrlSetText [1000, format ["Vehicle: %1", [_vehicle] call EFUNC(common,getObjectData) select 0]];
+        ctrlSetText [1000, format [localize LSTRING(VehicleLabel), [_vehicle] call EFUNC(common,getObjectData) select 0]];
 
         lbClear _list;
 
@@ -58,7 +58,7 @@
             if (_selectionName isNotEqualTo "") then {
                 private _damage = _damages select _forEachIndex;
                 private _damagePercent = _damage * 100;
-                private _index = _list lbAdd format ["%1 - Damage: %2%%", _selectionName, [_damagePercent, 1, 1, false] call CBA_fnc_formatNumber];
+                private _index = _list lbAdd format [localize LSTRING(VehicleDamageStatus), _selectionName, [_damagePercent, 1, 1, false] call CBA_fnc_formatNumber];
                 _list lbSetData [_index, str _forEachIndex];
             };
         } forEach _selectionNames;

@@ -6,7 +6,7 @@ if (isServer) then {
 
         private _hydrologyAction = [
             QGVAR(hydrology_menu),
-            localize ECSTRING(common,CollectWater),
+            localize LSTRING(Action),
             QPATHTOEF(icons,data\waves_arrow_up_ca.paa),
             {
                 params ["_target", "_player"];

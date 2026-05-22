@@ -22,7 +22,7 @@ GVAR(lineOut) = (GVAR(lineOut) - 0.05) max 0;
 GVAR(lineTension) = (GVAR(lineTension) + 0.1) min 1;
 
 if (GVAR(lineOut) <= 0 && GVAR(fishOn)) then {
-    [QEGVAR(common,tileText), "You caught a fish."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(CaughtFish)] call CBA_fnc_localEvent;
     private _fishHolder = "GroundWeaponHolder" createVehicle [0,0,0];
     _fishHolder addItemCargoGlobal [QCLASS(rawFish), 1];
     _fishHolder enableCollisionWith player;
@@ -35,7 +35,7 @@ if (GVAR(lineOut) <= 0 && GVAR(fishOn)) then {
     [] call FUNC(exit);
 } else {
     if (GVAR(lineOut) <= 0) then {
-        [QEGVAR(common,tileText), "Line fully reeled in."] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), localize LSTRING(FullyReeledIn)] call CBA_fnc_localEvent;
         [] call FUNC(exit);
     };
 };

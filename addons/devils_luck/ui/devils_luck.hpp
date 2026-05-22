@@ -14,7 +14,7 @@ class CLASS(devils_luck_ui) {
         };
         class CLASS(devils_luck_prompt): RscText {
             idc = 1100;
-            text = "Devil's Luck";
+            text = ECSTRING(devils_luck,DevilsLuck);
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
             y = 0 * GUI_GRID_H + GUI_GRID_Y;
             w = 22 * GUI_GRID_W;
@@ -71,7 +71,7 @@ class CLASS(devils_luck_ui) {
         };
         class CLASS(devils_luck_current_bet): RscText {
             idc = 1102;
-            text = "Current Bet: 0";
+            text = ECSTRING(devils_luck,CurrentBetPrompt);
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
             y = 2.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 22 * GUI_GRID_W;
@@ -91,7 +91,7 @@ class CLASS(devils_luck_ui) {
         class CLASS(devils_luck_bet_update): RscButton {
             idc = -1;
             onButtonClick = QUOTE([] call EFUNC(devils_luck,updateBetDisplay));
-            text = "Place Bet";
+            text = ECSTRING(devils_luck,PlaceBet);
             x = 30.5 * GUI_GRID_W + GUI_GRID_X;
             y = 10 * GUI_GRID_H + GUI_GRID_Y;
             w = 8 * GUI_GRID_W;
@@ -101,7 +101,7 @@ class CLASS(devils_luck_ui) {
         };
         class CLASS(devils_luck_prediction): RscText {
             idc = 1103;
-            text = "Prediction: NONE";
+            text = ECSTRING(devils_luck,PredictionNone);
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
             y = 4.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 22 * GUI_GRID_W;
@@ -111,7 +111,7 @@ class CLASS(devils_luck_ui) {
         };
         class CLASS(devils_luck_predict_higher): RscButton {
             idc = 1602;
-            text = "Predict Higher";
+            text = ECSTRING(devils_luck,PredictHigher);
             onButtonClick = QUOTE([true] call EFUNC(devils_luck,setPrediction));
             x = 1 * GUI_GRID_W + GUI_GRID_X;
             y = 14.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -122,7 +122,7 @@ class CLASS(devils_luck_ui) {
         };
         class CLASS(devils_luck_predict_lower): RscButton {
             idc = 1603;
-            text = "Predict Lower";
+            text = ECSTRING(devils_luck,PredictLower);
             onButtonClick = QUOTE([false] call EFUNC(devils_luck,setPrediction));
             x = 1 * GUI_GRID_W + GUI_GRID_X;
             y = 16.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -133,7 +133,7 @@ class CLASS(devils_luck_ui) {
         };
         class CLASS(devils_luck_roll): RscButton {
             idc = 1604;
-            text = "ROLL";
+            text = ECSTRING(devils_luck,Roll);
             onButtonClick = QUOTE([] call EFUNC(devils_luck,handleRoll));
             x = 16 * GUI_GRID_W + GUI_GRID_X;
             y = 15.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -146,7 +146,7 @@ class CLASS(devils_luck_ui) {
         class CLASS(devils_luck_help_tips): RscButton {
             onButtonClick = QUOTE([] call EFUNC(devils_luck,rules));
             idc = 1606;
-            text = "Rules";
+            text = ECSTRING(devils_luck,Rules);
             x = 31 * GUI_GRID_W + GUI_GRID_X;
             y = 18.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 8 * GUI_GRID_W;
@@ -156,7 +156,7 @@ class CLASS(devils_luck_ui) {
         };
         class CLASS(devils_luck_exit): RscButton {
             idc = 1605;
-            text = "Leave Game";
+            text = ECSTRING(devils_luck,LeaveGame);
             onButtonClick = "closeDialog 2";
             x = 31 * GUI_GRID_W + GUI_GRID_X;
             y = 22 * GUI_GRID_H + GUI_GRID_Y;
@@ -167,7 +167,7 @@ class CLASS(devils_luck_ui) {
         };
         class CLASS(devils_luck_noteBox): RscText {
             idc = 1104;
-            text = "Place your bets...";
+            text = ECSTRING(devils_luck,PlaceYourBets);
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
             y = 20.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 39 * GUI_GRID_W;

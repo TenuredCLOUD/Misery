@@ -16,22 +16,22 @@
 params ["_found", "_miningObject", "_objectData"];
 
 if !(_found) exitWith {
-    [QEGVAR(common,tileText), format ["No mining source found..."]] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(NoSource)] call CBA_fnc_localEvent;
 };
 
 if (isNull _miningObject) exitWith {
-    [QEGVAR(common,tileText), format ["No mining source found..."]] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(NoSource)] call CBA_fnc_localEvent;
 };
 
 private _miningTime = _objectData select 1;
 private _audio = _objectData select 2;
 
 if !([[QCLASS(pickaxe)]] call EFUNC(common,hasItem)) exitWith {
-    [QEGVAR(common,tileText), localize ECSTRING(common,MineOreNoTools)] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(NoTools)] call CBA_fnc_localEvent;
 };
 
 if (GVAR(minedPositions) findIf {_x distance getPosWorld player < 2.5} isNotEqualTo -1) exitWith {
-    [QEGVAR(common,tileText), "This ore vein has been depleted..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(VeinDepleted)] call CBA_fnc_localEvent;
 };
 
 if (currentWeapon player isNotEqualTo "") then {
@@ -49,7 +49,7 @@ player setVariable [QGVAR(miningOre), true];
 
 call FUNC(degradePick);
 
-["Mining ore...",
+[localize LSTRING(ActionProgress),
 _miningTime,
 {[[QCLASS(pickaxe)]] call EFUNC(common,hasItem)},
 {
@@ -76,10 +76,10 @@ _miningTime,
     if (_itemCargo isNotEqualTo []) then {
         private _holder = [getPosATL player, _itemCargo] call EFUNC(common,spawnLoot);
         private _rockChunksSuccess = [getPosATL player, [[QCLASS(stoneChunk), random 5]]] call EFUNC(common,spawnLoot);
-        [QEGVAR(common,tileText), "You found some ore..."] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), localize LSTRING(Success)] call CBA_fnc_localEvent;
     } else {
         private _rockChunksFailure = [getPosATL player, [[QCLASS(stoneChunk), random 5]]] call EFUNC(common,spawnLoot);
-        [QEGVAR(common,tileText), "No ore found..."] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), localize LSTRING(NoOreFound)] call CBA_fnc_localEvent;
     };
 
     if ([_oreDepletion] call EFUNC(common,rollChance)) then {
@@ -106,7 +106,7 @@ _miningTime,
         deleteVehicle _soundDummy;
     };
 
-    [QEGVAR(common,tileText), "You stop mining..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(Interrupted)] call CBA_fnc_localEvent;
 },
 [_objectData, _miningTime, _soundDummy]
 ] call CBA_fnc_progressBar;

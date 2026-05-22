@@ -7,7 +7,7 @@
 
         private _chemicalDetectorBatteries = [
             QGVAR(chemicalDetector_menu),
-            "Add 9v batteries to chemical detector",
+            localize LSTRING(AddBatteries),
             QPATHTOEF(icons,data\battery_charging_ca.paa),
             {
                 call FUNC(batteries);

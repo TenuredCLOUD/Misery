@@ -19,7 +19,7 @@
 private _dialog = findDisplay 982381;
 private _selectedIndex = lbCurSel 1500;
 
-if (_selectedIndex isEqualTo -1) exitWith {ctrlSetText [1001, "No treatment option selected..."];};
+if (_selectedIndex isEqualTo -1) exitWith {ctrlSetText [1001, localize LSTRING(NoOptionSelected)];};
 
 [982381, [1600, 1601], false] call EFUNC(common,displayShowControls);
 
@@ -32,12 +32,12 @@ private _duration = _treatment select 3;
 call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
 if !([_name] call FUNC(checkStats)) exitWith {
-    ctrlSetText [1001, "You don't need any treatment for this..."];
+    ctrlSetText [1001, localize LSTRING(NoTreatmentNeeded)];
     [982381, [1600, 1601], true] call EFUNC(common,displayShowControls);
 };
 
 if (_funds < _price) exitWith {
-    ctrlSetText [1001, "You cannot afford this!"];
+    ctrlSetText [1001, localize ECSTRING(common,TooExpensive)];
     [982381, [1600, 1601], true] call EFUNC(common,displayShowControls);
 };
 
@@ -47,7 +47,7 @@ private _interruptEH = _dialog displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key"];
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QCLASS(processTreatment), false];
-        [QEGVAR(common,tileText), "Treatment interrupted..."] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), localize LSTRING(Interrupted)] call CBA_fnc_localEvent;
     };
 }];
 
@@ -69,7 +69,7 @@ private _currentStep = 0;
     _args set [5, _currentStep];
 
     private _progress = (_currentStep / _totalSteps) * 100 toFixed 0;
-    ctrlSetText [1001, format ["Receiving treatment... %1%% complete", _progress]];
+    ctrlSetText [1001, format [localize LSTRING(ReceivingTreatment), _progress]];
 
     if (_currentStep >= _totalSteps) then {
         [-_price] call EFUNC(currency,modifyMoney);
@@ -84,7 +84,7 @@ private _currentStep = 0;
             call _action;
         };
 
-        ctrlSetText [1001, format ["%1 complete...", _name]];
+        ctrlSetText [1001, format [localize LSTRING(ProgressComplete), _name]];
         player setVariable [QCLASS(processTreatment), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _interruptEH];
         [982381, [1600, 1601], true] call EFUNC(common,displayShowControls);

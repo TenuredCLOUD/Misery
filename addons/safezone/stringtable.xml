@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Safezone">
+        <Key ID="STR_MISERY_Safezone_Component">
+            <English>Safezone</English>
+            <Czech>Bezpečná zóna</Czech>
+            <French>Zone de sécurité</French>
+            <Spanish>Zona segura</Spanish>
+            <Italian>Zona sicura</Italian>
+            <Polish>Bezpieczna strefa</Polish>
+            <Portuguese>Zona Segura</Portuguese>
+            <Russian>Безопасная зона</Russian>
+            <German>Sicherheitszone</German>
+            <Korean>안전 지대</Korean>
+            <Japanese>セーフゾーン</Japanese>
+            <Chinese>安全區</Chinese>
+            <Chinesesimp>安全区</Chinesesimp>
+            <Turkish>Güvenli Bölge</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Safezone_Entered">
+            <English>You are entering a safezone..</English>
+            <Czech>Vstupuješ do bezpečné zóny..</Czech>
+            <French>Vous entrez dans une zone de sécurité..</French>
+            <Spanish>Estás entrando en una zona segura..</Spanish>
+            <Italian>Stai entrando in una zona sicura..</Italian>
+            <Polish>Wchodzisz do bezpiecznej strefy..</Polish>
+            <Portuguese>Estás a entrar numa zona segura..</Portuguese>
+            <Russian>Вы входите в безопасную зону..</Russian>
+            <German>Du betrittst eine Sicherheitszone..</German>
+            <Korean>안전 구역에 진입하고 있습니다..</Korean>
+            <Japanese>安全地帯に入りました..</Japanese>
+            <Chinese>您正在進入安全區..</Chinese>
+            <Chinesesimp>您正在进入安全区..</Chinesesimp>
+            <Turkish>Güvenli bölgeye giriyorsunuz..</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Safezone_Left">
+            <English>You have left a safezone..</English>
+            <Czech>Opustil jsi bezpečnou zónu..</Czech>
+            <French>Vous avez quitté la zone de sécurité..</French>
+            <Spanish>Has salido de la zona segura..</Spanish>
+            <Italian>Hai lasciato la zona sicura..</Italian>
+            <Polish>Opuściłeś bezpieczną strefę..</Polish>
+            <Portuguese>Saíste de uma zona segura..</Portuguese>
+            <Russian>Вы покидаете безопасную зону..</Russian>
+            <German>Du hast die Sicherheitszone verlassen..</German>
+            <Korean>안전 구역에서 벗어났습니다..</Korean>
+            <Japanese>安全地帯から出ました..</Japanese>
+            <Chinese>您已離開安全區..</Chinese>
+            <Chinesesimp>您已离开安全区..</Chinesesimp>
+            <Turkish>Güvenli bölgeden ayrıldınız..</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Safezone_SafezoneAreas">
+            <English>Safe Zone Areas</English>
+            <Czech>Oblasti bezpečných zón</Czech>
+            <French>Zones de sécurité</French>
+            <Spanish>Áreas de zona segura</Spanish>
+            <Italian>Aree delle zone sicure</Italian>
+            <Polish>Strefy bezpieczne</Polish>
+            <Portuguese>Áreas de zona segura</Portuguese>
+            <Russian>Безопасные зоны</Russian>
+            <German>Sicherheitszonen-Gebiete</German>
+            <Korean>안전 구역 설정</Korean>
+            <Japanese>安全地帯エリア設定</Japanese>
+            <Chinese>安全區域</Chinese>
+            <Chinesesimp>安全区域</Chinesesimp>
+            <Turkish>Güvenli Alan Bölgeleri</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Safezone_SafezoneAreasDesc">
+            <English>ELLIPSE or RECTANGLE marker names covering the safezone area as strings ['Safezone_1', 'Safezone_2']</English>
+            <Czech>Názvy markerů typu ELLIPSE nebo RECTANGLE pokrývajících bezpečnou zónu jako řetězce ['Safezone_1', 'Safezone_2']</Czech>
+            <French>Noms des marqueurs ELLIPSE ou RECTANGLE couvrant la zone de sécurité sous forme de chaînes ['Safezone_1', 'Safezone_2']</French>
+            <Spanish>Nombres de los marcadores ELLIPSE o RECTANGLE que cubren el área de zona segura como cadenas ['Safezone_1', 'Safezone_2']</Spanish>
+            <Italian>Nomi dei marcadores ELLIPSE o RECTANGLE che coprono l'area di sicurezza espressi come stringhe ['Safezone_1', 'Safezone_2']</Italian>
+            <Polish>Nazwy markerów ELLIPSE lub RECTANGLE pokrywających bezpieczną strefę jako ciągi tekstowe ['Safezone_1', 'Safezone_2']</Polish>
+            <Portuguese>Nomes dos marcadores ELLIPSE ou RECTANGLE cobrindo a área de zona segura como strings ['Safezone_1', 'Safezone_2']</Portuguese>
+            <Russian>Имена маркеров типа ELLIPSE или RECTANGLE, покрывающих безопасную зону, в виде строк ['Safezone_1', 'Safezone_2']</Russian>
+            <German>ELLIPSE oder RECTANGLE Markernamen, die das Sicherheitsgebiet abdecken, als Strings ['Safezone_1', 'Safezone_2']</German>
+            <Korean>안전 구역을 지정하는 타원(ELLIPSE) 또는 사각형(RECTANGLE) 마커의 이름을 문자열 형태로 입력합니다 ['Safezone_1', 'Safezone_2']</Korean>
+            <Japanese>安全地帯をカバーする楕円（ELLIPSE）または長方形（RECTANGLE）マーカーの名前を文字列で指定します ['Safezone_1', 'Safezone_2']</Japanese>
+            <Chinese>以字串陣列形式輸入覆蓋安全區域的橢圓（ELLIPSE）或矩形（RECTANGLE）標記名稱 ['Safezone_1', 'Safezone_2']</Chinese>
+            <Chinesesimp>以字符串数组形式输入覆盖安全区域的椭圆（ELLIPSE）或矩形（RECTANGLE）标记名称 ['Safezone_1', 'Safezone_2']</Chinesesimp>
+            <Turkish>Güvenli alanı kapsayan ELLIPSE veya RECTANGLE işaretçi adlarını dize olarak yazın ['Safezone_1', 'Safezone_2']</Turkish>
+        </Key>
+    </Package>
+</Project>

@@ -17,7 +17,7 @@
 [player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
 
 if !([["ToolKit"]] call EFUNC(common,hasItem)) exitWith {
-    ctrlSetText [1001, format ["You need a toolkit to uninstall a battery..."]];
+    ctrlSetText [1001, localize LSTRING(NeedToolkitUninstallBattery)];
 };
 
 private _installedBatteries = _vehicle getVariable [QGVAR(installedBatteries), 0];
@@ -25,7 +25,7 @@ private _batteryCount = _vehicle getVariable [QGVAR(batteryCount), 1];
 private _batteryLevel = _vehicle getVariable [QGVAR(batteryLevel), 0];
 
 if (_installedBatteries <= 0) exitWith {
-    ctrlSetText [1001, format ["%1 has no batteries left to remove...", [_vehicle] call EFUNC(common,getObjectData) select 0]];
+    ctrlSetText [1001, format [localize LSTRING(NoBatteriesToRemove), [_vehicle] call EFUNC(common,getObjectData) select 0]];
 };
 
 private _batteryType = _vehicle getVariable [QGVAR(batteryType), 0];

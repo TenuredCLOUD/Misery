@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Rating">
+        <Key ID="STR_MISERY_Rating_Component">
+            <English>Rating</English>
+            <Czech>Hodnocení</Czech>
+            <French>Évaluation</French>
+            <Spanish>Calificación</Spanish>
+            <Italian>Valutazione</Italian>
+            <Polish>Ocena</Polish>
+            <Portuguese>Classificação</Portuguese>
+            <Russian>Рейтинг</Russian>
+            <German>Bewertung</German>
+            <Korean>평가</Korean>
+            <Japanese>評価</Japanese>
+            <Chinese>評分 / 評級</Chinese>
+            <Chinesesimp>评分 / 评级</Chinesesimp>
+            <Turkish>Derecelendirme</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Rating_IgnoreRating">
+            <English>Ignore rating</English>
+            <Czech>Ignorovat hodnocení</Czech>
+            <French>Ignorer la réputation</French>
+            <Spanish>Ignorar reputación</Spanish>
+            <Italian>Ignora reputazione</Italian>
+            <Polish>Ignoruj ocenę</Polish>
+            <Portuguese>Ignorar reputação</Portuguese>
+            <Russian>Игнорировать рейтинг</Russian>
+            <German>Bewertung ignorieren</German>
+            <Korean>평판 점수 무시</Korean>
+            <Japanese>評価システムを無視</Japanese>
+            <Chinese>忽略聲望評級</Chinese>
+            <Chinesesimp>忽略声望评级</Chinesesimp>
+            <Turkish>Derecelendirmeyi Yoksay</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Rating_IgnoreRatingDesc">
+            <English>When enabled, players cannot turn renegade</English>
+            <Czech>Pokud je povoleno, hráči se nemohou stát renegáty</Czech>
+            <French>Lorsqu'il est activé, les joueurs ne können pas devenir renégats</French>
+            <Spanish>Cuando está activado, los jugadores no pueden volverse renegados</Spanish>
+            <Italian>Quando abilitato, i giocatori non possono diventare rinnegati</Italian>
+            <Polish>Gdy włączone, gracze nie mogą stać się renegatami</Polish>
+            <Portuguese>Quando ativado, os jogadores não se podem tornar renegados</Portuguese>
+            <Russian>Если включено, игроки не могут стать ренегатами</Russian>
+            <German>Wenn aktiviert, können Spieler nicht zu Abtrünnigen werden</German>
+            <Korean>활성화 시, 플레이어가 변절자(배신자) 상태로 전환되지 않습니다</Korean>
+            <Japanese>有効にすると、プレイヤーは反逆者（レネゲード）状態にならなくなります</Japanese>
+            <Chinese>啟用時，玩家將不會轉變為叛变者（Renegade）狀態</Chinese>
+            <Chinesesimp>启用时，玩家将不会转变为叛变者（Renegade）状态</Chinesesimp>
+            <Turkish>Etkinleştirildiğinde, oyuncular dönek (renegade) durumuna düşemez</Turkish>
+        </Key>
+    </Package>
+</Project>

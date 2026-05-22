@@ -13,7 +13,7 @@ if !(isServer) exitWith {};
 
 private _eruBatteries = [
     QGVAR(eru_menu),
-    "Add lithium battery to ERU",
+    localize LSTRING(ERUActionAddBattery),
     QPATHTOEF(icons,data\battery_charging_ca.paa),
     {
         call FUNC(batteries);

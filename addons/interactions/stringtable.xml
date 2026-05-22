@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Interactions">
+        <Key ID="STR_MISERY_Interactions_AlreadyConsuming">
+            <English>You are already consuming something else...</English>
+            <Czech>Již konzumujete něco jiného...</Czech>
+            <French>Vous êtes déjà en train de consommer autre chose...</French>
+            <Spanish>Ya estás consumiendo otra cosa...</Spanish>
+            <Italian>Stai già consumando qualcos'altro...</Italian>
+            <Polish>Już coś konsumujesz...</Polish>
+            <Portuguese>Já está a consumir outra cosa...</Portuguese>
+            <Russian>Вы уже что-то потребляете...</Russian>
+            <German>Du konsumierst bereits etwas anderes...</German>
+            <Korean>이미 다른 것을 섭취하는 중입니다...</Korean>
+            <Japanese>すでに他のものを消費しています...</Japanese>
+            <Chinese>您已經ใน消耗其他東西了...</Chinese>
+            <Chinesesimp>您已经在消耗其他东西了...</Chinesesimp>
+            <Turkish>Zaten başka bir şey tüketiyorsunuz...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Interactions_MaskEquipped">
+            <English>You cannot use this item with a mask equipped...</English>
+            <Czech>Tuto položku nelze použít s nasazenou maskou...</Czech>
+            <French>Vous ne pouvez pas utiliser cet objet avec un masque équipé...</French>
+            <Spanish>No puedes usar este objeto con una máscara equipada...</Spanish>
+            <Italian>Non puoi usare questo oggetto con una maschera equipaggiata...</Italian>
+            <Polish>Nie możesz użyć tego przedmiotu, mając założoną maskę...</Polish>
+            <Portuguese>Não pode usar este item com uma máscara equipada...</Portuguese>
+            <Russian>Нельзя использовать этот предмет с надетой маской...</Russian>
+            <German>Du kannst diesen Gegenstand nicht mit einer ausgerüsteten Maske verwenden...</German>
+            <Korean>방독면을 착용한 상태에서는 이 아이템을 사용할 수 없습니다...</Korean>
+            <Japanese>マスクを装着した状態ではこのアイテムを使用できません...</Japanese>
+            <Chinese>配戴面具時無法使用此物品...</Chinese>
+            <Chinesesimp>佩戴面具时无法使用此物品...</Chinesesimp>
+            <Turkish>Maske takılıyken bu eşyayı kullanamazsınız...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Interactions_MissingTools">
+            <English>You need a can opener or tools to use this...</English>
+            <Czech>K použití této položky potřebujete otvírák na konzervy nebo nástroje...</Czech>
+            <French>Vous avez besoin d'un ouvre-boîte ou d'outils pour utiliser ceci...</French>
+            <Spanish>Necesitas un abrelatas o herramientas para usar esto...</Spanish>
+            <Italian>Hai bisogno di un apriscatole o di strumenti per usare questo...</Italian>
+            <Polish>Potrzebujesz otwieracza do puszek lub narzędzi, aby tego użyć...</Polish>
+            <Portuguese>Precisa de um abridor de latas ou ferramentas para usar isto...</Portuguese>
+            <Russian>Вам нужен консервный нож или инструменты, чтобы использовать это...</Russian>
+            <German>Du benötigst einen Dosenöffner oder Werkzeuge, um dies zu verwenden...</German>
+            <Korean>이것을 사용하려면 캔 따개나 도구가 필요합니다...</Korean>
+            <Japanese>これを使用するには缶切りや工具が必要です...</Japanese>
+            <Chinese>您需要開罐器或工具才能使用此物品...</Chinese>
+            <Chinesesimp>您需要开罐器或工具才能使用此物品...</Chinesesimp>
+            <Turkish>Bunu kullanmak için bir konserve açacağına veya aletlere ihtiyacınız var...</Turkish>
+        </Key>
+    </Package>
+</Project>

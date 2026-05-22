@@ -18,7 +18,7 @@ class CLASS(vehicleStats_ui) {
     class Controls {
         class CLASS(vehicle_powerIcon): RscText {
             idc = 2001;
-            text = QUOTE(Power:);
+            text = ECSTRING(maintenance,PowerLabel);
             x = 42.5 * GUI_GRID_W + GUI_GRID_X;
             y = 30 * GUI_GRID_H + GUI_GRID_Y;
             w = 4.5 * GUI_GRID_W;
@@ -28,7 +28,7 @@ class CLASS(vehicleStats_ui) {
         };
         class CLASS(vehicle_oilIcon): RscText {
             idc = 2002;
-            text = QUOTE(Oil:);
+            text = ECSTRING(maintenance,OilLabel);
             x = 42.5 * GUI_GRID_W + GUI_GRID_X;
             y = 31 * GUI_GRID_H + GUI_GRID_Y;
             w = 4.5 * GUI_GRID_W;
@@ -38,7 +38,7 @@ class CLASS(vehicleStats_ui) {
         };
         class CLASS(vehicle_waterIcon): RscText {
             idc = 2003;
-            text = QUOTE(Coolant:);
+            text = ECSTRING(maintenance,CoolantLabel);
             x = 42.5 * GUI_GRID_W + GUI_GRID_X;
             y = 32 * GUI_GRID_H + GUI_GRID_Y;
             w = 4.5 * GUI_GRID_W;
@@ -69,7 +69,6 @@ class CLASS(vehicleStats_ui) {
         };
         class CLASS(vehicle_batteries): RscText {
             idc = 1002;
-            text = ""; //--- ToDo: Localize;
             x = 57 * GUI_GRID_W + GUI_GRID_X;
             y = 29 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;

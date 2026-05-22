@@ -15,7 +15,7 @@ if !(GVAR(clothingCheckAction)) exitWith {};
 
 private _insulationCheckAction = [
     QGVAR(insulation_check_menu),
-    localize ECSTRING(common,CheckClothing),
+    localize LSTRING(CheckClothing),
     QPATHTOEF(icons,data\layers_plus_ca.paa),
     {
         call FUNC(insulation);

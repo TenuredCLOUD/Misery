@@ -14,7 +14,7 @@ class CLASS(moneyTake_ui) {
         };
         class CLASS(moneyTakeMenu_prompt): RscText {
             idc = 1000;
-            text = "Take funds"; //--- ToDo: Localize;
+            text = ECSTRING(currency,TakeFunds);
             x = 4 * GUI_GRID_W + GUI_GRID_X;
             y = 5.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 11 * GUI_GRID_W;
@@ -36,7 +36,7 @@ class CLASS(moneyTake_ui) {
         class CLASS(moneyTakeMenu_take): RscButton {
             idc = 1600;
             onButtonClick = QUOTE([] call EFUNC(currency,takeMoney));
-            text = "Take"; //--- ToDo: Localize;
+            text = ECSTRING(currency,Take);
             x = 14.5 * GUI_GRID_W + GUI_GRID_X;
             y = 10.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 8 * GUI_GRID_W;

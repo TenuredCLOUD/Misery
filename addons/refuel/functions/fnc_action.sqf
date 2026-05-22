@@ -23,7 +23,7 @@ if !(call FUNC(checkAreas)) exitWith {
 
     private _requestRefuelAction = [
         QGVAR(refuel_menu),
-        localize ECSTRING(common,ReqRefuel),
+        localize LSTRING(ReqRefuel),
         QPATHTOEF(markers,data\fuel_ca.paa),
         {
             createDialog QCLASS(refuelShop_ui);

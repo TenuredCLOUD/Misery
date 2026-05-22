@@ -25,7 +25,7 @@ if (side _unit isEqualTo side player) then {
 
     [
         _unit,
-        format [localize ECSTRING(common,RecruitUnit), _unitIdentity, EGVAR(money,symbol), [_recruitmentCost, 1, 2, true] call CBA_fnc_formatNumber],
+        format [localize LSTRING(RecruitUnit), _unitIdentity, EGVAR(money,symbol), [_recruitmentCost, 1, 2, true] call CBA_fnc_formatNumber],
         "\a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa",
         "\a3\Ui_F_Oldman\Data\IGUI\Cfg\HoldActions\holdAction_market_ca.paa",
         "_this distance _target < 3",
@@ -41,9 +41,9 @@ if (side _unit isEqualTo side player) then {
                 [-_recruitmentCost] call EFUNC(currency,modifyMoney);
                 [_target] joinSilent _caller;
                 [_target,_actionId] call BIS_fnc_holdActionRemove;
-                [QEGVAR(common,tileText), format [localize ECSTRING(common,RecruitUnit_Success), _unitIdentity, EGVAR(money,symbol), [_recruitmentCost, 1, 2, true] call CBA_fnc_formatNumber]] call CBA_fnc_localEvent;
+                [QEGVAR(common,tileText), format [localize LSTRING(RecruitUnit_Success), _unitIdentity, EGVAR(money,symbol), [_recruitmentCost, 1, 2, true] call CBA_fnc_formatNumber]] call CBA_fnc_localEvent;
             } else {
-                [QEGVAR(common,tileText), format [localize ECSTRING(common,RecruitUnit_Fail),_unitIdentity]] call CBA_fnc_localEvent;
+                [QEGVAR(common,tileText), format [localize LSTRING(RecruitUnit_Fail),_unitIdentity]] call CBA_fnc_localEvent;
             };
         },
         {},

@@ -15,17 +15,17 @@
 */
 
 if !([[QCLASS(lithiumBattery)]] call EFUNC(common,hasItem)) exitWith {
-    [QEGVAR(common,tileText), "You don't have any lithium batteries..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(MissingBatteries)] call CBA_fnc_localEvent;
 };
 
 if !([[QCLASS(geiger_NoBattery)]] call EFUNC(common,hasItem)) exitWith {
-    [QEGVAR(common,tileText), "You don't have a geiger that needs batteries..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(NoBatteriesNeeded)] call CBA_fnc_localEvent;
 };
 
 {
     [player, _x] call CBA_fnc_removeItem
 } forEach [QCLASS(geiger_NoBattery), QCLASS(lithiumBattery)];
 
-[QEGVAR(common,tileText), "You add a lithium battery to your geiger"] call CBA_fnc_localEvent;
+[QEGVAR(common,tileText), localize LSTRING(AddedBattery)] call CBA_fnc_localEvent;
 
 [player, QCLASS(geiger_Off), true] call CBA_fnc_addItem;

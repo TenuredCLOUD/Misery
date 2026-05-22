@@ -21,15 +21,15 @@
 
     _powerButton = findDisplay 573849 displayCtrl 1600;
 
-    if ((ctrlText 1600) isEqualTo "Start") exitWith {
+    if ((ctrlText 1600) isEqualTo (localize LSTRING(Start))) exitWith {
         if (insideBuilding player isEqualTo 1) exitWith {
-            [QEGVAR(common,tileText), "You cannot start a generator while inside..."] call CBA_fnc_localEvent;
+            [QEGVAR(common,tileText), localize LSTRING(Inside)] call CBA_fnc_localEvent;
         };
 
         [_generator, _generatorType] call FUNC(processAction);
     };
 
-    if ((ctrlText 1600) isEqualTo "Stop") exitWith {
+    if ((ctrlText 1600) isEqualTo (localize LSTRING(Stop))) exitWith {
         _generator setVariable [QGVAR(shuttingDown), true, true];
     };
 }, [_generator, _generatorType]] call CBA_fnc_waitUntilAndExecute;

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Gasmask">
+        <Key ID="STR_MISERY_Gasmask_Component">
+            <English>Gasmask</English>
+            <Czech>Plynová maska</Czech>
+            <French>Masque à gaz</French>
+            <Spanish>Máscara antigás</Spanish>
+            <Italian>Maschera antigas</Italian>
+            <Polish>Maska przeciwgazowa</Polish>
+            <Portuguese>Máscara de gás</Portuguese>
+            <Russian>Противогаз</Russian>
+            <German>Gasmaske</German>
+            <Korean>방독면</Korean>
+            <Japanese>ガスマスク</Japanese>
+            <Chinese>防毒面具</Chinese>
+            <Chinesesimp>防毒面具</Chinesesimp>
+            <Turkish>Gaz Maskesi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Gasmask_DefaultSwappedMask">
+            <English>Default swapped mask</English>
+            <Czech>Výchozí vyměněná maska</Czech>
+            <French>Masque de remplacement par défaut</French>
+            <Spanish>Máscara intercambiada por defecto</Spanish>
+            <Italian>Maschera scambiata predefinita</Italian>
+            <Polish>Domyślna zamieniona maska</Polish>
+            <Portuguese>Máscara trocada padrão</Portuguese>
+            <Russian>Сменная маска по умолчанию</Russian>
+            <German>Standardmäßig getauschte Maske</German>
+            <Korean>기본 교체된 방독면</Korean>
+            <Japanese>デフォルトの交換マスク</Japanese>
+            <Chinese>默認更換的面具</Chinese>
+            <Chinesesimp>默认更换的面具</Chinesesimp>
+            <Turkish>Varsayılan değiştirilen maske</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Gasmask_DefaultSwappedMaskDesc">
+            <English>The default mask that is returned when a player uses cartridges on a gasmask without cartridges (use when not using contact DLC gasmasks)</English>
+            <Czech>Výchozí maska, která se vrátí, když hráč použije filtry na plynovou masku bez filtrů (použijte, pokud nepoužíváte plynové masky z Contact DLC)</Czech>
+            <French>Le masque par défaut qui est retourné lorsqu'un joueur utilise des cartouches sur un masque à gaz sans cartouche (à utiliser lorsque vous n'utilisez pas les masques à gaz du DLC Contact)</French>
+            <Spanish>La máscara por defecto que se devuelve cuando un jugador usa cartuchos en una máscara antigás sin cartuchos (usar cuando no se utilicen las máscaras del DLC Contact)</Spanish>
+            <Italian>La maschera predefinita che viene restituita quando un giocatore usa filtri su una maschera antigas senza filtri (usare quando non si usano le maschere del DLC Contact)</Italian>
+            <Polish>Domyślna maska zwracana, gdy gracz używa pochłaniaczy na masce przeciwgazowej bez pochłaniaczy (używane, gdy nie są używane maski z DLC Contact)</Polish>
+            <Portuguese>A máscara padrão que é devolvida quando um jogador usa cartuchos numa máscara de gás sem cartuchos (usar quando não estiver a usar máscaras de gás do DLC Contact)</Portuguese>
+            <Russian>Маска по умолчанию, которая выдается, когда игрок использует фильтры на противогазе без фильтров (используется, если не используются противогазы из DLC Contact)</Russian>
+            <German>Die Standardmaske, die zurückgegeben wird, wenn ein Spieler Filter für eine Gasmaske ohne Filter verwendet (nutzen, wenn keine Gasmasken aus dem Contact-DLC verwendet werden)</German>
+            <Korean>플레이어가 정화통이 없는 방독면이에 정화통을 사용할 때 반환되는 기본 방독면입니다 (Contact DLC 방독면을 사용하지 않을 때 사용)</Korean>
+            <Japanese>プレイヤーがキャニスターなしのガスマスクにキャニスターを使用したときに返されるデフォルト의マスク (Contact DLCのガスマスクを使用していない場合に使用)</Japanese>
+            <Chinese>當玩家在沒有濾毒罐的防毒面具上使用濾毒罐時返回的默認面具 (不使用 Contact DLC 防毒面具時使用)</Chinese>
+            <Chinesesimp>当玩家在没有滤毒罐的防毒面具上使用滤毒罐时返回的默认面具 (不使用 Contact DLC 防毒面具时使用)</Chinesesimp>
+            <Turkish>Bir oyuncu filtresiz bir gaz maskesinde filtre kullandığında geri verilen varsayılan maske (Contact DLC gaz maskelerini kullanmadığınızda kullanın)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Gasmask_EnhancedGasmasks">
+            <English>Enhanced gasmasks</English>
+            <Czech>Vylepšené plynové masky</Czech>
+            <French>Masques à gaz améliorés</French>
+            <Spanish>Máscaras antigás mejoradas</Spanish>
+            <Italian>Maschere antigas potenziate</Italian>
+            <Polish>Ulepszone maski przeciwgazowe</Polish>
+            <Portuguese>Máscaras de gás aprimoradas</Portuguese>
+            <Russian>Улучшенные противогазы</Russian>
+            <German>Verbesserte Gasmasken</German>
+            <Korean>향상된 방독면</Korean>
+            <Japanese>強化されたガスマスク</Japanese>
+            <Chinese>增強型防毒面具</Chinese>
+            <Chinesesimp>增强型防毒面具</Chinesesimp>
+            <Turkish>Geliştirilmiş gaz maskeleri</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Gasmask_EnhancedGasmasksDesc">
+            <English>Enable enhanced gasmasks? (Makes all gasmasks vulnerable to cartridge failure, while gasmasks are worn cartridges deplete. If a rebreather is equipped, this isn't active due to using a rebreather for supplied air)</English>
+            <Czech>Povolit vylepšené plynové masky? (Způsobí, že všechny plynové masky budou náchylné k selhání filtru, přičemž během nošení masky se filtr opotřebovává. Pokud je vybaven dýchací přístroj, tato funkce není aktivní, protože dýchací přístroj dodává vzduch samostatně)</Czech>
+            <French>Activer les masques à gaz améliorés ? (Rend tous les masques à gaz vulnérables aux pannes de cartouche. Lorsque les masques sont portés, les cartouches s'épuisent. Si un recycleur est équipé, cela n'est pas actif car le recycleur fournit l'air)</French>
+            <Spanish>¿Activar máscaras antigás mejoradas? (Hace que todas las máscaras sean vulnerables a fallos de cartucho; los cartuchos se agotan mientras se usan. Si se equipa un rebreather, esto no se activa ya que este suministra el aire)</Spanish>
+            <Italian>Abilitare le maschere antigas potenziate? (Rende tutte le maschere vulnerabili al guasto del filtro, i filtri si consumano quando la maschera è indossata. Se è equipaggiato un respiratore, questo non è attivo poiché usa il respiratore per l'aria fornita)</Italian>
+            <Polish>Włączyć ulepszone maski przeciwgazowe? (Sprawia, że wszystkie maski są podatne na awarię pochłaniacza, który zużywa się podczas noszenia maski. Jeśli gracz ma wyposażony aparat oddechowy, ta opcja jest nieaktywna, ponieważ aparat zapewnia osobne zasilanie powietrzem)</Polish>
+            <Portuguese>Ativar máscaras de gás aprimoradas? (Torna todas as máscaras vulneráveis a falhas de cartucho; os cartuchos gastam-se enquanto as máscaras são usadas. Se um rebreather estiver equipado, isto não fica ativo devido ao uso do rebreather para suprimento de ar)</Portuguese>
+            <Russian>Включить улучшенные противогазы? (Делает все противогазы уязвимыми к поломке фильтра, при ношении противогаза фильтры расходуются. Если экипирован ребризер, эта функция неактивна, так как ребризер используется для подачи воздуха)</Russian>
+            <German>Verbesserte Gasmasken aktivieren? (Macht alle Gasmasken anfällig für Filterausfälle; während Gasmasken getragen werden, verbrauchen sich die Filter. Wenn ein Kreislauftauchgerät (Rebreather) ausgerüstet ist, ist dies inaktiv, da das Gerät für die Luftzufuhr sorgt)</German>
+            <Korean>향상된 방독면을 활성화하시겠습니까? (모든 방독면이 정화통 고장에 취약해지며, 방독면 착용 중에는 정화통이 소모됩니다. 재호흡기를 장착한 경우, 재호흡기로 공기가 공급되므로 이 기능은 비활성화됩니다)</Korean>
+            <Japanese>強化されたガスマスクを有効にしますか？ (すべてのガスマスクでキャニスターの故障が発生するようになり、装着中はキャニスターが消耗します。リブリーザーを装備している場合は、空気供給にリブリーザーが使用されるため、この機能は作動しません)</Japanese>
+            <Chinese>啟用增強型防毒面具？ (使所有防毒面具都容易受到濾毒罐失效的影響，佩戴防毒面具時濾毒罐會消耗。如果裝備了循環呼吸器，則此功能不會啟用，因為循環呼吸器會直接供氣)</Chinese>
+            <Chinesesimp>启用增强型防毒面具？ (使所有防毒面具都容易受到滤毒罐失效的影响，佩戴防毒面具时滤毒罐会消耗。如果装备了循环呼吸器，则此功能不会启用，因为循环呼吸器会直接供气)</Chinesesimp>
+            <Turkish>Geliştirilmiş gaz maskeleri aktif edilsin mi? (Tüm gaz maskelerini filtre arızasına karşı hassas hale getirir, maske takılıyken filtreler tükenir. Eğer bir rebreather kuşanılmışsa, hava beslemesi rebreather tarafından sağlandığı için bu özellik aktif olmaz)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Gasmask_EquipmentBroken">
+            <English>%1 broken, removing equipment...</English>
+            <Czech>%1 zničeno, odstraňování vybavení...</Czech>
+            <French>%1 cassé, retrait de l'équipement...</French>
+            <Spanish>%1 roto, quitando equipamiento...</Spanish>
+            <Italian>%1 rotto, rimozione dell'equipaggiamento...</Italian>
+            <Polish>%1 zniszczone, usuwanie sprzętu...</Polish>
+            <Portuguese>%1 partido, a remover o equipamento...</Portuguese>
+            <Russian>%1 сломано, снятие экипировки...</Russian>
+            <German>%1 beschädigt, Ausrüstung wird entfernt...</German>
+            <Korean>%1 파손됨, 장비 제거 중...</Korean>
+            <Japanese>%1が破損しました、装備を取り外しています...</Japanese>
+            <Chinese>%1 已损坏，正在移除装备...</Chinese>
+            <Chinesesimp>%1 已损坏，正在移除装备...</Chinesesimp>
+            <Turkish>%1 kırıldı, ekipman çıkarılıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Gasmask_NoValidMask">
+            <English>No valid mask available for cartridge replacement...</English>
+            <Czech>K výměně filtru není k dispozici žádná platná maska...</Czech>
+            <French>Aucun masque valide disponible pour le remplacement de la cartouche...</French>
+            <Spanish>No hay ninguna máscara válida disponible para reemplazar el cartucho...</Spanish>
+            <Italian>Nessuna maschera valida disponibile per la sostituzione del filtro...</Italian>
+            <Polish>Brak odpowiedniej maski do wymiany pochłaniacza...</Polish>
+            <Portuguese>Nenhuma máscara válida disponível para substituição de cartucho...</Portuguese>
+            <Russian>Нет подходящей маски для замены фильтра...</Russian>
+            <German>Keine gültige Maske für den Filterwechsel verfügbar...</German>
+            <Korean>정화통을 교체할 수 있는 유효한 방독면이 없습니다...</Korean>
+            <Japanese>キャニスターの交換が可能な有効なマスクがありません...</Japanese>
+            <Chinese>沒有可用於更換濾毒罐的有效面具...</Chinese>
+            <Chinesesimp>没有用于更换滤毒罐的有效面具...</Chinesesimp>
+            <Turkish>Filtre değişimi için geçerli bir maske mevcut değil...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Gasmask_RebreatherConnections">
+            <English>Rebreather connections</English>
+            <Czech>Připojení dýchacího přístroje</Czech>
+            <French>Connexions du recycleur</French>
+            <Spanish>Conexiones del rebreather</Spanish>
+            <Italian>Connessioni del respiratore</Italian>
+            <Polish>Połączenia aparatu oddechowego</Polish>
+            <Portuguese>Conexões de rebreather</Portuguese>
+            <Russian>Подключения ребризера</Russian>
+            <German>Kreislauftauchgerät-Anschlüsse</German>
+            <Korean>재호흡기 연결</Korean>
+            <Japanese>リブリーザーの接続</Japanese>
+            <Chinese>循環呼吸器連接</Chinese>
+            <Chinesesimp>循环呼吸器连接</Chinesesimp>
+            <Turkish>Rebreather bağlantıları</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Gasmask_RebreatherConnectionsDesc">
+            <English>Enables rebreather hose connections for Contact DLC CBRN equipment</English>
+            <Czech>Povoluje připojení hadic dýchacího přístroje pro CBRN vybavení z Contact DLC</Czech>
+            <French>Active les connexions des tuyaux du recycleur pour l'équipement RBNB du DLC Contact</French>
+            <Spanish>Permite las conexiones de manguera del rebreather para el equipo CBRN del DLC Contact</Spanish>
+            <Italian>Abilita le connessioni dei tubi del respiratore per l'equipaggiamento CBRN del DLC Contact</Italian>
+            <Polish>Umożliwia podłączenie węży aparatu oddechowego dla sprzętu CBRN z DLC Contact</Polish>
+            <Portuguese>Ativa as conexões de mangueira do rebreather para o equipamento CBRN do DLC Contact</Portuguese>
+            <Russian>Включает соединительные шланги ребризера для РХБЗ-экипировки из DLC Contact</Russian>
+            <German>Ermöglicht die Schlauchanschlüsse des Kreislauftauchgeräts für die CBRN-Ausrüstung aus dem Contact-DLC</German>
+            <Korean>Contact DLC CBRN 장비에 대한 재호흡기 호스 연결을 활성화합니다</Korean>
+            <Japanese>Contact DLCのCBRN装備用リブリーザーホース接続を有効にします</Japanese>
+            <Chinese>啟用 Contact DLC CBRN 裝備的循環呼吸器軟管連接</Chinese>
+            <Chinesesimp>启用 Contact DLC CBRN 装备的循环呼吸器软管连接</Chinesesimp>
+            <Turkish>Contact DLC CBRN ekipmanı için rebreather hortum bağlantılarını etkinleştirir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Gasmask_ReplacedCartridges">
+            <English>You replace the cartridges on your gasmask...</English>
+            <Czech>Vyměnili jste filtry na své plynové masce...</Czech>
+            <French>Vous remplacez les cartouches de votre masque à gaz...</French>
+            <Spanish>Reemplazas los cartuchos de tu máscara antigás...</Spanish>
+            <Italian>Sostituisci i filtri sulla tua maschera antigas...</Italian>
+            <Polish>Wymieniasz pochłaniacze w swojej masce przeciwgazowej...</Polish>
+            <Portuguese>Substituiu os cartuchos na sua máscara de gás...</Portuguese>
+            <Russian>Вы заменили фильтры в своем противогазе...</Russian>
+            <German>Du wechselst die Filter deiner Gasmaske...</German>
+            <Korean>방독면의 정화통을 교체합니다...</Korean>
+            <Japanese>ガスマスクのキャニスターを交換しています...</Japanese>
+            <Chinese>您更換了防毒面具上的濾毒罐...</Chinese>
+            <Chinesesimp>您更换了防毒面具上的滤毒罐...</Chinesesimp>
+            <Turkish>Gaz maskenizin filtrelerini değiştiriyorsunuz...</Turkish>
+        </Key>
+    </Package>
+</Project>

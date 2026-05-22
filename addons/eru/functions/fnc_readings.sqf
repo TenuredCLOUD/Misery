@@ -47,11 +47,11 @@ disableSerialization;
 
         switch (true) do {
             case (!isNil QGVAR(temperatureEnvironment)): {
-                _textControlReadings ctrlSetText format ["AIR: %1°C SEA: %2°C", parseNumber (((call EFUNC(temperature,environment)) select 0) toFixed 1), parseNumber (((call EFUNC(temperature,environment)) select 1) toFixed 1)];
+                _textControlReadings ctrlSetText format ["%3 %1°C %4 %2°C", parseNumber (((call EFUNC(temperature,environment)) select 0) toFixed 1), parseNumber (((call EFUNC(temperature,environment)) select 1) toFixed 1), localize LSTRING(AirLabel), localize LSTRING(SeaLabel)];
             };
             case (!isNil QGVAR(temperatureBody)): {
                 call EFUNC(common,getPlayerVariables) params ["", "", "", "_thermalIndex"];
-                _textControlReadings ctrlSetText format ["EXPOSURE: %1°C", [_thermalIndex, 1, 1, false] call CBA_fnc_formatNumber];
+                _textControlReadings ctrlSetText format ["%2 %1°C", [_thermalIndex, 1, 1, false] call CBA_fnc_formatNumber, localize LSTRING(ExposureLabel)];
             };
             case (!isNil QGVAR(compass)): {
                 _direction = round (getDir player);
@@ -66,10 +66,10 @@ disableSerialization;
                     case((_direction >= 265) && (_direction <= 275)) : {_Bearing = "W";};
                     case((_direction > 275) && (_direction < 355)) : {_Bearing = "NW";};
                 };
-                _textControlReadings ctrlSetText format ["COMPASS: %1 %2", _direction, _Bearing];
+                _textControlReadings ctrlSetText format ["%3 %1 %2", _direction, _Bearing, localize LSTRING(CompassLabel)];
             };
             default {
-                _textControlReadings ctrlSetText "> NO DATA <";
+                _textControlReadings ctrlSetText localize LSTRING(NoData);
             };
         };
 

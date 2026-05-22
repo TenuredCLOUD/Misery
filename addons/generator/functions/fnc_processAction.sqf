@@ -18,7 +18,7 @@
 params ["_generator", "_generatorType"];
 
 if (_generator getVariable [QGVAR(fuelLevel), 1] <= 0) exitWith {
-    [QEGVAR(common,tileText), "This generator has no fuel..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(NoFuel)] call CBA_fnc_localEvent;
 };
 
 private _soundStart = nil;

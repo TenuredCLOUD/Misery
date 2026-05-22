@@ -1,9 +1,9 @@
-private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
+private _category = format ["Misery %1", localize LSTRING(Component)];
 
 [
     QGVAR(enabled),
     "CHECKBOX",
-    ["Enabled", "Enable Saving"],
+    [ECSTRING(common,Enabled), LSTRING(EnableSaving)],
     _category,
     true,
     1
@@ -12,7 +12,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(resetSinglePlayerSave),
     "CHECKBOX",
-    ["Fresh Start", "Start fresh in singleplayer?"],
+    [LSTRING(FreshStart), LSTRING(FreshStartDesc)],
     _category,
     false,
     1
@@ -21,7 +21,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(hardcore),
     "CHECKBOX",
-    ["Enable Hardcore", "MP & SP - Hardcore mode only allows saving when nearby a lit fire. (SP only - it will wipe world data when GRAD Persistence is used)"],
+    [LSTRING(EnableHardcore), LSTRING(EnableHardcoreDesc)],
     _category,
     false
 ] call CBA_fnc_addSetting;
@@ -29,7 +29,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(saveSlot),
     "LIST",
-    ["Save Slot", "Which save slot would you like to use?"],
+    [LSTRING(SaveSlot), LSTRING(SaveSlotDesc)],
     _category,
     [[0, 1, 2, 3, 4], ["0", "1", "2", "3", "4"], 0],
     1,
@@ -40,9 +40,9 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(autosaveInterval),
     "LIST",
-    ["Autosave Interval", "How often would you like to autosave?"],
+    [LSTRING(Autosave), LSTRING(AutosaveDesc)],
     _category,
-    [[0, 1, 10, 15, 20, 25, 30], ["Never", "1 Minute", "10 Minutes", "15 Minutes", "20 Minutes", "25 Minutes", "30 Minutes"], 1],
+    [[0, 1, 10, 15, 20, 25, 30], [ECSTRING(common,Never), ECSTRING(common,Interval1Min), ECSTRING(common,Interval10Min), ECSTRING(common,Interval15Min), ECSTRING(common,Interval20Min), ECSTRING(common,Interval25Min), ECSTRING(common,Interval30Min)], 1],
     1,
     {},
     true
@@ -51,9 +51,9 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(gradAutosaveInterval),
     "LIST",
-    ["GRAD Persistence autosave interval", "How often would you like the server to save? (Requires GRAD persistence)"],
+    [LSTRING(GradAutosave), LSTRING(GradAutosaveDesc)],
     _category,
-    [[0, 10, 20, 30, 40, 50, 60], ["Never", "10 Minutes", "20 Minutes", "30 Minutes", "40 Minutes", "50 Minutes", "60 Minutes"], 0],
+    [[0, 10, 20, 30, 40, 50, 60], [ECSTRING(common,Never), ECSTRING(common,Interval10Min), ECSTRING(common,Interval20Min), ECSTRING(common,Interval30Min), ECSTRING(common,Interval40Min), ECSTRING(common,Interval50Min), ECSTRING(common,Interval60Min)], 0],
     1,
     {},
     true
@@ -62,7 +62,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(gradWarning),
     "CHECKBOX",
-    ["GRAD Persistence warning", "Show warning message for GRAD persistence when saving (Requires GRAD persistence)"],
+    [LSTRING(GradWarning), LSTRING(GradWarningDesc)],
     _category,
     false,
     1
@@ -71,7 +71,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(gradAdminActions),
     "CHECKBOX",
-    ["GRAD Persistence admin actions", "Gives admin level players higher privilege actions for database control (Requires GRAD persistence)"],
+    [LSTRING(GradAdmin), LSTRING(GradAdminDesc)],
     _category,
     false,
     1

@@ -18,7 +18,7 @@
 [player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
 
 if (isNull _vehicle) exitWith {
-    ctrlSetText [1001, format ["Invalid vehicle..."]];
+    ctrlSetText [1001, format [localize LSTRING(InvalidVehicle)]];
 };
 
 private _found = false;
@@ -45,15 +45,15 @@ _refuelInterrupt = (findDisplay 274839) displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QCLASS(processRefuel),false];
-        [QEGVAR(common,tileText), format ["Refueling interrupted..."]] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), localize LSTRING(RefuelingInterrupted)] call CBA_fnc_localEvent;
     };
 }];
 
 // Determine the required fuel type and Jerry can type based on the fuelTypeIndex
 private _requiredFuelType = switch (_fuelTypeIndex) do {
-    case 0: {[QCLASS(diesel), "Diesel"]};
-    case 1: {[QCLASS(petrol), "Petrol"]};
-    case 2: {[QCLASS(jetFuel), "JetFuel"]};
+    case 0: {[QCLASS(diesel), localize LSTRING(FuelDiesel)]};
+    case 1: {[QCLASS(petrol), localize LSTRING(FuelPetrol)]};
+    case 2: {[QCLASS(jetFuel), localize LSTRING(FuelJetFuel)]};
 };
 
 private _hasRequiredFuel = [[(_requiredFuelType) select 0]] call EFUNC(common,hasItem);
@@ -62,18 +62,18 @@ if (fuel _vehicle >= 1) exitWith {
     player setVariable [QCLASS(processRefuel), nil];
     (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
     _vehicle setFuel 1;
-    ctrlSetText [1001, format ["%1 fuel tank is full...", [_vehicle] call EFUNC(common,getObjectData) select 0]];
+    ctrlSetText [1001, format [localize LSTRING(FuelTankFull), [_vehicle] call EFUNC(common,getObjectData) select 0]];
     [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
 };
 
 if (!_hasRequiredFuel) exitWith {
     (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
-    ctrlSetText [1001, format ["%1 requires %2...", [_vehicle] call EFUNC(common,getObjectData) select 0, (_requiredFuelType) select 1]];
+    ctrlSetText [1001, format [localize LSTRING(RequiresFuelType), [_vehicle] call EFUNC(common,getObjectData) select 0, (_requiredFuelType) select 1]];
     [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
 };
 
-private _text = "Refueling...";
-private _tanklvl = "Tank level:";
+private _text = localize LSTRING(RefuelingProgress);
+private _tanklvl = localize LSTRING(TankLevelLabel);
 private _displayedText = "";
 
 [{
@@ -92,7 +92,7 @@ private _displayedText = "";
         player setVariable [QCLASS(processRefuel), nil];
         (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
         _vehicle setFuel 1;
-        ctrlSetText [1001, format ["%1 fuel tank is full...", [_vehicle] call EFUNC(common,getObjectData) select 0]];
+        ctrlSetText [1001, format [localize LSTRING(FuelTankFull), [_vehicle] call EFUNC(common,getObjectData) select 0]];
         [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
         _handle call CBA_fnc_removePerFrameHandler;
     };
@@ -102,7 +102,7 @@ private _displayedText = "";
     if (!_hasRequiredFuel) exitWith {
         player setVariable [QCLASS(processRefuel), nil];
         (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
-        ctrlSetText [1001, format ["You have run out of %1...", (_requiredFuelType) select 1]];
+        ctrlSetText [1001, format [localize LSTRING(OutOfFuel), (_requiredFuelType) select 1]];
         [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
         _handle call CBA_fnc_removePerFrameHandler;
     };

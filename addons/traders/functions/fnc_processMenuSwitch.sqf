@@ -22,10 +22,10 @@ private _iconTxt = _dialog displayCtrl 1004;
 
 if (GVAR(currentAction) isEqualTo "buy") then {
     GVAR(currentAction) = "sell";
-    _switchModeButton ctrlSetText "Buy Menu";
+    _switchModeButton ctrlSetText localize LSTRING(BuyMenu);
 } else {
     GVAR(currentAction) = "buy";
-    _switchModeButton ctrlSetText "Sell Menu";
+    _switchModeButton ctrlSetText localize LSTRING(SellMenu);
 };
 
 _iconCtrl ctrlSetText "";

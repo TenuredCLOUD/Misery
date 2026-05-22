@@ -2,8 +2,8 @@
 
 if (hasInterface) then {
     private _installLock = [
-        "installLock_ace",
-        "Install Door Locks",
+        QGVAR(installLock_menu),
+        localize LSTRING(Install),
         QPATHTOEF(icons,data\key_round_ca.paa),
         {
             GVAR(pinMode) = 0;
@@ -17,8 +17,8 @@ if (hasInterface) then {
     [player, 1, [QUOTE(ACE_SelfActions)], _installLock] call ACEFUNC(interact_menu,addActionToObject);
 
     private _unlockDoors = [
-        "unlockDoors_ace",
-        "Unlock Doors",
+        QGVAR(unlockDoors_menu),
+        localize LSTRING(Unlock),
         QPATHTOEF(icons,data\door_open_ca.paa),
         {
             GVAR(pinMode) = 1;
@@ -32,8 +32,8 @@ if (hasInterface) then {
     [player, 1, [QUOTE(ACE_SelfActions)], _unlockDoors] call ACEFUNC(interact_menu,addActionToObject);
 
     private _lockDoors = [
-        "lockDoors_ace",
-        "Lock Doors",
+        QGVAR(lockDoors_menu),
+        localize LSTRING(Lock),
         QPATHTOEF(icons,data\door_closed_locked_ca.paa),
         {
             GVAR(pinMode) = 1;

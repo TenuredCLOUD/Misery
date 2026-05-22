@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Treatment">
+        <Key ID="STR_MISERY_Treatment_Component">
+            <English>Treatment</English>
+            <Czech>Léčba</Czech>
+            <French>Traitement</French>
+            <Spanish>Tratamiento</Spanish>
+            <Italian>Trattamento</Italian>
+            <Polish>Leczenie</Polish>
+            <Portuguese>Tratamento</Portuguese>
+            <Russian>Лечение</Russian>
+            <German>Behandlung</German>
+            <Korean>치료</Korean>
+            <Japanese>治療</Japanese>
+            <Chinese>治療 / 醫療</Chinese>
+            <Chinesesimp>治疗 / 医疗</Chinesesimp>
+            <Turkish>Tedavi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_Duration">
+            <English>Wound treatment duration</English>
+            <Czech>Doba ošetření zranění</Czech>
+            <French>Durée du traitement des blessures</French>
+            <Spanish>Duración del tratamiento de heridas</Spanish>
+            <Italian>Durata trattamento ferite</Italian>
+            <Polish>Czas leczenia ran</Polish>
+            <Portuguese>Duração do tratamento de feridas</Portuguese>
+            <Russian>Длительность лечения ран</Russian>
+            <German>Dauer der Wundbehandlung</German>
+            <Korean>상처 치료 소요 시간</Korean>
+            <Japanese>傷의 治療時間</Japanese>
+            <Chinese>傷口治療耗時</Chinese>
+            <Chinesesimp>伤口治疗耗时</Chinesesimp>
+            <Turkish>Yara tedavi süresi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_DurationDesc">
+            <English>Time it takes to treat wounds</English>
+            <Czech>Doba v sekundách, kterou zabere ošetření zranění</Czech>
+            <French>Temps nécessaire pour traiter les blessures</French>
+            <Spanish>Tiempo necesario para tratar las heridas</Spanish>
+            <Italian>Tempo richiesto per medicare le ferite</Italian>
+            <Polish>Czas potrzebny na opatrzenie ran</Polish>
+            <Portuguese>Tempo necessário para tratar feridas</Portuguese>
+            <Russian>Время, необходимое для полного излечения ран</Russian>
+            <German>Zeit, die für die Behandlung von Wunden benötigt wird</German>
+            <Korean>상처 치료를 완료하는 데 걸리는 시간(초)입니다</Korean>
+            <Japanese>傷の治療が完了するまでにかかる時間（秒）です</Japanese>
+            <Chinese>完成外傷治療所需的總計時間（秒）</Chinese>
+            <Chinesesimp>完成外伤治疗所需的总计时间（秒）</Chinesesimp>
+            <Turkish>Yaraların tedavi edilmesi için geçen süre</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_InfectionCost">
+            <English>Infection treatment cost</English>
+            <Czech>Cena léčby infekce</Czech>
+            <French>Coût du traitement des infections</French>
+            <Spanish>Coste de tratamiento de infección</Spanish>
+            <Italian>Costo trattamento infezioni</Italian>
+            <Polish>Koszt leczenia infekcji</Polish>
+            <Portuguese>Custo do tratamento de infeções</Portuguese>
+            <Russian>Цена лечения инфекции</Russian>
+            <German>Kosten für Infektionsbehandlung</German>
+            <Korean>감염 치료 비용</Korean>
+            <Japanese>感染症の治療費用</Japanese>
+            <Chinese>感染抗生素治療費用</Chinese>
+            <Chinesesimp>感染抗生素治疗费用</Chinesesimp>
+            <Turkish>Enfeksiyon tedavi maliyeti</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_InfectionCostDesc">
+            <English>Infection treatment cost for players</English>
+            <Czech>Cena, kterou hráči zaplatí za vyléčení bakteriální či virové infekce</Czech>
+            <French>Coût du traitement des infections pour les joueurs</French>
+            <Spanish>Coste del tratamiento de infecciones para los jugadores</Spanish>
+            <Italian>Costo del trattamento delle infezioni per i giocatori</Italian>
+            <Polish>Koszt kuracji antybiotykowej przeciw infekcjom dla graczy</Polish>
+            <Portuguese>Custo do tratamento de infeções para os jogadores</Portuguese>
+            <Russian>Стоимость терапии по уничтожению инфекции в организме для игроков</Russian>
+            <German>Kosten für die Infektionsbehandlung von Spielern</German>
+            <Korean>플레이어가 감염 및 질병 증세를 치료할 때 지불하는 비용입니다</Korean>
+            <Japanese>プレイヤーが感染症を治療する際に支払う費用です</Japanese>
+            <Chinese>玩家在進行全身感染或敗血症治療時需要支付的資金花費</Chinese>
+            <Chinesesimp>玩家在进行全身感染或败血症治疗时需要支付的资金花费</Chinesesimp>
+            <Turkish>Oyuncular için enfeksiyon tedavi maliyeti</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_InfectionDuration">
+            <English>Infection treatment duration</English>
+            <Czech>Doba léčby infekce</Czech>
+            <French>Durée du traitement des infections</French>
+            <Spanish>Duración del tratamiento de infección</Spanish>
+            <Italian>Durata trattamento infezioni</Italian>
+            <Polish>Czas leczenia infekcji</Polish>
+            <Portuguese>Duração do tratamento de infeções</Portuguese>
+            <Russian>Длительность лечения инфекции</Russian>
+            <German>Dauer der Infektionsbehandlung</German>
+            <Korean>감염 치료 소요 시간</Korean>
+            <Japanese>感染症の治療時間</Japanese>
+            <Chinese>感染治療耗時</Chinese>
+            <Chinesesimp>感染治疗耗时</Chinesesimp>
+            <Turkish>Enfeksiyon tedavi süresi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_InfectionDurationDesc">
+            <English>Time it takes to treat Infection</English>
+            <Czech>Doba v sekundách, kterou zabere podání léků a potlačení infekce</Czech>
+            <French>Temps nécessaire pour traiter une infection</French>
+            <Spanish>Tiempo necesario para curar una infección</Spanish>
+            <Italian>Tempo richiesto per debellare un'infezione</Italian>
+            <Polish>Czas potrzebny na zwalczenie infekcji</Polish>
+            <Portuguese>Tempo necessário para tratar uma infeção</Portuguese>
+            <Russian>Время, требуемое для подавления и излечения инфекции</Russian>
+            <German>Zeit, die für die Behandlung einer Infektion benötigt wird</German>
+            <Korean>감염 증상을 치료하는 데 걸리는 시간(초)입니다</Korean>
+            <Japanese>感染症の治療にかかる時間（秒）です</Japanese>
+            <Chinese>徹底消除體內感染所需的總計時間（秒）</Chinese>
+            <Chinesesimp>彻底消除体内感染所需的总计时间（秒）</Chinesesimp>
+            <Turkish>Enfeksiyonun tedavi edilmesi için geçen süre</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_Interrupted">
+            <English>Treatment interrupted...</English>
+            <Czech>Ošetření bylo přerušeno...</Czech>
+            <French>Traitement interrompu...</French>
+            <Spanish>¡Tratamiento interrumpido!</Spanish>
+            <Italian>Trattamento interrotto...</Italian>
+            <Polish>Leczenie przerwane...</Polish>
+            <Portuguese>Tratamento interrompido...</Portuguese>
+            <Russian>Медицинская процедура прервана...</Russian>
+            <German>Behandlung abgebrochen...</German>
+            <Korean>치료 행위가 중단되었습니다...</Korean>
+            <Japanese>治療が中断されました...</Japanese>
+            <Chinese>醫療程序已中斷...</Chinese>
+            <Chinesesimp>医疗程序已中断...</Chinesesimp>
+            <Turkish>Tedavi kesintiye uğradı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_MedicalTreatment">
+            <English>Medical Treatment</English>
+            <Czech>Lékařské ošetření</Czech>
+            <French>Traitement médical</French>
+            <Spanish>Tratamiento médico</Spanish>
+            <Italian>Trattamento medico</Italian>
+            <Polish>Leczenie medyczne</Polish>
+            <Portuguese>Tratamento médico</Portuguese>
+            <Russian>Медицинское лечение</Russian>
+            <German>Medizinische Behandlung</German>
+            <Korean>의료 치료 설정</Korean>
+            <Japanese>医療治療設定</Japanese>
+            <Chinese>醫療護理體系</Chinese>
+            <Chinesesimp>医疗护理体系</Chinesesimp>
+            <Turkish>Tıbbi Tedavi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_NoOptionSelected">
+            <English>No treatment option selected...</English>
+            <Czech>Není vybrána žádná možnost ošetření...</Czech>
+            <French>Aucune option de traitement sélectionnée...</French>
+            <Spanish>Ninguna opción de tratamiento seleccionada...</Spanish>
+            <Italian>Nessuna opzione di trattamento selezionata...</Italian>
+            <Polish>Nie wybrano opcji leczenia...</Polish>
+            <Portuguese>Nenhuma opção de tratamento selecionada...</Portuguese>
+            <Russian>Вариант лечения не выбран...</Russian>
+            <German>Keine Behandlungsoption ausgewählt...</German>
+            <Korean>선택된 의료 치료 옵션이 없습니다...</Korean>
+            <Japanese>治療オプションが選択されていません...</Japanese>
+            <Chinese>未選擇任何醫療護理項目...</Chinese>
+            <Chinesesimp>未选择任何医疗护理项目...</Chinesesimp>
+            <Turkish>Hiçbir tedavi seçeneği seçilmedi...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_NoTreatmentNeeded">
+            <English>You don't need any treatment for this...</English>
+            <Czech>K tomuto nepotřebuješ žádné ošetření...</Czech>
+            <French>Vous n'avez pas besoin de traitement pour cela...</French>
+            <Spanish>No necesitas ningún tratamiento para esto...</Spanish>
+            <Italian>Non hai bisogno di alcun trattamento per questo...</Italian>
+            <Polish>Nie potrzebujesz żadnego leczenia w tym przypadku...</Polish>
+            <Portuguese>Não precisas de nenhum tratamento para isto...</Portuguese>
+            <Russian>Вам не требуется медицинское вмешательство для этого...</Russian>
+            <German>Du benötigst dafür keine Behandlung...</German>
+            <Korean>이 상태는 치료를 받을 필요가 없습니다...</Korean>
+            <Japanese>この症状は治療の必要がありません...</Japanese>
+            <Chinese>您目前不需要針對此項目的醫療處理...</Chinese>
+            <Chinesesimp>您目前不需要针对此项目的医疗处理...</Chinesesimp>
+            <Turkish>Bunun için herhangi bir tedaviye ihtiyacınız yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_ParasiteCost">
+            <English>Parasite treatment cost</English>
+            <Czech>Cena léčby parazitů</Czech>
+            <French>Coût du traitement des parasites</French>
+            <Spanish>Coste de tratamiento de parásitos</Spanish>
+            <Italian>Costo trattamento parassiti</Italian>
+            <Polish>Koszt leczenia pasożytów</Polish>
+            <Portuguese>Custo do tratamento de parasitas</Portuguese>
+            <Russian>Цена избавления от паразитов</Russian>
+            <German>Kosten für Parasitenbehandlung</German>
+            <Korean>기생충 치료 비용</Korean>
+            <Japanese>寄生虫の治療費用</Japanese>
+            <Chinese>寄生蟲驅蟲費用</Chinese>
+            <Chinesesimp>寄生虫驱虫费用</Chinesesimp>
+            <Turkish>Parazit tedavi maliyeti</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_ParasiteCostDesc">
+            <English>Parasite treatment cost for players</English>
+            <Czech>Cena, kterou hráči zaplatí za odstranění cizopasníků z organismu</Czech>
+            <French>Coût du traitement des parasites pour les joueurs</French>
+            <Spanish>Coste del tratamiento de parásitos para los jugadores</Spanish>
+            <Italian>Costo del trattamento dei parassiti per i giocatori</Italian>
+            <Polish>Koszt kuracji przeciwpasożytniczej dla graczy</Polish>
+            <Portuguese>Custo do tratamento de parasitas para os jogadores</Portuguese>
+            <Russian>Стоимость вывода паразитов из организма персонажа для игроков</Russian>
+            <German>Kosten für die Parasitenbehandlung von Spielern</German>
+            <Korean>플레이어가 체내 기생충 감염을 박멸할 때 지불하는 비용입니다</Korean>
+            <Japanese>プレイヤーが寄生虫を駆除・治療する際に支払う費用です</Japanese>
+            <Chinese>玩家在清除體內寄生蟲病症時需要支付的資金花費</Chinese>
+            <Chinesesimp>玩家在清除体内寄生虫病症时需要支付的资金花费</Chinesesimp>
+            <Turkish>Oyuncular için parazit tedavi maliyeti</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_ParasiteDuration">
+            <English>Parasite treatment duration</English>
+            <Czech>Doba léčby parazitů</Czech>
+            <French>Durée du traitement des parasites</French>
+            <Spanish>Duración del tratamiento de parásitos</Spanish>
+            <Italian>Durata trattamento parassiti</Italian>
+            <Polish>Czas leczenia pasożytów</Polish>
+            <Portuguese>Duração do tratamento de parasitas</Portuguese>
+            <Russian>Длительность избавления от паразитов</Russian>
+            <German>Dauer der Parasitenbehandlung</German>
+            <Korean>기생충 치료 소요 시간</Korean>
+            <Japanese>寄生虫の治療時間</Japanese>
+            <Chinese>寄生蟲治療耗時</Chinese>
+            <Chinesesimp>寄生虫治疗耗时</Chinesesimp>
+            <Turkish>Parazit tedavi süresi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_ParasiteDurationDesc">
+            <English>Time it takes to treat Parasites</English>
+            <Czech>Doba v sekundách, kterou zabere kompletní vypuzení parazitů</Czech>
+            <French>Temps nécessaire pour traiter les parasites</French>
+            <Spanish>Tiempo necesario para eliminar los parásitos</Spanish>
+            <Italian>Tempo richiesto per eliminare i parassiti</Italian>
+            <Polish>Czas potrzebny na usunięcie pasożytów</Polish>
+            <Portuguese>Tempo necessário para tratar parasitas</Portuguese>
+            <Russian>Время, необходимое для полного очищения организма от паразитов</Russian>
+            <German>Zeit, die für die Behandlung von Parasiten benötigt wird</German>
+            <Korean>체내 기생충을 박멸 및 정화하는 데 걸리는 시간(초)입니다</Korean>
+            <Japanese>寄生虫駆除治療にかかる時間（秒）です</Japanese>
+            <Chinese>體內驅蟲與腸胃調理程序所需的總計時間（秒）</Chinese>
+            <Chinesesimp>体内驱虫与肠胃调理程序所需的总计时间（秒）</Chinesesimp>
+            <Turkish>Parazitlerin tedavi edilmesi için geçen süre</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_ProgressComplete">
+            <English>%1 complete...</English>
+            <Czech>%1 dokončeno...</Czech>
+            <French>%1 terminé...</French>
+            <Spanish>%1 completado...</Spanish>
+            <Italian>%1 completato...</Italian>
+            <Polish>%1 ukończone...</Polish>
+            <Portuguese>%1 concluído...</Portuguese>
+            <Russian>%1 завершено...</Russian>
+            <German>%1 abgeschlossen...</German>
+            <Korean>%1 완료...</Korean>
+            <Japanese>%1 完了...</Japanese>
+            <Chinese>%1 已完成...</Chinese>
+            <Chinesesimp>%1 已完成...</Chinesesimp>
+            <Turkish>%1 tamamlandı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_PsychosisCost">
+            <English>Psychosis treatment cost</English>
+            <Czech>Cena léčby psychózy</Czech>
+            <French>Coût du traitement de la psychose</French>
+            <Spanish>Coste de tratamiento de psicosis</Spanish>
+            <Italian>Costo trattamento psicosi</Italian>
+            <Polish>Koszt leczenia psychozy</Polish>
+            <Portuguese>Custo do tratamento da psicose</Portuguese>
+            <Russian>Цена лечения психоза</Russian>
+            <German>Kosten für Psychosebehandlung</German>
+            <Korean>정신질환/정신증 치료 비용</Korean>
+            <Japanese>精神病・精神錯乱の治療費用</Japanese>
+            <Chinese>精神錯亂/精神疾病治療費用</Chinese>
+            <Chinesesimp>精神错乱/精神疾病治疗费用</Chinesesimp>
+            <Turkish>Psikoz tedavi maliyeti</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_PsychosisCostDesc">
+            <English>Psychosis treatment cost for players</English>
+            <Czech>Cena, kterou hráči zaplatí za psychiatrickou pomoc a stabilizaci psychózy</Czech>
+            <French>Coût du traitement de la psychose pour les joueurs</French>
+            <Spanish>Coste del tratamiento de psicosis para los jugadores</Spanish>
+            <Italian>Costo del trattamento della psicosi per i giocatori</Italian>
+            <Polish>Koszt terapii psychiatrycznej i stabilizacji psychozy dla graczy</Polish>
+            <Portuguese>Custo do tratamento da psicose para os jogadores</Portuguese>
+            <Russian>Стоимость медикаментозной терапии для подавления психоза у игроков</Russian>
+            <German>Kosten für die Psychosebehandlung von Spielern</German>
+            <Korean>플레이어가 정신 착란, 정신증 등의 신경학적 손상을 치료할 때 지불하는 비용입니다</Korean>
+            <Japanese>プレイヤーが精神病・錯乱状態を治療・回復する際に支払う費用です</Japanese>
+            <Chinese>玩家在修復精神錯亂、幻覺等心智受損時需要支付的資金花費</Chinese>
+            <Chinesesimp>玩家在修复精神错乱、幻觉等心智受损时需要支付的资金花费</Chinesesimp>
+            <Turkish>Oyuncular için psikoz tedavi maliyeti</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_PsychosisDuration">
+            <English>Psychosis treatment duration</English>
+            <Czech>Doba léčby psychózy</Czech>
+            <French>Durée du traitement de la psychose</French>
+            <Spanish>Duración del tratamiento de psicosis</Spanish>
+            <Italian>Durata trattamento psicosi</Italian>
+            <Polish>Czas leczenia psychozy</Polish>
+            <Portuguese>Duração do tratamento da psicose</Portuguese>
+            <Russian>Длительность лечения психоза</Russian>
+            <German>Dauer der Psychosebehandlung</German>
+            <Korean>정신질환 치료 소요 시간</Korean>
+            <Japanese>精神病・精神錯乱の治療時間</Japanese>
+            <Chinese>精神疾病治療耗時</Chinese>
+            <Chinesesimp>精神疾病治疗耗时</Chinesesimp>
+            <Turkish>Psikoz tedavi süresi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_PsychosisDurationDesc">
+            <English>Time it takes to treat Psychosis</English>
+            <Czech>Doba v sekundách, kterou zabere neurologická a psychická stabilizace postavy</Czech>
+            <French>Temps nécessaire pour traiter la psychose</French>
+            <Spanish>Tiempo necesario para estabilizar la psicosis</Spanish>
+            <Italian>Tempo richiesto per stabilizzare la psicosi</Italian>
+            <Polish>Czas potrzebny na neurologiczną i psychologiczną stabilizację postaci</Polish>
+            <Portuguese>Tempo necessário para tratar a psicose</Portuguese>
+            <Russian>Время, требуемое для медикаментозной и ментальной стабилизации персонажа</Russian>
+            <German>Zeit, die für die Behandlung einer Psychose benötigt wird</German>
+            <Korean>신경 쇠약 및 정신 착란 상태를 안지키고 안정화하는 데 걸리는 시간(초)입니다</Korean>
+            <Japanese>精神錯乱状態から回復・安定化するまでにかかる時間（秒）です</Japanese>
+            <Chinese>執行心理干預與神經藥物穩定心智所需的總計時間（秒）</Chinese>
+            <Chinesesimp>执行心理干预与神经药物稳定心智所需的总计时间（秒）</Chinesesimp>
+            <Turkish>Psikozun tedavi edilmesi için geçen süre</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_RadiationCost">
+            <English>Radiation treatment cost</English>
+            <Czech>Cena léčení radiace</Czech>
+            <French>Coût du traitement des radiations</French>
+            <Spanish>Coste de tratamiento de radiación</Spanish>
+            <Italian>Costo trattamento radiazioni</Italian>
+            <Polish>Koszt leczenia radiacji</Polish>
+            <Portuguese>Custo do tratamento de radiação</Portuguese>
+            <Russian>Цена вывода радиации</Russian>
+            <German>Kosten für Strahlungsbehandlung</German>
+            <Korean>방사능 치료 비용</Korean>
+            <Japanese>放射線治療費用</Japanese>
+            <Chinese>輻射消除費用</Chinese>
+            <Chinesesimp>辐射消除费用</Chinesesimp>
+            <Turkish>Radyasyon tedavi maliyeti</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_RadiationCostDesc">
+            <English>Radiation treatment cost for players</English>
+            <Czech>Cena, kterou hráči zaplatí za odstranění radiace z těla</Czech>
+            <French>Coût du traitement des radiations pour les joueurs</French>
+            <Spanish>Coste del tratamiento de radiación para los jugadores</Spanish>
+            <Italian>Costo del trattamento delle radiazioni per i giocatori</Italian>
+            <Polish>Koszt kuracji przeciwradiacyjnej dla graczy</Polish>
+            <Portuguese>Custo do tratamento de radiação para os jogadores</Portuguese>
+            <Russian>Стоимость вывода радиации и дезактивации для игроков</Russian>
+            <German>Kosten für die Strahlungsbehandlung von Spielern</German>
+            <Korean>플레이어가 축적된 체내 방사능을 제거할 때 지불하는 비용입니다</Korean>
+            <Japanese>プレイヤーが蓄積した放射線を治療する際に支払う費用です</Japanese>
+            <Chinese>玩家在消除體內輻射值時需要支付的資金花費</Chinese>
+            <Chinesesimp>玩家在消除体内辐射值时需要支付的资金花费</Chinesesimp>
+            <Turkish>Oyuncular için radyasyon tedavi maliyeti</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_RadiationDuration">
+            <English>Radiation treatment duration</English>
+            <Czech>Doba léčení radiace</Czech>
+            <French>Durée du traitement des radiations</French>
+            <Spanish>Duración del tratamiento de radiación</Spanish>
+            <Italian>Durata trattamento radiazioni</Italian>
+            <Polish>Czas leczenia radiacji</Polish>
+            <Portuguese>Duração do tratamento de radiação</Portuguese>
+            <Russian>Длительность вывода радиации</Russian>
+            <German>Dauer der Strahlungsbehandlung</German>
+            <Korean>방사능 치료 소요 시간</Korean>
+            <Japanese>放射線治療時間</Japanese>
+            <Chinese>輻射消除耗時</Chinese>
+            <Chinesesimp>辐射消除耗时</Chinesesimp>
+            <Turkish>Radyasyon tedavi süresi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_RadiationDurationDesc">
+            <English>Time it takes to treat radiation</English>
+            <Czech>Doba v sekundách, kterou zabere dekontaminace a léčba ozařování</Czech>
+            <French>Temps nécessaire pour traiter l'irradiation</French>
+            <Spanish>Tiempo necesario para eliminar la radiación</Spanish>
+            <Italian>Tempo richiesto per smaltire le radiazioni</Italian>
+            <Polish>Czas potrzebny na usunięcie radiacji z organizmu</Polish>
+            <Portuguese>Tempo necessário para tratar radiação</Portuguese>
+            <Russian>Время, необходимое для проведения дезактивации организма</Russian>
+            <German>Zeit, die für die Behandlung von Verstrahlung benötigt wird</German>
+            <Korean>방사능 치료 및 해독 절차에 걸리는 시간(초)입니다</Korean>
+            <Japanese>放射線デトックス治療にかかる時間（秒）です</Japanese>
+            <Chinese>執行體內輻射清除程序所需的總計時間（秒）</Chinese>
+            <Chinesesimp>执行体内辐射清除程序所需的总计时间（秒）</Chinesesimp>
+            <Turkish>Radyasyonun tedavi edilmesi için geçen süre</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_ReceivingTreatment">
+            <English>Receiving treatment... %1%% complete</English>
+            <Czech>Probíhá ošetření... hotovo z %1%%</Czech>
+            <French>Traitement en cours... %1%% effectué</French>
+            <Spanish>Recibiendo tratamiento... %1%% completado</Spanish>
+            <Italian>Trattamento in corso... %1%% completato</Italian>
+            <Polish>Trwa leczenie... ukończono w %1%%</Polish>
+            <Portuguese>A receber tratamento... %1%% concluído</Portuguese>
+            <Russian>Получение медицинской помощи... выполнено: %1%%</Russian>
+            <German>Behandlung läuft... %1%% abgeschlossen</German>
+            <Korean>치료를 받는 중... %1%% 완료</Korean>
+            <Japanese>治療を受けています... %1%% 完了</Japanese>
+            <Chinese>正在接受醫療處理... 已完成 %1%%</Chinese>
+            <Chinesesimp>正在接受医疗处理... 已完成 %1%%</Chinesesimp>
+            <Turkish>Tedavi alınıyor... %%1% tamamlandı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_Request">
+            <English>Request treatment</English>
+            <Czech>Žádost o ošetření</Czech>
+            <French>Demande de traitement</French>
+            <Spanish>Solicitar tratamiento</Spanish>
+            <Italian>Richiesta di trattamento</Italian>
+            <Polish>Żądanie leczenia</Polish>
+            <Portuguese>Solicitar tratamento</Portuguese>
+            <Russian>Запрос на лечение</Russian>
+            <German>Behandlung anfordern</German>
+            <Korean>치료 요청하기</Korean>
+            <Japanese>治療を依頼する</Japanese>
+            <Chinese>請求治療</Chinese>
+            <Chinesesimp>请求治疗</Chinesesimp>
+            <Turkish>Tedavi talep edin</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_ToxicityCost">
+            <English>Toxicity treatment cost</English>
+            <Czech>Cena léčby toxicity</Czech>
+            <French>Coût du traitement de la toxicité</French>
+            <Spanish>Coste de tratamiento de toxicidad</Spanish>
+            <Italian>Costo trattamento tossicità</Italian>
+            <Polish>Koszt leczenia toksyczności</Polish>
+            <Portuguese>Custo do tratamento de toxicidade</Portuguese>
+            <Russian>Цена детоксикации</Russian>
+            <German>Kosten für Toxizitätsbehandlung</German>
+            <Korean>독소 및 중독 치료 비용</Korean>
+            <Japanese>毒性・中毒の治療費用</Japanese>
+            <Chinese>毒性血清解毒費用</Chinese>
+            <Chinesesimp>毒性血清解毒费用</Chinesesimp>
+            <Turkish>Toksisite tedavi maliyeti</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_ToxicityCostDesc">
+            <English>Toxicity treatment cost for players</English>
+            <Czech>Cena, kterou hráči zaplatí za celkovou detoxikaci krve a orgánů</Czech>
+            <French>Coût du traitement de la toxicité pour les joueurs</French>
+            <Spanish>Coste del tratamiento de toxicidad para los jugadores</Spanish>
+            <Italian>Costo del trattamento della tossicità per i giocatori</Italian>
+            <Polish>Koszt zabiegu odtruwania organizmu (detoksu) dla graczy</Polish>
+            <Portuguese>Custo do tratamento de toxicidade para os jogadores</Portuguese>
+            <Russian>Стоимость очистки крови и детоксикации организма для игроков</Russian>
+            <German>Kosten für die Toxizitätsbehandlung von Spielern</German>
+            <Korean>플레이어가 독소 수치를 제거하고 해독 치료를 받을 때 지불하는 비용입니다</Korean>
+            <Japanese>プレイヤーが毒性・中毒症状を解독・治療する際に支払う費用です</Japanese>
+            <Chinese>玩家在洗胃或施打解毒劑時需要支付的資金花費</Chinese>
+            <Chinesesimp>玩家在洗胃或施打解毒剂时需要支付的资金花费</Chinesesimp>
+            <Turkish>Oyuncular için toksisite tedavi maliyeti</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_ToxicityDuration">
+            <English>Toxicity treatment duration</English>
+            <Czech>Doba léčby toxicity</Czech>
+            <French>Durée du traitement de la toxicité</French>
+            <Spanish>Duración del tratamiento de toxicidad</Spanish>
+            <Italian>Durata trattamento tossicità</Italian>
+            <Polish>Czas leczenia toksyczności</Polish>
+            <Portuguese>Duração do tratamento de toxicidade</Portuguese>
+            <Russian>Длительность детоксикации</Russian>
+            <German>Dauer der Toxizitätsbehandlung</German>
+            <Korean>독소 치료 소요 시간</Korean>
+            <Japanese>毒性・中毒の治療時間</Japanese>
+            <Chinese>毒性解毒耗時</Chinese>
+            <Chinesesimp>毒性解毒耗时</Chinesesimp>
+            <Turkish>Toksisite tedavi süresi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_ToxicityDurationDesc">
+            <English>Time it takes to treat Toxicity</English>
+            <Czech>Doba v sekundách, kterou zabere neutralizace jedů a toxinů v těle</Czech>
+            <French>Temps nécessaire pour traiter la toxicité</French>
+            <Spanish>Tiempo necesario para neutralizar la toxicidad</Spanish>
+            <Italian>Tempo richiesto per neutralizzare la tossicità</Italian>
+            <Polish>Czas potrzebny na pełną detoksykację organizmu</Polish>
+            <Portuguese>Tempo necessário para tratar a toxicidade</Portuguese>
+            <Russian>Время, требуемое для полного очищения крови от токсинов</Russian>
+            <German>Zeit, die für die Behandlung von Toxizität benötigt wird</German>
+            <Korean>체내 중독 증세를 중화하고 해독하는 데 걸리는 시간(초)입니다</Korean>
+            <Japanese>毒素の中和・解毒治療にかかる時間（秒）です</Japanese>
+            <Chinese>中和體內化學毒素或生物毒性所需的總計時間（秒）</Chinese>
+            <Chinesesimp>中和体内化学毒素或生物毒性所需的总计时间（秒）</Chinesesimp>
+            <Turkish>Toksisitenin tedavi edilmesi için geçen süre</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_TreatInfection">
+            <English>Treat Infection</English>
+            <Czech>Léčit infekci</Czech>
+            <French>Traiter l'infection</French>
+            <Spanish>Tratar infección</Spanish>
+            <Italian>Cura infezione</Italian>
+            <Polish>Lecz infekcję</Polish>
+            <Portuguese>Tratar infeção</Portuguese>
+            <Russian>Лечить инфекцию</Russian>
+            <German>Infektion behandeln</German>
+            <Korean>감염 증세 치료</Korean>
+            <Japanese>感染症を治療する</Japanese>
+            <Chinese>全身感染抗生素注入</Chinese>
+            <Chinesesimp>全身感染抗生索注入</Chinesesimp>
+            <Turkish>Enfeksiyonu Tedavi Et</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_TreatParasites">
+            <English>Treat Parasites</English>
+            <Czech>Léčit parazity</Czech>
+            <French>Traiter les parasites</French>
+            <Spanish>Tratar parásitos</Spanish>
+            <Italian>Elimina parassiti</Italian>
+            <Polish>Lecz pasożyty</Polish>
+            <Portuguese>Tratar parasitas</Portuguese>
+            <Russian>Вывести паразитов</Russian>
+            <German>Parasiten behandeln</German>
+            <Korean>기생충 구충 치료</Korean>
+            <Japanese>寄生虫を駆除する</Japanese>
+            <Chinese>寄生蟲驅蟲醫療</Chinese>
+            <Chinesesimp>寄生虫驱虫医疗</Chinesesimp>
+            <Turkish>Parazitleri Tedavi Et</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_TreatPsychosis">
+            <English>Treat Psychosis</English>
+            <Czech>Léčit psychózu</Czech>
+            <French>Traiter la psychose</French>
+            <Spanish>Tratar psicosis</Spanish>
+            <Italian>Cura psicosi</Italian>
+            <Polish>Lecz psychozę</Polish>
+            <Portuguese>Tratar psicose</Portuguese>
+            <Russian>Купировать психоз</Russian>
+            <German>Psychose behandeln</German>
+            <Korean>정신질환 신경 치료</Korean>
+            <Japanese>精神錯乱を治療する</Japanese>
+            <Chinese>精神錯亂神經修復</Chinese>
+            <Chinesesimp>精神错乱神经修复</Chinesesimp>
+            <Turkish>Psikozu Tedavi Et</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_TreatRadiation">
+            <English>Treat Radiation</English>
+            <Czech>Léčit radiaci</Czech>
+            <French>Traiter les radiations</French>
+            <Spanish>Tratar radiación</Spanish>
+            <Italian>Rimuovi radiazioni</Italian>
+            <Polish>Lecz radiację</Polish>
+            <Portuguese>Tratar radiação</Portuguese>
+            <Russian>Вывести радиацию</Russian>
+            <German>Verstrahlung behandeln</German>
+            <Korean>방사능 해독 치료</Korean>
+            <Japanese>放射線を治療する</Japanese>
+            <Chinese>體內輻射清除程序</Chinese>
+            <Chinesesimp>体内辐射清除程序</Chinesesimp>
+            <Turkish>Radyasyonu Tedavi Et</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_TreatToxicity">
+            <English>Treat Toxicity</English>
+            <Czech>Léčit toxicitu</Czech>
+            <French>Traiter la toxicité</French>
+            <Spanish>Tratar toxicidad</Spanish>
+            <Italian>Effettua disintossicazione</Italian>
+            <Polish>Lecz toksyczność</Polish>
+            <Portuguese>Tratar toxicidade</Portuguese>
+            <Russian>Провести детоксикацию</Russian>
+            <German>Toxizität behandeln</German>
+            <Korean>독소 중독 해독</Korean>
+            <Japanese>毒性・中毒を治療する</Japanese>
+            <Chinese>毒性清洗與生物解毒</Chinese>
+            <Chinesesimp>毒性清洗与生物解毒</Chinesesimp>
+            <Turkish>Toksisiteyi Tedavi Et</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_TreatWounds">
+            <English>Treat Wounds</English>
+            <Czech>Ošetřit zranění</Czech>
+            <French>Traiter les blessures</French>
+            <Spanish>Tratar heridas</Spanish>
+            <Italian>Medica ferite</Italian>
+            <Polish>Opatrz rany</Polish>
+            <Portuguese>Tratar feridas</Portuguese>
+            <Russian>Лечить раны</Russian>
+            <German>Wunden behandeln</German>
+            <Korean>외상 상처 치료</Korean>
+            <Japanese>傷を治療する</Japanese>
+            <Chinese>外傷傷口外科處理</Chinese>
+            <Chinesesimp>外伤伤口外科处理</Chinesesimp>
+            <Turkish>Yaraları Tedavi Et</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_WoundCost">
+            <English>Wound treatment cost</English>
+            <Czech>Cena ošetření zranění</Czech>
+            <French>Coût du traitement des blessures</French>
+            <Spanish>Coste de tratamiento de heridas</Spanish>
+            <Italian>Costo trattamento ferite</Italian>
+            <Polish>Koszt leczenia ran</Polish>
+            <Portuguese>Custo do tratamento de feridas</Portuguese>
+            <Russian>Цена лечения ран</Russian>
+            <German>Kosten für Wundbehandlung</German>
+            <Korean>상처 치료 비용</Korean>
+            <Japanese>傷の治療費用</Japanese>
+            <Chinese>傷口治療費用</Chinese>
+            <Chinesesimp>伤口治疗费用</Chinesesimp>
+            <Turkish>Yara tedavi maliyeti</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Treatment_WoundCostDesc">
+            <English>Wound treatment cost for players</English>
+            <Czech>Cena, kterou hráči zaplatí za ošetření otevřených zranění</Czech>
+            <French>Coût du traitement des blessures pour les joueurs</French>
+            <Spanish>Coste del tratamiento de heridas para los jugadores</Spanish>
+            <Italian>Costo del trattamento delle ferite per i giocatori</Italian>
+            <Polish>Koszt ošetrenia ran dla graczy</Polish>
+            <Portuguese>Custo do tratamento de feridas para os jogadores</Portuguese>
+            <Russian>Стоимость обработки и перевязки ран для игроков</Russian>
+            <German>Kosten für die Wundbehandlung von Spielern</German>
+            <Korean>플레이어가 외상 및 상처를 치료할 때 지불하는 비용입니다</Korean>
+            <Japanese>プレイヤーが創傷を治療する際に支払う費用です</Japanese>
+            <Chinese>玩家在外傷口治療時需要支付的資金花費</Chinese>
+            <Chinesesimp>玩家在外伤口治疗时需要支付的资金花费</Chinesesimp>
+            <Turkish>Oyuncular için yara tedavi maliyeti</Turkish>
+        </Key>
+    </Package>
+</Project>

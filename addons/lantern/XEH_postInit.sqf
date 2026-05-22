@@ -4,7 +4,7 @@ if (isServer) then {
 
     private _lanternBatteries = [
         QGVAR(lantern_menu),
-        "Add 9v battery to lantern",
+        localize LSTRING(Action),
         QPATHTOEF(icons,data\battery_charging_ca.paa),
         {
             call FUNC(batteries);

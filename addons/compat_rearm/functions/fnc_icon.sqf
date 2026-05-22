@@ -25,7 +25,7 @@ disableSerialization;
     [player] call EFUNC(common,nearVehicle) params ["", "_nearestVehicle"];
 
     if (_nearestVehicle isEqualTo []) exitWith {
-        _iconName ctrlSetText "No Vehicle to Refuel...";
+        _iconName ctrlSetText localize LSTRING(NoVehicle);
     };
 
     [_nearestVehicle] call EFUNC(common,getObjectData) params ["_displayName", "_picture"];

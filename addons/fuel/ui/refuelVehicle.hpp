@@ -76,7 +76,7 @@ class CLASS(refuelVehicle_ui) {
             idc = 1601;
             colorFocused[] = {0.5,0.5,0.5,0.7};
             onButtonClick = QUOTE(closeDialog 2);
-            text = "Exit"; //--- ToDo: Localize;
+            text = ECSTRING(common,Exit);
             x = 25.5 * GUI_GRID_W + GUI_GRID_X;
             y = 11 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;

@@ -37,7 +37,7 @@ if (GVAR(gradAdminActions)) then {
 
     private _gradSaveAction = [
         QGVAR(grad_db_menu),
-        "GRAD Persistence",
+        localize LSTRING(GradPersistence),
         QPATHTOEF(icons,data\savedisk_ca.paa),
         {
             createDialog QCLASS(grad_persistence_compat_ui)

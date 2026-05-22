@@ -13,7 +13,7 @@ class CLASS(hydrology_ui) {
         };
         class CLASS(hydrology_itemSelectionTip): RscText {
             idc = -1;
-            text = "Containers:"; //--- ToDo: Localize;
+            text = ECSTRING(hydrology,ContainersLabel);
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
             y = 2 * GUI_GRID_H + GUI_GRID_Y;
             w = 6 * GUI_GRID_W;
@@ -23,7 +23,7 @@ class CLASS(hydrology_ui) {
         };
         class CLASS(hydrology_prompt): RscText {
             idc = -1;
-            text = "What container would you like to fill?"; //--- ToDo: Localize;
+            text = ECSTRING(hydrology,Prompt);
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
             y = 0 * GUI_GRID_H + GUI_GRID_Y;
             w = 22 * GUI_GRID_W;
@@ -53,7 +53,7 @@ class CLASS(hydrology_ui) {
         };
         class CLASS(hydrology_FillContainer_Button): RscButton {
             idc = 1600;
-            text = "Fill container"; //--- ToDo: Localize;
+            text = ECSTRING(hydrology,FillAction);
             x = 19 * GUI_GRID_W + GUI_GRID_X;
             y = 7.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;
@@ -67,7 +67,7 @@ class CLASS(hydrology_ui) {
         };
         class CLASS(hydrology_drinkFromSource_Button): RscButton {
             idc = 1601;
-            text = ECSTRING(common,DrinkFromSource);
+            text = ECSTRING(hydrology,DrinkFromSource);
             x = 18.5 * GUI_GRID_W + GUI_GRID_X;
             y = 9.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 8.5 * GUI_GRID_W;
@@ -81,7 +81,7 @@ class CLASS(hydrology_ui) {
         };
         class CLASS(hydrology_exit): RscButton {
             idc = 1602;
-            text = "Exit";
+            text = ECSTRING(common,Exit);
             x = 19 * GUI_GRID_W + GUI_GRID_X;
             y = 11.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;

@@ -32,7 +32,7 @@ _trader setVariable [QGVAR(isBusy), false, true];
 
 private _traderAction = [
     QGVAR(accessTrader),
-    format ["Open %1", _shopName],
+    format [localize LSTRING(OpenAction), _shopName],
     QPATHTOEF(markers,data\hand_coins_ca.paa),
     {
         params ["_target", "_player"];

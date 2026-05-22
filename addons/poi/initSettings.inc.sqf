@@ -1,9 +1,9 @@
-private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
+private _category = format ["Misery %1", localize LSTRING(Component)];
 
 [
     QGVAR(spawnCheckDistance),
     "SLIDER",
-    ["Spawn check distance", "Distance to check for POI's to be able to spawn"],
+    [LSTRING(SpawnCheckDistance), LSTRING(SpawnCheckDistanceDesc)],
     _category,
     [250, 15000, 500, 0],
     1
@@ -12,7 +12,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(deleteCheckDistance),
     "SLIDER",
-    ["Deletion check distance", "Distance to check for POI's being out of this range for deletion"],
+    [LSTRING(DeletionCheckDistance), LSTRING(DeletionCheckDistanceDesc)],
     _category,
     [250, 15000, 1000, 0],
     1
@@ -21,7 +21,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(spawnRandomDistance),
     "SLIDER",
-    ["Random spawn distance", "Distance to spawn randomly generated POI's with no set spawn position"],
+    [LSTRING(RandomSpawnDistance), LSTRING(RandomSpawnDistanceDesc)],
     _category,
     [250, 15000, 250, 0],
     1
@@ -30,7 +30,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(checkInterval),
     "SLIDER",
-    ["Generating check interval", "Interval at which the system runs it's checks"],
+    [LSTRING(GeneratingCheckInterval), LSTRING(GeneratingCheckIntervalDesc)],
     _category,
     [1, 3600, 60, 0],
     1
@@ -39,7 +39,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(checkIntervalShore),
     "SLIDER",
-    ["Shoreline check interval", "Interval at which the system runs it's checks for shoreline POI's"],
+    [LSTRING(ShorelineCheckInterval), LSTRING(ShorelineCheckIntervalDesc)],
     _category,
     [1, 3600, 60, 0],
     1
@@ -48,7 +48,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(maxActive),
     "SLIDER",
-    ["Maximum allowed", "Maximum POI's allowed to be active on the map at any given time"],
+    [LSTRING(MaximumAllowed), LSTRING(MaximumAllowedDesc)],
     _category,
     [1, 15, 5, 0],
     1
@@ -57,7 +57,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(wrecksSmoke),
     "CHECKBOX",
-    ["Wrecks smoke", "Wrecks in POI's will smoke, making them more easier to spot from greater distances"],
+    [LSTRING(WrecksSmoke), LSTRING(WrecksSmokeDesc)],
     _category,
     false,
     1

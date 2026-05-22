@@ -22,7 +22,7 @@
     private _fuelLevel = _generator getVariable [QGVAR(fuelLevel), 1];
 
     if (_fuelLevel >= 1) exitWith {
-        [QEGVAR(common,tileText), "This generator has a full tank..."] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), localize LSTRING(FullTank)] call CBA_fnc_localEvent;
     };
 
     private _fuelCan = "";
@@ -31,16 +31,16 @@
     switch (_generatorType) do {
         case "Land_PowerGenerator_F": {
             _fuelCan = QCLASS(diesel);
-            _requiredFuelType = "Diesel";
+            _requiredFuelType = localize LSTRING(Diesel);
         };
         case "Land_Portable_generator_F": {
             _fuelCan = QCLASS(petrol);
-            _requiredFuelType = "Petrol";
+            _requiredFuelType = localize LSTRING(Petrol);
         };
     };
 
     if !([[_fuelCan]] call EFUNC(common,hasItem)) exitWith {
-        [QEGVAR(common,tileText), format ["You need a %1 jerrycan to refuel this generator...", _requiredFuelType]] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), format [localize LSTRING(NeedsJerrycan), _requiredFuelType]] call CBA_fnc_localEvent;
     };
 
     [{
@@ -54,12 +54,12 @@
         };
 
         if !([[_fuelCan]] call EFUNC(common,hasItem)) exitWith {
-            [QEGVAR(common,tileText), format ["You need a %1 jerrycan to refuel this generator...", _requiredFuelType]] call CBA_fnc_localEvent;
+            [QEGVAR(common,tileText), format [localize LSTRING(NeedsJerrycan), _requiredFuelType]] call CBA_fnc_localEvent;
             _handle call CBA_fnc_removePerFrameHandler;
         };
 
         if (_fuelLevel >= 1) exitWith {
-            [QEGVAR(common,tileText), "This generator has a full tank..."] call CBA_fnc_localEvent;
+            [QEGVAR(common,tileText), localize LSTRING(FullTank)] call CBA_fnc_localEvent;
             _handle call CBA_fnc_removePerFrameHandler;
         };
 
@@ -68,7 +68,7 @@
 
         _generator setVariable [QGVAR(fuelLevel), _currentFuel + _fueltoAdd, true];
 
-        private _emptyCan = [QCLASS(petrolEmpty), QCLASS(dieselEmpty)] select (_requiredFuelType isEqualTo "Diesel");
+        private _emptyCan = [QCLASS(petrolEmpty), QCLASS(dieselEmpty)] select (_requiredFuelType isEqualTo (localize LSTRING(Diesel)));
 
         [_fuelCan, _emptyCan] call EFUNC(common,itemDecrement);
 

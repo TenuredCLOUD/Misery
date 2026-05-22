@@ -22,7 +22,7 @@ private _purchaseButton = _dialog displayCtrl 1600;
 private _exitButton = _dialog displayCtrl 1601;
 
 if (_selectedIndex isEqualTo -1) exitWith {
-    ctrlSetText [1001, "No Repair option selected..."];
+    ctrlSetText [1001, localize LSTRING(NoSelection)];
 };
 
 if (_selectedIndex isNotEqualTo -1) exitWith {

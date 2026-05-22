@@ -26,16 +26,16 @@ private _fireIndex = -1;
 } forEach GVAR(activeFires);
 
 if (isNull _nearbyFire) then {
-    _noteBox ctrlSetText "No nearby fire to extinguish...";
+    _noteBox ctrlSetText localize LSTRING(ExtinguishNone);
 } else {
     if (isServer) then {
         if (inflamed _nearbyFire) then {
             _nearbyFire inflame false;
             (GVAR(activeFires) select _fireIndex) set [2, 0];
             publicVariable QGVAR(activeFires);
-            _noteBox ctrlSetText "Fire extinguished...";
+            _noteBox ctrlSetText localize LSTRING(Extinguished);
         } else {
-            _noteBox ctrlSetText "Fire is already extinguished...";
+            _noteBox ctrlSetText localize LSTRING(AlreadyExtinguished);
         };
     } else {
         [QGVAR(extinguishFire), [_nearbyFire, _fireIndex, _display]] call CBA_fnc_serverEvent;

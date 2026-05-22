@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="NoNVG">
+        <Key ID="STR_MISERY_NoNVG_Component">
+            <English>No NVG</English>
+            <Czech>Bez NVG</Czech>
+            <French>Pas de JVN</French>
+            <Spanish>Sin visores nocturnos</Spanish>
+            <Italian>No visori notturni</Italian>
+            <Polish>Bez noktowizji</Polish>
+            <Portuguese>Sem NVG</Portuguese>
+            <Russian>Без ПНВ</Russian>
+            <German>Keine Nachtsichtgeräte</German>
+            <Korean>야간 투視鏡 금지</Korean>
+            <Japanese>暗視装置なし</Japanese>
+            <Chinese>禁用夜視鏡</Chinese>
+            <Chinesesimp>禁用夜视仪</Chinesesimp>
+            <Turkish>Gece Görüşü Yok</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_NoNVG_Setting">
+            <English>No NVG in TPP</English>
+            <Czech>Žádné NVG ve 3. osobě</Czech>
+            <French>Pas de JVN en troisième personne</French>
+            <Spanish>Sin NVG en tercera persona</Spanish>
+            <Italian>Niente NVG in terza persona</Italian>
+            <Polish>Brak NVG w trzeciej osobie</Polish>
+            <Portuguese>Sem NVG em terceira pessoa</Portuguese>
+            <Russian>Без ПНВ от третьего лица</Russian>
+            <German>Kein Nachtsichtgerät in der 3. Person</German>
+            <Korean>3인칭 시점 야간투시경 사용 제한</Korean>
+            <Japanese>三人称視点でのNVG使用不可</Japanese>
+            <Chinese>第三人稱禁用夜視鏡</Chinese>
+            <Chinesesimp>第三人称禁用夜视镜</Chinesesimp>
+            <Turkish>Üçüncü Şahısta NVG Yasak</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_NoNVG_SettingDesc">
+            <English>Actively disables NVG's if the player is in third person (TPP) trying to use them. - can greatly increase difficulty, also levels the playing field...</English>
+            <Czech>Aktivně vypíná NVG, pokud se je hráč pokouší použít v pohledu třetí osoby (TPP). - může výrazně zvýšit obtížnost a vyrovnat podmínky...</Czech>
+            <French>Désactive activement les JVN si le joueur est en troisième personne (TPP) et essaie de les utiliser. - peut augmenter considérablement la difficulté, égalise également les chances...</French>
+            <Spanish>Desactiva activamente los NVG si el jugador está en tercera persona (TPP) e intenta usarlos. - puede aumentar enormemente la dificultad, también equilibra el campo de juego...</Spanish>
+            <Italian>Disabilita attivamente i visori notturni se il giocatore si trova in terza persona (TPP) mentre cerca di usarli. - può aumentare notevolmente la difficoltà, livellando anche il campo di gioco...</Italian>
+            <Polish>Aktywnie wyłącza gogle noktowizyjne (NVG), jeśli gracz próbuje ich użyć w widoku z trzeciej osoby (TPP). - może znacznie zwiększyć trudność, a także wyrównuje szanse...</Polish>
+            <Portuguese>Desativa ativamente os NVGs se o jogador estiver em terceira pessoa (TPP) tentando usá-los. - pode aumentar bastante a dificuldade, também nivela o campo de jogo...</Portuguese>
+            <Russian>Активно отключает ПНВ, если игрок пытается использовать их в режиме от третьего лица (TPP). — может значительно увеличить сложность, а также уравнивает шансы игроков...</Russian>
+            <German>Deaktiviert Nachtsichtgeräte aktiv, wenn der Spieler versucht, sie in der dritten Person (TPP) zu benutzen. – kann den Schwierigkeitsgrad stark erhöhen und sorgt für Chancengleichheit...</German>
+            <Korean>플레이어가 3인칭 시점(TPP)에서 야간투시경을 사용하려고 하면 강제로 비활성화합니다. — 난이도가 크게 상승하며, 모든 플레이어에게 공평한 환경을 제공합니다...</Korean>
+            <Japanese>プレイヤーが三人称視点（TPP）で夜視鏡を使用しようとすると、強制的に無効化します。— 難易度を大幅に上げるとともに、公平なプレイ環境を提供します...</Japanese>
+            <Chinese>當玩家處於第三人稱視角（TPP）時將強制禁用夜視鏡。這會大幅增加遊戲難度，但同時也能確保玩家之間的公平性...</Chinese>
+            <Chinesesimp>当玩家处于第三人称视角（TPP）时将强制禁用夜视镜。这会大幅增加游戏难度，但同时也能确保玩家之间的公平性...</Chinesesimp>
+            <Turkish>Oyuncu üçüncü şahıs (TPP) kamerasındayken gece görüş gözlüğü kullanmaya çalışırsa aktif olarak devre dışı bırakır. - Zorluğu büyük ölçüde artırabilir, ayrıca rekabet şartlarını eşitler...</Turkish>
+        </Key>
+    </Package>
+</Project>

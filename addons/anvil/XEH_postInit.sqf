@@ -11,7 +11,7 @@ if (isClass (missionConfigFile >> "CfgMisery_AnvilData")) then {
 
     private _anvilAction = [
         QGVAR(anvil_menu),
-        localize ECSTRING(common,UseAnvil),
+        localize LSTRING(UseAnvil),
         QPATHTOEF(icons,data\anvil_ca.paa),
         {
             params ["_target", "_player"];

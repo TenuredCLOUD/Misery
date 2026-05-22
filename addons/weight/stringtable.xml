@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Weight">
+        <Key ID="STR_MISERY_Weight_Component">
+            <English>Weight</English>
+            <Czech>Váha</Czech>
+            <French>Poids</French>
+            <Spanish>Peso</Spanish>
+            <Italian>Peso</Italian>
+            <Polish>Waga</Polish>
+            <Portuguese>Peso</Portuguese>
+            <Russian>Вес</Russian>
+            <German>Gewicht</German>
+            <Korean>무게</Korean>
+            <Japanese>重量</Japanese>
+            <Chinese>重量</Chinese>
+            <Chinesesimp>重量</Chinesesimp>
+            <Turkish>Ağırlık</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Weight_Penalty">
+            <English>Weight penalty</English>
+            <Czech>Postihy za váhu</Czech>
+            <French>Pénalité de poids</French>
+            <Spanish>Penalización por peso</Spanish>
+            <Italian>Malus peso equipaggiamento</Italian>
+            <Polish>Kary wagowe</Polish>
+            <Portuguese>Penalização por peso</Portuguese>
+            <Russian>Эффекты веса снаряжения</Russian>
+            <German>Gewichtsmalus</German>
+            <Korean>무게 패널티</Korean>
+            <Japanese>重量ペナルティ</Japanese>
+            <Chinese>裝備重量負面狀態</Chinese>
+            <Chinesesimp>装备重量负面状态</Chinesesimp>
+            <Turkish>Ağırlık Cezası</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Weight_PenaltyDesc">
+            <English>Enable a penalty for players gear weight? (Enables a deficiency to hunger / thirst for player weight, also increases tired calc values in SP - Dynamically calculated)</English>
+            <Czech>Povolit postih za váhu výstroje? (Zvyšuje spotřebu jídla a vody v závislosti na zátěži, v SP také urychluje únavu – dynamicky počítáno)</Czech>
+            <French>Activer une pénalité pour le poids de l'équipement du joueur ? (Entraîne une consommation accrue de nourriture/eau selon le poids, augmente aussi la fatigue en solo - calculé dynamiquement)</French>
+            <Spanish>¿Activar una penalización por el peso del equipo del jugador? (Aumenta el consumo de hambre y sed según el peso, también incrementa la fatiga en modo un jugador; se calcula dinámicamente)</Spanish>
+            <Italian>Abilitare malus legati al peso dell'equipaggiamento? (Aumenta il consumo di fame e sete in base al peso trasportato, incrementando anche la fatica in giocatore singolo - calcolato in modo dinamico)</Italian>
+            <Polish>Włączyć kary za wagę wyposażenia gracza? (Zwiększa zużycie głodu i pragnienia na podstawie ciężaru, a także przyspiesza zmęczenie w trybie jednoosobowym - obliczane dynamicznie)</Polish>
+            <Portuguese>Ativar penalizações para o peso do equipamento do jogador? (Aumenta o consumo de comida/água com base no peso, também aumenta a fadiga em modo um jogador - calculado dinamicamente)</Portuguese>
+            <Russian>Включить дебаффы от веса снаряжения? (Ускоряет расход голода и жажды в зависимости от нагрузки, а также повышает скорость утомления в одиночной игре — расчет производится динамически)</Russian>
+            <German>Malus für das Ausrüstungsgewicht aktivieren? (Erhöht den Hunger- und Durstverbrauch basierend auf der Last, beschleunigt im Einzelspieler zudem die Müdigkeit - dynamisch berechnet)</German>
+            <Korean>장비 무게에 따른 페널티를 적용하시겠습니까? (소지품 무게가 무거울수록 허기 및 갈증 소모 속도가 가속되며, 싱글플레이에서는 피로도 증가 수치도 함께 가속됩니다 - 실시간 동적 계산)</Korean>
+            <Japanese>装備重量によるペナルティを有効にしますか？（重量に応じて空腹・渇きの消費速度が加速し、シングルプレイでは疲労度の増加率も上昇します - 動的に計算されます）</Japanese>
+            <Chinese>是否開啟裝備重量帶來的負面懲罰？（負重越高將加速消耗飢餓與口渴值，在單人模式下亦會加速疲勞值的積累 - 均為實體動態計算）</Chinese>
+            <Chinesesimp>是否开启装备重量带来的负面惩罚？（负重越高将加速消耗饥饿与口渴值，在单人模式下亦会加速疲劳值的积累 - 均为实体动态计算）</Chinesesimp>
+            <Turkish>Oyuncu teçhizat ağırlığı için bir ceza etkinleştirilsin mi? (Oyuncu ağırlığına göre açlık/susuzluk tüketimini artırır, tek oyunculu modda yorgunluk hesaplama değerlerini de yükseltir - Dinamik olarak hesaplanır)</Turkish>
+        </Key>
+    </Package>
+</Project>

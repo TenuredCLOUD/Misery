@@ -1,9 +1,9 @@
-private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
+private _category = format ["Misery %1", localize LSTRING(Component)];
 
 [
     QGVAR(enabled),
     "CHECKBOX",
-    ["Temperature Framework", "Enable Temperature framework? (Enables player temperature calculations)"],
+    [LSTRING(Framework), LSTRING(FrameworkDesc)],
     _category,
     false,
     1
@@ -12,7 +12,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(breathFogAllowed),
     "CHECKBOX",
-    ["Breath Condensation", "Enable Breath Condensation? (Enables breath visibility in cold weather)"],
+    [LSTRING(BreathCondensation), LSTRING(BreathCondensationDesc)],
     _category,
     false,
     1
@@ -21,7 +21,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(clothingCheckAction),
     "CHECKBOX",
-    ["Clothing Check", "Enable manual clothing insulation check action? (more accurate with ERU unit)"],
+    [LSTRING(ClothingCheck), LSTRING(ClothingCheckDesc)],
     _category,
     false,
     1
@@ -30,7 +30,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(deficiency),
     "CHECKBOX",
-    ["Temperature penalty", "Enable a penalty for players Temperature? (Cold - hunger increase / Hot or fever - thirst increase - Dynamically calculated)"],
+    [LSTRING(Penalty), LSTRING(PenaltyDesc)],
     _category,
     false,
     1

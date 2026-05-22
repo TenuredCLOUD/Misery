@@ -25,7 +25,7 @@ if (!hasInterface) exitWith {};
             params ["_unit"];
             if (_unit isEqualTo player) then {
                 if ([_unit] call ACEFUNC(goggles,isGogglesVisible)) then {
-                    [QEGVAR(common,tileText), format ["%1 broken, removing equipment...", [goggles _unit] call EFUNC(common,getItemData) select 0]] call CBA_fnc_localEvent;
+                    [QEGVAR(common,tileText), format [localize LSTRING(EquipmentBroken), [goggles _unit] call EFUNC(common,getItemData) select 0]] call CBA_fnc_localEvent;
                     [{
                         params ["_unit"];
                         _unit unlinkItem goggles _unit;

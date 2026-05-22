@@ -2,7 +2,7 @@
 
 private _fireAction = [
     QGVAR(fire_menu),
-    localize ECSTRING(common,UseFire),
+    localize LSTRING(Action),
     QPATHTOEF(icons,data\nearfire_ca.paa),
     {
         params ["_target", "_player"];
@@ -20,7 +20,7 @@ private _fireAction = [
 
 private _fireCheckAction = [
     QGVAR(fireStatus_menu),
-    "Check fire",
+    localize LSTRING(CheckAction),
     QPATHTOEF(icons,data\nearfire_ca.paa),
     {
         params ["_target", "_player"];

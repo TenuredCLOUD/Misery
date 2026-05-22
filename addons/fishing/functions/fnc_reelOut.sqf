@@ -22,5 +22,5 @@ GVAR(lineOut) = (GVAR(lineOut) + 0.05) min 1;
 GVAR(lineTension) = (GVAR(lineTension) - 0.05) max 0;
 
 if (GVAR(lineOut) >= 1) then {
-    ctrlSetText [1001, "Line fully reeled out."];
+    ctrlSetText [1001, localize LSTRING(FullyReeledOut)];
 };

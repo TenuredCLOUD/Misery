@@ -1,9 +1,9 @@
-private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
+private _category = format ["Misery %1", localize LSTRING(Component)];
 
 [
     QGVAR(woundCost),
     "SLIDER",
-    ["Wound treatment cost", "Wound treatment cost for players"],
+    [LSTRING(WoundCost), LSTRING(WoundCostDesc)],
     _category,
     [1, 1000000, 50, 0],
     1
@@ -12,7 +12,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(woundDuration),
     "SLIDER",
-    ["Wound treatment duration", "Time it takes to treat wounds"],
+    [LSTRING(Duration), LSTRING(DurationDesc)],
     _category,
     [1, 300, 45, 0],
     1
@@ -21,7 +21,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(radiationCost),
     "SLIDER",
-    ["Radiation treatment cost", "Radiation treatment cost for players"],
+    [LSTRING(RadiationCost), LSTRING(RadiationCostDesc)],
     _category,
     [1, 1000000, 50, 0],
     1
@@ -30,7 +30,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(radiationDuration),
     "SLIDER",
-    ["Radiation treatment duration", "Time it takes to treat radiation"],
+    [LSTRING(RadiationDuration), LSTRING(RadiationDurationDesc)],
     _category,
     [1, 300, 30, 0],
     1
@@ -39,7 +39,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(infectionCost),
     "SLIDER",
-    ["Infection treatment cost", "Infection treatment cost for players"],
+    [LSTRING(InfectionCost), LSTRING(InfectionCostDesc)],
     _category,
     [1, 1000000, 50, 0],
     1
@@ -48,7 +48,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(infectionDuration),
     "SLIDER",
-    ["Infection treatment duration", "Time it takes to treat Infection"],
+    [LSTRING(InfectionDuration), LSTRING(InfectionDurationDesc)],
     _category,
     [1, 300, 25, 0],
     1
@@ -57,7 +57,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(parasiteCost),
     "SLIDER",
-    ["Parasite treatment cost", "Parasite treatment cost for players"],
+    [LSTRING(ParasiteCost), LSTRING(ParasiteCostDesc)],
     _category,
     [1, 1000000, 50, 0],
     1
@@ -66,7 +66,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(parasiteDuration),
     "SLIDER",
-    ["Parasite treatment duration", "Time it takes to treat Parasites"],
+    [LSTRING(ParasiteDuration), LSTRING(ParasiteDurationDesc)],
     _category,
     [1, 300, 20, 0],
     1
@@ -75,7 +75,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(toxicCost),
     "SLIDER",
-    ["Toxicity treatment cost", "Toxicity treatment cost for players"],
+    [LSTRING(ToxicityCost), LSTRING(ToxicityCostDesc)],
     _category,
     [1, 1000000, 50, 0],
     1
@@ -84,7 +84,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(toxicDuration),
     "SLIDER",
-    ["Toxicity treatment duration", "Time it takes to treat Toxicity"],
+    [LSTRING(ToxicityDuration), LSTRING(ToxicityDurationDesc)],
     _category,
     [1, 300, 35, 0],
     1
@@ -93,7 +93,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(psychosisCost),
     "SLIDER",
-    ["Psychosis treatment cost", "Psychosis treatment cost for players"],
+    [LSTRING(PsychosisCost), LSTRING(PsychosisCostDesc)],
     _category,
     [1, 1000000, 500, 0],
     1
@@ -102,7 +102,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(psychosisDuration),
     "SLIDER",
-    ["Psychosis treatment duration", "Time it takes to treat Psychosis"],
+    [LSTRING(PsychosisDuration), LSTRING(PsychosisDurationDesc)],
     _category,
     [1, 300, 40, 0],
     1

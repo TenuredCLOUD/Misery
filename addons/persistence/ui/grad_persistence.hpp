@@ -14,7 +14,7 @@ class CLASS(grad_persistence_compat_ui) {
         };
         class misery_gradPersistence_prompt: RscText {
             idc = -1;
-            text = "GRAD Persistence"; //--- ToDo: Localize;
+            text = ECSTRING(persistence,GradPersistence);
             x = 4 * GUI_GRID_W + GUI_GRID_X;
             y = 1 * GUI_GRID_H + GUI_GRID_Y;
             w = 22 * GUI_GRID_W;
@@ -34,7 +34,7 @@ class CLASS(grad_persistence_compat_ui) {
     class Controls {
         class misery_gradPersistence_save: RscButton {
             idc = -1;
-            text = "Save world"; //--- ToDo: Localize;
+            text = ECSTRING(persistence,SaveWorld);
             x = 4.5 * GUI_GRID_W + GUI_GRID_X;
             y = 9 * GUI_GRID_H + GUI_GRID_Y;
             w = 12 * GUI_GRID_W;
@@ -49,7 +49,7 @@ class CLASS(grad_persistence_compat_ui) {
         };
         class misery_gradPersistence_wipe: RscButton {
             idc = -1;
-            text = "Wipe world data"; //--- ToDo: Localize;
+            text = ECSTRING(persistence,WipeWorld);
             x = 23.5 * GUI_GRID_W + GUI_GRID_X;
             y = 9 * GUI_GRID_H + GUI_GRID_Y;
             w = 12 * GUI_GRID_W;
@@ -64,7 +64,7 @@ class CLASS(grad_persistence_compat_ui) {
         };
         class misery_gradPersistence_cancel_wipe: RscButton {
             idc = -1;
-            text = "Cancel"; //--- ToDo: Localize;
+            text = ECSTRING(common,Cancel);
             x = 14 * GUI_GRID_W + GUI_GRID_X;
             y = 15 * GUI_GRID_H + GUI_GRID_Y;
             w = 12 * GUI_GRID_W;

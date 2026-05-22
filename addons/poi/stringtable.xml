@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="POI">
+        <Key ID="STR_MISERY_POI_Component">
+            <English>POI</English>
+            <Czech>POI</Czech>
+            <French>POI</French>
+            <Spanish>Punto de interés</Spanish>
+            <Italian>Punto di interesse</Italian>
+            <Polish>Punkt zainteresowania</Polish>
+            <Portuguese>Ponto de Interesse</Portuguese>
+            <Russian>Точка интереса</Russian>
+            <German>POI</German>
+            <Korean>관심 지점</Korean>
+            <Japanese>興味深い場所</Japanese>
+            <Chinese>興趣點 / 地標</Chinese>
+            <Chinesesimp>兴趣点 / 地标</Chinesesimp>
+            <Turkish>İlgi Noktası</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_POI_DeletionCheckDistance">
+            <English>Deletion check distance</English>
+            <Czech>Vzdálenost pro kontrolu smazání</Czech>
+            <French>Distance de vérification de suppression</French>
+            <Spanish>Distancia de verificación de eliminación</Spanish>
+            <Italian>Distanza controllo eliminazione</Italian>
+            <Polish>Dystans sprawdzania usuwania</Polish>
+            <Portuguese>Distância de verificação de eliminação</Portuguese>
+            <Russian>Дистанция проверки удаления</Russian>
+            <German>Entfernung für Löschungs-Prüfung</German>
+            <Korean>삭제 확인 거리</Korean>
+            <Japanese>削除確認距離</Japanese>
+            <Chinese>刪除檢查距離</Chinese>
+            <Chinesesimp>删除检查距离</Chinesesimp>
+            <Turkish>Silme Kontrol Mesafesi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_POI_DeletionCheckDistanceDesc">
+            <English>Distance to check for POI's being out of this range for deletion</English>
+            <Czech>Vzdálenost, při jejímž překročení jsou POI smazány</Czech>
+            <French>Distance au-delà de laquelle les POI sont supprimés</French>
+            <Spanish>Distancia para verificar si los POI están fuera de rango para su eliminación</Spanish>
+            <Italian>Distanza oltre la quale i POI vengono rimossi dal mondo</Italian>
+            <Polish>Dystans, po którego przekroczeniu punkty POI są usuwane</Polish>
+            <Portuguese>Distância para verificar se os POIs estão fora do alcance para eliminação</Portuguese>
+            <Russian>Расстояние, при выходе за пределы которого POI удаляются</Russian>
+            <German>Entfernung, bei deren Überschreitung POIs gelöscht werden</German>
+            <Korean>POI가 이 범위를 벗어날 경우 삭제 대상이 되는 거리입니다</Korean>
+            <Japanese>POIがこの範囲外になった場合に削除判定を行う距離</Japanese>
+            <Chinese>當興趣點（POI）超出此距離範圍時將被刪除清理</Chinese>
+            <Chinesesimp>当兴趣点（POI）超出此距离范围时将被删除清理</Chinesesimp>
+            <Turkish>POI'ların silinmesi için bu menzilin dışında olup olmadığını kontrol edecek mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_POI_GeneratingCheckInterval">
+            <English>Generating check interval</English>
+            <Czech>Interval kontroly generování</Czech>
+            <French>Intervalle de vérification de génération</French>
+            <Spanish>Intervalo de verificación de generación</Spanish>
+            <Italian>Intervallo controllo generazione</Italian>
+            <Polish>Interwał sprawdzania generowania</Polish>
+            <Portuguese>Intervalo de verificação de geração</Portuguese>
+            <Russian>Интервал проверки генерации</Russian>
+            <German>Intervall für Generierungsprüfungen</German>
+            <Korean>생성 확인 주기</Korean>
+            <Japanese>生成確認インターバル</Japanese>
+            <Chinese>生成檢查間隔</Chinese>
+            <Chinesesimp>生成检查间隔</Chinesesimp>
+            <Turkish>Oluşturma Kontrol Sıqlığı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_POI_GeneratingCheckIntervalDesc">
+            <English>Interval at which the system runs it's checks</English>
+            <Czech>Interval, ve kterém systém provádí své kontroly</Czech>
+            <French>Intervalle auquel le système exécute ses vérifications</French>
+            <Spanish>Intervalo de tiempo en el que el sistema ejecuta sus comprobaciones</Spanish>
+            <Italian>Intervallo con cui il sistema esegue i suoi controlli di routine</Italian>
+            <Polish>Częstotliwość, z jaką system uruchamia procedury sprawdzające</Polish>
+            <Portuguese>Intervalo no qual o sistema executa as suas verificações</Portuguese>
+            <Russian>Интервал времени, с которым система запускает свои проверки</Russian>
+            <German>Intervall, in dem das System seine Überprüfungen durchführt</German>
+            <Korean>시스템이 스폰 및 관리 체크를 실행하는 시간 간격입니다</Korean>
+            <Japanese>システムが配置チェックを実行する時間間隔</Japanese>
+            <Chinese>系統執行檢查與維護循環的時間間隔</Chinese>
+            <Chinesesimp>系统执行检查与维护循环的时间间隔</Chinesesimp>
+            <Turkish>Sistemin kendi kontrollerini gerçekleştirme sıklığı aralığı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_POI_MaximumAllowed">
+            <English>Maximum allowed</English>
+            <Czech>Maximum povoleno</Czech>
+            <French>Maximum autorisé</French>
+            <Spanish>Máximo permitido</Spanish>
+            <Italian>Massimo consentito</Italian>
+            <Polish>Maksymalna dozwolona ilość</Polish>
+            <Portuguese>Máximo permitido</Portuguese>
+            <Russian>Максимум разрешено</Russian>
+            <German>Maximal erlaubt</German>
+            <Korean>최대 허용치</Korean>
+            <Japanese>最大許容数</Japanese>
+            <Chinese>最大允許數量</Chinese>
+            <Chinesesimp>最大允许数量</Chinesesimp>
+            <Turkish>İzin Verilen Maksimum</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_POI_MaximumAllowedDesc">
+            <English>Maximum POI's allowed to be active on the map at any given time</English>
+            <Czech>Maximální počet POI, které mohou být v jednu chvíli aktivní na mapě</Czech>
+            <French>Nombre maximum de POI pouvant être actifs simultanément sur la carte</French>
+            <Spanish>Número máximo de POI permitido que pueden estar activos en el mapa a la vez</Spanish>
+            <Italian>Numero massimo di POI che possono essere attivi contemporaneamente sulla mappa</Italian>
+            <Polish>Maksymalna liczba punktów POI, które mogą być aktywne na mapie w tym samym czasie</Polish>
+            <Portuguese>Número máximo de POIs autorizados a estarem ativos no mapa em simultâneo</Portuguese>
+            <Russian>Максимальное количество POI, которые могут одновременно быть активны на карте</Russian>
+            <German>Maximale Anzahl von POIs, die gleichzeitig auf der Karte aktiv sein dürfen</German>
+            <Korean>지도에 동시에 활성화될 수 있는 POI의 최대 개수입니다</Korean>
+            <Japanese>マップ上に同時に存在できるPOIの最大数</Japanese>
+            <Chinese>地圖上任何時候允許同時處於活動狀態的興趣點（POI）最大上限</Chinese>
+            <Chinesesimp>地图上任何时候允许同时处于活动状态的兴趣点（POI）最大上限</Chinesesimp>
+            <Turkish>Haritada herhangi bir zamanda aktif olmasına izin verilen maksimum POI sayısı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_POI_RandomSpawnDistance">
+            <English>Random spawn distance</English>
+            <Czech>Vzdálenost náhodného spawnu</Czech>
+            <French>Distance de spawn aléatoire</French>
+            <Spanish>Distancia de aparición aleatoria</Spanish>
+            <Italian>Distanza spawn casuale</Italian>
+            <Polish>Dystans losowego spawnu</Polish>
+            <Portuguese>Distância de surgimento aleatório</Portuguese>
+            <Russian>Дистанция случайного спавна</Russian>
+            <German>Entfernung für zufälligen Spawn</German>
+            <Korean>무작위 스폰 거리</Korean>
+            <Japanese>ランダムスポーン距離</Japanese>
+            <Chinese>隨機生成距離</Chinese>
+            <Chinesesimp>随机生成距离</Chinesesimp>
+            <Turkish>Rastgele Doğma Mesafesi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_POI_RandomSpawnDistanceDesc">
+            <English>Distance to spawn randomly generated POI's with no set spawn position</English>
+            <Czech>Vzdálenost pro spawn náhodně generovaných POI bez pevné pozice</Czech>
+            <French>Distance pour faire apparaître des POI générés de manière aléatoire sans position fixe</French>
+            <Spanish>Distancia para generar POI de forma aleatoria sin una posición fija preestablecida</Spanish>
+            <Italian>Distanza per generare POI casuali che non hanno una posizione fissa prestabilita</Italian>
+            <Polish>Dystans do spawnowania losowo generowanych punktów POI bez ustalonej pozycji</Polish>
+            <Portuguese>Distância para fazer surgir POIs gerados aleatoriamente sem posição fixa</Portuguese>
+            <Russian>Расстояние для спавна случайно создаваемых POI, не имеющих фиксированной позиции</Russian>
+            <German>Entfernung für das Spawnen von zufällig generierten POIs ohne festen Spawn-Punkt</German>
+            <Korean>지정된 위치가 없는 무작위 생성 POI를 스폰할 거리입니다</Korean>
+            <Japanese>固定の配置位置を持たない、ランダム生成されるPOIをスポーンさせる距离</Japanese>
+            <Chinese>在指定距離內隨機生成沒有預設固定坐標的興趣點（POI）</Chinese>
+            <Chinesesimp>在指定距离内随机生成没有预设固定坐标的兴趣点（POI）</Chinesesimp>
+            <Turkish>Belirli bir doğma noktası olmayan, rastgele oluşturulan POI'ların doğacağı mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_POI_ShorelineCheckInterval">
+            <English>Shoreline check interval</English>
+            <Czech>Interval kontroly pobřeží</Czech>
+            <French>Intervalle de vérification du rivage</French>
+            <Spanish>Intervalo de verificación de la costa</Spanish>
+            <Italian>Intervallo controllo costa</Italian>
+            <Polish>Interwał sprawdzania linii brzegowej</Polish>
+            <Portuguese>Intervalo de verificação da costa</Portuguese>
+            <Russian>Интервал проверки побережья</Russian>
+            <German>Intervall für Küstenlinienprüfung</German>
+            <Korean>해안선 확인 주기</Korean>
+            <Japanese>海岸線確認インターバル</Japanese>
+            <Chinese>海岸線檢查間隔</Chinese>
+            <Chinesesimp>海岸线检查间隔</Chinesesimp>
+            <Turkish>Sahil Şeridi Kontrol Sıklığı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_POI_ShorelineCheckIntervalDesc">
+            <English>Interval at which the system runs it's checks for shoreline POI's</English>
+            <Czech>Interval, ve kterém systém kontroluje POI na pobřeží</Czech>
+            <French>Intervalle auquel le système vérifie les POI côtiers</French>
+            <Spanish>Intervalo en el que el sistema comprueba los POI de la línea de costa</Spanish>
+            <Italian>Intervallo con cui il sistema controlla i POI posizionati sulla costa</Italian>
+            <Polish>Częstotliwość, z jaką system sprawdza nadbrzeżne punkty POI</Polish>
+            <Portuguese>Intervalo no qual o sistema verifica os POIs da costa</Portuguese>
+            <Russian>Интервал времени, с которым система проверяет прибрежные POI</Russian>
+            <German>Intervall, in dem das System Überprüfungen für Küsten-POIs durchführt</German>
+            <Korean>시스템이 해안선 주변의 POI를 체크하는 시간 간격입니다</Korean>
+            <Japanese>海岸線周辺のPOIに対してシステムがチェックを実行する時間間隔</Japanese>
+            <Chinese>系統針對海岸線景觀/興趣點（POI）執行檢查的時間間隔</Chinese>
+            <Chinesesimp>系统针对海岸线景观/兴趣点（POI）执行检查的时间间隔</Chinesesimp>
+            <Turkish>Sistemin sahil şeridi POI'ları için kontrolleri çalıştırma sıklığı aralığı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_POI_SpawnCheckDistance">
+            <English>Spawn check distance</English>
+            <Czech>Vzdálenost pro kontrolu spawnu</Czech>
+            <French>Distance de vérification du spawn</French>
+            <Spanish>Distancia de verificación de aparición</Spanish>
+            <Italian>Distanza controllo spawn</Italian>
+            <Polish>Dystans sprawdzania spawnu</Polish>
+            <Portuguese>Distância de verificação de surgimento</Portuguese>
+            <Russian>Дистанция проверки спавна</Russian>
+            <German>Entfernung für Spawn-Prüfung</German>
+            <Korean>스폰 확인 거리</Korean>
+            <Japanese>スポーン確認距離</Japanese>
+            <Chinese>生成檢查距離</Chinese>
+            <Chinesesimp>生成检查距离</Chinesesimp>
+            <Turkish>Doğma Kontrol Mesafesi</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_POI_SpawnCheckDistanceDesc">
+            <English>Distance to check for POI's to be able to spawn</English>
+            <Czech>Vzdálenost, ve které se kontrolují POI, aby se mohly spawnout</Czech>
+            <French>Distance à laquelle le système vérifie si les POI peuvent apparaître</French>
+            <Spanish>Distancia para verificar si los puntos de interés (POI) pueden aparecer</Spanish>
+            <Italian>Distanza per verificare la possibilità di spawn dei Punti di Interesse (POI)</Italian>
+            <Polish>Dystans, w jakim system sprawdza możliwość zespawnowania punktów POI</Polish>
+            <Portuguese>Distância para verificar se os POIs podem surgir</Portuguese>
+            <Russian>Расстояние, на котором проверяется возможность спавна точек интереса (POI)</Russian>
+            <German>Entfernung, in der geprüft wird, ob POIs spawnen können</German>
+            <Korean>POI가 스폰할 수 있는지 확인하는 거리입니다</Korean>
+            <Japanese>POIがスポーン可能か判定する距離</Japanese>
+            <Chinese>檢查興趣點（POI）是否符合生成條件的距離範圍</Chinese>
+            <Chinesesimp>检查兴趣点（POI）是否符合生成条件的距离范围</Chinesesimp>
+            <Turkish>POI'ların doğabilmesi için kontrol edilecek mesafe</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_POI_WrecksSmoke">
+            <English>Wrecks smoke</English>
+            <Czech>Dým z vraků</Czech>
+            <French>Fumée des épaves</French>
+            <Spanish>Humo en restos</Spanish>
+            <Italian>Fumo dai relitti</Italian>
+            <Polish>Dym z wraków</Polish>
+            <Portuguese>Fumo de destroços</Portuguese>
+            <Russian>Дым из обломков</Russian>
+            <German>Wrackrauch</German>
+            <Korean>잔해 연기 효과</Korean>
+            <Japanese>残骸の煙効果</Japanese>
+            <Chinese>殘骸冒煙</Chinese>
+            <Chinesesimp>残骸冒烟</Chinesesimp>
+            <Turkish>Enkaz Dumanı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_POI_WrecksSmokeDesc">
+            <English>Wrecks in POI's will smoke, making them more easier to spot from greater distances</English>
+            <Czech>Vraky v POI budou dýmat, což usnadní jejich zpozorování na větší vzdálenost</Czech>
+            <French>Les épaves dans les POI émettront de la fumée, ce qui les rendra plus faciles à repérer de loin</French>
+            <Spanish>Los restos de vehículos en los POI echarán humo, haciéndolos más fáciles de detectar desde lejos</Spanish>
+            <Italian>I relitti all'interno dei POI emetteranno fumo, rendendoli più facili da avvistare da grandi distanze</Italian>
+            <Polish>Wraki w punktach POI będą dymić, co ułatwi ich dostrzeżenie z większych odległości</Polish>
+            <Portuguese>Os destroços nos POIs vão deitar fumo, tornando-os mais fáceis de avistar a longas distâncias</Portuguese>
+            <Russian>Обломки техники в POI будут дымиться, что сделает их более заметными с большого расстояния</Russian>
+            <German>Wracks in POIs rauchen, wodurch sie aus größerer Entfernung leichter zu entdecken sind</German>
+            <Korean>POI 내부의 차량 잔해에서 연기가 발생하여 먼 거리에서도 쉽게 식별할 수 있게 합니다</Korean>
+            <Japanese>POI内の残骸から煙を発生させ、遠距離からでも視認しやすくします</Japanese>
+            <Chinese>興趣點（POI）中的載具殘骸將會釋放濃煙，使其更容易在遠處被玩家察覺</Chinese>
+            <Chinesesimp>兴趣点（POI）中的载具残骸将会释放浓烟，使其更容易在远处被玩家察觉</Chinesesimp>
+            <Turkish>POI'lardaki enkazlar duman çıkararak uzak mesafelerden fark edilmelerini kolaylaştırır</Turkish>
+        </Key>
+    </Package>
+</Project>

@@ -75,7 +75,7 @@
             };
         } forEach _items;
 
-        _buySellButton ctrlSetText "Buy";
+        _buySellButton ctrlSetText localize LSTRING(Buy);
         [982390, [1603], false] call EFUNC(common,displayShowControls);
         [982390, [2800], true] call EFUNC(common,displayShowControls);
         _buySellButton ctrlEnable (lbSize _list > 0);
@@ -105,7 +105,7 @@
         };
     } forEach _items;
 
-    _buySellButton ctrlSetText "Sell";
+    _buySellButton ctrlSetText localize LSTRING(Sell);
     [982390, [1603], true] call EFUNC(common,displayShowControls);
     [982390, [2800], false] call EFUNC(common,displayShowControls);
     if (lbSize _list isEqualTo 0) then {
@@ -113,7 +113,7 @@
         _giftButton ctrlEnable false;
         _iconCtrl ctrlSetText "";
         _iconTxt ctrlSetText "";
-        _infoBox ctrlSetText "You have nothing to sell...";
+        _infoBox ctrlSetText localize LSTRING(NothingToSell);
     } else {
         _buySellButton ctrlEnable true;
         _giftButton ctrlEnable true;

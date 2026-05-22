@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Hydrology">
+        <Key ID="STR_MISERY_Hydrology_Action">
+            <English>Collect Water</English>
+            <Czech>Sbírat vodu</Czech>
+            <French>Recueillir de l'eau</French>
+            <Spanish>Recoger agua</Spanish>
+            <Italian>Raccogliere acqua</Italian>
+            <Polish>Zbieraj wodę</Polish>
+            <Portuguese>Colete água</Portuguese>
+            <Russian>Собирать воду</Russian>
+            <German>Wasser sammeln</German>
+            <Korean>물 모으기</Korean>
+            <Japanese>水を集める</Japanese>
+            <Chinese>收集水</Chinese>
+            <Chinesesimp>收集水</Chinesesimp>
+            <Turkish>Su topla</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Hydrology_ContainersLabel">
+            <English>Containers:</English>
+            <Czech>Kontejnery:</Czech>
+            <French>Conteneurs :</French>
+            <Spanish>Contenedores:</Spanish>
+            <Italian>Contenitori:</Italian>
+            <Polish>Kontenery:</Polish>
+            <Portuguese>Contentores:</Portuguese>
+            <Russian>Емкости:</Russian>
+            <German>Behälter:</German>
+            <Korean>용기 목록:</Korean>
+            <Japanese>コンテナ:</Japanese>
+            <Chinese>容器：</Chinese>
+            <Chinesesimp>容器：</Chinesesimp>
+            <Turkish>Kaplar:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Hydrology_DrinkFromSource">
+            <English>Drink from source</English>
+            <Czech>Pití ze zdroje</Czech>
+            <French>Boire à la source</French>
+            <Spanish>Beber de la fuente</Spanish>
+            <Italian>Bere alla fonte</Italian>
+            <Polish>Pij ze źródła</Polish>
+            <Portuguese>Beba da fonte</Portuguese>
+            <Russian>Напиток из источника</Russian>
+            <German>Trinken von der Quelle</German>
+            <Korean>소스에서 마시기</Korean>
+            <Japanese>ソースから飲む</Japanese>
+            <Chinese>從源頭飲水</Chinese>
+            <Chinesesimp>从源头饮水</Chinesesimp>
+            <Turkish>Kaynağından iç</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Hydrology_FillAction">
+            <English>Fill container</English>
+            <Czech>Naplnit kontejner</Czech>
+            <French>Remplir le conteneur</French>
+            <Spanish>Llenar contenedor</Spanish>
+            <Italian>Riempi contenitore</Italian>
+            <Polish>Napełnij kontener</Polish>
+            <Portuguese>Encher contentor</Portuguese>
+            <Russian>Заполнить емкость</Russian>
+            <German>Behälter befüllen</German>
+            <Korean>용기 채우기</Korean>
+            <Japanese>コンテナを充填する</Japanese>
+            <Chinese>填充容器</Chinese>
+            <Chinesesimp>填充容器</Chinesesimp>
+            <Turkish>Kabı doldur</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Hydrology_FilledSuccess">
+            <English>You filled: %1...</English>
+            <Czech>Naplnili jste: %1...</Czech>
+            <French>Vous avez rempli : %1...</French>
+            <Spanish>Has llenado: %1...</Spanish>
+            <Italian>Hai riempito: %1...</Italian>
+            <Polish>Napełniono: %1...</Polish>
+            <Portuguese>Encheu: %1...</Portuguese>
+            <Russian>Вы заполнили: %1...</Russian>
+            <German>Du hast befüllt: %1...</German>
+            <Korean>다음을 채웠습니다: %1...</Korean>
+            <Japanese>充填完了: %1...</Japanese>
+            <Chinese>您填充了：%1...</Chinese>
+            <Chinesesimp>您填充了：%1...</Chinesesimp>
+            <Turkish>Şunu doldurdunuz: %1...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Hydrology_FillingProgress">
+            <English>Filling Container... %1%2 complete</English>
+            <Czech>Plnění kontejneru... %1%2 dokončeno</Czech>
+            <French>Remplissage du conteneur... %1%2 effectué</French>
+            <Spanish>Llenando contenedor... %1%2 completado</Spanish>
+            <Italian>Riempimento del contenitore... %1%2 completato</Italian>
+            <Polish>Napełnianie kontenera... %1%2 ukończono</Polish>
+            <Portuguese>A encher o contentor... %1%2 concluído</Portuguese>
+            <Russian>Заполнение емкости... %1%2 завершено</Russian>
+            <German>Behälter wird befüllt... %1%2 abgeschlossen</German>
+            <Korean>용기 채우는 중... %1%2 완료됨</Korean>
+            <Japanese>コンテナに充填中... %1%2 完了</Japanese>
+            <Chinese>正在 填充容器... %1%2 完成</Chinese>
+            <Chinesesimp>正在填充容器... %1%2 完成</Chinesesimp>
+            <Turkish>Kap Dolduruluyor... %1%2 tamamlandı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Hydrology_Interrupted">
+            <English>Filling interrupted...</English>
+            <Czech>Plnění přerušeno...</Czech>
+            <French>Remplissage interrompu...</French>
+            <Spanish>Llenado interrumpido...</Spanish>
+            <Italian>Riempimento interrotto...</Italian>
+            <Polish>Napełnianie przerwane...</Polish>
+            <Portuguese>Enchimento interrompido...</Portuguese>
+            <Russian>Заполнение прервано...</Russian>
+            <German>Befüllen unterbrochen...</German>
+            <Korean>채우기가 중단되었습니다...</Korean>
+            <Japanese>充填が中断されました...</Japanese>
+            <Chinese>填充中斷...</Chinese>
+            <Chinesesimp>填充中断...</Chinesesimp>
+            <Turkish>Doldurma kesintiye uğradı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Hydrology_MissingContainer">
+            <English>You don’t have that container...</English>
+            <Czech>Tento kontejner nemáte...</Czech>
+            <French>Vous n'avez pas ce conteneur...</French>
+            <Spanish>No tienes ese contenedor...</Spanish>
+            <Italian>Non hai quel contenitore...</Italian>
+            <Polish>Nie masz tego kontenera...</Polish>
+            <Portuguese>Não tem esse contentor...</Portuguese>
+            <Russian>У вас нет этой емкости...</Russian>
+            <German>Du hast diesen Behälter nicht...</German>
+            <Korean>해당 용기를 가지고 있지 않습니다...</Korean>
+            <Japanese>そのコンテナを持っていません...</Japanese>
+            <Chinese>您沒有那個容器...</Chinese>
+            <Chinesesimp>您没有那个容器...</Chinesesimp>
+            <Turkish>Bu kaba sahip değilsiniz...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Hydrology_NoMatchingContainer">
+            <English>No matching container found.</English>
+            <Czech>Nenalezen žádný odpovídající kontejner.</Czech>
+            <French>Aucun conteneur correspondant trouvé.</French>
+            <Spanish>No se encontró ningún contenedor que coincida.</Spanish>
+            <Italian>Nessun contenitore corrispondente trovato.</Italian>
+            <Polish>Nie znaleziono pasującego kontenera.</Polish>
+            <Portuguese>Nenhum contentor correspondente encontrado.</Portuguese>
+            <Russian>Подходящая емкость не найдена.</Russian>
+            <German>Kein passender Behälter gefunden.</German>
+            <Korean>일치하는 용기를 찾을 수 없습니다.</Korean>
+            <Japanese>일치하는 컨테이너를 찾을 수 없습니다.</Japanese>
+            <Chinese>找不到匹配的容器。</Chinese>
+            <Chinesesimp>找不到匹配的容器。</Chinesesimp>
+            <Turkish>Eşleşen kap bulunamadı.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Hydrology_Prompt">
+            <English>What container would you like to fill?</English>
+            <Czech>Který kontejner chcete naplnit?</Czech>
+            <French>Quel conteneur souhaitez-vous remplir ?</French>
+            <Spanish>¿Qué contenedor te gustaría llenar?</Spanish>
+            <Italian>Quale contenitore vorresti riempire?</Italian>
+            <Polish>Który kontener chcesz napełnić?</Polish>
+            <Portuguese>Que contentor gostaria de encher?</Portuguese>
+            <Russian>Какую емкость вы хотите заполнить?</Russian>
+            <German>Welchen Behälter möchtest du befüllen?</German>
+            <Korean>어떤 용기를 채우시겠습니까?</Korean>
+            <Japanese>どのコンテナを充填しますか？</Japanese>
+            <Chinese>您想填充哪個容器？</Chinese>
+            <Chinesesimp>您想填充哪个容器？</Chinesesimp>
+            <Turkish>Hangi kabı doldurmak istersiniz?</Turkish>
+        </Key>
+    </Package>
+</Project>

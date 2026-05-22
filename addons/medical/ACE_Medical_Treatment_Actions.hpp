@@ -2,8 +2,8 @@ class ACE_Medical_Treatment_Actions {
     class Morphine;
 
     class CLASS(cocaine): Morphine {
-        displayName = "Snort Cocaine";
-        displayNameProgress = "Snorting cocaine...";
+        displayName = CSTRING(Cocaine);
+        displayNameProgress = CSTRING(CocaineProgress);
         icon = "z\ace\addons\medical_gui\ui\painkillers.paa";
         medicRequired = 0;
         allowedSelections[] = {"Head"};
@@ -23,8 +23,8 @@ class ACE_Medical_Treatment_Actions {
     };
 
     class CLASS(antibiotic): Morphine {
-        displayName = "Administer Antibiotics";
-        displayNameProgress = "Administering antibiotics...";
+        displayName = CSTRING(Antibiotic);
+        displayNameProgress = CSTRING(AntibioticProgress);
         icon = "z\ace\addons\medical_gui\ui\painkillers.paa";
         medicRequired = 0;
         allowedSelections[] = {"Head"};
@@ -46,8 +46,8 @@ class ACE_Medical_Treatment_Actions {
     };
 
     class CLASS(antidote): Morphine {
-        displayName = "Inject Antidote";
-        displayNameProgress = "Injecting antidote...";
+        displayName = CSTRING(Antidote);
+        displayNameProgress = CSTRING(AntidoteProgress);
         icon = "z\ace\addons\medical_gui\ui\auto_injector.paa";
         medicRequired = 0;
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
@@ -67,8 +67,8 @@ class ACE_Medical_Treatment_Actions {
     };
 
     class CLASS(antiparasitic): Morphine {
-        displayName = "Administer Antiparasitics";
-        displayNameProgress = "Administering antiparasitics...";
+        displayName = CSTRING(Antiparasitic);
+        displayNameProgress = CSTRING(AntiparasiticProgress);
         icon = "z\ace\addons\medical_gui\ui\painkillers.paa";
         medicRequired = 0;
         allowedSelections[] = {"Head"};
@@ -90,8 +90,8 @@ class ACE_Medical_Treatment_Actions {
     };
 
     class CLASS(caffetin): Morphine {
-        displayName = "Administer Caffetin";
-        displayNameProgress = "Administering caffetin...";
+        displayName = CSTRING(Caffetin);
+        displayNameProgress = CSTRING(CaffetinProgress);
         icon = "z\ace\addons\medical_gui\ui\painkillers.paa";
         medicRequired = 0;
         allowedSelections[] = {"Head"};
@@ -113,8 +113,8 @@ class ACE_Medical_Treatment_Actions {
     };
 
     class CLASS(caffeine): Morphine {
-        displayName = "Administer Caffeine tablets";
-        displayNameProgress = "Administering caffeine...";
+        displayName = CSTRING(Caffeine);
+        displayNameProgress = CSTRING(CaffeineProgress);
         icon = "z\ace\addons\medical_gui\ui\painkillers.paa";
         medicRequired = 0;
         allowedSelections[] = {"Head"};
@@ -136,8 +136,8 @@ class ACE_Medical_Treatment_Actions {
     };
 
     class CLASS(charcoalTablets): Morphine {
-        displayName = "Administer Charcoal tablets";
-        displayNameProgress = "Administering charcoal...";
+        displayName = CSTRING(CharcoalTablets);
+        displayNameProgress = CSTRING(CharcoalTabletsProgress);
         icon = "z\ace\addons\medical_gui\ui\painkillers.paa";
         medicRequired = 0;
         allowedSelections[] = {"Head"};
@@ -159,8 +159,8 @@ class ACE_Medical_Treatment_Actions {
     };
 
     class CLASS(clozapine): Morphine {
-        displayName = "Inject Clozapine";
-        displayNameProgress = "Injecting clozapine...";
+        displayName = CSTRING(Clozapine);
+        displayNameProgress = CSTRING(ClozapineProgress);
         icon = "z\ace\addons\medical_gui\ui\auto_injector.paa";
         medicRequired = 0;
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
@@ -180,8 +180,8 @@ class ACE_Medical_Treatment_Actions {
     };
 
     class CLASS(clozapineBox): Morphine {
-        displayName = "Administer Clozapine";
-        displayNameProgress = "Administering clozapine...";
+        displayName = CSTRING(ClozapineBox);
+        displayNameProgress = CSTRING(ClozapineBoxProgress);
         icon = "z\ace\addons\medical_gui\ui\painkillers.paa";
         medicRequired = 0;
         allowedSelections[] = {"Head"};
@@ -202,8 +202,8 @@ class ACE_Medical_Treatment_Actions {
     };
 
     class CLASS(deconKit): Morphine {
-        displayName = "Use Decontamination kit";
-        displayNameProgress = "Using Decontamination kit...";
+        displayName = CSTRING(DeconKit);
+        displayNameProgress = CSTRING(DeconKitProgress);
         icon = "z\ace\addons\medical_gui\ui\painkillers.paa";
         medicRequired = 0;
         allowedSelections[] = {"Body"};
@@ -224,8 +224,8 @@ class ACE_Medical_Treatment_Actions {
     };
 
     class CLASS(electrolyte): Morphine {
-        displayName = "Inject Electrolyte solution";
-        displayNameProgress = "Injecting solution...";
+        displayName = CSTRING(Electrolyte);
+        displayNameProgress = CSTRING(ElectrolyteProgress);
         icon = "z\ace\addons\medical_gui\ui\auto_injector.paa";
         medicRequired = 0;
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
@@ -245,8 +245,8 @@ class ACE_Medical_Treatment_Actions {
     };
 
     class CLASS(glucose): Morphine {
-        displayName = "Inject Glucose";
-        displayNameProgress = "Injecting glucose...";
+        displayName = CSTRING(Glucose);
+        displayNameProgress = CSTRING(GlucoseProgress);
         icon = "z\ace\addons\medical_gui\ui\auto_injector.paa";
         medicRequired = 0;
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
@@ -266,8 +266,8 @@ class ACE_Medical_Treatment_Actions {
     };
 
     class CLASS(painkillers): Morphine {
-        displayName = "Administer Pain pill";
-        displayNameProgress = "Administering pain pill...";
+        displayName = CSTRING(Painkillers);
+        displayNameProgress = CSTRING(PainkillersProgress);
         icon = "z\ace\addons\medical_gui\ui\painkillers.paa";
         medicRequired = 0;
         allowedSelections[] = {"Head"};
@@ -288,8 +288,8 @@ class ACE_Medical_Treatment_Actions {
     };
 
     class CLASS(potassiumIodate): Morphine {
-        displayName = "Administer Potassium iodate";
-        displayNameProgress = "Administering potassium iodate...";
+        displayName = CSTRING(PotassiumIodate);
+        displayNameProgress = CSTRING(PotassiumIodateProgress);
         icon = "z\ace\addons\medical_gui\ui\painkillers.paa";
         medicRequired = 0;
         allowedSelections[] = {"Head"};
@@ -310,8 +310,8 @@ class ACE_Medical_Treatment_Actions {
     };
 
     class CLASS(randomMedication): Morphine {
-        displayName = "Administer Random pharmaceuticals";
-        displayNameProgress = "Administering random pharmaceuticals...";
+        displayName = CSTRING(RandomMedication);
+        displayNameProgress = CSTRING(RandomMedicationProgress);
         icon = "z\ace\addons\medical_gui\ui\painkillers.paa";
         medicRequired = 0;
         allowedSelections[] = {"Head"};
@@ -332,8 +332,8 @@ class ACE_Medical_Treatment_Actions {
     };
 
     class CLASS(sleepingPills): Morphine {
-        displayName = "Administer Sleeping pill";
-        displayNameProgress = "Administering sleeping pill...";
+        displayName = CSTRING(SleepingPills);
+        displayNameProgress = CSTRING(SleepingPillsProgress);
         icon = "z\ace\addons\medical_gui\ui\painkillers.paa";
         medicRequired = 0;
         allowedSelections[] = {"Head"};
@@ -354,8 +354,8 @@ class ACE_Medical_Treatment_Actions {
     };
 
     class CLASS(thrombomodulin): Morphine {
-        displayName = "Inject Thrombomodulin";
-        displayNameProgress = "Injecting thrombomodulin...";
+        displayName = CSTRING(Thrombomodulin);
+        displayNameProgress = CSTRING(ThrombomodulinProgress);
         icon = "z\ace\addons\medical_gui\ui\auto_injector.paa";
         medicRequired = 0;
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
@@ -375,8 +375,8 @@ class ACE_Medical_Treatment_Actions {
     };
 
     class CLASS(thrombomodulin_Stimpack): Morphine {
-        displayName = "Inject Thrombomodulin Stimpack";
-        displayNameProgress = "Injecting thrombomodulin stimpack...";
+        displayName = CSTRING(ThrombomodulinStim);
+        displayNameProgress = CSTRING(ThrombomodulinStimProgress);
         icon = "z\ace\addons\medical_gui\ui\auto_injector.paa";
         medicRequired = 0;
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};

@@ -46,19 +46,19 @@ private _refuelInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key"];
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QCLASS(processRefuel), false];
-        [parseText "<t font='PuristaMedium' size='1'>Refueling interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+        [QEGVAR(common,tileText), localize ECSTRING(maintenance,RefuelingInterrupted)] call CBA_fnc_localEvent;
     };
 }];
 
 if (_funds < _fuelCost) exitWith {
-    ctrlSetText [1001, "You cannot afford this!"];
+    ctrlSetText [1001, localize ECSTRING(common,TooExpensive)];
     [982384, [1600, 1601], true] call EFUNC(common,displayShowControls);
     player setVariable [QCLASS(processRefuel), nil];
     _dialog displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
 };
 
 if (fuel _nearestVehicle >= 1) exitWith {
-    private _displayFull = format ["%1 fuel tank is full...", _displayName];
+    private _displayFull = format [localize ECSTRING(maintenance,FuelTankFull), _displayName];
     ctrlSetText [1001, _displayFull];
     [982384, [1600, 1601], true] call EFUNC(common,displayShowControls);
     player setVariable [QCLASS(processRefuel), nil];
@@ -84,7 +84,7 @@ private _fundsToDeduct = _fuelCost;
     if (_funds < _fundsToDeduct) exitWith {
         player setVariable [QCLASS(processRefuel), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
-        ctrlSetText [1001, "You cannot afford this!"];
+        ctrlSetText [1001, localize ECSTRING(common,TooExpensive)];
         [982384, [1600, 1601], true] call EFUNC(common,displayShowControls);
         _handle call CBA_fnc_removePerFrameHandler;
     };
@@ -95,7 +95,7 @@ private _fundsToDeduct = _fuelCost;
     _nearestVehicle setFuel (_currentFuel + _fuelToAdd);
 
     private _displayedText = format [
-        "Refueling...%1%2%1Tank level: %3%4%1 Funds:%1%5%1%6",
+        localize LSTRING(Progress),
         endl,
         _displayName,
         (_currentFuel + _fuelToAdd) * 100 toFixed 2,
@@ -110,7 +110,7 @@ private _fundsToDeduct = _fuelCost;
     if (_currentFuel + _fuelToAdd >= 1) exitWith {
         player setVariable [QCLASS(processRefuel), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
-        private _displayFull = format ["%1 fuel tank is full...", _displayName];
+        private _displayFull = format [localize ECSTRING(maintenance,FuelTankFull), _displayName];
         ctrlSetText [1001, _displayFull];
         [982384, [1600, 1601], true] call EFUNC(common,displayShowControls);
         _handle call CBA_fnc_removePerFrameHandler;

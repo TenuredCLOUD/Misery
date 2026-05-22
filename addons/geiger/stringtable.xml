@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Geiger">
+        <Key ID="STR_MISERY_Geiger_AddedBattery">
+            <English>You add a lithium battery to your geiger</English>
+            <Czech>Vložili jste lithiovou baterii do svého Geigerova počítače</Czech>
+            <French>Vous ajoutez une pile au lithium à votre compteur Geiger</French>
+            <Spanish>Has añadido una batería de litio a tu contador Geiger</Spanish>
+            <Italian>Hai aggiunto una batteria al litio al tuo contatore Geiger</Italian>
+            <Polish>Dodajesz baterię litową do swojego licznika Geigera</Polish>
+            <Portuguese>Adicionou uma bateria de lítio ao seu contador Geiger</Portuguese>
+            <Russian>Вы вставили литиевую батарейку в свой счетчик Гейгера</Russian>
+            <German>Du hast eine Lithium-Batterie in deinen Geigerzähler eingesetzt</German>
+            <Korean>가이거 계수기에 리튬 배터리를 추가했습니다</Korean>
+            <Japanese>ガイガーカウンターにリウム電池を1個入れました</Japanese>
+            <Chinese>您將 1 個 鋰電池放入了您的蓋革計數器</Chinese>
+            <Chinesesimp>您将 1 个 锂电池放入了您的盖革计数器</Chinesesimp>
+            <Turkish>Geiger sayacınıza lityum pil eklediniz</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Geiger_BatteryAction">
+            <English>Add lithium battery to geiger</English>
+            <Czech>Vložit lithiovou baterii do Geigerova počítače</Czech>
+            <French>Ajouter une pile au lithium au compteur Geiger</French>
+            <Spanish>Añadir batería de litio al contador Geiger</Spanish>
+            <Italian>Aggiungi batteria al litio al contatore Geiger</Italian>
+            <Polish>Dodaj baterię litową do licznika Geigera</Polish>
+            <Portuguese>Adicionar bateria de lítio ao contador Geiger</Portuguese>
+            <Russian>Вставить литиевую батарейку в счетчик Гейгера</Russian>
+            <German>Lithium-Batterie in Geigerzähler einsetzen</German>
+            <Korean>가이거 계수기에 리튬 배터리 추가</Korean>
+            <Japanese>ガイガーカウンターにリチウム電池を入れる</Japanese>
+            <Chinese>將鋰電池放入蓋革計數器</Chinese>
+            <Chinesesimp>将锂电池放入盖革计数器</Chinesesimp>
+            <Turkish>Geiger sayacına lityum pil ekleyin</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Geiger_Component">
+            <English>Geiger</English>
+            <Czech>Geiger</Czech>
+            <French>Geiger</French>
+            <Spanish>Geiger</Spanish>
+            <Italian>Geiger</Italian>
+            <Polish>Geiger</Polish>
+            <Portuguese>Geiger</Portuguese>
+            <Russian>Гейгер</Russian>
+            <German>Geiger</German>
+            <Korean>가이거</Korean>
+            <Japanese>ガイガー</Japanese>
+            <Chinese>蓋革</Chinese>
+            <Chinesesimp>盖革</Chinesesimp>
+            <Turkish>Geiger</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Geiger_MissingBatteries">
+            <English>You don't have any lithium batteries...</English>
+            <Czech>Nemáte žádné lithiové baterie...</Czech>
+            <French>Vous n'avez pas de piles au lithium...</French>
+            <Spanish>No tienes ninguna batería de litio...</Spanish>
+            <Italian>Non hai batterie al litio...</Italian>
+            <Polish>Nie masz żadnych baterii litowych...</Polish>
+            <Portuguese>Não tem nenhuma bateria de lítio...</Portuguese>
+            <Russian>У вас нет литиевых батареек...</Russian>
+            <German>Du hast keine Lithium-Batterien...</German>
+            <Korean>리튬 배터리가 없습니다...</Korean>
+            <Japanese>リチウム電池を持っていません...</Japanese>
+            <Chinese>您沒有任何鋰電池...</Chinese>
+            <Chinesesimp>您没有任何锂电池...</Chinesesimp>
+            <Turkish>Hiç lityum piliniz yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Geiger_NoBatteriesNeeded">
+            <English>You don't have a geiger that needs batteries...</English>
+            <Czech>Nemáte Geigerův počítač, který by potřeboval baterie...</Czech>
+            <French>Vous n'avez pas de compteur Geiger qui nécessite des piles...</French>
+            <Spanish>No tienes ningún contador Geiger que necesite baterías...</Spanish>
+            <Italian>Non hai un contatore Geiger que richieda batterie...</Italian>
+            <Polish>Nie masz licznika Geigera, który wymagałby baterii...</Polish>
+            <Portuguese>Não tem nenhum contador Geiger que precise de baterias...</Portuguese>
+            <Russian>У вас нет счетчика Гейгера, которому требуются батарейки...</Russian>
+            <German>Du hast keinen Geigerzähler, der Batterien benötigt...</German>
+            <Korean>배터리가 필요한 가이거 계수기가 없습니다...</Korean>
+            <Japanese>電池が必要なガイガーカウンターを持っていません...</Japanese>
+            <Chinese>您沒有需要電池的蓋革計數器...</Chinese>
+            <Chinesesimp>您没有需要电池的盖革计数器...</Chinesesimp>
+            <Turkish>Pille çalışan bir geiger sayacınız yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Geiger_Toggle">
+            <English>Toggle Geiger</English>
+            <Czech>Přepnout Geigerův počítač</Czech>
+            <French>Basculer le compteur Geiger</French>
+            <Spanish>Alternar contador Geiger</Spanish>
+            <Italian>Alterna contatore Geiger</Italian>
+            <Polish>Przełącz licznik Geigera</Polish>
+            <Portuguese>Alternar contador Geiger</Portuguese>
+            <Russian>Переключить счетчик Гейгера</Russian>
+            <German>Geigerzähler umschalten</German>
+            <Korean>가이거 계수기 토글</Korean>
+            <Japanese>ガイガーカウンター切替</Japanese>
+            <Chinese>切換蓋革計數器</Chinese>
+            <Chinesesimp>切换盖革计数器</Chinesesimp>
+            <Turkish>Geiger Sayacını Aç/Kapat</Turkish>
+        </Key>
+    </Package>
+</Project>

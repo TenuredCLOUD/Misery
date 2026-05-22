@@ -40,7 +40,7 @@
 
             private _baseAction = [
                 QGVAR(forestryTree_Base_menu),
-                "Interact",
+                localize ECSTRING(common,Interact),
                 QPATHTOEF(icons,data\trees_ca.paa),
                 {
                     params ["", "", "_params"];
@@ -52,7 +52,7 @@
 
             private _gatherWoodAction = [
                 QGVAR(forestryCollectWood_menu),
-                localize ECSTRING(common,CollectWood),
+                localize LSTRING(CollectWood),
                 "a3\ui_f\data\igui\cfg\actions\take_ca.paa",
                 {
                     params ["", "", "_params"];
@@ -66,7 +66,7 @@
 
             private _axeAction = [
                 QGVAR(forestryChopWood_menu),
-                "Chop down",
+                localize LSTRING(ChopDown),
                 QPATHTOEF(icons,data\axe_ca.paa),
                 {
                     params ["", "", "_params"];
@@ -82,7 +82,7 @@
 
             private _sawAction = [
                 QGVAR(forestrySawWood_menu),
-                "Cut down",
+                localize LSTRING(CutDown),
                 QPATHTOEF(icons,data\axe_ca.paa),
                 {
                     params ["", "", "_params"];
@@ -116,7 +116,7 @@
 
                 private _foragingMenu = [
                     QGVAR(foraging_menu),
-                    localize ECSTRING(common,Forage),
+                    localize LSTRING(Forage),
                     QPATHTOEF(icons,data\leaf_ca.paa),
                     {},
                     {true}
@@ -124,7 +124,7 @@
 
                 private _foragingWormsMenu = [
                     QGVAR(foragingWorms_menu),
-                    localize ECSTRING(common,ForageDigForWorms),
+                    localize LSTRING(ForageDigForWorms),
                     QPATHTOEF(icons,data\shovel_ca.paa),
                     {
                         [] call FUNC(digForWorms)
@@ -134,7 +134,7 @@
 
                 private _foragingTinderMenu = [
                     QGVAR(foragingTinder_menu),
-                    localize ECSTRING(common,ForageSearchForTinder),
+                    localize LSTRING(ForageSearchForTinder),
                     QPATHTOEF(icons,data\leaf_ca.paa),
                     {
                         [] call FUNC(searchForTinder)

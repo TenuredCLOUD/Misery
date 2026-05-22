@@ -3,7 +3,7 @@
 if (GVAR(enabled)) then {
     private _fishingMainMenu = [
         QGVAR(fishing_menu),
-        localize ECSTRING(common,StartFishing),
+        localize LSTRING(Action),
         QPATHTOEF(icons,data\fishing_hook_ca.paa),
         {},
         {
@@ -15,7 +15,7 @@ if (GVAR(enabled)) then {
 
     private _fishingActionMenu = [
         QGVAR(fishingAction_menu),
-        localize ECSTRING(common,StartFishingAct),
+        localize LSTRING(StartAction),
         QPATHTOEF(icons,data\fishing_hook_ca.paa),
         {
             [] call FUNC(action);
@@ -27,10 +27,10 @@ if (GVAR(enabled)) then {
 
     private _fishingRequirementsMenu = [
         QGVAR(fishingRequirements_menu),
-        localize ECSTRING(common,StartFishingRequirements),
+        localize LSTRING(Requirements),
         QPATHTOEF(icons,data\fishing_hook_ca.paa),
         {
-            [QEGVAR(common,tileText), localize ECSTRING(common,StartFishingRequirements_Listed)] call CBA_fnc_localEvent;
+            [QEGVAR(common,tileText), localize LSTRING(RequirementsListed)] call CBA_fnc_localEvent;
         },
         {true}
     ] call ACEFUNC(interact_menu,createAction);

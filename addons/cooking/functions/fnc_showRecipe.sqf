@@ -20,12 +20,12 @@ private _selectedOutputItem = lbData [1500, (lbCurSel 1500)];
 private _recipe = GVAR(cookingRecipes) select {(_x select 0) isEqualTo _selectedOutputItem} select 0;
 
 if (isNil "_recipe") exitWith {
-    ctrlSetText [1001, "No recipe selected..."];
+    ctrlSetText [1001, localize ECSTRING(common,NoRecipeSelect)];
 };
 
 private _requiredItems = _recipe select 1;
 private _cookingMethod = _recipe select 8;
-private _text = format ["Required Items for %1ing:", _cookingMethod];
+private _text = format [localize LSTRING(Required), _cookingMethod];
 
 {
     private _item = _x select 0;

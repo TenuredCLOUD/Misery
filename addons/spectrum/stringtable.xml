@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Spectrum">
+        <Key ID="STR_MISERY_Spectrum_Action">
+            <English>Add lithium batteries to spectrum device</English>
+            <Czech>Vložit lithiové baterie do zařízení Spectrum</Czech>
+            <French>Ajouter des piles au lithium à l'appareil Spectrum</French>
+            <Spanish>Añadir baterías de litio al dispositivo Spectrum</Spanish>
+            <Italian>Inserisci batterie al litio nel dispositivo Spectrum</Italian>
+            <Polish>Włóż baterie litowe do urządzenia Spectrum</Polish>
+            <Portuguese>Adicionar baterias de lítio ao dispositivo Spectrum</Portuguese>
+            <Russian>Вставить литиевые батареи в устройство Spectrum</Russian>
+            <German>Lithium-Batterien in Spectrum-Gerät einlegen</German>
+            <Korean>스펙트럼 장치에 리튬 배터리 넣기</Korean>
+            <Japanese>スペクトラムデバイスにリチウムバッテリーを装着</Japanese>
+            <Chinese>更換頻譜儀鋰電池</Chinese>
+            <Chinesesimp>更换频谱仪锂电池</Chinesesimp>
+            <Turkish>Spektrum cihazına lityum pil tak</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Spectrum_BatteriesAdded">
+            <English>You add x2 lithium batteries to your spectrum device</English>
+            <Czech>Vložil jsi 2x lithiovou baterii do svého zařízení Spectrum</Czech>
+            <French>Vous ajoutez 2 piles au lithium à votre appareil Spectrum</French>
+            <Spanish>Has añadido 2 baterías de litio a tu dispositivo Spectrum</Spanish>
+            <Italian>Hai inserito 2 batterie al litio nel dispositivo Spectrum</Italian>
+            <Polish>Włożyłeś 2 baterie litowe do urządzenia Spectrum</Polish>
+            <Portuguese>Adicionaste 2x baterias de lítio ao teu dispositivo Spectrum</Portuguese>
+            <Russian>Вы вставили 2 литиевые батареи в устройство Spectrum</Russian>
+            <German>Du legst 2x Lithium-Batterien in dein Spectrum-Gerät ein</German>
+            <Korean>스펙트럼 장치에 리튬 배터리 2개를 장착했습니다</Korean>
+            <Japanese>スペクトラムデバイスにリ튬バッテリーを2個装着しました</Japanese>
+            <Chinese>您向頻譜儀中安裝了 2 顆鋰電池</Chinese>
+            <Chinesesimp>您向频谱仪中安装了 2 颗锂电池</Chinesesimp>
+            <Turkish>Spektrum cihazınıza 2 adet lityum pil taktınız</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Spectrum_NoDevice">
+            <English>You don't have a spectrum device that needs batteries...</English>
+            <Czech>Nemáš žádné zařízení Spectrum, které by potřebovalo baterie...</Czech>
+            <French>Vous n'avez pas d'appareil Spectrum nécessitant des piles...</French>
+            <Spanish>No tienes ningún dispositivo Spectrum que necesite baterías...</Spanish>
+            <Italian>Non hai un dispositivo Spectrum che richiede batterie...</Italian>
+            <Polish>Nie posiadasz urządzenia Spectrum wymagającego baterii...</Polish>
+            <Portuguese>Não tens um dispositivo Spectrum que precise de baterias...</Portuguese>
+            <Russian>У вас нет устройства Spectrum, требующего замены батарей...</Russian>
+            <German>Du hast kein Spectrum-Gerät, das Batterien benötigt...</German>
+            <Korean>배터리가 필요한 스펙트럼 장치를 가지고 있지 않습니다...</Korean>
+            <Japanese>バッテリーを必要とするスペクトラムデバイスを持っていません...</Japanese>
+            <Chinese>您背包中沒有需要更換電池的頻譜儀...</Chinese>
+            <Chinesesimp>您背包中没有需要更换电池的频谱仪...</Chinesesimp>
+            <Turkish>Pille çalışan bir spektrum cihazınız yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Spectrum_NoLithium">
+            <English>You don't have enough lithium batteries... (2 needed)</English>
+            <Czech>Nemáš dostatek lithiových baterií... (jsou potřeba 2)</Czech>
+            <French>Vous n'avez pas assez de piles au lithium... (2 nécessaires)</French>
+            <Spanish>No tienes suficientes baterías de litio... (se necesitan 2)</Spanish>
+            <Italian>Non hai abbastanza batterie al litio... (ne servono 2)</Italian>
+            <Polish>Nie masz wystarczającej ilości baterii litowych... (wymagane 2)</Polish>
+            <Portuguese>Não tens baterias de lítio suficientes... (são necessárias 2)</Portuguese>
+            <Russian>У вас недостаточно литиевых батарей... (требуется 2 шт.)</Russian>
+            <German>Du hast nicht genug Lithium-Batterien... (2 benötigt)</German>
+            <Korean>리튬 배터리가 부족합니다... (2개 필요)</Korean>
+            <Japanese>리튬 배터리가 부족합니다... (2개 필요)</Japanese>
+            <Chinese>您的鋰電池數量不足... (需要 2 顆)</Chinese>
+            <Chinesesimp>您的锂电池数量不足... (需要 2 颗)</Chinesesimp>
+            <Turkish>Yeterli lityum piliniz yok... (2 adet gerekli)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Spectrum_RemoveAntenna">
+            <English>Remove the antenna attachment from your spectrum device before adding batteries...</English>
+            <Czech>Před vložením baterií odstraňte z anténního zařízení anténní nástavec...</Czech>
+            <French>Retirez l'antenne de votre appareil Spectrum antes d'ajouter des piles...</French>
+            <Spanish>Quita la antena de tu dispositivo Spectrum antes de ponerle las baterías...</Spanish>
+            <Italian>Rimuovi l'antenna dal dispositivo Spectrum prima di inserire le batterie...</Italian>
+            <Polish>Zdemontuj antenę z urządzenia Spectrum przed włożeniem baterii...</Polish>
+            <Portuguese>Remova a antena do seu dispositivo Spectrum antes de colocar as baterias...</Portuguese>
+            <Russian>Снимите антенну с устройства Spectrum перед установкой батарей...</Russian>
+            <German>Entferne den Antennenaufsatz von deinem Spectrum-Gerät, bevor du Batterien einlegst...</German>
+            <Korean>배터리를 넣기 전에 스펙트럼 장치에서 안테나 부품을 분리하십시오...</Korean>
+            <Japanese>バッテリーを入れる前に、スペクトラムデバイスからアンテナアタッチメントを取り外してください...</Japanese>
+            <Chinese>裝入電池前，請先拆除頻譜儀的探測天線配件...</Chinese>
+            <Chinesesimp>装入电池前，请先拆除频谱仪的探测天线配件...</Chinesesimp>
+            <Turkish>Pilleri takmadan önce spektrum cihazınızdan anten eklentisini çıkarın...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Spectrum_RemoveLight">
+            <English>Remove the light attachment from your spectrum device before adding batteries...</English>
+            <Czech>Před vložením baterií odstraňte ze svého zařízení Spectrum světelný nástavec...</Czech>
+            <French>Retirez la lampe de votre appareil Spectrum avant d'ajouter des piles...</French>
+            <Spanish>Quita el accesorio de luz de tu dispositivo Spectrum antes de ponerle las baterías...</Spanish>
+            <Italian>Rimuovi la torcia dal dispositivo Spectrum prima di inserire le batterie...</Italian>
+            <Polish>Zdemontuj latarkę z urządzenia Spectrum przed włożeniem baterii...</Polish>
+            <Portuguese>Remova a lanterna do seu dispositivo Spectrum antes de colocar as baterias...</Portuguese>
+            <Russian>Снимите фонарь с устройства Spectrum перед установкой батарей...</Russian>
+            <German>Entferne den Lichtaufsatz von deinem Spectrum-Gerät, bevor du Batterien einlegst...</German>
+            <Korean>배터리를 넣기 전에 스펙트럼 장치에서 라이트 부품을 분리하십시오...</Korean>
+            <Japanese>バッテリーを入れる前に、スペクトラムデバイスからライトアタッチメントを取り外してください...</Japanese>
+            <Chinese>裝入電池前，請先拆除頻譜儀的燈具配件...</Chinese>
+            <Chinesesimp>装入电池前，请先拆除频谱仪的灯具配件...</Chinesesimp>
+            <Turkish>Pilleri takmadan önce spektrum cihazınızdan ışık eklentisini çıkarın...</Turkish>
+        </Key>
+    </Package>
+</Project>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Refuel">
+        <Key ID="STR_MISERY_Refuel_Action">
+            <English>Refuel (%1/L) %2L</English>
+            <Czech>Natankovat (%1/L) %2L</Czech>
+            <French>Ravitailler (%1/L) %2L</French>
+            <Spanish>Repostar (%1/L) %2L</Spanish>
+            <Italian>Rifornisci (%1/L) %2L</Italian>
+            <Polish>Zatankuj (%1/L) %2L</Polish>
+            <Portuguese>Reabastecer (%1/L) %2L</Portuguese>
+            <Russian>Заправить (%1/л) %2л</Russian>
+            <German>Betanken (%1/L) %2L</German>
+            <Korean>주유하기 (%1/L) %2L</Korean>
+            <Japanese>給油 (%1/L) %2L</Japanese>
+            <Chinese>加注燃料 (%1/升) %2升</Chinese>
+            <Chinesesimp>加注燃料 (%1/升) %2升</Chinesesimp>
+            <Turkish>Yakıt Al (%1/L) %2L</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Refuel_Component">
+            <English>Refuel</English>
+            <Czech>Doplnit palivo</Czech>
+            <French>Ravitailler en carburant</French>
+            <Spanish>Repostar</Spanish>
+            <Italian>Rifornimento</Italian>
+            <Polish>Tankowanie</Polish>
+            <Portuguese>Reabastecer</Portuguese>
+            <Russian>Заправить</Russian>
+            <German>Tanken</German>
+            <Korean>연료 보급</Korean>
+            <Japanese>燃料補給</Japanese>
+            <Chinese>加油 / 補充燃料</Chinese>
+            <Chinesesimp>加油 / 补充燃料</Chinesesimp>
+            <Turkish>Yakit İkmali</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Refuel_FuelPrices">
+            <English>Fuel prices</English>
+            <Czech>Ceny paliva</Czech>
+            <French>Prix du carburant</French>
+            <Spanish>Precios del combustible</Spanish>
+            <Italian>Prezzi del carburante</Italian>
+            <Polish>Ceny paliwa</Polish>
+            <Portuguese>Preços dos combustíveis</Portuguese>
+            <Russian>Цены на топливо</Russian>
+            <German>Kraftstoffpreise</German>
+            <Korean>연료 가격 설정</Korean>
+            <Japanese>燃料価格設定</Japanese>
+            <Chinese>燃料價格</Chinese>
+            <Chinesesimp>燃料价格</Chinesesimp>
+            <Turkish>Yakıt Fiyatları</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Refuel_FuelPricesDesc">
+            <English>Fuel prices data when purchased at refueling area. Indexed as - [diesel, petrol, jetfuel]</English>
+            <Czech>Údaje o cenách paliva při nákupu v doplňovací oblasti. Indexováno jako - [diesel, benzín, letecké palivo]</Czech>
+            <French>Données sur les prix du carburant lors de l'achat dans une zone de ravitaillement. Indexé comme - [diesel, essence, kérosène]</French>
+            <Spanish>Datos de precios de combustible al comprar en un área de repostaje. Indexado como - [diésel, gasolina, queroseno]</Spanish>
+            <Italian>Dati sui prezzi del carburante se acquistato in un'area di rifornimento. Indicizzato come - [diesel, benzina, carburante avio]</Italian>
+            <Polish>Dane dotyczące cen paliw przy zakupie w strefie tankowania. Indeksowane jako - [diesel, benzyna, paliwo lotnicze]</Polish>
+            <Portuguese>Dados de preços de combustível quando comprado na área de reabastecimento. Indexado como - [diesel, gasolina, combustível a jato]</Portuguese>
+            <Russian>Данные о ценах на топливо при покупке в зоне заправки. Индексируется как — [дизель, бензин, авиатопливо]</Russian>
+            <German>Daten zu Kraftstoffpreisen beim Kauf in einem Betankungsgebiet. Indiziert als - [Diesel, Benzin, Kerosin]</German>
+            <Korean>주유 구역에서 구매할 때의 연료 가격 데이터입니다. 배열 순서: [디젤, 가솔린, 항공유]</Korean>
+            <Japanese>給油エリアで購入する際の燃料価格データです。インデックス順：[ディーゼル, ガソリン, ジェット燃料]</Japanese>
+            <Chinese>在加油區域購買燃料的價格數據。索引格式為 - [柴油, 汽油, 航空燃油]</Chinese>
+            <Chinesesimp>在加油区域购买燃料的价格数据。索引格式为 - [柴油, 汽油, 航空燃油]</Chinesesimp>
+            <Turkish>Yeniden yakıt alma alanından satın alınan yakıtın fiyat verileri. Şu şekilde dizine eklenir - [dizel, benzin, jet yakıtı]</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Refuel_NoSelection">
+            <English>No Refuel option selected...</English>
+            <Czech>Nebyla vybrána žádná možnost tankování...</Czech>
+            <French>Aucune option de ravitaillement sélectionnée...</French>
+            <Spanish>No se ha seleccionado ninguna opción de repostaje...</Spanish>
+            <Italian>Nessuna opzione di rifornimento selezionata...</Italian>
+            <Polish>Nie wybrano opcji tankowania...</Polish>
+            <Portuguese>Nenhuma opção de reabastecimento selecionada...</Portuguese>
+            <Russian>Вариант заправки не выбран...</Russian>
+            <German>Keine Betankungsoption ausgewählt...</German>
+            <Korean>주유 옵션이 선택되지 않았습니다...</Korean>
+            <Japanese>給油オプションが選択されていません...</Japanese>
+            <Chinese>未選擇任何加油選項...</Chinese>
+            <Chinesesimp>未选择任何加油选项...</Chinesesimp>
+            <Turkish>Herhangi bir yakıt alma seçeneği seçilmedi...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Refuel_NoVehicle">
+            <English>No Vehicle to Refuel...</English>
+            <Czech>Nenalezeno žádné vozidlo k natankování...</Czech>
+            <French>Aucun véhicule à ravitailler...</French>
+            <Spanish>No hay ningún vehículo para repostar...</Spanish>
+            <Italian>Nessun veicolo da rifornire...</Italian>
+            <Polish>Brak pojazdu do zatankowania...</Polish>
+            <Portuguese>Nenhum veículo para reabastecer...</Portuguese>
+            <Russian>Нет техники для заправки...</Russian>
+            <German>Kein Fahrzeug zum Betanken vorhanden...</German>
+            <Korean>주유할 차량이 없습니다...</Korean>
+            <Japanese>給油対象の車両が見つかりません...</Japanese>
+            <Chinese>未找到可加油的載具...</Chinese>
+            <Chinesesimp>未找到可加油的载具...</Chinesesimp>
+            <Turkish>Yeniden yakıt alınacak araç yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Refuel_Progress">
+            <English>Refueling...%1%2%1Tank level: %3%4%1 Funds:%1%5%1%6</English>
+            <Czech>Tankování...%1%2%1Stav nádrže: %3%4%1 Finance:%1%5%1%6</Czech>
+            <French>Ravitaillement...%1%2%1Niveau du réservoir : %3%4%1 Fonds :%1%5%1%6</French>
+            <Spanish>Repostando...%1%2%1Nivel del tanque: %3%4%1 Fondos:%1%5%1%6</Spanish>
+            <Italian>Rifornimento in corso...%1%2%1Livello serbatoio: %3%4%1 Fondi:%1%5%1%6</Italian>
+            <Polish>Tankowanie...%1%2%1Poziom baku: %3%4%1 Środki:%1%5%1%6</Polish>
+            <Portuguese>Reabastecendo...%1%2%1Nível do depósito: %3%4%1 Fundos:%1%5%1%6</Portuguese>
+            <Russian>Заправка...%1%2%1Уровень бака: %3%4%1 Средства:%1%5%1%6</Russian>
+            <German>Betankung läuft...%1%2%1Tankfüllstand: %3%4%1 Guthaben:%1%5%1%6</German>
+            <Korean>주유 중...%1%2%1연료 잔량: %3%4%1 자금:%1%5%1%6</Korean>
+            <Japanese>給油中...%1%2%1タンク残量: %3%4%1 所持金:%1%5%1%6</Japanese>
+            <Chinese>正在加油...%1%2%1油箱油位: %3%4%1 資金:%1%5%1%6</Chinese>
+            <Chinesesimp>正在加油...%1%2%1油箱油位: %3%4%1 资金:%1%5%1%6</Chinesesimp>
+            <Turkish>Yakıt alınıyor...%1%2%1Depo seviyesi: %3%4%1 Paranız:%1%5%1%6</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Refuel_RefuelingAreas">
+            <English>Refueling Areas</English>
+            <Czech>Oblasti pro doplňování paliva</Czech>
+            <French>Zones de ravitaillement</French>
+            <Spanish>Áreas de repostaje</Spanish>
+            <Italian>Aree di rifornimento</Italian>
+            <Polish>Strefy tankowania</Polish>
+            <Portuguese>Áreas de reabastecimento</Portuguese>
+            <Russian>Зоны заправки</Russian>
+            <German>Betankungsgebiete</German>
+            <Korean>주유 구역 설정</Korean>
+            <Japanese>給油エリア設定</Japanese>
+            <Chinese>加油區域</Chinese>
+            <Chinesesimp>加油区域</Chinesesimp>
+            <Turkish>Yakıt Alma Alanları</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Refuel_RefuelingAreasDesc">
+            <English>ELLIPSE or RECTANGLE marker names covering the refueling area as strings ['Refuel_1', 'Refuel_2']</English>
+            <Czech>Názvy markerů typu ELLIPSE nebo RECTANGLE pokrývajících oblast pro doplňování paliva jako řetězce ['Refuel_1', 'Refuel_2']</Czech>
+            <French>Noms des marqueurs ELLIPSE ou RECTANGLE couvrant la zone de ravitaillement sous forme de chaînes ['Refuel_1', 'Refuel_2']</French>
+            <Spanish>Nombres de los marcadores ELLIPSE o RECTANGLE que cubren el área de repostaje como cadenas ['Refuel_1', 'Refuel_2']</Spanish>
+            <Italian>Nomi dei marcadores ELLIPSE o RECTANGLE che coprono l'area di rifornimento espressi come stringhe ['Refuel_1', 'Refuel_2']</Italian>
+            <Polish>Nazwy markerów ELLIPSE lub RECTANGLE pokrywających strefę tankowania jako ciągi tekstowe ['Refuel_1', 'Refuel_2']</Polish>
+            <Portuguese>Nomes dos marcadores ELLIPSE ou RECTANGLE cobrindo a área de reabastecimento como strings ['Refuel_1', 'Refuel_2']</Portuguese>
+            <Russian>Имена маркеров типа ELLIPSE или RECTANGLE, покрывающих зону заправки, в виде строк ['Refuel_1', 'Refuel_2']</Russian>
+            <German>ELLIPSE oder RECTANGLE Markernamen, die das Betankungsgebiet abdecken, als Strings ['Refuel_1', 'Refuel_2']</German>
+            <Korean>주유 구역을 지정하는 타원(ELLIPSE) 또는 사각형(RECTANGLE) 마커의 이름을 문자열 형태로 입력합니다 ['Refuel_1', 'Refuel_2']</Korean>
+            <Japanese>給油エリアをカバーする楕円（ELLIPSE）または長方形（RECTANGLE）マーカーの名前を文字列で指定します ['Refuel_1', 'Refuel_2']</Japanese>
+            <Chinese>以字串陣列形式輸入覆蓋加油區域的橢圓（ELLIPSE）或矩形（RECTANGLE）標記名稱 ['Refuel_1', 'Refuel_2']</Chinese>
+            <Chinesesimp>以字符串数组形式输入覆盖加油区域的椭圆（ELLIPSE）或矩形（RECTANGLE）标记名称 ['Refuel_1', 'Refuel_2']</Chinesesimp>
+            <Turkish>Yakıt alma alanını kapsayan ELLIPSE veya RECTANGLE işaretçi adlarını dize olarak yazın ['Refuel_1', 'Refuel_2']</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Refuel_ReqRefuel">
+            <English>Request refuel</English>
+            <Czech>Žádost o doplnění paliva</Czech>
+            <French>Demande de ravitaillement</French>
+            <Spanish>Solicitar repostaje</Spanish>
+            <Italian>Richiesta di rifornimento</Italian>
+            <Polish>Żądanie tankowania</Polish>
+            <Portuguese>Solicitar reabastecimento</Portuguese>
+            <Russian>Запрос на дозаправку</Russian>
+            <German>Tanken anfordern</German>
+            <Korean>급유 요청하기</Korean>
+            <Japanese>給油を依頼する</Japanese>
+            <Chinese>請求加油</Chinese>
+            <Chinesesimp>请求加油</Chinesesimp>
+            <Turkish>Yakıt ikmali talep edin</Turkish>
+        </Key>
+    </Package>
+</Project>

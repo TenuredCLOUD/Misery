@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Repair">
+        <Key ID="STR_MISERY_Repair_Action">
+            <English>Repair (%1)</English>
+            <Czech>Opravit (%1)</Czech>
+            <French>Réparer (%1)</French>
+            <Spanish>Reparar (%1)</Spanish>
+            <Italian>Ripara (%1)</Italian>
+            <Polish>Napraw (%1)</Polish>
+            <Portuguese>Reparar (%1)</Portuguese>
+            <Russian>Ремонт (%1)</Russian>
+            <German>Reparieren (%1)</German>
+            <Korean>수리하기 (%1)</Korean>
+            <Japanese>修理 (%1)</Japanese>
+            <Chinese>維修 (%1)</Chinese>
+            <Chinesesimp>维修 (%1)</Chinesesimp>
+            <Turkish>Onar (%1)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Repair_AlreadyFullyRepaired">
+            <English>%1 is already fully repaired...</English>
+            <Czech>%1 je již plně opraven...</Czech>
+            <French>%1 est déjà entièrement réparé...</French>
+            <Spanish>%1 ya está completamente reparado...</Spanish>
+            <Italian>%1 è già completamente riparato...</Italian>
+            <Polish>%1 jest już w pełni naprawiony...</Polish>
+            <Portuguese>%1 já está totalmente reparado...</Portuguese>
+            <Russian>%1 уже полностью отремонтирован...</Russian>
+            <German>%1 ist bereits vollständig repariert...</German>
+            <Korean>%1은(는) 이미 완전히 수리되었습니다...</Korean>
+            <Japanese>%1 はすでに完全に修理されています...</Japanese>
+            <Chinese>%1 已經處於完好狀態，無需維修...</Chinese>
+            <Chinesesimp>%1 已经处于完好状态，无需维修...</Chinesesimp>
+            <Turkish>%1 zaten tamamen onarılmış...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Repair_Component">
+            <English>Repair</English>
+            <Czech>Opravit</Czech>
+            <French>Réparer</French>
+            <Spanish>Reparar</Spanish>
+            <Italian>Riparazione</Italian>
+            <Polish>Napraw</Polish>
+            <Portuguese>Reparar</Portuguese>
+            <Russian>Ремонтировать</Russian>
+            <German>Reparieren</German>
+            <Korean>수리</Korean>
+            <Japanese>修理</Japanese>
+            <Chinese>修復 / 維修</Chinese>
+            <Chinesesimp>修复 / 维修</Chinesesimp>
+            <Turkish>Onar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Repair_Interrupted">
+            <English>Repairs interrupted...</English>
+            <Czech>Opravy přerušeny...</Czech>
+            <French>Réparations interrompues...</French>
+            <Spanish>Reparaciones interrumpidas...</Spanish>
+            <Italian>Riparazioni interrotte...</Italian>
+            <Polish>Naprawa przerwana...</Polish>
+            <Portuguese>Reparações interrompidas...</Portuguese>
+            <Russian>Ремонт прерван...</Russian>
+            <German>Reparatur unterbrochen...</German>
+            <Korean>수리 작업이 중단되었습니다...</Korean>
+            <Japanese>修理が中断されました...</Japanese>
+            <Chinese>維修進程已中斷...</Chinese>
+            <Chinesesimp>维修进程已中断...</Chinesesimp>
+            <Turkish>Onarım kesintiye uğradı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Repair_NoSelection">
+            <English>No Repair option selected...</English>
+            <Czech>Nebyla vybrána žádná možnost opravy...</Czech>
+            <French>Aucune option de réparation sélectionnée...</French>
+            <Spanish>No se ha seleccionado ninguna opción de reparación...</Spanish>
+            <Italian>Nessuna opzione di riparazione selezionata...</Italian>
+            <Polish>Nie wybrano opcji naprawy...</Polish>
+            <Portuguese>Nenhuma opção de reparação selecionada...</Portuguese>
+            <Russian>Вариант ремонта не выбран...</Russian>
+            <German>Keine Repararturoption ausgewählt...</German>
+            <Korean>수리 옵션이 선택되지 않았습니다...</Korean>
+            <Japanese>修理オプションが選択されていません...</Japanese>
+            <Chinese>未選擇任何維修選項...</Chinese>
+            <Chinesesimp>未选择任何维修选项...</Chinesesimp>
+            <Turkish>Herhangi bir onarım seçeneği seçilmedi...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Repair_Progress">
+            <English>Repairing %2...%1Fixing: %3%1Funds: %4 %5</English>
+            <Czech>Oprava %2...%1Opravuje se: %3%1Finance: %4 %5</Czech>
+            <French>Réparation de %2...%1Réparation : %3%1Fonds : %4 %5</French>
+            <Spanish>Reparando %2...%1Reparando: %3%1Fondos: %4 %5</Spanish>
+            <Italian>Riparazione di %2...%1Riparazione: %3%1Fondi: %4 %5</Italian>
+            <Polish>Naprawa %2...%1Naprawianie: %3%1Środki: %4 %5</Polish>
+            <Portuguese>Reparando %2...%1Reparando: %3%1Fundos: %4 %5</Portuguese>
+            <Russian>Ремонт %2...%1Исправление: %3%1Средства: %4 %5</Russian>
+            <German>Reparatur von %2...%1Behebung: %3%1Guthaben: %4 %5</German>
+            <Korean>수리 중: %2...%1정비 부위: %3%1자금: %4 %5</Korean>
+            <Japanese>%2 を修理中...%1修理箇所: %3%1所持金: %4 %5</Japanese>
+            <Chinese>正在維修 %2...%1修復部位: %3%1資金: %4 %5</Chinese>
+            <Chinesesimp>正在维修 %2...%1修复部位: %3%1资金: %4 %5</Chinesesimp>
+            <Turkish>%2 onarılıyor...%1Düzeltilen: %3%1Paranız: %4 %5</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Repair_Prompt">
+            <English>Vehicle Repair</English>
+            <Czech>Oprava vozidel</Czech>
+            <French>Réparation de véhicule</French>
+            <Spanish>Reparación de vehículos</Spanish>
+            <Italian>Riparazione veicoli</Italian>
+            <Polish>Naprawa pojazdów</Polish>
+            <Portuguese>Reparação de veículos</Portuguese>
+            <Russian>Ремонт техники</Russian>
+            <German>Fahrzeugreparatur</German>
+            <Korean>차량 정비</Korean>
+            <Japanese>車両修理</Japanese>
+            <Chinese>載具維修</Chinese>
+            <Chinesesimp>载具维修</Chinesesimp>
+            <Turkish>Araç Onarımı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Repair_RepairAreas">
+            <English>Repair Areas</English>
+            <Czech>Oblasti oprav</Czech>
+            <French>Zones de réparation</French>
+            <Spanish>Áreas de reparación</Spanish>
+            <Italian>Aree di riparazione</Italian>
+            <Polish>Strefy naprawcze</Polish>
+            <Portuguese>Áreas de reparação</Portuguese>
+            <Russian>Зоны ремонта</Russian>
+            <German>Reparaturgebiete</German>
+            <Korean>정비 구역 설정</Korean>
+            <Japanese>修理エリア設定</Japanese>
+            <Chinese>維修區域</Chinese>
+            <Chinesesimp>维修区域</Chinesesimp>
+            <Turkish>Onarım Alanları</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Repair_RepairAreasDesc">
+            <English>ELLIPSE or RECTANGLE marker names covering the repair area as strings ['Repair_1', 'Repair_2']</English>
+            <Czech>Názvy markerů typu ELLIPSE nebo RECTANGLE pokrývajících oblast oprav jako řetězce ['Repair_1', 'Repair_2']</Czech>
+            <French>Noms des marqueurs ELLIPSE ou RECTANGLE couvrant la zone de réparation sous forme de chaînes ['Repair_1', 'Repair_2']</French>
+            <Spanish>Nombres de los marcadores ELLIPSE o RECTANGLE que cubren el área de reparación como cadenas ['Repair_1', 'Repair_2']</Spanish>
+            <Italian>Nomi dei marcadores ELLIPSE o RECTANGLE che coprono l'area di riparazione espressi come stringhe ['Repair_1', 'Repair_2']</Italian>
+            <Polish>Nazwy markerów ELLIPSE lub RECTANGLE pokrywających strefę naprawczą jako ciągi tekstowe ['Repair_1', 'Repair_2']</Polish>
+            <Portuguese>Nomes dos marcadores ELLIPSE ou RECTANGLE cobrindo a área de reparação como strings ['Repair_1', 'Repair_2']</Portuguese>
+            <Russian>Имена маркеров типа ELLIPSE или RECTANGLE, покрывающих зону ремонта, в виде строк ['Repair_1', 'Repair_2']</Russian>
+            <German>ELLIPSE oder RECTANGLE Markernamen, die das Reparaturgebiet abdecken, als Strings ['Repair_1', 'Repair_2']</German>
+            <Korean>정비 구역을 지정하는 타원(ELLIPSE) 또는 사각형(RECTANGLE) 마커의 이름을 문자열 형태로 입력합니다 ['Repair_1', 'Repair_2']</Korean>
+            <Japanese>修理エリア를カバーする楕円（ELLIPSE）または长方形（RECTANGLE）マーカーの名前を文字列で指定します ['Repair_1', 'Repair_2']</Japanese>
+            <Chinese>以字串陣列形式輸入覆蓋維修區域的橢圓（ELLIPSE）或矩形（RECTANGLE）標記名稱 ['Repair_1', 'Repair_2']</Chinese>
+            <Chinesesimp>以字符串数组形式输入覆盖维修区域的椭圆（ELLIPSE）或矩形（RECTANGLE）标记名称 ['Repair_1', 'Repair_2']</Chinesesimp>
+            <Turkish>Onarım alanını kapsayan ELLIPSE veya RECTANGLE işaretçi adlarını dize olarak yazın ['Repair_1', 'Repair_2']</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Repair_ReqRepairs">
+            <English>Request repairs</English>
+            <Czech>Žádost o opravu</Czech>
+            <French>Demande de réparation</French>
+            <Spanish>Solicitar reparaciones</Spanish>
+            <Italian>Richiesta di riparazioni</Italian>
+            <Polish>Żądanie naprawy</Polish>
+            <Portuguese>Solicitar reparos</Portuguese>
+            <Russian>Запросить ремонт</Russian>
+            <German>Reparaturen anfordern</German>
+            <Korean>수리 요청하기</Korean>
+            <Japanese>修理を依頼する</Japanese>
+            <Chinese>請求修理</Chinese>
+            <Chinesesimp>请求修理</Chinesesimp>
+            <Turkish>Onarım talep edin</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Repair_Success">
+            <English>%1 has been fully repaired...</English>
+            <Czech>%1 byl plně opraven...</Czech>
+            <French>%1 a été entièrement réparé...</French>
+            <Spanish>%1 ha sido completamente reparado...</Spanish>
+            <Italian>%1 è stato completamente riparato...</Italian>
+            <Polish>%1 został w pełni naprawiony...</Polish>
+            <Portuguese>%1 foi totalmente reparado...</Portuguese>
+            <Russian>%1 был полностью отремонтирован...</Russian>
+            <German>%1 wurde vollständig repariert...</German>
+            <Korean>%1 수리가 완료되었습니다...</Korean>
+            <Japanese>%1 の修理が完了しました...</Japanese>
+            <Chinese>%1 已成功修復完畢...</Chinese>
+            <Chinesesimp>%1 已成功修复完毕...</Chinesesimp>
+            <Turkish>%1 tamamen onarıldı...</Turkish>
+        </Key>
+    </Package>
+</Project>

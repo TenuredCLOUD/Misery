@@ -1,9 +1,9 @@
-private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
+private _category = format ["Misery %1", localize LSTRING(Component)];
 
 [
     QGVAR(fuelCosts),
     "EDITBOX",
-    ["Fuel prices", "Fuel prices data when purchased at refueling area. Indexed as - [diesel, petrol, jetfuel]"],
+    [LSTRING(FuelPrices), LSTRING(FuelPricesDesc)],
     _category,
     "[150, 50, 500]",
     1
@@ -12,7 +12,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(areas),
     "EDITBOX",
-    ["Refueling Areas", "ELLIPSE or RECTANGLE marker names covering the refueling area as strings ['Refuel_1', 'Refuel_2']"],
+    [LSTRING(RefuelingAreas), LSTRING(RefuelingAreasDesc)],
     _category,
     "[]",
     1

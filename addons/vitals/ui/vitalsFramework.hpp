@@ -13,7 +13,7 @@ class CLASS(vitals_framework_ui) {
         };
         class CLASS(vitals_framework_status_buffs): RscText {
             idc = -1;
-            text = "Buffs:";
+            text = ECSTRING(vitals,Buffs);
             x = 29.5 * GUI_GRID_W + GUI_GRID_X;
             y = 27.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 4 * GUI_GRID_W;
@@ -23,7 +23,7 @@ class CLASS(vitals_framework_ui) {
         };
         class CLASS(vitals_framework_status_ailments): RscText {
             idc = -1;
-            text = "Ailments:";
+            text = ECSTRING(vitals,Ailments);
             x = 37 * GUI_GRID_W + GUI_GRID_X;
             y = 27.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 4.5 * GUI_GRID_W;
@@ -35,7 +35,7 @@ class CLASS(vitals_framework_ui) {
     class Controls {
         class CLASS(vitals_framework_status_hunger): RscText {
             idc = 1003;
-            text = "Hunger:";
+            text = ECSTRING(vitals,Hunger);
             x = 13 * GUI_GRID_W + GUI_GRID_X;
             y = 3 * GUI_GRID_H + GUI_GRID_Y;
             w = 4 * GUI_GRID_W;
@@ -52,7 +52,7 @@ class CLASS(vitals_framework_ui) {
         };
         class CLASS(vitals_framework_status_thirst): RscText {
             idc = 1005;
-            text = "Thirst:";
+            text = ECSTRING(vitals,Thirst);
             x = 13 * GUI_GRID_W + GUI_GRID_X;
             y = 4.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 4 * GUI_GRID_W;
@@ -69,7 +69,7 @@ class CLASS(vitals_framework_ui) {
         };
         class CLASS(vitals_framework_status_fatigue): RscText {
             idc = 1006;
-            text = "Fatigue:";
+            text = ECSTRING(vitals,Fatigue);
             x = 13 * GUI_GRID_W + GUI_GRID_X;
             y = 6 * GUI_GRID_H + GUI_GRID_Y;
             w = 4 * GUI_GRID_W;
@@ -86,7 +86,7 @@ class CLASS(vitals_framework_ui) {
         };
         class CLASS(vitals_framework_status_wetness): RscText {
             idc = 1007;
-            text = "Wetness:";
+            text = ECSTRING(vitals,Wetness);
             x = 13 * GUI_GRID_W + GUI_GRID_X;
             y = 7.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 4.5 * GUI_GRID_W;
@@ -103,7 +103,7 @@ class CLASS(vitals_framework_ui) {
         };
         class CLASS(vitals_framework_status_gasMask): RscText {
             idc = 1016;
-            text = "Gas Mask:";
+            text = ECSTRING(vitals,GasMask);
             x = 21.5 * GUI_GRID_W + GUI_GRID_X;
             y = 2.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 5 * GUI_GRID_W;

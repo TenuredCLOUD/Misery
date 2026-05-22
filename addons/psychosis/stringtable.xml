@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Psychosis">
+        <Key ID="STR_MISERY_Psychosis_BeingWatched">
+            <English>You feel like you're being watched..</English>
+            <Czech>Máš pocit, že tě někdo sleduje..</Czech>
+            <French>Vous avez l'impression d'être observé..</French>
+            <Spanish>Sientes que te están observando..</Spanish>
+            <Italian>Hai la sensazione di essere osservato..</Italian>
+            <Polish>Czujesz się obserwowany..</Polish>
+            <Portuguese>Sentes que estás a ser observado..</Portuguese>
+            <Russian>Вам кажется, что за вами наблюдают..</Russian>
+            <German>Du hast das Gefühl, beobachtet zu werden..</German>
+            <Korean>누군가 당신을 지켜보고 있는 것 같습니다..</Korean>
+            <Japanese>誰かに見られているような気がする..</Japanese>
+            <Chinese>你感覺自己正被暗中窺視..</Chinese>
+            <Chinesesimp>你感觉自己正被暗中窥视..</Chinesesimp>
+            <Turkish>İzleniyormuş gibi hissediyorsun..</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Psychosis_Component">
+            <English>Psychosis</English>
+            <Czech>Psychóza</Czech>
+            <French>Psychose</French>
+            <Spanish>Psicosis</Spanish>
+            <Italian>Psicosi</Italian>
+            <Polish>Psychoza</Polish>
+            <Portuguese>Psicose</Portuguese>
+            <Russian>Психоз</Russian>
+            <German>Psychose</German>
+            <Korean>정신병</Korean>
+            <Japanese>精神病状態</Japanese>
+            <Chinese>精神错乱 / 精神病發作</Chinese>
+            <Chinesesimp>精神错乱 / 精神病发作</Chinesesimp>
+            <Turkish>Psikoz</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Psychosis_EnablePsychosisDesc">
+            <English>Enable psychosis effects?</English>
+            <Czech>Povolit efekty psychózy?</Czech>
+            <French>Activer les effets de psychose ?</French>
+            <Spanish>¿Activar efectos de psicosis?</Spanish>
+            <Italian>Abilitare effetti della psicosi?</Italian>
+            <Polish>Włączyć efekty psychozy?</Polish>
+            <Portuguese>Ativar efeitos de psicose?</Portuguese>
+            <Russian>Включить эффекты психоза?</Russian>
+            <German>Psychose-Effekte aktivieren?</German>
+            <Korean>정신착란 효과를 활성화하시겠습니까?</Korean>
+            <Japanese>精神錯乱エフェクトを有効にしますか？</Japanese>
+            <Chinese>是否啟用精神錯亂效果？</Chinese>
+            <Chinesesimp>是否启用精神错乱效果？</Chinesesimp>
+            <Turkish>Psikoz efektleri etkinleştirilsin mi?</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Psychosis_FollowDarkness">
+            <English>They follow in the darkness..</English>
+            <Czech>Následují mě ve tmě..</Czech>
+            <French>Ils suivent dans l'obscurité..</French>
+            <Spanish>Siguen en la oscuridad..</Spanish>
+            <Italian>Seguono nell'oscurità..</Italian>
+            <Polish>Podążają za mną w ciemności..</Polish>
+            <Portuguese>Eles seguem na escuridão..</Portuguese>
+            <Russian>Они преследуют во тьме..</Russian>
+            <German>Sie folgen in der Dunkelheit..</German>
+            <Korean>그들이 어둠 속에서 뒤쫓아옵니다..</Korean>
+            <Japanese>奴らは暗闇から追ってくる..</Japanese>
+            <Chinese>他們在黑暗中步步尾隨..</Chinese>
+            <Chinesesimp>他们在黑暗中步步尾随..</Chinesesimp>
+            <Turkish>Karanlıkta takip ediyorlar..</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Psychosis_LingeringPresence">
+            <English>You feel a lingering presence..</English>
+            <Czech>Cítíš přetrvávající přítomnost..</Czech>
+            <French>Vous sentez une présence persistante..</French>
+            <Spanish>Sientes una presencia persistente..</Spanish>
+            <Italian>Senti una presenza persistente..</Italian>
+            <Polish>Czujesz czyjąś obecność..</Polish>
+            <Portuguese>Sentes uma presença persistente..</Portuguese>
+            <Russian>Вы чувствуете чьё-то присутствие..</Russian>
+            <German>Du spürst eine anhaltende Gegenwart..</German>
+            <Korean>어떤 존재가 주위를 맴도는 느낌이 듭니다..</Korean>
+            <Japanese>誰かの気配がそこに留まっているのを感じる..</Japanese>
+            <Chinese>你感覺到身旁有某種存在揮之不去..</Chinese>
+            <Chinesesimp>你感觉到身旁有某种存在挥之不去..</Chinesesimp>
+            <Turkish>Geri planda bir varlık hissediyorsun..</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Psychosis_PsychosisAtNight">
+            <English>Psychosis At Night</English>
+            <Czech>Noční psychóza</Czech>
+            <French>Psychose nocturne</French>
+            <Spanish>Psicosis nocturna</Spanish>
+            <Italian>Psicosi notturna</Italian>
+            <Polish>Psychoza w nocy</Polish>
+            <Portuguese>Psicose noturna</Portuguese>
+            <Russian>Ночной психоз</Russian>
+            <German>Nachtpsychose</German>
+            <Korean>야간 정신착란</Korean>
+            <Japanese>夜間の精神錯乱</Japanese>
+            <Chinese>夜間精神錯亂</Chinese>
+            <Chinesesimp>夜间精神错乱</Chinesesimp>
+            <Turkish>Gece Psikozu</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Psychosis_PsychosisAtNightDesc">
+            <English>Darkness can increase psychosis, while being near a fire or being inside will counteract it.</English>
+            <Czech>Tma může psychózu zvyšovat, zatímco pobyt u ohně nebo uvnitř budov ji potlačuje.</Czech>
+            <French>L'obscurité peut augmenter la psychose, tandis qu'être près d'un feu ou à l'intérieur la contrecarre.</French>
+            <Spanish>La oscuridad puede aumentar la psicosis, mientras que estar cerca de un fuego o dentro de un edificio la contrarrestará.</Spanish>
+            <Italian>L'oscurità può aumentare la psicosi, mentre trovarsi vicino a un fuoco o al coperto la contrasterà.</Italian>
+            <Polish>Ciemność może nasilać psychozę, podczas gdy przebywanie w pobliżu ognia lub wewnątrz pomieszczeń przeciwdziała jej.</Polish>
+            <Portuguese>A escuridão pode aumentar a psicose, enquanto estar perto de uma fogueira ou dentro de casa irá neutralizá-la.</Portuguese>
+            <Russian>Темнота может усиливать психоз, тогда как нахождение у костра или внутри помещений противодействует ему.</Russian>
+            <German>Dunkelheit kann die Psychose verstärken, während die Nähe zu einem Feuer oder der Aufenthalt in Gebäuden dem entgegenwirkt.</German>
+            <Korean>어둠은 정신착란을 악화시키며, 모닥불 근처에 있거나 실내에 머무르면 이를 완화할 수 있습니다.</Korean>
+            <Japanese>暗闇は精神錯乱を悪化させますが、焚き火の近くにいるか室内に滞在することでこれを防ぐことができます。</Japanese>
+            <Chinese>黑暗會加劇精神錯亂，而靠近篝火或待在室內則能有效緩解該症狀。</Chinese>
+            <Chinesesimp>黑暗会加剧精神错乱，而靠近篝火或待在室内则能有效缓解该症状。</Chinesesimp>
+            <Turkish>Karanlık psikozu artırabilir; bir ateşin yakınında veya kapalı alanda olmak ise bunu dengeler.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Psychosis_PsychosisDecrease">
+            <English>Psychosis Decrease</English>
+            <Czech>Pokles psychózy</Czech>
+            <French>Diminution de la psychose</French>
+            <Spanish>Disminución de psicosis</Spanish>
+            <Italian>Diminuzione della psicosi</Italian>
+            <Polish>Spadek psychozy</Polish>
+            <Portuguese>Diminuição da psicose</Portuguese>
+            <Russian>Sнижение психоза</Russian>
+            <German>Psychose-Abnahme</German>
+            <Korean>정신착란 감소량</Korean>
+            <Japanese>精神錯乱の減少度</Japanese>
+            <Chinese>精神錯亂消退值</Chinese>
+            <Chinesesimp>精神错乱消退值</Chinesesimp>
+            <Turkish>Psikoz Azalması</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Psychosis_PsychosisDecreaseDesc">
+            <English>How much psychosis naturally decreases.</English>
+            <Czech>Jak moc psychóza přirozeně klesá.</Czech>
+            <French>La vitesse à laquelle la psychose diminue naturellement.</French>
+            <Spanish>Cuánto disminuye la psicosis de forma natural.</Spanish>
+            <Italian>Quanto la psicosi diminuisce naturalmente.</Italian>
+            <Polish>Jak bardzo psychoza zmniejsza się w naturalny sposób.</Polish>
+            <Portuguese>O quanto a psicose diminui naturalmente.</Portuguese>
+            <Russian>Величина, na которую психоз естественным образом снижается.</Russian>
+            <German>Wie stark die Psychose auf natürliche Weise abnimmt.</German>
+            <Korean>정신착란 수치가 자연적으로 감소하는 수치입니다.</Korean>
+            <Japanese>精神錯乱が自然に減少する量です。</Japanese>
+            <Chinese>精神錯亂度自然隨時間降低的數值。</Chinese>
+            <Chinesesimp>精神错乱度自然随时间降低的数值。</Chinesesimp>
+            <Turkish>Psikozun doğal olarak ne kadar azaldığı.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Psychosis_PsychosisNightInc">
+            <English>Psychosis at Night Increase</English>
+            <Czech>Nárůst noční psychózy</Czech>
+            <French>Augmentation de la psychose nocturne</French>
+            <Spanish>Aumento de psicosis nocturna</Spanish>
+            <Italian>Aumento della psicosi notturna</Italian>
+            <Polish>Wzrost psychozy w nocy</Polish>
+            <Portuguese>Aumento da psicose à noite</Portuguese>
+            <Russian>Nарастание ночного психоза</Russian>
+            <German>Psychose-Erhöhung bei Nacht</German>
+            <Korean>야간 정신착란 증가량</Korean>
+            <Japanese>夜間の精神錯乱増加度</Japanese>
+            <Chinese>夜間精神錯亂增加值</Chinese>
+            <Chinesesimp>夜间精神错乱增加值</Chinesesimp>
+            <Turkish>Gece Psikoz Artışı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Psychosis_PsychosisNightIncDesc">
+            <English>Added psychosis value from Night time</English>
+            <Czech>Přidaná hodnota psychózy z nočního času</Czech>
+            <French>Valeur de psychose ajoutée par la période nocturne</French>
+            <Spanish>Valor de psicosis adicional obtenido durante la noche</Spanish>
+            <Italian>Valore di psicosi aggiuntivo accumulato durante la notte</Italian>
+            <Polish>Dodatkowa wartość psychozy wynikająca z pory nocnej</Polish>
+            <Portuguese>Valor de psicose adicionado pelo período noturno</Portuguese>
+            <Russian>Дополнительное значение психоза, начисляемое в ночное время</Russian>
+            <German>Zusätzlicher Psychosewert durch die Nachtzeit</German>
+            <Korean>야간 시간대에 추가되는 정신착란 수치입니다.</Korean>
+            <Japanese>夜間時間帯に加算される精神錯乱の数値です。</Japanese>
+            <Chinese>夜間環境下額外累積的精神錯亂數值。</Chinese>
+            <Chinesesimp>夜间环境下额外累积的精神错乱数值。</Chinesesimp>
+            <Turkish>Gece vaktinden dolayı eklenen psikoz değeri</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Psychosis_PsychosisTimer">
+            <English>Psychosis Cycle Timer</English>
+            <Czech>Časovač cyklu psychózy</Czech>
+            <French>Chronomètre du cycle de psychose</French>
+            <Spanish>Temporizador del ciclo de psicosis</Spanish>
+            <Italian>Timer del ciclo di psicosi</Italian>
+            <Polish>Licznik cyklu psychozy</Polish>
+            <Portuguese>Temporizador do ciclo de psicose</Portuguese>
+            <Russian>Таймер цикла психоза</Russian>
+            <German>Psychose-Zyklus-Timer</German>
+            <Korean>정신착란 주기 타이머</Korean>
+            <Japanese>精神錯乱サイクルタイマー</Japanese>
+            <Chinese>精神錯亂循環計時器</Chinese>
+            <Chinesesimp>精神错乱循环计时器</Chinesesimp>
+            <Turkish>Psikoz Döngü Zamanlayıcısı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Psychosis_PsychosisTimerDesc">
+            <English>How often is the psychosis value updated?</English>
+            <Czech>Jak často se aktualizuje hodnota psychózy?</Czech>
+            <French>À quelle fréquence la valeur de psychose est-elle mise à jour ?</French>
+            <Spanish>¿Con qué frecuencia se actualiza el valor de psicosis?</Spanish>
+            <Italian>Ogni quanto tempo viene aggiornato il valore della psicosi?</Italian>
+            <Polish>Jak często aktualizowana jest wartość psychozy?</Polish>
+            <Portuguese>Com que frequência o valor de psicose é atualizado?</Portuguese>
+            <Russian>Как часто обновляется значение психоза?</Russian>
+            <German>Wie oft wird der Psychosewert aktualisiert?</German>
+            <Korean>정신착란 수치가 얼마나 자주 갱신됩니까?</Korean>
+            <Japanese>精神錯乱の数値はどのくらいの頻度で更新されますか？</Japanese>
+            <Chinese>精神錯亂數值每隔多久更新一次？</Chinese>
+            <Chinesesimp>精神错乱数值每隔多久更新一次？</Chinesesimp>
+            <Turkish>Psikoz değeri ne sıklıkla güncellenir?</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Psychosis_ShadowsMoving">
+            <English>The shadows are moving..</English>
+            <Czech>Stíny se hýbou..</Czech>
+            <French>Les ombres bougent..</French>
+            <Spanish>Las sombras se mueven..</Spanish>
+            <Italian>Le ombre si muovono..</Italian>
+            <Polish>Cienie się poruszają..</Polish>
+            <Portuguese>As sombras estão a mover-se..</Portuguese>
+            <Russian>Тени шевелятся..</Russian>
+            <German>Die Schatten bewegen sich..</German>
+            <Korean>그림자들이 움직이고 있습니다..</Korean>
+            <Japanese>影が動いている..</Japanese>
+            <Chinese>陰影正在扭曲蠕動..</Chinese>
+            <Chinesesimp>阴影正在扭曲蠕动..</Chinesesimp>
+            <Turkish>Gölgeler hareket ediyor..</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Psychosis_TextNotifiers">
+            <English>Text notifiers</English>
+            <Czech>Textová upozornění</Czech>
+            <French>Notifications textuelles</French>
+            <Spanish>Notificaciones de texto</Spanish>
+            <Italian>Notifiche di testo</Italian>
+            <Polish>Powiadomienia tekstowe</Polish>
+            <Portuguese>Notificações de texto</Portuguese>
+            <Russian>Текстовые уведомления</Russian>
+            <German>Textbenachrichtigungen</German>
+            <Korean>텍스트 알림</Korean>
+            <Japanese>テキスト通知</Japanese>
+            <Chinese>文本提示</Chinese>
+            <Chinesesimp>文本提示</Chinesesimp>
+            <Turkish>Metin Bildirimleri</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Psychosis_TextNotifiersDesc">
+            <English>Enable psychosis text notifications?</English>
+            <Czech>Povolit textová upozornění na psychózu?</Czech>
+            <French>Activer les notifications textuelles de psychose ?</French>
+            <Spanish>¿Activar las notificaciones de texto de psicosis?</Spanish>
+            <Italian>Abilitare le notifiche di testo della psicosi?</Italian>
+            <Polish>Włączyć tekstowe powiadomienia o psychozie?</Polish>
+            <Portuguese>Ativar notificações de texto de psicose?</Portuguese>
+            <Russian>Включить текстовые уведомления о психозе?</Russian>
+            <German>Textbenachrichtigungen für Psychose aktivieren?</German>
+            <Korean>정신착란 텍스트 알림을 활성화하시겠습니까?</Korean>
+            <Japanese>精神錯乱のテキスト通知を有効にしますか？</Japanese>
+            <Chinese>是否啟用精神錯亂文本通知？</Chinese>
+            <Chinesesimp>是否启用精神错乱文本通知？</Chinesesimp>
+            <Turkish>Psikoz metin bildirimleri etkinleştirilsin mi?</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Psychosis_Uneasy">
+            <English>You feel uneasy..</English>
+            <Czech>Cítíš se neklidně..</Czech>
+            <French>Vous vous sentez mal à l'aise..</French>
+            <Spanish>Te sientes inquieto..</Spanish>
+            <Italian>Ti senti inquieto..</Italian>
+            <Polish>Czujesz niepokój..</Polish>
+            <Portuguese>Sentes-te inquieto..</Portuguese>
+            <Russian>Вам не по себе..</Russian>
+            <German>Du fühlst dich unbehaglich..</German>
+            <Korean>마음이 불안해집니다..</Korean>
+            <Japanese>胸騒ぎがする..</Japanese>
+            <Chinese>你感到惶恐不安..</Chinese>
+            <Chinesesimp>你感到惶恐不安..</Chinesesimp>
+            <Turkish>Huzursuz hissediyorsun..</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Psychosis_UnnaturalEntities">
+            <English>Unnatural Entities Increase</English>
+            <Czech>Nárůst z nepřirozených entit</Czech>
+            <French>Augmentation par entités surnaturelles</French>
+            <Spanish>Aumento por entidades sobrenaturales</Spanish>
+            <Italian>Aumento da entità innaturali</Italian>
+            <Polish>Wzrost od nadprzyrodzonych istot</Polish>
+            <Portuguese>Aumento por entidades sobrenaturais</Portuguese>
+            <Russian>Прирост от неестественных существ</Russian>
+            <German>Erhöhung durch unnatürliche Entitäten</German>
+            <Korean>초자연적 존재로 인한 증가량</Korean>
+            <Japanese>非自然的な存在による増加度</Japanese>
+            <Chinese>異常超自然實體增加值</Chinese>
+            <Chinesesimp>异常超自然实体增加值</Chinesesimp>
+            <Turkish>Doğaüstü Varlık Artışı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Psychosis_UnnaturalEntitiesDesc">
+            <English>Additional psychosis value from strange entities (Anomalies, Spooks, Zombies etc.)</English>
+            <Czech>Dodatečná hodnota psychózy ze zvláštních entit (Anomálie, Přízraky, Zombie atd.)</Czech>
+            <French>Valeur de psychose supplémentaire causée par des entités étranges (Anomalies, Spectres, Zombies, etc.)</French>
+            <Spanish>Valor de psicosis adicional provocado por entidades extrañas (Anomalías, Espectros, Zombis, etc.)</Spanish>
+            <Italian>Valore di psicosi aggiuntivo causato da strane entità (Anomalie, Spettri, Zombie, ecc.)</Italian>
+            <Polish>Dodatkowa wartość psychozy generowana przez dziwne istoty (Anomalie, Zjawy, Zombie itp.)</Polish>
+            <Portuguese>Valor de psicose adicional causado por entidades estranhas (Anomalias, Espreitadores, Zombies, etc.)</Portuguese>
+            <Russian>Дополнительное значение психоза от контакта со странными существами (аномалии, призраки, зомби и т.д.)</Russian>
+            <German>Zusätzlicher Psychosewert durch seltsame Entitäten (Anomalien, Geister, Zombies usw.)</German>
+            <Korean>기이한 존재들(변칙 현상, 유령, 좀비 등) 근처에 있을 때 추가되는 정신착란 수치입니다.</Korean>
+            <Japanese>奇妙な存在（アノマリー、幽霊、ゾンビなど）から受ける精神錯乱の追加値です。</Japanese>
+            <Chinese>靠近未知/異常實體（異常點、幽靈、殭屍等）時額外增加的精神錯亂數值。</Chinese>
+            <Chinesesimp>靠近未知/异常实体（异常点、幽灵、僵尸等）时额外增加的精神错乱数值。</Chinesesimp>
+            <Turkish>Garip varlıklardan (Anomaliler, Hayaletler, Zombiler vb.) kaynaklanan ek psikoz değeri</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Psychosis_WatchingMe">
+            <English>They're watching me..</English>
+            <Czech>Sledují mě..</Czech>
+            <French>Ils me regardent..</French>
+            <Spanish>Me están mirando..</Spanish>
+            <Italian>Mi stanno guardando..</Italian>
+            <Polish>Oni mnie obserwują..</Polish>
+            <Portuguese>Eles estão a olhar für mim..</Portuguese>
+            <Russian>Они смотрят на меня..</Russian>
+            <German>Sie beobachten mich..</German>
+            <Korean>그들이 나를 지켜보고 있어..</Korean>
+            <Japanese>奴らが私を見ている..</Japanese>
+            <Chinese>他們在看著我..</Chinese>
+            <Chinesesimp>他们在看着我..</Chinesesimp>
+            <Turkish>Beni izliyorlar..</Turkish>
+        </Key>
+    </Package>
+</Project>

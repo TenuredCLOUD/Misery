@@ -1,9 +1,9 @@
-private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
+private _category = format ["Misery %1", localize LSTRING(Component)];
 
 [
     QGVAR(marketshiftDistance),
     "SLIDER",
-    ["Distance check", "Distance that the shop manager checks for players near traders in meters"],
+    [LSTRING(DistanceCheck), LSTRING(DistanceCheckDesc)],
     _category,
     [50, 20000, 1000, 0],
     1
@@ -12,7 +12,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(marketshiftCycle),
     "SLIDER",
-    ["Changing cycle 'Market shift'", "Time in seconds per cycle (default: 3600 - 1 Real time hour)"],
+    [LSTRING(MarketShift), LSTRING(MarketShiftDesc)],
     _category,
     [1, 86400, 3600, 0],
     1
@@ -21,30 +21,30 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(economyMode),
     "LIST",
-    ["Economy Mode", "Sets trader economy difficulty"],
+    [LSTRING(EconomyMode), LSTRING(EconomyModeDesc)],
     _category,
     [
-        ["normal", "recession", "hyperinflation", "depression"],
-        ["The most stable market.", "A Medium level of difficulty with the market.", "Harder variant of the market.", "Brutal, hardest level of the economy."],
+        [LSTRING(Normal), LSTRING(Recession), LSTRING(Hyperinflation), LSTRING(Depression)],
+        [LSTRING(NormalDesc), LSTRING(RecessionDesc), LSTRING(HyperinflationDesc), LSTRING(DepressionDesc)],
         0
     ],
     1,
     {
         params ["_value"];
         switch (_value) do {
-            case "normal": {
+            case LSTRING(Normal): {
                 GVAR(markup) = 1.1;
                 GVAR(markdown) = 0.9;
             };
-            case "recession": {
+            case LSTRING(Recession): {
                 GVAR(markup) = 1.4;
                 GVAR(markdown) = 0.7;
             };
-            case "hyperinflation": {
+            case LSTRING(Hyperinflation): {
                 GVAR(markup) = 2.5;
                 GVAR(markdown) = 0.6;
             };
-            case "depression": {
+            case LSTRING(Depression): {
                 GVAR(markup) = 2.0;
                 GVAR(markdown) = 0.4;
             };

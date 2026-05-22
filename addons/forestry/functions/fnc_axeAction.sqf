@@ -19,15 +19,15 @@
 params ["_found", "_tree", "_damaged", "_hasAxe"];
 
 if !(_found) exitWith {
-    [QEGVAR(common,tileText), format ["You need to be near a tree to start chopping wood..."]] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), format [localize LSTRING(NeedTreeChopping)]] call CBA_fnc_localEvent;
 };
 
 if (_damaged) exitWith {
-    [QEGVAR(common,tileText), format ["Tree has fallen, doesn't have anymore wood..."]] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), format [localize LSTRING(TreeEmpty)]] call CBA_fnc_localEvent;
 };
 
 if !(_hasAxe) exitWith {
-    [QEGVAR(common,tileText), localize ECSTRING(common,NoAxeForWoodNoti)] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(NoAxeForWoodNoti)] call CBA_fnc_localEvent;
 };
 
 if (currentWeapon player isNotEqualTo "") then {
@@ -39,7 +39,7 @@ _soundDummy attachTo [player, [0, 0, 0], "Pelvis"];
 
 _soundDummy say3D [QCLASS(audio_sound_chopWood), 500];
 
-["Chopping wood...",
+[localize LSTRING(ChoppingProgress),
 15,
 {_found && _hasAxe},
 {
@@ -62,7 +62,7 @@ _soundDummy say3D [QCLASS(audio_sound_chopWood), 500];
         deleteVehicle _soundDummy;
     };
 
-    [QEGVAR(common,tileText), "You stop cutting down the tree..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(StopCutting)] call CBA_fnc_localEvent;
 },
 [_tree, _soundDummy]
 ] call CBA_fnc_progressBar;

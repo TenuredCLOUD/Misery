@@ -13,7 +13,7 @@ class CLASS(fishing_ui) {
         };
         class CLASS(fishing_prompt): RscText {
             idc = -1;
-            text = "Fishing";
+            text = ECSTRING(fishing,Name);
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
             y = 0 * GUI_GRID_H + GUI_GRID_Y;
             w = 22 * GUI_GRID_W;
@@ -31,7 +31,7 @@ class CLASS(fishing_ui) {
         };
         class CLASS(fishing_lineTension_prompt): RscText {
             idc = 1010;
-            text = "Line tension:";
+            text = ECSTRING(fishing,TensionLabel);
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
             y = 6.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 22 * GUI_GRID_W;
@@ -41,7 +41,7 @@ class CLASS(fishing_ui) {
         };
         class CLASS(fishing_lineOut_prompt): RscText {
             idc = 1012;
-            text = "Line out:";
+            text = ECSTRING(fishing,LineOutLabel);
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
             y = 10 * GUI_GRID_H + GUI_GRID_Y;
             w = 22 * GUI_GRID_W;
@@ -55,7 +55,7 @@ class CLASS(fishing_ui) {
             idc = 1600;
             colorFocused[] = {0.5,0.5,0.5,0.7};
             onButtonClick = QUOTE([] call EFUNC(fishing,castLine));
-            text = "Cast line";
+            text = ECSTRING(fishing,CastAction);
             x = 31 * GUI_GRID_W + GUI_GRID_X;
             y = 7.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;
@@ -69,7 +69,7 @@ class CLASS(fishing_ui) {
         class CLASS(fishing_exit): RscButton {
             idc = 1602;
             colorFocused[] = {0.5,0.5,0.5,0.7};
-            text = "Exit";
+            text = ECSTRING(common,Exit);
             x = 31.5 * GUI_GRID_W + GUI_GRID_X;
             y = 18 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;

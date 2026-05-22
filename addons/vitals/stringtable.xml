@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Vitals">
+        <Key ID="STR_MISERY_Vitals_Ailments">
+            <English>Ailments:</English>
+            <Czech>Neduhy:</Czech>
+            <French>Affections :</French>
+            <Spanish>Dolencias:</Spanish>
+            <Italian>Malattie:</Italian>
+            <Polish>Dolegliwości:</Polish>
+            <Portuguese>Enfermidades:</Portuguese>
+            <Russian>Недуги:</Russian>
+            <German>Leiden:</German>
+            <Korean>질병 및 이상 상태:</Korean>
+            <Japanese>状態異常・疾患:</Japanese>
+            <Chinese>疾病與異常狀態:</Chinese>
+            <Chinesesimp>疾病与异常状态:</Chinesesimp>
+            <Turkish>Hastalıklar:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Vitals_Buffs">
+            <English>Buffs:</English>
+            <Czech>Posílení:</Czech>
+            <French>Bonus :</French>
+            <Spanish>Bonificaciones:</Spanish>
+            <Italian>Potenziamenti:</Italian>
+            <Polish>Wzmocnienia:</Polish>
+            <Portuguese>Efeitos positivos:</Portuguese>
+            <Russian>Баффы:</Russian>
+            <German>Effekte:</German>
+            <Korean>버프 수치:</Korean>
+            <Japanese>バフ効果:</Japanese>
+            <Chinese>正面增益:</Chinese>
+            <Chinesesimp>正面增益:</Chinesesimp>
+            <Turkish>Destekler:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Vitals_Fatigue">
+            <English>Fatigue:</English>
+            <Czech>Únava:</Czech>
+            <French>Fatigue :</French>
+            <Spanish>Fatiga:</Spanish>
+            <Italian>Fatica:</Italian>
+            <Polish>Zmęczenie:</Polish>
+            <Portuguese>Fadiga:</Portuguese>
+            <Russian>Усталость:</Russian>
+            <German>Müdigkeit:</German>
+            <Korean>피로도:</Korean>
+            <Japanese>疲労度:</Japanese>
+            <Chinese>疲勞值:</Chinese>
+            <Chinesesimp>疲劳值:</Chinesesimp>
+            <Turkish>Yorgunluk:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Vitals_GasMask">
+            <English>Gas Mask:</English>
+            <Czech>Plynová maska:</Czech>
+            <French>Masque à gaz :</French>
+            <Spanish>Máscara antigás:</Spanish>
+            <Italian>Maschera antigas:</Italian>
+            <Polish>Maska przeciwgazowa:</Polish>
+            <Portuguese>Mascara de gás:</Portuguese>
+            <Russian>Противогаз:</Russian>
+            <German>Gasmaske:</German>
+            <Korean>방독면 상태:</Korean>
+            <Japanese>ガスマスク:</Japanese>
+            <Chinese>防毒面具狀態:</Chinese>
+            <Chinesesimp>防毒面具状态:</Chinesesimp>
+            <Turkish>Gaz Maskesi:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Vitals_Hunger">
+            <English>Hunger:</English>
+            <Czech>Hlad:</Czech>
+            <French>Faim :</French>
+            <Spanish>Hambre:</Spanish>
+            <Italian>Fame:</Italian>
+            <Polish>Głód:</Polish>
+            <Portuguese>Fome:</Portuguese>
+            <Russian>Голод:</Russian>
+            <German>Hunger:</German>
+            <Korean>허기 상태:</Korean>
+            <Japanese>空腹度:</Japanese>
+            <Chinese>飢餓值:</Chinese>
+            <Chinesesimp>饥饿值:</Chinesesimp>
+            <Turkish>Açlık:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Vitals_Thirst">
+            <English>Thirst:</English>
+            <Czech>Žízeň:</Czech>
+            <French>Soif :</French>
+            <Spanish>Sed:</Spanish>
+            <Italian>Sete:</Italian>
+            <Polish>Pragnienie:</Polish>
+            <Portuguese>Sede:</Portuguese>
+            <Russian>Жажда:</Russian>
+            <German>Durst:</German>
+            <Korean>갈증 상태:</Korean>
+            <Japanese>渇き度:</Japanese>
+            <Chinese>口渴值:</Chinese>
+            <Chinesesimp>口渴值:</Chinesesimp>
+            <Turkish>Susuzluk:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Vitals_Wetness">
+            <English>Wetness:</English>
+            <Czech>Vlhkost:</Czech>
+            <French>Humidité :</French>
+            <Spanish>Humedad:</Spanish>
+            <Italian>Umidità:</Italian>
+            <Polish>Wilgotność:</Polish>
+            <Portuguese>Humidade:</Portuguese>
+            <Russian>Влажность:</Russian>
+            <German>Nässe:</German>
+            <Korean>수분/침수도:</Korean>
+            <Japanese>濡れ具合:</Japanese>
+            <Chinese>潮濕度:</Chinese>
+            <Chinesesimp>潮湿度:</Chinesesimp>
+            <Turkish>Islaklık:</Turkish>
+        </Key>
+    </Package>
+</Project>

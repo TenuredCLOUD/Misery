@@ -12,7 +12,7 @@ if (isClass (missionConfigFile >> "CfgMisery_ForgeData")) then {
 
     private _forgeAction = [
         QGVAR(forge_menu),
-        localize ECSTRING(common,UseForge),
+        localize LSTRING(Action),
         QPATHTOEF(icons,data\anvil_ca.paa),
         {
             params ["_target", "_player"];

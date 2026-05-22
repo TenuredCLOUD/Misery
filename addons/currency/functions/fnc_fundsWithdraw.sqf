@@ -19,7 +19,7 @@ call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", ""
 private _amount = (ctrlText ((findDisplay 483729) displayCtrl 1400)) call BIS_fnc_parseNumber;
 
 if (_amount <= 0) exitWith {
-    [QEGVAR(common,tileText), "Invalid withdrawal amount..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(InvalidWithdraw)] call CBA_fnc_localEvent;
 };
 
 private _taxAmount = 0;
@@ -32,7 +32,7 @@ if (GVAR(bankTax)) then {
 };
 
 if (_totalDeduction > _bankedFunds) exitWith {
-    [QEGVAR(common,tileText), "You don't have enough funds for this withdrawal..."] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(NotEnoughWithdraw)] call CBA_fnc_localEvent;
 };
 
 // Add full amount to cash
@@ -42,9 +42,9 @@ if (_totalDeduction > _bankedFunds) exitWith {
 [-_totalDeduction, true] call FUNC(modifyMoney);
 
 private _message = if (_taxAmount > 0) then {
-    format ["Withdrew: %2 %1 (Tax: %2 %3)", [_amount, 1, 2, true] call CBA_fnc_formatNumber, GVAR(symbol), [_taxAmount, 1, 2, true] call CBA_fnc_formatNumber]
+    format [localize LSTRING(WithdrewTax), [_amount, 1, 2, true] call CBA_fnc_formatNumber, GVAR(symbol), [_taxAmount, 1, 2, true] call CBA_fnc_formatNumber]
 } else {
-    format ["Withdrew: %2 %1", [_amount, 1, 2, true] call CBA_fnc_formatNumber, GVAR(symbol)]
+    format [localize LSTRING(Withdrew), [_amount, 1, 2, true] call CBA_fnc_formatNumber, GVAR(symbol)]
 };
 
 [QEGVAR(common,tileText), _message] call CBA_fnc_localEvent;

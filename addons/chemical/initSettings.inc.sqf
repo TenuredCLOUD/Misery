@@ -1,9 +1,9 @@
-private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
+private _category = format ["Misery %1", localize LSTRING(Component)];
 
 [
     QGVAR(areas),
     "EDITBOX",
-    ["Chemical Areas", "ELLIPSE or RECTANGLE marker names covering the radioactive area as strings ['Chemical_1', 'Chemical_2']"],
+    [LSTRING(Areas), LSTRING(AreasDesc)],
     _category,
     "[]",
     1
@@ -12,7 +12,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(initialColor),
     "COLOR",
-    ["Chemical areas initial color", "Initial starting color of chemical zones - RGBA format"],
+    [LSTRING(InitialColor), LSTRING(InitialColorDesc)],
     _category,
     [1, 1, 0, 0]
 ] call CBA_fnc_addSetting;
@@ -20,7 +20,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(finalColor),
     "COLOR",
-    ["Chemical areas final color", "Final color of chemical zones - RGBA format"],
+    [LSTRING(FinalColor), LSTRING(FinalColorDesc)],
     _category,
     [1, 1, 0, 1]
 ] call CBA_fnc_addSetting;

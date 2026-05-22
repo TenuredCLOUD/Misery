@@ -69,7 +69,7 @@ class CLASS(forge_ui) {
             idc = 1603;
             colorFocused[] = {0.5,0.5,0.5,0.7};
             onButtonClick = QUOTE([] call EFUNC(forge,showRecipe));
-            text = "Show Recipe"; //--- ToDo: Localize;
+            text = ECSTRING(common,ShowRecipe);
             x = 19 * GUI_GRID_W + GUI_GRID_X;
             y = 9.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;
@@ -95,7 +95,7 @@ class CLASS(forge_ui) {
         };
         class CLASS(forge_exit): RscButton {
             idc = 1602;
-            text = "Exit";
+            text = ECSTRING(common,Exit);
             x = 31.5 * GUI_GRID_W + GUI_GRID_X;
             y = 15.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;

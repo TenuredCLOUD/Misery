@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Anvil">
+        <Key ID="STR_MISERY_Anvil_Interrupted">
+            <English>Smithing interrupted...</English>
+            <Czech>Kování přerušeno...</Czech>
+            <French>Forgeage interrompu...</French>
+            <Spanish>Herrería interrumpida...</Spanish>
+            <Italian>Forgiatura interrotta...</Italian>
+            <Polish>Wykuwanie przerwane...</Polish>
+            <Portuguese>Forjamento interrompido...</Portuguese>
+            <Russian>Ковка прервана...</Russian>
+            <German>Schmieden unterbrochen...</German>
+            <Korean>제작이 중단되었습니다...</Korean>
+            <Japanese>鍛造が中断されました...</Japanese>
+            <Chinese>鍛造已中斷...</Chinese>
+            <Chinesesimp>锻造已中断...</Chinesesimp>
+            <Turkish>Demircilik yarıda kesildi...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Anvil_MissingItems">
+            <English>You don’t have those materials...</English>
+            <Czech>Tyto materiály nemáte...</Czech>
+            <French>Vous n'avez pas ces matériaux...</French>
+            <Spanish>No tienes esos materiales...</Spanish>
+            <Italian>Non hai quei materiali...</Italian>
+            <Polish>Nie masz tych materiałów...</Polish>
+            <Portuguese>Você não tem esses materiais...</Portuguese>
+            <Russian>У вас нет этих материалов...</Russian>
+            <German>Du hast diese Materialien nicht...</German>
+            <Korean>해당 재료를 가지고 있지 않습니다...</Korean>
+            <Japanese>それらの材料を持っていません...</Japanese>
+            <Chinese>你沒有那些材料...</Chinese>
+            <Chinesesimp>你没有那些材料...</Chinesesimp>
+            <Turkish>Bu malzemelere sahip değilsiniz...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Anvil_NeedForge">
+            <English>You need a forge near your anvil in order to smith items...</English>
+            <Czech>K vykování předmětů potřebujete výheň poblíž kovadliny...</Czech>
+            <French>Vous avez besoin d'une forge près de votre enclume pour forger des objets...</French>
+            <Spanish>Necesitas una forja cerca de tu yunque para forjar objetos...</Spanish>
+            <Italian>Hai bisogno di una fucina vicino all'incudine per forgiare oggetti...</Italian>
+            <Polish>Potrzebujesz kuźni blisko kowadła, aby wykuwać przedmioty...</Polish>
+            <Portuguese>Você precisa de uma forja perto da sua bigorna para forjar itens...</Portuguese>
+            <Russian>Для ковки предметов вам нужна кузница рядом с наковальней...</Russian>
+            <German>Du benötigst eine Esse in der Nähe deines Ambosses, um Gegenstände zu schmieden...</German>
+            <Korean>아이템을 제작하려면 모루 근처에 화덕이 필요합니다...</Korean>
+            <Japanese>アイテムを鍛造するには、金床の近くに鍛冶場が必要です...</Japanese>
+            <Chinese>你需要在鐵砧附近有一個熔爐才能鍛造物品...</Chinese>
+            <Chinesesimp>你需要在铁砧附近有一个熔炉才能锻造物品...</Chinesesimp>
+            <Turkish>Eşya dövmek için örsünüzün yanında bir ocağa ihtiyacınız var...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Anvil_NeedHammer">
+            <English>You need a hammer to process ingots...</English>
+            <Czech>K opracování ingotů potřebujete kladivo...</Czech>
+            <French>Vous avez besoin d'un marteau pour traiter les lingots...</French>
+            <Spanish>Necesitas un martillo para procesar los lingotes...</Spanish>
+            <Italian>Hai bisogno di un martello per lavorare i lingotti...</Italian>
+            <Polish>Potrzebujesz młota, aby przetworzyć sztabki...</Polish>
+            <Portuguese>Você precisa de um martelo para processar os lingotes...</Portuguese>
+            <Russian>Для обработки слитков вам нужен молот...</Russian>
+            <German>Du benötigst einen Hammer, um Barren zu bearbeiten...</German>
+            <Korean>주괴를 가공하려면 망치가 필요합니다...</Korean>
+            <Japanese>インゴットを加工するにはハンマーが必要です...</Japanese>
+            <Chinese>你需要一把錘子來處理金屬錠...</Chinese>
+            <Chinesesimp>你需要一把锤子来处理金属锭...</Chinesesimp>
+            <Turkish>Külçeleri işlemek için bir çekice ihtiyacınız var...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Anvil_NoFuel">
+            <English>Nearest forge doesn't have enough fuel to reheat ingots...</English>
+            <Czech>Nejbližší výheň nemá dostatek paliva pro ohřátí ingotů...</Czech>
+            <French>La forge la plus proche n'a pas assez de combustible pour réchauffer les lingots...</French>
+            <Spanish>La forja más cercana no tiene suficiente combustible para recalentar los lingotes...</Spanish>
+            <Italian>La fucina più vicina non ha abbastanza combustibile per riscaldare i lingotti...</Italian>
+            <Polish>Najbliższa kuźnia nie ma wystarczającej ilości paliwa, aby ponownie rozgrzać sztabki...</Polish>
+            <Portuguese>A forja mais próxima não tem combustível suficiente para reaquecer os lingotes...</Portuguese>
+            <Russian>В ближайшей кузнице недостаточно топлива для разогрева слитков...</Russian>
+            <German>Die nächste Esse hat nicht genug Brennstoff, um die Barren zu erhitzen...</German>
+            <Korean>가장 가까운 화덕에 주괴를 다시 데울 연료가 부족합니다...</Korean>
+            <Japanese>最寄りの鍛冶場にはインゴットを再加熱するための燃料が不足しています...</Japanese>
+            <Chinese>最近的熔爐沒有足夠的燃料來重新加熱金屬錠...</Chinese>
+            <Chinesesimp>最近的熔炉没有足够的燃料来重新加热金属锭...</Chinesesimp>
+            <Turkish>En yakın ocakta külçeleri yeniden ısıtmak için yeterli yakıt yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Anvil_NoMaterial">
+            <English>No matching material found...</English>
+            <Czech>Nenalezen žádný odpovídající materiál...</Czech>
+            <French>Aucun matériau correspondant trouvé...</French>
+            <Spanish>No se encontró material coincidente...</Spanish>
+            <Italian>Nessun materiale corrispondente trovato...</Italian>
+            <Polish>Nie znaleziono pasującego materiału...</Polish>
+            <Portuguese>Nenhum material correspondente encontrado...</Portuguese>
+            <Russian>Соответствующий материал не найден...</Russian>
+            <German>Kein passendes Material gefunden...</German>
+            <Korean>일치하는 재료를 찾을 수 없습니다...</Korean>
+            <Japanese>一致する材料が見つかりません...</Japanese>
+            <Chinese>未找到匹配的材料...</Chinese>
+            <Chinesesimp>未找到匹配的材料...</Chinesesimp>
+            <Turkish>Eşleşen malzeme bulunamadı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Anvil_NoSmeltSelected">
+            <English>No smelt materials selected...</English>
+            <Czech>Nebyly vybrány žádné materiály k tavení...</Czech>
+            <French>Aucun matériau de fusion sélectionné...</French>
+            <Spanish>No se han seleccionado materiales para fundir...</Spanish>
+            <Italian>Nessun materiale da fusione selezionato...</Italian>
+            <Polish>Nie wybrano materiałów do wytopu...</Polish>
+            <Portuguese>Nenhum material de fundição selecionado...</Portuguese>
+            <Russian>Материалы для плавки не выбраны...</Russian>
+            <German>Keine Schmelzmaterialien ausgewählt...</German>
+            <Korean>제련할 재료가 선택되지 않았습니다...</Korean>
+            <Japanese>製錬材料が選択されていません...</Japanese>
+            <Chinese>未選擇熔煉材料...</Chinese>
+            <Chinesesimp>未选择熔炼材料...</Chinesesimp>
+            <Turkish>Eritilecek malzeme seçilmedi...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Anvil_Progress">
+            <English>Smithing materials... %1%2 complete</English>
+            <Czech>Kování materiálů... %1 %2 hotovo</Czech>
+            <French>Forgeage des matériaux... %1%2 terminé</French>
+            <Spanish>Forjando materiales... %1%2 completado</Spanish>
+            <Italian>Forgiatura materiali... %1%2 completata</Italian>
+            <Polish>Wykuwanie materiałów... ukończono %1%2</Polish>
+            <Portuguese>Forjando materiais... %1%2 concluído</Portuguese>
+            <Russian>Ковка материалов... %1%2 завершено</Russian>
+            <German>Materialien werden geschmiedet... %1%2 abgeschlossen</German>
+            <Korean>재료 제작 중... %1%2 완료</Korean>
+            <Japanese>材料を鍛造中... %1%2 完了</Japanese>
+            <Chinese>正在鍛造材料... %1%2 已完成</Chinese>
+            <Chinesesimp>正在锻造材料... %1%2 已完成</Chinesesimp>
+            <Turkish>Malzemeler dövülüyor... %1%2 tamamlandı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Anvil_RequiredMaterials">
+            <English>Required materials:</English>
+            <Czech>Požadované materiály:</Czech>
+            <French>Matériaux requis :</French>
+            <Spanish>Materiales requeridos:</Spanish>
+            <Italian>Materiali richiesti:</Italian>
+            <Polish>Wymagane materiały:</Polish>
+            <Portuguese>Materiais necessários:</Portuguese>
+            <Russian>Необходимые материалы:</Russian>
+            <German>Erforderliche Materialien:</German>
+            <Korean>필요한 재료:</Korean>
+            <Japanese>必要な材料:</Japanese>
+            <Chinese>所需材料:</Chinese>
+            <Chinesesimp>所需材料:</Chinesesimp>
+            <Turkish>Gerekli malzemeler:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Anvil_SmithingAnvil">
+            <English>Smithing Anvil</English>
+            <Czech>Kovářská kovadlina</Czech>
+            <French>Enclume de forgeron</French>
+            <Spanish>Yunque de herrería</Spanish>
+            <Italian>Incudine da fabbro</Italian>
+            <Polish>Kowadło kowalskie</Polish>
+            <Portuguese>Bigorna de ferreiro</Portuguese>
+            <Russian>Кузнечная наковальня</Russian>
+            <German>Schmiedeamboss</German>
+            <Korean>대장간 모역</Korean>
+            <Japanese>鍛冶屋の金床</Japanese>
+            <Chinese>鍛造鐵砧</Chinese>
+            <Chinesesimp>锻造铁砧</Chinesesimp>
+            <Turkish>Demirci Örsü</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Anvil_Success">
+            <English>You successfully smithed: %1...</English>
+            <Czech>Úspěšně jsi vykoval: %1...</Czech>
+            <French>Vous avez forgé avec succès : %1...</French>
+            <Spanish>Has forjado con éxito: %1...</Spanish>
+            <Italian>Hai forgiato con successo: %1...</Italian>
+            <Polish>Pomyślnie wykuto: %1...</Polish>
+            <Portuguese>Você forjou com sucesso: %1...</Portuguese>
+            <Russian>Вы успешно выковали: %1...</Russian>
+            <German>Du hast erfolgreich geschmiedet: %1...</German>
+            <Korean>%1 제작에 성공했습니다...</Korean>
+            <Japanese>%1 の鍛造に成功しました...</Japanese>
+            <Chinese>你成功鍛造了: %1...</Chinese>
+            <Chinesesimp>你成功锻造了: %1...</Chinesesimp>
+            <Turkish>Başarıyla dövüldü: %1...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Anvil_UseAnvil">
+            <English>Use Anvil</English>
+            <Czech>Použití kovadliny</Czech>
+            <French>Utiliser l'enclume</French>
+            <Spanish>Usar yunque</Spanish>
+            <Italian>Utilizzare l'incudine</Italian>
+            <Polish>Użyj kowadła</Polish>
+            <Portuguese>Usar bigorna</Portuguese>
+            <Russian>Используйте наковальню</Russian>
+            <German>Amboss verwenden</German>
+            <Korean>모루 사용</Korean>
+            <Japanese>アンビルを使う</Japanese>
+            <Chinese>使用鐵砧</Chinese>
+            <Chinesesimp>使用铁砧</Chinesesimp>
+            <Turkish>Örs kullanın</Turkish>
+        </Key>
+    </Package>
+</Project>

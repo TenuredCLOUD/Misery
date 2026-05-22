@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Lantern">
+        <Key ID="STR_MISERY_Lantern_Action">
+            <English>Add 9v battery to lantern</English>
+            <Czech>Vložit 9V baterii do lucerny</Czech>
+            <French>Ajouter une pile 9V à la lanterne</French>
+            <Spanish>Añadir batería de 9v a la linterna</Spanish>
+            <Italian>Aggiungi batteria da 9v alla lanterna</Italian>
+            <Polish>Dodaj baterię 9V do latarni</Polish>
+            <Portuguese>Adicionar bateria de 9v à lanterna</Portuguese>
+            <Russian>Вставить батарейку 9V в фонарь</Russian>
+            <German>9V-Batterie in Laterne einsetzen</German>
+            <Korean>랜턴에 9V 배터리 추가</Korean>
+            <Japanese>ランタンに9V電池を入れる</Japanese>
+            <Chinese>將 9V 電池放入提燈</Chinese>
+            <Chinesesimp>将 9V 电池放入提灯</Chinesesimp>
+            <Turkish>Fenere 9v pil ekleyin</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Lantern_AddedBattery">
+            <English>You add a 9v battery to your lantern</English>
+            <Czech>Vložili jste 9V baterii do své lucerny</Czech>
+            <French>Vous ajoutez une pile 9V à votre lanterne</French>
+            <Spanish>Has añadido una batería de 9v a tu linterna</Spanish>
+            <Italian>Hai aggiunto una batteria da 9v alla tua lanterna</Italian>
+            <Polish>Dodajesz baterię 9V do swojej latarni</Polish>
+            <Portuguese>Adicionou uma bateria de 9v à sua lanterna</Portuguese>
+            <Russian>Вы вставили батарейку 9V в свой фонарь</Russian>
+            <German>Du hast eine 9V-Batterie in deine Laterne eingesetzt</German>
+            <Korean>랜턴에 9V 배터리를 추가했습니다</Korean>
+            <Japanese>ランタン에 9V電池를 1개 넣었습니다</Japanese>
+            <Chinese>您將 1 個 9V 電池放入了您的提燈</Chinese>
+            <Chinesesimp>您将 1 个 9V 电池放入了您的提灯</Chinesesimp>
+            <Turkish>Fenerinize 9v pil eklediniz</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Lantern_Component">
+            <English>Lantern</English>
+            <Czech>Lucerna</Czech>
+            <French>Lanterne</French>
+            <Spanish>Linterna</Spanish>
+            <Italian>Lanterna</Italian>
+            <Polish>Latarnia</Polish>
+            <Portuguese>Lanterna</Portuguese>
+            <Russian>Фонарь</Russian>
+            <German>Laterne</German>
+            <Korean>랜턴</Korean>
+            <Japanese>ランタン</Japanese>
+            <Chinese>提燈 / 提灯</Chinese>
+            <Chinesesimp>提灯</Chinesesimp>
+            <Turkish>Fener</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Lantern_MissingBatteries">
+            <English>You don't have any 9v batteries...</English>
+            <Czech>Nemáte žádné 9V baterie...</Czech>
+            <French>Vous n'avez pas de piles 9V...</French>
+            <Spanish>No tienes ninguna batería de 9v...</Spanish>
+            <Italian>Non hai batterie da 9v...</Italian>
+            <Polish>Nie masz żadnych baterii 9V...</Polish>
+            <Portuguese>Não tem nenhuma bateria de 9v...</Portuguese>
+            <Russian>У вас нет батареек 9V...</Russian>
+            <German>Du hast keine 9V-Batterien...</German>
+            <Korean>9V 배터리가 없습니다...</Korean>
+            <Japanese>9V電池を持っていません...</Japanese>
+            <Chinese>您沒有任何 9V 電池...</Chinese>
+            <Chinesesimp>您没有任何 9V 电池...</Chinesesimp>
+            <Turkish>Hiç 9v piliniz yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Lantern_NoBatteriesNeeded">
+            <English>You don't have a lantern that needs battery's...</English>
+            <Czech>Nemáte lucernu, která by potřebovala baterie...</Czech>
+            <French>Vous n'avez pas de lanterne qui nécessite des piles...</French>
+            <Spanish>No tienes ninguna linterna que necesite baterías...</Spanish>
+            <Italian>Non hai una lanterna che richieda batterie...</Italian>
+            <Polish>Nie masz latarni, která wymagałaby baterii...</Polish>
+            <Portuguese>Não tem nenhuma lanterna que precise de baterias...</Portuguese>
+            <Russian>У вас нет фонаря, которому требуются батарейки...</Russian>
+            <German>Du hast keine Laterne, die Batterien benötigt...</German>
+            <Korean>배터리가 필요한 랜턴이 없습니다...</Korean>
+            <Japanese>電池が必要なランタンを持っていません...</Japanese>
+            <Chinese>您沒有需要電池的提燈...</Chinese>
+            <Chinesesimp>您没有需要电池的提灯...</Chinesesimp>
+            <Turkish>Pille çalışan bir feneriniz yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Lantern_Toggle">
+            <English>Toggle Lantern</English>
+            <Czech>Přepnout lucernu</Czech>
+            <French>Basculer la lanterne</French>
+            <Spanish>Alternar linterna</Spanish>
+            <Italian>Alterna lanterna</Italian>
+            <Polish>Przełącz latarnię</Polish>
+            <Portuguese>Alternar lanterna</Portuguese>
+            <Russian>Переключить фонарь</Russian>
+            <German>Laterne umschalten</German>
+            <Korean>랜턴 토글</Korean>
+            <Japanese>ランタン切替</Japanese>
+            <Chinese>切換提燈</Chinese>
+            <Chinesesimp>切换提灯</Chinesesimp>
+            <Turkish>Feneri Aç/Kapat</Turkish>
+        </Key>
+    </Package>
+</Project>

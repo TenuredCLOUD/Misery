@@ -1,9 +1,9 @@
-private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
+private _category = format ["Misery %1", localize LSTRING(Component)];
 
 [
     QGVAR(areas),
     "EDITBOX",
-    ["Repair Areas", "ELLIPSE or RECTANGLE marker names covering the repair area as strings ['Repair_1', 'Repair_2']"],
+    [LSTRING(RepairAreas), LSTRING(RepairAreasDesc)],
     _category,
     "[]",
     1

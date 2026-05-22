@@ -33,7 +33,7 @@ call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", ""
 if (isNull _dialog) exitWith {};
 
 if (_currSelection < 0) exitWith {
-    ctrlSetText [1001, "No item selected..."];
+    ctrlSetText [1001, localize LSTRING(NoSelection)];
 };
 
 if (isNull _trader) exitWith {(findDisplay 982390) closeDisplay 2};
@@ -49,15 +49,15 @@ private _sellPrice = [_basePrice, _itemData select 2, _minCostFactor, _maxCostFa
 [_itemName] call EFUNC(common,getItemData) params ["_itemDisplayName"];
 
 switch (true) do {
-    case (_buttonAction isEqualTo "Buy"): {
+    case (_buttonAction isEqualTo localize LSTRING(Buy)): {
         if (_funds < _buyPrice) exitWith {
-            ctrlSetText [1001, "You cannot afford this!"];
+            ctrlSetText [1001, localize ECSTRING(common,TooExpensive)];
         };
         if (_stock isEqualTo 0) exitWith {
-            ctrlSetText [1001, format ["Out of stock: %1", [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck))]];
+            ctrlSetText [1001, format [localize LSTRING(OutOfStock), [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck))]];
         };
         if (_shopFunds < _buyPrice) exitWith {
-            ctrlSetText [1001, "Trader cannot afford this transaction!"];
+            ctrlSetText [1001, localize LSTRING(TraderInsufficientFunds)];
         };
         _itemData set [2, _stock - 1];
         _trader setVariable [QGVAR(shop), _shop, true];
@@ -70,16 +70,16 @@ switch (true) do {
             private _added = [player, _itemName, true] call CBA_fnc_addItem;
 
         };
-        ctrlSetText [1001, format ["%1 purchased for %2 %3", [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck)), EGVAR(currency,symbol), [_buyPrice, 1, 2, true] call CBA_fnc_formatNumber]];
+        ctrlSetText [1001, format [localize LSTRING(PurchaseSuccess), [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck)), EGVAR(currency,symbol), [_buyPrice, 1, 2, true] call CBA_fnc_formatNumber]];
         [] call FUNC(updateShop);
         [] call FUNC(processIcon);
     };
-    case (_buttonAction isEqualTo "Sell"): {
+    case (_buttonAction isEqualTo localize LSTRING(Sell)): {
         if ([_itemName] call EFUNC(common,countItem) isEqualTo 0) exitWith {
-            ctrlSetText [1001, "You don't have this item..."];
+            ctrlSetText [1001, localize LSTRING(MissingItem)];
         };
         if (_shopFunds < _sellPrice) exitWith {
-            ctrlSetText [1001, "Trader cannot afford this transaction!"];
+            ctrlSetText [1001, localize LSTRING(TraderInsufficientFunds)];
         };
         _itemData set [2, _stock + 1];
         _trader setVariable [QGVAR(shop), _shop, true];
@@ -91,14 +91,14 @@ switch (true) do {
         } else {
             [player, _itemName] call CBA_fnc_removeItem;
         };
-        ctrlSetText [1001, format ["%1 sold for %2 %3", [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck)), EGVAR(currency,symbol), [_sellPrice, 1, 2, true] call CBA_fnc_formatNumber]];
+        ctrlSetText [1001, format [localize LSTRING(SellSuccess), [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck)), EGVAR(currency,symbol), [_sellPrice, 1, 2, true] call CBA_fnc_formatNumber]];
         [] call FUNC(updateShop);
         [] call FUNC(processIcon);
     };
-    case (_buttonAction isEqualTo "Gift Item"): {
+    case (_buttonAction isEqualTo localize LSTRING(Gift)): {
         if (_trader getVariable [QGVAR(giftClicked), false]) then {
             if ([_itemName] call EFUNC(common,countItem) isEqualTo 0) exitWith {
-                ctrlSetText [1001, "You don't have this item..."];
+                ctrlSetText [1001, localize LSTRING(MissingItem)];
             };
             _itemData set [2, _stock + 1];
             _trader setVariable [QGVAR(shop), _shop, true];
@@ -107,11 +107,11 @@ switch (true) do {
             } else {
                 [player, _itemName] call CBA_fnc_removeItem;
             };
-            ctrlSetText [1001, format ["Successfully gifted %1", [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck))]];
+            ctrlSetText [1001, format [localize LSTRING(GiftSuccess), [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck))]];
             _trader setVariable [QGVAR(giftClicked), false];
         } else {
             _trader setVariable [QGVAR(giftClicked), true];
-            ctrlSetText [1001, format ["Confirm gift of %1?", [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck))]];
+            ctrlSetText [1001, format [localize LSTRING(GiftConfirm), [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck))]];
             [{
                 params ["_trader"];
                 if (isNull _trader) exitWith {};
@@ -125,7 +125,7 @@ switch (true) do {
         [] call FUNC(processIcon);
     };
     default {
-        [QUOTE(COMPONENT_BEAUTIFIED), format ["Invalid action: %1", _buttonAction]] call EFUNC(common,debugMessage);
+        [QUOTE(COMPONENT_BEAUTIFIED), format [localize LSTRING(InvalidAction), _buttonAction]] call EFUNC(common,debugMessage);
         [] call FUNC(updateShop);
     };
 };

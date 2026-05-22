@@ -20,7 +20,7 @@ private _dialog = findDisplay 982379;
 private _selectedOutputItem = lbData [1500, (lbCurSel 1500)];
 private _recipe = GVAR(cookingRecipes) select {(_x select 0) isEqualTo _selectedOutputItem} select 0;
 
-if (isNil "_recipe") exitWith { ctrlSetText [1001, "No matching recipe found."]; };
+if (isNil "_recipe") exitWith { ctrlSetText [1001, localize ECSTRING(common,NoRecipeMatch)]; };
 
 private _outputItem = _recipe select 0;
 private _requiredItems = _recipe select 1;
@@ -36,11 +36,11 @@ private _cookingMethod = _recipe select 8;
 
 private _playerXP = player getVariable [QGVAR(xp), MACRO_PLAYER_DEFAULTS_LOW];
 if (_playerXP < _requiredXP) exitWith {
-    ctrlSetText [1001, format ["You need %1 cooking XP to make this (you have %2).", _requiredXP, _playerXP]];
+    ctrlSetText [1001, format [localize LSTRING(LowXP), _requiredXP, _playerXP]];
 };
 
 if (!([_requiredItems] call FUNC(canCookCheck))) exitWith {
-    ctrlSetText [1001, "You don’t have the required items..."];
+    ctrlSetText [1001, localize ECSTRING(common,MissingItems)];
 };
 
 private _progressBar = _dialog displayCtrl 1010;
@@ -65,7 +65,7 @@ private _cookInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QGVAR(isCooking), false];
         [982379, [1010], false] call EFUNC(common,displayShowControls);
-        [parseText "<t font='PuristaMedium' size='1'>Cooking interrupted...</t>", true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+        [QEGVAR(common,tileText), localize LSTRING(Interrupted)] call CBA_fnc_localEvent;
     };
 }];
 
@@ -93,7 +93,7 @@ private _currentStep = 0;
 
     private _progress = (_currentStep / _totalSteps);
     _progressBar progressSetPosition _progress;
-    ctrlSetText [1001, format ["%1ing %2... %3%4 complete", _cookingMethod, _displayName, (_progress * 100) toFixed 0, "%"]];
+    ctrlSetText [1001, format [localize LSTRING(Progress), _cookingMethod, _displayName, (_progress * 100) toFixed 0, "%"]];
 
     if (_currentStep >= _totalSteps) exitWith {
         {
@@ -123,9 +123,9 @@ private _currentStep = 0;
 
         private _currentXP = player getVariable [QGVAR(xp), MACRO_PLAYER_DEFAULTS_LOW];
         player setVariable [QGVAR(xp), _currentXP + _outputXP, true];
-        [parseText format ["<t font='PuristaMedium' size='1'>You gained %1 XP from %2ing %3.</t>", _outputXP, toLower _cookingMethod, _displayName], true, nil, 7, 0.7, 0] call BIS_fnc_textTiles;
+        [QEGVAR(common,tileText), format [localize LSTRING(GainXP), _outputXP, toLower _cookingMethod, _displayName]] call CBA_fnc_localEvent;
 
-        ctrlSetText [1001, format ["You %1ed %2 %3!", toLower _cookingMethod, _outputCount, _displayName]];
+        ctrlSetText [1001, format [localize LSTRING(Success), toLower _cookingMethod, _outputCount, _displayName]];
         player setVariable [QGVAR(isCooking), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _cookInterrupt];
         [982379, [1600, 1601, 1602], true] call EFUNC(common,displayShowControls);

@@ -22,7 +22,7 @@ if (_building isEqualTo objNull) exitWith {};
 
 if (GVAR(pinMode) isEqualTo 0) then {
     _building setVariable [QGVAR(doorPin), _pin, true];
-    private _pinSetTip = format ["Locking PIN has been set: %1", [_pin, 1, 0, false]call CBA_fnc_formatNumber];
+    private _pinSetTip = format ["%2 %1", [_pin, 1, 0, false]call CBA_fnc_formatNumber, localize LSTRING(PINSet)];
     [player, QCLASS(lockKit)] call CBA_fnc_removeItem;
     [_pinSetTip, 1, [1, 1, 1, 1]] call CBA_fnc_notify;
     [] call FUNC(enableLocks);
@@ -38,7 +38,7 @@ if (GVAR(pinMode) isEqualTo 0) then {
             [_building, true, _saved] call FUNC(updateBuildingState);
         };
     } else {
-        ["Wrong PIN...", 1, [1, 0, 0, 1]] call CBA_fnc_notify;
+        [localize LSTRING(WrongPIN), 1, [1, 0, 0, 1]] call CBA_fnc_notify;
     };
 };
 

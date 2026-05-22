@@ -76,7 +76,7 @@
 
     [_vehicle, _batteryType, _requiredBatteries] call FUNC(getBatteryCharge) params ["_totalCharge", "_maxCharge"];
 
-    _batteryCtrl ctrlSetText format ["(Batteries: %1/%2)", _installedBatteries, _requiredBatteries];
+    _batteryCtrl ctrlSetText format [localize LSTRING(BatteryStatusParentheses), _installedBatteries, _requiredBatteries];
     _powerBar progressSetPosition (_totalCharge / _maxCharge);
     _oilBar progressSetPosition _oilLevel;
     _coolantBar progressSetPosition _coolantLevel;

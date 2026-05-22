@@ -11,12 +11,12 @@ if (GVAR(woodCollection)) then {
 
     private _forestrySplitLog = [
         QGVAR(forestrySplitLog_menu),
-        localize ECSTRING(common,SplitWoodLog),
+        localize LSTRING(SplitWoodLog),
         QPATHTOEF(icons,data\axe_ca.paa),
         {
             params ["_target", "_player"];
             if !([[QCLASS(woodenlog)]] call EFUNC(common,hasItem)) exitWith {
-                [QEGVAR(common,tileText), localize ECSTRING(common,NoWoodenLogsForSplitting)] call CBA_fnc_localEvent;
+                [QEGVAR(common,tileText), localize LSTRING(NoWoodenLogsForSplitting)] call CBA_fnc_localEvent;
             };
 
             private _hasAxe = [[QCLASS(woodaxe), MACRO_AXES]] call EFUNC(common,hasItem);
@@ -25,7 +25,7 @@ if (GVAR(woodCollection)) then {
             if (_hasAxe || _hasSaw) then {
                 [_hasAxe, _hasSaw] call FUNC(splitWoodAction);
             } else {
-                [QEGVAR(common,tileText), localize ECSTRING(common,NoWoodAxeOrChainsawNoti)] call CBA_fnc_localEvent;
+                [QEGVAR(common,tileText), localize LSTRING(NoWoodAxeOrChainsawNoti)] call CBA_fnc_localEvent;
             };
         },
         {

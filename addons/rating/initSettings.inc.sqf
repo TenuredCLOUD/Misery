@@ -1,9 +1,9 @@
-private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
+private _category = format ["Misery %1", localize LSTRING(Component)];
 
 [
     QGVAR(enabled),
     "CHECKBOX",
-    ["Ignore rating", "When enabled, players cannot turn renegade"],
+    [LSTRING(IgnoreRating), LSTRING(IgnoreRatingDesc)],
     _category,
     false,
     1

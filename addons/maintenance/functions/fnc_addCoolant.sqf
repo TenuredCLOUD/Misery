@@ -18,7 +18,7 @@
 [player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
 
 if (isNull _vehicle) exitWith {
-    ctrlSetText [1001, format ["Invalid vehicle..."]];
+    ctrlSetText [1001, format [localize LSTRING(InvalidVehicle)]];
 };
 
 private _currentCoolantLevel = _vehicle getVariable [QGVAR(coolantLevel), 0];
@@ -45,7 +45,7 @@ _coolantInterrupt = (findDisplay 274839) displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
     if (_key isEqualTo DIK_ESCAPE) then {
         player setVariable [QCLASS(processCoolant),false];
-        [QEGVAR(common,tileText), format ["Adding coolant interrupted..."]] call CBA_fnc_localEvent;
+        [QEGVAR(common,tileText), localize LSTRING(CoolantInterrupted)] call CBA_fnc_localEvent;
     };
 }];
 
@@ -55,18 +55,18 @@ if (_currentCoolantLevel >= 1) exitWith {
     player setVariable [QCLASS(processCoolant), nil];
     (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _coolantInterrupt];
     _vehicle setVariable [QGVAR(coolantLevel), 1, true];
-    ctrlSetText [1001, format ["%1 coolant is full...", [_vehicle] call EFUNC(common,getObjectData) select 0]];
+    ctrlSetText [1001, format [localize LSTRING(CoolantFull), [_vehicle] call EFUNC(common,getObjectData) select 0]];
     [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
 };
 
 if (!_hasCoolant) exitWith {
     (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _coolantInterrupt];
-    ctrlSetText [1001, format ["You need engine coolant to refill %1...", [_vehicle] call EFUNC(common,getObjectData) select 0]];
+    ctrlSetText [1001, format [localize LSTRING(Coolant), [_vehicle] call EFUNC(common,getObjectData) select 0]];
     [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
 };
 
-private _text = "Adding coolant...";
-private _coolantLvl = "coolant level:";
+private _text = localize LSTRING(CoolantProgress);
+private _coolantLvl = localize LSTRING(CoolantLevelLabel);
 private _displayedText = "";
 
 [{
@@ -86,7 +86,7 @@ private _displayedText = "";
         player setVariable [QCLASS(processCoolant), nil];
         (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _coolantInterrupt];
         _vehicle setVariable [QGVAR(coolantLevel), 1, true];
-        ctrlSetText [1001, format ["%1 coolant is full...", [_vehicle] call EFUNC(common,getObjectData) select 0]];
+        ctrlSetText [1001, format [localize LSTRING(CoolantFull), [_vehicle] call EFUNC(common,getObjectData) select 0]];
         [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
         _handle call CBA_fnc_removePerFrameHandler;
     };
@@ -96,7 +96,7 @@ private _displayedText = "";
     if (!_hasCoolant) exitWith {
         player setVariable [QCLASS(processCoolant), nil];
         (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _coolantInterrupt];
-        ctrlSetText [1001, format ["You have run out of %1...", "Engine coolant"]];
+        ctrlSetText [1001, localize LSTRING(OutOfCoolant)];
         [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
         _handle call CBA_fnc_removePerFrameHandler;
     };

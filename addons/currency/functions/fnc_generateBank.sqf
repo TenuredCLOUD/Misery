@@ -18,7 +18,7 @@ params ["_object"];
 
 private _bankAction = [
     QGVAR(accessBank),
-    format ["Open %1", GVAR(bankName)],
+    format [localize LSTRING(OpenAction), GVAR(bankName)],
     QPATHTOEF(markers,data\vault_ca.paa),
     {
         params ["_target", "_player"];

@@ -96,6 +96,6 @@ if (_facewear isNotEqualTo "") then {
 
 private _warmth = (_uniformWarmth + _vestWarmth + _headgearWarmth + _facewearWarmth) min 50;
 
-private _text = format ["Uniform: %1  Vest: %2  Headwear: %3  Facewear: %4", round _uniformWarmth, round _vestWarmth, round _headgearWarmth, round _facewearWarmth];
+private _text = format [localize LSTRING(ClothingStatus), round _uniformWarmth, round _vestWarmth, round _headgearWarmth, round _facewearWarmth];
 
 [_warmth, [_uniformWarmth, _vestWarmth, _headgearWarmth, _facewearWarmth], _text]

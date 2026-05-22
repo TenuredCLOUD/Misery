@@ -18,7 +18,7 @@
 
         private _spectrumBatteries = [
             QGVAR(spectrumDetector_menu),
-            "Add lithium batteries to spectrum device",
+            localize LSTRING(Action),
             QPATHTOEF(icons,data\battery_charging_ca.paa),
             {
                 call FUNC(batteries);

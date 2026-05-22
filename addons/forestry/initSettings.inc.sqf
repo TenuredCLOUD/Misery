@@ -1,9 +1,9 @@
-private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
+private _category = format ["Misery %1", localize LSTRING(Component)];
 
 [
     QGVAR(woodCollection),
     "CHECKBOX",
-    ["Wood collection", "Enable Wood collection actions? (Must be enabled for tree interaction, and log splitting)"],
+    [LSTRING(CollectionName), LSTRING(CollectionDesc)],
     _category,
     false,
     1
@@ -12,7 +12,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(sawingWood),
     "CHECKBOX",
-    ["Sawing Wood", "Enable Wood sawing actions? (Disable if you want to make your own saw interactions)"],
+    [LSTRING(SawingWood), LSTRING(SawingWoodDesc)],
     _category,
     false,
     1
@@ -21,7 +21,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(choppingWood),
     "CHECKBOX",
-    ["Chopping Wood", "Enable Wood chopping actions? (Disable if you want to make your own axe interactions)"],
+    [LSTRING(ChoppingWood), LSTRING(ChoppingWoodDesc)],
     _category,
     false,
     1
@@ -30,7 +30,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(foraging),
     "CHECKBOX",
-    ["Foraging", "Enable Foraging? (Enables digging for worms, and searching for tinder actions. Requires wood collection to be enabled)"],
+    [LSTRING(Foraging), LSTRING(ForagingDesc)],
     _category,
     false,
     1
