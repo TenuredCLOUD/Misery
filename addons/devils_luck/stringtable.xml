@@ -17,6 +17,22 @@
             <Chinesesimp>下次好运...</Chinesesimp>
             <Turkish>Bir dahaki sefere bol şans...</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Devils_Luck_Component">
+            <English>Devil's Luck</English>
+            <Czech>Ďáblovo štěstí</Czech>
+            <French>La chance du diable</French>
+            <Spanish>Suerte del diablo</Spanish>
+            <Italian>Fortuna del diavolo</Italian>
+            <Polish>Diabelskie szczęście</Polish>
+            <Portuguese>Sorte do diabo</Portuguese>
+            <Russian>Дьявольское везение</Russian>
+            <German>Teufelsglück</German>
+            <Korean>악마의 운</Korean>
+            <Japanese>悪魔の強運</Japanese>
+            <Chinese>惡魔的眷顧</Chinese>
+            <Chinesesimp>恶魔的眷顾</Chinesesimp>
+            <Turkish>Şeytanın Şansı</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Devils_Luck_CurrentBetLabel">
             <English>Current Bet:</English>
             <Czech>Aktuální sázka:</Czech>

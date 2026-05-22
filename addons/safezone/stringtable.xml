@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
     <Package name="Safezone">
+        <Key ID="STR_MISERY_Safezone_Component">
+            <English>Safezone</English>
+            <Czech>Bezpečná zóna</Czech>
+            <French>Zone de sécurité</French>
+            <Spanish>Zona segura</Spanish>
+            <Italian>Zona sicura</Italian>
+            <Polish>Bezpieczna strefa</Polish>
+            <Portuguese>Zona Segura</Portuguese>
+            <Russian>Безопасная зона</Russian>
+            <German>Sicherheitszone</German>
+            <Korean>안전 지대</Korean>
+            <Japanese>セーフゾーン</Japanese>
+            <Chinese>安全區</Chinese>
+            <Chinesesimp>安全区</Chinesesimp>
+            <Turkish>Güvenli Bölge</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Safezone_Entered">
             <English>You are entering a safezone..</English>
             <Czech>Vstupuješ do bezpečné zóny..</Czech>

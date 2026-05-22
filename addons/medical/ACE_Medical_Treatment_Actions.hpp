@@ -203,7 +203,7 @@ class ACE_Medical_Treatment_Actions {
 
     class CLASS(deconKit): Morphine {
         displayName = CSTRING(DeconKit);
-        displayNameProgress = CSTRING(DeconKitProcess);
+        displayNameProgress = CSTRING(DeconKitProgress);
         icon = "z\ace\addons\medical_gui\ui\painkillers.paa";
         medicRequired = 0;
         allowedSelections[] = {"Body"};

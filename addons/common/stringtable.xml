@@ -65,21 +65,53 @@
             <Chinesesimp>取消</Chinesesimp>
             <Turkish>İptal</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Common_CheckGearWeight">
-            <English>Check Gear weight</English>
-            <Czech>Kontrola hmotnosti vybavení</Czech>
-            <French>Vérifier le poids de l'engrenage</French>
-            <Spanish>Comprobar el peso del engranaje</Spanish>
-            <Italian>Controllare il peso dell'ingranaggio</Italian>
-            <Polish>Sprawdź wagę przekładni</Polish>
-            <Portuguese>Verificar o peso da engrenagem</Portuguese>
-            <Russian>Проверьте вес шестерни</Russian>
-            <German>Getriebegewicht prüfen</German>
-            <Korean>기어 무게 확인</Korean>
-            <Japanese>ギア重量チェック</Japanese>
-            <Chinese>檢查裝備重量</Chinese>
-            <Chinesesimp>检查装备重量</Chinesesimp>
-            <Turkish>Dişli ağırlığını kontrol edin</Turkish>
+        <Key ID="STR_MISERY_Common_CombatLog">
+            <English>Combat Log Prevention</English>
+            <Czech>Prevence odpojení z boje</Czech>
+            <French>Prévention du combat log</French>
+            <Spanish>Prevención de salida en combate</Spanish>
+            <Italian>Prevenzione combat log</Italian>
+            <Polish>Zapobieganie wylogowaniu podczas walki</Polish>
+            <Portuguese>Prevenção de Combat Log</Portuguese>
+            <Russian>Предотвращение выхода из боя</Russian>
+            <German>Combat-Log-Prävention</German>
+            <Korean>전투 중 탈주 방지</Korean>
+            <Japanese>戦闘中切断の防止</Japanese>
+            <Chinese>防戰鬥中斷線 / 防惡意下線</Chinese>
+            <Chinesesimp>防战斗中断线 / 防恶意下线</Chinesesimp>
+            <Turkish>Savaştan Kaçmayı Önleme</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_CombatLogDesc">
+            <English>Prevent Combat logging</English>
+            <Czech>Zabránit odpojení během boje</Czech>
+            <French>Empêcher la déconnexion en combat</French>
+            <Spanish>Evitar salir del juego en combate</Spanish>
+            <Italian>Impedisci il combat log</Italian>
+            <Polish>Zapobiegaj wylogowaniu w trakcie walki</Polish>
+            <Portuguese>Impedir o combat log</Portuguese>
+            <Russian>Предотвращать выход во время боя</Russian>
+            <German>Abmelden im Kampf verhindern</German>
+            <Korean>전투 중 게임 종료 방지</Korean>
+            <Japanese>戦闘中のログアウトを防止する</Japanese>
+            <Chinese>防止在戰鬥中惡意下線</Chinese>
+            <Chinesesimp>防止在战斗中恶意下线</Chinesesimp>
+            <Turkish>Savaş sırasında oyundan çıkmayı önler</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_Component">
+            <English>Common</English>
+            <Czech>Běžné</Czech>
+            <French>Commun</French>
+            <Spanish>Común</Spanish>
+            <Italian>Comune</Italian>
+            <Polish>Powszechne</Polish>
+            <Portuguese>Comum</Portuguese>
+            <Russian>Обычное</Russian>
+            <German>Gewöhnlich</German>
+            <Korean>일반</Korean>
+            <Japanese>コモン</Japanese>
+            <Chinese>普通</Chinese>
+            <Chinesesimp>普通</Chinesesimp>
+            <Turkish>Yaygın</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_Craft">
             <English>Craft</English>
@@ -112,6 +144,54 @@
             <Chinese>你想製作什麼？</Chinese>
             <Chinesesimp>你想制作什么？</Chinesesimp>
             <Turkish>Ne üretmek istersiniz?</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_DebugMode">
+            <English>Debug Mode</English>
+            <Czech>Režim ladění</Czech>
+            <French>Mode débogage</French>
+            <Spanish>Modo depuración</Spanish>
+            <Italian>Modalità debug</Italian>
+            <Polish>Tryb debugowania</Polish>
+            <Portuguese>Modo Debug</Portuguese>
+            <Russian>Режим отладки</Russian>
+            <German>Debug-Modus</German>
+            <Korean>디버그 모드</Korean>
+            <Japanese>デバッグモード</Japanese>
+            <Chinese>調試模式</Chinese>
+            <Chinesesimp>调试模式</Chinesesimp>
+            <Turkish>Hata Ayıklama Modu</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_DebugModeDesc">
+            <English>Show debug text</English>
+            <Czech>Zobrazit ladící text</Czech>
+            <French>Afficher le texte de débogage</French>
+            <Spanish>Mostrar texto de depuración</Spanish>
+            <Italian>Mostra testo di debug</Italian>
+            <Polish>Pokaż tekst debugowania</Polish>
+            <Portuguese>Mostrar texto de debug</Portuguese>
+            <Russian>Показывать отладочный текст</Russian>
+            <German>Debug-Text anzeigen</German>
+            <Korean>디버그 텍스트 표시</Korean>
+            <Japanese>デバッグテキストを表示</Japanese>
+            <Chinese>顯示調試文本</Chinese>
+            <Chinesesimp>显示调试文本</Chinesesimp>
+            <Turkish>Hata ayıklama metnini göster</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_Disabled">
+            <English>Disabled</English>
+            <Czech>Zakázáno</Czech>
+            <French>Désactivé</French>
+            <Spanish>Deshabilitado</Spanish>
+            <Italian>Disattivato</Italian>
+            <Polish>Wyłączone</Polish>
+            <Portuguese>Desativado</Portuguese>
+            <Russian>Отключено</Russian>
+            <German>Deaktiviert</German>
+            <Korean>비활성화됨</Korean>
+            <Japanese>無効</Japanese>
+            <Chinese>已禁用</Chinese>
+            <Chinesesimp>已禁用</Chinesesimp>
+            <Turkish>Devre Dışı</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_DisplayName">
             <English>Misery</English>
@@ -160,22 +240,6 @@
             <Chinese>退出</Chinese>
             <Chinesesimp>退出</Chinesesimp>
             <Turkish>Çıkış</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_GearWeightVal">
-            <English>Gear weight feels like: ~ %2kg (%1lbs)</English>
-            <Czech>Hmotnost vybavení se zdá být: ~ %2kg (%1lbs)</Czech>
-            <French>Le poids de l'engrenage ressemble à.. : ~ %2kg (%1lbs)</French>
-            <Spanish>El peso del engranaje se siente como: ~ %2kg (%1lbs)</Spanish>
-            <Italian>Il peso dell'ingranaggio sembra: ~ %2kg (%1lbs)</Italian>
-            <Polish>Waga przekładni: ~ %2kg (%1lbs)</Polish>
-            <Portuguese>O peso da engrenagem parece: ~ %2kg (%1lbs)</Portuguese>
-            <Russian>Вес шестерни ощущается как: ~ %2 кг (%1 фунт)</Russian>
-            <German>Das Getriebegewicht fühlt sich an wie: ~ %2kg (%1lbs)</German>
-            <Korean>기어 무게는 다음과 같이 느껴집니다: ~ %2kg (%1lbs)</Korean>
-            <Japanese>ギア重量はこんな感じ： ~ 2kg (%1lbs)</Japanese>
-            <Chinese>裝備重量感覺約為: ~ %2kg (%1lbs)</Chinese>
-            <Chinesesimp>装备重量感觉约为: ~ %2kg (%1lbs)</Chinesesimp>
-            <Turkish>Dişli ağırlığı gibi hissediyor: ~ %2kg (%1lbs)</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_Interact">
             <English>Interact</English>
@@ -321,6 +385,22 @@
             <Chinesesimp>2 小时</Chinesesimp>
             <Turkish>2 Saat</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Common_Interval2Min">
+            <English>2 Minutes</English>
+            <Czech>2 minut</Czech>
+            <French>2 minutes</French>
+            <Spanish>2 minutos</Spanish>
+            <Italian>2 minuti</Italian>
+            <Polish>2 minut</Polish>
+            <Portuguese>2 minutos</Portuguese>
+            <Russian>2 минут</Russian>
+            <German>2 Minuten</German>
+            <Korean>2분</Korean>
+            <Japanese>2分</Japanese>
+            <Chinese>2 分鐘</Chinese>
+            <Chinesesimp>2 分钟</Chinesesimp>
+            <Turkish>2 Dakika</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Common_Interval30Min">
             <English>30 Minutes</English>
             <Czech>30 minut</Czech>
@@ -353,6 +433,22 @@
             <Chinesesimp>30 秒</Chinesesimp>
             <Turkish>30 Saniye</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Common_Interval3Min">
+            <English>3 Minutes</English>
+            <Czech>3 minut</Czech>
+            <French>3 minutes</French>
+            <Spanish>3 minutos</Spanish>
+            <Italian>3 minuti</Italian>
+            <Polish>3 minut</Polish>
+            <Portuguese>3 minutos</Portuguese>
+            <Russian>3 минут</Russian>
+            <German>3 Minuten</German>
+            <Korean>3분</Korean>
+            <Japanese>3分</Japanese>
+            <Chinese>3 分鐘</Chinese>
+            <Chinesesimp>3 分钟</Chinesesimp>
+            <Turkish>3 Dakika</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Common_Interval40Min">
             <English>40 Minutes</English>
             <Czech>40 minut</Czech>
@@ -384,6 +480,22 @@
             <Chinese>50 分鐘</Chinese>
             <Chinesesimp>50 分钟</Chinesesimp>
             <Turkish>50 Dakika</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_Interval5Min">
+            <English>5 Minutes</English>
+            <Czech>5 minut</Czech>
+            <French>5 minutes</French>
+            <Spanish>5 minutos</Spanish>
+            <Italian>5 minuti</Italian>
+            <Polish>5 minut</Polish>
+            <Portuguese>5 minutos</Portuguese>
+            <Russian>5 минут</Russian>
+            <German>5 Minuten</German>
+            <Korean>5분</Korean>
+            <Japanese>5分</Japanese>
+            <Chinese>5 分鐘</Chinese>
+            <Chinesesimp>5 分钟</Chinesesimp>
+            <Turkish>5 Dakika</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_Interval60Min">
             <English>60 Minutes</English>
@@ -449,22 +561,6 @@
             <Chinesesimp>从不</Chinesesimp>
             <Turkish>Asla</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Common_NoChainsawForWoodNoti">
-            <English>You don't have a chainsaw to saw any wood...</English>
-            <Czech>Nemáš motorovou pilu na řezání dřeva...</Czech>
-            <French>Vous n'avez pas besoin de tronçonneuse pour scier du bois...</French>
-            <Spanish>No tienes una motosierra para serrar madera...</Spanish>
-            <Italian>Non hai una motosega per segare la legna...</Italian>
-            <Polish>Nie masz piły łańcuchowej, aby ciąć drewno...</Polish>
-            <Portuguese>Você não precisa de uma motosserra para serrar madeira...</Portuguese>
-            <Russian>У вас нет бензопилы, чтобы распилить дерево...</Russian>
-            <German>Sie haben keine Kettensäge, um Holz zu sägen...</German>
-            <Korean>나무를 톱질할 전기톱이 없는데...</Korean>
-            <Japanese>チェンソーがないと薪が切れない...。</Japanese>
-            <Chinese>你沒有可以鋸木頭的鏈鋸...</Chinese>
-            <Chinesesimp>你没有可以锯木头的链锯...</Chinesesimp>
-            <Turkish>Odun kesmek için elektrikli testereniz yok...</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Common_NoLithiumBatteries">
             <English>You don't have any lithium batteries...</English>
             <Czech>Nemáte žádné lithiové baterie...</Czech>
@@ -529,6 +625,38 @@
             <Chinesesimp>无</Chinesesimp>
             <Turkish>Hiçbiri</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Common_PromptSize">
+            <English>Text prompt sizes</English>
+            <Czech>Velikosti textových výzev</Czech>
+            <French>Taille des invites de texte</French>
+            <Spanish>Tamaño de ventanas de texto</Spanish>
+            <Italian>Dimensioni prompt di testo</Italian>
+            <Polish>Rozmiar komunikatów tekstowych</Polish>
+            <Portuguese>Tamanho dos avisos de texto</Portuguese>
+            <Russian>Размер текстовых подсказок</Russian>
+            <German>Größe der Textfenster</German>
+            <Korean>텍스트 프롬프트 크기</Korean>
+            <Japanese>テキストプロンプトのサイズ</Japanese>
+            <Chinese>文本提示大小</Chinese>
+            <Chinesesimp>文本提示大小</Chinesesimp>
+            <Turkish>Metin istemi boyutları</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_PromptSizeDesc">
+            <English>Text size of prompts &amp; popups</English>
+            <Czech>Velikost textu výzev a vyskakovacích oken</Czech>
+            <French>Taille du texte des invites et fenêtres pop-up</French>
+            <Spanish>Tamaño de texto de avisos y ventanas emergentes</Spanish>
+            <Italian>Dimensione del testo di prompt e popup</Italian>
+            <Polish>Rozmiar tekstu komunikatów i wyskakujących okien</Polish>
+            <Portuguese>Tamanho do texto de avisos e pop-ups</Portuguese>
+            <Russian>Размер текста в подсказках и окнах</Russian>
+            <German>Textgröße für Eingabeaufforderungen &amp; Popups</German>
+            <Korean>프롬프트 및 팝업의 텍스트 크기</Korean>
+            <Japanese>プロンプトとポップアップの文字サイズ</Japanese>
+            <Chinese>提示框與彈出視窗的字體大小</Chinese>
+            <Chinesesimp>提示框与弹出窗口的字体大小</Chinesesimp>
+            <Turkish>İstemlerin ve açılır pencerelerin metin boyutu</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Common_Purchase">
             <English>Purchase</English>
             <Czech>Koupit</Czech>
@@ -576,6 +704,38 @@
             <Chinese>顯示配方</Chinese>
             <Chinesesimp>显示配方</Chinesesimp>
             <Turkish>Tarifi Göster</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_SystemChats">
+            <English>Systemchats</English>
+            <Czech>Systémové chaty</Czech>
+            <French>Chats système</French>
+            <Spanish>Chats de sistema</Spanish>
+            <Italian>Chat di sistema</Italian>
+            <Polish>Czaty systemowe</Polish>
+            <Portuguese>Chats do Sistema</Portuguese>
+            <Russian>Системные чаты</Russian>
+            <German>System-Chats</German>
+            <Korean>시스템 채팅</Korean>
+            <Japanese>システムチャット</Japanese>
+            <Chinese>系統提示</Chinese>
+            <Chinesesimp>系统提示</Chinesesimp>
+            <Turkish>Sistem Sohbetleri</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Common_SystemChatsRpt">
+            <English>SystemChat + RPT Logs</English>
+            <Czech>SystemChat + RPT logy</Czech>
+            <French>SystemChat + Logs RPT</French>
+            <Spanish>SystemChat + Registros RPT</Spanish>
+            <Italian>SystemChat + Log RPT</Italian>
+            <Polish>SystemChat + Logi RPT</Polish>
+            <Portuguese>SystemChat + Logs RPT</Portuguese>
+            <Russian>SystemChat + Логи RPT</Russian>
+            <German>SystemChat + RPT-Logs</German>
+            <Korean>시스템 채팅 + RPT 로그</Korean>
+            <Japanese>SystemChat + RPTログ</Japanese>
+            <Chinese>系統提示 + RPT日誌</Chinese>
+            <Chinesesimp>系统提示 + RPT日志</Chinesesimp>
+            <Turkish>Sistem Sohbeti + RPT Günlükleri</Turkish>
         </Key>
         <Key ID="STR_MISERY_Common_TooExpensive">
             <English>You cannot afford this!</English>

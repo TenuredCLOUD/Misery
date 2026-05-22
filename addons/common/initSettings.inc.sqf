@@ -1,12 +1,12 @@
-private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
+private _category = format ["Misery %1", localize LSTRING(Component)];
 [
     QGVAR(debugMode),
     "LIST",
-    ["Debug Mode", "Show debug text"],
+    [LSTRING(DebugMode), LSTRING(DebugModeDesc)],
     _category,
     [
         [0, 1, 2],
-        ["Disabled", "Systemchats", "SystemChat + RPT Logs"],
+        [LSTRING(Disabled), LSTRING(SystemChats), LSTRING(SystemChatsRpt)],
         0
     ],
     1
@@ -15,7 +15,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(combatLogPreventionEnabled),
     "CHECKBOX",
-    ["Combat Log Prevention", "Prevent Combat logging"],
+    [LSTRING(CombatLog), LSTRING(CombatLogDesc)],
     _category,
     true,
     1
@@ -24,7 +24,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(promptSizes),
     "SLIDER",
-    ["Text prompt sizes", "Text size of prompts & popups"],
+    [LSTRING(PromptSize), LSTRING(PromptSizeDesc)],
     _category,
     [0.5, 1, 0.7, 2],
     2

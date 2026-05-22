@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
     <Package name="Compat_Remnant">
+        <Key ID="STR_MISERY_Compat_Remnant_Component">
+            <English>Compat Remnant</English>
+            <Czech>Kompatibilita s Remnant</Czech>
+            <French>Compatibilité Remnant</French>
+            <Spanish>Compatibilidad con Remnant</Spanish>
+            <Italian>Compatibilità Remnant</Italian>
+            <Polish>Kompatybilność z Remnant</Polish>
+            <Portuguese>Compatibilidade com Remnant</Portuguese>
+            <Russian>Совместимость с Remnant</Russian>
+            <German>Remnant-Kompatibilität</German>
+            <Korean>Remnant 호환성</Korean>
+            <Japanese>Remnant互換性</Japanese>
+            <Chinese>Remnant 相容性</Chinese>
+            <Chinesesimp>Remnant 兼容性</Chinesesimp>
+            <Turkish>Remnant Uyumluluğu</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Compat_Remnant_DropChance">
             <English>Artifact drop chance</English>
             <Czech>Šance na vypadnutí artefaktu</Czech>

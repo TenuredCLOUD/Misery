@@ -17,6 +17,22 @@
             <Chinesesimp>你感觉自己正被暗中窥视..</Chinesesimp>
             <Turkish>İzleniyormuş gibi hissediyorsun..</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Psychosis_Component">
+            <English>Psychosis</English>
+            <Czech>Psychóza</Czech>
+            <French>Psychose</French>
+            <Spanish>Psicosis</Spanish>
+            <Italian>Psicosi</Italian>
+            <Polish>Psychoza</Polish>
+            <Portuguese>Psicose</Portuguese>
+            <Russian>Психоз</Russian>
+            <German>Psychose</German>
+            <Korean>정신병</Korean>
+            <Japanese>精神病状態</Japanese>
+            <Chinese>精神错乱 / 精神病發作</Chinese>
+            <Chinesesimp>精神错乱 / 精神病发作</Chinesesimp>
+            <Turkish>Psikoz</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Psychosis_EnablePsychosisDesc">
             <English>Enable psychosis effects?</English>
             <Czech>Povolit efekty psychózy?</Czech>

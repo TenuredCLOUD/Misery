@@ -193,22 +193,6 @@
             <Chinesesimp>9 小时</Chinesesimp>
             <Turkish>9 saat</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Sleep_Button">
-            <English>Sleep...</English>
-            <Czech>Spánek...</Czech>
-            <French>Dormir...</French>
-            <Spanish>Duerme...</Spanish>
-            <Italian>Dormire...</Italian>
-            <Polish>Sen...</Polish>
-            <Portuguese>Dormir...</Portuguese>
-            <Russian>Спи...</Russian>
-            <German>Schlafen...</German>
-            <Korean>수면...</Korean>
-            <Japanese>眠れ...</Japanese>
-            <Chinese>睡覺...</Chinese>
-            <Chinesesimp>睡觉...</Chinesesimp>
-            <Turkish>Uyu.</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Sleep_Action">
             <English>Sleep</English>
             <Czech>Spát</Czech>
@@ -224,6 +208,22 @@
             <Chinese>睡眠</Chinese>
             <Chinesesimp>睡眠</Chinesesimp>
             <Turkish>Uyu</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Sleep_Button">
+            <English>Sleep...</English>
+            <Czech>Spánek...</Czech>
+            <French>Dormir...</French>
+            <Spanish>Duerme...</Spanish>
+            <Italian>Dormire...</Italian>
+            <Polish>Sen...</Polish>
+            <Portuguese>Dormir...</Portuguese>
+            <Russian>Спи...</Russian>
+            <German>Schlafen...</German>
+            <Korean>수면...</Korean>
+            <Japanese>眠れ...</Japanese>
+            <Chinese>睡覺...</Chinese>
+            <Chinesesimp>睡觉...</Chinesesimp>
+            <Turkish>Uyu.</Turkish>
         </Key>
         <Key ID="STR_MISERY_Sleep_Fear">
             <English>You are tormented by fear, and sleep is a distant memory. You hallucinate horrors that haunt you, and feel sensations that terrify you. You are descending into madness…</English>

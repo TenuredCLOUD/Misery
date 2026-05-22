@@ -65,6 +65,22 @@
             <Chinesesimp>每个周期可能生成的动物数量</Chinesesimp>
             <Turkish>Her döngüde oluşabilecek olası hayvan miktarı</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Ambient_Animals_Component">
+            <English>Ambient Animals</English>
+            <Czech>Okolní zvířata</Czech>
+            <French>Animaux ambiants</French>
+            <Spanish>Animales de ambiente</Spanish>
+            <Italian>Fauna d'ambiente</Italian>
+            <Polish>Zwierzęta w otoczeniu</Polish>
+            <Portuguese>Animais ambiente</Portuguese>
+            <Russian>Эмбиент-животные</Russian>
+            <German>Umgebungs-Tiere</German>
+            <Korean>주변 환경 동물</Korean>
+            <Japanese>アンビエントアニマル</Japanese>
+            <Chinese>環境動物動態生成</Chinese>
+            <Chinesesimp>环境动物动态生成</Chinesesimp>
+            <Turkish>Ortam hayvanları</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Ambient_Animals_DeleteDist">
             <English>Delete distance</English>
             <Czech>Vzdálenost pro smazání</Czech>

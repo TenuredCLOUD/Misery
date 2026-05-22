@@ -557,6 +557,38 @@
             <Chinesesimp>打火机</Chinesesimp>
             <Turkish>Çakmak</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Assets_LockKit_Description">
+            <English>electronic door locking kit, prevents unauthorized entry once installed</English>
+            <Czech>Elektronická sada pro uzamčení dveří, po instalaci zabraňuje neoprávněnému vjezdu či vstupu.</Czech>
+            <French>Kit de verrouillage électronique de porte, empêche tout accès non autorisé une fois installé.</French>
+            <Spanish>Kit de bloqueo electrónico de puertas; una vez instalado, impide el acceso no autorizado.</Spanish>
+            <Italian>Kit di bloccaggio elettronico per portiere, impedisce l'accesso non autorizzato una volta installato.</Italian>
+            <Polish>Elektroniczny zestaw blokady drzwi, po zainstalowaniu zapobiega nieautoryzowanemu dostępowi.</Polish>
+            <Portuguese>Kit de fecho eletrónico de portas, impede a entrada não autorizada após a instalação.</Portuguese>
+            <Russian>Электронный комплект дверного замка, после установки предотвращает несанкционированный доступ внутрь.</Russian>
+            <German>Elektronischer Türverriegelungssatz, verhindert nach dem Einbau unbefugten Zutritt.</German>
+            <Korean>전자식 도어 잠금 시스템 키트입니다. 설치 시 외부인의 무단 탑승 및 침입을 방지합니다.</Korean>
+            <Japanese>電子式のドアロックキットです。設置すると外部からの不正な侵入や搭乗を防ぎます。</Japanese>
+            <Chinese>電子車門鎖升級套件，安裝後可有效防止未授權的人員強行進入或竊取車輛。</Chinese>
+            <Chinesesimp>电子车门锁升级套件，安装后可有效防止未授权的人员强行进入或窃取车辆。</Chinesesimp>
+            <Turkish>Elektronik kapı kilitleme kiti, kurulduktan sonra yetkisiz girişi engeller.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_LockKit_DisplayName">
+            <English>Door lock kit</English>
+            <Czech>Sada na uzamčení dveří</Czech>
+            <French>Kit de verrouillage de porte</French>
+            <Spanish>Kit de cerradura de puerta</Spanish>
+            <Italian>Kit bloccaggio porta</Italian>
+            <Polish>Zestaw do blokowania drzwi</Polish>
+            <Portuguese>Kit de fechadura de porta</Portuguese>
+            <Russian>Комплект дверного замка</Russian>
+            <German>Türschloss-Bausatz</German>
+            <Korean>문 잠금 장치 키트</Korean>
+            <Japanese>ドアロックキット</Japanese>
+            <Chinese>車門鎖改裝套件</Chinese>
+            <Chinesesimp>车门锁改装套件</Chinesesimp>
+            <Turkish>Kapı kilidi kiti</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Assets_MatchBox_Description">
             <English>box of weathered matches</English>
             <Czech>krabička zvětralých zápalek</Czech>
@@ -654,20 +686,20 @@
             <Turkish>Kalitesiz Kazma</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_PotassiumIodate_Description">
-            <English>Contains Anti-Radiation tablets</English>
-            <Czech>Obsahuje antiradiační tablety</Czech>
-            <French>Contient des comprimés anti-radiations</French>
-            <Spanish>Contiene tabletas antirradiación.</Spanish>
-            <Italian>Contiene compresse anti-radiazioni</Italian>
-            <Polish>Zawiera tabletki antyradiacyjne</Polish>
-            <Portuguese>Contém comprimidos anti-radiação</Portuguese>
-            <Russian>Содержит противорадиационные таблетки.</Russian>
-            <German>Enthält Anti-Strahlen-Tabletten</German>
-            <Korean>방사선 방지 정제가 포함되어 있습니다.</Korean>
-            <Japanese>抗放射線錠剤が含まれています</Japanese>
-            <Chinese>含有抗輻射藥片</Chinese>
-            <Chinesesimp>含有抗辐射药片</Chinesesimp>
-            <Turkish>Anti-Radyasyon tabletleri içerir</Turkish>
+            <English>Contains tablets that saturate the thyroid gland, blocking the absorption of radioactive isotopes and preventing radiation exposure.&lt;br/&gt; - Radiation medication</English>
+            <Czech>Obsahuje tablety, které nasycují štítnou žlázu, čímž blokují vstřebávání radioaktivních izotopů a zabraňují ozáření.&lt;br/&gt; - Antiradiační lék</Czech>
+            <French>Contient des comprimés qui saturent la thyroïde, bloquant l'absorption d'isotopes radioactifs et protégeant de l'irradiation.&lt;br/&gt; - Médicament anti-radiation</French>
+            <Spanish>Contiene comprimidos que saturan la glándula tiroides, bloqueando la absorción de isótopos radiactivos y previniendo la exposición a la radiación.&lt;br/&gt; - Medicamento antirradiación</Spanish>
+            <Italian>Contiene compresse che saturano la tiroide, bloccando l'assorbimento di isotopi radioattivi e prevenendo l'esposizione alle radiazioni.&lt;br/&gt; - Farmaco antiradiazioni</Italian>
+            <Polish>Zawiera tabletki nasycające tarczycę, co blokuje wchłanianie izotopów promieniotwórczych i zapobiega skutkom napromieniowania.&lt;br/&gt; - Lek przeciwradiacyjny</Polish>
+            <Portuguese>Contém comprimidos que saturam a glândula tiroide, bloqueando a absorção de isótopos radioativos e prevenindo a exposição à radiação.&lt;br/&gt; - Medicamento de radiação</Portuguese>
+            <Russian>Содержит таблетки, которые насыщают щитовидную железу стабильным йодом, блокируя поглощение радиоактивных изотопов и предотвращая радиационное заражение.&lt;br/&gt; - Радиопротектор</Russian>
+            <German>Enthält Tabletten, die die Schilddrüse sättigen, wodurch die Aufnahme radioaktiver Isotope blockiert und eine Strahlenbelastung verhindert wird.&lt;br/&gt; - Strahlenschutzmedikament</German>
+            <Korean>갑상선을 안정적인 요오드로 포화시켜 방사성 동위원소의 흡수를 차단하고 내부 피폭을 방지하는 알약입니다.&lt;br/&gt; - 방사능 치료제</Korean>
+            <Japanese>甲状腺を安定ヨウ素で飽和させることで、放射性同位体の吸収をブロックし、内部被ばくを防ぐ錠剤です。&lt;br/&gt; - 放射線防護薬</Japanese>
+            <Chinese>含有可使甲狀腺飽和的片劑，進而阻斷放射性同位素의吸收，有效防止內部輻射傷害。&lt;br/&gt; - 輻射防護藥物</Chinese>
+            <Chinesesimp>含有可使甲状腺饱和的片剂，进而阻断放射性同位素的吸收，有效防止内部辐射伤害。&lt;br/&gt; - 辐射防护药物</Chinesesimp>
+            <Turkish>Radyoaktif izotopların emilimini engellemek ve radyasyona maruz kalmayı önlemek için tiroid bezini doyuran tabletler içerir.&lt;br/&gt; - Radyasyon ilacı</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_PotassiumIodate_DisplayName">
             <English>Potassium Iodate</English>

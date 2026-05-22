@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
     <Package name="Rating">
+        <Key ID="STR_MISERY_Rating_Component">
+            <English>Rating</English>
+            <Czech>Hodnocení</Czech>
+            <French>Évaluation</French>
+            <Spanish>Calificación</Spanish>
+            <Italian>Valutazione</Italian>
+            <Polish>Ocena</Polish>
+            <Portuguese>Classificação</Portuguese>
+            <Russian>Рейтинг</Russian>
+            <German>Bewertung</German>
+            <Korean>평가</Korean>
+            <Japanese>評価</Japanese>
+            <Chinese>評分 / 評級</Chinese>
+            <Chinesesimp>评分 / 评级</Chinesesimp>
+            <Turkish>Derecelendirme</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Rating_IgnoreRating">
             <English>Ignore rating</English>
             <Czech>Ignorovat hodnocení</Czech>

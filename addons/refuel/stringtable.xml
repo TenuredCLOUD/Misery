@@ -17,6 +17,22 @@
             <Chinesesimp>加注燃料 (%1/升) %2升</Chinesesimp>
             <Turkish>Yakıt Al (%1/L) %2L</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Refuel_Component">
+            <English>Refuel</English>
+            <Czech>Doplnit palivo</Czech>
+            <French>Ravitailler en carburant</French>
+            <Spanish>Repostar</Spanish>
+            <Italian>Rifornimento</Italian>
+            <Polish>Tankowanie</Polish>
+            <Portuguese>Reabastecer</Portuguese>
+            <Russian>Заправить</Russian>
+            <German>Tanken</German>
+            <Korean>연료 보급</Korean>
+            <Japanese>燃料補給</Japanese>
+            <Chinese>加油 / 補充燃料</Chinese>
+            <Chinesesimp>加油 / 补充燃料</Chinesesimp>
+            <Turkish>Yakit İkmali</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Refuel_FuelPrices">
             <English>Fuel prices</English>
             <Czech>Ceny paliva</Czech>

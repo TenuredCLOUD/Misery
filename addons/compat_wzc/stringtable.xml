@@ -241,6 +241,22 @@
             <Chinesesimp>每个周期可能生成的生物数量</Chinesesimp>
             <Turkish>Her döngüde oluşabilecek yaratık miktarı</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Compat_WZC_Component">
+            <English>Compat WZC</English>
+            <Czech>Kompatibilita s WZC</Czech>
+            <French>Compatibilité WZC</French>
+            <Spanish>Compatibilidad con WZC</Spanish>
+            <Italian>Compatibilità WZC</Italian>
+            <Polish>Kompatybilność z WZC</Polish>
+            <Portuguese>Compatibilidade com WZC</Portuguese>
+            <Russian>Совместимость с WZC</Russian>
+            <German>WZC-Kompatibilität</German>
+            <Korean>WZC 호환성</Korean>
+            <Japanese>WZC互換性</Japanese>
+            <Chinese>WZC 相容性</Chinese>
+            <Chinesesimp>WZC 兼容性</Chinesesimp>
+            <Turkish>WZC Uyumluluğu</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Compat_WZC_Cycle">
             <English>Spawn check interval</English>
             <Czech>Interval kontroly spawnu</Czech>

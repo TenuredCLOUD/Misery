@@ -33,6 +33,22 @@
             <Chinesesimp>%1 已经处于完好状态，无需维修...</Chinesesimp>
             <Turkish>%1 zaten tamamen onarılmış...</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Repair_Component">
+            <English>Repair</English>
+            <Czech>Opravit</Czech>
+            <French>Réparer</French>
+            <Spanish>Reparar</Spanish>
+            <Italian>Riparazione</Italian>
+            <Polish>Napraw</Polish>
+            <Portuguese>Reparar</Portuguese>
+            <Russian>Ремонтировать</Russian>
+            <German>Reparieren</German>
+            <Korean>수리</Korean>
+            <Japanese>修理</Japanese>
+            <Chinese>修復 / 維修</Chinese>
+            <Chinesesimp>修复 / 维修</Chinesesimp>
+            <Turkish>Onar</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Repair_Interrupted">
             <English>Repairs interrupted...</English>
             <Czech>Opravy přerušeny...</Czech>

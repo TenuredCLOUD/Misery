@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
     <Package name="Treatment">
+        <Key ID="STR_MISERY_Treatment_Component">
+            <English>Treatment</English>
+            <Czech>Léčba</Czech>
+            <French>Traitement</French>
+            <Spanish>Tratamiento</Spanish>
+            <Italian>Trattamento</Italian>
+            <Polish>Leczenie</Polish>
+            <Portuguese>Tratamento</Portuguese>
+            <Russian>Лечение</Russian>
+            <German>Behandlung</German>
+            <Korean>치료</Korean>
+            <Japanese>治療</Japanese>
+            <Chinese>治療 / 醫療</Chinese>
+            <Chinesesimp>治疗 / 医疗</Chinesesimp>
+            <Turkish>Tedavi</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Treatment_Duration">
             <English>Wound treatment duration</English>
             <Czech>Doba ošetření zranění</Czech>

@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
     <Package name="Acceleration">
+        <Key ID="STR_MISERY_Acceleration_Component">
+            <English>Acceleration</English>
+            <Czech>Akcelerace</Czech>
+            <French>Accélération</French>
+            <Spanish>Aceleración</Spanish>
+            <Italian>Accelerazione</Italian>
+            <Polish>Przyspieszenie</Polish>
+            <Portuguese>Aceleração</Portuguese>
+            <Russian>Ускорение</Russian>
+            <German>Beschleunigung</German>
+            <Korean>가속력</Korean>
+            <Japanese>加速力</Japanese>
+            <Chinese>加速性能</Chinese>
+            <Chinesesimp>加速性能</Chinesesimp>
+            <Turkish>Hızlanma</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Acceleration_NoTimeAccel">
             <English>No time acceleration</English>
             <Czech>Žádné zrychlení času</Czech>

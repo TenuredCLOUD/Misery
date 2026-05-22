@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
     <Package name="Gasmask">
+        <Key ID="STR_MISERY_Gasmask_Component">
+            <English>Gasmask</English>
+            <Czech>Plynová maska</Czech>
+            <French>Masque à gaz</French>
+            <Spanish>Máscara antigás</Spanish>
+            <Italian>Maschera antigas</Italian>
+            <Polish>Maska przeciwgazowa</Polish>
+            <Portuguese>Máscara de gás</Portuguese>
+            <Russian>Противогаз</Russian>
+            <German>Gasmaske</German>
+            <Korean>방독면</Korean>
+            <Japanese>ガスマスク</Japanese>
+            <Chinese>防毒面具</Chinese>
+            <Chinesesimp>防毒面具</Chinesesimp>
+            <Turkish>Gaz Maskesi</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Gasmask_DefaultSwappedMask">
             <English>Default swapped mask</English>
             <Czech>Výchozí vyměněná maska</Czech>

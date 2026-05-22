@@ -1275,8 +1275,8 @@ class CfgWeapons {
     };
 
     class CLASS(lockKit): CLASS(ItemCore) {
-        displayName = "Door lock kit";
-        descriptionShort = "electronic door locking kit, prevents unauthorized entry once installed";
+        displayName = CSTRING(LockKit_DisplayName);
+        descriptionShort = CSTRING(LockKit_Description);
         model = "a3\weapons_f\items\toolkit.p3d";
         picture = QPATHTOF(data\icons\toolkit.paa);
         scope = 2;

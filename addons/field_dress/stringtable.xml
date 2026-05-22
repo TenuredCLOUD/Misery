@@ -17,6 +17,22 @@
             <Chinesesimp>这只动物已经在处理中了...</Chinesesimp>
             <Turkish>Bu hayvan zaten işleniyor...</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Field_Dress_Component">
+            <English>Field Dress</English>
+            <Czech>Vyvrhnout</Czech>
+            <French>Vider le gibier</French>
+            <Spanish>Desollar en el campo</Spanish>
+            <Italian>Eviscerazione</Italian>
+            <Polish>Patroszenie</Polish>
+            <Portuguese>Eviscerar</Portuguese>
+            <Russian>Разделать тушу</Russian>
+            <German>Aufbrechen</German>
+            <Korean>야외 도축</Korean>
+            <Japanese>フィールドドレス</Japanese>
+            <Chinese>現場宰殺 / 剝皮肢解</Chinese>
+            <Chinesesimp>现场宰杀 / 剥皮肢解</Chinesesimp>
+            <Turkish>Yaban Hayvanı İçini Temizleme</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Field_Dress_Desc">
             <English>Allow field dressing of animals?</English>
             <Czech>Povolit polní vyvrhování zvířat?</Czech>

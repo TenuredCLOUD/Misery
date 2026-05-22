@@ -49,6 +49,22 @@
             <Chinesesimp>仅显示兼容的武器配件</Chinesesimp>
             <Turkish>Yalnızca uyumlu silah eşyalarını göster</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Traders_Component">
+            <English>Traders</English>
+            <Czech>Obchodníci</Czech>
+            <French>Marchands</French>
+            <Spanish>Comerciantes</Spanish>
+            <Italian>Commercianti</Italian>
+            <Polish>Handlarze</Polish>
+            <Portuguese>Comerciantes</Portuguese>
+            <Russian>Торговцы</Russian>
+            <German>Händler</German>
+            <Korean>상인들</Korean>
+            <Japanese>トレーダー</Japanese>
+            <Chinese>商人</Chinese>
+            <Chinesesimp>商人</Chinesesimp>
+            <Turkish>Tüccarlar</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Traders_Depression">
             <English>depression</English>
             <Czech>deprese</Czech>

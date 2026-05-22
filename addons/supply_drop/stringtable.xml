@@ -97,6 +97,22 @@
             <Chinesesimp>空投箱中可能出现的背包物资列表</Chinesesimp>
             <Turkish>Olası sırt çantası malzemeleri</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Supply_Drop_Component">
+            <English>Supply Drop</English>
+            <Czech>Zásilka zásob</Czech>
+            <French>Parachutage de ravitaillement</French>
+            <Spanish>Suministros aéreos</Spanish>
+            <Italian>Lancio di rifornimenti</Italian>
+            <Polish>Zrzut zaopatrzenia</Polish>
+            <Portuguese>Suprimento Aéreo</Portuguese>
+            <Russian>Сброс припасов</Russian>
+            <German>Vorratslieferung</German>
+            <Korean>보급품 투하</Korean>
+            <Japanese>補給物資投하</Japanese>
+            <Chinese>物資空投</Chinese>
+            <Chinesesimp>物资空投</Chinesesimp>
+            <Turkish>Destek Paketi</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Supply_Drop_DeletionDistance">
             <English>Deletion distance</English>
             <Czech>Vzdálenost pro smazání</Czech>

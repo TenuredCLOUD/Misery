@@ -65,6 +65,22 @@
             <Chinesesimp>此载具无法重新补给...</Chinesesimp>
             <Turkish>Bu araç yeniden mühimmatlandırılamaz...</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Compat_Rearm_Component">
+            <English>Compat Rearm</English>
+            <Czech>Kompatibilita přezbrojení</Czech>
+            <French>Compatibilité réarmement</French>
+            <Spanish>Compatibilidad de rearmamento</Spanish>
+            <Italian>Compatibilità riarmo</Italian>
+            <Polish>Kompatybilność przezbrojenia</Polish>
+            <Portuguese>Compatibilidade de rearmamento</Portuguese>
+            <Russian>Совместимость с перезарядкой/перевооружением</Russian>
+            <German>Aufmunitionierungs-Kompatibilität</German>
+            <Korean>재보급(Rearm) 호환성</Korean>
+            <Japanese>リアーム互換性</Japanese>
+            <Chinese>補給與重裝相容性</Chinese>
+            <Chinesesimp>补给与重装兼容性</Chinesesimp>
+            <Turkish>Yeniden Donatma Uyumluluğu</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Compat_Rearm_Interrupted">
             <English>Resupply interrupted... (Refunded)</English>
             <Czech>Doplňování zásob přerušeno... (Vráceno)</Czech>

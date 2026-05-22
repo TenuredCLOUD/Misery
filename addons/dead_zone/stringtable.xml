@@ -17,6 +17,22 @@
             <Chinesesimp>死亡地带区域</Chinesesimp>
             <Turkish>Ölü Bölge Alanları</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Dead_Zone_Component">
+            <English>Dead Zone</English>
+            <Czech>Mrtvá zóna</Czech>
+            <French>Zone morte</French>
+            <Spanish>Zona muerta</Spanish>
+            <Italian>Zona morta</Italian>
+            <Polish>Martwa strefa</Polish>
+            <Portuguese>Zona morta</Portuguese>
+            <Russian>Мёртвая зона</Russian>
+            <German>Todeszone</German>
+            <Korean>데드 존</Korean>
+            <Japanese>デッドゾーン</Japanese>
+            <Chinese>死亡之區 / 盲區</Chinese>
+            <Chinesesimp>死亡之区 / 盲区</Chinesesimp>
+            <Turkish>Ölü Bölge</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Dead_Zone_DeadZonesDesc">
             <English>ELLIPSE or RECTANGLE marker names covering the barrage areas as strings ['Deadzone_1', 'Deadzone_2']</English>
             <Czech>Názvy značek ELLIPSE nebo RECTANGLE pokrývající oblasti palby jako řetězce ['Deadzone_1', 'Deadzone_2']</Czech>

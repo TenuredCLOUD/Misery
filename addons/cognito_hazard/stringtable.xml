@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
-    <Package name="Cognito">
-        <Key ID="STR_MISERY_Cognito_Areas">
+    <Package name="Cognito_Hazard">
+        <Key ID="STR_MISERY_Cognito_Hazard_Areas">
             <English>Cognitohazardous Areas</English>
             <Czech>Oblasti s kognitivní hrozbou</Czech>
             <French>Zones cognitohazardous</French>
@@ -17,7 +17,7 @@
             <Chinesesimp>认知危害区域</Chinesesimp>
             <Turkish>Bilişsel Tehlike Alanları</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Cognito_AreasDesc">
+        <Key ID="STR_MISERY_Cognito_Hazard_AreasDesc">
             <English>ELLIPSE or RECTANGLE marker names covering the Cognitohazard area as strings ['CognitoHaz_1', 'CognitoHaz_2']</English>
             <Czech>Názvy markerů ELLIPSE nebo RECTANGLE pokrývající oblast kognitivní hrozby jako řetězce ['CognitoHaz_1', 'CognitoHaz_2']</Czech>
             <French>Noms des marqueurs ELLIPSE ou RECTANGLE couvrant la zone de cognitohazard sous forme de chaînes ['CognitoHaz_1', 'CognitoHaz_2']</French>
@@ -33,7 +33,7 @@
             <Chinesesimp>覆盖认知危害区域的 ELLIPSE 或 RECTANGLE 标记名称，格式为字符串 ['CognitoHaz_1', 'CognitoHaz_2']</Chinesesimp>
             <Turkish>Bilişsel Tehlike alanını kapsayan dize biçimindeki ELLIPSE veya RECTANGLE işaretçi adları ['CognitoHaz_1', 'CognitoHaz_2']</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Cognito_Cognitohazards">
+        <Key ID="STR_MISERY_Cognito_Hazard_Cognitohazards">
             <English>Cognitohazards</English>
             <Czech>Kognitivní hrozby</Czech>
             <French>Cognitohazards</French>
@@ -49,7 +49,23 @@
             <Chinesesimp>认知危害</Chinesesimp>
             <Turkish>Bilişsel Tehlikeler</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Cognito_EnableAudio">
+        <Key ID="STR_MISERY_Cognito_Hazard_Component">
+            <English>Cognito Hazard</English>
+            <Czech>Kognitivní hrozba</Czech>
+            <French>Risque cognitif</French>
+            <Spanish>Peligro cognitivo</Spanish>
+            <Italian>Pericolo cognitivo</Italian>
+            <Polish>Zagrożenie poznawcze</Polish>
+            <Portuguese>Perigo cognitivo</Portuguese>
+            <Russian>Ментальная угроза</Russian>
+            <German>Kognitives Risiko</German>
+            <Korean>인지재해</Korean>
+            <Japanese>認識災害</Japanese>
+            <Chinese>認知危害</Chinese>
+            <Chinesesimp>认知危害</Chinesesimp>
+            <Turkish>Bilişsel Tehlike</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Cognito_Hazard_EnableAudio">
             <English>Enable audio based Cognitohazard zones?</English>
             <Czech>Povolit zóny kognitivních hrozeb založené na zvuku?</Czech>
             <French>Activer les zones de cognitohazard basées sur l'audio ?</French>

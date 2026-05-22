@@ -33,6 +33,22 @@
             <Chinesesimp>您希望每隔多久自动存档一次？</Chinesesimp>
             <Turkish>Ne sıklıkla otomatik kaydetmek istersiniz?</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Persistence_Component">
+            <English>Persistence</English>
+            <Czech>Perzistence</Czech>
+            <French>Persistance</French>
+            <Spanish>Persistencia</Spanish>
+            <Italian>Persistenza</Italian>
+            <Polish>Persystencja</Polish>
+            <Portuguese>Persistência</Portuguese>
+            <Russian>Персистентность</Russian>
+            <German>Persistenz</German>
+            <Korean>지속성</Korean>
+            <Japanese>永続性</Japanese>
+            <Chinese>持久性 / 存檔持久化</Chinese>
+            <Chinesesimp>持久性 / 存档持久化</Chinesesimp>
+            <Turkish>Kalıcılık</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Persistence_EnableHardcore">
             <English>Enable Hardcore</English>
             <Czech>Aktivovat hardcore</Czech>

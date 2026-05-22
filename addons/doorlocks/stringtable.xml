@@ -49,6 +49,22 @@
             <Chinesesimp>无法在此位置安装门锁...</Chinesesimp>
             <Turkish>Bu konumda kapı kilidi kurulamaz...</Turkish>
         </Key>
+        <Key ID="STR_MISERY_DoorLocks_Component">
+            <English>Door Locks</English>
+            <Czech>Zámky dveří</Czech>
+            <French>Verrouillage des portes</French>
+            <Spanish>Cerraduras de puertas</Spanish>
+            <Italian>Serrature porte</Italian>
+            <Polish>Blokady drzwi</Polish>
+            <Portuguese>Trancas de portas</Portuguese>
+            <Russian>Дверные замки</Russian>
+            <German>Türschlösser</German>
+            <Korean>문 잠금 장치</Korean>
+            <Japanese>ドアロック</Japanese>
+            <Chinese>車門鎖 / 門鎖系統</Chinese>
+            <Chinesesimp>车门锁 / 门锁系统</Chinesesimp>
+            <Turkish>Kapı Kilitleri</Turkish>
+        </Key>
         <Key ID="STR_MISERY_DoorLocks_DoorsAlreadyLocked">
             <English>Doors are already locked...</English>
             <Czech>Dveře jsou již zamčeny...</Czech>

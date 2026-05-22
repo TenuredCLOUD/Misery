@@ -17,6 +17,22 @@
             <Chinesesimp>此处已被搜寻过了...</Chinesesimp>
             <Turkish>Bu zaten arandı...</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Loot_Component">
+            <English>Loot</English>
+            <Czech>Kořist</Czech>
+            <French>Butin</French>
+            <Spanish>Botín</Spanish>
+            <Italian>Bottino</Italian>
+            <Polish>Łup</Polish>
+            <Portuguese>Saque</Portuguese>
+            <Russian>Добыча</Russian>
+            <German>Beute</German>
+            <Korean>노획물</Korean>
+            <Japanese>ルートアイテム</Japanese>
+            <Chinese>戰利品 / 物資</Chinese>
+            <Chinesesimp>战利品 / 物资</Chinesesimp>
+            <Turkish>Ganimet</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Loot_ItemsFound">
             <English>You found some items...</English>
             <Czech>Našli jste nějaké předměty...</Czech>

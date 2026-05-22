@@ -33,6 +33,22 @@
             <Chinesesimp>您将 1 个 9V 电池放入了您的提灯</Chinesesimp>
             <Turkish>Fenerinize 9v pil eklediniz</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Lantern_Component">
+            <English>Lantern</English>
+            <Czech>Lucerna</Czech>
+            <French>Lanterne</French>
+            <Spanish>Linterna</Spanish>
+            <Italian>Lanterna</Italian>
+            <Polish>Latarnia</Polish>
+            <Portuguese>Lanterna</Portuguese>
+            <Russian>Фонарь</Russian>
+            <German>Laterne</German>
+            <Korean>랜턴</Korean>
+            <Japanese>ランタン</Japanese>
+            <Chinese>提燈 / 提灯</Chinese>
+            <Chinesesimp>提灯</Chinesesimp>
+            <Turkish>Fener</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Lantern_MissingBatteries">
             <English>You don't have any 9v batteries...</English>
             <Czech>Nemáte žádné 9V baterie...</Czech>

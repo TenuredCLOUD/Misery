@@ -1,6 +1,6 @@
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 
-private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
+private _category = format ["Misery %1", localize LSTRING(Component)];
 
 // Keybind is bound to "K"
 [_category, QGVAR(power), LSTRING(Toggle), {

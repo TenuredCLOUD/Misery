@@ -1,10 +1,10 @@
-private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
+private _category = format ["Misery %1", localize LSTRING(Component)];
 
 // Enhanced Character Effects
 [
     QGVAR(enhancedCharacterEffects),
     "CHECKBOX",
-    [LSTRING(EnhancedCharEffects), LSTRING(EnhancedCharEffects_Desc)],
+    [LSTRING(EnhancedCharEffects), LSTRING(EnhancedCharEffectsDesc)],
     _category,
     true, 1, {}, true
 ] call CBA_fnc_addSetting;
@@ -13,7 +13,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(enhancedInventorySounds),
     "CHECKBOX",
-    [LSTRING(EnhancedInvSounds), LSTRING(EnhancedInvSounds_Desc)],
+    [LSTRING(EnhancedInvSounds), LSTRING(EnhancedInvSoundsDesc)],
     _category,
     false, 1, {}, true
 ] call CBA_fnc_addSetting;
@@ -22,7 +22,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(ambientSoundScape),
     "CHECKBOX",
-    [LSTRING(AmbientSoundscape), LSTRING(AmbientSoundscape_Desc)],
+    [LSTRING(AmbientSoundscape), LSTRING(AmbientSoundscapeDesc)],
     _category,
     false, 1, {}, true
 ] call CBA_fnc_addSetting;
@@ -31,7 +31,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
 [
     QGVAR(forgeAmbience),
     "CHECKBOX",
-    [LSTRING(ForgeAmbience), LSTRING(ForgeAmbience_Desc)],
+    [LSTRING(ForgeAmbience), LSTRING(ForgeAmbienceDesc)],
     _category,
     false, 1, {}, true
 ] call CBA_fnc_addSetting;

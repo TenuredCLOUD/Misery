@@ -177,6 +177,22 @@
             <Chinesesimp>木材收集</Chinesesimp>
             <Turkish>Odun toplama</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Forestry_Component">
+            <English>Forestry</English>
+            <Czech>Lesnictví</Czech>
+            <French>Sylviculture</French>
+            <Spanish>Silvicultura</Spanish>
+            <Italian>Silvicoltura</Italian>
+            <Polish>Leśnictwo</Polish>
+            <Portuguese>Silvicultura</Portuguese>
+            <Russian>Лесоводство</Russian>
+            <German>Forstwirtschaft</German>
+            <Korean>임업</Korean>
+            <Japanese>林業</Japanese>
+            <Chinese>林業 / 野外生存</Chinese>
+            <Chinesesimp>林业 / 野外生存</Chinesesimp>
+            <Turkish>Ormancılık</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Forestry_CutDown">
             <English>Cut down</English>
             <Czech>Uříznout</Czech>
@@ -275,18 +291,18 @@
         </Key>
         <Key ID="STR_MISERY_Forestry_Foraging">
             <English>Foraging</English>
-            <Czech>Hledání potravy</Czech>
-            <French>Glanage</French>
-            <Spanish>Recolección silvestre</Spanish>
+            <Czech>Sběr plodů a surovin</Czech>
+            <French>Cueillette</French>
+            <Spanish>Forrajeo</Spanish>
             <Italian>Ricerca di cibo</Italian>
             <Polish>Zbieractwo</Polish>
-            <Portuguese>Forrageamento</Portuguese>
+            <Portuguese>Busca por recursos</Portuguese>
             <Russian>Собирательство</Russian>
-            <German>Nahrungssuche</German>
-            <Korean>자원 채집</Korean>
+            <German>Sammeln</German>
+            <Korean>채집</Korean>
             <Japanese>採集</Japanese>
-            <Chinese>覓食 / 採集</Chinese>
-            <Chinesesimp>觅食 / 采集</Chinesesimp>
+            <Chinese>採集</Chinese>
+            <Chinesesimp>采集</Chinesesimp>
             <Turkish>Yiyecek arama</Turkish>
         </Key>
         <Key ID="STR_MISERY_Forestry_ForagingDesc">
@@ -304,22 +320,6 @@
             <Chinese>啟用覓食/採集？ (啟用挖蠕蟲和尋找引火物動作。需要先啟用木材收集)</Chinese>
             <Chinesesimp>启用觅食/采集？ (启用挖蠕虫和寻找引火物动作。需要先启用木材收集)</Chinesesimp>
             <Turkish>Yiyecek arama etkinleştirilsin mi? (Solucan toplamak için kazma ve kav arama eylemlerini etkinleştirir. Odun toplamanın etkinleştirilmesini gerektirir)</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Forestry_ForagingName">
-            <English>Foraging</English>
-            <Czech>Sběr plodů a surovin</Czech>
-            <French>Cueillette</French>
-            <Spanish>Forrajeo</Spanish>
-            <Italian>Ricerca di cibo</Italian>
-            <Polish>Zbieractwo</Polish>
-            <Portuguese>Busca por recursos</Portuguese>
-            <Russian>Собирательство</Russian>
-            <German>Sammeln</German>
-            <Korean>채집</Korean>
-            <Japanese>採集</Japanese>
-            <Chinese>採集</Chinese>
-            <Chinesesimp>采集</Chinesesimp>
-            <Turkish>Yiyecek arama</Turkish>
         </Key>
         <Key ID="STR_MISERY_Forestry_FoundNothing">
             <English>You didn't find anything...</English>
@@ -784,38 +784,6 @@
             <Chinese>樹已經倒了，沒有更多木頭了...</Chinese>
             <Chinesesimp>树已经倒了，没有更多木头了...</Chinesesimp>
             <Turkish>Ağaç devrildi, artık odun yok...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Forestry_WoodCollection">
-            <English>Wood collection</English>
-            <Czech>Sběr dřeva</Czech>
-            <French>Collecte de bois</French>
-            <Spanish>Recolección de madera</Spanish>
-            <Italian>Raccolta della legna</Italian>
-            <Polish>Zbieranie drewna</Polish>
-            <Portuguese>Coleta de madeira</Portuguese>
-            <Russian>Сбор древесины</Russian>
-            <German>Holzsammlung</German>
-            <Korean>목재 채집</Korean>
-            <Japanese>薪集め</Japanese>
-            <Chinese>木材收集</Chinese>
-            <Chinesesimp>木材收集</Chinesesimp>
-            <Turkish>Odun toplama</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Forestry_WoodCollectionDesc">
-            <English>Enable Wood collection actions? (Must be enabled for tree interaction, and log splitting)</English>
-            <Czech>Povolit akce pro sběr dřeva? (Musí být povoleno pro interakci se stromy a štípání polen)</Czech>
-            <French>Activer les actions de collecte de bois ? (Doit être activé pour l'interaction avec les arbres et le fendage de bûches)</French>
-            <Spanish>¿Activar acciones de recolección de madera? (Debe estar activado para la interacción con árboles y el corte de troncos)</Spanish>
-            <Italian>Abilitare le azioni di raccolta della legna? (Deve essere abilitato per l'interazione con gli alberi e lo spaccamento dei tronchi)</Italian>
-            <Polish>Włączyć akcje zbierania drewna? (Wymagane do interakcji z drzewami oraz rąbania kloców drewna)</Polish>
-            <Portuguese>Ativar ações de coleta de madeira? (Deve estar ativo para interação com árvores e divisão de lenha)</Portuguese>
-            <Russian>Включить действия по сбору древесины? (Необходимо для взаимодействия с деревьями и колки дров)</Russian>
-            <German>Aktionen zur Holzsammlung aktivieren? (Muss für Baum-Interaktionen und das Spalten von Holzscheiten aktiviert sein)</German>
-            <Korean>목재 채집 상호작용을 활성화하시겠습니까? (나무 상호작용 및 장작 쪼개기를 위해 활성화해야 합니다)</Korean>
-            <Japanese>薪集めのアクションを有効にしますか？ ( 나무와의 상호작용 및 대나무/통나무割りに必要です)</Japanese>
-            <Chinese>啟用木材收集動作？ (與樹木互動和劈柴時必須啟用)</Chinese>
-            <Chinesesimp>启用木材收集动作？ (与树木互动和劈柴时必须启用)</Chinesesimp>
-            <Turkish>Odun toplama eylemleri etkinleştirilsin mi? (Ağaç etkileşimi ve kütük yarma için etkinleştirilmelidir)</Turkish>
         </Key>
     </Package>
 </Project>

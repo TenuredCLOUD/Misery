@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
     <Package name="Survival">
+        <Key ID="STR_MISERY_Survival_Component">
+            <English>Survival</English>
+            <Czech>Přežití</Czech>
+            <French>Survie</French>
+            <Spanish>Supervivencia</Spanish>
+            <Italian>Sopravvivenza</Italian>
+            <Polish>Przetrwanie</Polish>
+            <Portuguese>Sobrevivência</Portuguese>
+            <Russian>Выживание</Russian>
+            <German>Überleben</German>
+            <Korean>생존</Korean>
+            <Japanese>サバイバル</Japanese>
+            <Chinese>生存</Chinese>
+            <Chinesesimp>生存</Chinesesimp>
+            <Turkish>Hayatta Kalma</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Survival_MetabolicCoefficient">
             <English>Metabolic coefficient</English>
             <Czech>Metabolický koeficient</Czech>

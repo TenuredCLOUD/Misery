@@ -49,6 +49,22 @@
             <Chinesesimp>指南针:</Chinesesimp>
             <Turkish>PUSULA:</Turkish>
         </Key>
+        <Key ID="STR_MISERY_ERU_Component">
+            <English>ERU</English>
+            <Czech>ERU</Czech>
+            <French>ERU</French>
+            <Spanish>ERU</Spanish>
+            <Italian>ERU</Italian>
+            <Polish>ERU</Polish>
+            <Portuguese>ERU</Portuguese>
+            <Russian>ЭРУ</Russian>
+            <German>ERU</German>
+            <Korean>ERU</Korean>
+            <Japanese>ERU</Japanese>
+            <Chinese>ERU 緊急應變部隊</Chinese>
+            <Chinesesimp>ERU 紧急应变部队</Chinesesimp>
+            <Turkish>ERU</Turkish>
+        </Key>
         <Key ID="STR_MISERY_ERU_ERUActionAddBattery">
             <English>Add lithium battery to ERU</English>
             <Czech>Přidat lithiovou baterii do ERU</Czech>

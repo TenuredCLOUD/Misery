@@ -1,4 +1,4 @@
-private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
+private _category = format ["Misery %1", localize LSTRING(Component)];
 
 [
     QGVAR(enabled),
@@ -15,7 +15,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     [LSTRING(FactionList), LSTRING(FactionToSpawn)],
     _category,
     [[0, 1, 2, 3],
-    ["West / BLUFOR","East / OPFOR","Civilian","Independant"], 1],
+    [LSTRING(BLUFOR), LSTRING(OPFOR), LSTRING(Civilian), LSTRING(Independent)], 1],
     1
 ] call CBA_fnc_addSetting;
 
@@ -213,7 +213,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "LIST",
     [LSTRING(CheckInterval), LSTRING(CheckIntervalDesc)],
     _category,
-    [[30, 60, 120, 180, 300], ["30 seconds", "1 Minute", "2 Minutes", "3 Minutes", "5 Minutes"], 0],
+    [[30, 60, 120, 180, 300], [ECSTRING(common,Interval30Sec), ECSTRING(common,Interval1Min), ECSTRING(common,Interval2Min), ECSTRING(common,Interval3Min), ECSTRING(common,Interval5Min)], 0],
     1,
     {},
     true

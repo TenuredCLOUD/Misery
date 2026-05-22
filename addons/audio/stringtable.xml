@@ -33,7 +33,7 @@
             <Chinesesimp>环境音乐数组</Chinesesimp>
             <Turkish>Ortam müziği dizisi</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Audio_AmbientMusicArray_Desc">
+        <Key ID="STR_MISERY_Audio_AmbientMusicArrayDesc">
             <English>Listed music to play randomly for players (Format: Mymusic_1,Mymusic_2,etc...)</English>
             <Czech>Seznam skladeb pro náhodné přehrávání (Formát: Hudba_1,Hudba_2,atd...)</Czech>
             <French>Liste des musiques à jouer aléatoirement (Format : Musique_1,Musique_2,etc...)</French>
@@ -49,7 +49,7 @@
             <Chinesesimp>为玩家随机播放的音乐列表 (格式: Mymusic_1,Mymusic_2 等...)</Chinesesimp>
             <Turkish>Oyuncular için rastgele çalınacak müziklerin listesi (Biçim: Mymusic_1,Mymusic_2,vb...)</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Audio_AmbientMusic_Desc">
+        <Key ID="STR_MISERY_Audio_AmbientMusicDesc">
             <English>Enable Misery's OST (utilize Ambient Music array for more music to be played)</English>
             <Czech>Povolit Misery OST (pro více hudby využijte Ambient Music array)</Czech>
             <French>Activer l'OST de Misery (utilisez le tableau Ambient Music pour plus de musiques)</French>
@@ -97,7 +97,7 @@
             <Chinesesimp>环境音效景观数组</Chinesesimp>
             <Turkish>Ortam ses manzarası dizisi</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Audio_AmbientSoundscapeArray_Desc">
+        <Key ID="STR_MISERY_Audio_AmbientSoundscapeArrayDesc">
             <English>Listed sounds to play randomly around players (Format: Mysound_1,Mysound_2,etc...)</English>
             <Czech>Seznam zvuků pro náhodné přehrávání kolem hráčů (Formát: Zvuk_1,Zvuk_2,atd...)</Czech>
             <French>Liste des sons à jouer aléatoirement autour des joueurs (Format : Son_1,Son_2,etc...)</French>
@@ -113,7 +113,7 @@
             <Chinesesimp>随机在玩家周围播放的声音列表 (格式: Mysound_1,Mysound_2 等...)</Chinesesimp>
             <Turkish>Oyuncuların etrafında rastgele çalınacak seslerin listesi (Biçim: Mysound_1,Mysound_2,vb...)</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Audio_AmbientSoundscape_Desc">
+        <Key ID="STR_MISERY_Audio_AmbientSoundscapeDesc">
             <English>Enable Extra world audio with input sounds? (must utilize the 'Ambient soundscape array' data)</English>
             <Czech>Povolit extra zvuky světa? (musí využívat data z 'Ambient soundscape array')</Czech>
             <French>Activer l'audio mondial supplémentaire ? (doit utiliser les données de 'Ambient soundscape array')</French>
@@ -128,6 +128,22 @@
             <Chinese>開啟帶有輸入聲音的額外世界音頻？(必須使用“環境音效景觀數組”數據)</Chinese>
             <Chinesesimp>开启带有输入声音的额外世界音频？(必须使用“环境音效景观数组”数据)</Chinesesimp>
             <Turkish>Giriş sesleriyle ekstra dünya sesi etkinleştirilsin mi? ('Ortam ses manzarası dizisi' verilerini kullanmalıdır)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Audio_Component">
+            <English>Audio</English>
+            <Czech>Zvuk</Czech>
+            <French>Audio</French>
+            <Spanish>Audio</Spanish>
+            <Italian>Audio</Italian>
+            <Polish>Audio</Polish>
+            <Portuguese>Áudio</Portuguese>
+            <Russian>Аудио</Russian>
+            <German>Audio</German>
+            <Korean>오디오</Korean>
+            <Japanese>オーディオ</Japanese>
+            <Chinese>音訊設定</Chinese>
+            <Chinesesimp>音讯设定</Chinesesimp>
+            <Turkish>Ses</Turkish>
         </Key>
         <Key ID="STR_MISERY_Audio_EnhancedCharEffects">
             <English>Character Enhanced effects</English>
@@ -145,7 +161,7 @@
             <Chinesesimp>角色强化效果</Chinesesimp>
             <Turkish>Geliştirilmiş karakter efektleri</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Audio_EnhancedCharEffects_Desc">
+        <Key ID="STR_MISERY_Audio_EnhancedCharEffectsDesc">
             <English>Enable Extra Character Immersion? (Enables audible and visual feedback for the survival framework)</English>
             <Czech>Povolit extra imerzi postavy? (Povolí zvukovou a vizuální zpětnou vazbu pro survival systém)</Czech>
             <French>Activer l'immersion supplémentaire du personnage ? (Active les retours sonores et visuels pour le système de survie)</French>
@@ -177,7 +193,7 @@
             <Chinesesimp>强化库存声音</Chinesesimp>
             <Turkish>Geliştirilmiş envanter sesleri</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Audio_EnhancedInvSounds_Desc">
+        <Key ID="STR_MISERY_Audio_EnhancedInvSoundsDesc">
             <English>Enable Inventory audio overhaul?</English>
             <Czech>Povolit přepracování zvuků inventáře?</Czech>
             <French>Activer la refonte audio de l'inventaire ?</French>
@@ -209,7 +225,7 @@
             <Chinesesimp>熔炉环境音效</Chinesesimp>
             <Turkish>Ocaklar için ortam sesi</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Audio_ForgeAmbience_Desc">
+        <Key ID="STR_MISERY_Audio_ForgeAmbienceDesc">
             <English>Enable Audio loop for forges? (Makes them crackle and hum - immersion)</English>
             <Czech>Povolit zvukovou smyčku pro výhně? (Vytváří praskání a hučení - imerze)</Czech>
             <French>Activer la boucle audio pour les forges ? (Crée des crépitements et des bourdonnements)</French>

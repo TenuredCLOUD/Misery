@@ -1,4 +1,4 @@
-private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
+private _category = format ["Misery %1", localize LSTRING(Component)];
 
 [
     QGVAR(enabled),
@@ -302,7 +302,7 @@ private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
     "LIST",
     [LSTRING(Cycle), LSTRING(CycleDesc)],
     _category,
-    [[30, 60, 120, 180, 300], ["30 seconds", "1 Minute", "2 Minutes", "3 Minutes", "5 Minutes"], 0],
+    [[30, 60, 120, 180, 300], [ECSTRING(common,Interval30Sec), ECSTRING(common,Interval1Min), ECSTRING(common,Interval2Min), ECSTRING(common,Interval3Min), ECSTRING(common,Interval5Min)], 0],
     1,
     {},
     true

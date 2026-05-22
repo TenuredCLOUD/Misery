@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
     <Package name="POI">
+        <Key ID="STR_MISERY_POI_Component">
+            <English>POI</English>
+            <Czech>POI</Czech>
+            <French>POI</French>
+            <Spanish>Punto de interés</Spanish>
+            <Italian>Punto di interesse</Italian>
+            <Polish>Punkt zainteresowania</Polish>
+            <Portuguese>Ponto de Interesse</Portuguese>
+            <Russian>Точка интереса</Russian>
+            <German>POI</German>
+            <Korean>관심 지점</Korean>
+            <Japanese>興味深い場所</Japanese>
+            <Chinese>興趣點 / 地標</Chinese>
+            <Chinesesimp>兴趣点 / 地标</Chinesesimp>
+            <Turkish>İlgi Noktası</Turkish>
+        </Key>
         <Key ID="STR_MISERY_POI_DeletionCheckDistance">
             <English>Deletion check distance</English>
             <Czech>Vzdálenost pro kontrolu smazání</Czech>

@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
     <Package name="NoNVG">
+        <Key ID="STR_MISERY_NoNVG_Component">
+            <English>No NVG</English>
+            <Czech>Bez NVG</Czech>
+            <French>Pas de JVN</French>
+            <Spanish>Sin visores nocturnos</Spanish>
+            <Italian>No visori notturni</Italian>
+            <Polish>Bez noktowizji</Polish>
+            <Portuguese>Sem NVG</Portuguese>
+            <Russian>Без ПНВ</Russian>
+            <German>Keine Nachtsichtgeräte</German>
+            <Korean>야간 투視鏡 금지</Korean>
+            <Japanese>暗視装置なし</Japanese>
+            <Chinese>禁用夜視鏡</Chinese>
+            <Chinesesimp>禁用夜视仪</Chinesesimp>
+            <Turkish>Gece Görüşü Yok</Turkish>
+        </Key>
         <Key ID="STR_MISERY_NoNVG_Setting">
             <English>No NVG in TPP</English>
             <Czech>Žádné NVG ve 3. osobě</Czech>

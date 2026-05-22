@@ -1,9 +1,9 @@
-private _category = format ["Misery - %1", QUOTE(COMPONENT_BEAUTIFIED)];
+private _category = format ["Misery %1", localize LSTRING(Component)];
 
 [
     QGVAR(woodCollection),
     "CHECKBOX",
-    [LSTRING(WoodCollection), LSTRING(WoodCollectionDesc)],
+    [LSTRING(CollectionName), LSTRING(CollectionDesc)],
     _category,
     false,
     1

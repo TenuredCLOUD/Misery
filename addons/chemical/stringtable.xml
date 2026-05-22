@@ -65,6 +65,22 @@
             <Chinesesimp>覆盖放射性区域的 ELLIPSE 或 RECTANGLE 标记名称，格式为字符串 ['Chemical_1', 'Chemical_2']</Chinesesimp>
             <Turkish>Radyoaktif alanı kapsayan dize biçimindeki ELLIPSE veya RECTANGLE işaretçi adları ['Chemical_1', 'Chemical_2']</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Chemical_Component">
+            <English>Chemical</English>
+            <Czech>Chemický</Czech>
+            <French>Chimique</French>
+            <Spanish>Químico</Spanish>
+            <Italian>Chimico</Italian>
+            <Polish>Chemiczne</Polish>
+            <Portuguese>Químico</Portuguese>
+            <Russian>Химический</Russian>
+            <German>Chemisch</German>
+            <Korean>화학성</Korean>
+            <Japanese>化学</Japanese>
+            <Chinese>化學 / 毒性</Chinese>
+            <Chinesesimp>化学 / 毒性</Chinesesimp>
+            <Turkish>Kimyasal</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Chemical_FinalColor">
             <English>Chemical areas final color</English>
             <Czech>Konečná barva chemických oblastí</Czech>

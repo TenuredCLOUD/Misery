@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
     <Package name="Weight">
+        <Key ID="STR_MISERY_Weight_Component">
+            <English>Weight</English>
+            <Czech>Váha</Czech>
+            <French>Poids</French>
+            <Spanish>Peso</Spanish>
+            <Italian>Peso</Italian>
+            <Polish>Waga</Polish>
+            <Portuguese>Peso</Portuguese>
+            <Russian>Вес</Russian>
+            <German>Gewicht</German>
+            <Korean>무게</Korean>
+            <Japanese>重量</Japanese>
+            <Chinese>重量</Chinese>
+            <Chinesesimp>重量</Chinesesimp>
+            <Turkish>Ağırlık</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Weight_Penalty">
             <English>Weight penalty</English>
             <Czech>Postihy za váhu</Czech>

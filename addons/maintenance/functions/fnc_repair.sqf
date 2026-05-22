@@ -19,6 +19,10 @@
 
 params ["_hitpointIndex", "_selectedIndex"];
 
+if (_selectedIndex isEqualTo -1) exitWith {
+    ctrlSetText [1001, localize ECSTRING(maintenance,NoRepairSelected)];
+};
+
 if !([["ToolKit"]] call EFUNC(common,hasItem)) exitWith {
     ctrlSetText [1001, localize LSTRING(NeedToolkitRepair)];
 };

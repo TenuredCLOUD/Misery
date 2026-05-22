@@ -65,6 +65,22 @@
             <Chinesesimp>你钓到了一条鱼。</Chinesesimp>
             <Turkish>Bir balık yakaladın.</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Fishing_Component">
+            <English>Fishing</English>
+            <Czech>Rybaření</Czech>
+            <French>Pêche</French>
+            <Spanish>Pesca</Spanish>
+            <Italian>Pesca</Italian>
+            <Polish>Wędkarstwo</Polish>
+            <Portuguese>Pesca</Portuguese>
+            <Russian>Рыбалка</Russian>
+            <German>Angeln</German>
+            <Korean>낚시</Korean>
+            <Japanese>釣り</Japanese>
+            <Chinese>釣魚</Chinese>
+            <Chinesesimp>钓鱼</Chinesesimp>
+            <Turkish>Balık Tutma</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Fishing_Desc">
             <English>Enable Fishing near open water sources? (Requires fishing rod, bait, hook, and fishing spool...)</English>
             <Czech>Povolit rybaření u otevřených vodních zdrojů? (Vyžaduje rybářský prut, návnadu, háček a naviják...)</Czech>

@@ -13,7 +13,6 @@ class CLASS(maintenance_ui) {
         };
         class CLASS(maintenance_prompt): RscText {
             idc = 1000;
-            text = "Vehicle Maintenance";
             x = -4.5 * GUI_GRID_W + GUI_GRID_X;
             y = 0.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 20.5 * GUI_GRID_W;
@@ -51,7 +50,7 @@ class CLASS(maintenance_ui) {
         class CLASS(maintenance_addBattery): RscButton {
             idc = 1607;
             colorFocused[] = {0.5,0.5,0.5,0.7};
-            text = "Add battery"; //--- ToDo: Localize;
+            text = ECSTRING(maintenance,AddBattery);
             x = 29.5 * GUI_GRID_W + GUI_GRID_X;
             y = 9 * GUI_GRID_H + GUI_GRID_Y;
             w = 7 * GUI_GRID_W;
@@ -65,7 +64,7 @@ class CLASS(maintenance_ui) {
         class CLASS(maintenance_removeBattery): RscButton {
             idc = 1606;
             colorFocused[] = {0.5,0.5,0.5,0.7};
-            text = "Remove battery"; //--- ToDo: Localize;
+            text = ECSTRING(maintenance,RemoveBattery);
             x = 29.5 * GUI_GRID_W + GUI_GRID_X;
             y = 11.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7 * GUI_GRID_W;
@@ -79,7 +78,7 @@ class CLASS(maintenance_ui) {
         class CLASS(maintenance_addOil): RscButton {
             idc = 1604;
             colorFocused[] = {0.5,0.5,0.5,0.7};
-            text = "Add oil"; //--- ToDo: Localize;
+            text = ECSTRING(maintenance,AddOil);
             x = 22 * GUI_GRID_W + GUI_GRID_X;
             y = 9 * GUI_GRID_H + GUI_GRID_Y;
             w = 7 * GUI_GRID_W;
@@ -93,7 +92,7 @@ class CLASS(maintenance_ui) {
         class CLASS(maintenance_removeOil): RscButton {
             idc = 1609;
             colorFocused[] = {0.5,0.5,0.5,0.7};
-            text = "Remove oil"; //--- ToDo: Localize;
+            text = ECSTRING(maintenance,RemoveOil);
             x = 22 * GUI_GRID_W + GUI_GRID_X;
             y = 11.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7 * GUI_GRID_W;
@@ -107,7 +106,7 @@ class CLASS(maintenance_ui) {
         class CLASS(maintenance_addCoolant): RscButton {
             idc = 1605;
             colorFocused[] = {0.5,0.5,0.5,0.7};
-            text = "Add coolant"; //--- ToDo: Localize;
+            text = ECSTRING(maintenance,AddCoolant);
             x = 22 * GUI_GRID_W + GUI_GRID_X;
             y = 14 * GUI_GRID_H + GUI_GRID_Y;
             w = 7 * GUI_GRID_W;
@@ -121,7 +120,7 @@ class CLASS(maintenance_ui) {
         class CLASS(maintenance_removeCoolant): RscButton {
             idc = 1610;
             colorFocused[] = {0.5,0.5,0.5,0.7};
-            text = "Remove coolant"; //--- ToDo: Localize;
+            text = ECSTRING(maintenance,RemoveCoolant);
             x = 22 * GUI_GRID_W + GUI_GRID_X;
             y = 16.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7 * GUI_GRID_W;
@@ -135,27 +134,21 @@ class CLASS(maintenance_ui) {
         class CLASS(maintenance_repair): RscButton {
             idc = 1600;
             colorFocused[] = {0.5,0.5,0.5,0.7};
-            text = "Repair"; //--- ToDo: Localize;
+            text = ECSTRING(maintenance,Repair);
             x = 37 * GUI_GRID_W + GUI_GRID_X;
             y = 9 * GUI_GRID_H + GUI_GRID_Y;
             w = 7 * GUI_GRID_W;
             h = 2 * GUI_GRID_H;
             colorBackground[] = {0.2,0.2,0.2,0.7};
             colorActive[] = {0.5,0.5,0.5,0.7};
-            onButtonClick = QUOTE(
-                private _dialog = ctrlParent (_this select 0);
-                private _list = _dialog displayCtrl 1500;
-                private _selected = lbCurSel _list;
-                if (_selected isEqualTo -1) exitWith {ctrlSetText [ARR_2(1001,'No repair option selected...')]};
-                private _hitpoint = _list lbData _selected;
-                [ARR_2(_hitpoint,_selected)] call EFUNC(maintenance,repair));
+            onButtonClick = QUOTE([ARR_2(_hitpoint,_selected)] call EFUNC(maintenance,repair));
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
         class CLASS(maintenance_refuel): RscButton {
             idc = 1601;
             colorFocused[] = {0.5,0.5,0.5,0.7};
-            text = "Refuel"; //--- ToDo: Localize;
+            text = ECSTRING(maintenance,Refuel);
             x = 37 * GUI_GRID_W + GUI_GRID_X;
             y = 14 * GUI_GRID_H + GUI_GRID_Y;
             w = 7 * GUI_GRID_W;
@@ -169,7 +162,7 @@ class CLASS(maintenance_ui) {
         class CLASS(maintenance_syphon): RscButton {
             idc = 1608;
             colorFocused[] = {0.5,0.5,0.5,0.7};
-            text = "Syphon"; //--- ToDo: Localize;
+            text = ECSTRING(maintenance,Syphon);
             x = 37 * GUI_GRID_W + GUI_GRID_X;
             y = 16.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7 * GUI_GRID_W;
@@ -183,20 +176,14 @@ class CLASS(maintenance_ui) {
         class CLASS(maintenance_scavenge): RscButton {
             idc = 1602;
             colorFocused[] = {0.5,0.5,0.5,0.7};
-            text = "Scavenge"; //--- ToDo: Localize;
+            text = ECSTRING(maintenance,Scavenge);
             x = 37 * GUI_GRID_W + GUI_GRID_X;
             y = 11.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7 * GUI_GRID_W;
             h = 2 * GUI_GRID_H;
             colorBackground[] = {0.2,0.2,0.2,0.7};
             colorActive[] = {0.5,0.5,0.5,0.7};
-            onButtonClick = QUOTE(
-                private _dialog = ctrlParent (_this select 0);
-                private _list = _dialog displayCtrl 1500;
-                private _selected = lbCurSel _list;
-                if (_selected isEqualTo -1) exitWith {ctrlSetText [ARR_2(1001,'No scavenge option selected...')]};
-                private _hitpoint = _list lbData _selected;
-                [ARR_2(_hitpoint,_selected)] call EFUNC(maintenance,scavenge));
+            onButtonClick = QUOTE([ARR_2(_hitpoint,_selected)] call EFUNC(maintenance,scavenge));
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
@@ -262,7 +249,7 @@ class CLASS(maintenance_ui) {
         };
         class CLASS(maintenance_fuelText): RscText {
             idc = 2010;
-            text = "Fuel:"; //--- ToDo: Localize;
+            text = ECSTRING(maintenance,FuelLabel);
             x = -5 * GUI_GRID_W + GUI_GRID_X;
             y = 15 * GUI_GRID_H + GUI_GRID_Y;
             w = 4 * GUI_GRID_W;
@@ -272,7 +259,7 @@ class CLASS(maintenance_ui) {
         };
         class CLASS(maintenance_powerText): RscText {
             idc = 2011;
-            text = "Power:"; //--- ToDo: Localize;
+            text = ECSTRING(maintenance,PowerLabel);
             x = -5 * GUI_GRID_W + GUI_GRID_X;
             y = 16 * GUI_GRID_H + GUI_GRID_Y;
             w = 4 * GUI_GRID_W;
@@ -282,7 +269,7 @@ class CLASS(maintenance_ui) {
         };
         class CLASS(maintenance_oilText): RscText {
             idc = 2012;
-            text = "Oil:"; //--- ToDo: Localize;
+            text = ECSTRING(maintenance,OilLabel);
             x = -5 * GUI_GRID_W + GUI_GRID_X;
             y = 17 * GUI_GRID_H + GUI_GRID_Y;
             w = 4 * GUI_GRID_W;
@@ -292,7 +279,7 @@ class CLASS(maintenance_ui) {
         };
         class CLASS(maintenance_coolantText): RscText {
             idc = 2013;
-            text = "Coolant:"; //--- ToDo: Localize;
+            text = ECSTRING(maintenance,CoolantLabel);
             x = -5 * GUI_GRID_W + GUI_GRID_X;
             y = 18 * GUI_GRID_H + GUI_GRID_Y;
             w = 4 * GUI_GRID_W;

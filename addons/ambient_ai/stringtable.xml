@@ -113,6 +113,22 @@
             <Chinesesimp>AI 的弹药数量 (随机选择)</Chinesesimp>
             <Turkish>Yapay zeka için mühimmat sayısı (rastgele seçilir)</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Ambient_AI_BLUFOR">
+            <English>West / BLUFOR</English>
+            <Czech>Západ / BLUFOR</Czech>
+            <French>Ouest / BLUFOR</French>
+            <Spanish>Oeste / BLUFOR</Spanish>
+            <Italian>Ovest / BLUFOR</Italian>
+            <Polish>Zachód / BLUFOR</Polish>
+            <Portuguese>Oeste / BLUFOR</Portuguese>
+            <Russian>Запад / BLUFOR</Russian>
+            <German>Westen / BLUFOR</German>
+            <Korean>서부 / BLUFOR</Korean>
+            <Japanese>西側 / BLUFOR</Japanese>
+            <Chinese>西方 / 藍方</Chinese>
+            <Chinesesimp>西方 / 蓝方</Chinesesimp>
+            <Turkish>Batı / BLUFOR</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Ambient_AI_Backpack">
             <English>Backpack</English>
             <Czech>Batoh</Czech>
@@ -176,6 +192,38 @@
             <Chinese>生成檢查之間的時間間隔 (秒)</Chinese>
             <Chinesesimp>生成检查之间的时间间隔 (秒)</Chinesesimp>
             <Turkish>Oluşma kontrolleri arasındaki saniye cinsinden süre</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_Civilian">
+            <English>Civilian</English>
+            <Czech>Civilisté</Czech>
+            <French>Civil</French>
+            <Spanish>Civil</Spanish>
+            <Italian>Civile</Italian>
+            <Polish>Cywil</Polish>
+            <Portuguese>Civil</Portuguese>
+            <Russian>Гражданские</Russian>
+            <German>Zivilist</German>
+            <Korean>민간인</Korean>
+            <Japanese>市民</Japanese>
+            <Chinese>平民</Chinese>
+            <Chinesesimp>平民</Chinesesimp>
+            <Turkish>Sivil</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_Component">
+            <English>Ambient AI</English>
+            <Czech>Okolní AI</Czech>
+            <French>IA ambiante</French>
+            <Spanish>IA de ambiente</Spanish>
+            <Italian>IA d'ambiente</Italian>
+            <Polish>Otoczenie AI</Polish>
+            <Portuguese>IA ambiente</Portuguese>
+            <Russian>Эмбиент-AI</Russian>
+            <German>Umgebungs-KI</German>
+            <Korean>주변 환경 AI</Korean>
+            <Japanese>アンビエントAI</Japanese>
+            <Chinese>環境AI動態生成</Chinese>
+            <Chinesesimp>环境AI动态生成</Chinesesimp>
+            <Turkish>Ortam yapay zekası</Turkish>
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_DeletionDist">
             <English>Deletion distance</English>
@@ -352,6 +400,22 @@
             <Chinese>AI 可能使用的頭部裝備</Chinese>
             <Chinesesimp>AI 可能使用的头部装备</Chinesesimp>
             <Turkish>Yapay zeka için olası başlıklar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_Independent">
+            <English>Independent</English>
+            <Czech>Nezávislí</Czech>
+            <French>Indépendant</French>
+            <Spanish>Independiente</Spanish>
+            <Italian>Indipendente</Italian>
+            <Polish>Niezależni</Polish>
+            <Portuguese>Independente</Portuguese>
+            <Russian>Независимые</Russian>
+            <German>Unabhängig</German>
+            <Korean>독립군</Korean>
+            <Japanese>独立勢力</Japanese>
+            <Chinese>独立方 / 綠方</Chinese>
+            <Chinesesimp>独立方 / 绿方</Chinesesimp>
+            <Turkish>Bağımsız</Turkish>
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_Items">
             <English>Items</English>
@@ -544,6 +608,22 @@
             <Chinese>AI 可能使用的夜視儀</Chinese>
             <Chinesesimp>AI 可能使用的夜视仪</Chinesesimp>
             <Turkish>Yapay zeka için olası gece görüşü</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_OPFOR">
+            <English>East / OPFOR</English>
+            <Czech>Východ / OPFOR</Czech>
+            <French>Est / OPFOR</French>
+            <Spanish>Este / OPFOR</Spanish>
+            <Italian>Est / OPFOR</Italian>
+            <Polish>Wschód / OPFOR</Polish>
+            <Portuguese>Leste / OPFOR</Portuguese>
+            <Russian>Восток / OPFOR</Russian>
+            <German>Osten / OPFOR</German>
+            <Korean>동부 / OPFOR</Korean>
+            <Japanese>东侧 / OPFOR</Japanese>
+            <Chinese>東方 / 紅方</Chinese>
+            <Chinesesimp>东方 / 红方</Chinesesimp>
+            <Turkish>Doğu / OPFOR</Turkish>
         </Key>
         <Key ID="STR_MISERY_Ambient_AI_PrimaryWeapons">
             <English>Primary weapons</English>

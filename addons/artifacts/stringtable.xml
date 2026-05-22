@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
     <Package name="Artifacts">
+        <Key ID="STR_MISERY_Artifacts_Component">
+            <English>Artifacts</English>
+            <Czech>Artefakty</Czech>
+            <French>Artefacts</French>
+            <Spanish>Artefactos</Spanish>
+            <Italian>Artefatti</Italian>
+            <Polish>Artefakty</Polish>
+            <Portuguese>Artefactos</Portuguese>
+            <Russian>Артефакты</Russian>
+            <German>Artefakte</German>
+            <Korean>아티팩트</Korean>
+            <Japanese>アーティファクト</Japanese>
+            <Chinese>神器 / 異常物</Chinese>
+            <Chinesesimp>神器 / 异常物</Chinesesimp>
+            <Turkish>Artefaktlar</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Artifacts_DebugEnable">
             <English>Enable artifact spawns debugging</English>
             <Czech>Povolit ladění vytváření artefaktů</Czech>

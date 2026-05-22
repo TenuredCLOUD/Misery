@@ -33,6 +33,22 @@
             <Chinesesimp>将锂电池放入盖革计数器</Chinesesimp>
             <Turkish>Geiger sayacına lityum pil ekleyin</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Geiger_Component">
+            <English>Geiger</English>
+            <Czech>Geiger</Czech>
+            <French>Geiger</French>
+            <Spanish>Geiger</Spanish>
+            <Italian>Geiger</Italian>
+            <Polish>Geiger</Polish>
+            <Portuguese>Geiger</Portuguese>
+            <Russian>Гейгер</Russian>
+            <German>Geiger</German>
+            <Korean>가이거</Korean>
+            <Japanese>ガイガー</Japanese>
+            <Chinese>蓋革</Chinese>
+            <Chinesesimp>盖革</Chinesesimp>
+            <Turkish>Geiger</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Geiger_MissingBatteries">
             <English>You don't have any lithium batteries...</English>
             <Czech>Nemáte žádné lithiové baterie...</Czech>

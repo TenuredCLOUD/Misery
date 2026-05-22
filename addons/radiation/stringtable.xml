@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
     <Package name="Radiation">
+        <Key ID="STR_MISERY_Radiation_Component">
+            <English>Radiation</English>
+            <Czech>Radiace</Czech>
+            <French>Radiation</French>
+            <Spanish>Radiación</Spanish>
+            <Italian>Radiazioni</Italian>
+            <Polish>Promieniowanie</Polish>
+            <Portuguese>Radiação</Portuguese>
+            <Russian>Радиация</Russian>
+            <German>Strahlung</German>
+            <Korean>방사능</Korean>
+            <Japanese>放射線</Japanese>
+            <Chinese>辐射 / 放射線</Chinese>
+            <Chinesesimp>辐射</Chinesesimp>
+            <Turkish>Radyasyon</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Radiation_RadioactiveAreas">
             <English>Radioactive Areas</English>
             <Czech>Radioaktivní oblasti</Czech>

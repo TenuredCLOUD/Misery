@@ -81,6 +81,22 @@
             <Chinesesimp>中央银行网络的名称</Chinesesimp>
             <Turkish>Merkezi banka ağının adı</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Currency_Component">
+            <English>Currency</English>
+            <Czech>Měna</Czech>
+            <French>Monnaie</French>
+            <Spanish>Divisa</Spanish>
+            <Italian>Valuta</Italian>
+            <Polish>Waluta</Polish>
+            <Portuguese>Moeda</Portuguese>
+            <Russian>Валюта</Russian>
+            <German>Währung</German>
+            <Korean>화폐</Korean>
+            <Japanese>通貨</Japanese>
+            <Chinese>貨幣</Chinese>
+            <Chinesesimp>货币</Chinesesimp>
+            <Turkish>Para Birimi</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Currency_Corpse">
             <English>Corpse</English>
             <Czech>Mrtvola</Czech>

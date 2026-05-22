@@ -129,6 +129,22 @@
             <Chinesesimp>衣物保暖: %1°C&lt;br/&gt;&lt;br/&gt;</Chinesesimp>
             <Turkish>Giysi Sıcaklığı: %1°C&lt;br/&gt;&lt;br/&gt;</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Temperature_Component">
+            <English>Temperature</English>
+            <Czech>Teplota</Czech>
+            <French>Température</French>
+            <Spanish>Temperatura</Spanish>
+            <Italian>Temperatura</Italian>
+            <Polish>Temperatura</Polish>
+            <Portuguese>Temperatura</Portuguese>
+            <Russian>Температура</Russian>
+            <German>Temperatur</German>
+            <Korean>온도</Korean>
+            <Japanese>気温 / 温度</Japanese>
+            <Chinese>溫度</Chinese>
+            <Chinesesimp>温度</Chinesesimp>
+            <Turkish>Sıcaklık</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Temperature_Framework">
             <English>Temperature Framework</English>
             <Czech>Teplotní systém</Czech>
