@@ -81,6 +81,38 @@
             <Chinesesimp>使能地图上会随机降下带有辐射强度的酸雨/辐射雨</Chinesesimp>
             <Turkish>Radyoaktif yağmuru etkinleştirir</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Radiation_RadioactiveWater">
+            <English>Enable Radioactive waters</English>
+            <Czech>Povolit radioaktivní vodu</Czech>
+            <French>Activer les eaux radioactives</French>
+            <Spanish>Activar aguas radiactivas</Spanish>
+            <Italian>Abilita acque radioattive</Italian>
+            <Polish>Włącz radioaktywne wody</Polish>
+            <Portuguese>Ativar águas radioativas</Portuguese>
+            <Russian>Включить радиоактивную воду</Russian>
+            <German>Radioaktive Gewässer aktivieren</German>
+            <Korean>방사능 오염수 활성화</Korean>
+            <Japanese>放射能汚染水を有効化</Japanese>
+            <Chinese>啟用放射性水域</Chinese>
+            <Chinesesimp>启用放射性水域</Chinesesimp>
+            <Turkish>Radyoaktif Suları Etkinleştir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Radiation_RadioactiveWaterDesc">
+            <English>Enables radioactive water when swimming</English>
+            <Czech>Aktivuje radioaktivitu vody při plavání</Czech>
+            <French>Active la radioactivité de l'eau lors de la nage</French>
+            <Spanish>Hace que el agua sea radiactiva al nadar</Spanish>
+            <Italian>Rende l'acqua radioattiva durante il nuoto</Italian>
+            <Polish>Sprawia, że woda jest radioaktywna podczas pływania</Polish>
+            <Portuguese>Torna a água radioativa ao nadar</Portuguese>
+            <Russian>Игрок получает радиацию во время плавания</Russian>
+            <German>Aktiviert radioaktive Strahlung beim Schwimmen</German>
+            <Korean>수영할 때 방사능 피해를 입습니다</Korean>
+            <Japanese>泳いでいる時に放射線ダメージを受けるようになります</Japanese>
+            <Chinese>游泳時會受到放射性輻射傷害</Chinese>
+            <Chinesesimp>游泳时会受到放射性辐射伤害</Chinesesimp>
+            <Turkish>Yüzerken radyoaktif suya maruz kalmayı etkinleştirir</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Radiation_StoreArtifact">
             <English>Store Artifact</English>
             <Czech>Uložit artefakt</Czech>

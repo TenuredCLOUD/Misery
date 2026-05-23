@@ -377,16 +377,6 @@ QCLASS(guttingKnife), \
 #define SICKNESS_FACTOR 1.6666667e-2 //0.5
 #define WETNESS_RATE 5e-4 //0.015
 
-// Swimming animations:
-#define MACRO_ANIMATION_SWIMMING \
-"asswpercmstpsnonwnondnon", \
-"aswmpercmrunsnonwnondl", \
-"asswpercmrunsnonwnondr", \
-"asswpercmrunsnonwnondb", \
-"asswpercmrunsnonwnondf", \
-"asswpercmrunsnonwnondf", \
-"aswmpercmrunsnonwnondfl"
-
 // IMS animations for compat:
 #define MACRO_ANIMATION_IMS_SPRINT "am_kulak_sprintf", "melee_sprintf", "melee_sprintfl", "melee_sprintfr"
 

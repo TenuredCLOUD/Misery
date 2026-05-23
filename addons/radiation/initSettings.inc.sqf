@@ -17,3 +17,12 @@ private _category = format ["Misery %1", localize LSTRING(Component)];
     false,
     1
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(radioactiveWater),
+    "CHECKBOX",
+    [LSTRING(RadioactiveWater), LSTRING(RadioactiveWaterDesc)],
+    _category,
+    false,
+    1
+] call CBA_fnc_addSetting;

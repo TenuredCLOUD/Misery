@@ -30,6 +30,7 @@ private _targetExposure = _ambientTarget;
 private _thermalIndexModifier = _airTemp + (_clothesWarmth / 5);
 private _wetnessModifier = 0;
 private _changeMultiplier = 1;
+private _hasWetsuit = ((toLower uniform player) find "wetsuit") > -1;
 
 call EFUNC(common,nearFire) params ["", "_isInflamed"];
 
@@ -111,13 +112,12 @@ switch (true) do {
         };
     };
     default {
-        private _hasWetsuit = ((toLower uniform player) find "wetsuit") > -1;
-        private _isSwimming = (animationState player in [MACRO_ANIMATION_SWIMMING]);
+        private _isSwimming = [player] call ACEFUNC(common,isSwimming);
 
         private _rainWet = false;
         private _waterWet = false;
 
-        if (surfaceIsWater getPosWorld player || _isSwimming) then {
+        if (_isSwimming) then {
             _waterWet = true;
             _thermalIndexModifier = _seaTemp;
             _targetExposure = linearConversion [TEMP_MIN, TEMP_MAX, _seaTemp, -1, 1, true];
@@ -145,7 +145,7 @@ switch (true) do {
 private _driftChange = NEUTRAL_RATE * _changeMultiplier;
 private _exposureModifier = (_targetExposure - _exposure) * _driftChange;
 
-if (_wetness > 0 && _thermalIndex < TEMP_NEUTRAL) then {
+if (_wetness > 0 && _thermalIndex < TEMP_NEUTRAL && !_hasWetsuit) then {
     _exposureModifier = (_exposureModifier - (_wetness * WETNESS_RATE * 5)) * (3 + _wetness);
 };
 

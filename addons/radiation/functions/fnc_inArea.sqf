@@ -27,11 +27,12 @@ if !(call FUNC(checkAreas)) exitWith {
     {
         private _player = _x;
         private _isPlayerHandled = _player getVariable [QGVAR(insideArea), false];
+        private _isSwimming = [_player] call ACEFUNC(common,isSwimming);
 
         if (!_isPlayerHandled) then {
             private _isInsideZone = GVAR(areas) findIf {_player inArea _x} isNotEqualTo -1;
 
-            if (_isInsideZone || rain > 0) then {
+            if (_isInsideZone || rain > 0 || _isSwimming) then {
                 _player setVariable [QGVAR(insideArea), true, true];
                 [QGVAR(radiationEvent), [], _player] call CBA_fnc_targetEvent;
             };
