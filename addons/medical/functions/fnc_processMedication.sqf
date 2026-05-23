@@ -27,9 +27,7 @@ if ([_className, "CfgMagazines"] call EFUNC(common,configCheck)) then {
 
 [_patient, [_className] call EFUNC(common,getItemData) select 0] call ACEFUNC(medical_treatment,addToTriageCard);
 
-[_patient, "activity", localize LSTRING(UsedMedication), [[_medic, false, true] call ACEFUNC(common,getName), [_className] call EFUNC(common,getItemData) select 0]] call ACEFUNC(medical_treatment,addToLog);
-
-// [QACEGVAR(medical_treatment,medicationLocal), [_patient, _bodyPart, _classname], _patient] call CBA_fnc_targetEvent;
+[_patient, "activity", localize LSTRING(UsedMedication), [[_patient, false, true] call ACEFUNC(common,getName), [_className] call EFUNC(common,getItemData) select 0]] call ACEFUNC(medical_treatment,addToLog);
 
 [_className] call FUNC(getMedicationData) params ["_painAdjust", "_timeInSystem", "_timeTillMaxEffect", "_viscosityChange", "_hrIncreaseLow", "_hrIncreaseNormal", "_hrIncreaseHigh", "_incompatibleMedication", "_dose", "_maxDose"];
 
@@ -44,7 +42,9 @@ private _heartRateChange = _minIncrease + random (_maxIncrease - _minIncrease);
 [_patient, _className, _timeTillMaxEffect, _timeInSystem, _heartRateChange, _painAdjust, _viscosityChange, _dose] call ACEFUNC(medical_status,addMedicationAdjustment);
 
 if (_className in [MACRO_MEDICATION_STRONG]) then {
-    [15, 2] call EFUNC(common,chromaticEffect);
+    if (isPlayer _patient) then {
+        [15, 2] remoteExecCall [QEFUNC(common,chromaticEffect), owner _patient];
+    };
     [_patient, _className] call FUNC(withdrawal);
 };
 

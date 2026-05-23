@@ -7,6 +7,7 @@ ADDON = false;
 #include "initSettings.inc.sqf"
 
 GVAR(modLoadedCache) = createHashMap;
+GVAR(chromEffect) = false;
 
 call FUNC(modLoadedPrep);
 
