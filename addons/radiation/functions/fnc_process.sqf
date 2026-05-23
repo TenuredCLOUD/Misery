@@ -77,7 +77,7 @@
     if (GVAR(radioactiveWater)) then {
 
         if (_isSwimming) then {
-            _waterDose = 0.0005;
+            _waterDose = linearConversion [0, 3, _baseEffectiveDose, 0, 0.0005, true];
         };
     };
 
