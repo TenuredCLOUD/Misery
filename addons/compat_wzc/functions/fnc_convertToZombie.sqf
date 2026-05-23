@@ -24,5 +24,7 @@ if (!(player getVariable ["WBK_AI_ISZombie", false]) && _infection >= 1) then {
 };
 
 if (player getVariable ["WBK_AI_ISZombie", false]) then {
-    [player, 1 / 8, "head"] call EFUNC(survival,ailmentDamage);
+    QGVAR(display) cutRsc [QCLASS(bloodshot_ui), "PLAIN", 1, false];
+    [player, "head", ["Contusion", 5, 2, 1]] call ACEFUNC(medical,addWound);
+    [player] call EFUNC(medical,handleHeadTrauma);
 };

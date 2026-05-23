@@ -40,9 +40,9 @@ if (_psychosisLevel < 0.55) exitWith {
 
 GVAR(sleepBlocked) = true;
 
-if ([50] call EFUNC(common,rollChance)) then {
+if ([75] call EFUNC(common,rollChance)) then {
     enableCamShake true;
-    addCamShake [2, GVAR(cycleTimer), 2];
+    addCamShake [0.5, 5, 10];
 };
 
 if (_psychosisLevel > 0.75) then {

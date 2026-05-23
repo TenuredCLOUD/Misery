@@ -14,7 +14,7 @@
  *
 */
 
-call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "", "", "_exposure"];
+call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "", "", "_exposure", "", "", "_infection", "_parasites", "_toxicity"];
 
 private _decayHealth = false;
 
@@ -29,6 +29,15 @@ switch (true) do {
         _decayHealth = true
     };
     case (_exposure isEqualTo 1): {
+        _decayHealth = true
+    };
+    case (_infection isEqualTo 1): {
+        _decayHealth = true
+    };
+    case (_parasites isEqualTo 1): {
+        _decayHealth = true
+    };
+    case (_toxicity >= 0.5): {
         _decayHealth = true
     };
     default {_decayHealth = false};

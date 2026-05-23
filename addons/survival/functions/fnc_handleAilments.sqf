@@ -17,7 +17,7 @@
 
 call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "", "", "", "", "", "_infection", "_parasites", "_toxicity"];
 
-call EFUNC(common,playerDamaged) params ["_damaged"];
+private _damaged = player call ACEFUNC(medical,isInjured);
 
 // Parasites - Always gets worse, reset if medication is used
 private _finalParasites = ((_parasites + GVAR(parasiteModifiers)) min 1) max -1;

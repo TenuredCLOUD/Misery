@@ -41,11 +41,13 @@
     [QUOTE(COMPONENT_BEAUTIFIED), format ["Hearing Protection: %1%2", (_hearingProtection * 100), "%"]] call EFUNC(common,debugMessage);
 
     if (_hearingProtection < 1) then {
-        [player, _damageMultiplier, "head", "punch"] call ACEFUNC(medical,addDamageToUnit);
         QGVAR(display) cutRsc [QCLASS(tunnel_ui), "PLAIN", 1, false];
-    };
-
-    if (EGVAR(psychosis,enabled)) then {
-        [_psychModifier, "psychosis"] call EFUNC(common,addStatusModifier);
+        if (EGVAR(psychosis,enabled)) then {
+            [_psychModifier, "psychosis"] call EFUNC(common,addStatusModifier);
+            [player, "head", ["Contusion", 1, 2, 1]] call ACEFUNC(medical,addWound);
+        } else {
+            [player, "head", ["Contusion", 1, 2, 1]] call ACEFUNC(medical,addWound);
+            [player] call EFUNC(medical,handleHeadTrauma);
+        };
     };
 }, 1] call CBA_fnc_addPerFrameHandler;

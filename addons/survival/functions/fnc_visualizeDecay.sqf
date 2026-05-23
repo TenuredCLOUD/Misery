@@ -2,7 +2,7 @@
 /*
  * Author: TenuredCLOUD
  * Visualize health decay
- * Slowly adds black tunnel vision effect to players vision, based on hunger, thirst, exposure
+ * Adds ACE medical uncon effect to players vision, based on hunger, thirst, exposure, sickness
  *
  * Arguments:
  * 0: visualize decay <BOOL>
@@ -17,29 +17,26 @@
 
 params ["_decay"];
 
-private _targetLevel = [0, 3.333333e-3] select _decay; //0.1
+private _targetLevel = [0, 8.333333e-4] select _decay;
 GVAR(decayLevel) = GVAR(decayLevel) + _targetLevel;
 
 if (GVAR(decayLevel) > 0 && !_decay) then {
-    GVAR(decayLevel) = GVAR(decayLevel) - 8.333333e-3; //0.25
+    GVAR(decayLevel) = GVAR(decayLevel) - 2.083333e-3;
 };
 
 GVAR(decayLevel) = GVAR(decayLevel) max 0 min 1;
 
 private _intensity = GVAR(decayLevel);
 
-GVAR(decayEffect) ppEffectEnable (_intensity > 0);
-GVAR(decayEffect) ppEffectAdjust [
-    1 - _intensity * 0.5,
-    1 - _intensity * 0.7,
-    0,
-    [0, 0, 0, _intensity * 0.5],
-    [1, 1, 1, 1 - _intensity],
-    [1, 1, 1, 0],
-    [0.3 + _intensity * 0.7, 0.5 - _intensity * 0.5, 0, 0, -0.1, 0.4, 0.8 - _intensity * 0.6]
-];
-GVAR(decayEffect) ppEffectCommit 0.5;
+// If no visualizer make sure effect doesn't fire (fix for healthy state & effect playing in main menu)
+if (!_decay) exitWith {};
+
+if ([5] call EFUNC(common,rollChance)) then {
+    [false, 1] call ACEFUNC(medical_feedback,effectUnconscious);
+};
 
 if (_decay && _intensity >= 1) then {
-    [player, 0.33, "head", "unknown", objNull, [], true] call ACEFUNC(medical,addDamageToUnit);
+    if ([5] call EFUNC(common,rollChance)) then {
+        [player] call ACEFUNC(medical_statemachine,enteredStateCardiacArrest);
+    };
 };
