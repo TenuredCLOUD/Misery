@@ -19,15 +19,6 @@ private _category = format ["Misery %1", localize LSTRING(Component)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(overlays),
-    "CHECKBOX",
-    ["Gasmask Overlays", "Enables gasmask overlays for Contact DLC CBRN equipment"],
-    _category,
-    false,
-    1
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(rebreatherHoses),
     "CHECKBOX",
     [LSTRING(RebreatherConnections), LSTRING(RebreatherConnectionsDesc)],
