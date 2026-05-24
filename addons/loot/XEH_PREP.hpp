@@ -4,6 +4,7 @@ PREP(checkAreas);
 PREP(generate);
 PREP(loop);
 PREP(parseData);
+PREP(parseGradFortData);
 PREP(parseSearchData);
 PREP(searchCondition);
 PREP(searchInteraction);

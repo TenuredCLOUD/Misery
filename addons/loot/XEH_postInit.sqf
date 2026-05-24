@@ -5,6 +5,9 @@ if (!isServer) exitWith {};
 if (isClass (missionConfigFile >> "CfgMisery_LootData")) then {
     [{CBA_missionTime > 1}, {
         call FUNC(parseData);
+        if (isClass (missionConfigFile >> "CfgGradFortifications")) then {
+            call FUNC(parseGradFortData);
+        };
         call FUNC(checkAreas);
 
         [{
