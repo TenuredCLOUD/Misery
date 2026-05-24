@@ -26,11 +26,11 @@ private _currentTimer = 0;
     params ["_args", "_handle"];
     _args params ["_currentTimer"];
 
-    private _isSwimming = (animationState player in [MACRO_ANIMATION_SWIMMING]);
+    private _isSwimming = [player] call ACEFUNC(common,isSwimming);
 
     if (isGamePaused) exitWith {};
 
-    if (isNull objectParent player && surfaceIsWater getPosWorld player || _isSwimming) exitWith {
+    if (isNull objectParent player && _isSwimming) exitWith {
         GVAR(thermalBagActive) = false;
         _handle call CBA_fnc_removePerFrameHandler;
     };

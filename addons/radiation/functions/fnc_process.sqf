@@ -45,9 +45,11 @@
 
     private _zoneDose = 0;
     private _rainDose = 0;
+    private _waterDose = 0;
 
     private _activeAreaIndex = GVAR(areas) findIf {player inArea _x};
     private _insideRadZone = _activeAreaIndex isNotEqualTo -1;
+    private _isSwimming = [player] call ACEFUNC(common,isSwimming);
 
     if (_insideRadZone) then {
         private _marker = GVAR(areas) select _activeAreaIndex;
@@ -72,7 +74,14 @@
         };
     };
 
-    private _totalDose = (_zoneDose + _rainDose) * _radResistance;
+    if (GVAR(radioactiveWater)) then {
+
+        if (_isSwimming) then {
+            _waterDose = linearConversion [0, 3, _baseEffectiveDose, 0, 0.0005, true];
+        };
+    };
+
+    private _totalDose = (_zoneDose + _rainDose + _waterDose) * _radResistance;
 
     if (_totalDose > 0) then {
         [_totalDose, "radiation"] call EFUNC(common,addStatusModifier);
@@ -82,8 +91,9 @@
     [QUOTE(COMPONENT_BEAUTIFIED), format ["Total Effective Dose: %1 (Zone: %2, Rain: %3)", _totalDose, _zoneDose, _rainDose]] call EFUNC(common,debugMessage);
 
     private _isSafeFromRain = (rain < 0.1) || (_rainDose isEqualTo 0 && !_insideRadZone);
+    private _isSafeFromWater = (!_isSwimming) || (_waterDose isEqualTo 0 && !_insideRadZone);
 
-    if (!_insideRadZone && _isSafeFromRain) exitWith {
+    if (!_insideRadZone && _isSafeFromRain && _isSafeFromWater) exitWith {
         player setVariable [QGVAR(insideArea), false, true];
         _handle call CBA_fnc_removePerFrameHandler;
     };
