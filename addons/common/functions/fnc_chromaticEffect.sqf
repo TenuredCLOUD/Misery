@@ -16,6 +16,8 @@
 
 params [["_duration", 3], ["_commitTime", 2]];
 
+if (!hasInterface) exitWith {};
+
 if (GVAR(chromEffect)) exitWith {};
 
 GVAR(chromEffect) = true;
