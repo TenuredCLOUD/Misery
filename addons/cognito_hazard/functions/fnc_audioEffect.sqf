@@ -29,22 +29,12 @@
     enableCamShake true;
 
     if (_hearingProtection < 1) exitWith {
+        15 call ACEFUNC(hearing,earRinging);
+        [] call ACEFUNC(medical_feedback,effectIncapacitated);
         playSound QEGVAR(audio,sound_brainScorcher);
-
-        "dynamicBlur" ppEffectEnable true;
-        "dynamicBlur" ppEffectAdjust [10];
-        "dynamicBlur" ppEffectCommit 3;
-
         addCamShake [10, 45, 10];
-        player setFatigue 1;
-        5 fadeSound 0.1;
-
-        "dynamicBlur" ppEffectAdjust [20];
-        "dynamicBlur" ppEffectCommit 3;
-        "dynamicBlur" ppEffectEnable false;
     };
 
-    addCamShake [1, 5, 10];
     playSound QEGVAR(audio,sound_submergedShort);
     playSound selectRandom [MACRO_AUDIOSELECTIONS];
 }, 16] call CBA_fnc_addPerFrameHandler;

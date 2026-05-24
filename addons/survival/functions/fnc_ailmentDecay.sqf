@@ -14,29 +14,20 @@
  *
 */
 
-call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "_radiation", "_infection", "_parasites", "_toxicity", "_psychosis"];
+call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "_radiation", "", "", "", "_psychosis"];
 
-if (_radiation > 0.025) then {
-    if ([5] call EFUNC(common,rollChance)) then {
-        [player, _radiation / 5, "body"] call FUNC(ailmentDamage);
+if (_radiation > 0.01) then {
+    if ([1] call EFUNC(common,rollChance)) then {
+        [player, _radiation] call EFUNC(medical,handleRadiationEffects);
+        [player] call EFUNC(medical,handleRadiationExposure);
     };
 };
 
-if (_infection isEqualTo 1) then {
-    [player, 1 / 6.5, "body"] call FUNC(ailmentDamage);
-};
-
-if (_parasites isEqualTo 1) then {
-    [player, 1 / 6.5, "body"] call FUNC(ailmentDamage);
-};
-
-if (_toxicity > 0.25) then {
-    [player, _toxicity / 5, "body"] call FUNC(ailmentDamage);
-};
-
-if (_psychosis isEqualTo 1) then {
-    if ([5] call EFUNC(common,rollChance)) then {
-        [player, 1 / 8, "head"] call FUNC(ailmentDamage);
+if (_psychosis > 0.75) then {
+    if ([1] call EFUNC(common,rollChance)) then {
+        5 call ACEFUNC(hearing,earRinging);
+        [] call ACEFUNC(medical_feedback,effectIncapacitated);
+        [player, _psychosis] call EFUNC(medical,handlePsychosisEffects);
+        [player] call EFUNC(medical,handleHeadTrauma);
     };
 };
-

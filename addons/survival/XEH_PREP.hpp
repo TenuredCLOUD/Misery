@@ -1,4 +1,3 @@
-PREP(ailmentDamage);
 PREP(ailmentDecay);
 PREP(decayHealth);
 PREP(feedback);
