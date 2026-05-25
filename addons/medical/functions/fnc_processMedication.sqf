@@ -43,7 +43,7 @@ private _heartRateChange = _minIncrease + random (_maxIncrease - _minIncrease);
 
 if (_className in [MACRO_MEDICATION_STRONG]) then {
     if (isPlayer _patient) then {
-        [15, 2] remoteExecCall [QEFUNC(common,chromaticEffect), owner _patient];
+        [QEGVAR(common,chromA), [15, 2], _patient] call CBA_fnc_targetEvent;
     };
     [_patient, _className] call FUNC(withdrawal);
 };

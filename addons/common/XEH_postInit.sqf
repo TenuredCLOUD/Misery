@@ -63,3 +63,8 @@ GVAR(defaultLoadout) = [[[],[],[],[],[],[],"","",[],["ItemMap","","","ItemCompas
 
     systemChat format ["[%1] %2", _callsign, _text];
 }] call CBA_fnc_addEventHandler;
+
+[QGVAR(chromA), {
+    params ["_duration", "_commitTime"];
+    [_duration, _commitTime] call FUNC(chromaticEffect);
+}] call CBA_fnc_addEventHandler;
