@@ -37,5 +37,5 @@ if (GVAR(woodCollection)) then {
         3
     ] call ACEFUNC(interact_menu,createAction);
 
-    [QCLASS(woodenlog), 0, [], _forestrySplitLog] call ACEFUNC(interact_menu,addActionToClass);
+    [player, 1, [QUOTE(ACE_SelfActions), QUOTE(ACE_Equipment)], _forestrySplitLog] call ACEFUNC(interact_menu,addActionToObject);
 };
