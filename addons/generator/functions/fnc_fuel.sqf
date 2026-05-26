@@ -17,16 +17,7 @@
 
 params ["_generator", "_generatorType"];
 
-private _fuelDelay = nil;
-
-    switch (_generatorType) do {
-        case "Land_Portable_generator_F": {
-            _fuelDelay = 60;
-        };
-        case "Land_PowerGenerator_F": {
-            _fuelDelay = 120;
-        };
-    };
+private _fuelDelay = _generator getVariable [QGVAR(fuelDelay), 0];
 
 [{
     params ["_args", "_handle"];

@@ -4,7 +4,8 @@
  * Generator Refuel Action
  *
  * Arguments:
- * None
+ * 0: Generator <OBJECT>
+ * 1: Type <STRING>
  *
  * Return Value:
  * None
@@ -14,64 +15,69 @@
  *
 */
 
-[player] call FUNC(nearGenerator) params ["", "_generator", "_generatorType"];
+params ["_generator", "_generatorType"];
 
-[{!isNull findDisplay 573849}, {
-    params ["_generator", "_generatorType"];
+private _fuelLevel = _generator getVariable [QGVAR(fuelLevel), 1];
 
-    private _fuelLevel = _generator getVariable [QGVAR(fuelLevel), 1];
+if (_fuelLevel >= 1) exitWith {
+    [QEGVAR(common,tileText), localize LSTRING(FullTank)] call CBA_fnc_localEvent;
+};
 
-    if (_fuelLevel >= 1) exitWith {
-        [QEGVAR(common,tileText), localize LSTRING(FullTank)] call CBA_fnc_localEvent;
+private _fuelCan = "";
+private _requiredFuelType = "";
+
+switch (_generatorType) do {
+    case "Land_PowerGenerator_F": {
+        _fuelCan = QCLASS(diesel);
+        _requiredFuelType = localize LSTRING(Diesel);
     };
+    case "Land_Portable_generator_F": {
+        _fuelCan = QCLASS(petrol);
+        _requiredFuelType = localize LSTRING(Petrol);
+    };
+};
 
-    private _fuelCan = "";
-    private _requiredFuelType = "";
+if !([[_fuelCan]] call EFUNC(common,hasItem)) exitWith {
+    [QEGVAR(common,tileText), format [localize LSTRING(NeedsJerrycan), _requiredFuelType]] call CBA_fnc_localEvent;
+};
 
-    switch (_generatorType) do {
-        case "Land_PowerGenerator_F": {
-            _fuelCan = QCLASS(diesel);
-            _requiredFuelType = localize LSTRING(Diesel);
-        };
-        case "Land_Portable_generator_F": {
-            _fuelCan = QCLASS(petrol);
-            _requiredFuelType = localize LSTRING(Petrol);
-        };
+private _lastPos = getPosATL player;
+
+[{
+    params ["_args", "_handle"];
+    _args params ["_fuelCan", "_requiredFuelType", "_fuelLevel", "_generator", "_generatorType", "_lastPos"];
+
+    private _currentFuel = _generator getVariable [QGVAR(fuelLevel), 1];
+
+    private _fuelTip = format [localize LSTRING(FuelLevel), [_currentFuel * 100, 1, 1, false] call CBA_fnc_formatNumber, "%"];
+
+    [[_fuelTip, 1, [1, 1, 1, 1]], [], true] call CBA_fnc_notify;
+
+    private _currentPos = getPosATL player;
+
+    //Check if player is moving, immediately stop refueling
+    if (_currentPos distance _lastPos > 0.01) exitWith {
+        _handle call CBA_fnc_removePerFrameHandler;
     };
 
     if !([[_fuelCan]] call EFUNC(common,hasItem)) exitWith {
         [QEGVAR(common,tileText), format [localize LSTRING(NeedsJerrycan), _requiredFuelType]] call CBA_fnc_localEvent;
+        _handle call CBA_fnc_removePerFrameHandler;
     };
 
-    [{
-        params ["_args", "_handle"];
-        _args params ["_fuelCan", "_requiredFuelType", "_fuelLevel", "_generator", "_generatorType"];
+    if (_fuelLevel >= 1) exitWith {
+        [QEGVAR(common,tileText), localize LSTRING(FullTank)] call CBA_fnc_localEvent;
+        _handle call CBA_fnc_removePerFrameHandler;
+    };
 
-        private _currentFuel = _generator getVariable [QGVAR(fuelLevel), 1];
+    // Land_PowerGenerator_F simulated at 80L tank, Land_Portable_generator_F simulated at 40L tank
+    private _fueltoAdd = [0.025, 0.0125] select (_generatorType isEqualTo "Land_PowerGenerator_F");
 
-        if (isNull findDisplay 573849) exitWith {
-            _handle call CBA_fnc_removePerFrameHandler;
-        };
+    _generator setVariable [QGVAR(fuelLevel), _currentFuel + _fueltoAdd, true];
 
-        if !([[_fuelCan]] call EFUNC(common,hasItem)) exitWith {
-            [QEGVAR(common,tileText), format [localize LSTRING(NeedsJerrycan), _requiredFuelType]] call CBA_fnc_localEvent;
-            _handle call CBA_fnc_removePerFrameHandler;
-        };
+    private _emptyCan = [QCLASS(petrolEmpty), QCLASS(dieselEmpty)] select (_requiredFuelType isEqualTo (localize LSTRING(Diesel)));
 
-        if (_fuelLevel >= 1) exitWith {
-            [QEGVAR(common,tileText), localize LSTRING(FullTank)] call CBA_fnc_localEvent;
-            _handle call CBA_fnc_removePerFrameHandler;
-        };
+    [_fuelCan, _emptyCan] call EFUNC(common,itemDecrement);
 
-        // Land_PowerGenerator_F simulated at 80L tank, Land_Portable_generator_F simulated at 40L tank
-        private _fueltoAdd = [0.025, 0.0125] select (_generatorType isEqualTo "Land_PowerGenerator_F");
-
-        _generator setVariable [QGVAR(fuelLevel), _currentFuel + _fueltoAdd, true];
-
-        private _emptyCan = [QCLASS(petrolEmpty), QCLASS(dieselEmpty)] select (_requiredFuelType isEqualTo (localize LSTRING(Diesel)));
-
-        [_fuelCan, _emptyCan] call EFUNC(common,itemDecrement);
-
-    }, 1, [_fuelCan, _requiredFuelType, _fuelLevel, _generator, _generatorType]] call CBA_fnc_addPerFrameHandler;
-}, [_generator, _generatorType]] call CBA_fnc_waitUntilAndExecute;
+}, 1, [_fuelCan, _requiredFuelType, _fuelLevel, _generator, _generatorType, _lastPos]] call CBA_fnc_addPerFrameHandler;
 

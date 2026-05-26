@@ -71,5 +71,6 @@ params ["_generator", "_generatorType"];
                 } forEach _hitpoints;
             };
         } forEach _lights + _lightsTerrain;
+        _handle call CBA_fnc_removePerFrameHandler;
     };
 }, 1, [_generator, _generatorType]] call CBA_fnc_addPerFrameHandler;

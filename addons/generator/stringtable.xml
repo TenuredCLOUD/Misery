@@ -17,6 +17,22 @@
             <Chinesesimp>使用发电机</Chinesesimp>
             <Turkish>Jeneratörü kullan</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Generator_CheckFuel">
+            <English>Check Fuel</English>
+            <Czech>Zkontrolovat palivo</Czech>
+            <French>Vérifier le carburant</French>
+            <Spanish>Comprobar combustible</Spanish>
+            <Italian>Controlla carburante</Italian>
+            <Polish>Sprawdź poziom paliwa</Polish>
+            <Portuguese>Verificar Combustível</Portuguese>
+            <Russian>Проверить топливо</Russian>
+            <German>Kraftstoff prüfen</German>
+            <Korean>연료 확인</Korean>
+            <Japanese>燃料を確認</Japanese>
+            <Chinese>检查油量 / 檢查燃料</Chinese>
+            <Chinesesimp>检查油量 / 检查燃料</Chinesesimp>
+            <Turkish>Yakıtı Kontrol Et</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Generator_Diesel">
             <English>Diesel</English>
             <Czech>Nafta</Czech>
@@ -33,6 +49,22 @@
             <Chinesesimp>柴油</Chinesesimp>
             <Turkish>Dizel</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Generator_FailedStart">
+            <English>The Generator failed to start...</English>
+            <Czech>Generátor se nepodařilo spustit...</Czech>
+            <French>Le générateur n'a pas pu démarrer...</French>
+            <Spanish>El generador no pudo arrancar...</Spanish>
+            <Italian>Il generatore non è partito...</Italian>
+            <Polish>Generator nie uruchomił się...</Polish>
+            <Portuguese>O gerador falhou ao iniciar...</Portuguese>
+            <Russian>Генератор не заёлся...</Russian>
+            <German>Der Generator konnte nicht gestartet werden...</German>
+            <Korean>발전기를 가동하지 못했습니다...</Korean>
+            <Japanese>発電機の起動に失敗しました...</Japanese>
+            <Chinese>發電機無法啟動...</Chinese>
+            <Chinesesimp>发电机无法启动...</Chinesesimp>
+            <Turkish>Jeneratör çalıştırılamadı...</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Generator_FuelLabel">
             <English>Fuel:</English>
             <Czech>Palivo:</Czech>
@@ -48,6 +80,22 @@
             <Chinese>燃料:</Chinese>
             <Chinesesimp>燃料:</Chinesesimp>
             <Turkish>Yakıt:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Generator_FuelLevel">
+            <English>Fuel level: ~ %1%2</English>
+            <Czech>Stav paliva: ~ %1%2</Czech>
+            <French>Niveau de carburant : ~ %1%2</French>
+            <Spanish>Nivel de combustible: ~ %1%2</Spanish>
+            <Italian>Livello carburante: ~ %1%2</Italian>
+            <Polish>Poziom paliwa: ~ %1%2</Polish>
+            <Portuguese>Nível de combustível: ~ %1%2</Portuguese>
+            <Russian>Уровень топлива: ~ %1%2</Russian>
+            <German>Kraftstoffstand: ~ %1%2</German>
+            <Korean>연료 잔량: ~ %1%2</Korean>
+            <Japanese>燃料残量: ~ %1%2</Japanese>
+            <Chinese>油量：~ %1%2</Chinese>
+            <Chinesesimp>油量：~ %1%2</Chinesesimp>
+            <Turkish>Yakit seviyesi: ~ %1%2</Turkish>
         </Key>
         <Key ID="STR_MISERY_Generator_FullTank">
             <English>This generator has a full tank...</English>

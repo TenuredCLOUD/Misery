@@ -35,8 +35,6 @@ switch (_generatorType) do {
     };
 };
 
-_generator setVariable [QGVAR(isRunning), true, true];
-
 private _soundDummy = "Land_HelipadEmpty_F" createVehicle (getPosATL _generator);
 _generator setVariable [QCLASS(generatorSound), true, true];
 
@@ -46,12 +44,20 @@ _generator setVariable [QCLASS(generatorSound), true, true];
     deleteVehicle _this;
 }, _soundDummy] call CBA_fnc_waitUntilAndExecute;
 
+// Failure to start RNG logic since most Generators do not start with one pull etc...
+if ([50] call EFUNC(common,rollChance)) exitWith {
+    [QEGVAR(common,tileText), localize LSTRING(FailedStart)] call CBA_fnc_localEvent;
+};
+
+_generator setVariable [QGVAR(isRunning), true, true];
+
 [{
     params ["_generator", "_generatorType"];
 
-    [[_generator, _generatorType], FUNC(fuel)] remoteExec ["call", [0, -2] select isDedicated, true];
-    [[_generator, _generatorType], FUNC(powerNearby)] remoteExec ["call", [0, -2] select isDedicated, true];
-    [[_generator, _generatorType], FUNC(runLoop)] remoteExec ["call", [0, -2] select isDedicated, true];
-    [[_generator], FUNC(trackPos)] remoteExec ["call", [0, -2] select isDedicated, true];
+    [QGVAR(processFuel), [_generator, _generatorType]] call CBA_fnc_globalEvent;
+    [QGVAR(processPower), [_generator, _generatorType]] call CBA_fnc_globalEvent;
+    [QGVAR(running), [_generator, _generatorType]] call CBA_fnc_globalEvent;
+    [QGVAR(watchPos), [_generator]] call CBA_fnc_globalEvent;
+
 }, [_generator, _generatorType], _startupDelay] call CBA_fnc_waitAndExecute;
 

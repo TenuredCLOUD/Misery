@@ -4,7 +4,9 @@
  * Generator Power button
  *
  * Arguments:
- * None
+ * 0: Generator <OBJECT>
+ * 1: Type <STRING>
+ * 2: Power Value <NUMBER>
  *
  * Return Value:
  * None
@@ -14,24 +16,17 @@
  *
 */
 
-[player] call FUNC(nearGenerator) params ["", "_generator", "_generatorType"];
+params ["_generator", "_generatorType", "_power"];
 
-[{!isNull findDisplay 573849}, {
-    params ["_generator", "_generatorType"];
-
-    _powerButton = findDisplay 573849 displayCtrl 1600;
-
-    if ((ctrlText 1600) isEqualTo (localize LSTRING(Start))) exitWith {
-        if (insideBuilding player isEqualTo 1) exitWith {
-            [QEGVAR(common,tileText), localize LSTRING(Inside)] call CBA_fnc_localEvent;
-        };
-
-        [_generator, _generatorType] call FUNC(processAction);
+if (_power isEqualTo 1) exitWith {
+    if (insideBuilding player isEqualTo 1) exitWith {
+        [QEGVAR(common,tileText), localize LSTRING(Inside)] call CBA_fnc_localEvent;
     };
 
-    if ((ctrlText 1600) isEqualTo (localize LSTRING(Stop))) exitWith {
-        _generator setVariable [QGVAR(shuttingDown), true, true];
-    };
-}, [_generator, _generatorType]] call CBA_fnc_waitUntilAndExecute;
+    [_generator, _generatorType] call FUNC(processAction);
+};
 
+if (_power isEqualTo 0) exitWith {
+    _generator setVariable [QGVAR(shuttingDown), true, true];
+};
 

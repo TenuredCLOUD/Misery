@@ -13,7 +13,6 @@
 #include "\z\misery\addons\forge\ui\forge.hpp"
 #include "\z\misery\addons\fuel\ui\refill_fuelCan.hpp"
 #include "\z\misery\addons\fuel\ui\refuelVehicle.hpp"
-#include "\z\misery\addons\generator\ui\generator.hpp"
 #include "\z\misery\addons\hydrology\ui\hydrology.hpp"
 #include "\z\misery\addons\maintenance\ui\maintenance.hpp"
 #include "\z\misery\addons\persistence\ui\grad_persistence.hpp"
