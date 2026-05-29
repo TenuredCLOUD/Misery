@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call misery_generator_fnc_initPortableGenerators;
+ * [] call misery_generator_fnc_initGenerators;
  *
  * Public: No
 */
