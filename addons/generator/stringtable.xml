@@ -241,6 +241,22 @@
             <Chinesesimp>加油</Chinesesimp>
             <Turkish>Yakıt ikmali yap</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Generator_RefuelingInterrupted">
+            <English>Refueling interrupted...</English>
+            <Czech>Naplňování přerušeno...</Czech>
+            <French>Rechargement interrompu...</French>
+            <Spanish>Repostaje interrumpido...</Spanish>
+            <Italian>Rifornimento interrotto...</Italian>
+            <Polish>Zatankowanie przerwane...</Polish>
+            <Portuguese>Enchimento interrompido...</Portuguese>
+            <Russian>Заправка прервана...</Russian>
+            <German>Benzinieren unterbrochen...</German>
+            <Korean>주유 중단됨...</Korean>
+            <Japanese>給油が中断されました...</Japanese>
+            <Chinese>加油被中断了...</Chinese>
+            <Chinesesimp>加油被中断了...</Chinesesimp>
+            <Turkish>Yakıt doldurma işlemi kesildi...</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Generator_SHUTTINGDOWN">
             <English>SHUTTING DOWN</English>
             <Czech>VYPÍNÁNÍ</Czech>

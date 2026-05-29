@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 // CBA Events
-[QGVAR(say3D), {(_this select 0) say3D (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(say3D), {(_this select 0) say3D [(_this select 1), (_this select 2)]}] call CBA_fnc_addEventHandler;
 
 // TODO.
 /*

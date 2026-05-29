@@ -23,16 +23,7 @@ params ["_generator", "_generatorType"];
 
     private _runState = _generator getVariable [QGVAR(isRunning), false];
 
-    private _radius = nil;
-
-    switch (_generatorType) do {
-        case "Land_Portable_generator_F": {
-            _radius = 25;
-        };
-        case "Land_PowerGenerator_F": {
-            _radius = 150;
-        };
-    };
+    private _radius = _generator getVariable [QGVAR(powerRadius), 0];
 
     private _lights = nearestObjects [getPosATL _generator, ["HOUSE","STATIC","BUILDING"], _radius, false];
     private _lightsTerrain = nearestTerrainObjects [getPosATL _generator, ["BUILDING","HOUSE"], _radius, false];

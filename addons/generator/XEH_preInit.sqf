@@ -6,7 +6,8 @@ ADDON = false;
 
 GVAR(generators) = [
     "Land_Portable_generator_F",
-    "Land_PowerGenerator_F"
+    QCLASS(dieselGenerator),
+    QCLASS(kvaGenerator)
 ];
 
 ADDON = true;

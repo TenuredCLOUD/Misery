@@ -24,13 +24,13 @@ private _lastPos = getPosATL _generator;
 
     _currentPos = getPosATL _generator;
 
-    //Check if generator is "Moving" (Base item framework of somekind? if so kill running gen)
+    // Check if generator is "Moving" (Base item framework of somekind? if so kill running gen)
     if (_currentPos distance _lastPos > 0.01) exitWith {
         _generator setVariable [QGVAR(isRunning), false, true];
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
-    //Check if generator no longer exists
+    // Check if generator no longer exists
     if (isNull _generator) exitWith {
         _generator setVariable [QGVAR(isRunning), false, true];
         _handle call CBA_fnc_removePerFrameHandler;

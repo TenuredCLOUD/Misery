@@ -25,15 +25,26 @@ if (_fuelLevel >= 1) exitWith {
 
 private _fuelCan = "";
 private _requiredFuelType = "";
+private _fueltoAdd = 0;
 
 switch (_generatorType) do {
-    case "Land_PowerGenerator_F": {
-        _fuelCan = QCLASS(diesel);
-        _requiredFuelType = localize LSTRING(Diesel);
-    };
     case "Land_Portable_generator_F": {
         _fuelCan = QCLASS(petrol);
         _requiredFuelType = localize LSTRING(Petrol);
+        // Simulated 40L/10.5Gal tank
+        _fueltoAdd = 0.025;
+    };
+    case QCLASS(dieselGenerator): {
+        _fuelCan = QCLASS(diesel);
+        _requiredFuelType = localize LSTRING(Diesel);
+        // Simulated 80L/21Gal tank
+        _fueltoAdd = 0.0125;
+    };
+    case QCLASS(kvaGenerator): {
+        _fuelCan = QCLASS(diesel);
+        _requiredFuelType = localize LSTRING(Diesel);
+        // Simulated 500L/132Gal tank
+        _fueltoAdd = 0.002;
     };
 };
 
@@ -45,7 +56,7 @@ private _lastPos = getPosATL player;
 
 [{
     params ["_args", "_handle"];
-    _args params ["_fuelCan", "_requiredFuelType", "_fuelLevel", "_generator", "_generatorType", "_lastPos"];
+    _args params ["_fuelCan", "_requiredFuelType", "_fuelLevel", "_generator", "_generatorType", "_lastPos", "_fueltoAdd"];
 
     private _currentFuel = _generator getVariable [QGVAR(fuelLevel), 1];
 
@@ -57,6 +68,7 @@ private _lastPos = getPosATL player;
 
     //Check if player is moving, immediately stop refueling
     if (_currentPos distance _lastPos > 0.01) exitWith {
+        [QEGVAR(common,tileText), [localize LSTRING(RefuelingInterrupted)]] call CBA_fnc_localEvent;
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
@@ -70,14 +82,11 @@ private _lastPos = getPosATL player;
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
-    // Land_PowerGenerator_F simulated at 80L tank, Land_Portable_generator_F simulated at 40L tank
-    private _fueltoAdd = [0.025, 0.0125] select (_generatorType isEqualTo "Land_PowerGenerator_F");
-
     _generator setVariable [QGVAR(fuelLevel), _currentFuel + _fueltoAdd, true];
 
     private _emptyCan = [QCLASS(petrolEmpty), QCLASS(dieselEmpty)] select (_requiredFuelType isEqualTo (localize LSTRING(Diesel)));
 
     [_fuelCan, _emptyCan] call EFUNC(common,itemDecrement);
 
-}, 1, [_fuelCan, _requiredFuelType, _fuelLevel, _generator, _generatorType, _lastPos]] call CBA_fnc_addPerFrameHandler;
+}, 1, [_fuelCan, _requiredFuelType, _fuelLevel, _generator, _generatorType, _lastPos, _fueltoAdd]] call CBA_fnc_addPerFrameHandler;
 

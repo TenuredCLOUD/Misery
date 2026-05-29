@@ -24,7 +24,7 @@ private _fuelDelay = _generator getVariable [QGVAR(fuelDelay), 0];
     _args params ["_generator"];
 
     private _runState = _generator getVariable [QGVAR(isRunning), false];
-    private _fuelLevel = _generator getVariable [QGVAR(fuelLevel), 1];
+    private _fuelLevel = _generator getVariable [QGVAR(fuelLevel), 0];
 
     if (!_runState || _fuelLevel <= 0) exitWith {
         _handle call CBA_fnc_removePerFrameHandler;
@@ -32,4 +32,7 @@ private _fuelDelay = _generator getVariable [QGVAR(fuelDelay), 0];
 
     _generator setVariable [QGVAR(fuelLevel), _fuelLevel - 0.01, true];
 
+    if (_fuelLevel < 0) then {
+        _generator setVariable [QGVAR(fuelLevel), 0, true];
+    };
 }, _fuelDelay, [_generator]] call CBA_fnc_addPerFrameHandler;

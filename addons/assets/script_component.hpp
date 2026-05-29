@@ -122,7 +122,9 @@
 
 #define MACRO_VEHICLES \
     QCLASS(forge), \
-    QCLASS(anvil)
+    QCLASS(anvil), \
+    QCLASS(dieselGenerator), \
+    QCLASS(kvaGenerator)
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
