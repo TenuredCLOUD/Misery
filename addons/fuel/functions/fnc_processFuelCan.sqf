@@ -52,12 +52,12 @@ call FUNC(pumpAudio);
     params ["_args", "_handle"];
     _args params ["_selectedFuelCan", "_pumpInterrupt", "_preCheckCanNoFuel"];
 
-    [player, 25] call EFUNC(generator,nearGenerator) params ["", "_generator"];
+    [player, 25] call EFUNC(power,nearGenerator) params ["", "_generator"];
 
     GVAR(usingGenerator) = false;
     GVAR(usingBattery) = false;
 
-    if (!isNil "_generator" && _generator getVariable [QEGVAR(generator,isRunning), false]) then {
+    if (!isNil "_generator" && _generator getVariable [QEGVAR(power,generatorRunning), false]) then {
         GVAR(usingGenerator) = true;
     };
 

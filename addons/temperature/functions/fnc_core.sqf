@@ -50,8 +50,8 @@ switch (true) do {
         _changeMultiplier = 50;
     };
     case (insideBuilding player isEqualTo 1 && _isInflamed): {
-        [player, 150] call EFUNC(generator,nearGenerator) params ["", "_generator"];
-        private _hasPower = (!isNil "_generator" && {_generator getVariable [QEGVAR(generator,isRunning), false]});
+        [player, 150] call EFUNC(power,nearGenerator) params ["", "_generator"];
+        private _hasPower = (!isNil "_generator" && {_generator getVariable [QEGVAR(power,generatorRunning), false]});
 
         if (_hasPower) then {
             _targetExposure = 0.25 - (_wetnessChill * 0.5);
@@ -72,8 +72,8 @@ switch (true) do {
         _changeMultiplier = 50;
     };
     case (insideBuilding player isEqualTo 1): {
-        [player, 150] call EFUNC(generator,nearGenerator) params ["", "_generator"];
-        private _hasPower = (!isNil "_generator" && {_generator getVariable [QEGVAR(generator,isRunning), false]});
+        [player, 150] call EFUNC(power,nearGenerator) params ["", "_generator"];
+        private _hasPower = (!isNil "_generator" && {_generator getVariable [QEGVAR(power,generatorRunning), false]});
 
         if (_hasPower) then {
             _targetExposure = 0 - (_wetnessChill * 0.2);

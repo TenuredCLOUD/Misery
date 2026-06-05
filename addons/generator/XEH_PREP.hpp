@@ -1,9 +1,0 @@
-PREP(fuel);
-PREP(initGenerators);
-PREP(nearGenerator);
-PREP(powerButton);
-PREP(powerNearby);
-PREP(processAction);
-PREP(refuel);
-PREP(runLoop);
-PREP(trackPos);

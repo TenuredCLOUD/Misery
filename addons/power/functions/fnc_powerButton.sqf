@@ -27,6 +27,6 @@ if (_power isEqualTo 1) exitWith {
 };
 
 if (_power isEqualTo 0) exitWith {
-    _generator setVariable [QGVAR(shuttingDown), true, true];
+    [QGVAR(removeGeneratorFromServer), [_generator]] call CBA_fnc_serverEvent;
 };
 

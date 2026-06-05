@@ -737,6 +737,22 @@
             <Chinesesimp>系统提示 + RPT日志</Chinesesimp>
             <Turkish>Sistem Sohbeti + RPT Günlükleri</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Common_TakeItem">
+            <English>Take %1</English>
+            <Czech>Vzít %1</Czech>
+            <French>Prendre %1</French>
+            <Spanish>Tomar %1 / Cojer %1</Spanish>
+            <Italian>Prendi %1</Italian>
+            <Polish>Weź %1</Polish>
+            <Portuguese>Pegar %1</Portuguese>
+            <Russian>Взять %1</Russian>
+            <German>%1 nehmen</German>
+            <Korean>%1 줍기</Korean>
+            <Japanese>%1 を取る</Japanese>
+            <Chinese>拿取 %1</Chinese>
+            <Chinesesimp>拿取 %1</Chinesesimp>
+            <Turkish>%1 Al</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Common_TooExpensive">
             <English>You cannot afford this!</English>
             <Czech>Tohle si nemůžete dovolit!</Czech>

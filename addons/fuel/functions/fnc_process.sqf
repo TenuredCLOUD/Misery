@@ -76,12 +76,12 @@ private _displayedText = "";
 
     private _fuelToAdd = 1 / _totalLiters;
 
-    [player, 25] call EFUNC(generator,nearGenerator) params ["", "_generator"];
+    [player, 25] call EFUNC(power,nearGenerator) params ["", "_generator"];
 
     GVAR(usingGenerator) = false;
     GVAR(usingBattery) = false;
 
-    if (!isNil "_generator" && _generator getVariable [QEGVAR(generator,isRunning), false]) then {
+    if (!isNil "_generator" && _generator getVariable [QEGVAR(power,generatorRunning), false]) then {
         GVAR(usingGenerator) = true;
     };
 

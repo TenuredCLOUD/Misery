@@ -20,6 +20,6 @@ params ["_object", ["_distance", 2]];
 
 if (!isNull objectParent player) exitWith {};
 
-private _nearObjects = nearestObjects [_object, ["Land_Portable_generator_F", QCLASS(dieselGenerator), QCLASS(kvaGenerator)], _distance];
+private _nearObjects = nearestObjects [_object, [QCLASS(petrolGenerator), QCLASS(dieselGenerator), QCLASS(kvaGenerator)], _distance];
 
 [_nearObjects isNotEqualTo [], _nearObjects select 0, typeOf (_nearObjects select 0)]

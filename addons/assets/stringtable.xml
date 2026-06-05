@@ -289,22 +289,6 @@
             <Chinesesimp>净化套件</Chinesesimp>
             <Turkish>Dekont Kiti</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Assets_DieselGenerator_DisplayName">
-            <English>Diesel Generator</English>
-            <Czech>Dieselový generátor</Czech>
-            <French>Générateur diesel</French>
-            <Spanish>Generador diésel</Spanish>
-            <Italian>Generatore diesel</Italian>
-            <Polish>Generator diesla</Polish>
-            <Portuguese>Gerador Diesel</Portuguese>
-            <Russian>Дизельный генератор</Russian>
-            <German>Dieselgenerator</German>
-            <Korean>디젤 발전기</Korean>
-            <Japanese>ディーゼル発電機</Japanese>
-            <Chinese>柴油發電機</Chinese>
-            <Chinesesimp>柴油发电机</Chinesesimp>
-            <Turkish>Dizel Jeneratör</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Assets_ERUOff_DisplayName">
             <English>ERU (OFF)</English>
             <Czech>ERU (VYPNUTO)</Czech>
@@ -476,22 +460,6 @@
             <Chinese>用於探測身體輻射</Chinese>
             <Chinesesimp>用于探测身体辐射</Chinesesimp>
             <Turkish>Vücuttaki radyasyonu tespit etmek için kullanılır</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Assets_KVAGenerator_DisplayName">
-            <English>KVA Generator</English>
-            <Czech>KVA Generátor</Czech>
-            <French>Générateur kVA</French>
-            <Spanish>Generador kVA</Spanish>
-            <Italian>Generatore kVA</Italian>
-            <Polish>Generator kVA</Polish>
-            <Portuguese>Gerador kVA</Portuguese>
-            <Russian>гВА Генератор</Russian>
-            <German>kVA-Generator</German>
-            <Korean>kVA 발전기</Korean>
-            <Japanese>kVA 発電機</Japanese>
-            <Chinese>kVA 發電機</Chinese>
-            <Chinesesimp>kVA 发电机</Chinesesimp>
-            <Turkish>kVA Jeneratör</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_LanternOff_Description">
             <English>Equipped with batteries</English>
