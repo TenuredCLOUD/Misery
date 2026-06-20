@@ -15,49 +15,11 @@
 */
 
 private _generatorMainAction = [
-    QGVAR(generator_mainMenu),
-    localize LSTRING(Action),
-    QPATHTOEF(icons,data\cable_ca.paa),
-    {
-        params ["_target", "_player"];
-    },
-    {
-        alive _target;
-    },
-    {},
-    ["_target", "_player"],
-    [0, 0, 0],
-    3
-] call ACEFUNC(interact_menu,createAction);
-
-private _generatorTurnOnAction = [
-    QGVAR(generator_powerOnMenu),
-    localize LSTRING(Start),
-    QPATHTOEF(icons,data\power_ca.paa),
-    {
-        params ["_target", "_player"];
-        [_target, typeOf _target, 1] call FUNC(powerButton);
-    },
-    {
-        !(_target getVariable [QGVAR(generatorRunning), false]);
-    },
-    {},
-    ["_target", "_player"],
-    [0, 0, 0],
-    3
-] call ACEFUNC(interact_menu,createAction);
-
-private _generatorTurnOffAction = [
-    QGVAR(generator_powerOffMenu),
-    localize LSTRING(Stop),
-    QPATHTOEF(icons,data\power_off_ca.paa),
-    {
-        params ["_target", "_player"];
-        [_target, typeOf _target, 0] call FUNC(powerButton);
-    },
-    {
-        _target getVariable [QGVAR(generatorRunning), false];
-    },
+    QGVAR(generator_MainMenu),
+    localize LSTRING(MaintenanceAction),
+    QPATHTOEF(markers,data\wrench_ca.paa),
+    { },
+    {alive _target},
     {},
     ["_target", "_player"],
     [0, 0, 0],
@@ -67,15 +29,27 @@ private _generatorTurnOffAction = [
 private _generatorCheckFuelAction = [
     QGVAR(generator_checkFuelMenu),
     localize LSTRING(CheckFuel),
-    "a3\ui_f\data\igui\cfg\actions\take_ca.paa",
+    "",
     {
         params ["_target", "_player"];
 
-        private _fuelLevel = _target getVariable [QGVAR(generatorFuel), 0];
+        [_target] call AE3FUNC(power,checkFuelLevelAction);
+    },
+    {true},
+    {},
+    ["_target", "_player"],
+    [0, 0, 0],
+    3
+] call ACEFUNC(interact_menu,createAction);
 
-        private _fuelTip = format [localize LSTRING(FuelLevel), [_fuelLevel * 100, 1, 1, false] call CBA_fnc_formatNumber, "%"];
+private _generatorCheckOutputAction = [
+    QGVAR(generator_checkOutputMenu),
+    localize LSTRING(CheckPowerOutput),
+    QPATHTOEF(icons,data\circuit_board_ca.paa),
+    {
+        params ["_target", "_player"];
 
-        [[_fuelTip, 1, [1, 1, 1, 1]], [], true] call CBA_fnc_notify;
+        [_target, true] call AE3FUNC(power,getPowerOutput);
     },
     {true},
     {},
@@ -87,16 +61,22 @@ private _generatorCheckFuelAction = [
 private _generatorRefuelAction = [
     QGVAR(generator_refuelMenu),
     localize LSTRING(Refuel),
-    QPATHTOEF(markers,data\fuel_ca.paa),
+    "z\ace\addons\refuel\ui\icon_refuel_interact.paa",
     {
         params ["_target", "_player"];
-        [_target, typeOf _target] call FUNC(refuel);
+
+        [_player, _target] call FUNC(refuelGenerator);
     },
     {
-        !(_target getVariable [QGVAR(generatorRunning), false]);
+        params ["_target", "_player"];
+        if ([_target] call AE3FUNC(power,getPowerState) isNotEqualTo "Off") exitWith { false };
+
+        if (fuel _target >= 1) exitWith { false };
+
+        true
     },
     {},
-    ["_target", "_player"],
+    [],
     [0, 0, 0],
     3
 ] call ACEFUNC(interact_menu,createAction);
@@ -104,87 +84,30 @@ private _generatorRefuelAction = [
 private _generatorSyphonAction = [
     QGVAR(generator_syphonMenu),
     localize LSTRING(SyphonFuel),
-    QPATHTOEF(icons,data\droplet_off_ca.paa),
-    {
-        params ["_target", "_player"];
-        [_target, typeOf _target] call FUNC(syphon);
-    },
-    {
-        !(_target getVariable [QGVAR(generatorRunning), false]);
-    },
-    {},
-    ["_target", "_player"],
-    [0, 0, 0],
-    3
-] call ACEFUNC(interact_menu,createAction);
-
-private _generatorCheckOutputAction = [
-    QGVAR(generator_checkOutputMenu),
-    localize LSTRING(CheckPowerOutput),
-    QPATHTOEF(icons,data\zap_ca.paa),
+    "z\ace\addons\refuel\ui\icon_refuel_interact.paa",
     {
         params ["_target", "_player"];
 
-        private _config = configOf _target;
-        private _output = 0;
-
-        if (_target getVariable [QGVAR(generatorRunning), false]) then {
-            _output = getNumber (_config >> QGVAR(output));
-        };
-
-        private _powerTip = format ["%1 W | %2 kW", [_output, 1, 1, false] call CBA_fnc_formatNumber, [_output / 1000, 1, 1, false] call CBA_fnc_formatNumber];
-
-        [[_powerTip, 1, [1, 1, 1, 1]], [], true] call CBA_fnc_notify;
+        [_player, _target] call FUNC(syphonGenerator);
     },
-    {true},
-    {},
-    ["_target", "_player"],
-    [0, 0, 0],
-    3
-] call ACEFUNC(interact_menu,createAction);
-
-private _generatorConnectAction = [
-    QGVAR(generator_connectMenu),
-    localize LSTRING(PowerAction),
-    QPATHTOEF(icons,data\plug_ca.paa),
     {
         params ["_target", "_player"];
+        if ([_target] call AE3FUNC(power,getPowerState) isNotEqualTo "Off") exitWith { false };
+
+        if (fuel _target <= 0) exitWith { false };
+
+        true
     },
-    {true},
     {},
-    ["_target", "_player"],
+    [],
     [0, 0, 0],
     3
 ] call ACEFUNC(interact_menu,createAction);
 
 {
     [_x, 0, [QUOTE(ACE_MainActions)], _generatorMainAction] call ACEFUNC(interact_menu,addActionToClass);
-} forEach GVAR(generators);
-
-{
-    [_x, 0, [QUOTE(ACE_MainActions), QGVAR(generator_mainMenu)], _generatorTurnOnAction] call ACEFUNC(interact_menu,addActionToClass);
-} forEach GVAR(generators);
-
-{
-    [_x, 0, [QUOTE(ACE_MainActions), QGVAR(generator_mainMenu)], _generatorTurnOffAction] call ACEFUNC(interact_menu,addActionToClass);
-} forEach GVAR(generators);
-
-{
-    [_x, 0, [QUOTE(ACE_MainActions), QGVAR(generator_mainMenu)], _generatorCheckFuelAction] call ACEFUNC(interact_menu,addActionToClass);
-} forEach GVAR(generators);
-
-{
-    [_x, 0, [QUOTE(ACE_MainActions), QGVAR(generator_mainMenu)], _generatorRefuelAction] call ACEFUNC(interact_menu,addActionToClass);
-} forEach GVAR(generators);
-
-{
-    [_x, 0, [QUOTE(ACE_MainActions), QGVAR(generator_mainMenu)], _generatorSyphonAction] call ACEFUNC(interact_menu,addActionToClass);
-} forEach GVAR(generators);
-
-{
-    [_x, 0, [QUOTE(ACE_MainActions), QGVAR(generator_mainMenu)], _generatorCheckOutputAction] call ACEFUNC(interact_menu,addActionToClass);
-} forEach GVAR(generators);
-
-{
-    [_x, 0, [QUOTE(ACE_MainActions), QGVAR(generator_mainMenu)], _generatorConnectAction] call ACEFUNC(interact_menu,addActionToClass);
+    [_x, 0, [QUOTE(ACE_MainActions), QGVAR(generator_MainMenu)], _generatorCheckFuelAction] call ACEFUNC(interact_menu,addActionToClass);
+    [_x, 0, [QUOTE(ACE_MainActions), QGVAR(generator_MainMenu)], _generatorCheckOutputAction] call ACEFUNC(interact_menu,addActionToClass);
+    [_x, 0, [QUOTE(ACE_MainActions), QGVAR(generator_MainMenu)], _generatorRefuelAction] call ACEFUNC(interact_menu,addActionToClass);
+    [_x, 0, [QUOTE(ACE_MainActions), QGVAR(generator_MainMenu)], _generatorSyphonAction] call ACEFUNC(interact_menu,addActionToClass);
 } forEach GVAR(generators);

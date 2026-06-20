@@ -50,20 +50,10 @@ switch (true) do {
         _changeMultiplier = 50;
     };
     case (insideBuilding player isEqualTo 1 && _isInflamed): {
-        [player, 150] call EFUNC(power,nearGenerator) params ["", "_generator"];
-        private _hasPower = (!isNil "_generator" && {_generator getVariable [QEGVAR(power,generatorRunning), false]});
-
-        if (_hasPower) then {
-            _targetExposure = 0.25 - (_wetnessChill * 0.5);
-            _thermalIndexModifier = (_airTemp + 30) min 35;
-            _wetnessModifier = -0.01;
-            _changeMultiplier = 50;
-        } else {
-            _targetExposure = ([0.5, 0.1] select (_airTemp < TEMP_NEUTRAL)) - (_wetnessChill * 0.5);
-            _thermalIndexModifier = (_airTemp + 20) min 35;
-            _wetnessModifier = -0.005;
-            _changeMultiplier = 50;
-        };
+        _targetExposure = ([0.5, 0.1] select (_airTemp < TEMP_NEUTRAL)) - (_wetnessChill * 0.5);
+        _thermalIndexModifier = (_airTemp + 20) min 35;
+        _wetnessModifier = -0.005;
+        _changeMultiplier = 50;
     };
     case (_isInflamed): {
         _targetExposure = ([0.5, 0.1] select (_airTemp < TEMP_NEUTRAL)) - (_wetnessChill * 0.5);
@@ -72,20 +62,10 @@ switch (true) do {
         _changeMultiplier = 50;
     };
     case (insideBuilding player isEqualTo 1): {
-        [player, 150] call EFUNC(power,nearGenerator) params ["", "_generator"];
-        private _hasPower = (!isNil "_generator" && {_generator getVariable [QEGVAR(power,generatorRunning), false]});
-
-        if (_hasPower) then {
-            _targetExposure = 0 - (_wetnessChill * 0.2);
-            _thermalIndexModifier = TEMP_NEUTRAL;
-            _wetnessModifier = -0.001;
-            _changeMultiplier = 50;
-        } else {
-            _targetExposure = ((_ambientTarget + 0.3) min 0) - _wetnessChill;
-            _thermalIndexModifier = _airTemp + 10;
-            _wetnessModifier = -0.0001;
-            _changeMultiplier = 50;
-        };
+        _targetExposure = ((_ambientTarget + 0.3) min 0) - _wetnessChill;
+        _thermalIndexModifier = _airTemp + 10;
+        _wetnessModifier = -0.0001;
+        _changeMultiplier = 50;
     };
     case !(isNull objectParent player): {
         private _config = missionConfigFile >> "CfgMisery_VehicleData";

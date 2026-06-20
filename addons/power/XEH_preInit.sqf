@@ -4,46 +4,33 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
+GVAR(powerEquipment) = [
+    "Land_PortableGenerator_01_F_AE3",
+    "Land_PortableGenerator_01_black_F_AE3",
+    "Land_PortableGenerator_01_sand_F_AE3",
+    "Land_Portable_generator_F_AE3",
+    "Land_MobileRadar_01_generator_F_AE3",
+    "Land_DieselGroundPowerUnit_01_F_AE3",
+    "Land_PowerGenerator_F_AE3",
+    "Land_SolarPanel_04_olive_F_AE3",
+    "Land_SolarPanel_04_black_F_AE3",
+    "Land_SolarPanel_04_sand_F_AE3",
+    "Land_BatteryPack_01_open_olive_F_AE3",
+    "Land_BatteryPack_01_open_black_F_AE3",
+    "Land_BatteryPack_01_open_sand_F_AE3",
+    "Land_Laptop_03_black_F_AE3",
+    "Land_Laptop_03_olive_F_AE3",
+    "Land_Laptop_03_sand_F_AE3"
+];
+
 GVAR(generators) = [
-    QCLASS(petrolGenerator),
-    QCLASS(dieselGenerator),
-    QCLASS(kvaGenerator)
-];
-
-GVAR(runningGenerators) = [];
-
-GVAR(lights) = [
-    // Portable Lights (single folded / unfolded)
-    QCLASS(portableLight_single_black),
-    QCLASS(portableLight_single_black_unfolded),
-    QCLASS(portableLight_single_od),
-    QCLASS(portableLight_single_od_unfolded),
-    QCLASS(portableLight_single_sand),
-    QCLASS(portableLight_single_sand_unfolded),
-    QCLASS(portableLight_single_yellow),
-    QCLASS(portableLight_single_yellow_unfolded),
-    // Portable Lights (double)
-    QCLASS(portableLight_double_black),
-    QCLASS(portableLight_double_od),
-    QCLASS(portableLight_double_sand),
-    QCLASS(portableLight_double_yellow),
-    // Portable Lights (quad)
-    QCLASS(portableLight_quad_black),
-    QCLASS(portableLight_quad_od),
-    QCLASS(portableLight_quad_sand),
-    QCLASS(portableLight_quad_yellow)
-];
-
-GVAR(solar) = [
-    QCLASS(portable_solar_black),
-    QCLASS(portable_solar_od),
-    QCLASS(portable_solar_sand)
-];
-
-GVAR(batteryBanks) = [
-    QCLASS(batteryPack_black),
-    QCLASS(batteryPack_od),
-    QCLASS(batteryPack_sand)
+    "Land_PortableGenerator_01_F_AE3",
+    "Land_PortableGenerator_01_black_F_AE3",
+    "Land_PortableGenerator_01_sand_F_AE3",
+    "Land_Portable_generator_F_AE3",
+    "Land_MobileRadar_01_generator_F_AE3",
+    "Land_DieselGroundPowerUnit_01_F_AE3",
+    "Land_PowerGenerator_F_AE3"
 ];
 
 ADDON = true;

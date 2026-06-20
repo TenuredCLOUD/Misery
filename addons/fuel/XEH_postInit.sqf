@@ -1,57 +1,42 @@
 #include "script_component.hpp"
 
-if (!isNil QACEGVAR(refuel,enabled) && ACEGVAR(refuel,enabled)) exitWith {};
+if (isServer) then {
+    call FUNC(initFuelPumps);
+    call FUNC(processTerrainPumps);
+};
+
+call FUNC(initRefuelRestrictions);
 
 private _allFuelStations = [MACRO_FUELSTATIONS_LAND] + [MACRO_FUELSTATIONS_AIR];
-
-private _fuelPumpAction = [
-    QGVAR(fuel_pump_menu),
-    localize LSTRING(Action),
-    QPATHTOEF(markers,data\fuel_ca.paa),
-    {},
-    {true},
-    {},
-    ["_target", "_player"],
-    [0, 0, 0],
-    3
-] call ACEFUNC(interact_menu,createAction);
-
-{
-    [_x, 0, [QUOTE(ACE_MainActions)], _fuelPumpAction] call ACEFUNC(interact_menu,addActionToClass);
-} forEach _allFuelStations;
-
-private _refuelPumpAction = [
-    QGVAR(refuel_pump_menu),
-    localize LSTRING(RefuelAtPump),
-    QPATHTOEF(markers,data\fuel_ca.paa),
-    {
-        createDialog QCLASS(refuelVehicle_ui)
-    },
-    {true},
-    {},
-    ["_target", "_player"],
-    [0, 0, 0],
-    3
-] call ACEFUNC(interact_menu,createAction);
-
-{
-    [_x, 0, [QUOTE(ACE_MainActions), QGVAR(fuel_pump_menu)], _refuelPumpAction] call ACEFUNC(interact_menu,addActionToClass);
-} forEach _allFuelStations;
 
 private _refillPumpAction = [
     QGVAR(refuel_fuelCan_pump_menu),
     localize LSTRING(RefillFuelCanAtPump),
-    QPATHTOEF(markers,data\fuel_ca.paa),
+    "z\ace\addons\refuel\ui\icon_refuel_interact.paa",
     {
-        createDialog QCLASS(refuelfuelCan_ui)
+        params ["_target", "_player"];
+
+        private _allCans = [MACRO_FUEL_CANS] + [MACRO_FUEL_CANS_EMPTY];
+        private _matchedIndex = _allCans findIf { [[_x]] call EFUNC(common,hasItem) };
+
+        [_player, _matchedIndex] call FUNC(processFuelCan);
     },
-    {true},
+    {
+        params ["_target", "_player"];
+
+        private _isHoldingNozzle = _player getVariable [QACEGVAR(refuel,nozzle), objNull];
+
+        if (isNull _isHoldingNozzle) exitWith { false };
+
+        private _allCans = [MACRO_FUEL_CANS] + [MACRO_FUEL_CANS_EMPTY];
+        private _matchedIndex = _allCans findIf { [[_x]] call EFUNC(common,hasItem) };
+
+        _matchedIndex isNotEqualTo -1
+    },
     {},
     ["_target", "_player"],
     [0, 0, 0],
     3
 ] call ACEFUNC(interact_menu,createAction);
 
-{
-    [_x, 0, [QUOTE(ACE_MainActions), QGVAR(fuel_pump_menu)], _refillPumpAction] call ACEFUNC(interact_menu,addActionToClass);
-} forEach _allFuelStations;
+[player, 1, [QUOTE(ACE_SelfActions)], _refillPumpAction] call ACEFUNC(interact_menu,addActionToObject);

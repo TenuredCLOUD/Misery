@@ -27,7 +27,7 @@ if (isNil QEGVAR(common,vehicleData)) then {
     private _data = [];
 
     private _fuelType = 0;
-    private _fuelLiters = 100;
+    private _fuelLiters = 0;
     private _coolantLiters = 10;
     private _oilLiters = 8;
     private _batteryType = 0;
@@ -41,7 +41,6 @@ if (isNil QEGVAR(common,vehicleData)) then {
 
     if (_hasConfig) then {
         _fuelType = getNumber (_maintConfig >> "fuelType");
-        _fuelLiters = getNumber (_maintConfig >> "fuelLiters");
         _coolantLiters = getNumber (_maintConfig >> "coolantLiters");
         _oilLiters = getNumber (_maintConfig >> "oilLiters");
         _batteryType = getNumber (_maintConfig >> "batteryType");
@@ -51,11 +50,11 @@ if (isNil QEGVAR(common,vehicleData)) then {
         _resupplyPrice = getNumber (_maintConfig >> "resupplyPrice");
     } else {
         private _vehicleConfig = configFile >> "CfgVehicles" >> _vehicleName;
-        private _fuelCapacity = getNumber (_vehicleConfig >> "fuelCapacity");
 
-        if (_fuelCapacity <= 0) then {
-            _fuelCapacity = 100;
-        };
+        private _acefuelCapacity = getNumber (configOf _vehicle >> QACEGVAR(refuel,fuelCapacity));
+        private _defaultfuelCapacity = getNumber (configOf _vehicle >> "fuelCapacity");
+
+        private _fuelCapacity = [_defaultfuelCapacity, _acefuelCapacity] select (_acefuelCapacity > 0);
 
         if (_vehicle isKindOf "Helicopter" || _vehicle isKindOf "Plane") then {
             _fuelType = 2;

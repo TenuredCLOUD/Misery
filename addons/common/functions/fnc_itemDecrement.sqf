@@ -8,7 +8,7 @@
  * 1: Replacement Item <STRING> (default: "")
  *
  * Return Value:
- * None
+ * 0: Decremented <BOOL>
  *
  * Example:
  * [] call misery_common_fnc_itemDecrement
@@ -25,10 +25,12 @@ if (_itemContainer isNotEqualTo -1) then {
     if (_containerCount > 1) then {
         player removeMagazine _item;
         [player, _item, _containerCount - 1, true] call CBA_fnc_addMagazine;
+        true
     } else {
         player removeMagazine _item;
         if (_replacementItem isNotEqualTo "") then {
             [player, _replacementItem, true] call CBA_fnc_addItem;
         };
+        false
     };
 };

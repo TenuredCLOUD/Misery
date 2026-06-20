@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
     <Package name="Generator">
-        <Key ID="STR_MISERY_Power_Action">
-            <English>Use Generator</English>
-            <Czech>Použít generátor</Czech>
-            <French>Utiliser le générateur</French>
-            <Spanish>Usar generador</Spanish>
-            <Italian>Usa generatore</Italian>
-            <Polish>Użyj generatora</Polish>
-            <Portuguese>Usar gerador</Portuguese>
-            <Russian>Использовать генератор</Russian>
-            <German>Generator benutzen</German>
-            <Korean>발전기 사용</Korean>
-            <Japanese>発電機を使用する</Japanese>
-            <Chinese>使用發電機</Chinese>
-            <Chinesesimp>使用发电机</Chinesesimp>
-            <Turkish>Jeneratörü kullan</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Power_CheckFuel">
             <English>Check Fuel</English>
             <Czech>Zkontrolovat palivo</Czech>
@@ -49,6 +33,22 @@
             <Chinesesimp>检查输出功率</Chinesesimp>
             <Turkish>Güç Çıkışını Kontrol Et</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Power_ContainerFullOrUnavailable">
+            <English>%1 is full or no longer available...</English>
+            <Czech>%1 je plný nebo již není dostupný...</Czech>
+            <French>%1 est plein ou n'est plus disponible...</French>
+            <Spanish>%1 está lleno o ya no está disponible...</Spanish>
+            <Italian>%1 è pieno o non è più disponibile...</Italian>
+            <Polish>%1 jest pełny lub nie jest już dostępny...</Polish>
+            <Portuguese>%1 está cheio ou já não está disponível...</Portuguese>
+            <Russian>%1 заполнен или более недоступен...</Russian>
+            <German>%1 ist voll oder nicht mehr verfügbar...</German>
+            <Korean>%1이(가) 가득 찼거나 더 이상 사용할 수 없습니다...</Korean>
+            <Japanese>%1は満タンか、または利用できません...</Japanese>
+            <Chinese>%1 已滿或不再可用...</Chinese>
+            <Chinesesimp>%1 已满或不再可用...</Chinesesimp>
+            <Turkish>%1 dolu veya artık mevcut değil...</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Power_Diesel">
             <English>Diesel</English>
             <Czech>Nafta</Czech>
@@ -64,70 +64,6 @@
             <Chinese>柴油</Chinese>
             <Chinesesimp>柴油</Chinesesimp>
             <Turkish>Dizel</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Power_DieselGenerator_DisplayName">
-            <English>Diesel Generator</English>
-            <Czech>Dieselový generátor</Czech>
-            <French>Générateur diesel</French>
-            <Spanish>Generador diésel</Spanish>
-            <Italian>Generatore diesel</Italian>
-            <Polish>Generator diesla</Polish>
-            <Portuguese>Gerador Diesel</Portuguese>
-            <Russian>Дизельный генератор</Russian>
-            <German>Dieselgenerator</German>
-            <Korean>디젤 발전기</Korean>
-            <Japanese>ディーゼル発電機</Japanese>
-            <Chinese>柴油發電機</Chinese>
-            <Chinesesimp>柴油发电机</Chinesesimp>
-            <Turkish>Dizel Jeneratör</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Power_FailedStart">
-            <English>The Generator failed to start...</English>
-            <Czech>Generátor se nepodařilo spustit...</Czech>
-            <French>Le générateur n'a pas pu démarrer...</French>
-            <Spanish>El generador no pudo arrancar...</Spanish>
-            <Italian>Il generatore non è partito...</Italian>
-            <Polish>Generator nie uruchomił się...</Polish>
-            <Portuguese>O gerador falhou ao iniciar...</Portuguese>
-            <Russian>Генератор не заёлся...</Russian>
-            <German>Der Generator konnte nicht gestartet werden...</German>
-            <Korean>발전기를 가동하지 못했습니다...</Korean>
-            <Japanese>発電機の起動に失敗しました...</Japanese>
-            <Chinese>發電機無法啟動...</Chinese>
-            <Chinesesimp>发电机无法启动...</Chinesesimp>
-            <Turkish>Jeneratör çalıştırılamadı...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Power_FuelLabel">
-            <English>Fuel:</English>
-            <Czech>Palivo:</Czech>
-            <French>Carburant :</French>
-            <Spanish>Combustible:</Spanish>
-            <Italian>Carburante:</Italian>
-            <Polish>Paliwo:</Polish>
-            <Portuguese>Combustível:</Portuguese>
-            <Russian>Топливо:</Russian>
-            <German>Kraftstoff:</German>
-            <Korean>연료:</Korean>
-            <Japanese>燃料:</Japanese>
-            <Chinese>燃料:</Chinese>
-            <Chinesesimp>燃料:</Chinesesimp>
-            <Turkish>Yakıt:</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Power_FuelLevel">
-            <English>Fuel level: ~ %1%2</English>
-            <Czech>Stav paliva: ~ %1%2</Czech>
-            <French>Niveau de carburant : ~ %1%2</French>
-            <Spanish>Nivel de combustible: ~ %1%2</Spanish>
-            <Italian>Livello carburante: ~ %1%2</Italian>
-            <Polish>Poziom paliwa: ~ %1%2</Polish>
-            <Portuguese>Nível de combustível: ~ %1%2</Portuguese>
-            <Russian>Уровень топлива: ~ %1%2</Russian>
-            <German>Kraftstoffstand: ~ %1%2</German>
-            <Korean>연료 잔량: ~ %1%2</Korean>
-            <Japanese>燃料残量: ~ %1%2</Japanese>
-            <Chinese>油量：~ %1%2</Chinese>
-            <Chinesesimp>油量：~ %1%2</Chinesesimp>
-            <Turkish>Yakit seviyesi: ~ %1%2</Turkish>
         </Key>
         <Key ID="STR_MISERY_Power_FullTank">
             <English>This generator has a full tank...</English>
@@ -145,37 +81,21 @@
             <Chinesesimp>这台发电机的油箱已满...</Chinesesimp>
             <Turkish>Bu jeneratörün deposu dolu...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Power_Inside">
-            <English>You cannot start a generator while inside...</English>
-            <Czech>Nemůžete spustit generátor uvnitř budovy...</Czech>
-            <French>Vous ne pouvez pas démarrer un générateur à l'intérieur...</French>
-            <Spanish>No puedes arrancar un generador estando adentro...</Spanish>
-            <Italian>Non puoi avviare un generatore all'interno...</Italian>
-            <Polish>Nie możesz uruchomić generatora wewnątrz budynku...</Polish>
-            <Portuguese>Não pode ligar um gerador dentro de um edifício...</Portuguese>
-            <Russian>Нельзя запускать генератор внутри помещения...</Russian>
-            <German>Du kannst einen Generator nicht im Innenbereich starten...</German>
-            <Korean>실내에서는 발전기를 가동할 수 없습니다...</Korean>
-            <Japanese>屋内で発電機を始動することはできません...</Japanese>
-            <Chinese>您不能在室內啟動發電機...</Chinese>
-            <Chinesesimp>您不能在室内启动发电机...</Chinesesimp>
-            <Turkish>İçerideyken jeneratörü çalıştıramazsınız...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Power_KVAGenerator_DisplayName">
-            <English>KVA Generator</English>
-            <Czech>KVA Generátor</Czech>
-            <French>Générateur kVA</French>
-            <Spanish>Generador kVA</Spanish>
-            <Italian>Generatore kVA</Italian>
-            <Polish>Generator kVA</Polish>
-            <Portuguese>Gerador kVA</Portuguese>
-            <Russian>гВА Генератор</Russian>
-            <German>kVA-Generator</German>
-            <Korean>kVA 발전기</Korean>
-            <Japanese>kVA 発電機</Japanese>
-            <Chinese>kVA 發電機</Chinese>
-            <Chinesesimp>kVA 发电机</Chinesesimp>
-            <Turkish>kVA Jeneratör</Turkish>
+        <Key ID="STR_MISERY_Power_MaintenanceAction">
+            <English>Maintenance</English>
+            <Czech>Údržba</Czech>
+            <French>Entretien / Maintenance</French>
+            <Spanish>Mantenimiento</Spanish>
+            <Italian>Manutenzione</Italian>
+            <Polish>Konserwacja</Polish>
+            <Portuguese>Manutenção</Portuguese>
+            <Russian>Обслуживание</Russian>
+            <German>Wartung</German>
+            <Korean>정비 / 유지보수</Korean>
+            <Japanese>メンテナンス / 保守</Japanese>
+            <Chinese>維護 / 保養</Chinese>
+            <Chinesesimp>维护 / 保养</Chinesesimp>
+            <Turkish>Bakım</Turkish>
         </Key>
         <Key ID="STR_MISERY_Power_NeedJerrycanSyphon">
             <English>You need a %1 jerrycan to syphon this generator...</English>
@@ -192,6 +112,22 @@
             <Chinese>你需要一個 %1 油桶來虹吸這個發電機...</Chinese>
             <Chinesesimp>你需要一个 %1 油桶来虹吸这个发电机...</Chinesesimp>
             <Turkish>Bu jeneratörden yakıt sifonlamak için %1 bidona ihtiyacın var...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Power_NeedToolkitSyphon">
+            <English>You need a toolkit to syphon fuel...</English>
+            <Czech>K odsátí paliva potřebuješ sadu nářadí...</Czech>
+            <French>Vous avez besoin d'une boîte à outils pour siphonner du carburant...</French>
+            <Spanish>Necesitas un kit de herramientas para sifonar combustible...</Spanish>
+            <Italian>Hai bisogno di un kit di attrezzi para sifonare il carburante...</Italian>
+            <Polish>Potrzebujesz zestawu narzędzi, aby spuścić paliwo...</Polish>
+            <Portuguese>Você precisa de un kit de ferramentas para sifonar combustível...</Portuguese>
+            <Russian>Вам нужен набор инструментов, чтобы слить топливо...</Russian>
+            <German>Du benötigst ein Werkzeugset, um Kraftstoff abzusaugen...</German>
+            <Korean>연료를 흡입하려면 공구 상자가 필요합니다...</Korean>
+            <Japanese>燃料を吸い出すにはツールキットが必要です...</Japanese>
+            <Chinese>你需要工具箱來虹吸燃料...</Chinese>
+            <Chinesesimp>你需要工具箱来虹吸燃料...</Chinesesimp>
+            <Turkish>Yakıt sifonlamak için bir alet çantasına ihtiyacın var...</Turkish>
         </Key>
         <Key ID="STR_MISERY_Power_NeedsJerrycan">
             <English>You need a %1 jerrycan to refuel this generator...</English>
@@ -225,22 +161,6 @@
             <Chinesesimp>这台发电机没有燃料...</Chinesesimp>
             <Turkish>Bu jeneratörde yakıt yok...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Power_OFF">
-            <English>OFF</English>
-            <Czech>VYPNUTO</Czech>
-            <French>ARRÊT</French>
-            <Spanish>APAGADO</Spanish>
-            <Italian>SPENTO</Italian>
-            <Polish>WYŁĄCZONY</Polish>
-            <Portuguese>DESLIGADO</Portuguese>
-            <Russian>ВЫКЛ</Russian>
-            <German>AUS</German>
-            <Korean>꺼짐</Korean>
-            <Japanese>オフ</Japanese>
-            <Chinese>關閉</Chinese>
-            <Chinesesimp>关闭</Chinesesimp>
-            <Turkish>KAPALI</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Power_Petrol">
             <English>Petrol</English>
             <Czech>Benzín</Czech>
@@ -256,70 +176,6 @@
             <Chinese>汽油</Chinese>
             <Chinesesimp>汽油</Chinesesimp>
             <Turkish>Benzin</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Power_PetrolGenerator_DisplayName">
-            <English>Petrol Generator</English>
-            <Czech>Benzínový generátor</Czech>
-            <French>Générateur à essence</French>
-            <Spanish>Generador de gasolina</Spanish>
-            <Italian>Generatore a benzina</Italian>
-            <Polish>Generator benzynowy</Polish>
-            <Portuguese>Gerador a Gasolina</Portuguese>
-            <Russian>Бензиновый генератор</Russian>
-            <German>Benzingenerator</German>
-            <Korean>가솔린 발전기</Korean>
-            <Japanese>ガソリン発電機</Japanese>
-            <Chinese>汽油發電機</Chinese>
-            <Chinesesimp>汽油发电机</Chinesesimp>
-            <Turkish>Benzinli Jeneratör</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Power_PowerAction">
-            <English>Power</English>
-            <Czech>Napájení / Výkon</Czech>
-            <French>Puissance / Énergie</French>
-            <Spanish>Energía / Potencia</Spanish>
-            <Italian>Energia / Potenza</Italian>
-            <Polish>Zasilanie / Moc</Polish>
-            <Portuguese>Energia / Potência</Portuguese>
-            <Russian>Питание / Мощность</Russian>
-            <German>Strom / Leistung</German>
-            <Korean>전력</Korean>
-            <Japanese>電力 / 出力</Japanese>
-            <Chinese>電力 / 電源</Chinese>
-            <Chinesesimp>电力 / 电源</Chinesesimp>
-            <Turkish>Güç</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Power_PowerState">
-            <English>Power State: %1</English>
-            <Czech>Stav napájení: %1</Czech>
-            <French>État de l'alimentation : %1</French>
-            <Spanish>Estado de energía: %1</Spanish>
-            <Italian>Stato alimentazione: %1</Italian>
-            <Polish>Stan zasilania: %1</Polish>
-            <Portuguese>Estado da energia: %1</Portuguese>
-            <Russian>Состояние питания: %1</Russian>
-            <German>Stromstatus: %1</German>
-            <Korean>전원 상태: %1</Korean>
-            <Japanese>電源状態: %1</Japanese>
-            <Chinese>電源狀態: %1</Chinese>
-            <Chinesesimp>电源状态: %1</Chinesesimp>
-            <Turkish>Güç Durumu: %1</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Power_RUNNING">
-            <English>RUNNING</English>
-            <Czech>BĚŽÍ</Czech>
-            <French>EN MARCHE</French>
-            <Spanish>EN MARCHA</Spanish>
-            <Italian>IN FUNZIONE</Italian>
-            <Polish>URUCHOMIONY</Polish>
-            <Portuguese>EM FUNCIONAMENTO</Portuguese>
-            <Russian>РАБОТАЕТ</Russian>
-            <German>LÄUFT</German>
-            <Korean>가동 중</Korean>
-            <Japanese>運転中</Japanese>
-            <Chinese>運行中</Chinese>
-            <Chinesesimp>运行中</Chinesesimp>
-            <Turkish>ÇALIŞIYOR</Turkish>
         </Key>
         <Key ID="STR_MISERY_Power_Refuel">
             <English>Refuel</English>
@@ -337,6 +193,22 @@
             <Chinesesimp>加油</Chinesesimp>
             <Turkish>Yakıt ikmali yap</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Power_Refueling">
+            <English>Refueling...</English>
+            <Czech>Doplňování paliva...</Czech>
+            <French>Ravitaillement...</French>
+            <Spanish>Repostando...</Spanish>
+            <Italian>Rifornimento...</Italian>
+            <Polish>Tankowanie...</Polish>
+            <Portuguese>Reabastecendo...</Portuguese>
+            <Russian>Заправка...</Russian>
+            <German>Tanken...</German>
+            <Korean>연료 보충 중...</Korean>
+            <Japanese>給油中...</Japanese>
+            <Chinese>正在加油...</Chinese>
+            <Chinesesimp>正在加油...</Chinesesimp>
+            <Turkish>Yeniden yakıt dolduruluyor...</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Power_RefuelingInterrupted">
             <English>Refueling interrupted...</English>
             <Czech>Naplňování přerušeno...</Czech>
@@ -352,54 +224,6 @@
             <Chinese>加油被中断了...</Chinese>
             <Chinesesimp>加油被中断了...</Chinesesimp>
             <Turkish>Yakıt doldurma işlemi kesildi...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Power_SHUTTINGDOWN">
-            <English>SHUTTING DOWN</English>
-            <Czech>VYPÍNÁNÍ</Czech>
-            <French>ARRÊT EN COURS</French>
-            <Spanish>APAGÁNDOSE</Spanish>
-            <Italian>SPEGNIMENTO</Italian>
-            <Polish>WYŁĄCZANIE</Polish>
-            <Portuguese>A DESLIGAR</Portuguese>
-            <Russian>ВЫКЛЮЧЕНИЕ</Russian>
-            <German>WIRD AUSGESCHALTET</German>
-            <Korean>종료 중</Korean>
-            <Japanese>停止中</Japanese>
-            <Chinese>正在關閉</Chinese>
-            <Chinesesimp>正在关闭</Chinesesimp>
-            <Turkish>KAPANIYOR</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Power_Start">
-            <English>Start</English>
-            <Czech>Spustit</Czech>
-            <French>Démarrer</French>
-            <Spanish>Arrancar</Spanish>
-            <Italian>Avvia</Italian>
-            <Polish>Uruchom</Polish>
-            <Portuguese>Ligar</Portuguese>
-            <Russian>Запустить</Russian>
-            <German>Starten</German>
-            <Korean>시작</Korean>
-            <Japanese>始動</Japanese>
-            <Chinese>啟動</Chinese>
-            <Chinesesimp>启动</Chinesesimp>
-            <Turkish>Başlat</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Power_Stop">
-            <English>Stop</English>
-            <Czech>Zastavit</Czech>
-            <French>Arrêter</French>
-            <Spanish>Detener</Spanish>
-            <Italian>Fermá</Italian>
-            <Polish>Zatrzymaj</Polish>
-            <Portuguese>Parar</Portuguese>
-            <Russian>Остановить</Russian>
-            <German>Stoppen</German>
-            <Korean>정지</Korean>
-            <Japanese>停止</Japanese>
-            <Chinese>停止</Chinese>
-            <Chinesesimp>停止</Chinesesimp>
-            <Turkish>Durdur</Turkish>
         </Key>
         <Key ID="STR_MISERY_Power_SyphonFuel">
             <English>Syphon Fuel</English>
@@ -417,6 +241,22 @@
             <Chinesesimp>虹吸燃料</Chinesesimp>
             <Turkish>Yakıt Sifonla</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Power_Syphoning">
+            <English>Syphoning...</English>
+            <Czech>Odsávání paliva...</Czech>
+            <French>Siphonnage...</French>
+            <Spanish>Sifonando...</Spanish>
+            <Italian>Sifonamento...</Italian>
+            <Polish>Spuszczanie paliwa...</Polish>
+            <Portuguese>Sifonando...</Portuguese>
+            <Russian>Слив топлива...</Russian>
+            <German>Absaugen...</German>
+            <Korean>연료 흡입 중...</Korean>
+            <Japanese>燃料の吸い出し中...</Japanese>
+            <Chinese>正在虹吸...</Chinese>
+            <Chinesesimp>正在虹吸...</Chinesesimp>
+            <Turkish>Sifonlanıyor...</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Power_SyphoningInterrupted">
             <English>Syphoning interrupted...</English>
             <Czech>Odsávání paliva bylo přerušeno...</Czech>
@@ -432,54 +272,6 @@
             <Chinese>虹吸已中斷...</Chinese>
             <Chinesesimp>虹吸已中断...</Chinesesimp>
             <Turkish>Yakıt sifonlama kesintiye uğradı...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Power_TurnOff">
-            <English>Turn Off</English>
-            <Czech>Vypnout</Czech>
-            <French>Éteindre</French>
-            <Spanish>Apagar</Spanish>
-            <Italian>Spegni</Italian>
-            <Polish>Wyłącz</Polish>
-            <Portuguese>Desligar</Portuguese>
-            <Russian>Выключить</Russian>
-            <German>Ausschalten</German>
-            <Korean>끄기</Korean>
-            <Japanese>オフにする / 停止</Japanese>
-            <Chinese>關閉 / 關燈</Chinese>
-            <Chinesesimp>关闭 / 关灯</Chinesesimp>
-            <Turkish>Kapat</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Power_TurnOn">
-            <English>Turn On</English>
-            <Czech>Zapnout</Czech>
-            <French>Allumer / Mettre en marche</French>
-            <Spanish>Encender</Spanish>
-            <Italian>Accendi</Italian>
-            <Polish>Włącz</Polish>
-            <Portuguese>Ligar</Portuguese>
-            <Russian>Включить</Russian>
-            <German>Einschalten</German>
-            <Korean>켜기</Korean>
-            <Japanese>オンにする / 起動</Japanese>
-            <Chinese>開啟 / 開燈</Chinese>
-            <Chinesesimp>开启 / 开灯</Chinesesimp>
-            <Turkish>Aç</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Power_UseDevice">
-            <English>Use Device</English>
-            <Czech>Použít zařízení</Czech>
-            <French>Utiliser l'appareil</French>
-            <Spanish>Usar dispositivo</Spanish>
-            <Italian>Usa dispositivo</Italian>
-            <Polish>Użyj urządzenia</Polish>
-            <Portuguese>Usar Dispositivo</Portuguese>
-            <Russian>Использовать устройство</Russian>
-            <German>Gerät verwenden</German>
-            <Korean>장치 사용</Korean>
-            <Japanese>装置を使用</Japanese>
-            <Chinese>使用設備</Chinese>
-            <Chinesesimp>使用设备</Chinesesimp>
-            <Turkish>Cihazı Kullan</Turkish>
         </Key>
     </Package>
 </Project>
