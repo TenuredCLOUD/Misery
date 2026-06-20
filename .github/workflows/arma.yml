@@ -23,7 +23,7 @@ jobs:
     - name: Setup HEMTT
       uses: arma-actions/hemtt@v1
     - name: Run HEMTT build
-      run: hemtt/hemtt build
+      run: chmod +x hemtt/hemtt && hemtt/hemtt build
     - name: Rename build folder
       run: mv .hemttout/build .hemttout/@misery
     - name: Upload Artifact
