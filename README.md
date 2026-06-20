@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-    <sup><strong>Requires the latest versions of <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a> <a href="https://github.com/acemod/ACE3/releases">ACE3</a> and <a href="https://github.com/y0014984/Advanced-Equipment/releases">AE3</a>.<br/>
+    <sup><strong>Requires the latest versions of <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>,<a href="https://github.com/acemod/ACE3/releases">ACE3</a> and <a href="https://github.com/y0014984/Advanced-Equipment/releases">AE3</a>.<br/>
     Visit us on <a href="https://discord.gg/5gD3DwZqkK">Discord</a></strong></sup>
 </p>
 
@@ -55,7 +55,7 @@ We trust that this mod will serve as a valuable tool in realizing your vision fo
 
 ## Getting started
 
-Misery requires Arma 3 and the latest version of <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a> <a href="https://github.com/acemod/ACE3/releases">ACE3</a> and <a href="https://github.com/y0014984/Advanced-Equipment/releases">AE3</a>.
+Misery requires Arma 3 and the latest version of <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>,<a href="https://github.com/acemod/ACE3/releases">ACE3</a> and <a href="https://github.com/y0014984/Advanced-Equipment/releases">AE3</a>.
 
 ## Contributing to Misery
 
