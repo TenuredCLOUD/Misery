@@ -1,16 +1,17 @@
-#define COMPONENT generator
-#define COMPONENT_BEAUTIFIED Generator
+#define COMPONENT power
+#define COMPONENT_BEAUTIFIED Power
 #include "\z\misery\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
 
-#ifdef DEBUG_ENABLED_GENERATOR
+#ifdef DEBUG_ENABLED_POWER
     #define DEBUG_MODE_FULL
 #endif
 
-#ifdef DEBUG_SETTINGS_GENERATOR
-    #define DEBUG_SETTINGS DEBUG_SETTINGS_GENERATOR
+#ifdef DEBUG_SETTINGS_POWER
+    #define DEBUG_SETTINGS DEBUG_SETTINGS_POWER
 #endif
 
 #include "\z\misery\addons\main\script_macros.hpp"
+

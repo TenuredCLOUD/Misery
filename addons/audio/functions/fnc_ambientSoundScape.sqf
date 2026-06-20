@@ -28,7 +28,7 @@ private _soundDummy = createVehicle ["Land_HelipadEmpty_F", _dummyPosition, [], 
 
 private _sound = selectRandom GVAR(ambientSoundScapeExtras);
 
-[QGVAR(say3D), [_soundDummy, _sound]] call CBA_fnc_globalEvent;
+[QGVAR(say3D), [_soundDummy, _sound, 100]] call CBA_fnc_globalEvent;
 
 // Loop sound
 [{

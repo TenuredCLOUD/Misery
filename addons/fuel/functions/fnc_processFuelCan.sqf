@@ -1,5 +1,4 @@
 #include "..\script_component.hpp"
-#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
  * Author: TenuredCLOUD
  * Process filling fuel cans from fuel pump
@@ -15,119 +14,128 @@
  *
 */
 
-private _dialog = findDisplay 733836;
+params ["_unit", "_matchedIndex"];
 
-private _selectedFuelCan = lbData [1500, (lbCurSel 1500)];
+if (_matchedIndex isEqualTo -1) exitWith {};
 
-if (_selectedFuelCan isEqualTo "") exitWith { ctrlSetText [1001, localize LSTRING(NoFuelCan)] };
+private _allCans = [MACRO_FUEL_CANS] + [MACRO_FUEL_CANS_EMPTY];
+private _foundCanClass = _allCans select _matchedIndex;
 
-player setVariable [QGVAR(usingPump), true];
+private _isEmptyCan = _foundCanClass in [MACRO_FUEL_CANS_EMPTY];
 
-// Initial button disabler
-[733836, [1600, 1601], false] call EFUNC(common,displayShowControls);
+private _fuelTypeIndex = -1;
 
-private _pumpInterrupt = (findDisplay 733836) displayAddEventHandler ["KeyDown", {
-    params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
-    if (_key isEqualTo DIK_ESCAPE) then {
-        player setVariable [QGVAR(usingPump), false];
-        [QEGVAR(common,tileText), format [localize LSTRING(FillingInterrupted)]] call CBA_fnc_localEvent;
-    };
-}];
-
-private _preCheckIndex = [MACRO_FUEL_CANS] find _selectedFuelCan;
-private _preCheckCanNoFuel = [MACRO_FUEL_CANS_EMPTY] select _preCheckIndex;
-
-if (!([[_preCheckCanNoFuel]] call EFUNC(common,hasItem)) && !([[_selectedFuelCan]] call EFUNC(common,hasItem))) exitWith {
-    ctrlSetText [1001, localize LSTRING(NoFuelCanToFill)];
-    [733836, [1600, 1601], true] call EFUNC(common,displayShowControls);
-    player setVariable [QGVAR(usingPump), false];
-    (findDisplay 733836) displayRemoveEventHandler ["KeyDown", _pumpInterrupt];
+switch (true) do {
+    case (_foundCanClass isEqualTo QCLASS(diesel) || _foundCanClass isEqualTo QCLASS(dieselEmpty)): { _fuelTypeIndex = 0 };
+    case (_foundCanClass isEqualTo QCLASS(petrol) || _foundCanClass isEqualTo QCLASS(petrolEmpty)): { _fuelTypeIndex = 1 };
+    case (_foundCanClass isEqualTo QCLASS(jetFuel) || _foundCanClass isEqualTo QCLASS(jetFuelEmpty)): { _fuelTypeIndex = 2 };
 };
 
-GVAR(pumpingFuel) = true;
-playSound QEGVAR(audio,sound_gasPumpStart);
-call FUNC(pumpAudio);
+private _fillableCan = [MACRO_FUEL_CANS] select _fuelTypeIndex;
+
+private _nozzle = _unit getVariable [QACEGVAR(refuel,nozzle), objNull];
+
+private _targetPump = if (!isNull _nozzle) then { _nozzle getVariable [QACEGVAR(refuel,source), objNull] } else { objNull };
+
+if (isNull _targetPump) exitWith {
+    [[localize LSTRING(FuelPumpUnresponsive), 1, [1, 1, 1, 1]], [], true] call CBA_fnc_notify;
+};
+
+private _powerState = [_targetPump] call AE3FUNC(power,getPowerState);
+
+private _dummyPosition = getPosATL _nozzle;
+private _soundDummy = createVehicle ["Land_HelipadEmpty_F", _dummyPosition, [], 0, "CAN_COLLIDE"];
+private _soundDummy_1 = createVehicle ["Land_HelipadEmpty_F", _dummyPosition, [], 0, "CAN_COLLIDE"];
+
+if (_powerState isEqualTo "Off") exitWith {
+    [[localize LSTRING(NoPowerSource), 1, [1, 1, 1, 1]], [], true] call CBA_fnc_notify;
+    [QEGVAR(audio,say3D), [_soundDummy, QACEGVAR(refuel,nozzle_stop), 50]] call CBA_fnc_globalEvent;
+    [{
+        params ["_soundDummy", "_soundDummy_1"];
+        deleteVehicle _soundDummy;
+        deleteVehicle _soundDummy_1;
+    }, [_soundDummy, _soundDummy_1], 0.5] call CBA_fnc_waitAndExecute;
+};
+
+private _fuelStrings = [localize LSTRING(Diesel), localize LSTRING(Petrol), localize LSTRING(JetFuel)];
+
+private _canFuelTypeString = _fuelStrings select _fuelTypeIndex;
+
+private _pumpAllowedFuels = _targetPump getVariable [QGVAR(fuelTypeSupported), []];
+
+if !(_fuelTypeIndex in _pumpAllowedFuels) exitWith {
+    private _msg = format [localize LSTRING(PumpDoesNotDispense), _canFuelTypeString];
+    [[_msg, 1, [1, 1, 1, 1]], [], true] call CBA_fnc_notify;
+    [QEGVAR(audio,say3D), [_soundDummy, QACEGVAR(refuel,nozzle_stop), 50]] call CBA_fnc_globalEvent;
+    [{
+        params ["_soundDummy", "_soundDummy_1"];
+        {
+            deleteVehicle _x;
+        } forEach [_soundDummy, _soundDummy_1];
+    }, [_soundDummy, _soundDummy_1], 0.5] call CBA_fnc_waitAndExecute;
+};
+
+[QEGVAR(audio,say3D), [_soundDummy, QACEGVAR(refuel,nozzle_start), 50]] call CBA_fnc_globalEvent;
+
+if (_isEmptyCan) then {
+    [_unit, _foundCanClass] call CBA_fnc_removeItem;
+    [_unit, _fillableCan, 1, true] call CBA_fnc_addMagazine;
+};
+
+private _lastPos = getPosATL _unit;
+
+private _totalSteps = 20 / (ACEGVAR(refuel,rate) min 20);
+private _currentStep = 0;
 
 [{
     params ["_args", "_handle"];
-    _args params ["_selectedFuelCan", "_pumpInterrupt", "_preCheckCanNoFuel"];
+    _args params ["_nozzle", "_targetPump", "_lastPos", "_totalSteps", "_currentStep", "_unit", "_fillableCan", "_soundDummy", "_soundDummy_1", "_canFuelTypeString"];
 
-    [player, 25] call EFUNC(generator,nearGenerator) params ["", "_generator"];
+    private _currentPos = getPosATL _unit;
 
-    GVAR(usingGenerator) = false;
-    GVAR(usingBattery) = false;
+    [[localize LSTRING(Refueling), 1, [1, 1, 1, 1]], [], true] call CBA_fnc_notify;
 
-    if (!isNil "_generator" && _generator getVariable [QEGVAR(generator,isRunning), false]) then {
-        GVAR(usingGenerator) = true;
-    };
+    if ((_currentPos distance _lastPos) > 0.01 || isNull _nozzle || isNull _targetPump || !alive _unit) exitWith {
+        [[localize LSTRING(RefuelingInterrupted), 1, [1, 1, 1, 1]], [], true] call CBA_fnc_notify;
+        deleteVehicle _soundDummy;
+        [QEGVAR(audio,say3D), [_soundDummy_1, QACEGVAR(refuel,nozzle_stop), 50]] call CBA_fnc_globalEvent;
+        [{
+            deleteVehicle _this;
+        }, [_soundDummy_1], 0.5] call CBA_fnc_waitAndExecute;
 
-    if ([[QCLASS(autoBattery), QCLASS(autoBattery_Heavy)]] call EFUNC(common,hasItem)) then {
-        GVAR(usingBattery) = true;
-    };
-
-    if ((player getVariable QGVAR(usingPump)) isEqualTo false) exitWith {
-        (findDisplay 733836) displayRemoveEventHandler ["KeyDown", _pumpInterrupt];
-        [733836, [1600, 1601], true] call EFUNC(common,displayShowControls);
-        GVAR(pumpingFuel) = false;
-        playSound QEGVAR(audio,sound_gasPumpStop);
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
-    if (!GVAR(usingGenerator) && !GVAR(usingBattery)) exitWith {
-        player setVariable [QGVAR(usingPump), nil];
-        (findDisplay 733836) displayRemoveEventHandler ["KeyDown", _pumpInterrupt];
-        ctrlSetText [1001, localize LSTRING(NoPowerSource)];
-        [733836, [1600, 1601], true] call EFUNC(common,displayShowControls);
-        GVAR(pumpingFuel) = false;
-        playSound QEGVAR(audio,sound_gasPumpStop);
+    private _incremented = false;
+    private _rate = ACEGVAR(refuel,rate);
+
+    for "_i" from 1 to _rate do {
+        [_fillableCan] call EFUNC(common,itemIncrement) params [["_success", false]];
+        if (_success) then { _incremented = true; };
+    };
+
+    if !(_incremented) exitWith {
+        private _msg = format [localize LSTRING(CanIsFull), _canFuelTypeString];
+        [[_msg, 1, [1, 1, 1, 1]], [], true] call CBA_fnc_notify;
+        deleteVehicle _soundDummy;
+        [QEGVAR(audio,say3D), [_soundDummy_1, QACEGVAR(refuel,nozzle_stop), 50]] call CBA_fnc_globalEvent;
+        [{
+            deleteVehicle _this;
+        }, [_soundDummy_1], 0.5] call CBA_fnc_waitAndExecute;
+
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
-    ctrlSetText [1001, localize LSTRING(PumpingFuel)];
+    _currentStep = _currentStep + 1;
+    _args set [4, _currentStep];
 
-    // Add matching magazine type of fuel can to player if they have empty variant
-    if !([[_selectedFuelCan]] call EFUNC(common,hasItem)) then {
-        // Remove empty can and swap with magazine (fill-able variant)
-        [player, _preCheckCanNoFuel] call CBA_fnc_removeItem;
-        [player, _selectedFuelCan, 1, true] call CBA_fnc_addMagazine;
+    if (_currentStep >= _totalSteps) exitWith {
+        deleteVehicle _soundDummy;
+        [QEGVAR(audio,say3D), [_soundDummy_1, QACEGVAR(refuel,nozzle_stop), 50]] call CBA_fnc_globalEvent;
+        [{
+            deleteVehicle _this;
+        }, [_soundDummy_1], 0.5] call CBA_fnc_waitAndExecute;
+
+        _handle call CBA_fnc_removePerFrameHandler;
     };
-
-    if (GVAR(usingGenerator)) then {
-        // No power needed since generator is powering fuel pump
-        [_selectedFuelCan] call EFUNC(common,itemIncrement) params ["_incremented"];
-
-        if !(_incremented) exitWith {
-            player setVariable [QGVAR(usingPump), nil];
-            (findDisplay 733836) displayRemoveEventHandler ["KeyDown", _pumpInterrupt];
-            ctrlSetText [1001, localize LSTRING(StopPumpingFuel)];
-            [733836, [1600, 1601], true] call EFUNC(common,displayShowControls);
-            GVAR(pumpingFuel) = false;
-            playSound QEGVAR(audio,sound_gasPumpStop);
-            _handle call CBA_fnc_removePerFrameHandler;
-        };
-    };
-
-    if (!GVAR(usingGenerator) && GVAR(usingBattery)) then {
-        [_selectedFuelCan] call EFUNC(common,itemIncrement) params ["_incremented"];
-
-        if !(_incremented) exitWith {
-            player setVariable [QGVAR(usingPump), nil];
-            (findDisplay 733836) displayRemoveEventHandler ["KeyDown", _pumpInterrupt];
-            ctrlSetText [1001, localize LSTRING(StopPumpingFuel)];
-            [733836, [1600, 1601], true] call EFUNC(common,displayShowControls);
-            GVAR(pumpingFuel) = false;
-            playSound QEGVAR(audio,sound_gasPumpStop);
-            _handle call CBA_fnc_removePerFrameHandler;
-        };
-        // Decrement the battery's life randomly (if being used):
-        if ([30] call EFUNC(common,rollChance)) then {
-            if ([[QCLASS(autoBattery)]] call EFUNC(common,hasItem)) then {
-                [QCLASS(autoBattery)] call EFUNC(common,itemDecrement);
-            } else {
-                if ([[QCLASS(autoBattery_Heavy)]] call EFUNC(common,hasItem)) then {
-                    [QCLASS(autoBattery_Heavy)] call EFUNC(common,itemDecrement);
-                };
-            };
-        };
-    };
-}, 0.5, [_selectedFuelCan, _pumpInterrupt, _preCheckCanNoFuel]] call CBA_fnc_addPerFrameHandler;
+}, 0.5, [_nozzle, _targetPump, _lastPos, _totalSteps, _currentStep, _unit, _fillableCan, _soundDummy, _soundDummy_1, _canFuelTypeString]] call CBA_fnc_addPerFrameHandler;

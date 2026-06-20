@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Generator">
+        <Key ID="STR_MISERY_Power_CheckFuel">
+            <English>Check Fuel</English>
+            <Czech>Zkontrolovat palivo</Czech>
+            <French>Vérifier le carburant</French>
+            <Spanish>Comprobar combustible</Spanish>
+            <Italian>Controlla carburante</Italian>
+            <Polish>Sprawdź poziom paliwa</Polish>
+            <Portuguese>Verificar Combustível</Portuguese>
+            <Russian>Проверить топливо</Russian>
+            <German>Kraftstoff prüfen</German>
+            <Korean>연료 확인</Korean>
+            <Japanese>燃料を確認</Japanese>
+            <Chinese>检查油量 / 檢查燃料</Chinese>
+            <Chinesesimp>检查油量 / 检查燃料</Chinesesimp>
+            <Turkish>Yakıtı Kontrol Et</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Power_CheckPowerOutput">
+            <English>Check Power output</English>
+            <Czech>Zkontrolovat výkon</Czech>
+            <French>Vérifier la puissance de sortie</French>
+            <Spanish>Comprobar potencia de salida</Spanish>
+            <Italian>Controlla potenza erogata</Italian>
+            <Polish>Sprawdź moc wyjściową</Polish>
+            <Portuguese>Verificar Saída de Energia</Portuguese>
+            <Russian>Проверить выходную мощность</Russian>
+            <German>Leistung prüfen</German>
+            <Korean>전력 출력 확인</Korean>
+            <Japanese>출력を確認</Japanese>
+            <Chinese>檢查輸出功率</Chinese>
+            <Chinesesimp>检查输出功率</Chinesesimp>
+            <Turkish>Güç Çıkışını Kontrol Et</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Power_ContainerFullOrUnavailable">
+            <English>%1 is full or no longer available...</English>
+            <Czech>%1 je plný nebo již není dostupný...</Czech>
+            <French>%1 est plein ou n'est plus disponible...</French>
+            <Spanish>%1 está lleno o ya no está disponible...</Spanish>
+            <Italian>%1 è pieno o non è più disponibile...</Italian>
+            <Polish>%1 jest pełny lub nie jest już dostępny...</Polish>
+            <Portuguese>%1 está cheio ou já não está disponível...</Portuguese>
+            <Russian>%1 заполнен или более недоступен...</Russian>
+            <German>%1 ist voll oder nicht mehr verfügbar...</German>
+            <Korean>%1이(가) 가득 찼거나 더 이상 사용할 수 없습니다...</Korean>
+            <Japanese>%1は満タンか、または利用できません...</Japanese>
+            <Chinese>%1 已滿或不再可用...</Chinese>
+            <Chinesesimp>%1 已满或不再可用...</Chinesesimp>
+            <Turkish>%1 dolu veya artık mevcut değil...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Power_Diesel">
+            <English>Diesel</English>
+            <Czech>Nafta</Czech>
+            <French>Diesel</French>
+            <Spanish>Diésel</Spanish>
+            <Italian>Diesel</Italian>
+            <Polish>Diesel</Polish>
+            <Portuguese>Diesel</Portuguese>
+            <Russian>Дизель</Russian>
+            <German>Diesel</German>
+            <Korean>디젤</Korean>
+            <Japanese>ディーゼル</Japanese>
+            <Chinese>柴油</Chinese>
+            <Chinesesimp>柴油</Chinesesimp>
+            <Turkish>Dizel</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Power_FullTank">
+            <English>This generator has a full tank...</English>
+            <Czech>Tento generátor má plnou nádrž...</Czech>
+            <French>Ce générateur a le réservoir plein...</French>
+            <Spanish>Este generador tiene el tanque lleno...</Spanish>
+            <Italian>Questo generatore ha il serbatoio pieno...</Italian>
+            <Polish>Ten generator ma pełny bak...</Polish>
+            <Portuguese>Este gerador tem o depósito cheio...</Portuguese>
+            <Russian>У этого генератора полный бак...</Russian>
+            <German>Dieser Generator hat einen vollen Tank...</German>
+            <Korean>이 발전기의 연료 탱크가 가득 찼습니다...</Korean>
+            <Japanese>この発電機は満タンです...</Japanese>
+            <Chinese>這台發電機的油箱已滿...</Chinese>
+            <Chinesesimp>这台发电机的油箱已满...</Chinesesimp>
+            <Turkish>Bu jeneratörün deposu dolu...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Power_MaintenanceAction">
+            <English>Maintenance</English>
+            <Czech>Údržba</Czech>
+            <French>Entretien / Maintenance</French>
+            <Spanish>Mantenimiento</Spanish>
+            <Italian>Manutenzione</Italian>
+            <Polish>Konserwacja</Polish>
+            <Portuguese>Manutenção</Portuguese>
+            <Russian>Обслуживание</Russian>
+            <German>Wartung</German>
+            <Korean>정비 / 유지보수</Korean>
+            <Japanese>メンテナンス / 保守</Japanese>
+            <Chinese>維護 / 保養</Chinese>
+            <Chinesesimp>维护 / 保养</Chinesesimp>
+            <Turkish>Bakım</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Power_NeedJerrycanSyphon">
+            <English>You need a %1 jerrycan to syphon this generator...</English>
+            <Czech>Potřebuješ %1 kanystr k odsátí tohoto generátoru...</Czech>
+            <French>Vous avez besoin d'un jerrycan de %1 pour siphonner ce générateur...</French>
+            <Spanish>Necesitas un bidón de %1 para sifonar este generador...</Spanish>
+            <Italian>Hai bisogno di una tanica da %1 per sifonare questo generatore...</Italian>
+            <Polish>Potrzebujesz kanistra (%1), aby spuścić paliwo z tego generatora...</Polish>
+            <Portuguese>Você precisa de um galão de %1 para sifonar este gerador...</Portuguese>
+            <Russian>Вам канистра (%1), чтобы слить топливо из этого генератора...</Russian>
+            <German>Du benötigst einen %1-Kanister, um diesen Generator abzusaugen...</German>
+            <Korean>이 발전기에서 연료를 흡입하려면 %1 제리캔이 필요합니다...</Korean>
+            <Japanese>この発電機から燃料を吸い出すには %1 ジェリカンが必要です...</Japanese>
+            <Chinese>你需要一個 %1 油桶來虹吸這個發電機...</Chinese>
+            <Chinesesimp>你需要一个 %1 油桶来虹吸这个发电机...</Chinesesimp>
+            <Turkish>Bu jeneratörden yakıt sifonlamak için %1 bidona ihtiyacın var...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Power_NeedToolkitSyphon">
+            <English>You need a toolkit to syphon fuel...</English>
+            <Czech>K odsátí paliva potřebuješ sadu nářadí...</Czech>
+            <French>Vous avez besoin d'une boîte à outils pour siphonner du carburant...</French>
+            <Spanish>Necesitas un kit de herramientas para sifonar combustible...</Spanish>
+            <Italian>Hai bisogno di un kit di attrezzi para sifonare il carburante...</Italian>
+            <Polish>Potrzebujesz zestawu narzędzi, aby spuścić paliwo...</Polish>
+            <Portuguese>Você precisa de un kit de ferramentas para sifonar combustível...</Portuguese>
+            <Russian>Вам нужен набор инструментов, чтобы слить топливо...</Russian>
+            <German>Du benötigst ein Werkzeugset, um Kraftstoff abzusaugen...</German>
+            <Korean>연료를 흡입하려면 공구 상자가 필요합니다...</Korean>
+            <Japanese>燃料を吸い出すにはツールキットが必要です...</Japanese>
+            <Chinese>你需要工具箱來虹吸燃料...</Chinese>
+            <Chinesesimp>你需要工具箱来虹吸燃料...</Chinesesimp>
+            <Turkish>Yakıt sifonlamak için bir alet çantasına ihtiyacın var...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Power_NeedsJerrycan">
+            <English>You need a %1 jerrycan to refuel this generator...</English>
+            <Czech>K doplnění paliva do tohoto generátoru potřebujete kanystr s %1...</Czech>
+            <French>Vous avez besoin d'un jerrycan de %1 pour ravitailler ce générateur...</French>
+            <Spanish>Necesitas un bidón de %1 para reabastecer este generador...</Spanish>
+            <Italian>Hai bisogno di una tanica di %1 per rifornire questo generatore...</Italian>
+            <Polish>Potrzebujesz kanistra z %1, aby zatankować ten generator...</Polish>
+            <Portuguese>Precisa de um jerrican de %1 para reabastecer este gerador...</Portuguese>
+            <Russian>Вам нужна канистра с %1, чтобы заправить этот генератор...</Russian>
+            <German>Du benötigst einen %1-Kanister, um diesen Generator aufzutanken...</German>
+            <Korean>이 발전기를 재충전하려면 %1 제리캔이 필요합니다...</Korean>
+            <Japanese>この発電機に給油するには%1のジェリカンが必要です...</Japanese>
+            <Chinese>您需要一個 %1 油桶來為這台發電機加油...</Chinese>
+            <Chinesesimp>您需要一个 %1 油桶来为这台发电机加油...</Chinesesimp>
+            <Turkish>Bu jeneratöre yakıt ikmali yapmak için %1 bidona ihtiyacınız var...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Power_NoFuel">
+            <English>This generator has no fuel...</English>
+            <Czech>Tento generátor nemá žádné palivo...</Czech>
+            <French>Ce générateur n'a pas de carburant...</French>
+            <Spanish>Este generador no tiene combustible...</Spanish>
+            <Italian>Questo generatore non ha carburante...</Italian>
+            <Polish>Ten generator nie ma paliwa...</Polish>
+            <Portuguese>Este gerador não tem combustível...</Portuguese>
+            <Russian>В этом генераторе нет топлива...</Russian>
+            <German>Dieser Generator hat keinen Kraftstoff...</German>
+            <Korean>이 발전기에는 연료가 없습니다...</Korean>
+            <Japanese>この発電機には燃料がありません...</Japanese>
+            <Chinese>這台發電機沒有燃料...</Chinese>
+            <Chinesesimp>这台发电机没有燃料...</Chinesesimp>
+            <Turkish>Bu jeneratörde yakıt yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Power_Petrol">
+            <English>Petrol</English>
+            <Czech>Benzín</Czech>
+            <French>Essence</French>
+            <Spanish>Gasolina</Spanish>
+            <Italian>Benzina</Italian>
+            <Polish>Benzyna</Polish>
+            <Portuguese>Gasolina</Portuguese>
+            <Russian>Бензин</Russian>
+            <German>Benzin</German>
+            <Korean>휘발유</Korean>
+            <Japanese>ガソリン</Japanese>
+            <Chinese>汽油</Chinese>
+            <Chinesesimp>汽油</Chinesesimp>
+            <Turkish>Benzin</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Power_Refuel">
+            <English>Refuel</English>
+            <Czech>Doplnit palivo</Czech>
+            <French>Ravitailler</French>
+            <Spanish>Reabastecer</Spanish>
+            <Italian>Rifornisci</Italian>
+            <Polish>Zatankuj</Polish>
+            <Portuguese>Reabastecer</Portuguese>
+            <Russian>Заправить</Russian>
+            <German>Auftanken</German>
+            <Korean>연료 보충</Korean>
+            <Japanese>給油</Japanese>
+            <Chinese>加油</Chinese>
+            <Chinesesimp>加油</Chinesesimp>
+            <Turkish>Yakıt ikmali yap</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Power_Refueling">
+            <English>Refueling...</English>
+            <Czech>Doplňování paliva...</Czech>
+            <French>Ravitaillement...</French>
+            <Spanish>Repostando...</Spanish>
+            <Italian>Rifornimento...</Italian>
+            <Polish>Tankowanie...</Polish>
+            <Portuguese>Reabastecendo...</Portuguese>
+            <Russian>Заправка...</Russian>
+            <German>Tanken...</German>
+            <Korean>연료 보충 중...</Korean>
+            <Japanese>給油中...</Japanese>
+            <Chinese>正在加油...</Chinese>
+            <Chinesesimp>正在加油...</Chinesesimp>
+            <Turkish>Yeniden yakıt dolduruluyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Power_RefuelingInterrupted">
+            <English>Refueling interrupted...</English>
+            <Czech>Naplňování přerušeno...</Czech>
+            <French>Rechargement interrompu...</French>
+            <Spanish>Repostaje interrumpido...</Spanish>
+            <Italian>Rifornimento interrotto...</Italian>
+            <Polish>Zatankowanie przerwane...</Polish>
+            <Portuguese>Enchimento interrompido...</Portuguese>
+            <Russian>Заправка прервана...</Russian>
+            <German>Benzinieren unterbrochen...</German>
+            <Korean>주유 중단됨...</Korean>
+            <Japanese>給油が中断されました...</Japanese>
+            <Chinese>加油被中断了...</Chinese>
+            <Chinesesimp>加油被中断了...</Chinesesimp>
+            <Turkish>Yakıt doldurma işlemi kesildi...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Power_SyphonFuel">
+            <English>Syphon Fuel</English>
+            <Czech>Odsát palivo</Czech>
+            <French>Siphonner le carburant</French>
+            <Spanish>Sifonar combustible</Spanish>
+            <Italian>Sifona carburante</Italian>
+            <Polish>Spuść paliwo</Polish>
+            <Portuguese>Sifonar Combustível</Portuguese>
+            <Russian>Слить топливо</Russian>
+            <German>Kraftstoff absaugen</German>
+            <Korean>연료 흡입</Korean>
+            <Japanese>燃料を吸い出す</Japanese>
+            <Chinese>虹吸燃料</Chinese>
+            <Chinesesimp>虹吸燃料</Chinesesimp>
+            <Turkish>Yakıt Sifonla</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Power_Syphoning">
+            <English>Syphoning...</English>
+            <Czech>Odsávání paliva...</Czech>
+            <French>Siphonnage...</French>
+            <Spanish>Sifonando...</Spanish>
+            <Italian>Sifonamento...</Italian>
+            <Polish>Spuszczanie paliwa...</Polish>
+            <Portuguese>Sifonando...</Portuguese>
+            <Russian>Слив топлива...</Russian>
+            <German>Absaugen...</German>
+            <Korean>연료 흡입 중...</Korean>
+            <Japanese>燃料の吸い出し中...</Japanese>
+            <Chinese>正在虹吸...</Chinese>
+            <Chinesesimp>正在虹吸...</Chinesesimp>
+            <Turkish>Sifonlanıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Power_SyphoningInterrupted">
+            <English>Syphoning interrupted...</English>
+            <Czech>Odsávání paliva bylo přerušeno...</Czech>
+            <French>Siphonnage interrompu...</French>
+            <Spanish>Sifonado interrumpido...</Spanish>
+            <Italian>Sifonamento interrotto...</Italian>
+            <Polish>Spuszczanie paliwa przerwane...</Polish>
+            <Portuguese>Sifonagem interrompida...</Portuguese>
+            <Russian>Слив топлива прерван...</Russian>
+            <German>Absaugen unterbrochen...</German>
+            <Korean>연료 흡입이 중단되었습니다...</Korean>
+            <Japanese>燃料の吸い出しが中断されました...</Japanese>
+            <Chinese>虹吸已中斷...</Chinese>
+            <Chinesesimp>虹吸已中断...</Chinesesimp>
+            <Turkish>Yakıt sifonlama kesintiye uğradı...</Turkish>
+        </Key>
+    </Package>
+</Project>

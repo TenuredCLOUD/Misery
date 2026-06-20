@@ -1,6 +1,6 @@
-PREP(audioLogic);
-PREP(fuelCanListed);
-PREP(icon);
-PREP(process);
+PREP(initFuelPumps);
+PREP(initRefuelRestrictions);
 PREP(processFuelCan);
-PREP(pumpAudio);
+PREP(processTerrainPumps);
+PREP(turnOffPump);
+PREP(turnOnPump);

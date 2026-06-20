@@ -29,6 +29,18 @@
 #define ACEFUNC(var1,var2) TRIPLES(DOUBLES(ACE_PREFIX,var1),fnc,var2)
 #define QACEFUNC(var1,var2) QUOTE(ACEFUNC(var1,var2))
 
+// AE3 reference macros
+#define AE3_PREFIX ae3
+
+#define AE3GVAR(module,var) TRIPLES(AE3_PREFIX,module,var)
+#define QAE3GVAR(module,var) QUOTE(AE3GVAR(module,var))
+
+#define CLASSAE3(var) DOUBLES(AE3_PREFIX,var)
+#define QCLASSAE3(var) QUOTE(CLASSAE3(var))
+
+#define AE3FUNC(var1,var2) TRIPLES(DOUBLES(AE3_PREFIX,var1),fnc,var2)
+#define QAE3FUNC(var1,var2) QUOTE(AE3FUNC(var1,var2))
+
 #ifdef DISABLE_COMPILE_CACHE
     #undef PREP
     #define PREP(fncName) DFUNC(fncName) = compile preprocessFileLineNumbers QPATHTOF(functions\DOUBLES(fnc,fncName).sqf)
@@ -337,8 +349,8 @@ QCLASS(guttingKnife), \
 ]
 
 // Fuel cans
-#define MACRO_FUEL_CANS QCLASS(petrol), QCLASS(diesel), QCLASS(jetFuel)
-#define MACRO_FUEL_CANS_EMPTY QCLASS(petrolEmpty), QCLASS(dieselEmpty), QCLASS(jetFuelEmpty)
+#define MACRO_FUEL_CANS QCLASS(diesel), QCLASS(petrol), QCLASS(jetFuel)
+#define MACRO_FUEL_CANS_EMPTY QCLASS(dieselEmpty), QCLASS(petrolEmpty), QCLASS(jetFuelEmpty)
 
 // Ambient AI
 #define MACRO_FACTIONS west, east, civilian, independent
