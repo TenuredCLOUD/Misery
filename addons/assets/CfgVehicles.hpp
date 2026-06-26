@@ -7,6 +7,7 @@ class CfgVehicles {
         author = "Model credits: RBG_illustrations - Reworked by TenuredCLOUD";
         displayName = CSTRING(Forge_DisplayName);
         MACRO_THING_COMMON;
+        XEH_ENABLED;
         mapSize = 3;
         model = QPATHTOF(data\models\forge.p3d);
         textSingular = "Forge";

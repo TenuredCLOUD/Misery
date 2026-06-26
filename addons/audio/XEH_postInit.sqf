@@ -1,21 +1,6 @@
 #include "script_component.hpp"
 
-// CBA Events
 [QGVAR(say3D), {(_this select 0) say3D [(_this select 1), (_this select 2)]}] call CBA_fnc_addEventHandler;
-
-// TODO.
-/*
-if (isServer) then {
-    if (count GVAR(ambientMusicExtras) > 0) then {
-        [] call FUNC(playRandomMusic);
-        [] call FUNC(ambientMusic);
-    };
-
-    if (GVAR(forgeAmbience)) then {
-        call FUNC(forgeAudio);
-    };
-};
-*/
 
 if (hasInterface) then {
     if (GVAR(ambientSoundScape)) then {
@@ -30,9 +15,6 @@ if (hasInterface) then {
 
         call FUNC(ambientMusic);
     };
-
-    // Forge Master List
-    GVAR(forgeAudioList) = [];
 
     if (GVAR(enhancedInventorySounds)) then {
         // Inventory Sounds

@@ -1,5 +1,6 @@
 PREP(burnFuel);
 PREP(canSmeltCheck);
+PREP(initAudio);
 PREP(outputsListed);
 PREP(parseData);
 PREP(processSmelt);
