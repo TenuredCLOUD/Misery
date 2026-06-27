@@ -19,7 +19,7 @@
     if !([[QCLASS(lantern_On)]] call EFUNC(common,hasItem)) exitWith {
         if (!isNil {player getVariable [QGVAR(state), nil]}) then {
             private _lantern = player getVariable [QGVAR(state), nil];
-            [_lantern] remoteExec ["deleteVehicle", [0, -2] select isDedicated, _lantern];
+            [QGVAR(deleteLantern), [_lantern]] call CBA_fnc_globalEvent;
             player setVariable [QGVAR(state), nil, true];
         };
     };

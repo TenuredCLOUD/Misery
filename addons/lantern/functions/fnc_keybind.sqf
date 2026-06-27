@@ -28,7 +28,7 @@ if ([[QCLASS(lantern_Off)]] call EFUNC(common,hasItem)) then {
 
         _lantern setVariable [QGRADGVAR(persistence,isExcluded), true, true];
 
-        [_lantern, [player, [-0.17, -0.14, -0.06], "Pelvis", true]] remoteExec ["attachTo", [0, -2] select isDedicated, _lantern];
+        [QGVAR(attachLantern), [_lantern, [player, [-0.17, -0.14, -0.06], "Pelvis", true]]] call CBA_fnc_globalEvent;
 
         player setVariable [QGVAR(state), _lantern, true];
     };
@@ -38,7 +38,7 @@ if ([[QCLASS(lantern_On)]] call EFUNC(common,hasItem)) then {
     if (!isNil {player getVariable [QGVAR(state), nil]}) then {
         private _lantern = player getVariable [QGVAR(state), nil];
 
-        [_lantern] remoteExec ["deleteVehicle", [0, -2] select isDedicated, _lantern];
+        [QGVAR(deleteLantern), [_lantern]] call CBA_fnc_globalEvent;
 
         [player, [QCLASS(lantern_On), QCLASS(lantern_Off)], false] call EFUNC(common,switchPowerState);
 

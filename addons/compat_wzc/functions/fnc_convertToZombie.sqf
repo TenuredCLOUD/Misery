@@ -17,7 +17,7 @@
 call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "_infection"];
 
 if (!(player getVariable ["WBK_AI_ISZombie", false]) && _infection >= 1) then {
-    [player, ["WBK_Runner_Angry_Idle", 0, 0.2, false]] remoteExec ["switchMove", 0];
+    [QGVAR(convertToZed), [player, ["WBK_Runner_Angry_Idle", 0, 0.2, false]]] call CBA_fnc_globalEvent;
     player setVariable ["WBK_SynthHP", WBK_Zombies_CorruptedHP, true];
     player setVariable ["WBK_AI_ISZombie", true, true];
     player setVariable ["WBK_AI_ZombieMoveSet", "WBK_Runner_Angry_Idle", true];

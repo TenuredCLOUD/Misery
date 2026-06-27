@@ -104,7 +104,7 @@ private _fundsPerTick = _repairPrice / _totalSteps;
     private _partDamage = _damages select _targetIndex;
     private _newDamage = (_partDamage - _repairStep) max 0;
 
-    [_nearestVehicle, [_partName, _newDamage]] remoteExecCall ["setHitPointDamage", _nearestVehicle];
+    [QGVAR(repairVehiclePart), [_nearestVehicle, [_partName, _newDamage]]] call CBA_fnc_globalEvent;
 
     [-_fundsPerTick] call EFUNC(currency,modifyMoney);
 

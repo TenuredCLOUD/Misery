@@ -1,5 +1,23 @@
 #include "script_component.hpp"
 
+[QGVAR(deleteLantern), {
+    params ["_lantern"];
+    if (alive _lantern) then {
+        deleteVehicle _lantern;
+    };
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(attachLantern), {
+    params ["_lantern", "_attachParams"];
+    _lantern attachTo _attachParams;
+
+    // Since power component removes light from lanterns re-add it after its attached
+    [{
+        params ["_lantern"];
+        _lantern switchLight "ON";
+    }, [_lantern], 0.02] call CBA_fnc_waitAndExecute;
+}] call CBA_fnc_addEventHandler;
+
 if (isServer) then {
 
     private _lanternBatteries = [
@@ -21,7 +39,7 @@ if (isServer) then {
         if (_killed isEqualTo player && {local _killed}) then {
             if (!isNil {_killed getVariable [QGVAR(state), nil]}) then {
                 private _lantern = _killed getVariable [QGVAR(state), nil];
-                [_lantern] remoteExec ["deleteVehicle", [0, -2] select isDedicated, _lantern];
+                [QGVAR(deleteLantern), [_lantern]] call CBA_fnc_globalEvent;
                 _killed setVariable [QGVAR(state), nil, true];
             };
         };
@@ -34,7 +52,7 @@ if (hasInterface) then {
         if (_item isEqualTo QCLASS(lantern_On) && {local _unit}) then {
             if (!isNil {_unit getVariable [QGVAR(state), nil]}) then {
                 private _lantern = _unit getVariable [QGVAR(state), nil];
-                [_lantern] remoteExec ["deleteVehicle", [0, -2] select isDedicated, _lantern];
+                [QGVAR(deleteLantern), [_lantern]] call CBA_fnc_globalEvent;
                 _unit setVariable [QGVAR(state), nil, true];
             };
         };
@@ -46,7 +64,7 @@ if (hasInterface) then {
             if (isNil {_unit getVariable [QGVAR(state), nil]}) then {
                 private _lantern = "Land_Camping_Light_F" createVehicle position _unit;
                 _lantern setVariable [QGRADGVAR(persistence,isExcluded), true, true];
-                [_lantern, [_unit, [-0.17, -0.14, -0.06], "Pelvis", true]] remoteExec ["attachTo", [0, -2] select isDedicated, _lantern];
+                [QGVAR(attachLantern), [_lantern, [_unit, [-0.17, -0.14, -0.06], "Pelvis", true]]] call CBA_fnc_globalEvent;
                 _unit setVariable [QGVAR(state), _lantern, true];
             };
         };
@@ -58,7 +76,7 @@ if (hasInterface) then {
             if (!isNil {player getVariable [QGVAR(state), nil]}) then {
                 private _lantern = player getVariable [QGVAR(state), nil];
 
-                [_lantern] remoteExec ["deleteVehicle", [0, -2] select isDedicated, _lantern];
+                [QGVAR(deleteLantern), [_lantern]] call CBA_fnc_globalEvent;
 
                 [player, [QCLASS(lantern_On), QCLASS(lantern_Off)], false] call EFUNC(common,switchPowerState);
 
