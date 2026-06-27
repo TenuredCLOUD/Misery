@@ -2,6 +2,11 @@
 
 if (!GVAR(enabled)) exitWith {};
 
+[QGVAR(convertToZed), {
+    params ["_unit", "_animParams"];
+    _unit switchMove (_animParams select 0);
+}] call CBA_fnc_addEventHandler;
+
 if (hasInterface) then {
     if (GVAR(infectionEnabled)) then {
         call FUNC(infect);

@@ -34,7 +34,7 @@ publicVariable QGVAR(allRadioSounds);
     private _soundSource = createVehicle ["Land_HelipadEmpty_F", getPosASL _x, [], 0, "CAN_COLLIDE"];
     _soundSource attachTo [_x, [0, 0, 0]];
     GVAR(allRadioSounds) pushBack _soundSource;
-    [_soundSource, [_trkName, 150]] remoteExec ["say3D", 0, _soundSource];
+    [QEGVAR(audio,say3D), [_soundSource, _trkName, 150]] call CBA_fnc_globalEvent;
 } forEach GVAR(allRadios);
 
 publicVariable QGVAR(allRadioSounds);
