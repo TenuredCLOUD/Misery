@@ -76,6 +76,9 @@ if (isMultiplayer) exitWith {
         params ["", "_key"];
         if (_key isEqualTo 1) then {
             call FUNC(saveGame);
+            if (GVAR(gradESCSave)) then {
+                [1] call FUNC(handleGrad);
+            };
         };
     }];
 }] call CBA_fnc_waitUntilAndExecute;

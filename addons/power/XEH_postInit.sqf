@@ -3,10 +3,6 @@
 if (isServer) then {
     call FUNC(initLightSources);
 
-    [{
-        call FUNC(applyStates);
-    }, [], 0.2] call CBA_fnc_waitAndExecute;
-
     if (isClass (missionConfigFile >> "CfgGradPersistence")) then {
         {
             [_x] call GRADFUNC(persistence,blacklistClasses);

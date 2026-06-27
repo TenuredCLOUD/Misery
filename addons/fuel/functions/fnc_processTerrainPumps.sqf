@@ -48,3 +48,5 @@ if (isClass (missionConfigFile >> "CfgGradPersistence")) then {
         [_x] call GRADFUNC(persistence,blacklistObjects);
     } forEach _replacementPumps;
 };
+
+missionNamespace setVariable [QGVAR(activeFuelPumps), _replacementPumps, true];

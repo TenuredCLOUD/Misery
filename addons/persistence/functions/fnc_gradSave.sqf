@@ -17,5 +17,5 @@
     [] call FUNC(gradSave);
 }, [], GVAR(gradAutosaveTimer)] call CBA_fnc_waitAndExecute;
 
-[GVAR(gradWarning), 0] call GRADFUNC(persistence,saveMission);
+[1] call FUNC(handleGrad);
 

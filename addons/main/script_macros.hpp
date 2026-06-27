@@ -152,6 +152,21 @@
 // Crafting stations / Fuel stations
 #define MACRO_FUELSTATIONS_LAND "Land_fs_feed_F", "Land_FuelStation_Feed_F", "Land_FuelStation_03_pump_F", "Land_Ind_TankSmall2", "Land_Ind_TankSmall2_EP1", "Land_A_FuelStation_Feed", "Land_fuelstation", "Land_Ind_FuelStation_Feed_EP1"
 #define MACRO_FUELSTATIONS_AIR "B_Slingload_01_Fuel_F", "StorageBladder_01_fuel_forest_F", "StorageBladder_01_fuel_sand_F", "Land_Pod_Heli_Transport_04_fuel_F"
+
+#define MACRO_FUELSTATION_CAPACITIES \
+    ["Land_fs_feed_F", 10000], \
+    ["Land_FuelStation_Feed_F", 10000], \
+    ["Land_FuelStation_03_pump_F", 10000], \
+    ["Land_Ind_TankSmall2", 15000], \
+    ["Land_Ind_TankSmall2_EP1", 15000], \
+    ["Land_A_FuelStation_Feed", 10000], \
+    ["Land_fuelstation", 10000], \
+    ["Land_Ind_FuelStation_Feed_EP1", 10000], \
+    ["B_Slingload_01_Fuel_F", 4000], \
+    ["StorageBladder_01_fuel_forest_F", 2500], \
+    ["StorageBladder_01_fuel_sand_F", 2500], \
+    ["Land_Pod_Heli_Transport_04_fuel_F", 3000]
+
 #define MACRO_CRAFTINGSTATIONS "Land_Workbench_01_F", "Land_PortableDesk_01_olive_F"
 
 // Radios
