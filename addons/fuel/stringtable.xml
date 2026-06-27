@@ -113,22 +113,6 @@
             <Chinesesimp>泵未分配 %1...</Chinesesimp>
             <Turkish>Pompa %1 dağıtmıyor...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Fuel_PumpSupports">
-            <English>Pump supports: %1 Vehicle requires: %2</English>
-            <Czech>Čerpadlo podporuje: %1 Vozidlo vyžaduje: %2</Czech>
-            <French>La pompe fournit : %1 Le véhicule nécessite : %2</French>
-            <Spanish>La bomba admite: %1 El vehículo requiere: %2</Spanish>
-            <Italian>La pompa eroga: %1 Il veicolo richiede: %2</Italian>
-            <Polish>Pompa obsługuje: %1 Pojazd wymaga: %2</Polish>
-            <Portuguese>A bomba suporta: %1 O veículo requer: %2</Portuguese>
-            <Russian>Насос поддерживает: %1 Транспорту требуется: %2</Russian>
-            <German>Pumpe unterstützt: %1 Fahrzeug benötigt: %2</German>
-            <Korean>펌프 지원: %1 차량 요구: %2</Korean>
-            <Japanese>ポンプの対応: %1 車両の要求: %2</Japanese>
-            <Chinese>幫浦支援: %1 車輛需要: %2</Chinese>
-            <Chinesesimp>泵支持: %1 车辆需要: %2</Chinesesimp>
-            <Turkish>Pompa desteği: %1 Araç gereksinimi: %2</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Fuel_RefillFuelCanAtPump">
             <English>Refill fuel can at pump</English>
             <Czech>Napleněte nádrž na pompe</Czech>
