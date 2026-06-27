@@ -19,7 +19,7 @@
     private _pumpAllowedFuels = _source getVariable [QGVAR(fuelTypeSupported), []];
 
     // If target is a generator & source isn't jetfuel allow refilling
-    if (_target in EGVAR(power,generators) && 0 in _pumpAllowedFuels || 1 in _pumpAllowedFuels) exitWith {};
+    if (typeOf _target in EGVAR(power,generators) && [0, 1] in [_pumpAllowedFuels]) exitWith {};
 
     if (_pumpAllowedFuels isNotEqualTo []) then {
 
@@ -57,7 +57,7 @@
                 case 2: { _reqString = localize LSTRING(JetFuel) };
             };
 
-            private _msg = format [localize LSTRING(PumpSupports), _pumpAllowedFuels joinString " + ", _reqString];
+            private _msg = format [localize LSTRING(PumpDoesNotDispense), _reqString];
             [[_msg, 1, [1, 1, 1, 1]], [], true] call CBA_fnc_notify;
         };
     };
