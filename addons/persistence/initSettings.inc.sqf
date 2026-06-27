@@ -60,6 +60,15 @@ private _category = format ["Misery %1", localize LSTRING(Component)];
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(gradESCSave),
+    "CHECKBOX",
+    [LSTRING(SaveWorldStateESC), LSTRING(SaveWorldStateESCDesc)],
+    _category,
+    false,
+    1
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(gradWarning),
     "CHECKBOX",
     [LSTRING(GradWarning), LSTRING(GradWarningDesc)],
@@ -72,6 +81,33 @@ private _category = format ["Misery %1", localize LSTRING(Component)];
     QGVAR(gradAdminActions),
     "CHECKBOX",
     [LSTRING(GradAdmin), LSTRING(GradAdminDesc)],
+    _category,
+    false,
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(saveAE3States),
+    "CHECKBOX",
+    [LSTRING(SaveAE3States), LSTRING(SaveAE3StatesDesc)],
+    _category,
+    false,
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(saveACECargo),
+    "CHECKBOX",
+    [LSTRING(SaveACECargo), LSTRING(SaveACECargoDesc)],
+    _category,
+    false,
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(saveACEFuelStations),
+    "CHECKBOX",
+    [LSTRING(SaveACEFuelingStations), LSTRING(SaveACEFuelingStationsDesc)],
     _category,
     false,
     1

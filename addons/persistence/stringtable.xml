@@ -257,6 +257,102 @@
             <Chinesesimp>硬核模式已启用，您需要靠近点燃的篝火才能存档...</Chinesesimp>
             <Turkish>Hardcore mod etkinleştirildi, kaydetmek için yanan bir ateşin yakınında olmalısınız...</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Persistence_SaveACECargo">
+            <English>Save ACE cargo</English>
+            <Czech>Uložit náklad ACE</Czech>
+            <French>Sauvegarder le chargement ACE</French>
+            <Spanish>Guardar carga de ACE</Spanish>
+            <Italian>Salva carico ACE</Italian>
+            <Polish>Zapisz ładunek ACE</Polish>
+            <Portuguese>Salvar carga do ACE</Portuguese>
+            <Russian>Сохранить груз ACE</Russian>
+            <German>ACE-Fracht speichern</German>
+            <Korean>ACE 화물 저장</Korean>
+            <Japanese>ACE カーゴを保存</Japanese>
+            <Chinese>儲存 ACE 物資</Chinese>
+            <Chinesesimp>储存 ACE 物资</Chinesesimp>
+            <Turkish>ACE Kargosunu Kaydet</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_SaveACECargoDesc">
+            <English>Saves ACE cargo, and restores it on load, requires GRAD persistence</English>
+            <Czech>Uloží náklad ACE a obnoví jej při načtení, vyžaduje GRAD persistence</Czech>
+            <French>Sauvegarde le chargement ACE et le restaure au chargement, nécessite GRAD persistence</French>
+            <Spanish>Guarda la carga de ACE y la restaura al cargar, requiere GRAD persistence</Spanish>
+            <Italian>Salva il carico ACE e lo ripristina al caricamento, richiede GRAD persistence</Italian>
+            <Polish>Zapisuje ładunek ACE i przywraca go po załadowaniu, wymaga GRAD persistence</Polish>
+            <Portuguese>Salva a carga do ACE e a restaura ao carregar, requer GRAD persistence</Portuguese>
+            <Russian>Сохраняет груз ACE и восстанавливает его при загрузке, требуется GRAD persistence</Russian>
+            <German>Speichert ACE-Fracht und stellt sie beim Laden wieder her, erfordert GRAD persistence</German>
+            <Korean>ACE 화물을 저장하고 불러올 때 복원합니다. GRAD persistence가 필요합니다</Korean>
+            <Japanese>ACE カーゴを保存し、ロード時に復元します（GRAD persistence が必要）</Japanese>
+            <Chinese>儲存 ACE 物資並在載入時恢復，需要 GRAD persistence</Chinese>
+            <Chinesesimp>储存 ACE 物资并在载入时恢复，需要 GRAD persistence</Chinesesimp>
+            <Turkish>ACE kargosunu kaydeder ve yükleme esnasında geri yükler, GRAD persistence gerektirir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_SaveACEFuelingStations">
+            <English>Save ACE fueling stations</English>
+            <Czech>Uložit čerpací stanice ACE</Czech>
+            <French>Sauvegarder les stations-service ACE</French>
+            <Spanish>Guardar estaciones de servicio ACE</Spanish>
+            <Italian>Salva stazioni di rifornimento ACE</Italian>
+            <Polish>Zapisz stacje paliw ACE</Polish>
+            <Portuguese>Salvar postos de combustível ACE</Portuguese>
+            <Russian>Сохранить заправочные станции ACE</Russian>
+            <German>ACE-Tankstellen speichern</German>
+            <Korean>ACE 주유소 저장</Korean>
+            <Japanese>ACE 給油ステーションを保存</Japanese>
+            <Chinese>儲存 ACE 加油站</Chinese>
+            <Chinesesimp>储存 ACE 加油站</Chinesesimp>
+            <Turkish>ACE Yakıt İstasyonlarını Kaydet</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_SaveACEFuelingStationsDesc">
+            <English>Saves ACE fueling stations, makes it so fuel locations stay depleted after use, requires GRAD persistence</English>
+            <Czech>Uloží čerpací stanice ACE, zajistí, aby palivové lokace zůstaly po použití vyčerpané, vyžaduje GRAD persistence</Czech>
+            <French>Sauvegarde les stations-service ACE, permettant aux points de ravitaillement de rester vidés après utilisation, nécessite GRAD persistence</French>
+            <Spanish>Guarda las estaciones de servicio ACE, hace que los puntos de combustible permanezcan agotados tras su uso, requiere GRAD persistence</Spanish>
+            <Italian>Salva le stazioni di rifornimento ACE, facendo in modo che i punti di rifornimento rimangano esauriti dopo l'uso, richiede GRAD persistence</Italian>
+            <Polish>Zapisuje stacje paliw ACE, sprawia, że miejsca z paliwem pozostają wyczerpane po użyciu, wymaga GRAD persistence</Polish>
+            <Portuguese>Salva os postos de combustível ACE, fazendo com que os locais de combustível permaneçam esgotados após o uso, requer GRAD persistence</Portuguese>
+            <Russian>Сохраняет заправочные станции ACE, благодаря чему запасы топлива не восполняются после использования, требуется GRAD persistence</Russian>
+            <German>Speichert ACE-Tankstellen, sorgt dafür, dass Tankstellen nach der Nutzung leer bleiben, erfordert GRAD persistence</German>
+            <Korean>ACE 주유소를 저장하여 사용 후 주유 공간이 고갈된 상태로 유지되도록 합니다. GRAD persistence가 필요합니다</Korean>
+            <Japanese>ACE 給油ステーションを保存し、使用後に燃料スポットが枯渇したままになるようにします（GRAD persistence が必要）</Japanese>
+            <Chinese>儲存 ACE 加油站，使燃料點在使用後保持枯竭狀態延續，需要 GRAD persistence</Chinese>
+            <Chinesesimp>储存 ACE 加油站，使燃料点在使用后保持枯竭状态延续，需要 GRAD persistence</Chinesesimp>
+            <Turkish>ACE yakıt istasyonlarını kaydeder, yakıt noktalarının kullanıldıktan sonra boş kalmasını sağlar, GRAD persistence gerektirir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_SaveAE3States">
+            <English>Save AE3 states</English>
+            <Czech>Uložit stavy AE3</Czech>
+            <French>Sauvegarder les états AE3</French>
+            <Spanish>Guardar estados de AE3</Spanish>
+            <Italian>Salva stati AE3</Italian>
+            <Polish>Zapisz stany AE3</Polish>
+            <Portuguese>Salvar estados do AE3</Portuguese>
+            <Russian>Сохранить состояния AE3</Russian>
+            <German>AE3-Zustände speichern</German>
+            <Korean>AE3 상태 저장</Korean>
+            <Japanese>AE3 の状態を保存</Japanese>
+            <Chinese>儲存 AE3 狀態</Chinese>
+            <Chinesesimp>储存 AE3 状态</Chinesesimp>
+            <Turkish>AE3 Durumlarını Kaydet</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_SaveAE3StatesDesc">
+            <English>Saves AE3 states, battery levels, generator fuel, etc... Requires GRAD persistence</English>
+            <Czech>Uloží stavy AE3, úrovně baterií, palivo v generátoru atd... Vyžaduje GRAD persistence</Czech>
+            <French>Sauvegarde les états AE3, les niveaux de batterie, le carburant du générateur, etc. Nécessite GRAD persistence</French>
+            <Spanish>Guarda los estados de AE3, niveles de batería, combustible del generador, etc... Requiere GRAD persistence</Spanish>
+            <Italian>Salva gli stati AE3, i livelli della batteria, il carburante del generatore, ecc... Richiede GRAD persistence</Italian>
+            <Polish>Zapisuje stany AE3, poziomy baterii, paliwo generatora itp... Wymaga GRAD persistence</Polish>
+            <Portuguese>Salva os estados do AE3, níveis de bateria, combustível do gerador, etc... Requer GRAD persistence</Portuguese>
+            <Russian>Сохраняет состояния AE3, уровень заряда батарей, топливо в генераторе и т. д... Требуется GRAD persistence</Russian>
+            <German>Speichert AE3-Zustände, Batteriestände, Generator-Kraftstoff usw. Erfordert GRAD persistence</German>
+            <Korean>AE3 상태, 배터리 잔량, 발전기 연료 등을 저장합니다. GRAD persistence가 필요합니다</Korean>
+            <Japanese>AE3 の状態、バッテリー残量、発電機の燃料などを保存します（GRAD persistence が必要）</Japanese>
+            <Chinese>儲存 AE3 狀態、電池電量、发電機燃料等... 需要 GRAD persistence</Chinese>
+            <Chinesesimp>储存 AE3 状态、电池电量、发电机燃料等... 需要 GRAD persistence</Chinesesimp>
+            <Turkish>AE3 durumlarını, batarya seviyelerini, jeneratör yakıtını vb. kaydeder... GRAD persistence gerektirir</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Persistence_SaveSlot">
             <English>Save Slot</English>
             <Czech>Pozice pro uložení</Czech>
@@ -304,6 +400,38 @@
             <Chinese>保存世界數據</Chinese>
             <Chinesesimp>保存世界数据</Chinesesimp>
             <Turkish>Dünyayı Kaydet</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_SaveWorldStateESC">
+            <English>Save World state on ESC click</English>
+            <Czech>Uložit stav světa při stisknutí ESC</Czech>
+            <French>Sauvegarder l'état du monde via la touche Échap</French>
+            <Spanish>Guardar estado del mundo al pulsar ESC</Spanish>
+            <Italian>Salva lo stato del mondo alla pressione di ESC</Italian>
+            <Polish>Zapisz stan świata po naciśnięciu ESC</Polish>
+            <Portuguese>Salvar estado do mundo ao apertar ESC</Portuguese>
+            <Russian>Сохранять состояние мира при нажатии ESC</Russian>
+            <German>Weltzustand bei Drücken von ESC speichern</German>
+            <Korean>ESC 누를 때 세계 상태 저장</Korean>
+            <Japanese>ESC キー押下時にワールドの状態を保存</Japanese>
+            <Chinese>按下 ESC 時儲存世界狀態</Chinese>
+            <Chinesesimp>按下 ESC 时储存世界状态</Chinesesimp>
+            <Turkish>ESC tıklandığında Dünya durumunu kaydet</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_SaveWorldStateESCDesc">
+            <English>Pushes a GRAD save when ESC key is pressed, SP only, requires GRAD persistence</English>
+            <Czech>Vynutí uložení GRAD při stisknutí klávesy ESC, pouze pro SP, vyžaduje GRAD persistence</Czech>
+            <French>Force une sauvegarde GRAD lorsque la touche Échap est enfoncée, Solo uniquement, nécessite GRAD persistence</French>
+            <Spanish>Forza un guardado de GRAD al pulsar la tecla ESC, solo para un jugador, requiere GRAD persistence</Spanish>
+            <Italian>Invia un salvataggio GRAD quando viene premuto il tasto ESC, solo SP, richiede GRAD persistence</Italian>
+            <Polish>Wymusza zapis GRAD po naciśnięciu klawisza ESC, tylko SP, wymaga GRAD persistence</Polish>
+            <Portuguese>Força um salvamento do GRAD quando a tecla ESC é pressionada, apenas SP, requer GRAD persistence</Portuguese>
+            <Russian>Принудительно выполняет сохранение GRAD при нажатии клавиши ESC, только в одиночной игре, требуется GRAD persistence</Russian>
+            <German>Erzwingt eine GRAD-Speicherung beim Drücken der ESC-Taste, nur SP, erfordert GRAD persistence</German>
+            <Korean>ESC 키를 누를 때 GRAD 저장을 실행합니다. 싱글 플레이어(SP) 전용이며 GRAD persistence가 필요합니다</Korean>
+            <Japanese>ESC キーが押されたときに GRAD セーブを実行します（SP 専用、GRAD persistence が必要）</Japanese>
+            <Chinese>按下 ESC 鍵時推送 GRAD 存檔，僅限單人遊戲(SP)，需要 GRAD persistence</Chinese>
+            <Chinesesimp>按下 ESC 键时推送 GRAD 存档，仅限单人游戏(SP)，需要 GRAD persistence</Chinesesimp>
+            <Turkish>ESC tuşuna basıldığında bir GRAD kaydı tetikler, yalnızca SP, GRAD persistence gerektirir</Turkish>
         </Key>
         <Key ID="STR_MISERY_Persistence_WipeWorld">
             <English>Wipe world data</English>

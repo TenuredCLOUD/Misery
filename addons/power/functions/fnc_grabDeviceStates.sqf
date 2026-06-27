@@ -48,6 +48,8 @@ private _masterDeviceMap = createHashMap;
         private _device = _x;
         private _dummy = _device getVariable [QAE3GVAR(power,internal), objNull];
 
+        if (_x getVariable [QEGVAR(persistence,isCargo), false]) then { continue };
+
         if (!isNull _dummy) then {
             private _powerSource = _dummy getVariable [QAE3GVAR(power,batteryLevel), 0.1];
 
@@ -64,6 +66,8 @@ private _masterDeviceMap = createHashMap;
         private _powerSource = _device getVariable [QAE3GVAR(power,batteryLevel), 1];
         private _key = _device call BIS_fnc_objectVar;
 
+        if (_x getVariable [QEGVAR(persistence,isCargo), false]) then { continue };
+
         _masterDeviceMap set [_key, [typeOf _device, _powerSource, 1, getPosASL _device, [vectorDir _device, vectorUp _device]]];
     } forEach (allMissionObjects _x);
 } forEach _directDevices;
@@ -72,6 +76,8 @@ private _masterDeviceMap = createHashMap;
     {
         private _device = _x;
         private _key = _device call BIS_fnc_objectVar;
+
+        if (_x getVariable [QEGVAR(persistence,isCargo), false]) then { continue };
 
         _masterDeviceMap set [_key, [typeOf _device, fuel _device, 2, getPosASL _device, [vectorDir _device, vectorUp _device]]];
     } forEach (allMissionObjects _x);

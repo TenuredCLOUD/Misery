@@ -16,6 +16,12 @@
 
 params ["_source"];
 
+if (EGVAR(persistence,saveACEFuelStations)) then {
+    private _remainingFuel = _source getVariable [QACEGVAR(refuel,currentFuelCargo), 0];
+
+    _source setVariable [QGVAR(litreCargo), _remainingFuel, true];
+};
+
 [_source, 0] call ACEFUNC(refuel,makeSource);
 
 true
