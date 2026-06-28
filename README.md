@@ -32,6 +32,7 @@
 - Resource Gathering: Fishing, hunting, mining, smithing, and wood collection
 - Advanced Refueling Framework: Utilizing the ACE refueling API with some custom tweaks for required fuel types and power requirements
 - World Systems: Dynamic POI generation, Ambient AI & Creature spawns
+- Localization: Built with global communities in mind. Most strings are fully translated and localized across 14 supported languages
 - ...And many more tools of a massive suite tailored specifically for mission designers
 
 ## Getting started
