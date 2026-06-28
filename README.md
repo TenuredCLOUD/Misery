@@ -13,49 +13,30 @@
 </p>
 
 <p align="center">
-    <sup><strong>Requires the latest versions of <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>,<a href="https://github.com/acemod/ACE3/releases">ACE3</a> and <a href="https://github.com/y0014984/Advanced-Equipment/releases">AE3</a>.<br/>
+    <sup><strong>Requires the latest versions of <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>, <a href="https://github.com/acemod/ACE3/releases">ACE3</a> and <a href="https://github.com/y0014984/Advanced-Equipment/releases">AE3</a>.<br/>
     Visit us on <a href="https://discord.gg/5gD3DwZqkK">Discord</a></strong></sup>
 </p>
 
-# 🚧 Work in Progress 🚧
-
-Please note that Misery 2.0 is currently under active development and **not ready for release**.
-
-## Current State
-
-The mod is still missing several code functionalities and is in the process of being prepared for the **2.0 build**. We are also in the process of conducting extensive testing, including **multiplayer testing**.
-
-**Misery** draws inspiration from renowned mods such as DayZ, Ravage, Heros Survive, and acclaimed games like S.T.A.L.K.E.R. However, it distinguishes itself through the incorporation of custom assets and a unique, challenging twist on survival mechanics
-
-The mod also showcases the collaborative efforts of various community authors and friends. Designed as a framework, Misery aims to augment the creative possibilities for scenario designers in crafting a post-apocalyptic world
-
-We trust that this mod will serve as a valuable tool in realizing your vision for a compelling, immersive gaming experience
+**Misery** is an ever evolving survival framework dedicated to creating a rich development environment for scenario designers.
 
 ## Core features
 
-- Module based dev environment (you don't need to know much coding)
-- Click of button persistence for client based data - ACE medical included
-- Unique "HUD of choice" options for modules - want a bar styled HUD for players to use in your scenario's? Done.
-- S.T.A.L.K.E.R themed optional environmental effects utilizing GSC audio samples
-- Flexible environment that can easily be worked with for most scenario developers
-- Optimized code structure utilizing CBA functions as well as Macro encoding for quick pre-processing of mod code so code packed scenario's are less inhibited...
-- Advanced Temperature system that dynamically calculates temperature loss or gain depending on clothing insulation, air temperature, as well as player exposure...
-- Fatigue system either sleep or utilize stimulants in order to replenish energy levels. This feature is intended for single-player mode.
-- Dedicated crafting system
-- Ground loot framework
-- Simple ERU system (Environment Reading Unit)
-- Fishing & hunting
-- Mining and smithing
-- Wood collection system
-- Immersive Fire crafting
-- Advanced refueling framework (Jet fuel, Diesel, petrol)
-- POI generation
-- Terrain De-Cluttering system
-- And many more unique tools & features for scenario designers...
+- AE3 Power API Integration: Power matters, You'll need functioning electricity just to operate fuel pumps
+- ACE Integration: Utilizes many of ACE's API's (Refuel, Medical, Weather, etc...)
+- Vast Mission Config Data: Fully customizable data entries for precise custom item integration and dialing of other systems
+- Full GRAD Persistence Support: World states carry over seamlessly if you utilize GRAD persistence
+- Optimization: Utilizes CBA for pre-processing of functions, as well as running no scheduled code
+- Advanced Dynamic Temperature System: Real-time calculations factoring in clothing insulation, environmental air temperature, and direct player exposure
+- Fatigue & Sleep Mechanics: Manage your exhaustion. Rest naturally or utilize stimulants (Single-Player)
+- Deep Survival Systems: Dedicated crafting, dynamic loot frameworks, and immersive fire starting
+- Resource Gathering: Fishing, hunting, mining, smithing, and wood collection
+- Advanced Refueling Framework: Utilizing the ACE refueling API with some custom tweaks for required fuel types and power requirements
+- World Systems: Dynamic POI generation, Ambient AI & Creature spawns
+- ...And many more tools of a massive suite tailored specifically for mission designers
 
 ## Getting started
 
-Misery requires Arma 3 and the latest version of <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>,<a href="https://github.com/acemod/ACE3/releases">ACE3</a> and <a href="https://github.com/y0014984/Advanced-Equipment/releases">AE3</a>.
+Misery requires Arma 3 and the latest version of <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>, <a href="https://github.com/acemod/ACE3/releases">ACE3</a> and <a href="https://github.com/y0014984/Advanced-Equipment/releases">AE3</a>.
 
 ## Contributing to Misery
 
