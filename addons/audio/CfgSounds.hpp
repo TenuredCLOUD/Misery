@@ -380,17 +380,6 @@ class CfgSounds {
     MACRO_SOUNDS(geiger09,geiger);
     MACRO_SOUNDS(geiger10,geiger);
 
-    // Generator
-    MACRO_SOUNDS(dieselRunning,generator);
-    MACRO_SOUNDS(dieselStart,generator);
-    MACRO_SOUNDS(dieselStop,generator);
-    MACRO_SOUNDS(kvaRunning,generator);
-    MACRO_SOUNDS(kvaStart,generator);
-    MACRO_SOUNDS(kvaStop,generator);
-    MACRO_SOUNDS(petrolRunning,generator);
-    MACRO_SOUNDS(petrolStart,generator);
-    MACRO_SOUNDS(petrolStop,generator);
-
     // Green Mountain
     MACRO_SOUNDS(gmBeep,greenmountain);
     MACRO_SOUNDS(gmChatter,greenmountain);

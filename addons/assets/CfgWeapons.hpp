@@ -746,18 +746,6 @@ class CfgWeapons {
         };
     };
 
-    class CLASS(rope): CLASS(ItemCore) {
-        displayName = CSTRING(Rope_DisplayName);
-        descriptionShort = CSTRING(Rope_Description);
-        picture = QPATHTOF(data\icons\rope.paa);
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 15;
-        };
-    };
-
     class CLASS(needleThread): CLASS(ItemCore) {
         displayName = CSTRING(NeedleThread_DisplayName);
         descriptionShort = CSTRING(NeedleThread_Description);
