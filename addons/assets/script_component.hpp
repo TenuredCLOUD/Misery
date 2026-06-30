@@ -91,7 +91,6 @@
     QCLASS(randomMedication), \
     QCLASS(rawFish), \
     QCLASS(rawMeat), \
-    QCLASS(rope), \
     QCLASS(ruby), \
     QCLASS(sapphire), \
     QCLASS(sledgehammer), \

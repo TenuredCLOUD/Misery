@@ -26,7 +26,7 @@ private _outputItem = _recipe select 0;
 private _requiredItems = _recipe select 1;
 private _cookingTime = _recipe select 2;
 private _outputCount = _recipe select 3;
-private _toBeReplaced = _recipe select 4;
+private _code = _recipe select 4;
 private _audio = _recipe select 5;
 private _outputXP = _recipe select 6;
 private _requiredXP = _recipe select 7;
@@ -75,7 +75,7 @@ private _currentStep = 0;
 
 [{
     params ["_args", "_handle"];
-    _args params ["_requiredItems", "_outputItem", "_outputCount", "_toBeReplaced", "_outputXP", "_cookingMethod", "_dialog", "_cookInterrupt", "_totalSteps", "_currentStep", "_displayName", "_progressBar", "_soundSource"];
+    _args params ["_requiredItems", "_outputItem", "_outputCount", "_code", "_outputXP", "_cookingMethod", "_dialog", "_cookInterrupt", "_totalSteps", "_currentStep", "_displayName", "_progressBar", "_soundSource"];
 
     if (!(player getVariable [QGVAR(isCooking), false]) || !alive player) exitWith {
         player setVariable [QGVAR(isCooking), nil];
@@ -111,15 +111,7 @@ private _currentStep = 0;
             [player, _outputItem, true] call CBA_fnc_addItem;
         };
 
-        if (count _toBeReplaced > 0) then {
-            private _itemToReplace = _toBeReplaced select 0;
-            private _chance = _toBeReplaced select 1;
-            private _replacementItem = _toBeReplaced select 2;
-            if ([_chance] call EFUNC(common,rollChance)) then {
-                [player, _itemToReplace] call CBA_fnc_removeItem;
-                [player, _replacementItem, true] call CBA_fnc_addItem;
-            };
-        };
+        if (_code isNotEqualTo "") then {call compile _code};
 
         private _currentXP = player getVariable [QGVAR(xp), MACRO_PLAYER_DEFAULTS_LOW];
         player setVariable [QGVAR(xp), _currentXP + _outputXP, true];
@@ -140,7 +132,7 @@ private _currentStep = 0;
         [_handle] call CBA_fnc_removePerFrameHandler;
     };
 }, 0.5, [
-    _requiredItems, _outputItem, _outputCount, _toBeReplaced, _outputXP, _cookingMethod,
+    _requiredItems, _outputItem, _outputCount, _code, _outputXP, _cookingMethod,
     _dialog, _cookInterrupt,
     _totalSteps, _currentStep, _displayName, _progressBar, _soundSource
 ]] call CBA_fnc_addPerFrameHandler;

@@ -126,17 +126,6 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(cenestinBottle): CLASS(FakeMagazine) {
-        CLASSACE(isMedicalItem) = 1;
-        count = 15;
-        descriptionShort = CSTRING(CenestinBottle_Description);
-        displayName = CSTRING(CenestinBottle_DisplayName);
-        mass = 2;
-        model = "\a3\structures_f_epa\Items\Medical\VitaminBottle_F.p3d";
-        picture = QPATHTOF(data\icons\cenestinbottle.paa);
-        scope = 2;
-    };
-
     class CLASS(lighter): CLASS(FakeMagazine) {
         CLASSACE(disableRepacking) = 1;
         count = 100;
@@ -430,18 +419,29 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(waterJerryCan_Full): CLASS(FakeMagazine) {
+    class CLASS(waterJerryCan_Purified): CLASS(FakeMagazine) {
         CLASSACE(disableRepacking) = 1;
         count = 20;
-        descriptionShort = CSTRING(JerryCanWaterFull_Description);
-        displayName = CSTRING(JerryCanWaterFull_DisplayName);
+        descriptionShort = CSTRING(JerryCanWaterFullPure_Description);
+        displayName = CSTRING(JerryCanWaterFullPure_DisplayName);
         mass = 150;
         model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
         picture = QPATHTOF(data\icons\canisterwater.paa);
         scope = 2;
     };
 
-    class CLASS(waterJerryCan_FullDirty): CLASS(FakeMagazine) {
+    class CLASS(waterJerryCan_Clean): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
+        count = 20;
+        descriptionShort = CSTRING(JerryCanWaterFullClean_Description);
+        displayName = CSTRING(JerryCanWaterFullClean_DisplayName);
+        mass = 150;
+        model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
+        picture = QPATHTOF(data\icons\canisterwater.paa);
+        scope = 2;
+    };
+
+    class CLASS(waterJerryCan_Dirty): CLASS(FakeMagazine) {
         CLASSACE(disableRepacking) = 1;
         count = 20;
         descriptionShort = CSTRING(JerryCanWaterFullDirty_Description);

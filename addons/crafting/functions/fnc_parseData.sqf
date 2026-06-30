@@ -24,7 +24,7 @@ GVAR(craftingRecipes) = [];
     } forEach _requiredItems;
     private _craftingTime = getNumber (_x >> "craftingTime");
     private _outputCount = getNumber (_x >> "outputCount");
-    private _toBeReplaced = getArray (_x >> "toBeReplaced");
+    private _code = getText (_x >> "code");
     private _audio = getText (_x >> "audio");
     private _outputXP = getNumber (_x >> "outputXP");    // XP awarded upon completion
     private _requiredXP = getNumber (_x >> "requiredXP"); // Minimum XP required
@@ -34,7 +34,7 @@ GVAR(craftingRecipes) = [];
         _requiredItems,   // Index 1: Required items
         _craftingTime,    // Index 2: Crafting time
         _outputCount,     // Index 3: Output quantity
-        _toBeReplaced,    // Index 4: Items to replace
+        _code,            // Index 4: Code to run on completion
         _audio,           // Index 5: Crafting sound
         _outputXP,        // Index 6: XP awarded upon completion
         _requiredXP       // Index 7: Minimum XP required

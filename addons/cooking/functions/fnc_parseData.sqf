@@ -24,7 +24,7 @@ GVAR(cookingRecipes) = [];
     } forEach _requiredItems;
     private _cookingTime = getNumber (_x >> "cookingTime");
     private _outputCount = getNumber (_x >> "outputCount");
-    private _toBeReplaced = getArray (_x >> "toBeReplaced");
+    private _code = getText (_x >> "code");
     private _audio = getText (_x >> "audio");
     private _outputXP = getNumber (_x >> "outputXP");
     private _requiredXP = getNumber (_x >> "requiredXP");
@@ -35,7 +35,7 @@ GVAR(cookingRecipes) = [];
         _requiredItems,   // Index 1: Required items
         _cookingTime,     // Index 2: Cooking time
         _outputCount,     // Index 3: Output quantity
-        _toBeReplaced,    // Index 4: Items to replace
+        _code,            // Index 4: Code to run on completion
         _audio,           // Index 5: Cooking sound
         _outputXP,        // Index 6: XP awarded
         _requiredXP,      // Index 7: Minimum XP required

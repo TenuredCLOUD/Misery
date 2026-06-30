@@ -129,38 +129,6 @@
             <Chinesesimp>加合百服包装</Chinesesimp>
             <Turkish>Caffetin paketi</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Assets_CenestinBottle_Description">
-            <English>Contains Cenestin pills</English>
-            <Czech>Obsahuje tablety Cenestinu</Czech>
-            <French>Contient des pilules Cenestin</French>
-            <Spanish>Contiene píldoras Cenestin</Spanish>
-            <Italian>Contiene pillole Cenestin</Italian>
-            <Polish>Zawiera tabletki Cenestin</Polish>
-            <Portuguese>Contém comprimidos de Cenestin</Portuguese>
-            <Russian>Содержит таблетки Ценестин</Russian>
-            <German>Enthält Cenestin-Pillen</German>
-            <Korean>Cenestin 알약 함유</Korean>
-            <Japanese>Cenestin錠剤が含まれています</Japanese>
-            <Chinese>含有結合雌激素藥片</Chinese>
-            <Chinesesimp>含有结合雌激素药片</Chinesesimp>
-            <Turkish>Cenestin hapları içerir</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Assets_CenestinBottle_DisplayName">
-            <English>Cenestin bottle</English>
-            <Czech>Láhev Cenestinu</Czech>
-            <French>Flacon de Cenestin</French>
-            <Spanish>Botella de Cenestin</Spanish>
-            <Italian>Flacone di Cenestin</Italian>
-            <Polish>Butelka Cenestin</Polish>
-            <Portuguese>Frasco de Cenestin</Portuguese>
-            <Russian>Бутылка Ценестина</Russian>
-            <German>Cenestin Flasche</German>
-            <Korean>Cenestin 병</Korean>
-            <Japanese>Cenestinボトル</Japanese>
-            <Chinese>結合雌激素瓶</Chinese>
-            <Chinesesimp>结合雌激素瓶</Chinesesimp>
-            <Turkish>Cenestin şişesi</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Assets_Chainsaw_Description">
             <English>- makes wood collection easy&lt;br/&gt; - Tool</English>
             <Czech>- usnadňuje těžbu dřeva&lt;br/&gt; - Nářadí</Czech>
@@ -3178,100 +3146,132 @@
             <Turkish>Demir Parçası</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_JerryCanWaterEmpty_Description">
-            <English>An empty Jerrycan used for water collection...</English>
-            <Czech>Prázdný kanystr používaný ke sběru vody...</Czech>
-            <French>Un jerrican vide utilisé pour la collecte d'eau...</French>
-            <Spanish>Un bidón vacío usado para recolectar agua...</Spanish>
-            <Italian>Un Jerrycan vuoto utilizzato per la raccolta dell'acqua...</Italian>
-            <Polish>Pusty kanister używany do zbierania wody...</Polish>
-            <Portuguese>Um Jerrycan vazio usado para coleta de água...</Portuguese>
-            <Russian>Пустой канистра, используемый для сбора воды...</Russian>
-            <German>Ein leerer Kanister zur Wassersammlung...</German>
-            <Korean>물 수집에 사용되는 빈 제리캔...</Korean>
-            <Japanese>水を集めるために使用される空のジェリカン...</Japanese>
-            <Chinese>用於收集水的空油桶...</Chinese>
-            <Chinesesimp>用于收集水的空油桶...</Chinesesimp>
-            <Turkish>Su toplamak için kullanılan boş bir Jerrycan...</Turkish>
+            <English>An empty water canister...</English>
+            <Czech>Prázdný kanystr na vodu...</Czech>
+            <French>Un bidon d'eau vide...</French>
+            <Spanish>Un bidón de agua vacío...</Spanish>
+            <Italian>Una tanica d'acqua vuota...</Italian>
+            <Polish>Pusty kanister na wodę...</Polish>
+            <Portuguese>Um galão de água vazio...</Portuguese>
+            <Russian>Пустая канистра для воды...</Russian>
+            <German>Ein leerer Wasserkanister...</German>
+            <Korean>비어 있는 물통...</Korean>
+            <Japanese>空の水筒...</Japanese>
+            <Chinese>一個空的水罐...</Chinese>
+            <Chinesesimp>一个空的水罐...</Chinesesimp>
+            <Turkish>Boş bir su bidonu...</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_JerryCanWaterEmpty_DisplayName">
-            <English>Water (Empty)</English>
-            <Czech>Voda (Prázdný)</Czech>
-            <French>Eau (Vide)</French>
-            <Spanish>Agua (Vacío)</Spanish>
-            <Italian>Acqua (Vuoto)</Italian>
-            <Polish>Woda (Pusty)</Polish>
-            <Portuguese>Água (Vazio)</Portuguese>
-            <Russian>Вода (Пустой)</Russian>
-            <German>Wasser (Leer)</German>
-            <Korean>물 (비어 있음)</Korean>
-            <Japanese>水（空）</Japanese>
-            <Chinese>水 (空)</Chinese>
-            <Chinesesimp>水 (空)</Chinesesimp>
-            <Turkish>Su (Boş)</Turkish>
+            <English>Water Canister (Empty)</English>
+            <Czech>Kanystr na vodu (Prázdný)</Czech>
+            <French>Bidon d'eau (Vide)</French>
+            <Spanish>Bidón de agua (Vacío)</Spanish>
+            <Italian>Tanica d'acqua (Vuota)</Italian>
+            <Polish>Kanister na wodę (Pusty)</Polish>
+            <Portuguese>Galão de água (Vazio)</Portuguese>
+            <Russian>Канистра для воды (Пустая)</Russian>
+            <German>Wasserkanister (Leer)</German>
+            <Korean>물통 (비어 있음)</Korean>
+            <Japanese>水筒 (空)</Japanese>
+            <Chinese>水罐 (空)</Chinese>
+            <Chinesesimp>水罐 (空)</Chinesesimp>
+            <Turkish>Su Bidonu (Boş)</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_JerryCanWaterFullClean_Description">
+            <English>This water canister is filled with boiled water. It's free from biological contaminants, but might still contain radiation</English>
+            <Czech>Tento kanystr na vodu je naplněn převařenou vodou. Je zbaven biologických nečistot, ale může stále obsahovat radiaci</Czech>
+            <French>Ce bidon d'eau est rempli d'eau bouillie. Il est exempt de contaminants biologiques, mais peut encore contenir des radiations</French>
+            <Spanish>Este bidón de agua está lleno de agua hervida. Está libre de contaminantes biológicos, pero aún podría contener radiación</Spanish>
+            <Italian>Questa tanica d'eau è riempita con acqua bollita. È priva di contaminanti biologici, ma potrebbe contenere ancora radiazioni</Italian>
+            <Polish>Ten kanister jest napełniony przegotowaną wodą. Jest wolny od zanieczyszczeń biologicznych, ale może nadal zawierać promieniowanie</Polish>
+            <Portuguese>Este galão de água está cheio de água fervida. Está livre de contaminantes biológicos, mas ainda pode conter radiação</Portuguese>
+            <Russian>Эта канистра заполнена кипяченой водой. Она очищена от биологических загрязнений, но все еще может содержать радиацию</Russian>
+            <German>Dieser Wasserkanister ist mit abgekochtem Wasser gefüllt. Er ist frei von biologischen Verunreinigungen, kann aber noch Strahlung enthalten</German>
+            <Korean>이 물통은 끓인 물로 채워져 있습니다. 생물학적 오염 물질은 없지만, 여전히 방사능이 남아있을 수 있습니다</Korean>
+            <Japanese>この水筒には沸騰させた水が入っています。生物学的汚染物質は含まれていませんが、放射能が残っている可能性があります</Japanese>
+            <Chinese>這個水罐裝滿了煮沸的水。不含生物污染物，但可能仍含有輻射</Chinese>
+            <Chinesesimp>这个水罐装满了煮沸的水。不含生物污染物，但可能仍含有辐射</Chinesesimp>
+            <Turkish>Bu su bidonu kaynatılmış suyla doludur. Biyolojik kirleticilerden arındırılmıştır ancak hala radyasyon içerebilir</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_JerryCanWaterFullClean_DisplayName">
+            <English>Water Canister (Clean) (5Gal / 20L)</English>
+            <Czech>Kanystr na vodu (Čistá) (5 gal / 20 l)</Czech>
+            <French>Bidon d'eau (Propre) (5 Gal / 20 L)</French>
+            <Spanish>Bidón de agua (Limpia) (5 Gal / 20 L)</Spanish>
+            <Italian>Tanica d'acqua (Pulita) (5 Gal / 20 L)</Italian>
+            <Polish>Kanister na wodę (Czysta) (5 Gal / 20 L)</Polish>
+            <Portuguese>Galão de água (Limpa) (5 Gal / 20 L)</Portuguese>
+            <Russian>Канистра для воды (Чистая) (5 гал. / 20 л)</Russian>
+            <German>Wasserkanister (Sauber) (5 Gal / 20 L)</German>
+            <Korean>물통 (깨끗함) (5갈론 / 20L)</Korean>
+            <Japanese>水筒 (きれいな水) (5Gal / 20L)</Japanese>
+            <Chinese>水罐 (乾淨) (5加侖 / 20公升)</Chinese>
+            <Chinesesimp>水罐 (干净) (5加仑 / 20升)</Chinesesimp>
+            <Turkish>Su Bidonu (Temiz) (5 Gal / 20 L)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_JerryCanWaterFullDirty_Description">
-            <English>Full of dirty water</English>
-            <Czech>Plný špinavé vody</Czech>
-            <French>Plein d'eau sale</French>
-            <Spanish>Lleno de agua sucia</Spanish>
-            <Italian>Pieno d'acqua sporca</Italian>
-            <Polish>Pełna brudnej wody</Polish>
-            <Portuguese>Cheio de água suja</Portuguese>
-            <Russian>Полный грязной воды</Russian>
-            <German>Voll mit schmutzigem Wasser</German>
-            <Korean>더러운 물로 가득</Korean>
-            <Japanese>汚れた水でいっぱい</Japanese>
-            <Chinese>裝滿髒水</Chinese>
-            <Chinesesimp>装满脏水</Chinesesimp>
-            <Turkish>Kirli su dolu</Turkish>
+            <English>This water canister contains water straight from the environment, it has a foul strong odor...</English>
+            <Czech>Tento kanystr na vodu obsahuje vodu přímo z přírody, má silný odporný zápach...</Czech>
+            <French>Ce bidon d'eau contient de l'eau provenant directement de l'environnement, elle a une forte odeur nauséabonde...</French>
+            <Spanish>Este bidón de agua contiene agua extraída directamente del entorno, tiene un olor fuerte y desagradable...</Spanish>
+            <Italian>Questa tanica d'eau contiene acqua proveniente direttamente dall'ambiente, ha un forte odore sgradevole...</Italian>
+            <Polish>Ten kanister zawiera wodę prosto ze środowiska, ma silny, nieprzyjemny zapach...</Polish>
+            <Portuguese>Este galão de água contém água direto do ambiente, tem un odor forte e desagradável...</Portuguese>
+            <Russian>Эта канистра содержит воду прямиком из окружающей среды, у нее сильный неприятный запах...</Russian>
+            <German>Dieser Wasserkanister enthält Wasser direkt aus der Umwelt, es hat einen starken, üblen Geruch...</German>
+            <Korean>이 물통에는 자연에서 바로 길어온 물이 들어있으며, 지독하고 강한 악취가 납니다...</Korean>
+            <Japanese>この水筒には環境から直接採取した水が入っており、ひどい悪臭がします...</Japanese>
+            <Chinese>這個水罐裝著直接採集自自然環境的水，散發著強烈的惡臭...</Chinese>
+            <Chinesesimp>这个水罐装着直接采集自自然环境的水，散发着强烈恶臭...</Chinesesimp>
+            <Turkish>Bu su bidonu doğrudan doğadan alınan su içermektedir, çok kötü ve ağır bir kokusu var...</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_JerryCanWaterFullDirty_DisplayName">
-            <English>Water 'Dirty' (5Gal / 20L)</English>
-            <Czech>Voda 'Špinavá' (5 galonů / 20L)</Czech>
-            <French>Eau 'Sale' (5 gallons / 20L)</French>
-            <Spanish>Agua 'Sucia' (5 galones / 20L)</Spanish>
-            <Italian>Acqua 'Sporco' (5 galloni / 20L)</Italian>
-            <Polish>Woda 'Brudna' (5 galonów / 20L)</Polish>
-            <Portuguese>Água 'Suja' (5 galões / 20L)</Portuguese>
-            <Russian>Вода 'Грязная' (5 галлонов / 20 л)</Russian>
-            <German>Wasser 'Schmutzig' (5 Gallonen / 20L)</German>
-            <Korean>물 '더러운' (5갤런 / 20L)</Korean>
-            <Japanese>水「汚れた」（5ガロン/ 20L）</Japanese>
-            <Chinese>髒水 (5加侖 / 20升)</Chinese>
-            <Chinesesimp>脏水 (5加仑 / 20升)</Chinesesimp>
-            <Turkish>Su 'Kirli' (5 Galon / 20L)</Turkish>
+            <English>Water Canister (Dirty) (5Gal / 20L)</English>
+            <Czech>Kanystr na vodu (Znečištěná) (5 gal / 20 l)</Czech>
+            <French>Bidon d'eau (Sale) (5 Gal / 20 L)</French>
+            <Spanish>Bidón de agua (Sucia) (5 Gal / 20 L)</Spanish>
+            <Italian>Tanica d'acqua (Sulla) (5 Gal / 20 L)</Italian>
+            <Polish>Kanister na wodę (Brudna) (5 Gal / 20 L)</Polish>
+            <Portuguese>Galão de água (Suja) (5 Gal / 20 L)</Portuguese>
+            <Russian>Канистра для воды (Грязная) (5 гал. / 20 л)</Russian>
+            <German>Wasserkanister (Schmutzig) (5 Gal / 20 L)</German>
+            <Korean>물통 (오염됨) (5갈론 / 20L)</Korean>
+            <Japanese>水筒 (汚水) (5Gal / 20L)</Japanese>
+            <Chinese>水罐 (髒污) (5加侖 / 20公升)</Chinese>
+            <Chinesesimp>水罐 (脏污) (5加仑 / 20升)</Chinesesimp>
+            <Turkish>Su Bidonu (Kirli) (5 Gal / 20 L)</Turkish>
         </Key>
-        <Key ID="STR_Misery_Assets_JerryCanWaterFull_Description">
-            <English>Full of water</English>
-            <Czech>Plný vody</Czech>
-            <French>Plein d'eau</French>
-            <Spanish>Lleno de agua</Spanish>
-            <Italian>Pieno d'acqua</Italian>
-            <Polish>Pełna wody</Polish>
-            <Portuguese>Cheio de água</Portuguese>
-            <Russian>Полный воды</Russian>
-            <German>Voll mit Wasser</German>
-            <Korean>물이 가득</Korean>
-            <Japanese>水がいっぱい</Japanese>
-            <Chinese>裝滿水</Chinese>
-            <Chinesesimp>装满水</Chinesesimp>
-            <Turkish>Su dolu</Turkish>
+        <Key ID="STR_Misery_Assets_JerryCanWaterFullPure_Description">
+            <English>This water canister holds water that's been treated with purification tablets, removing all traces of radiation and biological contaminants</English>
+            <Czech>Tento kanystr na vodu obsahuje vodu, která byla ošetřena tabletami na čištění vody, což odstranilo veškeré stopy radiace a biologických nečistot</Czech>
+            <French>Ce bidon d'eau contient de l'eau traitée avec des pastilles de purification, éliminant toute trace de radiation et de contaminants biologiques</French>
+            <Spanish>Este bidón de agua contiene agua tratada con pastillas de purificación, eliminando todo rastro de radiación y contaminantes biológicos</Spanish>
+            <Italian>Questa tanica d'acqua contiene acqua trattata con pastiglie purificanti, che rimuovono ogni traccia di radiazioni e contaminanti biologici</Italian>
+            <Polish>Ten kanister zawiera wodę uzdatnioną tabletkami oczyszczającymi, co usunęło wszelkie ślady promieniowania i zanieczyszczeń biologicznych</Polish>
+            <Portuguese>Este galão de água contém água tratada com pastilhas de purificação, removendo todos os vestígios de radiação e contaminantes biológicos</Portuguese>
+            <Russian>Эта канистра содержит воду, обработанную таблетками для очистки, что удалило все следы радиации и biological загрязнений</Russian>
+            <German>Dieser Wasserkanister enthält Wasser, das mit Reinigungstabletten behandelt wurde, wodurch alle Spuren von Strahlung und biologischen Verunreinigungen entfernt wurden</German>
+            <Korean>이 물통에는 정수 알약으로 처리된 물이 들어있어, 모든 방사능과 생물학적 오염 물질 흔적이 제거되었습니다</Korean>
+            <Japanese>この水筒には浄水タブレットで処理された水が入っており、放射能や生物学的汚染物質の形跡がすべて取り除かれています</Japanese>
+            <Chinese>這個水罐裝著經過淨水片處理的水，去除了所有輻射和生物污染物的痕跡</Chinese>
+            <Chinesesimp>这个水罐装着经过净水片处理的水， Express了所有辐射和生物污染物的痕迹</Chinesesimp>
+            <Turkish>Bu su bidonu, arındırma tabletleri ile işlenmiş, tüm radyasyon ve biyolojik kirletici izlerinden arındırılmış su içermektedir</Turkish>
         </Key>
-        <Key ID="STR_Misery_Assets_JerryCanWaterFull_DisplayName">
-            <English>Water (5Gal / 20L)</English>
-            <Czech>Voda (5 galonů / 20L)</Czech>
-            <French>Eau (5 gallons / 20L)</French>
-            <Spanish>Agua (5 galones / 20L)</Spanish>
-            <Italian>Acqua (5 galloni / 20L)</Italian>
-            <Polish>Woda (5 galonów / 20L)</Polish>
-            <Portuguese>Água (5 galões / 20L)</Portuguese>
-            <Russian>Вода (5 галлонов / 20 л)</Russian>
-            <German>Wasser (5 Gallonen / 20L)</German>
-            <Korean>물 (5갤런 / 20L)</Korean>
-            <Japanese>水（5ガロン/ 20L）</Japanese>
-            <Chinese>水 (5加侖 / 20升)</Chinese>
-            <Chinesesimp>水 (5加仑 / 20升)</Chinesesimp>
-            <Turkish>Su (5 Galon / 20L)</Turkish>
+        <Key ID="STR_Misery_Assets_JerryCanWaterFullPure_DisplayName">
+            <English>Water Canister (Purified) (5Gal / 20L)</English>
+            <Czech>Kanystr na vodu (Purifikovaná) (5 gal / 20 l)</Czech>
+            <French>Bidon d'eau (Purifiée) (5 Gal / 20 L)</French>
+            <Spanish>Bidón de agua (Purificada) (5 Gal / 20 L)</Spanish>
+            <Italian>Tanica d'acqua (Purificata) (5 Gal / 20 L)</Italian>
+            <Polish>Kanister na wodę (Oczyszczona) (5 Gal / 20 L)</Polish>
+            <Portuguese>Galão de água (Purificada) (5 Gal / 20 L)</Portuguese>
+            <Russian>Канистра для воды (Очищенная) (5 гал. / 20 л)</Russian>
+            <German>Wasserkanister (Gereinigt) (5 Gal / 20 L)</German>
+            <Korean>물통 (정수됨) (5갈론 / 20L)</Korean>
+            <Japanese>水筒 (浄化水) (5Gal / 20L)</Japanese>
+            <Chinese>水罐 (已過濾) (5加侖 / 20公升)</Chinese>
+            <Chinesesimp>水罐 (已过滤) (5加仑 / 20升)</Chinesesimp>
+            <Turkish>Su Bidonu (Arıtılmış) (5 Gal / 20 L)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_JetFuelEmpty_Description">
             <English>An empty Jerrycan used for fuel collection...&lt;br/&gt; - Fuel item &lt;br/&gt; - Empty</English>
@@ -4072,38 +4072,6 @@
             <Chinese>大米</Chinese>
             <Chinesesimp>大米</Chinesesimp>
             <Turkish>Pirinç</Turkish>
-        </Key>
-        <Key ID="STR_Misery_Assets_Rope_Description">
-            <English>small bit of rope &lt;br/&gt; - Crafting item</English>
-            <Czech>kousek lana &lt;br/&gt; - Předmět pro výrobu</Czech>
-            <French>petit morceau de corde &lt;br/&gt; - Objet d'artisanat</French>
-            <Spanish>pequeño trozo de cuerda &lt;br/&gt; - Objeto de artesanía</Spanish>
-            <Italian>piccolo pezzo di corda &lt;br/&gt; - Oggetto per il crafting</Italian>
-            <Polish>mały kawałek liny &lt;br/&gt; - Przedmiot do tworzenia</Polish>
-            <Portuguese>pequeno pedaço de corda &lt;br/&gt; - Item de criação</Portuguese>
-            <Russian>небольшой кусок верёвки &lt;br/&gt; - Предмет для крафта</Russian>
-            <German>kleines Stück Seil &lt;br/&gt; - Handwerksgegenstand</German>
-            <Korean>작은 밧줄 조각 &lt;br/&gt; - 제작 아이템</Korean>
-            <Japanese>少しのロー &lt;br/&gt; - クラフトアイテム</Japanese>
-            <Chinese>一小段繩子&lt;br/&gt; - 製作物品</Chinese>
-            <Chinesesimp>一小段绳子&lt;br/&gt; - 制作物品</Chinesesimp>
-            <Turkish>küçük bir parça ip &lt;br/&gt; - El işi öğesi</Turkish>
-        </Key>
-        <Key ID="STR_Misery_Assets_Rope_DisplayName">
-            <English>Rope</English>
-            <Czech>Lano</Czech>
-            <French>Corde</French>
-            <Spanish>Cuerda</Spanish>
-            <Italian>Corda</Italian>
-            <Polish>Lina</Polish>
-            <Portuguese>Corda</Portuguese>
-            <Russian>Верёвка</Russian>
-            <German>Seil</German>
-            <Korean>밧줄</Korean>
-            <Japanese>ロープ</Japanese>
-            <Chinese>繩子</Chinese>
-            <Chinesesimp>绳子</Chinesesimp>
-            <Turkish>İp</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_RotorRepairKit_Description">
             <English>rotor repair kit used for aircraft repairs</English>

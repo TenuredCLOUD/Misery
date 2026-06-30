@@ -129,6 +129,22 @@
             <Chinesesimp>您没有那个容器...</Chinesesimp>
             <Turkish>Bu kaba sahip değilsiniz...</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Hydrology_NoContainersNeedPurification">
+            <English>You don't have any containers that need chemical purification...</English>
+            <Czech>Nemáte žádné nádoby, které by vyžadovaly chemické čištění...</Czech>
+            <French>Vous n'avez aucun récipient nécessitant une purification chimique...</French>
+            <Spanish>No tienes ningún recipiente que requiera purificación química...</Spanish>
+            <Italian>Non hai contenitori que richiedano una purificazione chimica...</Italian>
+            <Polish>Nie masz żadnych pojemników, které wymagają chemicznego oczyszczania...</Polish>
+            <Portuguese>Você não tem nenhum recipiente que precise de purificação química...</Portuguese>
+            <Russian>У вас нет контейнеров, требующих химической очистки...</Russian>
+            <German>Du hast keine Behälter, die eine chemische Reinigung erfordern...</German>
+            <Korean>화학적 정수가 필요한 용기가 없습니다...</Korean>
+            <Japanese>化学的浄化が必要な容器がありません...</Japanese>
+            <Chinese>你沒有任何需要化學過濾的容器...</Chinese>
+            <Chinesesimp>你没有任何需要化学过滤的容器...</Chinesesimp>
+            <Turkish>Kimyasal arındırma gerektiren herhangi bir kabınız yok...</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Hydrology_NoMatchingContainer">
             <English>No matching container found.</English>
             <Czech>Nenalezen žádný odpovídající kontejner.</Czech>
@@ -145,6 +161,38 @@
             <Chinesesimp>找不到匹配的容器。</Chinesesimp>
             <Turkish>Eşleşen kap bulunamadı.</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Hydrology_NoPurificationTablets">
+            <English>You don't have any purification tablets...</English>
+            <Czech>Nemáte žádné tablety na čištění vody...</Czech>
+            <French>Vous n'avez pas de pastilles de purification...</French>
+            <Spanish>No tienes pastillas de purificación...</Spanish>
+            <Italian>Non hai pastiglie purificanti...</Italian>
+            <Polish>Nie masz żadnych tabletek oczyszczających...</Polish>
+            <Portuguese>Você não tem nenhuma pastilha de purificação...</Portuguese>
+            <Russian>У вас нет таблеток для очистки воды...</Russian>
+            <German>Du hast keine Reinigungstabletten...</German>
+            <Korean>정수 알약이 없습니다...</Korean>
+            <Japanese>浄水タブレットを持っていません...</Japanese>
+            <Chinese>你沒有任何淨水片...</Chinese>
+            <Chinesesimp>你没有任何净水片...</Chinesesimp>
+            <Turkish>Hiç arındırma tabletiniz yok...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Hydrology_NotEnoughTablets">
+            <English>You need %1 tablets to purify %2, but you only have %3...</English>
+            <Czech>K vyčištění %2 potřebujete %1 tablet, ale máte pouze %3...</Czech>
+            <French>Vous avez besoin de %1 pastilles pour purifier %2, mais vous n'en avez que %3...</French>
+            <Spanish>Necesitas %1 pastillas para purificar %2, pero solo tienes %3...</Spanish>
+            <Italian>Hai bisogno di %1 pastiglie per purificare %2, ma ne hai solo %3...</Italian>
+            <Polish>Potrzebujesz %1 tabletek, aby oczyścić %2, ale masz tylko %3...</Polish>
+            <Portuguese>Você precisa de %1 pastilhas para purificar %2, mas só tem %3...</Portuguese>
+            <Russian>Вам нужно %1 табл. для очистки %2, но у вас есть только %3...</Russian>
+            <German>Du benötigst %1 Tabletten, um %2 zu reinigen, aber du hast nur %3...</German>
+            <Korean>%2을(를) 정수하려면 알약 %1개가 필요하지만, %3개만 가지고 있습니다...</Korean>
+            <Japanese>%2の浄化にはタブレットが%1個必要ですが、%3個しか持っていません...</Japanese>
+            <Chinese>你需要 %1 片淨水片來過濾 %2，但你只有 %3 片...</Chinese>
+            <Chinesesimp>你需要 %1 片净水片来过滤 %2，但你只有 %3 片...</Chinesesimp>
+            <Turkish>%2 nesnesini arındırmak için %1 tablete ihtiyacınız var, ancak sizde sadece %3 tane var...</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Hydrology_Prompt">
             <English>What container would you like to fill?</English>
             <Czech>Který kontejner chcete naplnit?</Czech>
@@ -160,6 +208,38 @@
             <Chinese>您想填充哪個容器？</Chinese>
             <Chinesesimp>您想填充哪个容器？</Chinesesimp>
             <Turkish>Hangi kabı doldurmak istersiniz?</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Hydrology_TabletsUsedCount">
+            <English>%1 purified, used %2 tablet(s)...</English>
+            <Czech>%1 vyčištěno, použito %2 tablet...</Czech>
+            <French>%1 purifié, %2 pastille(s) utilisée(s)...</French>
+            <Spanish>%1 purificado, se usó %2 pastilla(s)...</Spanish>
+            <Italian>%1 purificato, usato %2 pastiglia/e...</Italian>
+            <Polish>Oczyszczono %1, zużyto %2 tabletek...</Polish>
+            <Portuguese>%1 purificado, usado(s) %2 pastilha(s)...</Portuguese>
+            <Russian>%1 очищено, использовано табл.: %2...</Russian>
+            <German>%1 gereinigt, %2 Tablette(n) verwendet...</German>
+            <Korean>%1 정수 완료, 알약 %2개 사용됨...</Korean>
+            <Japanese>%1を浄化しました、タブレットを%2個使用...</Japanese>
+            <Chinese>%1 已過濾，使用了 %2 片淨水片...</Chinese>
+            <Chinesesimp>%1 已过滤，使用了 %2 片净水片...</Chinesesimp>
+            <Turkish>%1 arındırıldı, %2 tablet kullanıldı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Hydrology_UsedAllTablets">
+            <English>You used a whole pack of tablets to purify %1...</English>
+            <Czech>K vyčištění %1 jste použili celé balení tablet...</Czech>
+            <French>Vous avez utilisé une boîte entière de pastilles pour purifier %1...</French>
+            <Spanish>Usaste un paquete entero de pastillas para purificar %1...</Spanish>
+            <Italian>Hai usato un intero pacchetto di pastiglie per purificare %1...</Italian>
+            <Polish>Zużyłeś całe opakowanie tabletek, aby oczyścić %1...</Polish>
+            <Portuguese>Você usou um pacote inteiro de pastilhas para purificar %1...</Portuguese>
+            <Russian>Вы использовали целую упаковку таблеток для очистки %1...</Russian>
+            <German>Du hast eine ganze Packung Tabletten verwendet, um %1 zu reinigen...</German>
+            <Korean>%1을(를) 정수하기 위해 알약 한 팩을 모두 사용했습니다...</Korean>
+            <Japanese>%1の浄化にタブレットを1パック丸ごと使用しました...</Japanese>
+            <Chinese>你使用了整包淨水片來過濾 %1...</Chinese>
+            <Chinesesimp>你使用了整包净水片来过滤 %1...</Chinesesimp>
+            <Turkish>%1 nesnesini arındırmak için bütün bir paket tablet kullandınız...</Turkish>
         </Key>
     </Package>
 </Project>
