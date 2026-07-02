@@ -37,12 +37,14 @@
                 QPATHTOEF(icons,data\scan_search_ca.paa),
                 {
                     params ["", "", "_params"];
-                    _params params ["_realObject", "_objectData"];
-                    [_realObject, _objectData] call FUNC(searchObject);
+                    _params params ["_realObject", "_objectData", "_hitPos"];
+                    [_realObject, _objectData, _hitPos] call FUNC(searchObject);
                 },
                 {true},
                 {},
-                [_object, _objectData]
+                [_object, _objectData, _hitPos],
+                [0, 0, 0],
+                3
             ] call ACEFUNC(interact_menu,createAction);
 
             [GVAR(activeLogic), 0, [], _action] call ACEFUNC(interact_menu,addActionToObject);
