@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-["CBA_settingsInitialized", {
+["CBA_loadingScreenDone", {
     if (isServer) then {
         call FUNC(inArea);
         [QGVAR(artifactSpawnEvent), FUNC(spawn)] call CBA_fnc_addEventHandler;

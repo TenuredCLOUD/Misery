@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-["CBA_settingsInitialized", {
+["CBA_loadingScreenDone", {
     if (isServer) then {
         call FUNC(inArea);
     };

@@ -8,7 +8,7 @@ GVAR(markerSizeX) = GVAR(minimumDistance) + GVAR(safeDistance);
 GVAR(markerSizeY) = GVAR(maximumDistance) + GVAR(safeDistance);
 GVAR(registeredEntities) = [];
 
-["CBA_settingsInitialized", {
+["CBA_loadingScreenDone", {
     call FUNC(convertToArray);
     call FUNC(loop);
     call FUNC(patrol);
