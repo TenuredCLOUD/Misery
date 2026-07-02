@@ -6,7 +6,7 @@ if (!GVAR(enabled)) exitWith {};
 GVAR(dropZones) = [];
 GVAR(activeDrops) = [];
 
-["CBA_settingsInitialized", {
+["CBA_loadingScreenDone", {
     [] call FUNC(convertToArray);
     [] call FUNC(loop);
     [] call FUNC(cleanCheck);
