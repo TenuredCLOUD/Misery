@@ -61,6 +61,6 @@ if (!hasInterface) exitWith {};
 
 GVAR(blockSave) = false;
 
-["CBA_settingsInitialized", {
+["CBA_loadingScreenDone", {
     [] call FUNC(init);
 }] call CBA_fnc_addEventHandler;

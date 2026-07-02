@@ -10,7 +10,7 @@ GVAR(modifiers) = 0;
 GVAR(sleepBlocked) = false;
 GVAR(terrifiedState) = false;
 
-["CBA_settingsInitialized", {
+["CBA_loadingScreenDone", {
     if (hasInterface) then {
         [] call FUNC(loop);
 
