@@ -49,7 +49,7 @@ _soundDummy say3D [QCLASS(audio_sound_gatheringFirewood), 25];
         deleteVehicle _soundDummy;
     };
 
-    [getPosATL player, [[QCLASS(woodensticks), selectRandom [1, 2, 3, 4, 5]]]] call EFUNC(common,spawnLoot);
+    [getPosATL player, [[]], [[]], [[QCLASS(woodensticks), selectRandom [1, 2, 3, 4, 5]]]] call EFUNC(common,spawnLoot);
 
     private _position = getPosWorld player;
 
