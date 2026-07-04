@@ -4,7 +4,7 @@
  * Caches searched object position to array
  *
  * Arguments:
- * 0: Object <OBJECT>
+ * 0: Position <ARRAY>
  *
  * Return Value:
  * None
@@ -14,16 +14,14 @@
  *
 */
 
-params ["_object"];
+params ["_position"];
 
-private _position = getPosWorld _object;
-
-// Check if position is already cached (within 0.4 meters)
-if (GVAR(searchedPositions) findIf {_x distance _position < 0.4} isEqualTo -1) then {
+// Check if position is already cached (within 0.5 meters)
+if (GVAR(searchedPositions) findIf {_x vectorDistance _position < 0.5} isEqualTo -1) then {
 
     GVAR(searchedPositions) pushBack _position;
 
     publicVariable QGVAR(searchedPositions);
 
-    [QUOTE(COMPONENT_BEAUTIFIED), format ["Cached searched position %1 for object %2", _position, _object]] call EFUNC(common,debugMessage);
+    [QUOTE(COMPONENT_BEAUTIFIED), format ["Cached searched position %1", _position]] call EFUNC(common,debugMessage);
 };

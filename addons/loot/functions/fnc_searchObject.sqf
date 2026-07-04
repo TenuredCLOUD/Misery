@@ -6,6 +6,7 @@
  * Arguments:
  * 0: Object <OBJECT>
  * 1: Object data <ARRAY>
+ * 2: Hit Position <ARRAY>
  *
  * Return Value:
  * None
@@ -15,7 +16,7 @@
  *
 */
 
-params ["_object", "_objectData"];
+params ["_object", "_objectData", "_hitPos"];
 
 if (isNull _object) exitWith {};
 
@@ -28,8 +29,7 @@ private _magazines = _objectData select 6;
 private _items = _objectData select 7;
 private _backpacks = _objectData select 8;
 
-private _pos = getPosWorld _object;
-if (GVAR(searchedPositions) findIf {_x distance _pos < 0.4} isNotEqualTo -1) exitWith {
+if (GVAR(searchedPositions) findIf {_x vectorDistance _hitPos < 0.5} isNotEqualTo -1) exitWith {
     [QEGVAR(common,tileText), localize LSTRING(AlreadySearched)] call CBA_fnc_localEvent;
 };
 
@@ -64,18 +64,18 @@ if (_audio isNotEqualTo "") then {
     {true},
     {
         params ["_args"];
-        _args params ["_object", "_objectData", "_soundDummy"];
+        _args params ["_object", "_objectData", "_hitPos", "_soundDummy"];
         private _searchChance = _objectData select 2;
         private _weapons = _objectData select 5;
         private _magazines = _objectData select 6;
         private _items = _objectData select 7;
         private _backpacks = _objectData select 8;
 
+        [_hitPos] call FUNC(cacheSearched);
+
         if (_soundDummy isNotEqualTo objNull) then {
             deleteVehicle _soundDummy;
         };
-
-        [_object] call FUNC(cacheSearched);
 
         if ([_searchChance] call EFUNC(common,rollChance)) exitWith {
             [QEGVAR(common,tileText), localize LSTRING(NothingFound)] call CBA_fnc_localEvent;
@@ -123,7 +123,7 @@ if (_audio isNotEqualTo "") then {
     },
     {
         params ["_args"];
-        _args params ["_object", "_objectData", "_soundDummy"];
+        _args params ["_object", "_objectData", "_hitPos", "_soundDummy"];
         private _searchChance = _objectData select 2;
         private _weapons = _objectData select 5;
         private _magazines = _objectData select 6;
@@ -136,5 +136,5 @@ if (_audio isNotEqualTo "") then {
             deleteVehicle _soundDummy;
         };
     },
-    [_object, _objectData, _soundDummy]
+    [_object, _objectData, _hitPos, _soundDummy]
 ] call CBA_fnc_progressBar;
