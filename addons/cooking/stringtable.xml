@@ -34,20 +34,20 @@
             <Turkish>Ne pişirmek istersiniz?</Turkish>
         </Key>
         <Key ID="STR_MISERY_Cooking_GainXP">
-            <English>You gained %1 XP from %2ing %3.</English>
-            <Czech>Získali jste %1 zkušeností za %2í %3.</Czech>
-            <French>Vous avez gagné %1 XP en %2ant %3.</French>
-            <Spanish>Has ganado %1 XP al %2ar %3.</Spanish>
-            <Italian>Hai guadagnato %1 XP %1ando %3.</Italian>
-            <Polish>Zyskałeś %1 PD za %2 %3.</Polish>
-            <Portuguese>Ganhaste %1 XP ao %2ar %3.</Portuguese>
-            <Russian>Вы получили %1 опыта за %2 %3.</Russian>
-            <German>Du hast %1 EP durch das %2 von %3 erhalten.</German>
-            <Korean>%3을(를) %2하여 %1 XP를 획득했습니다.</Korean>
-            <Japanese>%3の%2により %1 XPを獲得しました。</Japanese>
-            <Chinese>你通過 %2 %3 獲得了 %1 經驗值。</Chinese>
-            <Chinesesimp>你通过 %2 %3 获得了 %1 经验值。</Chinesesimp>
-            <Turkish>%3 %2erek %1 TP kazandınız.</Turkish>
+            <English>You gained %1 XP from %2 %3</English>
+            <Czech>Získal jsi %1 XP za %2 %3</Czech>
+            <French>Vous avez gagné %1 XP grâce à %2 %3</French>
+            <Spanish>Has ganado %1 XP por %2 %3</Spanish>
+            <Italian>Hai guadagnato %1 XP da %2 %3</Italian>
+            <Polish>Otrzymujesz %1 XP za %2 %3</Polish>
+            <Portuguese>Você ganhou %1 XP por %2 %3</Portuguese>
+            <Russian>Вы получили %1 XP за %2 %3</Russian>
+            <German>Du hast %1 XP für %2 %3 erhalten</German>
+            <Korean>%2 %3(으)로 인해 %1 XP를 획득했습니다</Korean>
+            <Japanese>%2 %3により %1 XP を獲得しました</Japanese>
+            <Chinese>你透過 %2 %3 獲得了 %1 經驗值</Chinese>
+            <Chinesesimp>你通过 %2 %3 获得了 %1 经验值</Chinesesimp>
+            <Turkish>%2 %3 işleminden %1 XP kazandınız</Turkish>
         </Key>
         <Key ID="STR_MISERY_Cooking_Interrupted">
             <English>Cooking interrupted...</English>
@@ -82,52 +82,36 @@
             <Turkish>Bunu yapmak için %1 yemek pişirme TP'sine ihtiyacınız var (%2 TP'niz var).</Turkish>
         </Key>
         <Key ID="STR_MISERY_Cooking_Progress">
-            <English>%1ing %2... %3%4 complete</English>
-            <Czech>%1ím %2... %3%4 hotovo</Czech>
-            <French>%1 de %2... %3%4 terminé</French>
-            <Spanish>%1ando %2... %3%4 completado</Spanish>
-            <Italian>%1ando %2... %3%4 completato</Italian>
-            <Polish>%1 %2... ukończono %3%4</Polish>
-            <Portuguese>%1ando %2... %3%4 concluído</Portuguese>
-            <Russian>%1 %2... %3%4 завершено</Russian>
-            <German>%1e %2... %3%4 abgeschlossen</German>
-            <Korean>%2 %1 중... %3%4 완료</Korean>
-            <Japanese>%2を%1中... %3%4 完了</Japanese>
-            <Chinese>正在 %1 %2... %3%4 已完成</Chinese>
-            <Chinesesimp>正在 %1 %2... %3%4 已完成</Chinesesimp>
-            <Turkish>%2 %1iliyor... %%%3 tamamlandı</Turkish>
+            <English>%1 %2... %3%4 complete</English>
+            <Czech>%1 %2... z %3%4 dokončeno</Czech>
+            <French>%1 %2... %3%4 terminé</French>
+            <Spanish>%1 %2... %3%4 completado</Spanish>
+            <Italian>%1 %2... %3%4 completato</Italian>
+            <Polish>%1 %2... ukończono w %3%4</Polish>
+            <Portuguese>%1 %2... %3%4 concluído</Portuguese>
+            <Russian>%1 %2... завершено: %3%4</Russian>
+            <German>%1 %2... %3%4 abgeschlossen</German>
+            <Korean>%1 %2... %3%4 완료됨</Korean>
+            <Japanese>%1 %2... %3%4 完了</Japanese>
+            <Chinese>%1 %2... 已完成 %3%4</Chinese>
+            <Chinesesimp>%1 %2... 已完成 %3%4</Chinesesimp>
+            <Turkish>%1 %2... %%3%4 tamamlandı</Turkish>
         </Key>
         <Key ID="STR_MISERY_Cooking_Required">
-            <English>Required Items for %1ing:</English>
-            <Czech>Požadované položky pro %2í:</Czech>
+            <English>Required Items for %1:</English>
+            <Czech>Požadované předměty pro %1:</Czech>
             <French>Objets requis pour %1 :</French>
-            <Spanish>Objetos requeridos para %1ar:</Spanish>
-            <Italian>Oggetti necessari per %1are:</Italian>
-            <Polish>Wymagane przedmioty do %1:</Polish>
-            <Portuguese>Itens necessários para %1ar:</Portuguese>
+            <Spanish>Objetos requeridos para %1:</Spanish>
+            <Italian>Oggetti richiesti per %1:</Italian>
+            <Polish>Wymagane przedmioty dla %1:</Polish>
+            <Portuguese>Itens necessários para %1:</Portuguese>
             <Russian>Необходимые предметы для %1:</Russian>
-            <German>Benötigte Gegenstände zum %1en:</German>
+            <German>Benötigte Gegenstände für %1:</German>
             <Korean>%1에 필요한 아이템:</Korean>
-            <Japanese>%1に必要なアイテム:</Japanese>
-            <Chinese>%1 所需物品:</Chinese>
-            <Chinesesimp>%1 所需物品:</Chinesesimp>
-            <Turkish>%1 için gerekli öğeler:</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Cooking_Success">
-            <English>You %1ed %2 %3!</English>
-            <Czech>U%1il jste %2 %3!</Czech>
-            <French>Vous avez %1é %2 %3!</French>
-            <Spanish>¡Has %1ado %2 %3!</Spanish>
-            <Italian>Hai %1ato %2 %3!</Italian>
-            <Polish>%1łeś %2 %3!</Polish>
-            <Portuguese>Tu %1aste %2 %3!</Portuguese>
-            <Russian>Вы %1 %2 %3!</Russian>
-            <German>Du hast %2 %3 ge%1t!</German>
-            <Korean>%2개의 %3을(를) %1했습니다!</Korean>
-            <Japanese>%2個の%3を%1しました！</Japanese>
-            <Chinese>你 %1 了 %2 個 %3！</Chinese>
-            <Chinesesimp>你 %1 了 %2 个 %3！</Chinesesimp>
-            <Turkish>%2 adet %3 %1diniz!</Turkish>
+            <Japanese>%1 に必要なアイテム:</Japanese>
+            <Chinese>製造 %1 所需物品：</Chinese>
+            <Chinesesimp>制造 %1 所需物品：</Chinesesimp>
+            <Turkish>%1 için Gerekli Öğeler:</Turkish>
         </Key>
     </Package>
 </Project>

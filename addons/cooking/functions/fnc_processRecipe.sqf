@@ -115,9 +115,8 @@ private _currentStep = 0;
 
         private _currentXP = player getVariable [QGVAR(xp), MACRO_PLAYER_DEFAULTS_LOW];
         player setVariable [QGVAR(xp), _currentXP + _outputXP, true];
-        [QEGVAR(common,tileText), format [localize LSTRING(GainXP), _outputXP, toLower _cookingMethod, _displayName]] call CBA_fnc_localEvent;
+        ctrlSetText [1001, format [localize LSTRING(GainXP), _outputXP, toLower _cookingMethod, _displayName]];
 
-        ctrlSetText [1001, format [localize LSTRING(Success), toLower _cookingMethod, _outputCount, _displayName]];
         player setVariable [QGVAR(isCooking), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _cookInterrupt];
         [982379, [1600, 1601, 1602], true] call EFUNC(common,displayShowControls);
