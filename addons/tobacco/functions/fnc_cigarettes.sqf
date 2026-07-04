@@ -14,31 +14,43 @@
  *
 */
 
-private _hasMatch = [[QCLASS(matches)]] call EFUNC(common,hasItem);
-private _hasLighter = [[QCLASS(lighter)]] call EFUNC(common,hasItem);
+[player] call ACEFUNC(weaponselect,putWeaponAway);
 
-if !(_hasMatch && _hasLighter) exitWith {
+if !([[QCLASS(matchBox), QCLASS(lighter)]] call EFUNC(common,hasItem)) exitWith {
     [QEGVAR(common,tileText), localize LSTRING(NoFireSource)] call CBA_fnc_localEvent;
 };
 
-[QEGVAR(common,tileText), localize LSTRING(LightCigarette)] call CBA_fnc_localEvent;
+[{animationState player isEqualTo "amovpercmstpsnonwnondnon"}, {
 
-[QCLASS(cigarettePack)] call EFUNC(common,itemDecrement);
+    [QEGVAR(common,tileText), localize LSTRING(LightCigarette)] call CBA_fnc_localEvent;
 
-if ([QCLASSACE(medical)] call EFUNC(common,isModLoaded)) then {
-    [player, QCLASS(cigarettePack), 10, 300, -1, -1, -1, 1] call ACEFUNC(medical_status,addMedicationAdjustment);
-};
+    [QCLASS(cigarettePack)] call EFUNC(common,itemDecrement);
 
-if (EGVAR(psychosis,enabled)) then {
-    [-0.1, "psychosis"] call EFUNC(common,addStatusModifier);
-};
+    if (EGVAR(psychosis,enabled)) then {
+        [-0.1, "psychosis"] call EFUNC(common,addStatusModifier);
+    };
 
-if (_hasMatch) exitWith {
-    [QCLASS(matches)] call EFUNC(common,itemDecrement);
-    playSound3D [QPATHTOEF(audio,sounds\immersion\Matchsmoking.ogg), player, false, getPosASL player, 4, 1, 10];
-};
+    player playGesture QEGVAR(animations,cigarreteIn);
 
-if (_hasLighter) exitWith {
-    [QCLASS(lighter)] call EFUNC(common,itemDecrement);
-    playSound3D [QPATHTOEF(audio,sounds\immersion\Lightersmoking.ogg), player, false, getPosASL player, 4, 1, 10];
-};
+    if ([[QCLASS(matchBox)]] call EFUNC(common,hasItem)) exitWith {
+        [QCLASS(matchBox)] call EFUNC(common,itemDecrement);
+        playSound QCLASS(audio_sound_matchSmoking);
+        [{
+            player playGesture QEGVAR(animations,cigarreteLoop);
+        }, [], 2] call CBA_fnc_waitAndExecute;
+        [{
+            player playGesture QEGVAR(animations,cigarreteOut);
+        }, [], 15] call CBA_fnc_waitAndExecute;
+    };
+
+    if ([[QCLASS(lighter)]] call EFUNC(common,hasItem)) exitWith {
+        [QCLASS(lighter)] call EFUNC(common,itemDecrement);
+        playSound QCLASS(audio_sound_lighterSmoking);
+        [{
+            player playGesture QEGVAR(animations,cigarreteLoop);
+        }, [], 2] call CBA_fnc_waitAndExecute;
+        [{
+            player playGesture QEGVAR(animations,cigarreteOut);
+        }, [], 15] call CBA_fnc_waitAndExecute;
+    };
+}, [], 10] call CBA_fnc_waitUntilAndExecute;
