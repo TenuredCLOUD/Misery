@@ -26,6 +26,9 @@ _heli flyInHeight 100;
     localize LSTRING(Dropping)
 ]] call CBA_fnc_globalEvent;
 
+private _radioSound = selectRandom ["RadioAmbient2", "RadioAmbient8"];
+[QEGVAR(common,radioBroadcastAudio), [_radioSound]] call CBA_fnc_globalEvent;
+
 [{
     params ["_heliGroup", "_heli", "_crate"];
 
@@ -55,6 +58,9 @@ _heli flyInHeight 100;
     groupId _heliGroup,
     localize LSTRING(Delivered)
     ]] call CBA_fnc_globalEvent;
+
+    private _radioSound = selectRandom ["RadioAmbient2", "RadioAmbient8"];
+    [QEGVAR(common,radioBroadcastAudio), [_radioSound]] call CBA_fnc_globalEvent;
 
     [{
         params ["_args", "_handle"];

@@ -47,6 +47,10 @@ _heliGroup move _dropZone;
     format [localize LSTRING(EnRoute), _dropZone]
 ]] call CBA_fnc_globalEvent;
 
+private _radioSound = selectRandom ["RadioAmbient2", "RadioAmbient8"];
+
+[QEGVAR(common,radioBroadcastAudio), [_radioSound]] call CBA_fnc_globalEvent;
+
 // Blacklist all objects from saving
 _heli setVariable [QGRADGVAR(persistence,isExcluded), true];
 _crate setVariable [QGRADGVAR(persistence,isExcluded), true];
