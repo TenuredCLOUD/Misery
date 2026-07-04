@@ -82,20 +82,20 @@
             <Turkish>Bunu yapmak için %1 yemek pişirme TP'sine ihtiyacınız var (%2 TP'niz var).</Turkish>
         </Key>
         <Key ID="STR_MISERY_Cooking_Progress">
-            <English>%1ing %2... %3%4 complete</English>
-            <Czech>%1ím %2... %3%4 hotovo</Czech>
-            <French>%1 de %2... %3%4 terminé</French>
-            <Spanish>%1ando %2... %3%4 completado</Spanish>
-            <Italian>%1ando %2... %3%4 completato</Italian>
-            <Polish>%1 %2... ukończono %3%4</Polish>
-            <Portuguese>%1ando %2... %3%4 concluído</Portuguese>
-            <Russian>%1 %2... %3%4 завершено</Russian>
-            <German>%1e %2... %3%4 abgeschlossen</German>
-            <Korean>%2 %1 중... %3%4 완료</Korean>
-            <Japanese>%2を%1中... %3%4 完了</Japanese>
-            <Chinese>正在 %1 %2... %3%4 已完成</Chinese>
-            <Chinesesimp>正在 %1 %2... %3%4 已完成</Chinesesimp>
-            <Turkish>%2 %1iliyor... %%%3 tamamlandı</Turkish>
+            <English>%1 %2... %3%4 complete</English>
+            <Czech>%1 %2... z %3%4 dokončeno</Czech>
+            <French>%1 %2... %3%4 terminé</French>
+            <Spanish>%1 %2... %3%4 completado</Spanish>
+            <Italian>%1 %2... %3%4 completato</Italian>
+            <Polish>%1 %2... ukończono w %3%4</Polish>
+            <Portuguese>%1 %2... %3%4 concluído</Portuguese>
+            <Russian>%1 %2... завершено: %3%4</Russian>
+            <German>%1 %2... %3%4 abgeschlossen</German>
+            <Korean>%1 %2... %3%4 완료됨</Korean>
+            <Japanese>%1 %2... %3%4 完了</Japanese>
+            <Chinese>%1 %2... 已完成 %3%4</Chinese>
+            <Chinesesimp>%1 %2... 已完成 %3%4</Chinesesimp>
+            <Turkish>%1 %2... %%3%4 tamamlandı</Turkish>
         </Key>
         <Key ID="STR_MISERY_Cooking_Required">
             <English>Required Items for %1ing:</English>
