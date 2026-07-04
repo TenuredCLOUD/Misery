@@ -2,7 +2,7 @@
 
 if (!hasInterface) exitWith {};
 
-["CBA_settingsInitialized", {
+["CBA_loadingScreenDone", {
     if (GVAR(enhanced)) then {
         call FUNC(deficiency);
         call FUNC(rebreatherAudio);

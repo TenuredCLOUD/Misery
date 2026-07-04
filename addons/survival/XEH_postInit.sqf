@@ -4,7 +4,7 @@ GVAR(decayLevel) = 0;
 
 if (!hasInterface) exitWith {};
 
-["CBA_settingsInitialized", {
+["CBA_loadingScreenDone", {
     [] call FUNC(loop);
 }] call CBA_fnc_addEventHandler;
 
