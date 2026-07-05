@@ -29,13 +29,25 @@ if (_currentMarker in GVAR(processedMarkers)) exitWith {
 
 [_centerPos, _radius] call EFUNC(common,nearBuilding) params ["", "", "_nearBuildings"];
 
-private _buildingPositions = {
-    _x buildingPos -1;
+private _buildingPositions = [];
+
+{
+    _buildingPositions append (_x buildingPos -1);
 } forEach _nearBuildings;
 
 for "_i" from 1 to _numArtifacts do {
-    private _useBuilding = [50] call EFUNC(common,rollChance);
-    private _randomPos = [[_currentMarker] call CBA_fnc_randPosArea, selectRandom _buildingPositions] select _useBuilding;
+    private _useBuilding = [[50] call EFUNC(common,rollChance), false] select (_buildingPositions isEqualTo []);
+
+    private _randomPos = if (_useBuilding) then {
+        selectRandom _buildingPositions;
+    } else {
+        [_currentMarker] call CBA_fnc_randPosArea;
+    };
+
+    if (count _randomPos < 3) then {
+        _randomPos = [_currentMarker] call CBA_fnc_randPosArea;
+        _useBuilding = false;
+    };
 
     private _groundHolder = createVehicle ["WeaponHolderSimulated", _randomPos, [], 0, "CAN_COLLIDE"];
 
