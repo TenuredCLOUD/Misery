@@ -18,8 +18,6 @@ if (hasInterface) then {
 
 if (!isServer) exitWith {};
 
-GVAR(markerSizeX) = GVAR(minimumDistance) + GVAR(safeDistance);
-GVAR(markerSizeY) = GVAR(maximumDistance) + GVAR(safeDistance);
 GVAR(registeredEntities) = [];
 
 ["CBA_loadingScreenDone", {

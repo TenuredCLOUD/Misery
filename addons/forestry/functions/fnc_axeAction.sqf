@@ -50,23 +50,11 @@ _soundDummy say3D [QCLASS(audio_sound_chopWood), 500];
         deleteVehicle _soundDummy;
     };
 
-    private _markerPos = getPosATL player;
-    private _playerName = name player;
-    private _markerName = format ["%1_%2_%3", CBA_missionTime, _playerName, random 100];
-    private _marker = createMarkerLocal [_markerName, _markerPos];
-    _marker setMarkerShapeLocal "ELLIPSE";
-    _marker setMarkerSizeLocal [2.5, 2.5];
-    _marker setMarkerAlphaLocal 0;
-
-    [[_marker, true] call CBA_fnc_randPosArea, [[]], [[]], [[QCLASS(woodensticks), selectRandom [1, 2, 3, 4, 5]]]] call EFUNC(common,spawnLoot);
-    [[_marker, true] call CBA_fnc_randPosArea, [[]], [[]], [[QCLASS(firewood), selectRandom [1, 2]]]] call EFUNC(common,spawnLoot);
-    [[_marker, true] call CBA_fnc_randPosArea, [[]], [[]], [[QCLASS(woodenlog), 1]]] call EFUNC(common,spawnLoot);
+    [[getPosWorld player, 2.5] call CBA_fnc_randPos, [[]], [[]], [[QCLASS(woodensticks), selectRandom [1, 2, 3, 4, 5]]]] call EFUNC(common,spawnLoot);
+    [[getPosWorld player, 2.5] call CBA_fnc_randPos, [[]], [[]], [[QCLASS(firewood), selectRandom [1, 2]]]] call EFUNC(common,spawnLoot);
+    [[getPosWorld player, 2.5] call CBA_fnc_randPos, [[]], [[]], [[QCLASS(woodenlog), 1]]] call EFUNC(common,spawnLoot);
 
     _tree setDamage 1;
-
-    [{
-        deleteMarkerLocal _this;
-    }, _marker, 1] call CBA_fnc_waitAndExecute;
 },
 {
     params ["_args"];

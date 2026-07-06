@@ -25,31 +25,21 @@ private _selectedPlayer = selectRandom _players;
 // If no players in game exit spawner
 if (_players isEqualTo []) exitWith {};
 
-private _markerPos = getPosATL _selectedPlayer;
-private _playerUID = getPlayerUID _selectedPlayer;
-private _markerName = format ["%1_%2_%3", CBA_missionTime, _playerUID, random 100];
-private _marker = createMarkerLocal [_markerName, _markerPos];
-_marker setMarkerShapeLocal "ELLIPSE";
-_marker setMarkerSizeLocal [GVAR(markerSizeX), GVAR(markerSizeY)];
-_marker setMarkerAlphaLocal 0;
-
 for "_i" from 1 to _numEntities do {
 
     if ((count GVAR(registeredEntities)) >= GVAR(maxPopulation)) exitWith {break};
 
-    private _outsidePos = [_marker, true] call CBA_fnc_randPosArea;
+    private _radius = [GVAR(animalMinimumDistance), GVAR(animalMaximumDistance)] call BIS_fnc_randomInt;
 
-    // Check if _outsidePos is valid and not water
-    if (_outsidePos isEqualTo [] || surfaceIsWater _outsidePos) exitWith {
+    private _position = [getPosWorld _selectedPlayer, _radius] call CBA_fnc_randPos;
+
+    // Check if _position is valid and not water
+    if (_position isEqualTo [] || surfaceIsWater _position) exitWith {
         if (GVAR(debug)) then {[QUOTE(COMPONENT_BEAUTIFIED), localize LSTRING(InvalidPos)] call EFUNC(common,debugMessage);};
         continue;
     };
     if ([GVAR(animalSpawnChance)] call EFUNC(common,rollChance)) then {
-        private _createdAnimal = createAgent [selectRandom [MACRO_FIELDDRESS_ANIMALTYPES], _outsidePos, [], 0, "CAN_COLLIDE"];
+        private _createdAnimal = createAgent [selectRandom [MACRO_FIELDDRESS_ANIMALTYPES], _position, [], 0, "CAN_COLLIDE"];
         GVAR(registeredEntities) pushBack _createdAnimal;
     };
 };
-
-[{
-    deleteMarkerLocal _this;
-}, _marker, 1] call CBA_fnc_waitAndExecute;

@@ -280,15 +280,6 @@ private _category = format ["Misery %1", localize LSTRING(Component)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(safeDistance),
-    "SLIDER",
-    [LSTRING(SafeDist), LSTRING(SafeDistDesc)],
-    _category,
-    [25, 5000, 200, 0],
-    1
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(deletionDistance),
     "SLIDER",
     [LSTRING(DelDist), LSTRING(DelDistDesc)],

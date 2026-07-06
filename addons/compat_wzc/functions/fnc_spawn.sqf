@@ -26,23 +26,16 @@ private _selectedPlayer = selectRandom _players;
 // If no players in game exit spawner
 if (_players isEqualTo []) exitWith {};
 
-private _markerPos = getPosATL _selectedPlayer;
-private _playerUID = getPlayerUID _selectedPlayer;
-
-private _markerName = format ["%1_%2_%3", CBA_missionTime, _playerUID, random 100];
-private _marker = createMarkerLocal [_markerName, _markerPos];
-_marker setMarkerShapeLocal "ELLIPSE";
-_marker setMarkerSizeLocal [GVAR(markerSizeX), GVAR(markerSizeY)];
-_marker setMarkerAlphaLocal 0;
-
 for "_i" from 1 to _numEntities do {
 
     // recheck every spawn cycle
     if ((count GVAR(registeredEntities)) >= GVAR(maxPopulation)) exitWith {break};
 
-    private _outsidePos = [_marker, true] call CBA_fnc_randPosArea;
+    private _radius = [GVAR(minimumDistance), GVAR(maximumDistance)] call BIS_fnc_randomInt;
 
-    if (_outsidePos isEqualTo [] || surfaceIsWater _outsidePos) exitWith {
+    private _position = [getPosWorld _selectedPlayer, _radius] call CBA_fnc_randPos;
+
+    if (_position isEqualTo [] || surfaceIsWater _position) exitWith {
         [QUOTE(COMPONENT_BEAUTIFIED), "AI Spawner: Invalid position or position in water, skipping"] call EFUNC(common,debugMessage);
         continue;
     };
@@ -61,7 +54,7 @@ for "_i" from 1 to _numEntities do {
                 selectRandom [MACRO_WZC_SPECIAL_ZOMBIES];
             };
             [_unit, _unit] call ACEFUNC(common,claim);
-            _unit = _group createUnit [_class, _outsidePos, [], 0, "NONE"];
+            _unit = _group createUnit [_class, _position, [], 0, "NONE"];
             _unit setVariable [QGRADGVAR(persistence,isExcluded), true];
             _unit addEventHandler ["Killed", {
                 params ["_unit"];
@@ -70,7 +63,7 @@ for "_i" from 1 to _numEntities do {
             _unit enableDynamicSimulation true;
             GVAR(registeredEntities) pushBack _group;
         } else {
-            private _unit = _group createUnit ["WBK_C_ExportClass", _outsidePos, [], 0, "NONE"];
+            private _unit = _group createUnit ["WBK_C_ExportClass", _position, [], 0, "NONE"];
             [_unit, _type] call FUNC(randomGear);
             [_unit, _type] call WBK_LoadAIThroughEden;
             _unit setDamage 0.5; // apply blood effect to all regular zombie types
@@ -90,8 +83,3 @@ for "_i" from 1 to _numEntities do {
         };
     };
 };
-
-[{
-    deleteMarkerLocal _this;
-}, _marker, 1] call CBA_fnc_waitAndExecute;
-

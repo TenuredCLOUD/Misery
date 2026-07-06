@@ -55,27 +55,19 @@ private _group = createGroup GVAR(factionType);
 
 private _numEntities = [1, GVAR(groupSize)] call BIS_fnc_randomInt;
 
+private _radius = [GVAR(minimumDistance), GVAR(maximumDistance)] call BIS_fnc_randomInt;
 
-private _markerPos = getPosATL _selectedPlayer;
-private _playerUID = getPlayerUID _selectedPlayer;
-
-private _markerName = format ["%1_%2_%3", CBA_missionTime, _playerUID, random 100];
-private _marker = createMarkerLocal [_markerName, _markerPos];
-_marker setMarkerShapeLocal "ELLIPSE";
-_marker setMarkerSizeLocal [GVAR(markerSizeX), GVAR(markerSizeY)];
-_marker setMarkerAlphaLocal 0;
-
-private _outsidePos = [_marker, true] call CBA_fnc_randPosArea;
+private _position = [getPosWorld _selectedPlayer, _radius] call CBA_fnc_randPos;
 
 for "_i" from 1 to _numEntities do {
 
-    if (_outsidePos isEqualTo [] || surfaceIsWater _outsidePos) exitWith {
+    if (_position isEqualTo [] || surfaceIsWater _position) exitWith {
         [QUOTE(COMPONENT_BEAUTIFIED), localize LSTRING(SpawnerInvalidPos)] call EFUNC(common,debugMessage);
         continue;
     };
 
     if ([GVAR(spawnChance)] call EFUNC(common,rollChance)) then {
-        _unit = _group createUnit [GVAR(aiClass), _outsidePos, [], 0, "FORM"];
+        _unit = _group createUnit [GVAR(aiClass), _position, [], 0, "FORM"];
     };
 
     _unit addEventHandler ["Killed", {
@@ -104,10 +96,6 @@ for "_i" from 1 to _numEntities do {
         _unit setVariable [QEGVAR(currency,canSearch), true, true];
     };
 };
-
-[{
-    deleteMarkerLocal _this;
-}, _marker, 1] call CBA_fnc_waitAndExecute;
 
 _group enableDynamicSimulation true;
 

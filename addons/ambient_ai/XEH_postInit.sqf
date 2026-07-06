@@ -4,8 +4,6 @@ if (!isServer) exitWith {};
 
 if (!GVAR(enabled)) exitWith {};
 
-GVAR(markerSizeX) = GVAR(minimumDistance) + GVAR(safeDistance);
-GVAR(markerSizeY) = GVAR(maximumDistance) + GVAR(safeDistance);
 GVAR(registeredEntities) = [];
 
 ["CBA_loadingScreenDone", {
