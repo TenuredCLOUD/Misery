@@ -22,25 +22,31 @@ if !(call FUNC(checkAreas)) exitWith {
     params ["_args", "_handle"];
     {
         private _player = _x;
-        private _isPlayerHandled = _player getVariable [QGVAR(insideArea), false];
+        private _currentTrackingMarker = _player getVariable [QGVAR(insideArea), ""];
 
-        if (!_isPlayerHandled) then {
-            private _currentMarker = "";
-            {
-                if (_player inArea _x && {!(_x in GVAR(processedMarkers))}) exitWith {
-                _currentMarker = _x;
-                };
-            } forEach GVAR(areas);
+        private _markerPlayerIsInside = "";
+        {
+            if (_player inArea _x) exitWith {
+                _markerPlayerIsInside = _x;
+            };
+        } forEach GVAR(areas);
 
-            if (_currentMarker isNotEqualTo "") then {
-                _player setVariable [QGVAR(insideArea), true, true];
+        if (_markerPlayerIsInside isEqualTo "" && _currentTrackingMarker isNotEqualTo "") then {
+            _player setVariable [QGVAR(insideArea), "", true];
+        };
+
+        if (_markerPlayerIsInside isNotEqualTo "" && {_markerPlayerIsInside isNotEqualTo _currentTrackingMarker}) then {
+
+            _player setVariable [QGVAR(insideArea), _markerPlayerIsInside, true];
+
+            if !(_markerPlayerIsInside in GVAR(processedMarkers)) then {
                 [QGVAR(artifactSpawnEvent), [
-                    getMarkerPos _currentMarker,
-                    round(linearConversion [0, 500, selectMax (getMarkerSize _currentMarker), 5, 20, true]),
-                    selectMax (getMarkerSize _currentMarker),
-                    getMarkerSize _currentMarker,
-                    _currentMarker
-                ], _player] call CBA_fnc_targetEvent;
+                    getMarkerPos _markerPlayerIsInside,
+                    round(linearConversion [0, 500, selectMax (getMarkerSize _markerPlayerIsInside), 5, 20, true]),
+                    selectMax (getMarkerSize _markerPlayerIsInside),
+                    getMarkerSize _markerPlayerIsInside,
+                    _markerPlayerIsInside
+                ]] call CBA_fnc_globalEvent;
             };
         };
     } forEach (call EFUNC(common,listPlayers));
