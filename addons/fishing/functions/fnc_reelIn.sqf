@@ -23,10 +23,7 @@ GVAR(lineTension) = (GVAR(lineTension) + 0.1) min 1;
 
 if (GVAR(lineOut) <= 0 && GVAR(fishOn)) then {
     [QEGVAR(common,tileText), localize LSTRING(CaughtFish)] call CBA_fnc_localEvent;
-    private _fishHolder = "GroundWeaponHolder" createVehicle [0,0,0];
-    _fishHolder addItemCargoGlobal [QCLASS(rawFish), 1];
-    _fishHolder enableCollisionWith player;
-    _fishHolder setPos (player modelToWorld [0.3, -0.3, 0]);
+    [player, QCLASS(rawFish), true] call CBA_fnc_addItem;
 
     // Random bait loss from fish digesting it
     if ([50] call EFUNC(common,rollChance)) then {

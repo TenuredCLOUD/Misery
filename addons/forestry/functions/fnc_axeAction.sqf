@@ -50,9 +50,9 @@ _soundDummy say3D [QCLASS(audio_sound_chopWood), 500];
         deleteVehicle _soundDummy;
     };
 
-    [[getPosWorld player, 2.5] call CBA_fnc_randPos, [[]], [[]], [[QCLASS(woodensticks), selectRandom [1, 2, 3, 4, 5]]]] call EFUNC(common,spawnLoot);
-    [[getPosWorld player, 2.5] call CBA_fnc_randPos, [[]], [[]], [[QCLASS(firewood), selectRandom [1, 2]]]] call EFUNC(common,spawnLoot);
-    [[getPosWorld player, 2.5] call CBA_fnc_randPos, [[]], [[]], [[QCLASS(woodenlog), 1]]] call EFUNC(common,spawnLoot);
+    [player, QCLASS(woodensticks), selectRandom [1, 2, 3, 4, 5]] call EFUNC(common,addItem);
+    [player, QCLASS(firewood), selectRandom [1, 2]] call EFUNC(common,addItem);
+    [player, QCLASS(woodenlog), true] call CBA_fnc_addItem;
 
     _tree setDamage 1;
 },

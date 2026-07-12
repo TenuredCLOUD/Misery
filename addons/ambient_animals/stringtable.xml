@@ -241,38 +241,6 @@
             <Chinesesimp>动物生成的最小距离</Chinesesimp>
             <Turkish>Hayvanların oluşabileceği minimum mesafe</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Ambient_Animals_SafeDist">
-            <English>Safe distance</English>
-            <Czech>Bezpečná vzdálenost</Czech>
-            <French>Distance de sécurité</French>
-            <Spanish>Distancia de seguridad</Spanish>
-            <Italian>Distanza di sicurezza</Italian>
-            <Polish>Bezpieczna odległość</Polish>
-            <Portuguese>Distância de segurança</Portuguese>
-            <Russian>Безопасная дистанция</Russian>
-            <German>Sicherheitsabstand</German>
-            <Korean>안전 거리</Korean>
-            <Japanese>安全距離</Japanese>
-            <Chinese>安全距離</Chinese>
-            <Chinesesimp>安全距离</Chinesesimp>
-            <Turkish>Güvenli mesafe</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Ambient_Animals_SafeDistDesc">
-            <English>Minimum distance at which animals can spawn from other players</English>
-            <Czech>Minimální vzdálenost, ve které se zvířata mohou tvořit od ostatních hráčů</Czech>
-            <French>Distance minimale à laquelle les animaux peuvent apparaître par rapport aux autres joueurs</French>
-            <Spanish>Distancia mínima a la que pueden aparecer animales de otros jugadores</Spanish>
-            <Italian>Distanza minima alla quale gli animali possono apparire rispetto ad altri giocatori</Italian>
-            <Polish>Minimalna odległość, w której mogą pojawiać się zwierzęta od innych graczy</Polish>
-            <Portuguese>Distância mínima na qual os animais podem aparecer em relação a outros jogadores</Portuguese>
-            <Russian>Минимальное расстояние от других игроков, на котором могут появляться животные</Russian>
-            <German>Mindestentfernung, in der Tiere von anderen Spielern spawnen können</German>
-            <Korean>다른 플레이어로부터 동물이 스폰될 수 있는 최소 거리</Korean>
-            <Japanese>他のプレイヤーから動物がスポーンできる最小距離</Japanese>
-            <Chinese>動物在其他玩家附近的最小生成距離</Chinese>
-            <Chinesesimp>动物在其他玩家附近的最小生成距离</Chinesesimp>
-            <Turkish>Hayvanların diğer oyunculardan oluşabileceği minimum mesafe</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Ambient_Animals_SpawnChance">
             <English>Spawn chance %</English>
             <Czech>Šance na vytvoření %</Czech>

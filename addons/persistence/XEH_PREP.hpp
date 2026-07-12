@@ -1,14 +1,14 @@
 PREP(autosave);
 PREP(clientDataGet);
 PREP(clientDataSet);
+PREP(combatLogPrevention);
 PREP(formatSaveName);
 PREP(gradSave);
 PREP(handleGrad);
 PREP(init);
 PREP(loadData);
-PREP(multiplayerDataLoad);
-PREP(multiplayerDataSave);
 PREP(newPlayer);
 PREP(restoreCargo);
 PREP(saveGame);
+PREP(serverInit);
 PREP(syncCargo);

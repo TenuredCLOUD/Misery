@@ -70,15 +70,15 @@ _miningTime,
         _x params ["_classname", "_amount", "_chance"];
         if ([_chance] call EFUNC(common,rollChance)) then {
             _itemCargo pushBack [_classname, _amount];
+            [player, _classname, _amount] call EFUNC(common,addItem);
         };
     } forEach _items;
 
     if (_itemCargo isNotEqualTo []) then {
-        private _holder = [getPosATL player, _itemCargo] call EFUNC(common,spawnLoot);
-        private _rockChunksSuccess = [getPosATL player, [[QCLASS(stoneChunk), random 5]]] call EFUNC(common,spawnLoot);
+        [player, QCLASS(stoneChunk), selectRandom [1, 2, 3, 4, 5]] call EFUNC(common,addItem);
         [QEGVAR(common,tileText), localize LSTRING(Success)] call CBA_fnc_localEvent;
     } else {
-        private _rockChunksFailure = [getPosATL player, [[QCLASS(stoneChunk), random 5]]] call EFUNC(common,spawnLoot);
+        [player, QCLASS(stoneChunk), selectRandom [1, 2, 3, 4, 5]] call EFUNC(common,addItem);
         [QEGVAR(common,tileText), localize LSTRING(NoOreFound)] call CBA_fnc_localEvent;
     };
 

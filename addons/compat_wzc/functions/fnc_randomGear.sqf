@@ -17,17 +17,17 @@
 
 params ["_unit", "_type"];
 
-private _clothes = [GVAR(clothingMil), GVAR(clothingCiv)] select ([GVAR(clothingChance)] call EFUNC(common,rollChance));
+private _clothes = [GVAR(clothingMilCached), GVAR(clothingCivCached)] select ([GVAR(clothingChance)] call EFUNC(common,rollChance));
 
-private _headgear = [GVAR(headgearMil), GVAR(headgearCiv)] select (_clothes isEqualTo GVAR(clothingCiv));
+private _headgear = [GVAR(headgearMilCached), GVAR(headgearCivCached)] select (_clothes isEqualTo GVAR(clothingCivCached));
 
-private _facewear = [GVAR(facewearMil), GVAR(facewearCiv)] select (_clothes isEqualTo GVAR(clothingCiv));
+private _facewear = [GVAR(facewearMilCached), GVAR(facewearCivCached)] select (_clothes isEqualTo GVAR(clothingCivCached));
 
-private _vests = [GVAR(vestMil), GVAR(vestCiv)] select (_clothes isEqualTo GVAR(clothingCiv));
+private _vests = [GVAR(vestMilCached), GVAR(vestCivCached)] select (_clothes isEqualTo GVAR(clothingCivCached));
 
-private _backpacks = [GVAR(bagMil), GVAR(bagCiv)] select (_clothes isEqualTo GVAR(clothingCiv));
+private _backpacks = [GVAR(bagMilCached), GVAR(bagCivCached)] select (_clothes isEqualTo GVAR(clothingCivCached));
 
-private _items = [GVAR(itemsMil), GVAR(itemsCiv)] select (_clothes isEqualTo GVAR(clothingCiv));
+private _items = [GVAR(itemsMilCached), GVAR(itemsCivCached)] select (_clothes isEqualTo GVAR(clothingCivCached));
 
 removeAllWeapons _unit;
 removeAllItems _unit;
@@ -65,6 +65,6 @@ if ([GVAR(itemsChance)] call EFUNC(common,rollChance)) then {
 };
 
 if (_type isEqualTo 6) then {
-    [_unit, selectRandom GVAR(weapons), 1, 0] call BIS_fnc_addWeapon;
+    [_unit, selectRandom GVAR(weaponsCached), 1, 0] call BIS_fnc_addWeapon;
 };
 

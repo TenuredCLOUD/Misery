@@ -13,13 +13,28 @@
  * [] call misery_ambient_ai_fnc_convertToArray
 */
 
-GVAR(primaryWeapons) = parseSimpleArray GVAR(primaryWeapons);
-GVAR(secondaryWeapons) = parseSimpleArray GVAR(secondaryWeapons);
-GVAR(launcherWeapons) = parseSimpleArray GVAR(launcherWeapons);
-GVAR(items) = parseSimpleArray GVAR(items);
-GVAR(nvgs) = parseSimpleArray GVAR(nvgs);
-GVAR(facewear) = parseSimpleArray GVAR(facewear);
-GVAR(headgear) = parseSimpleArray GVAR(headgear);
-GVAR(uniform) = parseSimpleArray GVAR(uniform);
-GVAR(vest) = parseSimpleArray GVAR(vest);
-GVAR(backpack) = parseSimpleArray GVAR(backpack);
+GVAR(primaryWeaponsCached) = parseSimpleArray GVAR(primaryWeapons);
+GVAR(secondaryWeaponsCached) = parseSimpleArray GVAR(secondaryWeapons);
+GVAR(launcherWeaponsCached) = parseSimpleArray GVAR(launcherWeapons);
+GVAR(itemsCached) = parseSimpleArray GVAR(items);
+GVAR(nvgsCached) = parseSimpleArray GVAR(nvgs);
+GVAR(facewearCached) = parseSimpleArray GVAR(facewear);
+GVAR(headgearCached) = parseSimpleArray GVAR(headgear);
+GVAR(uniformCached) = parseSimpleArray GVAR(uniform);
+GVAR(vestCached) = parseSimpleArray GVAR(vest);
+GVAR(backpackCached) = parseSimpleArray GVAR(backpack);
+
+{
+    publicVariable _x;
+} forEach [
+    QGVAR(primaryWeaponsCached),
+    QGVAR(secondaryWeaponsCached),
+    QGVAR(launcherWeaponsCached),
+    QGVAR(itemsCached),
+    QGVAR(nvgsCached),
+    QGVAR(facewearCached),
+    QGVAR(headgearCached),
+    QGVAR(uniformCached),
+    QGVAR(vestCached),
+    QGVAR(backpackCached)
+];

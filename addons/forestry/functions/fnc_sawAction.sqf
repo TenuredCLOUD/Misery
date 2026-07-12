@@ -54,9 +54,9 @@ call FUNC(chainsawFuelDecrement);
         deleteVehicle _soundDummy;
     };
 
-    [[getPosWorld player, 2.5] call CBA_fnc_randPos, [[]], [[]], [[QCLASS(woodensticks), selectRandom [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]]]] call EFUNC(common,spawnLoot);
-    [[getPosWorld player, 2.5] call CBA_fnc_randPos, [[]], [[]], [[QCLASS(firewood), selectRandom [1, 2, 3, 4, 5]]]] call EFUNC(common,spawnLoot);
-    [[getPosWorld player, 2.5] call CBA_fnc_randPos, [[]], [[]], [[QCLASS(woodenlog), selectRandom [1, 2, 3]]]] call EFUNC(common,spawnLoot);
+    [player, QCLASS(woodensticks), selectRandom [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]] call EFUNC(common,addItem);
+    [player, QCLASS(firewood), selectRandom [1, 2, 3, 4, 5]] call EFUNC(common,addItem);
+    [player, QCLASS(woodenlog), selectRandom [1, 2, 3]] call EFUNC(common,addItem);
 
     _tree setDamage 1;
 

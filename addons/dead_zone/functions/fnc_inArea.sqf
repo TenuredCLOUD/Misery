@@ -31,7 +31,7 @@ if !(call FUNC(checkAreas)) exitWith {
 
             [
                 _scatterPos,
-                selectRandom GVAR(shellTypes),
+                selectRandom GVAR(shellTypesCached),
                 GVAR(radius),
                 GVAR(density),
                 0
@@ -39,5 +39,5 @@ if !(call FUNC(checkAreas)) exitWith {
 
             [QUOTE(COMPONENT_BEAUTIFIED), format ["Dead Zone %1 engaged %2 targets.", _zone, count _targets]] call EFUNC(common,debugMessage);
         };
-    } forEach GVAR(areas);
+    } forEach GVAR(areasCached);
 }, GVAR(barrageDelay)] call CBA_fnc_addPerFrameHandler;

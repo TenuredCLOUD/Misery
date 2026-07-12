@@ -13,11 +13,6 @@
  * [] call misery_chemical_fnc_detectorAlert
 */
 
-// If chemical zone check fails, system will not function.
-if !(call FUNC(checkAreas)) exitWith {
-    [QUOTE(COMPONENT_BEAUTIFIED), "Marker check system failed, alerts disabled."] call EFUNC(common,debugMessage);
-};
-
 [{"ChemicalDetector_01_watch_F" in assignedItems player}, {
     [{
         params ["_args", "_handle"];

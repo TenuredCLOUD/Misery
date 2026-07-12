@@ -16,70 +16,95 @@
  * Public: No
 */
 
-if ((count GVAR(registeredEntities)) >= GVAR(maxPopulation)) exitWith {};
+[{
+    params ["_args", "_handle"];
 
-private _numEntities = [1, GVAR(clusterSize)] call BIS_fnc_randomInt;
+    if ((count GVAR(registeredEntities)) >= GVAR(maxPopulation)) exitWith {};
 
-private _players = call EFUNC(common,listPlayers);
-private _selectedPlayer = selectRandom _players;
+    private _players = call EFUNC(common,listPlayers);
 
-// If no players in game exit spawner
-if (_players isEqualTo []) exitWith {};
+    // If no players in game exit spawner
+    if (_players isEqualTo []) exitWith {};
 
-for "_i" from 1 to _numEntities do {
+    private _selectedPlayer = selectRandom _players;
 
-    // recheck every spawn cycle
-    if ((count GVAR(registeredEntities)) >= GVAR(maxPopulation)) exitWith {break};
+    private _numEntities = [1, GVAR(clusterSize)] call BIS_fnc_randomInt;
 
-    private _radius = [GVAR(minimumDistance), GVAR(maximumDistance)] call BIS_fnc_randomInt;
+    for "_i" from 1 to _numEntities do {
+        if ((count GVAR(registeredEntities)) >= GVAR(maxPopulation)) exitWith {break};
 
-    private _position = [getPosWorld _selectedPlayer, _radius] call CBA_fnc_randPos;
+        private _position = [];
+        private _isValidPosition = false;
 
-    if (_position isEqualTo [] || surfaceIsWater _position) exitWith {
-        [QUOTE(COMPONENT_BEAUTIFIED), "AI Spawner: Invalid position or position in water, skipping"] call EFUNC(common,debugMessage);
-        continue;
-    };
+        for "_attempts" from 1 to 5 do {
 
-    private _type = [] call FUNC(findClass);
+            private _radius = [GVAR(minimumDistance), GVAR(maximumDistance)] call BIS_fnc_randomInt;
+            private _potentialPos = [getPosWorld _selectedPlayer, _radius] call CBA_fnc_randPos;
 
-    private _group = createGroup resistance;
+            private _playerTooClose = [_potentialPos, GVAR(minimumDistance)] call CBA_fnc_nearPlayer;
 
-    private _unit = objNull;
-
-    if ([GVAR(spawnChance)] call EFUNC(common,rollChance)) then {
-        if (_type isEqualType "") then {
-            private _class = if (_type isEqualTo "GOLIATH") then {
-                selectRandom [MACRO_WZC_SPECIAL];
-            } else {
-                selectRandom [MACRO_WZC_SPECIAL_ZOMBIES];
+            if (!_playerTooClose && {!(surfaceIsWater _potentialPos)}) then {
+                _position = _potentialPos;
+                _isValidPosition = true;
+                break;
             };
-            [_unit, _unit] call ACEFUNC(common,claim);
-            _unit = _group createUnit [_class, _position, [], 0, "NONE"];
-            _unit setVariable [QGRADGVAR(persistence,isExcluded), true];
-            _unit addEventHandler ["Killed", {
-                params ["_unit"];
-                addToRemainsCollector [_unit];
-            }];
-            _unit enableDynamicSimulation true;
-            GVAR(registeredEntities) pushBack _group;
-        } else {
-            private _unit = _group createUnit ["WBK_C_ExportClass", _position, [], 0, "NONE"];
-            [_unit, _type] call FUNC(randomGear);
-            [_unit, _type] call WBK_LoadAIThroughEden;
-            _unit setDamage 0.5; // apply blood effect to all regular zombie types
-            _unit setSpeaker "NoVoice"; // ensure no callouts, even with single grouped units
-            _unit setVariable [QGRADGVAR(persistence,isExcluded), true];
-            _unit addEventHandler ["Killed", {
-                params ["_unit"];
-                addToRemainsCollector [_unit];
-            }];
-            _unit enableDynamicSimulation true;
-            GVAR(registeredEntities) pushBack _group;
-            [_unit, _unit] call ACEFUNC(common,claim);
-            // set var for money searching if chance exists
-            if (EGVAR(currency,corpseHasMoneyChance) > 0) then {
-                _unit setVariable [QEGVAR(currency,canSearch), true, true];
+        };
+
+        if (!_isValidPosition) then {
+            [QUOTE(COMPONENT_BEAUTIFIED), "AI Spawner: Invalid position or position in water, skipping"] call EFUNC(common,debugMessage);
+            continue;
+        };
+
+        if ([GVAR(spawnChance)] call EFUNC(common,rollChance)) then {
+
+            private _type = [] call FUNC(findClass);
+
+            private _group = createGroup resistance;
+
+            private _unit = objNull;
+
+            if (_type isEqualType "") then {
+                private _class = if (_type isEqualTo "GOLIATH") then {
+                    selectRandom [MACRO_WZC_SPECIAL];
+                } else {
+                    selectRandom [MACRO_WZC_SPECIAL_ZOMBIES];
+                };
+
+                _unit = _group createUnit [_class, _position, [], 0, "NONE"];
+                if (isNull _unit) exitWith {continue};
+
+                [_unit, _unit] call ACEFUNC(common,claim);
+                _unit setVariable [QGRADGVAR(persistence,isExcluded), true];
+                _unit addEventHandler ["Killed", {
+                    params ["_unit"];
+                    addToRemainsCollector [_unit];
+                }];
+                _unit enableDynamicSimulation true;
+
+                GVAR(registeredEntities) pushBack _group;
+            } else {
+                _unit = _group createUnit ["WBK_C_ExportClass", _position, [], 0, "NONE"];
+                if (isNull _unit) exitWith {continue};
+
+                [_unit, _type] call FUNC(randomGear);
+                [_unit, _type] call WBK_LoadAIThroughEden;
+                _unit setDamage 0.5; // apply blood effect to all regular zombie types
+                [_unit, "because"] call ACEFUNC(common,muteUnit); // Mute unit (disables callouts)
+                _unit setVariable [QGRADGVAR(persistence,isExcluded), true];
+                _unit addEventHandler ["Killed", {
+                    params ["_unit"];
+                    addToRemainsCollector [_unit];
+                }];
+                _unit enableDynamicSimulation true;
+                [_unit, _unit] call ACEFUNC(common,claim);
+
+                GVAR(registeredEntities) pushBack _group;
+
+                // set var for money searching if chance exists
+                if (EGVAR(currency,corpseHasMoneyChance) > 0) then {
+                    _unit setVariable [QEGVAR(currency,canSearch), true, true];
+                };
             };
         };
     };
-};
+}, GVAR(cycleLength)] call CBA_fnc_addPerFrameHandler;

@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: MikeMF
+ * Author: MikeMF, TenuredCLOUD
  * Handles saving in multiplayer or singleplayer.
  *
  * Arguments:
@@ -31,16 +31,9 @@ GVAR(blockSave) = true;
     GVAR(blockSave) = false;
 }, [], 5] call CBA_fnc_waitAndExecute;
 
-// Refresh save variables pre-save
-call FUNC(loadData);
+private _serializedData = call FUNC(clientDataSet);
 
-private _playerData = call FUNC(clientDataSet);
+private _saveNameString = call FUNC(formatSaveName);
 
-if (isMultiplayer) exitWith {
-    [QGVAR(saveDataToServer), _playerData] call CBA_fnc_serverEvent;
-};
+profileNamespace setVariable [_saveNameString, _serializedData];
 
-profileNamespace setVariable [QGVAR(saveName), _playerData];
-
-// Refresh save variables post-save
-call FUNC(loadData);

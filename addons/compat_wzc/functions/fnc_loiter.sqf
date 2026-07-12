@@ -14,7 +14,11 @@
  *
 */
 
-[{GVAR(registeredEntities) isNotEqualTo []}, {
+[{
+    params ["_args", "_handle"];
+
+    if (GVAR(registeredEntities) isEqualTo []) exitWith {};
+
     {
         private _group = _x;
         private _leader = leader _group;
@@ -22,7 +26,4 @@
 
         _group move _randomPos;
     } forEach GVAR(registeredEntities);
-    [{
-        [] call FUNC(loiter);
-    }, [], 15] call CBA_fnc_waitAndExecute;
-}, []] call CBA_fnc_waitUntilAndExecute;
+}, 15] call CBA_fnc_addPerFrameHandler;

@@ -51,7 +51,7 @@ _toolUsed select 3,
 
     [player, QCLASS(woodenlog)] call CBA_fnc_removeItem;
 
-    [getPosATL player, [[QCLASS(firewood), selectRandom [1, 2]]]] call EFUNC(common,spawnLoot);
+    [player, QCLASS(firewood), selectRandom [1, 2]] call EFUNC(common,addItem);
 
     if (_toolUsed select 1 isEqualTo 1) then {
         player setVariable [QGVAR(cuttingWood), nil];

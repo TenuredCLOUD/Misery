@@ -1,4 +1,4 @@
- #include "..\script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
  * AI cleanup
@@ -15,19 +15,33 @@
  *
 */
 
-private _players = call EFUNC(common,listPlayers);
+[{
+    params ["_args", "_handle"];
 
-if (GVAR(registeredEntities) isEqualTo []) exitWith {};
+    if (GVAR(registeredEntities) isEqualTo []) exitWith {};
 
-{
-    private _group = _x;
-    private _leader = leader _group;
     {
-        private _distance = _x distance2D _leader;
-        if (_distance < GVAR(deletionDistance)) exitWith {continue};
+        private _group = _x;
 
-        GVAR(registeredEntities) deleteAt _forEachIndex;
-        {deleteVehicle _x} forEach (units _group);
-    } forEach _players;
-} forEachReversed GVAR(registeredEntities);
+        if (isNull _group || {units _group isEqualTo []}) then {
+            GVAR(registeredEntities) deleteAt _forEachIndex;
+            continue;
+        };
 
+        private _leader = leader _group;
+
+        if (isNull _leader) then { _leader = (units _group) select 0; };
+
+        private _playerNearby = [getPosWorld _leader, GVAR(deletionDistance)] call CBA_fnc_nearPlayer;
+
+        if (!_playerNearby) then {
+            GVAR(registeredEntities) deleteAt _forEachIndex;
+
+            {
+                deleteVehicle _x;
+            } forEach (units _group);
+
+            deleteGroup _group;
+        };
+    } forEachReversed GVAR(registeredEntities);
+}, GVAR(cycleLength)] call CBA_fnc_addPerFrameHandler;

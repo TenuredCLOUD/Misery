@@ -47,12 +47,12 @@
     private _rainDose = 0;
     private _waterDose = 0;
 
-    private _activeAreaIndex = GVAR(areas) findIf {player inArea _x};
+    private _activeAreaIndex = GVAR(areasCached) findIf {player inArea _x};
     private _insideRadZone = _activeAreaIndex isNotEqualTo -1;
     private _isSwimming = [player] call ACEFUNC(common,isSwimming);
 
     if (_insideRadZone) then {
-        private _marker = GVAR(areas) select _activeAreaIndex;
+        private _marker = GVAR(areasCached) select _activeAreaIndex;
         private _markerSize = getMarkerSize _marker;
         private _maxRadius = (_markerSize select 0) max (_markerSize select 1);
         private _distToCenter = player distance (getMarkerPos _marker);

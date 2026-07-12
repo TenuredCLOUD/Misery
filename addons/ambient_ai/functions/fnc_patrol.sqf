@@ -16,7 +16,11 @@
  * Public: No
 */
 
-[{GVAR(registeredEntities) isNotEqualTo []}, {
+[{
+    params ["_args", "_handle"];
+
+    if (GVAR(registeredEntities) isEqualTo []) exitWith {};
+
     {
         private _group = _x;
         private _leader = leader _group;
@@ -29,7 +33,4 @@
         [_group, position (_nearestTown select 2), 300, 8, "MOVE", "AWARE", "RED", "LIMITED", "STAG COLUMN", "_group call CBA_fnc_searchNearby", [3, 6, 9]] call CBA_fnc_taskPatrol;
 
     } forEach GVAR(registeredEntities);
-    [{
-        [] call FUNC(patrol);
-    }, [], 30] call CBA_fnc_waitAndExecute;
-}, []] call CBA_fnc_waitUntilAndExecute;
+}, 30] call CBA_fnc_addPerFrameHandler;

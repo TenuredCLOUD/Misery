@@ -15,17 +15,24 @@
  *
 */
 
-private _players = call EFUNC(common,listPlayers);
+[{
+    params ["_args", "_handle"];
 
-if (count GVAR(registeredEntities) isEqualTo 0) exitWith {};
+    if (GVAR(registeredEntities) isEqualTo []) exitWith {};
 
-{
-    private _entity = _x;
     {
-        private _distance = _x distance2D _entity;
-        if (_distance < GVAR(animalDeleteDistance)) exitWith {continue};
+        private _entity = _x;
 
-        GVAR(registeredEntities) deleteAt _forEachIndex;
-        deleteVehicle _entity;
-    } forEach _players;
-} forEachReversed GVAR(registeredEntities);
+        if (isNull _entity) then {
+            GVAR(registeredEntities) deleteAt _forEachIndex;
+            continue;
+        };
+
+        private _playerNearby = [getPosWorld _entity, GVAR(animalDeleteDistance)] call CBA_fnc_nearPlayer;
+
+        if (!_playerNearby) then {
+            GVAR(registeredEntities) deleteAt _forEachIndex;
+            deleteVehicle _entity;
+        };
+    } forEachReversed GVAR(registeredEntities);
+}, GVAR(animalCycleLength)] call CBA_fnc_addPerFrameHandler;

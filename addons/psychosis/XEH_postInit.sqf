@@ -10,14 +10,14 @@ GVAR(modifiers) = 0;
 GVAR(sleepBlocked) = false;
 GVAR(terrifiedState) = false;
 
+if !(hasInterface) exitWith {};
+
 ["CBA_loadingScreenDone", {
-    if (hasInterface) then {
-        [] call FUNC(loop);
+    [] call FUNC(loop);
 
-        [QGVAR(update), FUNC(effects)] call CBA_fnc_addEventHandler;
+    [QGVAR(update), FUNC(effects)] call CBA_fnc_addEventHandler;
 
-        call FUNC(heartFlutter);
-    };
+    call FUNC(heartFlutter);
 }] call CBA_fnc_addEventHandler;
 
 GVAR(randomTextLines) = [

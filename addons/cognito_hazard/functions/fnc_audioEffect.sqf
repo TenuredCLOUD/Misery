@@ -18,7 +18,7 @@
 
     if (isGamePaused) exitWith {};
 
-    private _leftArea = GVAR(areas) findIf {player inArea _x} isEqualTo -1;
+    private _leftArea = GVAR(areasCached) findIf {player inArea _x} isEqualTo -1;
 
     if (_leftArea) exitWith {
         _handle call CBA_fnc_removePerFrameHandler;

@@ -721,38 +721,6 @@
             <Chinesesimp>你招募了 %1，花费 %2 %3</Chinesesimp>
             <Turkish>%1 için işe aldınız %2 %3</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Ambient_AI_SafeDist">
-            <English>Safe distance</English>
-            <Czech>Bezpečná vzdálenost</Czech>
-            <French>Distance de sécurité</French>
-            <Spanish>Distancia de seguridad</Spanish>
-            <Italian>Distanza di sicurezza</Italian>
-            <Polish>Bezpieczna odległość</Polish>
-            <Portuguese>Distância de Segurança</Portuguese>
-            <Russian>Безопасное расстояние</Russian>
-            <German>Sicherheitsabstand</German>
-            <Korean>안전 거리</Korean>
-            <Japanese>安全距離</Japanese>
-            <Chinese>安全距離</Chinese>
-            <Chinesesimp>安全距离</Chinesesimp>
-            <Turkish>Güvenli mesafe</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Ambient_AI_SafeDistDesc">
-            <English>Minimum distance at which ai can spawn from other players</English>
-            <Czech>Minimální vzdálenost, ve které se AI může vytvořit od ostatních hráčů</Czech>
-            <French>Distance minimale à laquelle l'IA peut apparaître par rapport aux autres joueurs</French>
-            <Spanish>Distancia mínima a la que la IA puede aparecer de otros jugadores</Spanish>
-            <Italian>Distanza minima in cui l'IA può spawnare rispetto agli altri giocatori</Italian>
-            <Polish>Minimalna odległość, w jakiej AI może tworzyć się od innych graczy</Polish>
-            <Portuguese>Distância mínima em que a IA pode surgir de outros jogadores</Portuguese>
-            <Russian>Минимальное расстояние, на котором ИИ может появиться от других игроков</Russian>
-            <German>Mindestentfernung, in der die KI von anderen Spielern entfernt spawnen kann</German>
-            <Korean>다른 플레이어로부터 AI가 생성될 수 있는 최소 거리</Korean>
-            <Japanese>他のプレイヤーからAIがスポーンできる最小距離</Japanese>
-            <Chinese>AI 在其他玩家附近的最小生成距離</Chinese>
-            <Chinesesimp>AI 在其他玩家附近的最小生成距离</Chinesesimp>
-            <Turkish>Yapay zekanın diğer oyunculardan oluşabileceği minimum mesafe</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Ambient_AI_SecondaryWeapons">
             <English>Secondary weapons</English>
             <Czech>Sekundární zbraně</Czech>

@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: MikeMF
+ * Author: MikeMF, TenuredCLOUD
  * Prevents combat logging, forcibly saves after countdown ends, will only run in Multiplayer.
  *
  * Arguments:
@@ -13,7 +13,7 @@
  * [] call misery_common_fnc_combatLogPrevention
 */
 
-if !(GVAR(combatLogPreventionEnabled) || isMultiplayer) exitWith {};
+if !(isMultiplayer) exitWith {};
 
 (findDisplay 46) displayAddEventHandler ["KeyDown", {
     [{
@@ -26,16 +26,16 @@ if !(GVAR(combatLogPreventionEnabled) || isMultiplayer) exitWith {};
                     if (CBA_missionTime - _time >= 1) then {
                         private _abortButton = (findDisplay 49) displayCtrl 104;
                         _abortButton ctrlEnable false;
-                        _abortButton ctrlSetText format ["Please Wait %1 Seconds", _iteration];
+                        _abortButton ctrlSetText format [localize LSTRING(PleaseWait), _iteration];
                         _args set [0, (_iteration -1)];
                         _args set [1, CBA_missionTime];
 
                         if (_iteration isEqualTo 0) then {
                             _handle call CBA_fnc_removePerFrameHandler;
-                            _abortButton ctrlSetText "Logout";
+                            _abortButton ctrlSetText localize LSTRING(Logout);
                             _abortButton ctrlEnable true;
-                            if (!isNil QEGVAR(persistence,enabled) && EGVAR(persistence,enabled)) then {
-                                [QEGVAR(persistence,saveDataToServer), EFUNC(persistence,multiplayerDataSave)] call CBA_fnc_addEventHandler;
+                            if (GVAR(enabled)) then {
+                                call FUNC(saveGame);
                             };
                         };
                     };

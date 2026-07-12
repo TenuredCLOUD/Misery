@@ -6,8 +6,7 @@ if (!GVAR(enabled)) exitWith {};
 
 GVAR(registeredEntities) = [];
 
-["CBA_loadingScreenDone", {
-    call FUNC(convertToArray);
-    call FUNC(loop);
-    call FUNC(patrol);
-}] call CBA_fnc_addEventHandler;
+call FUNC(convertToArray);
+call FUNC(spawn);
+call FUNC(clean);
+call FUNC(patrol);

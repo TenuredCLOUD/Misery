@@ -9,8 +9,6 @@ if (hasInterface) then {
     }, []] call CBA_fnc_waitUntilAndExecute;
 };
 
-if !(isServer) exitWith {};
-
 private _addBatterytoGeiger = [
     QGVAR(geiger_menu),
     localize LSTRING(BatteryAction),

@@ -11,6 +11,8 @@
     params ["_lantern", "_attachParams"];
     _lantern attachTo _attachParams;
 
+    [_lantern, _lantern] call ACEFUNC(common,claim);
+
     // Since power component removes light from lanterns re-add it after its attached
     [{
         params ["_lantern"];
@@ -18,22 +20,21 @@
     }, [_lantern], 0.02] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addEventHandler;
 
+private _lanternBatteries = [
+    QGVAR(lantern_menu),
+    localize LSTRING(Action),
+    QPATHTOEF(icons,data\battery_charging_ca.paa),
+    {
+        call FUNC(batteries);
+    },
+    {
+        [[QCLASS(9vBattery), QCLASS(lantern_NoBattery)]] call EFUNC(common,hasItem)
+    }
+] call ACEFUNC(interact_menu,createAction);
+
+[player, 1, [QUOTE(ACE_SelfActions)], _lanternBatteries] call ACEFUNC(interact_menu,addActionToObject);
+
 if (isServer) then {
-
-    private _lanternBatteries = [
-        QGVAR(lantern_menu),
-        localize LSTRING(Action),
-        QPATHTOEF(icons,data\battery_charging_ca.paa),
-        {
-            call FUNC(batteries);
-        },
-        {
-            [[QCLASS(9vBattery), QCLASS(lantern_NoBattery)]] call EFUNC(common,hasItem)
-        }
-    ] call ACEFUNC(interact_menu,createAction);
-
-    [player, 1, [QUOTE(ACE_SelfActions)], _lanternBatteries] call ACEFUNC(interact_menu,addActionToObject);
-
     addMissionEventHandler ["EntityKilled", {
         params ["_killed", "_killer", "_instigator"];
         if (_killed isEqualTo player && {local _killed}) then {

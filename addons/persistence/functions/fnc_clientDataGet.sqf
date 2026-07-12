@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: MikeMF
+ * Author: MikeMF, TenuredCLOUD
  * Gathers client data from savegame and resets it.
  *
  * Arguments:
@@ -40,7 +40,7 @@ private _variableNames = [MISERY_PLAYER_VARIABLE_VALUES];
 } forEach _variables;
 
 player setUnitLoadout _loadout;
-player setPosATL _position;
+player setPosWorld _position;
 player setDir _direction;
 
 switch (_stance) do {
@@ -49,13 +49,4 @@ switch (_stance) do {
     default {};
 };
 
-private _damageType = typeName _damage;
-if ([QCLASSACE(medical)] call EFUNC(common,isModLoaded)) then {
-    if (_damageType isEqualTo "STRING") then {
-        [player, _damage] call ACEFUNC(medical,deserializeState);
-    } else {
-        [player, MACRO_DEFAULT_ACE_DAMAGE] call ACEFUNC(medical,deserializeState);
-    };
-} else {
-    player setDamage _damage;
-};
+[player, _damage] call ACEFUNC(medical,deserializeState);

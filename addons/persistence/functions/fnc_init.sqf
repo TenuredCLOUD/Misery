@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: MikeMF
+ * Author: MikeMF, TenuredCLOUD
  * Begins persistency
  *
  * Arguments:
@@ -12,23 +12,6 @@
  * Example:
  * [] call misery_persistence_fnc_init
 */
-
-// Setup initial save variables & start autosave
-if (isServer) then {
-    [] call FUNC(loadData);
-
-    if (GVAR(autosaveInterval) isNotEqualTo 0) then {
-        [{
-            call FUNC(autoSave);
-        }, [], GVAR(autosaveTimer)] call CBA_fnc_waitAndExecute;
-    };
-
-    if (GVAR(gradAutosaveInterval) isNotEqualTo 0) then {
-        [{
-            call FUNC(gradSave);
-        }, [], GVAR(gradAutosaveTimer)] call CBA_fnc_waitAndExecute;
-    };
-};
 
 // If GRAD Persistence is being used, and admin actions are enabled - add actions to admins, or SP player
 if (GVAR(gradAdminActions)) then {
@@ -56,21 +39,27 @@ player addEventHandler ["Respawn", {
 }];
 
 // Singleplayer hardcore
-if (!isMultiplayer && GVAR(hardcore)) then {
+if (!isMultiplayer) then {
     player addEventHandler ["Killed", {
-        if (!isNil "grad_persistence_blacklist") then {
-            [missionName] call GRADFUNC(persistence,clearMissionData);
+
+        if (GVAR(hardcore)) exitWith {
+            if (!isNil "grad_persistence_blacklist") then {
+                [missionName] call GRADFUNC(persistence,clearMissionData);
+            };
+            // Wipe local profile as well as bank if hardcore
+            [true] call FUNC(newPlayer);
         };
+
+        // If normal death wipe character normally (keep bank)
+        [false] call FUNC(newPlayer);
     }];
 };
 
-// Callback for multiplayer
-if (isMultiplayer) exitWith {
-    [QUOTE(COMPONENT_BEAUTIFIED), "Loading multiplayer data from server."] call EFUNC(common,debugMessage);
-    [QGVAR(loadDataFromServer), player] call CBA_fnc_serverEvent;
+// Multiplayer Combat Log Prevention
+if (isMultiplayer) then {
+    [] call FUNC(combatLogPrevention);
 };
 
-// Force SP save on Escape menu
 [{!isNull findDisplay 46}, {
     (findDisplay 46) displayAddEventHandler ["KeyDown", {
         params ["", "_key"];
@@ -83,11 +72,10 @@ if (isMultiplayer) exitWith {
     }];
 }] call CBA_fnc_waitUntilAndExecute;
 
-if (GVAR(singlePlayerSaveData) isEqualTo [] || GVAR(resetSinglePlayerSave)) exitWith {
-    [QUOTE(COMPONENT_BEAUTIFIED), "New player, no single player data found or single player data reset is enabled."] call EFUNC(common,debugMessage);
-    call FUNC(newPlayer);
+private _playerData = call FUNC(loadData);
+
+if (_playerData isEqualTo [] || GVAR(resetSinglePlayerSave)) exitWith {
+    [true] call FUNC(newPlayer);
 };
 
-// Use direct save data for singleplayer
-[QUOTE(COMPONENT_BEAUTIFIED), "Loading singleplayer data"] call EFUNC(common,debugMessage);
-[GVAR(singlePlayerSaveData)] call FUNC(clientDataGet);
+[_playerData] call FUNC(clientDataGet);

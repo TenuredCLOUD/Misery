@@ -1,13 +1,13 @@
 #include "script_component.hpp"
 
-if !(isServer) exitWith {};
-
 if !(isClass (missionConfigFile >> "CfgMisery_ForgeData")) exitWith {
     [QUOTE(COMPONENT_BEAUTIFIED), "CfgMisery_ForgeData class not found in description.ext, skipping loading of anvil / smithing framework..."] call EFUNC(common,debugMessage);
 };
 
 if (isClass (missionConfigFile >> "CfgMisery_AnvilData")) then {
-    [] call FUNC(parseData);
+    if (isServer) then {
+        [] call FUNC(parseData);
+    };
 
     private _anvilAction = [
         QGVAR(anvil_menu),

@@ -55,12 +55,20 @@ for "_i" from 1 to _numArtifacts do {
 
     _groundHolder addItemCargoGlobal [selectRandom [MACRO_ARTIFACTS], 1];
 
-    // Emission system
-    private _light = "#lightpoint" createVehicleLocal [0,0,0];
-    _light setLightBrightness (0.05 + (selectMax _markerSize * 0.001));
-    _light setLightColor [random [0.4, 0.5, 0.6], random [0.4, 0.5, 0.6], random [0.4, 0.5, 0.6]];
-    _light lightAttachObject [_groundHolder, [0, 0, 0.5]];
-    _groundHolder setVariable [QGVAR(lightEmission), _light];
+    private _reflectorClass = selectRandom [
+        "Reflector_Cone_01_white_F",
+        "Reflector_Cone_01_orange_F",
+        "Reflector_Cone_01_red_F",
+        "Reflector_Cone_01_green_F",
+        "Reflector_Cone_01_blue_F"
+    ];
+
+    private _light = createVehicle [_reflectorClass, [0, 0, 0], [], 0, "CAN_COLLIDE"];
+
+    _light attachTo [_groundHolder, [0, 0, 0.5]];
+    _light setVectorDirAndUp [[0, 0, -1], [0, 1, 0]];
+
+    _groundHolder setVariable [QGVAR(lightEmission), _light, true];
 
     // Debug markers
     if (GVAR(debug)) then {
@@ -73,3 +81,4 @@ for "_i" from 1 to _numArtifacts do {
 
 // Mark marker as processed
 GVAR(processedMarkers) pushBackUnique _currentMarker;
+publicVariable QGVAR(processedMarkers);

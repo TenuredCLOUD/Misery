@@ -18,9 +18,6 @@ if (!hasInterface) exitWith {};
 // Default loadout
 GVAR(defaultLoadout) = [[[],[],[],[],[],[],"","",[],["ItemMap","","","ItemCompass","ItemWatch",""]],[], false];
 
-// Combat Logging
-[] call FUNC(combatLogPrevention);
-
 // Loadout change will clear item cache for hasItem
 ["loadout", {
     GVAR(itemsCache) = nil;
