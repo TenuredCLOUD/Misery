@@ -16,7 +16,7 @@
 [{
     params ["_args", "_handle"];
 
-    if (isNil {player getVariable QGVAR(miningOre)}) exitWith {
+    if (isNil {ACE_player getVariable QGVAR(miningOre)}) exitWith {
         _handle call CBA_fnc_removePerFrameHandler;
     };
 

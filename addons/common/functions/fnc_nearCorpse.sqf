@@ -13,7 +13,7 @@
  * 1: Corpse <OBJECT>
  *
  * Example:
- * [player, ["Sheep_random_F"], 2] call misery_common_fnc_nearCorpse;
+ * [ACE_player, ["Sheep_random_F"], 2] call misery_common_fnc_nearCorpse;
 */
 
 params ["_object", "_type", "_radius"];

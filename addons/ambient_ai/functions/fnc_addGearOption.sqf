@@ -18,7 +18,7 @@
 
 params ["_unit"];
 
-if (side _unit isEqualTo side player) then {
+if (side _unit isEqualTo side ACE_player) then {
 
     private _gearAction = [
         QGVAR(gear_menu),

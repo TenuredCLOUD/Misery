@@ -17,13 +17,13 @@
 
 [{
 
-    if (!alive player) exitWith {};
+    if (!alive ACE_player) exitWith {};
 
     if (isGamePaused) exitWith {};
 
-    private _activeMeds = [player, false] call ACEFUNC(medical_status,getAllMedicationCount);
+    private _activeMeds = [ACE_player, false] call ACEFUNC(medical_status,getAllMedicationCount);
     private _currentBloodstream = _activeMeds apply { toLower (_x select 0) };
-    private _activeIVs = player call ACEFUNC(medical,getIVs);
+    private _activeIVs = ACE_player call ACEFUNC(medical,getIVs);
 
     if (_activeMeds isEqualTo [] && _activeIVs isEqualTo []) exitWith {};
 
@@ -45,13 +45,13 @@
 
         // Simulated overdose
         if (_dose > _maxDose) then {
-            [player, _className, _dose, _maxDose, _className] call ACEFUNC(medical_treatment,overDose);
+            [ACE_player, _className, _dose, _maxDose, _className] call ACEFUNC(medical_treatment,overDose);
         };
 
         // Incompatible Interaction
         {
             if (toLower _x in _currentBloodstream) then {
-                [player, _className, _dose, _maxDose, _x] call ACEFUNC(medical_treatment,overDose);
+                [ACE_player, _className, _dose, _maxDose, _x] call ACEFUNC(medical_treatment,overDose);
             };
         } forEach _incompatibleMedication;
 

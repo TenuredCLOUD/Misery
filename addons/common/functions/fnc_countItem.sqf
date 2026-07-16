@@ -16,7 +16,7 @@
 
 params ["_item"];
 
-private _allItems = (uniformItems player) + (vestItems player) + (backpackItems player);
+private _allItems = (uniformItems ACE_player) + (vestItems ACE_player) + (backpackItems ACE_player);
 
 private _totalCount = {_x isEqualTo _item} count _allItems;
 

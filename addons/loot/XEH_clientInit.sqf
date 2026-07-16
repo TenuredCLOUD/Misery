@@ -2,9 +2,9 @@
 
 if (!hasInterface) exitWith {};
 
-// Grab nearby building positions in 100m and cache them as used so no loot generates infront of player on spawn / reload inside buildings
-[{!isNull player}, {
-    [player, 100] call EFUNC(common,nearBuilding) params ["", "", "_nearBuildings"];
+// Grab nearby building positions in 100m and cache them as used so no loot generates infront of ACE_player on spawn / reload inside buildings
+[{!isNull ACE_player}, {
+    [ACE_player, 100] call EFUNC(common,nearBuilding) params ["", "", "_nearBuildings"];
     private _toCache = [];
 
     {

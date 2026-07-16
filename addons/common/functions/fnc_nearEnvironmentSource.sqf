@@ -12,11 +12,11 @@
  * None
  *
  * Example:
- * [player, 1, 1] call misery_common_fnc_nearEnvironmentSource;
+ * [ACE_player, 1, 1] call misery_common_fnc_nearEnvironmentSource;
  *
 */
 
-params [["_unit", player], ["_type", 1], ["_maxDistance", 1.5]];
+params [["_unit", ACE_player], ["_type", 1], ["_maxDistance", 1.5]];
 
 private _unitPos = eyePos _unit;
 private _unitDir = eyeDirection _unit;

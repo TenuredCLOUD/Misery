@@ -19,7 +19,7 @@
 
     if (isGamePaused) exitWith {};
 
-    [player] call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "", "_respiratory"];
+    [ACE_player] call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "", "_respiratory"];
     call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "_cartridgeEfficiency"];
 
     if (_scba >= 1) exitWith {};
@@ -33,14 +33,14 @@
     private _decrementValue = _baseDegradation;
 
     // Check if in hazardous zones
-    private _inHazardZone = ((EGVAR(chemical,areas) findIf {player inArea _x} isNotEqualTo -1) || (EGVAR(radiation,areas) findIf {player inArea _x} isNotEqualTo -1));
+    private _inHazardZone = ((EGVAR(chemical,areas) findIf {ACE_player inArea _x} isNotEqualTo -1) || (EGVAR(radiation,areas) findIf {ACE_player inArea _x} isNotEqualTo -1));
 
     if (_inHazardZone) then {
         _decrementValue = _decrementValue * _zoneMultiplier;
     };
 
-    if (isNull objectParent player) then {
-        private _fatigue = [getFatigue player, player getVariable [QACEGVAR(advanced_fatigue,aimFatigue), 0]] select (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)});
+    if (isNull objectParent ACE_player) then {
+        private _fatigue = [getFatigue ACE_player, ACE_player getVariable [QACEGVAR(advanced_fatigue,aimFatigue), 0]] select (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)});
         private _fatiguePenalty = _fatigue * _fatigueMultiplier;
         _decrementValue = _decrementValue + _fatiguePenalty;
     };
@@ -51,12 +51,12 @@
 
     [-_decrementValue, "cartridge"] call EFUNC(common,addStatusModifier);
     private _cartridgeEfficiencyTotal = ((_cartridgeEfficiency + GVAR(modifiers)) min 1) max 0;
-    player setVariable [QGVAR(cartridgeEfficiency), _cartridgeEfficiencyTotal];
+    ACE_player setVariable [QGVAR(cartridgeEfficiency), _cartridgeEfficiencyTotal];
     GVAR(modifiers) = 0;
 
     if (_cartridgeEfficiencyTotal <= 0) then {
         [] call FUNC(swapMask);
-        player setVariable [QGVAR(cartridgeEfficiency), MACRO_PLAYER_DEFAULTS_HIGH];
+        ACE_player setVariable [QGVAR(cartridgeEfficiency), MACRO_PLAYER_DEFAULTS_HIGH];
     };
 
     [QUOTE(COMPONENT_BEAUTIFIED), "Deficiency cycle..."] call EFUNC(common,debugMessage);

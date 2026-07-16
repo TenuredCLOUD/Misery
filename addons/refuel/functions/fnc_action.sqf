@@ -29,7 +29,7 @@ if !(call FUNC(checkAreas)) exitWith {
             createDialog QCLASS(refuelShop_ui);
         },
         {
-            GVAR(areas) findIf {player inArea _x} isNotEqualTo -1
+            GVAR(areas) findIf {ACE_player inArea _x} isNotEqualTo -1
         }
     ] call ACEFUNC(interact_menu,createAction);
 

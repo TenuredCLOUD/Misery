@@ -20,7 +20,7 @@ params ["_audioSource", "_logicHandle"];
     params ["_args", "_handle"];
     _args params ["_audioSource", "_logicHandle"];
 
-    if (!([player] call FUNC(hasDetector)) || !alive player) exitWith {
+    if (!([ACE_player] call FUNC(hasDetector)) || !alive ACE_player) exitWith {
         if !(isNull _audioSource) then {
             deleteVehicle _audioSource;
             if (!isNil "_logicHandle") then {

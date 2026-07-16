@@ -19,7 +19,7 @@ private _nearbyFire = objNull;
 private _fireIndex = -1;
 
 {
-    if (player distance (_x select 0) < 2.5) exitWith {
+    if (ACE_player distance (_x select 0) < 2.5) exitWith {
         _nearbyFire = _x select 0;
         _fireIndex = _forEachIndex;
     };

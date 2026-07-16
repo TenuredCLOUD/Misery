@@ -27,5 +27,5 @@ if (_parasites > 0) then {
 
 private _finalThirst = ((_thirst + GVAR(thirstModifiers)) min 1) max 0;
 GVAR(thirstModifiers) = 0;
-player setVariable [QGVAR(thirst), _finalThirst];
+ACE_player setVariable [QGVAR(thirst), _finalThirst];
 

@@ -15,7 +15,7 @@
  *
 */
 
-[player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
+[ACE_player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
 
 if (isNull _vehicle) exitWith {
     ctrlSetText [1001, localize LSTRING(InvalidVehicle)];
@@ -40,7 +40,7 @@ private _fuelTypeIndex = 0;
 
 if !(_found) exitWith {};
 
-player setVariable [QCLASS(processRefuel), true];
+ACE_player setVariable [QCLASS(processRefuel), true];
 
 // Initial button disabler
 [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], false] call EFUNC(common,displayEnableControls);
@@ -48,7 +48,7 @@ player setVariable [QCLASS(processRefuel), true];
 _refuelInterrupt = (findDisplay 274839) displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
     if (_key isEqualTo DIK_ESCAPE) then {
-        player setVariable [QCLASS(processRefuel),false];
+        ACE_player setVariable [QCLASS(processRefuel),false];
         [QEGVAR(common,tileText), localize LSTRING(SyphoningInterrupted)] call CBA_fnc_localEvent;
     };
 }];
@@ -63,7 +63,7 @@ private _requiredFuelType = switch (_fuelTypeIndex) do {
 private _hasRequiredFuel = [[(_requiredFuelType) select 0, (_requiredFuelType) select 2]] call EFUNC(common,hasItem);
 
 if (fuel _vehicle <= 0) exitWith {
-    player setVariable [QCLASS(processRefuel), nil];
+    ACE_player setVariable [QCLASS(processRefuel), nil];
     (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
     _vehicle setFuel 0;
     ctrlSetText [1001, format [localize LSTRING(FuelTankEmpty), [_vehicle] call EFUNC(common,getObjectData) select 0]];
@@ -89,14 +89,14 @@ private _displayedText = "";
     private _emptyFuelCan = (_requiredFuelType) select 2;
     private _fuelCanMagazine = (_requiredFuelType) select 0;
 
-    if ((player getVariable QCLASS(processRefuel)) isEqualTo false) exitWith {
+    if ((ACE_player getVariable QCLASS(processRefuel)) isEqualTo false) exitWith {
         (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
         [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
     if (fuel _vehicle <= 0) exitWith {
-        player setVariable [QCLASS(processRefuel), nil];
+        ACE_player setVariable [QCLASS(processRefuel), nil];
         (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
         _vehicle setFuel 0;
         ctrlSetText [1001, format [localize LSTRING(FuelTankEmpty), [_vehicle] call EFUNC(common,getObjectData) select 0]];
@@ -107,7 +107,7 @@ private _displayedText = "";
     private _hasRequiredFuel = [[(_requiredFuelType) select 0, (_requiredFuelType) select 2]] call EFUNC(common,hasItem);
 
     if (!_hasRequiredFuel) exitWith {
-        player setVariable [QCLASS(processRefuel), nil];
+        ACE_player setVariable [QCLASS(processRefuel), nil];
         (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
         ctrlSetText [1001, format [localize LSTRING(NeedSyphonContainers), (_requiredFuelType) select 0, (_requiredFuelType) select 2]];
         [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
@@ -120,8 +120,8 @@ private _displayedText = "";
 
     // Remove empty fuel can and replace with magazine variant
     if ([[(_requiredFuelType) select 2]] call EFUNC(common,hasItem)) then {
-        player removeItem _emptyFuelCan;
-        [player, _fuelCanMagazine, 1, true] call CBA_fnc_addMagazine;
+        ACE_player removeItem _emptyFuelCan;
+        [ACE_player, _fuelCanMagazine, 1, true] call CBA_fnc_addMagazine;
     };
 
     // Increment the count of the used Jerry can type

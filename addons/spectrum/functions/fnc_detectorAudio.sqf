@@ -13,7 +13,7 @@
  * [] call misery_spectrum_fnc_detectorAudio
 */
 
-[{[player] call FUNC(hasDetector)},
+[{[ACE_player] call FUNC(hasDetector)},
 {
     [{
         params ["_args", "_handle"];
@@ -36,7 +36,7 @@
 
         if (_randomRemnant isEqualTo 25 && "remnant" call EFUNC(common,isModLoaded)) then {
             _group = createGroup [civilian, true];
-            _pos = getPos player;
+            _pos = getPos ACE_player;
             _pos = [_pos select 0, _pos select 1, _pos select 2];
             _pos = _pos vectorAdd [50, 0, 0];
             _entity = [MACRO_PHANTOM_ENTITIES];
@@ -49,7 +49,7 @@
 
         if (_randomSpook isEqualTo 25 && "DSA_Spooks" call EFUNC(common,isModLoaded)) then {
             _group = createGroup [civilian, true];
-            _pos = getPos player;
+            _pos = getPos ACE_player;
             _pos = [_pos select 0, _pos select 1, _pos select 2];
             _pos = _pos vectorAdd [50, 0, 0];
             _spookArray = [] + dsaSpookBases + dsaDevMutants + dsaWebknightCreatures;

@@ -12,7 +12,7 @@
  * 1: Nearest player <OBJECT>
  *
  * Example:
- * [player, 2] call misery_common_fnc_nearPlayer;
+ * [ACE_player, 2] call misery_common_fnc_nearPlayer;
 */
 
 params ["_object", "_radius"];

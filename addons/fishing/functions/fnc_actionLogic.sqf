@@ -22,10 +22,10 @@ private _idd = 982387;
 
     [{
         if (!isNull findDisplay _this) then {
-            GVAR(actionLogic) = "GroundWeaponHolder_Scripted" createVehicle(getPos player);
+            GVAR(actionLogic) = "GroundWeaponHolder_Scripted" createVehicle(getPos ACE_player);
             GVAR(actionLogic) addItemCargoGlobal [QCLASS(fishingPole), 1];
             GVAR(actionLogic) setDir 0;
-            GVAR(actionLogic) attachTo [player,[0,-0.15,-0.75],"rightHandMiddle1",true];
+            GVAR(actionLogic) attachTo [ACE_player,[0,-0.15,-0.75],"rightHandMiddle1",true];
             GVAR(actionLogic) setVectorDirAndUp [[3,0,0.55],[9.05,0.65,-0.15]];
         };
     }, _idd, 0.1] call CBA_fnc_waitAndExecute;

@@ -1,6 +1,10 @@
 #include "script_component.hpp"
 
-if (GVAR(woodCollection)) then {
+if !(GVAR(woodCollection)) exitWith {};
+
+if !(hasInterface) exitWith {};
+
+["CBA_loadingScreenDone", {
 
     [QCLASSACE(interactMenuOpened), {
         params ["_type"];
@@ -37,5 +41,6 @@ if (GVAR(woodCollection)) then {
         3
     ] call ACEFUNC(interact_menu,createAction);
 
-    [player, 1, [QUOTE(ACE_SelfActions), QUOTE(ACE_Equipment)], _forestrySplitLog] call ACEFUNC(interact_menu,addActionToObject);
-};
+    [ACE_player, 1, [QUOTE(ACE_SelfActions), QUOTE(ACE_Equipment)], _forestrySplitLog] call ACEFUNC(interact_menu,addActionToObject);
+
+}] call CBA_fnc_addEventHandler;

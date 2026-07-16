@@ -15,10 +15,10 @@
 
 private _playerGear = [];
 
-_playerGear pushBack (uniform player);
-_playerGear pushBack (vest player);
-_playerGear pushBack (goggles player);
-_playerGear pushBack (headgear player);
-_playerGear pushBack (backpack player);
+_playerGear pushBack (uniform ACE_player);
+_playerGear pushBack (vest ACE_player);
+_playerGear pushBack (goggles ACE_player);
+_playerGear pushBack (headgear ACE_player);
+_playerGear pushBack (backpack ACE_player);
 
 _playerGear

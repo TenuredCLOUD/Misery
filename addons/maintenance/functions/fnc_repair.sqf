@@ -27,7 +27,7 @@ if !([["ToolKit"]] call EFUNC(common,hasItem)) exitWith {
     ctrlSetText [1001, localize LSTRING(NeedToolkitRepair)];
 };
 
-[player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
+[ACE_player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
 
 if (isNull _vehicle) exitWith {
     ctrlSetText [1001, localize LSTRING(InvalidVehicle)];
@@ -63,10 +63,10 @@ switch (true) do {
 
         if (_hitpointDamage isEqualTo 1 && _hasSpare) then {
             [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], false] call EFUNC(common,displayEnableControls);
-            player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+            ACE_player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
             [{
                 params ["_vehicle", "_index"];
-                [player, QCLASS(spareTire)] call CBA_fnc_removeItem;
+                [ACE_player, QCLASS(spareTire)] call CBA_fnc_removeItem;
                 _vehicle setHitIndex [_index, 0];
                 ctrlSetText [1001, localize LSTRING(RepairedWheelSpare)];
                 [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
@@ -78,7 +78,7 @@ switch (true) do {
             } else {
                 if (_hitpointDamage > 0 && _hasPatchKit) then {
                     [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], false] call EFUNC(common,displayEnableControls);
-                    player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+                    ACE_player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
                     [{
                         params ["_vehicle", "_index"];
                         [QCLASS(tirePatchKit)] call EFUNC(common,itemDecrement);
@@ -109,7 +109,7 @@ switch (true) do {
             [_vehicle] call FUNC(listed);
         };
         if ([[_requiredForRepair]] call EFUNC(common,hasItem)) exitWith {
-            player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+            ACE_player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
             [{
                 params ["_vehicle", "_requiredForRepair", "_index", "_selectionName"];
                 if !(GVAR(difficulty)) then {

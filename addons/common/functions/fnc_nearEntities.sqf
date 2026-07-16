@@ -16,6 +16,6 @@
 
 params ["_entities", "_distance"];
 
-private _nearEntities = player nearEntities [_entities, _distance];
+private _nearEntities = ACE_player nearEntities [_entities, _distance];
 
 _nearEntities isNotEqualTo []

@@ -17,6 +17,6 @@
 
 params ["_object"];
 
-private _nearObjects = nearestObjects [_object, [QCLASS(forge)], 2.5];
+private _nearObjects = nearestObjects [_object, [QCLASS(forge)], 5];
 
 [_nearObjects select 0, (_nearObjects select 0) getVariable [QGVAR(fuel), 0]]

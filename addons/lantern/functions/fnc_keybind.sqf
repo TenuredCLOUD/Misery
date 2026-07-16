@@ -15,8 +15,8 @@
 */
 
 if ([[QCLASS(lantern_Off)]] call EFUNC(common,hasItem)) then {
-    if (isNil {player getVariable [QGVAR(state), nil]}) then {
-        [player, [QCLASS(lantern_On), QCLASS(lantern_Off)], true] call EFUNC(common,switchPowerState);
+    if (isNil {ACE_player getVariable [QGVAR(state), nil]}) then {
+        [ACE_player, [QCLASS(lantern_On), QCLASS(lantern_Off)], true] call EFUNC(common,switchPowerState);
 
         if ([40] call EFUNC(common,rollChance)) then {
             [QCLASS(lantern_On), QCLASS(lantern_NoBattery)] call EFUNC(common,itemDecrement);
@@ -24,27 +24,27 @@ if ([[QCLASS(lantern_Off)]] call EFUNC(common,hasItem)) then {
         // Run logic check regardless of deduction
         call FUNC(logicCheck);
 
-        private _lantern = "Land_Camping_Light_F" createVehicle position player;
+        private _lantern = "Land_Camping_Light_F" createVehicle position ACE_player;
 
         _lantern setVariable [QGRADGVAR(persistence,isExcluded), true, true];
 
-        [QGVAR(attachLantern), [_lantern, [player, [-0.17, -0.14, -0.06], "Pelvis", true]]] call CBA_fnc_globalEvent;
+        [QGVAR(attachLantern), [_lantern, [ACE_player, [-0.17, -0.14, -0.06], "Pelvis", true]]] call CBA_fnc_globalEvent;
 
-        player setVariable [QGVAR(state), _lantern, true];
+        ACE_player setVariable [QGVAR(state), _lantern, true];
     };
 };
 
 if ([[QCLASS(lantern_On)]] call EFUNC(common,hasItem)) then {
-    if (!isNil {player getVariable [QGVAR(state), nil]}) then {
-        private _lantern = player getVariable [QGVAR(state), nil];
+    if (!isNil {ACE_player getVariable [QGVAR(state), nil]}) then {
+        private _lantern = ACE_player getVariable [QGVAR(state), nil];
 
         [QGVAR(deleteLantern), [_lantern]] call CBA_fnc_globalEvent;
 
-        [player, [QCLASS(lantern_On), QCLASS(lantern_Off)], false] call EFUNC(common,switchPowerState);
+        [ACE_player, [QCLASS(lantern_On), QCLASS(lantern_Off)], false] call EFUNC(common,switchPowerState);
 
-        player setVariable [QGVAR(state), nil, true];
+        ACE_player setVariable [QGVAR(state), nil, true];
     } else {
         // Fallback for reloader issues
-        [player, [QCLASS(lantern_On), QCLASS(lantern_Off)], false] call EFUNC(common,switchPowerState);
+        [ACE_player, [QCLASS(lantern_On), QCLASS(lantern_Off)], false] call EFUNC(common,switchPowerState);
     };
 };

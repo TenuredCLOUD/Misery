@@ -17,7 +17,7 @@
 
 [{!isNull findDisplay 982379}, {
     private _list = findDisplay 982379 displayCtrl 1500;
-    private _playerXP = player getVariable [QGVAR(xp), MACRO_PLAYER_DEFAULTS_LOW];
+    private _playerXP = ACE_player getVariable [QGVAR(xp), MACRO_PLAYER_DEFAULTS_LOW];
 
     [982379, [1010], false] call EFUNC(common,displayShowControls);
 

@@ -10,5 +10,7 @@ if (isServer) then {
 
 if (!hasInterface) exitWith {};
 
-[] call FUNC(init);
+["CBA_loadingScreenDone", {
+    call FUNC(init);
+}] call CBA_fnc_addEventHandler;
 

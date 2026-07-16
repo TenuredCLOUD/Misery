@@ -22,10 +22,10 @@ if !(hasInterface) exitWith {};
         }
     ] call ACEFUNC(interact_menu,createAction);
 
-    [player, 1, [QUOTE(ACE_SelfActions)], _leadContainer] call ACEFUNC(interact_menu,addActionToObject);
+    [ACE_player, 1, [QUOTE(ACE_SelfActions)], _leadContainer] call ACEFUNC(interact_menu,addActionToObject);
 
     // Reactivate Geiger if picking up active one:
-    player addEventHandler ["Take", {
+    ACE_player addEventHandler ["Take", {
         params ["_unit", "_container", "_item"];
         if (_item isEqualTo QCLASS(geiger_On)) then {
             if (isNil {_unit getVariable "GeigerON"}) then {
@@ -35,7 +35,7 @@ if !(hasInterface) exitWith {};
     }];
 
     // Kill Detection var for Geiger if you drop it:
-    player addEventHandler ["Put", {
+    ACE_player addEventHandler ["Put", {
         params ["_unit", "_container", "_item"];
         if (_item isEqualTo QCLASS(geiger_On)) then {
             if (_unit getVariable ["GeigerON", true]) then {

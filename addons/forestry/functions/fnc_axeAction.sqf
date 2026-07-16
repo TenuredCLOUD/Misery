@@ -30,12 +30,12 @@ if !(_hasAxe) exitWith {
     [QEGVAR(common,tileText), localize LSTRING(NoAxeForWoodNoti)] call CBA_fnc_localEvent;
 };
 
-if (currentWeapon player isNotEqualTo "") then {
-    [player] call ACEFUNC(weaponselect,putWeaponAway);
+if (currentWeapon ACE_player isNotEqualTo "") then {
+    [ACE_player] call ACEFUNC(weaponselect,putWeaponAway);
 };
 
-private _soundDummy = "Land_HelipadEmpty_F" createVehicle (getPosWorld player);
-_soundDummy attachTo [player, [0, 0, 0], "Pelvis"];
+private _soundDummy = "Land_HelipadEmpty_F" createVehicle (getPosWorld ACE_player);
+_soundDummy attachTo [ACE_player, [0, 0, 0], "Pelvis"];
 
 _soundDummy say3D [QCLASS(audio_sound_chopWood), 500];
 
@@ -50,9 +50,9 @@ _soundDummy say3D [QCLASS(audio_sound_chopWood), 500];
         deleteVehicle _soundDummy;
     };
 
-    [player, QCLASS(woodensticks), selectRandom [1, 2, 3, 4, 5]] call EFUNC(common,addItem);
-    [player, QCLASS(firewood), selectRandom [1, 2]] call EFUNC(common,addItem);
-    [player, QCLASS(woodenlog), true] call CBA_fnc_addItem;
+    [ACE_player, QCLASS(woodensticks), selectRandom [1, 2, 3, 4, 5]] call EFUNC(common,addItem);
+    [ACE_player, QCLASS(firewood), selectRandom [1, 2]] call EFUNC(common,addItem);
+    [ACE_player, QCLASS(woodenlog), true] call CBA_fnc_addItem;
 
     _tree setDamage 1;
 },

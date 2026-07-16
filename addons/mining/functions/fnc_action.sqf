@@ -30,22 +30,22 @@ if !([[QCLASS(pickaxe)]] call EFUNC(common,hasItem)) exitWith {
     [QEGVAR(common,tileText), localize LSTRING(NoTools)] call CBA_fnc_localEvent;
 };
 
-if (GVAR(minedPositions) findIf {_x distance getPosWorld player < 2.5} isNotEqualTo -1) exitWith {
+if (GVAR(minedPositions) findIf {_x distance getPosWorld ACE_player < 2.5} isNotEqualTo -1) exitWith {
     [QEGVAR(common,tileText), localize LSTRING(VeinDepleted)] call CBA_fnc_localEvent;
 };
 
-if (currentWeapon player isNotEqualTo "") then {
-    [player] call ACEFUNC(weaponselect,putWeaponAway);
+if (currentWeapon ACE_player isNotEqualTo "") then {
+    [ACE_player] call ACEFUNC(weaponselect,putWeaponAway);
 };
 
-private _soundDummy = "Land_HelipadEmpty_F" createVehicle (getPosWorld player);
-_soundDummy attachTo [player, [0, 0, 0], "Pelvis"];
+private _soundDummy = "Land_HelipadEmpty_F" createVehicle (getPosWorld ACE_player);
+_soundDummy attachTo [ACE_player, [0, 0, 0], "Pelvis"];
 
 if (_audio isNotEqualTo "") then {
     _soundDummy say3D [_audio, 250];
 };
 
-player setVariable [QGVAR(miningOre), true];
+ACE_player setVariable [QGVAR(miningOre), true];
 
 call FUNC(degradePick);
 
@@ -62,7 +62,7 @@ _miningTime,
         deleteVehicle _soundDummy;
     };
 
-    player setVariable [QGVAR(miningOre), nil];
+    ACE_player setVariable [QGVAR(miningOre), nil];
 
     private _itemCargo = [];
 
@@ -70,20 +70,20 @@ _miningTime,
         _x params ["_classname", "_amount", "_chance"];
         if ([_chance] call EFUNC(common,rollChance)) then {
             _itemCargo pushBack [_classname, _amount];
-            [player, _classname, _amount] call EFUNC(common,addItem);
+            [ACE_player, _classname, _amount] call EFUNC(common,addItem);
         };
     } forEach _items;
 
     if (_itemCargo isNotEqualTo []) then {
-        [player, QCLASS(stoneChunk), selectRandom [1, 2, 3, 4, 5]] call EFUNC(common,addItem);
+        [ACE_player, QCLASS(stoneChunk), selectRandom [1, 2, 3, 4, 5]] call EFUNC(common,addItem);
         [QEGVAR(common,tileText), localize LSTRING(Success)] call CBA_fnc_localEvent;
     } else {
-        [player, QCLASS(stoneChunk), selectRandom [1, 2, 3, 4, 5]] call EFUNC(common,addItem);
+        [ACE_player, QCLASS(stoneChunk), selectRandom [1, 2, 3, 4, 5]] call EFUNC(common,addItem);
         [QEGVAR(common,tileText), localize LSTRING(NoOreFound)] call CBA_fnc_localEvent;
     };
 
     if ([_oreDepletion] call EFUNC(common,rollChance)) then {
-        private _position = getPosWorld player;
+        private _position = getPosWorld ACE_player;
 
         // Check if position is already cached (within 2.5 meters)
         if (GVAR(minedPositions) findIf {_x distance _position < 2.5} isEqualTo -1) then {
@@ -100,7 +100,7 @@ _miningTime,
     params ["_args"];
     _args params ["_objectData", "_miningTime", "_soundDummy"];
 
-    player setVariable [QGVAR(miningOre), nil];
+    ACE_player setVariable [QGVAR(miningOre), nil];
 
     if (_soundDummy isNotEqualTo objNull) then {
         deleteVehicle _soundDummy;

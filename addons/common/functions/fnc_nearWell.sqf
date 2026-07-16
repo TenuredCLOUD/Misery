@@ -19,7 +19,7 @@ _found=false;
 _type="";
 _rDir=0;
 {
-_rDir=(player getRelDir _x);
+_rDir=(ACE_player getRelDir _x);
 if ((_rDir>270)OR(_rDir<90)) then {
     _type=toLower format["%1",_x];
     {
@@ -27,6 +27,6 @@ if ((_rDir>270)OR(_rDir<90)) then {
     } forEach EGVAR(hydrology,waterSources);
 };
 if (_found)exitWith{};
-} forEach(nearestObjects[player,[],2.5]);
+} forEach(nearestObjects[ACE_player,[],2.5]);
 
 _found //return val (BOOL)

@@ -115,7 +115,7 @@ if (hasInterface && !GVAR(difficulty)) then {
             createDialog QCLASS(maintenance_ui);
         },
         {
-            ([player] call EFUNC(common,nearVehicle)) select 0
+            ([ACE_player] call EFUNC(common,nearVehicle)) select 0
         }
     ] call ACEFUNC(interact_menu,createAction);
 

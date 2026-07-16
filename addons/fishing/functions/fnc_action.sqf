@@ -23,8 +23,8 @@ if !([] call FUNC(hasGear)) exitWith {
 };
 
 // Force holstering
-if (currentWeapon player isNotEqualTo "") then {
-    player action ["SWITCHWEAPON", player, player, -1];
+if (currentWeapon ACE_player isNotEqualTo "") then {
+    ACE_player action ["SWITCHWEAPON", ACE_player, ACE_player, -1];
 };
 
 createDialog QCLASS(fishing_ui);

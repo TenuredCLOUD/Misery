@@ -20,24 +20,10 @@
     }, [_lantern], 0.02] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addEventHandler;
 
-private _lanternBatteries = [
-    QGVAR(lantern_menu),
-    localize LSTRING(Action),
-    QPATHTOEF(icons,data\battery_charging_ca.paa),
-    {
-        call FUNC(batteries);
-    },
-    {
-        [[QCLASS(9vBattery), QCLASS(lantern_NoBattery)]] call EFUNC(common,hasItem)
-    }
-] call ACEFUNC(interact_menu,createAction);
-
-[player, 1, [QUOTE(ACE_SelfActions)], _lanternBatteries] call ACEFUNC(interact_menu,addActionToObject);
-
 if (isServer) then {
     addMissionEventHandler ["EntityKilled", {
         params ["_killed", "_killer", "_instigator"];
-        if (_killed isEqualTo player && {local _killed}) then {
+        if (_killed isEqualTo ACE_player && {local _killed}) then {
             if (!isNil {_killed getVariable [QGVAR(state), nil]}) then {
                 private _lantern = _killed getVariable [QGVAR(state), nil];
                 [QGVAR(deleteLantern), [_lantern]] call CBA_fnc_globalEvent;
@@ -47,8 +33,25 @@ if (isServer) then {
     }];
 };
 
-if (hasInterface) then {
-    player addEventHandler ["Put", {
+if !(hasInterface) exitWith {};
+
+["CBA_loadingScreenDone", {
+
+    private _lanternBatteries = [
+        QGVAR(lantern_menu),
+        localize LSTRING(Action),
+        QPATHTOEF(icons,data\battery_charging_ca.paa),
+        {
+            call FUNC(batteries);
+        },
+        {
+            [[QCLASS(9vBattery), QCLASS(lantern_NoBattery)]] call EFUNC(common,hasItem)
+        }
+    ] call ACEFUNC(interact_menu,createAction);
+
+    [ACE_player, 1, [QUOTE(ACE_SelfActions)], _lanternBatteries] call ACEFUNC(interact_menu,addActionToObject);
+
+    ACE_player addEventHandler ["Put", {
         params ["_unit", "_container", "_item"];
         if (_item isEqualTo QCLASS(lantern_On) && {local _unit}) then {
             if (!isNil {_unit getVariable [QGVAR(state), nil]}) then {
@@ -59,7 +62,7 @@ if (hasInterface) then {
         };
     }];
 
-    player addEventHandler ["Take", {
+    ACE_player addEventHandler ["Take", {
         params ["_unit", "_container", "_item"];
         if (_item isEqualTo QCLASS(lantern_On) && {local _unit}) then {
             if (isNil {_unit getVariable [QGVAR(state), nil]}) then {
@@ -72,21 +75,21 @@ if (hasInterface) then {
     }];
 
     // Safety fallback for auto-removal of lanterns if still active (on load / reload)
-    [{!isNull player && !isNull findDisplay 46}, {
+    [{!isNull ACE_player && !isNull findDisplay 46}, {
         if ([[QCLASS(lantern_On)]] call EFUNC(common,hasItem)) then {
-            if (!isNil {player getVariable [QGVAR(state), nil]}) then {
-                private _lantern = player getVariable [QGVAR(state), nil];
+            if (!isNil {ACE_player getVariable [QGVAR(state), nil]}) then {
+                private _lantern = ACE_player getVariable [QGVAR(state), nil];
 
                 [QGVAR(deleteLantern), [_lantern]] call CBA_fnc_globalEvent;
 
-                [player, [QCLASS(lantern_On), QCLASS(lantern_Off)], false] call EFUNC(common,switchPowerState);
+                [ACE_player, [QCLASS(lantern_On), QCLASS(lantern_Off)], false] call EFUNC(common,switchPowerState);
 
-                player setVariable [QGVAR(state), nil, true];
+                ACE_player setVariable [QGVAR(state), nil, true];
             } else {
                 // Fallback for reloader issues
-                [player, [QCLASS(lantern_On), QCLASS(lantern_Off)], false] call EFUNC(common,switchPowerState);
+                [ACE_player, [QCLASS(lantern_On), QCLASS(lantern_Off)], false] call EFUNC(common,switchPowerState);
             };
         };
     }, []] call CBA_fnc_waitUntilAndExecute;
-};
 
+}] call CBA_fnc_addEventHandler;

@@ -17,7 +17,7 @@
 
 params ["_item"];
 
-private _magazines = magazinesAmmo player;
+private _magazines = magazinesAmmo ACE_player;
 private _itemContainer = _magazines findIf {(_x select 0) isEqualTo _item};
 
 if (_itemContainer isEqualTo -1) exitWith {};

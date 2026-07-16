@@ -23,12 +23,12 @@ if !(EGVAR(temperature,enabled)) exitWith {};
 // Exposure
 private _finalExposure = ((_exposure + EGVAR(temperature,exposureModifiers)) min 1) max -1;
 EGVAR(temperature,exposureModifiers) = 0;
-player setVariable [QEGVAR(temperature,exposure), _finalExposure];
+ACE_player setVariable [QEGVAR(temperature,exposure), _finalExposure];
 
 // Thermal Index / caches players temperature
-player setVariable [QEGVAR(temperature,thermalIndex), EGVAR(temperature,thermalIndexModifiers)];
+ACE_player setVariable [QEGVAR(temperature,thermalIndex), EGVAR(temperature,thermalIndexModifiers)];
 
 // Wetness
 private _finalWetness = ((_wetness + EGVAR(temperature,wetnessModifiers)) min 1) max 0;
 EGVAR(temperature,wetnessModifiers) = 0;
-player setVariable [QEGVAR(temperature,wetness), _finalWetness];
+ACE_player setVariable [QEGVAR(temperature,wetness), _finalWetness];

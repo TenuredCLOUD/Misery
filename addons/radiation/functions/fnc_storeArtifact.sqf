@@ -22,8 +22,8 @@ if ([_artifacts] call EFUNC(common,hasItem)) then {
     private _index = EGVAR(common,itemsCache) findIf {_x in _artifacts};
     private _artifact = EGVAR(common,itemsCache) select _index;
 
-    player removeItem _artifact;
-    player removeItem QCLASS(leadContainer_Open);
-    player addItem QCLASS(leadContainer_Closed);
+    ACE_player removeItem _artifact;
+    ACE_player removeItem QCLASS(leadContainer_Open);
+    ACE_player addItem QCLASS(leadContainer_Closed);
     [QEGVAR(common,tileText), localize LSTRING(StoreLeadContainer)] call CBA_fnc_localEvent;
 };

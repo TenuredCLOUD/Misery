@@ -13,15 +13,15 @@
  * [] call misery_chemical_fnc_detectorAlert
 */
 
-[{"ChemicalDetector_01_watch_F" in assignedItems player}, {
+[{"ChemicalDetector_01_watch_F" in assignedItems ACE_player}, {
     [{
         params ["_args", "_handle"];
 
         if (isGamePaused) exitWith {};
 
-        private _threatLevel = player getVariable [QGVAR(detectedThreat), 0];
+        private _threatLevel = ACE_player getVariable [QGVAR(detectedThreat), 0];
 
-        if !("ChemicalDetector_01_watch_F" in assignedItems player || isNil "_threatLevel") exitWith {
+        if !("ChemicalDetector_01_watch_F" in assignedItems ACE_player || isNil "_threatLevel") exitWith {
             call FUNC(detectorAlert);
             _handle call CBA_fnc_removePerFrameHandler;
         };

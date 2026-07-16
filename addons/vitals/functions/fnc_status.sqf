@@ -33,7 +33,7 @@ disableSerialization;
     private _ailmentsList = _vitalsDisplay displayCtrl 1502;
 
     call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "", "_exposure", "_wetness", "_radiation", "_infection", "_parasites", "_toxicity", "_psychosis", "_buffs", "_ailments", "_funds", "", "_cartridgeEfficiency"];
-    [player] call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "_skinProtection", "_respiratoryProtection", "_eyeProtection", "_hearingProtection"];
+    [ACE_player] call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "_skinProtection", "_respiratoryProtection", "_eyeProtection", "_hearingProtection"];
 
     lbClear _buffsList;
     lbClear _ailmentsList;
@@ -75,14 +75,14 @@ disableSerialization;
         private _index = _buffsList lbAdd _buffName;
         _buffsList lbSetData [_index, _buffName];
         _buffsList lbSetPicture [_index, _buffImage];
-    } forEach (player getVariable ["buffs", []]);
+    } forEach (ACE_player getVariable ["buffs", []]);
 
     {
         _x params ["_ailmentName", "_ailmentImage"];
         private _index = _ailmentsList lbAdd _ailmentName;
         _ailmentsList lbSetData [_index, _ailmentName];
         _ailmentsList lbSetPicture [_index, _ailmentImage];
-    } forEach (player getVariable ["ailments", []]);
+    } forEach (ACE_player getVariable ["ailments", []]);
 
     if (!EGVAR(gasmask,enhanced)) then {
         [982377, [1016, 1017], false] call EFUNC(common,displayShowControls);
@@ -108,7 +108,7 @@ disableSerialization;
 
     _hungerBar progressSetPosition _hunger;
     _thirstBar progressSetPosition _thirst;
-    private _fatigueValue = [getFatigue player, player getVariable [QACEGVAR(advanced_fatigue,aimFatigue), 0]] select (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)});
+    private _fatigueValue = [getFatigue ACE_player, ACE_player getVariable [QACEGVAR(advanced_fatigue,aimFatigue), 0]] select (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)});
     _fatigueBar progressSetPosition _fatigueValue;
 
     if (_wetness <= 0) then {

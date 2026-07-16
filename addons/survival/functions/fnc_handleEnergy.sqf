@@ -25,10 +25,10 @@ if (_isMultiplayer) exitWith {};
 [+_decrementValue, "energy"] call EFUNC(common,addStatusModifier);
 private _finalEnergy = ((_energyDeficit + GVAR(energyModifiers)) min 1) max 0;
 GVAR(energyModifiers) = 0;
-player setVariable [QGVAR(energyDeficit), _finalEnergy];
+ACE_player setVariable [QGVAR(energyDeficit), _finalEnergy];
 
-private _isSleeping = player getVariable [QEGVAR(sleep,isSleeping), false];
+private _isSleeping = ACE_player getVariable [QEGVAR(sleep,isSleeping), false];
 
 if (_energyDeficit > 0.9 && !(_isSleeping) && [1] call EFUNC(common,rollChance)) then {
-    [player, true, 5, true] call ACEFUNC(medical,setUnconscious);
+    [ACE_player, true, 5, true] call ACEFUNC(medical,setUnconscious);
 };

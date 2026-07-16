@@ -13,10 +13,10 @@
  * [] call misery_devils_luck_fnc_unloadMenu;
 */
 
-private _dealer = player getVariable [QGVAR(currentDealer), objNull];
+private _dealer = ACE_player getVariable [QGVAR(currentDealer), objNull];
 
 if (!isNull _dealer) then {
     _dealer setVariable [QGVAR(isActive), false, true];
 };
 
-player setVariable [QGVAR(currentDealer), nil];
+ACE_player setVariable [QGVAR(currentDealer), nil];

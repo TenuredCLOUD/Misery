@@ -20,7 +20,7 @@
     if !(call EFUNC(radiation,hasArtifact)) exitWith {}; // Early exit until player has an artifact.
 
     // Handle artifact dosage
-    [player] call EFUNC(protection,totalProtection) params ["", "", "_skinProtection", "_respiratoryProtection", "_eyeProtection"];
+    [ACE_player] call EFUNC(protection,totalProtection) params ["", "", "_skinProtection", "_respiratoryProtection", "_eyeProtection"];
 
     private _skinDeficit = 1 * ((1 - _skinProtection) / 1) max 0;
     private _respiratoryDeficit = 1 * ((1 - _respiratoryProtection) / 1) max 0;
@@ -28,7 +28,7 @@
     private _totalDeficit = _skinDeficit + _respiratoryDeficit + _eyeDeficit;
 
     private _radResistance = 1.0;
-    private _activeMeds = [player, false] call ACEFUNC(medical_status,getAllMedicationCount);
+    private _activeMeds = [ACE_player, false] call ACEFUNC(medical_status,getAllMedicationCount);
 
     {
         _x params ["_className", "_dose", "_effectiveness"];

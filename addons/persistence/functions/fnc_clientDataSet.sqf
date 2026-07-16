@@ -13,13 +13,13 @@
  * [] call misery_persistence_fnc_clientDataSet
 */
 
-private _playerID = getPlayerUID player;
+private _playerID = getPlayerUID ACE_player;
 private _playerVariables = call EFUNC(common,getPlayerVariables);
-private _loadout = getUnitLoadout player;
-private _position = getPosWorld player;
-private _direction = getDir player;
-private _stance = stance player;
-private _damage = [player] call ACEFUNC(medical,serializeState);
+private _loadout = getUnitLoadout ACE_player;
+private _position = getPosWorld ACE_player;
+private _direction = getDir ACE_player;
+private _stance = stance ACE_player;
+private _damage = [ACE_player] call ACEFUNC(medical,serializeState);
 
 private _rawArray = [
     worldName,

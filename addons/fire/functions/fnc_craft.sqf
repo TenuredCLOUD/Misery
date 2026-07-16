@@ -40,7 +40,7 @@ private _isReignition = false;
 private _fireIndex = -1;
 private _fuelType = "";
 {
-    if (player distance (_x select 0) < 2.5 && !inflamed (_x select 0)) exitWith {
+    if (ACE_player distance (_x select 0) < 2.5 && !inflamed (_x select 0)) exitWith {
         _nearbyFire = _x select 0;
         _isReignition = true;
         _fireIndex = _forEachIndex;
@@ -89,23 +89,23 @@ if (!_isReignition) then {
 // Play ignition sound
 private _ignitionSound = ["\z\misery\addons\audio\sounds\immersion\Match.ogg", "\z\misery\addons\audio\sounds\immersion\Lighter.ogg"] select ([MACRO_FIRE_IGNITION] find _ignition);
 
-playSound3D [_ignitionSound, player, false, getPosASL player, 4, 1, 10];
+playSound3D [_ignitionSound, ACE_player, false, getPosASL ACE_player, 4, 1, 10];
 
-player playAction "Gear";
+ACE_player playAction "Gear";
 
-player setVariable [QCLASS(isCraftingFire), true];
+ACE_player setVariable [QCLASS(isCraftingFire), true];
 
 // Interrupt handler
 private _craftInterrupt = _display displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key"];
     if (_key isEqualTo DIK_ESCAPE) then {
-        player setVariable [QCLASS(isCraftingFire), false];
+        ACE_player setVariable [QCLASS(isCraftingFire), false];
         [QEGVAR(common,tileText), localize LSTRING(Interrupted)] call CBA_fnc_localEvent;
     };
 }];
 
 private _craftingTime = [5, 10, 15] select (["small", "big", "barrel"] find _fuelType);
-if (rain > 0.3 && insideBuilding player isEqualTo 0) then {
+if (rain > 0.3 && insideBuilding ACE_player isEqualTo 0) then {
     _craftingTime = _craftingTime * 1.5;
 };
 
@@ -131,11 +131,11 @@ private _currentStep = 0;
         "_currentStep"
     ];
 
-    if (!(player getVariable [QCLASS(isCraftingFire), false]) || !alive player) exitWith {
-        player setVariable [QCLASS(isCraftingFire), nil];
+    if (!(ACE_player getVariable [QCLASS(isCraftingFire), false]) || !alive ACE_player) exitWith {
+        ACE_player setVariable [QCLASS(isCraftingFire), nil];
         _display displayRemoveEventHandler ["KeyDown", _craftInterrupt];
         [982388, [1600, 1601, 1602], true] call EFUNC(common,displayEnableControls);
-        [player, _tinder] call CBA_fnc_removeItem;
+        [ACE_player, _tinder] call CBA_fnc_removeItem;
         [_ignition] call EFUNC(common,itemDecrement);
         _noteBox ctrlSetText localize LSTRING(InterruptedTinder);
         call FUNC(populate);
@@ -162,7 +162,7 @@ private _currentStep = 0;
         };
 
     // Tinder and ignition source depletion:
-        [player, _tinder] call CBA_fnc_removeItem;
+        [ACE_player, _tinder] call CBA_fnc_removeItem;
         [_ignition] call EFUNC(common,itemDecrement);
 
         if (_isSuccessful) then {
@@ -175,7 +175,7 @@ private _currentStep = 0;
             _noteBox ctrlSetText localize LSTRING(Failed);
         };
 
-        player setVariable [QCLASS(isCraftingFire), nil];
+        ACE_player setVariable [QCLASS(isCraftingFire), nil];
         _display displayRemoveEventHandler ["KeyDown", _craftInterrupt];
         [982388, [1600, 1601, 1602], true] call EFUNC(common,displayEnableControls);
         call FUNC(populate);

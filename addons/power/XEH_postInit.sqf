@@ -12,5 +12,6 @@ if (isServer) then {
 
 if !(hasInterface) exitWith {};
 
-call FUNC(generatorInteractions);
-
+["CBA_loadingScreenDone", {
+    call FUNC(generatorInteractions);
+}] call CBA_fnc_addEventHandler;

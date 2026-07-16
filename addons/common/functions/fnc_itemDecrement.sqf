@@ -16,20 +16,20 @@
 
 params ["_item", ["_replacementItem", ""]];
 
-private _magazines = magazinesAmmo player;
+private _magazines = magazinesAmmo ACE_player;
 private _itemContainer = _magazines findIf {(_x select 0) isEqualTo _item};
 
 if (_itemContainer isNotEqualTo -1) then {
     private _containerCount = (_magazines select _itemContainer) select 1;
 
     if (_containerCount > 1) then {
-        player removeMagazine _item;
-        [player, _item, _containerCount - 1, true] call CBA_fnc_addMagazine;
+        ACE_player removeMagazine _item;
+        [ACE_player, _item, _containerCount - 1, true] call CBA_fnc_addMagazine;
         true
     } else {
-        player removeMagazine _item;
+        ACE_player removeMagazine _item;
         if (_replacementItem isNotEqualTo "") then {
-            [player, _replacementItem, true] call CBA_fnc_addItem;
+            [ACE_player, _replacementItem, true] call CBA_fnc_addItem;
         };
         false
     };

@@ -23,10 +23,10 @@ if !([["ChemicalDetector_01_black_F"]] call EFUNC(common,hasItem)) exitWith {
 };
 
 {
-    for "_i" from 1 to 2 do {[player, _x] call CBA_fnc_removeItem};
+    for "_i" from 1 to 2 do {[ACE_player, _x] call CBA_fnc_removeItem};
 } forEach [QCLASS(9vBattery)];
 
 [QEGVAR(common,tileText), localize LSTRING(AddedBatteries)] call CBA_fnc_localEvent;
 
-[player, "ChemicalDetector_01_black_F", "ChemicalDetector_01_watch_F"] call EFUNC(common,itemSwap);
+[ACE_player, "ChemicalDetector_01_black_F", "ChemicalDetector_01_watch_F"] call EFUNC(common,itemSwap);
 

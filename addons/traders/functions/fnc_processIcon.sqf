@@ -29,7 +29,7 @@
 
     private _selectedItem = _list lbData _currselection;
 
-    private _trader = player getVariable [QGVAR(currentTrader), objNull];
+    private _trader = ACE_player getVariable [QGVAR(currentTrader), objNull];
     private _shop = _trader getVariable [QGVAR(shop), []];
     _shop params ["", "", "_items"];
 

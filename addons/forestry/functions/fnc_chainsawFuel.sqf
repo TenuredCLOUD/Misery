@@ -28,9 +28,9 @@ if (_currentFuel isEqualTo _maxFuel) exitWith {
     private _hasSaw = [[QCLASS(chainsaw)]] call EFUNC(common,hasItem);
 
     if (_hasEmptySaw && !_hasSaw) then {
-        [player, QCLASS(chainsaw_Empty)] call CBA_fnc_removeItem;
+        [ACE_player, QCLASS(chainsaw_Empty)] call CBA_fnc_removeItem;
         [QCLASS(sawFuel)] call EFUNC(common,itemDecrement);
-        [player, QCLASS(chainsaw), 1] call CBA_fnc_addMagazine;
+        [ACE_player, QCLASS(chainsaw), 1] call CBA_fnc_addMagazine;
     };
 
     if !([[QCLASS(sawFuel)]] call EFUNC(common,hasItem)) exitWith {

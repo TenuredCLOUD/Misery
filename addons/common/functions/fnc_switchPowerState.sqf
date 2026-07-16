@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [player, ["misery_lantern_On", "misery_lantern_Off"], true] call misery_common_fnc_switchPowerState
+ * [ACE_player, ["misery_lantern_On", "misery_lantern_Off"], true] call misery_common_fnc_switchPowerState
 */
 
 params ["_unit", "_magazineFilter", "_switchToOn"];

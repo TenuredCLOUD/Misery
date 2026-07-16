@@ -27,7 +27,7 @@ if !([["ToolKit"]] call EFUNC(common,hasItem)) exitWith {
     ctrlSetText [1001, localize LSTRING(NeedToolkitScavenge)];
 };
 
-[player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
+[ACE_player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
 
 if (isNull _vehicle) exitWith {
     ctrlSetText [1001, localize LSTRING(InvalidVehicle)];
@@ -64,13 +64,13 @@ switch (true) do {
         };
 
         [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], false] call EFUNC(common,displayEnableControls);
-        player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+        ACE_player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
         [{
             params ["_vehicle", "_index", "_selectionName", "_scavengedItem"];
             if !(GVAR(difficulty)) then {
-                [player, _scavengedItem, true] call CBA_fnc_addItem;
+                [ACE_player, _scavengedItem, true] call CBA_fnc_addItem;
             } else {
-                [player, QCLASS(spareTire), true] call CBA_fnc_addItem;
+                [ACE_player, QCLASS(spareTire), true] call CBA_fnc_addItem;
             };
             _vehicle setHitIndex [_index, 1];
             ctrlSetText [1001, format [localize LSTRING(ScavengedSuccess), _selectionName]];
@@ -94,11 +94,11 @@ switch (true) do {
             [_vehicle] call FUNC(listed);
         };
         if ([[QCLASS(emptyToolKit)]] call EFUNC(common,hasItem)) exitWith {
-            player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+            ACE_player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
             [{
                 params ["_vehicle", "_index", "_selectionName", "_scavengedItem"];
-                player removeItem QCLASS(emptyToolKit);
-                [player, _scavengedItem, 1, true] call CBA_fnc_addMagazine;
+                ACE_player removeItem QCLASS(emptyToolKit);
+                [ACE_player, _scavengedItem, 1, true] call CBA_fnc_addMagazine;
                 _vehicle setHitIndex [_index, 1];
                 ctrlSetText [1001, format [localize LSTRING(ScavengedFromUsed), [_scavengedItem] call EFUNC(common,getItemData) select 0, [QCLASS(emptyToolKit)] call EFUNC(common,getItemData) select 0, _selectionName]];
                 [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
@@ -113,7 +113,7 @@ switch (true) do {
                 [_vehicle] call FUNC(listed);
             };
             if (_incremented) exitWith {
-                player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+                ACE_player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
                 [{
                     params ["_vehicle", "_index", "_selectionName", "_scavengedItem"];
                     _vehicle setHitIndex [_index, 1];

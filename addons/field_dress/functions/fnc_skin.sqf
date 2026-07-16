@@ -47,7 +47,7 @@ switch (true) do {
     };
 };
 
-player playAction "Gear";
+ACE_player playAction "Gear";
 
 [localize LSTRING(Start),
 15,
@@ -56,14 +56,14 @@ player playAction "Gear";
     params ["_args"];
     _args params ["_animal", "_audioSource"];
 
-    player playAction "";
+    ACE_player playAction "";
 
     if !(isNull _audioSource) then {
         deleteVehicle _audioSource;
     };
 
     for "_i" from 1 to (GVAR(meatCount) + round(random 1)) do {
-        [player, QCLASS(rawMeat), true] call CBA_fnc_addItem;
+        [ACE_player, QCLASS(rawMeat), true] call CBA_fnc_addItem;
     };
 
     [_animal] call EFUNC(ballistics,destroy);
@@ -74,7 +74,7 @@ player playAction "Gear";
     params ["_args"];
     _args params ["_animal", "_audioSource"];
 
-    player playAction "";
+    ACE_player playAction "";
 
     if !(isNull _audioSource) then {
         deleteVehicle _audioSource;

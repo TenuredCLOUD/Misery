@@ -16,7 +16,7 @@
 */
 
 // NATO APR & CUR
-player addEventHandler ["SlotItemChanged", {
+ACE_player addEventHandler ["SlotItemChanged", {
     params ["_unit", "_name", "_slot", "_assigned", "_weapon"];
     private _lowercaseName = toLower _name;
     private _maskIndex = MACRO_RESPIRATOR_MASKS_CUR findIf {_lowercaseName isEqualTo (_x select 0)};
@@ -36,7 +36,7 @@ player addEventHandler ["SlotItemChanged", {
 }];
 
 // Regulator mask & SCBA
-player addEventHandler ["SlotItemChanged", {
+ACE_player addEventHandler ["SlotItemChanged", {
     params ["_unit", "_name", "_slot", "_assigned", "_weapon"];
 
     private _lowercaseName = toLower _name;

@@ -21,7 +21,7 @@ disableSerialization;
 {
     [{
         params ["_args", "_handle"];
-        if ( isNull findDisplay 982380 || (!alive player)) exitWith {
+        if ( isNull findDisplay 982380 || (!alive ACE_player)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
 

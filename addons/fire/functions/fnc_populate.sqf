@@ -34,7 +34,7 @@ lbClear _ignitionCombo;
     if (_displayName == "") then {
         _displayName = getText (configFile >> "CfgMagazines" >> _x >> "displayName");
     };
-    if (_x in items player || _x in magazines player) then {
+    if (_x in items ACE_player || _x in magazines ACE_player) then {
         private _index = _tinderCombo lbAdd _displayName;
         _tinderCombo lbSetData [_index, _x];
     };
@@ -45,7 +45,7 @@ private _fuelItems = [MACRO_FIRE_FUEL];
 private _nearbyFire = objNull;
 private _nearbyType = "";
 {
-    if (player distance (_x select 0) < 2.5 && !inflamed (_x select 0) && {_x select 1 in ["big", "barrel"]}) exitWith {
+    if (ACE_player distance (_x select 0) < 2.5 && !inflamed (_x select 0) && {_x select 1 in ["big", "barrel"]}) exitWith {
         _nearbyFire = _x select 0;
         _nearbyType = _x select 1;
     };
@@ -53,7 +53,7 @@ private _nearbyType = "";
 
 // Check untracked unlit fires
 if (isNull _nearbyFire) then {
-    private _nearbyObjects = nearestObjects [player, ["Fireplace_base_F", "Land_Fire_barrel_F"], 2.5];
+    private _nearbyObjects = nearestObjects [ACE_player, ["Fireplace_base_F", "Land_Fire_barrel_F"], 2.5];
     {
         if (!inflamed _x) exitWith {
             _nearbyFire = _x;
@@ -66,12 +66,12 @@ if (isNull _nearbyFire) then {
     } forEach _nearbyObjects;
 };
 
-if (!isNull _nearbyFire && {QCLASS(firewood) in items player} && {_nearbyType in ["big", "barrel"]}) then {
+if (!isNull _nearbyFire && {QCLASS(firewood) in items ACE_player} && {_nearbyType in ["big", "barrel"]}) then {
     _fuelItems pushBackUnique QCLASS(firewood);
 };
 {
     private _displayName = getText (configFile >> "CfgWeapons" >> _x >> "displayName");
-    if (_x in items player) then {
+    if (_x in items ACE_player) then {
         private _index = _fuelCombo lbAdd _displayName;
         _fuelCombo lbSetData [_index, _x];
     };
@@ -83,7 +83,7 @@ if (!isNull _nearbyFire && {QCLASS(firewood) in items player} && {_nearbyType in
     if (_displayName == "") then {
         _displayName = getText (configFile >> "CfgMagazines" >> _x >> "displayName");
     };
-    if (_x in items player || _x in magazines player) then {
+    if (_x in items ACE_player || _x in magazines ACE_player) then {
         private _index = _ignitionCombo lbAdd _displayName;
         _ignitionCombo lbSetData [_index, _x];
     };

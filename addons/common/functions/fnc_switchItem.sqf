@@ -18,13 +18,13 @@ params ["_switchFrom", "_switchTo"];
 
 if (_switchFrom isNotEqualTo []) then {
     {
-        player removeItem _x;
+        ACE_player removeItem _x;
     } forEach _switchFrom;
 };
 
 // If the player doesn't have space for the item, it is placed nearby on the ground.
 if (_switchTo isNotEqualTo []) then {
     {
-        [player, _x, true] call CBA_fnc_addItem;
+        [ACE_player, _x, true] call CBA_fnc_addItem;
     } forEach _switchTo;
 };

@@ -21,7 +21,7 @@ if !(GVAR(enabled)) exitWith {};
 
 call FUNC(environment) params ["_airTemp", "_seaTemp"];
 
-[player] call FUNC(clothing) params ["_clothesWarmth"];
+[ACE_player] call FUNC(clothing) params ["_clothesWarmth"];
 _clothesWarmth = _clothesWarmth * (1 - _wetness * 0.5);
 
 private _wetnessChill = linearConversion [0, 1, _wetness, 0, 0.8, true];
@@ -30,7 +30,7 @@ private _targetExposure = _ambientTarget;
 private _thermalIndexModifier = _airTemp + (_clothesWarmth / 5);
 private _wetnessModifier = 0;
 private _changeMultiplier = 1;
-private _hasWetsuit = ((toLower uniform player) find "wetsuit") > -1;
+private _hasWetsuit = ((toLower uniform ACE_player) find "wetsuit") > -1;
 
 call EFUNC(common,nearFire) params ["", "_isInflamed"];
 
@@ -49,7 +49,7 @@ switch (true) do {
         _wetnessModifier = -0.01;
         _changeMultiplier = 50;
     };
-    case (insideBuilding player isEqualTo 1 && _isInflamed): {
+    case (insideBuilding ACE_player isEqualTo 1 && _isInflamed): {
         _targetExposure = ([0.5, 0.1] select (_airTemp < TEMP_NEUTRAL)) - (_wetnessChill * 0.5);
         _thermalIndexModifier = (_airTemp + 20) min 35;
         _wetnessModifier = -0.005;
@@ -61,23 +61,23 @@ switch (true) do {
         _wetnessModifier = -0.005;
         _changeMultiplier = 50;
     };
-    case (insideBuilding player isEqualTo 1): {
+    case (insideBuilding ACE_player isEqualTo 1): {
         _targetExposure = ((_ambientTarget + 0.3) min 0) - _wetnessChill;
         _thermalIndexModifier = _airTemp + 10;
         _wetnessModifier = -0.0001;
         _changeMultiplier = 50;
     };
-    case !(isNull objectParent player): {
+    case !(isNull objectParent ACE_player): {
         private _config = missionConfigFile >> "CfgMisery_VehicleData";
         private _shelteredVeh = false;
 
-        if (isClass _config && {isNumber (_config >> typeOf vehicle player >> "shelter")}) then {
-            _shelterValue = getNumber (_config >> typeOf vehicle player >> "shelter");
-            if (_shelterValue > 0 && isEngineOn vehicle player) then {
+        if (isClass _config && {isNumber (_config >> typeOf vehicle ACE_player >> "shelter")}) then {
+            _shelterValue = getNumber (_config >> typeOf vehicle ACE_player >> "shelter");
+            if (_shelterValue > 0 && isEngineOn vehicle ACE_player) then {
                 _shelteredVeh = true;
             };
         } else {
-            if (getNumber (configOf (vehicle player) >> "transportSoldier") > 0 && isEngineOn vehicle player) then {
+            if (getNumber (configOf (vehicle ACE_player) >> "transportSoldier") > 0 && isEngineOn vehicle ACE_player) then {
                 _shelteredVeh = true;
             };
         };
@@ -92,7 +92,7 @@ switch (true) do {
         };
     };
     default {
-        private _isSwimming = [player] call ACEFUNC(common,isSwimming);
+        private _isSwimming = [ACE_player] call ACEFUNC(common,isSwimming);
 
         private _rainWet = false;
         private _waterWet = false;

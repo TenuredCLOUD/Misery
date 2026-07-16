@@ -15,11 +15,11 @@
  *
 */
 
-private _trader = player getVariable [QGVAR(currentTrader), objNull];
+private _trader = ACE_player getVariable [QGVAR(currentTrader), objNull];
 
 if (!isNull _trader) then {
     _trader setVariable [QGVAR(isBusy), false, true];
 };
 
 GVAR(currentAction) = nil;
-player setVariable [QGVAR(currentTrader), nil];
+ACE_player setVariable [QGVAR(currentTrader), nil];

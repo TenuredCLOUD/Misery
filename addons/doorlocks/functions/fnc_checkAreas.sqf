@@ -15,8 +15,8 @@
 
 // Convert to Array.
 if (GVAR(areas) isEqualType "") then {
-    GVAR(areas) = parseSimpleArray GVAR(areas);
-    publicVariable QGVAR(areas);
+    GVAR(areasCached) = parseSimpleArray GVAR(areas);
+    publicVariable QGVAR(areasCached);
 };
 
 private _failedMarkers = [];
@@ -29,6 +29,6 @@ private _failedMarkers = [];
         [QUOTE(COMPONENT_BEAUTIFIED), _msg] call EFUNC(common,debugMessage);
         _failedMarkers pushBackUnique _marker;
     };
-} forEach GVAR(areas);
+} forEach GVAR(areasCached);
 
 count _failedMarkers isEqualTo 0

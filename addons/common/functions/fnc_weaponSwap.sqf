@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [player, QCLASS(woodaxe), "WBK_axe"] call misery_common_fnc_weaponSwap;
+ * [ACE_player, QCLASS(woodaxe), "WBK_axe"] call misery_common_fnc_weaponSwap;
  *
 */
 

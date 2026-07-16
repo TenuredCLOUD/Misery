@@ -4,7 +4,7 @@ if (hasInterface) then {
     call FUNC(processEffects);
 
     // Auto swap logic for ACE pain pills
-    player addEventHandler ["Take", {
+    ACE_player addEventHandler ["Take", {
 	    params ["_unit", "_container", "_item"];
 
         if (_item isEqualTo QCLASSACE(PainKillers)) then {
@@ -13,7 +13,7 @@ if (hasInterface) then {
     }];
 
 
-    player addEventHandler ["InventoryOpened", {
+    ACE_player addEventHandler ["InventoryOpened", {
         params ["_unit", "_primaryContainer", "_secondaryContainer"];
 
         if ([[QCLASSACE(PainKillers)]] call EFUNC(common,hasItem)) then {

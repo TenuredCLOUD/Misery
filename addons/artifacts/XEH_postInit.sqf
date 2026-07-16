@@ -21,7 +21,7 @@ if !(hasInterface) exitWith {};
     [] call FUNC(exposure);
 
     //Artifact Light emission handling:
-    player addEventHandler ["Take", {
+    ACE_player addEventHandler ["Take", {
         params ["_unit", "_container", "_item"];
         if (_item in [MACRO_ARTIFACTS]) then {
             private _light = _container getVariable [QGVAR(lightEmission), objNull];
@@ -31,7 +31,7 @@ if !(hasInterface) exitWith {};
         };
     }];
 
-    player addEventHandler ["Put", {
+    ACE_player addEventHandler ["Put", {
         params ["_unit", "_container", "_item"];
 
         if !(_container isKindOf "GroundWeaponHolder") exitWith {};

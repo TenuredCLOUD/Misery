@@ -14,7 +14,7 @@
  *
 */
 
-private _goggles = toLower goggles player;
+private _goggles = toLower goggles ACE_player;
 if (_goggles isEqualTo "") exitWith {};
 
 private _respirators = [MACRO_RESPIRATOR_MASKS];
@@ -23,10 +23,10 @@ if (_goggles in _respirators) then {
     private _index = _respirators find _goggles;
     private _noFilterMask = [MACRO_RESPIRATOR_MASKS_NOFILTER] select _index;
 
-    removeGoggles player;
-    player addGoggles _noFilterMask;
+    removeGoggles ACE_player;
+    ACE_player addGoggles _noFilterMask;
 } else {
-    removeGoggles player;
+    removeGoggles ACE_player;
     GVAR(lastMask) = _goggles;
-    [player, QCLASS(gasMask_Empty), true] call CBA_fnc_addItem;
+    [ACE_player, QCLASS(gasMask_Empty), true] call CBA_fnc_addItem;
 };

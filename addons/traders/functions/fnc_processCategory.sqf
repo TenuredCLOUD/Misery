@@ -19,7 +19,7 @@
 
     private _dialog = findDisplay 982390;
     private _categoryDropdown = _dialog displayCtrl 2100;
-    private _trader = player getVariable [QGVAR(currentTrader), objNull];
+    private _trader = ACE_player getVariable [QGVAR(currentTrader), objNull];
 
     if (isNull _trader) exitWith {(findDisplay 982390) closeDisplay 2};
 

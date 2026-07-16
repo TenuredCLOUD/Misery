@@ -13,12 +13,12 @@
  *     2: Debug string <STRING>
  *
  * Example:
- * [player] call misery_temperature_fnc_clothing;
+ * [ACE_player] call misery_temperature_fnc_clothing;
  *
  * Public: No
 */
 
-params [["_unit", player]];
+params [["_unit", ACE_player]];
 
 private _uniformWarmth = 0;
 private _vestWarmth = 0;

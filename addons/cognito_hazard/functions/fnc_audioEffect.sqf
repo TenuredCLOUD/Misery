@@ -18,13 +18,13 @@
 
     if (isGamePaused) exitWith {};
 
-    private _leftArea = GVAR(areasCached) findIf {player inArea _x} isEqualTo -1;
+    private _leftArea = GVAR(areasCached) findIf {ACE_player inArea _x} isEqualTo -1;
 
     if (_leftArea) exitWith {
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
-    private _hearingProtection = ([player] call EFUNC(protection,totalProtection)) select 5;
+    private _hearingProtection = ([ACE_player] call EFUNC(protection,totalProtection)) select 5;
 
     enableCamShake true;
 

@@ -14,7 +14,7 @@
  *
 */
 
-private _trader = player getVariable [QGVAR(currentDoctor), objNull];
+private _trader = ACE_player getVariable [QGVAR(currentDoctor), objNull];
 
 if (isNull _trader) exitWith {(findDisplay 982381) closeDisplay 2};
 

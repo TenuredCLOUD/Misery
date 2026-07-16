@@ -23,7 +23,7 @@ disableSerialization;
     private _iconCtrl = _dialog displayCtrl 1602;
     private _iconName = _dialog displayCtrl 1603;
 
-    [player] call EFUNC(common,nearVehicle) params ["", "_nearestVehicle"];
+    [ACE_player] call EFUNC(common,nearVehicle) params ["", "_nearestVehicle"];
 
     if (_nearestVehicle isEqualTo []) exitWith {
         _iconName ctrlSetText localize ECSTRING(maintenance,NoVehicleToRepair);

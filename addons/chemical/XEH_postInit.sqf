@@ -27,7 +27,7 @@ if !(hasInterface) exitWith {};
         }
     ] call ACEFUNC(interact_menu,createAction);
 
-    [player, 1, [QUOTE(ACE_SelfActions)], _chemicalDetectorBatteries] call ACEFUNC(interact_menu,addActionToObject);
+    [ACE_player, 1, [QUOTE(ACE_SelfActions)], _chemicalDetectorBatteries] call ACEFUNC(interact_menu,addActionToObject);
 }] call CBA_fnc_addEventHandler;
 
 

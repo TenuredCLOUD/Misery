@@ -26,7 +26,7 @@ if (isNil {_corpse getVariable QGVAR(processingSkin)}) then {
     _corpse setVariable [QGVAR(processingSkin), true, true];
 };
 
-player playAction "Gear";
+ACE_player playAction "Gear";
 
 [localize LSTRING(StartSkinning),
 15,
@@ -35,7 +35,7 @@ player playAction "Gear";
     params ["_args"];
     _args params ["_corpse", "_audioSource"];
 
-    player playAction "";
+    ACE_player playAction "";
 
     if !(isNull _audioSource) then {
         deleteVehicle _audioSource;
@@ -48,7 +48,7 @@ player playAction "Gear";
         QCLASS(zombie_Eye)
     ];
 
-    [player, _specimen, true] call CBA_fnc_addItem;
+    [ACE_player, _specimen, true] call CBA_fnc_addItem;
 
     [QEGVAR(common,tileText), localize LSTRING(RottenSpecimen)] call CBA_fnc_localEvent;
 },
@@ -56,7 +56,7 @@ player playAction "Gear";
     params ["_args"];
     _args params ["_corpse", "_audioSource"];
 
-    player playAction "";
+    ACE_player playAction "";
 
     if !(isNull _audioSource) then {
         deleteVehicle _audioSource;

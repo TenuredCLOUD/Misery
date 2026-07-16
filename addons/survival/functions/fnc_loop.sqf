@@ -19,7 +19,7 @@
 [{
     params ["_args", "_handle"];
 
-    if (!alive player) exitWith {};
+    if (!alive ACE_player) exitWith {};
 
     if (isGamePaused) exitWith {};
 
@@ -34,9 +34,9 @@
         _weightDeficiency = linearConversion [0, 1, _weightFactor, 0, 0.000066 * GVAR(metabolicCoef), true];
     };
 
-    // If player is not on foot, reduction stays at a low value.
-    if (isNull objectParent player) then {
-        private _currentSpeed = abs (speed player);
+    // If ACE_player is not on foot, reduction stays at a low value.
+    if (isNull objectParent ACE_player) then {
+        private _currentSpeed = abs (speed ACE_player);
 
         private _speedPenalty = linearConversion [0, 30, _currentSpeed, 0, 0.00001 * GVAR(metabolicCoef), true];
 

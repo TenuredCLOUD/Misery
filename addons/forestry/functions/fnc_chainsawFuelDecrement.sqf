@@ -16,7 +16,7 @@
 [{
     params ["_args", "_handle"];
 
-    if (isNil {player getVariable QGVAR(cuttingWood)}) exitWith {
+    if (isNil {ACE_player getVariable QGVAR(cuttingWood)}) exitWith {
         _handle call CBA_fnc_removePerFrameHandler;
     };
 

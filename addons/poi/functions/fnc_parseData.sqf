@@ -75,6 +75,7 @@ private _pois = missionConfigFile >> "CfgMisery_POI" >> "Areas";
         objNull // 37
     ];
     GVAR(list) pushBack _poiData;
+    publicVariable QGVAR(list);
 } forEach configProperties [_pois, "isClass _x"];
 
 [{

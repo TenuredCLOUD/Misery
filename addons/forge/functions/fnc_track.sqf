@@ -18,4 +18,5 @@
 
 [QCLASS(forge), "Init", {
     GVAR(tracked) pushBack (_this select 0);
+    publicVariable QGVAR(tracked);
 }, true, [], true] call CBA_fnc_addClassEventHandler;

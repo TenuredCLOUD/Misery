@@ -20,7 +20,7 @@ params ["_buttonAction"];
 private _dialog = findDisplay 982390;
 private _list = _dialog displayCtrl 1500;
 private _currSelection = lbCurSel _list;
-private _trader = player getVariable [QGVAR(currentTrader), objNull];
+private _trader = ACE_player getVariable [QGVAR(currentTrader), objNull];
 private _shop = _trader getVariable [QGVAR(shop), []];
 private _items = _shop select 2;
 private _shopFunds = _shop select 3;
@@ -59,20 +59,11 @@ switch (true) do {
         if (_shopFunds < _buyPrice) exitWith {
             ctrlSetText [1001, localize LSTRING(TraderInsufficientFunds)];
         };
-        _itemData set [2, _stock - 1];
-        _trader setVariable [QGVAR(shop), _shop, true];
-        [-_buyPrice] call EFUNC(currency,modifyMoney);
-        _shop set [3, _shopFunds + _buyPrice];
-        _trader setVariable [QGVAR(shop), _shop, true];
-        if (_purchaseCode isNotEqualTo "") then {
-            call compile _purchaseCode;
-        } else {
-            private _added = [player, _itemName, true] call CBA_fnc_addItem;
 
-        };
-        ctrlSetText [1001, format [localize LSTRING(PurchaseSuccess), [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck)), EGVAR(currency,symbol), [_buyPrice, 1, 2, true] call CBA_fnc_formatNumber]];
-        [] call FUNC(updateShop);
-        [] call FUNC(processIcon);
+        [
+            QGVAR(serverPurchase),
+            [ACE_player, _trader, _itemName, _buyPrice, _purchaseCode, _itemDisplayName, _objectDisplayName]
+        ] call CBA_fnc_serverEvent;
     };
     case (_buttonAction isEqualTo localize LSTRING(Sell)): {
         if ([_itemName] call EFUNC(common,countItem) isEqualTo 0) exitWith {
@@ -81,33 +72,16 @@ switch (true) do {
         if (_shopFunds < _sellPrice) exitWith {
             ctrlSetText [1001, localize LSTRING(TraderInsufficientFunds)];
         };
-        _itemData set [2, _stock + 1];
-        _trader setVariable [QGVAR(shop), _shop, true];
-        [_sellPrice] call EFUNC(currency,modifyMoney);
-        _shop set [3, _shopFunds - _sellPrice];
-        _trader setVariable [QGVAR(shop), _shop, true];
-        if (_itemName in magazines player) then {
-            [player, _itemName] call CBA_fnc_removeMagazine;
-        } else {
-            [player, _itemName] call CBA_fnc_removeItem;
-        };
-        ctrlSetText [1001, format [localize LSTRING(SellSuccess), [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck)), EGVAR(currency,symbol), [_sellPrice, 1, 2, true] call CBA_fnc_formatNumber]];
-        [] call FUNC(updateShop);
-        [] call FUNC(processIcon);
+
+        [QGVAR(serverSell), [ACE_player, _trader, _itemName, _sellPrice]] call CBA_fnc_serverEvent;
     };
     case (_buttonAction isEqualTo localize LSTRING(Gift)): {
         if (_trader getVariable [QGVAR(giftClicked), false]) then {
             if ([_itemName] call EFUNC(common,countItem) isEqualTo 0) exitWith {
                 ctrlSetText [1001, localize LSTRING(MissingItem)];
             };
-            _itemData set [2, _stock + 1];
-            _trader setVariable [QGVAR(shop), _shop, true];
-            if (_itemName in magazines player) then {
-                [player, _itemName] call CBA_fnc_removeMagazine;
-            } else {
-                [player, _itemName] call CBA_fnc_removeItem;
-            };
-            ctrlSetText [1001, format [localize LSTRING(GiftSuccess), [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck))]];
+
+            [QGVAR(serverGift), [ACE_player, _trader, _itemName]] call CBA_fnc_serverEvent;
             _trader setVariable [QGVAR(giftClicked), false];
         } else {
             _trader setVariable [QGVAR(giftClicked), true];
@@ -121,8 +95,6 @@ switch (true) do {
                 };
             }, [_trader], 5] call CBA_fnc_waitAndExecute;
         };
-        [] call FUNC(updateShop);
-        [] call FUNC(processIcon);
     };
     default {
         [QUOTE(COMPONENT_BEAUTIFIED), format [localize LSTRING(InvalidAction), _buttonAction]] call EFUNC(common,debugMessage);

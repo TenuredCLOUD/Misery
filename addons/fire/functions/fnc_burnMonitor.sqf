@@ -32,7 +32,7 @@
     private _burnTimeLeft = 0;
     private _type = "";
     {
-        if (player distance (_x select 0) < 2.5) exitWith {
+        if (ACE_player distance (_x select 0) < 2.5) exitWith {
             _nearbyFire = _x select 0;
             _burnTimeLeft = _x select 2;
             _type = _x select 1;
@@ -47,7 +47,7 @@
         [982388, [1600], false] call EFUNC(common,displayEnableControls);
     } else {
         _fuelTime ctrlSetText "";
-        if (!(player getVariable [QCLASS(isCraftingFire), nil]) && !ctrlEnabled (findDisplay 982388 displayCtrl 1600)) then {
+        if (!(ACE_player getVariable [QCLASS(isCraftingFire), nil]) && !ctrlEnabled (findDisplay 982388 displayCtrl 1600)) then {
             [982388, [1600], true] call EFUNC(common,displayEnableControls);
         };
     };

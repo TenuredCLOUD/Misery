@@ -14,7 +14,7 @@
  *
 */
 
-[player] call FUNC(stats) params ["_forge", "_fuelLevel"];
+[ACE_player] call FUNC(stats) params ["_forge", "_fuelLevel"];
 
 [{!isNull findDisplay 982388}, {
     params ["_forge", "_fuelLevel"];
@@ -27,7 +27,7 @@
         ctrlSetText [1001, localize LSTRING(NeedsCoal)];
     };
 
-    [player, QCLASS(coalOre)] call CBA_fnc_removeItem;
+    [ACE_player, QCLASS(coalOre)] call CBA_fnc_removeItem;
     ctrlSetText [1001, localize LSTRING(AddedCoal)];
 
     _forge setVariable [QGVAR(fuel), _fuelLevel + 0.05, true];

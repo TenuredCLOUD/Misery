@@ -65,22 +65,6 @@
             <Chinesesimp>车门锁 / 门锁系统</Chinesesimp>
             <Turkish>Kapı Kilitleri</Turkish>
         </Key>
-        <Key ID="STR_MISERY_DoorLocks_DoorsAlreadyLocked">
-            <English>Doors are already locked...</English>
-            <Czech>Dveře jsou již zamčeny...</Czech>
-            <French>Les portes sont déjà verrouillées...</French>
-            <Spanish>Las puertas ya están bloqueadas...</Spanish>
-            <Italian>Le porte sono già bloccate...</Italian>
-            <Polish>Drzwi są już zamknięte...</Polish>
-            <Portuguese>As portas já estão trancadas...</Portuguese>
-            <Russian>Двери уже заперты...</Russian>
-            <German>Türen sind bereits verriegelt...</German>
-            <Korean>문이 이미 잠겨 있습니다...</Korean>
-            <Japanese>ドアはすでにロックされています...</Japanese>
-            <Chinese>門已經鎖上了...</Chinese>
-            <Chinesesimp>门已经锁上了...</Chinesesimp>
-            <Turkish>Kapılar zaten kilitli...</Turkish>
-        </Key>
         <Key ID="STR_MISERY_DoorLocks_DoorsLocked">
             <English>Doors locked</English>
             <Czech>Dveře zamčeny</Czech>

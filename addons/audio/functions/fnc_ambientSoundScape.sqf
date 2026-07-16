@@ -23,7 +23,7 @@ if (!isNull _oldSoundSource) then {
 // Exit if no sounds defined, will end the loop.
 if (GVAR(ambientSoundScapeExtras) isEqualTo []) exitWith {};
 
-private _dummyPosition = player getPos [(30 + random 70), random 360];
+private _dummyPosition = ACE_player getPos [(30 + random 70), random 360];
 private _soundDummy = createVehicle ["Land_HelipadEmpty_F", _dummyPosition, [], 0, "CAN_COLLIDE"];
 
 private _sound = selectRandom GVAR(ambientSoundScapeExtras);

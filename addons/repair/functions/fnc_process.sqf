@@ -22,7 +22,7 @@ private _found = false;
 
 call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
-[player] call EFUNC(common,nearVehicle) params ["", "_nearestVehicle"];
+[ACE_player] call EFUNC(common,nearVehicle) params ["", "_nearestVehicle"];
 
 if (_nearestVehicle isEqualTo []) exitWith {};
 
@@ -37,12 +37,12 @@ if (_nearestVehicle isEqualTo []) exitWith {};
 
 if (!_found) exitWith {};
 
-player setVariable [QCLASS(processRepairs), true];
+ACE_player setVariable [QCLASS(processRepairs), true];
 
 private _repairsInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key"];
     if (_key isEqualTo DIK_ESCAPE) then {
-        player setVariable [QCLASS(processRepairs), false];
+        ACE_player setVariable [QCLASS(processRepairs), false];
         [QEGVAR(common,tileText), localize LSTRING(Interrupted)] call CBA_fnc_localEvent;
     };
 }];
@@ -50,7 +50,7 @@ private _repairsInterrupt = _dialog displayAddEventHandler ["KeyDown", {
 if (_funds < _repairPrice) exitWith {
     ctrlSetText [1001, localize ECSTRING(common,TooExpensive)];
     [982386, [1600, 1601], true] call EFUNC(common,displayShowControls);
-    player setVariable [QCLASS(processRepairs), nil];
+    ACE_player setVariable [QCLASS(processRepairs), nil];
     _dialog displayRemoveEventHandler ["KeyDown", _repairsInterrupt];
 };
 
@@ -58,7 +58,7 @@ private _hitData = getAllHitPointsDamage _nearestVehicle;
 if (_hitData isEqualTo [] || {(_hitData select 2) findIf {_x > 0} isEqualTo -1}) exitWith {
     ctrlSetText [1001, format [localize LSTRING(AlreadyFullyRepaired), _displayName]];
     [982386, [1600, 1601], true] call EFUNC(common,displayShowControls);
-    player setVariable [QCLASS(processRepairs), nil];
+    ACE_player setVariable [QCLASS(processRepairs), nil];
     _dialog displayRemoveEventHandler ["KeyDown", _repairsInterrupt];
 };
 
@@ -72,14 +72,14 @@ private _fundsPerTick = _repairPrice / _totalSteps;
 
     call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
-    if (!alive _nearestVehicle || !(player getVariable [QCLASS(processRepairs), false])) exitWith {
-        player setVariable [QCLASS(processRepairs), nil];
+    if (!alive _nearestVehicle || !(ACE_player getVariable [QCLASS(processRepairs), false])) exitWith {
+        ACE_player setVariable [QCLASS(processRepairs), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _repairsInterrupt];
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
     if (_funds < _fundsPerTick) exitWith {
-        player setVariable [QCLASS(processRepairs), nil];
+        ACE_player setVariable [QCLASS(processRepairs), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _repairsInterrupt];
         ctrlSetText [1001, localize ECSTRING(common,TooExpensive)];
         [982386, [1600, 1601], true] call EFUNC(common,displayShowControls);
@@ -93,7 +93,7 @@ private _fundsPerTick = _repairPrice / _totalSteps;
     private _targetIndex = _damages findIf { _x > 0 };
 
     if (_targetIndex isEqualTo -1) exitWith {
-        player setVariable [QCLASS(processRepairs), nil];
+        ACE_player setVariable [QCLASS(processRepairs), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _repairsInterrupt];
         ctrlSetText [1001, format [localize LSTRING(Success), _displayName]];
         [982386, [1600, 1601], true] call EFUNC(common,displayShowControls);

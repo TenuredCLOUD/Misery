@@ -36,23 +36,23 @@
 
 params ["_itemName", "_category", "_delay", "_hungerValue", "_thirstValue", "_energyDeficitValue", "_exposureValue", "_radiationValue", "_infectionValue", "_parasitesValue", "_toxicityValue", "_psychosisValue", "_maskBlocksUse", "_requiresCanOpener", "_removeOnUse", "_replacement", "_sound", "_feedback", "_animation", "_code"];
 
-[player] call EFUNC(protection,totalProtection) params ["_gasMask", "_scba"];
+[ACE_player] call EFUNC(protection,totalProtection) params ["_gasMask", "_scba"];
 
 if (_maskBlocksUse && {(_gasMask > 0 || _scba > 0)}) exitWith {
     [QEGVAR(common,tileText), [localize LSTRING(MaskEquipped)]] call CBA_fnc_localEvent;
 };
 
-if (_requiresCanOpener && {((items player + magazines player) findIf {_x in [MACRO_CANTOOLS]}) isEqualTo -1 && !(currentWeapon player in [MACRO_KNIVES])}) exitWith {
+if (_requiresCanOpener && {((items ACE_player + magazines ACE_player) findIf {_x in [MACRO_CANTOOLS]}) isEqualTo -1 && !(currentWeapon ACE_player in [MACRO_KNIVES])}) exitWith {
     [QEGVAR(common,tileText), [localize LSTRING(MissingTools)]] call CBA_fnc_localEvent;
 };
 
-if (gestureState player in [MACRO_ANIMATION_GESTURES]) exitWith {
+if (gestureState ACE_player in [MACRO_ANIMATION_GESTURES]) exitWith {
     [QEGVAR(common,tileText), [localize LSTRING(AlreadyConsuming)]] call CBA_fnc_localEvent;
 };
 
 if (_removeOnUse) then {
     if ([_itemName, "CfgWeapons"] call EFUNC(common,configCheck)) then {
-        [player, _itemName] call CBA_fnc_removeItem;
+        [ACE_player, _itemName] call CBA_fnc_removeItem;
     } else {
         [_itemName, _replacement] call EFUNC(common,itemDecrement);
     };
@@ -64,14 +64,14 @@ if (count _feedback >= 2) then {
 };
 
 if (_sound isNotEqualTo "") then {
-    playSound3D [_sound, player, false, getPosASL player, 4, 1, 10];
+    playSound3D [_sound, ACE_player, false, getPosASL ACE_player, 4, 1, 10];
 };
 
 if (_animation isNotEqualTo "") then {
     if (isClass (configFile >> "CfgMovesMaleSdr" >> "States" >> _animation)) then {
-        player switchMove _animation;
+        ACE_player switchMove _animation;
     } else {
-        player switchGesture _animation;
+        ACE_player switchGesture _animation;
     };
 };
 

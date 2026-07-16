@@ -17,11 +17,11 @@
 
 params ["_requiredItems"];
 
-private _playerItems = (items player) + (magazines player);
+private _playerItems = ((items ACE_player) + (magazines ACE_player)) apply { toLowerANSI _x };
 private _hasAll = true;
 
 {
-    private _item = _x select 0;
+    private _item = toLowerANSI (_x select 0);
     private _count = _x select 1;
     private _playerCount = {_x isEqualTo _item} count _playerItems;
 

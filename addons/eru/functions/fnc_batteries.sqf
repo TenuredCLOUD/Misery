@@ -23,9 +23,9 @@ if !([[QCLASS(eru_NoBattery)]] call EFUNC(common,hasItem)) exitWith {
 };
 
 {
-    [player, _x] call CBA_fnc_removeItem
+    [ACE_player, _x] call CBA_fnc_removeItem
 } forEach [QCLASS(eru_NoBattery), QCLASS(lithiumBattery)];
 
 [QEGVAR(common,tileText), localize LSTRING(AddBatteryToERU)] call CBA_fnc_localEvent;
 
-[player, QCLASS(eru_Off), true] call CBA_fnc_addItem;
+[ACE_player, QCLASS(eru_Off), true] call CBA_fnc_addItem;

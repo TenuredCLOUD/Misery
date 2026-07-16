@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [vehicle player] call misery_maintenance_fnc_updateIcon;
+ * [vehicle ACE_player] call misery_maintenance_fnc_updateIcon;
  *
  * Public: No
 */
@@ -20,11 +20,11 @@
     [{
         params ["_args", "_handle"];
 
-        if (isNull findDisplay 274839 || !alive player) exitWith {
+        if (isNull findDisplay 274839 || !alive ACE_player) exitWith {
             _handle call CBA_fnc_removePerFrameHandler;
         };
 
-        [player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
+        [ACE_player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
 
         [_vehicle] call EFUNC(common,getObjectData) params ["_displayName", "_picture"];
 

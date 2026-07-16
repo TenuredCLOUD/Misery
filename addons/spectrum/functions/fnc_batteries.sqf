@@ -14,7 +14,7 @@
  *
 */
 
-[player] call EFUNC(common,handgunAttachments) params ["_muzzle", "_light"];
+[ACE_player] call EFUNC(common,handgunAttachments) params ["_muzzle", "_light"];
 
 if (_muzzle isNotEqualTo "") exitWith {
     [QEGVAR(common,tileText), localize LSTRING(RemoveAntenna)] call CBA_fnc_localEvent;
@@ -33,12 +33,12 @@ if !([["hgun_esd_01_dummy_F"]] call EFUNC(common,hasItem)) exitWith {
 };
 
 {
-    for "_i" from 1 to 2 do {[player, _x] call CBA_fnc_removeItem};
+    for "_i" from 1 to 2 do {[ACE_player, _x] call CBA_fnc_removeItem};
 } forEach [QCLASS(lithiumBattery)];
 
 [QEGVAR(common,tileText), localize LSTRING(BatteriesAdded)] call CBA_fnc_localEvent;
 
-private _detector = handgunWeapon player;
-player removeWeapon _detector;
+private _detector = handgunWeapon ACE_player;
+ACE_player removeWeapon _detector;
 // add newspectrum device
-player addWeapon "hgun_esd_01_F";
+ACE_player addWeapon "hgun_esd_01_F";

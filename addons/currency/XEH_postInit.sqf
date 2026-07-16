@@ -40,7 +40,7 @@ private _giftMoneyAction = [
     3
 ] call ACEFUNC(interact_menu,createAction);
 
-["CAManBase", 0, [QUOTE(ACE_MainActions)], _giftMoneyAction] call ACEFUNC(interact_menu,addActionToClass);
+["CAManBase", 0, [QUOTE(ACE_MainActions)], _giftMoneyAction, true] call ACEFUNC(interact_menu,addActionToClass);
 
 private _fundsCheckAction = [
     QGVAR(check_menu),
@@ -53,9 +53,11 @@ private _fundsCheckAction = [
     {true}
 ] call ACEFUNC(interact_menu,createAction);
 
-[player, 1, [QUOTE(ACE_SelfActions), QUOTE(ACE_Equipment)], _fundsCheckAction] call ACEFUNC(interact_menu,addActionToObject);
+private _player = [] call ACEFUNC(common,player);
 
-player setVariable [QGVAR(canSearch), true, true];
+[_player, 1, [QUOTE(ACE_SelfActions), QUOTE(ACE_Equipment)], _fundsCheckAction] call ACEFUNC(interact_menu,addActionToObject);
+
+_player setVariable [QGVAR(canSearch), true, true];
 
 [QGVAR(addCorpseSearchAction), {
     params ["_unit"];

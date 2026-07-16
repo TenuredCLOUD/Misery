@@ -30,37 +30,37 @@
 */
 
 // Energy
-private _hunger = player getVariable [QEGVAR(survival,hunger), MACRO_PLAYER_DEFAULTS_HIGH];
-private _thirst = player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH];
-private _energyDeficit = player getVariable [QEGVAR(survival,energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
+private _hunger = ACE_player getVariable [QEGVAR(survival,hunger), MACRO_PLAYER_DEFAULTS_HIGH];
+private _thirst = ACE_player getVariable [QEGVAR(survival,thirst), MACRO_PLAYER_DEFAULTS_HIGH];
+private _energyDeficit = ACE_player getVariable [QEGVAR(survival,energyDeficit), MACRO_PLAYER_DEFAULTS_LOW];
 
 // Temperature
-private _thermalIndex = player getVariable [QEGVAR(temperature,thermalIndex), MACRO_PLAYER_DEFAULTS_TEMP];
-private _exposure = player getVariable [QEGVAR(temperature,exposure), MACRO_PLAYER_DEFAULTS_LOW];
-private _wetness = player getVariable [QEGVAR(temperature,wetness), MACRO_PLAYER_DEFAULTS_LOW];
+private _thermalIndex = ACE_player getVariable [QEGVAR(temperature,thermalIndex), MACRO_PLAYER_DEFAULTS_TEMP];
+private _exposure = ACE_player getVariable [QEGVAR(temperature,exposure), MACRO_PLAYER_DEFAULTS_LOW];
+private _wetness = ACE_player getVariable [QEGVAR(temperature,wetness), MACRO_PLAYER_DEFAULTS_LOW];
 
 // Sickness
-private _radiation = player getVariable [QEGVAR(survival,radiation), MACRO_PLAYER_DEFAULTS_LOW];
-private _infection = player getVariable [QEGVAR(survival,infection), MACRO_PLAYER_DEFAULTS_LOW];
-private _parasites = player getVariable [QEGVAR(survival,parasites), MACRO_PLAYER_DEFAULTS_LOW];
-private _toxicity = player getVariable [QEGVAR(survival,toxicity), MACRO_PLAYER_DEFAULTS_LOW];
+private _radiation = ACE_player getVariable [QEGVAR(survival,radiation), MACRO_PLAYER_DEFAULTS_LOW];
+private _infection = ACE_player getVariable [QEGVAR(survival,infection), MACRO_PLAYER_DEFAULTS_LOW];
+private _parasites = ACE_player getVariable [QEGVAR(survival,parasites), MACRO_PLAYER_DEFAULTS_LOW];
+private _toxicity = ACE_player getVariable [QEGVAR(survival,toxicity), MACRO_PLAYER_DEFAULTS_LOW];
 
 // Psychosis
-private _psychosis = player getVariable [QEGVAR(psychosis,state), MACRO_PLAYER_DEFAULTS_LOW];
+private _psychosis = ACE_player getVariable [QEGVAR(psychosis,state), MACRO_PLAYER_DEFAULTS_LOW];
 
 // Vitals
-private _buffs = player getVariable [QEGVAR(vitals,buffs), []];
-private _ailments = player getVariable [QEGVAR(vitals,ailments), []];
+private _buffs = ACE_player getVariable [QEGVAR(vitals,buffs), []];
+private _ailments = ACE_player getVariable [QEGVAR(vitals,ailments), []];
 
 // Banking
-private _funds = player getVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
-private _bankedFunds = player getVariable [QEGVAR(currency,bankedFunds), MACRO_PLAYER_DEFAULTS_LOW];
+private _funds = ACE_player getVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
+private _bankedFunds = ACE_player getVariable [QEGVAR(currency,bankedFunds), MACRO_PLAYER_DEFAULTS_LOW];
 
 // Gas Mask
-private _cartridgeEfficiency = player getVariable [QEGVAR(gasmask,cartridgeEfficiency), MACRO_PLAYER_DEFAULTS_HIGH];
+private _cartridgeEfficiency = ACE_player getVariable [QEGVAR(gasmask,cartridgeEfficiency), MACRO_PLAYER_DEFAULTS_HIGH];
 
 // Power / simulated battery life
-private _chemicalDetectorPower = player getVariable [QEGVAR(chemical,detectorPower), MACRO_PLAYER_DEFAULTS_HIGH];
-private _spectrumDevicePower = player getVariable [QEGVAR(spectrum,detectorPower), MACRO_PLAYER_DEFAULTS_HIGH];
+private _chemicalDetectorPower = ACE_player getVariable [QEGVAR(chemical,detectorPower), MACRO_PLAYER_DEFAULTS_HIGH];
+private _spectrumDevicePower = ACE_player getVariable [QEGVAR(spectrum,detectorPower), MACRO_PLAYER_DEFAULTS_HIGH];
 
 [_hunger, _thirst, _energyDeficit, _thermalIndex, _exposure, _wetness, _radiation, _infection, _parasites, _toxicity, _psychosis, _buffs, _ailments, _funds, _bankedFunds, _cartridgeEfficiency, _chemicalDetectorPower, _spectrumDevicePower]

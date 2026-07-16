@@ -13,7 +13,7 @@
  * [] call misery_persistence_fnc_init
 */
 
-// If GRAD Persistence is being used, and admin actions are enabled - add actions to admins, or SP player
+// If GRAD Persistence is being used, and admin actions are enabled - add actions to admins, or SP ACE_player
 if (GVAR(gradAdminActions)) then {
     GVAR(gradPersistenceTag) = getText (missionConfigFile >> "CfgGradPersistence" >> "missionTag");
     if (GVAR(gradPersistenceTag) isEqualTo "") then {GVAR(gradPersistenceTag) = missionName};
@@ -30,17 +30,17 @@ if (GVAR(gradAdminActions)) then {
         }
     ] call ACEFUNC(interact_menu,createAction);
 
-    [player, 1, [QUOTE(ACE_SelfActions)], _gradSaveAction] call ACEFUNC(interact_menu,addActionToObject);
+    [ACE_player, 1, [QUOTE(ACE_SelfActions)], _gradSaveAction] call ACEFUNC(interact_menu,addActionToObject);
 };
 
 // New player or Respawned player
-player addEventHandler ["Respawn", {
+ACE_player addEventHandler ["Respawn", {
     [false] call FUNC(newPlayer);
 }];
 
 // Singleplayer hardcore
 if (!isMultiplayer) then {
-    player addEventHandler ["Killed", {
+    ACE_player addEventHandler ["Killed", {
 
         if (GVAR(hardcore)) exitWith {
             if (!isNil "grad_persistence_blacklist") then {

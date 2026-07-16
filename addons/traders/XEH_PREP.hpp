@@ -1,8 +1,8 @@
 PREP(calculatePrice);
 PREP(generateShop);
 PREP(generateVehicle);
-PREP(getTraderData);
 PREP(loadTrader);
+PREP(parseData);
 PREP(processCategory);
 PREP(processIcon);
 PREP(processMenuSwitch);

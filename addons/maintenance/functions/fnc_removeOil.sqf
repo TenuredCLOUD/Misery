@@ -15,7 +15,7 @@
  *
 */
 
-[player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
+[ACE_player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
 
 if (isNull _vehicle) exitWith {
     ctrlSetText [1001, localize LSTRING(InvalidVehicle)];
@@ -36,7 +36,7 @@ private _totalLiters = 0;
 
 if !(_found) exitWith {};
 
-player setVariable [QCLASS(processOil), true];
+ACE_player setVariable [QCLASS(processOil), true];
 
 // Initial button disabler
 [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], false] call EFUNC(common,displayEnableControls);
@@ -44,7 +44,7 @@ player setVariable [QCLASS(processOil), true];
 _oilInterrupt = (findDisplay 274839) displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
     if (_key isEqualTo DIK_ESCAPE) then {
-        player setVariable [QCLASS(processOil),false];
+        ACE_player setVariable [QCLASS(processOil),false];
         [QEGVAR(common,tileText), localize LSTRING(RemovingOilInterrupted)] call CBA_fnc_localEvent;
     };
 }];
@@ -52,7 +52,7 @@ _oilInterrupt = (findDisplay 274839) displayAddEventHandler ["KeyDown", {
 private _hasOil = [[QCLASS(engineOil), QCLASS(oilEmpty)]] call EFUNC(common,hasItem);
 
 if (_currentOilLevel <= 0) exitWith {
-    player setVariable [QCLASS(processOil), nil];
+    ACE_player setVariable [QCLASS(processOil), nil];
     (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _oilInterrupt];
     _vehicle setVariable [QGVAR(oilLevel), 0, true];
     ctrlSetText [1001, format [localize LSTRING(OilIsEmpty), [_vehicle] call EFUNC(common,getObjectData) select 0]];
@@ -76,14 +76,14 @@ private _displayedText = "";
     private _oilToRemove = 1 / _totalLiters;
     private _currentOilLevel = _vehicle getVariable [QGVAR(oilLevel), 0];
 
-    if ((player getVariable QCLASS(processOil)) isEqualTo false) exitWith {
+    if ((ACE_player getVariable QCLASS(processOil)) isEqualTo false) exitWith {
         (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _oilInterrupt];
         [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
     if (_currentOilLevel <= 0) exitWith {
-        player setVariable [QCLASS(processOil), nil];
+        ACE_player setVariable [QCLASS(processOil), nil];
         (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _oilInterrupt];
         _vehicle setVariable [QGVAR(oilLevel), 0, true];
         ctrlSetText [1001, format [localize LSTRING(OilIsEmpty), [_vehicle] call EFUNC(common,getObjectData) select 0]];
@@ -97,8 +97,8 @@ private _displayedText = "";
 
     // Remove empty oil can and replace with magazine variant
     if ([[QCLASS(oilEmpty)]] call EFUNC(common,hasItem)) then {
-        player removeItem QCLASS(oilEmpty);
-        [player, QCLASS(engineOil), 1, true] call CBA_fnc_addMagazine;
+        ACE_player removeItem QCLASS(oilEmpty);
+        [ACE_player, QCLASS(engineOil), 1, true] call CBA_fnc_addMagazine;
     };
 
     // Increment the count of the oil can

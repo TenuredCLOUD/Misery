@@ -31,11 +31,11 @@ if (_energyDeficit < 0.15) exitWith {
     [QEGVAR(common,tileText), localize LSTRING(NotTired)] call CBA_fnc_localEvent;
 };
 
-if (animationState player isNotEqualTo "amovpsitmstpsnonwnondnon_ground") then {
-    player playActionNow "SitDown";
+if (animationState ACE_player isNotEqualTo "amovpsitmstpsnonwnondnon_ground") then {
+    ACE_player playActionNow "SitDown";
 };
 
-player setVariable [QGVAR(isSleeping), true];
+ACE_player setVariable [QGVAR(isSleeping), true];
 
 cutText ["", "BLACK OUT", 2];
 
@@ -45,21 +45,21 @@ cutText ["", "BLACK OUT", 2];
 
 [{
     [QEGVAR(common,tileText), format [localize LSTRING(SleptFor), _this]] call CBA_fnc_localEvent;
-    player setFatigue 1;
+    ACE_player setFatigue 1;
 }, _selectedHour, 6] call CBA_fnc_waitAndExecute;
 
 [{
     cutText ["", "BLACK IN", 2];
 }, [], 8] call CBA_fnc_waitAndExecute;
 
-player setVariable [QCLASS(isSleeping), false];
+ACE_player setVariable [QCLASS(isSleeping), false];
 
 // Calculate hunger and thirst decrement
 private _hungerThirstDecrement = (_selectedHour * 0.02) + (0 max (_selectedHour - 8)) * 0.03;
 // Calculate energy reduction (reset to 0 at 8 hours, penalty after 8)
 private _energyReduction = (1 min (_selectedHour * 0.125)) - (0 max (_selectedHour - 8)) * 0.05;
 
-// Apply to player variables
+// Apply to ACE_player variables
 [-_hungerThirstDecrement, "hunger"] call EFUNC(common,addStatusModifier);
 [-_hungerThirstDecrement, "thirst"] call EFUNC(common,addStatusModifier);
 [-_energyReduction, "energy"] call EFUNC(common,addStatusModifier);

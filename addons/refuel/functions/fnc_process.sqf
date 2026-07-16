@@ -23,7 +23,7 @@ private _found = false;
 
 call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
-[player] call EFUNC(common,nearVehicle) params ["", "_nearestVehicle"];
+[ACE_player] call EFUNC(common,nearVehicle) params ["", "_nearestVehicle"];
 
 if (_nearestVehicle isEqualTo []) exitWith {};
 
@@ -40,12 +40,12 @@ if (_nearestVehicle isEqualTo []) exitWith {};
 
 if (!_found) exitWith {};
 
-player setVariable [QCLASS(processRefuel), true];
+ACE_player setVariable [QCLASS(processRefuel), true];
 
 private _refuelInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key"];
     if (_key isEqualTo DIK_ESCAPE) then {
-        player setVariable [QCLASS(processRefuel), false];
+        ACE_player setVariable [QCLASS(processRefuel), false];
         [QEGVAR(common,tileText), localize ECSTRING(maintenance,RefuelingInterrupted)] call CBA_fnc_localEvent;
     };
 }];
@@ -53,7 +53,7 @@ private _refuelInterrupt = _dialog displayAddEventHandler ["KeyDown", {
 if (_funds < _fuelCost) exitWith {
     ctrlSetText [1001, localize ECSTRING(common,TooExpensive)];
     [982384, [1600, 1601], true] call EFUNC(common,displayShowControls);
-    player setVariable [QCLASS(processRefuel), nil];
+    ACE_player setVariable [QCLASS(processRefuel), nil];
     _dialog displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
 };
 
@@ -61,7 +61,7 @@ if (fuel _nearestVehicle >= 1) exitWith {
     private _displayFull = format [localize ECSTRING(maintenance,FuelTankFull), _displayName];
     ctrlSetText [1001, _displayFull];
     [982384, [1600, 1601], true] call EFUNC(common,displayShowControls);
-    player setVariable [QCLASS(processRefuel), nil];
+    ACE_player setVariable [QCLASS(processRefuel), nil];
     _dialog displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
 };
 
@@ -75,14 +75,14 @@ private _fundsToDeduct = _fuelCost;
 
     call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
-    if (!alive _nearestVehicle || !(player getVariable [QCLASS(processRefuel), false])) exitWith {
-        player setVariable [QCLASS(processRefuel), nil];
+    if (!alive _nearestVehicle || !(ACE_player getVariable [QCLASS(processRefuel), false])) exitWith {
+        ACE_player setVariable [QCLASS(processRefuel), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
     if (_funds < _fundsToDeduct) exitWith {
-        player setVariable [QCLASS(processRefuel), nil];
+        ACE_player setVariable [QCLASS(processRefuel), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
         ctrlSetText [1001, localize ECSTRING(common,TooExpensive)];
         [982384, [1600, 1601], true] call EFUNC(common,displayShowControls);
@@ -108,7 +108,7 @@ private _fundsToDeduct = _fuelCost;
     [-_fundsToDeduct] call EFUNC(currency,modifyMoney);
 
     if (_currentFuel + _fuelToAdd >= 1) exitWith {
-        player setVariable [QCLASS(processRefuel), nil];
+        ACE_player setVariable [QCLASS(processRefuel), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _refuelInterrupt];
         private _displayFull = format [localize ECSTRING(maintenance,FuelTankFull), _displayName];
         ctrlSetText [1001, _displayFull];
