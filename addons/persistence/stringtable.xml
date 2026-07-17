@@ -97,38 +97,6 @@
             <Chinesesimp>启用存档</Chinesesimp>
             <Turkish>Kaydetmeyi Etkinleştir</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Persistence_FreshStart">
-            <English>Fresh Start</English>
-            <Czech>Nový začátek</Czech>
-            <French>Nouveau départ</French>
-            <Spanish>Nuevo comienzo</Spanish>
-            <Italian>Nuovo inizio</Italian>
-            <Polish>Czysty start</Polish>
-            <Portuguese>Recomeço</Portuguese>
-            <Russian>Новый старт</Russian>
-            <German>Neuanfang</German>
-            <Korean>새로운 시작</Korean>
-            <Japanese>新しく始める</Japanese>
-            <Chinese>全新開始</Chinese>
-            <Chinesesimp>全新开始</Chinesesimp>
-            <Turkish>Yeni Başlangıç</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Persistence_FreshStartDesc">
-            <English>Start fresh in singleplayer?</English>
-            <Czech>Začít znovu v singleplayeru?</Czech>
-            <French>Recommencer à zéro en solo ?</French>
-            <Spanish>¿Empezar de cero en un jugador?</Spanish>
-            <Italian>Iniziare da capo in giocatore singolo?</Italian>
-            <Polish>Zacząć od nowa w trybie jednoosobowym?</Polish>
-            <Portuguese>Começar do zero no modo um jogador?</Portuguese>
-            <Russian>Начать заново в одиночной игре?</Russian>
-            <German>Im Einzelspieler neu anfangen?</German>
-            <Korean>싱글플레이어에서 새롭게 시작하시겠습니까?</Korean>
-            <Japanese>シングルプレイヤーで新しく始めますか？</Japanese>
-            <Chinese>要在單人模式中全新開始嗎？</Chinese>
-            <Chinesesimp>要在单人模式中全新开始吗？</Chinesesimp>
-            <Turkish>Tek oyunculuda yeni bir başlangıç yapılsın mı?</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Persistence_GradAdmin">
             <English>GRAD Persistence admin actions</English>
             <Czech>Administrátorské akce GRAD persistence</Czech>

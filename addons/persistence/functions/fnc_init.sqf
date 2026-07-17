@@ -46,12 +46,20 @@ if (!isMultiplayer) then {
             if (!isNil "grad_persistence_blacklist") then {
                 [missionName] call GRADFUNC(persistence,clearMissionData);
             };
-            // Wipe local profile as well as bank if hardcore
-            [true] call FUNC(newPlayer);
+
+            // Wipe All Character data
+            private _saveNameString = call FUNC(formatSaveName);
+            profileNamespace setVariable [_saveNameString, nil];
         };
 
-        // If normal death wipe character normally (keep bank)
-        [false] call FUNC(newPlayer);
+        call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "_bankedFunds"];
+
+        // Cache bank funds to a fresh profileNamespace var for retrieval on restart
+        profileNamespace setVariable [QGVAR(cachedBank), _bankedFunds];
+
+        // Wipe All Character data
+        private _saveNameString = call FUNC(formatSaveName);
+        profileNamespace setVariable [_saveNameString, nil];
     }];
 };
 
@@ -74,7 +82,7 @@ if (isMultiplayer) then {
 
 private _playerData = call FUNC(loadData);
 
-if (_playerData isEqualTo [] || GVAR(resetSinglePlayerSave)) exitWith {
+if (_playerData isEqualTo []) exitWith {
     [true] call FUNC(newPlayer);
 };
 

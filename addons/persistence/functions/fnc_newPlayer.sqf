@@ -15,7 +15,7 @@
 
 params [["_newSave", true]];
 
-[QUOTE(COMPONENT_BEAUTIFIED), format ["New ACE_player, Fresh Start: %1", _newSave]] call EFUNC(common,debugMessage);
+[QUOTE(COMPONENT_BEAUTIFIED), format ["New player, Fresh Start: %1", _newSave]] call EFUNC(common,debugMessage);
 
 ACE_player setUnitLoadout EGVAR(common,defaultLoadout);
 
@@ -37,7 +37,15 @@ ACE_player setVariable [QEGVAR(vitals,buffs), []];
 ACE_player setVariable [QEGVAR(vitals,ailments), []];
 ACE_player setVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
 
-// Banking data is not reset unless fresh ACE_player.
+// Banking data is not reset unless fresh player
 if (_newSave) then {
-    ACE_player setVariable [QEGVAR(currency,bankedFunds), MACRO_PLAYER_DEFAULTS_LOW];
+    private _cachedBank = profileNamespace getVariable [QGVAR(cachedBank), nil];
+
+    if (!isNil "_cachedBank") then {
+        ACE_player setVariable [QEGVAR(currency,bankedFunds), _cachedBank];
+
+        profileNamespace setVariable [QGVAR(cachedBank), nil];
+    } else {
+        ACE_player setVariable [QEGVAR(currency,bankedFunds), MACRO_PLAYER_DEFAULTS_LOW];
+    };
 };

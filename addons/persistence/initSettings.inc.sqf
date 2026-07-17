@@ -10,15 +10,6 @@ private _category = format ["Misery %1", localize LSTRING(Component)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(resetSinglePlayerSave),
-    "CHECKBOX",
-    [LSTRING(FreshStart), LSTRING(FreshStartDesc)],
-    _category,
-    false,
-    1
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(hardcore),
     "CHECKBOX",
     [LSTRING(EnableHardcore), LSTRING(EnableHardcoreDesc)],
