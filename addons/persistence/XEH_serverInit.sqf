@@ -28,4 +28,29 @@ if (GVAR(saveACEFuelStations)) then {
     [{ call EFUNC(fuel,applyFuelStates); }, [], 0.2] call CBA_fnc_waitAndExecute;
 };
 
+if (GVAR(saveACETags)) then {
+
+    if (isNil QGVAR(sprayTagsCached)) then {
+        GVAR(sprayTagsCached) = createHashMap;
+    };
+
+    [QCLASSACE(tagCreated), {
+        params ["_tagObject", "_texture", "_type"];
+        [{
+            params ["_tagObject", "_texture", "_type"];
+            if (isNull _tagObject) exitWith {};
+
+            private _pos = getPosWorld _tagObject;
+            private _vectorDirAndUp = [vectorDir _tagObject, vectorUp _tagObject];
+            private _tagKey = format ["tag_%1_%2_%3", _pos select 0, _pos select 1, _pos select 2];
+
+            GVAR(sprayTagsCached) set [_tagKey, [_pos, _vectorDirAndUp, _texture, _type]];
+        }, [_tagObject, _texture, _type], 0.5] call CBA_fnc_waitAndExecute;
+    }] call CBA_fnc_addEventHandler;
+
+    [QGVAR(grabsprayTags), {call FUNC(syncSprayTags)}] call CBA_fnc_addEventHandler;
+
+    [{ call FUNC(createGlobalSprayTags); }, [], 0.2] call CBA_fnc_waitAndExecute;
+};
+
 [] call FUNC(serverInit);

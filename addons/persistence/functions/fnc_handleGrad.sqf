@@ -30,6 +30,10 @@ if (_type isEqualTo 1) then {
         [QGVAR(grabFuelStationLitres)] call CBA_fnc_serverEvent;
     };
 
+    if (GVAR(saveACETags)) then {
+        [QGVAR(grabSprayTags)] call CBA_fnc_serverEvent;
+    };
+
     [{
         // Slight delay to ensure other persistence frameworks are cached for GRAD write
         [QGVAR(saveWorldState)] call CBA_fnc_serverEvent;
