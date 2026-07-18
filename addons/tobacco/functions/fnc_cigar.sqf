@@ -24,7 +24,7 @@ if !([[QCLASS(matchBox), QCLASS(lighter)]] call EFUNC(common,hasItem)) exitWith 
 
     [QEGVAR(common,tileText), localize LSTRING(LightCigar)] call CBA_fnc_localEvent;
 
-    ACE_player removeItem QCLASS(cigar);
+    [QCLASS(cigar)] call EFUNC(common,itemDecrement);
 
     if (EGVAR(psychosis,enabled)) then {
         [-0.2, "psychosis"] call EFUNC(common,addStatusModifier);
