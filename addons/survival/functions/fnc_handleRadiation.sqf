@@ -19,7 +19,7 @@ call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "", "", "", 
 
 private _finalRadiation = ((_radiation + GVAR(radiationModifiers)) min 1) max 0;
 GVAR(radiationModifiers) = 0;
-player setVariable [QGVAR(radiation), _finalRadiation];
+ACE_player setVariable [QGVAR(radiation), _finalRadiation];
 
 if (_radiation > 0) then {
     [-3.333e-6, "radiation"] call EFUNC(common,addStatusModifier);
@@ -36,7 +36,7 @@ if (_radiation > 0) then {
     // calculation for stamina loss: (scales with radiation exposure)
     private _scaledStaminaLoss = linearConversion [0, 1, _radiation, 0, 0.000015 * GVAR(metabolicCoef), true];
 
-    player setStamina ((getStamina player) - _scaledStaminaLoss);
+    ACE_player setStamina ((getStamina ACE_player) - _scaledStaminaLoss);
 
     [[-_scaledNutrientLoss, "hunger"] call EFUNC(common,addStatusModifier), [-_scaledNutrientLoss, "thirst"] call EFUNC(common,addStatusModifier)] select ([50] call EFUNC(common,rollChance));
 };

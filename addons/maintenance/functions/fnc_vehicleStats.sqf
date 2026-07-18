@@ -19,12 +19,12 @@
 [{
     params ["_args", "_handle"];
 
-    private _vehicle = vehicle player;
+    private _vehicle = vehicle ACE_player;
 
     [_vehicle] call EFUNC(common,getObjectData) params ["_displayName"];
 
     // Make sure driver or pilot / co-pilot get display only
-    if (currentPilot _vehicle isEqualTo player) then {
+    if (currentPilot _vehicle isEqualTo ACE_player) then {
         QGVAR(display) cutRsc [QUOTE(CLASS(vehicleStats_ui)), "PLAIN", 1, false];
     } else {
         QGVAR(display) cutText ["", "PLAIN"];
@@ -32,12 +32,12 @@
             [{
                 params ["_vehicle"];
 
-                player action ["LightOff", _vehicle];
+                ACE_player action ["LightOff", _vehicle];
             }, [_vehicle], 0.02] call CBA_fnc_waitAndExecute;
         };
     };
 
-    if (!alive player || isNull objectParent player) exitWith {
+    if (!alive ACE_player || isNull objectParent ACE_player) exitWith {
         QGVAR(display) cutText ["", "PLAIN"];
         _handle call CBA_fnc_removePerFrameHandler;
     };

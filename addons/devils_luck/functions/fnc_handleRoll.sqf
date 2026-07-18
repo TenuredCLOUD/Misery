@@ -17,7 +17,7 @@ private _bet = GVAR(currentBet);
 private _prediction = GVAR(currentPrediction);
 private _oldTotal = GVAR(currentTotal);
 
-private _dealer = player getVariable [QGVAR(currentDealer), objNull];
+private _dealer = ACE_player getVariable [QGVAR(currentDealer), objNull];
 
 private _dealerFunds = _dealer getVariable [QGVAR(dealerFunds), 50000];
 if (_dealerFunds <= 0) exitWith {

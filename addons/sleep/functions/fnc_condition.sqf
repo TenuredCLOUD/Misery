@@ -7,7 +7,7 @@
  * None
  *
  * Return Value:
- * 0: Near bed object, or terrainObject, or player is in a ground vehicle, or cursorObject model matches bed model macro <BOOL>
+ * 0: Near bed object, or terrainObject, or ACE_player is in a ground vehicle, or cursorObject model matches bed model macro <BOOL>
  *
  * Example:
  * [] call misery_sleep_fnc_sleepCondition
@@ -26,11 +26,11 @@ private _vehicleConfig = "";
 
 private _canSleepInVehicle = false;
 
-if !(isNull objectParent player) then {
-    _vehicleConfig = configOf (vehicle player);
+if !(isNull objectParent ACE_player) then {
+    _vehicleConfig = configOf (vehicle ACE_player);
     if (getNumber (_vehicleConfig >> "transportSoldier") > 1) then {
         _canSleepInVehicle = true;
     };
 };
 
-(vehicle player isKindOf "Car" && _canSleepInVehicle) || _modelInfo in [MACRO_BED_MODELS]
+(vehicle ACE_player isKindOf "Car" && _canSleepInVehicle) || _modelInfo in [MACRO_BED_MODELS]

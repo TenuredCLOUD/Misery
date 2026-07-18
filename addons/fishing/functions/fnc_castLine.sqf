@@ -85,16 +85,16 @@ ctrlSetText [1001, localize LSTRING(LineCast)];
         private _randomGearLoss = round selectRandom [1, 2, 3];
         switch (true) do {
             case (_randomGearLoss isEqualTo 1): {
-                [player, QCLASS(worms)] call CBA_fnc_removeItem;
+                [ACE_player, QCLASS(worms)] call CBA_fnc_removeItem;
             };
             case (_randomGearLoss isEqualTo 2): {
                 {
-                [player, _x] call CBA_fnc_removeItem;
+                [ACE_player, _x] call CBA_fnc_removeItem;
                 } forEach [QCLASS(fishhook), QCLASS(worms)];
             };
             case (_randomGearLoss isEqualTo 3): {
                 {
-                [player, _x] call CBA_fnc_removeItem;
+                [ACE_player, _x] call CBA_fnc_removeItem;
                 } forEach [QCLASS(fishingSpool), QCLASS(fishhook), QCLASS(worms)];
             };
         };

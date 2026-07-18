@@ -106,4 +106,18 @@ if (hasInterface && !GVAR(difficulty)) then {
 
         [QCLASSACE(Wheel), 0, [QUOTE(ACE_MainActions)], _wheelAction] call ACEFUNC(interact_menu,addActionToClass);
     };
+
+    private _maintenanceAction = [
+        QGVAR(maintenance_menu),
+        localize LSTRING(Action),
+        QPATHTOEF(markers,data\wrench_ca.paa),
+        {
+            createDialog QCLASS(maintenance_ui);
+        },
+        {
+            ([ACE_player] call EFUNC(common,nearVehicle)) select 0
+        }
+    ] call ACEFUNC(interact_menu,createAction);
+
+    ["AllVehicles", 0, [QUOTE(ACE_MainActions)], _maintenanceAction, true] call ACEFUNC(interact_menu,addActionToClass);
 };

@@ -13,15 +13,6 @@ private _category = format ["Misery %1", localize LSTRING(Component)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(combatLogPreventionEnabled),
-    "CHECKBOX",
-    [LSTRING(CombatLog), LSTRING(CombatLogDesc)],
-    _category,
-    true,
-    1
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(promptSizes),
     "SLIDER",
     [LSTRING(PromptSize), LSTRING(PromptSizeDesc)],

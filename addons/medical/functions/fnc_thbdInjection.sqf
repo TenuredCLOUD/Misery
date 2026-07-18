@@ -29,8 +29,8 @@ private _intensity = linearConversion [0, 1, _value, 0, 1, false];
 
 [_baseTRate * _intensity, "thirst"] call EFUNC(common,addStatusModifier);
 
-private _painAmount = player getVariable [QACEGVAR(medical,pain), 0];
+private _painAmount = ACE_player getVariable [QACEGVAR(medical,pain), 0];
 
 if (_painAmount <= 0.5) then {
-    [player, _basePRate] call ACEFUNC(medical_status,adjustPainLevel);
+    [ACE_player, _basePRate] call ACEFUNC(medical_status,adjustPainLevel);
 };

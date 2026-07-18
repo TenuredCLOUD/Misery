@@ -4,12 +4,9 @@ if (!isServer) exitWith {};
 
 if (!GVAR(enabled)) exitWith {};
 
-GVAR(markerSizeX) = GVAR(minimumDistance) + GVAR(safeDistance);
-GVAR(markerSizeY) = GVAR(maximumDistance) + GVAR(safeDistance);
 GVAR(registeredEntities) = [];
 
-["CBA_loadingScreenDone", {
-    call FUNC(convertToArray);
-    call FUNC(loop);
-    call FUNC(patrol);
-}] call CBA_fnc_addEventHandler;
+call FUNC(convertToArray);
+call FUNC(spawn);
+call FUNC(clean);
+call FUNC(patrol);

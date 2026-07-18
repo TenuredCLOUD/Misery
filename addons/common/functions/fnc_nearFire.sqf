@@ -14,7 +14,7 @@
  * [] call misery_common_fnc_nearFire
 */
 
-private _nearestObjects = nearestObjects [player, [MACRO_FIRETYPES], 2.5];
+private _nearestObjects = nearestObjects [ACE_player, [MACRO_FIRETYPES], 2.5];
 
 private _isInflamed = _nearestObjects findIf {inflamed _x} isNotEqualTo -1;
 

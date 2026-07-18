@@ -13,11 +13,6 @@
  * [] call misery_chemical_fnc_updateDetector
 */
 
-// If chemical zone check fails, system will not function.
-if !(call FUNC(checkAreas)) exitWith {
-    [QUOTE(COMPONENT_BEAUTIFIED), "Marker check system failed, detectors disabled."] call EFUNC(common,debugMessage);
-};
-
 [{
     params ["_args", "_handle"];
 
@@ -39,7 +34,7 @@ if !(call FUNC(checkAreas)) exitWith {
             _maxThreat = _maxThreat max _threat;
 
             _player setVariable [QGVAR(detectedThreat), _maxThreat];
-        } forEach GVAR(areas);
+        } forEach GVAR(areasCached);
 
         QGVAR(detector) cutRsc ["RscWeaponChemicalDetector", "PLAIN", 1, false];
         private _detectorDisplay = uiNamespace getVariable ["RscWeaponChemicalDetector", displayNull];

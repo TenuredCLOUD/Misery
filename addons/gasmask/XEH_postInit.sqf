@@ -16,7 +16,7 @@ if (!hasInterface) exitWith {};
     if (!isNil QACEGVAR(goggles,effects) && ACEGVAR(goggles,effects) >= 2) then {
         [QCLASSACE(glassesCracked), {
             params ["_unit"];
-            if (_unit isEqualTo player) then {
+            if (_unit isEqualTo ACE_player) then {
                 if ([_unit] call ACEFUNC(goggles,isGogglesVisible)) then {
                     [QEGVAR(common,tileText), format [localize LSTRING(EquipmentBroken), [goggles _unit] call EFUNC(common,getItemData) select 0]] call CBA_fnc_localEvent;
                     [{

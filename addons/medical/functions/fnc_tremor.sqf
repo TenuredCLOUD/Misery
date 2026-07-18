@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [player, 60] call misery_medical_fnc_tremor;
+ * [ACE_player, 60] call misery_medical_fnc_tremor;
  *
 */
 

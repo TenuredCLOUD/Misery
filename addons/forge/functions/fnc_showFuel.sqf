@@ -22,11 +22,11 @@ disableSerialization;
 {
     [{
         params ["_args", "_handle"];
-        if (isNull findDisplay 982388 || (!alive player)) exitWith {
+        if (isNull findDisplay 982388 || (!alive ACE_player)) exitWith {
             _handle call CBA_fnc_removePerFrameHandler;
         };
 
-        [player] call FUNC(stats) params ["", "_forgeFuel"];
+        [ACE_player] call FUNC(stats) params ["", "_forgeFuel"];
 
         private _dialog = findDisplay 982388;
         private _fuelProgressBar = _dialog displayCtrl 1011;

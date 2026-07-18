@@ -15,7 +15,7 @@
  *
 */
 
-[player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
+[ACE_player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
 
 if (isNull _vehicle) exitWith {
     ctrlSetText [1001, format [localize LSTRING(InvalidVehicle)]];
@@ -36,7 +36,7 @@ private _totalLiters = 0;
 
 if !(_found) exitWith {};
 
-player setVariable [QCLASS(processCoolant), true];
+ACE_player setVariable [QCLASS(processCoolant), true];
 
 // Initial button disabler
 [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], false] call EFUNC(common,displayEnableControls);
@@ -44,7 +44,7 @@ player setVariable [QCLASS(processCoolant), true];
 _coolantInterrupt = (findDisplay 274839) displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key", "_shift", "_ctrl", "_alt"];
     if (_key isEqualTo DIK_ESCAPE) then {
-        player setVariable [QCLASS(processCoolant),false];
+        ACE_player setVariable [QCLASS(processCoolant),false];
         [QEGVAR(common,tileText), localize LSTRING(CoolantInterrupted)] call CBA_fnc_localEvent;
     };
 }];
@@ -52,7 +52,7 @@ _coolantInterrupt = (findDisplay 274839) displayAddEventHandler ["KeyDown", {
 private _hasCoolant = [[QCLASS(coolant)]] call EFUNC(common,hasItem);
 
 if (_currentCoolantLevel >= 1) exitWith {
-    player setVariable [QCLASS(processCoolant), nil];
+    ACE_player setVariable [QCLASS(processCoolant), nil];
     (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _coolantInterrupt];
     _vehicle setVariable [QGVAR(coolantLevel), 1, true];
     ctrlSetText [1001, format [localize LSTRING(CoolantFull), [_vehicle] call EFUNC(common,getObjectData) select 0]];
@@ -76,14 +76,14 @@ private _displayedText = "";
     private _coolantToAdd = 1 / _totalLiters;
     private _currentCoolantLevel = _vehicle getVariable [QGVAR(coolantLevel), 0];
 
-    if ((player getVariable QCLASS(processCoolant)) isEqualTo false) exitWith {
+    if ((ACE_player getVariable QCLASS(processCoolant)) isEqualTo false) exitWith {
         (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _coolantInterrupt];
         [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
     if (_currentCoolantLevel >= 1) exitWith {
-        player setVariable [QCLASS(processCoolant), nil];
+        ACE_player setVariable [QCLASS(processCoolant), nil];
         (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _coolantInterrupt];
         _vehicle setVariable [QGVAR(coolantLevel), 1, true];
         ctrlSetText [1001, format [localize LSTRING(CoolantFull), [_vehicle] call EFUNC(common,getObjectData) select 0]];
@@ -94,7 +94,7 @@ private _displayedText = "";
     private _hasCoolant = [[QCLASS(coolant)]] call EFUNC(common,hasItem);
 
     if (!_hasCoolant) exitWith {
-        player setVariable [QCLASS(processCoolant), nil];
+        ACE_player setVariable [QCLASS(processCoolant), nil];
         (findDisplay 274839) displayRemoveEventHandler ["KeyDown", _coolantInterrupt];
         ctrlSetText [1001, localize LSTRING(OutOfCoolant)];
         [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], true] call EFUNC(common,displayEnableControls);

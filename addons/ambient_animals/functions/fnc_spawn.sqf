@@ -15,41 +15,51 @@
  *
 */
 
-if ((count GVAR(registeredEntities)) >= GVAR(maxPopulation)) exitWith {};
-
-private _numEntities = [1, GVAR(clusterSize)] call BIS_fnc_randomInt;
-
-private _players = call EFUNC(common,listPlayers);
-private _selectedPlayer = selectRandom _players;
-
-// If no players in game exit spawner
-if (_players isEqualTo []) exitWith {};
-
-private _markerPos = getPosATL _selectedPlayer;
-private _playerUID = getPlayerUID _selectedPlayer;
-private _markerName = format ["%1_%2_%3", CBA_missionTime, _playerUID, random 100];
-private _marker = createMarkerLocal [_markerName, _markerPos];
-_marker setMarkerShapeLocal "ELLIPSE";
-_marker setMarkerSizeLocal [GVAR(markerSizeX), GVAR(markerSizeY)];
-_marker setMarkerAlphaLocal 0;
-
-for "_i" from 1 to _numEntities do {
-
-    if ((count GVAR(registeredEntities)) >= GVAR(maxPopulation)) exitWith {break};
-
-    private _outsidePos = [_marker, true] call CBA_fnc_randPosArea;
-
-    // Check if _outsidePos is valid and not water
-    if (_outsidePos isEqualTo [] || surfaceIsWater _outsidePos) exitWith {
-        if (GVAR(debug)) then {[QUOTE(COMPONENT_BEAUTIFIED), localize LSTRING(InvalidPos)] call EFUNC(common,debugMessage);};
-        continue;
-    };
-    if ([GVAR(animalSpawnChance)] call EFUNC(common,rollChance)) then {
-        private _createdAnimal = createAgent [selectRandom [MACRO_FIELDDRESS_ANIMALTYPES], _outsidePos, [], 0, "CAN_COLLIDE"];
-        GVAR(registeredEntities) pushBack _createdAnimal;
-    };
-};
-
 [{
-    deleteMarkerLocal _this;
-}, _marker, 1] call CBA_fnc_waitAndExecute;
+    params ["_args", "_handle"];
+
+    if ((count GVAR(registeredEntities)) >= GVAR(maxPopulation)) exitWith {};
+
+    private _numEntities = [1, GVAR(clusterSize)] call BIS_fnc_randomInt;
+
+    private _players = call EFUNC(common,listPlayers);
+    private _selectedPlayer = selectRandom _players;
+
+    // If no players in game exit spawner
+    if (_players isEqualTo []) exitWith {};
+
+    for "_i" from 1 to _numEntities do {
+
+        if ((count GVAR(registeredEntities)) >= GVAR(maxPopulation)) exitWith {break};
+
+        private _position = [];
+        private _isValidPosition = false;
+
+        for "_attempts" from 1 to 5 do {
+
+            private _radius = [GVAR(animalMinimumDistance), GVAR(animalMaximumDistance)] call BIS_fnc_randomInt;
+            private _potentialPos = [getPosWorld _selectedPlayer, _radius] call CBA_fnc_randPos;
+
+            private _playerTooClose = [_potentialPos, GVAR(animalMinimumDistance)] call CBA_fnc_nearPlayer;
+
+            if (!_playerTooClose && {!(surfaceIsWater _potentialPos)}) then {
+                _position = _potentialPos;
+                _isValidPosition = true;
+                break;
+            };
+        };
+
+        if (!_isValidPosition) then {
+            if (GVAR(debug)) then {
+                [QUOTE(COMPONENT_BEAUTIFIED), localize LSTRING(InvalidPos)] call EFUNC(common,debugMessage);
+            };
+            continue;
+        };
+
+        if ([GVAR(animalSpawnChance)] call EFUNC(common,rollChance)) then {
+            private _createdAnimal = createAgent [selectRandom [MACRO_FIELDDRESS_ANIMALTYPES], _position, [], 0, "CAN_COLLIDE"];
+            [_createdAnimal, "because"] call ACEFUNC(common,muteUnit); // Mute unit (disables callouts)
+            GVAR(registeredEntities) pushBack _createdAnimal;
+        };
+    };
+}, GVAR(animalCycleLength)] call CBA_fnc_addPerFrameHandler;

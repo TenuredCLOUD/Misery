@@ -51,8 +51,8 @@ if (!_canSearch) exitWith {
     [QEGVAR(common,tileText), format [localize LSTRING(ToolRequired), _listString]] call CBA_fnc_localEvent;
 };
 
-private _soundDummy = "Land_HelipadEmpty_F" createVehicle (getPosWorld player);
-_soundDummy attachTo [player, [0, 0, 0], "Pelvis"];
+private _soundDummy = "Land_HelipadEmpty_F" createVehicle (getPosWorld ACE_player);
+_soundDummy attachTo [ACE_player, [0, 0, 0], "Pelvis"];
 
 if (_audio isNotEqualTo "") then {
     _soundDummy say3D [_audio, 50];
@@ -90,6 +90,7 @@ if (_audio isNotEqualTo "") then {
             _x params ["_classname", "_amount", "_chance"];
             if ([_chance] call EFUNC(common,rollChance)) then {
                 _weaponCargo pushBack [_classname, _amount];
+                [ACE_player, _classname, _amount] call EFUNC(common,addItem);
             };
         } forEach _weapons;
 
@@ -97,6 +98,7 @@ if (_audio isNotEqualTo "") then {
             _x params ["_classname", "_amount", "_chance"];
             if ([_chance] call EFUNC(common,rollChance)) then {
                 _magazineCargo pushBack [_classname, _amount];
+                [ACE_player, _classname, _amount] call EFUNC(common,addItem);
             };
         } forEach _magazines;
 
@@ -104,6 +106,7 @@ if (_audio isNotEqualTo "") then {
             _x params ["_classname", "_amount", "_chance"];
             if ([_chance] call EFUNC(common,rollChance)) then {
                 _itemCargo pushBack [_classname, _amount];
+                [ACE_player, _classname, _amount] call EFUNC(common,addItem);
             };
         } forEach _items;
 
@@ -111,11 +114,11 @@ if (_audio isNotEqualTo "") then {
             _x params ["_classname", "_amount", "_chance"];
             if ([_chance] call EFUNC(common,rollChance)) then {
                 _backpackCargo pushBack [_classname, _amount];
+                [ACE_player, _classname, _amount] call EFUNC(common,addItem);
             };
         } forEach _backpacks;
 
         if (_weaponCargo isNotEqualTo [] || _magazineCargo isNotEqualTo [] || _itemCargo isNotEqualTo [] || _backpackCargo isNotEqualTo []) then {
-            private _holder = [getPosATL player, _weaponCargo, _magazineCargo, _itemCargo, _backpackCargo] call EFUNC(common,spawnLoot);
             [QEGVAR(common,tileText), localize LSTRING(ItemsFound)] call CBA_fnc_localEvent;
         } else {
             [QEGVAR(common,tileText), localize LSTRING(NothingFound)] call CBA_fnc_localEvent;

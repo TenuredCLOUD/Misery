@@ -1,14 +1,15 @@
 #include "script_component.hpp"
 
-if !(isServer) exitWith {};
-
-GVAR(tracked) = [];
-
-call FUNC(track);
+if (isServer) then {
+    GVAR(tracked) = [];
+    call FUNC(track);
+};
 
 if (isClass (missionConfigFile >> "CfgMisery_ForgeData")) then {
-    [] call FUNC(parseData);
-    [] call FUNC(burnFuel);
+    if (isServer) then {
+        [] call FUNC(parseData);
+        [] call FUNC(burnFuel);
+    };
 
     private _forgeAction = [
         QGVAR(forge_menu),
@@ -31,9 +32,11 @@ if (isClass (missionConfigFile >> "CfgMisery_ForgeData")) then {
     [QUOTE(COMPONENT_BEAUTIFIED), "CfgMisery_ForgeData class not found in description.ext, skipping data parser..."] call EFUNC(common,debugMessage);
 };
 
-[{CBA_missionTime > 5}, {
+if (isServer) then {
+    [{CBA_missionTime > 5}, {
 
-    if (EGVAR(audio,forgeAmbience)) then {
-        call FUNC(initAudio);
-    };
-}, []] call CBA_fnc_waitUntilAndExecute;
+        if (EGVAR(audio,forgeAmbience)) then {
+            call FUNC(initAudio);
+        };
+    }, []] call CBA_fnc_waitUntilAndExecute;
+};

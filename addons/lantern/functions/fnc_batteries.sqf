@@ -23,10 +23,10 @@ if !([[QCLASS(lantern_NoBattery)]] call EFUNC(common,hasItem)) exitWith {
 };
 
 {
-    [player, _x] call CBA_fnc_removeItem
+    [ACE_player, _x] call CBA_fnc_removeItem
 } forEach [QCLASS(lantern_NoBattery), QCLASS(9vBattery)];
 
 [QEGVAR(common,tileText), localize LSTRING(AddedBattery)] call CBA_fnc_localEvent;
 
-[player, QCLASS(lantern_Off), true] call CBA_fnc_addItem
+[ACE_player, QCLASS(lantern_Off), true] call CBA_fnc_addItem
 

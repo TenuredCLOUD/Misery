@@ -23,7 +23,7 @@ if !(_building isKindOf "House") exitWith {
     [0, objNull, true];
 };
 
-if (player distance _building > 25) exitWith {
+if (ACE_player distance _building > 25) exitWith {
     [0, objNull, true];
 };
 

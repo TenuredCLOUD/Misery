@@ -20,33 +20,36 @@ params ["_trader", "_traderClass"];
 
 if (isNull _trader) exitWith {};
 
-private _traderData = [] call FUNC(getTraderData);
-private _shop = _traderData select {(_x select 0) isEqualTo _traderClass} select 0;
+[{GVAR(traderData) isNotEqualTo []}, {
+    params ["_trader", "_traderClass"];
 
-if (isNil "_shop") exitWith {};
+    private _shop = GVAR(traderData) select {(_x select 0) isEqualTo _traderClass} select 0;
 
-_shop params ["_traderClass", "_shopName", "_items", "_shopFunds"];
+    if (isNil "_shop") exitWith {};
 
-_trader setVariable [QGVAR(shop), _shop, true];
-_trader setVariable [QGVAR(isBusy), false, true];
+    _shop params ["_traderClass", "_shopName", "_items", "_shopFunds"];
 
-private _traderAction = [
-    QGVAR(accessTrader),
-    format [localize LSTRING(OpenAction), _shopName],
-    QPATHTOEF(markers,data\hand_coins_ca.paa),
-    {
-        params ["_target", "_player"];
-        _player setVariable [QGVAR(currentTrader), _target];
-        createDialog QCLASS(traderShop_ui);
-    },
-    {true},
-    {},
-    ["_target", "_player"],
-    [0, 0, 0],
-    3
-] call ACEFUNC(interact_menu,createAction);
+    _trader setVariable [QGVAR(shop), _shop, true];
+    _trader setVariable [QGVAR(isBusy), false, true];
 
-[_trader, 0, [QUOTE(ACE_MainActions)], _traderAction] call ACEFUNC(interact_menu,addActionToObject);
+    private _traderAction = [
+        QGVAR(accessTrader),
+        format [localize LSTRING(OpenAction), _shopName],
+        QPATHTOEF(markers,data\hand_coins_ca.paa),
+        {
+            params ["_target", "_player"];
+            _player setVariable [QGVAR(currentTrader), _target];
+            createDialog QCLASS(traderShop_ui);
+        },
+        {true},
+        {},
+        ["_target", "_player"],
+        [0, 0, 0],
+        3
+    ] call ACEFUNC(interact_menu,createAction);
 
-GVAR(activeTraders) pushBackUnique _trader;
-publicVariable QGVAR(activeTraders);
+    [_trader, 0, [QUOTE(ACE_MainActions)], _traderAction] call ACEFUNC(interact_menu,addActionToObject);
+
+    GVAR(activeTraders) pushBackUnique _trader;
+    publicVariable QGVAR(activeTraders);
+}, [_trader, _traderClass]] call CBA_fnc_waitUntilAndExecute;

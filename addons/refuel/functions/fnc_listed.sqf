@@ -18,7 +18,7 @@
 [{!isNull findDisplay 982384}, {
     private _list = findDisplay 982384 displayCtrl 1500;
 
-    [player] call EFUNC(common,nearVehicle) params ["", "_nearestVehicle"];
+    [ACE_player] call EFUNC(common,nearVehicle) params ["", "_nearestVehicle"];
 
     if (_nearestVehicle isEqualTo []) exitWith {
         [982384, [1600], false] call EFUNC(common,displayShowControls);

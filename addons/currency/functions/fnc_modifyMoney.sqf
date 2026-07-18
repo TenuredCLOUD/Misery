@@ -21,7 +21,7 @@ params ["_amount", "_isBank"];
 call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds", "_bankedFunds"];
 
 if (_isBank) exitWith {
-    player setVariable [QGVAR(bankedFunds), _bankedFunds + _amount];
+    ACE_player setVariable [QGVAR(bankedFunds), _bankedFunds + _amount];
 };
 
-player setVariable [QGVAR(funds), _funds + _amount];
+ACE_player setVariable [QGVAR(funds), _funds + _amount];

@@ -15,7 +15,7 @@
  *
 */
 
-[player, 2] call EFUNC(common,nearPlayer) params ["_isNear", "_targetPlayer"];
+[ACE_player, 2] call EFUNC(common,nearPlayer) params ["_isNear", "_targetPlayer"];
 
 call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 

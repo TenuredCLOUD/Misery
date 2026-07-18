@@ -19,7 +19,7 @@ private _nearbyFire = objNull;
 private _fireIndex = -1;
 
 {
-    if (player distance (_x select 0) < 2.5) exitWith {
+    if (ACE_player distance (_x select 0) < 2.5) exitWith {
         _nearbyFire = _x select 0;
         _fireIndex = _forEachIndex;
     };
@@ -28,16 +28,12 @@ private _fireIndex = -1;
 if (isNull _nearbyFire) then {
     _noteBox ctrlSetText localize LSTRING(ExtinguishNone);
 } else {
-    if (isServer) then {
-        if (inflamed _nearbyFire) then {
-            _nearbyFire inflame false;
-            (GVAR(activeFires) select _fireIndex) set [2, 0];
-            publicVariable QGVAR(activeFires);
-            _noteBox ctrlSetText localize LSTRING(Extinguished);
-        } else {
-            _noteBox ctrlSetText localize LSTRING(AlreadyExtinguished);
-        };
+    if (inflamed _nearbyFire) then {
+        _nearbyFire inflame false;
+        (GVAR(activeFires) select _fireIndex) set [2, 0];
+        publicVariable QGVAR(activeFires);
+        _noteBox ctrlSetText localize LSTRING(Extinguished);
     } else {
-        [QGVAR(extinguishFire), [_nearbyFire, _fireIndex, _display]] call CBA_fnc_serverEvent;
+        _noteBox ctrlSetText localize LSTRING(AlreadyExtinguished);
     };
 };

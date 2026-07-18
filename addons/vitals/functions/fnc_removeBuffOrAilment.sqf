@@ -17,10 +17,10 @@
 params ["_type", "_name"];
 
 private _arrayName = ["ailments", "buffs"] select (_type isEqualTo "buff");
-private _array = player getVariable [_arrayName, []];
+private _array = ACE_player getVariable [_arrayName, []];
 private _index = _array findIf {(_x select 0) isEqualTo _name};
 
 if (_index isNotEqualTo -1) then {
     _array deleteAt _index;
-    player setVariable [_arrayName, _array];
+    ACE_player setVariable [_arrayName, _array];
 };

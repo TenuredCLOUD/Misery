@@ -1,6 +1,6 @@
+PREP(addItem);
 PREP(addStatusModifier);
 PREP(chromaticEffect);
-PREP(combatLogPrevention);
 PREP(configCheck);
 PREP(countItem);
 PREP(countMagazinesAmmo);

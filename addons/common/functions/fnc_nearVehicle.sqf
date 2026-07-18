@@ -16,7 +16,7 @@
 */
 params ["_object"];
 
-if (!isNull objectParent player) exitWith {};
+if (!isNull objectParent ACE_player) exitWith {};
 
 private _nearestObjects = nearestObjects [_object, [MACRO_VEHICLETYPES], 5];
 

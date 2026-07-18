@@ -56,7 +56,7 @@ if (GVAR(specimensEnabled)) then {
 };
 
 // Auto swap logic for Rvg items to prevent conflicts
-player addEventHandler ["Take", {
+ACE_player addEventHandler ["Take", {
 	params ["_unit", "_container", "_item"];
 
     // Tents & sleeping bags
@@ -66,7 +66,7 @@ player addEventHandler ["Take", {
         private _oldCampItem = _item;
         private _campKitToAdd = (MACRO_RVG_CAMPING select _campingGear) select 1;
         [_unit, _oldCampItem] call CBA_fnc_removeItem;
-        [player, _campKitToAdd] call grad_fortifications_fnc_addFort;
+        [ACE_player, _campKitToAdd] call grad_fortifications_fnc_addFort;
     };
 
     // Tools
@@ -116,8 +116,8 @@ player addEventHandler ["Take", {
     };
 }];
 
-// Edge cases for someone adding items manually to the player
-player addEventHandler ["InventoryOpened", {
+// Edge cases for someone adding items manually to the ACE_player
+ACE_player addEventHandler ["InventoryOpened", {
     params ["_unit", "_primaryContainer", "_secondaryContainer"];
 
     // Tents & sleeping bags
@@ -127,7 +127,7 @@ player addEventHandler ["InventoryOpened", {
 
         if ([[_oldCampItem]] call EFUNC(common,hasItem) && !isNil QUOTE(grad_fortifications_playerInventorySize)) then {
             [_unit, _oldCampItem] call CBA_fnc_removeItem;
-            [player, _newCampItem] call grad_fortifications_fnc_addFort;
+            [ACE_player, _newCampItem] call grad_fortifications_fnc_addFort;
         };
     } forEach MACRO_RVG_CAMPING;
 

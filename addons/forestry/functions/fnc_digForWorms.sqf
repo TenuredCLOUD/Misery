@@ -14,34 +14,34 @@
  *
 */
 
-[player] call EFUNC(common,nearTree) params ["_found", "_nearestTree", "_damaged", "_hasAxe", "_hasSaw"];
+[ACE_player] call EFUNC(common,nearTree) params ["_found", "_nearestTree", "_damaged", "_hasAxe", "_hasSaw"];
 
 if !(_found) exitWith {
     [QEGVAR(common,tileText), format [localize LSTRING(NearFoliage)]] call CBA_fnc_localEvent;
 };
 
-if (GVAR(digPositions) findIf {_x distance getPosATL player < 2.5} isNotEqualTo -1) exitWith {
+if (GVAR(digPositions) findIf {_x distance getPosATL ACE_player < 2.5} isNotEqualTo -1) exitWith {
     [QEGVAR(common,tileText), localize LSTRING(AreaDug)] call CBA_fnc_localEvent;
 };
 
-player playActionNow "Crouch";
+ACE_player playActionNow "Crouch";
 
-if (currentWeapon player isNotEqualTo "") then {
-    [player] call ACEFUNC(weaponselect,putWeaponAway);
+if (currentWeapon ACE_player isNotEqualTo "") then {
+    [ACE_player] call ACEFUNC(weaponselect,putWeaponAway);
 };
 
 [localize LSTRING(DiggingWorms),
 15,
-{[player] call EFUNC(common,nearTree) params ["_found", "", "", "", ""]; _found},
+{[ACE_player] call EFUNC(common,nearTree) params ["_found", "", "", "", ""]; _found},
 {
     if ([70] call EFUNC(common,rollChance)) then {
         [QEGVAR(common,tileText), localize LSTRING(FoundWorms)] call CBA_fnc_localEvent;
-        [player, QCLASS(worms)] call CBA_fnc_addItem;
+        [ACE_player, QCLASS(worms)] call CBA_fnc_addItem;
     } else {
         [QEGVAR(common,tileText), localize LSTRING(FoundNothing)] call CBA_fnc_localEvent;
     };
 
-    private _position = getPosWorld player;
+    private _position = getPosWorld ACE_player;
 
     // Check if position is already cached (within 2.5 meters)
     if (GVAR(digPositions) findIf {_x distance _position < 2.5} isEqualTo -1) then {

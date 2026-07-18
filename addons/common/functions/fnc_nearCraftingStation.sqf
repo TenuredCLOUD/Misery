@@ -17,8 +17,8 @@
 params ["_craftingStations", "_distance"];
 
 // Early exit if in vehicle.
-if (!isNull objectParent player) exitWith {};
+if (!isNull objectParent ACE_player) exitWith {};
 
-private _nearObjects = nearestObjects [player, _craftingStations, _distance];
+private _nearObjects = nearestObjects [ACE_player, _craftingStations, _distance];
 
 _nearObjects isNotEqualTo []

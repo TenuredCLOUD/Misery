@@ -18,11 +18,11 @@ params ["_items"];
 
 // Cache is updated when loadout changes and this function re-runs.
 if (isNil QGVAR(itemsCache)) then {
-    private _uniqueUnitItems = [player, true, true, true, true, true, true] call CBA_fnc_uniqueUnitItems;
+    private _uniqueUnitItems = [ACE_player, true, true, true, true, true, true] call CBA_fnc_uniqueUnitItems;
     {
         if (_x isEqualTo "") then {continue}; // skip gear that doesn't exist
         _uniqueUnitItems pushBack _x;
-    } forEach [uniform player, vest player, backpack player, headgear player, goggles player];
+    } forEach [uniform ACE_player, vest ACE_player, backpack ACE_player, headgear ACE_player, goggles ACE_player];
     GVAR(itemsCache) = _uniqueUnitItems;
 };
 

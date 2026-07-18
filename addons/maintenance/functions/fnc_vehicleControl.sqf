@@ -19,7 +19,7 @@
 GVAR(handleEngine) = {
     params ["_args", "_handle"];
 
-    private _vehicle = vehicle player;
+    private _vehicle = vehicle ACE_player;
 
     GVAR(engineHandle) = _handle;
 
@@ -76,7 +76,7 @@ GVAR(handleEngine) = {
     };
 };
 
-player addEventHandler ["GetInMan", {
+ACE_player addEventHandler ["GetInMan", {
     params ["_unit", "_role", "_vehicle"];
 
     if (_vehicle isKindOf "StaticWeapon") exitWith {};
@@ -145,7 +145,7 @@ player addEventHandler ["GetInMan", {
     GVAR(handleLights) = addUserActionEventHandler ["headlights", "Activate", {
         params ["_activated"];
 
-        private _vehicle = vehicle player;
+        private _vehicle = vehicle ACE_player;
         private _batteryLevel = _vehicle getVariable [QGVAR(batteryLevel), 0];
 
         if (_activated) then {
@@ -153,7 +153,7 @@ player addEventHandler ["GetInMan", {
                 params ["_vehicle", "_batteryLevel"];
 
                 if (_batteryLevel <= 0 && isLightOn _vehicle) then {
-                    player action ["LightOff", _vehicle];
+                    ACE_player action ["LightOff", _vehicle];
                 };
             }, [_vehicle, _batteryLevel], 0.02] call CBA_fnc_waitAndExecute;
         };
@@ -232,11 +232,11 @@ player addEventHandler ["GetInMan", {
 
     GVAR(trackPlayerSeats) = _unit addEventHandler ["SeatSwitchedMan", {
         params ["_unit1", "_unit2", "_vehicle"];
-        if (_unit1 isEqualTo player || _unit2 isEqualTo player) then {
-            if (player isEqualTo (currentPilot _vehicle)) then {
-                player setVariable [QGVAR(isPilot), true];
+        if (_unit1 isEqualTo ACE_player || _unit2 isEqualTo ACE_player) then {
+            if (ACE_player isEqualTo (currentPilot _vehicle)) then {
+                ACE_player setVariable [QGVAR(isPilot), true];
             } else {
-                player setVariable [QGVAR(isPilot), false];
+                ACE_player setVariable [QGVAR(isPilot), false];
             };
         };
     }];

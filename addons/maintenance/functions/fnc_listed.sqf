@@ -18,7 +18,7 @@
 
 [{!isNull findDisplay 274839},{
 
-    [player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
+    [ACE_player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
 
     private _list = findDisplay 274839 displayCtrl 1500;
 
@@ -26,7 +26,7 @@
         params ["_args", "_handle"];
         _args params ["_nearVehicle", "_vehicle", "_list", "_batteryStatusText"];
 
-        [player] call EFUNC(common,nearVehicle) params ["", "", "_hasCrew"];
+        [ACE_player] call EFUNC(common,nearVehicle) params ["", "", "_hasCrew"];
 
         if (_hasCrew) exitWith {
             [QEGVAR(common,tileText), format [localize LSTRING(CrewPresent), [_vehicle] call EFUNC(common,getObjectData) select 0]] call CBA_fnc_localEvent;
@@ -34,7 +34,7 @@
             (findDisplay 274839) closeDisplay 2;
         };
 
-        if (isNull findDisplay 274839 || !alive player) exitWith {
+        if (isNull findDisplay 274839 || !alive ACE_player) exitWith {
             _handle call CBA_fnc_removePerFrameHandler;
         };
 

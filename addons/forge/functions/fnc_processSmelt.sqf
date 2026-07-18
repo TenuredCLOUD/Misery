@@ -22,7 +22,7 @@ private _recipe = GVAR(data) select {(_x select 0) isEqualTo _selectedItem} sele
 
 private _progressBar = _dialog displayCtrl 1010;
 
-[player] call FUNC(stats) params ["", "_forgeFuel"];
+[ACE_player] call FUNC(stats) params ["", "_forgeFuel"];
 
 if (isNil "_recipe") exitWith {ctrlSetText [1001, localize LSTRING(NoMaterialFound)];};
 
@@ -42,7 +42,7 @@ if (_forgeFuel isEqualTo 0) exitWith {
 
 [982388, [1010], true] call EFUNC(common,displayShowControls);
 
-player playAction "Gear";
+ACE_player playAction "Gear";
 
 private _outputDisplayName = getText (configFile >> "CfgWeapons" >> _outputItem >> "displayName");
 if (_outputDisplayName isEqualTo "") then {
@@ -52,12 +52,12 @@ if (_outputDisplayName isEqualTo "") then {
     _outputDisplayName = _outputItem;
 };
 
-player setVariable [QGVAR(isSmelting), true];
+ACE_player setVariable [QGVAR(isSmelting), true];
 
 private _smeltInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key"];
     if (_key isEqualTo DIK_ESCAPE) then {
-        player setVariable [QGVAR(isSmelting), false];
+        ACE_player setVariable [QGVAR(isSmelting), false];
         [982388, [1010], false] call EFUNC(common,displayShowControls);
         [QEGVAR(common,tileText), localize LSTRING(Interrupted)] call CBA_fnc_localEvent;
     };
@@ -66,7 +66,7 @@ private _smeltInterrupt = _dialog displayAddEventHandler ["KeyDown", {
 private _totalSteps = _smeltTime * 2;
 private _currentStep = 0;
 
-private _soundDummy = "#particlesource" createVehicleLocal getPosATL player;
+private _soundDummy = "#particlesource" createVehicleLocal getPosATL ACE_player;
 _soundDummy say3D QCLASS(audio_sound_metalSmelt);
 
 [{
@@ -83,11 +83,11 @@ _soundDummy say3D QCLASS(audio_sound_metalSmelt);
         "_progressBar"
     ];
 
-    if (!(player getVariable [QGVAR(isSmelting), false]) || !alive player) exitWith {
+    if (!(ACE_player getVariable [QGVAR(isSmelting), false]) || !alive ACE_player) exitWith {
         if (_soundDummy isNotEqualTo objNull) then {
             deleteVehicle _soundDummy;
         };
-        player setVariable [QGVAR(isSmelting), nil];
+        ACE_player setVariable [QGVAR(isSmelting), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _smeltInterrupt];
         [982388, [1600, 1602, 1604, 1603], true] call EFUNC(common,displayShowControls);
         [982388, [1010], false] call EFUNC(common,displayShowControls);
@@ -106,14 +106,14 @@ _soundDummy say3D QCLASS(audio_sound_metalSmelt);
             private _item = _x select 0;
             private _count = _x select 1;
             for "_j" from 1 to _count do {
-                [player, _item] call CBA_fnc_removeItem;
+                [ACE_player, _item] call CBA_fnc_removeItem;
             };
         } forEach _requiredItems;
 
-        [player, _outputItem, true] call CBA_fnc_addItem;
+        [ACE_player, _outputItem, true] call CBA_fnc_addItem;
 
         ctrlSetText [1001, format [localize LSTRING(Smelted), _outputDisplayName]];
-        player setVariable [QGVAR(isSmelting), nil];
+        ACE_player setVariable [QGVAR(isSmelting), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _smeltInterrupt];
         if (_soundDummy isNotEqualTo objNull) then {
             deleteVehicle _soundDummy;

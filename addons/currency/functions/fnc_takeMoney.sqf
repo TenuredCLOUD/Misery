@@ -15,7 +15,7 @@
  *
 */
 
-[player, ["CAManBase"], 2] call EFUNC(common,nearCorpse) params ["_isNear", "_corpse"];
+[ACE_player, ["CAManBase"], 2] call EFUNC(common,nearCorpse) params ["_isNear", "_corpse"];
 
 if (!_isNear) exitWith {
     [QEGVAR(common,tileText), localize LSTRING(NoCorpse)] call CBA_fnc_localEvent;

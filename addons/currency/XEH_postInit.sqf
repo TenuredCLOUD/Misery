@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-GVAR(searchForMoneyAction) = [
+private _searchMoneyAction = [
     QGVAR(searchForMoney_menu),
     format [localize LSTRING(SearchAction), GVAR(symbol)],
     QPATHTOEF(icons,data\hand_helping_ca.paa),
@@ -18,6 +18,8 @@ GVAR(searchForMoneyAction) = [
     [0, 0, 0],
     3
 ] call ACEFUNC(interact_menu,createAction);
+
+["CAManBase", 0, [QUOTE(ACE_MainActions)], _searchMoneyAction, true] call ACEFUNC(interact_menu,addActionToClass);
 
 private _giftMoneyAction = [
     QGVAR(giftMoney_menu),
@@ -38,7 +40,7 @@ private _giftMoneyAction = [
     3
 ] call ACEFUNC(interact_menu,createAction);
 
-["CAManBase", 0, [QUOTE(ACE_MainActions)], _giftMoneyAction] call ACEFUNC(interact_menu,addActionToClass);
+["CAManBase", 0, [QUOTE(ACE_MainActions)], _giftMoneyAction, true] call ACEFUNC(interact_menu,addActionToClass);
 
 private _fundsCheckAction = [
     QGVAR(check_menu),
@@ -51,27 +53,31 @@ private _fundsCheckAction = [
     {true}
 ] call ACEFUNC(interact_menu,createAction);
 
-[player, 1, [QUOTE(ACE_SelfActions), QUOTE(ACE_Equipment)], _fundsCheckAction] call ACEFUNC(interact_menu,addActionToObject);
+private _player = [] call ACEFUNC(common,player);
+
+[_player, 1, [QUOTE(ACE_SelfActions), QUOTE(ACE_Equipment)], _fundsCheckAction] call ACEFUNC(interact_menu,addActionToObject);
+
+_player setVariable [QGVAR(canSearch), true, true];
+
+[QGVAR(addCorpseSearchAction), {
+    params ["_unit"];
+    if (isNull _unit) exitWith {};
+
+    [_unit, 0, [QUOTE(ACE_MainActions)], GVAR(searchForMoneyAction)] call ACEFUNC(interact_menu,addActionToObject);
+}] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
-    addMissionEventHandler ["EntityKilled", {
-        params ["_unit", "_killer", "_instigator", "_useEffects"];
+    ["CAManBase", "Killed", {
+        params ["_unit"];
 
-        if (_unit isKindOf "CAManBase") then {
-
-            if (!isPlayer _unit) then {
-                if ([GVAR(corpseHasMoneyChance)] call EFUNC(common,rollChance)) then {
-                    private _midAiMoney = GVAR(minAiMoney) + GVAR(maxAiMoney) / 2;
-                    private _cashFound = floor random [GVAR(minAiMoney), _midAiMoney, GVAR(maxAiMoney)];
-                    _unit setVariable [QGVAR(funds), _cashFound, true];
-                } else {
-                    _unit setVariable [QGVAR(funds), 0, true];
-                };
-            };
-
-            if (GVAR(corpseHasMoneyChance) > 0) then {
-                [_unit, 0, [QUOTE(ACE_MainActions)], GVAR(searchForMoneyAction)] call ACEFUNC(interact_menu,addActionToObject);
+        if (!isPlayer _unit) then {
+            if ([GVAR(corpseHasMoneyChance)] call EFUNC(common,rollChance)) then {
+                private _midAiMoney = GVAR(minAiMoney) + GVAR(maxAiMoney) / 2;
+                private _cashFound = floor random [GVAR(minAiMoney), _midAiMoney, GVAR(maxAiMoney)];
+                _unit setVariable [QGVAR(funds), _cashFound, true];
+            } else {
+                _unit setVariable [QGVAR(funds), 0, true];
             };
         };
-    }];
+    }] call CBA_fnc_addClassEventHandler;
 };

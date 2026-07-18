@@ -17,12 +17,12 @@
 
 params ["_hasAxe", "_hasSaw"];
 
-if (currentWeapon player isNotEqualTo "") then {
-    [player] call ACEFUNC(weaponselect,putWeaponAway);
+if (currentWeapon ACE_player isNotEqualTo "") then {
+    [ACE_player] call ACEFUNC(weaponselect,putWeaponAway);
 };
 
-private _soundDummy = "Land_HelipadEmpty_F" createVehicle (getPosWorld player);
-_soundDummy attachTo [player, [0, 0, 0], "Pelvis"];
+private _soundDummy = "Land_HelipadEmpty_F" createVehicle (getPosWorld ACE_player);
+_soundDummy attachTo [ACE_player, [0, 0, 0], "Pelvis"];
 
 private _toolUsed = switch (true) do {
     case (_hasAxe && !_hasSaw): {[QCLASS(audio_sound_chopWood), 0, localize LSTRING(ChoppingLog), 10]};
@@ -33,7 +33,7 @@ private _toolUsed = switch (true) do {
 _soundDummy say3D [_toolUsed select 0, 500];
 
 if (_toolUsed select 1 isEqualTo 1) then {
-    player setVariable [QGVAR(cuttingWood), true];
+    ACE_player setVariable [QGVAR(cuttingWood), true];
 
     call FUNC(chainsawFuelDecrement);
 };
@@ -49,12 +49,12 @@ _toolUsed select 3,
         deleteVehicle _soundDummy;
     };
 
-    [player, QCLASS(woodenlog)] call CBA_fnc_removeItem;
+    [ACE_player, QCLASS(woodenlog)] call CBA_fnc_removeItem;
 
-    [getPosATL player, [[QCLASS(firewood), selectRandom [1, 2]]]] call EFUNC(common,spawnLoot);
+    [ACE_player, QCLASS(firewood), selectRandom [1, 2]] call EFUNC(common,addItem);
 
     if (_toolUsed select 1 isEqualTo 1) then {
-        player setVariable [QGVAR(cuttingWood), nil];
+        ACE_player setVariable [QGVAR(cuttingWood), nil];
     };
 },
 {
@@ -66,7 +66,7 @@ _toolUsed select 3,
     };
 
     if (_toolUsed select 1 isEqualTo 1) then {
-        player setVariable [QGVAR(cuttingWood), nil];
+        ACE_player setVariable [QGVAR(cuttingWood), nil];
         [QEGVAR(common,tileText), localize LSTRING(StopSawingLog)] call CBA_fnc_localEvent;
     } else {
         [QEGVAR(common,tileText), localize LSTRING(StopSplittingLog)] call CBA_fnc_localEvent;

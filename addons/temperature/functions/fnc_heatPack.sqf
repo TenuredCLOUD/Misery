@@ -18,7 +18,7 @@ if (GVAR(thermalBagActive) || GVAR(thermalPackHeatActive) || GVAR(thermalPackCol
 
 GVAR(thermalPackHeatActive) = true;
 
-[player, QCLASS(heatpack)] call CBA_fnc_removeItem;
+[ACE_player, QCLASS(heatpack)] call CBA_fnc_removeItem;
 
 private _currentTimer = 0;
 
@@ -26,16 +26,16 @@ private _currentTimer = 0;
     params ["_args", "_handle"];
     _args params ["_currentTimer"];
 
-    private _isSwimming = [player] call ACEFUNC(common,isSwimming);
+    private _isSwimming = [ACE_player] call ACEFUNC(common,isSwimming);
 
     if (isGamePaused) exitWith {};
 
-    if (isNull objectParent player && _isSwimming) exitWith {
+    if (isNull objectParent ACE_player && _isSwimming) exitWith {
         GVAR(thermalPackHeatActive) = false;
         _handle call CBA_fnc_removePerFrameHandler;
     };
 
-    if (!alive player) exitWith {
+    if (!alive ACE_player) exitWith {
         GVAR(thermalPackHeatActive) = false;
         _handle call CBA_fnc_removePerFrameHandler;
     };

@@ -31,7 +31,7 @@ if (_isInflamed) exitWith {
     _nightAlteration
 };
 
-if (insideBuilding player > 0.5) exitWith {
+if (insideBuilding ACE_player > 0.5) exitWith {
     [QUOTE(COMPONENT_BEAUTIFIED), "No psychosis increase at night due to being in building."] call EFUNC(common,debugMessage);
     _nightAlteration
 };

@@ -13,20 +13,15 @@
  * [] call misery_chemical_fnc_detectorAlert
 */
 
-// If chemical zone check fails, system will not function.
-if !(call FUNC(checkAreas)) exitWith {
-    [QUOTE(COMPONENT_BEAUTIFIED), "Marker check system failed, alerts disabled."] call EFUNC(common,debugMessage);
-};
-
-[{"ChemicalDetector_01_watch_F" in assignedItems player}, {
+[{"ChemicalDetector_01_watch_F" in assignedItems ACE_player}, {
     [{
         params ["_args", "_handle"];
 
         if (isGamePaused) exitWith {};
 
-        private _threatLevel = player getVariable [QGVAR(detectedThreat), 0];
+        private _threatLevel = ACE_player getVariable [QGVAR(detectedThreat), 0];
 
-        if !("ChemicalDetector_01_watch_F" in assignedItems player || isNil "_threatLevel") exitWith {
+        if !("ChemicalDetector_01_watch_F" in assignedItems ACE_player || isNil "_threatLevel") exitWith {
             call FUNC(detectorAlert);
             _handle call CBA_fnc_removePerFrameHandler;
         };

@@ -17,7 +17,7 @@ params ["_item"];
 
 private _incrementedSuccess = false;
 
-private _magazines = magazinesAmmo player;
+private _magazines = magazinesAmmo ACE_player;
 
 {
     if ((_x select 0) isEqualTo _item) then {
@@ -26,8 +26,8 @@ private _magazines = magazinesAmmo player;
         private _maxAmmo = getNumber (_config >> "count");
 
         if (_containerCount < _maxAmmo) then {
-            player removeMagazine _item;
-            [player, _item, _containerCount + 1, true] call CBA_fnc_addMagazine;
+            ACE_player removeMagazine _item;
+            [ACE_player, _item, _containerCount + 1, true] call CBA_fnc_addMagazine;
             _incrementedSuccess = true;
             break;
         };

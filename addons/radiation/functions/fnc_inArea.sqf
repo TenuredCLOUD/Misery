@@ -30,7 +30,7 @@ if !(call FUNC(checkAreas)) exitWith {
         private _isSwimming = [_player] call ACEFUNC(common,isSwimming);
 
         if (!_isPlayerHandled) then {
-            private _isInsideZone = GVAR(areas) findIf {_player inArea _x} isNotEqualTo -1;
+            private _isInsideZone = GVAR(areasCached) findIf {_player inArea _x} isNotEqualTo -1;
 
             if (_isInsideZone || rain > 0 || _isSwimming) then {
                 _player setVariable [QGVAR(insideArea), true, true];

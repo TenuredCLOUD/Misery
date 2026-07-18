@@ -20,9 +20,9 @@
 
         if (isGamePaused) exitWith {};
 
-        [player] call EFUNC(protection,totalProtection) params ["", "_scba"];
+        [ACE_player] call EFUNC(protection,totalProtection) params ["", "_scba"];
 
-        if (!GVAR(terrifiedState) || !alive player) exitWith {
+        if (!GVAR(terrifiedState) || !alive ACE_player) exitWith {
             _handle call CBA_fnc_removePerFrameHandler;
             call FUNC(heartFlutter);
         };

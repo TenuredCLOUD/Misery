@@ -18,12 +18,12 @@ params ["_switchFrom", "_switchTo"];
 
 if (_switchFrom isNotEqualTo []) then {
     {
-        player removeMagazine _x;
+        ACE_player removeMagazine _x;
     } forEach _switchFrom;
 };
 
 if (_switchTo isNotEqualTo []) then {
     {
-        player addMagazine _x;
+        ACE_player addMagazine _x;
     } forEach _switchTo;
 };

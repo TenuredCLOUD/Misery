@@ -18,17 +18,17 @@
 
     if (isGamePaused) exitWith {};
 
-    private _leftArea = GVAR(areas) findIf {player inArea _x} isEqualTo -1;
+    private _leftArea = GVAR(areasCached) findIf {ACE_player inArea _x} isEqualTo -1;
 
     if (_leftArea) exitWith {
-        player setVariable [QGVAR(insideArea), false, true];
+        ACE_player setVariable [QGVAR(insideArea), false, true];
         _handle call CBA_fnc_removePerFrameHandler;
         [{
             QGVAR(display) cutText ["", "PLAIN"];
         }, [], 15] call CBA_fnc_waitAndExecute;
     };
 
-    private _totalProtection = [player] call EFUNC(protection,totalProtection);
+    private _totalProtection = [ACE_player] call EFUNC(protection,totalProtection);
     private _hearingProtection = _totalProtection select 5;
     private _damageMultiplier = 0;
     private _psychModifier = 0;
@@ -44,10 +44,10 @@
         QGVAR(display) cutRsc [QCLASS(tunnel_ui), "PLAIN", 1, false];
         if (EGVAR(psychosis,enabled)) then {
             [_psychModifier, "psychosis"] call EFUNC(common,addStatusModifier);
-            [player, "head", ["Contusion", 1, 2, 1]] call ACEFUNC(medical,addWound);
+            [ACE_player, "head", ["Contusion", 1, 2, 1]] call ACEFUNC(medical,addWound);
         } else {
-            [player, "head", ["Contusion", 1, 2, 1]] call ACEFUNC(medical,addWound);
-            [player] call EFUNC(medical,handleHeadTrauma);
+            [ACE_player, "head", ["Contusion", 1, 2, 1]] call ACEFUNC(medical,addWound);
+            [ACE_player] call EFUNC(medical,handleHeadTrauma);
         };
     };
 }, 1] call CBA_fnc_addPerFrameHandler;

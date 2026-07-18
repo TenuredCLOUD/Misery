@@ -14,8 +14,8 @@
  * Public: No
 */
 
-player removeItem QCLASS(boxNails);
+ACE_player removeItem QCLASS(boxNails);
 
 for "_i" from 1 to 15 do {
-    [player, QCLASS(woodnail), true] call CBA_fnc_addItem;
+    [ACE_player, QCLASS(woodnail), true] call CBA_fnc_addItem;
 };

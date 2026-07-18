@@ -33,4 +33,4 @@ if (GVAR(initialColor) isEqualTo [0, 0, 0, 0] && GVAR(finalColor) isEqualTo [0, 
         _x setParticleCircle [0, [0, 0, 0]];
         _x setDropInterval 0.035;
     } forEach [_fog1, _fog2, _fog3];
-} forEach GVAR(areas);
+} forEach GVAR(areasCached);

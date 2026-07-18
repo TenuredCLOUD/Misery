@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: MikeMF
+ * Author: MikeMF, TenuredCLOUD
  * Begins persistency
  *
  * Arguments:
@@ -13,24 +13,7 @@
  * [] call misery_persistence_fnc_init
 */
 
-// Setup initial save variables & start autosave
-if (isServer) then {
-    [] call FUNC(loadData);
-
-    if (GVAR(autosaveInterval) isNotEqualTo 0) then {
-        [{
-            call FUNC(autoSave);
-        }, [], GVAR(autosaveTimer)] call CBA_fnc_waitAndExecute;
-    };
-
-    if (GVAR(gradAutosaveInterval) isNotEqualTo 0) then {
-        [{
-            call FUNC(gradSave);
-        }, [], GVAR(gradAutosaveTimer)] call CBA_fnc_waitAndExecute;
-    };
-};
-
-// If GRAD Persistence is being used, and admin actions are enabled - add actions to admins, or SP player
+// If GRAD Persistence is being used, and admin actions are enabled - add actions to admins, or SP ACE_player
 if (GVAR(gradAdminActions)) then {
     GVAR(gradPersistenceTag) = getText (missionConfigFile >> "CfgGradPersistence" >> "missionTag");
     if (GVAR(gradPersistenceTag) isEqualTo "") then {GVAR(gradPersistenceTag) = missionName};
@@ -47,30 +30,44 @@ if (GVAR(gradAdminActions)) then {
         }
     ] call ACEFUNC(interact_menu,createAction);
 
-    [player, 1, [QUOTE(ACE_SelfActions)], _gradSaveAction] call ACEFUNC(interact_menu,addActionToObject);
+    [ACE_player, 1, [QUOTE(ACE_SelfActions)], _gradSaveAction] call ACEFUNC(interact_menu,addActionToObject);
 };
 
 // New player or Respawned player
-player addEventHandler ["Respawn", {
+ACE_player addEventHandler ["Respawn", {
     [false] call FUNC(newPlayer);
 }];
 
 // Singleplayer hardcore
-if (!isMultiplayer && GVAR(hardcore)) then {
-    player addEventHandler ["Killed", {
-        if (!isNil "grad_persistence_blacklist") then {
-            [missionName] call GRADFUNC(persistence,clearMissionData);
+if (!isMultiplayer) then {
+    ACE_player addEventHandler ["Killed", {
+
+        if (GVAR(hardcore)) exitWith {
+            if (!isNil "grad_persistence_blacklist") then {
+                [missionName] call GRADFUNC(persistence,clearMissionData);
+            };
+
+            // Wipe All Character data
+            private _saveNameString = call FUNC(formatSaveName);
+            profileNamespace setVariable [_saveNameString, nil];
         };
+
+        call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "_bankedFunds"];
+
+        // Cache bank funds to a fresh profileNamespace var for retrieval on restart
+        profileNamespace setVariable [QGVAR(cachedBank), _bankedFunds];
+
+        // Wipe All Character data
+        private _saveNameString = call FUNC(formatSaveName);
+        profileNamespace setVariable [_saveNameString, nil];
     }];
 };
 
-// Callback for multiplayer
-if (isMultiplayer) exitWith {
-    [QUOTE(COMPONENT_BEAUTIFIED), "Loading multiplayer data from server."] call EFUNC(common,debugMessage);
-    [QGVAR(loadDataFromServer), player] call CBA_fnc_serverEvent;
+// Multiplayer Combat Log Prevention
+if (isMultiplayer) then {
+    [] call FUNC(combatLogPrevention);
 };
 
-// Force SP save on Escape menu
 [{!isNull findDisplay 46}, {
     (findDisplay 46) displayAddEventHandler ["KeyDown", {
         params ["", "_key"];
@@ -83,11 +80,10 @@ if (isMultiplayer) exitWith {
     }];
 }] call CBA_fnc_waitUntilAndExecute;
 
-if (GVAR(singlePlayerSaveData) isEqualTo [] || GVAR(resetSinglePlayerSave)) exitWith {
-    [QUOTE(COMPONENT_BEAUTIFIED), "New player, no single player data found or single player data reset is enabled."] call EFUNC(common,debugMessage);
-    call FUNC(newPlayer);
+private _playerData = call FUNC(loadData);
+
+if (_playerData isEqualTo []) exitWith {
+    [true] call FUNC(newPlayer);
 };
 
-// Use direct save data for singleplayer
-[QUOTE(COMPONENT_BEAUTIFIED), "Loading singleplayer data"] call EFUNC(common,debugMessage);
-[GVAR(singlePlayerSaveData)] call FUNC(clientDataGet);
+[_playerData] call FUNC(clientDataGet);

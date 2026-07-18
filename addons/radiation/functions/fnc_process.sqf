@@ -18,7 +18,7 @@
 
     if (isGamePaused) exitWith {};
 
-    [player] call EFUNC(protection,totalProtection) params ["", "", "_skinProtection", "_respiratoryProtection", "_eyeProtection"];
+    [ACE_player] call EFUNC(protection,totalProtection) params ["", "", "_skinProtection", "_respiratoryProtection", "_eyeProtection"];
 
     // Non-linear deficits for better scaling, even with protection of 3 very small radiation leaks occur
     private _skinDeficit = (1 * ((1 - _skinProtection) ^ 1.5)) max 0.001;
@@ -27,7 +27,7 @@
     private _baseEffectiveDose = _skinDeficit + _respiratoryDeficit + _eyeDeficit;
 
     private _radResistance = 1.0;
-    private _activeMeds = [player, false] call ACEFUNC(medical_status,getAllMedicationCount);
+    private _activeMeds = [ACE_player, false] call ACEFUNC(medical_status,getAllMedicationCount);
 
     {
         _x params ["_className", "_dose", "_effectiveness"];
@@ -47,15 +47,15 @@
     private _rainDose = 0;
     private _waterDose = 0;
 
-    private _activeAreaIndex = GVAR(areas) findIf {player inArea _x};
+    private _activeAreaIndex = GVAR(areasCached) findIf {ACE_player inArea _x};
     private _insideRadZone = _activeAreaIndex isNotEqualTo -1;
-    private _isSwimming = [player] call ACEFUNC(common,isSwimming);
+    private _isSwimming = [ACE_player] call ACEFUNC(common,isSwimming);
 
     if (_insideRadZone) then {
-        private _marker = GVAR(areas) select _activeAreaIndex;
+        private _marker = GVAR(areasCached) select _activeAreaIndex;
         private _markerSize = getMarkerSize _marker;
         private _maxRadius = (_markerSize select 0) max (_markerSize select 1);
-        private _distToCenter = player distance (getMarkerPos _marker);
+        private _distToCenter = ACE_player distance (getMarkerPos _marker);
 
         private _zoneIntensity = linearConversion [_maxRadius, 0, _distToCenter, 0.1, 1, true];
 
@@ -63,10 +63,10 @@
     };
 
     if (GVAR(radioactiveRain) && {rain > 0.1}) then {
-        private _isExposed = (isNull objectParent player) && (insideBuilding player isNotEqualTo 1);
+        private _isExposed = (isNull objectParent ACE_player) && (insideBuilding ACE_player isNotEqualTo 1);
 
-        if !(isNull objectParent player) then {
-            _isExposed = getNumber (configOf (vehicle player) >> "transportSoldier") < 2;
+        if !(isNull objectParent ACE_player) then {
+            _isExposed = getNumber (configOf (vehicle ACE_player) >> "transportSoldier") < 2;
         };
 
         if (_isExposed) then {
@@ -94,7 +94,7 @@
     private _isSafeFromWater = (!_isSwimming) || (_waterDose isEqualTo 0 && !_insideRadZone);
 
     if (!_insideRadZone && _isSafeFromRain && _isSafeFromWater) exitWith {
-        player setVariable [QGVAR(insideArea), false, true];
+        ACE_player setVariable [QGVAR(insideArea), false, true];
         _handle call CBA_fnc_removePerFrameHandler;
     };
 }, 1] call CBA_fnc_addPerFrameHandler;

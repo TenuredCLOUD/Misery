@@ -65,38 +65,6 @@
             <Chinesesimp>取消</Chinesesimp>
             <Turkish>İptal</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Common_CombatLog">
-            <English>Combat Log Prevention</English>
-            <Czech>Prevence odpojení z boje</Czech>
-            <French>Prévention du combat log</French>
-            <Spanish>Prevención de salida en combate</Spanish>
-            <Italian>Prevenzione combat log</Italian>
-            <Polish>Zapobieganie wylogowaniu podczas walki</Polish>
-            <Portuguese>Prevenção de Combat Log</Portuguese>
-            <Russian>Предотвращение выхода из боя</Russian>
-            <German>Combat-Log-Prävention</German>
-            <Korean>전투 중 탈주 방지</Korean>
-            <Japanese>戦闘中切断の防止</Japanese>
-            <Chinese>防戰鬥中斷線 / 防惡意下線</Chinese>
-            <Chinesesimp>防战斗中断线 / 防恶意下线</Chinesesimp>
-            <Turkish>Savaştan Kaçmayı Önleme</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Common_CombatLogDesc">
-            <English>Prevent Combat logging</English>
-            <Czech>Zabránit odpojení během boje</Czech>
-            <French>Empêcher la déconnexion en combat</French>
-            <Spanish>Evitar salir del juego en combate</Spanish>
-            <Italian>Impedisci il combat log</Italian>
-            <Polish>Zapobiegaj wylogowaniu w trakcie walki</Polish>
-            <Portuguese>Impedir o combat log</Portuguese>
-            <Russian>Предотвращать выход во время боя</Russian>
-            <German>Abmelden im Kampf verhindern</German>
-            <Korean>전투 중 게임 종료 방지</Korean>
-            <Japanese>戦闘中のログアウトを防止する</Japanese>
-            <Chinese>防止在戰鬥中惡意下線</Chinese>
-            <Chinesesimp>防止在战斗中恶意下线</Chinesesimp>
-            <Turkish>Savaş sırasında oyundan çıkmayı önler</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Common_Component">
             <English>Common</English>
             <Czech>Běžné</Czech>

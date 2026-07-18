@@ -24,10 +24,10 @@
         if (isGamePaused) exitWith {};
 
         private _hasGeiger = [[QCLASS(geiger_On)]] call EFUNC(common,hasItem);
-        private _inRadiationArea = player getVariable [QEGVAR(radiation,insideArea), false];
+        private _inRadiationArea = ACE_player getVariable [QEGVAR(radiation,insideArea), false];
         call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "_radiation"];
 
-        if (!_hasGeiger || !alive player) exitWith {
+        if (!_hasGeiger || !alive ACE_player) exitWith {
             [QUOTE(COMPONENT_BEAUTIFIED), "Geiger loop exiting"] call EFUNC(common,debugMessage);
             QGVAR(display) cutText ["", "PLAIN"];
             _handle call CBA_fnc_removePerFrameHandler;

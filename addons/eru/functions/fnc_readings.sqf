@@ -20,7 +20,7 @@ disableSerialization;
     [{
         params ["_args", "_handle"];
 
-        if (!([[QCLASS(eru_On)]] call EFUNC(common,hasItem)) || !alive player) exitWith {
+        if (!([[QCLASS(eru_On)]] call EFUNC(common,hasItem)) || !alive ACE_player) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             QGVAR(display) cutText ["", "PLAIN"];
             [] call FUNC(readings);
@@ -31,8 +31,8 @@ disableSerialization;
         private _display = uiNamespace getVariable QGVAR(ui);
         private _textControlTimeDate = _display displayCtrl 1000;
         private _textControlReadings = _display displayCtrl 1001;
-        private _inRadiationArea = player getVariable [QEGVAR(radiation,insideArea), false];
-        private _inCognitoArea = player getVariable [QEGVAR(cognito_hazard,insideArea), false];
+        private _inRadiationArea = ACE_player getVariable [QEGVAR(radiation,insideArea), false];
+        private _inCognitoArea = ACE_player getVariable [QEGVAR(cognito_hazard,insideArea), false];
 
         private _time = format ["%1", ([dayTime, "HH:MM"] call BIS_fnc_timeToString)];
         private _date = format ["%4%5/%2%3/%1",
@@ -54,7 +54,7 @@ disableSerialization;
                 _textControlReadings ctrlSetText format ["%2 %1°C", [_thermalIndex, 1, 1, false] call CBA_fnc_formatNumber, localize LSTRING(ExposureLabel)];
             };
             case (!isNil QGVAR(compass)): {
-                _direction = round (getDir player);
+                _direction = round (getDir ACE_player);
                 _Bearing = _direction;
                 switch true do {
                     case(((_direction >= 355) && (_direction <=359)) || ((_direction >= 0) && (_direction <= 5))) : {_Bearing = "N";};

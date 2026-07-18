@@ -97,38 +97,6 @@
             <Chinesesimp>启用存档</Chinesesimp>
             <Turkish>Kaydetmeyi Etkinleştir</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Persistence_FreshStart">
-            <English>Fresh Start</English>
-            <Czech>Nový začátek</Czech>
-            <French>Nouveau départ</French>
-            <Spanish>Nuevo comienzo</Spanish>
-            <Italian>Nuovo inizio</Italian>
-            <Polish>Czysty start</Polish>
-            <Portuguese>Recomeço</Portuguese>
-            <Russian>Новый старт</Russian>
-            <German>Neuanfang</German>
-            <Korean>새로운 시작</Korean>
-            <Japanese>新しく始める</Japanese>
-            <Chinese>全新開始</Chinese>
-            <Chinesesimp>全新开始</Chinesesimp>
-            <Turkish>Yeni Başlangıç</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Persistence_FreshStartDesc">
-            <English>Start fresh in singleplayer?</English>
-            <Czech>Začít znovu v singleplayeru?</Czech>
-            <French>Recommencer à zéro en solo ?</French>
-            <Spanish>¿Empezar de cero en un jugador?</Spanish>
-            <Italian>Iniziare da capo in giocatore singolo?</Italian>
-            <Polish>Zacząć od nowa w trybie jednoosobowym?</Polish>
-            <Portuguese>Começar do zero no modo um jogador?</Portuguese>
-            <Russian>Начать заново в одиночной игре?</Russian>
-            <German>Im Einzelspieler neu anfangen?</German>
-            <Korean>싱글플레이어에서 새롭게 시작하시겠습니까?</Korean>
-            <Japanese>シングルプレイヤーで新しく始めますか？</Japanese>
-            <Chinese>要在單人模式中全新開始嗎？</Chinese>
-            <Chinesesimp>要在单人模式中全新开始吗？</Chinesesimp>
-            <Turkish>Tek oyunculuda yeni bir başlangıç yapılsın mı?</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Persistence_GradAdmin">
             <English>GRAD Persistence admin actions</English>
             <Czech>Administrátorské akce GRAD persistence</Czech>
@@ -256,6 +224,38 @@
             <Chinese>硬核模式已啟用，您需要靠近點燃的篝火才能存檔...</Chinese>
             <Chinesesimp>硬核模式已启用，您需要靠近点燃的篝火才能存档...</Chinesesimp>
             <Turkish>Hardcore mod etkinleştirildi, kaydetmek için yanan bir ateşin yakınında olmalısınız...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_Logout">
+            <English>Logout</English>
+            <Czech>Odhlásit se</Czech>
+            <French>Déconnexion</French>
+            <Spanish>Cerrar sesión</Spanish>
+            <Italian>Disconnetti</Italian>
+            <Polish>Wyloguj się</Polish>
+            <Portuguese>Sair</Portuguese>
+            <Russian>Выйти из игры</Russian>
+            <German>Abmelden</German>
+            <Korean>로그아웃</Korean>
+            <Japanese>ログアウト</Japanese>
+            <Chinese>登出</Chinese>
+            <Chinesesimp>登出</Chinesesimp>
+            <Turkish>Çıkış Yap</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_PleaseWait">
+            <English>Please Wait %1 Seconds</English>
+            <Czech>Prosím počkejte %1 sekund</Czech>
+            <French>Veuillez patienter %1 secondes</French>
+            <Spanish>Por favor, espere %1 segundos</Spanish>
+            <Italian>Attendere %1 secondi, prego</Italian>
+            <Polish>Proszę czekać %1 s</Polish>
+            <Portuguese>Por favor, aguarde %1 segundos</Portuguese>
+            <Russian>Пожалуйста, подождите %1 сек.</Russian>
+            <German>Bitte warten Sie %1 Sekunden</German>
+            <Korean>%1초 동안 기다려 주십시오</Korean>
+            <Japanese>%1 秒お待ちください</Japanese>
+            <Chinese>請稍候 %1 秒</Chinese>
+            <Chinesesimp>请稍候 %1 秒</Chinesesimp>
+            <Turkish>Lütfen %1 Saniye Bekleyin</Turkish>
         </Key>
         <Key ID="STR_MISERY_Persistence_SaveACECargo">
             <English>Save ACE cargo</English>

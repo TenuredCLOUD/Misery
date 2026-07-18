@@ -41,12 +41,12 @@ if (_funds < _price) exitWith {
     [982381, [1600, 1601], true] call EFUNC(common,displayShowControls);
 };
 
-player setVariable [QCLASS(processTreatment), true];
+ACE_player setVariable [QCLASS(processTreatment), true];
 
 private _interruptEH = _dialog displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key"];
     if (_key isEqualTo DIK_ESCAPE) then {
-        player setVariable [QCLASS(processTreatment), false];
+        ACE_player setVariable [QCLASS(processTreatment), false];
         [QEGVAR(common,tileText), localize LSTRING(Interrupted)] call CBA_fnc_localEvent;
     };
 }];
@@ -58,8 +58,8 @@ private _currentStep = 0;
     params ["_args", "_handle"];
     _args params ["_dialog", "_name", "_price", "_action", "_totalSteps", "_currentStep", "_interruptEH"];
 
-    if (!(player getVariable [QCLASS(processTreatment), false]) || !alive player) exitWith {
-        player setVariable [QCLASS(processTreatment), nil];
+    if (!(ACE_player getVariable [QCLASS(processTreatment), false]) || !alive ACE_player) exitWith {
+        ACE_player setVariable [QCLASS(processTreatment), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _interruptEH];
         [982381, [1600, 1601], true] call EFUNC(common,displayShowControls);
         _handle call CBA_fnc_removePerFrameHandler;
@@ -76,16 +76,16 @@ private _currentStep = 0;
 
         if (isNil "_action") then {
             if ([QCLASSACE(medical)] call EFUNC(common,isModLoaded)) then {
-                [player] call ACEFUNC(medical_treatment,fullHealLocal);
+                [ACE_player] call ACEFUNC(medical_treatment,fullHealLocal);
             } else {
-                player setDamage 0;
+                ACE_player setDamage 0;
             };
         } else {
             call _action;
         };
 
         ctrlSetText [1001, format [localize LSTRING(ProgressComplete), _name]];
-        player setVariable [QCLASS(processTreatment), nil];
+        ACE_player setVariable [QCLASS(processTreatment), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _interruptEH];
         [982381, [1600, 1601], true] call EFUNC(common,displayShowControls);
 

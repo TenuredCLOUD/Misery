@@ -52,12 +52,12 @@ if (_count < _reqTablets) exitWith {
 
 [_inputClass] call EFUNC(common,countMagazinesAmmo) params ["_lastVolume"];
 
-[player, _inputClass] call CBA_fnc_removeItem;
+[ACE_player, _inputClass] call CBA_fnc_removeItem;
 
-[player, _purifiedClass, _lastVolume, true] call CBA_fnc_addMagazine;
+[ACE_player, _purifiedClass, _lastVolume, true] call CBA_fnc_addMagazine;
 
 if (_reqTablets >= 10) then {
-    [player, QCLASS(pureTablets)] call CBA_fnc_removeItem;
+    [ACE_player, QCLASS(pureTablets)] call CBA_fnc_removeItem;
     [QEGVAR(common,tileText), format [localize LSTRING(UsedAllTablets), [(_targetContainer select 0)] call EFUNC(common,getItemData) select 0]] call CBA_fnc_localEvent;
 } else {
     for "_i" from 1 to _reqTablets do {

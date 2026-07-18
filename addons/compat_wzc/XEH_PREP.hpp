@@ -5,6 +5,5 @@ PREP(convertToZombie);
 PREP(findClass);
 PREP(infect);
 PREP(loiter);
-PREP(loop);
 PREP(randomGear);
 PREP(spawn);

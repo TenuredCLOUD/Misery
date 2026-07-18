@@ -15,7 +15,7 @@
 */
 
 if ([[QCLASS(18vBattery)]] call EFUNC(common,hasItem)) then {
-    player removeItem QCLASS(electricHandSaw_NoBattery);
-    player removeItem QCLASS(18vBattery);
-    [player, QCLASS(electricHandsaw), true] call CBA_fnc_addMagazine;
+    ACE_player removeItem QCLASS(electricHandSaw_NoBattery);
+    ACE_player removeItem QCLASS(18vBattery);
+    [ACE_player, QCLASS(electricHandsaw), true] call CBA_fnc_addMagazine;
 };

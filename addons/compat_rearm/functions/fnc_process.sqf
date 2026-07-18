@@ -22,7 +22,7 @@ private _found = false;
 
 call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
-[player] call EFUNC(common,nearVehicle) params ["", "_nearestVehicle"];
+[ACE_player] call EFUNC(common,nearVehicle) params ["", "_nearestVehicle"];
 
 if (_nearestVehicle isEqualTo []) exitWith {};
 
@@ -37,12 +37,12 @@ if (_nearestVehicle isEqualTo []) exitWith {};
 
 if (!_found) exitWith {};
 
-player setVariable [QCLASS(processRearm), true];
+ACE_player setVariable [QCLASS(processRearm), true];
 
 private _rearmInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key"];
     if (_key isEqualTo DIK_ESCAPE) then {
-        player setVariable [QCLASS(processRearm), false];
+        ACE_player setVariable [QCLASS(processRearm), false];
         [QEGVAR(common,tileText), localize LSTRING(Interrupted)] call CBA_fnc_localEvent;
     };
 }];
@@ -50,7 +50,7 @@ private _rearmInterrupt = _dialog displayAddEventHandler ["KeyDown", {
 if (_funds < _resupplyPrice) exitWith {
     ctrlSetText [1001, localize ECSTRING(common,TooExpensive)];
     [982383, [1600, 1601], true] call EFUNC(common,displayShowControls);
-    player setVariable [QCLASS(processRearm), nil];
+    ACE_player setVariable [QCLASS(processRearm), nil];
     _dialog displayRemoveEventHandler ["KeyDown", _rearmInterrupt];
 };
 
@@ -68,9 +68,9 @@ _dummyVehicle enableSimulation false;
     private _progressPercent = (((_step + 1) / _totalSteps) * 100) toFixed 2;
     call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
-    if (!alive _nearestVehicle || !(player getVariable [QCLASS(processRearm), false])) exitWith {
+    if (!alive _nearestVehicle || !(ACE_player getVariable [QCLASS(processRearm), false])) exitWith {
         [_totalFundsDeducted] call EFUNC(currency,modifyMoney);
-        player setVariable [QCLASS(processRearm), nil];
+        ACE_player setVariable [QCLASS(processRearm), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _rearmInterrupt];
         deleteVehicle _dummyVehicle;
         ctrlSetText [1001, localize LSTRING(Interrupted)];
@@ -80,7 +80,7 @@ _dummyVehicle enableSimulation false;
 
     if (_funds < _fundsToDeductPerStep) exitWith {
         [_totalFundsDeducted] call EFUNC(currency,modifyMoney);
-        player setVariable [QCLASS(processRearm), nil];
+        ACE_player setVariable [QCLASS(processRearm), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _rearmInterrupt];
         ctrlSetText [1001, localize LSTRING(OutOfFunds)];
         [982383, [1600, 1601], true] call EFUNC(common,displayShowControls);
@@ -103,7 +103,7 @@ _dummyVehicle enableSimulation false;
 
     if (_step >= _totalSteps - 1) exitWith {
         [_dummyVehicle, _nearestVehicle] call ACEFUNC(rearm,rearmEntireVehicleSuccess);
-        player setVariable [QCLASS(processRearm), nil];
+        ACE_player setVariable [QCLASS(processRearm), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _rearmInterrupt];
         private _displayFull = format [localize LSTRING(Success), _displayName];
         ctrlSetText [1001, _displayFull];

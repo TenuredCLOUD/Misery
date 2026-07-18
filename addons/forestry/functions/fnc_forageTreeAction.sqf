@@ -25,22 +25,22 @@ if (_damaged) exitWith {
     [QEGVAR(common,tileText), format [localize LSTRING(TreeEmpty)]] call CBA_fnc_localEvent;
 };
 
-if (GVAR(gatheredPositions) findIf {_x distance getPosATL player < 2.5} isNotEqualTo -1) exitWith {
+if (GVAR(gatheredPositions) findIf {_x distance getPosATL ACE_player < 2.5} isNotEqualTo -1) exitWith {
     [QEGVAR(common,tileText), localize LSTRING(DeadGathered)] call CBA_fnc_localEvent;
 };
 
-if (currentWeapon player isNotEqualTo "") then {
-    [player] call ACEFUNC(weaponselect,putWeaponAway);
+if (currentWeapon ACE_player isNotEqualTo "") then {
+    [ACE_player] call ACEFUNC(weaponselect,putWeaponAway);
 };
 
-private _soundDummy = "Land_HelipadEmpty_F" createVehicle (getPosWorld player);
-_soundDummy attachTo [player, [0, 0, 0], "Pelvis"];
+private _soundDummy = "Land_HelipadEmpty_F" createVehicle (getPosWorld ACE_player);
+_soundDummy attachTo [ACE_player, [0, 0, 0], "Pelvis"];
 
 _soundDummy say3D [QCLASS(audio_sound_gatheringFirewood), 25];
 
 [localize LSTRING(GatheringProgress),
 60,
-{[player] call EFUNC(common,nearTree) params ["_found", "", "", "", ""]; _found},
+{[ACE_player] call EFUNC(common,nearTree) params ["_found", "", "", "", ""]; _found},
 {
     params ["_args"];
     _args params ["_tree", "_soundDummy"];
@@ -49,9 +49,9 @@ _soundDummy say3D [QCLASS(audio_sound_gatheringFirewood), 25];
         deleteVehicle _soundDummy;
     };
 
-    [getPosATL player, [[]], [[]], [[QCLASS(woodensticks), selectRandom [1, 2, 3, 4, 5]]]] call EFUNC(common,spawnLoot);
+    [ACE_player, QCLASS(woodensticks), selectRandom [1, 2, 3, 4, 5]] call EFUNC(common,addItem);
 
-    private _position = getPosWorld player;
+    private _position = getPosWorld ACE_player;
 
     // Check if position is already cached (within 2.5 meters)
     if (GVAR(gatheredPositions) findIf {_x distance _position < 2.5} isEqualTo -1) then {

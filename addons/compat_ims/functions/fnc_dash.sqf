@@ -15,22 +15,22 @@
  *
 */
 
-[{(animationState player in [MACRO_ANIMATION_IMS_SPRINT])},
+[{(animationState ACE_player in [MACRO_ANIMATION_IMS_SPRINT])},
 {
     [{
         params ["_args", "_handle"];
 
-        private _fatigueValue = [getFatigue player, player getVariable [QACEGVAR(advanced_fatigue,aimFatigue), 0]] select (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)});
+        private _fatigueValue = [getFatigue ACE_player, ACE_player getVariable [QACEGVAR(advanced_fatigue,aimFatigue), 0]] select (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)});
 
-        if (!(animationState player in [MACRO_ANIMATION_IMS_SPRINT]) || (!alive player) || (_fatigueValue >= 0.9)) exitWith {
+        if (!(animationState ACE_player in [MACRO_ANIMATION_IMS_SPRINT]) || (!alive ACE_player) || (_fatigueValue >= 0.9)) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
             [QUOTE(COMPONENT_BEAUTIFIED), "Dash Compat cycle terminated."] call EFUNC(common,debugMessage);
-            if (animationState player isEqualTo "am_kulak_sprintf") then {
-                player playMoveNow "am_kulak_idle";
+            if (animationState ACE_player isEqualTo "am_kulak_sprintf") then {
+                ACE_player playMoveNow "am_kulak_idle";
             };
             {
-                if ((animationState player isEqualTo _x) && _x isNotEqualTo "am_kulak_sprintf") then {
-                    player playMoveNow "melee_armed_idle";
+                if ((animationState ACE_player isEqualTo _x) && _x isNotEqualTo "am_kulak_sprintf") then {
+                    ACE_player playMoveNow "melee_armed_idle";
                 };
             } forEach [MACRO_ANIMATION_IMS_SPRINT];
             [] call FUNC(dash);
@@ -38,9 +38,9 @@
         };
 
         if (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)}) then {
-            player setVariable [QACEGVAR(advanced_fatigue,aimFatigue), _fatigueValue + 0.01];
+            ACE_player setVariable [QACEGVAR(advanced_fatigue,aimFatigue), _fatigueValue + 0.01];
         } else {
-            player setFatigue (_fatigueValue + 0.01);
+            ACE_player setFatigue (_fatigueValue + 0.01);
         };
 
         [QUOTE(COMPONENT_BEAUTIFIED), "Dash Compat cycle."] call EFUNC(common,debugMessage);

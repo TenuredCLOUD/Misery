@@ -17,10 +17,10 @@
 
 [{
     if !([[QCLASS(lantern_On)]] call EFUNC(common,hasItem)) exitWith {
-        if (!isNil {player getVariable [QGVAR(state), nil]}) then {
-            private _lantern = player getVariable [QGVAR(state), nil];
+        if (!isNil {ACE_player getVariable [QGVAR(state), nil]}) then {
+            private _lantern = ACE_player getVariable [QGVAR(state), nil];
             [QGVAR(deleteLantern), [_lantern]] call CBA_fnc_globalEvent;
-            player setVariable [QGVAR(state), nil, true];
+            ACE_player setVariable [QGVAR(state), nil, true];
         };
     };
 }, [], 1] call CBA_fnc_waitAndExecute;

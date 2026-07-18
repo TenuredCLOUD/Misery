@@ -16,15 +16,15 @@
 
 call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "_infection"];
 
-if (!(player getVariable ["WBK_AI_ISZombie", false]) && _infection >= 1) then {
-    [QGVAR(convertToZed), [player, ["WBK_Runner_Angry_Idle", 0, 0.2, false]]] call CBA_fnc_globalEvent;
-    player setVariable ["WBK_SynthHP", WBK_Zombies_CorruptedHP, true];
-    player setVariable ["WBK_AI_ISZombie", true, true];
-    player setVariable ["WBK_AI_ZombieMoveSet", "WBK_Runner_Angry_Idle", true];
+if (!(ACE_player getVariable ["WBK_AI_ISZombie", false]) && _infection >= 1) then {
+    [QGVAR(convertToZed), [ACE_player, ["WBK_Runner_Angry_Idle", 0, 0.2, false]]] call CBA_fnc_globalEvent;
+    ACE_player setVariable ["WBK_SynthHP", WBK_Zombies_CorruptedHP, true];
+    ACE_player setVariable ["WBK_AI_ISZombie", true, true];
+    ACE_player setVariable ["WBK_AI_ZombieMoveSet", "WBK_Runner_Angry_Idle", true];
 };
 
-if (player getVariable ["WBK_AI_ISZombie", false]) then {
+if (ACE_player getVariable ["WBK_AI_ISZombie", false]) then {
     QGVAR(display) cutRsc [QCLASS(bloodshot_ui), "PLAIN", 1, false];
-    [player, "head", ["Contusion", 5, 2, 1]] call ACEFUNC(medical,addWound);
-    [player] call EFUNC(medical,handleHeadTrauma);
+    [ACE_player, "head", ["Contusion", 5, 2, 1]] call ACEFUNC(medical,addWound);
+    [ACE_player] call EFUNC(medical,handleHeadTrauma);
 };

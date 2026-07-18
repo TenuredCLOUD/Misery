@@ -25,7 +25,7 @@
     private _iconCtrl = _dialog displayCtrl 1200;
     private _iconTxt = _dialog displayCtrl 1004;
     private _infoBox = _dialog displayCtrl 1001;
-    private _trader = player getVariable [QGVAR(currentTrader), objNull];
+    private _trader = ACE_player getVariable [QGVAR(currentTrader), objNull];
     private _shop = _trader getVariable [QGVAR(shop), []];
 
     if (isNull _trader) exitWith {(findDisplay 982390) closeDisplay 2};
@@ -35,9 +35,9 @@
     _shop params ["_traderClass", "_shopName", "_items", "_shopFunds"];
     ctrlSetText [1000, _shopName];
 
-    private _pweapon = primaryWeapon player;
-    private _hweapon = handgunWeapon player;
-    private _sweapon = secondaryWeapon player;
+    private _pweapon = primaryWeapon ACE_player;
+    private _hweapon = handgunWeapon ACE_player;
+    private _sweapon = secondaryWeapon ACE_player;
     private _compatibleItemsP = if (_pweapon isNotEqualTo "") then {[_pweapon] call CBA_fnc_compatibleItems} else {[]};
     private _compatibleMagazinesP = if (_pweapon isNotEqualTo "") then {[_pweapon] call CBA_fnc_compatibleMagazines} else {[]};
     private _compatibleItemsH = if (_hweapon isNotEqualTo "") then {[_hweapon] call CBA_fnc_compatibleItems} else {[]};

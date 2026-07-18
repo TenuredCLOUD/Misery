@@ -32,7 +32,7 @@ if !(hasInterface) exitWith {};
 
 ["cameraView", {
     params ["_unit", "_newView"];
-    if (_unit isNotEqualTo player) exitWith {};
+    if (_unit isNotEqualTo ACE_player) exitWith {};
 
     if (!isNull GVAR(currentActionProp) && {_newView isEqualTo "INTERNAL"}) then {
         deleteVehicle GVAR(currentActionProp);

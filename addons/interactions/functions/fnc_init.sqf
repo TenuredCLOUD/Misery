@@ -40,7 +40,7 @@ private _categories = [];
         [_categoryName]
     ] call ACEFUNC(interact_menu,createAction);
 
-    [player, 1, [QUOTE(ACE_SelfActions), QUOTE(ACE_Equipment)], _categoryAction] call ACEFUNC(interact_menu,addActionToObject);
+    [ACE_player, 1, [QUOTE(ACE_SelfActions), QUOTE(ACE_Equipment)], _categoryAction] call ACEFUNC(interact_menu,addActionToObject);
 
     {
         private _itemEntry = _x;
@@ -68,7 +68,7 @@ private _categories = [];
                 _itemEntry
             ] call ACEFUNC(interact_menu,createAction);
 
-            [player, 1, [QUOTE(ACE_SelfActions), QUOTE(ACE_Equipment), _categoryID], _itemAction] call ACEFUNC(interact_menu,addActionToObject);
+            [ACE_player, 1, [QUOTE(ACE_SelfActions), QUOTE(ACE_Equipment), _categoryID], _itemAction] call ACEFUNC(interact_menu,addActionToObject);
         };
     } forEach GVAR(data);
 } forEach _categories;

@@ -1,6 +1,11 @@
 #include "script_component.hpp"
 
-if (GVAR(enabled)) then {
+if !(GVAR(enabled)) exitWith {};
+
+if !(hasInterface) exitWith {};
+
+["CBA_loadingScreenDone", {
+
     private _fishingMainMenu = [
         QGVAR(fishing_menu),
         localize LSTRING(Action),
@@ -11,7 +16,7 @@ if (GVAR(enabled)) then {
         }
     ] call ACEFUNC(interact_menu,createAction);
 
-    [player, 1, [QUOTE(ACE_SelfActions)], _fishingMainMenu] call ACEFUNC(interact_menu,addActionToObject);
+    [ACE_player, 1, [QUOTE(ACE_SelfActions)], _fishingMainMenu] call ACEFUNC(interact_menu,addActionToObject);
 
     private _fishingActionMenu = [
         QGVAR(fishingAction_menu),
@@ -23,7 +28,7 @@ if (GVAR(enabled)) then {
         {true}
     ] call ACEFUNC(interact_menu,createAction);
 
-    [player, 1, [QUOTE(ACE_SelfActions), QGVAR(fishing_menu)], _fishingActionMenu] call ACEFUNC(interact_menu,addActionToObject);
+    [ACE_player, 1, [QUOTE(ACE_SelfActions), QGVAR(fishing_menu)], _fishingActionMenu] call ACEFUNC(interact_menu,addActionToObject);
 
     private _fishingRequirementsMenu = [
         QGVAR(fishingRequirements_menu),
@@ -35,5 +40,6 @@ if (GVAR(enabled)) then {
         {true}
     ] call ACEFUNC(interact_menu,createAction);
 
-    [player, 1, [QUOTE(ACE_SelfActions), QGVAR(fishing_menu)], _fishingRequirementsMenu] call ACEFUNC(interact_menu,addActionToObject);
-};
+    [ACE_player, 1, [QUOTE(ACE_SelfActions), QGVAR(fishing_menu)], _fishingRequirementsMenu] call ACEFUNC(interact_menu,addActionToObject);
+
+}] call CBA_fnc_addEventHandler;

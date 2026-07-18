@@ -20,21 +20,21 @@
 
     if (isGamePaused) exitWith {};
 
-    [player] call EFUNC(protection,totalProtection) params ["", "_scba"];
+    [ACE_player] call EFUNC(protection,totalProtection) params ["", "_scba"];
 
     if (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)}) exitWith {}; // Kill audible breath if ACE advanced fatigue is enabled
 
     if (_scba < 1) exitWith {};
 
-    private _breathDelay = linearConversion [0, 1, getFatigue player, 10, 3, true];
+    private _breathDelay = linearConversion [0, 1, getFatigue ACE_player, 10, 3, true];
 
     if (CBA_missionTime - _lastBreathTime >= _breathDelay) then {
-        private _pitch = 0.8 + random 0.1 + getFatigue player;
-        player say3D [selectRandom [MACRO_REBREATHER_SOUNDS], 10, _pitch];
+        private _pitch = 0.8 + random 0.1 + getFatigue ACE_player;
+        ACE_player say3D [selectRandom [MACRO_REBREATHER_SOUNDS], 10, _pitch];
 
         _args set [0, CBA_missionTime];
 
-        [QUOTE(COMPONENT_BEAUTIFIED), format ["Gasmask Breath: Delay %1s | Fatigue %2%3 | Pitch %4", round(_breathDelay), round(getFatigue player * 100), "%", round(_pitch * 100)/100]] call EFUNC(common,debugMessage);
+        [QUOTE(COMPONENT_BEAUTIFIED), format ["Gasmask Breath: Delay %1s | Fatigue %2%3 | Pitch %4", round(_breathDelay), round(getFatigue ACE_player * 100), "%", round(_pitch * 100)/100]] call EFUNC(common,debugMessage);
     };
 }, 0.5, [CBA_missionTime - 5]] call CBA_fnc_addPerFrameHandler;
 

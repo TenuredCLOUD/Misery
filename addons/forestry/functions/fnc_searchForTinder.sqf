@@ -14,28 +14,28 @@
  *
 */
 
-[player] call EFUNC(common,nearTree) params ["_found", "_nearestTree", "_damaged", "_hasAxe", "_hasSaw"];
+[ACE_player] call EFUNC(common,nearTree) params ["_found", "_nearestTree", "_damaged", "_hasAxe", "_hasSaw"];
 
 if !(_found) exitWith {
     [QEGVAR(common,tileText), format [localize LSTRING(NearTreeTinder)]] call CBA_fnc_localEvent;
 };
 
-if (GVAR(tinderPositions) findIf {_x distance getPosATL player < 2.5} isNotEqualTo -1) exitWith {
+if (GVAR(tinderPositions) findIf {_x distance getPosATL ACE_player < 2.5} isNotEqualTo -1) exitWith {
     [QEGVAR(common,tileText), localize LSTRING(AreaSearched)] call CBA_fnc_localEvent;
 };
 
-if (currentWeapon player isNotEqualTo "") then {
-    [player] call ACEFUNC(weaponselect,putWeaponAway);
+if (currentWeapon ACE_player isNotEqualTo "") then {
+    [ACE_player] call ACEFUNC(weaponselect,putWeaponAway);
 };
 
-private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position player);
-_soundDummy attachTo [player, [0, 0, 0], "Pelvis"];
+private _soundDummy = "Land_HelipadEmpty_F" createVehicle (position ACE_player);
+_soundDummy attachTo [ACE_player, [0, 0, 0], "Pelvis"];
 
 _soundDummy say3D [QCLASS(audio_sound_dryGrass), 25];
 
 [localize LSTRING(SearchingTinder),
 15,
-{[player] call EFUNC(common,nearTree) params ["_found", "", "", "", ""]; _found},
+{[ACE_player] call EFUNC(common,nearTree) params ["_found", "", "", "", ""]; _found},
 {
     params ["_args"];
     _args params ["_nearestTree", "_soundDummy"];
@@ -46,12 +46,12 @@ _soundDummy say3D [QCLASS(audio_sound_dryGrass), 25];
 
     if ([50] call EFUNC(common,rollChance)) then {
         [QEGVAR(common,tileText), localize LSTRING(FoundTinder)] call CBA_fnc_localEvent;
-        [player, QCLASS(tinder)] call CBA_fnc_addItem;
+        [ACE_player, QCLASS(tinder)] call CBA_fnc_addItem;
     } else {
         [QEGVAR(common,tileText), localize LSTRING(FoundNothing)] call CBA_fnc_localEvent;
     };
 
-    private _position = getPosWorld player;
+    private _position = getPosWorld ACE_player;
 
     // Check if position is already cached (within 2.5 meters)
     if (GVAR(tinderPositions) findIf {_x distance _position < 2.5} isEqualTo -1) then {

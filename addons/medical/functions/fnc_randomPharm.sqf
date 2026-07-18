@@ -28,5 +28,5 @@ private _intensity = linearConversion [0, 1, _value, 0, 1, false];
 [_baseTRate * _intensity, "toxicity"] call EFUNC(common,addStatusModifier);
 
 if ([0.5] call EFUNC(common,rollChance)) then {
-    [player, true, 5, true] call ACEFUNC(medical,setUnconscious);
+    [ACE_player, true, 5, true] call ACEFUNC(medical,setUnconscious);
 };

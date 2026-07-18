@@ -29,7 +29,7 @@ if !(call FUNC(checkAreas)) exitWith {
             if (_player inArea _x) exitWith {
                 _markerPlayerIsInside = _x;
             };
-        } forEach GVAR(areas);
+        } forEach GVAR(areasCached);
 
         if (_markerPlayerIsInside isEqualTo "" && _currentTrackingMarker isNotEqualTo "") then {
             _player setVariable [QGVAR(insideArea), "", true];

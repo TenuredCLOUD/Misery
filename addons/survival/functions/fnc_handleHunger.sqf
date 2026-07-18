@@ -27,5 +27,5 @@ if (_parasites > 0) then {
 
 private _finalHunger = ((_hunger + GVAR(hungerModifiers)) min 1) max 0;
 GVAR(hungerModifiers) = 0;
-player setVariable [QGVAR(hunger), _finalHunger];
+ACE_player setVariable [QGVAR(hunger), _finalHunger];
 

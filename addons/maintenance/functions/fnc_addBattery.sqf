@@ -14,7 +14,7 @@
  *
 */
 
-[player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
+[ACE_player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
 
 if !([["ToolKit"]] call EFUNC(common,hasItem)) exitWith {
     ctrlSetText [1001, format [localize LSTRING(NeedToolkitBattery)]];
@@ -35,11 +35,11 @@ private _playerBatteryCount = [_batteryClass] call EFUNC(common,countItem);
 
 if (_playerBatteryCount >= 1) then {
     [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], false] call EFUNC(common,displayEnableControls);
-    player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+    ACE_player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
     [{
         params ["_vehicle", "_batteryType", "_batteryClass", "_installedBatteries", "_batteryCount"];
         [_batteryClass] call EFUNC(common,countMagazinesAmmo) params ["_batteryLife"];
-        [player, _batteryClass] call CBA_fnc_removeMagazine;
+        [ACE_player, _batteryClass] call CBA_fnc_removeMagazine;
         _installedBatteries = _installedBatteries + 1;
         _vehicle setVariable [QGVAR(installedBatteries), _installedBatteries, true];
         _vehicle setVariable [QGVAR(batteryLevel), (_vehicle getVariable [QGVAR(batteryLevel), 0]) + ((_batteryLife / 100) / _batteryCount), true];

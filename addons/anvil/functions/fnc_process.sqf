@@ -22,7 +22,7 @@ private _recipe = GVAR(data) select {(_x select 0) isEqualTo _selectedItem} sele
 
 private _progressBar = _dialog displayCtrl 1010;
 
-[player] call FUNC(nearestForgeStats) params ["_closestForge", "_forgeFuel"];
+[ACE_player] call FUNC(nearestForgeStats) params ["_closestForge", "_forgeFuel"];
 
 if (isNil "_recipe") exitWith {ctrlSetText [1001, localize LSTRING(NoMaterial)]};
 
@@ -48,16 +48,16 @@ if !([[MACRO_ANVIL_HAMMERS]] call EFUNC(common,hasItem)) exitWith {ctrlSetText [
 
 [274840, [1010], true] call EFUNC(common,displayShowControls);
 
-player playAction "Gear";
+ACE_player playAction "Gear";
 
 [_outputItem] call EFUNC(common,getItemData) params ["_displayName"];
 
-player setVariable [QGVAR(isSmithing), true];
+ACE_player setVariable [QGVAR(isSmithing), true];
 
 private _smithInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key"];
     if (_key isEqualTo DIK_ESCAPE) then {
-        player setVariable [QGVAR(isSmithing), false];
+        ACE_player setVariable [QGVAR(isSmithing), false];
         [274840, [1010], false] call EFUNC(common,displayShowControls);
         [QEGVAR(common,tileText), localize LSTRING(Interrupted)] call CBA_fnc_localEvent;
     };
@@ -66,7 +66,7 @@ private _smithInterrupt = _dialog displayAddEventHandler ["KeyDown", {
 private _totalSteps = _smeltTime * 2;
 private _currentStep = 0;
 
-private _soundDummy = "#particlesource" createVehicleLocal getPosATL player;
+private _soundDummy = "#particlesource" createVehicleLocal getPosATL ACE_player;
 _soundDummy say3D QCLASS(audio_sound_anvilHammer);
 
 [{
@@ -83,11 +83,11 @@ _soundDummy say3D QCLASS(audio_sound_anvilHammer);
         "_progressBar"
     ];
 
-    if (!(player getVariable [QGVAR(isSmithing), false]) || !alive player) exitWith {
+    if (!(ACE_player getVariable [QGVAR(isSmithing), false]) || !alive ACE_player) exitWith {
         if (_soundDummy isNotEqualTo objNull) then {
             deleteVehicle _soundDummy;
         };
-        player setVariable [QGVAR(isSmithing), nil];
+        ACE_player setVariable [QGVAR(isSmithing), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _smithInterrupt];
         [274840, [1600, 1602, 1603], true] call EFUNC(common,displayEnableControls);
         [274840, [1010], false] call EFUNC(common,displayShowControls);
@@ -106,14 +106,14 @@ _soundDummy say3D QCLASS(audio_sound_anvilHammer);
             private _item = _x select 0;
             private _count = _x select 1;
             for "_j" from 1 to _count do {
-                [player, _item] call CBA_fnc_removeItem;
+                [ACE_player, _item] call CBA_fnc_removeItem;
             };
         } forEach _requiredItems;
 
-        [player, _outputItem, true] call CBA_fnc_addItem;
+        [ACE_player, _outputItem, true] call CBA_fnc_addItem;
 
         ctrlSetText [1001, format [localize LSTRING(Success), _displayName]];
-        player setVariable [QGVAR(isSmithing), nil];
+        ACE_player setVariable [QGVAR(isSmithing), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _smithInterrupt];
         if (_soundDummy isNotEqualTo objNull) then {
             deleteVehicle _soundDummy;

@@ -37,9 +37,9 @@ switch (true) do {
         };
 
         private _fireClass = "Campfire_burning_F";
-        private _object = createVehicle [_fireClass, player modelToWorld [0, 2, 0], [], 0, "CAN_COLLIDE"];
+        private _object = createVehicle [_fireClass, ACE_player modelToWorld [0, 2, 0], [], 0, "CAN_COLLIDE"];
 
-        [player, _fuel] call CBA_fnc_removeItem;
+        [ACE_player, _fuel] call CBA_fnc_removeItem;
 
         private _burnTimeLeft = 5400;
         GVAR(activeFires) pushBack [_object, "big", _burnTimeLeft];
@@ -56,9 +56,9 @@ switch (true) do {
         };
 
         private _fireClass = "FirePlace_burning_F";
-        private _object = createVehicle [_fireClass, player modelToWorld [0, 2, 0], [], 0, "CAN_COLLIDE"];
+        private _object = createVehicle [_fireClass, ACE_player modelToWorld [0, 2, 0], [], 0, "CAN_COLLIDE"];
 
-        [player, _fuel] call CBA_fnc_removeItem;
+        [ACE_player, _fuel] call CBA_fnc_removeItem;
 
         private _burnTimeLeft = 2700;
         GVAR(activeFires) pushBack [_object, "small", _burnTimeLeft];
@@ -71,7 +71,7 @@ switch (true) do {
         _nearbyFire inflame true;
         private _burnTimeLeft = if (_fuel isEqualTo "") then {30} else {[2700, 5400] select ([QCLASS(woodensticks), QCLASS(firewood)] find _fuel)};
         if (_fuel isNotEqualTo "") then {
-            [player, _fuel] call CBA_fnc_removeItem;
+            [ACE_player, _fuel] call CBA_fnc_removeItem;
         };
         if (_fireIndex >= 0 && _fireIndex < count GVAR(activeFires)) then {
             (GVAR(activeFires) select _fireIndex) set [2, _burnTimeLeft];
@@ -87,7 +87,7 @@ switch (true) do {
         _nearbyFire inflame true;
         private _burnTimeLeft = if (_fuel isEqualTo "") then {30} else {[2700, 5400] select (["small", "big"] find _fuelType)};
         if (_fuel isNotEqualTo "") then {
-            [player, _fuel] call CBA_fnc_removeItem;
+            [ACE_player, _fuel] call CBA_fnc_removeItem;
         };
         if (_fireIndex >= 0 && _fireIndex < count GVAR(activeFires)) then {
             (GVAR(activeFires) select _fireIndex) set [2, _burnTimeLeft];

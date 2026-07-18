@@ -18,9 +18,11 @@
 
 params ["_building", "_doorsLocked", ["_pin", 0]];
 
+if (!isServer) exitWith {};
+
 if (isNull _building) exitWith {};
 
-private _posStr = str (getPosATL _building);  // Key buildings by pos
+private _posStr = str (getPosATL _building);
 private _states = missionNamespace getVariable [QGVAR(buildingStates), []];
 
 private _index = _states findIf {(_x select 0) isEqualTo _posStr};

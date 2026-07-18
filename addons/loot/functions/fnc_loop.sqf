@@ -66,6 +66,7 @@ if (_players isEqualTo []) exitWith {
             if ([_chance] call EFUNC(common,rollChance)) exitWith {continue};
             [_x, _isMilitary, _isMedical, _isStore, _isGarage] call FUNC(generate);
             GVAR(building_used) pushBack _building;
+            publicVariableServer QGVAR(building_used);
         } forEach _buildingPositions;
     } forEach _nearBuildings;
 } forEach _players;

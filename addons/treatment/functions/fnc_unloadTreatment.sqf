@@ -14,10 +14,10 @@
  *
 */
 
-private _trader = player getVariable [QGVAR(currentDoctor), objNull];
+private _trader = ACE_player getVariable [QGVAR(currentDoctor), objNull];
 
 if (!isNull _trader) then {
     _trader setVariable [QGVAR(isTreating), false, true];
 };
 
-player setVariable [QGVAR(currentDoctor), nil];
+ACE_player setVariable [QGVAR(currentDoctor), nil];

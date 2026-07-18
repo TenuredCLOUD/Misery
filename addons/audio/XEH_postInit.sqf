@@ -18,23 +18,23 @@ if (hasInterface) then {
 
     if (GVAR(enhancedInventorySounds)) then {
         // Inventory Sounds
-        player addEventHandler ["InventoryClosed", {
-            if (backpack player isNotEqualTo "") then {
+        ACE_player addEventHandler ["InventoryClosed", {
+            if (backpack ACE_player isNotEqualTo "") then {
                 playSound QCLASS(audio_sound_inventoryClose);
             };
         }];
 
-        player addEventHandler ["InventoryOpened", {
-            if (backpack player isNotEqualTo "") then {
+        ACE_player addEventHandler ["InventoryOpened", {
+            if (backpack ACE_player isNotEqualTo "") then {
                 playSound QCLASS(audio_sound_inventoryOpen);
             };
         }];
 
-        player addEventHandler ["Take", {
+        ACE_player addEventHandler ["Take", {
             playSound QCLASS(audio_sound_pickup);
         }];
 
-        player addEventHandler ["Put", {
+        ACE_player addEventHandler ["Put", {
             playSound QCLASS(audio_sound_drop02);
         }];
     };

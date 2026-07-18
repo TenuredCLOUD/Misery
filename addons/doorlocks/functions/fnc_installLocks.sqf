@@ -14,7 +14,7 @@
  *
 */
 
-if (GVAR(areas) findIf {player inArea _x} isNotEqualTo -1) exitWith {
+if (GVAR(areasCached) findIf {ACE_player inArea _x} isNotEqualTo -1) exitWith {
     [localize LSTRING(CannotInstallLock), 1, [1, 1, 1, 1]] call CBA_fnc_notify;
 };
 

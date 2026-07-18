@@ -31,7 +31,7 @@
 
     ctrlSetText [2222, format ["%3: %1 %2", EGVAR(currency,symbol), [_funds, 1, 2, true] call CBA_fnc_formatNumber, profileName]];
 
-    private _dealer = player getVariable [QGVAR(currentDealer), objNull];
+    private _dealer = ACE_player getVariable [QGVAR(currentDealer), objNull];
     private _dealerFunds = _dealer getVariable [QGVAR(dealerFunds), 50000];
 
     ctrlSetText [2223, format ["%3 %1 %2", EGVAR(currency,symbol), [_dealerFunds, 1, 2, true] call CBA_fnc_formatNumber, localize LSTRING(DealerLabel)]];

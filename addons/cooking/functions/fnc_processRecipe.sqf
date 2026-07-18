@@ -34,7 +34,7 @@ private _cookingMethod = _recipe select 8;
 
 [_outputItem] call EFUNC(common,getItemData) params ["_displayName"];
 
-private _playerXP = player getVariable [QGVAR(xp), MACRO_PLAYER_DEFAULTS_LOW];
+private _playerXP = ACE_player getVariable [QGVAR(xp), MACRO_PLAYER_DEFAULTS_LOW];
 if (_playerXP < _requiredXP) exitWith {
     ctrlSetText [1001, format [localize LSTRING(LowXP), _requiredXP, _playerXP]];
 };
@@ -48,22 +48,22 @@ private _progressBar = _dialog displayCtrl 1010;
 [982379, [1600, 1601, 1602], false] call EFUNC(common,displayShowControls);
 [982379, [1010], true] call EFUNC(common,displayShowControls);
 
-player playAction "Gear";
+ACE_player playAction "Gear";
 
 private _soundSource = objNull;
 if (_audio isNotEqualTo "") then {
-    _soundSource = createVehicle ["Land_HelipadEmpty_F", getPosASL player, [], 0, "CAN_COLLIDE"];
-    _soundSource setPosASL (getPosASL player);
-    _soundSource attachTo [player, [0, 0, 0]];
+    _soundSource = createVehicle ["Land_HelipadEmpty_F", getPosASL ACE_player, [], 0, "CAN_COLLIDE"];
+    _soundSource setPosASL (getPosASL ACE_player);
+    _soundSource attachTo [ACE_player, [0, 0, 0]];
     _soundSource say3D [_audio, 50, 1];
 };
 
-player setVariable [QGVAR(isCooking), true];
+ACE_player setVariable [QGVAR(isCooking), true];
 
 private _cookInterrupt = _dialog displayAddEventHandler ["KeyDown", {
     params ["_displayOrControl", "_key"];
     if (_key isEqualTo DIK_ESCAPE) then {
-        player setVariable [QGVAR(isCooking), false];
+        ACE_player setVariable [QGVAR(isCooking), false];
         [982379, [1010], false] call EFUNC(common,displayShowControls);
         [QEGVAR(common,tileText), localize LSTRING(Interrupted)] call CBA_fnc_localEvent;
     };
@@ -77,8 +77,8 @@ private _currentStep = 0;
     params ["_args", "_handle"];
     _args params ["_requiredItems", "_outputItem", "_outputCount", "_code", "_outputXP", "_cookingMethod", "_dialog", "_cookInterrupt", "_totalSteps", "_currentStep", "_displayName", "_progressBar", "_soundSource"];
 
-    if (!(player getVariable [QGVAR(isCooking), false]) || !alive player) exitWith {
-        player setVariable [QGVAR(isCooking), nil];
+    if (!(ACE_player getVariable [QGVAR(isCooking), false]) || !alive ACE_player) exitWith {
+        ACE_player setVariable [QGVAR(isCooking), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _cookInterrupt];
         [982379, [1600, 1601, 1602], true] call EFUNC(common,displayShowControls);
         [982379, [1010], false] call EFUNC(common,displayShowControls);
@@ -102,22 +102,22 @@ private _currentStep = 0;
             private _removeAfterUse = _x select 2;
             if (_removeAfterUse) then {
                 for "_j" from 1 to _count do {
-                    [player, _item] call CBA_fnc_removeItem;
+                    [ACE_player, _item] call CBA_fnc_removeItem;
                 };
             };
         } forEach _requiredItems;
 
         for "_i" from 1 to _outputCount do {
-            [player, _outputItem, true] call CBA_fnc_addItem;
+            [ACE_player, _outputItem, true] call CBA_fnc_addItem;
         };
 
         if (_code isNotEqualTo "") then {call compile _code};
 
-        private _currentXP = player getVariable [QGVAR(xp), MACRO_PLAYER_DEFAULTS_LOW];
-        player setVariable [QGVAR(xp), _currentXP + _outputXP, true];
+        private _currentXP = ACE_player getVariable [QGVAR(xp), MACRO_PLAYER_DEFAULTS_LOW];
+        ACE_player setVariable [QGVAR(xp), _currentXP + _outputXP, true];
         ctrlSetText [1001, format [localize LSTRING(GainXP), _outputXP, toLower _cookingMethod, _displayName]];
 
-        player setVariable [QGVAR(isCooking), nil];
+        ACE_player setVariable [QGVAR(isCooking), nil];
         _dialog displayRemoveEventHandler ["KeyDown", _cookInterrupt];
         [982379, [1600, 1601, 1602], true] call EFUNC(common,displayShowControls);
         [982379, [1010], false] call EFUNC(common,displayShowControls);

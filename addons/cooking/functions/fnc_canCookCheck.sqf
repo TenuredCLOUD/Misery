@@ -17,7 +17,7 @@
 
 params ["_requiredItems"];
 
-private _playerItems = (items player) + (magazines player);
+private _playerItems = (items ACE_player) + (magazines ACE_player);
 private _hasAll = true;
 
 {

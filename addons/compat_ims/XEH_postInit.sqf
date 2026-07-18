@@ -71,7 +71,7 @@ if (!hasInterface) exitWith {};
 [] call FUNC(dash);
 
 // Auto swap logic for basic item conversion to IMS melee weapons
-player addEventHandler ["Take", {
+ACE_player addEventHandler ["Take", {
 	params ["_unit", "_container", "_item"];
     // Knives & Axes
     private _toolGear = MACRO_IMS_COMPAT findIf { _item isEqualTo (_x select 0) };
@@ -84,7 +84,7 @@ player addEventHandler ["Take", {
     };
 }];
 
-player addEventHandler ["InventoryOpened", {
+ACE_player addEventHandler ["InventoryOpened", {
     params ["_unit", "_primaryContainer", "_secondaryContainer"];
     // Knives & Axes
     {

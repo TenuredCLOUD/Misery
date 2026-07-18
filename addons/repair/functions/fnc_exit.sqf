@@ -15,6 +15,6 @@
 
 (findDisplay 982386) closeDisplay 2;
 
-if (!isNil {player getVariable [QCLASS(processRepairs), false]}) then {
-    player setVariable [QCLASS(processRepairs), nil];
+if (!isNil {ACE_player getVariable [QCLASS(processRepairs), false]}) then {
+    ACE_player setVariable [QCLASS(processRepairs), nil];
 };

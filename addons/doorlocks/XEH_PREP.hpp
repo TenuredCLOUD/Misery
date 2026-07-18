@@ -1,8 +1,6 @@
 PREP(applyBuildingStates);
 PREP(checkAreas);
 PREP(countDoors);
-PREP(disableLocks);
-PREP(enableLocks);
 PREP(installLocks);
 PREP(ProcessPin);
 PREP(promptPin);

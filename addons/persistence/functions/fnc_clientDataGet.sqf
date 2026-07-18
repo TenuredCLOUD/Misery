@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: MikeMF
+ * Author: MikeMF, TenuredCLOUD
  * Gathers client data from savegame and resets it.
  *
  * Arguments:
@@ -26,7 +26,7 @@ if (worldName isNotEqualTo _worldName) exitWith {
 };
 
 // Block save sharing
-private _currentPlayerID = getPlayerUID player;
+private _currentPlayerID = getPlayerUID ACE_player;
 if (_playerID isNotEqualTo _currentPlayerID) exitWith {
     [QUOTE(COMPONENT_BEAUTIFIED), format [" Current player ID (%1) does not match saved player ID (%2), Loading Aborted", _currentPlayerID, _playerID]] call EFUNC(common,debugMessage);
     [] call FUNC(newPlayer);
@@ -36,26 +36,17 @@ private _variableNames = [MISERY_PLAYER_VARIABLE_VALUES];
 
 {
     private _variableName = _variableNames select _forEachIndex;
-    player setVariable [_variableName, _x];
+    ACE_player setVariable [_variableName, _x];
 } forEach _variables;
 
-player setUnitLoadout _loadout;
-player setPosATL _position;
-player setDir _direction;
+ACE_player setUnitLoadout _loadout;
+ACE_player setPosWorld _position;
+ACE_player setDir _direction;
 
 switch (_stance) do {
-    case "CROUCH": {player playAction "PlayerCrouch"};
-    case "PRONE": {player playAction "PlayerProne"};
+    case "CROUCH": {ACE_player playAction "PlayerCrouch"};
+    case "PRONE": {ACE_player playAction "PlayerProne"};
     default {};
 };
 
-private _damageType = typeName _damage;
-if ([QCLASSACE(medical)] call EFUNC(common,isModLoaded)) then {
-    if (_damageType isEqualTo "STRING") then {
-        [player, _damage] call ACEFUNC(medical,deserializeState);
-    } else {
-        [player, MACRO_DEFAULT_ACE_DAMAGE] call ACEFUNC(medical,deserializeState);
-    };
-} else {
-    player setDamage _damage;
-};
+[ACE_player, _damage] call ACEFUNC(medical,deserializeState);

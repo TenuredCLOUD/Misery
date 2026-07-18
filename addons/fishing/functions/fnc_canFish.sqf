@@ -15,10 +15,10 @@
 */
 
 private _isLookingAtWater = surfaceIsWater (screenToWorld [0.5,0.5]);
-private _overShore = (position player isFlatEmpty  [-1, -1, -1, -1, 0, true] isNotEqualTo []);
-private _overWater = (position player isFlatEmpty  [-1, -1, -1, -1, 2, false] isNotEqualTo []);
+private _overShore = (position ACE_player isFlatEmpty  [-1, -1, -1, -1, 0, true] isNotEqualTo []);
+private _overWater = (position ACE_player isFlatEmpty  [-1, -1, -1, -1, 2, false] isNotEqualTo []);
 
-if ((_overShore && _isLookingAtWater) || (_overWater && _isLookingAtWater) || (vehicle player isKindOf 'Ship')) exitWith {
+if ((_overShore && _isLookingAtWater) || (_overWater && _isLookingAtWater) || (vehicle ACE_player isKindOf 'Ship')) exitWith {
     true
 };
 

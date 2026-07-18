@@ -14,7 +14,7 @@
  *
 */
 
-[player, "WBK_IMS_Hit", {
+[ACE_player, "WBK_IMS_Hit", {
     params ["_unit","_damage","_enemy"];
 
     // Must be a player, on foot being attacked by a zombie.

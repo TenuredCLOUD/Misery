@@ -37,6 +37,6 @@ if ([5] call EFUNC(common,rollChance)) then {
 
 if (_decay && _intensity >= 1) then {
     if ([5] call EFUNC(common,rollChance)) then {
-        [player] call ACEFUNC(medical_statemachine,enteredStateCardiacArrest);
+        [ACE_player] call ACEFUNC(medical_statemachine,enteredStateCardiacArrest);
     };
 };

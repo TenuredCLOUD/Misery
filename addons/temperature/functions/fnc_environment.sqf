@@ -31,7 +31,7 @@ if (isClass (missionConfigFile >> "CfgMisery_TemperatureData" >> "DailyTemps")) 
     ambientTemperature params ["_airTemp", "_seaTemp"];
 };
 
-    private _altitude = (getPosASL player) select 2;
+    private _altitude = (getPosASL ACE_player) select 2;
 
     _airTemp = [_airTemp - (_altitude / 1000) * 6.5, ACEGVAR(weather,currentTemperature)] select (!isNil QACEGVAR(weather,enabled) && {ACEGVAR(weather,enabled)}); // Temperature in Celsius at altitude or ace calculation
 
@@ -39,12 +39,12 @@ if (isClass (missionConfigFile >> "CfgMisery_TemperatureData" >> "DailyTemps")) 
 
     private _breathFog = false;
 
-    if (!(isNull objectParent player) || insideBuilding player isEqualTo 1) then {
+    if (!(isNull objectParent ACE_player) || insideBuilding ACE_player isEqualTo 1) then {
         _windChillIndexCelsius = _airTemp;
         _breathFog = false;
     } else {
         private _windSpeedMs = vectorMagnitude [wind select 0, wind select 1, 0];
-        private _playerSpeedMs = abs(speed player) / 3.6; // Convert km/h to m/s
+        private _playerSpeedMs = abs(speed ACE_player) / 3.6; // Convert km/h to m/s
         private _apparentWindMs = _windSpeedMs + _playerSpeedMs;
 
         private _apparentWindMph = _apparentWindMs * 2.23694;
@@ -54,7 +54,7 @@ if (isClass (missionConfigFile >> "CfgMisery_TemperatureData" >> "DailyTemps")) 
             _windChillIndexCelsius = 13.12 + (0.6215 * _airTemp) - (11.37 * (_apparentWindMph ^ 0.16)) + (0.3965 * _airTemp * (_apparentWindMph ^ 0.16));
         };
 
-        if (_airTemp <= 7 && !(underwater player)) then {
+        if (_airTemp <= 7 && !(underwater ACE_player)) then {
             _breathFog = true;
         };
     };

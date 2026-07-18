@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: MikeMF
+ * Author: MikeMF, TenuredCLOUD
  * Loads save data into variable, updated each time the game saves.
  *
  * Arguments:
@@ -13,14 +13,16 @@
  * [] call misery_persistence_fnc_loadData
 */
 
-if (isMultiplayer) exitWith {
-    [QUOTE(COMPONENT_BEAUTIFIED), "Refreshing Multiplayer Data Map"] call EFUNC(common,debugMessage);
-    GVAR(multiplayerSaveData) = profileNamespace getVariable [GVAR(saveName), []];
+private _saveNameString = call FUNC(formatSaveName);
 
-    if (GVAR(multiplayerSaveData) isEqualTo []) then {
-        GVAR(multiplayerSaveData) = createHashMap;
-    };
-};
+private _serialized = profileNamespace getVariable [_saveNameString, ""];
 
-[QUOTE(COMPONENT_BEAUTIFIED), "Refreshing Singleplayer Data Map"] call EFUNC(common,debugMessage);
-GVAR(singlePlayerSaveData) = profileNamespace getVariable [QGVAR(saveName), []];
+if (_serialized isEqualTo "") exitWith { [] };
+
+private _namespace = [_serialized] call CBA_fnc_deserializeNamespace;
+
+private _playerData = _namespace getVariable [QGVAR(playerData), []];
+
+_namespace call CBA_fnc_deleteNamespace;
+
+_playerData

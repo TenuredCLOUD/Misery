@@ -19,7 +19,7 @@ call EFUNC(common,nearFire) params ["_nearestFire"];
 private _hasTinder = [[MACRO_FIRE_TINDER]] call EFUNC(common,hasItem);
 private _hasIgnition = [[MACRO_FIRE_IGNITION]] call EFUNC(common,hasItem);
 
-if (_nearestFire isEqualTo [] && _hasTinder && _hasIgnition && isNull objectParent player && insideBuilding player != 1) exitWith {
+if (_nearestFire isEqualTo [] && _hasTinder && _hasIgnition && isNull objectParent ACE_player && insideBuilding ACE_player != 1) exitWith {
     true
 };
 

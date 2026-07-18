@@ -18,15 +18,12 @@ if (hasInterface) then {
 
 if (!isServer) exitWith {};
 
-GVAR(markerSizeX) = GVAR(minimumDistance) + GVAR(safeDistance);
-GVAR(markerSizeY) = GVAR(maximumDistance) + GVAR(safeDistance);
 GVAR(registeredEntities) = [];
 
-["CBA_loadingScreenDone", {
-    call FUNC(convertToArray);
-    call FUNC(loop);
-    call FUNC(loiter);
-}] call CBA_fnc_addEventHandler;
+call FUNC(convertToArray);
+call FUNC(spawn);
+call FUNC(clean);
+call FUNC(loiter);
 
 // set resistance faction / IND to enemy to all others to fix faction issues with WebZC
 resistance setFriend [west, 0];

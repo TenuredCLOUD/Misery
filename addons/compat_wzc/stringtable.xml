@@ -689,38 +689,6 @@
             <Chinesesimp>允许特殊类型仅在夜间生成</Chinesesimp>
             <Turkish>Özel türlerin yalnızca gece vakti oluşmasına izin verir</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Compat_WZC_SafeDist">
-            <English>Safe distance</English>
-            <Czech>Bezpečná vzdálenost</Czech>
-            <French>Distance de sécurité</French>
-            <Spanish>Distancia de seguridad</Spanish>
-            <Italian>Distanza di sicurezza</Italian>
-            <Polish>Bezpieczna odległość</Polish>
-            <Portuguese>Distância de segurança</Portuguese>
-            <Russian>Безопасное расстояние</Russian>
-            <German>Sicherheitsabstand</German>
-            <Korean>안전 거리</Korean>
-            <Japanese>安全距離</Japanese>
-            <Chinese>安全距離</Chinese>
-            <Chinesesimp>安全距离</Chinesesimp>
-            <Turkish>Güvenli mesafe</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Compat_WZC_SafeDistDesc">
-            <English>Minimum distance at which creatures can spawn from other players</English>
-            <Czech>Minimální vzdálenost, ve které se mohou stvoření spawnovat od ostatních hráčů</Czech>
-            <French>Distance minimale à laquelle les créatures peuvent apparaître par rapport aux autres joueurs</French>
-            <Spanish>Distancia mínima a la que las criaturas pueden aparecer de otros jugadores</Spanish>
-            <Italian>Distanza minima alla quale le creature possono apparire dagli altri giocatori</Italian>
-            <Polish>Minimalna odległość, w jakiej stworzenia mogą się odradzać od innych graczy</Polish>
-            <Portuguese>Distância mínima em que as criaturas podem spawnar de outros jogadores</Portuguese>
-            <Russian>Минимальное расстояние, на котором существа могут появляться рядом с другими игроками</Russian>
-            <German>Mindestabstand, in dem Kreaturen von anderen Spielern spawnen können</German>
-            <Korean>다른 플레이어로부터 생명체가 생성될 수 있는 최소 거리</Korean>
-            <Japanese>他のプレイヤーからクリーチャーがスポーンできる最小距離</Japanese>
-            <Chinese>生物在其他玩家附近的最小生成距離</Chinese>
-            <Chinesesimp>生物在其他玩家附近的最小生成距离</Chinesesimp>
-            <Turkish>Yaratıkların diğer oyunculardan oluşabileceği minimum mesafe</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Compat_WZC_SpawnChance">
             <English>Spawn Chance - Overall</English>
             <Czech>Šance na spawn - celková</Czech>

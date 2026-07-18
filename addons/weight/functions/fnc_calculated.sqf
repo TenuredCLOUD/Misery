@@ -16,6 +16,6 @@
 */
 
 private _maxLoad = getNumber (configFile >> "CfgInventoryGlobalVariable" >> "maxSoldierLoad");
-private _weightFactor = (loadAbs player / _maxLoad) min 1; // 0–1, capped at max load
+private _weightFactor = (loadAbs ACE_player / _maxLoad) min 1; // 0–1, capped at max load
 
 _weightFactor

@@ -29,7 +29,7 @@
         };
     };
 
-    [player] call EFUNC(common,nearTree) params ["_found", "_nearestTree", "_damaged", "_hasAxe", "_hasSaw"];
+    [ACE_player] call EFUNC(common,nearTree) params ["_found", "_nearestTree", "_damaged", "_hasAxe", "_hasSaw"];
 
     if (_found && {_nearestTree isNotEqualTo []}) then {
 
@@ -151,7 +151,7 @@
         };
 
         private _treePos = getPosASL _tree;
-        private _playerPos = getPosASL player;
+        private _playerPos = getPosASL ACE_player;
 
         private _dirToPlayer = _treePos vectorFromTo _playerPos;
 
