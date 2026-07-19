@@ -9,4 +9,4 @@ GVAR(registeredEntities) = [];
 call FUNC(convertToArray);
 call FUNC(spawn);
 call FUNC(clean);
-call FUNC(patrol);
+call FUNC(hunt);

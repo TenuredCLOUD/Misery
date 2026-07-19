@@ -173,6 +173,15 @@ private _category = format ["Misery %1", localize LSTRING(Component)];
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(huntChance),
+    "SLIDER",
+    [LSTRING(HuntChance), LSTRING(HuntChanceDesc)],
+    _category,
+    [1, 100, 10, 0],
+    1
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(minimumDistance),
     "SLIDER",
     [LSTRING(MinDist), LSTRING(MinDistDesc)],

@@ -267,12 +267,7 @@ if (_aiClass isNotEqualTo "") then {
         };
     } forEach (units _group);
 
-    private _taskDorP = [1, 2] call BIS_fnc_randomInt;
-    if (_taskDorP isEqualTo 1) then {
-        [_group, _pos, _aiSpawnDistance] call BIS_fnc_taskPatrol;
-    } else {
-        [_group, _pos] call BIS_fnc_taskDefend;
-    };
+    [_group, _pos] call BIS_fnc_taskDefend;
 
     _group setCombatMode "RED";
     _group setBehaviour "SAFE";
