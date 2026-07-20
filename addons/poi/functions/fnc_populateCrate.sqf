@@ -47,7 +47,7 @@ if (!isNil "_crateWeaponArray" && {count _crateWeaponArray > 0}) then {
                     };
                 };
             };
-            case "NONE": {};
+            case "": {};
         };
 
         switch (_crateWeaponAttchArray) do {
@@ -67,7 +67,7 @@ if (!isNil "_crateWeaponArray" && {count _crateWeaponArray > 0}) then {
                     };
                 };
             };
-            case "NONE": {};
+            case "": {};
         };
     };
 };
