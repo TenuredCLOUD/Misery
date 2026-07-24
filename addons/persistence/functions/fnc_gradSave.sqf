@@ -13,6 +13,8 @@
  * [] call misery_persistence_fnc_gradSave
 */
 
+if !(isServer) exitWith {};
+
 [{
     [] call FUNC(gradSave);
 }, [], GVAR(gradAutosaveTimer)] call CBA_fnc_waitAndExecute;

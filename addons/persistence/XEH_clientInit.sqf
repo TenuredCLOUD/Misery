@@ -1,8 +1,9 @@
 #include "script_component.hpp"
 
-if (!hasInterface) exitWith {};
+if !(hasInterface) exitWith {};
 
 GVAR(blockSave) = false;
+GVAR(clientLoaded) = false;
 
 ["CBA_loadingScreenDone", {
     [] call FUNC(init);

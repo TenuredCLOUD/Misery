@@ -18,17 +18,6 @@ private _category = format ["Misery %1", localize LSTRING(Component)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(saveSlot),
-    "LIST",
-    [LSTRING(SaveSlot), LSTRING(SaveSlotDesc)],
-    _category,
-    [[0, 1, 2, 3, 4], ["0", "1", "2", "3", "4"], 0],
-    1,
-    {},
-    true
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(autosaveInterval),
     "LIST",
     [LSTRING(Autosave), LSTRING(AutosaveDesc)],
