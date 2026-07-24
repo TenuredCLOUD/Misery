@@ -321,6 +321,38 @@
             <Chinesesimp>储存 ACE 加油站，使燃料点在使用后保持枯竭状态延续，需要 GRAD persistence</Chinesesimp>
             <Turkish>ACE yakıt istasyonlarını kaydeder, yakıt noktalarının kullanıldıktan sonra boş kalmasını sağlar, GRAD persistence gerektirir</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Persistence_SaveACETags">
+            <English>Save ACE spraypaint tags</English>
+            <Czech>Ukládat ACE nasprejované značky</Czech>
+            <French>Sauvegarder les tags de peinture ACE</French>
+            <Spanish>Guardar grafitis de ACE</Spanish>
+            <Italian>Salva i tag bomboletta ACE</Italian>
+            <Polish>Zapisuj oznaczenia sprayu ACE</Polish>
+            <Portuguese>Salvar pichações do ACE</Portuguese>
+            <Russian>Сохранять граффити ACE</Russian>
+            <German>ACE-Sprühlogos speichern</German>
+            <Korean>ACE 스프레이 페인트 표식 저장</Korean>
+            <Japanese>ACEスプレーのタグを保存</Japanese>
+            <Chinese>儲存 ACE 噴漆標記</Chinese>
+            <Chinesesimp>储存 ACE 喷漆标记</Chinesesimp>
+            <Turkish>ACE Sprey Boya İşaretlerini Kaydet</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_SaveACETagsDesc">
+            <English>Saves ACE spraypaint tags, makes spray tags persistent, requires GRAD persistence</English>
+            <Czech>Ukládá ACE nasprejované značky a činí je persistentními. Vyžaduje GRAD persistence.</Czech>
+            <French>Sauvegarde les tags de peinture ACE et les rend persistants. Nécessite GRAD persistence.</French>
+            <Spanish>Guarda los grafitis de pintura en aerosol de ACE y los hace persistentes; requiere GRAD persistence.</Spanish>
+            <Italian>Salva i tag con bomboletta spray di ACE rendendoli persistenti. Richiede GRAD persistence.</Italian>
+            <Polish>Zapisuje oznaczenia sprayu ACE i czyni je trwałymi. Wymaga frameworku GRAD persistence.</Polish>
+            <Portuguese>Salva as pichações de tinta spray do ACE e as torna persistentes. Requer GRAD persistence.</Portuguese>
+            <Russian>Сохраняет граффити ACE и делает их персистентными. Требуется GRAD persistence.</Russian>
+            <German>Speichert ACE-Sprühlogos und macht sie persistent. Erfordert GRAD persistence.</German>
+            <Korean>ACE 스프레이 페인트 표식을 저장하고 유지합니다. GRAD persistence 플러그인이 필요합니다.</Korean>
+            <Japanese>ACEスプレー의タグを保存し、永続化します。GRAD persistence が必要です。</Japanese>
+            <Chinese>儲存 ACE 噴漆標記並使其具有持久性。需要 GRAD persistence 支援。</Chinese>
+            <Chinesesimp>储存 ACE 喷漆标记并使其具有持久性。需要 GRAD persistence 支持。</Chinesesimp>
+            <Turkish>ACE sprey boya işaretlerini kaydeder ve kalıcı hale getirir; GRAD persistence gerektirir.</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Persistence_SaveAE3States">
             <English>Save AE3 states</English>
             <Czech>Uložit stavy AE3</Czech>

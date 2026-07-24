@@ -92,3 +92,12 @@ private _category = format ["Misery %1", localize LSTRING(Component)];
     false,
     1
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(saveACETags),
+    "CHECKBOX",
+    [LSTRING(SaveACETags), LSTRING(SaveACETagsDesc)],
+    _category,
+    false,
+    1
+] call CBA_fnc_addSetting;
