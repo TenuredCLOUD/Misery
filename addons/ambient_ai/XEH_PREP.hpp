@@ -2,6 +2,6 @@ PREP(addGearOption);
 PREP(addRecruitOption);
 PREP(clean);
 PREP(convertToArray);
-PREP(patrol);
+PREP(hunt);
 PREP(randomGear);
 PREP(spawn);

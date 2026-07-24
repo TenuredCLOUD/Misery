@@ -5,7 +5,7 @@ private _category = format ["Misery %1", localize LSTRING(Component)];
     "SLIDER",
     [LSTRING(SpawnCheckDistance), LSTRING(SpawnCheckDistanceDesc)],
     _category,
-    [250, 15000, 500, 0],
+    [500, 5000, 500, 0],
     1
 ] call CBA_fnc_addSetting;
 
@@ -14,7 +14,7 @@ private _category = format ["Misery %1", localize LSTRING(Component)];
     "SLIDER",
     [LSTRING(DeletionCheckDistance), LSTRING(DeletionCheckDistanceDesc)],
     _category,
-    [250, 15000, 1000, 0],
+    [750, 5000, 1500, 0],
     1
 ] call CBA_fnc_addSetting;
 
@@ -23,7 +23,7 @@ private _category = format ["Misery %1", localize LSTRING(Component)];
     "SLIDER",
     [LSTRING(RandomSpawnDistance), LSTRING(RandomSpawnDistanceDesc)],
     _category,
-    [250, 15000, 250, 0],
+    [500, 5000, 500, 0],
     1
 ] call CBA_fnc_addSetting;
 

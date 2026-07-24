@@ -44,6 +44,12 @@
             private _playerTooClose = [_potentialPos, GVAR(minimumDistance)] call CBA_fnc_nearPlayer;
 
             if (!_playerTooClose && {!(surfaceIsWater _potentialPos)}) then {
+
+                private _spawnAreaType = [_potentialPos] call EFUNC(common,evaluateEnvironment);
+
+                // Check if potential position is in a forest area, if so drop spawn chance to 2% (less zombies in wooded areas unless night)
+                if (_spawnAreaType in ["WOODS", "WILDERNESS"] && [98] call EFUNC(common,rollChance) && sunOrMoon > 0.2) then {continue};
+
                 _position = _potentialPos;
                 _isValidPosition = true;
                 break;

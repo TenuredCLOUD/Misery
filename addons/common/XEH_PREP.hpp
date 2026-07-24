@@ -9,6 +9,7 @@ PREP(displayEnableControls);
 PREP(displayShowControls);
 PREP(dumpModClasses);
 PREP(emptyObject);
+PREP(evaluateEnvironment);
 PREP(getItemData);
 PREP(getLookedAtTarget);
 PREP(getMagazineCapacity);

@@ -401,6 +401,38 @@
             <Chinesesimp>AI 可能使用的头部装备</Chinesesimp>
             <Turkish>Yapay zeka için olası başlıklar</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Ambient_AI_HuntChance">
+            <English>Hunt chance</English>
+            <Czech>Šance na lov</Czech>
+            <French>Chance de traque</French>
+            <Spanish>Probabilidad de caza</Spanish>
+            <Italian>Probabilità di caccia</Italian>
+            <Polish>Szansa na polowanie</Polish>
+            <Portuguese>Chance de caça</Portuguese>
+            <Russian>Шанс преследования</Russian>
+            <German>Jagdchance</German>
+            <Korean>추적 확률</Korean>
+            <Japanese>索敵・追跡確率</Japanese>
+            <Chinese>搜尋機率</Chinese>
+            <Chinesesimp>搜寻概率</Chinesesimp>
+            <Turkish>Avlanma İhtimali</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_AI_HuntChanceDesc">
+            <English>Chance that spawned units will search near the player</English>
+            <Czech>Šance, že vytvořené jednotky budou prohledávat oblast v blízkosti hráče</Czech>
+            <French>Chances que les unités générées effectuent des recherches à proximité du joueur</French>
+            <Spanish>Probabilidad de que las unidades generadas busquen cerca del jugador</Spanish>
+            <Italian>Probabilità che le unità generate cerchino nelle vicinanze del giocatore</Italian>
+            <Polish>Szansa, że zespawnowane jednostki będą przeszukiwać teren w pobliżu gracza</Polish>
+            <Portuguese>Chance de que as unidades geradas procurem perto do jogador</Portuguese>
+            <Russian>Шанс того, что появившиеся отряды начнут искать игрока поблизости</Russian>
+            <German>Chance, dass gespawnte Einheiten in der Nähe des Spielers suchen</German>
+            <Korean>생성된 AI 유닛들이 플레이어 주변을 수색할 확률입니다</Korean>
+            <Japanese>スポーンしたユニットがプレイヤーの周辺を捜索する確率</Japanese>
+            <Chinese>已生成的敵方單位在玩家附近展開搜尋的機率</Chinese>
+            <Chinesesimp>已生成的敌方单位在玩家附近展开搜寻的概率</Chinesesimp>
+            <Turkish>Beliren birimlerin oyuncunun yakınlarında arama yapma ihtimali</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Ambient_AI_Independent">
             <English>Independent</English>
             <Czech>Nezávislí</Czech>
