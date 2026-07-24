@@ -66,6 +66,12 @@
         private _playerTooClose = [_potentialPos, GVAR(minimumDistance)] call CBA_fnc_nearPlayer;
 
         if (!_playerTooClose && {!(surfaceIsWater _potentialPos)}) then {
+
+            private _spawnAreaType = [_potentialPos] call EFUNC(common,evaluateEnvironment);
+
+            // Check if potential position is in a forest area, if so drop spawn chance to 2% (less AI in wooded areas)
+            if (_spawnAreaType in ["WOODS", "WILDERNESS"] && [98] call EFUNC(common,rollChance)) then {continue};
+
             _position = _potentialPos;
             _isValidPosition = true;
             break;
@@ -112,4 +118,22 @@
 
     _group enableDynamicSimulation true;
     GVAR(registeredEntities) pushBack _group;
+
+    // Set up group to always search nearest town or actively hunt nearest player
+    if ([GVAR(huntChance)] call EFUNC(common,rollChance)) then {
+        _group setVariable [QGVAR(logicType), 0, true];
+    } else {
+        _group setVariable [QGVAR(logicType), 1, true];
+
+        {
+            _x enableGunLights "forceOn";
+        } forEach (units _group);
+
+        private _nearTowns = nearestLocations [getPosATL leader _group, ["NameCity", "NameVillage", "NameCityCapital"], 5000];
+        if (_nearTowns isNotEqualTo []) then {
+            private _townPos = locationPosition (_nearTowns select 0);
+
+            [_group, [_townPos, 200, 200, 0, false]] call CBA_fnc_taskSearchArea;
+        };
+    };
 }, GVAR(cycleLength)] call CBA_fnc_addPerFrameHandler;

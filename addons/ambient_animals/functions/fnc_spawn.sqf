@@ -43,6 +43,12 @@
             private _playerTooClose = [_potentialPos, GVAR(animalMinimumDistance)] call CBA_fnc_nearPlayer;
 
             if (!_playerTooClose && {!(surfaceIsWater _potentialPos)}) then {
+
+                private _spawnAreaType = [_potentialPos] call EFUNC(common,evaluateEnvironment);
+
+                // Check if potential position is in a urban area, if so drop spawn chance to 2% (less animals in towns)
+                if (_spawnAreaType in ["URBAN"] && [98] call EFUNC(common,rollChance)) then {continue};
+
                 _position = _potentialPos;
                 _isValidPosition = true;
                 break;

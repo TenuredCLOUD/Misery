@@ -14,6 +14,9 @@
  *
 */
 
+// Exit if ACE repair is enabled
+if (!isNil QACEGVAR(repair,enabled) && {ACEGVAR(repair,enabled)}) exitWith {};
+
 GVAR(vehicleData) = [];
 {
     private _vehicleName = configName _x;

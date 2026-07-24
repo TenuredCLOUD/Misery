@@ -14,6 +14,8 @@
  * [] call misery_persistence_fnc_handleGrad
 */
 
+if !(isServer) exitWith {};
+
 params ["_type"];
 
 if (_type isEqualTo 1) then {

@@ -7,22 +7,22 @@
  * None
  *
  * Return Value:
- * None
+ * 0: Player Data Deserialized HashMap <HASHMAP>
  *
  * Example:
  * [] call misery_persistence_fnc_loadData
 */
 
-private _saveNameString = call FUNC(formatSaveName);
+if !(hasInterface) exitWith {};
 
-private _serialized = profileNamespace getVariable [_saveNameString, ""];
+private _serialized = profileNamespace getVariable [ACTIVE_PROFILE_KEY, createHashMap];
 
-if (_serialized isEqualTo "") exitWith { [] };
+if (_serialized isEqualTo createHashMap) exitWith { createHashMap };
 
 private _namespace = [_serialized] call CBA_fnc_deserializeNamespace;
 
-private _playerData = _namespace getVariable [QGVAR(playerData), []];
+private _saveMap = _namespace getVariable [QGVAR(activeProfileData), createHashMap];
 
 _namespace call CBA_fnc_deleteNamespace;
 
-_playerData
+_saveMap

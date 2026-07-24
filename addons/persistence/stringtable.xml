@@ -385,38 +385,6 @@
             <Chinesesimp>储存 AE3 状态、电池电量、发电机燃料等... 需要 GRAD persistence</Chinesesimp>
             <Turkish>AE3 durumlarını, batarya seviyelerini, jeneratör yakıtını vb. kaydeder... GRAD persistence gerektirir</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Persistence_SaveSlot">
-            <English>Save Slot</English>
-            <Czech>Pozice pro uložení</Czech>
-            <French>Emplacement de sauvegarde</French>
-            <Spanish>Ranura de guardado</Spanish>
-            <Italian>Slot di salvataggio</Italian>
-            <Polish>Slot zapisu</Polish>
-            <Portuguese>Espaço de gravação</Portuguese>
-            <Russian>Слот сохранения</Russian>
-            <German>Speicherplatz</German>
-            <Korean>저장 슬롯</Korean>
-            <Japanese>セーブスロット</Japanese>
-            <Chinese>存檔槽位</Chinese>
-            <Chinesesimp>存档槽位</Chinesesimp>
-            <Turkish>Kayıt Yuvası</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Persistence_SaveSlotDesc">
-            <English>Which save slot would you like to use?</English>
-            <Czech>Kterou pozici pro uložení chcete použít?</Czech>
-            <French>Quel emplacement de sauvegarde souhaitez-vous utiliser ?</French>
-            <Spanish>¿Qué ranura de guardado te gustaría usar?</Spanish>
-            <Italian>Quale slot di salvataggio vorresti utilizzare?</Italian>
-            <Polish>Którego slotu zapisu chcesz użyć?</Polish>
-            <Portuguese>Qual o espaço de gravação que gostaria de usar?</Portuguese>
-            <Russian>Какой слот сохранения вы хотите использовать?</Russian>
-            <German>Welchen Speicherplatz möchtest du verwenden?</German>
-            <Korean>어떤 저장 슬롯을 사용하시겠습니까?</Korean>
-            <Japanese>どのセーブスロットを使用しますか？</Japanese>
-            <Chinese>您想要使用哪一個存檔槽位？</Chinese>
-            <Chinesesimp>您想要使用哪一个存档槽位？</Chinesesimp>
-            <Turkish>Hangi kayıt yuvasını kullanmak istersiniz?</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Persistence_SaveWorld">
             <English>Save world</English>
             <Czech>Uložit svět</Czech>

@@ -32,7 +32,7 @@ private _category = format ["Misery %1", localize LSTRING(Component)];
     "SLIDER",
     [LSTRING(MinDist), LSTRING(MinDistDesc)],
     _category,
-    [25, 5000, 500, 0],
+    [350, 5000, 500, 0],
     1
 ] call CBA_fnc_addSetting;
 
@@ -41,7 +41,7 @@ private _category = format ["Misery %1", localize LSTRING(Component)];
     "SLIDER",
     [LSTRING(MaxDist), LSTRING(MaxDistDesc)],
     _category,
-    [25, 10000, 500, 0],
+    [450, 5000, 1500, 0],
     1
 ] call CBA_fnc_addSetting;
 
@@ -50,7 +50,7 @@ private _category = format ["Misery %1", localize LSTRING(Component)];
     "SLIDER",
     [LSTRING(DeleteDist), LSTRING(DeleteDistDesc)],
     _category,
-    [25, 5000, 1000, 0],
+    [500, 5000, 2000, 0],
     1
 ] call CBA_fnc_addSetting;
 

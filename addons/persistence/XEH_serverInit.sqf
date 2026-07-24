@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+if !(isServer) exitWith {};
+
 [QGVAR(saveWorldState), {[GVAR(gradWarning), 0] call GRADFUNC(persistence,saveMission)}] call CBA_fnc_addEventHandler;
 [QGVAR(wipeWorldState), {[GVAR(gradPersistenceTag)] call GRADFUNC(persistence,clearMissionData)}] call CBA_fnc_addEventHandler;
 
@@ -53,4 +55,18 @@ if (GVAR(saveACETags)) then {
     [{ call FUNC(createGlobalSprayTags); }, [], 0.2] call CBA_fnc_waitAndExecute;
 };
 
-[] call FUNC(serverInit);
+if (GVAR(gradAutosaveInterval) isNotEqualTo 0) then {
+    [{
+        call FUNC(gradSave);
+    }, [], GVAR(gradAutosaveTimer)] call CBA_fnc_waitAndExecute;
+};
+
+addMissionEventHandler ["HandleDisconnect", {
+    params ["_unit", "_id", "_uid", "_name"];
+
+    if (!isNull _unit) then {
+        deleteVehicle _unit;
+    };
+
+    false
+}];

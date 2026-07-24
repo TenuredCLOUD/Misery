@@ -334,7 +334,7 @@ QCLASS(guttingKnife), \
 "tsp_meleeWeapon_fireaxe"
 
 // Fire crafting
-#define MACRO_FIRETYPES "MetalBarrel_burning_F", "Land_Campfire_F", "Land_FirePlace_F", "FirePlace_burning_F"
+#define MACRO_FIRETYPES "MetalBarrel_burning_F", "Land_Campfire_F", "Campfire_burning_F", "Land_FirePlace_F", "FirePlace_burning_F"
 #define MACRO_FIRE_TINDER QCLASS(tinder), "acex_intelitems_notepad", "rvg_money", "rvg_notepad", "rvg_docFolder"
 #define MACRO_FIRE_FUEL QCLASS(woodensticks), QCLASS(firewood)
 #define MACRO_FIRE_IGNITION QCLASS(lighter), QCLASS(matchBox)
