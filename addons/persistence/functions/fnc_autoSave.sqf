@@ -13,6 +13,8 @@
  * [] call misery_persistence_fnc_autosave
 */
 
+if !(hasInterface) exitWith {};
+
 // Attach hardcore mode logic
 if (GVAR(autosaveInterval) isEqualTo 0 || GVAR(hardcore)) exitWith {
     [QUOTE(COMPONENT_BEAUTIFIED), "Autosave disabled or Hardcore mode enabled."] call EFUNC(common,debugMessage);

@@ -7,36 +7,45 @@
  * None
  *
  * Return Value:
- * Player Data Serialized <ARRAY>
+ * Player Data Serialized <HASHMAP>
  *
  * Example:
  * [] call misery_persistence_fnc_clientDataSet
 */
 
-private _playerID = getPlayerUID ACE_player;
-private _playerVariables = call EFUNC(common,getPlayerVariables);
-private _loadout = getUnitLoadout ACE_player;
-private _position = getPosWorld ACE_player;
-private _direction = getDir ACE_player;
-private _stance = stance ACE_player;
-private _damage = [ACE_player] call ACEFUNC(medical,serializeState);
+if !(hasInterface) exitWith {};
 
-private _rawArray = [
-    worldName,
-    _playerID,
-    _playerVariables,
-    _loadout,
-    _position,
-    _direction,
-    _stance,
-    _damage
+[] call ACEFUNC(common,player) params ["_player"];
+
+if (isNull _player) exitWith {};
+
+private _position = getPosWorld _player;
+
+if (_position isEqualTo [0, 0, 0]) exitWith {};
+
+private _playerVariables = call EFUNC(common,getPlayerVariables);
+private _loadout = getUnitLoadout _player;
+private _direction = getDir _player;
+private _stance = stance _player;
+private _damage = [_player] call ACEFUNC(medical,serializeState);
+
+private _saveMap = createHashMapFromArray [
+    ["worldName", worldName],
+    ["missionTag", missionName],
+    ["variables", _playerVariables],
+    ["loadout", _loadout],
+    ["position", _position],
+    ["direction", _direction],
+    ["stance", _stance],
+    ["damage", _damage]
 ];
 
 private _namespace = [] call CBA_fnc_createNamespace;
 
-_namespace setVariable [QGVAR(playerData), _rawArray];
+_namespace setVariable [QGVAR(activeProfileData), _saveMap];
 
 private _serialized = [_namespace] call CBA_fnc_serializeNamespace;
+
 _namespace call CBA_fnc_deleteNamespace;
 
 _serialized

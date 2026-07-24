@@ -13,6 +13,13 @@
  * [] call misery_persistence_fnc_saveGame
 */
 
+if !(hasInterface) exitWith {};
+
+// Safety for ESC key handler (if pressed before fully initialized)
+if (!GVAR(clientLoaded)) exitWith {};
+
+if (toUpper (lifeState ACE_player) in ["DEAD", "DEAD-RESPAWN", "DEAD-SWITCHING"]) exitWith {};
+
 call EFUNC(common,nearFire) params ["", "_isInflamed"];
 
 if (GVAR(hardcore) && !_isInflamed) exitWith {
@@ -33,7 +40,10 @@ GVAR(blockSave) = true;
 
 private _serializedData = call FUNC(clientDataSet);
 
-private _saveNameString = call FUNC(formatSaveName);
+profileNamespace setVariable [ACTIVE_PROFILE_KEY, _serializedData];
 
-profileNamespace setVariable [_saveNameString, _serializedData];
+call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "_bankedFunds"];
+profileNamespace setVariable [ACTIVE_BANK_KEY, _bankedFunds];
 
+// Make sure profile is saved in case of game crash, etc...
+saveProfileNamespace;
