@@ -5,7 +5,7 @@
  * Populates list of fillable containers in GUI
  *
  * Arguments:
- * None
+ * 0: Active source containers <HASHMAP>
  *
  * Return Value:
  * None
@@ -16,19 +16,21 @@
  * Public: No
 */
 
+params [["_recipes", createHashMap, [createHashMap]]];
+
 [{!isNull findDisplay 982380}, {
-private _list = findDisplay 982380 displayCtrl 1500;
+    params ["_recipes"];
 
-[982380, [1010], false] call EFUNC(common,displayShowControls);
-
-lbClear _list;
+    private _list = findDisplay 982380 displayCtrl 1500;
+    [982380, [1010], false] call EFUNC(common,displayShowControls);
+    lbClear _list;
 
     {
-        private _requiredItem = _x select 0;
+        private _requiredItem = _x;
 
         [_requiredItem] call EFUNC(common,getItemData) params ["_displayName"];
 
         private _index = _list lbAdd _displayName;
         _list lbSetData [_index, _requiredItem];
-    } forEach GVAR(containers);
-}, []] call CBA_fnc_waitUntilAndExecute;
+    } forEach _recipes;
+}, [_recipes]] call CBA_fnc_waitUntilAndExecute;

@@ -17,6 +17,38 @@
             <Chinesesimp>收集水</Chinesesimp>
             <Turkish>Su topla</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Hydrology_CheckWaterLevel">
+            <English>Check Water Level</English>
+            <Czech>Zkontrolovat hladinu vody</Czech>
+            <French>Vérifier le niveau d'eau</French>
+            <Spanish>Comprobar nivel de agua</Spanish>
+            <Italian>Controlla livello dell'acqua</Italian>
+            <Polish>Sprawdź poziom wody</Polish>
+            <Portuguese>Verificar nível de água</Portuguese>
+            <Russian>Проверить уровень воды</Russian>
+            <German>Wasserstand prüfen</German>
+            <Korean>수위 확인</Korean>
+            <Japanese>水位を確認</Japanese>
+            <Chinese>檢查水位</Chinese>
+            <Chinesesimp>检查水位</Chinesesimp>
+            <Turkish>Su Seviyesini Kontrol Et</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Hydrology_Confirm">
+            <English>Confirm</English>
+            <Czech>Potvrdit</Czech>
+            <French>Confirmer</French>
+            <Spanish>Confirmar</Spanish>
+            <Italian>Conferma</Italian>
+            <Polish>Potwierdź</Polish>
+            <Portuguese>Confirmar</Portuguese>
+            <Russian>Подтвердить</Russian>
+            <German>Bestätigen</German>
+            <Korean>확인</Korean>
+            <Japanese>確定</Japanese>
+            <Chinese>確認</Chinese>
+            <Chinesesimp>确认</Chinesesimp>
+            <Turkish>Onayla</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Hydrology_ContainersLabel">
             <English>Containers:</English>
             <Czech>Kontejnery:</Czech>
@@ -48,6 +80,22 @@
             <Chinese>從源頭飲水</Chinese>
             <Chinesesimp>从源头饮水</Chinesesimp>
             <Turkish>Kaynağından iç</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Hydrology_DumpWaterContainers">
+            <English>Dump Water Containers</English>
+            <Czech>Vyprázdnit nádoby na vodu</Czech>
+            <French>Vider les récipients d'eau</French>
+            <Spanish>Vaciar recipientes de agua</Spanish>
+            <Italian>Svuota contenitori d'acqua</Italian>
+            <Polish>Opróżnij pojemniki na wodę</Polish>
+            <Portuguese>Esvaziar recipientes de água</Portuguese>
+            <Russian>Опустошить емкости для воды</Russian>
+            <German>Wasserbehälter entleeren</German>
+            <Korean>수분 용기 비우기</Korean>
+            <Japanese>水容器を空にする</Japanese>
+            <Chinese>傾倒水容器</Chinese>
+            <Chinesesimp>倾倒水容器</Chinesesimp>
+            <Turkish>Su Kaplarını Boşalt</Turkish>
         </Key>
         <Key ID="STR_MISERY_Hydrology_FillAction">
             <English>Fill container</English>
@@ -193,6 +241,22 @@
             <Chinesesimp>你需要 %1 片净水片来过滤 %2，但你只有 %3 片...</Chinesesimp>
             <Turkish>%2 nesnesini arındırmak için %1 tablete ihtiyacınız var, ancak sizde sadece %3 tane var...</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Hydrology_NotEnoughWater">
+            <English>Not enough water! Required: %1L (Source has: %2L)</English>
+            <Czech>Nedostatek vody! Požadováno: %1L (Zdroj má: %2L)</Czech>
+            <French>Pas assez d'eau ! Requis : %1L (Source contient : %2L)</French>
+            <Spanish>¡No hay suficiente agua! Requerido: %1L (El origen tiene: %2L)</Spanish>
+            <Italian>Acqua insufficiente! Richiesta: %1L (La fonte ne ha: %2L)</Italian>
+            <Polish>Za mało wody! Wymagane: %1L (Źródło posiada: %2L)</Polish>
+            <Portuguese>Água insuficiente! Necessário: %1L (A fonte possui: %2L)</Portuguese>
+            <Russian>Недостаточно воды! Требуется: %1L (В источнике: %2L)</Russian>
+            <German>Nicht genug Wasser! Benötigt: %1L (Quelle enthält: %2L)</German>
+            <Korean>물이 부족합니다! 필요량: %1L (수원 보유량: %2L)</Korean>
+            <Japanese>水が足りません！ 必要量: %1L（水源の残量: %2L）</Japanese>
+            <Chinese>水量不足！需要：%1L（水源現有：%2L）</Chinese>
+            <Chinesesimp>水量不足！需要：%1L（水源现有：%2L）</Chinesesimp>
+            <Turkish>Yetersiz su! Gerekli: %1L (Kaynaktaki: %2L)</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Hydrology_Prompt">
             <English>What container would you like to fill?</English>
             <Czech>Který kontejner chcete naplnit?</Czech>
@@ -240,6 +304,54 @@
             <Chinese>你使用了整包淨水片來過濾 %1...</Chinese>
             <Chinesesimp>你使用了整包净水片来过滤 %1...</Chinesesimp>
             <Turkish>%1 nesnesini arındırmak için bütün bir paket tablet kullandınız...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Hydrology_WaterContainersEmptied">
+            <English>All water containers have been emptied...</English>
+            <Czech>Všechny nádoby na vodu byly vyprázdněny...</Czech>
+            <French>Tous les récipients d'eau ont été vidés...</French>
+            <Spanish>Todos los recipientes de agua han sido vaciados...</Spanish>
+            <Italian>Tutti i contenitori d'acqua sono stati svuotati...</Italian>
+            <Polish>Wszystkie pojemniki na wodę zostały opróżnione...</Polish>
+            <Portuguese>Todos os recipientes de água foram esvaziados...</Portuguese>
+            <Russian>Все емкости для воды были опустошены...</Russian>
+            <German>Alle Wasserbehälter wurden entleert...</German>
+            <Korean>모든 수분 용기가 비워졌습니다...</Korean>
+            <Japanese>すべての水容器が空になりました...</Japanese>
+            <Chinese>所有水容器已全部清空...</Chinese>
+            <Chinesesimp>所有水容器已全部清空...</Chinesesimp>
+            <Turkish>Tüm su kapları boşaltıldı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Hydrology_WaterRemaining">
+            <English>Water Remaining: %1L / %2L</English>
+            <Czech>Zbývající voda: %1L / %2L</Czech>
+            <French>Eau restante : %1L / %2L</French>
+            <Spanish>Agua restante: %1L / %2L</Spanish>
+            <Italian>Acqua rimasta: %1L / %2L</Italian>
+            <Polish>Pozostała voda: %1L / %2L</Polish>
+            <Portuguese>Água restante: %1L / %2L</Portuguese>
+            <Russian>Осталось воды: %1L / %2L</Russian>
+            <German>Verbleibendes Wasser: %1L / %2L</German>
+            <Korean>남은 수량: %1L / %2L</Korean>
+            <Japanese>残水量: %1L / %2L</Japanese>
+            <Chinese>剩餘水量：%1L / %2L</Chinese>
+            <Chinesesimp>剩余水量：%1L / %2L</Chinesesimp>
+            <Turkish>Kalan Su: %1L / %2L</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Hydrology_WaterSourceEmpty">
+            <English>Water source has no more water...</English>
+            <Czech>Vodní zdroj je zcela vyčerpán...</Czech>
+            <French>La source d'eau est épuisée...</French>
+            <Spanish>El origen de agua no tiene más agua...</Spanish>
+            <Italian>La fonte d'acqua è esaurita...</Italian>
+            <Polish>Źródło vody zostało wyczerpane...</Polish>
+            <Portuguese>A fonte de água não tem mais água...</Portuguese>
+            <Russian>В источнике закончилась вода...</Russian>
+            <German>Die Wasserquelle ist versiegt...</German>
+            <Korean>수원에 더 이상 물이 없습니다...</Korean>
+            <Japanese>水源の水が（底をつきました）...</Japanese>
+            <Chinese>水源已無水可用...</Chinese>
+            <Chinesesimp>水源已无水可用...</Chinesesimp>
+            <Turkish>Su kaynağında hiç su kalmadı...</Turkish>
         </Key>
     </Package>
 </Project>

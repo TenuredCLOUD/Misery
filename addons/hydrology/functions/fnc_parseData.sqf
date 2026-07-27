@@ -16,18 +16,44 @@
  * Public: No
 */
 
-GVAR(containers) = [];
+if !(isServer) exitWith {};
+
+GVAR(data) = createHashMap;
+
+private _poolCfg = missionConfigFile >> "CfgMisery_HydrologyData" >> "Sources";
 
 {
-    private _outputItem = configName _x;   // Class name is the filled container / output
-    private _requiredItem = getText (_x >> "requiredItem");
-    private _fillingTime = getNumber (_x >> "fillingTime");
+    private _className = configName _x;
+    private _defaultCapacity = getNumber (_x >> "capacity");
 
-    GVAR(containers) pushBack [
-        _requiredItem,  // Index 0: Empty container
-        _outputItem,    // Index 1: Filled container (from class name)
-        _fillingTime    // Index 2: Filling time
-    ];
-} forEach ("true" configClasses (missionConfigFile >> "CfgMisery_HydrologyData"));
+    private _zOffset = getNumber (_x >> "zOffset");
 
-publicVariable QGVAR(containers);
+    private _recipesCfg = _x >> "Recipes";
+
+    private _containersMap = createHashMap;
+
+    {
+        private _outputItem = configName _x;
+        private _requiredItem = getText (_x >> "requiredItem");
+        private _fillingTime = getNumber (_x >> "fillingTime");
+        private _audio = getText (_x >> "audio");
+        private _waterAmount = getNumber (_x >> "waterAmount");
+
+        _containersMap set [_requiredItem, createHashMapFromArray [
+            ["required", _requiredItem],
+            ["output", _outputItem],
+            ["waterAmount", [1, _waterAmount] select (_waterAmount > 0)],
+            ["fillingTime", _fillingTime],
+            ["audio", _audio]
+        ]];
+    } forEach ("isClass _x" configClasses _recipesCfg);
+
+    GVAR(data) set [_className, createHashMapFromArray [
+        ["capacity", _defaultCapacity],
+        ["zOffset", _zOffset],
+        ["recipes", _containersMap]
+    ]];
+
+} forEach ("isClass _x" configClasses _poolCfg);
+
+publicVariable QGVAR(data);

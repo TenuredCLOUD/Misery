@@ -55,6 +55,10 @@ if (GVAR(saveACETags)) then {
     [{ call FUNC(createGlobalSprayTags); }, [], 0.2] call CBA_fnc_waitAndExecute;
 };
 
+if (GVAR(saveWaterSources)) then {
+    [{ call EFUNC(hydrology,applySourceStates); }, [], 0.2] call CBA_fnc_waitAndExecute;
+};
+
 if (GVAR(gradAutosaveInterval) isNotEqualTo 0) then {
     [{
         call FUNC(gradSave);

@@ -101,3 +101,12 @@ private _category = format ["Misery %1", localize LSTRING(Component)];
     false,
     1
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(saveWaterSources),
+    "CHECKBOX",
+    [LSTRING(SaveWaterSources), LSTRING(SaveWaterSourcesDesc)],
+    _category,
+    false,
+    1
+] call CBA_fnc_addSetting;

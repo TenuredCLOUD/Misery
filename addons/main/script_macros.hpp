@@ -29,6 +29,12 @@
 #define ACEFUNC(var1,var2) TRIPLES(DOUBLES(ACE_PREFIX,var1),fnc,var2)
 #define QACEFUNC(var1,var2) QUOTE(ACEFUNC(var1,var2))
 
+// ACEX reference macros
+#define ACEX_PREFIX acex
+
+#define ACEXGVAR(module,var) TRIPLES(ACEX_PREFIX,module,var)
+#define QACEXGVAR(module,var) QUOTE(ACEXGVAR(module,var))
+
 // AE3 reference macros
 #define AE3_PREFIX ae3
 

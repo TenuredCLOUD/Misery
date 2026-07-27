@@ -106,8 +106,11 @@ disableSerialization;
         };
     };
 
-    _hungerBar progressSetPosition _hunger;
-    _thirstBar progressSetPosition _thirst;
+    private _hungerValue = [_hunger, (100 - (ACE_player getVariable [QACEXGVAR(field_rations,hunger), 0])) / 100] select (!isNil QACEXGVAR(field_rations,enabled) && {ACEXGVAR(field_rations,enabled)});
+    private _thirstValue = [_thirst, (100 - (ACE_player getVariable [QACEXGVAR(field_rations,thirst), 0])) / 100] select (!isNil QACEXGVAR(field_rations,enabled) && {ACEXGVAR(field_rations,enabled)});
+    _hungerBar progressSetPosition _hungerValue;
+    _thirstBar progressSetPosition _thirstValue;
+
     private _fatigueValue = [getFatigue ACE_player, ACE_player getVariable [QACEGVAR(advanced_fatigue,aimFatigue), 0]] select (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)});
     _fatigueBar progressSetPosition _fatigueValue;
 

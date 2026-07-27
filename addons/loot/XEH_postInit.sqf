@@ -8,6 +8,10 @@ if (isClass (missionConfigFile >> "CfgMisery_SearchableObjects")) then {
         params ["_type"];
         if (_type isNotEqualTo 0) exitWith {};
 
+        [] call FUNC(searchCondition) params ["_found"];
+
+        if !(_found) exitWith {};
+
         [] call FUNC(searchInteraction);
     }] call CBA_fnc_addEventHandler;
 } else {

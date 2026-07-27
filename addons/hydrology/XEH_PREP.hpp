@@ -1,6 +1,12 @@
+PREP(applySourceStates);
+PREP(canDumpWater);
+PREP(condition);
 PREP(containersListed);
 PREP(drinkFromSource);
+PREP(dumpWater);
 PREP(icon);
+PREP(interaction);
 PREP(parseData);
 PREP(processFill);
 PREP(purifyWater);
+PREP(syncWaterSource);
