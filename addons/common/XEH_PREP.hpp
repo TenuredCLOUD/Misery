@@ -41,7 +41,6 @@ PREP(nearPlayer);
 PREP(nearRockSource);
 PREP(nearTree);
 PREP(nearVehicle);
-PREP(nearWell);
 PREP(parseVehicleData);
 PREP(rollChance);
 PREP(spawnLoot);

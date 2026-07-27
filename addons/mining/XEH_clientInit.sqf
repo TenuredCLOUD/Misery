@@ -8,6 +8,10 @@ if (isClass (missionConfigFile >> "CfgMisery_MiningData")) then {
         params ["_type"];
         if (_type isNotEqualTo 0) exitWith {};
 
+        [] call FUNC(condition) params ["_found"];
+
+        if !(_found) exitWith {};
+
         [] call FUNC(interaction);
     }] call CBA_fnc_addEventHandler;
 };

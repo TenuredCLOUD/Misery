@@ -1,6 +1,6 @@
 class CLASS(hydrology_ui) {
     idd = 982380;
-    onLoad = QUOTE([982380] call EFUNC(common,menuBlurEffect); [] call EFUNC(hydrology,containersListed); [] call EFUNC(hydrology,icon));
+    onLoad = QUOTE([982380] call EFUNC(common,menuBlurEffect); [] call EFUNC(hydrology,icon));
 
     class ControlsBackground {
         class CLASS(hydrology_background): CLASS(RscText) {

@@ -385,6 +385,38 @@
             <Chinesesimp>储存 AE3 状态、电池电量、发电机燃料等... 需要 GRAD persistence</Chinesesimp>
             <Turkish>AE3 durumlarını, batarya seviyelerini, jeneratör yakıtını vb. kaydeder... GRAD persistence gerektirir</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Persistence_SaveWaterSources">
+            <English>Save water sources (Hydrology)</English>
+            <Czech>Ukládat vodní zdroje (Hydrologie)</Czech>
+            <French>Sauvegarder les sources d'eau (Hydrologie)</French>
+            <Spanish>Guardar fuentes de agua (Hidrología)</Spanish>
+            <Italian>Salva fonti d'acqua (Idrologia)</Italian>
+            <Polish>Zapisuj źródła wody (Hydrologia)</Polish>
+            <Portuguese>Salvar fontes de água (Hidrologia)</Portuguese>
+            <Russian>Сохранять источники воды (Гидрология)</Russian>
+            <German>Wasserquellen speichern (Hydrologie)</German>
+            <Korean>수원 저장 (수문학)</Korean>
+            <Japanese>水源を保存（水文学）</Japanese>
+            <Chinese>儲存水源（水文系統）</Chinese>
+            <Chinesesimp>储存水源（水文系统）</Chinesesimp>
+            <Turkish>Su Kaynaklarını Kaydet (Hidroloji)</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Persistence_SaveWaterSourcesDesc">
+            <English>Saves water sources, and restores their capacity on load, requires GRAD persistence</English>
+            <Czech>Ukládá vodní zdroje a při načtení obnovuje jejich zbývající kapacitu. Vyžaduje GRAD persistence.</Czech>
+            <French>Sauvegarde les sources d'eau et restaure leur capacité lors du chargement. Nécessite GRAD persistence.</French>
+            <Spanish>Guarda las fuentes de agua y restaura su capacidad al cargar; requiere GRAD persistence.</Spanish>
+            <Italian>Salva le fonti d'acqua e ne ripristina la capacità al caricamento. Richiede GRAD persistence.</Italian>
+            <Polish>Zapisuje źródła wody i przywraca ich pojemność podczas wczytywania. Wymaga frameworku GRAD persistence.</Polish>
+            <Portuguese>Salva as fontes de água e restaura sua capacidade ao carregar. Requer GRAD persistence.</Portuguese>
+            <Russian>Сохраняет источники воды и восстанавливает их оставшуюся емкость при загрузке. Требуется GRAD persistence.</Russian>
+            <German>Speichert Wasserquellen und stellt deren Kapazität beim Laden wieder her. Erfordert GRAD persistence.</German>
+            <Korean>수원을 저장하고 불러올 때 남은 용량을 복원합니다. GRAD persistence 플러그인이 필요합니다.</Korean>
+            <Japanese>水源の状態を保存し、ロード時に残量を復元します。GRAD persistence が必要です。</Japanese>
+            <Chinese>儲存水源資料並在載入時重置其剩餘水容量。需要 GRAD persistence 支援。</Chinese>
+            <Chinesesimp>储存水源数据并在加载时重置其剩余水容量。需要 GRAD persistence 支持。</Chinesesimp>
+            <Turkish>Su kaynaklarını kaydeder ve yükleme sırasında kapasitelerini geri yükler; GRAD persistence gerektirir.</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Persistence_SaveWorld">
             <English>Save world</English>
             <Czech>Uložit svět</Czech>
