@@ -17,17 +17,27 @@
 
 call EFUNC(common,getPlayerVariables) params ["", "", "", "_thermalIndex", "_exposure", "_wetness", "", "_infection", "_parasites"];
 
-if !(GVAR(enabled)) exitWith {};
+if !(GVAR(enabled) && ACEGVAR(weather,enabled)) exitWith {};
 
-call FUNC(environment) params ["_airTemp", "_seaTemp"];
+call FUNC(environment) params ["_temperature", "_heatIndex", "_windChill", "_humidity", "_breathFog"];
 
 [ACE_player] call FUNC(clothing) params ["_clothesWarmth"];
 _clothesWarmth = _clothesWarmth * (1 - _wetness * 0.5);
 
 private _wetnessChill = linearConversion [0, 1, _wetness, 0, 0.8, true];
-private _ambientTarget = linearConversion [TEMP_MIN, TEMP_MAX, _airTemp, -1, 1, true];
+
+private _perceivedTemp = _temperature;
+if (_temperature >= 26) then {
+    _perceivedTemp = _heatIndex;
+} else {
+    if (_temperature <= 10) then {
+        _perceivedTemp = _windChill;
+    };
+};
+
+private _ambientTarget = linearConversion [TEMP_MIN, TEMP_MAX, _perceivedTemp, -1, 1, true];
 private _targetExposure = _ambientTarget;
-private _thermalIndexModifier = _airTemp + (_clothesWarmth / 5);
+private _thermalIndexModifier = _perceivedTemp + (_clothesWarmth / 5);
 private _wetnessModifier = 0;
 private _changeMultiplier = 1;
 private _hasWetsuit = ((toLower uniform ACE_player) find "wetsuit") > -1;
@@ -50,20 +60,20 @@ switch (true) do {
         _changeMultiplier = 50;
     };
     case (insideBuilding ACE_player isEqualTo 1 && _isInflamed): {
-        _targetExposure = ([0.5, 0.1] select (_airTemp < TEMP_NEUTRAL)) - (_wetnessChill * 0.5);
-        _thermalIndexModifier = (_airTemp + 20) min 35;
+        _targetExposure = ([0.5, 0.1] select (_temperature < TEMP_NEUTRAL)) - (_wetnessChill * 0.5);
+        _thermalIndexModifier = (_temperature + 20) min 35;
         _wetnessModifier = -0.005;
         _changeMultiplier = 50;
     };
     case (_isInflamed): {
-        _targetExposure = ([0.5, 0.1] select (_airTemp < TEMP_NEUTRAL)) - (_wetnessChill * 0.5);
-        _thermalIndexModifier = (_airTemp + 20) min 35;
+        _targetExposure = ([0.5, 0.1] select (_temperature < TEMP_NEUTRAL)) - (_wetnessChill * 0.5);
+        _thermalIndexModifier = (_temperature + 20) min 35;
         _wetnessModifier = -0.005;
         _changeMultiplier = 50;
     };
     case (insideBuilding ACE_player isEqualTo 1): {
         _targetExposure = ((_ambientTarget + 0.3) min 0) - _wetnessChill;
-        _thermalIndexModifier = _airTemp + 10;
+        _thermalIndexModifier = _temperature + 10;
         _wetnessModifier = -0.0001;
         _changeMultiplier = 50;
     };
@@ -88,35 +98,29 @@ switch (true) do {
             _changeMultiplier = 50;
         } else {
             _targetExposure = (_ambientTarget + 0.1) - _wetnessChill;
-            _thermalIndexModifier = _airTemp + (_clothesWarmth / 10);
+            _thermalIndexModifier = _perceivedTemp + (_clothesWarmth / 10);
         };
     };
     default {
         private _isSwimming = [ACE_player] call ACEFUNC(common,isSwimming);
 
-        private _rainWet = false;
-        private _waterWet = false;
-
         if (_isSwimming) then {
-            _waterWet = true;
-            _thermalIndexModifier = _seaTemp;
-            _targetExposure = linearConversion [TEMP_MIN, TEMP_MAX, _seaTemp, -1, 1, true];
-            _wetnessModifier = [0.05, 1.0] select (_isSwimming);
+            _wetnessModifier = [0.05, 0.005] select (_hasWetsuit);
 
-            if (!_hasWetsuit && _seaTemp < TEMP_NEUTRAL) then {
-                _targetExposure = -1;
+            if (_temperature < 20) then {
+                private _coldSeverity = linearConversion [TEMP_MIN, 20, _temperature, -1, -0.2, true];
+                _targetExposure = if (_hasWetsuit) then { _coldSeverity * 0.3 } else { _coldSeverity };
+            } else {
+                _targetExposure = linearConversion [20, TEMP_MAX, _temperature, -0.1, 0.2, true];
             };
         } else {
-            _targetExposure = linearConversion [TEMP_MIN, TEMP_MAX, (_airTemp + (_clothesWarmth / 5)), -1, 1, true];
+            _targetExposure = linearConversion [TEMP_MIN, TEMP_MAX, (_perceivedTemp + (_clothesWarmth / 5)), -1, 1, true];
             _targetExposure = (_targetExposure - _wetnessChill) max -1;
 
             if (rain > 0 && !_hasWetsuit) then {
                 _wetnessModifier = rain * 0.03;
-                _rainWet = true;
             } else {
-                if (!_rainWet && !_waterWet) then {
-                    _wetnessModifier = -0.00001;
-                };
+                _wetnessModifier = -0.00001;
             };
         };
     };
@@ -131,6 +135,10 @@ if (_wetness > 0 && _thermalIndex < TEMP_NEUTRAL && !_hasWetsuit) then {
 
 private _hungerModifier = HUNGER_RATE * EGVAR(survival,metabolicCoef);
 private _thirstModifier = THIRST_RATE * EGVAR(survival,metabolicCoef);
+
+if (_perceivedTemp > 30) then {
+    _thirstModifier = _thirstModifier * (1 + ((_perceivedTemp - 30) * 0.06));
+};
 
 private _impactAbs = abs(_exposure);
 

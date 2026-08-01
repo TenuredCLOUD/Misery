@@ -22,7 +22,6 @@
 #include "\z\misery\addons\vitals\ui\vitalsFramework.hpp"
 
 class RscTitles {
-    #include "\z\misery\addons\eru\ui\eru.hpp"
     #include "\z\misery\addons\geiger\ui\geiger.hpp"
     #include "\z\misery\addons\maintenance\ui\vehicleStats.hpp"
     #include "\z\misery\addons\overlays\ui\bloodShot_overlay.hpp"

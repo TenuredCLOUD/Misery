@@ -257,54 +257,6 @@
             <Chinesesimp>净化套件</Chinesesimp>
             <Turkish>Dekont Kiti</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Assets_ERUOff_DisplayName">
-            <English>ERU (OFF)</English>
-            <Czech>ERU (VYPNUTO)</Czech>
-            <French>ERU (OFF)</French>
-            <Spanish>ERU (APAGADO)</Spanish>
-            <Italian>ERU (OFF)</Italian>
-            <Polish>ERU (WYŁ.)</Polish>
-            <Portuguese>ERU (DESLIGADO)</Portuguese>
-            <Russian>КПК (ВЫКЛ)</Russian>
-            <German>ERU (AUS)</German>
-            <Korean>ERU(꺼짐)</Korean>
-            <Japanese>ERU（OFF）</Japanese>
-            <Chinese>環境讀取裝置 (關閉)</Chinese>
-            <Chinesesimp>环境读取装置 (关闭)</Chinesesimp>
-            <Turkish>ERU (KAPALI)</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Assets_ERU_Description">
-            <English>Environmental Reading Unit&lt;br/&gt; - Information</English>
-            <Czech>Jednotka pro čtení prostředí&lt;br/&gt; - Informace</Czech>
-            <French>Unité de lecture environnementale&lt;br/&gt; - Informations</French>
-            <Spanish>Unidad de lectura ambiental&lt;br/&gt; - Información</Spanish>
-            <Italian>Unità di lettura ambientale&lt;br/&gt; - Informazioni</Italian>
-            <Polish>Jednostka odczytu środowiskowego&lt;br/&gt; - Informacje</Polish>
-            <Portuguese>Unidade de leitura ambiental&lt;br/&gt; - Informações</Portuguese>
-            <Russian>Блок мониторинга среды&lt;br/&gt; - Информация</Russian>
-            <German>Umwelt-Leseeinheit&lt;br/&gt; - Informationen</German>
-            <Korean>환경 판독 장치&lt;br/&gt; - 정보</Korean>
-            <Japanese>環境読取装置&lt;br/&gt; - 情報</Japanese>
-            <Chinese>環境讀取裝置&lt;br/&gt; - 信息</Chinese>
-            <Chinesesimp>环境读取装置&lt;br/&gt; - 信息</Chinesesimp>
-            <Turkish>Çevresel Okuma Ünitesi&lt;br/&gt; - Bilgi</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Assets_ERU_DisplayName">
-            <English>ERU (ON)</English>
-            <Czech>ERU (ZAPNUTO)</Czech>
-            <French>ERU (ON)</French>
-            <Spanish>ERU (ENCENDIDO)</Spanish>
-            <Italian>ERU (ON)</Italian>
-            <Polish>ERU (WŁ.)</Polish>
-            <Portuguese>ERU (LIGADO)</Portuguese>
-            <Russian>КПК (ВКЛ)</Russian>
-            <German>ERU (EIN)</German>
-            <Korean>ERU(켜짐)</Korean>
-            <Japanese>ERU（ON）</Japanese>
-            <Chinese>環境讀取裝置 (開啟)</Chinese>
-            <Chinesesimp>环境读取装置 (开启)</Chinesesimp>
-            <Turkish>ERU (AÇIK)</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Assets_ElectricHandSaw_Description">
             <English>A battery powered saw&lt;br/&gt; - Base crafting</English>
             <Czech>Akumulátorová pila&lt;br/&gt; - Stavební nářadí</Czech>
@@ -2152,22 +2104,6 @@
             <Chinese>膠帶</Chinese>
             <Chinesesimp>胶带</Chinesesimp>
             <Turkish>Koli Bandı</Turkish>
-        </Key>
-        <Key ID="STR_Misery_Assets_ERUNoBattery_DisplayName">
-            <English>ERU (No battery)</English>
-            <Czech>ERU (bez baterie)</Czech>
-            <French>ERU (sans batterie)</French>
-            <Spanish>ERU (sin batería)</Spanish>
-            <Italian>ERU (nessuna batteria)</Italian>
-            <Polish>ERU (brak baterii)</Polish>
-            <Portuguese>ERU (sem bateria)</Portuguese>
-            <Russian>КПК (без аккумулятора)</Russian>
-            <German>ERU (keine Batterie)</German>
-            <Korean>ERU(배터리 없음)</Korean>
-            <Japanese>ERU（バッテリーなし）</Japanese>
-            <Chinese>環境讀取裝置 (無電池)</Chinese>
-            <Chinesesimp>环境读取装置 (无电池)</Chinesesimp>
-            <Turkish>ERU (Pilsiz)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ElectricHandSawNoBattery_DisplayName">
             <English>Electric Hand saw (no battery)</English>

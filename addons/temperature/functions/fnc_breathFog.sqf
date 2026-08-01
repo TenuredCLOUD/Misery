@@ -17,7 +17,7 @@
  * Public: No
 */
 
-call FUNC(environment) params ["", "", "_breathFog"];
+call FUNC(environment) params ["", "", "", "", "_breathFog"];
 
 // Wait till _breathFog check is true, otherwise run check every 10 seconds
 if (!_breathFog || !alive ACE_player) exitWith {
