@@ -147,5 +147,27 @@ class CLASS(vitals_framework_ui) {
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
+        class CLASS(vitals_framework_thermometer): CLASS(RscProgress_V)
+        {
+	        idc = 2000;
+	        x = 25 * GUI_GRID_W + GUI_GRID_X;
+	        y = 9.5 * GUI_GRID_H + GUI_GRID_Y;
+	        w = 0.5 * GUI_GRID_W;
+	        h = 4.5 * GUI_GRID_H;
+	        colorText[] = {1,1,1,0};
+	        colorBackground[] = {0,0,0,0.3};
+        };
+        class CLASS(vitals_framework_temp_notch): RscText
+        {
+            idc = 2001;
+            x = 25 * GUI_GRID_W + GUI_GRID_X;
+            y = 11.75 * GUI_GRID_H + GUI_GRID_Y;
+            w = 0.5 * GUI_GRID_W;
+            h = 0.1 * GUI_GRID_H;
+            colorBackground[] = {1,1,1,1};
+        };
     };
 };
+
+
+

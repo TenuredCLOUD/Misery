@@ -31,6 +31,8 @@ disableSerialization;
     private _wetnessBar = _vitalsDisplay displayCtrl 1018;
     private _buffsList = _vitalsDisplay displayCtrl 1501;
     private _ailmentsList = _vitalsDisplay displayCtrl 1502;
+    private _tempBar = _vitalsDisplay displayCtrl 2000;
+    private _tempIndicator = _vitalsDisplay displayCtrl 2001;
 
     call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "", "_exposure", "_wetness", "_radiation", "_infection", "_parasites", "_toxicity", "_psychosis", "_buffs", "_ailments", "_funds", "", "_cartridgeEfficiency"];
     [ACE_player] call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "_skinProtection", "_respiratoryProtection", "_eyeProtection", "_hearingProtection"];
@@ -95,6 +97,8 @@ disableSerialization;
         switch (_gearCase) do {
             case "GasMask": {
                     [982377, [1016, 1017], true] call EFUNC(common,displayShowControls);
+                    private _cartridgeTipValue  = [_cartridgeEfficiency] call FUNC(valueToPercent);
+                    _gasMaskBar ctrlSetTooltip format [localize LSTRING(MaskEfficiency), _cartridgeTipValue];
                     _gasMaskBar progressSetPosition _cartridgeEfficiency;
                 };
             case "SuppliedAir": {
@@ -106,18 +110,38 @@ disableSerialization;
         };
     };
 
+    if !(EGVAR(temperature,enabled) && ACEGVAR(weather,enabled)) then {
+        [982377, [2000, 2001], false] call EFUNC(common,displayShowControls);
+    } else {
+        [_tempIndicator, _exposure] call FUNC(updateThermometer);
+    };
+
     private _hungerValue = [_hunger, (100 - (ACE_player getVariable [QACEXGVAR(field_rations,hunger), 0])) / 100] select (!isNil QACEXGVAR(field_rations,enabled) && {ACEXGVAR(field_rations,enabled)});
     private _thirstValue = [_thirst, (100 - (ACE_player getVariable [QACEXGVAR(field_rations,thirst), 0])) / 100] select (!isNil QACEXGVAR(field_rations,enabled) && {ACEXGVAR(field_rations,enabled)});
+
+    private _kcalValue  = [_hungerValue] call FUNC(hungerToKcal);
+    private _waterValue = [_thirstValue] call FUNC(thirstToLitres);
+
+    _hungerBar ctrlSetTooltip format [localize LSTRING(Satiety), _kcalValue];
+    _thirstBar ctrlSetTooltip format [localize LSTRING(Hydration), _waterValue];
+
     _hungerBar progressSetPosition _hungerValue;
     _thirstBar progressSetPosition _thirstValue;
 
     private _fatigueValue = [getFatigue ACE_player, ACE_player getVariable [QACEGVAR(advanced_fatigue,aimFatigue), 0]] select (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)});
+
+    private _fatigueTipValue  = [_fatigueValue] call FUNC(valueToPercent);
+
+    _fatigueBar ctrlSetTooltip format [localize LSTRING(Exhaustion), _fatigueTipValue];
+
     _fatigueBar progressSetPosition _fatigueValue;
 
     if (_wetness <= 0) then {
         [982377, [1007, 1018], false] call EFUNC(common,displayShowControls);
     } else {
         [982377, [1007, 1018], true] call EFUNC(common,displayShowControls);
+        private _wetnessTipValue  = [_wetness] call FUNC(valueToPercent);
+        _wetnessBar ctrlSetTooltip format [localize LSTRING(WaterSaturation), _wetnessTipValue];
         _wetnessBar progressSetPosition _wetness;
     };
 
