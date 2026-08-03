@@ -56,13 +56,13 @@ switch (true) do {
     case (GVAR(thermalBagActive)): {
         _targetExposure = 0;
         _thermalIndexModifier = TEMP_NEUTRAL;
-        _wetnessModifier = -0.01;
+        _wetnessModifier = -0.0025;
         _changeMultiplier = 50;
     };
     case (insideBuilding ACE_player isEqualTo 1 && _isInflamed): {
         _targetExposure = ([0.5, 0.1] select (_temperature < TEMP_NEUTRAL)) - (_wetnessChill * 0.5);
         _thermalIndexModifier = (_temperature + 20) min 35;
-        _wetnessModifier = -0.005;
+        _wetnessModifier = -0.007;
         _changeMultiplier = 50;
     };
     case (_isInflamed): {
@@ -94,7 +94,7 @@ switch (true) do {
         if (_shelteredVeh) then {
             _targetExposure = 0 - (_wetnessChill * 0.3);
             _thermalIndexModifier = TEMP_NEUTRAL;
-            _wetnessModifier = -0.001;
+            _wetnessModifier = -0.0005;
             _changeMultiplier = 50;
         } else {
             _targetExposure = (_ambientTarget + 0.1) - _wetnessChill;
@@ -114,8 +114,19 @@ switch (true) do {
                 _targetExposure = linearConversion [20, TEMP_MAX, _temperature, -0.1, 0.2, true];
             };
         } else {
-            _targetExposure = linearConversion [TEMP_MIN, TEMP_MAX, (_perceivedTemp + (_clothesWarmth / 5)), -1, 1, true];
+            private _tempDelta = _perceivedTemp - TEMP_NEUTRAL;
+
+            if (_tempDelta < 0) then {
+                private _insulationFactor = (1 - ((_clothesWarmth min 80) / 100)) max 0.1;
+                _tempDelta = _tempDelta * _insulationFactor;
+                _targetExposure = linearConversion [TEMP_MIN - TEMP_NEUTRAL, 0, _tempDelta, -1, 0, true];
+            } else {
+                _targetExposure = linearConversion [0, TEMP_MAX - TEMP_NEUTRAL, _tempDelta, 0, 1, true];
+            };
+
             _targetExposure = (_targetExposure - _wetnessChill) max -1;
+
+            _changeMultiplier = 1 + ((abs (speed ACE_player)) / 4);
 
             if (rain > 0 && !_hasWetsuit) then {
                 _wetnessModifier = rain * 0.03;
@@ -128,6 +139,8 @@ switch (true) do {
 
 private _driftChange = NEUTRAL_RATE * _changeMultiplier;
 private _exposureModifier = (_targetExposure - _exposure) * _driftChange;
+
+[QUOTE(COMPONENT_BEAUTIFIED), format ["Target Exposure: %1 | Change Multiplier: %2 | Exposure Modifier: %3", _targetExposure, _changeMultiplier, _exposureModifier]] call EFUNC(common,debugMessage);
 
 if (_wetness > 0 && _thermalIndex < TEMP_NEUTRAL && !_hasWetsuit) then {
     _exposureModifier = (_exposureModifier - (_wetness * WETNESS_RATE * 5)) * (3 + _wetness);
@@ -156,6 +169,6 @@ if (GVAR(deficiency)) then {
 
 [_thermalIndexModifier, "thermalindex"] call EFUNC(common,addStatusModifier);
 [_wetnessModifier, "wetness"] call EFUNC(common,addStatusModifier);
-[_exposureModifier * EGVAR(survival,metabolicCoef), "exposure"] call EFUNC(common,addStatusModifier);
+[_exposureModifier, "exposure"] call EFUNC(common,addStatusModifier);
 [-_hungerModifier, "hunger"] call EFUNC(common,addStatusModifier);
 [-_thirstModifier, "thirst"] call EFUNC(common,addStatusModifier);
