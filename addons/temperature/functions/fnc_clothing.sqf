@@ -36,7 +36,8 @@ if (_uniform isNotEqualTo "") then {
     if (isClass _config && {isNumber (_config >> _uniform >> "insulation")}) then {
         _uniformWarmth = getNumber (_config >> _uniform >> "insulation");
     } else {
-        private _uniformMass = getNumber (configFile >> "CfgWeapons" >> _uniform >> "ItemInfo" >> "mass");
+        private _uniformConfig = [_uniform] call CBA_fnc_getItemConfig;
+        private _uniformMass = getNumber (_uniformConfig >> "itemInfo" >> "mass");
         if (_uniformMass > 0) then {
             _uniformWarmth = (_uniformMass / 4) min 15;
             if ((toLower _uniform) find "ghillie" > -1) then {
@@ -59,7 +60,8 @@ if (_vest isNotEqualTo "") then {
     if (isClass _config && {isNumber (_config >> _vest >> "insulation")}) then {
         _vestWarmth = getNumber (_config >> _vest >> "insulation");
     } else {
-        private _vestMass = getNumber (configFile >> "CfgWeapons" >> _vest >> "ItemInfo" >> "mass");
+        private _vestConfig = [_vest] call CBA_fnc_getItemConfig;
+        private _vestMass = getNumber (_vestConfig >> "itemInfo" >> "mass");
         if (_vestMass > 0) then {
             _vestWarmth = (_vestMass / 6) min 15;
         };
@@ -70,7 +72,8 @@ if (_headgear isNotEqualTo "") then {
     if (isClass _config && {isNumber (_config >> _headgear >> "insulation")}) then {
         _headgearWarmth = getNumber (_config >> _headgear >> "insulation");
     } else {
-        private _headgearMass = getNumber (configFile >> "CfgWeapons" >> _headgear >> "ItemInfo" >> "mass");
+        private _headgearConfig = [_headgear] call CBA_fnc_getItemConfig;
+        private _headgearMass = getNumber (_headgearConfig >> "itemInfo" >> "mass");
         if (_headgearMass > 0) then {
             _headgearWarmth = (_headgearMass / 8) min 4;
             if ((((toLower _headgear) find "watchcap" > -1) || ((toLower _headgear) find "ushanka" > -1) || ((toLower _headgear) find "bala" > -1) || ((toLower _headgear) find "shem" > -1))) then {
@@ -84,7 +87,8 @@ if (_facewear isNotEqualTo "") then {
     if (isClass _config && {isNumber (_config >> _facewear >> "insulation")}) then {
         _facewearWarmth = getNumber (_config >> _facewear >> "insulation");
     } else {
-        private _facewearMass = getNumber (configFile >> "CfgGlasses" >> _facewear >> "ItemInfo" >> "mass");
+        private _facewearConfig = [_facewear] call CBA_fnc_getItemConfig;
+        private _facewearMass = getNumber (_facewearConfig >> "mass");
         if (_facewearMass > 0) then {
             _facewearWarmth = (_facewearMass / 10) min 2;
             if ((((toLower _facewear) find "bala" > -1) || ((toLower _facewear) find "shem" > -1))) then {
