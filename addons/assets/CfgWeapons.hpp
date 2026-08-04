@@ -621,29 +621,6 @@ class CfgWeapons {
         };
     };
 
-    class CLASS(gasMask_Empty): CLASS(ItemCore) {
-        displayName = CSTRING(GasMaskEmpty_DisplayName);
-        descriptionShort = CSTRING(GasMaskEmpty_Description);
-        picture = QPATHTOF(data\icons\gasmask.paa);
-        scope = 2;
-        scopeCurator = 2;
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 25;
-        };
-    };
-
-    class CLASS(gasCartridge): CLASS(ItemCore) {
-        displayName = CSTRING(GasCartridge_DisplayName);
-        descriptionShort = CSTRING(GasCartridge_Description);
-        picture = QPATHTOF(data\icons\maskcartridges.paa);
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 20;
-        };
-    };
-
     class CLASS(18vBattery): CLASS(ItemCore) {
         displayName = CSTRING(18VBattery_DisplayName);
         descriptionShort = CSTRING(18VBattery_Description);

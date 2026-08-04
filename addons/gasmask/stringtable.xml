@@ -17,38 +17,6 @@
             <Chinesesimp>防毒面具</Chinesesimp>
             <Turkish>Gaz Maskesi</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Gasmask_DefaultSwappedMask">
-            <English>Default swapped mask</English>
-            <Czech>Výchozí vyměněná maska</Czech>
-            <French>Masque de remplacement par défaut</French>
-            <Spanish>Máscara intercambiada por defecto</Spanish>
-            <Italian>Maschera scambiata predefinita</Italian>
-            <Polish>Domyślna zamieniona maska</Polish>
-            <Portuguese>Máscara trocada padrão</Portuguese>
-            <Russian>Сменная маска по умолчанию</Russian>
-            <German>Standardmäßig getauschte Maske</German>
-            <Korean>기본 교체된 방독면</Korean>
-            <Japanese>デフォルトの交換マスク</Japanese>
-            <Chinese>默認更換的面具</Chinese>
-            <Chinesesimp>默认更换的面具</Chinesesimp>
-            <Turkish>Varsayılan değiştirilen maske</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Gasmask_DefaultSwappedMaskDesc">
-            <English>The default mask that is returned when a player uses cartridges on a gasmask without cartridges (use when not using contact DLC gasmasks)</English>
-            <Czech>Výchozí maska, která se vrátí, když hráč použije filtry na plynovou masku bez filtrů (použijte, pokud nepoužíváte plynové masky z Contact DLC)</Czech>
-            <French>Le masque par défaut qui est retourné lorsqu'un joueur utilise des cartouches sur un masque à gaz sans cartouche (à utiliser lorsque vous n'utilisez pas les masques à gaz du DLC Contact)</French>
-            <Spanish>La máscara por defecto que se devuelve cuando un jugador usa cartuchos en una máscara antigás sin cartuchos (usar cuando no se utilicen las máscaras del DLC Contact)</Spanish>
-            <Italian>La maschera predefinita che viene restituita quando un giocatore usa filtri su una maschera antigas senza filtri (usare quando non si usano le maschere del DLC Contact)</Italian>
-            <Polish>Domyślna maska zwracana, gdy gracz używa pochłaniaczy na masce przeciwgazowej bez pochłaniaczy (używane, gdy nie są używane maski z DLC Contact)</Polish>
-            <Portuguese>A máscara padrão que é devolvida quando um jogador usa cartuchos numa máscara de gás sem cartuchos (usar quando não estiver a usar máscaras de gás do DLC Contact)</Portuguese>
-            <Russian>Маска по умолчанию, которая выдается, когда игрок использует фильтры на противогазе без фильтров (используется, если не используются противогазы из DLC Contact)</Russian>
-            <German>Die Standardmaske, die zurückgegeben wird, wenn ein Spieler Filter für eine Gasmaske ohne Filter verwendet (nutzen, wenn keine Gasmasken aus dem Contact-DLC verwendet werden)</German>
-            <Korean>플레이어가 정화통이 없는 방독면이에 정화통을 사용할 때 반환되는 기본 방독면입니다 (Contact DLC 방독면을 사용하지 않을 때 사용)</Korean>
-            <Japanese>プレイヤーがキャニスターなしのガスマスクにキャニスターを使用したときに返されるデフォルト의マスク (Contact DLCのガスマスクを使用していない場合に使用)</Japanese>
-            <Chinese>當玩家在沒有濾毒罐的防毒面具上使用濾毒罐時返回的默認面具 (不使用 Contact DLC 防毒面具時使用)</Chinese>
-            <Chinesesimp>当玩家在没有滤毒罐的防毒面具上使用滤毒罐时返回的默认面具 (不使用 Contact DLC 防毒面具时使用)</Chinesesimp>
-            <Turkish>Bir oyuncu filtresiz bir gaz maskesinde filtre kullandığında geri verilen varsayılan maske (Contact DLC gaz maskelerini kullanmadığınızda kullanın)</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Gasmask_EnhancedGasmasks">
             <English>Enhanced gasmasks</English>
             <Czech>Vylepšené plynové masky</Czech>
@@ -97,22 +65,6 @@
             <Chinesesimp>%1 已损坏，正在移除装备...</Chinesesimp>
             <Turkish>%1 kırıldı, ekipman çıkarılıyor...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Gasmask_NoValidMask">
-            <English>No valid mask available for cartridge replacement...</English>
-            <Czech>K výměně filtru není k dispozici žádná platná maska...</Czech>
-            <French>Aucun masque valide disponible pour le remplacement de la cartouche...</French>
-            <Spanish>No hay ninguna máscara válida disponible para reemplazar el cartucho...</Spanish>
-            <Italian>Nessuna maschera valida disponibile per la sostituzione del filtro...</Italian>
-            <Polish>Brak odpowiedniej maski do wymiany pochłaniacza...</Polish>
-            <Portuguese>Nenhuma máscara válida disponível para substituição de cartucho...</Portuguese>
-            <Russian>Нет подходящей маски для замены фильтра...</Russian>
-            <German>Keine gültige Maske für den Filterwechsel verfügbar...</German>
-            <Korean>정화통을 교체할 수 있는 유효한 방독면이 없습니다...</Korean>
-            <Japanese>キャニスターの交換が可能な有効なマスクがありません...</Japanese>
-            <Chinese>沒有可用於更換濾毒罐的有效面具...</Chinese>
-            <Chinesesimp>没有用于更换滤毒罐的有效面具...</Chinesesimp>
-            <Turkish>Filtre değişimi için geçerli bir maske mevcut değil...</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Gasmask_RebreatherConnections">
             <English>Rebreather connections</English>
             <Czech>Připojení dýchacího přístroje</Czech>
@@ -144,22 +96,6 @@
             <Chinese>啟用 Contact DLC CBRN 裝備的循環呼吸器軟管連接</Chinese>
             <Chinesesimp>启用 Contact DLC CBRN 装备的循环呼吸器软管连接</Chinesesimp>
             <Turkish>Contact DLC CBRN ekipmanı için rebreather hortum bağlantılarını etkinleştirir</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Gasmask_ReplacedCartridges">
-            <English>You replace the cartridges on your gasmask...</English>
-            <Czech>Vyměnili jste filtry na své plynové masce...</Czech>
-            <French>Vous remplacez les cartouches de votre masque à gaz...</French>
-            <Spanish>Reemplazas los cartuchos de tu máscara antigás...</Spanish>
-            <Italian>Sostituisci i filtri sulla tua maschera antigas...</Italian>
-            <Polish>Wymieniasz pochłaniacze w swojej masce przeciwgazowej...</Polish>
-            <Portuguese>Substituiu os cartuchos na sua máscara de gás...</Portuguese>
-            <Russian>Вы заменили фильтры в своем противогазе...</Russian>
-            <German>Du wechselst die Filter deiner Gasmaske...</German>
-            <Korean>방독면의 정화통을 교체합니다...</Korean>
-            <Japanese>ガスマスクのキャニスターを交換しています...</Japanese>
-            <Chinese>您更換了防毒面具上的濾毒罐...</Chinese>
-            <Chinesesimp>您更换了防毒面具上的滤毒罐...</Chinesesimp>
-            <Turkish>Gaz maskenizin filtrelerini değiştiriyorsunuz...</Turkish>
         </Key>
     </Package>
 </Project>

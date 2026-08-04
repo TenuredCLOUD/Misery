@@ -54,8 +54,6 @@
     QCLASS(fishingPole), \
     QCLASS(fishingSpool), \
     QCLASS(flatheadScrewdriver), \
-    QCLASS(gasCartridge), \
-    QCLASS(gasMask_Empty), \
     QCLASS(geiger_dead), \
     QCLASS(geiger_NoBattery), \
     QCLASS(glucose), \

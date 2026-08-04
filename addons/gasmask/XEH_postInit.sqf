@@ -28,6 +28,3 @@ if (!hasInterface) exitWith {};
         }] call CBA_fnc_addEventHandler;
     };
 }] call CBA_fnc_addEventHandler;
-
-// For gasmask cartridge efficiency.
-GVAR(modifiers) = 0;

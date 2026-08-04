@@ -32,7 +32,7 @@ disableSerialization;
     private _buffsList = _vitalsDisplay displayCtrl 1501;
     private _ailmentsList = _vitalsDisplay displayCtrl 1502;
 
-    call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "", "_exposure", "_wetness", "_radiation", "_infection", "_parasites", "_toxicity", "_psychosis", "_buffs", "_ailments", "_funds", "", "_cartridgeEfficiency"];
+    call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "", "_exposure", "_wetness", "_radiation", "_infection", "_parasites", "_toxicity", "_psychosis", "_buffs", "_ailments", "_funds"];
     [ACE_player] call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "_skinProtection", "_respiratoryProtection", "_eyeProtection", "_hearingProtection"];
 
     lbClear _buffsList;
@@ -95,6 +95,7 @@ disableSerialization;
         switch (_gearCase) do {
             case "GasMask": {
                     [982377, [1016, 1017], true] call EFUNC(common,displayShowControls);
+                    private _cartridgeEfficiency = call EFUNC(gasmask,checkCartridges);
                     _gasMaskBar progressSetPosition _cartridgeEfficiency;
                 };
             case "SuppliedAir": {

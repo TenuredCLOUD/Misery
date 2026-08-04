@@ -21,9 +21,6 @@ params ["_modifier", ["_status", "notFound"]];
 _status = toLower _status;
 
 switch (_status) do {
-    case "cartridge": {
-        EGVAR(gasmask,modifiers) = EGVAR(gasmask,modifiers) + _modifier;
-    };
     case "energy": {
         EGVAR(survival,energyModifiers) = EGVAR(survival,energyModifiers) + _modifier;
     };

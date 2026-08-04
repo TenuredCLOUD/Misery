@@ -8,6 +8,15 @@ class CfgMagazines {
         count = 0;
     };
 
+    class CLASS(gasCartridge): CLASS(FakeMagazine) {
+        count = 100;
+        descriptionShort = CSTRING(GasCartridge_Description);
+        displayName = CSTRING(GasCartridge_DisplayName);
+        mass = 20;
+        picture = QPATHTOF(data\icons\maskcartridges.paa);
+        scope = 2;
+    };
+
     class CLASS(pureTablets): CLASS(FakeMagazine) {
         CLASSACE(disableRepacking) = 1;
         count = 10;
