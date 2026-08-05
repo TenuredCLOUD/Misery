@@ -39,7 +39,7 @@ QUOTE(WBK_SpecialZombie_Smasher_Acid_1)
 #define MACRO_PSYCHOSIS_HEARTFLUTTER \
 QCLASSACE(heartbeat_fast_1), \
 QCLASSACE(heartbeat_fast_2), \
-QCLASSACE(heartbeat_fast_3
+QCLASSACE(heartbeat_fast_3)
 
 #define MACRO_PSYCHOSIS_BREATH \
 QACEGVAR(advanced_fatigue,breathMax0), \
