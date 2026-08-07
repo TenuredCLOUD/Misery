@@ -47,7 +47,7 @@ switch (true) do {
     };
 };
 
-ACE_player playAction "Gear";
+[ACE_player, "Gear"] call ACEFUNC(common,doAnimation);
 
 [localize LSTRING(Start),
 15,
@@ -56,7 +56,7 @@ ACE_player playAction "Gear";
     params ["_args"];
     _args params ["_animal", "_audioSource"];
 
-    ACE_player playAction "";
+    [ACE_player, "", 1] call ACEFUNC(common,doAnimation);
 
     if !(isNull _audioSource) then {
         deleteVehicle _audioSource;
@@ -74,7 +74,7 @@ ACE_player playAction "Gear";
     params ["_args"];
     _args params ["_animal", "_audioSource"];
 
-    ACE_player playAction "";
+    [ACE_player, "", 1] call ACEFUNC(common,doAnimation);
 
     if !(isNull _audioSource) then {
         deleteVehicle _audioSource;

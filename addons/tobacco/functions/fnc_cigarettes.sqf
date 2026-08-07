@@ -30,16 +30,16 @@ if !([[QCLASS(matchBox), QCLASS(lighter)]] call EFUNC(common,hasItem)) exitWith 
         [-0.1, "psychosis"] call EFUNC(common,addStatusModifier);
     };
 
-    ACE_player playGesture QEGVAR(animations,cigarreteIn);
+    [ACE_player, QEGVAR(animations,cigarreteIn)] call ACEFUNC(common,doGesture);
 
     if ([[QCLASS(matchBox)]] call EFUNC(common,hasItem)) exitWith {
         [QCLASS(matchBox)] call EFUNC(common,itemDecrement);
         playSound QCLASS(audio_sound_matchSmoking);
         [{
-            ACE_player playGesture QEGVAR(animations,cigarreteLoop);
+            [ACE_player, QEGVAR(animations,cigarreteLoop)] call ACEFUNC(common,doGesture);
         }, [], 2] call CBA_fnc_waitAndExecute;
         [{
-            ACE_player playGesture QEGVAR(animations,cigarreteOut);
+            [ACE_player, QEGVAR(animations,cigarreteOut)] call ACEFUNC(common,doGesture);
         }, [], 15] call CBA_fnc_waitAndExecute;
     };
 
@@ -47,10 +47,10 @@ if !([[QCLASS(matchBox), QCLASS(lighter)]] call EFUNC(common,hasItem)) exitWith 
         [QCLASS(lighter)] call EFUNC(common,itemDecrement);
         playSound QCLASS(audio_sound_lighterSmoking);
         [{
-            ACE_player playGesture QEGVAR(animations,cigarreteLoop);
+            [ACE_player, QEGVAR(animations,cigarreteLoop)] call ACEFUNC(common,doGesture);
         }, [], 2] call CBA_fnc_waitAndExecute;
         [{
-            ACE_player playGesture QEGVAR(animations,cigarreteOut);
+            [ACE_player, QEGVAR(animations,cigarreteOut)] call ACEFUNC(common,doGesture);
         }, [], 15] call CBA_fnc_waitAndExecute;
     };
 }, [], 10] call CBA_fnc_waitUntilAndExecute;

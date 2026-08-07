@@ -42,7 +42,7 @@ if (_forgeFuel isEqualTo 0) exitWith {
 
 [982388, [1010], true] call EFUNC(common,displayShowControls);
 
-ACE_player playAction "Gear";
+[ACE_player, "Gear"] call ACEFUNC(common,doAnimation);
 
 private _outputDisplayName = getText (configFile >> "CfgWeapons" >> _outputItem >> "displayName");
 if (_outputDisplayName isEqualTo "") then {

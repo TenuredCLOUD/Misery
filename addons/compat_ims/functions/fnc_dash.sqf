@@ -26,11 +26,11 @@
             [_handle] call CBA_fnc_removePerFrameHandler;
             [QUOTE(COMPONENT_BEAUTIFIED), "Dash Compat cycle terminated."] call EFUNC(common,debugMessage);
             if (animationState ACE_player isEqualTo "am_kulak_sprintf") then {
-                ACE_player playMoveNow "am_kulak_idle";
+                [ACE_player, "am_kulak_idle"] call ACEFUNC(common,doAnimation);
             };
             {
                 if ((animationState ACE_player isEqualTo _x) && _x isNotEqualTo "am_kulak_sprintf") then {
-                    ACE_player playMoveNow "melee_armed_idle";
+                    [ACE_player, "melee_armed_idle"] call ACEFUNC(common,doAnimation);
                 };
             } forEach [MACRO_ANIMATION_IMS_SPRINT];
             [] call FUNC(dash);

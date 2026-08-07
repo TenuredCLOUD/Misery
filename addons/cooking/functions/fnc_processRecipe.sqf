@@ -48,7 +48,7 @@ private _progressBar = _dialog displayCtrl 1010;
 [982379, [1600, 1601, 1602], false] call EFUNC(common,displayShowControls);
 [982379, [1010], true] call EFUNC(common,displayShowControls);
 
-ACE_player playAction "Gear";
+[ACE_player, "Gear"] call ACEFUNC(common,doAnimation);
 
 private _soundSource = objNull;
 if (_audio isNotEqualTo "") then {

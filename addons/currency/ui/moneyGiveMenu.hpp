@@ -1,7 +1,6 @@
 class CLASS(moneyGive_ui) {
     idd = 358493;
     onLoad = QUOTE([358493] call EFUNC(common,menuBlurEffect));
-    onUnload = QUOTE(player playAction '');
 
     class ControlsBackground {
         class CLASS(moneyGiveMenu_background): CLASS(RscText) {

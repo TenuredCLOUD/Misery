@@ -26,7 +26,7 @@ if (_hunger < 0.5) then {
     if ([1] call EFUNC(common,rollChance)) then {
         [ACE_player, "moan", 0] call ACEFUNC(medical_feedback,playInjuredSound);
         if (currentWeapon ACE_player isEqualTo "") then {
-            ACE_player playGesture QEGVAR(animations,hungry);
+            [ACE_player, QEGVAR(animations,hungry)] call ACEFUNC(common,doGesture);
         };
         _feedBackCompleted = true;
     };
@@ -43,7 +43,7 @@ if (_thirst < 0.5 && !_feedBackCompleted) then {
             QACEGVAR(advanced_fatigue,breathLow5)
         ];
         if (currentWeapon ACE_player isEqualTo "") then {
-            ACE_player playGesture QEGVAR(animations,thirsty);
+            [ACE_player, QEGVAR(animations,thirsty)] call ACEFUNC(common,doGesture);
         };
         _feedBackCompleted = true;
     };

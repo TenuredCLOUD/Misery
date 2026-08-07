@@ -26,7 +26,7 @@ if (isNil {_corpse getVariable QGVAR(processingSkin)}) then {
     _corpse setVariable [QGVAR(processingSkin), true, true];
 };
 
-ACE_player playAction "Gear";
+[ACE_player, "Gear"] call ACEFUNC(common,doAnimation);
 
 [localize LSTRING(StartSkinning),
 15,
@@ -35,7 +35,7 @@ ACE_player playAction "Gear";
     params ["_args"];
     _args params ["_corpse", "_audioSource"];
 
-    ACE_player playAction "";
+    [ACE_player, "", 1] call ACEFUNC(common,doAnimation);
 
     if !(isNull _audioSource) then {
         deleteVehicle _audioSource;
@@ -56,7 +56,7 @@ ACE_player playAction "Gear";
     params ["_args"];
     _args params ["_corpse", "_audioSource"];
 
-    ACE_player playAction "";
+    [ACE_player, "", 1] call ACEFUNC(common,doAnimation);
 
     if !(isNull _audioSource) then {
         deleteVehicle _audioSource;

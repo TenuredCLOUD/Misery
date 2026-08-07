@@ -17,7 +17,7 @@
         GVAR(currentActionProp) = ITEM_CLASS createVehicleLocal (getPos player); \
         GVAR(currentActionProp) attachTo [player, _offset, "LeftHand", true]; \
         GVAR(currentActionProp) setVectorDirAndUp _vectors; \
-        player playAction _anim; \
+        [ACE_player, _anim, 2] call ACEFUNC(common,doAnimation); \
         [{ \
             if (!isNull GVAR(currentActionProp)) then { \
                 deleteVehicle GVAR(currentActionProp); \
@@ -25,7 +25,7 @@
             }; \
         }, [], _time] call CBA_fnc_waitAndExecute; \
     } else { \
-        player playAction _anim; \
+        [ACE_player, _anim, 2] call ACEFUNC(common,doAnimation); \
     };
 
 #ifdef DEBUG_ENABLED_ANIMATIONS
