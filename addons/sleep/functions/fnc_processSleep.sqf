@@ -32,7 +32,7 @@ if (_energyDeficit < 0.15) exitWith {
 };
 
 if (animationState ACE_player isNotEqualTo "amovpsitmstpsnonwnondnon_ground") then {
-    ACE_player playActionNow "SitDown";
+    [ACE_player, "SitDown"] call ACEFUNC(common,doAnimation);
 };
 
 ACE_player setVariable [QGVAR(isSleeping), true];

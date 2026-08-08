@@ -69,9 +69,9 @@ if (_sound isNotEqualTo "") then {
 
 if (_animation isNotEqualTo "") then {
     if (isClass (configFile >> "CfgMovesMaleSdr" >> "States" >> _animation)) then {
-        ACE_player switchMove _animation;
+        [ACE_player, _animation] call ACEFUNC(common,doAnimation);
     } else {
-        ACE_player switchGesture _animation;
+        [ACE_player, _animation] call ACEFUNC(common,doGesture);
     };
 };
 

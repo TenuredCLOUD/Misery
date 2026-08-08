@@ -29,9 +29,9 @@ if (_index isNotEqualTo -1) then {
 
     if (_patient isEqualTo _medic) then {
         if (isClass (configFile >> "CfgMovesMaleSdr" >> "States" >> _animation)) then {
-            _patient switchMove _animation;
+            [_patient, _animation, 2] call ACEFUNC(common,doAnimation);
         } else {
-            _patient switchGesture _animation;
+            [_patient, _animation, 2] call ACEFUNC(common,doGesture);
         };
     };
 };

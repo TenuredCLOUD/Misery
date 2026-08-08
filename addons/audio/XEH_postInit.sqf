@@ -20,22 +20,30 @@ if (hasInterface) then {
         // Inventory Sounds
         ACE_player addEventHandler ["InventoryClosed", {
             if (backpack ACE_player isNotEqualTo "") then {
-                playSound QCLASS(audio_sound_inventoryClose);
+                [ACE_player, objNull] call ACEFUNC(backpacks,backpackOpened);
+            } else {
+                playSound selectRandom [
+                    QACEGVAR(wardrobe,fabric_06),
+                    QACEGVAR(wardrobe,fabric_07),
+                    QACEGVAR(wardrobe,fabric_16),
+                    QACEGVAR(wardrobe,fabric_20),
+                    QACEGVAR(wardrobe,fabric_25)
+                ];
             };
         }];
 
         ACE_player addEventHandler ["InventoryOpened", {
             if (backpack ACE_player isNotEqualTo "") then {
-                playSound QCLASS(audio_sound_inventoryOpen);
+                [ACE_player, objNull] call ACEFUNC(backpacks,backpackOpened);
+            } else {
+                playSound selectRandom [
+                    QACEGVAR(wardrobe,fabric_06),
+                    QACEGVAR(wardrobe,fabric_07),
+                    QACEGVAR(wardrobe,fabric_16),
+                    QACEGVAR(wardrobe,fabric_20),
+                    QACEGVAR(wardrobe,fabric_25)
+                ];
             };
-        }];
-
-        ACE_player addEventHandler ["Take", {
-            playSound QCLASS(audio_sound_pickup);
-        }];
-
-        ACE_player addEventHandler ["Put", {
-            playSound QCLASS(audio_sound_drop02);
         }];
     };
 };

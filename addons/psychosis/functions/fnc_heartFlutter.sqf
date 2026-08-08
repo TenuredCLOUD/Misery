@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Audible heart beat & increase in BP due to psychosis state
+ * Audible heart beat
  *
  * Arguments:
  * None
