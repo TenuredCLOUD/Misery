@@ -44,4 +44,17 @@ private _totals = _unit call FUNC(backpack);
     };
 } forEach _allGear;
 
+if (EGVAR(gasmask,enhanced)) then {
+    private _scba = _totals select 1;
+
+    if (_scba < 1) then {
+
+        private _hasCartridge = [[QCLASS(gasCartridge)]] call EFUNC(common,hasItem);
+
+        if (!_hasCartridge) then {
+            _totals set [3, 0];
+        };
+    };
+};
+
 _totals

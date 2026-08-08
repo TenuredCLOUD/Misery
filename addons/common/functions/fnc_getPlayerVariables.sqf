@@ -23,7 +23,6 @@
  *     12: Ailments <ARRAY>
  *     13: Currency <NUMBER>
  *     14: Banked Currency <NUMBER>
- *     18: Cartridge Efficiency <NUMBER>
  *
  * Example:
  * [] call misery_common_fnc_getPlayerVariables
@@ -56,11 +55,8 @@ private _ailments = ACE_player getVariable [QEGVAR(vitals,ailments), []];
 private _funds = ACE_player getVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
 private _bankedFunds = ACE_player getVariable [QEGVAR(currency,bankedFunds), MACRO_PLAYER_DEFAULTS_LOW];
 
-// Gas Mask
-private _cartridgeEfficiency = ACE_player getVariable [QEGVAR(gasmask,cartridgeEfficiency), MACRO_PLAYER_DEFAULTS_HIGH];
-
 // Power / simulated battery life
 private _chemicalDetectorPower = ACE_player getVariable [QEGVAR(chemical,detectorPower), MACRO_PLAYER_DEFAULTS_HIGH];
 private _spectrumDevicePower = ACE_player getVariable [QEGVAR(spectrum,detectorPower), MACRO_PLAYER_DEFAULTS_HIGH];
 
-[_hunger, _thirst, _energyDeficit, _thermalIndex, _exposure, _wetness, _radiation, _infection, _parasites, _toxicity, _psychosis, _buffs, _ailments, _funds, _bankedFunds, _cartridgeEfficiency, _chemicalDetectorPower, _spectrumDevicePower]
+[_hunger, _thirst, _energyDeficit, _thermalIndex, _exposure, _wetness, _radiation, _infection, _parasites, _toxicity, _psychosis, _buffs, _ailments, _funds, _bankedFunds, _chemicalDetectorPower, _spectrumDevicePower]

@@ -2649,38 +2649,6 @@
             <Chinesesimp>防毒面具滤毒罐</Chinesesimp>
             <Turkish>Gaz Maskesi kartuşları</Turkish>
         </Key>
-        <Key ID="STR_Misery_Assets_GasMaskEmpty_Description">
-            <English>Gasmask that doesn't have cartridges, useless</English>
-            <Czech>Plynová maska bez filtračních patron, k ničemu</Czech>
-            <French>Masque à gaz sans cartouches, inutile</French>
-            <Spanish>Máscara de gas que no tiene cartuchos, inútil</Spanish>
-            <Italian>Maschera antigas senza cartucce, inutile</Italian>
-            <Polish>Maska przeciwgazowa bez nabojów, bezużyteczna</Polish>
-            <Portuguese>Máscara de gás sem cartuchos, inútil</Portuguese>
-            <Russian>Противогаз без патронов, бесполезный</Russian>
-            <German>Gasmaske, die keine Patronen hat, nutzlos</German>
-            <Korean>카트리지가 없는 방독면, 쓸모없음</Korean>
-            <Japanese>カートリッジがないガスマスク、役に立たない</Japanese>
-            <Chinese>沒有濾毒罐的防毒面具，沒用</Chinese>
-            <Chinesesimp>没有滤毒罐的防毒面具，没用</Chinesesimp>
-            <Turkish>Kartuşu olmayan Gaz Maskesi, işe yaramaz</Turkish>
-        </Key>
-        <Key ID="STR_Misery_Assets_GasMaskEmpty_DisplayName">
-            <English>Gasmask (no cartridges)</English>
-            <Czech>Plynová maska (bez filtračních patron)</Czech>
-            <French>Masque à gaz (pas de cartouches)</French>
-            <Spanish>Máscara de gas (sin cartuchos)</Spanish>
-            <Italian>Maschera antigas (no cartucce)</Italian>
-            <Polish>Maska przeciwgazowa (bez naboi)</Polish>
-            <Portuguese>Máscara de gás (sem cartuchos)</Portuguese>
-            <Russian>Противогаз (без патронов)</Russian>
-            <German>Gasmaske (keine Patronen)</German>
-            <Korean>방독면 (카트리지 없음)</Korean>
-            <Japanese>ガスマスク（カートリッジなし）</Japanese>
-            <Chinese>防毒面具 (無濾毒罐)</Chinese>
-            <Chinesesimp>防毒面具 (无滤毒罐)</Chinesesimp>
-            <Turkish>Gaz Maskesi (kartuş yok)</Turkish>
-        </Key>
         <Key ID="STR_Misery_Assets_GeigerDead_Description">
             <English>Dead Geiger counter, went through too many rads and burned out, completely useless.&lt;br/&gt; - Random Junk</English>
             <Czech>Mrtvý Geigerův počítač, prošel příliš velkou radiací a vyhořel, zcela k ničemu.&lt;br/&gt; - Náhodný odpad</Czech>

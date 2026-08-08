@@ -34,7 +34,7 @@ disableSerialization;
     private _tempBar = _vitalsDisplay displayCtrl 2000;
     private _tempIndicator = _vitalsDisplay displayCtrl 2001;
 
-    call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "", "_exposure", "_wetness", "_radiation", "_infection", "_parasites", "_toxicity", "_psychosis", "_buffs", "_ailments", "_funds", "", "_cartridgeEfficiency"];
+    call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "_energyDeficit", "", "_exposure", "_wetness", "_radiation", "_infection", "_parasites", "_toxicity", "_psychosis", "_buffs", "_ailments", "_funds"];
     [ACE_player] call EFUNC(protection,totalProtection) params ["_gasMask", "_scba", "_skinProtection", "_respiratoryProtection", "_eyeProtection", "_hearingProtection"];
 
     lbClear _buffsList;
@@ -97,6 +97,7 @@ disableSerialization;
         switch (_gearCase) do {
             case "GasMask": {
                     [982377, [1016, 1017], true] call EFUNC(common,displayShowControls);
+                    private _cartridgeEfficiency = call EFUNC(gasmask,checkCartridges);
                     private _cartridgeTipValue  = [_cartridgeEfficiency] call FUNC(valueToPercent);
                     _gasMaskBar ctrlSetTooltip format [localize LSTRING(MaskEfficiency), _cartridgeTipValue];
                     _gasMaskBar progressSetPosition _cartridgeEfficiency;

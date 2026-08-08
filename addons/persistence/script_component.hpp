@@ -27,7 +27,6 @@
     QEGVAR(vitals,debuffs), \
     QEGVAR(currency,funds), \
     QEGVAR(currency,bankedFunds), \
-    QEGVAR(gasmask,cartridgeEfficiency), \
     QEGVAR(chemical,detectorPower), \
     QEGVAR(spectrum,detectorPower)
 
