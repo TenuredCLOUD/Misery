@@ -1,6 +1,7 @@
 PREP(ailmentDecay);
 PREP(decayHealth);
 PREP(feedback);
+PREP(getMetabolicCosts);
 PREP(handleAilments);
 PREP(handleEnergy);
 PREP(handleHunger);

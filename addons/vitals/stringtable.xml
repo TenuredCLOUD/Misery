@@ -33,6 +33,54 @@
             <Chinesesimp>正面增益:</Chinesesimp>
             <Turkish>Destekler:</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Vitals_Chilled">
+            <English>Chilled</English>
+            <Czech>Chladno</Czech>
+            <French>Refroidi</French>
+            <Spanish>Fresco</Spanish>
+            <Italian>Infreddato</Italian>
+            <Polish>Ochłodzenie</Polish>
+            <Portuguese>Gelado</Portuguese>
+            <Russian>Охлаждение</Russian>
+            <German>Unterkühlt</German>
+            <Korean>쌀쌀함</Korean>
+            <Japanese>冷え</Japanese>
+            <Chinese>微寒</Chinese>
+            <Chinesesimp>微寒</Chinesesimp>
+            <Turkish>Üşümüş</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Vitals_Cold">
+            <English>Cold</English>
+            <Czech>Chladno</Czech>
+            <French>Froid</French>
+            <Spanish>Frío</Spanish>
+            <Italian>Freddo</Italian>
+            <Polish>Zimno</Polish>
+            <Portuguese>Frio</Portuguese>
+            <Russian>Холодно</Russian>
+            <German>Kalt</German>
+            <Korean>추움</Korean>
+            <Japanese>寒い</Japanese>
+            <Chinese>寒冷</Chinese>
+            <Chinesesimp>寒冷</Chinesesimp>
+            <Turkish>Soğuk</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Vitals_Exhaustion">
+            <English>Exhaustion: %1%%</English>
+            <Czech>Vyčerpání: %1%%</Czech>
+            <French>Épuisement : %1%%</French>
+            <Spanish>Agotamiento: %1%%</Spanish>
+            <Italian>Esaurimento: %1%%</Italian>
+            <Polish>Wyczerpanie: %1%%</Polish>
+            <Portuguese>Exaustão: %1%%</Portuguese>
+            <Russian>Истощение: %1%%</Russian>
+            <German>Erschöpfung: %1%%</German>
+            <Korean>피로도: %1%%</Korean>
+            <Japanese>疲労度: %1%%</Japanese>
+            <Chinese>力竭度：%1%%</Chinese>
+            <Chinesesimp>力竭度：%1%%</Chinesesimp>
+            <Turkish>Bitkinlik: %%%1</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Vitals_Fatigue">
             <English>Fatigue:</English>
             <Czech>Únava:</Czech>
@@ -48,6 +96,22 @@
             <Chinese>疲勞值:</Chinese>
             <Chinesesimp>疲劳值:</Chinesesimp>
             <Turkish>Yorgunluk:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Vitals_Freezing">
+            <English>Freezing</English>
+            <Czech>Mrazivě</Czech>
+            <French>Gacial</French>
+            <Spanish>Congelación</Spanish>
+            <Italian>Gelido</Italian>
+            <Polish>Zamarzanie</Polish>
+            <Portuguese>Congelando</Portuguese>
+            <Russian>Замерзание</Russian>
+            <German>Gefrierend</German>
+            <Korean>얼어붙음</Korean>
+            <Japanese>凍結</Japanese>
+            <Chinese>嚴寒</Chinese>
+            <Chinesesimp>严寒</Chinesesimp>
+            <Turkish>Dondurucu</Turkish>
         </Key>
         <Key ID="STR_MISERY_Vitals_GasMask">
             <English>Gas Mask:</English>
@@ -65,6 +129,22 @@
             <Chinesesimp>防毒面具状态:</Chinesesimp>
             <Turkish>Gaz Maskesi:</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Vitals_Hot">
+            <English>Hot</English>
+            <Czech>Horko</Czech>
+            <French>Chaud</French>
+            <Spanish>Caluroso</Spanish>
+            <Italian>Molto caldo</Italian>
+            <Polish>Gorąco</Polish>
+            <Portuguese>Quente</Portuguese>
+            <Russian>Жарко</Russian>
+            <German>Heiß</German>
+            <Korean>더움</Korean>
+            <Japanese>暑い</Japanese>
+            <Chinese>炎熱</Chinese>
+            <Chinesesimp>炎热</Chinesesimp>
+            <Turkish>Sıcak</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Vitals_Hunger">
             <English>Hunger:</English>
             <Czech>Hlad:</Czech>
@@ -81,6 +161,118 @@
             <Chinesesimp>饥饿值:</Chinesesimp>
             <Turkish>Açlık:</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Vitals_Hydration">
+            <English>Hydration: %1 L / 3.0 L</English>
+            <Czech>Hydratace: %1 L / 3.0 L</Czech>
+            <French>Hydratation : %1 L / 3.0 L</French>
+            <Spanish>Hidratación: %1 L / 3.0 L</Spanish>
+            <Italian>Idratazione: %1 L / 3.0 L</Italian>
+            <Polish>Nawodnienie: %1 L / 3.0 L</Polish>
+            <Portuguese>Hidratação: %1 L / 3.0 L</Portuguese>
+            <Russian>Гидратация: %1 L / 3.0 L</Russian>
+            <German>Hydratisierung: %1 L / 3.0 L</German>
+            <Korean>수분: %1 L / 3.0 L</Korean>
+            <Japanese>水分補給度: %1 L / 3.0 L</Japanese>
+            <Chinese>保水度：%1 L / 3.0 L</Chinese>
+            <Chinesesimp>保湿度：%1 L / 3.0 L</Chinesesimp>
+            <Turkish>Hidrasyon: %1 L / 3.0 L</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Vitals_HyperthermiaRisk">
+            <English>Hyperthermia Risk</English>
+            <Czech>Riziko přehřátí</Czech>
+            <French>Risque d'hyperthermie</French>
+            <Spanish>Riesgo de hipertermia</Spanish>
+            <Italian>Rischio ipertermia</Italian>
+            <Polish>Ryzyko hipertermii</Polish>
+            <Portuguese>Risco de hipertermia</Portuguese>
+            <Russian>Риск гипертермии</Russian>
+            <German>Überhitzungsrisiko</German>
+            <Korean>고체온증 위험</Korean>
+            <Japanese>高熱病・うつ熱の危険</Japanese>
+            <Chinese>過熱風險</Chinese>
+            <Chinesesimp>过热风险</Chinesesimp>
+            <Turkish>Hipertermi Riski</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Vitals_HypothermiaRisk">
+            <English>Hypothermia Risk</English>
+            <Czech>Riziko podchlazení</Czech>
+            <French>Risque d'hypothermie</French>
+            <Spanish>Riesgo de hipotermia</Spanish>
+            <Italian>Rischio ipotermia</Italian>
+            <Polish>Ryzyko hipotermii</Polish>
+            <Portuguese>Risco de hipotermia</Portuguese>
+            <Russian>Риск гипотермии</Russian>
+            <German>Unterkühlungsrisiko</German>
+            <Korean>저체온증 위험</Korean>
+            <Japanese>低体温症の危険</Japanese>
+            <Chinese>失溫風險</Chinese>
+            <Chinesesimp>失温风险</Chinesesimp>
+            <Turkish>Hipotermi Riski</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Vitals_MaskEfficiency">
+            <English>Efficiency: %1%%</English>
+            <Czech>Efektivita: %1%%</Czech>
+            <French>Efficacité : %1%%</French>
+            <Spanish>Eficiencia: %1%%</Spanish>
+            <Italian>Efficienza: %1%%</Italian>
+            <Polish>Wydajność: %1%%</Polish>
+            <Portuguese>Eficiência: %1%%</Portuguese>
+            <Russian>Эффективность: %1%%</Russian>
+            <German>Effizienz: %1%%</German>
+            <Korean>효율: %1%%</Korean>
+            <Japanese>効率: %1%%</Japanese>
+            <Chinese>效率：%1%%</Chinese>
+            <Chinesesimp>效率：%1%%</Chinesesimp>
+            <Turkish>Verimlilik: %%%1</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Vitals_Overheating">
+            <English>Overheating</English>
+            <Czech>Přehřátí</Czech>
+            <French>Surchauffe</French>
+            <Spanish>Sobrecalentamiento</Spanish>
+            <Italian>Surriscaldamento</Italian>
+            <Polish>Przegrzanie</Polish>
+            <Portuguese>Superaquecimento</Portuguese>
+            <Russian>Перегрев</Russian>
+            <German>Überhitzung</German>
+            <Korean>과열</Korean>
+            <Japanese>オーバーヒート</Japanese>
+            <Chinese>過熱</Chinese>
+            <Chinesesimp>过热</Chinesesimp>
+            <Turkish>Aşırı Isınma</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Vitals_Satiety">
+            <English>Satiety: %1 / 3000 kcal</English>
+            <Czech>Sytost: %1 / 3000 kcal</Czech>
+            <French>Satiété : %1 / 3000 kcal</French>
+            <Spanish>Saciedad: %1 / 3000 kcal</Spanish>
+            <Italian>Sazietà: %1 / 3000 kcal</Italian>
+            <Polish>Sytość: %1 / 3000 kcal</Polish>
+            <Portuguese>Saciedade: %1 / 3000 kcal</Portuguese>
+            <Russian>Сытость: %1 / 3000 ккал</Russian>
+            <German>Sättigung: %1 / 3000 kcal</German>
+            <Korean>포만감: %1 / 3000 kcal</Korean>
+            <Japanese>満腹度: %1 / 3000 kcal</Japanese>
+            <Chinese>飽足度：%1 / 3000 kcal</Chinese>
+            <Chinesesimp>饱足度：%1 / 3000 kcal</Chinesesimp>
+            <Turkish>Doygunluk: %1 / 3000 kcal</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Vitals_Temperate">
+            <English>Temperate</English>
+            <Czech>Mírný</Czech>
+            <French>Tempéré</French>
+            <Spanish>Templado</Spanish>
+            <Italian>Temperato</Italian>
+            <Polish>Umiarkowanie</Polish>
+            <Portuguese>Temperado</Portuguese>
+            <Russian>Умерено</Russian>
+            <German>Mäßig</German>
+            <Korean>적정</Korean>
+            <Japanese>適温</Japanese>
+            <Chinese>適中</Chinese>
+            <Chinesesimp>适中</Chinesesimp>
+            <Turkish>Ilıman</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Vitals_Thirst">
             <English>Thirst:</English>
             <Czech>Žízeň:</Czech>
@@ -96,6 +288,38 @@
             <Chinese>口渴值:</Chinese>
             <Chinesesimp>口渴值:</Chinesesimp>
             <Turkish>Susuzluk:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Vitals_Warm">
+            <English>Warm</English>
+            <Czech>Teplo</Czech>
+            <French>Chaud</French>
+            <Spanish>Cálido</Spanish>
+            <Italian>Caldo</Italian>
+            <Polish>Ciepło</Polish>
+            <Portuguese>Aquecido</Portuguese>
+            <Russian>Тепло</Russian>
+            <German>Warm</German>
+            <Korean>따뜻함</Korean>
+            <Japanese>暖かい</Japanese>
+            <Chinese>溫暖</Chinese>
+            <Chinesesimp>温暖</Chinesesimp>
+            <Turkish>Sıcak</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Vitals_WaterSaturation">
+            <English>Water Saturation: %1%%</English>
+            <Czech>Nasycení vodou: %1%%</Czech>
+            <French>Saturation en eau : %1%%</French>
+            <Spanish>Saturación de agua: %1%%</Spanish>
+            <Italian>Saturazione d'acqua: %1%%</Italian>
+            <Polish>Nasycenie wodą: %1%%</Polish>
+            <Portuguese>Saturação de água: %1%%</Portuguese>
+            <Russian>Насыщение водой: %1%%</Russian>
+            <German>Wassersättigung: %1%%</German>
+            <Korean>수분 포화도: %1%%</Korean>
+            <Japanese>浸水度: %1%%</Japanese>
+            <Chinese>含水量：%1%%</Chinese>
+            <Chinesesimp>含水量：%1%%</Chinesesimp>
+            <Turkish>Su Doygunluğu: %%%1</Turkish>
         </Key>
         <Key ID="STR_MISERY_Vitals_Wetness">
             <English>Wetness:</English>
