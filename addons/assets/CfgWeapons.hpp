@@ -1159,18 +1159,6 @@ class CfgWeapons {
         };
     };
 
-    class CLASS(eru_NoBattery): CLASS(ItemCore) {
-        displayName = CSTRING(ERUNoBattery_DisplayName);
-        descriptionShort = CSTRING(RequiresLithiumBattery_Description);
-        picture = QPATHTOF(data\icons\ERU_OFF.paa);
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 7;
-        };
-    };
-
     class CLASS(jetFuelEmpty): CLASS(ItemCore) {
         displayName = CSTRING(JetFuelEmpty_DisplayName);
         descriptionShort = CSTRING(JetFuelEmpty_Description);

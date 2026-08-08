@@ -48,7 +48,6 @@
     QCLASS(emerald), \
     QCLASS(emptyToolKit), \
     QCLASS(energyDrink), \
-    QCLASS(eru_NoBattery), \
     QCLASS(firewood), \
     QCLASS(fishhook), \
     QCLASS(fishingPole), \

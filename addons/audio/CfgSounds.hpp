@@ -72,11 +72,6 @@ class CfgSounds {
     // EAS
     MACRO_SOUNDS(easPhantoms,eas);
 
-    // ERU
-    MACRO_SOUNDS(chirpBeep,eru);
-    MACRO_SOUNDS(powerDownBeep,eru);
-    MACRO_SOUNDS(powerUpBeep,eru);
-
     // Fire
     MACRO_SOUNDS(fireBig,fire);
 
