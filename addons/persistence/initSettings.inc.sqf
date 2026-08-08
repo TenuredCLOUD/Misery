@@ -58,9 +58,9 @@ private _category = format ["Misery %1", localize LSTRING(Component)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(gradAdminActions),
+    QGVAR(gradActions),
     "CHECKBOX",
-    [LSTRING(GradAdmin), LSTRING(GradAdminDesc)],
+    [LSTRING(GradActions), LSTRING(GradActionsDesc)],
     _category,
     false,
     1
