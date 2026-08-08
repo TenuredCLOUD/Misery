@@ -210,26 +210,6 @@ class CfgMagazines {
         scope = 2;
     };
 
-    class CLASS(eru_On): CLASS(FakeMagazine) {
-        CLASSACE(disableRepacking) = 1;
-        count = 100;
-        descriptionShort = CSTRING(ERU_Description);
-        displayName = CSTRING(ERU_DisplayName);
-        mass = 7;
-        picture = QPATHTOF(data\icons\eru_on.paa);
-        scope = 2;
-    };
-
-    class CLASS(eru_Off): CLASS(FakeMagazine) {
-        CLASSACE(disableRepacking) = 1;
-        count = 100;
-        descriptionShort = CSTRING(ERU_Description);
-        displayName = CSTRING(ERUOff_DisplayName);
-        mass = 7;
-        picture = QPATHTOF(data\icons\eru_off.paa);
-        scope = 2;
-    };
-
     class CLASS(lantern_On): CLASS(FakeMagazine) {
         CLASSACE(disableRepacking) = 1;
         count = 100;

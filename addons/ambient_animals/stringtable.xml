@@ -113,6 +113,38 @@
             <Chinesesimp>远离玩家后动物被删除的最小距离</Chinesesimp>
             <Turkish>Hayvanların silineceği bir oyuncuya olan minimum mesafe</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Ambient_Animals_DisableVanillaWildlife">
+            <English>Disable vanilla ambient wildlife</English>
+            <Czech>Zakázat původní okolní faunu</Czech>
+            <French>Désactiver la faune ambiante vanilla</French>
+            <Spanish>Desactivar fauna ambiental de vanilla</Spanish>
+            <Italian>Disattiva fauna selvatica ambientale vanilla</Italian>
+            <Polish>Wyłącz waniliową faunę otoczenia</Polish>
+            <Portuguese>Desativar fauna ambiental nativa</Portuguese>
+            <Russian>Отключить стандартную дикую природу</Russian>
+            <German>Standard-Umgebungstiere deaktivieren</German>
+            <Korean>바닐라 주변 야생동물 비활성화</Korean>
+            <Japanese>バニラの環境野生動物を無効化</Japanese>
+            <Chinese>停用原版環境野生動物</Chinese>
+            <Chinesesimp>禁用原版环境野生动物</Chinesesimp>
+            <Turkish>Vanilya Ortam Yaban Hayatını Devre Dışı Bırak</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_Animals_DisableVanillaWildlifeDesc">
+            <English>When enabled, animals such as rabbits, snakes, and bugs are no longer automatically generated near the player. This setting makes animal sightings more rare. (Recommended for performance)</English>
+            <Czech>Při povolené možnosti se zvířata jako králíci, hadi a hmyz již nebudou automaticky generovat v blízkosti hráče. Toto nastavení činí pozorování zvířat vzácnějším. (Doporučeno pro výkon)</Czech>
+            <French>Lorsqu'elle est activée, les animaux tels que les lapins, les serpents et les insectes ne sont plus générés automatiquement à proximité du joueur. Ce paramètre rend la présence d'animaux plus rare. (Recommandé pour les performances)</French>
+            <Spanish>Cuando está activado, los animales como conejos, serpientes e insectos ya no se generan automáticamente cerca del jugador. Esta configuración hace que ver animales sea más raro. (Recomendado para mejorar el rendimiento)</Spanish>
+            <Italian>Se abilitato, animali come conigli, serpenti e insetti non verranno più generati automaticamente vicino al giocatore. Questa impostazione rende gli avvistamenti di animali più rari. (Consigliato per le prestazioni)</Italian>
+            <Polish>Po włączeniu zwierzęta takie jak króliki, węże i owady nie będą już automatycznie generowane w pobliżu gracza. To ustawienie sprawia, że spotkania ze zwierzętami są rzadsze. (Zalecane dla wydajności)</Polish>
+            <Portuguese>Quando ativado, animais como coelhos, cobras e insetos não serão mais gerados automaticamente perto do jogador. Esta configuração torna os avistamentos de animais mais raros. (Recomendado para desempenho)</Portuguese>
+            <Russian>Если включено, такие животные, как кролики, змеи и насекомые, больше не создаются автоматически рядом с игроком. Эта настройка делает встречу с животными более редкой. (Рекомендуется для производительности)</Russian>
+            <German>Wenn aktiviert, werden Tiere wie Kaninchen, Schlangen und Insekten nicht mehr automatisch in der Nähe des Spielers gespawnt. Diese Einstellung macht Tiersichtungen seltener. (Für bessere Performance empfohlen)</German>
+            <Korean>활성화하면 토끼, 뱀, 곤충과 같은 동물이 플레이어 근처에서 더 이상 자동으로 생성되지 않습니다. 이 설정은 동물을 마주칠 확률을 낮춥니다. (성능 향상을 위해 권장)</Korean>
+            <Japanese>有効にすると、ウサギ、ヘビ、昆虫などの動物がプレイヤーの近くに自動生成されなくなります。この設定により動物の遭遇頻度が低下します。（パフォーマンス向上のため推奨）</Japanese>
+            <Chinese>啟用後，兔子、蛇和昆蟲等動物將不再於玩家附近自動生成。此設定會降低野生動物的出現率。（建議開啟以提升效能）</Chinese>
+            <Chinesesimp>启用后，兔子、蛇和昆虫等动物将不再于玩家附近自动生成。此设置会降低野生动物的出现率。（建议开启以提升性能）</Chinesesimp>
+            <Turkish>Etkinleştirildiğinde tavşanlar, yılanlar ve böcekler gibi hayvanlar artık oyuncunun yakınında otomatik olarak oluşturulmaz. Bu ayar hayvanların görülmesini daha nadir hale getirir. (Performans için önerilir)</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Ambient_Animals_EnableWildlife">
             <English>Enable roaming ambient wildlife?</English>
             <Czech>Povolit toulání okolní zvěře?</Czech>

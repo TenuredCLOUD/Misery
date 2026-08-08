@@ -60,7 +60,7 @@ if (_currentWaterLevel < _waterAmount) exitWith {
 [982380, [1600, 1601, 1602], false] call EFUNC(common,displayShowControls);
 [982380, [1010], true] call EFUNC(common,displayShowControls);
 
-ACE_player playAction "Gear";
+[ACE_player, "Gear"] call ACEFUNC(common,doAnimation);
 
 if (_audio isNotEqualTo "") then {
     playSound3D [_audio, ACE_player, false, getPosASL ACE_player, 4, 1, 10];

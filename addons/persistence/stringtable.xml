@@ -97,37 +97,37 @@
             <Chinesesimp>启用存档</Chinesesimp>
             <Turkish>Kaydetmeyi Etkinleştir</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Persistence_GradAdmin">
-            <English>GRAD Persistence admin actions</English>
-            <Czech>Administrátorské akce GRAD persistence</Czech>
-            <French>Actions admin de persistance GRAD</French>
-            <Spanish>Acciones de admin de persistencia GRAD</Spanish>
-            <Italian>Azioni admin persistenza GRAD</Italian>
-            <Polish>Uprawnienia administratora persystencji GRAD</Polish>
-            <Portuguese>Ações de administrador de persistência GRAD</Portuguese>
-            <Russian>Админ-действия персистенции GRAD</Russian>
-            <German>GRAD-Persistenz Admin-Aktionen</German>
-            <Korean>GRAD 지지형 저장 관리자 기능</Korean>
-            <Japanese>GRAD 永続化管理者アクション</Japanese>
-            <Chinese>GRAD 存檔持久化管理員權限</Chinese>
-            <Chinesesimp>GRAD 存档持久化管理员权限</Chinesesimp>
-            <Turkish>GRAD Kalıcılığı yönetici eylemleri</Turkish>
+        <Key ID="STR_MISERY_Persistence_GradActions">
+            <English>GRAD Persistence actions</English>
+            <Czech>Akce GRAD Persistence</Czech>
+            <French>Actions GRAD Persistence</French>
+            <Spanish>Acciones de GRAD Persistence</Spanish>
+            <Italian>Azioni GRAD Persistence</Italian>
+            <Polish>Akcje GRAD Persistence</Polish>
+            <Portuguese>Ações do GRAD Persistence</Portuguese>
+            <Russian>Действия GRAD Persistence</Russian>
+            <German>GRAD Persistence Aktionen</German>
+            <Korean>GRAD Persistence 상호작용</Korean>
+            <Japanese>GRAD Persistence アクション</Japanese>
+            <Chinese>GRAD Persistence 操作選單</Chinese>
+            <Chinesesimp>GRAD Persistence 操作菜单</Chinesesimp>
+            <Turkish>GRAD Persistence Eylemleri</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Persistence_GradAdminDesc">
-            <English>Gives admin level players higher privilege actions for database control (Requires GRAD persistence)</English>
-            <Czech>Poskytuje hráčům na úrovni administrátora akce s vyššími privilegii pro správu databáze (Vyžaduje GRAD persistenci)</Czech>
-            <French>Donne aux administrateurs des actions à privilèges élevés pour le contrôle de la base de données (Nécessite la persistance GRAD)</French>
-            <Spanish>Otorga a los jugadores con nivel de administrador acciones de mayor privilegio para el control de la base de datos (Requiere persistencia GRAD)</Spanish>
-            <Italian>Fornisce ai giocatori di livello amministratore azioni con privilegi più elevati per il controllo del database (Richiede persistenza GRAD)</Italian>
-            <Polish>Daje graczom z uprawnieniami administratora dostęp do zaawansowanych akcji kontroli bazy danych (Wymaga persystencji GRAD)</Polish>
-            <Portuguese>Dá aos jogadores de nível administrador ações com privilégios mais elevados para controlo da base de dados (Requer persistência GRAD)</Portuguese>
-            <Russian>Предоставляет игрокам с правами администратора расширенные действия для управления базой данных (Требуется персистенция GRAD)</Russian>
-            <German>Gibt Spielern mit Admin-Rechten erweiterte Aktionen zur Datenbankkontrolle (Erfordert GRAD-Persistenz)</German>
-            <Korean>관리자 권한의 플레이어에게 데이터베이스 제어를 위한 상위 권한 기능을 부여합니다 (GRAD 지지형 저장 필요)</Korean>
-            <Japanese>管理者レベル의プレイヤーにデータベース管理のための上位権限アクションを付与します（GRAD永続化が必要です）</Japanese>
-            <Chinese>賦予管理員級別的玩家更高權限來控制與管理資料庫（需要 GRAD 存檔持久化功能）</Chinese>
-            <Chinesesimp>赋予管理员级别的玩家更高权限来控制与管理数据库（需要 GRAD 存档持久化功能）</Chinesesimp>
-            <Turkish>Yönetici seviyesindeki oyunculara veritabanı kontrolü için daha yüksek ayrıcalıklı eylemler sağlar (GRAD kalıcılığı gerektirir)</Turkish>
+        <Key ID="STR_MISERY_Persistence_GradActionsDesc">
+            <English>Gives player actions for GRAD (SP only, Requires GRAD persistence)</English>
+            <Czech>Poskytuje hráči akce pro GRAD (Pouze SP, vyžaduje GRAD persistence)</Czech>
+            <French>Donne au joueur des actions pour GRAD (SP uniquement, nécessite GRAD persistence)</French>
+            <Spanish>Otorga al jugador acciones para GRAD (Solo SP, requiere GRAD persistence)</Spanish>
+            <Italian>Fornisce al giocatore le azioni per GRAD (Solo SP, richiede GRAD persistence)</Italian>
+            <Polish>Daje graczowi akcje dla GRAD (Tylko SP, wymaga GRAD persistence)</Polish>
+            <Portuguese>Concede ao jogador ações do GRAD (Apenas SP, requer GRAD persistence)</Portuguese>
+            <Russian>Дает игроку действия для GRAD (Только для SP, требуется GRAD persistence)</Russian>
+            <German>Gibt dem Spieler Aktionen für GRAD (Nur SP, erfordert GRAD persistence)</German>
+            <Korean>플레이어에게 GRAD 상호작용 옵션을 부여합니다 (싱글플레이 전용, GRAD persistence 필요)</Korean>
+            <Japanese>プレイヤーに GRAD 用のアクションが付与されます（SP専用。GRAD persistence が必要です）</Japanese>
+            <Chinese>賦予玩家 GRAD 的相關操作選單（僅限單人模式，需要 GRAD persistence 支援）</Chinese>
+            <Chinesesimp>赋予玩家 GRAD 的相关操作菜单（仅限单人模式，需要 GRAD persistence 支持）</Chinesesimp>
+            <Turkish>Oyuncuya GRAD eylemleri verir (Yalnızca Tek Oyunculu, GRAD persistence gerektirir)</Turkish>
         </Key>
         <Key ID="STR_MISERY_Persistence_GradAutosave">
             <English>GRAD Persistence autosave interval</English>

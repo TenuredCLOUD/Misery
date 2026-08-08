@@ -529,22 +529,6 @@
             <Chinesesimp>从不</Chinesesimp>
             <Turkish>Asla</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Common_NoLithiumBatteries">
-            <English>You don't have any lithium batteries...</English>
-            <Czech>Nemáte žádné lithiové baterie...</Czech>
-            <French>Vous n'avez pas de piles au lithium...</French>
-            <Spanish>No tienes baterías de litio...</Spanish>
-            <Italian>Non hai batterie al litio...</Italian>
-            <Polish>Nie masz baterii litowych...</Polish>
-            <Portuguese>Você não tem baterias de lítio...</Portuguese>
-            <Russian>У вас нет литиевых батареек...</Russian>
-            <German>Du hast keine Lithium-Batterien...</German>
-            <Korean>리튬 배터리가 없습니다...</Korean>
-            <Japanese>リチウム電池を持っていません...</Japanese>
-            <Chinese>你沒有任何鋰電池...</Chinese>
-            <Chinesesimp>你没有任何锂电池...</Chinesesimp>
-            <Turkish>Hiç lityum pilin yok...</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Common_NoRecipeMatch">
             <English>No matching recipe found.</English>
             <Czech>Nebyl nalezen žádný odpovídající recept.</Czech>

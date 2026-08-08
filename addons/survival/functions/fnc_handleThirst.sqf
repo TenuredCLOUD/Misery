@@ -21,6 +21,13 @@ if (acex_field_rations_enabled) exitWith {};
 
 call EFUNC(common,getPlayerVariables) params ["", "_thirst", "", "", "", "", "", "", "_parasites"];
 
+// If player is bleeding, add slight fluid loss from wounds
+private _fluidLoss = (ACE_player call ACEFUNC(medical,getBloodLoss)) / 20;
+
+if (_fluidLoss > 0) then {
+    [-_fluidLoss, "thirst"] call EFUNC(common,addStatusModifier);
+};
+
 if (_parasites > 0) then {
     [-_decrementValue, "thirst"] call EFUNC(common,addStatusModifier);
 };
