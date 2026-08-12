@@ -16,7 +16,7 @@ class CfgMagazines {
         mass = 50;
         model = "a3\props_f_enoch\military\decontamination\cbrncase_01_f.p3d";
         picture = QPATHTOF(data\icons\cbrn_container.paa);
-        scope 2;
+        scope = 2;
     };
 
     class CLASS(gasCartridge): CLASS(FakeMagazine) {
