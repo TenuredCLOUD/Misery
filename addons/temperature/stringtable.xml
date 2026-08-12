@@ -162,20 +162,20 @@
             <Turkish>Sıcaklık Sistemi</Turkish>
         </Key>
         <Key ID="STR_MISERY_Temperature_FrameworkDesc">
-            <English>Enable Temperature framework? (Enables player temperature calculations)</English>
-            <Czech>Povolit teplotní systém? (Zapne výpočty tělesné teploty hráčů)</Czech>
-            <French>Activer le système de température ? (Active les calculs de température corporelle du joueur)</French>
-            <Spanish>¿Activar el sistema de temperatura? (Permite los cálculos de temperatura del jugador)</Spanish>
-            <Italian>Abilitare il sistema della temperatura? (Attiva il calcolo della temperatura corporea dei giocatori)</Italian>
-            <Polish>Włączyć system temperatury? (Aktywuje obliczenia temperatury ciała gracza)</Polish>
-            <Portuguese>Ativar o sistema de temperatura? (Ativa os cálculos de temperatura do jogador)</Portuguese>
-            <Russian>Включить систему температуры? (Активирует динамические расчеты температуры тела персонажей)</Russian>
-            <German>Temperatur-System aktivieren? (Aktiviert die Berechnungen der Spielertemperatur)</German>
-            <Korean>체온 프레임워크를 활성화하시겠습니까? (플레이어의 체온 및 환경 온도 계산을 적용합니다)</Korean>
-            <Japanese>体温システムを有効にしますか？（プレイヤーの体温計算処理を有効化します）</Japanese>
-            <Chinese>是否啟用體溫模擬架構？（啟用後將動態計算玩家體溫與環境熱量傳導）</Chinese>
-            <Chinesesimp>是否启用体温模拟架构？（启用后将动态计算玩家体温与环境热量传导）</Chinesesimp>
-            <Turkish>Sıcaklık sistemi etkinleştirilsin mi? (Oyuncu sıcaklık hesaplamalarını açar)</Turkish>
+            <English>Enable Temperature framework? (Enables player temperature exposure, requires ACE weather)</English>
+            <Czech>Povolit systém teploty? (Povoluje vliv teploty na hráče, vyžaduje ACE Počasí)</Czech>
+            <French>Activer le système de température ? (Active l'exposition de la température sur le joueur, nécessite ACE Météo)</French>
+            <Spanish>¿Habilitar el sistema de temperatura? (Permite la exposición a la temperatura del jugador, requiere ACE Météo)</Spanish>
+            <Italian>Abilitare il sistema di temperatura? (Attiva l'esposizione alla temperatura del giocatore, richiede ACE Meteo)</Italian>
+            <Polish>Włączyć system temperatury? (Włącza wpływ temperatury na gracza, wymaga ACE Weather)</Polish>
+            <Portuguese>Ativar o sistema de temperatura? (Ativa a exposição do jogador à temperatura, requer ACE Clima)</Portuguese>
+            <Russian>Включить систему температуры? (Включает влияние температуры на игрока, требуется ACE Погода)</Russian>
+            <German>Temperatur-System aktivieren? (Aktiviert Temperatureinflüsse auf den Spieler, erfordert ACE Weather)</German>
+            <Korean>체온 시스템을 활성화하시겠습니까? (플레이어의 체온 노출 효과를 활성화하며, ACE Weather가 필요합니다)</Korean>
+            <Japanese>気温・体温 structural システムを有効化しますか？（プレイヤーの body 温度 expose を有効化します。ACE Weather が必要です）</Japanese>
+            <Chinese>啟用體溫系統？（啟用玩家體溫與環境溫度影響，需要 ACE Weather 支援）</Chinese>
+            <Chinesesimp>启用体温系统？（启用玩家体温与环境温度影响，需要 ACE Weather 支持）</Chinesesimp>
+            <Turkish>Sıcaklık sistemi etkinleştirilsin mi? (Oyuncunun sıcaklığa maruz kalmasını etkinleştirir, ACE Weather gerektirir)</Turkish>
         </Key>
         <Key ID="STR_MISERY_Temperature_Penalty">
             <English>Temperature penalty</English>

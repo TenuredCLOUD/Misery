@@ -18,7 +18,7 @@
 
 call EFUNC(common,getPlayerVariables) params ["", "", "", "", "_exposure", "_wetness"];
 
-if !(EGVAR(temperature,enabled)) exitWith {};
+if !(EGVAR(temperature,enabled) && ACEGVAR(weather,enabled)) exitWith {};
 
 // Exposure
 private _finalExposure = ((_exposure + EGVAR(temperature,exposureModifiers)) min 1) max -1;

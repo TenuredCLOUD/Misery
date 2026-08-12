@@ -2,6 +2,10 @@
 
 if !(isServer) exitWith {};
 
+// Check if GRAD has a set missionTag, if not automatically use the missionName
+GVAR(gradPersistenceTag) = getText (missionConfigFile >> "CfgGradPersistence" >> "missionTag");
+if (GVAR(gradPersistenceTag) isEqualTo "") then {GVAR(gradPersistenceTag) = missionName};
+
 [QGVAR(saveWorldState), {[GVAR(gradWarning), 0] call GRADFUNC(persistence,saveMission)}] call CBA_fnc_addEventHandler;
 [QGVAR(wipeWorldState), {[GVAR(gradPersistenceTag)] call GRADFUNC(persistence,clearMissionData)}] call CBA_fnc_addEventHandler;
 

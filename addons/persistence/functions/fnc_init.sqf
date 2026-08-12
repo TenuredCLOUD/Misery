@@ -18,10 +18,8 @@ if !(hasInterface) exitWith {};
 
 [] call ACEFUNC(common,player) params ["_player"];
 
-// If GRAD Persistence is being used, and admin actions are enabled - add actions to admins, or SP player
-if (GVAR(gradAdminActions)) then {
-    GVAR(gradPersistenceTag) = getText (missionConfigFile >> "CfgGradPersistence" >> "missionTag");
-    if (GVAR(gradPersistenceTag) isEqualTo "") then {GVAR(gradPersistenceTag) = missionName};
+// Add GRAD save manager to SP player (if enabled)
+if (GVAR(gradActions)) then {
 
     private _gradSaveAction = [
         QGVAR(grad_db_menu),
@@ -31,7 +29,7 @@ if (GVAR(gradAdminActions)) then {
             createDialog QCLASS(grad_persistence_compat_ui)
         },
         {
-            call BIS_fnc_admin isEqualTo 2 || !isMultiplayer
+            !isMultiplayer
         }
     ] call ACEFUNC(interact_menu,createAction);
 

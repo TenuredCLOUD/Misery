@@ -91,7 +91,7 @@ private _ignitionSound = ["\z\misery\addons\audio\sounds\immersion\Match.ogg", "
 
 playSound3D [_ignitionSound, ACE_player, false, getPosASL ACE_player, 4, 1, 10];
 
-ACE_player playAction "Gear";
+[ACE_player, "Gear"] call ACEFUNC(common,doAnimation);
 
 ACE_player setVariable [QCLASS(isCraftingFire), true];
 

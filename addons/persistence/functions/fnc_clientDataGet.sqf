@@ -57,9 +57,9 @@ _player setPosWorld _position;
 _player setDir _direction;
 
 switch (_stance) do {
-    case "STAND": {_player playAction "PlayerStand"};
-    case "CROUCH": {_player playAction "PlayerCrouch"};
-    case "PRONE": {_player playAction "PlayerProne"};
+    case "STAND": {[_player, "PlayerStand", 2] call ACEFUNC(common,doAnimation)};
+    case "CROUCH": {[_player, "PlayerCrouch", 2] call ACEFUNC(common,doAnimation)};
+    case "PRONE": {[_player, "PlayerProne", 2] call ACEFUNC(common,doAnimation)};
     default {};
 };
 

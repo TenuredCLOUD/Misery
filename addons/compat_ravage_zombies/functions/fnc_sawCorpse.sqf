@@ -26,7 +26,7 @@ if (isNil {_corpse getVariable QGVAR(processingSaw)}) then {
     _corpse setVariable [QGVAR(processingSaw), true, true];
 };
 
-ACE_player playAction "Gear";
+[ACE_player, "Gear"] call ACEFUNC(common,doAnimation);
 
 [localize LSTRING(StartSawing),
 15,
@@ -35,7 +35,7 @@ ACE_player playAction "Gear";
     params ["_args"];
     _args params ["_corpse", "_audioSource"];
 
-    ACE_player playAction "";
+    [ACE_player, "", 1] call ACEFUNC(common,doAnimation);
 
     if !(isNull _audioSource) then {
         deleteVehicle _audioSource;
@@ -66,7 +66,7 @@ ACE_player playAction "Gear";
     params ["_args"];
     _args params ["_corpse", "_audioSource"];
 
-    ACE_player playAction "";
+    [ACE_player, "", 1] call ACEFUNC(common,doAnimation);
 
     if !(isNull _audioSource) then {
         deleteVehicle _audioSource;

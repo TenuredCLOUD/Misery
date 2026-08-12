@@ -1,19 +1,18 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Temperature Conversions & Wind Chill Algorithm
- * Implements WMO-standard wind chill formula (valid for ≤10°C & >4.8mph winds)
- * Accounts for apparent wind (meteorological + player movement vectors)
- * Automatic fallback to ambient temp outside valid ranges
+ * Environment exposure utilizing ACE weather API
  *
  * Arguments:
  * None
  *
  * Return Value:
  * 0: Array of Variables <ARRAY>
- *     0: Windchill / Air temperature <NUMBER>
- *     1: SeaTemp <NUMBER>
- *     2: BreathFog <BOOL>
+ *     0: Air temperature <NUMBER>
+ *     1: HeatIndex <NUMBER>
+ *     2: Windchill <NUMBER>
+ *     3: Humidity <NUMBER>
+ *     4: BreathFog <BOOL>
  *
  * Example:
  * [] call misery_temperature_fnc_environment;
@@ -21,52 +20,22 @@
  * Public: No
 */
 
-private _airTemp = 0;
-private _seaTemp = nil;
+private _posASL = getPosASL ACE_player;
+private _altitude = _posASL select 2;
 
-if (isClass (missionConfigFile >> "CfgMisery_TemperatureData" >> "DailyTemps")) then {
-    _airTemp = getArray (missionConfigFile >> "CfgMisery_TemperatureData" >> "DailyTemps" >> "airTemps");
-    _airTemp = _airTemp select (date select 3);
-} else {
-    ambientTemperature params ["_airTemp", "_seaTemp"];
+private _temperature = _altitude call ACEFUNC(weather,calculateTemperatureAtHeight);
+
+private _windSpeed = [[_posASL, false, true, true] call ACEFUNC(weather,calculateWindSpeed), [_posASL, true, true, true] call ACEFUNC(weather,calculateWindSpeed)] select (ACEGVAR(advanced_ballistics,enabled));
+
+private _heatIndex = [_temperature, ACEGVAR(weather,currentHumidity)] call ACEFUNC(weather,calculateHeatIndex);
+private _windChill = [_temperature, _windSpeed] call ACEFUNC(weather,calculateWindChill);
+private _dewPoint = [_temperature, ACEGVAR(weather,currentHumidity)] call ACEFUNC(weather,calculateDewPoint);
+
+private _breathFog = false;
+if (isNull objectParent ACE_player && {insideBuilding ACE_player isEqualTo 0}) then {
+    if ((_temperature <= _dewPoint + 1 || _temperature <= 2) && {!(underwater ACE_player)}) then {
+        _breathFog = true;
+    };
 };
 
-    private _altitude = (getPosASL ACE_player) select 2;
-
-    _airTemp = [_airTemp - (_altitude / 1000) * 6.5, ACEGVAR(weather,currentTemperature)] select (!isNil QACEGVAR(weather,enabled) && {ACEGVAR(weather,enabled)}); // Temperature in Celsius at altitude or ace calculation
-
-    private _windChillIndexCelsius = _airTemp;
-
-    private _breathFog = false;
-
-    if (!(isNull objectParent ACE_player) || insideBuilding ACE_player isEqualTo 1) then {
-        _windChillIndexCelsius = _airTemp;
-        _breathFog = false;
-    } else {
-        private _windSpeedMs = vectorMagnitude [wind select 0, wind select 1, 0];
-        private _playerSpeedMs = abs(speed ACE_player) / 3.6; // Convert km/h to m/s
-        private _apparentWindMs = _windSpeedMs + _playerSpeedMs;
-
-        private _apparentWindMph = _apparentWindMs * 2.23694;
-
-        if (_airTemp <= 10 && _apparentWindMph > 4.8) then {
-            // North American/WMO wind chill formula
-            _windChillIndexCelsius = 13.12 + (0.6215 * _airTemp) - (11.37 * (_apparentWindMph ^ 0.16)) + (0.3965 * _airTemp * (_apparentWindMph ^ 0.16));
-        };
-
-        if (_airTemp <= 7 && !(underwater ACE_player)) then {
-            _breathFog = true;
-        };
-    };
-
-    // Cap temperature between -50°C and 55°C
-    _windChillIndexCelsius = (_windChillIndexCelsius max -50) min 55;
-
-    // Automatically calculate seaTemp & cap at 1°C so water doesn't freeze
-    if (isNil "_seaTemp" || {_seaTemp isEqualTo 0}) then {
-        _seaTemp = linearConversion [-20, 40, _airTemp, 1, 25, true];
-    };
-
-    _seaTemp = _seaTemp max 1;
-
-    [_windChillIndexCelsius, _seaTemp, _breathFog]
+[_temperature, _heatIndex, _windChill, ACEGVAR(weather,currentHumidity), _breathFog]

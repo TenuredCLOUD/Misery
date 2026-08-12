@@ -257,54 +257,6 @@
             <Chinesesimp>净化套件</Chinesesimp>
             <Turkish>Dekont Kiti</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Assets_ERUOff_DisplayName">
-            <English>ERU (OFF)</English>
-            <Czech>ERU (VYPNUTO)</Czech>
-            <French>ERU (OFF)</French>
-            <Spanish>ERU (APAGADO)</Spanish>
-            <Italian>ERU (OFF)</Italian>
-            <Polish>ERU (WYŁ.)</Polish>
-            <Portuguese>ERU (DESLIGADO)</Portuguese>
-            <Russian>КПК (ВЫКЛ)</Russian>
-            <German>ERU (AUS)</German>
-            <Korean>ERU(꺼짐)</Korean>
-            <Japanese>ERU（OFF）</Japanese>
-            <Chinese>環境讀取裝置 (關閉)</Chinese>
-            <Chinesesimp>环境读取装置 (关闭)</Chinesesimp>
-            <Turkish>ERU (KAPALI)</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Assets_ERU_Description">
-            <English>Environmental Reading Unit&lt;br/&gt; - Information</English>
-            <Czech>Jednotka pro čtení prostředí&lt;br/&gt; - Informace</Czech>
-            <French>Unité de lecture environnementale&lt;br/&gt; - Informations</French>
-            <Spanish>Unidad de lectura ambiental&lt;br/&gt; - Información</Spanish>
-            <Italian>Unità di lettura ambientale&lt;br/&gt; - Informazioni</Italian>
-            <Polish>Jednostka odczytu środowiskowego&lt;br/&gt; - Informacje</Polish>
-            <Portuguese>Unidade de leitura ambiental&lt;br/&gt; - Informações</Portuguese>
-            <Russian>Блок мониторинга среды&lt;br/&gt; - Информация</Russian>
-            <German>Umwelt-Leseeinheit&lt;br/&gt; - Informationen</German>
-            <Korean>환경 판독 장치&lt;br/&gt; - 정보</Korean>
-            <Japanese>環境読取装置&lt;br/&gt; - 情報</Japanese>
-            <Chinese>環境讀取裝置&lt;br/&gt; - 信息</Chinese>
-            <Chinesesimp>环境读取装置&lt;br/&gt; - 信息</Chinesesimp>
-            <Turkish>Çevresel Okuma Ünitesi&lt;br/&gt; - Bilgi</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Assets_ERU_DisplayName">
-            <English>ERU (ON)</English>
-            <Czech>ERU (ZAPNUTO)</Czech>
-            <French>ERU (ON)</French>
-            <Spanish>ERU (ENCENDIDO)</Spanish>
-            <Italian>ERU (ON)</Italian>
-            <Polish>ERU (WŁ.)</Polish>
-            <Portuguese>ERU (LIGADO)</Portuguese>
-            <Russian>КПК (ВКЛ)</Russian>
-            <German>ERU (EIN)</German>
-            <Korean>ERU(켜짐)</Korean>
-            <Japanese>ERU（ON）</Japanese>
-            <Chinese>環境讀取裝置 (開啟)</Chinese>
-            <Chinesesimp>环境读取装置 (开启)</Chinesesimp>
-            <Turkish>ERU (AÇIK)</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Assets_ElectricHandSaw_Description">
             <English>A battery powered saw&lt;br/&gt; - Base crafting</English>
             <Czech>Akumulátorová pila&lt;br/&gt; - Stavební nářadí</Czech>
@@ -2105,22 +2057,6 @@
             <Chinesesimp>胶带</Chinesesimp>
             <Turkish>Koli Bandı</Turkish>
         </Key>
-        <Key ID="STR_Misery_Assets_ERUNoBattery_DisplayName">
-            <English>ERU (No battery)</English>
-            <Czech>ERU (bez baterie)</Czech>
-            <French>ERU (sans batterie)</French>
-            <Spanish>ERU (sin batería)</Spanish>
-            <Italian>ERU (nessuna batteria)</Italian>
-            <Polish>ERU (brak baterii)</Polish>
-            <Portuguese>ERU (sem bateria)</Portuguese>
-            <Russian>КПК (без аккумулятора)</Russian>
-            <German>ERU (keine Batterie)</German>
-            <Korean>ERU(배터리 없음)</Korean>
-            <Japanese>ERU（バッテリーなし）</Japanese>
-            <Chinese>環境讀取裝置 (無電池)</Chinese>
-            <Chinesesimp>环境读取装置 (无电池)</Chinesesimp>
-            <Turkish>ERU (Pilsiz)</Turkish>
-        </Key>
         <Key ID="STR_Misery_Assets_ElectricHandSawNoBattery_DisplayName">
             <English>Electric Hand saw (no battery)</English>
             <Czech>Elektrická ruční pila (bez baterie)</Czech>
@@ -2664,38 +2600,6 @@
             <Chinese>防毒面具濾毒罐</Chinese>
             <Chinesesimp>防毒面具滤毒罐</Chinesesimp>
             <Turkish>Gaz Maskesi kartuşları</Turkish>
-        </Key>
-        <Key ID="STR_Misery_Assets_GasMaskEmpty_Description">
-            <English>Gasmask that doesn't have cartridges, useless</English>
-            <Czech>Plynová maska bez filtračních patron, k ničemu</Czech>
-            <French>Masque à gaz sans cartouches, inutile</French>
-            <Spanish>Máscara de gas que no tiene cartuchos, inútil</Spanish>
-            <Italian>Maschera antigas senza cartucce, inutile</Italian>
-            <Polish>Maska przeciwgazowa bez nabojów, bezużyteczna</Polish>
-            <Portuguese>Máscara de gás sem cartuchos, inútil</Portuguese>
-            <Russian>Противогаз без патронов, бесполезный</Russian>
-            <German>Gasmaske, die keine Patronen hat, nutzlos</German>
-            <Korean>카트리지가 없는 방독면, 쓸모없음</Korean>
-            <Japanese>カートリッジがないガスマスク、役に立たない</Japanese>
-            <Chinese>沒有濾毒罐的防毒面具，沒用</Chinese>
-            <Chinesesimp>没有滤毒罐的防毒面具，没用</Chinesesimp>
-            <Turkish>Kartuşu olmayan Gaz Maskesi, işe yaramaz</Turkish>
-        </Key>
-        <Key ID="STR_Misery_Assets_GasMaskEmpty_DisplayName">
-            <English>Gasmask (no cartridges)</English>
-            <Czech>Plynová maska (bez filtračních patron)</Czech>
-            <French>Masque à gaz (pas de cartouches)</French>
-            <Spanish>Máscara de gas (sin cartuchos)</Spanish>
-            <Italian>Maschera antigas (no cartucce)</Italian>
-            <Polish>Maska przeciwgazowa (bez naboi)</Polish>
-            <Portuguese>Máscara de gás (sem cartuchos)</Portuguese>
-            <Russian>Противогаз (без патронов)</Russian>
-            <German>Gasmaske (keine Patronen)</German>
-            <Korean>방독면 (카트리지 없음)</Korean>
-            <Japanese>ガスマスク（カートリッジなし）</Japanese>
-            <Chinese>防毒面具 (無濾毒罐)</Chinese>
-            <Chinesesimp>防毒面具 (无滤毒罐)</Chinesesimp>
-            <Turkish>Gaz Maskesi (kartuş yok)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_GeigerDead_Description">
             <English>Dead Geiger counter, went through too many rads and burned out, completely useless.&lt;br/&gt; - Random Junk</English>

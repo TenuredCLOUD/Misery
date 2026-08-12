@@ -23,18 +23,22 @@
 
     if (isGamePaused) exitWith {};
 
+    // Automatically scale metabolic coef to ACE advanced fatigue metabolic cost factor if enabled
+    if (ACEGVAR(advanced_fatigue,enabled)) then {
+        private _metabolicCosts = call FUNC(getMetabolicCosts);
+        GVAR(metabolicCoef) = _metabolicCosts;
+    };
+
     private _isMultiplayer = isMultiplayer;
     private _decrementValue = 3.333e-6 * GVAR(metabolicCoef);
 
-    private _weightDeficiency = 0;
+    private _gearMass = 0 max (((ACE_player getVariable [QACEGVAR(movement,totalLoad), loadAbs ACE_player]) / 22.046 - 3.5) * 1);
 
-    if (EGVAR(weight,deficiency)) then {
-        private _weightFactor = call EFUNC(weight,calculated);
+    private _weightFactor = linearConversion [0, 40, _gearMass, 0, 1, true];
 
-        _weightDeficiency = linearConversion [0, 1, _weightFactor, 0, 0.000066 * GVAR(metabolicCoef), true];
-    };
+    private _weightDeficiency = linearConversion [0, 1, _weightFactor, 0, 0.000066 * GVAR(metabolicCoef), true];
 
-    // If ACE_player is not on foot, reduction stays at a low value.
+    // If player is not on foot, reduction stays at a low value.
     if (isNull objectParent ACE_player) then {
         private _currentSpeed = abs (speed ACE_player);
 

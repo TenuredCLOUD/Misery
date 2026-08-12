@@ -329,10 +329,6 @@ QCLASS(guttingKnife), \
 // Mining
 #define MACRO_GEMTYPES QCLASS(malachite), QCLASS(ruby), QCLASS(sapphire), QCLASS(amethyst), QCLASS(diamond), QCLASS(emerald)
 
-// Gasmasks
-#define MACRO_RESPIRATOR_MASKS "g_airpurifyingrespirator_01_f", "g_airpurifyingrespirator_02_black_f", "g_airpurifyingrespirator_02_olive_f", "g_airpurifyingrespirator_02_sand_f"
-#define MACRO_RESPIRATOR_MASKS_NOFILTER "g_airpurifyingrespirator_01_nofilter_f", "g_airpurifyingrespirator_02_black_nofilter_f", "g_airpurifyingrespirator_02_olive_nofilter_f", "g_airpurifyingrespirator_02_sand_nofilter_f"
-
 #define MACRO_RESPIRATOR_MASKS_CUR [ \
     [QUOTE(g_airpurifyingrespirator_01_nofilter_f), QUOTE(B_CombinationUnitRespirator_01_F)] \
 ]

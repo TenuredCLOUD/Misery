@@ -48,7 +48,7 @@ if !([[MACRO_ANVIL_HAMMERS]] call EFUNC(common,hasItem)) exitWith {ctrlSetText [
 
 [274840, [1010], true] call EFUNC(common,displayShowControls);
 
-ACE_player playAction "Gear";
+[ACE_player, "Gear"] call ACEFUNC(common,doAnimation);
 
 [_outputItem] call EFUNC(common,getItemData) params ["_displayName"];
 

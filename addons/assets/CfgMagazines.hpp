@@ -16,6 +16,15 @@ class CfgMagazines {
         mass = 50;
         model = "a3\props_f_enoch\military\decontamination\cbrncase_01_f.p3d";
         picture = QPATHTOF(data\icons\cbrn_container.paa);
+        scope 2;
+    };
+
+    class CLASS(gasCartridge): CLASS(FakeMagazine) {
+        count = 100;
+        descriptionShort = CSTRING(GasCartridge_Description);
+        displayName = CSTRING(GasCartridge_DisplayName);
+        mass = 20;
+        picture = QPATHTOF(data\icons\maskcartridges.paa);
         scope = 2;
     };
 
@@ -209,26 +218,6 @@ class CfgMagazines {
         mass = 85;
         model = QPATHTOF(data\models\pickaxe.p3d);
         picture = QPATHTOF(data\icons\pickaxe.paa);
-        scope = 2;
-    };
-
-    class CLASS(eru_On): CLASS(FakeMagazine) {
-        CLASSACE(disableRepacking) = 1;
-        count = 100;
-        descriptionShort = CSTRING(ERU_Description);
-        displayName = CSTRING(ERU_DisplayName);
-        mass = 7;
-        picture = QPATHTOF(data\icons\eru_on.paa);
-        scope = 2;
-    };
-
-    class CLASS(eru_Off): CLASS(FakeMagazine) {
-        CLASSACE(disableRepacking) = 1;
-        count = 100;
-        descriptionShort = CSTRING(ERU_Description);
-        displayName = CSTRING(ERUOff_DisplayName);
-        mass = 7;
-        picture = QPATHTOF(data\icons\eru_off.paa);
         scope = 2;
     };
 

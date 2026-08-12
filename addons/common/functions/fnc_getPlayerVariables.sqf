@@ -23,7 +23,6 @@
  *     12: Ailments <ARRAY>
  *     13: Currency <NUMBER>
  *     14: Banked Currency <NUMBER>
- *     18: Cartridge Efficiency <NUMBER>
  *
  * Example:
  * [] call misery_common_fnc_getPlayerVariables

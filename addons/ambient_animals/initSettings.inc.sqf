@@ -10,6 +10,15 @@ private _category = format ["Misery %1", localize LSTRING(Component)];
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(disableEnvironment),
+    "CHECKBOX",
+    [LSTRING(DisableVanillaWildlife), LSTRING(DisableVanillaWildlifeDesc)],
+    _category,
+    false,
+    1
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(maxPopulation),
     "SLIDER",
     [LSTRING(MaxAnimals), LSTRING(MaxAnimalsDesc)],

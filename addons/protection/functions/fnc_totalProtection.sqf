@@ -53,4 +53,17 @@ private _protection = getNumber (_heargearConfig >> QCLASSACE(hearing_protection
 
 _totals set [5, _protection];
 
+if (EGVAR(gasmask,enhanced)) then {
+    private _scba = _totals select 1;
+
+    if (_scba < 1) then {
+
+        private _hasCartridge = [[QCLASS(gasCartridge)]] call EFUNC(common,hasItem);
+
+        if (!_hasCartridge) then {
+            _totals set [3, 0];
+        };
+    };
+};
+
 _totals

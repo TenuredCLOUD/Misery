@@ -40,14 +40,11 @@
     QCLASS(emerald), \
     QCLASS(emptyToolKit), \
     QCLASS(energyDrink), \
-    QCLASS(eru_NoBattery), \
     QCLASS(firewood), \
     QCLASS(fishhook), \
     QCLASS(fishingPole), \
     QCLASS(fishingSpool), \
     QCLASS(flatheadScrewdriver), \
-    QCLASS(gasCartridge), \
-    QCLASS(gasMask_Empty), \
     QCLASS(geiger_dead), \
     QCLASS(geiger), \
     QCLASS(glucose), \

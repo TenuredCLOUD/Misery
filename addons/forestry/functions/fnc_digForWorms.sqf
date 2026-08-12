@@ -24,7 +24,7 @@ if (GVAR(digPositions) findIf {_x distance getPosATL ACE_player < 2.5} isNotEqua
     [QEGVAR(common,tileText), localize LSTRING(AreaDug)] call CBA_fnc_localEvent;
 };
 
-ACE_player playActionNow "Crouch";
+[ACE_player, "Crouch", 1] call ACEFUNC(common,doAnimation);
 
 if (currentWeapon ACE_player isNotEqualTo "") then {
     [ACE_player] call ACEFUNC(weaponselect,putWeaponAway);
