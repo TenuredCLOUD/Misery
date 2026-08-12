@@ -13,7 +13,6 @@ if !(hasInterface) exitWith {};
 
     call FUNC(gas);
     call FUNC(detectorAlert);
-    call FUNC(managePower);
 
     private _chemicalDetectorBatteries = [
         QGVAR(chemicalDetector_menu),

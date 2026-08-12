@@ -49,6 +49,102 @@
             <Chinesesimp>启用或禁用神器调试</Chinesesimp>
             <Turkish>Eser hata ayıklamasını etkinleştir veya devre dışı bırak</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Artifacts_ExcavateSoil">
+            <English>Excavate Soil</English>
+            <Czech>Vykopat zeminu</Czech>
+            <French>Excaver le sol</French>
+            <Spanish>Excavar suelo</Spanish>
+            <Italian>Scava terreno</Italian>
+            <Polish>Wykop glebę</Polish>
+            <Portuguese>Escavar solo</Portuguese>
+            <Russian>Выкопать грунт</Russian>
+            <German>Boden ausheben</German>
+            <Korean>토양 굴착</Korean>
+            <Japanese>土壌を掘削</Japanese>
+            <Chinese>挖掘土壤</Chinese>
+            <Chinesesimp>挖掘土壤</Chinesesimp>
+            <Turkish>Toprağı Kaz</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Artifacts_ExcavatedSoil">
+            <English>Excavated Soil</English>
+            <Czech>Zemina vykopána</Czech>
+            <French>Sol excavé</French>
+            <Spanish>Suelo excavado</Spanish>
+            <Italian>Terreno scavato</Italian>
+            <Polish>Wykopano glebę</Polish>
+            <Portuguese>Solo escavado</Portuguese>
+            <Russian>Грунт выкопан</Russian>
+            <German>Boden ausgehoben</German>
+            <Korean>토양 굴착 완료</Korean>
+            <Japanese>土壌を掘削しました</Japanese>
+            <Chinese>已挖掘土壤</Chinese>
+            <Chinesesimp>已挖掘土壤</Chinesesimp>
+            <Turkish>Toprak Kazıldı</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Artifacts_ExcavatingSoil">
+            <English>Excavating soil sample...</English>
+            <Czech>Odebírání vzorku zeminy...</Czech>
+            <French>Excavation de l'échantillon de sol...</French>
+            <Spanish>Excavando muestra de suelo...</Spanish>
+            <Italian>Scavo del campione di terreno...</Italian>
+            <Polish>Pobieranie próbki gleby...</Polish>
+            <Portuguese>Escavando amostra de solo...</Portuguese>
+            <Russian>Извлечение образца грунта...</Russian>
+            <German>Entnahme der Bodenprobe...</German>
+            <Korean>토양 표본 굴착 중...</Korean>
+            <Japanese>土壌サンプルを掘削中...</Japanese>
+            <Chinese>正在挖掘土壤樣品...</Chinese>
+            <Chinesesimp>正在挖掘土壤样品...</Chinesesimp>
+            <Turkish>Toprak numunesi kazılıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Artifacts_ExcavationStopped">
+            <English>Excavation Stopped...</English>
+            <Czech>Kopání zastaveno...</Czech>
+            <French>Excavation interrompue...</French>
+            <Spanish>Excavación detenida...</Spanish>
+            <Italian>Scavo interrotto...</Italian>
+            <Polish>Wykopywanie przerwane...</Polish>
+            <Portuguese>Escavação interrompida...</Portuguese>
+            <Russian>Раскопки остановлены...</Russian>
+            <German>Aushebung abgebrochen...</German>
+            <Korean>굴착 중단됨...</Korean>
+            <Japanese>掘削を中止しました...</Japanese>
+            <Chinese>挖掘已停止...</Chinese>
+            <Chinesesimp>挖掘已停止...</Chinesesimp>
+            <Turkish>Kazı Durduruldu...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Artifacts_LeadContainerFull">
+            <English>Lead container has no more room for samples...</English>
+            <Czech>Olověný kontejner již nemá místo na další vzorky...</Czech>
+            <French>Le conteneur en plomb n'a plus de place pour d'autres échantillons...</French>
+            <Spanish>El contenedor de plomo no tiene más espacio para muestras...</Spanish>
+            <Italian>Il contenitore di piombo non ha più spazio per altri campioni...</Italian>
+            <Polish>Ołowiany pojemnik nie ma już miejsca na więcej próbek...</Polish>
+            <Portuguese>O recipiente de chumbo não tem mais espaço para amostras...</Portuguese>
+            <Russian>В свинцовом контейнере больше нет места для образцов...</Russian>
+            <German>Der Blei-Behälter hat keinen Platz mehr für weitere Proben...</German>
+            <Korean>납 차폐 용기에 표본을 더 이상 넣을 공간이 없습니다...</Korean>
+            <Japanese>鉛容器にはこれ以上サンプルを収納する空きがありません...</Japanese>
+            <Chinese>鉛襯容器已無空間存放更多樣品...</Chinese>
+            <Chinesesimp>铅衬容器已无空间存放更多样品...</Chinesesimp>
+            <Turkish>Kurşun konteynerde daha fazla numune için yer kalmadı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Artifacts_SampleStored">
+            <English>Sample stored in lead lined container</English>
+            <Czech>Vzorek byl uložen do olovem stíněného kontejneru</Czech>
+            <French>Échantillon stocké dans le conteneur en plomb</French>
+            <Spanish>Muestra guardada en el contenedor revestido de plomo</Spanish>
+            <Italian>Campione conservato nel contenitore rivestito di piombo</Italian>
+            <Polish>Próbka została schowana w ołowianym pojemniku</Polish>
+            <Portuguese>Amostra armazenada no recipiente blindado com chumbo</Portuguese>
+            <Russian>Образец помещен в контейнер со свинцовой футеровкой</Russian>
+            <German>Probe im bleiverkleideten Behälter eingelagert</German>
+            <Korean>납 방사능 차폐 용기에 표본을 보관했습니다</Korean>
+            <Japanese>鉛ライニング容器にサンプルを収納しました</Japanese>
+            <Chinese>樣品已存入鉛襯容器中</Chinese>
+            <Chinesesimp>样品已存入铅衬容器中</Chinesesimp>
+            <Turkish>Numune kurşun kaplı konteynere saklandı</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Artifacts_SpawnAreas">
             <English>Artifact spawn Areas</English>
             <Czech>Oblasti vytváření artefaktů</Czech>
@@ -80,6 +176,22 @@
             <Chinese>覆蓋神器生成區域的 ELLIPSE 或 RECTANGLE 標記名稱，格式為字符串 ['Artifact_spawn_1', 'Artifact_spawn_2']</Chinese>
             <Chinesesimp>覆盖神器生成区域的 ELLIPSE 或 RECTANGLE 标记名称，格式为字符串 ['Artifact_spawn_1', 'Artifact_spawn_2']</Chinesesimp>
             <Turkish>Eser oluşum alanlarını kapsayan dize biçimindeki ELLIPSE veya RECTANGLE işaretçi adları ['Artifact_spawn_1', 'Artifact_spawn_2']</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Artifacts_StoreSample">
+            <English>Store sample</English>
+            <Czech>Uložit vzorek</Czech>
+            <French>Stocker l'échantillon</French>
+            <Spanish>Guardar muestra</Spanish>
+            <Italian>Conserva campione</Italian>
+            <Polish>Schowaj próbkę</Polish>
+            <Portuguese>Armazenar amostra</Portuguese>
+            <Russian>Сохранить образец</Russian>
+            <German>Probe einlagern</German>
+            <Korean>표본 보관</Korean>
+            <Japanese>サンプルを収納</Japanese>
+            <Chinese>儲存樣品</Chinese>
+            <Chinesesimp>储存样品</Chinesesimp>
+            <Turkish>Numuneyi Sakla</Turkish>
         </Key>
     </Package>
 </Project>

@@ -4,26 +4,44 @@ if !(hasInterface) exitWith {};
 
 ["CBA_loadingScreenDone", {
 
-    // Safety fallback if active geiger is in players inventory (on load / reload)
-    [{!isNull ACE_player && !isNull findDisplay 46}, {
-        if ([[QCLASS(geiger_On)]] call EFUNC(common,hasItem)) then {
-            [ACE_player, [QCLASS(geiger_On), QCLASS(geiger_Off)], false] call EFUNC(common,switchPowerState);
-        };
-    }, []] call CBA_fnc_waitUntilAndExecute;
-
-
-    private _addBatterytoGeiger = [
+    private _geigerMenu = [
         QGVAR(geiger_menu),
-        localize LSTRING(BatteryAction),
-        QPATHTOEF(icons,data\battery_charging_ca.paa),
+        localize ECSTRING(assets,GeigerCounter_DisplayName),
+        QPATHTOEF(assets,data\icons\personalgeiger.paa),
+        {},
         {
-            call FUNC(batteries)
-        },
-        {
-            [[QCLASS(lithiumBattery), QCLASS(geiger_NoBattery)]] call EFUNC(common,hasItem)
+            [[QCLASS(geiger)]] call EFUNC(common,hasItem) || [[QCLASS(geiger_NoBattery)]] call EFUNC(common,hasItem)
         }
     ] call ACEFUNC(interact_menu,createAction);
 
-    [ACE_player, 1, [QUOTE(ACE_SelfActions)], _addBatterytoGeiger] call ACEFUNC(interact_menu,addActionToObject);
+    [ACE_player, 1, [QUOTE(ACE_SelfActions), QUOTE(ACE_Equipment)], _geigerMenu] call ACEFUNC(interact_menu,addActionToObject);
+
+    private _showGeiger = [
+        QGVAR(geiger_show),
+        localize LSTRING(ShowGeiger),
+        "",
+        {
+            call FUNC(show)
+        },
+        {
+            [[QCLASS(geiger)]] call EFUNC(common,hasItem) && !(uiNamespace getVariable [QGVAR(ui_visible), false])
+        }
+    ] call ACEFUNC(interact_menu,createAction);
+
+    [ACE_player, 1, [QUOTE(ACE_SelfActions), QUOTE(ACE_Equipment), QGVAR(geiger_menu)], _showGeiger] call ACEFUNC(interact_menu,addActionToObject);
+
+    private _hideGeiger = [
+        QGVAR(geiger_hide),
+        localize LSTRING(HideGeiger),
+        "",
+        {
+            call FUNC(hide)
+        },
+        {
+            uiNamespace getVariable [QGVAR(ui_visible), false]
+        }
+    ] call ACEFUNC(interact_menu,createAction);
+
+    [ACE_player, 1, [QUOTE(ACE_SelfActions), QUOTE(ACE_Equipment), QGVAR(geiger_menu)], _hideGeiger] call ACEFUNC(interact_menu,addActionToObject);
 
 }] call CBA_fnc_addEventHandler;

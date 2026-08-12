@@ -53,24 +53,11 @@ class CfgWeapons {
         };
     };
 
-    class CLASS(geiger_NoBattery): CLASS(ItemCore) {
-        displayName = CSTRING(GeigerNoBattery_DisplayName);
-        descriptionShort = CSTRING(RequiresLithiumBattery_Description);
-        picture = QPATHTOF(data\icons\personalgeigernobattery.paa);
+    class CLASS(geiger): CLASS(ItemCore) {
+        displayName = CSTRING(GeigerCounter_DisplayName);
+        descriptionShort = CSTRING(GeigerCounter_Description);
+        picture = QPATHTOF(data\icons\personalgeiger.paa);
         model = "\A3\Weapons_F\Items\MineDetector.p3d";
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 10;
-        };
-    };
-
-    class CLASS(lantern_NoBattery): CLASS(ItemCore) {
-        displayName = CSTRING(LanternNoBattery_DisplayName);
-        descriptionShort = CSTRING(RequiresLithiumBattery_Description);
-        picture = QPATHTOF(data\icons\lantern.paa);
-        model = "a3\structures_f\civ\camping\camping_light_off_f.p3d";
         scope = 2;
         scopeCurator = 2;
 
@@ -351,141 +338,11 @@ class CfgWeapons {
         };
     };
 
-    class CLASS(leadContainer_Closed): CLASS(ItemCore) {
-        displayName = CSTRING(LeadContainerClosed_DisplayName);
-        descriptionShort = CSTRING(LeadContainerClosed_Description);
-        picture = QPATHTOF(data\icons\cbrn_container.paa);
-        model = "a3\props_f_enoch\military\decontamination\cbrncase_01_f.p3d";
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 50;
-        };
-    };
-
-    class CLASS(artifact_01): CLASS(ItemCore) {
-        displayName = CSTRING(Artifact_DisplayName);
-        descriptionShort = CSTRING(Artifact_Description);
-        picture = QPATHTOF(data\icons\Artifact01.paa);
-        model = QPATHTOF(data\models\artifact.p3d);
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 3;
-        };
-    };
-
-    class CLASS(artifact_02): CLASS(ItemCore) {
-        displayName = CSTRING(Artifact_DisplayName);
-        descriptionShort = CSTRING(Artifact_Description);
-        picture = QPATHTOF(data\icons\Artifact02.paa);
-        model = QPATHTOF(data\models\artifact.p3d);
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 3;
-        };
-    };
-
-    class CLASS(artifact_03): CLASS(ItemCore) {
-        displayName = CSTRING(Artifact_DisplayName);
-        descriptionShort = CSTRING(Artifact_Description);
-        picture = QPATHTOF(data\icons\Artifact03.paa);
-        model = QPATHTOF(data\models\artifact.p3d);
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 3;
-        };
-    };
-
-    class CLASS(artifact_04): CLASS(ItemCore) {
-        displayName = CSTRING(Artifact_DisplayName);
-        descriptionShort = CSTRING(Artifact_Description);
-        picture = QPATHTOF(data\icons\Artifact04.paa);
-        model = QPATHTOF(data\models\artifact.p3d);
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 3;
-        };
-    };
-
-    class CLASS(artifact_05): CLASS(ItemCore) {
-        displayName = CSTRING(Artifact_DisplayName);
-        descriptionShort = CSTRING(Artifact_Description);
-        picture = QPATHTOF(data\icons\Artifact05.paa);
-        model = QPATHTOF(data\models\artifact.p3d);
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 3;
-        };
-    };
-
-    class CLASS(artifact_06): CLASS(ItemCore) {
-        displayName = CSTRING(Artifact_DisplayName);
-        descriptionShort = CSTRING(Artifact_Description);
-        picture = QPATHTOF(data\icons\Artifact06.paa);
-        model = QPATHTOF(data\models\artifact.p3d);
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 3;
-        };
-    };
-
-    class CLASS(artifact_07): CLASS(ItemCore) {
-        displayName = CSTRING(Artifact_DisplayName);
-        descriptionShort = CSTRING(Artifact_Description);
-        picture = QPATHTOF(data\icons\Artifact07.paa);
-        model = QPATHTOF(data\models\artifact.p3d);
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 3;
-        };
-    };
-
-    class CLASS(artifact_08): CLASS(ItemCore) {
-        displayName = CSTRING(Artifact_DisplayName);
-        descriptionShort = CSTRING(Artifact_Description);
-        picture = QPATHTOF(data\icons\Artifact08.paa);
-        model = QPATHTOF(data\models\artifact.p3d);
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 3;
-        };
-    };
-
-    class CLASS(artifact_09): CLASS(ItemCore) {
-        displayName = CSTRING(Artifact_DisplayName);
-        descriptionShort = CSTRING(Artifact_Description);
-        picture = QPATHTOF(data\icons\Artifact09.paa);
-        model = QPATHTOF(data\models\artifact.p3d);
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 3;
-        };
-    };
-
-    class CLASS(artifact_10): CLASS(ItemCore) {
-        displayName = CSTRING(Artifact_DisplayName);
-        descriptionShort = CSTRING(Artifact_Description);
-        picture = QPATHTOF(data\icons\Artifact10.paa);
-        model = QPATHTOF(data\models\artifact.p3d);
+    class CLASS(fallout_glass): CLASS(ItemCore) {
+        displayName = CSTRING(FalloutGlass_DisplayName);
+        descriptionShort = CSTRING(FalloutGlass_Description);
+        picture = QPATHTOF(data\icons\artifact09.paa);
+        model = "a3\weapons_f\ammo\stone_2.p3d";
         scope = 2;
         scopeCurator = 2;
 
@@ -1252,6 +1109,19 @@ class CfgWeapons {
     class CLASS(emptyToolKit): CLASS(ItemCore) {
         displayName = CSTRING(EmptyToolKit_DisplayName);
         descriptionShort = CSTRING(EmptyToolKit_Description);
+        model = "a3\weapons_f\items\toolkit.p3d";
+        picture = QPATHTOF(data\icons\toolkit.paa);
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 25;
+        };
+    };
+
+    class CLASS(shpKit): CLASS(ItemCore) {
+        displayName = CSTRING(SHP_DisplayName);
+        descriptionShort = CSTRING(SHP_Description);
         model = "a3\weapons_f\items\toolkit.p3d";
         picture = QPATHTOF(data\icons\toolkit.paa);
         scope = 2;

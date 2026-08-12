@@ -14,7 +14,7 @@
  *
 */
 
-[ACE_player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
+private _vehicle = ACE_player getVariable [QGVAR(currentVehicle), objNull];
 
 if !([["ToolKit"]] call EFUNC(common,hasItem)) exitWith {
     ctrlSetText [1001, format [localize LSTRING(NeedToolkitBattery)]];

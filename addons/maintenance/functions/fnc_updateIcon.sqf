@@ -16,15 +16,18 @@
  * Public: No
 */
 
+params ["_vehicle"];
+
 [{!isNull findDisplay 274839},{
+    params ["_vehicle"];
+
     [{
         params ["_args", "_handle"];
+        _args params ["_vehicle"];
 
         if (isNull findDisplay 274839 || !alive ACE_player) exitWith {
             _handle call CBA_fnc_removePerFrameHandler;
         };
-
-        [ACE_player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
 
         [_vehicle] call EFUNC(common,getObjectData) params ["_displayName", "_picture"];
 
@@ -106,5 +109,5 @@
 
         ctrlSetText [1200, format ["%1", _picture]];
         ctrlSetText [1002, format ["%1", _displayName]];
-    }, 0.5] call CBA_fnc_addPerFrameHandler;
-},[]] call CBA_fnc_waitUntilAndExecute;
+    }, 0.5, [_vehicle]] call CBA_fnc_addPerFrameHandler;
+},[_vehicle]] call CBA_fnc_waitUntilAndExecute;

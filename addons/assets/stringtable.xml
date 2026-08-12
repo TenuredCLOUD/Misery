@@ -353,6 +353,38 @@
             <Chinesesimp>发动机油</Chinesesimp>
             <Turkish>motor yağı</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Assets_FalloutGlass_Description">
+            <English>Dense slag, formed from soil and heavy metals fused by extreme heat. Likely sought after by researchers</English>
+            <Czech>Hustá škvára vytvořená ze zeminy a těžkých kovů roztavených extrémním teplem. Pravděpodobně vyhledávána výzkumníky</Czech>
+            <French>Scorie dense, formée de sol et de métaux lourds fusionnés par une chaleur extrême. Probablement recherchée par les chercheurs</French>
+            <Spanish>Escoria densa, formada por suelo y metales pesados fundidos por un calor extremo. Probablemente buscada por investigadores</Spanish>
+            <Italian>Scoria densa, formata da terreno e metalli pesanti fusi da un calore estremo. Molto ricercata dai ricercatori</Italian>
+            <Polish>Gęsty szlak, powstały z gleby i metali ciężkich stopionych w ekstremalnej temperaturze. Prawdopodobnie poszukiwany przez badaczy</Polish>
+            <Portuguese>Escória densa, formada por solo e metais pesados fundidos por calor extremo. Provavelmente procurada por pesquisadores</Portuguese>
+            <Russian>Плотный шлак, образованный из почвы и тяжелых металлов, сплавленных экстремальной температурой. Представляет ценность для исследователей</Russian>
+            <German>Dichte Schlacke, entstanden aus Boden und Schwermetallen, die durch extreme Hitze verschmolzen wurden. Von Forschern begehrt</German>
+            <Korean>극심한 열로 인해 토양과 중금속이 융합되어 형성된 찌꺼기입니다. 연구원들이 찾을 가능성이 높습니다</Korean>
+            <Japanese>極度の熱で土壌と重金属が fused して形成された高密度のスラグ。研究者によって探索される可能性が高い</Japanese>
+            <Chinese>由土壤和重金屬在高溫下熔合形成的緻密礦渣。研究人員可能對此感興趣</Chinese>
+            <Chinesesimp>由土壤和重金属高温熔合形成的致密矿渣。研究人员可能对此感兴趣</Chinesesimp>
+            <Turkish>Aşırı ısı nedeniyle toprak ve ağır metallerin birleşmesiyle oluşan yoğun cüruf. Araştırmacılar tarafından aranan bir maddedir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_FalloutGlass_DisplayName">
+            <English>Irradiated Fallout Glass</English>
+            <Czech>Ozařované spadové sklo</Czech>
+            <French>Verre de retombées irradié</French>
+            <Spanish>Vidrio de lluvia radiactiva irradiado</Spanish>
+            <Italian>Vetro di ricaduta irradiato</Italian>
+            <Polish>Napromieniowane szkło opadowe</Polish>
+            <Portuguese>Vidro de precipitação radioativa irradiado</Portuguese>
+            <Russian>Облученное остекление выпадающих осадков</Russian>
+            <German>Irradiertes Fallout-Glas</German>
+            <Korean>방사능 낙용 유리</Korean>
+            <Japanese>照射されたフォールアウトガラス</Japanese>
+            <Chinese>受輻射的落塵玻璃</Chinese>
+            <Chinesesimp>受辐射的落尘玻璃</Chinesesimp>
+            <Turkish>Radyasyona Maruz Kalmış Serpinti Camı</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Assets_FieldThermalRegulationKit_Description">
             <English>Advanced thermoregulation kit equipped with moisture-wicking cloth and medical grade equipment to maintain optimal body temperature in harsh conditions, can be used in any climate.</English>
             <Czech>Pokročilá souprava pro termoregulaci vybavená tkaninou odvádějící vlhkost a lékařským vybavením pro udržení optimální tělesné teploty v drsných podmínkách, použitelná v jakémkoli klimatu.</Czech>
@@ -381,117 +413,37 @@
             <Japanese>野外体温調節キット</Japanese>
             <Turkish>Saha termoregülasyon kiti</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Assets_GeigerOff_DisplayName">
-            <English>Personal Geiger Counter (OFF)</English>
-            <Czech>Osobní Geigerův počítač (VYPNUTO)</Czech>
-            <French>Compteur Geiger personnel (ÉTEINT)</French>
-            <Spanish>Contador Geiger personal (APAGADO)</Spanish>
-            <Italian>Contatore Geiger personale (SPENTO)</Italian>
-            <Polish>Osobisty licznik Geigera (WYŁĄCZONY)</Polish>
-            <Portuguese>Contador Geiger pessoal (DESLIGADO)</Portuguese>
-            <Russian>Личный счетчик Гейгера (ВЫКЛ)</Russian>
-            <German>Persönliches Geigerzähler (AUS)</German>
-            <Korean>개인용 가이거 계수기(OFF)</Korean>
-            <Japanese>個人用ガイガーカウンター（OFF）</Japanese>
-            <Chinese>個人蓋革計數器 (關閉)</Chinese>
-            <Chinesesimp>个人盖革计数器 (关闭)</Chinesesimp>
-            <Turkish>Kişisel Geiger Sayacı (KAPALI)</Turkish>
+        <Key ID="STR_MISERY_Assets_GeigerCounter_Description">
+            <English>Emits audible alerts in radioactive hazard zones and tracks radiation exposure in real time</English>
+            <Czech>Vydává akustické výstrahy v oblastech s nebezpečím radiace a sleduje vystavení radiaci v reálném čase</Czech>
+            <French>Émet des alertes sonores dans les zones à risque radioactif et suit l'exposition aux radiations en temps réel</French>
+            <Spanish>Emite alertas sonoras en zonas de peligro radiactivo y rastrea la exposición a la radiación en tiempo real</Spanish>
+            <Italian>Emette allarmi sonori nelle zone a rischio radioattivo e monitora l'esposizione alle radiazioni in tempo reale</Italian>
+            <Polish>Emituje sygnały dźwiękowe w strefach zagrożenia radiacyjnego i śledzi ekspozycję na promieniowanie w czasie rzeczywistym</Polish>
+            <Portuguese>Emite alertas sonoros em zonas de perigo radioativo e rastreia a exposição à radiação em tempo real</Portuguese>
+            <Russian>Издает звуковые сигналы в зонах радиационной опасности и отслеживает уровень облучения в реальном времени</Russian>
+            <German>Gibt akustische Warnungen in radioaktiven Gefahrenzonen aus und verfolgt die Strahlenbelastung in Echtzeit</German>
+            <Korean>방사능 위험 지역에서 경고음을 울리고 실시간으로 방사선 노출을 추적합니다</Korean>
+            <Japanese>放射性危険地帯で警告音を鳴らし、放射線 exposed 量をリアルタイムで測定します</Japanese>
+            <Chinese>在放射性危險區域發出聲響警報，並即時追蹤輻射暴露量</Chinese>
+            <Chinesesimp>在放射性危险区域发出声响警报，并实时追踪辐射暴露量</Chinesesimp>
+            <Turkish>Radyoaktif tehlike bölgelerinde sesli uyarılar verir ve radyasyona maruz kalma süresini gerçek zamanlı takip eder</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Assets_GeigerOn_DisplayName">
-            <English>Personal Geiger Counter (ON)</English>
-            <Czech>Osobní Geigerův počítač (ZAPNUTO)</Czech>
-            <French>Compteur Geiger personnel (ALLUMÉ)</French>
-            <Spanish>Contador Geiger personal (ENCENDIDO)</Spanish>
-            <Italian>Contatore Geiger personale (ACCESO)</Italian>
-            <Polish>Osobisty licznik Geigera (WŁĄCZONY)</Polish>
-            <Portuguese>Contador Geiger pessoal (LIGADO)</Portuguese>
-            <Russian>Личный счетчик Гейгера (ВКЛ)</Russian>
-            <German>Persönliches Geigerzähler (EIN)</German>
-            <Korean>개인용 가이거 계수기(ON)</Korean>
-            <Japanese>個人用ガイガーカウンター（ON）</Japanese>
-            <Chinese>個人蓋革計數器 (開啟)</Chinese>
-            <Chinesesimp>个人盖革计数器 (开启)</Chinesesimp>
-            <Turkish>Kişisel Geiger Sayacı (AÇIK)</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Assets_Geiger_Description">
-            <English>Used to detect radiation on the body</English>
-            <Czech>Používá se k detekci radiace na těle</Czech>
-            <French>Utilisé pour détecter les radiations sur le corps</French>
-            <Spanish>Se utiliza para detectar la radiación en el cuerpo</Spanish>
-            <Italian>Utilizzato per rilevare le radiazioni sul corpo</Italian>
-            <Polish>Służy do wykrywania promieniowania na ciele</Polish>
-            <Portuguese>Usado para detectar radiação no corpo</Portuguese>
-            <Russian>Используется для обнаружения радиации на теле</Russian>
-            <German>Wird verwendet, um Strahlung am Körper zu erkennen</German>
-            <Korean>신체의 방사능을 감지하는 데 사용됩니다.</Korean>
-            <Japanese>体内の放射線を検出するために使用されます</Japanese>
-            <Chinese>用於探測身體輻射</Chinese>
-            <Chinesesimp>用于探测身体辐射</Chinesesimp>
-            <Turkish>Vücuttaki radyasyonu tespit etmek için kullanılır</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Assets_LanternOff_Description">
-            <English>Equipped with batteries</English>
-            <Czech>Vybaveno bateriemi</Czech>
-            <French>Equipé de piles</French>
-            <Spanish>Equipado con baterías</Spanish>
-            <Italian>Dotato di batterie</Italian>
-            <Polish>Wyposażony w baterie</Polish>
-            <Portuguese>Equipado com baterias</Portuguese>
-            <Russian>Оснащен аккумуляторами</Russian>
-            <German>Ausgestattet mit Batterien</German>
-            <Korean>배터리 장착</Korean>
-            <Japanese>電池を搭載</Japanese>
-            <Chinese>配備電池</Chinese>
-            <Chinesesimp>配备电池</Chinesesimp>
-            <Turkish>Pillerle donatılmıştır</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Assets_LanternOff_DisplayName">
-            <English>Lantern (Off)</English>
-            <Czech>Lucerna (vypnuto)</Czech>
-            <French>Lanterne (éteinte)</French>
-            <Spanish>Linterna (apagada)</Spanish>
-            <Italian>Lanterna (spenta)</Italian>
-            <Polish>Latarnia (wyłączona)</Polish>
-            <Portuguese>Lanterna (desligada)</Portuguese>
-            <Russian>Фонарь (Выкл.)</Russian>
-            <German>Laterne (Aus)</German>
-            <Korean>랜턴(끄기)</Korean>
-            <Japanese>ランタン（オフ）</Japanese>
-            <Chinese>燈籠 (關閉)</Chinese>
-            <Chinesesimp>灯笼 (关闭)</Chinesesimp>
-            <Turkish>Fener (Kapalı)</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Assets_LanternOn_Description">
-            <English>Helps light the way in the dark...</English>
-            <Czech>Pomáhá osvětlit cestu ve tmě...</Czech>
-            <French>Aide à éclairer le chemin dans l'obscurité...</French>
-            <Spanish>Ayuda a iluminar el camino en la oscuridad...</Spanish>
-            <Italian>Aiuta a illuminare la strada nell'oscurità...</Italian>
-            <Polish>Pomaga oświetlić drogę w ciemności...</Polish>
-            <Portuguese>Ajuda a iluminar o caminho no escuro...</Portuguese>
-            <Russian>Помогает осветить путь в темноте...</Russian>
-            <German>Hilft, den Weg im Dunkeln zu erhellen...</German>
-            <Korean>어둠 속에서 길을 밝히는 데 도움이 됩니다...</Korean>
-            <Japanese>暗闇で道を照らすのに役立ちます...</Japanese>
-            <Chinese>在黑暗中照亮道路...</Chinese>
-            <Chinesesimp>在黑暗中照亮道路...</Chinesesimp>
-            <Turkish>Karanlıkta yolu aydınlatmaya yardımcı olur...</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Assets_LanternOn_DisplayName">
-            <English>Lantern (On)</English>
-            <Czech>Lucerna (zapnutá)</Czech>
-            <French>Lanterne (Allumée)</French>
-            <Spanish>Linterna (encendida)</Spanish>
-            <Italian>Lanterna (accesa)</Italian>
-            <Polish>Latarnia (włączona)</Polish>
-            <Portuguese>Lanterna (ligada)</Portuguese>
-            <Russian>Фонарь (Вкл.)</Russian>
-            <German>Laterne (Ein)</German>
-            <Korean>랜턴(켜짐)</Korean>
-            <Japanese>ランタン（オン）</Japanese>
-            <Chinese>燈籠 (開啟)</Chinese>
-            <Chinesesimp>灯笼 (开启)</Chinesesimp>
-            <Turkish>Fener (Açık)</Turkish>
+        <Key ID="STR_MISERY_Assets_GeigerCounter_DisplayName">
+            <English>Personal Geiger Counter</English>
+            <Czech>Osobní Geigerův čítač</Czech>
+            <French>Compteur Geiger personnel</French>
+            <Spanish>Contador Geiger personal</Spanish>
+            <Italian>Contatore Geiger personale</Italian>
+            <Polish>Osobisty licznik Geigera</Polish>
+            <Portuguese>Contador Geiger pessoal</Portuguese>
+            <Russian>Персональный счетчик Гейгера</Russian>
+            <German>Persönlicher Geigerzähler</German>
+            <Korean>개인용 가이거 계기</Korean>
+            <Japanese>個人用ガイガーカウンター</Japanese>
+            <Chinese>個人蓋革計數器</Chinese>
+            <Chinesesimp>个人盖革计数器</Chinesesimp>
+            <Turkish>Kişisel Geiger Sayacı</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_Lighter_Description">
             <English>Old lighter...&lt;br/&gt; - Fire crafting</English>
@@ -716,6 +668,38 @@
             <Chinese>淨水片</Chinese>
             <Chinesesimp>净水片</Chinesesimp>
             <Turkish>Aqua tabletleri</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_SHP_Description">
+            <English>Specialized active earpieces designed to protect operators from high frequency cognitive hazards. Emits real time counter static to cancel out brain damaging pressure waves while providing dynamic pitch feedback and entity proximity alerts</English>
+            <Czech>Specializovaná aktivní sluchátka určená k ochraně operátorů před vysokofrekvenčními kognitivními hrozbami. Vyzařují protistatický šum v reálném čase k potlačení tlakových vln poškozujících mozek, přičemž poskytují dynamickou tónovou zpětnou vazbu a varování před blízkostí entit</Czech>
+            <French>Oreillettes actives spécialisées conçues pour protéger les opérateurs contre les risques cognitifs à haute fréquence. Émettent du bruit blanc dynamique en temps réel pour annuler les ondes de pression nocives pour le cerveau tout en fournissant un retour tonal dynamique et des alertes de proximité d'entités</French>
+            <Spanish>Auriculares activos especializados diseñados para proteger a los operadores de peligros cognitivos de alta frecuencia. Emiten estática de cancelación en tiempo real para anular las ondas de presión dañinas para el cerebro, proporcionando retroalimentación de tono dinámica y alertas de proximidad de entidades</Spanish>
+            <Italian>Auricolari attivi specializzati progettati per proteggere gli operatori da pericoli cognitivi ad alta frequenza. Emettono rumore bianco di contrasto in tempo reale per annullare le onde di pressione dannose per il cervello, fornendo feedback di tono dinamico e allarmi di prossimità per le entità</Italian>
+            <Polish>Specjalistyczne słuchawki aktywne zaprojektowane do ochrony operatorów przed zagrożeniami poznawczymi o wysokiej częstotliwości. Emitują szum przeciwstawny w czasie rzeczywistym, aby neutralizować uszkadzające mózg fale ciśnienia, zapewniając dynamiczne sprzężenie zwrotne tonu oraz ostrzeżenia o bliskości obiektów</Polish>
+            <Portuguese>Fones ativos especializados projetados para proteger operadores de perigos cognitivos de alta frequência. Emitem ruído estático de cancelamento em tempo real para anular ondas de pressão danosas ao cérebro, enquanto fornecem feedback dinâmico de tom e alertas de proximidade de entidades</Portuguese>
+            <Russian>Специализированные активные наушники, предназначенные для защиты операторов от высокочастотных когнитивных угроз. Излучают встречный статический шум в реальном времени для подавления травмирующих мозг волн давления, обеспечивая динамическую обратную связь по тональности и сигналы о приближении сущностей</Russian>
+            <German>Spezialisierte aktive Ohrhörer zum Schutz vor hochfrequenten kognitiven Gefahren. Senden Echtzeit-Gegenrauschen aus, um hirnschädigende Druckwellen zu neutralisieren, und bieten dynamische Tonhöhen-Rückmeldungen sowie Entitäts-Annäherungswarnungen</German>
+            <Korean>고주파 인지 위험으로부터 대원을 보호하도록 설계된 특수 액티브 이어폰입니다. 뇌 손상을 일으키는 압력파를 상쇄하기 위해 실시간 상쇄 정전기를 방출하며, 동적 피치 피드백과 개체 근접 경고를 제공합니다</Korean>
+            <Japanese>高周波認知ハザードからオペレーターを保護するよう設計された専門的なアクティブイヤホン。脳に 損傷を与える圧力波を相殺する対抗ノイズをリアルタイムで放出し、動的なピッチフィードバックと実体の近接警告を提供します</Japanese>
+            <Chinese>專為保護作戰人員免受高頻認知危害所設計的特殊主動式耳機。能即時發出反向靜電雜音以抵消損害大腦的壓力波，同時提供動態音調反饋與實體近距警報</Chinese>
+            <Chinesesimp>专为保护作战人员免受高频认知危害所设计的特殊主动式耳机。能实时发出反向静电杂音以抵消损害大脑的压力波，同时提供动态音调反馈与实体近距警报</Chinesesimp>
+            <Turkish>Operatörleri yüksek frekanslı bilişsel tehlikelere karşı korumak için tasarlanmış özel aktif kulaklıklar. Beyne zarar veren basınç dalgalarını engellemek için gerçek zamanlı karşı statik gürültü yayarken dinamik ses tonu geri bildirimi ve varlık yakınlık uyarıları sağlar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_SHP_DisplayName">
+            <English>SHP-1 Active Earpiece Set</English>
+            <Czech>Sada aktivních sluchátek SHP-1</Czech>
+            <French>Ensemble d'oreillettes actives SHP-1</French>
+            <Spanish>Juego de auriculares activos SHP-1</Spanish>
+            <Italian>Set auricolari attivi SHP-1</Italian>
+            <Polish>Zestaw aktywnych słuchawek dousznych SHP-1</Polish>
+            <Portuguese>Conjunto de fones ativos SHP-1</Portuguese>
+            <Russian>Комплект активных наушников SHP-1</Russian>
+            <German>SHP-1 Aktives Ohrhörer-Set</German>
+            <Korean>SHP-1 액티브 이어폰 세트</Korean>
+            <Japanese>SHP-1 アクティブイヤホンセット</Japanese>
+            <Chinese>SHP-1 主動式耳機組</Chinese>
+            <Chinesesimp>SHP-1 主动式耳机组</Chinesesimp>
+            <Turkish>SHP-1 Aktif Kulaklık Seti</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_SawFuel_Description">
             <English>Can of 2 stroke fuel&lt;br/&gt; - Fuel item</English>
@@ -988,38 +972,6 @@
             <Chinese>鍛造砧</Chinese>
             <Chinesesimp>锻造砧</Chinesesimp>
             <Turkish>Demirci Örsü</Turkish>
-        </Key>
-        <Key ID="STR_Misery_Assets_Artifact_Description">
-            <English>A strange object that emits radiation, probably highly sought after by researchers.&lt;br/&gt; - Emits radiation&lt;br/&gt; - Rarity</English>
-            <Czech>Podivný předmět, který vyzařuje radiaci, pravděpodobně velmi žádaný výzkumníky.&lt;br/&gt; - Vyzařuje radiaci&lt;br/&gt; - Vzácnost</Czech>
-            <French>Un objet étrange qui émet des radiations, probablement très recherché par les chercheurs.&lt;br/&gt; - Émet des radiations&lt;br/&gt; - Rareté</French>
-            <Spanish>Un extraño objeto que emite radiación, probablemente muy buscado por los investigadores.&lt;br/&gt; - Emite radiación&lt;br/&gt; - Rareza</Spanish>
-            <Italian>Uno strano oggetto che emette radiazioni, probabilmente molto ricercato dai ricercatori.&lt;br/&gt; - Emette radiazioni&lt;br/&gt; - Rarità</Italian>
-            <Polish>Dziwny obiekt emitujący promieniowanie, prawdopodobnie bardzo poszukiwany przez naukowców.&lt;br/&gt; - Emituje promieniowanie&lt;br/&gt; - Rzadkość</Polish>
-            <Portuguese>Um objeto estranho que emite radiação, provavelmente muito procurado por pesquisadores.&lt;br/&gt; - Emite radiação&lt;br/&gt; - Raridade</Portuguese>
-            <Russian>Странный объект, излучающий радиацию, который, вероятно, очень востребован исследователями.&lt;br/&gt; - Излучает радиацию&lt;br/&gt; - Редкость</Russian>
-            <German>Ein seltsames Objekt, das Strahlung emittiert und wahrscheinlich von Forschern sehr gesucht wird.&lt;br/&gt; - Emittiert Strahlung&lt;br/&gt; - Seltenheit</German>
-            <Korean>방사선을 방출하는 이상한 물체로 연구자들이 많이 찾는 것 같습니다.&lt;br/&gt; - 방사선 방출&lt;br/&gt; - 희귀도</Korean>
-            <Japanese>放射線を放出する奇妙な物体で、おそらく研究者に非常に求められています。&lt;br/&gt; -放射線を放出します&lt;br/&gt; -レア度</Japanese>
-            <Chinese>一個發射輻射的奇怪物體，可能深受研究人員的追捧。&lt;br/&gt; - 發射輻射&lt;br/&gt; - 稀有度</Chinese>
-            <Chinesesimp>一个发射辐射的奇怪物体，可能深受研究人员的追捧。&lt;br/&gt; - 发射辐射&lt;br/&gt; - 稀有度</Chinesesimp>
-            <Turkish>Radyasyon yayan, muhtemelen araştırmacılar tarafından çok aranan garip bir nesne.&lt;br/&gt; - Radyasyon yayar&lt;br/&gt; - Nadirlik</Turkish>
-        </Key>
-        <Key ID="STR_Misery_Assets_Artifact_DisplayName">
-            <English>Artifact</English>
-            <Czech>Artefakt</Czech>
-            <French>Artefact</French>
-            <Spanish>Artefacto</Spanish>
-            <Italian>Artefatto</Italian>
-            <Polish>Artefakt</Polish>
-            <Portuguese>Artefato</Portuguese>
-            <Russian>Артефакт</Russian>
-            <German>Artefakt</German>
-            <Korean>유물</Korean>
-            <Japanese>アーティファクト</Japanese>
-            <Chinese>神器</Chinese>
-            <Chinesesimp>神器</Chinesesimp>
-            <Turkish>Eser</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_AutoBatteryHeavy_Description">
             <English>An old 8D Deep cycle Automotive battery. Very heavy... &lt;br/&gt; - Refueling item &lt;br/&gt; - Crafting item</English>
@@ -2777,22 +2729,6 @@
             <Chinesesimp>报废的盖革计数器</Chinesesimp>
             <Turkish>Ölü Geiger</Turkish>
         </Key>
-        <Key ID="STR_Misery_Assets_GeigerNoBattery_DisplayName">
-            <English>Personal Geiger Counter (No battery)</English>
-            <Czech>Osobní Geigerův počítač (Bez baterie)</Czech>
-            <French>Compteur Geiger personnel (Pas de pile)</French>
-            <Spanish>Contador Geiger personal (Sin batería)</Spanish>
-            <Italian>Contatore Geiger personale (Batteria scarica)</Italian>
-            <Polish>Osobisty licznik Geigera (Brak baterii)</Polish>
-            <Portuguese>Contador Geiger pessoal (Sem bateria)</Portuguese>
-            <Russian>Личный счетчик Гейгера (Без батареи)</Russian>
-            <German>Persönliches Geigerzähler (Keine Batterie)</German>
-            <Korean>개인용 가이거 계수기(배터리 없음)</Korean>
-            <Japanese>個人用ガイガーカウンター（電池切れ）</Japanese>
-            <Chinese>個人蓋革計數器 (無電池)</Chinese>
-            <Chinesesimp>个人盖革计数器 (无电池)</Chinesesimp>
-            <Turkish>Kişisel Geiger Sayacı (Pilsiz)</Turkish>
-        </Key>
         <Key ID="STR_Misery_Assets_GlassRepairKit_Description">
             <English>glass repair kit used for vehicle repair</English>
             <Czech>sada na opravu skla používaná při opravách vozidel</Czech>
@@ -3352,22 +3288,6 @@
             <Chinese>起落架套件</Chinese>
             <Chinesesimp>起落架套件</Chinesesimp>
             <Turkish>İniş takımı kiti</Turkish>
-        </Key>
-        <Key ID="STR_Misery_Assets_LanternNoBattery_DisplayName">
-            <English>Lantern (No battery)</English>
-            <Czech>Lucerna (bez baterie)</Czech>
-            <French>Lanterne (Pas de batterie)</French>
-            <Spanish>Linterna (sin batería)</Spanish>
-            <Italian>Lanterna (senza batteria)</Italian>
-            <Polish>Latarnia (bez baterii)</Polish>
-            <Portuguese>Lanterna (sem bateria)</Portuguese>
-            <Russian>Фонарь (без батареи)</Russian>
-            <German>Laterne (keine Batterie)</German>
-            <Korean>랜턴(배터리 없음)</Korean>
-            <Japanese>ランタン（電池なし）</Japanese>
-            <Chinese>燈籠 (無電池)</Chinese>
-            <Chinesesimp>灯笼 (无电池)</Chinesesimp>
-            <Turkish>Fener (Pil yok)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_LeadContainerClosed_Description">
             <English>A lead isolated container that holds something. The container itself feels mildly warm to the touch, almost as if it's storing some sort of heat energy.&lt;br/&gt; - Contains an artifact &lt;br/&gt; - Rarity</English>

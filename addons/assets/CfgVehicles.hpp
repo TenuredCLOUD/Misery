@@ -1,6 +1,7 @@
 class CfgVehicles {
     class House_F;
     class Thing;
+    class Land_HelipadEmpty_F;
 
     class CLASS(forge): Thing {
         armor = 2000;
@@ -21,4 +22,10 @@ class CfgVehicles {
         model = QPATHTOF(data\models\medievalanvil.p3d);
         textSingular = "Anvil";
     };
+    class CLASS(detectorProxy): Land_HelipadEmpty_F {
+        scope = 1;
+        ACEGVAR(minedetector,detectable) = 1;
+    };
 };
+
+

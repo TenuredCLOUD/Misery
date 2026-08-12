@@ -561,21 +561,21 @@
             <Chinesesimp>无效车辆...</Chinesesimp>
             <Turkish>Geçersiz araç...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Maintenance_ItemToolKit">
-            <English>ToolKit</English>
-            <Czech>Sada nářadí</Czech>
-            <French>Boîte à outils</French>
-            <Spanish>Kit de herramientas</Spanish>
-            <Italian>Kit di attrezzi</Italian>
-            <Polish>Zestaw narzędzi</Polish>
-            <Portuguese>Kit de ferramentas</Portuguese>
-            <Russian>Набор инструментов</Russian>
-            <German>Werkzeugkasten</German>
-            <Korean>툴킷</Korean>
-            <Japanese>ツールキット</Japanese>
-            <Chinese>工具箱</Chinese>
-            <Chinesesimp>工具箱</Chinesesimp>
-            <Turkish>Alet Çantası</Turkish>
+        <Key ID="STR_MISERY_Maintenance_LightServiceCompleted">
+            <English>Light service completed</English>
+            <Czech>Lehký servis dokončen</Czech>
+            <French>Entretien léger terminé</French>
+            <Spanish>Servicio ligero completado</Spanish>
+            <Italian>Manutenzione leggera completata</Italian>
+            <Polish>Lekki serwis zakończony</Polish>
+            <Portuguese>Serviço leve concluído</Portuguese>
+            <Russian>Легкое обслуживание завершено</Russian>
+            <German>Leichte Wartung abgeschlossen</German>
+            <Korean>경정비가 완료되었습니다</Korean>
+            <Japanese>簡易整備が完了しました</Japanese>
+            <Chinese>輕度保養完成</Chinese>
+            <Chinesesimp>轻度保养完成</Chinesesimp>
+            <Turkish>Hafif bakım tamamlandı</Turkish>
         </Key>
         <Key ID="STR_MISERY_Maintenance_NeedCoolantContainers">
             <English>You need %1 or %2 to start draining coolant from %3...</English>
@@ -1024,6 +1024,22 @@
             <Chinese>電量:</Chinese>
             <Chinesesimp>电量:</Chinesesimp>
             <Turkish>Güç:</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Maintenance_QuickService">
+            <English>Quick Service</English>
+            <Czech>Rychlý servis</Czech>
+            <French>Entretien rapide</French>
+            <Spanish>Servicio rápido</Spanish>
+            <Italian>Manutenzione rapida</Italian>
+            <Polish>Szybki serwis</Polish>
+            <Portuguese>Serviço rápido</Portuguese>
+            <Russian>Быстрое обслуживание</Russian>
+            <German>Schnellwartung</German>
+            <Korean>간이 정비</Korean>
+            <Japanese>簡易整備</Japanese>
+            <Chinese>快速保養</Chinese>
+            <Chinesesimp>快速保养</Chinesesimp>
+            <Turkish>Hızlı Bakım</Turkish>
         </Key>
         <Key ID="STR_MISERY_Maintenance_Refuel">
             <English>Refuel</English>

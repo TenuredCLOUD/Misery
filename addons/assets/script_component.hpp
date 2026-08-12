@@ -3,21 +3,13 @@
 #include "\z\misery\addons\main\script_mod.hpp"
 
 #define MACRO_WEAPONS \
+    QCLASS(shpKit), \
+    QCLASS(fallout_glass), \
     QCLASS(18vBattery), \
     QCLASS(9vBattery), \
     QCLASS(amethyst), \
     QCLASS(antidote), \
     QCLASS(anvilHammer), \
-    QCLASS(artifact_01), \
-    QCLASS(artifact_02), \
-    QCLASS(artifact_03), \
-    QCLASS(artifact_04), \
-    QCLASS(artifact_05), \
-    QCLASS(artifact_06), \
-    QCLASS(artifact_07), \
-    QCLASS(artifact_08), \
-    QCLASS(artifact_09), \
-    QCLASS(artifact_10), \
     QCLASS(bakedBeans), \
     QCLASS(boneSaw), \
     QCLASS(camoNet), \
@@ -57,7 +49,7 @@
     QCLASS(gasCartridge), \
     QCLASS(gasMask_Empty), \
     QCLASS(geiger_dead), \
-    QCLASS(geiger_NoBattery), \
+    QCLASS(geiger), \
     QCLASS(glucose), \
     QCLASS(goldIngot), \
     QCLASS(goldOre), \
@@ -69,8 +61,6 @@
     QCLASS(ironPiece), \
     QCLASS(ItemCore), \
     QCLASS(jetFuelEmpty), \
-    QCLASS(lantern_NoBattery), \
-    QCLASS(leadContainer_Closed), \
     QCLASS(leadContainer_Open), \
     QCLASS(lithiumBattery), \
     QCLASS(lockKit), \

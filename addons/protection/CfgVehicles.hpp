@@ -7,7 +7,6 @@ class CfgVehicles {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 1;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 0;
     };
 
     class B_CombinationUnitRespirator_01_Base_F: Bag_Base {
@@ -16,6 +15,5 @@ class CfgVehicles {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 1;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 0;
     };
 };

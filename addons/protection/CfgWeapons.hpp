@@ -8,7 +8,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetCrew_B: H_HelmetB {
@@ -17,7 +16,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetCrew_I: H_HelmetCrew_B {
@@ -26,7 +24,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetCrew_I_E: H_HelmetCrew_I {
@@ -35,7 +32,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetHBK_headset_base_F;
@@ -45,7 +41,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetHBK_chops_base_F;
@@ -55,7 +50,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetHBK_ear_base_F;
@@ -65,7 +59,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetO_ocamo: H_HelmetB {
@@ -74,7 +67,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetSpecO_ocamo: H_HelmetO_ocamo {
@@ -83,7 +75,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetSpecO_blk: H_HelmetSpecO_ocamo {
@@ -92,7 +83,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetSpecO_ghex_F: H_HelmetSpecO_ocamo {
@@ -101,7 +91,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetAggressor_base_F;
@@ -111,7 +100,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetAggressor_cover_base_F;
@@ -121,7 +109,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetAggressor_cover_taiga_F: H_HelmetAggressor_cover_base_F {
@@ -130,7 +117,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetB_camo: H_HelmetB {
@@ -139,7 +125,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetCrew_O: H_HelmetCrew_B {
@@ -148,7 +133,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetCrew_O_ghex_F: H_HelmetCrew_O {
@@ -157,7 +141,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_Tank_base_F;
@@ -167,7 +150,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_Tank_eaf_F: H_Tank_black_F {
@@ -176,7 +158,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetLeaderO_ocamo: H_HelmetO_ocamo {
@@ -185,7 +166,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetLeaderO_ghex_F: H_HelmetLeaderO_ocamo {
@@ -194,7 +174,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetLeaderO_oucamo: H_HelmetLeaderO_ocamo {
@@ -203,7 +182,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_EarProtectors_base_F;
@@ -213,7 +191,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_EarProtectors_orange_F: H_EarProtectors_base_F {
@@ -222,7 +199,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_EarProtectors_red_F: H_EarProtectors_base_F {
@@ -231,7 +207,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_EarProtectors_white_F: H_EarProtectors_base_F {
@@ -240,7 +215,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_EarProtectors_yellow_F: H_EarProtectors_base_F {
@@ -249,7 +223,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetB_plain_mcamo;
@@ -259,7 +232,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetSpecB_blk: H_HelmetSpecB {
@@ -268,7 +240,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetSpecB_paint2: H_HelmetSpecB {
@@ -277,7 +248,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetSpecB_paint1: H_HelmetSpecB {
@@ -286,7 +256,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetSpecB_sand: H_HelmetSpecB {
@@ -295,7 +264,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetB_Enh_tna_F: H_HelmetSpecB {
@@ -304,7 +272,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetSpecB_wdl: H_HelmetSpecB {
@@ -313,7 +280,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HeadSet_base_F;
@@ -323,7 +289,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HeadSet_orange_F: H_HeadSet_base_F {
@@ -332,7 +297,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HeadSet_red_F: H_HeadSet_base_F {
@@ -341,7 +305,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HeadSet_white_F: H_HeadSet_base_F {
@@ -350,7 +313,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HeadSet_yellow_F: H_HeadSet_base_F {
@@ -359,7 +321,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_CrewHelmetHeli_B: H_HelmetB {
@@ -368,7 +329,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.25;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 1;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_CrewHelmetHeli_I: H_CrewHelmetHeli_B {
@@ -377,7 +337,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.25;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 1;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_CrewHelmetHeli_O: H_CrewHelmetHeli_B {
@@ -386,7 +345,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.25;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 1;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_CrewHelmetHeli_I_E: H_CrewHelmetHeli_O {
@@ -395,7 +353,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.25;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 1;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_PilotHelmetHeli_B: H_HelmetB {
@@ -404,7 +361,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 1;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_PilotHelmetHeli_I: H_PilotHelmetHeli_B {
@@ -413,7 +369,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 1;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_PilotHelmetHeli_O: H_PilotHelmetHeli_B {
@@ -422,7 +377,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 1;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_PilotHelmetHeli_I_E: H_PilotHelmetHeli_O {
@@ -431,7 +385,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 1;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetB_light: H_HelmetB {
@@ -440,7 +393,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetB_light_black: H_HelmetB_light {
@@ -449,7 +401,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetB_light_desert: H_HelmetB_light {
@@ -458,7 +409,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetB_light_grass: H_HelmetB_light {
@@ -467,7 +417,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetB_light_sand: H_HelmetB_light {
@@ -476,7 +425,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetB_light_snakeskin: H_HelmetB_light {
@@ -485,7 +433,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetB_Light_tna_F: H_HelmetB_light {
@@ -494,7 +441,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetB_light_wdl: H_HelmetB_light {
@@ -503,7 +449,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class HelmetBase;
@@ -513,7 +458,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_Cap_marshal: H_Cap_headphones {
@@ -522,7 +466,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_PilotHelmetFighter_B: H_HelmetB {
@@ -531,7 +474,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.25;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 1;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_PilotHelmetFighter_I: H_PilotHelmetFighter_B {
@@ -540,7 +482,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.25;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 1;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_PilotHelmetFighter_O: H_PilotHelmetFighter_B {
@@ -549,7 +490,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.25;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 1;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_PilotHelmetFighter_I_E: H_PilotHelmetFighter_O {
@@ -558,7 +498,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.25;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 1;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetO_ghex_F: H_HelmetO_ocamo {
@@ -567,7 +506,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetO_oucamo: H_HelmetO_ocamo {
@@ -576,7 +514,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_RacingHelmet_1_F: H_HelmetB_camo {
@@ -585,7 +522,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.25;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 1;
-        GVAR(hearingProtection) = 0.25;
     };
 
     class H_RacingHelmet_1_black_F: H_RacingHelmet_1_F {
@@ -594,7 +530,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.25;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 1;
-        GVAR(hearingProtection) = 0.25;
     };
 
     class H_RacingHelmet_2_F: H_RacingHelmet_1_F {
@@ -603,7 +538,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.25;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 1;
-        GVAR(hearingProtection) = 0.25;
     };
 
     class H_RacingHelmet_1_green_F: H_RacingHelmet_1_black_F {
@@ -612,7 +546,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.25;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 1;
-        GVAR(hearingProtection) = 0.25;
     };
 
     class H_RacingHelmet_1_orange_F: H_RacingHelmet_1_black_F {
@@ -621,7 +554,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.25;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 1;
-        GVAR(hearingProtection) = 0.25;
     };
 
     class H_RacingHelmet_1_red_F: H_RacingHelmet_1_black_F {
@@ -630,7 +562,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.25;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 1;
-        GVAR(hearingProtection) = 0.25;
     };
 
     class H_RacingHelmet_3_F: H_RacingHelmet_1_F {
@@ -639,7 +570,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.25;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 1;
-        GVAR(hearingProtection) = 0.25;
     };
 
     class H_RacingHelmet_4_F: H_RacingHelmet_1_F {
@@ -648,7 +578,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.25;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 1;
-        GVAR(hearingProtection) = 0.25;
     };
 
     class H_RacingHelmet_1_white_F: H_RacingHelmet_1_black_F {
@@ -657,7 +586,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.25;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 1;
-        GVAR(hearingProtection) = 0.25;
     };
 
     class H_RacingHelmet_1_yellow_F: H_RacingHelmet_1_black_F {
@@ -666,7 +594,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.25;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 1;
-        GVAR(hearingProtection) = 0.25;
     };
 
     class H_HelmetO_ViperSP_hex_F: H_HelmetB {
@@ -675,7 +602,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.25;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 1;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetO_ViperSP_ghex_F: H_HelmetO_ViperSP_hex_F {
@@ -684,7 +610,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.25;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 1;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetB_TI_tna_F: H_HelmetB {
@@ -693,7 +618,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class H_HelmetB_TI_arid_F: H_HelmetB_TI_tna_F {
@@ -702,7 +626,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 1;
     };
 
     class Uniform_Base;
@@ -712,7 +635,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.75;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 0;
     };
 
     class U_B_CBRN_Suit_01_Tropic_F: Uniform_Base {
@@ -721,7 +643,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.75;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 0;
     };
 
     class U_B_CBRN_Suit_01_Wdl_F: Uniform_Base {
@@ -730,7 +651,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.75;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 0;
     };
 
     class U_C_CBRN_Suit_01_Blue_F: Uniform_Base {
@@ -739,7 +659,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.75;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 0;
     };
 
     class U_C_CBRN_Suit_01_White_F: Uniform_Base {
@@ -748,7 +667,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.75;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 0;
     };
 
     class U_I_CBRN_Suit_01_AAF_F: Uniform_Base {
@@ -757,7 +675,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.75;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 0;
     };
 
     class U_I_E_CBRN_Suit_01_EAF_F: Uniform_Base {
@@ -766,7 +683,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.75;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 0;
     };
 
     class U_O_T_Soldier_F: Uniform_Base {
@@ -775,7 +691,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.75;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 0;
     };
 
     class U_O_CombatUniform_ocamo: Uniform_Base {
@@ -784,7 +699,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.75;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 0;
     };
 
     class U_O_CombatUniform_oucamo: Uniform_Base {
@@ -793,7 +707,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.75;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 0;
     };
 
     class U_O_PilotCoveralls: Uniform_Base {
@@ -802,7 +715,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.75;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 0;
     };
 
     class U_B_PilotCoveralls: Uniform_Base {
@@ -811,7 +723,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.75;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 0;
     };
 
     class U_O_SpecopsUniform_ocamo: Uniform_Base {
@@ -820,7 +731,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.75;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 0;
     };
 
     class U_O_V_Soldier_Viper_F: Uniform_Base {
@@ -829,7 +739,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.75;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 0;
     };
 
     class U_O_V_Soldier_Viper_hex_F: Uniform_Base {
@@ -838,7 +747,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.75;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 0;
     };
 
     class U_O_T_Sniper_F: Uniform_Base {
@@ -847,7 +755,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0.75;
         GVAR(respiratoryProtection) = 0;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 0;
     };
 
     class VestItem;
@@ -858,7 +765,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 1;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 0;
         displayName = "Oxygen Rebreather [NATO]";
         hiddenSelections[] = {"camo", "hide", "unhide", "unhide2"};
         hiddenSelectionsTextures[] = {
@@ -888,7 +794,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 1;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 0;
         displayName = "Oxygen Rebreather [AAF]";
         hiddenSelections[] = {"camo", "hide", "unhide", "unhide2"};
         hiddenSelectionsTextures[] = {
@@ -918,7 +823,6 @@ class CfgWeapons {
         GVAR(skinProtection) = 0;
         GVAR(respiratoryProtection) = 1;
         GVAR(eyeProtection) = 0;
-        GVAR(hearingProtection) = 0;
         displayName = "Oxygen Rebreather [CSAT]";
         hiddenSelections[] = {"camo", "hide", "unhide", "unhide2"};
         hiddenSelectionsTextures[] = {

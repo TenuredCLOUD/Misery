@@ -19,7 +19,7 @@
 [{
     params ["_args", "_handle"];
 
-    private _vehicle = vehicle ACE_player;
+    private _vehicle = objectParent ACE_player;
 
     [_vehicle] call EFUNC(common,getObjectData) params ["_displayName"];
 
@@ -98,7 +98,7 @@
             } forEach [1804, 2003];
         };
     };
-}, 0] call CBA_fnc_addPerFrameHandler;
+}, 0.1] call CBA_fnc_addPerFrameHandler;
 
 
 

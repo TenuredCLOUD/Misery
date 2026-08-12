@@ -13,7 +13,7 @@
  *    2: Skin Protection
  *    3: Respiratory Protection
  *    4: Eye Protection
- *    5: Hearing Protection
+ *    5: Hearing Protection (ACE hearing)
  *
  * Example:
  * [] call misery_protection_fnc_totalProtection;
@@ -43,5 +43,14 @@ private _totals = _unit call FUNC(backpack);
         } forEach _currentGearArray;
     };
 } forEach _allGear;
+
+// ACE hearing value
+private _headgear = headgear ACE_player;
+
+private _heargearConfig = configFile >> "CfgWeapons" >> _headgear;
+
+private _protection = getNumber (_heargearConfig >> QCLASSACE(hearing_protection)) min 1;
+
+_totals set [5, _protection];
 
 _totals

@@ -15,7 +15,7 @@
  *
 */
 
-[ACE_player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
+private _vehicle = ACE_player getVariable [QGVAR(currentVehicle), objNull];
 
 if (isNull _vehicle) exitWith {
     ctrlSetText [1001, localize LSTRING(InvalidVehicle)];

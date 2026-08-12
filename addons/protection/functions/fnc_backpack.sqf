@@ -13,7 +13,6 @@
  *    2: Skin Protection
  *    3: Respiratory Protection
  *    4: Eye Protection
- *    5: Hearing Protection
  *
  * Example:
  * [] call misery_protection_fnc_backpack;
@@ -35,8 +34,7 @@ private _attributes = [
     QGVAR(scba),
     QGVAR(skinProtection),
     QGVAR(respiratoryProtection),
-    QGVAR(eyeProtection),
-    QGVAR(hearingProtection)
+    QGVAR(eyeProtection)
 ];
 
 _attributes apply {

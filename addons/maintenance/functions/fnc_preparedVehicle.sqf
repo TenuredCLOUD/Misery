@@ -49,7 +49,7 @@ if (_vehicle isKindOf "Car") then {
     [_vehicle, QCLASS(metalFabricationKit), selectRandom [0, 1], true] call CBA_fnc_addItemCargo;
 };
 
-if (typeOf _vehicle in MACRO_TANK_CLASSES) then {
+if (_vehicle isKindOf "Tank") then {
     [_vehicle, QCLASS(trackRepairKit), selectRandom [0, 1], true] call CBA_fnc_addItemCargo;
     [_vehicle, QCLASS(glassRepairKit), selectRandom [0, 1], true] call CBA_fnc_addItemCargo;
     [_vehicle, QCLASS(electronicRepairKit), selectRandom [0, 1], true] call CBA_fnc_addItemCargo;

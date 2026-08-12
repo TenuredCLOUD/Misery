@@ -21,6 +21,9 @@ if (isNil QEGVAR(common,vehicleData)) then {
 
 ["AllVehicles", "Init", {
     params ["_vehicle"];
+
+    if (unitIsUAV _vehicle) exitWith {};
+
     private _vehicleName = typeOf _vehicle;
 
     private _existingEntry = EGVAR(common,vehicleData) findIf {(_x select 0) isEqualTo _vehicleName};

@@ -81,5 +81,37 @@
             <Chinesesimp>开启基于音频的认知危害区域？</Chinesesimp>
             <Turkish>Ses tabanlı Bilişsel Tehlike bölgeleri etkinleştirilsin mi?</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Cognito_Hazard_EquipSHP">
+            <English>Insert Earpieces</English>
+            <Czech>Nasadit sluchátka</Czech>
+            <French>Insérer les oreillettes</French>
+            <Spanish>Insertar auriculares</Spanish>
+            <Italian>Inserisci auricolari</Italian>
+            <Polish>Załóż słuchawki</Polish>
+            <Portuguese>Inserir fones</Portuguese>
+            <Russian>Вставить наушники</Russian>
+            <German>Ohrhörer einsetzen</German>
+            <Korean>이어폰 착용</Korean>
+            <Japanese>イヤホンを装着</Japanese>
+            <Chinese>戴上耳機</Chinese>
+            <Chinesesimp>戴上耳机</Chinesesimp>
+            <Turkish>Kulaklıkları Tak</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Cognito_Hazard_UnequipSHP">
+            <English>Remove Earpieces</English>
+            <Czech>Vyjmout sluchátka</Czech>
+            <French>Retirer les oreillettes</French>
+            <Spanish>Retirar auriculares</Spanish>
+            <Italian>Rimuovi auricolari</Italian>
+            <Polish>Zdejmij słuchawki</Polish>
+            <Portuguese>Remover fones</Portuguese>
+            <Russian>Снять наушники</Russian>
+            <German>Ohrhörer herausnehmen</German>
+            <Korean>이어폰 탈착</Korean>
+            <Japanese>イヤホンを外す</Japanese>
+            <Chinese>取下耳機</Chinese>
+            <Chinesesimp>取下耳机</Chinesesimp>
+            <Turkish>Kulaklıkları Çıkar</Turkish>
+        </Key>
     </Package>
 </Project>

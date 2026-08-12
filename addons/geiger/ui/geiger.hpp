@@ -29,4 +29,3 @@ class CLASS(geiger_ui) {
     };
 };
 
-

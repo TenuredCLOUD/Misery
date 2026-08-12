@@ -23,62 +23,40 @@ params ["_centerPos", "_numArtifacts", "_radius", "_markerSize", "_currentMarker
 
 if (!isServer) exitWith {};
 
-if (_currentMarker in GVAR(processedMarkers)) exitWith {
-    [QUOTE(COMPONENT_BEAUTIFIED), format ["Artifacts already generated for %1", _currentMarker]] call EFUNC(common,debugMessage);
-};
-
-[_centerPos, _radius] call EFUNC(common,nearBuilding) params ["", "", "_nearBuildings"];
-
-private _buildingPositions = [];
-
-{
-    _buildingPositions append (_x buildingPos -1);
-} forEach _nearBuildings;
+if (_currentMarker in GVAR(processedMarkers)) exitWith {};
 
 for "_i" from 1 to _numArtifacts do {
-    private _useBuilding = [[50] call EFUNC(common,rollChance), false] select (_buildingPositions isEqualTo []);
+    private _randomPos = [_currentMarker] call CBA_fnc_randPosArea;
 
-    private _randomPos = if (_useBuilding) then {
-        selectRandom _buildingPositions;
-    } else {
-        [_currentMarker] call CBA_fnc_randPosArea;
-    };
+    _randomPos set [2, 0];
 
-    if (count _randomPos < 3) then {
-        _randomPos = [_currentMarker] call CBA_fnc_randPosArea;
-        _useBuilding = false;
-    };
+    // Ensure position is outdoors (no roofs or nearby building geometry)
+    private _eyePos = _randomPos;
 
-    private _groundHolder = createVehicle ["WeaponHolderSimulated", _randomPos, [], 0, "CAN_COLLIDE"];
+    _eyePos set [2, (_eyePos select 2) + 0.2];
 
-    removeFromRemainsCollector [_groundHolder];
+    private _roofPos = _randomPos;
 
-    _groundHolder addItemCargoGlobal [selectRandom [MACRO_ARTIFACTS], 1];
+    _roofPos set [2, (_roofPos select 2) + 30];
 
-    private _reflectorClass = selectRandom [
-        "Reflector_Cone_01_white_F",
-        "Reflector_Cone_01_orange_F",
-        "Reflector_Cone_01_red_F",
-        "Reflector_Cone_01_green_F",
-        "Reflector_Cone_01_blue_F"
-    ];
+    private _underRoof = lineIntersects [_eyePos, _roofPos];
 
-    private _light = createVehicle [_reflectorClass, [0, 0, 0], [], 0, "CAN_COLLIDE"];
+    private _nearBuildings = nearestObjects [_randomPos, ["House", "Building"], 6];
 
-    _light attachTo [_groundHolder, [0, 0, 0.5]];
-    _light setVectorDirAndUp [[0, 0, -1], [0, 1, 0]];
+    if (!_underRoof && {_nearBuildings isEqualTo []}) then {
 
-    _groundHolder setVariable [QGVAR(lightEmission), _light, true];
+        private _detectorProxy = createVehicle [QCLASS(detectorProxy), _randomPos, [], 0, "CAN_COLLIDE"];
 
-    // Debug markers
-    if (GVAR(debug)) then {
-        private _marker = createMarker [format ["Artifact_%1_%2", diag_tickTime, _i], _randomPos];
-        _marker setMarkerTypeLocal "hd_dot";
-        _marker setMarkerColorLocal (["ColorGreen", "ColorBlue"] select _useBuilding);
-        _marker setMarkerText format ["Artifact_%1", ["OUTDOOR", "INDOOR"] select _useBuilding];
+        private _logicNode = createVehicle ["ACE_LogicDummy", _randomPos, [], 0, "CAN_COLLIDE"];
+
+        _logicNode setPosATL _randomPos;
+
+        _logicNode setVariable [QGVAR(detectorProxy), _detectorProxy, true];
+
+        private _jipID = [QGVAR(setupExcavationNode), [_logicNode]] call CBA_fnc_globalEventJIP;
+        _logicNode setVariable [QGVAR(nodeJipID), _jipID, true];
     };
 };
 
-// Mark marker as processed
 GVAR(processedMarkers) pushBackUnique _currentMarker;
 publicVariable QGVAR(processedMarkers);

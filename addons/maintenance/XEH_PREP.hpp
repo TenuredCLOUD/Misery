@@ -12,6 +12,6 @@ PREP(removeOil);
 PREP(repair);
 PREP(scavenge);
 PREP(syphon);
+PREP(unload);
 PREP(updateIcon);
-PREP(vehicleControl);
 PREP(vehicleStats);
