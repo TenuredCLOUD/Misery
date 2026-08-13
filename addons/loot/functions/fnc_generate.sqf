@@ -21,12 +21,12 @@
 
 params ["_spawnPosition", "_isMilitary", "_isMedical", "_isStore", "_isGarage"];
 
-private ["_lootType", "_markerID", "_debugMarker", "_weaponCargo", "_magazineCargo", "_itemCargo", "_backpackCargo"];
+private _lootType = 0;
 
-_weaponCargo = [];
-_magazineCargo = [];
-_itemCargo = [];
-_backpackCargo = [];
+private _weaponCargo = [];
+private _magazineCargo = [];
+private _itemCargo = [];
+private _backpackCargo = [];
 
 /*
  * Adjust loot type probabilities based on building type
@@ -63,8 +63,8 @@ switch (true) do {
 };
 
 if (EGVAR(common,debugMode) > 0) then {
-    _markerID = format ["%1", _spawnPosition];
-    _debugMarker = createMarkerLocal [_markerID, _spawnPosition];
+    private _markerID = format ["%1", _spawnPosition];
+    private _debugMarker = createMarkerLocal [_markerID, _spawnPosition];
     _debugMarker setMarkerShapeLocal "ICON";
     _debugMarker setMarkerTypeLocal "hd_dot";
     _debugMarker setMarkerColorLocal "ColorRed";
