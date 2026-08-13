@@ -41,7 +41,7 @@ if (_indexData select [0, 1] isEqualTo "[") exitWith {
     private _hiddenPoints = parseSimpleArray _indexData;
 
     [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], false] call EFUNC(common,displayEnableControls);
-    ACE_player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+    [ACE_player, "AinvPknlMstpSnonWnonDnon_medic0", 2] call ACEFUNC(common,doAnimation);
 
     [{
         params ["_vehicle", "_hiddenPoints"];
@@ -87,7 +87,7 @@ switch (true) do {
 
         if (_hitpointDamage isEqualTo 1 && _hasSpare) then {
             [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], false] call EFUNC(common,displayEnableControls);
-            ACE_player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+            [ACE_player, "AinvPknlMstpSnonWnonDnon_medic0", 2] call ACEFUNC(common,doAnimation);
             [{
                 params ["_vehicle", "_index"];
                 [ACE_player, QCLASS(spareTire)] call CBA_fnc_removeItem;
@@ -102,7 +102,7 @@ switch (true) do {
             } else {
                 if (_hitpointDamage > 0 && _hasPatchKit) then {
                     [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], false] call EFUNC(common,displayEnableControls);
-                    ACE_player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+                    [ACE_player, "AinvPknlMstpSnonWnonDnon_medic0", 2] call ACEFUNC(common,doAnimation);
                     [{
                         params ["_vehicle", "_index"];
                         [QCLASS(tirePatchKit)] call EFUNC(common,itemDecrement);
@@ -133,7 +133,7 @@ switch (true) do {
             [_vehicle] call FUNC(listed);
         };
         if ([[_requiredForRepair]] call EFUNC(common,hasItem)) exitWith {
-            ACE_player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+            [ACE_player, "AinvPknlMstpSnonWnonDnon_medic0", 2] call ACEFUNC(common,doAnimation);
             [{
                 params ["_vehicle", "_requiredForRepair", "_index", "_selectionName"];
                 if !(GVAR(difficulty)) then {

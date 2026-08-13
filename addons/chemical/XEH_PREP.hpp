@@ -1,4 +1,3 @@
-PREP(batteries);
 PREP(checkAreas);
 PREP(detectorAlert);
 PREP(gas);

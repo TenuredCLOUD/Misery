@@ -75,7 +75,7 @@ switch (true) do {
         };
 
         [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], false] call EFUNC(common,displayEnableControls);
-        ACE_player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+        [ACE_player, "AinvPknlMstpSnonWnonDnon_medic0", 2] call ACEFUNC(common,doAnimation);
         [{
             params ["_vehicle", "_index", "_selectionName", "_scavengedItem"];
             if !(GVAR(difficulty)) then {
@@ -105,7 +105,7 @@ switch (true) do {
             [_vehicle] call FUNC(listed);
         };
         if ([[QCLASS(emptyToolKit)]] call EFUNC(common,hasItem)) exitWith {
-            ACE_player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+            [ACE_player, "AinvPknlMstpSnonWnonDnon_medic0", 2] call ACEFUNC(common,doAnimation);
             [{
                 params ["_vehicle", "_index", "_selectionName", "_scavengedItem"];
                 ACE_player removeItem QCLASS(emptyToolKit);
@@ -124,7 +124,7 @@ switch (true) do {
                 [_vehicle] call FUNC(listed);
             };
             if (_incremented) exitWith {
-                ACE_player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+                [ACE_player, "AinvPknlMstpSnonWnonDnon_medic0", 2] call ACEFUNC(common,doAnimation);
                 [{
                     params ["_vehicle", "_index", "_selectionName", "_scavengedItem"];
                     _vehicle setHitIndex [_index, 1];
