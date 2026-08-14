@@ -21,7 +21,6 @@ PREP(grabComposition);
 PREP(grabParentClass);
 PREP(handgunAttachments);
 PREP(hasItem);
-PREP(isInside);
 PREP(isInsideLoot);
 PREP(isModLoaded);
 PREP(itemDecrement);
