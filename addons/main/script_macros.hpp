@@ -187,6 +187,7 @@
 "Land_WoodenBed_01_F", \
 "Land_Sun_chair_green_F", \
 "Land_ArmChair_01_F", \
+"Land_Sofa_01_F", \
 "Land_Sleeping_bag_F", \
 "Land_Sleeping_bag_blue_F", \
 "Land_Sleeping_bag_brown_F", \
@@ -218,6 +219,7 @@
 "woodenbed_01_f.p3d", \
 "sun_chair_green_f.p3d", \
 "armchair_01_f.p3d", \
+"sofa_01_f.p3d", \
 "sleeping_bag_f.p3d", \
 "sleeping_bag_blue_f.p3d", \
 "sleeping_bag_brown_f.p3d", \

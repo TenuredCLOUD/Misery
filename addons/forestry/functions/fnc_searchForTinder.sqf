@@ -33,6 +33,8 @@ _soundDummy attachTo [ACE_player, [0, 0, 0], "Pelvis"];
 
 _soundDummy say3D [QCLASS(audio_sound_dryGrass), 25];
 
+[ACE_player, "AinvPknlMstpSnonWnonDnon_medic4", 1] call ACEFUNC(common,doAnimation);
+
 [localize LSTRING(SearchingTinder),
 15,
 {[ACE_player] call EFUNC(common,nearTree) params ["_found", "", "", "", ""]; _found},
@@ -62,6 +64,8 @@ _soundDummy say3D [QCLASS(audio_sound_dryGrass), 25];
 
         [QUOTE(COMPONENT_BEAUTIFIED), format ["Cached position %1 for tinder", _position]] call EFUNC(common,debugMessage);
     };
+
+    [ACE_player, "", 1] call ACEFUNC(common,doAnimation);
 },
 {
     params ["_args"];
@@ -72,6 +76,8 @@ _soundDummy say3D [QCLASS(audio_sound_dryGrass), 25];
     };
 
     [QEGVAR(common,tileText), localize LSTRING(StopSearchingTinder)] call CBA_fnc_localEvent;
+
+    [ACE_player, "", 1] call ACEFUNC(common,doAnimation);
 },
 [_nearestTree, _soundDummy]
 ] call CBA_fnc_progressBar;

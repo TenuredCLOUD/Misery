@@ -10,7 +10,24 @@ if !(hasInterface) exitWith {};
         params ["_type"];
         if (_type isNotEqualTo 0) exitWith {};
 
+        [ACE_player, 1, 2] call EFUNC(common,nearEnvironmentSource) params ["_found"];
+
+        if !(_found) exitWith {};
+
         [] call FUNC(interaction);
+    }] call CBA_fnc_addEventHandler;
+
+    [QCLASSACE(interactMenuClosed), {
+        if (!isNull GVAR(activeTreeLogic)) then {
+            [GVAR(activeTreeLogic), 0, [QUOTE(ACE_MainActions), QGVAR(forestryTree_Base_menu)]] call ACEFUNC(interact_menu,removeActionFromObject);
+            deleteVehicle GVAR(activeTreeLogic);
+            GVAR(activeTreeLogic) = objNull;
+        };
+        if (!isNull GVAR(activeForagingLogic)) then {
+            [GVAR(activeForagingLogic), 0, [QUOTE(ACE_MainActions), QGVAR(foraging_menu)]] call ACEFUNC(interact_menu,removeActionFromObject);
+            deleteVehicle GVAR(activeForagingLogic);
+            GVAR(activeForagingLogic) = objNull;
+        };
     }] call CBA_fnc_addEventHandler;
 
     private _forestrySplitLog = [

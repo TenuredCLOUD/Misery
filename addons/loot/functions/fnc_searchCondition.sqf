@@ -17,7 +17,7 @@
  *
 */
 
-[1] call EFUNC(common,getLookedAtTarget) params ["_object", "_hitPos"];
+[2] call EFUNC(common,getLookedAtTarget) params ["_object", "_hitPos"];
 
 if (isNull _object) exitWith {[false, objNull, [], [0, 0, 0]]};
 

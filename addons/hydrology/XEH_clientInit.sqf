@@ -27,21 +27,26 @@ if (isClass (missionConfigFile >> "CfgMisery_HydrologyData")) then {
     GVAR(lastInteractedSource) = objNull;
     GVAR(activeLogic) = objNull;
 
-    [QCLASSACE(interactMenuOpened), {
-        params ["_type"];
-        if (_type isNotEqualTo 0) exitWith {};
+    ["CBA_loadingScreenDone", {
 
-        [] call FUNC(condition) params ["_found"];
+        [QCLASSACE(interactMenuOpened), {
+            params ["_type"];
+            if (_type isNotEqualTo 0) exitWith {};
 
-        if !(_found) exitWith {};
+            [] call FUNC(condition) params ["_found"];
 
-        [] call FUNC(interaction);
-    }] call CBA_fnc_addEventHandler;
+            if !(_found) exitWith {};
 
-    [QCLASSACE(interactMenuClosed), {
-        if (!isNull GVAR(activeLogic)) then {
-            [GVAR(activeLogic), 0, [QGVAR(hydrology_menu)]] call ACEFUNC(interact_menu,removeActionFromObject);
-            GVAR(activeLogic) = objNull;
-        };
+            [] call FUNC(interaction);
+        }] call CBA_fnc_addEventHandler;
+
+        [QCLASSACE(interactMenuClosed), {
+            if (!isNull GVAR(activeLogic)) then {
+                [GVAR(activeLogic), 0, [QUOTE(ACE_MainActions), QGVAR(hydrology_menu)]] call ACEFUNC(interact_menu,removeActionFromObject);
+                [GVAR(activeLogic), 0, [QUOTE(ACE_MainActions), QGVAR(checkSource_menu)]] call ACEFUNC(interact_menu,removeActionFromObject);
+                deleteVehicle GVAR(activeLogic);
+                GVAR(activeLogic) = objNull;
+            };
+        }] call CBA_fnc_addEventHandler;
     }] call CBA_fnc_addEventHandler;
 };

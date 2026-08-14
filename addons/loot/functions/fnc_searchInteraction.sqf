@@ -13,49 +13,31 @@
  * [] call misery_loot_fnc_searchInteraction;
  *
 */
+[] call FUNC(searchCondition) params ["_found", "_object", "_objectData", "_hitPos"];
 
-[{
-    params ["_args", "_handle"];
-
-    if (!ACEGVAR(interact_menu,keydown)) exitWith {
-        [_handle] call CBA_fnc_removePerFrameHandler;
-        if (!isNull GVAR(activeLogic)) then {
-            deleteVehicle GVAR(activeLogic);
-            GVAR(activeLogic) = objNull;
-        };
-    };
-
-    [] call FUNC(searchCondition) params ["_found", "_object", "_objectData", "_hitPos"];
-
-    if (_found) then {
-        if (isNull GVAR(activeLogic)) then {
-            GVAR(activeLogic) = "ACE_LogicDummy" createVehicleLocal [0, 0, 0];
-
-            private _action = [
-                QGVAR(searchObject_menu),
-                localize LSTRING(SearchAction),
-                QPATHTOEF(icons,data\scan_search_ca.paa),
-                {
-                    params ["", "", "_params"];
-                    _params params ["_realObject", "_objectData", "_hitPos"];
-                    [_realObject, _objectData, _hitPos] call FUNC(searchObject);
-                },
-                {true},
-                {},
-                [_object, _objectData, _hitPos],
-                [0, 0, 0],
-                3
-            ] call ACEFUNC(interact_menu,createAction);
-
-            [GVAR(activeLogic), 0, [], _action] call ACEFUNC(interact_menu,addActionToObject);
-        };
+if (_found) then {
+    if (isNull GVAR(activeLogic)) then {
+        GVAR(activeLogic) = "ACE_LogicDummy" createVehicleLocal [0, 0, 0];
 
         GVAR(activeLogic) setPosASL _hitPos;
 
-    } else {
-        if (!isNull GVAR(activeLogic)) then {
-            deleteVehicle GVAR(activeLogic);
-            GVAR(activeLogic) = objNull;
-        };
+        private _action = [
+            QGVAR(searchObject_menu),
+            localize LSTRING(SearchAction),
+            QPATHTOEF(icons,data\scan_search_ca.paa),
+            {
+                params ["", "", "_params"];
+                _params params ["_realObject", "_objectData", "_hitPos"];
+                [_realObject, _objectData, _hitPos] call FUNC(searchObject);
+            },
+            {true},
+            {},
+            [_object, _objectData, _hitPos],
+            [0, 0, 0],
+            3
+        ] call ACEFUNC(interact_menu,createAction);
+
+        [GVAR(activeLogic), 0, [QUOTE(ACE_MainActions)], _action] call ACEFUNC(interact_menu,addActionToObject);
     };
-}, 0] call CBA_fnc_addPerFrameHandler;
+};
+

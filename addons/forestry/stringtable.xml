@@ -769,21 +769,5 @@
             <Chinesesimp>你停止了劈原木...</Chinesesimp>
             <Turkish>Kütüğü yarmayı bıraktınız...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Forestry_TreeEmpty">
-            <English>Tree has fallen, doesn't have anymore wood...</English>
-            <Czech>Strom padl, už v něm není žádné dřevo...</Czech>
-            <French>L'arbre est tombé, il n'y a plus de bois...</French>
-            <Spanish>El árbol ha caído, ya no tiene madera...</Spanish>
-            <Italian>L'albero è caduto, non ha più legna...</Italian>
-            <Polish>Drzewo upadło, nie ma już więcej drewna...</Polish>
-            <Portuguese>A árvore caiu, não tem mais madeira...</Portuguese>
-            <Russian>Дерево упало, в нем больше нет древесины...</Russian>
-            <German>Der Baum ist gefallen, er hat kein Holz mehr...</German>
-            <Korean>나무가 쓰러져 더 이상 목재가 없습니다...</Korean>
-            <Japanese>木が倒れました。もう木材はありません...</Japanese>
-            <Chinese>樹已經倒了，沒有更多木頭了...</Chinese>
-            <Chinesesimp>树已经倒了，没有更多木头了...</Chinesesimp>
-            <Turkish>Ağaç devrildi, artık odun yok...</Turkish>
-        </Key>
     </Package>
 </Project>
