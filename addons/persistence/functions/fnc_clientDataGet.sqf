@@ -26,7 +26,6 @@ if (_saveMap isEqualTo createHashMap) exitWith {
 [QUOTE(COMPONENT_BEAUTIFIED), "Loading Client Data from HashMap"] call EFUNC(common,debugMessage);
 
 private _savedWorld = _saveMap getOrDefault ["worldName", ""];
-private _savedMissionTag = _saveMap getOrDefault ["missionTag", ""];
 private _variables = _saveMap getOrDefault ["variables", []];
 private _loadout = _saveMap getOrDefault ["loadout", []];
 private _position = _saveMap getOrDefault ["position", []];
@@ -36,11 +35,6 @@ private _damage = _saveMap getOrDefault ["damage", []];
 
 if (worldName isNotEqualTo _savedWorld) exitWith {
     [QUOTE(COMPONENT_BEAUTIFIED), format ["Current World (%1) does not match saved world (%2). Aborting.", worldName, _savedWorld]] call EFUNC(common,debugMessage);
-    call FUNC(newPlayer);
-};
-
-if (missionName isNotEqualTo _savedMissionTag) exitWith {
-    [QUOTE(COMPONENT_BEAUTIFIED), format ["Current Scenario (%1) does not match saved missionTag (%2). Aborting.", missionName, _savedMissionTag]] call EFUNC(common,debugMessage);
     call FUNC(newPlayer);
 };
 

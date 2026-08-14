@@ -31,7 +31,6 @@ private _damage = [_player] call ACEFUNC(medical,serializeState);
 
 private _saveMap = createHashMapFromArray [
     ["worldName", worldName],
-    ["missionTag", missionName],
     ["variables", _playerVariables],
     ["loadout", _loadout],
     ["position", _position],
