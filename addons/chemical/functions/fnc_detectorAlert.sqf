@@ -27,7 +27,12 @@
         };
 
         if (_threatLevel >= 0.05) then {
-           playSound "FD_Start_F";
+
+            private _pitch = 0.8 + (_threatLevel * 0.8);
+            private _volume = 0.5 + (_threatLevel * 0.5);
+
+            // Make beeping local audio to prevent network saturation
+            playSoundUI ["FD_Start_F", _volume, _pitch];
         };
     }, 0.5] call CBA_fnc_addPerFrameHandler;
 }, []] call CBA_fnc_waitUntilAndExecute;

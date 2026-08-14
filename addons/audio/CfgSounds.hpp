@@ -140,8 +140,6 @@ class CfgSounds {
     MACRO_SOUNDS(staticWeird02,immersion);
     MACRO_SOUNDS(staticWeird03,immersion);
     MACRO_SOUNDS(staticWeird04,immersion);
-    MACRO_SOUNDS(staticWeird05,immersion);
-    MACRO_SOUNDS(staticWeird06,immersion);
     MACRO_SOUNDS(staticWeird07,immersion);
     MACRO_SOUNDS(staticWeird08,immersion);
     MACRO_SOUNDS(staticWeird09,immersion);

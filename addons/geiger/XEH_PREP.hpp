@@ -1,3 +1,2 @@
-PREP(batteries);
-PREP(keybind);
-PREP(readings);
+PREP(hide);
+PREP(show);

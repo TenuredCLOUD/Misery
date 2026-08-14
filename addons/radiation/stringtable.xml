@@ -113,37 +113,5 @@
             <Chinesesimp>游泳时会受到放射性辐射伤害</Chinesesimp>
             <Turkish>Yüzerken radyoaktif suya maruz kalmayı etkinleştirir</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Radiation_StoreArtifact">
-            <English>Store Artifact</English>
-            <Czech>Uložit artefakt</Czech>
-            <French>Magasin d'artefacts</French>
-            <Spanish>Almacenar artefacto</Spanish>
-            <Italian>Conservare l'artefatto</Italian>
-            <Polish>Sklep z artefaktami</Polish>
-            <Portuguese>Armazenar artefato</Portuguese>
-            <Russian>Магазин артефактов</Russian>
-            <German>Artefakt speichern</German>
-            <Korean>아티팩트 저장</Korean>
-            <Japanese>ストアアーティファクト</Japanese>
-            <Chinese>存放神器</Chinese>
-            <Chinesesimp>存放神器</Chinesesimp>
-            <Turkish>Store Artifact</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Radiation_StoreLeadContainer">
-            <English>You put the artifact in your lead lined container</English>
-            <Czech>Vložil jsi artefakt do olovem vyloženého kontejneru</Czech>
-            <French>Vous placez l'artéfact dans votre conteneur doublé de plomb</French>
-            <Spanish>Has metido el artefacto en tu contenedor forrado de plomo</Spanish>
-            <Italian>Hai messo l'artefatto nel tuo contenitore rivestito di piombo</Italian>
-            <Polish>Schowałeś artefakt do ołowianego pojemnika</Polish>
-            <Portuguese>Colocou o artefacto no seu contentor revestido a chumbo</Portuguese>
-            <Russian>Вы положили артефакт в контейнер со свинцовой подкладкой</Russian>
-            <German>Du legst das Artefakt in deinen bleigefütterten Behälter</German>
-            <Korean>아티팩트를 납 차폐 보관함에 넣었습니다</Korean>
-            <Japanese>アーティファクトを鉛の保管容器に収納しました</Japanese>
-            <Chinese>您已將神器放回鉛襯防輻射容器中</Chinese>
-            <Chinesesimp>您已将神器放回铅衬防辐射容器中</Chinesesimp>
-            <Turkish>Artefaktı kurşun kaplı kutuna koydun</Turkish>
-        </Key>
     </Package>
 </Project>

@@ -14,7 +14,7 @@
  *
 */
 
-[ACE_player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
+private _vehicle = ACE_player getVariable [QGVAR(currentVehicle), objNull];
 
 if !([["ToolKit"]] call EFUNC(common,hasItem)) exitWith {
     ctrlSetText [1001, localize LSTRING(NeedToolkitUninstallBattery)];
@@ -34,7 +34,7 @@ private _batteryClass = [QCLASS(autoBattery), QCLASS(autoBattery_Heavy)] select 
 if (_installedBatteries > 0) then {
     [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], false] call EFUNC(common,displayEnableControls);
 
-    ACE_player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+    [ACE_player, "AinvPknlMstpSnonWnonDnon_medic0", 2] call ACEFUNC(common,doAnimation);
     [{
         params ["_vehicle", "_batteryType", "_batteryClass", "_installedBatteries", "_batteryCount", "_batteryLevel"];
         private _chargePerBattery = (((_batteryLevel * 100) / _installedBatteries) * _batteryCount);

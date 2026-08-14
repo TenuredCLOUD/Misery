@@ -19,7 +19,7 @@ addMissionEventHandler ["EntityKilled", {
 
     if (_killed isKindOf "myst_phantom_hidden_f" || _killed isKindOf "myst_phantom_naked_f") then {
         if ([GVAR(dropChance)] call EFUNC(common,rollChance)) then {
-            [getPosATL _killed, [], [], [[selectRandom [MACRO_ARTIFACTS], 1]]] call EFUNC(common,spawnLoot);
+            [getPosATL _killed, [], [], [[QCLASS(fallout_glass), 1]]] call EFUNC(common,spawnLoot);
         };
     };
 }];

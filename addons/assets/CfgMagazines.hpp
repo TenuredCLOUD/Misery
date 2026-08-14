@@ -8,6 +8,17 @@ class CfgMagazines {
         count = 0;
     };
 
+    class CLASS(leadContainer_Closed): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
+        count = 10;
+        descriptionShort = CSTRING(LeadContainerClosed_Description);
+        displayName = CSTRING(LeadContainerClosed_DisplayName);
+        mass = 50;
+        model = "a3\props_f_enoch\military\decontamination\cbrncase_01_f.p3d";
+        picture = QPATHTOF(data\icons\cbrn_container.paa);
+        scope = 2;
+    };
+
     class CLASS(gasCartridge): CLASS(FakeMagazine) {
         count = 100;
         descriptionShort = CSTRING(GasCartridge_Description);
@@ -208,50 +219,6 @@ class CfgMagazines {
         model = QPATHTOF(data\models\pickaxe.p3d);
         picture = QPATHTOF(data\icons\pickaxe.paa);
         scope = 2;
-    };
-
-    class CLASS(lantern_On): CLASS(FakeMagazine) {
-        CLASSACE(disableRepacking) = 1;
-        count = 100;
-        descriptionShort = CSTRING(LanternOn_Description);
-        displayName = CSTRING(LanternOn_DisplayName);
-        mass = 10;
-        picture = QPATHTOF(data\icons\lantern.paa);
-        model = "a3\structures_f_epb\civ\camping\camping_light_f.p3d";
-        scope = 2;
-    };
-
-    class CLASS(lantern_Off): CLASS(FakeMagazine) {
-        CLASSACE(disableRepacking) = 1;
-        count = 100;
-        descriptionShort = CSTRING(LanternOff_Description);
-        displayName = CSTRING(LanternOff_DisplayName);
-        mass = 10;
-        picture = QPATHTOF(data\icons\lantern.paa);
-        model = "a3\structures_f\civ\camping\camping_light_off_f.p3d";
-        scope = 2;
-    };
-
-    class CLASS(geiger_On): CLASS(FakeMagazine) {
-        CLASSACE(disableRepacking) = 1;
-        count = 100;
-        descriptionShort = CSTRING(Geiger_Description);
-        displayName = CSTRING(GeigerOn_DisplayName);
-        mass = 10;
-        model = "\A3\Weapons_F\Items\minedetector.p3d";
-        picture = QPATHTOF(data\icons\personalgeiger.paa);
-        scope = 2;
-    };
-
-    class CLASS(geiger_Off): CLASS(FakeMagazine) {
-        CLASSACE(disableRepacking) = 1;
-        scope = 2;
-        descriptionShort = CSTRING(Geiger_Description);
-        displayName = CSTRING(GeigerOff_DisplayName);
-        picture = QPATHTOF(data\icons\personalgeigernobattery.paa);
-        model = "\A3\Weapons_F\Items\minedetector.p3d";
-        count = 100;
-        mass = 10;
     };
 
     class CLASS(autoBattery): CLASS(FakeMagazine) {

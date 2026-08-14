@@ -13,30 +13,34 @@
  * [] call misery_chemical_fnc_updateDetector
 */
 
-[{
-    params ["_args", "_handle"];
+[{"ChemicalDetector_01_watch_F" in assignedItems ACE_player}, {
+    [{
+        params ["_args", "_handle"];
 
-    if (isGamePaused) exitWith {};
+        if (isGamePaused) exitWith {};
 
-    private _players = call EFUNC(common,listPlayers);
-    {
-        private _player = _x;
+        if (!alive ACE_player || !("ChemicalDetector_01_watch_F" in assignedItems ACE_player)) exitWith {
+            call FUNC(updateDetector);
+            _handle call CBA_fnc_removePerFrameHandler;
+        };
 
         private _maxThreat = 0;
+
         {
             private _area = _x;
             private _areaPos = getMarkerPos _area;
             private _areaSize = selectMax (getMarkerSize _area);
             private _maxRange = _areaSize + 100;
-            private _distance = _player distance _areaPos;
+            private _distance = ACE_player distance _areaPos;
 
             private _threat = ((1 - (_distance / _maxRange)) max 0) min 1;
             _maxThreat = _maxThreat max _threat;
 
-            _player setVariable [QGVAR(detectedThreat), _maxThreat];
+            ACE_player setVariable [QGVAR(detectedThreat), _maxThreat];
         } forEach GVAR(areasCached);
 
         QGVAR(detector) cutRsc ["RscWeaponChemicalDetector", "PLAIN", 1, false];
+
         private _detectorDisplay = uiNamespace getVariable ["RscWeaponChemicalDetector", displayNull];
         private _threatCtrl = _detectorDisplay displayCtrl 101;
 
@@ -44,7 +48,7 @@
             _threatCtrl ctrlAnimateModel ["Threat_Level_Source", parseNumber ([_maxThreat, 1, 2, false] call CBA_fnc_formatNumber), true];
         } else {
             _threatCtrl ctrlAnimateModel ["Threat_Level_Source", 0, true];
-            _player setVariable [QGVAR(detectedThreat), nil];
+            ACE_player setVariable [QGVAR(detectedThreat), nil];
         };
-    } forEach _players;
-}, 0.5, []] call CBA_fnc_addPerFrameHandler;
+    }, 0.5, []] call CBA_fnc_addPerFrameHandler;
+}, []] call CBA_fnc_waitUntilAndExecute;

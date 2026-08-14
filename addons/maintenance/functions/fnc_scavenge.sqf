@@ -5,19 +5,20 @@
  * Scavenges parts from vehicles
  *
  * Arguments:
- * 0: HitpointIndex <STRING>
- * 1: SelectedIndex <NUMBER>
+ * None
  *
  * Return Value:
  * None
  *
  * Example:
- * ["0", 0] call misery_maintenance_fnc_scavenge;
+ * [] call misery_maintenance_fnc_scavenge;
  *
  * Public: No
 */
 
-params ["_hitpointIndex", "_selectedIndex"];
+private _dialog = findDisplay 274839;
+private _list = _dialog displayCtrl 1500;
+private _selectedIndex = lbCurSel _list;
 
 if (_selectedIndex isEqualTo -1) exitWith {
     ctrlSetText [1001, localize ECSTRING(maintenance,NoScavengeSelected)];
@@ -27,16 +28,26 @@ if !([["ToolKit"]] call EFUNC(common,hasItem)) exitWith {
     ctrlSetText [1001, localize LSTRING(NeedToolkitScavenge)];
 };
 
-[ACE_player] call EFUNC(common,nearVehicle) params ["_nearVehicle", "_vehicle"];
+private _vehicle = ACE_player getVariable [QGVAR(currentVehicle), objNull];
 
 if (isNull _vehicle) exitWith {
     ctrlSetText [1001, localize LSTRING(InvalidVehicle)];
 };
 
+private _indexData = _list lbData _selectedIndex;
+
+// Quick Service selection exit / can't scavenge
+if (_indexData select [0, 1] isEqualTo "[") exitWith {
+
+    ctrlSetText [1001, format [localize LSTRING(CannotScavenge), localize LSTRING(QuickService)]];
+    [_vehicle] call FUNC(listed);
+};
+
+private _index = parseNumber _indexData;
+//private _index = parseNumber (_list lbData _selectedIndex);
 private _hitpoints = getAllHitPointsDamage _vehicle;
 private _hitpointNames = _hitpoints select 0;
 private _selectionNames = _hitpoints select 1;
-private _index = parseNumber _hitpointIndex;
 
 if (_index < 0 || _index >= count _hitpointNames) exitWith {
     ctrlSetText [1001, localize LSTRING(InvalidVehicle)];
@@ -44,16 +55,16 @@ if (_index < 0 || _index >= count _hitpointNames) exitWith {
 
 private _hitpoint = _hitpointNames select _index;
 private _selectionName = _selectionNames select _index;
-private _scavengedItem = "";
-private _hitpointLower = toLower _selectionName;
+private _hitpointLower = toLower format ["%1 %2", _hitpoint, _selectionName];
 private _hitpointDamage = _vehicle getHitIndex _index;
+private _scavengedItem = "";
 
 if !(GVAR(difficulty)) then {
     {
-        if ((_x select 0) in _hitpointLower) exitWith {_scavengedItem = _x select 1};
+        if ((_x select 0) in _hitpointLower) exitWith {
+            _scavengedItem = _x select 1;
+        };
     } forEach MACRO_MAINTENANCE_SCAVENGE;
-} else {
-    _scavengedItem = "";
 };
 
 switch (true) do {
@@ -64,7 +75,7 @@ switch (true) do {
         };
 
         [274839, [1600, 1601, 1602, 1603, 1604, 1605, 1606, 1607, 1608, 1609, 1610], false] call EFUNC(common,displayEnableControls);
-        ACE_player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+        [ACE_player, "AinvPknlMstpSnonWnonDnon_medic0", 2] call ACEFUNC(common,doAnimation);
         [{
             params ["_vehicle", "_index", "_selectionName", "_scavengedItem"];
             if !(GVAR(difficulty)) then {
@@ -94,7 +105,7 @@ switch (true) do {
             [_vehicle] call FUNC(listed);
         };
         if ([[QCLASS(emptyToolKit)]] call EFUNC(common,hasItem)) exitWith {
-            ACE_player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+            [ACE_player, "AinvPknlMstpSnonWnonDnon_medic0", 2] call ACEFUNC(common,doAnimation);
             [{
                 params ["_vehicle", "_index", "_selectionName", "_scavengedItem"];
                 ACE_player removeItem QCLASS(emptyToolKit);
@@ -113,7 +124,7 @@ switch (true) do {
                 [_vehicle] call FUNC(listed);
             };
             if (_incremented) exitWith {
-                ACE_player switchMove "AinvPknlMstpSnonWnonDnon_medic0";
+                [ACE_player, "AinvPknlMstpSnonWnonDnon_medic0", 2] call ACEFUNC(common,doAnimation);
                 [{
                     params ["_vehicle", "_index", "_selectionName", "_scavengedItem"];
                     _vehicle setHitIndex [_index, 1];

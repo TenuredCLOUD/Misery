@@ -86,6 +86,10 @@
     [QUOTE(comturret), QCLASS(weaponSystemKit)], \
     [QUOTE(comgun), QCLASS(weaponSystemKit)], \
     [QUOTE(flare), QCLASS(countermeasureKit)], \
+    [QUOTE(svetlo), QCLASS(electronicRepairKit)], \
+    [QUOTE(palivo), QCLASS(fuelSystemKit)], \
+    [QUOTE(motor), QCLASS(enginePartsKit)], \
+    [QUOTE(karoserie), QCLASS(metalFabricationKit)], \
     [QUOTE(wheel), ""] \
 ]
 
@@ -119,41 +123,12 @@
     [QUOTE(comturret), QCLASS(weaponSystemKit)], \
     [QUOTE(comgun), QCLASS(weaponSystemKit)], \
     [QUOTE(flare), QCLASS(countermeasureKit)], \
+    [QUOTE(svetlo), QCLASS(electronicRepairKit)], \
+    [QUOTE(palivo), QCLASS(fuelSystemKit)], \
+    [QUOTE(motor), QCLASS(enginePartsKit)], \
+    [QUOTE(karoserie), ""], \
     [QUOTE(wheel), QCLASS(spareTire)] \
 ]
-
-#define MACRO_TANK_CLASSES ["B_MBT_01_cannon_F", \
-"B_APC_Wheeled_01_cannon_F", \
-"B_APC_Tracked_01_CRV_F", \
-"B_APC_Tracked_01_rcws_F", \
-"B_AFV_Wheeled_01_cannon_F", \
-"B_T_APC_Wheeled_01_cannon_F", \
-"B_T_APC_Tracked_01_CRV_F", \
-"B_T_APC_Tracked_01_rcws_F", \
-"B_T_AFV_Wheeled_01_cannon_F", \
-"B_MBT_01_TUSK_F", \
-"B_T_MBT_01_cannon_F", \
-"B_T_MBT_01_TUSK_F", \
-"B_T_AFV_Wheeled_01_up_cannon_F", \
-"O_APC_Tracked_02_cannon_F", \
-"O_APC_Wheeled_02_rcws_v2_F", \
-"O_T_APC_Tracked_02_cannon_ghex_F", \
-"O_T_APC_Wheeled_02_rcws_v2_ghex_F", \
-"O_MBT_02_cannon_F", \
-"O_MBT_02_railgun_F", \
-"O_MBT_04_cannon_F", \
-"O_MBT_04_command_F", \
-"O_T_MBT_02_cannon_ghex_F", \
-"O_T_MBT_02_railgun_ghex_F", \
-"O_T_MBT_04_cannon_F", \
-"O_T_MBT_04_command_F", \
-"I_APC_Wheeled_03_cannon_F", \
-"I_APC_tracked_03_cannon_F", \
-"I_E_APC_tracked_03_cannon_F", \
-"I_LT_01_AT_F", \
-"I_LT_01_scout_F", \
-"I_LT_01_cannon_F", \
-"I_MBT_03_cannon_F"]
 
 // Crafting stations / Fuel stations
 #define MACRO_FUELSTATIONS_LAND "Land_fs_feed_F", "Land_FuelStation_Feed_F", "Land_FuelStation_03_pump_F", "Land_A_FuelStation_Feed", "Land_fuelstation", "Land_Ind_FuelStation_Feed_EP1"
@@ -280,9 +255,6 @@
 "rail_station_big_f.p3d", \
 "a_hospital.p3d", \
 "a_office02.p3d"
-
-// Artifacts
-#define MACRO_ARTIFACTS QCLASS(artifact_01), QCLASS(artifact_02), QCLASS(artifact_03), QCLASS(artifact_04), QCLASS(artifact_05), QCLASS(artifact_06), QCLASS(artifact_07), QCLASS(artifact_08), QCLASS(artifact_09), QCLASS(artifact_10)
 
 // Can openers
 #define MACRO_CANTOOLS QCLASS(canOpener), QCLASS(guttingKnife), "rvg_guttingKnife", "rvg_canOpener"

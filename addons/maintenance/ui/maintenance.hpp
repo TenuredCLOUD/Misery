@@ -1,6 +1,7 @@
 class CLASS(maintenance_ui) {
     idd = 274839;
-    onLoad = QUOTE([274839] call EFUNC(common,menuBlurEffect); [] call EFUNC(maintenance,listed); [] call EFUNC(maintenance,updateIcon));
+    onLoad = QUOTE([274839] call EFUNC(common,menuBlurEffect));
+    onUnload = QUOTE(call EFUNC(maintenance,unload));
 
     class ControlsBackground {
         class CLASS(maintenance_background): CLASS(RscText) {
@@ -141,7 +142,7 @@ class CLASS(maintenance_ui) {
             h = 2 * GUI_GRID_H;
             colorBackground[] = {0.2,0.2,0.2,0.7};
             colorActive[] = {0.5,0.5,0.5,0.7};
-            onButtonClick = QUOTE([ARR_2(_hitpoint,_selected)] call EFUNC(maintenance,repair));
+            onButtonClick = QUOTE([] call EFUNC(maintenance,repair));
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };
@@ -183,7 +184,7 @@ class CLASS(maintenance_ui) {
             h = 2 * GUI_GRID_H;
             colorBackground[] = {0.2,0.2,0.2,0.7};
             colorActive[] = {0.5,0.5,0.5,0.7};
-            onButtonClick = QUOTE([ARR_2(_hitpoint,_selected)] call EFUNC(maintenance,scavenge));
+            onButtonClick = QUOTE([] call EFUNC(maintenance,scavenge));
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
         };

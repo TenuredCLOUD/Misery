@@ -29,25 +29,52 @@
     };
 
     private _totalProtection = [ACE_player] call EFUNC(protection,totalProtection);
-    private _hearingProtection = _totalProtection select 5;
+    private _baseProtection = _totalProtection select 5;
     private _damageMultiplier = 0;
     private _psychModifier = 0;
 
-    _damageMultiplier = (1 * ((1 - _hearingProtection) ^ 1.5) min 0.15) max 0;
-    _psychModifier = 1 * ((1 - _hearingProtection) ^ 1.5) max 0.001;
+    private _hasEHP = ACE_player getVariable [QCLASSACE(hasEHP), false];
+    private _hasEarPlugs = ACE_player getVariable [QCLASSACE(hasEarPlugsIn), false];
+    private _hasSHP = ACE_player getVariable [QGVAR(hasSHP), false];
 
-    [QUOTE(COMPONENT_BEAUTIFIED), format ["Damage Multiplier %1", _damageMultiplier]] call EFUNC(common,debugMessage);
-    [QUOTE(COMPONENT_BEAUTIFIED), format ["Psychosis Modifier: %1", _psychModifier]] call EFUNC(common,debugMessage);
-    [QUOTE(COMPONENT_BEAUTIFIED), format ["Hearing Protection: %1%2", (_hearingProtection * 100), "%"]] call EFUNC(common,debugMessage);
+    private _calculatedProtection = _baseProtection;
 
-    if (_hearingProtection < 1) then {
-        QGVAR(display) cutRsc [QCLASS(tunnel_ui), "PLAIN", 1, false];
-        if (EGVAR(psychosis,enabled)) then {
-            [_psychModifier, "psychosis"] call EFUNC(common,addStatusModifier);
-            [ACE_player, "head", ["Contusion", 1, 2, 1]] call ACEFUNC(medical,addWound);
-        } else {
-            [ACE_player, "head", ["Contusion", 1, 2, 1]] call ACEFUNC(medical,addWound);
-            [ACE_player] call EFUNC(medical,handleHeadTrauma);
+    if (_hasEHP) then {
+        _calculatedProtection = _calculatedProtection + 0.35;
+    };
+
+    // Only give earplugs a bonus if hearing protection is worn over them
+    if (_hasEarPlugs && {(_baseProtection > 0.3 || _hasEHP)}) then {
+        _calculatedProtection = _calculatedProtection + 0.15;
+    };
+
+    _damageMultiplier = (1 * ((1 - (_calculatedProtection min 1)) ^ 1.5) min 0.15) max 0;
+    _psychModifier = 1 * ((1 - (_calculatedProtection min 1)) ^ 1.5) max 0.001;
+
+    [QUOTE(COMPONENT_BEAUTIFIED), format ["Calculated Protection: %1%%", ((_calculatedProtection min 1) * 100)]] call EFUNC(common,debugMessage);
+
+    switch (true) do {
+        case (_hasSHP): {};
+        case (_calculatedProtection >= 0.85): {
+            if (EGVAR(psychosis,enabled)) then {
+                [_psychModifier, "psychosis"] call EFUNC(common,addStatusModifier);
+            };
+        };
+        case (_calculatedProtection >= 0.75): {
+            QGVAR(display) cutRsc [QCLASS(tunnel_ui), "PLAIN", 1, false];
+            if (EGVAR(psychosis,enabled)) then {
+                [_psychModifier, "psychosis"] call EFUNC(common,addStatusModifier);
+            };
+        };
+        default {
+            QGVAR(display) cutRsc [QCLASS(tunnel_ui), "PLAIN", 1, false];
+            if (EGVAR(psychosis,enabled)) then {
+                [_psychModifier, "psychosis"] call EFUNC(common,addStatusModifier);
+                [ACE_player, "head", ["Contusion", 1, 2, 1]] call ACEFUNC(medical,addWound);
+            } else {
+                [ACE_player, "head", ["Contusion", 1, 2, 1]] call ACEFUNC(medical,addWound);
+                [ACE_player] call EFUNC(medical,handleHeadTrauma);
+            };
         };
     };
 }, 1] call CBA_fnc_addPerFrameHandler;
