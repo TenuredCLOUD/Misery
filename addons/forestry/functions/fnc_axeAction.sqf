@@ -16,14 +16,12 @@
  *
 */
 
-params ["_found", "_tree", "_damaged", "_hasAxe"];
+params ["_found", "_tree"];
+
+private _hasAxe = [[QCLASS(woodaxe), MACRO_AXES]] call EFUNC(common,hasItem);
 
 if !(_found) exitWith {
     [QEGVAR(common,tileText), format [localize LSTRING(NeedTreeChopping)]] call CBA_fnc_localEvent;
-};
-
-if (_damaged) exitWith {
-    [QEGVAR(common,tileText), format [localize LSTRING(TreeEmpty)]] call CBA_fnc_localEvent;
 };
 
 if !(_hasAxe) exitWith {

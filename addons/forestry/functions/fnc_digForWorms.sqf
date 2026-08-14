@@ -24,7 +24,7 @@ if (GVAR(digPositions) findIf {_x distance getPosATL ACE_player < 2.5} isNotEqua
     [QEGVAR(common,tileText), localize LSTRING(AreaDug)] call CBA_fnc_localEvent;
 };
 
-[ACE_player, "Crouch", 1] call ACEFUNC(common,doAnimation);
+[ACE_player, "AinvPknlMstpSnonWnonDnon_medic4", 1] call ACEFUNC(common,doAnimation);
 
 if (currentWeapon ACE_player isNotEqualTo "") then {
     [ACE_player] call ACEFUNC(weaponselect,putWeaponAway);
@@ -52,9 +52,13 @@ if (currentWeapon ACE_player isNotEqualTo "") then {
 
         [QUOTE(COMPONENT_BEAUTIFIED), format ["Cached position %1 for worms", _position]] call EFUNC(common,debugMessage);
     };
+
+    [ACE_player, "", 1] call ACEFUNC(common,doAnimation);
 },
 {
     [QEGVAR(common,tileText), localize LSTRING(StopDigging)] call CBA_fnc_localEvent;
+
+    [ACE_player, "", 1] call ACEFUNC(common,doAnimation);
 },
 []
 ] call CBA_fnc_progressBar;

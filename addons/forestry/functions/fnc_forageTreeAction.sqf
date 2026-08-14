@@ -6,7 +6,6 @@
  * Arguments:
  * 0: Found <BOOL>
  * 1: Tree <OBJECT>
- * 2: Damaged <BOOL>
  *
  * Return Value:
  * None
@@ -15,14 +14,10 @@
  *
 */
 
-params ["_found", "_tree", "_damaged"];
+params ["_found", "_tree"];
 
 if !(_found) exitWith {
     [QEGVAR(common,tileText), format [localize LSTRING(NeedTreeGathering)]] call CBA_fnc_localEvent;
-};
-
-if (_damaged) exitWith {
-    [QEGVAR(common,tileText), format [localize LSTRING(TreeEmpty)]] call CBA_fnc_localEvent;
 };
 
 if (GVAR(gatheredPositions) findIf {_x distance getPosATL ACE_player < 2.5} isNotEqualTo -1) exitWith {

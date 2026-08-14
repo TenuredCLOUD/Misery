@@ -7,30 +7,41 @@
  * None
  *
  * Return Value:
- * 0: Near bed object, or terrainObject, or ACE_player is in a ground vehicle, or cursorObject model matches bed model macro <BOOL>
+ * 0: Player in safe vehicle <BOOL>
+ * 1: Found <BOOL>
+ * 2: Sleeping Object <OBJECT>
+ * 3: Intersection position of looked at object <ARRAY>
  *
  * Example:
- * [] call misery_sleep_fnc_sleepCondition
+ * [] call misery_sleep_fnc_condition
  *
 */
 
-[2] call EFUNC(common,getLookedAtTarget) params ["_object"];
+[5] call EFUNC(common,getLookedAtTarget) params ["_object", "_hitPos"];
 
-private _modelInfo = "";
+if (isNull _object && isNull objectParent ACE_player) exitWith {[false, false, objNull, [0, 0, 0]]};
 
-if (!isNull _object) then {
-    _modelInfo = (getModelInfo _object) select 0;
+private _modelInfo = getModelInfo _object select 0;
+
+private _sleepingObject = objNull;
+
+private _index = [MACRO_BED_MODELS] findIf {_x isEqualTo _modelInfo};
+
+if (_index isNotEqualTo -1) then {
+    _sleepingObject = _object;
 };
+
+private _found = !isNull _sleepingObject;
 
 private _vehicleConfig = "";
 
 private _canSleepInVehicle = false;
 
 if !(isNull objectParent ACE_player) then {
-    _vehicleConfig = configOf (vehicle ACE_player);
+    _vehicleConfig = configOf (objectParent ACE_player);
     if (getNumber (_vehicleConfig >> "transportSoldier") > 1) then {
         _canSleepInVehicle = true;
     };
 };
 
-(vehicle ACE_player isKindOf "Car" && _canSleepInVehicle) || _modelInfo in [MACRO_BED_MODELS]
+[(objectParent ACE_player isKindOf "Car" && _canSleepInVehicle), _found, _sleepingObject, _hitPos]

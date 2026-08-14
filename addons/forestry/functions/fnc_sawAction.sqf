@@ -16,14 +16,12 @@
  *
 */
 
-params ["_found", "_tree", "_damaged", "_hasSaw"];
+params ["_found", "_tree"];
+
+private _hasSaw = [[QCLASS(chainsaw)]] call EFUNC(common,hasItem);
 
 if !(_found) exitWith {
     [QEGVAR(common,tileText), format [localize LSTRING(NeedTreeSawing)]] call CBA_fnc_localEvent;
-};
-
-if (_damaged) exitWith {
-    [QEGVAR(common,tileText), format [localize LSTRING(TreeEmpty)]] call CBA_fnc_localEvent;
 };
 
 if !(_hasSaw) exitWith {

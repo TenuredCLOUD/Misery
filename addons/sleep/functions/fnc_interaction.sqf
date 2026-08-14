@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Add dynamic action to mining objects
+ * Add dynamic action to sleeping objects
  *
  * Arguments:
  * None
@@ -10,11 +10,11 @@
  * None
  *
  * Example:
- * [] call misery_mining_fnc_interaction;
+ * [] call misery_sleep_fnc_interaction;
  *
 */
 
-[] call FUNC(condition) params ["_found", "_miningObject", "_objectData", "_hitPos"];
+call FUNC(condition) params ["", "_found", "_sleepingObject", "_hitPos"];
 
 if (_found) then {
     if (isNull GVAR(activeLogic)) then {
@@ -23,17 +23,17 @@ if (_found) then {
         GVAR(activeLogic) setPosASL _hitPos;
 
         private _action = [
-            QGVAR(mineOre_menu),
+            QGVAR(sleepObject_menu),
             localize LSTRING(Action),
-            QPATHTOEF(icons,data\pickaxe_ca.paa),
+            QPATHTOEF(icons,data\bed_ca.paa),
             {
-                params ["", "", "_params"];
-                _params params ["_found", "_obj", "_data"];
-                [_found, _obj, _data] call FUNC(action);
+                createDialog QCLASS(sleepMenu_ui);
             },
             {true},
             {},
-            [_found, _miningObject, _objectData]
+            [],
+            [0, 0, 0],
+            5
         ] call ACEFUNC(interact_menu,createAction);
 
         [GVAR(activeLogic), 0, [QUOTE(ACE_MainActions)], _action] call ACEFUNC(interact_menu,addActionToObject);
