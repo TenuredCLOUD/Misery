@@ -1,14 +1,12 @@
 PREP(autosave);
-PREP(clientDataGet);
-PREP(clientDataSet);
 PREP(combatLogPrevention);
 PREP(createGlobalSprayTags);
 PREP(gradSave);
 PREP(handleGrad);
 PREP(init);
-PREP(loadData);
 PREP(newPlayer);
 PREP(restoreCargo);
-PREP(saveGame);
+PREP(saveClient);
 PREP(syncCargo);
 PREP(syncSprayTags);
+PREP(deleteClient);

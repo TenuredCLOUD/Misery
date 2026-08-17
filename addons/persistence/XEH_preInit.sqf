@@ -6,6 +6,8 @@ ADDON = false;
 
 #include "initSettings.inc.sqf"
 
+GVAR(autosaveInterval) = GVAR(autosaveInterval) * 60;
+
 GVAR(gradAutosaveTimer) = GVAR(gradAutosaveInterval) * 60;
 
 ADDON = true;

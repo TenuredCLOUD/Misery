@@ -24,4 +24,4 @@ if (GVAR(autosaveInterval) isEqualTo 0 || GVAR(hardcore)) exitWith {
     [] call FUNC(autosave);
 }, [], GVAR(autosaveTimer)] call CBA_fnc_waitAndExecute;
 
-call FUNC(saveGame);
+call FUNC(saveClient);

@@ -16,6 +16,8 @@
 
 if !(hasInterface) exitWith {};
 
+if !(isClass (missionConfigFile >> "CfgGradPersistence")) exitWith {};
+
 [] call ACEFUNC(common,player) params ["_player"];
 
 // Add GRAD save manager to SP player (if enabled)
@@ -39,9 +41,12 @@ if (GVAR(gradActions)) then {
 // New player or Respawned player (MP)
 [QGVAR(respawnEvent), "Respawn", {
     call FUNC(newPlayer);
+
     if (GVAR(hardcore)) then {
-        profileNamespace setVariable [ACTIVE_BANK_KEY, nil];
-        ACE_player setVariable [QEGVAR(currency,bankedFunds), MACRO_PLAYER_DEFAULTS_LOW];
+        [] call ACEFUNC(common,player) params ["_player"];
+
+        _player setVariable [QEGVAR(currency,bankedFunds), MACRO_PLAYER_DEFAULTS_LOW];
+        profileNamespace setVariable [QGVAR(activeBank), nil];
     };
 }] call CBA_fnc_addBISPlayerEventHandler;
 
@@ -50,18 +55,16 @@ if !(isMultiplayer) then {
 
     [QGVAR(killedEvent), "Killed", {
 
-        if (GVAR(hardcore)) exitWith {
-            if (!isNil "grad_persistence_blacklist") then {
-                [missionName] call GRADFUNC(persistence,clearMissionData);
-            };
+        [] call ACEFUNC(common,player) params ["_player"];
 
-            // Wipe All Character data & Bank
-            profileNamespace setVariable [ACTIVE_PROFILE_KEY, nil];
-            profileNamespace setVariable [ACTIVE_BANK_KEY, nil];
+        if (GVAR(hardcore)) exitWith {
+            // Wipe world data & Bank
+            [QGVAR(wipeWorldState)] call CBA_fnc_serverEvent;
+            profileNamespace setVariable [QGVAR(activeBank), nil];
         };
 
-        // Wipe All Character data
-        profileNamespace setVariable [ACTIVE_PROFILE_KEY, nil];
+        // Wipe character data
+        [QGVAR(wipeClient), [getPlayerUID _player]] call CBA_fnc_serverEvent;
     }] call CBA_fnc_addBISPlayerEventHandler;
 };
 
@@ -74,9 +77,8 @@ if !(isMultiplayer) then {
         (findDisplay 46) displayAddEventHandler ["KeyDown", {
             params ["", "_key"];
             if (_key isEqualTo DIK_ESCAPE) then {
-                call FUNC(saveGame);
-                if (GVAR(gradESCSave)) then {
-                    [1] call FUNC(handleGrad);
+                if (GVAR(enabled)) then {
+                    call FUNC(saveClient);
                 };
             };
         }];
@@ -90,18 +92,6 @@ if (GVAR(autosaveInterval) isNotEqualTo 0) then {
     }, [], GVAR(autosaveTimer)] call CBA_fnc_waitAndExecute;
 };
 
-// Client Load / Fresh start
-// Pull Character data
-private _playerData = call FUNC(loadData);
-
 // Pull bank info
-private _savedBank = profileNamespace getVariable [ACTIVE_BANK_KEY, MACRO_PLAYER_DEFAULTS_LOW];
-ACE_player setVariable [QEGVAR(currency,bankedFunds), _savedBank];
-
-if (_playerData isEqualTo createHashMap) exitWith {
-    call FUNC(newPlayer);
-    GVAR(clientLoaded) = true;
-};
-
-[_playerData] call FUNC(clientDataGet);
-GVAR(clientLoaded) = true;
+private _savedBank = profileNamespace getVariable [QGVAR(activeBank), MACRO_PLAYER_DEFAULTS_LOW];
+_player setVariable [QEGVAR(currency,bankedFunds), _savedBank];

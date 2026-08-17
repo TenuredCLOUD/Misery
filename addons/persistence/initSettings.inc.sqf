@@ -40,15 +40,6 @@ private _category = format ["Misery %1", localize LSTRING(Component)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(gradESCSave),
-    "CHECKBOX",
-    [LSTRING(SaveWorldStateESC), LSTRING(SaveWorldStateESCDesc)],
-    _category,
-    false,
-    1
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(gradWarning),
     "CHECKBOX",
     [LSTRING(GradWarning), LSTRING(GradWarningDesc)],

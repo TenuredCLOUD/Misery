@@ -2,12 +2,20 @@
 
 if !(isServer) exitWith {};
 
-// Check if GRAD has a set missionTag, if not automatically use the missionName
-GVAR(gradPersistenceTag) = getText (missionConfigFile >> "CfgGradPersistence" >> "missionTag");
-if (GVAR(gradPersistenceTag) isEqualTo "") then {GVAR(gradPersistenceTag) = missionName};
+if !(isClass (missionConfigFile >> "CfgGradPersistence")) exitWith {};
 
-[QGVAR(saveWorldState), {[GVAR(gradWarning), 0] call GRADFUNC(persistence,saveMission)}] call CBA_fnc_addEventHandler;
-[QGVAR(wipeWorldState), {[GVAR(gradPersistenceTag)] call GRADFUNC(persistence,clearMissionData)}] call CBA_fnc_addEventHandler;
+[QGVAR(saveWorldState), {
+    [GVAR(gradWarning), 0] call GRADFUNC(persistence,saveMission);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(wipeWorldState), {
+    [] call GRADFUNC(persistence,clearMissionData);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(wipeClient), {
+    params ["_uid"];
+    [_uid] call FUNC(deleteClient);
+}] call CBA_fnc_addEventHandler;
 
 if (GVAR(saveAE3States)) then {
     [QGVAR(grabAE3Devices), {call EFUNC(power,grabDeviceStates)}] call CBA_fnc_addEventHandler;

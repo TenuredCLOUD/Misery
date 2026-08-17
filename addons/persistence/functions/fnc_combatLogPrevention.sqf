@@ -40,7 +40,7 @@ if !(isMultiplayer) exitWith {};
                                 _abortButton ctrlSetText localize LSTRING(Logout);
                                 _abortButton ctrlEnable true;
                                 if (GVAR(enabled)) then {
-                                    call FUNC(saveGame);
+                                    call FUNC(saveClient);
                                 };
                             };
                         };

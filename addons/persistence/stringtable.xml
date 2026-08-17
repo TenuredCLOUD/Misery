@@ -433,38 +433,6 @@
             <Chinesesimp>保存世界数据</Chinesesimp>
             <Turkish>Dünyayı Kaydet</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Persistence_SaveWorldStateESC">
-            <English>Save World state on ESC click</English>
-            <Czech>Uložit stav světa při stisknutí ESC</Czech>
-            <French>Sauvegarder l'état du monde via la touche Échap</French>
-            <Spanish>Guardar estado del mundo al pulsar ESC</Spanish>
-            <Italian>Salva lo stato del mondo alla pressione di ESC</Italian>
-            <Polish>Zapisz stan świata po naciśnięciu ESC</Polish>
-            <Portuguese>Salvar estado do mundo ao apertar ESC</Portuguese>
-            <Russian>Сохранять состояние мира при нажатии ESC</Russian>
-            <German>Weltzustand bei Drücken von ESC speichern</German>
-            <Korean>ESC 누를 때 세계 상태 저장</Korean>
-            <Japanese>ESC キー押下時にワールドの状態を保存</Japanese>
-            <Chinese>按下 ESC 時儲存世界狀態</Chinese>
-            <Chinesesimp>按下 ESC 时储存世界状态</Chinesesimp>
-            <Turkish>ESC tıklandığında Dünya durumunu kaydet</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Persistence_SaveWorldStateESCDesc">
-            <English>Pushes a GRAD save when ESC key is pressed, SP only, requires GRAD persistence</English>
-            <Czech>Vynutí uložení GRAD při stisknutí klávesy ESC, pouze pro SP, vyžaduje GRAD persistence</Czech>
-            <French>Force une sauvegarde GRAD lorsque la touche Échap est enfoncée, Solo uniquement, nécessite GRAD persistence</French>
-            <Spanish>Forza un guardado de GRAD al pulsar la tecla ESC, solo para un jugador, requiere GRAD persistence</Spanish>
-            <Italian>Invia un salvataggio GRAD quando viene premuto il tasto ESC, solo SP, richiede GRAD persistence</Italian>
-            <Polish>Wymusza zapis GRAD po naciśnięciu klawisza ESC, tylko SP, wymaga GRAD persistence</Polish>
-            <Portuguese>Força um salvamento do GRAD quando a tecla ESC é pressionada, apenas SP, requer GRAD persistence</Portuguese>
-            <Russian>Принудительно выполняет сохранение GRAD при нажатии клавиши ESC, только в одиночной игре, требуется GRAD persistence</Russian>
-            <German>Erzwingt eine GRAD-Speicherung beim Drücken der ESC-Taste, nur SP, erfordert GRAD persistence</German>
-            <Korean>ESC 키를 누를 때 GRAD 저장을 실행합니다. 싱글 플레이어(SP) 전용이며 GRAD persistence가 필요합니다</Korean>
-            <Japanese>ESC キーが押されたときに GRAD セーブを実行します（SP 専用、GRAD persistence が必要）</Japanese>
-            <Chinese>按下 ESC 鍵時推送 GRAD 存檔，僅限單人遊戲(SP)，需要 GRAD persistence</Chinese>
-            <Chinesesimp>按下 ESC 键时推送 GRAD 存档，仅限单人游戏(SP)，需要 GRAD persistence</Chinesesimp>
-            <Turkish>ESC tuşuna basıldığında bir GRAD kaydı tetikler, yalnızca SP, GRAD persistence gerektirir</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Persistence_WipeWorld">
             <English>Wipe world data</English>
             <Czech>Smazat data světa</Czech>
