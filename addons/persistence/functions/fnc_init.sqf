@@ -85,13 +85,6 @@ if !(isMultiplayer) then {
     }] call CBA_fnc_waitUntilAndExecute;
 };
 
-// Autosaving
-if (GVAR(autosaveInterval) isNotEqualTo 0) then {
-    [{
-        call FUNC(autoSave);
-    }, [], GVAR(autosaveTimer)] call CBA_fnc_waitAndExecute;
-};
-
 // Pull bank info
 private _savedBank = profileNamespace getVariable [QGVAR(activeBank), MACRO_PLAYER_DEFAULTS_LOW];
 _player setVariable [QEGVAR(currency,bankedFunds), _savedBank];

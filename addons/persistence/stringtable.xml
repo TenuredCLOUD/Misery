@@ -1,38 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
     <Package name="Persistence">
-        <Key ID="STR_MISERY_Persistence_Autosave">
-            <English>Autosave Interval</English>
-            <Czech>Interval automatického ukládání</Czech>
-            <French>Intervalle d'autosave</French>
-            <Spanish>Intervalo de autoguardado</Spanish>
-            <Italian>Intervallo salvataggio automatico</Italian>
-            <Polish>Interwał automatycznego zapisu</Polish>
-            <Portuguese>Intervalo de gravação automática</Portuguese>
-            <Russian>Интервал автосохранения</Russian>
-            <German>Autospeicher-Intervall</German>
-            <Korean>자동 저장 간격</Korean>
-            <Japanese>オートセーブ間隔</Japanese>
-            <Chinese>自動存檔間隔</Chinese>
-            <Chinesesimp>自动存档间隔</Chinesesimp>
-            <Turkish>Otomatik Kaydetme Aralığı</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Persistence_AutosaveDesc">
-            <English>How often would you like to autosave?</English>
-            <Czech>Jak často chcete automaticky ukládat?</Czech>
-            <French>À quelle fréquence souhaitez-vous effectuer une sauvegarde automatique ?</French>
-            <Spanish>¿Con qué frecuencia te gustaría que se guardara automáticamente?</Spanish>
-            <Italian>Ogni quanto tempo vorresti effettuare il salvataggio automatico?</Italian>
-            <Polish>Jak często chcesz automatycznie zapisyвать grę?</Polish>
-            <Portuguese>Com que frequência gostaria de gravar automaticamente?</Portuguese>
-            <Russian>Как часто вы хотите выполнять автосохранение?</Russian>
-            <German>Wie oft möchtest du automatisch speichern?</German>
-            <Korean>얼마나 자주 자동 저장하시겠습니까?</Korean>
-            <Japanese>どれくらいの頻度でオートセーブしますか？</Japanese>
-            <Chinese>您希望每隔多久自動存檔一次？</Chinese>
-            <Chinesesimp>您希望每隔多久自动存档一次？</Chinesesimp>
-            <Turkish>Ne sıklıkla otomatik kaydetmek istersiniz?</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Persistence_Component">
             <English>Persistence</English>
             <Czech>Perzistence</Czech>

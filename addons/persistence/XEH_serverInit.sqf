@@ -4,6 +4,9 @@ if !(isServer) exitWith {};
 
 if !(isClass (missionConfigFile >> "CfgGradPersistence")) exitWith {};
 
+// Automatically blacklist logics from saving
+["ACE_LogicDummy"] call GRADFUNC(persistence,blacklistClasses);
+
 [QGVAR(saveWorldState), {
     [GVAR(gradWarning), 0] call GRADFUNC(persistence,saveMission);
 }] call CBA_fnc_addEventHandler;
