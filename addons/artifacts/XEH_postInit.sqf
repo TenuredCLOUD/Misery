@@ -14,6 +14,11 @@
     deleteVehicle _node;
 }] call CBA_fnc_addEventHandler;
 
+if (isClass (missionConfigFile >> "CfgGradPersistence")) then {
+    // Automatically blacklist logics from saving
+    [QCLASS(detectorProxy)] call GRADFUNC(persistence,blacklistClasses);
+};
+
 if (hasInterface) then {
     [QGVAR(setupExcavationNode), {
         params ["_node"];

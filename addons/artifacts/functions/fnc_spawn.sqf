@@ -28,9 +28,10 @@ if (_currentMarker in GVAR(processedMarkers)) exitWith {};
 for "_i" from 1 to _numArtifacts do {
     private _randomPos = [_currentMarker] call CBA_fnc_randPosArea;
 
-    private _nearBuildings = nearestObjects [_randomPos, ["House", "Building"], 10];
+    private _positionLogic = createVehicle ["ACE_LogicDummy", _randomPos, [], 0, "CAN_COLLIDE"];
 
-    if (_nearBuildings isEqualTo []) then {
+    // Make sure spawns are uncovered / outside positions only
+    if !([_positionLogic, 20] call EFUNC(common,hasOverheadCover)) then {
         private _detectorProxy = createVehicle [QCLASS(detectorProxy), _randomPos, [], 0, "CAN_COLLIDE"];
         private _logicNode = createVehicle ["ACE_LogicDummy", _randomPos, [], 0, "CAN_COLLIDE"];
 
