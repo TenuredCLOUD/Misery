@@ -104,6 +104,17 @@
                 _unit enableDynamicSimulation true;
                 [_unit, _unit] call ACEFUNC(common,claim);
 
+                // Set var for money searching if chance exists (Only for regular zombies)
+                if (EGVAR(currency,corpseHasMoneyChance) > 0) then {
+                    _unit setVariable [QEGVAR(currency,canSearch), true, true];
+                    if ([EGVAR(currency,corpseHasMoneyChance)] call EFUNC(common,rollChance)) then {
+                        private _cashFound = [EGVAR(currency,minAiMoney), EGVAR(currency,maxAiMoney)] call BIS_fnc_randomInt;
+                        _unit setVariable [QEGVAR(currency,funds), _cashFound, true];
+                    } else {
+                        _unit setVariable [QEGVAR(currency,funds), 0, true];
+                    };
+                };
+
                 GVAR(registeredEntities) pushBack _group;
 
                 // set var for money searching if chance exists

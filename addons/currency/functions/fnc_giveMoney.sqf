@@ -15,15 +15,17 @@
  *
 */
 
-[ACE_player, 2] call EFUNC(common,nearPlayer) params ["_isNear", "_targetPlayer"];
+private _targetUID = ACE_player getVariable [QGVAR(giftRecipient), ""];
 
 call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
-if (!_isNear) exitWith {
+private _recipient = _targetUID call BIS_fnc_getUnitByUID;
+
+if (isNull _recipient) exitWith {
     [QEGVAR(common,tileText), localize LSTRING(NoPlayer)] call CBA_fnc_localEvent;
 };
 
-private _targetPlayerFunds = _targetPlayer getVariable [QGVAR(funds), MACRO_PLAYER_DEFAULTS_LOW];
+private _recipientFunds = _recipient getVariable [QGVAR(funds), MACRO_PLAYER_DEFAULTS_LOW];
 
 private _amount = (ctrlText ((findDisplay 358493) displayCtrl 1400)) call BIS_fnc_parseNumber;
 
@@ -38,7 +40,7 @@ if (_amount > _funds) exitWith {
 [QEGVAR(common,tileText), format [localize LSTRING(Gifted), [_amount, 1, 2, true] call CBA_fnc_formatNumber, GVAR(symbol)]] call CBA_fnc_localEvent;
 
 // Increase target players money
-_targetPlayer setVariable [QGVAR(funds), _targetPlayerFunds + _amount, true];
+_recipient setVariable [QGVAR(funds), _recipientFunds + _amount, true];
 
 // Remove funds from player gifting
 [-_amount] call FUNC(modifyMoney);

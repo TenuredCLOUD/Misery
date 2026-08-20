@@ -8,10 +8,13 @@ private _searchMoneyAction = [
         params ["_target", "_player"];
         createDialog QCLASS(moneyTake_ui);
         [_target] call FUNC(takeMoneyRefresh);
+        _player setVariable [QGVAR(searchTarget), _target];
     },
     {
         params ["_target", "_player"];
-        !alive _target && _target getVariable [QGVAR(canSearch), false];
+
+        private _isAwake = [_target] call ACEFUNC(common,isAwake);
+        (!_isAwake || _target getVariable [QACEGVAR(captives,isHandcuffed), false] || _target getVariable [QACEGVAR(captives,isSurrendering), false]) && _target getVariable [QGVAR(canSearch), false];
     },
     {},
     ["_target", "_player"],
@@ -29,6 +32,7 @@ private _giftMoneyAction = [
         params ["_target", "_player"];
         createDialog QCLASS(moneyGive_ui);
         [_target] call FUNC(giveMoneyRefresh);
+        _player setVariable [QGVAR(giftRecipient), getPlayerUID _target];
     },
     {
         params ["_target", "_player"];
@@ -58,26 +62,3 @@ private _player = [] call ACEFUNC(common,player);
 [_player, 1, [QUOTE(ACE_SelfActions), QUOTE(ACE_Equipment)], _fundsCheckAction] call ACEFUNC(interact_menu,addActionToObject);
 
 _player setVariable [QGVAR(canSearch), true, true];
-
-[QGVAR(addCorpseSearchAction), {
-    params ["_unit"];
-    if (isNull _unit) exitWith {};
-
-    [_unit, 0, [QUOTE(ACE_MainActions)], GVAR(searchForMoneyAction)] call ACEFUNC(interact_menu,addActionToObject);
-}] call CBA_fnc_addEventHandler;
-
-if (isServer) then {
-    ["CAManBase", "Killed", {
-        params ["_unit"];
-
-        if (!isPlayer _unit) then {
-            if ([GVAR(corpseHasMoneyChance)] call EFUNC(common,rollChance)) then {
-                private _midAiMoney = GVAR(minAiMoney) + GVAR(maxAiMoney) / 2;
-                private _cashFound = floor random [GVAR(minAiMoney), _midAiMoney, GVAR(maxAiMoney)];
-                _unit setVariable [QGVAR(funds), _cashFound, true];
-            } else {
-                _unit setVariable [QGVAR(funds), 0, true];
-            };
-        };
-    }] call CBA_fnc_addClassEventHandler;
-};

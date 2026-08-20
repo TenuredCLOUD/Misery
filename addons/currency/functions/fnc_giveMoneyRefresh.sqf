@@ -28,14 +28,12 @@ params ["_targetPlayer"];
 
         call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
 
-        private _targetPlayerFunds = _targetPlayer getVariable [QGVAR(funds), MACRO_PLAYER_DEFAULTS_LOW];
-
-        private _playerFundsParsed = _funds call BIS_fnc_parseNumber;
-        private _playerFundsFormatted = [_playerFundsParsed, 1, 2, true] call CBA_fnc_formatNumber;
+        private _playerFundsFormatted = [_funds, 1, 2, true] call CBA_fnc_formatNumber;
         private _playerFundsText = format ["%3: %1 %2", GVAR(symbol), _playerFundsFormatted, profileName];
 
-        private _targetPlayerFundsParsed = _targetPlayerFunds call BIS_fnc_parseNumber;
-        private _targetPlayerFundsFormatted = [_targetPlayerFundsParsed, 1, 2, true] call CBA_fnc_formatNumber;
+        private _targetPlayerFunds = _targetPlayer getVariable [QGVAR(funds), MACRO_PLAYER_DEFAULTS_LOW];
+
+        private _targetPlayerFundsFormatted = [_targetPlayerFunds, 1, 2, true] call CBA_fnc_formatNumber;
         private _targetPlayerFundsText = format ["%3: %1 %2", GVAR(symbol), _targetPlayerFundsFormatted, name _targetPlayer];
 
         ctrlSetText [1001, _targetPlayerFundsText];

@@ -226,6 +226,16 @@ if (_aiClass isNotEqualTo "") then {
             [_unit] call EFUNC(ambient_ai,addRecruitOption);
             [_unit] call EFUNC(ambient_ai,addGearOption);
         };
+
+        if (EGVAR(currency,corpseHasMoneyChance) > 0) then {
+            _unit setVariable [QEGVAR(currency,canSearch), true, true];
+            if ([EGVAR(currency,corpseHasMoneyChance)] call EFUNC(common,rollChance)) then {
+                private _cashFound = [EGVAR(currency,minAiMoney), EGVAR(currency,maxAiMoney)] call BIS_fnc_randomInt;
+                _unit setVariable [QEGVAR(currency,funds), _cashFound, true];
+            } else {
+                _unit setVariable [QEGVAR(currency,funds), 0, true];
+            };
+        };
     };
 
     if (count (_poi get "aiItemLoot") > 0) then {
