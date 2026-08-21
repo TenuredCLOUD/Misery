@@ -3,6 +3,7 @@ PREP(addCoolant);
 PREP(addOil);
 PREP(getBatteryCharge);
 PREP(initVehicles);
+PREP(ignore);
 PREP(listed);
 PREP(preparedVehicle);
 PREP(refuel);

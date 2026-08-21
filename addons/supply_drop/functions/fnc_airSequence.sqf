@@ -22,6 +22,8 @@ if (_players isEqualTo []) exitWith {};
 private _dropZone = [getPosATL selectRandom _players, selectRandom GVAR(dropZones)] select (GVAR(dropZones) isNotEqualTo []);
 
 private _heli = createVehicle [selectRandom GVAR(heliTypes), [0, 0, 0], [], 0, "FLY"];
+[_heli] call EFUNC(maintenance,ignore);
+
 private _heliGroup = createVehicleCrew _heli;
 _heli setDir (_heli getDir _dropZone);
 

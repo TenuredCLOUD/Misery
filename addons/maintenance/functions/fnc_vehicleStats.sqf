@@ -21,6 +21,8 @@
 
     private _vehicle = objectParent ACE_player;
 
+    private _isIgnored = _vehicle getVariable [QGVAR(ignore), false];
+
     [_vehicle] call EFUNC(common,getObjectData) params ["_displayName"];
 
     // Make sure driver or pilot / co-pilot get display only
@@ -37,7 +39,7 @@
         };
     };
 
-    if (!alive ACE_player || isNull objectParent ACE_player) exitWith {
+    if (!alive ACE_player || isNull objectParent ACE_player || _isIgnored) exitWith {
         QGVAR(display) cutText ["", "PLAIN"];
         _handle call CBA_fnc_removePerFrameHandler;
     };
