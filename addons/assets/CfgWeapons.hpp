@@ -4,8 +4,8 @@ class CfgWeapons {
     class CLASS(ItemCore): CBA_MiscItem {};
 
     class CLASS(money_case): CLASS(ItemCore) {
-        displayName = "Money Case";
-        descriptionShort = "Solid plastic storage case with a metal lining, makes detection with a mine detector easy, can be used to for a money cache";
+        displayName = CSTRING(PlasticCase_DisplayName);
+        descriptionShort = CSTRING(PlasticCase_Description);
         picture = QPATHTOF(data\icons\smallPlasticCase.paa);
         model = "a3\structures_f_heli\items\luggage\plasticcase_01_small_f.p3d";
         scope = 2;

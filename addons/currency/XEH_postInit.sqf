@@ -59,7 +59,7 @@ private _fundsCheckAction = [
 
 private _buryCacheAction = [
     QGVAR(cache_menu),
-    "Bury Cache",
+    localize LSTRING(BuryCache),
     QPATHTOEF(icons,data\shovel_ca.paa),
     {
         params ["_target", "_player"];
@@ -77,15 +77,15 @@ private _buryCacheAction = [
 
                 [_player, "", 1] call ACEFUNC(common,doAnimation);
 
-                ["Stash buried...", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
+                [localize LSTRING(StashBuried), 1, [1, 1, 1, 1]] call CBA_fnc_notify;
 
                 createVehicle [QCLASS(moneyCache), getPosATL _player, [], 0, "CAN_COLLIDE"];
             },
             {
-                ["You stop burying...", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
+                [localize LSTRING(StopBurying), 1, [1, 1, 1, 1]] call CBA_fnc_notify;
                 [ACE_player, "", 1] call ACEFUNC(common,doAnimation);
             },
-            "Burying cache..."
+            localize LSTRING(BuryingCache)
         ] call ACEFUNC(common,progressBar);
     },
     {

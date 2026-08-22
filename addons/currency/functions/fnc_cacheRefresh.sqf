@@ -37,4 +37,4 @@ params ["_cache"];
     ctrlSetText [1001, _playerFundsText];
     ctrlSetText [1002, _cacheText];
     ctrlSetText [1004, format ["%1", GVAR(symbol)]];
-}, 1, [_cache]] call CBA_fnc_addPerFrameHandler;
+}, 0.1, [_cache]] call CBA_fnc_addPerFrameHandler;

@@ -557,6 +557,38 @@
             <Chinesesimp>劣质镐</Chinesesimp>
             <Turkish>Kalitesiz Kazma</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Assets_PlasticCase_Description">
+            <English>Solid plastic storage case with a metal lining, makes detection with a mine detector easy, perfect for long term money storage</English>
+            <Czech>Odolný plastový úložný kufr s kovovou výstelkou. Snadno ho detekujete minovým hledačem, což z něj dělá ideální volbu pro dlouhodobé ukládání peněz.</Czech>
+            <French>Mallette de rangement en plastique solide avec un revêtement métallique. Facile à détecter avec un détecteur de mines, parfaite pour le stockage d'argent à long terme.</French>
+            <Spanish>Maletín de almacenamiento de plástico resistente con revestimiento metálico. Facilita su detección con un detector de minas, ideal para el almacenamiento de dinero a largo plazo.</Spanish>
+            <Italian>Valigetta di custodia in robusta plastica con rivestimento metallico. Facile da individuare con un cercamine, perfetta per la conservazione di denaro a lungo termine.</Italian>
+            <Polish>Solidna plastikowa walizka ze wzmocnieniem metalowym. Łatwa do wykrycia za pomocą wykrywacza min, idealna do długoterminowego przechowywania pieniędzy.</Polish>
+            <Portuguese>Maleta de armazenamento de plástico sólido com revestimento metálico. Facilita a detecção com um detector de minas, perfeita para o armazenamento de dinheiro a longo prazo.</Portuguese>
+            <Russian>Прочный пластиковый кейс с металлической подкладкой. Легко обнаруживается миноискателем, идеально подходит для долговременного хранения денег.</Russian>
+            <German>Robuster Kunststoffkoffer mit Metallauskleidung. Lässt sich mit einem Minensuchgerät leicht aufspüren – perfekt für die langfristige Aufbewahrung von Geld.</German>
+            <Korean>금속 라이닝이 적용된 견고한 플라스틱 보관 케이스입니다. 금속 탐지기로 쉽게 탐지할 수 있어 자금을 장기 보관하기에 적합합니다.</Korean>
+            <Japanese>金属ライニングが施された頑丈なプラスチック製収納ケース。地雷探知機での検出が容易で、長期的な資金の保管に最適です。</Japanese>
+            <Chinese>帶有金屬襯里的堅固塑料儲物箱，易於用金屬探測器發現，非常適合長期存放資金。</Chinese>
+            <Chinesesimp>带有金属衬里的坚固塑料储物箱，易于用金属探测器发现，非常适合长期存放资金。</Chinesesimp>
+            <Turkish>Metal kaplamalı sağlam plastik depolama çantası. Mayın detektörüyle tespiti kolaydır, uzun vadeli para depolama için mükemmeldir.</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_PlasticCase_DisplayName">
+            <English>Plastic Case</English>
+            <Czech>Plastový kufr</Czech>
+            <French>Mallette en plastique</French>
+            <Spanish>Maletín de plástico</Spanish>
+            <Italian>Valigetta in plastica</Italian>
+            <Polish>Plastikowa walizka</Polish>
+            <Portuguese>Maleta de plástico</Portuguese>
+            <Russian>Пластиковый кейс</Russian>
+            <German>Kunststoffkoffer</German>
+            <Korean>플라스틱 케이스</Korean>
+            <Japanese>プラスチックケース</Japanese>
+            <Chinese>塑料手提箱</Chinese>
+            <Chinesesimp>塑料手提箱</Chinesesimp>
+            <Turkish>Plastik Çanta</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Assets_PotassiumIodate_Description">
             <English>Contains tablets that saturate the thyroid gland, blocking the absorption of radioactive isotopes and preventing radiation exposure.&lt;br/&gt; - Radiation medication</English>
             <Czech>Obsahuje tablety, které nasycují štítnou žlázu, čímž blokují vstřebávání radioaktivních izotopů a zabraňují ozáření.&lt;br/&gt; - Antiradiační lék</Czech>

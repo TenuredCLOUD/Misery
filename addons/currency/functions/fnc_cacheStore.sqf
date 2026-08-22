@@ -23,7 +23,7 @@ private _cacheFunds = _cache getVariable [QGVAR(cacheFunds), 0];
 private _amount = (ctrlText ((findDisplay 483730) displayCtrl 1400)) call BIS_fnc_parseNumber;
 
 if (_amount <= 0) exitWith {
-    [QEGVAR(common,tileText), localize LSTRING(InvalidDeposit)] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(InvalidAmount)] call CBA_fnc_localEvent;
 };
 
 if (_amount > _funds) exitWith {

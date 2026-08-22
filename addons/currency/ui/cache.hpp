@@ -54,7 +54,7 @@ class CLASS(cache_ui) {
         class CLASS(cache_stash): RscButton {
             idc = 1600;
             onButtonClick = QUOTE([] call EFUNC(currency,cacheStore));
-            text = "Store";
+            text = ECSTRING(currency,Store);
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
             y = 11.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;
@@ -68,7 +68,7 @@ class CLASS(cache_ui) {
         class CLASS(cache_take): RscButton {
             idc = 1601;
             onButtonClick = QUOTE([] call EFUNC(currency,cacheTake));
-            text = "Take";
+            text = ECSTRING(currency,Take);
             x = 0.5 * GUI_GRID_W + GUI_GRID_X;
             y = 14.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;
@@ -83,7 +83,7 @@ class CLASS(cache_ui) {
         {
             idc = 1602;
             onButtonClick = QUOTE([] call EFUNC(currency,removeCache));
-            text = "Remove";
+            text = ECSTRING(currency,Remove);
             x = 31.5 * GUI_GRID_W + GUI_GRID_X;
             y = 14.5 * GUI_GRID_H + GUI_GRID_Y;
             w = 7.5 * GUI_GRID_W;

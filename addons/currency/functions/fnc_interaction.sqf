@@ -26,7 +26,7 @@ if (_found) then {
 
     private _action = [
         QGVAR(cache_menu),
-        "Use cache",
+        localize LSTRING(UseCache),
         QPATHTOEF(icons,data\shovel_ca.paa),
         {
             params ["_target", "_player", "_params"];
