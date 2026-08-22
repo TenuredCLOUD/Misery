@@ -1,4 +1,6 @@
 PREP(bankRefresh);
+PREP(exitGifting);
+PREP(exitTaking);
 PREP(fundsDeposit);
 PREP(fundsWithdraw);
 PREP(generateBank);

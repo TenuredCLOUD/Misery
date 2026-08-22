@@ -33,6 +33,8 @@ if (side _unit isEqualTo side ACE_player) then {
             call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "", "", "", "", "", "", "_funds"];
             if (_funds >= _recruitmentCost) then {
                 [-_recruitmentCost] call EFUNC(currency,modifyMoney);
+                private _recipientFunds = _target getVariable [QEGVAR(currency,funds), MACRO_PLAYER_DEFAULTS_LOW];
+                _target setVariable [QEGVAR(currency,funds), _recipientFunds + _recruitmentCost, true];
                 [_target] joinSilent _player;
                 [QEGVAR(common,tileText), format [localize LSTRING(RecruitUnit_Success), name _target, EGVAR(currency,symbol), [_recruitmentCost, 1, 2, true] call CBA_fnc_formatNumber]] call CBA_fnc_localEvent;
             } else {

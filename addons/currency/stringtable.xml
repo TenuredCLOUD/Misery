@@ -97,22 +97,6 @@
             <Chinesesimp>货币</Chinesesimp>
             <Turkish>Para Birimi</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Currency_Corpse">
-            <English>Corpse</English>
-            <Czech>Mrtvola</Czech>
-            <French>Cadavre</French>
-            <Spanish>Cadáver</Spanish>
-            <Italian>Cadavere</Italian>
-            <Polish>Trup</Polish>
-            <Portuguese>Cadáver</Portuguese>
-            <Russian>Труп</Russian>
-            <German>Leiche</German>
-            <Korean>시체</Korean>
-            <Japanese>死体</Japanese>
-            <Chinese>屍體</Chinese>
-            <Chinesesimp>尸体</Chinesesimp>
-            <Turkish>Ceset</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Currency_CurrentFunds">
             <English>Current funds</English>
             <Czech>Aktuální finance</Czech>
