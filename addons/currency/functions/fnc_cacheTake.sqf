@@ -27,7 +27,7 @@ if (_amount <= 0) exitWith {
 };
 
 if (_amount > _cacheFunds) exitWith {
-    [QEGVAR(common,tileText), localize LSTRING(NoFundsToTake)] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(InvalidAmount)] call CBA_fnc_localEvent;
 };
 
 [_amount] call FUNC(modifyMoney);
