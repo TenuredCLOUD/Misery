@@ -18,17 +18,6 @@ private _category = format ["Misery %1", localize LSTRING(Component)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(autosaveInterval),
-    "LIST",
-    [LSTRING(Autosave), LSTRING(AutosaveDesc)],
-    _category,
-    [[0, 1, 10, 15, 20, 25, 30], [ECSTRING(common,Never), ECSTRING(common,Interval1Min), ECSTRING(common,Interval10Min), ECSTRING(common,Interval15Min), ECSTRING(common,Interval20Min), ECSTRING(common,Interval25Min), ECSTRING(common,Interval30Min)], 1],
-    1,
-    {},
-    true
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(gradAutosaveInterval),
     "LIST",
     [LSTRING(GradAutosave), LSTRING(GradAutosaveDesc)],
@@ -37,15 +26,6 @@ private _category = format ["Misery %1", localize LSTRING(Component)];
     1,
     {},
     true
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(gradESCSave),
-    "CHECKBOX",
-    [LSTRING(SaveWorldStateESC), LSTRING(SaveWorldStateESCDesc)],
-    _category,
-    false,
-    1
 ] call CBA_fnc_addSetting;
 
 [

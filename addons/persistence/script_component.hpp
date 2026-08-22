@@ -5,11 +5,6 @@
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
 
-// Profile Type
-#define ACTIVE_PROFILE_KEY [QGVAR(activeProfileSP), QGVAR(activeProfileMP)] select isMultiplayer
-// Bank Type
-#define ACTIVE_BANK_KEY [QGVAR(activeBankSP), QGVAR(activeBankMP)] select isMultiplayer
-
 // Do not alter the order of this, will cause variables to be set with the wrong values.
 #define MISERY_PLAYER_VARIABLE_VALUES \
     QEGVAR(survival,hunger), \
