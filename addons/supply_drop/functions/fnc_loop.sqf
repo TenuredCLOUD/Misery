@@ -14,6 +14,15 @@
  *
 */
 
+private _players = call EFUNC(common,listPlayers);
+
+// if no players in game, rerun loop after timedown
+if (_players isEqualTo []) exitWith {
+    [{
+        [] call FUNC(loop);
+    }, [], 10] call CBA_fnc_waitAndExecute;
+};
+
 if ([GVAR(spawnChance)] call EFUNC(common,rollChance)) then {
     [] call FUNC(airSequence);
 };

@@ -28,25 +28,11 @@ if (_currentMarker in GVAR(processedMarkers)) exitWith {};
 for "_i" from 1 to _numArtifacts do {
     private _randomPos = [_currentMarker] call CBA_fnc_randPosArea;
 
-    _randomPos set [2, 0];
+    private _positionLogic = createVehicle ["ACE_LogicDummy", _randomPos, [], 0, "CAN_COLLIDE"];
 
-    // Ensure position is outdoors (no roofs or nearby building geometry)
-    private _eyePos = _randomPos;
-
-    _eyePos set [2, (_eyePos select 2) + 0.2];
-
-    private _roofPos = _randomPos;
-
-    _roofPos set [2, (_roofPos select 2) + 30];
-
-    private _underRoof = lineIntersects [_eyePos, _roofPos];
-
-    private _nearBuildings = nearestObjects [_randomPos, ["House", "Building"], 6];
-
-    if (!_underRoof && {_nearBuildings isEqualTo []}) then {
-
+    // Make sure spawns are uncovered / outside positions only
+    if !([_positionLogic, 20] call EFUNC(common,hasOverheadCover)) then {
         private _detectorProxy = createVehicle [QCLASS(detectorProxy), _randomPos, [], 0, "CAN_COLLIDE"];
-
         private _logicNode = createVehicle ["ACE_LogicDummy", _randomPos, [], 0, "CAN_COLLIDE"];
 
         _logicNode setPosATL _randomPos;
@@ -55,6 +41,15 @@ for "_i" from 1 to _numArtifacts do {
 
         private _jipID = [QGVAR(setupExcavationNode), [_logicNode]] call CBA_fnc_globalEventJIP;
         _logicNode setVariable [QGVAR(nodeJipID), _jipID, true];
+
+        if (GVAR(debug) && {!isNull _logicNode}) then {
+            private _markerID = format ["%1", _randomPos];
+            private _debugMarker = createMarker [_markerID, getPosATL _logicNode];
+            _debugMarker setMarkerShapeLocal "ICON";
+            _debugMarker setMarkerTypeLocal "hd_dot";
+            _debugMarker setMarkerColorLocal "ColorRed";
+            _debugMarker setMarkerText format ["artifact_%1", _markerID];
+        };
     };
 };
 

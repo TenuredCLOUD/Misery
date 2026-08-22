@@ -45,7 +45,7 @@ class CLASS(grad_persistence_compat_ui) {
             colorActive[] = {0.5, 0.5, 0.5, 0.7};
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
-            onButtonClick = QUOTE([ARR_1(1)] call EFUNC(persistence,handleGrad));
+            onButtonClick = QUOTE([ARR_1(QQEGVAR(persistence,saveWorldState))] call CBA_fnc_serverEvent);
         };
         class misery_gradPersistence_wipe: RscButton {
             idc = -1;
@@ -60,7 +60,7 @@ class CLASS(grad_persistence_compat_ui) {
             colorActive[] = {0.5, 0.5, 0.5, 0.7};
             font = UI_MACRO_FONT;
             sizeEx = UI_MACRO_TEXTSIZE;
-            onButtonClick = QUOTE([ARR_1(-1)] call EFUNC(persistence,handleGrad));
+            onButtonClick = QUOTE([ARR_1(QQEGVAR(persistence,wipeWorldState))] call CBA_fnc_serverEvent);
         };
         class misery_gradPersistence_cancel_wipe: RscButton {
             idc = -1;

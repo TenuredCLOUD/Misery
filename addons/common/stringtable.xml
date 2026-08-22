@@ -321,22 +321,6 @@
             <Chinesesimp>20 分钟</Chinesesimp>
             <Turkish>20 Dakika</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Common_Interval25Min">
-            <English>25 Minutes</English>
-            <Czech>25 minut</Czech>
-            <French>25 minutes</French>
-            <Spanish>25 minutos</Spanish>
-            <Italian>25 minuti</Italian>
-            <Polish>25 minut</Polish>
-            <Portuguese>25 minutos</Portuguese>
-            <Russian>25 минут</Russian>
-            <German>25 Minuten</German>
-            <Korean>25분</Korean>
-            <Japanese>25分</Japanese>
-            <Chinese>25 分鐘</Chinese>
-            <Chinesesimp>25 分钟</Chinesesimp>
-            <Turkish>25 Dakika</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Common_Interval2Hours">
             <English>2 Hours</English>
             <Czech>2 hodiny</Czech>

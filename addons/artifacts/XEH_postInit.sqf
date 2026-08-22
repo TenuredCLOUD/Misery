@@ -14,6 +14,11 @@
     deleteVehicle _node;
 }] call CBA_fnc_addEventHandler;
 
+if (isClass (missionConfigFile >> "CfgGradPersistence")) then {
+    // Automatically blacklist logics from saving
+    [QCLASS(detectorProxy)] call GRADFUNC(persistence,blacklistClasses);
+};
+
 if (hasInterface) then {
     [QGVAR(setupExcavationNode), {
         params ["_node"];
@@ -25,6 +30,10 @@ if (hasInterface) then {
             QPATHTOEF(icons,data\shovel_ca.paa),
             {
                 params ["_target", "_player"];
+
+                if !([[MACRO_SHOVELS]] call EFUNC(common,hasItem)) exitWith {
+                    [QEGVAR(common,tileText), localize LSTRING(NeedShovel)] call CBA_fnc_localEvent;
+                };
 
                 [_player, "AinvPknlMstpSnonWnonDnon_medic4"] call ACEFUNC(common,doAnimation);
 
@@ -58,15 +67,11 @@ if (hasInterface) then {
                     localize LSTRING(ExcavatingSoil)
                 ] call ACEFUNC(common,progressBar);
             },
-            {
-                params ["", "_player"];
-
-                [[QCLASSACE(EntrenchingTool)]] call EFUNC(common,hasItem);
-            },
+            {true},
             {},
             [],
             [0, 0, 0],
-            1
+            2
         ] call ACEFUNC(interact_menu,createAction);
 
         [_node, 0, [], _digAction] call ACEFUNC(interact_menu,addActionToObject);

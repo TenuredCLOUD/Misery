@@ -275,4 +275,12 @@ switch (_lootType) do {
     };
 };
 
-[_spawnPosition, _weaponCargo, _magazineCargo, _itemCargo, _backpackCargo] call EFUNC(common,spawnLoot);
+private _positionLogic = createVehicle ["ACE_LogicDummy", _spawnPosition, [], 0, "CAN_COLLIDE"];
+
+if ([_positionLogic, 20] call EFUNC(common,hasOverheadCover)) then {
+    [_spawnPosition, _weaponCargo, _magazineCargo, _itemCargo, _backpackCargo] call EFUNC(common,spawnLoot);
+    deleteVehicle _positionLogic;
+} else {
+    [QUOTE(COMPONENT_BEAUTIFIED), format ["Loot position: %1 Not covered, skipping...", _spawnPosition]] call EFUNC(common,debugMessage);
+    deleteVehicle _positionLogic;
+};

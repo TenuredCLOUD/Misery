@@ -129,6 +129,22 @@
             <Chinesesimp>铅衬容器已无空间存放更多样品...</Chinesesimp>
             <Turkish>Kurşun konteynerde daha fazla numune için yer kalmadı...</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Artifacts_NeedShovel">
+            <English>You need a shovel to excavate soil...</English>
+            <Czech>K vykopání zeminy potřebujete lopatu...</Czech>
+            <French>Vous avez besoin d'une pelle pour excaver le sol...</French>
+            <Spanish>Necesitas una pala para excavar el suelo...</Spanish>
+            <Italian>Hai bisogno di una pala per scavare il terreno...</Italian>
+            <Polish>Potrzebujesz łopaty, aby wykopać glebę...</Polish>
+            <Portuguese>Você precisa de uma pá para escavar o solo...</Portuguese>
+            <Russian>Вам нужна лопата, чтобы выкопать грунт...</Russian>
+            <German>Du benötigst einen Spaten, um Boden auszuheben...</German>
+            <Korean>토양을 굴착하려면 삽이 필요합니다...</Korean>
+            <Japanese>土壌を掘削するにはショベルが必要です...</Japanese>
+            <Chinese>你需要一把鏟子才能挖掘土壤...</Chinese>
+            <Chinesesimp>你需要一把铲子才能挖掘土壤...</Chinesesimp>
+            <Turkish>Toprağı kazmak için bir küreğe ihtiyacınız var...</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Artifacts_SampleStored">
             <English>Sample stored in lead lined container</English>
             <Czech>Vzorek byl uložen do olovem stíněného kontejneru</Czech>

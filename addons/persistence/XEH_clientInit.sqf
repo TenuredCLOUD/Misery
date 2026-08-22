@@ -3,7 +3,6 @@
 if !(hasInterface) exitWith {};
 
 GVAR(blockSave) = false;
-GVAR(clientLoaded) = false;
 
 ["CBA_loadingScreenDone", {
     [] call FUNC(init);
