@@ -166,7 +166,11 @@ if (isServer) then {
                 [_target] call FUNC(updateIcon);
                 _player setVariable [QGVAR(currentVehicle), _target];
             },
-            {true}
+            {
+                params ["_target", "_player"];
+
+                !(_target getVariable [QGVAR(ignore), false]);
+            }
         ] call ACEFUNC(interact_menu,createAction);
 
         [_vehicle, 0, [QUOTE(ACE_MainActions)], _maintenanceAction] call ACEFUNC(interact_menu,addActionToObject);
@@ -176,6 +180,12 @@ if (isServer) then {
 
         _vehicle addEventHandler ["Engine", {
             params ["_vehicle", "_engineState"];
+
+            private _isIgnored = _vehicle getVariable [QGVAR(ignore), false];
+
+            if (_isIgnored) exitWith {
+                _vehicle removeEventHandler [_thisEvent, _thisEventHandler];
+            };
 
             private _requiredBatteries = _vehicle getVariable [QGVAR(batteryCount), 1];
             private _installedBatteries = _vehicle getVariable [QGVAR(installedBatteries), 0];
