@@ -89,7 +89,7 @@ private _buryCacheAction = [
         ] call ACEFUNC(common,progressBar);
     },
     {
-        (insideBuilding ACE_player isNotEqualTo 1 && [[QCLASSACE(EntrenchingTool)]] call EFUNC(common,hasItem) && [[QCLASS(money_case)]] call EFUNC(common,hasItem));
+        (insideBuilding ACE_player isNotEqualTo 1 && [[MACRO_SHOVELS]] call EFUNC(common,hasItem) && [[QCLASS(money_case)]] call EFUNC(common,hasItem));
     }
 ] call ACEFUNC(interact_menu,createAction);
 

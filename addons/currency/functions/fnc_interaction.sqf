@@ -37,7 +37,7 @@ if (_found) then {
             _player setVariable [QGVAR(currentCache), _cacheObject];
         },
         {
-            [[QCLASSACE(EntrenchingTool)]] call EFUNC(common,hasItem)
+            [[MACRO_SHOVELS]] call EFUNC(common,hasItem)
         },
         {},
         [_cacheObject],
