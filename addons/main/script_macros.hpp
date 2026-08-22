@@ -261,6 +261,15 @@
 // Can openers
 #define MACRO_CANTOOLS QCLASS(canOpener), QCLASS(guttingKnife), "rvg_guttingKnife", "rvg_canOpener"
 
+// Shovels
+#define MACRO_SHOVELS \
+QCLASSACE(EntrenchingTool), \
+"tsp_meleeWeapon_mpl50_black", \
+"tsp_meleeWeapon_mpl50_dave", \
+"tsp_meleeWeapon_mpl50", \
+"Shovel_Russian", \
+"Shovel_Russian_Rotated"
+
 // Knifes
 #define MACRO_KNIVES \
 QCLASS(guttingKnife), \
