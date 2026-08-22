@@ -18,7 +18,7 @@
 private _target = ACE_player getVariable [QGVAR(searchTarget), objNull];
 
 if (isNull _target) exitWith {
-    [QEGVAR(common,tileText), localize LSTRING(NoCorpse)] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(NoFundsToTake)] call CBA_fnc_localEvent;
 };
 
 private _targetFunds = _target getVariable [QGVAR(funds), MACRO_PLAYER_DEFAULTS_LOW];
@@ -26,7 +26,7 @@ private _targetFunds = _target getVariable [QGVAR(funds), MACRO_PLAYER_DEFAULTS_
 private _amount = (ctrlText ((findDisplay 358492) displayCtrl 1400)) call BIS_fnc_parseNumber;
 
 if (_targetFunds <= 0) exitWith {
-    [QEGVAR(common,tileText), localize LSTRING(NoMoreFundsCorpse)] call CBA_fnc_localEvent;
+    [QEGVAR(common,tileText), localize LSTRING(NoFundsToTake)] call CBA_fnc_localEvent;
 };
 
 if (_amount <= 0) exitWith {

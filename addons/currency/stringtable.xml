@@ -81,6 +81,22 @@
             <Chinesesimp>中央银行网络的名称</Chinesesimp>
             <Turkish>Merkezi banka ağının adı</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Currency_Cache">
+            <English>Cache</English>
+            <Czech>Skrýš</Czech>
+            <French>Cache</French>
+            <Spanish>Alijo</Spanish>
+            <Italian>Nascondiglio</Italian>
+            <Polish>Schowek</Polish>
+            <Portuguese>Esconderijo</Portuguese>
+            <Russian>Тайник</Russian>
+            <German>Versteck</German>
+            <Korean>은닉처</Korean>
+            <Japanese>キャッシュ</Japanese>
+            <Chinese>密藏</Chinese>
+            <Chinesesimp>密藏</Chinesesimp>
+            <Turkish>Zula</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Currency_Component">
             <English>Currency</English>
             <Czech>Měna</Czech>
@@ -513,21 +529,37 @@
             <Chinesesimp>AI 可能携带的最小现金金额。(上限 5,000)</Chinesesimp>
             <Turkish>Yapay zekanın sahip olabileceği minimum nakit. (5.000 ile sınırlı)</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Currency_NoCorpse">
-            <English>No corpse nearby...</English>
-            <Czech>Žádná mrtvola poblíž...</Czech>
-            <French>Aucun cadavre à proximité...</French>
-            <Spanish>No hay cadáveres cerca...</Spanish>
-            <Italian>Nessun cadavere nelle vicinanze...</Italian>
-            <Polish>Brak zwłok w pobliżu...</Polish>
-            <Portuguese>Nenhum corpo por perto...</Portuguese>
-            <Russian>Рядом нет трупов...</Russian>
-            <German>Leiche nicht in der Nähe...</German>
-            <Korean>주변에 시체가 없습니다...</Korean>
-            <Japanese>近くに死体がありません...</Japanese>
-            <Chinese>附近沒有屍體...</Chinese>
-            <Chinesesimp>附近没有尸体...</Chinesesimp>
-            <Turkish>Yakında ceset yok...</Turkish>
+        <Key ID="STR_MISERY_Currency_MoneyCache">
+            <English>Money Cache</English>
+            <Czech>Sk skrýš s penězi</Czech>
+            <French>Cache d'argent</French>
+            <Spanish>Alijo de dinero</Spanish>
+            <Italian>Nascondiglio di denaro</Italian>
+            <Polish>Schowek na pieniądze</Polish>
+            <Portuguese>Esconderijo de dinheiro</Portuguese>
+            <Russian>Тайник с деньгами</Russian>
+            <German>Geldversteck</German>
+            <Korean>자금 은닉처</Korean>
+            <Japanese>現金キャッシュ</Japanese>
+            <Chinese>資金密藏</Chinese>
+            <Chinesesimp>资金密藏</Chinesesimp>
+            <Turkish>Para Zulası</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_MoneyStored">
+            <English>Money stored: %2 %1</English>
+            <Czech>Uložené peníze: %2 %1</Czech>
+            <French>Argent stocké : %2 %1</French>
+            <Spanish>Dinero almacenado: %2 %1</Spanish>
+            <Italian>Denaro depositato: %2 %1</Italian>
+            <Polish>Przechowywane środki: %2 %1</Polish>
+            <Portuguese>Dinheiro guardado: %2 %1</Portuguese>
+            <Russian>Хранится денег: %2 %1</Russian>
+            <German>Gelagertes Geld: %2 %1</German>
+            <Korean>보관된 자금: %2 %1</Korean>
+            <Japanese>保管中の現金: %2 %1</Japanese>
+            <Chinese>已存資金：%2 %1</Chinese>
+            <Chinesesimp>已存资金：%2 %1</Chinesesimp>
+            <Turkish>Depolanan para: %2 %1</Turkish>
         </Key>
         <Key ID="STR_MISERY_Currency_NoFundsDeposit">
             <English>No funds to deposit</English>
@@ -545,6 +577,22 @@
             <Chinesesimp>无资金可存</Chinesesimp>
             <Turkish>Yatırılacak fon yok</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Currency_NoFundsToTake">
+            <English>No funds to take</English>
+            <Czech>Žádné peníze k vyzvednutí</Czech>
+            <French>Pas fonds à récupérer</French>
+            <Spanish>No hay fondos para tomar</Spanish>
+            <Italian>Nessun fondo da prelevare</Italian>
+            <Polish>Brak środków do pobrania</Polish>
+            <Portuguese>Sem fundos para retirar</Portuguese>
+            <Russian>Нет средств для изъятия</Russian>
+            <German>Kein Geld vorhanden</German>
+            <Korean>수령할 자금 없음</Korean>
+            <Japanese>回収できる資金がありません</Japanese>
+            <Chinese>無資金可取</Chinese>
+            <Chinesesimp>无资金可取</Chinesesimp>
+            <Turkish>Alınacak fon yok</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Currency_NoFundsWithdraw">
             <English>No funds to withdraw</English>
             <Czech>Žádné prostředky k výběru</Czech>
@@ -560,22 +608,6 @@
             <Chinese>無資金可取</Chinese>
             <Chinesesimp>无资金可取</Chinesesimp>
             <Turkish>Çekilecek fon yok</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_NoMoreFundsCorpse">
-            <English>This corpse has no more funds...</English>
-            <Czech>Tato mrtvola již nemá žádné prostředky...</Czech>
-            <French>Ce cadavre n'a plus de fonds...</French>
-            <Spanish>Este cadáver ya no tiene fondos...</Spanish>
-            <Italian>Questo cadavere non ha più fondi...</Italian>
-            <Polish>Te zwłoki nie mają już więcej środków...</Polish>
-            <Portuguese>Este corpo não tem mais fundos...</Portuguese>
-            <Russian>У этого трупа больше нет средств...</Russian>
-            <German>Diese Leiche hat keine Mittel mehr...</German>
-            <Korean>이 시체에는 더 이상 자금이 없습니다...</Korean>
-            <Japanese>この死体にはもう資金がありません...</Japanese>
-            <Chinese>這具屍體沒有更多資金了...</Chinese>
-            <Chinesesimp>这具尸体没有更多资金了...</Chinesesimp>
-            <Turkish>Bu cesette başka fon kalmadı...</Turkish>
         </Key>
         <Key ID="STR_MISERY_Currency_NoPlayer">
             <English>No player nearby...</English>

@@ -57,8 +57,46 @@ private _fundsCheckAction = [
     {true}
 ] call ACEFUNC(interact_menu,createAction);
 
+private _buryCacheAction = [
+    QGVAR(cache_menu),
+    "Bury Cache",
+    QPATHTOEF(icons,data\shovel_ca.paa),
+    {
+        params ["_target", "_player"];
+
+        [_player, "AinvPknlMstpSnonWnonDnon_medic4"] call ACEFUNC(common,doAnimation);
+
+        [
+            10,
+            [_target, _player],
+            {
+                params ["_args"];
+                _args params ["_node", "_player"];
+
+                [_player, QCLASS(money_case)] call CBA_fnc_removeItem;
+
+                [_player, "", 1] call ACEFUNC(common,doAnimation);
+
+                ["Stash buried...", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
+
+                createVehicle [QCLASS(moneyCache), getPosATL _player, [], 0, "CAN_COLLIDE"];
+            },
+            {
+                ["You stop burying...", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
+                [ACE_player, "", 1] call ACEFUNC(common,doAnimation);
+            },
+            "Burying cache..."
+        ] call ACEFUNC(common,progressBar);
+    },
+    {
+        (insideBuilding ACE_player isNotEqualTo 1 && [[QCLASSACE(EntrenchingTool)]] call EFUNC(common,hasItem) && [[QCLASS(money_case)]] call EFUNC(common,hasItem));
+    }
+] call ACEFUNC(interact_menu,createAction);
+
 private _player = [] call ACEFUNC(common,player);
 
 [_player, 1, [QUOTE(ACE_SelfActions), QUOTE(ACE_Equipment)], _fundsCheckAction] call ACEFUNC(interact_menu,addActionToObject);
+
+[_player, 1, [QUOTE(ACE_SelfActions), QUOTE(ACE_Equipment)], _buryCacheAction] call ACEFUNC(interact_menu,addActionToObject);
 
 _player setVariable [QGVAR(canSearch), true, true];

@@ -1,4 +1,9 @@
 PREP(bankRefresh);
+PREP(cacheRefresh);
+PREP(cacheStore);
+PREP(cacheTake);
+PREP(condition);
+PREP(exitCache);
 PREP(exitGifting);
 PREP(exitTaking);
 PREP(fundsDeposit);
@@ -6,6 +11,8 @@ PREP(fundsWithdraw);
 PREP(generateBank);
 PREP(giveMoney);
 PREP(giveMoneyRefresh);
+PREP(interaction);
 PREP(modifyMoney);
+PREP(removeCache);
 PREP(takeMoney);
 PREP(takeMoneyRefresh);
