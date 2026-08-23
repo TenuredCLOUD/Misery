@@ -26,6 +26,10 @@ class CfgVehicles {
         scope = 1;
         ACEGVAR(minedetector,detectable) = 1;
     };
+    class CLASS(gearCache): Land_HelipadEmpty_F {
+        scope = 1;
+        ACEGVAR(minedetector,detectable) = 1;
+    };
 };
 
 
