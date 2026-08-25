@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Check to allow water collection action
+ * Check to allow cache action
  *
  * Arguments:
  * 0: Object <OBJECT>

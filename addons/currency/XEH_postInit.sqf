@@ -89,7 +89,11 @@ private _buryCacheAction = [
         ] call ACEFUNC(common,progressBar);
     },
     {
-        (insideBuilding ACE_player isNotEqualTo 1 && [[MACRO_SHOVELS]] call EFUNC(common,hasItem) && [[QCLASS(money_case)]] call EFUNC(common,hasItem));
+        params ["_target", "_player"];
+
+        private _isCovered = [_player, 20] call EFUNC(common,hasOverheadCover);
+
+        (!_isCovered && [[MACRO_SHOVELS]] call EFUNC(common,hasItem) && [[QCLASS(money_case)]] call EFUNC(common,hasItem));
     }
 ] call ACEFUNC(interact_menu,createAction);
 

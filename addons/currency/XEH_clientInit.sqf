@@ -19,7 +19,7 @@ GVAR(activeLogic) = objNull;
 
     [QCLASSACE(interactMenuClosed), {
         if (!isNull GVAR(activeLogic)) then {
-            [GVAR(activeLogic), 0, [QUOTE(ACE_MainActions), QGVAR(hydrology_menu)]] call ACEFUNC(interact_menu,removeActionFromObject);
+            [GVAR(activeLogic), 0, [QUOTE(ACE_MainActions), QGVAR(cache_menu)]] call ACEFUNC(interact_menu,removeActionFromObject);
             deleteVehicle GVAR(activeLogic);
             GVAR(activeLogic) = objNull;
         };
