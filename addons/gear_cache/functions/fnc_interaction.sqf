@@ -26,7 +26,7 @@ if (_found) then {
 
     private _action = [
         QGVAR(cache_menu),
-        "Unbury cache",
+        localize LSTRING(DigUpCache),
         QPATHTOEF(icons,data\shovel_ca.paa),
         {
             params ["_target", "_player", "_params"];
@@ -63,16 +63,16 @@ if (_found) then {
 
                     [_player, "", 1] call ACEFUNC(common,doAnimation);
 
-                    ["Stash unburied...", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
+                    [localize LSTRING(StashDugUp), 1, [1, 1, 1, 1]] call CBA_fnc_notify;
                 },
                 {
                     params ["_args"];
                     _args params ["_target", "_player", "_cacheObject"];
 
-                    ["You stop digging...", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
+                    [localize LSTRING(StopDigging), 1, [1, 1, 1, 1]] call CBA_fnc_notify;
                     [_player, "", 1] call ACEFUNC(common,doAnimation);
                 },
-                "Digging up cache..."
+                localize LSTRING(DiggingUpCache)
             ] call ACEFUNC(common,progressBar);
         },
         {

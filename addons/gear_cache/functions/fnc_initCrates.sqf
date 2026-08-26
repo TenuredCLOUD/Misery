@@ -24,7 +24,7 @@ if !(isServer) exitWith {};
 
     private _buryAction = [
         QGVAR(crate_menu),
-        "Bury crate",
+        localize LSTRING(BuryCrate),
         QPATHTOEF(icons,data\shovel_ca.paa),
         {
             params ["_target", "_player"];
@@ -55,22 +55,24 @@ if !(isServer) exitWith {};
 
                     [_player, "", 1] call ACEFUNC(common,doAnimation);
 
-                    ["Stash buried...", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
+                    [localize LSTRING(StashBuried), 1, [1, 1, 1, 1]] call CBA_fnc_notify;
                 },
                 {
                     params ["_args"];
                     _args params ["_target", "_player"];
 
-                    ["You stopped burying...", 1, [1, 1, 1, 1]] call CBA_fnc_notify;
+                    [localize LSTRING(StopDigging), 1, [1, 1, 1, 1]] call CBA_fnc_notify;
                     [_player, "", 1] call ACEFUNC(common,doAnimation);
                 },
-                "Burying Cache..."
+                localize LSTRING(BuryingCache)
             ] call ACEFUNC(common,progressBar);
         },
         {
             params ["_target", "_player"];
 
-            insideBuilding _player isNotEqualTo 1 && [[MACRO_SHOVELS]] call EFUNC(common,hasItem);
+            private _isCovered = [_target, 20] call EFUNC(common,hasOverheadCover);
+
+            !_isCovered && [[MACRO_SHOVELS]] call EFUNC(common,hasItem);
         },
         {},
         [],
