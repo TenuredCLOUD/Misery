@@ -71,8 +71,9 @@ if !(isServer) exitWith {};
             params ["_target", "_player"];
 
             private _isCovered = [_target, 20] call EFUNC(common,hasOverheadCover);
+            private _isIgnored = _target getVariable [QGVAR(ignore), false];
 
-            !_isCovered && [[MACRO_SHOVELS]] call EFUNC(common,hasItem);
+            !_isCovered && !_isIgnored && [[MACRO_SHOVELS]] call EFUNC(common,hasItem);
         },
         {},
         [],
