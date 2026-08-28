@@ -184,7 +184,7 @@ class CfgWeapons {
 
     class CLASS(energyDrink): CLASS(ItemCore) {
         displayName = CSTRING(EnergyDrink_DisplayName);
-        descriptionShort = CSTRING(EnergyDrink_Description);
+        descriptionShort = CSTRING(Caffeine_Description);
         picture = QPATHTOF(data\icons\energyDrink.paa);
         model = "a3\structures_f\items\food\can_v3_f.p3d";
         scope = 2;
@@ -942,7 +942,7 @@ class CfgWeapons {
 
     class CLASS(electricHandSaw_NoBattery): CLASS(ItemCore) {
         displayName = CSTRING(ElectricHandSawNoBattery_DisplayName);
-        descriptionShort = CSTRING(RequiresLithiumBattery_Description);
+        descriptionShort = CSTRING(18VBatteryNeeded_Description);
         picture = QPATHTOF(data\icons\ElectricHandCircularSaw.paa);
         scope = 2;
         scopeCurator = 2;
@@ -995,7 +995,7 @@ class CfgWeapons {
 
     class CLASS(jetFuelEmpty): CLASS(ItemCore) {
         displayName = CSTRING(JetFuelEmpty_DisplayName);
-        descriptionShort = CSTRING(JetFuelEmpty_Description);
+        descriptionShort = CSTRING(FuelGenericEmpty_Description);
         picture = QPATHTOF(data\icons\CanisterJetFuel.paa);
         model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
         scope = 2;
@@ -1008,7 +1008,7 @@ class CfgWeapons {
 
     class CLASS(dieselEmpty): CLASS(ItemCore) {
         displayName = CSTRING(DieselEmpty_DisplayName);
-        descriptionShort = CSTRING(DieselEmpty_Description);
+        descriptionShort = CSTRING(FuelGenericEmpty_Description);
         picture = QPATHTOF(data\icons\CanisterDiesel.paa);
         model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
         scope = 2;
@@ -1021,7 +1021,7 @@ class CfgWeapons {
 
     class CLASS(petrolEmpty): CLASS(ItemCore) {
         displayName = CSTRING(PetrolEmpty_DisplayName);
-        descriptionShort = CSTRING(PetrolEmpty_Description);
+        descriptionShort = CSTRING(FuelGenericEmpty_Description);
         picture = QPATHTOF(data\icons\CanisterPetrol.paa);
         model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
         scope = 2;
@@ -1034,7 +1034,6 @@ class CfgWeapons {
 
     class CLASS(oilEmpty): CLASS(ItemCore) {
         displayName = CSTRING(EngineOilEmpty_DisplayName);
-        descriptionShort = CSTRING(EngineOilEmpty_Description);
         picture = QPATHTOF(data\icons\CanisterDiesel.paa);
         model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
         scope = 2;
@@ -1047,7 +1046,6 @@ class CfgWeapons {
 
     class CLASS(coolantEmpty): CLASS(ItemCore) {
         displayName = CSTRING(EngineCoolant_DisplayName);
-        descriptionShort = CSTRING(EngineCoolant_Description);
         picture = QPATHTOF(data\icons\CanisterWater.paa);
         model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
         scope = 2;
@@ -1060,7 +1058,6 @@ class CfgWeapons {
 
     class CLASS(spareTire): CLASS(ItemCore) {
         displayName = CSTRING(SpareTire_DisplayName);
-        descriptionShort = CSTRING(SpareTire_Description);
         picture = QPATHTOF(data\icons\tire.paa);
         model = "a3\structures_f\civ\garbage\tyre_f.p3d";
         scope = 2;
