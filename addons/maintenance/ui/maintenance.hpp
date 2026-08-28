@@ -1,7 +1,7 @@
 class CLASS(maintenance_ui) {
     idd = 274839;
-    onLoad = QUOTE([274839] call EFUNC(common,menuBlurEffect));
-    onUnload = QUOTE(call EFUNC(maintenance,unload));
+    onLoad = QUOTE([ARR_2(_this select 0,true)] call ACEFUNC(common,blurScreen));
+    onUnload = QUOTE([ARR_2(_this select 0,false)] call ACEFUNC(common,blurScreen); call EFUNC(maintenance,unload));
 
     class ControlsBackground {
         class CLASS(maintenance_background): CLASS(RscText) {

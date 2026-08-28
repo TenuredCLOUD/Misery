@@ -1,7 +1,7 @@
 class CLASS(medicalTreatment_ui) {
     idd = 982381;
-    onLoad = QUOTE([982381] call EFUNC(common,menuBlurEffect); [] call EFUNC(treatment,treatListed); call EFUNC(treatment,loadTreatment));
-    onUnload = QUOTE(call EFUNC(treatment,unloadTreatment));
+    onLoad = QUOTE([ARR_2(_this select 0,true)] call ACEFUNC(common,blurScreen); [] call EFUNC(treatment,treatListed); call EFUNC(treatment,loadTreatment));
+    onUnload = QUOTE([ARR_2(_this select 0,false)] call ACEFUNC(common,blurScreen); call EFUNC(treatment,unloadTreatment));
 
     class ControlsBackground {
         class CLASS(medicalTreatment_background): CLASS(RscText) {

@@ -1,7 +1,7 @@
 class CLASS(moneyTake_ui) {
     idd = 358492;
-    onLoad = QUOTE([358492] call EFUNC(common,menuBlurEffect));
-    onUnload = QUOTE(call EFUNC(currency,exitTaking));
+    onLoad = QUOTE([ARR_2(_this select 0,true)] call ACEFUNC(common,blurScreen));
+    onUnload = QUOTE(call EFUNC(currency,exitTaking); [ARR_2(_this select 0,false)] call ACEFUNC(common,blurScreen));
 
     class ControlsBackground {
         class CLASS(moneyTakeMenu_background): CLASS(RscText) {

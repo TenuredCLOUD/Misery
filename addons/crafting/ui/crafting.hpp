@@ -1,6 +1,7 @@
 class CLASS(craftingFramework_ui) {
     idd = 982376;
-    onLoad = QUOTE([982376] call EFUNC(common,menuBlurEffect); [] call EFUNC(crafting,recipesListed); [] call EFUNC(crafting,showIcon));
+    onLoad = QUOTE([ARR_2(_this select 0,true)] call ACEFUNC(common,blurScreen); [] call EFUNC(crafting,recipesListed); [] call EFUNC(crafting,showIcon));
+    onUnload = QUOTE([ARR_2(_this select 0,false)] call ACEFUNC(common,blurScreen));
 
     class ControlsBackground {
         class CLASS(crafting_background): CLASS(RscText) {

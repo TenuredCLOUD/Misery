@@ -1,6 +1,7 @@
 class CLASS(sleepMenu_ui) {
     idd = 982374;
-    onLoad = QUOTE([982374] call EFUNC(common,menuBlurEffect); player setVariable [ARR_2(QUOTE(QGVAR(sleepDataVal)),0)]);
+    onLoad = QUOTE([ARR_2(_this select 0,true)] call ACEFUNC(common,blurScreen); player setVariable [ARR_2(QUOTE(QGVAR(sleepDataVal)),0)]);
+    onUnload = QUOTE([ARR_2(_this select 0,false)] call ACEFUNC(common,blurScreen));
 
     class ControlsBackground {
         class CLASS(sleepMenu_background): CLASS(RscText) {

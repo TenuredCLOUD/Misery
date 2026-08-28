@@ -1,6 +1,7 @@
 class CLASS(anvil_ui) {
     idd = 274840;
-    onLoad = QUOTE([274840] call EFUNC(common,menuBlurEffect); [] call EFUNC(anvil,outputsListed));
+    onLoad = QUOTE([ARR_2(_this select 0,true)] call ACEFUNC(common,blurScreen); [] call EFUNC(anvil,outputsListed));
+    onUnload = QUOTE([ARR_2(_this select 0,false)] call ACEFUNC(common,blurScreen));
 
     class ControlsBackground {
         class CLASS(anvil_background): CLASS(RscText) {

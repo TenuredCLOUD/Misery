@@ -1,6 +1,7 @@
 class CLASS(doorLock_ui) {
     idd = 696677;
-    onLoad = QUOTE([696677] call EFUNC(common,menuBlurEffect));
+    onLoad = QUOTE([ARR_2(_this select 0,true)] call ACEFUNC(common,blurScreen));
+    onUnload = QUOTE([ARR_2(_this select 0,false)] call ACEFUNC(common,blurScreen));
 
     class ControlsBackground {
         class misery_doorLock_background: misery_RscText {

@@ -1,6 +1,7 @@
 class CLASS(forge_ui) {
     idd = 982388;
-    onLoad = QUOTE([982388] call EFUNC(common,menuBlurEffect); [] call EFUNC(forge,outputsListed); [] call EFUNC(forge,showFuel));
+    onLoad = QUOTE([ARR_2(_this select 0,true)] call ACEFUNC(common,blurScreen); [] call EFUNC(forge,outputsListed); [] call EFUNC(forge,showFuel));
+    onUnload = QUOTE([ARR_2(_this select 0,false)] call ACEFUNC(common,blurScreen));
 
     class ControlsBackground {
         class CLASS(forge_background): CLASS(RscText) {

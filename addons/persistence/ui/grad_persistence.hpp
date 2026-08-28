@@ -1,7 +1,8 @@
 
 class CLASS(grad_persistence_compat_ui) {
     idd = 47237377;
-    onLoad = QUOTE([47237377] call EFUNC(common,menuBlurEffect));
+    onLoad = QUOTE([ARR_2(_this select 0,true)] call ACEFUNC(common,blurScreen));
+    onUnload = QUOTE([ARR_2(_this select 0,false)] call ACEFUNC(common,blurScreen));
 
     class ControlsBackground {
         class misery_gradPersistence_background: misery_RscText {
