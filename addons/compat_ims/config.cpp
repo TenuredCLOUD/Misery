@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {QCLASS(common), "WBK_MeleeMechanics"};
+        requiredAddons[] = {QCLASSACE(common), QCLASS(common), "WBK_MeleeMechanics"};
         skipWhenMissingDependencies = 1;
         authors[] = {"TenuredCLOUD"};
         VERSION_CONFIG;

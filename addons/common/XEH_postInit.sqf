@@ -18,9 +18,27 @@ if (!hasInterface) exitWith {};
 // Default loadout
 GVAR(defaultLoadout) = [[[],[],[],[],[],[],"","",[],["ItemMap","","","ItemCompass","ItemWatch",""]],[], false];
 
-// Loadout change will clear item cache for hasItem
 ["loadout", {
+    // Loadout change will clear item cache for hasItem
     GVAR(itemsCache) = nil;
+
+    // IMS compat item swapping (if enabled)
+    if (!isNil QEGVAR(compat_ims,enableSwap) && EGVAR(compat_ims,enableSwap)) then {
+        call EFUNC(compat_ims,swapItems);
+    };
+
+    // Ravage compat item swapping (if enabled)
+    if (!isNil QEGVAR(compat_ravage_zombies,enableSwap) && EGVAR(compat_ravage_zombies,enableSwap)) then {
+        call EFUNC(compat_ravage_zombies,swapItems);
+    };
+
+    // TSP compat item swapping (if enabled)
+    if (!isNil QEGVAR(compat_tsp,enableSwap) && EGVAR(compat_tsp,enableSwap)) then {
+        call EFUNC(compat_tsp,swapItems);
+    };
+
+    // ACE medical pain pill swap
+    call EFUNC(medical,swapPainKillers);
 }] call CBA_fnc_addPlayerEventHandler;
 
 [QGVAR(titleText), {
