@@ -62,6 +62,10 @@ if (count _composition >= 3) then {
         _obj enableDynamicSimulation true;
         _obj setVariable [QGRADGVAR(persistence,isExcluded), true];
 
+        [_obj, false] call ACEFUNC(dragging,setDraggable);
+        [_obj, false] call ACEFUNC(dragging,setCarryable);
+        [_obj, -1] call ACEFUNC(cargo,setSize);
+
         _spawnedObjects pushBack _obj;
 
         if (_class in ["Land_Campfire_F", "Land_FirePlace_F"] && {[50] call EFUNC(common,rollChance)}) then {

@@ -40,6 +40,10 @@ clearMagazineCargoGlobal _crate;
 clearItemCargoGlobal _crate;
 clearBackpackCargoGlobal _crate;
 
+[_crate, false] call ACEFUNC(dragging,setDraggable);
+[_crate, false] call ACEFUNC(dragging,setCarryable);
+[_crate, -1] call ACEFUNC(cargo,setSize);
+
 [_crate] call FUNC(populateCrate);
 
 _heli setSlingLoad _crate;
