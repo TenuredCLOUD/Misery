@@ -69,6 +69,9 @@ if (count _composition >= 3) then {
         };
 
         if (_class isKindOf "ReammoBox_F") then {
+
+            _obj setVariable [QEGVAR(gear_cache,ignore), true, true];
+
             clearMagazineCargoGlobal _obj;
             clearWeaponCargoGlobal _obj;
             clearItemCargoGlobal _obj;

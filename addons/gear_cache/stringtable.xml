@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Gear_cache">
+        <Key ID="STR_MISERY_Gear_cache_BuryCrate">
+            <English>Bury crate</English>
+            <Czech>Zakopat bednu</Czech>
+            <French>Enterrer la caisse</French>
+            <Spanish>Enterrar caja</Spanish>
+            <Italian>Seppellisci cassa</Italian>
+            <Polish>Zakop skrzynię</Polish>
+            <Portuguese>Enterrar caixa</Portuguese>
+            <Russian>Закопать ящик</Russian>
+            <German>Kiste eingraben</German>
+            <Korean>상자 묻기</Korean>
+            <Japanese>木箱を埋める</Japanese>
+            <Chinese>埋藏木箱</Chinese>
+            <Chinesesimp>埋藏木箱</Chinesesimp>
+            <Turkish>Sandığı göm</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Gear_cache_BuryingCache">
+            <English>Burying Cache...</English>
+            <Czech>Zakopávám skrýš...</Czech>
+            <French>Enterrement de la cache...</French>
+            <Spanish>Enterrando alijo...</Spanish>
+            <Italian>Seppellimento nascondiglio...</Italian>
+            <Polish>Zakopywanie schowka...</Polish>
+            <Portuguese>Enterrando esconderijo...</Portuguese>
+            <Russian>Закапывание тайника...</Russian>
+            <German>Versteck wird eingegraben...</German>
+            <Korean>은닉처 묻는 중...</Korean>
+            <Japanese>キャッシュを埋没中...</Japanese>
+            <Chinese>埋藏密藏中...</Chinese>
+            <Chinesesimp>埋藏密藏中...</Chinesesimp>
+            <Turkish>Zula gömülüyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Gear_cache_DigUpCache">
+            <English>Dig up cache</English>
+            <Czech>Vykopat skrýš</Czech>
+            <French>Dérerterrer la cache</French>
+            <Spanish>Desenterrar alijo</Spanish>
+            <Italian>Disinterra nascondiglio</Italian>
+            <Polish>Wykop schowek</Polish>
+            <Portuguese>Desenterrar esconderijo</Portuguese>
+            <Russian>Откопать тайник</Russian>
+            <German>Versteck ausgraben</German>
+            <Korean>은닉처 파내기</Korean>
+            <Japanese>キャッシュを掘り起こす</Japanese>
+            <Chinese>挖掘密藏</Chinese>
+            <Chinesesimp>挖掘密藏</Chinesesimp>
+            <Turkish>Zulayı kazıp çıkar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Gear_cache_DiggingUpCache">
+            <English>Digging up cache...</English>
+            <Czech>Vykopávám skrýš...</Czech>
+            <French>Déterrement de la cache...</French>
+            <Spanish>Desenterrando alijo...</Spanish>
+            <Italian>Disinterramento nascondiglio...</Italian>
+            <Polish>Wykopywanie schowka...</Polish>
+            <Portuguese>Desenterrando esconderijo...</Portuguese>
+            <Russian>Раскопавание тайника...</Russian>
+            <German>Versteck wird ausgegraben...</German>
+            <Korean>은닉처 파내는 중...</Korean>
+            <Japanese>キャッシュを掘り起こし中...</Japanese>
+            <Chinese>挖掘密藏中...</Chinese>
+            <Chinesesimp>挖掘密藏中...</Chinesesimp>
+            <Turkish>Zula kazılıyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Gear_cache_StashBuried">
+            <English>Stash buried...</English>
+            <Czech>Skrýš zakopána...</Czech>
+            <French>Planque enterrée...</French>
+            <Spanish>Alijo enterrado...</Spanish>
+            <Italian>Nascondiglio sepolto...</Italian>
+            <Polish>Schowek zakopany...</Polish>
+            <Portuguese>Esconderijo enterrado...</Portuguese>
+            <Russian>Тайник закопан...</Russian>
+            <German>Versteck eingegraben...</German>
+            <Korean>은닉처를 묻었습니다...</Korean>
+            <Japanese>キャッシュを埋めました...</Japanese>
+            <Chinese>密藏已埋藏...</Chinese>
+            <Chinesesimp>密藏已埋藏...</Chinesesimp>
+            <Turkish>Zula gömüldü...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Gear_cache_StashDugUp">
+            <English>Stash dug up...</English>
+            <Czech>Skrýš vykopána...</Czech>
+            <French>Planque déterrée...</French>
+            <Spanish>Alijo desenterrado...</Spanish>
+            <Italian>Nascondiglio disinterrato...</Italian>
+            <Polish>Schowek wykopany...</Polish>
+            <Portuguese>Esconderijo desenterrado...</Portuguese>
+            <Russian>Тайник откопан...</Russian>
+            <German>Versteck ausgegraben...</German>
+            <Korean>은닉처를 발굴했습니다...</Korean>
+            <Japanese>キャッシュを掘り起こしました...</Japanese>
+            <Chinese>密藏已挖掘...</Chinese>
+            <Chinesesimp>密藏已挖掘...</Chinesesimp>
+            <Turkish>Zula kazılıp çıkarıldı...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Gear_cache_StopDigging">
+            <English>You stop digging...</English>
+            <Czech>Přestal jsi kopat...</Czech>
+            <French>Vous arrêtez de creuser...</French>
+            <Spanish>Dejas de excavar...</Spanish>
+            <Italian>Smetti di scavare...</Italian>
+            <Polish>Przestajesz kopać...</Polish>
+            <Portuguese>Você para de escavar...</Portuguese>
+            <Russian>Вы прекратили копать...</Russian>
+            <German>Du hörst auf zu graben...</German>
+            <Korean>굴착을 중단합니다...</Korean>
+            <Japanese>発掘作業を中止しました...</Japanese>
+            <Chinese>你停止了挖掘...</Chinese>
+            <Chinesesimp>你停止了挖掘...</Chinesesimp>
+            <Turkish>Kazmayı bıraktın...</Turkish>
+        </Key>
+    </Package>
+</Project>
