@@ -56,9 +56,6 @@ switch (true) do {
         if (_stock isEqualTo 0) exitWith {
             ctrlSetText [1001, format [localize LSTRING(OutOfStock), [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck))]];
         };
-        if (_shopFunds < _buyPrice) exitWith {
-            ctrlSetText [1001, localize LSTRING(TraderInsufficientFunds)];
-        };
 
         [
             QGVAR(serverPurchase),
