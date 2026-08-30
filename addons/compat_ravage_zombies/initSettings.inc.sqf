@@ -10,6 +10,15 @@ private _category = format ["Misery %1", localize LSTRING(Component)];
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(enableSwap),
+    "CHECKBOX",
+    [LSTRING(SwapEnabled), LSTRING(SwapEnabledDesc)],
+    _category,
+    false,
+    1
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(specimensEnabled),
     "CHECKBOX",
     [LSTRING(Specimens), LSTRING(SpecimensDesc)],
