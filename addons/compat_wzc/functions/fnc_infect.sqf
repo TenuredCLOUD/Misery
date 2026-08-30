@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Infection system with CBA HIT EH
+ * Infection system with IMS HIT EH
  * Processes Zombie infection transmission
  *
  * Arguments:
@@ -14,13 +14,18 @@
  *
 */
 
-[ACE_player, "WBK_IMS_Hit", {
+[] call ACEFUNC(common,player) params ["_player"];
+
+[_player, "WBK_IMS_Hit", {
     params ["_unit","_damage","_enemy"];
 
-    // Must be a player, on foot being attacked by a zombie.
-    if !(isPlayer _unit || isNull objectParent _unit || _enemy isKindOf "WBK_C_ExportClass") exitWith {};
+    // Must be a player, on foot being attacked by a zombie
+    if !(isPlayer _unit || isNull objectParent _unit) exitWith {};
 
-    if ([GVAR(infectionChance)] call EFUNC(common,rollChance)) exitWith {
-        [0.01, "infection"] call EFUNC(common,addStatusModifier);
+    // Only register infection from spawner regular zombies
+    if (typeOf _enemy isEqualTo "WBK_C_ExportClass") then {
+        if ([GVAR(infectionChance)] call EFUNC(common,rollChance)) exitWith {
+            [0.1, "infection"] call EFUNC(common,addStatusModifier);
+        };
     };
 }] call BIS_fnc_addScriptedEventHandler;
