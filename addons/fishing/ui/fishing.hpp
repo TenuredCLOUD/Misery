@@ -1,6 +1,7 @@
 class CLASS(fishing_ui) {
     idd = 982387;
-    onLoad = QUOTE([982387] call EFUNC(common,menuBlurEffect));
+    onLoad = QUOTE([ARR_2(_this select 0,true)] call ACEFUNC(common,blurScreen));
+    onUnload = QUOTE([ARR_2(_this select 0,false)] call ACEFUNC(common,blurScreen));
 
     class ControlsBackground {
         class CLASS(fishing_background): CLASS(RscText) {

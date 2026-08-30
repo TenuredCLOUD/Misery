@@ -1,6 +1,7 @@
 class CLASS(repairShop_ui) {
     idd = 982386;
-    onLoad = QUOTE([982386] call EFUNC(common,menuBlurEffect); [] call EFUNC(repair,listed); [] call EFUNC(repair,icon));
+    onLoad = QUOTE([ARR_2(_this select 0,true)] call ACEFUNC(common,blurScreen); [] call EFUNC(repair,listed); [] call EFUNC(repair,icon));
+    onUnload = QUOTE([ARR_2(_this select 0,false)] call ACEFUNC(common,blurScreen));
 
     class ControlsBackground {
         class CLASS(repairShop_background): CLASS(RscText) {

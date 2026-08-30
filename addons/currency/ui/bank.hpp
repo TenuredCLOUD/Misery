@@ -1,6 +1,7 @@
 class CLASS(banking_ui) {
     idd = 483729;
-    onLoad = QUOTE([483729] call EFUNC(common,menuBlurEffect); [] call EFUNC(currency,bankRefresh));
+    onLoad = QUOTE([ARR_2(_this select 0,true)] call ACEFUNC(common,blurScreen); [] call EFUNC(currency,bankRefresh));
+    onUnload = QUOTE([ARR_2(_this select 0,false)] call ACEFUNC(common,blurScreen));
 
     class ControlsBackground {
         class CLASS(bank_background): CLASS(RscText) {

@@ -1,6 +1,7 @@
 class CLASS(vitals_framework_ui) {
     idd = 982377;
-    onLoad = QUOTE([982377] call EFUNC(common,menuBlurEffect); [] call EFUNC(vitals,status));
+    onLoad = QUOTE([ARR_2(_this select 0,true)] call ACEFUNC(common,blurScreen); [] call EFUNC(vitals,status));
+    onUnload = QUOTE([ARR_2(_this select 0,false)] call ACEFUNC(common,blurScreen));
 
     class ControlsBackground {
         class CLASS(vitals_framework_background): CLASS(RscText) {

@@ -19,6 +19,7 @@ if (hasInterface) then {
     if (GVAR(enhancedInventorySounds)) then {
         // Inventory Sounds
         ACE_player addEventHandler ["InventoryClosed", {
+            ["inventory", false] call ACEFUNC(common,blurScreen);
             if (backpack ACE_player isNotEqualTo "") then {
                 [ACE_player, objNull] call ACEFUNC(backpacks,backpackOpened);
             } else {
@@ -33,6 +34,7 @@ if (hasInterface) then {
         }];
 
         ACE_player addEventHandler ["InventoryOpened", {
+            ["inventory", true] call ACEFUNC(common,blurScreen);
             if (backpack ACE_player isNotEqualTo "") then {
                 [ACE_player, objNull] call ACEFUNC(backpacks,backpackOpened);
             } else {

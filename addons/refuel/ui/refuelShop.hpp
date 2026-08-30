@@ -1,6 +1,7 @@
 class CLASS(refuelShop_ui) {
     idd = 982384;
-    onLoad = QUOTE([982384] call EFUNC(common,menuBlurEffect); [] call EFUNC(refuel,listed); [] call EFUNC(refuel,icon));
+    onLoad = QUOTE([ARR_2(_this select 0,true)] call ACEFUNC(common,blurScreen); [] call EFUNC(refuel,listed); [] call EFUNC(refuel,icon));
+    onUnload = QUOTE([ARR_2(_this select 0,false)] call ACEFUNC(common,blurScreen));
 
     class ControlsBackground {
         class CLASS(refuelShop_background): CLASS(RscText) {

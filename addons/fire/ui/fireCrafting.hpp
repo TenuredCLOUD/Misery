@@ -1,6 +1,7 @@
 class CLASS(fireCrafting_ui) {
     idd = 982388;
-    onLoad = QUOTE([982388] call EFUNC(common,menuBlurEffect); call EFUNC(fire,populate); [] call EFUNC(fire,burnMonitor));
+    onLoad = QUOTE([ARR_2(_this select 0,true)] call ACEFUNC(common,blurScreen); call EFUNC(fire,populate); [] call EFUNC(fire,burnMonitor));
+    onUnload = QUOTE([ARR_2(_this select 0,false)] call ACEFUNC(common,blurScreen));
 
     class ControlsBackground {
         class CLASS(fireCrafting_background): CLASS(RscText) {

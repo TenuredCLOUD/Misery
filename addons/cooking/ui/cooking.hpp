@@ -1,6 +1,7 @@
 class CLASS(cookingFramework_ui) {
     idd = 982379;
-    onLoad = QUOTE([982379] call EFUNC(common,menuBlurEffect); [] call EFUNC(cooking,recipesListed); [] call EFUNC(cooking,showIcon));
+    onLoad = QUOTE([ARR_2(_this select 0,true)] call ACEFUNC(common,blurScreen); [] call EFUNC(cooking,recipesListed); [] call EFUNC(cooking,showIcon));
+    onUnload = QUOTE([ARR_2(_this select 0,false)] call ACEFUNC(common,blurScreen));
 
     class ControlsBackground {
         class CLASS(crafting_background): CLASS(RscText) {
