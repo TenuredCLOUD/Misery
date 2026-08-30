@@ -35,5 +35,5 @@ private _largeBurnCount = 0;
 } forEach _bodyWounds;
 
 if (_largeBruiseCount >= 10 && _largeBurnCount >= 10) then {
-    [_unit] call ACEFUNC(medical_statemachine,enteredStateCardiacArrest);
+    [_unit] call ACEFUNC(medical_status,setDead);
 };
