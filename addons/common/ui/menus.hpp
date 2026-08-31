@@ -4,6 +4,7 @@
 #include "\z\misery\addons\cooking\ui\cooking.hpp"
 #include "\z\misery\addons\crafting\ui\crafting.hpp"
 #include "\z\misery\addons\currency\ui\bank.hpp"
+#include "\z\misery\addons\currency\ui\cache.hpp"
 #include "\z\misery\addons\currency\ui\moneyGiveMenu.hpp"
 #include "\z\misery\addons\currency\ui\moneyTakeMenu.hpp"
 #include "\z\misery\addons\devils_luck\ui\devils_luck.hpp"

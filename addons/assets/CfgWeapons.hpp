@@ -3,6 +3,19 @@ class CfgWeapons {
     class CBA_MiscItem_ItemInfo;
     class CLASS(ItemCore): CBA_MiscItem {};
 
+    class CLASS(money_case): CLASS(ItemCore) {
+        displayName = CSTRING(PlasticCase_DisplayName);
+        descriptionShort = CSTRING(PlasticCase_Description);
+        picture = QPATHTOF(data\icons\smallPlasticCase.paa);
+        model = "a3\structures_f_heli\items\luggage\plasticcase_01_small_f.p3d";
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 85;
+        };
+    };
+
     class CLASS(pickaxe_Broken): CLASS(ItemCore) {
         displayName = CSTRING(PickaxeBroken_DisplayName);
         descriptionShort = CSTRING(PickaxeBroken_Description);

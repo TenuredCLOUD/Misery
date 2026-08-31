@@ -3,6 +3,7 @@
 #include "\z\misery\addons\main\script_mod.hpp"
 
 #define MACRO_WEAPONS \
+    QCLASS(money_case), \
     QCLASS(shpKit), \
     QCLASS(fallout_glass), \
     QCLASS(18vBattery), \

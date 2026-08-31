@@ -81,6 +81,54 @@
             <Chinesesimp>中央银行网络的名称</Chinesesimp>
             <Turkish>Merkezi banka ağının adı</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Currency_BuryCache">
+            <English>Bury Cache</English>
+            <Czech>Zakopat skrýš</Czech>
+            <French>Enterrer la cache</French>
+            <Spanish>Enterrar alijo</Spanish>
+            <Italian>Seppellisci nascondiglio</Italian>
+            <Polish>Zakop schowek</Polish>
+            <Portuguese>Enterrar esconderijo</Portuguese>
+            <Russian>Закопать тайник</Russian>
+            <German>Versteck eingraben</German>
+            <Korean>은닉처 묻기</Korean>
+            <Japanese>キャッシュを埋める</Japanese>
+            <Chinese>埋藏密藏</Chinese>
+            <Chinesesimp>埋藏密藏</Chinesesimp>
+            <Turkish>Zulayı göm</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_BuryingCache">
+            <English>Burying cache...</English>
+            <Czech>Zakopávám skrýš...</Czech>
+            <French>Enterrement de la cache...</French>
+            <Spanish>Enterrando alijo...</Spanish>
+            <Italian>Seppellimento nascondiglio...</Italian>
+            <Polish>Zakopywanie schowka...</Polish>
+            <Portuguese>Enterrando esconderijo...</Portuguese>
+            <Russian>Закапывание тайника...</Russian>
+            <German>Versteck wird eingegraben...</German>
+            <Korean>은닉처 묻는 중...</Korean>
+            <Japanese>キャッシュを埋没中...</Japanese>
+            <Chinese>埋藏密藏中...</Chinese>
+            <Chinesesimp>埋藏密藏中...</Chinesesimp>
+            <Turkish>Zula gömülüyor...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_Cache">
+            <English>Cache</English>
+            <Czech>Skrýš</Czech>
+            <French>Cache</French>
+            <Spanish>Alijo</Spanish>
+            <Italian>Nascondiglio</Italian>
+            <Polish>Schowek</Polish>
+            <Portuguese>Esconderijo</Portuguese>
+            <Russian>Тайник</Russian>
+            <German>Versteck</German>
+            <Korean>은닉처</Korean>
+            <Japanese>キャッシュ</Japanese>
+            <Chinese>密藏</Chinese>
+            <Chinesesimp>密藏</Chinesesimp>
+            <Turkish>Zula</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Currency_Component">
             <English>Currency</English>
             <Czech>Měna</Czech>
@@ -513,21 +561,37 @@
             <Chinesesimp>AI 可能携带的最小现金金额。(上限 5,000)</Chinesesimp>
             <Turkish>Yapay zekanın sahip olabileceği minimum nakit. (5.000 ile sınırlı)</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Currency_NoCorpse">
-            <English>No corpse nearby...</English>
-            <Czech>Žádná mrtvola poblíž...</Czech>
-            <French>Aucun cadavre à proximité...</French>
-            <Spanish>No hay cadáveres cerca...</Spanish>
-            <Italian>Nessun cadavere nelle vicinanze...</Italian>
-            <Polish>Brak zwłok w pobliżu...</Polish>
-            <Portuguese>Nenhum corpo por perto...</Portuguese>
-            <Russian>Рядом нет трупов...</Russian>
-            <German>Leiche nicht in der Nähe...</German>
-            <Korean>주변에 시체가 없습니다...</Korean>
-            <Japanese>近くに死体がありません...</Japanese>
-            <Chinese>附近沒有屍體...</Chinese>
-            <Chinesesimp>附近没有尸体...</Chinesesimp>
-            <Turkish>Yakında ceset yok...</Turkish>
+        <Key ID="STR_MISERY_Currency_MoneyCache">
+            <English>Money Cache</English>
+            <Czech>Sk skrýš s penězi</Czech>
+            <French>Cache d'argent</French>
+            <Spanish>Alijo de dinero</Spanish>
+            <Italian>Nascondiglio di denaro</Italian>
+            <Polish>Schowek na pieniądze</Polish>
+            <Portuguese>Esconderijo de dinheiro</Portuguese>
+            <Russian>Тайник с деньгами</Russian>
+            <German>Geldversteck</German>
+            <Korean>자금 은닉처</Korean>
+            <Japanese>現金キャッシュ</Japanese>
+            <Chinese>資金密藏</Chinese>
+            <Chinesesimp>资金密藏</Chinesesimp>
+            <Turkish>Para Zulası</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_MoneyStored">
+            <English>Money stored: %2 %1</English>
+            <Czech>Uložené peníze: %2 %1</Czech>
+            <French>Argent stocké : %2 %1</French>
+            <Spanish>Dinero almacenado: %2 %1</Spanish>
+            <Italian>Denaro depositato: %2 %1</Italian>
+            <Polish>Przechowywane środki: %2 %1</Polish>
+            <Portuguese>Dinheiro guardado: %2 %1</Portuguese>
+            <Russian>Хранится денег: %2 %1</Russian>
+            <German>Gelagertes Geld: %2 %1</German>
+            <Korean>보관된 자금: %2 %1</Korean>
+            <Japanese>保管中の現金: %2 %1</Japanese>
+            <Chinese>已存資金：%2 %1</Chinese>
+            <Chinesesimp>已存资金：%2 %1</Chinesesimp>
+            <Turkish>Depolanan para: %2 %1</Turkish>
         </Key>
         <Key ID="STR_MISERY_Currency_NoFundsDeposit">
             <English>No funds to deposit</English>
@@ -545,6 +609,22 @@
             <Chinesesimp>无资金可存</Chinesesimp>
             <Turkish>Yatırılacak fon yok</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Currency_NoFundsToTake">
+            <English>No funds to take</English>
+            <Czech>Žádné peníze k vyzvednutí</Czech>
+            <French>Pas fonds à récupérer</French>
+            <Spanish>No hay fondos para tomar</Spanish>
+            <Italian>Nessun fondo da prelevare</Italian>
+            <Polish>Brak środków do pobrania</Polish>
+            <Portuguese>Sem fundos para retirar</Portuguese>
+            <Russian>Нет средств для изъятия</Russian>
+            <German>Kein Geld vorhanden</German>
+            <Korean>수령할 자금 없음</Korean>
+            <Japanese>回収できる資金がありません</Japanese>
+            <Chinese>無資金可取</Chinese>
+            <Chinesesimp>无资金可取</Chinesesimp>
+            <Turkish>Alınacak fon yok</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Currency_NoFundsWithdraw">
             <English>No funds to withdraw</English>
             <Czech>Žádné prostředky k výběru</Czech>
@@ -560,22 +640,6 @@
             <Chinese>無資金可取</Chinese>
             <Chinesesimp>无资金可取</Chinesesimp>
             <Turkish>Çekilecek fon yok</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Currency_NoMoreFundsCorpse">
-            <English>This corpse has no more funds...</English>
-            <Czech>Tato mrtvola již nemá žádné prostředky...</Czech>
-            <French>Ce cadavre n'a plus de fonds...</French>
-            <Spanish>Este cadáver ya no tiene fondos...</Spanish>
-            <Italian>Questo cadavere non ha più fondi...</Italian>
-            <Polish>Te zwłoki nie mają już więcej środków...</Polish>
-            <Portuguese>Este corpo não tem mais fundos...</Portuguese>
-            <Russian>У этого трупа больше нет средств...</Russian>
-            <German>Diese Leiche hat keine Mittel mehr...</German>
-            <Korean>이 시체에는 더 이상 자금이 없습니다...</Korean>
-            <Japanese>この死体にはもう資金がありません...</Japanese>
-            <Chinese>這具屍體沒有更多資金了...</Chinese>
-            <Chinesesimp>这具尸体没有更多资金了...</Chinesesimp>
-            <Turkish>Bu cesette başka fon kalmadı...</Turkish>
         </Key>
         <Key ID="STR_MISERY_Currency_NoPlayer">
             <English>No player nearby...</English>
@@ -673,6 +737,22 @@
             <Chinesesimp>打开 %1</Chinesesimp>
             <Turkish>%1 Aç</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Currency_Remove">
+            <English>Remove</English>
+            <Czech>Odstranit</Czech>
+            <French>Retirer</French>
+            <Spanish>Remover</Spanish>
+            <Italian>Rimuovi</Italian>
+            <Polish>Usuń</Polish>
+            <Portuguese>Remover</Portuguese>
+            <Russian>Убрать</Russian>
+            <German>Entfernen</German>
+            <Korean>제거</Korean>
+            <Japanese>撤คุ</Japanese>
+            <Chinese>移除</Chinese>
+            <Chinesesimp>移除</Chinesesimp>
+            <Turkish>Kaldır</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Currency_SearchAction">
             <English>%1 Search for money</English>
             <Czech>%1 Hledat peníze</Czech>
@@ -688,6 +768,54 @@
             <Chinese>%1 搜尋資金</Chinese>
             <Chinesesimp>%1 搜寻资金</Chinesesimp>
             <Turkish>%1 Para ara</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_StashBuried">
+            <English>Stash buried...</English>
+            <Czech>Skrýš zakopána...</Czech>
+            <French>Planque enterrée...</French>
+            <Spanish>Alijo enterrado...</Spanish>
+            <Italian>Nascondiglio sepolto...</Italian>
+            <Polish>Schowek zakopany...</Polish>
+            <Portuguese>Esconderijo enterrado...</Portuguese>
+            <Russian>Тайник закопан...</Russian>
+            <German>Versteck eingegraben...</German>
+            <Korean>은닉처를 묻었습니다...</Korean>
+            <Japanese>キャッシュを埋めました...</Japanese>
+            <Chinese>密藏已埋藏...</Chinese>
+            <Chinesesimp>密藏已埋藏...</Chinesesimp>
+            <Turkish>Zula gömüldü...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_StopBurying">
+            <English>You stop burying...</English>
+            <Czech>Přestal jsi zakopávat...</Czech>
+            <French>Vous arrêtez d'enterrer...</French>
+            <Spanish>Dejas de enterrar...</Spanish>
+            <Italian>Smetti di seppellire...</Italian>
+            <Polish>Przestajesz zakopywać...</Polish>
+            <Portuguese>Você para de enterrar...</Portuguese>
+            <Russian>Вы прекратили закопать...</Russian>
+            <German>Du hörst auf zu graben...</German>
+            <Korean>묻기를 중단합니다...</Korean>
+            <Japanese>埋没作業を中止しました...</Japanese>
+            <Chinese>你停止了埋藏...</Chinese>
+            <Chinesesimp>你停止了埋藏...</Chinesesimp>
+            <Turkish>Gömmeyi bıraktın...</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_Store">
+            <English>Store</English>
+            <Czech>Uložit</Czech>
+            <French>Stocker</French>
+            <Spanish>Guardar</Spanish>
+            <Italian>Deposita</Italian>
+            <Polish>Schowaj</Polish>
+            <Portuguese>Guardar</Portuguese>
+            <Russian>Положить</Russian>
+            <German>Einlagern</German>
+            <Korean>보관</Korean>
+            <Japanese>預ける</Japanese>
+            <Chinese>預存</Chinese>
+            <Chinesesimp>预存</Chinesesimp>
+            <Turkish>Depola</Turkish>
         </Key>
         <Key ID="STR_MISERY_Currency_Symbol">
             <English>Money Symbol</English>
@@ -729,12 +857,12 @@
             <Italian>Prendi</Italian>
             <Polish>Weź</Polish>
             <Portuguese>Pegar</Portuguese>
-            <Russian>Взять</Russian>
+            <Russian>Забрать</Russian>
             <German>Nehmen</German>
-            <Korean>기져가기</Korean>
-            <Japanese>取る</Japanese>
-            <Chinese>取出</Chinese>
-            <Chinesesimp>取出</Chinesesimp>
+            <Korean>수령</Korean>
+            <Japanese>取り出す</Japanese>
+            <Chinese>提取</Chinese>
+            <Chinesesimp>提取</Chinesesimp>
             <Turkish>Al</Turkish>
         </Key>
         <Key ID="STR_MISERY_Currency_TakeFunds">
@@ -800,6 +928,22 @@
             <Chinese>設置銀行交易稅費的難度，反映經濟狀況</Chinese>
             <Chinesesimp>设置银行交易税费的难度，反映经济状况</Chinesesimp>
             <Turkish>Ekonomik koşulları yansıtan banka işlem vergilerinin zorluğunu ayarlar</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Currency_UseCache">
+            <English>Use cache</English>
+            <Czech>Použít skrýš</Czech>
+            <French>Utiliser la cache</French>
+            <Spanish>Usar alijo</Spanish>
+            <Italian>Usa nascondiglio</Italian>
+            <Polish>Użyj schowka</Polish>
+            <Portuguese>Usar esconderijo</Portuguese>
+            <Russian>Использовать тайник</Russian>
+            <German>Versteck nutzen</German>
+            <Korean>은닉처 사용</Korean>
+            <Japanese>キャッシュを使用</Japanese>
+            <Chinese>使用密藏</Chinese>
+            <Chinesesimp>使用密藏</Chinesesimp>
+            <Turkish>Zulayı kullan</Turkish>
         </Key>
         <Key ID="STR_MISERY_Currency_Withdraw">
             <English>Withdraw</English>

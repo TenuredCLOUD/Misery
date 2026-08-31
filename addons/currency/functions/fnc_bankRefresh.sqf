@@ -64,4 +64,4 @@
         ctrlSetText [1006, if (_playerFundsParsed > 0) then {format [localize LSTRING(MaxDeposit), [_playerFundsParsed, 1, 2, true] call CBA_fnc_formatNumber, GVAR(symbol)]} else { localize LSTRING(NoFundsDeposit) }];
         ctrlSetText [1007, if (_playerBankParsed > 0) then {format [localize LSTRING(MaxWithdraw), [_playerBankParsed, 1, 2, true] call CBA_fnc_formatNumber, GVAR(symbol)]} else { localize LSTRING(NoFundsWithdraw) }];
     };
-}, 1] call CBA_fnc_addPerFrameHandler;
+}, 0.1] call CBA_fnc_addPerFrameHandler;
