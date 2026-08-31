@@ -28,7 +28,6 @@ PREP(itemIncrement);
 PREP(itemSwap);
 PREP(listPlayers);
 PREP(lowerCaseArray);
-PREP(menuBlurEffect);
 PREP(modLoadedPrep);
 PREP(nearBuilding);
 PREP(nearCorpse);

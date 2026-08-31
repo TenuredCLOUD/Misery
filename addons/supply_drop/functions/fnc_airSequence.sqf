@@ -33,10 +33,16 @@ _heli flyInHeight 75;
 
 private _crate = createVehicle [selectRandom GVAR(crateTypes), position _heli vectorAdd [0, 0, -10], [], 0, "NONE"];
 
+_crate setVariable [QEGVAR(gear_cache,ignore), true, true];
+
 clearWeaponCargoGlobal _crate;
 clearMagazineCargoGlobal _crate;
 clearItemCargoGlobal _crate;
 clearBackpackCargoGlobal _crate;
+
+[_crate, false] call ACEFUNC(dragging,setDraggable);
+[_crate, false] call ACEFUNC(dragging,setCarryable);
+[_crate, -1] call ACEFUNC(cargo,setSize);
 
 [_crate] call FUNC(populateCrate);
 

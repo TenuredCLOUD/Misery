@@ -1,7 +1,7 @@
 class CLASS(traderShop_ui) {
     idd = 982390;
-    onLoad = QUOTE([982390] call EFUNC(common,menuBlurEffect); call EFUNC(traders,loadTrader));
-    onUnload = QUOTE(call EFUNC(traders,unloadTrader));
+    onLoad = QUOTE([ARR_2(_this select 0,true)] call ACEFUNC(common,blurScreen); call EFUNC(traders,loadTrader));
+    onUnload = QUOTE([ARR_2(_this select 0,false)] call ACEFUNC(common,blurScreen); call EFUNC(traders,unloadTrader));
 
     class ControlsBackground {
         class CLASS(traderShop_background): CLASS(RscText) {

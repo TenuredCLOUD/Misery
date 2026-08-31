@@ -444,7 +444,6 @@ class CfgMagazines {
     class CLASS(coolant): CLASS(FakeMagazine) {
         CLASSACE(disableRepacking) = 1;
         count = 20;
-        descriptionShort = CSTRING(Coolant_Description);
         displayName = CSTRING(Coolant_DisplayName);
         mass = 120;
         model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
@@ -455,7 +454,6 @@ class CfgMagazines {
     class CLASS(engineOil): CLASS(FakeMagazine) {
         CLASSACE(disableRepacking) = 1;
         count = 20;
-        descriptionShort = CSTRING(EngineOil_Description);
         displayName = CSTRING(EngineOil_DisplayName);
         mass = 50;
         model = "\a3\structures_f\Items\Vessels\CanisterFuel_F.p3d";
@@ -466,7 +464,6 @@ class CfgMagazines {
     class CLASS(metalFabricationKit): CLASS(FakeMagazine) {
         CLASSACE(disableRepacking) = 1;
         count = 5;
-        descriptionShort = CSTRING(MetalFabricationKit_Description);
         displayName = CSTRING(MetalFabricationKit_DisplayName);
         mass = 150;
         model = "a3\weapons_f\items\toolkit.p3d";
@@ -477,7 +474,6 @@ class CfgMagazines {
     class CLASS(enginePartsKit): CLASS(FakeMagazine) {
         CLASSACE(disableRepacking) = 1;
         count = 10;
-        descriptionShort = CSTRING(EnginePartsKit_Description);
         displayName = CSTRING(EnginePartsKit_DisplayName);
         mass = 70;
         model = "a3\weapons_f\items\toolkit.p3d";
@@ -488,7 +484,6 @@ class CfgMagazines {
     class CLASS(fuelSystemKit): CLASS(FakeMagazine) {
         CLASSACE(disableRepacking) = 1;
         count = 10;
-        descriptionShort = CSTRING(FuelSystemKit_Description);
         displayName = CSTRING(FuelSystemKit_DisplayName);
         mass = 70;
         model = "a3\weapons_f\items\toolkit.p3d";
@@ -499,7 +494,6 @@ class CfgMagazines {
     class CLASS(electronicRepairKit): CLASS(FakeMagazine) {
         CLASSACE(disableRepacking) = 1;
         count = 20;
-        descriptionShort = CSTRING(ElectronicRepairKit_Description);
         displayName = CSTRING(ElectronicRepairKit_DisplayName);
         mass = 50;
         model = "a3\weapons_f\items\toolkit.p3d";
@@ -510,7 +504,6 @@ class CfgMagazines {
     class CLASS(glassRepairKit): CLASS(FakeMagazine) {
         CLASSACE(disableRepacking) = 1;
         count = 15;
-        descriptionShort = CSTRING(GlassRepairKit_Description);
         displayName = CSTRING(GlassRepairKit_DisplayName);
         mass = 50;
         model = "a3\weapons_f\items\toolkit.p3d";
@@ -521,7 +514,6 @@ class CfgMagazines {
     class CLASS(tirePatchKit): CLASS(FakeMagazine) {
         CLASSACE(disableRepacking) = 1;
         count = 10;
-        descriptionShort = CSTRING(TirePatchKit_Description);
         displayName = CSTRING(TirePatchKit_DisplayName);
         mass = 50;
         model = "a3\weapons_f\items\toolkit.p3d";
@@ -532,7 +524,6 @@ class CfgMagazines {
     class CLASS(trackRepairKit): CLASS(FakeMagazine) {
         CLASSACE(disableRepacking) = 1;
         count = 4;
-        descriptionShort = CSTRING(TrackRepairKit_Description);
         displayName = CSTRING(TrackRepairKit_DisplayName);
         mass = 150;
         model = "a3\weapons_f\items\toolkit.p3d";
@@ -543,7 +534,6 @@ class CfgMagazines {
     class CLASS(rotorRepairKit): CLASS(FakeMagazine) {
         CLASSACE(disableRepacking) = 1;
         count = 4;
-        descriptionShort = CSTRING(RotorRepairKit_Description);
         displayName = CSTRING(RotorRepairKit_DisplayName);
         mass = 150;
         model = "a3\weapons_f\items\toolkit.p3d";
@@ -554,7 +544,6 @@ class CfgMagazines {
     class CLASS(winchRepairKit): CLASS(FakeMagazine) {
         CLASSACE(disableRepacking) = 1;
         count = 10;
-        descriptionShort = CSTRING(WinchRepairKit_Description);
         displayName = CSTRING(WinchRepairKit_DisplayName);
         mass = 100;
         model = "a3\weapons_f\items\toolkit.p3d";
@@ -565,7 +554,6 @@ class CfgMagazines {
     class CLASS(hydraulicRepairKit): CLASS(FakeMagazine) {
         CLASSACE(disableRepacking) = 1;
         count = 5;
-        descriptionShort = CSTRING(HydraulicRepairKit_Description);
         displayName = CSTRING(HydraulicRepairKit_DisplayName);
         mass = 100;
         model = "a3\weapons_f\items\toolkit.p3d";
@@ -576,7 +564,6 @@ class CfgMagazines {
     class CLASS(aerodynamicControlKit): CLASS(FakeMagazine) {
         CLASSACE(disableRepacking) = 1;
         count = 5;
-        descriptionShort = CSTRING(AerodynamicControlKit_Description);
         displayName = CSTRING(AerodynamicControlKit_DisplayName);
         mass = 100;
         model = "a3\weapons_f\items\toolkit.p3d";
@@ -587,7 +574,6 @@ class CfgMagazines {
     class CLASS(transmissionRepairKit): CLASS(FakeMagazine) {
         CLASSACE(disableRepacking) = 1;
         count = 5;
-        descriptionShort = CSTRING(TransmissionRepairKit_Description);
         displayName = CSTRING(TransmissionRepairKit_DisplayName);
         mass = 100;
         model = "a3\weapons_f\items\toolkit.p3d";
@@ -598,7 +584,6 @@ class CfgMagazines {
     class CLASS(landingGearKit): CLASS(FakeMagazine) {
         CLASSACE(disableRepacking) = 1;
         count = 5;
-        descriptionShort = CSTRING(LandingGearKit_Description);
         displayName = CSTRING(LandingGearKit_DisplayName);
         mass = 100;
         model = "a3\weapons_f\items\toolkit.p3d";
@@ -609,7 +594,6 @@ class CfgMagazines {
     class CLASS(weaponSystemKit): CLASS(FakeMagazine) {
         CLASSACE(disableRepacking) = 1;
         count = 10;
-        descriptionShort = CSTRING(WeaponSystemKit_Description);
         displayName = CSTRING(WeaponSystemKit_DisplayName);
         mass = 150;
         model = "a3\weapons_f\items\toolkit.p3d";
@@ -620,7 +604,6 @@ class CfgMagazines {
     class CLASS(countermeasureKit): CLASS(FakeMagazine) {
         CLASSACE(disableRepacking) = 1;
         count = 10;
-        descriptionShort = CSTRING(CounterMeasureKit_Description);
         displayName = CSTRING(CounterMeasureKit_DisplayName);
         mass = 100;
         model = "a3\weapons_f\items\toolkit.p3d";

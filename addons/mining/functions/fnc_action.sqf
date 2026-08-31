@@ -26,7 +26,7 @@ if (isNull _miningObject) exitWith {
 private _miningTime = _objectData select 1;
 private _audio = _objectData select 2;
 
-if !([[QCLASS(pickaxe)]] call EFUNC(common,hasItem)) exitWith {
+if !([[QCLASS(pickaxe), QUOTE(WBK_Pickaxe)]] call EFUNC(common,hasItem)) exitWith {
     [QEGVAR(common,tileText), localize LSTRING(NoTools)] call CBA_fnc_localEvent;
 };
 
@@ -34,7 +34,8 @@ if (GVAR(minedPositions) findIf {_x distance getPosWorld ACE_player < 2.5} isNot
     [QEGVAR(common,tileText), localize LSTRING(VeinDepleted)] call CBA_fnc_localEvent;
 };
 
-if (currentWeapon ACE_player isNotEqualTo "") then {
+// If not using WBK pickaxe holster weapon
+if (currentWeapon ACE_player isNotEqualTo QUOTE(WBK_Pickaxe)) then {
     [ACE_player] call ACEFUNC(weaponselect,putWeaponAway);
 };
 
@@ -47,11 +48,13 @@ if (_audio isNotEqualTo "") then {
 
 ACE_player setVariable [QGVAR(miningOre), true];
 
-call FUNC(degradePick);
+if !([[QUOTE(WBK_Pickaxe)]] call EFUNC(common,hasItem)) then {
+    call FUNC(degradePick);
+};
 
 [localize LSTRING(ActionProgress),
 _miningTime,
-{[[QCLASS(pickaxe)]] call EFUNC(common,hasItem)},
+{[[QCLASS(pickaxe), QUOTE(WBK_Pickaxe)]] call EFUNC(common,hasItem)},
 {
     params ["_args"];
     _args params ["_objectData", "_miningTime", "_soundDummy"];

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Compat_TSP">
+        <Key ID="STR_MISERY_Compat_TSP_Component">
+            <English>Compat TSP</English>
+            <Czech>Kompatibilní s TSP</Czech>
+            <French>Compatible TSP</French>
+            <Spanish>Compatible con TSP</Spanish>
+            <Italian>Compatibile con TSP</Italian>
+            <Polish>Kompatybilność z TSP</Polish>
+            <Portuguese>Compatível com TSP</Portuguese>
+            <Russian>Совместимо с TSP</Russian>
+            <German>TSP-kompatibel</German>
+            <Korean>TSP 호환</Korean>
+            <Japanese>TSP互換</Japanese>
+            <Chinese>相容 TSP</Chinese>
+            <Chinesesimp>兼容 TSP</Chinesesimp>
+            <Turkish>TSP Uyumlu</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_TSP_SwapEnabled">
+            <English>Enable Item Swapping</English>
+            <Czech>Povolit výměnu předmětů</Czech>
+            <French>Activer l'échange d'objets</French>
+            <Spanish>Habilitar intercambio de objetos</Spanish>
+            <Italian>Abilita scambio oggetti</Italian>
+            <Polish>Włącz wymianę przedmiotów</Polish>
+            <Portuguese>Ativar troca de itens</Portuguese>
+            <Russian>Включить замену предметов</Russian>
+            <German>Gegenstandstausch aktivieren</German>
+            <Korean>아이템 교체 활성화</Korean>
+            <Japanese>アイテムの交換を有効化</Japanese>
+            <Chinese>啟用物品替換</Chinese>
+            <Chinesesimp>启用物品替换</Chinesesimp>
+            <Turkish>Eşya Takasını Etkinleştir</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Compat_TSP_SwapEnabledDesc">
+            <English>Automatically converts items from Misery to TSP melee items</English>
+            <Czech>Automaticky převádí předměty z Misery na blízko zbraně TSP</Czech>
+            <French>Convertit automatiquement les objets de Misery en armes de mêlée TSP</French>
+            <Spanish>Convierte automáticamente objetos de Misery en armas cuerpo a cuerpo de TSP</Spanish>
+            <Italian>Converte automaticamente gli oggetti da Misery in armi da mischia TSP</Italian>
+            <Polish>Automatycznie zamienia przedmioty z Misery na broń białą TSP</Polish>
+            <Portuguese>Converte automaticamente itens do Misery em armas de combate corpo a corpo do TSP</Portuguese>
+            <Russian>Автоматически конвертирует предметы из Misery в ближнее оружие TSP</Russian>
+            <German>Konvertiert Gegenstände aus Misery automatisch in TSP-Nahkampfwaffen</German>
+            <Korean>Misery의 아이템을 TSP 근접 무기로 자동 변환합니다</Korean>
+            <Japanese>MiseryのアイテムをTSP近接武器に自動的に変換します</Japanese>
+            <Chinese>自動將 Misery 物品轉換為 TSP 近戰武器</Chinese>
+            <Chinesesimp>自动将 Misery 物品转换为 TSP 近战武器</Chinesesimp>
+            <Turkish>Misery eşyalarını otomatik olarak TSP yakın dövüş silahlarına dönüştürür</Turkish>
+        </Key>
+    </Package>
+</Project>

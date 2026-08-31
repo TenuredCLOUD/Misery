@@ -69,30 +69,3 @@ if (!hasInterface) exitWith {};
 
 // WBK IMS Handle for Dash / sprint w/ no stamina (overrides to enforce stamina depletion)
 [] call FUNC(dash);
-
-// Auto swap logic for basic item conversion to IMS melee weapons
-ACE_player addEventHandler ["Take", {
-	params ["_unit", "_container", "_item"];
-    // Knives & Axes
-    private _toolGear = MACRO_IMS_COMPAT findIf { _item isEqualTo (_x select 0) };
-    if (_toolGear isNotEqualTo -1) then {
-        private _oldToolItem = _item;
-        private _newToolItem = (MACRO_IMS_COMPAT select _toolGear) select 1;
-        if ([_unit, _oldToolItem] call CBA_fnc_removeItem) then {
-            [_unit, _newToolItem, true] call CBA_fnc_addItem;
-        };
-    };
-}];
-
-ACE_player addEventHandler ["InventoryOpened", {
-    params ["_unit", "_primaryContainer", "_secondaryContainer"];
-    // Knives & Axes
-    {
-        _x params ["_oldToolItem", "_newToolItem"];
-
-        if ([[_oldToolItem]] call EFUNC(common,hasItem)) then {
-            [_unit, _oldToolItem] call CBA_fnc_removeItem;
-            [_unit, _newToolItem, true] call CBA_fnc_addItem;
-        };
-    } forEach MACRO_IMS_COMPAT;
-}];

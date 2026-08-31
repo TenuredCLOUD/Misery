@@ -23,6 +23,7 @@ PREP(processMedication);
 PREP(randomPharm);
 PREP(saline);
 PREP(sleepingPill);
+PREP(swapPainKillers);
 PREP(thbdInjection);
 PREP(tremor);
 PREP(withdrawal);

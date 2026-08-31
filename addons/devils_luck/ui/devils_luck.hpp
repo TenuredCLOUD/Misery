@@ -1,7 +1,7 @@
 class CLASS(devils_luck_ui) {
     idd = 338455;
-    onLoad = QUOTE([338455] call EFUNC(common,menuBlurEffect); [] call EFUNC(devils_luck,loadMenu));
-    onUnload = QUOTE(call EFUNC(devils_luck,unloadMenu));
+    onLoad = QUOTE([ARR_2(_this select 0,true)] call ACEFUNC(common,blurScreen); [] call EFUNC(devils_luck,loadMenu));
+    onUnload = QUOTE(call EFUNC(devils_luck,unloadMenu); [ARR_2(_this select 0,false)] call ACEFUNC(common,blurScreen));
 
     class ControlsBackground {
         class CLASS(devils_luck_background): CLASS(RscText) {

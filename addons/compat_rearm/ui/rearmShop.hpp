@@ -1,6 +1,7 @@
 class CLASS(rearmShop_ui) {
     idd = 982383;
-    onLoad = QUOTE([982383] call EFUNC(common,menuBlurEffect); [] call EFUNC(compat_rearm,listed); [] call EFUNC(compat_rearm,icon));
+    onLoad = QUOTE([ARR_2(_this select 0,true)] call ACEFUNC(common,blurScreen); [] call EFUNC(compat_rearm,listed); [] call EFUNC(compat_rearm,icon));
+    onUnload = QUOTE([ARR_2(_this select 0,false)] call ACEFUNC(common,blurScreen));
 
     class ControlsBackground {
         class CLASS(rearmShop_background): CLASS(RscText) {
