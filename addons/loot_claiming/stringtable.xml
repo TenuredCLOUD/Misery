@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="MISERY">
+    <Package name="Loot_Claiming">
+        <Key ID="STR_MISERY_Loot_Claiming_Component">
+            <English>Loot Claiming</English>
+            <Czech>Nárokování kořisti</Czech>
+            <French>Revendication du bucolage</French>
+            <Spanish>Reclamación de botín</Spanish>
+            <Italian>Rivendicazione del bottino</Italian>
+            <Polish>Rezerwacja łupu</Polish>
+            <Portuguese>Reivindicação de saque</Portuguese>
+            <Russian>Захваченный лут</Russian>
+            <German>Beuteanspruch</German>
+            <Korean>전리품 소유권</Korean>
+            <Japanese>戦利品の所有権</Japanese>
+            <Chinese>戰利品所有權</Chinese>
+            <Chinesesimp>战利品所有权</Chinesesimp>
+            <Turkish>Ganimet Sahiplenme</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Loot_Claiming_Desc">
+            <English>When enabled, killed units are claimed by their killer and cannot be accessed by everyone</English>
+            <Czech>Pokud je funkce povolena, zabité jednotky si přivlastní jejich zabiják a nejsou přístupné všem</Czech>
+            <French>Lorsqu'elle est activée, les unités tuées sont revendiquées par leur tueur et ne sont pas accessibles à tous</French>
+            <Spanish>Cuando se activa, las unidades abatidas son reclamadas por su asesino y no todos pueden acceder a ellas</Spanish>
+            <Italian>Se abilitata, le unità uccise vengono rivendicate dal loro uccisore e non sono accessibili a chiunque</Italian>
+            <Polish>Gdy opcja jest włączona, zabite jednostki zostają zastrzeżone przez ich zabójcę i nie są dostępne dla wszystkich</Polish>
+            <Portuguese>Quando ativado, as unidades mortas são reivindicadas pelo seu assassino e não podem ser acessadas por todos</Portuguese>
+            <Russian>Если включено, убитые юниты закрепляются за застрелившим их игроком и недоступны для остальных</Russian>
+            <German>Wenn aktiviert, werden getötete Einheiten von ihrem Töter beansprucht und sind nicht für jeden zugänglich</German>
+            <Korean>활성화되면 처치된 유닛은 처치자에게 귀속되어 모든 사람이 접근할 수 없게 됩니다</Korean>
+            <Japanese>有効にすると、倒したユニットの所有権がキルしたプレイヤーに付与され、他のプレイヤーはアクセスできなくなります</Japanese>
+            <Chinese>啟用後，擊殺的單位將歸擊殺者所有，其他人無法存取</Chinese>
+            <Chinesesimp>启用后，击杀的单位将归击杀者所有，其他人无法访问</Chinesesimp>
+            <Turkish>Etkinleştirildiğinde, öldürülen birlikler onu öldüren kişi tarafından sahiplenilir ve herkes tarafından erişilemez</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Loot_Claiming_Warning">
+            <English>Not your loot. Don't become the next target...</English>
+            <Czech>To není tvá kořist. Nenech se proměnit v další terč...</Czech>
+            <French>Ce n'est pas votre butin. Ne devenez pas la prochaine cible...</French>
+            <Spanish>No es tu botín. No te conviertas en el próximo objetivo...</Spanish>
+            <Italian>Non è il tuo bottino. Non diventare il prossimo bersaglio...</Italian>
+            <Polish>To nie twój łup. Nie stań się kolejnym celem...</Polish>
+            <Portuguese>Não é o seu saque. Não se torne o próximo alvo...</Portuguese>
+            <Russian>Это не твой лут. Не стань следующей мишенью...</Russian>
+            <German>Nicht deine Beute. Werde nicht zum nächsten Ziel...</German>
+            <Korean>당신의 전리품이 아닙니다. 다음 표적이 되지 마십시오...</Korean>
+            <Japanese>お前の戦利品ではない。次の標的になるな…</Japanese>
+            <Chinese>這不是你的戰利品。別成為下一個目標……</Chinese>
+            <Chinesesimp>这不是你的战利品。别成为下一个目标……</Chinesesimp>
+            <Turkish>Senin ganimetin değil. Bir sonraki hedef sen olma...</Turkish>
+        </Key>
+    </Package>
+</Project>

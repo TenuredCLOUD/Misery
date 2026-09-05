@@ -6,6 +6,13 @@ private _searchMoneyAction = [
     QPATHTOEF(icons,data\hand_helping_ca.paa),
     {
         params ["_target", "_player"];
+
+        private _claimant = _target getVariable [QEGVAR(loot_claiming,claimedBy), objNull];
+
+        if (!isNull _claimant && {alive _claimant} && {group _claimant isNotEqualTo group _player} && {side _player isEqualTo side _claimant}) exitWith {
+            [QEGVAR(common,tileText), localize ECSTRING(loot_claiming,Warning)] call CBA_fnc_localEvent;
+        };
+
         createDialog QCLASS(moneyTake_ui);
         [_target] call FUNC(takeMoneyRefresh);
         _player setVariable [QGVAR(searchTarget), _target];
