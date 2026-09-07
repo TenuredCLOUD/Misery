@@ -36,19 +36,19 @@
     switch (_unitCase) do {
         case "BLUFOR": {
             GVAR(factionType) = west;
-            GVAR(aiClass) = "B_Survivor_F";
+            GVAR(aiClass) = ["B_Survivor_F", GVAR(aiClassOverride)] select (!isNil QGVAR(aiClassOverride));
         };
         case "OPFOR": {
             GVAR(factionType) = east;
-            GVAR(aiClass) = "O_G_Survivor_F";
+            GVAR(aiClass) = ["O_G_Survivor_F", GVAR(aiClassOverride)] select (!isNil QGVAR(aiClassOverride));
         };
         case "Civilian": {
             GVAR(factionType) = civilian;
-            GVAR(aiClass) = "C_man_1";
+            GVAR(aiClass) = ["C_man_1", GVAR(aiClassOverride)] select (!isNil QGVAR(aiClassOverride));
         };
         case "Independant": {
             GVAR(factionType) = independent;
-            GVAR(aiClass) = "I_G_Survivor_F";
+            GVAR(aiClass) = ["I_G_Survivor_F", GVAR(aiClassOverride)] select (!isNil QGVAR(aiClassOverride));
         };
     };
 
@@ -110,6 +110,21 @@
             [_unit] call grad_persistence_fnc_blacklistObjects;
         };
 
+        // Add fresh magazine to unit on reload event if last mag is used (preventing out of ammo state)
+        _unit addEventHandler ["Reloaded", {
+            params ["_unit", "_weapon", "_muzzle", "_newMagazine", "_oldMagazine"];
+
+            if (_newMagazine isEqualTo [] || {_weapon isEqualTo secondaryWeapon _unit}) exitWith {};
+
+            _newMagazine params ["_magazineClass", "_ammoCount", "_magazineID", "_magazineCreator"];
+
+            private _remainingMags = { _x isEqualTo _magazineClass } count (magazines _unit);
+
+            if (_remainingMags isEqualTo 0) then {
+                [_unit, _magazineClass] call CBA_fnc_addMagazine;
+            };
+        }];
+
         // Set var for money searching if chance exists
         if (EGVAR(currency,corpseHasMoneyChance) > 0) then {
             _unit setVariable [QEGVAR(currency,canSearch), true, true];
@@ -123,6 +138,7 @@
     };
 
     _group enableDynamicSimulation true;
+    _group setVariable [QGRADGVAR(persistence,isExcluded), true];
     GVAR(registeredEntities) pushBack _group;
 
     // Set up group to always search nearest town or actively hunt nearest player

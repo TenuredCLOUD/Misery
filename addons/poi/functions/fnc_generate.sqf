@@ -234,6 +234,26 @@ if (_aiClass isNotEqualTo "") then {
             [_unit] call EFUNC(ambient_ai,addGearOption);
         };
 
+        _unit setVariable [QGRADGVAR(persistence,isExcluded), true];
+        if (!isNil "grad_persistence_blacklist") then {
+            [_unit] call grad_persistence_fnc_blacklistObjects;
+        };
+
+        // Add fresh magazine to unit on reload event if last mag is used (preventing out of ammo state)
+        _unit addEventHandler ["Reloaded", {
+            params ["_unit", "_weapon", "_muzzle", "_newMagazine", "_oldMagazine"];
+
+            if (_newMagazine isEqualTo [] || {_weapon isEqualTo secondaryWeapon _unit}) exitWith {};
+
+            _newMagazine params ["_magazineClass", "_ammoCount", "_magazineID", "_magazineCreator"];
+
+            private _remainingMags = { _x isEqualTo _magazineClass } count (magazines _unit);
+
+            if (_remainingMags isEqualTo 0) then {
+                [_unit, _magazineClass] call CBA_fnc_addMagazine;
+            };
+        }];
+
         if (EGVAR(currency,corpseHasMoneyChance) > 0) then {
             _unit setVariable [QEGVAR(currency,canSearch), true, true];
             if ([EGVAR(currency,corpseHasMoneyChance)] call EFUNC(common,rollChance)) then {
