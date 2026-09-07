@@ -31,6 +31,8 @@ ACE_player setVariable [QGVAR(index), _index];
 [{
     params ["_args", "_handle"];
 
+    if (isGamePaused) exitWith {};
+
     private _leftSafeZone = GVAR(areasCached) findIf {ACE_player inArea _x} isEqualTo -1;
 
     if (_leftSafeZone) exitWith {

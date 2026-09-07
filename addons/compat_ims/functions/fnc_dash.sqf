@@ -20,6 +20,8 @@
     [{
         params ["_args", "_handle"];
 
+        if (isGamePaused) exitWith {};
+
         private _fatigueValue = [getFatigue ACE_player, ACE_player getVariable [QACEGVAR(advanced_fatigue,aimFatigue), 0]] select (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)});
 
         if (!(animationState ACE_player in [MACRO_ANIMATION_IMS_SPRINT]) || (!alive ACE_player) || (_fatigueValue >= 0.9)) exitWith {

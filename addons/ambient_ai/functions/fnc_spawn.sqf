@@ -19,6 +19,8 @@
 [{
     params ["_args", "_handle"];
 
+    if (isGamePaused) exitWith {};
+
     if ((count GVAR(registeredEntities)) >= GVAR(maxGroups)) exitWith {};
 
     private _players = call EFUNC(common,listPlayers);

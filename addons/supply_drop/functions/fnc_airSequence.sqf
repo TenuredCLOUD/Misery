@@ -77,6 +77,9 @@ addToRemainsCollector (crew _heli);
 
 [{
     params ["_args", "_handle"];
+
+    if (isGamePaused) exitWith {};
+
     _args params ["_dropZone", "_heliGroup", "_heli", "_crate"];
 
     if !(alive _heli) exitWith {
