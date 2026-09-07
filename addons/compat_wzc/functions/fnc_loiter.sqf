@@ -17,6 +17,8 @@
 [{
     params ["_args", "_handle"];
 
+    if (isGamePaused) exitWith {};
+
     if (GVAR(registeredEntities) isEqualTo []) exitWith {};
 
     {

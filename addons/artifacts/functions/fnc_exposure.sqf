@@ -19,6 +19,8 @@
     [{
         params ["_args", "_handle"];
 
+        if (isGamePaused) exitWith {};
+
         if !([[QCLASS(fallout_glass)]] call EFUNC(common,hasItem)) exitWith {
             call FUNC(exposure);
             _handle call CBA_fnc_removePerFrameHandler;

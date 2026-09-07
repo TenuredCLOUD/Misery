@@ -20,6 +20,8 @@ if !(isServer) exitWith {};
 [{
     params ["_args", "_handle"];
 
+    if (isGamePaused) exitWith {};
+
     private _players = call EFUNC(common,listPlayers);
 
     if (_players isEqualTo []) exitWith {};

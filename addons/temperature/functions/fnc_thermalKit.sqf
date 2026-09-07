@@ -24,6 +24,9 @@ private _currentTimer = 0;
 
 [{
     params ["_args", "_handle"];
+
+    if (isGamePaused) exitWith {};
+
     _args params ["_currentTimer"];
 
     private _isSwimming = [ACE_player] call ACEFUNC(common,isSwimming);

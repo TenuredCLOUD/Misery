@@ -18,6 +18,8 @@
 [{
     params ["_args", "_handle"];
 
+    if (isGamePaused) exitWith {};
+
     if ((count GVAR(registeredEntities)) >= GVAR(maxPopulation)) exitWith {};
 
     private _numEntities = [1, GVAR(clusterSize)] call BIS_fnc_randomInt;
