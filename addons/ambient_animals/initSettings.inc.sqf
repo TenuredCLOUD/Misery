@@ -19,6 +19,15 @@ private _category = format ["Misery %1", localize LSTRING(Component)];
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(ammoRestrictions),
+    "CHECKBOX",
+    [LSTRING(UnsafeAmmo), LSTRING(UnsafeAmmoDesc)],
+    _category,
+    true,
+    1
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(maxPopulation),
     "SLIDER",
     [LSTRING(MaxAnimals), LSTRING(MaxAnimalsDesc)],

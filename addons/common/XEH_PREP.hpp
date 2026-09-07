@@ -1,5 +1,6 @@
 PREP(addItem);
 PREP(addStatusModifier);
+PREP(bloodPool);
 PREP(chromaticEffect);
 PREP(configCheck);
 PREP(countItem);
