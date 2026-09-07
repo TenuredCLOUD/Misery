@@ -42,6 +42,9 @@ if (GVAR(gradActions)) then {
 [QGVAR(respawnEvent), "Respawn", {
     call FUNC(newPlayer);
 
+    // Hide all scroll actions on respawn
+    hideActions [3, []];
+
     if (GVAR(hardcore)) then {
         [] call ACEFUNC(common,player) params ["_player"];
 
