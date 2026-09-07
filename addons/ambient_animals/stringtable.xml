@@ -305,6 +305,38 @@
             <Chinesesimp>每个周期族群生成的百分比概率</Chinesesimp>
             <Turkish>Kümelerin oluşma döngüsü başına % şans</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Ambient_Animals_UnsafeAmmo">
+            <English>Unsafe ammo for small animals</English>
+            <Czech>Nevhodné střelivo pro malou zvěř</Czech>
+            <French>Munition inadaptée pour le petit gibier</French>
+            <Spanish>Munición no segura para animales pequeños</Spanish>
+            <Italian>Munizione non adatta per piccoli animali</Italian>
+            <Polish>Nieodpowiednia amunicja na małą zwierzynę</Polish>
+            <Portuguese>Munição inadequada para animais pequenos</Portuguese>
+            <Russian>Опасный боеприпас для мелкой дичи</Russian>
+            <German>Ungeeignete Munition für Kleintiere</German>
+            <Korean>소형 동물용으로 부적합한 탄약</Korean>
+            <Japanese>小型動物には危険な弾薬</Japanese>
+            <Chinese>對小型動物過大的子彈</Chinese>
+            <Chinesesimp>对小型动物过大的子弹</Chinesesimp>
+            <Turkish>Küçük hayvanlar için uygunsuz mühimmat</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Ambient_Animals_UnsafeAmmoDesc">
+            <English>When shot with higher velocity rounds small game animals yield no meat</English>
+            <Czech>Při zasáhnutí náboji s vyšší úsťovou rychlostí nezůstane z malé zvěře žádné maso</Czech>
+            <French>Lorsqu'ils sont touchés par des projectiles à haute vitesse, les petits gibiers ne fournissent aucune viande</French>
+            <Spanish>Al disparar a caza menor con proyectiles de mayor velocidad, no se obtiene carne</Spanish>
+            <Italian>Se colpiti da proiettili ad alta velocità, i piccoli animali da caccia non producono carne</Italian>
+            <Polish>W przypadku postrzału pociskami o wyższej prędkości mała zwierzyna nie daje żadnego mięsa</Polish>
+            <Portuguese>Quando atingidos por projéteis de alta velocidade, pequenos animais de caça não fornecem carne</Portuguese>
+            <Russian>При выстреле высокоскоростными патронами мелкая дичь не оставляет мяса</Russian>
+            <German>Wenn Kleintiere mit Geschossen höherer Geschwindigkeit getroffen werden, liefern sie kein Fleisch</German>
+            <Korean>고속탄으로 사격할 경우 소형 야생 동물에게서 고기를 얻을 수 없습니다</Korean>
+            <Japanese>高初速の弾丸で撃たれた場合、小型の獲物からは肉が得られなくなります</Japanese>
+            <Chinese>使用高初速子彈擊中小型獵物時，將無法獲得任何肉類</Chinese>
+            <Chinesesimp>使用高初速子弹击中小型猎物时，将无法获得任何肉类</Chinesesimp>
+            <Turkish>Yüksek hızlı mermilerle vurulduğunda küçük av hayvanlarından et elde edilemez</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Ambient_Animals_Wildlife">
             <English>Ambient wildlife</English>
             <Czech>Okolní zvěř</Czech>

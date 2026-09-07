@@ -15,6 +15,9 @@ if (isServer) then {
 
 if (!hasInterface) exitWith {};
 
+// Hide all scroll actions
+hideActions [3, []];
+
 // Default loadout
 GVAR(defaultLoadout) = [[[],[],[],[],[],[],"","",[],["ItemMap","","","ItemCompass","ItemWatch",""]],[], false];
 

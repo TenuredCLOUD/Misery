@@ -359,8 +359,11 @@ QCLASS(guttingKnife), \
 // Animal processing / Field dressing
 #define MACRO_FIELDDRESS_SKINSOUNDS QEGVAR(audio,sound_skinning01), QEGVAR(audio,sound_skinning02), QEGVAR(audio,sound_skinning03)
 #define MACRO_FIELDDRESS_SAWSOUNDS QEGVAR(audio,sound_boneSaw), QEGVAR(audio,sound_cut01), QEGVAR(audio,sound_cut02), QEGVAR(audio,sound_cut03)
-#define MACRO_FIELDDRESS_ANIMALTYPES "Sheep_random_F", "Goat_random_F", "Cock_random_F", "Hen_random_F", "Rabbit_F"
-#define MACRO_FIELDDRESS_SMALLANIMALTYPES "Cock_random_F", "Hen_random_F", "Rabbit_F"
+#define MACRO_FIELDDRESS_ANIMALTYPES "Sheep_random_F", "Goat_random_F", "Cock_random_F", "Hen_random_F", "Rabbit_F", "Snake_random_F", "Snake_vipera_random_F"
+#define MACRO_FIELDDRESS_SMALLANIMALTYPES "Cock_random_F", "Hen_random_F", "Rabbit_F", "Snake_random_F", "Snake_vipera_random_F"
+
+// Blood pools
+#define MACRO_BLOODPOOL_TYPES "BloodPool_01_Medium_New_F", "BloodSplatter_01_Medium_New_F", "BloodSplatter_01_Small_New_F", "BloodSpray_01_New_F"
 
 // Player Status
 #define MACRO_PLAYER_DEFAULTS_HIGH 1

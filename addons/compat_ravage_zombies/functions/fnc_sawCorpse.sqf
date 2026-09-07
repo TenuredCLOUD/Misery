@@ -26,7 +26,7 @@ if (isNil {_corpse getVariable QGVAR(processingSaw)}) then {
     _corpse setVariable [QGVAR(processingSaw), true, true];
 };
 
-[ACE_player, "Gear"] call ACEFUNC(common,doAnimation);
+[ACE_player, "AinvPknlMstpSnonWnonDnon_medic4"] call ACEFUNC(common,doAnimation);
 
 [localize LSTRING(StartSawing),
 15,
@@ -41,7 +41,7 @@ if (isNil {_corpse getVariable QGVAR(processingSaw)}) then {
         deleteVehicle _audioSource;
     };
 
-    [_corpse] call EFUNC(ballistics,destroy);
+    [_corpse] call EFUNC(common,bloodPool);
 
     private _specimen = selectRandom [
         QCLASS(zombie_Head),

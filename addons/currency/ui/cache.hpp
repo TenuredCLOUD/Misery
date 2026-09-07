@@ -1,7 +1,7 @@
 class CLASS(cache_ui) {
     idd = 483730;
-    onLoad = QUOTE([483730] call EFUNC(common,menuBlurEffect));
-    onUnload = QUOTE(call EFUNC(currency,exitCache));
+    onLoad = QUOTE([ARR_2(_this select 0,true)] call ACEFUNC(common,blurScreen));
+    onUnload = QUOTE(call EFUNC(currency,exitCache); [ARR_2(_this select 0,false)] call ACEFUNC(common,blurScreen));
 
     class ControlsBackground {
         class CLASS(cache_background): CLASS(RscText) {
