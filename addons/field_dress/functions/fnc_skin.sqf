@@ -18,12 +18,12 @@ params ["_animal"];
 
 private _audioSource = playSound selectRandom [MACRO_FIELDDRESS_SKINSOUNDS];
 
-if (_animal getVariable [QGVAR(processingSkin), false]) exitWith {
+if (_animal getVariable [QGVAR(fieldDressing), false]) exitWith {
     [QEGVAR(common,tileText), localize LSTRING(AlreadyProcessed)] call CBA_fnc_localEvent;
 };
 
-if (isNil {_animal getVariable QGVAR(processingSkin)}) then {
-    _animal setVariable [QGVAR(processingSkin), true, true];
+if (isNil {_animal getVariable QGVAR(fieldDressing)}) then {
+    _animal setVariable [QGVAR(fieldDressing), true, true];
 };
 
 switch (true) do {
@@ -47,7 +47,7 @@ switch (true) do {
     };
 };
 
-[ACE_player, "Gear"] call ACEFUNC(common,doAnimation);
+[ACE_player, "AinvPknlMstpSnonWnonDnon_medic4"] call ACEFUNC(common,doAnimation);
 
 [localize LSTRING(Start),
 15,
@@ -66,7 +66,7 @@ switch (true) do {
         [ACE_player, QCLASS(rawMeat), true] call CBA_fnc_addItem;
     };
 
-    [_animal] call EFUNC(ballistics,destroy);
+    [_animal] call EFUNC(common,bloodPool);
 
     [QEGVAR(common,tileText), localize LSTRING(Success)] call CBA_fnc_localEvent;
 },

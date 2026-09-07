@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {QCLASS(common)};
+        requiredAddons[] = {QCLASS(common), QCLASSACE(advanced_ballistics)};
         authors[] = {"TenuredCLOUD"};
         VERSION_CONFIG;
     };
