@@ -3,13 +3,6 @@
 [QCLASSACE(medicalMenuOpened), {
     params ["_unit", "_patient", "_menuType"];
 
-    // Zombification force close of ACE medical ui
-    if (ACE_player getVariable ["WBK_AI_ISZombie", false]) exitWith {
-        [{!isNull findDisplay 38580}, {
-            (findDisplay 38580) closeDisplay 2;
-        }, []] call CBA_fnc_waitUntilAndExecute;
-    };
-
     if (_patient isEqualTo ACE_player) then {
         private _display = findDisplay 46 createDisplay QCLASS(vitals_framework_ui);
         ACE_player setVariable [QGVAR(medicalDisplay), _display];
