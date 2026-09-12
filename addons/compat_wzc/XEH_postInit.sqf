@@ -3,8 +3,8 @@
 if (!GVAR(enabled)) exitWith {};
 
 [QGVAR(convertToZed), {
-    params ["_unit", "_animParams"];
-    _unit switchMove (_animParams select 0);
+    params ["_unit", "_funds"];
+    [_unit, _funds] call FUNC(buildPlayerZombie);
 }] call CBA_fnc_addEventHandler;
 
 if (hasInterface) then {

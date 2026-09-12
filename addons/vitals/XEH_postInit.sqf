@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-["ace_medicalMenuOpened", {
+[QCLASSACE(medicalMenuOpened), {
     params ["_unit", "_patient", "_menuType"];
 
     if (_patient isEqualTo ACE_player) then {
@@ -18,7 +18,7 @@
     };
 }] call CBA_fnc_addEventHandler;
 
-["ace_treatmentStarted", {
+[QCLASSACE(treatmentStarted), {
     params ["_caller", "_target", "_selectionName", "_className", "_itemUser", "_usedItem", "_createLitter"];
 
     private _display = ACE_player getVariable [QGVAR(medicalDisplay), displayNull];
