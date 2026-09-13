@@ -19,7 +19,6 @@
 #include "\z\misery\addons\repair\ui\repairShop.hpp"
 #include "\z\misery\addons\sleep\ui\sleep.hpp"
 #include "\z\misery\addons\traders\ui\traderShop.hpp"
-#include "\z\misery\addons\treatment\ui\medicalTreatment.hpp"
 #include "\z\misery\addons\vitals\ui\vitalsFramework.hpp"
 
 class RscTitles {
