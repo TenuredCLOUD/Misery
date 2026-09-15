@@ -15,7 +15,7 @@
 
 #define MACRO_MEDICATION_REGISTRY [ \
     [QCLASS(cocaine), QEFUNC(stims,cocaine)], \
-    [QCLASS(antibiotic), QFUNC(antibiotics)], \
+    [QCLASS(antibiotic), QFUNC(antibiotic)], \
     [QCLASS(antidote), QFUNC(antidote)], \
     [QCLASS(antiparasitic), QFUNC(antiparasitic)], \
     [QCLASS(caffetin), QFUNC(caffetinTablets)], \
@@ -29,7 +29,7 @@
     [QCLASS(painkillers), QFUNC(painPill)], \
     [QCLASS(potassiumIodate), QFUNC(potassiumIodate)], \
     [QCLASS(randomMedication), QFUNC(randomPharm)], \
-    [QCLASS(sleepingPills), QFUNC(sleepinPill)], \
+    [QCLASS(sleepingPills), QFUNC(sleepingPill)], \
     [QCLASS(thrombomodulin), QFUNC(thbdInjection)], \
     [QCLASS(thrombomodulin_Stimpack), QFUNC(thbdInjection)], \
     [QCLASSACE(salineIV_500), QFUNC(saline)], \
