@@ -14,17 +14,27 @@
  *
 */
 
-call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "_infection"];
+call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "", "_infection", "", "", "", "", "", "_funds"];
 
-if (!(ACE_player getVariable ["WBK_AI_ISZombie", false]) && _infection >= 1) then {
-    [QGVAR(convertToZed), [ACE_player, ["WBK_Runner_Angry_Idle", 0, 0.2, false]]] call CBA_fnc_globalEvent;
-    ACE_player setVariable ["WBK_SynthHP", WBK_Zombies_CorruptedHP, true];
-    ACE_player setVariable ["WBK_AI_ISZombie", true, true];
-    ACE_player setVariable ["WBK_AI_ZombieMoveSet", "WBK_Runner_Angry_Idle", true];
+[] call ACEFUNC(common,player) params ["_player"];
+
+if (_infection >= 1) then {
+
+    // 75/25 split for zombification after infection reaches 1 preventing immediate zombification
+    if ([75] call EFUNC(common,rollChance)) exitWith {};
+
+    if (isNull _player || !alive _player) exitWith {};
+
+    // Handle old body on death
+    [QGVAR(zombifiedEvent), "Killed", {
+        params ["_unit", "_killer", "_instigator", "_useEffects", "_shot", "_real"];
+
+        hideObjectGlobal _unit;
+    }] call CBA_fnc_addBISPlayerEventHandler;
+
+    [QGVAR(convertToZed), [_player, _funds]] call CBA_fnc_serverEvent;
+
+    [_player] call ACEFUNC(medical_status,setDead);
 };
 
-if (ACE_player getVariable ["WBK_AI_ISZombie", false]) then {
-    QGVAR(display) cutRsc [QCLASS(bloodshot_ui), "PLAIN", 1, false];
-    [ACE_player, "head", ["Contusion", 5, 2, 1]] call ACEFUNC(medical,addWound);
-    [ACE_player] call EFUNC(medical,handleHeadTrauma);
-};
+
