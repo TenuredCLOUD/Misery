@@ -14,6 +14,9 @@
  */
 
 [{
+
+    if (isGamePaused) exitWith {};
+
     private _newActiveFires = [];
 
     {

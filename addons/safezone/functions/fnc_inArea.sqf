@@ -21,6 +21,8 @@ if !(call FUNC(checkAreas)) exitWith {
 [{
     params ["_args", "_handle"];
 
+    if (isGamePaused) exitWith {};
+
     private _players = call EFUNC(common,listPlayers);
     {
         private _player = _x;

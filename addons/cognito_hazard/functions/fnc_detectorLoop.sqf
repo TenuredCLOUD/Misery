@@ -16,6 +16,8 @@
 [{
     params ["_args", "_handle"];
 
+    if (isGamePaused) exitWith {};
+
     private _staticHandle = ACE_player getVariable [QGVAR(staticAudioHandle), -1];
     private _weirdHandle = ACE_player getVariable [QGVAR(weirdAudioHandle), -1];
 

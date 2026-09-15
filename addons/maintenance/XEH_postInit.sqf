@@ -8,6 +8,9 @@ if (isServer) then {
 
     GVAR(handleEngine) = {
         params ["_args", "_handle"];
+
+        if (isGamePaused) exitWith {};
+
         _args params ["_vehicle"];
 
         if (isNull _vehicle || {!alive _vehicle} || {!isEngineOn _vehicle}) exitWith {

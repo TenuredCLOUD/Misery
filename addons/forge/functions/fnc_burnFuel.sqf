@@ -17,6 +17,8 @@
 [{
     params ["_args", "_handle"];
 
+    if (isGamePaused) exitWith {};
+
     if ((count GVAR(tracked)) < 1) exitWith {};
 
     {

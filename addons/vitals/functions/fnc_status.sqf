@@ -17,6 +17,8 @@ disableSerialization;
 [{
     params ["_args", "_handle"];
 
+    if (isGamePaused) exitWith {};
+
     if (isNull findDisplay 982377) exitWith {};
 
     private _vitalsDisplay = findDisplay 982377;
