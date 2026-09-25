@@ -20,6 +20,9 @@ if !(call FUNC(checkAreas)) exitWith {
 
 [{
     params ["_args", "_handle"];
+
+    if (isGamePaused) exitWith {};
+
     {
         private _player = _x;
         private _currentTrackingMarker = _player getVariable [QGVAR(insideArea), ""];

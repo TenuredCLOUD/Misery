@@ -1,3 +1,4 @@
+PREP(buildPlayerZombie);
 PREP(checkInfection);
 PREP(clean);
 PREP(convertToArray);

@@ -17,6 +17,8 @@
 [{
     params ["_args", "_handle"];
 
+    if (isGamePaused) exitWith {};
+
     if (GVAR(allRadios) isEqualTo []) exitWith {};
 
     private _index = GVAR(allRadios) findIf { _x isEqualTo objNull };

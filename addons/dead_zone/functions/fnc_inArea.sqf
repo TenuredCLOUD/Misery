@@ -20,6 +20,8 @@ if !(call FUNC(checkAreas)) exitWith {
 [{
     params ["_args", "_handle"];
 
+    if (isGamePaused) exitWith {};
+
     {
         private _zone = _x;
         private _targets = (call EFUNC(common,listPlayers)) select { _x inArea _zone && {alive _x}};

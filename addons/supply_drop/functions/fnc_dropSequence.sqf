@@ -64,6 +64,9 @@ private _radioSound = selectRandom ["RadioAmbient2", "RadioAmbient8"];
 
     [{
         params ["_args", "_handle"];
+
+        if (isGamePaused) exitWith {};
+
         _args params ["_heli", "_smoke", "_flare"];
 
         if !(alive _heli) exitWith {

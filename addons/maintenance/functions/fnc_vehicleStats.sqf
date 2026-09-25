@@ -19,6 +19,8 @@
 [{
     params ["_args", "_handle"];
 
+    if (isGamePaused) exitWith {};
+
     private _vehicle = objectParent ACE_player;
 
     private _isIgnored = _vehicle getVariable [QGVAR(ignore), false];

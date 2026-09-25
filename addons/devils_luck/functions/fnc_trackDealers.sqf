@@ -20,6 +20,9 @@ if (!isServer) exitWith {};
 [{count GVAR(activeDealers) > 0}, {
     [{
         params ["_args", "_handle"];
+
+        if (isGamePaused) exitWith {};
+
         private _players = call EFUNC(common,listPlayers);
         _players = _players - (entities "HeadlessClient_F");
 
