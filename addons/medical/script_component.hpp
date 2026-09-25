@@ -20,8 +20,7 @@
     [QCLASS(antiparasitic), QFUNC(antiparasitic)], \
     [QCLASS(caffetin), QFUNC(caffetinTablets)], \
     [QCLASS(caffeine), QFUNC(caffieneTablets)], \
-    [QCLASS(charcoalTablets), QFUNC(charcoalTablets)], \
-    [QCLASS(clozapine), QFUNC(clozapineInjection)], \
+    [QCLASS(haloperidol), QFUNC(haloperidol)], \
     [QCLASS(clozapineBox), QFUNC(clozapine)], \
     [QCLASS(deconKit), QFUNC(deconKit)], \
     [QCLASS(electrolyte), QFUNC(electrolyteInjection)], \
@@ -42,7 +41,6 @@
     [QCLASS(antiparasitic), QEGVAR(animations,pillBottle)], \
     [QCLASS(caffetin), QEGVAR(animations,pillBottle)], \
     [QCLASS(caffeine), QEGVAR(animations,pillBottle)], \
-    [QCLASS(charcoalTablets), QEGVAR(animations,pillBottle)], \
     [QCLASS(clozapineBox), QEGVAR(animations,pillBottle)], \
     [QCLASS(deconKit), QUOTE(AinvPknlMstpSnonWnonDnon_G01)], \
     [QCLASS(painkillers), QEGVAR(animations,pillBottle)], \

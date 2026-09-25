@@ -18,52 +18,52 @@
             <Turkish>Antibiyotik hapları içerir</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_Antibiotic_DisplayName">
-            <English>Antibiotic package</English>
-            <Czech>Balení antibiotik</Czech>
-            <French>Paquet d'antibiotiques</French>
-            <Spanish>Paquete de antibióticos</Spanish>
-            <Italian>Confezione di antibiotici</Italian>
-            <Polish>Opakowanie antybiotyków</Polish>
-            <Portuguese>Pacote de antibióticos</Portuguese>
-            <Russian>Упаковка антибиотиков</Russian>
-            <German>Antibiotika-Packung</German>
-            <Korean>항생제 패키지</Korean>
-            <Japanese>抗生物質パッケージ</Japanese>
-            <Chinese>抗生素包裝</Chinese>
-            <Chinesesimp>抗生素包装</Chinesesimp>
-            <Turkish>Antibiyotik paketi</Turkish>
+            <English>Antibiotics</English>
+            <Czech>Antibiotika</Czech>
+            <French>Antibiotiques</French>
+            <Spanish>Antibióticos</Spanish>
+            <Italian>Antibiotici</Italian>
+            <Polish>Antybiotyki</Polish>
+            <Portuguese>Antibióticos</Portuguese>
+            <Russian>Антибиотики</Russian>
+            <German>Antibiotika</German>
+            <Korean>항생제</Korean>
+            <Japanese>抗生物質</Japanese>
+            <Chinese>抗生素</Chinese>
+            <Chinesesimp>抗生素</Chinesesimp>
+            <Turkish>Antibiyotikler</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_Antiparasitic_Description">
-            <English>Contains anti parasitic pills</English>
-            <Czech>Obsahuje antiparazitární pilulky</Czech>
-            <French>Contient des comprimés antiparasitaires</French>
+            <English>Contains antiparasitic pills</English>
+            <Czech>Obsahuje antiparazitikum</Czech>
+            <French>Contient des antiparasitaires</French>
             <Spanish>Contiene pastillas antiparasitarias</Spanish>
             <Italian>Contiene pillole antiparassitarie</Italian>
             <Polish>Zawiera tabletki przeciwpasożytnicze</Polish>
-            <Portuguese>Contém comprimidos antiparasitários</Portuguese>
+            <Portuguese>Contém pílulas antiparasitárias</Portuguese>
             <Russian>Содержит противопаразитарные таблетки</Russian>
-            <German>Enthält Anti-Parasiten-Pillen</German>
-            <Korean>항기생충제 알약이 들어 있습니다.</Korean>
-            <Japanese>抗寄生虫剤が含まれています</Japanese>
-            <Chinese>含有抗寄生蟲藥片</Chinese>
-            <Chinesesimp>含有抗寄生虫药片</Chinesesimp>
-            <Turkish>Anti paraziter haplar içerir</Turkish>
+            <German>Enthält Antiparasitika-Tabletten</German>
+            <Korean>구충제가 들어있습니다</Korean>
+            <Japanese>駆虫薬が含まれています</Japanese>
+            <Chinese>含有驅蟲藥片</Chinese>
+            <Chinesesimp>含有驱虫药片</Chinesesimp>
+            <Turkish>Antiparaziter haplar içerir</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_Antiparasitic_DisplayName">
-            <English>Anti parasitic package</English>
-            <Czech>Antiparazitární balení</Czech>
-            <French>Paquet antiparasitaire</French>
-            <Spanish>Paquete antiparasitario</Spanish>
-            <Italian>Confezione antiparassitaria</Italian>
-            <Polish>Opakowanie przeciwpasożytnicze</Polish>
-            <Portuguese>Pacote antiparasitário</Portuguese>
-            <Russian>Противопаразитарная упаковка</Russian>
-            <German>Anti-Parasiten-Packung</German>
-            <Korean>항기생충제 패키지</Korean>
-            <Japanese>抗寄生虫パッケージ</Japanese>
-            <Chinese>抗寄生蟲藥物包裝</Chinese>
-            <Chinesesimp>抗寄生虫药物包装</Chinesesimp>
-            <Turkish>Anti paraziter paket</Turkish>
+            <English>Antiparasitics</English>
+            <Czech>Antiparazitika</Czech>
+            <French>Antiparasitaires</French>
+            <Spanish>Antiparasitarios</Spanish>
+            <Italian>Antiparassitari</Italian>
+            <Polish>Leki przeciwpasożytnicze</Polish>
+            <Portuguese>Antiparasitários</Portuguese>
+            <Russian>Противопаразитарные средства</Russian>
+            <German>Antiparasitika</German>
+            <Korean>구충제</Korean>
+            <Japanese>駆虫薬</Japanese>
+            <Chinese>驅蟲藥</Chinese>
+            <Chinesesimp>驱虫药</Chinesesimp>
+            <Turkish>Antiparazitler</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_Caffeine_Description">
             <English>Gives a boost of energy</English>
@@ -97,38 +97,6 @@
             <Chinesesimp>咖啡因片</Chinesesimp>
             <Turkish>Kafein tabletleri</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Assets_Caffetin_Description">
-            <English>Contains Caffetin tablets</English>
-            <Czech>Obsahuje tablety Caffetin</Czech>
-            <French>Contient des comprimés de Caffetin</French>
-            <Spanish>Contiene tabletas de Caffetin</Spanish>
-            <Italian>Contiene compresse di Caffetin</Italian>
-            <Polish>Zawiera tabletki Caffetin</Polish>
-            <Portuguese>Contém comprimidos de Caffetin</Portuguese>
-            <Russian>Содержит таблетки Caffetin</Russian>
-            <German>Enthält Caffetin-Tabletten</German>
-            <Korean>카페틴 정제 함유</Korean>
-            <Japanese>カフェチン錠が含まれています</Japanese>
-            <Chinese>含有加合百服藥片</Chinese>
-            <Chinesesimp>含有加合百服药片</Chinesesimp>
-            <Turkish>Caffetin tabletleri içerir</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Assets_Caffetin_DisplayName">
-            <English>Caffetin package</English>
-            <Czech>Balení Caffetin</Czech>
-            <French>Paquet de Caffetin</French>
-            <Spanish>Paquete de Caffetin</Spanish>
-            <Italian>Confezione di Caffetin</Italian>
-            <Polish>Opakowanie Caffetin</Polish>
-            <Portuguese>Pacote de Caffetin</Portuguese>
-            <Russian>Упаковка Caffetin</Russian>
-            <German>Caffetin-Packung</German>
-            <Korean>카페틴 패키지</Korean>
-            <Japanese>カフェチンパッケージ</Japanese>
-            <Chinese>加合百服包裝</Chinese>
-            <Chinesesimp>加合百服包装</Chinesesimp>
-            <Turkish>Caffetin paketi</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Assets_Chainsaw_Description">
             <English>Rugged well worn chainsaw, makes wood collection easy</English>
             <Czech>Odolná, dobře opotřebovaná motorová pila; usnadňuje sběr dřeva</Czech>
@@ -160,38 +128,6 @@
             <Chinese>鏈鋸</Chinese>
             <Chinesesimp>链锯</Chinesesimp>
             <Turkish>Motorlu testere</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Assets_CharcoalTabs_Description">
-            <English>Contains charcoal tablets</English>
-            <Czech>Obsahuje živočišné uhlí</Czech>
-            <French>Contient des comprimés de charbon</French>
-            <Spanish>Contiene pastillas de carbón</Spanish>
-            <Italian>Contiene compresse di carbone</Italian>
-            <Polish>Zawiera tabletki węgla aktywnego</Polish>
-            <Portuguese>Contém comprimidos de carvão</Portuguese>
-            <Russian>Содержит таблетки активированного угля</Russian>
-            <German>Enthält Kohletabletten</German>
-            <Korean>숯 정제가 포함되어 있습니다</Korean>
-            <Japanese>活性炭タブレットを含有</Japanese>
-            <Chinese>含有木炭片</Chinese>
-            <Chinesesimp>含有木炭片</Chinesesimp>
-            <Turkish>Kömür tabletleri içerir</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Assets_CharcoalTabs_DisplayName">
-            <English>Charcoal tablets</English>
-            <Czech>Tablety aktivního uhlí</Czech>
-            <French>Comprimés de charbon actif</French>
-            <Spanish>Tabletas de carbón activado</Spanish>
-            <Italian>Compresse di carbone attivo</Italian>
-            <Polish>Tabletki z węglem aktywnym</Polish>
-            <Portuguese>Comprimidos de carvão ativado</Portuguese>
-            <Russian>Таблетки активированного угля</Russian>
-            <German>Aktivkohletabletten</German>
-            <Korean>숯 정제</Korean>
-            <Japanese>木炭錠</Japanese>
-            <Chinese>木炭片</Chinese>
-            <Chinesesimp>木炭片</Chinesesimp>
-            <Turkish>Aktif kömür tabletleri</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_ClozapineBox_Description">
             <English>Contains Clozapine pills</English>
@@ -477,6 +413,22 @@
             <Chinesesimp>火柴盒</Chinesesimp>
             <Turkish>Kibrit Kutusu</Turkish>
         </Key>
+        <Key ID="STR_MISERY_Assets_PainCaffeine_Description">
+            <English>Contains pain pills with caffeine</English>
+            <Czech>Obsahuje prášky na bolest s kofeinem</Czech>
+            <French>Contient des antalgiques avec de la caféine</French>
+            <Spanish>Contiene pastillas para el dolor con cafeína</Spanish>
+            <Italian>Contiene pillole per il dolore con caffeina</Italian>
+            <Polish>Zawiera tabletki przeciwbólowe z kofeiną</Polish>
+            <Portuguese>Contém pílulas para dor com cafeína</Portuguese>
+            <Russian>Содержит обезболивающие таблетки с кофеином</Russian>
+            <German>Enthält Schmerztabletten mit Koffein</German>
+            <Korean>카페인이 함유된 진통제가 들어있습니다</Korean>
+            <Japanese>カフェイン入り鎮痛剤が含まれています</Japanese>
+            <Chinese>含有含咖啡因的止痛藥</Chinese>
+            <Chinesesimp>含有含咖啡因的止痛药</Chinesesimp>
+            <Turkish>Kafeinli ağrı kesici haplar içerir</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Assets_Pain_Description">
             <English>Contains pain pills</English>
             <Czech>Obsahuje léky proti bolesti</Czech>
@@ -718,20 +670,20 @@
             <Turkish>Uyku hapı içerir</Turkish>
         </Key>
         <Key ID="STR_MISERY_Assets_SleepPack_DisplayName">
-            <English>Sleeping pills package</English>
-            <Czech>Balení prášků na spaní</Czech>
-            <French>Paquet de somnifères</French>
-            <Spanish>Paquete de pastillas para dormir</Spanish>
-            <Italian>Confezione di sonniferi</Italian>
-            <Polish>Opakowanie tabletek nasennych</Polish>
-            <Portuguese>Pacote de comprimidos para dormir</Portuguese>
-            <Russian>Упаковка снотворного</Russian>
-            <German>Schlaftabletten-Packung</German>
-            <Korean>수면제 패키지</Korean>
-            <Japanese>睡眠薬のパッケージ</Japanese>
-            <Chinese>安眠藥包裝</Chinese>
-            <Chinesesimp>安眠药包装</Chinesesimp>
-            <Turkish>Uyku hapı paketi</Turkish>
+            <English>Sleeping pills</English>
+            <Czech>Prášky na spaní</Czech>
+            <French>Somnifères</French>
+            <Spanish>Pastillas para dormir</Spanish>
+            <Italian>Sonniferi</Italian>
+            <Polish>Tabletki nasenne</Polish>
+            <Portuguese>Comprimidos para dormir</Portuguese>
+            <Russian>Снотворное</Russian>
+            <German>Schlaftabletten</German>
+            <Korean>수면제</Korean>
+            <Japanese>睡眠薬</Japanese>
+            <Chinese>安眠藥</Chinese>
+            <Chinesesimp>安眠药</Chinesesimp>
+            <Turkish>Uyku hapları</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_18VBatteryNeeded_Description">
             <English>Requires 18v battery</English>
@@ -861,38 +813,6 @@
             <Chinesesimp>紫水晶</Chinesesimp>
             <Turkish>Ametist</Turkish>
         </Key>
-        <Key ID="STR_Misery_Assets_Antidote_Description">
-            <English>extremely efficient medical injection</English>
-            <Czech>extrémně účinná lékařská injekce</Czech>
-            <French>injection médicale extrêmement efficace</French>
-            <Spanish>inyección médica extremadamente eficiente</Spanish>
-            <Italian>iniezione medica estremamente efficiente</Italian>
-            <Polish>niezwykle skuteczny zastrzyk medyczny</Polish>
-            <Portuguese>injeção médica extremamente eficiente</Portuguese>
-            <Russian>чрезвычайно эффективная медицинская инъекция</Russian>
-            <German>äußerst wirksame medizinische Injektion</German>
-            <Korean>매우 효율적인 의료 주사</Korean>
-            <Japanese>非常に効率的な医療用注射</Japanese>
-            <Chinese>極其有效的醫療注射劑</Chinese>
-            <Chinesesimp>极其有效的医疗注射剂</Chinesesimp>
-            <Turkish>son derece verimli tıbbi enjeksiyon</Turkish>
-        </Key>
-        <Key ID="STR_Misery_Assets_Antidote_DisplayName">
-            <English>Antidote injection</English>
-            <Czech>Injekce protijed</Czech>
-            <French>Injection d'antidote</French>
-            <Spanish>inyección de antídoto</Spanish>
-            <Italian>Iniezione di antidoto</Italian>
-            <Polish>Zastrzyk antidotum</Polish>
-            <Portuguese>Injeção de antídoto</Portuguese>
-            <Russian>Инъекция противоядия</Russian>
-            <German>Gegenmittel-Injektion</German>
-            <Korean>해독제 주사</Korean>
-            <Japanese>解毒剤注射</Japanese>
-            <Chinese>解毒劑注射</Chinese>
-            <Chinesesimp>解毒剂注射</Chinesesimp>
-            <Turkish>Panzehir enjeksiyonu</Turkish>
-        </Key>
         <Key ID="STR_Misery_Assets_AnvilHammer_Description">
             <English>Old striking hammer, has some good weight to it</English>
             <Czech>Staré kladivo, má dobrou váhu</Czech>
@@ -940,6 +860,38 @@
             <Chinese>鍛造砧</Chinese>
             <Chinesesimp>锻造砧</Chinesesimp>
             <Turkish>Demirci Örsü</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_Atropine_Description">
+            <English>Antidote Treatment Nerve Agent Autoinjector, treats severe nerve agent exposure</English>
+            <Czech>Autoinjektor protijedu proti nervově paralytickým látkám, léčí závažná vystavení nervovým plynům</Czech>
+            <French>Auto-injecteur d'antidote contre les agents innervants, traite l'exposition grave aux agents innervants</French>
+            <Spanish>Autoinyector de antídoto contra agentes nerviosos, trata la exposición grave a agentes nerviosos</Spanish>
+            <Italian>Autoiniettore antidoto per agenti nervosi, tratta l'esposizione grave ad agenti nervosi</Italian>
+            <Polish>Autostrzykawka z odtrutką na środki bojowe o działaniu paralityczno-drgawkowym, leczy ciężkie porażenia gazami bojowymi</Polish>
+            <Portuguese>Autoinjetor de antídoto para agente nervoso, trata exposição grave a agentes nervosos</Portuguese>
+            <Russian>Автоинжектор-антидот от нервно-паралитических веществ, применяется при тяжелых отравлениях нервно-паралитическими газами</Russian>
+            <German>Autoinjektor-Gegengift für Nervenkampfstoffe, behandelt schwere Exposition gegenüber Nervengiften</German>
+            <Korean>신경작용제 해독제 자동 주사기, 심각한 신경작용제 노출을 치료합니다</Korean>
+            <Japanese>神経剤解毒剤自動注射器、深刻な神経剤暴露を治療します</Japanese>
+            <Chinese>神經毒劑解毒劑自動注射器，用於治療嚴重的神經毒劑暴露</Chinese>
+            <Chinesesimp>神经毒剂解毒剂自动注射器，用于治疗严重的神经毒剂暴露</Chinesesimp>
+            <Turkish>Sinir gazı panzehir oto-enjektörü, şiddetli sinir gazı maruziyetini tedavi eder</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_Atropine_DisplayName">
+            <English>Atropine/2-PAM Autoinjector</English>
+            <Czech>Autoinjektor Atropin/2-PAM</Czech>
+            <French>Auto-injecteur d'Atropine/2-PAM</French>
+            <Spanish>Autoinyector de atropina/2-PAM</Spanish>
+            <Italian>Autoiniettore di atropina/2-PAM</Italian>
+            <Polish>Autostrzykawka z atropiną i 2-PAM</Polish>
+            <Portuguese>Autoinjetor de atropina/2-PAM</Portuguese>
+            <Russian>Автоинжектор Атропин/2-PAM</Russian>
+            <German>Atropin/2-PAM-Autoinjektor</German>
+            <Korean>아트로핀/2-PAM 자동 주사기</Korean>
+            <Japanese>アトロピン/2-PAM自動注射器</Japanese>
+            <Chinese>阿托品/2-PAM 自動注射器</Chinese>
+            <Chinesesimp>阿托品/2-PAM 自动注射器</Chinesesimp>
+            <Turkish>Atropin/2-PAM Oto-Enjektörü</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_AutoBatteryHeavy_Description">
             <English>Deep cycle Automotive battery, very heavy...</English>
@@ -1513,38 +1465,6 @@
             <Chinesesimp>报废的电路板</Chinesesimp>
             <Turkish>Ölü Devre Kartı</Turkish>
         </Key>
-        <Key ID="STR_Misery_Assets_Clozapine_Description">
-            <English>Used to treat symptoms of psychosis such as delusions, hallucinations, paranoia, or confused thoughts, as well as schizophrenia, injected rather than ingested</English>
-            <Czech>Používá se k léčbě příznaků psychózy, jako jsou bludy, halucinace, paranoia nebo zmatené myšlenky, stejně jako schizofrenie, podává se injekčně, nikoli ústně</Czech>
-            <French>Utilisé pour traiter les symptômes de la psychose tels que les délires, les hallucinations, la paranoïa ou la confusion mentale, ainsi que la schizophrénie, injecté plutôt qu'ingéré</French>
-            <Spanish>Se utiliza para tratar síntomas de psicosis como delirios, alucinaciones, paranoia o pensamientos confusos, así como la esquizofrenia, se inyecta en lugar de ingerirse</Spanish>
-            <Italian>Usato per trattare i sintomi della psicosi come deliri, allucinazioni, paranoia o pensieri confusi, oltre alla schizofrenia, iniettato anziché ingerito</Italian>
-            <Polish>Stosowany w leczeniu objawów psychozy, takich jak urojenia, halucynacje, paranoja lub zaburzenia myślenia, a także schizofrenii, podawany w zastrzyku zamiast doustnie</Polish>
-            <Portuguese>Usado para tratar sintomas de psicose, como delírios, alucinações, paranoia ou pensamentos confusos, bem como esquizofrenia, injetado em vez de ingerido</Portuguese>
-            <Russian>Используется для лечения симптомов психоза, таких как бред, галлюцинации, паранойя или спутанность сознания, а также шизофрении; вводится инъекционно, а не перорально</Russian>
-            <German>Wird zur Behandlung von Psychosesymptomen wie Wahnvorstellungen, Halluzinationen, Paranoia oder verwirrten Gedanken sowie Schizophrenie verwendet, wird injiziert statt eingenommen</German>
-            <Korean>망상, 환각, 편집증, 혼란스러운 등 정신병 증상과 조현병 치료에 사용되며, 복용하지 않고 주사합니다</Korean>
-            <Japanese>妄想、幻覚、妄想症、思考混乱などの統合失調症や精神病の症状の治療に使用され、経口 ではなく注射で投与される</Japanese>
-            <Chinese>用於治療精神病症狀，如妄想、幻覺、偏執或思緒混亂，以及精神分裂症，採用注射而非口服</Chinese>
-            <Chinesesimp>用于治疗精神病症状，如妄想、幻觉、偏执或思绪混乱，以及精神分裂症，采用注射而非口服</Chinesesimp>
-            <Turkish>Sanrı, halüsinasyon, paranoit düşünce veya kafa karışıklığı gibi psikoz belirtilerinin yanı sıra şizofreni tedavisinde kullanılır, yutulmak yerine enjekte edilir</Turkish>
-        </Key>
-        <Key ID="STR_Misery_Assets_Clozapine_DisplayName">
-            <English>Clozapine Injection</English>
-            <Czech>Injekce Clozapine</Czech>
-            <French>Injection de clozapine</French>
-            <Spanish>Inyección de clozapina</Spanish>
-            <Italian>Iniezione di clozapina</Italian>
-            <Polish>Zastrzyk Clozapine</Polish>
-            <Portuguese>Injeção de Clozapina</Portuguese>
-            <Russian>Инъекция клозапина</Russian>
-            <German>Clozapin-Injektion</German>
-            <Korean>클로자핀 주사</Korean>
-            <Japanese>クロザピン注射</Japanese>
-            <Chinese>氯氮平注射液</Chinese>
-            <Chinesesimp>氯氮平注射液</Chinesesimp>
-            <Turkish>Klozapin Enjeksiyonu</Turkish>
-        </Key>
         <Key ID="STR_Misery_Assets_CoalOre_Description">
             <English>Primary fuel source for a smelting forge</English>
             <Czech>Hlavní zdroj paliva pro tavební výheň</Czech>
@@ -2041,38 +1961,6 @@
             <Chinesesimp>电动手锯 (无电池)</Chinesesimp>
             <Turkish>Elektrikli El Testeresi (pilsiz)</Turkish>
         </Key>
-        <Key ID="STR_Misery_Assets_Electrolyte_Description">
-            <English>Pre-mixed Electrolyte solution, can aid with re-hydration</English>
-            <Czech>Předem namíchaný elektrolytický roztok, pomáhá při rehydrataci</Czech>
-            <French>Solution d'électrolytes pré-mélangée, aide à la réhydratation</French>
-            <Spanish>Solución de electrolitos premezclada, puede ayudar con la rehidratación</Spanish>
-            <Italian>Soluzione di elettroliti premiscelata, può aiutare nella reidratazione</Italian>
-            <Polish>Gotowy roztwór elektrolitów, pomaga w nawodnieniu organizmu</Polish>
-            <Portuguese>Solução de eletrólitos pré-misturada, pode ajudar na reidratação</Portuguese>
-            <Russian>Готовый раствор электролитов, помогает при обезвоживании</Russian>
-            <German>Vorgemischte Elektrolytlösung, kann bei der Rehydrierung helfen</German>
-            <Korean>미리 혼합된 전해질 용액, 수분 보충에 도움이 됩니다</Korean>
-            <Japanese>調合済みの電解質溶液。水分補給に役立つ</Japanese>
-            <Chinese>預先調配的電解質溶液，有助於補充水分</Chinese>
-            <Chinesesimp>预先调配的电解质溶液，有助于补充水分</Chinesesimp>
-            <Turkish>Önceden karıştırılmış elektrolit çözeltisi, sıvı takviyesine yardımcı olabilir</Turkish>
-        </Key>
-        <Key ID="STR_Misery_Assets_Electrolyte_DisplayName">
-            <English>Electrolyte Injection</English>
-            <Czech>Injekce elektrolytů</Czech>
-            <French>Injection d'électrolytes</French>
-            <Spanish>Inyección de electrolitos</Spanish>
-            <Italian>Iniezione di elettroliti</Italian>
-            <Polish>Zastrzyk elektrolitowy</Polish>
-            <Portuguese>Injeção de eletrólitos</Portuguese>
-            <Russian>Инъекция электролита</Russian>
-            <German>Elektrolyt-Injektion</German>
-            <Korean>전해질 주사</Korean>
-            <Japanese>電解質注射</Japanese>
-            <Chinese>電解質注射液</Chinese>
-            <Chinesesimp>电解质注射液</Chinesesimp>
-            <Turkish>Elektrolit Enjeksiyonu</Turkish>
-        </Key>
         <Key ID="STR_Misery_Assets_ElectronicRepairKit_DisplayName">
             <English>Electronics repair kit</English>
             <Czech>Sada na opravu elektroniky</Czech>
@@ -2537,38 +2425,6 @@
             <Chinesesimp>玻璃维修套件</Chinesesimp>
             <Turkish>Cam tamir takımı</Turkish>
         </Key>
-        <Key ID="STR_Misery_Assets_Glucose_Description">
-            <English>Glucose syringe, can help the body cope with severe hunger</English>
-            <Czech>Glukózová injekční stříkačka, pomáhá tělu vyrovnat se s silným hladem</Czech>
-            <French>Seringue de glucose, peut aider l'organisme à faire face à une faim intense</French>
-            <Spanish>Jeringa de glucosa, puede ayudar al cuerpo a sobrellevar el hambre extrema</Spanish>
-            <Italian>Siringa di glucosio, può aiutare il corpo ad affrontare la fame intensa</Italian>
-            <Polish>Strzykawka z glukozą, pomaga organizmowi radzić sobie z silnym głodem</Polish>
-            <Portuguese>Seringa de glicose, pode ajudar o corpo a lidar com a fome severa</Portuguese>
-            <Russian>Шприц с глюкозой, помогает организму справиться с сильным голодом</Russian>
-            <German>Glukosespritze, kann dem Körper helfen, schweren Hunger zu bewältigen</German>
-            <Korean>포도당 주사기, 심각한 허기를 견디는 데 도움이 됩니다</Korean>
-            <Japanese>ブドウ糖注射器。激しい空腹を phenolic やわらげるのに役立つ</Japanese>
-            <Chinese>葡萄糖注射器，可幫助身體應對嚴重的飢餓</Chinese>
-            <Chinesesimp>葡萄糖注射器，可帮助身体应对严重的饥饿</Chinesesimp>
-            <Turkish>Glukoz şırıngası, vücudun şiddetli açlıkla baş etmesine yardımcı olabilir</Turkish>
-        </Key>
-        <Key ID="STR_Misery_Assets_Glucose_DisplayName">
-            <English>Glucose Injection</English>
-            <Czech>Injekce glukózy</Czech>
-            <French>Injection de glucose</French>
-            <Spanish>Inyección de glucosa</Spanish>
-            <Italian>Iniezione di glucosio</Italian>
-            <Polish>Zastrzyk z glukozy</Polish>
-            <Portuguese>Injeção de glicose</Portuguese>
-            <Russian>Инъекция глюкозы</Russian>
-            <German>Glukoseinspritzung</German>
-            <Korean>포도당 주사</Korean>
-            <Japanese>グルコース注射</Japanese>
-            <Chinese>葡萄糖注射液</Chinese>
-            <Chinesesimp>葡萄糖注射液</Chinesesimp>
-            <Turkish>Glikoz Enjeksiyonu</Turkish>
-        </Key>
         <Key ID="STR_Misery_Assets_GoldIngot_Description">
             <English>Worth a small fortune</English>
             <Czech>Má hodnotu malého jmění</Czech>
@@ -2696,6 +2552,38 @@
             <Chinese>獵刀</Chinese>
             <Chinesesimp>猎刀</Chinesesimp>
             <Turkish>Av bıçağı</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_Haloperidol_Description">
+            <English>Rapidly suppresses acute psychotic breaks, paranoia, and visual or auditory hallucinations</English>
+            <Czech>Rychle potlačuje akutní psychotické záchvaty, paranoiu a zrakové či sluchové halucinace</Czech>
+            <French>Supprime rapidement les crises psychotiques aiguës, la paranoïa et les hallucinations visuelles ou auditives</French>
+            <Spanish>Suprime rápidamente brotes psicóticos agudos, paranoia y alucinaciones visuales o auditivas</Spanish>
+            <Italian>Sopprime rapidamente crisi psicotiche acute, paranoia e allucinazioni visive o uditive</Italian>
+            <Polish>Szybko tłumi ostre epizody psychotyczne, paranoję oraz halucynacje wzrokowe i słuchowe</Polish>
+            <Portuguese>Suprime rapidamente surtos psicóticos agudos, paranoia e alucinações visuais ou auditivas</Portuguese>
+            <Russian>Быстро подавляет острые психотические приступы, паранойю, а также зрительные и слуховые галлюцинации</Russian>
+            <German>Unterdrückt schnell akute psychotische Schübe, Paranoia sowie visuelle und auditive Halluzinationen</German>
+            <Korean>급성 정신병적 발작, 망상, 시각 및 환청 증상을 빠르게 완화합니다</Korean>
+            <Japanese>急性精神病発作、妄想、視覚または聴覚の幻覚を急速に抑制します</Japanese>
+            <Chinese>快速抑制急性精神病發作、妄想症以及視聽幻覺</Chinese>
+            <Chinesesimp>快速抑制急性精神病发作、妄想症以及视听幻觉</Chinesesimp>
+            <Turkish>Akut psikotik krizleri, paranoyayı ve görsel veya işitsel halüsinasyonları hızla bastırır</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_Haloperidol_DisplayName">
+            <English>Haloperidol Autoinjector</English>
+            <Czech>Haloperidolový autoinjektor</Czech>
+            <French>Auto-injecteur de halopéridol</French>
+            <Spanish>Autoinyector de haloperidol</Spanish>
+            <Italian>Autoiniettore di aloperidolo</Italian>
+            <Polish>Autostrzykawka z haloperidolem</Polish>
+            <Portuguese>Autoinjetor de haloperidol</Portuguese>
+            <Russian>Автоинжектор галоперидола</Russian>
+            <German>Haloperidol-Autoinjektor</German>
+            <Korean>할로페리돌 자동 주사기</Korean>
+            <Japanese>ハロペリドール自動注射器</Japanese>
+            <Chinese>氟哌啶醇自動注射器</Chinese>
+            <Chinesesimp>氟哌啶醇自动注射器</Chinesesimp>
+            <Turkish>Haloperidol Oto-Enjektörü</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_HeatPack_Description">
             <English>Single use heatpack</English>
@@ -4643,37 +4531,21 @@
             <Japanese>死体の皮</Japanese>
             <Turkish>Ceset derisi</Turkish>
         </Key>
-        <Key ID="STR_Misery_Assets_thbdStimpack_Description">
-            <English>Thbd Stimpack, this single use stimpack administers an extremely high dose of Thrombomodulin(Thbd), use with caution</English>
-            <Czech>Thbd stimulátor, tento jednorázový stimulátor podává extrémně vysokou dávku trombomodulinu (Thbd), používejte s opatrností</Czech>
-            <French>Stimpack Thbd, ce stimpack à usage unique administre une dose extrêmement élevée de thrombomoduline (Thbd), à utiliser avec précaution</French>
-            <Spanish>Estimulante Thbd, este estimulante de un solo uso administra una dosis extremadamente alta de trombomodulina (Thbd), usar con precaución</Spanish>
-            <Italian>Stimpack Thbd, questo stimpack monouso somministra una dose estremamente elevata di trombomodulina (Thbd), usare con cautela</Italian>
-            <Polish>Stymulant Thbd, ten jednorazowy stymulant podaje niezwykle wysoką dawkę trombomoduliny (Thbd), używaj z ostrożnością</Polish>
-            <Portuguese>Estimulante Thbd, este estimulante de uso único administra uma dose extremamente alta de trombomodulina (Thbd), use com cuidado</Portuguese>
-            <Russian>Стимулятор Thbd, этот одноразовый стимулятор вводит чрезвычайно высокую дозу тромбомодулина (Thbd), используйте с осторожностью</Russian>
-            <German>Thbd-Stimpack, dieses Einweg-Stimpack verabreicht eine extrem hohe Dosis Thrombomodulin (Thbd), mit Vorsicht verwenden</German>
-            <Korean>Thbd 스팀팩, 이 일회용 스팀팩은 매우 높은 용량의 트롬보모듈린(Thbd)을 투여합니다. 주의해서 사용하십시오</Korean>
-            <Japanese>Thbdスティムパック、この使い捨てスティムパックは極めて高用量のトロンボモジュリン(Thbd)を投与します。慎重に使用してください</Japanese>
-            <Chinese>Thbd 興奮劑，這款一次性興奮劑會注射極高劑量的血栓調節素（Thbd），請謹慎使用</Chinese>
-            <Chinesesimp>Thbd 兴奋剂，这款一次性兴奋剂会注射极高剂量的血栓调节素（Thbd），请谨慎使用</Chinesesimp>
-            <Turkish>Thbd Stimpack, bu tek kullanımlık stimpack son derece yüksek dozda Trombomodülin (Thbd) enjekte eder, dikkatli kullanın</Turkish>
-        </Key>
-        <Key ID="STR_Misery_Assets_thbdStimpack_DisplayName">
-            <English>Thbd Stimpack</English>
-            <Czech>Thbd Stimulant</Czech>
-            <French>Thbd Stimpack</French>
-            <Spanish>Thbd Stimpack</Spanish>
-            <Italian>Thbd Stimpack</Italian>
-            <Polish>Thbd Stimpack</Polish>
-            <Portuguese>Thbd Stimpack</Portuguese>
-            <Russian>Стимулятор Thbd</Russian>
-            <German>Thbd Stimpack</German>
-            <Korean>Thbd Stimpack</Korean>
-            <Japanese>Thbdスティムパック</Japanese>
-            <Chinese>Thbd 興奮劑</Chinese>
-            <Chinesesimp>Thbd 兴奋剂</Chinesesimp>
-            <Turkish>Thbd Stimpack</Turkish>
+        <Key ID="STR_Misery_Assets_thbdHigh_DisplayName">
+            <English>Thbd Autoinjector (High Dose)</English>
+            <Czech>Autoinjektor Thbd (Vysoká dávka)</Czech>
+            <French>Auto-injecteur Thbd (Haute dose)</French>
+            <Spanish>Autoinyector Thbd (Dosis alta)</Spanish>
+            <Italian>Autoiniettore Thbd (Dose alta)</Italian>
+            <Polish>Autostrzykawka Thbd (Wysoka dawka)</Polish>
+            <Portuguese>Autoinjetor Thbd (Dose alta)</Portuguese>
+            <Russian>Автоинжектор Thbd (Высокая доза)</Russian>
+            <German>Thbd-Autoinjektor (Hohe Dosis)</German>
+            <Korean>Thbd 자동 주사기 (고용량)</Korean>
+            <Japanese>Thbd自動注射器 (高用量)</Japanese>
+            <Chinese>Thbd 自動注射器（高劑量）</Chinese>
+            <Chinesesimp>Thbd 自动注射器（高剂量）</Chinesesimp>
+            <Turkish>Thbd Oto-Enjektörü (Yüksek Doz)</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_thbd_Description">
             <English>Thrombomodulin(Thbd) This gene encodes a cell-surface receptor that helps to regulate blood production and other processes. Can help with severe radiation exposure</English>
@@ -4692,20 +4564,20 @@
             <Turkish>Trombomodülin (Thbd) Bu gen, kan üretimini ve diğer süreçleri düzenlemeye yardımcı olan bir hücre yüzeyi reseptörünü kodlar. Şiddetli radyasyona maruz kalma durumunda yardımcı olabilir</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_thbd_DisplayName">
-            <English>Thbd Injection</English>
-            <Czech>Injekce Thbd</Czech>
-            <French>Injection Thbd</French>
-            <Spanish>Inyección de Thbd</Spanish>
-            <Italian>Iniezione di Thbd</Italian>
-            <Polish>Zastrzyk Thbd</Polish>
-            <Portuguese>Injeção de Thbd</Portuguese>
-            <Russian>Инъекция Thbd</Russian>
-            <German>Thbd-Injektion</German>
-            <Korean>Thbd 주사</Korean>
-            <Japanese>Thbd注射</Japanese>
-            <Chinese>Thbd 注射液</Chinese>
-            <Chinesesimp>Thbd 注射液</Chinesesimp>
-            <Turkish>Thbd Enjeksiyonu</Turkish>
+            <English>Thbd Autoinjector</English>
+            <Czech>Autoinjektor Thbd</Czech>
+            <French>Auto-injecteur Thbd</French>
+            <Spanish>Autoinyector Thbd</Spanish>
+            <Italian>Autoiniettore Thbd</Italian>
+            <Polish>Autostrzykawka Thbd</Polish>
+            <Portuguese>Autoinjetor Thbd</Portuguese>
+            <Russian>Автоинжектор Thbd</Russian>
+            <German>Thbd-Autoinjektor</German>
+            <Korean>Thbd 자동 주사기</Korean>
+            <Japanese>Thbd自動注射器</Japanese>
+            <Chinese>Thbd 自動注射器</Chinese>
+            <Chinesesimp>Thbd 自动注射器</Chinesesimp>
+            <Turkish>Thbd Oto-Enjektörü</Turkish>
         </Key>
     </Package>
 </Project>

@@ -42,9 +42,17 @@ if (_toxicity > 0) then {
     } else {
         [-1.66667e-4, "toxicity"] call EFUNC(common,addStatusModifier);
     };
+
+    if (_toxicity > 0.9) then {
+        ["toxicity", true] call ACEFUNC(common,blurScreen);
+    };
+    if (_toxicity <= 0.8) then {
+        ["toxicity", false] call ACEFUNC(common,blurScreen);
+    };
 };
 if (_toxicity < 0) then {
     ACE_player setVariable [QGVAR(toxicity), MACRO_PLAYER_DEFAULTS_LOW];
+    ["toxicity", false] call ACEFUNC(common,blurScreen);
 };
 
 // Infection - Heal if not damaged and well-fed/hydrated, otherwise gets worse

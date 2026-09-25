@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: TenuredCLOUD
- * Antidote pill usage utilizing ACE medical API
+ * Antidote usage utilizing ACE medical API
  *
  * Arguments:
  * 0: Dose amount <NUMBER>
@@ -17,7 +17,7 @@
 
 params ["_dose", "_value"];
 
-private _baseRate = -0.001 * _dose;
+private _baseRate = -0.00055 * _dose;
 private _intensity = linearConversion [0, 1, _value, 0, 1, false];
 
 [_baseRate * _intensity, "toxicity"] call EFUNC(common,addStatusModifier);

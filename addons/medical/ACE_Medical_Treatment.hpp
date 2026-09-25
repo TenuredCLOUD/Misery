@@ -55,12 +55,12 @@ class ACE_Medical_Treatment {
 
         class CLASS(antidote) {
             painReduce = 0;
-            hrIncreaseLow[] = {-1, -2};
-            hrIncreaseNormal[] = {-3, -5};
-            hrIncreaseHigh[] = {-4, -7};
+            hrIncreaseLow[] = {1, 2};
+            hrIncreaseNormal[] = {3, 5};
+            hrIncreaseHigh[] = {4, 7};
             timeInSystem = 900;
             timeTillMaxEffect = 60;
-            maxDose = 4;
+            maxDose = 2;
             dose = 1;
             incompatibleMedication[] = {};
             viscosityChange = -10;
@@ -109,32 +109,17 @@ class ACE_Medical_Treatment {
             viscosityChange = 0;
         };
 
-        class CLASS(charcoalTablets) {
-            painReduce = 0;
-            hrIncreaseLow[] = {1, 2};
-            hrIncreaseNormal[] = {2, 2};
-            hrIncreaseHigh[] = {3, 3};
-            timeInSystem = 450;
-            timeTillMaxEffect = 120;
-            maxDose = 20;
-            dose = 1;
-            incompatibleMedication[] = {};
-            viscosityChange = 0;
-        };
-
-        class CLASS(clozapine) {
+        class CLASS(haloperidol) {
             painReduce = 0;
             hrIncreaseLow[] = {-2, -4};
             hrIncreaseNormal[] = {-4, -8};
             hrIncreaseHigh[] = {-6, -10};
-            timeInSystem = 1200;
+            timeInSystem = 900;
             timeTillMaxEffect = 60;
             maxDose = 2;
             dose = 1;
             incompatibleMedication[] = {
                 QUOTE(Morphine),
-                QCLASSACE(glucose),
-                QCLASSACE(electrolyte),
                 QUOTE(Epinephrine),
                 QCLASS(cocaine)
             };
@@ -152,8 +137,6 @@ class ACE_Medical_Treatment {
             dose = 1;
             incompatibleMedication[] = {
                 QUOTE(Morphine),
-                QCLASSACE(glucose),
-                QCLASSACE(electrolyte),
                 QUOTE(Epinephrine),
                 QCLASS(cocaine)
             };
@@ -171,32 +154,6 @@ class ACE_Medical_Treatment {
             dose = 1;
             incompatibleMedication[] = {};
             viscosityChange = 0;
-        };
-
-        class CLASS(electrolyte) {
-            painReduce = 0;
-            hrIncreaseLow[] = {1, 2};
-            hrIncreaseNormal[] = {2, 3};
-            hrIncreaseHigh[] = {3, 4};
-            timeInSystem = 400;
-            timeTillMaxEffect = 60;
-            maxDose = 8;
-            dose = 1;
-            incompatibleMedication[] = {};
-            viscosityChange = 10;
-        };
-
-        class CLASS(glucose) {
-            painReduce = 0;
-            hrIncreaseLow[] = {2, 4};
-            hrIncreaseNormal[] = {3, 5};
-            hrIncreaseHigh[] = {4, 6};
-            timeInSystem = 400;
-            timeTillMaxEffect = 60;
-            maxDose = 8;
-            dose = 1;
-            incompatibleMedication[] = {};
-            viscosityChange = -10;
         };
 
         class CLASS(painkillers) {

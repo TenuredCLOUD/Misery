@@ -135,37 +135,14 @@ class ACE_Medical_Treatment_Actions {
         litter[] = {};
     };
 
-    class CLASS(charcoalTablets): Morphine {
-        displayName = CSTRING(CharcoalTablets);
-        displayNameProgress = CSTRING(CharcoalTabletsProgress);
-        icon = "z\ace\addons\medical_gui\ui\painkillers.paa";
-        medicRequired = 0;
-        allowedSelections[] = {"Head"};
-        category = "medication";
-        consumeItem = 0;
-        items[] = {QCLASS(charcoalTablets)};
-        treatmentLocations = 0;
-        condition = QFUNC(medicationCondition);
-        treatmentTime = 5;
-        treatmentTimeTrained = 3;
-        callbackStart = QFUNC(processAnimation);
-        callbackSuccess = QFUNC(processMedication);
-        animationMedic = "";
-        animationMedicProne = "";
-        animationMedicSelf = "";
-        animationMedicSelfProne = "";
-        sounds[] = {{QPATHTOEF(audio,sounds\items\pillBottleOpen.ogg), 1, 1, 50}};
-        litter[] = {};
-    };
-
-    class CLASS(clozapine): Morphine {
-        displayName = CSTRING(Clozapine);
-        displayNameProgress = CSTRING(ClozapineProgress);
+    class CLASS(haloperidol): Morphine {
+        displayName = CSTRING(Haloperidol);
+        displayNameProgress = CSTRING(HaloperidolProgress);
         icon = "z\ace\addons\medical_gui\ui\auto_injector.paa";
         medicRequired = 0;
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
         category = "medication";
-        items[] = {QCLASS(clozapine)};
+        items[] = {QCLASS(haloperidol)};
         treatmentLocations = 0;
         condition = "";
         treatmentTime = 5;
@@ -221,48 +198,6 @@ class ACE_Medical_Treatment_Actions {
         animationMedicSelfProne = "";
         sounds[] = {{QPATHTOEF(audio,sounds\items\caffetinBoxOpen.ogg), 1, 1, 50}};
         litter[] = {};
-    };
-
-    class CLASS(electrolyte): Morphine {
-        displayName = CSTRING(Electrolyte);
-        displayNameProgress = CSTRING(ElectrolyteProgress);
-        icon = "z\ace\addons\medical_gui\ui\auto_injector.paa";
-        medicRequired = 0;
-        allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
-        category = "medication";
-        items[] = {QCLASS(electrolyte)};
-        treatmentLocations = 0;
-        condition = "";
-        treatmentTime = 5;
-        treatmentTimeTrained = 3;
-        callbackSuccess = QFUNC(processMedication);
-        // animationMedic = "AinvPknlMstpSlayWpstDnon_medicOther";
-        // animationMedicProne = "";
-        // animationMedicSelf = "AinvPknlMstpSlayWpstDnon_medic";
-        // animationMedicSelfProne = "";
-        sounds[] = {{"z\ace\addons\medical_treatment\sounds\Inject.ogg", 1, 1, 50}};
-        litter[] = {{"MedicalGarbage_01_Injector_F"}};
-    };
-
-    class CLASS(glucose): Morphine {
-        displayName = CSTRING(Glucose);
-        displayNameProgress = CSTRING(GlucoseProgress);
-        icon = "z\ace\addons\medical_gui\ui\auto_injector.paa";
-        medicRequired = 0;
-        allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
-        category = "medication";
-        items[] = {QCLASS(glucose)};
-        treatmentLocations = 0;
-        condition = "";
-        treatmentTime = 5;
-        treatmentTimeTrained = 3;
-        callbackSuccess = QFUNC(processMedication);
-        // animationMedic = "AinvPknlMstpSlayWpstDnon_medicOther";
-        // animationMedicProne = "";
-        // animationMedicSelf = "AinvPknlMstpSlayWpstDnon_medic";
-        // animationMedicSelfProne = "";
-        sounds[] = {{"z\ace\addons\medical_treatment\sounds\Inject.ogg", 1, 1, 50}};
-        litter[] = {{"MedicalGarbage_01_Injector_F"}};
     };
 
     class CLASS(painkillers): Morphine {
