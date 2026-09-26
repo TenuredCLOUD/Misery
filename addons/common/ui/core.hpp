@@ -147,9 +147,9 @@ class RscCheckBox {
 };
 
 class RscProgress;
-class RscBackGround;
+class RscBackground;
 
-class CLASS(BackGround): RscBackGround {
+class CLASS(BackGround): RscBackground {
     idc = -1;
     type = 0;
     style = 96;

@@ -35,13 +35,11 @@
         if (_category isEqualTo "") then {
             _category = "Default";
         };
-        if !(_category in _categories) then {
-            _categories pushBack _category;
-        };
+        _categories pushBackUnique _category;
     } forEach _items;
 
     lbClear _categoryDropdown;
-    private _index = _categoryDropdown lbAdd "All";
+    private _index = _categoryDropdown lbAdd localize LSTRING(All);
     _categoryDropdown lbSetData [_index, ""];
     {
         private _index = _categoryDropdown lbAdd _x;
