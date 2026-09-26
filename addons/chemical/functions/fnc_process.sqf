@@ -34,32 +34,49 @@
     private _respiratoryDeficit = (1 * ((1 - _respiratoryProtection) ^ 1.5)) max 0;
     private _eyeDeficit = (1 * ((1 - _eyeProtection) ^ 1.5)) max 0;
 
-    private _randomPartAce = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"];
+    private _randomPartAce = ["head", "body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"];
 
     private _fatigueValue = [getFatigue ACE_player, ACE_player getVariable [QACEGVAR(advanced_fatigue,aimFatigue), 0]] select (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)});
 
+    private _toxResistance = 1;
+    private _activeMeds = [ACE_player, false] call ACEFUNC(medical_status,getAllMedicationCount);
+
+    {
+        _x params ["_className", "_dose", "_effectiveness"];
+
+        if (_className isEqualTo QCLASS(deconKit)) then {
+            private _bufferDK = linearConversion [0, 1, _effectiveness, 1, 0.6, true];
+            _toxResistance = _toxResistance * _bufferDK;
+        };
+    } forEach _activeMeds;
+
     if (_skinProtection < 1) then {
         private _skinWoundSize = round (linearConversion [0.05, 1, _skinDeficit, 0, 1, true]);
-
         private _skinBurnCount = round (linearConversion [0.05, 1, _skinDeficit, 1, 2, true]);
-
-        private _skinWoundDamage = linearConversion [0.05, 1, _skinDeficit, 0.01, 0.08, true];
+        private _skinWoundDamage = linearConversion [0.05, 1, _skinDeficit, 0.001, 0.008, true];
 
         [ACE_player, selectRandom _randomPartAce, ["ThermalBurn", _skinBurnCount, _skinWoundSize, _skinWoundDamage]] call ACEFUNC(medical,addWound);
+
+        private _skinToxicityRate = (_skinDeficit * 0.005) * _toxResistance;
+
+        [_skinToxicityRate, "toxicity"] call EFUNC(common,addStatusModifier);
     };
 
     if (_respiratoryProtection < 1) then {
 
-        call ACEFUNC(medical_feedback,effectIncapacitated);
+        private _respiratoryToxicityRate = [_respiratoryDeficit, _respiratoryDeficit * 0.002] select (_respiratoryProtection >= 0.5);
 
-        [ACE_player, "hit", 2] call ACEFUNC(medical_feedback,playInjuredSound);
+        [_respiratoryToxicityRate, "toxicity"] call EFUNC(common,addStatusModifier);
 
-        [_respiratoryDeficit, "toxicity"] call EFUNC(common,addStatusModifier);
+        if (_respiratoryProtection < 0.5) then {
+            call ACEFUNC(medical_feedback,effectIncapacitated);
+            [ACE_player, "hit", 2] call ACEFUNC(medical_feedback,playInjuredSound);
 
-        if (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)}) then {
-            ACE_player setVariable [QACEGVAR(advanced_fatigue,aimFatigue), _fatigueValue + 1];
-        } else {
-            ACE_player setFatigue (_fatigueValue + 1);
+            if (!isNil QACEGVAR(advanced_fatigue,enabled) && {ACEGVAR(advanced_fatigue,enabled)}) then {
+                ACE_player setVariable [QACEGVAR(advanced_fatigue,aimFatigue), _fatigueValue + 0.05];
+            } else {
+                ACE_player setFatigue (_fatigueValue + 0.05);
+            };
         };
     };
 

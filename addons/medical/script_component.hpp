@@ -18,14 +18,13 @@
     [QCLASS(antibiotic), QFUNC(antibiotic)], \
     [QCLASS(antidote), QFUNC(antidote)], \
     [QCLASS(antiparasitic), QFUNC(antiparasitic)], \
-    [QCLASS(caffetin), QFUNC(caffetinTablets)], \
     [QCLASS(caffeine), QFUNC(caffieneTablets)], \
     [QCLASS(haloperidol), QFUNC(haloperidol)], \
     [QCLASS(clozapineBox), QFUNC(clozapine)], \
-    [QCLASS(deconKit), QFUNC(deconKit)], \
     [QCLASS(electrolyte), QFUNC(electrolyteInjection)], \
     [QCLASS(glucose), QFUNC(glucoseInjection)], \
     [QCLASS(painkillers), QFUNC(painPill)], \
+    [QCLASS(painkillersCaffeine), QFUNC(painPillCaffeine)], \
     [QCLASS(potassiumIodate), QFUNC(potassiumIodate)], \
     [QCLASS(randomMedication), QFUNC(randomPharm)], \
     [QCLASS(sleepingPills), QFUNC(sleepingPill)], \
@@ -39,7 +38,7 @@
 #define MACRO_MEDICATION_ANIMATIONS [ \
     [QCLASS(antibiotic), QEGVAR(animations,pillBottle)], \
     [QCLASS(antiparasitic), QEGVAR(animations,pillBottle)], \
-    [QCLASS(caffetin), QEGVAR(animations,pillBottle)], \
+    [QCLASS(painkillersCaffeine), QEGVAR(animations,pillBottle)], \
     [QCLASS(caffeine), QEGVAR(animations,pillBottle)], \
     [QCLASS(clozapineBox), QEGVAR(animations,pillBottle)], \
     [QCLASS(deconKit), QUOTE(AinvPknlMstpSnonWnonDnon_G01)], \

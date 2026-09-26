@@ -32,6 +32,7 @@ if (_psychosis > 0.75) then {
     };
 };
 
-if (_toxicity > 0.01) then {
+if (_toxicity > 0) then {
     [ACE_player, _toxicity] call EFUNC(medical,handleToxicExposure);
+    [ACE_player, _toxicity] call EFUNC(medical,handleToxicEffects);
 };

@@ -20,9 +20,9 @@ params ["_unit", "_toxicity"];
 
 if (ACEGVAR(medical_vitals,simulateSpO2)) then {
     private _targetSpO2 = 1 - (_toxicity ^ 2);
-    ["toxicity", _targetSpO2] call ACEFUNC(medical_vitals,addSpO2DutyFactor);
+    [QGVAR(toxicity), _targetSpO2] call ACEFUNC(medical_vitals,addSpO2DutyFactor);
 } else {
-    if (_toxicity > 0.9) then {
+    if (_toxicity > 0.8) then {
         if ([0.5] call EFUNC(common,rollChance)) then {
             [_unit] call ACEFUNC(medical_status,setDead);
         };

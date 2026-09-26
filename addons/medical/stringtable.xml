@@ -129,38 +129,6 @@
             <Chinesesimp>正在处置咖啡因...</Chinesesimp>
             <Turkish>Kafein uygulanıyor...</Turkish>
         </Key>
-        <Key ID="STR_MISERY_Medical_Caffetin">
-            <English>Administer Caffetin</English>
-            <Czech>Podat Caffetin</Czech>
-            <French>Administrer du Caffetin</French>
-            <Spanish>Administrar Caffetin</Spanish>
-            <Italian>Somministrare Caffetin</Italian>
-            <Polish>Podaj Caffetin</Polish>
-            <Portuguese>Administrar Caffetin</Portuguese>
-            <Russian>Ввести Каффетин</Russian>
-            <German>Caffetin verabreichen</German>
-            <Korean>카페틴 투여</Korean>
-            <Japanese>カフェティンを投与</Japanese>
-            <Chinese>服用咖啡汀</Chinese>
-            <Chinesesimp>服用咖啡汀</Chinesesimp>
-            <Turkish>Caffetin Uygula</Turkish>
-        </Key>
-        <Key ID="STR_MISERY_Medical_CaffetinProgress">
-            <English>Administering caffetin...</English>
-            <Czech>Podává se Caffetin...</Czech>
-            <French>Administration de Caffetin...</French>
-            <Spanish>Administrando Caffetin...</Spanish>
-            <Italian>Somministrazione di Caffetin...</Italian>
-            <Polish>Podawanie Caffetinu...</Polish>
-            <Portuguese>Administrando Caffetin...</Portuguese>
-            <Russian>Введение Каффетина...</Russian>
-            <German>Caffetin wird verabreicht...</German>
-            <Korean>카페틴 투여 중...</Korean>
-            <Japanese>カフェティンを投与中...</Japanese>
-            <Chinese>正在處置咖啡汀...</Chinese>
-            <Chinesesimp>正在处置咖啡汀...</Chinesesimp>
-            <Turkish>Caffetin uygulanıyor...</Turkish>
-        </Key>
         <Key ID="STR_MISERY_Medical_ClozapineBox">
             <English>Administer Clozapine</English>
             <Czech>Podat klozapin</Czech>
@@ -304,6 +272,38 @@
             <Chinese>服用止痛藥片</Chinese>
             <Chinesesimp>服用止痛药片</Chinesesimp>
             <Turkish>Ağrı Kesici Hap Uygula</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_PainkillersCaffeine">
+            <English>Administer Caffeinated Pain pill</English>
+            <Czech>Podat prášek na bolest s kofeinem</Czech>
+            <French>Administrer un antalgique caféiné</French>
+            <Spanish>Administrar pastilla para el dolor con cafeína</Spanish>
+            <Italian>Somministra pillola per il dolore con caffeina</Italian>
+            <Polish>Podaj tabletkę przeciwbólową z kofeiną</Polish>
+            <Portuguese>Administrar pílula para dor com cafeína</Portuguese>
+            <Russian>Дать обезболивающее с кофеином</Russian>
+            <German>Schmerztablette mit Koffein verabreichen</German>
+            <Korean>카페인 함유 진통제 투여</Korean>
+            <Japanese>カフェイン入り鎮痛剤を投与</Japanese>
+            <Chinese>投藥 含咖啡因止痛藥</Chinese>
+            <Chinesesimp>投药 含咖啡因止痛药</Chinesesimp>
+            <Turkish>Kafeinli Ağrı Kesici Hap Ver</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Medical_PainkillersCaffeineProgress">
+            <English>Administering Caffeinated Pain pill...</English>
+            <Czech>Podávám prášek na bolest s kofeinem...</Czech>
+            <French>Administration d'un antalgique caféiné...</French>
+            <Spanish>Administrando pastilla para el dolor con cafeína...</Spanish>
+            <Italian>Somministrazione pillola per il dolore con caffeina in corso...</Italian>
+            <Polish>Podawanie tabletki przeciwbólowej z kofeiną...</Polish>
+            <Portuguese>Administrando pílula para dor com cafeína...</Portuguese>
+            <Russian>Выдача обезболивающего с кофеином...</Russian>
+            <German>Verabreiche Schmerztablette mit Koffein...</German>
+            <Korean>카페인 함유 진통제 투여 중...</Korean>
+            <Japanese>カフェイン入り鎮痛剤を投与中...</Japanese>
+            <Chinese>正在投藥含咖啡因止痛藥……</Chinese>
+            <Chinesesimp>正在投药含咖啡因止痛药……</Chinesesimp>
+            <Turkish>Kafeinli Ağrı Kesici Hap veriliyor...</Turkish>
         </Key>
         <Key ID="STR_MISERY_Medical_PainkillersProgress">
             <English>Administering pain pill...</English>

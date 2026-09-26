@@ -36,6 +36,8 @@ private _finalToxicity = ((_toxicity + GVAR(toxicityModifiers)) min 1) max -1;
 GVAR(toxicityModifiers) = 0;
 ACE_player setVariable [QGVAR(toxicity), _finalToxicity];
 
+private _isToxic = ACEGVAR(medical_vitals,spo2DutyList) getOrDefault [QEGVAR(medical,toxicity), createHashMap];
+
 if (_toxicity > 0) then {
     if (_damaged || _hunger < 0.75 || _thirst < 0.75) then {
         [3.33333e-4, "toxicity"] call EFUNC(common,addStatusModifier);
@@ -53,6 +55,9 @@ if (_toxicity > 0) then {
 if (_toxicity < 0) then {
     ACE_player setVariable [QGVAR(toxicity), MACRO_PLAYER_DEFAULTS_LOW];
     ["toxicity", false] call ACEFUNC(common,blurScreen);
+    if (_isToxic isNotEqualTo createHashMap) then {
+        [QEGVAR(medical,toxicity)] call ACEFUNC(medical_vitals,removeSpO2DutyFactor);
+    };
 };
 
 // Infection - Heal if not damaged and well-fed/hydrated, otherwise gets worse

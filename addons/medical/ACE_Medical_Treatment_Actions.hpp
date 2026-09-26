@@ -41,7 +41,7 @@ class ACE_Medical_Treatment_Actions {
         animationMedicProne = "";
         animationMedicSelf = "";
         animationMedicSelfProne = "";
-        sounds[] = {{QPATHTOEF(audio,sounds\items\caffetinBoxOpen.ogg), 1, 1, 50}};
+        sounds[] = {{QPATHTOEF(audio,sounds\items\pillBoxOpen.ogg), 1, 1, 50}};
         litter[] = {};
     };
 
@@ -55,13 +55,10 @@ class ACE_Medical_Treatment_Actions {
         items[] = {QCLASS(antidote)};
         treatmentLocations = 0;
         condition = "";
-        treatmentTime = 5;
-        treatmentTimeTrained = 3;
+        treatmentTime = QACEGVAR(medical_treatment,treatmentTimeAutoinjector);
+        treatmentTimeTrained = QACEGVAR(medical_treatment,treatmentTimeTrainedAutoinjector);
         callbackSuccess = QFUNC(processMedication);
-        // animationMedic = "AinvPknlMstpSlayWpstDnon_medicOther";
-        // animationMedicProne = "";
-        // animationMedicSelf = "AinvPknlMstpSlayWpstDnon_medic";
-        // animationMedicSelfProne = "";
+        animationMedic = "AinvPknlMstpSnonWnonDnon_medic1";
         sounds[] = {{"z\ace\addons\medical_treatment\sounds\Inject.ogg", 1, 1, 50}};
         litter[] = {{"MedicalGarbage_01_Injector_F"}};
     };
@@ -85,19 +82,19 @@ class ACE_Medical_Treatment_Actions {
         animationMedicProne = "";
         animationMedicSelf = "";
         animationMedicSelfProne = "";
-        sounds[] = {{QPATHTOEF(audio,sounds\items\caffetinBoxOpen.ogg), 1, 1, 50}};
+        sounds[] = {{QPATHTOEF(audio,sounds\items\pillBoxOpen.ogg), 1, 1, 50}};
         litter[] = {};
     };
 
-    class CLASS(caffetin): Morphine {
-        displayName = CSTRING(Caffetin);
-        displayNameProgress = CSTRING(CaffetinProgress);
+    class CLASS(painkillersCaffeine): Morphine {
+        displayName = CSTRING(PainkillersCaffeine);
+        displayNameProgress = CSTRING(PainkillersCaffeineProgress);
         icon = "z\ace\addons\medical_gui\ui\painkillers.paa";
         medicRequired = 0;
         allowedSelections[] = {"Head"};
         category = "medication";
         consumeItem = 0;
-        items[] = {QCLASS(caffetin)};
+        items[] = {QCLASS(painkillersCaffeine)};
         treatmentLocations = 0;
         condition = QFUNC(medicationCondition);
         treatmentTime = 5;
@@ -108,7 +105,7 @@ class ACE_Medical_Treatment_Actions {
         animationMedicProne = "";
         animationMedicSelf = "";
         animationMedicSelfProne = "";
-        sounds[] = {{QPATHTOEF(audio,sounds\items\caffetinBoxOpen.ogg), 1, 1, 50}};
+        sounds[] = {{QPATHTOEF(audio,sounds\items\pillBoxOpen.ogg), 1, 1, 50}};
         litter[] = {};
     };
 
@@ -145,13 +142,10 @@ class ACE_Medical_Treatment_Actions {
         items[] = {QCLASS(haloperidol)};
         treatmentLocations = 0;
         condition = "";
-        treatmentTime = 5;
-        treatmentTimeTrained = 3;
+        treatmentTime = QACEGVAR(medical_treatment,treatmentTimeAutoinjector);
+        treatmentTimeTrained = QACEGVAR(medical_treatment,treatmentTimeTrainedAutoinjector);
         callbackSuccess = QFUNC(processMedication);
-        // animationMedic = "AinvPknlMstpSlayWpstDnon_medicOther";
-        // animationMedicProne = "";
-        // animationMedicSelf = "AinvPknlMstpSlayWpstDnon_medic";
-        // animationMedicSelfProne = "";
+        animationMedic = "AinvPknlMstpSnonWnonDnon_medic1";
         sounds[] = {{"z\ace\addons\medical_treatment\sounds\Inject.ogg", 1, 1, 50}};
         litter[] = {{"MedicalGarbage_01_Injector_F"}};
     };
@@ -174,7 +168,7 @@ class ACE_Medical_Treatment_Actions {
         animationMedicProne = "";
         animationMedicSelf = "";
         animationMedicSelfProne = "";
-        sounds[] = {{QPATHTOEF(audio,sounds\items\caffetinBoxOpen.ogg), 1, 1, 50}};
+        sounds[] = {{QPATHTOEF(audio,sounds\items\pillBoxOpen.ogg), 1, 1, 50}};
         litter[] = {};
     };
 
@@ -196,7 +190,7 @@ class ACE_Medical_Treatment_Actions {
         animationMedicProne = "";
         animationMedicSelf = "";
         animationMedicSelfProne = "";
-        sounds[] = {{QPATHTOEF(audio,sounds\items\caffetinBoxOpen.ogg), 1, 1, 50}};
+        sounds[] = {{QPATHTOEF(audio,sounds\items\pillBoxOpen.ogg), 1, 1, 50}};
         litter[] = {};
     };
 
@@ -218,7 +212,7 @@ class ACE_Medical_Treatment_Actions {
         animationMedicProne = "";
         animationMedicSelf = "";
         animationMedicSelfProne = "";
-        sounds[] = {{QPATHTOEF(audio,sounds\items\caffetinBoxOpen.ogg), 1, 1, 50}};
+        sounds[] = {{QPATHTOEF(audio,sounds\items\pillBoxOpen.ogg), 1, 1, 50}};
         litter[] = {};
     };
 
@@ -298,13 +292,10 @@ class ACE_Medical_Treatment_Actions {
         items[] = {QCLASS(thrombomodulin)};
         treatmentLocations = 0;
         condition = "";
-        treatmentTime = 5;
-        treatmentTimeTrained = 3;
+        treatmentTime = QACEGVAR(medical_treatment,treatmentTimeAutoinjector);
+        treatmentTimeTrained = QACEGVAR(medical_treatment,treatmentTimeTrainedAutoinjector);
         callbackSuccess = QFUNC(processMedication);
-        // animationMedic = "AinvPknlMstpSlayWpstDnon_medicOther";
-        // animationMedicProne = "";
-        // animationMedicSelf = "AinvPknlMstpSlayWpstDnon_medic";
-        // animationMedicSelfProne = "";
+        animationMedic = "AinvPknlMstpSnonWnonDnon_medic1";
         sounds[] = {{"z\ace\addons\medical_treatment\sounds\Inject.ogg", 1, 1, 50}};
         litter[] = {{"MedicalGarbage_01_Injector_F"}};
     };
@@ -319,13 +310,10 @@ class ACE_Medical_Treatment_Actions {
         items[] = {QCLASS(thrombomodulin_Stimpack)};
         treatmentLocations = 0;
         condition = "";
-        treatmentTime = 5;
-        treatmentTimeTrained = 3;
+        treatmentTime = QACEGVAR(medical_treatment,treatmentTimeAutoinjector);
+        treatmentTimeTrained = QACEGVAR(medical_treatment,treatmentTimeTrainedAutoinjector);
         callbackSuccess = QFUNC(processMedication);
-        // animationMedic = "AinvPknlMstpSlayWpstDnon_medicOther";
-        // animationMedicProne = "";
-        // animationMedicSelf = "AinvPknlMstpSlayWpstDnon_medic";
-        // animationMedicSelfProne = "";
+        animationMedic = "AinvPknlMstpSnonWnonDnon_medic1";
         sounds[] = {{"z\ace\addons\medical_treatment\sounds\Inject.ogg", 1, 1, 50}};
         litter[] = {{"MedicalGarbage_01_Injector_F"}};
     };

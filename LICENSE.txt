@@ -50,6 +50,18 @@ Both methods of credit acknowledgment are acceptable.
 
 By adhering to these guidelines, we can ensure respect for the original creators' work and foster a collaborative and respectful modding community.
 
+AI-Assisted Content & Asset Notices
+
+Certain assets in this repository utilize AI generation tools as part of their creation process:
+
+- Localization & Stringtables: String tables and translated text were assisted via AI models. These translations are provided "as-is" and may contain contextual, technical, or grammatical errors. If you are a native speaker and wish to correct translation errors, community contributions and pull requests are highly encouraged!
+
+- Item Icons & Medical Graphics: Select UI icons, packaging graphics, and generic medication labeling (such as those located in /addons/medical/icons/) were created using AI-generated base renders that were subsequently hand edited for in-game use. Fictional medication designs were generated specifically to refrain from infringing upon the trade dress, logos, or trademarks of real world pharmaceutical companies.
+
+- Third-Party Media Exceptions: The icon (atropine_ca.paa) located in /addons/medical/icons/ is adapted from the ACE3 Mod and is used under its respective license terms (GPLv2).
+
+Unless noted otherwise above, these assets are distributed under the project's primary license terms (GPLv2).
+
 **Contributing to Misery**
 
 Misery is a community-driven, open-sourced project and we welcome contributions from everyone who is interested in improving this mod. Whether you're fixing bugs, improving the code, or even reporting errors, every contribution helps!

@@ -79,21 +79,6 @@ class ACE_Medical_Treatment {
             viscosityChange = 0;
         };
 
-        class CLASS(caffetin) {
-            painReduce = 0.2;
-            hrIncreaseLow[] = {2, 5};
-            hrIncreaseNormal[] = {3, 6};
-            hrIncreaseHigh[] = {4, 8};
-            timeInSystem = 900;
-            timeTillMaxEffect = 120;
-            maxDose = 8;
-            dose = 1;
-            incompatibleMedication[] = {
-                QCLASS(cocaine)
-            };
-            viscosityChange = 0;
-        };
-
         class CLASS(caffeine) {
             painReduce = 0;
             hrIncreaseLow[] = {2, 5};
@@ -166,6 +151,21 @@ class ACE_Medical_Treatment {
             maxDose = 4;
             dose = 1;
             incompatibleMedication[] = {};
+            viscosityChange = 0;
+        };
+
+        class CLASS(painkillersCaffeine) {
+            painReduce = 0.35;
+            hrIncreaseLow[] = {1, 2};
+            hrIncreaseNormal[] = {2, 3};
+            hrIncreaseHigh[] = {3, 4};
+            timeInSystem = 500;
+            timeTillMaxEffect = 120;
+            maxDose = 4;
+            dose = 1;
+            incompatibleMedication[] = {
+                QCLASS(cocaine)
+            };
             viscosityChange = 0;
         };
 

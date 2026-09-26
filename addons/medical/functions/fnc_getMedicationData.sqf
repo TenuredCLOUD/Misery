@@ -38,6 +38,6 @@ private _incompatibleMedication = getArray (_medicationConfig >> "incompatibleMe
 private _dose = getNumber (_medicationConfig >> "dose");
 private _maxDose = getNumber (_medicationConfig >> "maxDose");
 
-[_painAdjust , _timeInSystem, _timeTillMaxEffect, _viscosityChange, _hrIncreaseLow, _hrIncreaseNormal, _hrIncreaseHigh, _incompatibleMedication, _dose, _maxDose]
+[_painAdjust, _timeInSystem, _timeTillMaxEffect, _viscosityChange, _hrIncreaseLow, _hrIncreaseNormal, _hrIncreaseHigh, _incompatibleMedication, _dose, _maxDose]
 
 

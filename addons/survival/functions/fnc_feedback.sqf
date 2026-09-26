@@ -18,7 +18,7 @@
 
 if (!EGVAR(audio,enhancedCharacterEffects)) exitWith {};
 
-call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "", "", "_exposure", "", "_radiation", "_infection", "_parasites", "_toxicity"];
+call EFUNC(common,getPlayerVariables) params ["_hunger", "_thirst", "", "", "_exposure", "", "_radiation", "_infection", "_parasites"];
 
 private _feedBackCompleted = false;
 
@@ -78,13 +78,6 @@ if (_parasites > 0 && !_feedBackCompleted) then {
     if ([1] call EFUNC(common,rollChance)) then {
         addCamShake [1, 5, 10];
         [ACE_player, "moan", 2] call ACEFUNC(medical_feedback,playInjuredSound);
-        _feedBackCompleted = true;
-    };
-};
-
-if (_toxicity > 0 && !_feedBackCompleted) then {
-    if ([1] call EFUNC(common,rollChance)) then {
-        [ACE_player, "moan", 1] call ACEFUNC(medical_feedback,playInjuredSound);
         _feedBackCompleted = true;
     };
 };
