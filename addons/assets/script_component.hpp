@@ -21,7 +21,7 @@
     QCLASS(cereal), \
     QCLASS(chainsaw_Empty), \
     QCLASS(circuitBoard), \
-    QCLASS(clozapine), \
+    QCLASS(haloperidol), \
     QCLASS(coalOre), \
     QCLASS(cocaine), \
     QCLASS(coffeeBrewed), \
@@ -37,7 +37,6 @@
     QCLASS(dragonVase), \
     QCLASS(ductTape), \
     QCLASS(electricHandSaw_NoBattery), \
-    QCLASS(electrolyte), \
     QCLASS(emerald), \
     QCLASS(emptyToolKit), \
     QCLASS(energyDrink), \
@@ -48,7 +47,6 @@
     QCLASS(flatheadScrewdriver), \
     QCLASS(geiger_dead), \
     QCLASS(geiger), \
-    QCLASS(glucose), \
     QCLASS(goldIngot), \
     QCLASS(goldOre), \
     QCLASS(goldPiece), \

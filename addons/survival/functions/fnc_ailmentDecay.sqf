@@ -14,7 +14,7 @@
  *
 */
 
-call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "_radiation", "", "", "", "_psychosis"];
+call EFUNC(common,getPlayerVariables) params ["", "", "", "", "", "", "_radiation", "", "", "_toxicity", "_psychosis"];
 
 if (_radiation > 0.01) then {
     if ([1] call EFUNC(common,rollChance)) then {
@@ -30,4 +30,9 @@ if (_psychosis > 0.75) then {
         [ACE_player, _psychosis] call EFUNC(medical,handlePsychosisEffects);
         [ACE_player] call EFUNC(medical,handleHeadTrauma);
     };
+};
+
+if (_toxicity > 0) then {
+    [ACE_player, _toxicity] call EFUNC(medical,handleToxicExposure);
+    [ACE_player, _toxicity] call EFUNC(medical,handleToxicEffects);
 };

@@ -79,11 +79,11 @@ class CfgWeapons {
         };
     };
 
-    class CLASS(clozapine): CLASS(ItemCore) {
+    class CLASS(haloperidol): CLASS(ItemCore) {
         CLASSACE(isMedicalItem) = 1;
-        displayName = CSTRING(Clozapine_DisplayName);
-        descriptionShort = CSTRING(Clozapine_Description);
-        picture = QPATHTOF(data\icons\Clozapineinjection.paa);
+        displayName = CSTRING(Haloperidol_DisplayName);
+        descriptionShort = CSTRING(Haloperidol_Description);
+        picture = QPATHTOEF(medical,icons\atropine_ca.paa);
         scope = 2;
         scopeCurator = 2;
 
@@ -109,7 +109,7 @@ class CfgWeapons {
         CLASSACE(isMedicalItem) = 1;
         displayName = CSTRING(thbd_DisplayName);
         descriptionShort = CSTRING(thbd_Description);
-        picture = QPATHTOF(data\icons\Thbd.paa);
+        picture = QPATHTOEF(medical,icons\atropine_ca.paa);
         model = "a3\props_f_orange\humanitarian\garbage\medicalgarbage_01_injector_f.p3d";
         scope = 2;
         scopeCurator = 2;
@@ -121,9 +121,9 @@ class CfgWeapons {
 
     class CLASS(thrombomodulin_Stimpack): CLASS(ItemCore) {
         CLASSACE(isMedicalItem) = 1;
-        displayName = CSTRING(thbdStimpack_DisplayName);
-        descriptionShort = CSTRING(thbdStimpack_Description);
-        picture = QPATHTOF(data\icons\Thbdstim.paa);
+        displayName = CSTRING(thbdHigh_DisplayName);
+        descriptionShort = CSTRING(thbd_Description);
+        picture = QPATHTOEF(medical,icons\atropine_ca.paa);
         model = "a3\props_f_orange\humanitarian\garbage\medicalgarbage_01_injector_f.p3d";
         scope = 2;
         scopeCurator = 2;
@@ -135,9 +135,9 @@ class CfgWeapons {
 
     class CLASS(antidote): CLASS(ItemCore) {
         CLASSACE(isMedicalItem) = 1;
-        displayName = CSTRING(Antidote_DisplayName);
-        descriptionShort = CSTRING(Antidote_Description);
-        picture = QPATHTOF(data\icons\antidote.paa);
+        displayName = CSTRING(Atropine_DisplayName);
+        descriptionShort = CSTRING(Atropine_Description);
+        picture = QPATHTOEF(medical,icons\atropine_ca.paa);
         model = "a3\props_f_enoch\military\decontamination\antidotekit_01_f.p3d";
         scope = 2;
         scopeCurator = 2;
@@ -975,34 +975,6 @@ class CfgWeapons {
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 15;
-        };
-    };
-
-    class CLASS(glucose): CLASS(ItemCore) {
-        CLASSACE(isMedicalItem) = 1;
-        displayName = CSTRING(Glucose_DisplayName);
-        descriptionShort = CSTRING(Glucose_Description);
-        picture = QPATHTOF(data\icons\Glucose.paa);
-        model = "a3\props_f_orange\humanitarian\garbage\medicalgarbage_01_injector_f.p3d";
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 3;
-        };
-    };
-
-    class CLASS(electrolyte): CLASS(ItemCore) {
-        CLASSACE(isMedicalItem) = 1;
-        displayName = CSTRING(Electrolyte_DisplayName);
-        descriptionShort = CSTRING(Electrolyte_Description);
-        picture = QPATHTOF(data\icons\Electrolyte.paa);
-        model = "a3\props_f_orange\humanitarian\garbage\medicalgarbage_01_injector_f.p3d";
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 3;
         };
     };
 

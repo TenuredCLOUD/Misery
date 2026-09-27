@@ -41,43 +41,31 @@ class CfgMagazines {
 
     class CLASS(painkillers): CLASS(FakeMagazine) {
         CLASSACE(isMedicalItem) = 1;
-        count = 15;
+        count = 16;
         descriptionShort = CSTRING(Pain_Description);
         displayName = CSTRING(Pain_DisplayName);
         mass = 2;
-        model = "a3\structures_f_epa\items\medical\painkillers_f.p3d";
-        picture = QPATHTOF(data\icons\painkillers.paa);
+        picture = QPATHTOEF(medical,icons\paracetamol_ca.paa);
         scope = 2;
     };
 
     class CLASS(caffeine): CLASS(FakeMagazine) {
         CLASSACE(isMedicalItem) = 1;
-        count = 8;
+        count = 16;
         descriptionShort = CSTRING(Caffeine_Description);
         displayName = CSTRING(Caffeine_DisplayName);
         mass = 0.5;
-        picture = QPATHTOF(data\icons\caffeine.paa);
+        picture = QPATHTOEF(medical,icons\caffeine_ca.paa);
         scope = 2;
     };
 
-    class CLASS(charcoalTablets): CLASS(FakeMagazine) {
+    class CLASS(painkillersCaffeine): CLASS(FakeMagazine) {
         CLASSACE(isMedicalItem) = 1;
-        count = 10;
-        descriptionShort = CSTRING(CharcoalTabs_Description);
-        displayName = CSTRING(CharcoalTabs_DisplayName);
-        mass = 0.5;
-        picture = QPATHTOF(data\icons\charcoaltablets.paa);
-        scope = 2;
-    };
-
-    class CLASS(caffetin): CLASS(FakeMagazine) {
-        CLASSACE(isMedicalItem) = 1;
-        count = 4;
-        descriptionShort = CSTRING(Caffetin_Description);
-        displayName = CSTRING(Caffetin_DisplayName);
+        count = 16;
+        descriptionShort = CSTRING(PainCaffeine_Description);
+        displayName = CSTRING(Pain_DisplayName);
         mass = 2;
-        model = "\a3\structures_f_epa\Items\Medical\Antibiotic_F.p3d";
-        picture = QPATHTOF(data\icons\caffetin.paa);
+        picture = QPATHTOEF(medical,icons\paracetamolCaffeine_ca.paa);
         scope = 2;
     };
 
@@ -87,18 +75,17 @@ class CfgMagazines {
         descriptionShort = CSTRING(ClozapineBox_Description);
         displayName = CSTRING(ClozapineBox_DisplayName);
         mass = 2;
-        picture = QPATHTOF(data\icons\clozapinebox.paa);
+        picture = QPATHTOEF(medical,icons\clozapine_ca.paa);
         scope = 2;
     };
 
     class CLASS(antiparasitic): CLASS(FakeMagazine) {
         CLASSACE(isMedicalItem) = 1;
-        count = 8;
+        count = 16;
         descriptionShort = CSTRING(Antiparasitic_Description);
         displayName = CSTRING(Antiparasitic_DisplayName);
         mass = 2;
-        model = "\a3\structures_f_epa\Items\Medical\Antibiotic_F.p3d";
-        picture = QPATHTOF(data\icons\antiparasites.paa);
+        picture = QPATHTOEF(medical,icons\antiparasitics_ca.paa);
         scope = 2;
     };
 
@@ -108,8 +95,7 @@ class CfgMagazines {
         descriptionShort = CSTRING(Antibiotic_Description);
         displayName = CSTRING(Antibiotic_DisplayName);
         mass = 2;
-        model = "\a3\structures_f_epa\Items\Medical\Antibiotic_F.p3d";
-        picture = QPATHTOF(data\icons\antibiotics.paa);
+        picture = QPATHTOEF(medical,icons\antibiotics_ca.paa);
         scope = 2;
     };
 
@@ -120,7 +106,7 @@ class CfgMagazines {
         displayName = CSTRING(DeconKit_DisplayName);
         mass = 10;
         model = "\a3\props_f_enoch\military\decontamination\deconkit_01_f.p3d";
-        picture = QPATHTOF(data\icons\deconKit.paa);
+        picture = QPATHTOEF(medical,icons\deconKit_ca.paa);
         scope = 2;
     };
 
@@ -130,19 +116,17 @@ class CfgMagazines {
         descriptionShort = CSTRING(SleepPack_Description);
         displayName = CSTRING(SleepPack_DisplayName);
         mass = 2;
-        model = "\a3\structures_f_epa\Items\Medical\Antibiotic_F.p3d";
-        picture = QPATHTOF(data\icons\sleepingpillsbox.paa);
+        picture = QPATHTOEF(medical,icons\sleepingpills_ca.paa);
         scope = 2;
     };
 
     class CLASS(potassiumIodate): CLASS(FakeMagazine) {
         CLASSACE(isMedicalItem) = 1;
-        count = 15;
+        count = 16;
         descriptionShort = CSTRING(PotassiumIodate_Description);
         displayName = CSTRING(PotassiumIodate_DisplayName);
         mass = 2;
-        model = "\a3\structures_f_epa\Items\Medical\VitaminBottle_F.p3d";
-        picture = QPATHTOF(data\icons\potassiumiodate2.paa);
+        picture = QPATHTOEF(medical,icons\potassiumIodate_ca.paa);
         scope = 2;
     };
 

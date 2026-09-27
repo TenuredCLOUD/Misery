@@ -152,7 +152,7 @@ class CfgSounds {
     MACRO_SOUNDS(rummaging,inventory);
 
     // Items
-    MACRO_SOUNDS(caffetinBoxOpen,items);
+    MACRO_SOUNDS(pillBoxOpen,items);
     MACRO_SOUNDS(canOpener,items);
     MACRO_SOUNDS(canTab,items);
     MACRO_SOUNDS(chainsaw1,items);
@@ -230,6 +230,5 @@ class CfgSounds {
 
     // Zones
     MACRO_SOUNDS(altarAlarm,zones);
-    MACRO_SOUNDS(choking,zones);
     MACRO_SOUNDS(submergedShort,zones);
 };

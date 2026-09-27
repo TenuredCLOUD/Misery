@@ -37,7 +37,7 @@ switch (true) do {
     case (_parasites isEqualTo 1): {
         _decayHealth = true
     };
-    case (_toxicity >= 0.5): {
+    case (_toxicity >= 0.9): {
         _decayHealth = true
     };
     default {_decayHealth = false};
