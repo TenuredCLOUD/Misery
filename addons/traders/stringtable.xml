@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="MISERY">
     <Package name="Traders">
+        <Key ID="STR_MISERY_Traders_All">
+            <English>All</English>
+            <Czech>Vše</Czech>
+            <French>Tout</French>
+            <Spanish>Todo</Spanish>
+            <Italian>Tutti</Italian>
+            <Polish>Wszystkie</Polish>
+            <Portuguese>Tudo</Portuguese>
+            <Russian>Все</Russian>
+            <German>Alle</German>
+            <Korean>전체</Korean>
+            <Japanese>すべて</Japanese>
+            <Chinese>全部</Chinese>
+            <Chinesesimp>全部</Chinesesimp>
+            <Turkish>Tümü</Turkish>
+        </Key>
         <Key ID="STR_MISERY_Traders_Buy">
             <English>Buy</English>
             <Czech>Koupit</Czech>
