@@ -75,20 +75,34 @@ if !(hasInterface) exitWith {};
 ["CBA_loadingScreenDone", {
 
     [QGVAR(clientPurchaseComplete), {
-        params ["_itemName", "_buyPrice", "_purchaseCode"];
+        params ["_itemName", "_buyPrice", ["_purchaseCode", ""]];
 
         [_itemName] call EFUNC(common,getObjectData) params ["_objectDisplayName"];
         [_itemName] call EFUNC(common,getItemData) params ["_itemDisplayName"];
 
-        [-_buyPrice] call EFUNC(currency,modifyMoney);
-
         if (_purchaseCode isNotEqualTo "") then {
             call compile _purchaseCode;
         } else {
-            [ACE_player, _itemName, true] call CBA_fnc_addItem;
+            switch (true) do {
+                case (_itemName isKindOf "Bag_Base"): {
+                    ACE_player addBackpack _itemName;
+                };
+                default {
+                    [ACE_player, _itemName, true] call CBA_fnc_addItem;
+                };
+            };
         };
 
-        ctrlSetText [1001, format [localize LSTRING(PurchaseSuccess), [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck)), EGVAR(currency,symbol), [_buyPrice, 1, 2, true] call CBA_fnc_formatNumber]];
+        [-_buyPrice] call EFUNC(currency,modifyMoney);
+
+        private _displayName = [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck));
+
+        ctrlSetText [1001, format [
+            localize LSTRING(PurchaseSuccess),
+            _displayName,
+            EGVAR(currency,symbol),
+            [_buyPrice, 1, 2, true] call CBA_fnc_formatNumber
+        ]];
 
         [] call FUNC(updateShop);
         [] call FUNC(processIcon);
@@ -100,15 +114,29 @@ if !(hasInterface) exitWith {};
         [_itemName] call EFUNC(common,getObjectData) params ["_objectDisplayName"];
         [_itemName] call EFUNC(common,getItemData) params ["_itemDisplayName"];
 
-        [_sellPrice] call EFUNC(currency,modifyMoney);
-
-        if (_itemName in magazines ACE_player) then {
-            [ACE_player, _itemName] call CBA_fnc_removeMagazine;
-        } else {
-            [ACE_player, _itemName] call CBA_fnc_removeItem;
+        switch (true) do {
+            case (_itemName isKindOf "Bag_Base"): {
+                [backpackContainer ACE_player, _itemName, 1, true] call CBA_fnc_removeBackpackCargo;
+            };
+            case (_itemName in magazines ACE_player): {
+                [ACE_player, _itemName] call CBA_fnc_removeMagazine;
+            };
+            default {
+                [ACE_player, _itemName] call CBA_fnc_removeItem;
+            };
         };
 
-        ctrlSetText [1001, format [localize LSTRING(SellSuccess), [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck)), EGVAR(currency,symbol), [_sellPrice, 1, 2, true] call CBA_fnc_formatNumber]];
+        [_sellPrice] call EFUNC(currency,modifyMoney);
+
+        private _displayName = [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck));
+
+        ctrlSetText [1001, format [
+            localize LSTRING(SellSuccess),
+            _displayName,
+            EGVAR(currency,symbol),
+            [_sellPrice, 1, 2, true] call CBA_fnc_formatNumber
+        ]];
+
         [] call FUNC(updateShop);
         [] call FUNC(processIcon);
     }] call CBA_fnc_addEventHandler;
@@ -119,13 +147,22 @@ if !(hasInterface) exitWith {};
         [_itemName] call EFUNC(common,getObjectData) params ["_objectDisplayName"];
         [_itemName] call EFUNC(common,getItemData) params ["_itemDisplayName"];
 
-        if (_itemName in magazines ACE_player) then {
-            [ACE_player, _itemName] call CBA_fnc_removeMagazine;
-        } else {
-            [ACE_player, _itemName] call CBA_fnc_removeItem;
+        switch (true) do {
+            case (_itemName isKindOf "Bag_Base"): {
+                [backpackContainer ACE_player, _itemName, 1, true] call CBA_fnc_removeBackpackCargo;
+            };
+            case (_itemName in magazines ACE_player): {
+                [ACE_player, _itemName] call CBA_fnc_removeMagazine;
+            };
+            default {
+                [ACE_player, _itemName] call CBA_fnc_removeItem;
+            };
         };
 
-        ctrlSetText [1001, format [localize LSTRING(GiftSuccess), [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck))]];
+        private _displayName = [_itemDisplayName, _objectDisplayName] select ([_itemName, "CfgVehicles"] call EFUNC(common,configCheck));
+
+        ctrlSetText [1001, format [localize LSTRING(GiftSuccess), _displayName]];
+
         [] call FUNC(updateShop);
         [] call FUNC(processIcon);
     }] call CBA_fnc_addEventHandler;
