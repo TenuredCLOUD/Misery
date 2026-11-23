@@ -12,6 +12,8 @@
     QCLASS(antidote), \
     QCLASS(anvilHammer), \
     QCLASS(bakedBeans), \
+    QCLASS(rice), \
+    QCLASS(coffeeRation), \
     QCLASS(boneSaw), \
     QCLASS(camoNet), \
     QCLASS(cannedBacon), \
@@ -23,12 +25,10 @@
     QCLASS(circuitBoard), \
     QCLASS(haloperidol), \
     QCLASS(coalOre), \
+    QCLASS(plasticCup), \
     QCLASS(cocaine), \
-    QCLASS(coffeeBrewed), \
-    QCLASS(coffeeMug), \
     QCLASS(coldpack), \
     QCLASS(cookedFish), \
-    QCLASS(cookedMeat), \
     QCLASS(coolantEmpty), \
     QCLASS(copperWire), \
     QCLASS(craftingHammer), \
@@ -41,9 +41,7 @@
     QCLASS(emptyToolKit), \
     QCLASS(energyDrink), \
     QCLASS(firewood), \
-    QCLASS(fishhook), \
     QCLASS(fishingPole), \
-    QCLASS(fishingSpool), \
     QCLASS(flatheadScrewdriver), \
     QCLASS(geiger_dead), \
     QCLASS(geiger), \
@@ -75,8 +73,20 @@
     QCLASS(pliers), \
     QCLASS(powderedMilk), \
     QCLASS(randomMedication), \
+    QCLASS(fish), \
     QCLASS(rawFish), \
-    QCLASS(rawMeat), \
+    QCLASS(rawBeef), \
+    QCLASS(cookedBeef), \
+    QCLASS(rawMutton), \
+    QCLASS(cookedMutton), \
+    QCLASS(rawGoat), \
+    QCLASS(cookedGoat), \
+    QCLASS(rawChicken), \
+    QCLASS(cookedChicken), \
+    QCLASS(rawRabbit), \
+    QCLASS(cookedRabbit), \
+    QCLASS(rawSnake), \
+    QCLASS(cookedSnake), \
     QCLASS(ruby), \
     QCLASS(sapphire), \
     QCLASS(sledgehammer), \

@@ -1,0 +1,11 @@
+Asset Name: "Fishing Supplies Set"
+Author: FrodoUndead
+Source URL: https://skfb.ly/oGLRE
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+License URL: http://creativecommons.org/licenses/by/4.0/
+
+Modifications Made:
+- Converted to .p3d format for Arma 3
+- Re-mapped textures to .paa format
+- Removed fishing buckets & fishing net
+- Separated Fishing rod & Tacklebox to two separate model files

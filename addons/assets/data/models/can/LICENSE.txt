@@ -1,0 +1,13 @@
+Asset Name: "A Can of Beans"
+Author: BeamBuddy
+Source URL: https://skfb.ly/pyv9H
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+License URL: http://creativecommons.org/licenses/by/4.0/
+
+Modifications Made:
+- Converted to .p3d format for Arma 3
+- Re-mapped textures to .paa format
+- Removed Heinz logo / branding
+- Altered logo's to Isaac's "Bacon in that Can" & "Molk" branding ~ https://github.com/WoahIsaac
+- Added hidden textures to model properties
+- Shortened can and made it a tad wider

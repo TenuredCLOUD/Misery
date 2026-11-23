@@ -1529,101 +1529,37 @@
             <Chinesesimp>可卡因</Chinesesimp>
             <Turkish>Kokain</Turkish>
         </Key>
-        <Key ID="STR_Misery_Assets_CoffeeBrewed_Description">
-            <English>A coffee mug with brewed coffee</English>
-            <Czech>Hrnek na kávu s uvařenou kávou</Czech>
-            <French>Une tasse à café avec du café infusé</French>
-            <Spanish>Una taza de café con café preparado</Spanish>
-            <Italian>Una tazza da caffè con caffè preparato</Italian>
-            <Polish>Kubek do kawy z zaparzoną kawą</Polish>
-            <Portuguese>Caneca de café com café fresco</Portuguese>
-            <Russian>Кружка кофе с заваренным кофе</Russian>
-            <German>Eine Kaffeetasse mit gebrühtem Kaffee</German>
-            <Korean>끓인 커피가 담긴 커피 잔</Korean>
-            <Japanese>淹れたてのコーヒーが入ったコーヒーマグ</Japanese>
-            <Chinese>裝著煮好的咖啡的咖啡杯</Chinese>
-            <Chinesesimp>装着煮好的咖啡的咖啡杯</Chinesesimp>
-            <Turkish>Kahve Kupası ile Kahve</Turkish>
+        <Key ID="STR_Misery_Assets_CoffeeRation_Description">
+            <English>Single serve packet of instant coffee powder</English>
+            <Czech>Jednorázový sáček instantní kávy v prášku</Czech>
+            <French>Sachet individuel de café soluble en poudre</French>
+            <Spanish>Sobre individual de café instantáneo en polvo</Spanish>
+            <Italian>Bustina monodose di caffè solubile in polvere</Italian>
+            <Polish>Jednorazowa saszetka kawy rozpuszczalnej w proszku</Polish>
+            <Portuguese>Sachê individual de café solúvel em pó</Portuguese>
+            <Russian>Одноразовый пакетик растворимого кофе в порошке</Russian>
+            <German>Einzelportionsbeutel mit Instant-Kaffeepulver</German>
+            <Korean>인스턴트 커피 분말 1회용 패킷</Korean>
+            <Japanese>インスタントコーヒー粉末の1回分パック</Japanese>
+            <Chinese>單人份即溶咖啡粉包</Chinese>
+            <Chinesesimp>单人份即溶咖啡粉包</Chinesesimp>
+            <Turkish>Tek kullanımlık hazır kahve tozu paketi</Turkish>
         </Key>
-        <Key ID="STR_Misery_Assets_CoffeeBrewed_DisplayName">
-            <English>Coffee</English>
-            <Czech>Káva</Czech>
-            <French>Café</French>
-            <Spanish>Café</Spanish>
-            <Italian>Caffè</Italian>
-            <Polish>Kawa</Polish>
-            <Portuguese>Café</Portuguese>
-            <Russian>Кофе</Russian>
-            <German>Kaffee</German>
-            <Korean>커피</Korean>
-            <Japanese>コーヒー</Japanese>
-            <Chinese>咖啡</Chinese>
-            <Chinesesimp>咖啡</Chinesesimp>
-            <Turkish>Kahve</Turkish>
-        </Key>
-        <Key ID="STR_Misery_Assets_CoffeeGrounds_Description">
-            <English>Coffee grounds for making coffee</English>
-            <Czech>Kávová sedlina na přípravu kávy</Czech>
-            <French>Marc de café pour faire du café</French>
-            <Spanish>Café molido para hacer café</Spanish>
-            <Italian>Caffè macinato per fare il caffè</Italian>
-            <Polish>Fusy z kawy do parzenia kawy</Polish>
-            <Portuguese>Pó de café para fazer café</Portuguese>
-            <Russian>Кофейная гуща для приготовления кофе</Russian>
-            <German>Kaffeesatz zum Kaffeekochen</German>
-            <Korean>커피를 만들기 위한 커피 찌꺼기</Korean>
-            <Japanese>コーヒーを作るためのコーヒーかす</Japanese>
-            <Chinese>用於衝泡咖啡的咖啡粉</Chinese>
-            <Chinesesimp>用于冲泡咖啡的咖啡粉</Chinesesimp>
-            <Turkish>Kahve yapmak için Kahve Telvesi</Turkish>
-        </Key>
-        <Key ID="STR_Misery_Assets_CoffeeGrounds_DisplayName">
-            <English>Coffee Grounds</English>
-            <Czech>Kávová sedlina</Czech>
-            <French>Marc de café</French>
-            <Spanish>Café molido</Spanish>
-            <Italian>Caffè macinato</Italian>
-            <Polish>Fusy z kawy</Polish>
-            <Portuguese>Pó de café</Portuguese>
-            <Russian>Кофейная гуща</Russian>
-            <German>Kaffeesatz</German>
-            <Korean>커피 찌꺼기</Korean>
-            <Japanese>コーヒーかす</Japanese>
-            <Chinese>咖啡粉</Chinese>
-            <Chinesesimp>咖啡粉</Chinesesimp>
-            <Turkish>Kahve Telvesi</Turkish>
-        </Key>
-        <Key ID="STR_Misery_Assets_CoffeeMug_Description">
-            <English>An empty coffee mug</English>
-            <Czech>Prázdný hrnek na kávu</Czech>
-            <French>Une tasse à café vide</French>
-            <Spanish>Una taza de café vacía</Spanish>
-            <Italian>Una tazza da caffè vuota</Italian>
-            <Polish>Pusty kubek do kawy</Polish>
-            <Portuguese>Uma caneca de café vazia</Portuguese>
-            <Russian>Пустая кофейная кружка</Russian>
-            <German>Eine leere Kaffeetasse</German>
-            <Korean>빈 커피 잔</Korean>
-            <Japanese>空のコーヒーマグ</Japanese>
-            <Chinese>一個空咖啡杯</Chinese>
-            <Chinesesimp>一个空咖啡杯</Chinesesimp>
-            <Turkish>Boş Kahve Kupası</Turkish>
-        </Key>
-        <Key ID="STR_Misery_Assets_CoffeeMug_DisplayName">
-            <English>Coffee Mug</English>
-            <Czech>Hrnek na kávu</Czech>
-            <French>Tasse à café</French>
-            <Spanish>Taza de café</Spanish>
-            <Italian>Tazza da caffè</Italian>
-            <Polish>Kubek do kawy</Polish>
-            <Portuguese>Caneca de café</Portuguese>
-            <Russian>Кофейная кружка</Russian>
-            <German>Kaffeetasse</German>
-            <Korean>커피 잔</Korean>
-            <Japanese>コーヒーマグ</Japanese>
-            <Chinese>咖啡杯</Chinese>
-            <Chinesesimp>咖啡杯</Chinesesimp>
-            <Turkish>Kahve Kupası</Turkish>
+        <Key ID="STR_Misery_Assets_CoffeeRation_DisplayName">
+            <English>Coffee Ration</English>
+            <Czech>Kávový příděl</Czech>
+            <French>Ration de café</French>
+            <Spanish>Ración de café</Spanish>
+            <Italian>Razione di caffè</Italian>
+            <Polish>Racja kawy</Polish>
+            <Portuguese>Ração de café</Portuguese>
+            <Russian>Кофейный рацион</Russian>
+            <German>Kaffeeration</German>
+            <Korean>커피 배급품</Korean>
+            <Japanese>コーヒー配給品</Japanese>
+            <Chinese>咖啡口糧</Chinese>
+            <Chinesesimp>咖啡口粮</Chinesesimp>
+            <Turkish>Kahve Rasyonu</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_ColdPack_Description">
             <English>Single use coldpack</English>
@@ -1657,6 +1593,70 @@
             <Chinesesimp>冷敷袋</Chinesesimp>
             <Turkish>Soğuk paket</Turkish>
         </Key>
+        <Key ID="STR_Misery_Assets_CookedBeef_Description">
+            <English>Cooked beef</English>
+            <Czech>Uvařené hovězí maso</Czech>
+            <French>Viande de bœuf cuite</French>
+            <Spanish>Carne de res cocida</Spanish>
+            <Italian>Carne di manzo cotta</Italian>
+            <Polish>Ugotowana wołowina</Polish>
+            <Portuguese>Carne bovina cozida</Portuguese>
+            <Russian>Приготовленная говядина</Russian>
+            <German>Gekochtes Rindfleisch</German>
+            <Korean>익힌 소고기</Korean>
+            <Japanese>調理済みの牛肉</Japanese>
+            <Chinese>熟牛肉</Chinese>
+            <Chinesesimp>熟牛肉</Chinesesimp>
+            <Turkish>Pişmiş Sığır Eti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_CookedBeef_DisplayName">
+            <English>Cooked Beef</English>
+            <Czech>Uvařené hovězí</Czech>
+            <French>Bœuf cuit</French>
+            <Spanish>Carne de res cocida</Spanish>
+            <Italian>Manzo cotto</Italian>
+            <Polish>Ugotowana wołowina</Polish>
+            <Portuguese>Carne bovina cozida</Portuguese>
+            <Russian>Приготовленная говядина</Russian>
+            <German>Gekochtes Rindfleisch</German>
+            <Korean>익힌 소고기</Korean>
+            <Japanese>調理済みの牛肉</Japanese>
+            <Chinese>熟牛肉</Chinese>
+            <Chinesesimp>熟牛肉</Chinesesimp>
+            <Turkish>Pişmiş Sığır Eti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_CookedChicken_Description">
+            <English>Cooked chicken</English>
+            <Czech>Uvařené kuřecí maso</Czech>
+            <French>Poulet cuit</French>
+            <Spanish>Pollo cocido</Spanish>
+            <Italian>Pollo cotto</Italian>
+            <Polish>Ugotowany kurczak</Polish>
+            <Portuguese>Frango cozido</Portuguese>
+            <Russian>Приготовленная курятина</Russian>
+            <German>Gekochtes Hähnchen</German>
+            <Korean>익힌 닭고기</Korean>
+            <Japanese>調理済みの鶏肉</Japanese>
+            <Chinese>熟鸡肉</Chinese>
+            <Chinesesimp>熟鸡肉</Chinesesimp>
+            <Turkish>Pişmiş Tavuk Eti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_CookedChicken_DisplayName">
+            <English>Cooked Chicken</English>
+            <Czech>Uvařené kuře</Czech>
+            <French>Poulet cuit</French>
+            <Spanish>Pollo cocido</Spanish>
+            <Italian>Pollo cotto</Italian>
+            <Polish>Ugotowany kurczak</Polish>
+            <Portuguese>Frango cozido</Portuguese>
+            <Russian>Приготовленная курятина</Russian>
+            <German>Gekochtes Hähnchen</German>
+            <Korean>익힌 닭고기</Korean>
+            <Japanese>調理済みの鶏肉</Japanese>
+            <Chinese>熟鸡肉</Chinese>
+            <Chinesesimp>熟鸡肉</Chinesesimp>
+            <Turkish>Pişmiş Tavuk Eti</Turkish>
+        </Key>
         <Key ID="STR_Misery_Assets_CookedFish_Description">
             <English>Fish that's been cooked</English>
             <Czech>Ryba, která byla uvařena</Czech>
@@ -1674,52 +1674,148 @@
             <Turkish>Pişmiş balık</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_CookedFish_DisplayName">
-            <English>Cooked fish</English>
-            <Czech>Vařená ryba</Czech>
+            <English>Cooked Fish</English>
+            <Czech>Pečená ryba</Czech>
             <French>Poisson cuit</French>
-            <Spanish>Pescado cocido</Spanish>
+            <Spanish>Pescado cocinado</Spanish>
             <Italian>Pesce cotto</Italian>
-            <Polish>Gotowana ryba</Polish>
+            <Polish>Upieczona ryba</Polish>
             <Portuguese>Peixe cozido</Portuguese>
             <Russian>Приготовленная рыба</Russian>
-            <German>Gekochter Fisch</German>
+            <German>Gegarter Fisch</German>
             <Korean>익힌 생선</Korean>
-            <Japanese>焼き魚</Japanese>
+            <Japanese>調理済みの魚</Japanese>
             <Chinese>熟魚</Chinese>
             <Chinesesimp>熟鱼</Chinesesimp>
-            <Turkish>Pişmiş balık</Turkish>
+            <Turkish>Pişmiş Balık</Turkish>
         </Key>
-        <Key ID="STR_Misery_Assets_CookedMeat_Description">
-            <English>Meat that's been cooked</English>
-            <Czech>Maso, které bylo vařené</Czech>
-            <French>Viande cuite</French>
-            <Spanish>Carne que ha sido cocida</Spanish>
-            <Italian>Carne che è stata cotta</Italian>
-            <Polish>Mięso, które zostało ugotowane</Polish>
-            <Portuguese>Carne que foi cozida</Portuguese>
-            <Russian>Мясо, приготовленное</Russian>
-            <German>Fleisch, das gekocht wurde</German>
-            <Korean>다 익은 고기</Korean>
-            <Japanese>調理済みのお肉</Japanese>
-            <Chinese>已烹飪的肉</Chinese>
-            <Chinesesimp>已烹饪的肉</Chinesesimp>
-            <Turkish>Pişmiş et</Turkish>
+        <Key ID="STR_Misery_Assets_CookedGoat_Description">
+            <English>Cooked goat meat</English>
+            <Czech>Uvařené kozí maso</Czech>
+            <French>Viande de chèvre cuite</French>
+            <Spanish>Carne de cabra cocida</Spanish>
+            <Italian>Carne di capra cotta</Italian>
+            <Polish>Ugotowane mięso kozie</Polish>
+            <Portuguese>Carne de cabra cozida</Portuguese>
+            <Russian>Приготовленное козье мясо</Russian>
+            <German>Gekochtes Ziegenfleisch</German>
+            <Korean>익힌 염소고기</Korean>
+            <Japanese>調理済みのヤギ肉</Japanese>
+            <Chinese>熟山羊肉</Chinese>
+            <Chinesesimp>熟山羊肉</Chinesesimp>
+            <Turkish>Pişmiş Keçi Eti</Turkish>
         </Key>
-        <Key ID="STR_Misery_Assets_CookedMeat_DisplayName">
-            <English>Cooked Meat</English>
-            <Czech>Vařené maso</Czech>
-            <French>Viande cuite</French>
-            <Spanish>Carne Cocida</Spanish>
-            <Italian>Carne Cotta</Italian>
-            <Polish>Gotowane Mięso</Polish>
-            <Portuguese>Carne Cozida</Portuguese>
-            <Russian>Приготовленное мясо</Russian>
-            <German>Gekochtes Fleisch</German>
-            <Korean>익힌 고기</Korean>
-            <Japanese>調理した肉</Japanese>
-            <Chinese>熟肉</Chinese>
-            <Chinesesimp>熟肉</Chinesesimp>
-            <Turkish>Pişmiş Et</Turkish>
+        <Key ID="STR_Misery_Assets_CookedGoat_DisplayName">
+            <English>Cooked Goat</English>
+            <Czech>Uvařené kozí</Czech>
+            <French>Chèvre cuite</French>
+            <Spanish>Carne de cabra cocida</Spanish>
+            <Italian>Capra cotta</Italian>
+            <Polish>Ugotowana koźlina</Polish>
+            <Portuguese>Carne de cabra cozida</Portuguese>
+            <Russian>Приготовленное козье мясо</Russian>
+            <German>Gekochtes Ziegenfleisch</German>
+            <Korean>익힌 염소고기</Korean>
+            <Japanese>調理済みのヤギ肉</Japanese>
+            <Chinese>熟山羊肉</Chinese>
+            <Chinesesimp>熟山羊肉</Chinesesimp>
+            <Turkish>Pişmiş Keçi Eti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_CookedMutton_Description">
+            <English>Cooked mutton</English>
+            <Czech>Uvařené skopové maso</Czech>
+            <French>Viande de mouton cuite</French>
+            <Spanish>Carne de cordero cocida</Spanish>
+            <Italian>Carne di montone cotta</Italian>
+            <Polish>Ugotowana baranina</Polish>
+            <Portuguese>Carne de carneiro cozida</Portuguese>
+            <Russian>Приготовленная баранина</Russian>
+            <German>Gekochtes Hammelfleisch</German>
+            <Korean>익힌 양고기</Korean>
+            <Japanese>調理済みの羊肉</Japanese>
+            <Chinese>熟羊肉</Chinese>
+            <Chinesesimp>熟羊肉</Chinesesimp>
+            <Turkish>Pişmiş Koyun Eti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_CookedMutton_DisplayName">
+            <English>Cooked Mutton</English>
+            <Czech>Uvařené skopové</Czech>
+            <French>Mouton cuit</French>
+            <Spanish>Carne de cordero cocida</Spanish>
+            <Italian>Montone cotto</Italian>
+            <Polish>Ugotowana baranina</Polish>
+            <Portuguese>Carne de carneiro cozida</Portuguese>
+            <Russian>Приготовленная баранина</Russian>
+            <German>Gekochtes Hammelfleisch</German>
+            <Korean>익힌 양고기</Korean>
+            <Japanese>調理済みの羊肉</Japanese>
+            <Chinese>熟羊肉</Chinese>
+            <Chinesesimp>熟羊肉</Chinesesimp>
+            <Turkish>Pişmiş Koyun Eti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_CookedRabbit_Description">
+            <English>Cooked rabbit</English>
+            <Czech>Uvařené králičí maso</Czech>
+            <French>Lapin cuit</French>
+            <Spanish>Conejo cocido</Spanish>
+            <Italian>Coniglio cotto</Italian>
+            <Polish>Ugotowany królik</Polish>
+            <Portuguese>Coelho cozido</Portuguese>
+            <Russian>Приготовленная крольчатина</Russian>
+            <German>Gekochtes Kaninchen</German>
+            <Korean>익힌 토끼고기</Korean>
+            <Japanese>調理済みのウサギ肉</Japanese>
+            <Chinese>熟兔肉</Chinese>
+            <Chinesesimp>熟兔肉</Chinesesimp>
+            <Turkish>Pişmiş Tavşan Eti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_CookedRabbit_DisplayName">
+            <English>Cooked Rabbit</English>
+            <Czech>Uvařený králík</Czech>
+            <French>Lapin cuit</French>
+            <Spanish>Conejo cocido</Spanish>
+            <Italian>Coniglio cotto</Italian>
+            <Polish>Ugotowany królik</Polish>
+            <Portuguese>Coelho cozido</Portuguese>
+            <Russian>Приготовленная крольчатина</Russian>
+            <German>Gekochtes Kaninchen</German>
+            <Korean>익힌 토끼고기</Korean>
+            <Japanese>調理済みのウサギ肉</Japanese>
+            <Chinese>熟兔肉</Chinese>
+            <Chinesesimp>熟兔肉</Chinesesimp>
+            <Turkish>Pişmiş Tavşan Eti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_CookedSnake_Description">
+            <English>Cooked snake</English>
+            <Czech>Uvařené hadí maso</Czech>
+            <French>Viande de serpent cuite</French>
+            <Spanish>Carne de serpiente cocida</Spanish>
+            <Italian>Carne di serpente cotta</Italian>
+            <Polish>Ugotowane mięso węża</Polish>
+            <Portuguese>Carne de cobra cozida</Portuguese>
+            <Russian>Приготовленное змеиное мясо</Russian>
+            <German>Gekochtes Schlangenfleisch</German>
+            <Korean>익힌 뱀고기</Korean>
+            <Japanese>調理済みのヘビ肉</Japanese>
+            <Chinese>熟蛇肉</Chinese>
+            <Chinesesimp>熟蛇肉</Chinesesimp>
+            <Turkish>Pişmiş Yılan Eti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_CookedSnake_DisplayName">
+            <English>Cooked Snake</English>
+            <Czech>Uvařený had</Czech>
+            <French>Serpent cuit</French>
+            <Spanish>Serpiente cocida</Spanish>
+            <Italian>Serpente cotto</Italian>
+            <Polish>Ugotowany wąż</Polish>
+            <Portuguese>Cobra cozida</Portuguese>
+            <Russian>Приготовленное змеиное мясо</Russian>
+            <German>Gekochtes Schlangenfleisch</German>
+            <Korean>익힌 뱀고기</Korean>
+            <Japanese>調理済みのヘビ肉</Japanese>
+            <Chinese>熟蛇肉</Chinese>
+            <Chinesesimp>熟蛇肉</Chinesesimp>
+            <Turkish>Pişmiş Yılan Eti</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Coolant_DisplayName">
             <English>Engine coolant (5Gal / 20L)</English>
@@ -3369,6 +3465,70 @@
             <Chinesesimp>镐头</Chinesesimp>
             <Turkish>Kazma Kafası</Turkish>
         </Key>
+        <Key ID="STR_Misery_Assets_PlasticCup_Description">
+            <English>Lightweight, crush resistant plastic cup</English>
+            <Czech>Lehký, odolný plastový kelímek</Czech>
+            <French>Gobelet léger et résistant à l'écrasement</French>
+            <Spanish>Vaso de plástico ligero y resistente a los impactos</Spanish>
+            <Italian>Bicchiere di plastica leggero e resistente allo schiacciamento</Italian>
+            <Polish>Lekki, odporny na zgniatanie plastikowy kubek</Polish>
+            <Portuguese>Copo de plástico leve e resistente a esmagamento</Portuguese>
+            <Russian>Легкий, прочный пластиковый стаканчик</Russian>
+            <German>Leichter, quetschsicherer Plastikbecher</German>
+            <Korean>가볍고 파손에 강한 플라스틱 컵</Korean>
+            <Japanese>軽量で潰れにくいプラスチックカップ</Japanese>
+            <Chinese>輕便且抗壓的塑料杯</Chinese>
+            <Chinesesimp>轻便且抗压的塑料杯</Chinesesimp>
+            <Turkish>Hafif, ezilmeye dayanıklı plastik bardak</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_FishingTackleBox_DisplayName">
+            <English>Fishing Tackle Box</English>
+            <Czech>Rybářská krabička</Czech>
+            <French>Boîte de pêche</French>
+            <Spanish>Caja de aparejos de pesca</Spanish>
+            <Italian>Cassetta da pesca</Italian>
+            <Polish>Pudełko wędkarskie</Polish>
+            <Portuguese>Caixa de pesca</Portuguese>
+            <Russian>Рыболовный ящик со снастями</Russian>
+            <German>Angelbox</German>
+            <Korean>낚시 도구함</Korean>
+            <Japanese>釣り道具箱</Japanese>
+            <Chinese>釣具箱</Chinese>
+            <Chinesesimp>钓具箱</Chinesesimp>
+            <Turkish>Balıkçı Takım Kutusu</Turkish>
+        </Key>
+        <Key ID="STR_MISERY_Assets_FishingTackleBox_Description">
+            <English>Contains assorted hooks, fishing line, and artificial bait</English>
+            <Czech>Obsahuje různé háčky, vlasec a umělou návnadu</Czech>
+            <French>Contient un assortiment d'hameçons, du fil de pêche et des leurres artificiels</French>
+            <Spanish>Contiene anzuelos variados, sedal y cebo artificial</Spanish>
+            <Italian>Contiene ami assortiti, lenza ed esche artificiali</Italian>
+            <Polish>Zawiera różne haczyki, żyłkę wędkarską i sztuczną przynętę</Polish>
+            <Portuguese>Contém anzóis variados, linha de pesca e isca artificial</Portuguese>
+            <Russian>Содержит различные крючки, леску и искусственную приманку</Russian>
+            <German>Enthält verschiedene Haken, Angelschnur und Kunstköder</German>
+            <Korean>다양한 낚싯바늘, 낚싯줄, 인조 미끼가 들어있습니다</Korean>
+            <Japanese>各種フック、釣り糸、疑似餌が含まれています</Japanese>
+            <Chinese>內含各式魚鉤、釣魚線和假餌</Chinese>
+            <Chinesesimp>内含各式鱼钩、钓鱼线和假饵</Chinesesimp>
+            <Turkish>Çeşitli iğneler, misina ve yapay yem içerir</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_PlasticCup_DisplayName">
+            <English>Plastic cup</English>
+            <Czech>Plastový kelímek</Czech>
+            <French>Gobelet en plastique</French>
+            <Spanish>Vaso de plástico</Spanish>
+            <Italian>Bicchiere di plastica</Italian>
+            <Polish>Plastikowy kubek</Polish>
+            <Portuguese>Copo de plástico</Portuguese>
+            <Russian>Пластиковый стаканчик</Russian>
+            <German>Plastikbecher</German>
+            <Korean>플라스틱 컵</Korean>
+            <Japanese>プラスチックカップ</Japanese>
+            <Chinese>塑料杯</Chinese>
+            <Chinesesimp>塑料杯</Chinesesimp>
+            <Turkish>Plastik bardak</Turkish>
+        </Key>
         <Key ID="STR_Misery_Assets_Pliers_Description">
             <English>Pair of standard pliers</English>
             <Czech>Standardní kleště</Czech>
@@ -3465,23 +3625,119 @@
             <Chinesesimp>随机药品</Chinesesimp>
             <Turkish>Rastgele farmasötik ilaçlar</Turkish>
         </Key>
+        <Key ID="STR_Misery_Assets_RawBeef_Description">
+            <English>Raw beef, needs to be cooked</English>
+            <Czech>Syrové hovězí maso, je třeba uvařit</Czech>
+            <French>Viande de bœuf crue, doit être cuite</French>
+            <Spanish>Carne de res cruda, debe cocinarse</Spanish>
+            <Italian>Carne di manzo cruda, deve essere cotta</Italian>
+            <Polish>Surowa wołowina, musi zostać ugotowana</Polish>
+            <Portuguese>Carne bovina crua, precisa ser cozida</Portuguese>
+            <Russian>Сырая говядина, её нужно приготовить</Russian>
+            <German>Rohes Rindfleisch, muss gekocht werden</German>
+            <Korean>익히지 않은 소고기, 조리해야 합니다</Korean>
+            <Japanese>生の牛肉、調理が必要です</Japanese>
+            <Chinese>生牛肉，需要煮熟</Chinese>
+            <Chinesesimp>生牛肉，需要煮熟</Chinesesimp>
+            <Turkish>Çiğ sığır eti, pişirilmesi gerekiyor</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_RawBeef_DisplayName">
+            <English>Raw Beef</English>
+            <Czech>Syrové hovězí</Czech>
+            <French>Bœuf cru</French>
+            <Spanish>Carne de res cruda</Spanish>
+            <Italian>Manzo crudo</Italian>
+            <Polish>Surowa wołowina</Polish>
+            <Portuguese>Carne bovina crua</Portuguese>
+            <Russian>Сырая говядина</Russian>
+            <German>Rohes Rindfleisch</German>
+            <Korean>생소고기</Korean>
+            <Japanese>生の牛肉</Japanese>
+            <Chinese>生牛肉</Chinese>
+            <Chinesesimp>生牛肉</Chinesesimp>
+            <Turkish>Çiğ Sığır Eti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_RawChicken_Description">
+            <English>Raw chicken, needs to be cooked</English>
+            <Czech>Syrové kuřecí maso, je třeba uvařit</Czech>
+            <French>Poulet cru, doit être cuit</French>
+            <Spanish>Pollo crudo, debe cocinarse</Spanish>
+            <Italian>Pollo crudo, deve essere cotto</Italian>
+            <Polish>Surowy kurczak, musi zostać ugotowany</Polish>
+            <Portuguese>Frango cru, precisa ser cozido</Portuguese>
+            <Russian>Сырая курятина, её нужно приготовить</Russian>
+            <German>Rohes Hähnchen, muss gekocht werden</German>
+            <Korean>익히지 않은 닭고기, 조리해야 합니다</Korean>
+            <Japanese>生の鶏肉、調理が必要です</Japanese>
+            <Chinese>生鸡肉，需要煮熟</Chinese>
+            <Chinesesimp>生鸡肉，需要煮熟</Chinesesimp>
+            <Turkish>Çiğ tavuk eti, pişirilmesi gerekiyor</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_RawChicken_DisplayName">
+            <English>Raw Chicken</English>
+            <Czech>Syrové kuře</Czech>
+            <French>Poulet cru</French>
+            <Spanish>Pollo crudo</Spanish>
+            <Italian>Pollo crudo</Italian>
+            <Polish>Surowy kurczak</Polish>
+            <Portuguese>Frango cru</Portuguese>
+            <Russian>Сырая курятина</Russian>
+            <German>Rohes Hähnchen</German>
+            <Korean>생닭고기</Korean>
+            <Japanese>生の鶏肉</Japanese>
+            <Chinese>生鸡肉</Chinese>
+            <Chinesesimp>生鸡肉</Chinesesimp>
+            <Turkish>Çiğ Tavuk Eti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_Fish_Description">
+            <English>Unprocessed whole fish, requires gutting and filleting with a sharp tool before it can be cooked over a fire</English>
+            <Czech>Nezpracovaná celá ryba, před tepelnou úpravou na ohni vyžaduje vykuchání a vyfiletování ostrým nástrojem</Czech>
+            <French>Poisson entier brut, nécessite d'être vidé et levé en filets avec un outil tranchant avant d'être cuit au feu</French>
+            <Spanish>Pescado entero sin procesar, requiere eviscerarse y filetearse con una herramienta afilada antes de cocinarse al fuego</Spanish>
+            <Italian>Pesce intero non lavorato, richiede eviscerazione e sfilettatura con uno strumento affilato prima di poter essere cotto sul fuoco</Italian>
+            <Polish>Nieprzetworzona cała ryba, przed upieczeniem nad ogniem wymaga wypatroszenia i wyfiletowania ostrym narzędziem</Polish>
+            <Portuguese>Peixe inteiro não processado, precisa ser eviscerado e filetado com uma ferramenta afiada antes de ser assado no fogo</Portuguese>
+            <Russian>Необработанная целая рыба; перед приготовлением на огне требует потрошения и разделки на филе острым инструментом</Russian>
+            <German>Unverarbeiteter ganzer Fisch, muss vor dem Garen über dem Feuer mit einem scharfen Werkzeug ausgenommen und filetiert werden</German>
+            <Korean>손질하지 않은 통생선. 불에 굽기 전에 날카로운 도구로 내장을 제거하고 살을 발라내야 합니다</Korean>
+            <Japanese>未処理の丸ごとの魚。火で調理する前に、鋭利な道具で内臓処理と三枚おろしにする必要がある</Japanese>
+            <Chinese>未經處理的整條魚，在用火烹調前需要使用鋒利的工具開膛去內臟並剔骨切片</Chinese>
+            <Chinesesimp>未经处理的整条鱼，在用火烹饪前需要使用锋利的工具开膛去内脏并剔骨切片</Chinesesimp>
+            <Turkish>İşlenmemiş bütün balık, ateş üzerinde pişirilmeden önce keskin bir aletle temizlenmesi ve fileto çıkarılması gerekir</Turkish>
+        </Key>
         <Key ID="STR_Misery_Assets_RawFish_Description">
-            <English>Fish, needs to be cooked</English>
-            <Czech>Ryba, musí se vařit</Czech>
-            <French>Poisson, à cuire</French>
-            <Spanish>Pescado, necesita ser cocinado</Spanish>
-            <Italian>Pesce, deve essere cucinato</Italian>
-            <Polish>Ryba, musi być ugotowana</Polish>
-            <Portuguese>Peixe, precisa ser cozido</Portuguese>
-            <Russian>Рыба, нужно приготовить</Russian>
-            <German>Fisch, muss gekocht werden</German>
-            <Korean>생선, 요리해야 함</Korean>
-            <Japanese>魚、調理する必要があります</Japanese>
-            <Chinese>魚，需要烹飪</Chinese>
-            <Chinesesimp>鱼，需要烹饪</Chinesesimp>
-            <Turkish>Balık, pişirilmesi gerekiyor</Turkish>
+            <English>Raw fish, needs to be cooked</English>
+            <Czech>Syrová ryba, je potřeba ji upéct</Czech>
+            <French>Poisson cru, doit être cuit</French>
+            <Spanish>Pescado crudo, necesita cocinarse</Spanish>
+            <Italian>Pesce crudo, deve essere cotto</Italian>
+            <Polish>Surowa ryba, wymaga ugotowania</Polish>
+            <Portuguese>Peixe cru, precisa ser cozido</Portuguese>
+            <Russian>Сырая рыба, необходимо приготовить</Russian>
+            <German>Roher Fisch, muss gegart werden</German>
+            <Korean>생선 (날것), 조리가 필요합니다</Korean>
+            <Japanese>生の魚、調理が必要</Japanese>
+            <Chinese>生魚，需要烹調</Chinese>
+            <Chinesesimp>生鱼，需要烹饪</Chinesesimp>
+            <Turkish>Çiğ balık, pişirilmesi gerekiyor</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_RawFish_DisplayName">
+            <English>Raw Fish</English>
+            <Czech>Syrová ryba</Czech>
+            <French>Poisson cru</French>
+            <Spanish>Pescado crudo</Spanish>
+            <Italian>Pesce crudo</Italian>
+            <Polish>Surowa ryba</Polish>
+            <Portuguese>Peixe cru</Portuguese>
+            <Russian>Сырая рыба</Russian>
+            <German>Roher Fisch</German>
+            <Korean>생선 (날것)</Korean>
+            <Japanese>生の魚</Japanese>
+            <Chinese>生魚</Chinese>
+            <Chinesesimp>生鱼</Chinesesimp>
+            <Turkish>Çiğ Balık</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_Fish_DisplayName">
             <English>Fish</English>
             <Czech>Ryba</Czech>
             <French>Poisson</French>
@@ -3496,6 +3752,38 @@
             <Chinese>魚</Chinese>
             <Chinesesimp>鱼</Chinesesimp>
             <Turkish>Balık</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_RawGoat_Description">
+            <English>Raw goat meat, needs to be cooked</English>
+            <Czech>Syrové kozí maso, je třeba uvařit</Czech>
+            <French>Viande de chèvre crue, doit être cuite</French>
+            <Spanish>Carne de cabra cruda, debe cocinarse</Spanish>
+            <Italian>Carne di capra cruda, deve essere cotta</Italian>
+            <Polish>Surowe mięso kozie, musi zostać ugotowane</Polish>
+            <Portuguese>Carne de cabra crua, precisa ser cozida</Portuguese>
+            <Russian>Сырое козье мясо, его нужно приготовить</Russian>
+            <German>Rohes Ziegenfleisch, muss gekocht werden</German>
+            <Korean>익히지 않은 염소고기, 조리해야 합니다</Korean>
+            <Japanese>生のヤギ肉、調理が必要です</Japanese>
+            <Chinese>生山羊肉，需要煮熟</Chinese>
+            <Chinesesimp>生山羊肉，需要煮熟</Chinesesimp>
+            <Turkish>Çiğ keçi eti, pişirilmesi gerekiyor</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_RawGoat_DisplayName">
+            <English>Raw Goat</English>
+            <Czech>Syrové kozí</Czech>
+            <French>Chèvre crue</French>
+            <Spanish>Carne de cabra cruda</Spanish>
+            <Italian>Capra cruda</Italian>
+            <Polish>Surowa koźlina</Polish>
+            <Portuguese>Carne de cabra crua</Portuguese>
+            <Russian>Сырое козье мясо</Russian>
+            <German>Rohes Ziegenfleisch</German>
+            <Korean>생염소고기</Korean>
+            <Japanese>生のヤギ肉</Japanese>
+            <Chinese>生山羊肉</Chinese>
+            <Chinesesimp>生山羊肉</Chinesesimp>
+            <Turkish>Çiğ Keçi Eti</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_RawMeat_Description">
             <English>Raw meat, needs to be cooked</English>
@@ -3529,37 +3817,117 @@
             <Chinesesimp>生肉</Chinesesimp>
             <Turkish>Çiğ Et</Turkish>
         </Key>
-        <Key ID="STR_Misery_Assets_Rice_Description">
-            <English>Package of Rice</English>
-            <Czech>Balení rýže</Czech>
-            <French>Paquet de riz</French>
-            <Spanish>Paquete de arroz</Spanish>
-            <Italian>Confezione di riso</Italian>
-            <Polish>Paczka ryżu</Polish>
-            <Portuguese>Pacote de arroz</Portuguese>
-            <Russian>Упаковка риса</Russian>
-            <German>Packung Reis</German>
-            <Korean>쌀 한 봉지</Korean>
-            <Japanese>米のパック</Japanese>
-            <Chinese>大米包</Chinese>
-            <Chinesesimp>大米包</Chinesesimp>
-            <Turkish>Paket pirinç</Turkish>
+        <Key ID="STR_Misery_Assets_RawMutton_Description">
+            <English>Raw mutton, needs to be cooked</English>
+            <Czech>Syrové skopové maso, je třeba uvařit</Czech>
+            <French>Viande de mouton crue, doit être cuite</French>
+            <Spanish>Carne de cordero cruda, debe cocinarse</Spanish>
+            <Italian>Carne di montone cruda, deve essere cotta</Italian>
+            <Polish>Surowa baranina, musi zostać ugotowana</Polish>
+            <Portuguese>Carne de carneiro crua, precisa ser cozida</Portuguese>
+            <Russian>Сырая баранина, её нужно приготовить</Russian>
+            <German>Rohes Hammelfleisch, muss gekocht werden</German>
+            <Korean>익히지 않은 양고기, 조리해야 합니다</Korean>
+            <Japanese>生の羊肉、調理が必要です</Japanese>
+            <Chinese>生羊肉，需要煮熟</Chinese>
+            <Chinesesimp>生羊肉，需要煮熟</Chinesesimp>
+            <Turkish>Çiğ koyun eti, pişirilmesi gerekiyor</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_RawMutton_DisplayName">
+            <English>Raw Mutton</English>
+            <Czech>Syrové skopové</Czech>
+            <French>Mouton cru</French>
+            <Spanish>Carne de cordero cruda</Spanish>
+            <Italian>Montone crudo</Italian>
+            <Polish>Surowa baranina</Polish>
+            <Portuguese>Carne de carneiro crua</Portuguese>
+            <Russian>Сырая баранина</Russian>
+            <German>Rohes Hammelfleisch</German>
+            <Korean>생양고기</Korean>
+            <Japanese>生の羊肉</Japanese>
+            <Chinese>生羊肉</Chinese>
+            <Chinesesimp>生羊肉</Chinesesimp>
+            <Turkish>Çiğ Koyun Eti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_RawRabbit_Description">
+            <English>Raw rabbit, needs to be cooked</English>
+            <Czech>Syrové králičí maso, je třeba uvařit</Czech>
+            <French>Lapin cru, doit être cuit</French>
+            <Spanish>Conejo crudo, debe cocinarse</Spanish>
+            <Italian>Coniglio crudo, deve essere cotto</Italian>
+            <Polish>Surowy królik, musi zostać ugotowany</Polish>
+            <Portuguese>Coelho cru, precisa ser cozido</Portuguese>
+            <Russian>Сырая крольчатина, её нужно приготовить</Russian>
+            <German>Rohes Kaninchen, muss gekocht werden</German>
+            <Korean>익히지 않은 토끼고기, 조리해야 합니다</Korean>
+            <Japanese>生のウサギ肉、調理が必要です</Japanese>
+            <Chinese>生兔肉，需要煮熟</Chinese>
+            <Chinesesimp>生兔肉，需要煮熟</Chinesesimp>
+            <Turkish>Çiğ tavşan eti, pişirilmesi gerekiyor</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_RawRabbit_DisplayName">
+            <English>Raw Rabbit</English>
+            <Czech>Syrový králík</Czech>
+            <French>Lapin cru</French>
+            <Spanish>Conejo crudo</Spanish>
+            <Italian>Coniglio crudo</Italian>
+            <Polish>Surowy królik</Polish>
+            <Portuguese>Coelho cru</Portuguese>
+            <Russian>Сырая крольчатина</Russian>
+            <German>Rohes Kaninchen</German>
+            <Korean>생토끼고기</Korean>
+            <Japanese>生のウサギ肉</Japanese>
+            <Chinese>生兔肉</Chinese>
+            <Chinesesimp>生兔肉</Chinesesimp>
+            <Turkish>Çiğ Tavşan Eti</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_RawSnake_Description">
+            <English>Raw snake, needs to be cooked</English>
+            <Czech>Syrové hadí maso, je třeba uvařit</Czech>
+            <French>Viande de serpent crue, doit être cuite</French>
+            <Spanish>Carne de serpiente cruda, debe cocinarse</Spanish>
+            <Italian>Carne di serpente cruda, deve essere cotta</Italian>
+            <Polish>Surowe mięso węża, musi zostać ugotowane</Polish>
+            <Portuguese>Carne de cobra crua, precisa ser cozida</Portuguese>
+            <Russian>Сырое змеиное мясо, его нужно приготовить</Russian>
+            <German>Rohes Schlangenfleisch, muss gekocht werden</German>
+            <Korean>익히지 않은 뱀고기, 조리해야 합니다</Korean>
+            <Japanese>生のヘビ肉、調理が必要です</Japanese>
+            <Chinese>生蛇肉，需要煮熟</Chinese>
+            <Chinesesimp>生蛇肉，需要煮熟</Chinesesimp>
+            <Turkish>Çiğ yılan eti, pişirilmesi gerekiyor</Turkish>
+        </Key>
+        <Key ID="STR_Misery_Assets_RawSnake_DisplayName">
+            <English>Raw Snake</English>
+            <Czech>Syrový had</Czech>
+            <French>Serpent cru</French>
+            <Spanish>Serpiente cruda</Spanish>
+            <Italian>Serpente crudo</Italian>
+            <Polish>Surowy wąż</Polish>
+            <Portuguese>Cobra crua</Portuguese>
+            <Russian>Сырое змеиное мясо</Russian>
+            <German>Rohes Schlangenfleisch</German>
+            <Korean>생뱀고기</Korean>
+            <Japanese>生のヘビ肉</Japanese>
+            <Chinese>生蛇肉</Chinese>
+            <Chinesesimp>生蛇肉</Chinesesimp>
+            <Turkish>Çiğ Yılan Eti</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_Rice_DisplayName">
-            <English>Rice</English>
-            <Czech>Rýže</Czech>
-            <French>Riz</French>
-            <Spanish>Arroz</Spanish>
-            <Italian>Il riso</Italian>
-            <Polish>Ryż</Polish>
-            <Portuguese>Arroz</Portuguese>
-            <Russian>Рис</Russian>
-            <German>Reis</German>
-            <Korean>쌀</Korean>
-            <Japanese>米</Japanese>
-            <Chinese>大米</Chinese>
-            <Chinesesimp>大米</Chinesesimp>
-            <Turkish>Pirinç</Turkish>
+            <English>Rice Ration</English>
+            <Czech>Rýžový příděl</Czech>
+            <French>Ration de riz</French>
+            <Spanish>Ración de arroz</Spanish>
+            <Italian>Razione di riso</Italian>
+            <Polish>Racja ryżu</Polish>
+            <Portuguese>Ração de arroz</Portuguese>
+            <Russian>Рисовый рацион</Russian>
+            <German>Reisration</German>
+            <Korean>쌀 배급품</Korean>
+            <Japanese>米配給品</Japanese>
+            <Chinese>大米口糧</Chinese>
+            <Chinesesimp>大米口粮</Chinesesimp>
+            <Turkish>Pirinç Rasyonu</Turkish>
         </Key>
         <Key ID="STR_Misery_Assets_RotorRepairKit_DisplayName">
             <English>Rotor repair kit</English>
