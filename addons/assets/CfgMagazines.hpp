@@ -8,6 +8,17 @@ class CfgMagazines {
         count = 0;
     };
 
+    class CLASS(tacklebox): CLASS(FakeMagazine) {
+        CLASSACE(disableRepacking) = 1;
+        count = 25;
+        descriptionShort = CSTRING(FishingTackleBox_Description);
+        displayName = CSTRING(FishingTackleBox_DisplayName);
+        mass = 10;
+        model = QPATHTOF(data\models\fishing\Tacklebox.p3d);
+        picture = QPATHTOF(data\icons\tacklebox_ca.paa);
+        scope = 2;
+    };
+
     class CLASS(leadContainer_Closed): CLASS(FakeMagazine) {
         CLASSACE(disableRepacking) = 1;
         count = 10;
@@ -15,7 +26,7 @@ class CfgMagazines {
         displayName = CSTRING(LeadContainerClosed_DisplayName);
         mass = 50;
         model = "a3\props_f_enoch\military\decontamination\cbrncase_01_f.p3d";
-        picture = QPATHTOF(data\icons\cbrn_container.paa);
+        picture = QPATHTOF(data\icons\a3\cbrn_container_ca.paa);
         scope = 2;
     };
 
@@ -24,7 +35,7 @@ class CfgMagazines {
         descriptionShort = CSTRING(GasCartridge_Description);
         displayName = CSTRING(GasCartridge_DisplayName);
         mass = 20;
-        picture = QPATHTOF(data\icons\maskcartridges.paa);
+        picture = QPATHTOF(data\icons\maskCartridges_ca.paa);
         scope = 2;
     };
 
@@ -35,7 +46,7 @@ class CfgMagazines {
         displayName = CSTRING(PureTabs_DisplayName);
         mass = 2;
         model = "a3\structures_f_epa\items\medical\waterpurificationtablets_f.p3d";
-        picture = QPATHTOF(data\icons\pureTabs_ca.paa);
+        picture = QPATHTOF(data\icons\a3\pureTablets_ca.paa);
         scope = 2;
     };
 
@@ -179,7 +190,7 @@ class CfgMagazines {
         displayName = CSTRING(Chainsaw_DisplayName);
         mass = 100;
         model = QPATHTOF(data\models\chainsaw.p3d);
-        picture = QPATHTOF(data\icons\chainsaw.paa);
+        picture = QPATHTOF(data\icons\chainsaw_ca.paa);
         scope = 2;
     };
 
@@ -190,18 +201,7 @@ class CfgMagazines {
         displayName = CSTRING(SawFuel_DisplayName);
         mass = 10;
         model = "a3\structures_f\items\vessels\canisteroil_f.p3d";
-        picture = QPATHTOF(data\icons\sawfuel.paa);
-        scope = 2;
-    };
-
-    class CLASS(pickaxe): CLASS(FakeMagazine) {
-        CLASSACE(disableRepacking) = 1;
-        count = 1000;
-        descriptionShort = CSTRING(Pickaxe_Description);
-        displayName = CSTRING(Pickaxe_DisplayName);
-        mass = 85;
-        model = QPATHTOF(data\models\pickaxe.p3d);
-        picture = QPATHTOF(data\icons\pickaxe.paa);
+        picture = QPATHTOF(data\icons\a3\sawfuel_ca.paa);
         scope = 2;
     };
 
@@ -279,7 +279,7 @@ class CfgMagazines {
         displayName = CSTRING(CanteenPurified_DisplayName);
         mass = 30;
         model = "a3\structures_f_epa\items\food\canteen_f.p3d";
-        picture = QPATHTOF(data\icons\canteen.paa);
+        picture = "\z\ace\addons\field_rations\ui\item_canteen_co.paa";
         scope = 2;
     };
 
@@ -290,7 +290,7 @@ class CfgMagazines {
         displayName = CSTRING(CanteenClean_DisplayName);
         mass = 30;
         model = "a3\structures_f_epa\items\food\canteen_f.p3d";
-        picture = QPATHTOF(data\icons\canteen.paa);
+        picture = "\z\ace\addons\field_rations\ui\item_canteen_co.paa";
         scope = 2;
     };
 
@@ -301,7 +301,7 @@ class CfgMagazines {
         displayName = CSTRING(CanteenDirty_DisplayName);
         mass = 30;
         model = "a3\structures_f_epa\items\food\canteen_f.p3d";
-        picture = QPATHTOF(data\icons\canteen.paa);
+        picture = "\z\ace\addons\field_rations\ui\item_canteen_co.paa";
         scope = 2;
     };
 
@@ -335,27 +335,6 @@ class CfgMagazines {
         mass = 15;
         model = "a3\structures_f_epa\items\food\bottleplastic_v2_f.p3d";
         picture = QPATHTOF(data\icons\waterbottle.paa);
-        scope = 2;
-    };
-
-    class CLASS(coffeeGrounds): CLASS(FakeMagazine) {
-        CLASSACE(disableRepacking) = 1;
-        count = 4;
-        descriptionShort = CSTRING(CoffeeGrounds_Description);
-        displayName = CSTRING(CoffeeGrounds_DisplayName);
-        mass = 10;
-        picture = QPATHTOF(data\icons\coffeegrounds.paa);
-        scope = 2;
-    };
-
-    class CLASS(rice): CLASS(FakeMagazine) {
-        CLASSACE(disableRepacking) = 1;
-        count = 20;
-        descriptionShort = CSTRING(Rice_Description);
-        displayName = CSTRING(Rice_DisplayName);
-        mass = 15;
-        model = "a3\structures_f_epa\items\food\ricebox_f.p3d";
-        picture = QPATHTOF(data\icons\rice.paa);
         scope = 2;
     };
 
@@ -451,7 +430,7 @@ class CfgMagazines {
         displayName = CSTRING(MetalFabricationKit_DisplayName);
         mass = 150;
         model = "a3\weapons_f\items\toolkit.p3d";
-        picture = QPATHTOF(data\icons\toolkit.paa);
+        picture = QPATHTOF(data\icons\a3\toolkit_ca.paa);
         scope = 2;
     };
 
@@ -461,7 +440,7 @@ class CfgMagazines {
         displayName = CSTRING(EnginePartsKit_DisplayName);
         mass = 70;
         model = "a3\weapons_f\items\toolkit.p3d";
-        picture = QPATHTOF(data\icons\toolkit.paa);
+        picture = QPATHTOF(data\icons\a3\toolkit_ca.paa);
         scope = 2;
     };
 
@@ -471,7 +450,7 @@ class CfgMagazines {
         displayName = CSTRING(FuelSystemKit_DisplayName);
         mass = 70;
         model = "a3\weapons_f\items\toolkit.p3d";
-        picture = QPATHTOF(data\icons\toolkit.paa);
+        picture = QPATHTOF(data\icons\a3\toolkit_ca.paa);
         scope = 2;
     };
 
@@ -481,7 +460,7 @@ class CfgMagazines {
         displayName = CSTRING(ElectronicRepairKit_DisplayName);
         mass = 50;
         model = "a3\weapons_f\items\toolkit.p3d";
-        picture = QPATHTOF(data\icons\toolkit.paa);
+        picture = QPATHTOF(data\icons\a3\toolkit_ca.paa);
         scope = 2;
     };
 
@@ -491,7 +470,7 @@ class CfgMagazines {
         displayName = CSTRING(GlassRepairKit_DisplayName);
         mass = 50;
         model = "a3\weapons_f\items\toolkit.p3d";
-        picture = QPATHTOF(data\icons\toolkit.paa);
+        picture = QPATHTOF(data\icons\a3\toolkit_ca.paa);
         scope = 2;
     };
 
@@ -501,7 +480,7 @@ class CfgMagazines {
         displayName = CSTRING(TirePatchKit_DisplayName);
         mass = 50;
         model = "a3\weapons_f\items\toolkit.p3d";
-        picture = QPATHTOF(data\icons\toolkit.paa);
+        picture = QPATHTOF(data\icons\a3\toolkit_ca.paa);
         scope = 2;
     };
 
@@ -511,7 +490,7 @@ class CfgMagazines {
         displayName = CSTRING(TrackRepairKit_DisplayName);
         mass = 150;
         model = "a3\weapons_f\items\toolkit.p3d";
-        picture = QPATHTOF(data\icons\toolkit.paa);
+        picture = QPATHTOF(data\icons\a3\toolkit_ca.paa);
         scope = 2;
     };
 
@@ -521,7 +500,7 @@ class CfgMagazines {
         displayName = CSTRING(RotorRepairKit_DisplayName);
         mass = 150;
         model = "a3\weapons_f\items\toolkit.p3d";
-        picture = QPATHTOF(data\icons\toolkit.paa);
+        picture = QPATHTOF(data\icons\a3\toolkit_ca.paa);
         scope = 2;
     };
 
@@ -531,7 +510,7 @@ class CfgMagazines {
         displayName = CSTRING(WinchRepairKit_DisplayName);
         mass = 100;
         model = "a3\weapons_f\items\toolkit.p3d";
-        picture = QPATHTOF(data\icons\toolkit.paa);
+        picture = QPATHTOF(data\icons\a3\toolkit_ca.paa);
         scope = 2;
     };
 
@@ -541,7 +520,7 @@ class CfgMagazines {
         displayName = CSTRING(HydraulicRepairKit_DisplayName);
         mass = 100;
         model = "a3\weapons_f\items\toolkit.p3d";
-        picture = QPATHTOF(data\icons\toolkit.paa);
+        picture = QPATHTOF(data\icons\a3\toolkit_ca.paa);
         scope = 2;
     };
 
@@ -551,7 +530,7 @@ class CfgMagazines {
         displayName = CSTRING(AerodynamicControlKit_DisplayName);
         mass = 100;
         model = "a3\weapons_f\items\toolkit.p3d";
-        picture = QPATHTOF(data\icons\toolkit.paa);
+        picture = QPATHTOF(data\icons\a3\toolkit_ca.paa);
         scope = 2;
     };
 
@@ -561,7 +540,7 @@ class CfgMagazines {
         displayName = CSTRING(TransmissionRepairKit_DisplayName);
         mass = 100;
         model = "a3\weapons_f\items\toolkit.p3d";
-        picture = QPATHTOF(data\icons\toolkit.paa);
+        picture = QPATHTOF(data\icons\a3\toolkit_ca.paa);
         scope = 2;
     };
 
@@ -571,7 +550,7 @@ class CfgMagazines {
         displayName = CSTRING(LandingGearKit_DisplayName);
         mass = 100;
         model = "a3\weapons_f\items\toolkit.p3d";
-        picture = QPATHTOF(data\icons\toolkit.paa);
+        picture = QPATHTOF(data\icons\a3\toolkit_ca.paa);
         scope = 2;
     };
 
@@ -581,7 +560,7 @@ class CfgMagazines {
         displayName = CSTRING(WeaponSystemKit_DisplayName);
         mass = 150;
         model = "a3\weapons_f\items\toolkit.p3d";
-        picture = QPATHTOF(data\icons\toolkit.paa);
+        picture = QPATHTOF(data\icons\a3\toolkit_ca.paa);
         scope = 2;
     };
 
@@ -591,7 +570,7 @@ class CfgMagazines {
         displayName = CSTRING(CounterMeasureKit_DisplayName);
         mass = 100;
         model = "a3\weapons_f\items\toolkit.p3d";
-        picture = QPATHTOF(data\icons\toolkit.paa);
+        picture = QPATHTOF(data\icons\a3\toolkit_ca.paa);
         scope = 2;
     };
 
@@ -602,7 +581,7 @@ class CfgMagazines {
         displayName = CSTRING(FieldThermalRegulationKit_DisplayName);
         mass = 40;
         model = "a3\weapons_f\items\toolkit.p3d";
-        picture = QPATHTOF(data\icons\toolkit.paa);
+        picture = QPATHTOF(data\icons\a3\toolkit_ca.paa);
         scope = 2;
     };
 };

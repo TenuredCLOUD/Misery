@@ -6,21 +6,8 @@ class CfgWeapons {
     class CLASS(money_case): CLASS(ItemCore) {
         displayName = CSTRING(PlasticCase_DisplayName);
         descriptionShort = CSTRING(PlasticCase_Description);
-        picture = QPATHTOF(data\icons\smallPlasticCase.paa);
+        picture = QPATHTOF(data\icons\smallPlasticCase_ca.paa);
         model = "a3\structures_f_heli\items\luggage\plasticcase_01_small_f.p3d";
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 85;
-        };
-    };
-
-    class CLASS(pickaxe_Broken): CLASS(ItemCore) {
-        displayName = CSTRING(PickaxeBroken_DisplayName);
-        descriptionShort = CSTRING(PickaxeBroken_Description);
-        picture = QPATHTOF(data\icons\brokenpickaxe.paa);
-        model = QPATHTOF(data\models\pickaxe.p3d);
         scope = 2;
         scopeCurator = 2;
 
@@ -44,25 +31,25 @@ class CfgWeapons {
     class CLASS(fishingPole): CLASS(ItemCore) {
         displayName = CSTRING(FishingPole_DisplayName);
         descriptionShort = CSTRING(FishingPole_Description);
-        picture = QPATHTOF(data\icons\fishingpole2.paa);
-        model = QPATHTOF(data\models\fishingrod.p3d);
+        picture = QPATHTOF(data\icons\fishingrod_ca.paa);
+        model = QPATHTOF(data\models\fishing\fishingRod.p3d);
         scope = 2;
         scopeCurator = 2;
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 30;
+            mass = 15;
         };
     };
 
-    class CLASS(fishingSpool): CLASS(ItemCore) {
-        displayName = CSTRING(FishingSpool_DisplayName);
-        descriptionShort = CSTRING(FishingSpool_Description);
-        picture = QPATHTOF(data\icons\fishingspool.paa);
+    class CLASS(worms): CLASS(ItemCore) {
+        displayName = CSTRING(Worms_DisplayName);
+        descriptionShort = CSTRING(Worms_Description);
+        picture = QPATHTOF(data\icons\worms.paa);
         scope = 2;
         scopeCurator = 2;
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 5;
+            mass = 0.5;
         };
     };
 
@@ -83,7 +70,8 @@ class CfgWeapons {
         CLASSACE(isMedicalItem) = 1;
         displayName = CSTRING(Haloperidol_DisplayName);
         descriptionShort = CSTRING(Haloperidol_Description);
-        picture = QPATHTOEF(medical,icons\atropine_ca.paa);
+        picture = "\z\ace\addons\medical_treatment\ui\atropine_ca.paa";
+        model = "a3\props_f_enoch\military\decontamination\antidotekit_01_f.p3d";
         scope = 2;
         scopeCurator = 2;
 
@@ -109,8 +97,8 @@ class CfgWeapons {
         CLASSACE(isMedicalItem) = 1;
         displayName = CSTRING(thbd_DisplayName);
         descriptionShort = CSTRING(thbd_Description);
-        picture = QPATHTOEF(medical,icons\atropine_ca.paa);
-        model = "a3\props_f_orange\humanitarian\garbage\medicalgarbage_01_injector_f.p3d";
+        picture = "\z\ace\addons\medical_treatment\ui\atropine_ca.paa";
+        model = "a3\props_f_enoch\military\decontamination\antidotekit_01_f.p3d";
         scope = 2;
         scopeCurator = 2;
 
@@ -123,8 +111,8 @@ class CfgWeapons {
         CLASSACE(isMedicalItem) = 1;
         displayName = CSTRING(thbdHigh_DisplayName);
         descriptionShort = CSTRING(thbd_Description);
-        picture = QPATHTOEF(medical,icons\atropine_ca.paa);
-        model = "a3\props_f_orange\humanitarian\garbage\medicalgarbage_01_injector_f.p3d";
+        picture = "\z\ace\addons\medical_treatment\ui\atropine_ca.paa";
+        model = "a3\props_f_enoch\military\decontamination\antidotekit_01_f.p3d";
         scope = 2;
         scopeCurator = 2;
 
@@ -137,7 +125,7 @@ class CfgWeapons {
         CLASSACE(isMedicalItem) = 1;
         displayName = CSTRING(Atropine_DisplayName);
         descriptionShort = CSTRING(Atropine_Description);
-        picture = QPATHTOEF(medical,icons\atropine_ca.paa);
+        picture = "\z\ace\addons\medical_treatment\ui\atropine_ca.paa";
         model = "a3\props_f_enoch\military\decontamination\antidotekit_01_f.p3d";
         scope = 2;
         scopeCurator = 2;
@@ -159,30 +147,6 @@ class CfgWeapons {
         };
     };
 
-    class CLASS(fishhook): CLASS(ItemCore) {
-        displayName = CSTRING(FishHook_DisplayName);
-        descriptionShort = CSTRING(FishHook_Description);
-        picture = QPATHTOF(data\icons\fishhook.paa);
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 2;
-        };
-    };
-
-    class CLASS(worms): CLASS(ItemCore) {
-        displayName = CSTRING(Worms_DisplayName);
-        descriptionShort = CSTRING(Worms_Description);
-        picture = QPATHTOF(data\icons\worms.paa);
-        scope = 2;
-        scopeCurator = 2;
-
-        class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 0.5;
-        };
-    };
-
     class CLASS(lithiumBattery): CLASS(ItemCore) {
         displayName = CSTRING(LithiumBattery_DisplayName);
         descriptionShort = CSTRING(LithiumBattery_Description);
@@ -198,8 +162,14 @@ class CfgWeapons {
     class CLASS(energyDrink): CLASS(ItemCore) {
         displayName = CSTRING(EnergyDrink_DisplayName);
         descriptionShort = CSTRING(Caffeine_Description);
-        picture = QPATHTOF(data\icons\energyDrink.paa);
-        model = "a3\structures_f\items\food\can_v3_f.p3d";
+        picture = QPATHTOF(data\icons\energydrink_ca.paa);
+        model = QPATHTOF(data\models\soda\soda_tall.p3d);
+
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] =
+        {
+            QPATHTOF(data\models\soda\textures\stamina_ca.paa)
+        };
         scope = 2;
         scopeCurator = 2;
 
@@ -212,7 +182,13 @@ class CfgWeapons {
         displayName = CSTRING(Soda_DisplayName);
         descriptionShort = CSTRING(Soda_Description);
         picture = QPATHTOF(data\icons\soda_1.paa);
-        model = "a3\structures_f\items\food\can_v2_f.p3d";
+        model = QPATHTOF(data\models\soda\soda.p3d);
+
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] =
+        {
+            QPATHTOF(data\models\soda\textures\firepop_ca.paa)
+        };
         scope = 2;
         scopeCurator = 2;
 
@@ -225,7 +201,13 @@ class CfgWeapons {
         displayName = CSTRING(Soda_DisplayName);
         descriptionShort = CSTRING(Soda_Description);
         picture = QPATHTOF(data\icons\soda_2.paa);
-        model = "a3\structures_f\items\food\can_v1_f.p3d";
+        model = QPATHTOF(data\models\soda\soda.p3d);
+
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] =
+        {
+            QPATHTOF(data\models\soda\textures\yum_ca.paa)
+        };
         scope = 2;
         scopeCurator = 2;
 
@@ -237,7 +219,7 @@ class CfgWeapons {
     class CLASS(canOpener): CLASS(ItemCore) {
         displayName = CSTRING(CanOpener_DisplayName);
         descriptionShort = CSTRING(CanOpener_Description);
-        picture = QPATHTOF(data\icons\canOpener.paa);
+        picture = QPATHTOF(data\icons\a3\canopener_ca.paa);
         model = "a3\structures_f_epa\items\tools\canopener_f.p3d";
         scope = 2;
         scopeCurator = 2;
@@ -252,7 +234,7 @@ class CfgWeapons {
         author = "TenuredCLOUD";
         displayName = CSTRING(CanteenEmpty_DisplayName);
         descriptionShort = CSTRING(CanteenEmpty_Description);
-        picture = QPATHTOF(data\icons\canteen.paa);
+        picture = "\z\ace\addons\field_rations\ui\item_canteen_co.paa";
         model = "a3\structures_f_epa\items\food\canteen_f.p3d";
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
@@ -276,7 +258,7 @@ class CfgWeapons {
     class CLASS(cereal): CLASS(ItemCore) {
         displayName = CSTRING(Cereal_DisplayName);
         descriptionShort = CSTRING(Cereal_Description);
-        picture = QPATHTOF(data\icons\cereal.paa);
+        picture = QPATHTOF(data\icons\a3\cereal_ca.paa);
         model = "a3\structures_f_epa\items\food\cerealsbox_f.p3d";
         scope = 2;
         scopeCurator = 2;
@@ -289,7 +271,7 @@ class CfgWeapons {
     class CLASS(orange): CLASS(ItemCore) {
         displayName = CSTRING(Orange_DisplayName);
         descriptionShort = CSTRING(Orange_Description);
-        picture = QPATHTOF(data\icons\orange.paa);
+        picture = QPATHTOF(data\icons\a3\orange_ca.paa);
         model = "a3\props_f_orange\humanitarian\supplies\orange_01_f.p3d";
         scope = 2;
         scopeCurator = 2;
@@ -303,6 +285,25 @@ class CfgWeapons {
         displayName = CSTRING(PowderedMilk_DisplayName);
         descriptionShort = CSTRING(PowderedMilk_Description);
         picture = QPATHTOF(data\icons\drymilk.paa);
+        model = QPATHTOF(data\models\can\can.p3d);
+
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] =
+        {
+            QPATHTOF(data\models\can\textures\drymilk_ca.paa)
+        };
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 4;
+        };
+    };
+
+    class CLASS(powderedMilk_1): CLASS(ItemCore) {
+        displayName = CSTRING(PowderedMilk_DisplayName);
+        descriptionShort = CSTRING(PowderedMilk_Description);
+        picture = QPATHTOF(data\icons\a3\powderedMilk_ca.paa);
         model = "a3\structures_f_epa\items\food\powderedmilk_f.p3d";
         scope = 2;
         scopeCurator = 2;
@@ -316,6 +317,25 @@ class CfgWeapons {
         displayName = CSTRING(CannedBacon_DisplayName);
         descriptionShort = CSTRING(CannedBacon_Description);
         picture = QPATHTOF(data\icons\CannedBacon.paa);
+        model = QPATHTOF(data\models\can\can.p3d);
+
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] =
+        {
+            QPATHTOF(data\models\can\textures\cannedbacon_ca.paa)
+        };
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 10;
+        };
+    };
+
+    class CLASS(cannedBacon_1): CLASS(ItemCore) {
+        displayName = CSTRING(CannedBacon_DisplayName);
+        descriptionShort = CSTRING(CannedBacon_Description);
+        picture = QPATHTOF(data\icons\a3\cannedBacon_ca.paa);
         model = "a3\structures_f\items\food\tacticalbacon_f.p3d";
         scope = 2;
         scopeCurator = 2;
@@ -328,7 +348,7 @@ class CfgWeapons {
     class CLASS(bakedBeans): CLASS(ItemCore) {
         displayName = CSTRING(BakedBeans_DisplayName);
         descriptionShort = CSTRING(BakedBeans_Description);
-        picture = QPATHTOF(data\icons\CannedBeans.paa);
+        picture = QPATHTOF(data\icons\a3\bakedBeans_ca.paa);
         model = "a3\structures_f_epa\items\food\bakedbeans_f.p3d";
         scope = 2;
         scopeCurator = 2;
@@ -338,10 +358,36 @@ class CfgWeapons {
         };
     };
 
+    class CLASS(rice): CLASS(ItemCore) {
+        displayName = CSTRING(Rice_DisplayName);
+        descriptionShort = "$STR_ACE_Field_Rations_Humanitarian_Ration_Description";
+        picture = "\z\ace\addons\field_rations\ui\item_mre_human_co.paa";
+        model = "z\ace\addons\field_rations\data\mre_human.p3d";
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 5;
+        };
+    };
+
+    class CLASS(coffeeRation): CLASS(ItemCore) {
+        displayName = CSTRING(CoffeeRation_DisplayName);
+        descriptionShort = CSTRING(CoffeeRation_Description);
+        picture = "\z\ace\addons\field_rations\ui\item_mre_type4_co.paa";
+        model = "z\ace\addons\field_rations\data\mre_type4.p3d";
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 2;
+        };
+    };
+
     class CLASS(leadContainer_Open): CLASS(ItemCore) {
         displayName = CSTRING(LeadContainerOpen_DisplayName);
         descriptionShort = CSTRING(LeadContainerOpen_Description);
-        picture = QPATHTOF(data\icons\cbrn_container.paa);
+        picture = QPATHTOF(data\icons\a3\cbrn_container_ca.paa);
         model = "a3\props_f_enoch\military\decontamination\cbrncase_01_f.p3d";
         scope = 2;
         scopeCurator = 2;
@@ -367,8 +413,14 @@ class CfgWeapons {
     class CLASS(heatpack): CLASS(ItemCore) {
         displayName = CSTRING(HeatPack_DisplayName);
         descriptionShort = CSTRING(HeatPack_Description);
-        picture = QPATHTOF(data\icons\hotpack.paa);
-        model = "a3\structures_f_epa\items\medical\heatpack_f.p3d";
+        picture = QPATHTOF(data\icons\heatpack_ca.paa);
+        model = QPATHTOF(data\models\package\package.p3d);
+
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] =
+        {
+            QPATHTOF(data\models\package\textures\heatpack_ca.paa)
+        };
         scope = 2;
         scopeCurator = 2;
 
@@ -380,7 +432,14 @@ class CfgWeapons {
     class CLASS(coldpack): CLASS(ItemCore) {
         displayName = CSTRING(ColdPack_DisplayName);
         descriptionShort = CSTRING(ColdPack_Description);
-        picture = QPATHTOF(data\icons\coldpack.paa);
+        picture = QPATHTOF(data\icons\coldpack_ca.paa);
+        model = QPATHTOF(data\models\package\package.p3d);
+
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] =
+        {
+            QPATHTOF(data\models\package\textures\coldpack_ca.paa)
+        };
         scope = 2;
         scopeCurator = 2;
 
@@ -405,7 +464,7 @@ class CfgWeapons {
     class CLASS(tinContainer): CLASS(ItemCore) {
         displayName = CSTRING(TinContainer_DisplayName);
         descriptionShort = CSTRING(TinContainer_Description);
-        picture = QPATHTOF(data\icons\tinContainer.paa);
+        picture = QPATHTOF(data\icons\a3\tinContainer_ca.paa);
         model = "a3\structures_f_epa\items\vessels\tincontainer_f.p3d";
         scope = 2;
         scopeCurator = 2;
@@ -418,8 +477,179 @@ class CfgWeapons {
     class CLASS(cookedFish): CLASS(ItemCore) {
         displayName = CSTRING(CookedFish_DisplayName);
         descriptionShort = CSTRING(CookedFish_Description);
-        picture = QPATHTOF(data\icons\cookedfish.paa);
-        model = QPATHTOF(data\models\fishcooked.p3d);
+        picture = QPATHTOF(data\icons\cookedfish_ca.paa);
+        model = QPATHTOF(data\models\meat\meat_medium.p3d);
+
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] =
+        {
+            QPATHTOF(data\models\meat\textures\cookedfish_ca.paa)
+        };
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 2.5;
+        };
+    };
+
+    class CLASS(rawFish): CLASS(ItemCore) {
+        displayName = CSTRING(RawFish_DisplayName);
+        descriptionShort = CSTRING(RawFish_Description);
+        picture = QPATHTOF(data\icons\rawfish_ca.paa);
+        model = QPATHTOF(data\models\meat\meat_medium.p3d);
+
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] =
+        {
+            QPATHTOF(data\models\meat\textures\rawfish_ca.paa)
+        };
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 2.5;
+        };
+    };
+
+    class CLASS(fish): CLASS(ItemCore) {
+        displayName = CSTRING(Fish_DisplayName);
+        descriptionShort = CSTRING(Fish_Description);
+        picture = QPATHTOF(data\icons\a3\mullet_ca.paa);
+        model = "a3\animals_f\fishes\mullet_f.p3d";
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 5;
+        };
+    };
+
+    class CLASS(rawBeef): CLASS(ItemCore) {
+        displayName = CSTRING(RawBeef_DisplayName);
+        descriptionShort = CSTRING(RawBeef_Description);
+        picture = QPATHTOF(data\icons\rawBeef_ca.paa);
+        model = QPATHTOF(data\models\meat\meat.p3d);
+
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] =
+        {
+            QPATHTOF(data\models\meat\textures\rawbeef_ca.paa)
+        };
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 5;
+        };
+    };
+
+    class CLASS(cookedBeef): CLASS(ItemCore) {
+        displayName = CSTRING(CookedBeef_DisplayName);
+        descriptionShort = CSTRING(CookedBeef_Description);
+        picture = QPATHTOF(data\icons\cookedBeef_ca.paa);
+        model = QPATHTOF(data\models\meat\meat.p3d);
+
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] =
+        {
+            QPATHTOF(data\models\meat\textures\cookedbeef_ca.paa)
+        };
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 5;
+        };
+    };
+
+    class CLASS(rawMutton): CLASS(ItemCore) {
+        displayName = CSTRING(RawMutton_DisplayName);
+        descriptionShort = CSTRING(RawMutton_Description);
+        picture = QPATHTOF(data\icons\rawMutton_ca.paa);
+        model = QPATHTOF(data\models\meat\meat.p3d);
+
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] =
+        {
+            QPATHTOF(data\models\meat\textures\rawmutton_ca.paa)
+        };
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 5;
+        };
+    };
+
+    class CLASS(cookedMutton): CLASS(ItemCore) {
+        displayName = CSTRING(CookedMutton_DisplayName);
+        descriptionShort = CSTRING(CookedMutton_Description);
+        picture = QPATHTOF(data\icons\cookedMutton_ca.paa);
+        model = QPATHTOF(data\models\meat\meat.p3d);
+
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] =
+        {
+            QPATHTOF(data\models\meat\textures\cookedmutton_ca.paa)
+        };
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 5;
+        };
+    };
+
+    class CLASS(rawGoat): CLASS(ItemCore) {
+        displayName = CSTRING(RawGoat_DisplayName);
+        descriptionShort = CSTRING(RawGoat_Description);
+        picture = QPATHTOF(data\icons\rawGoat_ca.paa);
+        model = QPATHTOF(data\models\meat\meat.p3d);
+
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] =
+        {
+            QPATHTOF(data\models\meat\textures\rawgoat_ca.paa)
+        };
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 5;
+        };
+    };
+
+    class CLASS(cookedGoat): CLASS(ItemCore) {
+        displayName = CSTRING(CookedGoat_DisplayName);
+        descriptionShort = CSTRING(CookedGoat_Description);
+        picture = QPATHTOF(data\icons\cookedGoat_ca.paa);
+        model = QPATHTOF(data\models\meat\meat.p3d);
+
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] =
+        {
+            QPATHTOF(data\models\meat\textures\cookedgoat_ca.paa)
+        };
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 5;
+        };
+    };
+
+    class CLASS(rawChicken): CLASS(ItemCore) {
+        displayName = CSTRING(RawChicken_DisplayName);
+        descriptionShort = CSTRING(RawChicken_Description);
+        picture = QPATHTOF(data\icons\rawChicken_ca.paa);
+        model = QPATHTOF(data\models\meat\meat_medium.p3d);
+
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] =
+        {
+            QPATHTOF(data\models\meat\textures\rawchicken_ca.paa)
+        };
         scope = 2;
         scopeCurator = 2;
 
@@ -428,66 +658,111 @@ class CfgWeapons {
         };
     };
 
-    class CLASS(rawFish): CLASS(ItemCore) {
-        displayName = CSTRING(RawFish_DisplayName);
-        descriptionShort = CSTRING(RawFish_Description);
-        picture = QPATHTOF(data\icons\rawfish.paa);
-        model = QPATHTOF(data\models\fish.p3d);
+    class CLASS(cookedChicken): CLASS(ItemCore) {
+        displayName = CSTRING(CookedChicken_DisplayName);
+        descriptionShort = CSTRING(CookedChicken_Description);
+        picture = QPATHTOF(data\icons\cookedChicken_ca.paa);
+        model = QPATHTOF(data\models\meat\meat_medium.p3d);
+
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] =
+        {
+            QPATHTOF(data\models\meat\textures\cookedchicken_ca.paa)
+        };
         scope = 2;
         scopeCurator = 2;
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 5;
+            mass = 3;
         };
     };
 
-    class CLASS(cookedMeat): CLASS(ItemCore) {
-        displayName = CSTRING(CookedMeat_DisplayName);
-        descriptionShort = CSTRING(CookedMeat_Description);
-        picture = QPATHTOF(data\icons\cookedmeat.paa);
-        model = QPATHTOF(data\models\cookedmeat.p3d);
+    class CLASS(rawRabbit): CLASS(ItemCore) {
+        displayName = CSTRING(RawRabbit_DisplayName);
+        descriptionShort = CSTRING(RawRabbit_Description);
+        picture = QPATHTOF(data\icons\rawRabbit_ca.paa);
+        model = QPATHTOF(data\models\meat\meat_small.p3d);
+
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] =
+        {
+            QPATHTOF(data\models\meat\textures\rawchicken_ca.paa)
+        };
         scope = 2;
         scopeCurator = 2;
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 5;
+            mass = 2;
         };
     };
 
-    class CLASS(rawMeat): CLASS(ItemCore) {
-        displayName = CSTRING(RawMeat_DisplayName);
-        descriptionShort = CSTRING(RawMeat_Description);
-        picture = QPATHTOF(data\icons\rawmeat.paa);
-        model = QPATHTOF(data\models\rawmeat.p3d);
+    class CLASS(cookedRabbit): CLASS(ItemCore) {
+        displayName = CSTRING(CookedRabbit_DisplayName);
+        descriptionShort = CSTRING(CookedRabbit_Description);
+        picture = QPATHTOF(data\icons\cookedRabbit_ca.paa);
+        model = QPATHTOF(data\models\meat\meat_small.p3d);
+
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] =
+        {
+            QPATHTOF(data\models\meat\textures\cookedchicken_ca.paa)
+        };
         scope = 2;
         scopeCurator = 2;
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 5;
+            mass = 2;
         };
     };
 
-    class CLASS(coffeeMug): CLASS(ItemCore) {
-        displayName = CSTRING(CoffeeMug_DisplayName);
-        descriptionShort = CSTRING(CoffeeMug_Description);
-        picture = QPATHTOF(data\icons\coffeemug.paa);
+    class CLASS(rawSnake): CLASS(ItemCore) {
+        displayName = CSTRING(RawSnake_DisplayName);
+        descriptionShort = CSTRING(RawSnake_Description);
+        picture = QPATHTOF(data\icons\rawSnake_ca.paa);
+        model = QPATHTOF(data\models\meat\meat_strip.p3d);
+
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] =
+        {
+            QPATHTOF(data\models\meat\textures\rawchicken_ca.paa)
+        };
         scope = 2;
         scopeCurator = 2;
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 10;
+            mass = 1;
         };
     };
 
-    class CLASS(coffeeBrewed): CLASS(ItemCore) {
-        displayName = CSTRING(CoffeeBrewed_DisplayName);
-        descriptionShort = CSTRING(CoffeeBrewed_Description);
-        picture = QPATHTOF(data\icons\coffeebrewed.paa);
+    class CLASS(cookedSnake): CLASS(ItemCore) {
+        displayName = CSTRING(CookedSnake_DisplayName);
+        descriptionShort = CSTRING(CookedSnake_Description);
+        picture = QPATHTOF(data\icons\cookedSnake_ca.paa);
+        model = QPATHTOF(data\models\meat\meat_strip.p3d);
+
+        hiddenSelections[] = {"camo1"};
+        hiddenSelectionsTextures[] =
+        {
+            QPATHTOF(data\models\meat\textures\cookedchicken_ca.paa)
+        };
         scope = 2;
         scopeCurator = 2;
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 10;
+            mass = 1;
+        };
+    };
+
+    class CLASS(plasticCup): CLASS(ItemCore) {
+        displayName = CSTRING(PlasticCup_DisplayName);
+        descriptionShort = CSTRING(PlasticCup_Description);
+        picture = QPATHTOF(data\icons\a3\plasticcup_ca.paa);
+        model = "a3\structures_f_heli\items\food\tableware_01_cup_f.p3d";
+        scope = 2;
+        scopeCurator = 2;
+
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 1;
         };
     };
 
@@ -506,7 +781,7 @@ class CfgWeapons {
     class CLASS(ductTape): CLASS(ItemCore) {
         displayName = CSTRING(DuctTape_DisplayName);
         descriptionShort = CSTRING(DuctTape_Description);
-        picture = QPATHTOF(data\icons\ducttape.paa);
+        picture = QPATHTOF(data\icons\a3\ducttape_ca.paa);
         model = "a3\structures_f_epa\items\tools\ducttape_f.p3d";
         scope = 2;
         scopeCurator = 2;
@@ -545,7 +820,7 @@ class CfgWeapons {
     class CLASS(pliers): CLASS(ItemCore) {
         displayName = CSTRING(Pliers_DisplayName);
         descriptionShort = CSTRING(Pliers_Description);
-        picture = QPATHTOF(data\icons\pliers.paa);
+        picture = QPATHTOF(data\icons\a3\pliers_ca.paa);
         model = "a3\structures_f\items\tools\pliers_f.p3d";
         scope = 2;
         scopeCurator = 2;
@@ -583,7 +858,7 @@ class CfgWeapons {
     class CLASS(copperWire): CLASS(ItemCore) {
         displayName = CSTRING(CopperWire_DisplayName);
         descriptionShort = CSTRING(CopperWire_Description);
-        picture = QPATHTOF(data\icons\copperwire.paa);
+        picture = QPATHTOF(data\icons\a3\copperwire_ca.paa);
         model = "a3\structures_f_epa\items\tools\metalwire_f.p3d";
         scope = 2;
         scopeCurator = 2;
@@ -717,7 +992,7 @@ class CfgWeapons {
     class CLASS(zombie_Head): CLASS(ItemCore) {
         displayName = CSTRING(ZombieHead_DisplayName);
         descriptionShort = CSTRING(ZombieHead_Description);
-        picture = QPATHTOF(data\icons\head.paa);
+        picture = QPATHTOF(data\icons\a3\head_ca.paa);
         scope = 2;
         scopeCurator = 2;
 
@@ -789,7 +1064,7 @@ class CfgWeapons {
     class CLASS(boneSaw): CLASS(ItemCore) {
         displayName = CSTRING(BoneSaw_DisplayName);
         descriptionShort = CSTRING(BoneSaw_Description);
-        picture = QPATHTOF(data\icons\hacksaw.paa);
+        picture = QPATHTOF(data\icons\a3\hacksaw_ca.paa);
         model = "\a3\structures_f\Items\Tools\Saw_F.p3d";
         scope = 2;
         scopeCurator = 2;
@@ -814,7 +1089,7 @@ class CfgWeapons {
     class CLASS(woodaxe): CLASS(ItemCore) {
         displayName = CSTRING(WoodAxe_DisplayName);
         descriptionShort = CSTRING(WoodAxe_Description);
-        picture = QPATHTOF(data\icons\Woodaxe.paa);
+        picture = QPATHTOF(data\icons\a3\axe_ca.paa);
         model = "a3\structures_f\items\tools\axe_f.p3d";
         scope = 2;
         scopeCurator = 2;
@@ -865,7 +1140,7 @@ class CfgWeapons {
     class CLASS(chainsaw_Empty): CLASS(ItemCore) {
         displayName = CSTRING(ChainsawEmpty_DisplayName);
         descriptionShort = CSTRING(ChainsawEmpty_Description);
-        picture = QPATHTOF(data\icons\chainsaw.paa);
+        picture = QPATHTOF(data\icons\chainsaw_ca.paa);
         model = QPATHTOF(data\models\chainsaw.p3d);
         scope = 2;
         scopeCurator = 2;
@@ -1043,8 +1318,8 @@ class CfgWeapons {
 
     class CLASS(spareTire): CLASS(ItemCore) {
         displayName = CSTRING(SpareTire_DisplayName);
-        picture = QPATHTOF(data\icons\tire.paa);
-        model = "a3\structures_f\civ\garbage\tyre_f.p3d";
+        picture = QPATHTOF(data\icons\a3\tire_ca.paa);
+        model = "a3\soft_f_orange\van_02\van_02_rimless_tire_f.p3d";
         scope = 2;
         scopeCurator = 2;
 
@@ -1057,7 +1332,7 @@ class CfgWeapons {
         displayName = CSTRING(EmptyToolKit_DisplayName);
         descriptionShort = CSTRING(EmptyToolKit_Description);
         model = "a3\weapons_f\items\toolkit.p3d";
-        picture = QPATHTOF(data\icons\toolkit.paa);
+        picture = QPATHTOF(data\icons\a3\toolkit_ca.paa);
         scope = 2;
         scopeCurator = 2;
 
@@ -1070,7 +1345,7 @@ class CfgWeapons {
         displayName = CSTRING(SHP_DisplayName);
         descriptionShort = CSTRING(SHP_Description);
         model = "a3\weapons_f\items\toolkit.p3d";
-        picture = QPATHTOF(data\icons\toolkit.paa);
+        picture = QPATHTOF(data\icons\a3\toolkit_ca.paa);
         scope = 2;
         scopeCurator = 2;
 
@@ -1083,7 +1358,7 @@ class CfgWeapons {
         displayName = CSTRING(LockKit_DisplayName);
         descriptionShort = CSTRING(LockKit_Description);
         model = "a3\weapons_f\items\toolkit.p3d";
-        picture = QPATHTOF(data\icons\toolkit.paa);
+        picture = QPATHTOF(data\icons\a3\toolkit_ca.paa);
         scope = 2;
         scopeCurator = 2;
 

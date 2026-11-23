@@ -31,6 +31,8 @@ class CfgMovesBasic {
         GVAR(candyBar)[] = {QGVAR(candyBar), QUOTE(Gesture)};
         GVAR(thirsty)[] = {QGVAR(thirsty), QUOTE(Gesture)};
         GVAR(hungry)[] = {QGVAR(hungry), QUOTE(Gesture)};
+        GVAR(warmHands)[] = {QGVAR(warmHands), QUOTE(Gesture)};
+        GVAR(fishingRodHold)[] = {QGVAR(fishingRodHold), QUOTE(Gesture)};
     };
 };
 
@@ -41,7 +43,17 @@ class CfgGesturesMale {
         GVAR(leftHalfBod)[] = {"RightShoulder",1,"head",1,"neck1",1,"neck",1,"LeftShoulder",1,"LeftArm",1,"LeftArmRoll",1,"LeftForeArm",1,"LeftForeArmRoll",1,"LeftHand",1,"LeftHandRing",1,"LeftHandPinky1",1,"LeftHandPinky2",1,"LeftHandPinky3",1,"LeftHandRing1",1,"LeftHandRing2",1,"LeftHandRing3",1,"LeftHandMiddle1",1,"LeftHandMiddle2",1,"LeftHandMiddle3",1,"LeftHandIndex1",1,"LeftHandIndex2",1,"LeftHandIndex3",1,"LeftHandThumb1",1,"LeftHandThumb2",1,"LeftHandThumb3",1,"Spine",1,"Spine1",1,"Spine2",1,"Spine3",1,"pelvis","MaskStart"};
         GVAR(leftHalfBody_noPelvis)[] = {"head",1,"neck1",1,"neck",1,"LeftShoulder",1,"LeftArm",1,"LeftArmRoll",1,"LeftForeArm",1,"LeftForeArmRoll",1,"LeftHand",1,"LeftHandRing",1,"LeftHandPinky1",1,"LeftHandPinky2",1,"LeftHandPinky3",1,"LeftHandRing1",1,"LeftHandRing2",1,"LeftHandRing3",1,"LeftHandMiddle1",1,"LeftHandMiddle2",1,"LeftHandMiddle3",1,"LeftHandIndex1",1,"LeftHandIndex2",1,"LeftHandIndex3",1,"LeftHandThumb1",1,"LeftHandThumb2",1,"LeftHandThumb3",1,"Spine","MaskStart","Spine1",1,"Spine2",1,"Spine3",};
         GVAR(rightHalfBody)[] = {"LeftShoulder",1,"head",1,"neck1",1,"neck",1,"RightShoulder",1,"RightArm",1,"RightArmRoll",1,"RightForeArm",1,"RightForeArmRoll",1,"RightHand",1,"RightHandRing",1,"RightHandPinky1",1,"RightHandPinky2",1,"RightHandPinky3",1,"RightHandRing1",1,"RightHandRing2",1,"RightHandRing3",1,"RightHandMiddle1",1,"RightHandMiddle2",1,"RightHandMiddle3",1,"RightHandIndex1",1,"RightHandIndex2",1,"RightHandIndex3",1,"RightHandThumb1",1,"RightHandThumb2",1,"RightHandThumb3",1,"Spine","MaskStart","Spine1",1,"Spine2",1,"Spine3",1};
-        GVAR(leftHandActual)[] = {"LeftShoulder",1,"LeftArm",1,"LeftArmRoll",1,"LeftForeArm",1,"LeftForeArmRoll",1,"LeftHand",1,"LeftHandRing",1,"LeftHandPinky1",1,"LeftHandPinky2",1,"LeftHandPinky3",1,"LeftHandRing1",1,"LeftHandRing2",1,"LeftHandRing3",1,"LeftHandMiddle1",1,"LeftHandMiddle2",1,"LeftHandMiddle3",1,"LeftHandIndex1",1,"LeftHandIndex2",1,"LeftHandIndex3",1,"LeftHandThumb1",1,"LeftHandThumb2",1,"LeftHandThumb3",1,"pelvis","MaskStart"};
+        GVAR(leftHandActual)[] = {
+        "LeftShoulder",1,"LeftArm",1,"LeftArmRoll",1,"LeftForeArm",1,"LeftForeArmRoll",1,"LeftHand",1,"LeftHandRing",1,"LeftHandPinky1",1,"LeftHandPinky2",1,"LeftHandPinky3",1,"LeftHandRing1",1,"LeftHandRing2",1,"LeftHandRing3",1,"LeftHandMiddle1",1,"LeftHandMiddle2",1,"LeftHandMiddle3",1,"LeftHandIndex1",1,"LeftHandIndex2",1,"LeftHandIndex3",1,"LeftHandThumb1",1,"LeftHandThumb2",1,"LeftHandThumb3",1,"pelvis","MaskStart"};
+        GVAR(warmHandsBody)[] = {
+            "head",1,"neck1",1,"neck",1,"Spine",1,"Spine1",1,"Spine2",1,"Spine3",1,"LeftShoulder",1,"LeftArm",1,"LeftArmRoll",1,"LeftForeArm",1,
+            "LeftForeArmRoll",1,"LeftHand",1,"LeftHandRing",1,"LeftHandRing1",1,"LeftHandRing2",1,"LeftHandRing3",1,"LeftHandPinky1",1,
+            "LeftHandPinky2",1,"LeftHandPinky3",1,"LeftHandMiddle1",1,"LeftHandMiddle2",1,"LeftHandMiddle3",1,"LeftHandIndex1",1,"LeftHandIndex2",1,
+            "LeftHandIndex3",1,"LeftHandThumb1",1,"LeftHandThumb2",1,"LeftHandThumb3",1,"RightShoulder",1,"RightArm",1,"RightArmRoll",1,
+            "RightForeArm",1,"RightForeArmRoll",1,"RightHand",1,"RightHandRing",1,"RightHandRing1",1,"RightHandRing2",1,"RightHandRing3",1,
+            "RightHandPinky1",1,"RightHandPinky2",1,"RightHandPinky3",1,"RightHandMiddle1",1,"RightHandMiddle2",1,"RightHandMiddle3",1,
+            "RightHandIndex1",1,"RightHandIndex2",1,"RightHandIndex3",1,"RightHandThumb1",1,"RightHandThumb2",1,"RightHandThumb3",1
+        };
     };
 
     class States {
@@ -64,6 +76,44 @@ class CfgGesturesMale {
             looped = 0;
             file = QPATHTOF(anims\drink.rtm);
             mask = QUOTE(handsWeapon_context);
+            disableWeapons = 1;
+            interpolationRestart = 2;
+            canReload = 0;
+            disableWeaponsLong = 0;
+            canPullTrigger = 1;
+            enableDirectControl = 1;
+            leftHandIKBeg = 0;
+            leftHandIKCurve[] = {0};
+            leftHandIKEnd = 0;
+            rightHandIKBeg = 0;
+            rightHandIKCurve[] = {0};
+            rightHandIKEnd = 0;
+        };
+
+        class GVAR(warmHands): Default {
+            speed = 0.17;
+            looped = 1;
+            file = QPATHTOF(anims\warmHandsFire.rtm);
+            mask = QGVAR(warmHandsBody);
+            disableWeapons = 1;
+            interpolationRestart = 2;
+            canReload = 0;
+            disableWeaponsLong = 0;
+            canPullTrigger = 1;
+            enableDirectControl = 1;
+            leftHandIKBeg = 0;
+            leftHandIKCurve[] = {0};
+            leftHandIKEnd = 0;
+            rightHandIKBeg = 0;
+            rightHandIKCurve[] = {0};
+            rightHandIKEnd = 0;
+        };
+
+        class GVAR(fishingRodHold): Default {
+            speed = 0.17;
+            looped = 1;
+            file = QPATHTOF(anims\fishing_hold.rtm);
+            mask = QGVAR(warmHandsBody);
             disableWeapons = 1;
             interpolationRestart = 2;
             canReload = 0;

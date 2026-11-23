@@ -58,8 +58,6 @@ Certain assets in this repository utilize AI generation tools as part of their c
 
 - Item Icons & Medical Graphics: Select UI icons, packaging graphics, and generic medication labeling (such as those located in /addons/medical/icons/) were created using AI-generated base renders that were subsequently hand edited for in-game use. Fictional medication designs were generated specifically to refrain from infringing upon the trade dress, logos, or trademarks of real world pharmaceutical companies.
 
-- Third-Party Media Exceptions: The icon (atropine_ca.paa) located in /addons/medical/icons/ is adapted from the ACE3 Mod and is used under its respective license terms (GPLv2).
-
 Unless noted otherwise above, these assets are distributed under the project's primary license terms (GPLv2).
 
 **Contributing to Misery**
